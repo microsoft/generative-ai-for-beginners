@@ -1,5 +1,5 @@
 {
-	"name": "gnerative-ai-for-beginners",
+	"name": "generative-ai-for-beginners",
 	"version": "1.0.0",
 	"description": "Generative AI for Beginners - A Curriculum",
 	"main": "index.js",
@@ -11,9 +11,7 @@
 		"url": "git+https://github.com/microsoft/generative-ai-for-beginners.git"
 	},
 	"keywords": [
-		"machine",
-		"learning",
-		"ml",
+		"generative",
 		"ai",
 		"curriculum"
 	],
