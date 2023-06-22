@@ -1,0 +1,2 @@
+- Getting Started
+  - [Introduction to Generative AI](../1-getting-started/lessons/1-introduction-to-generative-ai/README.md)

@@ -1,0 +1,119 @@
+[
+	{
+		"title": "Generative AI for Beginners: Quizzes",
+		"complete": "Congratulations, you completed the quiz!",
+		"error": "Sorry, try again",
+		"quizzes": [
+			{
+				"id": 1,
+				"title": "Lesson 1 - Introduction to Generative AI: Pre-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "What does AI stand for?",
+						"answerOptions": [
+							{
+								"answerText": "Always Intelligent",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Artificial Intelligence",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "Artificial Invention",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "AI has achieved consciousness:",
+						"answerOptions": [
+							{
+								"answerText": "Yes",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "No",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "LLMs are:",
+						"answerOptions": [
+							{
+								"answerText": "A type of Llama",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Liquid Lemon Meringue",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "Large Language Models",
+								"isCorrect": "true"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Lesson 1 - Introduction to Generative AI: Post-Lecture Quiz",
+				"quiz": [
+					{
+						"questionText": "How quickly did ChatGPT reach 100 million users?",
+						"answerOptions": [
+							{
+								"answerText": "1 week",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "2 months",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "3 years",
+								"isCorrect": "false"
+							}
+						]
+					},
+					{
+						"questionText": "Large language models can be run on tiny devices like smart watches",
+						"answerOptions": [
+							{
+								"answerText": "True",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "False",
+								"isCorrect": "true"
+							}
+						]
+					},
+					{
+						"questionText": "The biggest limitation for availability of LLMs in the cloud is:",
+						"answerOptions": [
+							{
+								"answerText": "A lack of GPUs",
+								"isCorrect": "true"
+							},
+							{
+								"answerText": "A lack of CPUs",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "A lack of money",
+								"isCorrect": "false"
+							},
+							{
+								"answerText": "A lack of llamas",
+								"isCorrect": "false"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
