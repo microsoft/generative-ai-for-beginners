@@ -47,7 +47,7 @@ In addition, a low-stakes quiz before a class sets the intention of the student 
 | 02 | | | | |
 | 03 | | | | |
 | 04 | | | | |
-| 05 | | | | |
+| 05 | [Advanced prompts](./5-advanced-prompts/README.md) | | | [Advanced prompts](./5-advanced-prompts/README.md) |
 | 06 | | | | |
 | 07 | | | | |
 | 08 | | | | |
