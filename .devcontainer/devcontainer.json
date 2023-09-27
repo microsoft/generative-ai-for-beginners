@@ -9,7 +9,7 @@
 
 	"waitFor": "onCreateCommand",
 	"updateContentCommand": "python3 -m pip install -r requirements.txt",
-	"postCreateCommand": "bash .devcontainer/post-create.sh",
+  	"postCreateCommand": "bash .devcontainer/post-create.sh",
 
 	"customizations": {
 	  "codespaces": {
