@@ -8,13 +8,13 @@ Concept 3
 
 ## Learning Goals (h2) 
 After completing this lesson you will know how to/understand: 
-Goal 1 
-Goal 2
-Goal 3 
+- Techniques for efficiently buliding and integerating chat applications
+- How to apply customization and fine tuning to applications
+- Startegies and considerations to effectively monitor high quality chat applications
 
-## Concept 1 (h2) 
+##  Integrating Generative AI into Chat Applications
 
-## Concept 2 (h2) 
+##  Customization and Fine tuning
 
 
-## Concept 3 (h2) 
+## Metrics for Responsible AI-Driven Chat
