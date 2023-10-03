@@ -12,7 +12,7 @@ This lesson covers:
 ## Learning Goals 
 By the end of this lesson, you'll be able to:
 
-- Describe considerations for how building and integrating chat applications into existing systems.
+- Describe considerations for building and integrating chat applications into existing systems.
 - Customize chat applications for specific use-cases. 
 - Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications.
 - Ensuring chat applications leverage AI responsibly.
@@ -21,7 +21,7 @@ By the end of this lesson, you'll be able to:
 
 Elevating chat applications through generative AI isn't only centered around making them smarter; it's about optimizing their architecture, performance, and user interface to deliver a quality user experience. This involves investigating the architectural foundations, API integrations, and user interface considerations. This section aims to offer you a comprehensive roadmap for navigating these complex landscapes, whether you're plugging them into existing systems or building them as stand-alone platforms.
  
-By the end of this section, you'll be equipped with the technical expertise needed to efficiently construct and incorporate chat applications, either as enhancements to existing systems or as stand-alone solutions.
+By the end of this section, you'll be equipped with the expertise needed to efficiently construct and incorporate chat applications, either as enhancements to existing systems or as stand-alone solutions.
 
 ### Chatbot or Chat application?
 
@@ -32,31 +32,30 @@ The table below outlines the key differences and similarities to help us underst
 | Chatbot                               | Generative AI-Powered Chat Application |
 | ------------------------------------- | -------------------------------------- |
 | Task-Focused and rule based           | Context-aware                          |
-| Limited to Programmed functions       | May host one or multiple chatbots      |
-| Often integrated into larger systems  | Incorporates generative AI models      |
+| Often integrated into larger systems  | May host one or multiple chatbots      |
+| Limited to programmed functions       | Incorporates generative AI models      |
 | Specialized & structured interactions | Capable of open-domain discussions     |
 
 
 ### Leveraging pre-built functionalities with SDKs and APIs
 
-When building a chat application, it's best to assess what is already out there. Using SDKs and APIs to build chat application is an advantageous strategy for building chat applications for a variety of reasons.
+When building a chat application, it's best to assess what is already out there. Using SDKs and APIs to build chat application is an advantageous strategy for building chat applications for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
 
 - **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
 - **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built in solutions for these concerns.
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released. 
 - **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive dataset provides your application with natural language capabilities.
 
-By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
 
 ### User Experience (UX)
 
 General UX principles apply for chat applications, but here's some additional considerations that become particularly important due to the machine learning components involved.
 
-- **Mechanism for addressing ambiguity**: Generative AI models can sometimes produce ambiguous responses. Providing a chat application with the ability for the user to ask for clarification. 
+- **Mechanism for addressing ambiguity**: Generative AI models occasionally generate ambiguous answers. A feature that allows users to ask for clarification can be helpful should they come across this problem.
 - **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.  
 - **Personalization**: With the ability to learn and adapt, AI models can provide offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit in finding specific answers, creating a more efficient and satisfying interaction.
 
-One such example is the "Custom instructions" settings in ChatGPT [IMAGE]()
+One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT ![IMAGE]()
 
 ### Accessibility
 
@@ -67,17 +66,54 @@ One such example is the "Custom instructions" settings in ChatGPT [IMAGE]()
 - **Features for Motor Impairment**: Keyboard navigation support, voice commands.
 - **Features for Cognitive Impairment**: Simplified language options.
 
-## Customization and Fine-tuning
+## Customization and Fine-tuning for Domain-Specific Language Models
+
+Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. Domain-specific language models (DSL Models) have the capacity to enhance user engagement and by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+
+Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task. For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source. Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings. While the original, general-purpose model might be adequate for answering basic medical questions or providing general advice, it may struggle with highly specific or complex cases. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?" A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology. In instances such as these, fine-tuning the model with a specialized medical dataset can significantly improve its ability to handle these intricate medical inquiries more accurately and reliably. This requires access to a large and relevant dataset that represents the domain-specific challenges and questions that need to be addressed. 
 
 
+## Considerations for a High Quality AI-Driven Chat Experience
+
+Below are some considerations for 
+
+### Key Metrics 
+
+To maintain the high-quality performance an application, it's essential to keep track of key metrics and considerations. These measurements not only ensure the functionality of the application but also assess the quality of the AI model and user experience. Below is a list that covers basic, AI, and user experience metrics to consider. 
+
+| Metric                        | Definition                                                                                                             | Considerations for Chat Developer                                         |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Uptime**                    | Measures the time the application is operational and accessible by users.                                              | How will you minimize downtime?                                           |
+| **Response Time**             | The time taken by the application to reply to a user's query.                                                          | How can you optimize query processing to improve response time?           |
+| **Precision**                 | The ratio of true positive predictions to the total number of positive predictions                                     | How will you validate the precision of your model?                        |
+| **Recall (Sensitivity)**      | The ratio of true positive predictions to the actual number of positives                                               | How will you measure and improve recall?                                  |
+| **F1 Score**                  | The harmonic mean of precision and recall, that balances the trade-off between both.                                   | What is your target F1 Score? How will you balance precision and recall?  |
+| **Perplexity**                | Measures how well the probability distribution predicted by the model aligns with the actual distribution of the data. | How will you minimize perplexity?                                         |
+| **User Satisfaction Metrics** | Measures the user's perception of the application. Often captured through surveys.                                     | How often will you collect user feedback? How will you adapt based on it? |
+| **Error Rate**                | The rate at which the model makes mistakes in understanding or output.                                                 | What strategies do you have in place to reduce error rates?               |
+| **Retraining Cycles**         | The frequency with which the model is updated to incorporate new data and insights.                                    | How often will you retrain the model? What triggers a retraining cycle?   |
+| **Anomaly Detection**         | Tools and techniques for identifying unusual patterns that do not conform to expected behavior.                        | How will you respond to anomalies?                                        |
 
 
+## Implementing Responsible AI Practices in Chat Applications
+
+Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider any why they should take them seriously.
 
 
+| Principles             | Microsoft's Definition                                | Considerations for Chat Developer                                      | Why It's Important                                                                     |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Fairness               | AI systems should treat all people fairly.            | Ensure the chat application does not discriminate based on user data.  | To build trust and inclusivity among users; avoids legal ramifications.                |
+| Reliability and Safety | AI systems should perform reliably and safely.        | Implement testing and fail-safes to minimize errors and risks.         | Ensures user satisfaction and prevents potential harm.                                 |
+| Privacy and Security   | AI systems should be secure and respect privacy.      | Implement strong encryption and data protection measures.              | To safeguard sensitive user data and comply with privacy laws.                         |
+| Inclusiveness          | AI systems should empower everyone and engage people. | Design UI/UX that is accessible and easy-to-use for diverse audiences. | Ensures a wider range of people can use the application effectively.                   |
+| Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
+| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.           |
 
-## Metrics for Responsible AI-Driven Chat
+
 
 
 References
 
-[Fine-Tuning language models from human preferences]() https://arxiv.org/pdf/1909.08593.pdf
+[Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf) 
+
+[OpenAI Fine Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning)
