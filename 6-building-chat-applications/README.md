@@ -2,7 +2,7 @@
 
 Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai)?
 
-As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the foundational architecture that supports these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
+As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that supports these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
 
 This lesson covers:
 - Techniques for efficiently building and integrating chat applications.
@@ -15,13 +15,13 @@ By the end of this lesson, you'll be able to:
 - Describe considerations for building and integrating chat applications into existing systems.
 - Customize chat applications for specific use-cases. 
 - Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications.
-- Ensuring chat applications leverage AI responsibly.
+- Ensure chat applications leverage AI responsibly.
 
 ##  Integrating Generative AI into Chat Applications
 
 Elevating chat applications through generative AI isn't only centered around making them smarter; it's about optimizing their architecture, performance, and user interface to deliver a quality user experience. This involves investigating the architectural foundations, API integrations, and user interface considerations. This section aims to offer you a comprehensive roadmap for navigating these complex landscapes, whether you're plugging them into existing systems or building them as stand-alone platforms.
  
-By the end of this section, you'll be equipped with the expertise needed to efficiently construct and incorporate chat applications, either as enhancements to existing systems or as stand-alone solutions.
+By the end of this section, you'll be equipped with the expertise needed to efficiently construct and incorporate chat applications.
 
 ### Chatbot or Chat application?
 
@@ -39,7 +39,7 @@ The table below outlines the key differences and similarities to help us underst
 
 ### Leveraging pre-built functionalities with SDKs and APIs
 
-When building a chat application, it's best to assess what is already out there. Using SDKs and APIs to build chat application is an advantageous strategy for building chat applications for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
+When building a chat application, a great first step is to assess what is already out there. Using SDKs and APIs to build chat applications is an advantageous strategy for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
 
 - **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
 - **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built in solutions for these concerns.
@@ -95,7 +95,7 @@ To maintain the high-quality performance an application, it's essential to keep 
 | **Anomaly Detection**         | Tools and techniques for identifying unusual patterns that do not conform to expected behavior.                        | How will you respond to anomalies?                                        |
 
 
-## Implementing Responsible AI Practices in Chat Applications
+### Implementing Responsible AI Practices in Chat Applications
 
 Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider any why they should take them seriously.
 
