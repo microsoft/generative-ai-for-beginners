@@ -155,7 +155,7 @@ GPT models undergo extensive training on vast amounts of data, enabling them to 
 
 For example, you can build flows to automatically generate text for a variety of use cases, such as: drafts of emails, product descriptions, and more. You can also use the model to generate text for a variety of apps, such as chatbots and customer service apps that enable customer service agents to respond effectively and effectiently to customer inquiries.
 
-![](images/create-prompt.png)
+![](images/create-prompt-gpt.png)
 
 To learn how to use this AI Model in Power Automate, go through the [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/add-intelligence-ai-copilot/?WT.mc_id=academic-109639-somelezediko) module.
 
