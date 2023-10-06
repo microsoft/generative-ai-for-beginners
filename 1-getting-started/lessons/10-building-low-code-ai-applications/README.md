@@ -44,17 +44,17 @@ To build an app with Copilot in PowerApps, follow the steps below:
 
 2. Use the text area on the home screen to describe the app you want to build. For example, ***I want to build an app to track and manage inventory of a tech store***. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-chat-prompt-powerapps.png)
+    ![](images/copilot-chat-prompt-powerapps.png)
 
 3. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
 
-![](images/copilot-table.png)
+    ![](images/copilot-table.png)
 
 4. Once you are done with the table, click on the **Create app** button to create the app.
 
 5. The AI Copilot will generate a responsive Canvas app based on your description. You can then customize the app to meet your needs (optional). You can also use the AI Copilot to add new screens to the app. For example, you can use the following prompt to add a new screen to the app: ***I want to add an email screen to send updates***. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-app.png)
+    ![](images/copilot-app.png)
 
 6. Once you are done with the app, click on the **Save** button to save the app.
 
@@ -72,13 +72,13 @@ To author and update a Dataverse Table with Copilot in PowerApps, follow the ste
 
 3. On the right side of the screen, use the text area to describe the table you want to create. For example, ***I want to create a table to track and manage inventory for a tech store***. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-new-table-prompt.png)
+    ![](images/copilot-new-table-prompt.png)
 
 4. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
 
 5. To use AI Copilot to add a new field to the table, use the following prompt: ***I want to add a field to store supplier email.***. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-new-column.png)
+    ![](images/copilot-new-column.png)
 
 6. The AI Copilot will generate a new field and you can then customize the field to meet your needs.
 
@@ -92,11 +92,11 @@ To build a flow with Copilot in Power Automate, follow the steps below:
 
 2. Use the text area on the home screen to describe the flow you want to build. For example, ***I want to receive updates when stock quantity drops to a certain number in Dataverse**. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-chat-prompt-powerautomate.png)
+    ![](images/copilot-chat-prompt-powerautomate.png)
 
 3. The AI Copilot will suggest a flow with the actions you need to perform the task you want to automate. You click on the **Next** button to go through the steps.
 
-![](images/suggested-flow.png)
+    ![](images/suggested-flow.png)
 
 4. Power Automate will prompt you to set up the connections required for the flow. Once you are done with the connections, click on the **Create Flow** button to create the flow.
 
@@ -118,7 +118,7 @@ To build a flow with Copilot in Power Automate, follow the steps below:
 
 9. Use copilot to add a new action to the flow. For example, you can use the following prompt to add a new action to the flow: ***I want to create a task in planner when the condition is true and send an email***. Click on the **Send** button to send the prompt to the AI Copilot.
 
-![](images/copilot-powerautomate.png)
+    ![](images/copilot-powerautomate.png)
 
 10. The AI Copilot will generate a new action and you can then customize the action to meet your needs.
 
