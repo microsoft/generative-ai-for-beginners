@@ -4,24 +4,24 @@
 
 With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like the Edu4All startup - can apply them to their use cases and grow!
 
-The next step in the Edu4All team journey is exploring the current landscape of Large Language Models and understanding what are the most suitable for their use cases.
+The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
 
 This lesson will cover:
 
 - Different types of LLMs in the current landscape
 - Testing, iterating, and comparing different models for your use case in Azure
-- Deploying your LLM
+- How to deploy an LLM
 
 ## Learning Goals
 
 After completing this lesson, you will be able to:
 - Select the right model for your use case
-- Understand how to test, iterate, and improve performance
+- Understand how to test, iterate, and improve performance of your model
 - Know how Business deploy models
 
 ## Understand different types of LLMs 
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Knowing this will help the Education Startup team to select the right model for the scenario, and understand how to test, iterate, and improve performance. 
+Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help the our startup select the right model for the scenario, and understand how to test, iterate, and improve performance. 
 
 ### Foundation Models versus LLMs
 
@@ -46,7 +46,7 @@ Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
 
 Another way to categorize LLMs is whether they are open source or proprietary.
 
-Open-source models are models that are made available to the public and can be used by anyone. They are often made available by the company that created them, or by the research community. These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. However, they are not always optimized for production use, and may not be as performant as proprietary models. Plus, funding for open-source models can be limited, and they may not be maintained for long periods of time or may not be updated with the latest research. Examples of popular open source models include [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), [Bloom](https://sapling.ai/llm/bloom) and [LLaMA](https://sapling.ai/llm/llama).
+Open-source models are models that are made available to the public and can be used by anyone. They are often made available by the company that created them, or by the research community. These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. However, they are not always optimized for production use, and may not be as performant as proprietary models. Plus, funding for open-source models can be limited, and they may not be maintained long term or may not be updated with the latest research. Examples of popular open source models include [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), [Bloom](https://sapling.ai/llm/bloom) and [LLaMA](https://sapling.ai/llm/llama).
 
 Proprietary models are models that are owned by a company and are not made available to the public. These models are often optimized for production use. However, they are not allowed to be inspected, modified, or customized for different use cases. Plus, they are not always available for free, and may require a subscription or payment to use. Also, users do not have control over the data that is used to train the model, which means they should entrust the model owner with ensuring commitment about data privacy and responsible use of AI. Examples of popular proprietary models include [OpenAI models](https://platform.openai.com/docs/models/overview), [Google Bard](https://sapling.ai/llm/bard) or [Claude 2](https://www.anthropic.com/index/claude-2).
 
@@ -55,11 +55,11 @@ Proprietary models are models that are owned by a company and are not made avail
 
 LLMs can also be categorized by the output they generate.
 
-Embeddings is a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings).
+Embeddings are a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings).
 
 ![Embedding](./images/Embedding.png)
 
-Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/), and can be used to generate new images, or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALLE3](https://openai.com/dall-e-3) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion).
+Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/), and can be used to generate new images or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALLE3](https://openai.com/dall-e-3) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion).
 
 ![Image generation](./images/Image.png)
 
@@ -73,9 +73,9 @@ To talk about the different types of architectures of LLMs, let's use an analogy
 
 Imagine your manager gave you a task for writing a quiz for the students.  You have two colleagues; one oversees creating the content and the other oversees reviewing them.
 
-The content creator is like a Decoder only model, he can look at the topic and see what you already wrote and then he can write a course based on that. He is very good at writing engaging and informative content, but he is not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
+The content creator is like a Decoder only model, they can look at the topic and see what you already wrote and then he can write a course based on that. They are very good at writing engaging and informative content, but they are not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
 
-The reviewer is like an Encoder only model, he looks at the course written and the answers, noticing the relationship between them and understanding context, but he is not good at generating content. An example of Encoder only model would be BERT.
+The reviewer is like an Encoder only model, they look at the course written and the answers, noticing the relationship between them and understanding context, but they are not good at generating content. An example of Encoder only model would be BERT.
 
 Imagine that we can have someone as well who could create and review the quiz, this is an Encoder-Decoder model. Some examples would be BART and T5.
 
@@ -83,13 +83,13 @@ Imagine that we can have someone as well who could create and review the quiz, t
 
 Now, let's talk about the difference between a service and a model. A service is a product that is offered by a Cloud Service Provider, and is often a combination of models, data, and other components. A model is the core component of a service, and is often a foundation model, such as an LLM. 
 
-Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange to leverage service owner’s equipment and resources, optimizing CapEx and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
+Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange to leverage service owner’s equipment and resources, optimizing expenses and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
 
 Models are just the Neural Network, with the parameters, weights, and others. Allowing companies to run locally, however, would need to buy equipment, build structure to scale and buy a license or use an open-source model. A model like LLaMA is available to be used, requiring computational power to run the model.
  
 ## How to test and iterate with different models to understand performance on Azure 
 
-Once the Edu4All team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
+Once our team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
 Most of the models we mentioned in previous paragraphs (OpenAI models, open source models like Llama2, and Hugging Face transformers) are available in the [Foundation Models](https://learn.microsoft.com/en-us/azure/machine-learning/concept-foundation-models) catalog in [Azure Machine Learning studio](https://ml.azure.com/).
 
 [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
@@ -132,7 +132,7 @@ Prompt engineering with context is the most cost-effective approach to kick-off 
 ### Retrieval Augmented Generation (RAG)
 
 LLMs have the limitation that they can use only the data that has been used during their training to generate an answer. This means that they don’t know anything about the facts that happened after their training process, and they cannot access non-public information (like company data).
-This can be overcome through RAG, a technique that augments prompt with external data in the form of chunks of documents, considering prompt length limits. This should be supported by Vector database tools (like [Azure Vector Search](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)) that retrieve the useful chunks from varied pre-defined data sources and add them to the prompt Context.
+This can be overcome through RAG, a technique that augments prompt with external data in the form of chunks of documents, considering prompt length limits. This is supported by Vector database tools (like [Azure Vector Search](https://learn.microsoft.com/en-us/azure/search/vector-search-overview)) that retrieve the useful chunks from varied pre-defined data sources and add them to the prompt Context.
 This technique is very helpful when a business doesn’t have enough data, enough time, or resources to fine-tune an LLM, but still wishes to improve performance on a specific workload and reduce risks of hallucinations, i.e., mystification of reality or harmful content.  
 
 ### Fine-tuned model
@@ -149,3 +149,5 @@ Training an LLM from scratch is without a doubt the most difficult and the most 
 -	[[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052)
 -	[How to use Open Source foundation models curated by Azure Machine Learning (preview) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-foundation-models?view=azureml-api-2)
 -	[Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
+-	[Retrieval Augmented Generation using Azure Machine Learning prompt flow](https://learn.microsoft.com/en-us/azure/machine-learning/concept-retrieval-augmented-generation?view=azureml-api-2)
+-	[Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)
