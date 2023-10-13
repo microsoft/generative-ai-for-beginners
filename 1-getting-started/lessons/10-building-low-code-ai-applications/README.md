@@ -68,7 +68,7 @@ You will build the app using Copilot in PowerApps following the steps below:
 
 3. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
 
-> **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the apps data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+    > **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the apps data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
     ![](images/copilot-dataverse-table-powerapps.png)
 
