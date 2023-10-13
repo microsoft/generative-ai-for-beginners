@@ -46,6 +46,22 @@ When building a chat application, a great first step is to assess what is alread
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released. 
 - **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive dataset provides your application with natural language capabilities.
 
+Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the [notebook](notebook.ipynb) for this lesson.
+
+```python
+import os
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for a instructional lesson on chat applications for generative AI."}])
+```
+
+The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive the following error if you didn't set the key.
+
+```
+AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
+```
 
 ### User Experience (UX)
 
