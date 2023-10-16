@@ -7,7 +7,7 @@
 
 This lesson will cover:
 
-* Introduction to the business scenario: Edu4All and their mission.
+* Introduction to the business scenario: our startup idea and mission.
 * Generative AI and how we landed on the current technology landscape.
 * Inner working of a large language model.
 * Main capabilities and practical use cases of Large Language Models.
@@ -21,15 +21,15 @@ After completing this lesson, you will understand:
 
 ## Scenario
 
-Edu4All is a fictious startup in the education domain with the ambitious mission of *improving accessibility* in learning on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs.
+Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this course we'll explore how they are revolutionizing education through a fictional startup, that we’ll be referring to as *our startup*. Our startup works in the education domain with the ambitious mission of *improving accessibility* in learning on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs.
 
-The team is aware they’ll not be able to achieve this goal without leveraging one of the most powerful tools of modern times – generative Artificial Intelligence (AI).
+Our startup team is aware we’ll not be able to achieve this goal without leveraging one of the most powerful tools of modern times – Large Language Models (LLMs).
 
 Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day which provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
 ![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png)
 
-In this curriculum, we’ll explore how Edu4All leverages generative AI to unlock new scenarios in the education world and how they address the inevitable challenges associated with the social implications of its application and the technology limitations.
+In this curriculum, we’ll explore how our startup leverages generative AI to unlock new scenarios in the education world and how we address the inevitable challenges associated with the social implications of its application and the technology limitations.
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
@@ -74,9 +74,9 @@ In the next chapter we are going to explore different types of Generative AI mod
 
 * **Selection process, probability distribution**: The output token is chosen by the model according to its probability of occurring after the current text sequence. This is because the model predicts a probability distribution over all possible ‘next tokens’, calculated based on its training. However, not always the token with the highest probability is chosen from the resulting distribution. A degree of randomness is added to this choice, in a way that the model acts in a non-deterministic fashion - we do not get the exact same output for the same input. This degree of randomness is added to simulate the process of creative thinking and it can be tuned using a model parameter called temperature.
 
-## How can Edu4All leverage Large Language Models?
+## How can our startup leverage Large Language Models?
 
-Now that we have a better understanding of the inner working of a large language model, let’s see some practical examples of the most common tasks they can perform pretty well, with an eye to Edu4All business scenario.
+Now that we have a better understanding of the inner working of a large language model, let’s see some practical examples of the most common tasks they can perform pretty well, with an eye to our business scenario.
 We said that the main capability of a Large Language Model is *generating a text from scratch, starting from a textual input, written in natural language*.
 
 But what kind of textual input and output?
@@ -107,3 +107,4 @@ Also, the output of a generative AI model is not perfect and sometimes the creat
 
 * [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/)
 * [Generative AI: Implication and Applications for Education](https://arxiv.org/abs/2305.07605)
+* [Fundamentals of Generative AI](https://learn.microsoft.com/training/modules/fundamentals-generative-ai/)
