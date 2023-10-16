@@ -73,6 +73,16 @@ General UX principles apply to chat applications, but here's some additional con
 
 One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT ![IMAGE]()
 
+#### Microsoft's System Message Framework for Large Language Models
+
+[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
+
+1. Defining who the model is for, as well as its capabilities and limitations.
+2. Defining the model's output format.
+3. Providing specific examples that demonstrate intended behavior of the model.
+4. Providing additional behavioral guardrails.
+
+
 ### Accessibility
 
  Whether a user has visual, auditory, motor, or cognitive impairments, a well-designed chat application should be usable by all. The following list breaks down specific features aimed at enhancing accessibility for various user impairments.
@@ -91,7 +101,7 @@ Fine-tuning is often considered when a pre-trained model falls short in a specia
 
 ## Considerations for a High Quality AI-Driven Chat Experience
 
-Below are some considerations for 
+This section outlines the criteria for "high-quality" chat applications, which include the capture of actionable metrics and adherence to a framework that responsibly leverages AI technology.
 
 ### Key Metrics 
 
@@ -128,8 +138,13 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 
 
-References
+## References
 
-[Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf) 
 
-[OpenAI Fine Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning)
+- [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message)
+
+- [Learn how to work with the GPT-35-Turbo and GPT-4 models](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?pivots=programming-language-chat-completions)
+
+- [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf) 
+
+- [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning)
