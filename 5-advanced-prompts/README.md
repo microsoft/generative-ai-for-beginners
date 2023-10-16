@@ -1,22 +1,25 @@
 # Advanced prompts
 
-So you've started to use an LLM tool like ChatGPT or perhaps GitHUb Copilot. You've seen the power of the tool, but you're not quite sure how to get the most out of it.
+Let's recap some learnings from the previous chapter: 
+> Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context. 
 
-To be really efficient with AI tools you need to learn how to prompt them efficiently. Prompting is it's own thing referred to as prompt engineering. We've covered prompt engineering somewhat in previous chapters but let's go at depth in this chapter.
+There's also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is *optimization*, how to gradually improve the prompt.
+
+At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques than can be applied to any LLM.  
 
 ## Introduction
 
-- Prompt engineering.
-- Best practices.
-- Templated prompts.
+In this chapter, we will cover the following topics:
+
+- Extend your knowledge of prompt engineering by applying different techniques to your prompts.
+- Configuring your prompts to vary the output.
 
 ## Learning goals
 
-After completing this lesson, you will:
+After completing this lesson, you'll be able to:
 
-- Understand Prompt engineering and how this effects the outcome of your prompts.
-- Apply different types of prompts and see how the outcome differs.
-- Learn best practices for prompt engineering.
+- Apply prompt engineering techniques that improves the outcome of your prompts.
+- Perform prompting that is either varied or deterministic.
 
 ## Prompt engineering
 
@@ -92,7 +95,7 @@ Here's how:
   Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?"
   Answer: 1
 
-Not how we write a substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
+Note how we write a substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
 
 As you can see chain-of-thought is a very powerful technique.
 
@@ -113,7 +116,7 @@ Requirements: {{requirements}}
 
 Above, you see how the prompt is constructed using a template. In the template there's a number of variables, denoted by `{{variable}}`, that will be replaced with actual values from a company API.
 
-Here's an example of how the prompt could look like once the variables have been replaced: 
+Here's an example of how the prompt could look like once the variables have been replaced by content from your company:
 
 ```text
 Insurance company: ACME Insurance
@@ -129,7 +132,44 @@ Budget: $1000
 Requirements: Car, Home
 ```
 
-### Least to most
+Running this prompt through an LLM will produce a response like this:
+
+```text
+, and Life insurance
+
+Given the budget and requirements, we suggest the following insurance package from ACME Insurance: 
+- Car, cheap, 500 USD 
+- Home, cheap, 600 USD 
+- Life, cheap, 100 USD 
+Total cost: $1,200 USD
+```
+
+As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After som *trial and error*, we arrive at the following prompt:
+
+```text
+Insurance company: ACME Insurance
+Insurance products (cost per month): 
+- type: Car, cheap, cost: 500 USD
+- type: Car, expensive, cost: 1100 USD 
+- type: Home, cheap, cost: 600 USD
+- type: Home, expensive, cost: 1200 USD
+- type: Life, cheap, cost: 100 USD
+
+Please suggest an insurance given the following budget and requirements:
+Budget: $1000 restrict choice to types: Car, Home
+```
+
+Note how adding *type* and *cost* and also using the keyword *restrict* helps the LLM to understand what we want.
+
+Now we get the following response:
+
+```text
+Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
+```
+
+The point of this example was to show that even though we're using a basic technique like *generated knowledge*, we still need to optimize the prompt in most cases to get the desired outcome.
+
+### Least-to-most
 
 The idea with Least-to-most prompting is to break down a bigger problem into sub problems. That way, you help guide the LLM on how to "conquer" the bigger problem. A good example could be for data science where you can ask the LLM to divide up a problem like so:
 
@@ -261,6 +301,262 @@ The two biggest risks are loss of life and loss of business.
 
 At this point, the LLM is consistent and mentions "life" and "business" as top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
 
+## Vary your output
+
+LLMs are non deterministic by nature, meaning that you will get different results each time you run the same prompt. Try the following prompt for example:
+
+> "Generate code for a Python Web API"
+
+```text
+# Import necessary modules
+import flask
+from flask import request, jsonify
+
+# Create a Flask app
+app = flask.Flask(__name__)
+
+# Create a route for the API
+@app.route('/api', methods=['GET'])
+def api():
+    # Get the data from the request
+    data = request.args
+
+    # Process the data
+    result = process_data(data)
+
+    # Return the result as JSON
+    return jsonify(result)
+
+# Function to process the data
+def process_data(data):
+    # Do something with the data
+    result = data + 1
+
+    # Return the result
+    return result
+
+# Run the app
+if __name__ == '__main__':
+    app.run()
+
+```
+
+Running the same prompt again generates a slightly different response:
+
+```text
+#import necessary packages
+import flask
+from flask import request, jsonify
+
+#create the Flask application
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
+
+#create a list of books
+books = [
+    {'id': 0,
+     'title': 'A Fire Upon the Deep',
+     'author': 'Vernor Vinge',
+     'first_sentence': 'The coldsleep itself was dreamless.',
+     'year_published': '1992'},
+    {'id': 1,
+     'title': 'The Ones Who Walk Away From Omelas',
+     'author': 'Ursula K. Le Guin',
+     'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
+     'published': '1973'},
+    {'id': 2,
+     'title': 'Dhalgren',
+     'author': 'Samuel R. Delany',
+     'first_sentence': 'to wound the autumnal city.',
+     'published': '1975'}
+]
+
+#create an endpoint for the API
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Books API</h1>
+<p>A prototype API for retrieving books.</p>'''
+
+#create an endpoint to return all books
+@app.route('/api/v1/resources/books/all', methods=['GET'])
+def api_all():
+    return jsonify(books)
+
+#create an endpoint to return a single book
+@app.route('/api/v1/resources/books', methods=['GET'])
+def api_id():
+    #check if an ID was provided as part of the URL
+    #if ID is provided, assign it to a variable
+    #if no ID is provided, display an error
+    if 'id' in request.args:
+        id = int(request.args['id'])
+    else:
+        return "Error: No id field provided. Please specify an id."
+
+    #create an empty list for our results
+    results = []
+
+    #loop through the data and match results that fit the requested ID
+    #IDs are unique, but other fields might return many results
+    for book in books:
+        if book['id'] == id:
+            results.append(book)
+
+    #use the jsonify function from Flask to convert our list of
+    #Python dictionaries to the JSON format
+    return jsonify(results)
+
+app.run()
+```
+
+> So is the varied output a problem?
+
+Depends on what you're trying to do. If you want a specific response then it's a problem. If you're ok with a varied output like "Generate any 3 questions on geography", then it's not a problem.
+
+### Using temperature to vary your output
+
+Ok, so we've decided we want to limit the output to be more predictable, that is more deterministic. How do we do that?
+
+Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 is the most varied. The default value is 0.7. Let's see what happens with two runs of the same prompt with temperature set to 0.1:
+
+> "Generate code for a Python Web API"
+
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
+
+#create an instance of the Flask class
+app = flask.Flask(__name__)
+
+#create an endpoint for the API
+@app.route('/api/v1/endpoint', methods=['GET'])
+def api_endpoint():
+    #get the request data
+    data = request.get_json()
+
+    #process the data
+    result = process_data(data)
+
+    #return the result
+    return jsonify(result)
+
+#function to process the data
+def process_data(data):
+    #process the data
+    result = {'result': 'success'}
+
+    #return the result
+    return result
+
+#run the Flask app
+if __name__ == '__main__':
+    app.run()
+
+```
+
+Running the prompt again gives us this outcome:
+
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
+
+#create a Flask app
+app = flask.Flask(__name__)
+
+#create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    #get the data from the request
+    data = request.get_json()
+    
+    #process the data
+    result = process_data(data)
+    
+    #return the result
+    return jsonify(result)
+
+#define the process_data function
+def process_data(data):
+    #do something with the data
+    result = data + 1
+    
+    #return the result
+    return result
+
+#run the app
+if __name__ == '__main__':
+    app.run()
+
+```
+
+There's only a tiny difference between these two outputs.  Let's do the opposite this time, let's set the temperature to 0.9:
+
+```python
+# Import necessary libraries
+import flask
+from flask import request, jsonify
+
+# Create a Flask app
+app = flask.Flask(__name__)
+
+# Create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    # Get the data from the request
+    data = request.args
+
+    # Process the data
+    result = process_data(data)
+
+    # Return the result
+    return jsonify(result)
+
+# Function to process the data
+def process_data(data):
+    # Do something with the data
+    result = data + 1
+
+    # Return the result
+    return result
+
+# Run the app
+if __name__ == '__main__':
+    app.run()
+
+```
+
+and the second attempt at 0.9 as temperature value:
+
+```python
+import flask
+from flask import request, jsonify
+
+# create the Flask app
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
+
+# create some test data
+books = [
+    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+]
+
+# create an endpoint
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Welcome to our book API!</h1>'''
+
+@app.route('/api/v1/resources/books
+
+```
+
+As you can see, the results couldn't be more varied.
+
+> note, there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.   
+
 ## Good practices
 
 There are many practices you can apply to try getting what you want. You will find your own style as you use prompting more and more. 
@@ -293,7 +589,7 @@ app.listen(3000, () => {
 })
 ```
 
-Use an AI assistant like GitHUb Copilot or ChatGPt and apply the "self-refine" technique to improve the code.
+Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
 
 ## Solution
 
