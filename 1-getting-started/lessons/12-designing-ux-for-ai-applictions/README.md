@@ -1,6 +1,6 @@
 # Designing UX for AI Applications
 
-<!-- ![Lesson video embeded here](video-url) -->
+<!-- 6to embeded here](video-url) -->
 
 <!-- ## [Pre-lecture quiz](quiz-url) -->
 
@@ -89,5 +89,6 @@ AI applications are not perfect, therefore, they are bound to make mistakes. Whe
 * [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873)
 * [UX for AI: Design Practices for AI Developers](https://www.linkedin.com/learning/ux-for-ai-design-practices-for-ai-developers)
 * [New skills in the age of AI by John Maeda](https://youtu.be/Lkbkd_hkDLY)
+* [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/en-us/community/content/best-practices-ai-ux)
 
 
