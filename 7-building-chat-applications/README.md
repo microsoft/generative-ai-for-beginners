@@ -71,7 +71,14 @@ General UX principles apply to chat applications, but here's some additional con
 - **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.  
 - **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit in finding specific answers, creating a more efficient and satisfying interaction.
 
-One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT ![IMAGE]()
+One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction. 
+
+![Custom Instructions Settings in ChatGPT](img/custom_instructions.png)
+
+This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in depth lesson plan based on her experience.
+
+![A prompt in ChatGPT for a lesson plan about linked lists](img/lesson_plan_prompt.png)
+
 
 #### Microsoft's System Message Framework for Large Language Models
 
