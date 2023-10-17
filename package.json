@@ -23,5 +23,8 @@
 	"homepage": "https://github.com/microsoft/generative-ai-for-beginners#readme",
 	"devDependencies": {
 		"docsify-to-pdf": "0.0.5"
+	},
+	"dependencies": {
+		"openai": "^4.10.0"
 	}
 }
