@@ -18,7 +18,7 @@ prompt = "Complete the following: Once upon a time there was a"
 # engine
 engine = "davinci-001"
 
-# deployment_id
+# deployment_id, azure specific
 deployment_name = os.getenv("DEPLOYMENT_NAME")
 
 completion = openai.Completion.create(engine=deployment_name, prompt=prompt, max_tokens=600)
