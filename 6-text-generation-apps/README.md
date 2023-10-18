@@ -76,9 +76,9 @@ Then there are libraries that operate on a higher level like:
 - **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
 
 ## First app using openai
-
+Let's see how we can build our first app, what libraries we need, how much is required and so on.
 ### Install openai
-
+There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more.  We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
 ```bash
 pip install openai
 ```
@@ -586,7 +586,7 @@ What we have so far is code that works, but there are some tweaks we should be d
     completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
     ```
 
-   > Note, the close to 1.0, the higher the value.
+   > Note, the closer to 1.0, the more varied the output.
 
 
 
