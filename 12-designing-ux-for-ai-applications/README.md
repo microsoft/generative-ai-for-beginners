@@ -18,7 +18,7 @@ User experience is how a user interacts with and uses a specific product or serv
 Take some time and read more about [user experience and design thinking.](https://learn.microsoft.com/en-us/training/modules/ux-design/)
 
 ## Introduction to User Experience and Understanding User Needs
-In Edu4All, our fictitious education startup, we have two primary users, teachers and students. Each of the two users has unique needs. A user-centered design prioritizes the user ensuring the products are relevant and beneficial for those it is intended for. 
+In our fictitious education startup, we have two primary users, teachers and students. Each of the two users has unique needs. A user-centered design prioritizes the user ensuring the products are relevant and beneficial for those it is intended for. 
 
 The application should be **useful, reliable, accessible and pleasant** to provide a good user experience. 
 
@@ -76,7 +76,7 @@ Another way to handle this is to clearly communicate the capabilities and limita
 
 ![Giving feedback and handling errors](images/feedback-loops.png)
 
-System errors are common with applications where the user might need assistance with information outside the scope of the AI or the application may have a limit of how many questions/subjects a user can generate summaries. For example a AI application trained with data on limited subjects for example, History and Math may not be able to handle questions around Geography. To mitigate this, the AI system can give a response like: "Sorry, Edu4All has been trained with data in the following subjects....., I cannot be able to respond to the question you asked."
+System errors are common with applications where the user might need assistance with information outside the scope of the AI or the application may have a limit of how many questions/subjects a user can generate summaries. For example a AI application trained with data on limited subjects for example, History and Math may not be able to handle questions around Geography. To mitigate this, the AI system can give a response like: "Sorry, our product has been trained with data in the following subjects....., I cannot be able to respond to the question you asked."
 
 AI applications are not perfect, therefore, they are bound to make mistakes. When designing your applications, you should ensure you create room for feedback from users and error handling in a way that is simple and easily explainable.
 

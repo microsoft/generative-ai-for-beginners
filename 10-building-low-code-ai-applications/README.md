@@ -17,7 +17,7 @@ This lesson covers:
 By the end of this lesson, you will be able to:
 
 - Understand how Copilot works in Power Platform
-- Build a Student Assignment Tracker App for Edu4All, our fictitious education startup.
+- Build a Student Assignment Tracker App for our education startup.
 - Build an Invoice Processing Flow that uses AI to extract information from invoices
 - Apply best practices when using the Create Text with GPT AI Model
 
@@ -26,7 +26,7 @@ The tools and technologies that you will use in this lesson are:
 - PowerApps for the Student Assignment Tracker app, which provides a low-code development environment for building apps to track, manage and interact with data.
 - Dataverse for storing the data for the Student Assignment Tracker app where Dataverse will provide a low-code data platform for storing the apps data.
 - Power Automate for the Invoice Processing flow where you will have low-code development environment for building workflows to automate the Invoice Processing process.
-- AI Builder for the Invoice Processing AI Model where you will use prebuilt AI Models to process the Edu4All invoices.
+- AI Builder for the Invoice Processing AI Model where you will use prebuilt AI Models to process the invoices for our startup.
 
 ## Generative AI in Power Platform
 
@@ -34,7 +34,7 @@ Enhancing low-code development and application with generative AI is a key focus
 
 How does this work? Copilot is an AI assistant that enables you to build Power Platform solutions by describing your requirements in a series of conversational steps using natural language. You can use Copilot driven functionalities as feature in your app screens to enable users to uncover insights through conversational interactions. AI Builder is a low-code AI capability available in Power Platform that enables you to use AI Models to help you to automate processes and predict outcomes. With AI Builder you can bring AI to your apps and flows that connect to your data in Dataverse or in various cloud data sources, such as SharePoint, OneDrive or Azure.
 
-Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents. AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for Edu4All, our fictitious education startup.
+Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents. AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for our education startup.
 
 ### Copilot in PowerApps
 
@@ -48,15 +48,15 @@ As part of the Power Platform, Power Automate lets users create automated workfl
 
 The copilot AI assistant feature in Power Automate enables you to describe what kind of flow you need and what actions you want your flow to perform. Copilot then generates a flow based on your description. You can then customize the flow to meet your needs. The AI Copilot also generates and suggests the actions you need to perform the task you want to automate. We will look at what flows are and how you can use them in Power Automate on this lesson later. You can then customize the actions to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Automate home screen.
 
-## Use Copilot to Build a Solution for Edu4All
+## Use Copilot to Build a Solution for Our Startup 
 
-Edu4All is a fictitious education startup that provides online courses to students. The startup has grown rapidly and is now struggling to keep up with the demand for its courses. The startup has hired you as a Power Platform developer to help them build a low code solution to help them manage their student assignments and invoices. Their solution should be able to help them track and manage student assignments through an app and automate the invoice processing process through a workflow. You have been asked to use Generative AI to develop the solution.
+Our startup provides online courses to students. The startup has grown rapidly and is now struggling to keep up with the demand for its courses. The startup has hired you as a Power Platform developer to help them build a low code solution to help them manage their student assignments and invoices. Their solution should be able to help them track and manage student assignments through an app and automate the invoice processing process through a workflow. You have been asked to use Generative AI to develop the solution.
 
 When you are getting started with using Copilot, you can use the [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko) to get started with the prompts. This library contains a list of prompts that you can use to build apps and flows with Copilot. You can also use the prompts in the library to get an idea of how to describe your requirements to Copilot.
 
-### Build a Student Assignment Tracker App for Edu4All
+### Build a Student Assignment Tracker App for Our Startup
 
-The educators at Edu4All have been struggling to keep track of student assignments. They have been using a spreadsheet to track the assignments but this has become difficult to manage as the number of students has increased. They have asked you to build an app that will help them track and manage student assignments. The app should enable them to add new assignments, view assignments, update assignments and delete assignments. The app should also enable the educators and students to view the assignments that have been graded and those that have not been graded. 
+The educators at our startup have been struggling to keep track of student assignments. They have been using a spreadsheet to track the assignments but this has become difficult to manage as the number of students has increased. They have asked you to build an app that will help them track and manage student assignments. The app should enable them to add new assignments, view assignments, update assignments and delete assignments. The app should also enable the educators and students to view the assignments that have been graded and those that have not been graded. 
 
 You will build the app using Copilot in PowerApps following the steps below:
 
@@ -94,13 +94,13 @@ You will build the app using Copilot in PowerApps following the steps below:
 
 > **Your homework**: The app you just built is a good start but can be improved. With the email feature, educators can only send emails to students manually by having to type their emails. Can you use Copilot to build an automation that will enable educators to send emails to students automatically when they submit their assignments? Your hint is with the right prompt you can use Copilot in Power Automate to build this.
 
-### Build an Invoices Information Table for Edu4All
+### Build an Invoices Information Table for Our Startup
 
-The Edu4All finance team has been struggling to keep track of invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a table that will help them store, track and manage the information of the invoices they received. The table should be used to build an automation that will extract all the invoice information and store it in the table. The table should also enable the finance team to view the invoices that have been paid and those that have not been paid.
+The finance team of our startup has been struggling to keep track of invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a table that will help them store, track and manage the information of the invoices they received. The table should be used to build an automation that will extract all the invoice information and store it in the table. The table should also enable the finance team to view the invoices that have been paid and those that have not been paid.
 
 The Power Platform has an underlying data platform called Dataverse that enables you to store the data for your apps and solutions. Dataverse provides a low-code data platform for storing the apps data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-Why should you use Dataverse for Edu4All? The standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you store different types of data, similar to how you might use multiple worksheets in a single Excel workbook. You can use tables to store data that is specific to your organization or business need. Some of the benefits Edu4All will get from using Dataverse include but are not limited to: 
+Why should we use Dataverse for our startup? The standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you store different types of data, similar to how you might use multiple worksheets in a single Excel workbook. You can use tables to store data that is specific to your organization or business need. Some of the benefits our startup will get from using Dataverse include but are not limited to: 
 
 - **Easy to manage**: Both the metadata and data are stored in the cloud, so you don't have to worry about the details of how they are stored or managed. You can focus on building your apps and solutions.
 
@@ -110,7 +110,7 @@ Why should you use Dataverse for Edu4All? The standard and custom tables within 
 
 - **Logic and validation**: You can use business rules, calculated fields, and validation rules to enforce business logic and maintain data accuracy.
 
-Now that you know what Dataverse is and why you should use it, let's look at how you can use Copilot to create a table in Dataverse to meet the requirements of the Edu4All finance team.
+Now that you know what Dataverse is and why you should use it, let's look at how you can use Copilot to create a table in Dataverse to meet the requirements of our finance team.
 
 >**Note** : You will use this table in the next section to build an automation that will extract all the invoice information and store it in the table.
 
@@ -130,7 +130,7 @@ To create a table in Dataverse using Copilot, follow the steps below:
 
     ![](images/copilot-dataverse-table.png)
 
-5. The Edu4All finance team want to send an email to the supplier to update them with the current status of their invoice. You can use Copilot to add a new field to the table to store the supplier email. For example, you can use the following prompt to add a new field to the table: ***I want to add a column to store supplier email***. Click on the **Send** button to send the prompt to the AI Copilot.
+5. The finance team want to send an email to the supplier to update them with the current status of their invoice. You can use Copilot to add a new field to the table to store the supplier email. For example, you can use the following prompt to add a new field to the table: ***I want to add a column to store supplier email***. Click on the **Send** button to send the prompt to the AI Copilot.
 
 6. The AI Copilot will generate a new field and you can then customize the field to meet your needs.
 
@@ -159,13 +159,13 @@ With Custom AI Models you can bring your own model into AI Builder so that it ca
 
 ![](images/ai-builder-models.png)
 
-### Build an Invoice Processing Flow for Edu4All
+### Build an Invoice Processing Flow for Our Startup
 
-The Edu4All finance team has been struggling to process invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a workflow that will help them process invoices using AI. The workflow should enable them to extract information from invoices and store the information in a Dataverse table. The workflow should also enable them to send an email to the finance team with the extracted information.
+The finance team has been struggling to process invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a workflow that will help them process invoices using AI. The workflow should enable them to extract information from invoices and store the information in a Dataverse table. The workflow should also enable them to send an email to the finance team with the extracted information.
 
-Now that you know what AI Builder is and why you should use it, let's look at how you can use the Invoice Processing AI Model in AI Builder, that we covered earlier on, to build a workflow that will help the Edu4All finance team process invoices.
+Now that you know what AI Builder is and why you should use it, let's look at how you can use the Invoice Processing AI Model in AI Builder, that we covered earlier on, to build a workflow that will help the finance team process invoices.
 
-To build a workflow that will help the Edu4All finance team process invoices using the Invoice Processing AI Model in AI Builder, follow the steps below:
+To build a workflow that will help the finance team process invoices using the Invoice Processing AI Model in AI Builder, follow the steps below:
 
 1. Navigate to the [Power Automate](https://make.powerautomate.com) home screen.
 
@@ -204,7 +204,7 @@ To build a workflow that will help the Edu4All finance team process invoices usi
 
 12. Once you are done with the flow, click on the **Save** button to save the flow. You can then test the flow by sending an email with an invoice to the folder you specified in the trigger.
 
-> **Your homework**: The flow you just built is a good start, now you need to think of how you can build an automation that will enable the Edu4All finance team to send an email to the supplier to update them with the current status of their invoice. Your hint: the flow must run when the status of the invoice changes.
+> **Your homework**: The flow you just built is a good start, now you need to think of how you can build an automation that will enable our finance team to send an email to the supplier to update them with the current status of their invoice. Your hint: the flow must run when the status of the invoice changes.
 
 ### Use a Text Generation AI Model in Power Automate
 

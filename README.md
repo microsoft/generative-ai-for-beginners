@@ -8,78 +8,45 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/)
 
-# Generative AI for Beginners - A curriculum
+# Generative AI for Beginners - A 12 lesson curriculum on building Generative AI Applications
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 12-week, 24-lesson curriculum all about Generative AI basics. Each lesson includes pre- and post-lesson quizzes, written instructions to complete the lesson, a solution, an assignment and more. Our project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
-
-> **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. If you would like to create your own lessons, we have also included a [lesson template](lesson-template/README.md).
-
-> **[Students](https://learn.microsoft.com/training/student-hub/?WT.mc_id=academic-99474-cxa)**, to use this curriculum on your own, fork the entire repo and complete the exercises on your own, starting with a pre-lecture quiz, then reading the lecture and completing the rest of the activities. Try to create the projects by comprehending the lessons rather than copying the solution code; however that code is available in the /solutions folders in each project-oriented lesson. Another idea would be to form a study group with friends and go through the content together.
-
-## Pedagogy
-
-We have chosen two pedagogical tenets while building this curriculum: ensuring that it is project-based and that it includes frequent quizzes. By the end of this series, students will have built a number of real-world projects that leverage generative AI.
-
-By ensuring that the content aligns with projects, the process is made more engaging for students and retention of concepts will be augmented.
-
-In addition, a low-stakes quiz before a class sets the intention of the student towards learning a topic, while a second quiz after class ensures further retention. This curriculum was designed to be flexible and fun and can be taken in whole or in part. The projects start small and become increasingly complex by the end of the 12 week cycle.
+Azure Cloud Advocates at Microsoft are pleased to offer a 12-leson curriculum all about Generative AI basics. This curruci
 
 ## Each lesson includes:
 
 - sketchnote
 - optional supplemental video
-- pre-lesson warmup quiz
 - written lesson
 - for project-based lessons, step-by-step guides on how to build the project
-- knowledge checks
 - a challenge
 - supplemental reading
-- assignment
-- post-lesson quiz
 
-> **A note about quizzes**: All quizzes are contained [in this app](), for 48 total quizzes of three questions each. They are linked from within the lessons but the quiz app can be run locally; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
 ## Lessons
 
-|       |              Project Name              |                       Concepts Taught                       | Learning Objectives                                                                                                                                                 |                                                        Linked Lesson                                                         |
-| :---: | :------------------------------------: | :---------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------: |
-| 01 | [Getting started](./1-getting-started/README.md) | | | [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md)                      |
-| 02 | | | | |
-| 03 | | | | |
-| 04 | | | | |
-| 05 | | | | |
-| 06 | | | | |
-| 07 | | | | |
-| 08 | | | | |
-| 09 | | | | |
-| 10 | | | | |
-| 11 | | | | |
-| 12 | | | | |
-| 13 | | | | |
-| 14 | | | | |
-| 15 | | | | |
-| 16 | | | | |
-| 17 | | | | |
-| 18 | | | | |
-| 19 | | | | |
-| 20 | | | | |
-| 21 | | | | |
-| 22 | | | | |
-| 23 | | | | |
-| 24 | | | | |
+|       |              Lesson Name              |                       Concepts Taught                       |                     Learning Goal                 |                             
+| :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
+| 00 | Course Introduction - How to Take This Course | Tech setup and course structure | Setting you up for success while learning in this course| [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md) 
+| 01 | [Introduction to Generative AI and LLMs](./1-getting-started/README.md) | Generative AI and how we landed on the current technology landscape|  What generative AI is and how Large Language Models work.                    |
+| 02 | [Exploring and comparing different LLMs](./2-exploring-and-comparing-different-llms/) |Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
+| 03 | Using Generative AI Responsibly | Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibliy 
+| 04 | [Understanding Prompt Engineering Fundamentals](./4-prompt-engineering-fundamentals/) | Hands-on application of Prompy Engineering Best Practices  |  Understand prompt structure & usage|  
+| 05 |Creating Advanced Prompts | Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improves the outcome of your prompts.| 
+| 06 | Building Text Generation Applications  | Build a text generation app using Azure OpenAI  | Understand how to effecient use tokens and temparture to vary the model's output | |
+| 07 | Building Chat Applications | Techniques for efficiently building and integrating chat applications.| Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications| 
+| 08 | Building Search Apps (Vector Databases) | Semantic vs Keyword search.  What are text embeddings and how they apply to search  | Create an application that uses Embeddings to search for data. | 
+| 09 | Building Image Generation Applications  | Image generation and why it's useful in building applications| Build an image generation application | 
+| 10 | [Building Low Code AI Applications](./10-building-low-code-ai-applications/)  | Introduction to Generative AI in Power Platform | Build a Student Assignment Tracker App for our education startup with Low Code | |
+| 11 | [Integrating External Applications with Function Calling](./11%20-%20Integrating%20External%20Applications%20with%20Function%20Calling%20/)  | What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
+| 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
+| xx | Additional Learning Resources  | Links to continue your learning from each lesson! |  | |
+
 
 ## Offline access
 
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
-### PDF
 
-You can generate a PDF of this content for offline access if needed. To do this, make sure you have [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and run the following commands in the root folder of this repo:
-
-```sh
-npm i
-npm run convert
-```
 
 ## Help Wanted!
 
@@ -89,9 +56,11 @@ Would you like to contribute a translation? Please read our [translation guideli
 
 Our team produces other curricula! Check out:
 
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
-- [IoT for Beginners](https://aka.ms/iot-beginners)
 - [ML for Beginners](https://aka.ms/ml-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)
 - [AI for Beginners](https://aka.ms/ai-beginners)
+
+- [Web Dev for Beginners](https://aka.ms/webdev-beginners)
+- [IoT for Beginners](https://aka.ms/iot-beginners)
+
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
