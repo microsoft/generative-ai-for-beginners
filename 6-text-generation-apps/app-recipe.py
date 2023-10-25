@@ -24,10 +24,10 @@ prompt = f"Show me {no_recipes} recipes for a dish with the following ingredient
 
 
 # engine
-engine = "davinci-001"
+engine = os.getenv("ENGINE")
 
 # deployment_id
-deployment_name = "chris-eastus"
+deployment_name = os.getenv("DEPLOYMENT_NAME")
 
 completion = openai.Completion.create(engine=deployment_name, prompt=prompt, max_tokens=600, temperature=0.1)
 
