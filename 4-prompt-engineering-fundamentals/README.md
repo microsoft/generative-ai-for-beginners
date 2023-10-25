@@ -93,7 +93,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 ![Base LLM Chat Completion](./img/4.0-playground-chat-base.png)
 
-### 1.4.3 Concept 3: Instruction Tuned LLMs
+### 1.4.3 Concept: Instruction Tuned LLMs
 
 An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction.
 
