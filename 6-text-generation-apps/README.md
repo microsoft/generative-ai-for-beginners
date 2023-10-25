@@ -20,15 +20,6 @@ At the end of this lesson, you'll be able to:
 - Build a text generation app using openai.
 - Configure your app to use more or less tokens and also change the temperature, for a varied output.
 
-## References
-
-TODO, openai
-
-## Learning goals
-
-- Understand what a text generation app is.
-- Explain what semantic kernel is and how you can use it to build a text generation app.
-
 ## What is a text generation app?
 
 Normally when you build an app it some kind of interface like the following:
@@ -76,47 +67,67 @@ Then there are libraries that operate on a higher level like:
 - **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
 
 ## First app using openai
+
 Let's see how we can build our first app, what libraries we need, how much is required and so on.
+
 ### Install openai
+
 There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more.  We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
+
 ```bash
 pip install openai
 ```
 
-### Create an account
+### Create a resource
 
-Go to https://beta.openai.com/ and create an account.
+You need to carry out the following steps:
 
-TODO, add instructions for Azure.
+- Create an account on Azure <https://azure.microsoft.com/free/>.
+- Gain access to Azure Open AI. Go to <https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai> and request access.
 
-### Setup your API key
+  > [!NOTE]
+  > At the time of writing, you need to apply for access to Azure Open AI.
 
-You can use one of two ways to setup your API key:
+- Install Python <https://www.python.org/>
+- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
 
-- Set the environment variable `OPENAI_API_KEY` to your API key.
 
-    ```bash
-    export OPENAI_API_KEY='sk-...'
-    ```
-- Set it in code:
+### Locate API key and endpoint
 
-    ```python
-    import openai
-    openai.api_key = "sk-..."
-    ```
+At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure Open AI resource and copy the "Key 1" value.
 
-Once you're setup with your API key, you can start using the library to generate text.
+  ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/en-us/azure/ai-services/openai/media/quickstarts/endpoint.png)
 
-If you're using Azure Open AI, here's how setup configuration:
+Now that you have this information copied, let's instruct the libraries to use it.
+
+> [!NOTE]
+> It's worth separating your API key from your code. You can do so by using environment variables.
+> - Set the environment variable `OPENAI_API_KEY` to your API key.
+>  `export OPENAI_API_KEY='sk-...'`
+
+
+### Setup configuration Azure
+
+If you're using Azure Open AI, here's how you setup configuration:
 
 ```python
-import openai
-
 openai.api_type = 'azure'
 openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_version = '2023-05-15'
+openai.api_base = os.getenv("API_BASE")
 ```
 
-### Generate text
+Above we're setting the following:
+
+- `api_type` to `azure`. This tells the library to use Azure Open AI and not OpenAI.
+- `api_key`, this is your API key found in the Azure Portal.
+- `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
+- `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key. 
+
+> [!NOTE]
+> `os.getenv` is a function that reads environment variables. You can use it to read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set these environment variables in your terminal or by using a library like `dotenv`.
+
+## Generate text
 
 The way to generate text is to use the `Completion` class. Here's an example:
 
@@ -168,19 +179,17 @@ Now that we learned how to setup and configure openai, it's time to build your f
     import openai
 
     openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
-    # azure
 
-    # enable below if you use Azure Open AI
-    # openai.api_type = 'azure' 
-    # openai.api_version = '2023-05-15'
-    # openai.api_base = "<endpoint found in Azure Portal where your API key is>"
- 
+    openai.api_type = 'azure' 
+    openai.api_version = '2023-05-15'
+    openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+    deployment_name = "<deployment name>"
 
     # add your completion code
     prompt = "Complete the following: Once upon a time there was a"
 
     # make completion
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt)
+    completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
     
     # print response
     print(completion.choices[0].text)
