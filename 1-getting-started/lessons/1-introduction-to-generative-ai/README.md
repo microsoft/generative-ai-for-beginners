@@ -3,6 +3,10 @@
 <!-- Sketchnote goes here -->
 ![]()
 
+Generative AI is artificial intelligence capable of generating text, images and other type of content. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds. 
+
+In this curriculum, we’ll explore how our startup leverages generative AI to unlock new scenarios in the education world and how we address the inevitable challenges associated with the social implications of its application and the technology limitations.
+
 ## Introduction
 
 This lesson will cover:
@@ -19,17 +23,17 @@ After completing this lesson, you will understand:
 * What generative AI is and how Large Language Models work.
 * How you can leverage large language models for different use cases, with a focus on education scenarios.
 
-## Scenario
+## Scenario: an educational startup "Edu4All"
 
-Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this course we'll explore how they are revolutionizing education through a fictional startup, that we’ll be referring to as *our startup*. Our startup works in the education domain with the ambitious mission of *improving accessibility* in learning on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs.
+Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this curriculum we'll explore how it's revolutionizing education through a fictional startup. We'll refer to this startup as Edu4All. Our startup works in the education domain with the ambitious mission statement of 
+
+> *improving accessibility in learning, on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs*.
 
 Our startup team is aware we’ll not be able to achieve this goal without leveraging one of the most powerful tools of modern times – Large Language Models (LLMs).
 
-Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day which provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
+Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
 ![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png)
-
-In this curriculum, we’ll explore how our startup leverages generative AI to unlock new scenarios in the education world and how we address the inevitable challenges associated with the social implications of its application and the technology limitations.
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
@@ -102,6 +106,12 @@ The input of a large language model is known as prompt, while the output is know
 The examples above are quite simple and don’t want to be an exhaustive demonstration of Large Language Models capabilities. They just want to show the potential of using generative AI, in particular but not limited to educational context.
 
 Also, the output of a generative AI model is not perfect and sometimes the creativity of the model can work against it, resulting in an output which is a combination of words that the human user can interpret as a mystification of reality, or it can be offensive. Generative AI is not intelligent - at least in the more comprehensive definition of intelligence, including critical and creative reasoning or emotional intelligence; it is not deterministic, and it is not trustworthy, since hallucinations, such as erroneous references, content, and statements, may be combined with correct information, and presented in a persuasive and confident manner. In the following lessons, we’ll be dealing with all these limitations and we’ll see what we can do to mitigate them.
+
+## Assignment
+
+Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan. 
+
+If you done this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/en-gb/startups) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
 
 ## Additional resources
 
