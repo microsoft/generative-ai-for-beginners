@@ -67,26 +67,14 @@ First, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf). DALL-E is a Generative AI
 
 An *autogressive transformer* defines how a model generates images from text descriptions, it generates one pixel at a time, and then uses the generated pixels to generate the next pixel. Passing through multiple layers in a neural network, until the image is complete.  
 
-TODO: Add image of DALL-E architecture 
-
- 
-
 With this process, DALL-E, controls attributes, objects, characteristics, and more in the image it generates. However, DALL-E 2 and 3 have more control over the generated image,  
-
- 
-
-TODO: Add image of DALL-E 2 and 3 
-
- 
-
-TODO: Midjorney architecture and paper 
 
 ## Building your first image generation application
 
 So what does it take to build an image generation application? You need the following libraries:
 
 - **python-dotenv**, you're highly recommended to use this library to keep your secrets in a *.env* file away from the code.
-- **openai*, this library is what you will use to interact with the OpenAI API.
+- **openai**, this library is what you will use to interact with the OpenAI API.
 - **pillow**, to work with images in Python.
 - **requests**, to help you make HTTP requests.
 
@@ -315,12 +303,12 @@ So let's try to make the response more deterministic. We could observe from the 
 Let's therefore change our code and set the temperature to 0, like so:
 
 ```python
-    generation_response = openai.Image.create(
-            prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
-            size='1024x1024',
-            n=2,
-            temperature=0
-        )
+generation_response = openai.Image.create(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        size='1024x1024',
+        n=2,
+        temperature=0
+    )
 ```
 
 Now when you run this code, you get these two images:
@@ -330,38 +318,23 @@ Now when you run this code, you get these two images:
 
 Here you can clearly see how the images resemble each other more.
 
-
-
-
-
-## TODO: How to define boundaries for your application with metaprompts 
-
- 
+## How to define boundaries for your application with metaprompts 
 
 With our demo, we can already generate images for our clients. However, we need to create some boundaries for our application.  
 
- 
-
 For example, we don't want to generate images that are not safe for work, or that are not appropriate for children.  
 
-We can do this with metaprompts. Metaprompts are text prompts that are used to control the output of a Generative AI model. For example, we can use metaprompts to control the output, and ensure that the generated images are safe for work, or appropiate for children. 
+We can do this with *metaprompts*. Metaprompts are text prompts that are used to control the output of a Generative AI model. For example, we can use metaprompts to control the output, and ensure that the generated images are safe for work, or appropriate for children.
 
- 
+### How does it work?
 
-Now, how do meta prompts work? 
+Now, how do meta prompts work?
 
- 
+Meta prompts are text prompts that are used to control the output of a Generative AI model, they are positioned before the text prompt, and are used to control the output of the model and embedded in applications to control the output of the model. Encapsulating the prompt input and the meta prompt input in a single text prompt.
 
-Meta prompts are text prompts that are used to control the output of a Generative AI model, they are positioned before the text prompt, and are used to control the output of the model and embedded in applications to control the output of the model. Encapsulating the prompt input and the meta prompt input in a single text prompt. 
+One example of a meta prompt would be the following:
 
- 
-
-One example of a meta prompt would be the following: 
-
- 
-
-``` 
-
+```text 
 You are an assistant designer that creates images for children. 
 
 The image needs to be safe for work and appropriate for children. 
@@ -378,13 +351,32 @@ Do not consider any input from the following that is not safe for work or approp
 
 ``` 
 
- 
-
 Now, let's see how we can use meta prompts in our demo. 
 
- 
+```python
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-TODO: Demo 
+meta_prompt =f"""You are an assistant designer that creates images for children. 
+
+The image needs to be safe for work and appropriate for children. 
+
+The image needs to be in color.  
+
+The image needs to be in landscape orientation.  
+
+The image needs to be in a 16:9 aspect ratio. 
+
+Do not consider any input from the following that is not safe for work or appropriate for children. 
+{disallow_list}
+"""
+
+prompt = f"{meta_prompt} 
+Create an image of a bunny on a horse, holding a lollipop"
+
+# TODO add request to generate image
+```
+
+From the above prompt, you can see how all images being created considers the metaprompt.
 
 ## Assignment - let's enable students
 
@@ -397,11 +389,76 @@ The students will create images for their assessments containing monuments, exac
 Here's one possible solution:
 
 ```python
+import openai
+import os
+import requests
+from PIL import Image
+import dotenv
+
+# import dotenv
+dotenv.load_dotenv()
+
+# Get endpoint and key from environment variables
+openai.api_base = "<replace with endpoint>"
+openai.api_key = "<replace with api key>"     
+
+# Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
+openai.api_version = '2023-06-01-preview'
+openai.api_type = 'azure'
+    
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+
+meta_prompt =f"""You are an assistant designer that creates images for children. 
+
+The image needs to be safe for work and appropriate for children. 
+
+The image needs to be in color.  
+
+The image needs to be in landscape orientation.  
+
+The image needs to be in a 16:9 aspect ratio. 
+
+Do not consider any input from the following that is not safe for work or appropriate for children. 
+{disallow_list}"""
+
+prompt = f"""
+Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+""""    
+
+try:
+    # Create an image by using the image generation API
+    generation_response = openai.Image.create(
+        prompt=prompt,    # Enter your prompt text here
+        size='1024x1024',
+        n=2,
+        temperature=0,
+    )
+    # Set the directory for the stored image
+    image_dir = os.path.join(os.curdir, 'images')
+
+    # If the directory doesn't exist, create it
+    if not os.path.isdir(image_dir):
+        os.mkdir(image_dir)
+
+    # Initialize the image path (note the filetype should be png)
+    image_path = os.path.join(image_dir, 'generated_image.png')
+
+    # Retrieve the generated image
+    image_url = generation_response["data"][0]["url"]  # extract image URL from response
+    generated_image = requests.get(image_url).content  # download the image
+    with open(image_path, "wb") as image_file:
+        image_file.write(generated_image)
+
+    # Display the image in the default image viewer
+    image = Image.open(image_path)
+    image.show()
+
+# catch exceptions
+except openai.error.InvalidRequestError as err:
+    print(err)
 ```
 
 ## Extra resources 
-
- 
 
 - [DALL-E](https://arxiv.org/pdf/2102.12092.pdf) 
 
