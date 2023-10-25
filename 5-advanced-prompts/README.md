@@ -573,20 +573,20 @@ Here are some good practices to consider:
 
 ## Assignment
 
-Here's code in JavaScript showing how to build a simple API using Express.js:
+Here's code in Python showing how to build a simple API using Flask:
 
-```javascript
-const express = require('express')
+```python
+from flask import Flask, request
 
-const app = express()
+app = Flask(__name__)
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+@app.route('/')
+def hello():
+    name = request.args.get('name', 'World')
+    return f'Hello, {name}!'
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-})
+if __name__ == '__main__':
+    app.run()
 ```
 
 Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
@@ -598,7 +598,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc. 
 
-[Solution](./solution.js)
+[Solution](./solution.py)
 
 ## Knowledge check
 
