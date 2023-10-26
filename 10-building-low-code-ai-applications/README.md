@@ -1,5 +1,10 @@
 # Building Low Code AI Applications
 
+
+[![Building Low Code AI Applications](./images/genai_course_10[68].png)](https://youtu.be/XX8491SAF44) 
+
+*(Click the image abvoe to view video of this lesson)*
+
 ## Introduction
 
 Building apps and solutions has become more easier for traditional developers and non-developers through the use of Low Code Development Platforms. Low Code Development Platforms enable you to build apps and solutions with little to no code. This is achieved by providing a visual development environment that enables you to drag and drop components to build apps and solutions. This enables you to build apps and solutions faster and with less resources. In this lesson, we dive deep into how to use Low Code and how to enhance low code development with AI using Power Platform.
@@ -218,18 +223,9 @@ For example, you can build flows to automatically generate text for a variety of
 
 To learn how to use this AI Model in Power Automate, go through the [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/en-us/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module.
 
-## Resources
 
-- [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/en-us/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko)
+## Great Work! Contiune Your Learning 
 
-- [Get Started with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder/?WT.mc_id=academic-109639-somelezediko)
+Want to learn more about building low-code Generative AI apps? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
 
-- [Detect Objects with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder-object-detection/?WT.mc_id=academic-109639-somelezediko)
-
-- [Process Custom Documents with AI Builder](https://learn.microsoft.com/en-us/training/modules/get-started-with-form-processing/?WT.mc_id=academic-109639-somelezediko)
-
-- [AI Copilot Overview](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-overview?WT.mc_id=academic-109639-somelezediko)
-
-- [Build a canvas app solution with Copilot in Power Apps](https://learn.microsoft.com/en-us/training/modules/build-canvas-app-real-estate-power-apps-copilot/?WT.mc_id=academic-109639-somelezediko)
-
-- [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko)
+Head over to the Lesson 11 where we will look at how to [intergrate Generative AI with Function Calling](/2-exploring-and-comparing-different-llms/README.md)!
