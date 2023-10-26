@@ -1,0 +1,7 @@
+openai>=0.28.0,<0.29.0
+ipykernel>=6.25.2
+pandas>=2.1.1, <3.0.0
+plotly>=5.16.1,<5.17.0
+matplotlib>=3.7.2,<4.0.0
+scipy>=1.11.2,<2.0.0
+scikit-learn>=1.3.0,<2.0.0
