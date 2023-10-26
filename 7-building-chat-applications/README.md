@@ -1,15 +1,26 @@
 # Building Generative AI-Powered Chat Applications
 
-Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai)?
+Now that we've seen how we can build text-generation apps, let's look into chat applications.
+
+Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. 
+
+Some questions we need answered are:
+
+- **Building the app**.  How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  
+- **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai)?
 
 As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
 
+## Introduction
+
 This lesson covers:
+
 - Techniques for efficiently building and integrating chat applications.
 - How to apply customization and fine-tuning to applications.
 - Strategies and considerations to effectively monitor chat applications.
 
 ## Learning Goals 
+
 By the end of this lesson, you'll be able to:
 
 - Describe considerations for building and integrating chat applications into existing systems.
@@ -63,7 +74,7 @@ The above example uses the GPT-3.5 Turbo model to complete the prompt, but notic
 AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
 ```
 
-### User Experience (UX)
+## User Experience (UX)
 
 General UX principles apply to chat applications, but here's some additional considerations that become particularly important due to the machine learning components involved.
 
@@ -80,7 +91,7 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 ![A prompt in ChatGPT for a lesson plan about linked lists](img/lesson_plan_prompt.png)
 
 
-#### Microsoft's System Message Framework for Large Language Models
+### Microsoft's System Message Framework for Large Language Models
 
 [Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
 
@@ -101,10 +112,31 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 
 ## Customization and Fine-tuning for Domain-Specific Language Models
 
-Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. Domain-specific language models (DSL Models) can enhance user engagement and by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
 
-Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task. For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source. Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings. While the original, general-purpose model might be adequate for answering basic medical questions or providing general advice, it may struggle with highly specific or complex cases. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?" A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology. In instances such as these, fine-tuning the model with a specialized medical dataset can significantly improve its ability to handle these intricate medical inquiries more accurately and reliably. This requires access to a large and relevant dataset that represents the domain-specific challenges and questions that need to be addressed. 
+- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand it's concepts and scenarios.
+- **Apply fine-tuning**. Fine-tuning is the process to further train your model with specific data.
 
+### Using a DSL
+
+Leveraging a domain-specific language models (DSL Models) can enhance user engagement and by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+
+### Apply fine-tuning
+
+Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task. 
+
+For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source. 
+
+**Scenario: a medical application**
+
+Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings. 
+
+A general-purpose model might be adequate for answering basic medical questions or providing general advice, it may struggle with the following:
+
+- **Highly specific or complex cases**. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?" 
+- **Lacking recent advancements**. A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology.
+
+In instances such as these, fine-tuning the model with a specialized medical dataset can significantly improve its ability to handle these intricate medical inquiries more accurately and reliably. This requires access to a large and relevant dataset that represents the domain-specific challenges and questions that need to be addressed.
 
 ## Considerations for a High Quality AI-Driven Chat Experience
 
@@ -142,11 +174,11 @@ Microsoft's approach to Responsible AI has identified six principles that should
 | Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
 | Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.           |
 
+## Assignment
 
-
+See [assignment](./notebook-azure-openai.ipynb) it will take you through a series of exercises from running your first chat prompts, to classifying and summaring text and more.
 
 ## References
-
 
 - [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message)
 
