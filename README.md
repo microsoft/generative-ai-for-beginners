@@ -8,53 +8,71 @@
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/)
 
-# Generative AI for Beginners - A 12 lesson curriculum on building Generative AI Applications
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners)
 
-Azure Cloud Advocates at Microsoft are pleased to offer a 12-leson curriculum all about Generative AI basics. This curruci
+[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
 
-## Each lesson includes:
 
-- sketchnote
+
+# Generative AI for Beginners - A Course on Building Generative AI Applications
+
+Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. This course will take you from learning Generative AI concepts like LLMs and prompt engineering to applying those ideas by building real Generative AI applications. 
+
+Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
+
+Build a strong foundation of Generative AI knowledge and start applying it today!
+
+## 📂 Each lesson includes:
 - optional supplemental video
 - written lesson
 - for project-based lessons, step-by-step guides on how to build the project
 - a challenge
-- supplemental reading
+- links 
+
+## 🌱 Getting Started
+
+To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easier later!  
+
+This course is divided into 6 concept lessons and 6 coding lessons. The coding lessons have both a Juypter Notebook and README included if you only want to view the results of the code and text. To help you get up and running faster, we recommend using this course with Github Codespaces (no extra installs needed). You can open this by using the link below: 
+
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners)
+
+To make sure you have access to the right tools for the coding projects, go to the [Course Introduction Page](/00-course-setup/README.md)
+
+If you enjoyed this course, we would really apperciate it if you starred (🌟) this repo! 
+
+## 🗣️ Meet Other Learners, Get Support 
+We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
 
-## Lessons
-|       |              Lesson Name              |                       Concepts Taught                       |                     Learning Goal                 |                             
+
+## 🗃️ Lessons
+|       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
-| 00 | Course Introduction - How to Take This Course | Tech setup and course structure | Setting you up for success while learning in this course| [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md) 
-| 01 | [Introduction to Generative AI and LLMs](./1-getting-started/README.md) | Generative AI and how we landed on the current technology landscape|  What generative AI is and how Large Language Models work.                    |
+| 00 | [Course Introduction - How to Take This Course](/00-course-setup/README.md) | Tech setup and course structure | Setting you up for success while learning in this course| [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md) 
+| 01 | [Introduction to Generative AI and LLMs](./1-getting-started/README.md) | Generative AI and how we landed on the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
 | 02 | [Exploring and comparing different LLMs](./2-exploring-and-comparing-different-llms/) |Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
-| 03 | Using Generative AI Responsibly | Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibliy 
-| 04 | [Understanding Prompt Engineering Fundamentals](./4-prompt-engineering-fundamentals/) | Hands-on application of Prompy Engineering Best Practices  |  Understand prompt structure & usage|  
-| 05 |Creating Advanced Prompts | Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improves the outcome of your prompts.| 
-| 06 | Building Text Generation Applications  | Build a text generation app using Azure OpenAI  | Understand how to effecient use tokens and temparture to vary the model's output | |
-| 07 | Building Chat Applications | Techniques for efficiently building and integrating chat applications.| Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications| 
-| 08 | Building Search Apps (Vector Databases) | Semantic vs Keyword search.  What are text embeddings and how they apply to search  | Create an application that uses Embeddings to search for data. | 
-| 09 | Building Image Generation Applications  | Image generation and why it's useful in building applications| Build an image generation application | 
+| 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly%20/README.MD)| Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
+| 04 | [Understanding Prompt Engineering Fundamentals](./4-prompt-engineering-fundamentals/) | Hands-on application of Prompt Engineering Best Practices  |  Understand prompt structure & usage|  
+| 05 | [Creating Advanced Prompts](./05-advanced-prompts/README.md) | Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improve the outcome of your prompts.| 
+| 06 | [Building Text Generation Applications](./06-text-generation-apps/README.md)  | Build a text generation app using Azure OpenAI  | Understand how to efficiently use tokens and temperature to vary the model's output | |
+| 07 | [Building Chat Applications](./07-building-chat-applications/README.md) | Techniques for efficiently building and integrating chat applications.| Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications| 
+| 08 | [Building Search Apps Vector Databases](./08-building-search-applications/README.md) | Semantic vs Keyword search.  What are text embeddings and how do they apply to search  | Create an application that uses Embeddings to search for data. | 
+| 09 | [Building Image Generation Applications](./09-building-image-applications/README.md)  | Image generation and why it's useful in building applications| Build an image generation application | 
 | 10 | [Building Low Code AI Applications](./10-building-low-code-ai-applications/)  | Introduction to Generative AI in Power Platform | Build a Student Assignment Tracker App for our education startup with Low Code | |
 | 11 | [Integrating External Applications with Function Calling](./11%20-%20Integrating%20External%20Applications%20with%20Function%20Calling%20/)  | What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
 | 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
-| xx | Additional Learning Resources  | Links to continue your learning from each lesson! |  | |
+| xx | [Continue Your Learning](./13%20-%20contiuned-learning/)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
 
 
 
-## Offline access
+### 🚀  Are you a startup or got an idea you want to launch? 
 
-You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+Visit [Microsoft's Founders Hub](https://www.microsoft.com/startups) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services** as well as **1:1 expert support** with Microsoft's AI experts.
 
+## 🎒  Other Courses 
 
-
-## Help Wanted!
-
-Would you like to contribute a translation? Please read our [translation guidelines](TRANSLATIONS.md) and add input [to one of the translations issues](https://github.com/microsoft/generative-ai-for-beginners/issues?q=is%3Aissue+is%3Aopen+label%3Atranslation). If you want to translate into a new language, please raise a new issue for tracking.
-
-## Other Curricula
-
-Our team produces other curricula! Check out:
+Our team produces other courses! Check out:
 
 - [ML for Beginners](https://aka.ms/ml-beginners)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners)

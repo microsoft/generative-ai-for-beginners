@@ -1,8 +1,8 @@
 # Designing UX for AI Applications
 
-<!-- 6to embeded here](video-url) -->
+[![Designing UX for AI Applications](./images/genai_course_12[88].png)](https://youtu.be/bO7h2_hOhR0) 
 
-<!-- ## [Pre-lecture quiz](quiz-url) -->
+*(Click the image abvoe to view video of this lesson)*
 
 
 ### Introduction
@@ -84,11 +84,8 @@ AI applications are not perfect, therefore, they are bound to make mistakes. Whe
 
 <!-- ## [Post-lecture quiz](quiz-url) -->
 
-## Additional resources
+## Congratulations, you have finished this course! 
 
-* [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873)
-* [UX for AI: Design Practices for AI Developers](https://www.linkedin.com/learning/ux-for-ai-design-practices-for-ai-developers)
-* [New skills in the age of AI by John Maeda](https://youtu.be/Lkbkd_hkDLY)
-* [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/en-us/community/content/best-practices-ai-ux)
+Want to learn more about designing UX for AI Applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
-
+Congratulation, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://www.microsoft.com/en-us/startups) and apply for the program to recieve support on your journey. 
