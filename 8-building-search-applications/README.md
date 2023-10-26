@@ -2,7 +2,7 @@
 
 There's more to LLMs than chatbots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
 
-In this lesson, you are going to build a search application for our startup. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
+In this lesson, you are going to build a search application for our education startup Edu4All. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
 
 For example, a student might type in 'What are Jupyter Notebooks?' or 'What is Azure ML' and the search application will return a list of YouTube videos that are relevant to the question, and better still, the search application will return a link to the place in the video where the answer to the question is located.
 
@@ -19,10 +19,9 @@ In this lesson, we will cover:
 
 After completing this lesson, you will be able to:
 
-- The difference between semantic and keyword search.
+- Tell the difference between semantic and keyword search.
 - Explain what Text Embeddings are.
-- Explain how to use Embeddings to search for data.
-- Create an application that uses Embeddings to search for data.
+- Create an application using Embeddings to search for data.
 
 ## Why build a search application?
 
@@ -32,7 +31,7 @@ The lesson includes an Embedding Index of the YouTube transcripts for the Micros
 
 The following is an example of a semantic query for the question 'can you use rstudio with azure ml?'. Check out the YouTube url, you'll see the url contains a timestamp that takes you to the place in the video where the answer to the question is located.
 
-![](media/query_results.png)
+![Semantic query for the question "can you use rstudio with Azure ML"](media/query_results.png)
 
 ## What is semantic search?
 
@@ -88,11 +87,9 @@ Next, we're going to learn how to build a search application using Embeddings. T
 
 This solution was built and tested on Windows 11, macOS, and Ubuntu 22.04 using Python 3.10 or later. You can download Python from [python.org](https://www.python.org/downloads/).
 
-## Assignment - let's enable students
+## Assignment - building a search application, to enable students
 
 We introduced our startup at the beginning of this lesson. Now it's time to enable the students to build a search application for their assessments.
-
-## Creating the Azure OpenAI Services
 
 In this assignment, you will create the Azure OpenAI Services that will be used to build the search application. You will create the following Azure OpenAI Services. You'll need an Azure subscription to complete this assignment.
 
@@ -100,7 +97,7 @@ In this assignment, you will create the Azure OpenAI Services that will be used 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Select the Cloud Shell icon in the upper-right corner of the Azure portal.
-3. Select Bash for the environment type.
+3. Select **Bash** for the environment type.
 
 #### Create a resource group
 
