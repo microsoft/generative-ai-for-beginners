@@ -1,4 +1,4 @@
-# Getting Started with "Generative AI for Beginners" 
+# Getting Started with this course 
 
 We are very excited for you to start this course and see what you get inspired to build with Generative AI! 
 

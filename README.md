@@ -14,7 +14,7 @@
 
 
 
-# Generative AI for Beginners - A Course on Building Generative AI Applications
+# Generative AI for Beginners - A Course 
 
 Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. This course will take you from learning Generative AI concepts like LLMs and prompt engineering to applying those ideas by building real Generative AI applications. 
 
