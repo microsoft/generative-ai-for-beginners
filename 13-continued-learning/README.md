@@ -1,6 +1,6 @@
 # Additional resources
 
-Here are links to other great resources to contiue your learning and building wih Generative AI.
+Here are links to other great resources to continue your learning and building with Generative AI.
 
 Missing a great resource? Let us know by submitting a PR! 
 

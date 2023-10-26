@@ -370,10 +370,10 @@ Wrap the section with a summary and resources for self-guided learning.
 -->
 
 
-## 1.12 Learning Resources
+## Great Work! Continue Your Learning 
 
-1. [Introduction to Generative AI](https://learn.microsoft.com/training/paths/introduction-generative-ai/) - Microsoft Learning Path (2023)
-1. [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering) - Azure OpenAI Documentation (2023)
-1. [Prompt Engineering Techniques](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions) - Azure OpenAI Documentation (2023)
-1. [Prompt Engineering Overview](https://learn.microsoft.com/en-us/semantic-kernel/prompt-engineering/) - Semantic Kernel Documentation (2023)
-1. [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259) - Microsoft Tech Community (2023)
+
+Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+
+  
+Head over to the Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md)!

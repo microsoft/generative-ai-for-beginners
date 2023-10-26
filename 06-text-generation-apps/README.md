@@ -656,7 +656,7 @@ A: 3, because environment variables are not stored in code and can be loaded fro
 
 ## Great Work! Continue Your Learning 
 
-Want to learn more about about creating text generation applications? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about about creating text generation applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 
 Head over to the Lesson 7 where we will look at how to [build chat applications](/7-building-chat-applications/README.md)!

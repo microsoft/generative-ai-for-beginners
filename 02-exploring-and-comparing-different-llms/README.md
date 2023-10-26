@@ -150,7 +150,7 @@ Training an LLM from scratch is without a doubt the most difficult and the most 
 ## Great Work, Continue Your Learning! 
 
 
-Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 
 Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly%20/README.MD)!

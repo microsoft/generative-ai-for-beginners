@@ -153,7 +153,7 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 ## Great Work! Continue the Journey
 
-Want to learn more about creating chat applications with Generative AI? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about creating chat applications with Generative AI? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
   
 Head over to Lesson 8 to see how you can start  [building search applications](/8-building-search-applications/README.md)!

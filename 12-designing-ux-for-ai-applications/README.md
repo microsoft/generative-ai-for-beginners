@@ -84,8 +84,8 @@ AI applications are not perfect, therefore, they are bound to make mistakes. Whe
 
 <!-- ## [Post-lecture quiz](quiz-url) -->
 
-## Congrulations, you have finished this course! 
+## Congratulations, you have finished this course! 
 
-Want to learn more about designing UX for AI Applications? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about designing UX for AI Applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 Congratulation, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://www.microsoft.com/en-us/startups) and apply for the program to recieve support on your journey. 

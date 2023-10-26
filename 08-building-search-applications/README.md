@@ -161,7 +161,7 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 ## Great Work! Continue Your Learning 
 
-Want to learn more about how to build search applications? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about how to build search applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
   
 Head over to the Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md)!

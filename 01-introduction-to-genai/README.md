@@ -115,7 +115,7 @@ If you done this task, you might even be ready to apply to Microsoft's incubator
 
 ## Great Work! Continue the Journey 
 
-Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic. 
+Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
 
 Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/2-exploring-and-comparing-different-llms/README.md)! 
 

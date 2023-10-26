@@ -466,7 +466,7 @@ except openai.error.InvalidRequestError as err:
  ## Great Work! Continue Your Learning 
 
 
-Want to learn more about how to build Image Generation apps? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about how to build Image Generation apps? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 
 Head over to the Lesson 10 where we will look at how to [build AI applications with low-code](/10-building-low-code-ai-applications/README.md))!

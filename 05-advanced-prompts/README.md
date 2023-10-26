@@ -615,7 +615,7 @@ Answer: A, because chain-of-thought is about showing the LLM how to solve a prob
 
 ## Great Work! Continue Your Learning 
 
-Want to learn more about creating advanced prompts? Go to the [contiuned learning page](/13%20-%20contiuned-learning/README.md) to find other great resources on this topic.
+Want to learn more about creating advanced prompts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 
 Head over to the Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md)!
