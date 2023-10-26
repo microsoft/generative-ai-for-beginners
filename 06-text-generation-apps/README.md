@@ -2,6 +2,7 @@
 
 [![Building Text Generation Applications ](./images/genai_course_6[95].png)](https://youtu.be/5jKHzY6-4s8) 
 
+*(Click the image above to view video of this lesson)*
 
 You've seen so far through this curriculum that there are core concepts like prompts and even a whole discipline called "prompt engineering". Many tools you can interact with like ChatGPT, Office 365, Microsoft Power Platform and more, supports you using prompts to accomplish something.
 
