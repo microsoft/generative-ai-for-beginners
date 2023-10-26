@@ -49,9 +49,9 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 ## 🗃️ Lessons
 |       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
-| 00 | [Course Introduction - How to Take This Course](/00-course-setup/README.md) | Tech setup and course structure | Setting you up for success while learning in this course| [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md) 
-| 01 | [Introduction to Generative AI and LLMs](./1-getting-started/README.md) | Generative AI and how we landed on the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
-| 02 | [Exploring and comparing different LLMs](./2-exploring-and-comparing-different-llms/) |Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
+| 00 | [Course Introduction - How to Take This Course](/00-course-setup/README.md) | Tech setup and course structure | Setting you up for success while learning in this course| 
+| 01 | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md) | Generative AI and how we landed on the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
+| 02 | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md) |Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
 | 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly%20/README.MD)| Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
 | 04 | [Understanding Prompt Engineering Fundamentals](./4-prompt-engineering-fundamentals/) | Hands-on application of Prompt Engineering Best Practices  |  Understand prompt structure & usage|  
 | 05 | [Creating Advanced Prompts](./05-advanced-prompts/README.md) | Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improve the outcome of your prompts.| 
@@ -62,7 +62,7 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 | 10 | [Building Low Code AI Applications](./10-building-low-code-ai-applications/)  | Introduction to Generative AI in Power Platform | Build a Student Assignment Tracker App for our education startup with Low Code | |
 | 11 | [Integrating External Applications with Function Calling](./11%20-%20Integrating%20External%20Applications%20with%20Function%20Calling%20/)  | What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
 | 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
-| xx | [Continue Your Learning](./13%20-%20contiuned-learning/)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
+| xx | [Continue Your Learning](./13-continued-learning/README.md)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
 
 
 
