@@ -31,7 +31,7 @@ Build a strong foundation of Generative AI knowledge and start applying it today
 
 ## 🌱 Getting Started
 
-To get started, [fork this entire repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easier later!  
+To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easier later!  
 
 This course is divided into 6 concept lessons and 6 coding lessons. The coding lessons have both a Juypter Notebook and README included if you only want to view the results of the code and text. To help you get up and running faster, we recommend using this course with Github Codespaces (no extra installs needed). You can open this by using the link below: 
 
