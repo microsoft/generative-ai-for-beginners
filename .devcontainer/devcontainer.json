@@ -4,22 +4,20 @@
 	"name": "Generative AI For Beginners",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"hostRequirements": {
-	  "cpus": 4
+		"cpus": 4
 	},
-
 	"waitFor": "onCreateCommand",
 	"updateContentCommand": "python3 -m pip install -r requirements.txt",
-  	"postCreateCommand": "bash .devcontainer/post-create.sh",
-
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
 	"customizations": {
-	  "codespaces": {
-		"openFiles": []
-	  },
-	  "vscode": {
-		"extensions": [
-		  "ms-toolsai.jupyter",
-		  "ms-python.python"
-		]
-	  }
+		"codespaces": {
+			"openFiles": []
+		},
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			]
+		}
 	}
-  }
+}
