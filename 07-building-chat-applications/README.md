@@ -2,6 +2,9 @@
 
 [![Building Generative AI-Powered Chat Applications](./img/genai_course_7[8].png)](https://youtu.be/Kw4i-tlKMrQ) 
 
+*(Click the image above to view video of this lesson)*
+
+
 Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai)?
 
 As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.

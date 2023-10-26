@@ -3,7 +3,7 @@
 
 [![Building Low Code AI Applications](./images/genai_course_10[68].png)](https://youtu.be/XX8491SAF44) 
 
-*(Click the image abvoe to view video of this lesson)*
+*(Click the image above to view video of this lesson)*
 
 ## Introduction
 
