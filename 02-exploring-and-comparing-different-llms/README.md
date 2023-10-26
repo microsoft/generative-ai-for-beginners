@@ -6,22 +6,22 @@
 
 ## Introduction
 
-With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like the Edu4All startup - can apply them to their use cases and grow!
+With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
 
 The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
 
 This lesson will cover:
 
-- Different types of LLMs in the current landscape
-- Testing, iterating, and comparing different models for your use case in Azure
-- How to deploy an LLM
+- Different types of LLMs in the current landscape.
+- Testing, iterating, and comparing different models for your use case in Azure.
+- How to deploy an LLM.
 
 ## Learning Goals
 
 After completing this lesson, you will be able to:
-- Select the right model for your use case
-- Understand how to test, iterate, and improve performance of your model
-- Know how Business deploy models
+- Select the right model for your use case.
+- Understand how to test, iterate, and improve performance of your model.
+- Know how businesses deploy models.
 
 ## Understand different types of LLMs 
 
@@ -30,10 +30,9 @@ Large Language Models (LLMs) can have multiple categorizations based on their ar
 ### Foundation Models versus LLMs
 
 The term Foundation Model was [coined by Stanford researchers](https://arxiv.org/abs/2108.07258) and defined as an AI model that follows some criteria, such as:
-- They are trained using unsupervised learning or self-supervised learning, meaning they are trained on unlabeled multimodal data, and they do not require human annotation or labeling of data for their training process.
-- They are very large models, based on very deep neural networks trained on billions of parameters.
-- They are normally intended to serve as a ‘foundation’ for other models, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
-Now, since foundation models have taken shape most strongly in the natural language processing domain, it’s common to use the terms foundation model and LLM interchangeably. However, to be precise, LLMs are a type of foundation model, usually trained on text data, that could be specialized for specific use cases, such as text summarization, translation, or question answering. In other words, not all foundation models are LLMs and LLMs can be seen as language-focused foundation models.
+- **They are trained using unsupervised learning or self-supervised learning**, meaning they are trained on unlabeled multimodal data, and they do not require human annotation or labeling of data for their training process.
+- **They are very large models**, based on very deep neural networks trained on billions of parameters.
+- **They are normally intended to serve as a ‘foundation’ for other models**, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
 
 ![Foundation Models versus LLMs](./images/FoundationModel.png)
  
@@ -115,13 +114,36 @@ Most of the models we mentioned in previous paragraphs (OpenAI models, open sour
 ![Model deployment](./images/Llama4.png)
 
 
-## Deploying LLMs
+## Selecting appropriate LLM model within GPT model family
 
+There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more. 
+
+Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a differen type of model.
+
+- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. As an example, you can use everything from a cheaper, but capable model like curie to the more costly but performat davinci type model. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper). 
+
+- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e) and also in Chapter 9 of this curriculum 
+
+- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3, GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground) to evaluate which models best fit your needs in terms of capability and cost.
+
+Selecting a model means you get some basic capabilties, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming section.
+
+## Improving LLM results
 We’ve explored with the Edu4All team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
 
 But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads? 
+ 
 
-There are several approaches a business can use to deploy an LLM in production, with different levels of complexity, cost, and quality. Let’s look at them.
+There are several approaches a business can use to get the results they need from an LLM, you can select different types of models with different degrees of training
+
+deploy an LLM in production, with different levels of complexity, cost, and quality. Here's some different approaches:
+
+- **Prompt engineering with context**. The idea is to provide enough context when you prompt to ensure you get the responses you need.
+
+- **Retrieval Augmented Generation, RAG**. Your data might exist in a database or web endpoint for example, to ensure this data, or a subset of it, is included at the time of prompting, you can fetch the relevant data and make that part of the users prompt.
+
+- **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
+
 
 ![LLMs deployment](./images/Deploy.png)
  
@@ -130,6 +152,7 @@ Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://w
 ### Prompt Engineering with Context
 
 Pre-trained LLMs work very well on generalized natural language tasks, even by calling them with a short prompt, like a sentence to complete or a question – the so-called “zero-shot” learning.
+
 However, the more the user can frame their query, with a detailed request and examples – the Context – the most accurate and closest to user’s expectations the answer will be. In this case, we talk about “one-shot” learning if the prompt includes only one example and “few shot learning” if it includes multiple examples.
 Prompt engineering with context is the most cost-effective approach to kick-off with.
 
@@ -140,13 +163,28 @@ This can be overcome through RAG, a technique that augments prompt with external
 This technique is very helpful when a business doesn’t have enough data, enough time, or resources to fine-tune an LLM, but still wishes to improve performance on a specific workload and reduce risks of hallucinations, i.e., mystification of reality or harmful content.  
 
 ### Fine-tuned model
+
 Fine-tuning is a process that leverages transfer learning to ‘adapt’ the model to a downstream task or to solve a specific problem. Differently from few-shot learning and RAG, it results in a new model being generated, with updated weights and biases. It requires a set of training examples consisting of a single input (the prompt) and its associated output (the completion).
 This would be the preferred approach if:
--	A business would like to use fine-tuned less capable models (like embedding models) rather than high performance models, resulting in a more cost effective and fast solution.
--	Latency is important for a specific use-case, so it’s not possible to use very long prompts or the number of examples that should be learnt from the model doesn’t fit with the prompt length limit.
--	A business has a lot of high-quality data and ground truth labels and the resources required to maintain this data up to date over time.
+
+-	**Using fine-tuned models**. A business would like to use fine-tuned less capable models (like embedding models) rather than high performance models, resulting in a more cost effective and fast solution.
+
+-	**Considering latency**. Latency is important for a specific use-case, so it’s not possible to use very long prompts or the number of examples that should be learnt from the model doesn’t fit with the prompt length limit.
+
+-	**Staying up to date**. A business has a lot of high-quality data and ground truth labels and the resources required to maintain this data up to date over time.
+
 ### Trained model
 Training an LLM from scratch is without a doubt the most difficult and the most complex approach to adopt, requiring massive amounts of data, skilled resources, and appropriate computational power. This option should be considered only in a scenario where a business has a domain-specific use case and a large amount of domain-centric data.
+
+## Knowledge check
+
+Q1 For the following use case, what could be a good approach to improve LLM completion results? 
+
+   1. Prompt engineering with context
+   1. A2: RAG
+   1. A3: Fine-tuned model
+
+A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
 
 ## Great Work, Continue Your Learning! 
 
