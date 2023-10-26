@@ -23,7 +23,6 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-leson curriculum al
 
 
 ## Lessons
-
 |       |              Lesson Name              |                       Concepts Taught                       |                     Learning Goal                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | Course Introduction - How to Take This Course | Tech setup and course structure | Setting you up for success while learning in this course| [Introduction to Generative AI](./1-getting-started/lessons/1-introduction-to-generative-ai/README.md) 
@@ -40,6 +39,7 @@ Azure Cloud Advocates at Microsoft are pleased to offer a 12-leson curriculum al
 | 11 | [Integrating External Applications with Function Calling](./11%20-%20Integrating%20External%20Applications%20with%20Function%20Calling%20/)  | What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
 | 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
 | xx | Additional Learning Resources  | Links to continue your learning from each lesson! |  | |
+
 
 
 ## Offline access
