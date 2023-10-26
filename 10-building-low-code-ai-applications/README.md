@@ -23,7 +23,7 @@ By the end of this lesson, you will be able to:
 
 The tools and technologies that you will use in this lesson are:
 
-- PowerApps for the Student Assignment Tracker app, which provides a low-code development environment for building apps to track, manage and interact with data.
+- Power Apps for the Student Assignment Tracker app, which provides a low-code development environment for building apps to track, manage and interact with data.
 - Dataverse for storing the data for the Student Assignment Tracker app where Dataverse will provide a low-code data platform for storing the apps data.
 - Power Automate for the Invoice Processing flow where you will have low-code development environment for building workflows to automate the Invoice Processing process.
 - AI Builder for the Invoice Processing AI Model where you will use prebuilt AI Models to process the invoices for our startup.
@@ -36,11 +36,11 @@ How does this work? Copilot is an AI assistant that enables you to build Power P
 
 Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents. AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for our education startup.
 
-### Copilot in PowerApps
+### Copilot in Power Apps
 
-As part of the Power Platform, PowerApps provides a low-code development environment for building apps to track, manage and interact with data. It is a suite of app development services with a scalable data platform and the ability to connect to cloud services and on-premises data. PowerApps allows you to build apps that run on browsers, tablets, and phones, and can be shared with co-workers. PowerApps eases users into app development with a simple interface, so that every business user or pro developer can build custom apps. The app development experience is also enhanced with Generative AI through Copilot.
+As part of the Power Platform, Power Apps provides a low-code development environment for building apps to track, manage and interact with data. It is a suite of app development services with a scalable data platform and the ability to connect to cloud services and on-premises data. Power Apps allows you to build apps that run on browsers, tablets, and phones, and can be shared with co-workers. Power Apps eases users into app development with a simple interface, so that every business user or pro developer can build custom apps. The app development experience is also enhanced with Generative AI through Copilot.
 
-The copilot AI assistant feature in PowerApps enables you to describe what kind of app you need and what information you want your app to track, collect, or show. Copilot then generates a responsive Canvas app based on your description. You can then customize the app to meet your needs. The AI Copilot also generates and suggests a Dataverse Table with the fields you need to store the data you want to track and some sample data. We will look at what Dataverse is and how you can use it in PowerApps on this lesson later. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the PowerApps home screen.
+The copilot AI assistant feature in Power Apps enables you to describe what kind of app you need and what information you want your app to track, collect, or show. Copilot then generates a responsive Canvas app based on your description. You can then customize the app to meet your needs. The AI Copilot also generates and suggests a Dataverse Table with the fields you need to store the data you want to track and some sample data. We will look at what Dataverse is and how you can use it in Power Apps on this lesson later. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Apps home screen.
 
 ### Copilot in Power Automate
 
@@ -58,9 +58,9 @@ When you are getting started with using Copilot, you can use the [Power Platform
 
 The educators at our startup have been struggling to keep track of student assignments. They have been using a spreadsheet to track the assignments but this has become difficult to manage as the number of students has increased. They have asked you to build an app that will help them track and manage student assignments. The app should enable them to add new assignments, view assignments, update assignments and delete assignments. The app should also enable the educators and students to view the assignments that have been graded and those that have not been graded. 
 
-You will build the app using Copilot in PowerApps following the steps below:
+You will build the app using Copilot in Power Apps following the steps below:
 
-1. Navigate to the [PowerApps](https://make.powerapps.com) home screen.
+1. Navigate to the [Power Apps](https://make.powerapps.com) home screen.
 
 2. Use the text area on the home screen to describe the app you want to build. For example, ***I want to build an app to track and manage student assignments***. Click on the **Send** button to send the prompt to the AI Copilot.
 
@@ -106,7 +106,7 @@ Why should we use Dataverse for our startup? The standard and custom tables with
 
 - **Secure**: Dataverse provides a secure and cloud-based storage option for your data. You can control who has access to the data in your tables and how they can access it using role based security.
 
-- **Rich metadata**: Data types and relationships are used directly within PowerApps
+- **Rich metadata**: Data types and relationships are used directly within Power Apps
 
 - **Logic and validation**: You can use business rules, calculated fields, and validation rules to enforce business logic and maintain data accuracy.
 
@@ -116,7 +116,7 @@ Now that you know what Dataverse is and why you should use it, let's look at how
 
 To create a table in Dataverse using Copilot, follow the steps below:
 
-1. Navigate to the [PowerApps](https://make.powerapps.com) home screen.
+1. Navigate to the [Power Apps](https://make.powerapps.com) home screen.
 
 2. On the left navigation bar, select on **Tables** and then click on **Describe the new Table**.
 
@@ -155,7 +155,7 @@ Some of the Prebuilt AI Models available in Power Platform include:
 - **Form Processing**: This model extracts information from forms.
 - **Invoice Processing**: This model extracts information from invoices.
 
-With Custom AI Models you can bring your own model into AI Builder so that it can function like any AI Builder custom model, allowing you to train the model using your own data. You can use these models to automate processes and predict outcomes in both PowerApps and Power Automate. When using your own model there are limitations that apply. Read more on these [limitations](https://learn.microsoft.com/en-us/ai-builder/byo-model#limitations).
+With Custom AI Models you can bring your own model into AI Builder so that it can function like any AI Builder custom model, allowing you to train the model using your own data. You can use these models to automate processes and predict outcomes in both Power Apps and Power Automate. When using your own model there are limitations that apply. Read more on these [limitations](https://learn.microsoft.com/en-us/ai-builder/byo-model#limitations).
 
 ![](images/ai-builder-models.png)
 
@@ -216,29 +216,20 @@ For example, you can build flows to automatically generate text for a variety of
 
 ![](images/create-prompt-gpt.png)
 
-To learn how to use this AI Model in Power Automate, go through the [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/add-intelligence-ai-copilot/?WT.mc_id=academic-109639-somelezediko) module.
+To learn how to use this AI Model in Power Automate, go through the [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/en-us/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module.
 
 ## Resources
 
-- [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/add-intelligence-ai-copilot/?WT.mc_id=academic-109639-somelezediko)
+- [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/en-us/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko)
 
 - [Get Started with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder/?WT.mc_id=academic-109639-somelezediko)
 
 - [Detect Objects with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder-object-detection/?WT.mc_id=academic-109639-somelezediko)
+
+- [Process Custom Documents with AI Builder](https://learn.microsoft.com/en-us/training/modules/get-started-with-form-processing/?WT.mc_id=academic-109639-somelezediko)
 
 - [AI Copilot Overview](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-overview?WT.mc_id=academic-109639-somelezediko)
 
 - [Build a canvas app solution with Copilot in Power Apps](https://learn.microsoft.com/en-us/training/modules/build-canvas-app-real-estate-power-apps-copilot/?WT.mc_id=academic-109639-somelezediko)
 
 - [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko)
-
-
-
-
-
-
-
-
-
-
-
