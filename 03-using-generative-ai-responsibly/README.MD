@@ -44,7 +44,7 @@ Let's take for example we build a feature for our startup that allows students t
 The model produces a response like the one below:
 
 
-![](/03-using-generative-ai-responsibly%20/images/2135-ChatGPT(1)_11zon.webp)
+![](/03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
 
 *(Source: https://flyingbisons.com)*
 
