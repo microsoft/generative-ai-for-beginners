@@ -192,6 +192,6 @@ A:3, if you have the time and resources and high quality data, fine-tuning is th
 Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 
-Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly%20/README.MD)!
+Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD)!
 
 

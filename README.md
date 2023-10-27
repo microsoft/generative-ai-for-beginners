@@ -9,7 +9,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/)
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners)
-
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
 
 
@@ -52,7 +51,7 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 | 00 | [Course Introduction - How to Take This Course](/00-course-setup/README.md) | Tech setup and course structure | Setting you up for success while learning in this course| 
 | 01 | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md) | Generative AI and how we landed on the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
 | 02 | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md) |Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
-| 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly%20/README.MD)| Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
+| 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.MD)| Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
 | 04 | [Understanding Prompt Engineering Fundamentals](./4-prompt-engineering-fundamentals/) | Hands-on application of Prompt Engineering Best Practices  |  Understand prompt structure & usage|  
 | 05 | [Creating Advanced Prompts](./05-advanced-prompts/README.md) | Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improve the outcome of your prompts.| 
 | 06 | [Building Text Generation Applications](./06-text-generation-apps/README.md)  | Build a text generation app using Azure OpenAI  | Understand how to efficiently use tokens and temperature to vary the model's output | |
