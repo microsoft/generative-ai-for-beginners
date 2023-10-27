@@ -24,9 +24,9 @@ After completing this lesson, you will understand:
 * What generative AI is and how Large Language Models work.
 * How you can leverage large language models for different use cases, with a focus on education scenarios.
 
-## Scenario: an educational startup "Edu4All"
+## Scenario: our educational startup 
 
-Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this curriculum we'll explore how it's revolutionizing education through a fictional startup. We'll refer to this startup as Edu4All. Our startup works in the education domain with the ambitious mission statement of 
+Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this curriculum we'll explore how it's revolutionizing education through a fictional startup. We'll refer to this startup as *our startup*. Our startup works in the education domain with the ambitious mission statement of 
 
 > *improving accessibility in learning, on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs*.
 
@@ -116,7 +116,7 @@ If you done this task, you might even be ready to apply to Microsoft's incubator
 
 ## Great Work! Continue the Journey 
 
-Want to learn more about different Generative AI concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
+Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
 
 Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/2-exploring-and-comparing-different-llms/README.md)! 
 
