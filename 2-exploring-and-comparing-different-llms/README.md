@@ -1,6 +1,6 @@
 # Exploring and comparing different LLMs
 
-With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like the Edu4All startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
+With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
 
 ## Introduction
 
@@ -114,17 +114,10 @@ Most of the models we mentioned in previous paragraphs (OpenAI models, open sour
 ![Model deployment](./images/Llama4.png)
 
 
-## Selecting appropriate LLM model within GPT model family
 
-There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more. 
 
-Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a differen type of model.
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. As an example, you can use everything from a cheaper, but capable model like curie to the more costly but performat davinci type model. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper). 
-- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e) and also in Chapter 9 of this curriculum 
-- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3, GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground) to evaluate which models best fit your needs in terms of capability and cost.
 
-Selecting a model means you get some basic capabilties, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming section.
 
 ## Improving LLM results
 
@@ -171,7 +164,7 @@ Training an LLM from scratch is without a doubt the most difficult and the most 
 
 ## Knowledge check
 
-Q1 For the following use case, what could be a good approach to improve LLM completion results? 
+Q1 What could be a good approach to improve LLM completion results? 
    1. Prompt engineering with context
    1. A2: RAG
    1. A3: Fine-tuned model
