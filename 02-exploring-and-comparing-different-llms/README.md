@@ -25,7 +25,7 @@ After completing this lesson, you will be able to:
 
 ## Understand different types of LLMs 
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help the our startup select the right model for the scenario, and understand how to test, iterate, and improve performance. 
+Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help our startup select the right model for the scenario, and understand how to test, iterate, and improve performance. 
 
 There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more. 
 
@@ -126,7 +126,7 @@ Most of the models we mentioned in previous paragraphs (OpenAI models, open sour
 ![Model deployment](./images/Llama4.png)
 
 ## Improving LLM results
-We’ve explored with the Edu4All team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
+We’ve explored with our startup team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
 
 But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads? 
  
@@ -175,7 +175,7 @@ Training an LLM from scratch is without a doubt the most difficult and the most 
 
 ## Knowledge check
 
-Q1 For the following use case, what could be a good approach to improve LLM completion results? 
+Q1 What could be a good approach to improve LLM completion results? 
 
    1. Prompt engineering with context
    1. A2: RAG
