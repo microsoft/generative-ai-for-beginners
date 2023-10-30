@@ -1,6 +1,7 @@
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](./img/genai_course_7[8].png)](https://youtu.be/Kw4i-tlKMrQ) 
+[![Building Generative AI-Powered Chat Applications](./img/07-lesson-banner.png
+)](https://youtu.be/Kw4i-tlKMrQ) 
 
 *(Click the image above to view video of this lesson)*
 

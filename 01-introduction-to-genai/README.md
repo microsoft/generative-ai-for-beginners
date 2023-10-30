@@ -1,6 +1,6 @@
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/genai_course_1[83].png)](https://youtu.be/vf_mZrn8ibc)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
 
 *(Click the image above to view video of this lesson)*
 

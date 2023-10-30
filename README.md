@@ -1,3 +1,7 @@
+
+![Generative AI For Beginners](./img/1.png)
+
+
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/)
@@ -67,7 +71,7 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 
 ### 🚀  Are you a startup or got an idea you want to launch? 
 
-Visit [Microsoft's Founders Hub](https://www.microsoft.com/startups) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services** as well as **1:1 expert support** with Microsoft's AI experts.
+Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services** as well as **1:1 expert support** with Microsoft's AI experts.
 
 ## 🎒  Other Courses 
 
