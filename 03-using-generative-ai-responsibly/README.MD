@@ -4,6 +4,7 @@
 
 **Video Coming Soon** 
 
+It's easy to be fascinated with AI and generative AI in particular, but you need to consider how you would use it responsibly. You need to consider things like how to ensure the output is fair, non-harmful and more. This chapter aims to provide you with mentioned context, what to consider, and how to take active steps to improve your AI usage. 
 
 ## Introduction 
 
@@ -51,7 +52,6 @@ The model produces a response like the one below:
 This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic survivor. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. 
 
 With each iteration of any given LLM, we have seen performance improvements around minimizing hallucinations. Even with this improvement,  we as application builders and users still need to remain aware of these limitations. 
-
 
 ### Harmful Content 
 
@@ -118,6 +118,19 @@ Building an operational practice around your AI applications is the final stage.
 
 While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Saftey](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview ) can help detect harmful content and images via an API request. 
 
+## Knowledge check
+
+What are some things you need to care about to ensure responsible AI usage?
+
+1. That the answer is correct.
+1. Harmful usage, that AI isn't used for criminal purposes.
+1. Ensuring the AI is free from bias and discrimination.
+
+A: 2 and 3 is correct. Responsible AI helps you consider how to mitigate harmful effects and biases and more.
+
+## 🚀 Challenge
+
+Read up on [Azure AI Content Saftey](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview ) and see what you can adopt for your usage. 
 
 ## Great Work, Continue Your Learning! 
 
