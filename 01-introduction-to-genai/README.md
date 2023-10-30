@@ -114,6 +114,16 @@ Your assignment is to read up more on [generative AI](https://en.wikipedia.org/w
 
 If you done this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/en-gb/startups) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
 
+## Knowledge check
+
+What's true about large language models?
+
+1. You get the exact same response every time.
+1. It does things perfectly, great at adding numbers, produce working code etc.
+1. The response may vary despite using the same prompt. It's also great at give you a first draft of something, be it text or code. But you need to improve on the results.
+
+A: 3, an LLM is non-deterministic, the response vary, however, you can control its variance via a temperature setting. You also shouldn't expect it to do things perfectly, it's here to do the heavy-lifting for you which often means you get a good first attempt at something that you need to gradually improve.
+
 ## Great Work! Continue the Journey 
 
 Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
