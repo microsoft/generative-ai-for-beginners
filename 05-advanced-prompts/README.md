@@ -1,7 +1,7 @@
 # Creating Advanced prompts
 
 
-[![Creating Advanced Prompts](./images/genai_course_5[65].png)](https://youtu.be/32GBH6BTWZQ) 
+[![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ) 
 
 Let's recap some learnings from the previous chapter: 
 > Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context. 

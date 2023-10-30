@@ -1,6 +1,6 @@
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](./images/genai_course_2[56].png)](https://youtu.be/J1mWzw0P74c)
+[![Exploring and comparing different LLMs](./images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
 
 *(Click the image above to view video of this lesson)*
 
