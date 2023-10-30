@@ -16,7 +16,6 @@
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
 
 
-
 # Generative AI for Beginners - A Course 
 
 Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. This course will take you from learning Generative AI concepts like LLMs and prompt engineering to applying those ideas by building real Generative AI applications. 
@@ -24,13 +23,6 @@ Learn the fundamentals of building Generative AI applications with our 12-lesson
 Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
 
 Build a strong foundation of Generative AI knowledge and start applying it today!
-
-## 📂 Each lesson includes:
-- optional supplemental video
-- written lesson
-- for project-based lessons, step-by-step guides on how to build the project
-- a challenge
-- links 
 
 ## 🌱 Getting Started
 
@@ -46,7 +38,6 @@ If you enjoyed this course, we would really apperciate it if you starred (🌟) 
 
 ## 🗣️ Meet Other Learners, Get Support 
 We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
-
 
 
 ## 🗃️ Lessons
@@ -67,12 +58,18 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 | 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
 | xx | [Continue Your Learning](./13-continued-learning/README.md)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
 
-
-
 ### 🚀  Are you a startup or got an idea you want to launch? 
 
 Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services** as well as **1:1 expert support** with Microsoft's AI experts.
 
+
+## 📂 Each lesson includes:
+- optional supplemental video
+- written lesson
+- for project-based lessons, step-by-step guides on how to build the project
+- a challenge
+- links to extra learning
+  
 ## 🎒  Other Courses 
 
 Our team produces other courses! Check out:
