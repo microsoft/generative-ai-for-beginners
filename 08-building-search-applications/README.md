@@ -1,10 +1,10 @@
 # Building a Search Applications 
 
-[![Introduction to Generative AI and Large Language Models](./media/genai_course_8[80].png)]() 
+[![Introduction to Generative AI and Large Language Models](./media/genai_course_8[80].png)](TBD)
 
-**Video Coming Soon** 
+> **Video Coming Soon** 
 
-There's more to LLMs than chatbots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
+There's more to LLMs than chat bots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
 
 In this lesson, you are going to build a search application for our education startup Edu4All. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
 
@@ -26,7 +26,6 @@ After completing this lesson, you will be able to:
 - Tell the difference between semantic and keyword search.
 - Explain what Text Embeddings are.
 - Create an application using Embeddings to search for data.
-
 
 ## Why build a search application?
 
@@ -54,7 +53,7 @@ Here's an example, image the following text is in a transcript from one of the e
 Today we are going to learn about Azure Machine Learning.
 ```
 
-We'd pass the text to the OpenAI Embedding API and it would return the following embedding consisting of 1536 numbers aka a vector. Each number in the vector represents a different aspect of the text. For brievity, here are the first 10 numbers in the vector.
+We'd pass the text to the OpenAI Embedding API and it would return the following embedding consisting of 1536 numbers aka a vector. Each number in the vector represents a different aspect of the text. For brevity, here are the first 10 numbers in the vector.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
@@ -82,7 +81,7 @@ We've learned about text embeddings, the next step is to learn how to use text e
 
 ### What is cosine similarity?
 
-Cosine similarity is a measure of similarity between two vectors, you'll also hear this referred to as `nearest neighbor search`. To perform a cosine similarity search you need to `vectorize` for `query` text using the OpenAI Embedding API. Then calculate the `cosine similarity` between the query vector and each vector in the Embedding Index. Remember, the Embedding Index has a vector for each YouTube transcript text segment. Finally, sort the results by cosine similarity and the text segments with the highest cosine similarity are the most similar to the query.
+Cosine similarity is a measure of similarity between two vectors, you'll also hear this referred to as `nearest neighbor search`. To perform a cosine similarity search you need to _vectorize_ for _query_ text using the OpenAI Embedding API. Then calculate the _cosine similarity_ between the query vector and each vector in the Embedding Index. Remember, the Embedding Index has a vector for each YouTube transcript text segment. Finally, sort the results by cosine similarity and the text segments with the highest cosine similarity are the most similar to the query.
 
 From a mathematic perspective, cosine similarity measures the cosine of the angle between two vectors projected in a multidimensional space. This measurement is beneficial, because if two documents are far apart by Euclidean distance because of size, they could still have a smaller angle between them and therefore higher cosine similarity. For more information about cosine similarity equations, see [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
 
@@ -159,7 +158,6 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 ## Great Work! Continue Your Learning 
 
-Want to learn more about how to build search applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
-  
 Head over to the Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md)!
