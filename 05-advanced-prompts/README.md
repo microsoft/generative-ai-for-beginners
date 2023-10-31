@@ -607,11 +607,15 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 
 Why would I use chain-of-thought prompting? Show me 1 correct response and 2 incorrect responses.
 
-- A, To teach the LLM how to solve a problem.
-- B, To teach the LLM to find errors in code.
-- C, To instruct the LLM to come up with different solutions.
+1. To teach the LLM how to solve a problem.
+1. B, To teach the LLM to find errors in code.
+1. C, To instruct the LLM to come up with different solutions.
 
-Answer: A, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, and similar problems and how they were solved.
+A: 1, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, and similar problems and how they were solved.
+
+## 🚀 Challenge
+
+You just used self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
 
 ## Great Work! Continue Your Learning
 
