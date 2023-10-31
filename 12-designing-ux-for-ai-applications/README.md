@@ -9,11 +9,11 @@ User experience is a very important aspect of building apps. Users need to be ab
 
 ## Introduction
 
-User experience is how a user interacts with and uses a specific product or service be it a system, tool, or design. When developing AI applications, developers not only focus on ensuring the user experience is effective but also ethical. In this lesson, we cover how to build Artificial Intelligence (AI) applications that adresses user needs.
+User experience is how a user interacts with and uses a specific product or service be it a system, tool, or design. When developing AI applications, developers not only focus on ensuring the user experience is effective but also ethical. In this lesson, we cover how to build Artificial Intelligence (AI) applications that addresses user needs.
 
 The lesson will cover the following areas:
 
-* Introduction to User Experience and Undestanding User Needs
+* Introduction to User Experience and Understanding User Needs
 * Designing AI Applications for Trust and Transparency
 * Designing AI Applications for Collaboration and Feedback
 
@@ -26,7 +26,7 @@ After taking this lesson, you'll be able to:
 
 ### Prerequisite
 
-Take some time and read more about [user experience and design thinking.](https://learn.microsoft.com/en-us/training/modules/ux-design/)
+Take some time and read more about [user experience and design thinking.](https://learn.microsoft.com/training/modules/ux-design/)
 
 ## Introduction to User Experience and Understanding User Needs
 
@@ -56,7 +56,7 @@ Not every challenge can be solved with AI. AI comes in to augment your user expe
 
 ## Designing AI Applications for Trust and Transparency
 
-Building trust is crtitical when designing AI applications. Trust ensures a user is confident that the application will get the work done, deliver results consistently and the results are what the user needs. A risk in this area is mistrust and overtrust. Mistrust occures when a user has little or no trust in an AI system, this leads to the user rejecting your application. Overtrust occurs when a user overestimates the capability of an AI system, leading to users trusting the AI system too much. For example, an automated grading system in the case of overtrust might lead the teacher not to proof through some of the papers to ensure the grading system works well. This could result in unfair or inaccurate grades for the students, or missed opportunities for feedback and improvement.
+Building trust is critical when designing AI applications. Trust ensures a user is confident that the application will get the work done, deliver results consistently and the results are what the user needs. A risk in this area is mistrust and over trust. Mistrust occurs when a user has little or no trust in an AI system, this leads to the user rejecting your application. Over trust occurs when a user overestimates the capability of an AI system, leading to users trusting the AI system too much. For example, an automated grading system in the case of over trust might lead the teacher not to proof through some of the papers to ensure the grading system works well. This could result in unfair or inaccurate grades for the students, or missed opportunities for feedback and improvement.
 
 Two ways to ensure trust is put right at the centre of design is explainability and control.
 
@@ -84,11 +84,11 @@ Another feature in Bing that allows a user to have control over the application 
 
 ![Bing search results with options to modify the prompt and output](images/bing2.png "Bing search results with options to modify the prompt and output")
 
-> When designing AI applications, intentionality is key in ensuring users do not overtrust setting unrealistic expectations of its capabilities. One way to do this is by creating friction between the prompts and the results. Reminding the user, that this is AI and not a fellow human being
+> When designing AI applications, intentionality is key in ensuring users do not over trust setting unrealistic expectations of its capabilities. One way to do this is by creating friction between the prompts and the results. Reminding the user, that this is AI and not a fellow human being
 
 ## Designing AI Applications for Collaboration and Feedback
 
-As earlier mentioned generative AI creates a collaboration between the user and AI. Most engagements are with a user inputing a prompt and the AI generating an output. What if the output is incorrect? How does the application handle errors if they occur? Does the AI blame the user or takes time to explain the error?
+As earlier mentioned generative AI creates a collaboration between the user and AI. Most engagements are with a user inputting a prompt and the AI generating an output. What if the output is incorrect? How does the application handle errors if they occur? Does the AI blame the user or takes time to explain the error?
 
 AI applications should be built in to receive and give feedback. This not only helps the AI system improve, but it also builds trust with the users. A feedback loop should be included in the design, an example can be a simple thumbs up or down on the output.
 
@@ -116,6 +116,6 @@ Take any AI apps you've built so far, consider implementing the below steps in y
 
 ## Congratulations, you have finished this course
 
-Want to learn more about designing UX for AI Applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about designing UX for AI Applications? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
-Congratulations, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://aka.ms/genai-foundershub) and apply for the program to recieve support on your journey. 
+Congratulations, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://aka.ms/genai-foundershub) and apply for the program to receive support on your journey.

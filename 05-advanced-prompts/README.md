@@ -1,12 +1,12 @@
 # Creating Advanced prompts
 
+[![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ) 
+Let's recap some learnings from the previous chapter:
 
-Let's recap some learnings from the previous chapter: 
-> Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context. 
+> Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context.
 
-There's also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is *optimization*, how to gradually improve the prompt.
+There's also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
 
 At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques than can be applied to any LLM.  
 
@@ -54,7 +54,7 @@ So far, we've seen a simple prompt example, but generative AI is capable of much
 
 ### Techniques for prompting
 
-First, we need to understand that prompting is an *emergent* property of an LLM meaning that this is not a feature that is built into the model but rather something we discover as we use the model.
+First, we need to understand that prompting is an _emergent_ property of an LLM meaning that this is not a feature that is built into the model but rather something we discover as we use the model.
 
 There are some basic techniques that we can use to prompt an LLM. Let's explore them.
 
@@ -83,9 +83,9 @@ LLM answers with 5, which is incorrect. Correct answer is 1 apple, given the cal
 
 So how can we teach the LLM to do this correctly?
 
-Let's try chain-of-thought. Applying chain-of-thought means: 
+Let's try chain-of-thought. Applying chain-of-thought means:
 
-1. Give the LLM a similar example. 
+1. Give the LLM a similar example.
 1. Show the calculation, and how to calculate it correctly.
 1. Provide the original prompt.
 
@@ -104,73 +104,73 @@ As you can see chain-of-thought is a very powerful technique.
 
 ### Generated knowledge
 
-Many times when you want to construct a prompt, you want to do so using your own company's data. You want part of the prompt to be from the company and the other part should be the actual prompt you're interested in. 
+Many times when you want to construct a prompt, you want to do so using your own company's data. You want part of the prompt to be from the company and the other part should be the actual prompt you're interested in.
 
 As an example, this is what your prompt then can look like if you're in the insurance business:
 
-```text
-{{company}}: {{company_name}}
-{{products}}: 
-{{products_list}}
-Please suggest an insurance given the following budget and requirements:
-Budget: {{budget}}
-Requirements: {{requirements}}
-```
+    ```text
+    {{company}}: {{company_name}}
+    {{products}}: 
+    {{products_list}}
+    Please suggest an insurance given the following budget and requirements:
+    Budget: {{budget}}
+    Requirements: {{requirements}}
+    ```
 
 Above, you see how the prompt is constructed using a template. In the template there's a number of variables, denoted by `{{variable}}`, that will be replaced with actual values from a company API.
 
 Here's an example of how the prompt could look like once the variables have been replaced by content from your company:
 
-```text
-Insurance company: ACME Insurance
-Insurance products (cost per month): 
-- Car, cheap, 500 USD
-- Car, expensive, 1100 USD 
-- Home, cheap, 600 USD
-- Home, expensive, 1200 USD
-- Life, cheap, 100 USD
-
-Please suggest an insurance given the following budget and requirements:
-Budget: $1000
-Requirements: Car, Home
-```
+    ```text
+    Insurance company: ACME Insurance
+    Insurance products (cost per month): 
+    - Car, cheap, 500 USD
+    - Car, expensive, 1100 USD 
+    - Home, cheap, 600 USD
+    - Home, expensive, 1200 USD
+    - Life, cheap, 100 USD
+    
+    Please suggest an insurance given the following budget and requirements:
+    Budget: $1000
+    Requirements: Car, Home
+    ```
 
 Running this prompt through an LLM will produce a response like this:
 
-```text
-, and Life insurance
+    ```output
+    , and Life insurance
+    
+    Given the budget and requirements, we suggest the following insurance package from ACME Insurance: 
+    - Car, cheap, 500 USD 
+    - Home, cheap, 600 USD 
+    - Life, cheap, 100 USD 
+    Total cost: $1,200 USD
+    ```
 
-Given the budget and requirements, we suggest the following insurance package from ACME Insurance: 
-- Car, cheap, 500 USD 
-- Home, cheap, 600 USD 
-- Life, cheap, 100 USD 
-Total cost: $1,200 USD
-```
+As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After som _trial and error_, we arrive at the following prompt:
 
-As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After som *trial and error*, we arrive at the following prompt:
+    ```text
+    Insurance company: ACME Insurance
+    Insurance products (cost per month): 
+    - type: Car, cheap, cost: 500 USD
+    - type: Car, expensive, cost: 1100 USD 
+    - type: Home, cheap, cost: 600 USD
+    - type: Home, expensive, cost: 1200 USD
+    - type: Life, cheap, cost: 100 USD
+    
+    Please suggest an insurance given the following budget and requirements:
+    Budget: $1000 restrict choice to types: Car, Home
+    ```
 
-```text
-Insurance company: ACME Insurance
-Insurance products (cost per month): 
-- type: Car, cheap, cost: 500 USD
-- type: Car, expensive, cost: 1100 USD 
-- type: Home, cheap, cost: 600 USD
-- type: Home, expensive, cost: 1200 USD
-- type: Life, cheap, cost: 100 USD
-
-Please suggest an insurance given the following budget and requirements:
-Budget: $1000 restrict choice to types: Car, Home
-```
-
-Note how adding *type* and *cost* and also using the keyword *restrict* helps the LLM to understand what we want.
+Note how adding _type_ and _cost_ and also using the keyword _restrict_ helps the LLM to understand what we want.
 
 Now we get the following response:
 
-```text
-Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
-```
+    ```output
+    Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
+    ```
 
-The point of this example was to show that even though we're using a basic technique like *generated knowledge*, we still need to optimize the prompt in most cases to get the desired outcome.
+The point of this example was to show that even though we're using a basic technique like _generated knowledge_, we still need to optimize the prompt in most cases to get the desired outcome.
 
 ### Least-to-most
 
@@ -178,7 +178,7 @@ The idea with Least-to-most prompting is to break down a bigger problem into sub
 
 > Prompt: How to perform data science in 5 steps?
 
-With your AI assistant answering with: 
+With your AI assistant answering with:
 
 1. Collect data
 1. Clean data
@@ -205,52 +205,52 @@ Here's an example using this technique:
 
 AI Answer:
 
-```python
-import flask
-app = Flask(__name__)
-
-@app.route('/products')
-def products():
-    return 'Products'
-
-@app.route('/customers')
-def customers():
-    return 'Customers'
-```
+    ```python
+    import flask
+    app = Flask(__name__)
+    
+    @app.route('/products')
+    def products():
+        return 'Products'
+    
+    @app.route('/customers')
+    def customers():
+        return 'Customers'
+    ```
 
 > Prompt: suggest 3 improvements of the above code
 
 AI Answer:
 
-```text
-Sure, here are three suggestions to improve the code:
+    ```text
+    Sure, here are three suggestions to improve the code:
+    
+    Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
+    
+    Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
+    
+    Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
+    ```
 
-Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
-
-Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
-
-Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
-```
-
-```python
-from flask import Flask, request
-
-app = Flask(__name__)
-
-@app.route('/products')
-def products():
-    return f'This is the {request.path} page'
-
-@app.route('/customers')
-def customers():
-    return f'This is the {request.path} page'
-
-if __name__ == '__main__':
-    app.run()
-```
+    ```python
+    from flask import Flask, request
+    
+    app = Flask(__name__)
+    
+    @app.route('/products')
+    def products():
+        return f'This is the {request.path} page'
+    
+    @app.route('/customers')
+    def customers():
+        return f'This is the {request.path} page'
+    
+    if __name__ == '__main__':
+        app.run()
+    ```
 
 As you can see, the above AI response is improving the first suggested code thanks to critiquing the first answer.
- 
+
 ### Maieutic prompting
 
 Maieutic prompting is a technique that is similar to self-refine but it's more about asking the LLM to explain itself. The goal is to reduce inconsistencies in the LLM's output so to ensure it arrives at the correct answer. The workflow to follow is:
@@ -264,43 +264,43 @@ Repeat 2 and 3 until you've gone through all the parts and you're satisfied with
 Here's an example prompt:
 
 > prompt: How can I create a crisis plan to mitigate for a pandemic in 5 steps?
-LLM answer: 
+LLM answer:
 
-```text
-1. Identify the risks
-1. Identify the stakeholders
-1. Identify the resources
-1. Identify the actions
-1. Identify the communication channels
-```
+    ```text
+    1. Identify the risks
+    1. Identify the stakeholders
+    1. Identify the resources
+    1. Identify the actions
+    1. Identify the communication channels
+    ```
 
 It's identified 5 steps, but can we determine if this is correct? Let's ask the LLM to explain each step:
 
 > prompt: Explain the first step in more detail, what are the risks in detail with a pandemic?
 
-```text
-The risks are the following:
-
-- Loss of life
-- Loss of business
-- Loss of reputation
-- Loss of customers
-- Loss of employees
-```
+    ```text
+    The risks are the following:
+    
+    - Loss of life
+    - Loss of business
+    - Loss of reputation
+    - Loss of customers
+    - Loss of employees
+    ```
 
 At this point, we want to make sure the LLM is correct so we ask it to explain the first risk in more detail and hope it's consistent with the answer above:
 
 > prompt: In a Pandemic, which is the biggest risk and why?
 
-```text
-The biggest risk is loss of life because it's the most important thing to protect.
-```
+    ```text
+    The biggest risk is loss of life because it's the most important thing to protect.
+    ```
 
 > What are the two biggest risks in a pandemic?
 
-```text
-The two biggest risks are loss of life and loss of business.
-```
+    ```text
+    The two biggest risks are loss of life and loss of business.
+    ```
 
 At this point, the LLM is consistent and mentions "life" and "business" as top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
 
@@ -310,107 +310,107 @@ LLMs are non deterministic by nature, meaning that you will get different result
 
 > "Generate code for a Python Web API"
 
-```text
-# Import necessary modules
-import flask
-from flask import request, jsonify
-
-# Create a Flask app
-app = flask.Flask(__name__)
-
-# Create a route for the API
-@app.route('/api', methods=['GET'])
-def api():
-    # Get the data from the request
-    data = request.args
-
-    # Process the data
-    result = process_data(data)
-
-    # Return the result as JSON
-    return jsonify(result)
-
-# Function to process the data
-def process_data(data):
-    # Do something with the data
-    result = data + 1
-
-    # Return the result
-    return result
-
-# Run the app
-if __name__ == '__main__':
-    app.run()
-
-```
+    ```text
+    # Import necessary modules
+    import flask
+    from flask import request, jsonify
+    
+    # Create a Flask app
+    app = flask.Flask(__name__)
+    
+    # Create a route for the API
+    @app.route('/api', methods=['GET'])
+    def api():
+        # Get the data from the request
+        data = request.args
+    
+        # Process the data
+        result = process_data(data)
+    
+        # Return the result as JSON
+        return jsonify(result)
+    
+    # Function to process the data
+    def process_data(data):
+        # Do something with the data
+        result = data + 1
+    
+        # Return the result
+        return result
+    
+    # Run the app
+    if __name__ == '__main__':
+        app.run()
+    
+    ```
 
 Running the same prompt again generates a slightly different response:
 
-```text
-#import necessary packages
-import flask
-from flask import request, jsonify
-
-#create the Flask application
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
-
-#create a list of books
-books = [
-    {'id': 0,
-     'title': 'A Fire Upon the Deep',
-     'author': 'Vernor Vinge',
-     'first_sentence': 'The coldsleep itself was dreamless.',
-     'year_published': '1992'},
-    {'id': 1,
-     'title': 'The Ones Who Walk Away From Omelas',
-     'author': 'Ursula K. Le Guin',
-     'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
-     'published': '1973'},
-    {'id': 2,
-     'title': 'Dhalgren',
-     'author': 'Samuel R. Delany',
-     'first_sentence': 'to wound the autumnal city.',
-     'published': '1975'}
-]
-
-#create an endpoint for the API
-@app.route('/', methods=['GET'])
-def home():
-    return '''<h1>Books API</h1>
-<p>A prototype API for retrieving books.</p>'''
-
-#create an endpoint to return all books
-@app.route('/api/v1/resources/books/all', methods=['GET'])
-def api_all():
-    return jsonify(books)
-
-#create an endpoint to return a single book
-@app.route('/api/v1/resources/books', methods=['GET'])
-def api_id():
-    #check if an ID was provided as part of the URL
-    #if ID is provided, assign it to a variable
-    #if no ID is provided, display an error
-    if 'id' in request.args:
-        id = int(request.args['id'])
-    else:
-        return "Error: No id field provided. Please specify an id."
-
-    #create an empty list for our results
-    results = []
-
-    #loop through the data and match results that fit the requested ID
-    #IDs are unique, but other fields might return many results
-    for book in books:
-        if book['id'] == id:
-            results.append(book)
-
-    #use the jsonify function from Flask to convert our list of
-    #Python dictionaries to the JSON format
-    return jsonify(results)
-
-app.run()
-```
+    ```text
+    #import necessary packages
+    import flask
+    from flask import request, jsonify
+    
+    #create the Flask application
+    app = flask.Flask(__name__)
+    app.config["DEBUG"] = True
+    
+    #create a list of books
+    books = [
+        {'id': 0,
+         'title': 'A Fire Upon the Deep',
+         'author': 'Vernor Vinge',
+         'first_sentence': 'The coldsleep itself was dreamless.',
+         'year_published': '1992'},
+        {'id': 1,
+         'title': 'The Ones Who Walk Away From Omelas',
+         'author': 'Ursula K. Le Guin',
+         'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
+         'published': '1973'},
+        {'id': 2,
+         'title': 'Dhalgren',
+         'author': 'Samuel R. Delany',
+         'first_sentence': 'to wound the autumnal city.',
+         'published': '1975'}
+    ]
+    
+    #create an endpoint for the API
+    @app.route('/', methods=['GET'])
+    def home():
+        return '''<h1>Books API</h1>
+    <p>A prototype API for retrieving books.</p>'''
+    
+    #create an endpoint to return all books
+    @app.route('/api/v1/resources/books/all', methods=['GET'])
+    def api_all():
+        return jsonify(books)
+    
+    #create an endpoint to return a single book
+    @app.route('/api/v1/resources/books', methods=['GET'])
+    def api_id():
+        #check if an ID was provided as part of the URL
+        #if ID is provided, assign it to a variable
+        #if no ID is provided, display an error
+        if 'id' in request.args:
+            id = int(request.args['id'])
+        else:
+            return "Error: No id field provided. Please specify an id."
+    
+        #create an empty list for our results
+        results = []
+    
+        #loop through the data and match results that fit the requested ID
+        #IDs are unique, but other fields might return many results
+        for book in books:
+            if book['id'] == id:
+                results.append(book)
+    
+        #use the jsonify function from Flask to convert our list of
+        #Python dictionaries to the JSON format
+        return jsonify(results)
+    
+    app.run()
+    ```
 
 > So is the varied output a problem?
 
@@ -424,137 +424,137 @@ Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 
 
 > "Generate code for a Python Web API"
 
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
-
-#create an instance of the Flask class
-app = flask.Flask(__name__)
-
-#create an endpoint for the API
-@app.route('/api/v1/endpoint', methods=['GET'])
-def api_endpoint():
-    #get the request data
-    data = request.get_json()
-
-    #process the data
-    result = process_data(data)
-
-    #return the result
-    return jsonify(result)
-
-#function to process the data
-def process_data(data):
-    #process the data
-    result = {'result': 'success'}
-
-    #return the result
-    return result
-
-#run the Flask app
-if __name__ == '__main__':
-    app.run()
-
-```
+    ```python
+    #import necessary libraries
+    import flask
+    from flask import request, jsonify
+    
+    #create an instance of the Flask class
+    app = flask.Flask(__name__)
+    
+    #create an endpoint for the API
+    @app.route('/api/v1/endpoint', methods=['GET'])
+    def api_endpoint():
+        #get the request data
+        data = request.get_json()
+    
+        #process the data
+        result = process_data(data)
+    
+        #return the result
+        return jsonify(result)
+    
+    #function to process the data
+    def process_data(data):
+        #process the data
+        result = {'result': 'success'}
+    
+        #return the result
+        return result
+    
+    #run the Flask app
+    if __name__ == '__main__':
+        app.run()
+    
+    ```
 
 Running the prompt again gives us this outcome:
 
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
-
-#create a Flask app
-app = flask.Flask(__name__)
-
-#create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    #get the data from the request
-    data = request.get_json()
+    ```python
+    #import necessary libraries
+    import flask
+    from flask import request, jsonify
     
-    #process the data
-    result = process_data(data)
+    #create a Flask app
+    app = flask.Flask(__name__)
     
-    #return the result
-    return jsonify(result)
-
-#define the process_data function
-def process_data(data):
-    #do something with the data
-    result = data + 1
+    #create a route for the API
+    @app.route('/api', methods=['GET'])
+    def api_call():
+        #get the data from the request
+        data = request.get_json()
+        
+        #process the data
+        result = process_data(data)
+        
+        #return the result
+        return jsonify(result)
     
-    #return the result
-    return result
-
-#run the app
-if __name__ == '__main__':
-    app.run()
-
-```
+    #define the process_data function
+    def process_data(data):
+        #do something with the data
+        result = data + 1
+        
+        #return the result
+        return result
+    
+    #run the app
+    if __name__ == '__main__':
+        app.run()
+    
+    ```
 
 There's only a tiny difference between these two outputs.  Let's do the opposite this time, let's set the temperature to 0.9:
 
-```python
-# Import necessary libraries
-import flask
-from flask import request, jsonify
-
-# Create a Flask app
-app = flask.Flask(__name__)
-
-# Create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    # Get the data from the request
-    data = request.args
-
-    # Process the data
-    result = process_data(data)
-
-    # Return the result
-    return jsonify(result)
-
-# Function to process the data
-def process_data(data):
-    # Do something with the data
-    result = data + 1
-
-    # Return the result
-    return result
-
-# Run the app
-if __name__ == '__main__':
-    app.run()
-
-```
+    ```python
+    # Import necessary libraries
+    import flask
+    from flask import request, jsonify
+    
+    # Create a Flask app
+    app = flask.Flask(__name__)
+    
+    # Create a route for the API
+    @app.route('/api', methods=['GET'])
+    def api_call():
+        # Get the data from the request
+        data = request.args
+    
+        # Process the data
+        result = process_data(data)
+    
+        # Return the result
+        return jsonify(result)
+    
+    # Function to process the data
+    def process_data(data):
+        # Do something with the data
+        result = data + 1
+    
+        # Return the result
+        return result
+    
+    # Run the app
+    if __name__ == '__main__':
+        app.run()
+    
+    ```
 
 and the second attempt at 0.9 as temperature value:
 
-```python
-import flask
-from flask import request, jsonify
-
-# create the Flask app
-app = flask.Flask(__name__)
-app.config['DEBUG'] = True
-
-# create some test data
-books = [
-    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
-    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
-    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
-]
-
-# create an endpoint
-@app.route('/', methods=['GET'])
-def home():
-    return '''<h1>Welcome to our book API!</h1>'''
-
-@app.route('/api/v1/resources/books
-
-```
+    ```python
+    import flask
+    from flask import request, jsonify
+    
+    # create the Flask app
+    app = flask.Flask(__name__)
+    app.config['DEBUG'] = True
+    
+    # create some test data
+    books = [
+        {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+        {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+        {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+    ]
+    
+    # create an endpoint
+    @app.route('/', methods=['GET'])
+    def home():
+        return '''<h1>Welcome to our book API!</h1>'''
+    
+    @app.route('/api/v1/resources/books
+    
+    ```
 
 As you can see, the results couldn't be more varied.
 
@@ -578,19 +578,19 @@ Here are some good practices to consider:
 
 Here's code in Python showing how to build a simple API using Flask:
 
-```python
-from flask import Flask, request
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    name = request.args.get('name', 'World')
-    return f'Hello, {name}!'
-
-if __name__ == '__main__':
-    app.run()
-```
+    ```python
+    from flask import Flask, request
+    
+    app = Flask(__name__)
+    
+    @app.route('/')
+    def hello():
+        name = request.args.get('name', 'World')
+        return f'Hello, {name}!'
+    
+    if __name__ == '__main__':
+        app.run()
+    ```
 
 Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
 
@@ -599,7 +599,7 @@ Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" t
 Please attempt to solve the assignment by adding suitable prompts to the code.
 
 > [!TIP]
-> Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc. 
+> Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
 [Solution](./solution.py)
 
@@ -607,15 +607,18 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 
 Why would I use chain-of-thought prompting? Show me 1 correct response and 2 incorrect responses.
 
-- A, To teach the LLM how to solve a problem.
-- B, To teach the LLM to find errors in code.
-- C, To instruct the LLM to come up with different solutions.
+1. To teach the LLM how to solve a problem.
+1. B, To teach the LLM to find errors in code.
+1. C, To instruct the LLM to come up with different solutions.
 
-Answer: A, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, and similar problems and how they were solved.
+A: 1, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, and similar problems and how they were solved.
 
-## Great Work! Continue Your Learning 
+## 🚀 Challenge
 
-Want to learn more about creating advanced prompts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+You just used self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
 
+## Great Work! Continue Your Learning
 
-Head over to the Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md)!
+Want to learn more about creating advanced prompts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+
+Head over to the Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md)
