@@ -87,13 +87,13 @@ pip install openai
 You need to carry out the following steps:
 
 - Create an account on Azure <https://azure.microsoft.com/free/>.
-- Gain access to Azure Open AI. Go to <https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai> and request access.
+- Gain access to Azure Open AI. Go to <https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst> and request access.
 
   > [!NOTE]
   > At the time of writing, you need to apply for access to Azure Open AI.
 
 - Install Python <https://www.python.org/>
-- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
+- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Locate API key and endpoint
 

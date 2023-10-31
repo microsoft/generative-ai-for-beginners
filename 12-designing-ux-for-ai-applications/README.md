@@ -26,7 +26,7 @@ After taking this lesson, you'll be able to:
 
 ### Prerequisite
 
-Take some time and read more about [user experience and design thinking.](https://learn.microsoft.com/training/modules/ux-design/)
+Take some time and read more about [user experience and design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
 ## Introduction to User Experience and Understanding User Needs
 

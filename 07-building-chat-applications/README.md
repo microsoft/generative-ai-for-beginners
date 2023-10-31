@@ -96,7 +96,7 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 
 ### Microsoft's System Message Framework for Large Language Models
 
-[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
+[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
 
 1. Defining who the model is for, as well as its capabilities and limitations.
 2. Defining the model's output format.

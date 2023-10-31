@@ -2,7 +2,7 @@
 
 [![Introduction to Generative AI and Large Language Models](./media/genai_course_8[80].png)](TBD)
 
-> **Video Coming Soon** 
+> **Video Coming Soon**
 
 There's more to LLMs than chat bots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
 
@@ -66,14 +66,14 @@ The Embedding index for this lesson was created with a series of Python scripts.
 The scripts perform the following operations:
 
 1. The transcript for each YouTube video in the [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) playlist is downloaded.
-2. Using [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling), an attempt is made to extract the speaker name from the first 3 minutes of the YouTube transcript. The speaker name for each video is stored in the Embedding Index named `embedding_index_3m.json`.
+2. Using [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), an attempt is made to extract the speaker name from the first 3 minutes of the YouTube transcript. The speaker name for each video is stored in the Embedding Index named `embedding_index_3m.json`.
 3. The transcript text is then chunked into **3 minute text segments**. The segment includes about 20 words overlapping from the next segment to ensure that the Embedding for the segment is not cut off and to provide better search context.
 4. Each text segment is then passed to the OpenAI Chat API to summarize the text into 60 words. The summary is also stored in the Embedding Index `embedding_index_3m.json`.
 5. Finally, the segment text is passed to the OpenAI Embedding API. The Embedding API returns a vector of 1536 numbers that represent the semantic meaning of the segment. The segment along with the OpenAI Embedding vector is stored in an Embedding Index `embedding_index_3m.json`.
 
 ### Vector Databases
 
-For lesson simplicity, the Embedding Index is stored in a JSON file named `embedding_index_3m.json` and loaded into a Pandas Dataframe. However, in production, the Embedding Index would be stored in a vector database such as [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme), to name but a few.
+For lesson simplicity, the Embedding Index is stored in a JSON file named `embedding_index_3m.json` and loaded into a Pandas Dataframe. However, in production, the Embedding Index would be stored in a vector database such as [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme), to name but a few.
 
 ## Understanding cosine similarity
 
