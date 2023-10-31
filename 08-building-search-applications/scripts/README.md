@@ -8,7 +8,7 @@ The transcription data prep scripts have been tested on the latest releases Wind
 
 > [!IMPORTANT]
 > We suggest you update the Azure CLI to the latest version to ensure compatibility with OpenAI
-> See [Documentation](https://learn.microsoft.com/en-us/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> See [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Create a resource group
 
