@@ -655,6 +655,10 @@ What's a good way to store secrets like API keys?
 
 A: 3, because environment variables are not stored in code and can be loaded from the code. 
 
+## 🚀 Challenge
+
+When working on the assignment, try vary the temperature, try set it to 0, 0.5 and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
+
 ## Great Work! Continue Your Learning 
 
 Want to learn more about about creating text generation applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
