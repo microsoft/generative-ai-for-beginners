@@ -1,6 +1,7 @@
 
 ![Generative AI For Beginners](./img/1.png)
 
+### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/)
@@ -18,27 +19,29 @@
 
 # Generative AI for Beginners - A Course 
 
-Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. This course will take you from learning Generative AI concepts like LLMs and prompt engineering to applying those ideas by building real Generative AI applications. 
-
-Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
-
-Build a strong foundation of Generative AI knowledge and start applying it today!
+Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
 
 ## 🌱 Getting Started
 
 To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easier later!  
 
-This course is divided into 6 concept lessons and 6 coding lessons. The coding lessons have both a Juypter Notebook and README included if you only want to view the results of the code and text. To help you get up and running faster, we recommend using this course with Github Codespaces (no extra installs needed). You can open this by using the link below: 
-
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners)
-
-To make sure you have access to the right tools for the coding projects, go to the [Course Introduction Page](/00-course-setup/README.md)
-
-If you enjoyed this course, we would really apperciate it if you starred (🌟) this repo! 
+Head to the [Course Setup Page](/00-course-setup/README.md) to find the setup guide that works best for you!
 
 ## 🗣️ Meet Other Learners, Get Support 
+
 We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
+### 🚀  Are you a startup or got an idea you want to launch? 
+
+Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
+
+## 📂 Each lesson includes:
+
+- a short video introdution to the topic
+- written lesson located in the README 
+- for project-based lessons, a Juypter Notebook with code examples 
+- a challenge or assignment to apply your learning 
+- links to extra resources to contiune your learning
 
 ## 🗃️ Lessons
 |       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
@@ -58,17 +61,9 @@ We believe one of the best ways to learn is learning with others! Join our [offi
 | 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/) | **Concept:** Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
 | xx | [Continue Your Learning](./13-continued-learning/README.md)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
 
-### 🚀  Are you a startup or got an idea you want to launch? 
-
-Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services** as well as **1:1 expert support** with Microsoft's AI experts.
 
 
-## 📂 Each lesson includes:
-- optional supplemental video
-- written lesson
-- for project-based lessons, step-by-step guides on how to build the project
-- a challenge
-- links to extra learning
+ 
   
 ## 🎒  Other Courses 
 
