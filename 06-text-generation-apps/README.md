@@ -648,13 +648,9 @@ What does the concept temperature do?
 
 A: 1
 
-What's a good way to store secrets like API keys?
+## 🚀 Challenge
 
-1. In code.
-1. In a file.
-1. In environment variables.
-
-A: 3, because environment variables are not stored in code and can be loaded from the code.
+When working on the assignment, try vary the temperature, try set it to 0, 0.5 and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
 
 ## Great Work! Continue Your Learning
 
