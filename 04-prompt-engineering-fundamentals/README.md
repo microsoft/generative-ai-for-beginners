@@ -379,6 +379,21 @@ LESSON TEMPLATE:
 Wrap the section with a summary and resources for self-guided learning.
 -->
 
+
+## Knowledge check
+
+Which of the following is a good prompt following some reasonable best practices?
+
+1. Show me an image of red car
+2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
+3. Show me an image of red car of make Volvo and model XC90 
+
+A: 2, it's the best prompt as it provides details on "what" and goes into specifics (not just any car but a specific make and model) and it also describes the overall setting. 3 is next best as it also contains a lot of description.
+
+## 🚀 Challenge
+
+See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it? 
+
 ## Great Work! Continue Your Learning
 
 Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
