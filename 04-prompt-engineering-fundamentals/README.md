@@ -1,14 +1,13 @@
-# Prompt Engineering Fundamentals 
+# Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals ](./img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk) 
+[![Prompt Engineering Fundamentals](./img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
 
 
 How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these is what this chapter and the upcoming chapter is looking to answer.
 
+_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
 
-_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code. 
-
-Users can now interact with these models using familiar pardigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt till the response matches their expectations.
+Users can now interact with these models using familiar paradigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt till the response matches their expectations.
 
 "Prompts" now become the primary _programming interface_ for generative AI apps, telling the models what to do and influencing the quality of returned responses. "Prompt Engineering" is a fast-growing field of study that focuses on the _design and optimization_ of prompts to deliver consistent and quality responses at scale.
 
@@ -43,10 +42,10 @@ The notebook comes with _starter_ exercises - but you are encouraged to add your
 
 Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education). We want to build AI-powered applications of  _personalized learning_ - so let's think about how different users of our application might "design" prompts:
 
- - **Administrators** might ask the AI to _analyze curriculum data to identify gaps in coverage_. The AI can summarize results or visualize them with code.
- - **Educators** might ask the AI to _generate a lesson plan for a target audience and topic_. The AI can build the personalized plan in a specified format.
- - **Students** might ask the AI to _tutor them in a difficult subject_. The AI can now guide students with lessons, hints & examples tailored to their level.
- 
+- **Administrators** might ask the AI to _analyze curriculum data to identify gaps in coverage_. The AI can summarize results or visualize them with code.
+- **Educators** might ask the AI to _generate a lesson plan for a target audience and topic_. The AI can build the personalized plan in a specified format.
+- **Students** might ask the AI to _tutor them in a difficult subject_. The AI can now guide students with lessons, hints & examples tailored to their level.
+
 That's just the tip of the iceberg. Check out [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main) - an open-source prompts library curated by education experts - to get a broader sense of the possibilities! _Try running some of those prompts in the sandbox or using the OpenAI Playground to see what happens!_
 
 <!--
@@ -62,21 +61,21 @@ Define it and explain why it is needed.
 ## What is Prompt Engineering?
 
 We started this lesson by defining **Prompt Engineering** as the process of _designing and optimizing_ text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model. We can think of this as a 2-step process:
- - _designing_ the initial prompt for a given model and objective
- - _refining_ the prompt iteratively to improve quality of response
 
-This is necessarily a trial-and-error process that requires user intuition and effort for getting optimal results. So why is it important? To answer that question, we first need to understand three concepts: 
+- _designing_ the initial prompt for a given model and objective
+- _refining_ the prompt iteratively to improve quality of response
 
- - _Tokenization_ = how the model "sees" the prompt
- - _Base LLMs_ = how the foundation model "processes" a prompt
- - _Instruction-Tuned LLMs_ = how the model can now see "tasks"
+This is necessarily a trial-and-error process that requires user intuition and effort for getting optimal results. So why is it important? To answer that question, we first need to understand three concepts:
 
+- _Tokenization_ = how the model "sees" the prompt
+- _Base LLMs_ = how the foundation model "processes" a prompt
+- _Instruction-Tuned LLMs_ = how the model can now see "tasks"
 
 ### Tokenization
 
 An LLM sees prompts as a _sequence of tokens_ where different models (or versions of a model) can tokenize the same prompt in different ways. Since LLMs are trained on tokens (and not on raw text), the way prompts get tokenized has a direct impact on the quality of the generated response.
 
-To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespaces and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
+To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
 
 ![Tokenization](./img/4.0-tokenizer-example.png)
 
@@ -104,7 +103,6 @@ See how the result is now tuned to reflect the desired goal and format? An educa
 
 ![Instruction Tuned LLM Chat Completion](./img/4.0-playground-chat-instructions.png)
 
-
 ## Why do we need Prompt Engineering?
 
 Now that we know how prompts are processed by LLMs, let's talk about _why_ we need prompt engineering. The answer lies in the fact that current LLMs pose a number of challenges that make _reliable and consistent completions_ more challenging to achieve without putting effort into prompt construction and optimization. For instance:
@@ -115,17 +113,17 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 1. **Models capabilities will vary.** Newer models or model generations will have richer capabilities but also bring unique quirks and tradeoffs in cost & complexity. _Prompt engineering can help us develop best practices and workflows that abstract away differences and adapt to model-specific requirements in scalable, seamless ways_.
 
-Let's see this in action in the OpenAI or Azure OpenAI Playground: 
+Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
- - Use the same prompt with different LLM deployments (e.g, OpenAI , Azure OpenAI, Hugging Face) - did you see the variations?.
- - Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
+- Use the same prompt with different LLM deployments (e.g, OpenAI , Azure OpenAI, Hugging Face) - did you see the variations?.
+- Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
 
 ### Hallucinations Example
 
 Want to get a sense of how hallucinations work? Think of a prompt that instructs the AI to generate content for a non-existent topic (to ensure it is not found in the training dataset). For example - I tried this prompt:
 > **Prompt:** generate a lesson plan on the Martian War of 2076.
 
-A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event. 
+A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event.
 
 So what happens when we run this prompt with different LLM providers?
 
@@ -157,7 +155,7 @@ Read the posts in order, to follow their learning journey.
 - **May 2023** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/).
 - **Jun 2023** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/).
 - **Jul 2023** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/)
-- **Jul 2023** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/) 
+- **Jul 2023** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/)
 - **Sep 2023** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/)
 
 You can also browse their [Engineering blog](https://github.blog/category/engineering/) for more posts like [this one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/) that shows how these models and techniques are _applied_ for driving real-world applications.
@@ -178,24 +176,22 @@ Illustrated with examples.
 
 We've seen why prompt engineering is important - now let's understand how prompts are _constructed_ so we can evaluate different techniques for more effective prompt design.
 
-### Basic Prompt 
+### Basic Prompt
 
 Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
-
 
 | Prompt (Input) | Completion (Output) |
 |:---|:---|
 | Oh say can you see | It sounds like you're starting the lyrics to "The Star-Spangled Banner," the national anthem of the United States. The full lyrics are ... |
 
-
 ### Complex Prompt
 
-Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt) lets us construct a complex prompt as a collection of _messages_ with
- - input/output pairs reflecting _user_ input and _assistant_ response
- - system message setting the context for assistant behavior or personality
+Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt) lets us construct a complex prompt as a collection of _messages_ with:
+
+- Input/output pairs reflecting _user_ input and _assistant_ response.
+- System message setting the context for assistant behavior or personality.
 
 The request is now in the form below, where the _tokenization_ effectively captures relevant information from context and conversation. Now, changing the system context can be as impactful on the quality of completions, as the user inputs provided.
-
 
 ```python
 response = openai.ChatCompletion.create(
@@ -222,14 +218,17 @@ In the above examples, the user prompt was a simple text query that can be inter
 ## Primary Content
 
 In the above examples, the prompt was still fairly open-ended, allowing the LLM to decide what part of its pre-trained dataset was relevant. With the _primary content_ design pattern, the input text is divided into two parts:
- - an instruction (action)
- - relevant content (that influences action)
+
+- an instruction (action)
+- relevant content (that influences action)
 
 Here's an example where the instruction is to "summarize this in 2 sentences".
 
+```text
 | Prompt (Input) | Completion (Output) |
 |:---|:---|
 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, the fifth planet from the Sun, is the largest in the Solar System and is known for being one of the brightest objects in the night sky. Named after the Roman god Jupiter, it's a gas giant whose mass is two-and-a-half times that of all other planets in the Solar System combined. |
+```
 
 The primary content segment can be used in various ways to drive more effective instructions:
 
@@ -244,17 +243,19 @@ Let's explore these in action.
 This is an approach where you use the primary content to "feed the model" some examples of the desired output for a given instruction, and let it infer the patter for the desired output. Based on the number of examples provided, we can have zero-shot prompting, one-shot prompting, few-shot prompting etc.
 
 The prompt now consists of three components:
- - A task description
- - A few examples of the desired output
- - The start of a new example (which becomes an implicit task description)
 
+- A task description
+- A few examples of the desired output
+- The start of a new example (which becomes an implicit task description)
 
-| Learning Type | Prompt (Input) | Completion (Output) |
-|:---|:---|:---|
-| Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
-| One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
-| Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
-| | | |
+    ```text
+    | Learning Type | Prompt (Input) | Completion (Output) |
+    |:---|:---|:---|
+    | Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
+    | One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
+    | Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
+    | | | |
+    ```
 
 Note how we had to provide an explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more accurate inferences with no added instructions.
 
@@ -262,13 +263,14 @@ Note how we had to provide an explicit instruction ("Translate to Spanish") in z
 
 Another technique for using primary content is to provide _cues_ rather than examples. In this case, we are giving the model a nudge in the right direction by _starting it off_ with a snippet that reflects the desired response format. The model then "takes the cue" to continue in that vein.
 
+```text
 | Number of Cues | Prompt (Input) | Completion (Output) |
 |:---|:---|:---|
 | 0  | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This**  | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky..|
 | 1 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times. |
 | 2 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> Top 3 Facts We Learned: | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ... |
 | | | |
-
+```
 
 ### Prompt Templates
 
@@ -276,17 +278,17 @@ A prompt template is a _pre-defined recipe for a prompt_ that can be stored and 
 
 In it's more complex form like [this example from LangChain](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/) it contains _placeholders_ that can be replaced with data from a variety of sources (user input, system context, external data sources etc.) to generate a prompt dynamically. This allows us to create a library of reusable prompts that can be used to drive consistent user experiences **programmatically** at scale.
 
-Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for vertical application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring etc.
-
+Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for vertical application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring etc.
 
 ## Supporting Content
 
 If we think about prompt construction as having a instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies etc. that can help the model _tailor_ its response to be suit the desired user objectives or expectations.
 
 For example: Given a course catalog with extensive metadata (name, description, level, metadata tags, instructor etc.) on all the available courses in the curriculum:
- - we can define an instruction to "summarize the course catalog for Fall 2023"
- - we can use the primary content to provide a few examples of the desired output
- - we can use the secondary content to identify the top 5 "tags" of interest.
+
+- we can define an instruction to "summarize the course catalog for Fall 2023"
+- we can use the primary content to provide a few examples of the desired output
+- we can use the secondary content to identify the top 5 "tags" of interest.
 
 Now, the model can provide a summary in the format show by the few examples - but if a result has multiple tags, it can prioritize the 5 tags identified in secondary content.
 
@@ -310,18 +312,18 @@ Now that we know how prompts can be _constructed_, we can start thinking about h
 ### Prompt Engineering Mindset
 
 Prompt Engineering is a trial-and-error process so keep three broad guiding factors in mind:
- 
- 1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide model towards familiar usage patterns.
 
- 2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capablities they provide (e.g., via API or SDK) and the type of content they are optimized for (e.g, code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to *prioritize tasks* or build *customized templates* that aare optimized for the model's capabilities.
- 
- 3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to jumpstart prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g, prompt libraries) that can be used as a new baseline by others, for faster iterations in future.
- 
+1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide model towards familiar usage patterns.
+
+2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capabilities they provide (e.g., via API or SDK) and the type of content they are optimized for (e.g, code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to _prioritize tasks_ or build _customized templates_ that are optimized for the model's capabilities.
+
+3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g, prompt libraries) that can be used as a new baseline by others, for faster iterations in future.
 
 ## Best Practices
 
-Now let's look at common best practices that are recommended by [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering#best-practices) practitioners.
+Now let's look at common best practices that are recommended by [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices) practitioners.
 
+```text
 | What | Why |
 |:---|:---|
 | Evaluate the latest models. | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions. |
@@ -333,9 +335,9 @@ Now let's look at common best practices that are recommended by [Open AI](https:
 | Order Matters | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.|
 |Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or hallucinatory responses. |
 | | |
+```
 
 As with any best practice, remember that _your mileage may vary_ based on the model, the task and the domain. Use these as a starting point, and iterate to find what works best for you. Constantly re-evaluate your prompt engineering process as new models and tools become available, with a focus on process scalability and response quality.
-
 
 <!--
 LESSON TEMPLATE:
@@ -348,33 +350,35 @@ SOLUTION:
 Link to a copy of that Notebook with the prompts filled in and run, showing what one example could be.
 -->
 
-
 ## Assignment
 
 Congratulations! You made it to the end of the lesson! It's time to put some of those concepts and techniques to the test with real examples!
 
-For our code challenge, we'll be using a Jupyter Notebook with exercises you can complete interactively. You can also extend the Notebook with your own Markdown and Code cells to explore ideas and techniques on your own.
+For our assignment, we'll be using a Jupyter Notebook with exercises you can complete interactively. You can also extend the Notebook with your own Markdown and Code cells to explore ideas and techniques on your own.
 
-**To get started, fork the repo, then:**
+### To get started, fork the repo, then
+
 - (Recommended) Launch GitHub Codespaces  
-- (Alternatively) Clone the repo to your local device and use it with Docker Desktop 
+- (Alternatively) Clone the repo to your local device and use it with Docker Desktop
 - (Alternatively) Open the Notebook with your preferred Notebook runtime environment.
 
-**Next, configure your environment variables** 
+### Next, configure your environment variables
+
 - Copt the `.env.copy` file in repo root to `.env` and fill in the `OPENAI_API_KEY` value. You can find your API Key in your [OpenAI Dashboard](https://beta.openai.com/account/api-keys).
 
-**Next, open the Jupyter Notebook** 
+### Next, open the Jupyter Notebook
+
 - Select the runtime kernel. If using options 1 or 2, simply select the default Python 3.10.x kernel provided by the dev container.
 
 You're all set to run the exercises. Note that there are no _right and wrong_ answers here - just exploring options by trial-and-error and building intuition for what works for a given model and application domain.
 
 _For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that show one example output for reference._
 
-
  <!--
 LESSON TEMPLATE:
 Wrap the section with a summary and resources for self-guided learning.
 -->
+
 
 ## Knowledge check
 
@@ -390,11 +394,8 @@ A: 2, it's the best prompt as it provides details on "what" and goes into specif
 
 See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it? 
 
-
-## Great Work! Continue Your Learning 
-
+## Great Work! Continue Your Learning
 
 Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
-  
 Head over to the Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md)!
