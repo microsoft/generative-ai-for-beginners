@@ -1,6 +1,6 @@
 # Prompt Engineering Fundamentals 
 
-[![Prompt Engineering Fundamentals ](./img/genai_course_4[10].png)](https://youtu.be/r2ItK3UMVTk) 
+[![Prompt Engineering Fundamentals ](./img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk) 
 
 
 How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these is what this chapter and the upcoming chapter is looking to answer.

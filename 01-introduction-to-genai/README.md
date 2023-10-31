@@ -1,6 +1,6 @@
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/genai_course_1[83].png)](https://youtu.be/vf_mZrn8ibc)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
 
 *(Click the image above to view video of this lesson)*
 
@@ -113,6 +113,16 @@ Also, the output of a generative AI model is not perfect and sometimes the creat
 Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan. 
 
 If you done this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/en-gb/startups) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
+
+## Knowledge check
+
+What's true about large language models?
+
+1. You get the exact same response every time.
+1. It does things perfectly, great at adding numbers, produce working code etc.
+1. The response may vary despite using the same prompt. It's also great at give you a first draft of something, be it text or code. But you need to improve on the results.
+
+A: 3, an LLM is non-deterministic, the response vary, however, you can control its variance via a temperature setting. You also shouldn't expect it to do things perfectly, it's here to do the heavy-lifting for you which often means you get a good first attempt at something that you need to gradually improve.
 
 ## Great Work! Continue the Journey 
 

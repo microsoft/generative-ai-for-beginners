@@ -1,6 +1,7 @@
 # Designing UX for AI Applications
 
-[![Designing UX for AI Applications](./images/genai_course_12[88].png)](https://youtu.be/bO7h2_hOhR0)
+[![Designing UX for AI Applications](./images/12-lesson-banner.png)](https://youtu.be/bO7h2_hOhR0) 
+
 
 > *(Click the image above to view video of this lesson)*
 
@@ -117,4 +118,4 @@ Take any AI apps you've built so far, consider implementing the below steps in y
 
 Want to learn more about designing UX for AI Applications? Go to the [contiuned learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
-Congratulation, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://www.microsoft.com/en-us/startups) and apply for the program to recieve support on your journey.
+Congratulations, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://aka.ms/genai-foundershub) and apply for the program to recieve support on your journey. 

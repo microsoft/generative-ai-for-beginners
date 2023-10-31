@@ -1,14 +1,14 @@
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](./images/genai_course_2[56].png)](https://youtu.be/J1mWzw0P74c)
+[![Exploring and comparing different LLMs](./images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
 
 *(Click the image above to view video of this lesson)*
-
-## Introduction
 
 With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
 
 The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
+
+## Introduction
 
 This lesson will cover:
 
@@ -175,13 +175,17 @@ Training an LLM from scratch is without a doubt the most difficult and the most 
 
 ## Knowledge check
 
-Q1 What could be a good approach to improve LLM completion results? 
+What could be a good approach to improve LLM completion results? 
 
-   1. Prompt engineering with context
-   1. A2: RAG
-   1. A3: Fine-tuned model
+1. Prompt engineering with context
+1. RAG
+1. Fine-tuned model
 
 A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
+
+## 🚀 Challenge
+
+Read up more on how you can [use RAG](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview) for your business. 
 
 ## Great Work, Continue Your Learning! 
 
