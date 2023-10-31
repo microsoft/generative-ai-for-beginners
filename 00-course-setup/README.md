@@ -18,11 +18,50 @@ To avoid any dependency issues when running the code, we recommend running this 
 
 This can be created by selecting the `Code` option on your forked version of this repo and selecting the **Codespaces** option.
 
-![Dialog showing buttons to create a codespace](./images/who-will-pay.webp)
-
 ### 3. Storing Your API Keys
 
 Keeping your API keys safe and secure is important when building any type of application. We encourage you not to store any API keys directly in the code you are working with as committing those details to a public repository could result in unwanted costs and issues.
+
+![Dialog showing buttons to create a codespace](./images/who-will-pay.webp)
+
+## How to Run locally on your computer
+
+To run the code locally on your computer, you would need to have some version of Python installed. I personally recommend installing **[miniconda](https://conda.io/en/latest/miniconda.html)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**.
+
+After you install miniconda, you need to clone the repository and create a virtual environment to be used for this course:
+
+```bash
+git clone http://github.com/microsoft/ai-for-beginners
+cd ai-for-beginners
+conda env create --name ai4beg --file .devcontainer/environment.yml
+conda activate ai4beg
+```
+
+### Using Visual Studio Code with Python Extension
+
+Probably the best way to use the curriculum is to open it in [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-77998-bethanycheum) with [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-77998-bethanycheum).
+
+> **Note**: Once you clone and open the directory in VS Code, it will automatically suggest you to install Python extensions. You would also have to install miniconda as described above.
+
+> **Note**: If VS Code suggests you to re-open the repository in container, you need to decline this to use local Python installation. 
+
+### Using Jupyter in the Browser
+
+You can also use Jupyter environment right from the browser on your own computer. Actually, both classical Jupyter and Jupyer Hub provide quite convenient development environment with auto-completion, code highlighting, etc.
+
+To start Jupyter locally, go to the directory of the course, and execute:
+```bash
+jupyter notebook
+```
+or
+```bash
+jupyterhub
+```
+You then can navigate to any of the `.ipynb` files, open them and start working.
+
+### Running in container
+
+An alternative to Python installation would be to run the code in container. Since our repository contains special `.devcontainer` folder that instructs how to build a container for this repo, VS Code would offer you to re-open the code in container. This will require Docker installation, and also would be more complex, so we recommend this to more experienced users.
 
 One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow this guide on how to [manage secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).
 
