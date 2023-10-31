@@ -128,5 +128,5 @@ A: 3, an LLM is non-deterministic, the response vary, however, you can control i
 
 Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
 
-Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/2-exploring-and-comparing-different-llms/README.md)! 
+Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/02-exploring-and-comparing-different-llms/README.md)! 
 
