@@ -110,7 +110,7 @@ Building an operational practice around your AI applications is the final stage.
 
 ## Tools
 
-While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview ) can help detect harmful content and images via an API request.
+While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst ) can help detect harmful content and images via an API request.
 
 ## Knowledge check
 
@@ -124,7 +124,7 @@ A: 2 and 3 is correct. Responsible AI helps you consider how to mitigate harmful
 
 ## 🚀 Challenge
 
-Read up on [Azure AI Content Saftey](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview ) and see what you can adopt for your usage.
+Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
 
 ## Great Work, Continue Your Learning
 

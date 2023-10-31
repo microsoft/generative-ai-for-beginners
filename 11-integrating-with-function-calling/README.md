@@ -442,7 +442,7 @@ To continue your learning of Azure Open AI Function Calling you can build:
 - Create another function call that takes more information from the learner like their native language
 - Create error handling on when the function call and/or API call does not return any suitable courses
 
- Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference) page to see how and where this data is available.
+ Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) page to see how and where this data is available.
 
 ## Great Work! Continue the Journey
 
