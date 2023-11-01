@@ -26,17 +26,17 @@ Learn the fundamentals of building Generative AI applications with our 12-lesson
 There are many things you could help with for example:
 
 - Find spelling errors or code errors, raise an issue and/or PR
-- Translate to your language, every chapter has *translations* sub directory, if you want to help with this one create the following structure:
+- Translate to your language, every chapter has a *translations* subdirectory, if you want to help with this one create the following structure:
 
   Chapter NN/
     translations
       es/          <== your language code
        README.md   <== your translation
-  - Send us your ideas, maybe you ideas for new lessons or exercises, let us know how we can improve.
+  - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
     
 Hope to hear from you:
 - Raise an issue, <https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst>
-- Create a pullr request, <https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst>
+- Create a pull request, <https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst>
 
 ## 🌱 Getting Started
 
@@ -54,11 +54,11 @@ Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can
 
 ## 📂 Each lesson includes:
 
-- a short video introdution to the topic
+- a short video introduction to the topic
 - written lesson located in the README 
 - for project-based lessons, a Juypter Notebook with code examples 
 - a challenge or assignment to apply your learning 
-- links to extra resources to contiune your learning
+- links to extra resources to continue your learning
 
 ## 🗃️ Lessons
 |       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
