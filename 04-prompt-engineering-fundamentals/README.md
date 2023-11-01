@@ -3,7 +3,7 @@
 [![Prompt Engineering Fundamentals](./img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
 
 
-How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these is what this chapter and the upcoming chapter is looking to answer.
+How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
 
 _Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
 
@@ -34,7 +34,7 @@ The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment w
 
 We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
 
-The default notebook is setup for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
+The default notebook is set up for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
@@ -63,9 +63,9 @@ Define it and explain why it is needed.
 We started this lesson by defining **Prompt Engineering** as the process of _designing and optimizing_ text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model. We can think of this as a 2-step process:
 
 - _designing_ the initial prompt for a given model and objective
-- _refining_ the prompt iteratively to improve quality of response
+- _refining_ the prompt iteratively to improve the quality of the response
 
-This is necessarily a trial-and-error process that requires user intuition and effort for getting optimal results. So why is it important? To answer that question, we first need to understand three concepts:
+This is necessarily a trial-and-error process that requires user intuition and effort to get optimal results. So why is it important? To answer that question, we first need to understand three concepts:
 
 - _Tokenization_ = how the model "sees" the prompt
 - _Base LLMs_ = how the foundation model "processes" a prompt
@@ -115,7 +115,7 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
-- Use the same prompt with different LLM deployments (e.g, OpenAI , Azure OpenAI, Hugging Face) - did you see the variations?.
+- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
 - Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
 
 ### Hallucinations Example
@@ -145,7 +145,7 @@ Prompt engineering techniques like _metaprompting_ and _temperature configuratio
 
 ## Case Study: GitHub Copilot
 
-Let's wrap this section by getting a sense for how prompt engineering is used in real-world solutions by looking at one Case Study: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Let's wrap this section by getting a sense of how prompt engineering is used in real-world solutions by looking at one Case Study: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
 GitHub Copilot is your "AI Pair Programmer" - it converts text prompts into code completions and is integrated into your development environment (e.g., Visual Studio Code) for a seamless user experience. As documented in the series of blogs below, the earliest version was based on the OpenAI Codex model - with engineers quickly realizing the need to fine-tune the model and develop better prompt engineering techniques, to improve code quality. In July, they [debuted an improved AI model that goes beyond Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) for even faster suggestions.
 
@@ -240,7 +240,7 @@ Let's explore these in action.
 
 ### Using Examples
 
-This is an approach where you use the primary content to "feed the model" some examples of the desired output for a given instruction, and let it infer the patter for the desired output. Based on the number of examples provided, we can have zero-shot prompting, one-shot prompting, few-shot prompting etc.
+This is an approach where you use the primary content to "feed the model" some examples of the desired output for a given instruction, and let it infer the pattern for the desired output. Based on the number of examples provided, we can have zero-shot prompting, one-shot prompting, few-shot prompting etc.
 
 The prompt now consists of three components:
 
@@ -257,7 +257,7 @@ The prompt now consists of three components:
     | | | |
     ```
 
-Note how we had to provide an explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more accurate inferences with no added instructions.
+Note how we had to provide explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more accurate inferences with no added instructions.
 
 ### Prompt Cues
 
@@ -290,7 +290,7 @@ For example: Given a course catalog with extensive metadata (name, description, 
 - we can use the primary content to provide a few examples of the desired output
 - we can use the secondary content to identify the top 5 "tags" of interest.
 
-Now, the model can provide a summary in the format show by the few examples - but if a result has multiple tags, it can prioritize the 5 tags identified in secondary content.
+Now, the model can provide a summary in the format shown by the few examples - but if a result has multiple tags, it can prioritize the 5 tags identified in secondary content.
 
 ---
 
@@ -313,11 +313,11 @@ Now that we know how prompts can be _constructed_, we can start thinking about h
 
 Prompt Engineering is a trial-and-error process so keep three broad guiding factors in mind:
 
-1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide model towards familiar usage patterns.
+1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide the model towards familiar usage patterns.
 
 2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capabilities they provide (e.g., via API or SDK) and the type of content they are optimized for (e.g, code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to _prioritize tasks_ or build _customized templates_ that are optimized for the model's capabilities.
 
-3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g, prompt libraries) that can be used as a new baseline by others, for faster iterations in future.
+3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g, prompt libraries) that can be used as a new baseline by others, for faster iterations in the future.
 
 ## Best Practices
 
@@ -372,7 +372,7 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 You're all set to run the exercises. Note that there are no _right and wrong_ answers here - just exploring options by trial-and-error and building intuition for what works for a given model and application domain.
 
-_For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that show one example output for reference._
+_For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that shows one example output for reference._
 
  <!--
 LESSON TEMPLATE:
@@ -398,4 +398,4 @@ See if you can leverage the "cue" technique with the prompt: Complete the senten
 
 Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
