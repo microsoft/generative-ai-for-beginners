@@ -21,6 +21,23 @@
 
 Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
 
+## Want to help?
+
+There are many things you could help with for example:
+
+- Find spelling errors or code errors, raise an issue and/or PR
+- Translate to your language, every chapter has *translations* sub directory, if you want to help with this one create the following structure:
+
+  Chapter NN/
+    translations
+      es/          <== your language code
+       README.md   <== your translatio
+  - Send us your ideas, maybe you ideas for new lessons or exercises, let us know how we can improve.
+    
+Hope to hear from you:
+- Raise an issue, <https://github.com/microsoft/generative-ai-for-beginners/issues>
+- Create a pullr request, <https://github.com/microsoft/generative-ai-for-beginners/pulls>
+
 ## 🌱 Getting Started
 
 To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easier later!  
