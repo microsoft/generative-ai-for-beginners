@@ -1,28 +1,28 @@
-# Prompt Engineering Fundamentals
+# 第四章：提示工程基础
 
 [![Prompt Engineering Fundamentals](./img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
 
 
-How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these is what this chapter and the upcoming chapter is looking to answer.
+如何撰写 LLM 的提示很重要，精心设计的提示可以比不精心设计的提示取得更好的结果。 但这些概念到底是什么，提示、提示工程以及我如何改进我发送给 LLMs 的内容？ 诸如此类的问题正是本章和下一章想要解答的。
 
-_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
+_生成式人工智能_能够根据用户请求创建新内容（例如文本、图像、音频、代码等）。 它使用 LLMs 来实现这一目标，例如 OpenAI 的 GPT 模型系列，这些模型通过使用自然语言和代码进行训练。
 
-Users can now interact with these models using familiar paradigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt till the response matches their expectations.
+用户现在可以使用熟悉的语言（如聊天）与这些模型进行交互，而无需任何技术专业知识或培训。 这些模型是基于提示的——用户发送文本输入（提示）并获取人工智能响应（完成）。 然后，他们可以在多轮对话中迭代地“与人工智能聊天”，完善他们的提示，直到响应符合他们的预期。
 
-"Prompts" now become the primary _programming interface_ for generative AI apps, telling the models what to do and influencing the quality of returned responses. "Prompt Engineering" is a fast-growing field of study that focuses on the _design and optimization_ of prompts to deliver consistent and quality responses at scale.
+“提示”现在成为生成式人工智能应用程序的主要_编程界面_，告诉模型要做什么并影响返回响应的质量。 “提示工程”是一个快速发展的研究领域，专注于提示的“设计和优化”，以大规模提供一致且高质量的响应。
 
-## Learning Goals
+## 学习目标
 
-In this lesson, we learn what Prompt Engineering is, why it matters, and how we can craft more effective prompts for a given model and application objective. We'll understand core concepts and best practices for prompt engineering - and learn about an interactive Jupyter Notebooks "sandbox" environment where we can see these concepts applied to real examples.
+在本章中，我们将了解什么是提示工程、为什么它很重要，以及如何针对给定的模型和应用程序目标制定更有效的提示。 我们将了解提示工程的核心概念和最佳实践，并了解交互式 Jupyter Notebooks“沙箱”环境，在 Notebooks 中我们可以看到这些概念应用于实际示例。
 
-By the end of this lesson we will be able to:
+在本课结束时，我们将能够：
 
-1. Explain what prompt engineering is and why it matters.
-2. Describe the components of a prompt and how they are used.
-3. Learn best practices and techniques for prompt engineering.
-4. Apply learned techniques to real examples, using an OpenAI endpoint.
+1. 解释什么是提示工程及其重要性。
+2. 描述提示的组成部分及其使用方法。
+3. 学习提示工程的最佳实践和技术。
+4. 结合 OpenAI 将学到的技术应用于实际示例。
 
-## Learning Sandbox
+## 学习沙盒
 
 Prompt engineering is currently more art than science. The best way to improve our intuition for it is to _practice more_ and adopt a trial-and-error approach that combines application domain expertise with recommended techniques and model-specific optimizations.
 
