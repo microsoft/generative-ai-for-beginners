@@ -108,7 +108,7 @@ Models are just the Neural Network, with the parameters, weights, and others. Al
 Once our team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
 Most of the models we mentioned in previous paragraphs (OpenAI models, open source models like Llama2, and Hugging Face transformers) are available in the [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) catalog in [Azure Machine Learning studio](https://ml.azure.com/).
 
-[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
+[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
 
 - Find the Foundation Model of interest in the catalog, filtering by task, license, or name. It’s also possible to import new models that are not yet included in the catalog.
 - Review the model card, including a detailed description and code samples, and test it with the Sample Inference widget, by providing a sample prompt to test the result.
@@ -192,6 +192,6 @@ Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/r
 
 ## Great Work, Continue Your Learning
 
-Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD)!
+Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD?WT.mc_id=academic-105485-koreyst)!
