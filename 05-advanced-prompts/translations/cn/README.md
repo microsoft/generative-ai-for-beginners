@@ -1,6 +1,6 @@
 # 创建高级的提示工程技巧
 
-[![Creating Advanced Prompts](../images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
+[![Creating Advanced Prompts](../../images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
 
 让我们回顾一下上一章的一些知识：
 
@@ -615,6 +615,6 @@ LLM 本质上是不确定的，这意味着每次运行相同的提示时都会�
 
 ## 继续学习
 
-想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](../../13-continued-learning/translations/README.zh-cn.md) 查找有关此主章节的其他学习资源。
+想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关此主章节的其他学习资源。
 
-前往第六章，我们将应用提示工程知识[构建文本生成应用程序](../../06-text-generation-apps/README.md) 
+前往第六章，我们将应用提示工程知识[构建文本生成应用程序](../../../06-text-generation-apps/README.md) 

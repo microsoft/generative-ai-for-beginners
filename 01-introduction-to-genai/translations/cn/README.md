@@ -1,6 +1,6 @@
 # 第一章 : 生成式人工智能和 LLM 介绍
 
-[![Introduction to Generative AI and Large Language Models](../images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
+[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
 
 *(点击该图片看本章导学视频)*
 
@@ -34,7 +34,7 @@
 
 生成式人工智能有望彻底改变我们今天的学习和教学方式，学生可以每天 24 小时使用虚拟教师，虚拟教室不仅能提供大量信息和示例，也能够利用创新的工具来评估学生并提供反馈。
 
-![Five young students looking at a monitor - image by DALLE2](../images/students-by-DALLE2.png)
+![Five young students looking at a monitor - image by DALLE2](../../images/students-by-DALLE2.png)
 
 首先，让我们来学习一些将在整个课程系列中使用的基本概念和术语。
 
@@ -61,7 +61,7 @@
 
 这就是我们今天提出生成式人工智能的原因，它可以被视为深度学习的一个子集。
 
-![AI、ML、DL 和生成式 AI](../images/AI-diagram.png)
+![AI、ML、DL 和生成式 AI](../../images/AI-diagram.png)
 
 经过人工智能领域数十年的研究，一种名为 *Transformer* 的新模型架构克服了 RNN 的限制，能够获得更长的文本序列作为输入。 Transformer 基于注意力机制，使模型能够为其接收到的输入赋予不同的权重，“更加专注于”关联信息集中的地方，不管它们在文本序列中的顺序如何。
 
@@ -73,7 +73,7 @@
 
 * **分词器，文本到数字**：大型语言模型接收文本作为输入并生成文本作为输出。 然而，作为统计模型，它们对数字的处理效果对比起文本序列的处理效果要好得多。 这就是为什么模型的每个输入在被核心模型使用之前都由分词器处理。 标记是一段文本——由可变数量的字符组成，因此标记器的主要任务是将输入分割成标记数组。 然后，每个令牌都映射有一个令牌索引，该索引是原始文本块的整数编码。
 
-![Example of tokenization](../images/tokenizer-example.png)
+![Example of tokenization](../../images/tokenizer-example.png)
 
 * **预测输出标记**：给定 n 个标记作为输入（最大 n 因模型而异），模型能够预测一个标记作为输出。 然后，该标记会以扩展窗口模式合并到下一次迭代的输入中，从而获得一个（或多个）句子作为答案,生成结果有更好的用户体验。 这解释了为什么如果您曾经使用过 ChatGPT，您可能会注意到有时它在生成结果时在句子中间出现停顿。
 
@@ -91,24 +91,24 @@
 
      1. 文章、书籍、产品评论等的总结，以及从非结构化数据中提取见解。
 
-     ![摘要示例](../images/summarization-example.png)
+     ![摘要示例](../../images/summarization-example.png)
 
 
      2. 文章、论文、作业等的创意构思和设计。
 
-     ![创意写作示例](../images/creative-writing-example.png)
+     ![创意写作示例](../../images/creative-writing-example.png)
 
 * **问题**，以与代理对话的形式提出。
 
-     ![对话示例](../images/conversation-example.png)
+     ![对话示例](../../images/conversation-example.png)
 
 * **文本补全**，这隐含着对写作帮助的请求。
 
-     ![文本完成示例](../images/text-completion-example.png)
+     ![文本完成示例](../../images/text-completion-example.png)
 
 *  **代码**解释和记录需求，或者要求生成执行特定任务的一段代码的注释。
 
-     ![编码示例](../images/coding-example.png)
+     ![编码示例](../../images/coding-example.png)
 
 以上的例子非常简单，并不是对生成式人工智能功能的详尽演示。 只是想展示使用生成式人工智能的潜力，并不局限于教育领域。
 
@@ -133,6 +133,6 @@
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../../13-continued-learning/translations/README.zh-cn.md) 查找有关此主题的其他学习资源。
+想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关此主题的其他学习资源。
 
-前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](../../02-exploring-and-comparing-different-llms/translations/README.zh-cn.md)！
+前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](../../../02-exploring-and-comparing-different-llms/translations/cn/README.md)！

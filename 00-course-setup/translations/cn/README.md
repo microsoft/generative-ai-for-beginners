@@ -22,7 +22,7 @@
 
 在构建任何类型的应用程序时，确保 API Keys 的安全非常重要。 我们建议您不要将任何 API 密钥直接存储在您正在使用的代码中，因为将这些详细信息提交到公共存储库可能会导致不必要的费用成本和问题。
 
-![Dialog showing buttons to create a codespace](../images/who-will-pay.webp)
+![Dialog showing buttons to create a codespace](../../images/who-will-pay.webp)
 
 ## 在您的设备上本地运行
 
@@ -102,4 +102,4 @@ jupyterhub
 
 ## 我们一起开始进入学习
 
-现在您已经完成了完成本课程所需的设置步骤，让我们开始进入[生成式人工智能和 LLMs 简介](../../01-introduction-to-genai/translations/README.zh-cn.md)。
+现在您已经完成了完成本课程所需的设置步骤，让我们开始进入[生成式人工智能和 LLMs 简介](../../../01-introduction-to-genai/translations/cn/README.md)。
