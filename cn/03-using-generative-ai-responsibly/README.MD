@@ -1,8 +1,8 @@
-# Using Generative AI Responsibly
+# 负责任地使用生成式人工智能
 
 [![Using Generative AI Responsibly](./images/genai_course_3[77].png)]() 
 
-> **Video Coming Soon**
+> **导学视频即将上架**
 
 It's easy to be fascinated with AI and generative AI in particular, but you need to consider how you would use it responsibly. You need to consider things like how to ensure the output is fair, non-harmful and more. This chapter aims to provide you with mentioned context, what to consider, and how to take active steps to improve your AI usage.
 
