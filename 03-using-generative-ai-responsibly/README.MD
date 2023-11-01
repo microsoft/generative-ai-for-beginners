@@ -48,7 +48,7 @@ The model produces a response like the one below:
 
 > *(Source: [Flying bisons](https://flyingbisons.com))*
 
-This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic survivor. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to AI system to be unreliably and negatively impact the reputation of our startup.
+This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic survivor. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to the AI system being unreliable and negatively impact the reputation of our startup.
 
 With each iteration of any given LLM, we have seen performance improvements around minimizing hallucinations. Even with this improvement,  we as application builders and users still need to remain aware of these limitations.
 
@@ -94,7 +94,7 @@ It is now time to find ways where we can prevent or limit the potential harm cau
 
 - **Safety System**. A safety system is a set of tools and configurations on the platform serving the model that help mitigate harm. An example of this is the content filtering system on the Azure OpenAI service. Systems should also detect jailbreak attacks and unwanted activity like requests from bots.
 
-- **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to scope or domain of system.
+- **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to the scope or domain of the system.
 
  It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
@@ -120,7 +120,7 @@ What are some things you need to care about to ensure responsible AI usage?
 1. Harmful usage, that AI isn't used for criminal purposes.
 1. Ensuring the AI is free from bias and discrimination.
 
-A: 2 and 3 is correct. Responsible AI helps you consider how to mitigate harmful effects and biases and more.
+A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmful effects and biases and more.
 
 ## 🚀 Challenge
 
