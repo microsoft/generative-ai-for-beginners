@@ -61,7 +61,7 @@ We'd pass the text to the OpenAI Embedding API and it would return the following
 
 ## How is the Embedding index created?
 
-The Embedding index for this lesson was created with a series of Python scripts. You'll find the scripts along with instructions in the [README](./scripts/README.md) in the 'scripts` folder for this lesson. You don't need to run these scripts to complete this lesson as the Embedding Index is provided for you.
+The Embedding index for this lesson was created with a series of Python scripts. You'll find the scripts along with instructions in the [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) in the 'scripts` folder for this lesson. You don't need to run these scripts to complete this lesson as the Embedding Index is provided for you.
 
 The scripts perform the following operations:
 
@@ -150,7 +150,7 @@ az cognitiveservices account deployment create \
 
 ## Solution
 
-Open the [solution notebook](./solution.ipynb) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
+Open the [solution notebook](./solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
 
 When you run the notebook, you'll be prompted to enter a query. The input box will look like this:
 
@@ -158,6 +158,6 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 ## Great Work! Continue Your Learning 
 
-Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md)!
+Head over to the Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!

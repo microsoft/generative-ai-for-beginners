@@ -12,7 +12,7 @@ Chat applications have become integrated into our daily lives, offering more tha
 Some questions we need answered are:
 
 - **Building the app**.  How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  
-- **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai)?
+- **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
 As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
 
@@ -176,10 +176,10 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 ## Assignment
  
-See [assignment](./notebook-azure-openai.ipynb) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
+See [assignment](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
 
 ## Great Work! Continue the Journey
 
-Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 8 to see how you can start  [building search applications](/8-building-search-applications/README.md)!
+Head over to Lesson 8 to see how you can start  [building search applications](/8-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!

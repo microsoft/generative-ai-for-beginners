@@ -239,6 +239,6 @@ To learn how to use this AI Model in Power Automate, go through the [Add intelli
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about building low-code Generative AI apps? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about building low-code Generative AI apps? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 11 where we will look at how to [integrate Generative AI with Function Calling](/11-intergating-with-function-calling/README.md)!
+Head over to the Lesson 11 where we will look at how to [integrate Generative AI with Function Calling](/11-intergating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!

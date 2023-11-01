@@ -116,6 +116,6 @@ Take any AI apps you've built so far, consider implementing the below steps in y
 
 ## Congratulations, you have finished this course
 
-Want to learn more about designing UX for AI Applications? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about designing UX for AI Applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
 Congratulations, you have completed this course! The building should not stop here. Hopefully you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://aka.ms/genai-foundershub) and apply for the program to receive support on your journey.
