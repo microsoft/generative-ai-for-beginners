@@ -31,8 +31,8 @@ To run the code locally on your computer, you would need to have some version of
 After you install miniconda, you need to clone the repository and create a virtual environment to be used for this course:
 
 ```bash
-git clone http://github.com/microsoft/ai-for-beginners
-cd ai-for-beginners
+git clone https://github.com/microsoft/generative-ai-for-beginners
+cd generative-ai-for-beginners
 conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
