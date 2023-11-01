@@ -1,197 +1,205 @@
-# Exploring and comparing different LLMs
+# 第二章 : 探索和比较不同的 LLMs
 
 [![Exploring and comparing different LLMs](./images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
 
-> *Click the image above to view video of this lesson*
+> *点击该图片看本章导学视频*
 
-With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
+在上一章中，我们了解了生成式人工智能如何改变技术格局、LLMs 工作原理，以及企业（例如“Our startup”）如何将它们应用到自己的应用场景中并得到发展！ 在本章中，我们将比较和对比不同类型的大型语言模型以了解它们的优缺点。
 
-The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
+我们初创公司技术旅程的下一步是 LLMs 的前景并了解哪些适合我们的案例
 
 ## Introduction
 
-This lesson will cover:
+本章内容包括：
 
-- Different types of LLMs in the current landscape.
-- Testing, iterating, and comparing different models for your use case in Azure.
-- How to deploy an LLM.
+- 当前落地的不同类型的 LLMs 。
+- 在 Azure 中测试、迭代和不同模型使用场景的比较
+- 如何部署 LLMs 。
 
-## Learning Goals
+## 学习目标
 
-After completing this lesson, you will be able to:
+完成本章学习后，您将会学习到：
 
-- Select the right model for your use case.
-- Understand how to test, iterate, and improve performance of your model.
-- Know how businesses deploy models.
+- 为您的应用场景选择合适的模型。
+- 了解如何测试、迭代和提高模型的性能。
+- 了解企业如何部署模型。
 
-## Understand different types of LLMs
+## 认识不同的 LLMs
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help our startup select the right model for the scenario, and understand how to test, iterate, and improve performance.
+大型语言模型 (LLM) 可以根据其架构、训练数据和用例进行多种分类。 了解这些差异将有助于“Our startup”根据场景选择正确的模型，并了解如何测试、迭代和提高性能。
 
-There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more.
+LLM 模型有许多不同类型，您选择的模型取决于您的用途、您的数据、您准备支付的费用等等。
 
-Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
+根据您是否打算使用模型进行文本、音频、视频、图像生成等，您可能会选择不同类型的模型。
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. As an example, you can use everything from a cheaper, but capable model like curie to the more costly but performant davinci type model. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper).
+- **音频和语音识别**。 为此，Whisper 模型是一个不错的选择，因为它们是通常用于语音识别。 它经过不同音频数据的训练，可以执行多语言语音识别。 例如，您可以使用所有的模型，从价格便宜但功能强大的模型（如 Curry）到更昂贵拥有高性能的达芬奇（Davinci）模型。 详细了解 [ Whisper 类型模型](https://platform.openai.com/docs/models/whisper)。
 
-- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e) and also in Chapter 9 of this curriculum.
+- **图像生成**。 对于图像生成，DALL-E 和 Midjourney 是两个最佳的选择。 DALL-E 由 Azure OpenAI 提供。 [在此处阅读有关 DALL-E 的更多信息](https://platform.openai.com/docs/models/dall-e) 以及本课程的第九章。
 
-- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground) to evaluate which models best fit your needs in terms of capability and cost.
+- **文本生成**。 大多数模型都经过文本生成训练，您有从 GPT-3.5 到 GPT-4 的多种选择。 它们的成本各不同，其中 GPT-4 是最昂贵的。 值得研究一下 [Azure OpenAI Playground](https://oai.azure.com/portal/playground)，以评估哪些模型在功能和成本方面适合你的实际需求。
 
-Selecting a model means you get some basic capabilities, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming sections.
+选择模型意味着您能获得一些基本功能，但这可能还不够。 通常，您有公司特定的数据，您需要以某种方式告诉 LLMs。 关于如何解决这个问题，有几种不同的选择，接下来的部分将详细介绍。
 
-### Foundation Models versus LLMs
+### 认识基础模型与 LLMs
 
-The term Foundation Model was [coined by Stanford researchers](https://arxiv.org/abs/2108.07258) and defined as an AI model that follows some criteria, such as:
+“基础模型”是[由斯坦福大学研究人员创造](https://arxiv.org/abs/2108.07258)，定义为遵循某些标准的人工智能模型，例如：
 
-- **They are trained using unsupervised learning or self-supervised learning**, meaning they are trained on unlabeled multi-modal data, and they do not require human annotation or labeling of data for their training process.
-- **They are very large models**, based on very deep neural networks trained on billions of parameters.
-- **They are normally intended to serve as a ‘foundation’ for other models**, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
+- **他们使用无监督学习或自监督学习进行训练**，这意味着他们接受未标记的多模式数据的训练，并且他们的训练过程不需要人工注释或数据标记。
+- **它们是非常大的模型**，基于经过数十亿参数训练的深度神经网络。
+- **它们通常旨在作为其他模型的“基础”**，这意味着它们可以用作构建其他模型的起点，可以通过微调方式来完成。
 
-![Foundation Models versus LLMs](./images/FoundationModel.png)
+![基础模型与 LLMs](./images/FoundationModel.png)
 
-Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
+图片来源：【基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-To further clarify this distinction, let’s take ChatGPT as an example. To build the first version of ChatGPT, a model called GPT-3.5 served as the foundation model. This means that OpenAI used some chat-specific data to create a tuned version of GPT-3.5 that was specialized in performing well in conversational scenarios, such as chat bots.
+为了进一步阐明这种区别，我们以 ChatGPT 为例。 为了构建 ChatGPT 的第一个版本，名为 GPT-3.5 的模型作为基础模型。 这意味着 OpenAI 使用一些特定于聊天的数据来创建 GPT-3.5 的调整版本，专门用于在对话场景（例如聊天机器人）中让其有更好的表现。
 
-![Foundation Model](./images/Multimodal.png)
+![基础模型](./images/Multimodal.png)
 
-Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
+图片来源：[2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
 
-### Open Source versus Proprietary Models
+### 认识开源模型与专有模型
 
-Another way to categorize LLMs is whether they are open source or proprietary.
+对 LLM 进行分类的另一种方法是它们是开源的还是专有的。
 
-Open-source models are models that are made available to the public and can be used by anyone. They are often made available by the company that created them, or by the research community. These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. However, they are not always optimized for production use, and may not be as performant as proprietary models. Plus, funding for open-source models can be limited, and they may not be maintained long term or may not be updated with the latest research. Examples of popular open source models include [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), [Bloom](https://sapling.ai/llm/bloom) and [LLaMA](https://sapling.ai/llm/llama).
+开源模型是向公众开放并且任何人都可以使用的模型。 它们通常由创建它们的公司或研究团体提供。 这些模型可以针对 LLMs 的各种用例进行检查、修改和定制。 然而，它们并不总是针对生产用途进行优化，并且可能不如专有模型具备高性能。 此外，开源模型的资金可能有限，并且它们可能无法长期维护或可能无法根据最新研究进行更新。 流行的开源模型的例子包括 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Bloom](https://sapling.ai/llm/bloom) 和 [ LLaMA](https://sapling.ai/llm/llama)。
 
-Proprietary models are models that are owned by a company and are not made available to the public. These models are often optimized for production use. However, they are not allowed to be inspected, modified, or customized for different use cases. Plus, they are not always available for free, and may require a subscription or payment to use. Also, users do not have control over the data that is used to train the model, which means they should entrust the model owner with ensuring commitment about data privacy and responsible use of AI. Examples of popular proprietary models include [OpenAI models](https://platform.openai.com/docs/models/overview), [Google Bard](https://sapling.ai/llm/bard) or [Claude 2](https://www.anthropic.com/index/claude-2).
+专有模型是公司拥有的模型，不向公众提供。 这些模型通常针对生产用途进行了优化。 但是，不允许针对特定的使用场景进行检查、修改或定制它们。 另外，它们并不总是免费提供，可能需要订阅或付费才能使用。 此外，用户无法控制用于训练模型的数据，这意味着他们应该委托模型所有者确保对数据隐私和负责任地使用人工智能的承诺。 流行的专有模型的例子包括 [OpenAI 模型](https://platform.openai.com/docs/models/overview)、[Google Bard](https://sapling.ai/llm/bard) 或 [Claude 2] （https://www.anthropic.com/index/claude-2）。
 
-### Embedding versus Image generation versus Text and Code generation
+### 认识嵌入式，图像生成，文本或代码生成
 
-LLMs can also be categorized by the output they generate.
+LLMs 还可以根据其产生的输出进行分类。
 
-Embeddings are a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings).
+嵌入是一组可以将文本转换为数字形式的模型，称为嵌入，它是输入文本的数字表示。 嵌入使机器更容易理解单词或句子之间的关系，并且可以用作其他模型的输入，例如分类模型或对数值数据具有更好性能的聚类模型。 嵌入模型通常用于迁移学习，其中为有大量数据的代理任务构建模型，然后将模型权重（嵌入）重新用于其他下游任务。 此类别的一个示例是 [OpenAI 嵌入](https://platform.openai.com/docs/models/embeddings)。
 
-![Embedding](./images/Embedding.png)
+![嵌入](./images/Embedding.png)
 
-Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/), and can be used to generate new images or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALL-E-3](https://openai.com/dall-e-3) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion).
+图像生成模型主要是用来生成图像。 这些模型通常用于图像编辑、图像合成和图像翻译。 图像生成模型通常在大型图像数据集上进行训练，例如 [LAION-5B](https://laion.ai/blog/laion-5b/)，并且可用于生成新图像或编辑现有图像 修复、超分辨率和着色技术。 如 [DALL-E-3](https://openai.com/dall-e-3) 和 [StableDiffusion](https://github.com/Stability-AI/StableDiffusion)。
 
 ![Image generation](./images/Image.png)
 
-Text and code generation models are models that generate text or code. These models are often used for text summarization, translation, and question answering. Text generation models are often trained on large datasets of text, such as [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html), and can be used to generate new text, or to answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot), are often trained on large datasets of code, such as GitHub, and can be used to generate new code, or to fix bugs in existing code.
+文本或代码生成模型主要是生成文本或代码。 这些模型通常用于文本摘要、翻译和问答。 文本生成模型通常在大型文本数据集上进行训练，例如 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html)，并且可用于生成新文本或回答问题。 代码生成模型，例如 [CodeParrot](https://huggingface.co/codeparrot)，通常在大型代码数据集（如 GitHub）上进行训练，可用于生成新代码或修复现有代码中的错误。
 
  ![Text and code generation](./images/Text.png)
 
-### Encoder-Decoder versus Decoder-only
+### 了解编码-解码器与独立解码器
 
-To talk about the different types of architectures of LLMs, let's use an analogy.
+为了讨论 LLMs 的不同类型的架构，让我们来打个比方。
 
-Imagine your manager gave you a task for writing a quiz for the students.  You have two colleagues; one oversees creating the content and the other oversees reviewing them.
+想象一下，您的经理给您一个为学生编写测验题目的任务。 您有两个同事； 一名负责监督内容的创建，另一名负责审查内容。
 
-The content creator is like a Decoder only model, they can look at the topic and see what you already wrote and then he can write a course based on that. They are very good at writing engaging and informative content, but they are not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
+内容创建者就像一个独立解码器的模型，他们可以查看主题并查看您已经写的内容，然后他可以基于这些内容来编写课程。 他们非常擅长撰写引人入胜且内容丰富的内容，但不太擅长理解主题和学习目标。 独立解码器模型如 GPT 系列模型，例如 GPT-3。
 
-The reviewer is like an Encoder only model, they look at the course written and the answers, noticing the relationship between them and understanding context, but they are not good at generating content. An example of Encoder only model would be BERT.
+审阅者就像一个独立编码器的模型，他们查看编写的课程和答案，注意它们之间的关系并通过上下文进行理解，但他们不擅于生成内容。独立编码器模型的一个例子是 BERT。
 
-Imagine that we can have someone as well who could create and review the quiz, this is an Encoder-Decoder model. Some examples would be BART and T5.
+想象一下，我们也可以有人可以创建和审查测验，这是一个编码器-解码器模型如 BART 和 T5 
 
-### Service versus Model
+### 理解服务与模型
 
-Now, let's talk about the difference between a service and a model. A service is a product that is offered by a Cloud Service Provider, and is often a combination of models, data, and other components. A model is the core component of a service, and is often a foundation model, such as an LLM.
+现在，我们来谈谈服务和模型之间的区别。 服务是云服务提供商提供的产品，通常是模型、数据和其他组件的结合。 模型是服务的核心组件，通常是基础模型，例如各种 LLM。
 
-Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange to leverage service owner’s equipment and resources, optimizing expenses and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
+服务通常针对生产环境进行了优化，并且通常比模型让用户通过图形界面使用。 但服务并不总是免费提供的，可能需要订阅或付费才能使用，以换取服务所有者的设备和相关资源，优化费用并轻松扩展。 服务的一个例子是 [Azure OpenAI 服务](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst)，它提供按需付费计划，意味着用户根据服务用量付费。此外，Azure OpenAI  Service 在模型功能上还提供企业级安全性和负责任的 AI 框架。
 
-Models are just the Neural Network, with the parameters, weights, and others. Allowing companies to run locally, however, would need to buy equipment, build structure to scale and buy a license or use an open-source model. A model like LLaMA is available to be used, requiring computational power to run the model.
+模型是带有参数、权重等的神经网络。 允许公司在本地运营需要购买设备、构建并购买许可证或使用开源模型。 像 LLaMA 这样的模型使用就需要额外的算力运行
 
-## How to test and iterate with different models to understand performance on Azure
+## 如何使用不同的模型进行测试和迭代从而了解 Azure 上的运行性能
 
-Once our team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
-Most of the models we mentioned in previous paragraphs (OpenAI models, open source models like Llama2, and Hugging Face transformers) are available in the [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) catalog in [Azure Machine Learning studio](https://ml.azure.com/).
+一旦我们的团队探索了当前的 LLMs 前景并为他们的场景确定了一些好的候选模型后，下一步就是根据他们的数据和工作负载行测试。 这是一个迭代过程，通过实验和量化来完成。
+我们在前面的段落中提到的大多数模型（OpenAI 模型、Llama2 等开源模型和 Hugging Face transformers）都可以在 [Azure 机器学习工作室](https://ml.azure.com/) 中的目录中找到 [基础模型](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) 。
 
-[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
+[Azure 机器学习](https://azure.microsoft.com/products/machine-learning/) 是一项云服务，专为数据科学家和机器学习工程师设计，用于管理整个机器学习生命周期（训练、测试、部署和 MLOps 相关的工作） 在一个平台上。 机器学习工作室为此服务提供图形用户界面，使用户能够：
 
-- Find the Foundation Model of interest in the catalog, filtering by task, license, or name. It’s also possible to import new models that are not yet included in the catalog.
-- Review the model card, including a detailed description and code samples, and test it with the Sample Inference widget, by providing a sample prompt to test the result.
+- 在目录中查找感兴趣的基础模型，按任务、许可证或名称进行过滤。 还可以导入尚未包含在目录中的新模型。
+- 查看模型名片(包括详细描述和代码示例,并通过提供示例提示来测试结果),使用示例推理小部件对其进行测试。
 
 ![Model card](./images/Llama1.png)
 
-- Evaluate model performance with objective evaluation metrics on a specific workload and a specific set of data provided in input.
+- 使用特定工作负载和输入中提供的特定数据集的评估指标来评估模型性能。
 
 ![Model evaluation](./images/Llama2.png)
 
-- Fine-tune the model on custom training data to improve model performance in a specific workload, leveraging the experimentation and tracking capabilities of Azure Machine Learning.
+- 利用 Azure 机器学习的实验和跟踪功能，根据自定义训练数据微调模型，以提高特定工作负载中的模型性能。
 
 ![Model fine-tuning](./images/Llama3.png)
 
-- Deploy the original pre-trained model or the fine-tuned version to a remote real time inference or batch endpoint, to enable applications to consume it.
+- 将原始预训练模型或微调版本模型部署到远程实时推理或批处理端点，以使应用程序能够直接使用。
 
 ![Model deployment](./images/Llama4.png)
 
-## Improving LLM results
+## 提升 LLM 的输出结果准确度
 
-We’ve explored with our startup team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
+我们与 “Our startup” 团队一起探索了不同类型的 LLMs 和云平台（Azure 机器学习），使我们能够比较不同的模型，根据测试数据对其进行评估，提高性能并将其部署在推理端点上。
 
-But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads?
+但是他们什么时候应该考虑微调模型而不是使用预先训练的模型呢？ 是否有其他方法可以提高模型在特定工作负载上的性能？
 
-There are several approaches a business can use to get the results they need from an LLM, you can select different types of models with different degrees of training
+企业可以使用多种方法从 LLMs 获得所需的结果，您可以选择具有不同训练程度的不同类型的模型
 
-deploy an LLM in production, with different levels of complexity, cost, and quality. Here's some different approaches:
+在生产中部署 LLMs ，具有不同程度的复杂性、成本和质量。 以下是一些不同的方法：
 
-- **Prompt engineering with context**. The idea is to provide enough context when you prompt to ensure you get the responses you need.
+- **根据上下文的提示工程**。 这个想法是在提示时提供足够的背景信息，以确保获得所需的结果。
 
-- **Retrieval Augmented Generation, RAG**. Your data might exist in a database or web endpoint for example, to ensure this data, or a subset of it, is included at the time of prompting, you can fetch the relevant data and make that part of the users prompt.
+- **检索增强生成，RAG**。 例如，您的数据可能存在于向量数据库或 Web 端点中，为了确保在提示时包含此数据或其子集，您可以获取相关数据并对用户进行提示。
 
-- **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
+- **微调模型**。 在这里，您根据自己的数据进一步训练模型，这使得模型更加准确并且能够响应您的需求，但可能成本高昂。
 
 ![LLMs deployment](./images/Deploy.png)
 
-Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
+图片来源: [企业部署LLM的四种方式| Fiddler AI 博客](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
 
-### Prompt Engineering with Context
+### 通过上下文的提示工程
 
-Pre-trained LLMs work very well on generalized natural language tasks, even by calling them with a short prompt, like a sentence to complete or a question – the so-called “zero-shot” learning.
+预先训练的 LLMs 在广义自然语言任务上表现得非常好，甚至可以用简短的提示来调用它们，比如要完成的句子或问题——即所谓的“零样本”学习。
 
-However, the more the user can frame their query, with a detailed request and examples – the Context – the most accurate and closest to user’s expectations the answer will be. In this case, we talk about “one-shot” learning if the prompt includes only one example and “few shot learning” if it includes multiple examples.
-Prompt engineering with context is the most cost-effective approach to kick-off with.
+然而，用户越能通过详细的请求和示例（上下文）来构建他们的查询，就会得到最准确、最接近用户期望的答案。 在这种情况下，如果提示仅包含一个示例，我们讨论“单样本”学习；如果提示包含多个示例，我们讨论“少样本学习”。
 
-### Retrieval Augmented Generation (RAG)
+根据上下文进行快速工程设计是最具成本效益的启动方法。
 
-LLMs have the limitation that they can use only the data that has been used during their training to generate an answer. This means that they don’t know anything about the facts that happened after their training process, and they cannot access non-public information (like company data).
-This can be overcome through RAG, a technique that augments prompt with external data in the form of chunks of documents, considering prompt length limits. This is supported by Vector database tools (like [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) that retrieve the useful chunks from varied pre-defined data sources and add them to the prompt Context.
+### 检索增强生成 (RAG)
 
-This technique is very helpful when a business doesn’t have enough data, enough time, or resources to fine-tune an LLM, but still wishes to improve performance on a specific workload and reduce risks of hallucinations, i.e., mystification of reality or harmful content.  
+LLMs 有一个限制，即他们只能使用训练期间使用过的数据来生成答案。 这意味着他们对训练过程后发生的事情一无所知，并且无法访问非公开信息（例如公司数据）。
+这可以通过 RAG 来克服，RAG 是一种考虑提示长度限制的技术，以文档块的形式使用外部数据来增强提示。 矢量数据库工具（例如 [Azure 向量搜索](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)）支持此功能，可检索有用的信息来自各种预定义数据源的块并将它们添加到提示上下文中。
 
-### Fine-tuned model
+当企业没有足够的数据、足够的时间或资源来微调 LLMs，但仍希望提高特定工作负载的性能并减少幻觉的风险（即对现实的神秘化或有害的风险）时，此技术非常有用
 
-Fine-tuning is a process that leverages transfer learning to ‘adapt’ the model to a downstream task or to solve a specific problem. Differently from few-shot learning and RAG, it results in a new model being generated, with updated weights and biases. It requires a set of training examples consisting of a single input (the prompt) and its associated output (the completion).
-This would be the preferred approach if:
+### 微调模型
 
-- **Using fine-tuned models**. A business would like to use fine-tuned less capable models (like embedding models) rather than high performance models, resulting in a more cost effective and fast solution.
+微调是一个利用迁移学习使模型“适应”下游任务或解决特定问题的过程。 与少样本学习和 RAG 不同，它会生成一个新模型，并更新权重和偏差。 它需要一组训练示例，其中包含单个输入（提示）及其关联的输出（完成）。
 
-- **Considering latency**. Latency is important for a specific use-case, so it’s not possible to use very long prompts or the number of examples that should be learnt from the model doesn’t fit with the prompt length limit.
+如果出现以下情况，这将是首选方法：
 
-- **Staying up to date**. A business has a lot of high-quality data and ground truth labels and the resources required to maintain this data up to date over time.
+- **使用微调模型**。 企业希望使用经过微调能力较差的模型（例如嵌入模型）而不是高性能模型，从而获得更具成本效益和快速的解决方案。
 
-### Trained model
+- **考虑延迟**。 延迟对于特定用例很重要，因此不可能使用很长的提示，或者应该从模型中学习的示例数量不符合提示长度限制。
 
-Training an LLM from scratch is without a doubt the most difficult and the most complex approach to adopt, requiring massive amounts of data, skilled resources, and appropriate computational power. This option should be considered only in a scenario where a business has a domain-specific use case and a large amount of domain-centric data.
+- **保持最新状态**。 企业拥有大量高质量的数据和真实标签，以及随着时间的推移保持这些数据最新所需的资源。
 
-## Knowledge check
+### 训练垂直行业模型
 
-What could be a good approach to improve LLM completion results?
+从头开始培训 LLMs 无疑是最困难、最复杂的方法，需要大量数据、熟练资源和适当的计算能力。 仅在企业具有特定领域的用例和大量以特定领域为中心的数据的情况下才应考虑此选项。
 
-1. Prompt engineering with context
-1. RAG
-1. Fine-tuned model
 
-A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
 
-## 🚀 Challenge
+## 知识检查
 
-Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) for your business.
+提升 LLMs 输出效率最好的方法是什么？
 
-## Great Work, Continue Your Learning
+1. 根据背景提示进行工程设计
+2. RAG
+3. 模型微调
+
+A：3，如果您有时间和资源以及高质量的数据，微调是保持最新状态的更好选择。 然而，如果您正在寻求改进，但又缺乏时间，那么值得首先考虑 RAG。
+
+## 🚀 拓展
+
+详细了解如何为您的业务 [使用 RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst)。
+
+## 继续您的学习旅程
 
 Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
 
 Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD)!
+
+想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关本章的其他重要资源。
+
+前往第三章，我们将了解如何[负责任地使用生成式 AI 进行应用构建](/03-using-generative-ai-responsible/README.MD)！
