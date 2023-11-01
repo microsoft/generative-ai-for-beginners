@@ -112,7 +112,7 @@ Also, the output of a generative AI model is not perfect and sometimes the creat
 
 Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way", can you do something you couldn't before, or are you faster? Write a 300 word summary on what your dream AI startup would look like and include headers like "Problem", "How I would use AI", "Impact" and optionally a business plan. 
 
-If you done this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/en-gb/startups) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
+If you done this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/en-gb/startups?WT.mc_id=academic-105485-koreyst) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
 
 ## Knowledge check
 
@@ -126,7 +126,7 @@ A: 3, an LLM is non-deterministic, the response vary, however, you can control i
 
 ## Great Work! Continue the Journey 
 
-Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic. 
+Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic. 
 
-Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/02-exploring-and-comparing-different-llms/README.md)! 
+Head over to the Lesson 2 where we will look at how to [explore and compare different LLM types](/02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)! 
 

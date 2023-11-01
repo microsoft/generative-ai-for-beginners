@@ -86,8 +86,8 @@ pip install openai
 
 You need to carry out the following steps:
 
-- Create an account on Azure <https://azure.microsoft.com/free/>.
-- Gain access to Azure Open AI. Go to <https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst> and request access.
+- Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Gain access to Azure Open AI. Go to [https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
 
   > [!NOTE]
   > At the time of writing, you need to apply for access to Azure Open AI.
@@ -174,7 +174,7 @@ Now that we learned how to setup and configure openai, it's time to build your f
     > If you're using Windows type `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
     > [!NOTE]
-    > locate your Azure Open AI key by going to https://portal.azure.com/ and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+    > locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
 
 1. Create a *app.py* file and give it the following code:
 
@@ -654,6 +654,6 @@ When working on the assignment, try vary the temperature, try set it to 0, 0.5 a
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 7 where we will look at how to [build chat applications](/7-building-chat-applications/README.md)!
+Head over to the Lesson 7 where we will look at how to [build chat applications](/7-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!

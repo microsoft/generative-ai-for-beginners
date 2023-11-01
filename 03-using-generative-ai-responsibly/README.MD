@@ -96,11 +96,11 @@ It is now time to find ways where we can prevent or limit the potential harm cau
 
 - **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to scope or domain of system.
 
- It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md)
+ It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **User Experience**. The final layer is where the user interacts directly with the model through our application’s interface in some way. In this way we can design the UI/UX to limit the user on the types of inputs they can send to the model as well as text or images displayed to the user. When deploying the AI application, we also must be transparent about what our Generative AI application can and can’t do.  
 
-We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md)
+We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **Evaluate model**. Working with LLMs can be challenging because we don’t always have control over the data the model was trained on. Regardless, we should always evaluate the model’s performance and outputs. It’s still important to measure the model’s accuracy, similarity, groundedness, and relevance of the output. This helps provide transparency and trust to stakeholders and users.
 
@@ -128,6 +128,6 @@ Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-servic
 
 ## Great Work, Continue Your Learning
 
-Want to learn more about how to build with Generative AI responsibly? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+Want to learn more about how to build with Generative AI responsibly? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](/4-prompt-engineering-fundamentals/README.md)!
+Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](/4-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
