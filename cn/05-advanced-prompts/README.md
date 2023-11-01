@@ -1,95 +1,93 @@
-# Creating Advanced prompts
+# 创建高级的提示工程技巧
 
 [![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
 
-Let's recap some learnings from the previous chapter:
+让我们回顾一下上一章的一些知识：
 
 > Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context.
 
-There's also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
+编写提示也有两个步骤，通过提供相关上下文构建提示，第二部分是优化，如何逐步改进提示。
 
-At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques than can be applied to any LLM.  
+至此，我们对如何编写提示有了一些基本的了解，但还需要更深入。 在本章中，您将从尝试各种提示到理解为什么一种提示比另一种更好的方向出发。 您将学习如何按照一些适用于 LLMs 的基本技术构建提示。
 
-## Introduction
+## 本章概述
 
-In this chapter, we will cover the following topics:
+在本章中，我们将讨论以下内容：
 
-- Extend your knowledge of prompt engineering by applying different techniques to your prompts.
-- Configuring your prompts to vary the output.
+- 通过在提示中应用不同的技术来扩展您的提示工程知识。
+- 配置提示以改变输出。
 
-## Learning goals
+## 学习目标
 
-After completing this lesson, you'll be able to:
+完成本课程后，您将能够掌握：
 
-- Apply prompt engineering techniques that improves the outcome of your prompts.
-- Perform prompting that is either varied or deterministic.
+- 应用提示工程技术来改善提示结果。
+- 执行多样化或确定性的提示。
 
-## Prompt engineering
+## 提示工程
 
-Prompt engineering is the process of creating prompts that will produce the desired outcome. There's more to prompt engineering than just writing a text prompt. Prompt engineering is not an engineering discipline, it's more a set of techniques that you can apply to get the desired outcome.
+提示工程是创建将产生所需结果的提示的过程。 提示工程不仅仅是编写文本提示。提示工程不是一门工程学科，它更像是一组可以应用以获得所需结果的技术。
 
-### An example of a prompt
+### 一个例子
 
-Let's take a basic prompt like this one:
+让我们看一个像这样的基本提示：
 
 > Generate 10 questions on geography.
 
-In this prompt, you are actually applying a set of different prompt techniques.
+在这个提示中，实际上应用了一组不同的提示技巧。
 
-Let's break this down.
+让我们来分解一下。
 
-- **Context**, you specify it should be about "geography".
-- **Limiting the output**, you want no more than 10 questions.
+- **上下文**，您指定它应该与“地理”有关。
+- **限制输出**，您希望不超过 10 个问题。
 
-### Limitations of simple prompting
+### 简单提示的局限性
 
-You may or may not get the desired outcome. You will get your questions generated, but geography is a big topic and you may not get what you want to due the following reasons:
+您可能会也可能不会得到想要的结果。 你会得到你的问题，但地理是一个大话题，你可能无法得到你想要的，原因如下：
 
-- **Big topic**, you don' know if it's going to be about countries, capitals, rivers and so on.
-- **Format**, what if you wanted the questions to be formatted in a certain way?
+- **大话题**，你不知道它是否会涉及国家、首都、河流等等。
+- **格式**，如果您希望问题以某种方式格式化怎么办？
 
-As you can see, there's a lot to consider when creating prompts.
+正如您所看到的，创建提示时需要考虑很多因素。
 
-So far, we've seen a simple prompt example, but generative AI is capable of much more to help people in a variety of roles and industries. Let's explore some basic techniques next.
+到目前为止，我们已经看到了一个简单的提示示例，但生成式人工智能能够为各种角色和行业的人们提供更多帮助。 接下来让我们探讨一些基本技术。
 
-### Techniques for prompting
+### 提示技巧
 
-First, we need to understand that prompting is an _emergent_ property of an LLM meaning that this is not a feature that is built into the model but rather something we discover as we use the model.
+首先，我们需要了解提示是 LLM 的一个紧急属性，这意味着这不是模型中内置的功能，而是我们在使用模型时发现的东西。
 
-There are some basic techniques that we can use to prompt an LLM. Let's explore them.
+我们可以使用一些基本技巧来提示 LLM。 让我们来探索一下它们。
 
-- **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
-- **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
-- **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
-- **Least to most**, like chain-of-though, this technique is about breaking down a problem in series of steps and then ask these steps to be performed in order.
-- **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
-- **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
+- **少样本提示**，这是最基本的提示形式。 这是一个带有几个示例的提示。
+- **思维链**，这种类型的提示告诉 LLMs 如何将问题分解为步骤。
+- **生成的知识**，为了提高提示的响应，您可以在提示中额外提供生成的事实或知识。
+- **从最少到最多**，就像链式分析一样，这种技术是将问题分解为一系列步骤，然后要求按顺序执行这些步骤。
+- **自我完善**，这种技术是修正 LLM 的输出，然后要求其改进。
+- **多维度提示**。 您在这里想要的是确保 LLM 答案是正确的，并要求它解释答案的各个部分。 这是一种自我完善的形式。
 
-### Few-shot prompting
+### 少样本提示
 
-This style of prompting is very simple, it may consist of a single prompt and possibly a few examples. This technique is probably what you're using as you're starting to learn about LLMs. Here's an example:
+这种提示风格非常简单，它可能由一个提示和几个示例组成。 当您开始学习 LLMs 时，您可能正在使用这种技术。 这是一个例子：
 
 - Prompt: "What is Algebra?"
 - Answer: "Algebra is a branch of mathematics that studies mathematical symbols and the rules for manipulating these symbols."
 
-### Chain-of-thought
+### 思维链
 
-Chain-of-thought is a very interesting technique as it's about taking the LLM through a series of steps. The idea is to instruct the LLM in such a way that it understands how to do something. Consider the following example, with and without chain-of-thought:
+思想链是一项非常有趣的技术，因为它涉及到 LLMs 的分步。 这个想法是以一种让 LLMs 了解如何做某种事情的方式来指导 LLMs。 考虑下面的例子，无论有没有思想链：
 
     - Prompt: "Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?"
     - Answer: 5
 
-LLM answers with 5, which is incorrect. Correct answer is 1 apple, given the calculation (5 -3 -2 + 1 = 1).
+LLM 给出的答案为 5，这是不正确的。 根据计算结果 (5 -3 -2 + 1 = 1)，正确答案是 1 个苹果。
 
-So how can we teach the LLM to do this correctly?
+那么我们怎样才能教LLM正确地做到这一点呢？
 
-Let's try chain-of-thought. Applying chain-of-thought means:
+让我们尝试一下思维链。 应用思维链意味着：
 
-1. Give the LLM a similar example.
-1. Show the calculation, and how to calculate it correctly.
-1. Provide the original prompt.
-
-Here's how:
+1. 给LLM一个类似的例子。
+2. 展示计算结果，以及如何正确计算。
+3. 提供原始提示。
 
 - Prompt: "Lisa has 7 apples, throws 1 apple, gives 4 apples to Bart and Bart gives one back:
   7 -1 = 6
@@ -98,15 +96,15 @@ Here's how:
   Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?"
   Answer: 1
 
-Note how we write a substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
+请注意我们如何用另一个示例、计算和原始提示编写更长的提示，然后得出正确答案 1。
 
-As you can see chain-of-thought is a very powerful technique.
+正如您所看到的，思维链是一种非常强大的技术。
 
-### Generated knowledge
+### 生成的知识
 
-Many times when you want to construct a prompt, you want to do so using your own company's data. You want part of the prompt to be from the company and the other part should be the actual prompt you're interested in.
+很多时候，当您想要构建提示时，您希望使用自己公司的数据来实现。 您希望提示的一部分来自公司，另一部分应该是您感兴趣的实际提示。
 
-As an example, this is what your prompt then can look like if you're in the insurance business:
+举个例子，如果您从事保险业务，那么您的提示可能如下所示：
 
     ```text
     {{company}}: {{company_name}}
@@ -117,9 +115,9 @@ As an example, this is what your prompt then can look like if you're in the insu
     Requirements: {{requirements}}
     ```
 
-Above, you see how the prompt is constructed using a template. In the template there's a number of variables, denoted by `{{variable}}`, that will be replaced with actual values from a company API.
+在上面，您可以看到如何使用模板构建提示。 模板中有许多变量，用“{{variable}}”表示，这些变量将替换为公司 API 中的实际值。
 
-Here's an example of how the prompt could look like once the variables have been replaced by content from your company:
+以下示例展示了变量被公司内容替换后提示的外观：
 
     ```text
     Insurance company: ACME Insurance
@@ -135,7 +133,7 @@ Here's an example of how the prompt could look like once the variables have been
     Requirements: Car, Home
     ```
 
-Running this prompt through an LLM will produce a response like this:
+通过 LLM 运行此提示将产生如下响应：
 
     ```output
     , and Life insurance
@@ -147,7 +145,7 @@ Running this prompt through an LLM will produce a response like this:
     Total cost: $1,200 USD
     ```
 
-As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After som _trial and error_, we arrive at the following prompt:
+正如您所看到的，它还建议购买人寿保险，但事实并非如此。 此结果表明我们需要通过更改提示来优化提示，使其更清楚地了解其允许的内容。 经过一些试验和错误之后，我们得到以下提示：
 
     ```text
     Insurance company: ACME Insurance
@@ -162,44 +160,44 @@ As you can see, it also suggests the Life insurance, which it shouldn't. This re
     Budget: $1000 restrict choice to types: Car, Home
     ```
 
-Note how adding _type_ and _cost_ and also using the keyword _restrict_ helps the LLM to understand what we want.
+请注意添加 _type_ 和 _cost_ 以及使用关键字 _restrict_ 如何帮助 LLM 理解我们想要的内容。
 
-Now we get the following response:
+现在我们得到以下响应：
 
     ```output
     Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
     ```
 
-The point of this example was to show that even though we're using a basic technique like _generated knowledge_, we still need to optimize the prompt in most cases to get the desired outcome.
+这个例子的目的是表明，即使我们使用像_生成知识_这样的基本技术，我们仍然需要在大多数情况下优化提示以获得所需的结果。
 
-### Least-to-most
+### 从少到多
 
-The idea with Least-to-most prompting is to break down a bigger problem into sub problems. That way, you help guide the LLM on how to "conquer" the bigger problem. A good example could be for data science where you can ask the LLM to divide up a problem like so:
+从最少到最多提示的想法是将一个更大的问题分解为多个子问题。 这样，您就可以帮助指导 LLMs 如何“克服”更大的问题。 数据科学就是一个很好的例子，你可以要求 LLMs 来划分问题，如下所示：
 
 > Prompt: How to perform data science in 5 steps?
 
-With your AI assistant answering with:
+你的人工智能助理会回答：
 
-1. Collect data
-1. Clean data
-1. Analyze data
-1. Plot data
-1. Present data
+1. 收集数据
+2. 清理数据
+3. 分析数据
+4. 绘制数据
+5. 现有数据
 
-### Self-refine, critique the results
+### 自我完善，质疑结果
 
-With generative AIs and LLMs, you can't trust the output. You need to verify it. After all, the LLM is just presenting you what's the next most likely thing to say, not what's correct. Therefore, a good idea is to ask the LLM to critique itself, which leads us to the self-refine technique.
+对于生成式人工智能和 LLMs，你不能相信其输出。 你需要验证一下。 毕竟， LLMs只是向您展示下一个最有可能说的话，而不是正确的内容。 因此，一个好主意是要求 LLMs 自我批评，这引导我们自我完善技术。
 
-How it works is that you follow the following steps:
+其工作原理是按照以下步骤操作：
 
-1. Initial prompt asking the LLM to solve a problem
-1. LLM answers
-1. You critique the answer and ask the AI to improve
-1. LLM answers again, this time considering the critique and suggest solutions it came up with
+1. 要求LLM解决问题的初始提示
+2. LLM产生答案
+3. 质疑答案并要求人工智能改进
+4. LLM 再次回答，这次考虑了质疑并提出了解决方案
 
-You can repeat this process as many times as you want.
+您可以根据需要多次重复此过程。
 
-Here's an example using this technique:
+这是使用此技术的示例：
 
 > Prompt: "Create a Python Web API with routes products and customers"
 
@@ -249,19 +247,17 @@ AI Answer:
         app.run()
     ```
 
-As you can see, the above AI response is improving the first suggested code thanks to critiquing the first answer.
+正如您所看到的，由于对第一个答案的批评，上述人工智能响应正在改进第一个建议的代码。
 
-### Maieutic prompting
+### 多维度的提示
 
-Maieutic prompting is a technique that is similar to self-refine but it's more about asking the LLM to explain itself. The goal is to reduce inconsistencies in the LLM's output so to ensure it arrives at the correct answer. The workflow to follow is:
+多维度的提示是一种类似于自我完善的技术，但它更多的是要求 LLMs 解释自己。 目标是减少 LLMs 输出不一致，以确保得出正确的答案。 要遵循的工作流程是：
 
-1. Ask the LLM to answer a question
-1. For each part of the answer, ask the LLM to explain it more in depth.
-1. If there are inconsistencies, discard the parts that are inconsistent.
+1. 请 LLM 回答问题
+2. 对于答案的每一部分，请LLM更深入地解释。
+3. 如果存在不一致，则丢弃不一致的部分。
 
-Repeat 2 and 3 until you've gone through all the parts and you're satisfied with the answer.
-
-Here's an example prompt:
+重复 2 和 3，直到您完成所有部分并对答案感到满意为止。
 
 > prompt: How can I create a crisis plan to mitigate for a pandemic in 5 steps?
 LLM answer:
@@ -274,7 +270,7 @@ LLM answer:
     1. Identify the communication channels
     ```
 
-It's identified 5 steps, but can we determine if this is correct? Let's ask the LLM to explain each step:
+它确定了 5 个步骤，但是我们可以确定这是否正确吗？ 让我们请LLM解释一下每一步：
 
 > prompt: Explain the first step in more detail, what are the risks in detail with a pandemic?
 
@@ -288,7 +284,7 @@ It's identified 5 steps, but can we determine if this is correct? Let's ask the 
     - Loss of employees
     ```
 
-At this point, we want to make sure the LLM is correct so we ask it to explain the first risk in more detail and hope it's consistent with the answer above:
+此时，我们希望确保 LLM 是正确的，因此我们要求它更详细地解释第一个风险，并希望它与上面的答案一致：
 
 > prompt: In a Pandemic, which is the biggest risk and why?
 
@@ -302,11 +298,11 @@ At this point, we want to make sure the LLM is correct so we ask it to explain t
     The two biggest risks are loss of life and loss of business.
     ```
 
-At this point, the LLM is consistent and mentions "life" and "business" as top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
+在这一点上，LLMs 是一致的，并提到“生活”和“商业”是两大风险。 我们现在可以继续下一步并感到相当有信心。 然而，我们不应该盲目相信 LLM，我们应该始终验证输出。
 
-## Vary your output
+## 改变您的输出
 
-LLMs are non deterministic by nature, meaning that you will get different results each time you run the same prompt. Try the following prompt for example:
+LLM 本质上是不确定的，这意味着每次运行相同的提示时都会得到不同的结果。 例如尝试以下提示：
 
 > "Generate code for a Python Web API"
 
@@ -344,7 +340,7 @@ LLMs are non deterministic by nature, meaning that you will get different result
     
     ```
 
-Running the same prompt again generates a slightly different response:
+再次运行相同的提示会生成略有不同的响应：
 
     ```text
     #import necessary packages
@@ -414,13 +410,13 @@ Running the same prompt again generates a slightly different response:
 
 > So is the varied output a problem?
 
-Depends on what you're trying to do. If you want a specific response then it's a problem. If you're ok with a varied output like "Generate any 3 questions on geography", then it's not a problem.
+取决于你想做什么。 如果你想要一个具体的回应，那就是一个问题。 如果您可以接受诸如“生成任意 3 个地理问题”之类的不同输出，那么这不是问题。
 
-### Using temperature to vary your output
+### 利用温度来改变输出
 
-Ok, so we've decided we want to limit the output to be more predictable, that is more deterministic. How do we do that?
+好的，所以我们决定将输出限制为更可预测，即更具确定性。 我们该怎么做呢？
 
-Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 is the most varied. The default value is 0.7. Let's see what happens with two runs of the same prompt with temperature set to 0.1:
+温度是 0 到 1 之间的值，其中 0 最具确定性，1 最具变化性。 默认值为 0.7。 让我们看看在温度设置为 0.1 的情况下两次运行相同的提示会发生什么：
 
 > "Generate code for a Python Web API"
 
@@ -458,7 +454,7 @@ Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 
     
     ```
 
-Running the prompt again gives us this outcome:
+再次运行提示符会给我们这样的结果：
 
     ```python
     #import necessary libraries
@@ -494,7 +490,7 @@ Running the prompt again gives us this outcome:
     
     ```
 
-There's only a tiny difference between these two outputs.  Let's do the opposite this time, let's set the temperature to 0.9:
+这两个输出之间只有很小的差异。 这次我们反其道而行之，将温度设置为 0.9：
 
     ```python
     # Import necessary libraries
@@ -530,7 +526,7 @@ There's only a tiny difference between these two outputs.  Let's do the opposite
     
     ```
 
-and the second attempt at 0.9 as temperature value:
+第二次尝试使用 0.9 作为温度值：
 
     ```python
     import flask
@@ -556,27 +552,27 @@ and the second attempt at 0.9 as temperature value:
     
     ```
 
-As you can see, the results couldn't be more varied.
+正如您所看到的，结果各式各样。
 
-> note, there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.   
+> 请注意，您可以更改更多参数来改变输出，例如 top-k, top-p, repetition penalty, length penalty and diversity penalty ，但这些不属于本课程的范围。  
 
-## Good practices
+## 最佳实践
 
-There are many practices you can apply to try getting what you want. You will find your own style as you use prompting more and more. 
+您可以应用许多实践来尝试获得您想要的东西。 当你越来越多地使用提示时，你会发现自己的风格。
 
-Additionally to the techniques we've covered, there are some good practices to consider when prompting an LLM.
+除了我们介绍的技术之外，在调用 LLMs 时还需要考虑一些好的做法。
 
-Here are some good practices to consider:
+以下是一些值得考虑的良好做法：
 
-- **Specify context**. Context matters, the more you can specify like domain, topic, etc. the better.
-- Limit the output. If you want a specific number of items or a specific length, specify it.
-- **Specify both what and how**. Remember to mention both what you want and how you want it, for example "Create a Python Web API with routes products and customers, divide it into 3 files".
-- **Use templates**. Often, you will want to enrich your prompts with data from your company. Use templates to do this. Templates can have variables that you replace with actual data.
-- **Spell correctly**. LLMs might provide you with a correct response, but if you spell correctly, you will get a better response.  
+- **指定上下文**。 上下文很重要，您可以指定的领域、主题等越多越好。
+- 限制输出。 如果您想要特定数量的项目或特定长度，请指定。
+- **指定内容和方式**。 请记住提及您想要什么以及您想要如何实现，例如“创建一个包含路由产品和客户的 Python Web API，将其分为 3 个文件”。
+- **使用模板**。 通常，您会希望使用公司的数据来丰富提示。 使用模板来执行此操作。 模板可以包含用实际数据替换的变量。
+- **拼写正确**。 LLMs 可能会为您提供正确的答案，但如果您拼写正确，您会得到更好的答案。
 
-## Assignment
+## 作业
 
-Here's code in Python showing how to build a simple API using Flask:
+以下 Python 代码展示了如何使用 Flask 构建简单的 API：
 
     ```python
     from flask import Flask, request
@@ -592,33 +588,33 @@ Here's code in Python showing how to build a simple API using Flask:
         app.run()
     ```
 
-Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
+使用 GitHub Copilot 或 ChatGPT 等人工智能助手，并应用“自我优化”技术来改进代码。
 
-## Solution
+## 解决方案
 
-Please attempt to solve the assignment by adding suitable prompts to the code.
+请尝试通过在代码中添加适当的提示来完成作业。
 
 > [!TIP]
-> Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
+> 短语提示要求它改进，限制改进的数量是个好主意。 您还可以要求以某种方式改进它，例如架构、性能、安全性等。
 
 [Solution](./solution.py)
 
-## Knowledge check
+## 知识检查
 
-Why would I use chain-of-thought prompting? Show me 1 correct response and 2 incorrect responses.
+为什么我要使用思维链提示？ 显示 1 个正确答案和 2 个错误答案。
 
-1. To teach the LLM how to solve a problem.
-1. B, To teach the LLM to find errors in code.
-1. C, To instruct the LLM to come up with different solutions.
+1. 教 LLM 如何解决问题。
+2. 教 LLM 发现代码中的错误。
+3. 指导 LLM 提出不同的解决方案。
 
-A: 1, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, and similar problems and how they were solved.
+答：1，因为思路链是向 LLM 展示如何通过提供一系列步骤来解决问题，以及类似的问题以及它们是如何解决的。
 
-## 🚀 Challenge
+## 🚀 知识拓展
 
-You just used self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
+你刚刚在作业中使用了自我完善技术。 选取您构建的任何程序并考虑您想要对其进行哪些改进。 现在使用自我优化技术来建议更改。 您认为结果如何，是更好还是更坏了？
 
-## Great Work! Continue Your Learning
+## 继续学习
 
-Want to learn more about creating advanced prompts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关此主章节的其他学习资源。
 
-Head over to the Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md)
+前往第六章，我们将应用提示工程知识[构建文本生成应用程序](/6-text- Generation-apps/README.md) 
