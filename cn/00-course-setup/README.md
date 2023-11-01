@@ -102,4 +102,4 @@ jupyterhub
 
 ## 我们一起开始进入学习
 
-现在您已经完成了完成本课程所需的设置步骤，让我们开始进入[生成式人工智能和 LLMs 简介](../01-introduction-to-genai/README.md)。
+现在您已经完成了完成本课程所需的设置步骤，让我们开始进入[生成式人工智能和 LLMs 简介](../cn/01-introduction-to-genai/README.md)。

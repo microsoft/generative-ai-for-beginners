@@ -615,6 +615,6 @@ LLM 本质上是不确定的，这意味着每次运行相同的提示时都会�
 
 ## 继续学习
 
-想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关此主章节的其他学习资源。
+想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](./cn/13-continued-learning/README.md) 查找有关此主章节的其他学习资源。
 
-前往第六章，我们将应用提示工程知识[构建文本生成应用程序](/6-text- Generation-apps/README.md) 
+前往第六章，我们将应用提示工程知识[构建文本生成应用程序](./cn/6-text- Generation-apps/README.md) 

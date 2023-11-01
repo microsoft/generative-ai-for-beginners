@@ -1,10 +1,10 @@
-# Additional resources
+# 拓展学习资源
 
-Here are links to other great resources to continue your learning and building with Generative AI.
+以下是其他重要资源的链接，可帮助您继续学习和使用生成式 AI 进行构建。
 
-Are we missing a great resource? Let us know by submitting a PR!
+我们是否错过了一些很棒的资源？ 通过提交 PR 让我们知道！
 
-## Lesson 1  - Introduction to Generative AI and LLMs
+## 第一章  - 生成式人工智能和 LLM 介绍
 
 🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/)
 
@@ -14,7 +14,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Generative AI: Implication and Applications for Education](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 2 - Exploring and Comparing Different LLM types
+## 第二章 - 探索和比较不同的 LLMs
 
 🔗 [How to use Open Source foundation models curated by Azure Machine Learning (preview) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/azure/machine-learning/how-to-use-foundation-models?WT.mc_id=academic-105485-koreyst)
 
@@ -30,7 +30,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 3 - Using Generative AI Responsibly
+## 第三章 - 负责任地使用生成式人工智能
 
 🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-koreyst)
 
@@ -42,7 +42,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [GPT-4 System Card](https://cdn.openai.com/papers/gpt-4-system-card.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 4 - Understanding Prompt Engineering Fundamentals
+## 第四章 - 提示工程基础
 
 🔗 [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
 
@@ -56,15 +56,15 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259)
 
-## Lesson 5  - Creating Advanced Prompts
+## 第五章  - 创建高级的提示工程技巧
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 6 - Building Text Generation Applications
+## 第六章 - 构建文本生成应用
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions&WT.mc_id=academic-105485-koreyst)
 
-## Lesson 7 - Building Chat Applications
+## 第七章 - 构建聊天应用
 
 🔗 [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?WT.mc_id=academic-105485-koreyst)
 
@@ -74,7 +74,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
-## Lesson 8 - Building Search Applications
+## 第八章 - 通过向量数据库构建搜索应用
 
 🔗 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)
 
@@ -82,7 +82,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 9 - Building Image Generation Applications
+## 第九章- 构建图像生成应用
 
 🔗  [Generate Images with Azure OpenAI Service](https://learn.microsoft.com/training/modules/generate-images-azure-openai?WT.mc_id=academic-105485-koreyst)
 
@@ -94,7 +94,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf)
 
-## Lesson 10 - Building Low Code AI Applications
+## 第十章 - 构建低代码的人工智能应用
 
 🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-koreyst)
 
@@ -106,11 +106,11 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?wt.mc_id=github_S-1231_webpage_reactor&WT.mc_id=academic-109639-somelezediko)
 
-## Lesson 11- Integrating Applications with Function Calling
+## 第十一章 - 使用 Function Calling 集成外部应用
 
 🔗 [OpenAI Functions Documentation](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 12 - Designing UX for AI Applications
+## 第十二章 - 为人工智能应用程序设计用户体验
 
 🔗 [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/community/content/best-practices-ai-ux?WT.mc_id=academic-105485-koreyst)
 

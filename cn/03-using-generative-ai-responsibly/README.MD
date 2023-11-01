@@ -128,7 +128,7 @@
 
 ## 继续学习
 
-想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关本章的其他重要资源。
+想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](./cn/13-continued-learning/README.md) 查找有关本章的其他重要资源。
 
-前往第四章，我们将了解 [提示工程基础](/4-prompt-engineering-fundamentals/README.md)！
+前往第四章，我们将了解 [提示工程基础](./cn/4-prompt-engineering-fundamentals/README.md)！
 

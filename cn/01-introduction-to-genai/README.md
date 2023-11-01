@@ -133,6 +133,6 @@
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../13-continued-learning/README.md) 查找有关此主题的其他学习资源。
+想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](./cn/13-continued-learning/README.md) 查找有关此主题的其他学习资源。
 
-前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](/02-exploring-and-comparing- different-llms/README.md)！
+前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](./cn/02-exploring-and-comparing- different-llms/README.md)！
