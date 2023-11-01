@@ -411,4 +411,4 @@ Wrap the section with a summary and resources for self-guided learning.
 
 想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关此章节的其他重要资源。
 
-前往第五章学习，我们将了解[创建高级的提示技巧](../05-advanced-prompts/README.md)！
+前往第五章学习，我们将了解[创建高级的提示工程技巧](../05-advanced-prompts/README.md)！
