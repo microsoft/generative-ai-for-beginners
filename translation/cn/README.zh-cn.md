@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](./img/1.png)
+![Generative AI For Beginners](../../img/1.png)
 
 ### 通过 12 章的课程，开启构建生成式 AI 应用程序之路
 
@@ -25,7 +25,7 @@
 
 首先，将 [整个repo fork ](https://github.com/microsoft/generative-ai-for-beginners/fork) 到您自己的 GitHub 帐户，以便能够更改任何代码并完成相关学习。 您还可以[(🌟)该 Fork](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars)以便稍后更容易地找到它！
 
-前往[课程学习环境设置](/00-course-setup/README.md) 找到最适合您的设置指南！
+前往[课程学习环境设置](./cn/00-course-setup/README.md) 找到最适合您的设置指南！
 
 ## 🗣️ 找到志同道合的人和获取支持
 
