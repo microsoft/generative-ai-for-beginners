@@ -1,6 +1,6 @@
 # 第二章 : 探索和比较不同的 LLMs
 
-[![Exploring and comparing different LLMs](../images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
 
 > *点击该图片看本章导学视频*
 
@@ -48,14 +48,14 @@ LLM 模型有许多不同类型，您选择的模型取决于您的用途、您�
 - **它们是非常大的模型**，基于经过数十亿参数训练的深度神经网络。
 - **它们通常旨在作为其他模型的“基础”**，这意味着它们可以用作构建其他模型的起点，可以通过微调方式来完成。
 
-![基础模型与 LLMs](../images/FoundationModel.png)
+![基础模型与 LLMs](../../images/FoundationModel.png)
 
 图片来源：【基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 为了进一步阐明这种区别，我们以 ChatGPT 为例。 为了构建 ChatGPT 的第一个版本，名为 GPT-3.5 的模型作为基础模型。 这意味着 OpenAI 使用一些特定于聊天的数据来创建 GPT-3.5 的调整版本，专门用于在对话场景（例如聊天机器人）中让其有更好的表现。
 
-![基础模型](../images/Multimodal.png)
+![基础模型](../../images/Multimodal.png)
 
 图片来源：[2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
 
@@ -73,15 +73,15 @@ LLMs 还可以根据其产生的输出进行分类。
 
 嵌入是一组可以将文本转换为数字形式的模型，称为嵌入，它是输入文本的数字表示。 嵌入使机器更容易理解单词或句子之间的关系，并且可以用作其他模型的输入，例如分类模型或对数值数据具有更好性能的聚类模型。 嵌入模型通常用于迁移学习，其中为有大量数据的代理任务构建模型，然后将模型权重（嵌入）重新用于其他下游任务。 此类别的一个示例是 [OpenAI 嵌入](https://platform.openai.com/docs/models/embeddings)。
 
-![嵌入](../images/Embedding.png)
+![嵌入](../../images/Embedding.png)
 
 图像生成模型主要是用来生成图像。 这些模型通常用于图像编辑、图像合成和图像翻译。 图像生成模型通常在大型图像数据集上进行训练，例如 [LAION-5B](https://laion.ai/blog/laion-5b/)，并且可用于生成新图像或编辑现有图像 修复、超分辨率和着色技术。 如 [DALL-E-3](https://openai.com/dall-e-3) 和 [StableDiffusion](https://github.com/Stability-AI/StableDiffusion)。
 
-![Image generation](../images/Image.png)
+![Image generation](../../images/Image.png)
 
 文本或代码生成模型主要是生成文本或代码。 这些模型通常用于文本摘要、翻译和问答。 文本生成模型通常在大型文本数据集上进行训练，例如 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html)，并且可用于生成新文本或回答问题。 代码生成模型，例如 [CodeParrot](https://huggingface.co/codeparrot)，通常在大型代码数据集（如 GitHub）上进行训练，可用于生成新代码或修复现有代码中的错误。
 
- ![Text and code generation](../images/Text.png)
+ ![Text and code generation](../../images/Text.png)
 
 ### 了解编码-解码器与独立解码器
 
@@ -113,19 +113,19 @@ LLMs 还可以根据其产生的输出进行分类。
 - 在目录中查找感兴趣的基础模型，按任务、许可证或名称进行过滤。 还可以导入尚未包含在目录中的新模型。
 - 查看模型名片(包括详细描述和代码示例,并通过提供示例提示来测试结果),使用示例推理小部件对其进行测试。
 
-![Model card](../images/Llama1.png)
+![Model card](../../images/Llama1.png)
 
 - 使用特定工作负载和输入中提供的特定数据集的评估指标来评估模型性能。
 
-![Model evaluation](../images/Llama2.png)
+![Model evaluation](../../images/Llama2.png)
 
 - 利用 Azure 机器学习的实验和跟踪功能，根据自定义训练数据微调模型，以提高特定工作负载中的模型性能。
 
-![Model fine-tuning](../images/Llama3.png)
+![Model fine-tuning](../../images/Llama3.png)
 
 - 将原始预训练模型或微调版本模型部署到远程实时推理或批处理端点，以使应用程序能够直接使用。
 
-![Model deployment](../images/Llama4.png)
+![Model deployment](../../images/Llama4.png)
 
 ## 提升 LLM 的输出结果准确度
 
@@ -143,7 +143,7 @@ LLMs 还可以根据其产生的输出进行分类。
 
 - **微调模型**。 在这里，您根据自己的数据进一步训练模型，这使得模型更加准确并且能够响应您的需求，但可能成本高昂。
 
-![LLMs deployment](../images/Deploy.png)
+![LLMs deployment](../../images/Deploy.png)
 
 图片来源: [企业部署LLM的四种方式| Fiddler AI 博客](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
 
@@ -196,6 +196,6 @@ A：3，如果您有时间和资源以及高质量的数据，微调是保持最
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../../13-continued-learning/translations/README.zh-cn.md) 查找有关本章的其他重要资源。
+想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关本章的其他重要资源。
 
-前往第三章，我们将了解如何[负责任地使用生成式 AI 进行应用构建](../../03-using-generative-ai-responsibly/translations/README.zh-cn.MD)！
+前往第三章，我们将了解如何[负责任地使用生成式 AI 进行应用构建](../../../03-using-generative-ai-responsibly/translations/cn/README.MD)！

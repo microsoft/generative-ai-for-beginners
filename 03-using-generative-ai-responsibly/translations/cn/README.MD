@@ -1,6 +1,6 @@
 # 第三章 ： 负责任地使用生成式人工智能
 
-[![Using Generative AI Responsibly](../images/genai_course_3[77].png)]() 
+[![Using Generative AI Responsibly](../../images/genai_course_3[77].png)]() 
 
 > **导学视频即将上架，敬请期待**
 
@@ -76,7 +76,7 @@
 
 现在我们已经确定了负责任的生成式人工智能的重要性，让我们看看我们可以采取的 4 个步骤来负责任地构建我们的人工智能解决方案：
 
-![缓解循环](../images/mitigate-cycle.png)
+![缓解循环](../../images/mitigate-cycle.png)
 
 ### 衡量潜在危害
 
@@ -88,7 +88,7 @@
 
 现在是时候寻找方法来预防或限制模型及其响应造成的潜在危害了。 我们可以从 4 个不同的层面来看待这个问题：
 
-![缓解层](../images/mitigation-layers.png)
+![缓解层](../../images/mitigation-layers.png)
 
 - **模型**。 为正确的用例选择正确的模型。 当应用于更小、更具体的用例时，更大、更复杂的模型（例如 GPT-4）可能会导致更大的有害内容风险。 使用训练数据进行微调还可以降低有害内容的风险。
 
@@ -128,7 +128,7 @@
 
 ## 继续学习
 
-想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](../../13-continued-learning/translations/README.zh-cn.md) 查找有关本章的其他重要资源。
+想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关本章的其他重要资源。
 
-前往第四章，我们将了解 [提示工程基础](../../04-prompt-engineering-fundamentals/translations/README.zh-cn.md)！
+前往第四章，我们将了解 [提示工程基础](../../../04-prompt-engineering-fundamentals/translations/cn/README.md)！
 

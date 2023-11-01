@@ -1,6 +1,6 @@
 # 第四章：提示工程基础
 
-[![Prompt Engineering Fundamentals](../img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
+[![Prompt Engineering Fundamentals](../../img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
 
 
 如何撰写 LLM 的提示很重要，精心设计的提示可以比不精心设计的提示取得更好的结果。 但这些概念到底是什么，提示、提示工程以及我如何改进我发送给 LLMs 的内容？ 诸如此类的问题正是本章和下一章想要解答的。
@@ -79,7 +79,7 @@ LLM 将提示视为标记序列，其中不同的模型（或模型的版本）�
 
 要直观地了解标记化的工作原理，请尝试使用如下所示的 [OpenAI Tokenizer](https://platform.openai.com/tokenizer) 等工具。 复制您的提示 - 并查看如何将其转换为标记，注意空白字符和标点符号的处理方式。 请注意，此例子显示的是较旧的 LLM (GPT-3) - 因此使用较新的模型尝试此操作可能会产生不同的结果。
 
-![Tokenization](../img/4.0-tokenizer-example.png)
+![Tokenization](../../img/4.0-tokenizer-example.png)
 
 ### 概念: 基础模型
 
@@ -95,7 +95,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 但是，如果用户想要查看满足某些标准或任务目标的特定内容怎么办？ 这就是通过 LLMs 进行指令调整发挥作用的地方。
 
-![Base LLM Chat Completion](../img/4.0-playground-chat-base.png)
+![Base LLM Chat Completion](../../img/4.0-playground-chat-base.png)
 
 ### 概念:  LLMs 中的指令调整
 
@@ -109,7 +109,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 看看现在如何调整结果以反映所需的目标和格式？ 教育工作者现在可以直接在该课程的 ppt 中使用此结果。
 
-![Instruction Tuned LLM Chat Completion](../img/4.0-playground-chat-instructions.png)
+![Instruction Tuned LLM Chat Completion](../../img/4.0-playground-chat-instructions.png)
 
 ## 为什么我们需要提示工程
 
@@ -138,15 +138,15 @@ But what if the user wanted to see something specific that met some criteria or 
 
 > **响应 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../img/4.0-hallucination-oai.png)
+![Response 1](../../img/4.0-hallucination-oai.png)
 
 > **响应 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../img/4.0-hallucination-aoai.png)
+![Response 2](../../img/4.0-hallucination-aoai.png)
 
 > **响应 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../img/4.0-hallucination-huggingchat.png)
+![Response 3](../../img/4.0-hallucination-huggingchat.png)
 
 正如预期的那样，由于随机行为和模型能力变化，每个模型（或模型版本）都会产生略有不同的响应。 例如，一个模型针对八年级受众，而另一个模型则假设高中生。 但所有三个模型确实生成了可以让不知情的用户相信该事件是真实的响应
 
@@ -409,6 +409,6 @@ Wrap the section with a summary and resources for self-guided learning.
 
 ## 继续学习
 
-想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../../13-continued-learning/translations/README.zh-cn.md) 查找有关此章节的其他重要资源。
+想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关此章节的其他重要资源。
 
-前往第五章学习，我们将了解[创建高级的提示工程技巧](../../05-advanced-prompts/translations/README.zh-cn.md)！
+前往第五章学习，我们将了解[创建高级的提示工程技巧](../../../05-advanced-prompts/translations/cn/README.md)！
