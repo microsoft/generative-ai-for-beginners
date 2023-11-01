@@ -67,7 +67,7 @@ There are a few well known libraries for working with LLMs like:
 
 Then there are libraries that operate on a higher level like:
 
-- **Langchain**. Langchain is well known and support Python.
+- **Langchain**. Langchain is well known and supports Python.
 - **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
 
 ## First app using openai
