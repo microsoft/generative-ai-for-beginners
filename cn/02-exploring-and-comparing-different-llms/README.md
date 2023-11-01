@@ -8,7 +8,7 @@
 
 我们初创公司技术旅程的下一步是 LLMs 的前景并了解哪些适合我们的案例
 
-## Introduction
+## 本章概述
 
 本章内容包括：
 
@@ -190,15 +190,11 @@ LLMs 有一个限制，即他们只能使用训练期间使用过的数据来生
 
 A：3，如果您有时间和资源以及高质量的数据，微调是保持最新状态的更好选择。 然而，如果您正在寻求改进，但又缺乏时间，那么值得首先考虑 RAG。
 
-## 🚀 拓展
+## 🚀 知识拓展
 
 详细了解如何为您的业务 [使用 RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst)。
 
 ## 继续您的学习旅程
-
-Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
-
-Head over to the Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD)!
 
 想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关本章的其他重要资源。
 

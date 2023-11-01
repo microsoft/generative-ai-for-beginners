@@ -1,133 +1,134 @@
-# 负责任地使用生成式人工智能
+# 第三章 ： 负责任地使用生成式人工智能
 
 [![Using Generative AI Responsibly](./images/genai_course_3[77].png)]() 
 
-> **导学视频即将上架**
+> **导学视频即将上架，敬请期待**
 
-It's easy to be fascinated with AI and generative AI in particular, but you need to consider how you would use it responsibly. You need to consider things like how to ensure the output is fair, non-harmful and more. This chapter aims to provide you with mentioned context, what to consider, and how to take active steps to improve your AI usage.
+人们很容易对人工智能尤其是生成式人工智能着迷，但你需要考虑如何负责任地使用它。 你需要考虑如何确保输出是公平的、无害的等等。 本章旨在为您提供上述相关背景信息、需要考虑的事项以及如何采取积极措施来改善人工智能的使用。
 
-## Introduction
+## 本章概述
 
-This lesson will cover:
+本章内容包括：
 
-- Why you should prioritize Responsible AI when building Generative AI applications.
-- Core principles of Responsible AI and how they relate to Generative AI.
-- How to put these Responsible AI principles into practice through strategy and tooling.
+- 为什么在构建生成式人工智能应用程序时应优先考虑负责任的人工智能。
+- 负责任的人工智能的核心原则以及它们与生成式人工智能的关系。
+- 如何通过策略和工具将这些负责任的人工智能原则付诸实践。
 
-## Learning Goals
+## 学习目标
 
-After completing this lesson you will know: 
+学完本章内容后您将了解到：
 
-- The importance of Responsible AI when building Generative AI applications.
-- When to think and apply the core principles of Responsible AI when building Generative AI applications.
-- What tools and strategies are available to you to put the concept of Responsible AI into practice.
+- 构建生成式人工智能应用程序时负责任的人工智能的重要性。
+- 在构建生成式 AI 应用程序时何时思考和应用 Responsible AI 的核心原则。
+- 您可以使用哪些工具和策略来将 Responsible AI 的概念付诸实践。
 
-## Responsible AI Principles
+## 负责任的人工智能原则
 
-The excitement of Generative AI has never been higher. This excitement has brought a lot of new developers, attention, and funding to this space. While this is very positive for anyone looking to build products and companies using Generative AI, it is also important we proceed responsibly.
+生成式人工智能的热度非常高。 这种热度为这个领域带来了许多新的开发人员、关注和资金。 虽然这对于任何想要使用生成式人工智能构建产品和公司的人来说都是非常积极的，但我们负责任地行事也很重要。
 
-Throughout this course, we are focusing on building our startup and our AI education product. We’ll use the principles of Responsible AI: Fairness, Inclusiveness, Reliability/Safety, Security & Privacy, Transparency and Accountability. With these principles, we will explore how they relate to our use of Generative AI in our products.
+在整个课程中，我们专注于构建“Our startup”和相关人工智能教育产品。 我们将使用负责任的人工智能的原则：公平、包容、可靠性/安全、安全和隐私、透明度和问责制。 根据这些原则，我们将探讨它们与我们在产品中使用生成式人工智能的关系。
 
-## Why Should You Prioritize Responsible AI
+## 为什么你应该优先考虑负责任的人工智能
 
-When building a product, taking a human-centric approach by keeping your user's best interest in mind leads to the best results.
+在构建产品时，采取以人为本的方法并牢记用户的最大利益会带来最大旭爱意
 
-The uniqueness of Generative AI is its power to create helpful answers, information, guidance, and content for users. This can be done without many manual steps which can lead to very impressive results. Without proper planning and strategies, it can also unfortunately lead to some harmful results for your users, your product, and society as a whole.
+生成式人工智能的独特性在于它能够为用户创建有用的答案、信息、指导和内容。 无需许多手动步骤即可完成此操作，这可以带来非常令人印象深刻的结果。 不幸的是如果没有适当的规划和策略，它也可能会给您的用户、产品和整个社会带来一些有害的结果。
 
-Let's look at some (but not all) of these potentially harmful results:
+让我们看看这些潜在有害结果中的一些（但不是全部）：
 
-### Hallucinations
+### 幻觉
 
-Hallucinations are a term used to describe when an LLM produces content that is either completely nonsensical or something we know is factually wrong based on other sources of information.
+幻觉是一个术语，用于描述 LLMs 产生的内容要么完全无意义，要么根据给出其他错误的信息。
 
-Let's take for example we build a feature for our startup that allows students to ask historical questions to a model. A student asks the question `Who was the sole survivor of Titanic?`
+举个例子，我们为“Our startup”构建了一个功能，允许学生向模型提出历史问题。 一名学生问“泰坦尼克号的唯一幸存者是谁？”
 
-The model produces a response like the one below:
+该模型产生如下响应：
 
-![Prompt saying "Who was the sole survivor of the Titanic"](/03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
+![提示说“谁是泰坦尼克号的唯一幸存者”](/03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
 
-> *(Source: [Flying bisons](https://flyingbisons.com))*
+> *（来源：[飞翔的野牛](https://flyingbisons.com))*
 
-This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic survivor. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to AI system to be unreliably and negatively impact the reputation of our startup.
+给出了一个非常确切的答案。 不幸的是，这是不正确的。 即使极少了解，人们也会发现泰坦尼克号幸存者不止一名。 但对于刚开始研究这个领域的学生来说，这个答案足以有说服力，不会被质疑并被视为事实。 这样做的后果可能会导致人工智能系统不可靠，并对我们初创公司的声誉产生负面影响。
 
-With each iteration of any given LLM, we have seen performance improvements around minimizing hallucinations. Even with this improvement,  we as application builders and users still need to remain aware of these limitations.
+在任何给定的 LLMs 的每次迭代中，我们都看到了在最大限度地减少幻觉方面的性能改进。 即使有了这样的改进，我们作为应用程序构建者和用户仍然需要意识到这些限制。
 
-### Harmful Content
+### 有害内容
 
-We covered in the earlier section when an LLM produces incorrect or nonsensical responses.  Another risk we need to be aware of is when a model responds with harmful content.
+我们在前面的部分中介绍了 LLMs 会产生不正确或毫无意义的回答。 我们需要注意的另一个风险是模型产生有害内容。
 
-Harmful content can be defined as:
+有害内容可以定义为：
 
-- Providing instructions or encouraging self-harm or harm to certain groups.
-- Hateful or demeaning content.
-- Guiding planning any type of attack or violent acts.
-- Providing instructions on how to find illegal content or commit illegal acts.
-- Displaying sexually explicit content.
+- 提供指示或鼓励自残或伤害某些群体。
+- 仇恨或侮辱性内容。
+- 指导策划任何类型的攻击或暴力行为。
+- 提供有关如何查找非法内容或实施非法行为的说明。
+- 展示露骨的色情内容。
 
-For our startup, we want to make sure we have the right tools and strategies in place to prevent this type of content from being seen by students.
+对于我们的初创公司来说，我们希望确保拥有正确的工具和策略来防止学生看到此类内容。
 
-### Lack of Fairness
+### 缺乏公平性
 
-Fairness is defined as “ensuring that an AI system is free from bias and discrimination and that they treat everyone fairly and equally.” In the world of Generative AI, we want to ensure that exclusionary worldviews of marginalized groups are not reinforced by the model’s output.
+公平的定义是“确保人工智能系统没有偏见和歧视，并公平、平等地对待每个人。” 在生成式人工智能的世界中，我们希望确保模型的输出不会强化边缘群体的排他性世界观。
 
-These types of outputs are not only destructive to building positive product experiences for our users, but they also cause further societal harm. As application builders, we should always keep a wide and diverse user base in mind when building solutions with Generative AI.
+这些类型的输出不仅会破坏为用户建立积极的产品体验，还会造成进一步对社会进行危害。 作为应用程序构建者，在使用生成式人工智能构建解决方案时，我们应该始终牢记广泛且多样化的用户群。
 
-## How to Use Generative AI Responsibly
+## 如何负责任地使用生成式人工智能
 
-Now that we have identified the importance of Responsible Generative AI, let's look at 4 steps we can take to build our AI solutions responsibly:
+现在我们已经确定了负责任的生成式人工智能的重要性，让我们看看我们可以采取的 4 个步骤来负责任地构建我们的人工智能解决方案：
 
-![Mitigate Cycle](./images/mitigate-cycle.png)
+![缓解循环](./images/mitigate-cycle.png)
 
-### Measure Potential Harms
+### 衡量潜在危害
 
-In software testing, we test the expected actions of a user on an application. Similarly, testing a diverse set of prompts users are most likely going to use is a good way to measure potential harm.
+在软件测试中，我们测试用户对应用程序的预期操作。 同样，测试用户最有可能使用的一组不同的提示是衡量潜在危害的好方法。
 
-Since our startup is building an education product, it would be good to prepare a list of education-related prompts. This could be to cover a certain subject, historical facts, and prompts about student life.
+由于“Our startup”正在开发教育产品，因此最好准备一份与教育相关的提示列表。 这可以涉及某个主题、历史事实和有关学生生活的提示。
 
-### Mitigate Potential Harms
+### 减轻潜在危害
 
-It is now time to find ways where we can prevent or limit the potential harm caused by the model and its responses. We can look at this in 4 different layers:
+现在是时候寻找方法来预防或限制模型及其响应造成的潜在危害了。 我们可以从 4 个不同的层面来看待这个问题：
 
-![Mitigation Layers](./images/mitigation-layers.png)
+![缓解层](./images/mitigation-layers.png)
 
-- **Model**. Choosing the right model for the right use case. Larger and more complex models like GPT-4 can cause more of a risk of harmful content when applied to smaller and more specific use cases. Using your training data to fine-tune also reduces the risk of harmful content.
+- **模型**。 为正确的用例选择正确的模型。 当应用于更小、更具体的用例时，更大、更复杂的模型（例如 GPT-4）可能会导致更大的有害内容风险。 使用训练数据进行微调还可以降低有害内容的风险。
 
-- **Safety System**. A safety system is a set of tools and configurations on the platform serving the model that help mitigate harm. An example of this is the content filtering system on the Azure OpenAI service. Systems should also detect jailbreak attacks and unwanted activity like requests from bots.
+- **安全系统**。 安全系统是平台上为模型服务的一组工具和配置，有助于减轻伤害。 Azure OpenAI Service 上的内容过滤系统就是一个例子。 系统还应该检测越狱攻击和不需要的活动，例如来自网络机器人的请求。
 
-- **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to scope or domain of system.
+- **元提示**。 元提示和基础是我们可以根据某些行为和信息指导或限制模型的方法。 这可以使用系统输入来定义模型的某些限制。 此外，提供与系统范围或领域更相关的输出。
 
- It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md)
+  它还可以使用检索增强生成 (RAG) 等技术，让模型仅从选定的可信来源中提取信息。 本课程后面有一章关于[构建搜索应用程序](../08-building-search-applications/README.md)的内容
 
-- **User Experience**. The final layer is where the user interacts directly with the model through our application’s interface in some way. In this way we can design the UI/UX to limit the user on the types of inputs they can send to the model as well as text or images displayed to the user. When deploying the AI application, we also must be transparent about what our Generative AI application can and can’t do.  
+- **用户体验**。 最后一层是用户通过应用程序界面以某种方式直接与模型交互的地方。 通过这种方式，我们可以设计 UI/UX 来限制用户可以发送到模型的输入类型以及向用户显示的文本或图像。 在部署人工智能应用程序时，我们还必须透明地了解我们的生成式人工智能应用程序可以做什么和不能做什么。
 
-We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md)
+我们有一章内容致力于[为人工智能应用程序设计用户体验](../12-designing-ux-for-ai-applications/README.md)
 
-- **Evaluate model**. Working with LLMs can be challenging because we don’t always have control over the data the model was trained on. Regardless, we should always evaluate the model’s performance and outputs. It’s still important to measure the model’s accuracy, similarity, groundedness, and relevance of the output. This helps provide transparency and trust to stakeholders and users.
+- **评估模型**。 与 LLMs 合作可能具有挑战性，因为我们并不总是能够控制模型训练的数据。 无论如何，我们应该始终评估模型的性能和输出。 衡量模型的准确性、相似性、基础性和输出的相关性仍然很重要。 这有助于为应用相关人员和用户提供透明度和信任。
 
-### Operate a Responsible Generative AI solution
+### 运营负责任的生成式人工智能解决方案
 
-Building an operational practice around your AI applications is the final stage. This includes partnering with other parts of our startup like Legal and Security to ensure we are compliant with all regulatory policies. Before launching, we also want to build plans around delivery, handling incidents, and rollback to prevent any harm to our users from growing.
+围绕人工智能应用程序构建操作实践是最后阶段。 这包括与“Our startup”的其他部门（例如法律和安全部门）合作，以确保我们遵守所有监管政策。 在发布之前，我们还希望围绕交付、处理事件和回滚制定计划，以防止扩大对用户造成的任何伤害。
 
-## Tools
+## 相关工具
 
-While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst ) can help detect harmful content and images via an API request.
+虽然开发负责任 AI 解决方案的工作量可能看起来很多，但这是值得付出的。 随着生成式人工智能领域的发展，更多帮助开发人员有效地将责任整合到工作流程中的工具将会更成熟。 如，[Azure AI 内容安全](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst ) 可以通过 API 请求帮助检测有害内容和图像。
 
-## Knowledge check
+## 知识检查
 
-What are some things you need to care about to ensure responsible AI usage?
+为了确保负责任地使用人工智能，您需要注意哪些事项？
 
-1. That the answer is correct.
-1. Harmful usage, that AI isn't used for criminal purposes.
-1. Ensuring the AI is free from bias and discrimination.
+1. 答案正确。
+2. 有害使用，即人工智能不用于犯罪目的。
+3. 确保人工智能不存在偏见和歧视。
 
-A: 2 and 3 is correct. Responsible AI helps you consider how to mitigate harmful effects and biases and more.
+答：2和3是正确的。 负责任的人工智能可以帮助您考虑如何减轻有害影响和偏见等。
 
-## 🚀 Challenge
+## 🚀 知识拓展
 
-Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
+阅读 [Azure AI 内容安全](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) 并了解您可以采用什么方法。
 
-## Great Work, Continue Your Learning
+## 继续学习
 
-Want to learn more about how to build with Generative AI responsibly? Go to the [continued learning page](../13-continued-learning/README.md) to find other great resources on this topic.
+想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](../13-continued-learning/README.md) 查找有关本章的其他重要资源。
 
-Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](/4-prompt-engineering-fundamentals/README.md)!
+前往第四章，我们将了解 [提示工程基础](/4-prompt-engineering-fundamentals/README.md)！
+
