@@ -28,12 +28,13 @@ There are many things you could help with for example:
 - Find spelling errors or code errors, raise an issue and/or PR
 - Translate to your language, every chapter has a *translations* subdirectory, if you want to help with this one create the following structure:
 
+```text
   Chapter NN/
     translations
       es/          <== your language code
        README.md   <== your translation
   - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
-    
+
 Hope to hear from you:
 - Raise an issue, <https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst>
 - Create a pull request, <https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst>
