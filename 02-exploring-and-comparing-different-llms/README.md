@@ -194,4 +194,4 @@ Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/r
 
 Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.MD?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](/03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
