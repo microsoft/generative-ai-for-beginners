@@ -6,7 +6,7 @@
 
 There's more to LLMs than chat bots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
 
-In this lesson, you are going to build a search application for our education startup Edu4All. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
+In this lesson, you are going to build a search application for our education startup. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
 
 For example, a student might type in 'What are Jupyter Notebooks?' or 'What is Azure ML' and the search application will return a list of YouTube videos that are relevant to the question, and better still, the search application will return a link to the place in the video where the answer to the question is located.
 
