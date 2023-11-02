@@ -4,7 +4,7 @@
 
 > *(Click the image above to view video of this lesson)*
 
-You've seen so far through this curriculum that there are core concepts like prompts and even a whole discipline called "prompt engineering". Many tools you can interact with like ChatGPT, Office 365, Microsoft Power Platform and more, supports you using prompts to accomplish something.
+You've seen so far through this curriculum that there are core concepts like prompts and even a whole discipline called "prompt engineering". Many tools you can interact with like ChatGPT, Office 365, Microsoft Power Platform and more, support you using prompts to accomplish something.
 
 For you to add such an experience to an app, you need to understand concepts like prompts, completions and choose a library to work with. That's exactly what you'll learn in this chapter.
 
@@ -26,7 +26,7 @@ At the end of this lesson, you'll be able to:
 
 ## What is a text generation app?
 
-Normally when you build an app it some kind of interface like the following:
+Normally when you build an app it has some kind of interface like the following:
 
 - Command-based. Console apps are typical apps where you type a command and it carries out a task. For example, `git` is a command-based app.
 - User interface (UI). Some apps have graphical user interfaces (GUIs) where you click buttons, input text, select options and more.
@@ -42,14 +42,14 @@ Compare it to a command-based app where you type a command:
 
 So how is a text generation app different?
 
-In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Other benefits is that because you're already interacting with a data source that has been trained on a vast corpus of information, where a traditional app might be limited on what's in a database.
+In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that because you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited on what's in a database.
 
 ### What can I build with a text generation app?
 
-There are many things you can build like for example:
+There are many things you can build. For example:
 
 - **A chatbot**. A chatbot answering questions about topics, like your company and its products could be a good match.
-- **Helper**. LLMs are great at things like summarizing text, get insights from text, producing text like resumes and more.
+- **Helper**. LLMs are great at things like summarizing text, getting insights from text, producing text like resumes and more.
 - **Code assistant**. Depending on the language model you use, you can build a code assistant that helps you write code. For example, you can use a product like GitHub Copilot as well as ChatGPT to help you write code.
 
 ## How can I get started?
@@ -57,7 +57,7 @@ There are many things you can build like for example:
 Well, you need to find a way to integrate with an LLM which usually entails the following two approaches:
 
 - Use an API. Here you're constructing web requests with your prompt and get generated text back.
-- Use a library. Libraries helps encapsulate the API calls and makes it easier to use.
+- Use a library. Libraries help encapsulate the API calls and make them easier to use.
 
 ## Libraries/SDKs
 
@@ -67,7 +67,7 @@ There are a few well known libraries for working with LLMs like:
 
 Then there are libraries that operate on a higher level like:
 
-- **Langchain**. Langchain is well known and support Python.
+- **Langchain**. Langchain is well known and supports Python.
 - **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
 
 ## First app using openai
@@ -141,11 +141,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-In above code we create a completion object and pass in the model we want to use and the prompt. Then we print the generated text.
+In the above code, we create a completion object and pass in the model we want to use and the prompt. Then we print the generated text.
 
 ### Chat completions
 
-So far, you've seen how we've been using `Completion` to generate text. But there's another class called `ChatCompletion` that is more suited for chat bots. Here's an example of using it:
+So far, you've seen how we've been using `Completion` to generate text. But there's another class called `ChatCompletion` that is more suited for chatbots. Here's an example of using it:
 
 ```python
 import openai
@@ -156,11 +156,11 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-More on this functionality in a coming chapter.
+More on this functionality in an upcoming chapter.
 
 ## Exercise - your first text generation app
 
-Now that we learned how to setup and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
+Now that we learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
 
 1. Create a virtual environment and install openai:
 
@@ -174,9 +174,9 @@ Now that we learned how to setup and configure openai, it's time to build your f
     > If you're using Windows type `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
     > [!NOTE]
-    > locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+    > Locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
 
-1. Create a *app.py* file and give it the following code:
+1. Create an *app.py* file and give it the following code:
 
     ```python
     import openai
@@ -213,11 +213,11 @@ Now that we learned how to setup and configure openai, it's time to build your f
 
 Now you've seen how to generate text using a prompt. You even have a program up and running that you can modify and change to generate different types of text.
 
-Prompts can be used for all sorts of tasks like for example:
+Prompts can be used for all sorts of tasks. For example:
 
 - **Generate a type of text**. For example, you can generate a poem, questions for a quiz etc.
-- **Lookup information**. You can use prompts to lookup information like for example what does CORS mean in web development?
-- **Generate code**. You can use prompts to generate code, like for example developing a regular expression used to validate emails or why not generate an entire program, like a web app?  
+- **Lookup information**. You can use prompts to look for information like the following example 'What does CORS mean in web development?'.
+- **Generate code**. You can use prompts to generate code, for example developing a regular expression used to validate emails or why not generate an entire program, like a web app?
 
 ## A more practical use case: a recipe generator
 
@@ -291,7 +291,7 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-This outcome is great, I know what to cook. At this point, what could be a useful improvements are:
+This outcome is great, I know what to cook. At this point, what could be useful improvements are:
 
 - Filtering out ingredients I don't like or am allergic to.
 - Produce a shopping list, in case I don't have all the ingredients at home.
@@ -392,9 +392,9 @@ Now that we have played out a scenario, let's write code to match the demonstrat
     -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
     ```
 
-    > NOTE, your LLM is non deterministic, so you might get different results for every time you run the program.
+    > NOTE, your LLM is nondeterministic, so you might get different results every time you run the program.
 
-    Great, let's see how we can improve things. To  improve things, we want to make sure the code is flexible, so ingredients and number of recipes can be improved and changed.
+    Great, let's see how we can improve things. To improve things, we want to make sure the code is flexible, so ingredients and number of recipes can be improved and changed.
 
 1. Let's change the code in the following way:
 
@@ -407,7 +407,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
     prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
     ```
 
-    Taking the code for a test run, could look like:
+    Taking the code for a test run, could look like this:
 
     ```output
     No of recipes (for example, 5: 3
@@ -432,7 +432,7 @@ To further improve it, we want to add the following:
     prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
     ```
 
-    Above, we add `{filter}` to the end the prompt and we also capture the filter value from the user.
+    Above, we add `{filter}` to the end of the prompt and we also capture the filter value from the user.
 
     An example input of running the program can now look like so:
 
@@ -501,13 +501,13 @@ To further improve it, we want to add the following:
     5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
     ```
 
-    As you can see, any recipes with milk in it has been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in it as well, so there's a need to be clear.
+    As you can see, any recipes with milk in it has been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in them as well, so there's a need to be clear.
 
     ```python
 
 - **Produce a shopping list**. We want to produce a shopping list, considering what we already have at home.
 
-    For this functionality, we could either try to solve everything one prompt or we could split it up into two prompts. Let's try the latter approach. Here we're suggesting to add an additional prompt, but for that to work, we need to add the result of the former prompt as context to the latter prompt.
+    For this functionality, we could either try to solve everything in one prompt or we could split it up into two prompts. Let's try the latter approach. Here we're suggesting adding an additional prompt, but for that to work, we need to add the result of the former prompt as context to the latter prompt.
 
     Locate the part in the code that prints out the result from the first prompt and add the following code below:
 
@@ -554,9 +554,9 @@ To further improve it, we want to add the following:
 
 ## Improve your setup
 
-What we have so far is code that works, but there are some tweaks we should be doing to improve things further. Some things we should do is:
+What we have so far is code that works, but there are some tweaks we should be doing to improve things further. Some things we should do are:
 
-- **Separate secrets from code**, like the API key. Secrets does not belong in code and should be stored in a secure location. To separate secrets from code, we can use environment variables and library like `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **Separate secrets from code**, like the API key. Secrets do not belong in code and should be stored in a secure location. To separate secrets from code, we can use environment variables and libraries like `python-dotenv` to load them from a file. Here's how that would look like in code:
 
     1. Create a `.env` file with the following content:
 
@@ -572,7 +572,7 @@ What we have so far is code that works, but there are some tweaks we should be d
         OPENAI_API_BASE=<replace>
         ```
 
-        In code, you would the load the environment variables like so:
+        In code, you would load the environment variables like so:
 
         ```python
         from dotenv import load_dotenv
@@ -584,7 +584,7 @@ What we have so far is code that works, but there are some tweaks we should be d
 
 - **A word on token length**. We should consider how many tokens we need to generate the text we want. Tokens cost money, so where possible, we should try to be economical with the number of tokens we use. For example, can we phrase the prompt so that we can use less tokens?
 
-   To change tokens used, you can use the `max_tokens` parameter. For example, if you want to use 100 tokens, you would do:
+   To change the tokens used, you can use the `max_tokens` parameter. For example, if you want to use 100 tokens, you would do:
 
     ```python
     completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
@@ -604,7 +604,7 @@ What we have so far is code that works, but there are some tweaks we should be d
 
 For this assignment, you can choose what to build.
 
-Here's some suggestions:
+Here are some suggestions:
 
 - Tweak the recipe generator app to improve it further. Play around with temperature values, and the prompts to see what you can come up with.
 - Build a "study buddy". This app should be able to answer questions about a topic for example Python, you could have prompts like "What is a certain topic in Python?", or you could have a prompt that says, show me code for a certain topic etc.
@@ -629,7 +629,7 @@ Below is a starter prompt, see how you can use it and tweak it to your liking.
 
 ### History bot
 
-Here's some prompts you could be using:
+Here are some prompts you could be using:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -650,10 +650,10 @@ A: 1
 
 ## 🚀 Challenge
 
-When working on the assignment, try vary the temperature, try set it to 0, 0.5 and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
+When working on the assignment, try to vary the temperature, try set it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 7 where we will look at how to [build chat applications](/7-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 7 where we will look at how to [build chat applications](/7-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!

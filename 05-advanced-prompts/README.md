@@ -6,9 +6,9 @@ Let's recap some learnings from the previous chapter:
 
 > Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context.
 
-There's also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
+There are also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
 
-At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques than can be applied to any LLM.  
+At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques that can be applied to any LLM.  
 
 ## Introduction
 
@@ -21,7 +21,7 @@ In this chapter, we will cover the following topics:
 
 After completing this lesson, you'll be able to:
 
-- Apply prompt engineering techniques that improves the outcome of your prompts.
+- Apply prompt engineering techniques that improve the outcome of your prompts.
 - Perform prompting that is either varied or deterministic.
 
 ## Prompt engineering
@@ -45,7 +45,7 @@ Let's break this down.
 
 You may or may not get the desired outcome. You will get your questions generated, but geography is a big topic and you may not get what you want to due the following reasons:
 
-- **Big topic**, you don' know if it's going to be about countries, capitals, rivers and so on.
+- **Big topic**, you don't know if it's going to be about countries, capitals, rivers and so on.
 - **Format**, what if you wanted the questions to be formatted in a certain way?
 
 As you can see, there's a lot to consider when creating prompts.
@@ -61,7 +61,7 @@ There are some basic techniques that we can use to prompt an LLM. Let's explore 
 - **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
 - **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
 - **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
-- **Least to most**, like chain-of-though, this technique is about breaking down a problem in series of steps and then ask these steps to be performed in order.
+- **Least to most**, like chain-of-though, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
 - **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
 - **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
 
@@ -98,7 +98,7 @@ Here's how:
   Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?"
   Answer: 1
 
-Note how we write a substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
+Note how we write substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
 
 As you can see chain-of-thought is a very powerful technique.
 
@@ -147,7 +147,7 @@ Running this prompt through an LLM will produce a response like this:
     Total cost: $1,200 USD
     ```
 
-As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After som _trial and error_, we arrive at the following prompt:
+As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After some _trial and error_, we arrive at the following prompt:
 
     ```text
     Insurance company: ACME Insurance
@@ -174,7 +174,7 @@ The point of this example was to show that even though we're using a basic techn
 
 ### Least-to-most
 
-The idea with Least-to-most prompting is to break down a bigger problem into sub problems. That way, you help guide the LLM on how to "conquer" the bigger problem. A good example could be for data science where you can ask the LLM to divide up a problem like so:
+The idea with Least-to-most prompting is to break down a bigger problem into subproblems. That way, you help guide the LLM on how to "conquer" the bigger problem. A good example could be for data science where you can ask the LLM to divide up a problem like so:
 
 > Prompt: How to perform data science in 5 steps?
 
@@ -263,7 +263,7 @@ Repeat 2 and 3 until you've gone through all the parts and you're satisfied with
 
 Here's an example prompt:
 
-> prompt: How can I create a crisis plan to mitigate for a pandemic in 5 steps?
+> prompt: How can I create a crisis plan to mitigate a pandemic in 5 steps?
 LLM answer:
 
     ```text
@@ -302,11 +302,11 @@ At this point, we want to make sure the LLM is correct so we ask it to explain t
     The two biggest risks are loss of life and loss of business.
     ```
 
-At this point, the LLM is consistent and mentions "life" and "business" as top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
+At this point, the LLM is consistent and mentions "life" and "business" as the top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
 
 ## Vary your output
 
-LLMs are non deterministic by nature, meaning that you will get different results each time you run the same prompt. Try the following prompt for example:
+LLMs are nondeterministic by nature, meaning that you will get different results each time you run the same prompt. Try the following prompt for example:
 
 > "Generate code for a Python Web API"
 
@@ -558,11 +558,11 @@ and the second attempt at 0.9 as temperature value:
 
 As you can see, the results couldn't be more varied.
 
-> note, there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.   
+> Note, that there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.   
 
 ## Good practices
 
-There are many practices you can apply to try getting what you want. You will find your own style as you use prompting more and more. 
+There are many practices you can apply to try to get what you want. You will find your own style as you use prompting more and more. 
 
 Additionally to the techniques we've covered, there are some good practices to consider when prompting an LLM.
 
@@ -615,10 +615,10 @@ A: 1, because chain-of-thought is about showing the LLM how to solve a problem b
 
 ## 🚀 Challenge
 
-You just used self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
+You just used the self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
 
 ## Great Work! Continue Your Learning
 
 Want to learn more about creating advanced prompts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/6-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
