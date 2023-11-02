@@ -38,6 +38,7 @@ There are many things you could help with for example:
 Hope to hear from you:
 - Raise an issue, <https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst>
 - Create a pull request, <https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst>
+```
 
 ## 🌱 Getting Started
 
