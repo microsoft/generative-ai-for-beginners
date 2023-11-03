@@ -9,7 +9,7 @@ Now that we've seen how we can build text-generation apps, let's look into chat 
 
 Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. 
 
-Some questions we need answered are:
+Some questions we need to be answered are:
 
 - **Building the app**.  How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  
 - **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
@@ -41,14 +41,14 @@ By the end of this section, you'll be equipped with the expertise needed to effi
 
 ### Chatbot or Chat application?
 
-Before we dive into building chat applications, let's compare 'chat bots' against 'AI-powered chat applications,' which serve distinct roles and functionalities. A chatbot's main purpose is to automate specific conversational tasks, such as answering frequently asked questions or tracking a package. It's typically governed by rule-based logic or complex AI algorithms. In contrast, an AI-powered chat application is a far more expansive environment designed to facilitate various forms of digital communication, such as text, voice, and video chats among human users. Its defining feature is the integration of generative AI model that simulate nuanced, human-like conversations, generating responses based on a wide variety of input and contextual cues. A generative AI powered chat application can engage in open-domain discussions, adapt to evolving conversational contexts, and even produce creative or complex dialogue.
+Before we dive into building chat applications, let's compare 'chatbots' against 'AI-powered chat applications,' which serve distinct roles and functionalities. A chatbot's main purpose is to automate specific conversational tasks, such as answering frequently asked questions or tracking a package. It's typically governed by rule-based logic or complex AI algorithms. In contrast, an AI-powered chat application is a far more expansive environment designed to facilitate various forms of digital communication, such as text, voice, and video chats among human users. Its defining feature is the integration of a generative AI model that simulates nuanced, human-like conversations, generating responses based on a wide variety of input and contextual cues. A generative AI powered chat application can engage in open-domain discussions, adapt to evolving conversational contexts, and even produce creative or complex dialogue.
 
 The table below outlines the key differences and similarities to help us understand their unique roles in digital communication.
 
 | Chatbot                               | Generative AI-Powered Chat Application |
 | ------------------------------------- | -------------------------------------- |
 | Task-Focused and rule based           | Context-aware                          |
-| Often integrated into larger systems  | May host one or multiple chat bots      |
+| Often integrated into larger systems  | May host one or multiple chatbots      |
 | Limited to programmed functions       | Incorporates generative AI models      |
 | Specialized & structured interactions | Capable of open-domain discussions     |
 
@@ -59,7 +59,7 @@ When building a chat application, a great first step is to assess what is alread
 - **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
 - **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built in solutions for these concerns.
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
-- **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive dataset provides your application with natural language capabilities.
+- **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
 
 Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the [notebook](notebook.ipynb) for this lesson.
 
@@ -69,7 +69,7 @@ import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for a instructional lesson on chat applications for generative AI."}])
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
 The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive the following error if you didn't set the key.
@@ -80,11 +80,11 @@ AuthenticationError: No API key provided. You can set your API key in code using
 
 ## User Experience (UX)
 
-General UX principles apply to chat applications, but here's some additional considerations that become particularly important due to the machine learning components involved.
+General UX principles apply to chat applications, but here are some additional considerations that become particularly important due to the machine learning components involved.
 
 - **Mechanism for addressing ambiguity**: Generative AI models occasionally generate ambiguous answers. A feature that allows users to ask for clarification can be helpful should they come across this problem.
 - **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.  
-- **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit in finding specific answers, creating a more efficient and satisfying interaction.
+- **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit of finding specific answers, creating a more efficient and satisfying interaction.
 
 One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
 
@@ -117,7 +117,7 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
 
 - **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand it's concepts and scenarios.
-- **Apply fine-tuning**. Fine-tuning is the process to further train your model with specific data.
+- **Apply fine-tuning**. Fine-tuning is the process of further training your model with specific data.
 
 ## Customization: Using a DSL
 
@@ -133,7 +133,7 @@ For instance, medical queries are complex and require a lot of context. When a m
 
 Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings.
 
-A general-purpose model might be adequate for answering basic medical questions or providing general advice, it may struggle with the following:
+A general-purpose model might be adequate for answering basic medical questions or providing general advice, but it may struggle with the following:
 
 - **Highly specific or complex cases**. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?"
 - **Lacking recent advancements**. A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology.
@@ -163,7 +163,7 @@ To maintain the high-quality performance an application, it's essential to keep 
 
 ### Implementing Responsible AI Practices in Chat Applications
 
-Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider any why they should take them seriously.
+Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider and why they should take them seriously.
 
 | Principles             | Microsoft's Definition                                | Considerations for Chat Developer                                      | Why It's Important                                                                     |
 | ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
