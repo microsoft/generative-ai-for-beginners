@@ -4,14 +4,14 @@
 
 > **Video Coming Soon**
 
-There's more to LLMs than text generation. It's also possible to generate images from text descriptions. Having images as a modality can be highly useful in a number of areas from MedTech, architecture, tourism, game development and more. In this chapter we will look into the two most popular image generation models, DALL-E and Midjourney.
+There's more to LLMs than text generation. It's also possible to generate images from text descriptions. Having images as a modality can be highly useful in a number of areas from MedTech, architecture, tourism, game development and more. In this chapter, we will look into the two most popular image generation models, DALL-E and Midjourney.
 
 ## Introduction
 
 In this lesson, we will cover:
 
 - Image generation and why it's useful.
-- DALL-E and Midjourney,what they are and how they work.
+- DALL-E and Midjourney, what they are, and how they work.
 - How you would build an image generation app.
 
 ## Learning Goals
@@ -32,9 +32,9 @@ Image generation applications are a great way to explore the capabilities of Gen
 
 ## Scenario: Edu4All
 
-As part of this lesson, we will continue to work with our startup, Edu4All, in this lesson. The students will create images for their assessments, exactly what images is up to the students, but it could be illustrations for their own fairytale or create a new character for their story or help them to visualize their ideas and concepts.
+As part of this lesson, we will continue to work with our startup, Edu4All, in this lesson. The students will create images for their assessments, exactly what images is up to the students, but they could be illustrations for their own fairytale or create a new character for their story or help them visualize their ideas and concepts.
 
-Here's what Edu4All's students could generate for example if they're working on class on monuments:
+Here's what Edu4All's students could generate for example if they're working in class on monuments:
 
 ![Edu4All startup, class on monuments, Eiffel Tower](startup.png)
 
@@ -44,7 +44,7 @@ using a prompt like
 
 ## What is DALL-E and Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2) and [Midjourney](https://www.midjourney.com/) are two of the most popular image generation models, they allow you using prompts to generate images.
+[DALL-E](https://openai.com/dall-e-2) and [Midjourney](https://www.midjourney.com/) are two of the most popular image generation models, they allow you to use prompts to generate images.
 
 ### DALL-E
 
@@ -65,9 +65,9 @@ Midjourney works in a similar way to DALL-E, it generates images from text promp
 
 ## How does DALL-E and Midjourney Work
 
-First, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf). DALL-E is a Generative AI model based on the transformer architecture with an *auto regressive transformer*.  
+First, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf). DALL-E is a Generative AI model based on the transformer architecture with an *autoregressive transformer*.  
 
-An *autogressive transformer* defines how a model generates images from text descriptions, it generates one pixel at a time, and then uses the generated pixels to generate the next pixel. Passing through multiple layers in a neural network, until the image is complete.  
+An *autoregressive transformer* defines how a model generates images from text descriptions, it generates one pixel at a time, and then uses the generated pixels to generate the next pixel. Passing through multiple layers in a neural network, until the image is complete.  
 
 With this process, DALL-E, controls attributes, objects, characteristics, and more in the image it generates. However, DALL-E 2 and 3 have more control over the generated image,  
 
@@ -236,17 +236,17 @@ generation_response = openai.Image.create(
 - **prompt**, is the text prompt that is used to generate the image. In this case, we're using the prompt "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils".
 - **size**, is the size of the image that is generated. In this case, we're generating an image that is 1024x1024 pixels.
 - **n**, is the number of images that are generated. In this case, we're generating two images.
-- **temperature**, is a parameter that controls the randomness of the output of a Generative AI model. The temperature is value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
+- **temperature**, is a parameter that controls the randomness of the output of a Generative AI model. The temperature is a value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
 
-There's more things you can do with images that we will cover in the next section.
+There are more things you can do with images that we will cover in the next section.
 
 ## Additional capabilities of image generation
 
-You've seen so far how we were able to generate an image using a few lines on Python. However, there's more things you can do with images.
+You've seen so far how we were able to generate an image using a few lines in Python. However, there are more things you can do with images.
 
 You can also do the following:
 
-- **Perform edits**. By providing an existing image a mask and prompt, you can alter an image. For example, you can add something to a portion of an image. Imagine our bunny image, you can add a hat to the bunny. How you would do that is by providing the image, a mask (identifying the part of the area for the change) and a text prompt to say what should be done.
+- **Perform edits**. By providing an existing image a mask and a prompt, you can alter an image. For example, you can add something to a portion of an image. Imagine our bunny image, you can add a hat to the bunny. How you would do that is by providing the image, a mask (identifying the part of the area for the change) and a text prompt to say what should be done.
 
     ```python
     response = openai.Image.create_edit(
@@ -276,7 +276,7 @@ You can also do the following:
 
 ## Temperature
 
-Temperature is a parameter that controls the randomness of the output of a Generative AI model. The temperature is value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
+Temperature is a parameter that controls the randomness of the output of a Generative AI model. The temperature is a value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
 
 Let's look at an example of how temperature works, by running this prompt twice:
 
@@ -300,7 +300,7 @@ As you can see, the images are similar, but not the same. Let's try changing the
 
 ### Changing the temperature
 
-So let's try to make the response more deterministic. We could observe from the two images we generated that in the first image, there's a bunny and in the second image, there's horse, so the images varies greatly.
+So let's try to make the response more deterministic. We could observe from the two images we generated that in the first image, there's a bunny and in the second image, there's a horse, so the images vary greatly.
 
 Let's therefore change our code and set the temperature to 0, like so:
 
@@ -378,11 +378,11 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-From the above prompt, you can see how all images being created considers the metaprompt.
+From the above prompt, you can see how all images being created consider the metaprompt.
 
 ## Assignment - let's enable students
 
-We introduced Edu4All in the beginning of this lesson. Now it's time to enable the students to generate images for their assessments.
+We introduced Edu4All at the beginning of this lesson. Now it's time to enable the students to generate images for their assessments.
 
 The students will create images for their assessments containing monuments, exactly what monuments is up to the students. The students are asked to use their creativity in this task to place these monuments in different contexts.
 
@@ -465,4 +465,4 @@ except openai.error.InvalidRequestError as err:
 
 Want to learn more about how to build Image Generation apps? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 10 where we will look at how to [build AI applications with low-code](/10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Head over to Lesson 10 where we will look at how to [build AI applications with low-code](/10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
