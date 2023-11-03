@@ -55,7 +55,7 @@ Here are ways you can contribute to this course:
 
 - a short video introduction to the topic
 - written lesson located in the README 
-- for project-based lessons, a Juypter Notebook with code examples 
+- for project-based lessons, a Jupyter Notebook with code examples 
 - a challenge or assignment to apply your learning 
 - links to extra resources to continue your learning
 
