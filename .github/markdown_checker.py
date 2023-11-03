@@ -73,15 +73,15 @@ def check_broken_links(file_path : str) -> str:
     broken_path = check_paths_exists(file_path, paths)
     country_locale = check_url_locale(urls)
     tracking_id = check_url_tracking(urls)
-    
+
     if len(broken_path)> 0:
         formatted_output += f'has the following broken relative paths {broken_path}\n'
     if len(country_locale)> 0:
         formatted_output += f'has the following links with country locale {country_locale}\n'
     if len(tracking_id)> 0:
         formatted_output += f'has the following links with no tracking id {tracking_id}\n'
-    if len(broken_path) < 0 and len(country_locale) < 0 and len(tracking_id) < 0:
-        formatted_output += "has no problems"
+    if len(broken_path) == 0 and len(country_locale) == 0 and len(tracking_id) == 0:
+        formatted_output += "has no problems\n"
 
     return formatted_output
 
