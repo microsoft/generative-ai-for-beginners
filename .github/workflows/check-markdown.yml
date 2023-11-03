@@ -25,8 +25,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
       - name: Run Check broken URLs
-        id : links-check
-        run: echo "broken=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')" >> $GITHUB_OUTPUT
+        id: links-check
+        run: |
+          BROKEN=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')"
+          echo "BROKEN<<EOF" >> $GITHUB_ENV
+          echo "$BROKEN" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
       - name: Leave a comment
         uses: actions/github-script@v6
         with:
@@ -37,5 +41,5 @@ jobs:
               repo: context.repo.repo,
               body: `We have automatically detected the following issues in your lessons.
                      Please check the following file paths and associated url issues with them.
-                     ${{ steps.links-check.outputs.broken }}`
+                     ${{ env.BROKEN }}`
             })
