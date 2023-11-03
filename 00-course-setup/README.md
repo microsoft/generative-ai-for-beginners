@@ -26,16 +26,46 @@ Keeping your API keys safe and secure is important when building any type of app
 
 ## How to Run locally on your computer
 
-To run the code locally on your computer, you would need to have some version of Python installed. I personally recommend installing **[miniconda](https://conda.io/en/latest/miniconda.html)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**.
+To run the code locally on your computer, you would need to have some version of [Python installed](https://www.python.org/downloads/).
 
-After you install miniconda, you need to clone the repository and create a virtual environment to be used for this course:
+To then use the repository, you need to clone it:
 
-```bash
+```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
+```
+
+Now you have everything checked out and can start learning and work with the code.
+
+### Installing miniconda (optional step)
+
+There are advantages to installing  **[miniconda](https://conda.io/en/latest/miniconda.html)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**. `conda` makes it easy to install and switch between different Python versions and packages, and also to install packages that are not available via `pip`.
+
+After you install miniconda, you need to clone the repository (if you haven't already done so) and create a virtual environment to be used for this course:
+
+Before running the below step, ensure that you first have an *environment.yml* file. The *environment.yml* file is used to create a conda environment with the necessary dependencies and can look like so:
+
+```yml
+name: <environment-name>
+channels:  
+ - defaults
+dependencies:  
+- python=<python-version>  
+- openai  
+- python-dotenv
+```
+
+You can replace `<environment-name>` with the name of your conda environment, and `<python-version>` with the version of Python you want to use. Place your created *environment.yml* file in the *.devcontainer* folder of your repo.
+
+Now that you've hopefully created a *environment.yml* file, you can create a conda environment with the following command:
+
+
+```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
+
+Refer to this link on creating a [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) if you run into trouble.
 
 ### Using Visual Studio Code with Python Extension
 
@@ -50,13 +80,17 @@ Probably the best way to use the curriculum is to open it in [Visual Studio Code
 You can also use Jupyter environment right from the browser on your own computer. Actually, both classical Jupyter and Jupyer Hub provide quite convenient development environment with auto-completion, code highlighting, etc.
 
 To start Jupyter locally, go to the directory of the course, and execute:
+
 ```bash
 jupyter notebook
 ```
+
 or
+
 ```bash
 jupyterhub
 ```
+
 You then can navigate to any of the `.ipynb` files, open them and start working.
 
 ### Running in container
