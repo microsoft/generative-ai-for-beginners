@@ -1,0 +1,41 @@
+name: General Formatting
+
+on:
+  # Trigger the workflow on push or pull request
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - '**.md'
+      - '**.ipynb'
+
+jobs:
+  check-broken-links-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Run Check broken URLs
+        id : links-check
+        run: echo "broken=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')" >> $GITHUB_OUTPUT
+      - name: Leave a comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `We have automatically detected the following issues in your lessons.
+                     Please check the following file paths and associated url issues with them.
+                     ${{ steps.links-check.outputs.broken }}`
+            })
