@@ -78,7 +78,6 @@ Here are ways you can contribute to this course:
 | xx | [Continue Your Learning](./13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
 
 
-
  
   
 ## 🎒  Other Courses 
