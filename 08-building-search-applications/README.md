@@ -4,7 +4,7 @@
 
 > **Video Coming Soon**
 
-There's more to LLMs than chat bots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
+There's more to LLMs than chatbots and text generation. It's also possible to build search applications using Embeddings. Embeddings are numerical representations of data also known as vectors, and can be used for semantic search for data.
 
 In this lesson, you are going to build a search application for our education startup. Our startup is a non-profit organization that provides free education to students in developing countries. Our startup has a large number of YouTube videos that students can use to learn about AI. Our startup wants to build a search application that allows students to search for a YouTube video by typing a question.
 
@@ -160,4 +160,4 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to the Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
