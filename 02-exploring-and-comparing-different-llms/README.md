@@ -32,7 +32,7 @@ There are many different types of LLM models, your choice of model depends on wh
 
 Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. As an example, you can use everything from a cheaper, but capable model like curie to the more costly but performant davinci type model. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper).
+- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper).
 
 - **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e) and also in Chapter 9 of this curriculum.
 
