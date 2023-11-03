@@ -1,4 +1,4 @@
-# 创建高级的提示工程技巧
+# 第五章：创建高级的提示工程技巧
 
 [![Creating Advanced Prompts](../../images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
 
