@@ -50,7 +50,7 @@
 | 00 | [课程介绍](../../00-course-setup/translations/cn/README.md) | 学习环境配置和课程结构 | 在学习本课程的同时帮助您取得成功 | 
 | 01 | [生成式人工智能和 LLM 介绍](../../01-introduction-to-genai//translations/cn/README.md) | **知识点**: 生成式人工智能以及我们如何适应当前的技术格局 | 了解什么是生成式人工智能 以及 LLMs 的工作原理。                 |
 | 02 | [探索和比较不同的 LLMs](../../02-exploring-and-comparing-different-llms/translations/cn/README.md) | **知识点**: 测试、迭代和比较不同的 LLMs 模型 | 为您的应用场景选择正确的模型 |
-| 03 | [负责任地使用生成式人工智能](../../03-using-generative-ai-responsibly/translations/cn/README.MD)| **知识点:** 了解基础模型的局限性和人工智能背后的风险 | 了解如何负责任地构建生成式人工智能应用程序
+| 03 | [负责任地使用生成式人工智能](../../03-using-generative-ai-responsibly/translations/cn/README.md)| **知识点:** 了解基础模型的局限性和人工智能背后的风险 | 了解如何负责任地构建生成式人工智能应用程序
 | 04 | [提示工程基础](../../04-prompt-engineering-fundamentals/translations/cn/README.md) | **代码/知识点:** 提示工程最佳实践| 了解提示结构和用法|
 | 05 | [创建高级的提示工程技巧](../../05-advanced-prompts/translations/cn/README.md) | **代码/知识点:** 通过在提示中应用不同的技术来扩展您的提示工程知识 | 应用提示工程技术来改善提示结果。|
 | 06 | 构建文本生成应用 | **代码:** 使用 Azure OpenAI 构建文本生成应用程序 | 了解如何有效地使用令牌和温度来改变模型的输出 | |
