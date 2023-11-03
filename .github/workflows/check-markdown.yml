@@ -27,7 +27,7 @@ jobs:
       - name: Run Check broken URLs
         id: links-check
         run: |
-          BROKEN=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')"
+          BROKEN=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')
           echo "BROKEN<<EOF" >> $GITHUB_ENV
           echo "$BROKEN" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
