@@ -34,7 +34,7 @@ Our startup team is aware we’ll not be able to achieve this goal without lever
 
 Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
-![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png)
+![[Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png)](https://github.com/rizwanshoukat3324/generative-ai-for-beginners/blob/main/01-introduction-to-genai/images/Five%20Student%20Lookig%20at%20Monitor.png?raw=true)
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
@@ -90,6 +90,7 @@ The input of a large language model is known as prompt, while the output is know
 * An **instruction** specifying the type of output we expect from the model. This instruction sometimes might embed some examples or some additional data.
 
     1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
+       
     ![Example of summarization](./images/summarization-example.png)
 
     2. Creative ideation and design of an article, an essay, an assignment or more.
