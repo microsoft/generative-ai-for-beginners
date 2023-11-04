@@ -160,4 +160,4 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 9 where we will look at how to [build image generation applications](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
