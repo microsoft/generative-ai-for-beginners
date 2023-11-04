@@ -1,4 +1,4 @@
-# 第一章 : 生成式人工智能和 LLM 介绍
+# 第一章 : 生成式人工智能和 LLMs 介绍
 
 [![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
 
