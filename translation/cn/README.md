@@ -47,19 +47,19 @@
 
 |       |              课程链接             |                       相关教学内容                     |                     学习目标                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
-| 00 | [课程介绍](../../00-course-setup/translations/cn/README.md) | 学习环境配置和课程结构 | 在学习本课程的同时帮助您取得成功 | 
-| 01 | [生成式人工智能和 LLM 介绍](../../01-introduction-to-genai//translations/cn/README.md) | **知识点**: 生成式人工智能以及我们如何适应当前的技术格局 | 了解什么是生成式人工智能 以及 LLMs 的工作原理。                 |
+| 00 | [课程介绍和学习环境设置](../../00-course-setup/translations/cn/README.md) | 学习环境配置和课程结构 | 在学习本课程的同时帮助您取得成功 | 
+| 01 | [生成式人工智能和 LLMs 介绍](../../01-introduction-to-genai//translations/cn/README.md) | **知识点**: 生成式人工智能以及我们如何适应当前的技术格局 | 了解什么是生成式人工智能 以及 LLMs 的工作原理。                 |
 | 02 | [探索和比较不同的 LLMs](../../02-exploring-and-comparing-different-llms/translations/cn/README.md) | **知识点**: 测试、迭代和比较不同的 LLMs 模型 | 为您的应用场景选择正确的模型 |
-| 03 | [负责任地使用生成式人工智能](../../03-using-generative-ai-responsibly/translations/cn/README.MD)| **知识点:** 了解基础模型的局限性和人工智能背后的风险 | 了解如何负责任地构建生成式人工智能应用程序
+| 03 | [负责任地使用生成式人工智能](../../03-using-generative-ai-responsibly/translations/cn/README.md)| **知识点:** 了解基础模型的局限性和人工智能背后的风险 | 了解如何负责任地构建生成式人工智能应用程序
 | 04 | [提示工程基础](../../04-prompt-engineering-fundamentals/translations/cn/README.md) | **代码/知识点:** 提示工程最佳实践| 了解提示结构和用法|
 | 05 | [创建高级的提示工程技巧](../../05-advanced-prompts/translations/cn/README.md) | **代码/知识点:** 通过在提示中应用不同的技术来扩展您的提示工程知识 | 应用提示工程技术来改善提示结果。|
-| 06 | [构建文本生成应用](../../06-text-generation-apps/translations/cn/README.md) | **代码:** 使用 Azure OpenAI 构建文本生成应用程序 | 了解如何有效地使用令牌和温度来改变模型的输出 | |
-| 07 | 构建聊天应用| **代码**: 有效构建和集成聊天应用程序的技术。 | 确定关键指标和注意事项，以有效监控和维护人工智能聊天应用程序的质量|
-| 08 | 通过向量数据库构建搜索应用 | **代码**: 语义搜索与关键字搜索。 什么是文本嵌入以及它们如何应用于搜索 | 创建一个使用嵌入来搜索数据的应用程序。 |
-| 09 | 构建图像生成应用 | **代码:** 图像生成及其在构建应用程序中的作用| 构建图像生成应用程序 |
-| 10 | 构建低代码的人工智能应用 | **低代码:** Power Platform 中的生成式 AI 简介 | 使用低代码为我们的教育初创公司构建学生作业跟踪应用程序 | |
-| 11 | 使用 Function Calling 集成外部应用  | **代码:** 什么是 Function Calling 及其在应用程序中的使用示例  | 设置 Function Calling 以从外部 API 检索数据 | |
-| 12 | 为人工智能应用程序设计用户体验 | **知识点:** 设计人工智能应用程序以实现信任和透明度 | 开发生成式人工智能应用时用户体验设计的相关原则 | |
+| 06 | [创建文本生成应用](../../06-text-generation-apps/translations/cn/README.md) | **代码:** 使用 Azure OpenAI 构建文本生成应用程序 | 了解如何有效地使用令牌和温度来改变模型的输出 | |
+| 07 | [创建聊天应用](../../07-building-chat-applications/translations/cn/README.md)| **代码**: 有效构建和集成聊天应用程序的技术。 | 确定关键指标和注意事项，以有效监控和维护人工智能聊天应用程序的质量|
+| 08 | [创建搜索应用](../../08-building-search-applications/translations/cn/README.md) | **代码**: 语义搜索与关键字搜索。 什么是文本嵌入以及它们如何应用于搜索 | 创建一个使用嵌入来搜索数据的应用程序。 |
+| 09 | [创建图像生成应用](../../09-building-image-applications/translations/cn/README.md) | **代码:** 图像生成及其在构建应用程序中的作用| 构建图像生成应用程序 |
+| 10 | [创建低代码的人工智能应用](../../10-building-low-code-ai-applications/translations/cn/README.md) | **低代码:** Power Platform 中的生成式 AI 简介 | 使用低代码为我们的教育初创公司构建学生作业跟踪应用程序 | |
+| 11 | [为生成式 AI 添加 function calling](../../11-integrating-with-function-calling/transaltions/cn/README.md)  | **代码:** 什么是 Function Calling 及其在应用程序中的使用示例  | 设置 Function Calling 以从外部 API 检索数据 | |
+| 12 | [为人工智能应用程序添加用户体验](../../12-designing-ux-for-ai-applications/translations/cn/README.md) | **知识点:** 设计人工智能应用程序以实现信任和透明度 | 开发生成式人工智能应用时用户体验设计的相关原则 | |
 | xx | [拓展学习](../../13-continued-learning/translations/cn/README.md)  | 包含每章内容的的拓展链接！ | 掌握生成式人工智能相关技能 | |
  
   
