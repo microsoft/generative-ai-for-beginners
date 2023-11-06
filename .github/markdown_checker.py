@@ -87,30 +87,30 @@ def check_broken_links(file_path : str, link_type : str , check_type: str) -> st
 
     # check if file has links
     if len(all_links) > 0:
-        formatted_output = f"> FILE '{file_path}'\n"
+        formatted_output = f"    FILE '{file_path}'\n"
         if link_type == "path":
             paths = get_paths_from_links(all_links)
             if check_type == "broken":
                 broken_path = check_paths_exists(file_path, paths)
                 if len (broken_path) > 0:
-                    formatted_output += f'> has the following broken relative paths {broken_path}\n'
+                    formatted_output += f'    has the following broken relative paths {broken_path}\n'
                     return formatted_output
             elif check_type == "tracking":
                 tracking_id_paths = check_url_tracking(paths)
                 if len(tracking_id_paths) > 0:
-                    formatted_output += f'> has the following paths with no tracking id {tracking_id_paths}\n'
+                    formatted_output += f'    has the following paths with no tracking id {tracking_id_paths}\n'
                     return formatted_output
         elif link_type == "url":
             urls = get_urls_from_links(all_links)
             if check_type == "tracking":
                 tracking_id_urls = check_url_tracking(urls)
                 if len(tracking_id_urls) > 0:
-                    formatted_output += f'> has the following links with no tracking id {tracking_id_urls}\n'
+                    formatted_output += f'    has the following links with no tracking id {tracking_id_urls}\n'
                     return formatted_output
             elif check_type == "locale":
                 country_locale_urls = check_url_locale(urls)
                 if len(country_locale_urls) > 0:
-                    formatted_output += f'> has the following links with country locale {country_locale_urls}\n'
+                    formatted_output += f'    has the following links with country locale {country_locale_urls}\n'
                     return formatted_output
 
 def get_links_from_file(file_path: str) -> list:
