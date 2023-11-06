@@ -42,8 +42,8 @@ jobs:
               body: `# Check Broken Paths
                      We have automatically detected the following broken relative paths in your lessons.
                      Please check the file paths and associated broken paths inside them.
-                     ```
-                     ${{ env.BROKEN_PATHS }}
-                     ```
+                     >
+                     > ${{ env.BROKEN_PATHS }}
+                     >
                      `
             })
