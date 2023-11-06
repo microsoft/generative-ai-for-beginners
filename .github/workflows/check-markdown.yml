@@ -45,4 +45,5 @@ jobs:
               # Check Broken Paths
               ${{ env.BROKEN_PATHS }}
               `
-            })
+            })  
+          run: exit 1
