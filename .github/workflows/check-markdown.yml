@@ -39,8 +39,9 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `We have automatically detected the following issues in your lessons.
-                     Please check the following file paths and associated url issues with them.
+              body: `# Check Broken Paths
+                     We have automatically detected the following broken relative paths in your lessons.
+                     Please check the file paths and associated broken paths inside them.
                      ```
                      ${{ env.BROKEN_PATHS }}
                      ```
