@@ -24,14 +24,14 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-      - name: Run Check broken URLs
-        id: links-check
+      - name: Run Check broken paths
         run: |
-          BROKEN=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_links')
-          echo "BROKEN<<EOF" >> $GITHUB_ENV
-          echo "$BROKEN" >> $GITHUB_ENV
+          BROKEN_PATHS=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_paths')
+          echo "BROKEN_PATHS<<EOF" >> $GITHUB_ENV
+          echo "$BROKEN_PATHS" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - name: Leave a comment
+      - name: Leave broken paths comment
+        if: ${{ env:BROKEN_PATHS != '' }}
         uses: actions/github-script@v6
         with:
           script: |
@@ -41,5 +41,8 @@ jobs:
               repo: context.repo.repo,
               body: `We have automatically detected the following issues in your lessons.
                      Please check the following file paths and associated url issues with them.
-                     ${{ env.BROKEN }}`
+                     ```
+                     ${{ env.BROKEN_PATHS }}
+                     ```
+                     `
             })
