@@ -438,7 +438,7 @@ To integrate this into our application, let's take the following steps:
 
 To continue your learning of Azure Open AI Function Calling you can build:
 
-- More parameters of the function that might help learners find more courses. You can find the available API parameters here:
+- More parameters of the function that might help learners find more courses.
 - Create another function call that takes more information from the learner like their native language
 - Create error handling when the function call and/or API call does not return any suitable courses
 
