@@ -31,7 +31,7 @@ jobs:
           echo "$BROKEN_PATHS" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: Leave broken paths comment
-        if: ${{ env:BROKEN_PATHS != '' }}
+        if: ${{ env.BROKEN_PATHS != '' }}
         uses: actions/github-script@v6
         with:
           script: |
