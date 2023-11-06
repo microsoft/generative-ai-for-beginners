@@ -44,7 +44,7 @@
 
 该模型产生如下响应：
 
-![提示说“谁是泰坦尼克号的唯一幸存者”](/03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
+![提示说“谁是泰坦尼克号的唯一幸存者”](../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
 
 > *（来源：[飞翔的野牛](https://flyingbisons.com))*
 

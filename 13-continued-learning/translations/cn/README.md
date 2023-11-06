@@ -4,7 +4,7 @@
 
 我们是否错过了一些很棒的资源？ 通过提交 PR 让我们知道！
 
-## 第一章  - 生成式人工智能和 LLM 介绍
+## 第一章  - 生成式人工智能和 LLMs 介绍
 
 🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/)
 
@@ -60,11 +60,11 @@
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=academic-105485-koreyst)
 
-## 第六章 - 构建文本生成应用
+## 第六章 - 创建文本生成应用
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions&WT.mc_id=academic-105485-koreyst)
 
-## 第七章 - 构建聊天应用
+## 第七章 - 创建聊天应用
 
 🔗 [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?WT.mc_id=academic-105485-koreyst)
 
@@ -74,7 +74,7 @@
 
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
-## 第八章 - 通过向量数据库构建搜索应用
+## 第八章 - 创建搜索应用
 
 🔗 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)
 
@@ -82,7 +82,7 @@
 
 🔗 [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity?wt.mc_id=github_S-1231_webpage_reactor)
 
-## 第九章- 构建图像生成应用
+## 第九章- 创建图像生成应用
 
 🔗  [Generate Images with Azure OpenAI Service](https://learn.microsoft.com/training/modules/generate-images-azure-openai?WT.mc_id=academic-105485-koreyst)
 
@@ -94,7 +94,7 @@
 
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf)
 
-## 第十章 - 构建低代码的人工智能应用
+## 第十章 - 创建低代码的人工智能应用
 
 🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-koreyst)
 
@@ -106,11 +106,11 @@
 
 🔗 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?wt.mc_id=github_S-1231_webpage_reactor&WT.mc_id=academic-109639-somelezediko)
 
-## 第十一章 - 使用 Function Calling 集成外部应用
+## 第十一章 - 为生成式 AI 添加 function calling
 
 🔗 [OpenAI Functions Documentation](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)
 
-## 第十二章 - 为人工智能应用程序设计用户体验
+## 第十二章 - 为人工智能应用程序添加用户体验
 
 🔗 [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/community/content/best-practices-ai-ux?WT.mc_id=academic-105485-koreyst)
 

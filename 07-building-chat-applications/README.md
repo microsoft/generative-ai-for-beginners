@@ -182,4 +182,4 @@ See [assignment](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)
 
 Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 8 to see how you can start  [building search applications](/08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 8 to see how you can start  [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!

@@ -85,7 +85,7 @@ Cosine similarity is a measure of similarity between two vectors, you'll also he
 
 From a mathematic perspective, cosine similarity measures the cosine of the angle between two vectors projected in a multidimensional space. This measurement is beneficial, because if two documents are far apart by Euclidean distance because of size, they could still have a smaller angle between them and therefore higher cosine similarity. For more information about cosine similarity equations, see [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-## Building your first search application application
+## Building your first search application
 
 Next, we're going to learn how to build a search application using Embeddings. The search application will allow students to search for a video by typing a question. The search application will return a list of videos that are relevant to the question. The search application will also return a link to the place in the video where the answer to the question is located.
 
@@ -160,4 +160,4 @@ When you run the notebook, you'll be prompted to enter a query. The input box wi
 
 Want to learn more about how to build search applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 9 where we will look at how to [build image generation applications](/09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 9 where we will look at how to [build image generation applications](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
