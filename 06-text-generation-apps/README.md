@@ -654,6 +654,6 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
