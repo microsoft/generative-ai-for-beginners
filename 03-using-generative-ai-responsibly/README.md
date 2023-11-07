@@ -128,6 +128,6 @@ Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-servic
 
 ## Great Work, Continue Your Learning
 
-Want to learn more about how to build with Generative AI responsibly? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!

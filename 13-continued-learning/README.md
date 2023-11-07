@@ -4,6 +4,10 @@ Here are links to other great resources to continue your learning and building w
 
 Are we missing a great resource? Let us know by submitting a PR!
 
+## 🧠 One Collection to Rule Them ALl  
+
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
+
 ## Lesson 1  - Introduction to Generative AI and LLMs
 
 🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/)
