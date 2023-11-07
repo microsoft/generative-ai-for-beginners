@@ -33,7 +33,7 @@ Head to the [Course Setup Page](./00-course-setup/README.md) to find the setup g
 
 We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
-## Want to learn more? 
+## 🧠 Want to learn more? 
 After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge! 
 
 ##  🚀  Are you a startup or got an idea you want to launch? 
