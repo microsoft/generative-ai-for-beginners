@@ -45,7 +45,7 @@ Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can
 Here are ways you can contribute to this course: 
 - Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
-```
+
 
 ## 📂 Each lesson includes:
 
