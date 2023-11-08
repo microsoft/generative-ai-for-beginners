@@ -35,6 +35,7 @@ jobs:
         if: ${{ env.BROKEN_PATHS != '' }}
         uses: actions/github-script@v6
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -58,6 +59,7 @@ jobs:
         if: ${{ env.PATHS_TRACKING != '' }}
         uses: actions/github-script@v6
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -81,6 +83,7 @@ jobs:
         if: ${{ env.URLS_TRACKING != '' }}
         uses: actions/github-script@v6
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -104,6 +107,7 @@ jobs:
         if: ${{ env.URLS_LOCALE != '' }}
         uses: actions/github-script@v6
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
