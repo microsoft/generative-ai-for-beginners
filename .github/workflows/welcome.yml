@@ -1,4 +1,4 @@
-name:  Welcome to the Microsoft Cloud Tutorials
+name:  Welcome to the Microsoft Generative AI
 on:
   # Trigger the workflow on push or pull request
   pull_request:
