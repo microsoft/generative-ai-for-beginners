@@ -13,8 +13,8 @@ jobs:
   check-broken-links-job:
     runs-on: ubuntu-latest
     permissions:
-      issues: write-all
-      pull-requests: write-all
+      issues: write
+      pull-requests: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
