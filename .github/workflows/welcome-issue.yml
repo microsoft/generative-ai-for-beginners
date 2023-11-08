@@ -22,7 +22,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `👋 Thanks for contributing @${ issueAuthor }! We will review the pull request and get back to you soon.`
+              body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
         uses: pozil/auto-assign-issue@v1
