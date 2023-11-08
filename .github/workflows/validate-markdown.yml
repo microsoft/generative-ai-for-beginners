@@ -1,0 +1,126 @@
+name: Validate Markdown
+
+on:
+  # Trigger the workflow on push or pull request
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - '**.md'
+      - '**.ipynb'
+
+jobs:
+  check-broken-links-job:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Run Check broken paths
+        run: |
+          BROKEN_PATHS=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_paths')
+          echo "BROKEN_PATHS<<EOF" >> $GITHUB_ENV
+          echo "$BROKEN_PATHS" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Leave broken paths comment
+        if: ${{ env.BROKEN_PATHS != '' }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected the following broken relative paths in your lessons.
+              Please check the file paths and associated broken paths inside them.
+              # Check Broken Paths
+              ${{ env.BROKEN_PATHS }}
+              `
+            })
+
+      - name: Run Check paths tracking
+        run: |
+          PATHS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_paths_tracking')
+          echo "PATHS_TRACKING<<EOF" >> $GITHUB_ENV
+          echo "$PATHS_TRACKING" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Leave paths tracking comment
+        if: ${{ env.PATHS_TRACKING != '' }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected missing tracking id from the following relative paths in your lessons.
+              Please check the file paths and associated paths inside them.
+              # Check Missing Tracking from Paths
+              ${{ env.PATHS_TRACKING }}
+              `
+            })
+
+      - name: Run Check URLs tracking
+        run: |
+          URLS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_tracking')
+          echo "URLS_TRACKING<<EOF" >> $GITHUB_ENV
+          echo "$URLS_TRACKING" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Leave URLs tracking comment
+        if: ${{ env.URLS_TRACKING != '' }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected missing tracking id from the following URLs in your lessons.
+              Please check the file paths and associated URLs inside them.
+              # Check Missing Tracking from URLs
+              ${{ env.URLS_TRACKING }}
+              `
+            })
+
+      - name: Run Check URLs Country Locale
+        run: |
+          URLS_LOCALE=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_locale')
+          echo "URLS_LOCALE<<EOF" >> $GITHUB_ENV
+          echo "$URLS_LOCALE" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Leave URLs locale comment
+        if: ${{ env.URLS_LOCALE != '' }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected added country locale to URLs in your lessons.
+              Please check the file paths and associated URLs inside them.
+              # Check Country Locale in URLs
+              ${{ env.URLS_LOCALE }}
+              `
+            })
+
+      - name: Update workflow run status
+        if: ${{ env.BROKEN_PATHS != '' }} || ${{ env.PATHS_TRACKING != '' }} || ${{ env.URLS_TRACKING != '' }} || ${{ env.URLS_LOCALE != '' }}
+        run: exit 1
