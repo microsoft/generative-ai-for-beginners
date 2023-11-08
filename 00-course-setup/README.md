@@ -3,7 +3,7 @@
 We are very excited for you to start this course and see what you get inspired to build with Generative AI!
 
 To make your time successful, we have created this page that outlines any setup steps, technical requirements, and how to get help when you need it.
-
+ 
 ## Setup Steps
 
 To start taking this course, you will need to complete the following steps.
