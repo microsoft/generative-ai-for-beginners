@@ -36,7 +36,7 @@ As part of this lesson, we will continue to work with our startup, Edu4All, in t
 
 Here's what Edu4All's students could generate for example if they're working in class on monuments:
 
-![Edu4All startup, class on monuments, Eiffel Tower](startup.png)
+![Edu4All startup, class on monuments, Eiffel Tower](./images/startup.png)
 
 using a prompt like
 
@@ -282,11 +282,11 @@ Let's look at an example of how temperature works, by running this prompt twice:
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](./v1-generated_image.png)
+![Bunny on a horse holding a lollipop, version 1](./images/v1-generated_image.png)
 
 Now let's run that same prompt just to see that we won't get the same image twice:
 
-![Generated image of bunny on horse](./v2-generated_image.png)
+![Generated image of bunny on horse](./images/v2-generated_image.png)
 
 As you can see, the images are similar, but not the same. Let's try changing the temperature value to 0.1 and see what happens:
 
@@ -315,8 +315,8 @@ generation_response = openai.Image.create(
 
 Now when you run this code, you get these two images:
 
-- ![Temperature 0, v1](./v1-0temp-generated_image.png)
-- ![Temperature 0 , v2](./v2-0temp-generated_image.png)
+- ![Temperature 0, v1](./images/v1-0temp-generated_image.png)
+- ![Temperature 0 , v2](./images/v2-0temp-generated_image.png)
 
 Here you can clearly see how the images resemble each other more.
 
@@ -463,6 +463,6 @@ except openai.error.InvalidRequestError as err:
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about how to build Image Generation apps? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 10 where we will look at how to [build AI applications with low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)

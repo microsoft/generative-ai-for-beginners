@@ -33,23 +33,19 @@ Head to the [Course Setup Page](./00-course-setup/README.md) to find the setup g
 
 We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
-### 🚀  Are you a startup or got an idea you want to launch? 
+## 🧠 Want to learn more? 
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge! 
+
+##  🚀  Are you a startup or got an idea you want to launch? 
 
 Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
 
-## 🙏 Want to help?
+##  🙏 Want to help?
 
 Here are ways you can contribute to this course: 
 - Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
-- Translate to your language, every chapter has a *translations* subdirectory, if you want to help with this one create the following structure:
 
-```text
-  Chapter NN/
-    translations
-      es/          <== your language code
-       README.md   <== your translation
-```
 
 ## 📂 Each lesson includes:
 
