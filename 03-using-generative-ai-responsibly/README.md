@@ -1,6 +1,6 @@
 # Using Generative AI Responsibly
 
-[![Using Generative AI Responsibly](./images/genai_course_3[77].png)]() 
+[![Using Generative AI Responsibly](./images/genai_course_3[77].png?WT.mc_id=academic-105485-koreyst)]() 
 
 > **Video Coming Soon**
 
@@ -44,7 +44,7 @@ Let's take for example we build a feature for our startup that allows students t
 
 The model produces a response like the one below:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
+![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp?WT.mc_id=academic-105485-koreyst)
 
 > *(Source: [Flying bisons](https://flyingbisons.com))*
 
@@ -76,7 +76,7 @@ These types of outputs are not only destructive to building positive product exp
 
 Now that we have identified the importance of Responsible Generative AI, let's look at 4 steps we can take to build our AI solutions responsibly:
 
-![Mitigate Cycle](./images/mitigate-cycle.png)
+![Mitigate Cycle](./images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
 
 ### Measure Potential Harms
 
@@ -88,7 +88,7 @@ Since our startup is building an education product, it would be good to prepare 
 
 It is now time to find ways where we can prevent or limit the potential harm caused by the model and its responses. We can look at this in 4 different layers:
 
-![Mitigation Layers](./images/mitigation-layers.png)
+![Mitigation Layers](./images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
 
 - **Model**. Choosing the right model for the right use case. Larger and more complex models like GPT-4 can cause more of a risk of harmful content when applied to smaller and more specific use cases. Using your training data to fine-tune also reduces the risk of harmful content.
 

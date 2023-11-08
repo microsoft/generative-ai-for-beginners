@@ -1,6 +1,6 @@
 # Building Low Code AI Applications
 
-[![Building Low Code AI Applications](./images/10-lesson-banner.png)](https://youtu.be/XX8491SAF44)
+[![Building Low Code AI Applications](./images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/XX8491SAF44)
 
 > *(Click the image above to view video of this lesson)*
 

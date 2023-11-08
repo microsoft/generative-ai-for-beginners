@@ -1,6 +1,6 @@
 # Integrating with function calling
 
-![chapter image](./images/genai_course_11[90].png)
+![chapter image](./images/genai_course_11[90].png?WT.mc_id=academic-105485-koreyst)
 
 You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.  
 
@@ -163,7 +163,7 @@ Now we can send both requests to the LLM and examine the response we receive by 
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.  
 
-![function flow](./images/Function-Flow.png)
+![function flow](./images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -185,7 +185,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action ie execute a function or API Call.
 3. **Making** another call  to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](./images/LLM-Flow.png)
+![LLM Flow](./images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 ### Step 1 - creating messages
 
