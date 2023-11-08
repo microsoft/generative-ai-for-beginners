@@ -26,7 +26,7 @@ Keeping your API keys safe and secure is important when building any type of app
 
 ## How to Run locally on your computer
 
-To run the code locally on your computer, you would need to have some version of [Python installed](https://www.python.org/downloads/).
+To run the code locally on your computer, you would need to have some version of [Python installed](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
 To then use the repository, you need to clone it:
 
@@ -39,7 +39,7 @@ Now you have everything checked out and can start learning and work with the cod
 
 ### Installing miniconda (optional step)
 
-There are advantages to installing  **[miniconda](https://conda.io/en/latest/miniconda.html)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**. `conda` makes it easy to install and switch between different Python versions and packages, and also to install packages that are not available via `pip`.
+There are advantages to installing  **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**. `conda` makes it easy to install and switch between different Python versions and packages, and also to install packages that are not available via `pip`.
 
 After you install miniconda, you need to clone the repository (if you haven't already done so) and create a virtual environment to be used for this course:
 
@@ -65,7 +65,7 @@ conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
 
-Refer to this link on creating a [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) if you run into trouble.
+Refer to this link on creating a [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) if you run into trouble.
 
 ### Using Visual Studio Code with Python Extension
 
@@ -103,7 +103,7 @@ One of the best ways to keep your API keys secure when using GitHub Codespaces i
 
 The course has 6 concept lessons and 6 coding lessons.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu&culture=en-us&country=us).
+For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu&culture=en-us&country=us&WT.mc_id=academic-105485-koreyst).
 
 While you wait for your application to be processed, each coding lesson also includes a `README.md` file where you can view the code and outputs.
 
@@ -113,9 +113,9 @@ If this is your first time working with the Azure OpenAI service, please follow 
 
 ## Meet Other Learners
 
-We have created channels in our official [AI Community Discord server](https://aka.ms/genai-discord) for meeting other learners. This is a great way to network with other like-minded entrepreneurs, builders, students, and anyone looking to level up in Generative AI.
+We have created channels in our official [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) for meeting other learners. This is a great way to network with other like-minded entrepreneurs, builders, students, and anyone looking to level up in Generative AI.
 
-[![Join discord channel](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![Join discord channel](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 The project team will also be on this Discord server to help any learners.
 

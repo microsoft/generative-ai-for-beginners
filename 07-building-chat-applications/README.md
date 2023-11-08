@@ -1,6 +1,6 @@
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](./img/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ)
+[![Building Generative AI-Powered Chat Applications](./img/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
 
 > *(Click the image above to view video of this lesson)*
 
@@ -179,6 +179,6 @@ See [assignment](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)
 
 ## Great Work! Continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 8 to see how you can start  [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
