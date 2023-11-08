@@ -93,7 +93,7 @@ pip install openai
 您需要执行以下步骤：
 
 - 在 Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst) 上创建帐户。
-- 访问 Azure Open AI。 进入到 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并请求访问权限。
+- 访问 Azure Open AI。 进入到 [https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并请求访问权限。
 
   > [!注意]
   > 您需要申请访问 Azure Open AI Service 的访问。
