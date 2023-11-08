@@ -446,6 +446,6 @@ To continue your learning of Azure Open AI Function Calling you can build:
 
 ## Great Work! Continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 12 where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!

@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
 
 Let's recap some learnings from the previous chapter:
 
@@ -619,6 +619,6 @@ You just used the self-refine technique in the assignment. Take any program you 
 
 ## Great Work! Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)

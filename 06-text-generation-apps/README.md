@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
 > *(Click the image above to view video of this lesson)*
 
@@ -99,7 +99,7 @@ You need to carry out the following steps:
 
 At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure Open AI resource and copy the "Key 1" value.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 Now that you have this information copied, let's instruct the libraries to use it.
 
@@ -654,6 +654,6 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 ## Great Work! Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
 Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
