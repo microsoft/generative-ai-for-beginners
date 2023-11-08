@@ -2,19 +2,22 @@ name: Validate Markdown
 
 on:
   # Trigger the workflow on push or pull request
-  pull_request:
+  pull_request_target:
     branches: 
       - main
     paths:
       - '**.md'
       - '**.ipynb'
 
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+  pull-requests: write
+
 jobs:
   check-broken-links-job:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
