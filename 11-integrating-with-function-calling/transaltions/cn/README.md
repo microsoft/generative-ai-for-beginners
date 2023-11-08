@@ -399,13 +399,13 @@ messages= [ {"role": "user", "content": "Find me a good course for a beginner st
    }
 
    Output of function call:
-   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/en-us/training/modules/describe-concepts-of-cryptography/? 
+   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/? 
    WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en- 
    us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL 
-   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/en-us/training/modules/design-a-data-model-with-ads/? 
+   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/? 
    WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url': 
-   'https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the 
-   Rust development environment', 'url': 'https://learn.microsoft.com/en-us/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
+   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the 
+   Rust development environment', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
    <class 'str'> 
    ```
 3. 现在我们将向 LLM 发送更新后的消息 `messages` ，以便我们可以接收自然语言响应，而不是 API JSON 格式的响应。
