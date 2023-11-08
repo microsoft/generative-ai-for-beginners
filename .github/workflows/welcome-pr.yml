@@ -1,7 +1,7 @@
 name:  Welcome to the Microsoft Generative AI
 on:
   # Trigger the workflow on pull request
-  pull_request:
+  pull_request_target:
     types: [opened]
 jobs:
   asses-pull-request:
