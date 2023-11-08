@@ -62,8 +62,13 @@ def get_lessons_paths(root_path: str) -> dict:
             # check for translations directories
             if os.path.isdir(os.path.join(root_path, lesson, item)):
                 for sub_item in os.listdir(os.path.join(root_path, lesson, item)):
+                    if os.path.isdir(os.path.join(root_path, lesson, item, sub_item)):
+                        for sub_item2 in os.listdir(os.path.join(root_path, lesson, item, sub_item)):
+                            # check for .md and .ipynb files and store them
+                            if sub_item2.lower().endswith(('.md', '.ipynb')):
+                                lessons[lesson].append(os.path.join(item, sub_item, sub_item2))
                     # check for .md and .ipynb files and store them
-                    if sub_item.lower().endswith(('.md', '.ipynb')):
+                    elif sub_item.lower().endswith(('.md', '.ipynb')):
                         lessons[lesson].append(os.path.join(item, sub_item))
             # check for .md and .ipynb files and store them
             elif item.lower().endswith(('.md', '.ipynb')):
@@ -145,6 +150,7 @@ def get_paths_from_links(all_links: list) -> list:
     path_pattern = re.compile(r'(\.{1,2}\/)+([A-Za-z0-9-]+\/)*(.+\.[A-Za-z]+)')
 
     for link in all_links:
+        link = link.split(" ")[0]
         matches = re.findall(path_pattern, link)
         if matches:
             paths.append(link)
