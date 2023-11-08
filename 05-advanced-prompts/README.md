@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ)
 
 Let's recap some learnings from the previous chapter:
 
@@ -601,7 +601,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
-[Solution](./solution.py)
+[Solution](./solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Knowledge check
 

@@ -1,7 +1,6 @@
 # Designing UX for AI Applications
 
-[![Designing UX for AI Applications](./images/12-lesson-banner.png)](https://youtu.be/bO7h2_hOhR0) 
-
+[![Designing UX for AI Applications](./images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/bO7h2_hOhR0)
 
 > *(Click the image above to view video of this lesson)*
 

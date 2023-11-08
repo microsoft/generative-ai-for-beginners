@@ -1,6 +1,6 @@
 # Building a Search Applications 
 
-[![Introduction to Generative AI and Large Language Models](./media/genai_course_8[80].png)](TBD)
+[![Introduction to Generative AI and Large Language Models](./media/genai_course_8[80].png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **Video Coming Soon**
 

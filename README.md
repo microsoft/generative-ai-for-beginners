@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](./img/1.png)
+![Generative AI For Beginners](./img/1.png?WT.mc_id=academic-105485-koreyst)
 
 ### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
 
@@ -27,7 +27,7 @@ To get started, [fork this entire repo](https://github.com/microsoft/generative-
 
 Below are the links to each lesson. Feel free to explore and start at any lesson that interests you the most! 
 
-Head to the [Course Setup Page](./00-course-setup/README.md) to find the setup guide that works best for you. 
+Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) to find the setup guide that works best for you. 
 
 ## 🗣️ Meet Other Learners, Get Support 
 
