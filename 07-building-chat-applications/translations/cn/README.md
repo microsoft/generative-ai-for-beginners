@@ -1,6 +1,6 @@
 # 第七章：创建聊天应用
 
-[![Building Generative AI-Powered Chat Applications](../../img/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
 
 > *(点击该图片看本章导学视频)*
 
@@ -62,7 +62,7 @@
 - **更容易维护**：更新和改进更易于管理，因为大多数 API 和 SDK 在发布新版本时只需要更新库。
 - **获得尖端技术**：利用经过微调和在广泛数据集上训练的模型为您的应用程序提供自然语言功能。
 
-访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](notebook.ipynb) 中自行尝试。
+访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](./notebook.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
 
 
 ```python
@@ -90,11 +90,11 @@ AuthenticationError: No API key provided. You can set your API key in code using
 
 个性化的一个例子是 OpenAI 的 ChatGPT 中的“自定义指令”设置。 它允许您提供有关您自己的信息，这些信息可能是您的提示的重要背景。 以下是自定义指令的示例。
 
-![Custom Instructions Settings in ChatGPT](../../img/custom_instructions.png?WT.mc_id=academic-105485-koreyst)
+![Custom Instructions Settings in ChatGPT](../../images/custom-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 “配置文件”提示 ChatGPT 在链接列表上创建课程计划。 请注意，ChatGPT 可以按照用户的特点获得更深入的课程计划。
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../img/lesson_plan_prompt.png?WT.mc_id=academic-105485-koreyst)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../images/lesson-plan-prompt.png?WT.mc_id=academic-105485-koreyst)
 
 ### 微软的 LLMs 系统消息框架
 
@@ -192,5 +192,5 @@ Head over to Lesson 8 to see how you can start  [building search applications](/
 
 想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
-前往第八章，我们将学习[构建搜索应用程序](../../../07-building-chat-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
+前往第八章，我们将学习[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
 
