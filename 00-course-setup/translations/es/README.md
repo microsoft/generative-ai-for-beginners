@@ -135,4 +135,4 @@ Este proyecto ha adoptado el Código de Conducta de Código Abierto de Microsoft
 
 ## ¡Empecemos!
 
-Ahora que has completado los pasos necesarios para realizar este curso, comencemos con una [introducción a la IA Generativa y a los Modelos de Lenguaje Gigantes (LLMs)](../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Ahora que has completado los pasos necesarios para realizar este curso, comencemos con una [introducción a la IA Generativa y a los Modelos de Lenguaje Gigantes (LLMs)](../../../01-introduction-to-genai/translations/es/README.md?WT.mc_id=academic-105485-koreyst).
