@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](./img/1.png)
+![Generative AI For Beginners](./img/1.png?WT.mc_id=academic-105485-koreyst)
 
 ### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
 
@@ -7,14 +7,14 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
 [![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 
 # Generative AI for Beginners - A Course 
@@ -27,29 +27,25 @@ To get started, [fork this entire repo](https://github.com/microsoft/generative-
 
 Below are the links to each lesson. Feel free to explore and start at any lesson that interests you the most! 
 
-Head to the [Course Setup Page](./00-course-setup/README.md) to find the setup guide that works best for you. 
+Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) to find the setup guide that works best for you. 
 
 ## 🗣️ Meet Other Learners, Get Support 
 
-We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
+We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
-### 🚀  Are you a startup or got an idea you want to launch? 
+## 🧠 Want to learn more? 
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge! 
 
-Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
+##  🚀  Are you a startup or got an idea you want to launch? 
 
-## 🙏 Want to help?
+Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
+
+##  🙏 Want to help?
 
 Here are ways you can contribute to this course: 
 - Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 - Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
-- Translate to your language, every chapter has a *translations* subdirectory, if you want to help with this one create the following structure:
 
-```text
-  Chapter NN/
-    translations
-      es/          <== your language code
-       README.md   <== your translation
-```
 
 ## 📂 Each lesson includes:
 

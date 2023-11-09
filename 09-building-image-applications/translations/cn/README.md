@@ -1,6 +1,6 @@
 # 第九章：构建图像生成应用
 
-[![Building Image Generation Applications](../../images/genai_course_9[70].png)](TBD)
+[![Building Image Generation Applications](../../images/genai_course_9[70].png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **导学视频敬请期待**
 
@@ -36,7 +36,7 @@ LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将�
 
 例如，如果 Edu4All 的学生在课堂上研究纪念碑，他们可以生成以下内容：
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../startup.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../images/startup.png?WT.mc_id=academic-105485-koreyst)
 
 提示词如下
 
@@ -44,7 +44,7 @@ LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将�
 
 ## 什么是 DALL-E 和 Midjourney？
 
-[DALL-E](https://openai.com/dall-e-2) 和 [Midjourney](https://www.midjourney.com/) 是两种最流行的图像生成模型，它们允许您使用提示词生成图像。
+[DALL-E](https://openai.com/dall-e-2) 和 [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) 是两种最流行的图像生成模型，它们允许您使用提示词生成图像。
 
 ### DALL-E 
 
@@ -61,13 +61,13 @@ LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将�
 
 Midjourney 的工作方式与 DALL-E 类似，它根据文本提示生成图像。 Midjourney 还可以用于使用“戴帽子的猫”或“莫西干狗”等提示来生成图像。
 
-![图像由 Midjourney生成，机械鸽子](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png)
+![图像由 Midjourney生成，机械鸽子](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 
 *图片来源维基百科，图片由 Midjourney 生成*
 
 ## DALL-E 和 Midjourney 如何运作
 
-首先，[DALL-E](https://arxiv.org/pdf/2102.12092.pdf)。 DALL-E 是一种基于带有 *autoregressive transformer* 的 transformer 架构的生成式人工智能模型。
+首先，[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst)。 DALL-E 是一种基于带有 *autoregressive transformer* 的 transformer 架构的生成式人工智能模型。
 
 “autoregressive transformer”定义了模型如何根据文本描述生成图像，它一次生成一个像素，然后使用生成的像素生成下一个像素。 经过神经网络中的多个层，直到图像完整。
 
@@ -151,7 +151,7 @@ Midjourney 的工作方式与 DALL-E 类似，它根据文本提示生成图像�
             os.mkdir(image_dir)
     
         # Initialize the image path (note the filetype should be png)
-        image_path = os.path.join(image_dir, 'generated_image.png')
+        image_path = os.path.join(image_dir, 'generated_image.png?WT.mc_id=academic-105485-koreyst')
     
         # Retrieve the generated image
         image_url = generation_response["data"][0]["url"]  # extract image URL from response
@@ -286,12 +286,12 @@ Temperature 是控制生成式 AI 模型输出随机性的参数。 Temperature 
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../v1-generated_image.png)
+![Bunny on a horse holding a lollipop, version 1](../../images/v1-generated_image.png?WT.mc_id=academic-105485-koreyst)
 
 现在让我们运行相同的提示，我们不会两次获得相同的图像：
 
 
-![Generated image of bunny on horse](../../v2-generated_image.png)
+![Generated image of bunny on horse](../../images/v2-generated_image.png?WT.mc_id=academic-105485-koreyst)
 
 正如您所看到的，图像相似，但不相同。 让我们尝试将 temperature 值更改为 0.1，看看会发生什么：
 
@@ -321,8 +321,8 @@ generation_response = openai.Image.create(
 
 现在，当您运行此代码时，您会得到这两个图像：
 
-- ![Temperature 0, v1](../../v1-0temp-generated_image.png)
-- ![Temperature 0 , v2](../../v2-0temp-generated_image.png)
+- ![Temperature 0, v1](../../images/v1-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
+- ![Temperature 0 , v2](../../images/v2-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
 
 在这里您可以清楚地看到图像彼此之间的相似程度。
 
@@ -448,7 +448,7 @@ try:
         os.mkdir(image_dir)
 
     # Initialize the image path (note the filetype should be png)
-    image_path = os.path.join(image_dir, 'generated_image.png')
+    image_path = os.path.join(image_dir, 'generated_image.png?WT.mc_id=academic-105485-koreyst')
 
     # Retrieve the generated image
     image_url = generation_response["data"][0]["url"]  # extract image URL from response
