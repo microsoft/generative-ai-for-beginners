@@ -90,9 +90,9 @@
 
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e)
+🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf)
+🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
 ## 第十章 - 创建低代码的人工智能应用
 

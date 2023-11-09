@@ -76,7 +76,7 @@
 
 现在我们已经确定了负责任的生成式人工智能的重要性，让我们看看我们可以采取的 4 个步骤来负责任地构建我们的人工智能解决方案：
 
-![缓解循环](../../images/mitigate-cycle.png??WT.mc_id=academic-105485-koreyst)
+![缓解循环](../../images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
 
 ### 衡量潜在危害
 
@@ -88,7 +88,7 @@
 
 现在是时候寻找方法来预防或限制模型及其响应造成的潜在危害了。 我们可以从 4 个不同的层面来看待这个问题：
 
-![缓解层](../../images/mitigation-layers.png??WT.mc_id=academic-105485-koreyst)
+![缓解层](../../images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
 
 - **模型**。 为正确的用例选择正确的模型。 当应用于更小、更具体的用例时，更大、更复杂的模型（例如 GPT-4）可能会导致更大的有害内容风险。 使用训练数据进行微调还可以降低有害内容的风险。
 
@@ -96,11 +96,11 @@
 
 - **元提示**。 元提示和基础是我们可以根据某些行为和信息指导或限制模型的方法。 这可以使用系统输入来定义模型的某些限制。 此外，提供与系统范围或领域更相关的输出。
 
-  它还可以使用检索增强生成 (RAG) 等技术，让模型仅从选定的可信来源中提取信息。 本课程后面有一章关于[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md)的内容
+  它还可以使用检索增强生成 (RAG) 等技术，让模型仅从选定的可信来源中提取信息。 本课程后面有一章关于[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)的内容
 
 - **用户体验**。 最后一层是用户通过应用程序界面以某种方式直接与模型交互的地方。 通过这种方式，我们可以设计 UI/UX 来限制用户可以发送到模型的输入类型以及向用户显示的文本或图像。 在部署人工智能应用程序时，我们还必须透明地了解我们的生成式人工智能应用程序可以做什么和不能做什么。
 
-我们有一章内容致力于[为人工智能应用程序设计用户体验](../../../12-designing-ux-for-ai-applications/translations/cn/README.md)
+我们有一章内容致力于[为人工智能应用程序设计用户体验](../../../12-designing-ux-for-ai-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **评估模型**。 与 LLMs 合作可能具有挑战性，因为我们并不总是能够控制模型训练的数据。 无论如何，我们应该始终评估模型的性能和输出。 衡量模型的准确性、相似性、基础性和输出的相关性仍然很重要。 这有助于为应用相关人员和用户提供透明度和信任。
 

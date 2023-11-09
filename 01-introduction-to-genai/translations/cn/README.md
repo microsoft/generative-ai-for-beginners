@@ -119,7 +119,7 @@
 
 你的任务是阅读更多关于生成式人工智能（https://en.wikipedia.org/wiki/Generative_artificial_intelligence）的内容，并尝试找出一个你现在可以添加生成式人工智能但目前还没有的领域。 与用“旧式方法”做有什么不同，你能做一些你以前做不到的事情吗，或者生成的时候速度更快吗？ 写一篇 300 字的摘要，描述您梦想的人工智能初创公司的样子，包括“问题”、“我将如何使用人工智能”、“影响”等标题，还可以选择做一份商业计划。
 
-如果您完成了此任务，您甚至可以准备好申请 Microsoft 的创业孵化器[Microsoft for Startups Founders Hub](https://www.microsoft.com/zh-cn/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAIc redits 以及相关指导等等
+如果您完成了此任务，您甚至可以准备好申请 Microsoft 的创业孵化器[Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAIc redits 以及相关指导等等
 
 ## 知识检查
 
