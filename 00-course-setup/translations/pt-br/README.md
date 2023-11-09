@@ -35,7 +35,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Agora você tem tudo configurado e pode começar a aprender e trabalhar com o código.
+Agora, você tem tudo configurado e pode começar a aprender e trabalhar com o código.
 
 ### Instalando o miniconda (etapa opcional)
 
