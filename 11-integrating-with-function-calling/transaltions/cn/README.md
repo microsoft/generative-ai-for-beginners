@@ -8,9 +8,9 @@
 
 > **导学视频敬请期待**
 
-## 本章概述
+## 本章概述 
 
-在本章中，您将学习到：
+在本章中，您将学习到:
 
 - 解释什么是 function calling 及其用例。
 - 使用 Azure OpenAI 创建 function calling。
