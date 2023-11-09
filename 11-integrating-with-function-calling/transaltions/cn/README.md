@@ -164,7 +164,7 @@ Function Calling 是 Azure Open AI Service 的一项功能，旨在克服以下�
 
 那么我们该如何解决格式化问题呢？ 通过使用 function calling，我们可以确保收到返回的结构化数据。 当使用 function calling 时，LLM 实际上并不调用或运行任何函数。 相反，我们为 LLMs 创建了一个响应结构。 然后，我们使用这些结构化响应来了解要在应用程序中运行哪些功能。.  
 
-![function flow](../../images/Function-Flow.png??WT.mc_id=academic-105485-koreyst)
+![function flow](../../images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 然后我们可以获取函数返回的内容并将其发送回 LLM。 然后， LLM 将使用自然语言来回答用户的查询。
 
