@@ -37,15 +37,6 @@ cd generative-ai-for-beginners
 
 Agora você tem tudo configurado e pode começar a aprender e trabalhar com o código.
 
-### Installing miniconda (optional step)
-
-There are advantages to installing  **[miniconda](https://conda.io/en/latest/miniconda.html)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**. `conda` makes it easy to install and switch between different Python versions and packages, and also to install packages that are not available via `pip`.
-
-After you install miniconda, you need to clone the repository (if you haven't already done so) and create a virtual environment to be used for this course:
-
-Before running the below step, ensure that you first have an *environment.yml* file. The *environment.yml* file is used to create a conda environment with the necessary dependencies and can look like so:
-
-
 ### Instalando o miniconda (etapa opcional)
 
 Existem vantagens em instalar o **[miniconda](https://conda.io/en/latest/miniconda.html)** - que é uma instalação bastante leve que suporta o gerenciador de pacotes `conda` para diferentes **ambientes virtuais** do Python. O `conda` facilita a instalação e alternância entre diferentes versões e pacotes do Python e também a instalação de pacotes que não estão disponíveis via `pip`.
