@@ -59,6 +59,7 @@ jobs:
         run: exit 1
 
   check-paths-tracking:
+    if: ${{ always() }}
     needs: check-broken-paths
     name: Check Paths Have Tracking
     runs-on: ubuntu-latest
@@ -102,6 +103,7 @@ jobs:
         run: exit 1
 
   check-urls-tracking:
+    if: ${{ always() }}
     needs: check-paths-tracking
     name: Check URLs Have Tracking
     runs-on: ubuntu-latest
@@ -145,6 +147,7 @@ jobs:
         run: exit 1
 
   check-urls-locale:
+    if: ${{ always() }}
     needs: check-urls-tracking
     name: Check URLs Don't Have Locale
     runs-on: ubuntu-latest
