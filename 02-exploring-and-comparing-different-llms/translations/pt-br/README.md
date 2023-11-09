@@ -10,8 +10,6 @@ O próximo passo na jornada de nossa startup é explorar o cenário atual dos Gr
 
 ## Introdução
 
-This lesson will cover:
-
 Esta lição abordará:
 
 - Diferentes tipos de LLMs no cenário atual.
@@ -176,30 +174,6 @@ Essa seria a abordagem preferida se:
 
 - **Mantendo-se atualizado**: Uma empresa possui muitos dados de alta qualidade e rótulos de verdade fundamentais e os recursos necessários para manter esses dados atualizados ao longo do tempo.
 
-### Trained model
-
-Training an LLM from scratch is without a doubt the most difficult and the most complex approach to adopt, requiring massive amounts of data, skilled resources, and appropriate computational power. This option should be considered only in a scenario where a business has a domain-specific use case and a large amount of domain-centric data.
-
-## Knowledge check
-
-What could be a good approach to improve LLM completion results?
-
-1. Prompt engineering with context
-1. RAG
-1. Fine-tuned model
-
-A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
-
-## 🚀 Challenge
-
-Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) for your business.
-
-## Great Work, Continue Your Learning
-
-Want to learn more about different Generative AI concepts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
-
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
-
 ### Modelo Treinado
 
 Treinar um LLM a partir do zero é, sem dúvida, a abordagem mais difícil e complexa de adotar, exigindo enormes quantidades de dados, recursos qualificados e poder computacional adequado. Essa opção deve ser considerada apenas em um cenário em que uma empresa possui um caso de uso específico de domínio e uma grande quantidade de dados centrados no domínio.
@@ -222,5 +196,5 @@ Saiba mais sobre como você pode [usar o RAG](https://learn.microsoft.com/azure/
 
 Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
 
-Vamos para a Lição 3, onde veremos como [construir com IA Generativa de forma Responsável](../../../03-using-generative-ai-responsibly/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
+Vamos para a Lição 3, onde veremos como podemos [Criar IA Generativa de forma Responsável](../../../03-using-generative-ai-responsibly/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
 
