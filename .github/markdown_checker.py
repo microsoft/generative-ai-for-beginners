@@ -22,7 +22,9 @@ def main() -> None:
             file_path = os.path.join(
                 in_arg.dir,
                 lesson_folder_name,
-                lesson_file_name )
+                lesson_file_name)
+            if in_arg.dir == lesson_folder_name:
+                file_path = os.path.join(lesson_folder_name, lesson_file_name)
             if "check_broken_paths" in in_arg.func:
                 formatted_output = check_broken_links(file_path, "path" , "broken")
                 if formatted_output:
@@ -50,7 +52,9 @@ def get_lessons_paths(root_path: str) -> dict:
     Return: formatted dictionary with directories as key and an array of files as values
     """
     lessons = {}
-
+    # add root path to the dictionary
+    lessons[root_path] = []
+    pass_list = ['CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'SECURITY.md']
     # get lessons folders
     for item in os.listdir(root_path):
         if os.path.isdir(os.path.join(root_path, item)):
@@ -58,21 +62,26 @@ def get_lessons_paths(root_path: str) -> dict:
 
     # get lesson exercises (md, ipynb files)
     for lesson, _ in lessons.items():
-        for item in os.listdir(os.path.join(root_path, lesson)):
-            # check for translations directories
-            if os.path.isdir(os.path.join(root_path, lesson, item)):
-                for sub_item in os.listdir(os.path.join(root_path, lesson, item)):
-                    if os.path.isdir(os.path.join(root_path, lesson, item, sub_item)):
-                        for sub_item2 in os.listdir(os.path.join(root_path, lesson, item, sub_item)):
-                            # check for .md and .ipynb files and store them
-                            if sub_item2.lower().endswith(('.md', '.ipynb')):
-                                lessons[lesson].append(os.path.join(item, sub_item, sub_item2))
-                    # check for .md and .ipynb files and store them
-                    elif sub_item.lower().endswith(('.md', '.ipynb')):
-                        lessons[lesson].append(os.path.join(item, sub_item))
-            # check for .md and .ipynb files and store them
-            elif item.lower().endswith(('.md', '.ipynb')):
-                lessons[lesson].append(item)
+        if lesson != root_path:
+            for item in os.listdir(os.path.join(root_path, lesson)):
+                # check for translations directories
+                if os.path.isdir(os.path.join(root_path, lesson, item)):
+                    for sub_item in os.listdir(os.path.join(root_path, lesson, item)):
+                        if os.path.isdir(os.path.join(root_path, lesson, item, sub_item)):
+                            for sub_item2 in os.listdir(os.path.join(root_path, lesson, item, sub_item)):
+                                # check for .md and .ipynb files and store them
+                                if sub_item2.lower().endswith(('.md', '.ipynb')) and sub_item2 not in pass_list:
+                                    lessons[lesson].append(os.path.join(item, sub_item, sub_item2))
+                        # check for .md and .ipynb files and store them
+                        elif sub_item.lower().endswith(('.md', '.ipynb')) and sub_item not in pass_list:
+                            lessons[lesson].append(os.path.join(item, sub_item))
+                # check for .md and .ipynb files and store them
+                elif item.lower().endswith(('.md', '.ipynb')) and item not in pass_list:
+                    lessons[lesson].append(item)
+    # get .md and .ipynb in root directory
+    for item in os.listdir(root_path):
+        if item.lower().endswith(('.md', '.ipynb')) and item not in pass_list:
+            lessons[root_path].append(item)
 
     # check to remove folders that don't have .md files in them
     lessons = {key: values for key, values in lessons.items() if len(values) > 0}
@@ -95,24 +104,24 @@ def check_broken_links(file_path : str, link_type : str , check_type: str) -> st
         formatted_output = f"    FILE '{file_path}'\n"
         if link_type == "path":
             paths = get_paths_from_links(all_links)
-            if check_type == "broken":
+            if check_type == "broken" and len(paths) > 0:
                 broken_path = check_paths_exists(file_path, paths)
                 if len (broken_path) > 0:
                     formatted_output += f'    has the following broken relative paths {broken_path}\n'
                     return formatted_output
-            elif check_type == "tracking":
+            elif check_type == "tracking" and len(paths) > 0:
                 tracking_id_paths = check_url_tracking(paths)
                 if len(tracking_id_paths) > 0:
                     formatted_output += f'    has the following paths with no tracking id {tracking_id_paths}\n'
                     return formatted_output
         elif link_type == "url":
             urls = get_urls_from_links(all_links)
-            if check_type == "tracking":
+            if check_type == "tracking" and len(urls) > 0:
                 tracking_id_urls = check_url_tracking(urls)
                 if len(tracking_id_urls) > 0:
                     formatted_output += f'    has the following links with no tracking id {tracking_id_urls}\n'
                     return formatted_output
-            elif check_type == "locale":
+            elif check_type == "locale" and len(urls) > 0:
                 country_locale_urls = check_url_locale(urls)
                 if len(country_locale_urls) > 0:
                     formatted_output += f'    has the following links with country locale {country_locale_urls}\n'
@@ -125,20 +134,22 @@ def get_links_from_file(file_path: str) -> list:
     all_links = []
     with open(file_path, 'r',  encoding="utf-8") as file:
         data = file.read()
-        link_pattern = re.compile(r'\[.*\]\((.*?)\)')
+        link_pattern = re.compile(r'\]\((.*?)\)| \)')
         matches = re.finditer(link_pattern, data)
         for matched_group in matches:
-            all_links.append(matched_group.group(1))
+            if matched_group.group(1):
+                all_links.append(matched_group.group(1))
     return all_links
 
 def get_urls_from_links(all_links: list) -> list:
     """function to get an array of urls from a list"""
     urls = []
     url_pattern = re.compile(r'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}\b([-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)')
-
+    allowed_list = ['github.com', 'microsoft.com', 'visualstudio.com', 'aka.ms', 'azure.com']
     for link in all_links:
         matches = re.findall(url_pattern, link)
-        if matches:
+        
+        if matches and any(allowed in link.lower() for allowed in allowed_list):
             urls.append(link)
     return urls
 
