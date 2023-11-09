@@ -49,7 +49,8 @@ jobs:
               repo: context.repo.repo,
               body: `
               We have automatically detected the following broken relative paths in your lessons.
-              Please check the file paths and associated broken paths inside them.
+              Please check the file paths and associated broken paths inside them. 
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Broken Paths
               ${{ env.BROKEN_PATHS }}
               `
@@ -94,6 +95,7 @@ jobs:
               body: `
               We have automatically detected missing tracking id from the following relative paths in your lessons.
               Please check the file paths and associated paths inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Missing Tracking from Paths
               ${{ env.PATHS_TRACKING }}
               `
@@ -138,6 +140,7 @@ jobs:
               body: `
               We have automatically detected missing tracking id from the following URLs in your lessons.
               Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Missing Tracking from URLs
               ${{ env.URLS_TRACKING }}
               `
@@ -182,6 +185,7 @@ jobs:
               body: `
               We have automatically detected added country locale to URLs in your lessons.
               Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Country Locale in URLs
               ${{ env.URLS_LOCALE }}
               `
