@@ -36,8 +36,8 @@ Simply follow the instructions listed here to pass the workflow checks.
 
 - [Check Broken Relative Paths](#check-broken-relative-paths)
 - [Check Paths Have Tracking](#check-paths-have-tracking)
-- [Check URLs Have Tracking](check-urls-have-tracking)
-- [Check URLs Don't Have Locale](check-urls-dont-have-locale)
+- [Check URLs Have Tracking](#check-urls-have-tracking)
+- [Check URLs Don't Have Locale](#check-urls-dont-have-locale)
 
 ### Check Broken Relative Paths
 
@@ -51,6 +51,6 @@ The workflow
 
 This workflow
 
-# Check URLs Don't Have Locale
+### Check URLs Don't Have Locale
 
 This workflow
