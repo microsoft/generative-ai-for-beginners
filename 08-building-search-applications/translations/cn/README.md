@@ -164,4 +164,4 @@ az cognitiveservices account deployment create \
 
 想要了解有关创建搜索应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
-前往第九章，我们将学习[构建图像生成应用程序](../../../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst) 
+前往第九章，我们将学习[构建图像生成应用程序](../../../09-building-image-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
