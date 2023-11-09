@@ -28,3 +28,29 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 * Do not combine multiple changes to one pull request. For example, submit any bug fix and documentation updates using separate PRs
 * If your pull request shows merge conflicts, make sure to update your local main to be a mirror of what's in the main repository before making your modifications
 * If you are submitting a typo or documentation fix, you can combine modifications to a single PR where suitable
+
+## GitHub Workflows
+
+When you submit a pull request, four different workflows to validate your markdown. 
+Simply follow the instructions listed here to pass the workflow checks.
+
+- [Check Broken Relative Paths](#check-broken-relative-paths)
+- [Check Paths Have Tracking](#check-paths-have-tracking)
+- [Check URLs Have Tracking](check-urls-have-tracking)
+- [Check URLs Don't Have Locale](check-urls-dont-have-locale)
+
+### Check Broken Relative Paths
+
+This workflow
+
+### Check Paths Have Tracking
+
+The workflow
+
+### Check URLs Have Tracking
+
+This workflow
+
+# Check URLs Don't Have Locale
+
+This workflow
