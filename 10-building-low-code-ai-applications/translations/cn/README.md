@@ -1,6 +1,6 @@
 # 第十章：创建低代码的人工智能应用
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png)](https://youtu.be/XX8491SAF44)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/XX8491SAF44?WT.mc_id=academic-105485-koreyst)
 
 > *(点击该图片看本章导学视频)*
 
@@ -79,21 +79,21 @@ Power Automate 中的 Copilot  AI 助手功能使您能够描述您需要哪种�
 
 您将按照以下步骤使用 Power Apps 中的 Copilot 构建应用程序：
 
-1. 导航到 [Power Apps](https://make.powerapps.com) 主屏幕。
+1. 导航到 [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) 主屏幕。
 
 1. 使用主屏幕上的文本区域描述您要构建的应用程序。 例如，***我想构建一个应用程序来跟踪和管理学生作业***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
-  ![描述您要构建的应用程序](../../images/copilot-chat-prompt-powerapps.png)
+  ![描述您要构建的应用程序](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
 1. AI Copilot 将建议一个 Dataverse 表，其中包含存储要跟踪的数据所需的字段以及一些示例数据。 然后，您可以通过对话步骤使用 AI Copilot 助手功能自定义表格以满足您的需求。
 
      > **重点事项**：Dataverse 是 Power Platform 的底层数据平台。 它是一个用于存储应用程序数据的低代码数据平台。 它是一项完全托管的服务，可将数据安全地存储在 Microsoft 云中，并在您的 Power Platform 环境中进行配置。 它具有内置的数据治理功能，例如数据分类、数据沿袭、细粒度访问控制等。 您可以在[此处](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)了解有关Dataverse的更多信息。
 
-    ![新表中的建议字段](../../images/copilot-dataverse-table-powerapps.png)
+    ![新表中的建议字段](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
 2. 教育工作者希望向已提交作业的学生发送电子邮件，以便让他们了解作业的最新进度。 您可以使用 Copilot 向表中添加新字段来存储学生电子邮件。 例如，您可以使用以下提示向表中添加新字段：***我想添加一列来存储学生电子邮件***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
-![添加新字段](../../images/copilot-new-column.png)
+![添加新字段](../../images/copilot-new-column.png?WT.mc_id=academic-105485-koreyst)
 
 1. AI Copilot 将生成一个新字段，您可以自定义该字段以满足您的需求。
 
@@ -103,7 +103,7 @@ Power Automate 中的 Copilot  AI 助手功能使您能够描述您需要哪种�
 
 1. 对于要向学生发送电子邮件的教育工作者，您可以使用 Copilot 向应用程序添加新屏幕。 例如，您可以使用以下提示向应用程序添加新屏幕：***我想添加一个屏幕来向学生发送电子邮件***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
-![Describe the app you want to build](../../images/copilot-new-screen.png)
+![Describe the app you want to build](../../images/copilot-new-screen.png?WT.mc_id=academic-105485-koreyst)
 
 1. AI Copilot 将生成一个新屏幕，然后您可以自定义屏幕以满足您的需求。
 
@@ -136,19 +136,19 @@ Power Platform 有一个名为 Dataverse 的底层数据平台，使您能够存
 
 要使用 Copilot 在 Dataverse 中创建表，请按照以下步骤操作：
 
-1. 导航到 [Power Apps](https://make.powerapps.com) 主屏幕。
+1. 导航到 [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) 主屏幕。
 
 2. 在左侧导航栏上，选择 **表** ，然后单击 **描述新表** 。
 
-![选择新表](../../images/describe-new-table.png)
+![选择新表](../../images/describe-new-table.png?WT.mc_id=academic-105485-koreyst)
 
 1. 在 **描述新表** 屏幕上，使用文本区域描述您要创建的表。 例如，***我想创建一个表来存储发票信息***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
-![描述表格](../../images/copilot-chat-prompt-dataverse.png)
+![描述表格](../../images/copilot-chat-prompt-dataverse.png?WT.mc_id=academic-105485-koreyst)
 
 1. AI Copilot 将建议一个 Dataverse 表，其中包含存储要跟踪的数据所需的字段以及一些示例数据。 然后，您可以通过对话步骤使用 AI Copilot 助手功能自定义表格以满足您的需求。
 
-![建议的 Dataverse 表](../../images/copilot-dataverse-table.png)
+![建议的 Dataverse 表](../../images/copilot-dataverse-table.png?WT.mc_id=academic-105485-koreyst)
 
 1. 财务团队希望向供应商发送电子邮件，以更新其发票的当前状态。 您可以使用 Copilot 向表中添加新字段来存储供应商电子邮件。 例如，您可以使用以下提示向表中添加新字段：***我想添加一列来存储供应商电子邮件***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
@@ -177,7 +177,7 @@ Power Platform 中提供的一些预构建 AI 模型包括：
 
 通过自定义 AI 模型，您可以将自己的模型引入 AI Builder，以便它可以像任何 AI Builder 自定义模型一样运行，从而允许您使用自己的数据训练模型。 您可以使用这些模型来自动化流程并预测 Power Apps 和 Power Automate 中的结果。 使用您自己的模型时存在一些限制。 了解有关这些[限制](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)的更多信息
 
-![AI 构建器模型](../../images/ai-builder-models.png)
+![AI 构建器模型](../../images/ai-builder-models.png?WT.mc_id=academic-105485-koreyst)
 
 ## 作业 - 为 “Our Startup” 构建发票处理流程
 
@@ -187,11 +187,11 @@ Power Platform 中提供的一些预构建 AI 模型包括：
 
 要构建一个工作流程来帮助财务团队使用 AI Builder 中的发票处理 AI 模型处理发票，请按照以下步骤操作：
 
-1. 导航至 [Power Automate](https://make.powerautomate.com) 主屏幕。
+1. 导航至 [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) 主屏幕。
 
 2. 使用主屏幕上的文本区域描述您要构建的工作流程。 例如，***当发票到达我的邮箱时对其进行处理***。 单击 **发送** 按钮将提示发送到 AI Copilot。
 
-     ![副驾驶电源自动化](../../images/copilot-chat-prompt-powerautomate.png)
+     ![副驾驶电源自动化](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-koreyst)
 
 3. AI Copilot 将建议您执行想要自动化的任务所需的操作。 您可以单击 **下一步** 按钮来完成后续步骤。
 
@@ -205,7 +205,7 @@ Power Platform 中提供的一些预构建 AI 模型包括：
 
 8. 从流程中删除 **Condition** 操作，因为您不会使用它。 它应该类似于以下屏幕截图：
 
-     ![电源自动化，删除操作](../../images/powerautomate-remove-actions.png)
+     ![电源自动化，删除操作](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-koreyst)
 
 9. 单击 **添加操作** 按钮并搜索 **Dataverse**。 选择 **添加新行** 操作。
 
@@ -220,7 +220,7 @@ Power Platform 中提供的一些预构建 AI 模型包括：
      - 状态 - 将 **状态** 设置为 **待处理**。
      - 供应商电子邮件 - 使用 **新电子邮件到达时** 触发器中的 **发件人** 动态内容。
 
-     ![电源自动添加行](../../images/powerautomate-add-row.png)
+     ![电源自动添加行](../../images/powerautomate-add-row.png?WT.mc_id=academic-105485-koreyst)
 
 12. 完成流程后，单击 **保存** 按钮保存流程。 然后，您可以通过将带有发票的电子邮件发送到您在触发器中指定的文件夹来测试流程。
 
@@ -235,7 +235,7 @@ GPT 模型经过大量数据的广泛训练，使它们能够在有提示时生�
 
 例如，您可以构建流程来自动生成各种用例的文本，如：电子邮件草稿、产品描述等。 您还可以使用该模型为各种应用程序生成文本，如聊天机器人和客户服务应用程序，使客户服务代理能够有效且高效地响应客户查询。
 
-![创建提示](../../images/create-prompt-gpt.png)
+![创建提示](../../images/create-prompt-gpt.png?WT.mc_id=academic-105485-koreyst)
 
 要了解如何在 Power Automate 中使用此 AI 模型，请浏览[使用 AI Builder 和 GPT 添加智能](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) 模块。
 

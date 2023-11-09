@@ -1,6 +1,6 @@
 # 第十一章：为生成式 AI 添加 function calling
 
-![chapter image](../../images/genai_course_11[90].png)
+![chapter image](../../images/genai_course_11[90].png?WT.mc_id=academic-105485-koreyst)
 
 到目前为止，您在之前的章节中已经学到了相当多的知识。 然而，我们可以进一步改进。 可以解决的一些问题是如何获得更一致的响应格式，以便更轻松地处理下游响应。 此外，我们可能希望添加来自其他来源的数据以进一步丰富我们的应用程序。
 
@@ -8,9 +8,9 @@
 
 > **导学视频敬请期待**
 
-## 本章概述
+## 本章概述 
 
-在本章中，您将学习到：
+在本章中，您将学习到:
 
 - 解释什么是 function calling 及其用例。
 - 使用 Azure OpenAI 创建 function calling。
@@ -164,7 +164,7 @@ Function Calling 是 Azure Open AI Service 的一项功能，旨在克服以下�
 
 那么我们该如何解决格式化问题呢？ 通过使用 function calling，我们可以确保收到返回的结构化数据。 当使用 function calling 时，LLM 实际上并不调用或运行任何函数。 相反，我们为 LLMs 创建了一个响应结构。 然后，我们使用这些结构化响应来了解要在应用程序中运行哪些功能。.  
 
-![function flow](../../images/Function-Flow.png)
+![function flow](../../images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 然后我们可以获取函数返回的内容并将其发送回 LLM。 然后， LLM 将使用自然语言来回答用户的查询。
 
@@ -186,7 +186,7 @@ Function Calling 是 Azure Open AI Service 的一项功能，旨在克服以下�
 2. **读取**模型的响应以执行操作，即执行函数或 API 调用。
 3. **使用**函数的响应再次调用 Chat Completions API，以使用该信息创建对用户的响应。
 
-![LLM Flow](../../images/LLM-Flow.png)
+![LLM Flow](../../images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 ### Step 1 - 创建消息
 

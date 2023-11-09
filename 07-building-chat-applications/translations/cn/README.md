@@ -1,7 +1,6 @@
 # 第七章：创建聊天应用
 
-[![Building Generative AI-Powered Chat Applications](../../img/07-lesson-banner.png
-)](https://youtu.be/Kw4i-tlKMrQ)
+[![Building Generative AI-Powered Chat Applications](../../img/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
 
 > *(点击该图片看本章导学视频)*
 
@@ -91,11 +90,11 @@ AuthenticationError: No API key provided. You can set your API key in code using
 
 个性化的一个例子是 OpenAI 的 ChatGPT 中的“自定义指令”设置。 它允许您提供有关您自己的信息，这些信息可能是您的提示的重要背景。 以下是自定义指令的示例。
 
-![Custom Instructions Settings in ChatGPT](../../img/custom_instructions.png)
+![Custom Instructions Settings in ChatGPT](../../img/custom_instructions.png?WT.mc_id=academic-105485-koreyst)
 
 “配置文件”提示 ChatGPT 在链接列表上创建课程计划。 请注意，ChatGPT 可以按照用户的特点获得更深入的课程计划。
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../img/lesson_plan_prompt.png)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../img/lesson_plan_prompt.png?WT.mc_id=academic-105485-koreyst)
 
 ### 微软的 LLMs 系统消息框架
 
@@ -180,11 +179,11 @@ Microsoft 的 Responsible AI 方法确定了指导 AI 开发和使用的六项�
 
 ## 作业
  
-请查看[作业](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)，它将引导您完成一系列练习，从运行第一个聊天提示到对文本进行分类和总结等等。
+请查看[作业](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)，它将引导您完成一系列练习，从运行第一个聊天提示到对文本进行分类和总结等等。
 
 ## Great Work! Continue the Journey
 
-Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../../../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
 Head over to Lesson 8 to see how you can start  [building search applications](/08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
