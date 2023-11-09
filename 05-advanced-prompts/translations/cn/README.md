@@ -597,7 +597,7 @@ LLM 本质上是不确定的，这意味着每次运行相同的提示时都会�
 > [!TIP]
 > 短语提示要求它改进，限制改进的数量是个好主意。 您还可以要求以某种方式改进它，例如架构、性能、安全性等。
 
-[Solution](../../../solution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](../../solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## 知识检查
 
