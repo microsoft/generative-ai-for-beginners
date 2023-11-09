@@ -2,7 +2,7 @@
 
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
 
 *(Click the image above to view video of this lesson)*
 
@@ -36,7 +36,7 @@ Our startup team is aware we’ll not be able to achieve this goal without lever
 
 Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
-![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+![Five young students looking at a monitor - image by DALLE2](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
@@ -63,7 +63,7 @@ This is the technology that powered the virtual assistants born in the first dec
 
 So that’s how we came to Generative AI today, which can be seen as a subset of deep learning.
 
-![AI, ML, DL and Generative AI](./images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
+![AI, ML, DL and Generative AI](../../images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
 
 After decades of research in the AI field, a new model architecture – called *Transformer* – overcame the limits of RNNs, being able to get much longer sequences of text as input. Transformers are based on the attention mechanism, enabling the model to give different weights to the inputs it receives, ‘paying more attention’ where the most relevant information is concentrated, regardless of their order in the text sequence.
 
@@ -75,7 +75,7 @@ In the next chapter we are going to explore different types of Generative AI mod
 
 * **Tokenizer, text to numbers**: Large Language Models receive a text as input and generate a text as output. However, being statistical models, they work much better with numbers than text sequences. That’s why every input to the model is processed by a tokenizer, before being used by the core model. A token is a chunk of text – consisting of a variable number of characters, so the tokenizer's main task is splitting the input into an array of tokens. Then, each token is mapped with a token index, which is the integer encoding of the original text chunk.
 
-![Example of tokenization](./images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Example of tokenization](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 * **Predicting output tokens**: Given n tokens as input (with max n varying from one model to another), the model is able to predict one token as output. This token is then incorporated into the input of the next iteration, in an expanding window pattern, enabling a better user experience of getting one (or multiple) sentence as an answer. This explains why, if you ever played with ChatGPT, you might have noticed that sometimes it looks like it stops in the middle of a sentence.
 
@@ -92,19 +92,19 @@ The input of a large language model is known as prompt, while the output is know
 * An **instruction** specifying the type of output we expect from the model. This instruction sometimes might embed some examples or some additional data.
 
     1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
-    ![Example of summarization](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Example of summarization](../../images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
 
     2. Creative ideation and design of an article, an essay, an assignment or more.
-    ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Example of creative writing](../../images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
 * A **question**, asked in the form of a conversation with an agent.
-    ![Example of conversation](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Example of conversation](../../images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
 
 * A chunk of **text to complete**, which implicitly is an ask for writing assistance. 
-    ![Example of text completion](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Example of text completion](../../images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
 
 * A chunk of **code** together with the ask of explaining and documenting it, or a comment asking to generate a piece of code performing a specific task.
-    ![Coding example](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Coding example](../../images/coding-example.png?WT.mc_id=academic-105485-koreyst)
 
 The examples above are quite simple and don’t want to be an exhaustive demonstration of Large Language Models capabilities. They just want to show the potential of using generative AI, in particular but not limited to educational context.
 
@@ -130,4 +130,4 @@ A: 3, an LLM is non-deterministic, the response vary, however, you can control i
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../../../02-exploring-and-comparing-different-llms/translations/es/README.md?WT.mc_id=academic-105485-koreyst)!
