@@ -23,7 +23,7 @@
 
 ## 🌱 如何开始
 
-首先，将 [整个repo fork ](https://github.com/microsoft/generative-ai-for-beginners/fork) 到您自己的 GitHub 帐户，以便能够更改任何代码并完成相关学习。 您还可以[(🌟)该 Fork](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)以便稍后更容易地找到它！
+首先，将 [整个repo fork ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) 到您自己的 GitHub 帐户，以便能够更改任何代码并完成相关学习。 您还可以[(🌟)该 Fork](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)以便稍后更容易地找到它！
 
 前往[课程学习环境设置](../../00-course-setup/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 找到最适合您的设置指南！
 
@@ -48,7 +48,7 @@
 |       |              课程链接             |                       相关教学内容                     |                     学习目标                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | [课程介绍和学习环境设置](../../00-course-setup/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | 学习环境配置和课程结构 | 在学习本课程的同时帮助您取得成功 | 
-| 01 | [生成式人工智能和 LLMs 介绍](../../01-introduction-to-genai//translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **知识点**: 生成式人工智能以及我们如何适应当前的技术格局 | 了解什么是生成式人工智能 以及 LLMs 的工作原理。                 |
+| 01 | [生成式人工智能和 LLMs 介绍](../../01-introduction-to-genai/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **知识点**: 生成式人工智能以及我们如何适应当前的技术格局 | 了解什么是生成式人工智能 以及 LLMs 的工作原理。                 |
 | 02 | [探索和比较不同的 LLMs](../../02-exploring-and-comparing-different-llms/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **知识点**: 测试、迭代和比较不同的 LLMs 模型 | 为您的应用场景选择正确的模型 |
 | 03 | [负责任地使用生成式人工智能](../../03-using-generative-ai-responsibly/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)| **知识点:** 了解基础模型的局限性和人工智能背后的风险 | 了解如何负责任地构建生成式人工智能应用程序
 | 04 | [提示工程基础](../../04-prompt-engineering-fundamentals/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **代码/知识点:** 提示工程最佳实践| 了解提示结构和用法|
