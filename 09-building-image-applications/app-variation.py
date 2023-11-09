@@ -18,13 +18,13 @@ openai.api_type = 'azure'
 image_dir = os.path.join(os.curdir, 'images')
 
 # Initialize the image path (note the filetype should be png)
-image_path = os.path.join(image_dir, 'generated_image.png')
+image_path = os.path.join(image_dir, 'generated-image.png')
 
 # ---creating variation below---
 try:
     print("LOG creating variation")
     response = openai.Image.create_variation(
-        image=open("generated_image.png", "rb"),
+        image=open("generated-image.png", "rb"),
         n=1,
         size="1024x1024"
     )

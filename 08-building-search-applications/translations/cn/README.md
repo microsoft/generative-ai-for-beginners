@@ -1,6 +1,6 @@
 # 第八章：创建搜索应用
 
-[![Introduction to Generative AI and Large Language Models](../../media/genai_course_8[80].png?WT.mc_id=academic-105485-koreyst)](TBD)
+[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **导学视频敬请期待**
 
@@ -35,7 +35,7 @@ LLMs 应用场景不仅仅是聊天机器人和文本生成。 还可以使用�
 
 以下是问题“can you use rstudio with azure ml?”的语义查询示例。 查看 YouTube 网址，您会看到该网址包含一个时间戳，可将您带到视频中问题答案所在的位置。
 
-![Semantic query for the question "can you use rstudio with Azure ML"](../../media/query_results.png?WT.mc_id=academic-105485-koreyst)
+![Semantic query for the question "can you use rstudio with Azure ML"](../../images/query-results.png?WT.mc_id=academic-105485-koreyst)
 
 ## 什么是语义搜索？
 
@@ -158,7 +158,7 @@ az cognitiveservices account deployment create \
 
 当您运行 notebook 时，系统将提示您输入查询。 输入框将如下所示：
 
-![Input box for the user to input a query](../../media/notebook_search.png?WT.mc_id=academic-105485-koreyst)
+![Input box for the user to input a query](../../images/notebook-search.png?WT.mc_id=academic-105485-koreyst)
 
 ## 继续学习
 

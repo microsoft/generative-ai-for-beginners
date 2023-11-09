@@ -1,6 +1,6 @@
 # Building Image Generation Applications
 
-[![Building Image Generation Applications](./images/genai_course_9[70].png?WT.mc_id=academic-105485-koreyst)](TBD)
+[![Building Image Generation Applications](./images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **Video Coming Soon**
 
@@ -150,7 +150,7 @@ So what does it take to build an image generation application? You need the foll
             os.mkdir(image_dir)
     
         # Initialize the image path (note the filetype should be png)
-        image_path = os.path.join(image_dir, 'generated_image.png')
+        image_path = os.path.join(image_dir, 'generated-image.png')
     
         # Retrieve the generated image
         image_url = generation_response["data"][0]["url"]  # extract image URL from response
@@ -282,11 +282,11 @@ Let's look at an example of how temperature works, by running this prompt twice:
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](./images/v1-generated_image.png?WT.mc_id=academic-105485-koreyst)
+![Bunny on a horse holding a lollipop, version 1](./images/v1-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 Now let's run that same prompt just to see that we won't get the same image twice:
 
-![Generated image of bunny on horse](./images/v2-generated_image.png?WT.mc_id=academic-105485-koreyst)
+![Generated image of bunny on horse](./images/v2-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 As you can see, the images are similar, but not the same. Let's try changing the temperature value to 0.1 and see what happens:
 
@@ -315,8 +315,8 @@ generation_response = openai.Image.create(
 
 Now when you run this code, you get these two images:
 
-- ![Temperature 0, v1](./images/v1-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
-- ![Temperature 0 , v2](./images/v2-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
+- ![Temperature 0, v1](./images/v1-temp-generated-image.png?WT.mc_id=academic-105485-koreyst)
+- ![Temperature 0 , v2](./images/v2-temp-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 Here you can clearly see how the images resemble each other more.
 
@@ -443,7 +443,7 @@ try:
         os.mkdir(image_dir)
 
     # Initialize the image path (note the filetype should be png)
-    image_path = os.path.join(image_dir, 'generated_image.png')
+    image_path = os.path.join(image_dir, 'generated-image.png')
 
     # Retrieve the generated image
     image_url = generation_response["data"][0]["url"]  # extract image URL from response

@@ -1,6 +1,6 @@
 # 第九章：构建图像生成应用
 
-[![Building Image Generation Applications](../../images/genai_course_9[70].png?WT.mc_id=academic-105485-koreyst)](TBD)
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **导学视频敬请期待**
 
@@ -151,7 +151,7 @@ Midjourney 的工作方式与 DALL-E 类似，它根据文本提示生成图像�
             os.mkdir(image_dir)
     
         # Initialize the image path (note the filetype should be png)
-        image_path = os.path.join(image_dir, 'generated_image.png?WT.mc_id=academic-105485-koreyst')
+        image_path = os.path.join(image_dir, 'generated-image.png')
     
         # Retrieve the generated image
         image_url = generation_response["data"][0]["url"]  # extract image URL from response
@@ -286,12 +286,12 @@ Temperature 是控制生成式 AI 模型输出随机性的参数。 Temperature 
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../images/v1-generated_image.png?WT.mc_id=academic-105485-koreyst)
+![Bunny on a horse holding a lollipop, version 1](../../images/v1-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 现在让我们运行相同的提示，我们不会两次获得相同的图像：
 
 
-![Generated image of bunny on horse](../../images/v2-generated_image.png?WT.mc_id=academic-105485-koreyst)
+![Generated image of bunny on horse](../../images/v2-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 正如您所看到的，图像相似，但不相同。 让我们尝试将 temperature 值更改为 0.1，看看会发生什么：
 
@@ -321,8 +321,8 @@ generation_response = openai.Image.create(
 
 现在，当您运行此代码时，您会得到这两个图像：
 
-- ![Temperature 0, v1](../../images/v1-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
-- ![Temperature 0 , v2](../../images/v2-0temp-generated_image.png?WT.mc_id=academic-105485-koreyst)
+- ![Temperature 0, v1](../../images/v1-temp-generated-image.png?WT.mc_id=academic-105485-koreyst)
+- ![Temperature 0 , v2](../../images/v2-temp-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 在这里您可以清楚地看到图像彼此之间的相似程度。
 
@@ -448,7 +448,7 @@ try:
         os.mkdir(image_dir)
 
     # Initialize the image path (note the filetype should be png)
-    image_path = os.path.join(image_dir, 'generated_image.png?WT.mc_id=academic-105485-koreyst')
+    image_path = os.path.join(image_dir, 'generated-image.png')
 
     # Retrieve the generated image
     image_url = generation_response["data"][0]["url"]  # extract image URL from response
