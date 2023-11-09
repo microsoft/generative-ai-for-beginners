@@ -3,18 +3,18 @@
 
 ### 通过 12 章的课程，开启构建生成式 AI 应用程序之路
 
-[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/)
-[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/)
-[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/)
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners)
-[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 
 # 面向初学者的生成式人工智能课程
@@ -23,17 +23,17 @@
 
 ## 🌱 如何开始
 
-首先，将 [整个repo fork ](https://github.com/microsoft/generative-ai-for-beginners/fork) 到您自己的 GitHub 帐户，以便能够更改任何代码并完成相关学习。 您还可以[(🌟)该 Fork](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars)以便稍后更容易地找到它！
+首先，将 [整个repo fork ](https://github.com/microsoft/generative-ai-for-beginners/fork) 到您自己的 GitHub 帐户，以便能够更改任何代码并完成相关学习。 您还可以[(🌟)该 Fork](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)以便稍后更容易地找到它！
 
 前往[课程学习环境设置](../../00-course-setup/translations/cn/README.md) 找到最适合您的设置指南！
 
 ## 🗣️ 找到志同道合的人和获取支持
 
-我们相信最好的学习方式之一就是与他人一起学习！ 加入我们的[官方 AI Discord server](https://aka.ms/genai-discord)，与参加本课程的其他学习者会面和交流并获得支持。 您可能会在那里找到一位联合创始人！
+我们相信最好的学习方式之一就是与他人一起学习！ 加入我们的[官方 AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)，与参加本课程的其他学习者会面和交流并获得支持。 您可能会在那里找到一位联合创始人！
 
 ### 🚀  您是否来自一家初创公司还是有一个创业的想法？
 
-访问 [Microsoft's Founders Hub](https://aka.ms/genai-Foundershub)，您可以在这里申请获得**免费 OpenAI credits**以及可高达价值 **15 万美元的 Azure  AI 服务**。
+访问 [Microsoft's Founders Hub](https://aka.ms/genai-Foundershub?WT.mc_id=academic-105485-koreyst)，您可以在这里申请获得**免费 OpenAI credits**以及可高达价值 **15 万美元的 Azure  AI 服务**。
 
 ## 📂 每章都包含
 
@@ -67,11 +67,11 @@
 
 我们团队还有更多基础基础的系列课程，请点击学习
 
-- [机器学习入门系列](https://aka.ms/ml-beginners)
-- [数据科学入门系列](https://aka.ms/datascience-beginners)
-- [人工智能入门系列](https://aka.ms/ai-beginners)
+- [机器学习入门系列](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+- [数据科学入门系列](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+- [人工智能入门系列](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 
-- [网页编程入门系列](https://aka.ms/webdev-beginners)
-- [物联网入门系列](https://aka.ms/iot-beginners)
+- [网页编程入门系列](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [物联网入门系列](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 
-- [虚拟现实入门系列](https://github.com/microsoft/xr-development-for-beginners)
+- [虚拟现实入门系列](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)

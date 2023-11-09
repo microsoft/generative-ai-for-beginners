@@ -1,6 +1,6 @@
 # 第六章：创建文本生成应用
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png)](https://youtu.be/5jKHzY6-4s8)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
 > *(点击该图片看本章导学视频)*
 
@@ -93,7 +93,7 @@ pip install openai
 您需要执行以下步骤：
 
 - 在 Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst) 上创建帐户。
-- 访问 Azure Open AI。 进入到 [https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并请求访问权限。
+- 访问 Azure Open AI。 进入到 [https://learn.microsoft.com/zh-cn/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/zh-cn/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并请求访问权限。
 
   > [!注意]
   > 您需要申请访问 Azure Open AI Service 的访问。
@@ -105,7 +105,7 @@ pip install openai
 
 您需要告诉“openai”库要使用什么 API key。 要查找 API key ，请转到创建好的 Azure Open AI Service 中的 "Keys and Endpoint"部分并复制 "Key 1" 值。
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 复制 Key 后，让我们调用 libraries 使用它。
 
@@ -665,7 +665,7 @@ A: 1
 
 ## 继续学习
 
-想要了解有关创建文本生成应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关此主章节的其他学习资源。
+想要了解有关创建文本生成应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第七章，我们将学习[构建聊天应用程序](../../../07-building-chat-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
 
