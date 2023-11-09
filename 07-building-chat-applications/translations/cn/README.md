@@ -192,5 +192,5 @@ Head over to Lesson 8 to see how you can start  [building search applications](/
 
 想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
-前往第八章，我们将学习[构建搜索应用程序](../../../07-building-chat-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
+前往第八章，我们将学习[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
 
