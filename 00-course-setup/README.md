@@ -18,11 +18,11 @@ To avoid any dependency issues when running the code, we recommend running this 
 
 This can be created by selecting the `Code` option on your forked version of this repo and selecting the **Codespaces** option.
 
+![Dialog showing buttons to create a codespace](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
+
 ### 3. Storing Your API Keys
 
 Keeping your API keys safe and secure is important when building any type of application. We encourage you not to store any API keys directly in the code you are working with as committing those details to a public repository could result in unwanted costs and issues.
-
-![Dialog showing buttons to create a codespace](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
 ## How to Run locally on your computer
 
