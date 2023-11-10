@@ -1,6 +1,6 @@
 # Fundamentos de Engenharia de Prompt
 
-[![Prompt Engineering Fundamentals](../../img/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 A forma como você escreve seu prompt para o LLM importa. Um prompt cuidadosamente elaborado pode alcançar um resultado melhor do que um que não é. Mas o que são esses conceitos, prompt, Engenharia de Prompt e como posso melhorar o que envio para o LLM? Perguntas como essas são o que este capítulo e o próximo estão procurando responder.
 
@@ -76,7 +76,7 @@ Um LLM vê prompts como uma _sequência de tokens_ onde diferentes modelos (ou v
 
 Para ter uma intuição de como a tokenização funciona, experimente ferramentas como o [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) mostrado abaixo. Copie seu prompt e veja como ele é convertido em tokens, prestando atenção em como caracteres de espaço em branco e pontuações são tratados. Note que este exemplo mostra um LLM mais antigo (GPT-3) - então, tentar isso com um modelo mais recente pode produzir um resultado diferente.
 
-![Tokenization](../../img/4.0-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Tokenization](../../images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 ### Conceito: Modelos Fundamentais
 
@@ -88,7 +88,7 @@ Desejam ver como a conclusão baseada em prompts funciona? Insira o prompt acima
 
 Mas e se o usuário quiser ver algo específico que atenda a alguns critérios ou objetivos de tarefa? É aqui que os LLMs _instruídos_ entram em cena.
 
-![Base LLM Chat Completion](../../img/4.0-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
+![Base LLM Chat Completion](../../images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
 
 ### Conceito: LLMs Instruídos
 
@@ -102,7 +102,7 @@ Vamos experimentar - revisite o prompt acima, mas agora altere a _mensagem do si
 
 Veja como o resultado agora está ajustado para refletir o objetivo desejado e o formato? Um educador pode agora usar diretamente essa resposta em seus slides para aquela aula.
 
-![Instruction Tuned LLM Chat Completion](../../img/4.0-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
+![Instruction Tuned LLM Chat Completion](../../images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 ## Por que precisamos de Engenharia de Prompt?
 
@@ -130,15 +130,15 @@ Então, o que acontece quando executamos este prompt com diferentes provedores d
 
 > **Resposta 1**: OpenAI Playground (GPT-35)
 
-![Resposta 1](../../img/4.0-hallucination-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Resposta 1](../../images/04-hallucination-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Resposta 2**: Azure OpenAI Playground (GPT-35)
 
-![Resposta 2](../../img/4.0-hallucination-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Resposta 2](../../images/04-hallucination-oai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Resposta 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Resposta 3](../../img/4.0-hallucination-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![Resposta 3](../../images/04-hallucination-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 Como esperado, cada modelo (ou versão do modelo) produz respostas ligeiramente diferentes devido ao comportamento estocástico e variações nas capacidades do modelo. Por exemplo, um modelo tem como alvo uma audiência do 8º ano, enquanto o outro assume um estudante do ensino médio. Mas os três modelos geraram respostas que poderiam convencer um usuário desinformado de que o evento era real.
 
