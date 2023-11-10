@@ -18,7 +18,7 @@
 				"ms-python.python",
 				"ms-toolsai.jupyter"
 			], 
-			"postCreateCommand": "pip install -r requirements.txt"
+			"postCreateCommand": "pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
 		}
 	}
 }
