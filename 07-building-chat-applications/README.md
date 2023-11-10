@@ -60,7 +60,7 @@ When building a chat application, a great first step is to assess what is alread
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
 - **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the [notebook](./notebook.ipynb?WT.mc_id=academic-105485-koreyst) for this lesson.
+Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](./notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
 
 ```python
 import os
