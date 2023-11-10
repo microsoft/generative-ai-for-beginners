@@ -1,6 +1,6 @@
 # Fundamentos de Engenharia de Prompt
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 A forma como você escreve seu prompt para o LLM importa. Um prompt cuidadosamente elaborado pode alcançar um resultado melhor do que um que não é. Mas o que são esses conceitos, prompt, Engenharia de Prompt e como posso melhorar o que envio para o LLM? Perguntas como essas são o que este capítulo e o próximo estão procurando responder.
 
