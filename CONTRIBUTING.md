@@ -34,8 +34,9 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 
 - Ensure that all your URLs are wrapped in square brackets followed by a parenthesis with no extra spaces around them or inside them `[]()`.
 - Ensure that any relative link (i.e. links to other files and folders in the repository) starts with a `./` referring to a file or a folder located in the current working directory or a `../` referring to a file or a folder located in a parent working directory.
+- Ensure that any relative link (i.e. links to other files and folders in the repository) has a tracking ID (i.e. `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
+- Ensure that any URL from the following domains _github.com, microsoft.com, visualstudio.com, aka.ms, and azure.com_ has a tracking ID (i.e. `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
 - Ensure that your links don't have country specific locale in them (i.e. `/en-us/` or `/en/`).
-- Ensure that any URL from the following domains _github.com, microsoft.com, visualstudio.com, aka.ms, and azure.com_ has a tracking ID at the end of it (i.e. `?` or `&` then `wt.mc_id=` or `WT.mc_id=`).
 - Ensure that all images are stored in the `./images` folder.
 - Ensure that the images have descriptive names using English characters, numbers, and dashes in the name of your image.
 
@@ -66,17 +67,57 @@ When you type `./` or `../` VS code will prompt you to choose from the available
 ![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/792c1bc1-4c3f-4ad4-a8c5-66dcf224f668)
 Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
 
+Once you add the correct relative path, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
+
 ### Check Paths Have Tracking
 
 This workflow ensures that any relative path has tracking in it.
 This repository is deployed to GitHub pages so we need to track the movement between the different files and folders.
+
+To make sure your relative paths have tracking in them simply check for the following text `?wt.mc_id` at the end of the path.
+If it's appended to your relative paths then you will pass this check.
+
+If not, you may get the following error.
+![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/d5e53a5a-d53d-4486-be80-1a9ed7115093)
+
+To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
+
+Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
+
 
 ### Check URLs Have Tracking
 
 This workflow ensures that any web URL has tracking in it.
 This repository is available to everyone so you need to make sure to track the access to know from where the traffic is coming.
 
+To make sure your URLs have tracking in them simply check for the following text `?wt.mc_id` at the end of the path.
+If it's appended to your URLs then you will pass this check.
+
+If not, you may get the following error.
+![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/72d23ee5-180d-453c-a119-6b9011647a45)
+
+
+To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
+
+Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
+
 ### Check URLs Don't Have Locale
 
 This workflow ensures that any web URL doesn't have country specific locale in it.
 This repository is available to everyone around the world so you need to make sure not to include your country's locale in URLs.
+
+To make sure your URLs don't have country locale in them simply check for the following text `/en-us/` or `/en/` or any other language locale anywhere in the URL.
+If it's not present in your URLs then you will pass this check.
+
+If not, you may get the following error.
+![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/c261987b-f6eb-484e-a4a3-bab696828d62)
+
+To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
+
+Once you remove the country locale, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
+
+Congratulations! We will get back to you as soon as possible with feedback about your contribution.
