@@ -14,7 +14,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 # Curso - Inteligência Artificial Generativa para Iniciantes
 
@@ -30,9 +30,9 @@ Acesse a [Página de Configuração do Curso](../../00-course-setup/translations
 
 ## 🗣️ Conheça Outros Aprendizes e Obtenha Suporte
 
-Nós acreditamos que uma das melhores formas de aprender é aprendendo com outras pessoas! Junte-se ao nosso [servidor oficial do Discord de IA](https://aka.ms/genai-discord) para conhecer e fazer networking com outros alunos(as) que estão fazendo este curso e obter suporte. Quem sabe você pode encontrar seu próximo co-fundador(a) lá!
+Nós acreditamos que uma das melhores formas de aprender é aprendendo com outras pessoas! Junte-se ao nosso [servidor oficial do Discord de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conhecer e fazer networking com outros alunos(as) que estão fazendo este curso e obter suporte. Quem sabe você pode encontrar seu próximo co-fundador(a) lá!
 
-[![Junte-se ao canal do Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![Junte-se ao canal do Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 ### 🚀 Você é uma startup ou tem uma ideia que deseja lançar? 
 

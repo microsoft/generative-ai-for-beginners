@@ -44,9 +44,9 @@ Vamos dar, por exemplo, a criação de um recurso para nossa startup que permite
 
 O modelo produz uma resposta como a que está abaixo:
 
-![Prompt dizendo "Quem foi o único sobrevivente do Titanic"](../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
+![Prompt dizendo "Quem foi o único sobrevivente do Titanic"](../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp?WT.mc_id=academic-105485-koreyst)
 
-> *(Fonte: [Flying bisons](https://flyingbisons.com))*
+> *(Fonte: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 
 Esta é uma resposta muito confiante e completa. Infelizmente, está incorreta. Mesmo com uma quantidade mínima de pesquisa, alguém descobriria que houve mais de um sobrevivente do Titanic. Para um estudante que está começando a pesquisar esse tópico, essa resposta pode ser persuasiva o suficiente para não ser questionada e tratada como fato. As consequências disso podem levar ao sistema de IA sendo pouco confiável e impactar negativamente a reputação de nossa startup.
 

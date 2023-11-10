@@ -1,6 +1,6 @@
 # Fundamentos de Engenharia de Prompt
 
-[![Prompt Engineering Fundamentals](../../img/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk)
+[![Prompt Engineering Fundamentals](../../img/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 A forma como você escreve seu prompt para o LLM importa. Um prompt cuidadosamente elaborado pode alcançar um resultado melhor do que um que não é. Mas o que são esses conceitos, prompt, Engenharia de Prompt e como posso melhorar o que envio para o LLM? Perguntas como essas são o que este capítulo e o próximo estão procurando responder.
 
@@ -74,17 +74,17 @@ Isso é necessariamente um processo de tentativa e erro que requer intuição do
 
 Um LLM vê prompts como uma _sequência de tokens_ onde diferentes modelos (ou versões de um modelo) podem tokenizar o mesmo prompt de maneiras diferentes. Como os LLMs são treinados em tokens (não em texto bruto), a forma como os prompts são tokenizados tem um impacto direto na qualidade da resposta gerada.
 
-Para ter uma intuição de como a tokenização funciona, experimente ferramentas como o [OpenAI Tokenizer](https://platform.openai.com/tokenizer) mostrado abaixo. Copie seu prompt e veja como ele é convertido em tokens, prestando atenção em como caracteres de espaço em branco e pontuações são tratados. Note que este exemplo mostra um LLM mais antigo (GPT-3) - então, tentar isso com um modelo mais recente pode produzir um resultado diferente.
+Para ter uma intuição de como a tokenização funciona, experimente ferramentas como o [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) mostrado abaixo. Copie seu prompt e veja como ele é convertido em tokens, prestando atenção em como caracteres de espaço em branco e pontuações são tratados. Note que este exemplo mostra um LLM mais antigo (GPT-3) - então, tentar isso com um modelo mais recente pode produzir um resultado diferente.
 
 ![Tokenization](../../img/4.0-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 ### Conceito: Modelos Fundamentais
 
-Uma vez que um prompt é tokenizado, a função principal do ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6) (ou modelo fundamental) é prever o token nessa sequência. Como os LLMs são treinados em conjuntos massivos de dados de texto, eles têm uma boa compreensão das relações estatísticas entre tokens e podem fazer essa previsão com alguma confiança. 
+Uma vez que um prompt é tokenizado, a função principal do ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (ou modelo fundamental) é prever o token nessa sequência. Como os LLMs são treinados em conjuntos massivos de dados de texto, eles têm uma boa compreensão das relações estatísticas entre tokens e podem fazer essa previsão com alguma confiança. 
 
 > Observação: eles não compreendem o _significado_ das palavras no prompt ou token; eles apenas veem um padrão que podem "completar" com sua próxima previsão. Eles podem continuar prevendo a sequência até serem interrompidos pela intervenção do usuário ou alguma condição preestabelecida.
 
-Desejam ver como a conclusão baseada em prompts funciona? Insira o prompt acima no [_Chat Playground_](https://oai.azure.com/playground) do Azure OpenAI Studio com as configurações padrão. O sistema está configurado para tratar prompts como solicitações de informação - então, você deve ver uma conclusão que atende a esse contexto.
+Desejam ver como a conclusão baseada em prompts funciona? Insira o prompt acima no [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) do Azure OpenAI Studio com as configurações padrão. O sistema está configurado para tratar prompts como solicitações de informação - então, você deve ver uma conclusão que atende a esse contexto.
 
 Mas e se o usuário quiser ver algo específico que atenda a alguns critérios ou objetivos de tarefa? É aqui que os LLMs _instruídos_ entram em cena.
 
@@ -92,7 +92,7 @@ Mas e se o usuário quiser ver algo específico que atenda a alguns critérios o
 
 ### Conceito: LLMs Instruídos
 
-Um [LLM Instruído](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6) começa com o modelo fundamental e o ajusta com exemplos ou pares de entrada/saída (por exemplo, "mensagens" de várias rodadas) que podem conter instruções claras - e a resposta da IA tenta seguir essa instrução.
+Um [LLM Instruído](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) começa com o modelo fundamental e o ajusta com exemplos ou pares de entrada/saída (por exemplo, "mensagens" de várias rodadas) que podem conter instruções claras - e a resposta da IA tenta seguir essa instrução.
 
 Isso usa técnicas como Aprendizado por Reforço com Feedback Humano (ARFH) que podem treinar o modelo a _seguir instruções_ e _aprender com feedback_ para que produza respostas mais adequadas a aplicações práticas e mais relevantes para objetivos do usuário.
 
@@ -179,7 +179,7 @@ Vimos por que a Engenharia de Prompt é importante - agora vamos entender como o
 
 ### Prompt Básico
 
-Vamos começar com o prompt básico: uma entrada de texto enviada ao modelo sem nenhum outro contexto. Aqui está um exemplo - quando enviamos as primeiras palavras do hino nacional dos EUA para a [API de Completions da OpenAI](https://platform.openai.com/docs/api-reference/completions), ela instantaneamente _completa_ a resposta com as próximas linhas, ilustrando o comportamento básico de previsão.
+Vamos começar com o prompt básico: uma entrada de texto enviada ao modelo sem nenhum outro contexto. Aqui está um exemplo - quando enviamos as primeiras palavras do hino nacional dos EUA para a [API de Completions da OpenAI](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst), ela instantaneamente _completa_ a resposta com as próximas linhas, ilustrando o comportamento básico de previsão.
 
 | Prompt (Input) | Completion (Output) |
 |:---|:---|
@@ -275,9 +275,9 @@ Observe como tivemos que fornecer uma instrução explícita ("Resuma Isso") no 
 
 ### Modelos de Prompt
 
-Um modelo de prompt é uma _receita pré-definida para um prompt_ que pode ser armazenada e reutilizada conforme necessário, para proporcionar experiências do usuário mais consistentes em escala. Em sua forma mais simples, é apenas uma coleção de exemplos de prompt como [este da OpenAI](https://platform.openai.com/examples) que fornece tanto os componentes interativos do prompt (mensagens do usuário e do sistema) quanto o formato de solicitação impulsionado por API - para suportar a reutilização.
+Um modelo de prompt é uma _receita pré-definida para um prompt_ que pode ser armazenada e reutilizada conforme necessário, para proporcionar experiências do usuário mais consistentes em escala. Em sua forma mais simples, é apenas uma coleção de exemplos de prompt como [este da OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) que fornece tanto os componentes interativos do prompt (mensagens do usuário e do sistema) quanto o formato de solicitação impulsionado por API - para suportar a reutilização.
 
-Em sua forma mais complexa, como [este exemplo em LangChain](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/), contém _placeholders_ que podem ser substituídos por dados de diversas fontes (entrada do usuário, contexto do sistema, fontes de dados externas etc.) para gerar um prompt dinamicamente. Isso nos permite criar uma biblioteca de prompts reutilizáveis que podem ser usados para impulsionar experiências do usuário consistentes **programaticamente** em escala.
+Em sua forma mais complexa, como [este exemplo em LangChain](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst), contém _placeholders_ que podem ser substituídos por dados de diversas fontes (entrada do usuário, contexto do sistema, fontes de dados externas etc.) para gerar um prompt dinamicamente. Isso nos permite criar uma biblioteca de prompts reutilizáveis que podem ser usados para impulsionar experiências do usuário consistentes **programaticamente** em escala.
 
 Finalmente, o real valor dos modelos está na capacidade de criar e publicar _bibliotecas de prompts_ para domínios de aplicação verticais - onde o modelo de prompt é agora _otimizado_ para refletir o contexto ou exemplos específicos do domínio da aplicação que tornam as respostas mais relevantes e precisas para o público-alvo.
 
@@ -324,7 +324,7 @@ A Engenharia de Prompt é um processo de tentativa e erro, então tenha em mente
 
 ## Melhores Práticas
 
-Agora, vamos dar uma olhada nas práticas recomendadas comuns pela [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) e pelos praticantes da [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
+Agora, vamos dar uma olhada nas práticas recomendadas comuns pela [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) e pelos praticantes da [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
 
 
 | What | Why |
@@ -366,7 +366,7 @@ Para a nossa tarefa, usaremos um Jupyter Notebook com exercícios que você pode
 
 ### Em seguida, configure suas variáveis de ambiente
 
-- Copie o arquivo `.env.copy` na raiz do repositório para `.env` e preencha o valor `OPENAI_API_KEY`. Você pode encontrar sua chave de API em seu [OpenAI Dashboard](https://beta.openai.com/account/api-keys).
+- Copie o arquivo `.env.copy` na raiz do repositório para `.env` e preencha o valor `OPENAI_API_KEY`. Você pode encontrar sua chave de API em seu [OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst).
 
 ### Em seguida, abra o Jupyter Notebook
 
