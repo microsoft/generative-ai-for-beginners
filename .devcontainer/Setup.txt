@@ -1,0 +1,8 @@
+This file will use the official Python image as the base image for the 
+development container. It will also install some VS Code extensions for Python development,
+such as the Python extension and the Jupyter. 
+
+Finally, it will run the command pip install -r requirements.txt after the container is 
+created, which will install all the Python libraries listed in the requirements.txt file. 
+You can learn more about how to create and use dev containers in VS Code from this link or this link. 
+I hope this helps you with your project http://code.visualstudio.com?WT.mc_id=academic-105485-koreyst 
