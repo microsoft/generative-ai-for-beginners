@@ -61,7 +61,7 @@ LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将�
 
 Midjourney 的工作方式与 DALL-E 类似，它根据文本提示生成图像。 Midjourney 还可以用于使用“戴帽子的猫”或“莫西干狗”等提示来生成图像。
 
-![图像由 Midjourney生成，机械鸽子](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+![图像由 Midjourney生成，机械鸽子](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 
 *图片来源维基百科，图片由 Midjourney 生成*
 
