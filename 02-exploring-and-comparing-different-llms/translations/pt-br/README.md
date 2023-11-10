@@ -1,6 +1,6 @@
 # Explorando e comparando diferentes LLMs
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png)](https://youtu.be/J1mWzw0P74c)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c)
 
 > *Clique na imagem acima para ver o vídeo desta lição*
 
@@ -50,14 +50,14 @@ O termo Modelo de Fundação foi [criado por pesquisadores de Stanford](https://
 
 - **Normalmente, eles são destinados a servir como uma ‘base’ para outros modelos**, o que significa que podem ser usados como ponto de partida para outros modelos serem construídos em cima, o que pode ser feito por ajuste fino.
 
-![Foundation Models versus LLMs](../../images/FoundationModel.png)
+![Foundation Models versus LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Fonte da imagem: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Para esclarecer ainda mais essa distinção, vamos usar o ChatGPT como exemplo. Para criar a primeira versão do ChatGPT, um modelo chamado GPT-3.5 serviu como modelo fundamental. Isso significa que a OpenAI utilizou alguns dados específicos de conversação para criar uma versão ajustada do GPT-3.5 que foi especializada em se sair bem em cenários de conversação, como chatbots.
 
-![Foundation Model](../../images/Multimodal.png)
+![Foundation Model](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
 Fonte da imagem: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
 
@@ -75,15 +75,15 @@ Os LLMs também podem ser categorizados com base na saída que geram.
 
 Os `embeddings` são um conjunto de modelos que podem converter texto em uma forma numérica, chamada `embedding`, que é uma representação numérica do texto de entrada. Os `embeddings` facilitam a compreensão das relações entre palavras ou frases por máquinas e podem ser usadas como entradas por outros modelos, como modelos de classificação ou modelos de agrupamento que têm um melhor desempenho com dados numéricos. Modelos de incorporação são frequentemente usados para aprendizado por transferência, onde um modelo é construído para uma tarefa substituta para a qual há uma abundância de dados, e em seguida, os pesos do modelo (`embeddings`) são reutilizados para outras tarefas subsequentes. Um exemplo desta categoria é [Embeddings no OpenAI](https://platform.openai.com/docs/models/embeddings).
 
-![Embedding](../../images/Embedding.png)
+![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-koreyst)
 
 Modelos de geração de imagem são modelos que geram imagens. Esses modelos são frequentemente usados para edição de imagens, síntese de imagens e tradução de imagens. Modelos de geração de imagem são frequentemente treinados em grandes conjuntos de dados de imagens, como [LAION-5B](https://laion.ai/blog/laion-5b/), e podem ser usados para gerar novas imagens ou editar imagens existentes com técnicas de inpainting, super-resolução e colorização. Exemplos incluem [DALL-E-3](https://openai.com/dall-e-3) e [modelos do Stable Diffusion](https://github.com/Stability-AI/StableDiffusion).
 
-![Image Generation](../../images/Image.png)
+![Image Generation](../../images/Image.png?WT.mc_id=academic-105485-koreyst)
 
 Modelos de geração de texto e código são modelos que geram texto ou código. Esses modelos são frequentemente usados para resumir texto, traduzir e responder a perguntas. Modelos de geração de texto são frequentemente treinados em grandes conjuntos de dados de texto, como [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html), e podem ser usados para gerar novo texto ou responder a perguntas. Modelos de geração de código, como [CodeParrot](https://huggingface.co/codeparrot), são frequentemente treinados em grandes conjuntos de dados de código, como o GitHub, e podem ser usados para gerar novo código ou corrigir bugs em código existente.
 
-![Text and code generation](../../images/Text.png)
+![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -115,19 +115,19 @@ A maioria dos modelos mencionados nos parágrafos anteriores (modelos da OpenAI,
 - Encontrar o Foundation Model de interesse no catálogo, filtrando por tarefa, licença ou nome. Também é possível importar novos modelos que ainda não estejam incluídos no catálogo.
 - Analisar o cartão do modelo, incluindo uma descrição detalhada e exemplos de código, e testá-lo com o widget de Inferência de Amostra, fornecendo um prompt de amostra para testar o resultado.
 
-![Cartão do Modelo](../../images/Llama1.png)
+![Cartão do Modelo](../../images/Llama1.png?WT.mc_id=academic-105485-koreyst)
 
 - Avaliar o desempenho do modelo com métricas de avaliação objetivas em uma carga de trabalho específica e um conjunto de dados específico fornecido como entrada.
 
-![Avaliação do Modelo](../../images/Llama2.png)
+![Avaliação do Modelo](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
 
 - Ajustar o modelo com dados de treinamento personalizados para melhorar o desempenho do modelo em uma carga de trabalho específica, aproveitando as capacidades de experimentação e rastreamento do Aprendizado de Máquina do Azure.
 
-![Ajuste do Modelo](../../images/Llama3.png)
+![Ajuste do Modelo](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
 
 - Implante o modelo pré-treinado original ou a versão ajustada a um ponto de extremidade remoto em tempo real ou por lote, para permitir que aplicativos o consumam.
 
-![Implantação do Modelo](../../images/Llama4.png)
+![Implantação do Modelo](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
 
 ## Melhorando os Resultados dos LLMs
 
@@ -145,7 +145,7 @@ Implantar um LLM em produção, com diferentes níveis de complexidade, custo e 
 
 - **Modelo ajustado fino**: nesse caso, você treinou o modelo ainda mais com seus próprios dados, o que torna o modelo mais preciso e responsivo às suas necessidades, mas pode ser custoso.
 
-![Implantação de LLMs](../../images/Deploy.png)
+![Implantação de LLMs](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
 Fonte da imagem: [Quatro Maneiras de Empresas Implatarem LLMs | Blog Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
 

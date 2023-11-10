@@ -22,7 +22,7 @@ Isso pode ser criado selecionando a opção `Code` na sua versão `birfucada` de
 
 Manter suas chaves da API seguras e protegidas é importante quando você cria qualquer tipo de aplicação. Recomendamos que você não armazene suas chaves da API diretamente no código com o qual está trabalhando. Pois a inclusão dessas informações num repositório público pode resultar em custos indesejados e problemas a você.
 
-![Dialog showing buttons to create a codespace](../../images/who-will-pay.webp)
+![Dialog showing buttons to create a codespace](../../images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
 ## Como Executar Localmente no seu Computador
 

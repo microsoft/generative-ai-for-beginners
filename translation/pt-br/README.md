@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](../../img/1.png)
+![Generative AI For Beginners](../../img/1.png?WT.mc_id=academic-105485-koreyst)
 
 ### Um curso com 12 lições que ensina tudo o que você precisa saber para começar a criar aplicações de IA Generativa
 
