@@ -138,15 +138,15 @@ But what if the user wanted to see something specific that met some criteria or 
 
 > **响应 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../images/04-hallucination-oai.png?WT.mc_id=academic-105485-koreyst)
+![Response 1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
 
 > **响应 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../images/04-hallucination-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Response 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **响应 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../images/04-hallucination-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 正如预期的那样，由于随机行为和模型能力变化，每个模型（或模型版本）都会产生略有不同的响应。 例如，一个模型针对八年级受众，而另一个模型则假设高中生。 但所有三个模型确实生成了可以让不知情的用户相信该事件是真实的响应
 
