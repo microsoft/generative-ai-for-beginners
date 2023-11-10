@@ -3,7 +3,7 @@
 [![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 
-How you write your prompt to the LLM matters, a carefully crafted prompt can achieve achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
+How you write your prompt to the LLM matters, a carefully crafted prompt can achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
 
 _Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
 
@@ -81,7 +81,7 @@ To get an intuition for how tokenization works, try tools like the [OpenAI Token
 
 ### Concept: Foundation Models
 
-Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Not that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
+Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Note that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
 
 Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
 
