@@ -30,7 +30,7 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 * If you are submitting a translation, please create one PR for all the translated files as we don't accept partial translations for the content
 * If you are submitting a typo or documentation fix, you can combine modifications to a single PR where suitable
 
-## General Guidance for writing 
+## General Guidance for writing
 
 - Ensure that all your URLs are wrapped in square brackets followed by a parenthesis with no extra spaces around them or inside them `[]()`.
 - Ensure that any relative link (i.e. links to other files and folders in the repository) starts with a `./` referring to a file or a folder located in the current working directory or a `../` referring to a file or a folder located in a parent working directory.
@@ -42,7 +42,7 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 
 ## GitHub Workflows
 
-When you submit a pull request, four different workflows will be triggered to validate the previous rules. 
+When you submit a pull request, four different workflows will be triggered to validate the previous rules.
 Simply follow the instructions listed here to pass the workflow checks.
 
 - [Check Broken Relative Paths](#check-broken-relative-paths)
@@ -52,19 +52,23 @@ Simply follow the instructions listed here to pass the workflow checks.
 
 ### Check Broken Relative Paths
 
-This workflow ensures that any relative path in your files is working. 
+This workflow ensures that any relative path in your files is working.
 This repository is deployed to GitHub pages so you need to be very careful when you type the links that glue everything together to not direct anyone to the wrong place.
 
-To make sure that your links are working properly simply use VS code to check that. 
+To make sure that your links are working properly simply use VS code to check that.
 
 For example, when you hover over any link in your files you will be prompted to follow the link by pressing on **ctrl + click**
-![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/0ba24c75-bc02-448c-9ce1-7c97dc22c98c)
+
+![VS code follow links screenshot](./images/vscode-follow-link.png "Screenshot from vs code prompt to follow a link when you hover over a link.")
+
 If you click on a link and it's not working locally then, surely it will trigger the workflow and won't work on GitHub.
 
 To fix this issue, try to type the link with the help of VS code.
 
 When you type `./` or `../` VS code will prompt you to choose from the available options according to what you typed.
-![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/792c1bc1-4c3f-4ad4-a8c5-66dcf224f668)
+
+![VS code select relative path screenshot](./images/vscode-select-relative-path.png "Screenshot from vs code prompt to select relative path from a pop up list.")
+
 Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
 
 Once you add the correct relative path, save, and push your changes the workflow will be triggered again to verify your changes.
@@ -79,13 +83,13 @@ To make sure your relative paths have tracking in them simply check for the foll
 If it's appended to your relative paths then you will pass this check.
 
 If not, you may get the following error.
-![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/d5e53a5a-d53d-4486-be80-1a9ed7115093)
+
+![GitHub check paths missing tracking comment screenshot](./images/github-check-paths-missing-tracking-comment.png "Screenshot from github comment that shows missing tracking from relative paths")
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
 
 Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes.
 If you pass the check then you are good to go.
-
 
 ### Check URLs Have Tracking
 
@@ -96,8 +100,8 @@ To make sure your URLs have tracking in them simply check for the following text
 If it's appended to your URLs then you will pass this check.
 
 If not, you may get the following error.
-![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/72d23ee5-180d-453c-a119-6b9011647a45)
 
+![GitHub check urls missing tracking comment screenshot](./images/github-check-urls-missing-tracking-comment.png "Screenshot from github comment that shows missing tracking from urls")
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
 
@@ -113,7 +117,8 @@ To make sure your URLs don't have country locale in them simply check for the fo
 If it's not present in your URLs then you will pass this check.
 
 If not, you may get the following error.
-![image](https://github.com/john0isaac/generative-ai-for-beginners/assets/64026625/c261987b-f6eb-484e-a4a3-bab696828d62)
+
+![GitHub check country locale comment screenshot](./images/github-check-urls-missing-tracking-comment.png "Screenshot from github comment that shows added country locale to urls")
 
 To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
 

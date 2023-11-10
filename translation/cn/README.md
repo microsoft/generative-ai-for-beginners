@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](../../img/1.png?WT.mc_id=academic-105485-koreyst)
+![Generative AI For Beginners](../../images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
 
 ### 通过 12 章的课程，开启构建生成式 AI 应用程序之路
 
