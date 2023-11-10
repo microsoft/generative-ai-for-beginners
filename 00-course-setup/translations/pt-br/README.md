@@ -112,9 +112,9 @@ Se esta for a primeira vez que você está trabalhando com o serviço Azure Open
 
 ## Conheça Outros Aprendizes
 
-Criamos canais em nosso servidor oficial da [Comunidade de Inteligência Artificial no Discord](https://aka.ms/genai-discord) para que você possa conhecer outros aprendizes. Esta é uma ótima maneira de se conectar com outros empreendedores, pessoas desenvolvedoras, estudantes e qualquer pessoa que queira se aprofundar sobre Inteligência Artificial Generativa.
+Criamos canais em nosso servidor oficial da [Comunidade de Inteligência Artificial no Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para que você possa conhecer outros aprendizes. Esta é uma ótima maneira de se conectar com outros empreendedores, pessoas desenvolvedoras, estudantes e qualquer pessoa que queira se aprofundar sobre Inteligência Artificial Generativa.
 
-[![Participe do canal no Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord)
+[![Participe do canal no Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 A equipe do projeto também estará presente neste servidor do Discord para ajudar à todos(as).
 

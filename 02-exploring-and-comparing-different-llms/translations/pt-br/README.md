@@ -1,6 +1,6 @@
 # Explorando e comparando diferentes LLMs
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
 
 > *Clique na imagem acima para ver o vídeo desta lição*
 
@@ -32,17 +32,17 @@ Existem muitos tipos diferentes de modelos LLM, sua escolha de modelo depende do
 
 Dependendo se você pretende usar os modelos para geração de texto, áudio, vídeo ou imagem você pode optar por um tipo diferente de modelo.
 
-- **Reconhecimento de áudio e fala**: para esse fim, os modelos do tipo Whisper são uma ótima escolha. Pois são de propósito geral e destinados ao reconhecimento de fala. Ele é treinado em áudio diversificado e pode realizar reconhecimento de fala multilíngue. Saiba mais sobre [modelos do tipo Whisper aqui](https://platform.openai.com/docs/models/whisper).
+- **Reconhecimento de áudio e fala**: para esse fim, os modelos do tipo Whisper são uma ótima escolha. Pois são de propósito geral e destinados ao reconhecimento de fala. Ele é treinado em áudio diversificado e pode realizar reconhecimento de fala multilíngue. Saiba mais sobre [modelos do tipo Whisper aqui](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Geração de Imagem**: para geração de imagem, DALL-E e Midjourney são duas escolhas muito conhecidas. DALL-E é oferecido pelo Azure OpenAI. [Leia mais sobre DALL-E aqui](https://platform.openai.com/docs/models/dall-e) e também no Capítulo 9 deste currículo.
+- **Geração de Imagem**: para geração de imagem, DALL-E e Midjourney são duas escolhas muito conhecidas. DALL-E é oferecido pelo Azure OpenAI. [Leia mais sobre DALL-E aqui](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) e também no Capítulo 9 deste currículo.
 
-- **Geração de texto**: a maioria dos modelos é treinada na geração de texto e você tem uma grande variedade de escolhas, desde GPT-3.5 até GPT-4. Eles vêm a custos diferentes, sendo o GPT-4 o mais caro. Vale a pena dar uma olhada no [Azure Open AI playground](https://oai.azure.com/portal/playground) para avaliar quais modelos se adequam melhor às suas necessidades em termos de capacidade e custo.
+- **Geração de texto**: a maioria dos modelos é treinada na geração de texto e você tem uma grande variedade de escolhas, desde GPT-3.5 até GPT-4. Eles vêm a custos diferentes, sendo o GPT-4 o mais caro. Vale a pena dar uma olhada no [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) para avaliar quais modelos se adequam melhor às suas necessidades em termos de capacidade e custo.
 
 Escolher um modelo significa que você obtém algumas capacidades básicas, que podem não ser suficientes. Muitas vezes, você tem dados específicos da empresa que precisa informar ao LLM. Existem algumas opções diferentes sobre como abordar isso, abordaremos mais sobre isso nas próximas seções.
 
 ### Modelos de base versus LLMs
 
-O termo Modelo de Fundação foi [criado por pesquisadores de Stanford](https://arxiv.org/abs/2108.07258) e definido como um modelo de IA que segue alguns critérios, como:
+O termo Modelo de Fundação foi [criado por pesquisadores de Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) e definido como um modelo de IA que segue alguns critérios, como:
 
 - **Eles são treinandos usando aprendizado não supervisionado ou aprendizado auto-supervisionado**, o que significa que são treinados em dados multimodais não rotulados e não requerem anotação humana ou rotulagem de dados para seu processo de treinamento.
 
@@ -53,35 +53,35 @@ O termo Modelo de Fundação foi [criado por pesquisadores de Stanford](https://
 ![Foundation Models versus LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Fonte da imagem: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
-](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
+](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404?WT.mc_id=academic-105485-koreyst)
 
 Para esclarecer ainda mais essa distinção, vamos usar o ChatGPT como exemplo. Para criar a primeira versão do ChatGPT, um modelo chamado GPT-3.5 serviu como modelo fundamental. Isso significa que a OpenAI utilizou alguns dados específicos de conversação para criar uma versão ajustada do GPT-3.5 que foi especializada em se sair bem em cenários de conversação, como chatbots.
 
 ![Foundation Model](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
-Fonte da imagem: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf)
+Fonte da imagem: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
 ### Modelos de Código Aberto versus Modelos Proprietários
 
 Outra maneira de categorizar os Modelos de Linguagem de Grande Escala (LLMs) é se eles são de código aberto ou proprietários.
 
-Os modelos de código aberto são modelos que são disponibilizados ao público e podem ser usados por qualquer pessoa. Eles são frequentemente disponibilizados pela empresa que os criou ou pela comunidade de pesquisa. Esses modelos podem ser inspecionados, modificados e personalizados para diversos casos de uso em LLMs. No entanto, nem sempre são otimizados para uso em produção e podem não ser tão eficientes quanto os modelos proprietários. Além disso, o financiamento para modelos de código aberto pode ser limitado, e eles podem não ser mantidos a longo prazo ou não ser atualizados com as pesquisas mais recentes. Exemplos de modelos de código aberto populares incluem [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), [Bloom](https://sapling.ai/llm/bloom) e [LLaMA](https://sapling.ai/llm/llama).
+Os modelos de código aberto são modelos que são disponibilizados ao público e podem ser usados por qualquer pessoa. Eles são frequentemente disponibilizados pela empresa que os criou ou pela comunidade de pesquisa. Esses modelos podem ser inspecionados, modificados e personalizados para diversos casos de uso em LLMs. No entanto, nem sempre são otimizados para uso em produção e podem não ser tão eficientes quanto os modelos proprietários. Além disso, o financiamento para modelos de código aberto pode ser limitado, e eles podem não ser mantidos a longo prazo ou não ser atualizados com as pesquisas mais recentes. Exemplos de modelos de código aberto populares incluem [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) e [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst).
 
-Os modelos proprietários são modelos de propriedade de uma empresa e não são disponibilizados ao público. Esses modelos são frequentemente otimizados para uso em produção. No entanto, não podem ser inspecionados, modificados ou personalizados para diferentes casos de uso. Além disso, nem sempre estão disponíveis gratuitamente e podem exigir uma assinatura ou pagamento para uso. Além disso, os usuários não têm controle sobre os dados usados para treinar o modelo, o que significa que devem confiar ao proprietário do modelo o compromisso com a privacidade dos dados e o uso responsável da IA. Exemplos de modelos proprietários populares incluem [modelos da OpenAI](https://platform.openai.com/docs/models/overview), [Google Bard](https://sapling.ai/llm/bard) ou [Claude 2](https://www.anthropic.com/index/claude-2).
+Os modelos proprietários são modelos de propriedade de uma empresa e não são disponibilizados ao público. Esses modelos são frequentemente otimizados para uso em produção. No entanto, não podem ser inspecionados, modificados ou personalizados para diferentes casos de uso. Além disso, nem sempre estão disponíveis gratuitamente e podem exigir uma assinatura ou pagamento para uso. Além disso, os usuários não têm controle sobre os dados usados para treinar o modelo, o que significa que devem confiar ao proprietário do modelo o compromisso com a privacidade dos dados e o uso responsável da IA. Exemplos de modelos proprietários populares incluem [modelos da OpenAI](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) ou [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
 
 ### Embeddings versus Geração de Imagem versus Geração de Texto e Código
 
 Os LLMs também podem ser categorizados com base na saída que geram.
 
-Os `embeddings` são um conjunto de modelos que podem converter texto em uma forma numérica, chamada `embedding`, que é uma representação numérica do texto de entrada. Os `embeddings` facilitam a compreensão das relações entre palavras ou frases por máquinas e podem ser usadas como entradas por outros modelos, como modelos de classificação ou modelos de agrupamento que têm um melhor desempenho com dados numéricos. Modelos de incorporação são frequentemente usados para aprendizado por transferência, onde um modelo é construído para uma tarefa substituta para a qual há uma abundância de dados, e em seguida, os pesos do modelo (`embeddings`) são reutilizados para outras tarefas subsequentes. Um exemplo desta categoria é [Embeddings no OpenAI](https://platform.openai.com/docs/models/embeddings).
+Os `embeddings` são um conjunto de modelos que podem converter texto em uma forma numérica, chamada `embedding`, que é uma representação numérica do texto de entrada. Os `embeddings` facilitam a compreensão das relações entre palavras ou frases por máquinas e podem ser usadas como entradas por outros modelos, como modelos de classificação ou modelos de agrupamento que têm um melhor desempenho com dados numéricos. Modelos de incorporação são frequentemente usados para aprendizado por transferência, onde um modelo é construído para uma tarefa substituta para a qual há uma abundância de dados, e em seguida, os pesos do modelo (`embeddings`) são reutilizados para outras tarefas subsequentes. Um exemplo desta categoria é [Embeddings no OpenAI](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
 ![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-koreyst)
 
-Modelos de geração de imagem são modelos que geram imagens. Esses modelos são frequentemente usados para edição de imagens, síntese de imagens e tradução de imagens. Modelos de geração de imagem são frequentemente treinados em grandes conjuntos de dados de imagens, como [LAION-5B](https://laion.ai/blog/laion-5b/), e podem ser usados para gerar novas imagens ou editar imagens existentes com técnicas de inpainting, super-resolução e colorização. Exemplos incluem [DALL-E-3](https://openai.com/dall-e-3) e [modelos do Stable Diffusion](https://github.com/Stability-AI/StableDiffusion).
+Modelos de geração de imagem são modelos que geram imagens. Esses modelos são frequentemente usados para edição de imagens, síntese de imagens e tradução de imagens. Modelos de geração de imagem são frequentemente treinados em grandes conjuntos de dados de imagens, como [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), e podem ser usados para gerar novas imagens ou editar imagens existentes com técnicas de inpainting, super-resolução e colorização. Exemplos incluem [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) e [modelos do Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
 ![Image Generation](../../images/Image.png?WT.mc_id=academic-105485-koreyst)
 
-Modelos de geração de texto e código são modelos que geram texto ou código. Esses modelos são frequentemente usados para resumir texto, traduzir e responder a perguntas. Modelos de geração de texto são frequentemente treinados em grandes conjuntos de dados de texto, como [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html), e podem ser usados para gerar novo texto ou responder a perguntas. Modelos de geração de código, como [CodeParrot](https://huggingface.co/codeparrot), são frequentemente treinados em grandes conjuntos de dados de código, como o GitHub, e podem ser usados para gerar novo código ou corrigir bugs em código existente.
+Modelos de geração de texto e código são modelos que geram texto ou código. Esses modelos são frequentemente usados para resumir texto, traduzir e responder a perguntas. Modelos de geração de texto são frequentemente treinados em grandes conjuntos de dados de texto, como [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), e podem ser usados para gerar novo texto ou responder a perguntas. Modelos de geração de código, como [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), são frequentemente treinados em grandes conjuntos de dados de código, como o GitHub, e podem ser usados para gerar novo código ou corrigir bugs em código existente.
 
 ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
@@ -108,7 +108,7 @@ Os modelos são apenas as Redes Neurais, com parâmetros, pesos e outros. Isso p
 ## Como testar e iterar com diferentes modelos para entender o desempenho no Azure
 
 Depois que nossa equipe explorou o cenário atual dos LLMs e identificou alguns bons candidatos para seus cenários, o próximo passo é testá-los em seus dados e carga de trabalho. Isso é um processo iterativo, feito por meio de experimentos e medições.
-A maioria dos modelos mencionados nos parágrafos anteriores (modelos da OpenAI, modelos de código aberto como `Llama2` e `Hugging Face transformers`) está disponível no [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) no [Azure Machine Learning studio](https://ml.azure.com/).
+A maioria dos modelos mencionados nos parágrafos anteriores (modelos da OpenAI, modelos de código aberto como `Llama2` e `Hugging Face transformers`) está disponível no [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) no [Azure Machine Learning studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst).
 
 [Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) é um serviço em nuvem projetado para Cientistas de Dados e Engenheiros de Machine Learning que gerenciam o ciclo completo de Aprendizado de Máquina (treinamento, teste, implantação e gerenciamento de MLOps) em uma única plataforma. O Machine Learning Studio oferece uma interface gráfica de usuário para este serviço e permite ao usuário:
 
@@ -147,7 +147,7 @@ Implantar um LLM em produção, com diferentes níveis de complexidade, custo e 
 
 ![Implantação de LLMs](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
-Fonte da imagem: [Quatro Maneiras de Empresas Implatarem LLMs | Blog Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms)
+Fonte da imagem: [Quatro Maneiras de Empresas Implatarem LLMs | Blog Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
 ### Engenharia de Prompts com Contexto
 
