@@ -102,7 +102,7 @@ Uma das melhores maneiras de manter suas chaves da API seguras ao usar GitHub Co
 
 O curso possui 6 lições conceituais e 6 lições incluem codificações.
 
-Para as lições de codificação, estamos usando o Serviço Azure OpenAI. Você precisará de acesso ao serviço do Azure OpenAI e de uma chave de API para executar o código. Você pode solicitar acesso ao [completar esta aplicação](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu&culture=en-us&country=us).
+Para as lições de codificação, estamos usando o Serviço Azure OpenAI. Você precisará de acesso ao serviço do Azure OpenAI e de uma chave de API para executar o código. Você pode solicitar acesso ao [completar esta aplicação](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu&culture=en-us&country=us?WT.mc_id=academic-105485-koreyst).
 
 Enquanto aguarda o processamento da sua inscrição, cada lição que tenha codificação também inclui um arquivo `README.md` onde você pode visualizar o código e as suas respectivas saídas.
 

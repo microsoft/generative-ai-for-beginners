@@ -18,7 +18,7 @@
 
 # Curso - Inteligência Artificial Generativa para Iniciantes
 
-Aprenda os fundamentos para criar aplicações de IA Generativa com nosso curso que abrange 12 lições, criado pelos **[Microsoft Cloud Advocates](https://developer.microsoft.com/advocates/)**. Cada lição aborda um aspecto fundamental dos princípios e desenvolvimento de aplicações em IA Generativa. Ao decorrer deste curso, estaremos desenvolvendo nossa própria startup de IA Generativa para que você possa entender o que é necessário para lançar suas ideias.
+Aprenda os fundamentos para criar aplicações de IA Generativa com nosso curso que abrange 12 lições, criado pelos **[Microsoft Cloud Advocates](https://developer.microsoft.com/advocates/?WT.mc_id=academic-105485-koreyst)**. Cada lição aborda um aspecto fundamental dos princípios e desenvolvimento de aplicações em IA Generativa. Ao decorrer deste curso, estaremos desenvolvendo nossa própria startup de IA Generativa para que você possa entender o que é necessário para lançar suas ideias.
 
 ## 🌱 Primeiros Passos
 
@@ -36,9 +36,9 @@ Nós acreditamos que uma das melhores formas de aprender é aprendendo com outra
 
 ### 🚀 Você é uma startup ou tem uma ideia que deseja lançar? 
 
-Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
+Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
 
-Visite o [Microsoft's Founders Hub](https://aka.ms/genai-foundershub) onde você pode se inscrever para receber **créditos gratuitos da OpenAI** e até **USD 150 mil para os principais serviços de IA da Azure**.
+Visite o [Microsoft's Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) onde você pode se inscrever para receber **créditos gratuitos da OpenAI** e até **USD 150 mil para os principais serviços de IA da Azure**.
 
 ## 🙏 Deseja ajudar?
 
