@@ -26,7 +26,7 @@ Para começar, [faça um fork deste repositório](https://github.com/microsoft/g
 
 Abaixo estão os links para cada lição. Sinta-se à vontade para explorar e começar em qualquer lição que te interessa mais!
 
-Acesse a [Página de Configuração do Curso](../../00-course-setup/translations/pt-br/README.md) para encontrar o guia de configuração que melhor se adapta a você.
+Acesse a [Página de Configuração do Curso](../../00-course-setup/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar o guia de configuração que melhor se adapta a você.
 
 ## 🗣️ Conheça Outros Aprendizes e Obtenha Suporte
 
