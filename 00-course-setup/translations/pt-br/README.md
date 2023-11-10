@@ -26,7 +26,7 @@ Manter suas chaves da API seguras e protegidas é importante quando você cria q
 
 ## Como Executar Localmente no seu Computador
 
-Para executar o código localmente no seu computador, você precisará ter alguma versão do [Python instalada](https://www.python.org/downloads).
+Para executar o código localmente no seu computador, você precisará ter alguma versão do [Python instalada](https://www.python.org/downloads?WT.mc_id=academic-105485-koreyst).
 
 Para utilizar o repositório, você precisará clonar primeiramente:
 
