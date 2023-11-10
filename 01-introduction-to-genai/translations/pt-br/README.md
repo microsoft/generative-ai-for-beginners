@@ -40,7 +40,7 @@ Para começar, vamos definir alguns conceitos e terminologia básica que usaremo
 
 ## Como surgiu a IA Generativa?
 
-Apesar da extraordinária *hype* criada recentemente com o anúncio de modelos de IA generativa, essa tecnologia está em desenvolvimento há décadas, com os primeiros esforços de pesquisa datando dos anos 60. Agora estamos em um ponto em que a IA possui capacidades cognitivas humanas como conversação, como mostrado por exemplo, no [OpenAI ChatGPT](https://openai.com/chatgpt) ou no [Bing Chat](https://www.microsoft.com/en-us/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), que também utiliza um modelo GPT para a pesquisa na web e conversas do Bing.
+Apesar da extraordinária *hype* criada recentemente com o anúncio de modelos de IA generativa, essa tecnologia está em desenvolvimento há décadas, com os primeiros esforços de pesquisa datando dos anos 60. Agora estamos em um ponto em que a IA possui capacidades cognitivas humanas como conversação, como mostrado por exemplo, no [OpenAI ChatGPT](https://openai.com/chatgpt) ou no [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), que também utiliza um modelo GPT para a pesquisa na web e conversas do Bing.
 
 Voltando um pouco, os primeiros protótipos de IA consistiam em chatbots datilografados, baseando-se em uma base de conhecimento extraída de um grupo de especialistas e representada em um computador. As respostas na base de conhecimento eram acionadas por palavras-chave que apareciam no texto de entrada.
 No entanto, logo ficou claro que tal abordagem, usando chatbots datilografados, não se escalava bem.
