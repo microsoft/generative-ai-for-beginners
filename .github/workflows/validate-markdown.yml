@@ -1,7 +1,7 @@
 name: Validate Markdown
 
 on:
-  # Trigger the workflow on push or pull request
+  # Trigger the workflow on pull request
   pull_request_target:
     branches: 
       - main
@@ -16,7 +16,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  check-broken-links-job:
+  check-broken-paths:
+    name: Check Broken Relative Paths
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -48,12 +49,33 @@ jobs:
               repo: context.repo.repo,
               body: `
               We have automatically detected the following broken relative paths in your lessons.
-              Please check the file paths and associated broken paths inside them.
+              Please check the file paths and associated broken paths inside them. 
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Broken Paths
               ${{ env.BROKEN_PATHS }}
               `
             })
+      - name: Update workflow run status
+        if: ${{ env.BROKEN_PATHS != '' }}
+        run: exit 1
 
+  check-paths-tracking:
+    if: ${{ always() }}
+    needs: check-broken-paths
+    name: Check Paths Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
       - name: Run Check paths tracking
         run: |
           PATHS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_paths_tracking')
@@ -73,11 +95,32 @@ jobs:
               body: `
               We have automatically detected missing tracking id from the following relative paths in your lessons.
               Please check the file paths and associated paths inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Missing Tracking from Paths
               ${{ env.PATHS_TRACKING }}
               `
             })
+      - name: Update workflow run status
+        if: ${{ env.PATHS_TRACKING != '' }}
+        run: exit 1
 
+  check-urls-tracking:
+    if: ${{ always() }}
+    needs: check-paths-tracking
+    name: Check URLs Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
       - name: Run Check URLs tracking
         run: |
           URLS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_tracking')
@@ -97,11 +140,32 @@ jobs:
               body: `
               We have automatically detected missing tracking id from the following URLs in your lessons.
               Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Missing Tracking from URLs
               ${{ env.URLS_TRACKING }}
               `
             })
+      - name: Update workflow run status
+        if: ${{ env.URLS_TRACKING != '' }}
+        run: exit 1
 
+  check-urls-locale:
+    if: ${{ always() }}
+    needs: check-urls-tracking
+    name: Check URLs Don't Have Locale
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
       - name: Run Check URLs Country Locale
         run: |
           URLS_LOCALE=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_locale')
@@ -121,11 +185,11 @@ jobs:
               body: `
               We have automatically detected added country locale to URLs in your lessons.
               Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
               # Check Country Locale in URLs
               ${{ env.URLS_LOCALE }}
               `
             })
-
       - name: Update workflow run status
-        if: ${{ env.BROKEN_PATHS != '' }} || ${{ env.PATHS_TRACKING != '' }} || ${{ env.URLS_TRACKING != '' }} || ${{ env.URLS_LOCALE != '' }}
+        if: ${{ env.URLS_LOCALE != '' }}
         run: exit 1

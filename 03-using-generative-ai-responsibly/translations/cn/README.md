@@ -1,6 +1,6 @@
 # 第三章 ： 负责任地使用生成式人工智能
 
-[![Using Generative AI Responsibly](../../images/genai_course_3[77].png?WT.mc_id=academic-105485-koreyst)]() 
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
 
 > **导学视频即将上架，敬请期待**
 
@@ -44,7 +44,7 @@
 
 该模型产生如下响应：
 
-![提示说“谁是泰坦尼克号的唯一幸存者”](../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp)
+![提示说“谁是泰坦尼克号的唯一幸存者”](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
 
 > *（来源：[飞翔的野牛](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 

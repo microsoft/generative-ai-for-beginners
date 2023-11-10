@@ -1,6 +1,6 @@
 # Using Generative AI Responsibly
 
-[![Using Generative AI Responsibly](./images/genai_course_3[77].png?WT.mc_id=academic-105485-koreyst)]() 
+[![Using Generative AI Responsibly](./images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
 
 > **Video Coming Soon**
 
@@ -44,7 +44,7 @@ Let's take for example we build a feature for our startup that allows students t
 
 The model produces a response like the one below:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp?WT.mc_id=academic-105485-koreyst)
+![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
 
 > *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 

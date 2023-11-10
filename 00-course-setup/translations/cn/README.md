@@ -10,7 +10,7 @@
 
 ### 1. Fork this Repo
 
-[Fork 这个完整的 repo](https://github.com/microsoft/generative-ai-for-beginners/fork) 到你自己的 GitHub 账号下以便您能完成代码的修改和完成相关的挑战. 您也可以 [给该 repo star (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) 让您更容易找到它和相关的 Repo.
+[Fork 这个完整的 repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) 到你自己的 GitHub 账号下以便您能完成代码的修改和完成相关的挑战. 您也可以 [给该 repo star (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) 让您更容易找到它和相关的 Repo.
 
 ### 2. 创建 GitHub Codespaces
 
@@ -88,7 +88,7 @@ jupyterhub
 
 ## 贡献该内容
 
-本课程是一项开源计划。 如果您发现需要改进的地方或问题，请创建 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls) 或记录 [Github 问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)。
+本课程是一项开源计划。 如果您发现需要改进的地方或问题，请创建 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) 或记录 [Github 问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)。
 
 课程项目团队将跟踪所有贡献，为开源做出贡献是在生成人工智能领域建立职业生涯的绝佳方式。
 

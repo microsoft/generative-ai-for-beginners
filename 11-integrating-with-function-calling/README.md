@@ -1,6 +1,6 @@
 # Integrating with function calling
 
-![chapter image](./images/genai_course_11[90].png?WT.mc_id=academic-105485-koreyst)
+![chapter image](./images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)
 
 You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.  
 
