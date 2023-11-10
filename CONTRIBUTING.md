@@ -3,7 +3,7 @@
 This project welcomes contributions and suggestions. Most contributions require you to
 agree to a Contributor License Agreement (CLA) declaring that you have the right to,
 and actually do, grant us the rights to use your contribution. For details, visit
-https://cla.microsoft.com.
+<https://cla.microsoft.com>.
 
 > Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
 
@@ -79,7 +79,7 @@ If you pass the check then you are good to go.
 This workflow ensures that any relative path has tracking in it.
 This repository is deployed to GitHub pages so we need to track the movement between the different files and folders.
 
-To make sure your relative paths have tracking in them simply check for the following text `?wt.mc_id` at the end of the path.
+To make sure your relative paths have tracking in them simply check for the following text `?wt.mc_id=` at the end of the path.
 If it's appended to your relative paths then you will pass this check.
 
 If not, you may get the following error.
@@ -96,7 +96,7 @@ If you pass the check then you are good to go.
 This workflow ensures that any web URL has tracking in it.
 This repository is available to everyone so you need to make sure to track the access to know from where the traffic is coming.
 
-To make sure your URLs have tracking in them simply check for the following text `?wt.mc_id` at the end of the path.
+To make sure your URLs have tracking in them simply check for the following text `?wt.mc_id=` at the end of the URL.
 If it's appended to your URLs then you will pass this check.
 
 If not, you may get the following error.
@@ -118,7 +118,7 @@ If it's not present in your URLs then you will pass this check.
 
 If not, you may get the following error.
 
-![GitHub check country locale comment screenshot](./images/github-check-urls-missing-tracking-comment.png "Screenshot from github comment that shows added country locale to urls")
+![GitHub check country locale comment screenshot](./images/github-check-country-locale-comment.png "Screenshot from github comment that shows added country locale to urls")
 
 To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
 
