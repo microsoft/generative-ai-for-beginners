@@ -51,7 +51,8 @@ Simply follow the instructions listed here to pass the workflow checks.
 
 ### Check Broken Relative Paths
 
-This workflow ensures that any relative path in your files is working. This repository is deployed to GitHub pages so you need to be very careful when you type the links that glue everything together to not direct anyone to the wrong place.
+This workflow ensures that any relative path in your files is working. 
+This repository is deployed to GitHub pages so you need to be very careful when you type the links that glue everything together to not direct anyone to the wrong place.
 
 To make sure that your links are working properly simply use VS code to check that. 
 
@@ -67,12 +68,15 @@ Follow the path by clicking on the desired file or folder and you will be sure t
 
 ### Check Paths Have Tracking
 
-The workflow
+This workflow ensures that any relative path has tracking in it.
+This repository is deployed to GitHub pages so we need to track the movement between the different files and folders.
 
 ### Check URLs Have Tracking
 
-This workflow
+This workflow ensures that any web URL has tracking in it.
+This repository is available to everyone so you need to make sure to track the access to know from where the traffic is coming.
 
 ### Check URLs Don't Have Locale
 
-This workflow
+This workflow ensures that any web URL doesn't have country specific locale in it.
+This repository is available to everyone around the world so you need to make sure not to include your country's locale in URLs.
