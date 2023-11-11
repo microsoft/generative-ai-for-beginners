@@ -19,7 +19,7 @@
 
 # Generative AI for Beginners - A Course 
 
-Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, we will be building our own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
+Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, you will be building your own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
 
 ## 🌱 Getting Started
 
@@ -31,7 +31,7 @@ Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-10
 
 ## 🗣️ Meet Other Learners, Get Support 
 
-We believe one of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
+One of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
 ## 🧠 Want to learn more? 
 After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge! 
@@ -50,8 +50,8 @@ Here are ways you can contribute to this course:
 ## 📂 Each lesson includes:
 
 - a short video introduction to the topic
-- written lesson located in the README 
-- for project-based lessons, a Jupyter Notebook with code examples 
+- a written lesson located in the README 
+- a Jupyter Notebook with code examples (for project-based lessons) 
 - a challenge or assignment to apply your learning 
 - links to extra resources to continue your learning
 
@@ -59,14 +59,14 @@ Here are ways you can contribute to this course:
 |       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | [Course Introduction - How to Take This Course](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) | Tech setup and course structure | Setting you up for success while learning in this course| 
-| 01 | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) | **Concept**: Generative AI and how we landed on the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
+| 01 | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) | **Concept**: Generative AI and the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
 | 02 | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) | **Concept**: Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
 | 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)| **Concept:** Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
 | 04 | [Understanding Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) | **Code/Concept:** Hands-on application of Prompt Engineering Best Practices  |  Understand prompt structure & usage|  
 | 05 | [Creating Advanced Prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst) | **Code/Concept:** Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improve the outcome of your prompts.| 
 | 06 | [Building Text Generation Applications](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** Build a text generation app using Azure OpenAI  | Understand how to efficiently use tokens and temperature to vary the model's output | |
 | 07 | [Building Chat Applications](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Code**: Techniques for efficiently building and integrating chat applications.| Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications| 
-| 08 | [Building Search Apps Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Code**: Semantic vs Keyword search.  What are text embeddings and how do they apply to search  | Create an application that uses Embeddings to search for data. | 
+| 08 | [Building Search Apps Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Code**: Semantic vs Keyword search.  Learn about text embeddings and how they apply to search  | Create an application that uses Embeddings to search for data. | 
 | 09 | [Building Image Generation Applications](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** Image generation and why it's useful in building applications| Build an image generation application | 
 | 10 | [Building Low Code AI Applications](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Low Code:** Introduction to Generative AI in Power Platform | Build a Student Assignment Tracker App for our education startup with Low Code | |
 | 11 | [Integrating External Applications with Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
@@ -84,8 +84,6 @@ Our team produces other courses! Check out:
 - [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 - [IoT for Beginners](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
