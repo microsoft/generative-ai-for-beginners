@@ -542,8 +542,7 @@ To further improve it, we want to add the following:
         No of recipes (for example, 5: 2
         List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
         Filter (for example, vegetarian, vegan, or gluten-free: sugar
-        Recipes:
-         or milk.
+
         
         -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
         -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
