@@ -38,7 +38,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 ##  🚀  Are you a startup or got an idea you want to launch? 
 
-Visit [Microsoft's Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) where you can apply to receive **free OpenAI credits** and up to **$150k towards Azure's leading AI services**. 
+Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) to receive **free OpenAI credits** and up to **$150k towards Azure credits to access OpenAI models through Azure OpenAI Services**. 
 
 ##  🙏 Want to help?
 
