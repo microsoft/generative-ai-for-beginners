@@ -76,7 +76,7 @@ Você criará o aplicativo usando Copilot no Power Apps seguindo as etapas abaix
 
     > **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Suggested fields in your new table](./images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-koreyst)
+   ![Suggested fields in your new table](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
 1. Os educadores desejam enviar e-mails aos alunos que enviaram suas atribuições para mantê-los atualizados sobre o progresso de suas tarefas. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do aluno. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: ***Quero adicionar uma coluna para armazenar o e-mail do aluno***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
@@ -228,4 +228,4 @@ Para aprender a usar este modelo de IA no Power Automate, passe pelo módulo [Ad
 
 Após concluir esta lição, confira nossa [coleção de aprendizado de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar seu conhecimento em IA generativa!
 
-Vamos avançar para a Lição 11, onde veremos como [integrar a IA generativa com chamada de função](../../../11-integrating-with-function-calling/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
+Vamos avançar para a Lição 11, onde veremos como [integrar a IA generativa com chamada de função](../../../11-integrating-with-function-calling/transaltions/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
