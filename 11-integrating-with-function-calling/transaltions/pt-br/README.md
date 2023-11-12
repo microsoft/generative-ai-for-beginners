@@ -450,4 +450,4 @@ Dica: Consulte a [documentação de referência da API Learn](https://learn.micr
 
 Após completar esta lição, confira nossa [coleção de aprendizado sobre IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar seus conhecimentos em IA Generativa!
 
-Vá para a Lição 12, onde veremos como [projetar UX para aplicativos de IA](../../../12-designing-ux-for-ai-applications/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
+Vá para a Lição 12, onde veremos como [Projetando UX para aplicativos de IA](../../../12-designing-ux-for-ai-applications/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
