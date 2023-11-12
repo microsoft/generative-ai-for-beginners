@@ -138,7 +138,7 @@ Então, o que acontece quando executamos este prompt com diferentes provedores d
 
 > **Resposta 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Resposta 3](../../images/04-hallucination-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 Como esperado, cada modelo (ou versão do modelo) produz respostas ligeiramente diferentes devido ao comportamento estocástico e variações nas capacidades do modelo. Por exemplo, um modelo tem como alvo uma audiência do 8º ano, enquanto o outro assume um estudante do ensino médio. Mas os três modelos geraram respostas que poderiam convencer um usuário desinformado de que o evento era real.
 
