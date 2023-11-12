@@ -36,7 +36,7 @@ As part of this lesson, we will continue to work with our startup, Edu4All, in t
 
 Here's what Edu4All's students could generate for example if they're working in class on monuments:
 
-![Edu4All startup, class on monuments, Eiffel Tower](./images/startup.png?WT.mc_id=academic-105485-koreyst)
+![Edu4All startup, class on monuments, Eiffel Tower](../../images/startup.png?WT.mc_id=academic-105485-koreyst)
 
 using a prompt like
 
