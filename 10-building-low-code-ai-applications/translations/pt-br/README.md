@@ -228,4 +228,4 @@ Para aprender a usar este modelo de IA no Power Automate, passe pelo módulo [Ad
 
 Após concluir esta lição, confira nossa [coleção de aprendizado de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar seu conhecimento em IA generativa!
 
-Vamos avançar para a Lição 11, onde veremos como [integrar a IA generativa com chamada de função](../../../11-integrating-with-function-calling/transaltions/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
+Vamos avançar para a Lição 11, onde veremos como [Integrando a IA generativa com chamada de função](../../../11-integrating-with-function-calling/transaltions/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
