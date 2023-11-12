@@ -130,11 +130,11 @@ Então, o que acontece quando executamos este prompt com diferentes provedores d
 
 > **Resposta 1**: OpenAI Playground (GPT-35)
 
-![Resposta 1](../../images/04-hallucination-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Resposta 1](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Resposta 2**: Azure OpenAI Playground (GPT-35)
 
-![Resposta 2](../../images/04-hallucination-oai.png?WT.mc_id=academic-105485-koreyst)
+![Response 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Resposta 3**: : Hugging Face Chat Playground (LLama-2)
 
