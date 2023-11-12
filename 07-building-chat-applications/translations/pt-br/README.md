@@ -66,7 +66,7 @@ Ao criar uma aplicação de chat, um ótimo primeiro passo é avaliar o que já 
 
 - **Acesso a tecnologia de ponta**: Alavancar modelos que foram ajustados e treinados em conjuntos de dados extensivos proporciona à sua aplicação capacidades de linguagem natural.
 
-Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](./notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
+Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
 
 ```python
 import os
