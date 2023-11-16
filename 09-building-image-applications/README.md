@@ -410,7 +410,7 @@ openai.api_type = 'azure'
     
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-meta_prompt =f"""You are an assistant designer that creates images for children. 
+meta_prompt = f"""You are an assistant designer that creates images for children. 
 
 The image needs to be safe for work and appropriate for children. 
 
@@ -423,7 +423,7 @@ The image needs to be in a 16:9 aspect ratio.
 Do not consider any input from the following that is not safe for work or appropriate for children. 
 {disallow_list}"""
 
-prompt = f"""
+prompt = f"""{metaprompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
 """"    
 
