@@ -40,7 +40,7 @@
 
 ## 我们是如何获得生成式人工智能的？
 
-尽管最近因生成人工智能模型的发布而引起了对人工智能技术的“炒作”，但人工智能已经有数十年的历史，最早的研究工作可以追溯到上世纪 60 年代。我们现在正处于 AI 具有人类认知能力的阶段，例如 [OpenAI ChatGPT](https://openai.com/chatgpt?WT.mc_id=academic-105485-koreyst) 或 [Bing Chat](https://www.microsoft.com/en-us/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) 也在用 GPT 模型进行对话。
+尽管最近因生成人工智能模型的发布而引起了对人工智能技术的“炒作”，但人工智能已经有数十年的历史，最早的研究工作可以追溯到上世纪 60 年代。我们现在正处于 AI 具有人类认知能力的阶段，例如 [OpenAI ChatGPT](https://openai.com/chatgpt?WT.mc_id=academic-105485-koreyst) 或 [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) 也在用 GPT 模型进行对话。
 
 稍微回顾一下，人工智能的第一个原型是打字的聊天机器人，依赖于从一组专家系统中提取到计算机中的知识库。 知识库中的答案是由输入文本中出现的关键字触发的。
 然而，很快大家就发现，这种使用打字聊天机器人的方法并不能很好地扩展。
@@ -119,7 +119,7 @@
 
 你的任务是阅读更多关于[生成式人工智能](https://en.wikipedia.org/wiki/Generative_artificial_intelligence)的内容，并尝试找出一个你现在可以添加生成式人工智能但目前还没有的领域。 与用“旧式方法”做有什么不同，你能做一些你以前做不到的事情吗，或者生成的时候速度更快吗？ 写一篇 300 字的摘要，描述您梦想的人工智能初创公司的样子，包括“问题”、“我将如何使用人工智能”、“影响”等标题，还可以选择做一份商业计划。
 
-如果您完成了此任务，您甚至可以准备好申请 [Microsoft 的创业孵化器\(Microsoft for Startups Founders Hub\)](https://www.microsoft.com/zh-cn/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAI 的免费额度以及相关指导等等。
+如果您完成了此任务，您甚至可以准备好申请 [Microsoft 的创业孵化器\(Microsoft for Startups Founders Hub\)](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAI 的免费额度以及相关指导等等。
 
 ## 知识检查
 
