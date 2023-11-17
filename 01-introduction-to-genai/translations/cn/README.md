@@ -1,6 +1,6 @@
 # 第一章 : 生成式人工智能和 LLMs 介绍
 
-[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+[![生成式人工智能和 LLMs 介绍](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
 
 *(点击该图片看本章导学视频)*
 
@@ -22,7 +22,7 @@
 学习完本课程后，您将会了解到：
 
 * 什么是生成式人工智能以及 LLMs 如何工作。
-* 如何针对不同的使用 LLMs 的例子(这里我们重点关注教育场景)。
+* 如何针对不同的使用 LLMs 的例子（这里我们重点关注教育场景）。
 
 ## 场景: our educational startup 
 
@@ -34,13 +34,13 @@
 
 生成式人工智能有望彻底改变我们今天的学习和教学方式，学生可以每天 24 小时使用虚拟教师，虚拟教室不仅能提供大量信息和示例，也能够利用创新的工具来评估学生并提供反馈。
 
-![Five young students looking at a monitor - image by DALLE2](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+![五位学生正看着屏幕 - 由 DALLE2 生成的图片](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
 
 首先，让我们来学习一些将在整个课程系列中使用的基本概念和术语。
 
 ## 我们是如何获得生成式人工智能的？
 
-尽管最近因生成人工智能模型的发布而引起了对人工智能技术的“炒作”，但人工智能已经有数十年的历史，最早的研究工作可以追溯到上世纪 60 年代。 我们现在正处于 AI 具有人类认知能力的阶段，例如 [OpenAI ChatGPT](https://openai.com/chatgpt?WT.mc_id=academic-105485-koreyst) 或 [Bing Chat](https://www.microsoft.com/en-us/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst）也在用 GPT 模型进行对话。
+尽管最近因生成人工智能模型的发布而引起了对人工智能技术的“炒作”，但人工智能已经有数十年的历史，最早的研究工作可以追溯到上世纪 60 年代。我们现在正处于 AI 具有人类认知能力的阶段，例如 [OpenAI ChatGPT](https://openai.com/chatgpt?WT.mc_id=academic-105485-koreyst) 或 [Bing Chat](https://www.microsoft.com/en-us/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) 也在用 GPT 模型进行对话。
 
 稍微回顾一下，人工智能的第一个原型是打字的聊天机器人，依赖于从一组专家系统中提取到计算机中的知识库。 知识库中的答案是由输入文本中出现的关键字触发的。
 然而，很快大家就发现，这种使用打字聊天机器人的方法并不能很好地扩展。
@@ -73,7 +73,7 @@
 
 * **分词器，文本到数字**：大型语言模型接收文本作为输入并生成文本作为输出。 然而，作为统计模型，它们对数字的处理效果对比起文本序列的处理效果要好得多。 这就是为什么模型的每个输入在被核心模型使用之前都由分词器处理。 标记是一段文本——由可变数量的字符组成，因此标记器的主要任务是将输入分割成标记数组。 然后，每个令牌都映射有一个令牌索引，该索引是原始文本块的整数编码。
 
-![Example of tokenization](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![分词的例子](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 * **预测输出标记**：给定 n 个标记作为输入（最大 n 因模型而异），模型能够预测一个标记作为输出。 然后，该标记会以扩展窗口模式合并到下一次迭代的输入中，从而获得一个（或多个）句子作为答案,生成结果有更好的用户体验。 这解释了为什么如果您曾经使用过 ChatGPT，您可能会注意到有时它在生成结果时在句子中间出现停顿。
 
@@ -117,9 +117,9 @@
 
 ## 任务
 
-你的任务是阅读更多关于生成式人工智能（https://en.wikipedia.org/wiki/Generative_artificial_intelligence）的内容，并尝试找出一个你现在可以添加生成式人工智能但目前还没有的领域。 与用“旧式方法”做有什么不同，你能做一些你以前做不到的事情吗，或者生成的时候速度更快吗？ 写一篇 300 字的摘要，描述您梦想的人工智能初创公司的样子，包括“问题”、“我将如何使用人工智能”、“影响”等标题，还可以选择做一份商业计划。
+你的任务是阅读更多关于[生成式人工智能](https://en.wikipedia.org/wiki/Generative_artificial_intelligence)的内容，并尝试找出一个你现在可以添加生成式人工智能但目前还没有的领域。 与用“旧式方法”做有什么不同，你能做一些你以前做不到的事情吗，或者生成的时候速度更快吗？ 写一篇 300 字的摘要，描述您梦想的人工智能初创公司的样子，包括“问题”、“我将如何使用人工智能”、“影响”等标题，还可以选择做一份商业计划。
 
-如果您完成了此任务，您甚至可以准备好申请 Microsoft 的创业孵化器[Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAIc redits 以及相关指导等等
+如果您完成了此任务，您甚至可以准备好申请 [Microsoft 的创业孵化器\(Microsoft for Startups Founders Hub\)](https://www.microsoft.com/zh-cn/startups?WT.mc_id=academic-105485-koreyst)，我们为您提供 Azure 和 OpenAI 的免费额度以及相关指导等等。
 
 ## 知识检查
 
@@ -133,6 +133,6 @@
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主题的其他学习资源。
+想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)查找有关此主题的其他学习资源。
 
 前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](../../../02-exploring-and-comparing-different-llms/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！
