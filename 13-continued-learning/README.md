@@ -80,7 +80,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/en-us/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-koreyst)
+🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-koreyst)
 
 
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
