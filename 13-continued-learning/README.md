@@ -48,7 +48,11 @@ After completing this course, check out our [Generative AI Learning collection](
 
 ## Lesson 4 - Understanding Prompt Engineering Fundamentals
 
-🔗 [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
+🔗 [Getting Started with Azure OpenAI Services](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-koreyst)
+
+[Apply Prompt Engineering with Azure OpenAI services](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-koreyst)
+
+[Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering/?WT.mc_id=academic-105485-koreyst)
 
@@ -76,6 +80,9 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
+🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-koreyst)
+
+
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
 ## Lesson 8 - Building Search Applications
@@ -99,6 +106,7 @@ After completing this course, check out our [Generative AI Learning collection](
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?WT.mc_id=academic-105485-koreyst)
 
 ## Lesson 10 - Building Low Code AI Applications
+🔗 [Create bots with Microsoft Copilot Studio](https://learn.microsoft.com/training/paths/work-power-virtual-agents/?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-koreyst)
 
