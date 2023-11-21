@@ -4,7 +4,7 @@
 
 *(Clique na imagem acima para assistir ao vídeo desta lição)*
 
-A Inteligência Artificial Generativa é uma forma de inteligência artificial capaz de gerar texto, imagens e outros tipos de conteúdos. O que a torna uma tecnologia fantástica é que ela democratiza a IA. Além disso, qualquer pessoa pode usá-la com apenas uma pequena frase, uma sentença escrita em uma linguagem natural. Não é necessário aprender uma linguagem como Java ou SQL para realizar algo significativo. Tudo o que você precisa fazer é usar sua própria linguagem, declarar o que deseja e uma sugestão de um modelo de IA será gerada. As aplicações e o impacto disso são enormes: você pode escrever ou compreender relatórios, criar aplicações e muito mais, tudo em questão de segundos.
+A Inteligência Artificial Generativa é uma forma de inteligência artificial capaz de gerar texto, imagens e outros tipos de conteúdo. O que a faz uma tecnologia fantástica é que ela democratiza a IA. Além disso, qualquer pessoa pode usá-la com apenas uma pequena frase, uma sentença escrita em uma linguagem natural. Não é necessário aprender uma linguagem como Java ou SQL para realizar algo significativo. Tudo o que você precisa fazer é usar sua própria linguagem, declarar o que deseja e uma sugestão de um modelo de IA será gerada. As aplicações e o impacto disso são enormes: você pode escrever ou compreender relatórios, criar aplicações e muito mais, tudo em questão de segundos.
 
 Neste currículo, exploraremos como nossa startup aproveita a IA generativa para desbloquear novos cenários no mundo da educação e como lidamos com os desafios inevitáveis relacionados às implicações sociais de sua aplicação e às limitações tecnológicas.
 
@@ -57,7 +57,7 @@ As redes neurais (ou as Redes Neurais Recorrentes - `RNNs`) aprimoraram signific
 
 Essa é a tecnologia que impulsionou os assistentes virtuais nascidos na primeira década do novo século, muito proficientes na interpretação da linguagem humana, identificando uma necessidade e executando uma ação para satisfazê-la - como responder com um script predefinido ou consumir um serviço de terceiros.
 
-### E, hoje a IA Generativa
+### Atualmente, a IA Generativa
 
 Foi assim que chegamos à IA Generativa de hoje, que pode ser vista como um subconjunto de aprendizado profundo.
 
@@ -71,11 +71,11 @@ A maioria dos modelos recentes da IA generativa - também conhecidos como Grande
 
 No próximo capítulo, vamos explorar diferentes tipos de modelos de IA generativa. Por enquanto, vamos dar uma olhada em como os grandes modelos de linguagem funcionam, com foco nos modelos do OpenAI GPT (`Generative Pre-trained Transformer`).
 
-* **Tokenizador, texto para números**: Grandes Modelos de Linguagem, recebem um texto como entrada e geram um texto como saída. No entanto, sendo modelos estatísticos, eles funcionam muito melhor com números do que sequências de texto. É por isso que cada entrada no modelo é processada por um `tokenizador` antes de ser usada pelo modelo principal. Um `token` é um pedaço de texto - consistindo de um número variável de caracteres, portanto, a principal tarefa do tokenizador é dividir a entrada em uma matriz de tokens. Em seguida, cada token é mapeado com um índice de token, que é a codificação inteira do trecho de texto original.
+* **Tokenizador, texto para números**: Grandes Modelos de Linguagem, recebem um texto como entrada e geram um texto como saída. No entanto, sendo modelos estatísticos, eles funcionam muito melhor com números do que sequências de texto. É por isso que cada entrada no modelo é processada por um `tokenizador` antes de ser usada pelo modelo principal. Um `token` é um pedaço de texto - consistindo em um número variável de caracteres, portanto, a principal tarefa do tokenizador é dividir a entrada em uma matriz de tokens. Em seguida, cada token é mapeado com um índice de token, que é a codificação inteira do trecho de texto original.
 
 ![Example of tokenization](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
-* **Previsão de tokens de saída**: Dados `n` tokens como entrada (com o máximo `n` variando de um modelo para outro), o modelo é capaz de prever um token como saída. Esse token é então incorporado à entrada da próxima iteração em um padrão de janela expansiva. Possibilitando assim, uma melhor experiência do usuário em obter uma (ou várias) sentenças como resposta. Isso explica porque, se você já brincou com o ChatGPT, pode ter notado que às vezes parece que ele para no meio de uma frase.
+* **Previsão de tokens de saída**: Dados `n` tokens como entrada (com o máximo `n` variando de um modelo para outro), o modelo é capaz de prever um token como saída. Esse token é então incorporado à entrada da próxima iteração em um padrão de janela expansiva. Possibilitando assim, uma melhor experiência do usuário em obter uma (ou várias) sentenças como resposta. Isso explica por que, se você já brincou com o ChatGPT, pode ter notado que às vezes parece que ele para no meio de uma frase.
 
 * **Processo de seleção, distribuição de probabilidade**: O token de saída é escolhido pelo modelo de acordo com a probabilidade de ocorrer após a sequência de texto atual. Isso ocorre porque o modelo prevê uma distribuição de probabilidade sobre todos os possíveis *próximos tokens* calculados com base em seu treinamento. No entanto, nem sempre o token com a maior probabilidade é escolhido na distribuição resultante. Um grau de aleatoriedade é adicionado a essa escolha, de forma que o modelo age de maneira não determinística - não obtemos a mesma saída exata para a mesma entrada. Esse grau de aleatoriedade é adicionado para simular o processo de pensamento criativo e pode ser ajustado usando um parâmetro do modelo chamado temperatura.
 
