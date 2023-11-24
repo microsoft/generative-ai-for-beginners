@@ -1,6 +1,6 @@
 # 第四章：提示工程基础
 
-[![Prompt Engineering Fundamentals](../../img/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 
 如何撰写 LLM 的提示很重要，精心设计的提示可以比不精心设计的提示取得更好的结果。 但这些概念到底是什么，提示、提示工程以及我如何改进我发送给 LLMs 的内容？ 诸如此类的问题正是本章和下一章想要解答的。
@@ -48,7 +48,7 @@ _生成式人工智能_能够根据用户请求创建新内容（例如文本、
 - **教育者**可能会要求人工智能为目标受众和主题生成教学计划。 AI可以按照指定的格式构建个性化计划。
 - **学生**可能会要求人工智能辅导他们学习困难的科目。 人工智能现在可以通过适合学生水平的课程、结合提示和示例来指导学生。
 
-这只是冰山一角。 查看 [教育中的提示工程](https://github.com/microsoft/prompts-for-edu/tree/main) - 一个由教育专家设计的开源提示库 ！ 尝试在沙箱中运行其中一些提示或使用 OpenAI Playground 看看会产生什么结果！
+这只是冰山一角。 查看 [教育中的提示工程](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - 一个由教育专家设计的开源提示库 ！ 尝试在沙箱中运行其中一些提示或使用 OpenAI Playground 看看会产生什么结果！
 
 <!--
 LESSON TEMPLATE:
@@ -77,29 +77,29 @@ Define it and explain why it is needed.
 
 LLM 将提示视为标记序列，其中不同的模型（或模型的版本）可以以不同的方式对同一提示进行标记。 由于 LLM 是根据标记（而不是原始文本）进行训练的，因此提示标记化的方式对生成的响应的质量有直接影响。
 
-要直观地了解标记化的工作原理，请尝试使用如下所示的 [OpenAI Tokenizer](https://platform.openai.com/tokenizer) 等工具。 复制您的提示 - 并查看如何将其转换为标记，注意空白字符和标点符号的处理方式。 请注意，此例子显示的是较旧的 LLM (GPT-3) - 因此使用较新的模型尝试此操作可能会产生不同的结果。
+要直观地了解标记化的工作原理，请尝试使用如下所示的 [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) 等工具。 复制您的提示 - 并查看如何将其转换为标记，注意空白字符和标点符号的处理方式。 请注意，此例子显示的是较旧的 LLM (GPT-3) - 因此使用较新的模型尝试此操作可能会产生不同的结果。
 
-![Tokenization](../../img/4.0-tokenizer-example.png)
+![Tokenization](../../images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 ### 概念: 基础模型
 
-Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Not that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
+Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.openai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Not that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
 
-Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
+Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
-一旦提示被标记化，[“Base LLM”](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6)的主要功能 （或基础模型）是预测该序列中的标记。 由于 LLMs 接受过大量文本数据集的训练，因此他们对标记之间的统计关系有很好的理解，并且可以自信地做出预测。 并不是说他们不理解提示或标记中单词的含义，他们只是看到了一个可以通过下一个预测“完成”的模式。 他们可以继续预测序列，直到被用户干预或某些预先设定的条件终止。
+一旦提示被标记化，[“Base LLM”](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)的主要功能 （或基础模型）是预测该序列中的标记。 由于 LLMs 接受过大量文本数据集的训练，因此他们对标记之间的统计关系有很好的理解，并且可以自信地做出预测。 并不是说他们不理解提示或标记中单词的含义，他们只是看到了一个可以通过下一个预测“完成”的模式。 他们可以继续预测序列，直到被用户干预或某些预先设定的条件终止。
 
-想了解基于提示补全是如何工作的吗？ 使用默认设置将上述提示输入到 Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground)。 系统配置会将提示视为信息请求 - 因此您应该看到满足此上下文的补全。
+想了解基于提示补全是如何工作的吗？ 使用默认设置将上述提示输入到 Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)。 系统配置会将提示视为信息请求 - 因此您应该看到满足此上下文的补全。
 
 但是，如果用户想要查看满足某些标准或任务目标的特定内容怎么办？ 这就是通过 LLMs 进行指令调整发挥作用的地方。
 
-![Base LLM Chat Completion](../../img/4.0-playground-chat-base.png)
+![Base LLM Chat Completion](../../images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
 
 ### 概念:  LLMs 中的指令调整
 
-[ LLMs 中的指令调整](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6) 从基础模型开始，并使用以下参数对其进行微调 可以包含明确指令的示例或输入/输出对（例如多轮“消息”），以及人工智能尝试遵循该指令的响应。
+[ LLMs 中的指令调整](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) 从基础模型开始，并使用以下参数对其进行微调 可以包含明确指令的示例或输入/输出对（例如多轮“消息”），以及人工智能尝试遵循该指令的响应。
 
 它使用诸如人类反馈强化学习 (RLHF) 之类的技术，可以训练模型“遵循指令”并“从反馈中学习”，从而产生更适合实际应用且与用户目标更相关的响应。
 
@@ -109,7 +109,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 看看现在如何调整结果以反映所需的目标和格式？ 教育工作者现在可以直接在该课程的 ppt 中使用此结果。
 
-![Instruction Tuned LLM Chat Completion](../../img/4.0-playground-chat-instructions.png)
+![Instruction Tuned LLM Chat Completion](../../images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 ## 为什么我们需要提示工程
 
@@ -138,15 +138,15 @@ But what if the user wanted to see something specific that met some criteria or 
 
 > **响应 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../img/4.0-hallucination-oai.png)
+![Response 1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
 
 > **响应 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../img/4.0-hallucination-aoai.png)
+![Response 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **响应 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../img/4.0-hallucination-huggingchat.png)
+![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 正如预期的那样，由于随机行为和模型能力变化，每个模型（或模型版本）都会产生略有不同的响应。 例如，一个模型针对八年级受众，而另一个模型则假设高中生。 但所有三个模型确实生成了可以让不知情的用户相信该事件是真实的响应
 
@@ -154,20 +154,20 @@ But what if the user wanted to see something specific that met some criteria or 
 
 ## 案例学习: GitHub Copilot
 
-让我们通过一个案例研究来了解如何在实际解决方案中使用提示工程：[GitHub Copilot](https://github.com/features/copilot)。
+让我们通过一个案例研究来了解如何在实际解决方案中使用提示工程：[GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst)。
 
-GitHub Copilot 是您的“AI 结对编程器” - 它将文本提示转换为代码补全，并集成到您的开发环境（例如 Visual Studio Code）中，以提供无缝的用户体验。 正如下面的系列博客中所述，最早的版本基于 OpenAI Codex 模型 - 工程师很快意识到需要微调模型并开发更好的提示工程技术，以提高代码质量。 7 月，他们 [首次推出了超越 Codex 模型的改进人工智能模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/) 以获得更快的建议。
+GitHub Copilot 是您的“AI 结对编程器” - 它将文本提示转换为代码补全，并集成到您的开发环境（例如 Visual Studio Code）中，以提供无缝的用户体验。 正如下面的系列博客中所述，最早的版本基于 OpenAI Codex 模型 - 工程师很快意识到需要微调模型并开发更好的提示工程技术，以提高代码质量。 7 月，他们 [首次推出了超越 Codex 模型的改进人工智能模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) 以获得更快的建议。
 
 按顺序阅读帖子，了解他们的成长过程
 
-- **2023 年 5 月** | [GitHub Copilot is Getting Better at Understanding Your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/)
-- **2023 年 5 月** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/).
-- **2023 年 6 月** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/).
-- **2023 年 7 月** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/)
-- **2023 年 7 月** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/)
-- **2023 年 9 月** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/)
+- **2023 年 5 月** | [GitHub Copilot is Getting Better at Understanding Your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **2023 年 5 月** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **2023 年 6 月** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **2023 年 7 月** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **2023 年 7 月** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **2023 年 9 月** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-您还可以浏览他们的[工程师博客](https://github.blog/category/engineering/)以获取更多帖子，例如[该链接](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/) 展示了如何应用这些模型和技术来驱动现实世界的应用程序。
+您还可以浏览他们的[工程师博客](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst)以获取更多帖子，例如[该链接](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) 展示了如何应用这些模型和技术来驱动现实世界的应用程序。
 
 ---
 
@@ -187,7 +187,7 @@ Illustrated with examples.
 
 ### 基础提示
 
-让我们从基础提示开始：发送到模型的文本输入，没有其他上下文。 这是一个例子 - 当我们将美国国歌的前几个单词发送到 OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions) 时，它会立即完成下一个单词的响应 几行，说明了基本的预测行为。
+让我们从基础提示开始：发送到模型的文本输入，没有其他上下文。 这是一个例子 - 当我们将美国国歌的前几个单词发送到 OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) 时，它会立即完成下一个单词的响应 几行，说明了基本的预测行为。
 
 
 | Prompt (Input) | Completion (Output) |
@@ -284,11 +284,11 @@ response = openai.ChatCompletion.create(
 
 ### 提示模版
 
-提示模板是预定义的提示配方，可以根据需要进行存储和重用，以大规模推动更一致的用户体验。 最简单的形式是，它只是一组提示示例的集合，例如 [OpenAI 中的这个例子](https://platform.openai.com/examples)，它提供了交互式提示组件（用户和系统消息）和 AP驱动请求格式来支持重用。
+提示模板是预定义的提示配方，可以根据需要进行存储和重用，以大规模推动更一致的用户体验。 最简单的形式是，它只是一组提示示例的集合，例如 [OpenAI 中的这个例子](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)，它提供了交互式提示组件（用户和系统消息）和 AP驱动请求格式来支持重用。
 
-在它更复杂的形式中，比如[LangChain的这个例子](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等）来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
+在它更复杂的形式中，比如[LangChain的这个例子](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等）来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
 
-最后，模板的真正价值在于能够为垂直应用程序领域创建和发布提示库 - 其中提示模板现在已优化以反映特定于应用程序的上下文或示例，使响应对于目标用户受众更加相关和准确 。 [Prompts For Edu](https://github.com/microsoft/prompts-for-edu) repo 是这种方法的一个很好的例子，它为教育领域策划了一个提示库，重点关注课程计划等关键目标， 课程设计、学生辅导等
+最后，模板的真正价值在于能够为垂直应用程序领域创建和发布提示库 - 其中提示模板现在已优化以反映特定于应用程序的上下文或示例，使响应对于目标用户受众更加相关和准确 。 [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repo 是这种方法的一个很好的例子，它为教育领域策划了一个提示库，重点关注课程计划等关键目标， 课程设计、学生辅导等
 
 ## 支持内容
 
@@ -346,7 +346,7 @@ Now let's look at common best practices that are recommended by [Open AI](https:
 | Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.|
 |Double Down | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.|
 | Order Matters | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.|
-|Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or hallucinatory responses. |
+|Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses. |
 | | |
 ```
 
@@ -377,7 +377,7 @@ Link to a copy of that Notebook with the prompts filled in and run, showing what
 
 ### 接下来，配置你的环境变量
 
-- 将存储库根目录中的“.env.copy”文件复制为“.env”并填写“OPENAI_API_KEY”值。 您可以在 [OpenAI Dashboard](https://beta.openai.com/account/api-keys) 中找到您的 API 密钥。
+- 将存储库根目录中的“.env.copy”文件复制为“.env”并填写“OPENAI_API_KEY”值。 您可以在 [OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst) 中找到您的 API 密钥。
 
 ### 接下来，打开 Jupyter Notebook
 
@@ -409,6 +409,6 @@ Wrap the section with a summary and resources for self-guided learning.
 
 ## 继续学习
 
-想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md) 查找有关此章节的其他重要资源。
+想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此章节的其他重要资源。
 
-前往第五章学习，我们将了解[创建高级的提示工程技巧](../../../05-advanced-prompts/translations/cn/README.md)！
+前往第五章学习，我们将了解[创建高级的提示工程技巧](../../../05-advanced-prompts/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！

@@ -1,0 +1,170 @@
+name: Validate Markdown
+
+on:
+  # Trigger the workflow on pull request
+  pull_request_target:
+    branches: 
+      - main
+    paths:
+      - '**.md'
+      - '**.ipynb'
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  check-broken-paths:
+    name: Check Broken Relative Paths
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Check broken Paths
+        id: check-broken-paths
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-broken-paths
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Leave broken paths comment
+        if: ${{ steps.check-broken-paths.outputs.is-valid == 1 }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected the following broken relative paths in your lessons.
+              Please check the file paths and associated broken paths inside them. 
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
+              # Check Broken Paths
+              ${{ env.BROKEN_PATHS }}
+              `
+            })
+      - name: Update workflow run status
+        if: ${{ steps.check-broken-paths.outputs.is-valid == 1 }}
+        run: exit 1
+  check-paths-tracking:
+    if: ${{ always() }}
+    needs: check-broken-paths
+    name: Check Paths Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check paths tracking
+        id: check-paths-tracking
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-paths-tracking
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Leave paths tracking comment
+        if: ${{ steps.check-paths-tracking.outputs.is-valid == 1 }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected missing tracking id from the following relative paths in your lessons.
+              Please check the file paths and associated paths inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
+              # Check Missing Tracking from Paths
+              ${{ env.PATHS_TRACKING }}
+              `
+            })
+      - name: Update workflow run status
+        if: ${{ steps.check-paths-tracking.outputs.is-valid == 1 }}
+        run: exit 1
+
+  check-urls-tracking:
+    if: ${{ always() }}
+    needs: check-paths-tracking
+    name: Check URLs Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check URLs tracking
+        id: check-urls-tracking
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-urls-tracking
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Leave URLs tracking comment
+        if: ${{ steps.check-urls-tracking.outputs.is-valid == 1 }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected missing tracking id from the following URLs in your lessons.
+              Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
+              # Check Missing Tracking from URLs
+              ${{ env.URLS_TRACKING }}
+              `
+            })
+      - name: Update workflow run status
+        if: ${{ steps.check-urls-tracking.outputs.is-valid == 1 }}
+        run: exit 1
+
+  check-urls-locale:
+    if: ${{ always() }}
+    needs: check-urls-tracking
+    name: Check URLs Don't Have Locale
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check URLs Country Locale
+        id: check-urls-locale
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-urls-locale
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Leave URLs locale comment
+        if: ${{ steps.check-urls-locale.outputs.is-valid == 1 }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              We have automatically detected added country locale to URLs in your lessons.
+              Please check the file paths and associated URLs inside them.
+              Learn more from our [contributing guide](https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md).
+              # Check Country Locale in URLs
+              ${{ env.URLS_LOCALE }}
+              `
+            })
+      - name: Update workflow run status
+        if: ${{ steps.check-urls-locale.outputs.is-valid == 1 }}
+        run: exit 1

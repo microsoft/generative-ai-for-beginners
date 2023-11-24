@@ -4,9 +4,13 @@ Here are links to other great resources to continue your learning and building w
 
 Are we missing a great resource? Let us know by submitting a PR!
 
+## 🧠 One Collection to Rule Them ALl  
+
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+
 ## Lesson 1  - Introduction to Generative AI and LLMs
 
-🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/)
+🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/?WT.mc_id=academic-105485-koreyst)
 
 🔗 [Fundamentals of Generative AI](https://learn.microsoft.com/training/modules/fundamentals-generative-ai?&WT.mc_id=academic-105485-koreyst)
 
@@ -18,9 +22,9 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [How to use Open Source foundation models curated by Azure Machine Learning (preview) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/azure/machine-learning/how-to-use-foundation-models?WT.mc_id=academic-105485-koreyst)
 
-🔗 [The Large Language Model (LLM) Index | Sapling](https://sapling.ai/llm/index)
+🔗 [The Large Language Model (LLM) Index | Sapling](https://sapling.ai/llm/index?WT.mc_id=academic-105485-koreyst)
 
-🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052)
+🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052?WT.mc_id=academic-105485-koreyst)
 
 🔗 [Retrieval Augmented Generation using Azure Machine Learning prompt flow](https://learn.microsoft.com/azure/machine-learning/concept-retrieval-augmented-generation?WT.mc_id=academic-105485-koreyst)
 
@@ -34,7 +38,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-koreyst)
 
-🔗 [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)
+🔗 [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-koreyst)
 
 🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai?WT.mc_id=academic-105485-koreyst)
 
@@ -44,7 +48,11 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 ## Lesson 4 - Understanding Prompt Engineering Fundamentals
 
-🔗 [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
+🔗 [Getting Started with Azure OpenAI Services](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-koreyst)
+
+[Apply Prompt Engineering with Azure OpenAI services](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-koreyst)
+
+[Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering/?WT.mc_id=academic-105485-koreyst)
 
@@ -54,7 +62,7 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering?WT.mc_id=academic-105485-koreyst)
 
-🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259)
+🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?WT.mc_id=academic-105485-koreyst)
 
 ## Lesson 5  - Creating Advanced Prompts
 
@@ -71,6 +79,9 @@ Are we missing a great resource? Let us know by submitting a PR!
 🔗 [Learn how to work with the GPT-35-Turbo and GPT-4 models](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
+
+🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-koreyst)
+
 
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
@@ -90,11 +101,12 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e)
+🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)
 
-🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf)
+🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?WT.mc_id=academic-105485-koreyst)
 
 ## Lesson 10 - Building Low Code AI Applications
+🔗 [Create bots with Microsoft Copilot Studio](https://learn.microsoft.com/training/paths/work-power-virtual-agents/?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-koreyst)
 
@@ -120,4 +132,4 @@ Are we missing a great resource? Let us know by submitting a PR!
 
 🔗 [New skills in the age of AI by John Maeda](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗  [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873)
+🔗  [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?WT.mc_id=academic-105485-koreyst)

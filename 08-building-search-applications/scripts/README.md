@@ -15,7 +15,7 @@ The transcription data prep scripts have been tested on the latest releases Wind
 > [!NOTE]
 > For these instructions we're using the resource group named "semantic-video-search" in East US.
 > You can change the name of the resource group, but when changing the location for the resources, 
-> check the [model availability table](https://aka.ms/oai/models).
+> check the [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -63,7 +63,7 @@ az cognitiveservices account deployment create \
 
 ## Required software
 
-- [Python 3.9](https://www.python.org/downloads/) or greater
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) or greater
 
 ## Environment variables
 
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Install the required Python libraries
 
-1. Install the [git client](https://git-scm.com/downloads) if it's not already installed.
+1. Install the [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) if it's not already installed.
 1. From a `Terminal` window, clone the sample to your preferred repo folder.
 
     ```bash

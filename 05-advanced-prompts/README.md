@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
 
 Let's recap some learnings from the previous chapter:
 
@@ -61,7 +61,7 @@ There are some basic techniques that we can use to prompt an LLM. Let's explore 
 - **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
 - **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
 - **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
-- **Least to most**, like chain-of-though, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
+- **Least to most**, like chain-of-thought, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
 - **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
 - **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
 
@@ -601,7 +601,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
-[Solution](./solution.py)
+[Solution](./solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Knowledge check
 
@@ -619,6 +619,6 @@ You just used the self-refine technique in the assignment. Take any program you 
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about creating advanced prompts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](/06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)

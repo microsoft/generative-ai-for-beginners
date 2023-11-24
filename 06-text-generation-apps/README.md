@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png)](https://youtu.be/5jKHzY6-4s8)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
 > *(Click the image above to view video of this lesson)*
 
@@ -87,7 +87,7 @@ pip install openai
 You need to carry out the following steps:
 
 - Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Gain access to Azure Open AI. Go to [https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
+- Gain access to Azure Open AI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
 
   > [!NOTE]
   > At the time of writing, you need to apply for access to Azure Open AI.
@@ -99,7 +99,7 @@ You need to carry out the following steps:
 
 At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure Open AI resource and copy the "Key 1" value.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 Now that you have this information copied, let's instruct the libraries to use it.
 
@@ -503,7 +503,6 @@ To further improve it, we want to add the following:
 
     As you can see, any recipes with milk in it has been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in them as well, so there's a need to be clear.
 
-    ```python
 
 - **Produce a shopping list**. We want to produce a shopping list, considering what we already have at home.
 
@@ -543,13 +542,12 @@ To further improve it, we want to add the following:
         No of recipes (for example, 5: 2
         List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
         Filter (for example, vegetarian, vegan, or gluten-free: sugar
-        Recipes:
-         or milk.
+
         
         -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
         -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
         Shopping list:
-         -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice 
+        -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice 
         ```
 
 ## Improve your setup
@@ -635,7 +633,7 @@ Here are some prompts you could be using:
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
 - "You are Abe Lincoln, respond using grammar and words like Abe would have used:
 
-   Tell me about your greatest accomplishments, in 300 words:"
+   Tell me about your greatest accomplishments, in 300 words"
 ```
 
 ## Knowledge check
@@ -646,7 +644,6 @@ What does the concept temperature do?
 1. It controls how big the response is.
 1. It controls how many tokens are used.
 
-A: 1
 
 ## 🚀 Challenge
 
@@ -654,6 +651,6 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about creating text generation applications? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 7 where we will look at how to [build chat applications](/07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
