@@ -1,4 +1,3 @@
-
 ![Generative AI For Beginners](./images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
 
 ### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
