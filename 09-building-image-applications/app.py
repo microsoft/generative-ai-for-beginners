@@ -19,10 +19,10 @@ openai.api_type = 'azure'
 try:
     # Create an image by using the image generation API
     generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='Red and white Rocket with fussy paws',    # Enter your prompt text here
         size='1024x1024',
         n=2,
-        temperature=0,
+        temperature=1,
     )
     # Set the directory for the stored image
     image_dir = os.path.join(os.curdir, 'images')
@@ -50,20 +50,20 @@ except openai.error.InvalidRequestError as err:
 
 # ---creating variation below---
 
-response = openai.Image.create_variation(
-  image=open(image_path, "rb"),
-  n=1,
-  size="1024x1024"
-)
+# response = openai.Image.create_variation(
+#   image=open(image_path, "rb"),
+#   n=1,
+#   size="1024x1024"
+# )
 
-image_path = os.path.join(image_dir, 'generated_variation.png')
+# image_path = os.path.join(image_dir, 'generated_variation.png')
 
-image_url = response['data'][0]['url']
+# image_url = response['data'][0]['url']
 
-generated_image = requests.get(image_url).content  # download the image
-with open(image_path, "wb") as image_file:
-    image_file.write(generated_image)
+# generated_image = requests.get(image_url).content  # download the image
+# with open(image_path, "wb") as image_file:
+#     image_file.write(generated_image)
 
-# Display the image in the default image viewer
-image = Image.open(image_path)
-image.show()
+# # Display the image in the default image viewer
+# image = Image.open(image_path)
+# image.show()

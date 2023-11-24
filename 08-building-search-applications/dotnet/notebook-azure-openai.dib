@@ -1,0 +1,61 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget: Azure.AI.OpenAI, 1.0.0-beta.9"
+
+#!csharp
+
+using Azure;
+using Azure.AI.OpenAI;
+
+#!csharp
+
+#r "nuget:Microsoft.DotNet.Interactive.AIUtilities, 1.0.0-beta.23557.4"
+
+using Microsoft.DotNet.Interactive;
+using Microsoft.DotNet.Interactive.AIUtilities;
+
+#!csharp
+
+var azureOpenAIKey = "<replace with API key>";
+var azureOpenAIEndpoint = "<replace with endpoint>";
+var deployment = "<replace with deployment name, should be of type ADA embedding for Azure Open AI>";
+
+#!csharp
+
+OpenAIClient client = new (new Uri(azureOpenAIEndpoint), new AzureKeyCredential(azureOpenAIKey));
+
+#!csharp
+
+var source = "Car";
+var compareTo = "Vehicle";
+var parrot = "A bird";
+
+var parrotEmbeddings = await client.GetEmbeddingsAsync(new EmbeddingsOptions(deployment, new []{ parrot }));
+
+// vector version
+var embeddings = await client.GetEmbeddingsAsync(new EmbeddingsOptions(deployment, new []{ source }));
+
+// vector version
+var embeddingsCompareTo = await client.GetEmbeddingsAsync(new EmbeddingsOptions(deployment, new []{ compareTo }));
+
+var sourceValue = embeddings.Value.Data[0].Display();
+Console.WriteLine(sourceValue);
+var compareToValue = embeddingsCompareTo.Value.Data[0].Display();
+Console.WriteLine(compareToValue);
+
+#!csharp
+
+var comparer = new CosineSimilarityComparer<float[]>(f => f);
+var carArray = embeddings.Value.Data[0].Embedding.ToArray(); // float []
+var vehicleArray = embeddingsCompareTo.Value.Data[0].Embedding.ToArray(); // float []
+var parrotArray = parrotEmbeddings.Value.Data[0].Embedding.ToArray(); // float []
+
+var score = comparer.Score(carArray, vehicleArray);
+Console.WriteLine(score);
+
+score = comparer.Score(carArray, parrotArray);
+Console.WriteLine(score);

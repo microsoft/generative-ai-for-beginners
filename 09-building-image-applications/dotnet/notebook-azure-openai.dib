@@ -1,0 +1,37 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget: Azure.AI.OpenAI, 1.0.0-beta.9"
+
+#!csharp
+
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using Azure.AI.OpenAI;
+using Azure;
+
+#!csharp
+
+string endpoint = "<replace with endpoint>";
+string key = "<replace with API key>";
+
+#!csharp
+
+OpenAIClient client = new(new Uri(endpoint), new AzureKeyCredential(key));
+
+var imageGenerations = await client.GetImageGenerationsAsync(
+    new ImageGenerationOptions()
+    {
+        Prompt = "captain with a parrot on his shoulder",
+        Size = ImageSize.Size256x256,
+    });
+
+// Image Generations responses provide URLs you can use to retrieve requested images
+Uri imageUri = imageGenerations.Value.Data[0].Url;
+
+// Print the image URI to console:
+Console.WriteLine(imageUri);
