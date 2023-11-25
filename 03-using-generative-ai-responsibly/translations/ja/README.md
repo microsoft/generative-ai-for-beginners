@@ -1,6 +1,6 @@
 # 責任ある生成AIの使用
 
-[![生成AIを責任を持って使う](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
+[![生成AIを責任を持って使う](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)
 
 > ビデオ近日公開予定
 
@@ -44,7 +44,7 @@ AI、特に生成AIに魅了されるのは簡単だが、それをどう責任�
 
 モデルは以下のような応答を生成する：
 
-![「タイタニック号の唯一の生存者は誰か」というプロンプト](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
+![「タイタニック号の唯一の生存者は誰か」というプロンプト](../../images/ChatGPT-titanic-survivor-prompt.webp)
 
 > *(ソース: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 
@@ -76,7 +76,7 @@ LLMを繰り返すたびに、幻覚を最小限に抑えるパフォーマン�
 
 さて、責任ある生成AIの重要性を確認したところで、責任あるAIソリューションを構築するための4つのステップを見てみよう：
 
-![軽減サイクル](../../images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
+![軽減サイクル](../../images/mitigate-cycle.png)
 
 ### 潜在的な弊害をメジャーで測る
 
@@ -88,7 +88,7 @@ LLMを繰り返すたびに、幻覚を最小限に抑えるパフォーマン�
 
 今度は、モデルとその対応によって引き起こされる潜在的な害を防止または制限できる方法を見つける番です。私たちはこれを4つの異なる層で見ることができます：
 
-![軽減レイヤー](../../images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
+![軽減レイヤー](../../images/mitigation-layers.png)
 
 - モデル 適切なユースケースに適切なモデルを選択する。GPT-4のような大規模で複雑なモデルは、より小規模で具体的なユースケースに適用すると、有害なコンテンツのリスクが高まる可能性があります。また、トレーニングデータを使って微調整を行うことで、有害コンテンツのリスクを減らすことができます。
 
@@ -96,11 +96,11 @@ LLMを繰り返すたびに、幻覚を最小限に抑えるパフォーマン�
 
 - **メタプロンプト**。メタプロンプトとグラウンディングは、特定の行動や情報に基づいてモデルを指示したり制限したりする方法です。これは、モデルの特定の限界を定義するためにシステム入力を使用することができます。さらに、システムのスコープやドメインにより関連した出力を提供することもできます。
 
- また、RAG(Retrieval Augmented Generation)のようなテクニックを使用して、モデルが信頼できるソースの選択からのみ情報を引き出せるようにすることもできます。このコースの後半に[検索アプリケーションの構築]のレッスンがあります(../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
-
+ また、RAG(Retrieval Augmented Generation)のようなテクニックを使用して、モデルが信頼できるソースの選択からのみ情報を引き出せるようにすることもできます。このコースの後半に[検索アプリケーションの構築](../../../08-building-search-applications/transrations/ja/README.md)
+のレッスンがあります
 - ユーザー・エクスペリエンス 最後のレイヤーは、ユーザーが何らかの方法でアプリケーションのインターフェースを通してモデルと直接対話するところです。このようにして、ユーザーに表示されるテキストや画像と同様に、ユーザーがモデルに送信できる入力の種類を制限するUI/UXを設計することができます。AIアプリケーションをデプロイするとき、生成AIアプリケーションができること、できないことについて透明性を持たせる必要もあります。 
 
-AIアプリケーションのためのUXデザイン]に特化したレッスン全体があります(../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)。
+[AIアプリケーションのためのUXデザイン](../../../12-designing-ux-for-ai-applications/translations/ja/README.md)に特化したレッスン全体があります。
 
 - モデルの評価 LLMでの作業は、モデルが学習されたデータを常にコントロールできるわけではないので、難しいかもしれません。それにもかかわらず、我々は常にモデルの性能と出力を評価する必要があります。モデルの正確さ、類似性、根拠性、出力の関連性をメジャーすることが重要であることに変わりはない。これは、利害関係者やユーザーに透明性と信頼を提供するのに役立つ。
 
@@ -110,7 +110,7 @@ AIアプリケーションの運用プラクティスを構築することが最
 
 ## ツール
 
-責任あるAIソリューションの開発作業は大変に思えるかもしれないが、それは努力に値する仕事である。生成AIの分野が成長するにつれて、開発者がワークフローにレスポンシブルAIを効率的に統合するためのツールが成熟していくだろう。例えば、[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst )は、APIリクエストを通じて有害なコンテンツや画像を検出するのに役立つ。
+責任あるAIソリューションの開発作業は大変に思えるかもしれないが、それは努力に値する仕事である。生成AIの分野が成長するにつれて、開発者がワークフローにレスポンシブルAIを効率的に統合するためのツールが成熟していくだろう。例えば、[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview)は、APIリクエストを通じて有害なコンテンツや画像を検出するのに役立つ。
 
 ## ナレッジチェック
 
@@ -124,10 +124,10 @@ A: 2と3が正しい。責任あるAIは、有害な影響や偏見などを軽�
 
 ## 🚀チャレンジ
 
-[Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst)を読んで、自分の使い方に取り入れられるものを見てみましょう。
+[Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview)を読んで、自分の使い方に取り入れられるものを見てみましょう。
 
 ## よくやった、学習を続けよう
 
-このレッスンを終えたら、[生成AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AI知識のレベルアップを続けましょう！
+このレッスンを終えたら、[生成AI学習コレクション](https://aka.ms/genai-collection)をチェックして、生成AI知識のレベルアップを続けましょう！
 
 レッスン4では、[プロンプトエンジニアリングの基礎](../../../04-prompt-engineering-fundamentals/translations/ja/README.md)を見ていきます！
