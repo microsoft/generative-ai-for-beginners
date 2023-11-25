@@ -1,8 +1,8 @@
 # 生成AIと大規模言語モデル入門
 
-[![生成AIと大規模言語モデル入門s](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+[![生成AIと大規模言語モデル入門s](../../images/01-lesson-banner.png)](https://youtu.be/vf_mZrn8ibc)
 
-(https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+(https://youtu.be/vf_mZrn8ibc)
 
 *このレッスンのビデオを見るには上の画像をクリックしてください。
 
@@ -36,13 +36,13 @@
 
 生成AIは、今日の学習・教育方法に革命をもたらすと期待されている。学生は、膨大な量の情報と例文を提供するバーチャル教師を24時間自由に利用でき、教師は革新的なツールを活用して学生を評価し、フィードバックを与えることができる。
 
-モニターを見る5人の若い生徒たち - 画像はDALLE2による](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+モニターを見る5人の若い生徒たち - 画像はDALLE2による](../../images/students-by-DALLE2.png)
 
 まず始めに、カリキュラムを通して使用する基本的な概念と用語を定義しておこう。
 
 ## なぜ生成AIが生まれたのか？
 
-最近、生成AIモデルの発表によって異常なまでの誇大宣伝が行われているが、この技術は数十年かけて作られたものであり、最初の研究努力は60年代にまでさかのぼる。例えば、[OpenAI ChatGPT](https://openai.com/chatgpt)や[Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst)が示すように、私たちは今、AIが人間の認知能力を持つ段階にいる。
+最近、生成AIモデルの発表によって異常なまでの誇大宣伝が行われているが、この技術は数十年かけて作られたものであり、最初の研究努力は60年代にまでさかのぼる。例えば、[OpenAI ChatGPT](https://openai.com/chatgpt)や[Bing Chat](https://www.microsoft.com/edge/features/bing-chat)が示すように、私たちは今、AIが人間の認知能力を持つ段階にいる。
 
 少し話を戻すと、AIの最初のプロトタイプは、専門家のグループから抽出され、コンピュータに表現された知識ベースに依存する、タイプライターのチャットボットで構成されていた。知識ベースの回答は、入力テキストに現れるキーワードによってトリガーされた。
 しかし、タイプライターのチャットボットを使ったこのようなアプローチでは、うまくスケールしないことがすぐに明らかになった。
@@ -63,7 +63,7 @@
 
 こうして、ディープラーニングのサブセットともいえる生成AIが誕生した。
 
-![AI、ML、DL、そして生成AI](../../images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
+![AI、ML、DL、そして生成AI](../../images/AI-diagram.png)
 
 AI分野での数十年にわたる研究の後、*トランスフォーマー*と呼ばれる新しいモデル・アーキテクチャがRNNの限界を克服し、入力としてはるかに長いテキストのシーケンスを得ることができるようになった。トランスフォーマーは注意メカニズムに基づいており、モデルが受け取った入力に異なる重みを与え、テキストシーケンス内の順序に関係なく、最も関連性の高い情報が集中している場所に「より注意を払う」ことを可能にする。
 
@@ -75,7 +75,7 @@ AI分野での数十年にわたる研究の後、*トランスフォーマー*�
 
 * **トークナイザー、テキストから数値へ**： 大規模言語モデルは入力としてテキストを受け取り、出力としてテキストを生成します。しかし、統計モデルであるため、テキスト列よりも数値の方がはるかにうまく機能します。そのため、モデルへのすべての入力は、コアモデルで使われる前にトークナイザーで処理されます。トークンとは、可変の文字数からなるテキストの塊のことで、トークナイザーの主な仕事は、入力をトークンの配列に分割することだ。そして、各トークンは、元のテキストチャンクの整数エンコーディングであるトークン・インデックスとマッピングされます。
 
-![トークン化の例](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![トークン化の例](../../images/tokenizer-example.png)
 
 * **出力トークンの予測**： 入力としてn個のトークンが与えられると（最大nはモデルによって異なる）、モデルは出力として1個のトークンを予測することができる。このトークンは次の反復の入力に組み込まれ、ウィンドウを拡大するパターンで、1つの（または複数の）文を答えとして得るという、より良いユーザー体験を可能にします。このため、ChatGPTで遊んだことがある人は、文の途中で止まっているように見えることがあることに気づいたかもしれません。
 
@@ -93,31 +93,31 @@ AI分野での数十年にわたる研究の後、*トランスフォーマー*�
 
     1. 非構造化データからの洞察の抽出とともに、記事、本、製品レビューなどの要約。
     
-    ![要約の例](../../images/summarization-example.png?WT.mc_id=academic-105485-koreyst)。
+    ![要約の例](../../images/summarization-example.png)。
 
     <br> 1.
     
     2. 記事、エッセイ、課題などの創造的なアイデアとデザイン。
     
-    ![クリエイティブ・ライティングの例](../../images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
+    ![クリエイティブ・ライティングの例](../../images/creative-writing-example.png)
 
     <br> **質問**です。
     
 * エージェントとの会話形式で尋ねられる**質問**。
   
-会話例](../../images/conversation-example.png?WT.mc_id=academic-105485-koreyst)。
+![会話例](../../images/conversation-example.png)。
 
-<br> **テキストの塊。
+<br> **テキストの塊**。
 
 * テキストを完成させるためのチャンク。
    
-![テキスト補完の例](../../images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
+![テキスト補完の例](../../images/text-completion-example.png)
 
-<br> * **コードの塊**。
+* **コードの塊**
 
-* コード**の塊と、それを説明し文書化する依頼、または特定のタスクを実行するコードの一部を生成するように依頼するコメント。
+* **コード**の塊と、それを説明し文書化する依頼、または特定のタスクを実行するコードの一部を生成するように依頼するコメント。
 
-コーディング例](../../images/coding-example.png?WT.mc_id=academic-105485-koreyst)。
+![コーディング例](../../images/coding-example.png)
 
 <br>
 
@@ -127,9 +127,9 @@ AI分野での数十年にわたる研究の後、*トランスフォーマー*�
 
 ## 課題
 
-あなたの課題は、[生成AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst)についてもっと読み、現在生成AIがない分野で、あなたが生成AIを追加する分野を特定することです。旧来の方法」と比べてどのように影響が違うのか、以前はできなかったことができるのか、より速くできるのか。あなたの夢のAIスタートアップがどのようなものか、300ワードで要約し、「問題」、「AIをどのように使うか」、「インパクト」、そしてオプションでビジネスプランのような見出しをつけて書いてください。
+あなたの課題は、[生成AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence)についてもっと読み、現在生成AIがない分野で、あなたが生成AIを追加する分野を特定することです。旧来の方法」と比べてどのように影響が違うのか、以前はできなかったことができるのか、より速くできるのか。あなたの夢のAIスタートアップがどのようなものか、300ワードで要約し、「問題」、「AIをどのように使うか」、「インパクト」、そしてオプションでビジネスプランのような見出しをつけて書いてください。
 
-このタスクをこなしたなら、マイクロソフトのインキュベーターである[Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst)に応募する準備ができているかもしれない。Azure、OpenAI、メンタリング、その他多くのクレジットを提供している！
+このタスクをこなしたなら、マイクロソフトのインキュベーターである[Microsoft for Startups Founders Hub](https://www.microsoft.com/startups)に応募する準備ができているかもしれない。Azure、OpenAI、メンタリング、その他多くのクレジットを提供している！
 
 ## ナレッジチェック
 
@@ -143,6 +143,6 @@ A:3、LLMは非決定論的で、応答はさまざまですが、温度設定�
 
 ## 素晴らしい仕事だ！旅を続ける 
 
-このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、Generative AIの知識をレベルアップしていきましょう！
+このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection)をチェックして、Generative AIの知識をレベルアップしていきましょう！
 
 レッスン2では、[異なるLLMタイプの探索と比較](../../../02-exploring-and-comparing-different-llms/translations/ja/README.md)の方法を見ていきます！
