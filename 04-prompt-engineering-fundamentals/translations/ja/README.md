@@ -1,6 +1,6 @@
 # プロンプト エンジニアリングの基礎
 
-[![プロンプト工学基礎](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![プロンプト工学基礎](../../images/04-lesson-banner.png)](https://youtu.be/r2ItK3UMVTk)
 
 
 LLMへのプロンプトをどのように書くかは重要であり、注意深く作られたプロンプトは、そうでないものよりも良い結果を得ることができる。しかし、プロンプト、プロンプト・エンジニアリングという概念は一体何なのだろうか？このような疑問に対する答えが、この章と次の章である。
@@ -40,13 +40,13 @@ LLMへのプロンプトをどのように書くかは重要であり、注意�
 
 ## スタートアップ
 
-では、このトピックが私たちのスタートアップのミッションである[教育にAIイノベーションをもたらす](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)にどのように関係しているのかについてお話ししましょう。そこで、私たちのアプリケーションのさまざまなユーザーがどのようにプロンプトを「デザイン」するかを考えてみましょう：
+では、このトピックが私たちのスタートアップのミッションである[教育にAIイノベーションをもたらす](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education)にどのように関係しているのかについてお話ししましょう。そこで、私たちのアプリケーションのさまざまなユーザーがどのようにプロンプトを「デザイン」するかを考えてみましょう：
 
 - **管理者**は、カリキュラムのデータを分析し、カバー範囲のギャップを特定するようAIに求めるかもしれない。AIは結果を要約したり、コードで可視化することができます。
 - **教育者**はAIに、対象者とトピックのためのレッスンプランを生成するよう求めるかもしれません。AIは、指定されたフォーマットでパーソナライズされたプランを構築することができます。
 - **学生**は、AIに難しい科目の個人指導を依頼するかもしれません。AIは、生徒のレベルに合わせた授業、ヒント、例題で生徒を導くことができる。
 
-これは氷山の一角です。[Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst)-教育の専門家によってキュレーションされたオープンソースのプロンプト・ライブラリ-をチェックすれば、より幅広い可能性を感じることができる！これらのプロンプトのいくつかをサンドボックスで動かしてみたり、OpenAI Playgroundを使って何が起こるか見てみよう！！
+これは氷山の一角です。[Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main)-教育の専門家によってキュレーションされたオープンソースのプロンプト・ライブラリ-をチェックすれば、より幅広い可能性を感じることができる！これらのプロンプトのいくつかをサンドボックスで動かしてみたり、OpenAI Playgroundを使って何が起こるか見てみよう！！
 
 <!--
 レッスンのテンプレート
@@ -75,23 +75,23 @@ LLMへのプロンプトをどのように書くかは重要であり、注意�
 
 LLMはプロンプトを「トークンのシーケンス」として認識し、異なるモデル（ま たはモデルのバージョン）は同じプロンプトを異なる方法でトークン化できる。LLMは(生のテキストではなく)トークンに対して学習されるため、プロンプトがトークン化される方法は生成される応答の品質に直接影響する。
 
-トークナイゼーションがどのように機能するか直感的に理解するには、以下の[OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)のようなツールを試してみてください。プロンプトをコピーして、空白文字や句読点がどのように扱われるかに注意しながら、それがどのようにトークンに変換されるかを見てください。この例は古いLLM(GPT-3)を使っていることに注意してください。
+トークナイゼーションがどのように機能するか直感的に理解するには、以下の[OpenAI Tokenizer](https://platform.openai.com/tokenizer)のようなツールを試してみてください。プロンプトをコピーして、空白文字や句読点がどのように扱われるかに注意しながら、それがどのようにトークンに変換されるかを見てください。この例は古いLLM(GPT-3)を使っていることに注意してください。
 
-![トークナイゼーション](../../images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![トークナイゼーション](../../images/04-tokenizer-example.png)
 
 ### コンセプト 基礎モデル
 
-プロンプトがトークン化されると、["ベースLLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)(またはファウンデーションモデル)の主な機能は、そのシーケンスのトークンを予測することである。LLMは膨大なテキストデータセットで訓練されているため、トークン間の統計的なリレーションシップに精通しており、ある程度自信を持って予測することができる。LLMはプロンプトやトークンに含まれる単語の「意味」を理解しているわけではなく、次の予測で「完了」できるパターンを見ているだけである。彼らは、ユーザーの介入や事前に設定された条件によって終了するまで、シーケンスを予測し続けることができる。
+プロンプトがトークン化されると、["ベースLLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6)(またはファウンデーションモデル)の主な機能は、そのシーケンスのトークンを予測することである。LLMは膨大なテキストデータセットで訓練されているため、トークン間の統計的なリレーションシップに精通しており、ある程度自信を持って予測することができる。LLMはプロンプトやトークンに含まれる単語の「意味」を理解しているわけではなく、次の予測で「完了」できるパターンを見ているだけである。彼らは、ユーザーの介入や事前に設定された条件によって終了するまで、シーケンスを予測し続けることができる。
 
-プロンプトベースの補完がどのように機能するか見てみましょうか？上記のプロンプトをAzure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)にデフォルト設定で入力します。システムはプロンプトを情報の要求として扱うように設定されているので、このコンテキストを満たす補完が表示されるはずです。
+プロンプトベースの補完がどのように機能するか見てみましょうか？上記のプロンプトをAzure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground)にデフォルト設定で入力します。システムはプロンプトを情報の要求として扱うように設定されているので、このコンテキストを満たす補完が表示されるはずです。
 
 しかし、ユーザーが何らかの基準やタスクの目的を満たす特定のものを見たいとしたらどうでしょうか？そこで、_instruction-tuned_ LLMが登場します。
 
-![ベースLLMチャット完了](../../images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
+![ベースLLMチャット完了](../../images/04-playground-chat-base.png)
 
 ### コンセプト 命令チューニングLLM
 
-[Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)は、基礎モデルから始まり、明確な指示を含むことができる例や入出力のペア(例えば、複数ターンの「メッセージ」)を使ってそれを微調整します-そして、AIはその指示に従おうとします。
+[Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6)は、基礎モデルから始まり、明確な指示を含むことができる例や入出力のペア(例えば、複数ターンの「メッセージ」)を使ってそれを微調整します-そして、AIはその指示に従おうとします。
 
 これは、人間のフィードバックによる強化学習（RLHF）のようなテクニックを使用し、モデルを「指示に従う」ように訓練し、「フィードバックから学習する」ことで、より実用的なアプリケーションに適した、ユーザーの目的に関連した応答を生成することができる。
 
@@ -101,7 +101,7 @@ LLMはプロンプトを「トークンのシーケンス」として認識し�
 
 結果が、望ましい目標と形式を反映するように調整されているのがわかるでしょうか。教育者はこの回答を、そのクラスのスライドに直接使うことができます。
 
-![指示調整済みLLMチャット完了](../../images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
+![指示調整済みLLMチャット完了](../../images/04-playground-chat-instructions.png)
 
 ## なぜプロンプト・エンジニアリングが必要なのか?
 
@@ -120,7 +120,7 @@ LLMはプロンプトを「トークンのシーケンス」として認識し�
 
 ### ファブリケーションの例
 
-このコースでは、LLMがトレーニングの制限や他の制約のために時々事実と異なる情報を生成する現象について言及するために、**"捏造 "**という用語を使います。また、一般的な記事や研究論文で、この現象を「幻覚」と呼ぶのを聞いたことがあるかもしれません。しかし、私たちは「捏造」_という言葉を使うことを強く推奨します。そうすることで、機械主導の結果に人間のような特徴を帰属させることで、その行動を誤って擬人化してしまうことがなくなるからです。これはまた、用語の観点から[Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)を強化し、文脈によっては攻撃的または非包括的とみなされる可能性のある用語を削除します。
+このコースでは、LLMがトレーニングの制限や他の制約のために時々事実と異なる情報を生成する現象について言及するために、**"捏造 "**という用語を使います。また、一般的な記事や研究論文で、この現象を「幻覚」と呼ぶのを聞いたことがあるかもしれません。しかし、私たちは「捏造」_という言葉を使うことを強く推奨します。そうすることで、機械主導の結果に人間のような特徴を帰属させることで、その行動を誤って擬人化してしまうことがなくなるからです。これはまた、用語の観点から[Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai)を強化し、文脈によっては攻撃的または非包括的とみなされる可能性のある用語を削除します。
 
 捏造がどのように機能するかの感覚をつかみたいですか？存在しないトピックのコンテンツを生成するようAIに指示するプロンプトを考えてみよう（学習データセットにないことを確認するため）。例えば、次のようなプロンプトを試してみた：
 > 2076年の火星戦争に関するレッスンプランを生成してください。
@@ -131,15 +131,15 @@ LLMはプロンプトを「トークンのシーケンス」として認識し�
 
 > レスポンス1 OpenAI Playground (GPT-35)
 
-![応答1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)。
+![応答1](../../images/04-fabrication-oai.png)。
 
 > レスポンス 2**： Azure OpenAI プレイグラウンド (GPT-35)
 
-![レスポンス 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)。
+![レスポンス 2](../../images/04-fabrication-aoai.png)。
 
 > 反応3**: : 抱きつき顔チャット遊び場 (LLama-2)
 
-![レスポンス3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![レスポンス3](../../images/04-fabrication-huggingchat.png)
 
 予想通り、各モデル（またはモデルのバージョン）は、確率的な挙動とモデル能力のばらつきのおかげで、わずかに異なる反応を示している。たとえば、1つのモデルは8年生をターゲットにしていますが、もう1つのモデルは高校生を想定しています。しかし、3つのモデルすべてが、何も知らないユーザーにその出来事が現実であると確信させるような応答を生成した。
 
@@ -147,20 +147,20 @@ LLMはプロンプトを「トークンのシーケンス」として認識し�
 
 ## ケーススタディ GitHub Copilot
 
-プロンプトエンジニアリングが実際のソリューションでどのように使われているかを、あるケーススタディから感じ取って、このセクションを締めくくろう： [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst)です。
+プロンプトエンジニアリングが実際のソリューションでどのように使われているかを、あるケーススタディから感じ取って、このセクションを締めくくろう： [GitHub Copilot](https://github.com/features/copilot)です。
 
-GitHub Copilotは、あなたの「AIペアプログラマー」です。テキストプロンプトをコード補完に変換し、シームレスなユーザーエクスペリエンスのために開発環境（Visual Studio Codeなど）に統合されています。以下の一連のブログで文書化されているように、初期のバージョンはOpenAI Codexモデルに基づいていました - エンジニアはすぐに、コードの品質を向上させるために、モデルを微調整し、より良いプロンプトエンジニアリング技術を開発する必要性に気づきました。7月、彼らは[Codexを超える改善されたAIモデルをデビューさせた](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)。
+GitHub Copilotは、あなたの「AIペアプログラマー」です。テキストプロンプトをコード補完に変換し、シームレスなユーザーエクスペリエンスのために開発環境（Visual Studio Codeなど）に統合されています。以下の一連のブログで文書化されているように、初期のバージョンはOpenAI Codexモデルに基づいていました - エンジニアはすぐに、コードの品質を向上させるために、モデルを微調整し、より良いプロンプトエンジニアリング技術を開発する必要性に気づきました。7月、彼らは[Codexを超える改善されたAIモデルをデビューさせた](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/)。
 
 彼らの学習の旅をたどるために、投稿を順番に読んでください。
 
-- 2023年5月**日｜[GitHub Copilotがあなたのコードをより理解するようになる](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- 2023年5月**日｜[Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- 2023年6月**日｜[GitHub Copilotのプロンプトの書き方](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- 2023年7月**日｜[. GitHub CopilotはAIモデルを改良してCodexを超える](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
-- 2023年7月**日｜[A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
-- 2023年9月**日｜[How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- 2023年5月**日｜[GitHub Copilotがあなたのコードをより理解するようになる](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/)
+- 2023年5月**日｜[Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/).
+- 2023年6月**日｜[GitHub Copilotのプロンプトの書き方](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/).
+- 2023年7月**日｜[. GitHub CopilotはAIモデルを改良してCodexを超える](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/)
+- 2023年7月**日｜[A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/)
+- 2023年9月**日｜[How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/)
 
-[エンジニアリングブログ](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst)には、これらのモデルやテクニックが実際のアプリケーションにどのように適用されているかを示す[このブログ](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst)のような投稿もあります。
+[エンジニアリングブログ](https://github.blog/category/engineering/)には、これらのモデルやテクニックが実際のアプリケーションにどのように適用されているかを示す[このブログ](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/)のような投稿もあります。
 
 ---
 
@@ -180,7 +180,7 @@ GitHub Copilotは、あなたの「AIペアプログラマー」です。テキ�
 
 ### 基本的なプロンプト
 
-基本的なプロンプトから始めましょう。他のコンテキストがない状態でモデルに送信されるテキスト入力です。例えば、OpenAIの[Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst)にアメリカ国歌の最初の数単語を送ると、即座に次の数行のレスポンスが補完され、基本的な予測動作が示されます。
+基本的なプロンプトから始めましょう。他のコンテキストがない状態でモデルに送信されるテキスト入力です。例えば、OpenAIの[Completion API](https://platform.openai.com/docs/api-reference/completions)にアメリカ国歌の最初の数単語を送ると、即座に次の数行のレスポンスが補完され、基本的な予測動作が示されます。
 
 | プロンプト(入力) | 補完(出力)
 |:---|:---|
@@ -188,7 +188,7 @@ GitHub Copilotは、あなたの「AIペアプログラマー」です。テキ�
 
 ### 複雑なプロンプト
 
-では、この基本的なプロンプトにコンテキストと指示を追加してみましょう。[チャット補完API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst)では、_messages_のコレクションとして複雑なプロンプトを作成することができます：
+では、この基本的なプロンプトにコンテキストと指示を追加してみましょう。[チャット補完API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt)では、_messages_のコレクションとして複雑なプロンプトを作成することができます：
 
 - ユーザーの入力とアシスタントの応答を反映する入出力ペア。
 - アシスタントの動作やパーソナリティのコンテキストを設定するシステムメッセージ。
@@ -274,11 +274,11 @@ response = openai.ChatCompletion.create(
 
 ### プロンプトテンプレート
 
-プロンプトテンプレートとは、必要に応じて保存して再利用することができる、プロンプトのための「あらかじめ定義されたレシピ」であり、規模に応じてより一貫性のあるユーザーエクスペリエンスを促進する。最も単純な形では、[OpenAIからのもの](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)のようなプロンプトの例を集めたもので、インタラクティブなプロンプトコンポーネント(ユーザーとシステムのメッセージ)とAPI駆動型のリクエストフォーマットの両方を提供し、再利用をサポートする。
+プロンプトテンプレートとは、必要に応じて保存して再利用することができる、プロンプトのための「あらかじめ定義されたレシピ」であり、規模に応じてより一貫性のあるユーザーエクスペリエンスを促進する。最も単純な形では、[OpenAIからのもの](https://platform.openai.com/examples)のようなプロンプトの例を集めたもので、インタラクティブなプロンプトコンポーネント(ユーザーとシステムのメッセージ)とAPI駆動型のリクエストフォーマットの両方を提供し、再利用をサポートする。
 
-LangChainのこの例](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)のような、より複雑な形式では、プロンプトを動的に生成するために、さまざまなソース(ユーザー入力、システムコンテキスト、外部データソースなど)からのデータで置き換えることができる_placeholders_が含まれています。これにより、再利用可能なプロンプトのライブラリを作成することができ、これを使用して**プログラム的に**一貫したユーザーエクスペリエンスを大規模に推進することができます。
+[LangChainのこの例](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/)のような、より複雑な形式では、プロンプトを動的に生成するために、さまざまなソース(ユーザー入力、システムコンテキスト、外部データソースなど)からのデータで置き換えることができる_placeholders_が含まれています。これにより、再利用可能なプロンプトのライブラリを作成することができ、これを使用して**プログラム的に**一貫したユーザーエクスペリエンスを大規模に推進することができます。
 
-最後に、テンプレートの本当の価値は、垂直アプリケーションドメイン用のプロンプトライブラリを作成して公開できることにあります。Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst)リポジトリはこのアプローチの素晴らしい例であり、授業計画、カリキュラム設計、生徒指導などの主要な目的に重点を置いた教育分野のプロンプトライブラリをキュレーションしています。
+最後に、テンプレートの本当の価値は、垂直アプリケーションドメイン用のプロンプトライブラリを作成して公開できることにあります。Prompts For Edu](https://github.com/microsoft/prompts-for-edu)リポジトリはこのアプローチの素晴らしい例であり、授業計画、カリキュラム設計、生徒指導などの主要な目的に重点を置いた教育分野のプロンプトライブラリをキュレーションしています。
 
 ## サポートコンテンツ
 
@@ -315,13 +315,13 @@ LangChainのこの例](https://python.langchain.com/docs/modules/model_io/prompt
 
 1. **レスポンスの精度と関連性は、そのアプリケーションやユーザーが使用する「ドメイン」の機能です。直感とドメインの専門知識を適用して、テクニックをさらに**カスタマイズする。例えば、システムプロンプトでドメイン固有のパーソナリティを定義したり、ユーザープ ロンプトでドメイン固有のテンプレートを使用する。ドメイン固有のコンテキストを反映した二次的なコンテンツを提供したり、_domain-specific cues and examples_を使用してモデルを馴染みのある使用パターンに導く。
 
-2. **モデルの理解は重要です。しかし、モデルの実装は、使用するトレーニングデータセット（事前にトレーニングされた知識）、提供する機能（APIやSDK経由など）、最適化されるコンテンツのタイプ（コード対画像対テキストなど）という点でも異なります。使用しているモデルの長所と限界を理解し、その知識を使用して、タスクに優先順位をつけたり、モデルの能力に最適化されたテンプレートを構築します。
+2. **モデルの理解は重要**です。しかし、モデルの実装は、使用するトレーニングデータセット（事前にトレーニングされた知識）、提供する機能（APIやSDK経由など）、最適化されるコンテンツのタイプ（コード対画像対テキストなど）という点でも異なります。使用しているモデルの長所と限界を理解し、その知識を使用して、タスクに優先順位をつけたり、モデルの能力に最適化されたテンプレートを構築します。
 
-3. **モデルは急速に進化しており、プロンプトエンジニアリングの技術も進化しています。ドメインの専門家であるあなたには、より広範なコミュニティには当てはまらないかもしれない、他のコンテキストや基準があるかもしれません。プロンプトエンジニアリングツールとテクニックを使用してプロンプトの作成を「ジャンプスタート」し、自分の直感と専門知識を使用して結果を反復し検証する。あなたの洞察を記録し、他の人が新しいベースラインとして使用できる **知識ベース** (例: プロンプトライブラリ) を作成する。
+3. **モデルは急速に進化**しており、プロンプトエンジニアリングの技術も進化しています。ドメインの専門家であるあなたには、より広範なコミュニティには当てはまらないかもしれない、他のコンテキストや基準があるかもしれません。プロンプトエンジニアリングツールとテクニックを使用してプロンプトの作成を「ジャンプスタート」し、自分の直感と専門知識を使用して結果を反復し検証する。あなたの洞察を記録し、他の人が新しいベースラインとして使用できる **知識ベース** (例: プロンプトライブラリ) を作成する。
 
 ## ベストプラクティス
 
-では、[Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst)と[Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst)の実践者が推奨する一般的なベストプラクティスを見てみよう。
+では、[Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)と[Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices)の実践者が推奨する一般的なベストプラクティスを見てみよう。
 
 |何を|なぜ|?
 
@@ -362,7 +362,7 @@ Jupyter Notebook にリンクし、指示のコードコメントのみを記述
 
 ### 次に環境変数を設定します。
 
-- repoルートにある`.env.copy`ファイルを`.env`にコピーし、`OPENAI_API_KEY`の値を記入します。APIキーは[OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst)で確認できます。
+- repoルートにある`.env.copy`ファイルを`.env`にコピーし、`OPENAI_API_KEY`の値を記入します。APIキーは[OpenAI Dashboard](https://beta.openai.com/account/api-keys)で確認できます。
 
 ### 次に、Jupyter Notebook を開きます。
 
@@ -394,6 +394,6 @@ A: 2は、「何」の詳細を提供し、具体的な内容（どの車でも�
 
 ## よくできました！学習を続ける
 
-プロンプトエンジニアリングのコンセプトについてもっと知りたいですか？[継続学習ページ](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst)に行って、このトピックに関する他の素晴らしいリソースを見つけましょう。
+プロンプトエンジニアリングのコンセプトについてもっと知りたいですか？[継続学習ページ](../../../13-continued-learning/translations/ja/README.md)に行って、このトピックに関する他の素晴らしいリソースを見つけましょう。
 
 レッスン5では、[プロンプトのテクニック](../../../05-advanced-prompts/translations/ja/README.md)について学びます！

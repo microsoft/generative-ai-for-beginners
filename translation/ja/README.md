@@ -1,5 +1,5 @@
 
-![Generative AI For Beginners](./images/repository-thumbnail.png)
+![Generative AI For Beginners](../../images/repository-thumbnail.png)
 
 ### 生成AIアプリケーションを作り始めるために必要なすべてを学ぶ12レッスンコース
 
@@ -27,7 +27,7 @@ Microsoft Cloud Advocatesによる12レッスンの包括的なコースで、�
 
 以下は各レッスンへのリンクです。自由に探索して、最も興味のあるレッスンから始めてください！
 
-[コースセットアップページ](./00-course-setup/README.md)から、あなたに最適なセットアップガイドを見つけてください。
+[コースセットアップページ](../../00-course-setup/translations/ja/README.md)から、あなたに最適なセットアップガイドを見つけてください。
 
 ## 🗣️ 他の学習者に会い、サポートを受ける 
 
@@ -67,7 +67,7 @@ Microsoft Cloud Advocatesによる12レッスンの包括的なコースで、�
 | 07 | [チャットアプリケーションの構築](../../07-building-chat-applications/translations/ja/README.md) | **コード**： チャットアプリケーションを効率的に構築し、統合するためのテクニック|AIを搭載したチャットアプリケーションの品質を効果的に監視し、維持するための重要なメトリクスと考慮事項を特定する||。
 |08|[検索アプリケーションの構築 ベクトルデータベース](../../08-building-search-applications/translations/ja/README.md) | **Code**： セマンティック検索とキーワード検索。 テキストエンベッディングとそれが検索にどのように適用されるかについて学ぶ|エンベッディングを使ってデータを検索するアプリケーションを作る。| 
 09 | [画像生成アプリケーションの構築](../../09-building-image-applications/translations/ja/README.md) | **コード:** 画像生成とそれがアプリケーションを構築する上で有用である理由|画像生成アプリケーションを構築する | **コード:** 画像生成とそれがアプリケーションを構築する上で有用である理由|画像生成アプリケーションを構築する 
-| 10|[ローコードAIアプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja/README.md) | **ローコード:** Power Platformにおける生成AI入門|教育スタートアップのための学生課題追跡アプリをローコードで構築する||10|[ローコードAIアプリケーションの構築](./10-building-low-code-ai-applications/README.md)
+| 10|[ローコードAIアプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja/README.md) | **ローコード:** Power Platformにおける生成AI入門|教育スタートアップのための学生課題追跡アプリをローコードで構築する|
 | 11 | [関数呼び出しによる外部アプリケーションの統合](../../11-integrating-with-function-calling/transaltions/ja/README.md) | **コード:** 関数呼び出しとは何かとアプリケーションのユースケース | 外部APIからデータを取得するための関数呼び出しをセットアップする | |
 | 12 | [Designing UX for AI Applications](../../12-designing-ux-for-ai-applications/translations/ja/README.md) | **Concept:** Designing AI Applications for Trust and Transparency | 生成AIアプリケーションを開発する際にUXデザインの原則を適用する
 | xx| [学習の続き](../../13-continued-learning/translations/ja/README.md)|各レッスンの学習を続けるためのリンクです！| 生成AIをマスターしよう

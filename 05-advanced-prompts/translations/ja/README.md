@@ -1,6 +1,6 @@
 # 高度なプロンプトの作成
 
-[![高度なプロンプトの作成](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
+[![高度なプロンプトの作成](../../images/05-lesson-banner.png)](https://youtu.be/32GBH6BTWZQ)
 
 前章で学んだことを復習しよう：
 
@@ -602,7 +602,7 @@ GitHub CopilotやChatGPTのようなAIアシスタントを使い、「セルフ
 > ヒント
 > プロンプトをフレーズにして改善を求めましょう。例えば、アーキテクチャ、パフォーマンス、セキュリティなどです。
 
-[ソリューション](./solution.py?WT.mc_id=academic-105485-koreyst)
+[ソリューション](../../solution.py)
 
 ## 知識チェック
 
@@ -620,6 +620,6 @@ A: 1。思考の連鎖とは、LLMに一連の手順や類似の問題とその�
 
 ## よくやった！学習を続ける
 
-このレッスンを終えたら、[生成AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AI知識のレベルアップを続けましょう！
+このレッスンを終えたら、[生成AI学習コレクション](https://aka.ms/genai-collection)をチェックして、生成AI知識のレベルアップを続けましょう！
 
 レッスン6では、[テキスト生成アプリを作る](../../../06-text-generation-apps/translations/ja/README.md)によって、プロンプトエンジニアリングの知識を応用します。
