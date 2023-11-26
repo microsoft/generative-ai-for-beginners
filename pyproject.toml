@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 openai = "^1.3.5"
 python-dotenv = "^1.0.0"
+jupyterlab = "^4.0.9"
 
 
 [build-system]
