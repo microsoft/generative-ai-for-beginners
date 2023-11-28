@@ -3,4 +3,5 @@
 * Select Language
 
     * [English](/)
-    * [Chinese](/translation/cn/)
+    * [Chinese](/translations/cn/)
+    * [Portugese](/translations/pt-br/)
