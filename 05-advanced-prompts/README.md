@@ -61,7 +61,7 @@ There are some basic techniques that we can use to prompt an LLM. Let's explore 
 - **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
 - **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
 - **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
-- **Least to most**, like chain-of-though, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
+- **Least to most**, like chain-of-thought, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
 - **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
 - **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
 

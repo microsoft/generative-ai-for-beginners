@@ -1,14 +1,14 @@
-# Additional resources
+# Recursos Adicionais
 
-Here are links to other great resources to continue your learning and building with Generative AI.
+Aqui estão links para outros ótimos recursos para continuar sua aprendizagem e construção com IA Generativa.
 
-Are we missing a great resource? Let us know by submitting a PR!
+Se você estiver sentindo falta de algum recurso, nos avise enviando um PR!
 
-## 🧠 One Collection to Rule Them ALl  
+## 🧠 Uma Coleção para Dominar tudo sobre o tópico
 
-After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+Após completar este curso, confira nossa [Coleção de Aprendizagem de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar seu conhecimento em IA Generativa!
 
-## Lesson 1  - Introduction to Generative AI and LLMs
+## Lição 1 - Introdução à IA Generativa e LLMs
 
 🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/?WT.mc_id=academic-105485-koreyst)
 
@@ -18,7 +18,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Generative AI: Implication and Applications for Education](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 2 - Exploring and Comparing Different LLM types
+## Lição 2 - Explorando e Comparando Diferentes Tipos de LLM
 
 🔗 [How to use Open Source foundation models curated by Azure Machine Learning (preview) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/azure/machine-learning/how-to-use-foundation-models?WT.mc_id=academic-105485-koreyst)
 
@@ -34,7 +34,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 3 - Using Generative AI Responsibly
+## Lição 3 - Usando a IA Generativa de forma Responsável
 
 🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-koreyst)
 
@@ -46,13 +46,9 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [GPT-4 System Card](https://cdn.openai.com/papers/gpt-4-system-card.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 4 - Understanding Prompt Engineering Fundamentals
+## Lição 4 - Entendendo os Fundamentos da Engenharia de Prompt
 
-🔗 [Getting Started with Azure OpenAI Services](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-koreyst)
-
-[Apply Prompt Engineering with Azure OpenAI services](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-koreyst)
-
-[Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
+🔗 [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-koreyst)
 
 🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering/?WT.mc_id=academic-105485-koreyst)
 
@@ -64,15 +60,15 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 5  - Creating Advanced Prompts
+## Lição 5 - Criando Prompts Avançados
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 6 - Building Text Generation Applications
+## Lição 6 - Criando Aplicações de Geração de Texto
 
 🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions&WT.mc_id=academic-105485-koreyst)
 
-## Lesson 7 - Building Chat Applications
+## Lição 7 - Criando Aplicações de Chat
 
 🔗 [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?WT.mc_id=academic-105485-koreyst)
 
@@ -80,12 +76,9 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-koreyst)
-
-
 🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
-## Lesson 8 - Building Search Applications
+## Lição 8 - Criando Aplicações de Busca
 
 🔗 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)
 
@@ -93,7 +86,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 9 - Building Image Generation Applications
+## Lição 9 - Criando Aplicações de Geração de Imagens
 
 🔗  [Generate Images with Azure OpenAI Service](https://learn.microsoft.com/training/modules/generate-images-azure-openai?WT.mc_id=academic-105485-koreyst)
 
@@ -105,8 +98,7 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 10 - Building Low Code AI Applications
-🔗 [Create bots with Microsoft Copilot Studio](https://learn.microsoft.com/training/paths/work-power-virtual-agents/?&WT.mc_id=academic-105485-koreyst)
+## Lição 10 - Criando Aplicações com Low Code
 
 🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-koreyst)
 
@@ -118,11 +110,11 @@ After completing this course, check out our [Generative AI Learning collection](
 
 🔗 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?wt.mc_id=github_S-1231_webpage_reactor&WT.mc_id=academic-109639-somelezediko)
 
-## Lesson 11- Integrating Applications with Function Calling
+## Lição 11 - Integrando Aplicações com Chamadas de Função
 
 🔗 [OpenAI Functions Documentation](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)
 
-## Lesson 12 - Designing UX for AI Applications
+## Lição 12 - Projetando UX para Aplicações de IA
 
 🔗 [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/community/content/best-practices-ai-ux?WT.mc_id=academic-105485-koreyst)
 

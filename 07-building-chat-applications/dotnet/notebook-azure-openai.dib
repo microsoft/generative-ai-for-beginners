@@ -1,0 +1,37 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget: Azure.AI.OpenAI, 1.0.0-beta.8"
+
+#!csharp
+
+using Azure;
+using Azure.AI.OpenAI;
+using static System.Environment;
+
+#!csharp
+
+string endpoint = "<replace with endpoint>";
+string key = "<replace with API key>";
+
+OpenAIClient client = new(new Uri(endpoint), new AzureKeyCredential(key));
+
+var chatCompletionsOptions = new ChatCompletionsOptions()
+{
+    Messages =
+    {
+        new ChatMessage(ChatRole.System, "You are the president of France"),
+        new ChatMessage(ChatRole.System, "You have just resigned"),
+         new ChatMessage(ChatRole.User, "What tasks needs doing?")
+    },
+    MaxTokens = 100
+};
+
+Response<ChatCompletions> response = client.GetChatCompletions("gpt-35-turbo", chatCompletionsOptions);
+
+Console.WriteLine(response.Value.Choices[0].Message.Content);
+
+Console.WriteLine();
