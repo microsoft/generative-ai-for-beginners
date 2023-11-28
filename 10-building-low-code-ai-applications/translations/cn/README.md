@@ -51,7 +51,7 @@ Copilot 是一款 AI 助手，可让您使用自然语言以一系列对话步�
 
 您可以使用 Copilot 驱动的功能作为应用程序屏幕中的一项功能，使用户能够通过对话交互发现见解。
 
-AI Builder 是 Power Platform 中提供的低代码 AI 功能，使您能够使用 AI 模型来帮助您自动化流程并预测结果。 借助 AI Builder，您可以将 AI 引入连接到 Dataverse 或各种云数据源（例如 SharePoint、OneDrive 或 Azure）中的数据的应用程序和流程。
+AI Builder 是 Power Platform 中提供的低代码 AI 功能，使您能够使用 AI 模型来帮助您自动化流程并预测结果。 借助 AI Builder，您可以将 AI 引入连接到 Dataverse 或各种云数据源（例如 SharePoint、OneDrive 或 Azure) 中的数据的应用程序和流程。
 
 Copilot 适用于所有 Power Platform 产品：Power Apps、Power Automate、Power BI、Power Pages 和 Power Virtual Agent。 AI Builder 可在 Power Apps 和 Power Automate 中使用。 在本课程中，我们将重点介绍如何在 Power Apps 和 Power Automate 中使用 Copilot 和 AI Builder 为我们的教育初创公司构建解决方案。
 
@@ -63,7 +63,7 @@ Power Apps 中的 Copilot  AI 助手功能使您能够描述您需要哪种类�
 
 ### Power Automate 中的 Copilot 
 
-作为 Power Platform 的一部分，Power Automate 允许用户在应用程序和服务之间创建自动化工作流程。 它有助于自动化重复的业务流程，例如通信、数据收集和决策批准。 其简单的界面允许具有各种技术能力的用户（从初学者到经验丰富的开发人员）自动执行工作任务。 通过 Copilot 的生成式 AI 也增强了工作流程开发体验。
+作为 Power Platform 的一部分，Power Automate 允许用户在应用程序和服务之间创建自动化工作流程。 它有助于自动化重复的业务流程，例如通信、数据收集和决策批准。 其简单的界面允许具有各种技术能力的用户（从初学者到经验丰富的开发人员) 自动执行工作任务。 通过 Copilot 的生成式 AI 也增强了工作流程开发体验。
 
 Power Automate 中的 Copilot  AI 助手功能使您能够描述您需要哪种流程以及您希望流程执行哪些操作。 然后 Copilot 根据您的描述生成流程。 然后，您可以自定义流程以满足您的需求。 AI Copilot 还会生成并建议您执行想要自动化的任务所需的操作。 我们将在本章中稍后介绍什么是流以及如何在 Power Automate 中使用它们。 然后，您可以通过对话步骤使用 AI Copilot 助手功能自定义操作以满足您的需求。 通过 Power Automate 主屏幕轻松使用此功能。
 
@@ -158,7 +158,7 @@ Power Platform 有一个名为 Dataverse 的底层数据平台，使您能够存
 
 ## Power Platform 中的 AI 模型与 AI Builder
 
-AI Builder 是 Power Platform 中提供的低代码 AI 功能，使您能够使用 AI 模型来帮助您自动化流程并预测结果。 借助 AI Builder，您可以将 AI 引入连接到 Dataverse 或各种云数据源（例如 SharePoint、OneDrive 或 Azure）中的数据的应用程序和流程。
+AI Builder 是 Power Platform 中提供的低代码 AI 功能，使您能够使用 AI 模型来帮助您自动化流程并预测结果。 借助 AI Builder，您可以将 AI 引入连接到 Dataverse 或各种云数据源（例如 SharePoint、OneDrive 或 Azure) 中的数据的应用程序和流程。
 
 ## 预定义 AI 模型与自定义 AI 模型
 
