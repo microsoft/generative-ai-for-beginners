@@ -4,4 +4,4 @@
 
     * [English](/)
     * [Chinese](/translations/cn/)
-    * [Portugese](/translations/pt-br/)
+    * [Portuguese](/translations/pt-br/)
