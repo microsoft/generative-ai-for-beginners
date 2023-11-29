@@ -27,13 +27,14 @@ Prompt engineering is currently more art than science. The best way to improve o
 
 The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
 
-1. An OpenAI API key - the service endpoint for a deployed LLM.
+1. An Azure OpenAI API key - the service endpoint for a deployed LLM.
 
 2. A Python Runtime - in which the Notebook can be executed.
 
 We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
 
-The default notebook is set up for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
+The default notebook is set up for use with an Azure OpenAI service resource. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `AZURE_OPENAI_API_KEY=` and `AZURE_OPENAI_API_ENDPOINT=` lines with your API key and endpoint. You can check your credentials in the [Azure portal](portal.azure.com), by navigating to your Azure OpenAI resource and then opening the _Keys and Endpoints_ tab in the left menu.
+Also, please add the name you assigned to your model when you created the deployment to the `AZURE_OPENAI_DEPLOYMENT` variable. The recommended model for this exercise is 'gpt-35-turbo'.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
