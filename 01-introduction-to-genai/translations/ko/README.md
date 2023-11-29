@@ -38,7 +38,7 @@
 
 시작하기 위해, 이 커리큘럼에서 사용할 기본 개념과 용어를 정의하겠습니다.
 
-## How did we get Generative AI?
+## 우리는 어떻게 생성형 AI를 얻게 되었나요?
 
 최근 생성형 AI 모델의 발표로 인해 발생한 놀라운 *확장*에도 불구하고, 이 기술은 수십 년 동안 만들어져 왔으며, 최초의 연구 노력은 60년대에 거슬러 올라갑니다. 우리는 이제 인간의 인지 능력을 가진 AI에 도달했습니다. 예를 들어 [OpenAI ChatGPT](https://openai.com/chatgpt)나 [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst)과 같은 대화가 가능한 AI입니다. Bing Chat은 웹 검색 Bing 대화를 위해 GPT 모델을 사용합니다.
 
