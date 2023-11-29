@@ -134,4 +134,4 @@ GitHub Codespaces를 사용할 때 API 키를 안전하게 유지하는 가장 �
 
 ## 시작해봅시다
 
-해당 코스에 필요한 단계를 모두 완료했으니, [생성형 AI와 LLMs 소개](../../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)를 통해 시작해 보세요.
+해당 코스에 필요한 단계를 모두 완료했으니, [생성형 AI와 LLMs 소개](../../../01-introduction-to-genai/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)를 통해 시작해 보세요.
