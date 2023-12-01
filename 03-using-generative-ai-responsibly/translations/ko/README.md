@@ -1,6 +1,6 @@
 # 책임감 있게 생성형 AI 사용하기 
 
-[![Using Generative AI Responsibly](./images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
 
 > **Video Coming Soon**
 
