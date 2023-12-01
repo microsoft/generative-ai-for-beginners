@@ -23,7 +23,9 @@ filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
 # interpolate the number of recipes into the prompt an ingredients
 prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}: "
 
+
 completion = client.completions.create(model=deployment, prompt=prompt, max_tokens=600, temperature = 0.1)
+
 
 # print response
 print("Recipes:")

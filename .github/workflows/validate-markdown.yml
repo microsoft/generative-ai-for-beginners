@@ -24,21 +24,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Check broken Paths
+        id: check-broken-paths
+        uses: john0isaac/action-check-markdown@v1.0.0
         with:
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-      - name: Run Check broken paths
-        run: |
-          BROKEN_PATHS=$(python ./.github/markdown_checker.py --dir './' --func 'check_broken_paths')
-          echo "BROKEN_PATHS<<EOF" >> $GITHUB_ENV
-          echo "$BROKEN_PATHS" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          command: check-broken-paths
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Leave broken paths comment
-        if: ${{ env.BROKEN_PATHS != '' }}
+        if: ${{ steps.check-broken-paths.outputs.is-valid == 1 }}
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -56,9 +50,8 @@ jobs:
               `
             })
       - name: Update workflow run status
-        if: ${{ env.BROKEN_PATHS != '' }}
+        if: ${{ steps.check-broken-paths.outputs.is-valid == 1 }}
         run: exit 1
-
   check-paths-tracking:
     if: ${{ always() }}
     needs: check-broken-paths
@@ -69,21 +62,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
       - name: Run Check paths tracking
-        run: |
-          PATHS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_paths_tracking')
-          echo "PATHS_TRACKING<<EOF" >> $GITHUB_ENV
-          echo "$PATHS_TRACKING" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        id: check-paths-tracking
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-paths-tracking
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Leave paths tracking comment
-        if: ${{ env.PATHS_TRACKING != '' }}
+        if: ${{ steps.check-paths-tracking.outputs.is-valid == 1 }}
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -101,7 +88,7 @@ jobs:
               `
             })
       - name: Update workflow run status
-        if: ${{ env.PATHS_TRACKING != '' }}
+        if: ${{ steps.check-paths-tracking.outputs.is-valid == 1 }}
         run: exit 1
 
   check-urls-tracking:
@@ -114,21 +101,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
       - name: Run Check URLs tracking
-        run: |
-          URLS_TRACKING=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_tracking')
-          echo "URLS_TRACKING<<EOF" >> $GITHUB_ENV
-          echo "$URLS_TRACKING" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        id: check-urls-tracking
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-urls-tracking
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Leave URLs tracking comment
-        if: ${{ env.URLS_TRACKING != '' }}
+        if: ${{ steps.check-urls-tracking.outputs.is-valid == 1 }}
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -146,7 +127,7 @@ jobs:
               `
             })
       - name: Update workflow run status
-        if: ${{ env.URLS_TRACKING != '' }}
+        if: ${{ steps.check-urls-tracking.outputs.is-valid == 1 }}
         run: exit 1
 
   check-urls-locale:
@@ -159,21 +140,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
       - name: Run Check URLs Country Locale
-        run: |
-          URLS_LOCALE=$(python ./.github/markdown_checker.py --dir './' --func 'check_urls_locale')
-          echo "URLS_LOCALE<<EOF" >> $GITHUB_ENV
-          echo "$URLS_LOCALE" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        id: check-urls-locale
+        uses: john0isaac/action-check-markdown@v1.0.0
+        with:
+          command: check-urls-locale
+          directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Leave URLs locale comment
-        if: ${{ env.URLS_LOCALE != '' }}
+        if: ${{ steps.check-urls-locale.outputs.is-valid == 1 }}
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -191,5 +166,5 @@ jobs:
               `
             })
       - name: Update workflow run status
-        if: ${{ env.URLS_LOCALE != '' }}
+        if: ${{ steps.check-urls-locale.outputs.is-valid == 1 }}
         run: exit 1
