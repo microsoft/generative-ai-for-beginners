@@ -43,7 +43,7 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 예를 들어 스타트업의 기능 중 하나로 학생들이 모델에게 역사와 관련한 질문을 할 수 있도록 하는 경우를 생각해 보겠습니다. 학생이 '타이타닉의 유일한 생존자는 누구였나요?'라는 질문을 한 경우 모델은 아래와 같이 응답할 수 있습니다:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
 
 > *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 
