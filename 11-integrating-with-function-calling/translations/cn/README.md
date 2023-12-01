@@ -176,7 +176,7 @@ Function Calling 是 Azure Open AI Service 的一项功能，旨在克服以下�
 
 - **创建 API 或数据库查询**。 用户可以使用自然语言查找信息，并将其转换为格式化查询或 API 请求。 举个例子，老师请求“谁是完成最后作业的学生”，该老师可以调用名为 'get_completed(student_name: string, assignment: int, current_status: string)' 的函数
 
-- **创建结构化数据**。 用户可以获取一段文本或 CSV 并使用 LLM 从中提取重要信息。 例如，学生可以将有关和平协议的维基百科文章转换为创建人工智能闪存卡。 这可以通过使用名为 'get_important_facts（agreement_name：string，date_signed：string，partys_involved：list) ' 的函数来完成
+- **创建结构化数据**。 用户可以获取一段文本或 CSV 并使用 LLM 从中提取重要信息。 例如，学生可以将有关和平协议的维基百科文章转换为创建人工智能闪存卡。 这可以通过使用名为 'get_important_facts（agreement_name：string，date_signed：string，partys_involved：list）' 的函数来完成
 
 ## 创建您的第一个 function calling 
 
@@ -192,7 +192,7 @@ Function Calling 是 Azure Open AI Service 的一项功能，旨在克服以下�
 
 Step 1 是创建用户消息。 这可以通过获取文本输入的值来动态分配，或者您可以在此处分配一个值。 如果这是您第一次使用聊天完成 API，我们需要定义消息的“角色”和“内容”。
 
- `role` 可以是`system` （创建规则) 、`assistant` 模型) 或`user`最终用户) 。 对于函数调用，我们将其指定为 `user` 和一个示例问题。
+ `role` 可以是`system` （创建规则）、`assistant` 模型）或`user`最终用户）。 对于函数调用，我们将其指定为 `user` 和一个示例问题。
 
 
 ```python

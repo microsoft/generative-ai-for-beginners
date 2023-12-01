@@ -5,9 +5,9 @@
 
 如何撰写 LLM 的提示很重要，精心设计的提示可以比不精心设计的提示取得更好的结果。 但这些概念到底是什么，提示、提示工程以及我如何改进我发送给 LLMs 的内容？ 诸如此类的问题正是本章和下一章想要解答的。
 
-_生成式人工智能_能够根据用户请求创建新内容（例如文本、图像、音频、代码等) 。 它使用 LLMs 来实现这一目标，例如 OpenAI 的 GPT 模型系列，这些模型通过使用自然语言和代码进行训练。
+_生成式人工智能_能够根据用户请求创建新内容（例如文本、图像、音频、代码等）。 它使用 LLMs 来实现这一目标，例如 OpenAI 的 GPT 模型系列，这些模型通过使用自然语言和代码进行训练。
 
-用户现在可以使用熟悉的语言（如聊天) 与这些模型进行交互，而无需任何技术专业知识或培训。 这些模型是基于提示的——用户发送文本输入（提示) 并获取人工智能响应（完成) 。 然后，他们可以在多轮对话中迭代地“与人工智能聊天”，完善他们的提示，直到响应符合他们的预期。
+用户现在可以使用熟悉的语言（如聊天）与这些模型进行交互，而无需任何技术专业知识或培训。 这些模型是基于提示的——用户发送文本输入（提示）并获取人工智能响应（完成）。 然后，他们可以在多轮对话中迭代地“与人工智能聊天”，完善他们的提示，直到响应符合他们的预期。
 
 “提示”现在成为生成式人工智能应用程序的主要_编程界面_，告诉模型要做什么并影响返回响应的质量。 “提示工程”是一个快速发展的研究领域，专注于提示的“设计和优化”，以大规模提供一致且高质量的响应。
 
@@ -36,7 +36,7 @@ _生成式人工智能_能够根据用户请求创建新内容（例如文本、
 
 默认 Notebook 设置为与 OpenAI API 密钥一起使用。 只需将文件夹根目录中的“.env.copy”文件复制到“.env”，并使用您的 API 密钥更新“OPENAI_API_KEY=”行 - 一切就完成了。
 
-该 Notebook  附带入门练习 - 但我们鼓励您添加自己的Markdown描述) 和代码（提示请求) 部分来尝试更多示例或想法 - 并建立您对提示工程设计的感觉。
+该 Notebook  附带入门练习 - 但我们鼓励您添加自己的Markdown描述）和代码（提示请求）部分来尝试更多示例或想法 - 并建立您对提示工程设计的感觉。
 
 
 ## Our Startup 的使命
@@ -75,7 +75,7 @@ Define it and explain why it is needed.
 
 ### Tokenization
 
-LLM 将提示视为标记序列，其中不同的模型（或模型的版本) 可以以不同的方式对同一提示进行标记。 由于 LLM 是根据标记（而不是原始文本) 进行训练的，因此提示标记化的方式对生成的响应的质量有直接影响。
+LLM 将提示视为标记序列，其中不同的模型（或模型的版本）可以以不同的方式对同一提示进行标记。 由于 LLM 是根据标记（而不是原始文本）进行训练的，因此提示标记化的方式对生成的响应的质量有直接影响。
 
 要直观地了解标记化的工作原理，请尝试使用如下所示的 [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) 等工具。 复制您的提示 - 并查看如何将其转换为标记，注意空白字符和标点符号的处理方式。 请注意，此例子显示的是较旧的 LLM (GPT-3) - 因此使用较新的模型尝试此操作可能会产生不同的结果。
 
@@ -89,7 +89,7 @@ Want to see how prompt-based completion works? Enter the above prompt into the A
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
-一旦提示被标记化，[“Base LLM”](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)的主要功能 （或基础模型) 是预测该序列中的标记。 由于 LLMs 接受过大量文本数据集的训练，因此他们对标记之间的统计关系有很好的理解，并且可以自信地做出预测。 并不是说他们不理解提示或标记中单词的含义，他们只是看到了一个可以通过下一个预测“完成”的模式。 他们可以继续预测序列，直到被用户干预或某些预先设定的条件终止。
+一旦提示被标记化，[“Base LLM”](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)的主要功能 （或基础模型）是预测该序列中的标记。 由于 LLMs 接受过大量文本数据集的训练，因此他们对标记之间的统计关系有很好的理解，并且可以自信地做出预测。 并不是说他们不理解提示或标记中单词的含义，他们只是看到了一个可以通过下一个预测“完成”的模式。 他们可以继续预测序列，直到被用户干预或某些预先设定的条件终止。
 
 想了解基于提示补全是如何工作的吗？ 使用默认设置将上述提示输入到 Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)。 系统配置会将提示视为信息请求 - 因此您应该看到满足此上下文的补全。
 
@@ -99,7 +99,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 ### 概念:  LLMs 中的指令调整
 
-[ LLMs 中的指令调整](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) 从基础模型开始，并使用以下参数对其进行微调 可以包含明确指令的示例或输入/输出对（例如多轮“消息”) ，以及人工智能尝试遵循该指令的响应。
+[ LLMs 中的指令调整](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) 从基础模型开始，并使用以下参数对其进行微调 可以包含明确指令的示例或输入/输出对（例如多轮“消息”），以及人工智能尝试遵循该指令的响应。
 
 它使用诸如人类反馈强化学习 (RLHF) 之类的技术，可以训练模型“遵循指令”并“从反馈中学习”，从而产生更适合实际应用且与用户目标更相关的响应。
 
@@ -123,16 +123,16 @@ But what if the user wanted to see something specific that met some criteria or 
 
 让我们看看 OpenAI 或 Azure OpenAI Playground 中的实际情况：
 
-- 对不同的 LLM 部署（例如 OpenAI、Azure OpenAI、Hugging Face) 使用相同的提示 - 您看到差异了吗？
-- 对相同的 LLM 部署（例如 Azure OpenAI Playground) 重复使用相同的提示 - 产生的结果有何不同？
+- 对不同的 LLM 部署（例如 OpenAI、Azure OpenAI、Hugging Face）使用相同的提示 - 您看到差异了吗？
+- 对相同的 LLM 部署（例如 Azure OpenAI Playground）重复使用相同的提示 - 产生的结果有何不同？
 
 ### 幻觉示例
 
-想了解幻觉是如何运作的吗？ 想象一个提示，指示人工智能为不存在的主题生成内容（以确保在训练数据集中没有该信息) 。 例如 - 我尝试了这个提示：
+想了解幻觉是如何运作的吗？ 想象一个提示，指示人工智能为不存在的主题生成内容（以确保在训练数据集中没有该信息）。 例如 - 我尝试了这个提示：
 
 > **Prompt:** generate a lesson plan on the Martian War of 2076.
 
-网络搜索显示，有关于火星战争的虚构叙述（例如电视剧或书籍) ，但没有 2076 年的故事。常识还告诉我们，2076 年是“未来”，因此无法与真实事件联系起来。
+网络搜索显示，有关于火星战争的虚构叙述（例如电视剧或书籍），但没有 2076 年的故事。常识还告诉我们，2076 年是“未来”，因此无法与真实事件联系起来。
 
 那么，当我们对不同的 LLMs 提供者运行此提示时会发生什么？
 
@@ -148,7 +148,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 ![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
-正如预期的那样，由于随机行为和模型能力变化，每个模型（或模型版本) 都会产生略有不同的响应。 例如，一个模型针对八年级受众，而另一个模型则假设高中生。 但所有三个模型确实生成了可以让不知情的用户相信该事件是真实的响应
+正如预期的那样，由于随机行为和模型能力变化，每个模型（或模型版本）都会产生略有不同的响应。 例如，一个模型针对八年级受众，而另一个模型则假设高中生。 但所有三个模型确实生成了可以让不知情的用户相信该事件是真实的响应
 
 像元提示和温度配置这样的提示工程技术可以在一定程度上减少模型幻觉。 新的提示工程架构还将新工具和技术无缝地融入到提示流程中，以减轻或减少其中一些影响。
 
@@ -156,7 +156,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 让我们通过一个案例研究来了解如何在实际解决方案中使用提示工程：[GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst)。
 
-GitHub Copilot 是您的“AI 结对编程器” - 它将文本提示转换为代码补全，并集成到您的开发环境（例如 Visual Studio Code) 中，以提供无缝的用户体验。 正如下面的系列博客中所述，最早的版本基于 OpenAI Codex 模型 - 工程师很快意识到需要微调模型并开发更好的提示工程技术，以提高代码质量。 7 月，他们 [首次推出了超越 Codex 模型的改进人工智能模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) 以获得更快的建议。
+GitHub Copilot 是您的“AI 结对编程器” - 它将文本提示转换为代码补全，并集成到您的开发环境（例如 Visual Studio Code）中，以提供无缝的用户体验。 正如下面的系列博客中所述，最早的版本基于 OpenAI Codex 模型 - 工程师很快意识到需要微调模型并开发更好的提示工程技术，以提高代码质量。 7 月，他们 [首次推出了超越 Codex 模型的改进人工智能模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) 以获得更快的建议。
 
 按顺序阅读帖子，了解他们的成长过程
 
@@ -230,8 +230,8 @@ response = openai.ChatCompletion.create(
 
 在上面的示例中，提示仍然相当开放，允许 LLMs 决定其预训练数据集的哪一部分是相关的。 使用主要内容设计模式，输入文本分为两部分：
 
-- 指令（动作) 
-- 相关内容（影响响应) 
+- 指令（动作）
+- 相关内容（影响响应）
 
 下面是一个示例，其中的指令是“用 2 句话总结这一点”。
 
@@ -245,7 +245,7 @@ response = openai.ChatCompletion.create(
 
 - **示例** - 不要用明确的指令告诉模型要做什么，而是给它提供要做什么的示例，并让它进行推断。
 - **暗示** - 遵循带有“暗示”的说明，引导完成，引导模型做出更相关的响应。
-- **模板** - 这些是带有占位符（变量) 提示的可重复“配方”，可以使用特定用例的数据进行自定义。
+- **模板** - 这些是带有占位符（变量）提示的可重复“配方”，可以使用特定用例的数据进行自定义。
 
 
 ### 用例方式
@@ -256,7 +256,7 @@ response = openai.ChatCompletion.create(
 
 - 任务描述
 - 所需输出的一些示例
-- 新示例的开始（成为隐式任务描述) 
+- 新示例的开始（成为隐式任务描述）
 
     ```text
     | Learning Type | Prompt (Input) | Completion (Output) |
@@ -267,7 +267,7 @@ response = openai.ChatCompletion.create(
     | | | |
     ```
 
-请注意，我们如何必须在零样本提示中提供明确的指令（“翻译为西班牙语”) ，但它是在一次提示示例中推断出来的。 这个少样本示例展示了如何添加更多示例来让模型在不添加指令的情况下做出更准确的推理。
+请注意，我们如何必须在零样本提示中提供明确的指令（“翻译为西班牙语”），但它是在一次提示示例中推断出来的。 这个少样本示例展示了如何添加更多示例来让模型在不添加指令的情况下做出更准确的推理。
 
 ### 暗示提示
 
@@ -284,17 +284,17 @@ response = openai.ChatCompletion.create(
 
 ### 提示模版
 
-提示模板是预定义的提示配方，可以根据需要进行存储和重用，以大规模推动更一致的用户体验。 最简单的形式是，它只是一组提示示例的集合，例如 [OpenAI 中的这个例子](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)，它提供了交互式提示组件（用户和系统消息) 和 AP驱动请求格式来支持重用。
+提示模板是预定义的提示配方，可以根据需要进行存储和重用，以大规模推动更一致的用户体验。 最简单的形式是，它只是一组提示示例的集合，例如 [OpenAI 中的这个例子](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)，它提供了交互式提示组件（用户和系统消息）和 AP驱动请求格式来支持重用。
 
-在它更复杂的形式中，比如[LangChain的这个例子](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等) 来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
+在它更复杂的形式中，比如[LangChain的这个例子](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等）来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
 
 最后，模板的真正价值在于能够为垂直应用程序领域创建和发布提示库 - 其中提示模板现在已优化以反映特定于应用程序的上下文或示例，使响应对于目标用户受众更加相关和准确 。 [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repo 是这种方法的一个很好的例子，它为教育领域策划了一个提示库，重点关注课程计划等关键目标， 课程设计、学生辅导等
 
 ## 支持内容
 
-如果我们将提示构建视为具有指令（任务) 和目标（主要内容) ，那么次要内容_像我们提供的附加上下文**以某种方式影响输出**。 它可以是调整参数、格式化指令、主题分类法等，可以帮助模型定制其响应以适应所需的用户目标或期望。
+如果我们将提示构建视为具有指令（任务) 和目标（主要内容），那么次要内容_像我们提供的附加上下文**以某种方式影响输出**。 它可以是调整参数、格式化指令、主题分类法等，可以帮助模型定制其响应以适应所需的用户目标或期望。
 
-例如：给定一个包含课程表中所有可用课程的广泛元数据（名称、描述、级别、元数据标签、讲师等) 的课程目录：
+例如：给定一个包含课程表中所有可用课程的广泛元数据（名称、描述、级别、元数据标签、讲师等）的课程目录：
 
 - 我们可以定义一条指令来“总结 2023 年秋季课程目录”
 - 我们可以使用主要内容来提供所需输出的一些示例
@@ -326,9 +326,9 @@ Illustrate it with some exercises.
 
 1. **领域理解很重要。** 响应准确性和相关性是应用程序或用户操作的与特定领域相关的函数。 运用您的直觉和领域专业知识进一步**定制技术**。 例如，在系统提示中定义特定于某个领域的个性化，或在用户提示中使用特定于某领域的模板。 提供反映特定领域上下文的辅助内容，或使用特定领域的提示和示例来指导模型走向熟悉的使用模式。
 
-2. **模型理解很重要。** 我们知道模型产生的结果本质上是随机的。 但模型实现也可能因它们使用的训练数据集（预先训练的知识) 、它们提供的功能（例如，通过 API 或 SDK) 以及它们优化的内容类型（例如，代码与图像与文本) 。 了解您正在使用的模型的优点和局限性，并利用这些知识来确定任务的优先级或构建针对模型功能进行优化的自定义模板。
+2. **模型理解很重要。** 我们知道模型产生的结果本质上是随机的。 但模型实现也可能因它们使用的训练数据集（预先训练的知识）、它们提供的功能（例如，通过 API 或 SDK）以及它们优化的内容类型（例如，代码与图像与文本）。 了解您正在使用的模型的优点和局限性，并利用这些知识来确定任务的优先级或构建针对模型功能进行优化的自定义模板。
 
-3. **迭代和验证很重要。** 模型正在迅速发展，提示工程技术也在迅速发展。 作为领域专家，您可能有其他特定应用程序的背景或标准，这些背景或标准可能不适用于更广泛的社区。 使用提示工程工具和技术“快速启动”提示构建，然后使用您自己的直觉和领域专业知识迭代和验证结果。 记录您的见解并创建一个**知识库**（例如提示库) ，其他人可以将其用作新的基线，以便将来更快地迭代。
+3. **迭代和验证很重要。** 模型正在迅速发展，提示工程技术也在迅速发展。 作为领域专家，您可能有其他特定应用程序的背景或标准，这些背景或标准可能不适用于更广泛的社区。 使用提示工程工具和技术“快速启动”提示构建，然后使用您自己的直觉和领域专业知识迭代和验证结果。 记录您的见解并创建一个**知识库**（例如提示库），其他人可以将其用作新的基线，以便将来更快地迭代。
 
 ## 最佳实践
 
@@ -371,9 +371,9 @@ Link to a copy of that Notebook with the prompts filled in and run, showing what
 
 ### 首先，fork the repo，然后
 
--（推荐) 启动 GitHub Codespaces
-- （或者) 将 repo 克隆到本地设备并将其与 Docker Desktop 一起使用
-- （或者) 使用您的笔记本运行时环境来打开笔记本。
+-（推荐）启动 GitHub Codespaces
+- （或者）将 repo 克隆到本地设备并将其与 Docker Desktop 一起使用
+- （或者）使用您的笔记本运行时环境来打开笔记本。
 
 ### 接下来，配置你的环境变量
 
@@ -401,7 +401,7 @@ Wrap the section with a summary and resources for self-guided learning.
 2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
 3. Show me an image of red car of make Volvo and model XC90 
 
-答：2，这是最好的提示，因为它提供了有关“内容”的详细信息并详细说明（不仅仅是任何汽车，而是特定的品牌和型号) ，并且还描述了整体设置。 3 是次佳的，因为它也包含很多描述。
+答：2，这是最好的提示，因为它提供了有关“内容”的详细信息并详细说明（不仅仅是任何汽车，而是特定的品牌和型号），并且还描述了整体设置。 3 是次佳的，因为它也包含很多描述。
 
 ## 🚀 知识拓展
 
