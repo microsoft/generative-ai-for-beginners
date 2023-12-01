@@ -43,7 +43,7 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 예를 들어 스타트업의 기능 중 하나로 학생들이 모델에게 역사와 관련한 질문을 할 수 있도록 하는 경우를 생각해 보겠습니다. 학생이 '타이타닉의 유일한 생존자는 누구였나요?'라는 질문을 한 경우 모델은 아래와 같이 응답할 수 있습니다:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
+![Prompt saying "Who was the sole survivor of the Titanic"](../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
 
 > *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 
@@ -75,7 +75,7 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 책임 있는 생성형 AI의 중요성에 대해 배웠으므로 이제 생성형 AI의 답변들을 책임 있게 만드는 4가지 단계에 대해 배워봅시다.
 
-![Mitigate Cycle](./images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
+![Mitigate Cycle](../../images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
 
 ### 잠재적 피해 측정
 
@@ -87,7 +87,7 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 이제 모델 및 해당 응답이 일으킬 수 있는 잠재적 피해를 방지하거나 제한할 수 있는 방법을 찾아보겠습니다. 이를 4가지 다른 레이어로 살펴볼 수 있습니다:
 
-![Mitigation Layers](./images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
+![Mitigation Layers](../../images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
 
 - **모델**. 올바른 사용 사례에 적합한 모델 선택. GPT-4와 같이 크고 복잡한 모델은 더 작고 구체적인 사용 사례에 적용할 때 유해한 콘텐츠의 위험을 더 많이 초래할 수 있습니다. 훈련 데이터를 사용하여 세밀하게 조정하면 해로운 콘텐츠의 위험을 줄일 수 있습니다.
 
@@ -95,11 +95,11 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 - **메타프롬프트**. 메타프롬프트와 그라운딩은 특정 행동 및 정보를 기반으로 모델을 제한하거나 안내하는 방법입니다. 이것은 시스템 입력을 사용하여 모델의 특정 한계를 정의하거나 시스템의 범위나 도메인과 관련이 더 있는 출력을 제공할 수 있습니다. 
 
-또한 Retrieval Augmented Generation (RAG)과 같은 방법을 사용하여 모델이 검증된 출처들에서 선택하여 정보를 가져올 수 있도록 할 수 있습니다. 추후에 이것에 관한 수업이 있습니다. [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+또한 Retrieval Augmented Generation (RAG)과 같은 방법을 사용하여 모델이 검증된 출처들에서 선택하여 정보를 가져올 수 있도록 할 수 있습니다. 추후에 이것에 관한 수업이 있습니다. [building search applications](../../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **사용자 경험**. 최종 레이어는 사용자가 모델과 어떤 방식으로든 응용 프로그램 인터페이스를 통해 직접 상호 작용하는 곳입니다. 이를 통해 UI/UX를 디자인하여 사용자가 모델로 보낼 수 있는 입력 유형과 사용자에게 표시되는 텍스트 또는 이미지를 제한할 수 있습니다. AI 애플리케이션을 배포할 때에는 또한 생성형 AI 애플리케이션이 무엇을 할 수 있고 할 수 없는지에 대해 투명하게 밝혀야 합니다.   
 
-이에 관한 전체 내용을 담은 수업이 있습니다. [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+이에 관한 전체 내용을 담은 수업이 있습니다. [Designing UX for AI Applications](../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **모델 평가**. LLM 모델과 작업하는 것은 모델이 학습하는 데이터를 우리가 항상 제어할 수는 없기 때문에 어려울 수 있습니다. 그럼에도 불구하고 우리는 모델의 성능과 출력을 항상 평가해야 합니다. 모델의 정확도, 유사성, 기초 특성 및 출력의 관련성을 측정하는 것은 여전히 중요하고, 이는 이해관계자 및 사용자에게 투명성과 신뢰를 제공합니다.
 
