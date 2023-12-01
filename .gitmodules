@@ -1,0 +1,3 @@
+[submodule "devops"]
+	path = devops
+	url = https://github.com/aclouder/devops
