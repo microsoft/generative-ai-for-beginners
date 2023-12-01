@@ -95,11 +95,11 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 - **메타프롬프트**. 메타프롬프트와 그라운딩은 특정 행동 및 정보를 기반으로 모델을 제한하거나 안내하는 방법입니다. 이것은 시스템 입력을 사용하여 모델의 특정 한계를 정의하거나 시스템의 범위나 도메인과 관련이 더 있는 출력을 제공할 수 있습니다. 
 
-또한 Retrieval Augmented Generation (RAG)과 같은 방법을 사용하여 모델이 검증된 출처들에서 선택하여 정보를 가져올 수 있도록 할 수 있습니다. 추후에 이것에 관한 수업이 있습니다. [building search applications](../../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+또한 Retrieval Augmented Generation (RAG)과 같은 방법을 사용하여 모델이 검증된 출처들에서 선택하여 정보를 가져올 수 있도록 할 수 있습니다. 추후에 이것에 관한 수업이 있습니다. [building search applications](../../../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **사용자 경험**. 최종 레이어는 사용자가 모델과 어떤 방식으로든 응용 프로그램 인터페이스를 통해 직접 상호 작용하는 곳입니다. 이를 통해 UI/UX를 디자인하여 사용자가 모델로 보낼 수 있는 입력 유형과 사용자에게 표시되는 텍스트 또는 이미지를 제한할 수 있습니다. AI 애플리케이션을 배포할 때에는 또한 생성형 AI 애플리케이션이 무엇을 할 수 있고 할 수 없는지에 대해 투명하게 밝혀야 합니다.   
 
-이에 관한 전체 내용을 담은 수업이 있습니다. [Designing UX for AI Applications](../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+이에 관한 전체 내용을 담은 수업이 있습니다. [Designing UX for AI Applications](../../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **모델 평가**. LLM 모델과 작업하는 것은 모델이 학습하는 데이터를 우리가 항상 제어할 수는 없기 때문에 어려울 수 있습니다. 그럼에도 불구하고 우리는 모델의 성능과 출력을 항상 평가해야 합니다. 모델의 정확도, 유사성, 기초 특성 및 출력의 관련성을 측정하는 것은 여전히 중요하고, 이는 이해관계자 및 사용자에게 투명성과 신뢰를 제공합니다.
 
@@ -129,4 +129,4 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 이 수업을 마치고 나서 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)를 확인하여 생성형 AI에 관련한 지식을 더욱 쌓을 수 있습니다!
 
-4번 수업으로 이동하여 [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
+4번 수업으로 이동하여 [Prompt Engineering Fundamentals](../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
