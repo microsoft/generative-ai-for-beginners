@@ -88,7 +88,7 @@ jupyterhub
 
 ## 贡献该内容
 
-本课程是一项开源计划。 如果您发现需要改进的地方或问题，请创建 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) 或记录 [Github 问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)。
+本课程是一项开源计划。 如果您发现需要改进的地方或问题，请创建 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) 或记录 [GitHub 问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)。
 
 课程项目团队将跟踪所有贡献，为开源做出贡献是在生成人工智能领域建立职业生涯的绝佳方式。
 
