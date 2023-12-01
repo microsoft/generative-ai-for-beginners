@@ -108,7 +108,7 @@ LLMs 还可以根据其产生的输出进行分类。
 一旦我们的团队探索了当前的 LLMs 前景并为他们的场景确定了一些好的候选模型后，下一步就是根据他们的数据和工作负载行测试。 这是一个迭代过程，通过实验和量化来完成。
 我们在前面的段落中提到的大多数模型（OpenAI 模型、Llama2 等开源模型和 Hugging Face transformers）都可以在 [Azure 机器学习工作室](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst) 中的目录中找到 [基础模型](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) 。
 
-[Azure 机器学习](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) 是一项云服务，专为数据科学家和机器学习工程师设计，用于管理整个机器学习生命周期（训练、测试、部署和 MLOps 相关的工作） 在一个平台上。 机器学习工作室为此服务提供图形用户界面，使用户能够：
+[Azure 机器学习](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) 是一项云服务，专为数据科学家和机器学习工程师设计，用于管理整个机器学习生命周期（训练、测试、部署和 MLOps 相关的工作）在一个平台上。 机器学习工作室为此服务提供图形用户界面，使用户能够：
 
 - 在目录中查找感兴趣的基础模型，按任务、许可证或名称进行过滤。 还可以导入尚未包含在目录中的新模型。
 - 查看模型名片(包括详细描述和代码示例,并通过提供示例提示来测试结果),使用示例推理小部件对其进行测试。
