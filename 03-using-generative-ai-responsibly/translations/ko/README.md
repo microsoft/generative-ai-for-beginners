@@ -129,4 +129,4 @@ Hallucinations(환각)은 LLM이 완전히 비논리적이거나, 잘못되거�
 
 이 수업을 마치고 나서 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)를 확인하여 생성형 AI에 관련한 지식을 더욱 쌓을 수 있습니다!
 
-4번 수업으로 이동하여 [Prompt Engineering Fundamentals](../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
+4번 수업으로 이동하여 [Prompt Engineering Fundamentals](../../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
