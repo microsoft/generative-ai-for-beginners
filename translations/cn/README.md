@@ -58,7 +58,7 @@
 | 08 | [创建搜索应用](../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **代码**: 语义搜索与关键字搜索。 什么是文本嵌入以及它们如何应用于搜索 | 创建一个使用嵌入来搜索数据的应用程序。 |
 | 09 | [创建图像生成应用](../../09-building-image-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **代码:** 图像生成及其在构建应用程序中的作用| 构建图像生成应用程序 |
 | 10 | [创建低代码的人工智能应用](../../10-building-low-code-ai-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **低代码:** Power Platform 中的生成式 AI 简介 | 使用低代码为我们的教育初创公司构建学生作业跟踪应用程序 | |
-| 11 | [为生成式 AI 添加 function calling](../../11-integrating-with-function-calling/transaltions/cn/README.md?WT.mc_id=academic-105485-koreyst)  | **代码:** 什么是 Function Calling 及其在应用程序中的使用示例  | 设置 Function Calling 以从外部 API 检索数据 | |
+| 11 | [为生成式 AI 添加 function calling](../../11-integrating-with-function-calling/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)  | **代码:** 什么是 Function Calling 及其在应用程序中的使用示例  | 设置 Function Calling 以从外部 API 检索数据 | |
 | 12 | [为人工智能应用程序添加用户体验](../../12-designing-ux-for-ai-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) | **知识点:** 设计人工智能应用程序以实现信任和透明度 | 开发生成式人工智能应用时用户体验设计的相关原则 | |
 | xx | [拓展学习](../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst?WT.mc_id=academic-105485-koreyst)  | 包含每章内容的的拓展链接！ | 掌握生成式人工智能相关技能 | |
  
