@@ -26,15 +26,22 @@ By the end of this lesson we will be able to:
 
 Prompt engineering is currently more art than science. The best way to improve our intuition for it is to _practice more_ and adopt a trial-and-error approach that combines application domain expertise with recommended techniques and model-specific optimizations.
 
-The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
+The Jupyter Notebooks accompanying this lesson provide a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
 
-1. An OpenAI API key - the service endpoint for a deployed LLM.
+1. An OpenAI or Azure OpenAI API key - the service endpoint for a deployed LLM.
 
 2. A Python Runtime - in which the Notebook can be executed.
 
 We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
 
 The default notebook is set up for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
+
+If you have an Azure OpenAI deployment, then configure the following variables in your `.env` file:
+```
+AZURE_OPENAI_API_KEY="<your-azure-openai-api-key>"
+AZURE_OPENAI_ENDPOINT="<your-azure-openai-endpoint-url>"
+AZURE_OPENAI_DEPLOYMENT_NAME="<your-deployment-name>"
+```
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
@@ -362,9 +369,24 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 ### Next, configure your environment variables
 
-- Copt the `.env.copy` file in repo root to `.env` and fill in the `OPENAI_API_KEY` value. You can find your API Key in your [OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst).
+If you are using OpenAI:
 
-### Next, open the Jupyter Notebook
+- Copy the `.env.copy` file in repo root to `.env` and fill in the `OPENAI_API_KEY` value. You can find your API Key in your [OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst).
+
+If you are using Azure OpenAI:
+
+- Copy the `.env.copy` file in repo root to `.env` and fill in the following values:
+
+```
+AZURE_OPENAI_API_KEY="<your-azure-openai-api-key>"
+AZURE_OPENAI_ENDPOINT="<your-azure-openai-endpoint-url>"
+AZURE_OPENAI_DEPLOYMENT_NAME="<your-deployment-name>"
+```
+
+### Next, open the appropriate Jupyter Notebook
+
+- If you are using OpenAI, open [1-introduction.ipynb](1-introduction.ipynb)
+- If you are using Azure OpenAI, open [1-introduction-azure-openai.ipynb](1-introduction-azure-openai.ipynb)
 
 - Select the runtime kernel. If using options 1 or 2, simply select the default Python 3.10.x kernel provided by the dev container.
 
