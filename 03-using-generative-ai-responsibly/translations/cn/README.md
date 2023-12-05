@@ -110,7 +110,7 @@
 
 ## 相关工具
 
-虽然开发负责任 AI 解决方案的工作量可能看起来很多，但这是值得付出的。 随着生成式人工智能领域的发展，更多帮助开发人员有效地将责任整合到工作流程中的工具将会更成熟。 如，[Azure AI 内容安全](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst ) 可以通过 API 请求帮助检测有害内容和图像。
+虽然开发负责任 AI 解决方案的工作量可能看起来很多，但这是值得付出的。 随着生成式人工智能领域的发展，更多帮助开发人员有效地将责任整合到工作流程中的工具将会更成熟。 如，[Azure AI 内容安全](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) 可以通过 API 请求帮助检测有害内容和图像。
 
 ## 知识检查
 

@@ -47,7 +47,7 @@ Here is an example of a semantic search. Let's say you were looking to buy a car
 
 [Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) are a text representation technique used in [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Text embeddings are semantic numerical representations of text. Embeddings are used to represent data in a way that is easy for a machine to understand.  There are many models for building text embeddings, in this lesson, we will focus on generating embeddings using the OpenAI Embedding Model.
 
-Here's an example, image the following text is in a transcript from one of the episodes on the AI Show YouTube channel:
+Here's an example, imagine the following text is in a transcript from one of the episodes on the AI Show YouTube channel:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
