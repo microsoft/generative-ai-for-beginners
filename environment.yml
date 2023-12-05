@@ -1,0 +1,12 @@
+name: stats2
+channels:
+  - javascript
+dependencies:
+  - python=3.9
+  - bokeh=2.4.2
+  - conda-forge::numpy=1.21.*
+  - nodejs=16.13.*
+  - flask
+  - pip
+  - pip:
+    - Flask-Testing
