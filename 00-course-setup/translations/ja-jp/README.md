@@ -22,7 +22,7 @@ codespaces は、上記でフォークしたリポジトリの `Code` を選択�
 
 アプリケーションを構築する際、API キーを安全に管理することはとても重要です。公開リポジトリにこうした機密情報をコミットすると、不正利用による想定外のコストや問題が発生する可能性があります。そこで、作業中のコードに直接 API キーを保存しないようにしてください。  
 
-![codespaceを作成するボタンを示すダイアログ](./images/who-will-pay.webp?WT.mc_id=academic-105485-yoterada)
+![codespaceを作成するボタンを示すダイアログ](../../images/who-will-pay.webp?WT.mc_id=academic-105485-yoterada)
 
 ## ローカルのコンピュータで実行する方法
 
