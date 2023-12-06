@@ -131,7 +131,7 @@ The course has 6 concept lessons and 6 coding lessons.
 
 プル・リクエストを提出すると、CLA-bot が自動的に CLA（コントリビューター・ライセンス契約）の提出が必要かどうかを判断し、プル・リクエストに適切なマーク（例：ラベル、コメント）を付けます。bot の指示にお従いください。この処理は、CLA を使用するすべてのリポジトリで一度だけ行う必要があります。
 
-このプロジェクトは、[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) を採用しています。詳細は、Code of Conduct FAQ をご覧いただくか、追加の質問やコメントがある場合は、[メールで opencode](opencode@microsoft.com) にお問い合わせください。  
+このプロジェクトは、[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-yoterada) を採用しています。詳細は、Code of Conduct FAQ をご覧いただくか、追加の質問やコメントがある場合は、[メールで opencode](opencode@microsoft.com) にお問い合わせください。  
 
 ## それでは、始めましょう
 
