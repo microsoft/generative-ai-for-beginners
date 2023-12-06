@@ -186,10 +186,6 @@ A: 3、時間とリソース、高品質のデータがある場合、微調整�
 
 ## お疲れ様でした! 次のレッスンを続ける
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
-
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
-
 このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
 次のレッスン 3 では、[責任ある生成系 AI の利用](../../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
