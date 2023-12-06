@@ -162,7 +162,7 @@ LLM　は、トレーニング中に使用したデータだけを使って回�
 
 - **ファイン・チューニングしたモデルを使用する場合** 企業が高性能なモデルではなく、ファイン・チューニングした能力の低いモデル（埋め込みモデルなど）を使用し、よりコスト効率を高く、迅速なソリューション提供したいと考えている場合  
 
-- **レイテンシーを考慮する場合** 特定の用途でレイテンシーが重要で、とても長いプロンプトを使用することができない、またはモデルから学習するサンプルの数がプロンプトの長さの制限に合わない場合  
+- **レイテンシーを考慮する場合** 特定の用途でレイテンシーが重要で、とても長いプロンプトを使用することができない、またはモデルから学習するサンプル数がプロンプトの長さ制限に合わない場合  
 
 - **最新の状態を維持する場合** 企業が高品質のデータと正確なラベルを多く持ち、これらのデータを時間をかけて最新の状態に保つためにリソースを持っている場合
 
@@ -188,7 +188,7 @@ A: 3、時間とリソース、高品質のデータがある場合、微調整�
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
