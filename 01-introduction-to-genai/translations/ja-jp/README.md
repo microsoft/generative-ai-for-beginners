@@ -2,7 +2,7 @@
 
 [![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-yoterada)
 
-*(上記の画像をクリックすると、レッスン・ビデオを表示します)*
+> *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
 
 生成系 AI は、テキストや画像などのコンテンツを生成する人工知能です。この技術が素晴らしいのは、AI を誰にでも使えるようにしている所で、自然言語で書いた文章やテキスト・プロンプトだけで利用できる点です。
 価値あることを成し遂げるために、Java や SQL のような言語を学ぶ必要はありません。自分の言葉で要望を伝えるだけで、AI モデルから提案が返ってきます。この技術を使えば、報告書を書いたり理解したり、アプリケーションを作成したりといったことが、わずか数秒で可能になります。その可能性と影響力は計り知れません。
@@ -95,7 +95,7 @@ AI の歴史を振り返ると、初期の AI のプロトタイプは、タイ�
 
     1. 記事、書籍、製品レビューなどの要約と、非構造化データから知見（インサイト）の抽出
     
-    ![Example of summarization](./images/summarization-example.png?WT.mc_id=academic-105485-yoterada)
+    ![Example of summarization](../../images/summarization-example.png?WT.mc_id=academic-105485-yoterada)
 
     <br>
     
@@ -107,7 +107,7 @@ AI の歴史を振り返ると、初期の AI のプロトタイプは、タイ�
 
 * エージェントに対して会話形式で尋ねる**質問**
   
-![Example of conversation](./images/conversation-example.png?WT.mc_id=academic-105485-yoterada)
+![Example of conversation](../../images/conversation-example.png?WT.mc_id=academic-105485-yoterada)
 
 <br>
 
