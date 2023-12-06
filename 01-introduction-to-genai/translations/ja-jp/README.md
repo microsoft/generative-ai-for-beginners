@@ -37,7 +37,7 @@
 
 生成系 AI を利用すると、生徒は 24 時間いつでも問い合わせ可能なバーチャルの教師から大量の情報や例を得られるようになり、教師も生徒の成績を評価しフィードバックするために、新しいツールが使えられるようになると考えられ、現在の学習方法や指導方法に革命をもたらすと考えられています。
 
-![モニターを見つめる5人の若い学生 -  DALLE2による画像](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-yoterada)
+![モニターを見つめる5人の若い学生 -  DALLE2による画像](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-yoterada)
 
 まず、カリキュラム全体を通じて使用する、基本的な概念と用語を定義しましょう。
 
@@ -101,7 +101,7 @@ AI の歴史を振り返ると、初期の AI のプロトタイプは、タイ�
     
     2. 記事、エッセイ、課題などのアイデアとデザインの作成
     
-    ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-yoterada)
+    ![Example of creative writing](../../images/creative-writing-example.png?WT.mc_id=academic-105485-yoterada)
 
     <br>
 
