@@ -192,4 +192,4 @@ Head over to Lesson 3 where we will look at how to [build with Generative AI Res
 
 このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
-次のレッスン 3 では、[責任ある生成系 AI の利用](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+次のレッスン 3 では、[責任ある生成系 AI の利用](../../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
