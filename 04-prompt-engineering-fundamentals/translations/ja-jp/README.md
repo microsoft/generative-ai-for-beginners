@@ -1,4 +1,4 @@
-# Prompt Engineering Fundamentals
+# プロンプト・エンジニアリングの基礎
 
 [![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-yoterada)
 
