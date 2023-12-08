@@ -147,4 +147,4 @@ A: 3, 大規模言語モデル（LLM）は決定的ではなく、出力結果�
 
 このレッスンを修了後、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) に進んで、生成系 AI の知識をさらに深めましょう!
 
-レッスン 2 にお進みください。そこでは、[様々な LLM の調査と比較](../../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-yoterada)方法に焦点を当てます！
+レッスン 2 にお進みください。そこでは、[様々な LLM の調査と比較](../../../02-exploring-and-comparing-different-llms/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法に焦点を当てます！

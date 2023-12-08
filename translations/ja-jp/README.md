@@ -58,11 +58,11 @@
 ## 🗃️ レッスン一覧
 |       |              レッスンへのリンク              |                       学ぶ内容の概念                       |                      学習目標                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
-| 00 | [コース紹介 - コースの受講方法](../../00-course-setup/README.md?WT.mc_id=academic-105485-yoterada) | テクノロジーのセットアップとコースの枠組み | レッスンが成功したと分かるゴール設定| 
-| 01 | [生成系 AI と大規模言語モデルの紹介](../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-yoterada) |**概念**: 生成系 AI と現在のテクノロジー環境|  生成系 AI とは何か、そして大規模言語モデル（LLM）がどのように動くかを理解する。                   |
-| 02 | [様々なLLMの調査と比較](../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-yoterada) | **概念**: さまざまな大規模言語モデルのテスト、反復、および比較 | ユースケースに適した AI モデルを選択 | 
-| 03 | [責任ある生成系 AI の利用](../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-yoterada)| **概念**: ファウンデーションモデルの限界と AI に伴うリスクを理解する  | 責任ある生成系 AI アプリケーションの開発方法を学ぶ |
-| 04 | [プロンプト・エンジニアリングの基礎](../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** ハンズオン形式でプロンプト・エンジニアリングのベストプラクティスを学ぶ |  プロンプトの構造と使用法の理解 |  
+| 00 | [コース紹介 - コースの受講方法](../../00-course-setup/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | テクノロジーのセットアップとコースの枠組み | レッスンが成功したと分かるゴール設定| 
+| 01 | [生成系 AI と大規模言語モデルの紹介](../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) |**概念**: 生成系 AI と現在のテクノロジー環境|  生成系 AI とは何か、そして大規模言語モデル（LLM）がどのように動くかを理解する。                   |
+| 02 | [様々なLLMの調査と比較](../../02-exploring-and-comparing-different-llms/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念**: さまざまな大規模言語モデルのテスト、反復、および比較 | ユースケースに適した AI モデルを選択 | 
+| 03 | [責任ある生成系 AI の利用](../../03-using-generative-ai-responsibly/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)| **概念**: ファウンデーションモデルの限界と AI に伴うリスクを理解する  | 責任ある生成系 AI アプリケーションの開発方法を学ぶ |
+| 04 | [プロンプト・エンジニアリングの基礎](../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** ハンズオン形式でプロンプト・エンジニアリングのベストプラクティスを学ぶ |  プロンプトの構造と使用法の理解 |  
 | 05 | [高度なプロンプトの作成](../../05-advanced-prompts/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** プロンプトに様々なテクニックを取り入れ、プロンプト/
 エンジニアリングの知識をより深める | 出力結果を改善するため、プロンプト・エンジニアリングのテクニックを取り入れる | 
 | 06 | [テキスト生成アプリケーションの構築](../../06-text-generation-apps/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** コード：Azure OpenAI を使用してテキスト生成アプリを構築する | トークンと温度を効率的に使用しモデルの出力を変化させる方法を理解する |
