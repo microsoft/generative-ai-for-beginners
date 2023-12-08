@@ -1,6 +1,6 @@
 # Building a Search Applications 
 
-[![Introduction to Generative AI and Large Language Models](./images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
+[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
 
 > **Video Coming Soon**
 
@@ -35,7 +35,7 @@ The lesson includes an Embedding Index of the YouTube transcripts for the Micros
 
 The following is an example of a semantic query for the question 'can you use rstudio with azure ml?'. Check out the YouTube url, you'll see the url contains a timestamp that takes you to the place in the video where the answer to the question is located.
 
-![Semantic query for the question "can you use rstudio with Azure ML"](./images/query-results.png?WT.mc_id=academic-105485-koreyst)
+![Semantic query for the question "can you use rstudio with Azure ML"](../../images/query-results.png?WT.mc_id=academic-105485-koreyst)
 
 ## What is semantic search?
 
@@ -61,7 +61,7 @@ We'd pass the text to the OpenAI Embedding API and it would return the following
 
 ## How is the Embedding index created?
 
-The Embedding index for this lesson was created with a series of Python scripts. You'll find the scripts along with instructions in the [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) in the 'scripts` folder for this lesson. You don't need to run these scripts to complete this lesson as the Embedding Index is provided for you.
+The Embedding index for this lesson was created with a series of Python scripts. You'll find the scripts along with instructions in the [README](../../scripts/README.md?WT.mc_id=academic-105485-koreyst) in the 'scripts` folder for this lesson. You don't need to run these scripts to complete this lesson as the Embedding Index is provided for you.
 
 The scripts perform the following operations:
 
@@ -150,14 +150,14 @@ az cognitiveservices account deployment create \
 
 ## Solution
 
-Open the [solution notebook](./solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
+Open the [solution notebook](../../solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
 
 When you run the notebook, you'll be prompted to enter a query. The input box will look like this:
 
-![Input box for the user to input a query](./images/notebook-search.png?WT.mc_id=academic-105485-koreyst)
+![Input box for the user to input a query](../../images/notebook-search.png?WT.mc_id=academic-105485-koreyst)
 
 ## Great Work! Continue Your Learning 
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 9 where we will look at how to [build image generation applications](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 9 where we will look at how to [build image generation applications](../../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-koreyst)!

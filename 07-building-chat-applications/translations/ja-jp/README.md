@@ -1,6 +1,6 @@
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](./images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](../..//images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
 
 > *(Click the image above to view video of this lesson)*
 
@@ -60,7 +60,7 @@ When building a chat application, a great first step is to assess what is alread
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
 - **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](./notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
+Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
 
 ```python
 import os
@@ -87,11 +87,11 @@ General UX principles apply to chat applications, but here are some additional c
 
 One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
 
-![Custom Instructions Settings in ChatGPT](./images/custom-instructions.png?WT.mc_id=academic-105485-koreyst)
+![Custom Instructions Settings in ChatGPT](../../images/custom-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in depth lesson plan based on her experience.
 
-![A prompt in ChatGPT for a lesson plan about linked lists](./images/lesson-plan-prompt.png?WT.mc_id=academic-105485-koreyst)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../images/lesson-plan-prompt.png?WT.mc_id=academic-105485-koreyst)
 
 ### Microsoft's System Message Framework for Large Language Models
 
@@ -175,10 +175,10 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 ## Assignment
  
-See [assignment](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
+See [assignment](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
 
 ## Great Work! Continue the Journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 8 to see how you can start  [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 8 to see how you can start  [building search applications](../../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-koreyst)!
