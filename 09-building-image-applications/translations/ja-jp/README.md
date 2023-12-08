@@ -286,7 +286,7 @@ Let's look at an example of how temperature works, by running this prompt twice:
 
 Now let's run that same prompt just to see that we won't get the same image twice:
 
-![Generated image of bunny on horse](./images/v2-generated-image.png?WT.mc_id=academic-105485-koreyst)
+![Generated image of bunny on horse](../../images/v2-generated-image.png?WT.mc_id=academic-105485-koreyst)
 
 As you can see, the images are similar, but not the same. Let's try changing the temperature value to 0.1 and see what happens:
 
