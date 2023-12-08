@@ -133,4 +133,4 @@ A: 2 と 3 が正解です。責任ある AI を使用することで、害を�
 
 このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
-レッスン 4 では、[プロンプト・エンジニアリングの基本](../../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+レッスン 4 では、[プロンプト・エンジニアリングの基本](../../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
