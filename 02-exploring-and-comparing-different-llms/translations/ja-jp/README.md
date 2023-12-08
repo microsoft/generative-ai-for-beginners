@@ -1,4 +1,4 @@
-# Exploring and comparing different LLMs
+# さまざまな LLM の調査と比較
 
 [![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-yoterada)
 
