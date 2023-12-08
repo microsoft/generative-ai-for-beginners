@@ -1,6 +1,6 @@
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-yoterada)
 
 > *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
 
@@ -32,11 +32,11 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 
 選択するモデルは、テキスト、オーディオ、ビデオ、画像の生成などの場合は、各用途に応じてそれぞれ違う種類のモデルを選択することになります。
 
-- **オーディオおよび音声認識** この用途には、音声認識として汎用性のある Whisper というモデルが最適です。このモデルは、様々なオーディオ・データでトレーニングされており、多言語にも対応した音声認識ができます。[Whisper のモデルについての詳細はこちら](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **オーディオおよび音声認識** この用途には、音声認識として汎用性のある Whisper というモデルが最適です。このモデルは、様々なオーディオ・データでトレーニングされており、多言語にも対応した音声認識ができます。[Whisper のモデルについての詳細はこちら](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-yoterada).
 
-- **画像生成**。画像生成の選択肢として、DALL-E と Midjourney が非常に有名です。Azure OpenAI 上で DALL-E のモデルが利用可能です。[DALL-Eについての詳細はこちら](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst)をご覧ください。このカリキュラムの第 9 章でも解説します。
+- **画像生成**。画像生成の選択肢として、DALL-E と Midjourney が非常に有名です。Azure OpenAI 上で DALL-E のモデルが利用可能です。[DALL-Eについての詳細はこちら](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-yoterada)をご覧ください。このカリキュラムの第 9 章でも解説します。
 
-- **テキスト生成**。多くのモデルがテキスト生成用にトレーニングされており、GPT-3.5 から GPT-4 に至るまで、多種多様な選択肢があります。それぞれ利用する際のコストは異なり、GPT-4 が最も高価です。機能とコストの観点から、ニーズに最も適したモデルを選択するために、[Azure OpenAI プレイグラウンド](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst)をご確認ください。
+- **テキスト生成**。多くのモデルがテキスト生成用にトレーニングされており、GPT-3.5 から GPT-4 に至るまで、多種多様な選択肢があります。それぞれ利用する際のコストは異なり、GPT-4 が最も高価です。機能とコストの観点から、ニーズに最も適したモデルを選択するために、[Azure OpenAI プレイグラウンド](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-yoterada)をご確認ください。
 
 モデルを選択するということは、基本的な機能を手に入れ利用できることを意味しますが、それだけでは不十分な場合もあります。通常、会社固有のデータを何らかの方法で LLM に伝えなければならない状況もあります。その方法はいくつかの選択肢がありますが、それについては後続のセクションで詳しく説明します。
 
@@ -48,38 +48,38 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 - **非常に大規模なモデル**。数十億のパラメーターを用いてトレーニングされたディープ・ニューラル・ネットワークに基づいています
 - **通常、他のモデルの「基盤」として機能** ファイン・チューニングを行うことで、他のモデルを構築する際の出発点（基盤）として使用できます
 
-![ファウンデーション・モデルと LLM](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
+![ファウンデーション・モデルと LLM](../../images/FoundationModel.png?WT.mc_id=academic-105485-yoterada)
 
 画像出展: [基盤モデルと大規模言語モデルの効果的なガイド | Babar M Bhatti著 | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 この違いをさらに明確にするために、ChatGPT を例に挙げてみましょう。ChatGPT の最初のバージョンを作る際 GPT-3.5 というモデルをファウンデーション・モデルとして使いました。つまり、OpenAI は、チャットボットのような会話シナリオで高いパフォーマンスを発揮するよう、チャットに特化したデータを用いて GPT-3.5 のチューニング版を作成したのです。
 
-![Foundation Model](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
+![Foundation Model](../../images/Multimodal.png?WT.mc_id=academic-105485-yoterada)
 
-画像出展: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+画像出展: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-yoterada)
 
 ### オープンソース・モデルとプロプライエタリ・モデル  
 
 大規模言語モデル(LLM) を分類するもう一つの方法は、それがオープンソースかプロプライエタリかという点です。  
 
-オープンソース・モデルは、一般に公開され、誰でも利用できるモデルです。これらは多くの場合、そのモデルを開発した企業や研究コミュニティによって提供されます。これらのモデルは、LLM の様々な用途に合わせて検証、変更、カスタマイズすることが許可されています。しかし、常に本番環境での使用に最適化されているわけではなく、プロプライエタリモデルほど高いパフォーマンスを発揮しない場合もあります。さらに、オープンソース・モデルの資金提供は限られており、長期的に維持できないか、最新の研究に基づいて更新されない可能性もあります。[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst)、[Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst)、[LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst) などが人気のオープンソース・モデルの例です。
+オープンソース・モデルは、一般に公開され、誰でも利用できるモデルです。これらは多くの場合、そのモデルを開発した企業や研究コミュニティによって提供されます。これらのモデルは、LLM の様々な用途に合わせて検証、変更、カスタマイズすることが許可されています。しかし、常に本番環境での使用に最適化されているわけではなく、プロプライエタリモデルほど高いパフォーマンスを発揮しない場合もあります。さらに、オープンソース・モデルの資金提供は限られており、長期的に維持できないか、最新の研究に基づいて更新されない可能性もあります。[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-yoterada)、[Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-yoterada)、[LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-yoterada) などが人気のオープンソース・モデルの例です。
 
-プロプライエタリ・モデルは、企業が所有し一般には公開されていないモデルです。これらのモデルは、通常本番環境の使用に最適化されています。しかし異なるユースケースに対して、検証、変更、カスタマイズをすることは許されていません。また、常に無料で利用できるわけではなく、使用するためには、サブスクリプションや支払いが必要な場合があります。さらに、利用者はモデルをトレーニングする際に使用するデータをコントロールできず、データのプライバシーや、責任ある AI の原則に基づく使用を、プロプライエタリ・モデルの所有者が保証していることを信頼しなければなりません。[OpenAI のモデル](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst)、[Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst) などが人気のプロプライエタリ・モデルです。
+プロプライエタリ・モデルは、企業が所有し一般には公開されていないモデルです。これらのモデルは、通常本番環境の使用に最適化されています。しかし異なるユースケースに対して、検証、変更、カスタマイズをすることは許されていません。また、常に無料で利用できるわけではなく、使用するためには、サブスクリプションや支払いが必要な場合があります。さらに、利用者はモデルをトレーニングする際に使用するデータをコントロールできず、データのプライバシーや、責任ある AI の原則に基づく使用を、プロプライエタリ・モデルの所有者が保証していることを信頼しなければなりません。[OpenAI のモデル](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-yoterada)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-yoterada)、[Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-yoterada) などが人気のプロプライエタリ・モデルです。
 
 ### 埋め込み (Embedding) と画像生成とテキスト・コード生成  
 
 大規模言語モデル(LLM) は出力の種類によっても分類できます。  
 
-埋め込み (Embedding) は、テキストを、埋め込みと呼ぶ、数値形式に変換する AI モデルです。言い換えるならば、埋め込みは入力されたテキストに対する数値表現です。埋め込みによって、機械が単語や文の関係を理解しやすくなり、分類モデルや、数値データでパフォーマンスが向上するクラスタリング・モデルなど、他のモデルの入力として利用できます。埋め込みモデルは、データが豊富な代理タスクのためにモデルを構築し、その後でモデルの重み（埋め込み）を他の下流タスクで再利用する転移学習によく使用されます。このカテゴリーの例としては、[OpenAI Embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)モデルがあります。
+埋め込み (Embedding) は、テキストを、埋め込みと呼ぶ、数値形式に変換する AI モデルです。言い換えるならば、埋め込みは入力されたテキストに対する数値表現です。埋め込みによって、機械が単語や文の関係を理解しやすくなり、分類モデルや、数値データでパフォーマンスが向上するクラスタリング・モデルなど、他のモデルの入力として利用できます。埋め込みモデルは、データが豊富な代理タスクのためにモデルを構築し、その後でモデルの重み（埋め込み）を他の下流タスクで再利用する転移学習によく使用されます。このカテゴリーの例としては、[OpenAI Embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-yoterada)モデルがあります。
 
-![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-koreyst)
+![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-yoterada)
 
-画像生成モデルは、画像を生成するモデルです。これらのモデルは、画像編集、画像合成、画像変換で頻繁に利用されます。画像生成モデルは、[LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst) などの大規模な画像データセットでトレーニングされることが多く、新しい画像を生成したり、画像修復、高解像度化、色付け技術を用いて既存の画像を編集する際に利用できます。[DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) や [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) といったモデルがあります。
+画像生成モデルは、画像を生成するモデルです。これらのモデルは、画像編集、画像合成、画像変換で頻繁に利用されます。画像生成モデルは、[LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-yoterada) などの大規模な画像データセットでトレーニングされることが多く、新しい画像を生成したり、画像修復、高解像度化、色付け技術を用いて既存の画像を編集する際に利用できます。[DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-yoterada) や [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-yoterada) といったモデルがあります。
 
-![Image generation](../../images/Image.png?WT.mc_id=academic-105485-koreyst)
+![Image generation](../../images/Image.png?WT.mc_id=academic-105485-yoterada)
 
-テキスト生成モデルとコード生成モデルは、テキストやコードを生成するモデルです。これらのモデルは、テキストの要約、翻訳、質疑応答などによく利用されます。テキスト生成モデルは、[BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst) などの大規模なテキストデータセットでトレーニングされ、新しいテキストを生成したり、質問に答えたりするのに使われます。[CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst) のようなコード生成モデルは、GitHub などの大規模なソースコード・データセットでトレーニングされ、新しいコードを生成したり、既存コードのバグ修正に使われます。
- ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
+テキスト生成モデルとコード生成モデルは、テキストやコードを生成するモデルです。これらのモデルは、テキストの要約、翻訳、質疑応答などによく利用されます。テキスト生成モデルは、[BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-yoterada) などの大規模なテキストデータセットでトレーニングされ、新しいテキストを生成したり、質問に答えたりするのに使われます。[CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-yoterada) のようなコード生成モデルは、GitHub などの大規模なソースコード・データセットでトレーニングされ、新しいコードを生成したり、既存コードのバグ修正に使われます。
+ ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-yoterada)
 
 ### 「エンコーダー・デコーダー」 と 「デコーダーのみ」 のモデル
 
@@ -97,32 +97,32 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 
 サービスとモデルの違いについて説明します。サービスはクラウド・サービス・プロバイダーが提供する製品で、モデル、データ、その他のコンポーネントを組み合わせたものです。モデルはサービスの核となる部分で、大規模言語モデル (LLM) のようなファウンデーション・モデルが一般的です。  
 
-サービスは、本番環境での利用に最適化されており、グラフィカル・ユーザー・インターフェースを通じてモデルよりも使いやすいことが多いです。しかしサービスは、常に無料で利用できるわけではなく、サービス提供者の機器やリソースを活用する代わりに、サブスクリプションや支払いが必要な場合があります。これにより、費用を最適化し、簡単にスケールアップできます。サービスの例としては、使用量に応じて料金が発生する [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst) があります。また、Azure OpenAI サービスは、モデルの能力に加えて、エンタープライズグレードのセキュリティと責任あるAIフレームワークを提供します。  
+サービスは、本番環境での利用に最適化されており、グラフィカル・ユーザー・インターフェースを通じてモデルよりも使いやすいことが多いです。しかしサービスは、常に無料で利用できるわけではなく、サービス提供者の機器やリソースを活用する代わりに、サブスクリプションや支払いが必要な場合があります。これにより、費用を最適化し、簡単にスケールアップできます。サービスの例としては、使用量に応じて料金が発生する [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-yoterada) があります。また、Azure OpenAI サービスは、モデルの能力に加えて、エンタープライズグレードのセキュリティと責任あるAIフレームワークを提供します。  
 
 モデルは、パラメーターや重みなどを含むニューラルネットワークそのものです。企業がローカルで運用することも可能ですが、そのためには機器の購入、スケールアップのための環境構築、ライセンスの購入、またはオープンソース・モデルの使用が必要になります。LLaMAのようなモデルは利用可能ですが、モデルを実行するための計算能力が必要です。
 
 ## Azure でパフォーマンスを理解するために異なるモデルでテストと反復処理を行う方法  
 
-私たちは、現在の LLM の状況を調査し、シナリオに適したモデルの候補を見つけたら、次に、企業の実データと負荷試験でそれらをテストする必要があります。これは実験と測定を通じて行われる反復的なプロセスです。前の段落で触れたモデル（OpenAIモデル、Llama2のようなオープンソースモデル、Hugging Faceのトランスフォーマー）のほとんどは、[Azure Machine Learning Studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst)の[ファウンデーション・モデル](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst)・カタログで利用可能です。  
+私たちは、現在の LLM の状況を調査し、シナリオに適したモデルの候補を見つけたら、次に、企業の実データと負荷試験でそれらをテストする必要があります。これは実験と測定を通じて行われる反復的なプロセスです。前の段落で触れたモデル（OpenAIモデル、Llama2のようなオープンソースモデル、Hugging Faceのトランスフォーマー）のほとんどは、[Azure Machine Learning Studio](https://ml.azure.com/?WT.mc_id=academic-105485-yoterada)の[ファウンデーション・モデル](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-yoterada)・カタログで利用可能です。  
 
-[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst)は、データ・サイエンティストと機械学習エンジニアが ML ライフサイクル全体（トレーニング、テスト、デプロイ、MLOpsの管理）を一つのプラットフォームで管理するために設計されたクラウド・サービスです。Machine Learning Studio はグラフィカル・ユーザー・インターフェースを提供し、ユーザーが次の操作を行うことを可能にします：
+[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-yoterada)は、データ・サイエンティストと機械学習エンジニアが ML ライフサイクル全体（トレーニング、テスト、デプロイ、MLOpsの管理）を一つのプラットフォームで管理するために設計されたクラウド・サービスです。Machine Learning Studio はグラフィカル・ユーザー・インターフェースを提供し、ユーザーが次の操作を行うことを可能にします：
 
 - カタログから興味のあるファウンデーション・モデルを探し、タスク、ライセンス、名前でフィルタリングします。カタログにまだ含まれていない新しいモデルをインポートすることも可能です。
 - モデル・カードを確認して、詳細な説明とコードサンプルを見て、サンプル推論ウィジェットを使ってテストします。これは、サンプルプロンプトを提供して結果を試すものです。
 
-![Model card](../../images/Llama1.png?WT.mc_id=academic-105485-koreyst)
+![Model card](../../images/Llama1.png?WT.mc_id=academic-105485-yoterada)
 
 - 特定の負荷試験と入力された特定のデータセットに関する客観的な評価指標を用いて、モデルのパフォーマンスを評価します。
 
-![Model evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
+![Model evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-yoterada)
 
 - Azure Machine Learning の実験と追跡機能を活用して、カスタム・トレーニングデータでモデルをファイン・チューニングし、特定の負荷試験におけるモデルのパフォーマンスを向上させます。
 
-![Model fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
+![Model fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-yoterada)
 
 - 元の事前トレーニング済みモデルまたはファイン・チューニングされたバージョンをリモートのリアルタイム推論、もしくはバッチ・エンドポイントにデプロイし、アプリケーションから利用できるようにします。
 
-![Model deployment](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
+![Model deployment](../../images/Llama4.png?WT.mc_id=academic-105485-yoterada)
 
 ## 大規模言語モデル (LLM) の出力結果を改善する
 
@@ -140,9 +140,9 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 
 - **ファイン・チューニングしたモデル** 自分のデータを利用してモデルをさらにトレーニングし、モデルをより正確に、そしてニーズに応じた形にします。ただし、コストがかかる可能性があります。
 
-![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
+![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-yoterada)
 
-画像出展:: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+画像出展:: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-yoterada)
 
 ### コンテキストを用いたプロンプトエンジニアリング  
 
@@ -152,7 +152,7 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 
 ### Retrieval Augmented Generation（RAG）
 
-LLM　は、トレーニング中に使用したデータだけを使って回答を作るという制約があります。これは、トレーニング・プロセス後に起きた事実や、非公開情報（例えば企業データ）については分からないということを意味します。RAG は、プロンプトの長さの制限を考慮しつつ、ドキュメントの断片という形で、外部データをプロンプトに追加する技術で、制約から逃れます。これは、ベクター・データベース・ツール（[Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)など）を用いて、さまざまな定義済みのデータソースから有用な情報の断片を取得し、プロンプトのコンテキストに加えることで対応します。  
+LLM　は、トレーニング中に使用したデータだけを使って回答を作るという制約があります。これは、トレーニング・プロセス後に起きた事実や、非公開情報（例えば企業データ）については分からないということを意味します。RAG は、プロンプトの長さの制限を考慮しつつ、ドキュメントの断片という形で、外部データをプロンプトに追加する技術で、制約から逃れます。これは、ベクター・データベース・ツール（[Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-yoterada)など）を用いて、さまざまな定義済みのデータソースから有用な情報の断片を取得し、プロンプトのコンテキストに加えることで対応します。  
 
 この技術は、LLM をファイン・チューニングするための十分なデータ、時間、リソースがない企業にとって非常に有用です。そして特定の負荷試験におけるパフォーマンスを向上させ、回答捏造のリスク、つまり現実の歪曲や有害なコンテンツのリスクを減らしたいと場合に非常に有効です。
 
@@ -182,10 +182,10 @@ A: 3、時間とリソース、高品質のデータがある場合、微調整�
 
 ## 🚀 Challenge
 
-ビジネスで RAG を活用する方法についてもっと学びたい方は、[こちら](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst)をご覧ください。  
+ビジネスで RAG を活用する方法についてもっと学びたい方は、[こちら](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-yoterada)をご覧ください。  
 
 ## お疲れ様でした! 次のレッスンを続ける
 
-このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
+このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
-次のレッスン 3 では、[責任ある生成系 AI の利用](../../../03-using-generative-ai-responsibly/translations/ja-jp/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+次のレッスン 3 では、[責任ある生成系 AI の利用](../../../03-using-generative-ai-responsibly/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！

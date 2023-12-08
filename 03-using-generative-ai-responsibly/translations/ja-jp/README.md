@@ -1,6 +1,6 @@
 # 生成系 AI の責任ある使用
 
-[![生成系 AI の責任ある使用](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
+[![生成系 AI の責任ある使用](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-yoterada)]() 
 
 > **ビデオは近日公開予定**
 
@@ -47,9 +47,9 @@ AI、特に生成系 AI に多くの興味は持つことは理解できます�
 
 > ご注意：毎回同じ回答結果ではありませんし、利用するモデルのバージョンによっても回答内容は異なります：(日本語訳者による追記)
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-yoterada)
 
-> *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
+> *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-yoterada))*
 
 これはとても自信に満ちて、詳細な回答結果です。しかし残念ながら、この回答は間違っています。調べれば、タイタニック号の生存者は複数人いたことがわかります。この課題研究を始めたばかりの学生にとって、この回答は疑う余地なく事実として受け入れられるほど説得力があります。このような結果から、AI のシステムを信頼できなくなり、さらにはスタートアップ企業の評判にも悪影響を及ぼす可能性があります。
 
@@ -79,7 +79,7 @@ LLM のバージョンを更新するごとに、幻覚を減らす方向でパ�
 
 責任ある生成系 AI の重要性を理解した上で、責任を持って AI ソリューションを構築するために、4つの取り組むべき項目について見ていきましょう。
 
-![Mitigate Cycle](../../images/mitigate-cycle.png?WT.mc_id=academic-105485-koreyst)
+![Mitigate Cycle](../../images/mitigate-cycle.png?WT.mc_id=academic-105485-yoterada)
 
 ### 潜在的な危害の測定
 
@@ -91,7 +91,7 @@ LLM のバージョンを更新するごとに、幻覚を減らす方向でパ�
 
 AI モデルとその出力によって引き起こされる、潜在的な害を防ぐ、または抑制する方法を探る時が来ました。これを4つの異なるレイヤーで考えます。
 
-![Mitigation Layers](../../images/mitigation-layers.png?WT.mc_id=academic-105485-koreyst)
+![Mitigation Layers](../../images/mitigation-layers.png?WT.mc_id=academic-105485-yoterada)
 
 - **AI モデル** 用途に適したモデルを選択します。GPT-4 のように大きくて複雑なモデルを、より小規模で特定の用途に使う場合、有害な内容を引き起こす可能性がありリスクが高まります。独自のトレーニング・データを使ってモデルをファイン・チューニングすることで、有害なコンテンツのリスクを減らすこともできます。
 
@@ -103,7 +103,7 @@ AI モデルとその出力によって引き起こされる、潜在的な害�
 
 - **ユーザーエクスペリエンス** 最後のレイヤーは、ユーザ・インターフェースです。利用者はどのような形であれ、アプリケーションが提供するインターフェイスを利用してモデルと直接やりとりを行います。このように UI/UX を設計し、モデルに送信する入力の種類やユーザーで表示されるテキストや画像を制限することができます。AI　アプリケーションをデプロイする際、生成系　AI アプリケーションができることと、できないことについて透明性を持って伝える必要があります。
 
-    [AI アプリケーションの UX デザイン](../../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)に特化したレッスンがあります。
+    [AI アプリケーションの UX デザイン](../../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-yoterada)に特化したレッスンがあります。
 
 - **モデルを評価** 大規模言語モデル（LLMs）は、そのモデルがどのようなデータを使って学習されたのかを完全に把握することができないため、扱うのが難しい場合があります。それでもなお、モデルの性能や出力は常に検証すべきです。特に出力の正確性、類似性、根拠の正しさ、関連性を評価することは重要です。これにより、利害関係者や利用者に透明性と信頼性を提供することができます。
 
@@ -113,7 +113,7 @@ AI アプリケーションの実運用体制を構築する最終段階に入�
 
 ## ツール
 
-責任ある AI ソリューションを開発する作業は、手間がかかるように感じられるかもしれません。しかし、その労力に見合う価値があります。生成系 AI 系のビジネスが進化するに連れて、開発作業中に責任を効率的に取り入れられるツールが、より充実していくでしょう。例えば、[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) は、API を呼び出すことで有害なコンテンツや画像を検出するのに役立ちます。
+責任ある AI ソリューションを開発する作業は、手間がかかるように感じられるかもしれません。しかし、その労力に見合う価値があります。生成系 AI 系のビジネスが進化するに連れて、開発作業中に責任を効率的に取り入れられるツールが、より充実していくでしょう。例えば、[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-yoterada) は、API を呼び出すことで有害なコンテンツや画像を検出するのに役立ちます。
 
 ## 知識チェック
 
@@ -127,10 +127,10 @@ A: 2 と 3 が正解です。責任ある AI を使用することで、害を�
 
 ## 🚀 Challenge
 
-[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) について調べ、ご自身の用途に適用できるかご検討ください。  
+[Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-yoterada) について調べ、ご自身の用途に適用できるかご検討ください。  
 
 ## お疲れ様でした! 次のレッスンを続ける
 
-このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成系 AI の知識をさらに深めましょう。  
+このレッスン終了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をチェックして、生成系 AI の知識をさらに深めましょう。  
 
-レッスン 4 では、[プロンプト・エンジニアリングの基本](../../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+レッスン 4 では、[プロンプト・エンジニアリングの基本](../../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
