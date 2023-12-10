@@ -1,6 +1,6 @@
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
 
 How you write your prompt to the LLM matters, a carefully crafted prompt can achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
@@ -77,7 +77,7 @@ An LLM sees prompts as a _sequence of tokens_ where different models (or version
 
 To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
 
-![Tokenization](./images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Tokenization](../../images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 ### Concept: Foundation Models
 
@@ -87,7 +87,7 @@ Want to see how prompt-based completion works? Enter the above prompt into the A
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
-![Base LLM Chat Completion](./images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
+![Base LLM Chat Completion](../../images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
 
 ### Concept: Instruction Tuned LLMs
 
@@ -101,7 +101,7 @@ Let's try it out - revisit the prompt above but now change the _system message_ 
 
 See how the result is now tuned to reflect the desired goal and format? An educator can now directly use this response in their slides for that class.
 
-![Instruction Tuned LLM Chat Completion](./images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
+![Instruction Tuned LLM Chat Completion](../../images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 ## Why do we need Prompt Engineering?
 
@@ -131,15 +131,15 @@ So what happens when we run this prompt with different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](./images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
+![Response 1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](./images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Response 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Response 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](./images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 As expected, each model (or model version) produces slightly different responses thanks to stochastic behavior and model capability variations. For instance, one model targets an 8th grade audience while the other assumes a high-school student. But all three models did generate responses that could convince an uninformed user that the event was real
 
@@ -394,6 +394,6 @@ See if you can leverage the "cue" technique with the prompt: Complete the senten
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../../../13-continued-learning/translations/ko-kr/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 5 where we will look at [advance prompting techniques](../../../05-advanced-prompts/translations/ko-kr/README.md?WT.mc_id=academic-105485-koreyst)!
