@@ -41,7 +41,7 @@ Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-10
 One of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
 ## 🧠 Want to learn more? 
-After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge! 
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue levelling up your Generative AI knowledge! 
 
 ##  🚀  Are you a startup or got an idea you want to launch? 
 
