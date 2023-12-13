@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Install OpenAI and Dotenv for Python
 # TODO: Check why this can't be done in requirements.txt
