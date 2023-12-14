@@ -4,9 +4,9 @@
 
 > *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
 
-これまでのレッスンを通じて、プロンプトの基本的な概念や、「プロンプトエンジニアリング」と呼ばれる分野が存在することを学んできました。ChatGPT、Office 365、Microsoft Power Platform　など、操作可能な多くのツールは、プロンプトを使って、何かを成し遂げるためにサポートをします。
+これまでのレッスンを通じて、プロンプトの基本的な概念や、「プロンプトエンジニアリング」と呼ばれる分野が存在することを学んできました。ChatGPT、Office 365、Microsoft Power Platform　など、操作可能な多くのツールは、プロンプトを使って、何かを成し遂げるためのサポートを行います。
 
-アプリに、このような体験を追加するためには、プロンプトや補完といった概念を理解し、使用するライブラリを選択する必要があります。この章では、それらを具体的に学んでいきます。
+アプリに、このような体験を追加するためには、まずプロンプトや Completion といった概念を理解し、使用するライブラリを選択する必要があります。この章では、それらを具体的に学んでいきます。
 
 ## はじめに
 
@@ -22,13 +22,13 @@
 
 - テキスト生成アプリケーションとは何かを説明する事ができる
 - OpenAI を使用してテキスト生成アプリを構築する
-- 使用するトークン数を増減したり、温度を変更し、さまざまな出力を得るようにアプリを構成する
+- 使用するトークン数を増減させたり、温度を変更し、さまざまな出力を得られるようにアプリを構成する
 
 ## テキスト生成アプリについて
 
 通常、アプリを作る際、下記のようなインターフェースがあります：
 
-- コマンドベース：コンソール・アプリは典型的な例で、コマンドを入力するとタスクが実行されます。例えば、git はコマンド・ベースのアプリです
+- コマンドベース：コンソール・アプリは典型的な例で、コマンドを入力するとタスクを実行できます。例えば、git はコマンド・ベースのアプリです
 - ユーザーインターフェース（UI）：一部のアプリは、ボタンをクリックしたり、テキストを入力したり、オプションを選択したりするグラフィカル・ユーザーインターフェース（GUI）を持っています。
 
 ### コンソールと UI アプリには制限があります
@@ -36,50 +36,47 @@
 コマンドを入力するコマンドベースのアプリと比較してください。
 
 - **入力可能なコマンド数は有限** 任意のコマンドを入力できるわけではなく、アプリがサポートしているコマンドのみ入力可能です。
-- **言語特有** 一部のアプリは多言語をサポートしていますが、追加の言語サポートが可能であっても、基本的には特定の言語用にアプリが構築されています。
+- **言語特有** 一部のアプリはまれに多言語をサポートしていますが、たとえ追加言語サポートが可能な場合も、基本的には特定の言語用にアプリは実装されています。
 
 ### テキスト生成アプリの利点
 
 それでは、テキスト生成アプリはどう違うのでしょうか?
 
-テキスト生成アプリでは、コマンド数や特定の入力言語に制約されることなく、より柔軟に操作でき、自然言語を使ってアプリと対話することができます。さらに、大量のテキストや音声データの情報から訓練されたデータ・ソースを既に利用しているため、従来のアプリがデータベースの内容に制限されることとは対照的に、利用可能な情報が大幅に増えます。
+テキスト生成アプリでは、コマンド数や特定の入力言語に制約されることなく、より柔軟に操作でき、自然言語を使ってアプリと対話することができます。さらに、既に大量のテキストや音声データの情報から訓練されたデータ・ソースを利用しているため、従来のアプリがデータベースの内容に制限されることとは対照的に、利用可能な情報が大幅に増えます。
 
 ### テキスト生成アプリで何が作れるのでしょうか？
 
 作れるものはたくさんあります。例えば：
 
 - **チャットボット**： 所属する会社や、提供する製品について質問に答えるチャットボットは、良い選択肢です
-- **ヘルパー** LLM は、テキストの要約、テキストから知見の抽出、履歴書作成のようなテキスト生成など、様々なことに優れています
-- **コード・アシスタント** 使用する言語モデルによっては、コードの作成を支援するコード・アシスタントも作れます。例えば、GitHub Copilot や ChatGPT のような製品を使って、コードの作成を支援することができます。
+- **ヘルパー** LLM は、テキストの要約、テキストから知見の抽出、履歴書作成のようなテキスト生成など、様々なことに利用できます
+- **コード・アシスタント** 使用する言語モデルによっては、プログラミング・コードの作成を支援するコード・アシスタントも作れます。例えば、GitHub Copilot や ChatGPT のような製品を使って、コードの作成を支援することができます。
 
 ## どこから始めればよいのでしょうか？
 
 まず、LLM と統合する方法を見つける必要があります。これには通常、以下の2つのアプローチが含まれます：
 
 - API の使用：プロンプトを含む HTTP リクエストを作成し、生成されたテキストを取得
-- ライブラリの使用：API 呼び出しをカプセル化したライブラリを使用し API 呼び出しより簡単に利用
+- ライブラリの使用：API 呼び出しをカプセル化したライブラリを使用し API 呼び出しより簡単に利用可能
 
 ## ライブラリ/SDK
 
-There are a few well known libraries for working with LLMs like:
-LLMを操作するためのいくつかのよく知られたライブラリがあります：
+LLMを操作するためのいくつかの有名なライブラリがあります：
 
-- **OpenAI** このライブラリを使用すると、モデル接続とプロンプトの送信が容易
+- **OpenAI** このライブラリを使用すると、モデル接続とプロンプトの送信が簡単です
 
 また、より高いレベルで動作するライブラリもあります：
 
-- **Langchain** Langchain はよく知られており、Python をサポートしています。
-- **Semantic Kernel** Semantic Kernelは、C#、Python、JavaをサポートするMicrosoftのライブラリ
+- **Langchain** Langchain はよく知られており、Python をサポートしています
+- **Semantic Kernel** Semantic Kernelは、C#、Python、Java をサポートするMicrosoft 純正のライブラリです
 
 ## OpenAI を使用した最初のアプリ
 
-最初のアプリを構築する方法、必要なライブラリ、どの位の量が必要かなどを見てみましょう。
+下記で、最初のアプリを実装する方法、実装に必要なライブラリ、どの位の量が必要かなどをご確認ください。
 
 ### OpenAI のインストール
 
-There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more.  We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
-
-OpenAI や Azure OpenAI と対話するためのライブラリはたくさんあります。また、C#、Python、JavaScript、Javaなど、さまざまなプログラミング言語を使用することも可能です。今回は、Python 用の `OpenAI`ライブラリを使用することにしました。ライブラリのインストールには`pip`を使用します。
+OpenAI や Azure OpenAI と対話するためのライブラリはたくさんあります。また、C#、Python、JavaScript、Java など、さまざまなプログラミング言語を使用することも可能です。今回は、Python 用の `OpenAI` ライブラリを使用することにしました。ライブラリのインストールには `pip` を使用します。
 
 ```bash
 pip install openai
@@ -87,24 +84,24 @@ pip install openai
 
 ### リソースの作成
 
-以下の手順を実行する必要があります：  
+下記の手順に従い実行してください：  
 
-- - Azureのアカウントを作成します。[https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-yoterada)
+- Azureのアカウントを作成します。[https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-yoterada)
 - Azure Open AI へのアクセス権限を取得します。[https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-yoterada) からアクセス申請を提出します
 
-  > [!NOTE]
-  > この記事を書いている時点で、Azure Open AI へのアクセスを申請する必要があります。
+    > [!NOTE]
+    > 本記事の執筆時には、Azure Open AI へのアクセスを申請する必要があります。
 
 - Python をインストールします。 <https://www.python.org/>  
-- Azure OpenAI Serviceリソースを作成します。[リソースの作成方法](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-yoterada)については、このガイドを参照してください。
+- Azure OpenAI Serviceリソースを作成します。[リソースの作成方法](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-yoterada)については、こちらのガイドをご参照ください。
 
 ### API キーとエンドポイントを取得
 
-この段階で、`OpenAI` ライブラリにどの API キーを使用するか指示する必要があります。API キーを見つけるには、Azure Open AI リソースの「Keys and Endpoint」セクションに移動し、「Key 1」の値をコピーします。
+ここで、`OpenAI` ライブラリに対してどの API キーを使用するか指定する必要があります。API キーを見つけるためには、Azure OpenAI リソースの「Keys and Endpoint」セクションに移動し、「Key 1」の値をコピーします。
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-yoterada)
 
-キー・データをコピーしたので、ライブラリにそれを使用するよう指示します。
+キー・データをコピーしたので、ライブラリにそれを使用するよう指定します。
 
 > [!NOTE]
 > コードから API キーを分離することは重要です。環境変数を使用して設定できます。
@@ -112,7 +109,7 @@ pip install openai
 > - 環境変数 `OPENAI_API_KEY` に API キーを設定します
 >  `export OPENAI_API_KEY='sk-...'`
 
-### Azure　の設定
+### Azure の設定
 
 Azure OpenAI を使用している場合、下記の設定を行います：
 
@@ -128,35 +125,35 @@ openai.api_base = os.getenv("API_BASE")
 - `api_type`を`azure`に設定します。これにより、ライブラリは OpenAI ではなく Azure Open AI を使用します。  
 - `api_key`は、Azure Portal で取得した API キーを設定します。  
 - `api_version`は、使用する API のバージョンです。執筆時点での最新バージョンは`2023-05-15`です。  
-- `api_base` は API のエンドポイントです。これは、Azure Portal の API キーの隣にあります。  
+- `api_base` は API のエンドポイントです。これは、Azure Portal の API キーの下側に記載されています。
 
 > [!NOTE]
 > `os.getenv` は環境変数を読み取る関数です。`OPENAI_API_KEY` や `API_BASE` などの環境変数を読み取るために使用します。これらの環境変数は、ターミナルで設定するか、もしくは `dotenv` のようなライブラリを使用して設定します。
 
 ## テキストの生成
 
-`Completion` クラスを使用してテキストを生成する方法をご覧ください。下記は例です：
+`Completion` クラスを使用してテキストを生成する方法をご覧ください。下記にサンプルを記述しています：
 
 ```python
-prompt = "次の文を完成させてください:むかしむかしある所に"
+prompt = "次の文を完成させてください: むかしむかしある所に"
 
 completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-上記のコードでは、Completion オブジェクトを作成し、使用するモデルに対してプロンプトを渡しています。その後、生成されたテキストを出力します。
+上記のコードでは、Completion オブジェクトを作成し、使用するモデルに対してプロンプトを渡しています。その後、生成されたテキストを出力しています。
 
 ### Chat completions
 
 上記では、`Completion` クラスを使用してテキストを生成する方法を見てきました。
-しかし、チャット・ボットには、より適した `ChatCompletion` という別のクラスがあります。下記に例を示します。
+しかし、チャット・ボットには、より適した `ChatCompletion` という別のクラスが用意さあれています。下記にサンプルを記述しています。
 
 ```python
 import openai
 
 openai.api_key = "sk-..."
 
-completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "こんにちは世界 (Hello world)"}])
 print(completion.choices[0].message.content)
 ```
 
@@ -164,9 +161,7 @@ print(completion.choices[0].message.content)
 
 ## エクササイズ - 初めてのテキスト生成アプリ
 
-Now that we learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
-
-OpenAI のセットアップと設定方法を学んだので、次に初めてのテキスト生成アプリを作成しましょう。アプリの作成は、下記の手順で行なってください：
+OpenAI のセットアップと設定方法を学んだので、次に初めてのテキスト生成アプリを実装してみましょう。アプリの実装は、下記の手順で行なってください：
 
 1. 仮想環境を作成し、OpenAI をインストールします：
 
@@ -180,8 +175,7 @@ pip install openai
 > Windows 環境で行う場合は、`source venv/bin/activate` の代わりに`venv\Scripts\activate` を入力してください。
 
 > [!NOTE]
-> Locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-yoterada) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
-> Azure Open AI キーは、[https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-yoterada)に移動し、`Open AI` を検索し、`Open AI resource` を選択し、その後 `Keys and Endpoint` を選択し、`Key 1` の値をコピーてください。
+> Azure OpenAI キーは、[https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-yoterada) に移動し、`OpenAI` を検索し、`OpenAI Resource` を選択し、その後 `Keys and Endpoint` を選択し、`Key 1` の値をコピーてください。
 
 1. *app.py* ファイルを作成し、下記のコードを記述してください：
 
@@ -196,7 +190,7 @@ openai.api_base = "<Azure Portal でキーと同一の場所に記載されて�
 deployment_name = "<デプロイ名>"
 
 # ここに Completion コードを追加
-prompt = "次の文を完成させてください：むかしむかし、あるところに"
+prompt = "次の文を完成させてください: むかしむかし、あるところに"
 
 # Completion を作成
 completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
@@ -212,6 +206,8 @@ print(completion.choices[0].text)
 
 ```output
 おじいさんとおばあさんが住んでいました。
+
+(※ 上記の回答内容は、訳者が日本語で実行した場合にあわせて変更しました。英語で実行した場合と異なる結果が得られます。)
 ```
 
 ## さまざまな種類のプロンプト、さまざまな用途
@@ -226,11 +222,11 @@ print(completion.choices[0].text)
 
 ## より実用的な使用例：　料理レシピの作成
 
-家に食材があって、何か料理を作りたいという場合を想像してみてください。そのためにレシピが必要です。適切なレシピを見つける方法の一つに検索エンジンがありますが、LLM（大規模言語モデル）を使って探すこともできます。
+家に食材があって、何か料理を作りたい場合を想像してください。そのためにレシピが必要です。適切なレシピを見つける方法の一つに検索エンジンがありますが、LLM（大規模言語モデル）を使ってレシピを探すこともできます。
 
-次のようなプロンプトを記述することができます：
+たとえば、下記のようなプロンプトを記述することができます：
 
-> 「鶏肉、じゃがいも、にんじん」を使った料理のレシピを5つ教えてください。レシピごとに使用する全ての食材をリストしてください
+> 「鶏肉、じゃがいも、にんじん」を使った料理のレシピを 5 つ教えてください。レシピごとに使用する全ての食材をリストしてください。
 
 上記のプロンプトを使用すると、以下のようなレスポンスが得られるかもしれません：
 
@@ -296,7 +292,7 @@ print(completion.choices[0].text)
 - ドライオレガノ小さじ1
 ```
 
-この結果は素晴らしいですね、どのような料理すればよいかわかりました。ここで役に立つ、改善点２つをご覧ください：
+この結果は素晴らしいですね、どのような料理を作れるかがわかりました。ここで役に立つ、改善点２つをご覧ください：
 
 - 好きでない食材やアレルギーのある食材を除外する
 - 家に全ての食材がない場合に備え、買い物リストを作成する
@@ -385,7 +381,7 @@ print(completion.choices[0].text)
 prompt = f"鶏肉、じゃがいも、にんじんを使った料理のレシピを 5 つ教えてください。レシピごとに、使用するすべての食材をリストしてください"
 ```
 
-コードを実行すると、下記のような出力が表示されます。
+コードを実行すると、下記のような結果が表示されます。
 
 ```output
 -鶏肉とじゃがいも、人参のシチュー: サラダ油大さじ3, 玉ねぎ1個（みじん切り）, ニンニク2片（みじん切り）, 人参1本（皮をむいてみじん切り）, じゃがいも1個（皮をむいてみじん切り）, ローリエ1枚, タイム1枝, 塩小さじ1/2, 黒コショウ小さじ1/4, 鶏ガラスープ1 1/2カップ, ドライホワイトワイン1/2カップ, パセリ（みじん切り）大さじ2, 無塩バター大さじ2, 骨なし鶏もも肉1 1/2ポンド（1インチ角に切る）
@@ -401,9 +397,9 @@ prompt = f"鶏肉、じゃがいも、にんじんを使った料理のレシピ
 
 > 注意: LLM　は非決定的(非確実)なので、プログラムを実行するたびに上記とは異なる結果が得られるかもしれません。
 
-さて、どうすれば改善できるか見てみましょう。改善するために、コードに柔軟性を持たせて、材料やレシピの数を改善・変更できるようにしたいと考えています。
+さて、どうすれば改善できるか見てみましょう。改善するために、コードに柔軟性を持たせて、材料やレシピの数を変更できるようにします。
 
-1. 以下のようにコードを変更します。
+1. 以下のようにコードを変更してください。
 
 ```python
 no_recipes = input("レシピの数を入力してください（例：5）: ")
@@ -431,19 +427,17 @@ prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教�
 
 さらに改善するために、下記の機能を追加したいと思います。
 
-- **Filter out ingredients**. We want to be able to filter out ingredients we don't like or are allergic to. To accomplish this change, we can edit our existing prompt and add a filter condition to the end of it like so:
-
 - **材料のフィルタリング**。嫌いな食材やアレルギーのある食材をフィルタリングできるようにしたいと考えています。これを実現するために、既存のプロンプトを編集し、下記のようにフィルター条件をプロンプトの最後に追加してください。
 
 ```python  
 filter = input("フィルター（例：ベジタリアン、ビーガン、グルテンフリー）: ")
 
-prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教えてください。レシピごとに、使用するすべての食材をリストしてください。ただし、{filter}は除いてください。"
+prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教えてください。レシピごとに、使用するすべての食材をリストしてください。ただし、{filter}は除外してください。"
 ```
 
-上記では、プロンプトの最後に `{filter}` を追加し、ユーザーからフィルター値も取得します。
+上記では、プロンプトの最後に `{filter}` を追加し、ユーザーからフィルター値も取得しています。
 
-プログラムを実行すると、下記のような入出力が得られます。
+プログラムを実行すると、下記のような入出力結果が得られます。
 
 ```output
 レシピの数を入力してください（例：5）: 3
@@ -505,7 +499,7 @@ prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教�
 
 - **買い物リストを作成** 我々は、家にすでにあるものを考慮して、買い物リストを作成したいと考えています。
 
-この機能は、一つのプロンプトで全てを解決するか、もしくは二つのプロンプトに分けて実装するかのどちらかが可能です。ここでは後者の二つに分けるアプローチを試してみます。ここでは、追加のプロンプトを提案していますが、それを機能させるためには、前のプロンプトの結果を後ろのプロンプトのコンテキストに追加する必要があります。
+この機能は、一つのプロンプトで全てを解決する事もできますし、二つのプロンプトに分けて実装する事もできます。ここでは後者の二つに分けるアプローチを採用します。ここでは、追加のプロンプトを提案していますが、それを機能させるためには、前のプロンプトの結果を後ろのプロンプトのコンテキストに追加する必要があります。
 
 最初のプロンプトの結果を出力するコードの部分を見つけ、下記のコードを追加します：
 
@@ -549,11 +543,14 @@ completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt,
 -小麦粉、ベーキングパウダー、ベーキングソーダ、塩、砂糖、卵、バターミルク、バター、リンゴ、ナツメグ、シナモン、オールスパイス
 ```
 
+> ご注意：(訳者による追記)  
+> 上記の買い物リストの結果は、自宅にある食材（リンゴ、小麦粉）も含まれています。これらを除外するには、プロンプトを修正する必要があります。これは追加課題として、ご自身で実装してみてください。
+
 ## セットアップを改善しましょう
 
 現状で、動作するコードがありますが、さらに改善するためにはいくつかの調整が必要です。以下に、改善すべき点をいくつか挙げてみます。
 
-- **API　キーのような秘密情報をコードから分離する**　秘密情報はコードに含めるべきではなく、安全な場所に保存すべきです。秘密情報をコードから分離するために、環境変数や `python-dotenv` のようなライブラリを使ってファイルから読み込むことができます。コード上での実装は以下のようになります：
+- **API キーの機密情報をコードから分離する**　機密情報はコードに含めるべきではなく、安全な場所に保存すべきです。機密情報をコードから分離するために、環境変数や `python-dotenv` のようなライブラリを使ってファイルから読み込むことができます。コード上での実装は以下のようになります：
 
 1. 下記の内容を含む `.env` ファイルを作成します：
 
@@ -569,7 +566,7 @@ OPENAI_API_VERSION=2023-05-15
 OPENAI_API_BASE=<replace>
 ```
 
-コード上では、以下のように環境変数を読み込みます：
+コード上では、以下のように記述して環境変数から読み込む事ができます：
 
 ```python
 from dotenv import load_dotenv
@@ -579,9 +576,7 @@ load_dotenv()
 openai.api_key = os.environ["OPENAI_API_KEY"]
 ```
 
-- **トークンの長さについて** 生成するテキストに必要なトークン数を考慮すべきです。トークンはお金がかかるため、可能な限りトークンの数を節約するようにしましょう。例えば、プロンプトをどのように表現すればトークンを少なくできるでしょうか？
-
-   To change the tokens used, you can use the `max_tokens` parameter. For example, if you want to use 100 tokens, you would do:
+- **トークンの長さ** 生成するテキストに必要なトークン数を考慮すべきです。トークンは増えれば増えるほどお金がかかるため、可能な限りトークンの数を節約するようにしましょう。例えば、プロンプトをどのように表現すればトークンを少なくできるかご検討ください。
 
 扱うトークン数を変更するには、`max_tokens` パラメータを使用します。例えば、100 トークンを使用したい場合は、以下のようにします：
 
@@ -589,7 +584,7 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
 ```
 
-- **温度 (Temperature) に関する実験** これまで触れていなかった温度ですが、プログラムのパフォーマンスに大きな影響を与えます。温度値が高いほど、出力はランダムになります。逆に、温度値が低いほど、出力は予測可能になります。出力にバリエーションが必要かどうかを考えてみてください。
+- **温度 (Temperature)** これまで触れていなかった温度ですが、プログラムの実行結果に大きな影響を与えます。温度値が高いほど、出力はランダムになります。逆に、温度値が低いほど、出力は予測可能になります。出力にバリエーションが必要かどうかを考えてみてください。
 
 温度を変更するには、`temperature` パラメータを使用します。例えば、温度を0.5に設定したい場合は、以下のようにします：
 
@@ -632,8 +627,8 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt, temper
 ここでは、使用できるプロンプトをいくつか紹介します。
 
 ```text
-- "あなたはエイブ・リンカーンです。あなた自身について 3 つの文章を使って教えてください、そしてエイブが使ったであろう文法と言葉を使って答えてください"
-- "あなたはエイブ・リンカーンです。エイブが使ったであろう文法と言葉を使って答えてください：
+- "あなたはエイブラハム・リンカーンです。あなた自身について 3 つの文章を使って教えてください、そしてエイブラハムが使ったであろう文法と言葉を使って答えてください"
+- "あなたはエイブラハム・リンカーンです。エイブラハムが使ったであろう文法と言葉を使って答えてください：
 
    あなたの最大の功績について、300語で教えてください"
 ```
