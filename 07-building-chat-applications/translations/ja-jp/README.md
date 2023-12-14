@@ -61,8 +61,6 @@
 - **メンテナンスの容易さ**: ほとんどの API と SDK で、新しいバージョンがリリースされた際にライブラリを更新するだけで済むため、アップデートや改善の管理が容易になります。
 - **最先端技術へのアクセス**: 大規模なデータセットで微調整やトレーニングが行われたモデルを活用することで、アプリケーションに自然言語処理の能力を付与します。
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-yoterada) or [notebook for Azure OpenAI Services](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
-
 SDK や API の機能を利用するためには、通常、提供されるサービスの使用許可を取得する必要があります。これは、一意のキーや認証トークンを使って行われます。OpenAI Python ライブラリを使って、これがどのように行われるのか確認してみましょう。また、このレッスン用の [OpenAI のノートブック](../../notebook-openai.ipynb?WT.mc_id=academic-105485-yoterada)や [Azure OpenAI Services のノートブック](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys)を使って、自分で試すこともできます。
 
 ```python
@@ -93,8 +91,6 @@ See https://platform.openai.com/account/api-keys for details.
 - **曖昧さへの対処方法**: 生成系 AI モデルは時折、曖昧な回答を生成します。ユーザーがこの問題に遭遇した際に、明確化を求めることができる機能は役立ちます。
 - **文脈（コンテキスト）の保持**: 高度な生成系 AI モデルは、会話の文脈(会話履歴)を記憶する能力を持っており、これはユーザー・エクスペリエンスにとって必要な要素になります。ユーザーに文脈を制御し管理する能力を与えることで、ユーザー・エクスペリエンスは向上しますが、それと同時に、機密性の高いユーザー情報を保持するリスクも生じます。この情報をどの位の期間保持するか、例えば保持期間のポリシーを導入するなどの考慮が必要で、これにより文脈の必要性とプライバシーのバランスを保つことができます。
 - **パーソナライゼーション**: 学習と適応の能力を持つ AI モデルは、ユーザーに個別のエクスペリエンスを提供します。ユーザー・プロファイルなどの機能を通じてユーザー・エクスペリエンスをカスタマイズすることは、ユーザーが理解されていると感じさせるだけでなく、特定の回答を見つけるための手助けを行い、より効率的で満足度の対話を生み出します。
-
-One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
 
 パーソナライゼーションの一例として、OpenAI の ChatGPT では「Custom instructions（カスタム指示）」設定があります。これは、プロンプトに重要なコンテキストとなる自身の情報を提供することができるようになります。下記にカスタム指示の例を示します。
 
@@ -162,8 +158,8 @@ Microsoftは、大規模言語モデル（LLM）からの回答を生成する�
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | **アップタイム**                    | アプリケーションが稼働し、ユーザーが利用可能な時間を計測します                                              | ダウンタイムをどのように最小限に抑えますか?                                           |
 | **応答時間**             | アプリケーションがユーザーからの問い合わせに応答するまでの時間                                                          | クエリ処理をどのように最適化し、応答時間を改善しますか?           |
-| **精度**                 | 真陽性予測の割合を、陽性予測の総数で割ったもの　（訳者による追記：モデルで提供される正しい出力の数 (真陽性) と、陽性サンプルの総数 (真陽性+偽陽性) を比較 [1](https://plat.ai/blog/confusion-matrix-in-machine-learning/)）                                     | モデルの精度をどのように確認しますか?                        |
-| **再現率 (Sensitivity)**      | 真陽性予測の数を実際の真の数で割った比率  （訳者による追記：真の値の総数に対する、正しく分類された陽性サンプル(TP)の数の比率として計算 [1](https://plat.ai/blog/confusion-matrix-in-machine-learning/)）                                          |　Recall をどのように測定し、改善しますか?                                  |
+| **精度**                 | 真陽性予測の割合を、陽性予測の総数で割ったもの　</br>（訳者による追記：モデルで提供される正しい出力の数 (真陽性) と、陽性サンプルの総数 (真陽性+偽陽性) を比較 [1](https://plat.ai/blog/confusion-matrix-in-machine-learning/)）                                     | モデルの精度をどのように確認しますか?                        |
+| **再現率 (Sensitivity)**      | 真陽性予測の数を実際の真の数で割った比率  </br>（訳者による追記：真の値の総数に対する、正しく分類された陽性サンプル(TP)の数の比率として計算 [1](https://plat.ai/blog/confusion-matrix-in-machine-learning/)）                                          |　Recall をどのように測定し、改善しますか?                                  |
 | **F1 スコア**                  | 精度と再現率の調和平均で、両者のバランスを示します                                   | 目指すF1スコアは何ですか?精度と再現率のバランスをどのように調整しますか?  |
 | **Perplexity**                | モデルが予測した確率分布が、データの実際の分布とどれだけ一致しているかを計測します。(訳者追記：Perplexityは、言語モデルが与えられた文書をどの程度正確に予測できるかを示す指標で、値が小さいほど性能が良い) | Perplexity をどのように最小限に抑えますか?                                         |
 | **ユーザー満足度指標** | アプリケーションに対するユーザーの評価を計測します。主にアンケートを通じて収集します                                     | ユーザーフィードバックはどのくらいの頻度で収集しますか?それに基づいてどのように改善策を立てますか? |
