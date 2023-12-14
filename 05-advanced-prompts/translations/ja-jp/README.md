@@ -14,8 +14,8 @@
 
 この章では、次のトピックについて説明します。
 
-- Extend your knowledge of prompt engineering by applying different techniques to your prompts.
-- Configuring your prompts to vary the output.
+- プロンプトにさまざまな手法を適用することで、プロンプトエンジニアリングの知識を広げます
+- 出力を変化させるようプロンプトを構成します
 
 - プロンプトには、さまざまな手法を適用することで、プロンプト・エンジニアリングの知識の幅を広げます
 - 出力を変化させるようなプロンプトを作成します。
@@ -45,8 +45,6 @@
 - **出力を制限 :** 作成される質問の数は 10 個以下になります
 
 ### 単純なプロンプトの制限
-
-You may or may not get the desired outcome. You will get your questions generated, but geography is a big topic and you may not get what you want to due the following reasons:
 
 期待する結果が得られる場合と、得られない場合があります。質問は作成されますが、地理はとても大きな話題で、下記の理由により期待する結果が得られない場合があります。
 
@@ -614,8 +612,6 @@ if __name__ == '__main__':
 
 ## 解決
 
-Please attempt to solve the assignment by adding suitable prompts to the code.
-
 コードに対して適切なプロンプトを追加し、課題の解決を試みてください。
 
 > [!TIP]
@@ -634,8 +630,6 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 答え：1。chain-of-thought (思考の連鎖) プロンプトは、LLM に回答を導き出すための一連の処理段階と、類似問題とその解決方法を提供することで、問題を解決する方法を示すことです。
 
 ## 🚀 Challenge
-
-You just used the self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
 
 課題では、self-refine (自己改善) の手法を使用しました。皆様が実際に実装したプログラムを取り上げて、それに対してどのように改善したいか考えてみてください。そして、その改善案を self-refine (自己改善手法)の手法を使って実際に適用してみましょう。結果は良くなりましたか？悪くなりましたか？どう思われますか?
 
