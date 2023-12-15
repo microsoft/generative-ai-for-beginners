@@ -1,95 +1,94 @@
-# Building Image Generation Applications
+# 画像生成アプリケーションの構築
 
 [![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](TBD)
 
-> **Video Coming Soon**
+> **ビデオは近日公開予定**
 
-There's more to LLMs than text generation. It's also possible to generate images from text descriptions. Having images as a modality can be highly useful in a number of areas from MedTech, architecture, tourism, game development and more. In this chapter, we will look into the two most popular image generation models, DALL-E and Midjourney.
+LLM はテキスト生成だけでなく、テキストの説明から画像を生成することも可能です。医療技術、建築、観光、ゲーム開発など、多くの分野で画像を活用することはとても有益です。この章では、最も人気のある 2 つの画像生成モデル、DALL-E と Midjourney について詳しく見ていきます。
 
-## Introduction
+## はじめに
 
-In this lesson, we will cover:
+このレッスンでは、下記の内容について取り上げます：
 
-- Image generation and why it's useful.
-- DALL-E and Midjourney, what they are, and how they work.
-- How you would build an image generation app.
+- 画像生成の有用性
+- DALL-E と Midjourney の概要とその動作原理
+- 画像生成アプリの作り方
 
-## Learning Goals
+## 学習目標
 
-After completing this lesson, you will be able to:
+このレッスンを終了すると、下記のスキルを身につけることができます：
 
-- Build an image generation application.
-- Define boundaries for your application with meta prompts.
-- Work with DALL-E and Midjourney.
+- 画像生成アプリの作成  
+- メタプロンプトを用いてアプリケーションの範囲を定義  
+- DALL-E と Midjourney の活用方法
 
-## Why build an image generation application?
+## 画像生成アプリケーションを作る理由は何でしょう？
 
-Image generation applications are a great way to explore the capabilities of Generative AI. They can be used for, for example:  
+画像生成アプリケーションは、生成系 AI の能力を引き出す絶好の手段です。例えば、下記のような用途に利用できます：
 
-- **Image editing and synthesis**. You can generate images for a variety of use cases, such as image editing and image synthesis.  
+- **画像編集と合成**：画像編集や画像合成など、様々な用途の画像を生成することができます。
 
-- **Applied to a variety of industries**. They can also be used to generate images for a variety of industries like Medtech, Tourism, Game development and more.
+- **多種多様な業界への応用**：医療技術、観光、ゲーム開発など、様々な業界向けの画像を生成することも可能です。
 
-## Scenario: Edu4All
+## シナリオ　：　Edu4All
 
-As part of this lesson, we will continue to work with our startup, Edu4All, in this lesson. The students will create images for their assessments, exactly what images is up to the students, but they could be illustrations for their own fairytale or create a new character for their story or help them visualize their ideas and concepts.
+このレッスンでは、引き続きスタートアップの　Edu4All　で作業を進めていきます。生徒たちは評価用の画像を作成します。具体的にどのような画像を作るかは生徒たち次第ですが、自分たちの創作するおとぎ話のイラストを描いたり、物語の新しいキャラクターを作ったり、自分たちのアイデアや概念を視覚化する手助けをすることができます。
 
-Here's what Edu4All's students could generate for example if they're working in class on monuments:
+例えば、Edu4All の生徒たちが授業で記念碑について学んでいる場合、下記のような画像を生成することができます：
 
 ![Edu4All startup, class on monuments, Eiffel Tower](../../images/startup.png?WT.mc_id=academic-105485-yoterada)
 
-using a prompt like
+次のようなプロンプトを使用します。
 
-> "Dog next to Eiffel Tower in early morning sunlight"
+> "早朝の日差しを浴びたエッフェル塔の前に座る犬"
 
-## What is DALL-E and Midjourney?
+## DALL-E と Midjourney とは何でしょう？
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-yoterada) and [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-yoterada) are two of the most popular image generation models, they allow you to use prompts to generate images.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-yoterada) と [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-yoterada) は、プロンプトを使って画像を生成することができる、特に人気のある画像生成 AI モデルの 2 つです。
 
 ### DALL-E
 
-Let's start with DALL-E, which is a Generative AI model that generates images from text descriptions.
+まずは、テキストの説明から画像を生成する生成系AIモデル、DALL-E について見ていきましょう。
 
-> [DALL-E is a combination of two models, CLIP and diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-yoterada).  
+> [DALL-Eは、CLIP と Diffused attention という2つのモデルを組み合わせたものです](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-yoterada).  
 
-- **CLIP**, is a model that generates embeddings, which are numerical representations of data, from images and text.  
-
-- **Diffused attention**, is a model that generates images from embeddings. DALL-E is trained on a dataset of images and text and can be used to generate images from text descriptions. For example, DALL-E can be used to generate images of a cat in a hat, or a dog with a mohawk.
+- **CLIP** は、画像やテキストからデータの数値表現である埋め込みを生成するモデルです。
+- **Diffused attention** は、埋め込みから画像を生成するモデルです。DALL-E は画像とテキストのデータセットで訓練され、テキストの説明から画像を生成することができます。例えば、DALL-E を使って「帽子をかぶった猫」や「モヒカンヘアの犬」の画像を生成することができます。
 
 ### Midjourney
 
-Midjourney works in a similar way to DALL-E, it generates images from text prompts. Midjourney, can also be used to generate images using prompts like “a cat in a hat”, or a “dog with a mohawk”.
+Midjourney も DALL-E と同様に、テキストプロンプトから画像を生成します。Midjourney も同様に、「帽子をかぶった猫」や「モヒカンヘアの犬」などのプロンプトを使って画像を生成することができます。
 
 ![Image generated by Midjourney, mechanical pigeon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-yoterada)
 *Image cred Wikipedia, image generated by Midjourney*
 
-## How does DALL-E and Midjourney Work
+## DALL-E と Midjourney はどのように動作するのでしょうか？
 
-First, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-yoterada). DALL-E is a Generative AI model based on the transformer architecture with an *autoregressive transformer*.  
+まず、[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-yoterada) について説明します。DALL-E は、*自己回帰型トランスフォーマー*を用いたトランスフォーマー・アーキテクチャに基づく生成系 AI モデルです。
 
-An *autoregressive transformer* defines how a model generates images from text descriptions, it generates one pixel at a time, and then uses the generated pixels to generate the next pixel. Passing through multiple layers in a neural network, until the image is complete.  
+*自己回帰型トランスフォーマー*は、AI モデルがテキストの説明から画像を生成する方法を定義します。このモデルは一度に 1 ピクセルずつ生成し、生成したピクセルを使って、次のピクセルを生成します。このプロセスは、画像が完成するまで、ニューラル・ネットワークの複数の層を通過します。
 
-With this process, DALL-E, controls attributes, objects, characteristics, and more in the image it generates. However, DALL-E 2 and 3 have more control over the generated image,  
+このプロセスを通じて、DALL-E は生成する画像の属性、オブジェクト、特性などを制御します。DALL-E  2 や 3 は生成された画像をより詳細に制御する能力を持っています。
 
-## Building your first image generation application
+## 初めての画像生成アプリケーションの構築
 
-So what does it take to build an image generation application? You need the following libraries:
+画像生成アプリケーションを作るためには、下記のライブラリが必要です。
 
-- **python-dotenv**, you're highly recommended to use this library to keep your secrets in a *.env* file away from the code.
-- **openai**, this library is what you will use to interact with the OpenAI API.
-- **pillow**, to work with images in Python.
-- **requests**, to help you make HTTP requests.
+- **python-dotenv**：強く推奨：このライブラリを利用し機密情報をコードから分離し *.env* ファイルに保管します
+- **openai**：OpenAI API を利用するためのライブラリです
+- **pillow**：Python で画像を扱うためのライブラリです
+- **requests**：HTTP リクエストを作成するのに役立つライブラリです
 
-1. Create a file *.env* with the following content:
+1. 下記の内容を記述した *.env* ファイルを作成します。  
+  
+    ```text  
+    AZURE_OPENAI_ENDPOINT=<your endpoint>  
+    AZURE_OPENAI_KEY=<your key>  
+    ```  
+  
+    この情報は、Azure Portal の OpenAI を作成したリソースの「Keys and Endpoint」セクションで確認します。
 
-    ```text
-    AZURE_OPENAI_ENDPOINT=<your endpoint>
-    AZURE_OPENAI_KEY=<your key>
-    ```
-
-    Locate this information in Azure Portal for your resource in the "Keys and Endpoint" section.
-
-1. Collect the above libraries in a file called *requirements.txt* like so:
+1. 上記で示した必須ライブラリを *requirements.txt* という名前のファイルに記述します
 
     ```text
     python-dotenv
@@ -98,7 +97,7 @@ So what does it take to build an image generation application? You need the foll
     requests
     ```
 
-1. Next, create virtual environment and install the libraries:
+1. 次に、仮想環境を作成し、ライブラリをインストールします
 
     ```bash
     python3 -m venv venv
@@ -106,14 +105,14 @@ So what does it take to build an image generation application? You need the foll
     pip install -r requirements.txt
     ```
 
-    For Windows, use the following commands to create and activate your virtual environment:
+    Windowsの場合は、下記のコマンドを実行し仮想環境を作成し、利用できるようにします
 
     ```bash
     python3 -m venv venv
     venv\Scripts\activate.bat
     ````
 
-1. Add the following code in file called *app.py*:
+1. *app.py* という名前のファイルに下記のコードを記述します
 
     ```python
     import openai
@@ -122,55 +121,55 @@ So what does it take to build an image generation application? You need the foll
     from PIL import Image
     import dotenv
     
-    # import dotenv
+    # dotenvをインポート
     dotenv.load_dotenv()
     
-    # Get endpoint and key from environment variables
+    # 環境変数からエンドポイントとキーを取得
     openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
     openai.api_key = os.environ['AZURE_OPENAI_KEY']     
     
-    # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
+    # API のバージョンを割り当て（DALL-E は現在、2023-06-01-preview API バージョンのみをサポートしています）
     openai.api_version = '2023-06-01-preview'
     openai.api_type = 'azure'
     
     
     try:
-        # Create an image by using the image generation API
+        # 画像生成 API を使用して画像を作成
         generation_response = openai.Image.create(
-            prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+            prompt='ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている',    # ここにプロンプトのテキストを入力
             size='1024x1024',
             n=2,
             temperature=0,
         )
-        # Set the directory for the stored image
+        # 画像を保存するディレクトリを設定
         image_dir = os.path.join(os.curdir, 'images')
     
-        # If the directory doesn't exist, create it
+        # ディレクトリが存在しない場合は作成
         if not os.path.isdir(image_dir):
             os.mkdir(image_dir)
     
-        # Initialize the image path (note the filetype should be png)
+        # 画像ファイルへのパスを設定（ファイルタイプは png にします）
         image_path = os.path.join(image_dir, 'generated-image.png')
     
-        # Retrieve the generated image
-        image_url = generation_response["data"][0]["url"]  # extract image URL from response
-        generated_image = requests.get(image_url).content  # download the image
+        # 生成した画像を取得
+        image_url = generation_response["data"][0]["url"]  # レスポンスからイメージの URL を取得
+        generated_image = requests.get(image_url).content  # イメージのダウンロード
         with open(image_path, "wb") as image_file:
             image_file.write(generated_image)
     
-        # Display the image in the default image viewer
+        # デフォルトの画像ビューアで画像を表示
         image = Image.open(image_path)
         image.show()
     
-    # catch exceptions
+    # 例外をキャッチ
     except openai.error.InvalidRequestError as err:
         print(err)
 
     ```
 
-Let's explain this code:
+上記のコードについて説明します。
 
-- First, we import the libraries we need, including the OpenAI library, the dotenv library, the requests library, and the Pillow library.
+- 最初に、必要なライブラリをインポートします。これには、OpenAI ライブラリ、dotenv ライブラリ、requests ライブラリ、Pillow ライブラリが含まれます。
 
     ```python
     import openai
@@ -180,88 +179,88 @@ Let's explain this code:
     import dotenv
     ```
 
-- Next, we load the environment variables from the *.env* file.
+- 次に、*.env* ファイルから環境変数を読み込みます。
 
     ```python
-    # import dotenv
+    # dotenvをインポート
     dotenv.load_dotenv()
     ```
 
-- After that, we set the endpoint, key for the OpenAI API, version and type.
+- その後、OpenAI API のエンドポイント、キー、バージョン、タイプを設定します。
 
     ```python
-    # Get endpoint and key from environment variables
+    # 環境変数からエンドポイントとキーを取得
     openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
     openai.api_key = os.environ['AZURE_OPENAI_KEY'] 
 
-    # add version and type, Azure specific
+    # バージョンと種類を設定、Azure 固有設定
     openai.api_version = '2023-06-01-preview'
     openai.api_type = 'azure'
     ```
 
-- Next, we generate the image:
+- 次に、画像を作成します。
 
     ```python
-    # Create an image by using the image generation API
+    # 画像生成 API を使用して画像を作成
     generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている',    # ここにプロンプトのテキストを入力
         size='1024x1024',
         n=2,
         temperature=0,
     )
     ```
 
-    The above code responds with a JSON object that contains the URL of the generated image. We can use the URL to download the image and save it to a file.
+    上記のコードは、生成された画像の URL を含む JSON オブジェクトを返します。このURL を使って画像をダウンロードし、ファイルに保存できます。
 
-- Lastly, we open the image and use the standard image viewer to display it:
+- 最後に、画像を開き、標準の画像ビューアを使って表示します。
 
     ```python
     image = Image.open(image_path)
     image.show()
     ```
 
-### More details on generating the image
+### 画像生成の詳細 
 
-Let's look at the code that generates the image in more detail:
+画像を生成するコードをより詳しく見てみましょう。
 
 ```python
 generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている',    # ここにプロンプトのテキストを入力
         size='1024x1024',
         n=2,
         temperature=0,
     )
 ```
 
-- **prompt**, is the text prompt that is used to generate the image. In this case, we're using the prompt "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils".
-- **size**, is the size of the image that is generated. In this case, we're generating an image that is 1024x1024 pixels.
-- **n**, is the number of images that are generated. In this case, we're generating two images.
-- **temperature**, is a parameter that controls the randomness of the output of a Generative AI model. The temperature is a value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
+- **prompt**：画像を生成するためのテキスト・プロンプトです。この例では、「ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている」というプロンプトを使用しています。
+- **size**：生成する画像のサイズを指定します。この例では、1024x1024 ピクセルの画像を生成しています。
+- **n**：生成する画像の数です。この例では、2 つの画像を生成しています。
+- **temperature**：生成系 AI モデルの出力のランダム性を制御するパラメータです。温度は 0 から 1 の間の値で、0 は出力が決定的であることを意味し、1 は出力がランダムであることを意味します。デフォルト値は 0.7 です。
 
-There are more things you can do with images that we will cover in the next section.
+次のセクションでは、画像生成でできることについてさらに詳しく説明します。
 
-## Additional capabilities of image generation
+## 画像生成における追加機能
 
-You've seen so far how we were able to generate an image using a few lines in Python. However, there are more things you can do with images.
+ここまで、Python コードを実装して画像を生成する方法を見てきました。しかし、画像でできることは他にもあります。
 
-You can also do the following:
+下記のようなこともできます。
 
-- **Perform edits**. By providing an existing image a mask and a prompt, you can alter an image. For example, you can add something to a portion of an image. Imagine our bunny image, you can add a hat to the bunny. How you would do that is by providing the image, a mask (identifying the part of the area for the change) and a text prompt to say what should be done.
+- **画像編集を行う**：既存の画像にマスクとプロンプトを提供することで、画像を編集する事もできます。例えば、画像の一部に、何かを新たに追加することができます。ウサギの画像を想像してみてください、ウサギに帽子を被せることができます。それを行う方法は、画像、マスク（変更するエリアの部分を特定する）と、何をすべきかを示すテキストプロンプトを提供することです。
 
     ```python
     response = openai.Image.create_edit(
       image=open("base_image.png", "rb"),
       mask=open("mask.png", "rb"),
-      prompt="An image of a rabbit with a hat on its head.",
+      prompt="頭に帽子をかぶったウサギの画像",
       n=1,
       size="1024x1024"
     )
     image_url = response['data'][0]['url']
     ```
 
-    The base image would only contain the rabbit but the final image would have the hat on the rabbit.
+    ベース画像にはウサギだけが含まれていますが、最終的な画像にはウサギの帽子が含まれています。
 
-- **Create variations**. The idea is that you take an existing image and ask that variations are created. To create a variation, you provide an image and a text prompt and code like so:
+- **バリエーションを作成する**：既存の画像を取得し、バリエーションを作成するように依頼します。バリエーションを作成するには、画像とテキストプロンプトを提供し、以下のようにコードを記述します。
 
     ```python
     response = openai.Image.create_variation(
@@ -272,123 +271,122 @@ You can also do the following:
     image_url = response['data'][0]['url']
     ```
 
-    > Note, this is only supported on OpenAI
+    > ご注意：これはOpenAIでのみサポートされています。
 
-## Temperature
+## 温度
 
-Temperature is a parameter that controls the randomness of the output of a Generative AI model. The temperature is a value between 0 and 1 where 0 means that the output is deterministic and 1 means that the output is random. The default value is 0.7.
+温度は、生成系 AI モデルの出力のランダム性を制御するパラメータで、0 から 1 までの値を取ります。0 は出力が決定的であること、1 は出力がランダムであることを示しています。デフォルト値は 0.7 となっています。
 
-Let's look at an example of how temperature works, by running this prompt twice:
+実際に確認するため、下記のプロンプトを二度実行して、温度がどのように作用するかを見てみましょう。
 
-> Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
+> プロンプト : "ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている"
 
 ![Bunny on a horse holding a lollipop, version 1](../../images/v1-generated-image.png?WT.mc_id=academic-105485-yoterada)
 
-Now let's run that same prompt just to see that we won't get the same image twice:
+同じプロンプトを再度実行し、同じ画像が生成されないことを確認します。
 
 ![Generated image of bunny on horse](../../images/v2-generated-image.png?WT.mc_id=academic-105485-yoterada)
 
-As you can see, the images are similar, but not the same. Let's try changing the temperature value to 0.1 and see what happens:
+ご覧の通り、生成された画像は似ていますが、同じではありません。ここで温度値を 0.1 に変更して、その結果を見てみましょう。
 
 ```python
  generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている',    # ここにプロンプトのテキストを入力
         size='1024x1024',
         n=2
     )
 ```
 
-### Changing the temperature
+### 温度を変更してみましょう
 
-So let's try to make the response more deterministic. We could observe from the two images we generated that in the first image, there's a bunny and in the second image, there's a horse, so the images vary greatly.
+結果をより決定的にしたい場合、生成した二つの画像から見て分かるように、最初の画像にはウサギが、二つ目の画像には馬が映っているので、２つの画像に大きな違いがあります。
 
-Let's therefore change our code and set the temperature to 0, like so:
+そこで、コードを修正して温度を0に設定します。
 
 ```python
 generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        prompt='ウサギがキャンディを持って馬に乗り、霧のかかった牧場で水仙が育つ中を走っている',    # ここにプロンプトのテキストを入力
         size='1024x1024',
         n=2,
         temperature=0
     )
 ```
 
-Now when you run this code, you get these two images:
+このコードを実行すると、次の二つの画像が得られます。
 
 - ![Temperature 0, v1](../../images/v1-temp-generated-image.png?WT.mc_id=academic-105485-yoterada)
 - ![Temperature 0 , v2](../../images/v2-temp-generated-image.png?WT.mc_id=academic-105485-yoterada)
 
-Here you can clearly see how the images resemble each other more.
+これらの画像をご覧いただくと、２つの画像は互いにより似ていることが明確にわかります。
 
-## How to define boundaries for your application with metaprompts
+## メタ・プロンプトを使ってアプリケーションの範囲を設定する方法
 
-With our demo, we can already generate images for our clients. However, we need to create some boundaries for our application.  
+上記のように、すでにお客様に提供できる画像を生成することができます。しかし、アプリケーションの範囲を設定する必要があります。
 
-For example, we don't want to generate images that are not safe for work, or that are not appropriate for children.  
+例えば、職場の中で安全でない画像や、子供に適さない画像を生成することは避けたいと思います。
 
-We can do this with *metaprompts*. Metaprompts are text prompts that are used to control the output of a Generative AI model. For example, we can use metaprompts to control the output, and ensure that the generated images are safe for work, or appropriate for children.
+これは*メタ・プロンプト*という手法を使って実現できます。メタ・プロンプトは、生成系 AI モデルの出力を制御するために使用するテキスト・プロンプトです。例えば、メタ・プロンプトを使って出力を制御し、生成された画像が職場にとって安全であることや、子供に適していることを確認できます。
 
-### How does it work?
+### それはどのように動作するのでしょうか？
 
-Now, how do meta prompts work?
+それでは、メタ・プロンプトはどのように動作するのでしょうか？
 
-Meta prompts are text prompts that are used to control the output of a Generative AI model, they are positioned before the text prompt, and are used to control the output of the model and embedded in applications to control the output of the model. Encapsulating the prompt input and the meta prompt input in a single text prompt.
+メタ・プロンプトは、生成系 AI モデルの出力を制御するために使用するテキスト・プロンプトで、テキスト・プロンプトの前に配置し、モデルの出力を制御するために使用します。これはアプリケーションに組み込まれ、モデルの出力を制御します。プロンプト入力とメタ・プロンプト入力を一つのテキスト・プロンプトにまとめます。
 
-One example of a meta prompt would be the following:
-
-```text
-You are an assistant designer that creates images for children. 
-
-The image needs to be safe for work and appropriate for children. 
-
-The image needs to be in color.  
-
-The image needs to be in landscape orientation.  
-
-The image needs to be in a 16:9 aspect ratio. 
-
-Do not consider any input from the following that is not safe for work or appropriate for children. 
-
-(Input) 
+メタ・プロンプトの一例を下記に示します。
 
 ```text
+あなたは子供向けの画像を作成するアシスタントデザイナーです。
+ 
+画像は職場で安全であり、子供に適している必要があります。
+ 
+画像はカラーである必要があります。
+ 
+画像は風景の向きである必要があります。
+ 
+画像は16:9のアスペクト比である必要があります。
+ 
+以下の入力から、職場で安全でないものや子供に適さないものは考慮しないでください。
+ 
+（入力）
+```text
 
-Now, let's see how we can use meta prompts in our demo. 
+さて、それではアプリでメタ・プロンプトをどのように使うか見てみましょう。
 
 ```python
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+disallow_list = "剣、暴力、血、ゴア、ヌード、性的コンテンツ、アダルト・コンテンツ、アダルト・テーマ、アダルト・ワード、アダルト・ユーモア、アダルト・ジョーク、アダルト・シチュエーション、アダルト"
 
-meta_prompt =f"""You are an assistant designer that creates images for children. 
+meta_prompt =f"""あなたは子供向けの画像を作成するアシスタントデザイナーです。 
 
-The image needs to be safe for work and appropriate for children. 
+画像は職場の中で使用する際に安全で、子供に適している必要があります。
 
-The image needs to be in color.  
+画像はカラーである必要があります。
 
-The image needs to be in landscape orientation.  
+画像は横長の形式であるべきです。
 
-The image needs to be in a 16:9 aspect ratio. 
+画像は16:9のアスペクト比である必要があります。
 
-Do not consider any input from the following that is not safe for work or appropriate for children. 
+以下の、職場にとって安全でないものや、子供に適さないものは除外してください。
 {disallow_list}
 """
 
 prompt = f"{meta_prompt} 
-Create an image of a bunny on a horse, holding a lollipop"
+ウサギがアメを持って馬に乗っている画像を作成してください"
 
-# TODO add request to generate image
+# TODO 画像生成のリクエストを追加
 ```
 
-From the above prompt, you can see how all images being created consider the metaprompt.
+上記のプロンプトから、生成されるすべての画像がメタ・プロンプトを考慮していることがわかります。
 
-## Assignment - let's enable students
+## 課題 - 学生の能力を引き出しましょう
 
-We introduced Edu4All at the beginning of this lesson. Now it's time to enable the students to generate images for their assessments.
+このレッスンの初めに Edu4All を紹介しました。今度は、学生が自分たちの評価のための画像を生成できるようにしましょう。
 
-The students will create images for their assessments containing monuments, exactly what monuments is up to the students. The students are asked to use their creativity in this task to place these monuments in different contexts.
+学生は、自分たちの評価用の画像を作成します。その画像には記念碑が含まれている必要がありますが、どの記念碑を選ぶかは学生に任せます。学生は、これらの記念碑をさまざまな状況に合わせるために、この課題では創造性を発揮する事が求められます。
 
-## Solution
+## 解決策
 
-Here's one possible solution:
+下記に一つの解決策案を示します：
 
 ```python
 import openai
@@ -397,30 +395,30 @@ import requests
 from PIL import Image
 import dotenv
 
-# import dotenv
+# dotenvをインポート
 dotenv.load_dotenv()
 
-# Get endpoint and key from environment variables
-openai.api_base = "<replace with endpoint>"
-openai.api_key = "<replace with api key>"     
+# 環境変数からエンドポイントとキーを取得
+openai.api_base = "<エンドポイントに置き換え>"
+openai.api_key = "<API キーに置き換え>"     
 
-# Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
+# APIバージョンを指定（DALL-Eは現在、2023-06-01-preview APIバージョンのみ対応）
 openai.api_version = '2023-06-01-preview'
 openai.api_type = 'azure'
     
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+disallow_list = "剣、暴力、血、ゴア、ヌード、性的コンテンツ、大人向けコンテンツ、大人向けテーマ、大人向け言語、大人向けユーモア、大人向けジョーク、大人向け状況、大人"
 
-meta_prompt = f"""You are an assistant designer that creates images for children. 
-
-The image needs to be safe for work and appropriate for children. 
-
-The image needs to be in color.  
-
-The image needs to be in landscape orientation.  
-
-The image needs to be in a 16:9 aspect ratio. 
-
-Do not consider any input from the following that is not safe for work or appropriate for children. 
+meta_prompt = f"""あなたは子供向けの画像を作成するアシスタントデザイナーです。
+ 
+画像は、職場において安全で、子供に適している必要があります。
+ 
+画像はカラーである必要があります。
+ 
+画像は横向きである必要があります。
+ 
+画像は16:9のアスペクト比である必要があります。
+ 
+以下の入力は、職場で安全でない、または子供に適していないので除外してください。
 {disallow_list}"""
 
 prompt = f"""{metaprompt}
@@ -428,41 +426,41 @@ Generate monument of the Arc of Triumph in Paris, France, in the evening light w
 """"    
 
 try:
-    # Create an image by using the image generation API
+    # 画像生成APIを使用して画像を作成
     generation_response = openai.Image.create(
-        prompt=prompt,    # Enter your prompt text here
+        prompt=prompt,    # ここにプロンプト・テキストを入力
         size='1024x1024',
         n=2,
         temperature=0,
     )
-    # Set the directory for the stored image
+    # 保存する画像のディレクトリを設定
     image_dir = os.path.join(os.curdir, 'images')
 
-    # If the directory doesn't exist, create it
+    # ディレクトリが存在しない場合は作成
     if not os.path.isdir(image_dir):
         os.mkdir(image_dir)
 
-    # Initialize the image path (note the filetype should be png)
+    # 画像のパスを初期化（ファイルタイプは png であることに注意）
     image_path = os.path.join(image_dir, 'generated-image.png')
 
-    # Retrieve the generated image
-    image_url = generation_response["data"][0]["url"]  # extract image URL from response
-    generated_image = requests.get(image_url).content  # download the image
+    # 生成された画像を取得
+    image_url = generation_response["data"][0]["url"]  # レスポンスから画像URLを抽出
+    generated_image = requests.get(image_url).content  # 画像をダウンロード
     with open(image_path, "wb") as image_file:
         image_file.write(generated_image)
 
-    # Display the image in the default image viewer
+    # デフォルトの画像ビューアで画像を表示
     image = Image.open(image_path)
     image.show()
 
-# catch exceptions
+# 例外をキャッチ
 except openai.error.InvalidRequestError as err:
     print(err)
 ```
 
+## ## お疲れ様でした!　学習を続ける
 
-## Great Work! Continue Your Learning
+このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) to continue leveling up your Generative AI knowledge!
+次のレッスン 10 では、[ローコード AI アプリケーションの構築](../../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法について学びます！
 
-Head over to Lesson 10 where we will look at how to [build AI applications with low-code](../../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)
