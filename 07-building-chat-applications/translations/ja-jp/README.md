@@ -167,25 +167,25 @@ Microsoftは、大規模言語モデル（LLM）からの回答を生成する�
 | **再トレーニングサイクル**         | 新しいデータや知見を取り入れてモデルを更新する頻度                                    | どのくらいの頻度でモデルを再トレーニングしますか?再トレーニングサイクルを開始するトリガーは何ですか?   |
 | **異常検出**         | 期待する動作に適合しない異常なパターンを識別するためのツールと手法                        | 異常が発生した際にどのように対応しますか?                                        |
 
-### Implementing Responsible AI Practices in Chat Applications
+### チャット・アプリケーションにおける責任ある AI の実践導入
 
-Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider and why they should take them seriously.
+Microsoft の責任ある AI に対する取り組みは、AI の開発と利用を推奨する 6 つの原則を明らかにしています。下記に、それらの原則とその定義、そしてチャット開発者が考慮すべき事項と、それらをなぜ真剣に考えるべきかを説明します。
 
-| Principles             | Microsoft's Definition                                | Considerations for Chat Developer                                      | Why It's Important                                                                     |
+| 原則             | Microsoftの定義                                | チャット開発者に関する考慮事項                                      | 重要な理由                                                                     |
 | ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Fairness               | AI systems should treat all people fairly.            | Ensure the chat application does not discriminate based on user data.  | To build trust and inclusivity among users; avoids legal ramifications.                |
-| Reliability and Safety | AI systems should perform reliably and safely.        | Implement testing and fail-safes to minimize errors and risks.         | Ensures user satisfaction and prevents potential harm.                                 |
-| Privacy and Security   | AI systems should be secure and respect privacy.      | Implement strong encryption and data protection measures.              | To safeguard sensitive user data and comply with privacy laws.                         |
-| Inclusiveness          | AI systems should empower everyone and engage people. | Design UI/UX that is accessible and easy-to-use for diverse audiences. | Ensures a wider range of people can use the application effectively.                   |
-| Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
-| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.           |
+| 公平性               | AI システムは全ての人を公平に扱うべきです            | ユーザーデータに基づく差別がないようにチャットアプリケーションを設計します  | ユーザー間で信頼と包括性を築き、法的な問題を避けるためです                |
+| 信頼性と安全性 |AI システムは確実かつ安全に動作するべきです        | エラーやリスクを最小限に抑えるためにテストとフェイルセーフを実装します         | ユーザーの満足度を確保し、潜在的な危険を防ぐためです                                 |
+| プライバシーとセキュリティ   | AI システムは安全であり、プライバシーを尊重するべきです      | ユーザーデータを保護するために強力な暗号化とデータ保護対策を実装します              | ユーザーの機密データを保護し、プライバシー法を遵守するためです                         |
+| 包括性          | AI システムは全ての人を活力づけ、人々を巻き込むべきです | 多様なユーザーがアクセスしやすく使いやすい UI/UX を設計します | 多くの人がアプリケーションを効果的に使用できるようにするためです                   |
+| 透明性           | AI システムは理解しやすいべきです                 | AI の応答について明確なドキュメンテーションと理由を提供します           | ユーザーは、意思決定がどのように行われるかを理解できれば、システムを信頼する可能性が高まります |
+| 説明責任         | 人々は AI システムに対して説明責任を負うべきです          | AI の意思決定を監査し、改善するための明確なプロセスを設立します     | 継続的な改善とミスが発生した場合の是正措置を可能にするためです           |
 
-## Assignment
- 
-See [assignment](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-yoterada) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
+## 課題
 
-## Great Work! Continue the Journey
+[課題](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-yoterada)をご覧ください。最初のチャット・プロンプトの実行から、テキストの分類や要約など、一連の演習を行うことができます。
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) to continue leveling up your Generative AI knowledge!
+## お疲れ様でした!　学習を続ける
 
-Head over to Lesson 8 to see how you can start  [building search applications](../../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)!
+このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+
+レッスン 8 では、[Vector Databases を利用した検索アプリの構築](../../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法を見ていきます。
