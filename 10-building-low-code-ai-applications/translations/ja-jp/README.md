@@ -1,244 +1,245 @@
-# Building Low Code AI Applications
+# BローコードAIアプリケーションの構築
 
 [![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/XX8491SAF44?WT.mc_id=academic-105485-yoterada)
 
-> *(Click the image above to view video of this lesson)*
+> *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
 
-## Introduction
+## はじめに
 
-Now that we've learned how to build image generating applications, let's talk about low code. Generative AI can be used for a variety of different areas including low code, but what is low code and how can we add AI to it?
+画像生成アプリケーションの作り方を学んだところで、次にローコード開発について会話をうつしましょう。生成系 AI はローコードを含む多様な領域で使えますが、ローコードとは何でしょうか。また、それにどのように AI を組み込む事ができるのでしょうか。
 
-Building apps and solutions has become more easier for traditional developers and non-developers through the use of Low Code Development Platforms. Low Code Development Platforms enable you to build apps and solutions with little to no code. This is achieved by providing a visual development environment that enables you to drag and drop components to build apps and solutions. This enables you to build apps and solutions faster and with less resources. In this lesson, we dive deep into how to use Low Code and how to enhance low code development with AI using Power Platform.
+ローコード開発プラットフォームの利用により、従来の開発者や非開発者でもアプリやソリューションの作成がより容易になりました。ローコード開発プラットフォームを使うと、ほとんどコードを書かずに、あるいは全く書かずにアプリやソリューションを作れます。これは、コンポーネントをドラッグ・アンド・ドロップで配置できるビジュアル開発環境を提供することで実現しています。これにより、アプリやソリューションをより速く、リソースを少なく使って作れます。このレッスンでは、ローコードの使い方と、Power Platformを使った AI によるローコード開発の強化方法について詳しく説明します。
 
-The Power Platform provides organizations with the opportunity to empower their teams to build their own solutions through an intuitive low-code or no-code environment. This environment helps simplify the process of building solutions. With Power Platform, solutions can be built in days or weeks instead of months or years. Power Platform consists of five key products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents.
+Power Platform は、直感的なローコードまたはノーコード環境を通じて、組織のチームが自分たちのソリューションを作れるような機会を提供します。この環境は、ソリューション作成のプロセスを簡素化します。Power Platform を使えば、ソリューションを数ヶ月や数年かけて作るのではなく、数日や数週間で作れます。Power Platform は、Power Apps、Power Automate、Power BI、Power Pages、Power Virtual Agents の 5 つの主要製品から構成されています。
 
-This lesson covers:
+このレッスンでは、下記の内容を取り扱います：
 
-- Introduction to Generative AI in Power Platform
-- Introduction to Copilot and how to use it
-- Using Generative AI to build apps and flows in Power Platform
-- Understanding the AI Models in Power Platform with AI Builder
+- Power Platform における生成系AIの紹介
+- Copilot の紹介と使い方
+- 生成系 AI を使って Power Platform でアプリとフローを作る方法
+- AI Builder を使って Power Platform の AI モデルを理解する方法
 
-## Learning Goals
+## 学習目標
 
-By the end of this lesson, you will be able to:
+このレッスンを終了すると、下記を理解できます。
 
-- Understand how Copilot works in Power Platform.
+- Copilot が Power Platform でどのように機能するかを理解します
 
-- Build a Student Assignment Tracker App for our education startup.
+- 教育スタートアップ向けの Student Assignment Tracker アプリを構築します。
 
-- Build an Invoice Processing Flow that uses AI to extract information from invoices.
+- AIを使用して請求書から情報を抽出する請求書処理フローを構築します。
 
-- Apply best practices when using the Create Text with GPT AI Model.
+- GPT AI モデルを使用してテキスト生成を行う際に、ベスト・プラクティスを適用します。
 
-The tools and technologies that you will use in this lesson are:
+このレッスンで使用するツールとテクノロジは下記のとおりです。
 
-- **Power Apps**, for the Student Assignment Tracker app, which provides a low-code development environment for building apps to track, manage and interact with data.
+- **Power Apps**: データを追跡、管理、操作するアプリを作るためのローコード開発環境を提供し、これを利用し学生の課題追跡アプリを作ります。
 
-- **Dataverse**, for storing the data for the Student Assignment Tracker app where Dataverse will provide a low-code data platform for storing the app's data.
+- **Dataverse**: 学生の課題追跡アプリのデータを格納するために使います。Dataverseはアプリのデータを格納するためのローコード・データ・プラットフォームを提供します。
 
-- **Power Automate**, for the Invoice Processing flow where you will have low-code development environment for building workflows to automate the Invoice Processing process.
+- **Power Automate**: 請求書処理フローを作るためのローコード開発環境を提供し、これを使って請求書処理プロセスを自動化します。
 
-- **AI Builder**, for the Invoice Processing AI Model where you will use prebuilt AI Models to process the invoices for our startup.
+- **AI Builder**: 事前に作成した AI モデルを使ってスタートアップの請求書を処理するための請求書処理 AI モデルを作ります。
 
-## Generative AI in Power Platform
+## Power Platform の生成系 AI
 
-Enhancing low-code development and application with generative AI is a key focus area for Power Platform. The goal is to enable everyone to build AI-powered apps, sites, dashboards and automate processes with AI, *without requiring any data science expertise*. This goal is achieved by integrating generative AI into the low-code development experience in Power Platform in the form of Copilot and AI Builder.
+Power Platform の主な目標は、生成系AIを用いてローコード開発とアプリケーションを強化することです。その狙いは、データサイエンスの専門知識がない人でも、AI を使ったアプリ、サイト、ダッシュボードの作成や、AIによるプロセスの自動化ができるようにすることです。この目標は、Copilot と AI Builder を通じて、Power Platform のローコード開発体験に生成系 AI を組み込むことで達成します。
 
-### How does this work?
+### どのように動作するのでしょうか？
 
-Copilot is an AI assistant that enables you to build Power Platform solutions by describing your requirements in a series of conversational steps using natural language. You can for example instruct your AI assistant to state what fields your app will use and it will create both the app and the underlying data model or you could specify how to set up a flow in Power Automate.
+Copilot は AI アシスタントで、自然言語を使い会話形式のやり取りで要件を説明し、Power Platform のソリューションを作ることができます。たとえば、アプリで使用するフィールドを AI アシスタントに指示すると、アプリとそれに基づくデータモデルの両方を作成します。また、Power Automateでフローを設定する方法を指定することもできます。
 
-You can use Copilot driven functionalities as a feature in your app screens to enable users to uncover insights through conversational interactions.
+アプリ画面に Copilot の機能を組み込むことで、ユーザーは、会話型のやり取りを通じて、知見を得られるようになります。
 
-AI Builder is a low-code AI capability available in Power Platform that enables you to use AI Models to help you to automate processes and predict outcomes. With AI Builder you can bring AI to your apps and flows that connect to your data in Dataverse or in various cloud data sources, such as SharePoint, OneDrive or Azure.
+AI Builder は、Power Platform で利用可能なローコード AI 機能で、AI モデルを使用してプロセスを自動化し、結果を予測することができます。AI Builder を使用すると、Dataverse や SharePoint、OneDrive、Azure などの様々なクラウド上のデータソースに接続するアプリやフローに AI を組み込むことができます。
 
-Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents. AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for our education startup.
+Copilotは、Power Apps、Power Automate、Power BI、Power Pages、Power Virtual Agentsといった、全 Power Platform 製品で利用できます。一方で、AI Builder は Power Apps と Power Automate で利用できます。今回のレッスンでは、Power Apps と Power Automate における Copilot と AI Builder の使用方法について、特に教育スタートアップ用のソリューション開発の観点から詳しく説明していきます。
 
-### Copilot in Power Apps
+### Power Apps における Copilot
 
-As part of the Power Platform, Power Apps provides a low-code development environment for building apps to track, manage and interact with data. It's a suite of app development services with a scalable data platform and the ability to connect to cloud services and on-premises data. Power Apps allows you to build apps that run on browsers, tablets, and phones, and can be shared with co-workers. Power Apps eases users into app development with a simple interface, so that every business user or pro developer can build custom apps. The app development experience is also enhanced with Generative AI through Copilot.
+Power Platform の一部として、Power Apps は、データの追跡、管理、対話型のアプリを作成する事ができる、ローコード開発環境を提供します。これは、スケーラブルなデータ・プラットフォームと、クラウドサービスやオンプレミス・データに接続する力を備えたアプリ開発サービスを組み合わせた物です。Power Apps を使用すると、ブラウザ、タブレット、携帯電話上で動作するアプリを作成し、同僚に共有することができます。Power Apps はシンプルなインターフェースで、ユーザーが簡単にアプリ開発ができるように導き、全てのビジネス・ユーザーやプロの開発者がカスタム・アプリを作成できます。
 
-The copilot AI assistant feature in Power Apps enables you to describe what kind of app you need and what information you want your app to track, collect, or show. Copilot then generates a responsive Canvas app based on your description. You can then customize the app to meet your needs. The AI Copilot also generates and suggests a Dataverse Table with the fields you need to store the data you want to track and some sample data. We will look at what Dataverse is and how you can use it in Power Apps in this lesson later. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Apps home screen.
+Power Apps における Copilot AI アシスタント機能を利用すると、必要なアプリの種類や、アプリで追跡、収集、表示したい情報を説明できます。Copilot はその説明に基づいて、レスポンシブな（ユーザーが使用しているデバイスの画面サイズに応じて自動的にレイアウトを調整する）Canvas アプリを生成します。その後、アプリを自分のニーズに合わせてカスタマイズすることもできます。また、AI Copilot は追跡したいデータを保存するために必要なフィールドをあらかじめ持っている Dataverse テーブルとサンプルデータを生成し、提案します。このレッスンの後半では、Dataverse とは何か、そして Power Apps でどのように使用するかを詳しく見ていきます。その後、会話でのやり取りを通じて AI Copilot アシスタント機能を使用してテーブルを自分のニーズに合わせてカスタマイズすることができます。この機能は、Power Apps のホーム画面からすぐに利用できます。
 
-### Copilot in Power Automate
+### Power Automate における Copilot
 
-As part of the Power Platform, Power Automate lets users create automated workflows between applications and services. It helps automate repetitive business processes such as communication, data collection, and decision approvals. Its simple interface allows users with every technical competence (from beginners to seasoned developers) to automate work tasks. The workflow development experience is also enhanced with Generative AI through Copilot.
+Power Platform の一部である Power Automate は、ユーザーが、アプリケーションとサービス間で、自動化ワークフローの作成を可能にします。これにより、コミュニケーション、データ収集、承認決定などの反復的なビジネス・プロセスを自動化する事ができます。そして、その簡単なインターフェースは、初心者から経験豊富な開発者まで、全ての技術レベルのユーザーが作業タスクを自動化することを可能にします。またこうした、ワークフロー開発体験は Copilot を通じた生成型 AI で強化されます。
 
-The copilot AI assistant feature in Power Automate enables you to describe what kind of flow you need and what actions you want your flow to perform. Copilot then generates a flow based on your description. You can then customize the flow to meet your needs. The AI Copilot also generates and suggests the actions you need to perform the task you want to automate. We will look at what flows are and how you can use them in Power Automate in this lesson later. You can then customize the actions to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Automate home screen.
+Power Automate における Copilot AI アシスタント機能を利用すると、必要なフローの種類や、フローで実行したいアクションを、それぞれ説明することができます。Copilot はその説明に基づいて、フローを生成します。その後、フローをご自分のニーズに合わせてカスタマイズできます。また、AI Copilot は、自動化したいタスクを実行するために必要なアクションを生成したり、提案してくれます。このレッスンの後半では、フローとは何か、Power Automate での活用方法を詳しく説明します。その後、会話でのやり取りを通じた AI Copilot のアシスタント機能を通じて、アクションを自分のニーズに合わせてカスタマイズすることができます。この機能は、Power Automate のホーム画面からすぐに利用できます。
 
-## Assignment: manage student assignments and invoices for our startup, using Copilot
+## 課題： スタートアップが Copilot を使用して学生の課題と請求書を管理する
 
-Our startup provides online courses to students. The startup has grown rapidly and is now struggling to keep up with the demand for its courses. The startup has hired you as a Power Platform developer to help them build a low code solution to help them manage their student assignments and invoices. Their solution should be able to help them track and manage student assignments through an app and automate the invoice processing process through a workflow. You have been asked to use Generative AI to develop the solution.
+スタートアップは、学生にオンラインコースを提供しています。スタートアップは急速に成長し、そのコースの需要に対応するのが難しくなっています。スタートアップはあなたをPower Platform 開発者として新たに採用し、学生の課題と請求書を管理するためのローコードソリューションを構築するように依頼しました。そのソリューションは、アプリを通じて学生の課題の追跡と管理を行い、ワークフローを通じて請求処理のプロセスを自動化するのに役立ちます。あなたは、ソリューションを開発するために生成型 AI を使用するように指示されています。
 
-When you are getting started with using Copilot, you can use the [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko) to get started with the prompts. This library contains a list of prompts that you can use to build apps and flows with Copilot. You can also use the prompts in the library to get an idea of how to describe your requirements to Copilot.
+Copilot を使い始める際には、[Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639yoterada) を使用して、プロンプトを使い始められます。このライブラリには Copilot と共に、アプリやフローを作成するためのプロンプトのリストが含まれています。また、ライブラリ内のプロンプトを使用して、Copilot に対して要件をどのように説明するかのアイデアを得ることもできます。
 
-### Build a Student Assignment Tracker App for Our Startup
+### スタートアップによる学生課題追跡アプリの構築
 
-The educators at our startup have been struggling to keep track of student assignments. They have been using a spreadsheet to track the assignments but this has become difficult to manage as the number of students has increased. They have asked you to build an app that will help them track and manage student assignments. The app should enable them to add new assignments, view assignments, update assignments and delete assignments. The app should also enable educators and students to view the assignments that have been graded and those that have not been graded.
+スタートアップの教育者たちは、学生の課題を追跡するのに苦労しています。彼らは課題を追跡するためにスプレッドシートを使用していましたが、学生数が増加するにつれて管理が難しくなってきました。彼らはあなたに、学生の課題追跡と管理を手助けするアプリの作成を依頼しました。アプリは新しい課題の追加、課題の閲覧、課題の更新、課題の削除ができる必要があります。また、アプリは教育者と学生が共に、採点済みの課題と未採点の課題を閲覧できるように実装する必要があります。
 
-You will build the app using Copilot in Power Apps following the steps below:
+下記の手順に従って、Power Apps の Copilot を利用してアプリを構築します：
 
-1. Navigate to the [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) home screen.
+1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) のホーム画面に遷移します。
 
-1. Use the text area on the home screen to describe the app you want to build. For example, ***I want to build an app to track and manage student assignments***. Click on the **Send** button to send the prompt to the AI Copilot.
+1. ホーム画面のテキストエリアに、作成したいアプリを説明します。例えば、***学生の課題を追跡し管理するアプリを作成してください***と入力します。**Send**ボタンをクリックして、プロンプトをAI Copilotに送信します。
 
  ![Describe the app you want to build](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-yoterada)
 
-1. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
+1. AI Copilot は、追跡したいデータを保存するために必要なフィールドとサンプルデータを持つ Dataverse テーブルの作成を提案します。その後、会話でのやり取りを通じ AI Copilot のアシスタント機能を使用して、テーブルを自分のニーズに合わせてカスタマイズできます。
 
-    > **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+    > **重要**：Dataverse は Power Platform の基礎となるデータプラットフォームで、アプリのデータを保存するためのローコード・データ・プラットフォームです。Microsoft Cloud 上にデータを安全に保存する、完全にマネージドなサービスで、Power Platform 環境内でプロビジョニングされます。データ分類、データ系統、細分化されたアクセス制御など、組み込みのデータガバナンス機能が付属しています。Dataverse については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)から詳しく学ぶことができます。  
 
    ![Suggested fields in your new table](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-yoterada)
 
-1. Educators want to send emails to the students who have submitted their assignments to keep them updated on the progress of their assignments. You can use Copilot to add a new field to the table to store the student email. For example, you can use the following prompt to add a new field to the table: ***I want to add a column to store student email***. Click on the **Send** button to send the prompt to the AI Copilot.
+1. 教育者は、課題を提出した学生に進行状況を伝えるためにメールを送りたいと考えています。その為に、Copilotを使用して、学生のメールアドレスを保存する新しいフィールドをテーブルに追加できます。例えば、***学生のメールを保存する列を追加してください***というプロンプトを使用して、新しいフィールドを追加できます。**Send** ボタンをクリックして、プロンプトを AI Copilot に送信します。
 
 ![Adding a new field](../../images/copilot-new-column.png?WT.mc_id=academic-105485-yoterada)
 
-1. The AI Copilot will generate a new field and you can then customize the field to meet your needs.
+1. AI Copilot は新しいフィールドを生成し、その後、フィールドを自身のニーズに合わせてカスタマイズできます。  
 
-1. Once you are done with the table, click on the **Create app** button to create the app.
+1. テーブルが完成した後、**Create app** ボタンをクリックしてアプリを作成します。
 
-1. The AI Copilot will generate a responsive Canvas app based on your description. You can then customize the app to meet your needs.
+1. AI Copilot は記述内容に基づいてレスポンシブな Canvas アプリを生成します。その後、アプリを自分のニーズに合わせてカスタマイズできます。
 
-1. For educators to send emails to students, you can use Copilot to add a new screen to the app. For example, you can use the following prompt to add a new screen to the app: ***I want to add a screen to send emails to students***. Click on the **Send** button to send the prompt to the AI Copilot.
+1. 教育者が学生にメールを送るために、Copilotを使用してアプリに新しい画面を追加することができます。例えば、次のプロンプトを使用してアプリに新しい画面を追加することができます：***学生にメールを送る画面を追加してください***。そして **Send** ボタンをクリックして、プロンプトを AI Copilot に送信します。
 
 ![Adding a new screen via a prompt instruction](../../images/copilot-new-screen.png?WT.mc_id=academic-105485-yoterada)
 
-1. The AI Copilot will generate a new screen and you can then customize the screen to meet your needs.
+1. AI Copilot は新しい画面を生成し、その後、自身のニーズに合わせて画面をカスタマイズすることができます。
 
-1. Once you are done with the app, click on the **Save** button to save the app.
+1. アプリが完成した後、**Save** ボタンをクリックしてアプリを保存します。
 
-1. To share the app with the educators, click on the **Share** button and then click on the **Share** button again. You can then share the app with the educators by entering their email addresses.
+1. 教育者とアプリを共有するには、**Share** ボタンをクリックし、再度 **Share** ボタンをクリックします。その後、教育者のメールアドレスを入力してアプリを共有することができます。
 
-> **Your homework**: The app you just built is a good start but can be improved. With the email feature, educators can only send emails to students manually by having to type their emails. Can you use Copilot to build an automation that will enable educators to send emails to students automatically when they submit their assignments? Your hint is with the right prompt you can use Copilot in Power Automate to build this.
+> **課題**：あなたが作ったアプリは良い出発点ですが、まだ改善の余地があります。現在のメール機能は、教育者が学生のメールアドレスを手動で入力してメールを送るしかできません。課題を提出したときに、自動的に学生にメールを送ることができる自動化機能を Copilot を使用して構築することはできますか？ヒントは、適切なプロンプトを使用すれば、Power Automate の Copilot を使用して構築することができます。
 
-### Build an Invoices Information Table for Our Startup
+### スタートアップによる請求書情報テーブルを作成
 
-The finance team of our startup has been struggling to keep track of invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a table that will help them store, track and manage the information of the invoices they received. The table should be used to build an automation that will extract all the invoice information and store it in the table. The table should also enable the finance team to view the invoices that have been paid and those that have not been paid.
+スタートアップの財務部門は、請求書の追跡に苦労しています。彼らはスプレッドシートを使って請求書を追跡していましたが、請求書の数が増えるにつれて、管理が難しくなってきました。彼らはあなたに、受け取った請求書の情報を保存し、追跡したり、管理を手助けするアプリの作成を依頼しました。請求書情報を扱うテーブルは、すべての請求書情報を抽出し、それをテーブルに保存するまでの処理を自動化できるように実装します。またテーブルは、財務部門が支払い済みの請求書と未払いの請求書を、閲覧できるように実装します。
 
-The Power Platform has an underlying data platform called Dataverse that enables you to store the data for your apps and solutions. Dataverse provides a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more [about Dataverse here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+Power Platform には、アプリやソリューションのデータを保存するための基盤となるデータプラットフォーム、Dataverse が存在します。Dataverse はアプリのデータを保存するための、ローコード・データ・プラットフォームを提供し、Microsoft Cloud 上にデータを安全に保存するフルマネージドサービスです。これは Power Platform 環境内でプロビジョニングされ、データ分類、データの流れ、細かいアクセス制御などのデータ・ガバナンス機能も組み込まれています。Dataverse について詳しくは[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)をご覧ください。
 
-Why should we use Dataverse for our startup? The standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you store different types of data, similar to how you might use multiple worksheets in a single Excel workbook. You can use tables to store data that is specific to your organization or business need. Some of the benefits our startup will get from using Dataverse include but are not limited to:
+なぜスタートアップで Dataverse を使うべきなのでしょうか？Dataverse 内の標準テーブルとカスタムテーブルは、クラウド・ベースの安全なストレージ・オプションを提供します。テーブルを使うと、一つの Excel ワークブック内で複数のワークシートを使うのと同じように、さまざまな種類のデータを保存できます。組織やビジネスニーズに特化したデータをテーブルに保存することが可能です。スタートアップが Dataverse を使うことで得られる利点には下記のような物があります。
 
-- **Easy to manage**: Both the metadata and data are stored in the cloud, so you don't have to worry about the details of how they are stored or managed. You can focus on building your apps and solutions.
+- **管理が容易**：メタデータとデータはクラウドに保存されるため、その保存や管理の詳細について心配する必要はありません。アプリやソリューションの構築に集中できます。
 
-- **Secure**: Dataverse provides a secure and cloud-based storage option for your data. You can control who has access to the data in your tables and how they can access it using role based security.
+- **安全**：Dataverse はクラウドベースの安全なストレージオプションを提供します。ロールベースのセキュリティを使用し、テーブル内のデータへのアクセスを誰が、どのように行うかを制御できます。
 
-- **Rich metadata**: Data types and relationships are used directly within Power Apps
+- **豊富なメタデータ**：データ型とリレーションシップは Power Apps 内で直接利用されます。
 
-- **Logic and validation**: You can use business rules, calculated fields, and validation rules to enforce business logic and maintain data accuracy.
+- **ロジックと検証**：ビジネスルール、計算フィールド、検証ルールを使い、ビジネスロジックを適用し、データの正当性を維持できます。
 
-Now that you know what Dataverse is and why you should use it, let's look at how you can use Copilot to create a table in Dataverse to meet the requirements of our finance team.
+Dataverse とは何か、そしてその利点を理解したところで、Copilot を使って Dataverse でテーブルを作成し、財務チームの要件を満たすテーブル作成方法を見ていきましょう。
 
->**Note** : You will use this table in the next section to build an automation that will extract all the invoice information and store it in the table.
+>**注**：次のセクションでは、このテーブルを使って、すべての請求書情報を抽出し、そこからテーブルに保存するまでの自動化処理を構築します。
 
-To create a table in Dataverse using Copilot, follow the steps below:
+Copilotを　使って Dataverse でテーブルを作成する手順は下記の通りです：
 
-1. Navigate to the [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) home screen.
+1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) のホーム画面に遷移します。
 
-2. On the left navigation bar, select on **Tables** and then click on **Describe the new Table**.
+**Describe the new Table**.
+2. 左側のナビゲーションバーで「テーブル」を選択し、「新しいテーブルの説明」をクリックします。
 
 ![Select new table](../../images/describe-new-table.png?WT.mc_id=academic-105485-yoterada)
 
-1. On the **Describe the new Table** screen, use the text area to describe the table you want to create. For example, ***I want to create a table to store invoice information***. Click on the **Send** button to send the prompt to the AI Copilot.
+1. 「新しいテーブルの説明」画面で、テキストエリアを使って作成したいテーブルを記述します。例えば、「請求書情報を保存するテーブルを作成してください」と入力します。「送信」ボタンをクリックして、この指示を AI Copilot に送ります。
 
 ![Describe the table](../../images/copilot-chat-prompt-dataverse.png?WT.mc_id=academic-105485-yoterada)
 
-1. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
+1. AI Copilot は、追跡したいデータを保存するために必要なフィールドといくつかのサンプルデータを含む Dataverse テーブルを提案します。その後、会話形式のステップを通じて AI Copilot アシスタント機能を使って、自分のニーズに合わせてテーブルをカスタマイズできます。
 
 ![Suggested Dataverse table](../../images/copilot-dataverse-table.png?WT.mc_id=academic-105485-yoterada)
 
-1. The finance team wants to send an email to the supplier to update them with the current status of their invoice. You can use Copilot to add a new field to the table to store the supplier email. For example, you can use the following prompt to add a new field to the table: ***I want to add a column to store supplier email***. Click on the **Send** button to send the prompt to the AI Copilot.
+1. 財務チームは、サプライヤーにメールを送り、請求書の現在のステータスを更新したいと考えています。Copilot を使って、サプライヤーのメールを保存する新しいフィールドをテーブルに追加できます。例えば、「サプライヤーのメールを保存する列を追加してください」という指示を入力します。「送信」ボタンをクリックして、この指示を AI Copilot に送ります。
 
-1. The AI Copilot will generate a new field and you can then customize the field to meet your needs.
+1. AI Copilot は新しいフィールドを生成し、そのフィールドを自分のニーズに合わせてカスタマイズできます。
 
-1. Once you are done with the table, click on the **Create** button to create the table.
+1. テーブルの作成が完了したら、「作成」ボタンをクリックしてテーブルを作成します。
 
-## AI Models in Power Platform with AI Builder
+## AI Builder を使った Power Platform の AI モデル
 
-AI Builder is a low-code AI capability available in Power Platform that enables you to use AI Models to help you to automate processes and predict outcomes. With AI Builder you can bring AI to your apps and flows that connect to your data in Dataverse or in various cloud data sources, such as SharePoint, OneDrive or Azure.
+AI Builder は Power Platform で利用可能なローコード AI 機能で、プロセスの自動化や結果の予測を支援する AI モデルを使用できます。AI Builder を使えば、Dataverse や SharePoint、OneDrive、Azure などのさまざまなクラウド・データソースに接続するアプリやフローに AI を導入できます。
 
-## Prebuilt AI Models vs Custom AI Models
+## 事前構築済み AI モデルとカスタム AI モデル
 
-AI Builder provides two types of AI Models: Prebuilt AI Models and Custom AI Models. Prebuilt AI Models are ready-to-use AI Models that are trained by Microsoft and available in Power Platform. These help you add intelligence to your apps and flows without having to gather data and then build, train and publish your own models. You can use these models to automate processes and predict outcomes.
+AI Builder は、事前構築済み AI モデルとカスタム AI モデルの 2 種類の AI モデルを提供します。事前構築済み AI モデルは、Microsoft がトレーニングしたすぐに使用できる AI モデルで、Power Platform で利用可能です。これらのモデルを使うと、データを収集して独自のモデルを構築、トレーニング、公開することなく、アプリやフローにインテリジェンスな機能を追加できます。これらのモデルを使ってプロセスを自動化したり、結果を予測したりできます。
 
-Some of the Prebuilt AI Models available in Power Platform include:
+Power Platform で利用可能な事前構築済み AI モデルには以下のようなものがあります：
 
-- **Key Phrase Extraction**: This model extracts key phrases from text.
-- **Language Detection**: This model detects the language of a text.
-- **Sentiment Analysis**: This model detects positive, negative, neutral, or mixed sentiment in text.
-- **Business Card Reader**: This model extracts information from business cards.
-- **Text Recognition**: This model extracts text from images.
-- **Object Detection**: This model detects and extracts objects from images.
-- **Form Processing**: This model extracts information from forms.
-- **Invoice Processing**: This model extracts information from invoices.
+- **キーフレーズ抽出**：このモデルはテキストからキーフレーズを抽出します。
+- **言語検出**：このモデルはテキストの言語を検出します。
+- **感情分析**：このモデルはテキスト内の肯定的、否定的、中立的、または混合した感情を検出します。
+- **名刺リーダー**：このモデルは名刺から情報を抽出します。
+- **テキスト認識**：このモデルは画像からテキストを抽出します。
+- **物体検出**：このモデルは画像から物体を検出して抽出します。
+- **フォーム処理**：このモデルはフォームから情報を抽出します。
+- **請求書処理**：このモデルは請求書から情報を抽出します。
 
-With Custom AI Models you can bring your own model into AI Builder so that it can function like any AI Builder custom model, allowing you to train the model using your own data. You can use these models to automate processes and predict outcomes in both Power Apps and Power Automate. When using your own model there are limitations that apply. Read more on these [limitations](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-yoterada).
+カスタム AI モデルを使うと、自分のモデルを AI Builder に取り込んで、AI Builder のカスタムモデルと同様に機能させ、自分のデータを使ってモデルをトレーニングできます。これらのモデルを使って、Power Apps と Power Automate の両方でプロセスを自動化し、結果を予測できます。自分のモデルを使用する場合、適用される制限があります。これらの制限について詳しくは[こちら](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-yoterada)をご覧ください。
 
 ![AI builder models](../../images/ai-builder-models.png?WT.mc_id=academic-105485-yoterada)
 
-## Assignment #2 - Build an Invoice Processing Flow for Our Startup
+## 課題#2 - スタートアップによる請求書処理フローの構築
 
-The finance team has been struggling to process invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a workflow that will help them process invoices using AI. The workflow should enable them to extract information from invoices and store the information in a Dataverse table. The workflow should also enable them to send an email to the finance team with the extracted information.
+財務チームは請求書の処理に苦労しています。彼らはスプレッドシートを使って請求書を追跡していましたが、請求書の数が増えるにつれて管理が難しくなってきました。そこで、AI を使って請求書を処理するワークフローの構築を依頼されました。このワークフローでは、請求書から情報を抽出し、その情報を Dataverse テーブルに保存することが求められています。また、抽出した情報を財務チームにメールで送信できるようにする必要もあります。
 
-Now that you know what AI Builder is and why you should use it, let's look at how you can use the Invoice Processing AI Model in AI Builder, that we covered earlier on, to build a workflow that will help the finance team process invoices.
+AI Builder とは何か、なぜそれを使うべきなのかを理解したところで、先ほど説明した AI Builder の請求書処理 AI モデルを使って、財務チームが請求書を処理するのに役立つワークフローを構築する方法を見ていきましょう。
 
-To build a workflow that will help the finance team process invoices using the Invoice Processing AI Model in AI Builder, follow the steps below:
+AI Builder の請求書処理 AI モデルを使って、財務チームが請求書を処理するのに役立つワークフローを構築するには、下記の手順を実行します：
 
-1. Navigate to the [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-yoterada) home screen.
+1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-yoterada) のホーム画面に遷移します。
 
-2. Use the text area on the home screen to describe the workflow you want to build. For example, ***Process an invoice when it arrives in my mailbox***. Click on the **Send** button to send the prompt to the AI Copilot.
+2. ホーム画面のテキストエリアを使って、構築したいワークフローを記述します。例えば、「メールボックスに請求書が届いたら処理してください」と入力します。「送信」ボタンをクリックして、この指示を AI Copilot に送ります。
 
     ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-yoterada)
 
-3. The AI Copilot will suggest the actions you need to perform the task you want to automate. You can click on the **Next** button to go through the next steps.
+3. AI Copilot は、自動化したいタスクを実行するために必要なアクションを提案します。「次へ」ボタンをクリックすると、次のステップに進むことができます。
 
-4. On the next step, Power Automate will prompt you to set up the connections required for the flow. Once you are done, click on the **Create flow** button to create the flow.
+4. 次のステップでは、Power Automate がフローに必要な接続の設定を求めます。設定が完了したら、「フローの作成」ボタンをクリックしてフローを作成します。
 
-5. The AI Copilot will generate a flow and you can then customize the flow to meet your needs.
+5. AI Copilot はフローを生成し、その後、フローを自分のニーズに合わせてカスタマイズできます。
 
-6. Update the trigger of the flow and set the **Folder** to the folder where the invoices will be stored. For example, you can set the folder to **Inbox**. Click on **Show advanced options** and set the **Only with Attachments** to **Yes**. This will ensure that the flow only runs when an email with an attachment is received in the folder.
+6. フローのトリガーを更新し、請求書が保存されるフォルダーを指定します。例えば、「受信トレイ」を指定できます。「詳細オプションの表示」をクリックし、「添付ファイルのみ」を「はい」に設定します。これにより、添付ファイル付きのメールがフォルダーに届いたときだけフローが実行されます。
 
-7. Remove the following actions from the flow: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** and **Compose 4** because you will not be using them.
+7. 「HTMLからテキストへ」、「Compose」、「Compose 2」、「Compose 3」、「Compose 4」のアクションは使用しないため、フローから削除します。
 
-8. Remove the **Condition** action from the flow because you will not be using it. It should look like the following screenshot:
+8. 「条件」アクションも使用しないため、フローから削除します。次のスクリーンショットのようになります。
 
     ![power automate, remove actions](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-yoterada)
 
-9. Click on the **Add an action** button and search for **Dataverse**. Select the **Add a new row** action.
+9. 「アクションの追加」ボタンをクリックし、「Dataverse」を検索します。「新しい行の追加」アクションを選択します。
 
-10. On the **Extract Information from invoices** action, update the **Invoice File** to point to the **Attachment Content** from the email. This will ensure that the flow extracts information from the invoice attachment.
+10. 「請求書から情報を抽出」アクションで、請求書ファイルをメールの「添付ファイルの内容」を指すように更新します。これにより、フローが添付ファイルの請求書から情報を抽出するようになります。
 
-11. Select the **Table** you created earlier on. For example, you can select the **Invoice Information** table. Choose the dynamic content from the previous action to populate the following fields:
+11. 前に作成した「テーブル」を選択します。例えば、「請求書情報」テーブルを選択できます。前のアクションの動的コンテンツを選択して、次のフィールドに入力します：
 
     - ID
-    - Amount
-    - Date
-    - Name
-    - Status - Set the **Status** to **Pending**.
-    - Supplier Email - Use the **From** dynamic content from the **When a new email arrives** trigger.
+    - 金額
+    - 日付
+    - 名前
+    - ステータス - 「ステータス」を「保留中」に設定します。
+    - サプライヤーメール - 「新しいメールが届いたとき」にトリガーを呼び出し「送信者」を動的コンテンツとして使用します。
 
     ![power automate add row](../../images/powerautomate-add-row.png?WT.mc_id=academic-105485-yoterada)
 
-12. Once you are done with the flow, click on the **Save** button to save the flow. You can then test the flow by sending an email with an invoice to the folder you specified in the trigger.
+12. フローの設定が完了したら、「保存」ボタンをクリックしてフローを保存します。その後、トリガーで指定したフォルダーに請求書を含むメールを送信することで、フローをテストできます。
 
-> **Your homework**: The flow you just built is a good start, now you need to think of how you can build an automation that will enable our finance team to send an email to the supplier to update them with the current status of their invoice. Your hint: the flow must run when the status of the invoice changes.
+> **課題**：今作成したフローは良いスタート地点ですが、まだ改善ポイントがあります。次に、財務部門がサプライヤーにメールを送信し、請求書の現在の状況を更新できるような自動化処理を実装する方法を考える必要があります。ヒント：フローは、請求書の状況が変更されたときに実行する必要があります。
 
-## Use a Text Generation AI Model in Power Automate
+## Power Automate　でテキスト生成　AI　モデルを使用
 
-The Create Text with GPT AI Model in AI Builder enables you to generate text based on a prompt and is powered by the Microsoft Azure OpenAI Service. With this capability, you can incorporate GPT (Generative Pre-Trained Transformer) technology into your apps and flows to build a variety of automated flows and insightful applications.
+AI Builder の GPT モデルを使った「テキストの生成」機能は、プロンプトに基づいてテキストを生成するもので、Microsoft Azure OpenAI Service で提供されています。この機能を使えば、GPT（Generative Pre-Trained Transformer）テクノロジーをアプリやフローに組み込み、さまざまな自動化フローや知見に満ちたアプリケーションを構築できます。
 
-GPT models undergo extensive training on vast amounts of data, enabling them to produce text that closely resembles human language when provided with a prompt. When integrated with workflow automation, AI models like GPT can be harnessed to streamline and automate a wide range of tasks.
+GPT モデルは、膨大な量のデータに対して広範囲なトレーニングを行い、プロンプトが与えられると、人間の言葉による表現によく似たテキストを生成できます。ワークフローの自動化と統合することで、GPT などの AI モデルを活用して、さまざまなタスクを合理化し、自動化できます。
 
-For example, you can build flows to automatically generate text for a variety of use cases, such as: drafts of emails, product descriptions, and more. You can also use the model to generate text for a variety of apps, such as chatbots and customer service apps that enable customer service agents to respond effectively and efficiently to customer inquiries.
+例えば、メールの下書きや商品説明を自動生成するフローを作れます。また、このモデルを使えば、チャットボットや顧客サービス・アプリで、顧客の問い合わせに効率的に対応するテキストも生成できます。
 
 ![create a prompt](../../images/create-prompt-gpt.png?WT.mc_id=academic-105485-yoterada)
 
-To learn how to use this AI Model in Power Automate, go through the [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module.
+Power Automate でこの AI モデルを使用する方法については、[AI Builder と GPT を使ってインテリジェンスな機能を追加する](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-yoterada)をご参照ください。
 
-## Great Work! Continue Your Learning
+## お疲れ様でした!　学習を続ける
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) to continue leveling up your Generative AI knowledge!
+このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-Head over to Lesson 11 where we will look at how to [integrate Generative AI with Function Calling](../../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)!
+次のレッスン 11 では、[Function Calling を利用し外部アプリケーションとの統合](../../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
