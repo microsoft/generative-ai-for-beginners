@@ -188,4 +188,4 @@ Microsoft の責任ある AI に対する取り組みは、AI の開発と利用
 
 このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-レッスン 8 では、[Vector Databases を利用した検索アプリの構築](../../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法を見ていきます。
+レッスン 8 では、[検索アプリケーションの構築](../../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法を見ていきます。
