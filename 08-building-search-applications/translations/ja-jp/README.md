@@ -162,6 +162,4 @@ GitHub Codespaces で[ソリューションのノートブック](../../solution
 
 このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-Head over to Lesson 9 where we will look at how to [build image generation applications](../../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)!
-
 次のレッスン 9 では、[画像生成アプリケーションの構築](../../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法について学びます！
