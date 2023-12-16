@@ -1,6 +1,6 @@
 # AI アプリケーションの UX 設計
 
-[![Designing UX for AI Applications](./images/12-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/bO7h2_hOhR0?WT.mc_id=academic-105485-yoterada)
+[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/bO7h2_hOhR0?WT.mc_id=academic-105485-yoterada)
 
 > *(上の画像をクリックすると、このレッスンのビデオが表示されます)*
 
@@ -49,7 +49,7 @@
 
 快適であるとは、アプリケーションを使うことが楽しいということを意味します。魅力的なユーザー・エクスペリエンスは、利用者に好印象を与え、アプリケーションの再利用を促し、ビジネスの収益を増加させることができます。
 
-![image illustrating UX considerations in AI](./images/uxinai.png?WT.mc_id=academic-105485-yoterada)
+![image illustrating UX considerations in AI](../../images/uxinai.png?WT.mc_id=academic-105485-yoterada)
 
 全ての問題を AI で解決できるわけではありません。AI は、手動の作業を自動化したり、ユーザー体験をパーソナライズしたりすることで、ユーザー体験を向上させる役割を果たします。
 
@@ -63,25 +63,25 @@ AI アプリケーションを設計する際には、利用者との信頼関�
 
 AI が将来の世代への知識を伝えるなどの意思決定を支援する際、教師や保護者は AI がどのように意思決定を行うのかを理解することは重要です。これが説明可能性という概念で、AI アプリケーションがどのように決定を下すのかを理解することを指します。説明可能性を考慮した設計には、AI アプリケーションが何をできるのかの具体的な例を追加することが含まれます。例えば、「AI 教師を使い始める」ではなく、「AI を使ってノートを要約し、復習を容易にする」といった表現を使うことができます。
 
-![an app landing page with clear illustration of explainability in AI applications](./images/explanability-in-ai.png?WT.mc_id=academic-105485-yoterada)
+![an app landing page with clear illustration of explainability in AI applications](../../images/explanability-in-ai.png?WT.mc_id=academic-105485-yoterada)
 
 もう一つの例は、AI が利用者のデータや個人情報をどのように利用するかという点です。例えば、「学生」という属性を持つ利用者は、その属性に基づいて制約があるかもしれません。AI は質問の答えを直接教えることはできないかもしれませんが、利用者が問題解決の方法を自分で考える手助けをすることは可能です。
 
-![AI replying to questions based on persona](./images/solving-questions.png?WT.mc_id=academic-105485-yoterada)
+![AI replying to questions based on persona](../../images/solving-questions.png?WT.mc_id=academic-105485-yoterada)
 
 説明可能性のもう一つの重要な要素は、説明の簡素化です。学生や教師は AI の専門家ではないかもしれません。そこで、アプリケーションで何ができて何ができないのかについて説明する際は、簡単な内容で理解しやすい形にするべきです。
 
-![simplified explanations on AI capabilities](./images/simplified-explanations.png?WT.mc_id=academic-105485-yoterada)
+![simplified explanations on AI capabilities](../../images/simplified-explanations.png?WT.mc_id=academic-105485-yoterada)
 
 ### コントロール
 
 生成型 AI は、利用者と AI が協力する関係を作り出します。例えば、利用者は異なる結果を得るためにプロンプトによる指示を変更することができます。さらに、一度結果が出力されたら、利用者はその結果を修正することができ、自分がコントロールしていると感じることができます。例えば、Bing を使うときには、形式やトーン、長さに基づいてプロンプトによる指示をカスタマイズすることができます。そして、出力に変更を加えて、以下のように出力結果を修正することも可能です。
 
-![Bing search results with options to modify the prompt and output](./images/bing1.png?WT.mc_id=academic-105485-yoterada "Bing search results with options to modify the prompt and output")
+![Bing search results with options to modify the prompt and output](../../images/bing1.png?WT.mc_id=academic-105485-yoterada "Bing search results with options to modify the prompt and output")
 
 Bing には、利用者がアプリケーションを自分で操作できる機能として、AI が使用するデータの選択（オプトイン）や選択解除（オプトアウト）できる機能があります。例えば、学校のアプリケーションでは、学生は自分のノートや教師の教材を復習資料として利用したいと思うかもしれません。
 
-![Bing search results with options to modify the prompt and output](./images/bing2.png?WT.mc_id=academic-105485-yoterada "Bing search results with options to modify the prompt and output")
+![Bing search results with options to modify the prompt and output](../../images/bing2.png?WT.mc_id=academic-105485-yoterada "Bing search results with options to modify the prompt and output")
 
 > AI アプリケーションを設計する際、利用者が AI の能力について非現実的な期待を持ちすぎないようにするためには、意図的な設計が重要です。これを実現する一つの方法は、プロンプトによる指示と結果の間にある種の隔たりを作り出すことです。これにより、利用者に対して、相手が AI であって人間ではないことを思い出させることができます。
 
@@ -93,7 +93,7 @@ Bing には、利用者がアプリケーションを自分で操作できる機
 
 これに対応するもう一つの方法は、システムの能力と限界をはっきりと伝えることです。ユーザーが AI の能力を超える要求をしてエラーが発生した場合でも、それに対して適切に対処する必要があります。具体的な方法は下記の通りです。
 
-![Giving feedback and handling errors](./images/feedback-loops.png?WT.mc_id=academic-105485-yoterada)
+![Giving feedback and handling errors](../../images/feedback-loops.png?WT.mc_id=academic-105485-yoterada)
 
 システム・エラーは、利用者が AI の対応範囲を超える情報を問い合わせたり、要約を作成できる質問数やテーマの数に制限があるアプリケーションでよく見られます。例えば、歴史や数学など限定的なテーマのデータで学習させた AI アプリケーションは、地理学に関する質問に対応できないかもしれません。これを解消するために、AI システムは「申し訳ありませんが、当社の製品は以下のテーマのデータで学習していますので、あなたの質問には答えられません」といった回答を返すことができます。
 
