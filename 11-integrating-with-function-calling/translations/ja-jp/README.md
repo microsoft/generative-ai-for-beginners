@@ -447,4 +447,4 @@ Azure Open AI Function Calling の学習を続けるために、以下のこと�
 
 Head over to Lesson 12 where we will look at how to !
 
-次のレッスン 12 では、[AI アプリケーション用の UX デザイン](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
+次のレッスン 12 では、[AI アプリケーション用の UX デザイン](../../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
