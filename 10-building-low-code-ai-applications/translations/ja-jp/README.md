@@ -242,4 +242,4 @@ Power Automate でこの AI モデルを使用する方法については、[AI 
 
 このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-次のレッスン 11 では、[Function Calling を利用し外部アプリケーションとの統合](../../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
+次のレッスン 11 では、[Function Calling との統合](../../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！

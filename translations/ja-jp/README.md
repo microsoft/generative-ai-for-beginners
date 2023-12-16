@@ -69,7 +69,7 @@
 | 08 | Vector Databases を利用した[検索アプリケーションの構築](../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code**: セマンティック検索とキーワード検索のの違いについて学ぶ。テキストの埋め込みについて学び、検索への適用方法を理解する | 埋め込み技術を利用したデータ検索アプリケーションを構築する | 
 | 09 | [画像生成アプリケーションの構築](../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** アプリケーション開発で画像生成が役立つ理由 | 画像を生成するアプリケーションを構築する | 
 | 10 | [ローコード AI アプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Low Code:** Power Platform における生成系 AI の概要 | 教育系スタートアップ企業がローコードで学生の課題追跡アプリを構築する |
-| 11 | [Function Calling を利用し外部アプリケーションとの統合](../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** Function Calling とアプリケーションにおける用途 | 外部 API からデータを取得するため Function Calling を設定する |
+| 11 | [Function Calling との統合](../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** Function Calling とアプリケーションにおける用途 | 外部 API からデータを取得するため Function Calling を設定する |
 | 12 | [AI アプリケーション用の UX デザイン](../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念:** 透明性と信頼性を備えたAIアプリケーションの設計 | 生成系 AI アプリケーションの開発時に UX デザインの原則を適用する |
 | xx | [学習の継続](../../13-continued-learning/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | 各授業の内容をさらに進めるための参考リンク! | 生成系 AI の技術をマスターするために | 
 
