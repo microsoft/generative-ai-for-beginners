@@ -1,135 +1,135 @@
-# Additional resources
+# 追加のリソース  
 
-Here are links to other great resources to continue your learning and building with Generative AI.
+以下は、生成型AIの学習と構築を続けるための他の素晴らしいリソースへのリンクです。
 
-Are we missing a great resource? Let us know by submitting a PR!
+素晴らしいリソースが欠けている場合は、PRを提出してお知らせください！
 
-## 🧠 One Collection to Rule Them ALl  
+## 🧠 すべてを制覇する一コレクション
 
-After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) to continue leveling up your Generative AI knowledge!
+このコースを終了したら、[生成型AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をチェックし、生成型AIの知識をさらに深めてください！
 
-## Lesson 1  - Introduction to Generative AI and LLMs
+## レッスン1 - 生成系 AI と大規模言語モデルの紹介
 
-🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works/?WT.mc_id=academic-105485-yoterada)
+🔗 [GPTモデルの仕組み:誰でも理解できる](https://bea.stollnitz.com/blog/how-gpt-works/?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Fundamentals of Generative AI](https://learn.microsoft.com/training/modules/fundamentals-generative-ai?&WT.mc_id=academic-105485-yoterada)
+🔗 [生成型AIの基礎](https://learn.microsoft.com/training/modules/fundamentals-generative-ai?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [How GPT models work: accessible to everyone](https://bea.stollnitz.com/blog/how-gpt-works?WT.mc_id=academic-105485-yoterada)
+🔗 [GPTモデルの仕組み:誰でも理解できる](https://bea.stollnitz.com/blog/how-gpt-works?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Generative AI: Implication and Applications for Education](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [生成型AI:教育への影響と応用](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 2 - Exploring and Comparing Different LLM types
+## レッスン2 - 様々なLLMの調査と比較
 
-🔗 [How to use Open Source foundation models curated by Azure Machine Learning (preview) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/azure/machine-learning/how-to-use-foundation-models?WT.mc_id=academic-105485-yoterada)
+🔗 [Azure Machine Learningがキュレートするオープンソースの基盤モデルの使用方法 (プレビュー) - Azure Machine Learning | Microsoft Learn](https://learn.microsoft.com/azure/machine-learning/how-to-use-foundation-models?WT.mc_id=academic-105485-yoterada)
 
-🔗 [The Large Language Model (LLM) Index | Sapling](https://sapling.ai/llm/index?WT.mc_id=academic-105485-yoterada)
+🔗 [大規模言語モデル(LLM)インデックス | Sapling](https://sapling.ai/llm/index?WT.mc_id=academic-105485-yoterada)
 
-🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052?WT.mc_id=academic-105485-yoterada)
+🔗 [[2304.04052] デコーダのみかエンコーダ-デコーダか？言語モデルを正則化されたエンコーダ-デコーダとして解釈する (arxiv.org)](https://arxiv.org/abs/2304.04052?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Retrieval Augmented Generation using Azure Machine Learning prompt flow](https://learn.microsoft.com/azure/machine-learning/concept-retrieval-augmented-generation?WT.mc_id=academic-105485-yoterada)
+🔗 [Azure Machine Learningのプロンプトフローを使用した情報検索強化生成](https://learn.microsoft.com/azure/machine-learning/concept-retrieval-augmented-generation?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [LLMのグラウンディング](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [The Large Language Model (LLM) Index | Sapling](https://sapling.ai/llm/index?wt.mc_id=github_S-1231_webpage_reactor )
+🔗 [大規模言語モデル(LLM)インデックス | Sapling](https://sapling.ai/llm/index?wt.mc_id=github_S-1231_webpage_reactor )
 
-🔗 [[2304.04052] Decoder-Only or Encoder-Decoder? Interpreting Language Model as a Regularized Encoder-Decoder (arxiv.org)](https://arxiv.org/abs/2304.04052?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [[2304.04052] デコーダのみかエンコーダ-デコーダか？言語モデルを正則化されたエンコーダ-デコーダとして解釈する (arxiv.org)](https://arxiv.org/abs/2304.04052?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 3 - Using Generative AI Responsibly
+## レッスン3 - 責任ある生成系 AI の利用
 
-🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-yoterada)
+🔗 [責任ある生成型AIの基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-yoterada)
+🔗 [LLMのグラウンディング](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Fundamentals of Responsible Generative AI](https://learn.microsoft.com/training/modules/responsible-generative-ai?WT.mc_id=academic-105485-yoterada)
+🔗 [責任ある生成型AIの基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Being Responsible with Generative AI](https://learn.microsoft.com/shows/ai-show/being-responsible-with-generative-ai?WT.mc_id=academic-105485-yoterada)
+🔗 [生成型AIの責任ある使用](https://learn.microsoft.com/shows/ai-show/being-responsible-with-generative-ai?WT.mc_id=academic-105485-yoterada)
 
-🔗 [GPT-4 System Card](https://cdn.openai.com/papers/gpt-4-system-card.pdf?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [GPT-4システムカード](https://cdn.openai.com/papers/gpt-4-system-card.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 4 - Understanding Prompt Engineering Fundamentals
+## レッスン4 - プロンプト・エンジニアリングの基礎
 
-🔗 [Getting Started with Azure OpenAI Services](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-yoterada)
+🔗 [Azure OpenAIサービスの開始](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-yoterada)
 
-[Apply Prompt Engineering with Azure OpenAI services](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-yoterada)
+[Azure OpenAIサービスでのプロンプトエンジニアリングの適用](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-yoterada)
 
-[Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-yoterada)
+[プロンプトエンジニアリングの紹介](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering/?WT.mc_id=academic-105485-yoterada)
+🔗 [プロンプトエンジニアリングの概要](https://learn.microsoft.com/semantic-kernel/prompt-engineering/?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/education-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?wt.mc_id=github_S-1231_webpage_reactor )
+🔗 [教育用Azure OpenAIプロンプト](https://techcommunity.microsoft.com/t5/education-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?wt.mc_id=github_S-1231_webpage_reactor )
 
-🔗 [Introduction to Prompt Engineering](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=academic-105485-yoterada)
+🔗 [プロンプトエンジニアリングの紹介](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Prompt Engineering Overview](https://learn.microsoft.com/semantic-kernel/prompt-engineering?WT.mc_id=academic-105485-yoterada)
+🔗 [プロンプトエンジニアリングの概要](https://learn.microsoft.com/semantic-kernel/prompt-engineering?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Azure OpenAI for Education Prompts](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?WT.mc_id=academic-105485-yoterada)
+🔗 [教育用Azure OpenAIプロンプト](https://techcommunity.microsoft.com/t5/e1.ucation-blog/azure-openai-for-education-prompts-ai-and-a-guide-from-ethan-and/ba-p/3938259?WT.mc_id=academic-105485-yoterada)
 
-## Lesson 5  - Creating Advanced Prompts
+## レッスン5 - 高度なプロンプトの作成
 
-🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=academic-105485-yoterada)
+🔗 [プロンプトエンジニアリングの技術](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=academic-105485-yoterada)
 
-## Lesson 6 - Building Text Generation Applications
+## レッスン6 - テキスト生成アプリケーションの構築
 
-🔗 [Prompt Engineering Techniques](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions&WT.mc_id=academic-105485-yoterada)
+🔗 [プロンプトエンジニアリングの技術](https://learn.microsoft.com/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions&WT.mc_id=academic-105485-yoterada)
 
-## Lesson 7 - Building Chat Applications
+## レッスン7 - チャットアプリケーションの構築
 
-🔗 [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?WT.mc_id=academic-105485-yoterada)
+🔗 [大規模言語モデル(LLM)向けのシステムメッセージフレームワークとテンプレートの推奨事項](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Learn how to work with the GPT-35-Turbo and GPT-4 models](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?&WT.mc_id=academic-105485-yoterada)
+🔗 [GPT-35-TurboとGPT-4モデルの使用方法を学ぶ](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [Fine-Tuning language models from human preferences](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [人間の好みから言語モデルを微調整する](https://arxiv.org/pdf/1909.08593.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [Build natural language solutions with Azure OpenAI Services](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-yoterada)
+🔗 [Azure OpenAIサービスで自然言語ソリューションを構築する](https://learn.microsoft.com/training/modules/build-language-solution-azure-openai/?WT.mc_id=academic-105485-yoterada)
 
+🔗 [OpenAIの微調整](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
 
-🔗 [OpenAI Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning/when-to-use-fine-tuning?wt.mc_id=github_S-1231_webpage_reactor )
-
-## Lesson 8 - Building Search Applications
+## レッスン8 - 検索アプリケーションの構築
 
 🔗 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-yoterada)
 
-🔗 [OpenAI Embedding API](https://platform.openai.com/docs/api-reference/embeddings?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [OpenAI埋め込みAPI](https://platform.openai.com/docs/api-reference/embeddings?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [コサイン類似度](https://en.wikipedia.org/wiki/Cosine_similarity?wt.mc_id=github_S-1231_webpage_reactor)
 
-## Lesson 9 - Building Image Generation Applications
+## レッスン9 - 画像生成アプリケーションの構築
 
-🔗  [Generate Images with Azure OpenAI Service](https://learn.microsoft.com/training/modules/generate-images-azure-openai?WT.mc_id=academic-105485-yoterada)
+🔗[Azure OpenAIサービスで画像を生成する](https://learn.microsoft.com/training/modules/generate-images-azure-openai?WT.mc_id=academic-105485-yoterada)
 
-🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [OpenAIのDALL-EとCLIP 101:簡単な紹介](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [OpenAIのCLIP論文](https://arxiv.org/pdf/2103.00020.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [OpenAI's DALL-E and CLIP 101: A Brief Introduction](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-yoterada)
+🔗 [OpenAIのDALL-EとCLIP 101:簡単な紹介](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-yoterada)
 
-🔗 [OpenAI's CLIP paper](https://arxiv.org/pdf/2103.00020.pdf?WT.mc_id=academic-105485-yoterada)
+🔗 [OpenAIのCLIP論文](https://arxiv.org/pdf/2103.00020.pdf?WT.mc_id=academic-105485-yoterada)
 
-## Lesson 10 - Building Low Code AI Applications
-🔗 [Create bots with Microsoft Copilot Studio](https://learn.microsoft.com/training/paths/work-power-virtual-agents/?&WT.mc_id=academic-105485-yoterada)
+## レッスン10 - ローコード AI アプリケーションの構築
 
-🔗 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-yoterada)
+🔗 [Microsoft Copilot Studioでボットを作成する](https://learn.microsoft.com/training/paths/work-power-virtual-agents/?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [Get Started with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder?WT.mc_id=academic-105485-yoterada)
+🔗 [AI BuilderとGPTを使用してインテリジェンスを追加する](https://learn.microsoft.com/training/modules/ai-builder-text-generation?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [Detect Objects with AI Builder](https://learn.microsoft.com/training/modules/get-started-with-ai-builder-object-detection?WT.mc_id=academic-105485-yoterada)
+🔗 [AI Builderの開始](https://learn.microsoft.com/training/modules/get-started-with-ai-builder?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Build a canvas app solution with Copilot in Power Apps](https://learn.microsoft.com/training/modules/build-canvas-app-real-estate-power-apps-copilot/?WT.mc_id=academic-105485-yoterada)
+🔗 [AI Builderでオブジェクトを検出する](https://learn.microsoft.com/training/modules/get-started-with-ai-builder-object-detection?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?wt.mc_id=github_S-1231_webpage_reactor&WT.mc_id=academic-109639-somelezediko)
+🔗 [Power AppsでCopilotを使用してキャンバスアプリソリューションを構築する](https://learn.microsoft.com/training/modules/build-canvas-app-real-estate-power-apps-copilot/?WT.mc_id=academic-105485-yoterada)
 
-## Lesson 11- Integrating Applications with Function Calling
+🔗 [Power Platform Copilotプロンプトライブラリ](https://pnp.github.io/powerplatform-prompts/?wt.mc_id=github_S-1231_webpage_reactor&WT.mc_id=academic-109639-somelezediko)
 
-🔗 [OpenAI Functions Documentation](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-yoterada)
+## レッスン11- Function Calling との統合
 
-## Lesson 12 - Designing UX for AI Applications
+🔗 [OpenAI関数のドキュメンテーション](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-yoterada)
 
-🔗 [Best practices for building collaborative UX with Human-AI partnership](https://learn.microsoft.com/community/content/best-practices-ai-ux?WT.mc_id=academic-105485-yoterada)
+## レッスン12 - AI アプリケーション用の UX デザイン
 
-🔗  [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.linkedin.com/learning/ux-for-ai-design-practices-for-ai-developers?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [人間とAIのパートナーシップによる協調的UXを構築するためのベストプラクティス](https://learn.microsoft.com/community/content/best-practices-ai-ux?WT.mc_id=academic-105485-yoterada)
 
-🔗 [UX for AI: Design Practices for AI Developers](https://www.youtube.com/watch?wt.mc_id=github_S-1231_webpage_reactor&v=Lkbkd_hkDLY)
+🔗[人間中心のAI体験の設計:人工知能のための適用UX設計 by Akshay Kpre](https://www.linkedin.com/learning/ux-for-ai-design-practices-for-ai-developers?wt.mc_id=github_S-1231_webpage_reactor)
 
-🔗 [New skills in the age of AI by John Maeda](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [AI開発者のためのUX for AI:設計実践](https://www.youtube.com/watch?wt.mc_id=github_S-1231_webpage_reactor&v=Lkbkd_hkDLY)
 
-🔗  [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?WT.mc_id=academic-105485-yoterada)
+🔗 [AI時代の新しいスキル by John Maeda](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?wt.mc_id=github_S-1231_webpage_reactor)
+
+🔗[人間中心のAI体験の設計:人工知能のための適用UX設計 by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?WT.mc_id=academic-105485-yoterada)
