@@ -34,18 +34,18 @@
 
 ## 🧠 さらに知識を深めたいですか？
 
-このコースを終了後、さらに生成系 AI に関する知識を深めたい場合は、[生成AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をぜひご覧ください！
+このコースを終了後、さらに生成系 AI に関する知識を深めたい場合は、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
 
-##  🚀  起業家ですか、それとも実現したいアイデアがありますか？
+##  🚀  起業家ですか、それとも実現したいアイデアはありますか？
 
-その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada)にご登録いただくと、**OpenAI クレジットを無料で**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI サービスで OpenAI のモデルを利用**することができます。
+その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**OpenAI クレジットを無料で**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI サービスで OpenAI のモデルを利用**することができます。
 
 ##  🙏 ご協力いただける方を募集しています
 
 貢献して頂ける方法をいくつかご紹介します：
 
-- 文章の誤字脱字やコードに間違いを発見したら、[問題(Issue)で指摘する](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-yoterada)か[プルリクエストを送っていただく](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-yoterada)  
-- 私たちに、新しいレッスンや演習アイデアなどの提案をお送りいただき、コースの改善点を教えてください。
+- 文章の誤字脱字やコードに間違いを発見したら、[問題(Issue)で指摘する](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-yoterada)か[プルリクエストを送ってください](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-yoterada)  
+- 私たちに、新しいレッスンや演習アイデアなどの提案をお送りいただき、コースの改善点を教えてください
 
 ## 📂 各レッスンに含まれる内容
 

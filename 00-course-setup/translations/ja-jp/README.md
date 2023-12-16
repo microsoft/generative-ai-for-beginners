@@ -18,7 +18,7 @@
 
 codespaces は、上記でフォークしたリポジトリの `Code` を選択し、**Codespaces** オプションを選択することで作成できます。  
 
-### 3. APIキーの保管
+### 3. API　キーの保管
 
 アプリケーションを構築する際、API キーを安全に管理することはとても重要です。公開リポジトリにこうした機密情報をコミットすると、不正利用による想定外のコストや問題が発生する可能性があります。そこで、作業中のコードに直接 API キーを保存しないようにしてください。  
 
@@ -39,9 +39,9 @@ cd generative-ai-for-beginners
 
 ### miniconda　のインストール　（オプションの手順）
 
-**[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-yoterada)** のインストールをお勧めします - これは、異なる Python **仮想環境**で `conda` パッケージ・マネージャをサポートする、比較的軽量なインストーラーです。`conda` を利用すると、異なる Python のバージョンやパッケージを簡単にインストールでき、切り替えるもできます。さらに、`pip` 経由では入手できないパッケージのインストールもできます。  
+**[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-yoterada)** のインストールをお勧めします - これは、異なる Python **仮想環境**で `conda` パッケージ・マネージャをサポートする、比較的軽量なインストーラーです。`conda` を利用すると、異なる Python のバージョンやパッケージを簡単にインストールでき、切り替えるもできます。さらに、`pip` 経由で入手できないパッケージのインストールもできます。  
 
-miniconda をインストールした後、リポジトリをクローンしてください（まだ行っていない場合）。そして、このレッスン・コース用の仮想環境を作成してください：  
+miniconda をインストールした後、リポジトリをクローンしてください（まだ行っていない場合）。そして、このレッスン用の仮想環境を作成してください：  
 
 下記の手順を実行する前に、まず *environment.yml* ファイルが存在していることをご確認ください。*environment.yml* ファイルは、conda　環境の構築に必要な依存関係を定義した設定ファイルで、下記のような内容を記述します：  
 
@@ -64,21 +64,21 @@ conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
 
-仮に何らかの問題が発生した場合は、ユーザ・ガイドの[conda 環境](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-yoterada)をご参照ください。  
+仮に何らかの問題が発生した場合は、ユーザ・ガイドの [conda 環境](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-yoterada)をご参照ください。  
 
-### Python　の拡張機能をインストールした　Visual Studio Code　の使用
+### Python の拡張機能をインストールした Visual Studio Code の使用
 
-本カリキュラムを進めていく上で最もお勧めの方法は、[Python　の拡張機能を](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)インストールした [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) を利用することです。
+本カリキュラムを進めていく上で最もお勧めの方法は、[Python の拡張機能を](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)インストールした [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) のご利用です。
 
-> **ご注意**: クローンした後、VS Code でディレクトリを開くと、自動的に Python 拡張機能のインストールが提案されます。上記で説明したように　miniconda　もインストールする必要があります。
+> **ご注意**: クローンした後、VS Code でディレクトリを開くと、自動的に Python 拡張機能のインストールが提案されます。上記で説明したように miniconda もインストールする必要があります。
 
 > **ご注意**: ローカルにインストールした Python を利用したい場合、VS Code がコンテナでリポジトリを再度開くことを提案した際、コンテナでの起動を拒否してください。
   
-### ブラウザで　Jupyter　の使用
+### ブラウザで Jupyter の使用
 
 ご自身のコンピュータの Web ブラウザから直接、Jupyter 環境を使用することもできます。実際クラシックな Jupyter と Jupyter Hub は、自動補完、コード・ハイライトなどの機能を備えた非常に便利な開発環境を提供します。  
 
-Jupyter　をローカルで起動するには、レッスン・コースのディレクトリに移動し、下記のコマンドを実行します：  
+Jupyter をローカルで起動するには、レッスン・コースのディレクトリに移動し、下記のコマンドを実行します：  
 
 ```bash
 jupyter notebook
@@ -94,18 +94,17 @@ jupyterhub
 
 ### コンテナでの実行
 
-ローカル環境に Python をインストールする代わりに、コンテナ上で実行することもできます。リポジトリ中にコンテナ環境を構築するために必要な設定を含む `.devcontainer` フォルダが存在し、VS Code は起動時にコンテナで実行することを提案します。これは事前に Docker のインストールが必要で、より複雑になるため経験豊富なユーザーに推奨します。
+ローカル環境に Python をインストールする代わりに、コンテナ上で実行することもできます。このプロジェクトを fork するとレポジトリ内に、コンテナ環境を構築するために必要な設定を含む `.devcontainer` フォルダが存在します。そこで、VS Code は起動時にコンテナで実行することを提案します。コンテナで実行する為には、事前に Docker のインストールが必要で、少し複雑になるため経験豊富なユーザーにお勧めします。
 
-GitHub codespaces を使用する際、API キーを安全に管理する最良の方法は、Codespace Secrets を使用することです。[codespaces のシークレットを管理](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-yoterada)する方法については、このガイドをご参照ください。  
+GitHub codespaces を使用して API キーを安全に管理するためには、Codespace Secrets の利用が最適です。[codespaces のシークレットを管理](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-yoterada)する方法については、このガイドをご参照ください。  
 
 ## レッスンと技術要件
 
-The course has 6 concept lessons and 6 coding lessons.
 このコースは、6 つの概念レッスンと 6 つのコーディング・レッスンがあります。
 
 コーディング・レッスンでは、Azure OpenAI サービスを使用します。コードを実行するには、Azure OpenAI サービスへのアクセスと API キーが必要です。[このアプリケーション・フォームを完了](https://go.microsoft.com/fwlink/?linkid=2222006&clcid=0x409?WT.mc_id=academic-105485-yoterada)することで Azure OpenAI へアクセス申請できます。  
 
-アプリケーション・フォームの処理を待つ間、何もできないわけではなく、各レッスン中に、`README.md` ファイルとサンプル・コードを含んでいますので、レッスンの内容をご確認いただけます。
+アプリケーション・フォーム申請処理の完了を待つ間、何もできないわけではなく、各レッスン中に、`README.md` ファイルとサンプル・コードが含まれていますので、申請処理の完了前でもレッスンの内容をご確認いただけます。
 
 ## Azure OpenAI サービスをはじめて使用する場合  
 
