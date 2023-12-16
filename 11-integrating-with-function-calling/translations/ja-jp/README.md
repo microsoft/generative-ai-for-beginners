@@ -12,10 +12,6 @@
 
 このレッスンでは、以下の内容を取り扱います：
 
-- Explain what is function calling and its use cases.
-- Creating a function call using Azure OpenAI.
-- How to integrate a function call into an application.
-
 - 関数呼び出し (function calling) とは何か、その使用例について説明します。
 - Azure OpenAI を使用して関数呼び出しを作成します。
 - 関数呼び出しをアプリケーションに統合する方法を学びます。
@@ -24,8 +20,8 @@
 
 このレッスンを終えると、下記ができるようになります：
 
-- 関数呼び出しを使用する目的を説明できます。
-- Azure Open AI Service を使用して関数呼び出しをセットアップできます。
+- 関数呼び出しの使用理由を説明できます。
+- Azure Open AI Service を使用して関数呼び出しアプリを構築できます。
 - アプリケーションのユースケースに適した効果的な関数呼び出しを設計できます。
 
 ## シナリオ：関数を用いてチャットボットを改善する
@@ -146,13 +142,13 @@
    json_response1
    ```
 
-   応答1：
+   応答 1：
 
    ```json
    { "name": "Emily Johnson", "major": "コンピューターサイエンス", "school": "Duke University", "grades": "3.7", "club": "チェス・クラブ" }
    ```
 
-   Response 2:
+   応答 2:
 
    ```json
    { "name": "Michael Lee", "major": "コンピューターサイエンス", "school": "Stanford University", "grades": "3.8 GPA", "club": "ロボティクス・クラブ" }
@@ -164,7 +160,7 @@
 
    それでは、出力フォーマットの問題をどのようにして解決すればよいのでしょうか。関数呼び出しを使用することで、構造化されたデータを確実に受け取ることができます。関数呼び出しを使用する場合、LLM は実際には特定の関数を呼び出したり実行したりしません。代わりに、LLM は構造化された回答を作成します。その後、これらの構造化された回答を使用して、アプリケーションで実行する関数を決定します。
 
-![function flow](./images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
+![function flow](../../images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
 
    関数から返された結果を取得し、それを LLM に送り返すことができます。その後、LLM は自然言語を使用して利用者の問い合わせに回答します。
 
@@ -186,7 +182,7 @@
 2. **読み取り**：モデルからの回答を読み取り、アクションを実行します。つまり、関数を実行したり、API 呼び出しを行ったりします。  
 3. **再呼び出し**：関数からの応答を用いて、Chat Completions API を再度呼び出し、その情報を使用してユーザーへの回答を作成します。
 
-![LLM Flow](./images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
+![LLM Flow](../../images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 ### ステップ1 - メッセージの作成
 
