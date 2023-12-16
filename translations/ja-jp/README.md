@@ -60,14 +60,14 @@
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | [コース紹介 - コースの受講方法](../../00-course-setup/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | テクノロジーのセットアップとコースの枠組み | レッスンが成功したと分かるゴール設定| 
 | 01 | [生成系 AI と大規模言語モデルの紹介](../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) |**概念**: 生成系 AI と現在のテクノロジー環境|  生成系 AI とは何か、そして大規模言語モデル（LLM）がどのように動くかを理解する。                   |
-| 02 | [様々なLLMの調査と比較](../../02-exploring-and-comparing-different-llms/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念**: さまざまな大規模言語モデルのテスト、反復、および比較 | ユースケースに適した AI モデルを選択 | 
+| 02 | [様々なLLMの調査と比較](../../02-exploring-and-comparing-different-llms/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念**: さまざまな大規模言語モデルのテスト、反復、および比較 | ユースケースに適した AI モデルを選択 |
 | 03 | [責任ある生成系 AI の利用](../../03-using-generative-ai-responsibly/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)| **概念**: ファウンデーションモデルの限界と AI に伴うリスクを理解する  | 責任ある生成系 AI アプリケーションの開発方法を学ぶ |
 | 04 | [プロンプト・エンジニアリングの基礎](../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** ハンズオン形式でプロンプト・エンジニアリングのベストプラクティスを学ぶ |  プロンプトの構造と使用法の理解 |  
 | 05 | [高度なプロンプトの作成](../../05-advanced-prompts/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** プロンプトに様々なテクニックを取り入れ、プロンプト・エンジニアリングの知識をより深める | 出力結果を改善するため、プロンプト・エンジニアリングのテクニックを取り入れる | 
 | 06 | [テキスト生成アプリケーションの構築](../../06-text-generation-apps/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** コード：Azure OpenAI を使用してテキスト生成アプリを構築する | トークンと温度を効率的に使用しモデルの出力を変化させる方法を理解する |
 | 07 | [チャットアプリケーションの構築](../../07-building-chat-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code**: チャット アプリケーションを効率的に構築および統合するための手法。 | AI を利用したチャット・アプリケーションの品質を効果的に監視し維持するための重要なキーメトリクスと注意点を把握する | 
 | 08 | Vector Databases を利用した[検索アプリケーションの構築](../../08-building-search-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code**: セマンティック検索とキーワード検索のの違いについて学ぶ。テキストの埋め込みについて学び、検索への適用方法を理解する | 埋め込み技術を利用したデータ検索アプリケーションを構築する | 
-| 09 | [画像生成アプリケーションの構築](../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** アプリケーション開発で画像生成が役立つ理由 | 画像を生成するアプリケーションを構築する | 
+| 09 | [画像生成アプリケーションの構築](../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** アプリケーション開発で画像生成が役立つ理由 | 画像を生成するアプリケーションを構築する |
 | 10 | [ローコード AI アプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Low Code:** Power Platform における生成系 AI の概要 | 教育系スタートアップ企業がローコードで学生の課題追跡アプリを構築する |
 | 11 | [Function Calling との統合](../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** Function Calling とアプリケーションにおける用途 | 外部 API からデータを取得するため Function Calling を設定する |
 | 12 | [AI アプリケーション用の UX デザイン](../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念:** 透明性と信頼性を備えたAIアプリケーションの設計 | 生成系 AI アプリケーションの開発時に UX デザインの原則を適用する |
