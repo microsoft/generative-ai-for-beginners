@@ -135,6 +135,4 @@ The course has 6 concept lessons and 6 coding lessons.
 
 ## それでは、始めましょう
 
-Now that you have completed the needed steps to complete this course, let's get started by getting an [introduction to Generative AI and LLMs].
-
 このレッスンを修了するために必要な手順をすべて完了したので、[生成系 AI と大規模言語モデルの紹介](../../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) から始めましょう。

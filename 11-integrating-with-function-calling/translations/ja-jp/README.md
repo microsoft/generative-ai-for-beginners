@@ -443,7 +443,7 @@ Azure Open AI Function Calling の学習を続けるために、以下のこと�
 
 ## お疲れ様でした!　学習を続ける
 
-このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 Head over to Lesson 12 where we will look at how to !
 

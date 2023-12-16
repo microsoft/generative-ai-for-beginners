@@ -160,6 +160,6 @@ GitHub Codespaces で[ソリューションのノートブック](../../solution
 
 ## お疲れ様でした!　学習を続ける
 
-このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 次のレッスン 9 では、[画像生成アプリケーションの構築](../../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法について学びます！

@@ -6,7 +6,7 @@
 
 ## 🧠 すべてを制覇する一コレクション
 
-このコースを終了したら、[生成型AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をチェックし、生成型AIの知識をさらに深めてください！
+このコースを終了したら、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)をチェックし、生成型AIの知識をさらに深めてください！
 
 ## レッスン1 - 生成系 AI と大規模言語モデルの紹介
 

@@ -634,6 +634,6 @@ if __name__ == '__main__':
 
 ## お疲れ様でした!学習を続ける
 
-このレッスン修了後、[Generative AI ラーニング・コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 レッスン 6 では、プロンプト エンジニアリングの知識を応用して[テキスト生成アプリケーションの構築](../../../06-text-generation-apps/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)を行います。
