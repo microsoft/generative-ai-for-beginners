@@ -160,7 +160,7 @@
 
    それでは、出力フォーマットの問題をどのようにして解決すればよいのでしょうか。関数呼び出しを使用することで、構造化されたデータを確実に受け取ることができます。関数呼び出しを使用する場合、LLM は実際には特定の関数を呼び出したり実行したりしません。代わりに、LLM は構造化された回答を作成します。その後、これらの構造化された回答を使用して、アプリケーションで実行する関数を決定します。
 
-![function flow](../../images/Function-Flow.png?WT.mc_id=academic-105485-koreyst)
+![function flow](../../images/Function-Flow.png?WT.mc_id=academic-105485-yoterada)
 
    関数から返された結果を取得し、それを LLM に送り返すことができます。その後、LLM は自然言語を使用して利用者の問い合わせに回答します。
 
@@ -182,7 +182,7 @@
 2. **読み取り**：モデルからの回答を読み取り、アクションを実行します。つまり、関数を実行したり、API 呼び出しを行ったりします。  
 3. **再呼び出し**：関数からの応答を用いて、Chat Completions API を再度呼び出し、その情報を使用してユーザーへの回答を作成します。
 
-![LLM Flow](../../images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
+![LLM Flow](../../images/LLM-Flow.png?WT.mc_id=academic-105485-yoterada)
 
 ### ステップ1 - メッセージの作成
 
@@ -427,7 +427,7 @@ LLM からフォーマットされた応答をテストした後、これをア�
    ```python
    {
      "role": "assistant",
-     "content": "Azureを学ぶ初心者の学生向けにいくつかの良いコースを見つけました:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nリンクをクリックしてコースにアクセスできます。"
+     "content": "Azureを学ぶ初心者の学生向けにいくつかの良いコースを見つけました:\n\n1. [暗号の概念についての説明] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [TensorFlow を使用したオーディオ分類の概要](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Azure Data Studio を使って Azure SQL Database でパフォーマンスに優れたデータ モデルを設計する](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Azure 用の Microsoft クラウド導入フレームワークの概要](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Rust 開発環境を設定する](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nリンクをクリックしてコースにアクセスできます。"
    }
    ```
 
@@ -439,7 +439,7 @@ Azure Open AI Function Calling の学習を続けるために、以下のこと�
 - 学習者の母国語を聞くなど、学習者からより多くの情報を取得するための別の関数呼び出しを作成する。
 - 関数呼び出しや API 呼び出しが、適切なコースを返さない場合のエラー処理を実装する。
 
-ヒント: これらのデータを、どこでどのように利用できるかを確認するために、[Learn API リファレンス ドキュメント](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) をご参照ください。
+ヒント: これらのデータを、どこでどのように利用できるかを確認するために、[Learn API リファレンス ドキュメント](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-yoterada) をご参照ください。
 
 ## お疲れ様でした!　学習を続ける
 
@@ -447,4 +447,4 @@ Azure Open AI Function Calling の学習を続けるために、以下のこと�
 
 Head over to Lesson 12 where we will look at how to !
 
-次のレッスン 12 では、[AI アプリケーション用の UX デザイン](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+次のレッスン 12 では、[AI アプリケーション用の UX デザイン](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
