@@ -245,11 +245,11 @@ functions = [
 ]
 ```
 
-下記に、各関数のインスタンスについて詳しく説明します。
+下記に、関数について詳しく説明します。
 
 - `name` - 呼び出したい関数名
 - `description` - 関数がどのように動作するかの説明。ここは具体的で明確であることが重要
-- `parameters` - モデルが回答で生成する値と形式のリスト。`parameters` 配列はアイテムで構成され、各アイテムには次のプロパティを含む
+- `parameters` - モデルによって回答で生成する値とフォーマットのリスト。`parameters` 配列として構成し、次のプロパティを含む
    1. `type` - プロパティのデータ型
    1. `properties` - 回答に使用する特定の値のリスト
       1. `name` - フォーマットされた回答で使用するプロパティ名。例えば、`product`
@@ -301,19 +301,19 @@ messages= [ {"role": "user", "content": "初心者の学生が Azure を学ぶ�
 
 ## アプリケーションへ関数呼び出しの統合
 
-LLM からフォーマットされた応答をテストした後、これをアプリケーションに統合できます。
+LLM からフォーマットされた応答を取得した後、これをアプリケーションに統合します。
 
 ### フローの管理
 
 アプリケーションに統合するためには、下記の手順で行います。
 
-1. まず、Open AI サービスを呼び出し、メッセージを `response_message` という変数に格納します。
+1. まず、Open AI サービスを呼び出し、メッセージを `response_message` という変数に代入します。
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. 次に、Microsoft Learn API を呼び出してコースの一覧を取得する関数を定義します。
+1. 次に、Microsoft Learn のカタログ API を呼び出してコースの一覧を取得する関数を定義します。
 
    ```python
    import requests
@@ -397,21 +397,16 @@ LLM からフォーマットされた応答をテストした後、これをア�
 
    **Output**
 
-   ```text
-   推奨される関数呼び出し:
+   ```output
    {
      "name": "search_courses",
-     "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
+     "arguments": "{\n  \"role\": \"学生\",\n  \"product\": \"Azure\",\n  \"level\": \"初心者\"\n}"
    }
 
    関数呼び出しの出力:
-   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en-
-   us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL
-   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url':
-   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the
-   Rust development environment', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
+   [{'title': '暗号の概念についての説明', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
+   WT.mc_id=api_CatalogApi'}, {'title': 'TensorFlow を使用したオーディオ分類の概要', 'url': 'https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Azure Data Studio を使って Azure SQL Database でパフォーマンスに優れたデータ モデルを設計する', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi'}, {'title': 'Azure 用の Microsoft クラウド導入フレームワークの概要', 'url':
+   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Rust 開発環境を設定する', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
    <class 'str'>
    ```
 
