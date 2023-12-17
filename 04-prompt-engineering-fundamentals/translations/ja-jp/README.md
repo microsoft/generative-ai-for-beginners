@@ -46,15 +46,14 @@ _生成系 AI_ は、ユーザーからの依頼に対して、テキスト、�
 
 これらは、ほんの一例です。教育専門家から厳選された、オープンソースのプロンプト・ライブラリ「[Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-yoterada)」を確認し、さらに広い視野で可能性を探ってみてください！ _サンドボックスでそれらのプロンプトを試しに実行したり、OpenAI Playground で試してどのような結果が出力されるか試してください！_  
 
-
 <!--
 LESSON TEMPLATE:
-This unit should cover core concept #1.
-Reinforce the concept with examples and references.
+このユニットでは、基本となる下記の CONCEPT #1 をカバーするべきです。
+例や参照を用いてその概念を強化します。
 
 CONCEPT #1:
-Prompt Engineering.
-Define it and explain why it is needed.
+プロンプトエンジニアリング
+それが何であり、なぜ必要なのかを定義し説明します。
 -->
 
 ## プロンプト・エンジニアリングとは何ですか？
@@ -168,12 +167,12 @@ GitHub Copilotは「AI ペア・プログラマー」として機能し、開発
 
 <!--
 LESSON TEMPLATE:
-This unit should cover core concept #2.
-Reinforce the concept with examples and references.
+このユニットでは、下記の基本となる CONCEPT #2 を取り扱うべきです。
+例や参照を用いてその概念を強化します。
 
 CONCEPT #2:
-Prompt Design.
-Illustrated with examples.
+プロンプトデザイン
+例を用いて説明します
 -->
 
 ## プロンプトの組み立て
@@ -294,13 +293,13 @@ response = openai.ChatCompletion.create(
 
 <!--
 LESSON TEMPLATE:
-This unit should cover core concept #1.
-Reinforce the concept with examples and references.
+このユニットでは、下記の基本となる CONCEPT #3 を取り扱うべきです。
+例や参照を用いてその概念を強化します。
 
 CONCEPT #3:
-Prompt Engineering Techniques.
-What are some basic techniques for prompt engineering?
-Illustrate it with some exercises.
+プロンプト・エンジニアリングのテクニック
+プロンプト・エンジニアリングの基本的なテクニックとは何ですか？
+いくつかの練習問題を通じて紹介してください。
 -->
 
 ## プロンプト作成のベストプラクティス
@@ -336,13 +335,13 @@ Illustrate it with some exercises.
 
 <!--
 LESSON TEMPLATE:
-This unit should provide a code challenge if applicable
+このユニットは、可能であればコードチャレンジを提供するべきです。
 
 CHALLENGE:
-Link to a Jupyter Notebook with only the code comments in the instructions (code sections are empty).
+指示中には、コードコメントのみが含まれている Jupyter ノートブックへのリンクを提供（コード部分は空）。
 
 SOLUTION:
-Link to a copy of that Notebook with the prompts filled in and run, showing what one example could be.
+実行可能なプロンプトが記入された、ノートブックのコピーへのリンクです。これは一つの例を示しています。
 -->
 
 ## 課題  
@@ -371,7 +370,7 @@ _このため、このレッスンにはコードの解答例は含まれてい�
 
  <!--
 LESSON TEMPLATE:
-Wrap the section with a summary and resources for self-guided learning.
+このセクションをまとめと、自己学習のためのリソースを紹介して締めくくります
 -->
 
 ## 知識チェック

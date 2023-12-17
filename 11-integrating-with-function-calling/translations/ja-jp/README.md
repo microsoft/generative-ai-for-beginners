@@ -327,7 +327,6 @@ LLM からフォーマットされた応答をテストした後、これをア�
 
 いま、`functions` 変数とそれに対応する Python 関数を作成しましたが、実際の Python 関数を呼び出すために、これら 2 つをマッピングした内容を、LLM に指示するにはどうすればよいでしょうか？
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` is part of it and call the pointed out function. Here's how you can make the mentioned check below:
 1. Python 関数を呼び出す必要があるかどうかを確認するためには、LLM からの応答を調べ、 `function_call` が含まれているかを確認し、指摘された関数を呼び出す必要があります。以下のようにしてチェックを行います。
 
    ```python
