@@ -404,9 +404,28 @@ LLM からフォーマットされた応答を取得した後、これをアプ�
    }
 
    関数呼び出しの出力:
-   [{'title': '暗号の概念についての説明', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'TensorFlow を使用したオーディオ分類の概要', 'url': 'https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Azure Data Studio を使って Azure SQL Database でパフォーマンスに優れたデータ モデルを設計する', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi'}, {'title': 'Azure 用の Microsoft クラウド導入フレームワークの概要', 'url':
-   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Rust 開発環境を設定する', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
+    [
+      {
+        "title": "暗号の概念についての説明",
+        "url": "https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi"
+      },
+      {
+        "title": "TensorFlow を使用したオーディオ分類の概要",
+        "url": "https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi"
+      },
+      {
+        "title": "Azure Data Studio を使って Azure SQL Database でパフォーマンスに優れたデータ モデルを設計する",
+        "url": "https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi"
+      },
+      {
+        "title": "Azure 用の Microsoft クラウド導入フレームワークの概要",
+        "url": "https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi"
+      },
+      {
+        "title": "Rust 開発環境を設定する",
+        "url": "https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi"
+      }
+    ]
    <class 'str'>
    ```
 
