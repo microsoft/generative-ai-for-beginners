@@ -95,29 +95,48 @@ AI の歴史を振り返ると、初期の AI のプロトタイプは、タイ�
 
     1. 記事、書籍、製品レビューなどの要約と、非構造化データから知見（インサイト）の抽出
     
+    訳者追記：
+    - Can you please summarize the following for me ?
+    - 以下の内容を要約していただけますか？
+    
     ![Example of summarization](../../images/summarization-example.png?WT.mc_id=academic-105485-yoterada)
     
     <br>
     
     1. 記事、エッセイ、課題などのアイデアとデザインの作成
+
+    訳者追記：
+    - Please write an assignment for high school students including four open-ended questions about Louis XIV and his court. 
+    - 高校生用の課題を作成します。ルイ14世と彼の宮廷について、自由に回答できる 4 つの質問を作成してください。
     
     ![Example of creative writing](../../images/creative-writing-example.png?WT.mc_id=academic-105485-yoterada)
     
     <br>
 
 * エージェントに対して会話形式で尋ねる**質問**
-  
+
+    訳者追記：
+    - Who is Louis XIV and why he is an important historical character?
+    - ルイ14世はどういう人で、なぜ彼は歴史的に重要な人物なのですか？
 ![Example of conversation](../../images/conversation-example.png?WT.mc_id=academic-105485-yoterada)
 
 <br>
 
 * 続きを書く**文章の一節**で、実際には文章の執筆支援を要求しています
-   
+
+    訳者追記：
+    - Louis XIV is an important historical character because
+    - ルイ14世は重要な歴史的人物である理由は
+
 ![Example of text completion](../../images/text-completion-example.png?WT.mc_id=academic-105485-yoterada)
 
 <br>
 
-**プログラムコード**の一部と、そのコードに関する説明や記述を求める要望、または特定の作業を行うコードの生成を依頼するコメント
+* プログラムコード**の一部と、そのコードに関する説明や記述を求める要望、または特定の作業を行うコードの生成を依頼するコメント
+
+    訳者追記：
+    - A Python function to sum two numbers a and b
+    - 二つの数値aとbを合計するPython関数
 
 ![Coding example](../../images/coding-example.png?WT.mc_id=academic-105485-yoterada)
 
