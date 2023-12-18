@@ -36,7 +36,7 @@
 
 このコースを終了後、さらに生成系 AI に関する知識を深めたい場合は、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
 
-##  🚀  起業家ですか、それとも実現したいアイデアはありますか？
+##  🚀  スタートアップですか、それとも実現したいアイデアはありますか？
 
 その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**OpenAI クレジットを無料で**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI サービスで OpenAI のモデルを利用**することができます。
 
