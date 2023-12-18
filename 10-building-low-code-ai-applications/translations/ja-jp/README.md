@@ -10,7 +10,7 @@
 
 ローコード開発プラットフォームの利用により、従来の開発者や開発未経験者でもアプリやソリューションの作成がより簡単になりました。ローコード開発プラットフォームを使うと、ほとんどコードを書かずに、あるいは全く書かずに、アプリやソリューションを作れます。これは、コンポーネントをドラッグ・アンド・ドロップで配置できるビジュアル開発環境を利用することで実現します。これにより、アプリやソリューションをより速く、リソースも少なく作れます。このレッスンでは、ローコードの使い方と、Power Platform を使った AI によるローコード開発の方法について詳しく説明します。
 
-Power Platform は、直感的なローコードまたはノーコードの開発環境を通じて、組織のチーム・メンバーが自分達自身でソリューションを作れるような機会を提供します。この環境は、ソリューション作成のプロセスを大幅に簡素化します。Power Platform を使えば、ソリューションを数ヶ月や数年かけて作るのではなく、数日や数週間で作れるようになります。Power Platform は、Power Apps、Power Automate、Power BI、Power Pages、Power Virtual Agents の 5 つの主要製品から構成されています。
+Power Platform は、直感的なローコードまたはノーコードの開発環境を通じて、組織のチーム・メンバーが自分達自身でソリューションを作れるような機会を提供します。この環境は、ソリューション作成のプロセスを大幅に簡素化します。Power Platform を使えば、ソリューションを数ヶ月や数年かけて作るのではなく、数日や数週間で作れるようになります。Power Platform は、Power Apps、Power Automate、Power BI、Copilot Studio の 5 つの主要製品から構成されています。
 
 このレッスンでは、下記の内容を取り扱います：
 
@@ -87,7 +87,7 @@ Copilot を使い始める際には、[Power Platform Copilot Prompt Library](ht
 
 1. AI Copilot は、追跡したいデータを保存するために必要なフィールドとサンプルデータを持つ Dataverse テーブルの作成を提案します。その後、会話でのやり取りを通じ AI Copilot のアシスタント機能を使用して、テーブルを自分のニーズに合わせてカスタマイズできます。
 
-    > **重要**：Dataverse は Power Platform の基礎となるデータプラットフォームで、アプリのデータを保存するためのローコード・データ・プラットフォームです。Microsoft Cloud 上にデータを安全に保存する、完全にマネージドなサービスで、Power Platform 環境内でプロビジョニングされます。データ分類、データ系統、細分化されたアクセス制御など、組み込みのデータガバナンス機能が付属しています。Dataverse については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)から詳しく学ぶことができます。  
+    > **重要**：Dataverse は Power Platform の基盤となるデータプラットフォームで、アプリのデータを保存するためのローコード・データ・プラットフォームです。Microsoft Cloud 上にデータを安全に保存する、完全にマネージドなサービスで、Power Platform 環境内でプロビジョニングされます。データ分類、データ系統、きめ細やかなアクセス制御など、組み込みのデータガバナンス機能が付属しています。Dataverse については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)から詳しく学ぶことができます。  
 
    ![Suggested fields in your new table](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-yoterada)
 
@@ -127,13 +127,13 @@ Power Platform には、アプリやソリューションのデータを保存�
 
 - **豊富なメタデータ**：データ型とリレーションシップは Power Apps 内で直接利用されます。
 
-- **ロジックと検証**：ビジネスルール、計算フィールド、検証ルールを使い、ビジネスロジックを適用し、データの正当性を維持できます。
+- **ロジックと検証**：ビジネスルール、計算列、検証ルールを使い、ビジネスロジックを適用し、データの正当性を維持できます。
 
 Dataverse とは何か、そしてその利点を理解したところで、Copilot を使って Dataverse でテーブルを作成し、財務チームの要件を満たすテーブル作成方法を見ていきましょう。
 
 >**注**：次のセクションでは、このテーブルを使って、すべての請求書情報を抽出し、そこからテーブルに保存するまでの自動化処理を構築します。
 
-Copilotを　使って Dataverse でテーブルを作成する手順は下記の通りです：
+Copilotを使って Dataverse でテーブルを作成する手順は下記の通りです：
 
 1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) のホーム画面に遷移します。
 
@@ -171,7 +171,7 @@ Power Platform で利用可能な事前構築済み AI モデルには以下の�
 - **名刺リーダー**：このモデルは名刺から情報を抽出します。
 - **テキスト認識**：このモデルは画像からテキストを抽出します。
 - **物体検出**：このモデルは画像から物体を検出して抽出します。
-- **フォーム処理**：このモデルはフォームから情報を抽出します。
+- **文書処理**：このモデルはフォームから情報を抽出します。
 - **請求書処理**：このモデルは請求書から情報を抽出します。
 
 カスタム AI モデルを使うと、自分のモデルを AI Builder に取り込んで、AI Builder のカスタムモデルと同様に機能させ、自分のデータを使ってモデルをトレーニングできます。これらのモデルを使って、Power Apps と Power Automate の両方でプロセスを自動化し、結果を予測できます。自分のモデルを使用する場合、適用に関して制限があります。これらの制限について、詳しくは[こちら](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-yoterada)をご覧ください。
