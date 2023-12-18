@@ -16,7 +16,7 @@ Power Platform は、直感的なローコードまたはノーコードの開�
 
 - Power Platform における生成系AIの紹介
 - Copilot の紹介と使い方
-- 生成系 AI を使って Power Platform でアプリとフローを作る方法
+- 生成 AI を使って Power Platform でアプリとフローを作る方法
 - AI Builder を使って Power Platform の AI モデルを理解する方法
 
 ## 学習目標
@@ -239,6 +239,6 @@ Power Automate でこの AI モデルを使用する方法については、[AI 
 
 ## お疲れ様でした!　学習を続ける
 
-このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 次のレッスン 11 では、[Function Calling との統合](../../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！

@@ -1,7 +1,7 @@
 
 ![Generative AI For Beginners](../../images/repository-thumbnail.png?WT.mc_id=academic-105485-yoterada)
 
-### 生成系 AI アプリケーションの開発を始めるために必要な全知識を学べる 12 講座
+### 生成 AI アプリケーションの開発を始めるために必要な全知識を学べる 12 講座
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-yoterada)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-yoterada)
@@ -34,7 +34,7 @@
 
 ## 🧠 さらに知識を深めたいですか？
 
-このコースを終了後、さらに生成系 AI に関する知識を深めたい場合は、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
+このコースを終了後、さらに生成系 AI に関する知識を深めたい場合は、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
 
 ##  🚀  起業家ですか、それとも実現したいアイデアはありますか？
 
@@ -59,7 +59,7 @@
 |       |              レッスンへのリンク              |                       学ぶ内容の概念                       |                      学習目標                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | [コース紹介 - コースの受講方法](../../00-course-setup/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | テクノロジーのセットアップとコースの枠組み | レッスンが成功したと分かるゴール設定| 
-| 01 | [生成系 AI と大規模言語モデルの紹介](../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) |**概念**: 生成系 AI と現在のテクノロジー環境|  生成系 AI とは何か、そして大規模言語モデル（LLM）がどのように動くかを理解する。                   |
+| 01 | [生成 AI と大規模言語モデルの紹介](../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) |**概念**: 生成 AI と現在のテクノロジー環境|  生成 AI とは何か、そして大規模言語モデル（LLM）がどのように動くかを理解する。                   |
 | 02 | [様々なLLMの調査と比較](../../02-exploring-and-comparing-different-llms/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念**: さまざまな大規模言語モデルのテスト、反復、および比較 | ユースケースに適した AI モデルを選択 |
 | 03 | [責任ある生成系 AI の利用](../../03-using-generative-ai-responsibly/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)| **概念**: ファウンデーションモデルの限界と AI に伴うリスクを理解する  | 責任ある生成系 AI アプリケーションの開発方法を学ぶ |
 | 04 | [プロンプト・エンジニアリングの基礎](../../04-prompt-engineering-fundamentals/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **Code/概念:** ハンズオン形式でプロンプト・エンジニアリングのベストプラクティスを学ぶ |  プロンプトの構造と使用法の理解 |  
@@ -70,8 +70,8 @@
 | 09 | [画像生成アプリケーションの構築](../../09-building-image-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** アプリケーション開発で画像生成が役立つ理由 | 画像を生成するアプリケーションを構築する |
 | 10 | [ローコード AI アプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Low Code:** Power Platform における生成系 AI の概要 | 教育系スタートアップ企業がローコードで学生の課題追跡アプリを構築する |
 | 11 | [Function Calling との統合](../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** Function Calling とアプリケーションにおける用途 | 外部 API からデータを取得するため Function Calling を設定する |
-| 12 | [AI アプリケーション用の UX デザイン](../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念:** 透明性と信頼性を備えたAIアプリケーションの設計 | 生成系 AI アプリケーションの開発時に UX デザインの原則を適用する |
-| xx | [学習の継続](../../13-continued-learning/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | 各授業の内容をさらに進めるための参考リンク! | 生成系 AI の技術をマスターするために | 
+| 12 | [AI アプリケーション用の UX デザイン](../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念:** 透明性と信頼性を備えたAIアプリケーションの設計 | 生成 AI アプリケーションの開発時に UX デザインの原則を適用する |
+| xx | [学習の継続](../../13-continued-learning/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | 各授業の内容をさらに進めるための参考リンク! | 生成 AI の技術をマスターするために | 
 
 ## 🎒  その他のコース
 

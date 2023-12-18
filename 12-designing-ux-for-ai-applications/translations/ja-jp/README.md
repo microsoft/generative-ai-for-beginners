@@ -115,7 +115,7 @@ AI アプリケーションは完全ではなく、間違いを犯すことは�
 
 ## おめでとうございます、このコースを終了しました
 
-このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 おめでとうございます、このコースを無事終了しました！しかし、ここで学びを止めることはありません。このコースを通じて、ご自身の AI スタートアップを立ち上げることに興味を持たれたことと思います。
 [Microsoft Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada)にアクセスしてプログラムに申し込み、あなたの新たな挑戦をサポートしてもらいましょう。

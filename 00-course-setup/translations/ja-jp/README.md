@@ -134,4 +134,4 @@ GitHub codespaces を使用して API キーを安全に管理するためには
 
 ## それでは、始めましょう
 
-このレッスンを修了するために必要な手順をすべて完了したので、[生成系 AI と大規模言語モデルの紹介](../../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) から始めましょう。
+このレッスンを修了するために必要な手順をすべて完了したので、[生成 AI と大規模言語モデルの紹介](../../../01-introduction-to-genai/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) から始めましょう。

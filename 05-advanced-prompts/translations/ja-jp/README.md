@@ -192,7 +192,7 @@ AI アシスタントは以下のように回答します。
 
 ### Self-refine, critique the results
 
-生成系 AI や LLM を使用する際、その出力をそのまま信じてはいけません。必ず確認が必要です。なぜなら、LLM は何が正しいかではなく、次に出てくる可能性が最も高いものを提示しているだけだからです。そのため、LLM に自己評価を求め、それによって自己改善するという手法が有効です。
+生成 AI や LLM を使用する際、その出力をそのまま信じてはいけません。必ず確認が必要です。なぜなら、LLM は何が正しいかではなく、次に出てくる可能性が最も高いものを提示しているだけだからです。そのため、LLM に自己評価を求め、それによって自己改善するという手法が有効です。
 
 この手法は以下の手順で行います：  
 
@@ -623,6 +623,6 @@ if __name__ == '__main__':
 
 ## お疲れ様でした!学習を続ける
 
-このレッスン修了後、[生成系 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
 レッスン 6 では、プロンプト エンジニアリングの知識を応用して[テキスト生成アプリケーションの構築](../../../06-text-generation-apps/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)を行います。
