@@ -1,6 +1,6 @@
 # このコースを始めるために
 
-私たちは、皆様がこのコースを開始し生成系 AI で何を創り出すのかを見るのが、とても楽しみです！
+私たちは、皆様がこのコースを開始し生成 AI で何を創り出すのかを見るのが、とても楽しみです！
 
 皆様がこのレッスンを成功できるよう、セットアップ手順と技術要件そして必要な時に情報を得る方法を、このページにまとめました。  
 
@@ -112,7 +112,7 @@ GitHub codespaces を使用して API キーを安全に管理するためには
 
 ## 他の学習者との交流
 
-他の学習者と交流できるように、私たちは公式 [Discord AI コミュニティ・サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)にチャンネルを作成しました。生成系 AI の技術を向上したいと考える他の方々、たとえば、志の同じ起業家、開発者、学生、そして、どなたとでも交流していただく事が可能です。  
+他の学習者と交流できるように、私たちは公式 [Discord AI コミュニティ・サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)にチャンネルを作成しました。生成 AI の技術を向上したいと考える他の方々、たとえば、志の同じ起業家、開発者、学生、そして、どなたとでも交流していただく事が可能です。  
 
 [![Discord チャンネルに参加](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)
 
@@ -122,7 +122,7 @@ GitHub codespaces を使用して API キーを安全に管理するためには
 
 本レッスンはオープンソース・プロジェクトとして公開しています。仮に改善すべき点や問題を発見したら、[プルリクエスト](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-yoterada)をお送りいただくか、もしくは、[GitHub の Issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-yoterada) で報告していただければ幸いです。
 
-このプロジェクトの開発チームは全ての貢献を確認しています。オープンソースにご貢献いただくことは、生成系 AI の分野で新しいキャリアを築くのに良い方法かもしれません。
+このプロジェクトの開発チームは全ての貢献を確認しています。オープンソースにご貢献いただくことは、生成 AI の分野で新しいキャリアを築くのに良い方法かもしれません。
 
 多くの場合、貢献者はコントリビューター・ライセンス契約（CLA）に同意して頂く必要があります。これは貢献者が持っている権利を、私たちに、皆様の貢献を使用する権利を実際に与えて頂くことを宣言するための契約です。詳細については [CLA、コントリビューターライセンス契約のウェブサイト](https://cla.microsoft.com?WT.mc_id=academic-105485-yoterada)をご覧ください。
 

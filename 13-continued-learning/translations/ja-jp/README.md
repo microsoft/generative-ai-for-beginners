@@ -12,11 +12,11 @@
 
 🔗 [GPTモデルの仕組み:誰でも理解できる](https://bea.stollnitz.com/blog/how-gpt-works/?WT.mc_id=academic-105485-yoterada)
 
-🔗 [生成型AIの基礎](https://learn.microsoft.com/training/modules/fundamentals-generative-ai?&WT.mc_id=academic-105485-yoterada)
+🔗 [生成 AI の基礎](https://learn.microsoft.com/training/modules/fundamentals-generative-ai?&WT.mc_id=academic-105485-yoterada)
 
 🔗 [GPTモデルの仕組み:誰でも理解できる](https://bea.stollnitz.com/blog/how-gpt-works?WT.mc_id=academic-105485-yoterada)
 
-🔗 [生成型AI:教育への影響と応用](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
+🔗 [生成 AI:教育への影響と応用](https://arxiv.org/abs/2305.07605?wt.mc_id=github_S-1231_webpage_reactor)
 
 ## レッスン2 - 様々なLLMの調査と比較
 
@@ -34,15 +34,15 @@
 
 🔗 [[2304.04052] デコーダのみかエンコーダ-デコーダか？言語モデルを正則化されたエンコーダ-デコーダとして解釈する (arxiv.org)](https://arxiv.org/abs/2304.04052?wt.mc_id=github_S-1231_webpage_reactor)
 
-## レッスン3 - 責任ある生成系 AI の利用
+## レッスン3 - 責任ある生成 AI の利用
 
-🔗 [責任ある生成型AIの基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-yoterada)
+🔗 [責任ある生成 AI の基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai/?&WT.mc_id=academic-105485-yoterada)
 
-🔗 [LLMのグラウンディング](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-yoterada)
+🔗 [LLM のグラウンディング](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-yoterada)
 
-🔗 [責任ある生成型AIの基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai?WT.mc_id=academic-105485-yoterada)
+🔗 [責任ある生成 AI の基礎](https://learn.microsoft.com/training/modules/responsible-generative-ai?WT.mc_id=academic-105485-yoterada)
 
-🔗 [生成型AIの責任ある使用](https://learn.microsoft.com/shows/ai-show/being-responsible-with-generative-ai?WT.mc_id=academic-105485-yoterada)
+🔗 [生成 AI の責任ある使用](https://learn.microsoft.com/shows/ai-show/being-responsible-with-generative-ai?WT.mc_id=academic-105485-yoterada)
 
 🔗 [GPT-4システムカード](https://cdn.openai.com/papers/gpt-4-system-card.pdf?wt.mc_id=github_S-1231_webpage_reactor)
 
