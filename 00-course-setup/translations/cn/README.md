@@ -26,16 +26,46 @@
 
 ## 在您的设备上本地运行
 
-要在本地运行代码，您需要安装某个版本的 Python。 个人建议安装 **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)** - 这是相当轻量级的安装，支持不同 Python **虚拟环境** 的 `conda` 包管理器 。
+要在本地运行代码，您需要安装某个版本的 [Python](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst)。 
 
-安装 miniconda 后，您需要克隆存储库并创建一个用于本课程的 Python 虚拟环境：
+要使用存储库，您需要克隆它：
 
 ```bash
-git clone http://github.com/microsoft/ai-for-beginners
-cd ai-for-beginners
+git clone https://github.com/microsoft/generative-ai-for-beginners
+cd generative-ai-for-beginners
+```
+
+现在，您已经检查了所有内容，可以开始学习和使用代码了。
+
+## 安装miniconda（可选步骤）
+
+安装[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)有很多优点——它是一种相当轻量级的安装，支持不同Python**虚拟环境**的`conda`包管理器。`conda`使安装和在不同的Python版本和包之间切换变得容易，还可以安装无法通过`pip`获得的包。
+
+安装miniconda后，您需要克隆存储库（如果尚未克隆），并创建一个用于本课程的虚拟环境：
+
+在运行以下步骤之前，请确保首先拥有**environment.yml*文件。*environment.yml*文件用于创建具有必要依赖项的conda环境，看起来是这样的：
+
+```yml
+name: <environment-name>
+channels:  
+ - defaults
+dependencies:  
+- python=<python-version>  
+- openai  
+- python-dotenv
+```
+
+您可以将`<environment-name>`替换为conda环境的名称，将 `<python-version>`替换为由要使用的python版本。将创建的*environment.yml*文件放在你的仓库中的*.devcontainer*文件夹下。
+
+现在希望您已经创建了一个*environment.yml*文件，您可以使用以下命令创建一个conda环境：
+
+
+```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
+
+如果遇到问题，请参阅此链接以创建[conda环境](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst)。
 
 ### 使用 Visual Studio Code Python 插件
 
