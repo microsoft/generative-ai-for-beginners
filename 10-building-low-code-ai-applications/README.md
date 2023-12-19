@@ -10,7 +10,7 @@ Now that we've learned how to build image generating applications, let's talk ab
 
 Building apps and solutions has become more easier for traditional developers and non-developers through the use of Low Code Development Platforms. Low Code Development Platforms enable you to build apps and solutions with little to no code. This is achieved by providing a visual development environment that enables you to drag and drop components to build apps and solutions. This enables you to build apps and solutions faster and with less resources. In this lesson, we dive deep into how to use Low Code and how to enhance low code development with AI using Power Platform.
 
-The Power Platform provides organizations with the opportunity to empower their teams to build their own solutions through an intuitive low-code or no-code environment. This environment helps simplify the process of building solutions. With Power Platform, solutions can be built in days or weeks instead of months or years. Power Platform consists of five key products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents.
+The Power Platform provides organizations with the opportunity to empower their teams to build their own solutions through an intuitive low-code or no-code environment. This environment helps simplify the process of building solutions. With Power Platform, solutions can be built in days or weeks instead of months or years. Power Platform consists of five key products: Power Apps, Power Automate, Power BI, Power Pages and Copilot Studio.
 
 This lesson covers:
 
@@ -171,7 +171,7 @@ Some of the Prebuilt AI Models available in Power Platform include:
 - **Business Card Reader**: This model extracts information from business cards.
 - **Text Recognition**: This model extracts text from images.
 - **Object Detection**: This model detects and extracts objects from images.
-- **Form Processing**: This model extracts information from forms.
+- **Document processing**: This model extracts information from forms.
 - **Invoice Processing**: This model extracts information from invoices.
 
 With Custom AI Models you can bring your own model into AI Builder so that it can function like any AI Builder custom model, allowing you to train the model using your own data. You can use these models to automate processes and predict outcomes in both Power Apps and Power Automate. When using your own model there are limitations that apply. Read more on these [limitations](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
