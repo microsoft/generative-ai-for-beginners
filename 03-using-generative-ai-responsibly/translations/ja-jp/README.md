@@ -104,7 +104,7 @@ AI モデルとその出力によって引き起こされる、潜在的な問�
 - **メタ・プロンプト** メタ・プロンプトやグラウンディングといった手法を使って、モデルの行動や情報を特定の方向に誘導したり制限することができます。これはシステム入力を使って、モデルに対して特定の制限を定義します。また、システムのスコープや領域に合った、より適切な結果を出力することもできます。
 
     > 訳者追記：  
-    > グラウンディングの詳細は、[こちらの記事](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)をご参照ください。
+    > グラウンディングの詳細は、[こちらの記事](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857?WT.mc_id=academic-105485-yoterada)をご参照ください。
 
     Retrieval Augmented Generation（RAG）のような技術を使って、モデルが信頼できる情報源からのみ情報を引き出すようにすることもできます。このコースの後半で、検索アプリケーションの構築に関するレッスンもあります。
 
