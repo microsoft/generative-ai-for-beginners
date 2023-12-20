@@ -18,38 +18,38 @@
 
 # 初心者のための生成 AI - コース
 
-マイクロソフトのクラウド・アドボケイトが提供する、全12回のレッスンで生成 AI アプリケーション構築の基礎知識を身につけましょう。各レッスンで、生成 AI の基礎知識やアプリの実装に必要なキーポイントをしっかり押さえます。このコースを通じて、自分だけの生成 AI のスタートアップ企業を作りながらアイデアを形にする過程を実際に体験できます。
+マイクロソフトのクラウド・アドボケイトが提供する、全 12 回のレッスンを通して、生成 AI アプリケーション構築の基礎知識を身につけましょう。各レッスンで、生成 AI の基礎知識やアプリの実装に必要な重要ポイントをしっかりと理解できるようにします。このコースを通じて、自分だけの生成 AI のスタートアップ企業を作りながら、アイデアを形にする過程を実際に体験できます。
 
 ## 🌱 はじめに
 
-まず初めに、このリポジトリ全体をご自身の GitHub　アカウントで [fork](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-yoterada) してください。すると、コードの変更や各課題を修了することができるようになります。また、後から見つけやすくするために、このリポジトリに[スター 🌟 をつける](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-yoterada) のもおすすめです。
+まずはじめに、このリポジトリをご自分の GitHub アカウントに[フォーク](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-yoterada)してください。 すると、コードの変更や各課題を修了することができるようになります。また、後から探しやすくするために、このリポジトリに[スター 🌟 をつけて](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-yoterada) おくことをお勧めします。
 
-各レッスンのリンクは、下記に掲載しています。最も関心のあるレッスンからご自由に始めてください！
+各レッスンのリンクは、下記に記載しています。興味のあるレッスンからご自由に始めてください！
 
-ご自身に最適なセットアップ方法を見つけるために、[コース・セットアップ・ページ](../../00-course-setup/README.md?WT.mc_id=academic-105485-yoterada)にアクセスしてください。
+ご自身に最適なセットアップ方法を見つけるために、[コース・セットアップ・ページ](../../00-course-setup/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)にアクセスしてください。
 
 ## 🗣️ 他の学習者と出会ったり、サポートを受ける
 
-学習する上で最も効果的な方法は、他の方と一緒に学ぶことです！[公式 AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)に参加し、このコースを受講している他の学習者と出会って交流し助け合いましょう。もしかすると、そこで次のあなたの共同創業者が見つかるかもしれないですね！
+学びを深めるには、他の人と一緒に学ぶことが最も効果的です。！[公式の AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)に参加して、このコースを受講している他の学習者と出会い、交流し、助け合いましょう。そこで、新たなビジネス・パートナーが見つかる可能性もありますよ！
 
-## 🧠 さらに知識を深めたいですか？
+## 🧠 もっと知識を深めたいですか？
 
-このコースを終了後、さらに生成 AI に関する知識を深めたい場合は、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
+このコースを終了後、さらに生成 AI に関する知識を深めるために、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada)を、ぜひご覧ください！
 
 ##  🚀  スタートアップですか、それとも実現したいアイデアはありますか？
 
-その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**OpenAI クレジットを無料で**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI サービスで OpenAI のモデルを利用**することができます。
+その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**無料で OpenAI クレジットを**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI のサービスを通じて OpenAI のモデルを利用**することができます。
 
 ##  🙏 ご協力いただける方を募集しています
 
 貢献して頂ける方法をいくつかご紹介します：
 
-- 文章の誤字脱字やコードに間違いを発見したら、[問題(Issue)で指摘する](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-yoterada)か[プルリクエストを送ってください](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-yoterada)  
-- 私たちに、新しいレッスンや演習アイデアなどの提案をお送りいただき、コースの改善点を教えてください
+- 文章に誤字や脱字、コードの間違いを発見したら、GitHub の[問題 (Issue) として報告して頂く](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-yoterada)か[プル・リクエストを送ってください](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-yoterada)  
+- 新しいレッスンや演習のアイデアをご提案していただき、コースをより良くするための改善点を教えてください。
 
 ## 📂 各レッスンに含まれる内容
 
-- トピックの概要を説明する短い動画  
+- トピックの概要を紹介する短い動画  
 - README に記載されているレッスン
 - サンプル・コードを含む Jupyter Notebook（プロジェクト形式のレッスンの場合）  
 - 学習内容を活用した課題やチャレンジ
@@ -71,11 +71,11 @@
 | 10 | [ローコード AI アプリケーションの構築](../../10-building-low-code-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Low Code:** Power Platform における生成 AI の概要 | 教育系スタートアップ企業がローコードで学生の課題追跡アプリを構築する |
 | 11 | [Function Calling との統合](../../11-integrating-with-function-calling/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | **Code:** Function Calling とアプリケーションにおける用途 | 外部 API からデータを取得するため Function Calling を設定する |
 | 12 | [AI アプリケーション用の UX デザイン](../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada) | **概念:** 透明性と信頼性を備えたAIアプリケーションの設計 | 生成 AI アプリケーションの開発時に UX デザインの原則を適用する |
-| xx | [学習の継続](../../13-continued-learning/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | 各授業の内容をさらに進めるための参考リンク! | 生成 AI の技術をマスターするために | 
+| xx | [学習の継続](../../13-continued-learning/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)  | 各授業の内容をさらに進めるための参考リンク! | 生成 AI の技術をマスターするために |
 
 ## 🎒  その他のコース
 
-私たちは他のコースも提供しています！ぜひご覧ください：
+他のコースも提供しています！ぜひご覧ください：
 
 - [初心者のための ML](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-yoterada)
 - [初心者のための Data Science](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-yoterada)
