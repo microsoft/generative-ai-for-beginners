@@ -646,6 +646,6 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt, temper
 
 ## お疲れ様でした!　学習を続ける
 
-このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
+このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、生成 AI の知識をレベルアップさせましょう。
 
 レッスン 7 では、[チャットアプリケーションの構築](../../../07-building-chat-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)方法を見ていきます。
