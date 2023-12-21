@@ -22,7 +22,7 @@
 
 ## 🌱 はじめに
 
-まずはじめに、このリポジトリをご自分の GitHub アカウントに[フォーク](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-yoterada)してください。 すると、コードの変更や各課題を修了することができるようになります。また、後から探しやすくするために、このリポジトリに[スター 🌟 をつけて](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-yoterada) おくことをお勧めします。
+まずはじめに、このリポジトリをご自分の GitHub アカウントに[フォーク](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-yoterada)してください。 すると、コードの変更や各課題を修了できるようになります。また、後から探しやすくするために、このリポジトリに[スター 🌟 をつけて](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-yoterada) おいてください。
 
 各レッスンのリンクは、下記に記載しています。興味のあるレッスンからご自由に始めてください！
 
@@ -30,7 +30,7 @@
 
 ## 🗣️ 他の学習者と出会ったり、サポートを受ける
 
-学びを深めるには、他の人と一緒に学ぶことが最も効果的です。！[公式の AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)に参加して、このコースを受講している他の学習者と出会い、交流し、助け合いましょう。そこで、新たなビジネス・パートナーが見つかる可能性もありますよ！
+学びを深めるには、他の人と一緒に学ぶのが最も効果的です。！[公式の AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)に参加して、このコースを受講している他の学習者と出会い、交流し、助け合いましょう。そこで、新たなビジネス・パートナーが見つかる可能性もありますよ！
 
 ## 🧠 もっと知識を深めたいですか？
 
@@ -38,7 +38,7 @@
 
 ##  🚀  スタートアップですか、それとも実現したいアイデアはありますか？
 
-その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**無料で OpenAI クレジットを**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI のサービスを通じて OpenAI のモデルを利用**することができます。
+その場合、[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-yoterada) にご登録いただくと、**無料で OpenAI クレジットを**もらえるだけでなく、**最大で $150k の Azure クレジットを獲得し、Azure OpenAI のサービスを通じて OpenAI のモデルを利用**できます。
 
 ##  🙏 ご協力いただける方を募集しています
 
