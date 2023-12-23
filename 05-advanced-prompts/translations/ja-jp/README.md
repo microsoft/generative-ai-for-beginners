@@ -6,10 +6,10 @@
 
 > 「_プロンプト・エンジニアリング_」は、より意味のある指示やコンテキスト（文脈）を提供し、「**適切な回答の提供に向けてモデルを導く**」プロセスです。
 
-また、プロンプトを作成する際 2つのステップがあります。
-一つ目は関連するコンテキスト（文脈）を提供する手法で、二つ目は「_最適化_」つまりプロンプトを徐々に改善する手法です。
+また、プロンプトを作成するには 2 つの段階があります。
+一つ目は関連する「_コンテキスト（文脈）を作成_」する手法で、二つ目は「_最適化_」つまりプロンプトを徐々に改善する手法です。
 
-ここまでで、プロンプトの書き方についての基本的な内容は理解はできましたが、さらに深く掘り下げる必要があります。この章では、さまざまなプロンプトを試し、特定のプロンプトが別のプロンプトよりも優れている理由を理解します。任意の LLM に適用できる、いくつかの基本的な手法に従ってプロンプトを作成する方法を学習します。
+これまで、プロンプトの書き方に関連する基本的な内容について学んできましたが、さらに深く掘り下げる必要があります。この章では、さまざまなプロンプトを試し、特定のプロンプトが別のプロンプトよりも優れている理由を理解します。任意の LLM に適用できる、いくつかの基本的な手法に従ってプロンプトを作成する方法について学びます。
 
 ## はじめに
 
@@ -55,7 +55,7 @@
 
 ### プロンプトのテクニック
 
-まずプロンプトは、大規模言語モデル (LLM) の登場で、「_新たに出てきた技術_」で、これはモデルに組み込まれている機能ではなく、モデルを使うために使用するものだとご理解ください。
+まずプロンプトは、大規模言語モデル (LLM) の登場で、「_新たに出てきたテクニック_」で、これはモデルに組み込まれている機能ではなく、モデルを使うために使用するものだとご理解ください。
 
 LLM のプロンプトで利用可能な、基本的なテクニックがいくつかあります。それらを確認してみましょう。
 
@@ -76,14 +76,14 @@ LLM のプロンプトで利用可能な、基本的なテクニックがいく�
 
 ### Chain-of-thought
 
-Chain-of-thought (思考の連鎖) は、非常に興味深い手法で、一つの問題をいくつか複数の段階に分けて、LLM の回答を誘導する手法です。LLM が、何をどうやって処理を行うべきかを理解できるように指示する手法です。次の例を考えてみてください。Chain-of-thought を用いた場合と用いない場合の両方の例をご覧ください。まずは、Chain-of-thought を用いない例を見てみましょう。
+Chain-of-thought (思考の連鎖) は、非常に興味深い手法で、一つの問題をいくつか複数の段階に分けて、LLM の回答を誘導する手法です。LLM が、何をどうやって処理を行うべきか理解できるように指示する手法です。次の例を考えてみてください。Chain-of-thought を用いた場合と用いない場合の両方の例をご覧ください。まずは、Chain-of-thought を用いない例を見てみましょう。
 
     - プロンプト: 「アリスはリンゴを 5 個持っていて、3 個を捨て、2 個をボブに渡し、ボブは 1 個を返します。アリスはリンゴを何個持っていますか？」  
     - 回答: 5  
 
-LLMは5と答えますが、これは間違いです。正しい答えはリンゴ 1 個で、計算式は(5 -3 -2 + 1 = 1)です。  
+LLM は 5 と答えますが、これは不正解です。正しい答えはリンゴ 1 個で、計算式は (5 -3 -2 + 1 = 1) になります。  
 
-では、どうやって LLM がこれを正しく行うように教えられるのでしょうか？  
+では、どうやって LLM がこれを正しく計算できるように伝えられるのでしょうか？  
 
 次に、Chain-of-thought を試してみましょう。Chain-of-thought を適用するためには：  
 
@@ -100,7 +100,7 @@ LLMは5と答えますが、これは間違いです。正しい答えはリン�
     アリスはリンゴを 5 個持っていて、3 個を捨て、2 個をボブに渡し、ボブは 1 個を返します。アリスはリンゴを何個持っていますか？」
     - 回答: 1
 
-最初に類似した計算問題の計算順序や式を記述した、少し長いプロンプトを作成し、最後に本当に問い合わせしたい内容を記述し送信します。すると正しい答え 1 が得られています。
+最初に類似した計算問題の計算順序や式を記述した、少し長いプロンプトを作成します。次に、本当に聞きたい内容を記述し送信します。すると正しい答え 1 が得られています。
 
 ご覧の通り、Chain-of-thought (思考の連鎖) は非常に強力な手法です。
 
@@ -119,9 +119,9 @@ LLMは5と答えますが、これは間違いです。正しい答えはリン�
 要件: {{requirements}}  
 ```
 
-上記は、テンプレートを使用してプロンプトをどのように作成するかを示しています。テンプレートには、`{{variable}}`という形式で表現する変数はいくつかあり、これらは会社の API から取得した実際の値に置き換えます。  
+上記は、テンプレートを使用してプロンプトをどのように作成するかを示しています。テンプレートには、`{{variable}}`という形式で表現する変数がいくつかあり、これらは会社の API から取得した実際の値に置き換えます。  
 
-以下は、変数を自社の情報に置き換えた後のプロンプトの例です。  
+以下は、変数を自社の情報に置き換えた後のプロンプト例です。  
 
 ```text
 保険会社: ACME保険  
@@ -137,7 +137,7 @@ LLMは5と答えますが、これは間違いです。正しい答えはリン�
 要件: 自動車保険, 家財保険  
 ```
 
-このプロンプトをLLM（Language Model）で実行すると、以下のような回答が得られます。
+このプロンプトを LLM（Language Model）を実行すると、以下のような回答が得られます。
 
 ```output
 生命保険も含めて  
@@ -149,7 +149,7 @@ LLMは5と答えますが、これは間違いです。正しい答えはリン�
 合計費用: $1,200ドル  
 ```
 
-この結果では、生命保険も提案されていますが、これは本来求めていない結果です。これは、プロンプトが何を許可するかをより明確にするために、プロンプトを最適化する必要があるのを示しています。試行錯誤を繰り返した結果、以下のようなプロンプトにたどり着きました。
+結果は、生命保険も提案されましたが、これは本来求めていない結果です。そして、プロンプトの最適化が必要だというのを示しています。プロンプトで何を許可するのかを、より明確にする必要があります。試行錯誤を繰り返した結果、以下のようなプロンプトにたどり着きました。
 
 ```text
 保険会社: ACME保険  
@@ -166,13 +166,13 @@ LLMは5と答えますが、これは間違いです。正しい答えはリン�
 
 「種類」と「費用」を追加し、「限定」というキーワードを使用し、LLM が何を求めているかを理解するのに役立ちます。
 
-これにより、以下のような応答が得られます。
+これにより、以下のような回答が得られました。
 
 ```output
 予算と要件を考慮した上で、月額500ドルの自動車保険（安価）を提案します。  
 ```
 
-この例から、Generated knowledge という手法を使用しても、多くの場合、望む結果を得るためにはプロンプトの最適化が必要とわかります。
+この例から、Generated knowledge という手法を使用しても、期待する結果を得るためには、多くの場合でプロンプトの最適化が必要だとわかります。
 
 ### Least-to-most
 
@@ -292,16 +292,16 @@ LLMの回答:
 5 つが特定されましたが、これが正しいかどうかを確認するために、LLM に各内容を詳しく説明させてみましょう。
 
 > プロンプト: 最初のステップを詳しく説明してください。具体的には、パンデミックにおけるリスクは何ですか？
- 
-    ```text  
-    リスクは以下の通りです：  
-      
-    - 生命の喪失
-    - ビジネスの喪失
-    - 評判の喪失
-    - 顧客の喪失
-    - 従業員の喪失
-    ```  
+
+```text  
+リスクは以下の通りです：  
+
+- 生命の喪失
+- ビジネスの喪失
+- 評判の喪失
+- 顧客の喪失
+- 従業員の喪失
+```  
 
 ここで、LLM が正しいかどうかを確認するため、最初のリスクについて詳しく説明させ、それが上記の答えと一致するか確認します。
 
@@ -325,7 +325,7 @@ LLM は本質的に非確実な性質を持っているため、同じプロン�
 
 > "Python Web API のコードを生成してください"
 
-```text  
+```python  
 # 必要なモジュールをインポートする  
 import flask
 from flask import request, jsonify
@@ -360,7 +360,7 @@ if __name__ == '__main__':
 
 同じプロンプトを再度実行すると、少し異なる結果が出力されます。
 
-```text
+```python
 # 必要なパッケージをインポートする
 import flask
 from flask import request, jsonify
@@ -373,18 +373,18 @@ app.config["DEBUG"] = True
 books = [
     {'id': 0,
      'title': 'A Fire Upon the Deep',
-     'author': 'Vernor Vinge',
-     'first_sentence': 'The coldsleep itself was dreamless.',
+     'author': 'ヴァーナー・ヴィンジ',
+     'first_sentence': 'コールドスリープ自体は夢がない。',
      'year_published': '1992'},
     {'id': 1,
      'title': 'The Ones Who Walk Away From Omelas',
-     'author': 'Ursula K. Le Guin',
-     'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
+     'author': 'アーシュラ・K・ル=グウィン',
+     'first_sentence': '鐘の騒音がツバメを舞い上がらせ、夏の祭りが海に面した明るい塔の街オメラスにやってきた。',
      'published': '1973'},
     {'id': 2,
      'title': 'Dhalgren',
-     'author': 'Samuel R. Delany',
-     'first_sentence': 'to wound the autumnal city.',
+     'author': 'サミュエル・R・ディレイニ',
+     'first_sentence': '秋の街に傷をつけるために',
      'published': '1975'}
 ]
 
@@ -433,141 +433,137 @@ app.run()
 
 出力をより予測可能、つまりより決定論的(確実)に制限したいと考えた場合、どのようにすればよいでしょうか？
 
-Temperature (温度) パラメータは 0 から 1 までの値を持っており、0が最も確定的で、1 が最も多様性があります。デフォルト値は0.7です。温度を0.1に設定し、同じプロンプトを 2 回実行してみると以下のような結果が得られます。
+Temperature (温度) パラメータは 0 から 1 までの範囲で値を持っており、0 が最も決定的で、1 が最も多様性があります。デフォルト値は 0.7 です。温度を 0.1 に設定し、同じプロンプトを 2 回実行してみると以下のような結果が得られます。
 
 > "Python Web API のコード を作成してください"
 
-    ```python
-    #import necessary libraries
-    import flask
-    from flask import request, jsonify
-    
-    #create an instance of the Flask class
-    app = flask.Flask(__name__)
-    
-    #create an endpoint for the API
-    @app.route('/api/v1/endpoint', methods=['GET'])
-    def api_endpoint():
-        #get the request data
-        data = request.get_json()
-    
-        #process the data
-        result = process_data(data)
-    
-        #return the result
-        return jsonify(result)
-    
-    #function to process the data
-    def process_data(data):
-        #process the data
-        result = {'result': 'success'}
-    
-        #return the result
-        return result
-    
-    #run the Flask app
-    if __name__ == '__main__':
-        app.run()
-    
-    ```
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
+
+#create an instance of the Flask class
+app = flask.Flask(__name__)
+
+#create an endpoint for the API
+@app.route('/api/v1/endpoint', methods=['GET'])
+def api_endpoint():
+    #get the request data
+    data = request.get_json()
+
+    #process the data
+    result = process_data(data)
+
+    #return the result
+    return jsonify(result)
+
+#function to process the data
+def process_data(data):
+    #process the data
+    result = {'result': 'success'}
+
+    #return the result
+    return result
+
+#run the Flask app
+if __name__ == '__main__':
+    app.run()
+```
 
 プロンプトを再度実行すると、次の結果が得られます。  
 
-    ```python
-    #import necessary libraries
-    import flask
-    from flask import request, jsonify
-    
-    #create a Flask app
-    app = flask.Flask(__name__)
-    
-    #create a route for the API
-    @app.route('/api', methods=['GET'])
-    def api_call():
-        #get the data from the request
-        data = request.get_json()
-        
-        #process the data
-        result = process_data(data)
-        
-        #return the result
-        return jsonify(result)
-    
-    #define the process_data function
-    def process_data(data):
-        #do something with the data
-        result = data + 1
-        
-        #return the result
-        return result
-    
-    #run the app
-    if __name__ == '__main__':
-        app.run()
-    
-    ```
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
+
+#create a Flask app
+app = flask.Flask(__name__)
+
+#create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    #get the data from the request
+    data = request.get_json()
+
+    #process the data
+    result = process_data(data)
+
+    #return the result
+    return jsonify(result)
+
+#define the process_data function
+def process_data(data):
+    #do something with the data
+    result = data + 1
+
+    #return the result
+    return result
+
+#run the app
+if __name__ == '__main__':
+    app.run()
+```
 
 これら 2 つの出力結果はわずかな違いしかありません。今度は逆に、温度を0.9に設定してみましょう。
 
-    ```python
-    # Import necessary libraries
-    import flask
-    from flask import request, jsonify
-    
-    # Create a Flask app
-    app = flask.Flask(__name__)
-    
-    # Create a route for the API
-    @app.route('/api', methods=['GET'])
-    def api_call():
-        # Get the data from the request
-        data = request.args
-    
-        # Process the data
-        result = process_data(data)
-    
-        # Return the result
-        return jsonify(result)
-    
-    # Function to process the data
-    def process_data(data):
-        # Do something with the data
-        result = data + 1
-    
-        # Return the result
-        return result
-    
-    # Run the app
-    if __name__ == '__main__':
-        app.run()
-    
-    ```
+```python
+# Import necessary libraries
+import flask
+from flask import request, jsonify
+
+# Create a Flask app
+app = flask.Flask(__name__)
+
+# Create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    # Get the data from the request
+    data = request.args
+
+    # Process the data
+    result = process_data(data)
+
+    # Return the result
+    return jsonify(result)
+
+# Function to process the data
+def process_data(data):
+    # Do something with the data
+    result = data + 1
+
+    # Return the result
+    return result
+
+# Run the app
+if __name__ == '__main__':
+    app.run()
+```
 
 温度パラメータの値として 0.9 で 2 回目の実行:
 
-    ```python
-    import flask
-    from flask import request, jsonify
-    
-    # create the Flask app
-    app = flask.Flask(__name__)
-    app.config['DEBUG'] = True
-    
-    # create some test data
-    books = [
-        {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
-        {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
-        {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
-    ]
-    
-    # create an endpoint
-    @app.route('/', methods=['GET'])
-    def home():
-        return '''<h1>Welcome to our book API!</h1>'''
-    
-    @app.route('/api/v1/resources/books
-    
-    ```
+```python
+import flask
+from flask import request, jsonify
+
+# create the Flask app
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
+
+# create some test data
+books = [
+    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+]
+
+# create an endpoint
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Welcome to our book API!</h1>'''
+
+@app.route('/api/v1/resources/books
+```
 
 ご覧いただいたように、結果は非常に多様（違う内容）になります。
 
@@ -618,7 +614,7 @@ if __name__ == '__main__':
 
 ## 知識チェック
 
-なぜ、chain-of-thought (思考の連鎖) プロンプトを使用するのでしょうか?正解を 1 つ選択してください。
+なぜ、chain-of-thought (思考の連鎖) プロンプトを使用するのでしょうか? 正解を 1 つ選択してください。
 
 1. LLM に問題の解決方法を教える。
 1. LLM にコード内のエラーを見つけるように教える
