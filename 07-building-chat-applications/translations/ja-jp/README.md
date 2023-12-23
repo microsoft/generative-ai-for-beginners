@@ -95,6 +95,7 @@ See https://platform.openai.com/account/api-keys for details.
 
 ![Custom Instructions Settings in ChatGPT](../../images/custom-instructions.png?WT.mc_id=academic-105485-yoterada)
 
+> [!TIP]
 > 訳者追記  
 > システムの問い> ChatGPT がより適切な回答を提供するために、あなたに関する情報を教えてください？
 >  
@@ -108,6 +109,7 @@ See https://platform.openai.com/account/api-keys for details.
 
 ![A prompt in ChatGPT for a lesson plan about linked lists](../../images/lesson-plan-prompt.png?WT.mc_id=academic-105485-yoterada)
 
+> [!TIP]
 > 訳者追記  
 > 利用者の入力> 連結リストの学習計画を作成してください  
 >  
@@ -183,12 +185,12 @@ Microsoftは、大規模言語モデル（LLM）からの回答を生成する�
 | **Recall （再現率） (Sensitivity)**      | 真陽性予測の数を実際の真の数で割った比率  </br></br>（訳者による追記：真の値の総数に対する、正しく分類された陽性サンプル(TP)の数の比率として計算 [ご参考：What Is a Confusion Matrix in Machine Learning?](https://plat.ai/blog/confusion-matrix-in-machine-learning/)）                                          |　Recall をどのように測定し、改善しますか?                                  |
 | **F1 スコア**                  | 精度と再現率の調和平均で、両者のバランスを示します </br></br>（訳者による追記：</br>F1 = 2*((Precision*Recall)/(Precision+Recall)) </br> FスコアまたはFメジャーは、テストの精度の尺度です。これは、テストの精度と再現率から計算され、精度は真陽性の結果の数を、正しく識別されなかったものを含むすべての陽性結果の数で割った値であり、再現率は、真陽性の結果の数を、陽性として識別されたすべてのサンプルの数で割った値です。)                                  | 目指すF1スコアは何ですか?精度と再現率のバランスをどのように調整しますか?  |
 | **Perplexity**                | モデルが予測した確率分布が、データの実際の分布とどれだけ一致しているかを計測します。</br></br>(訳者追記：</br>[ご参考: Wikipedia パープレキシティ](https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%BC%E3%83%97%E3%83%AC%E3%82%AD%E3%82%B7%E3%83%86%E3%82%A3)) | Perplexity をどのように最小限に抑えますか?                                         |
-| **ユーザー満足度指標** | アプリケーションに対するユーザーの評価を計測します。主にアンケートを通じて収集します                                     | ユーザーフィードバックはどのくらいの頻度で収集しますか?それに基づいてどのように改善策を立てますか? |
+| **利用者満足度指標** | アプリケーションに対する利用者の評価を計測します。主にアンケートを通じて収集します                                     | ユーザーフィードバックはどのくらいの頻度で収集しますか?それに基づいてどのように改善策を立てますか? |
 | **エラー発生率**                | モデルが理解や出力で間違いを犯す割合                                                 | エラー発生率を減らすための戦略は何ですか?               |
 | **再トレーニングサイクル**         | 新しいデータや知見を取り入れてモデルを更新する頻度                                    | どのくらいの頻度でモデルを再トレーニングしますか?再トレーニングサイクルを開始するトリガーは何ですか?   |
 | **異常検出**         | 期待する動作に適合しない異常なパターンを識別するためのツールと手法                        | 異常が発生した際にどのように対応しますか?                                        |
 
-> [!TIPS]    
+> [!TIP]
 > 訳者追記：Precision（精度）、Recall （再現率）、F1 スコア、Perplexity は、機械学習の分野でよく使われるメトリクスです。これらのメトリクスの詳細については、[こちら](https://docs.microsoft.com/azure/machine-learning/how-to-understand-automated-ml#classification-metrics?WT.mc_id=academic-105485-yoterada)をご覧ください。
 > モデルのファイン・チューニングや再トレーニングを行わない場合は、こちらのメトリクスは不要です。その場合は、利用者満足度指標やエラー発生率など、アプリケーションのパフォーマンスを測定するメトリクスを重視してください。
 

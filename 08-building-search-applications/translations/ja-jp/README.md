@@ -92,6 +92,7 @@ LLM は、チャットボットやテキスト生成だけでなく、Embeddings
 
 数学的な観点から見ると、コサイン類似度は多次元空間に投影された 2 つのベクトル間の角度のコサインを測定します。この測定は有益で、2 つのドキュメントが大きさのためにユークリッド距離で離れていても、それらの間の角度が小さいため、コサイン類似度が高くなる可能性があります。コサイン類似度の方程式についての詳細は、[コサイン類似度](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-yoterada)をご覧ください。
 
+> [!TIP]
 > 訳者追記  
 > 訳者が日本語で説明している下記の記事もどうぞ参考にご覧ください。
 > [Azure OpenAI Embedding モデルを利用し最も関連性の高いドキュメントを見つける方法](https://qiita.com/yoshioterada/items/3e575828368bf3767532)
@@ -120,6 +121,7 @@ LLM は、チャットボットやテキスト生成だけでなく、Embeddings
 > リソースグループの名前は変更可能ですが、リソースの場所を変更する場合は、
 > [モデルの可用性](https://aka.ms/oai/models?WT.mc_id=academic-105485-yoterada)から対象リージョンで利用可能かご確認ください。
 
+> [!TIP]
 > 訳者追記  
 > 日本では jaapneast のリージョンで OpenAI の text-embedding-ada-002, gpt-35-turbo-0613 のモデルが利用可能です。仮に japaneast で利用できない場合は、他のリージョンで作成してください。
 

@@ -20,7 +20,8 @@ codespaces は、フォークしたリポジトリから、下記の緑のボタ
 
 ![codespaceを作成するボタンを示すダイアログ](../../images/who-will-pay.webp?WT.mc_id=academic-105485-yoterada)
 
-> **ご注意** (訳者追記)：  
+> [!NOTE]
+> (訳者追記)：  
 Fork したリポジトリで Codespace を利用する場合、Codespace の使用料はマイクロソフトが支払います。
 
 ### 3. API　キーの保管
