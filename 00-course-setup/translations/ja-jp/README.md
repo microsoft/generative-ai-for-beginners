@@ -1,4 +1,4 @@
-# このコースを始めるために
+# このコースを始めるための準備
 
 私たちは、皆様がこのコースを開始して、生成 AI を使ってどのような物を作り出してくださるのか、それを見るのがとても楽しみです！
 
@@ -12,11 +12,11 @@
 
 コードを修正したり、レッスン課題を終了するため、このリポジトリをご自身の GitHub アカウントに[フォーク](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-yoterada)してください。また後から、簡単にこのリポジトリを見つけられるように、[スター（🌟）をつける](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-yoterada)のもお勧めです。
 
-### 2. codespaces を作成
+### 2. Codespaces を作成
 
-コードを実行する際、依存関係の問題を避けるため、GitHub codespaces で、このコースの実行をお勧めします。  
+コードを実行する際、依存関係の問題を避けるため、GitHub Codespaces で、このコースの実行をお勧めします。  
 
-codespaces は、フォークしたリポジトリから、下記の緑のボタンの `Code` を選択し、**Codespaces** オプションを選択し作成できます。
+Codespaces は、フォークしたリポジトリから、下記の緑のボタンの `Code` を選択し、**Codespaces** オプションを選択し作成できます。
 
 ![codespaceを作成するボタンを示すダイアログ](../../images/who-will-pay.webp?WT.mc_id=academic-105485-yoterada)
 
@@ -43,7 +43,7 @@ cd generative-ai-for-beginners
 
 ### miniconda　のインストール　（オプションの手順）
 
-下記は省略可能な手順ですが、可能であれば **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-yoterada)** のインストールをお勧めします - これは、異なる Python **仮想環境**で `conda` パッケージ・マネージャをサポートする、比較的軽量なインストーラーです。`conda` を利用すると、異なる Python のバージョンやパッケージを簡単にインストールでき、切り替えもできます。さらに、`pip` を利用して公開されているパッケージのインストールもできます。  
+下記は省略可能な手順ですが、可能であれば **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-yoterada)** のインストールをお勧めします。これは、異なる Python **仮想環境**で `conda` パッケージ・マネージャをサポートする、比較的軽量なインストーラーです。`conda` を利用すると、異なる Python のバージョンやパッケージを簡単にインストールでき、切り替えもできます。さらに、`pip` を利用して公開されているパッケージのインストールもできます。  
 
 miniconda をインストールした後、リポジトリをクローンしてください（まだ行っていない場合）。そして、このレッスン用に下記の手順で新たな仮想環境を作成してください：  
 
@@ -100,7 +100,7 @@ jupyterhub
 
 ローカル環境に Python をインストールする代わりに、コンテナ上でも実行できます。このプロジェクトを fork するとレポジトリ内に、コンテナ・イメージを構築するために必要な設定を含む `.devcontainer` フォルダが存在します。そして VS Code は設定ファイルに記載した内容を元に、コンテナ上での実行を提案します。ローカルでコンテナを実行する為には、事前に Docker のインストールと起動が必要です。ローカルでのコンテナ環境のセットアップは少し複雑になるため経験豊富な利用者にお勧めします。
 
-GitHub codespaces を使用して API キーを安全に管理するためには、Codespace Secrets の利用をお勧めします。[codespaces のシークレットを管理](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-yoterada)する方法については、リンク先のガイドをご参照ください。  
+GitHub Codespaces を使用して API キーを安全に管理するためには、Codespace Secrets の利用をお勧めします。[Ccodespaces のシークレットを管理](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-yoterada)する方法については、リンク先のガイドをご参照ください。  
 
 ## レッスンと技術要件
 
@@ -116,7 +116,7 @@ GitHub codespaces を使用して API キーを安全に管理するためには
 
 ## 他の学習者との交流
 
-他の学習者と交流できるように、私たちは公式 [Discord AI コミュニティ・サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)にチャンネルを作成しました。生成 AI の技術を向上したいと考える他の方々、たとえば、志の同じ起業家、開発者、学生、そして、どなたとでも交流していただく事が可能です。  
+他の学習者と交流できるように、私たちは[公式の AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)にチャンネルを作成しました。生成 AI の技術を向上したいと考える他の方々、たとえば、志の同じ起業家、開発者、学生、そして、どなたとでも交流していただく事が可能です。  
 
 [![Discord チャンネルに参加](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)
 
@@ -135,7 +135,7 @@ GitHub codespaces を使用して API キーを安全に管理するためには
 
 プル・リクエストを提出すると、CLA-bot が自動的に CLA（コントリビューター・ライセンス契約）の提出が必要かどうかを判断し、プル・リクエストに適切なマーク（例：ラベル、コメント）を付けます。bot の指示にお従いください。この処理は、CLA を使用するすべてのリポジトリで一度だけ行う必要があります。
 
-このプロジェクトは、[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-yoterada) を採用しています。詳細は、Code of Conduct FAQ をご覧いただくか、追加の質問やコメントがある場合は、[メールで opencode](opencode@microsoft.com) にお問い合わせください。  
+このプロジェクトは、[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-yoterada) を採用しています。詳細は、Code of Conduct FAQ をご覧いただくか、追加の質問やコメントがある場合は、 [opencode 宛てにメールで](mailto:opencode@microsoft.com)お問い合わせください。  
 
 ## それでは、始めましょう
 
