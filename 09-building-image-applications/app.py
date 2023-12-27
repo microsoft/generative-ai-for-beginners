@@ -1,4 +1,4 @@
-import openai
+from openai import AzureOpenAI
 import os
 import requests
 from PIL import Image
@@ -7,19 +7,23 @@ import dotenv
 # import dotenv
 dotenv.load_dotenv()
 
-# Get endpoint and key from environment variables
-openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-openai.api_key = os.environ['AZURE_OPENAI_KEY']     
+ 
 
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
-openai.api_version = '2023-06-01-preview'
-openai.api_type = 'azure'
+client = AzureOpenAI(
+  api_key=os.environ['AZURE_OPENAI_KEY'],  # this is also the default, it can be omitted
+  api_version = "2023-05-15",
+  azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
+  )
+
+model = os.environ['AZURE_OPENAI_DEPLOYMENT']
 
 
 try:
     # Create an image by using the image generation API
-    generation_response = openai.Image.create(
-        prompt='Red and white Rocket with fussy paws',    # Enter your prompt text here
+
+    generation_response = client.Image.create(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
         n=2,
         temperature=1,
@@ -45,11 +49,18 @@ try:
     image.show()
 
 # catch exceptions
-except openai.error.InvalidRequestError as err:
+except client.error.InvalidRequestError as err:
     print(err)
 
 # ---creating variation below---
 
+
+response = client.Image.create_variation(
+  image=open(image_path, "rb"),
+  n=1,
+  size="1024x1024"
+)
+=======
 # response = openai.Image.create_variation(
 #   image=open(image_path, "rb"),
 #   n=1,
