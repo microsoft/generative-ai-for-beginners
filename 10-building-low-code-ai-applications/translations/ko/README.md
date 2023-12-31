@@ -6,7 +6,7 @@
 
 ## 소개
 
-이미지 생성 애플리케이션을 만드는 방법을 배웠으니 이제는 Low Code에 대해 이야기해보겠습니다. Generative AI는 low code를 포함한 다양한 영역에 사용될 수 있지만, low code란 무엇이며 어떻게 AI를 추가할 수 있을까요?
+이미지 생성 애플리케이션을 만드는 방법을 배웠으니 이제는 Low Code에 대해 이야기해보겠습니다. 생성형 AI는 low code를 포함한 다양한 영역에 사용될 수 있지만, low code란 무엇이며 어떻게 AI를 추가할 수 있을까요?
 
 Low Code 개발 플랫폼을 사용하면 전통적인 개발자와 비개발자 모두가 쉽게 앱과 솔루션을 구축할 수 있습니다. Low Code 개발 플랫폼은 시각적 개발 환경을 제공하여 컴포넌트를 드래그 앤 드롭하여 앱과 솔루션을 구축할 수 있도록 합니다. 이를 통해 앱과 솔루션을 더 빠르고 적은 리소스로 구축할 수 있습니다. 이 레슨에서는 Low Code의 사용 방법과 Power Platform을 사용하여 low code 개발을 AI로 향상시키는 방법에 대해 자세히 알아보겠습니다.
 
@@ -14,9 +14,9 @@ Power Platform은 조직에게 직관적인 low-code 또는 no-code 환경을 �
 
 이 레슨에서는 다음 내용을 다룹니다:
 
-- Power Platform에서 Generative AI 소개
+- Power Platform에서 생성형 AI 소개
 - Copilot 소개 및 사용 방법
-- Power Platform에서 Generative AI를 사용하여 앱과 플로우 구축
+- Power Platform에서 생성형 AI를 사용하여 앱과 플로우 구축
 - AI Builder를 사용하여 Power Platform의 AI 모델 이해
 
 ## 학습 목표
@@ -41,9 +41,9 @@ Power Platform은 조직에게 직관적인 low-code 또는 no-code 환경을 �
 
 - **AI Builder**: 스타트업의 송장을 처리하기 위해 사전 구축된 AI 모델을 사용할 수 있습니다.
 
-## Power Platform의 Generative AI
+## Power Platform의 생성형 AI
 
-Generative AI를 사용하여 low-code 개발과 애플리케이션을 향상시키는 것은 Power Platform의 주요 관심사입니다. 목표는 데이터 과학 전문 지식이 필요하지 않고 AI를 사용하여 앱, 사이트, 대시보드를 구축하고 프로세스를 자동화할 수 있는 모든 사람을 가능하게 하는 것입니다. 이 목표는 Copilot과 AI Builder의 형태로 generative AI를 Power Platform의 low-code 개발 환경에 통합함으로써 달성됩니다.
+생성형 AI를 사용하여 low-code 개발과 애플리케이션을 향상시키는 것은 Power Platform의 주요 관심사입니다. 목표는 데이터 과학 전문 지식이 필요하지 않고 AI를 사용하여 앱, 사이트, 대시보드를 구축하고 프로세스를 자동화할 수 있는 모든 사람을 가능하게 하는 것입니다. 이 목표는 Copilot과 AI Builder의 형태로 생성형 AI를 Power Platform의 low-code 개발 환경에 통합함으로써 달성됩니다.
 
 ### 이 작업은 어떻게 이루어질까요?
 
@@ -57,19 +57,19 @@ Copilot은 Power Apps, Power Automate, Power BI, Power Pages 및 Power Virtual A
 
 ### Power Apps에서의 Copilot
 
-Power Apps는 Power Platform의 일부로, 데이터를 추적, 관리 및 상호 작용하기 위한 앱을 구축하기 위한 low-code 개발 환경을 제공합니다. 확장 가능한 데이터 플랫폼과 클라우드 서비스 및 온프레미스 데이터에 연결할 수 있는 기능을 갖춘 앱 개발 서비스 모음입니다. Power Apps를 사용하면 브라우저, 태블릿 및 휴대폰에서 실행되는 앱을 구축하고 동료들과 공유할 수 있습니다. Power Apps는 간단한 인터페이스로 사용자를 앱 개발로 안내하여 모든 비즈니스 사용자나 전문 개발자가 사용자 정의 앱을 구축할 수 있습니다. 앱 개발 경험은 또한 Generative AI를 통해 Copilot과 함께 향상됩니다.
+Power Apps는 Power Platform의 일부로, 데이터를 추적, 관리 및 상호 작용하기 위한 앱을 구축하기 위한 low-code 개발 환경을 제공합니다. 확장 가능한 데이터 플랫폼과 클라우드 서비스 및 온프레미스 데이터에 연결할 수 있는 기능을 갖춘 앱 개발 서비스 모음입니다. Power Apps를 사용하면 브라우저, 태블릿 및 휴대폰에서 실행되는 앱을 구축하고 동료들과 공유할 수 있습니다. Power Apps는 간단한 인터페이스로 사용자를 앱 개발로 안내하여 모든 비즈니스 사용자나 전문 개발자가 사용자 정의 앱을 구축할 수 있습니다. 앱 개발 경험은 또한 생성형 AI를 통해 Copilot과 함께 향상됩니다.
 
 Power Apps의 Copilot AI 어시스턴트 기능을 사용하면 필요한 앱 종류와 앱이 추적, 수집 또는 표시해야 하는 정보를 설명할 수 있습니다. Copilot은 이 설명을 기반으로 반응형 캔버스 앱을 생성합니다. 그런 다음 앱을 사용자의 요구에 맞게 사용자 정의할 수 있습니다. AI Copilot은 또한 데이터를 추적하려는 필드와 일부 샘플 데이터가 포함된 Dataverse 테이블을 생성하고 제안합니다. 이후 대화식 단계를 통해 AI Copilot 어시스턴트 기능을 사용하여 테이블을 사용자의 요구에 맞게 사용자 정의할 수 있습니다. 이 기능은 Power Apps 홈 화면에서 즉시 사용할 수 있습니다.
 
 ### Power Automate에서의 Copilot
 
-Power Automate는 Power Platform의 일부로, 응용 프로그램 및 서비스 간에 자동화된 워크플로우를 생성할 수 있도록 도와줍니다. 의사 결정 승인, 커뮤니케이션, 데이터 수집과 같은 반복적인 비즈니스 프로세스를 자동화하는 데 도움이 됩니다. 간단한 인터페이스를 통해 모든 기술 역량을 갖춘 사용자(초보자부터 숙련된 개발자까지)가 작업 작업을 자동화할 수 있습니다. 워크플로우 개발 경험은 또한 Generative AI를 통해 Copilot과 함께 향상됩니다.
+Power Automate는 Power Platform의 일부로, 응용 프로그램 및 서비스 간에 자동화된 워크플로우를 생성할 수 있도록 도와줍니다. 의사 결정 승인, 커뮤니케이션, 데이터 수집과 같은 반복적인 비즈니스 프로세스를 자동화하는 데 도움이 됩니다. 간단한 인터페이스를 통해 모든 기술 역량을 갖춘 사용자(초보자부터 숙련된 개발자까지)가 작업 작업을 자동화할 수 있습니다. 워크플로우 개발 경험은 또한 생성형 AI를 통해 Copilot과 함께 향상됩니다.
 
 Power Automate의 Copilot AI 어시스턴트 기능을 사용하면 필요한 플로우 종류와 플로우가 수행해야 하는 작업을 설명할 수 있습니다. Copilot은 이 설명을 기반으로 플로우를 생성합니다. 그런 다음 플로우를 사용자의 요구에 맞게 사용자 정의할 수 있습니다. AI Copilot은 또한 자동화하려는 작업을 수행하기 위해 필요한 작업을 생성하고 제안합니다. 이후 대화식 단계를 통해 AI Copilot 어시스턴트 기능을 사용하여 작업을 사용자의 요구에 맞게 사용자 정의할 수 있습니다. 이 기능은 Power Automate 홈 화면에서 즉시 사용할 수 있습니다.
 
 ## 과제: Copilot을 사용하여 학생 과제 및 송장을 관리하는 솔루션 구축
 
-우리 스타트업은 학생들에게 온라인 강좌를 제공합니다. 스타트업은 빠르게 성장하여 강좌 수요를 따라가기 어려워졌습니다. 스타트업은 학생 과제와 송장 처리 프로세스를 관리하기 위해 low code 솔루션을 구축하는 데 도움을 받기 위해 Power Platform 개발자로서 여러분을 고용했습니다. 솔루션은 앱을 통해 학생 과제를 추적하고 관리하며, 워크플로우를 통해 송장 처리 프로세스를 자동화해야 합니다. 여러분은 Generative AI를 사용하여 솔루션을 개발하도록 요청받았습니다.
+우리 스타트업은 학생들에게 온라인 강좌를 제공합니다. 스타트업은 빠르게 성장하여 강좌 수요를 따라가기 어려워졌습니다. 스타트업은 학생 과제와 송장 처리 프로세스를 관리하기 위해 low code 솔루션을 구축하는 데 도움을 받기 위해 Power Platform 개발자로서 여러분을 고용했습니다. 솔루션은 앱을 통해 학생 과제를 추적하고 관리하며, 워크플로우를 통해 송장 처리 프로세스를 자동화해야 합니다. 여러분은 생성형 AI를 사용하여 솔루션을 개발하도록 요청받았습니다.
 
 Copilot 사용을 시작할 때는 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko)를 사용하여 프롬프트로 시작할 수 있습니다. 이 라이브러리에는 Copilot을 사용하여 앱과 플로우를 구축하는 데 사용할 수 있는 프롬프트 목록이 포함되어 있습니다. 또한 라이브러리의 프롬프트를 사용하여 Copilot에게 요구 사항을 설명하는 방법에 대한 아이디어를 얻을 수 있습니다.
 
@@ -239,6 +239,6 @@ Power Automate에서 이 AI 모델을 사용하는 방법에 대해 자세히 �
 
 ## 잘하셨습니다. 학습을 계속하세요!
 
-이 레슨을 완료한 후 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 계속 향상시킬 수 있습니다!
+이 레슨을 완료한 후 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 생성형 AI 지식을 계속 향상시킬 수 있습니다!
 
-다음 레슨인 [함수 호출과 Generative AI 통합](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!
+다음 레슨인 [Function Calling과 생성형 AI 통합](../../../11-integrating-with-function-calling/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!

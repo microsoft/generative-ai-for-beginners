@@ -2,22 +2,22 @@
 
 이 코스를 시작하시게 되어 정말 기쁩니다. 여러분이 Generative AI와 함께 무엇을 영감받아 만들어낼지 기대됩니다!
 
-여러분들의 시간을 성공적으로 보내기 위해, Setup Steps, 기술적 요구사항, 도움이 필요한 경우 어떻게 도움을 받을 수 있는지 안내하는 페이지를 만들었습니다.
+여러분들의 시간을 성공적으로 보내기 위해, 코스 환경 설정, 기술적 요구사항, 도움이 필요한 경우 어떻게 도움을 받을 수 있는지 안내하는 페이지를 만들었습니다.
 
-## Setup Steps
+## 코스 환경 설정하기
 
 이 과정을 시작하려면 다음 단계를 완료해야 합니다.
 
 
 ### 1. 레포지토리 포크하기
 
-[레포지토리를 fork](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) 하여 자신의 Github 계정에 업로드하여 코드를 변경하고 과제를 완료할 수 있습니다. 또한 [레포지토리에 star (🌟)를 추가](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) 하여 쉽게 찾아볼 수 있도록 할 수 있습니다.
+[레포지토리를 포크](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) 하여 자신의 Github 계정에 업로드하여 코드를 변경하고 과제를 완료할 수 있습니다. 또한 [레포지토리에 스타 (🌟)를 추가](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) 하여 쉽게 찾아볼 수 있도록 할 수 있습니다.
 
 ### 2. Codespace 만들기
 
 코드를 실행하는 동안 의존성 문제를 피하기 위해 Github codepsace를 활용하여 코스를 진행하는 것을 추천합니다.
 
-이를 위해 Fork한 레포지토리에서 `Code` 옵션을 선택하고 **Codespaces** 옵션을 선택하여 생성할 수 있습니다.
+이를 위해 포크한 레포지토리에서 `Code` 옵션을 선택하고 **Codespaces** 옵션을 선택하여 생성할 수 있습니다.
 
 ### 3. API 키 저장하기
 
@@ -29,7 +29,7 @@
 
 컴퓨터에서 로컬로 코드를 실행하려면 [Python](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst)이 설치되어 있어야 합니다.
 
-이후 레포지토리를 사용하려면 이를 clone해야 합니다.
+이후 레포지토리를 사용하려면 이를 클론해야 합니다.
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
@@ -78,7 +78,7 @@ Probably the best way to use the curriculum is to open it in [Visual Studio Code
 
 브라우저에서 직접 자신의 컴퓨터에서 Jupyter 환경을 사용할 수도 있습니다. 기존 Jupyter와 Jupyter Hub 모두 자동 완성, 코드 강조 등을 제공하는 매우 편리한 개발 환경을 제공합니다.
 
-Jupyter를 로컬에서 시작하려면, 강의의 디렉토리로 이동하고 다음을 실행하십시오:
+Jupyter를 로컬에서 시작하려면, 코스의 디렉토리로 이동하고 다음을 실행하십시오:
 
 ```bash
 jupyter notebook
@@ -120,7 +120,7 @@ GitHub Codespaces를 사용할 때 API 키를 안전하게 유지하는 가장 �
 
 ## 기여하기
 
-해당 코스는은 오픈 소스로 관리됩니다. 개선할 부분이나 문제가 있으면 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)를 생성하거나 [Github issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)를 기록해 주세요.
+해당 코스는 오픈 소스로 관리됩니다. 개선할 부분이나 문제가 있으면 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)를 생성하거나 [Github issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)를 기록해 주세요.
 
 프로젝트 팀은 모든 기여를 추적하고 있으며, 오픈 소스에 기여하는 것은 생성형 AI 분야에서 커리어를 구축하는 데 훌륭한 방법입니다.
 
@@ -134,4 +134,4 @@ GitHub Codespaces를 사용할 때 API 키를 안전하게 유지하는 가장 �
 
 ## 시작해봅시다
 
-해당 코스에 필요한 단계를 모두 완료했으니, [생성형 AI와 LLMs 소개](../../../01-introduction-to-genai/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)를 통해 시작해 보세요.
+해당 코스에 필요한 단계를 모두 완료했으니, [생성형 AI와 LLM 소개](../../../01-introduction-to-genai/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)를 통해 시작해 보세요.

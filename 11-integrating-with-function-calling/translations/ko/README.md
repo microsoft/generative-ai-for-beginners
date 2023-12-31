@@ -1,12 +1,14 @@
-# function calling과 통합하기
+# Function Calling과 통합하기
 
 ![chapter image](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)
+
+> **비디오 공개 예정**
 
 지금까지 이전 레슨에서 많은 것을 배웠습니다. 그러나 더 나아갈 수 있습니다. 우리가 해결할 수 있는 몇 가지 문제는 응답 형식을 더 일관되게 만들어 응답을 더 쉽게 처리할 수 있도록 하는 것이며, 또한 응용 프로그램을 더 풍부하게 만들기 위해 다른 소스에서 데이터를 추가할 수도 있습니다.
 
 위에서 언급한 문제들은 이번 챕터에서 다루고자 하는 내용입니다.
 
-> **비디오 공개 예정**
+
 
 ## 소개
 
@@ -20,9 +22,9 @@
 
 이 레슨을 마치면 다음을 할 수 있게 됩니다:
 
-- 함수 호출을 사용하는 목적을 설명할 수 있습니다.
-- Azure Open AI 서비스를 사용하여 함수 호출을 설정할 수 있습니다.
-- 응용 프로그램의 사용 사례에 맞는 효과적인 함수 호출을 설계할 수 있습니다.
+- function calling을 사용하는 목적을 설명할 수 있습니다.
+- Azure Open AI 서비스를 사용하여 function calling을 설정할 수 있습니다.
+- 응용 프로그램의 사용 사례에 맞는 효과적인 function calling을 설계할 수 있습니다.
 
 ## 시나리오: 함수를 사용하여 챗봇 개선하기
 
@@ -38,7 +40,7 @@
 
 ## Function calling의 필요성
 
-function calling 이전에 LLM(언어 모델)에서의 응답은 구조화되지 않고 일관성이 없었습니다. 개발자는 각 응답의 변형을 처리할 수 있도록 복잡한 유효성 검사 코드를 작성해야 했습니다. 사용자는 "스톡홀름의 현재 날씨는 어떻게 되나요?"와 같은 답변을 받을 수 없었습니다. 이는 모델이 데이터를 훈련한 시점으로 제한되었기 때문입니다.
+function calling 이전에 LLM에서의 응답은 구조화되지 않고 일관성이 없었습니다. 개발자는 각 응답의 변형을 처리할 수 있도록 복잡한 유효성 검사 코드를 작성해야 했습니다. 사용자는 "스톡홀름의 현재 날씨는 어떻게 되나요?"와 같은 답변을 받을 수 없었습니다. 이는 모델이 데이터를 훈련한 시점으로 제한되었기 때문입니다.
 
 function calling은 다음과 같은 제한 사항을 극복하기 위한 Azure Open AI 서비스의 기능입니다:
 
@@ -332,7 +334,7 @@ LLM에서 서식이 지정된 응답을 테스트한 후, 이제 이를 애플�
    ```python
       # 모델이 함수를 호출하려는지 확인합니다.
       if response_message.function_call.name:
-      print("추천 함수 호출:")
+      print("추천 function call:")
       print(response_message.function_call.name)
       print()
 
@@ -347,7 +349,7 @@ LLM에서 서식이 지정된 응답을 테스트한 후, 이제 이를 애플�
       function_args = json.loads(response_message.function_call.arguments)
       function_response = function_to_call(**function_args)
 
-      print("함수 호출 결과:")
+      print("function call 결과:")
       print(function_response)
       print(type(function_response))
 
@@ -445,4 +447,4 @@ Azure Open AI Function Calling 학습을 계속 진행하기 위해 다음을 �
 
 이 레슨을 완료한 후, [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 더욱 향상시킬 수 있습니다!
 
-12번 레슨으로 이동하여 [AI 애플리케이션을 위한 UX 디자인](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)에 대해 알아보세요!
+12번 레슨으로 이동하여 [AI 애플리케이션을 위한 UX 디자인](../../../12-designing-ux-for-ai-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)에 대해 알아보세요!
