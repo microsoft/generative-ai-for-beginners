@@ -1,7 +1,7 @@
 
-![Generative AI For Beginners](./images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
+![Generative AI For Beginners](../../images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
 
-### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
+### 생성형 AI 애플리케이션을 구축하기 위해 알아야 할 모든 것을 가르치는 12개의 레슨
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -30,9 +30,9 @@
 
 시작하려면 [이 저장소 전체를 포크](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst)하여 코드를 변경하고 과제를 완료할 수 있도록 자신의 GitHub 계정에 저장하세요. 나중에 찾기 쉽게 하려면 [이 저장소에 스타 (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)하세요.
 
-각각의 강의 링크는 아래에 제공되어 있습니다. 가장 관심 있는 강의부터 탐색하고 시작하세요!
+각각의 강의 링크는 아래에 제공되어 있습니다. 가장 관심 있는 강의부터 찾아보고 시작하세요!
 
-[강의 설정 페이지](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)로 이동하여 가장 적합한 설정 가이드를 찾으세요.
+[강의 환경 구축 페이지](../../00-course-setup/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)로 이동하여 적합한 환경 구축 가이드를 찾으세요.
 
 ## 🗣️ 다른 학습자들을 만나고 지원받기
 
@@ -44,7 +44,7 @@
 
 ##  🚀 스타트업이거나 실현하고자 하는 아이디어가 있나요?
 
-[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)에 가입하여 **무료 OpenAI 크레딧**과 **Azure OpenAI 서비스를 통해 OpenAI 모델에 액세스하기 위해 최대 **$150,000의 Azure 크레딧**을 받아보세요.
+[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)에 가입하여 **무료 OpenAI 크레딧**과 **Azure OpenAI 서비스를 통해 OpenAI 모델에 액세스하기 위해 최대 $150,000의 Azure 크레딧**을 받아보세요.
 
 ##  🙏 도움을 주고 싶으신가요?
 
