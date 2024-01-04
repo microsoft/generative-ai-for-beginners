@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
 > *(Click the image above to view video of this lesson)*
 
@@ -653,4 +653,4 @@ When working on the assignment, try to vary the temperature, try set it to 0, 0.
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 7 where we will look at how to [build chat applications](../../../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
