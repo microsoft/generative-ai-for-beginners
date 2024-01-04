@@ -22,7 +22,7 @@ Codespaces は、フォークしたリポジトリから、下記の緑のボタ
 
 > [!NOTE]
 > (訳者追記)：  
-Fork したリポジトリで Codespace を利用する場合、Codespace の使用料はマイクロソフトが支払います。
+Organization に所属しないユーザーが Fork したリポジトリで Codespace を利用する場合、[Codespace の使用料は個人のアカウントに課金されます](https://docs.github.com/ja/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#limiting-the-number-of-organization-owned-codespaces)。
 
 ### 3. API　キーの保管
 
