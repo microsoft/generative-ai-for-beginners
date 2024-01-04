@@ -58,19 +58,33 @@ First, we need to understand that prompting is an _emergent_ property of an LLM 
 
 There are some basic techniques that we can use to prompt an LLM. Let's explore them.
 
-- **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
+- **Zero-shot prompting**, this is the most basic form of prompting. It's a single prompt requesting a response from the LLM based solely on its training data.
+- **Few-shot prompting**, this type of prompting guides the LLM by providing 1 or more examples it can rely on to generate its response.
 - **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
 - **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
 - **Least to most**, like chain-of-thought, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
 - **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
 - **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
 
-### Few-shot prompting
+### Zero-shot prompting
 
-This style of prompting is very simple, it may consist of a single prompt and possibly a few examples. This technique is probably what you're using as you're starting to learn about LLMs. Here's an example:
+This style of prompting is very simple, it consists of a single prompt. This technique is probably what you're using as you're starting to learn about LLMs. Here's an example:
 
 - Prompt: "What is Algebra?"
 - Answer: "Algebra is a branch of mathematics that studies mathematical symbols and the rules for manipulating these symbols."
+
+### Few-shot prompting
+
+This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional a task-specific data. Here's an example:
+
+- Prompt: "Write a poem in the style of Shakespeare. Here are a few examples of Shakespearean sonnets.:
+  Sonnet 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
+  Sonnet 116: 'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds...'
+  Sonnet 132: 'Thine eyes I love, and they, as pitying me, Knowing thy heart torment me with disdain,...'
+  Now, write a sonnet about the beauty of the moon."
+- Answer: "Upon the sky, the moon doth softly gleam, In silv'ry light that casts its gentle grace,..."
+
+Examples provide the LLM with the context, format or style of the desired output. They help the model understand the specific task and generate more accurate and relevant responses.
 
 ### Chain-of-thought
 
