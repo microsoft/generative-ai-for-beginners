@@ -1,7 +1,7 @@
 
-![Generative AI For Beginners](./images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
+![Inteligencia Artificial Generativa para Principiantes](./images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
 
-### A 12 Lesson course teaching everything you need to know to start building Generative AI applications 
+### Un curso de 12 lecciones que enseña todo lo necesario para comenzar a construir aplicaciones de Inteligencia Artificial Generativa 
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -17,81 +17,79 @@
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 
-# Generative AI for Beginners - A Course 
-
-Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, you will be building your own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
-
-### 🌟 Special thanks 
-To our Microsoft Student Ambassadors and community authors, reviewers, and content contributors including: 
-
-[**John Aziz**](https://www.linkedin.com/in/john0isaac/) - For creating all of the GitHub Actions and workflows 
+# Inteligencia Artificial Generativa para Principiantes - Curso
 
 
+Aprende los fundamentos de la construcción de aplicaciones de Inteligencia Artificial Generativa con este curso de 12 lecciones, impartido por los Cloud Advocates de Microsoft. Cada lección aborda un aspecto clave de los principios de la Inteligencia Artificial Generativa y el desarrollo de aplicaciones. A lo largo de este curso, construirás tu propia startup de Inteligencia Artificial Generativa para comprender lo que se necesita para materializar tus ideas.
 
-## 🌱 Getting Started
+### 🌟 Agradecimientos especiales
+A nuestros Embajadores Estudiantiles de Microsoft y a los autores, revisores y contribuyentes de la comunidad, incluyendo:
 
-To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
-
-Below are the links to each lesson. Feel free to explore and start at any lesson that interests you the most! 
-
-Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) to find the setup guide that works best for you. 
-
-## 🗣️ Meet Other Learners, Get Support 
-
-One of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
-
-## 🧠 Want to learn more? 
-After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue levelling up your Generative AI knowledge! 
-
-##  🚀  Are you a startup or got an idea you want to launch? 
-
-Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) to receive **free OpenAI credits** and up to **$150k towards Azure credits to access OpenAI models through Azure OpenAI Services**. 
-
-##  🙏 Want to help?
-
-Here are ways you can contribute to this course: 
-- Find spelling errors or code errors, [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
-- Send us your ideas, maybe your ideas for new lessons or exercises, and let us know how we can improve.
+[**John Aziz**](https://www.linkedin.com/in/john0isaac/) - Por crear todas las GitHub Actions y workflows en GitHub.
 
 
-## 📂 Each lesson includes:
+## 🌱 Iniciemos!
 
-- a short video introduction to the topic
-- a written lesson located in the README 
-- a Jupyter Notebook with code examples (for project-based lessons) 
-- a challenge or assignment to apply your learning 
-- links to extra resources to continue your learning
+Para empezar, [Realiza un fork al repositorio completo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) a tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo más fácilmente más tarde.
 
-## 🗃️ Lessons
-|       |              Lesson Link              |                       Concepts Taught                       |                     Learning Goal                 |                             
+A continuación, se encuentran los enlaces a cada lección. ¡Siéntete libre de explorar y comenzar con la lección que más te interese!
+
+Dirígete a la [Página de Configuración del Curso](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) para encontrar la guía de configuración que mejor se adapte a tus necesidades.
+
+## 🗣️ Conoce a Otros Estudiantes para tener apoyo
+
+¡Una de las mejores formas de aprender es hacerlo junto a otros! Únete a nuestro [servidor oficial de Discord de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conocer y establecer conexiones con otros estudiantes que están tomando este curso, y obtener apoyo. ¡Quién sabe! Puede que encuentres a tu próximo cofundador allí.
+
+## 🧠 ¿Quieres aprender más?
+
+Después de completar este curso, echa un vistazo a nuestro [Colección de Aprendizaje en Inteligencia Artificial Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ¡Para seguir mejorando tu conocimiento en Inteligencia Artificial Generativa!
+
+##  🚀 ¿Eres una startup o tienes una idea que quisieras poner en marcha?
+
+Regístrate para [Microsoft para Fundadores de Startups Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) para recibir **créditos gratuitos de OpenAI** y hasta **$150,000 en créditos de Azure para acceder a los modelos de OpenAI a través de los Servicios Azure OpenAI**. 
+
+##  🙏 ¿Quieres ayudar?
+
+Aquí hay formas en las que puedes contribuir a este curso:
+- Encuentra errores ortográficos o de código, [plantea un issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) o [Crea un pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+- Envíanos tus ideas, quizás tengas propuestas para nuevas lecciones o ejercicios, y háznos saber cómo podemos mejorar.
+
+## 📂 Cada lección incluye:
+
+- Una breve introducción en video al tema
+- Una lección escrita ubicada en el README
+- Un cuaderno Jupyter con ejemplos de código (para lecciones basadas en proyectos)
+- Un desafío o tarea para aplicar lo aprendido
+- Enlaces a recursos adicionales para continuar tu aprendizaje
+
+## 🗃️ Lecciones
+|       |           Enlace de la Lección              |                       Conceptos Enseñados                       |                     Objetivo de Aprendizaje                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
-| 00 | [Course Introduction - How to Take This Course](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) | Tech setup and course structure | Setting you up for success while learning in this course| 
-| 01 | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) | **Concept**: Generative AI and the current technology landscape|  Understanding what Generative AI is and how Large Language Models (LLMs) work.                    |
-| 02 | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) | **Concept**: Testing, iterating, and comparing different Large Language Models | Select the right model for your use case | 
-| 03 | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)| **Concept:** Understanding the limitations of foundation models and the risks behind AI | Learn how to build Generative AI Applications responsibly 
-| 04 | [Understanding Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) | **Code/Concept:** Hands-on application of Prompt Engineering Best Practices  |  Understand prompt structure & usage|  
-| 05 | [Creating Advanced Prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst) | **Code/Concept:** Extend your knowledge of prompt engineering by applying different techniques to your prompts | Apply prompt engineering techniques that improve the outcome of your prompts.| 
-| 06 | [Building Text Generation Applications](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** Build a text generation app using Azure OpenAI  | Understand how to efficiently use tokens and temperature to vary the model's output | |
-| 07 | [Building Chat Applications](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Code**: Techniques for efficiently building and integrating chat applications.| Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications| 
-| 08 | [Building Search Apps Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Code**: Semantic vs Keyword search.  Learn about text embeddings and how they apply to search  | Create an application that uses Embeddings to search for data. | 
-| 09 | [Building Image Generation Applications](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** Image generation and why it's useful in building applications| Build an image generation application | 
-| 10 | [Building Low Code AI Applications](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Low Code:** Introduction to Generative AI in Power Platform | Build a Student Assignment Tracker App for our education startup with Low Code | |
-| 11 | [Integrating External Applications with Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)  | **Code:** What is function calling and its use cases for applications  | Setup a function call to retrieve data from an external API | |
-| 12 | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Concept:** Designing AI Applications for Trust and Transparency | Apply UX design principles when developing Generative AI Applications | |
-| xx | [Continue Your Learning](./13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst)  | Links to continue your learning from each lesson! | Mastering your Generative AI skills | |
+| 00 | [Introducción al Curso - ¿Cómo Tomar Este Curso?](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) |Configuración técnica y estructura del curso | Preparándote para el éxito mientras aprendes en este curso| 
+| 01 | [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Gran Escala (LLMs, por sus siglas en inglés)](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) | **Concepto**: Inteligencia Artificial Generativa y el panorama tecnológico actual|Comprendiendo qué es la IA Generativa y cómo funcionan los LLMs|
+| 02 | [Explorando y comparando diferentes LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) | **Concepto**:Probando, iterando y comparando diferentes Modelos de Lenguaje de Gran Escala (LLMs) | Seleccionar el modelo adecuado para tu caso de uso| 
+| 03 | [Utilizando la Inteligencia Artificial Generativa de manera Responsable](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)|**Concepto:** Comprendiendo las limitaciones de los modelos fundamentales y los riesgos asociados con la Inteligencia Artificial |Aprender a construir Aplicaciones de Inteligencia Artificial Generativa de manera responsable
+| 04 | [Comprendiendo los Fundamentos de la Ingeniería de Indicaciones (Prompts)](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) | **Código/Concepto:** Aplicación práctica de las Mejores Prácticas en Ingeniería de Indicaciones | Comprender la estructura y el uso de indicaciones (prompts)|  
+| 05 | [Creación de Prompts Avanzados](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst) | **Código/Concepto** Amplía tu conocimiento de la ingeniería de indicaciones aplicando diferentes técnicas a tus indicaciones | Aplica técnicas de ingeniería de Prompts que mejoren el resultado de tus Prompts| 
+| 06 | [Construyendo Aplicaciones de Generación de Texto](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)  | **Código:** Construir una aplicación de generación de texto utilizando Azure OpenAI | Comprender cómo utilizar eficientemente los tokens y la temperatura para variar la salida del modelo | |
+| 07 | [Construyendo aplicaciones de chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Código**: Técnicas para construir e integrar eficientemente aplicaciones de chat.| Identificar métricas clave y consideraciones para monitorear y mantener efectivamente la calidad de las aplicaciones de chat impulsadas por inteligencia artificial| 
+| 08 | [Construyendo aplicaciones de búsqueda con bases de datos vectoriales.](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Código:** Búsqueda semántica vs búsqueda por palabras clave. Aprende sobre incrustaciones de texto y cómo se aplican a la búsqueda.|Crea una aplicación que utilice incrustaciones (embeddings) para buscar datos | 
+| 09 | [Construyendo aplicaciones de generación de imágenes](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Código:** Generación de imágenes y por qué es útil en la construcción de aplicaciones| Construir una aplicación de generación de imágenes | 
+| 10 | [Construyendo Aplicaciones de Inteligencia Artificial con Bajo Código](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)  | **Bajo Código:** Introducción a la Inteligencia Artificial Generativa en Power Platform | Construye una aplicación de seguimiento de tareas estudiantiles para nuestra startup educativa con una plataforma de bajo código | |
+| 11 | [Integrando aplicaciones externas mediante llamadas a funciones](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)  | **Código:** ¿Qué es la llamada a funciones y cuáles son sus casos de uso en aplicaciones? | Configura una llamada a función para recuperar datos de una API externa | |
+| 12 | [Diseñando la experiencia de usuario (UX) para aplicaciones de inteligencia artificial (IA).](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Concepto:** Diseñando aplicaciones de inteligencia artificial para confianza y transparencia | Aplicar principios de diseño de experiencia de usuario (UX) al desarrollar aplicaciones de inteligencia artificial generativa| |
+| xx | [Continua tu aprendizaje](./13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst)  | Enlaces para continuar tu aprendizaje desde cada lección | Mejorando tus habilidades en inteligencia artificial generativa | |
 
 
-
- 
   
-## 🎒  Other Courses 
+## 🎒  Otros Cursos 
 
-Our team produces other courses! Check out:
+¡Nuestro equipo produce otros cursos! Échales un vistazo a:
 
-- [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-- [IoT for Beginners](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+- [ML para principiantes](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+- [Ciencia de Datos para Principiantes](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+- [AI para principiantes](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [Web Dev para principiantes](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [IoT para principiantes](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+- [Desarrollo de XR para Principiantes](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Dominando GitHub Copilot para Programación en Pareja en IA](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
