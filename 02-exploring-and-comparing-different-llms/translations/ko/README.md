@@ -1,6 +1,6 @@
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](./images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
 
 > *Click the image above to view video of this lesson*
 
@@ -48,14 +48,14 @@ The term Foundation Model was [coined by Stanford researchers](https://arxiv.org
 - **They are very large models**, based on very deep neural networks trained on billions of parameters.
 - **They are normally intended to serve as a ‘foundation’ for other models**, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
 
-![Foundation Models versus LLMs](./images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
+![Foundation Models versus LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 To further clarify this distinction, let’s take ChatGPT as an example. To build the first version of ChatGPT, a model called GPT-3.5 served as the foundation model. This means that OpenAI used some chat-specific data to create a tuned version of GPT-3.5 that was specialized in performing well in conversational scenarios, such as chatbots.
 
-![Foundation Model](./images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
+![Foundation Model](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -73,15 +73,15 @@ LLMs can also be categorized by the output they generate.
 
 Embeddings are a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](./images/Embedding.png?WT.mc_id=academic-105485-koreyst)
+![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-koreyst)
 
 Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), and can be used to generate new images or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](./images/Image.png?WT.mc_id=academic-105485-koreyst)
+![Image generation](../../images/Image.png?WT.mc_id=academic-105485-koreyst)
 
 Text and code generation models are models that generate text or code. These models are often used for text summarization, translation, and question answering. Text generation models are often trained on large datasets of text, such as [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), and can be used to generate new text, or to answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), are often trained on large datasets of code, such as GitHub, and can be used to generate new code, or to fix bugs in existing code.
 
- ![Text and code generation](./images/Text.png?WT.mc_id=academic-105485-koreyst)
+ ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -113,19 +113,19 @@ Most of the models we mentioned in previous paragraphs (OpenAI models, open sour
 - Find the Foundation Model of interest in the catalog, filtering by task, license, or name. It’s also possible to import new models that are not yet included in the catalog.
 - Review the model card, including a detailed description and code samples, and test it with the Sample Inference widget, by providing a sample prompt to test the result.
 
-![Model card](./images/Llama1.png?WT.mc_id=academic-105485-koreyst)
+![Model card](../../images/Llama1.png?WT.mc_id=academic-105485-koreyst)
 
 - Evaluate model performance with objective evaluation metrics on a specific workload and a specific set of data provided in input.
 
-![Model evaluation](./images/Llama2.png?WT.mc_id=academic-105485-koreyst)
+![Model evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
 
 - Fine-tune the model on custom training data to improve model performance in a specific workload, leveraging the experimentation and tracking capabilities of Azure Machine Learning.
 
-![Model fine-tuning](./images/Llama3.png?WT.mc_id=academic-105485-koreyst)
+![Model fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
 
 - Deploy the original pre-trained model or the fine-tuned version to a remote real time inference or batch endpoint, to enable applications to consume it.
 
-![Model deployment](./images/Llama4.png?WT.mc_id=academic-105485-koreyst)
+![Model deployment](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
 
 ## Improving LLM results
 
@@ -143,7 +143,7 @@ deploy an LLM in production, with different levels of complexity, cost, and qual
 
 - **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
 
-![LLMs deployment](./images/Deploy.png?WT.mc_id=academic-105485-koreyst)
+![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
 Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
@@ -194,4 +194,4 @@ Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/r
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../../../03-using-generative-ai-responsibly/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)!
