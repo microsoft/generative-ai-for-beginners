@@ -1,6 +1,6 @@
 # 텍스트 생성 애플리케이션 개발
 
-[![Building Text Generation Applications](././images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
 > *(위의 이미지를 클릭하여 이 수업의 동영상을 시청하세요.)*
 
