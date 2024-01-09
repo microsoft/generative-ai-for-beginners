@@ -51,7 +51,7 @@ Regístrate a [FoundersHub de Microsoft para emprendedores](https://aka.ms/genai
 ##  🙏 ¿Quieres ayudar?
 
 Aquí hay formas en las que puedes contribuir a este curso:
-- Encuentra errores ortográficos o de código, [plantea un issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) o [Crea un pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+- Encuentra errores ortográficos o de código, [abre un issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) o [Crea un pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 - Envíanos tus ideas, quizás tengas propuestas para nuevas lecciones o ejercicios, y háznos saber cómo podemos mejorar.
 
 ## 📂 Cada lección incluye:
