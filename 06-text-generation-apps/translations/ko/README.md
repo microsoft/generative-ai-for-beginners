@@ -1,117 +1,117 @@
-# Building Text Generation Applications
+# 텍스트 생성 애플리케이션 개발
 
 [![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
 
-> *(Click the image above to view video of this lesson)*
+> *(위의 이미지를 클릭하여 이 수업의 동영상을 시청하세요.)*
 
-You've seen so far through this curriculum that there are core concepts like prompts and even a whole discipline called "prompt engineering". Many tools you can interact with like ChatGPT, Office 365, Microsoft Power Platform and more, support you using prompts to accomplish something.
+지금까지 이 커리큘럼을 통해 프롬프트와 "프롬프트 엔지니어링"이라는 전체적인 개념과 같은 핵심 개념들을 보셨습니다. ChatGPT, Office 365, Microsoft Power Platform 등 다양한 도구들은 프롬프트를 사용하여 어떤 작업을 수행하는 데 도움을 주는 것을 확인하실 수 있습니다.
 
-For you to add such an experience to an app, you need to understand concepts like prompts, completions and choose a library to work with. That's exactly what you'll learn in this chapter.
+앱에 이러한 경험을 추가하려면 프롬프트, completion(완성어) 및 작업할 라이브러리와 관련된 개념을 이해해야 합니다. 이것이 바로 이번 장에서 배우게 될 내용입니다.
 
-## Introduction
+## 소개
 
-In this chapter, you will:
+이번 장에서는 다음을 하게 될 것입니다:
 
-- Learn about the openai library and it's core concepts.
-- Build a text generation app using openai.
-- Understand how to use concepts like prompt, temperature, and tokens to build a text generation app.
+- OpenAI 라이브러리와 그 핵심 개념에 대해 학습합니다.
+- OpenAI를 사용하여 텍스트 생성 앱을 개발합니다.
+- 프롬프트, temperature(언어 생성 모델에서 생성된 텍스트의 다양성을 조절하는 하이퍼파라미터), 토큰과 같은 개념을 사용하여 텍스트 생성 앱을 구축하는 방법을 이해합니다.
 
-## Learning goals
+## 학습 목표
 
-At the end of this lesson, you'll be able to:
+이 장을 학습하고 나면 다음을 할 수 있게 될 것입니다:
 
-- Explain what a text generation app is.
-- Build a text generation app using openai.
-- Configure your app to use more or less tokens and also change the temperature, for a varied output.
+- 텍스트 생성 앱이 무엇인지를 설명합니다.
+- OpenAI를 사용하여 텍스트 생성 앱을 개발합니다.
+- 앱을 더 많거나 더 적은 토큰을 사용하도록 구성하고, 또한 다양한 출력을 얻기 위해 temperature를 조절합니다.
 
-## What is a text generation app?
+## 텍스트 생성 애플리케이션이 무엇인가요?
 
-Normally when you build an app it has some kind of interface like the following:
+일반적으로 앱을 개발할 때 다음과 같은 종류의 인터페이스가 있습니다:
 
-- Command-based. Console apps are typical apps where you type a command and it carries out a task. For example, `git` is a command-based app.
-- User interface (UI). Some apps have graphical user interfaces (GUIs) where you click buttons, input text, select options and more.
+- 명령 기반(Command-based): 콘솔 앱은 명령을 입력하고 해당 작업을 수행하는 전형적인 앱입니다. 예를 들어 git은 명령 기반 앱의 한 예입니다.
+- 사용자 인터페이스 (UI): 일부 앱은 그래픽 사용자 인터페이스 (GUI)를 갖고 있습니다. 여기서는 버튼을 클릭하거나 텍스트를 입력하고 옵션을 선택하는 등의 작업을 수행합니다.
 
-### Console and UI apps are limited
+### 콘솔 및 UI 앱은 제한적입니다
 
-Compare it to a command-based app where you type a command:
+명령 기반 앱에서 명령을 입력하는 것과 비교해보세요:
 
-- **It's limited**. You can't just type any command, only the ones that the app supports.
-- **Language specific**. Some apps support many languages, but by default the app is built for a specific language, even if you can add more language support.
+- **제한적입니다**. 모든 명령을 입력할 수 있는 것이 아니라, 앱이 지원하는 명령만 입력할 수 있습니다.
+- **특정 언어에 한정됩니다**. 일부 앱은 여러 언어를 지원하지만, 기본적으로 앱은 특정 언어를 위해 구축되며, 추가적인 언어 지원이 가능한 경우에도 해당 언어에 한정됩니다.
 
-### Benefits of text generation apps
+### 텍스트 생성 앱의 장점
 
-So how is a text generation app different?
+그렇다면 텍스트 생성 앱은 어떻게 다를까요?
 
-In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that because you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited on what's in a database.
+텍스트 생성 앱에서는 더 많은 유연성을 가지며, 일련의 명령이나 특정 입력 언어에 제한되지 않습니다. 대신에 자연어를 사용하여 앱과 상호작용할 수 있습니다. 또 다른 장점은 이미 방대한 정보 코퍼스(말뭉치)로 훈련된 데이터 소스와 상호작용하고 있기 때문에, 전통적인 앱이 데이터베이스에 제한되는 것과는 달리 더 많은 가능성을 가집니다.
 
-### What can I build with a text generation app?
+### 텍스트 생성 앱으로 무엇을 만들 수 있을까요?
 
-There are many things you can build. For example:
+많은 것들을 만들 수 있습니다. 예를 들어:
 
-- **A chatbot**. A chatbot answering questions about topics, like your company and its products could be a good match.
-- **Helper**. LLMs are great at things like summarizing text, getting insights from text, producing text like resumes and more.
-- **Code assistant**. Depending on the language model you use, you can build a code assistant that helps you write code. For example, you can use a product like GitHub Copilot as well as ChatGPT to help you write code.
+- **챗봇**. 회사와 제품에 대한 질문에 답변하는 챗봇을 만들 수 있습니다.
+- **도움이 되는 도구**. LLM은 텍스트 요약, 텍스트에서 통찰력 얻기, 이력서와 같은 텍스트 생성 등에 뛰어납니다.
+- **코드 어시스턴트**. 사용하는 언어 모델에 따라 코드 작성을 도와주는 코드 어시스턴트를 만들 수 있습니다. 예를 들어, GitHub Copilot과 ChatGPT와 같은 제품을 사용하여 코드 작성을 도와줄 수 있습니다.
 
-## How can I get started?
+## 어떻게 시작할 수 있을까요?
 
-Well, you need to find a way to integrate with an LLM which usually entails the following two approaches:
+LLM과 통합하는 방법을 찾아야 합니다. 일반적으로 다음 두 가지 접근 방식을 사용합니다:
 
-- Use an API. Here you're constructing web requests with your prompt and get generated text back.
-- Use a library. Libraries help encapsulate the API calls and make them easier to use.
+- API 사용. 여기서는 프롬프트와 함께 웹 요청을 생성하고 생성된 텍스트를 받아옵니다.
+- 라이브러리 사용. 라이브러리는 API 호출을 캡슐화하고 사용하기 쉽게 만들어줍니다.
 
-## Libraries/SDKs
+## 라이브러리/SDK
 
-There are a few well known libraries for working with LLMs like:
+LLM과 작업하기 위해 몇 가지 잘 알려진 라이브러리가 있습니다:
 
-- **openai**, this library makes it easy to connect to your model and send in prompts.
+- **openai**, 이 라이브러리는 모델에 연결하고 프롬프트를 보내는 것을 쉽게 만들어줍니다.
 
-Then there are libraries that operate on a higher level like:
+또한 다음과 같이 더 높은 수준에서 작동하는 라이브러리도 있습니다:
 
-- **Langchain**. Langchain is well known and supports Python.
-- **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
+- **Langchain**. Langchain은 잘 알려진 라이브러리로, Python을 지원합니다.
+- **Semantic Kernel**. Semantic Kernel은 Microsoft에서 지원하는 C#, Python, Java 등의 언어를 지원하는 라이브러리입니다.
 
-## First app using openai
+## openai를 사용한 앱 개발
 
-Let's see how we can build our first app, what libraries we need, how much is required and so on.
+우리는 앱을 만드는 방법, 앱을 만들기 위해 어떤 라이브러리가 얼마나 필요한지 등을 살펴보겠습니다.
 
-### Install openai
+### openai 설치
 
-There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more.  We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
+OpenAI 또는 Azure OpenAI와 상호작용하기 위한 다양한 라이브러리가 있습니다. 그리고 이러한 다양한 라이브러리에서는 C#, Python, JavaScript, Java 등 다양한 프로그래밍 언어를 사용할 수도 있습니다. 저희는 `openai` Python 라이브러리를 사용하기로 선택했으므로, `pip`를 사용하여 설치하겠습니다.
 
 ```bash
 pip install openai
 ```
 
-### Create a resource
+### 리소스 생성
 
-You need to carry out the following steps:
+다음 단계를 수행해야 합니다:
 
-- Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Gain access to Azure Open AI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
-
-  > [!NOTE]
-  > At the time of writing, you need to apply for access to Azure Open AI.
-
-- Install Python <https://www.python.org/>
-- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
-
-### Locate API key and endpoint
-
-At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure Open AI resource and copy the "Key 1" value.
-
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
-
-Now that you have this information copied, let's instruct the libraries to use it.
+- Azure에 계정을 만듭니다. [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)에서 계정을 만드세요.
+- Azure Open AI에 액세스 권한을 얻으세요. [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst)로 이동하여 액세스를 요청하세요.
 
 > [!NOTE]
-> It's worth separating your API key from your code. You can do so by using environment variables.
+> 작성 시점에서 Azure Open AI에 대한 액세스 신청이 필요합니다.
+
+- Python을 설치합니다. <https://www.python.org/>
+- Azure OpenAI 서비스 리소스를 생성했습니다. [리소스 생성 가이드](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)를 참조하세요.
+
+### API 키와 엔드포인트 찾기
+
+이 시점에서 `openai` 라이브러리에 사용할 API 키를 알려야 합니다. API 키를 찾으려면 Azure Open AI 리소스의 "Keys and Endpoint" 섹션으로 이동하고 "Key 1" 값을 복사하세요.
+
+![Azure Portal의 Keys and Endpoint 리소스 블레이드](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+
+이제 이 정보를 복사했으니, 라이브러리에 사용하도록 지시합시다.
+
+> [!NOTE]
+> API 키를 코드와 분리하는 것이 좋습니다. 이를 위해 환경 변수를 사용할 수 있습니다.
 >
-> - Set the environment variable `OPENAI_API_KEY` to your API key.
+> - 환경 변수 `OPENAI_API_KEY`를 API 키로 설정하세요.
 >  `export OPENAI_API_KEY='sk-...'`
 
-### Setup configuration Azure
+### Azure 설정 구성
 
-If you're using Azure Open AI, here's how you setup configuration:
+Azure Open AI를 사용하는 경우, 다음과 같이 설정을 구성할 수 있습니다:
 
 ```python
 openai.api_type = 'azure'
@@ -120,19 +120,19 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Above we're setting the following:
+위에서는 다음과 같이 설정하고 있습니다:
 
-- `api_type` to `azure`. This tells the library to use Azure Open AI and not OpenAI.
-- `api_key`, this is your API key found in the Azure Portal.
-- `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
-- `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key. 
+- `api_type`을 `azure`로 설정합니다. 이는 라이브러리가 OpenAI가 아닌 Azure Open AI를 사용하도록 지시합니다.
+- `api_key`는 Azure Portal에서 찾을 수 있는 API 키입니다.
+- `api_version`은 사용하려는 API의 버전입니다. 작성 시점에서 최신 버전은 `2023-05-15`입니다.
+- `api_base`는 API의 엔드포인트입니다. API 키 옆에 Azure Portal에서 찾을 수 있습니다.
 
 > [!NOTE]
-> `os.getenv` is a function that reads environment variables. You can use it to read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set these environment variables in your terminal or by using a library like `dotenv`.
+> `os.getenv`는 환경 변수를 읽는 함수입니다. `OPENAI_API_KEY`와 `API_BASE`와 같은 환경 변수를 읽을 때 사용할 수 있습니다. 이러한 환경 변수는 터미널에서 설정하거나 `dotenv`와 같은 라이브러리를 사용하여 설정할 수 있습니다.
 
-## Generate text
+## 텍스트 생성
 
-The way to generate text is to use the `Completion` class. Here's an example:
+텍스트를 생성하는 방법은 `Completion` 클래스를 사용하는 것입니다. 다음은 예시입니다:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -141,11 +141,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-In the above code, we create a completion object and pass in the model we want to use and the prompt. Then we print the generated text.
+위의 코드에서는 완성 객체를 생성하고 사용할 모델과 프롬프트를 전달합니다. 그런 다음 생성된 텍스트를 출력합니다.
 
-### Chat completions
+### 채팅 completions
 
-So far, you've seen how we've been using `Completion` to generate text. But there's another class called `ChatCompletion` that is more suited for chatbots. Here's an example of using it:
+지금까지 `Completion`을 사용하여 텍스트를 생성하는 방법을 살펴보았습니다. 그러나 챗봇에 더 적합한 `ChatCompletion`이라는 다른 클래스도 있습니다. 다음은 사용 예시입니다:
 
 ```python
 import openai
@@ -156,27 +156,27 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-More on this functionality in an upcoming chapter.
+이 기능에 대한 자세한 내용은 다음 장에서 다룰 예정입니다.
 
-## Exercise - your first text generation app
+## 연습 - 첫 번째 텍스트 생성 앱
 
-Now that we learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
+이제 openai를 설정하고 구성하는 방법을 배웠으니, 첫 번째 텍스트 생성 앱을 만들어 보는 시간입니다. 앱을 만들기 위해 다음 단계를 따르세요:
 
-1. Create a virtual environment and install openai:
+1. 가상 환경을 생성하고 openai를 설치하세요:
 
     ```bash
     python -m venv venv
     source venv/bin/activate
     pip install openai
     ```
+    
+> [!NOTE]
+> Windows를 사용하는 경우 `source venv/bin/activate` 대신 `venv\Scripts\activate`를 입력하세요.
 
-    > [!NOTE]
-    > If you're using Windows type `venv\Scripts\activate` instead of `source venv/bin/activate`.
+> [!NOTE]
+> Azure Open AI 키를 찾으려면 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)로 이동하여 `Open AI`를 검색한 다음 `Open AI 리소스`를 선택하고 `Keys and Endpoint`를 선택하고 `Key 1` 값을 복사하세요.
 
-    > [!NOTE]
-    > Locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
-
-1. Create an *app.py* file and give it the following code:
+1. *app.py* 파일을 생성하고 다음 코드를 추가하세요:
 
     ```python
     import openai
@@ -198,10 +198,10 @@ Now that we learned how to set up and configure openai, it's time to build your 
     print(completion.choices[0].text)
     ```
 
-    > [!NOTE]
-    > If you're using Azure Open AI, you need to set the `api_type` to `azure` and set the `api_key` to your Azure Open AI key.
+> [!NOTE]
+> Azure Open AI를 사용하는 경우, `api_type`을 `azure`로 설정하고 `api_key`를 Azure Open AI 키로 설정해야 합니다.
 
-    You should see an output like the following:
+    다음과 같은 출력을 볼 수 있어야 합니다:
 
     ```output
      very unhappy _____.
@@ -209,25 +209,25 @@ Now that we learned how to set up and configure openai, it's time to build your 
     Once upon a time there was a very unhappy mermaid.
     ```
 
-## Different types of prompts, for different things
+## 서로 다른 유형의 프롬프트를, 서로 다른 용도에 맞게
 
-Now you've seen how to generate text using a prompt. You even have a program up and running that you can modify and change to generate different types of text.
+이제 프롬프트를 사용하여 텍스트를 생성하는 방법을 보았습니다. 심지어 다양한 유형의 텍스트를 생성하기 위해 수정하고 변경할 수 있는 프로그램이 작동 중입니다.
 
-Prompts can be used for all sorts of tasks. For example:
+프롬프트는 다양한 작업에 사용할 수 있습니다. 예를 들어:
 
-- **Generate a type of text**. For example, you can generate a poem, questions for a quiz etc.
-- **Lookup information**. You can use prompts to look for information like the following example 'What does CORS mean in web development?'.
-- **Generate code**. You can use prompts to generate code, for example developing a regular expression used to validate emails or why not generate an entire program, like a web app?
+- **텍스트 유형 생성**. 시, 퀴즈 질문 등을 생성할 수 있습니다.
+- **정보 조회**. '웹 개발에서 CORS는 무엇을 의미하는가?'와 같은 정보를 조회하는 데 프롬프트를 사용할 수 있습니다.
+- **코드 생성**. 이메일 유효성 검사에 사용되는 정규식 또는 웹 앱과 같은 전체 프로그램을 생성하는 데 프롬프트를 사용할 수 있습니다.
 
-## A more practical use case: a recipe generator
+## 더 실용적인 사용 사례: 레시피 생성기
 
-Imagine you have ingredients at home and you want to cook something. For that, you need a recipe. A way to find recipes is to use a search engine or you could use an LLM to do so.
+가정에 있는 재료로 무언가 요리하고 싶을 때 레시피가 필요합니다. 레시피를 찾는 방법은 검색 엔진을 사용하거나 LLM을 사용할 수도 있습니다.
 
-You could write a prompt like so:
+다음과 같은 프롬프트를 작성할 수 있습니다:
 
-> "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+> "닭, 감자, 당근을 사용한 요리 5개를 보여주세요. 각 레시피에 사용된 모든 재료를 나열해주세요."
 
-Given the above prompt, you might get a response similar to:
+위의 프롬프트를 주면 다음과 유사한 응답을 받을 수 있습니다:
 
 ```output
 1. Roasted Chicken and Vegetables: 
@@ -291,16 +291,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-This outcome is great, I know what to cook. At this point, what could be useful improvements are:
+이 결과는 훌륭합니다. 무엇을 요리할지 알게 되었습니다. 이제 유용한 개선 사항은 다음과 같습니다:
 
-- Filtering out ingredients I don't like or am allergic to.
-- Produce a shopping list, in case I don't have all the ingredients at home.
+- 싫어하는 재료나 알레르기가 있는 재료를 걸러내기.
+- 재료가 부족한 경우를 대비해 쇼핑 목록을 작성하기.
 
-For the above cases, let's add an additional prompt:
+위의 경우에 대해 추가적인 프롬프트를 추가해 보겠습니다:
 
-> "Please remove recipes with garlic as I'm allergic and replace it with something else. Also, please produce a shopping list for the recipes, considering I already have chicken, potatoes and carrots at home."
+> "대파를 대체할 다른 재료로 대체하고, 알레르기가 있는 사람을 위해 마늘이 포함된 레시피를 제거해주세요. 또한, 닭고기, 감자, 당근은 이미 집에 있으므로 쇼핑 목록을 작성해주세요."
 
-Now you have a new result, namely:
+이제 새로운 결과가 있습니다:
 
 ```output
 1. Roasted Chicken and Vegetables: 
@@ -367,20 +367,20 @@ Shopping List:
 - Pepper
 ```
 
-That's your five recipes, with no garlic mentioned and you also have a shopping list considering what you already have at home.
+이것이 당신의 다섯 가지 레시피입니다. 마늘은 포함되지 않았으며, 집에 이미 있는 재료를 고려한 쇼핑 목록도 있습니다.
 
-## Exercise - build a recipe generator
+## 연습 - 레시피 생성기 만들기
 
-Now that we have played out a scenario, let's write code to match the demonstrated scenario. To do so, follow these steps:
+이제 우리가 시나리오를 플레이했으니, 해당 시나리오와 일치하는 코드를 작성해 봅시다. 다음 단계를 따라주세요:
 
-1. Use the existing *app.py* file as a starting point
-1. Locate the `prompt` variable and change its code to the following:
+1. 기존의 *app.py* 파일을 시작점으로 사용합니다.
+2. `prompt` 변수를 찾아서 다음과 같이 코드를 변경합니다:
 
     ```python
     prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
     ```
 
-    If you now run the code, you should see an output similar to:
+    코드를 실행하면 다음과 유사한 출력이 표시됩니다:
 
     ```output
     -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -392,11 +392,11 @@ Now that we have played out a scenario, let's write code to match the demonstrat
     -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
     ```
 
-    > NOTE, your LLM is nondeterministic, so you might get different results every time you run the program.
+    > 참고: LLM은 결정론적이지 않으므로 프로그램을 실행할 때마다 다른 결과를 얻을 수 있습니다.
 
-    Great, let's see how we can improve things. To improve things, we want to make sure the code is flexible, so ingredients and number of recipes can be improved and changed.
+    좋아요, 어떻게 개선할 수 있는지 알아봅시다. 개선하기 위해 코드가 유연하도록 만들어야 합니다. 따라서 재료와 레시피 수를 개선하고 변경할 수 있어야 합니다.
 
-1. Let's change the code in the following way:
+1. 다음과 같이 코드를 변경해 봅시다:
 
     ```python
     no_recipes = input("No of recipes (for example, 5: ")
@@ -407,7 +407,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
     prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
     ```
 
-    Taking the code for a test run, could look like this:
+    코드를 테스트 실행하면 결과가 다음과 같을 수 있습니다:
 
     ```output
     No of recipes (for example, 5: 3
@@ -418,13 +418,13 @@ Now that we have played out a scenario, let's write code to match the demonstrat
     -Strawberry milk: milk, strawberries, sugar, vanilla extract
     ```
 
-### Improve by adding filter and shopping list
+### 필터와 쇼핑 목록 추가로 개선하기
 
-We now have a working app capable of producing recipes and it's flexible as it relies on inputs from the user, both on the number of recipes but also the ingredients used.
+이제 우리는 레시피를 생성할 수 있는 작동하는 앱을 가지고 있으며, 이 앱은 사용자의 입력에 의존하여 레시피 수와 사용되는 재료를 유연하게 조정할 수 있습니다.
 
-To further improve it, we want to add the following:
+그리고 더 개선하기 위해 다음을 추가하고 싶습니다:
 
-- **Filter out ingredients**. We want to be able to filter out ingredients we don't like or are allergic to. To accomplish this change, we can edit our existing prompt and add a filter condition to the end of it like so:
+- **재료 필터링**. 싫어하는 재료나 알레르기 반응이 있는 재료를 필터링할 수 있도록 하고 싶습니다. 이 변경을 위해 기존의 프롬프트를 수정하여 끝에 필터 조건을 추가할 수 있습니다:
 
     ```python
     filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
@@ -432,9 +432,9 @@ To further improve it, we want to add the following:
     prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
     ```
 
-    Above, we add `{filter}` to the end of the prompt and we also capture the filter value from the user.
+    위에서는 프롬프트 끝에 `{filter}`를 추가하고 사용자로부터 필터 값을 입력받도록 합니다.
 
-    An example input of running the program can now look like so:
+    프로그램을 실행하는 예시 입력은 다음과 같을 수 있습니다:
 
     ```output
     No of recipes (for example, 5: 3
@@ -501,14 +501,14 @@ To further improve it, we want to add the following:
     5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
     ```
 
-    As you can see, any recipes with milk in it has been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in them as well, so there's a need to be clear.
+    보시다시피, 우유가 들어간 레시피는 필터링되었습니다. 그러나 유당 불내증이 있다면 치즈가 들어간 레시피도 필터링하고 싶을 수 있으므로 명확하게 해야합니다.
 
 
-- **Produce a shopping list**. We want to produce a shopping list, considering what we already have at home.
+- **쇼핑 목록 생성**. 우리는 이미 집에 있는 재료를 고려하여 쇼핑 목록을 생성하고 싶습니다.
 
-    For this functionality, we could either try to solve everything in one prompt or we could split it up into two prompts. Let's try the latter approach. Here we're suggesting adding an additional prompt, but for that to work, we need to add the result of the former prompt as context to the latter prompt.
+    이 기능을 위해 우리는 하나의 프롬프트에서 모든 것을 해결하려고 시도할 수도 있고, 두 개의 프롬프트로 나눠서 해결할 수도 있습니다. 후자의 접근 방식을 시도해 보겠습니다. 여기서는 추가적인 프롬프트를 추가하는 것을 제안하고 있습니다. 그러나 이를 위해 이전 프롬프트의 결과를 후자의 프롬프트에 컨텍스트로 추가해야 합니다.
 
-    Locate the part in the code that prints out the result from the first prompt and add the following code below:
+    코드에서 첫 번째 프롬프트의 결과를 출력하는 부분을 찾아서 다음 코드를 아래에 추가하세요:
 
     ```python
     old_prompt_result = completion.choices[0].text
@@ -522,15 +522,15 @@ To further improve it, we want to add the following:
     print(completion.choices[0].text)
     ```
 
-    Note the following:
+    다음 사항을 주목하세요:
 
-    1. We're constructing a new prompt by adding the result from the first prompt to the new prompt:
+    1. 첫 번째 프롬프트의 결과를 새로운 프롬프트에 추가하여 새로운 프롬프트를 구성합니다:
 
         ```python
         new_prompt = f"{old_prompt_result} {prompt}"
         ```
 
-    1. We make a new request, but also considering the number of tokens we asked for in the first prompt, so this time we say `max_tokens` is 1200.
+    2. 첫 번째 프롬프트에서 요청한 토큰 수를 고려하여 새로운 요청을 만듭니다. 이번에는 `max_tokens`을 1200으로 설정합니다.
 
         ```python
         completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
@@ -550,19 +550,19 @@ To further improve it, we want to add the following:
         -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice 
         ```
 
-## Improve your setup
+## 설정 개선하기
 
-What we have so far is code that works, but there are some tweaks we should be doing to improve things further. Some things we should do are:
+지금까지 작성한 코드는 작동하지만, 더 개선할 수 있는 몇 가지 조정 사항이 있습니다. 우리가 해야 할 몇 가지 작업은 다음과 같습니다:
 
-- **Separate secrets from code**, like the API key. Secrets do not belong in code and should be stored in a secure location. To separate secrets from code, we can use environment variables and libraries like `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **비밀 정보와 코드 분리하기**, 예를 들어 API 키와 같은 비밀 정보는 코드에 포함되어서는 안 됩니다. 비밀 정보를 코드와 분리하기 위해 환경 변수와 `python-dotenv`와 같은 라이브러리를 사용하여 파일에서 로드할 수 있습니다. 코드에서 이렇게 구현할 수 있습니다:
 
-    1. Create a `.env` file with the following content:
+    1. `.env` 파일을 다음 내용으로 생성하세요:
 
         ```bash
         OPENAI_API_KEY=sk-...
         ```
 
-        > Note, for Azure, you need to set the following environment variables:
+        > 참고로, Azure의 경우 다음 환경 변수를 설정해야 합니다:
 
         ```bash
         OPENAI_API_TYPE=azure
@@ -570,7 +570,7 @@ What we have so far is code that works, but there are some tweaks we should be d
         OPENAI_API_BASE=<replace>
         ```
 
-        In code, you would load the environment variables like so:
+        코드에서는 다음과 같이 환경 변수를 로드합니다:
 
         ```python
         from dotenv import load_dotenv
@@ -580,39 +580,39 @@ What we have so far is code that works, but there are some tweaks we should be d
         openai.api_key = os.environ["OPENAI_API_KEY"]
         ```
 
-- **A word on token length**. We should consider how many tokens we need to generate the text we want. Tokens cost money, so where possible, we should try to be economical with the number of tokens we use. For example, can we phrase the prompt so that we can use less tokens?
+- **토큰 길이에 대한 고려사항**. 우리는 원하는 텍스트를 생성하기 위해 얼마나 많은 토큰이 필요한지 고려해야 합니다. 토큰은 비용이 들기 때문에 가능한 경우, 토큰의 수를 절약할 수 있는 방법을 고려해야 합니다. 예를 들어, 프롬프트를 어떻게 구성하면 더 적은 토큰을 사용할 수 있을까요?
 
-   To change the tokens used, you can use the `max_tokens` parameter. For example, if you want to use 100 tokens, you would do:
+    사용할 토큰을 변경하려면 `max_tokens` 매개변수를 사용할 수 있습니다. 예를 들어, 100개의 토큰을 사용하려면 다음과 같이 할 수 있습니다:
 
     ```python
     completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
     ```
 
-- **Experimenting with temperature**. Temperature is something we haven't mentioned so far but is an important context for how our program performs. The higher the temperature value the more random the output will be. Conversely the lower the temperature value the more predictable the output will be. Consider whether you want variation in your output or not.
+- **temperature 조절 실험**. temperature는 우리가 지금까지 언급하지 않았지만, 프로그램의 동작에 중요한 맥락입니다. temperature 값이 높을수록 출력이 더 무작위적이 됩니다. 반대로, temperature 값이 낮을수록 출력이 더 예측 가능해집니다. 출력에 변화를 원하는지 여부를 고려해보세요.
 
-   To alter the temperature, you can use the `temperature` parameter. For example, if you want to use a temperature of 0.5, you would do:
+    temperature를 변경하려면 `temperature` 매개변수를 사용할 수 있습니다. 예를 들어, temperature를 0.5로 설정하려면 다음과 같이 할 수 있습니다:
 
     ```python
     completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
     ```
 
-   > Note, the closer to 1.0, the more varied the output.
+> 참고로, 값이 1.0에 가까울수록 출력이 더 다양해집니다.
 
-## Assignment
+## 과제
 
-For this assignment, you can choose what to build.
+이 과제에서는 무엇을 구축할지 선택할 수 있습니다.
 
-Here are some suggestions:
+다음은 몇 가지 제안 사항입니다:
 
-- Tweak the recipe generator app to improve it further. Play around with temperature values, and the prompts to see what you can come up with.
-- Build a "study buddy". This app should be able to answer questions about a topic for example Python, you could have prompts like "What is a certain topic in Python?", or you could have a prompt that says, show me code for a certain topic etc.
-- History bot, make history come alive, instruct the bot to play a certain historical character and ask it questions about its life and times.
+- 레시피 생성기 앱을 더 개선해 보세요. temperature 값과 프롬프트를 조정하여 어떤 결과를 얻을 수 있는지 확인해보세요.
+- "스터디 버디"를 만들어 보세요. 이 앱은 Python과 같은 주제에 대한 질문에 답변할 수 있어야 합니다. "Python에서 특정 주제는 무엇인가요?"와 같은 프롬프트를 사용하거나, 특정 주제에 대한 코드를 보여달라는 프롬프트를 사용할 수도 있습니다.
+- 역사 봇을 만들어 역사를 생생하게 만들어 보세요. 봇에게 특정 역사적 인물로 역할을 맡게 하고, 그 인물에 대한 생애와 시대에 대해 질문해 보세요.
 
-## Solution
+## 정답 예시
 
-### Study buddy
+### 스터디 버디
 
-Below is a starter prompt, see how you can use it and tweak it to your liking.
+아래는 시작 프롬프트입니다. 이를 활용하고 원하는 대로 조정해보세요.
 
 ```text
 - "You're an expert on the Python language
@@ -625,9 +625,9 @@ Below is a starter prompt, see how you can use it and tweak it to your liking.
     - exercise in code with solutions"
 ```
 
-### History bot
+### 역사 봇
 
-Here are some prompts you could be using:
+다음은 사용할 수 있는 몇 가지 프롬프트입니다:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -636,21 +636,21 @@ Here are some prompts you could be using:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## Knowledge check
+## 지식 확인
 
-What does the concept temperature do?
+temperature 개념은 무엇을 하는 역할인가요?
 
-1. It controls how random the output is.
-1. It controls how big the response is.
-1. It controls how many tokens are used.
+1. 출력의 무작위성을 조절합니다.
+2. 응답의 크기를 조절합니다.
+3. 사용되는 토큰의 수를 조절합니다.
 
 
-## 🚀 Challenge
+## 🚀 도전과제
 
-When working on the assignment, try to vary the temperature, try set it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
+과제를 수행할 때, temperature 값을 다양하게 변경해보세요. 0, 0.5, 1로 설정해보세요. 기억해주세요, 0은 가장 일정하고 1은 가장 다양한 값을 의미합니다. 어떤 값이 앱에 가장 적합한지 확인해보세요.
 
-## Great Work! Continue Your Learning
+## 수고하셨습니다! 학습을 계속하세요
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+이 수업을 완료한 후에는 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 더욱 향상시킬 수 있습니다!
 
-Head over to Lesson 7 where we will look at how to [build chat applications](../../../07-building-chat-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)!
+7번 수업으로 이동하여 [채팅 애플리케이션을 구축하는 방법](../../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!
