@@ -42,7 +42,7 @@ Dirígete a la [Página de Configuración del Curso](./00-course-setup/README.md
 
 ## 🧠 ¿Quieres aprender más?
 
-Después de completar este curso, echa un vistazo a nuestro [Colección de Aprendizaje en Inteligencia Artificial Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ¡Para seguir mejorando tu conocimiento en Inteligencia Artificial Generativa!
+Después de completar este curso, echa un vistazo a nuestra [colección de Aprendizaje en Inteligencia Artificial Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ¡Para seguir mejorando tu conocimiento en Inteligencia Artificial Generativa!
 
 ##  🚀 ¿Eres una startup o tienes una idea que quisieras poner en marcha?
 
