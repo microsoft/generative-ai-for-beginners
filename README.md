@@ -63,7 +63,7 @@ Aquí hay formas en las que puedes contribuir a este curso:
 - Enlaces a recursos adicionales para continuar tu aprendizaje
 
 ## 🗃️ Lecciones
-|       |           Enlace de la Lección              |                       Conceptos Enseñados                       |                     Objetivo de Aprendizaje                 |                             
+|       |           Enlace a la Lección              |                       Conceptos Enseñados                       |                     Objetivo de Aprendizaje                 |                             
 | :---: | :------------------------------------: | :---------------------------------------------------------: | ----------------------------------------------------------- |
 | 00 | [Introducción al Curso - ¿Cómo Tomar Este Curso?](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) |Configuración técnica y estructura del curso | Preparándote para el éxito mientras aprendes en este curso| 
 | 01 | [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Gran Escala (LLMs, por sus siglas en inglés)](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) | **Concepto**: Inteligencia Artificial Generativa y el panorama tecnológico actual|Comprendiendo qué es la IA Generativa y cómo funcionan los LLMs|
