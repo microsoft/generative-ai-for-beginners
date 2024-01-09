@@ -20,7 +20,7 @@
 # Curso de Inteligencia Artificial Generativa para Principiantes 
 
 
-Aprende los fundamentos de la construcción de aplicaciones de Inteligencia Artificial Generativa con este curso de 12 lecciones, impartido por los Cloud Advocates de Microsoft. Cada lección aborda un aspecto clave de los principios de la Inteligencia Artificial Generativa y el desarrollo de aplicaciones. A lo largo de este curso, construirás tu propia startup de Inteligencia Artificial Generativa para comprender lo que se necesita para materializar tus ideas.
+Aprende los fundamentos de la construcción de aplicaciones de Inteligencia Artificial Generativa con este curso de 12 lecciones, impartido por los Cloud Advocates de Microsoft. Cada lección aborda un aspecto clave de los principios de la Inteligencia Artificial Generativa y el desarrollo de aplicaciones. A lo largo de este curso, construirás tu propia startup de Inteligencia Artificial Generativa (GenAI) para entender lo que necesitas para materializar tus ideas.
 
 ### 🌟 Agradecimientos especiales
 A nuestros Embajadores Estudiantiles de Microsoft y a los autores, revisores y contribuyentes de la comunidad, incluyendo:
