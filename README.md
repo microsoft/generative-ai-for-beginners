@@ -59,7 +59,7 @@ Aquí hay formas en las que puedes contribuir a este curso:
 - Un video muy corto para introducir el tema
 - Una lección escrita ubicada en el README
 - Un cuaderno Jupyter con ejemplos de código (para lecciones basadas en proyectos)
-- Un desafío o tarea para aplicar lo aprendido
+- Un reto o tarea para aplicar lo aprendido
 - Enlaces a recursos adicionales para continuar tu aprendizaje
 
 ## 🗃️ Lecciones
