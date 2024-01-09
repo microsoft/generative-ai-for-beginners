@@ -1,49 +1,49 @@
-# Getting Started with this course
+# Comenzando con este curso
 
-We are very excited for you to start this course and see what you get inspired to build with Generative AI!
+¡Estamos muy emocionados de que comiences este curso y ver con qué te inspiras para crear con la Inteligencia Artificial Generativa!
 
-To make your time successful, we have created this page that outlines any setup steps, technical requirements, and how to get help when you need it.
+Para que tu tiempo sea exitoso, hemos creado esta página que describe los pasos de configuración, los requisitos técnicos y cómo obtener ayuda cuando la necesites.
 
-## Setup Steps
+## Pasos de configuración
 
-To start taking this course, you will need to complete the following steps.
+Para comenzar este curso, deberás completar los siguientes pasos.
 
-### 1. Fork this Repo
+### 1. Fork (Bifurca) este repo
 
-[Fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos easier.
+[Fork (Bifurca) todo el repositorio](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) A tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo y los repositorios relacionados más fácilmente.
 
-### 2. Create a codespace
+### 2. Crea un espacio en codespace
 
-To avoid any dependency issues when running the code, we recommend running this course in a GitHub codespace.
+Para evitar problemas de dependencias al ejecutar el código, recomendamos realizar este curso en un espacio de código de GitHub.
 
-This can be created by selecting the `Code` option on your forked version of this repo and selecting the **Codespaces** option.
+Esto se puede hacer seleccionando la opción `Code` en tu versión bifurcada de este repositorio y luego seleccionando la opción **Codespaces** .
 
-### 3. Storing Your API Keys
+### 3. Almacenando tus claves de API
 
-Keeping your API keys safe and secure is important when building any type of application. We encourage you not to store any API keys directly in the code you are working with as committing those details to a public repository could result in unwanted costs and issues.
+Mantener seguras y protegidas tus claves de API es importante al desarrollar cualquier tipo de aplicación. Te recomendamos no almacenar las claves de API directamente en el código con el que estás trabajando, ya que comprometer esos detalles en un repositorio público podría ocasionar costos no deseados e issues.
 
-![Dialog showing buttons to create a codespace](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
+![Diálogo mostrando botones para crear un espacio de código](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
-## How to Run locally on your computer
+## Cómo ejecutar localmente en tu computadora
 
-To run the code locally on your computer, you would need to have some version of [Python installed](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Para ejecutar el código localmente en tu computadora, necesitarás tener alguna versión de [Python instalada](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-To then use the repository, you need to clone it:
+Para utilizar el repositorio, necesitas clonarlo:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Now you have everything checked out and can start learning and work with the code.
+Ahora tienes todo listo y puedes comenzar a aprender y trabajar con el código.
 
-### Installing miniconda (optional step)
+### Instalación de Miniconda (paso opcional)
 
-There are advantages to installing  **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)** - it is rather lightweight installation that supports `conda` package manager for different Python **virtual environments**. `conda` makes it easy to install and switch between different Python versions and packages, and also to install packages that are not available via `pip`.
+Hay ventajas en instalar **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)** - es una instalación bastante ligera que admite `conda` administrador de paquetes para diferentes versiones de Python **virtual environments**. `conda` facilita la instalación y el cambio entre diferentes versiones de Python y paquetes, además de permitir la instalación de paquetes que no están disponibles a través de `pip`.
 
-After you install miniconda, you need to clone the repository (if you haven't already done so) and create a virtual environment to be used for this course:
+Después de instalar Miniconda, necesitas clonar el repositorio (si aún no lo has hecho) y crear un entorno virtual para utilizar en este curso:
 
-Before running the below step, ensure that you first have an *environment.yml* file. The *environment.yml* file is used to create a conda environment with the necessary dependencies and can look like so:
+Antes de ejecutar el siguiente paso, asegúrate primero de tener un *environment.yml* file. El *environment.yml* archivo se utiliza para crear un entorno conda con las dependencias necesarias y puede lucir así:
 
 ```yml
 name: <environment-name>
@@ -55,31 +55,35 @@ dependencies:
 - python-dotenv
 ```
 
-You can replace `<environment-name>` with the name of your conda environment, and `<python-version>` with the version of Python you want to use. Place your created *environment.yml* file in the *.devcontainer* folder of your repo.
+Puedes reemplazar `<environment-name>` con el nombre de tu entorno conda, y `<python-version>` con la versión de Python que desees usar. Coloca tu archivo *environment.yml*  creado
+en la capeta *.devcontainer* de tu repo.
 
-Now that you've hopefully created a *environment.yml* file, you can create a conda environment with the following command:
-
+Ahora que idealmente has creado un *environment.yml* file, puedes crear un entorno conda con el siguiente comando:
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml
 conda activate ai4beg
 ```
 
-Refer to this link on creating a [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) if you run into trouble.
+Consulta este enlace sobre cómo crear un [conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) 
+si encuentras algún problema.
 
-### Using Visual Studio Code with Python Extension
 
-Probably the best way to use the curriculum is to open it in [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) with [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
+###Usando Visual Studio Code con la Extensión de Python
 
-> **Note**: Once you clone and open the directory in VS Code, it will automatically suggest you to install Python extensions. You would also have to install miniconda as described above.
 
-> **Note**: If VS Code suggests you to re-open the repository in container, you need to decline this to use local Python installation. 
+Probablemente la mejor manera de usar el plan de estudios sea abrirlo en [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) con [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
 
-### Using Jupyter in the Browser
+> **Nota**: Una vez que clones y abras el directorio en VS Code, automáticamente te sugerirá instalar las extensiones de Python. También tendrás que instalar Miniconda como se describe arriba.
 
-You can also use Jupyter environment right from the browser on your own computer. Actually, both classical Jupyter and Jupyer Hub provide quite convenient development environment with auto-completion, code highlighting, etc.
+> **Nota**: Si VS Code te sugiere volver a abrir el repositorio en un contenedor, debes rechazarlo para utilizar la instalación local de Python.
 
-To start Jupyter locally, go to the directory of the course, and execute:
+### Usando Jupyter en el navegador
+
+
+También puedes utilizar el entorno Jupyter directamente desde el navegador en tu propia computadora. De hecho, tanto Jupyter clásico como Jupyter Hub ofrecen un entorno de desarrollo bastante conveniente con autocompletado, resaltado de código, etc.
+
+Para iniciar Jupyter localmente, ve al directorio del curso y ejecuta:
 
 ```bash
 jupyter notebook
@@ -91,48 +95,48 @@ or
 jupyterhub
 ```
 
-You then can navigate to any of the `.ipynb` files, open them and start working.
+Luego puedes navegar a cualquiera de los `.ipynb` archivos, abrirlos y empezar a trabajar.
 
-### Running in container
+### Ejecutando en un contenedor
 
-An alternative to Python installation would be to run the code in container. Since our repository contains special `.devcontainer` folder that instructs how to build a container for this repo, VS Code would offer you to re-open the code in container. This will require Docker installation, and also would be more complex, so we recommend this to more experienced users.
+Una alternativa a la instalación de Python sería ejecutar el código en un contenedor. Dado que nuestro repositorio contiene una carpeta especial `.devcontainer`  que indica cómo construir un contenedor para este repositorio, VS Code te ofrecería volver a abrir el código en un contenedor. Esto requerirá la instalación de Docker y será más complejo, así que lo recomendamos para usuarios más experimentados.
 
-One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow this guide on how to [manage secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
+Una de las mejores formas de mantener seguras tus claves de API al usar GitHub Codespaces es mediante el uso de Secrets (Secretos) de Codespace. Sigue esta guía sobre cómo [Administrar secrets para tus codespaces.](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 
-## Lessons and Technical Requirements
+## Lecciones y Requisitos Técnicos
 
-The course has 6 concept lessons and 6 coding lessons.
+El curso consta de 6 lecciones conceptuales y 6 lecciones de codificación.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Para las lecciones de codificación, estamos utilizando el servicio Azure OpenAI. Necesitarás acceso al servicio Azure OpenAI y una clave de API para ejecutar este código. Puedes solicitar acceso [completando esta solicitud](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` file where you can view the code and outputs.
+Mientras esperas que procesen tu solicitud, cada lección de codificación también incluye un archivo `README.md` donde puedes ver el código y los resultados.
 
-## Using the Azure OpenAI Service for the First Time
+## Usando el Servicio Azure OpenAI por Primera Vez
 
-If this is your first time working with the Azure OpenAI service, please follow this guide on how to [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Si es la primera vez que trabajas con el servicio Azure OpenAI, por favor sigue esta guía sobre cómo [crear y desplegar un recurso de Azure OpenAI Service.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## Meet Other Learners
+## Conocer a Otros Aprendices
 
-We have created channels in our official [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) for meeting other learners. This is a great way to network with other like-minded entrepreneurs, builders, students, and anyone looking to level up in Generative AI.
+Hemos creado canales en nuestro oficial [Servidor de Discord de la Comunidad de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conocer a otros estudiantes. Esta es una excelente manera de conectarte con otros emprendedores, creadores, estudiantes y cualquier persona interesada en avanzar en el campo de la Inteligencia Artificial Generativa.
 
-[![Join discord channel](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Unete al canal de Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-The project team will also be on this Discord server to help any learners.
+El equipo del proyecto también estará en este servidor de Discord para ayudar a cualquier estudiante.
 
-## Contribute
+## Contribuye
 
-This course is an open-source initiative. If you see areas of improvement or issues, please create a [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) or log a [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+Este curso es una iniciativa de código abierto. Si encuentras áreas de mejora o problemas, por favor crea un [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) o registrar un [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-The project team will be tracking all contributions and contributing to open source is an amazing way to build your career in Generative AI.
+El equipo del proyecto estará siguiendo todas las contribuciones y contribuir al código abierto es una manera increíble de construir tu carrera en la Inteligencia Artificial Generativa.
 
-Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit [CLA, Contributor License Agreement website](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+La mayoría de las contribuciones requieren que aceptes un Acuerdo de Licencia para Colaboradores (CLA) en el que declaras que tienes derecho, y de hecho lo haces, a otorgarnos los derechos para usar tu contribución. Para más detalles, visita [CLA, sitio web del Acuerdo de Licencia para Colaboradores](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
+Importante: al traducir texto en este repositorio, asegúrate de no utilizar traducción automática. Verificaremos las traducciones a través de la comunidad, así que por favor ofrécete como voluntario solo para traducir a idiomas en los que seas competente.
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
+Cuando envíes un pull request, un bot del Acuerdo de Licencia para Colaboradores (CLA-bot) determinará automáticamente si necesitas proporcionar un CLA y decorará la PR apropiadamente (por ejemplo, etiqueta, comentario). Simplemente sigue las instrucciones proporcionadas por el bot. Solo necesitarás hacer esto una vez en todos los repositorios que utilicen nuestro CLA.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). For more information read the Code of Conduct FAQ or contact [Email opencode](opencode@microsoft.com) with any additional questions or comments.
+Este proyecto ha adoptado el [Código de Conducta de Código Abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Para más información, lee las Preguntas Frecuentes del Código de Conducta o contacta al [opencode Email](opencode@microsoft.com) con cualquier pregunta o comentario adicional.
 
-## Let's Get Started
+## Empecemos 😄
 
-Now that you have completed the needed steps to complete this course, let's get started by getting an [introduction to Generative AI and LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Ahora que has completado los pasos necesarios para terminar este curso, comencemos obteniendo un [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Aprendizaje Profundo (LLMs, por sus siglas en inglés).](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
