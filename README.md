@@ -38,7 +38,7 @@ Dirígete a la [Página de Configuración del Curso](./00-course-setup/README.md
 
 ## 🗣️ Conoce a Otros Estudiantes para tener apoyo
 
-¡Una de las mejores formas de aprender es hacerlo junto a otros! Únete a nuestro [servidor oficial de Discord de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conocer y establecer conexiones con otros estudiantes que están tomando este curso, y obtener apoyo. ¡Quién sabe! Puede que encuentres a tu próximo cofundador allí.
+¡Una de las mejores formas de aprender es hacerlo junto a otros! Únete a nuestro [servidor oficial de Discord de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conocer a otros estudiantes que están tomando este curso, y obtener apoyo. ¡Quién sabe! Puede que encuentres a tu próximo cofundador allí.
 
 ## 🧠 ¿Quieres aprender más?
 
