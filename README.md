@@ -17,7 +17,7 @@
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 
-# Inteligencia Artificial Generativa para Principiantes - Curso
+# Curso de Inteligencia Artificial Generativa para Principiantes 
 
 
 Aprende los fundamentos de la construcción de aplicaciones de Inteligencia Artificial Generativa con este curso de 12 lecciones, impartido por los Cloud Advocates de Microsoft. Cada lección aborda un aspecto clave de los principios de la Inteligencia Artificial Generativa y el desarrollo de aplicaciones. A lo largo de este curso, construirás tu propia startup de Inteligencia Artificial Generativa para comprender lo que se necesita para materializar tus ideas.
