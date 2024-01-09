@@ -18,9 +18,9 @@ Para evitar problemas de dependencias al ejecutar el código, recomendamos reali
 
 Esto se puede hacer seleccionando la opción `Code` en tu versión bifurcada de este repositorio y luego seleccionando la opción **Codespaces** .
 
-### 3. Almacenando tus claves de API
+### 3. Almacena tus claves de API
 
-Mantener seguras y protegidas tus claves de API es importante al desarrollar cualquier tipo de aplicación. Te recomendamos no almacenar las claves de API directamente en el código con el que estás trabajando, ya que comprometer esos detalles en un repositorio público podría ocasionar costos no deseados e issues.
+Mantenen seguras y protegidas tus claves de API es importante al desarrollar cualquier tipo de aplicación. Te recomendamos no almacenar las claves de API directamente en el código con el que estás trabajando, ya que comprometer esos detalles en un repositorio público podría ocasionar costos no deseados e issues.
 
 ![Diálogo mostrando botones para crear un espacio de código](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
@@ -58,7 +58,7 @@ dependencies:
 Puedes reemplazar `<environment-name>` con el nombre de tu entorno conda, y `<python-version>` con la versión de Python que desees usar. Coloca tu archivo *environment.yml*  creado
 en la capeta *.devcontainer* de tu repo.
 
-Ahora que idealmente has creado un *environment.yml* file, puedes crear un entorno conda con el siguiente comando:
+Ahora que idealmente has creado un archivo *environment.yml* , puedes crear un entorno conda con el siguiente comando:
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml
@@ -69,7 +69,7 @@ Consulta este enlace sobre cómo crear un [conda environments](https://docs.cond
 si encuentras algún problema.
 
 
-###Usando Visual Studio Code con la Extensión de Python
+### Usando Visual Studio Code con la Extensión de Python
 
 
 Probablemente la mejor manera de usar el plan de estudios sea abrirlo en [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) con [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
@@ -79,7 +79,6 @@ Probablemente la mejor manera de usar el plan de estudios sea abrirlo en [Visual
 > **Nota**: Si VS Code te sugiere volver a abrir el repositorio en un contenedor, debes rechazarlo para utilizar la instalación local de Python.
 
 ### Usando Jupyter en el navegador
-
 
 También puedes utilizar el entorno Jupyter directamente desde el navegador en tu propia computadora. De hecho, tanto Jupyter clásico como Jupyter Hub ofrecen un entorno de desarrollo bastante conveniente con autocompletado, resaltado de código, etc.
 
@@ -99,7 +98,7 @@ Luego puedes navegar a cualquiera de los `.ipynb` archivos, abrirlos y empezar a
 
 ### Ejecutando en un contenedor
 
-Una alternativa a la instalación de Python sería ejecutar el código en un contenedor. Dado que nuestro repositorio contiene una carpeta especial `.devcontainer`  que indica cómo construir un contenedor para este repositorio, VS Code te ofrecería volver a abrir el código en un contenedor. Esto requerirá la instalación de Docker y será más complejo, así que lo recomendamos para usuarios más experimentados.
+Una alternativa a la instalación de Python sería ejecutar el código en un contenedor. Dado que nuestro repositorio contiene una carpeta especial `.devcontainer` que indica cómo construir un contenedor para este repositorio, VS Code te ofrecería volver a abrir el código en un contenedor. Esto requerirá la instalación de Docker y será más complejo, así que lo recomendamos para usuarios más experimentados.
 
 Una de las mejores formas de mantener seguras tus claves de API al usar GitHub Codespaces es mediante el uso de Secrets (Secretos) de Codespace. Sigue esta guía sobre cómo [Administrar secrets para tus codespaces.](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 
@@ -139,4 +138,4 @@ Este proyecto ha adoptado el [Código de Conducta de Código Abierto de Microsof
 
 ## Empecemos 😄
 
-Ahora que has completado los pasos necesarios para terminar este curso, comencemos obteniendo un [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Aprendizaje Profundo (LLMs, por sus siglas en inglés).](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Ahora que has completado los pasos necesarios para terminar este curso, comencemos obteniendo una [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Aprendizaje Profundo (LLMs, por sus siglas en inglés).](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
