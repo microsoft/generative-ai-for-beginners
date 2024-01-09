@@ -46,7 +46,7 @@ Después de completar este curso, echa un vistazo a nuestra [colección de Apren
 
 ##  🚀 ¿Eres una startup o tienes una idea que quisieras poner en marcha?
 
-Regístrate para [Microsoft para Fundadores de Startups Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) para recibir **créditos gratuitos de OpenAI** y hasta **$150,000 en créditos de Azure para acceder a los modelos de OpenAI a través de los Servicios Azure OpenAI**. 
+Regístrate a [FoundersHub de Microsoft para emprendedores](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) para recibir **créditos gratuitos de OpenAI** y hasta **$150,000 en créditos de Azure para acceder a los modelos de OpenAI a través de los Servicios Azure OpenAI**. 
 
 ##  🙏 ¿Quieres ayudar?
 
