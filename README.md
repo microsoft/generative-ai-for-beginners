@@ -21,6 +21,13 @@
 
 Learn the fundamentals of building Generative AI applications with our 12-lesson comprehensive course by Microsoft Cloud Advocates. Each lesson covers a key aspect of Generative AI principles and application development. Throughout this course, you will be building your own Generative AI startup so you can get an understanding of what it takes to launch your ideas. 
 
+### 🌟 Special thanks 
+To our Microsoft Student Ambassadors and community authors, reviewers, and content contributors including: 
+
+[**John Aziz**](https://www.linkedin.com/in/john0isaac/) - For creating all of the GitHub Actions and workflows 
+
+
+
 ## 🌱 Getting Started
 
 To get started, [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
@@ -34,7 +41,7 @@ Head to the [Course Setup Page](./00-course-setup/README.md?WT.mc_id=academic-10
 One of the best ways to learn is learning with others! Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support. Who knows? You might find your next co-founder there! 
 
 ## 🧠 Want to learn more? 
-After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge! 
+After completing this course, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue levelling up your Generative AI knowledge! 
 
 ##  🚀  Are you a startup or got an idea you want to launch? 
 

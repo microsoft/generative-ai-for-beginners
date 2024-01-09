@@ -2,7 +2,7 @@
 
 [![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/bO7h2_hOhR0?WT.mc_id=academic-105485-koreyst)
 
-> *(Click the image above to view video of this lesson)*
+> *(이미지를 클릭하면 이 수업의 비디오를 볼 수 있습니다)*
 
 사용자 경험은 앱을 개발하는 데 있어 매우 중요한 부분입니다. 사용자들은 작업을 효율적으로 수행할 수 있어야 합니다. 그리고 효율적으로 사용하는 것도 중요하지만 누구나 사용할 수 있도록 앱을 디자인하는 것도 중요합니다. 이 장에서는 이러한 영역에 중점을 두어 사람들이 사용할 수 있고, 사용하고 싶어하는 앱을 디자인할 수 있도록 하는 부분들을 다룰 것입니다.
 
@@ -117,6 +117,6 @@ AI 애플리케이션은 완벽하지 않기 때문에 오류가 발생할 수 �
 
 ## 축하합니다, 이번 코스를 완료하였습니다.
 
-이 수업이 끝났으니 우리의 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 수업을 들어, 생성형 AI에 관한 지식을 계속해서 쌓아보세요!
+이 수업이 끝났으니 우리의 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 수업을 들어, 생성형 AI에 관한 지식을 계속해서 쌓아보세요!
 
 축하합니다, 이번 코스를 완료하였습니다! 그러나 여기서 멈추면 안됩니다. 바라건대, 당신이 당신만의 생성형 AI 스타트업을 만드는 것에 영감을 얻었으면 좋겠습니다. 여기 [Microsoft Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)로 이동하여 당신의 여정에 도움을 주기 위한 프로그램에 신청해보세요. 
