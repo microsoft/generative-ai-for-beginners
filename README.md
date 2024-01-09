@@ -88,7 +88,7 @@ Aquí hay formas en las que puedes contribuir a este curso:
 
 - [Machine Learning para principiantes](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 - [Ciencia de Datos para Principiantes](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI para principiantes](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [Inteligencia Artificial (AI) para principiantes](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 - [Web Dev para principiantes](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 - [IoT para principiantes](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 - [Desarrollo de Realidad Extendida (XR) para Principiantes](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
