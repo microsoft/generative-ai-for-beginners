@@ -1,66 +1,66 @@
-# Building Generative AI-Powered Chat Applications
+# 생성형 AI를 활용한 채팅 애플리케이션 구축
 
-[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
+[![Generative AI를 활용한 채팅 애플리케이션 구축](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
 
-> *(Click the image above to view video of this lesson)*
+> *(위의 이미지를 클릭하여 이 레슨의 비디오를 시청하세요)*
 
-Now that we've seen how we can build text-generation apps, let's look into chat applications.
+텍스트 생성 앱을 구축하는 방법을 살펴보았으니 이제 채팅 애플리케이션에 대해 알아보겠습니다.
 
-Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. 
+채팅 애플리케이션은 우리의 일상에 통합되어 있으며, 단순한 대화 수단 이상을 제공합니다. 고객 서비스, 기술 지원, 심지어 정교한 상담 시스템의 핵심 요소입니다. 얼마 전에도 채팅 애플리케이션으로부터 도움을 받은 적이 있을 것입니다. 우리가 이러한 플랫폼에 생성형 AI와 같은 고급 기술을 통합할수록 복잡성과 도전 과제도 증가합니다.
 
-Some questions we need to be answered are:
+다음과 같은 몇 가지 질문에 대답해야 합니다:
 
-- **Building the app**.  How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  
-- **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **앱 구축**. 특정 사용 사례에 대해 이 AI 기반 애플리케이션을 효율적으로 구축하고 원활하게 통합하는 방법은 무엇인가요?
+- **모니터링**. 배포된 후에는 기능과 [책임 있는 AI의 여섯 가지 원칙](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)을 준수하는 채로 애플리케이션이 최고 수준의 품질로 작동하는지 어떻게 모니터링할 수 있을까요?
 
-As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
+자동화와 원활한 인간-기계 상호작용으로 정의되는 시대로 나아감에 따라, 생성형 AI가 채팅 애플리케이션의 범위, 깊이 및 적응성을 어떻게 변화시키는지 이해하는 것이 필수적입니다. 이 레슨에서는 이러한 복잡한 시스템을 지원하는 아키텍처의 측면을 조사하고, 도메인 특정 작업에 대해 세밀하게 조정하는 방법을 탐구하며, 책임 있는 AI 배포를 보장하기 위한 지표와 고려 사항을 평가할 것입니다.
 
-## Introduction
+## 소개
 
-This lesson covers:
+이 레슨에서는 다음을 다룹니다:
 
-- Techniques for efficiently building and integrating chat applications.
-- How to apply customization and fine-tuning to applications.
-- Strategies and considerations to effectively monitor chat applications.
+- 효율적으로 채팅 애플리케이션을 구축하고 통합하는 기술.
+- 응용 프로그램에 맞게 사용자 정의 및 세부 조정하는 방법.
+- 채팅 애플리케이션을 효과적으로 모니터링하고 유지하는 전략 및 고려 사항.
 
-## Learning Goals
+## 학습 목표
 
-By the end of this lesson, you'll be able to:
+이 레슨을 마치면 다음을 할 수 있습니다:
 
-- Describe considerations for building and integrating chat applications into existing systems.
-- Customize chat applications for specific use-cases.
-- Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications.
-- Ensure chat applications leverage AI responsibly.
+- 기존 시스템에 채팅 애플리케이션을 구축하고 통합하기 위한 고려 사항을 설명할 수 있습니다.
+- 특정 사용 사례에 대해 채팅 애플리케이션을 사용자 정의할 수 있습니다.
+- AI 기반 채팅 애플리케이션의 품질을 효과적으로 모니터링하고 유지하기 위한 주요 지표 및 고려 사항을 식별할 수 있습니다.
+- 채팅 애플리케이션이 AI를 책임있게 활용하도록 보장할 수 있습니다.
 
-## Integrating Generative AI into Chat Applications
+## 생성형 AI를 채팅 애플리케이션에 통합하기
 
-Elevating chat applications through generative AI isn't only centered around making them smarter; it's about optimizing their architecture, performance, and user interface to deliver a quality user experience. This involves investigating the architectural foundations, API integrations, and user interface considerations. This section aims to offer you a comprehensive roadmap for navigating these complex landscapes, whether you're plugging them into existing systems or building them as stand-alone platforms.
+생성형 AI를 통해 채팅 애플리케이션을 개선하는 것은 단순히 더 똑똑하게 만드는 것에만 관련되지 않습니다. 품질 좋은 사용자 경험을 제공하기 위해 아키텍처, 성능 및 사용자 인터페이스를 최적화하는 것입니다. 이에는 아키텍처 기반, API 통합 및 사용자 인터페이스 고려 사항을 조사하는 것이 포함됩니다. 이 섹션은 기존 시스템에 플러그인으로 제공하거나 독립적인 플랫폼으로 구축하는 경우에도 이러한 복잡한 영역을 탐색하기 위한 포괄적인 로드맵을 제공합니다.
 
-By the end of this section, you'll be equipped with the expertise needed to efficiently construct and incorporate chat applications.
+이 섹션을 마치면 채팅 애플리케이션을 효율적으로 구축하고 통합하기 위해 필요한 전문 지식을 갖추게 될 것입니다.
 
-### Chatbot or Chat application?
+### 챗봇 또는 채팅 애플리케이션?
 
-Before we dive into building chat applications, let's compare 'chatbots' against 'AI-powered chat applications,' which serve distinct roles and functionalities. A chatbot's main purpose is to automate specific conversational tasks, such as answering frequently asked questions or tracking a package. It's typically governed by rule-based logic or complex AI algorithms. In contrast, an AI-powered chat application is a far more expansive environment designed to facilitate various forms of digital communication, such as text, voice, and video chats among human users. Its defining feature is the integration of a generative AI model that simulates nuanced, human-like conversations, generating responses based on a wide variety of input and contextual cues. A generative AI powered chat application can engage in open-domain discussions, adapt to evolving conversational contexts, and even produce creative or complex dialogue.
+채팅 애플리케이션을 구축하기 전에 '챗봇'과 'AI 기반 채팅 애플리케이션'을 비교해보겠습니다. 이들은 서로 다른 역할과 기능을 제공합니다. 챗봇의 주된 목적은 자주 묻는 질문에 대답하거나 소포를 추적하는 등 특정 대화 작업을 자동화하는 것입니다. 일반적으로 규칙 기반 논리나 복잡한 AI 알고리즘에 의해 제어됩니다. 반면, AI 기반 채팅 애플리케이션은 인간 사용자 간의 텍스트, 음성 및 비디오 채팅과 같은 다양한 형태의 디지털 커뮤니케이션을 원활하게 하는 더 넓은 환경을 제공합니다. 그 중요한 특징은 다양한 입력과 문맥적 단서를 기반으로 응답을 생성하는 생성형 AI 모델을 통합한다는 것입니다. 생성형 AI 기반 채팅 애플리케이션은 오픈 도메인 토론에 참여하고, 변화하는 대화적 문맥에 적응하며, 창의적이거나 복잡한 대화도 생성할 수 있습니다.
 
-The table below outlines the key differences and similarities to help us understand their unique roles in digital communication.
+아래 표는 디지털 커뮤니케이션에서 각각의 역할을 이해하기 위해 주요 차이점과 유사점을 개요로 제시합니다.
 
-| Chatbot                               | Generative AI-Powered Chat Application |
+| 챗봇                                 | 생성형 AI 기반 채팅 애플리케이션       |
 | ------------------------------------- | -------------------------------------- |
-| Task-Focused and rule based           | Context-aware                          |
-| Often integrated into larger systems  | May host one or multiple chatbots      |
-| Limited to programmed functions       | Incorporates generative AI models      |
-| Specialized & structured interactions | Capable of open-domain discussions     |
+| 작업 중심 및 규칙 기반                  | 문맥 인식                               |
+| 주로 대규모 시스템에 통합됨              | 하나 또는 여러 챗봇을 호스팅할 수 있음 |
+| 사전에 프로그래밍된 기능으로 제한됨              | 생성형 AI 모델 통합                     |
+| 전문화되고 구조화된 상호작용             | 열린 도메인으로 토론 가능                    |
 
-### Leveraging pre-built functionalities with SDKs and APIs
+### SDK 및 API를 활용한 사전 구축된 기능 활용
 
-When building a chat application, a great first step is to assess what is already out there. Using SDKs and APIs to build chat applications is an advantageous strategy for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
+채팅 애플리케이션을 구축할 때, 이미 존재하는 것을 평가하는 것은 매우 유리한 전략입니다. 잘 문서화된 SDK 및 API를 통합함으로써, 애플리케이션을 장기적으로 성공시키고, 확장성 및 유지보수 문제를 해결할 수 있습니다.
 
-- **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
-- **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built in solutions for these concerns.
-- **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
-- **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
+- **개발 프로세스를 가속화하고 오버헤드를 줄임**: 비용이 많이 드는 기능을 직접 구축하는 대신, 사전 구축된 기능을 활용함으로써 비즈니스 로직과 같이 더 중요한 애플리케이션의 다른 측면에 집중할 수 있습니다.
+- **더 나은 성능**: 처음부터 기능을 구축할 때, "확장성은 어떻게 되는가? 이 애플리케이션은 갑작스런 사용자 증가에 대응할 수 있는가?"라는 질문을 하게 될 것입니다. 잘 관리되는 SDK 및 API는 이러한 문제에 대한 솔루션을 내장하고 있습니다.
+- **보다 쉬운 유지보수**: 대부분의 API 및 SDK는 라이브러리의 업데이트만으로 업데이트 및 개선을 쉽게 관리할 수 있습니다.
+- **최첨단 기술에 대한 접근**: 사전에 세밀하게 조정되고 광범위한 데이터셋으로 훈련된 모델을 활용함으로써 애플리케이션에 자연어 기능을 제공할 수 있습니다.
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
+SDK 또는 API의 기능에 액세스하려면 일반적으로 제공된 서비스를 사용할 수 있는 권한을 얻어야 합니다. 이는 일반적으로 고유한 키 또는 인증 토큰을 사용하여 이루어집니다. 우리는 OpenAI Python 라이브러리를 사용하여 이를 탐색해볼 것입니다. 또한 이 레슨을 위한 [OpenAI 노트북](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) 또는 [Azure OpenAI 서비스 노트북](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys)에서 직접 시도해볼 수도 있습니다.
 
 ```python
 import os
@@ -71,114 +71,114 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive the following error if you didn't set the key.
+위의 예제는 GPT-3.5 Turbo 모델을 사용하여 프롬프트를 완성하는 것을 보여줍니다. 그러나 주의할 점은 API 키를 설정하지 않으면 다음과 같은 오류가 발생합니다.
 
 ```output
 AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
 ```
 
-## User Experience (UX)
+## 사용자 경험 (UX)
 
-General UX principles apply to chat applications, but here are some additional considerations that become particularly important due to the machine learning components involved.
+일반적인 UX 원칙은 채팅 애플리케이션에도 적용되지만, 기계 학습 구성 요소의 참여로 인해 특히 중요한 몇 가지 고려 사항이 있습니다.
 
-- **Mechanism for addressing ambiguity**: Generative AI models occasionally generate ambiguous answers. A feature that allows users to ask for clarification can be helpful should they come across this problem.
-- **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.  
-- **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit of finding specific answers, creating a more efficient and satisfying interaction.
+- **모호함에 대한 대응 메커니즘**: 생성형 AI 모델은 때로 모호한 답변을 생성할 수 있습니다. 사용자가 이러한 문제를 마주치면 해결을 요청할 수 있는 기능은 도움이 될 수 있습니다.
+- **컨텍스트 보존**: 고급 생성형 AI 모델은 대화 내에서 컨텍스트를 기억할 수 있는 능력을 갖추고 있으며, 이는 사용자 경험에 필수적인 자산일 수 있습니다. 사용자가 컨텍스트를 제어하고 관리할 수 있는 기능은 사용자 경험을 향상시키지만, 민감한 사용자 정보를 보존하는 위험을 동반합니다. 이러한 정보를 얼마나 오래 저장할지에 대한 고려 사항, 예를 들어 보존 정책을 도입함으로써 컨텍스트의 필요성과 개인 정보 보호 사이의 균형을 맞출 수 있습니다.
+- **개인화**: 학습하고 적응할 수 있는 AI 모델을 통해 사용자에게 맞춤화된 경험을 제공할 수 있습니다. 사용자 프로필과 같은 기능을 통해 사용자 경험을 맞춤화함으로써 사용자가 이해받는 느낌을 주고, 특정 답변을 찾는 데 도움을 줌으로써 더 효율적이고 만족스러운 상호작용을 가능하게 합니다.
 
-One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
+예를 들어, OpenAI의 ChatGPT에서 "사용자 정의 지침 (Custom instructions)" 설정은 개인화의 한 예입니다. 이 설정을 사용하면 프롬프트에 중요한 컨텍스트가 될 수 있는 자기 소개 정보를 제공할 수 있습니다. 다음은 사용자 정의 지침의 예입니다.
 
-![Custom Instructions Settings in ChatGPT](../../images/custom-instructions.png?WT.mc_id=academic-105485-koreyst)
+![ChatGPT의 사용자 정의 지침 설정](../../images/custom-instructions.png?WT.mc_id=academic-105485-koreyst)
 
-This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in depth lesson plan based on her experience.
+이 "프로필"은 ChatGPT에게 연결 리스트에 대한 수업 계획을 생성하도록 요청합니다. ChatGPT는 사용자가 자신의 경험에 기반한 더 깊은 수업 계획을 원할 수 있다는 점을 고려합니다.
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../images/lesson-plan-prompt.png?WT.mc_id=academic-105485-koreyst)
+![연결 리스트에 대한 수업 계획에 대한 ChatGPT의 프롬프트](../../images/lesson-plan-prompt.png?WT.mc_id=academic-105485-koreyst)
 
-### Microsoft's System Message Framework for Large Language Models
+### 대형 언어 모델을 위한 Microsoft의 시스템 메시지 프레임워크
 
-[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
+[Microsoft는 LLM(대형 언어 모델)에서 응답을 생성할 때 효과적인 시스템 메시지 작성에 대한 지침](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst)을 제공하고 있으며, 다음 4가지 영역으로 구분됩니다:
 
-1. Defining who the model is for, as well as its capabilities and limitations.
-2. Defining the model's output format.
-3. Providing specific examples that demonstrate intended behavior of the model.
-4. Providing additional behavioral guardrails.
+1. 모델을 사용하는 대상, 기능 및 제한 사항 정의
+2. 모델의 출력 형식 정의
+3. 모델의 의도된 동작을 보여주는 구체적인 예시 제공
+4. 추가적인 동작 가이드라인 제공
 
-### Accessibility
+### 접근성
 
- Whether a user has visual, auditory, motor, or cognitive impairments, a well-designed chat application should be usable by all. The following list breaks down specific features aimed at enhancing accessibility for various user impairments.
+시각, 청각, 운동, 인지 장애를 가진 사용자에게 잘 설계된 채팅 애플리케이션은 모두 사용할 수 있어야 합니다. 다음 목록은 다양한 사용자 장애에 대한 접근성을 향상시키기 위한 특정 기능을 설명합니다.
 
-- **Features for Visual Impairment**: High contrast themes and resizable text, screen reader compatibility.
-- **Features for Auditory Impairment**: Text-to-speech and speech-to-text functions, visual cues for audio notifications.
-- **Features for Motor Impairment**: Keyboard navigation support, voice commands.
-- **Features for Cognitive Impairment**: Simplified language options.
+- **시각 장애용 기능**: 고대비 테마와 크기 조절 가능한 텍스트, 스크린 리더 호환성.
+- **청각 장애용 기능**: 텍스트 읽기 및 음성을 텍스트로 변환하는 기능, 오디오 알림을 위한 시각적 힌트.
+- **운동 장애용 기능**: 키보드 탐색 지원, 음성 명령.
+- **인지 장애용 기능**: 단순화된 언어 옵션.
 
-## Customization and Fine-tuning for Domain-Specific Language Models
+## 도메인별 언어 모델을 위한 맞춤화 및 세부 조정
 
-Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
+회사의 전문 용어를 이해하고 사용자들이 일반적으로 가지는 특정 질문을 예상하는 채팅 애플리케이션을 상상해보세요. 여기에 언급할 가치가 있는 두 가지 접근 방식이 있습니다.
 
-- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand it's concepts and scenarios.
-- **Apply fine-tuning**. Fine-tuning is the process of further training your model with specific data.
+- **DSL 모델 활용**: DSL은 도메인별 특정 언어를 의미합니다. 특정 도메인에 대한 DSL 모델을 활용하여 해당 도메인의 개념과 시나리오를 이해할 수 있습니다.
+- **파인 튜닝 적용**: 파인 튜닝은 특정 데이터로 모델을 추가로 학습하는 과정입니다.
 
-## Customization: Using a DSL
+## 맞춤화: DSL 사용
 
-Leveraging a domain-specific language models (DSL Models) can enhance user engagement and by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+도메인별 언어 모델(DSL 모델)을 활용하면 전문적이고 문맥에 맞는 상호작용을 통해 사용자 참여를 높일 수 있습니다. 이는 특정 분야, 산업 또는 주제와 관련된 텍스트를 이해하고 생성하는 데 훈련되거나 세부 조정된 모델입니다. DSL 모델을 사용하는 옵션은 처음부터 훈련하는 것부터 SDK 및 API를 통해 기존 모델을 사용하는 것까지 다양합니다. 또 다른 옵션은 세부 조정으로, 기존 사전 훈련된 모델을 가져와 특정 도메인에 맞게 적응시키는 것입니다.
 
-## Customization: Apply fine-tuning
+## 맞춤화: 세부 조정 적용
 
-Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task.
+세부 조정은 사전 훈련된 모델이 특정 도메인이나 특정 작업에서 부족한 경우에 고려됩니다.
 
-For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source.
+예를 들어, 의료 질문은 복잡하며 많은 문맥을 필요로 합니다. 의료 전문가가 환자를 진단할 때는 생활 방식이나 기존 질환과 같은 다양한 요소를 고려하며, 최신 의학 저널을 통해 진단을 검증하기도 합니다. 이러한 미묘한 시나리오에서는 일반적인 목적의 AI 채팅 애플리케이션이 신뢰할 수 있는 출처가 될 수 없습니다.
 
-### Scenario: a medical application**
+### 시나리오: 의료 애플리케이션
 
-Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings.
+의료 전문가를 지원하기 위해 설계된 채팅 애플리케이션을 고려해보세요. 이 애플리케이션은 치료 지침, 약물 상호작용 또는 최근 연구 결과에 대한 빠른 참고를 제공합니다.
 
-A general-purpose model might be adequate for answering basic medical questions or providing general advice, but it may struggle with the following:
+일반적인 목적의 모델은 기본적인 의료 질문에 대답하거나 일반적인 조언을 제공하는 데에는 적합할 수 있지만, 다음과 같은 상황에서는 어려움을 겪을 수 있습니다:
 
-- **Highly specific or complex cases**. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?"
-- **Lacking recent advancements**. A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology.
+- **매우 구체적이거나 복잡한 경우**: 예를 들어, 신경과 의사는 "소아 환자에서 약물 내성 간질에 대한 최신 관리 방법은 무엇인가요?"라고 애플리케이션에 물을 수 있습니다.
+- **최신 개발에 대한 부족**: 일반적인 목적의 모델은 신경학과 약리학의 최신 개발을 반영한 현재 답변을 제공하는 데 어려움을 겪을 수 있습니다.
 
-In instances such as these, fine-tuning the model with a specialized medical dataset can significantly improve its ability to handle these intricate medical inquiries more accurately and reliably. This requires access to a large and relevant dataset that represents the domain-specific challenges and questions that need to be addressed.
+이러한 경우, 전문 의료 데이터셋을 사용하여 모델을 세부 조정하면 복잡한 의료 문의에 대한 정확성과 신뢰성을 크게 향상시킬 수 있습니다. 이는 해당 도메인의 도전과 질문을 대표하는 대규모이고 관련성 있는 데이터셋에 액세스하는 것을 필요로 합니다.
 
-## Considerations for a High Quality AI-Driven Chat Experience
+## 고품질 AI 기반 채팅 경험을 위한 고려 사항
 
-This section outlines the criteria for "high-quality" chat applications, which include the capture of actionable metrics and adherence to a framework that responsibly leverages AI technology.
+이 섹션에서는 "고품질" 채팅 애플리케이션의 기준을 설명하며, 실행 가능한 지표를 수집하고 AI 기술을 책임있게 활용하는 프레임워크를 준수하는 것을 포함합니다.
 
-### Key Metrics
+### 주요 지표
 
-To maintain the high-quality performance an application, it's essential to keep track of key metrics and considerations. These measurements not only ensure the functionality of the application but also assess the quality of the AI model and user experience. Below is a list that covers basic, AI, and user experience metrics to consider.
+애플리케이션의 고품질 성능을 유지하기 위해 주요 지표와 고려 사항을 추적하는 것이 중요합니다. 이러한 측정은 애플리케이션의 기능뿐만 아니라 AI 모델의 품질과 사용자 경험을 평가하는 데 도움이 됩니다. 아래는 고려해야 할 기본, AI 및 사용자 경험 지표를 다루는 목록입니다.
 
-| Metric                        | Definition                                                                                                             | Considerations for Chat Developer                                         |
+| 지표                          | 정의                                                                                                                   | 채팅 개발자를 위한 고려 사항                                               |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Uptime**                    | Measures the time the application is operational and accessible by users.                                              | How will you minimize downtime?                                           |
-| **Response Time**             | The time taken by the application to reply to a user's query.                                                          | How can you optimize query processing to improve response time?           |
-| **Precision**                 | The ratio of true positive predictions to the total number of positive predictions                                     | How will you validate the precision of your model?                        |
-| **Recall (Sensitivity)**      | The ratio of true positive predictions to the actual number of positives                                               | How will you measure and improve recall?                                  |
-| **F1 Score**                  | The harmonic mean of precision and recall, that balances the trade-off between both.                                   | What is your target F1 Score? How will you balance precision and recall?  |
-| **Perplexity**                | Measures how well the probability distribution predicted by the model aligns with the actual distribution of the data. | How will you minimize perplexity?                                         |
-| **User Satisfaction Metrics** | Measures the user's perception of the application. Often captured through surveys.                                     | How often will you collect user feedback? How will you adapt based on it? |
-| **Error Rate**                | The rate at which the model makes mistakes in understanding or output.                                                 | What strategies do you have in place to reduce error rates?               |
-| **Retraining Cycles**         | The frequency with which the model is updated to incorporate new data and insights.                                    | How often will you retrain the model? What triggers a retraining cycle?   |
-| **Anomaly Detection**         | Tools and techniques for identifying unusual patterns that do not conform to expected behavior.                        | How will you respond to anomalies?                                        |
+| **가동 시간 (Uptime)**                 | 애플리케이션이 사용자에게 작동 가능하고 접근 가능한 시간을 측정합니다.                                                    | 다운타임을 최소화하기 위해 어떻게 할 것인가요?                               |
+| **응답 시간 (Response Time)**                 | 애플리케이션이 사용자의 쿼리에 응답하는 데 걸리는 시간을 측정합니다.                                                        | 응답 시간을 개선하기 위해 쿼리 처리를 어떻게 최적화할 수 있을까요?         |
+| **정확도 (Precision)**                     | 전체 양성 예측 중 실제 양성 예측의 비율                                                                                   | 모델의 정확도를 어떻게 검증할 것인가요?                                    |
+| **재현율 (Recall), 민감도 (Sensitivity)**           | 실제 양성 중 양성 예측의 비율                                                                                           | 재현율 (recall)을 어떻게 측정하고 개선할 것인가요?                                  |
+| **F1 점수**                   | 정밀도 (precision)와 재현율 (recall)의 조화 평균으로, 두 가지 사이의 균형을 맞춥니다.                                                           | 목표 F1 점수는 무엇이며, 정밀도와 재현율을 어떻게 균형있게 유지할 것인가요? |
+| **Perplexity**                 | 모델이 예측한 확률 분포가 실제 데이터의 분포와 얼마나 일치하는지 측정합니다.                                                 | Perplexity를 최소화하기 위해 어떻게 할 것인가요?                             |
+| **사용자 만족도 지표**         | 사용자가 애플리케이션에 대한 인식을 측정합니다. 주로 설문 조사를 통해 수집됩니다.                                               | 얼마나 자주 사용자 피드백을 수집할 것인가요? 이를 기반으로 어떻게 적응할 것인가요? |
+| **오류율 (Error Rate)**                   | 모델이 이해하거나 출력하는 데 발생하는 오류의 비율                                                                     | 오류율을 줄이기 위한 전략은 무엇인가요?                                   |
+| **재학습 주기**               | 새로운 데이터와 통찰력을 반영하기 위해 모델을 업데이트하는 빈도                                                             | 모델을 얼마나 자주 재학습할 것인가요? 재학습 주기를 트리거하는 요소는 무엇인가요? |
+| **이상 탐지**                 | 예상되는 동작과 일치하지 않는 비정상적인 패턴을 식별하기 위한 도구와 기법                                                    | 이상 탐지에 어떻게 대응할 것인가요?                                         |
 
-### Implementing Responsible AI Practices in Chat Applications
+### 채팅 애플리케이션에서 책임 있는 AI 실천 방법 구현
 
-Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider and why they should take them seriously.
+Microsoft의 책임 있는 AI 접근 방식은 AI 개발과 사용을 안내하는 여섯 가지 원칙을 도출했습니다. 아래는 원칙, 정의 및 채팅 개발자가 고려해야 할 사항과 그 중요성입니다.
 
-| Principles             | Microsoft's Definition                                | Considerations for Chat Developer                                      | Why It's Important                                                                     |
-| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Fairness               | AI systems should treat all people fairly.            | Ensure the chat application does not discriminate based on user data.  | To build trust and inclusivity among users; avoids legal ramifications.                |
-| Reliability and Safety | AI systems should perform reliably and safely.        | Implement testing and fail-safes to minimize errors and risks.         | Ensures user satisfaction and prevents potential harm.                                 |
-| Privacy and Security   | AI systems should be secure and respect privacy.      | Implement strong encryption and data protection measures.              | To safeguard sensitive user data and comply with privacy laws.                         |
-| Inclusiveness          | AI systems should empower everyone and engage people. | Design UI/UX that is accessible and easy-to-use for diverse audiences. | Ensures a wider range of people can use the application effectively.                   |
-| Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
-| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.           |
+| 원칙                    | Microsoft의 정의                                      | 채팅 개발자를 위한 고려 사항                                      | 중요성                                                                                   |
+| ---------------------- | ----------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| 공정성                 | AI 시스템은 모든 사람을 공정하게 대우해야 합니다.         | 채팅 애플리케이션이 사용자 데이터를 기반으로 차별하지 않도록 보장합니다. | 사용자들 사이에서 신뢰와 포용성을 구축하며, 법적인 문제를 피할 수 있습니다.                |
+| 신뢰성과 안전성        | AI 시스템은 신뢰성 있고 안전하게 작동해야 합니다.       | 테스트와 오류 방지를 구현하여 오류와 위험을 최소화합니다.          | 사용자 만족도를 보장하고 잠재적인 피해를 방지합니다.                                     |
+| 개인 정보 보호와 보안 | AI 시스템은 안전하고 개인 정보를 존중해야 합니다.       | 강력한 암호화와 데이터 보호 조치를 구현합니다.                   | 민감한 사용자 데이터를 보호하고 개인 정보 보호 법을 준수합니다.                          |
+| 포용성                | AI 시스템은 모든 사람을 적극적으로 참여시켜야 합니다.   | 다양한 대중을 위해 접근 가능하고 사용하기 쉬운 UI/UX를 디자인합니다. | 더 넓은 범위의 사람들이 효과적으로 애플리케이션을 사용할 수 있도록 보장합니다.             |
+| 투명성                | AI 시스템은 이해하기 쉬워야 합니다.                    | AI 응답에 대한 명확한 문서와 이유를 제공합니다.                   | 사용자는 결정 방식을 이해할 수 있을 때 시스템을 더 신뢰할 가능성이 높습니다.                |
+| 책임성                | 사람들은 AI 시스템에 대해 책임져야 합니다.             | 감사 및 개선을 위한 명확한 프로세스를 수립합니다.                 | 실수가 발생한 경우 지속적인 개선과 수정 조치를 가능하게 합니다.                       |
 
-## Assignment
- 
-See [assignment](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
+## 과제
 
-## Great Work! Continue the Journey
+[과제](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)를 확인하세요. 이 과제에서는 첫 번째 채팅 프롬프트 실행부터 텍스트 분류 및 요약 등 다양한 연습을 진행합니다.
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+## 수고하셨습니다! 계속해서 학습을 진행하세요
 
-Head over to Lesson 8 to see how you can start  [building search applications](../../../08-building-search-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)!
+이 레슨을 완료한 후 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 계속해서 향상시킬 수 있습니다!
+
+[검색 애플리케이션 구축](../../../08-building-search-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)을 시작하는 방법을 알아보려면 레슨 8로 이동하세요!
