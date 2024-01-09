@@ -40,7 +40,7 @@ Para empezar, definamos algunos conceptos y terminología básicos que utilizare
 
 ## ¿Cómo llegamos a la Inteligencia Artificial Generativa?
 
-A pesar del extraordinario *hype* creado recientemente por el anuncio de modelos de IA generativa, esta tecnología lleva décadas en desarrollo, con los primeros esfuerzos de investigación remontándose a los años 60. Ahora estamos en un punto en el que la IA tiene capacidades cognitivas humanas, como la conversación, como se muestra, por ejemplo [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), que también utiliza un modelo GPT para las conversaciones de búsqueda web en Bing.
+A pesar del extraordinario *hype* creado recientemente por el anuncio de modelos de IA generativa, esta tecnología lleva décadas en desarrollo, con los primeros esfuerzos de investigación remontándose a los años 60. Ahora estamos en un punto en el que la IA tiene capacidades cognitivas humanas, como la conversación, como se muestra, por ejemplo [OpenAI ChatGPT](https://openai.com/chatgpt) o [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), que también utiliza un modelo GPT para las conversaciones de búsqueda web en Bing.
 
 Volviendo un poco atrás, los primeros prototipos de IA consistían en chatbots mecanografiados, que dependían de una base de conocimientos extraída de un grupo de expertos y representada en una computadora. Las respuestas en la base de conocimientos eran activadas por palabras clave que aparecían en el texto de entrada. Sin embargo, pronto quedó claro que este enfoque, utilizando chatbots mecanografiados, no escalaba bien.
 
@@ -66,11 +66,11 @@ Después de décadas de investigación en el campo de la inteligencia artificial
 
 La mayoría de los modelos recientes de Inteligencia Artificial Generativa, también conocidos como Modelos de Lenguaje Grandes (LLMs, por sus siglas en inglés), ya que trabajan con entradas y salidas de texto, están basados de hecho en esta arquitectura. Lo interesante de estos modelos, entrenados con una gran cantidad de datos no etiquetados de diversas fuentes como libros, artículos y sitios web, es que pueden adaptarse a una amplia variedad de tareas y generar texto gramaticalmente correcto con un atisbo de creatividad. Por lo tanto, no solo mejoraron de manera increíble la capacidad de una máquina para 'entender' un texto de entrada, sino que también habilitaron su capacidad para generar una respuesta original en lenguaje humano.
 
-## ¿Cómo funcionan los modelos de lenguaje grandes?
+## ¿Cómo funcionan los grandes modelos de lenguaje?
 
-En el próximo capítulo exploraremos diferentes tipos de modelos de Inteligencia Artificial Generativa, pero por ahora echemos un vistazo a cómo funcionan los modelos de lenguaje grandes, con un enfoque en los modelos de OpenAI GPT (Generative Pre-trained Transformer).
+En el próximo capítulo exploraremos diferentes tipos de modelos de Inteligencia Artificial Generativa, pero por ahora echemos un vistazo a cómo funcionan los grandes modelos de lenguaje, con un enfoque en los modelos de OpenAI GPT (Generative Pre-trained Transformer).
 
-* **Tokenizer, text to numbers**: Los Modelos de Lenguaje Grandes reciben un texto como entrada y generan un texto como salida. Sin embargo, al ser modelos estadísticos, funcionan mucho mejor con números que con secuencias de texto. Es por eso que cada entrada al modelo se procesa mediante un tokenizador antes de ser utilizada por el modelo central. Un token es un fragmento de texto, que consiste en un número variable de caracteres. La tarea principal del tokenizador es dividir la entrada en un conjunto de tokens. Luego, cada token se asigna con un índice de token, que es la codificación entera del fragmento de texto original.
+* **Tokenizador, texto a números**: Los grandes modelos de lenguaje reciben un texto como entrada y generan un texto como salida. Sin embargo, al ser modelos estadísticos, funcionan mucho mejor con números que con secuencias de texto. Es por eso que cada entrada al modelo se procesa mediante un tokenizador antes de ser utilizada por el modelo central. Un token es un fragmento de texto, que consiste en un número variable de caracteres. La tarea principal del tokenizador es dividir la entrada en un conjunto de tokens. Luego, cada token se asigna con un índice de token, que es la codificación entera del fragmento de texto original.
 
 ![Ejemplo de tokenización](./images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
@@ -78,7 +78,7 @@ En el próximo capítulo exploraremos diferentes tipos de modelos de Inteligenci
 
 * **Proceso de selección, distribución de probabilidad**: El token de salida es elegido por el modelo de acuerdo con su probabilidad de ocurrir después de la secuencia de texto actual. Esto se debe a que el modelo predice una distribución de probabilidad sobre todos los posibles 'próximos tokens', calculados en base a su entrenamiento. Sin embargo, no siempre se elige el token con la probabilidad más alta de la distribución resultante. Se añade un grado de aleatoriedad a esta elección, de manera que el modelo actúa de manera no determinista; no obtenemos la misma salida exacta para la misma entrada. Este grado de aleatoriedad se agrega para simular el proceso de pensamiento creativo y se puede ajustar utilizando un parámetro del modelo llamado temperatura.
 
-## ¿Cómo puede nuestra startup aprovechar los Modelos de Lenguaje Grandes?
+## ¿Cómo puede nuestra startup aprovechar los grandes modelos de lenguaje?
 
 Ahora que tenemos una mejor comprensión del funcionamiento interno de un modelo de lenguaje grande, veamos algunos ejemplos prácticos de las tareas más comunes que pueden realizar bastante bien, con atención a nuestro escenario empresarial. Dijimos que la capacidad principal de un Modelo de Lenguaje Grande es *generar texto desde cero, a partir de una entrada textual escrita en lenguaje natural*.
 
@@ -119,7 +119,7 @@ La entrada de un modelo de lenguaje grande se conoce como "prompt" (indicación)
 
 Los ejemplos anteriores son bastante simples y no pretenden ser una demostración exhaustiva de las capacidades de los modelos de lenguaje grandes. Solo quieren mostrar el potencial del uso de la IA generativa, en particular, pero no limitado al contexto educativo.
 
-Además, el resultado de un modelo de IA generativa no es perfecto y, a veces, la creatividad del modelo puede ir en su contra, dando como resultado un resultado que es una combinación de palabras que el usuario humano puede interpretar como una mistificación de la realidad, o puede ser ofensivo. La IA generativa no es inteligente, al menos en la definición más amplia de inteligencia, que incluye el razonamiento crítico y creativo o la inteligencia emocional; no es determinista y no es confiable, ya que las mentiras, como referencias, contenidos y declaraciones erróneos, pueden combinarse con información correcta y presentarse de manera persuasiva y segura. En las siguientes lecciones, abordaremos todas estas limitaciones y veremos qué podemos hacer para mitigarlas.
+Además, el resultado de un modelo de IA generativa no es perfecto y, a veces, la creatividad del modelo puede ir en su contra, dando como resultado un resultado que es una combinación de palabras que el usuario humano puede interpretar como una mistificación de la realidad, o puede ser ofensivo. La IA generativa no es inteligente, al menos en la definición más amplia de inteligencia, que incluye el razonamiento crítico y creativo o la inteligencia emocional; no es determinista y no es confiable, ya que las mentiras, como referencias, contenidos y declaraciones erróneas, pueden combinarse con información correcta y presentarse de manera persuasiva y segura. En las siguientes lecciones, abordaremos todas estas limitaciones y veremos qué podemos hacer para mitigarlas.
 
 ## Asignación
 
