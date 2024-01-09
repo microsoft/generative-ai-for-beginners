@@ -30,7 +30,7 @@ A nuestros Embajadores Estudiantiles de Microsoft y a los autores, revisores y c
 
 ## 🌱 Iniciemos!
 
-Para empezar, [Realiza un fork al repositorio completo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) a tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo más fácilmente más tarde.
+Para empezar, [Realiza un fork al repositorio completo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) a tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo más rápido y fácilmente.
 
 A continuación, se encuentran los enlaces a cada lección. ¡Siéntete libre de explorar y comenzar con la lección que más te interese!
 
