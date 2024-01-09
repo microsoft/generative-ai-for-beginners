@@ -653,4 +653,4 @@ temperature 개념은 무엇을 하는 역할인가요?
 
 이 수업을 완료한 후에는 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 더욱 향상시킬 수 있습니다!
 
-7번 수업으로 이동하여 [채팅 애플리케이션을 구축하는 방법](../../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!
+7번 수업으로 이동하여 [채팅 애플리케이션을 구축하는 방법](../../../07-building-chat-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!
