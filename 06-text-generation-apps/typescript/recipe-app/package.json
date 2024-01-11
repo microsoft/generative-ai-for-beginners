@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && tsc",
     "preserve": "npm run build",
-    "start": "npm run build && cross-env NODE_ENV=development concurrently \"nodemon\"",
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,14 +18,12 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.8",
-    "concurrently": "^8.2.2",
     "nodemon": "^3.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@azure/openai": "^1.0.0-beta.10",
-    "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "rimraf": "^5.0.5"
   },
