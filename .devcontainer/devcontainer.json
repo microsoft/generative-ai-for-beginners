@@ -16,7 +16,8 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
-				"ms-toolsai.jupyter"
+				"ms-toolsai.jupyter",
+				"ms-dotnettools.dotnet-interactive-vscode"
 			], 
 			"postCreateCommand": "pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
 		}
