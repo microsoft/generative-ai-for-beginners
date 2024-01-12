@@ -50,8 +50,7 @@ LLM 模型有许多不同类型，您选择的模型取决于您的用途、您�
 
 ![基础模型与 LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
-图片来源：【基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium
-](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
+图片来源：[基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 为了进一步阐明这种区别，我们以 ChatGPT 为例。 为了构建 ChatGPT 的第一个版本，名为 GPT-3.5 的模型作为基础模型。 这意味着 OpenAI 使用一些特定于聊天的数据来创建 GPT-3.5 的调整版本，专门用于在对话场景（例如聊天机器人）中让其有更好的表现。
 
