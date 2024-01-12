@@ -4,7 +4,7 @@
 	"name": "Generative AI For Beginners",
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
-    		"ghcr.io/devcontainers/features/dotnet:2": "latest"
+    		"ghcr.io/devcontainers/features/dotnet:2": {}
 	},
 	"hostRequirements": {
 		"cpus": 4
