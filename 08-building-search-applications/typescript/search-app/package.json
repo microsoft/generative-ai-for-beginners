@@ -7,7 +7,6 @@
     "build": "rimraf build && tsc",
     "preserve": "npm run build",
     "start": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "typescript",
