@@ -11,6 +11,6 @@ pip install openai
 # npm install --save openai
 
 # Temporary workaround to update to .NET 8
-wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-chmod +x ./dotnet-install.sh
-./dotnet-install.sh --version latest
+# wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+# chmod +x ./dotnet-install.sh
+# ./dotnet-install.sh --version latest
