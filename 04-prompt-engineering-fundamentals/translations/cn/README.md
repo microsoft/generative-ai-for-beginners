@@ -83,12 +83,6 @@ LLM 将提示视为标记序列，其中不同的模型（或模型的版本）�
 
 ### 概念: 基础模型
 
-Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.openai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Not that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
-
-Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
-
-But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
-
 一旦提示被标记化，[“Base LLM”](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)的主要功能 （或基础模型）是预测该序列中的标记。 由于 LLMs 接受过大量文本数据集的训练，因此他们对标记之间的统计关系有很好的理解，并且可以自信地做出预测。 并不是说他们不理解提示或标记中单词的含义，他们只是看到了一个可以通过下一个预测“完成”的模式。 他们可以继续预测序列，直到被用户干预或某些预先设定的条件终止。
 
 想了解基于提示补全是如何工作的吗？ 使用默认设置将上述提示输入到 Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)。 系统配置会将提示视为信息请求 - 因此您应该看到满足此上下文的补全。
