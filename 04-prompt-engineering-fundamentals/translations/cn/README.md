@@ -42,7 +42,7 @@ _生成式人工智能_能够根据用户请求创建新内容（例如文本、
 ## Our Startup 的使命
 
 
-现在，让我们来谈谈这个主题与 Our Startup 的使命[将人工智能创新带入教育](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education)有何关系 。 我们希望构建由人工智能驱动的个性化学习应用程序 - 所以让我们考虑一下我们应用程序的针对不同用户如何“设计”提示：
+现在，让我们来谈谈这个主题与 Our Startup 的使命[将人工智能创新带入教育](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)有何关系 。 我们希望构建由人工智能驱动的个性化学习应用程序 - 所以让我们考虑一下我们应用程序的针对不同用户如何“设计”提示：
 
 - **管理员**可能会要求人工智能分析课程数据以识别覆盖范围的差距_。 人工智能可以总结结果或用代码将其可视化。
 - **教育者**可能会要求人工智能为目标受众和主题生成教学计划。 AI可以按照指定的格式构建个性化计划。
