@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && tsc",
     "preserve": "npm run build",
-    "start": "nodemon",
+    "start": "nodemon"
   },
   "keywords": [
     "typescript",
