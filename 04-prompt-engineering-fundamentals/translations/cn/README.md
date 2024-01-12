@@ -229,11 +229,9 @@ response = openai.ChatCompletion.create(
 
 下面是一个示例，其中的指令是“用 2 句话总结这一点”。
 
-```text
 | Prompt (Input) | Completion (Output) |
 |:---|:---|
 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, the fifth planet from the Sun, is the largest in the Solar System and is known for being one of the brightest objects in the night sky. Named after the Roman god Jupiter, it's a gas giant whose mass is two-and-a-half times that of all other planets in the Solar System combined. |
-```
 
 主要内容片段可以通过多种方式使用来驱动更有效的指令：
 
@@ -252,14 +250,14 @@ response = openai.ChatCompletion.create(
 - 所需输出的一些示例
 - 新示例的开始（成为隐式任务描述）
 
-    ```text
-    | Learning Type | Prompt (Input) | Completion (Output) |
-    |:---|:---|:---|
-    | Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
-    | One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
-    | Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
-    | | | |
-    ```
+    
+| Learning Type | Prompt (Input) | Completion (Output) |
+|:---|:---|:---|
+| Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
+| One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
+| Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
+| | | |
+
 
 请注意，我们如何必须在零样本提示中提供明确的指令（“翻译为西班牙语”），但它是在一次提示示例中推断出来的。 这个少样本示例展示了如何添加更多示例来让模型在不添加指令的情况下做出更准确的推理。
 
@@ -267,14 +265,14 @@ response = openai.ChatCompletion.create(
 
 使用主要内容的另一种技术是提供暗示而不是示例。 在这种情况下，我们通过使用反映所需响应格式的片段启动来让模型朝正确的方向进行推理。 然后，模型“接受提示”，继续按照这种思路进行。
 
-```text
+
 | Number of Cues | Prompt (Input) | Completion (Output) |
 |:---|:---|:---|
 | 0  | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This**  | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky..|
 | 1 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times. |
 | 2 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> Top 3 Facts We Learned: | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ... |
 | | | |
-```
+
 
 ### 提示模版
 
@@ -330,7 +328,6 @@ Now let's look at common best practices that are recommended by [Open AI](https:
 
 现在让我们看看从业者推荐的常见最佳实践文档，包括 [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api) 和 [ Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) 
 
-```text
 | What | Why |
 |:---|:---|
 | Evaluate the latest models. | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions. |
@@ -342,7 +339,6 @@ Now let's look at common best practices that are recommended by [Open AI](https:
 | Order Matters | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.|
 |Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses. |
 | | |
-```
 
 任何最佳实践一样，请记住，_您的结果可能会因模型、任务和领域而异。 使用这些作为起点，并迭代以找到最适合您的方法。 随着新模型和工具的出现，不断重新评估您的提示工程，重点关注该提示工程的可扩展性和响应质量。
 
