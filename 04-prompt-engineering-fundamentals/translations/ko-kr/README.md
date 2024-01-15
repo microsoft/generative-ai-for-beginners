@@ -1,52 +1,51 @@
-# Prompt Engineering Fundamentals
+# 프롬프트 엔지니어링 기초
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![프롬프트 엔지니어링 기초](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
+LLM에 프롬프트를 어떻게 작성하느냐는 중요합니다. 신중하게 구성된 프롬프트는 그렇지 않은 프롬프트보다 더 나은 결과를 낼 수 있습니다. 하지만 이러한 개념들, 프롬프트, 프롬프트 엔지니어링이 무엇이며, 내가 LLM에 보내는 내용을 어떻게 개선할 수 있을까요? 이 장과 다음 장에서 이와 같은 질문에 답하려고 합니다.
 
-How you write your prompt to the LLM matters, a carefully crafted prompt can achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
+_생성형 AI_ 는 사용자의 요청에 반응하여 새로운 콘텐츠(예: 텍스트, 이미지, 오디오, 코드 등)를 만들어냅니다. 이를 위해 자연어 및 코드 사용에 대해 훈련된 _대형 언어 모델_ (LLMs)인 OpenAI의 GPT("Generative Pre-trained Transformer") 시리즈와 같은 모델을 활용합니다.
 
-_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
+이제 사용자는 채팅과 같은 익숙한 패러다임을 사용하여 기술적 전문 지식이나 훈련없이 이러한 모델과 상호 작용할 수 있습니다. 이러한 모델들은 _프롬프트 기반_ 입니다. 사용자는 텍스트 입력(프롬프트)을 보내고 AI의 응답(완성)을 받아냅니다. 사용자는 이후 AI와 반복적으로 "대화"를 나누며, 여러 턴의 대화를 통해 원하는 응답이 나올 때까지 프롬프트를 정제할 수 있습니다.
 
-Users can now interact with these models using familiar paradigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt till the response matches their expectations.
+이제 "프롬프트"는 생성형 AI 애플리케이션을 위한 주요 _프로그래밍 인터페이스_ 가 됩니다. 이는 모델에게 무엇을 할지 지시하고 반환된 응답의 질에 영향을 미칩니다. "프롬프트 엔지니어링"은 프롬프트의 _설계 및 최적화_ 에 중점을 두어 일관되고 질 높은 응답을 대규모로 제공하기 위한 연구 분야로 빠르게 성장하고 있습니다.
 
-"Prompts" now become the primary _programming interface_ for generative AI apps, telling the models what to do and influencing the quality of returned responses. "Prompt Engineering" is a fast-growing field of study that focuses on the _design and optimization_ of prompts to deliver consistent and quality responses at scale.
+## 학습 목표
 
-## Learning Goals
+이 수업에서는 프롬프트 엔지니어링이 무엇인지, 왜 중요한지, 주어진 모델과 애플리케이션 목표에 맞는 보다 효과적인 프롬프트를 어떻게 만들 수 있는지를 배웁니다. 우리는 프롬프트 엔지니어링의 핵심 개념과 모범 사례를 이해하고, 실제 예시에 이러한 개념들이 적용되는 상호 작용하는 주피터 노트북 "sandbox" 환경에 대해 알아볼 것입니다.
 
-In this lesson, we learn what Prompt Engineering is, why it matters, and how we can craft more effective prompts for a given model and application objective. We'll understand core concepts and best practices for prompt engineering - and learn about an interactive Jupyter Notebooks "sandbox" environment where we can see these concepts applied to real examples.
+이 수업을 마치면 다음을 할 수 있게 됩니다:
 
-By the end of this lesson we will be able to:
+1. 프롬프트 엔지니어링이 무엇이며 왜 중요한지 설명할 수 있습니다.
+2. 프롬프트의 구성 요소와 사용 방법을 기술할 수 있습니다.
+3. 프롬프트 엔지니어링을 위한 모범 사례와 기술을 배울 수 있습니다.
+4. 배운 기술을 OpenAI 엔드포인트를 사용하여 실제 예시에 적용할 수 있습니다.
 
-1. Explain what prompt engineering is and why it matters.
-2. Describe the components of a prompt and how they are used.
-3. Learn best practices and techniques for prompt engineering.
-4. Apply learned techniques to real examples, using an OpenAI endpoint.
+## 샌드박스(Sandbox) 학습
 
-## Learning Sandbox
+프롬프트 엔지니어링은 현재 과학이라기보다는 예술에 가깝습니다. 직관력 향상시키는 가장 좋은 방법은 _더 많이 실습하고_ 애플리케이션 도메인 전문 지식과 권장 기술, 모델별 최적화를 결합하는 시행착오적 접근 방식을 채택하는 것입니다.
 
-Prompt engineering is currently more art than science. The best way to improve our intuition for it is to _practice more_ and adopt a trial-and-error approach that combines application domain expertise with recommended techniques and model-specific optimizations.
+이 레슨과 함께 제공되는 주피터 노트북은 학습한 내용을 시험해 볼 수 있는 _sandbox_ 환경을 제공합니다 - 학습을 진행하면서 또는 마지막에 코드 챌린지의 일부로 사용할 수 있습니다. 연습문제를 실행하기 위해서는 다음이 필요합니다:
 
-The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
+1. OpenAI API 키 - 배포된 LLM의 서비스 엔드포인트입니다.
 
-1. An OpenAI API key - the service endpoint for a deployed LLM.
+2. 파이썬 런타임 - 노트북을 실행할 수 있는 환경입니다.
 
-2. A Python Runtime - in which the Notebook can be executed.
+이 리포지토리는 파이썬 3 런타임이 포함된 _dev container_ 로 구성되어 있습니다. GitHub 코드스페이스나 로컬 Docker 데스크톱에서 리포지토리를 열면 런타임이 자동으로 활성화됩니다. 그런 다음 노트북을 열고 Python 3.x 커널을 선택해 노트북을 실행할 준비를 하세요.
 
-We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
+기본 노트북은 OpenAI API 키 사용에 맞게 설정되어 있습니다. 폴더 루트의 `.env.copy` 파일을 `.env`로 복사하고 `OPENAI_API_KEY=` 줄에 API 키를 업데이트하면 준비가 완료됩니다.
 
-The default notebook is set up for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
-
-The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
+노트북에는 _starter_ 연습 문제가 포함되어 있지만, 직접 _Markdown_ (설명) 과 _Code_ (프롬프트 요청) 섹션을 자유롭게 추가하고 더 많은 예제나 아이디어를 시도해보고 프롬프트 디자인에 대한 직관을 키우는 것이 좋습니다.
 
 ## Our Startup
 
-Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We want to build AI-powered applications of  _personalized learning_ - so let's think about how different users of our application might "design" prompts:
+이제, _이번 주제_ 가 [교육에 AI 혁신을 가져오기](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)하는 우리 스타트업 미션과 어떻게 관련되는지에 대해 이야기해보겠습니다. 우리는 _맞춤 학습(personalized learning)_ 의 AI 기반 응용 프로그램을 구축하고 싶습니다. - 따라서 우리 애플리케이션의 다양한 사용자가 프롬프트를 어떻게 "디자인"할 수 있는지 생각해 봅시다:
 
-- **Administrators** might ask the AI to _analyze curriculum data to identify gaps in coverage_. The AI can summarize results or visualize them with code.
-- **Educators** might ask the AI to _generate a lesson plan for a target audience and topic_. The AI can build the personalized plan in a specified format.
-- **Students** might ask the AI to _tutor them in a difficult subject_. The AI can now guide students with lessons, hints & examples tailored to their level.
+- **관리자** 는 AI에게 _교육과정 데이터를 분석하여 커버리지의 공백을 식별하도록_ 요청할 수 있습니다. AI는 결과를 요약하거나 코드로 시각화할 수 있습니다.
+- **교육자** 는 AI에게 _대상 교육생과 주제에 대한 수업 계획을 작성하도록_ 요청할 수 있습니다. AI는 지정된 형식으로 맞춤형 계획을 작성할 수 있습니다.
+- **학생** 들은 AI에게 _어려운 과목을 가르쳐달라고_ 요청할 수 있습니다. AI는 이제 학생들의 수준에 맞춘 수업, 힌트 및 예시로 학생들을 안내할 수 있습니다.
 
-That's just the tip of the iceberg. Check out [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - an open-source prompts library curated by education experts - to get a broader sense of the possibilities! _Try running some of those prompts in the sandbox or using the OpenAI Playground to see what happens!_
+이것은 빙산의 일각에 불과합니다. 교육 전문가들이 선별한 오픈소스 프롬프트 라이브러리인 [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - 을 확인하여 더 다양한 가능성을 살펴보세요! _샌드박스에서 몇 가지 프롬프트를 실행하거나 OpenAI Playground를 사용하여 어떤 일이 일어나는지 확인해 보세요!_  
 
 <!--
 LESSON TEMPLATE:
@@ -58,109 +57,109 @@ Prompt Engineering.
 Define it and explain why it is needed.
 -->
 
-## What is Prompt Engineering?
+## 프롬프트 엔지니어링이란 무엇인가요?
 
-We started this lesson by defining **Prompt Engineering** as the process of _designing and optimizing_ text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model. We can think of this as a 2-step process:
+우리는 이 수업을 특정 애플리케이션 목표와 모델에 대한 일관되고 질 좋은 응답(완성)을 내기 위해 텍스트 입력(프롬프트)의 _설계와 최적화_ 과정이라고 정의하는 **프롬프트 엔지니어링**으로 시작했습니다. 이를 2단계 과정으로 생각해볼 수 있습니다:
 
-- _designing_ the initial prompt for a given model and objective
-- _refining_ the prompt iteratively to improve the quality of the response
+- 주어진 모델과 목표에 맞는 최초의 프롬프트 _설계하기_
+- 반복적으로 프롬프트를 _정제하여_ 응답의 질을 높이기
 
-This is necessarily a trial-and-error process that requires user intuition and effort to get optimal results. So why is it important? To answer that question, we first need to understand three concepts:
+이는 반드시 시행착오를 겪으며 사용자의 직관과 노력이 필요한 과정입니다. 그럼 왜 이것이 중요한가요? 그 질문에 답하기 위해서는 우선 세 가지 개념을 이해해야 합니다:
 
-- _Tokenization_ = how the model "sees" the prompt
-- _Base LLMs_ = how the foundation model "processes" a prompt
-- _Instruction-Tuned LLMs_ = how the model can now see "tasks"
+- _Tokenization_ = 모델이 프롬프트를 "어떻게 보는지"
+- _Base LLMs_ = 기초 모델이 프롬프트를 "어떻게 처리하는지"
+- _Instruction-Tuned LLMs_ = 모델이 이제 "작업"을 "어떻게 파악하는지"
 
 ### Tokenization
 
-An LLM sees prompts as a _sequence of tokens_ where different models (or versions of a model) can tokenize the same prompt in different ways. Since LLMs are trained on tokens (and not on raw text), the way prompts get tokenized has a direct impact on the quality of the generated response.
+LLM은 프롬프트를 _토큰의 시퀀스_ 로 보며, 다른 모델(또는 모델의 버전)은 동일한 프롬프트를 다른 방식으로 토크나이징 할 수 있습니다. LLM은 토큰에 대해 훈련받기 때문에(원시 텍스트가 아니라), 프롬프트를 토크나이징하는 방식은 생성된 응답의 질에 직접적인 영향을 미칩니다.
 
-To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
+토크나이제이션이 어떻게 작동하는지 직관적으로 이해하려면, 아래에 표시된 [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)와 같은 도구를 사용해보세요. 여러분의 프롬프트를 복사하여 붙여넣고 - 그것이 어떻게 토큰으로 변환되는지 확인해보세요. 빈칸 문자와 구두점이 어떻게 처리되는지 주목하세요. 이 예시는 이전 버전의 LLM(GPT-3)을 보여주기 때문에, 새로운 모델로 시도하면 다른 결과가 나올 수 있습니다.
 
 ![Tokenization](../../images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
-### Concept: Foundation Models
+### 개념: 기초 모델(Foundation Models)
 
-Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Note that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
+프롬프트가 토크나이징되면, ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (또는 기초 모델)의 주 기능은 해당 시퀀스에서 토큰을 예측하는 것입니다. LLM은 방대한 텍스트 데이터셋에 대해 훈련받기 때문에 토큰 간의 통계적 관계를 잘 파악하여 어느 정도의 확신을 가지고 예측을 할 수 있습니다. LLM은 프롬프트나 토큰의 _의미_ 를 이해하지 않습니다; 그저 다음 예측으로 "완성"할 수 있는 패턴을 보는 것뿐입니다. 사용자의 개입이나 사전에 설정된 조건에 의해 종료될 때까지 시퀀스 예측을 계속할 수 있습니다.
 
-Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
+프롬프트 기반 완성이 어떻게 작동하는지 보고 싶으신가요? 위의 프롬프트를 Azure OpenAI Studio의 [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)에 기본 설정으로 입력해보세요. 시스템은 프롬프트를 정보 요청으로 처리하도록 설정되어 있기 때문에, 이 컨텍스트를 만족하는 완성/결과물(completion)을 볼 수 있습니다.
 
-But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
+하지만 사용자가 특정 기준이나 작업 목표를 충족하는 특정한 것을 보고 싶다면 어떨까요? 이때 _지시학습으로 조정된(instruction-tuned)_ LLM이 등장합니다.
 
 ![Base LLM Chat Completion](../../images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
 
-### Concept: Instruction Tuned LLMs
+### 개념: 지시학습으로 조정된 LLMs
 
-An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction.
+[지시학습 튜닝된 LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)은 기본 모델로 시작하여 사람이 이해하기 쉬운 지시사항을 포함한 예시나 입력/출력 쌍(예를 들어, 여러 턴의 "메시지")으로 정교하게 튜닝합니다 - 그리고 AI의 응답은 해당 지시사항을 따르려고 시도합니다.
 
-This uses techniques like Reinforcement Learning with Human Feedback (RLHF) that can train the model to _follow instructions_ and _learn from feedback_ so that it produces responses that are better-suited to practical applications and more-relevant to user objectives.
+이는 사람의 피드백을 통한 강화 학습(Reinforcement Learning with Human Feedback, RLHF)과 같은 기법을 사용하여 모델이 _지시사항을 따르고_ _피드백으로부터 배우도록_ 훈련하는데, 결과적으로 실용적인 애플리케이션에 더 적합하고 사용자의 목표에 더 관련 있는 응답을 생성하게 됩니다.
 
-Let's try it out - revisit the prompt above but now change the _system message_ to provide the following instruction as context:
+위의 프롬프트를 다시 살펴보고 이제 _system message_를 변경하여 다음 명령어를 컨텍스트로 제공하세요:
 
-> _Summarize content you are provided with for a second-grade student. Keep the result to one paragraph with 3-5 bullet points._
+> _2학년 학생을 위해 제공된 콘텐츠를 요약합니다. 결과를 3~5개의 글머리 기호로 구성된 한 단락으로 유지하세요._
 
-See how the result is now tuned to reflect the desired goal and format? An educator can now directly use this response in their slides for that class.
+이제 원하는 목표와 형식을 반영하여 결과가 어떻게 조정되어 있는지 보셨나요? 이제 교육자는 이 응답을 해당 수업의 슬라이드에 직접 사용할 수 있습니다.
 
 ![Instruction Tuned LLM Chat Completion](../../images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
 
-## Why do we need Prompt Engineering?
+## 왜 프롬프트 엔지니어링이 필요한가요?
 
-Now that we know how prompts are processed by LLMs, let's talk about _why_ we need prompt engineering. The answer lies in the fact that current LLMs pose a number of challenges that make _reliable and consistent completions_ more challenging to achieve without putting effort into prompt construction and optimization. For instance:
+이제 LLM들이 어떻게 프롬프트를 처리하는지 알았으니, _왜_ 프롬프트 엔지니어링이 필요한지 얘기해봅시다. 답은 현재 LLM들이 내포하는 여러 도전적인 과제들 때문인데, 이로 인해 노력 없이 프롬프트 구성과 최적화를 통해 _신뢰할 수 있고 일관된 완성들_ 을 달성하기 어려워졌습니다. 예를 들면:
 
-1. **Model responses are stochastic.** The _same prompt_ will likely produce different responses with different models or model versions. And it may even produce different results with the _same model_ at different times. _Prompt engineering techniques can help us minimize these variations by providing better guardrails_.
+1. **모델 응답은 확률적입니다.** _동일한 프롬프트_ 는 서로 다른 모델이나 모델 버전으로 실행했을 때 다른 결과를 낼 것이며, 심지어 _동일한 모델_ 이라도 다른 시간에는 다른 결과를 낼 수도 있습니다. _프롬프트 엔지니어링 기법은 더 나은 가이드라인을 제공하여 이런 변동성을 최소화하는데 도움을 줄 수 있습니다._
 
-1. **Models can fabricate responses.** Models are pre-trained with _large but finite_ datasets, meaning they lack knowledge about concepts outside that training scope. As a result, they can produce completions that are inaccurate, imaginary, or directly contradictory to known facts.  _Prompt engineering techniques help users identify and mitigate such fabrications e.g., by asking AI for citations or reasoning_.
+1. **모델이 응답을 조작할 수 있습니다.** 모델은 _크지만 한정된_ 데이터셋으로 사전 훈련되기 때문에 그 훈련 범위 밖의 개념에 대한 지식이 없습니다. 결과적으로, 부정확하거나 상상 속의 것, 혹은 알려진 사실과 직접적으로 모순되는 완성들을 생성할 수 있습니다. _프롬프트 엔지니어링 기법은 사용자가 이러한 조작을 식별하고 완화하는데 도움을 줄 수 있습니다. 예를 들어, 인용이나 이유를 AI에게 요청하도록 함으로써._
 
-1. **Models capabilities will vary.** Newer models or model generations will have richer capabilities but also bring unique quirks and tradeoffs in cost & complexity. _Prompt engineering can help us develop best practices and workflows that abstract away differences and adapt to model-specific requirements in scalable, seamless ways_.
+1. **모델의 능력은 다양합니다.** 새로운 모델이나 모델 세대는 더 풍부한 기능을 제공하지만, 비용과 복잡성 면에서 고유한 특징과 타협점을 가지게 됩니다. _프롬프트 엔지니어링은 최상의 실무 방식과 작업 흐름을 개발하는데 도움을 줄 수 있으며 차이를 추상화하고 모델별 요구사항에 맞춰 확장 가능하고 원활하게 적응할 수 있습니다._
 
-Let's see this in action in the OpenAI or Azure OpenAI Playground:
+OpenAI 또는 Azure OpenAI Playground에서 이를 실제로 적용해봅시다:
 
-- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
-- Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
+- 다른 LLM 배포(예: OpenAI, Azure OpenAI, Hugging Face)에 동일한 프롬프트를 사용해보세요 - 변화를 보셨나요?
+- _동일한_ LLM 배포(예: Azure OpenAI playground)에서 동일한 프롬프트를 반복해서 사용해보세요 - 이러한 변화가 어떻게 달랐나요?
 
-### Fabrications Example
+### 정보 조작 예시
 
-In this course, we use the term **"fabrication"** to reference the phenomenon where LLMs sometimes generate factually incorrect information due to limitations in their training or other constraints. You may also have heard this referred to as _"hallucinations"_ in popular articles or research papers. However, we strongly recommend using _"fabrication"_ as the term so we don't accidentally anthropomorphize the behavior by attributing a human-like trait to a machine-driven outcome. This also reinforces [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) from a terminology perspective, removing terms that may also be considered offensive or non-inclusive in some contexts.
+이번 강의에서 우리는 LLMs이 훈련 과정의 한계나 기타 제약으로 인해 사실과 어긋나는 정보를 만들어내는 현상을 지칭하기 위해 **"정보 조작"** 이라는 용어를 사용합니다. 이것은 기사나 연구 논문에서 _"환각"_ 이라고도 불리기도 합니다. 그러나 우리는 기계가 주도하는 결과에 인간과 같은 특성을 부여함으로써 실수로 인류화하는 것을 피하기 위해 _"정보 조작"_ 이라는 용어를 사용하는 것을 강력히 권장합니다. 또한 이는 용어 사용 측면에서 [책임감 있는 AI 지침](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)을 강화하는 것이며, 특정 상황에서 불쾌하거나 포괄적이지 않은 것으로 간주될 수 있는 용어를 제거하는 데에도 도움이 됩니다.
 
-Want to get a sense of how fabrications work? Think of a prompt that instructs the AI to generate content for a non-existent topic (to ensure it is not found in the training dataset). For example - I tried this prompt:
-> **Prompt:** generate a lesson plan on the Martian War of 2076.
+정보 조작이 어떻게 작동하는지 궁금하신가요? 훈련 데이터셋에서 찾을 수 없는, 존재하지 않는 주제에 대한 내용을 생성하도록 AI에 지시하는 프롬프트를 생각해 보세요. 예를 들어, 저는 이런 프롬프트를 시도했습니다:
+> **프롬프트:** 2076년 화성 전쟁에 대한 수업 계획을 작성하세요.
 
-A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event.
+웹 검색을 통해 화성 전쟁에 대한 허구적인 묘사(예: TV 시리즈나 책)이 있음을 알 수 있겠지만, 2076년에는 없었습니다. 상식적으로 2076년은 _미래에 있기 때문에_ 실제 사건과 연관될 수 없지요.
 
-So what happens when we run this prompt with different LLM providers?
+그렇다면 이 프롬프트를 다양한 LLM 제공자들과 실행하면 어떻게 될까요?
 
-> **Response 1**: OpenAI Playground (GPT-35)
+> **응답 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
+![응답 1](../../images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
 
-> **Response 2**: Azure OpenAI Playground (GPT-35)
+**응답 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
+![응답 2](../../images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
-> **Response 3**: : Hugging Face Chat Playground (LLama-2)
+> **응답 3**: Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![응답 3](../../images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
-As expected, each model (or model version) produces slightly different responses thanks to stochastic behavior and model capability variations. For instance, one model targets an 8th grade audience while the other assumes a high-school student. But all three models did generate responses that could convince an uninformed user that the event was real
+예상대로, 각 모델(또는 모델 버전)은 확률적 행동과 모델 능력의 차이로 인해 약간 다른 응답을 생성합니다. 예를 들어, 한 모델은 8학년 대상을 목표로 하는 반면 다른 모델은 고등학생을 가정합니다. 하지만 모든 세 모델은 사건이 실제로 일어났다고 잘못된 정보를 가진 사용자를 속일 수 있는 응답을 생성했습니다.
 
-Prompt engineering techniques like _metaprompting_ and _temperature configuration_ may reduce model fabrications to some extent. New prompt engineering _architectures_ also incorporate new tools and techniques seamlessly into the prompt flow, to mitigate or reduce some of these effects.
+_메타프롬프팅_ 및 _온도 설정_ 과 같은 프롬프트 엔지니어링 기술은 모델 정보 조작을 어느 정도 줄일 수 있습니다. 새로운 프롬프트 엔지니어링 _아키텍처_ 또한 새로운 도구와 기술을 프롬프트 흐름에 완벽하게 통합하여 이러한 효과를 완화하거나 줄이기도 합니다.
 
-## Case Study: GitHub Copilot
+## 사례 연구: GitHub Copilot
 
-Let's wrap this section by getting a sense of how prompt engineering is used in real-world solutions by looking at one Case Study: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+이 섹션을 마무리하며 실제 솔루션에서 프롬프트 엔지니어링이 어떻게 사용되는지를 이해하기 위해 하나의 사례 연구를 살펴보겠습니다: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-GitHub Copilot is your "AI Pair Programmer" - it converts text prompts into code completions and is integrated into your development environment (e.g., Visual Studio Code) for a seamless user experience. As documented in the series of blogs below, the earliest version was based on the OpenAI Codex model - with engineers quickly realizing the need to fine-tune the model and develop better prompt engineering techniques, to improve code quality. In July, they [debuted an improved AI model that goes beyond Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) for even faster suggestions.
+GitHub Copilot은 여러분의 "AI 페어 프로그래머"로, 텍스트 프롬프트를 코드 완성으로 변환하며 개발 환경(예: Visual Studio Code)에 통합되어 원활한 사용자 경험을 제공합니다. 아래 블로그 시리즈에서 기술된 바와 같이, 초기 버전은 OpenAI Codex 모델을 기반으로 했으며, 엔지니어들은 모델을 미세 조정하고 더 나은 프롬프트 엔지니어링 기술을 개발할 필요성을 빠르게 깨달았습니다. 이를 통해 코드 품질을 향상시켰습니다. 7월에는 더 빠른 제안을 위해 [Codex를 넘어선 개선된 AI 모델을 선보였습니다](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst).
 
-Read the posts in order, to follow their learning journey.
+그들의 학습 여정을 따라가며 이러한 포스트들을 순서대로 읽어보세요.
 
-- **May 2023** | [GitHub Copilot is Getting Better at Understanding Your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- **May 2023** | [Inside GitHub: Working with the LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Jun 2023** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Jul 2023** | [.. GitHub Copilot goes beyond Codex with improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
-- **Jul 2023** | [A Developer's Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
-- **Sep 2023** | [How to build an enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023년 5월** | [GitHub Copilot은 코드 이해를 더 잘하기 위해 개선되고 있습니다](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **2023년 5월** | [GitHub 내부: GitHub Copilot 뒤에 있는 LLM과의 작업](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023년 6월** | [GitHub Copilot을 위한 더 나은 프롬프트 작성 방법](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023년 7월** | [.. GitHub Copilot은 Codex를 넘어 개선된 AI 모델로 더 나아갑니다](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **2023년 7월** | [개발자를 위한 프롬프트 엔지니어링 및 LLM 가이드](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **2023년 9월** | [GitHub Copilot에서 얻은 교훈: 기업용 LLM 앱 구축 방법](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-You can also browse their [Engineering blog](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) for more posts like [this one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) that shows how these models and techniques are _applied_ for driving real-world applications.
+또한, [이 글](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst)처럼 실제 애플리케이션 구동에 이러한 모델과 기술이 _적용되는_ 방법을 보여주는 글들을 [GitHub의 엔지니어링 블로그](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst)에서 더 많이 찾아볼 수 있습니다.
 
 ---
 
@@ -174,26 +173,26 @@ Prompt Design.
 Illustrated with examples.
 -->
 
-## Prompt Construction
+## 프롬프트 구성
 
-We've seen why prompt engineering is important - now let's understand how prompts are _constructed_ so we can evaluate different techniques for more effective prompt design.
+프롬프트 엔지니어링의 중요성을 이해했으니, 이제 프롬프트가 어떻게 _구성_ 되는지 이해해보고 더 효과적인 프롬프트 설계를 위한 다양한 기술을 검증해보겠습니다.
 
-### Basic Prompt
+### 기본 프롬프트
 
-Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
+기본 프롬프트부터 시작해보겠습니다: 모델에 전달된 텍스트 입력으로 다른 맥락(context)이 없습니다. 예시 - 미국 국가의 첫 몇 단어를 OpenAI [완성 API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst)에 보내면, 바로 다음 몇 줄로 응답을 _완성_ 하는데요, 이는 기본적인 예측 동작을 보여줍니다.
 
-| Prompt (Input) | Completion (Output) |
+| 프롬프트 (입력) | 완성 (출력) |
 |:---|:---|
-| Oh say can you see | It sounds like you're starting the lyrics to "The Star-Spangled Banner," the national anthem of the United States. The full lyrics are ... |
+| Oh say can you see | "The Star-Spangled Banner,"미국의 국가로 시작하는 가사 같네요. 전체 가사는 ... |
 
-### Complex Prompt
+### 복잡한 프롬프트
 
-Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) lets us construct a complex prompt as a collection of _messages_ with:
+이제 기본 프롬프트에 맥락(context)과 지시사항(instructions)을 추가해 보겠습니다. [채팅 완성 API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst)를 사용하면, _메세지_ 의 컬렉션으로 다음과 같이 복잡한 프롬프트를 구성할 수 있습니다.
 
-- Input/output pairs reflecting _user_ input and _assistant_ response.
-- System message setting the context for assistant behavior or personality.
+- _사용자_ 입력과 _어시스턴트_ 응답을 반영하는 입력/출력 쌍.
+- 어시스턴트의 행동이나 성격에 대한 맥락을 설정하는 시스템 메세지.
 
-The request is now in the form below, where the _tokenization_ effectively captures relevant information from context and conversation. Now, changing the system context can be as impactful on the quality of completions, as the user inputs provided.
+이제 요청은 아래와 같은 형태로, _토큰화_ 는 맥락과 대화에서 관련 정보를 효과적으로 포착하는 아래 형식이 되었습니다. 이제 시스템 맥락을 변경하면 사용자가 입력한 정보만큼이나 완성도에 영향을 미칠 수 있습니다.
 
 ```python
 response = openai.ChatCompletion.create(
@@ -207,90 +206,85 @@ response = openai.ChatCompletion.create(
 )
 ```
 
-### Instruction Prompt
+### 지시 프롬프트
 
-In the above examples, the user prompt was a simple text query that can be interpreted as a request for information. With _instruction_ prompts, we can use that text to specify a task in more detail, providing better guidance to the AI. Here's an example:
+위의 예에서 사용자 프롬프트는 정보 요청으로 해석될 수 있는 단순한 텍스트 쿼리였습니다. _지시_ 프롬프트를 사용하면 해당 텍스트를 사용하여 작업을 더 자세히 지정하여 AI에 더 나은 안내를 제공할 수 있습니다. 다음은 예시입니다:
 
 | Prompt (Input) | Completion (Output) | Instruction Type |
 |:---|:---|:---|
-| Write a description of the Civil War | _returned a simple paragraph_ | Simple|
-|Write a description of the Civil War. Provide key dates and events and describe their significance | _returned a paragraph followed by a list of key event dates with descriptions_| Complex  |
-|Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_| Complex. Formatted. |
+| 남북전쟁에 대한 설명을 작성하라 | _간단한 단락이 반환됨_ | 간단함 |
+| 남북전쟁에 대한 설명을 작성하라. 주요 날짜와 사건을 제공하고 그 중요성을 설명하라 | _주요 사건 날짜와 설명이 포함된 단락이 반환됨_ | 복잡함 |
+| 남북전쟁에 대한 설명을 1단락으로 작성하라. 주요 날짜와 그 중요성에 대한 3개의 요점을 제공하라. 주요 역사적 인물과 그들의 공헌에 대한 3개의 요점을 더 제공하라. 출력을 JSON 파일로 반환하라 | _JSON으로 포맷된 텍스트 박스에서 더 광범위한 세부사항이 반환되며, 필요에 따라 파일로 복사하여 검증할 수 있음_ | 복잡함. 포맷형태. |
 
-## Primary Content
+## 주요 내용
 
-In the above examples, the prompt was still fairly open-ended, allowing the LLM to decide what part of its pre-trained dataset was relevant. With the _primary content_ design pattern, the input text is divided into two parts:
+위의 예시에서 프롬프트는 여
+위의 예시에서는 프롬프트가 여전히 상당히 열린 상태이므로 LLM이 사전 학습된 데이터 세트의 어떤 부분이 관련성이 있는지 결정할 수 있습니다. _주요 내용_ 디자인 패턴을 사용하면 입력 텍스트가 두 부분으로 나뉩니다:
 
-- an instruction (action)
-- relevant content (that influences action)
+- 명령어 (동작)
+- (행동에 영향을 미치는) 관련 콘텐츠
 
-Here's an example where the instruction is to "summarize this in 2 sentences".
+다음은 "이 내용을 2문장으로 요약하라"는 지시가 있는 예시입니다.
 
-| Prompt (Input) | Completion (Output) |
+| 프롬프트 (입력) | 완성 (출력) |
 |:---|:---|
-| Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, the fifth planet from the Sun, is the largest in the Solar System and is known for being one of the brightest objects in the night sky. Named after the Roman god Jupiter, it's a gas giant whose mass is two-and-a-half times that of all other planets in the Solar System combined. |
+| 목성은 태양으로부터 다섯 번째 행성이며 태양계에서 가장 큰 행성입니다. 목성은 태양의 질량의 천분의 일이지만, 태양계 내 다른 모든 행성의 질량을 합친 것의 두 배 반에 달합니다. 목성은 맨눈으로 볼 수 있는 가장 밝은 천체 중 하나이며, 기록된 역사 이전부터 고대 문명에 알려져 있습니다. 목성은 로마 신 목성의 이름을 따서 명명되었습니다. 지구에서 볼 때, 목성은 반사된 빛으로 가시적인 그림자를 만들 정도로 충분히 밝을 수 있으며[19], 평균적으로 달과 금성에 이어 밤하늘에서 세 번째로 밝은 천연 물체입니다.[20] <br/> **이것을 2문장으로 요약하라** | 태양으로부터 다섯 번째에 위치한 목성은 태양계에서 가장 크며 밤하늘에서 가장 밝은 천체 중 하나로 알려져 있습니다. 로마 신 목성의 이름을 딴 이 가스 거인은 태양계 내 다른 모든 행성의 질량을 합친 것보다 두 배 반 더 큰 질량을 가지고 있습니다. |
 
-The primary content segment can be used in various ways to drive more effective instructions:
+주요 내용 부분은 다양한 방식으로 더 효과적인 지시를 위해 사용될 수 있습니다:
 
-- **Examples** - instead of telling the model what to do with an explicit instruction, give it examples of what to do and let it infer the pattern.
-- **Cues** - follow the instruction with a "cue" that primes the completion, guiding the model towards more relevant responses.
-- **Templates** - these are repeatable 'recipes' for prompts with placeholders (variables) that can be customized with data for specific use cases.
+- **예시** - 명시적인 지시로 모델에게 무엇을 할지 알려주는 대신, 무엇을 해야 하는지에 대한 예시를 제공하고 패턴을 추론하게 합니다.
+- **큐** - 지시문 뒤에 완성을 유도하는 '큐'를 추가하여 모델을 더 관련성 있는 응답으로 안내합니다.
+- **템플릿** - 이는 프롬프트에 대한 반복 가능한 '레시피'로, 특정 사용 사례에 대한 데이터로 사용자 지정할 수 있는 자리표시자(변수)가 포함됩니다.
 
-Let's explore these in action.
+이러한 방식을 실제로 적용해 보겠습니다.
 
-### Using Examples
+### 예시 사용하기
 
-This is an approach where you use the primary content to "feed the model" some examples of the desired output for a given instruction, and let it infer the pattern for the desired output. Based on the number of examples provided, we can have zero-shot prompting, one-shot prompting, few-shot prompting etc.
+이 접근법에서는 주요 내용을 사용하여 모델에 원하는 출력에 대한 몇 가지 예시를 "제공"하고, 원하는 출력에 대한 패턴을 추론하게 합니다. 제공된 예시의 수에 따라 제로-샷 프롬프팅, 원-샷 프롬프팅, 퓨-샷 프롬프팅 등이 있을 수 있습니다.
 
-The prompt now consists of three components:
+프롬프트는 이제 세 가지 구성 요소로 구성됩니다:
 
-- A task description
-- A few examples of the desired output
-- The start of a new example (which becomes an implicit task description)
+- 작업 설명
+- 원하는 출력의 몇 가지 예시
+- 새로운 예시의 시작 부분(묵시적 작업 설명이 됨)
 
-
-| Learning Type | Prompt (Input) | Completion (Output) |
+| 학습 유형 | 프롬프트 (입력) | 완성 (출력) |
 |:---|:---|:---|
-| Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
-| One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
-| Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
-| | | |
+| 제로-샷  | "The Sun is Shining". 스페인어로 번역하라  | "El Sol está brillando".|
+| 원-샷 | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
+| 퓨-샷 | 선수가 베이스를 돌았다 => 야구  <br/> 선수가 에이스를 쳤다 => 테니스  <br/> 선수가 식스를 쳤다 => 크리켓  <br/> 선수가 슬램덩크를 했다 => | 농구 |
 
+제로-샷 프롬프팅에서는 명시적인 지시("스페인어로 번역하라")가 필요했지만, 원-샷 프롬프팅 예시에서는 추론으로 이루어집니다. 퓨-샷 예시에서는 추가 지시 없이 더 많은 예시를 추가함으로써 모델이 더 정확한 추론을 할 수 있음을 보여줍니다.
 
-Note how we had to provide explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more accurate inferences with no added instructions.
+### 프롬프트 큐
 
-### Prompt Cues
+주요 내용을 사용하는 또 다른 기술은 예시 대신 _큐_를 제공하는 것입니다. 이 경우, 우리는 원하는 응답 형식을 반영하는 스니펫으로 시작하여 모델에 올바른 방향으로 힌트를 주고 있습니다. 모델은 그 큐를 "이어받아" 그 방식으로 계속합니다.
 
-Another technique for using primary content is to provide _cues_ rather than examples. In this case, we are giving the model a nudge in the right direction by _starting it off_ with a snippet that reflects the desired response format. The model then "takes the cue" to continue in that vein.
-
-
-| Number of Cues | Prompt (Input) | Completion (Output) |
+| 큐의 개수 | 프롬프트 (입력) | 완성 (출력) |
 |:---|:---|:---|
-| 0  | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This**  | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky..|
-| 1 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times. |
-| 2 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> Top 3 Facts We Learned: | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ... |
-| | | |
+| 0  | 목성은 태양으로부터 다섯 번째 행성이며 태양계에서 가장 큰 행성입니다. 목성은 태양의 질량의 천분의 일이지만, 태양계 내 다른 모든 행성의 질량을 합친 것의 두 배 반에 달합니다. 목성은 맨눈으로 볼 수 있는 가장 밝은 천체 중 하나이며, 기록된 역사 이전부터 고대 문명에 알려져 있습니다. <br/>**이것을 요약하시오.**  | 목성은 우리 태양계에서 가장 큰 행성이며 태양으로부터 다섯 번째에 위치합니다. 목성은 가스 거인으로, 태양의 질량의 1/1000에 불과하지만, 다른 모든 행성의 질량을 합친 것보다 무겁습니다. 고대 문명들은 오랜 시간 동안 목성을 알고 있었으며, 이는 밤하늘에서 쉽게 볼 수 있습니다..|
+| 1 | 목성은 태양으로부터 다섯 번째 행성이며 태양계에서 가장 큰 행성입니다. 목성은 태양의 질량의 천분의 일이지만, 태양계 내 다른 모든 행성의 질량을 합친 것의 두 배 반에 달합니다. 목성은 맨눈으로 볼 수 있는 가장 밝은 천체 중 하나이며, 기록된 역사 이전부터 고대 문명에 알려져 있습니다. <br/>**이것을 요약하시오.** <br/> 우리가 목성에 대해 배운 것은 | 태양으로부터 다섯 번째에 위치한 목성은 태양계에서 가장 큰 행성입니다. 이는 가스 거인으로, 태양의 질량의 천분의 일이지만, 태양계의 다른 모든 행성들의 총 질량의 두 배 반에 해당합니다. 목성은 맨눈으로도 쉽게 볼 수 있으며, 고대부터 알려져 왔습니다. |
+| 2 | 목성은 태양으로부터 다섯 번째 행성이며 태양계에서 가장 큰 행성입니다. 목성은 태양의 질량의 천분의 일이지만, 태양계 내 다른 모든 행성의 질량을 합친 것의 두 배 반에 달합니다. 목성은 맨눈으로 볼 수 있는 가장 밝은 천체 중 하나이며, 기록된 역사 이전부터 고대 문명에 알려져 있습니다. <br/>**이것을 요약하시오.** <br/> 우리가 배운 상위 3가지 사실: | 1. 목성은 태양으로부터 다섯 번째에 위치한 태양계에서 가장 큰 행성입니다. <br/> 2. 이는 가스 거인으로, 태양의 질량의 1/1000이지만...<br/> 3. 목성은 고대 시대부터 맨눈으로 볼 수 있으며...  |
 
+### 프롬프트 템플릿
 
-### Prompt Templates
+프롬프트 템플릿은 필요에 따라 저장하고 재사용할 수 있는 _미리 정의된 프롬프트 레시피_로, 대규모로 보다 일관된 사용자 경험을 제공할 수 있습니다. 가장 간단한 형태는 [OpenAI의 이 프롬프트](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)와 같은 프롬프트 예시 모음으로, 대화형 프롬프트 구성 요소(사용자 및 시스템 메시지)와 API기반 요청 방식 모두 제공하여 재사용을 지원합니다.
 
-A prompt template is a _pre-defined recipe for a prompt_ that can be stored and reused as needed, to drive more consistent user experiences at scale. In its simplest form, it is simply a collection of prompt examples like [this one from OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) that provides both the interactive prompt components (user and system messages) and the API-driven request format - to support reuse.
+[LangChain의 이 예시](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)와 같이 좀 더 복잡한 형태에서는 다양한 소스(사용자 입력, 시스템 맥락, 외부 데이터 소스 등)의 데이터로 대체하여 프롬프트를 동적으로 생성할 수 있는 _placeholder_ 가 포함되어 있습니다. 이를 통해 재사용 가능한 프롬프트 라이브러리를 생성하여 대규모로 일관된 사용자 경험을 **프로그래밍적으로** 제공할 수 있습니다.
 
-In it's more complex form like [this example from LangChain](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst) it contains _placeholders_ that can be replaced with data from a variety of sources (user input, system context, external data sources etc.) to generate a prompt dynamically. This allows us to create a library of reusable prompts that can be used to drive consistent user experiences **programmatically** at scale.
+마지막으로, 탬플릿의 진정한 가치는 수직적 애플리케이션 도메인을 위한 _프롬프트 라이브러리_ 를 만들고 공개하는 기능입니다. 이제 프롬프트 템플릿은 애플리케이션 별로 맥락이나 예시를 반영하여 타겟 사용자틍에게 보다 적절하고 정확한 응답을 제공할 수 있도록 _최적화_ 됩니다. [교육용 프롬프트](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) 저장소는 이러한 접근 방식의 좋은 예로, 수업 계획, 커리큘럼 설계, 학생 개인지도 등과 같은 주요 목표에 중점을 둔 교육용 프롬프트 라이브러리를 관리하고 있습니다.
 
-Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for vertical application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring etc.
+## 보조 내용
 
-## Supporting Content
+프롬프트 구성을 명령어(작업)와 대상(기본 컨텐츠)이 있는 것으로 생각 한다면, _보조 콘텐츠_ 는 **어떤 방식으로든 출력에 영향**을 미치기 위해 제공하는 추가 맥락과 같은 겁니다. 이는 매개변수, 서식 지정 지시문, 주체 분류 등을 설정하여 모델이 원하는 사용자 목표나 기대에 맞게 응답을 '맞춤화'하는 데 도움이 될 수 있습니다.
 
-If we think about prompt construction as having a instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies etc. that can help the model _tailor_ its response to be suit the desired user objectives or expectations.
+예를 들어, 커리큘럼에서 사용 가능한 모든 코스의 광범위한 메타데이터(이름, 설명, 수준, 메타데이터 테그, 교수자 등)가 포함된 코스 카탈로그가 있다고 가정해 보겠습니다.
 
-For example: Given a course catalog with extensive metadata (name, description, level, metadata tags, instructor etc.) on all the available courses in the curriculum:
+- "2023년 가을 학기 과정 카탈로그를 요약하라"는 지시문을 정의할 수 있습니다.
+- 원하는 출력의 몇 가지 예시를 제공하기 위해 주요 내용을 사용할 수 있습니다.
+- 관심 있는 상위 5개 "태그"를 식별하기 위해 보조 내용을 사용할 수 있습니다.
 
-- we can define an instruction to "summarize the course catalog for Fall 2023"
-- we can use the primary content to provide a few examples of the desired output
-- we can use the secondary content to identify the top 5 "tags" of interest.
-
-Now, the model can provide a summary in the format shown by the few examples - but if a result has multiple tags, it can prioritize the 5 tags identified in secondary content.
+이제 모델은 몇 가지 예시에서 보여준 형식으로 요약을 제공할 수 있지만, 결과에 여러 태그를 가질 경우 보조 내용에서 식별된 5개 태그를 우선시할 수 있습니다.
 
 ---
 
@@ -377,20 +371,19 @@ LESSON TEMPLATE:
 Wrap the section with a summary and resources for self-guided learning.
 -->
 
-
 ## Knowledge check
 
 Which of the following is a good prompt following some reasonable best practices?
 
 1. Show me an image of red car
 2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
-3. Show me an image of red car of make Volvo and model XC90 
+3. Show me an image of red car of make Volvo and model XC90
 
 A: 2, it's the best prompt as it provides details on "what" and goes into specifics (not just any car but a specific make and model) and it also describes the overall setting. 3 is next best as it also contains a lot of description.
 
 ## 🚀 Challenge
 
-See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it? 
+See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it?
 
 ## Great Work! Continue Your Learning
 
