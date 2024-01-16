@@ -144,4 +144,4 @@ R: 3, un LLM es no determinista, la respuesta varía, sin embargo, puedes contro
 
 Después de completar esta lección, ¡consulta nuestra [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar mejorando tu conocimiento de IA Generativa!
 
-Dirígete a la Lección 2, donde veremos ¡cómo [explorar y comparar diferentes tipos de LLM](../../../02-exploring-and-comparing-different-llms/translations/es-mx/README.md?WT.mc_id=academic-105485-koreyst)!
+Dirígete a la Lección 2, donde veremos ¡cómo [explorar y comparar diferentes tipos de LLM](../../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
