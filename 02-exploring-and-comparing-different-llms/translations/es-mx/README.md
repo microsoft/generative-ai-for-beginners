@@ -24,23 +24,23 @@ Después de completar esta lección, serás capaz de:
 - Entender cómo probar, iterar y mejorar el rendimiento de tu modelo.
 - Saber cómo las empresas implementan modelos.
 
-## Understand different types of LLMs
+## Entender los diferentes tipos de LLMs
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help our startup select the right model for the scenario, and understand how to test, iterate, and improve performance.
+Los Modelos Grandes de Lenguaje (LLMs) pueden clasificarse de múltiples formas según su arquitectura, datos de entrenamiento y caso de uso. Comprender estas diferencias ayudará a nuestra startup a elegir el modelo más adecuado para el escenario en el que se utilizará, así como a entender cómo probar, iterar y mejorar su rendimiento.
 
-There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more.
+Existen muchos tipos diferentes de modelos LLM. Tu elección de modelo dependerá de para qué planeas usarlos, los datos que tienes, cuánto estás dispuesto a pagar y más.
 
-Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
+Según el propósito de uso de los modelos, ya sea para procesar texto, audio, vídeo, generar imágenes y otros, es posible que decidas elegir un tipo diferente de modelo.
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Reconocimiento de audio y voz**. Para este propósito, los modelos tipo Whisper son una excelente elección, ya que son de propósito general y están orientados al reconocimiento de voz. Están entrenados con una amplia variedad de audios y pueden realizar reconocimiento de voz en múltiples idiomas. Aprende más sobre [modelos tipo Whisper aquí](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) and also in Chapter 9 of this curriculum.
+- **Generación de imágenes**. Para la generación de imágenes, DALL-E y Midjourney son dos opciones muy conocidas. DALL-E está disponible a través de Azure OpenAI. [Lee más sobre DALL-E aquí](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) y también en el Capítulo 9 de este currículo.
 
-- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) to evaluate which models best fit your needs in terms of capability and cost.
+- **Generación de texto**. La mayoría de los modelos están entrenados en generación de texto y tienes una gran variedad de opciones, desde GPT-3.5 hasta GPT-4. Vienen con diferentes costos, siendo GPT-4 el más caro. Es recomendable revisar el [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) para determinar qué modelos se ajustan mejor a tus necesidades en cuanto a capacidad y costo.
 
-Selecting a model means you get some basic capabilities, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming sections.
+Seleccionar un modelo significa que obtienes algunas capacidades básicas, que sin embargo podrían no ser suficientes. Frecuentemente tienes datos específicos de la empresa que de alguna manera necesitas comunicar al LLM. Hay varias opciones sobre cómo abordar eso, más sobre eso en las secciones siguientes.
 
-### Foundation Models versus LLMs
+### Modelos de Base versus Modelos Grandes de Lenguaje
 
 The term Foundation Model was [coined by Stanford researchers](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) and defined as an AI model that follows some criteria, such as:
 
