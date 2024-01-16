@@ -85,7 +85,7 @@ Ahora que tenemos un mejor entendimiento del funcionamiento interno de un modelo
 Dijimos que la principal capacidad de un Modelo de Lenguaje Grande es *generar un texto desde cero, a partir de una entrada textual, escrita en lenguaje natural*.
 
 Pero ¿qué tipo de entrada y salida textual?
-La entrada de un modelo de lenguaje grande se conoce como prompt, mientras que la salida se conoce como finalización, término que se refiere al mecanismo del modelo de generar el siguiente token para completar la entrada actual. Vamos a profundizar en qué es un prompt y cómo diseñarlo para aprovechar al máximo nuestro modelo. Pero por ahora, digamos que un prompt puede incluir:
+La entrada de un modelo de lenguaje grande se conoce como 'prompt', mientras que la salida se conoce como resultado o 'completion', término que se refiere al mecanismo del modelo de generar el siguiente token para completar la entrada actual. Vamos a profundizar en qué es un prompt y cómo diseñarlo para aprovechar al máximo nuestro modelo. Pero por ahora, digamos que un prompt puede incluir:
 
 * Una **instrucción** que especifica el tipo de resultado que esperamos del modelo. Esta instrucción en ocasiones puede incluir algunos ejemplos o algunos datos adicionales.
 
@@ -132,7 +132,7 @@ Si realizaste esta tarea, puede que incluso estés listo para postularte a la in
 
 ## Verificación de conocimientos
 
-¿Qué es verdad acerca de los modelos de lenguaje grande?
+¿Qué es cierto acerca de los modelos de lenguaje grande?
 
 1. Obtienes exactamente la misma respuesta cada vez.
 2. Hace las cosas perfectamente, excelente para sumar números, producir código funcional, etc.
