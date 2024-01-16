@@ -2,27 +2,26 @@
 // https://github.com/github/codespaces-jupyter
 {
 	"name": "Generative AI For Beginners",
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
-    		"ghcr.io/devcontainers/features/dotnet:2": {}
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "8.0"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"installJupyterlab": true,
+			"version": "latest"
+		}
 	},
 	"hostRequirements": {
 		"cpus": 4
 	},
-	"waitFor": "onCreateCommand",
-	"updateContentCommand": "python3 -m pip install -r requirements.txt",
-	"postCreateCommand": "bash .devcontainer/post-create.sh",
+	"postCreateCommand": "pip install -r requirements.txt && pip install numpy",
 	"customizations": {
-		"codespaces": {
-			"openFiles": []
-		},
 		"vscode": {
 			"extensions": [
-				"ms-python.python",
-				"ms-toolsai.jupyter",
 				"ms-dotnettools.dotnet-interactive-vscode"
-			], 
-			"postCreateCommand": "pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
+			]
 		}
 	}
 }
