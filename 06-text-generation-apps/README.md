@@ -190,12 +190,13 @@ Now that we learned how to set up and configure openai, it's time to build your 
 
     # add your completion code
     prompt = "Complete the following: Once upon a time there was a"
+    messages = [{"role": "user", "content": prompt}] 
 
     # make completion
-    completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
+    completion = client.chat.completions.create(model=deployment, messages=messages)
     
     # print response
-    print(completion.choices[0].text)
+    print(completion.choices[0].message.content)
     ```
 
     > [!NOTE]
@@ -511,15 +512,16 @@ To further improve it, we want to add the following:
     Locate the part in the code that prints out the result from the first prompt and add the following code below:
 
     ```python
-    old_prompt_result = completion.choices[0].text
+    old_prompt_result = completion.choices[0].message.content
     prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
     
     new_prompt = f"{old_prompt_result} {prompt}"
-    completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+    messages = [{"role": "user", "content": new_prompt}]  
+    completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
     
     # print response
     print("Shopping list:")
-    print(completion.choices[0].text)
+    print(completion.choices[0].message.content)
     ```
 
     Note the following:
@@ -585,7 +587,7 @@ What we have so far is code that works, but there are some tweaks we should be d
    To change the tokens used, you can use the `max_tokens` parameter. For example, if you want to use 100 tokens, you would do:
 
     ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
+    completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
     ```
 
 - **Experimenting with temperature**. Temperature is something we haven't mentioned so far but is an important context for how our program performs. The higher the temperature value the more random the output will be. Conversely the lower the temperature value the more predictable the output will be. Consider whether you want variation in your output or not.
@@ -593,7 +595,7 @@ What we have so far is code that works, but there are some tweaks we should be d
    To alter the temperature, you can use the `temperature` parameter. For example, if you want to use a temperature of 0.5, you would do:
 
     ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
+    completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
     ```
 
    > Note, the closer to 1.0, the more varied the output.
