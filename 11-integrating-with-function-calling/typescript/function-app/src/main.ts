@@ -45,8 +45,17 @@ async function main() {
 
     const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
     const deploymentName = "gpt-4"; // if you want to use 'gpt-4' model you need to create a resource in Sweden Central region
+    
+    const userParams = { 
+      location: "New York", 
+      unit: "C" 
+    };
+    
     const result = await client.getChatCompletions(deploymentName, [
-      { role: "user", content: "What's the weather in New York, NYC?" }
+      { 
+        role: "user", 
+        content: `What's the weather in ${userParams.location}, ${userParams.unit}?`,
+      },  
     ], {
       functions: [getCurrentWeatherFunction],
     });
@@ -55,7 +64,9 @@ async function main() {
       console.log(choice.message?.functionCall);
 
       if (choice.message?.functionCall) {
-        let response = await findWeather("New York", "C"); // include here the city and type [C = Celsius, F = Fahrenheit]
+        const { arguments: argumentsJson } = choice.message.functionCall;
+        const { location, unit } = JSON.parse(argumentsJson);
+        let response = await findWeather(location, unit);
         console.log("Result from Bing Maps API..: ", response);
       }
     }
