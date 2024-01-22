@@ -21,7 +21,7 @@ async function findWeather(currentLocation: string, placeType: string) {
 }
 
 const getCurrentWeatherFunction = {
-  name: "get_current_weather",
+  name: "findWeather",
   description: "Get the current weather in a given location",
   parameters: {
     type: "object",
