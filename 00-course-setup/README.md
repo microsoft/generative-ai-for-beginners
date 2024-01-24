@@ -10,7 +10,7 @@ Para comenzar este curso, deberás completar los siguientes pasos.
 
 ### 1. Fork (Bifurca) este repo
 
-[Fork (Bifurca) todo el repositorio](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) A tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo y los repositorios relacionados más fácilmente.
+[Fork (Bifurca) todo el repositorio](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) A tu propia cuenta de GitHub para poder modificar cualquier código y completar los desafíos. También puedes [marcar con una estrella (🌟) este repositorio](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para encontrarlo más fácilmente.
 
 ### 2. Crea un espacio en codespace
 
