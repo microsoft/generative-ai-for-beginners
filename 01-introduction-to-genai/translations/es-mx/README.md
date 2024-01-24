@@ -1,6 +1,6 @@
 # 📚 Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes
 
-[![Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+[![Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
 
 *(Haz clic en la imagen de arriba para ver el video de esta lección)*
 
