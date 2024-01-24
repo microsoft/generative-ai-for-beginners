@@ -16,7 +16,7 @@ Para comenzar este curso, deberás completar los siguientes pasos.
 
 Para evitar problemas de dependencias al ejecutar el código, recomendamos realizar este curso en un espacio de código de GitHub.
 
-Esto se puede hacer seleccionando la opción `Code` en tu versión bifurcada de este repositorio y luego seleccionando la opción **Codespaces** .
+Esto se puede hacer seleccionando la opción `Code` en tu propia versión bifurcada (forked) de este repositorio y luego seleccionando la opción **Codespaces** .
 
 ### 3. Almacena tus claves de API
 
