@@ -89,7 +89,7 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
 
     1. Resumen de un artículo, libro, reseñas de productos y más, junto con la extracción de información clave a partir de datos no estructurados.
     
-    ![Ejemplo de resumen](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Ejemplo de resumen](../../images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
     
