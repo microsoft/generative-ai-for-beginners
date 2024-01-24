@@ -133,7 +133,7 @@ Si realizas esta tarea, incluso podrías estar listo para postularte al programa
 
 1. Obtienes la misma respuesta exacta cada vez.
 2. Realiza tareas de manera perfecta, es excelente sumando números, produciendo código funcional, etc.
-3. La respuesta puede variar a pesar de usar el mismo inicio. También es excelente al ofrecerte un primer borrador de algo, ya sea texto o código. Sin embargo, necesitas mejorar los resultados.
+3. La respuesta puede variar a pesar de usar el mismo prompt. También es excelente para ofrecerte un primer borrador de algo, ya sea texto o código. Sin embargo, necesitas mejorar los resultados.
    
 A: 3. Un LLM (Large Language Model) es no determinista, las respuestas varían, sin embargo, puedes controlar su variabilidad mediante un ajuste de temperatura. Tampoco debes esperar que haga las cosas de manera perfecta; está aquí para hacer el trabajo pesado por ti, lo que a menudo significa que obtienes un buen primer intento en algo que necesitas mejorar gradualmente.
 
