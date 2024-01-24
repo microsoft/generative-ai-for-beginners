@@ -1,6 +1,6 @@
 # Comenzando con este curso
 
-¡Estamos muy emocionados de que comiences este curso y ver con qué te inspiras para crear con la Inteligencia Artificial Generativa!
+¡Estamos muy emocionados de que comiences este curso y ver con qué te inspiras para crear con la ayuda de la Inteligencia Artificial Generativa!
 
 Para apoyarte, hemos creado esta página que describe los pasos de configuración, los requisitos técnicos y cómo obtener ayuda cuando la necesites.
 
