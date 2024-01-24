@@ -34,7 +34,7 @@ Para empezar, [Realiza un fork al repositorio completo](https://github.com/micro
 
 A continuación, se encuentran los enlaces a cada lección. ¡Siéntete libre de explorar y comenzar con la lección que más te interese!
 
-Dirígete a la [Página de Configuración del Curso](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst) para encontrar la guía de configuración que mejor se adapte a tus necesidades.
+Dirígete a la [Página de Configuración del Curso](../../00-course-setup/translations/es-mx/README.md?WT.mc_id=academic-105485-koreyst) para encontrar la guía de configuración que mejor se adapte a tus necesidades.
 
 ## 🗣️ Conoce a Otros Estudiantes para tener apoyo
 
