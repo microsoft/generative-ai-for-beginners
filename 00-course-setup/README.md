@@ -14,7 +14,7 @@ Para comenzar este curso, deberás completar los siguientes pasos.
 
 ### 2. Crea un espacio en codespace
 
-Para evitar problemas de dependencias al ejecutar el código, recomendamos realizar este curso en un espacio de código de GitHub.
+Para evitar problemas de dependencias al ejecutar el código, recomendamos realizar este curso en un codespace de GitHub.
 
 Esto se puede hacer seleccionando la opción `Code` en tu propia versión bifurcada (forked) de este repositorio y luego seleccionando la opción **Codespaces** .
 
