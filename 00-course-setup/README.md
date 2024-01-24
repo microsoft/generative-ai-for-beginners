@@ -2,7 +2,7 @@
 
 ¡Estamos muy emocionados de que comiences este curso y ver con qué te inspiras para crear con la Inteligencia Artificial Generativa!
 
-Para que tu tiempo sea exitoso, hemos creado esta página que describe los pasos de configuración, los requisitos técnicos y cómo obtener ayuda cuando la necesites.
+Para apoyarte, hemos creado esta página que describe los pasos de configuración, los requisitos técnicos y cómo obtener ayuda cuando la necesites.
 
 ## Pasos de configuración
 
