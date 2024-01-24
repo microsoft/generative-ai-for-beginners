@@ -1,5 +1,5 @@
 
-![Inteligencia Artificial Generativa para Principiantes](./images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
+![Inteligencia Artificial Generativa para Principiantes](../../images/repository-thumbnail.png?WT.mc_id=academic-105485-koreyst)
 
 ### Un curso de 12 lecciones que enseña todo lo necesario para comenzar a construir aplicaciones de Inteligencia Artificial Generativa 
 
