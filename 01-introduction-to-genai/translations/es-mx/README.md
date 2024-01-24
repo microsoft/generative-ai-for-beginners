@@ -113,7 +113,7 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
 
 * Un trozo de **código** junto con la petición de explicarlo y documentarlo, o un comentario pidiendo generar un fragmento de código que realice una tarea específica.
   
-![Ejemplo de código](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
+![Ejemplo de código](../../images/coding-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
