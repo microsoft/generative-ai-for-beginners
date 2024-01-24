@@ -22,7 +22,7 @@ Esto se puede hacer seleccionando la opción `Code` en tu propia versión bifurc
 
 Mantenen seguras y protegidas tus claves de API es importante al desarrollar cualquier tipo de aplicación. Te recomendamos no almacenar las claves de API directamente en el código con el que estás trabajando, ya que comprometer esos detalles en un repositorio público podría ocasionar costos no deseados e issues.
 
-![Diálogo mostrando botones para crear un espacio de código](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
+![Diálogo mostrando botones para crear un espacio de código](../../images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
 ## Cómo ejecutar localmente en tu computadora
 
