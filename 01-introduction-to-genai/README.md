@@ -83,7 +83,7 @@ En el próximo capítulo exploraremos diferentes tipos de modelos de Inteligenci
 Ahora que tenemos una mejor comprensión del funcionamiento interno de un modelo de lenguaje grande, veamos algunos ejemplos prácticos de las tareas más comunes que pueden realizar bastante bien, con atención a nuestro escenario empresarial. Dijimos que la capacidad principal de un Modelo de Lenguaje Grande es *generar texto desde cero, a partir de una entrada textual escrita en lenguaje natural*.
 
 ¿Pero qué tipo de entrada y salida textual?
-La entrada de un modelo de lenguaje grande se conoce como "prompt" (indicación), mientras que la salida se conoce como "completion" (completado), término que se refiere al mecanismo del modelo de generar el próximo token para completar la entrada actual. Vamos a profundizar en lo que es un "prompt" y cómo diseñarlo de manera que aproveche al máximo nuestro modelo. Pero por ahora, simplemente diremos que un "prompt" puede incluir:
+La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), mientras que la salida se conoce como "completion" (completado), término que se refiere al mecanismo del modelo de generar el próximo token para completar la entrada actual. Vamos a profundizar en lo que es un "prompt" y cómo diseñarlo de manera que aprovechemos al máximo nuestro modelo. Pero por ahora, simplemente diremos que un "prompt" puede incluir:
 
 * Una **instrucción** especificando el tipo de salida que esperamos del modelo. Esta instrucción a veces puede incluir algunos ejemplos o datos adicionales.
 
