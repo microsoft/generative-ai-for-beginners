@@ -34,7 +34,7 @@ Nuestro equipo de startup es consciente de que no podremos alcanzar este objetiv
 
 Se espera que la Inteligencia Artificial Generativa revolucione la forma en que aprendemos y enseñamos hoy en día, con estudiantes teniendo a su disposición profesores virtuales las 24 horas del día que proporcionan grandes cantidades de información y ejemplos, y profesores capaces de aprovechar herramientas innovadoras para evaluar a sus estudiantes y brindar retroalimentación.
 
-![Cinco jóvenes estudiantes mirando un monitor. - image by DALLE2](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+![Cinco jóvenes estudiantes mirando un monitor. - image by DALLE2](../../images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
 
 Para empezar, definamos algunos conceptos y terminología básicos que utilizaremos a lo largo del plan de estudios.
 
