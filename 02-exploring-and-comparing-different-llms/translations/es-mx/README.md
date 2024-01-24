@@ -83,25 +83,25 @@ Los modelos de generación de texto y código son modelos que generan texto o c�
 
  ![Generación de texto y código](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
-### Encoder-Decoder versus Decoder-only
+### Codificador-Decodificador versus Solo-Decodificador
 
-To talk about the different types of architectures of LLMs, let's use an analogy.
+Para hablar sobre los diferentes tipos de arquitecturas de LLMs, utilicemos una analogía.
 
-Imagine your manager gave you a task for writing a quiz for the students.  You have two colleagues; one oversees creating the content and the other oversees reviewing them.
+Imagina que tu jefe te asignó la tarea de escribir un cuestionario para los estudiantes. Tienes dos colegas; uno se encarga de crear el contenido y el otro se encarga de revisarlo.
 
-The content creator is like a Decoder only model, they can look at the topic and see what you already wrote and then he can write a course based on that. They are very good at writing engaging and informative content, but they are not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
+El creador de contenido es como un modelo Decodificador o Decoder, puede mirar el tema y ver lo que escribiste, y luego puede escribir un curso basado en eso. Son muy buenos escribiendo contenido atractivo e informativo, pero no son muy buenos entendiendo el tema y los objetivos de aprendizaje. Algunos ejemplos de modelos decodificadores son los modelos de la familia GPT, como GPT-3.
 
-The reviewer is like an Encoder only model, they look at the course written and the answers, noticing the relationship between them and understanding context, but they are not good at generating content. An example of Encoder only model would be BERT.
+El que revisa es como un modelo Codificador o Encoder, observa el curso escrito y las respuestas, notando la relación entre ellos y comprendiendo el contexto, pero no es bueno generando contenido. Un ejemplo de modelo Codificador sería BERT.
 
-Imagine that we can have someone as well who could create and review the quiz, this is an Encoder-Decoder model. Some examples would be BART and T5.
+Imagina que también podemos tener a alguien que pueda crear y revisar el cuestionario, esto sería un modelo Codificador-Decodificador. Algunos ejemplos como BART y T5.
 
-### Service versus Model
+### Servicio versus Modelo
 
-Now, let's talk about the difference between a service and a model. A service is a product that is offered by a Cloud Service Provider, and is often a combination of models, data, and other components. A model is the core component of a service, and is often a foundation model, such as an LLM.
+Ahora, hablemos de la diferencia entre un servicio y un modelo. Un servicio es un producto ofrecido por un proveedor de servicios en la nube y suele ser una combinación de modelos, datos y otros componentes. Un modelo es el componente central de un servicio y a veces es un modelo base, como un LLM.
 
-Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange for leveraging the service owner’s equipment and resources, optimizing expenses and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
+Los servicios suelen estar optimizados para su uso en producción y son más fáciles de utilizar que los modelos, a través de una interfaz gráfica de usuario. Sin embargo, los servicios no siempre están disponibles de forma gratuita y pueden requerir una suscripción o pago para su uso, a cambio de aprovechar la infraestructura y los recursos del propietario del servicio, optimizando gastos y escalando fácilmente. Un ejemplo de servicio es [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), este servicio ofrece un plan de tarifas de pago por uso (pay-as-you-go) , lo que implica que los usuarios pagan en proporción a su utilización del servicio. Además, el servicio Azure OpenAI brinda seguridad de nivel empresarial y un marco de inteligencia artificial responsable, complementando las capacidades de los modelos.
 
-Models are just the Neural Network, with the parameters, weights, and others. Allowing companies to run locally, however, would need to buy equipment, build structure to scale and buy a license or use an open-source model. A model like LLaMA is available to be used, requiring computational power to run the model.
+Los modelos son simplemente la red neuronal, con sus parámetros, pesos y otros elementos. Permitir que las empresas los ejecuten localmente requeriría la compra de hardware, la construcción de una infraestructura para escalar y la adquisición de una licencia o el uso de un modelo de código abierto. Un modelo como LLaMA está disponible para su uso, pero requiere una potencia de computo significativa para ejecutarlo.
 
 ## How to test and iterate with different models to understand performance on Azure
 
