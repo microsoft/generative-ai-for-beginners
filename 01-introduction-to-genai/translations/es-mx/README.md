@@ -101,7 +101,7 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
     
 * Una **pregunta**, preguntado en forma de conversación con un agente.
   
-![Ejemplo de conversación](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
+![Ejemplo de conversación](../../images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
