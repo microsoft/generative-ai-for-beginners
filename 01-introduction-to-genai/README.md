@@ -129,7 +129,7 @@ Si realizas esta tarea, incluso podrías estar listo para postularte al programa
 
 ## Verificación de conocimientos
 
-¿Qué es cierto acerca de los modelos de lenguaje grandes?
+¿Qué es cierto acerca de los grandes modelos de lenguaje (LLM's, Large Language Models en ingles)?
 
 1. Obtienes la misma respuesta exacta cada vez.
 2. Realiza tareas de manera perfecta, es excelente sumando números, produciendo código funcional, etc.
