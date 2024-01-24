@@ -107,7 +107,7 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
 
 * Un fragmento de **texto por completar**, lo cual implícitamente es una solicitud de ayuda en la escritura.
    
-![Ejemplo de finalización de texto](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
+![Ejemplo de finalización de texto](../../images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
 
 <br>
 
