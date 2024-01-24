@@ -123,7 +123,7 @@ Además, el resultado de un modelo de IA generativa no es perfecto y, a veces, l
 
 ## Asignación
 
-Tu tarea es investigar más sobre [IA generativa](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) e intentar identificar un área donde agregarías inteligencia artificial generativa hoy en día que aún no la tenga. ¿Cómo sería diferente el impacto de hacerlo de la "manera antigua"? ¿Puedes hacer algo que no podrías hacer antes o eres más rápido? Escribe un resumen de 300 palabras sobre cómo sería tu startup de inteligencia artificial ideal e incluye encabezados como "Problema", "Cómo usaría la IA", "Impacto" y opcionalmente un plan de negocios.
+Tu tarea es investigar más sobre [IA generativa](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) e intentar identificar un área donde agregarías inteligencia artificial generativa hoy en día que aún no la tenga. ¿Cómo sería diferente el impacto de hacerlo de la "manera antigua"? ¿Puedes hacer algo que no podrías hacer antes o eres más rápido? Escribe un resumen de 300 palabras sobre cómo sería tu ideal startup de inteligencia artificial e incluye los encabezados como "Problema", "¿Cómo usaría la IA?", "Impacto" y opcionalmente un plan de negocios.
 
 Si realizas esta tarea, incluso podrías estar listo para postularte al programa de incubación de Microsoft, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) Ofrecemos créditos para Azure, OpenAI, mentoría y mucho más, échale un vistazo.!
 
