@@ -95,7 +95,7 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
     
     2. Ideación creativa y diseño de un artículo, un ensayo, una tarea u otros.
     
-    ![Ejemplo de escritura creativa](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
+    ![Ejemplo de escritura creativa](../../images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
     
