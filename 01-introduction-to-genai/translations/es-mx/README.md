@@ -60,7 +60,7 @@ Esta es la tecnología que impulsó a los asistentes virtuales nacidos en la pri
 
 Así es como llegamos a la Inteligencia Artificial Generativa hoy en día, que se puede considerar como un subconjunto del aprendizaje profundo.
 
-![AI, ML, DL y IA Generativa](./images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
+![AI, ML, DL y IA Generativa](../../images/AI-diagram.png?WT.mc_id=academic-105485-koreyst)
 
 Después de décadas de investigación en el campo de la inteligencia artificial, una nueva arquitectura de modelo, - llamada *Transformer* – superó los límites de las RNN, siendo capaz de manejar secuencias de texto mucho más largas como entrada. Los Transformers se basan en el mecanismo de atención, lo que permite al modelo asignar diferentes pesos a las entradas que recibe, ‘prestando más atención’ donde se concentra la información más relevante, independientemente de su orden en la secuencia de texto.
 
