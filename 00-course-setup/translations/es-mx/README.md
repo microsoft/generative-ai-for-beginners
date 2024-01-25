@@ -138,4 +138,4 @@ Este proyecto ha adoptado el [Código de Conducta de Código Abierto de Microsof
 
 ## Empecemos 😄
 
-Ahora que has completado los pasos necesarios para terminar este curso, comencemos obteniendo una [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Aprendizaje Profundo (LLMs, por sus siglas en inglés).](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Ahora que has completado los pasos necesarios para terminar este curso, comencemos obteniendo una [Introducción a la Inteligencia Artificial Generativa y Modelos de Lenguaje de Aprendizaje Profundo (LLMs, por sus siglas en inglés).](../../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
