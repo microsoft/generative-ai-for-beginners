@@ -193,4 +193,4 @@ Investiga más sobre cómo puedes [utilizar RAG](https://learn.microsoft.com/azu
 
 Después de completar esta lección, ¡consulta nuestra [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar mejorando tu conocimiento de IA Generativa!
 
-Dirígete a la Lección 3, donde veremos ¡cómo [construir con IA Generativa de manera Responsable](../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Dirígete a la Lección 3, donde veremos ¡cómo [construir con IA Generativa de manera Responsable](../../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
