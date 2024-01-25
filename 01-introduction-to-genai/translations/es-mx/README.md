@@ -141,4 +141,4 @@ A: 3. Un LLM (Large Language Model) es no determinista, las respuestas varían, 
 
 Después de completar esta lección, echa un vistazo a nuestra [Colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) Para seguir mejorando tu conocimiento en IA Generativa!
 
-Dirígete a la Lección 2 donde veremos cómo [explorar y comparar diferentes tipos de LLM](../../generative-ai-for-beginners/02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Dirígete a la Lección 2 donde veremos cómo [explorar y comparar diferentes tipos de LLM](../../../generative-ai-for-beginners/02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
