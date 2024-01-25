@@ -72,7 +72,7 @@ En el próximo capítulo exploraremos diferentes tipos de modelos de Inteligenci
 
 * **Tokenizador, texto a números**: Los grandes modelos de lenguaje reciben un texto como entrada y generan un texto como salida. Sin embargo, al ser modelos estadísticos, funcionan mucho mejor con números que con secuencias de texto. Es por eso que cada entrada al modelo se procesa mediante un tokenizador antes de ser utilizada por el modelo central. Un token es un fragmento de texto, que consiste en un número variable de caracteres. La tarea principal del tokenizador es dividir la entrada en un conjunto de tokens. Luego, cada token se asigna con un índice de token, que es la codificación entera del fragmento de texto original.
 
-![Ejemplo de tokenización](./images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Ejemplo de tokenización](../../images/tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 * **Predicción de tokens de salida**: Dado un conjunto de n tokens como entrada (con un máximo n que varía de un modelo a otro), el modelo es capaz de predecir un token como salida. Este token se incorpora luego a la entrada de la siguiente iteración, en un patrón de ventana expansiva, lo que permite una mejor experiencia del usuario al obtener una (o varias) oraciones como respuesta. Esto explica por qué, si alguna vez has interactuado con ChatGPT, es posible que hayas notado que a veces parece detenerse en medio de una oración.
 
