@@ -120,7 +120,7 @@ Si bien el trabajo de desarrollar soluciones de IA Responsable puede parecer muc
 2. Uso dañino, que la IA no se utilice con fines delictivos.
 3. Garantizar que la IA esté libre de sesgos y discriminación.
 
-A: 2 y 3 son correctos. La IA Responsable te ayuda a considerar cómo mitigar los efectos y sesgos dañinos y más.
+R: 2 y 3 son correctas. La IA Responsable te ayuda a considerar cómo mitigar los efectos y sesgos dañinos y más.
 
 ## 🚀 Desafío
 
@@ -128,6 +128,6 @@ Lee sobre [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-service
 
 ## ¡Buen trabajo! Continúa tu Aprendizaje
 
-Después de completar esta lección, ¡consulta nuestra colección de [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar mejorando tu conocimiento de IA Generativa!
+Después de completar esta lección, ¡consulta nuestra [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar mejorando tu conocimiento de IA Generativa!
 
 Dirígete a la Lección 4, donde veremos ¡[Fundamentos de Prompt Engineering](../../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
