@@ -47,8 +47,8 @@ El término "Modelo Fundacional" [fue acuñado por investigadores de Stanford](h
 - **Son entrenados utilizando aprendizaje no supervisado o aprendizaje auto-supervisado**, Lo que significa que se entrenan con datos multimodales no etiquetados y no requieren anotación humana o etiquetado de datos para su proceso de entrenamiento.
 - **Son modelos muy grandes**, Basados en redes neuronales muy profundas entrenadas con miles de millones de parámetros.
 - **Normalmente están destinados a servir como una "base" para otros modelos**, Lo que significa que pueden usarse como punto de partida para que otros modelos se construyan sobre ellos, lo cual se puede hacer mediante el ajuste fino (fine-tuning).
--------
-![Foundation Models versus LLMs](./images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
+
+![Foundation Models versus LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
