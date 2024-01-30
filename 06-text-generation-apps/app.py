@@ -1,33 +1,28 @@
-import openai
+from openai import AzureOpenAI
 import os
 import dotenv
 
 # import dotenv
 dotenv.load_dotenv()
 
-openai.api_key = os.getenv("API_KEY") 
+# configure Azure OpenAI service client 
+client = AzureOpenAI(
+  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
+  api_key=os.environ['AZURE_OPENAI_KEY'],  
+  api_version = "2023-10-01-preview"
+  )
 
-# enable below if you use Azure Open AI
-openai.api_type = 'azure' 
-openai.api_version = '2023-05-15'
-openai.api_base = os.getenv("API_BASE")
+deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
 
 # add your completion code
 prompt = "Complete the following: Once upon a time there was a"
-
-# engine
-engine = "davinci-001"
-
-# deployment_id, azure specific
-deployment_name = os.getenv("DEPLOYMENT_NAME")
-
-completion = openai.Completion.create(engine=deployment_name, prompt=prompt, max_tokens=600)
+messages = [{"role": "user", "content": prompt}]  
+# make completion
+completion = client.chat.completions.create(model=deployment, messages=messages)
 
 # print response
-print(completion.choices[0].text)
-
+print(completion.choices[0].message.content)
 
 #  very unhappy _____.
 
 # Once upon a time there was a very unhappy mermaid.
-

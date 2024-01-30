@@ -48,7 +48,7 @@ The model produces a response like the one below:
 
 > *(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
 
-This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic survivor. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to the AI system being unreliable and negatively impact the reputation of our startup.
+This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic disaster. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to the AI system being unreliable and negatively impact the reputation of our startup.
 
 With each iteration of any given LLM, we have seen performance improvements around minimizing hallucinations. Even with this improvement,  we as application builders and users still need to remain aware of these limitations.
 

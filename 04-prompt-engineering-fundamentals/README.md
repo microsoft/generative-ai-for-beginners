@@ -2,7 +2,6 @@
 
 [![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
 
-
 How you write your prompt to the LLM matters, a carefully crafted prompt can achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
 
 _Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
@@ -28,19 +27,20 @@ Prompt engineering is currently more art than science. The best way to improve o
 
 The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
 
-1. An OpenAI API key - the service endpoint for a deployed LLM.
+1. An Azure OpenAI API key - the service endpoint for a deployed LLM.
 
 2. A Python Runtime - in which the Notebook can be executed.
 
 We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
 
-The default notebook is set up for use with an OpenAI API Key. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `OPENAI_API_KEY=` line with your API key - and you're all set.
+The default notebook is set up for use with an Azure OpenAI service resource. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `AZURE_OPENAI_API_KEY=` and `AZURE_OPENAI_API_ENDPOINT=` lines with your API key and endpoint. You can check your credentials in the [Azure portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), by navigating to your Azure OpenAI resource and then opening the _Keys and Endpoints_ tab in the left menu.
+Also, please add the name you assigned to your model when you created the deployment to the `AZURE_OPENAI_DEPLOYMENT` variable. The recommended model for this exercise is 'gpt-35-turbo'.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
 ## Our Startup
 
-Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We want to build AI-powered applications of  _personalized learning_ - so let's think about how different users of our application might "design" prompts:
+Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We want to build AI-powered applications of _personalized learning_ - so let's think about how different users of our application might "design" prompts:
 
 - **Administrators** might ask the AI to _analyze curriculum data to identify gaps in coverage_. The AI can summarize results or visualize them with code.
 - **Educators** might ask the AI to _generate a lesson plan for a target audience and topic_. The AI can build the personalized plan in a specified format.
@@ -109,7 +109,7 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 1. **Model responses are stochastic.** The _same prompt_ will likely produce different responses with different models or model versions. And it may even produce different results with the _same model_ at different times. _Prompt engineering techniques can help us minimize these variations by providing better guardrails_.
 
-1. **Models can fabricate responses.** Models are pre-trained with _large but finite_ datasets, meaning they lack knowledge about concepts outside that training scope. As a result, they can produce completions that are inaccurate, imaginary, or directly contradictory to known facts.  _Prompt engineering techniques help users identify and mitigate such fabrications e.g., by asking AI for citations or reasoning_.
+1. **Models can fabricate responses.** Models are pre-trained with _large but finite_ datasets, meaning they lack knowledge about concepts outside that training scope. As a result, they can produce completions that are inaccurate, imaginary, or directly contradictory to known facts. _Prompt engineering techniques help users identify and mitigate such fabrications e.g., by asking AI for citations or reasoning_.
 
 1. **Models capabilities will vary.** Newer models or model generations will have richer capabilities but also bring unique quirks and tradeoffs in cost & complexity. _Prompt engineering can help us develop best practices and workflows that abstract away differences and adapt to model-specific requirements in scalable, seamless ways_.
 
@@ -123,6 +123,7 @@ Let's see this in action in the OpenAI or Azure OpenAI Playground:
 In this course, we use the term **"fabrication"** to reference the phenomenon where LLMs sometimes generate factually incorrect information due to limitations in their training or other constraints. You may also have heard this referred to as _"hallucinations"_ in popular articles or research papers. However, we strongly recommend using _"fabrication"_ as the term so we don't accidentally anthropomorphize the behavior by attributing a human-like trait to a machine-driven outcome. This also reinforces [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) from a terminology perspective, removing terms that may also be considered offensive or non-inclusive in some contexts.
 
 Want to get a sense of how fabrications work? Think of a prompt that instructs the AI to generate content for a non-existent topic (to ensure it is not found in the training dataset). For example - I tried this prompt:
+
 > **Prompt:** generate a lesson plan on the Martian War of 2076.
 
 A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event.
@@ -182,8 +183,8 @@ We've seen why prompt engineering is important - now let's understand how prompt
 
 Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
 
-| Prompt (Input) | Completion (Output) |
-|:---|:---|
+| Prompt (Input)     | Completion (Output)                                                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
 | Oh say can you see | It sounds like you're starting the lyrics to "The Star-Spangled Banner," the national anthem of the United States. The full lyrics are ... |
 
 ### Complex Prompt
@@ -211,11 +212,11 @@ response = openai.ChatCompletion.create(
 
 In the above examples, the user prompt was a simple text query that can be interpreted as a request for information. With _instruction_ prompts, we can use that text to specify a task in more detail, providing better guidance to the AI. Here's an example:
 
-| Prompt (Input) | Completion (Output) | Instruction Type |
-|:---|:---|:---|
-| Write a description of the Civil War | _returned a simple paragraph_ | Simple|
-|Write a description of the Civil War. Provide key dates and events and describe their significance | _returned a paragraph followed by a list of key event dates with descriptions_| Complex  |
-|Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_| Complex. Formatted. |
+| Prompt (Input)                                                                                                                                                                                                                         | Completion (Output)                                                                                                        | Instruction Type    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
+| Write a description of the Civil War                                                                                                                                                                                                   | _returned a simple paragraph_                                                                                              | Simple              |
+| Write a description of the Civil War. Provide key dates and events and describe their significance                                                                                                                                     | _returned a paragraph followed by a list of key event dates with descriptions_                                             | Complex             |
+| Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_ | Complex. Formatted. |
 
 ## Primary Content
 
@@ -226,8 +227,8 @@ In the above examples, the prompt was still fairly open-ended, allowing the LLM 
 
 Here's an example where the instruction is to "summarize this in 2 sentences".
 
-| Prompt (Input) | Completion (Output) |
-|:---|:---|
+| Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Completion (Output)                                                                                                                                                                                                                                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, the fifth planet from the Sun, is the largest in the Solar System and is known for being one of the brightest objects in the night sky. Named after the Roman god Jupiter, it's a gas giant whose mass is two-and-a-half times that of all other planets in the Solar System combined. |
 
 The primary content segment can be used in various ways to drive more effective instructions:
@@ -248,14 +249,12 @@ The prompt now consists of three components:
 - A few examples of the desired output
 - The start of a new example (which becomes an implicit task description)
 
-
-| Learning Type | Prompt (Input) | Completion (Output) |
-|:---|:---|:---|
-| Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
-| One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
-| Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
-| | | |
-
+| Learning Type | Prompt (Input)                                                                                                                                        | Completion (Output)         |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
+| Zero-shot     | "The Sun is Shining". Translate to Spanish                                                                                                            | "El Sol está brillando".    |
+| One-shot      | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                 | "Es un día frío y ventoso". |
+| Few-shot      | The player ran the bases => Baseball <br/> The player hit an ace => Tennis <br/> The player hit a six => Cricket <br/> The player made a slam-dunk => | Basketball                  |
+|               |                                                                                                                                                       |                             |
 
 Note how we had to provide explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more accurate inferences with no added instructions.
 
@@ -263,14 +262,12 @@ Note how we had to provide explicit instruction ("Translate to Spanish") in zero
 
 Another technique for using primary content is to provide _cues_ rather than examples. In this case, we are giving the model a nudge in the right direction by _starting it off_ with a snippet that reflects the desired response format. The model then "takes the cue" to continue in that vein.
 
-
-| Number of Cues | Prompt (Input) | Completion (Output) |
-|:---|:---|:---|
-| 0  | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This**  | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky..|
-| 1 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times. |
-| 2 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> Top 3 Facts We Learned: | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ... |
-| | | |
-
+| Number of Cues | Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Completion (Output)                                                                                                                                                                                                                                                                                       |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This**                                       | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky.. |
+| 1              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times.                        |
+| 2              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> Top 3 Facts We Learned:         | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ...                                                                       |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
 ### Prompt Templates
 
@@ -323,17 +320,17 @@ Prompt Engineering is a trial-and-error process so keep three broad guiding fact
 
 Now let's look at common best practices that are recommended by [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) practitioners.
 
-| What | Why |
-|:---|:---|
-| Evaluate the latest models. | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions. |
-| Separate instructions & context | Check if your model/provider defines _delimiters_ to distinguish instructions, primary and secondary content more clearly. This can help models assign weights more accurately to tokens. |
-|Be specific and clear | Give more details about the desired context, outcome, length, format, style etc. This will improve both the quality and consistency of responses. Capture recipes in reusable templates. |
-|Be descriptive, use examples |Models may respond better to a "show and tell" approach. Start with a `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies.|
-| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.|
-|Double Down | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.|
-| Order Matters | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.|
-|Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses. |
-| | |
+| What                              | Why                                                                                                                                                                                                                                               |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Evaluate the latest models.       | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions.                                                                                |
+| Separate instructions & context   | Check if your model/provider defines _delimiters_ to distinguish instructions, primary and secondary content more clearly. This can help models assign weights more accurately to tokens.                                                         |
+| Be specific and clear             | Give more details about the desired context, outcome, length, format, style etc. This will improve both the quality and consistency of responses. Capture recipes in reusable templates.                                                          |
+| Be descriptive, use examples      | Models may respond better to a "show and tell" approach. Start with a `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
+| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
+| Double Down                       | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.                                                         |
+| Order Matters                     | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.                                                               |
+| Give the model an “out”           | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses.                                                         |
+|                                   |                                                                                                                                                                                                                                                   |
 
 As with any best practice, remember that _your mileage may vary_ based on the model, the task and the domain. Use these as a starting point, and iterate to find what works best for you. Constantly re-evaluate your prompt engineering process as new models and tools become available, with a focus on process scalability and response quality.
 
@@ -356,13 +353,13 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 ### To get started, fork the repo, then
 
-- (Recommended) Launch GitHub Codespaces  
+- (Recommended) Launch GitHub Codespaces
 - (Alternatively) Clone the repo to your local device and use it with Docker Desktop
 - (Alternatively) Open the Notebook with your preferred Notebook runtime environment.
 
 ### Next, configure your environment variables
 
-- Copt the `.env.copy` file in repo root to `.env` and fill in the `OPENAI_API_KEY` value. You can find your API Key in your [OpenAI Dashboard](https://beta.openai.com/account/api-keys?WT.mc_id=academic-105485-koreyst).
+- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](./04-prompt-engineering-fundamentals#learning-sandbox) to learn how.
 
 ### Next, open the Jupyter Notebook
 
@@ -377,23 +374,22 @@ LESSON TEMPLATE:
 Wrap the section with a summary and resources for self-guided learning.
 -->
 
-
 ## Knowledge check
 
 Which of the following is a good prompt following some reasonable best practices?
 
 1. Show me an image of red car
 2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
-3. Show me an image of red car of make Volvo and model XC90 
+3. Show me an image of red car of make Volvo and model XC90
 
 A: 2, it's the best prompt as it provides details on "what" and goes into specifics (not just any car but a specific make and model) and it also describes the overall setting. 3 is next best as it also contains a lot of description.
 
 ## 🚀 Challenge
 
-See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it? 
+See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it?
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about different Prompt Engineering concepts? Go to the [continued learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!

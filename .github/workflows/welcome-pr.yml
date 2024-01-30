@@ -3,6 +3,9 @@ on:
   # Trigger the workflow on pull request
   pull_request_target:
     types: [opened]
+permissions:
+  contents: read
+  pull-requests: write
 jobs:
   asses-pull-request:
     runs-on: ubuntu-latest
