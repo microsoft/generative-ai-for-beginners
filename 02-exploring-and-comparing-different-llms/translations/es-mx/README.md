@@ -55,7 +55,7 @@ Fuente de la imagen: [Guía Esencial sobre Modelos Fundacionales y Grandes Model
 
 Para aclarar aún más esta distinción, tomemos ChatGPT como ejemplo. Para construir la primera versión de ChatGPT, se utilizó un modelo llamado GPT-3.5 como modelo base. Esto significa que OpenAI utilizó datos específicos de conversación para crear una versión ajustada de GPT-3.5 especializada en rendir bien en escenarios conversacionales, como chatbots.
 
-![Modelo Fundacional](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
+![Modelo Fundacional](../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
 Fuente de la imagen: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
