@@ -115,81 +115,80 @@ Una vez que nuestro equipo ha explorado el panorama actual de los Modelos de Len
 
 - Evaluar el rendimiento del modelo con métricas de evaluación objetiva en una carga de trabajo específica y un conjunto de datos específico proporcionado como entrada.
 
-![Model evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
+![Modelo Evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
 
 - Ajustar el modelo con datos de entrenamiento personalizados para mejorar el rendimiento del modelo en una carga de trabajo específica, aprovechando las capacidades de experimentación y seguimiento de Azure Machine Learning.
 
-![Model fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
+![Modelo Fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
 
 - Despliega el modelo pre-entrenado original o la versión ajustada a un punto final remoto de inferencia en tiempo real o por lotes, para permitir que las aplicaciones lo consuman.
 
-![Model deployment](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
+![Modelo Deployment](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
 
-## Improving LLM results
+## Mejorando los resultados de LLM
 
-We’ve explored with our startup team different kinds of LLMs and a Cloud Platform (Azure Machine Learning) enabling us to compare different models, evaluate them on test data, improve performance and deploy them on inference endpoints.
+Hemos explorado con nuestro equipo de inicio diferentes tipos de LLMs y una plataforma en la nube (Azure Machine Learning) que nos permite comparar diferentes modelos, evaluarlos con datos de prueba, mejorar el rendimiento y desplegarlos en puntos finales de inferencia.
 
-But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads?
+Pero ¿Cuándo deberían considerar ajustar finamente un modelo en lugar de usar uno preentrenado? ¿Existen otros enfoques para mejorar el rendimiento del modelo en cargas de trabajo específicas?
 
-There are several approaches a business can use to get the results they need from an LLM, you can select different types of models with different degrees of training
+Hay varios enfoques que una empresa puede usar para obtener los resultados que necesita de un LLM; puede seleccionar diferentes tipos de modelos con diferentes grados de entrenamiento.
 
-deploy an LLM in production, with different levels of complexity, cost, and quality. Here are some different approaches:
+desplegar un LLM en producción, con diferentes niveles de complejidad, coste y calidad. Aquí hay algunos enfoques diferentes:
 
-- **Prompt engineering with context**. The idea is to provide enough context when you prompt to ensure you get the responses you need.
+- **Prompt engineering con texto**. La idea es proporcionar suficiente contexto al momento de formular la indicación para garantizar que obtengas las respuestas que necesitas.
+  
+- **Generación Aumentada por Recuperación (RAG)**. Sus datos podrían existir en una base de datos o en un punto final web, por ejemplo. Para asegurarse de que estos datos, o un subconjunto de los mismos, estén incluidos al momento de la indicación, puede recuperar los datos relevantes y hacer que formen parte de la indicación del usuario.
 
-- **Retrieval Augmented Generation, RAG**. Your data might exist in a database or web endpoint for example, to ensure this data, or a subset of it, is included at the time of prompting, you can fetch the relevant data and make that part of the user's prompt.
+- **Modelo Fine-tuned**. Aquí, entrenaste el modelo aún más con tus propios datos, lo que hace que el modelo sea más preciso y receptivo a tus necesidades, pero podría resultar costoso.
 
-- **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
+![Despliegue de LLMs](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
-![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
+Img source: [Cuatro formas en que las empresas despliegan LLMs | Blog de Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+### Ingeniería de Indicaciones con Contexto (Prompt Engineering)
 
-### Prompt Engineering with Context
+Los LLM preentrenados funcionan muy bien en tareas generales del lenguaje natural, incluso al llamarlos con una indicación corta, como una oración por completar o una pregunta, lo que se conoce como aprendizaje "zero-shot"
 
-Pre-trained LLMs work very well on generalized natural language tasks, even by calling them with a short prompt, like a sentence to complete or a question – the so-called “zero-shot” learning.
+Sin embargo, cuanto más el usuario pueda enmarcar su consulta con una solicitud detallada y ejemplos, es decir, el contexto, más precisa y cercana a las expectativas del usuario será la respuesta. En este caso, hablamos de "aprendizaje de un disparo" si la indicación incluye solo un ejemplo y "aprendizaje de unos pocos disparos" si incluye varios ejemplos. La ingeniería de indicaciones con contexto es el enfoque más rentable para comenzar.
 
-However, the more the user can frame their query, with a detailed request and examples – the Context – the more accurate and closest to user’s expectations the answer will be. In this case, we talk about “one-shot” learning if the prompt includes only one example and “few shot learning” if it includes multiple examples.
-Prompt engineering with context is the most cost-effective approach to kick-off with.
+### Generación Aumentada por Recuperación (RAG)
 
-### Retrieval Augmented Generation (RAG)
+Los LLM tienen la limitación de que solo pueden utilizar los datos que se han utilizado durante su entrenamiento para generar una respuesta. Esto significa que no saben nada sobre los hechos que ocurrieron después de su proceso de entrenamiento y no pueden acceder a información no pública (como datos de la empresa).
 
-LLMs have the limitation that they can use only the data that has been used during their training to generate an answer. This means that they don’t know anything about the facts that happened after their training process, and they cannot access non-public information (like company data).
-This can be overcome through RAG, a technique that augments prompt with external data in the form of chunks of documents, considering prompt length limits. This is supported by Vector database tools (like [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) that retrieve the useful chunks from varied pre-defined data sources and add them to the prompt Context.
+Esto se puede superar a través de RAG, una técnica que aumenta la indicación con datos externos en forma de fragmentos de documentos, considerando los límites de longitud de la indicación. Esto es compatible con las herramientas de base de datos vectoriales. (como [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) que recuperan los fragmentos útiles de diversas fuentes de datos predefinidas y los agregan al contexto de la indicación.
 
-This technique is very helpful when a business doesn’t have enough data, enough time, or resources to fine-tune an LLM, but still wishes to improve performance on a specific workload and reduce risks of fabrications, i.e., mystification of reality or harmful content.  
+Esta técnica es muy útil cuando una empresa no tiene suficientes datos, tiempo o recursos para ajustar finamente un LLM, pero aún desea mejorar el rendimiento en una carga de trabajo específica y reducir los riesgos de fabricaciones, es decir, la mistificación de la realidad o contenido perjudicial.
 
-### Fine-tuned model
+### Modelo de ajuste fino (Fine-tuned)
 
-Fine-tuning is a process that leverages transfer learning to ‘adapt’ the model to a downstream task or to solve a specific problem. Differently from few-shot learning and RAG, it results in a new model being generated, with updated weights and biases. It requires a set of training examples consisting of a single input (the prompt) and its associated output (the completion).
-This would be the preferred approach if:
+El ajuste fino es un proceso que aprovecha el aprendizaje por transferencia para "adaptar" el modelo a una tarea descendente o para resolver un problema específico. A diferencia del aprendizaje de unos pocos disparos y de RAG, resulta en la generación de un nuevo modelo con pesos y sesgos actualizados. Requiere un conjunto de ejemplos de entrenamiento que consisten en una entrada única (la indicación) y su salida asociada (la completación). Este sería el enfoque preferido si:
 
-- **Using fine-tuned models**. A business would like to use fine-tuned less capable models (like embedding models) rather than high performance models, resulting in a more cost effective and fast solution.
+- **Usando modelos ajustados finamente**. Una empresa preferiría utilizar modelos ajustados finamente menos capaces (como modelos de incrustación) en lugar de modelos de alto rendimiento, lo que resulta en una solución más económica y rápida.
+  
+- **Considerando la latencia**. La latencia es importante para un caso de uso específico, por lo que no es posible utilizar indicaciones muy largas o el número de ejemplos que deben ser aprendidos por el modelo no se ajusta al límite de longitud de la indicación.
 
-- **Considering latency**. Latency is important for a specific use-case, so it’s not possible to use very long prompts or the number of examples that should be learned from the model doesn’t fit with the prompt length limit.
+- **Mantenerse actualizado**. Una empresa cuenta con una gran cantidad de datos de alta calidad y etiquetas de verdad básica, así como los recursos necesarios para mantener estos datos actualizados a lo largo del tiempo.
+  
+### Modelo entrenado
 
-- **Staying up to date**. A business has a lot of high-quality data and ground truth labels and the resources required to maintain this data up to date over time.
+Entrenar un LLM desde cero es, sin duda, el enfoque más difícil y complejo de adoptar, requiriendo cantidades masivas de datos, recursos capacitados y la potencia informática adecuada. Esta opción solo debería considerarse en un escenario donde una empresa tenga un caso de uso específico del dominio y una gran cantidad de datos centrados en ese dominio.
 
-### Trained model
+## Verificación de conocimientos
 
-Training an LLM from scratch is without a doubt the most difficult and the most complex approach to adopt, requiring massive amounts of data, skilled resources, and appropriate computational power. This option should be considered only in a scenario where a business has a domain-specific use case and a large amount of domain-centric data.
+¿Cuál podría ser un buen enfoque para mejorar los resultados de finalización del LLM?
 
-## Knowledge check
+1. Ingeniería de indicaciones con contexto.
+1. RAG (Generación Aumentada por Recuperación).
+1. Modelo ajustado finamente.
 
-What could be a good approach to improve LLM completion results?
+R:3, si tiene el tiempo, los recursos y los datos de alta calidad, realizar ajustes es la mejor opción para mantenerse actualizado. Sin embargo, si buscas mejorar las cosas y te falta tiempo, vale la pena considerar RAG primero.
 
-1. Prompt engineering with context
-1. RAG
-1. Fine-tuned model
+## 🚀 Desafío
 
-A:3, if you have the time and resources and high quality data, fine-tuning is the better option to stay up to date. However, if you're looking at improving things and you're lacking time it's worth considering RAG first.
+Lea más sobre cómo puede [usar RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) para su negocio.
 
-## 🚀 Challenge
+## Gran trabajo, continúa aprendiendo
 
-Read up more on how you can [use RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) for your business.
+Después de completar esta lección, consulte nuestra [colección de aprendizaje de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir mejorando tus conocimientos de IA generativa!
 
-## Great Work, Continue Your Learning
-
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
-
-Head over to Lesson 3 where we will look at how to [build with Generative AI Responsibly](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Dirígete a la Lección 3, donde veremos cómo [construir con IA generativa de manera responsable](../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
