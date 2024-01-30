@@ -1,53 +1,53 @@
-# Exploring and comparing different LLMs
+# Explorando y comparando diferentes LLM (Grandes modelos de lenguaje)
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Explorando y comparando diferentes LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
 
-> *Click the image above to view video of this lesson*
+> *Haz clic en la imagen de arriba para ver el video de esta lección*
 
-With the previous lesson, we have seen how Generative AI is changing the technology landscape, how Large Language Models (LLMs) work and how a business - like our startup - can apply them to their use cases and grow! In this chapter, we're looking to compare and contrast different types of large language models, LLMs to understand their pros and cons.
+Con la lección anterior, hemos visto cómo la Inteligencia Artificial Generativa está cambiando el panorama tecnológico, cómo funcionan los Grandes Modelos del Lenguaje (LLMs) y cómo una empresa, como nuestra startup, puede aplicarlos a sus casos de uso y crecer. En este capítulo, estamos buscando comparar y contrastar diferentes tipos de modelos de lenguaje grandes, LLMs, para entender sus ventajas y desventajas.
 
-The next step in our startup's journey is exploring the current landscape of Large Language Models (LLMs) and understanding which are suitable for our use case.
+El siguiente paso en la trayectoria de nuestra startup es explorar el panorama actual de los Grandes Modelos del Lenguaje (LLMs) y comprender cuáles son adecuados para nuestro caso de uso.
 
-## Introduction
+## Introducción
 
-This lesson will cover:
+Esta lección abordará:
 
-- Different types of LLMs in the current landscape.
-- Testing, iterating, and comparing different models for your use case in Azure.
-- How to deploy an LLM.
+-Diferentes tipos de Modelos de Lenguaje Grandes (LLMs) en el panorama actual.
+-Pruebas, iteraciones y comparaciones de diferentes modelos para tu caso de uso en Azure.
+-Cómo implementar un LLM.
 
-## Learning Goals
+## Objetivos de aprendizaje
 
-After completing this lesson, you will be able to:
+Después de completar esta lección, podrás:
 
-- Select the right model for your use case.
-- Understand how to test, iterate, and improve performance of your model.
-- Know how businesses deploy models.
+-Seleccionar el modelo adecuado para tu caso de uso.
+-Comprender cómo probar, iterar y mejorar el rendimiento de tu modelo.
+-Conocer cómo las empresas implementan modelos.
 
-## Understand different types of LLMs
+## Comprender diferentes tipos LLMs.
 
-Large Language Models (LLMs) can have multiple categorizations based on their architecture, training data, and use case. Understanding these differences will help our startup select the right model for the scenario, and understand how to test, iterate, and improve performance.
+Los Grandes Modelos del Lenguaje (LLMs) pueden tener múltiples categorizaciones basadas en su arquitectura, datos de entrenamiento y caso de uso. Comprender estas diferencias ayudará a nuestra startup a seleccionar el modelo adecuado para el escenario y entender cómo probar, iterar y mejorar el rendimiento.
 
-There are many different types of LLM models, your choice of model depends on what you aim to use them for, your data, how much you're ready to pay and more.
+Existen muchos tipos diferentes de modelos de LLM, la elección del modelo depende de para qué planeas utilizarlos, tus datos, cuánto estás dispuesto a pagar y otros factores más.
 
-Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
+Dependiendo de si planeas utilizar los modelos para generación de texto, audio, video, imágenes, entre otros, es posible que optes por un tipo de modelo diferente.
 
-- **Audio and speech recognition**. For this purpose, Whisper-type models are a great choice as they're general-purpose and aimed at speech recognition. It's trained on diverse audio and can perform multilingual speech recognition. Learn more about [Whisper type models here](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Reconocimiento de audio y voz**. Para este propósito, los modelos tipo Whisper son una excelente elección, ya que son de propósito general y están diseñados para el reconocimiento de voz. Están entrenados en audio diverso y pueden realizar reconocimiento de voz multilingüe. Obtén más información sobre ellos en: [Modelos tipo Whisper aquí](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Image generation**. For image generation, DALL-E and Midjourney are two very known choices. DALL-E is offered by Azure OpenAI. [Read more about DALL-E here](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) and also in Chapter 9 of this curriculum.
+- **Generación de imágenes**. Para la generación de imágenes, DALL-E y Midjourney son dos opciones muy conocidas. DALL-E es ofrecido por Azure OpenAI. [Lee más sobre DALL-E aquí](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) y también en el Capítulo 9 de este curso.
 
-- **Text generation**. Most models are trained on text generation and you have a large variety of choices from GPT-3.5 to GPT-4. They come at different costs with GPT-4 being the most expensive. It's worth looking into the [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) to evaluate which models best fit your needs in terms of capability and cost.
+- **Generación de texto**. La mayoría de los modelos están entrenados en generación de texto y tienes una amplia variedad de opciones, desde GPT-3.5 hasta GPT-4. Tienen diferentes costos, siendo GPT-4 el más caro. Vale la pena investigar más al respecto. [Azure Open AI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) para evaluar cuáles modelos se ajustan mejor a tus necesidades en términos de capacidad y costo.
 
-Selecting a model means you get some basic capabilities, that might not be enough however. Often you have company specific data that you somehow need to tell the LLM about. There are a few different choices on how to approach that, more on that in the upcoming sections.
+Seleccionar un modelo te brinda algunas capacidades básicas, que podrían no ser suficientes. A menudo, tienes datos específicos de la empresa que necesitas de alguna manera transmitir al LLM. Hay algunas opciones diferentes sobre cómo abordar eso, más detalles en las secciones próximas.
 
-### Foundation Models versus LLMs
+### Modelos Fundacionales versus grandes modelos del Lenguaje (LLMs).
 
-The term Foundation Model was [coined by Stanford researchers](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) and defined as an AI model that follows some criteria, such as:
+El término "Modelo Fundacional" [fue acuñado por investigadores de Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) y se define como un modelo de inteligencia artificial que sigue ciertos criterios, tales como:
 
-- **They are trained using unsupervised learning or self-supervised learning**, meaning they are trained on unlabeled multi-modal data, and they do not require human annotation or labeling of data for their training process.
-- **They are very large models**, based on very deep neural networks trained on billions of parameters.
-- **They are normally intended to serve as a ‘foundation’ for other models**, meaning they can be used as a starting point for other models to be built on top of, which can be done by fine-tuning.
-
+- **Son entrenados utilizando aprendizaje no supervisado o aprendizaje auto-supervisado**, Lo que significa que se entrenan con datos multimodales no etiquetados y no requieren anotación humana o etiquetado de datos para su proceso de entrenamiento.
+- **Son modelos muy grandes**, Basados en redes neuronales muy profundas entrenadas con miles de millones de parámetros.
+- **Normalmente están destinados a servir como una "base" para otros modelos**, Lo que significa que pueden usarse como punto de partida para que otros modelos se construyan sobre ellos, lo cual se puede hacer mediante el ajuste fino (fine-tuning).
+-------
 ![Foundation Models versus LLMs](./images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
