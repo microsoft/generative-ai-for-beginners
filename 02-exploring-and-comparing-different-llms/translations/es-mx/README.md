@@ -48,84 +48,82 @@ El término "Modelo Fundacional" [fue acuñado por investigadores de Stanford](h
 - **Son modelos muy grandes**, Basados en redes neuronales muy profundas entrenadas con miles de millones de parámetros.
 - **Normalmente están destinados a servir como una "base" para otros modelos**, Lo que significa que pueden usarse como punto de partida para que otros modelos se construyan sobre ellos, lo cual se puede hacer mediante el ajuste fino (fine-tuning).
 
-![Foundation Models versus LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
+![Modelos fundqacionales vs Grandes Modelos del Lenguaje](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
-Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
+Fuente de la imagen: [Guía Esencial sobre Modelos Fundacionales y Grandes Modelos del Lenguaje | por Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-To further clarify this distinction, let’s take ChatGPT as an example. To build the first version of ChatGPT, a model called GPT-3.5 served as the foundation model. This means that OpenAI used some chat-specific data to create a tuned version of GPT-3.5 that was specialized in performing well in conversational scenarios, such as chatbots.
+Para aclarar aún más esta distinción, tomemos ChatGPT como ejemplo. Para construir la primera versión de ChatGPT, se utilizó un modelo llamado GPT-3.5 como modelo base. Esto significa que OpenAI utilizó datos específicos de conversación para crear una versión ajustada de GPT-3.5 especializada en rendir bien en escenarios conversacionales, como chatbots.
 
-![Foundation Model](./images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
+![Modelo Fundacional](../../images/Multimodal.png?WT.mc_id=academic-105485-koreyst)
 
-Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+Fuente de la imagen: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Open Source versus Proprietary Models
+### Modelos de Código Abierto versus Modelos Propios
 
-Another way to categorize LLMs is whether they are open source or proprietary.
+Otra forma de categorizar los LLMs es si son de código abierto o propietarios.
 
-Open-source models are models that are made available to the public and can be used by anyone. They are often made available by the company that created them, or by the research community. These models are allowed to be inspected, modified, and customized for the various use cases in LLMs. However, they are not always optimized for production use, and may not be as performant as proprietary models. Plus, funding for open-source models can be limited, and they may not be maintained long term or may not be updated with the latest research. Examples of popular open source models include [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) and [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst).
+Los modelos de código abierto son modelos que se ponen a disposición del público y pueden ser utilizados por cualquier persona. A menudo son proporcionados por la empresa que los creó o por la comunidad de investigación. Estos modelos pueden ser inspeccionados, modificados y personalizados para diversos casos de uso en los LLMs. Sin embargo, no siempre están optimizados para su uso en producción y pueden no ser tan eficientes como los modelos propietarios. Además, la financiación para modelos de código abierto puede ser limitada y es posible que no se mantengan a largo plazo o no se actualicen con las últimas investigaciones. Ejemplos de modelos de código abierto populares incluyen [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) y [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst).
 
-Proprietary models are models that are owned by a company and are not made available to the public. These models are often optimized for production use. However, they are not allowed to be inspected, modified, or customized for different use cases. Plus, they are not always available for free, and may require a subscription or payment to use. Also, users do not have control over the data that is used to train the model, which means they should entrust the model owner with ensuring commitment to data privacy and responsible use of AI. Examples of popular proprietary models include [OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) or [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Los modelos propios son modelos que pertenecen a una empresa y no se ponen a disposición del público. Estos modelos suelen estar optimizados para su uso en producción. Sin embargo, no se permite inspeccionar, modificar o personalizar estos modelos para diferentes casos de uso. Además, no siempre están disponibles de forma gratuita y pueden requerir una suscripción o pago para su uso. También, los usuarios no tienen control sobre los datos utilizados para entrenar el modelo, lo que significa que deben confiar en el propietario del modelo para garantizar el compromiso con la privacidad de los datos y el uso responsable de la inteligencia artificial. Ejemplos de modelos propietarios populares incluyen [Modelos de OpenAI](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) or [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
 
-### Embedding versus Image generation versus Text and Code generation
+### Incrustación (Embedding) versus Generación de Imágenes versus Generación de Texto y Código.
 
-LLMs can also be categorized by the output they generate.
+Los LLMs también pueden categorizarse según la salida que generan.
 
-Embeddings are a set of models that can convert text into a numerical form, called embedding, which is a numerical representation of the input text. Embeddings make it easier for machines to understand the relationships between words or sentences and can be consumed as inputs by other models, such as classification models, or clustering models that have better performance on numerical data. Embedding models are often used for transfer learning, where a model is built for a surrogate task for which there’s an abundance of data, and then the model weights (embeddings) are re-used for other downstream tasks. An example of this category is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Las incrustaciones (Embeddings) son un conjunto de modelos que pueden convertir el texto en una forma numérica, llamada incrustación, que es una representación numérica del texto de entrada. Las incrustaciones facilitan que las máquinas comprendan las relaciones entre palabras o oraciones y pueden ser consumidas como entradas por otros modelos, como modelos de clasificación o modelos de agrupamiento que tienen un mejor rendimiento en datos numéricos. Los modelos de incrustación a menudo se utilizan para el aprendizaje por transferencia, donde se construye un modelo para una tarea sustituta para la cual hay abundancia de datos, y luego los pesos del modelo (incrustaciones) se reutilizan para otras tareas posteriores. Un ejemplo de esta categoría es [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](./images/Embedding.png?WT.mc_id=academic-105485-koreyst)
+![Embedding](../../images/Embedding.png?WT.mc_id=academic-105485-koreyst)
 
-Image generation models are models that generate images. These models are often used for image editing, image synthesis, and image translation. Image generation models are often trained on large datasets of images, such as [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), and can be used to generate new images or to edit existing images with inpainting, super-resolution, and colorization techniques. Examples include [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Los modelos de generación de imágenes son modelos que generan imágenes. Estos modelos se utilizan a menudo para la edición de imágenes, síntesis de imágenes y traducción de imágenes. Los modelos de generación de imágenes a menudo se entrenan en grandes conjuntos de datos de imágenes, como [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), y se pueden utilizar para generar nuevas imágenes o editar imágenes existentes con técnicas de rellenado, súper resolución y colorización. Ejemplos incluyen [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) y [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](./images/Image.png?WT.mc_id=academic-105485-koreyst)
+![Generación de imágenes](../../images/Image.png?WT.mc_id=academic-105485-koreyst)
 
-Text and code generation models are models that generate text or code. These models are often used for text summarization, translation, and question answering. Text generation models are often trained on large datasets of text, such as [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), and can be used to generate new text, or to answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), are often trained on large datasets of code, such as GitHub, and can be used to generate new code, or to fix bugs in existing code.
+Los modelos de generación de texto y código son modelos que generan texto o código. Estos modelos se utilizan a menudo para la sumarización de texto, la traducción y la respuesta a preguntas. Los modelos de generación de texto a menudo se entrenan en grandes conjuntos de datos de texto, como [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), y pueden ser utilizados para generar nuevo texto o responder preguntas. Los modelos de generación de código, como [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), a menudo se entrenan en grandes conjuntos de datos de código, como GitHub, y se pueden utilizar para generar nuevo código o corregir errores en el código existente.
 
- ![Text and code generation](./images/Text.png?WT.mc_id=academic-105485-koreyst)
+ ![Generación de texto y código](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
-### Encoder-Decoder versus Decoder-only
+### Codificador-Decodificador versus Solo Decodificador
 
-To talk about the different types of architectures of LLMs, let's use an analogy.
+Para hablar sobre los diferentes tipos de arquitecturas de LLMs, usemos una analogía.
 
-Imagine your manager gave you a task for writing a quiz for the students.  You have two colleagues; one oversees creating the content and the other oversees reviewing them.
+Imagina que tu jefe te asignó la tarea de escribir un cuestionario para los estudiantes. Tienes dos colegas; uno se encarga de crear el contenido y el otro se encarga de revisarlo.
 
-The content creator is like a Decoder only model, they can look at the topic and see what you already wrote and then he can write a course based on that. They are very good at writing engaging and informative content, but they are not very good at understanding the topic and the learning objectives. Some examples of Decoder models are GPT family models, such as GPT-3.
+El creador de contenido es como un modelo solo de decodificación, pueden mirar el tema y ver lo que ya escribiste y luego pueden escribir un curso basado en eso. Son muy buenos escribiendo contenido atractivo e informativo, pero no son muy buenos entendiendo el tema y los objetivos de aprendizaje. Algunos ejemplos de modelos de decodificación son los modelos de la familia GPT, como GPT-3.
 
-The reviewer is like an Encoder only model, they look at the course written and the answers, noticing the relationship between them and understanding context, but they are not good at generating content. An example of Encoder only model would be BERT.
+El revisor es como un modelo solo de codificación, ellos miran el curso escrito y las respuestas, notando la relación entre ellos y entendiendo el contexto, pero no son buenos generando contenido. Un ejemplo de modelo solo de codificación sería BERT.
 
-Imagine that we can have someone as well who could create and review the quiz, this is an Encoder-Decoder model. Some examples would be BART and T5.
+Imagina que también podemos tener a alguien que pueda crear y revisar el cuestionario, este es un modelo codificador-decodificador. Algunos ejemplos serían BART y T5.
 
-### Service versus Model
+### Servicio versus modelo
 
-Now, let's talk about the difference between a service and a model. A service is a product that is offered by a Cloud Service Provider, and is often a combination of models, data, and other components. A model is the core component of a service, and is often a foundation model, such as an LLM.
+Ahora, hablemos sobre la diferencia entre un servicio y un modelo. Un servicio es un producto que ofrece un proveedor de servicios en la nube y a menudo es una combinación de modelos, datos y otros componentes. Un modelo es el componente central de un servicio y a menudo es un modelo base, como un LLM.
 
-Services are often optimized for production use and are often easier to use than models, via a graphical user interface. However, services are not always available for free, and may require a subscription or payment to use, in exchange for leveraging the service owner’s equipment and resources, optimizing expenses and scaling easily. An example of service is [Azure OpenAI service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), which offers a pay-as-you-go rate plan,  meaning users are charged proportionally to how much they use the service Also, Azure OpenAI service offers enterprise-grade security and responsible AI framework on top of the models' capabilities.
+Los servicios a menudo están optimizados para su uso en producción y suelen ser más fáciles de usar que los modelos, a través de una interfaz gráfica de usuario. Sin embargo, los servicios no siempre están disponibles de forma gratuita y pueden requerir una suscripción o pago para su uso, a cambio de aprovechar el equipo y los recursos del propietario del servicio, optimizando gastos y escalando fácilmente. Un ejemplo de servicio es un servicio de almacenamiento en la nube como Dropbox o Google Drive.[Servicio de Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), el cual ofrece un plan de tarifas de pago por uso, lo que significa que los usuarios son cobrados de manera proporcional a la cantidad que utilicen el servicio. Además, el servicio proporciona seguridad de nivel empresarial y un marco de inteligencia artificial responsable que se suma a las capacidades de los modelos.
 
-Models are just the Neural Network, with the parameters, weights, and others. Allowing companies to run locally, however, would need to buy equipment, build structure to scale and buy a license or use an open-source model. A model like LLaMA is available to be used, requiring computational power to run the model.
+Los modelos son simplemente la red neuronal, con sus parámetros, pesos y otros atributos. Permiten a las empresas ejecutarlos localmente; sin embargo, esto requeriría la compra de equipos, la construcción de una estructura escalable y la adquisición de una licencia o el uso de un modelo de código abierto. Un modelo como LLaMA está disponible para su uso, pero requiere potencia computacional para ejecutar el modelo.
 
-## How to test and iterate with different models to understand performance on Azure
+## Cómo probar e iterar con diferentes modelos para entender el rendimiento en Azure
 
-Once our team has explored the current LLMs landscape and identified some good candidates for their scenarios, the next step is testing them on their data and on their workload. This is an iterative process, done by experiments and measures.
-Most of the models we mentioned in previous paragraphs (OpenAI models, open source models like Llama2, and Hugging Face transformers) are available in the [Foundation Models](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) catalog in [Azure Machine Learning studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst).
+Una vez que nuestro equipo ha explorado el panorama actual de los Modelos de Lenguaje de Gran Escala (LLMs, por sus siglas en inglés) e identificado algunos buenos candidatos para sus escenarios, el siguiente paso es probarlos con sus datos y su carga de trabajo. Este es un proceso iterativo, realizado mediante experimentos y medidas. La mayoría de los modelos que mencionamos en los párrafos anteriores (modelos de OpenAI, modelos de código abierto como Llama2 y transformadores de Hugging Face) están disponibles en los [Modelos Base](https://learn.microsoft.com/azure/machine-learning/concept-foundation-models?WT.mc_id=academic-105485-koreyst) catalogo en [Azure Machine Learning studio](https://ml.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst) is a Cloud Service designed for data scientists and ML engineers to manage the whole ML lifecycle (train, test, deploy and handle MLOps) in a single platform. The Machine Learning studio offers a graphical user interface to this service and enables the user to:
+[Azure Machine Learning](https://azure.microsoft.com/products/machine-learning/?WT.mc_id=academic-105485-koreyst)es un servicio en la nube diseñado para científicos de datos e ingenieros de aprendizaje automático para gestionar todo el ciclo de vida del aprendizaje automático (entrenamiento, prueba, implementación y manejo de MLOps) en una sola plataforma. El estudio de aprendizaje automático ofrece una interfaz gráfica de usuario para este servicio y permite al usuario:
 
-- Find the Foundation Model of interest in the catalog, filtering by task, license, or name. It’s also possible to import new models that are not yet included in the catalog.
-- Review the model card, including a detailed description and code samples, and test it with the Sample Inference widget, by providing a sample prompt to test the result.
+- Encontrar el Modelo Base de interés en el catálogo, filtrando por tarea, licencia o nombre. También es posible importar nuevos modelos que aún no estén incluidos en el catálogo.
+- Revisar la ficha del modelo, que incluye una descripción detallada y ejemplos de código, y probarlo con el widget de Inferencia de Muestra, proporcionando un ejemplo de indicación para probar el resultado.
+![Model card](../../images/Llama1.png?WT.mc_id=academic-105485-koreyst)
 
-![Model card](./images/Llama1.png?WT.mc_id=academic-105485-koreyst)
+- Evaluar el rendimiento del modelo con métricas de evaluación objetiva en una carga de trabajo específica y un conjunto de datos específico proporcionado como entrada.
 
-- Evaluate model performance with objective evaluation metrics on a specific workload and a specific set of data provided in input.
+![Model evaluation](../../images/Llama2.png?WT.mc_id=academic-105485-koreyst)
 
-![Model evaluation](./images/Llama2.png?WT.mc_id=academic-105485-koreyst)
+- Ajustar el modelo con datos de entrenamiento personalizados para mejorar el rendimiento del modelo en una carga de trabajo específica, aprovechando las capacidades de experimentación y seguimiento de Azure Machine Learning.
 
-- Fine-tune the model on custom training data to improve model performance in a specific workload, leveraging the experimentation and tracking capabilities of Azure Machine Learning.
+![Model fine-tuning](../../images/Llama3.png?WT.mc_id=academic-105485-koreyst)
 
-![Model fine-tuning](./images/Llama3.png?WT.mc_id=academic-105485-koreyst)
+- Despliega el modelo pre-entrenado original o la versión ajustada a un punto final remoto de inferencia en tiempo real o por lotes, para permitir que las aplicaciones lo consuman.
 
-- Deploy the original pre-trained model or the fine-tuned version to a remote real time inference or batch endpoint, to enable applications to consume it.
-
-![Model deployment](./images/Llama4.png?WT.mc_id=academic-105485-koreyst)
+![Model deployment](../../images/Llama4.png?WT.mc_id=academic-105485-koreyst)
 
 ## Improving LLM results
 
@@ -143,7 +141,7 @@ deploy an LLM in production, with different levels of complexity, cost, and qual
 
 - **Fine-tuned model**. Here, you trained the model further on your own data which leads to the model being more exact and responsive to your needs but might be costly.
 
-![LLMs deployment](./images/Deploy.png?WT.mc_id=academic-105485-koreyst)
+![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
 Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
