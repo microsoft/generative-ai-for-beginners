@@ -95,7 +95,7 @@ Este "perfil" solicita a ChatGPT crear un plan de lección en listas vinculadas.
 
 ### Marco de Trabajo de Mensajes de Sistema de Microsoft para Grandes Modelos de Lenguaje
 
-[Microsoft ha proporcionado orientación]](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) para escribir mensajes de sistema eficaces al generar respuestas de LLMs, divididos en 4 áreas:
+[Microsoft ha proporcionado orientación](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) para escribir mensajes de sistema eficaces al generar respuestas de LLMs, divididos en 4 áreas:
 
 1. Definir a quién va dirigido el modelo, así como sus capacidades y limitaciones.
 2. Definir el formato de salida del modelo.
