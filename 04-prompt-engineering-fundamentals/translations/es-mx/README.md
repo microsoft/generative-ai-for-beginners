@@ -360,7 +360,7 @@ Para nuestra tarea, utilizaremos un Jupyter Notebook con ejercicios que puedes c
 
 ### Siguiente, configura tus variables de entorno
 
-- Copia el archivo `.env.copy` en la raiz del repositorio a `.env` y actualiza los valores de `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` y `AZURE_OPENAI_DEPLOYMENT`. Consulta la [sección de Sandbox de Aprendizaje](../../04-prompt-engineering-fundamentals#learning-sandbox) para aprender cómo.
+- Copia el archivo `.env.copy` en la raiz del repositorio a `.env` y actualiza los valores de `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` y `AZURE_OPENAI_DEPLOYMENT`. Consulta la [sección de Sandbox de Aprendizaje](../../../04-prompt-engineering-fundamentals#learning-sandbox) para aprender cómo.
 
 ### Siguiente, abre el Jupyter Notebook
 
