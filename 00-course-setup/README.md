@@ -113,7 +113,7 @@ If this is your first time working with the Azure OpenAI service, please follow 
 
 ## Using the OpenAI API for the First Time
 
-If this is your first working with the OpenAI API, please follow the guide on how to [create and use the Interface.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+If this is your first time working with the OpenAI API, please follow the guide on how to [create and use the Interface.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
 ## Meet Other Learners
 
