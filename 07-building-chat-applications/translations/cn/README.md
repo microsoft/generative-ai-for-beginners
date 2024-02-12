@@ -62,15 +62,19 @@
 - **更容易维护**：更新和改进更易于管理，因为大多数 API 和 SDK 在发布新版本时只需要更新库。
 - **获得尖端技术**：利用经过微调和在广泛数据集上训练的模型为您的应用程序提供自然语言功能。
 
-访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
+访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
 
 ```python
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+API_KEY = os.getenv("OPENAI_API_KEY","")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
+client = OpenAI(
+    api_key=API_KEY
+    )
+
+chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
 上面的示例使用 GPT-3.5 Turbo 模型来完成提示，但请注意，API 密钥是在执行此操作之前设置的。 如果未设置 key，您将收到以下错误。
@@ -178,7 +182,7 @@ Microsoft 的 Responsible AI 方法确定了指导 AI 开发和使用的六项�
 
 ## 作业
  
-请查看[作业](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst)，它将引导您完成一系列练习，从运行第一个聊天提示到对文本进行分类和总结等等。
+请查看[作业](../../python?WT.mc_id=academic-105485-koreyst)，它将引导您完成一系列练习，从运行第一个聊天提示到对文本进行分类和总结等等。
 
 ## Great Work! Continue the Journey
 

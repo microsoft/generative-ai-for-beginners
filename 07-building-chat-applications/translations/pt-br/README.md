@@ -66,15 +66,19 @@ Ao criar uma aplicação de chat, um ótimo primeiro passo é avaliar o que já 
 
 - **Acesso a tecnologia de ponta**: Alavancar modelos que foram ajustados e treinados em conjuntos de dados extensivos proporciona à sua aplicação capacidades de linguagem natural.
 
-Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
+Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](../../python/oai-assigment-simple.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](../../python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
 
 ```python
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+API_KEY = os.getenv("OPENAI_API_KEY","")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
+client = OpenAI(
+    api_key=API_KEY
+    )
+
+chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
 No exemplo acima é usado o modelo GPT-3.5 Turbo para completar o prompt. Mas observe que a chave da API é definida antes de fazê-lo. Você receberia o seguinte erro se não definisse a chave.
@@ -183,7 +187,7 @@ A abordagem da Microsoft para a IA Responsável identificou seis princípios que
 
 ## Tarefa
  
-Veja a [tarefa](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) que o levará por uma série de exercícios, desde a execução de seus primeiros prompts de chat até a classificação e resumo de texto e muito mais.
+Veja a [tarefa](../../python?WT.mc_id=academic-105485-koreyst) que o levará por uma série de exercícios, desde a execução de seus primeiros prompts de chat até a classificação e resumo de texto e muito mais.
 
 ## Excelente Trabalho! Continue no Aprendizado!
 
