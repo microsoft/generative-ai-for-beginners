@@ -1,0 +1,36 @@
+{
+  "name": "chat-completions-app",
+  "version": "1.0.0",
+  "description": "a simple application how to use the chat completions with Azure OpenAI in TypeScript",
+  "main": "main.js",
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "preserve": "npm run build",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "typescript",
+    "azure",
+    "openai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@azure/openai": "^1.0.0-beta.10",
+    "dotenv": "^16.3.1",
+    "rimraf": "^5.0.5"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "npx ts-node ./src/main.ts"
+  }
+}
