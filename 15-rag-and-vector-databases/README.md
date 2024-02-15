@@ -84,15 +84,42 @@ A vector database, unlike traditional databases, is a specialized database desig
 
 We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most like the question will be returned together with the prompt. Chunking also reduces costs on  the number of tokens passed through an LLM.
 
-Some popular vector databases include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN,, Quadrants and DeepLake. You can create an Azure Cosmos DB model using azd as follows:
+Some popular vector databases include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN,, Quadrants and DeepLake. You can create an Azure Cosmos DB model using Azure CLI with the following command:
+
+```bash
+az login
+az group create -n <resource-group-name> -l <location>
+az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
+az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
+```
 
 ### From text to embeddings
 
-Before we store our data, we will need to convert it to vector embeddings before it is stored in the database. If you are working with large documents or long texts, you can chunk them based on queries you expect. Chunking can be done at sentence level, or at a paragraph level. As chunking derives meanings from the words around them, you can add some other context to a chunk, for example, by adding the document title or including some text before or after the chunk.
+Before we store our data, we will need to convert it to vector embeddings before it is stored in the database. If you are working with large documents or long texts, you can chunk them based on queries you expect. Chunking can be done at sentence level, or at a paragraph level. As chunking derives meanings from the words around them, you can add some other context to a chunk, for example, by adding the document title or including some text before or after the chunk. You can chunk the data as follows:
 
-Once chunked, we can then embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision and many more. Selecting a model to use will depend on the languages you're using, the type of content encoded (text/images/audio), the size of input it can encode and length of the embedding output.
+``` python
+def split_text(text, max_length, min_length):
+    words = text.split()
+    chunks = []
+    current_chunk = []
 
-An example of embedded text is:
+    for word in words:
+        current_chunk.append(word)
+        if len(' '.join(current_chunk)) < max_length and len(' '.join(current_chunk)) > min_length:
+            chunks.append(' '.join(current_chunk))
+            current_chunk = []
+
+    # If the last chunk didn't reach the minimum length, add it anyway
+    if current_chunk:
+        chunks.append(' '.join(current_chunk))
+
+    return chunks
+```
+
+Once chunked, we can then embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision and many more. Selecting a model to use will depend on the languages you're using, the type of content encoded (text/images/audio), the size of input it can encode and length of the embedding output. 
+
+An example of embedded text using OpenAI's `text-embedding-ada-002` model is:
+![an embedding of the word cat](images/cat.png)
 
 ## Retrieval and Vector Search
 
@@ -112,13 +139,11 @@ There are several ways to perform search within our database such as:
 
 - *Hybrid* - a combination of both keyword and vector search.
 
-A challenge with retrieval comes in when there is no similar response to the query in the database, the system will then return the best information they can get, however, you can use tactics like set up the maximum distance for relevance or use hybrid search that combines both keywords and vector search. In this lesson we will use hybrid search, a combination of both vector and keyword search.
+A challenge with retrieval comes in when there is no similar response to the query in the database, the system will then return the best information they can get, however, you can use tactics like set up the maximum distance for relevance or use hybrid search that combines both keywords and vector search. In this lesson we will use hybrid search, a combination of both vector and keyword search. We will store our data into a dataframe with columns containing the chunks as well as embeddings. 
 
 ### Vector Similarity
 
 The retriever will search through the knowledge database for embeddings that are close together, the closest neighbour, as they are texts that are similar. In the scenario a user asks a query, it is first embedded then matched with similar embeddings. The common measurement that is used to find how similar different vectors are is cosine similarity which is based on the angle between two vectors.
-
-> cosine similarity formula
 
 We can measure similarity using other alternatives we can use are Euclidean distance which is the straight line between vector endpoints and dot product which measures the sum of the products of corresponding elements of two vectors.
 
@@ -126,19 +151,78 @@ We can measure similarity using other alternatives we can use are Euclidean dist
 
 When doing retrieval, we will need to build a search index for our knowledge base before we perform search. An index will store our embeddings and can quickly retrieve the most similar chunks even in a large database. We can create our index locally using:
 
-> Code to create a search index to be added
+```python
+from sklearn.neighbors import NearestNeighbors
+
+embeddings = flattened_df['embeddings'].to_list()
+
+# Create the search index
+nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
+
+# To query the index, you can use the kneighbors method
+distances, indices = nbrs.kneighbors(embeddings)
+```
 
 ### Re-ranking
 
-Once you have queried the database, you might need to sort the results from the most relevant. A reranking LLM utilizes Machine Learning to improve the relevance of search results by ordering them from the most relevant. Using Azure AI Search, reranking is done automatically for you using a semantic reranker. An example of how reranking works:
+Once you have queried the database, you might need to sort the results from the most relevant. A reranking LLM utilizes Machine Learning to improve the relevance of search results by ordering them from the most relevant. Using Azure AI Search, reranking is done automatically for you using a semantic reranker. An example of how reranking works using nearest neighbours:
 
-> semantic reranker
+```python
+# Find the most similar documents
+distances, indices = nbrs.kneighbors([query_vector])
+
+index = []
+# Print the most similar documents
+for i in range(3):
+    index = indices[0][i]
+    for index in indices[0]:
+        print(flattened_df['chunks'].iloc[index])
+        print(flattened_df['path'].iloc[index])
+        print(flattened_df['distances'].iloc[index])
+    else:
+        print(f"Index {index} not found in DataFrame")
+```
 
 ## Bringing it all together
 
 The last step is adding our LLM into the mix to be able to get responses that are grounded on our data. We can implement it as follows:
 
-> code
+```python
+user_input = "what is a perceptron?"
+
+def chatbot(user_input):
+    # Convert the question to a query vector
+    query_vector = create_embeddings(user_input)
+
+    # Find the most similar documents
+    distances, indices = nbrs.kneighbors([query_vector])
+
+    # add documents to query  to provide context
+    history = []
+    for index in indices[0]:
+        history.append(flattened_df['chunks'].iloc[index])
+
+    # combine the history and the user input
+    history.append(user_input)
+
+    # create a message object
+    messages=[
+        {"role": "system", "content": "You are an AI assiatant that helps with AI questions."},
+        {"role": "user", "content": history[-1]}
+    ]
+
+    # use chat completion to generate a response
+    response = openai.chat.completions.create(
+        model="gpt-4",
+        temperature=0.7,
+        max_tokens=800,
+        messages=messages
+    )
+
+    return response.choices[0].message
+
+chatbot(user_input)
+```
 
 ## Evaluating our application
 
@@ -167,20 +251,6 @@ There are many different use cases where function calls can improve your app lik
 ## Summary
 
 We have covered the fundamental areas of RAG from adding our data to the application, the user query and output. To simplify creation of RAG, you can use frameworks such as Semanti Kernel, Langchain or Autogen.
-
-## Resources
-
-- [Azure AI Search: Outperforming vector search with hybrid retrieval and ranking capabilities - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/azure-ai-search-outperforming-vector-search-with-hybrid/ba-p/3929167)
-
-- [Get started with the Python enterprise chat sample using RAG - Python on Azure | Microsoft Learn](https://learn.microsoft.com/en-us/azure/developer/python/get-started-app-chat-template?tabs=github-codespaces)
-
-- [Generative AI for Beginners (microsoft.github.io)](https://microsoft.github.io/generative-ai-for-beginners/#/08-building-search-applications/README?wt.mc_id=academic-105485-koreyst) - how to build a search application
-
-- [Quickly build and deploy OpenAI apps on Azure, infused with your own data (youtube.com)](https://www.youtube.com/watch?v=j8i-OM5kwiY) - Using Azure CLI to initialize, architect and deploy your applications.
-
-- [Mastering RAG: How To Architect An Enterprise RAG System - Galileo (rungalileo.io)](https://www.rungalileo.io/blog/mastering-rag-how-to-architect-an-enterprise-rag-system) - non-Azure approach
-
-- [Build A Production RAG with Azure AI and Prompt Flow (nitya.github.io)](https://nitya.github.io/contoso-chat/) - building with promptflow 
 
 ## Assignment
 
