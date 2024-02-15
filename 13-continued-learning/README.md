@@ -133,3 +133,14 @@ After completing this course, check out our [Generative AI Learning collection](
 🔗 [New skills in the age of AI by John Maeda](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?wt.mc_id=github_S-1231_webpage_reactor)
 
 🔗  [Designing Human-Centric AI Experiences: Applied UX Design for Artificial Intelligence by Akshay Kpre](https://www.amazon.com/Designing-Human-Centric-Experiences-Artificial-Intelligence/dp/1484280873?WT.mc_id=academic-105485-koreyst)
+
+## Lesson 15 - Retrieval Augmented Generation (RAG) and Vector Databases
+🔗 [Azure AI Search: Outperforming vector search with hybrid retrieval and ranking capabilities - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/azure-ai-search-outperforming-vector-search-with-hybrid/ba-p/3929167?WT.mc_id=academic-105485-koreyst)
+
+🔗 [Get started with the Python enterprise chat sample using RAG - Python on Azure | Microsoft Learn](https://learn.microsoft.com/en-us/azure/developer/python/get-started-app-chat-template?tabs=github-codespaces?WT.mc_id=academic-105485-koreyst)
+
+🔗  [Generative AI for Beginners (microsoft.github.io)](https://microsoft.github.io/generative-ai-for-beginners/#/08-building-search-applications/README?wt.mc_id=academic-105485-koreyst) 
+
+🔗  [Quickly build and deploy OpenAI apps on Azure, infused with your own data (youtube.com)](https://www.youtube.com/watch?v=j8i-OM5kwiY) 
+
+🔗 [Build A Production RAG with Azure AI and Prompt Flow (nitya.github.io)](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst) 
