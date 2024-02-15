@@ -31,7 +31,7 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 - Basic knowledge of Python or Typescript is helpful - *For absolute beginners check out these [Python](https://learn.microsoft.com/en-us/training/paths/python-language/?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/?WT.mc_id=academic-105485-koreyst) courses.
 - A Github Account to [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account
 
-We have created a **Course Setup** lesson help you with setting up your environment. 
+We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you with setting up your developement environment. 
 
 Don't forget to star  [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
 
