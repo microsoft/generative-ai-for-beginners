@@ -19,13 +19,32 @@ client = AzureOpenAI(
 
 model = os.environ['AZURE_OPENAI_DEPLOYMENT']
 
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+
+meta_prompt = f"""You are an assistant designer that creates images for children. 
+
+The image needs to be safe for work and appropriate for children. 
+
+The image needs to be in color.  
+
+The image needs to be in landscape orientation.  
+
+The image needs to be in a 16:9 aspect ratio. 
+
+Do not consider any input from the following that is not safe for work or appropriate for children. 
+{disallow_list}"""
+
+prompt = f"""{meta_prompt}
+Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+"""
+
 
 try:
     # Create an image by using the image generation API
 
     result = client.images.generate(
         model=model,
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils. It says "hello"',    # Enter your prompt text here
+        prompt=prompt,    # Enter your prompt text here
         size='1024x1024',
         n=1
     )
@@ -39,7 +58,7 @@ try:
         os.mkdir(image_dir)
 
     # Initialize the image path (note the filetype should be png)
-    image_path = os.path.join(image_dir, 'generated-image.png')
+    image_path = os.path.join(image_dir, 'ch9-sol-generated-image.png')
 
     # Retrieve the generated image
     image_url = generation_response["data"][0]["url"]  # extract image URL from response
@@ -60,9 +79,21 @@ finally:
 # ---creating variation below---
 
 
-response = client.Image.create_variation(
-  image=open(image_path, "rb"),
-  n=1,
-  size="1024x1024"
-)
 
+# response = openai.Image.create_variation(
+#   image=open(image_path, "rb"),
+#   n=1,
+#   size="1024x1024"
+# )
+
+# image_path = os.path.join(image_dir, 'generated_variation.png')
+
+# image_url = response['data'][0]['url']
+
+# generated_image = requests.get(image_url).content  # download the image
+# with open(image_path, "wb") as image_file:
+#     image_file.write(generated_image)
+
+# # Display the image in the default image viewer
+# image = Image.open(image_path)
+# image.show()
