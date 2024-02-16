@@ -60,15 +60,19 @@
 - **メンテナンスの容易さ**: ほとんどの API と SDK で、新バージョンがリリースされた際、ライブラリを更新するだけで済むため、アップデートや改善が容易になります。
 - **最先端技術へのアクセス**: 大規模なデータセットでファイン・チューニングやトレーニングされたモデルを活用すると、アプリケーションに自然言語処理の能力を追加できます。
 
-SDK や API の機能を利用するためには、通常、提供されるサービスの使用許可を取得する必要があります。これは、一意のキーや認証トークンを使って行われます。OpenAI Python ライブラリを使って、これがどのように行われるのか確認してみましょう。また、このレッスン用の [OpenAI のノートブック](../../notebook-openai.ipynb?WT.mc_id=academic-105485-yoterada)や [Azure OpenAI Services のノートブック](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-yoterada)を使って、自分で試せます。
+SDK や API の機能を利用するためには、通常、提供されるサービスの使用許可を取得する必要があります。これは、一意のキーや認証トークンを使って行われます。OpenAI Python ライブラリを使って、これがどのように行われるのか確認してみましょう。また、このレッスン用の [OpenAI のノートブック](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-yoterada)や [Azure OpenAI Services のノートブック](../../python/aoai-assignment.ipynb?WT.mc_id=academic-105485-yoterada)を使って、自分で試せます。
 
 ```python
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+API_KEY = os.getenv("OPENAI_API_KEY","")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "生成 AI のチャット・アプリケーションに関するトレーニング・タイトルを2つ提案してください。"}])
+client = OpenAI(
+    api_key=API_KEY
+    )
+
+chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "生成 AI のチャット・アプリケーションに関するトレーニング・タイトルを2つ提案してください。"}])
 ```
 
 上記の例では、GPT-3.5 Turbo モデルを使用してプロンプトを作成していますが、その前に API キーを設定している点にご注意ください。キーを設定しなかった場合は、下記のエラーが表示されます。
@@ -209,7 +213,7 @@ Microsoft の責任ある AI への取り組みでは、AI の開発と利用を
 
 ## 課題
 
-[課題](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-yoterada)をご覧ください。最初のチャット・プロンプトの実行から、テキストの分類や要約など、一連の演習を行えます。
+[課題](../../python?WT.mc_id=academic-105485-yoterada)をご覧ください。最初のチャット・プロンプトの実行から、テキストの分類や要約など、一連の演習を行えます。
 
 ## お疲れ様でした!　学習を続ける
 
