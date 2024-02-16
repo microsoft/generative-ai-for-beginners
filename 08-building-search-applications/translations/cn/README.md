@@ -154,7 +154,7 @@ az cognitiveservices account deployment create \
 
 ## 解决方案
 
-在 GitHub Codespaces 中打开 [solution notebook](../../solution.ipynb?WT.mc_id=academic-105485-koreyst) 并按照 Jupyter Notebook 中的说明进行操作。
+在 GitHub Codespaces 中打开 [solution notebook](../../python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) 并按照 Jupyter Notebook 中的说明进行操作。
 
 当您运行 notebook 时，系统将提示您输入查询。 输入框将如下所示：
 
