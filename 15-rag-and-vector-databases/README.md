@@ -1,6 +1,6 @@
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-![chapter image](./images/)
+<!-- ![chapter image](./images/) -->
 
 In the search applications lesson, we learnt briefly how you can integrate your own data into Large Language Models (LLMs). In this lesson, we will delve further into the concepts of grounding your data in your LLM application, the mechanics of the process and the methods for storing data, including both embeddings and text.
 
@@ -44,7 +44,7 @@ An LLM powered chatbot processes user prompts to generate responses. It is desig
 
 ### How RAGs (Retrieval Augmented Generation) work
 
-![drawing showing how RAGs work](images/how-rag-works.png)
+![drawing showing how RAGs work](images/how-rag-works.png?WT.mc_id=academic-105485-koreyst)
 
 Suppose you want to deploy a chatbot that creates quizzes from your notes, you will require a connection to the knowledge base. This is where RAG comes to the rescue. RAGs operate as follows:
 
@@ -56,11 +56,11 @@ Suppose you want to deploy a chatbot that creates quizzes from your notes, you w
 
 - **Augmented Generation:** the LLM enhances its response based on the data retrieved. It allows the response generated to be not only based on pre-trained data but also relevant information from the added context. The retrieved data is used to augment the LLM's responses. The LLM then returns an answer to the user's question.
 
-![drawing showing how RAGs architecture](images/encoder-decode.png)
+![drawing showing how RAGs architecture](images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
 
 The architecture for RAGs is implemented using transformers consisting of two parts: an encoder and a decoder. For example, when a user asks a question, the input text 'encoded' into vectors capturing the meaning of words and the vectors are 'decoded' into our document index and generates new text based on the user query. The LLM uses both an encoder-decoder model to generate the output.
 
-Two approaches when implementing RAG according to the proposed paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf) are:
+Two approaches when implementing RAG according to the proposed paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) are:
 
 - ***RAG-Sequence*** using retrieved documents to predict the best possible answer to a user query
 
@@ -119,7 +119,7 @@ def split_text(text, max_length, min_length):
 Once chunked, we can then embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision and many more. Selecting a model to use will depend on the languages you're using, the type of content encoded (text/images/audio), the size of input it can encode and length of the embedding output. 
 
 An example of embedded text using OpenAI's `text-embedding-ada-002` model is:
-![an embedding of the word cat](images/cat.png)
+![an embedding of the word cat](images/cat.png?WT.mc_id=academic-105485-koreyst)
 
 ## Retrieval and Vector Search
 
@@ -264,6 +264,6 @@ Congratulations for completing the lesson 👏.
 
 ## Learning does not stop here, continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](<https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst>) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](<https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 18 where we will look at how xxx](../xxxx?WT.mc_id=academic-105485-koreyst)!
+<!-- Head over to Lesson 18 where we will look at how xxx](../xxxx?WT.mc_id=academic-105485-koreyst)! -->

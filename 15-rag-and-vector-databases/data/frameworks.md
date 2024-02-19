@@ -5,19 +5,19 @@ As we have learned already, to be able to train neural networks efficiently we n
 * To operate on tensors, eg. to multiply, add, and compute some functions such as sigmoid or softmax
 * To compute gradients of all expressions, in order to perform gradient descent optimization
 
-## [Pre-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/105)
 
-While the `numpy` library can do the first part, we need some mechanism to compute gradients. In [our framework](../04-OwnFramework/OwnFramework.ipynb) that we have developed in the previous section we had to manually program all derivative functions inside the `backward` method, which does backpropagation. Ideally, a framework should give us the opportunity to compute gradients of *any expression* that we can define.
 
-Another important thing is to be able to perform computations on GPU, or any other specialized compute units, such as [TPU](https://en.wikipedia.org/wiki/Tensor_Processing_Unit). Deep neural network training requires *a lot* of computations, and to be able to parallelize those computations on GPUs is very important.
+While the `numpy` library can do the first part, we need some mechanism to compute gradients. In our framework that we have developed in the previous section we had to manually program all derivative functions inside the `backward` method, which does backpropagation. Ideally, a framework should give us the opportunity to compute gradients of *any expression* that we can define.
+
+Another important thing is to be able to perform computations on GPU, or any other specialized compute units, such as TPU. Deep neural network training requires *a lot* of computations, and to be able to parallelize those computations on GPUs is very important.
 
 > ✅ The term 'parallelize' means to distribute the computations over multiple devices.
 
-Currently, the two most popular neural frameworks are: [TensorFlow](http://TensorFlow.org) and [PyTorch](https://pytorch.org/). Both provide a low-level API to operate with tensors on both CPU and GPU. On top of the low-level API, there is also higher-level API, called [Keras](https://keras.io/) and [PyTorch Lightning](https://pytorchlightning.ai/) correspondingly.
+Currently, the two most popular neural frameworks are: TensorFlow and PyTorch. Both provide a low-level API to operate with tensors on both CPU and GPU. On top of the low-level API, there is also higher-level API, called Keras and PyTorch Lightning correspondingly.
 
-Low-Level API | [TensorFlow](http://TensorFlow.org) | [PyTorch](https://pytorch.org/)
+Low-Level API | TensorFlow| PyTorch
 --------------|-------------------------------------|--------------------------------
-High-level API| [Keras](https://keras.io/) | [PyTorch Lightning](https://pytorchlightning.ai/)
+High-level API| Keras| Pytorch
 
 **Low-level APIs** in both frameworks allow you to build so-called **computational graphs**. This graph defines how to compute the output (usually the loss function) with given input parameters, and can be pushed for computation on GPU, if it is available. There are functions to differentiate this computational graph and compute gradients, which can then be used for optimizing model parameters.
 
@@ -37,9 +37,9 @@ Where possible, we will use High-Level APIs for simplicity. However, we believe 
 
 Continue your learning in the following notebooks:
 
-Low-Level API | [TensorFlow+Keras Notebook](IntroKerasTF.ipynb) | [PyTorch](IntroPyTorch.ipynb)
+Low-Level API | TensorFlow+Keras Notebook | PyTorch
 --------------|-------------------------------------|--------------------------------
-High-level API| [Keras](IntroKeras.ipynb) | *PyTorch Lightning*
+High-level API| Keras | *PyTorch Lightning*
 
 After mastering the frameworks, let's recap the notion of overfitting.
 
@@ -49,7 +49,7 @@ Overfitting is an extremely important concept in machine learning, and it is ver
 
 Consider the following problem of approximating 5 dots (represented by `x` on the graphs below):
 
-![linear](../images/overfit1.jpg) | ![overfit](../images/overfit2.jpg)
+!linear | overfit
 -------------------------|--------------------------
 **Linear model, 2 parameters** | **Non-linear model, 7 parameters**
 Training error = 5.3 | Training error = 0
@@ -70,7 +70,7 @@ It is very important to strike a correct balance between the richness of the mod
 
 As you can see from the graph above, overfitting can be detected by a very low training error, and a high validation error. Normally during training we will see both training and validation errors starting to decrease, and then at some point validation error might stop decreasing and start rising. This will be a sign of overfitting, and the indicator that we should probably stop training at this point (or at least make a snapshot of the model).
 
-![overfitting](../images/Overfitting.png)
+overfitting
 
 ## How to prevent overfitting
 
@@ -78,11 +78,11 @@ If you can see that overfitting occurs, you can do one of the following:
 
  * Increase the amount of training data
  * Decrease the complexity of the model
- * Use some [regularization technique](../../4-ComputerVision/08-TransferLearning/TrainingTricks.md), such as [Dropout](../../4-ComputerVision/08-TransferLearning/TrainingTricks.md#Dropout), which we will consider later.
+ * Use some regularization technique, such as Dropout, which we will consider later.
 
 ## Overfitting and Bias-Variance Tradeoff
 
-Overfitting is actually a case of a more generic problem in statistics called [Bias-Variance Tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff). If we consider the possible sources of error in our model, we can see two types of errors:
+Overfitting is actually a case of a more generic problem in statistics called Bias-Variance Tradeoff. If we consider the possible sources of error in our model, we can see two types of errors:
 
 * **Bias errors** are caused by our algorithm not being able to capture the relationship between training data correctly. It can result from the fact that our model is not powerful enough (**underfitting**).
 * **Variance errors**, which are caused by the model approximating noise in the input data instead of meaningful relationship (**overfitting**).
@@ -97,8 +97,6 @@ In this lesson, you learned about the differences between the various APIs for t
 
 In the accompanying notebooks, you will find 'tasks' at the bottom; work through the notebooks and complete the tasks.
 
-## [Post-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/205)
-
 ## Review & Self Study
 
 Do some research on the following topics:
@@ -112,10 +110,6 @@ Ask yourself the following questions:
 - What is the difference between TensorFlow and PyTorch?
 - What is the difference between overfitting and underfitting?
 
-## [Assignment](lab/README.md)
+## Assignment
 
 In this lab, you are asked to solve two classification problems using single- and multi-layered fully-connected networks using PyTorch or TensorFlow.
-
-* [Instructions](lab/README.md)
-* [Notebook](lab/LabFrameworks.ipynb)
-

@@ -10,8 +10,6 @@ In this section we will extend this model into a more flexible framework, allowi
 
 We will also develop our own modular framework in Python that will allow us to construct different neural network architectures.
 
-## [Pre-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/104)
-
 ## Formalization of Machine Learning
 
 Let's start with formalizing the Machine Learning problem. Suppose we have a training dataset **X** with labels **Y**, and we need to build a model *f* that will make most accurate predictions. The quality of predictions is measured by **Loss function** &lagran;. The following loss functions are often used:
@@ -56,7 +54,7 @@ The gradient descent algorithm would remain the same, but it would be more diffi
 
 Note that the left-most part of all those expressions is the same, and thus we can effectively calculate derivatives starting from the loss function and going "backwards" through the computational graph. Thus the method of training a multi-layered perceptron is called **backpropagation**, or 'backprop'.
 
-<img alt="compute graph" src="images/ComputeGraphGrad.png"/>
+
 
 > TODO: image citation
 
@@ -70,17 +68,17 @@ In this lesson, we have built our own neural network library, and we have used i
 
 In the accompanying notebook, you will implement your own framework for building and training multi-layered perceptrons. You will be able to see in detail how modern neural networks operate.
 
-Proceed to the [OwnFramework](OwnFramework.ipynb) notebook and work through it.
+Proceed to the OwnFramework notebook and work through it.
 
-## [Post-lecture quiz](https://red-field-0a6ddfd03.1.azurestaticapps.net/quiz/204)
+
 
 ## Review & Self Study
 
-Backpropagation is a common algorithm used in AI and ML, worth studying [in more detail](https://wikipedia.org/wiki/Backpropagation)
+Backpropagation is a common algorithm used in AI and ML, worth studying in more detail
 
-## [Assignment](lab/README.md)
+## Assignment
 
 In this lab, you are asked to use the framework you constructed in this lesson to solve MNIST handwritten digit classification.
 
-* [Instructions](lab/README.md)
-* [Notebook](lab/MyFW_MNIST.ipynb)
+* Instructions
+* Notebook
