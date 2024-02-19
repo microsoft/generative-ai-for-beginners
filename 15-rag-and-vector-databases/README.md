@@ -264,6 +264,4 @@ Congratulations for completing the lesson 👏.
 
 ## Learning does not stop here, continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](<https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
-
-<!-- Head over to Lesson 18 where we will look at how xxx](../xxxx?WT.mc_id=academic-105485-koreyst)! -->
+After completing this lesson, check out our [Generative AI Learning collection](<https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI 2knowledge!
