@@ -36,7 +36,7 @@ We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic
 Don't forget to star  [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
 
 ## 🧠 Ready to Deploy?  
-If you are looking for more advanced code samples, check out our collection of Generative AI Code Samples in both **Python** and **TypeScript**. 
+If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code) in both **Python** and **TypeScript**. 
 
 ## 🗣️ Meet Other Learners, Get Support 
 
