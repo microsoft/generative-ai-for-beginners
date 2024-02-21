@@ -1,10 +1,10 @@
 # テキスト生成アプリケーションの構築
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-yoterada)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcdt?WT.mc_id=academic-105485-yoterada)
 
-> *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
+> _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 
-これまでのレッスンを通じて、プロンプトの基本的な概念や、「プロンプト・エンジニアリング」と呼ぶテクニックについて学んできました。ChatGPT、Office 365、Microsoft Power Platform　など、プロンプトで操作可能な多くのツールは、皆様が何かを成し遂げるためのサポートを行います。
+これまでのレッスンを通じて、プロンプトの基本的な概念や、「プロンプト・エンジニアリング」と呼ぶテクニックについて学んできました。ChatGPT、Office 365、Microsoft Power Platform 　など、プロンプトで操作可能な多くのツールは、皆様が何かを成し遂げるためのサポートを行います。
 
 皆様のアプリケーションに、このような機能を追加するためには、プロンプトや Completion といった概念を理解し、使用するライブラリを選択する必要があります。この章では、それらを具体的に学んでいきます。
 
@@ -54,21 +54,21 @@
 
 ## どこから始めればよいのでしょうか？
 
-まず、LLM と統合する方法を理解する必要があります。これには通常、以下の2つのアプローチが含まれます：
+まず、LLM と統合する方法を理解する必要があります。これには通常、以下の 2 つのアプローチが含まれます：
 
 - API の使用：プロンプトを含む HTTP (RESTful) リクエストを作成し、生成されたテキストを取得
 - ライブラリの使用：上記の API 呼び出しより簡単に利用可能で、API 呼び出しを隠蔽したライブラリを使用
 
 ## ライブラリ/SDK
 
-LLMを操作するために、いくつかの有名なライブラリがあります：
+LLM を操作するために、いくつかの有名なライブラリがあります：
 
 - **OpenAI** このライブラリを使用すると、モデルに対する接続とプロンプトの送信が簡単になります
 
 また、より高レベルで動作するライブラリもあります：
 
 - **Langchain**：Langchain はよく知られており、Python をサポートしています
-- **Semantic Kernel**：Semantic Kernelは、C#、Python、Java をサポートするMicrosoft 純正のライブラリです
+- **Semantic Kernel**：Semantic Kernel は、C#、Python、Java をサポートする Microsoft 純正のライブラリです
 
 ## OpenAI を使用した最初のアプリ
 
@@ -84,16 +84,16 @@ pip install openai
 
 ### リソースの作成
 
-下記の手順に従い操作を行なってください：  
+下記の手順に従い操作を行なってください：
 
-- Azureのアカウントを作成します。[https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-yoterada)
+- Azure のアカウントを作成します。[https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-yoterada)
 - Azure Open AI へのアクセス権限を取得します。[https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-yoterada) からアクセス申請を提出します
 
-    > [!NOTE]
-    > 本記事の執筆時には、Azure Open AI へのアクセスを申請する必要があります。
+  > [!NOTE]
+  > 本記事の執筆時には、Azure Open AI へのアクセスを申請する必要があります。
 
-- Python をインストールします。 <https://www.python.org/>  
-- Azure OpenAI Serviceリソースを作成します。[リソースの作成方法](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-yoterada)については、こちらのガイドをご参照ください。
+- Python をインストールします。 <https://www.python.org/>
+- Azure OpenAI Service リソースを作成します。[リソースの作成方法](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-yoterada)については、こちらのガイドをご参照ください。
 
 ### API キーとエンドポイントを取得
 
@@ -107,7 +107,7 @@ pip install openai
 > API キーはコード中に直接書き込まずに管理すべきです。下記のように環境変数を使用して設定できます。
 >
 > - 環境変数 `OPENAI_API_KEY` に API キーを設定します  
->  `export OPENAI_API_KEY='sk-...'`
+>   `export OPENAI_API_KEY='sk-...'`
 
 ### Azure の設定
 
@@ -120,15 +120,14 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-上記は、それぞれ下記の設定を行っています：  
+上記は、それぞれ下記の設定を行っています：
 
-- `api_type`を`azure`に設定します。これにより、ライブラリは OpenAI ではなく Azure Open AI に接続します。  
-- `api_key`は、Azure Portal で取得した API キーを設定します。  
-- `api_version`は、使用する API のバージョンです。執筆時点での最新バージョンは`2023-05-15`です。  
+- `api_type`を`azure`に設定します。これにより、ライブラリは OpenAI ではなく Azure Open AI に接続します。
+- `api_key`は、Azure Portal で取得した API キーを設定します。
+- `api_version`は、使用する API のバージョンです。執筆時点での最新バージョンは`2023-05-15`です。
 - `api_base` は API のエンドポイントです。これは、Azure Portal の API キーの下側に記載されています。
 
-> [!NOTE]
-> `os.getenv` は環境変数を読み取る関数です。`OPENAI_API_KEY` や `API_BASE` などの環境変数を読み取るために使用します。これらの環境変数は、ターミナルで設定するか、もしくは `dotenv` のようなライブラリを使用して設定します。
+> [!NOTE] > `os.getenv` は環境変数を読み取る関数です。`OPENAI_API_KEY` や `API_BASE` などの環境変数を読み取るために使用します。これらの環境変数は、ターミナルで設定するか、もしくは `dotenv` のようなライブラリを使用して設定します。
 
 > [!NOTE]
 > 訳者追記  
@@ -183,14 +182,14 @@ pip install openai
 > [!NOTE]
 > Azure OpenAI キーは、[https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-yoterada) から `OpenAI` を検索し、`OpenAI Resource` を選択してください。その後 `Keys and Endpoint` を選択し、`Key 1` の値をコピーてください。
 
-1. *app.py* ファイルを作成し、下記のコードを記述してください：
+1. _app.py_ ファイルを作成し、下記のコードを記述してください：
 
 ```python
 import openai
 
 openai.api_key = "<OpenAI のキーまたは Azure OpenAI のキーを入力>"
 
-openai.api_type = 'azure' 
+openai.api_type = 'azure'
 openai.api_version = '2023-05-15'
 openai.api_base = "<Azure Portal でキーと同一の場所に記載されている接続用エンドポイント>"
 deployment_name = "<デプロイ名>"
@@ -200,7 +199,7 @@ prompt = "次の文を完成させてください: むかしむかし、ある�
 
 # Completion を作成
 completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
-    
+
 # レスポンスを出力
 print(completion.choices[0].text)
 ```
@@ -237,7 +236,7 @@ print(completion.choices[0].text)
 上記のプロンプトを使用すると、以下のようなレスポンスが得られるかもしれません：
 
 ```output
-1. ローストチキンと野菜： 
+1. ローストチキンと野菜：
 材料：
 - チキンのもも肉 4 枚
 - じゃがいも 2 個、角切り
@@ -380,7 +379,7 @@ print(completion.choices[0].text)
 
 シナリオを一通り試したところで、そのシナリオに合わせたコードを実装してみましょう。下記の手順に従い実装してください。
 
-1. 既存の *app.py* ファイルを利用します。
+1. 既存の _app.py_ ファイルを利用します。
 2. `prompt`という変数を探し、下記のようにコードを修正してください。
 
 ```python
@@ -401,7 +400,7 @@ prompt = f"鶏肉、じゃがいも、にんじんを使った料理のレシピ
 -鶏肉、じゃがいも、人参のカレー: サラダ油大さじ1, 大きめの玉ねぎ1個（みじん切り）, ニンニク2片（みじん切り）, 人参1本（皮をむいてみじん切り）, じゃがいも1個（皮をむいてみじん切り）, コリアンダー（パウダー）小さじ1, クミン（パウダー）小さじ1, ターメリック（パウダー）小さじ1/2, ジンジャー（パウダー）小さじ1/2, ケイエンペッパー小さじ1/4, 鶏ガラスープ2カップ, ドライホワイトワイン1/2カップ, ヒヨコ豆1缶（15オンス、水切り）, レーズン1/2カップ, シラントロ（みじん切り）1/2カップ
 ```
 
-> 注意: LLM　は非決定的(非確実)なので、プログラムを実行するたびに上記とは異なる結果が得られるかもしれません。
+> 注意: LLM 　は非決定的(非確実)なので、プログラムを実行するたびに上記とは異なる結果が得られるかもしれません。
 
 さてそれでは、どうすれば改善できるのかを見てみましょう。改善するために、コードに柔軟性を持たせ、材料やレシピの数を変更できるようにします。
 
@@ -435,7 +434,7 @@ prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教�
 
 - **材料のフィルタリング**。嫌いな食材やアレルギーのある食材をフィルタリングできるようにしたいと考えています。これを実現するために、既存のプロンプトを編集し、下記のようにフィルター条件をプロンプトの最後に追加してください。
 
-```python  
+```python
 filter = input("フィルター（例：ベジタリアン、ビーガン、グルテンフリー）: ")
 
 prompt = f"{ingredients} を使った料理のレシピを {no_recipes} つ教えてください。レシピごとに、使用するすべての食材をリストしてください。ただし、{filter}は除外してください。"
@@ -529,7 +528,7 @@ print(completion.choices[0].text)
 new_prompt = f"{old_prompt_result} {prompt}"
 ```
 
-1. 新しいリクエストを作成しますが、最初のプロンプトで要求したトークン数も考慮に入れて、今回は `max_tokens` を1200とします。
+1. 新しいリクエストを作成しますが、最初のプロンプトで要求したトークン数も考慮に入れて、今回は `max_tokens` を 1200 とします。
 
 ```python
 completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
@@ -537,7 +536,7 @@ completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt,
 
 このコードを実行すると、下記のような結果が得られます：
 
-```output  
+```output
 レシピの数（例えば、5）: 2
 食材のリスト（例えば、チキン、ポテト、キャロット）: リンゴ、小麦粉
 フィルター（例えば、ベジタリアン、ビーガン、グルテンフリー）: 砂糖
@@ -565,7 +564,7 @@ completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt,
 OPENAI_API_KEY=sk-...
 ```
 
-> ご注意：Azureを使用する場合は、下記の環境変数を設定する必要があります：
+> ご注意：Azure を使用する場合は、下記の環境変数を設定する必要があります：
 
 ```bash
 OPENAI_API_TYPE=azure
@@ -593,13 +592,13 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_to
 
 - **温度 (Temperature)** これまで触れていなかった温度ですが、プログラムの実行結果に大きな影響を与えます。温度が高いほど（値が 1 に近いほど）、出力はランダムになります。逆に、温度値が低いほど(値が 0 に近いほど)、出力結果は予測可能になります。ご自身のアプリで出力にバリエーションが必要かどうかを考えてください。
 
-温度を変更するには、`temperature` パラメータを使用します。例えば、温度を0.5に設定したい場合は、以下のようにします：
+温度を変更するには、`temperature` パラメータを使用します。例えば、温度を 0.5 に設定したい場合は、以下のようにします：
 
 ```python
 completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
 ```
 
-> 注意：1.0に近づくほど、出力のバリエーションが大きくなります。
+> 注意：1.0 に近づくほど、出力のバリエーションが大きくなります。
 
 ## 課題
 
@@ -618,13 +617,13 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt, temper
 下記は、あくまでも参考のプロンプトですので、使い方を確認し、お好みに合わせて微調整してください。
 
 ```text
-- "あなたは Python 言語のエキスパートです  
-   
-下記の形式で Python の初心者用レッスンを提案してください：  
-   
-形式：  
-    - 概念：  
-    - レッスンの簡単な説明：  
+- "あなたは Python 言語のエキスパートです
+
+下記の形式で Python の初心者用レッスンを提案してください：
+
+形式：
+    - 概念：
+    - レッスンの簡単な説明：
     - 解答付きのコード演習"
 ```
 
