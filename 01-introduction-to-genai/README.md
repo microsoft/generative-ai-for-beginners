@@ -1,6 +1,6 @@
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/vf_mZrn8ibc?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
 
 *(Click the image above to view video of this lesson)*
 

@@ -1,16 +1,16 @@
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](./images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](./images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=57a31949-67c5-4020-8c85-91e4995589f3?WT.mc_id=academic-105485-koreyst)
 
-> *(Click the image above to view video of this lesson)*
+> _(Click the image above to view video of this lesson)_
 
 Now that we've seen how we can build text-generation apps, let's look into chat applications.
 
-Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges. 
+Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges.
 
 Some questions we need to be answered are:
 
-- **Building the app**.  How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?  
+- **Building the app**. How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?
 - **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
 As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
@@ -60,29 +60,29 @@ When building a chat application, a great first step is to assess what is alread
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
 - **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](./notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
+Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) or [notebook for Azure OpenAI Services](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) for this lesson.
 
 ```python
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+API_KEY = os.getenv("OPENAI_API_KEY","")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
+client = OpenAI(
+    api_key=API_KEY
+    )
+
+chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive the following error if you didn't set the key.
-
-```output
-AuthenticationError: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
-```
+The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive an error if you didn't set the key.
 
 ## User Experience (UX)
 
 General UX principles apply to chat applications, but here are some additional considerations that become particularly important due to the machine learning components involved.
 
 - **Mechanism for addressing ambiguity**: Generative AI models occasionally generate ambiguous answers. A feature that allows users to ask for clarification can be helpful should they come across this problem.
-- **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.  
+- **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.
 - **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit of finding specific answers, creating a more efficient and satisfying interaction.
 
 One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
@@ -104,7 +104,7 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 
 ### Accessibility
 
- Whether a user has visual, auditory, motor, or cognitive impairments, a well-designed chat application should be usable by all. The following list breaks down specific features aimed at enhancing accessibility for various user impairments.
+Whether a user has visual, auditory, motor, or cognitive impairments, a well-designed chat application should be usable by all. The following list breaks down specific features aimed at enhancing accessibility for various user impairments.
 
 - **Features for Visual Impairment**: High contrast themes and resizable text, screen reader compatibility.
 - **Features for Auditory Impairment**: Text-to-speech and speech-to-text functions, visual cues for audio notifications.
@@ -128,7 +128,7 @@ Fine-tuning is often considered when a pre-trained model falls short in a specia
 
 For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source.
 
-### Scenario: a medical application**
+### Scenario: a medical application
 
 Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings.
 
@@ -171,14 +171,14 @@ Microsoft's approach to Responsible AI has identified six principles that should
 | Privacy and Security   | AI systems should be secure and respect privacy.      | Implement strong encryption and data protection measures.              | To safeguard sensitive user data and comply with privacy laws.                         |
 | Inclusiveness          | AI systems should empower everyone and engage people. | Design UI/UX that is accessible and easy-to-use for diverse audiences. | Ensures a wider range of people can use the application effectively.                   |
 | Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
-| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.           |
+| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.               |
 
 ## Assignment
- 
-See [assignment](./notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more.
+
+See [assignment](./python?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
 
 ## Great Work! Continue the Journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 8 to see how you can start  [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 8 to see how you can start [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!

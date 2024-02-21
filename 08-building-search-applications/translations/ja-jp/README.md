@@ -166,7 +166,7 @@ az cognitiveservices account deployment create \
 
 ## 解決策
 
-GitHub Codespaces で[ソリューションのノートブック](../../solution.ipynb?WT.mc_id=academic-105485-yoterada)を開き、Jupyter Notebook の指示に従ってください。
+GitHub Codespaces で[ソリューションのノートブック](../../python/aoai-solution.ipynb?WT.mc_id=academic-105485-yoterada)を開き、Jupyter Notebook の指示に従ってください。
 
 ノートブックを実行すると、質問内容を入力するように求められます。入力ボックスは次のように表示されます。
 

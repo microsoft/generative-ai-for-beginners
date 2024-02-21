@@ -4,7 +4,9 @@ We have instrumented this repository with a _dev container_ that comes with a Py
 
 ## 1. Create `.env` file
 
-The default notebook is set up for use with an [Azure OpenAI service resource](https://learn.microsoft.com/azure/ai-services/openai?WT.mc_id=academic-105485-koreyst). To configure this, we need to setup local environment variables for Azure as follows:
+The default notebook (identified by the 'aoai-' suffix) is set up for use with an [Azure OpenAI service resource](https://learn.microsoft.com/azure/ai-services/openai?WT.mc_id=academic-105485-koreyst). However, you have the option to run your assignments by using non-Azure openAI endpoints (choose the 'oai-' prefixed notebooks in this case).
+
+To configure this, we need to setup local environment variables for Azure as follows:
 
 1. Look in the root folder for a `.env.copy` file. It should contain a list of name-value pairs like this:
 
@@ -23,6 +25,12 @@ The default notebook is set up for use with an [Azure OpenAI service resource](h
 
 3. (Option) If you use GitHub Codespaces, you have the option to save environment variables as _Codespaces secrets_ associated with this repository. In that case, you won't need to setup a local .env file. **However, note that this option works only if you use GitHub Codespaces.** You will still need to setup the .env file if you use Docker Desktop instead.
 
+The above steps should be executed also if you are using the non-Azure OpenAI endpoints. In that case, you will need to populate the .env file with the appropriate values for the OpenAI service.
+
+```bash
+OPENAI_API_KEY='<add your OpenAI key here>'
+```
+
 
 ## 2. Populate `.env` file
 
@@ -32,6 +40,7 @@ Let's take a quick look at the variable names to understand what they represent:
 |:---|:---|
 |AZURE_OPENAI_ENDPOINT| This is the deployed endpoint for an Azure OpenAI resource|
 |AZURE_OPENAI_KEY | This is the authorization key for using that service  |
+|OPENAI_API_KEY | This is the authorization key for using the service for non-Azure OpenAI endpoints |
 |AZURE_OPENAI_DEPLOYMENT| This is the _text generation_ model deployment endpoint |
 |AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | This is the _text embeddings_ model deployment endpoint |
 | | | 
@@ -70,3 +79,6 @@ AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
 **Don't forget to save the .env file when done**. You can now exit the file and return to the instructions for running the notebook.
+
+### 2.3 Use OpenAI Public API
+Your OpenAI API key can be found in your [OpenAI account](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). If you don't have one, you can sign up for an account and create an API key. Once you have the key, you can use it to populate the `OPENAI_API_KEY` variable in the `.env` file.

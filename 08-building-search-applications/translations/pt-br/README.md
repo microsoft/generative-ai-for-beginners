@@ -156,7 +156,7 @@ az cognitiveservices account deployment create \
 
 ## Solução
 
-Abre a [notebook de solução](../../solution.ipynb?WT.mc_id=academic-105485-koreyst) no GitHub Codespaces e siga as instruções no Jupyter Notebook.
+Abre a [notebook de solução](../../python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) no GitHub Codespaces e siga as instruções no Jupyter Notebook.
 
 Quando você executar o notebook, será solicitado a inserir uma consulta. A caixa de entrada será assim:
 

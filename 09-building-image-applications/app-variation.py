@@ -1,33 +1,41 @@
-import openai
+from openai import AzureOpenAI
 import os
 import requests
 from PIL import Image
 import dotenv
+import json
 
 # import dotenv
 dotenv.load_dotenv()
 
 # Get endpoint and key from environment variables
-openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-openai.api_key = os.environ['AZURE_OPENAI_KEY']     
+client = AzureOpenAI(
+  api_key=os.environ['AZURE_OPENAI_KEY'],  # this is also the default, it can be omitted
+  api_version = "2023-12-01-preview",
+  azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
+  )
 
-# Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
-openai.api_version = '2023-06-01-preview'
-openai.api_type = 'azure'
+model = os.environ['AZURE_OPENAI_DEPLOYMENT']
 
 image_dir = os.path.join(os.curdir, 'images')
 
 # Initialize the image path (note the filetype should be png)
 image_path = os.path.join(image_dir, 'generated-image.png')
+print(image_path)
+image = Image.open(image_path)
+image.show()
 
 # ---creating variation below---
 try:
     print("LOG creating variation")
-    response = openai.Image.create_variation(
-        image=open("generated-image.png", "rb"),
+    result = client.images.create_variation(
+        image=open(image_path, "rb"),
         n=1,
         size="1024x1024"
     )
+
+    client.images.create_variation()
+    response = json.loads(result.model_dump_json())
 
     image_path = os.path.join(image_dir, 'generated_variation.png')
 
@@ -41,5 +49,8 @@ try:
     # Display the image in the default image viewer
     image = Image.open(image_path)
     image.show()
-except openai.error.InvalidRequestError as err:
-    print(err)
+#except openai.error.InvalidRequestError as err:
+#    print(err)
+    
+finally:
+    print("completed!")
