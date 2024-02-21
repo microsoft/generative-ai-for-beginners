@@ -40,7 +40,7 @@ Don't forget to star [star (🌟) this repo](https://docs.github.com/en/get-star
 
 ## 🧠 Ready to Deploy?
 
-If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code) in both **Python** and **TypeScript**.
+If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) in both **Python** and **TypeScript**.
 
 ## 🗣️ Meet Other Learners, Get Support
 
@@ -80,7 +80,7 @@ Find spelling errors, code errors or have a suggestion? [Raise an issue](https:/
 | 12  |             [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)             |     **Learn:** How to apply UX design principles when developing Generative AI Applications     | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 13  |             [Securing Your Generative AI Applications](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)             |       **Learn:** The threats and risks to AI systems and methods to secure these systems.       | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 14  |      [The Generative AI Application Lifecycle](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)      |             **Learn:** The tools and metrics to manage the LLM Lifecycle and LLMOps             | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  |  [Retrieval Augmented Generation (RAG) and Vector Databases](<(./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)>)   | **Build:** An application using a RAG Framework to retrieve embeddings from a Vector Databases  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  |    [Retrieval Augmented Generation (RAG) and Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)     | **Build:** An application using a RAG Framework to retrieve embeddings from a Vector Databases  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  |                                                     Open Source Models and Hugging Face                                                      |          **Build:** An application using open source models available on Hugging Face           | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  |                                    [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                    |                      **Build:** An application using an AI Agent Framework                      | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 18  |                                                               Fine-Tuning LLMs                                                               |                      **Learn:** The what, why and how of fine-tuning LLMs                       | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
