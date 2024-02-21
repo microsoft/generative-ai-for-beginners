@@ -1,10 +1,10 @@
 # Projetando UX para aplicativos de IA
 
-[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/bO7h2_hOhR0?WT.mc_id=academic-105485-koreyst)
+[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=1464ef7a-d974-4a04-9ce3-1bc5b3087b4b?WT.mc_id=academic-105485-koreyst)
 
-> *(Clique na imagem acima para assistir ao vídeo desta lição)*
+> _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
-A experiência do usuário é um aspecto muito importante na criação de aplicativos. Os usuários precisam poder usar seu aplicativo de maneira eficiente para realizar tarefas. Ser eficiente é uma coisa, mas você também precisa projetar aplicativos para que possam ser usados por todos, tornando-os *acessíveis*. Este capítulo se concentrará nessa área para que você termine projetando um aplicativo que as pessoas possam e queiram usar.
+A experiência do usuário é um aspecto muito importante na criação de aplicativos. Os usuários precisam poder usar seu aplicativo de maneira eficiente para realizar tarefas. Ser eficiente é uma coisa, mas você também precisa projetar aplicativos para que possam ser usados por todos, tornando-os _acessíveis_. Este capítulo se concentrará nessa área para que você termine projetando um aplicativo que as pessoas possam e queiram usar.
 
 ## Introdução
 
@@ -12,16 +12,16 @@ A experiência do usuário é como um usuário interage e utiliza um produto ou 
 
 A lição abordará as seguintes áreas:
 
-* Introdução à Experiência do Usuário e Compreensão das Necessidades do Usuário
-* Projeto de Aplicações de IA para Confiança e Transparência
-* Projeto de Aplicações de IA para Colaboração e Feedback
+- Introdução à Experiência do Usuário e Compreensão das Necessidades do Usuário
+- Projeto de Aplicações de IA para Confiança e Transparência
+- Projeto de Aplicações de IA para Colaboração e Feedback
 
 ## Metas de Aprendizado
 
 Após esta lição, você será capaz de:
 
-* Compreender como construir aplicativos de IA que atendam às necessidades do usuário.
-* Projetar aplicativos de IA que promovam confiança e colaboração.
+- Compreender como construir aplicativos de IA que atendam às necessidades do usuário.
+- Projetar aplicativos de IA que promovam confiança e colaboração.
 
 ### Pré-requisito
 

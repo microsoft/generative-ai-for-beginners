@@ -1,8 +1,8 @@
 # Desenvolvendo Aplicativos de Geração de Texto
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcd?WT.mc_id=academic-105485-koreyst)
 
-> *(Clique na imagem acima para assistir ao vídeo desta lição)*
+> _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
 Você viu até agora neste currículo que existem conceitos básicos como prompts e até mesmo uma disciplina inteira chamada "engenharia de prompts". Muitas ferramentas com as quais você pode interagir, como ChatGPT, Office 365, Microsoft Power Platform e muito mais, suportam o uso de prompts para realizar algo.
 
@@ -107,7 +107,7 @@ Agora que você tem essas informações copiadas, vamos instruir as bibliotecas 
 > Vale a pena separar sua chave API do seu código. Você pode fazer isso usando variáveis de ambiente.
 >
 > - Defina a variável de ambiente em: `OPENAI_API_TYPE` para a chave da sua API.
-> `export OPENAI_API_KEY='sk-...'`
+>   `export OPENAI_API_KEY='sk-...'`
 
 ### Configurando o recurso do Azure no código
 
@@ -129,8 +129,7 @@ Aqui estamos definindo o seguinte:
 - `api_version`, esta é a versão da API que você deseja usar. No momento da escrita, a versão mais recente é `2023-05-15`.
 - `api_base`, este é o endpoint da API. Você pode encontrá-lo no Portal do Azure ao lado de sua chave API.
 
-> [!OBSERVAÇÃO]
-> `os.getenv` é uma função que lê variáveis de ambiente. Você pode usá-lo para ler variáveis de ambiente como `OPENAI_API_KEY` e `API_BASE`. Defina essas variáveis de ambiente em seu terminal ou usando uma biblioteca como `dotenv`.
+> [!OBSERVAÇÃO] > `os.getenv` é uma função que lê variáveis de ambiente. Você pode usá-lo para ler variáveis de ambiente como `OPENAI_API_KEY` e `API_BASE`. Defina essas variáveis de ambiente em seu terminal ou usando uma biblioteca como `dotenv`.
 
 ## Gerando texto
 
@@ -166,50 +165,50 @@ Agora que aprendemos a configurar o openai, é hora de criar o seu primeiro apli
 
 1. Crie um ambiente virtual e instale o openai:
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    pip install openai
-    ```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install openai
+   ```
 
-    > [!OBSERVAÇÃO]
-    > Se você estiver usando o Windows, digite `venv\Scripts\activate` em vez de `source venv/bin/activate`.
+   > [!OBSERVAÇÃO]
+   > Se você estiver usando o Windows, digite `venv\Scripts\activate` em vez de `source venv/bin/activate`.
 
-    > [!OBSERVAÇÃO]
-    > Localize sua chave Azure Open AI acessando [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) e pesquise por `Open AI` e selecione o `recurso Open AI` e depois selecione `Chaves e Endpoint` e copie o valor `Chave 1`.
+   > [!OBSERVAÇÃO]
+   > Localize sua chave Azure Open AI acessando [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) e pesquise por `Open AI` e selecione o `recurso Open AI` e depois selecione `Chaves e Endpoint` e copie o valor `Chave 1`.
 
-1. Crie um arquivo *app.py* e dê a ele o seguinte código:
+1. Crie um arquivo _app.py_ e dê a ele o seguinte código:
 
-    ```python
-    import openai
+   ```python
+   import openai
 
-    openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
+   openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
 
-    openai.api_type = 'azure' 
-    openai.api_version = '2023-05-15'
-    openai.api_base = "<endpoint found in Azure Portal where your API key is>"
-    deployment_name = "<deployment name>"
+   openai.api_type = 'azure'
+   openai.api_version = '2023-05-15'
+   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   deployment_name = "<deployment name>"
 
-    # add your completion code
-    prompt = "Complete the following: Once upon a time there was a"
+   # add your completion code
+   prompt = "Complete the following: Once upon a time there was a"
 
-    # make completion
-    completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
-    
-    # print response
-    print(completion.choices[0].text)
-    ```
+   # make completion
+   completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
 
-    > [!OBSERVAÇÃO]
-    > Se você estiver usando o Azure Open AI, precisará definir o `api_type` como `azure` e definir o `api_key` como sua chave Azure Open AI.
+   # print response
+   print(completion.choices[0].text)
+   ```
 
-    Você deve ver uma saída como a seguinte:
+   > [!OBSERVAÇÃO]
+   > Se você estiver usando o Azure Open AI, precisará definir o `api_type` como `azure` e definir o `api_key` como sua chave Azure Open AI.
 
-    ```output
-     very unhappy _____.
+   Você deve ver uma saída como a seguinte:
 
-    Once upon a time there was a very unhappy mermaid.
-    ```
+   ```output
+    very unhappy _____.
+
+   Once upon a time there was a very unhappy mermaid.
+   ```
 
 ## Diferentes tipos de prompts, para diferentes coisas
 
@@ -351,7 +350,7 @@ Agora você tem um novo resultado, a saber:
      - 1 colher de chá de tomilho seco
      - 4 xícaras de caldo de galinha
      - Sal e pimenta a gosto
-    
+
 5. Hash de Frango e Batata:
    - Ingredientes:
      - 2 colheres de sopa de azeite de oliva
@@ -376,54 +375,53 @@ Aqui estão as cinco receitas, sem mencionar alho, e também uma lista de compra
 
 Agora que temos um cenário, vamos escrever o código para corresponder ao cenário demonstrado. Para fazer isso, siga estas etapas:
 
-
-1. Use o arquivo *app.py* existente como ponto de partida
+1. Use o arquivo _app.py_ existente como ponto de partida
 1. Localize a variável `prompt` e altere seu código para o seguinte:
 
-    ```python
-    prompt = "Me forneça 5 receitas de um prato com os seguintes ingredientes: frango, batata e cenoura. Por receita, liste todos os ingredientes usados"
-    ```
+   ```python
+   prompt = "Me forneça 5 receitas de um prato com os seguintes ingredientes: frango, batata e cenoura. Por receita, liste todos os ingredientes usados"
+   ```
 
-    Se você executar o código agora, deverá ver uma saída semelhante a:
+   Se você executar o código agora, deverá ver uma saída semelhante a:
 
-    ```output
-    - Ensopado de Frango com Batata e Cenoura: 3 colheres de sopa de azeite, 1 cebola picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 raminho de tomilho, 1/2 colher de chá de sal , 1/4 colher de chá de pimenta preta, 1 1/2 xícara de caldo de galinha, 1/2 xícara de vinho branco seco, 2 colheres de sopa de salsa fresca picada, 2 colheres de sopa de manteiga sem sal, 1 1/2 libra de coxas de frango desossadas e sem pele, cortadas em 1- pedaços de polegada
+   ```output
+   - Ensopado de Frango com Batata e Cenoura: 3 colheres de sopa de azeite, 1 cebola picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 raminho de tomilho, 1/2 colher de chá de sal , 1/4 colher de chá de pimenta preta, 1 1/2 xícara de caldo de galinha, 1/2 xícara de vinho branco seco, 2 colheres de sopa de salsa fresca picada, 2 colheres de sopa de manteiga sem sal, 1 1/2 libra de coxas de frango desossadas e sem pele, cortadas em 1- pedaços de polegada
 
-    - Frango Assado no Forno com Batata e Cenoura: 3 colheres de sopa de azeite extra-virgem, 1 colher de sopa de mostarda Dijon, 1 colher de sopa de alecrim fresco picado, 1 colher de sopa de tomilho fresco picado, 4 dentes de alho picados, 1 1/2 libra de batatas vermelhas pequenas, esquartejado, 1 1/2 libra de cenoura, cortada em quartos longitudinalmente, 1/2 colher de chá de sal, 1/4 colher de chá de pimenta preta, 1 (4 libras) de frango inteiro
+   - Frango Assado no Forno com Batata e Cenoura: 3 colheres de sopa de azeite extra-virgem, 1 colher de sopa de mostarda Dijon, 1 colher de sopa de alecrim fresco picado, 1 colher de sopa de tomilho fresco picado, 4 dentes de alho picados, 1 1/2 libra de batatas vermelhas pequenas, esquartejado, 1 1/2 libra de cenoura, cortada em quartos longitudinalmente, 1/2 colher de chá de sal, 1/4 colher de chá de pimenta preta, 1 (4 libras) de frango inteiro
 
-    - Caçarola de frango, batata e cenoura: spray de cozinha, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e ralada, 1 batata descascada e ralada, 1/2 colher de chá de folhas secas de tomilho, 1/4 colher de chá sal, 1/4 colher de chá de pimenta preta, 2 xícaras de caldo de galinha desnatado e com baixo teor de sódio, 1 xícara de ervilhas congeladas, 1/4 xícara de farinha de trigo, 1 xícara de leite com baixo teor de gordura a 2%, 1/4 xícara de parmesão ralado queijo
-    
-    - Jantar de frango e batata em uma panela: 2 colheres de sopa de azeite, 1 quilo de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm, 1 cebola grande picada, 3 dentes de alho picados, 1 cenoura descascada e picada, 1 batata, descascado e picado, 1 folha de louro, 1 raminho de tomilho, 1/2 colher de chá de sal, 1/4 colher de chá de pimenta preta, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco
-    
-    - Caril de Frango, Batata e Cenoura: 1 colher de sopa de óleo vegetal, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 colher de chá de coentro moído, 1 colher de chá de cominho moído, 1/2 colher de chá de açafrão em pó, 1/2 colher de chá de gengibre em pó, 1/4 colher de chá de pimenta caiena, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 1 lata (15 onças) de grão de bico, escorrido e enxaguado, 1/2 xícara de passas, 1/2 xícara de coentro fresco picado
-    ```
+   - Caçarola de frango, batata e cenoura: spray de cozinha, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e ralada, 1 batata descascada e ralada, 1/2 colher de chá de folhas secas de tomilho, 1/4 colher de chá sal, 1/4 colher de chá de pimenta preta, 2 xícaras de caldo de galinha desnatado e com baixo teor de sódio, 1 xícara de ervilhas congeladas, 1/4 xícara de farinha de trigo, 1 xícara de leite com baixo teor de gordura a 2%, 1/4 xícara de parmesão ralado queijo
 
-    > [!OBSERVAÇÃO]
-    > seu LLM é não determinístico, então você pode obter resultados diferentes sempre que executar o programa.
+   - Jantar de frango e batata em uma panela: 2 colheres de sopa de azeite, 1 quilo de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm, 1 cebola grande picada, 3 dentes de alho picados, 1 cenoura descascada e picada, 1 batata, descascado e picado, 1 folha de louro, 1 raminho de tomilho, 1/2 colher de chá de sal, 1/4 colher de chá de pimenta preta, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco
 
-    Ótimo! Vamos ver como podemos melhorar as coisas. Para melhorar as coisas, queremos ter certeza de que o código é flexível, para que os ingredientes e o número de receitas possam ser melhorados e alterados.
+   - Caril de Frango, Batata e Cenoura: 1 colher de sopa de óleo vegetal, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 colher de chá de coentro moído, 1 colher de chá de cominho moído, 1/2 colher de chá de açafrão em pó, 1/2 colher de chá de gengibre em pó, 1/4 colher de chá de pimenta caiena, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 1 lata (15 onças) de grão de bico, escorrido e enxaguado, 1/2 xícara de passas, 1/2 xícara de coentro fresco picado
+   ```
+
+   > [!OBSERVAÇÃO]
+   > seu LLM é não determinístico, então você pode obter resultados diferentes sempre que executar o programa.
+
+   Ótimo! Vamos ver como podemos melhorar as coisas. Para melhorar as coisas, queremos ter certeza de que o código é flexível, para que os ingredientes e o número de receitas possam ser melhorados e alterados.
 
 1. Vamos alterar o código da seguinte maneira:
 
-    ```python
-    no_recipes = input("No of recipes (for example, 5: ")
+   ```python
+   no_recipes = input("No of recipes (for example, 5: ")
 
-    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
-    
-    # interpolate the number of recipes into the prompt an ingredients
-    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
-    ```
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
 
-    Execute o código e teste, e vejamos o resultado:
+   # interpolate the number of recipes into the prompt an ingredients
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
 
-    ```output
-    No of recipes (for example, 5: 3
-    List of ingredients (for example, chicken, potatoes, and carrots: milk,strawberries
+   Execute o código e teste, e vejamos o resultado:
 
-    -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
-    -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream        
-    -Strawberry milk: milk, strawberries, sugar, vanilla extract
-    ```
+   ```output
+   No of recipes (for example, 5: 3
+   List of ingredients (for example, chicken, potatoes, and carrots: milk,strawberries
+
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
 
 ### Melhore adicionando filtro e lista de compras
 
@@ -433,128 +431,128 @@ Para melhorar ainda mais, queremos adicionar o seguinte:
 
 - **Filtrar ingredientes**: Queremos ser capazes de filtrar ingredientes que não gostamos ou somos alérgicos. Para realizar essa alteração, podemos editar nosso prompt existente e adicionar uma condição de filtro ao final, assim:
 
-    ```python
-    filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
 
-    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
-    ```
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
 
-    Acima adicionamos `{filter}` ao final do prompt e também capturamos o valor do filtro do usuário.
+  Acima adicionamos `{filter}` ao final do prompt e também capturamos o valor do filtro do usuário.
 
-    Um exemplo de entrada da execução do programa pode ser assim:
+  Um exemplo de entrada da execução do programa pode ser assim:
 
-    ```output
-    No of recipes (for example, 5: 3
-    List of ingredients (for example, chicken, potatoes, and carrots: onion,milk
-    Filter (for example, vegetarian, vegan, or gluten-free: no milk
+  ```output
+  No of recipes (for example, 5: 3
+  List of ingredients (for example, chicken, potatoes, and carrots: onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free: no milk
 
-    1. French Onion Soup
+  1. French Onion Soup
 
-    Ingredients:
-    
-    -1 large onion, sliced
-    -3 cups beef broth
-    -1 cup milk
-    -6 slices french bread
-    -1/4 cup shredded Parmesan cheese
-    -1 tablespoon butter
-    -1 teaspoon dried thyme
-    -1/4 teaspoon salt
-    -1/4 teaspoon black pepper
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. Place french bread slices on soup bowls.
-    5. Ladle soup over bread.
-    6. Sprinkle with Parmesan cheese.
-    
-    2. Onion and Potato Soup
-    
-    Ingredients:
-    
-    -1 large onion, chopped
-    -2 cups potatoes, diced
-    -3 cups vegetable broth
-    -1 cup milk
-    -1/4 teaspoon black pepper
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. Serve hot.
-    
-    3. Creamy Onion Soup
-    
-    Ingredients:
-    
-    -1 large onion, chopped
-    -3 cups vegetable broth
-    -1 cup milk
-    -1/4 teaspoon black pepper
-    -1/4 cup all-purpose flour
-    -1/2 cup shredded Parmesan cheese
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add vegetable broth, milk, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
-    5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
-    ```
+  Ingredients:
 
-    Como você pode ver, todas as receitas com leite foram filtradas. Mas, se você for intolerante à lactose, talvez queira filtrar também as receitas com queijo, então é preciso ser claro.
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  Como você pode ver, todas as receitas com leite foram filtradas. Mas, se você for intolerante à lactose, talvez queira filtrar também as receitas com queijo, então é preciso ser claro.
 
 - **Produze uma lista de compras**. Queremos produzir uma lista de compras, considerando o que já temos em casa.
 
-    Para esta funcionalidade, poderíamos tentar resolver tudo em um prompt ou poderíamos dividi-lo em dois prompts. Vamos tentar a última abordagem. Aqui estamos sugerindo adicionar um prompt adicional, mas para que isso funcione, precisamos adicionar o resultado do prompt anterior como contexto para o prompt posterior.
+  Para esta funcionalidade, poderíamos tentar resolver tudo em um prompt ou poderíamos dividi-lo em dois prompts. Vamos tentar a última abordagem. Aqui estamos sugerindo adicionar um prompt adicional, mas para que isso funcione, precisamos adicionar o resultado do prompt anterior como contexto para o prompt posterior.
 
-    ```python
-    old_prompt_result = completion.choices[0].text
-    prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
-    
-    new_prompt = f"{old_prompt_result} {prompt}"
-    completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-    
-    # print response
-    print("Shopping list:")
-    print(completion.choices[0].text)
-    ```
+  ```python
+  old_prompt_result = completion.choices[0].text
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
-    Observe o seguinte: 
+  new_prompt = f"{old_prompt_result} {prompt}"
+  completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
 
-    1. Nós estamos criando um novo prompt adicionando o resultado do primeiro prompt ao novo prompt:
+  # print response
+  print("Shopping list:")
+  print(completion.choices[0].text)
+  ```
 
-        ```python
-        new_prompt = f"{old_prompt_result} {prompt}"
-        ```
+  Observe o seguinte:
 
-    1. Nós fizemos uma nova requisição, mas também considerando o número de tokens que solicitamos no primeiro prompt, então desta vez dizemos que `max_tokens` é 1200.
+  1. Nós estamos criando um novo prompt adicionando o resultado do primeiro prompt ao novo prompt:
 
-        ```python
-        completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-        ```
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
 
-        Dando uma olhada neste código, chegamos agora à seguinte saída:
+  1. Nós fizemos uma nova requisição, mas também considerando o número de tokens que solicitamos no primeiro prompt, então desta vez dizemos que `max_tokens` é 1200.
 
-        ```output
-        No of recipes (for example, 5: 2
-        List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
-        Filter (for example, vegetarian, vegan, or gluten-free: sugar
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
 
-        
-        - Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     Dando uma olhada neste código, chegamos agora à seguinte saída:
 
-        - Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     ```output
+     No of recipes (for example, 5: 2
+     List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free: sugar
 
-        Shopping list:
-        - Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice 
-        ```
+
+     - Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+
+     - Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+
+     Shopping list:
+     - Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
 
 ## Melhorando a nossa configuração
 
@@ -562,47 +560,47 @@ O que temos até agora é um código que funciona, mas há algumas alterações 
 
 - **Separar `secrets` do código**, como a chave da API. Segredos não pertencem ao código e devem ser armazenados em um local seguro. Para separar segredos do código, podemos usar variáveis de ambiente e bibliotecas como `python-dotenv` para carregá-los de um arquivo. Veja como isso ficaria no código:
 
-    1. Crie um arquivo `.env` com o seguinte conteúdo:
+  1. Crie um arquivo `.env` com o seguinte conteúdo:
 
-        ```bash
-        OPENAI_API_KEY=sk-...
-        ```
+     ```bash
+     OPENAI_API_KEY=sk-...
+     ```
 
-        > Observação: para o Azure, você precisa definir as seguintes variáveis de ambiente:
+     > Observação: para o Azure, você precisa definir as seguintes variáveis de ambiente:
 
-        ```bash
-        OPENAI_API_TYPE=azure
-        OPENAI_API_VERSION=2023-05-15
-        OPENAI_API_BASE=<replace>
-        ```
+     ```bash
+     OPENAI_API_TYPE=azure
+     OPENAI_API_VERSION=2023-05-15
+     OPENAI_API_BASE=<replace>
+     ```
 
-        No código, você carregaria as variáveis de ambiente assim:
+     No código, você carregaria as variáveis de ambiente assim:
 
-        ```python
-        from dotenv import load_dotenv
+     ```python
+     from dotenv import load_dotenv
 
-        load_dotenv()
+     load_dotenv()
 
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-        ```
+     openai.api_key = os.environ["OPENAI_API_KEY"]
+     ```
 
 - **Uma palavra sobre o comprimento do token**. Devemos considerar quantos tokens precisamos para gerar o texto que queremos. Tokens custam dinheiro, então, sempre que possível, devemos tentar ser econômicos com o número de tokens que usamos. Por exemplo, podemos formular o prompt para que possamos usar menos tokens?
 
-   Para alterar os tokens usados, você pode usar o parâmetro `max_tokens`. Por exemplo, se você quiser usar 100 tokens, você faria:
+  Para alterar os tokens usados, você pode usar o parâmetro `max_tokens`. Por exemplo, se você quiser usar 100 tokens, você faria:
 
-    ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
-    ```
+  ```python
+  completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
+  ```
 
 - **Experimentando com a temperatura**. A temperatura é algo que não mencionamos até agora. Porém, é um contexto importante para o desempenho de nosso programa. Quanto maior o valor da temperatura, mais aleatório será o resultado. Por outro lado, quanto menor o valor da temperatura, mais previsível será o resultado. Considere se você deseja ou não variação na saída.
 
-   Para alterar a temperatura, você pode usar o parâmetro `temperature`. Por exemplo, se você quiser usar uma temperatura de 0.5, você faria:
+  Para alterar a temperatura, você pode usar o parâmetro `temperature`. Por exemplo, se você quiser usar uma temperatura de 0.5, você faria:
 
-    ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
-    ```
+  ```python
+  completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
+  ```
 
-   > Observação: quanto mais próximo de 1.0, mais variada será a saída.
+  > Observação: quanto mais próximo de 1.0, mais variada será a saída.
 
 ## Tarefa
 
