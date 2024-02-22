@@ -22,6 +22,8 @@ AI Agents are a very exciting field in the world of Generative AI. With this exc
 
 AI Agents allow Large Language Models (LLMs) to perform tasks by giving them access to a **state** and **tools**.
 
+![Agent Model](images/what-agent.png?WT.mc_id=academic-105485-koreyst)
+
 Let's define these terms:
 
 **Large Language Models** - These are the models referred throughout this course such as GPT-3.5, GPT-4, Llama-2, etc.
@@ -34,24 +36,23 @@ These definitions will hopefully give you a good grounding going forward as we l
 
 ## LangChain Agents
 
-LangChain Agents is an implementation of the definitions we provided above.
+[LangChain Agents](https://python.langchain.com/docs/modules/agents/?WT.mc_id=academic-105485-koreyst) is an implementation of the definitions we provided above.
 
-To manage the **state** , it uses a built-in function called the `AgentExecutor`. This accepts the defined `agent`a and the `tools` that are available to it.
+To manage the **state** , it uses a built-in function called the `AgentExecutor`. This accepts the defined `agent` and the `tools` that are available to it.
 
 The `Agent Executor` also stores the chat history to provide the context of the chat.
 
-LangChain offers a catalog of tools that can be imported into your application in which the LLM can get access to. These are made by the community and by the LangChain team.
+![Langchain Agents](images/langchain-agents.png?WT.mc_id=academic-105485-koreyst)
 
-You can then define these tools and pass them to the `Agent Executor.
+LangChain offers a [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) that can be imported into your application in which the LLM can get access to. These are made by the community and by the LangChain team.
 
-Visibility is another important aspect when talking about AI Agents. It is important for application developers to understand which tool the LLM is using and why.. For that, the team at LangChain have developed LangSmtih.
+You can then define these tools and pass them to the `Agent Executor`.
 
-https://python.langchain.com/docs/integrations/tools
-https://integrations.langchain.com/tools
+Visibility is another important aspect when talking about AI Agents. It is important for application developers to understand which tool the LLM is using and why.. For that, the team at LangChain have developed LangSmith.
 
 ## AutoGen
 
-The next AI Agent framework we will discuss is AutoGen. The main focus of AutoGen is conversations. Agents are both **conversable** and **customizable**.
+The next AI Agent framework we will discuss is [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). The main focus of AutoGen is conversations. Agents are both **conversable** and **customizable**.
 
 **Conversable -** LLMs can start and continue a conversation with another LLM in order to complete a task. This is done by creating `AssistantAgents` and giving them a specific system message.
 
@@ -72,6 +73,8 @@ user_proxy = UserProxyAgent(name="user_proxy")
 To change and manage state, an assistant Agent generates Python code to complete the task.
 
 Here is an example of the process:
+
+![AutoGen](images/autogen.png?WT.mc_id=academic-105485-koreyst)
 
 #### LLM Defined with a System Message
 
@@ -103,17 +106,19 @@ chatbot (to user_proxy):
 
 Once the initial chat is processed, the Agent will send the suggest tool to call. In this case, it is a function called `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
 
-We will look at this process in more detail with the Python example included in this lesson.
+You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
 
 ## Taskweaver
 
-The next agent framework we will explore is Taskweaver. It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with dataframes in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with dataframes in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
 
 ### State and Tools
 
 To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
 
 To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. This can be Python classes or a general code interpreter. This plugins are stored as embeddings so that the LLM can better search for the correct plugin.
+
+![Taskweaver](images/taskweaver.png?WT.mc_id=academic-105485-koreyst)
 
 Here is an example of a plugin to handle anomaly detection:
 
@@ -125,7 +130,9 @@ The code is verified before executing. Another feature to manage context in Task
 
 ## JARVIS
 
-The last agent framework we will explore is JARVIS. What makes JARVIS unique is that it uses an LLM to manage the `state` of the conversation and the `tools`are other AI models. Each of the AI models are specialized models that perform certain tasks such as object detection, transcription or image captioning.
+The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` of the conversation and the `tools`are other AI models. Each of the AI models are specialized models that perform certain tasks such as object detection, transcription or image captioning.
+
+![JARVIS](images/jarvis.png?WT.mc_id=academic-105485-koreyst)
 
 The LLM, being a general purpose model, receives the request from the user and identifies the the specific task and any arguments/data that is needed to complete the task.
 
@@ -146,3 +153,7 @@ To continue your learning of AI Agents you can build with AutoGen:
 - An application that simulates a business meeting with different departments of an education startup.
 - Create system messages that guide LLMs in understanding different personas and priorities, and enable the user to pitch a new product idea.
 - The LLM should then generate follow-up questions from each department to refine and improve the pitch and the product idea
+
+## Learning does not stop here, continue the Journey
+
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!

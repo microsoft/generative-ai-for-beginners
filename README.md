@@ -83,7 +83,7 @@ Find spelling errors, code errors or have a suggestion? [Raise an issue](https:/
 | 15  |    [Retrieval Augmented Generation (RAG) and Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)     | **Build:** An application using a RAG Framework to retrieve embeddings from a Vector Databases  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  |                                                     Open Source Models and Hugging Face                                                      |          **Build:** An application using open source models available on Hugging Face           | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  |                                    [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                    |                      **Build:** An application using an AI Agent Framework                      | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  |                                                               Fine-Tuning LLMs                                                               |                      **Learn:** The what, why and how of fine-tuning LLMs                       | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  |                                     [Fine-Tuning](./18-/README.md?WT.mc_id=academic-105485-koreyst) LLMs                                     |                      **Learn:** The what, why and how of fine-tuning LLMs                       | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Special thanks
 
