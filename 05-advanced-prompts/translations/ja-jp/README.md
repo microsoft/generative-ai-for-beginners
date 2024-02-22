@@ -618,7 +618,7 @@ if __name__ == '__main__':
 > [!TIP]
 > プロンプトの改善を求める際、対象となる改善項目を制限すると効果が高まります。また、アーキテクチャ、パフォーマンス、セキュリティといった特定の観点から改善を求めるアプローチも有効です。
 
-[Solution](./python/aoai-solution.pysolution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](../python/aoai-solution.pysolution.py?WT.mc_id=academic-105485-koreyst)
 
 ## 知識チェック
 

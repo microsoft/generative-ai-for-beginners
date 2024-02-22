@@ -193,6 +193,6 @@ A：3，如果您有时间和资源以及高质量的数据，微调是保持最
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
+想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
 
 前往第三章，我们将了解如何[负责任地使用生成式 AI 进行应用构建](../../../03-using-generative-ai-responsibly/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！

@@ -194,6 +194,6 @@ Saiba mais sobre como você pode [usar o RAG](https://learn.microsoft.com/azure/
 
 ## Ótimo Trabalho, Continue com Seu Aprendizado
 
-Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
+Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
 
 Vamos para a Lição 3, onde veremos como podemos [Criar IA Generativa de forma Responsável](../../../03-using-generative-ai-responsibly/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
