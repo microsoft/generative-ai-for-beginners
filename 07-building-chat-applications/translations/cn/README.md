@@ -183,12 +183,12 @@ Microsoft 的 Responsible AI 方法确定了指导 AI 开发和使用的六项�
 
 ## Great Work! Continue the Journey
 
-Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](../../../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about creating chat applications with Generative AI? Go to the [continued learning page](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
 Head over to Lesson 8 to see how you can start [building search applications](/08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ## 继续学习
 
-想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第八章，我们将学习[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)

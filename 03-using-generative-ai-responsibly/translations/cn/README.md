@@ -1,6 +1,6 @@
 # 第三章 ： 负责任地使用生成式人工智能
 
-[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
 
 > **导学视频即将上架，敬请期待**
 
@@ -46,7 +46,7 @@
 
 ![提示说“谁是泰坦尼克号的唯一幸存者”](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp?WT.mc_id=academic-105485-koreyst)
 
-> *（来源：[飞翔的野牛](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
+> _（来源：[飞翔的野牛](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
 给出了一个非常确切的答案。 不幸的是，这是不正确的。 即使极少了解，人们也会发现泰坦尼克号幸存者不止一名。 但对于刚开始研究这个领域的学生来说，这个答案足以有说服力，不会被质疑并被视为事实。 这样做的后果可能会导致人工智能系统不可靠，并对我们初创公司的声誉产生负面影响。
 
@@ -120,7 +120,7 @@
 2. 有害使用，即人工智能不用于犯罪目的。
 3. 确保人工智能不存在偏见和歧视。
 
-答：2和3是正确的。 负责任的人工智能可以帮助您考虑如何减轻有害影响和偏见等。
+答：2 和 3 是正确的。 负责任的人工智能可以帮助您考虑如何减轻有害影响和偏见等。
 
 ## 🚀 知识拓展
 
@@ -128,7 +128,6 @@
 
 ## 继续学习
 
-想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
+想要了解更多有关如何负责任地使用生成式 AI 进行构建的信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
 
 前往第四章，我们将了解 [提示工程基础](../../../04-prompt-engineering-fundamentals/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！
-

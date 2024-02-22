@@ -113,6 +113,6 @@ Bing 中允许用户控制应用程序的另一个功能是能够选择加入和
 
 ## 恭喜您完成本课程
 
-想要了解更多有关为人工智能应用程序设计用户体验的信息吗？ 转至[继进阶学习的页面续学习页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主题的其他重要资源。
+想要了解更多有关为人工智能应用程序设计用户体验的信息吗？ 转至[继进阶学习的页面续学习页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主题的其他重要资源。
 
 恭喜，您已完成本课程！ 你不应该学完即止。 希望您受到启发，开始创建自己的生成式人工智能初创公司。 前往 [Microsoft Founders Hub](https://aka.ms/genai-Foundershub?WT.mc_id=academic-105485-koreyst) 并申请该计划以并获得支持。

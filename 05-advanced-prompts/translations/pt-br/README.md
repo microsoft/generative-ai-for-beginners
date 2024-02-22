@@ -641,7 +641,7 @@ Por favor, tente resolver a tarefa adicionando prompts adequados ao código.
 > [!DICA]
 > Formule um prompt para pedir que ele melhor. É uma boa ideia limitar quantas melhorias devem ter. Você também pode pedir para melhorar de uma certa maneira, por exemplo, arquitetura, desempenho, segurança, etc.
 
-[Solution](../../solution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](../../python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Verificação de conhecimento
 

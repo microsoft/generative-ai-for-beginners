@@ -597,7 +597,7 @@ LLM 本质上是不确定的，这意味着每次运行相同的提示时都会�
 > [!TIP]
 > 短语提示要求它改进，限制改进的数量是个好主意。 您还可以要求以某种方式改进它，例如架构、性能、安全性等。
 
-[Solution](../../solution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](../../python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## 知识检查
 
@@ -615,6 +615,6 @@ LLM 本质上是不确定的，这意味着每次运行相同的提示时都会�
 
 ## 继续学习
 
-想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建高级提示的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第六章，我们将应用提示工程知识[构建文本生成应用程序](../../../06-text-generation-apps/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)

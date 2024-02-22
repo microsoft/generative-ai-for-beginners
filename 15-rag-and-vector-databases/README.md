@@ -2,7 +2,7 @@
 
 <!-- ![chapter image](./images/) -->
 
-In the search applications lesson, we learnt briefly how you can integrate your own data into Large Language Models (LLMs). In this lesson, we will delve further into the concepts of grounding your data in your LLM application, the mechanics of the process and the methods for storing data, including both embeddings and text.
+In the search applications lesson, we briefly learned how to integrate your own data into Large Language Models (LLMs). In this lesson, we will delve further into the concepts of grounding your data in your LLM application, the mechanics of the process and the methods for storing data, including both embeddings and text.
 
 > **Video Coming Soon**
 
@@ -40,7 +40,7 @@ Users will be able to create practice quizzes from their notes, revision flash c
 
 ## Retrieval Augmented Generation (RAG)
 
-An LLM powered chatbot processes user prompts to generate responses. It is designed to be interactive and engages with users on a wide array of topics. However, its responses are limited to the context provided and its foundational training data. For instance, GPT-4 knowledge cut off is September 2021, meaning, it lacks knowledge of events that have occurred after this period. In addition, the data used to train LLMs excludes confidential information such as personal notes or a company's product manual.
+An LLM powered chatbot processes user prompts to generate responses. It is designed to be interactive and engages with users on a wide array of topics. However, its responses are limited to the context provided and its foundational training data. For instance, GPT-4 knowledge cutoff is September 2021, meaning, it lacks knowledge of events that have occurred after this period. In addition, the data used to train LLMs excludes confidential information such as personal notes or a company's product manual.
 
 ### How RAGs (Retrieval Augmented Generation) work
 
@@ -62,7 +62,7 @@ The architecture for RAGs is implemented using transformers consisting of two pa
 
 Two approaches when implementing RAG according to the proposed paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) are:
 
-- ***RAG-Sequence*** using retrieved documents to predict the best possible answer to a user query
+- **_RAG-Sequence_** using retrieved documents to predict the best possible answer to a user query
 
 - **RAG-Token** using documents to generate the next token, then retrieve them to answer the user's query
 
@@ -82,7 +82,7 @@ Our application is based on our personal data i.e., the Neural Network lesson on
 
 A vector database, unlike traditional databases, is a specialized database designed to store, manage and search embedded vectors. It stores numerical representations of documents. Breaking down data to numerical embeddings makes it easier for our AI system to understand and process the data.
 
-We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most like the question will be returned together with the prompt. Chunking also reduces costs on  the number of tokens passed through an LLM.
+We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most like the question will be returned together with the prompt. Chunking also reduces costs on the number of tokens passed through an LLM.
 
 Some popular vector databases include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN,, Quadrants and DeepLake. You can create an Azure Cosmos DB model using Azure CLI with the following command:
 
@@ -97,7 +97,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 Before we store our data, we will need to convert it to vector embeddings before it is stored in the database. If you are working with large documents or long texts, you can chunk them based on queries you expect. Chunking can be done at sentence level, or at a paragraph level. As chunking derives meanings from the words around them, you can add some other context to a chunk, for example, by adding the document title or including some text before or after the chunk. You can chunk the data as follows:
 
-``` python
+```python
 def split_text(text, max_length, min_length):
     words = text.split()
     chunks = []
@@ -116,7 +116,7 @@ def split_text(text, max_length, min_length):
     return chunks
 ```
 
-Once chunked, we can then embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision and many more. Selecting a model to use will depend on the languages you're using, the type of content encoded (text/images/audio), the size of input it can encode and length of the embedding output. 
+Once chunked, we can then embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision and many more. Selecting a model to use will depend on the languages you're using, the type of content encoded (text/images/audio), the size of input it can encode and length of the embedding output.
 
 An example of embedded text using OpenAI's `text-embedding-ada-002` model is:
 ![an embedding of the word cat](images/cat.png?WT.mc_id=academic-105485-koreyst)
@@ -131,15 +131,15 @@ Retrieval happens when the system tries to quickly find the documents from the i
 
 There are several ways to perform search within our database such as:
 
-- *Keyword* search - used for text searches
+- **Keyword search** - used for text searches
 
-- *Semantic* search - uses the semantic meaning of words
+- **Semantic search** - uses the semantic meaning of words
 
-- *Vector* search - converts documents from text to vector representations using embedding models. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
+- **Vector search** - converts documents from text to vector representations using embedding models. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
 
-- *Hybrid* - a combination of both keyword and vector search.
+- **Hybrid** - a combination of both keyword and vector search.
 
-A challenge with retrieval comes in when there is no similar response to the query in the database, the system will then return the best information they can get, however, you can use tactics like set up the maximum distance for relevance or use hybrid search that combines both keywords and vector search. In this lesson we will use hybrid search, a combination of both vector and keyword search. We will store our data into a dataframe with columns containing the chunks as well as embeddings. 
+A challenge with retrieval comes in when there is no similar response to the query in the database, the system will then return the best information they can get, however, you can use tactics like set up the maximum distance for relevance or use hybrid search that combines both keywords and vector search. In this lesson we will use hybrid search, a combination of both vector and keyword search. We will store our data into a dataframe with columns containing the chunks as well as embeddings.
 
 ### Vector Similarity
 
@@ -236,13 +236,13 @@ chatbot(user_input)
 
 - Fluency - whether the response makes sense grammatically
 
-## Use Cases for using RAG and vector databases
+## Use Cases for using RAG (Retervival Augmented Generation) and vector databases
 
 There are many different use cases where function calls can improve your app like:
 
 - Question and Answering: grounding your company data to a chat that can be used by employees to ask questions.
 
-- Recommendation Systems: where you can create a sysytem that matches the most similar values e.g. movies, restaurants and many more.
+- Recommendation Systems: where you can create a system that matches the most similar values e.g. movies, restaurants and many more.
 
 - Chatbot services: you can store chat history and personalize the conversation based on the user data.
 
@@ -264,4 +264,4 @@ Congratulations for completing the lesson 👏.
 
 ## Learning does not stop here, continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](<https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI 2knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!

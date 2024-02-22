@@ -386,6 +386,6 @@ Wrap the section with a summary and resources for self-guided learning.
 
 ## 继续学习
 
-想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此章节的其他重要资源。
+想要了解更多有关不同提示工程概念的信息吗？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此章节的其他重要资源。
 
 前往第五章学习，我们将了解[创建高级的提示工程技巧](../../../05-advanced-prompts/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！
