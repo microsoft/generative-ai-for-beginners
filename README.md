@@ -16,7 +16,7 @@
 
 **Version 2 of this course is currently being deployed. Official Release February 23rd. Pardon the mess meanwhile**
 
-# Generative AI for Beginners - A Course
+# Generative AI for Beginners (Version 2) - A Course
 
 Learn the fundamentals of building Generative AI applications with our 18-lesson comprehensive course by Microsoft Cloud Advocates.
 
@@ -84,6 +84,7 @@ Find spelling errors, code errors or have a suggestion? [Raise an issue](https:/
 | 16  |                                   [Open Source Models and Hugging Face](./16-open-source-models/README.MD)                                   |          **Build:** An application using open source models available on Hugging Face           | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  |                                    [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                    |                      **Build:** An application using an AI Agent Framework                      | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 18  |                               [Fine-Tuning LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                |                      **Learn:** The what, why and how of fine-tuning LLMs                       | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+
 
 ### 🌟 Special thanks
 
