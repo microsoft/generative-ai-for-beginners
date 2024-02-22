@@ -131,6 +131,6 @@ _(点击该图片看本章导学视频)_
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主题的其他学习资源。
+想要了解更多关于不同的生成人工智能概念吗？ 请到[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主题的其他学习资源。
 
 前往第二章，我们将了解如何[探索和比较不同的 LLM 类型](../../../02-exploring-and-comparing-different-llms/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！

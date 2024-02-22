@@ -412,6 +412,6 @@ A: 2 番が最良のプロンプトです。それは「何を」求めている
 
 ## お疲れ様でした! 次のレッスンを続ける
 
-プロンプト・エンジニアリングに関して、さらに概念をもっと深く学びたい方は、この話題に関する他の素晴らしい情報を見つけるために[継続的学習のページ](../../../13-continued-learning/README.md?WT.mc_id=academic-105485-yoterada)をご参照ください。
+プロンプト・エンジニアリングに関して、さらに概念をもっと深く学びたい方は、この話題に関する他の素晴らしい情報を見つけるために[継続的学習のページ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をご参照ください。
 
 それでは、レッスン 5 に移り、[高度なプロンプト技術](../../../05-advanced-prompts/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)を見ていきましょう！

@@ -131,8 +131,7 @@ openai.api_base = os.getenv("API_BASE")
 - `api_version`, 这是您要使用的 API 版本。 在撰写本文时，最新版本是'2023-05-15'。
 - `api_base`, 这是 API 的 endpoint 。 您可以在 Azure Portal 中 API Key 下方找到它。
 
-> [注意]
-> `os.getenv` 是一个读取环境变量的函数。 您可以使用它来读取“OPENAI_API_KEY”和“API_BASE”等环境变量。 在终端中或使用“dotenv”等库设置这些环境变量。
+> [注意] > `os.getenv` 是一个读取环境变量的函数。 您可以使用它来读取“OPENAI_API_KEY”和“API_BASE”等环境变量。 在终端中或使用“dotenv”等库设置这些环境变量。
 
 ## 文字生成
 
@@ -662,6 +661,6 @@ A: 1
 
 ## 继续学习
 
-想要了解有关创建文本生成应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建文本生成应用的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第七章，我们将学习[构建聊天应用程序](../../../07-building-chat-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)

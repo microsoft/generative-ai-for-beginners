@@ -131,6 +131,6 @@ O que é verdade sobre Grandes Modelos de Linguagem?
 
 ## Ótimo trabalho! A Jornada Continua
 
-Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de Aprendizado Contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
+Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de Aprendizado Contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
 
 Vá para a Lição 2, onde veremos como [Explorar e comparar diferentes tipos de LLM](../../../02-exploring-and-comparing-different-llms/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!

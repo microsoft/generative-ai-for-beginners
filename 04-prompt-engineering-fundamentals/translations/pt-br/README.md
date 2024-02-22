@@ -393,6 +393,6 @@ Veja se você consegue aproveitar a técnica de "dica" com a instrução: Comple
 
 ## Ótimo Trabalho! Continue Sua Aprendizagem
 
-Quer aprender mais sobre diferentes conceitos de Engenharia de Instruções? Vá para a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tema.
+Quer aprender mais sobre diferentes conceitos de Engenharia de Instruções? Vá para a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tema.
 
 Agora, vamos para a Lição 5, onde exploraremos [técnicas avançadas de instrução](../../../05-advanced-prompts/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!

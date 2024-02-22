@@ -189,6 +189,6 @@ Head over to Lesson 8 to see how you can start [building search applications](/0
 
 ## 继续学习
 
-想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建聊天应用的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第八章，我们将学习[构建搜索应用程序](../../../08-building-search-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)

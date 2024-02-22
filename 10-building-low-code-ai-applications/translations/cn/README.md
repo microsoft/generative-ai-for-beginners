@@ -239,6 +239,6 @@ GPT 模型经过大量数据的广泛训练，使它们能够在有提示时生�
 
 ## 继续学习
 
-想要了解有关创建低代码的人工智能应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建低代码的人工智能应用的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
 前往第十一章，我们将学习[为生成式 AI 添加 function calling](../../../11-integrating-with-function-calling/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)
