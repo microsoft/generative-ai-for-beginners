@@ -16,7 +16,7 @@
 
 **Version 2 of this course is currently being deployed. Official Release February 23rd. Pardon the mess meanwhile**
 
-# Generative AI for Beginners - A Course
+# Generative AI for Beginners (Version 2) - A Course
 
 Learn the fundamentals of building Generative AI applications with our 18-lesson comprehensive course by Microsoft Cloud Advocates.
 
