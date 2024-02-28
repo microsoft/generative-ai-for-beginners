@@ -134,7 +134,7 @@ The last agent framework we will explore is [JARVIS](https://github.com/microsof
 
 ![JARVIS](images/jarvis.png?WT.mc_id=academic-105485-koreyst)
 
-The LLM, being a general purpose model, receives the request from the user and identifies the the specific task and any arguments/data that is needed to complete the task.
+The LLM, being a general purpose model, receives the request from the user and identifies the specific task and any arguments/data that is needed to complete the task.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
