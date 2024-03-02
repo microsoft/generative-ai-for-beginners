@@ -19,7 +19,7 @@ Ready? Let's get started.
 
 ## Illustrated Guide
 
-Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core conccepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md) page for additional links to support your self-guided learning journey!
+Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core conccepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for additional links to support your self-guided learning journey!
 
 ![Illustrated Guide to Fine Tuning Language Models](./img/18-fine-tuning-sketchnote.png?WT.mc_id=academic-105485-koreyst)
 
