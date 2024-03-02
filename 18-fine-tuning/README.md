@@ -17,6 +17,12 @@ By the end of this lesson, you should be able to answer the following questions:
 
 Ready? Let's get started.
 
+## Illustrated Guide
+
+Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core conccepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md) page for additional links to support your self-guided learning journey!
+
+![Illustrated Guide to Fine Tuning Language Models](./img/18-fine-tuning-sketchnote.png)
+
 ## What is fine-tuning for language models?
 
 By definition, large language models are _pre-trained_ on large quantities of text sourced from diverse sources including the internet. As we've learned in previous lessons, we need techniques like _prompt engineering_ and _retrieval-augmented generation_ to improve the quality of the model's responses to the user's questions ("prompts").
