@@ -21,8 +21,8 @@ The default notebook is set up for use with an [Azure OpenAI service resource](h
     ```
     This should create an identical copy _except that this file is .gitignore-d and will never get checked into source control_. We can now populate **this .env file** with the environment variable values (secrets) without fear of them being checked in accidentally. You can now move to the next section to start populating these variables.
 
-3. (Option) If you use GitHub Codespaces, you can also save environment variables as [_Codespaces secrets as described here_](https://docs.github.com/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces). Visit that link to learn how to add a secret, edit it, delete it, and use it in your running codespace. **If you choose this option**, your [**GitHub Settings > Codespaces Secrets**](https://github.com/settings/codespaces) should look something like this. 
-    ![Codespaces Secrets](./img/codespaces-secrets.png)
+3. (Option) If you use GitHub Codespaces, you can also save environment variables as [_Codespaces secrets as described here_](https://docs.github.com/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces?WT.mc_id=academic-105485-koreyst). Visit that link to learn how to add a secret, edit it, delete it, and use it in your running codespace. **If you choose this option**, your [**GitHub Settings > Codespaces Secrets**](https://github.com/settings/codespaces?WT.mc_id=academic-105485-koreyst) should look something like this. 
+    ![Codespaces Secrets](./img/codespaces-secrets.png?WT.mc_id=academic-105485-koreyst)
 
     Note that you can create these secrets once and then make them available to multiple repositories that use those env variables. **However, note that this option works only if you use GitHub Codespaces.** You will still need to setup the .env file if you plan to use Docker Desktop for local development with that devcontainer configruation.
 
