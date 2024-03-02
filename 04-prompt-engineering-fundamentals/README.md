@@ -33,6 +33,13 @@ The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment w
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
 
+## Illustrated Guide
+
+Want to get the big picture of what this lesson covers before you dive in? Check out this illustrated guide which gives you a sense of the main topics covered, and the key takeaways for you to think about in each one. The lesson roadmap takes you from understanding the core concepts and challenges, to addressing them with relevant prompt engineering techniques and best practices. Note that the "Advanced Techniques" section in this guide refers to content covered in the _next_ chapter of this curriculum.
+
+![Illustrated Guide to Prompt Engineering](./images/04-prompt-engineering-sketchnote.png)
+
+
 ## Our Startup
 
 Now, let's talk about how _this topic_ relates to our startup mission to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We want to build AI-powered applications of _personalized learning_ - so let's think about how different users of our application might "design" prompts:
