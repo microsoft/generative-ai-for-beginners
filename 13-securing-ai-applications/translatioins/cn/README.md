@@ -1,6 +1,6 @@
 # 生成式AI初学者指南：第13章 - 保护AI应用
 
-[![保护您的AI应用](./images/13-lesson-banner.jpg?WT.mc_id=academic-105485-koreyst)]()
+[![保护您的AI应用](../../images/13-lesson-banner.jpg?WT.mc_id=academic-105485-koreyst)]()
 
 ## 引言
 
@@ -123,7 +123,7 @@ LLMs可能对它们使用的数据的隐私和安全构成风险。例如，LLMs
 
 > AI红队的实践已经演变为具有更广泛的含义：它不仅涵盖了探测安全漏洞，还包括探测其他系统故障，如生成可能有害的内容。AI系统带来了新的风险，而红队是理解这些新风险的核心，如提示注入和产生不切实际的内容。- [Microsoft AI红队构建更安全的AI未来](https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![红队指引和资源](./images/13-AI-red-team.png?WT.mc_id=academic-105485-koreyst)]()
+[![红队指引和资源](../../images/13-AI-red-team.png?WT.mc_id=academic-105485-koreyst)]()
 
 以下是塑造Microsoft AI红队计划的关键洞察。
 
@@ -158,4 +158,4 @@ AI红队并非包罗万象，应被视为补充其他控制措施，如[基于�
 
 完成本课程后，请继续探索我们的[生成式AI学习系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，以进一步提高你的生成式AI技能！
 
-下一站，第14课：[生成式AI应用生命周期](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)！
+下一站，第14课：[生成式AI应用生命周期](../../../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)！
