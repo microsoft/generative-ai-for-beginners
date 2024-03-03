@@ -3,6 +3,9 @@ on:
   # Trigger the workflow on new issue
   issues:
     types: [opened]
+permissions:
+  contents: read
+  issues: write
 jobs:
   asses-issue:
     runs-on: ubuntu-latest

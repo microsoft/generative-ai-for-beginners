@@ -49,7 +49,6 @@ LLMs 应用场景不仅仅是聊天机器人和文本生成。 还可以使用�
 
 下面是一个示例，图像以下文本是 AI Show YouTube 频道上某一集的文字记录：
 
-
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
@@ -74,7 +73,7 @@ Today we are going to learn about Azure Machine Learning.
 
 ### 向量数据库
 
-为了简单起见，嵌入索引存储在名为 `embedding_index_3m.json` 的 JSON 文件中，并加载到 Pandas Dataframe 中。 但是，在生产中，嵌入索引将存储在向量数据库中，例如  [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst)
+为了简单起见，嵌入索引存储在名为 `embedding_index_3m.json` 的 JSON 文件中，并加载到 Pandas Dataframe 中。 但是，在生产中，嵌入索引将存储在向量数据库中，例如 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst)
 
 ## 理解余弦相似度
 
@@ -104,13 +103,11 @@ Today we are going to learn about Azure Machine Learning.
 2. 选择 Azure 门户右上角的 Cloud Shell 图标。
 3. 选择 **Bash** 作为环境类型。
 
-
 #### 创建资源组
 
 > 通过指引我们使用美国东部名为“semantic-video-search”的资源组。
 > 您可以更改资源组的名称，更改资源的位置等
 > 检查[可用的模型](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
-
 
 ```shell
 az group create --name semantic-video-search --location eastus
@@ -126,9 +123,10 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
 ```
 
 #### Get the endpoint and keys for usage in this application
-#### 获取此应用程序中使用的 endpoint 和 keys 
 
-从 Azure Cloud Shell 运行以下命令以获取 Azure OpenAI 服务资源的终 endpoint 和 keys 
+#### 获取此应用程序中使用的 endpoint 和 keys
+
+从 Azure Cloud Shell 运行以下命令以获取 Azure OpenAI 服务资源的终 endpoint 和 keys
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -154,7 +152,7 @@ az cognitiveservices account deployment create \
 
 ## 解决方案
 
-在 GitHub Codespaces 中打开 [solution notebook](../../solution.ipynb?WT.mc_id=academic-105485-koreyst) 并按照 Jupyter Notebook 中的说明进行操作。
+在 GitHub Codespaces 中打开 [solution notebook](../../python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) 并按照 Jupyter Notebook 中的说明进行操作。
 
 当您运行 notebook 时，系统将提示您输入查询。 输入框将如下所示：
 
@@ -162,6 +160,6 @@ az cognitiveservices account deployment create \
 
 ## 继续学习
 
-想要了解有关创建搜索应用的更多信息？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
+想要了解有关创建搜索应用的更多信息？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关此主章节的其他学习资源。
 
-前往第九章，我们将学习[构建图像生成应用程序](../../../09-building-image-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 
+前往第九章，我们将学习[构建图像生成应用程序](../../../09-building-image-applications/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)

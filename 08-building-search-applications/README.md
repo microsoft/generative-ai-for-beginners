@@ -150,7 +150,7 @@ az cognitiveservices account deployment create \
 
 ## Solution
 
-Open the [solution notebook](./solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
+Open the [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces and follow the instructions in the Jupyter Notebook.
 
 When you run the notebook, you'll be prompted to enter a query. The input box will look like this:
 

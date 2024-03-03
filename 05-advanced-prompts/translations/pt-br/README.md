@@ -1,6 +1,6 @@
 # Criando prompts avançados
 
-[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
+[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=f3615e46-dbca-477c-832d-21eef95cd9f3?WT.mc_id=academic-105485-koreyst)
 
 Vamos recapitular algumas aprendizagens do capítulo anterior:
 
@@ -110,7 +110,7 @@ Como exemplo, é assim que sua solicitação pode parecer se você estiver no ra
 
     ```text
     {{company}}: {{company_name}}
-    {{products}}: 
+    {{products}}:
     {{products_list}}
     Please suggest an insurance given the following budget and requirements:
     Budget: {{budget}}
@@ -123,13 +123,13 @@ Aqui está um exemplo de como a solicitação pode parecer depois que as variáv
 
     ```text
     Insurance company: ACME Insurance
-    Insurance products (cost per month): 
+    Insurance products (cost per month):
     - Car, cheap, 500 USD
-    - Car, expensive, 1100 USD 
+    - Car, expensive, 1100 USD
     - Home, cheap, 600 USD
     - Home, expensive, 1200 USD
     - Life, cheap, 100 USD
-    
+
     Please suggest an insurance given the following budget and requirements:
     Budget: $1000
     Requirements: Car, Home
@@ -139,11 +139,11 @@ Executando esta solicitação em um Modelo de Linguagem com Aprendizado Profundo
 
     ```output
     , and Life insurance
-    
-    Given the budget and requirements, we suggest the following insurance package from ACME Insurance: 
-    - Car, cheap, 500 USD 
-    - Home, cheap, 600 USD 
-    - Life, cheap, 100 USD 
+
+    Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
+    - Car, cheap, 500 USD
+    - Home, cheap, 600 USD
+    - Life, cheap, 100 USD
     Total cost: $1,200 USD
     ```
 
@@ -151,13 +151,13 @@ Como você pode ver, também sugere o seguro de vida, o que não deveria acontec
 
     ```text
     Insurance company: ACME Insurance
-    Insurance products (cost per month): 
+    Insurance products (cost per month):
     - type: Car, cheap, cost: 500 USD
-    - type: Car, expensive, cost: 1100 USD 
+    - type: Car, expensive, cost: 1100 USD
     - type: Home, cheap, cost: 600 USD
     - type: Home, expensive, cost: 1200 USD
     - type: Life, cheap, cost: 100 USD
-    
+
     Please suggest an insurance given the following budget and requirements:
     Budget: $1000 restrict choice to types: Car, Home
     ```
@@ -237,11 +237,11 @@ Resposta da IA:
     ```python
     import flask
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return 'Products'
-    
+
     @app.route('/customers')
     def customers():
         return 'Customers'
@@ -253,27 +253,27 @@ Resposta da IA:
 
     ```text
     Sure, here are three suggestions to improve the code:
-    
+
     Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
-    
+
     Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
-    
+
     Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
     ```
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return f'This is the {request.path} page'
-    
+
     @app.route('/customers')
     def customers():
         return f'This is the {request.path} page'
-    
+
     if __name__ == '__main__':
         app.run()
     ```
@@ -305,7 +305,7 @@ Repita os passos 2 e 3 até passar por todas as partes e ficar satisfeito com a 
 Aqui está um exemplo de um prompt:
 
 > prompt: How can I create a crisis plan to mitigate a pandemic in 5 steps?
-LLM answer:
+> LLM answer:
 
     ```text
     1. Identify the risks
@@ -321,7 +321,7 @@ São identificadas 5 etapas, mas podemos determinar se isso está correto? Vamos
 
     ```text
     The risks are the following:
-    
+
     - Loss of life
     - Loss of business
     - Loss of reputation
@@ -355,30 +355,30 @@ Os LLMs são, por natureza, não-determinísticos, o que significa que você obt
     # Import necessary modules
     import flask
     from flask import request, jsonify
-    
+
     # Create a Flask app
     app = flask.Flask(__name__)
-    
+
     # Create a route for the API
     @app.route('/api', methods=['GET'])
     def api():
         # Get the data from the request
         data = request.args
-    
+
         # Process the data
         result = process_data(data)
-    
+
         # Return the result as JSON
         return jsonify(result)
-    
+
     # Function to process the data
     def process_data(data):
         # Do something with the data
         result = data + 1
-    
+
         # Return the result
         return result
-    
+
     # Run the app
     if __name__ == '__main__':
         app.run()
@@ -390,11 +390,11 @@ Execute o mesmo prompt novamente e você observará que vai gerar uma resposta l
     #import necessary packages
     import flask
     from flask import request, jsonify
-    
+
     #create the Flask application
     app = flask.Flask(__name__)
     app.config["DEBUG"] = True
-    
+
     #create a list of books
     books = [
         {'id': 0,
@@ -413,18 +413,18 @@ Execute o mesmo prompt novamente e você observará que vai gerar uma resposta l
          'first_sentence': 'to wound the autumnal city.',
          'published': '1975'}
     ]
-    
+
     #create an endpoint for the API
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>Books API</h1>
     <p>A prototype API for retrieving books.</p>'''
-    
+
     #create an endpoint to return all books
     @app.route('/api/v1/resources/books/all', methods=['GET'])
     def api_all():
         return jsonify(books)
-    
+
     #create an endpoint to return a single book
     @app.route('/api/v1/resources/books', methods=['GET'])
     def api_id():
@@ -435,20 +435,20 @@ Execute o mesmo prompt novamente e você observará que vai gerar uma resposta l
             id = int(request.args['id'])
         else:
             return "Error: No id field provided. Please specify an id."
-    
+
         #create an empty list for our results
         results = []
-    
+
         #loop through the data and match results that fit the requested ID
         #IDs are unique, but other fields might return many results
         for book in books:
             if book['id'] == id:
                 results.append(book)
-    
+
         #use the jsonify function from Flask to convert our list of
         #Python dictionaries to the JSON format
         return jsonify(results)
-    
+
     app.run()
     ```
 
@@ -468,34 +468,34 @@ Temperatura é um valor entre 0 e 1, onde 0 é o mais determinístico e 1 é o m
     #import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     #create an instance of the Flask class
     app = flask.Flask(__name__)
-    
+
     #create an endpoint for the API
     @app.route('/api/v1/endpoint', methods=['GET'])
     def api_endpoint():
         #get the request data
         data = request.get_json()
-    
+
         #process the data
         result = process_data(data)
-    
+
         #return the result
         return jsonify(result)
-    
+
     #function to process the data
     def process_data(data):
         #process the data
         result = {'result': 'success'}
-    
+
         #return the result
         return result
-    
+
     #run the Flask app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 Execute o prompt novamente e você verá este resultado:
@@ -504,34 +504,34 @@ Execute o prompt novamente e você verá este resultado:
     #import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     #create a Flask app
     app = flask.Flask(__name__)
-    
+
     #create a route for the API
     @app.route('/api', methods=['GET'])
     def api_call():
         #get the data from the request
         data = request.get_json()
-        
+
         #process the data
         result = process_data(data)
-        
+
         #return the result
         return jsonify(result)
-    
+
     #define the process_data function
     def process_data(data):
         #do something with the data
         result = data + 1
-        
+
         #return the result
         return result
-    
+
     #run the app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 Há apenas uma pequena diferença entre essas duas saídas. Vamos fazer o contrário desta vez, vamos definir a temperatura para 0.9:
@@ -540,34 +540,34 @@ Há apenas uma pequena diferença entre essas duas saídas. Vamos fazer o contr�
     # Import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     # Create a Flask app
     app = flask.Flask(__name__)
-    
+
     # Create a route for the API
     @app.route('/api', methods=['GET'])
     def api_call():
         # Get the data from the request
         data = request.args
-    
+
         # Process the data
         result = process_data(data)
-    
+
         # Return the result
         return jsonify(result)
-    
+
     # Function to process the data
     def process_data(data):
         # Do something with the data
         result = data + 1
-    
+
         # Return the result
         return result
-    
+
     # Run the app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 e a segunda tentativa em 0,9 como valor de temperatura:
@@ -575,25 +575,25 @@ e a segunda tentativa em 0,9 como valor de temperatura:
     ```python
     import flask
     from flask import request, jsonify
-    
+
     # create the Flask app
     app = flask.Flask(__name__)
     app.config['DEBUG'] = True
-    
+
     # create some test data
     books = [
         {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
         {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
         {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
     ]
-    
+
     # create an endpoint
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>Welcome to our book API!</h1>'''
-    
+
     @app.route('/api/v1/resources/books
-    
+
     ```
 
 Como você pode ver, os resultados não poderiam ser mais variados.
@@ -620,14 +620,14 @@ Aqui está o código em Python que mostra como criar uma API simples usando o Fl
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/')
     def hello():
         name = request.args.get('name', 'World')
         return f'Hello, {name}!'
-    
+
     if __name__ == '__main__':
         app.run()
     ```
@@ -641,7 +641,7 @@ Por favor, tente resolver a tarefa adicionando prompts adequados ao código.
 > [!DICA]
 > Formule um prompt para pedir que ele melhor. É uma boa ideia limitar quantas melhorias devem ter. Você também pode pedir para melhorar de uma certa maneira, por exemplo, arquitetura, desempenho, segurança, etc.
 
-[Solution](../../solution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](../../python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Verificação de conhecimento
 

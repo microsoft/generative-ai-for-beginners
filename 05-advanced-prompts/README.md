@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=f3615e46-dbca-477c-832d-21eef95cd9f3?WT.mc_id=academic-105485-koreyst)
 
 Let's recap some learnings from the previous chapter:
 
@@ -8,7 +8,7 @@ Let's recap some learnings from the previous chapter:
 
 There are also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
 
-At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques that can be applied to any LLM.  
+At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques that can be applied to any LLM.
 
 ## Introduction
 
@@ -58,19 +58,33 @@ First, we need to understand that prompting is an _emergent_ property of an LLM 
 
 There are some basic techniques that we can use to prompt an LLM. Let's explore them.
 
-- **Few shot prompting**, this is the most basic form of prompting. It's a single prompt with a few examples.
+- **Zero-shot prompting**, this is the most basic form of prompting. It's a single prompt requesting a response from the LLM based solely on its training data.
+- **Few-shot prompting**, this type of prompting guides the LLM by providing 1 or more examples it can rely on to generate its response.
 - **Chain-of-thought**, this type of prompting tells the LLM how to break down a problem into steps.
 - **Generated knowledge**, to improve the response of a prompt, you can provide generated facts or knowledge additionally to your prompt.
 - **Least to most**, like chain-of-thought, this technique is about breaking down a problem into a series of steps and then ask these steps to be performed in order.
 - **Self-refine**, this technique is about critiquing the LLM's output and then asking it to improve.
 - **Maieutic prompting**. What you want here is to ensure the LLM answer is correct and you ask it to explain various parts of the answer. This is a form of self-refine.
 
-### Few-shot prompting
+### Zero-shot prompting
 
-This style of prompting is very simple, it may consist of a single prompt and possibly a few examples. This technique is probably what you're using as you're starting to learn about LLMs. Here's an example:
+This style of prompting is very simple, it consists of a single prompt. This technique is probably what you're using as you're starting to learn about LLMs. Here's an example:
 
 - Prompt: "What is Algebra?"
 - Answer: "Algebra is a branch of mathematics that studies mathematical symbols and the rules for manipulating these symbols."
+
+### Few-shot prompting
+
+This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional a task-specific data. Here's an example:
+
+- Prompt: "Write a poem in the style of Shakespeare. Here are a few examples of Shakespearean sonnets.:
+  Sonnet 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
+  Sonnet 116: 'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds...'
+  Sonnet 132: 'Thine eyes I love, and they, as pitying me, Knowing thy heart torment me with disdain,...'
+  Now, write a sonnet about the beauty of the moon."
+- Answer: "Upon the sky, the moon doth softly gleam, In silv'ry light that casts its gentle grace,..."
+
+Examples provide the LLM with the context, format or style of the desired output. They help the model understand the specific task and generate more accurate and relevant responses.
 
 ### Chain-of-thought
 
@@ -98,7 +112,7 @@ Here's how:
   Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?"
   Answer: 1
 
-Note how we write substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.  
+Note how we write substantially longer prompts with another example, a calculation and then the original prompt and we arrive at the correct answer 1.
 
 As you can see chain-of-thought is a very powerful technique.
 
@@ -110,7 +124,7 @@ As an example, this is what your prompt then can look like if you're in the insu
 
     ```text
     {{company}}: {{company_name}}
-    {{products}}: 
+    {{products}}:
     {{products_list}}
     Please suggest an insurance given the following budget and requirements:
     Budget: {{budget}}
@@ -123,13 +137,13 @@ Here's an example of how the prompt could look like once the variables have been
 
     ```text
     Insurance company: ACME Insurance
-    Insurance products (cost per month): 
+    Insurance products (cost per month):
     - Car, cheap, 500 USD
-    - Car, expensive, 1100 USD 
+    - Car, expensive, 1100 USD
     - Home, cheap, 600 USD
     - Home, expensive, 1200 USD
     - Life, cheap, 100 USD
-    
+
     Please suggest an insurance given the following budget and requirements:
     Budget: $1000
     Requirements: Car, Home
@@ -139,11 +153,11 @@ Running this prompt through an LLM will produce a response like this:
 
     ```output
     , and Life insurance
-    
-    Given the budget and requirements, we suggest the following insurance package from ACME Insurance: 
-    - Car, cheap, 500 USD 
-    - Home, cheap, 600 USD 
-    - Life, cheap, 100 USD 
+
+    Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
+    - Car, cheap, 500 USD
+    - Home, cheap, 600 USD
+    - Life, cheap, 100 USD
     Total cost: $1,200 USD
     ```
 
@@ -151,13 +165,13 @@ As you can see, it also suggests the Life insurance, which it shouldn't. This re
 
     ```text
     Insurance company: ACME Insurance
-    Insurance products (cost per month): 
+    Insurance products (cost per month):
     - type: Car, cheap, cost: 500 USD
-    - type: Car, expensive, cost: 1100 USD 
+    - type: Car, expensive, cost: 1100 USD
     - type: Home, cheap, cost: 600 USD
     - type: Home, expensive, cost: 1200 USD
     - type: Life, cheap, cost: 100 USD
-    
+
     Please suggest an insurance given the following budget and requirements:
     Budget: $1000 restrict choice to types: Car, Home
     ```
@@ -208,11 +222,11 @@ AI Answer:
     ```python
     import flask
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return 'Products'
-    
+
     @app.route('/customers')
     def customers():
         return 'Customers'
@@ -224,27 +238,27 @@ AI Answer:
 
     ```text
     Sure, here are three suggestions to improve the code:
-    
+
     Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
-    
+
     Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
-    
+
     Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
     ```
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return f'This is the {request.path} page'
-    
+
     @app.route('/customers')
     def customers():
         return f'This is the {request.path} page'
-    
+
     if __name__ == '__main__':
         app.run()
     ```
@@ -264,7 +278,7 @@ Repeat 2 and 3 until you've gone through all the parts and you're satisfied with
 Here's an example prompt:
 
 > prompt: How can I create a crisis plan to mitigate a pandemic in 5 steps?
-LLM answer:
+> LLM answer:
 
     ```text
     1. Identify the risks
@@ -280,7 +294,7 @@ It's identified 5 steps, but can we determine if this is correct? Let's ask the 
 
     ```text
     The risks are the following:
-    
+
     - Loss of life
     - Loss of business
     - Loss of reputation
@@ -314,34 +328,34 @@ LLMs are nondeterministic by nature, meaning that you will get different results
     # Import necessary modules
     import flask
     from flask import request, jsonify
-    
+
     # Create a Flask app
     app = flask.Flask(__name__)
-    
+
     # Create a route for the API
     @app.route('/api', methods=['GET'])
     def api():
         # Get the data from the request
         data = request.args
-    
+
         # Process the data
         result = process_data(data)
-    
+
         # Return the result as JSON
         return jsonify(result)
-    
+
     # Function to process the data
     def process_data(data):
         # Do something with the data
         result = data + 1
-    
+
         # Return the result
         return result
-    
+
     # Run the app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 Running the same prompt again generates a slightly different response:
@@ -350,11 +364,11 @@ Running the same prompt again generates a slightly different response:
     #import necessary packages
     import flask
     from flask import request, jsonify
-    
+
     #create the Flask application
     app = flask.Flask(__name__)
     app.config["DEBUG"] = True
-    
+
     #create a list of books
     books = [
         {'id': 0,
@@ -373,18 +387,18 @@ Running the same prompt again generates a slightly different response:
          'first_sentence': 'to wound the autumnal city.',
          'published': '1975'}
     ]
-    
+
     #create an endpoint for the API
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>Books API</h1>
     <p>A prototype API for retrieving books.</p>'''
-    
+
     #create an endpoint to return all books
     @app.route('/api/v1/resources/books/all', methods=['GET'])
     def api_all():
         return jsonify(books)
-    
+
     #create an endpoint to return a single book
     @app.route('/api/v1/resources/books', methods=['GET'])
     def api_id():
@@ -395,20 +409,20 @@ Running the same prompt again generates a slightly different response:
             id = int(request.args['id'])
         else:
             return "Error: No id field provided. Please specify an id."
-    
+
         #create an empty list for our results
         results = []
-    
+
         #loop through the data and match results that fit the requested ID
         #IDs are unique, but other fields might return many results
         for book in books:
             if book['id'] == id:
                 results.append(book)
-    
+
         #use the jsonify function from Flask to convert our list of
         #Python dictionaries to the JSON format
         return jsonify(results)
-    
+
     app.run()
     ```
 
@@ -428,34 +442,34 @@ Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 
     #import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     #create an instance of the Flask class
     app = flask.Flask(__name__)
-    
+
     #create an endpoint for the API
     @app.route('/api/v1/endpoint', methods=['GET'])
     def api_endpoint():
         #get the request data
         data = request.get_json()
-    
+
         #process the data
         result = process_data(data)
-    
+
         #return the result
         return jsonify(result)
-    
+
     #function to process the data
     def process_data(data):
         #process the data
         result = {'result': 'success'}
-    
+
         #return the result
         return result
-    
+
     #run the Flask app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 Running the prompt again gives us this outcome:
@@ -464,70 +478,70 @@ Running the prompt again gives us this outcome:
     #import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     #create a Flask app
     app = flask.Flask(__name__)
-    
+
     #create a route for the API
     @app.route('/api', methods=['GET'])
     def api_call():
         #get the data from the request
         data = request.get_json()
-        
+
         #process the data
         result = process_data(data)
-        
+
         #return the result
         return jsonify(result)
-    
+
     #define the process_data function
     def process_data(data):
         #do something with the data
         result = data + 1
-        
+
         #return the result
         return result
-    
+
     #run the app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
-There's only a tiny difference between these two outputs.  Let's do the opposite this time, let's set the temperature to 0.9:
+There's only a tiny difference between these two outputs. Let's do the opposite this time, let's set the temperature to 0.9:
 
     ```python
     # Import necessary libraries
     import flask
     from flask import request, jsonify
-    
+
     # Create a Flask app
     app = flask.Flask(__name__)
-    
+
     # Create a route for the API
     @app.route('/api', methods=['GET'])
     def api_call():
         # Get the data from the request
         data = request.args
-    
+
         # Process the data
         result = process_data(data)
-    
+
         # Return the result
         return jsonify(result)
-    
+
     # Function to process the data
     def process_data(data):
         # Do something with the data
         result = data + 1
-    
+
         # Return the result
         return result
-    
+
     # Run the app
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 and the second attempt at 0.9 as temperature value:
@@ -535,34 +549,34 @@ and the second attempt at 0.9 as temperature value:
     ```python
     import flask
     from flask import request, jsonify
-    
+
     # create the Flask app
     app = flask.Flask(__name__)
     app.config['DEBUG'] = True
-    
+
     # create some test data
     books = [
         {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
         {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
         {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
     ]
-    
+
     # create an endpoint
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>Welcome to our book API!</h1>'''
-    
+
     @app.route('/api/v1/resources/books
-    
+
     ```
 
 As you can see, the results couldn't be more varied.
 
-> Note, that there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.   
+> Note, that there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.
 
 ## Good practices
 
-There are many practices you can apply to try to get what you want. You will find your own style as you use prompting more and more. 
+There are many practices you can apply to try to get what you want. You will find your own style as you use prompting more and more.
 
 Additionally to the techniques we've covered, there are some good practices to consider when prompting an LLM.
 
@@ -572,7 +586,7 @@ Here are some good practices to consider:
 - Limit the output. If you want a specific number of items or a specific length, specify it.
 - **Specify both what and how**. Remember to mention both what you want and how you want it, for example "Create a Python Web API with routes products and customers, divide it into 3 files".
 - **Use templates**. Often, you will want to enrich your prompts with data from your company. Use templates to do this. Templates can have variables that you replace with actual data.
-- **Spell correctly**. LLMs might provide you with a correct response, but if you spell correctly, you will get a better response.  
+- **Spell correctly**. LLMs might provide you with a correct response, but if you spell correctly, you will get a better response.
 
 ## Assignment
 
@@ -580,14 +594,14 @@ Here's code in Python showing how to build a simple API using Flask:
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/')
     def hello():
         name = request.args.get('name', 'World')
         return f'Hello, {name}!'
-    
+
     if __name__ == '__main__':
         app.run()
     ```
@@ -601,7 +615,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
-[Solution](./solution.py?WT.mc_id=academic-105485-koreyst)
+[Solution](./python/aoai-solution.py)
 
 ## Knowledge check
 
@@ -615,7 +629,7 @@ A: 1, because chain-of-thought is about showing the LLM how to solve a problem b
 
 ## 🚀 Challenge
 
-You just used the self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse? 
+You just used the self-refine technique in the assignment. Take any program you built and consider what improvements you would want to apply to it. Now use the self-refine technique to apply the proposed changes. What did you think the result, better or worse?
 
 ## Great Work! Continue Your Learning
 

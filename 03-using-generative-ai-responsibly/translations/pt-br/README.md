@@ -1,6 +1,6 @@
 # Usando a IA Generativa de Forma Responsável
 
-[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]() 
+[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
 
 > **Vídeo em Breve**
 
@@ -44,9 +44,9 @@ Vamos dar, por exemplo, a criação de um recurso para nossa startup que permite
 
 O modelo produz uma resposta como a que está abaixo:
 
-![Prompt dizendo "Quem foi o único sobrevivente do Titanic"](../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp?WT.mc_id=academic-105485-koreyst)
+![Prompt dizendo "Quem foi o único sobrevivente do Titanic"](<../../../03-using-generative-ai-responsibly/images/2135-ChatGPT(1)_11zon.webp?WT.mc_id=academic-105485-koreyst>)
 
-> *(Fonte: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))*
+> _(Fonte: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
 Esta é uma resposta muito confiante e completa. Infelizmente, está incorreta. Mesmo com uma quantidade mínima de pesquisa, alguém descobriria que houve mais de um sobrevivente do Titanic. Para um estudante que está começando a pesquisar esse tópico, essa resposta pode ser persuasiva o suficiente para não ser questionada e tratada como fato. As consequências disso podem levar ao sistema de IA sendo pouco confiável e impactar negativamente a reputação de nossa startup.
 
@@ -96,7 +96,7 @@ Agora é hora de encontrar maneiras de prevenir ou limitar o dano potencial caus
 
 - **Metaprompt**: metaprompts e fundamentação são maneiras de direcionar ou limitar o modelo com base em determinados comportamentos e informações. Isso poderia ser o uso de entradas do sistema para definir certos limites do modelo. Além disso, fornecer saídas mais relevantes para o escopo ou domínio do sistema.
 
- Também pode ser o uso de técnicas como a Recuperação de Geração Aumentada (RAG) para fazer com que o modelo obtenha informações apenas de uma seleção de fontes confiáveis. Há uma lição posterior neste curso para [criar aplicações de busca](../../../08-building-search-applications/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)
+Também pode ser o uso de técnicas como a Recuperação de Geração Aumentada (RAG) para fazer com que o modelo obtenha informações apenas de uma seleção de fontes confiáveis. Há uma lição posterior neste curso para [criar aplicações de busca](../../../08-building-search-applications/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **Experiência do Usuário**: a camada final é onde o usuário interage diretamente com o modelo por meio da interface de nosso aplicativo de alguma forma. Dessa forma, podemos projetar a UI/UX para limitar o usuário quanto aos tipos de entradas que podem enviar ao modelo, bem como ao texto ou imagens exibidos ao usuário. Ao implantar o aplicativo de IA, também devemos ser transparentes sobre o que nossa aplicação de IA Generativa pode e não pode fazer.
 
@@ -110,7 +110,7 @@ Criar uma prática operacional em torno de suas aplicações de IA é a etapa fi
 
 ## Ferramentas
 
-Embora o trabalho de desenvolver soluções de IA Responsável possa parecer muito, porém é um trabalho que vale a pena. À medida que a área de IA Generativa cresce, mais ferramentas para ajudar os desenvolvedores a integrar eficientemente a responsabilidade em seus fluxos de trabalho amadurecerão. Por exemplo, o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst ) pode ajudar a detectar conteúdo e imagens prejudiciais por meio de uma solicitação de API.
+Embora o trabalho de desenvolver soluções de IA Responsável possa parecer muito, porém é um trabalho que vale a pena. À medida que a área de IA Generativa cresce, mais ferramentas para ajudar os desenvolvedores a integrar eficientemente a responsabilidade em seus fluxos de trabalho amadurecerão. Por exemplo, o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) pode ajudar a detectar conteúdo e imagens prejudiciais por meio de uma solicitação de API.
 
 ## Verificação de Conhecimento
 
@@ -128,7 +128,6 @@ Leia sobre o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-serv
 
 ## Ótimo Trabalho, Continue Sua Aprendizagem
 
-Quer aprender mais sobre como construir com IA Generativa de forma responsável? Acesse a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre esse tópico.
+Quer aprender mais sobre como construir com IA Generativa de forma responsável? Acesse a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre esse tópico.
 
 Vamos agora para a Lição 4, onde exploraremos os [Fundamentos da Engenharia de Prompt](../../../04-prompt-engineering-fundamentals/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
-

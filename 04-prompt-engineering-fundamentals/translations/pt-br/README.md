@@ -1,6 +1,6 @@
 # Fundamentos de Engenharia de Prompt
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=d54c0c69-b183-4a6c-80ed-8b1a8f299cff?WT.mc_id=academic-105485-koreyst)
 
 A forma como você escreve seu prompt para o LLM importa. Um prompt cuidadosamente elaborado pode alcançar um resultado melhor do que um que não é. Mas o que são esses conceitos, prompt, Engenharia de Prompt e como posso melhorar o que envio para o LLM? Perguntas como essas são o que este capítulo e o próximo estão procurando responder.
 
@@ -80,7 +80,7 @@ Para ter uma intuição de como a tokenização funciona, experimente ferramenta
 
 ### Conceito: Modelos Fundamentais
 
-Uma vez que um prompt é tokenizado, a função principal do ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (ou modelo fundamental) é prever o token nessa sequência. Como os LLMs são treinados em conjuntos massivos de dados de texto, eles têm uma boa compreensão das relações estatísticas entre tokens e podem fazer essa previsão com alguma confiança. 
+Uma vez que um prompt é tokenizado, a função principal do ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (ou modelo fundamental) é prever o token nessa sequência. Como os LLMs são treinados em conjuntos massivos de dados de texto, eles têm uma boa compreensão das relações estatísticas entre tokens e podem fazer essa previsão com alguma confiança.
 
 > Observação: eles não compreendem o _significado_ das palavras no prompt ou token; eles apenas veem um padrão que podem "completar" com sua próxima previsão. Eles podem continuar prevendo a sequência até serem interrompidos pela intervenção do usuário ou alguma condição preestabelecida.
 
@@ -122,6 +122,7 @@ Vamos ver isso em ação no OpenAI ou Azure OpenAI Playground:
 ### Exemplo de Alucinações
 
 Quer ter uma ideia de como as alucinações funcionam? Pense em um prompt que instrua a IA a gerar conteúdo para um tópico inexistente (para garantir que não seja encontrado no conjunto de dados de treinamento). Por exemplo - eu tentei este prompt:
+
 > **Prompt:** generate a lesson plan on the Martian War of 2076.
 
 Uma busca na web mostrou que havia relatos fictícios (por exemplo, séries de televisão ou livros) sobre guerras marcianas - mas nenhuma em 2076. O bom senso também nos diz que 2076 está _no futuro_ e, portanto, não pode ser associado a um evento real.
@@ -181,8 +182,8 @@ Vimos por que a Engenharia de Prompt é importante - agora vamos entender como o
 
 Vamos começar com o prompt básico: uma entrada de texto enviada ao modelo sem nenhum outro contexto. Aqui está um exemplo - quando enviamos as primeiras palavras do hino nacional dos EUA para a [API de Completions da OpenAI](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst), ela instantaneamente _completa_ a resposta com as próximas linhas, ilustrando o comportamento básico de previsão.
 
-| Prompt (Input) | Completion (Output) |
-|:---|:---|
+| Prompt (Input)     | Completion (Output)                                                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
 | Oh say can you see | It sounds like you're starting the lyrics to "The Star-Spangled Banner," the national anthem of the United States. The full lyrics are ... |
 
 ### Prompt Complexo
@@ -210,11 +211,11 @@ response = openai.ChatCompletion.create(
 
 Nos exemplos acima, o prompt do usuário era uma simples consulta de texto que pode ser interpretada como uma solicitação de informações. Com prompts de _instrução_, podemos usar esse texto para especificar uma tarefa de maneira mais detalhada, fornecendo orientações melhores para a IA. Aqui está um exemplo:
 
-| Prompt (Input) | Completion (Output) | Instruction Type |
-|:---|:---|:---|
-| Write a description of the Civil War | _returned a simple paragraph_ | Simple|
-|Write a description of the Civil War. Provide key dates and events and describe their significance | _returned a paragraph followed by a list of key event dates with descriptions_| Complex  |
-|Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_| Complex. Formatted. |
+| Prompt (Input)                                                                                                                                                                                                                         | Completion (Output)                                                                                                        | Instruction Type    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
+| Write a description of the Civil War                                                                                                                                                                                                   | _returned a simple paragraph_                                                                                              | Simple              |
+| Write a description of the Civil War. Provide key dates and events and describe their significance                                                                                                                                     | _returned a paragraph followed by a list of key event dates with descriptions_                                             | Complex             |
+| Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_ | Complex. Formatted. |
 
 ## Conteúdo Primário
 
@@ -225,9 +226,8 @@ Nos exemplos acima, o prompt ainda era bastante aberto, permitindo que o LLM dec
 
 Aqui está um exemplo em que a instrução é: "resuma isso em 2 frases".
 
-
-| Prompt (Input) | Completion (Output) |
-|:---|:---|
+| Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Completion (Output)                                                                                                                                                                                                                                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, the fifth planet from the Sun, is the largest in the Solar System and is known for being one of the brightest objects in the night sky. Named after the Roman god Jupiter, it's a gas giant whose mass is two-and-a-half times that of all other planets in the Solar System combined. |
 
 O segmento de conteúdo primário pode ser usado de várias maneiras para impulsionar instruções mais eficazes:
@@ -248,14 +248,12 @@ O prompt agora consiste em três componentes:
 - Alguns exemplos da saída desejada
 - O início de um novo exemplo (que se torna uma descrição implícita da tarefa)
 
-    
-    | Learning Type | Prompt (Input) | Completion (Output) |
-    |:---|:---|:---|
-    | Zero-shot  | "The Sun is Shining". Translate to Spanish  | "El Sol está brillando".|
-    | One-shot | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" => | "Es un día frío y ventoso". |
-    | Few-shot | The player ran the bases => Baseball  <br/> The player hit an ace => Tennis  <br/> The player hit a six => Cricket  <br/> The player made a slam-dunk => | Basketball |
-    | | | |
-    
+  | Learning Type | Prompt (Input)                                                                                                                                        | Completion (Output)         |
+  | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
+  | Zero-shot     | "The Sun is Shining". Translate to Spanish                                                                                                            | "El Sol está brillando".    |
+  | One-shot      | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                 | "Es un día frío y ventoso". |
+  | Few-shot      | The player ran the bases => Baseball <br/> The player hit an ace => Tennis <br/> The player hit a six => Cricket <br/> The player made a slam-dunk => | Basketball                  |
+  |               |                                                                                                                                                       |                             |
 
 Observe como tivemos que fornecer instruções explícitas ("Traduza para o espanhol") no prompting de `zero-shot`, mas isso é inferido no exemplo de `one-shot`. O exemplo `few-shot` mostra como adicionar mais exemplos permite que os modelos façam inferências mais precisas sem instruções adicionais.
 
@@ -263,13 +261,12 @@ Observe como tivemos que fornecer instruções explícitas ("Traduza para o espa
 
 Outra técnica para usar conteúdo primário é fornecer _dicas_ em vez de exemplos. Neste caso, estamos dando ao modelo um empurrão na direção certa ao _iniciá-lo_ com um trecho que reflete o formato da resposta desejada. O modelo então "pega a dica" para continuar nessa linha.
 
-
-| Number of Cues | Prompt (Input) | Completion (Output) |
-|:---|:---|:---|
-| 0  | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This**  | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky..|
-| 1 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times. |
-| 2 | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.  <br/>**Summarize This** <br/> Top 3 Facts We Learned: | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ... |
-| | | |
+| Number of Cues | Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Completion (Output)                                                                                                                                                                                                                                                                                       |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This**                                       | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky.. |
+| 1              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times.                        |
+| 2              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> Top 3 Facts We Learned:         | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ...                                                                       |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
 Observe como tivemos que fornecer uma instrução explícita ("Resuma Isso") no exemplo de zero dicas, mas isso é inferido no exemplo de uma dica. O exemplo de duas dicas mostra como adicionar mais dicas permite que os modelos façam inferências mais precisas sem instruções adicionais.
 
@@ -326,18 +323,17 @@ A Engenharia de Prompt é um processo de tentativa e erro, então tenha em mente
 
 Agora, vamos dar uma olhada nas práticas recomendadas comuns pela [Open AI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) e pelos praticantes da [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
 
-
-| What | Why |
-|:---|:---|
-| Evaluate the latest models. | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions. |
-| Separate instructions & context | Check if your model/provider defines _delimiters_ to distinguish instructions, primary and secondary content more clearly. This can help models assign weights more accurately to tokens. |
-|Be specific and clear | Give more details about the desired context, outcome, length, format, style etc. This will improve both the quality and consistency of responses. Capture recipes in reusable templates. |
-|Be descriptive, use examples |Models may respond better to a "show and tell" approach. Start with a `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies.|
-| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.|
-|Double Down | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.|
-| Order Matters | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.|
-|Give the model an “out” | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or hallucinatory responses. |
-| | |
+| What                              | Why                                                                                                                                                                                                                                               |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Evaluate the latest models.       | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions.                                                                                |
+| Separate instructions & context   | Check if your model/provider defines _delimiters_ to distinguish instructions, primary and secondary content more clearly. This can help models assign weights more accurately to tokens.                                                         |
+| Be specific and clear             | Give more details about the desired context, outcome, length, format, style etc. This will improve both the quality and consistency of responses. Capture recipes in reusable templates.                                                          |
+| Be descriptive, use examples      | Models may respond better to a "show and tell" approach. Start with a `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
+| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
+| Double Down                       | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.                                                         |
+| Order Matters                     | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.                                                               |
+| Give the model an “out”           | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or hallucinatory responses.                                                      |
+|                                   |                                                                                                                                                                                                                                                   |
 
 Como em qualquer prática recomendada, lembre-se de que _seus resultados podem variar_ com base no modelo, na tarefa e no domínio. Use essas práticas como ponto de partida e itere para encontrar o que funciona melhor para você. Reavalie constantemente seu processo de engenharia de prompt à medida que novos modelos e ferramentas se tornam disponíveis, com foco na escalabilidade do processo e na qualidade das respostas.
 
@@ -397,6 +393,6 @@ Veja se você consegue aproveitar a técnica de "dica" com a instrução: Comple
 
 ## Ótimo Trabalho! Continue Sua Aprendizagem
 
-Quer aprender mais sobre diferentes conceitos de Engenharia de Instruções? Vá para a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tema.
+Quer aprender mais sobre diferentes conceitos de Engenharia de Instruções? Vá para a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tema.
 
 Agora, vamos para a Lição 5, onde exploraremos [técnicas avançadas de instrução](../../../05-advanced-prompts/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!

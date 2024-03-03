@@ -1,8 +1,8 @@
 # 第二章 : 探索和比较不同的 LLMs
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=39aa0f98-826a-4f71-a24d-e888a8e80246?WT.mc_id=academic-105485-koreyst)
 
-> *点击该图片看本章导学视频*
+> _点击该图片看本章导学视频_
 
 在上一章中，我们了解了生成式人工智能如何改变技术格局、LLMs 工作原理，以及企业（例如“Our startup”）如何将它们应用到自己的应用场景中并得到发展！ 在本章中，我们将比较和对比不同类型的大型语言模型以了解它们的优缺点。
 
@@ -50,8 +50,7 @@ LLM 模型有许多不同类型，您选择的模型取决于您的用途、您�
 
 ![基础模型与 LLMs](../../images/FoundationModel.png?WT.mc_id=academic-105485-koreyst)
 
-图片来源：【基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium
-](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
+图片来源：[基础模型和大语言模型基本指南| 巴巴尔·M·巴蒂 (Babar M Bhatti) | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 为了进一步阐明这种区别，我们以 ChatGPT 为例。 为了构建 ChatGPT 的第一个版本，名为 GPT-3.5 的模型作为基础模型。 这意味着 OpenAI 使用一些特定于聊天的数据来创建 GPT-3.5 的调整版本，专门用于在对话场景（例如聊天机器人）中让其有更好的表现。
 
@@ -65,7 +64,7 @@ LLM 模型有许多不同类型，您选择的模型取决于您的用途、您�
 
 开源模型是向公众开放并且任何人都可以使用的模型。 它们通常由创建它们的公司或研究团体提供。 这些模型可以针对 LLMs 的各种用例进行检查、修改和定制。 然而，它们并不总是针对生产用途进行优化，并且可能不如专有模型具备高性能。 此外，开源模型的资金可能有限，并且它们可能无法长期维护或可能无法根据最新研究进行更新。 流行的开源模型的例子包括 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Bloom](https://sapling.ai/llm/bloom) 和 [ LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst)。
 
-专有模型是公司拥有的模型，不向公众提供。 这些模型通常针对生产用途进行了优化。 但是，不允许针对特定的使用场景进行检查、修改或定制它们。 另外，它们并不总是免费提供，可能需要订阅或付费才能使用。 此外，用户无法控制用于训练模型的数据，这意味着他们应该委托模型所有者确保对数据隐私和负责任地使用人工智能的承诺。 流行的专有模型的例子包括 [OpenAI 模型](https://platform.openai.com/docs/models/overview)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) 或 [Claude 2] （https://www.anthropic.com/index/claude-2）。
+专有模型是公司拥有的模型，不向公众提供。 这些模型通常针对生产用途进行了优化。 但是，不允许针对特定的使用场景进行检查、修改或定制它们。 另外，它们并不总是免费提供，可能需要订阅或付费才能使用。 此外，用户无法控制用于训练模型的数据，这意味着他们应该委托模型所有者确保对数据隐私和负责任地使用人工智能的承诺。 流行的专有模型的例子包括 [OpenAI 模型](https://platform.openai.com/docs/models/overview)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) 或 [Claude 2](https://www.anthropic.com/index/claude-2)。
 
 ### 认识嵌入式，图像生成，文本或代码生成
 
@@ -81,7 +80,7 @@ LLMs 还可以根据其产生的输出进行分类。
 
 文本或代码生成模型主要是生成文本或代码。 这些模型通常用于文本摘要、翻译和问答。 文本生成模型通常在大型文本数据集上进行训练，例如 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html)，并且可用于生成新文本或回答问题。 代码生成模型，例如 [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)，通常在大型代码数据集（如 GitHub）上进行训练，可用于生成新代码或修复现有代码中的错误。
 
- ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
+![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
 ### 了解编码-解码器与独立解码器
 
@@ -93,13 +92,13 @@ LLMs 还可以根据其产生的输出进行分类。
 
 审阅者就像一个独立编码器的模型，他们查看编写的课程和答案，注意它们之间的关系并通过上下文进行理解，但他们不擅于生成内容。独立编码器模型的一个例子是 BERT。
 
-想象一下，我们也可以有人可以创建和审查测验，这是一个编码器-解码器模型如 BART 和 T5 
+想象一下，我们也可以有人可以创建和审查测验，这是一个编码器-解码器模型如 BART 和 T5
 
 ### 理解服务与模型
 
 现在，我们来谈谈服务和模型之间的区别。 服务是云服务提供商提供的产品，通常是模型、数据和其他组件的结合。 模型是服务的核心组件，通常是基础模型，例如各种 LLM。
 
-服务通常针对生产环境进行了优化，并且通常比模型让用户通过图形界面使用。 但服务并不总是免费提供的，可能需要订阅或付费才能使用，以换取服务所有者的设备和相关资源，优化费用并轻松扩展。 服务的一个例子是 [Azure OpenAI 服务](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst)，它提供按需付费计划，意味着用户根据服务用量付费。此外，Azure OpenAI  Service 在模型功能上还提供企业级安全性和负责任的 AI 框架。
+服务通常针对生产环境进行了优化，并且通常比模型让用户通过图形界面使用。 但服务并不总是免费提供的，可能需要订阅或付费才能使用，以换取服务所有者的设备和相关资源，优化费用并轻松扩展。 服务的一个例子是 [Azure OpenAI 服务](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst)，它提供按需付费计划，意味着用户根据服务用量付费。此外，Azure OpenAI Service 在模型功能上还提供企业级安全性和负责任的 AI 框架。
 
 模型是带有参数、权重等的神经网络。 允许公司在本地运营需要购买设备、构建并购买许可证或使用开源模型。 像 LLaMA 这样的模型使用就需要额外的算力运行
 
@@ -145,7 +144,7 @@ LLMs 还可以根据其产生的输出进行分类。
 
 ![LLMs deployment](../../images/Deploy.png?WT.mc_id=academic-105485-koreyst)
 
-图片来源: [企业部署LLM的四种方式| Fiddler AI 博客](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+图片来源: [企业部署 LLM 的四种方式| Fiddler AI 博客](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
 ### 通过上下文的提示工程
 
@@ -178,8 +177,6 @@ LLMs 有一个限制，即他们只能使用训练期间使用过的数据来生
 
 从头开始培训 LLMs 无疑是最困难、最复杂的方法，需要大量数据、熟练资源和适当的计算能力。 仅在企业具有特定领域的用例和大量以特定领域为中心的数据的情况下才应考虑此选项。
 
-
-
 ## 知识检查
 
 提升 LLMs 输出效率最好的方法是什么？
@@ -196,6 +193,6 @@ A：3，如果您有时间和资源以及高质量的数据，微调是保持最
 
 ## 继续您的学习旅程
 
-想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](../../../13-continued-learning/translations/cn/README.md?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
+想要了解更多关于不同的生成人工智能概念吗？ 转至[进阶学习的页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 查找有关本章的其他重要资源。
 
 前往第三章，我们将了解如何[负责任地使用生成式 AI 进行应用构建](../../../03-using-generative-ai-responsibly/translations/cn/README.md?WT.mc_id=academic-105485-koreyst)！
