@@ -19,7 +19,7 @@
 
 这要求我们采用新的范式来适应这一变化，以正确的激励措施引导其发展。我们可以将传统的AI应用称为“ML应用”，将基于最新技术和技术的新型AI应用称为“GenAI应用”或简称“AI应用”。这种分类方式从多个方面改变了我们的讨论框架，如下比较所示。
 
-![LLMOps vs. MLOps comparison](./images/01-llmops-shift.png?WT.mc_id=academic-105485-koreys)
+![LLMOps vs. MLOps comparison](../../images/01-llmops-shift.png?WT.mc_id=academic-105485-koreys)
 
 注意，在LLMOps中，我们更加关注应用开发者，并将集成作为关键点，采用“模型即服务”，并围绕以下几个关键指标进行思考：
 
@@ -33,7 +33,7 @@
 
 首先，让我们通过下图了解生命周期及其变化。
 
-![LLMOps infographic](./images/02-llmops.png?WT.mc_id=academic-105485-koreys)
+![LLMOps infographic](../../images/02-llmops.png?WT.mc_id=academic-105485-koreys)
 
 可以看出，这与MLOps的传统生命周期有所不同。LLMs引入了许多新的需求，如提示工程、质量改进技术（微调、RAG、元提示）、负责任AI的不同评估和责任，以及新的评估指标（质量、危害、诚信、成本和延迟）。
 
@@ -43,7 +43,7 @@
 
 我们应该如何探索这些步骤？让我们深入了解如何构建一个生命周期。
 
-![LLMOps Workflow](./images/03-llm-stage-flows.png?WT.mc_id=academic-105485-koreys)
+![LLMOps Workflow](../../images/03-llm-stage-flows.png?WT.mc_id=academic-105485-koreys)
 
 这个过程可能看起来复杂，让我们先关注三个主要步骤：
 
@@ -63,10 +63,10 @@ Microsoft提供的[Azure AI Platform](https://azure.microsoft.com/solutions/ai/?
 
 通过[Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys)，你可以利用[AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)。AI Studio是一个网页门户，让你可以探索模型、示例和工具，管理资源，进行UI开发流程，以及提供SDK/CLI选项进行代码优先开发。
 
-![Azure AI possibilities](./images/04-azure-ai-platform.png?WT.mc_id=academic-105485-koreys)
+![Azure AI possibilities](../../images/04-azure-ai-platform.png?WT.mc_id=academic-105485-koreys)
 Azure AI让你可以使用多种资源，管理你的操作、服务、项目、向量搜索和数据库需求。
 
-![LLMOps with Azure AI](./images/05-llm-azure-ai-prompt.png?WT.mc_id=academic-105485-koreys)
+![LLMOps with Azure AI](../../images/05-llm-azure-ai-prompt.png?WT.mc_id=academic-105485-koreys)
 
 从概念证明(POC)到大规模应用，利用PromptFlow进行构建：
 
@@ -74,7 +74,7 @@ Azure AI让你可以使用多种资源，管理你的操作、服务、项目、
 - 轻松测试和微调你的应用，以实现高质量AI。
 - 使用Azure AI Studio进行集成和迭代，通过云推送和部署实现快速集成。
 
-![LLMOps with PromptFlow](./images/06-llm-promptflow.png?WT.mc_id=academic-105485-koreys)
+![LLMOps with PromptFlow](../../images/06-llm-promptflow.png?WT.mc_id=academic-105485-koreys)
 
 ## 继续学习！
 
