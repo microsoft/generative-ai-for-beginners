@@ -615,7 +615,7 @@ Please attempt to solve the assignment by adding suitable prompts to the code.
 > [!TIP]
 > Phrase a prompt to ask it to improve, it's a good idea to limit how many improvements. You can also ask to improve it in a certain way, for example architecture, performance, security, etc.
 
-[Solution](./python/aoai-solution.py)
+[Solution](./python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Knowledge check
 
