@@ -84,3 +84,21 @@ jobs:
           directory: ./
           guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
+  check-broken-urls:
+    if: ${{ always() }}
+    name: Check Broken URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check Broken URLs
+        id: check-broken-urls
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_broken_urls
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
