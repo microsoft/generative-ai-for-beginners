@@ -99,7 +99,7 @@ jobs:
         id: check-broken-urls
         uses: john0isaac/action-check-markdown@v1.0.6
         with:
-          command: check_borken_urls
+          command: check_broken_urls
           directory: ./
           guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
