@@ -87,7 +87,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
   check-broken-urls:
     if: ${{ always() }}
-    needs: check-urls-locale
     name: Check Broken URLs
     runs-on: ubuntu-latest
     steps:
