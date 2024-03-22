@@ -7,7 +7,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 🔖 Print PR title
-        run: title=${{ github.event.pull_request.title }}; echo "The Title of your PR is ${title}"
-      - name: 📝 Validate PR title
-        run: [[ $title =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
+      - run: title=${{ github.event.pull_request.title }}; echo "The Title of your PR is ${title}"
+      - run: [[ $title =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
