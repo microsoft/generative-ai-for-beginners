@@ -1,8 +1,8 @@
-# ローコードAIアプリケーションの構築
+# ローコード AI アプリケーションの構築
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://youtu.be/XX8491SAF44?WT.mc_id=academic-105485-yoterada)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=170c6cb7-3c96-40f2-a354-b6f0ec523de7?WT.mc_id=academic-105485-yoterada)
 
-> *(上記の画像をクリックすると、レッスン・ビデオを表示します)*
+> _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 
 ## はじめに
 
@@ -47,13 +47,13 @@ Power Platform は生成 AI を用いて、ローコード開発とアプリケ�
 
 ### どのように動作するのでしょうか？
 
-Copilot は AI アシスタントで、自然言語を使って会話形式のやり取りで要件を説明し、Power Platform のソリューションを作れます。たとえば、アプリで使用するフィールドを AI アシスタントに指示すると、アプリとそれに基づくデータモデルの両方を作成します。また、Power Automateでフローを設定する方法を指定できます。
+Copilot は AI アシスタントで、自然言語を使って会話形式のやり取りで要件を説明し、Power Platform のソリューションを作れます。たとえば、アプリで使用するフィールドを AI アシスタントに指示すると、アプリとそれに基づくデータモデルの両方を作成します。また、Power Automate でフローを設定する方法を指定できます。
 
 アプリ画面に Copilot の機能を組み込み、利用者は、会話型のやり取りを通じて、知見が得られるようになります。
 
 AI Builder は、Power Platform で利用可能なローコード AI 機能で、AI モデルを使用してプロセスを自動化し、結果を予測できます。AI Builder を使用すると、Dataverse や SharePoint、OneDrive、Azure などの様々なクラウド上のデータソースに接続するアプリやフローに AI を組み込めます。
 
-Copilotは、Power Apps、Power Automate、Power BI、Power Pages、Power Virtual Agentsといった、全 Power Platform 製品で利用できます。一方で、AI Builder は Power Apps と Power Automate で利用できます。今回のレッスンでは、Power Apps と Power Automate における Copilot と AI Builder の使用方法について、特に教育スタートアップ用のソリューション開発の観点から詳しく説明していきます。
+Copilot は、Power Apps、Power Automate、Power BI、Power Pages、Power Virtual Agents といった、全 Power Platform 製品で利用できます。一方で、AI Builder は Power Apps と Power Automate で利用できます。今回のレッスンでは、Power Apps と Power Automate における Copilot と AI Builder の使用方法について、特に教育スタートアップ用のソリューション開発の観点から詳しく説明していきます。
 
 ### Power Apps における Copilot
 
@@ -83,25 +83,25 @@ Copilot を使い始める際には、[Power Platform Copilot Prompt Library](ht
 
 1. ホーム画面のテキストエリアに、作成したいアプリを説明します。例えば、「**学生の課題を追跡し管理するアプリを作成してください**」と入力します。「**Send**」ボタンをクリックして、プロンプトを AI Copilot に送信します。
 
- ![Describe the app you want to build](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-yoterada)
+![Describe the app you want to build](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-yoterada)
 
 1. AI Copilot は、追跡したいデータを保存するために必要なフィールドとサンプルデータを持つ Dataverse テーブルの作成を提案します。その後、会話でのやり取りを通じ AI Copilot のアシスタント機能を使用して、テーブルを自分のニーズに合わせてカスタマイズできます。
 
-    > **重要**：Dataverse は Power Platform の基盤となるデータプラットフォームで、アプリのデータを保存するためのローコード・データ・プラットフォームです。Microsoft Cloud 上にデータを安全に保存する、完全にマネージドなサービスで、Power Platform 環境内でプロビジョニングできます。データ分類、データ系統、きめ細やかなアクセス制御など、組み込みのデータガバナンス機能が付属しています。Dataverse については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)から詳しく学ぶべます。  
+   > **重要**：Dataverse は Power Platform の基盤となるデータプラットフォームで、アプリのデータを保存するためのローコード・データ・プラットフォームです。Microsoft Cloud 上にデータを安全に保存する、完全にマネージドなサービスで、Power Platform 環境内でプロビジョニングできます。データ分類、データ系統、きめ細やかなアクセス制御など、組み込みのデータガバナンス機能が付属しています。Dataverse については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-yoterada)から詳しく学ぶべます。
 
    ![Suggested fields in your new table](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-yoterada)
 
-1. 教育者は、課題を提出した学生に進行状況を伝えるためにメールを送りたいと考えています。その為に、Copilotを使用して、学生のメールアドレスを保存する新しいフィールドをテーブルに追加できます。例えば、「**学生のメールを保存する列を追加してください**」というプロンプトを使用して、新しいフィールドを追加できます。「**Send**」ボタンをクリックして、プロンプトを AI Copilot に送信します。
+1. 教育者は、課題を提出した学生に進行状況を伝えるためにメールを送りたいと考えています。その為に、Copilot を使用して、学生のメールアドレスを保存する新しいフィールドをテーブルに追加できます。例えば、「**学生のメールを保存する列を追加してください**」というプロンプトを使用して、新しいフィールドを追加できます。「**Send**」ボタンをクリックして、プロンプトを AI Copilot に送信します。
 
 ![Adding a new field](../../images/copilot-new-column.png?WT.mc_id=academic-105485-yoterada)
 
-1. AI Copilot は新しいフィールドを生成し、その後、フィールドを自身のニーズに合わせてカスタマイズできます。  
+1. AI Copilot は新しいフィールドを生成し、その後、フィールドを自身のニーズに合わせてカスタマイズできます。
 
 1. テーブルが完成した後、「**Create app**」ボタンをクリックしてアプリを作成します。
 
 1. AI Copilot は記述内容に基づいてレスポンシブな Canvas アプリを生成します。その後、アプリを自分のニーズに合わせてカスタマイズできます。
 
-1. 教育者が学生にメールを送るために、Copilotを使用してアプリに新しい画面を追加できます。例えば、次のプロンプトを使用してアプリに新しい画面を追加できます：「***学生にメールを送る画面を追加してください***」そして「**Send**」ボタンをクリックして、プロンプトを AI Copilot に送信します。
+1. 教育者が学生にメールを送るために、Copilot を使用してアプリに新しい画面を追加できます。例えば、次のプロンプトを使用してアプリに新しい画面を追加できます：「**_学生にメールを送る画面を追加してください_**」そして「**Send**」ボタンをクリックして、プロンプトを AI Copilot に送信します。
 
 ![Adding a new screen via a prompt instruction](../../images/copilot-new-screen.png?WT.mc_id=academic-105485-yoterada)
 
@@ -131,9 +131,9 @@ Power Platform には、アプリやソリューションのデータを保存�
 
 Dataverse とは何か、そしてその利点を理解したところで、Copilot を使って Dataverse でテーブルを作成し、財務チームの要件を満たすテーブル作成方法を見ていきましょう。
 
->**注**：次のセクションでは、このテーブルを使って、すべての請求書情報を抽出し、そこからテーブルに保存するまでの自動化処理を構築します。
+> **注**：次のセクションでは、このテーブルを使って、すべての請求書情報を抽出し、そこからテーブルに保存するまでの自動化処理を構築します。
 
-Copilotを使って Dataverse でテーブルを作成する手順は下記の通りです：
+Copilot を使って Dataverse でテーブルを作成する手順は下記の通りです：
 
 1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-yoterada) のホーム画面に遷移します。
 
@@ -190,7 +190,7 @@ AI Builder の請求書処理 AI モデルを使って、財務チームが請�
 
 2. ホーム画面のテキストエリアを使って、構築したいワークフローを記述します。例えば、「メールボックスに請求書が届いたら処理を開始してください」と入力します。「送信」ボタンをクリックして、この指示を AI Copilot に送ります。
 
-    ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-yoterada)
+   ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-yoterada)
 
 3. AI Copilot は、自動化したいタスクを実行するために必要なアクションを提案します。「次へ」ボタンをクリックすると、次のステップに進めます。
 
@@ -204,7 +204,7 @@ AI Builder の請求書処理 AI モデルを使って、財務チームが請�
 
 8. 「条件」アクションも使用しないため、フローから削除します。次のスクリーンショットのようになります。
 
-    ![power automate, remove actions](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-yoterada)
+   ![power automate, remove actions](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-yoterada)
 
 9. 「アクションの追加」ボタンをクリックし、「Dataverse」を検索します。「新しい行の追加」アクションを選択します。
 

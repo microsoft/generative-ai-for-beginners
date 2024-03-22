@@ -1,10 +1,10 @@
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/r2ItK3UMVTk?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=eb8a0805-5623-4da8-b3c3-1b0ecccffa64?WT.mc_id=academic-105485-koreyst)
 
-How you write your prompt to the LLM matters, a carefully crafted prompt can achieve a better result than one that isn't. But what even are these concepts, prompt, prompt engineering and how do I improve what I send to the LLM? Questions like these are what this chapter and the upcoming chapter are looking to answer.
+The way your write your prompt to an LLM also matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer with in this chapter and the next.
 
-_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ (LLMs) like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
+_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
 
 Users can now interact with these models using familiar paradigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt till the response matches their expectations.
 
@@ -27,16 +27,18 @@ Prompt engineering is currently more art than science. The best way to improve o
 
 The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go, or as part of the code challenge at the end. To execute the exercises you will need:
 
-1. An Azure OpenAI API key - the service endpoint for a deployed LLM.
-
-2. A Python Runtime - in which the Notebook can be executed.
-
-We have instrumented this repository with a _dev container_ that comes with a Python 3 runtime. Simply open the repo in GitHub Codespaces or on your local Docker Desktop, to activate the runtime automatically. Then open the notebook and select the Python 3.x kernel to prepare the Notebook for execution.
-
-The default notebook is set up for use with an Azure OpenAI service resource. Simply copy the `.env.copy` file in the root of the folder to `.env` and update the `AZURE_OPENAI_API_KEY=` and `AZURE_OPENAI_API_ENDPOINT=` lines with your API key and endpoint. You can check your credentials in the [Azure portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), by navigating to your Azure OpenAI resource and then opening the _Keys and Endpoints_ tab in the left menu.
-Also, please add the name you assigned to your model when you created the deployment to the `AZURE_OPENAI_DEPLOYMENT` variable. The recommended model for this exercise is 'gpt-35-turbo'.
+1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.
+2. **A Python Runtime** - in which the Notebook can be executed.
+3. **Local Env Variables** - _complete the [SETUP](SETUP.md) steps now to get ready_.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
+
+## Illustrated Guide
+
+Want to get the big picture of what this lesson covers before you dive in? Check out this illustrated guide which gives you a sense of the main topics covered, and the key takeaways for you to think about in each one. The lesson roadmap takes you from understanding the core concepts and challenges, to addressing them with relevant prompt engineering techniques and best practices. Note that the "Advanced Techniques" section in this guide refers to content covered in the _next_ chapter of this curriculum.
+
+![Illustrated Guide to Prompt Engineering](./images/04-prompt-engineering-sketchnote.png?WT.mc_id=academic-105485-koreyst)
+
 
 ## Our Startup
 
@@ -390,6 +392,6 @@ See if you can leverage the "cue" technique with the prompt: Complete the senten
 
 ## Great Work! Continue Your Learning
 
-Want to learn more about different Prompt Engineering concepts? Go to the [contiuned learning page](../13-continued-learning/README.md?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
+Want to learn more about different Prompt Engineering concepts? Go to the [continued learning page](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to find other great resources on this topic.
 
-Head over to Lesson 5 where we will look at [advance prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
