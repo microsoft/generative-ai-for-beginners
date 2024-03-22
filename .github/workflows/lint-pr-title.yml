@@ -7,5 +7,5 @@ jobs:
     steps:
       - run: echo "🎉 The PR title is ${{ github.event.pull_request.title }}."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: run: [[ ${{ github.event.pull_request.title }} =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
+      - run: [[ ${{ github.event.pull_request.title }} =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
       - run: echo "🍏 This job's status is ${{ job.status }}."
