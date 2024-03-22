@@ -7,5 +7,4 @@ jobs:
   Lint-PR-Title:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: [[ ${{ github.event.pull_request.title }} =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
