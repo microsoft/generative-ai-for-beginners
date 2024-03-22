@@ -8,6 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: title=${{ github.event.pull_request.title }}
-      - run: echo "The Title of your PR is ${{ title }}"
-      - run: [[ "${{ title }}" =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
+      - run: echo "The Title of your PR is ${{ github.event.pull_request.title }}"
+      - run: [[ ${{ github.event.pull_request.title }} =~ ^(chore|feat|fix)\\(CP4SCORE-[0-9]{5,}\\): ]] && exit 0 || exit 1
