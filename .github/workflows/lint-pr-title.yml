@@ -4,7 +4,7 @@ on:
     types: [opened, edited, reopened, synchronize]
 
 jobs:
-  build:
+  Check PR title:
     runs-on: ubuntu-latest
     steps:
       - run: title=${{ github.event.pull_request.title }}; echo "The Title of your PR is ${title}"
