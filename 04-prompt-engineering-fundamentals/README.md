@@ -1,6 +1,6 @@
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=eb8a0805-5623-4da8-b3c3-1b0ecccffa64?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](./images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]
 
 The way you write your prompt to an LLM matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer in this chapter and the next.
 
@@ -37,7 +37,7 @@ The notebook comes with _starter_ exercises - but you are encouraged to add your
 
 Want to get the big picture of what this lesson covers before you dive in? Check out this illustrated guide which gives you a sense of the main topics covered, and the key takeaways for you to think about in each one. The lesson roadmap takes you from understanding the core concepts and challenges, to addressing them with relevant prompt engineering techniques and best practices. Note that the "Advanced Techniques" section in this guide refers to content covered in the _next_ chapter of this curriculum.
 
-![Illustrated Guide to Prompt Engineering](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-prompt-engineering-sketchnote.png?WT.mc_id=academic-105485-koreyst)
+![Illustrated Guide to Prompt Engineering](./images/04-prompt-engineering-sketchnote.png?WT.mc_id=academic-105485-koreyst)
 
 
 ## Our Startup
@@ -79,7 +79,7 @@ An LLM sees prompts as a _sequence of tokens_ where different models (or version
 
 To get an intuition for how tokenization works, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) shown below. Copy in your prompt - and see how that gets converted into tokens, paying attention to how whitespace characters and punctuation marks are handled. Note that this example shows an older LLM (GPT-3) - so trying this with a newer model may produce a different result.
 
-![Tokenization](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
+![Tokenization](./images/04-tokenizer-example.png?WT.mc_id=academic-105485-koreyst)
 
 ### Concept: Foundation Models
 
@@ -89,7 +89,7 @@ Want to see how prompt-based completion works? Enter the above prompt into the A
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
-![Base LLM Chat Completion](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
+![Base LLM Chat Completion](./images/04-playground-chat-base.png?WT.mc_id=academic-105485-koreyst)
 
 ### Concept: Instruction Tuned LLMs
 
@@ -103,7 +103,7 @@ Let's try it out - revisit the prompt above but now change the _system message_ 
 
 See how the result is now tuned to reflect the desired goal and format? An educator can now directly use this response in their slides for that class.
 
-![Instruction Tuned LLM Chat Completion](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
+![Instruction Tuned LLM Chat Completion](./images/04-playground-chat-instructions.png?WT.mc_id=academic-105485-koreyst)
 
 ## Why do we need Prompt Engineering?
 
@@ -134,15 +134,15 @@ So what happens when we run this prompt with different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
+![Response 1](./images/04-fabrication-oai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
+![Response 2](./images/04-fabrication-aoai.png?WT.mc_id=academic-105485-koreyst)
 
 > **Response 3**: : Hugging Face Chat Playground (LLama-2)
 
-![Response 3](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals/images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
+![Response 3](./images/04-fabrication-huggingchat.png?WT.mc_id=academic-105485-koreyst)
 
 As expected, each model (or model version) produces slightly different responses thanks to stochastic behavior and model capability variations. For instance, one model targets an 8th grade audience while the other assumes a high-school student. But all three models did generate responses that could convince an uninformed user that the event was real
 
@@ -361,7 +361,7 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 ### Next, configure your environment variables
 
-- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](https://microsoft.github.io/generative-ai-for-beginners/04-prompt-engineering-fundamentals#learning-sandbox) to learn how.
+- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](./04-prompt-engineering-fundamentals#learning-sandbox) to learn how.
 
 ### Next, open the Jupyter Notebook
 
