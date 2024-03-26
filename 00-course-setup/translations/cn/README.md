@@ -28,7 +28,23 @@
 
 要在本地运行代码，您需要安装某个版本的 Python。 个人建议安装 **[miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst)** - 这是相当轻量级的安装，支持不同 Python **虚拟环境** 的 `conda` 包管理器 。
 
-安装 miniconda 后，您需要克隆存储库并创建一个用于本课程的 Python 虚拟环境：
+在前往下述步骤之前，确保您首先有一个*environment.yml*文件。 *environment.yml*文件的作用是创建一个具有相关依赖的conda虚拟环境，*environment.yml*的一种格式可以参考如下：
+
+```yml
+name: <environment-name>
+channels:  
+ - defaults
+dependencies:  
+- python=<python-version>  
+- openai  
+- python-dotenv
+```
+
+- 译者注：可以考虑将*environment.yml*创建在项目的隐藏文件夹.devcontainer中，方便直接cp使用后面的bash命令。
+
+您可以将`<environment-name>`替换为您想创建的环境名,  `<python-version>`替换为您想要使用的Python的具体版本号，将您的*environment.yml*文件放在您项目的devcontainer文件夹下。
+
+现在您大概已经创建了*environment.yml*文件， 安装 miniconda 后，您需要克隆存储库并创建一个用于本课程的 Python 虚拟环境，您可以通过下列命令行指令来创建该环境:
 
 ```bash
 git clone http://github.com/microsoft/ai-for-beginners
