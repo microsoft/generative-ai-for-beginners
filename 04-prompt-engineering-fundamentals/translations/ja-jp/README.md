@@ -219,7 +219,7 @@ CONCEPT #2:
 実際のリクエストは下記のようになります。トークン化によってシステム・コンテキストと会話履歴から関連情報を効果的に捉えられるようになります。システム・コンテキストの変更は、利用者の入力内容と同じくらい、回答品質に影響を与える可能性があります。
 
 ```python
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "あなたは頼りになる助手です。"},
