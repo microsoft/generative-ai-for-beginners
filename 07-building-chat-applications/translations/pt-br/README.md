@@ -2,9 +2,9 @@
 
 ## Criando Aplicações Chat com IA Generativa
 
-[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/Kw4i-tlKMrQ?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=57a31949-67c5-4020-8c85-91e4995589f3?WT.mc_id=academic-105485-koreyst)
 
-> *(Clique na imagem acima para ver o vídeo da lição)*
+> _(Clique na imagem acima para ver o vídeo da lição)_
 
 Agora que vimos como podemos criar aplicativos de geração de texto, vamos dar uma olhada nos aplicativos de bate-papo.
 
@@ -47,12 +47,12 @@ Antes de nos aprofundarmos na criação de aplicativos de chat, vamos comparar '
 
 A tabela abaixo destaca as principais diferenças e semelhanças para nos ajudar a entender seus papéis únicos na comunicação digital.
 
-| Chatbot                                       | Aplicação de Chat Impulsionada por IA Generativa  |
-| -------------------------------------         | ------------------------------------------------- |
-| Focado em tarefas e baseado em regras         | Consciente do contexto                            |
-| Frequentemente integrado a sistemas maiores   | Pode hospedar um ou vários chatbots               |
-| Limitado a funções programadas                | Incorpora modelos de IA generativa                |
-| Interações especializadas e estruturadas      | Capaz de discussões em domínio aberto             |
+| Chatbot                                     | Aplicação de Chat Impulsionada por IA Generativa |
+| ------------------------------------------- | ------------------------------------------------ |
+| Focado em tarefas e baseado em regras       | Consciente do contexto                           |
+| Frequentemente integrado a sistemas maiores | Pode hospedar um ou vários chatbots              |
+| Limitado a funções programadas              | Incorpora modelos de IA generativa               |
+| Interações especializadas e estruturadas    | Capaz de discussões em domínio aberto            |
 
 ### Alavancando funcionalidades pré-criadas com SDKs e APIs
 
@@ -66,15 +66,19 @@ Ao criar uma aplicação de chat, um ótimo primeiro passo é avaliar o que já 
 
 - **Acesso a tecnologia de ponta**: Alavancar modelos que foram ajustados e treinados em conjuntos de dados extensivos proporciona à sua aplicação capacidades de linguagem natural.
 
-Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](../../notebook-openai.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
+Acesso à funcionalidade de um SDK ou API geralmente envolve a obtenção de permissão para usar os serviços fornecidos, frequentemente por meio do uso de uma chave única ou token de autenticação. Utilizaremos a Biblioteca Python da OpenAI para explorar como isso é feito. Você também pode experimentar por conta própria no seguinte [notebook para OpenAI](../../python/oai-assigment-simple.ipynb?WT.mc_id=academic-105485-koreyst) ou [Notebook para Serviços Azure OpenAI](../../python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) para esta lição.
 
 ```python
 import os
-import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+API_KEY = os.getenv("OPENAI_API_KEY","")
 
-chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
+client = OpenAI(
+    api_key=API_KEY
+    )
+
+chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
 No exemplo acima é usado o modelo GPT-3.5 Turbo para completar o prompt. Mas observe que a chave da API é definida antes de fazê-lo. Você receberia o seguinte erro se não definisse a chave.
@@ -155,35 +159,36 @@ Esta seção delineia os critérios para aplicações de chat consideradas "de a
 
 Para manter o desempenho de alta qualidade de uma aplicação, é essencial acompanhar métricas-chave e considerações. Essas medições não apenas garantem a funcionalidade da aplicação, mas também avaliam a qualidade do modelo de IA e a experiência do usuário. Abaixo está uma lista que abrange métricas básicas, de IA e de experiência do usuário a serem consideradas.
 
-| Métrica                       | Definição                                                                                                              | Considerações para o Desenvolvedor de Chat                                 |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Tempo de Atividade (Uptime)**| Mede o tempo em que a aplicação está operacional e acessível pelos usuários.                                            | Como você irá minimizar o tempo de inatividade?                             |
-| **Tempo de Resposta**          | O tempo que a aplicação leva para responder a uma consulta do usuário.                                                   | Como você pode otimizar o processamento de consultas para melhorar o tempo de resposta? |
-| **Precisão**                  | A razão entre previsões verdadeiras positivas e o número total de previsões positivas.                                   | Como você irá validar a precisão do seu modelo?                            |
-| **Revocação (Sensibilidade)** | A razão entre previsões verdadeiras positivas e o número real de positivos.                                             | Como você irá medir e melhorar a revocação?                                |
-| **Escore F1**                 | A média harmônica de precisão e revocação, que equilibra o compromisso entre ambos.                                    | Qual é o seu Escore F1 alvo? Como você irá equilibrar precisão e revocação? |
-| **Perplexidade**              | Mede quão bem a distribuição de probabilidade prevista pelo modelo se alinha com a distribuição real dos dados.        | Como você irá minimizar a perplexidade?                                    |
-| **Métricas de Satisfação do Usuário** | Mede a percepção do usuário em relação à aplicação. Frequentemente capturado por meio de pesquisas.                | Com que frequência você irá coletar feedback do usuário? Como você irá se adaptar a isso? |
-| **Taxa de Erro**              | A taxa na qual o modelo comete erros na compreensão ou saída.                                                            | Quais estratégias você tem para reduzir as taxas de erro?                  |
-| **Ciclos de Retreinamento**   | A frequência com que o modelo é atualizado para incorporar novos dados e insights.                                      | Com que frequência você irá retrainer o modelo? O que desencadeia um ciclo de retratamento? |
-| **Detecção de Anomalias**     | Ferramentas e técnicas para identificar padrões incomuns que não seguem o comportamento esperado.                     | Como você irá responder a anomalias?                                      |
-                                       |
+| Métrica                               | Definição                                                                                                       | Considerações para o Desenvolvedor de Chat                                                  |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Tempo de Atividade (Uptime)**       | Mede o tempo em que a aplicação está operacional e acessível pelos usuários.                                    | Como você irá minimizar o tempo de inatividade?                                             |
+| **Tempo de Resposta**                 | O tempo que a aplicação leva para responder a uma consulta do usuário.                                          | Como você pode otimizar o processamento de consultas para melhorar o tempo de resposta?     |
+| **Precisão**                          | A razão entre previsões verdadeiras positivas e o número total de previsões positivas.                          | Como você irá validar a precisão do seu modelo?                                             |
+| **Revocação (Sensibilidade)**         | A razão entre previsões verdadeiras positivas e o número real de positivos.                                     | Como você irá medir e melhorar a revocação?                                                 |
+| **Escore F1**                         | A média harmônica de precisão e revocação, que equilibra o compromisso entre ambos.                             | Qual é o seu Escore F1 alvo? Como você irá equilibrar precisão e revocação?                 |
+| **Perplexidade**                      | Mede quão bem a distribuição de probabilidade prevista pelo modelo se alinha com a distribuição real dos dados. | Como você irá minimizar a perplexidade?                                                     |
+| **Métricas de Satisfação do Usuário** | Mede a percepção do usuário em relação à aplicação. Frequentemente capturado por meio de pesquisas.             | Com que frequência você irá coletar feedback do usuário? Como você irá se adaptar a isso?   |
+| **Taxa de Erro**                      | A taxa na qual o modelo comete erros na compreensão ou saída.                                                   | Quais estratégias você tem para reduzir as taxas de erro?                                   |
+| **Ciclos de Retreinamento**           | A frequência com que o modelo é atualizado para incorporar novos dados e insights.                              | Com que frequência você irá retrainer o modelo? O que desencadeia um ciclo de retratamento? |
+| **Detecção de Anomalias**             | Ferramentas e técnicas para identificar padrões incomuns que não seguem o comportamento esperado.               | Como você irá responder a anomalias?                                                        |
+|  |
+
 ### Implementando Práticas de IA Responsável em Aplicações de Chat
 
 A abordagem da Microsoft para a IA Responsável identificou seis princípios que devem orientar o desenvolvimento e uso de IA. Abaixo estão os princípios, suas definições e o que um desenvolvedor de chat deve considerar e por que deve levar isso a sério.
 
-| Princípios              | Definição pela Microsoft                               | Considerações para o Desenvolvedor de Chat                                   | Por que é Importante                                                                   |
-| ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Justiça                | Sistemas de IA devem tratar todas as pessoas de forma justa. | Garantir que a aplicação de chat não discrimine com base nos dados do usuário. | Construir confiança e inclusividade entre os usuários; evita ramificações legais.      |
-| Confiabilidade e Segurança | Sistemas de IA devem ter desempenho confiável e seguro. | Implementar testes e mecanismos de segurança para minimizar erros e riscos.   | Garante satisfação do usuário e evita possíveis danos.                                |
-| Privacidade e Segurança  | Sistemas de IA devem ser seguros e respeitar a privacidade. | Implementar criptografia forte e medidas de proteção de dados.              | Proteger dados sensíveis do usuário e cumprir leis de privacidade.                      |
-| Inclusividade           | Sistemas de IA devem capacitar todos e envolver as pessoas. | Projetar uma interface acessível e fácil de usar para diversos públicos.    | Garante que uma variedade maior de pessoas possa usar a aplicação de forma eficaz.     |
-| Transparência           | Sistemas de IA devem ser compreensíveis.               | Fornecer documentação clara e justificativa para as respostas da IA.       | Os usuários têm mais probabilidade de confiar em um sistema se puderem entender como são tomadas as decisões. |
-| Responsabilidade        | As pessoas devem ser responsáveis pelos sistemas de IA. | Estabelecer um processo claro para auditoria e melhoria das decisões de IA. | Possibilita melhorias contínuas e medidas corretivas em caso de erros.                 |
+| Princípios                 | Definição pela Microsoft                                     | Considerações para o Desenvolvedor de Chat                                     | Por que é Importante                                                                                          |
+| -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Justiça                    | Sistemas de IA devem tratar todas as pessoas de forma justa. | Garantir que a aplicação de chat não discrimine com base nos dados do usuário. | Construir confiança e inclusividade entre os usuários; evita ramificações legais.                             |
+| Confiabilidade e Segurança | Sistemas de IA devem ter desempenho confiável e seguro.      | Implementar testes e mecanismos de segurança para minimizar erros e riscos.    | Garante satisfação do usuário e evita possíveis danos.                                                        |
+| Privacidade e Segurança    | Sistemas de IA devem ser seguros e respeitar a privacidade.  | Implementar criptografia forte e medidas de proteção de dados.                 | Proteger dados sensíveis do usuário e cumprir leis de privacidade.                                            |
+| Inclusividade              | Sistemas de IA devem capacitar todos e envolver as pessoas.  | Projetar uma interface acessível e fácil de usar para diversos públicos.       | Garante que uma variedade maior de pessoas possa usar a aplicação de forma eficaz.                            |
+| Transparência              | Sistemas de IA devem ser compreensíveis.                     | Fornecer documentação clara e justificativa para as respostas da IA.           | Os usuários têm mais probabilidade de confiar em um sistema se puderem entender como são tomadas as decisões. |
+| Responsabilidade           | As pessoas devem ser responsáveis pelos sistemas de IA.      | Estabelecer um processo claro para auditoria e melhoria das decisões de IA.    | Possibilita melhorias contínuas e medidas corretivas em caso de erros.                                        |
 
 ## Tarefa
- 
-Veja a [tarefa](../../notebook-azure-openai.ipynb?WT.mc_id=academic-105485-koreyst) que o levará por uma série de exercícios, desde a execução de seus primeiros prompts de chat até a classificação e resumo de texto e muito mais.
+
+Veja a [tarefa](../../python?WT.mc_id=academic-105485-koreyst) que o levará por uma série de exercícios, desde a execução de seus primeiros prompts de chat até a classificação e resumo de texto e muito mais.
 
 ## Excelente Trabalho! Continue no Aprendizado!
 

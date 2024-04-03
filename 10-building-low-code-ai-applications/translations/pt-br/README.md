@@ -1,8 +1,8 @@
 # Criando Aplication de IA com Low Code
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/XX8491SAF44?WT.mc_id=academic-105485-koreyst)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=170c6cb7-3c96-40f2-a354-b6f0ec523de7?WT.mc_id=academic-105485-koreyst)
 
-> *(Clique na imagem acima para ver o vídeo desta lição)*
+> _(Clique na imagem acima para ver o vídeo desta lição)_
 
 ## Introdução
 
@@ -30,7 +30,7 @@ As ferramentas e tecnologias que você usará nesta lição são:
 
 ## IA Generativa na Power Platform
 
-O aprimoramento do desenvolvimento de low-code e aplicativos com IA generativa é uma área-chave para a Power Platform. O objetivo é permitir que todos criam aplicativos, sites, painéis e automatizem processos com IA, *sem exigir qualquer conhecimento em ciência de dados*. Esse objetivo é alcançado integrando a IA generativa na experiência de desenvolvimento de low-code na Power Platform na forma de Copilot e AI Builder.
+O aprimoramento do desenvolvimento de low-code e aplicativos com IA generativa é uma área-chave para a Power Platform. O objetivo é permitir que todos criam aplicativos, sites, painéis e automatizem processos com IA, _sem exigir qualquer conhecimento em ciência de dados_. Esse objetivo é alcançado integrando a IA generativa na experiência de desenvolvimento de low-code na Power Platform na forma de Copilot e AI Builder.
 
 ### Como isso funciona?
 
@@ -68,17 +68,17 @@ Você criará o aplicativo usando Copilot no Power Apps seguindo as etapas abaix
 
 1. Acesse a [tela inicial do Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst).
 
-2. Use a área de texto na tela inicial para descrever o aplicativo que deseja criar. Por exemplo, ***Quero criar um aplicativo para rastrear e gerenciar as atribuições de estudantes***. Clique no botão **Enviar** para enviar o prompt ao AI Copilot.
+2. Use a área de texto na tela inicial para descrever o aplicativo que deseja criar. Por exemplo, **_Quero criar um aplicativo para rastrear e gerenciar as atribuições de estudantes_**. Clique no botão **Enviar** para enviar o prompt ao AI Copilot.
 
 ![Descreva o aplicativo que deseja criar](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
 1. The AI Copilot will suggest a Dataverse Table with the fields you need to store the data you want to track and some sample data. You can then customize the table to meet your needs using the AI Copilot assistant feature through conversational steps.
 
-    > **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+   > **Important**: Dataverse is the underlying data platform for Power Platform. It is a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more about Dataverse [here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
    ![Suggested fields in your new table](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
-1. Os educadores desejam enviar e-mails aos alunos que enviaram suas atribuições para mantê-los atualizados sobre o progresso de suas tarefas. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do aluno. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: ***Quero adicionar uma coluna para armazenar o e-mail do aluno***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+1. Os educadores desejam enviar e-mails aos alunos que enviaram suas atribuições para mantê-los atualizados sobre o progresso de suas tarefas. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do aluno. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do aluno_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
 ![Adicionando um novo campo](../../images/copilot-new-column.png?WT.mc_id=academic-105485-koreyst)
 
@@ -88,7 +88,7 @@ Você criará o aplicativo usando Copilot no Power Apps seguindo as etapas abaix
 
 1. O AI Copilot gerará um aplicativo Canvas responsivo com base na sua descrição. Você pode, então, personalizar o aplicativo conforme suas necessidades.
 
-1. Para que os educadores possam enviar e-mails aos alunos, você pode usar o Copilot para adicionar uma nova tela ao aplicativo. Por exemplo, você pode usar o seguinte comando para adicionar uma nova tela ao aplicativo: ***Quero adicionar uma tela para enviar e-mails aos alunos***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+1. Para que os educadores possam enviar e-mails aos alunos, você pode usar o Copilot para adicionar uma nova tela ao aplicativo. Por exemplo, você pode usar o seguinte comando para adicionar uma nova tela ao aplicativo: **_Quero adicionar uma tela para enviar e-mails aos alunos_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
 ![Adicionando uma nova tela via comando](../../images/copilot-new-screen.png?WT.mc_id=academic-105485-koreyst)
 
@@ -118,7 +118,7 @@ Por que devemos usar o Dataverse para nossa startup? As tabelas padrão e person
 
 Agora que você sabe o que é o Dataverse e por que deve usá-lo, vamos ver como você pode usar o Copilot para criar uma tabela no Dataverse para atender aos requisitos de nossa equipe financeira.
 
->**Nota** : Você usará esta tabela na próxima seção para criar uma automação que extrairá todas as informações da fatura e as armazenará na tabela.
+> **Nota** : Você usará esta tabela na próxima seção para criar uma automação que extrairá todas as informações da fatura e as armazenará na tabela.
 
 Para criar uma tabela no Dataverse usando o Copilot, siga as etapas abaixo:
 
@@ -128,7 +128,7 @@ Para criar uma tabela no Dataverse usando o Copilot, siga as etapas abaixo:
 
 ![Selecionar nova tabela](../../images/describe-new-table.png?WT.mc_id=academic-105485-koreyst)
 
-1. Na tela **Descrever a nova tabela**, use a área de texto para descrever a tabela que deseja criar. Por exemplo, ***Quero criar uma tabela para armazenar informações de fatura***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+1. Na tela **Descrever a nova tabela**, use a área de texto para descrever a tabela que deseja criar. Por exemplo, **_Quero criar uma tabela para armazenar informações de fatura_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
 ![Descrever a tabela](../../images/copilot-chat-prompt-dataverse.png?WT.mc_id=academic-105485-koreyst)
 
@@ -136,7 +136,7 @@ Para criar uma tabela no Dataverse usando o Copilot, siga as etapas abaixo:
 
 ![Tabela Dataverse sugerida](../../images/copilot-dataverse-table.png?WT.mc_id=academic-105485-koreyst)
 
-1. A equipe financeira deseja enviar um e-mail ao fornecedor para atualizá-lo com o status atual de sua fatura. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do fornecedor. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: ***Quero adicionar uma coluna para armazenar o e-mail do fornecedor***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+1. A equipe financeira deseja enviar um e-mail ao fornecedor para atualizá-lo com o status atual de sua fatura. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do fornecedor. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do fornecedor_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
 1. O AI Copilot gerará um novo campo e você poderá personalizá-lo conforme suas necessidades.
 
@@ -175,9 +175,9 @@ Para criar um fluxo que ajudará a equipe financeira a processar faturas usando 
 
 1. Acesse a [tela inicial do Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst).
 
-2. Use a área de texto na tela inicial para descrever o fluxo que você deseja criar. Por exemplo, ***Processar uma fatura quando ela chegar à minha caixa de correio***. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+2. Use a área de texto na tela inicial para descrever o fluxo que você deseja criar. Por exemplo, **_Processar uma fatura quando ela chegar à minha caixa de correio_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
-    ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-koreyst)
+   ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-koreyst)
 
 3. O AI Copilot sugerirá as ações que você precisa realizar para a tarefa que deseja automatizar. Você pode clicar no botão **Próximo** para passar para as próximas etapas.
 
@@ -191,7 +191,7 @@ Para criar um fluxo que ajudará a equipe financeira a processar faturas usando 
 
 8. Remova a ação **Condição** do fluxo, pois você não a usará. Deve se parecer com a captura de tela a seguir:
 
-    ![Power Automate, remover ações](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-koreyst)
+   ![Power Automate, remover ações](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-koreyst)
 
 9. Clique no botão **Adicionar uma ação** e pesquise por **Dataverse**. Selecione a ação **Adicionar uma nova linha**.
 

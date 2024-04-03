@@ -1,10 +1,10 @@
 # Designing UX for AI Applications
 
-[![Designing UX for AI Applications](./images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/bO7h2_hOhR0?WT.mc_id=academic-105485-koreyst)
+[![Designing UX for AI Applications](./images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=1464ef7a-d974-4a04-9ce3-1bc5b3087b4b?WT.mc_id=academic-105485-koreyst)
 
-> *(Click the image above to view video of this lesson)*
+> _(Click the image above to view video of this lesson)_
 
-User experience is a very important aspect of building apps. Users need to be able to use your app in an efficient way to perform tasks. Being efficient is one thing but you also need to design apps so that they can be used by everyone, to make them *accessible*. This chapter will focus on this area so you hopefully end up designing an app that people can and want to use.
+User experience is a very important aspect of building apps. Users need to be able to use your app in an efficient way to perform tasks. Being efficient is one thing but you also need to design apps so that they can be used by everyone, to make them _accessible_. This chapter will focus on this area so you hopefully end up designing an app that people can and want to use.
 
 ## Introduction
 
@@ -12,16 +12,16 @@ User experience is how a user interacts with and uses a specific product or serv
 
 The lesson will cover the following areas:
 
-* Introduction to User Experience and Understanding User Needs
-* Designing AI Applications for Trust and Transparency
-* Designing AI Applications for Collaboration and Feedback
+- Introduction to User Experience and Understanding User Needs
+- Designing AI Applications for Trust and Transparency
+- Designing AI Applications for Collaboration and Feedback
 
 ## Learning goals
 
 After taking this lesson, you'll be able to:
 
-* Understand how to build AI applications that meet the user needs.
-* Design AI applications that promote trust and collaboration.
+- Understand how to build AI applications that meet the user needs.
+- Design AI applications that promote trust and collaboration.
 
 ### Prerequisite
 
@@ -103,18 +103,18 @@ AI applications are not perfect, therefore, they are bound to make mistakes. Whe
 
 Take any AI apps you've built so far, consider implementing the below steps in your app:
 
-* **Pleasant:** Consider how you can make your app more pleasant. Are you adding explanations everywhere, are you encouraging the user to explore? How are you wording your error messages?
+- **Pleasant:** Consider how you can make your app more pleasant. Are you adding explanations everywhere, are you encouraging the user to explore? How are you wording your error messages?
 
-* **Usability:** Building a web app. Make sure your app is navigable by both mouse and keyboard.
+- **Usability:** Building a web app. Make sure your app is navigable by both mouse and keyboard.
 
-* **Trust and transparency:** Don't trust the AI completely and its output, consider how you would add a human to the process to verify the output. Also, consider and implement other ways to achieve trust and transparency.
+- **Trust and transparency:** Don't trust the AI completely and its output, consider how you would add a human to the process to verify the output. Also, consider and implement other ways to achieve trust and transparency.
 
-* **Control:** Give the user control of the data they provide to the application. Implement a way a user can opt-in and opt-out of data collection in the AI application.
+- **Control:** Give the user control of the data they provide to the application. Implement a way a user can opt-in and opt-out of data collection in the AI application.
 
 <!-- ## [Post-lecture quiz](quiz-url) -->
 
-## Congratulations, you have finished this course
+## Continue Your Learning!
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Congratulations, you have completed this course! The building should not stop here. Hopefully, you have been inspired to start building your own Generative AI startup. Head over to the [Microsoft Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) and apply for the program to receive support on your journey.
+Head over to Lesson 13 where we will look at how to [design UX for AI applications](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!

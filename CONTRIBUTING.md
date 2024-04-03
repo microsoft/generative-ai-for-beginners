@@ -13,8 +13,8 @@ instructions provided by the bot. You will only need to do this once across all 
 
 ## Code of Conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information read the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+For more information read the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Question or Problem?
 
@@ -59,7 +59,7 @@ To make sure that your links are working properly simply use VS code to check th
 
 For example, when you hover over any link in your files you will be prompted to follow the link by pressing on **ctrl + click**
 
-![VS code follow links screenshot](./images/vscode-follow-link.png "Screenshot from vs code prompt to follow a link when you hover over a link.")
+![VS code follow links screenshot](./images/vscode-follow-link.png?WT.mc_id=academic-105485-koreyst "Screenshot from vs code prompt to follow a link when you hover over a link.")
 
 If you click on a link and it's not working locally then, surely it will trigger the workflow and won't work on GitHub.
 
@@ -67,7 +67,7 @@ To fix this issue, try to type the link with the help of VS code.
 
 When you type `./` or `../` VS code will prompt you to choose from the available options according to what you typed.
 
-![VS code select relative path screenshot](./images/vscode-select-relative-path.png "Screenshot from vs code prompt to select relative path from a pop up list.")
+![VS code select relative path screenshot](./images/vscode-select-relative-path.png?WT.mc_id=academic-105485-koreyst "Screenshot from vs code prompt to select relative path from a pop up list.")
 
 Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
 
@@ -84,7 +84,7 @@ If it's appended to your relative paths then you will pass this check.
 
 If not, you may get the following error.
 
-![GitHub check paths missing tracking comment screenshot](./images/github-check-paths-missing-tracking-comment.png "Screenshot from github comment that shows missing tracking from relative paths")
+![GitHub check paths missing tracking comment screenshot](./images/github-check-paths-missing-tracking-comment.png?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows missing tracking from relative paths")
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
 
@@ -101,7 +101,7 @@ If it's appended to your URLs then you will pass this check.
 
 If not, you may get the following error.
 
-![GitHub check urls missing tracking comment screenshot](./images/github-check-urls-missing-tracking-comment.png "Screenshot from github comment that shows missing tracking from urls")
+![GitHub check urls missing tracking comment screenshot](./images/github-check-urls-missing-tracking-comment.png?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows missing tracking from urls")
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
 
@@ -118,7 +118,7 @@ If it's not present in your URLs then you will pass this check.
 
 If not, you may get the following error.
 
-![GitHub check country locale comment screenshot](./images/github-check-country-locale-comment.png "Screenshot from github comment that shows added country locale to urls")
+![GitHub check country locale comment screenshot](./images/github-check-country-locale-comment.png?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows added country locale to urls")
 
 To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
 

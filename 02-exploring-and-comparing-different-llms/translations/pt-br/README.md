@@ -1,8 +1,8 @@
 # Explorando e comparando diferentes LLMs
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
 
-> *Clique na imagem acima para ver o vídeo desta lição*
+> _Clique na imagem acima para ver o vídeo desta lição_
 
 Na lição anterior, vimos como a IA generativa está mudando o cenário tecnológico, como os Grandes Modelos de Linguagens (LLMs) funcionam e como uma empresa - como nossa startup - pode aplicá-los aos seus casos de uso e crescer! Neste capítulo, estamos procurando comparar e contrastar diferentes tipos de modelos de linguagem grandes, LLMs para entender seus prós e contras.
 
@@ -194,7 +194,6 @@ Saiba mais sobre como você pode [usar o RAG](https://learn.microsoft.com/azure/
 
 ## Ótimo Trabalho, Continue com Seu Aprendizado
 
-Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de aprendizado contínuo](../../../13-continued-learning/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
+Deseja aprender mais sobre diferentes conceitos de IA Generativa? Acesse a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
 
 Vamos para a Lição 3, onde veremos como podemos [Criar IA Generativa de forma Responsável](../../../03-using-generative-ai-responsibly/translations/pt-br/README.md?WT.mc_id=academic-105485-koreyst)!
-
