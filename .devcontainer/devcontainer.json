@@ -1,0 +1,24 @@
+// Adopting the default GitHub codespaces-jupyter template as starter
+// https://github.com/github/codespaces-jupyter
+{
+	"name": "Generative AI For Beginners",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"hostRequirements": {
+		"cpus": 4
+	},
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "python3 -m pip install -r requirements.txt",
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+	"customizations": {
+		"codespaces": {
+			"openFiles": []
+		},
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			], 
+			"postCreateCommand": "pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
+		}
+	}
+}

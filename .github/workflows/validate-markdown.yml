@@ -1,0 +1,104 @@
+name: Validate Markdown
+
+on:
+  # Trigger the workflow on pull request
+  pull_request_target:
+    branches: 
+      - main
+    paths:
+      - '**.md'
+      - '**.ipynb'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-broken-paths:
+    name: Check Broken Relative Paths
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Check broken Paths
+        id: check-broken-paths
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_broken_paths
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  check-paths-tracking:
+    if: ${{ always() }}
+    needs: check-broken-paths
+    name: Check Paths Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check paths tracking
+        id: check-paths-tracking
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_paths_tracking
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  check-urls-tracking:
+    if: ${{ always() }}
+    needs: check-paths-tracking
+    name: Check URLs Have Tracking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check URLs tracking
+        id: check-urls-tracking
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_urls_tracking
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  check-urls-locale:
+    if: ${{ always() }}
+    needs: check-urls-tracking
+    name: Check URLs Don't Have Locale
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check URLs Country Locale
+        id: check-urls-locale
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_urls_locale
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  check-broken-urls:
+    if: ${{ always() }}
+    name: Check Broken URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Run Check Broken URLs
+        id: check-broken-urls
+        uses: john0isaac/action-check-markdown@v1.0.6
+        with:
+          command: check_broken_urls
+          directory: ./
+          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+

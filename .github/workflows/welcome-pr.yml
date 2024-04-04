@@ -1,0 +1,34 @@
+name:  Welcome to the Microsoft Generative AI
+on:
+  # Trigger the workflow on pull request
+  pull_request_target:
+    types: [opened]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  asses-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Label and thanks comment to Pull request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issueAuthor = context.payload.sender.login
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['needs-review']
+            })
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `👋 Thanks for contributing @${ issueAuthor }! We will review the pull request and get back to you soon.`
+            })
+      - name: Auto-assign issue
+        uses: pozil/auto-assign-issue@v1
+        with:
+          repo-token:  ${{ secrets.GITHUB_TOKEN }}
+          assignees: koreyspace
