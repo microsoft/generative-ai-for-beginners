@@ -1,0 +1,30 @@
+{
+	"name": "generative-ai-for-beginners",
+	"version": "1.0.0",
+	"description": "Generative AI for Beginners - A Curriculum",
+	"main": "index.js",
+	"scripts": {
+		"convert": "node_modules/.bin/docsify-to-pdf"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/microsoft/generative-ai-for-beginners.git"
+	},
+	"keywords": [
+		"generative",
+		"ai",
+		"curriculum"
+	],
+	"author": "Jim Bennett and team",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/microsoft/generative-ai-for-beginners/issues"
+	},
+	"homepage": "https://github.com/microsoft/generative-ai-for-beginners#readme",
+	"devDependencies": {
+		"docsify-to-pdf": "0.0.5"
+	},
+	"dependencies": {
+		"openai": "^4.10.0"
+	}
+}

@@ -1,0 +1,59 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget: Azure.AI.OpenAI, 1.0.0-beta.8"
+
+#!csharp
+
+using Azure;
+using Azure.AI.OpenAI;
+using static System.Environment;
+
+string endpoint = "<replace with endpoint>";
+string key = "<replace with API key>";
+
+// Enter the deployment name you chose when you deployed the model.
+string engine = "<replace with deployment>";
+
+OpenAIClient client = new(new Uri(endpoint), new AzureKeyCredential(key));
+
+string prompt = "Complete the following: Once upon a time there was a";
+Console.Write($"Input: {prompt}\n");
+
+Response<Completions> completionsResponse = 
+    await client.GetCompletionsAsync(engine, prompt);
+string completion = completionsResponse.Value.Choices[0].Text;
+Console.WriteLine($"Chatbot: {completion}");
+
+#!csharp
+
+Console.Write("No of recipes (for example, 5): ");
+string no_recipes = "2";
+
+Console.Write("List of ingredients (for example, chicken, potatoes, and carrots): ");
+string ingredients = "chocolate";
+
+Console.Write("Filter (for example, vegetarian, vegan, or gluten-free): ");
+string filter = "peanuts";
+
+// interpolate the number of recipes into the prompt an ingredients
+string prompt = $"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}: ";
+
+#!csharp
+
+// engine, prompt, max_tokens, temperature
+CompletionsOptions options = new()
+{
+    MaxTokens = 150,
+    Temperature = 0.1f,
+};
+options.Prompts.Add(prompt);
+
+Response<Completions> completionsResponse = 
+    await client.GetCompletionsAsync(engine, options);
+string completion = completionsResponse.Value.Choices[0].Text;
+Console.WriteLine("==== Recipes ====");
+Console.WriteLine($"Chatbot: {completion}");
