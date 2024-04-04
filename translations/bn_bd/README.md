@@ -1,4 +1,4 @@
-![নতুনদের জন্য জেনারেটিভ এআই](./images/repo-thubmnail2.png?WT.mc_id=academic-105485-koreyst)
+![নতুনদের জন্য জেনারেটিভ এআই](../images/repo-thubmnail2.png?WT.mc_id=academic-105485-koreyst)
 
 ### জেনারেটিভ এআই অ্যাপ্লিকেশন তৈরি করার জন্য আপনার যা জানা দরকার তা শেখানোর ১৮টি পাঠ।
 
