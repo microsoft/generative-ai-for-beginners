@@ -20,7 +20,7 @@ Learn the fundamentals of building Generative AI applications with our 18-lesson
 
 ## 🌱 Getting Started
 
-This course is 18 lessons. Each lesson covers its own topic so start wherever you would like!
+This course has 18 lessons. Each lesson covers its own topic so start wherever you like!
 
 Lessons are labeled either "Learn" lessons explaining a Generative AI concept or "Build" lessons that explain a concept and code examples in both **Python** and **TypeScript** when possible.
 
@@ -30,11 +30,11 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 
 - Access to the [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) **OR** [OpenAI API](https://platform.openai.com/docs/quickstart?context=python?WT.mc_id=academic-105485-koreyst) - _Only required to complete coding lessons_
 - Basic knowledge of Python or Typescript is helpful - \*For absolute beginners check out these [Python](https://learn.microsoft.com/training/paths/python-language/?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://learn.microsoft.com/training/paths/build-javascript-applications-typescript/?WT.mc_id=academic-105485-koreyst) courses.
-- A Github Account to [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account
+- A Github account to [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account
 
-We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you with setting up your developement environment.
+We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you with setting up your development environment.
 
-Don't forget to star [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
+Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
 
 ## 🧠 Ready to Deploy?
 
@@ -50,13 +50,13 @@ Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundersh
 
 ## 🙏 Want to help?
 
-Find spelling errors, code errors or have a suggestion? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 Each lesson includes:
 
 - A short video introduction to the topic
 - A written lesson located in the README
-- Python and TypeScript Code Samples supporting Azure OpenAI and OpenAI API
+- Python and TypeScript code samples supporting Azure OpenAI and OpenAI API
 - Links to extra resources to continue your learning
 
 ## 🗃️ Lessons
