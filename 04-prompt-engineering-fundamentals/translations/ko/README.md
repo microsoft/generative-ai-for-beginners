@@ -194,7 +194,7 @@ Illustrated with examples.
 아래의 요청은 _토큰화_ 를 통해 맥락과 대화에서 관련 정보를 효과적으로 포착합니다. 이제 시스템 맥락을 변경하는 것은 사용자 입력과 마찬가지로 완성 품질에 큰 영향을 미칠 수 있습니다.
 
 ```python
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
