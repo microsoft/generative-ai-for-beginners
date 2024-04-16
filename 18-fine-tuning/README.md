@@ -19,7 +19,7 @@ Ready? Let's get started.
 
 ## Illustrated Guide
 
-Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core conccepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for additional links to support your self-guided learning journey!
+Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core concepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for additional links to support your self-guided learning journey!
 
 ![Illustrated Guide to Fine Tuning Language Models](./img/18-fine-tuning-sketchnote.png?WT.mc_id=academic-105485-koreyst)
 
@@ -27,7 +27,7 @@ Want to get the big picture of what we'll cover before we dive in? Check out thi
 
 By definition, large language models are _pre-trained_ on large quantities of text sourced from diverse sources including the internet. As we've learned in previous lessons, we need techniques like _prompt engineering_ and _retrieval-augmented generation_ to improve the quality of the model's responses to the user's questions ("prompts").
 
-A popular prompt-engineering technique involves giving the model more guidance on what is expected in the response either by providing _instructions_ (exlicit guidance) or _giving it a few examples_ (implicit guidance). This is referred to as _few-shot learning_ but it has two limitations:
+A popular prompt-engineering technique involves giving the model more guidance on what is expected in the response either by providing _instructions_ (explicit guidance) or _giving it a few examples_ (implicit guidance). This is referred to as _few-shot learning_ but it has two limitations:
 
 - Model token limits can restrict the number of examples you can give, and limit the effectiveness.
 - Model token costs can make it expensive to add examples to every prompt, and limit flexibility.
@@ -36,7 +36,7 @@ Fine-tuning is a common practice in machine learning systems where we take a pre
 
 ## When and why should we fine-tune models?
 
-In _this_ context, when we talk about fine-tuning, we are referring to **supervised** fine-tuning where the retraining is done by **adding new data** that was not part of the original training dataset. This is different from an unsupervised fine-tuning approach whwre the model is retrained on the original data, but with different hyperparameters.
+In _this_ context, when we talk about fine-tuning, we are referring to **supervised** fine-tuning where the retraining is done by **adding new data** that was not part of the original training dataset. This is different from an unsupervised fine-tuning approach where the model is retrained on the original data, but with different hyperparameters.
 
 The key thing to remember is that fine-tuning is an advanced technique that requires a certain level of expertise to get the desired results. If done incorrectly, it may not provide the expected improvements, and may even degrade the performance of the model for your targeted domain.
 

@@ -10,7 +10,7 @@ The default notebook is set up for use with an [Azure OpenAI service resource](h
 
     ```bash
     AZURE_OPENAI_ENDPOINT='<add your endpoint here>'
-    AZURE_OPENAI_DEPLOYMENT='<add your deployment name here>' 
+    AZURE_OPENAI_DEPLOYMENT='<add your deployment name here>'
     AZURE_OPENAI_KEY='<add your key here>'
     AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your deployment name here>'
     ```
@@ -21,7 +21,7 @@ The default notebook is set up for use with an [Azure OpenAI service resource](h
     ```
     This should create an identical copy _except that this file is .gitignore-d and will never get checked into source control_. We can now populate **this .env file** with the environment variable values (secrets) without fear of them being checked in accidentally. You can now move to the next section to start populating these variables.
 
-3. (Option) If you use GitHub Codespaces, you can also save environment variables as [_Codespaces secrets as described here_](https://docs.github.com/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces?WT.mc_id=academic-105485-koreyst). Visit that link to learn how to add a secret, edit it, delete it, and use it in your running codespace. **If you choose this option**, your [**GitHub Settings > Codespaces Secrets**](https://github.com/settings/codespaces?WT.mc_id=academic-105485-koreyst) should look something like this. 
+3. (Option) If you use GitHub Codespaces, you can also save environment variables as [_Codespaces secrets as described here_](https://docs.github.com/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces?WT.mc_id=academic-105485-koreyst). Visit that link to learn how to add a secret, edit it, delete it, and use it in your running codespace. **If you choose this option**, your [**GitHub Settings > Codespaces Secrets**](https://github.com/settings/codespaces?WT.mc_id=academic-105485-koreyst) should look something like this.
     ![Codespaces Secrets](./img/codespaces-secrets.png?WT.mc_id=academic-105485-koreyst)
 
     Note that you can create these secrets once and then make them available to multiple repositories that use those env variables. **However, note that this option works only if you use GitHub Codespaces.** You will still need to setup the .env file if you plan to use Docker Desktop for local development with that devcontainer configruation.
@@ -37,7 +37,7 @@ Let's take a quick look at the variable names to understand what they represent:
 |AZURE_OPENAI_KEY | This is the authorization key for using that service  |
 |AZURE_OPENAI_DEPLOYMENT| This is the _text generation_ model deployment endpoint |
 |AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | This is the _text embeddings_ model deployment endpoint |
-| | | 
+| | |
 
 For context, the last two variables refer to specific models that are used in chat completion (text generation model) and vector search (embeddings model) activities that are frequently used in generative AI applications. In the following sections, we'll locate the _values_ for these variables and set them in `.env` (replacing the content within the `' '`, but preserving the quotes).
 
@@ -53,7 +53,7 @@ The Azure OpenAI endpoint and key values will be found in the [Azure Portal](htt
 
 Next, we need the endpoints for the specific models we've deployed.
 1. Click the **Model deployments** option in the sidebar (left menu) for Azure OpenAI resource.
-1. In the destination page, click **Manage Deployments** 
+1. In the destination page, click **Manage Deployments**
 
 This will take you to the Azure OpenAI Studio website, where we'll find the other values as described below.
 
@@ -65,10 +65,10 @@ This will take you to the Azure OpenAI Studio website, where we'll find the othe
 1. You will need a _text-generation_ model - we recommend: **gpt-35-turbo**
 1. You will need a _text-embedding_ model - we recommend **text-embedding-ada-002**
 
-Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explcitly. So, as an example, you might have:
+Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explicitly. So, as an example, you might have:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo' 
+AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
