@@ -5,7 +5,7 @@ We setup this repository and course with a [development container](https://conta
 To activate the dev container, launch it in [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (for a cloud-hosted runtime) or in [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (for a local device-hosted runtime). Read [this documentation](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) for more details on how dev containers work within VS Code.  
 
 > [!TIP]  
-> We recommend using GitHub Codespaces for a quick start with minimal effort. It provides a generous [free usage quota](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts) for personal accounts. Configure [timeouts](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces) to stop or delete inactive codespaces to maximize your quota usage.
+> We recommend using GitHub Codespaces for a quick start with minimal effort. It provides a generous [free usage quota](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) for personal accounts. Configure [timeouts](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) to stop or delete inactive codespaces to maximize your quota usage.
 
 
 ## 1. Executing Assignments
@@ -23,16 +23,16 @@ Python assignments are provided either as applications (`.py` files) or Jupyter 
 Assignments **may** also be setup to work against one or more Large Language Model (LLM) deployments through a supported service provider like OpenAI, Azure or Hugging Face. These provide a _hosted endpoint_ (API) that we can access programmatically with the right credentials (API key or token). In this course, we discuss these providers:
 
  - [OpenAI](https://platform.openai.com/docs/models) with diverse models including the core GPT series.
- - [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for OpenAI models with enterprise readiness in focus
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/) for OpenAI models with enterprise readiness in focus
  - [Hugging Face](https://huggingface.co/docs/hub/index) for open-source models and inference server
 
 **You will need to use your own accounts for these exercises**. Assignments are optional so you can choose to setup one, all - or none - of the providers based on your interests. Some guidance for signup:
 
 | Signup | Cost | API Key | Playground | Comments |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup)| [Pricing](https://openai.com/pricing#language-models)| [Project-based](https://platform.openai.com/api-keys) | [No-Code, Web](https://platform.openai.com/playground) | Multiple Models Available |
-| [Azure](https://aka.ms/azure/free)| [Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython-new&pivots=programming-language-python#retrieve-key-and-endpoint)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython-new&pivots=programming-language-studio#playground) |  [Must Apply Ahead For Access](https://learn.microsoft.com/azure/ai-services/openai/)|
-| [Hugging Face](https://huggingface.co/join) | [Pricing](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens) | [Hugging Chat](https://huggingface.co/chat/)| [Hugging Chat has limited models](https://huggingface.co/chat/models) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Pricing](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Project-based](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Multiple Models Available |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Must Apply Ahead For Access](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Pricing](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat has limited models](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
 Follow the directions below to _configure_ this repository for use with different providers. Assignments that require a specific provider will contain one of these tags in their filename:
@@ -134,4 +134,4 @@ Your OpenAI API key can be found in your [OpenAI account](https://platform.opena
 
 ### 2.6 Configure Hugging Face: From Profile
 
-Your Hugging Face token can be found in your profile under [Access Tokens](https://huggingface.co/settings/tokens). Don't post or share these publicly. Instead, create a new token for this project usage and copy that into the `.env` file under the `HUGGING_FACE_API_KEY` variable. _Note:_ This is technically not an API key but is used for authentication so we are keeping that naming convention for consistency.
+Your Hugging Face token can be found in your profile under [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Don't post or share these publicly. Instead, create a new token for this project usage and copy that into the `.env` file under the `HUGGING_FACE_API_KEY` variable. _Note:_ This is technically not an API key but is used for authentication so we are keeping that naming convention for consistency.
