@@ -48,7 +48,7 @@
 
 ## Lesson 4 - 프롬프트 엔지니어링 기본 원리 이해
 
-🔗 [Getting Started with Azure OpenAI Services](https://https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-koreyst)
+🔗 [Getting Started with Azure OpenAI Services](https://learn.microsoft.com/training/modules/get-started-openai/?&WT.mc_id=academic-105485-koreyst)
 
 [Apply Prompt Engineering with Azure OpenAI services](https://learn.microsoft.com/training/modules/apply-prompt-engineering-azure-openai/?&WT.mc_id=academic-105485-koreyst)
 
