@@ -194,7 +194,7 @@ Illustrated with examples.
 该请求现在采用以下形式，其中标记化有效地从上下文和对话中捕获相关信息。 现在，更改系统上下文对补全质量的影响并与提供的用户输入一样。
 
 ```python
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},

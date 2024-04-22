@@ -80,4 +80,4 @@ Azure AI让你可以使用多种资源，管理你的操作、服务、项目、
 
 通过[Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)深入学习我们如何将这些概念应用于实际应用开发，并查看Cloud Advocacy如何在演示中加入这些概念。想要获取更多内容，不妨观看我们的[Ignite breakout session!](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-接下来，通过第15课，了解[检索增强生成和向量数据库](#)如何影响生成式AI，使应用更加吸引用户！
+接下来，通过第15课，了解[检索增强生成和向量数据库](../../../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)如何影响生成式AI，使应用更加吸引用户！
