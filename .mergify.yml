@@ -1,0 +1,42 @@
+pull_request_rules:
+  - name: Add a queue label when PR is queued
+    description: Toggle the queue label when a pull request is (un)queued.
+    conditions:
+      - queue-position > 0
+    actions:
+      label:
+        toggle:
+          - merge-queued
+
+  - name: Label conflicting pull requests
+    description: Add a label to a pull request with conflict to spot it easily
+    conditions:
+      - conflict
+    actions:
+      comment:
+        message: '@{{author}} this pull request is now in conflict 😩'
+      label:
+        toggle:
+          - conflict
+
+  - name: Automatic merge when CI passes and approved
+    conditions:
+      - author=dependabot[bot]
+      - check-success=dependency-review
+    actions:
+      merge:
+        method: merge
+
+  - name: continuously rebase pull requests when it's behind 5 commits on 'main'
+    conditions:
+      - base=main
+      - '#commits-behind>=5'
+    actions:
+      rebase:
+
+  - name: delete head branch after merge but not if other PRs depend on it
+    conditions:
+      - merged
+    actions:
+      delete_head_branch:
+        force: false
