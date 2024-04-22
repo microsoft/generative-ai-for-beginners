@@ -149,7 +149,7 @@ az cognitiveservices account deployment create \
 
 ## 해답
 
-GitHub Codespaces에서 [해답 노트북](../../solution.ipynb?WT.mc_id=academic-105485-koreyst)을 열고 Jupyter Notebook의 지침을 따르세요.
+GitHub Codespaces에서 [해답 노트북](../../python/oai-solution.ipynb?WT.mc_id=academic-105485-koreyst)을 열고 Jupyter Notebook의 지침을 따르세요.
 
 노트북을 실행할 때, 쿼리를 입력하라는 메시지가 표시됩니다. 입력 상자는 다음과 같이 보일 것입니다:
 
