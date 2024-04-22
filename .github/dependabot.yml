@@ -22,3 +22,10 @@ updates:
       # Allow both direct and indirect updates for all packages
       - dependency-type: "all"
     versioning-strategy: increase
+
+   # Maintain dependencies for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 50
