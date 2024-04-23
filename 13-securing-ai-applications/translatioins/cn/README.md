@@ -121,7 +121,7 @@ LLMs可能对它们使用的数据的隐私和安全构成风险。例如，LLMs
 
 模拟现实世界威胁现在被认为是构建弹性AI系统的标准实践，通过采用类似的工具、策略、程序来识别系统的风险并测试防御者的响应。
 
-> AI红队的实践已经演变为具有更广泛的含义：它不仅涵盖了探测安全漏洞，还包括探测其他系统故障，如生成可能有害的内容。AI系统带来了新的风险，而红队是理解这些新风险的核心，如提示注入和产生不切实际的内容。- [Microsoft AI红队构建更安全的AI未来](https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+> AI红队的实践已经演变为具有更广泛的含义：它不仅涵盖了探测安全漏洞，还包括探测其他系统故障，如生成可能有害的内容。AI系统带来了新的风险，而红队是理解这些新风险的核心，如提示注入和产生不切实际的内容。- [Microsoft AI红队构建更安全的AI未来](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
 [![红队指引和资源](../../images/13-AI-red-team.png?WT.mc_id=academic-105485-koreyst)]()
 
@@ -131,11 +131,11 @@ LLMs可能对它们使用的数据的隐私和安全构成风险。例如，LLMs
 2. **恶意和良性失败：**AI红队考虑了恶意和良性视角的失败。例如，当红队新的Bing时，我们探索的不仅仅是恶意对手如何颠覆系统，还有普通用户可能遇到的问题或有害内容。与传统的安全红队不同，主要关注恶意行为者，AI红队考虑了更广泛的人物和潜在失败。
 3. **AI系统的动态性：**AI应用不断进化。在大语言模型应用中，开发者适应不断变化的要求。持续的红队确保持续的警惕和适应不断变化的风险。
 
-AI红队并非包罗万象，应被视为补充其他控制措施，如[基于角色的访问控制（RBAC）](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst)和全面的数据管理解决方案。它旨在补充一个安全策略，该策略侧重于采用安全和负责任的AI解决方案，这些解决方案考虑到隐私和安全，同时努力最小化偏见、有害内容和误导信息，这些都可能侵蚀用户信心。
+AI红队并非包罗万象，应被视为补充其他控制措施，如[基于角色的访问控制（RBAC）](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst)和全面的数据管理解决方案。它旨在补充一个安全策略，该策略侧重于采用安全和负责任的AI解决方案，这些解决方案考虑到隐私和安全，同时努力最小化偏见、有害内容和误导信息，这些都可能侵蚀用户信心。
 
 以下是一些可以帮助您更好地了解红队如何帮助识别和缓解AI系统中的风险的额外阅读材料：
 
-- [为大型语言模型（LLMs）及其应用规划红队](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [为大型语言模型（LLMs）及其应用规划红队](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
 - [什么是OpenAI红队网络？](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
 - [AI红队 - 构建更安全、更负责任的AI解决方案的关键实践](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
 - MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst)，一个知识库，记录了对手在对AI系统进行实际攻击中使用的策略和技术。
@@ -152,7 +152,7 @@ AI红队并非包罗万象，应被视为补充其他控制措施，如[基于�
 
 ## 🚀 挑战
 
-探索更多关于如何在AI时代[管理和保护敏感信息](https://learn.microsoft.com/en-us/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst)的方法。
+探索更多关于如何在AI时代[管理和保护敏感信息](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst)的方法。
 
 ## 做得好，继续你的学习之旅
 

@@ -599,7 +599,7 @@ GitHub Copilot이나 ChatGPT와 같은 AI 어시스턴트를 사용하여 "자�
 > [!TIP]  
 > 개선 사항을 요청하는 프롬프트를 작성하는 것이 좋습니다. 개선 사항의 수를 제한하는 것도 좋은 아이디어입니다. 또한 아키텍처, 성능, 보안 등 특정한 방식으로 개선을 요청할 수도 있습니다.
 
-[해답](../../solution.py?WT.mc_id=academic-105485-koreyst)
+[해답](../../python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## 지식 확인
 
