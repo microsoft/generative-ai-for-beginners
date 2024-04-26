@@ -1,0 +1,7 @@
+name: <environment-name>
+channels:
+ - defaults
+dependencies:
+- python=<python-version>
+- openai
+- python-dotenv
