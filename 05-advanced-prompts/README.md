@@ -75,7 +75,7 @@ This style of prompting is very simple, it consists of a single prompt. This tec
 
 ### Few-shot prompting
 
-This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional a task-specific data. Here's an example:
+This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional task-specific data. Here's an example:
 
 - Prompt: "Write a poem in the style of Shakespeare. Here are a few examples of Shakespearean sonnets.:
   Sonnet 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
