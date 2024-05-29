@@ -1,6 +1,6 @@
 # Resources For Self-Guided Learning
 
-The lesson was built using a number of core resources from OpenAI and Azure OpenAI as references for the terminology and tutorials. Here is a non-comprehenisve list, for your own self-guided learning journeys.
+The lesson was built using a number of core resources from OpenAI and Azure OpenAI as references for the terminology and tutorials. Here is a non-comprehensive list, for your own self-guided learning journeys.
 
 ## 1. Primary Resources
 

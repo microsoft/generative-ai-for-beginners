@@ -56,8 +56,8 @@
 
 您需要找到一种与 LLMs 结合的方法，通常使用以下两种方法：
 
-- API 在这里，您将根据提示构建 Web 请求并返回生成的文本。
-- Libraries 库有助于封装 API 调用并使其更易于使用。
+- 使用API，您将根据提示构建 Web 请求并返回生成的文本。
+- 使用库，库有助于封装 API 调用，使其更易于使用。
 
 ## Libraries/SDKs
 
@@ -72,15 +72,11 @@
 
 ## 人生中第一个 openai 应用
 
-Let's see how we can build our first app, what libraries we need, how much is required and so on.
-
 让我们看看如何构建人生中第一个 openai 应用，我们需要哪些 libraries，需要多少技能等等。
 
 ### 安装 openai
 
-There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more. We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
-
-有许多 libraries 可用于与 OpenAI 或 Azure OpenAI 交互。 还可以使用不同的编程语言，如 C#、Python、JavaScript、Java 等。 我们选择使用 `openai` Python 库，通过 `pip` 来安装它。
+有许多库可用于与 OpenAI 或 Azure OpenAI 交互。 还可以使用不同的编程语言，如 C#、Python、JavaScript、Java 等。 我们选择使用 `openai` Python 库，通过 `pip` 来安装它。
 
 ```bash
 pip install openai
@@ -105,7 +101,7 @@ pip install openai
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-复制 Key 后，让我们调用 libraries 使用它。
+复制 Key 后，让我们调用库使用它。
 
 > [!注意]
 > 通过设置环境变量将 API Key 与代码分开是很重要的
@@ -124,7 +120,7 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-设置相关的补充
+以上设置的解释
 
 - `api_type` 为 `azure`. 这告诉 librarys 使用 Azure Open AI 而不是 OpenAI。
 - `api_key`, 对应 Azure Portal 中的 API Key
@@ -224,7 +220,7 @@ print(completion.choices[0].message.content)
 
 ## 进阶学习：菜谱生成器
 
-象一下，你家里有食材，你想煮点东西。 为此，你需要一个食谱。 查找食谱的一种方法是使用搜索引擎，或者您可以使用 LLMs 来这样做。
+想象一下，你家里有食材，你想煮点东西。 为此，你需要一个食谱。 查找食谱的一种方法是使用搜索引擎，或者您可以使用 LLMs 来这样做。
 
 你可以这样写一个提示：
 
@@ -437,9 +433,9 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Above, we add `{filter}` to the end of the prompt and we also capture the filter value from the user.
+  上面代码中，我们在提示语末尾添加了 {filter}，并让用户输入过滤值。
 
-  An example input of running the program can now look like so:
+  现在运行程序的输入示例如下
 
   ```output
   No of recipes (for example, 5: 3
@@ -508,10 +504,6 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
 
   正如您所看到的，任何含有牛奶的食谱都已被过滤掉。 但是，如果您患有乳糖不耐症，您可能也想过滤掉含有奶酪的食谱，因此有必要明确一下。
 
-  ```python
-
-  ```
-
 - **制作购物清单**。 我们想根据家里已有的物品制定一份购物清单。
 
   对于此功能，我们可以尝试在一个提示中解决所有问题，也可以将其分成两个提示。 让我们尝试一下后一种方法。 在这里，我们建议添加一个额外的提示，但为了使其起作用，我们需要将前一个提示的结果作为上下文添加到后一个提示中。
@@ -538,7 +530,7 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  2. 我们提出一个新的请求，但也考虑到我们在第一个提示中请求的 token 数量，所以这次我们说 `max_tokens` 是 1200。
+  2. 我们提出一个新的请求，但也考虑到我们在第一个提示中请求的 token 数量，所以这次我们设置 `max_tokens` 是 1200。
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
@@ -563,7 +555,7 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
 
 到目前为止，我们拥有的是可以运行的代码，但是我们应该做一些调整来进一步改进。 我们应该做的一些事情是：
 
-- **将 Key 与代码分开**，例如 API Key。Key 不属于代码，应存储在安全的位置。 为了将 Key 与代码分开，我们可以使用环境变量和像`python-dotenv` 这样的 libraries 从文件中加载它们。 代码如下：
+- **将 Key 与代码分开**，例如 API Key。Key 不属于代码，应存储在安全的位置。 为了将 Key 与代码分开，我们可以使用环境变量和像`python-dotenv` 这样的库去从文件中加载它们。 代码如下：
 
   1. 创建一个包含以下内容的 `.env` 文件：
 
@@ -571,7 +563,7 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
      OPENAI_API_KEY=sk-...
      ```
 
-     > Note, for Azure, you need to set the following environment variables:
+     > 注意，对于 Azure，需要设置以下环境变量:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -579,7 +571,7 @@ That's your five recipes, with no garlic mentioned and you also have a shopping 
      OPENAI_API_BASE=<replace>
      ```
 
-     In code, you would load the environment variables like so:
+     在代码中，您可以这样加载环境变量:
 
      ```python
      from dotenv import load_dotenv

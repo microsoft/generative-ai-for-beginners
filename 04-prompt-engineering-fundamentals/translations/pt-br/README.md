@@ -196,7 +196,7 @@ Agora, vamos adicionar contexto e instruções a esse prompt básico. A [API de 
 A solicitação agora está na forma abaixo, onde a _tokenização_ captura efetivamente informações relevantes do contexto e da conversa. Agora, alterar o contexto do sistema pode ter um impacto significativo na qualidade dos completamentos, assim como as entradas do usuário fornecidas.
 
 ```python
-response = openai.ChatCompletion.create(
+response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "Você é um assistente prestativo."},

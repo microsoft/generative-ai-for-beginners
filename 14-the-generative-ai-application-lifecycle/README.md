@@ -48,7 +48,7 @@ How could we explore those steps? Let's step into detail in how could we build a
 This may look a bit complicated, lets focus on the three big steps first.
 
 1. Ideating/Exploring: Exploration, here we can explore according to our business needs. Prototyping, creating a [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) and test if is efficient enough for our Hypothesis.
-1. Building/Augmenting: Implementation, now, we start to evaluate for bigger datasets implement tecnqiues, like Fine-tuning and RAG, to check the robustness of out solution. If it does not, re-implementing it, adding new steps in our flow or restructuring the data, might help. After testing our flow and our scale, if it works and check our Metrics, it is ready for the next step.
+1. Building/Augmenting: Implementation, now, we start to evaluate for bigger datasets implement techniques, like Fine-tuning and RAG, to check the robustness of out solution. If it does not, re-implementing it, adding new steps in our flow or restructuring the data, might help. After testing our flow and our scale, if it works and check our Metrics, it is ready for the next step.
 1. Operationalizing: Integration, now adding Monitoring and Alerts Systems to our system, deployment and application integration to our Application.
 
 Then, we have the overarching cycle of Management, focusing on security, compliance and governance.
@@ -82,4 +82,4 @@ Construct, from Proof-of-Concept(POC) until large scale applications with Prompt
 Amazing, now learn more how we structure an application to use the concepts with the [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), to check how Cloud Advocacy adds those concepts in demonstations. For more content, check our [Ignite breakout session!
 ](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vector Databases](#) impact Generative AI and to make more engaging Applications!
+Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vector Databases](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) impact Generative AI and to make more engaging Applications!

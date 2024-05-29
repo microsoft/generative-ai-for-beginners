@@ -21,7 +21,7 @@ This lesson will cover:
 After completing this lesson you will be able to:
 
 - Explain the purpose of using function calling.
-- Setup Function Call using the Azure Open AI Service.
+- Setup Function Call using the Azure OpenAI Service.
 - Design effective function calls for your application's use case.
 
 ## Scenario: improving our chatbot with functions
@@ -30,7 +30,7 @@ For this lesson, we want to build a feature for our education startup that allow
 
 To complete this scenario we will use a combination of:
 
-- `Azure Open AI` to create a chat experience for the user.
+- `Azure OpenAI` to create a chat experience for the user.
 - `Microsoft Learn Catalog API` to help users find courses based on the request of the user.
 - `Function Calling` to take the user's query and send it to a function to make the API request.
 
@@ -40,7 +40,7 @@ To get started, let's look at why we would want to use function calling in the f
 
 Before function calling, responses from an LLM were unstructured and inconsistent. Developers were required to write complex validation code to make sure they are able to handle each variation of a response. Users could not get answers like "What is the current weather in Stockholm?". This is because models were limited to the time the data was trained on.
 
-Function Calling is a feature of the Azure Open AI Service to overcome to the following limitations:
+Function Calling is a feature of the Azure OpenAI Service to overcome to the following limitations:
 
 - **Consistent response format**. If we can better control the response format we can more easily integrate the response downstream to other systems.
 - **External data**. Ability to use data from other sources of an application in a chat context.
@@ -53,7 +53,7 @@ Let's look at the example that illustrates the response format problem:
 
 Let's say we want to create a database of student data so we can suggest the right course to them. Below we have two descriptions of students that are very similar in the data they contain.
 
-1. Create a connection to our Azure Open AI resource:
+1. Create a connection to our Azure OpenAI resource:
 
    ```python
    import os
@@ -70,7 +70,7 @@ Let's say we want to create a database of student data so we can suggest the rig
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Below is some Python code for configuring our connection to Azure Open AI where we set `api_type`, `api_base`, `api_version` and `api_key`.
+   Below is some Python code for configuring our connection to Azure OpenAI where we set `api_type`, `api_base`, `api_version` and `api_key`.
 
 1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
 
@@ -114,7 +114,7 @@ Let's say we want to create a database of student data so we can suggest the rig
 
    The above prompts instruct the LLM to extract information and return the response in JSON format.
 
-1. After setting up the prompts and the connection to Azure Open AI, we will now send the prompts to the LLM by using `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. This is to mimic a message from a user being written to a chatbot.
+1. After setting up the prompts and the connection to Azure OpenAI, we will now send the prompts to the LLM by using `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. This is to mimic a message from a user being written to a chatbot.
 
    ```python
    # response from prompt one
@@ -433,7 +433,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## Assignment
 
-To continue your learning of Azure Open AI Function Calling you can build:
+To continue your learning of Azure OpenAI Function Calling you can build:
 
 - More parameters of the function that might help learners find more courses.
 - Create another function call that takes more information from the learner like their native language
