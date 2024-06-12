@@ -41,7 +41,7 @@ Source: Artifical Anayslsis
 
 ### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), developed by Meta is an open model that is optimized for chat based applications. This is due to its fine-tuning method, which included a large amount of dialogue and human feedback.. With this method, the model produces more results that are aligned to human expectation which provides a better user experience.
+[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), developed by Meta is an open model that is optimized for chat based applications. This is due to its fine-tuning method, which included a large amount of dialogue and human feedback. With this method, the model produces more results that are aligned to human expectation which provides a better user experience.
 
 Some examples of fine-tuned versions of Llama include [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), which specializes in Japanese and [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), which is an enhanced version of the base model.
 
