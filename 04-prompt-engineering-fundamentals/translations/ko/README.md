@@ -387,6 +387,4 @@ A: 2번입니다. 이 프롬프트는 "무엇"에 대한 세부 정보를 제공
 
 ## 훌륭합니다! 계속해서 학습하세요
 
-다양한 프롬프트 엔지니어링 개념에 대해 더 알고 싶으신가요? [계속해서 학습하기 페이지](../../../13-continued-learning/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)에서 이 주제에 대한 다른 훌륭한 자료를 찾아보세요.
-
 5번 레슨으로 이동하여 [고급 프롬프트 생성](../../../05-advanced-prompts/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!

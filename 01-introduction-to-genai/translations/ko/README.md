@@ -1,6 +1,6 @@
 # 생성형 AI와 대형 언어 모델 (LLM) 소개
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(이미지를 클릭하면 이 수업의 비디오를 볼 수 있습니다)_
 
