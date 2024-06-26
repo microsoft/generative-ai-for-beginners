@@ -1,6 +1,6 @@
 # Function Calling과 통합하기
 
-[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh)
+[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 지금까지 이전 레슨에서 많은 것을 배웠습니다. 그러나 더 나아갈 수 있습니다. 우리가 해결할 수 있는 몇 가지 문제는 응답 형식을 더 일관되게 만들어 응답을 더 쉽게 처리할 수 있도록 하는 것이며, 또한 응용 프로그램을 더 풍부하게 만들기 위해 다른 소스에서 데이터를 추가할 수도 있습니다.
 

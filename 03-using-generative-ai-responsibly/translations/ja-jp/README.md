@@ -1,8 +1,6 @@
 # 生成 AI の責任ある使用
 
-[![生成 AI の責任ある使用](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson3-gh)
-
-> **ビデオは近日公開予定**
+[![生成 AI の責任ある使用](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
 AI、特に生成 AI にとても強い興味は抱くのは理解できますが、それをどのように責任を持って利用するかについて、十分に検討する必要があります。例えば、出力結果が「公平で有害でない」のを保証するなど、多くの点を考慮すべきです。本章は、上記の背景や考慮すべき点、そして AI をより有効活用するための具体的な行動指針を、皆様にお届けします。
 

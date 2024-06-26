@@ -1,6 +1,6 @@
 # Building Low Code AI Applications
 
-[![Building Low Code AI Applications](./images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson10-gh)
+[![Building Low Code AI Applications](./images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Click the image above to view video of this lesson)_
 

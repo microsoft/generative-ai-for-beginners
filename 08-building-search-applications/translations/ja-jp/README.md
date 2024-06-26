@@ -1,6 +1,6 @@
 # 検索アプリケーションの構築
 
-[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson8-gh)
+[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
 LLM は、チャットボットやテキスト生成だけでなく、Embeddings を使った検索アプリケーションの実装も可能です。Embeddings とは、ベクトルと呼ばれるデータの数値表現で、データのセマンティック検索に活用できます。
 

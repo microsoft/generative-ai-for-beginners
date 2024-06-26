@@ -1,6 +1,6 @@
 # 第十一章：为生成式 AI 添加 function calling
 
-[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh)
+[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 到目前为止，您在之前的章节中已经学到了相当多的知识。 然而，我们可以进一步改进。 可以解决的一些问题是如何获得更一致的响应格式，以便更轻松地处理下游响应。 此外，我们可能希望添加来自其他来源的数据以进一步丰富我们的应用程序。
 

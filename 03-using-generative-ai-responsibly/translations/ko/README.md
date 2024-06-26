@@ -1,8 +1,6 @@
 # 책임감 있게 생성형 AI 사용하기
 
-[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh)
-
-> **비디오 제공 예정**
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
 AI 및 특히 생성형 AI에 매료되는 것은 쉽지만, 우리는 책임 있는 사용 방법을 고려해야 합니다. 즉, 출력물이 공정하고, 해를 끼치지 않도록 하는 등을 어떻게 보장할지에 대해 고려해야 합니다. 이 장에서는 '책임 있는 AI'가 나오게 된 상황과, 이를 위해 고려해야할 사항 및 AI 사용을 개선하기 위해 적극적인 단계를 취하는 방법을 알려주는 것을 목표로 합니다
 

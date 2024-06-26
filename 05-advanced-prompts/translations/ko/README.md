@@ -1,6 +1,6 @@
 # 고급 프롬프트 생성
 
-[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh)
+[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)
 
 이전 장에서 배운 내용을 간단히 되짚어보겠습니다:
 

@@ -1,6 +1,6 @@
 # 画像生成アプリケーションの構築
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson9-gh)
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 LLM はテキスト生成だけでなく、テキストの説明から画像も生成できます。画像生成は、医療や建築、観光、ゲーム開発のように様々な業界において価値が高いとされています。この章では、最も人気のある 2 つの画像生成モデル、DALL-E と Midjourney について詳しく見ていきます。
 

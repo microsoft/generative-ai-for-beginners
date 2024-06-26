@@ -1,6 +1,6 @@
 # Criando prompts avançados
 
-[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh)
+[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)
 
 Vamos recapitular algumas aprendizagens do capítulo anterior:
 

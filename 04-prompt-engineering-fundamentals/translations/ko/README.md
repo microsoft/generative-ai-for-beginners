@@ -1,6 +1,6 @@
 # 프롬프트 엔지니어링 기초
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson4-gh)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)
 
 LLM에게 어떻게 프롬프트를 작성하는지는 중요합니다. 신중하게 작성된 프롬프트는 그렇지 않은 프롬프트보다 더 좋은 결과를 얻을 수 있습니다. 그런데 이런 개념들, 프롬프트, 프롬프트 엔지니어링이 무엇인지, 그리고 LLM에게 보내는 것을 어떻게 개선할 수 있는지에 대한 질문들은 바로 이 장과 다가올 장에서 답변하려고 합니다.
 

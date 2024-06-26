@@ -1,6 +1,6 @@
 # Introdução à Inteligência Artificial Generativa e Grandes Modelos de Linguagem
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(Clique na imagem acima para assistir ao vídeo desta lição)_
 

@@ -1,6 +1,6 @@
 # 생성형 AI와 대형 언어 모델 (LLM) 소개
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(이미지를 클릭하면 이 수업의 비디오를 볼 수 있습니다)_
 
@@ -97,7 +97,6 @@ AI 분야에서 수십 년간의 연구 끝에 새로운 모델 구조인 *Trans
     ![Example of creative writing](../../images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
-
 
 - **질문 (question)** 을 통해 대화 형식으로 에이전트에게 질문을 물어볼 수 있습니다.
 

@@ -1,6 +1,6 @@
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(Click the image above to view video of this lesson)_
 
@@ -100,7 +100,6 @@ The input of a large language model is known as prompt, while the output is know
     ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
-
 
 - A **question**, asked in the form of a conversation with an agent.
 

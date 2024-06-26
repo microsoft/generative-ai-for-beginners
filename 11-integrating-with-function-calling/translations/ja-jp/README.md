@@ -1,6 +1,6 @@
 # Function Calling との統合
 
-[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh)
+[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 これまでのレッスンでかなり多くの内容を学びました。しかし、私たちはさらに成長できます。取り組むべき課題の一つは、一貫性のある回答フォーマットの作成です。回答フォーマットが一貫すると後続の処理はスムーズに進められます。また、他のデータ・ソースからデータを追加し、アプリケーションをさらに拡張できます。
 

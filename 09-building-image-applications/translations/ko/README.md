@@ -1,6 +1,6 @@
 # 이미지 생성 애플리케이션 구축하기
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh)
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 LLM은 텍스트 생성 이상의 기능을 갖고 있습니다. 텍스트 설명으로부터 이미지를 생성하는 것도 가능합니다. 이미지를 모달리티로 사용하는 것은 MedTech, 건축, 관광, 게임 개발 등 여러 분야에서 매우 유용할 수 있습니다. 이 장에서는 가장 인기 있는 이미지 생성 모델인 DALL-E와 Midjourney에 대해 알아보겠습니다.
 

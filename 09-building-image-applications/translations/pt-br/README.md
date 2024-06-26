@@ -1,6 +1,6 @@
 # Criando aplicativos de geração de imagens
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh)
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 Ainda há muito mais que os LLMs podem fazer além da geração de texto. Também é possível gerar imagens a partir de descrições de texto. Ter imagens como modalidade pode ser altamente útil em uma série de áreas, desde MedTech, arquitetura, turismo, desenvolvimento de jogos e muito mais. Neste capítulo, veremos os dois modelos de geração de imagens mais populares, DALL-E e Midjourney.
 

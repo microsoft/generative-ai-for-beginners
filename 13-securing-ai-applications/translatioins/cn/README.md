@@ -1,6 +1,6 @@
 # 生成式 AI 初学者指南：第 13 章 - 保护 AI 应用
 
-[![保护您的AI应用](../../images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson13-gh)
+[![保护您的AI应用](../../images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## 引言
 

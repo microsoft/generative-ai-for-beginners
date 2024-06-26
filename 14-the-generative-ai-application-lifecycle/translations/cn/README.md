@@ -1,4 +1,4 @@
-[![Integrating with function calling](../../images/14-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson14-gh)
+[![Integrating with function calling](../../images/14-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)
 
 # 生成式 AI 应用生命周期
 

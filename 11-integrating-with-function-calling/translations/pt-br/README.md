@@ -1,6 +1,6 @@
 # Integrando com chamadas de função
 
-[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh)
+[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 Você aprendeu bastante até agora nas lições anteriores. No entanto, podemos melhorar ainda mais. Algumas coisas que podemos abordar são como podemos obter um formato de resposta mais consistente para facilitar o trabalho com a resposta a jusante. Além disso, podemos querer adicionar dados de outras fontes para enriquecer ainda mais nossa aplicação.
 

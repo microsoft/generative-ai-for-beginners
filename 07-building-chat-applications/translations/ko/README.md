@@ -1,6 +1,6 @@
 # 생성형 AI를 활용한 채팅 애플리케이션 구축
 
-[![Generative AI를 활용한 채팅 애플리케이션 구축](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lessons7-gh)
+[![Generative AI를 활용한 채팅 애플리케이션 구축](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(위의 이미지를 클릭하여 이 레슨의 비디오를 시청하세요)_
 
