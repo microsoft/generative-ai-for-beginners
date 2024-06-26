@@ -1,6 +1,6 @@
 # 第三章 ： 负责任地使用生成式人工智能
 
-[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh)
 
 > **导学视频即将上架，敬请期待**
 

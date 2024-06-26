@@ -1,6 +1,6 @@
 # Usando a IA Generativa de Forma Responsável
 
-[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
+[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh)
 
 > **Vídeo em Breve**
 
