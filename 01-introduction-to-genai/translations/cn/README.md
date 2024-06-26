@@ -1,6 +1,6 @@
 # 第一章 : 生成式人工智能和 LLMs 介绍
 
-[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(点击该图片看本章导学视频)_
 

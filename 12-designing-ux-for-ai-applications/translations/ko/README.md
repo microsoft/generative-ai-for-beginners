@@ -1,6 +1,6 @@
 # AI 애플리케이션을 위한 사용자 경험(ux) 디자인하기
 
-[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson12-gh)
+[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(이미지를 클릭하면 이 수업의 비디오를 볼 수 있습니다)_
 

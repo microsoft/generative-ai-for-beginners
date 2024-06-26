@@ -1,6 +1,6 @@
 # 生成 AI と大規模言語モデルの紹介
 
-[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner1.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 
