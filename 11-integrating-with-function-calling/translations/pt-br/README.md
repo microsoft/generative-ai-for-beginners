@@ -1,12 +1,10 @@
 # Integrando com chamadas de função
 
-![chapter image](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)
+[![Integrating with function calling](../../images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 Você aprendeu bastante até agora nas lições anteriores. No entanto, podemos melhorar ainda mais. Algumas coisas que podemos abordar são como podemos obter um formato de resposta mais consistente para facilitar o trabalho com a resposta a jusante. Além disso, podemos querer adicionar dados de outras fontes para enriquecer ainda mais nossa aplicação.
 
 Os problemas mencionados acima são o que este capítulo pretende abordar.
-
-> **Vídeo em Breve**
 
 ## Introdução
 
@@ -47,7 +45,7 @@ A Chamada de Função é um recurso do Serviço Azure Open AI para superar as se
 
 ## Ilustrando o problema por meio de um cenário
 
-> Recomendamos que você crie um arquivo *Notebook.ipynb* e cole o código abaixo em células de código separadas se quiser executar o cenário abaixo. Você também pode apenas ler enquanto tentamos ilustrar um problema em que as funções podem ajudar a resolver o problema.
+> Recomendamos que você crie um arquivo _Notebook.ipynb_ e cole o código abaixo em células de código separadas se quiser executar o cenário abaixo. Você também pode apenas ler enquanto tentamos ilustrar um problema em que as funções podem ajudar a resolver o problema.
 
 Vamos dar uma olhada no exemplo que ilustra o problema do formato de resposta:
 
@@ -71,7 +69,7 @@ Digamos que queremos criar um banco de dados de dados de estudantes para que pos
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
-  
+
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
@@ -114,17 +112,17 @@ Digamos que queremos criar um banco de dados de dados de estudantes para que pos
    ```python
    # response from prompt one
    openai_response1 = openai.ChatCompletion.create(
-     engine="gpt-function",    
+     engine="gpt-function",
      messages = [{'role': 'user', 'content': prompt1}]
    )
-   openai_response1['choices'][0]['message']['content'] 
+   openai_response1['choices'][0]['message']['content']
 
    # response from prompt two
    openai_response2 = openai.ChatCompletion.create(
      engine="gpt-function",
      messages = [{'role': 'user', 'content': prompt2 }]
    )
-   openai_response2['choices'][0]['message']['content'] 
+   openai_response2['choices'][0]['message']['content']
    ```
 
 Agora nós podemos enviar ambas as solicitações para o LLM e examinar a resposta que recebemos encontrando-a assim `openai_response1['choices'][0]['message']['content']`.
@@ -140,21 +138,25 @@ Agora nós podemos enviar ambas as solicitações para o LLM e examinar a respos
    Resposta 1:
 
    ```json
-   {'name': 'Emily Johnson',
-    'major': 'computer science',
-    'school': 'Duke University',
-    'grades': '3.7',
-    'club': 'Chess Club'}
+   {
+     "name": "Emily Johnson",
+     "major": "computer science",
+     "school": "Duke University",
+     "grades": "3.7",
+     "club": "Chess Club"
+   }
    ```
 
    Resposta 2:
 
    ```json
-   {'name': 'Michael Lee',
-    'major': 'computer science',
-    'school': 'Stanford University',
-    'grades': '3.8 GPA',
-    'club': 'Robotics Club'}
+   {
+     "name": "Michael Lee",
+     "major": "computer science",
+     "school": "Stanford University",
+     "grades": "3.8 GPA",
+     "club": "Robotics Club"
+   }
    ```
 
    Embora os prompts sejam os mesmos e as descrições sejam semelhantes, vemos que os valores da propriedade `Grades` são formatados de maneira diferente, como `3.7` ou `3.7 GPA`, por exemplo.
@@ -241,8 +243,8 @@ Vamos descrever cada instância de função mais detalhadamente abaixo:
 - `name` - O nome da função que queremos que seja chamada.
 - `description` - Esta é a descrição de como a função funciona. Aqui é importante ser específico e claro.
 - `parameters` - Uma lista de valores e formatos que você deseja que o modelo produza em sua resposta. A matriz de parâmetros consiste em itens, onde cada item tem as seguintes propriedades:
-   1. `type` - O tipo de dados no qual as propriedades serão armazenadas.
-   1. `properties` - Lista dos valores específicos que o modelo usará para sua resposta
+  1.  `type` - O tipo de dados no qual as propriedades serão armazenadas.
+  1.  `properties` - Lista dos valores específicos que o modelo usará para sua resposta
       1. `name` - A chave é o nome da propriedade que o modelo usará em sua resposta formatada, por exemplo, `product`.
       1. `type` - O tipo de dados desta propriedade, por exemplo, `string`.
       1. `description` - Descrição da propriedade específica.
@@ -258,10 +260,10 @@ Também há a opção de definir `function_call` como `auto`. Isso significa que
 Aqui está algum código abaixo onde chamamos `ChatCompletion.create`, observe como definimos `functions=functions` e `function_call="auto"`, dando assim ao LLM a escolha de quando chamar as funções que fornecemos:
 
 ```python
-response = openai.ChatCompletion.create( engine="gpt-function", 
-                                        messages=messages, 
-                                        functions=functions, 
-                                        function_call="auto", ) 
+response = openai.ChatCompletion.create( engine="gpt-function",
+                                        messages=messages,
+                                        functions=functions,
+                                        function_call="auto", )
 
 print(response['choices'][0]['message'])
 ```
@@ -330,7 +332,7 @@ Para integrar isso ao nosso aplicativo, siga estas etapas:
 
    Observe como agora criamos uma função Python real que mapeia para os nomes de função introduzidos na variável `functions`. Também estamos fazendo chamadas reais de API externa para buscar os dados de que precisamos. Neste caso, vamos contra a API Microsoft Learn para pesquisar módulos de treinamento.
 
-  Ok! Então criamos variáveis `functions` e uma função Python correspondente, como dizemos ao LLM como mapear essas duas coisas para que nossa função Python seja chamada?
+Ok! Então criamos variáveis `functions` e uma função Python correspondente, como dizemos ao LLM como mapear essas duas coisas para que nossa função Python seja chamada?
 
 1. Para ver se precisamos chamar uma função Python, precisamos olhar para a resposta LLM e ver se `function_call` faz parte dela e chamar a função apontada. Veja como você pode fazer a verificação mencionada abaixo:
 
@@ -341,13 +343,13 @@ Para integrar isso ao nosso aplicativo, siga estas etapas:
      print(response_message.get("function_call"))
      print()
 
-    # Call the function. 
+    # Call the function.
     function_name = response_message["function_call"]["name"]
 
     available_functions = {
             "search_courses": search_courses,
     }
-    function_to_call = available_functions[function_name] 
+    function_to_call = available_functions[function_name]
 
     function_args = json.loads(response_message["function_call"]["arguments"])
     function_response = function_to_call(**function_args)
@@ -380,10 +382,10 @@ Para integrar isso ao nosso aplicativo, siga estas etapas:
    Essas três linhas garantem que extraímos o nome da função, os argumentos e fazemos a chamada:
 
    ```python
-   function_to_call = available_functions[function_name] 
+   function_to_call = available_functions[function_name]
 
    function_args = json.loads(response_message["function_call"]["arguments"])
-   function_response = function_to_call(**function_args) 
+   function_response = function_to_call(**function_args)
    ```
 
    Acima está a saída da execução do nosso código:
@@ -397,14 +399,14 @@ Para integrar isso ao nosso aplicativo, siga estas etapas:
    }
 
    Output of function call:
-   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/? 
-   WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en- 
-   us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL 
-   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/? 
-   WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url': 
-   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the 
+   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
+   WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en-
+   us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL
+   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?
+   WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url':
+   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the
    Rust development environment', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
-   <class 'str'> 
+   <class 'str'>
    ```
 
 1. Agora enviaremos a mensagem atualizada, `messages` para o LLM para que possamos receber uma resposta em linguagem natural em vez de uma resposta formatada em JSON da API.

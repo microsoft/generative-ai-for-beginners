@@ -1,8 +1,6 @@
 # Criando Aplicações de Busca
 
-[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
-
-> **Vídeo em breve**
+[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
 Há muito mais nas LLMs do que chatbots e geração de texto. Também é possível criar aplicações de busca usando `Embeddings`. `Embeddings` são representações numéricas de dados, também conhecidas como vetores, e podem ser usados para busca semântica de dados.
 

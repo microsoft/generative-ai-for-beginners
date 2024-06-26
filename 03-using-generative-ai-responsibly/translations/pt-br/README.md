@@ -1,8 +1,6 @@
 # Usando a IA Generativa de Forma Responsável
 
-[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
-
-> **Vídeo em Breve**
+[![Usando a IA Generativa de Forma Responsável](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
 É fácil se encantar com a IA e a IA generativa em particular. Mas é preciso considerar como você a usará de forma responsável. Você precisa considerar coisas como como garantir que a saída seja justa, não prejudicial e muito mais. Este capítulo tem como objetivo fornecer o contexto mencionado, o que considerar e como tomar medidas ativas para melhorar o uso de sua IA.
 

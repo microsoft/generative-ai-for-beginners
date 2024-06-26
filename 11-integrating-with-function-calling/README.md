@@ -1,12 +1,10 @@
 # Integrating with function calling
 
-![chapter image](./images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)
+[![Integrating with function calling](./images/11-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
 You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.
 
 The above mentioned problems are what this chapter is looking to address.
-
-> **Video Coming Soon**
 
 ## Introduction
 
@@ -145,13 +143,25 @@ Now we can send both requests to the LLM and examine the response we receive by 
    Response 1:
 
    ```json
-   { "name": "Emily Johnson", "major": "computer science", "school": "Duke University", "grades": "3.7", "club": "Chess Club" }
+   {
+     "name": "Emily Johnson",
+     "major": "computer science",
+     "school": "Duke University",
+     "grades": "3.7",
+     "club": "Chess Club"
+   }
    ```
 
    Response 2:
 
    ```json
-   { "name": "Michael Lee", "major": "computer science", "school": "Stanford University", "grades": "3.8 GPA", "club": "Robotics Club" }
+   {
+     "name": "Michael Lee",
+     "major": "computer science",
+     "school": "Stanford University",
+     "grades": "3.8 GPA",
+     "club": "Robotics Club"
+   }
    ```
 
    Even though the prompts are the same and the descriptions are similar, we see values of the `Grades` property formatted differently as we can sometimes get the format `3.7` or `3.7 GPA` for example.

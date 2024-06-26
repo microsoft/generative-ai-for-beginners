@@ -1,6 +1,6 @@
 # 高度なプロンプトの作成
 
-[![高度なプロンプトの作成](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=f3615e46-dbca-477c-832d-21eef95cd9f3?WT.mc_id=academic-105485-yoterada)
+[![高度なプロンプトの作成](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)
 
 前章までの学習内容をいくつかおさらいしましょう。
 
