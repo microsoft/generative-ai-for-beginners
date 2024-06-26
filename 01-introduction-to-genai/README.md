@@ -2,6 +2,8 @@
 
 [![Introduction to Generative AI and Large Language Models](./images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
 
+<iframe src="https://learn-video.azurefd.net/vod/player?show=generative-ai-for-beginners&ep=introduction-to-generative-ai-and-llms-generative-ai-for-beginners" width="1920" height="1080" style="border: 0; max-width: 100%; min-width: 100%;"></iframe>
+
 *(Click the image above to view video of this lesson)*
 
 Generative AI is artificial intelligence capable of generating text, images and other types of content. What makes it a fantastic technology is that it democratizes AI, anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile, all you need is to use your language, state what you want and out comes a suggestion from an AI model. The applications and impact for this is huge, you write or understand reports, write applications and much more, all in seconds. 
