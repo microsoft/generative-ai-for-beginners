@@ -103,7 +103,7 @@ Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/e
    ```
 
 ### Additional Resources
-- **Azure Documentation:** For more detailed information, refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-gb/azure/ai-services/openai/).
+- **Azure Documentation:** For more detailed information, refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/azure/ai-services/openai/).
 - **Support:** If you run into any issues, Azure support is available through the portal.
 
 
