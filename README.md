@@ -40,7 +40,7 @@ Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/e
 
 ### Step 1: Sign Up for an Azure Account
 1. **Visit Azure Portal:**
-   Go to the [Azure portal](https://portal.azure.com/).
+   Go to the [Azure portal](https://portal.azure.com).
 
 2. **Create an Account:**
    If you don't already have an Azure account, click on "Start free" and follow the instructions to create an account. You'll need to provide some personal information and a valid payment method (credit card) for identity verification. Note that while setting up the account is free, some services might incur costs, but you can access many free services with the Azure free account.
@@ -103,7 +103,7 @@ Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/e
    ```
 
 ### Additional Resources
-- **Azure Documentation:** For more detailed information, refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/).
+- **Azure Documentation:** For more detailed information, refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-gb/azure/ai-services/openai/).
 - **Support:** If you run into any issues, Azure support is available through the portal.
 
 
