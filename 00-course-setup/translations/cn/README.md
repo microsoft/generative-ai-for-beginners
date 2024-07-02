@@ -47,7 +47,7 @@ conda activate ai4beg
 
 ### 在浏览器中使用 Jupyter 
 
-您还可以直接从自己计算机上的浏览器使用 Jupyter 环境。 实际上，经典的 Jupyter 和 Jupyer Hub 都提供了相当便捷的开发环境，具有代码自动完成、代码高亮等功能。
+您还可以直接从自己计算机上的浏览器使用 Jupyter 环境。 实际上，经典的 Jupyter 和 Jupyter Hub 都提供了相当便捷的开发环境，具有代码自动完成、代码高亮等功能。
 
 要在本地启动 Jupyter，请转到课程目录，然后执行：
 
