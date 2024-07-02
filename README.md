@@ -36,6 +36,77 @@ We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic
 
 Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
 
+## Step-by-step guide to set up an Azure OpenAI free account
+
+### Step 1: Sign Up for an Azure Account
+1. **Visit Azure Portal:**
+   Go to the [Azure portal](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+
+2. **Create an Account:**
+   If you don't already have an Azure account, click on "Start free" and follow the instructions to create an account. You'll need to provide some personal information and a valid payment method (credit card) for identity verification. Note that while setting up the account is free, some services might incur costs, but you can access many free services with the Azure free account.
+
+### Step 2: Access Azure OpenAI Service
+1. **Navigate to Azure OpenAI:**
+   Once logged into the Azure portal, search for "Azure OpenAI" in the search bar at the top.
+
+2. **Create an OpenAI Service:**
+   Click on "Create" under the Azure OpenAI Service. You will be taken to the "Create OpenAI Service" page.
+
+### Step 3: Configure Your OpenAI Service
+1. **Select Subscription:**
+   Choose your Azure subscription from the dropdown.
+
+2. **Resource Group:**
+   Create a new resource group or select an existing one. A resource group is a container that holds related resources for an Azure solution.
+
+3. **Region:**
+   Select a region where you want to host your OpenAI service.
+
+4. **Name Your OpenAI Service:**
+   Provide a unique name for your OpenAI service.
+
+5. **Pricing Tier:**
+   Select a pricing tier. If you're using a free account, make sure to select a free or trial tier if available.
+
+6. **Review and Create:**
+   Click on "Review + create" to review your settings, and then click "Create" to deploy the service.
+
+### Step 4: Obtain the API Key
+1. **Navigate to the Resource:**
+   Once the deployment is complete, navigate to your OpenAI resource by clicking on "Go to resource".
+
+2. **Access Keys:**
+   In the left-hand menu, under "Keys and Endpoint," you will find your API keys.
+
+3. **Copy the Key:**
+   Copy the primary key. This is your API key that you will use to authenticate your requests to the Azure OpenAI service.
+
+### Step 5: Use the API Key
+1. **Install Azure SDK:**
+   Depending on your development environment, you might need to install the Azure SDK. For example, for Python:
+   ```bash
+   pip install azure-ai-openai
+   ```
+
+2. **Authenticate Using the API Key:**
+   Use the API key in your application to authenticate and make requests. For example, in Python:
+   ```python
+   from azure.ai.openai import OpenAIClient
+   from azure.core.credentials import AzureKeyCredential
+
+   api_key = 'YOUR_API_KEY'
+   endpoint = 'https://YOUR_RESOURCE_NAME.openai.azure.com/'
+
+   client = OpenAIClient(endpoint=endpoint, credential=AzureKeyCredential(api_key))
+
+   # Now you can use the client to interact with the OpenAI service
+   ```
+
+### Additional Resources
+- **Azure Documentation:** For more detailed information, refer to the Azure OpenAI Service documentation.
+- **Support:** If you run into any issues, Azure support is available through the portal.
+
+
 ## 🧠 Ready to Deploy?
 
 If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) in both **Python** and **TypeScript**.
