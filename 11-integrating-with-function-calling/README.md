@@ -16,7 +16,7 @@ This lesson will cover:
 
 ## Learning Goals
 
-After completing this lesson you will be able to:
+By the end of this lesson, you will be able to:
 
 - Explain the purpose of using function calling.
 - Setup Function Call using the Azure OpenAI Service.
