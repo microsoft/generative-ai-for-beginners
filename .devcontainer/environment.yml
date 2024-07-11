@@ -1,0 +1,7 @@
+name: dev
+channels:
+ - defaults
+dependencies:
+- python=3.10
+- openai
+- python-dotenv

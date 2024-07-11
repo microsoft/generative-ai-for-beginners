@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "generative-ai-for-beginners"
+version = "0.1.0"
+description = ""
+authors = ["hungpm372 <hungpm372@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipywidgets = "7.7.1"
+matplotlib = "3.7.0"
+numpy = "1.24.2"
+pandas = "1.5.3"
+tqdm = "4.66.3"
+python-dotenv = "1.0.0"
+openai = ">=0.28.0"
+tiktoken = "^0.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
