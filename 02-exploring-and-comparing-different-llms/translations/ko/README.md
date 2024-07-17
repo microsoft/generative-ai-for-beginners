@@ -1,8 +1,8 @@
 # 다양한 LLM 탐색과 비교
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/J1mWzw0P74c?WT.mc_id=academic-105485-koreyst)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)
 
-> *위의 이미지를 클릭하여 이 레슨의 비디오를 시청하세요.*
+> _위의 이미지를 클릭하여 이 레슨의 비디오를 시청하세요._
 
 이전 레슨에서 우리는 생성형 AI가 기술적인 환경을 변화시키고, 대형 언어 모델 (LLM)이 어떻게 작동하는지, 그리고 우리 스타트업과 같은 비즈니스가 그들을 사용하여 사용 사례를 적용하고 성장할 수 있는지를 보았습니다. 이 장에서는 다른 유형의 대형 언어 모델인 LLM을 비교하고 대조하여 그들의 장단점을 이해하기 위해 탐색할 것입니다.
 
@@ -79,7 +79,7 @@ LLM은 생성하는 출력에 따라 다양한 범주로 분류될 수 있습니
 
 텍스트 및 코드 생성 모델은 텍스트나 코드를 생성하는 모델입니다. 이러한 모델은 텍스트 요약, 번역 및 질문에 대한 답변과 같은 작업에 자주 사용됩니다. 텍스트 생성 모델은 대규모 텍스트 데이터셋(예: [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst))으로 훈련되며, 새로운 텍스트를 생성하거나 질문에 답변하는 데 사용될 수 있습니다. 코드 생성 모델인 [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)과 같은 모델은 대규모 코드 데이터셋(예: GitHub)으로 훈련되며, 새로운 코드를 생성하거나 기존 코드의 버그를 수정하는 데 사용될 수 있습니다.
 
- ![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
+![Text and code generation](../../images/Text.png?WT.mc_id=academic-105485-koreyst)
 
 ### 인코더-디코더 (Encoder-Decoder) VS 디코더 전용 (Decoder-only)
 

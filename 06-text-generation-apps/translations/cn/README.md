@@ -1,6 +1,6 @@
 # 第六章：创建文本生成应用
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcd?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(点击该图片看本章导学视频)_
 
@@ -56,7 +56,7 @@
 
 您需要找到一种与 LLMs 结合的方法，通常使用以下两种方法：
 
-- 使用API，您将根据提示构建 Web 请求并返回生成的文本。
+- 使用 API，您将根据提示构建 Web 请求并返回生成的文本。
 - 使用库，库有助于封装 API 调用，使其更易于使用。
 
 ## Libraries/SDKs

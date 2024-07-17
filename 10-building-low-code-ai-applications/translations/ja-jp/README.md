@@ -1,6 +1,6 @@
 # ローコード AI アプリケーションの構築
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=170c6cb7-3c96-40f2-a354-b6f0ec523de7?WT.mc_id=academic-105485-yoterada)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 

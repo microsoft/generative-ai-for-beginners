@@ -1,8 +1,8 @@
 # 텍스트 생성 애플리케이션 개발
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/5jKHzY6-4s8?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
-> *(위의 이미지를 클릭하여 이 수업의 동영상을 시청하세요.)*
+> _(위의 이미지를 클릭하여 이 수업의 동영상을 시청하세요.)_
 
 지금까지 이 커리큘럼을 통해 프롬프트와 "프롬프트 엔지니어링"이라는 전체적인 개념과 같은 핵심 개념들을 보셨습니다. ChatGPT, Office 365, Microsoft Power Platform 등 다양한 도구들은 프롬프트를 사용하여 어떤 작업을 수행하는 데 도움을 주는 것을 확인하실 수 있습니다.
 
@@ -107,7 +107,7 @@ pip install openai
 > API 키를 코드와 분리하는 것이 좋습니다. 이를 위해 환경 변수를 사용할 수 있습니다.
 >
 > - 환경 변수 `OPENAI_API_KEY`를 API 키로 설정하세요.
->  `export OPENAI_API_KEY='sk-...'`
+>   `export OPENAI_API_KEY='sk-...'`
 
 ### Azure 설정 구성
 
@@ -127,8 +127,7 @@ openai.api_base = os.getenv("API_BASE")
 - `api_version`은 사용하려는 API의 버전입니다. 작성 시점에서 최신 버전은 `2023-05-15`입니다.
 - `api_base`는 API의 엔드포인트입니다. API 키 옆에 Azure Portal에서 찾을 수 있습니다.
 
-> [!NOTE]
-> `os.getenv`는 환경 변수를 읽는 함수입니다. `OPENAI_API_KEY`와 `API_BASE`와 같은 환경 변수를 읽을 때 사용할 수 있습니다. 이러한 환경 변수는 터미널에서 설정하거나 `dotenv`와 같은 라이브러리를 사용하여 설정할 수 있습니다.
+> [!NOTE] > `os.getenv`는 환경 변수를 읽는 함수입니다. `OPENAI_API_KEY`와 `API_BASE`와 같은 환경 변수를 읽을 때 사용할 수 있습니다. 이러한 환경 변수는 터미널에서 설정하거나 `dotenv`와 같은 라이브러리를 사용하여 설정할 수 있습니다.
 
 ## 텍스트 생성
 
@@ -164,39 +163,39 @@ print(completion.choices[0].message.content)
 
 1. 가상 환경을 생성하고 openai를 설치하세요:
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    pip install openai
-    ```
-    
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install openai
+   ```
+
 > [!NOTE]
 > Windows를 사용하는 경우 `source venv/bin/activate` 대신 `venv\Scripts\activate`를 입력하세요.
 
 > [!NOTE]
 > Azure Open AI 키를 찾으려면 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)로 이동하여 `Open AI`를 검색한 다음 `Open AI 리소스`를 선택하고 `Keys and Endpoint`를 선택하고 `Key 1` 값을 복사하세요.
 
-1. *app.py* 파일을 생성하고 다음 코드를 추가하세요:
+1. _app.py_ 파일을 생성하고 다음 코드를 추가하세요:
 
-    ```python
-    import openai
+   ```python
+   import openai
 
-    openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
+   openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
 
-    openai.api_type = 'azure' 
-    openai.api_version = '2023-05-15'
-    openai.api_base = "<endpoint found in Azure Portal where your API key is>"
-    deployment_name = "<deployment name>"
+   openai.api_type = 'azure'
+   openai.api_version = '2023-05-15'
+   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   deployment_name = "<deployment name>"
 
-    # add your completion code
-    prompt = "Complete the following: Once upon a time there was a"
+   # add your completion code
+   prompt = "Complete the following: Once upon a time there was a"
 
-    # make completion
-    completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
-    
-    # print response
-    print(completion.choices[0].text)
-    ```
+   # make completion
+   completion = openai.Completion.create(engine= deployment_name, model="davinci-002", prompt=prompt)
+
+   # print response
+   print(completion.choices[0].text)
+   ```
 
 > [!NOTE]
 > Azure Open AI를 사용하는 경우, `api_type`을 `azure`로 설정하고 `api_key`를 Azure Open AI 키로 설정해야 합니다.
@@ -230,8 +229,8 @@ print(completion.choices[0].message.content)
 위의 프롬프트를 주면 다음과 유사한 응답을 받을 수 있습니다:
 
 ```output
-1. Roasted Chicken and Vegetables: 
-Ingredients: 
+1. Roasted Chicken and Vegetables:
+Ingredients:
 - 4 chicken thighs
 - 2 potatoes, cut into cubes
 - 2 carrots, cut into cubes
@@ -241,8 +240,8 @@ Ingredients:
 - 1 teaspoon dried oregano
 - Salt and pepper, to taste
 
-2. Chicken and Potato Stew: 
-Ingredients: 
+2. Chicken and Potato Stew:
+Ingredients:
 - 2 tablespoons olive oil
 - 1 onion, diced
 - 2 cloves garlic, minced
@@ -254,8 +253,8 @@ Ingredients:
 - 1 cup chicken broth
 - Salt and pepper, to taste
 
-3. Chicken and Potato Bake: 
-Ingredients: 
+3. Chicken and Potato Bake:
+Ingredients:
 - 2 tablespoons olive oil
 - 2 chicken breasts, cut into cubes
 - 2 potatoes, cut into cubes
@@ -267,8 +266,8 @@ Ingredients:
 - 1 cup chicken broth
 - Salt and pepper, to taste
 
-4. Chicken and Potato Soup: 
-Ingredients: 
+4. Chicken and Potato Soup:
+Ingredients:
 - 2 tablespoons olive oil
 - 1 onion, diced
 - 2 cloves garlic, minced
@@ -280,8 +279,8 @@ Ingredients:
 - 4 cups chicken broth
 - Salt and pepper, to taste
 
-5. Chicken and Potato Hash: 
-Ingredients: 
+5. Chicken and Potato Hash:
+Ingredients:
 - 2 tablespoons olive oil
 - 2 chicken breasts, cut into cubes
 - 2 potatoes, cut into cubes
@@ -303,8 +302,8 @@ Ingredients:
 이제 새로운 결과가 있습니다:
 
 ```output
-1. Roasted Chicken and Vegetables: 
-Ingredients: 
+1. Roasted Chicken and Vegetables:
+Ingredients:
 - 4 chicken thighs
 - 2 potatoes, cut into cubes
 - 2 carrots, cut into cubes
@@ -313,8 +312,8 @@ Ingredients:
 - 1 teaspoon dried oregano
 - Salt and pepper, to taste
 
-2. Chicken and Potato Stew: 
-Ingredients: 
+2. Chicken and Potato Stew:
+Ingredients:
 - 2 tablespoons olive oil
 - 1 onion, diced
 - 2 chicken breasts, cut into cubes
@@ -325,8 +324,8 @@ Ingredients:
 - 1 cup chicken broth
 - Salt and pepper, to taste
 
-3. Chicken and Potato Bake: 
-Ingredients: 
+3. Chicken and Potato Bake:
+Ingredients:
 - 2 tablespoons olive oil
 - 2 chicken breasts, cut into cubes
 - 2 potatoes, cut into cubes
@@ -337,8 +336,8 @@ Ingredients:
 - 1 cup chicken broth
 - Salt and pepper, to taste
 
-4. Chicken and Potato Soup: 
-Ingredients: 
+4. Chicken and Potato Soup:
+Ingredients:
 - 2 tablespoons olive oil
 - 1 onion, diced
 - 2 chicken breasts, cut into cubes
@@ -349,8 +348,8 @@ Ingredients:
 - 4 cups chicken broth
 - Salt and pepper, to taste
 
-5. Chicken and Potato Hash: 
-Ingredients: 
+5. Chicken and Potato Hash:
+Ingredients:
 - 2 tablespoons olive oil
 - 2 chicken breasts, cut into cubes
 - 2 potatoes, cut into cubes
@@ -358,7 +357,7 @@ Ingredients:
 - 1 onion, diced
 - 1 teaspoon dried oregano
 
-Shopping List: 
+Shopping List:
 - Olive oil
 - Onion
 - Thyme
@@ -373,50 +372,50 @@ Shopping List:
 
 이제 우리가 시나리오를 플레이했으니, 해당 시나리오와 일치하는 코드를 작성해 봅시다. 다음 단계를 따라주세요:
 
-1. 기존의 *app.py* 파일을 시작점으로 사용합니다.
+1. 기존의 _app.py_ 파일을 시작점으로 사용합니다.
 2. `prompt` 변수를 찾아서 다음과 같이 코드를 변경합니다:
 
-    ```python
-    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
-    ```
+   ```python
+   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+   ```
 
-    코드를 실행하면 다음과 유사한 출력이 표시됩니다:
+   코드를 실행하면 다음과 유사한 출력이 표시됩니다:
 
-    ```output
-    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
-    -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
-    -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
-    
-    -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
-    
-    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
-    ```
+   ```output
+   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
+   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
+   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
 
-    > 참고: LLM은 결정론적이지 않으므로 프로그램을 실행할 때마다 다른 결과를 얻을 수 있습니다.
+   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
 
-    좋아요, 어떻게 개선할 수 있는지 알아봅시다. 개선하기 위해 코드가 유연하도록 만들어야 합니다. 따라서 재료와 레시피 수를 개선하고 변경할 수 있어야 합니다.
+   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
+   ```
 
-1. 다음과 같이 코드를 변경해 봅시다:
+   > 참고: LLM은 결정론적이지 않으므로 프로그램을 실행할 때마다 다른 결과를 얻을 수 있습니다.
 
-    ```python
-    no_recipes = input("No of recipes (for example, 5: ")
+   좋아요, 어떻게 개선할 수 있는지 알아봅시다. 개선하기 위해 코드가 유연하도록 만들어야 합니다. 따라서 재료와 레시피 수를 개선하고 변경할 수 있어야 합니다.
 
-    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
-    
-    # interpolate the number of recipes into the prompt an ingredients
-    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
-    ```
+3. 다음과 같이 코드를 변경해 봅시다:
 
-    코드를 테스트 실행하면 결과가 다음과 같을 수 있습니다:
+   ```python
+   no_recipes = input("No of recipes (for example, 5: ")
 
-    ```output
-    No of recipes (for example, 5: 3
-    List of ingredients (for example, chicken, potatoes, and carrots: milk,strawberries
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
 
-    -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
-    -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream        
-    -Strawberry milk: milk, strawberries, sugar, vanilla extract
-    ```
+   # interpolate the number of recipes into the prompt an ingredients
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
+
+   코드를 테스트 실행하면 결과가 다음과 같을 수 있습니다:
+
+   ```output
+   No of recipes (for example, 5: 3
+   List of ingredients (for example, chicken, potatoes, and carrots: milk,strawberries
+
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
 
 ### 필터와 쇼핑 목록 추가로 개선하기
 
@@ -426,129 +425,128 @@ Shopping List:
 
 - **재료 필터링**. 싫어하는 재료나 알레르기 반응이 있는 재료를 필터링할 수 있도록 하고 싶습니다. 이 변경을 위해 기존의 프롬프트를 수정하여 끝에 필터 조건을 추가할 수 있습니다:
 
-    ```python
-    filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
 
-    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
-    ```
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
 
-    위에서는 프롬프트 끝에 `{filter}`를 추가하고 사용자로부터 필터 값을 입력받도록 합니다.
+  위에서는 프롬프트 끝에 `{filter}`를 추가하고 사용자로부터 필터 값을 입력받도록 합니다.
 
-    프로그램을 실행하는 예시 입력은 다음과 같을 수 있습니다:
+  프로그램을 실행하는 예시 입력은 다음과 같을 수 있습니다:
 
-    ```output
-    No of recipes (for example, 5: 3
-    List of ingredients (for example, chicken, potatoes, and carrots: onion,milk
-    Filter (for example, vegetarian, vegan, or gluten-free: no milk
+  ```output
+  No of recipes (for example, 5: 3
+  List of ingredients (for example, chicken, potatoes, and carrots: onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free: no milk
 
-    1. French Onion Soup
+  1. French Onion Soup
 
-    Ingredients:
-    
-    -1 large onion, sliced
-    -3 cups beef broth
-    -1 cup milk
-    -6 slices french bread
-    -1/4 cup shredded Parmesan cheese
-    -1 tablespoon butter
-    -1 teaspoon dried thyme
-    -1/4 teaspoon salt
-    -1/4 teaspoon black pepper
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. Place french bread slices on soup bowls.
-    5. Ladle soup over bread.
-    6. Sprinkle with Parmesan cheese.
-    
-    2. Onion and Potato Soup
-    
-    Ingredients:
-    
-    -1 large onion, chopped
-    -2 cups potatoes, diced
-    -3 cups vegetable broth
-    -1 cup milk
-    -1/4 teaspoon black pepper
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. Serve hot.
-    
-    3. Creamy Onion Soup
-    
-    Ingredients:
-    
-    -1 large onion, chopped
-    -3 cups vegetable broth
-    -1 cup milk
-    -1/4 teaspoon black pepper
-    -1/4 cup all-purpose flour
-    -1/2 cup shredded Parmesan cheese
-    
-    Instructions:
-    
-    1. In a large pot, sauté onions in butter until golden brown.
-    2. Add vegetable broth, milk, and pepper. Bring to a boil.
-    3. Reduce heat and simmer for 10 minutes.
-    4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
-    5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
-    ```
+  Ingredients:
 
-    보시다시피, 우유가 들어간 레시피는 필터링되었습니다. 그러나 유당 불내증이 있다면 치즈가 들어간 레시피도 필터링하고 싶을 수 있으므로 명확하게 해야합니다.
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
 
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  보시다시피, 우유가 들어간 레시피는 필터링되었습니다. 그러나 유당 불내증이 있다면 치즈가 들어간 레시피도 필터링하고 싶을 수 있으므로 명확하게 해야합니다.
 
 - **쇼핑 목록 생성**. 우리는 이미 집에 있는 재료를 고려하여 쇼핑 목록을 생성하고 싶습니다.
 
-    이 기능을 위해 우리는 하나의 프롬프트에서 모든 것을 해결하려고 시도할 수도 있고, 두 개의 프롬프트로 나눠서 해결할 수도 있습니다. 후자의 접근 방식을 시도해 보겠습니다. 여기서는 추가적인 프롬프트를 추가하는 것을 제안하고 있습니다. 그러나 이를 위해 이전 프롬프트의 결과를 후자의 프롬프트에 컨텍스트로 추가해야 합니다.
+  이 기능을 위해 우리는 하나의 프롬프트에서 모든 것을 해결하려고 시도할 수도 있고, 두 개의 프롬프트로 나눠서 해결할 수도 있습니다. 후자의 접근 방식을 시도해 보겠습니다. 여기서는 추가적인 프롬프트를 추가하는 것을 제안하고 있습니다. 그러나 이를 위해 이전 프롬프트의 결과를 후자의 프롬프트에 컨텍스트로 추가해야 합니다.
 
-    코드에서 첫 번째 프롬프트의 결과를 출력하는 부분을 찾아서 다음 코드를 아래에 추가하세요:
+  코드에서 첫 번째 프롬프트의 결과를 출력하는 부분을 찾아서 다음 코드를 아래에 추가하세요:
 
-    ```python
-    old_prompt_result = completion.choices[0].text
-    prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
-    
-    new_prompt = f"{old_prompt_result} {prompt}"
-    completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-    
-    # print response
-    print("Shopping list:")
-    print(completion.choices[0].text)
-    ```
+  ```python
+  old_prompt_result = completion.choices[0].text
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
-    다음 사항을 주목하세요:
+  new_prompt = f"{old_prompt_result} {prompt}"
+  completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
 
-    1. 첫 번째 프롬프트의 결과를 새로운 프롬프트에 추가하여 새로운 프롬프트를 구성합니다:
+  # print response
+  print("Shopping list:")
+  print(completion.choices[0].text)
+  ```
 
-        ```python
-        new_prompt = f"{old_prompt_result} {prompt}"
-        ```
+  다음 사항을 주목하세요:
 
-    2. 첫 번째 프롬프트에서 요청한 토큰 수를 고려하여 새로운 요청을 만듭니다. 이번에는 `max_tokens`을 1200으로 설정합니다.
+  1. 첫 번째 프롬프트의 결과를 새로운 프롬프트에 추가하여 새로운 프롬프트를 구성합니다:
 
-        ```python
-        completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-        ```  
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
 
-        Taking this code for a spin, we now arrive at the following output:
+  2. 첫 번째 프롬프트에서 요청한 토큰 수를 고려하여 새로운 요청을 만듭니다. 이번에는 `max_tokens`을 1200으로 설정합니다.
 
-        ```output
-        No of recipes (for example, 5: 2
-        List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
-        Filter (for example, vegetarian, vegan, or gluten-free: sugar
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
 
-        
-        -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
-        -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
-        Shopping list:
-        -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice 
-        ```
+     Taking this code for a spin, we now arrive at the following output:
+
+     ```output
+     No of recipes (for example, 5: 2
+     List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free: sugar
+
+
+     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     Shopping list:
+     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
 
 ## 설정 개선하기
 
@@ -556,45 +554,45 @@ Shopping List:
 
 - **비밀 정보와 코드 분리하기**, 예를 들어 API 키와 같은 비밀 정보는 코드에 포함되어서는 안 됩니다. 비밀 정보를 코드와 분리하기 위해 환경 변수와 `python-dotenv`와 같은 라이브러리를 사용하여 파일에서 로드할 수 있습니다. 코드에서 이렇게 구현할 수 있습니다:
 
-    1. `.env` 파일을 다음 내용으로 생성하세요:
+  1. `.env` 파일을 다음 내용으로 생성하세요:
 
-        ```bash
-        OPENAI_API_KEY=sk-...
-        ```
+     ```bash
+     OPENAI_API_KEY=sk-...
+     ```
 
-        > 참고로, Azure의 경우 다음 환경 변수를 설정해야 합니다:
+     > 참고로, Azure의 경우 다음 환경 변수를 설정해야 합니다:
 
-        ```bash
-        OPENAI_API_TYPE=azure
-        OPENAI_API_VERSION=2023-05-15
-        OPENAI_API_BASE=<replace>
-        ```
+     ```bash
+     OPENAI_API_TYPE=azure
+     OPENAI_API_VERSION=2023-05-15
+     OPENAI_API_BASE=<replace>
+     ```
 
-        코드에서는 다음과 같이 환경 변수를 로드합니다:
+     코드에서는 다음과 같이 환경 변수를 로드합니다:
 
-        ```python
-        from dotenv import load_dotenv
+     ```python
+     from dotenv import load_dotenv
 
-        load_dotenv()
+     load_dotenv()
 
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-        ```
+     openai.api_key = os.environ["OPENAI_API_KEY"]
+     ```
 
 - **토큰 길이에 대한 고려사항**. 우리는 원하는 텍스트를 생성하기 위해 얼마나 많은 토큰이 필요한지 고려해야 합니다. 토큰은 비용이 들기 때문에 가능한 경우, 토큰의 수를 절약할 수 있는 방법을 고려해야 합니다. 예를 들어, 프롬프트를 어떻게 구성하면 더 적은 토큰을 사용할 수 있을까요?
 
-    사용할 토큰을 변경하려면 `max_tokens` 매개변수를 사용할 수 있습니다. 예를 들어, 100개의 토큰을 사용하려면 다음과 같이 할 수 있습니다:
+  사용할 토큰을 변경하려면 `max_tokens` 매개변수를 사용할 수 있습니다. 예를 들어, 100개의 토큰을 사용하려면 다음과 같이 할 수 있습니다:
 
-    ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
-    ```
+  ```python
+  completion = openai.Completion.create(model="davinci-002", prompt=prompt, max_tokens=100)
+  ```
 
 - **temperature 조절 실험**. temperature는 우리가 지금까지 언급하지 않았지만, 프로그램의 동작에 중요한 맥락입니다. temperature 값이 높을수록 출력이 더 무작위적이 됩니다. 반대로, temperature 값이 낮을수록 출력이 더 예측 가능해집니다. 출력에 변화를 원하는지 여부를 고려해보세요.
 
-    temperature를 변경하려면 `temperature` 매개변수를 사용할 수 있습니다. 예를 들어, temperature를 0.5로 설정하려면 다음과 같이 할 수 있습니다:
+  temperature를 변경하려면 `temperature` 매개변수를 사용할 수 있습니다. 예를 들어, temperature를 0.5로 설정하려면 다음과 같이 할 수 있습니다:
 
-    ```python
-    completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
-    ```
+  ```python
+  completion = openai.Completion.create(model="davinci-002", prompt=prompt, temperature=0.5)
+  ```
 
 > 참고로, 값이 1.0에 가까울수록 출력이 더 다양해집니다.
 
@@ -643,7 +641,6 @@ temperature 개념은 무엇을 하는 역할인가요?
 1. 출력의 무작위성을 조절합니다.
 2. 응답의 크기를 조절합니다.
 3. 사용되는 토큰의 수를 조절합니다.
-
 
 ## 🚀 도전과제
 

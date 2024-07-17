@@ -1,6 +1,6 @@
 # 第十二章：为人工智能应用程序添加用户体验
 
-[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=1464ef7a-d974-4a04-9ce3-1bc5b3087b4b?WT.mc_id=academic-105485-koreyst)
+[![Designing UX for AI Applications](../../images/12-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
 
 _(点击该图片看本章导学视频)_
 

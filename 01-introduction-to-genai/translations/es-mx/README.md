@@ -1,6 +1,6 @@
 # 📚 Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes
 
-[![Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
+[![Introducción a la Inteligencia Artificial Generativa y a los Modelos de Lenguaje Grandes](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(Haz clic en la imagen de arriba para ver el video de esta lección)_
 
@@ -98,7 +98,6 @@ La entrada de un gran modelo de lenguaje se conoce como "prompt" (indicación), 
     ![Ejemplo de escritura creativa](../../images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
     <br>
-
 
 - Una **pregunta**, preguntado en forma de conversación con un agente.
 

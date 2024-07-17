@@ -1,6 +1,6 @@
 # プロンプト・エンジニアリングの基礎
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=d54c0c69-b183-4a6c-80ed-8b1a8f299cff?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)
 
 大規模言語モデル (LLM) では、プロンプトの書き方がとても重要で、慎重に作成したプロンプトは、そうでないものに比べ良い結果をもたらします。しかし、プロンプトやプロンプト・エンジニアリングとは一体どういう物なのでしょうか？また、LLM に送信する内容をどのようにして改善すればいいのでしょうか？この章と次の章では、そうした疑問に答えたいと思います。
 
