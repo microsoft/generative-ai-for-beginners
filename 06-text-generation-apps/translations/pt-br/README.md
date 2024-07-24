@@ -1,6 +1,6 @@
 # Desenvolvendo Aplicativos de Geração de Texto
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcd?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Clique na imagem acima para assistir ao vídeo desta lição)_
 

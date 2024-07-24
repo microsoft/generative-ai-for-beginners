@@ -1,6 +1,6 @@
 # 第十章：创建低代码的人工智能应用
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=170c6cb7-3c96-40f2-a354-b6f0ec523de7?WT.mc_id=academic-105485-koreyst)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(点击该图片看本章导学视频)_
 

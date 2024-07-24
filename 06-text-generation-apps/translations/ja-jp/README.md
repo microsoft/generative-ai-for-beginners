@@ -1,6 +1,6 @@
 # テキスト生成アプリケーションの構築
 
-[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcdt?WT.mc_id=academic-105485-yoterada)
+[![Building Text Generation Applications](../../images/06-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 

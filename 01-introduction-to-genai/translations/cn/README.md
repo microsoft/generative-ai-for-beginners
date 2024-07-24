@@ -1,6 +1,6 @@
 # 第一章 : 生成式人工智能和 LLMs 介绍
 
-[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](../../images/01-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(点击该图片看本章导学视频)_
 
@@ -65,7 +65,7 @@ _(点击该图片看本章导学视频)_
 
 经过人工智能领域数十年的研究，一种名为 _Transformer_ 的新模型架构克服了 RNN 的限制，能够获得更长的文本序列作为输入。 Transformer 基于注意力机制，使模型能够为其接收到的输入赋予不同的权重，“更加专注于”关联信息集中的地方，不管它们在文本序列中的顺序如何。
 
-生成式人工智能模也称为 LLM，因为它们使用文本输入和输出的架构。 这些模型的有趣之处在于，它们经过来自书籍、文章和网站等不同来源的大量未标记数据的训练，可以适应各种各样的任务，并以创造性的方式生成语法正确的文本。 因此，它们不仅极大地增强了机器“理解”输入文本的能力，而且使机器能够以人类语言生成原始响应。
+生成式人工智能模型也称为 LLM，因为它们使用文本输入和输出的架构。 这些模型的有趣之处在于，它们经过来自书籍、文章和网站等不同来源的大量未标记数据的训练，可以适应各种各样的任务，并以创造性的方式生成语法正确的文本。 因此，它们不仅极大地增强了机器“理解”输入文本的能力，而且使机器能够以人类语言生成原始响应。
 
 ## LLMs 如何工作?
 

@@ -1,6 +1,6 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=f3615e46-dbca-477c-832d-21eef95cd9f3?WT.mc_id=academic-105485-koreyst)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst?WT.mc_id=academic-105485-koreyst)
 
 Let's recap some learnings from the previous chapter:
 
@@ -75,7 +75,7 @@ This style of prompting is very simple, it consists of a single prompt. This tec
 
 ### Few-shot prompting
 
-This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional a task-specific data. Here's an example:
+This style of prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional task-specific data. Here's an example:
 
 - Prompt: "Write a poem in the style of Shakespeare. Here are a few examples of Shakespearean sonnets.:
   Sonnet 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
@@ -122,67 +122,65 @@ Many times when you want to construct a prompt, you want to do so using your own
 
 As an example, this is what your prompt then can look like if you're in the insurance business:
 
-    ```text
-    {{company}}: {{company_name}}
-    {{products}}:
-    {{products_list}}
-    Please suggest an insurance given the following budget and requirements:
-    Budget: {{budget}}
-    Requirements: {{requirements}}
-    ```
+```text
+{{company}}: {{company_name}}
+{{products}}:
+{{products_list}}
+Please suggest an insurance given the following budget and requirements:
+Budget: {{budget}}
+Requirements: {{requirements}}
+```
 
 Above, you see how the prompt is constructed using a template. In the template there's a number of variables, denoted by `{{variable}}`, that will be replaced with actual values from a company API.
 
 Here's an example of how the prompt could look like once the variables have been replaced by content from your company:
 
-    ```text
-    Insurance company: ACME Insurance
-    Insurance products (cost per month):
-    - Car, cheap, 500 USD
-    - Car, expensive, 1100 USD
-    - Home, cheap, 600 USD
-    - Home, expensive, 1200 USD
-    - Life, cheap, 100 USD
+```text
+Insurance company: ACME Insurance
+Insurance products (cost per month):
+- Car, cheap, 500 USD
+- Car, expensive, 1100 USD
+- Home, cheap, 600 USD
+- Home, expensive, 1200 USD
+- Life, cheap, 100 USD
 
-    Please suggest an insurance given the following budget and requirements:
-    Budget: $1000
-    Requirements: Car, Home
-    ```
+Please suggest an insurance given the following budget and requirements:
+Budget: $1000
+Requirements: Car, Home, and Life insurance
+```
 
 Running this prompt through an LLM will produce a response like this:
 
-    ```output
-    , and Life insurance
-
-    Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
-    - Car, cheap, 500 USD
-    - Home, cheap, 600 USD
-    - Life, cheap, 100 USD
-    Total cost: $1,200 USD
-    ```
+```output
+Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
+- Car, cheap, 500 USD
+- Home, cheap, 600 USD
+- Life, cheap, 100 USD
+Total cost: $1,200 USD
+```
 
 As you can see, it also suggests the Life insurance, which it shouldn't. This result is an indication that we need to optimize the prompt by changing the prompt to be clearer on what it can allow. After some _trial and error_, we arrive at the following prompt:
 
-    ```text
-    Insurance company: ACME Insurance
-    Insurance products (cost per month):
-    - type: Car, cheap, cost: 500 USD
-    - type: Car, expensive, cost: 1100 USD
-    - type: Home, cheap, cost: 600 USD
-    - type: Home, expensive, cost: 1200 USD
-    - type: Life, cheap, cost: 100 USD
+```text
+Insurance company: ACME Insurance
+Insurance products (cost per month):
+- type: Car, cheap, cost: 500 USD
+- type: Car, expensive, cost: 1100 USD
+- type: Home, cheap, cost: 600 USD
+- type: Home, expensive, cost: 1200 USD
+- type: Life, cheap, cost: 100 USD
 
-    Please suggest an insurance given the following budget and requirements:
-    Budget: $1000 restrict choice to types: Car, Home
-    ```
+Please suggest an insurance given the following budget and requirements:
+Budget: $1000 restrict choice to types: Car, Home
+```
 
 Note how adding _type_ and _cost_ and also using the keyword _restrict_ helps the LLM to understand what we want.
 
 Now we get the following response:
 
-    ```output
-    Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
-    ```
+```output
+Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
+```
 
 The point of this example was to show that even though we're using a basic technique like _generated knowledge_, we still need to optimize the prompt in most cases to get the desired outcome.
 
@@ -219,49 +217,49 @@ Here's an example using this technique:
 
 AI Answer:
 
-    ```python
-    import flask
-    app = Flask(__name__)
+```python
+import flask
+app = Flask(__name__)
 
-    @app.route('/products')
-    def products():
-        return 'Products'
+@app.route('/products')
+def products():
+    return 'Products'
 
-    @app.route('/customers')
-    def customers():
-        return 'Customers'
-    ```
+@app.route('/customers')
+def customers():
+    return 'Customers'
+```
 
 > Prompt: suggest 3 improvements of the above code
 
 AI Answer:
 
-    ```text
-    Sure, here are three suggestions to improve the code:
+```text
+Sure, here are three suggestions to improve the code:
 
-    Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
+Import the correct module: The first line should import Flask instead of flask. The correct import statement should be from flask import Flask.
 
-    Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
+Add a main function: Add a if __name__ == '__main__': block to the end of the file to run the application when the file is executed.
 
-    Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
-    ```
+Use f-strings: Use f-strings to format the return statements in the route functions. For example, return 'Products' can be changed to return f'This is the {request.path} page'.
+```
 
-    ```python
-    from flask import Flask, request
+```python
+from flask import Flask, request
 
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    @app.route('/products')
-    def products():
-        return f'This is the {request.path} page'
+@app.route('/products')
+def products():
+    return f'This is the {request.path} page'
 
-    @app.route('/customers')
-    def customers():
-        return f'This is the {request.path} page'
+@app.route('/customers')
+def customers():
+    return f'This is the {request.path} page'
 
-    if __name__ == '__main__':
-        app.run()
-    ```
+if __name__ == '__main__':
+    app.run()
+```
 
 As you can see, the above AI response is improving the first suggested code thanks to critiquing the first answer.
 
@@ -280,41 +278,41 @@ Here's an example prompt:
 > prompt: How can I create a crisis plan to mitigate a pandemic in 5 steps?
 > LLM answer:
 
-    ```text
-    1. Identify the risks
-    1. Identify the stakeholders
-    1. Identify the resources
-    1. Identify the actions
-    1. Identify the communication channels
-    ```
+```text
+1. Identify the risks
+1. Identify the stakeholders
+1. Identify the resources
+1. Identify the actions
+1. Identify the communication channels
+```
 
 It's identified 5 steps, but can we determine if this is correct? Let's ask the LLM to explain each step:
 
 > prompt: Explain the first step in more detail, what are the risks in detail with a pandemic?
 
-    ```text
-    The risks are the following:
+```text
+The risks are the following:
 
-    - Loss of life
-    - Loss of business
-    - Loss of reputation
-    - Loss of customers
-    - Loss of employees
-    ```
+- Loss of life
+- Loss of business
+- Loss of reputation
+- Loss of customers
+- Loss of employees
+```
 
 At this point, we want to make sure the LLM is correct so we ask it to explain the first risk in more detail and hope it's consistent with the answer above:
 
 > prompt: In a Pandemic, which is the biggest risk and why?
 
-    ```text
-    The biggest risk is loss of life because it's the most important thing to protect.
-    ```
+```text
+The biggest risk is loss of life because it's the most important thing to protect.
+```
 
 > What are the two biggest risks in a pandemic?
 
-    ```text
-    The two biggest risks are loss of life and loss of business.
-    ```
+```text
+The two biggest risks are loss of life and loss of business.
+```
 
 At this point, the LLM is consistent and mentions "life" and "business" as the top two risks. We can now continue to the next step and feel fairly confident. However, we shouldn't trust the LLM blindly, we should always verify the output.
 
@@ -324,107 +322,107 @@ LLMs are nondeterministic by nature, meaning that you will get different results
 
 > "Generate code for a Python Web API"
 
-    ```text
-    # Import necessary modules
-    import flask
-    from flask import request, jsonify
+```python
+# Import necessary modules
+import flask
+from flask import request, jsonify
 
-    # Create a Flask app
-    app = flask.Flask(__name__)
+# Create a Flask app
+app = flask.Flask(__name__)
 
-    # Create a route for the API
-    @app.route('/api', methods=['GET'])
-    def api():
-        # Get the data from the request
-        data = request.args
+# Create a route for the API
+@app.route('/api', methods=['GET'])
+def api():
+    # Get the data from the request
+    data = request.args
 
-        # Process the data
-        result = process_data(data)
+    # Process the data
+    result = process_data(data)
 
-        # Return the result as JSON
-        return jsonify(result)
+    # Return the result as JSON
+    return jsonify(result)
 
-    # Function to process the data
-    def process_data(data):
-        # Do something with the data
-        result = data + 1
+# Function to process the data
+def process_data(data):
+    # Do something with the data
+    result = data + 1
 
-        # Return the result
-        return result
+    # Return the result
+    return result
 
-    # Run the app
-    if __name__ == '__main__':
-        app.run()
+# Run the app
+if __name__ == '__main__':
+    app.run()
 
-    ```
+```
 
 Running the same prompt again generates a slightly different response:
 
-    ```text
-    #import necessary packages
-    import flask
-    from flask import request, jsonify
+```python
+#import necessary packages
+import flask
+from flask import request, jsonify
 
-    #create the Flask application
-    app = flask.Flask(__name__)
-    app.config["DEBUG"] = True
+#create the Flask application
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
 
-    #create a list of books
-    books = [
-        {'id': 0,
-         'title': 'A Fire Upon the Deep',
-         'author': 'Vernor Vinge',
-         'first_sentence': 'The coldsleep itself was dreamless.',
-         'year_published': '1992'},
-        {'id': 1,
-         'title': 'The Ones Who Walk Away From Omelas',
-         'author': 'Ursula K. Le Guin',
-         'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
-         'published': '1973'},
-        {'id': 2,
-         'title': 'Dhalgren',
-         'author': 'Samuel R. Delany',
-         'first_sentence': 'to wound the autumnal city.',
-         'published': '1975'}
-    ]
+#create a list of books
+books = [
+    {'id': 0,
+     'title': 'A Fire Upon the Deep',
+     'author': 'Vernor Vinge',
+     'first_sentence': 'The coldsleep itself was dreamless.',
+     'year_published': '1992'},
+    {'id': 1,
+     'title': 'The Ones Who Walk Away From Omelas',
+     'author': 'Ursula K. Le Guin',
+     'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.',
+     'published': '1973'},
+    {'id': 2,
+     'title': 'Dhalgren',
+     'author': 'Samuel R. Delany',
+     'first_sentence': 'to wound the autumnal city.',
+     'published': '1975'}
+]
 
-    #create an endpoint for the API
-    @app.route('/', methods=['GET'])
-    def home():
-        return '''<h1>Books API</h1>
-    <p>A prototype API for retrieving books.</p>'''
+#create an endpoint for the API
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Books API</h1>
+<p>A prototype API for retrieving books.</p>'''
 
-    #create an endpoint to return all books
-    @app.route('/api/v1/resources/books/all', methods=['GET'])
-    def api_all():
-        return jsonify(books)
+#create an endpoint to return all books
+@app.route('/api/v1/resources/books/all', methods=['GET'])
+def api_all():
+    return jsonify(books)
 
-    #create an endpoint to return a single book
-    @app.route('/api/v1/resources/books', methods=['GET'])
-    def api_id():
-        #check if an ID was provided as part of the URL
-        #if ID is provided, assign it to a variable
-        #if no ID is provided, display an error
-        if 'id' in request.args:
-            id = int(request.args['id'])
-        else:
-            return "Error: No id field provided. Please specify an id."
+#create an endpoint to return a single book
+@app.route('/api/v1/resources/books', methods=['GET'])
+def api_id():
+    #check if an ID was provided as part of the URL
+    #if ID is provided, assign it to a variable
+    #if no ID is provided, display an error
+    if 'id' in request.args:
+        id = int(request.args['id'])
+    else:
+        return "Error: No id field provided. Please specify an id."
 
-        #create an empty list for our results
-        results = []
+    #create an empty list for our results
+    results = []
 
-        #loop through the data and match results that fit the requested ID
-        #IDs are unique, but other fields might return many results
-        for book in books:
-            if book['id'] == id:
-                results.append(book)
+    #loop through the data and match results that fit the requested ID
+    #IDs are unique, but other fields might return many results
+    for book in books:
+        if book['id'] == id:
+            results.append(book)
 
-        #use the jsonify function from Flask to convert our list of
-        #Python dictionaries to the JSON format
-        return jsonify(results)
+    #use the jsonify function from Flask to convert our list of
+    #Python dictionaries to the JSON format
+    return jsonify(results)
 
-    app.run()
-    ```
+app.run()
+```
 
 > So is the varied output a problem?
 
@@ -438,137 +436,137 @@ Temperature is a value between 0 and 1, where 0 is the most deterministic and 1 
 
 > "Generate code for a Python Web API"
 
-    ```python
-    #import necessary libraries
-    import flask
-    from flask import request, jsonify
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
 
-    #create an instance of the Flask class
-    app = flask.Flask(__name__)
+#create an instance of the Flask class
+app = flask.Flask(__name__)
 
-    #create an endpoint for the API
-    @app.route('/api/v1/endpoint', methods=['GET'])
-    def api_endpoint():
-        #get the request data
-        data = request.get_json()
+#create an endpoint for the API
+@app.route('/api/v1/endpoint', methods=['GET'])
+def api_endpoint():
+    #get the request data
+    data = request.get_json()
 
-        #process the data
-        result = process_data(data)
+    #process the data
+    result = process_data(data)
 
-        #return the result
-        return jsonify(result)
+    #return the result
+    return jsonify(result)
 
-    #function to process the data
-    def process_data(data):
-        #process the data
-        result = {'result': 'success'}
+#function to process the data
+def process_data(data):
+    #process the data
+    result = {'result': 'success'}
 
-        #return the result
-        return result
+    #return the result
+    return result
 
-    #run the Flask app
-    if __name__ == '__main__':
-        app.run()
+#run the Flask app
+if __name__ == '__main__':
+    app.run()
 
-    ```
+```
 
 Running the prompt again gives us this outcome:
 
-    ```python
-    #import necessary libraries
-    import flask
-    from flask import request, jsonify
+```python
+#import necessary libraries
+import flask
+from flask import request, jsonify
 
-    #create a Flask app
-    app = flask.Flask(__name__)
+#create a Flask app
+app = flask.Flask(__name__)
 
-    #create a route for the API
-    @app.route('/api', methods=['GET'])
-    def api_call():
-        #get the data from the request
-        data = request.get_json()
+#create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    #get the data from the request
+    data = request.get_json()
 
-        #process the data
-        result = process_data(data)
+    #process the data
+    result = process_data(data)
 
-        #return the result
-        return jsonify(result)
+    #return the result
+    return jsonify(result)
 
-    #define the process_data function
-    def process_data(data):
-        #do something with the data
-        result = data + 1
+#define the process_data function
+def process_data(data):
+    #do something with the data
+    result = data + 1
 
-        #return the result
-        return result
+    #return the result
+    return result
 
-    #run the app
-    if __name__ == '__main__':
-        app.run()
+#run the app
+if __name__ == '__main__':
+    app.run()
 
-    ```
+```
 
 There's only a tiny difference between these two outputs. Let's do the opposite this time, let's set the temperature to 0.9:
 
-    ```python
-    # Import necessary libraries
-    import flask
-    from flask import request, jsonify
+```python
+# Import necessary libraries
+import flask
+from flask import request, jsonify
 
-    # Create a Flask app
-    app = flask.Flask(__name__)
+# Create a Flask app
+app = flask.Flask(__name__)
 
-    # Create a route for the API
-    @app.route('/api', methods=['GET'])
-    def api_call():
-        # Get the data from the request
-        data = request.args
+# Create a route for the API
+@app.route('/api', methods=['GET'])
+def api_call():
+    # Get the data from the request
+    data = request.args
 
-        # Process the data
-        result = process_data(data)
+    # Process the data
+    result = process_data(data)
 
-        # Return the result
-        return jsonify(result)
+    # Return the result
+    return jsonify(result)
 
-    # Function to process the data
-    def process_data(data):
-        # Do something with the data
-        result = data + 1
+# Function to process the data
+def process_data(data):
+    # Do something with the data
+    result = data + 1
 
-        # Return the result
-        return result
+    # Return the result
+    return result
 
-    # Run the app
-    if __name__ == '__main__':
-        app.run()
+# Run the app
+if __name__ == '__main__':
+    app.run()
 
-    ```
+```
 
 and the second attempt at 0.9 as temperature value:
 
-    ```python
-    import flask
-    from flask import request, jsonify
+```python
+import flask
+from flask import request, jsonify
 
-    # create the Flask app
-    app = flask.Flask(__name__)
-    app.config['DEBUG'] = True
+# create the Flask app
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
 
-    # create some test data
-    books = [
-        {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
-        {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
-        {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
-    ]
+# create some test data
+books = [
+    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+]
 
-    # create an endpoint
-    @app.route('/', methods=['GET'])
-    def home():
-        return '''<h1>Welcome to our book API!</h1>'''
+# create an endpoint
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Welcome to our book API!</h1>'''
 
-    @app.route('/api/v1/resources/books
+@app.route('/api/v1/resources/books
 
-    ```
+```
 
 As you can see, the results couldn't be more varied.
 
@@ -592,19 +590,19 @@ Here are some good practices to consider:
 
 Here's code in Python showing how to build a simple API using Flask:
 
-    ```python
-    from flask import Flask, request
+```python
+from flask import Flask, request
 
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    @app.route('/')
-    def hello():
-        name = request.args.get('name', 'World')
-        return f'Hello, {name}!'
+@app.route('/')
+def hello():
+    name = request.args.get('name', 'World')
+    return f'Hello, {name}!'
 
-    if __name__ == '__main__':
-        app.run()
-    ```
+if __name__ == '__main__':
+    app.run()
+```
 
 Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
 

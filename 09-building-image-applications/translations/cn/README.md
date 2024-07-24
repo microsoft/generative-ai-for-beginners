@@ -1,8 +1,6 @@
 # 第九章：构建图像生成应用
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
-
-> **导学视频敬请期待**
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将图像作为一种模式在医疗科技、建筑、旅游、游戏开发等许多领域非常有用。 在本章中，我们将研究两种最流行的图像生成模型：DALL-E 和 Midjourney。
 

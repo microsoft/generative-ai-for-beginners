@@ -1,6 +1,6 @@
 # Fundamentos de Engenharia de Prompt
 
-[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=d54c0c69-b183-4a6c-80ed-8b1a8f299cff?WT.mc_id=academic-105485-koreyst)
+[![Prompt Engineering Fundamentals](../../images/04-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)
 
 A forma como você escreve seu prompt para o LLM importa. Um prompt cuidadosamente elaborado pode alcançar um resultado melhor do que um que não é. Mas o que são esses conceitos, prompt, Engenharia de Prompt e como posso melhorar o que envio para o LLM? Perguntas como essas são o que este capítulo e o próximo estão procurando responder.
 
