@@ -3,11 +3,9 @@
 ## Artificial Intelligence: 
 The field of computer science that seeks o create 
 intelligent machines that can replciate or exceed human intelligence.
-
 ## Machine Learning
 Subset of AI that enables macines to learn from existing data
 and improve upon that data to mke decision or predictions
-
 ## Deep Learning
 A machine learning tecnique in wich layers of neural networs are used to process
 data and make decisions
@@ -19,7 +17,6 @@ receive text, give text
 transform text to tokens(#s)
 
 ## What are language models?
-
 Generative AI applications are powered by language models, which are a specialized type of machine learning model that you can use to perform natural language processing (NLP) tasks, including:
 - Determining sentiment or otherwise classifying natural language text.
 - Summarizing text.
