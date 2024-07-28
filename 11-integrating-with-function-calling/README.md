@@ -16,7 +16,7 @@ This lesson will cover:
 
 ## Learning Goals
 
-After completing this lesson you will be able to:
+By the end of this lesson, you will be able to:
 
 - Explain the purpose of using function calling.
 - Setup Function Call using the Azure OpenAI Service.
@@ -45,7 +45,7 @@ Function Calling is a feature of the Azure OpenAI Service to overcome to the fol
 
 ## Illustrating the problem through a scenario
 
-> We recommend you to use the [included notebook](/11-integrating-with-function-calling/Lesson11-FunctionCalling.ipynb) if you want to run the below scenario. You can also just read along as we're trying to illustrate a problem where functions can help to address the problem.
+> We recommend you to use the [included notebook](/11-integrating-with-function-calling/python/aoai-assignment.ipynb) if you want to run the below scenario. You can also just read along as we're trying to illustrate a problem where functions can help to address the problem.
 
 Let's look at the example that illustrates the response format problem:
 
