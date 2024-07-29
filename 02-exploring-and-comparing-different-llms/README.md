@@ -141,9 +141,7 @@ We’ve explored with our startup team different kinds of LLMs and a Cloud Platf
 
 But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads?
 
-There are several approaches a business can use to get the results they need from an LLM, you can select different types of models with different degrees of training
-
-deploy an LLM in production, with different levels of complexity, cost, and quality. Here are some different approaches:
+There are several approaches a business can use to get the results they need from an LLM. You can select different types of models with different degrees of training when deploying an LLM in production, with different levels of complexity, cost, and quality. Here are some different approaches:
 
 - **Prompt engineering with context**. The idea is to provide enough context when you prompt to ensure you get the responses you need.
 

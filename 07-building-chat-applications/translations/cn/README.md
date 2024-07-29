@@ -60,7 +60,7 @@
 - **更容易维护**：更新和改进更易于管理，因为大多数 API 和 SDK 在发布新版本时只需要更新库。
 - **获得尖端技术**：利用经过微调和在广泛数据集上训练的模型为您的应用程序提供自然语言功能。
 
-访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
+访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 key 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
 
 ```python
 import os

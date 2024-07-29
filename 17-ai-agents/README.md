@@ -30,7 +30,7 @@ Let's define these terms:
 
 **Large Language Models** - These are the models referred throughout this course such as GPT-3.5, GPT-4, Llama-2, etc.
 
-**State** - This refers to the context that the LLM is working in. The LLM uses the context of its past actions and the current context, guiding its decision-making for subsequent actions.. AI Agent Frameworks allow developers to maintain this context easier.
+**State** - This refers to the context that the LLM is working in. The LLM uses the context of its past actions and the current context, guiding its decision-making for subsequent actions. AI Agent Frameworks allow developers to maintain this context easier.
 
 **Tools** - To complete the task that the user has requested and that the LLM has planned out, the LLM needs access to tools. Some examples of tools can be a database, an API, an external application or even another LLM!
 
