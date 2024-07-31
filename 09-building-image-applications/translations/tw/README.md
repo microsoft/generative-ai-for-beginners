@@ -161,7 +161,7 @@ _圖片來源 Wikipedia, 圖片由 Midjourney 生成_
        image.show()
 
    # 捕捉異常
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -454,7 +454,7 @@ try:
     image.show()
 
 # 捕捉異常
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 

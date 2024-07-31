@@ -162,7 +162,7 @@ _자기회귀 트랜스포머 (autoregressive transformer)_ 는 모델이 텍스
        image.show()
 
    # 예외 처리
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -446,7 +446,7 @@ try:
     image.show()
 
 # 예외 처리
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 
