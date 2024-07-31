@@ -2,7 +2,7 @@
 
 ## Criando Aplicações Chat com IA Generativa
 
-[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=57a31949-67c5-4020-8c85-91e4995589f3?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Clique na imagem acima para ver o vídeo da lição)_
 
@@ -171,7 +171,7 @@ Para manter o desempenho de alta qualidade de uma aplicação, é essencial acom
 | **Taxa de Erro**                      | A taxa na qual o modelo comete erros na compreensão ou saída.                                                   | Quais estratégias você tem para reduzir as taxas de erro?                                   |
 | **Ciclos de Retreinamento**           | A frequência com que o modelo é atualizado para incorporar novos dados e insights.                              | Com que frequência você irá retrainer o modelo? O que desencadeia um ciclo de retratamento? |
 | **Detecção de Anomalias**             | Ferramentas e técnicas para identificar padrões incomuns que não seguem o comportamento esperado.               | Como você irá responder a anomalias?                                                        |
-|  |
+|                                       |
 
 ### Implementando Práticas de IA Responsável em Aplicações de Chat
 

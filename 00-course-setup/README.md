@@ -78,7 +78,7 @@ We recommend using the [Visual Studio Code (VS Code)](http://code.visualstudio.c
 
 > **Note**: Once you clone and open the directory in VS Code, it will automatically suggest you install a Python support extension.
 
-> **Note**: If VS Code suggests you re-open the repository in a container, decline this request in other to use the locally installed version of Python. 
+> **Note**: If VS Code suggests you re-open the repository in a container, decline this request in order to use the locally installed version of Python. 
 
 ### Using Jupyter in the Browser
 

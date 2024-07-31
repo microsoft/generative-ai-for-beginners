@@ -1,8 +1,8 @@
 # Low Code AI 애플리케이션 개발
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/XX8491SAF44?WT.mc_id=academic-105485-koreyst)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
-> *(위 이미지를 클릭하여 이 레슨의 비디오를 시청하세요)*
+> _(위 이미지를 클릭하여 이 레슨의 비디오를 시청하세요)_
 
 ## 소개
 
@@ -83,17 +83,17 @@ Copilot 사용을 시작할 때는 [Power Platform Copilot Prompt Library](https
 
 2. 왼쪽 탐색 창에서 **Tables**을 선택한 다음 **Describe the new Table**을 클릭합니다.
 
-3. 홈 화면의 텍스트 영역을 사용하여 구축하려는 앱을 설명합니다. 예를 들어, ***학생 과제를 추적하고 관리하기 위한 앱을 구축하고 싶습니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+3. 홈 화면의 텍스트 영역을 사용하여 구축하려는 앱을 설명합니다. 예를 들어, **_학생 과제를 추적하고 관리하기 위한 앱을 구축하고 싶습니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
- ![Describe the app you want to build](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-koreyst)
+![Describe the app you want to build](../../images/copilot-chat-prompt-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
 4. AI Copilot은 데이터베이스 테이블을 제안하며, 추적하려는 데이터를 저장하기 위해 필요한 필드와 일부 샘플 데이터를 제공합니다. 그런 다음 대화식 단계를 통해 테이블을 사용자 정의하여 요구 사항에 맞게 만들 수 있습니다.
 
-    > **중요**: Dataverse는 Power Platform의 기반이 되는 데이터 플랫폼입니다. 앱의 데이터를 저장하기 위한 low-code 데이터 플랫폼으로, Microsoft Cloud에 안전하게 데이터를 저장하며 Power Platform 환경 내에서 프로비저닝됩니다. 데이터 분류, 데이터 계보, 세밀한 액세스 제어 등과 같은 내장 데이터 거버넌스 기능을 갖추고 있습니다. Dataverse에 대해 자세히 알아보려면 [여기](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)를 참조하세요.
+   > **중요**: Dataverse는 Power Platform의 기반이 되는 데이터 플랫폼입니다. 앱의 데이터를 저장하기 위한 low-code 데이터 플랫폼으로, Microsoft Cloud에 안전하게 데이터를 저장하며 Power Platform 환경 내에서 프로비저닝됩니다. 데이터 분류, 데이터 계보, 세밀한 액세스 제어 등과 같은 내장 데이터 거버넌스 기능을 갖추고 있습니다. Dataverse에 대해 자세히 알아보려면 [여기](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)를 참조하세요.
 
    ![새로운 테이블에 제안된 필드](../../images/copilot-dataverse-table-powerapps.png?WT.mc_id=academic-105485-koreyst)
 
-5. 교육자들은 과제를 제출한 학생들에게 진행 상황을 알리기 위해 이메일을 보내고 싶어합니다. Copilot을 사용하여 테이블에 학생 이메일을 저장할 새로운 필드를 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 테이블에 새로운 필드를 추가할 수 있습니다: ***학생 이메일을 저장할 열을 추가하고 싶습니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+5. 교육자들은 과제를 제출한 학생들에게 진행 상황을 알리기 위해 이메일을 보내고 싶어합니다. Copilot을 사용하여 테이블에 학생 이메일을 저장할 새로운 필드를 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 테이블에 새로운 필드를 추가할 수 있습니다: **_학생 이메일을 저장할 열을 추가하고 싶습니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
 ![Adding a new field](../../images/copilot-new-column.png?WT.mc_id=academic-105485-koreyst)
 
@@ -103,7 +103,7 @@ Copilot 사용을 시작할 때는 [Power Platform Copilot Prompt Library](https
 
 8. AI Copilot은 설명에 기반한 반응형 캔버스 앱을 생성하며, 사용자 정의하여 요구 사항에 맞게 만들 수 있습니다.
 
-9. 교육자가 학생들에게 이메일을 보낼 수 있도록 앱에 새로운 화면을 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 앱에 새로운 화면을 추가할 수 있습니다: ***학생들에게 이메일을 보내기 위한 화면을 추가하고 싶습니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+9. 교육자가 학생들에게 이메일을 보낼 수 있도록 앱에 새로운 화면을 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 앱에 새로운 화면을 추가할 수 있습니다: **_학생들에게 이메일을 보내기 위한 화면을 추가하고 싶습니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
 ![Adding a new screen via a prompt instruction](../../images/copilot-new-screen.png?WT.mc_id=academic-105485-koreyst)
 
@@ -133,7 +133,7 @@ Power Platform에는 Dataverse라는 데이터 플랫폼이 있어 앱과 솔루
 
 이제 Dataverse가 무엇인지 알고 왜 사용해야 하는지 알았으니, AI Copilot을 사용하여 재무팀의 요구 사항을 충족하는 Dataverse 테이블을 생성하는 방법을 살펴보겠습니다.
 
->**참고**: 이 테이블은 다음 섹션에서 송장 정보를 추출하고 해당 정보를 저장하는 자동화를 구축하는 데 사용됩니다.
+> **참고**: 이 테이블은 다음 섹션에서 송장 정보를 추출하고 해당 정보를 저장하는 자동화를 구축하는 데 사용됩니다.
 
 Copilot을 사용하여 Dataverse에서 테이블을 생성하려면 다음 단계를 따르세요:
 
@@ -143,7 +143,7 @@ Copilot을 사용하여 Dataverse에서 테이블을 생성하려면 다음 단�
 
 ![Select new table](../../images/describe-new-table.png?WT.mc_id=academic-105485-koreyst)
 
-3. **Describe the new Table** 화면에서 테이블을 생성할 내용을 텍스트 영역에 설명합니다. 예를 들어, ***송장 정보를 저장하기 위한 테이블을 생성하고 싶습니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+3. **Describe the new Table** 화면에서 테이블을 생성할 내용을 텍스트 영역에 설명합니다. 예를 들어, **_송장 정보를 저장하기 위한 테이블을 생성하고 싶습니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
 ![Describe the table](../../images/copilot-chat-prompt-dataverse.png?WT.mc_id=academic-105485-koreyst)
 
@@ -151,7 +151,7 @@ Copilot을 사용하여 Dataverse에서 테이블을 생성하려면 다음 단�
 
 ![Suggested Dataverse table](../../images/copilot-dataverse-table.png?WT.mc_id=academic-105485-koreyst)
 
-5. 재무팀은 공급업체에게 송장의 현재 상태를 알리기 위해 이메일을 보내고 싶어합니다. Copilot을 사용하여 테이블에 공급업체 이메일을 저장할 새로운 필드를 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 테이블에 새로운 필드를 추가할 수 있습니다: ***공급업체 이메일을 저장할 열을 추가하고 싶습니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+5. 재무팀은 공급업체에게 송장의 현재 상태를 알리기 위해 이메일을 보내고 싶어합니다. Copilot을 사용하여 테이블에 공급업체 이메일을 저장할 새로운 필드를 추가할 수 있습니다. 예를 들어, 다음과 같은 프롬프트를 사용하여 테이블에 새로운 필드를 추가할 수 있습니다: **_공급업체 이메일을 저장할 열을 추가하고 싶습니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
 6. AI Copilot은 새로운 필드를 생성하고, 사용자 정의하여 요구 사항에 맞게 만들 수 있습니다.
 
@@ -188,9 +188,9 @@ AI Builder의 송장 처리 AI 모델을 활용하여 재무팀이 송장을 처
 
 1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) 홈 화면으로 이동합니다.
 
-2. 홈 화면의 텍스트 영역을 사용하여 구축하려는 워크플로우를 설명합니다. 예를 들어, ***송장이 메일함에 도착했을 때 송장을 처리합니다***. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
+2. 홈 화면의 텍스트 영역을 사용하여 구축하려는 워크플로우를 설명합니다. 예를 들어, **_송장이 메일함에 도착했을 때 송장을 처리합니다_**. **Send** 버튼을 클릭하여 AI Copilot에게 프롬프트를 전송합니다.
 
-    ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-koreyst)
+   ![Copilot power automate](../../images/copilot-chat-prompt-powerautomate.png?WT.mc_id=academic-105485-koreyst)
 
 3. AI Copilot은 자동화하려는 작업을 수행하기 위해 필요한 동작을 제안합니다. 다음 단계를 진행하려면 **Next** 버튼을 클릭할 수 있습니다.
 
@@ -204,7 +204,7 @@ AI Builder의 송장 처리 AI 모델을 활용하여 재무팀이 송장을 처
 
 8. 워크플로우에서 **Condition** 동작을 제거합니다. 사용하지 않을 것이기 때문에 제거합니다. 다음과 같이 보일 것입니다:
 
-    ![power automate, remove actions](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-koreyst)
+   ![power automate, remove actions](../../images/powerautomate-remove-actions.png?WT.mc_id=academic-105485-koreyst)
 
 9. **Add an action** 버튼을 클릭하고 **Dataverse**를 검색합니다. **Add a new row** 동작을 선택합니다.
 

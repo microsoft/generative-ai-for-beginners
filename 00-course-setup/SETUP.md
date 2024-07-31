@@ -44,7 +44,7 @@ You can configure one, none, or all providers. Related assignments will simply e
 
 ###  2.1. Create `.env` file
 
-We assume that you have already read the guidance above and signed up with the relevant provider, and obtained the required authentication credentials (API_KEY or token). In the case of Azure OpenAI, we assume you also have a valid deployment of an Azure OpenAI service (endpoint) with at least one GPT model deployed for chat completion.
+We assume that you have already read the guidance above and signed up with the relevant provider, and obtained the required authentication credentials (API_KEY or token). In the case of Azure OpenAI, we assume you also have a valid deployment of an Azure OpenAI Service (endpoint) with at least one GPT model deployed for chat completion.
 
 The next step is to configure your **local environment variables** as follows:
 

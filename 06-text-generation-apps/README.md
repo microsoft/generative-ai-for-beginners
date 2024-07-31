@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcd?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -87,17 +87,17 @@ pip install openai
 You need to carry out the following steps:
 
 - Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Gain access to Azure Open AI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
+- Gain access to Azure OpenAI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
 
   > [!NOTE]
-  > At the time of writing, you need to apply for access to Azure Open AI.
+  > At the time of writing, you need to apply for access to Azure OpenAI.
 
 - Install Python <https://www.python.org/>
 - Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Locate API key and endpoint
 
-At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure Open AI resource and copy the "Key 1" value.
+At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure OpenAI resource and copy the "Key 1" value.
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
@@ -111,7 +111,7 @@ Now that you have this information copied, let's instruct the libraries to use i
 
 ### Setup configuration Azure
 
-If you're using Azure Open AI, here's how you setup configuration:
+If you're using Azure OpenAI, here's how you setup configuration:
 
 ```python
 openai.api_type = 'azure'
@@ -122,7 +122,7 @@ openai.api_base = os.getenv("API_BASE")
 
 Above we're setting the following:
 
-- `api_type` to `azure`. This tells the library to use Azure Open AI and not OpenAI.
+- `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
 - `api_key`, this is your API key found in the Azure Portal.
 - `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
 - `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key.
@@ -173,14 +173,14 @@ Now that we learned how to set up and configure openai, it's time to build your 
    > If you're using Windows type `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure Open AI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
 
 1. Create an _app.py_ file and give it the following code:
 
    ```python
    import openai
 
-   openai.api_key = "<replace this value with your open ai key or Azure Open AI key>"
+   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
 
    openai.api_type = 'azure'
    openai.api_version = '2023-05-15'
@@ -199,7 +199,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
    ```
 
    > [!NOTE]
-   > If you're using Azure Open AI, you need to set the `api_type` to `azure` and set the `api_key` to your Azure Open AI key.
+   > If you're using Azure OpenAI, you need to set the `api_type` to `azure` and set the `api_key` to your Azure OpenAI key.
 
    You should see an output like the following:
 

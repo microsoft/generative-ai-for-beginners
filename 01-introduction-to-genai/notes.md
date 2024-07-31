@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My notes introduction to generative AI
 
 ## Definitions 
@@ -11,13 +12,31 @@ and improve upon that data to mke decision or predictions
 A machine learning tecnique in wich layers of neural networs are used to process
 data and make decisions
 - Generative AI=LLM
+=======
+# My-notes
+
+## Artificial Intelligence: 
+The field of computer science that seeks o create 
+intelligent machines that can replciate or exceed human intelligence.
+## Machine Learning
+Subset of AI that enables macines to learn from existing data
+and improve upon that data to mke decision or predictions
+## Deep Learning
+A machine learning tecnique in wich layers of neural networs are used to process
+data and make decisions
+
+## Generative AI=LLM
+>>>>>>> 17bdcb6d5221b9948ae707a28720e376d1b67fab
 Create new written, visual and auditory content given prompts or existing data
 Key conept: tokanisation
 receive text, give text
 transform text to tokens(#s)
 
 ## What are language models?
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17bdcb6d5221b9948ae707a28720e376d1b67fab
 Generative AI applications are powered by language models, which are a specialized type of machine learning model that you can use to perform natural language processing (NLP) tasks, including:
 - Determining sentiment or otherwise classifying natural language text.
 - Summarizing text.
@@ -28,7 +47,11 @@ While the mathematical principles behind these language models can be complex, a
 ## Transformer models
 Machine learning models for natural language processing have evolved over many years. Today's cutting-edge large language models are based on the transformer architecture, which builds on and extends some techniques that have been proven successful in modeling vocabularies to support NLP tasks - and in particular in generating language. Transformer models are trained with large volumes of text, enabling them to represent the semantic relationships between words and use those relationships to determine probable sequences of text that make sense. Transformer models with a large enough vocabulary are capable of generating language responses that are tough to distinguish from human responses.
 
+<<<<<<< HEAD
 ### Transformer model architecture consists of two components, or blocks:
+=======
+## Transformer model architecture consists of two components, or blocks:
+>>>>>>> 17bdcb6d5221b9948ae707a28720e376d1b67fab
 - An encoder block that creates semantic representations of the training vocabulary.
 - A decoder block that generates new language sequences.
 
@@ -238,6 +261,7 @@ Copilot Studio is designed to work well for low-code development scenarios in wh
 **Azure AI Studio**
 Azure AI Studio is a PaaS (platform as a service) development portal for professional software developers that gives you full control over the language model you want to use, including the capability to fine-tune the model with your own data. You can define prompt flows that orchestrate conversation flow and integrate your own data augmentation and prompt engineering logic, and you can deploy the resulting copilot service in the cloud and consume it from custom-developed apps and services. For more information, see https://azure.microsoft.com/products/ai-studio/.
 
+<<<<<<< HEAD
 
 ## Azure Open AI Service
 
@@ -378,4 +402,13 @@ The Open Neural Network Exchange (ONNX) is an open-source format designed to ena
 The ONNX model repository hosts several pretrained ONNX models you can use for inferencing in a wide variety of tasks.
 
 With ML.NET, you can take these pretrained ONNX models and use them for inferencing inside your .NET applications.
+=======
+**Summary**
+Generative AI is a rapidly developing field of AI that supports new language generation, code development, image creation, and more. This module explored how language models power generative AI and how copilot brings generative AI capabilities to your desktop. You learned the basics of Large Language Models (LLMs) and Small Language Models (SLMs), and the underlying transformer architecture of advanced language models.
+
+The main takeaways from this module include understanding the role of generative AI in creating AI assistants or copilots that provide contextualized support for common tasks. Often, generative AI is integrated into chat applications like Microsoft Copilot to interpret natural language inputs and generate suitable responses. You learned about the three levels of copilot adoption and the various applications of Microsoft Copilot across different Microsoft applications. The module also highlighted the importance of improving the quality of responses from generative AI. Finally, you have been introduced to two tools offered by Microsoft for customizing or developing custom copilots: Copilot Studio and Azure AI Studio.
+
+
+
+>>>>>>> 17bdcb6d5221b9948ae707a28720e376d1b67fab
 

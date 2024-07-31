@@ -1,8 +1,6 @@
 # 第三章 ： 负责任地使用生成式人工智能
 
-[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)]()
-
-> **导学视频即将上架，敬请期待**
+[![Using Generative AI Responsibly](../../images/03-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
 人们很容易对人工智能尤其是生成式人工智能着迷，但你需要考虑如何负责任地使用它。 你需要考虑如何确保输出是公平的、无害的等等。 本章旨在为您提供上述相关背景信息、需要考虑的事项以及如何采取积极措施来改善人工智能的使用。
 

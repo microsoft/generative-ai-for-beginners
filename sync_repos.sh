@@ -4,10 +4,10 @@
 set -e
 set -x  # Enable debugging output
 
-# Set environment variables
+# Set environment variables (ensure these are set in your environment)
 export GITHUB_TOKEN=your_github_token
 export GITHUB_REPO=github.com/diegoabeltran16/generative-ai-for-beginners.git
-export GITLAB_TOKEN=your_github_token
+export GITLAB_TOKEN=your_gitlab_token
 export GITLAB_REPO=gitlab.com/otros3114624/generative-ai-for-beginners.git
 
 # Configure Git credential helper to store credentials temporarily 
@@ -63,7 +63,7 @@ fi
 # Merge changes from GitHub to GitLab
 echo "Merging changes from GitHub to GitLab..."
 git checkout main
-if git pull github main; then
+if git pull github main --rebase; then
   echo "Pulled changes from GitHub successfully."
 else
   echo "Failed to pull changes from GitHub."
@@ -76,7 +76,7 @@ fi
 
 # Merge changes from GitLab to GitHub
 echo "Merging changes from GitLab to GitHub..."
-if git pull gitlab main; then
+if git pull gitlab main --rebase; then
   echo "Pulled changes from GitLab successfully."
 else
   echo "Failed to pull changes from GitLab."

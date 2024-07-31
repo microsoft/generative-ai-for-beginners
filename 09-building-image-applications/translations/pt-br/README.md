@@ -1,8 +1,6 @@
 # Criando aplicativos de geração de imagens
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
-
-> **Vídeo em Breve**
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 Ainda há muito mais que os LLMs podem fazer além da geração de texto. Também é possível gerar imagens a partir de descrições de texto. Ter imagens como modalidade pode ser altamente útil em uma série de áreas, desde MedTech, arquitetura, turismo, desenvolvimento de jogos e muito mais. Neste capítulo, veremos os dois modelos de geração de imagens mais populares, DALL-E e Midjourney.
 
@@ -24,9 +22,9 @@ After completing this lesson, you will be able to:
 
 ## Why build an image generation application?
 
-Image generation applications are a great way to explore the capabilities of Generative AI. They can be used for, for example:  
+Image generation applications are a great way to explore the capabilities of Generative AI. They can be used for, for example:
 
-- **Image editing and synthesis**. You can generate images for a variety of use cases, such as image editing and image synthesis.  
+- **Image editing and synthesis**. You can generate images for a variety of use cases, such as image editing and image synthesis.
 
 - **Applied to a variety of industries**. They can also be used to generate images for a variety of industries like Medtech, Tourism, Game development and more.
 
@@ -72,7 +70,7 @@ Veja o que os estudantes da Edu4All poderiam gerar, por exemplo, se estivessem t
 
 ![Edu4All startup, aula sobre monumentos, Torre Eiffel](../../images/startup.png?WT.mc_id=academic-105485-koreyst)
 
-usando um prompt como: 
+usando um prompt como:
 
 > "Dog next to Eiffel Tower in early morning sunlight"
 
@@ -95,13 +93,13 @@ Vamos começar com o DALL-E, que é um modelo de Inteligência Artificial Genera
 Midjourney funciona de maneira semelhante ao DALL-E, gerando imagens a partir de prompts de texto. Midjourney também pode ser usado para gerar imagens usando prompts como "um gato com chapéu" ou "um cachorro com um moicano".
 
 ![Imagem gerada pelo Midjourney, pombo mecânico](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-*Créditos da imagem: Wikipedia, imagem gerada pelo Midjourney*
+_Créditos da imagem: Wikipedia, imagem gerada pelo Midjourney_
 
 ## Como DALL-E e Midjourney Funcionam
 
-Primeiro, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E é um modelo de Inteligência Artificial Generativa baseado na arquitetura do transformer com um *transformer autoregressivo*.
+Primeiro, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E é um modelo de Inteligência Artificial Generativa baseado na arquitetura do transformer com um _transformer autoregressivo_.
 
-Um *transformer autoregressivo* define como um modelo gera imagens a partir de descrições de texto, gerando um pixel de cada vez e, em seguida, usando os pixels gerados para gerar o próximo pixel. Passando por várias camadas em uma rede neural, até que a imagem esteja completa.
+Um _transformer autoregressivo_ define como um modelo gera imagens a partir de descrições de texto, gerando um pixel de cada vez e, em seguida, usando os pixels gerados para gerar o próximo pixel. Passando por várias camadas em uma rede neural, até que a imagem esteja completa.
 
 Com esse processo, o DALL-E controla atributos, objetos, características e muito mais na imagem que gera. No entanto, DALL-E 2 e 3 têm mais controle sobre a imagem gerada.
 
@@ -109,150 +107,150 @@ Com esse processo, o DALL-E controla atributos, objetos, características e muit
 
 Então, o que é necessário para construir um aplicativo de geração de imagens? Você precisa das seguintes bibliotecas:
 
-- **python-dotenv**, é altamente recomendável usar esta biblioteca para manter suas informações confidenciais em um arquivo *.env* longe do código.
+- **python-dotenv**, é altamente recomendável usar esta biblioteca para manter suas informações confidenciais em um arquivo _.env_ longe do código.
 - **openai**, esta biblioteca é o que você usará para interagir com a API da OpenAI.
 - **pillow**, para trabalhar com imagens em Python.
 - **requests**, para ajudar você a fazer solicitações HTTP.
 
-1. Crie um arquivo *.env* com o seguinte conteúdo:
+1. Crie um arquivo _.env_ com o seguinte conteúdo:
 
-    ```text
-    AZURE_OPENAI_ENDPOINT=<your endpoint>
-    AZURE_OPENAI_KEY=<your key>
-    ```
+   ```text
+   AZURE_OPENAI_ENDPOINT=<your endpoint>
+   AZURE_OPENAI_KEY=<your key>
+   ```
 
-    Encontre essas informações no Portal do Azure para o seu recurso na seção "Chaves e Endpoint".
+   Encontre essas informações no Portal do Azure para o seu recurso na seção "Chaves e Endpoint".
 
-1. Cole as bibliotecas acima em um arquivo chamado *requirements.txt* assim:
+1. Cole as bibliotecas acima em um arquivo chamado _requirements.txt_ assim:
 
-    ```text
-    python-dotenv
-    openai
-    pillow
-    requests
-    ```
+   ```text
+   python-dotenv
+   openai
+   pillow
+   requests
+   ```
 
 1. Depois, crie um ambiente virtual e instale as bibliotecas:
 
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
-    Para Windows, use os seguintes comandos para criar e ativar seu ambiente virtual:
+   Para Windows, use os seguintes comandos para criar e ativar seu ambiente virtual:
 
-    ```bash
-    python3 -m venv venv
-    venv\Scripts\activate.bat
-    ````
+   ```bash
+   python3 -m venv venv
+   venv\Scripts\activate.bat
+   ```
 
-1. Adicione o seguinte código em um arquivo chamado *app.py*:
+1. Adicione o seguinte código em um arquivo chamado _app.py_:
 
-    ```python
-    import openai
-    import os
-    import requests
-    from PIL import Image
-    import dotenv
-    
-    # import dotenv
-    dotenv.load_dotenv()
-    
-    # Get endpoint and key from environment variables
-    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-    openai.api_key = os.environ['AZURE_OPENAI_KEY']     
-    
-    # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
-    openai.api_version = '2023-06-01-preview'
-    openai.api_type = 'azure'
-    
-    
-    try:
-        # Create an image by using the image generation API
-        generation_response = openai.Image.create(
-            prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
-            size='1024x1024',
-            n=2,
-            temperature=0,
-        )
-        # Set the directory for the stored image
-        image_dir = os.path.join(os.curdir, 'images')
-    
-        # If the directory doesn't exist, create it
-        if not os.path.isdir(image_dir):
-            os.mkdir(image_dir)
-    
-        # Initialize the image path (note the filetype should be png)
-        image_path = os.path.join(image_dir, 'generated-image.png')
-    
-        # Retrieve the generated image
-        image_url = generation_response["data"][0]["url"]  # extract image URL from response
-        generated_image = requests.get(image_url).content  # download the image
-        with open(image_path, "wb") as image_file:
-            image_file.write(generated_image)
-    
-        # Display the image in the default image viewer
-        image = Image.open(image_path)
-        image.show()
-    
-    # catch exceptions
-    except openai.error.InvalidRequestError as err:
-        print(err)
+   ```python
+   import openai
+   import os
+   import requests
+   from PIL import Image
+   import dotenv
 
-    ```
+   # import dotenv
+   dotenv.load_dotenv()
+
+   # Get endpoint and key from environment variables
+   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
+   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+
+   # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
+   openai.api_version = '2023-06-01-preview'
+   openai.api_type = 'azure'
+
+
+   try:
+       # Create an image by using the image generation API
+       generation_response = openai.Image.create(
+           prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+           size='1024x1024',
+           n=2,
+           temperature=0,
+       )
+       # Set the directory for the stored image
+       image_dir = os.path.join(os.curdir, 'images')
+
+       # If the directory doesn't exist, create it
+       if not os.path.isdir(image_dir):
+           os.mkdir(image_dir)
+
+       # Initialize the image path (note the filetype should be png)
+       image_path = os.path.join(image_dir, 'generated-image.png')
+
+       # Retrieve the generated image
+       image_url = generation_response["data"][0]["url"]  # extract image URL from response
+       generated_image = requests.get(image_url).content  # download the image
+       with open(image_path, "wb") as image_file:
+           image_file.write(generated_image)
+
+       # Display the image in the default image viewer
+       image = Image.open(image_path)
+       image.show()
+
+   # catch exceptions
+   except openai.error.InvalidRequestError as err:
+       print(err)
+
+   ```
 
 Vamos explicar este código:
 
 - Primeiro, importamos as bibliotecas de que precisamos, incluindo as bibliotecas OpenAI, dotenv, request e Pillow.
 
-    ```python
-    import openai
-    import os
-    import requests
-    from PIL import Image
-    import dotenv
-    ```
+  ```python
+  import openai
+  import os
+  import requests
+  from PIL import Image
+  import dotenv
+  ```
 
-- Depois, carregamos as variáveis de ambiente do arquivo *.env*.
+- Depois, carregamos as variáveis de ambiente do arquivo _.env_.
 
-    ```python
-    # import dotenv
-    dotenv.load_dotenv()
-    ```
+  ```python
+  # import dotenv
+  dotenv.load_dotenv()
+  ```
 
 - Após isso, definimos o endpoint, a chave para a API OpenAI, a versão e o tipo.
 
-    ```python
-    # Get endpoint and key from environment variables
-    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-    openai.api_key = os.environ['AZURE_OPENAI_KEY'] 
+  ```python
+  # Get endpoint and key from environment variables
+  openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
+  openai.api_key = os.environ['AZURE_OPENAI_KEY']
 
-    # add version and type, Azure specific
-    openai.api_version = '2023-06-01-preview'
-    openai.api_type = 'azure'
-    ```
+  # add version and type, Azure specific
+  openai.api_version = '2023-06-01-preview'
+  openai.api_type = 'azure'
+  ```
 
 - Depois, geramos a imagem:
 
-    ```python
-    # Create an image by using the image generation API
-    generation_response = openai.Image.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
-        size='1024x1024',
-        n=2,
-        temperature=0,
-    )
-    ```
+  ```python
+  # Create an image by using the image generation API
+  generation_response = openai.Image.create(
+      prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+      size='1024x1024',
+      n=2,
+      temperature=0,
+  )
+  ```
 
-    Acima está o código que responde com um objeto JSON que contém a URL da imagem gerada. Podemos usar a URL para baixar a imagem e salvá-la em um arquivo.
+  Acima está o código que responde com um objeto JSON que contém a URL da imagem gerada. Podemos usar a URL para baixar a imagem e salvá-la em um arquivo.
 
 - Finalmente, abrimos a imagem e usamos o visualizador de imagens padrão para exibi-la:
 
-    ```python
-    image = Image.open(image_path)
-    image.show()
-    ```
+  ```python
+  image = Image.open(image_path)
+  image.show()
+  ```
 
 ### Mais detalhes sobre a geração da imagem
 
@@ -287,31 +285,31 @@ Você também pode fazer o seguinte:
 
 - **Realizar edições**: Ao fornecer uma imagem existente, uma máscara e um prompt, você pode alterar uma imagem. Por exemplo, você pode adicionar algo a uma parte de uma imagem. Imagine nossa imagem de coelho, você pode adicionar um chapéu ao coelho. Como você faria isso é fornecendo a imagem, uma máscara (identificando a parte da área para a mudança) e um prompt de texto para dizer o que deve ser feito.
 
-    ```python
-    response = openai.Image.create_edit(
-      image=open("base_image.png", "rb"),
-      mask=open("mask.png", "rb"),
-      prompt="An image of a rabbit with a hat on its head.",
-      n=1,
-      size="1024x1024"
-    )
-    image_url = response['data'][0]['url']
-    ```
+  ```python
+  response = openai.Image.create_edit(
+    image=open("base_image.png", "rb"),
+    mask=open("mask.png", "rb"),
+    prompt="An image of a rabbit with a hat on its head.",
+    n=1,
+    size="1024x1024"
+  )
+  image_url = response['data'][0]['url']
+  ```
 
-    A base da imagem conteria apenas o coelho, mas a imagem final teria o chapéu no coelho.
+  A base da imagem conteria apenas o coelho, mas a imagem final teria o chapéu no coelho.
 
 - **Criar variações**: A ideia é que você pegue uma imagem existente e peça que sejam criadas variações. Para criar uma variação, você fornece uma imagem e um prompt de texto e o código é assim:
 
-    ```python
-    response = openai.Image.create_variation(
-      image=open("bunny-lollipop.png", "rb"),
-      n=1,
-      size="1024x1024"
-    )
-    image_url = response['data'][0]['url']
-    ```
+  ```python
+  response = openai.Image.create_variation(
+    image=open("bunny-lollipop.png", "rb"),
+    n=1,
+    size="1024x1024"
+  )
+  image_url = response['data'][0]['url']
+  ```
 
-    > Observação: isso é suportado apenas no OpenAI
+  > Observação: isso é suportado apenas no OpenAI
 
 ## Temperatura
 
@@ -365,7 +363,7 @@ Com a nossa demonstração, já podemos gerar imagens para nossos clientes. No e
 
 Por exemplo, não queremos gerar imagens que não sejam seguras para o trabalho ou que não sejam apropriadas para crianças.
 
-Podemos fazer isso com *metaprompts*. Metaprompts são prompts de texto que são usados para controlar a saída de um modelo de IA generativa. Por exemplo, podemos usar metaprompts para controlar a saída e garantir que as imagens geradas sejam seguras para o trabalho ou apropriadas para crianças.
+Podemos fazer isso com _metaprompts_. Metaprompts são prompts de texto que são usados para controlar a saída de um modelo de IA generativa. Por exemplo, podemos usar metaprompts para controlar a saída e garantir que as imagens geradas sejam seguras para o trabalho ou apropriadas para crianças.
 
 ### Como funciona?
 
@@ -375,47 +373,47 @@ Metaprompts são prompts de texto usados para controlar a saída de um modelo de
 
 Um exemplo de metaprompt seria o seguinte:
 
+````text
+You are an assistant designer that creates images for children.
+
+The image needs to be safe for work and appropriate for children.
+
+The image needs to be in color.
+
+The image needs to be in landscape orientation.
+
+The image needs to be in a 16:9 aspect ratio.
+
+Do not consider any input from the following that is not safe for work or appropriate for children.
+
+(Input)
+
 ```text
-You are an assistant designer that creates images for children. 
 
-The image needs to be safe for work and appropriate for children. 
-
-The image needs to be in color.  
-
-The image needs to be in landscape orientation.  
-
-The image needs to be in a 16:9 aspect ratio. 
-
-Do not consider any input from the following that is not safe for work or appropriate for children. 
-
-(Input) 
-
-```text
-
-Now, let's see how we can use meta prompts in our demo. 
+Now, let's see how we can use meta prompts in our demo.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-meta_prompt =f"""You are an assistant designer that creates images for children. 
+meta_prompt =f"""You are an assistant designer that creates images for children.
 
-The image needs to be safe for work and appropriate for children. 
+The image needs to be safe for work and appropriate for children.
 
-The image needs to be in color.  
+The image needs to be in color.
 
-The image needs to be in landscape orientation.  
+The image needs to be in landscape orientation.
 
-The image needs to be in a 16:9 aspect ratio. 
+The image needs to be in a 16:9 aspect ratio.
 
-Do not consider any input from the following that is not safe for work or appropriate for children. 
+Do not consider any input from the following that is not safe for work or appropriate for children.
 {disallow_list}
 """
 
-prompt = f"{meta_prompt} 
+prompt = f"{meta_prompt}
 Create an image of a bunny on a horse, holding a lollipop"
 
 # TODO add request to generate image
-```
+````
 
 No prompt acima, você pode ver como todas as imagens sendo criadas consideram o metaprompt.
 
@@ -441,30 +439,30 @@ dotenv.load_dotenv()
 
 # Get endpoint and key from environment variables
 openai.api_base = "<replace with endpoint>"
-openai.api_key = "<replace with api key>"     
+openai.api_key = "<replace with api key>"
 
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 openai.api_version = '2023-06-01-preview'
 openai.api_type = 'azure'
-    
+
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-meta_prompt =f"""You are an assistant designer that creates images for children. 
+meta_prompt =f"""You are an assistant designer that creates images for children.
 
-The image needs to be safe for work and appropriate for children. 
+The image needs to be safe for work and appropriate for children.
 
-The image needs to be in color.  
+The image needs to be in color.
 
-The image needs to be in landscape orientation.  
+The image needs to be in landscape orientation.
 
-The image needs to be in a 16:9 aspect ratio. 
+The image needs to be in a 16:9 aspect ratio.
 
-Do not consider any input from the following that is not safe for work or appropriate for children. 
+Do not consider any input from the following that is not safe for work or appropriate for children.
 {disallow_list}"""
 
 prompt = f"""
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-""""    
+""""
 
 try:
     # Create an image by using the image generation API
