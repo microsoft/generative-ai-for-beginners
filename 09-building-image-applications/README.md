@@ -334,7 +334,7 @@ Meta prompts are text prompts that are used to control the output of a Generativ
 
 One example of a meta prompt would be the following:
 
-````text
+```text
 You are an assistant designer that creates images for children.
 
 The image needs to be safe for work and appropriate for children.
@@ -349,7 +349,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 (Input)
 
-```text
+```
 
 Now, let's see how we can use meta prompts in our demo.
 
@@ -374,7 +374,7 @@ prompt = f"{meta_prompt}
 Create an image of a bunny on a horse, holding a lollipop"
 
 # TODO add request to generate image
-````
+```
 
 From the above prompt, you can see how all images being created consider the metaprompt.
 
