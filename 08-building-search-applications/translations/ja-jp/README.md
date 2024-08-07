@@ -29,7 +29,7 @@ LLM は、チャットボットやテキスト生成だけでなく、Embeddings
 
 実際に検索アプリケーションを作成すると、Embeddings を使用したデータの検索技術を習得できます。また、学生が情報を素早く見つけるための検索アプリケーションの作り方も学べます。
 
-このレッスンでは、Microsoft の [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-yoterada) という YouTube チャンネルから、YouTube の字幕を抜き出し、それを Embedding 検索用のインデックスとして利用する方法について紹介します。AI Show は、AI と機械学習について学べる YouTube チャンネルです。Embedding 用のインデックスは、2023 年 10 月までの各 YouTube にアップロードされた動画の字幕を含めています。この Embedding インデックスを使用して、スタートアップ用の検索アプリケーションを作ります。この検索アプリケーションは、質問の答えが動画のどの部分にあるかを示すリンクも返します。これは、学生が必要な情報を素早く見つけるのに非常に役立ちます。
+このレッスンでは、Microsoft の [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) という YouTube チャンネルから、YouTube の字幕を抜き出し、それを Embedding 検索用のインデックスとして利用する方法について紹介します。AI Show は、AI と機械学習について学べる YouTube チャンネルです。Embedding 用のインデックスは、2023 年 10 月までの各 YouTube にアップロードされた動画の字幕を含めています。この Embedding インデックスを使用して、スタートアップ用の検索アプリケーションを作ります。この検索アプリケーションは、質問の答えが動画のどの部分にあるかを示すリンクも返します。これは、学生が必要な情報を素早く見つけるのに非常に役立ちます。
 
 下記は、「Azure ML で rstudio を使えますか？」という質問に対するセマンティック・クエリの例です。YouTube の URL を見てみると、URL には質問の答えがどの動画のどの部分にあるかを示すタイムスタンプが含まれています。
 
@@ -70,7 +70,7 @@ LLM は、チャットボットやテキスト生成だけでなく、Embeddings
 
 スクリプト内部では下記の操作を行っています：
 
-1. [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-yoterada) プレイリスト中の各 YouTube 動画の字幕をダウンロードします。
+1. [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) プレイリスト中の各 YouTube 動画の字幕をダウンロードします。
 2. [OpenAI の Function Calling](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-yoterada) を使用して、YouTube 字幕の最初から 3 分で発表者の名前を抽出します。各動画の発表者の名前は、`embedding_index_3m.json` という名前の埋め込みインデックスに保存します。
 3. その後、字幕テキストは「**3 分間のテキストブロック**」に分割します。各ブロックには、次のブロックから約 20 語を重複して含め、各ブロックの埋め込みが途切れないように、より良い検索コンテキストを提供します。
 4. 各テキストブロックを OpenAI の Chat API に渡し、テキストを 60 語に要約します。この要約結果も `embedding_index_3m.json` という埋め込みインデックスに保存します。
