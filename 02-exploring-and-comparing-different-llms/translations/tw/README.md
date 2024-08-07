@@ -64,7 +64,7 @@ LLMs 可以根據其架構、訓練數據和使用案例進行多種分類。了
 
 另一種分類 LLMs 的方式是它們是開放原始碼還是專有的。
 
-開放原始碼模型是公開提供給大眾使用的模型，任何人都可以使用。這些模型通常由創建它們的公司或研究社群提供。這些模型允許被檢查、修改和自訂，以適應LLM的各種使用案例。然而，它們並不總是針對生產使用進行最佳化，性能可能不如專有模型。此外，開放原始碼模型的資金可能有限，可能不會長期維護或更新最新的研究。受歡迎的開放原始碼模型範例包括[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst)、[Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst)和[LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst)。
+開放原始碼模型是公開提供給大眾使用的模型，任何人都可以使用。這些模型通常由創建它們的公司或研究社群提供。這些模型允許被檢查、修改和自訂，以適應LLM的各種使用案例。然而，它們並不總是針對生產使用進行最佳化，性能可能不如專有模型。此外，開放原始碼模型的資金可能有限，可能不會長期維護或更新最新的研究。受歡迎的開放原始碼模型範例包括[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst)、[Bloom](https://huggingface.co/bigscience/bloom)和[LLaMA](https://llama.meta.com)。
 
 專有模型是由公司擁有且不對公眾開放的模型。這些模型通常針對生產用途進行最佳化。然而，它們不允許被檢查、修改或針對不同的使用案例進行自訂。此外，它們並不總是免費提供，可能需要訂閱或支付費用才能使用。而且，使用者無法控制用於訓練模型的數據，這意味著他們應該信任模型擁有者來確保對數據隱私和負責任使用 AI 的承諾。流行的專有模型範例包括[OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst)或[Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst)。
 

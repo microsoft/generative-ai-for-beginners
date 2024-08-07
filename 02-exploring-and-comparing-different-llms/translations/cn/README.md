@@ -62,7 +62,7 @@ LLM 模型有许多不同类型，您选择的模型取决于您的用途、您�
 
 对 LLM 进行分类的另一种方法是它们是开源的还是专有的。
 
-开源模型是向公众开放并且任何人都可以使用的模型。 它们通常由创建它们的公司或研究团体提供。 这些模型可以针对 LLMs 的各种用例进行检查、修改和定制。 然而，它们并不总是针对生产用途进行优化，并且可能不如专有模型具备高性能。 此外，开源模型的资金可能有限，并且它们可能无法长期维护或可能无法根据最新研究进行更新。 流行的开源模型的例子包括 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Bloom](https://sapling.ai/llm/bloom) 和 [ LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst)。
+开源模型是向公众开放并且任何人都可以使用的模型。 它们通常由创建它们的公司或研究团体提供。 这些模型可以针对 LLMs 的各种用例进行检查、修改和定制。 然而，它们并不总是针对生产用途进行优化，并且可能不如专有模型具备高性能。 此外，开源模型的资金可能有限，并且它们可能无法长期维护或可能无法根据最新研究进行更新。 流行的开源模型的例子包括 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Bloom](https://huggingface.co/bigscience/bloom) 和 [ LLaMA](https://llama.meta.com)。
 
 专有模型是公司拥有的模型，不向公众提供。 这些模型通常针对生产用途进行了优化。 但是，不允许针对特定的使用场景进行检查、修改或定制它们。 另外，它们并不总是免费提供，可能需要订阅或付费才能使用。 此外，用户无法控制用于训练模型的数据，这意味着他们应该委托模型所有者确保对数据隐私和负责任地使用人工智能的承诺。 流行的专有模型的例子包括 [OpenAI 模型](https://platform.openai.com/docs/models/overview)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) 或 [Claude 2](https://www.anthropic.com/index/claude-2)。
 
