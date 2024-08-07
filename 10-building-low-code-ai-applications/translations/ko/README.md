@@ -71,7 +71,7 @@ Power Automate의 Copilot AI 어시스턴트 기능을 사용하면 필요한 �
 
 우리 스타트업은 학생들에게 온라인 강좌를 제공합니다. 스타트업은 빠르게 성장하여 강좌 수요를 따라가기 어려워졌습니다. 스타트업은 학생 과제와 송장 처리 프로세스를 관리하기 위해 low code 솔루션을 구축하는 데 도움을 받기 위해 Power Platform 개발자로서 여러분을 고용했습니다. 솔루션은 앱을 통해 학생 과제를 추적하고 관리하며, 워크플로우를 통해 송장 처리 프로세스를 자동화해야 합니다. 여러분은 생성형 AI를 사용하여 솔루션을 개발하도록 요청받았습니다.
 
-Copilot 사용을 시작할 때는 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko)를 사용하여 프롬프트로 시작할 수 있습니다. 이 라이브러리에는 Copilot을 사용하여 앱과 플로우를 구축하는 데 사용할 수 있는 프롬프트 목록이 포함되어 있습니다. 또한 라이브러리의 프롬프트를 사용하여 Copilot에게 요구 사항을 설명하는 방법에 대한 아이디어를 얻을 수 있습니다.
+Copilot 사용을 시작할 때는 [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko)를 사용하여 프롬프트로 시작할 수 있습니다. 이 라이브러리에는 Copilot을 사용하여 앱과 플로우를 구축하는 데 사용할 수 있는 프롬프트 목록이 포함되어 있습니다. 또한 라이브러리의 프롬프트를 사용하여 Copilot에게 요구 사항을 설명하는 방법에 대한 아이디어를 얻을 수 있습니다.
 
 ### 학생 과제 추적 앱 구축하기
 

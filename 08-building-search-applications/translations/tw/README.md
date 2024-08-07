@@ -31,7 +31,7 @@
 
 建立搜尋應用程式將幫助你了解如何使用嵌入來搜尋資料。你還將學習如何建構一個學生可以用來快速找到資訊的搜尋應用程式。
 
-這課程包括 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) YouTube 頻道的 YouTube 文字記錄的嵌入索引。AI Show 是一個教你關於 AI 和機器學習的 YouTube 頻道。嵌入索引包含截至 2023 年 10 月的每個 YouTube 文字記錄的嵌入。你將使用嵌入索引為我們的初創公司建構一個搜尋應用程式。搜尋應用程式會返回一個連結，指向影片中回答問題的位置。這是一個讓學生快速找到所需資訊的好方法。
+這課程包括 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 頻道的 YouTube 文字記錄的嵌入索引。AI Show 是一個教你關於 AI 和機器學習的 YouTube 頻道。嵌入索引包含截至 2023 年 10 月的每個 YouTube 文字記錄的嵌入。你將使用嵌入索引為我們的初創公司建構一個搜尋應用程式。搜尋應用程式會返回一個連結，指向影片中回答問題的位置。這是一個讓學生快速找到所需資訊的好方法。
 
 以下是一個針對問題「你可以將 rstudio 與 azure ml 一起使用嗎？」的語義查詢範例。查看 YouTube 連結, 你會看到連結包含一個時間戳記, 它會帶你到影片中回答問題的位置。
 
@@ -65,7 +65,7 @@
 
 腳本執行以下操作:
 
-1. 每個 YouTube 影片在 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) 播放清單中的逐字稿會被下載。
+1. 每個 YouTube 影片在 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 播放清單中的逐字稿會被下載。
 2. 使用 [OpenAI 函式](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)，嘗試從 YouTube 逐字稿的前 3 分鐘中提取講者姓名。每個影片的講者姓名會儲存在名為 `embedding_index_3m.json` 的嵌入索引中。
 3. 然後將逐字稿文本分塊成 **3 分鐘文本片段**。每個片段包括大約 20 個與下一個片段重疊的單詞，以確保片段的嵌入不會被切斷，並提供更好的搜索上下文。
 4. 然後將每個文本片段傳遞給 OpenAI 聊天 API，將文本摘要為 60 個單詞。摘要也會儲存在嵌入索引 `embedding_index_3m.json` 中。

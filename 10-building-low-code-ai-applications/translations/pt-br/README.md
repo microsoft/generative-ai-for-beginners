@@ -58,7 +58,7 @@ O recurso de assistente de IA Copilot no Power Automate permite que você descre
 
 Nossa startup fornece cursos online para estudantes. A startup cresceu rapidamente e está enfrentando dificuldades para acompanhar a demanda por seus cursos. A startup contratou você como desenvolvedor da Power Platform para ajudá-los a criar uma solução de baixo código para ajudá-los a gerenciar suas atribuições de estudantes e faturas. Sua solução deve ser capaz de ajudá-los a rastrear e gerenciar as atribuições de estudantes por meio de um aplicativo e automatizar o processo de processamento de faturas por meio de um fluxo. Foi solicitado a você que use a IA generativa para desenvolver a solução.
 
-Quando estiver começando a usar o Copilot, você pode usar a [Biblioteca de Prompts do Power Platform Copilot](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko) para começar com os prompts. Esta biblioteca contém uma lista de prompts que você pode usar para criar aplicativos e fluxos com Copilot. Você também pode usar os prompts na biblioteca para ter uma ideia de como descrever seus requisitos para o Copilot.
+Quando estiver começando a usar o Copilot, você pode usar a [Biblioteca de Prompts do Power Platform Copilot](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) para começar com os prompts. Esta biblioteca contém uma lista de prompts que você pode usar para criar aplicativos e fluxos com Copilot. Você também pode usar os prompts na biblioteca para ter uma ideia de como descrever seus requisitos para o Copilot.
 
 ### Criando um Aplicativo de Rastreamento de Atribuições de Estudantes para Nossa Startup
 

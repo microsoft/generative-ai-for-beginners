@@ -29,7 +29,7 @@ LLM(대형 언어 모델)은 챗봇과 텍스트 생성 이상의 기능을 가�
 
 검색 애플리케이션을 만드는 것은 Embedding을 사용하여 데이터를 검색하는 방법을 이해하는 데 도움이 됩니다. 또한 학생들이 정보를 빠르게 찾을 수 있는 검색 애플리케이션을 만드는 방법을 배우게 될 것입니다.
 
-이 레슨에는 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) YouTube 채널의 YouTube 비디오 트랜스크립트의 Embedding 인덱스가 포함되어 있습니다. AI Show는 AI와 머신러닝에 대해 가르치는 YouTube 채널입니다. Embedding 인덱스에는 2023년 10월까지의 각 YouTube 트랜스크립트에 대한 Embedding이 포함되어 있습니다. 우리 스타트업을 위해 Embedding 인덱스를 사용하여 검색 애플리케이션을 만들 것입니다. 검색 애플리케이션은 질문의 답변이 있는 비디오의 위치로 이동할 수 있는 링크를 반환합니다. 이는 학생들이 필요한 정보를 빠르게 찾는 좋은 방법입니다.
+이 레슨에는 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 채널의 YouTube 비디오 트랜스크립트의 Embedding 인덱스가 포함되어 있습니다. AI Show는 AI와 머신러닝에 대해 가르치는 YouTube 채널입니다. Embedding 인덱스에는 2023년 10월까지의 각 YouTube 트랜스크립트에 대한 Embedding이 포함되어 있습니다. 우리 스타트업을 위해 Embedding 인덱스를 사용하여 검색 애플리케이션을 만들 것입니다. 검색 애플리케이션은 질문의 답변이 있는 비디오의 위치로 이동할 수 있는 링크를 반환합니다. 이는 학생들이 필요한 정보를 빠르게 찾는 좋은 방법입니다.
 
 다음은 질문 'Azure ML에서 rstudio를 사용할 수 있나요?'에 대한 의미 기반 쿼리의 예입니다. YouTube URL을 확인해보면, 질문의 답변이 있는 비디오의 위치로 이동하는 타임스탬프가 URL에 포함되어 있습니다.
 
@@ -63,7 +63,7 @@ LLM(대형 언어 모델)은 챗봇과 텍스트 생성 이상의 기능을 가�
 
 이 스크립트는 다음과 같은 작업을 수행합니다:
 
-1. [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) 재생목록의 각 YouTube 비디오의 트랜스크립트를 다운로드합니다.
+1. [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 재생목록의 각 YouTube 비디오의 트랜스크립트를 다운로드합니다.
 2. [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)를 사용하여 YouTube 트랜스크립트의 처음 3분에서 스피커 이름을 추출하려고 시도합니다. 각 비디오의 스피커 이름은 `embedding_index_3m.json`이라는 임베딩 인덱스에 저장됩니다.
 3. 그런 다음 트랜스크립트 텍스트를 **3분 텍스트 세그먼트**로 분할합니다. 세그먼트에는 임베딩이 잘리지 않도록 하고 더 나은 검색 문맥을 제공하기 위해 다음 세그먼트에서 약 20개의 단어가 겹치도록 설계되었습니다.
 4. 각 텍스트 세그먼트는 OpenAI Chat API에 전달되어 텍스트를 60단어로 요약합니다. 이 요약은 임베딩 인덱스 `embedding_index_3m.json`에도 저장됩니다.
