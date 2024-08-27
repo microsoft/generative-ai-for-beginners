@@ -61,7 +61,7 @@ Foundation Model이라는 용어는 [스탠포드 연구원들에 의해 만들�
 
 LLM을 분류하는 또 다른 방법은 오픈 소스인지 독점 모델인지에 따라 나눌 수 있습니다.
 
-오픈 소스 모델은 일반에 공개되어 누구나 사용할 수 있는 모델입니다. 이러한 모델은 일반적으로 해당 모델을 개발한 회사나 연구 커뮤니티에 의해 제공됩니다. 이러한 모델은 검토, 수정 및 사용 사례에 맞게 사용자 정의할 수 있습니다. 그러나 이러한 모델은 항상 프로덕션 환경에 최적화되지 않을 수 있으며, 독점 모델만큼 성능이 우수하지 않을 수도 있습니다. 또한, 오픈 소스 모델의 자금 지원은 제한적일 수 있으며, 장기적으로 유지되지 않거나 최신 연구로 업데이트되지 않을 수도 있습니다. 대표적인 오픈 소스 모델로는 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-koreyst) 및 [LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-koreyst)이 있습니다.
+오픈 소스 모델은 일반에 공개되어 누구나 사용할 수 있는 모델입니다. 이러한 모델은 일반적으로 해당 모델을 개발한 회사나 연구 커뮤니티에 의해 제공됩니다. 이러한 모델은 검토, 수정 및 사용 사례에 맞게 사용자 정의할 수 있습니다. 그러나 이러한 모델은 항상 프로덕션 환경에 최적화되지 않을 수 있으며, 독점 모델만큼 성능이 우수하지 않을 수도 있습니다. 또한, 오픈 소스 모델의 자금 지원은 제한적일 수 있으며, 장기적으로 유지되지 않거나 최신 연구로 업데이트되지 않을 수도 있습니다. 대표적인 오픈 소스 모델로는 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) 및 [LLaMA](https://llama.meta.com)이 있습니다.
 
 독점 모델 (Proprietary models)은 회사에 소유되어 일반에 공개되지 않는 모델입니다. 이러한 모델은 일반적으로 프로덕션 환경에 최적화되어 있습니다. 그러나 이러한 모델은 사용자가 검토, 수정 또는 사용 사례에 맞게 사용자 정의할 수 없습니다. 또한, 이러한 모델은 항상 무료로 제공되지 않을 수 있으며, 사용을 위해 구독 또는 결제가 필요할 수 있습니다. 또한, 사용자는 모델을 훈련하는 데 사용되는 데이터를 제어할 수 없으므로 데이터 프라이버시와 AI의 책임있는 사용을 보장하기 위해 모델 소유자에게 의존해야 합니다. 대표적인 독점 모델로는 [OpenAI 모델](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) 및 [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst)가 있습니다.
 

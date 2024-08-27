@@ -28,7 +28,7 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 
 **What You Need**
 
-- Access to the [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) **OR** [OpenAI API](https://platform.openai.com/docs/quickstart?context=python?WT.mc_id=academic-105485-koreyst) - _Only required to complete coding lessons_
+- Access to the [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) **OR** [OpenAI API](https://platform.openai.com/docs/quickstart?context=python?WT.mc_id=academic-105485-koreyst) **OR** [GitHub Marketplace Model Catalog](https://github.com/marketplace/models?WT.mc_id=academic-105485-koreyst) - _Only required to complete coding lessons_
 - Basic knowledge of Python or TypeScript is helpful - \*For absolute beginners check out these [Python](https://learn.microsoft.com/training/paths/python-language/?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://learn.microsoft.com/training/paths/build-javascript-applications-typescript/?WT.mc_id=academic-105485-koreyst) courses.
 - A GitHub account to [fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account
 

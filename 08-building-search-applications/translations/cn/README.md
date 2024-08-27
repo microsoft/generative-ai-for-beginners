@@ -29,7 +29,7 @@ LLMs 应用场景不仅仅是聊天机器人和文本生成。 还可以使用�
 
 创建搜索应用将帮助您了解如何使用嵌入来搜索数据。 您还将学习如何构建可供学生快速查找信息的搜索应用程序。
 
-本课程包括 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) YouTube 频道的 YouTube 记录的嵌入索引。 AI Show 是一个 YouTube 频道，向您介绍人工智能和机器学习。 嵌入索引包含截至 2023 年 10 月每个 YouTube 记录的嵌入。您将使用嵌入索引为“Our Startup”构建搜索应用程序。 搜索应用程序返回视频中问题答案所在位置的链接。 这是学生快速找到所需信息的好方法。
+本课程包括 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 频道的 YouTube 记录的嵌入索引。 AI Show 是一个 YouTube 频道，向您介绍人工智能和机器学习。 嵌入索引包含截至 2023 年 10 月每个 YouTube 记录的嵌入。您将使用嵌入索引为“Our Startup”构建搜索应用程序。 搜索应用程序返回视频中问题答案所在位置的链接。 这是学生快速找到所需信息的好方法。
 
 以下是问题“can you use rstudio with azure ml?”的语义查询示例。 查看 YouTube 网址，您会看到该网址包含一个时间戳，可将您带到视频中问题答案所在的位置。
 
@@ -63,7 +63,7 @@ Today we are going to learn about Azure Machine Learning.
 
 这些脚本执行以下操作：
 
-1. 下载 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) 播放列表中每个 YouTube 视频的文字记录。
+1. 下载 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 播放列表中每个 YouTube 视频的文字记录。
 2. 使用[OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)，尝试 从 YouTube 记录的前 3 分钟中提取演讲者姓名。 每个视频的演讲者姓名存储在名为 `embedding_index_3m.json` 的嵌入索引中。
 3. 然后将转录文本分成 **3 分钟的文本片段**。 该片段包含大约 20 个与下一个片段重叠的单词，以确保该片段的嵌入不会被切断并提供更好的搜索上下文。
 4. 然后，每个文本片段都会传递到 OpenAI Chat API，将文本总结为 60 个单词。 摘要也存储在嵌入索引 `embedding_index_3m.json` 中。

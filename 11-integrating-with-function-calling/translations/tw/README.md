@@ -45,7 +45,7 @@
 
 ## 通過情境說明問題
 
-> 我們建議你使用[內建筆記本](/11-integrating-with-function-calling/Lesson11-FunctionCalling.ipynb)如果你想要執行以下場景。你也可以只是閱讀，因為我們正在嘗試說明一個函式可以幫助解決的問題。
+> 我們建議你使用[內建筆記本](../../python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst)如果你想要執行以下場景。你也可以只是閱讀，因為我們正在嘗試說明一個函式可以幫助解決的問題。
 
 讓我們看看說明回應格式問題的範例:
 

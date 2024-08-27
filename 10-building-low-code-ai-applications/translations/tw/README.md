@@ -71,7 +71,7 @@ Power Automate 中的副駕駛 AI 助手功能使您能夠描述您需要的流�
 
 我們的初創公司為學生提供線上課程。該初創公司發展迅速，現在難以應對課程的需求。該初創公司聘請了你作為 Power Platform 開發人員，幫助他們建構一個低程式碼解決方案，以幫助他們管理學生作業和發票。他們的解決方案應能通過應用程式幫助他們追蹤和管理學生作業，並通過工作流程自動化發票處理過程。你被要求使用生成式 AI 開發該解決方案。
 
-當你開始使用 Copilot 時，你可以使用 [Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639-somelezediko) 來開始使用提示。此函式庫包含一系列提示，你可以用來與 Copilot 一起建構應用程式和流程。你也可以使用函式庫中的提示來了解如何向 Copilot 描述你的需求。
+當你開始使用 Copilot 時，你可以使用 [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) 來開始使用提示。此函式庫包含一系列提示，你可以用來與 Copilot 一起建構應用程式和流程。你也可以使用函式庫中的提示來了解如何向 Copilot 描述你的需求。
 
 ### 建構我們新創公司的學生作業追蹤應用程式
 
