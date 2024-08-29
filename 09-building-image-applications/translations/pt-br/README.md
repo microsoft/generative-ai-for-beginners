@@ -195,7 +195,7 @@ Então, o que é necessário para construir um aplicativo de geração de imagen
        image.show()
 
    # catch exceptions
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -493,7 +493,7 @@ try:
     image.show()
 
 # catch exceptions
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 

@@ -161,7 +161,7 @@ So what does it take to build an image generation application? You need the foll
        image.show()
 
    # catch exceptions
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -454,7 +454,7 @@ try:
     image.show()
 
 # catch exceptions
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 

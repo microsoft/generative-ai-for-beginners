@@ -163,7 +163,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
        image.show()
 
    # catch exceptions
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -458,7 +458,7 @@ try:
     image.show()
 
 # catch exceptions
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 

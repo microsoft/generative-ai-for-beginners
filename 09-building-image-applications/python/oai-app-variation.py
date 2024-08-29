@@ -35,5 +35,5 @@ try:
     # Display the image in the default image viewer
     image = Image.open(image_path)
     image.show()
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)

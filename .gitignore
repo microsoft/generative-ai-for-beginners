@@ -162,3 +162,6 @@ cython_debug/
 node_modules/
 
 .DS_Store
+
+# downloaded stuff for 08-building-search-applications
+08-building-search-applications/scripts/transcripts_the_ai_show/
