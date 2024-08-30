@@ -5,4 +5,3 @@ dependencies:
 - python=3.12
 - openai
 - python-dotenv
-- azure-ai-inference
