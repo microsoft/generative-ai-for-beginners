@@ -38,6 +38,7 @@ cd generative-ai-for-beginners
 Once you have everything checked out, you can get started!
 
 ### Installing Miniconda (optional step)
+
 [Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, as well as a few packages.
 Conda itself is a package manager, that makes it easy to setup and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It also comes in handy for installing packages that are not available via `pip`.
 
@@ -48,6 +49,7 @@ With Miniconda installed, you need to clone the [repository](https://github.com/
 Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
 
 Go ahead and populate your environment file with the snippet below:
+
 ```yml
 name: <environment-name>
 channels:
@@ -56,12 +58,13 @@ dependencies:
 - python=<python-version>
 - openai
 - python-dotenv
+- azure-ai-inference
+
 ```
 
 The environment file specifies the dependencies we need. `<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` is the latest major version of Python.
 
 With that done, you can  go ahead and create your Conda environment by running the commands below in your command line/terminal
-
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
@@ -78,7 +81,7 @@ We recommend using the [Visual Studio Code (VS Code)](http://code.visualstudio.c
 
 > **Note**: Once you clone and open the directory in VS Code, it will automatically suggest you install a Python support extension.
 
-> **Note**: If VS Code suggests you re-open the repository in a container, decline this request in order to use the locally installed version of Python. 
+> **Note**: If VS Code suggests you re-open the repository in a container, decline this request in order to use the locally installed version of Python.
 
 ### Using Jupyter in the Browser
 
