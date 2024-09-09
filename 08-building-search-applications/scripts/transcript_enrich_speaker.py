@@ -8,6 +8,7 @@ import logging
 import queue
 import time
 import argparse
+import dotenv
 import openai
 from openai.embeddings_utils import get_embedding
 from rich.progress import Progress
@@ -21,6 +22,9 @@ from tenacity import (
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
+
+# import dotenv
+dotenv.load_dotenv()
 
 API_KEY = os.environ["AZURE_OPENAI_API_KEY"]
 RESOURCE_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]

@@ -8,6 +8,7 @@ import json
 import threading
 import queue
 import time
+import dotenv
 import openai
 from openai.embeddings_utils import get_embedding
 import tiktoken
@@ -18,6 +19,9 @@ from tenacity import (
     retry_if_not_exception_type,
 )
 from rich.progress import Progress
+
+# import dotenv
+dotenv.load_dotenv()
 
 API_KEY = os.environ["AZURE_OPENAI_API_KEY"]
 RESOURCE_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
