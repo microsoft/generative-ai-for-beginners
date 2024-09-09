@@ -25,10 +25,10 @@ python transcript_enrich_lite.py -f $TRANSCRIPT_FOLDER
 
 # Check if master_enriched.json file exists then rename it to include segment minutes
 if (Test-Path "$TRANSCRIPT_FOLDER\output\master_enriched.json") {
-    Move-Item -Path "$TRANSCRIPT_FOLDER\output\master_enriched.json" -Destination "$TRANSCRIPT_FOLDER\output\embedding_index_full_${TRANSCRIPT_BUCKET_MINUTES}m.json"
+    Move-Item -Path "$TRANSCRIPT_FOLDER\output\master_enriched.json" -Destination "$TRANSCRIPT_FOLDER\output\embedding_index_full_${TRANSCRIPT_BUCKET_MINUTES}m.json" -Force
 }
 
 # Check if master_enriched_lite.json file exists then rename it to include segment minutes
 if (Test-Path "$TRANSCRIPT_FOLDER\output\master_enriched_lite.json") {
-    Move-Item -Path "$TRANSCRIPT_FOLDER\output\master_enriched_lite.json" -Destination "$TRANSCRIPT_FOLDER\output\embedding_index_${TRANSCRIPT_BUCKET_MINUTES}m.json"
+    Move-Item -Path "$TRANSCRIPT_FOLDER\output\master_enriched_lite.json" -Destination "$TRANSCRIPT_FOLDER\output\embedding_index_${TRANSCRIPT_BUCKET_MINUTES}m.json" -Force
 }
