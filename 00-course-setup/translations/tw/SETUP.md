@@ -84,7 +84,7 @@ Python 指派是以應用程式（`.py` 檔案）或 Jupyter 筆記本（`.ipynb
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | 這是您在個人資料中設定的使用者存取權杖 |
 | OPENAI_API_KEY | 這是用於非 Azure OpenAI 端點服務的授權金鑰 |
-| AZURE_OPENAI_KEY | 這是用於該服務的授權金鑰 |
+| AZURE_OPENAI_API_KEY | 這是用於該服務的授權金鑰 |
 | AZURE_OPENAI_ENDPOINT | 這是 Azure OpenAI 資源的部署端點 |
 | AZURE_OPENAI_DEPLOYMENT | 這是 _文本生成_ 模型的部署端點 |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | 這是 _文本嵌入_ 模型的部署端點 |
@@ -99,7 +99,7 @@ Azure OpenAI 端點和金鑰值可以在 [Azure Portal](https://portal.azure.com
 1. 前往 [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
 1. 點擊側邊欄中的 **Keys and Endpoint** 選項（左側選單）。
 1. 點擊 **Show Keys** - 你應該會看到以下內容: KEY 1, KEY 2 和 Endpoint。
-1. 使用 KEY 1 的值作為 AZURE_OPENAI_KEY
+1. 使用 KEY 1 的值作為 AZURE_OPENAI_API_KEY
 1. 使用 Endpoint 的值作為 AZURE_OPENAI_ENDPOINT
 
 接下來，我們需要已部署的特定模型的端點。
