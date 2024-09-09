@@ -1,3 +1,4 @@
+# pylint: disable=all
 from openai import AzureOpenAI
 import os
 import dotenv
@@ -8,8 +9,9 @@ dotenv.load_dotenv()
 # configure Azure OpenAI service client 
 client = AzureOpenAI(
   azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
-  api_key=os.environ['AZURE_OPENAI_KEY'],  
-  api_version = "2023-10-01-preview"
+  api_key=os.environ['AZURE_OPENAI_API_KEY'],  
+  api_version = "2024-02-01"
+#  api_version = "2023-05-15"
   )
 
 deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
