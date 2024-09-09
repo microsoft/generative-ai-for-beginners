@@ -61,7 +61,7 @@
    load_dotenv()
 
    client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_KEY'],  # 這也是預設值，可以省略
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # 這也是預設值，可以省略
    api_version = "2023-07-01-preview"
    )
 

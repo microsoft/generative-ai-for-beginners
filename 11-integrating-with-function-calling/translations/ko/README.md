@@ -61,7 +61,7 @@ function calling은 다음과 같은 제한 사항을 극복하기 위한 Azure 
    load_dotenv()
 
    client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_KEY'],  # 이것은 기본값이며, 생략 가능합니다.
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # 이것은 기본값이며, 생략 가능합니다.
    api_version = "2023-07-01-preview"
    )
 
