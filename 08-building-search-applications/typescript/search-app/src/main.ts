@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const endpoint = process.env.AZURE_OPENAI_ENDPOINT || "";
-const azureApiKey = process.env.AZURE_OPENAI_KEY || "";
+const azureApiKey = process.env.AZURE_OPENAI_API_KEY || "";
 
 /**
  * Calculates the cosine similarity between two vectors.
