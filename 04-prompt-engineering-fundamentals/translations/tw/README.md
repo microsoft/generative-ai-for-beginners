@@ -362,7 +362,7 @@ response = openai.chat.completions.create(
 
 ### 接下來，設定你的環境變數
 
-- 複製 repo 根目錄中的 `.env.copy` 檔案到 `.env` 並填入 `AZURE_OPENAI_KEY`、`AZURE_OPENAI_ENDPOINT` 和 `AZURE_OPENAI_DEPLOYMENT` 值。回到[Learning Sandbox section](../../04-prompt-engineering-fundamentals#learning-sandbox)學習如何操作。
+- 複製 repo 根目錄中的 `.env.copy` 檔案到 `.env` 並填入 `AZURE_OPENAI_API_KEY`、`AZURE_OPENAI_ENDPOINT` 和 `AZURE_OPENAI_DEPLOYMENT` 值。回到[Learning Sandbox section](../../04-prompt-engineering-fundamentals#learning-sandbox)學習如何操作。
 
 ### 接下來，打開 Jupyter Notebook
 

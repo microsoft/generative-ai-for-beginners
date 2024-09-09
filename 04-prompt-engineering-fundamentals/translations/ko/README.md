@@ -356,7 +356,7 @@ Link to a copy of that Notebook with the prompts filled in and run, showing what
 
 ### 다음으로, 환경 변수를 구성하세요
 
-- 레포지토리 루트에 있는 `.env.copy` 파일을 `.env`로 복사하고 `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_DEPLOYMENT` 값을 채워넣으세요. [Learning Sandbox section](./04-prompt-engineering-fundamentals#learning-sandbox)에서 자세한 내용을 확인하세요.
+- 레포지토리 루트에 있는 `.env.copy` 파일을 `.env`로 복사하고 `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_DEPLOYMENT` 값을 채워넣으세요. [Learning Sandbox section](./04-prompt-engineering-fundamentals#learning-sandbox)에서 자세한 내용을 확인하세요.
 
 ### 다음으로, Jupyter Notebook을 열어보세요
 
