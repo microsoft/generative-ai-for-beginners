@@ -82,7 +82,7 @@ _圖片來源 Wikipedia, 圖片由 Midjourney 生成_
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_KEY=<your key>
+   AZURE_OPENAI_API_KEY=<your key>
    ```
 
    在 Azure Portal 中找到你的資源的 "Keys and Endpoint" 部分來定位這些資訊。
@@ -125,7 +125,7 @@ _圖片來源 Wikipedia, 圖片由 Midjourney 生成_
 
    # 從環境變數中獲取 endpoint 和 key
    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+   openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
    # 指定 API 版本 (DALL-E 目前僅支持 2023-06-01-preview API 版本)
    openai.api_version = '2023-06-01-preview'
@@ -190,7 +190,7 @@ _圖片來源 Wikipedia, 圖片由 Midjourney 生成_
   ```python
   # Get endpoint and key from environment variables
   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-  openai.api_key = os.environ['AZURE_OPENAI_KEY']
+  openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
   # add version and type, Azure specific
   openai.api_version = '2023-06-01-preview'

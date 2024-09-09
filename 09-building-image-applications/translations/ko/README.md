@@ -83,7 +83,7 @@ _자기회귀 트랜스포머 (autoregressive transformer)_ 는 모델이 텍스
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_KEY=<your key>
+   AZURE_OPENAI_API_KEY=<your key>
    ```
 
    이 정보는 Azure Portal에서 리소스의 "Keys and Endpoint" 섹션에서 찾을 수 있습니다.
@@ -126,7 +126,7 @@ _자기회귀 트랜스포머 (autoregressive transformer)_ 는 모델이 텍스
 
    # 환경 변수에서 엔드포인트와 키를 가져옵니다.
    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+   openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
    # API 버전을 할당합니다 (DALL-E는 현재 2023-06-01-preview API 버전만 지원됩니다).
    openai.api_version = '2023-06-01-preview'
@@ -191,7 +191,7 @@ _자기회귀 트랜스포머 (autoregressive transformer)_ 는 모델이 텍스
   ```python
   # 환경 변수에서 엔드포인트와 키를 가져옵니다.
   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-  openai.api_key = os.environ['AZURE_OPENAI_KEY']
+  openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
   # 버전과 타입을 추가합니다. Azure에 특화된 설정입니다.
   openai.api_version = '2023-06-01-preview'
