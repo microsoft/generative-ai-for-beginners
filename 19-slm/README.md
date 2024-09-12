@@ -2,7 +2,7 @@
 
 A small language model (SLM) represents a scaled-down variant of a large language model (LLM), leveraging many of the architectural principles and techniques of LLMs, while exhibiting a significantly reduced computational footprint. Typically, SLMs are constructed by compressing or distilling LLMs, aiming to retain a substantial portion of the original model's functionality and linguistic capabilities. This reduction in model size decreases the overall complexity, making SLMs more efficient in terms of both memory usage and computational requirements. Despite these optimizations, SLMs can still perform a wide range of natural language processing (NLP) tasks, such as text generation, summarization, and translation, albeit with some trade-offs in performance or depth of understanding compared to their larger counterparts. The development of SLMs aligns with the increasing need for models that can be deployed in resource-constrained environments, such as mobile devices or edge computing platforms, where full-scale LLMs may be impractical due to their heavy resource demands. By focusing on efficiency, SLMs balance performance with accessibility, enabling broader application across various domains.
 
-![slm](./img/slm.png)
+![slm](./img/slm.png?WT.mc_id=academic-105485-koreyst)
 
 ## Learning Objectives
 
@@ -100,7 +100,7 @@ We can use the Phi-3/3.5 Family model based on different scenarios. Unlike LLM, 
 
 We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 based on different scenarios.
 
-![phi3](./img/phi3.png)
+![phi3](./img/phi3.png?WT.mc_id=academic-105485-koreyst)
 
 ### Inference difference Cloud's API
 
@@ -110,21 +110,21 @@ GitHub Models is the most direct way. You can quickly access the Phi-3/3.5-Instr
 
 - Demo:Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios
 
-![phi3](./img/gh1.png)
+![phi3](./img/gh1.png?WT.mc_id=academic-105485-koreyst)
 
-![phi35](./img/gh2.png)
+![phi35](./img/gh2.png?WT.mc_id=academic-105485-koreyst)
 
 
 **Azure AI Studio**
 
-Or if we want to use the vision and MoE models, you can use Azure AI Studio to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Azure AI Studio [Click this link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md)
+Or if we want to use the vision and MoE models, you can use Azure AI Studio to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Azure AI Studio [Click this link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
 
 In addition to the cloud-based Model Catalog solutions provided by Azure and GitHub, you can also use Nivida NIM to complete related calls. You can visit NIVIDA NIM to complete the API calls of Phi-3/3.5 Family
 
-- Demo: Using Nividia NIM to call Phi-3.5-Vision-API  [[Click this link](./python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Using Nividia NIM to call Phi-3.5-Vision-API  [[Click this link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
 ### Inference Phi-3/3.5 in local env
@@ -135,11 +135,11 @@ In addition to the cloud-based Model Catalog solutions provided by Azure and Git
 This is the most commonly used method, but it also requires GPU acceleration. After all, scenes such as Vision and MoE require a lot of calculations, which will be very limited in the CPU if they are not quantized.
 
 
-- Demo:Using Transformer to call Phi-3.5-Instuct [Click this link](./python/phi35-instruct-demo.ipynb)
+- Demo:Using Transformer to call Phi-3.5-Instuct [Click this link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo:Using Transformer to call Phi-3.5-Vision[Click this link](./python/phi35-vision-demo.ipynb)
+- Demo:Using Transformer to call Phi-3.5-Vision[Click this link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo:Using Transformer to call Phi-3.5-MoE[Click this link](./python/phi35_moe_demo.ipynb)
+- Demo:Using Transformer to call Phi-3.5-MoE[Click this link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
 
@@ -222,7 +222,7 @@ while not generator.is_done():
 
 **Others**
 
-In addition to ONNX Runtime and Ollama reference methods, we can also complete the reference of quantitative models based on the model reference methods provided by different manufacturers. Such as Apple MLX framework with Apple Metal, Qualcomm QNN with NPU, Intel OpenVINO with CPU/GPU, etc. You can also get more content from [Phi-3 Cookbook](https://aka.ms/phi-3cookbook)
+In addition to ONNX Runtime and Ollama reference methods, we can also complete the reference of quantitative models based on the model reference methods provided by different manufacturers. Such as Apple MLX framework with Apple Metal, Qualcomm QNN with NPU, Intel OpenVINO with CPU/GPU, etc. You can also get more content from [Phi-3 Cookbook](https://aka.ms/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
 
 
 ## More
