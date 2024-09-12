@@ -1,0 +1,47 @@
+import os
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from gtts import gTTS
+from moviepy.editor import TextClip, concatenate_videoclips
+
+# Replace 'YOUR_API_TOKEN' with your actual token
+API_TOKEN = 'YOUR_API_TOKEN'
+
+def start(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text('Send me some text and I will create a video for you!')
+
+def create_video(text: str) -> str:
+    # Generate speech from text
+    tts = gTTS(text)
+    audio_file = 'audio.mp3'
+    tts.save(audio_file)
+
+    # Create a video clip with the text
+    text_clip = TextClip(text, fontsize=70, color='white', bg_color='black', size=(640, 480), method='caption')
+    text_clip = text_clip.set_duration(5)  # Duration of the text display
+    video_file = 'output_video.mp4'
+    text_clip.write_videofile(video_file, fps=24)
+
+    return video_file
+
+def handle_message(update: Update, context: CallbackContext) -> None:
+    user_text = update.message.text
+    video_file = create_video(user_text)
+    update.message.reply_video(video=open(video_file, 'rb'))
+
+def main() -> None:
+    updater = Updater(API_TOKEN)
+
+    # Get the dispatcher to register handlers
+    dispatcher = updater.dispatcher
+
+    # Register handlers
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+
+    # Start the Bot
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
