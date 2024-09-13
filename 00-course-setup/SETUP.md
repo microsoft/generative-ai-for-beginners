@@ -85,7 +85,7 @@ Let's take a quick look at the variable names to understand what they represent:
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | This is the user access token you setup in your profile |
 | OPENAI_API_KEY | This is the authorization key for using the service for non-Azure OpenAI endpoints |
-| AZURE_OPENAI_KEY | This is the authorization key for using that service |
+| AZURE_OPENAI_API_KEY | This is the authorization key for using that service |
 | AZURE_OPENAI_ENDPOINT | This is the deployed endpoint for an Azure OpenAI resource |
 | AZURE_OPENAI_DEPLOYMENT | This is the _text generation_ model deployment endpoint |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | This is the _text embeddings_ model deployment endpoint |
@@ -101,7 +101,7 @@ The Azure OpenAI endpoint and key values will be found in the [Azure Portal](htt
 1. Go to the [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
 1. Click the **Keys and Endpoint** option in the sidebar (menu at left).
 1. Click **Show Keys** - you should see the following: KEY 1, KEY 2 and Endpoint.
-1. Use the KEY 1 value for AZURE_OPENAI_KEY
+1. Use the KEY 1 value for AZURE_OPENAI_API_KEY
 1. Use the Endpoint value for AZURE_OPENAI_ENDPOINT
 
 Next, we need the endpoints for the specific models we've deployed.

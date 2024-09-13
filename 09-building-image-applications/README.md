@@ -82,7 +82,7 @@ So what does it take to build an image generation application? You need the foll
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_KEY=<your key>
+   AZURE_OPENAI_API_KEY=<your key>
    ```
 
    Locate this information in Azure Portal for your resource in the "Keys and Endpoint" section.
@@ -125,7 +125,7 @@ So what does it take to build an image generation application? You need the foll
 
    # Get endpoint and key from environment variables
    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+   openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
    # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
    openai.api_version = '2023-06-01-preview'
@@ -190,7 +190,7 @@ Let's explain this code:
   ```python
   # Get endpoint and key from environment variables
   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-  openai.api_key = os.environ['AZURE_OPENAI_KEY']
+  openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
   # add version and type, Azure specific
   openai.api_version = '2023-06-01-preview'

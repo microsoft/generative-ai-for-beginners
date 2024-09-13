@@ -61,7 +61,7 @@ Let's say we want to create a database of student data so we can suggest the rig
    load_dotenv()
 
    client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_KEY'],  # this is also the default, it can be omitted
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
    api_version = "2023-07-01-preview"
    )
 

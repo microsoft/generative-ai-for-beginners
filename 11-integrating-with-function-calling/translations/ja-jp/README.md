@@ -61,7 +61,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 client = AzureOpenAI(
-api_key=os.environ['AZURE_OPENAI_KEY'],  # これもデフォルトで省略できます
+api_key=os.environ['AZURE_OPENAI_API_KEY'],  # これもデフォルトで省略できます
 api_version = "2023-07-01-preview"
 )
 

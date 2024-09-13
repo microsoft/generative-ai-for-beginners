@@ -84,7 +84,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_KEY=<your key>
+   AZURE_OPENAI_API_KEY=<your key>
    ```
 
    在 Azure 门户中的 "Keys and Endpoint" 部分中找到资源的此信息。
@@ -127,7 +127,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
 
    # Get endpoint and key from environment variables
    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+   openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
    # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
    openai.api_version = '2023-06-01-preview'
@@ -192,7 +192,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
   ```python
   # Get endpoint and key from environment variables
   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-  openai.api_key = os.environ['AZURE_OPENAI_KEY']
+  openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
   # add version and type, Azure specific
   openai.api_version = '2023-06-01-preview'
