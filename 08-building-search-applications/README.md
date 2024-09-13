@@ -145,7 +145,7 @@ az cognitiveservices account deployment create \
     --model-name text-embedding-ada-002 \
     --model-version "2"  \
     --model-format OpenAI \
-    --scale-settings-scale-type "Standard"
+    --sku-capacity 100 --sku-name "Standard"
 ```
 
 ## Solution
