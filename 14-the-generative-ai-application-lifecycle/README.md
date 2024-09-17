@@ -23,11 +23,11 @@ With this, we need a new Paradigm to adapt this tool in a dynamic, with the corr
 
 ![LLMOps vs. MLOps comparison](./images/01-llmops-shift.png?WT.mc_id=academic-105485-koreys)
 
-Notice that in LLMOps, we are more focused in the App Developers, using integrations as a key point, using "Models-as-a-Service" and thinking in the following points for metrics.
+Notice that in LLMOps, we are more focused on the App Developers, using integrations as a key point, using "Models-as-a-Service" and thinking in the following points for metrics.
 
 - Quality: Response quality
 - Harm: Responsible AI
-- Honesty: Response groundness (Makes sense? It is correct?)
+- Honesty: Response groundedness (Makes sense? It is correct?)
 - Cost: Solution Budget
 - Latency: Avg. time for token response
 
@@ -37,11 +37,11 @@ First, to understand the lifecycle and the modifications, let's note the next in
 
 ![LLMOps infographic](./images/02-llmops.png?WT.mc_id=academic-105485-koreys)
 
-As you may note, this is different from the usual Lifecycles from MLOps. LLMs have many new requirements, as Prompting, different tecniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsability with responsible AI, lastly, new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
+As you may note, this is different from the usual Lifecycles from MLOps. LLMs have many new requirements, as Prompting, different techniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsability with responsible AI, lastly, new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
 
-For instance, take a look how we ideate. Using prompt engineering to experiment with various LLMs to explore possibilities to tests if their Hypothesis could be correct.
+For instance, take a look at how we ideate. Using prompt engineering to experiment with various LLMs to explore possibilities to test if their Hypothesis could be correct.
 
-Note that this is not linear, but integrated loops, iterative and with an overacrching cycle.
+Note that this is not linear, but integrated loops, iterative and with an overarching cycle.
 
 How could we explore those steps? Let's step into detail in how could we build a lifecycle.
 
@@ -81,7 +81,7 @@ Construct, from Proof-of-Concept(POC) until large scale applications with Prompt
 
 ## Great! Continue your Learning!
 
-Amazing, now learn more how we structure an application to use the concepts with the [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), to check how Cloud Advocacy adds those concepts in demonstations. For more content, check our [Ignite breakout session!
+Amazing, now learn more about how we structure an application to use the concepts with the [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), to check how Cloud Advocacy adds those concepts in demonstrations. For more content, check our [Ignite breakout session!
 ](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
 Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vector Databases](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) impact Generative AI and to make more engaging Applications!
