@@ -1,6 +1,6 @@
 # 검색 증강 생성 (RAG) 및 벡터 데이터베이스
 
-[![검색 증강 생성 (RAG) 및 벡터 데이터베이스](./images/15-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)
+[![검색 증강 생성 (RAG) 및 벡터 데이터베이스](../../images/15-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)
 
 검색 응용 프로그램 수업에서는 대규모 언어 모델(LLM)에 사용자의 데이터를 통합하는 방법을 간략히 배웠습니다. 이번 수업에서는 LLM 응용 프로그램에 데이터를 결합하는 개념, 프로세스의 메커니즘 및 임베딩과 텍스트를 포함한 데이터 저장 방법에 대해 더 자세히 알아보겠습니다.
 
@@ -42,7 +42,7 @@ LLM 기반 챗봇은 사용자 프롬프트를 처리하여 응답을 생성합�
 
 ### RAGs (검색 증강 생성)이 작동하는 방식
 
-![RAGs가 작동하는 방식을 보여주는 그림](images/how-rag-works.png?WT.mc_id=academic-105485-koreyst)
+![RAGs가 작동하는 방식을 보여주는 그림](../../images/how-rag-works.png?WT.mc_id=academic-105485-koreyst)
 
 예를 들어, 노트에서 퀴즈를 생성하는 챗봇을 배포하려면 지식 기반과의 연결이 필요합니다. 이때 RAG가 그 해결책이 됩니다. RAG는 다음과 같이 작동합니다:
 
@@ -54,7 +54,7 @@ LLM 기반 챗봇은 사용자 프롬프트를 처리하여 응답을 생성합�
 
 - **증강 생성:** LLM은 검색된 데이터를 기반으로 응답을 개선합니다. 이는 미리 학습된 데이터뿐만 아니라 추가된 컨텍스트의 관련 정보에 기반하여 응답을 생성할 수 있게 합니다. 검색된 데이터는 LLM의 응답을 증강시키는 데 사용됩니다. LLM은 그런 다음 사용자의 질문에 대한 답을 반환합니다.
 
-![RAGs 아키텍처를 보여주는 그림](images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
+![RAGs 아키텍처를 보여주는 그림](../../images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
 
 RAGs의 아키텍처는 인코더와 디코더의 두 부분으로 구성된 트랜스포머를 사용해 구현됩니다. 예를 들어, 사용자가 질문을 하면 입력 텍스트는 단어의 의미를 포착하는 벡터로 '인코딩'되고, 이 벡터는 문서 인덱스로 '디코딩'되어 사용자 쿼리에 기반하여 새로운 텍스트를 생성합니다. LLM은 출력 생성을 위해 인코더-디코더 모델을 모두 사용합니다.
 
@@ -71,7 +71,6 @@ RAGs의 아키텍처는 인코더와 디코더의 두 부분으로 구성된 트
 - **검증 가능한 데이터**를 지식 베이스에 활용하여 사용자 쿼리에 대한 문맥을 제공함으로써 허구를 줄입니다.
 
 - LLM을 미세 조정하는 것과 비교했을 때 **비용 효율성**이 높아 경제적입니다.
-
 
 ## 지식 기반 만들기
 
@@ -118,7 +117,7 @@ def split_text(text, max_length, min_length):
 청크로 나눈 후에는 다양한 임베딩 모델을 사용하여 텍스트를 임베딩할 수 있습니다. 사용할 수 있는 모델에는 word2vec, OpenAI의 ada-002, Azure Computer Vision 등 다양한 모델이 있습니다. 사용할 모델을 선택할 때는 사용하는 언어, 인코딩된 콘텐츠 유형(텍스트/이미지/오디오), 인코딩할 수 있는 입력 크기 및 임베딩 출력 길이를 고려해야 합니다.
 
 OpenAI의 `text-embedding-ada-002` 모델을 사용하여 텍스트를 임베딩한 예는 다음과 같습니다:
-![고양이 단어의 임베딩](images/cat.png?WT.mc_id=academic-105485-koreyst)
+![고양이 단어의 임베딩](../../images/cat.png?WT.mc_id=academic-105485-koreyst)
 
 ## 검색 및 벡터 검색
 
@@ -170,7 +169,7 @@ distances, indices = nbrs.kneighbors(embeddings)
 
 데이터베이스에 쿼리한 후에는 가장 관련성 있는 결과부터 정렬해야 할 수도 있습니다. 재랭킹 LLM은 기계 학습을 활용하여 검색 결과의 관련성을 개선하고 가장 관련성 있는 결과부터 정렬합니다. Azure AI Search를 사용하면, 의미론적 재랭커를 통해 자동으로 재랭킹이 수행됩니다. 가장 가까운 이웃을 사용한 재랭킹의 예:
 
-```python
+````python
 
 # 가장 유사한 문서 찾기
 distances, indices = nbrs.kneighbors([query_vector])
@@ -228,7 +227,7 @@ def chatbot(user_input):
     return response.choices[0].message
 
 chatbot(user_input)
-```
+````
 
 ## 애플리케이션 평가하기
 

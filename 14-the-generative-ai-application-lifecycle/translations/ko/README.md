@@ -19,7 +19,7 @@ LLM은 인공지능 무기고의 새로운 도구로서, 응용 프로그램의 
 
 이와 함께, 우리는 동적으로 이 도구를 적응시키기 위한 새로운 패러다임이 필요합니다. 적절한 인센티브로 말이죠. 이전의 AI 애플리케이션은 "ML 애플리케이션"으로, 새로운 AI 애플리케이션은 "GenAI 애플리케이션" 또는 단순히 "AI 애플리케이션"으로 분류할 수 있는데, 이는 당시에 사용된 주류 기술과 기법을 반영합니다. 이는 여러 방식으로 우리 내러티브를 변화시킵니다. 다음 비교를 살펴보세요.
 
-![LLMOps vs. MLOps 비교](./images/01-llmops-shift.png?WT.mc_id=academic-105485-koreys)
+![LLMOps vs. MLOps 비교](../../images/01-llmops-shift.png?WT.mc_id=academic-105485-koreys)
 
 LLMOps에서는 앱 개발자에 더욱 초점을 맞추고, 통합을 주요 포인트로 사용하며 "서비스로서의 모델(Models-as-a-Service)"을 사용하고 지표를 다음과 같이 생각합니다.
 
@@ -33,7 +33,7 @@ LLMOps에서는 앱 개발자에 더욱 초점을 맞추고, 통합을 주요 �
 
 먼저, 라이프사이클과 그 변화를 이해하기 위해 다음 인포그래픽을 참고하세요.
 
-![LLMOps infographic](./images/02-llmops.png?WT.mc_id=academic-105485-koreys)
+![LLMOps infographic](../../images/02-llmops.png?WT.mc_id=academic-105485-koreys)
 
 보시다시피, 이것은 일반적인 MLOps 라이프사이클과 다릅니다. LLM은 프롬프트 엔지니어링, 품질 향상을 위한 다양한 기법 (Fine-Tuning, RAG, Meta-Prompts), 책임 있는 AI와의 평가 및 책임 등 여러 새로운 요구 사항이 있습니다. 마지막으로, 새로운 평가 지표 (품질, 해악, 정직성, 비용 및 지연)가 있습니다.
 
@@ -43,7 +43,7 @@ LLMOps에서는 앱 개발자에 더욱 초점을 맞추고, 통합을 주요 �
 
 이 단계를 탐색하려면 어떻게 해야 할까요? 라이프사이클을 구축하는 방법에 대해 자세히 살펴보겠습니다.
 
-![LLMOps Workflow](./images/03-llm-stage-flows.png?WT.mc_id=academic-105485-koreys)
+![LLMOps Workflow](../../images/03-llm-stage-flows.png?WT.mc_id=academic-105485-koreys)
 
 이것은 약간 복잡해 보일 수 있습니다. 먼저 세 가지 큰 단계에 집중해 보겠습니다.
 
@@ -63,11 +63,11 @@ LLMOps에서는 앱 개발자에 더욱 초점을 맞추고, 통합을 주요 �
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys)은 [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)를 사용할 수 있게 합니다. AI Studio는 다양한 모델, 샘플, 도구 등을 탐색할 수 있는 웹 포털입니다. 자원을 관리하고, UI 개발 흐름과 코드-중심 개발을 위한 SDK/CLI 옵션을 포함합니다.
 
-![Azure AI 가능성](./images/04-azure-ai-platform.png?WT.mc_id=academic-105485-koreys)
+![Azure AI 가능성](../../images/04-azure-ai-platform.png?WT.mc_id=academic-105485-koreys)
 
 Azure AI는 여러 자원을 사용하여 운영, 서비스, 프로젝트, 벡터 검색 및 데이터베이스 필요를 관리할 수 있게 합니다.
 
-![LLMOps with Azure AI](./images/05-llm-azure-ai-prompt.png?WT.mc_id=academic-105485-koreys)
+![LLMOps with Azure AI](../../images/05-llm-azure-ai-prompt.png?WT.mc_id=academic-105485-koreys)
 
 PromptFlow와 함께 개념 증명(Proof-of-Concept, POC)에서 대규모 애플리케이션까지 구축:
 
@@ -75,12 +75,10 @@ PromptFlow와 함께 개념 증명(Proof-of-Concept, POC)에서 대규모 애플
 - 품질 높은 AI를 위해 앱을 쉽게 테스트하고 조정
 - 클라우드와 통합하고 반복하기 위해 Azure AI Studio를 사용하고, 신속한 통합을 위해 Push 및 Deploy
 
-![LLMOps with PromptFlow](./images/06-llm-promptflow.png?WT.mc_id=academic-105485-koreys)
-
-
+![LLMOps with PromptFlow](../../images/06-llm-promptflow.png?WT.mc_id=academic-105485-koreys)
 
 ## 훌륭합니다! 학습을 계속하세요!
 
 놀랍습니다! 이제 [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)을 통해 애플리케이션을 구조화하여 개념을 사용하는 방법을 배우고, Cloud Advocacy가 이러한 개념을 데모에 추가하는 방식을 확인하세요. 더 많은 콘텐츠를 보려면 [Ignite 분과 세션](https://www.youtube.com/watch?v=DdOylyrTOWg)을 확인하세요!
 
-이제 Lesson 15를 확인하여 [Retrieval Augmented Generation 및 벡터 데이터베이스](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)가 생성 AI에 미치는 영향과 보다 흥미로운 애플리케이션을 만드는 방법을 이해하세요!
+이제 Lesson 15를 확인하여 [Retrieval Augmented Generation 및 벡터 데이터베이스](../../../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)가 생성 AI에 미치는 영향과 보다 흥미로운 애플리케이션을 만드는 방법을 이해하세요!

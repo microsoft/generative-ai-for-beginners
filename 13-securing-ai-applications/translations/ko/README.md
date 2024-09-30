@@ -1,6 +1,6 @@
 # 생성형 AI 애플리케이션 보안
 
-[![생성형 AI 애플리케이션 보안](./images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
+[![생성형 AI 애플리케이션 보안](../../images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## 소개
 
@@ -72,7 +72,7 @@ Microsoft Cloud Advocate Rod Trent는 이러한 신흥 AI 위협에 대해 깊�
 - **모델 검증**: 이는 AI 시스템 또는 LLM의 모델 매개변수 또는 아키텍처의 정확성과 완전성을 검증하는 과정입니다. 모델 검증은 모델이 보호되고 인증되어 모델 도난을 방지하는지 확인하는 데 도움이 됩니다.
 - **출력 검증**: 이는 AI 시스템 또는 LLM의 출력 품질과 신뢰성을 검증하는 과정입니다. 출력 검증은 출력이 일관되고 정확한지 확인하여 악의적 조작을 감지하고 수정하는 데 도움이 됩니다.
 
-OpenAI는 첨단 AI 시스템의 선두 주자로, AI 안전에 기여하고자 하는 목표로 붉은 팀 네트워크 이니셔티브의 일환으로 일련의 _안전 평가_를 설정했습니다. 이 평가는 AI 시스템의 출력을 테스트하기 위한 것입니다.
+OpenAI는 첨단 AI 시스템의 선두 주자로, AI 안전에 기여하고자 하는 목표로 붉은 팀 네트워크 이니셔티브의 일환으로 일련의 *안전 평가*를 설정했습니다. 이 평가는 AI 시스템의 출력을 테스트하기 위한 것입니다.
 
 > 평가의 범위는 간단한 Q&A 테스트에서 더 복잡한 시뮬레이션까지 다양할 수 있습니다. 다음은 다양한 각도에서 AI 행동을 평가하기 위해 OpenAI가 개발한 샘플 평가의 구체적인 예입니다:
 
@@ -123,7 +123,7 @@ LLM은 사용하는 데이터의 프라이버시와 보안에 위험을 초래�
 
 > AI 레드 팀 실행의 의미는 진화하여 더 확장된 의미를 가지게 되었습니다: 이는 보안 취약점을 탐색하는 것뿐만 아니라 잠재적으로 해로운 콘텐츠 생성을 포함한 다른 시스템 실패를 탐색하는 것도 포함합니다. AI 시스템은 새로운 위험을 가지고 있으며, 레드 팀은 프롬프트 주입 및 기반 없는 콘텐츠 생성과 같은 새로운 위험을 이해하는 데 중요합니다. - [Microsoft AI 레드 팀이 더 안전한 AI의 미래를 구축](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![레드 팀에 대한 지침 및 리소스](./images/13-AI-red-team.png?WT.mc_id=academic-105485-koreyst)]()
+[![레드 팀에 대한 지침 및 리소스](../../images/13-AI-red-team.png?WT.mc_id=academic-105485-koreyst)]()
 
 아래는 Microsoft의 AI 레드 팀 프로그램을 형성한 주요 통찰입니다.
 
@@ -161,4 +161,4 @@ AI 시대에 민감한 정보를 [관리하고 보호하는 방법](https://lear
 
 이 레슨을 완료한 후 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 계속 향상시키세요!
 
-Lesson 14로 이동하여 [생성형 AI 애플리케이션 수명 주기](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
+Lesson 14로 이동하여 [생성형 AI 애플리케이션 수명 주기](../../../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!

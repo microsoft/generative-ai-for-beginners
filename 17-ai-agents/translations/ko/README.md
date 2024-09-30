@@ -22,7 +22,7 @@ AI 에이전트는 생성형 AI 분야에서 매우 흥미로운 분야입니다
 
 AI 에이전트는 대형 언어 모델(LLMs)에게 **상태**와 **도구**에 대한 접근 권한을 제공하여 작업을 수행할 수 있게 합니다.
 
-![Agent Model](images/what-agent.png?WT.mc_id=academic-105485-koreyst)
+![Agent Model](../../images/what-agent.png?WT.mc_id=academic-105485-koreyst)
 
 다음 용어들을 정의해보겠습니다:
 
@@ -42,7 +42,7 @@ AI 에이전트는 대형 언어 모델(LLMs)에게 **상태**와 **도구**에 
 
 `AgentExecutor`는 또한 대화 기록을 저장하여 대화의 맥락을 제공합니다.
 
-![LangChain 에이전트](images/langchain-agents.png?WT.mc_id=academic-105485-koreyst)
+![LangChain 에이전트](../../images/langchain-agents.png?WT.mc_id=academic-105485-koreyst)
 
 LangChain은 LLM이 접근할 수 있는 [도구 카탈로그](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)를 애플리케이션에 가져올 수 있게 제공합니다. 이러한 도구들은 커뮤니티와 LangChain 팀에 의해 만들어졌습니다.
 
@@ -68,14 +68,13 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 user_proxy = UserProxyAgent(name="user_proxy")
 ```
 
-
 ### 상태와 도구들
 
 상태를 변경하고 관리하기 위해, 보조 에이전트는 작업을 완료하기 위한 Python 코드를 생성합니다.
 
 여기에 과정의 예시가 있습니다:
 
-![AutoGen](images/autogen.png?WT.mc_id=academic-105485-koreyst)
+![AutoGen](../../images/autogen.png?WT.mc_id=academic-105485-koreyst)
 
 #### 시스템 메시지가 포함된 LLM 정의
 
@@ -118,7 +117,7 @@ chatbot (to user_proxy):
 
 작업을 완료하기 위해 `Planner`는 `Plugins`라고 불리는 도구 모음에 접근합니다. 이 도구들은 Python 클래스나 일반적인 코드 인터프리터일 수 있습니다. 이 플러그인들은 임베딩으로 저장되어 LLM이 적절한 플러그인을 더 잘 검색할 수 있도록 합니다.
 
-![Taskweaver](images/taskweaver.png?WT.mc_id=academic-105485-koreyst)
+![Taskweaver](../../images/taskweaver.png?WT.mc_id=academic-105485-koreyst)
 
 다음은 이상 탐지를 처리하기 위한 플러그인의 예입니다:
 
@@ -133,7 +132,7 @@ class AnomalyDetectionPlugin(Plugin):
 
 우리가 탐구할 마지막 에이전트 프레임워크는 [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)입니다. JARVIS의 독특한 점은 대화의 `상태`를 관리하는 데 LLM을 사용하고 `도구`로 다른 AI 모델들을 활용한다는 것입니다. 각 AI 모델은 객체 감지, 전사, 이미지 캡션 작성 등 특정 작업을 수행하는 특수 모델들로 구성됩니다.
 
-![JARVIS](images/jarvis.png?WT.mc_id=academic-105485-koreyst)
+![JARVIS](../../images/jarvis.png?WT.mc_id=academic-105485-koreyst)
 
 LLM은 범용 모델로서 사용자로부터 요청을 받아 해당 작업과 작업을 완료하는 데 필요한 인수/데이터를 식별합니다.
 

@@ -1,6 +1,6 @@
 ## 소개
 
-오픈 소스 LLM의 세계는 흥미롭고 끊임없이 진화하고 있습니다. 이 강의는 오픈 소스 모델에 대한 심층적인 정보를 제공하는 것을 목표로 합니다. 독점 모델과 오픈 소스 모델을 비교하는 정보가 필요하다면 ["다양한 LLM 탐색 및 비교" 강의](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)를 참조하세요. 이 강의에서는 모델의 미세 조정(fine-tuning)에 대한 내용도 다룰 예정이지만, 보다 자세한 설명은 ["LLM 미세 조정" 강의](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)를 참조하세요.
+오픈 소스 LLM의 세계는 흥미롭고 끊임없이 진화하고 있습니다. 이 강의는 오픈 소스 모델에 대한 심층적인 정보를 제공하는 것을 목표로 합니다. 독점 모델과 오픈 소스 모델을 비교하는 정보가 필요하다면 ["다양한 LLM 탐색 및 비교" 강의](../../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)를 참조하세요. 이 강의에서는 모델의 미세 조정(fine-tuning)에 대한 내용도 다룰 예정이지만, 보다 자세한 설명은 ["LLM 미세 조정" 강의](../../../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)를 참조하세요.
 
 ## 학습 목표
 
@@ -30,23 +30,20 @@ LLM의 개발은 소프트웨어 개발과 유사한 요소를 가지고 있지�
 
 **비용** - 이러한 모델을 사용하고 배포하는 데 드는 토큰당 비용은 독점 모델보다 낮습니다. 생성형 AI 애플리케이션을 구축할 때, 이러한 모델을 사용하는 경우 성능 대비 가격을 고려해야 합니다.
 
-![모델 비용](./images/model-price.png?WT.mc_id=academic-105485-koreyst)  
+![모델 비용](../../images/model-price.png?WT.mc_id=academic-105485-koreyst)  
 출처: Artificial Analysis
 
 **유연성** - 오픈 모델을 사용하면 다양한 모델을 사용하거나 결합하여 유연하게 작업할 수 있습니다. 예를 들어, 사용자가 사용자 인터페이스에서 직접 사용되는 모델을 선택할 수 있는 [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)가 있습니다.
 
-![모델 선택](./images/choose-model.png?WT.mc_id=academic-105485-koreyst)
+![모델 선택](../../images/choose-model.png?WT.mc_id=academic-105485-koreyst)
 
 ## 다양한 개방형 모델 탐구
-
-
 
 ### Llama 2
 
 [LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst)는 Meta에서 개발한 오픈 모델로, 채팅 기반 응용 프로그램에 최적화되어 있습니다. 이는 대화 및 인간 피드백을 대량으로 포함한 미세 조정 방법 덕분입니다. 이 방법을 통해 모델은 인간의 기대에 더 부합하는 결과를 생성하여 더 나은 사용자 경험을 제공합니다.
 
 Llama의 미세 조정 버전의 예로는 일본어에 특화된 [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst)와 기본 모델의 향상된 버전인 [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst) 등이 있습니다.
-
 
 ### 미스트랄 (Mistral)
 
@@ -66,7 +63,7 @@ Llama의 미세 조정 버전의 예로는 일본어에 특화된 [Japanese Llam
 
 LLM을 여러 유형별로 비교할 때, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)도 또 다른 훌륭한 자원입니다:
 
-![모델 품질](./images/model-quality.png?WT.mc_id=academic-105485-koreyst)
+![모델 품질](../../images/model-quality.png?WT.mc_id=academic-105485-koreyst)
 출처: Artificial Analysis
 
 특정 용도에 대한 작업을 진행할 때, 동일한 영역에 집중하여 미세 조정된 버전을 찾는 것이 효과적일 수 있습니다. 다양한 오픈 모델을 실험하여 자신과 사용자 기대에 부합하는지 확인하는 것도 좋은 방법입니다.
