@@ -151,5 +151,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
+## Learning does not stop here, continue the Journey
 
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
