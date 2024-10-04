@@ -38,7 +38,7 @@ These definitions will hopefully give you a good grounding going forward as we l
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/modules/agents/?WT.mc_id=academic-105485-koreyst) is an implementation of the definitions we provided above.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) is an implementation of the definitions we provided above.
 
 To manage the **state** , it uses a built-in function called the `AgentExecutor`. This accepts the defined `agent` and the `tools` that are available to it.
 
