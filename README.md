@@ -20,7 +20,7 @@ Learn the fundamentals of building Generative AI applications with our 21-lesson
 
 ## 🌱 Getting Started
 
-This course has 18 lessons. Each lesson covers its own topic so start wherever you like!
+This course has 21 lessons. Each lesson covers its own topic so start wherever you like!
 
 Lessons are labeled either "Learn" lessons explaining a Generative AI concept or "Build" lessons that explain a concept and code examples in both **Python** and **TypeScript** when possible.
 
