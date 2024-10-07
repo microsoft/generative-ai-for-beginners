@@ -16,10 +16,10 @@ In this lesson, we will explore 2 models from the Meta family or "Llama Herd" - 
 These models come in different variants and are available on the Github Model marketplace. Here are more details on using Github Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Model Variants: 
-Llama 3.1 - 70B Instruct 
-Llama 3.1 - 405B Instruct 
-Llama 3.2 - 11B Vision Instruct 
-Llama 3.2 - 90B Vision Instruct 
+- Llama 3.1 - 70B Instruct 
+- Llama 3.1 - 405B Instruct 
+- Llama 3.2 - 11B Vision Instruct 
+- Llama 3.2 - 90B Vision Instruct 
 
 *Note: Llama 3 is also available on Github Models but won't be covered in this lesson*
 
