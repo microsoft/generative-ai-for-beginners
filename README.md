@@ -27,7 +27,7 @@ Lessons are labeled either "Learn" lessons explaining a Generative AI concept or
 Each lesson also includes a "Keep Learning" section with additional learning tools.
 
 ## What You Need
-### To run this code of this course, you can use either: 
+### To run the code of this course, you can use either: 
  - [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://github.com/marketplace/models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
  - [OpenAI API](https://platform.openai.com/docs/quickstart?context=python?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
