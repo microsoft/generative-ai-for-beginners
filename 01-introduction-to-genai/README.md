@@ -90,34 +90,24 @@ The input of a large language model is known as prompt, while the output is know
 - An **instruction** specifying the type of output we expect from the model. This instruction sometimes might embed some examples or some additional data.
 
   1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
-
-  ![Example of summarization](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
-
-    <br>
     
-    2. Creative ideation and design of an article, an essay, an assignment or more.
-    
-    ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
-
-    <br>
+    ![Example of summarization](./images/summarization-example.png?WT.mc_id=academic-105485-koreyst)
+  
+  2. Creative ideation and design of an article, an essay, an assignment or more.
+      
+     ![Example of creative writing](./images/creative-writing-example.png?WT.mc_id=academic-105485-koreyst)
 
 - A **question**, asked in the form of a conversation with an agent.
-
-![Example of conversation](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
-
-<br>
+  
+  ![Example of conversation](./images/conversation-example.png?WT.mc_id=academic-105485-koreyst)
 
 - A chunk of **text to complete**, which implicitly is an ask for writing assistance.
-
-![Example of text completion](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
-
-<br>
+  
+  ![Example of text completion](./images/text-completion-example.png?WT.mc_id=academic-105485-koreyst)
 
 - A chunk of **code** together with the ask of explaining and documenting it, or a comment asking to generate a piece of code performing a specific task.
-
-![Coding example](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
-
-<br>
+  
+  ![Coding example](./images/coding-example.png?WT.mc_id=academic-105485-koreyst)
 
 The examples above are quite simple and don’t want to be an exhaustive demonstration of Large Language Models capabilities. They just want to show the potential of using generative AI, in particular but not limited to educational context.
 
