@@ -106,7 +106,7 @@ AI モデルとその出力によって引き起こされる、潜在的な問�
 
 > [!TIP]
 > 訳者追記：
-> グラウンディングの詳細は、[こちらの記事](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/grounding-llms/3843857/?WT.mc_id=academic-105485-yoterada)をご参照ください。
+> グラウンディングの詳細は、[こちらの記事](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/grounding-llms/3843857?WT.mc_id=academic-105485-yoterada)をご参照ください。
 
 信頼性のある情報源のデータだけをモデルが利用するように、Retrieval Augmented Generation（RAG）のような技術を使用できます。このコースの後半で、検索アプリケーションの構築に関するレッスンもあります。
 
