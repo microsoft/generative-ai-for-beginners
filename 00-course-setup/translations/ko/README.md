@@ -114,7 +114,7 @@ GitHub Codespaces를 사용할 때 API 키를 안전하게 유지하는 가장 �
 
 [공식 AI 커뮤니티 디스코드 서버](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)에 다른 학습자들과 만날 수 있는 채널을 만들었습니다. 여기서 같은 마음을 가진 창업가, 빌더, 학생, 그리고 생성형 AI에서 한 단계 더 나아가고자 하는 모든 사람들과 네트워킹할 수 있습니다.
 
-[![Join discord channel](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 프로젝트 팀도 해당 디스코드 서버에 있어서 어떤 학습자든 도와드릴 수 있습니다.
 
