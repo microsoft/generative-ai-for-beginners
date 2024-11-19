@@ -161,7 +161,7 @@ NVIDIA NIM의 주요 특징:
 
 NIM은 NVIDIA AI Enterprise의 일부로, AI 모델의 배포와 운영을 간소화하여 NVIDIA GPU에서 효율적으로 실행되도록 합니다.
 
-- 데모: NVIDIA NIM을 사용하여 Phi-3.5-Vision API 호출하려면 [[이 링크를 클릭하세요](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- 데모: NVIDIA NIM을 사용하여 Phi-3.5-Vision API 호출하려면 [[이 링크를 클릭하세요](../..//python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 ### 로컬 환경에서 Phi-3/3.5 추론하기
 
@@ -184,9 +184,9 @@ Hugging Face Transformers는 자연어 처리(Natural Language Processing, NLP) 
 
 이 방법은 가장 일반적으로 사용되지만 GPU 가속이 필요합니다. Vision이나 MoE와 같은 시나리오는 많은 계산이 필요하며, 양자화하지 않으면 CPU에서 매우 제한적입니다.
 
-- 데모: Transformer를 사용하여 Phi-3.5-Instruct 호출하기 - [이 링크를 클릭하세요](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
-- 데모: Transformer를 사용하여 Phi-3.5-Vision 호출하기 - [이 링크를 클릭하세요](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
-- 데모: Transformer를 사용하여 Phi-3.5-MoE 호출하기 - [이 링크를 클릭하세요](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- 데모: Transformer를 사용하여 Phi-3.5-Instruct 호출하기 - [이 링크를 클릭하세요](../..//python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- 데모: Transformer를 사용하여 Phi-3.5-Vision 호출하기 - [이 링크를 클릭하세요](../..//python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- 데모: Transformer를 사용하여 Phi-3.5-MoE 호출하기 - [이 링크를 클릭하세요](../..//python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
 
