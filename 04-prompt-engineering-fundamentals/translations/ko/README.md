@@ -270,7 +270,7 @@ response = openai.chat.completions.create(
 
 프롬프트 템플릿은 필요에 따라 저장하고 재사용할 수 있는 *프롬프트를 위한 미리 정의된 레시피*입니다. 가장 간단한 형태에서는 [OpenAI의 예시](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)와 같이 상호작용 프롬프트 구성 요소(사용자 및 시스템 메시지)와 API 기반 요청 형식을 모두 제공하여 재사용을 지원합니다.
 
-[LangChain의 예시](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)와 같이 더 복잡한 형태에서는 _플레이스홀더_ 를 포함하여 다양한 소스(사용자 입력, 시스템 컨텍스트, 외부 데이터 소스 등)의 데이터로 교체하여 동적으로 프롬프트를 생성할 수 있습니다. 이를 통해 규모에 맞게 일관된 사용자 경험을 **프로그래밍 방식**으로 구현할 수 있는 재사용 가능한 프롬프트 라이브러리를 만들 수 있습니다.
+[LangChain의 예시](https://python.langchain.com/docs/how_to/#prompt-templates?WT.mc_id=academic-105485-koreyst)와 같이 더 복잡한 형태에서는 _플레이스홀더_ 를 포함하여 다양한 소스(사용자 입력, 시스템 컨텍스트, 외부 데이터 소스 등)의 데이터로 교체하여 동적으로 프롬프트를 생성할 수 있습니다. 이를 통해 규모에 맞게 일관된 사용자 경험을 **프로그래밍 방식**으로 구현할 수 있는 재사용 가능한 프롬프트 라이브러리를 만들 수 있습니다.
 
 마지막으로, 템플릿의 실제 가치는 이제 프롬프트 템플릿이 응용 프로그램별 컨텍스트나 응용 프로그램 특정 예시를 반영하여 응답을 더 관련성 있고 정확하게 만드는 _프롬프트 라이브러리_ 를 생성하고 게시할 수 있는 능력에 있습니다. [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) 저장소는 이 접근 방식의 훌륭한 예로, 교육 분야에 대한 프롬프트 라이브러리를 선별하여 수업 계획, 커리큘럼 설계, 학생 지도 등과 같은 주요 목표에 중점을 둡니다.
 
