@@ -12,7 +12,7 @@ The world of open-source LLMs is exciting and constantly evolving. This lesson a
 
 ## What are Open Source Models?
 
-Open source software has played a crucial role in the growth of technology across various fields. The Open Source Initiative (OSI) has defined [10 criteria for software](https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) to be classified as open source. The source code must be openly shared under a license approved by the OSI.
+Open source software has played a crucial role in the growth of technology across various fields. The Open Source Initiative (OSI) has defined [10 criteria for software](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) to be classified as open source. The source code must be openly shared under a license approved by the OSI.
 
 While the development of LLMs has similar elements to developing software, the process is not exactly the same. This has brought much discussion in the community on the definition of open source in the context of LLMs. For a model to be aligned with the traditional definition of open source the following information should be publicly available:
 
