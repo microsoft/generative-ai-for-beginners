@@ -275,7 +275,7 @@ response = openai.chat.completions.create(
 
 一個提示模板是一個_預先定義的提示秘訣_，可以根據需要儲存和重複使用，以大規模推動更一致的使用者體驗。最簡單的形式，它只是一些提示範例的集合，如[這個來自 OpenAI 的範例](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)，它提供了互動提示組件（使用者和系統訊息）和 API 驅動的請求格式 - 以支援重複使用。
 
-在它更複雜的形式中，如[這個來自 LangChain 的範例](https://python.langchain.com/docs/modules/model_io/prompts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，它包含可以用來自各種來源（使用者輸入、系統上下文、外部資料來源等）的資料替換的_佔位符_，以動態生成提示。這使我們能夠建立一個可重複使用的提示函式庫，程式化地在大規模上驅動一致的使用者體驗。
+在它更複雜的形式中，如[這個來自 LangChain 的範例](https://python.langchain.com/docs/how_to/#prompt-templates?WT.mc_id=academic-105485-koreyst)，它包含可以用來自各種來源（使用者輸入、系統上下文、外部資料來源等）的資料替換的_佔位符_，以動態生成提示。這使我們能夠建立一個可重複使用的提示函式庫，程式化地在大規模上驅動一致的使用者體驗。
 
 最後，範本的真正價值在於能夠為垂直應用領域建立和發布_提示函式庫_——提示範本現在已_最佳化_，以反映應用特定的上下文或範例，使回應對目標用戶群體更相關和準確。[Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst)儲存庫就是這種方法的一個很好的範例，精選了教育領域的提示函式庫，強調了課程規劃、課程設計、學生輔導等關鍵目標。
 
