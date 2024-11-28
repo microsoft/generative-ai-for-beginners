@@ -146,7 +146,7 @@ Mistral Small is great for:
 
 To show differences in latency between Mistral Small and Large, run the below cells. 
 
-You should see a difference in response times between 3-5 seconds. Also not the response lengths and style over the smae prompt.  
+You should see a difference in response times between 3-5 seconds. Also note the response lengths and style over the same prompt.  
 
 ```python 
 
@@ -225,7 +225,7 @@ Some other feature of the NeMo model are:
 
 In this sample, we will look at how Mistral NeMo handles tokenization compared to Mistral Large. 
 
-Both samples take the same prompt but you shoud see that NeMo returns back less tokens vs Mistral Large. 
+Both samples take the same prompt but you should see that NeMo returns back less tokens vs Mistral Large. 
 
 ```bash
 pip install mistral-common
