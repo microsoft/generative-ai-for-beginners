@@ -1,40 +1,38 @@
-# Building with Mistral Models 
+# Mistral 모델로 빌드하기
 
-## Introduction 
+## 소개
 
-This lesson will cover: 
-- Exploring the different Mistral Models 
-- Understanding the use-cases and scenarios for each model 
-- Code samples show the unique features of each model. 
+이 레슨에서는 다음의 내용을 다룹니다:
+- 다양한 Mistral 모델 탐색
+- 각 모델의 사용 사례와 시나리오 이해
+- 각 모델의 고유한 기능을 보여주는 코드 예제
 
-## The Mistral Models 
+## Mistral 모델들
+이 레슨에서는 **Mistral Large**, **Mistral Small**, 그리고 **Mistral Nemo**라는 세 가지 Mistral 모델을 살펴보겠습니다.
 
-In this lesson, we will explore 3 different Mistral models: 
-**Mistral Large**, **Mistral Small** and **Mistral Nemo**. 
-
-Each of these models are available free on the Github Model marketplace. The code in this notebook will be using this models to run the code. Here are more details on using Github Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst). 
-
+세 모델 모두 Github Model 마켓플레이스에서 무료로 이용 가능합니다. 현 레슨에서는 이 세 모델들을 사용하여 코드를 실행할 예정입니다. Github Models를 사용하여 AI 모델로 프로토타입 제작에 대한 자세한 내용은 [여기에서 확인할 수 있습니다.](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst). 
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 is currently the flagship model from Mistral and is designed for enterprise use. 
+Mistral Large 2는 현재 Mistral의 대표 모델로, 기업용으로 설계되었습니다. 
 
-The model is an  upgrade to the original Mistral Large by offering 
--  Larger Context Window - 128k vs 32k 
--  Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
--  Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
+이 모델은 기존 Mistral Large 모델을 업그레이드한 것으로, 다음과 같은 개선 사항이 있습니다. 
 
-With these features, Mistral Large excels at 
-- *Retrieval Augmented Generation (RAG)* - due to the larger context window
-- *Function Calling* - this model has native function calling which allows integration with external tools and APIs. These calls can be made both in parallel or one after another in a sequential order. 
-- *Code Generation* - this model excels on Python, Java, TypeScript and C++ generation. 
+- 더 큰 context window - 32k에서 128k로 확대
+- 더 나아진 수학 및 코딩 작성 성능 - 평균 정확도가 60.4%에서 76.9%로 증가
+- 더 향상된 다국어 성능 - 지원 언어에는 영어, 프랑스어, 독일어, 스페인어, 이탈리아어, 포르투갈어, 네덜란드어, 러시아어, 중국어, 일본어, 한국어, 아랍어, 힌디어가 포함
 
-### RAG Example using Mistral Large 2 
+이러한 기능을 통해 Mistral Large는 다음과 같은 분야에 적합합니다: 
+- *검색 증강 생성(Retrieval Augmented Generation, RAG)* - 넓어진 context window 덕분에 더 나은 성능 발휘
+- *함수 호출(Function Calling)* - 외부 도구와 API와의 통합을 가능하게 하는 네이티브 함수 호출 기능 제공. 해당 호출을 병렬 또는 순차적인 순서로 차례대로 수행 가능.
+- *코드 생성(Code Generation)* - Python, Java, TypeScript, C++ 코드를 생성하는 데 우수한 성능을 발휘
 
-In this example, we are using Mistral Large 2 to run a RAG pattern over a text document. The question is written in Korean and asks about the author's activities before college. 
+### Mistral Large 2을 사용한 RAG 예제 
 
-It uses Cohere Embeddings Model to create embeddings of the text document as well as the question. For this sample, it uses the faiss Python package as a vector store. 
+이 예제에서는 Mistral Large 2를 사용해 텍스트 문서에 대한 RAG 패턴을 실행합니다. 질문은 한국어로 작성되었으며, 저자가 대학에 들어가기 전 했던 활동에 대해 묻고 있습니다. 
 
-The prompt sent to the Mistral model includes both the questions and the retrieved chunks that are similar to the question. The Model then provides a natural language response. 
+Cohere Embeddings Model을 사용해 텍스트와 질문의 임베딩을 생성하며, faiss Python 패키지를 벡터 저장소로 사용합니다.
+
+Mistral 모델에 보내는 프롬프트에는 질문과 유사한 검색 결과 청크들이 포함됩니다. 모델은 이 정보에 기반해 자연어 응답을 제공합니다. 
 
 ```python 
 pip install faiss-cpu
@@ -130,23 +128,23 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small 
-Mistral Small is another model in the Mistral family of models under the premier/enterprise category. As the name implies, this model is a Small Language Model (SLM). The advantages of using Mistral Small are that it is: 
-- Cost Saving compared to Mistral LLMs like Mistral Large and NeMo - 80% price drop
-- Low latency - faster response compared to Mistral's LLMs
-- Flexible - can be deployed across different environments with less restrictions on required resources. 
+## Mistral Small
+Mistral Small은 Mistral 제품군 내의 프리미어/기업용 카테고리에 속한 또 다른 모델입니다. 이름에서 알 수 있듯이 소형 언어 모델(SLM)이죠. Mistral Small은 다음과 같은 장점이 있습니다:
+- 비용 절감 - Mistral Large와 NeMo같은 Mistral LLMs에 비해 80% 비용 절감
+- 짧은 지연 시간 - Mistral LLM에 비해 빠른 응답 속도
+- 유연성 - 리소스 요구 사항이 적어 다양한 환경에서 배포 가능
 
 
-Mistral Small is great for: 
-- Text based tasks such as summarization, sentiment analysis and translation. 
-- Applications where frequent requests are made due to its cost effectiveness 
-- Low latency code tasks like review and code suggestions 
+Mistral Small은 다음과 같은 경우에 적합합니다:
 
-## Comparing Mistral Small and Mistral Large 
+- 요약, 감정 분석, 번역 등 텍스트 기반 작업
+- 비용 효율성으로 인해 자주 요청이 필요한 애플리케이션
+- 즉각적인 응답이 필요한 코드 검토, 코드 제안 등의 작업
 
-To show differences in latency between Mistral Small and Large, run the below cells. 
+## Mistral Small과 Mistral Large 비교
+아래 코드 셀을 실행하여 Mistral Small과 Large의 응답 시간 차이를 비교해보겠습니다. 
 
-You should see a difference in response times between 3-5 seconds. Also note the response lengths and style over the same prompt.  
+실행해보면 동일한 프롬프트에 대해 3-5초 정도의 응답 시간 차이를 확인할 수 있으며, 응답 길이와 스타일 차이도 살펴볼 수 있습니다.
 
 ```python 
 
@@ -207,32 +205,31 @@ print(response.choices[0].message.content)
 ```
 
 ## Mistral NeMo
+이 레슨에서 다루는 다른 두 모델과 비교하여 Mistral NeMo는 Apache2 라이선스를 가진 유일한 무료 모델입니다. 
 
-Compared to the other two models discussed in this lesson, Mistral NeMo is the only free model with an Apache2 License. 
+NeMo는 Mistral의 이전 오픈 소스 LLM인 Mistral 7B의 업그레이드된 모델로 볼 수 있습니다. 
 
-It is viewed as an upgrade to the earlier open source LLM from Mistral, Mistral 7B. 
+NeMo 모델의 특징은 다음과 같습니다:
 
-Some other feature of the NeMo model are: 
+- *더 효율적인 토큰화* - tiktoken 대신 Tekken tokenizer를 사용해 더 많은 언어와 코드에서 더 나은 성능 발휘
 
-- *More efficient tokenization:* This model using the Tekken tokenizer over the more commonly used tiktoken. This allows for better performance over more languages and code. 
+- *파인튜닝* - 기본 모델은 파인튜닝이 가능하여, 파인튜닝이 필요한 사용 사례에 더 유연하게 활용할 수 있음
 
-- *Finetuning:* The base model is available for finetuning. This allows for more flexibility for use-cases where finetuning may be needed. 
-
-- *Native Function Calling* - Like Mistral Large, this model has been trained on function calling. This makes it unique as being one of the first open source models to do so. 
+- *네이티브 함수 호출* - Mistral Large처럼 function calling에 대한 학습이 되어 있음. 오픈 소스 모델로서는 최초로 이 기능을 갖추었다는 점이 독특함
 
 
-### Comparing Tokenizers 
+## Tokenizer 비교
 
-In this sample, we will look at how Mistral NeMo handles tokenization compared to Mistral Large. 
+다음 샘플에서는 Mistral NeMo가 Mistral Large와 비교하여 어떻게 tokenization을 처리하는지 살펴봅니다. 
 
-Both samples take the same prompt but you should see that NeMo returns back less tokens vs Mistral Large. 
+두 샘플 모두 동일한 프롬프트를 사용하지만, NeMo가 Mistral Large보다 적은 수의 토큰을 반환하는 것을 확인할 수 있습니다.
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import needed packages:
+# 필요한 패키지 임포트:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -243,13 +240,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral 토크나이저 로드
 
 model_name = "open-mistral-nemo	"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# 메시지 목록 토큰화
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -283,12 +280,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# 토큰 수 세기
 print(len(tokens))
 ```
 
 ```python
-# Import needed packages:
+# 필요한 패키지 임포트:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -299,13 +296,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral 토크나이저 로드
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# 메시지 목록 토큰화
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -339,10 +336,10 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# 토큰 수 세기
 print(len(tokens))
 ```
 
-## Learning does not stop here, continue the Journey
+## 여기서 멈추지 말고, 더 깊이 탐구해 보세요
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+이 레슨을 마쳤다면, [생성형 AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)에서 더 많은 내용을 확인하며 생성형 AI 지식을 한 단계 더 높여보세요!

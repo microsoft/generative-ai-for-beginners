@@ -1,4 +1,4 @@
-﻿[![開放原始碼模型](../../images/17-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![開放原始碼模型](../../images/17-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
 ## 簡介
 
@@ -38,7 +38,7 @@ AI Agents 允許大型語言模型（LLMs）透過提供**狀態**和**工具**�
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents/?WT.mc_id=academic-105485-koreyst) 是我們上述定義的實現。
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) 是我們上述定義的實現。
 
 要管理**狀態**，它使用一個名為 `AgentExecutor` 的內建函式。這個函式接受定義的 `agent` 和可用的 `tools`。
 
