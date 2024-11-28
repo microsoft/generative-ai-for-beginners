@@ -127,7 +127,7 @@ jupyterhub
 
 我們已經在我們的官方[AI 社群 Discord 伺服器](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)中建立了頻道，以便與其他學習者會面。這是一個與其他志同道合的企業家、建構者、學生和任何希望在生成式 AI 中提升的人聯繫的好方法。
 
-[![加入 discord 頻道](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![加入 discord 頻道](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 專案團隊也會在這個 Discord 伺服器上幫助任何學習者。
 

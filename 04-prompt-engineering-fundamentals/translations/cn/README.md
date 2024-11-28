@@ -268,7 +268,7 @@ response = openai.chat.completions.create(
 
 提示模板是预定义的提示配方，可以根据需要进行存储和重用，以大规模推动更一致的用户体验。 最简单的形式是，它只是一组提示示例的集合，例如 [OpenAI 中的这个例子](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)，它提供了交互式提示组件（用户和系统消息）和 AP 驱动请求格式来支持重用。
 
-在它更复杂的形式中，比如[LangChain 的这个例子](https://python.langchain.com/docs/how_to/#prompt-templates?WT.mc_id=academic-105485-koreyst)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等）来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
+在它更复杂的形式中，比如[LangChain 的这个例子](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，它包含占位符，可以替换为来自各种来源的数据(用户 输入、系统上下文、外部数据源等）来动态生成提示。 这使我们能够创建一个可重用的提示库，可用于大规模地**以编程方式**驱动一致的用户体验。
 
 最后，模板的真正价值在于能够为垂直应用程序领域创建和发布提示库 - 其中提示模板现在已优化以反映特定于应用程序的上下文或示例，使响应对于目标用户受众更加相关和准确 。 [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repo 是这种方法的一个很好的例子，它为教育领域策划了一个提示库，重点关注课程计划等关键目标， 课程设计、学生辅导等
 
