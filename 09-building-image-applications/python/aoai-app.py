@@ -59,10 +59,3 @@ finally:
     print("completed!")
 # ---creating variation below---
 
-
-response = client.images.create_variation(
-  image=open(image_path, "rb"),
-  n=1,
-  size="1024x1024"
-)
-
