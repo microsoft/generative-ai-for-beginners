@@ -236,7 +236,7 @@ chatbot(user_input)
 
 - Fluency - whether the response makes sense grammatically
 
-## Use Cases for using RAG (Retervival Augmented Generation) and vector databases
+## Use Cases for using RAG (Retrieval Augmented Generation) and vector databases
 
 There are many different use cases where function calls can improve your app like:
 
