@@ -73,7 +73,7 @@ conda activate ai4beg
 
 ### 使用 Visual Studio Code 搭配 Python 支援擴充功能
 
-我們建議在本課程中使用安裝了[Python 支援擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst)的[Visual Studio Code (VS Code)](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst)編輯器。不過，這只是建議，並不是絕對的要求。
+我們建議在本課程中使用安裝了[Python 支援擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst)的[Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst)編輯器。不過，這只是建議，並不是絕對的要求。
 
 > **注意**: 通過在 VS Code 中打開課程儲存庫，你可以選擇在容器中設定專案。這是因為在課程儲存庫中發現的[特殊 `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst)目錄。更多內容稍後介紹。
 

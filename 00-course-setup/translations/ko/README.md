@@ -68,7 +68,7 @@ conda activate ai4beg
 
 ### 파이썬 Extension과 함께 Visual Studio Code 사용하기
 
-Probably the best way to use the curriculum is to open it in [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) with [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
+Probably the best way to use the curriculum is to open it in [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) with [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
 
 > **Note**: “VS Code에서 디렉토리를 클론하고 열면 자동으로 Python 확장을 설치하라는 제안이 나타납니다. 또한 위에서 설명한대로 miniconda도 설치해야 합니다.
 
