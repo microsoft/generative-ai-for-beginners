@@ -39,7 +39,7 @@ conda activate ai4beg
 
 ### 使用 Visual Studio Code Python 插件
 
-学习本课程，建议使用 [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-77998-bethanycheum) 的 [Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-77998-bethanycheum).
+学习本课程，建议使用 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77998-bethanycheum) 的 [Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-77998-bethanycheum).
 
 > **注意**：在 VS Code 中克隆并打开该目录后，会自动建议您安装 Python 插件。 还必须如上所述要求安装 miniconda。
 

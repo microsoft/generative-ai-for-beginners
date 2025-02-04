@@ -68,7 +68,7 @@ Se você tiver problemas, consulte este link sobre a criação de [ambientes con
 
 ### Usando o Visual Studio Code com a Extensão do Python
 
-Provavelmente a melhor maneira de usar o currículo é abrindo no [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) com a [Extensão Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
+Provavelmente a melhor maneira de usar o currículo é abrindo no [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) com a [Extensão Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
 
 > **Observação**: Uma vez que você clonar e abrir o diretório no VS Code, ele automaticamente vai sugerir que você instale as extensões do Python. Você também precisará instalar o `Miniconda` conforme descrito acima.
 
