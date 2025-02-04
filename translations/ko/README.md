@@ -47,7 +47,7 @@ Microsoft 클라우드 전문가들이 제공하는 21개 강의로 구성된 �
 
 [공식 AI Discord 서버](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)에 참여하여 이 강좌를 수강하는 다른 학습자들과 만나고 네트워크를 형성하며 지원을 받으세요.
 
-## 🚀 스타트업을 만드시나요?
+## 🚀 스타트업을 운영하시나요?
 
 [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)에 가입하여 **무료 OpenAI 크레딧**과 Azure OpenAI 서비스를 통한 OpenAI 모델 액세스를 위한 **최대 $150,000의 Azure 크레딧**을 받으세요.
 
