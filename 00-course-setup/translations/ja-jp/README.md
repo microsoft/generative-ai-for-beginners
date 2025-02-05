@@ -72,7 +72,7 @@ conda activate ai4beg
 
 ### Python の拡張機能をインストールした Visual Studio Code の使用
 
-このカリキュラムを進める際には、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)をインストールした [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) の使用を特にお勧めします。
+このカリキュラムを進める際には、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)をインストールした [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) の使用を特にお勧めします。
 
 > **ご注意**: クローンした後、VS Code でディレクトリを開くと、自動的に Python 拡張機能のインストールが提案されます。上記で説明したように miniconda もインストールしてください。
 
