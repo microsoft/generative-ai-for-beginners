@@ -95,7 +95,7 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) for making key contributions to each lesson to improve the learner and code experience. 
 
-## 🎒 Other Courses 
+## 🎒 Other Courses
 
 Our team produces other courses! Check out:
 
@@ -109,5 +109,6 @@ Our team produces other courses! Check out:
 - [Web Dev for Beginners](https://aka.ms/webdev-beginners)
 - [IoT for Beginners](https://aka.ms/iot-beginners)
 - [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners)
+- [Mastering GitHub Copilot for Paired Programming](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures)
