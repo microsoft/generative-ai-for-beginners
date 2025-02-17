@@ -192,7 +192,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
    messages = [{"role": "user", "content": prompt}]
 
    # make completion
-   completion = client.chat.completions.create(model=deployment, messages=messages)
+   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
 
    # print response
    print(completion.choices[0].message.content)
