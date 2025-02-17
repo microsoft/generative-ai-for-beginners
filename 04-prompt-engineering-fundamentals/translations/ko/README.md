@@ -40,7 +40,7 @@ _생성형 AI_ 는 사용자의 요청에 응답하여 새로운 콘텐츠(예: 
 
 ## 우리 스타트업
 
-이제, _본 주제_ 가 우리 스타트업의 [교육에 AI 혁신을 가져오기](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst) 미션과 어떻게 관련되는지에 대해 이야기해보겠습니다. 우리는 _개인화된 학습_ (personalized learning)의 AI 기반 응용 프로그램을 구축하고자 합니다. 그러니 애플리케이션 목표와 모델에 대한 다양한 사용자들이 프롬프트를 "디자인" 할 수 있는 방법에 대해 생각해보겠습니다:
+이제, _본 주제_ 가 우리 스타트업의 [교육에 AI 혁신을 가져오기](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)의 미션과 어떻게 관련되는지에 대해 이야기해보겠습니다. 우리는 _개인화된 학습_ (personalized learning)의 AI 기반 응용 프로그램을 구축하고자 합니다. 그러니 애플리케이션 목표와 모델에 대한 다양한 사용자들이 프롬프트를 "디자인" 할 수 있는 방법에 대해 생각해보겠습니다:
 
 - **관리자** 는 AI가 _커리큘럼 데이터를 분석하여 부족한 부분을 식별_ 하도록 요청할 수 있습니다. AI는 결과를 요약하거나 코드로 시각화할 수 있습니다.
 - **교육자** 는 _대상 그룹과 주제에 대한 레슨 계획을 생성_ 하도록 AI에게 요청할 수 있습니다. AI는 지정된 형식으로 개인화된 계획을 작성할 수 있습니다.
