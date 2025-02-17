@@ -24,6 +24,8 @@ This course has 21 lessons. Each lesson covers its own topic so start wherever y
 
 Lessons are labeled either "Learn" lessons explaining a Generative AI concept or "Build" lessons that explain a concept and code examples in both **Python** and **TypeScript** when possible.
 
+For .NET Developers checkout [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)!
+
 Each lesson also includes a "Keep Learning" section with additional learning tools.
 
 ## What You Need
