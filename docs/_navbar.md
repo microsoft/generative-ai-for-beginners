@@ -7,3 +7,4 @@
     * [Traditional Chinese](/translations/tw/)
     * [Portuguese](/translations/pt-br/)
     * [Japanese](/translations/ja-jp/)
+    * [Korean](/translations/ko/)
