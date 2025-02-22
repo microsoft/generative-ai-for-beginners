@@ -1,4 +1,4 @@
-![생성형 AI 입문자를 위한 과정](./images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
+![생성형 AI 입문자를 위한 과정](../../images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
 
 ### 생성형 AI 애플리케이션 개발에 필요한 모든 것을 가르치는 21개의 강의
 
