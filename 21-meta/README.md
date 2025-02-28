@@ -13,7 +13,7 @@ This lesson will cover:
 
 In this lesson, we will explore 2 models from the Meta family or "Llama Herd" - Llama 3.1 and Llama 3.2 
 
-These models come in different variants and are available on the Github Model marketplace. Here are more details on using Github Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+These models come in different variants and are available on the GitHub Model marketplace. Here are more details on using GitHub Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Model Variants: 
 - Llama 3.1 - 70B Instruct 
@@ -21,7 +21,7 @@ Model Variants:
 - Llama 3.2 - 11B Vision Instruct 
 - Llama 3.2 - 90B Vision Instruct 
 
-*Note: Llama 3 is also available on Github Models but won't be covered in this lesson*
+*Note: Llama 3 is also available on GitHub Models but won't be covered in this lesson*
 
 ## Llama 3.1 
 
@@ -53,7 +53,7 @@ In the code example below:
 - Send a user prompt that asks about the weather in a certain city. 
 - The LLM will respond with a tool call to the Brave Search tool which will look like this `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Note: This example only make the tool call, if you would like to get the results, you will need to create a free account on the Brave API page and define the function itself` 
+*Note: This example only makes the tool call, if you would like to get the results, you will need to create a free account on the Brave API page and define the function itself` 
 
 ```python 
 import os
@@ -95,7 +95,7 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Despite being a LLM, one limitation that Llama 3.1 has is multimodality. That is, being able to use different types of input such as images as prompts and providing responses. This ability is one of the main features of Llama 3.2. These features also include: 
+Despite being an LLM, one limitation that Llama 3.1 has is multimodality. That is, being able to use different types of input such as images as prompts and providing responses. This ability is one of the main features of Llama 3.2. These features also include: 
 
 - Multimodality -  has the ability to evaluate both text and image prompts 
 - Small to Medium size variations (11B and 90B) - this provides flexible deployment options, 
