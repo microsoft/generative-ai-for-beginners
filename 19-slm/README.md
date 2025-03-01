@@ -99,7 +99,7 @@ The Phi-3-medium with 14B parameters continues this trend and outperforms the Ge
 We can think of it as an upgrade of Phi-3-mini. While the parameters remain unchanged, it improves the ability to support multiple languages(
 Support 20+ languages:Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian) ​​and adds stronger support for long context.
 
-Phi-3.5-mini with 3.8B parameters outperforms language models of the same size and on par with models twice its size.
+Phi-3.5-mini with 3.8B parameters outperforms language models of the same size and is on par with models twice its size.
 
 ### Phi-3 / 3.5 Vision
 
@@ -120,7 +120,7 @@ Phi-3.5-vision outperforms larger models such as Claude-3.5 Sonnet and Gemini 1.
 
 ### Phi-3.5-MoE
 
-***Mixture of Experts(MoE)*** enable models to be pretrained with far less compute, which means you can dramatically scale up the model or dataset size with the same compute budget as a dense model. In particular, a MoE model should achieve the same quality as its dense counterpart much faster during pretraining.
+***Mixture of Experts(MoE)*** enables models to be pretrained with far less compute, which means you can dramatically scale up the model or dataset size with the same compute budget as a dense model. In particular, a MoE model should achieve the same quality as its dense counterpart much faster during pretraining.
 
 Phi-3.5-MoE comprises 16x3.8B expert modules.Phi-3.5-MoE with only 6.6B active parameters achieves a similar level of reasoning, language understanding, and math as much larger models
 
@@ -153,7 +153,7 @@ Or if we want to use the vision and MoE models, you can use Azure AI Studio to c
 
 **NVIDIA NIM**
 
-In addition to the cloud-based Model Catalog solutions provided by Azure and GitHub, you can also use [Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) to complete related calls. You can visit NIVIDA NIM to complete the API calls of Phi-3/3.5 Family. NVIDIA NIM (NVIDIA Inference Microservices) is a set of accelerated inference microservices designed to help developers deploy AI models efficiently across various environments, including clouds, data centers, and workstations.
+In addition to the cloud-based Model Catalog solutions provided by Azure and GitHub, you can also use [Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) to complete related calls. You can visit NIVIDA NIM to complete the API calls of the Phi-3/3.5 Family. NVIDIA NIM (NVIDIA Inference Microservices) is a set of accelerated inference microservices designed to help developers deploy AI models efficiently across various environments, including clouds, data centers, and workstations.
 
 Here are some key features of NVIDIA NIM:
 
@@ -171,7 +171,7 @@ NIM is part of NVIDIA AI Enterprise, which aims to simplify the deployment and o
 ### Inference Phi-3/3.5 in local env
 Inference in relation to Phi-3, or any language model like GPT-3, refers to the process of generating responses or predictions based on the input it receives. When you provide a prompt or question to Phi-3, it uses its trained neural network to infer the most likely and relevant response by analyzing patterns and relationships in the data it was trained on.
 
-**Hugging face Transformer**
+**Hugging Face Transformer**
 Hugging Face Transformers is a powerful library designed for natural language processing (NLP) and other machine learning tasks. Here are some key points about it:
 
 1. **Pretrained Models**: It provides thousands of pretrained models that can be used for various tasks such as text classification, named entity recognition, question answering, summarization, translation, and text generation.
@@ -223,7 +223,7 @@ ONNX Runtime for GENAI extends the capabilities of ONNX Runtime to support gener
 - **Performance Optimization:** It includes optimizations for different hardware accelerators like NVIDIA GPUs, AMD GPUs, and more2.
 - **Ease of Use:** It provides APIs for easy integration into applications, allowing you to generate text, images, and other content with minimal code
 - Users can call a high level generate() method, or run each iteration of the model in a loop, generating one token at a time, and optionally updating generation parameters inside the loop.
-- ONNX runtume also has support for greedy/beam search and TopP, TopK sampling to generate token sequences and built-in logits processing like repetition penalties. You can also easily add custom scoring.
+- ONNX runtime also has support for greedy/beam search and TopP, TopK sampling to generate token sequences and built-in logits processing like repetition penalties. You can also easily add custom scoring.
 
 ## Getting Started
 To get started with ONNX Runtime for GENAI, you can follow these steps:
