@@ -104,11 +104,14 @@ Go ahead and populate your environment file with the snippet below:
 name: <environment-name>
 channels:
  - defaults
+ - microsoft
 dependencies:
 - python=<python-version>
 - openai
 - python-dotenv
-- microsoft azure-ai-ml
+- pip
+- pip:
+    - azure-ai-ml
 
 ```
 
