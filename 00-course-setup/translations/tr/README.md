@@ -18,7 +18,7 @@ Kodun çalıştırılması sırasında bağımlılık sorunlarını önlemek iç
 
 Bunun için, çatalladığınız depo üzerinde `Code` oseçeneğine tıklayın ve **Codespaces** seçeneğini belirleyin.
 
-![Kod alanı oluşturmak için düğmeleri gösteren iletişim kutusu](../images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
+![Kod alanı oluşturmak için düğmeleri gösteren iletişim kutusu](../../images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
 ### 3. API Anahtarlarınızı Güvenli Bir Şekilde Saklayın
 
