@@ -1,4 +1,4 @@
-![Generative AI For Beginners](./images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
+![Generative AI For Beginners](../../images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
 
 ### 21 Ders, Üretken Yapay Zeka uygulamaları oluşturmaya başlamak için bilmeniz gereken her şeyi öğretiyor
 
