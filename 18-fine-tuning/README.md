@@ -54,9 +54,9 @@ So, before you learn "how" to fine-tune language models, you need to know "why" 
   - Compute - for running fine-tuning jobs, and deploying fine-tuned model
   - Data - access to sufficient quality examples for fine-tuning impact
 - **Benefits**: Have you confirmed the benefits for fine-tuning?
-  - Quality - did fine-tuned model outperform baseline?
+  - Quality - did fine-tuned model outperform the baseline?
   - Cost - does it reduce token usage by simplifying prompts?
-  - Extensibility - can you repurpose base model for new domains?
+  - Extensibility - can you repurpose the base model for new domains?
 
 By answering these questions, you should be able to decide if fine-tuning is the right approach for your use case. Ideally, the approach is valid only if the benefits outweigh the costs. Once you decide to proceed, it's time to think about _how_ you can fine tune the pre-trained model.
 
@@ -94,4 +94,4 @@ After completing this lesson, check out our [Generative AI Learning collection](
 
 Congratulations!! You have completed the final lesson from the v2 series for this course! Don't stop learning and building. \*\*Check out the [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for a list of additional suggestions for just this topic.
 
-Our v1 series of lessons have also been updated with more assignments and concepts. So take a minute to refresh your knowledge - and please [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us improve these lessons for the community.
+Our v1 series of lessons has also been updated with more assignments and concepts. So take a minute to refresh your knowledge - and please [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us improve these lessons for the community.

@@ -8,7 +8,7 @@
 
 Now that we've learned how to build image generating applications, let's talk about low code. Generative AI can be used for a variety of different areas including low code, but what is low code and how can we add AI to it?
 
-Building apps and solutions has become more easier for traditional developers and non-developers through the use of Low Code Development Platforms. Low Code Development Platforms enable you to build apps and solutions with little to no code. This is achieved by providing a visual development environment that enables you to drag and drop components to build apps and solutions. This enables you to build apps and solutions faster and with less resources. In this lesson, we dive deep into how to use Low Code and how to enhance low code development with AI using Power Platform.
+Building apps and solutions has become easier for traditional developers and non-developers through the use of Low Code Development Platforms. Low Code Development Platforms enable you to build apps and solutions with little to no code. This is achieved by providing a visual development environment that enables you to drag and drop components to build apps and solutions. This enables you to build apps and solutions faster and with less resources. In this lesson, we dive deep into how to use Low Code and how to enhance low code development with AI using Power Platform.
 
 The Power Platform provides organizations with the opportunity to empower their teams to build their own solutions through an intuitive low-code or no-code environment. This environment helps simplify the process of building solutions. With Power Platform, solutions can be built in days or weeks instead of months or years. Power Platform consists of five key products: Power Apps, Power Automate, Power BI, Power Pages and Copilot Studio.
 
@@ -67,7 +67,7 @@ As part of the Power Platform, Power Automate lets users create automated workfl
 
 The copilot AI assistant feature in Power Automate enables you to describe what kind of flow you need and what actions you want your flow to perform. Copilot then generates a flow based on your description. You can then customize the flow to meet your needs. The AI Copilot also generates and suggests the actions you need to perform the task you want to automate. We will look at what flows are and how you can use them in Power Automate in this lesson later. You can then customize the actions to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Automate home screen.
 
-## Assignment: manage student assignments and invoices for our startup, using Copilot
+## Assignment: Manage student assignments and invoices for our startup, using Copilot
 
 Our startup provides online courses to students. The startup has grown rapidly and is now struggling to keep up with the demand for its courses. The startup has hired you as a Power Platform developer to help them build a low code solution to help them manage their student assignments and invoices. Their solution should be able to help them track and manage student assignments through an app and automate the invoice processing process through a workflow. You have been asked to use Generative AI to develop the solution.
 
@@ -119,7 +119,7 @@ The finance team of our startup has been struggling to keep track of invoices. T
 
 The Power Platform has an underlying data platform called Dataverse that enables you to store the data for your apps and solutions. Dataverse provides a low-code data platform for storing the app's data. It is a fully managed service that securely stores data in the Microsoft Cloud and is provisioned within your Power Platform environment. It comes with built-in data governance capabilities, such as data classification, data lineage, fine-grained access control, and more. You can learn more [about Dataverse here](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-Why should we use Dataverse for our startup? The standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you store different types of data, similar to how you might use multiple worksheets in a single Excel workbook. You can use tables to store data that is specific to your organization or business need. Some of the benefits our startup will get from using Dataverse include but are not limited to:
+Why should we use Dataverse for our startup? The standard and custom tables within Dataverse provide a secure and cloud-based storage option for your data. Tables let you store different types of data, similar to how you might use multiple worksheets in a single Excel workbook. You can use tables to store data that is specific to your organization or business needs. Some of the benefits our startup will get from using Dataverse include but are not limited to:
 
 - **Easy to manage**: Both the metadata and data are stored in the cloud, so you don't have to worry about the details of how they are stored or managed. You can focus on building your apps and solutions.
 
@@ -182,7 +182,7 @@ With Custom AI Models you can bring your own model into AI Builder so that it ca
 
 The finance team has been struggling to process invoices. They have been using a spreadsheet to track the invoices but this has become difficult to manage as the number of invoices has increased. They have asked you to build a workflow that will help them process invoices using AI. The workflow should enable them to extract information from invoices and store the information in a Dataverse table. The workflow should also enable them to send an email to the finance team with the extracted information.
 
-Now that you know what AI Builder is and why you should use it, let's look at how you can use the Invoice Processing AI Model in AI Builder, that we covered earlier on, to build a workflow that will help the finance team process invoices.
+Now that you know what AI Builder is and why you should use it, let's look at how you can use the Invoice Processing AI Model in AI Builder, which we covered earlier on, to build a workflow that will help the finance team process invoices.
 
 To build a workflow that will help the finance team process invoices using the Invoice Processing AI Model in AI Builder, follow the steps below:
 

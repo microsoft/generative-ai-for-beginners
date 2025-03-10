@@ -12,13 +12,13 @@ This lesson will cover:
 In this lesson, we will explore 3 different Mistral models: 
 **Mistral Large**, **Mistral Small** and **Mistral Nemo**. 
 
-Each of these models are available free on the Github Model marketplace. The code in this notebook will be using this models to run the code. Here are more details on using Github Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst). 
+Each of these models is available free on the Github Model marketplace. The code in this notebook will be using these models to run the code. Here are more details on using Github Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst). 
 
 
 ## Mistral Large 2 (2407)
 Mistral Large 2 is currently the flagship model from Mistral and is designed for enterprise use. 
 
-The model is an  upgrade to the original Mistral Large by offering 
+The model is an upgrade to the original Mistral Large by offering 
 -  Larger Context Window - 128k vs 32k 
 -  Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
 -  Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
@@ -212,7 +212,7 @@ Compared to the other two models discussed in this lesson, Mistral NeMo is the o
 
 It is viewed as an upgrade to the earlier open source LLM from Mistral, Mistral 7B. 
 
-Some other feature of the NeMo model are: 
+Some other features of the NeMo model are: 
 
 - *More efficient tokenization:* This model using the Tekken tokenizer over the more commonly used tiktoken. This allows for better performance over more languages and code. 
 
