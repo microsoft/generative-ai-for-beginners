@@ -17,8 +17,11 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter"
-			], 
-			"postCreateCommand": "pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
+			],
+			"postCreateCommand": [
+				"curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+				"pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt"
+			]
 		}
 	}
 }
