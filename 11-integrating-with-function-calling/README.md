@@ -10,7 +10,7 @@ The above mentioned problems are what this chapter is looking to address.
 
 This lesson will cover:
 
-- Explain what is function calling and its use cases.
+- Explain what function calling is and its use cases.
 - Creating a function call using Azure OpenAI.
 - How to integrate a function call into an application.
 
@@ -22,7 +22,7 @@ By the end of this lesson, you will be able to:
 - Setup Function Call using the Azure OpenAI Service.
 - Design effective function calls for your application's use case.
 
-## Scenario: improving our chatbot with functions
+## Scenario: Improving our chatbot with functions
 
 For this lesson, we want to build a feature for our education startup that allows users to use a chatbot to find technical courses. We will recommend courses that fit their skill level, current role and technology of interest.
 
@@ -38,7 +38,7 @@ To get started, let's look at why we would want to use function calling in the f
 
 Before function calling, responses from an LLM were unstructured and inconsistent. Developers were required to write complex validation code to make sure they are able to handle each variation of a response. Users could not get answers like "What is the current weather in Stockholm?". This is because models were limited to the time the data was trained on.
 
-Function Calling is a feature of the Azure OpenAI Service to overcome to the following limitations:
+Function Calling is a feature of the Azure OpenAI Service to overcome the following limitations:
 
 - **Consistent response format**. If we can better control the response format we can more easily integrate the response downstream to other systems.
 - **External data**. Ability to use data from other sources of an application in a chat context.
@@ -189,7 +189,7 @@ There are many different use cases where function calls can improve your app lik
 The process of creating a function call includes 3 main steps:
 
 1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action ie execute a function or API Call.
+2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
 ![LLM Flow](./images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
@@ -247,7 +247,7 @@ Let's describe each function instance more in detail below:
 
 - `name` - The name of the function that we want to have called.
 - `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where item have the following properties:
+- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
   1.  `type` - The data type of the properties will be stored in.
   1.  `properties` - List of the specific values that the model will use for its response
       1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
@@ -305,7 +305,7 @@ After we have tested the formatted response from the LLM, now we can integrate t
 
 To integrate this into our application, let's take the following steps:
 
-1. First, let's make the call to the Open AI services and store the message in a variable called `response_message`.
+1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
 
    ```python
    response_message = response.choices[0].message
@@ -455,4 +455,4 @@ Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 12 where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 12, where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
