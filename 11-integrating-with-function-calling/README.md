@@ -4,7 +4,7 @@
 
 You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.
 
-The above mentioned problems are what this chapter is looking to address.
+The above-mentioned problems are what this chapter is looking to address.
 
 ## Introduction
 
@@ -26,7 +26,7 @@ By the end of this lesson, you will be able to:
 
 For this lesson, we want to build a feature for our education startup that allows users to use a chatbot to find technical courses. We will recommend courses that fit their skill level, current role and technology of interest.
 
-To complete this scenario we will use a combination of:
+To complete this scenario, we will use a combination of:
 
 - `Azure OpenAI` to create a chat experience for the user.
 - `Microsoft Learn Catalog API` to help users find courses based on the request of the user.
@@ -36,7 +36,7 @@ To get started, let's look at why we would want to use function calling in the f
 
 ## Why Function Calling
 
-Before function calling, responses from an LLM were unstructured and inconsistent. Developers were required to write complex validation code to make sure they are able to handle each variation of a response. Users could not get answers like "What is the current weather in Stockholm?". This is because models were limited to the time the data was trained on.
+Before function calling, responses from an LLM were unstructured and inconsistent. Developers were required to write complex validation code to make sure they were able to handle each variation of a response. Users could not get answers like "What is the current weather in Stockholm?". This is because models were limited to the time the data was trained on.
 
 Function Calling is a feature of the Azure OpenAI Service to overcome the following limitations:
 
@@ -164,7 +164,7 @@ Now we can send both requests to the LLM and examine the response we receive by 
    }
    ```
 
-   Even though the prompts are the same and the descriptions are similar, we see values of the `Grades` property formatted differently as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Even though the prompts are the same and the descriptions are similar, we see values of the `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
 
    This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
 
@@ -178,11 +178,11 @@ We can then take what is returned from the function and send this back to the LL
 
 There are many different use cases where function calls can improve your app like:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
 
 - **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flash cards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
 ## Creating Your First Function Call
 
@@ -299,7 +299,7 @@ Next, we need to see how we can use this in our app.
 
 ## Integrating Function Calls into an Application
 
-After we have tested the formatted response from the LLM, now we can integrate this into an application.
+After we have tested the formatted response from the LLM, we can now integrate this into an application.
 
 ### Managing the flow
 
@@ -337,7 +337,7 @@ To integrate this into our application, let's take the following steps:
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` is part of it and call the pointed out function. Here's how you can make the mentioned check below:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` is part of it and call the pointed-out function. Here's how you can make the mentioned check below:
 
    ```python
    # Check if the model wants to call a function
