@@ -55,7 +55,7 @@ Not every challenge can be solved with AI. AI comes in to augment your user expe
 
 ## Designing AI Applications for Trust and Transparency
 
-Building trust is critical when designing AI applications. Trust ensures a user is confident that the application will get the work done, deliver results consistently and the results are what the user needs. A risk in this area is mistrust and over trust. Mistrust occurs when a user has little or no trust in an AI system, this leads to the user rejecting your application. Over trust occurs when a user overestimates the capability of an AI system, leading to users trusting the AI system too much. For example, an automated grading system in the case of over trust might lead the teacher not to proof through some of the papers to ensure the grading system works well. This could result in unfair or inaccurate grades for the students, or missed opportunities for feedback and improvement.
+Building trust is critical when designing AI applications. Trust ensures a user is confident that the application will get the work done, deliver results consistently and the results are what the user needs. A risk in this area is mistrust and overtrust. Mistrust occurs when a user has little or no trust in an AI system, this leads to the user rejecting your application. Overtrust occurs when a user overestimates the capability of an AI system, leading to users trusting the AI system too much. For example, an automated grading system in the case of overtrust might lead the teacher not to proof through some of the papers to ensure the grading system works well. This could result in unfair or inaccurate grades for the students, or missed opportunities for feedback and improvement.
 
 Two ways to ensure that trust is put right at the center of design are explainability and control.
 
@@ -83,11 +83,11 @@ Another feature in Bing that allows a user to have control over the application 
 
 ![Bing search results with options to modify the prompt and output](./images/bing2.png?WT.mc_id=academic-105485-koreyst "Bing search results with options to modify the prompt and output")
 
-> When designing AI applications, intentionality is key in ensuring users do not over trust setting unrealistic expectations of its capabilities. One way to do this is by creating friction between the prompts and the results. Reminding the user, that this is AI and not a fellow human being
+> When designing AI applications, intentionality is key in ensuring users do not overtrust setting unrealistic expectations of its capabilities. One way to do this is by creating friction between the prompts and the results. Reminding the user, that this is AI and not a fellow human being
 
 ## Designing AI Applications for Collaboration and Feedback
 
-As earlier mentioned generative AI creates a collaboration between the user and AI. Most engagements are with a user inputting a prompt and the AI generating an output. What if the output is incorrect? How does the application handle errors if they occur? Does the AI blame the user or take time to explain the error?
+As earlier mentioned, generative AI creates a collaboration between the user and AI. Most engagements are with a user inputting a prompt and the AI generating an output. What if the output is incorrect? How does the application handle errors if they occur? Does the AI blame the user or take time to explain the error?
 
 AI applications should be built in to receive and give feedback. This not only helps the AI system improve but also builds trust with the users. A feedback loop should be included in the design, an example can be a simple thumbs up or down on the output.
 
@@ -95,7 +95,7 @@ Another way to handle this is to clearly communicate the capabilities and limita
 
 ![Giving feedback and handling errors](./images/feedback-loops.png?WT.mc_id=academic-105485-koreyst)
 
-System errors are common with applications where the user might need assistance with information outside the scope of the AI or the application may have a limit of how many questions/subjects a user can generate summaries. For example, an AI application trained with data on limited subjects for example, History and Math may not be able to handle questions around Geography. To mitigate this, the AI system can give a response like: "Sorry, our product has been trained with data in the following subjects....., I cannot be able to respond to the question you asked."
+System errors are common with applications where the user might need assistance with information outside the scope of the AI or the application may have a limit on how many questions/subjects a user can generate summaries. For example, an AI application trained with data on limited subjects for example, History and Math may not be able to handle questions around Geography. To mitigate this, the AI system can give a response like: "Sorry, our product has been trained with data in the following subjects....., I cannot be able to respond to the question you asked."
 
 AI applications are not perfect, therefore, they are bound to make mistakes. When designing your applications, you should ensure you create room for feedback from users and error handling in a way that is simple and easily explainable.
 
@@ -103,7 +103,7 @@ AI applications are not perfect, therefore, they are bound to make mistakes. Whe
 
 Take any AI apps you've built so far, consider implementing the below steps in your app:
 
-- **Pleasant:** Consider how you can make your app more pleasant. Are you adding explanations everywhere, are you encouraging the user to explore? How are you wording your error messages?
+- **Pleasant:** Consider how you can make your app more pleasant. Are you adding explanations everywhere? Are you encouraging the user to explore? How are you wording your error messages?
 
 - **Usability:** Building a web app. Make sure your app is navigable by both mouse and keyboard.
 
@@ -117,4 +117,4 @@ Take any AI apps you've built so far, consider implementing the below steps in y
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 13 where we will look at how to [securing AI applications](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 13, where we will look at how to [securing AI applications](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
