@@ -137,4 +137,4 @@ Cevap: 3, bir LLM (Büyük Dil Modeli) deterministik değildir, yani yanıtları
 
 Bu dersi tamamladıktan sonra [Üretken Yapay Zeka Öğrenme Koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyerek Üretken Yapay Zeka bilginizi geliştirmeye devam edin!
 
-Ders 2'ye geçerek farklı LLM türlerini nasıl [keşfedip karşılaştırabileceğinizi](../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) öğrenin!
+Ders 2'ye geçerek farklı LLM türlerini nasıl [keşfedip karşılaştırabileceğinizi](../../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) öğrenin!
