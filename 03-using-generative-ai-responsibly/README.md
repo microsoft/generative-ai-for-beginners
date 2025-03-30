@@ -124,7 +124,7 @@ A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmfu
 
 ## 🚀 Challenge
 
-Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
+Read up on [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
 
 ## Great Work, Continue Your Learning
 
