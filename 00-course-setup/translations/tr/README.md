@@ -205,4 +205,4 @@ Bu proje [Microsoft Open Source Code of Conduct](https://opensource.microsoft.co
 
 ## Başlayalım
 
-Bu kursu tamamlamak için gerekli adımları tamamladığınıza göre, şimdi [Üretken Yapay Zeka ve Büyük Dil Modellerine (LLM'ler)](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) giriş yaparak başlayalım.
+Bu kursu tamamlamak için gerekli adımları tamamladığınıza göre, şimdi [Üretken Yapay Zeka ve Büyük Dil Modellerine (LLM'ler)](../../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) giriş yaparak başlayalım.
