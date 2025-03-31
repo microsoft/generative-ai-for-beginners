@@ -188,7 +188,7 @@ A: 3、時間とリソース、高品質のデータがある場合 ファイン
 > 訳者追記：  
 > 訳者的には 1,2,3 の順番で検討するのが良いと思います。ケース・バイ・ケースですが、ファイン・チューニングは、時間とリソースがある場合に検討するのが良いと思います。
 
-## 🚀 Challenge
+## 🚀 チャレンジ
 
 ビジネスで RAG を活用する方法についてもっと学びたい方は、[こちら](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-yoterada)をご覧ください。
 
