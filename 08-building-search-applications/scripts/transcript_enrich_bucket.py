@@ -172,19 +172,22 @@ def parse_json_vtt_transcript(vtt, metadata):
 
         # Append the last text segment to the last segment in segments dictionary
         if seg_begin_seconds and text != "":
-            previous_segment_tokens = len(tokenizer.encode(segments[-1]["text"]))
-            current_segment_tokens = len(tokenizer.encode(text))
+            if segments:
+                previous_segment_tokens = len(tokenizer.encode(segments[-1]["text"]))
+                current_segment_tokens = len(tokenizer.encode(text))
 
-            if previous_segment_tokens + current_segment_tokens < MAX_TOKENS:
-                segments[-1]["text"] += text
+                if previous_segment_tokens + current_segment_tokens < MAX_TOKENS:
+                    segments[-1]["text"] += text
+                else:
+                    if not first_segment:
+                        # append PERCENTAGE_OVERLAP text to the previous segment
+                        # to smooth context transition
+                        append_text_to_previous_segment(text)
+                    first_segment = False
+                    add_new_segment(metadata, text, seg_begin_seconds)
             else:
-                if not first_segment:
-                    # append PERCENTAGE_OVERLAP text to the previous segment
-                    # to smooth context transition
-                    append_text_to_previous_segment(text)
-                first_segment = False
+                 # If segments list is empty, add the text as a new segment
                 add_new_segment(metadata, text, seg_begin_seconds)
-
 
 def get_transcript(metadata):
     """get the transcript from the .vtt file"""

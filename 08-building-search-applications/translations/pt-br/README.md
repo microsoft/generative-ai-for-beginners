@@ -1,8 +1,6 @@
 # Criando Aplicações de Busca
 
-[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
-
-> **Vídeo em breve**
+[![Introduction to Generative AI and Large Language Models](../../images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
 Há muito mais nas LLMs do que chatbots e geração de texto. Também é possível criar aplicações de busca usando `Embeddings`. `Embeddings` são representações numéricas de dados, também conhecidas como vetores, e podem ser usados para busca semântica de dados.
 
@@ -31,7 +29,7 @@ Após completar esta lição, você será capaz de:
 
 Criar uma aplicação de busca ajudará você a entender como usar Embeddings para buscar dados. Você também aprenderá como construir uma aplicação de busca que pode ser usada por estudantes para encontrar informações rapidamente.
 
-A lição inclui um Índice de Embeddings dos transcritos do YouTube para o canal [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) da Microsoft no YouTube. O AI Show é um canal do YouTube que ensina sobre IA e aprendizado de máquina. O Índice de Embeddings contém os Embeddings para cada um dos transcritos do YouTube até outubro de 2023. Você usará o Índice de Embeddings para construir uma aplicação de busca para nossa startup. A aplicação de busca retorna um link para o local no vídeo onde está localizada a resposta para a pergunta. Esta é uma ótima maneira para os estudantes encontrarem rapidamente as informações de que precisam.
+A lição inclui um Índice de Embeddings dos transcritos do YouTube para o canal [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) da Microsoft no YouTube. O AI Show é um canal do YouTube que ensina sobre IA e aprendizado de máquina. O Índice de Embeddings contém os Embeddings para cada um dos transcritos do YouTube até outubro de 2023. Você usará o Índice de Embeddings para construir uma aplicação de busca para nossa startup. A aplicação de busca retorna um link para o local no vídeo onde está localizada a resposta para a pergunta. Esta é uma ótima maneira para os estudantes encontrarem rapidamente as informações de que precisam.
 
 Abaixo nós temos um exemplo de uma consulta semântica para a pergunta: 'É possível usar o RStudio com o Azure ML?'. Confira a URL do YouTube, você verá que a URL contém um carimbo de data/hora que o leva para o local no vídeo onde está localizada
 
@@ -65,7 +63,7 @@ O Índice de Embeddings para esta lição foi criado com uma série de scripts P
 
 Os scripts executam as seguintes operações:
 
-1. A transcrição de cada vídeo do YouTube na lista de reprodução [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1?WT.mc_id=academic-105485-koreyst) é baixada.
+1. A transcrição de cada vídeo do YouTube na lista de reprodução [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) é baixada.
 
 2. Usando [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), uma tentativa é feita para extrair o nome do orador dos primeiros 3 minutos do transcrição do YouTube. O nome do orador para cada vídeo é armazenado no Índice de Embeddings chamado `embedding_index_3m.json`.
 
@@ -151,7 +149,7 @@ az cognitiveservices account deployment create \
     --model-name text-embedding-ada-002 \
     --model-version "2"  \
     --model-format OpenAI \
-    --scale-settings-scale-type "Standard"
+    --sku-capacity 100 --sku-name "Standard"
 ```
 
 ## Solução

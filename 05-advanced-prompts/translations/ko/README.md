@@ -1,6 +1,6 @@
 # 고급 프롬프트 생성
 
-[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/32GBH6BTWZQ?WT.mc_id=academic-105485-koreyst)
+[![Creating Advanced Prompts](../../images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)
 
 이전 장에서 배운 내용을 간단히 되짚어보겠습니다:
 
@@ -74,8 +74,8 @@ LLM을 프롬프트하기 위해 몇 가지 기본적인 기법을 사용할 수
 
 Chain-of-thought는 LLM을 일련의 단계를 거쳐 가르치는 매우 흥미로운 기술입니다. 이 아이디어는 LLM에게 어떻게 해야 하는지 이해시키는 방법입니다. 다음 예시를 고려해보세요. Chain-of-thought를 사용하는 경우와 그렇지 않은 경우를 비교해보세요:
 
-  - 프롬프트: "앨리스는 사과를 5개 가지고 있습니다. 3개의 사과를 던지고, 2개를 밥에게 주었고, 밥이 하나를 다시 돌려줬을 때, 앨리스는 몇 개의 사과를 가지고 있을까요?"
-  - 답변: 5
+- 프롬프트: "앨리스는 사과를 5개 가지고 있습니다. 3개의 사과를 던지고, 2개를 밥에게 주었고, 밥이 하나를 다시 돌려줬을 때, 앨리스는 몇 개의 사과를 가지고 있을까요?"
+- 답변: 5
 
 LLM은 5라고 답했지만, 이는 잘못된 답입니다. 정답은 계산에 따라 (5 - 3 - 2 + 1 = 1) 1개의 사과입니다.
 
@@ -90,10 +90,10 @@ Chain-of-thought를 시도해보겠습니다. Chain-of-thought를 적용하는 �
 다음과 같이 해보겠습니다:
 
 - 프롬프트: "리사는 사과를 7개 가지고 있습니다. 1개의 사과를 던지고, 4개의 사과를 바트에게 주고, 바트가 하나를 다시 돌려줍니다:
-    7 - 1 = 6
-    6 - 4 = 2
-    2 + 1 = 3
-    앨리스는 사과를 5개 가지고 있습니다. 3개의 사과를 던지고, 2개를 밥에게 주고, 밥이 하나를 다시 돌려준다면, 앨리스는 몇 개의 사과를 가지고 있을까요?"  
+  7 - 1 = 6
+  6 - 4 = 2
+  2 + 1 = 3
+  앨리스는 사과를 5개 가지고 있습니다. 3개의 사과를 던지고, 2개를 밥에게 주고, 밥이 하나를 다시 돌려준다면, 앨리스는 몇 개의 사과를 가지고 있을까요?"
 - 답변: 1
 
 비슷한 예제, 계산 방법, 그리고 원래의 프롬프트를 포함한 긴 프롬프트를 작성하고, 올바른 답인 1에 도달합니다.
@@ -108,7 +108,7 @@ Chain-of-thought는 매우 강력한 기술임을 알 수 있습니다.
 
     ```text
     {{company}}: {{company_name}}
-    {{products}}: 
+    {{products}}:
     {{products_list}}
     다음 예산과 요구 사항에 따라 보험을 제안해주세요:
     예산: {{budget}}
@@ -121,9 +121,9 @@ Chain-of-thought는 매우 강력한 기술임을 알 수 있습니다.
 
     ```text
     보험 회사: ACME Insurance
-    보험 상품 (월 별 비용): 
+    보험 상품 (월 별 비용):
     - 자동차, 저렴함, 500 USD
-    - 자동차, 비쌈, 1100 USD 
+    - 자동차, 비쌈, 1100 USD
     - 주택, 저렴함, 600 USD
     - 주택, 비쌈, 1200 USD
     - 생명, 저렴함, 100 USD
@@ -139,9 +139,9 @@ Chain-of-thought는 매우 강력한 기술임을 알 수 있습니다.
     , and Life insurance
 
     예산과 요구 사항에 따라 ACME 보험으로부터 다음과 같은 보험 패키지를 제안합니다:
-    - 자동차, 저렴함, 500 USD 
-    - 주택, 저렴함, 600 USD 
-    - 생명, 저렴함, 100 USD 
+    - 자동차, 저렴함, 500 USD
+    - 주택, 저렴함, 600 USD
+    - 생명, 저렴함, 100 USD
     총 비용: $1,200 USD
     ```
 
@@ -149,9 +149,9 @@ Chain-of-thought는 매우 강력한 기술임을 알 수 있습니다.
 
     ```text
     보험 회사: ACME Insurance
-    보험 상품 (월 별 비용): 
+    보험 상품 (월 별 비용):
     - 유형: 자동차, 저렴함, 비용: 500 USD
-    - 유형: 자동차, 비쌈, 비용: 1100 USD 
+    - 유형: 자동차, 비쌈, 비용: 1100 USD
     - 유형: 주택, 저렴함, 비용: 600 USD
     - 유형: 주택, 비쌈, 비용: 1200 USD
     - 유형: 생명, 저렴함, 비용: 100 USD
@@ -206,11 +206,11 @@ AI 답변:
     ```python
     import flask
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return 'Products'
-    
+
     @app.route('/customers')
     def customers():
         return 'Customers'
@@ -222,27 +222,27 @@ AI 답변:
 
     ```text
     물론, 다음은 코드를 개선하기 위한 세 가지 제안입니다:
-    
+
     올바른 모듈을 가져오세요: 첫 번째 줄은 flask 대신에 Flask를 가져와야 합니다. 올바른 import 문은 from flask import Flask여야 합니다.
-    
+
     main 함수를 추가하세요: 파일이 실행될 때 애플리케이션을 실행하기 위해 if __name__ == '__main__': 블록을 파일의 끝에 추가하세요.
-    
+
     f-strings를 사용하세요: route 함수에서 반환문을 포맷팅하기 위해 f-strings를 사용하세요. 예를 들어, return 'Products'를 return f'This is the {request.path} page'로 변경할 수 있습니다.
     ```
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/products')
     def products():
         return f'This is the {request.path} page'
-    
+
     @app.route('/customers')
     def customers():
         return f'This is the {request.path} page'
-    
+
     if __name__ == '__main__':
         app.run()
     ```
@@ -261,7 +261,7 @@ Maieutic prompting은 자기 개선 (Self-refine)과 유사한 기술이지만, 
 
 다음은 예시 프롬프트입니다:
 
-> 프롬프트: 5단계로 팬데믹을 완화하기 위한 위기 대응 계획을 어떻게 작성할 수 있을까요?  
+> 프롬프트: 5단계로 팬데믹을 완화하기 위한 위기 대응 계획을 어떻게 작성할 수 있을까요?
 
 LLM 답변:
 
@@ -279,7 +279,7 @@ LLM 답변:
 
     ```text
     다음은 위험 요소입니다:
-    
+
     - 생명의 손실
     - 사업의 손실
     - 평판의 손실
@@ -313,34 +313,34 @@ LLM은 본질적으로 결정론적이지 않으므로, 동일한 프롬프트�
     # 필요한 라이브러리 가져오기
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 인스턴스 생성
     app = flask.Flask(__name__)
-    
+
     # API를 위한 엔드포인트 생성
     @app.route('/api', methods=['GET'])
     def api():
         # 요청 데이터 가져오기
         data = request.args
-    
+
         # 데이터 처리
         result = process_data(data)
-    
+
         # 결과를 JSON 형식으로 반환
         return jsonify(result)
-    
+
     # 데이터 처리 함수
     def process_data(data):
         # 데이터 처리 수행
         result = data + 1
-    
+
         # 결과 반환
         return result
-    
+
     # 앱 실행
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 동일한 프롬프트를 다시 실행하면 약간 다른 응답이 생성됩니다:
@@ -349,11 +349,11 @@ LLM은 본질적으로 결정론적이지 않으므로, 동일한 프롬프트�
     # 필요한 패키지 가져오기
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 생성
     app = flask.Flask(__name__)
     app.config["DEBUG"] = True
-    
+
     # 책 목록 생성
     books = [
         {'id': 0,
@@ -372,18 +372,18 @@ LLM은 본질적으로 결정론적이지 않으므로, 동일한 프롬프트�
          'first_sentence': 'to wound the autumnal city.',
          'published': '1975'}
     ]
-    
+
     # API를 위한 엔드포인트 생성
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>Books API</h1>
     <p>책을 검색하기 위한 프로토 타입 API입니다.</p>'''
-    
+
     # 모든 책 반환을 위한 엔드포인트 생성
     @app.route('/api/v1/resources/books/all', methods=['GET'])
     def api_all():
         return jsonify(books)
-    
+
     # 단일 책 반환을 위한 엔드포인트 생성
     @app.route('/api/v1/resources/books', methods=['GET'])
     def api_id():
@@ -394,19 +394,19 @@ LLM은 본질적으로 결정론적이지 않으므로, 동일한 프롬프트�
             id = int(request.args['id'])
         else:
             return "오류: ID 필드가 제공되지 않았습니다. ID를 지정해주세요."
-    
+
         # 결과를 저장할 빈 리스트 생성
         results = []
-    
+
         # 데이터를 반복하며 요청된 ID와 일치하는 결과 찾기
         # ID는 고유하지만 다른 필드는 여러 결과를 반환할 수 있음
         for book in books:
             if book['id'] == id:
                 results.append(book)
-    
+
         # Flask의 jsonify 함수를 사용하여 Python 사전의 리스트를 JSON 형식으로 변환
         return jsonify(results)
-    
+
     app.run()
     ```
 
@@ -426,34 +426,34 @@ temperature는 0과 1 사이의 값으로, 0은 가장 결정적이고 1은 가�
     # 필요한 라이브러리 가져오기
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 생성
     app = flask.Flask(__name__)
-    
+
     # API를 위한 엔드포인트 생성
     @app.route('/api/v1/endpoint', methods=['GET'])
     def api_endpoint():
         # 요청 데이터 가져오기
         data = request.get_json()
-    
+
         # 데이터 처리
         result = process_data(data)
-    
+
         # 결과 반환
         return jsonify(result)
-    
+
     # 데이터 처리 함수 정의
     def process_data(data):
         # 데이터 처리
         result = {'result': 'success'}
-    
+
         # 결과 반환
         return result
-    
+
     # Flask 앱 실행
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 프롬프트를 다시 실행하면 다음과 같은 결과가 나옵니다:
@@ -462,34 +462,34 @@ temperature는 0과 1 사이의 값으로, 0은 가장 결정적이고 1은 가�
     # 필요한 라이브러리 가져오기
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 생성
     app = flask.Flask(__name__)
-    
+
     # API를 위한 엔드포인트 생성
     @app.route('/api', methods=['GET'])
     def api_call():
         # 요청 데이터 가져오기
         data = request.get_json()
-        
+
         # 데이터 처리
         result = process_data(data)
-        
+
         # 결과 반환
         return jsonify(result)
-    
+
     # 데이터 처리 함수 정의
     def process_data(data):
         # 데이터 처리
         result = data + 1
-        
+
         # 결과 반환
         return result
-    
+
     # Flask 앱 실행
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 이 두 출력 사이에는 아주 작은 차이만 있습니다. 이번에는 반대로 temperature를 0.9로 설정해 보겠습니다:
@@ -498,34 +498,34 @@ temperature는 0과 1 사이의 값으로, 0은 가장 결정적이고 1은 가�
     # 필요한 라이브러리 가져오기
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 생성
     app = flask.Flask(__name__)
-    
+
     # API를 위한 엔드포인트 생성
     @app.route('/api', methods=['GET'])
     def api_call():
         # 요청 데이터 가져오기
         data = request.args
-    
+
         # 데이터 처리
         result = process_data(data)
-    
+
         # 결과 반환
         return jsonify(result)
-    
+
     # 데이터 처리 함수 정의
     def process_data(data):
         # 데이터 처리
         result = data + 1
-    
+
         # 결과 반환
         return result
-    
+
     # Flask 앱 실행
     if __name__ == '__main__':
         app.run()
-    
+
     ```
 
 그리고 temperature 값을 0.9로 설정한 두 번째 시도:
@@ -533,25 +533,25 @@ temperature는 0과 1 사이의 값으로, 0은 가장 결정적이고 1은 가�
     ```python
     import flask
     from flask import request, jsonify
-    
+
     # Flask 앱 생성
     app = flask.Flask(__name__)
     app.config['DEBUG'] = True
-    
+
     # 테스트 데이터 생성
     books = [
         {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
         {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
         {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
     ]
-    
+
     # 엔드포인트 생성
     @app.route('/', methods=['GET'])
     def home():
         return '''<h1>도서 API에 오신 것을 환영합니다!</h1>'''
-    
+
     @app.route('/api/v1/resources/books
-    
+
     ```
 
 보시다시피, 결과는 매우 다양합니다.
@@ -578,14 +578,14 @@ temperature는 0과 1 사이의 값으로, 0은 가장 결정적이고 1은 가�
 
     ```python
     from flask import Flask, request
-    
+
     app = Flask(__name__)
-    
+
     @app.route('/')
     def hello():
         name = request.args.get('name', 'World')
         return f'Hello, {name}!'
-    
+
     if __name__ == '__main__':
         app.run()
     ```

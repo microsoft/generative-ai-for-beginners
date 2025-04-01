@@ -1,0 +1,10 @@
+name: dev
+channels:
+ - defaults
+dependencies:
+- python=3.10.0
+- openai
+- python-dotenv
+- pip
+- pip:
+  - azure-ai-inference

@@ -1,14 +1,14 @@
 from openai import AzureOpenAI
 import os
-import dotenv
+from dotenv import load_dotenv
 
-# import dotenv
-dotenv.load_dotenv()
+# load environment variables from .env file
+load_dotenv()
 
 # configure Azure OpenAI service client 
 client = AzureOpenAI(
   azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
-  api_key=os.environ['AZURE_OPENAI_KEY'],  
+  api_key=os.environ['AZURE_OPENAI_API_KEY'],  
   api_version = "2023-10-01-preview"
   )
 

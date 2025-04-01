@@ -1,6 +1,6 @@
 # ローコード AI アプリケーションの構築
 
-[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=170c6cb7-3c96-40f2-a354-b6f0ec523de7?WT.mc_id=academic-105485-yoterada)
+[![Building Low Code AI Applications](../../images/10-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 
@@ -71,7 +71,7 @@ Power Automate における Copilot AI アシスタント機能を利用する�
 
 スタートアップは、学生にオンラインコースを提供しています。スタートアップは急速に成長し、そのコースの需要に対応するのが難しくなっています。スタートアップはあなたを Power Platform 開発者として新たに採用し、学生の課題と請求書を管理するためのローコードソリューションを構築するように依頼しました。そのソリューションは、アプリを通じて学生の課題の追跡と管理を行い、ワークフローを通じて請求処理のプロセスを自動化するのに役立ちます。あなたは、ソリューションを開発するために生成 AI を使用するように指示されています。
 
-Copilot を使い始める際には、[Power Platform Copilot Prompt Library](https://pnp.github.io/powerplatform-prompts/?WT.mc_id=academic-109639yoterada) を使用して、プロンプトを使い始めます。このライブラリには Copilot と共に、アプリやフローを作成するためのプロンプトのリストが含まれています。また、ライブラリ内のプロンプトを使用して、Copilot に対して要件をどのように説明できるのかといったアイデアを得られます。
+Copilot を使い始める際には、[Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639yoterada) を使用して、プロンプトを使い始めます。このライブラリには Copilot と共に、アプリやフローを作成するためのプロンプトのリストが含まれています。また、ライブラリ内のプロンプトを使用して、Copilot に対して要件をどのように説明できるのかといったアイデアを得られます。
 
 ### スタートアップによる学生課題追跡アプリの構築
 

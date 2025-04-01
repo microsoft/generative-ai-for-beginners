@@ -1,6 +1,6 @@
 # 第七章：创建聊天应用
 
-[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=57a31949-67c5-4020-8c85-91e4995589f3?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](../../images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(点击该图片看本章导学视频)_
 
@@ -60,7 +60,7 @@
 - **更容易维护**：更新和改进更易于管理，因为大多数 API 和 SDK 在发布新版本时只需要更新库。
 - **获得尖端技术**：利用经过微调和在广泛数据集上训练的模型为您的应用程序提供自然语言功能。
 
-访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 kwy 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
+访问 SDK 或 API 的功能通常涉及获取使用所提供服务的许可，这通常是通过使用唯一 key 或身份验证 token 来实现的。 我们将使用 OpenAI Python library 来探索它是什么样子。 您也可以在本章的[notebook](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 中自行尝试。
 
 ```python
 import os

@@ -1,6 +1,6 @@
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-<!-- ![chapter image](./images/) -->
+[![Retrieval Augmented Generation (RAG) and Vector Databases](./images/15-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)
 
 In the search applications lesson, we briefly learned how to integrate your own data into Large Language Models (LLMs). In this lesson, we will delve further into the concepts of grounding your data in your LLM application, the mechanics of the process and the methods for storing data, including both embeddings and text.
 
@@ -123,7 +123,7 @@ An example of embedded text using OpenAI's `text-embedding-ada-002` model is:
 
 ## Retrieval and Vector Search
 
-When a user asks a question, the retriever transforms it into a vector using the query encoder, it then searches the through our document search index for relevant vectors in the document that are related to the input. Once done, it converts both the input vector and document vectors into text and passes it through the LLM.
+When a user asks a question, the retriever transforms it into a vector using the query encoder, it then searches through our document search index for relevant vectors in the document that are related to the input. Once done, it converts both the input vector and document vectors into text and passes it through the LLM.
 
 ### Retrieval
 
@@ -207,7 +207,7 @@ def chatbot(user_input):
 
     # create a message object
     messages=[
-        {"role": "system", "content": "You are an AI assiatant that helps with AI questions."},
+        {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
         {"role": "user", "content": history[-1]}
     ]
 
@@ -236,7 +236,7 @@ chatbot(user_input)
 
 - Fluency - whether the response makes sense grammatically
 
-## Use Cases for using RAG (Retervival Augmented Generation) and vector databases
+## Use Cases for using RAG (Retrieval Augmented Generation) and vector databases
 
 There are many different use cases where function calls can improve your app like:
 

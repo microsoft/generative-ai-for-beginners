@@ -92,7 +92,7 @@ def split_text(text, max_length, min_length):
 ```
 一旦完成分块，我们就可以使用不同的嵌入模型来嵌入我们的文本。您可以使用的一些模型包括word2vec、OpenAI的ada-002、Azure Computer Vision等。选择使用哪个模型将取决于您使用的语言、编码的内容类型（文本/图像/音频）、它可以编码的输入大小以及嵌入输出的长度。
 
-使用OpenAI的`text-embedding-ada-002`模型嵌入文本的示例是：![嵌入单词cat的示例](images/cat.png?WT.mc_id=academic-105485-koreyst)
+使用OpenAI的`text-embedding-ada-002`模型嵌入文本的示例是：![嵌入单词cat的示例](../../images/cat.png?WT.mc_id=academic-105485-koreyst)
 
 ## 检索和向量搜索
 

@@ -22,6 +22,9 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+  "@azure-rest/ai-inference": "latest",
+  "@azure/core-auth": "latest",
+  "@azure/core-sse": "latest",
     "@azure/openai": "^1.0.0-beta.10",
     "dotenv": "^16.3.1",
     "rimraf": "^5.0.5"

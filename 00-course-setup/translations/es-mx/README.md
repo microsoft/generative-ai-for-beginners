@@ -72,7 +72,7 @@ si encuentras algún problema.
 ### Usando Visual Studio Code con la Extensión de Python
 
 
-Probablemente la mejor manera de usar el plan de estudios sea abrirlo en [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) con [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
+Probablemente la mejor manera de usar el plan de estudios sea abrirlo en [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) con [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst).
 
 > **Nota**: Una vez que clones y abras el directorio en VS Code, automáticamente te sugerirá instalar las extensiones de Python. También tendrás que instalar Miniconda como se describe arriba.
 
@@ -118,7 +118,7 @@ Si es la primera vez que trabajas con el servicio Azure OpenAI, por favor sigue 
 
 Hemos creado canales en nuestro oficial [Servidor de Discord de la Comunidad de IA](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para conocer a otros estudiantes. Esta es una excelente manera de conectarte con otros emprendedores, creadores, estudiantes y cualquier persona interesada en avanzar en el campo de la Inteligencia Artificial Generativa.
 
-[![Unete al canal de Discord](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Unete al canal de Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 El equipo del proyecto también estará en este servidor de Discord para ayudar a cualquier estudiante.
 

@@ -1,8 +1,6 @@
 # 第九章：构建图像生成应用
 
-[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](TBD)
-
-> **导学视频敬请期待**
+[![Building Image Generation Applications](../../images/09-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 LLMs 不仅仅是文本生成。 还可以根据文本描述生成图像。 将图像作为一种模式在医疗科技、建筑、旅游、游戏开发等许多领域非常有用。 在本章中，我们将研究两种最流行的图像生成模型：DALL-E 和 Midjourney。
 
@@ -86,7 +84,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_KEY=<your key>
+   AZURE_OPENAI_API_KEY=<your key>
    ```
 
    在 Azure 门户中的 "Keys and Endpoint" 部分中找到资源的此信息。
@@ -129,7 +127,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
 
    # Get endpoint and key from environment variables
    openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-   openai.api_key = os.environ['AZURE_OPENAI_KEY']
+   openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
    # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
    openai.api_version = '2023-06-01-preview'
@@ -165,7 +163,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
        image.show()
 
    # catch exceptions
-   except openai.error.InvalidRequestError as err:
+   except openai.InvalidRequestError as err:
        print(err)
 
    ```
@@ -194,7 +192,7 @@ _图片来源维基百科，图片由 Midjourney 生成_
   ```python
   # Get endpoint and key from environment variables
   openai.api_base = os.environ['AZURE_OPENAI_ENDPOINT']
-  openai.api_key = os.environ['AZURE_OPENAI_KEY']
+  openai.api_key = os.environ['AZURE_OPENAI_API_KEY']
 
   # add version and type, Azure specific
   openai.api_version = '2023-06-01-preview'
@@ -460,7 +458,7 @@ try:
     image.show()
 
 # catch exceptions
-except openai.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 ```
 

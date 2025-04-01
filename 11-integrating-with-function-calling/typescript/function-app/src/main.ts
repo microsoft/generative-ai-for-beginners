@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const endpoint = process.env.AZURE_OPENAI_ENDPOINT || "";
-const azureApiKey = process.env.AZURE_OPENAI_KEY || "";
+const azureApiKey = process.env.AZURE_OPENAI_API_KEY || "";
 const bingMapsBaseUrl = process.env.BING_MAPS_BASE_URL || "";
 const bingApiKey = process.env.BING_API_KEY || "";
 

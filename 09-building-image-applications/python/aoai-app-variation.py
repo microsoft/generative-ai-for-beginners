@@ -10,7 +10,7 @@ dotenv.load_dotenv()
 
 # Get endpoint and key from environment variables
 client = AzureOpenAI(
-  api_key=os.environ['AZURE_OPENAI_KEY'],  # this is also the default, it can be omitted
+  api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
   api_version = "2023-12-01-preview",
   azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
   )
@@ -49,7 +49,7 @@ try:
     # Display the image in the default image viewer
     image = Image.open(image_path)
     image.show()
-#except openai.error.InvalidRequestError as err:
+#except openai.InvalidRequestError as err:
 #    print(err)
     
 finally:

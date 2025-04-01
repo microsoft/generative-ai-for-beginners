@@ -1,6 +1,6 @@
 # 生成 AI を利用したチャット・アプリケーションの構築
 
-[![Building Generative AI-Powered Chat Applications](../..//images/07-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=57a31949-67c5-4020-8c85-91e4995589f3?WT.mc_id=academic-105485-yoterada)
+[![Building Generative AI-Powered Chat Applications](../..//images/07-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 

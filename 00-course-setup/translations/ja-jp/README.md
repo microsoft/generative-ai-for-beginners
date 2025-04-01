@@ -72,7 +72,7 @@ conda activate ai4beg
 
 ### Python の拡張機能をインストールした Visual Studio Code の使用
 
-このカリキュラムを進める際には、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)をインストールした [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) の使用を特にお勧めします。
+このカリキュラムを進める際には、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-yoterada)をインストールした [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-105485-yoterada) の使用を特にお勧めします。
 
 > **ご注意**: クローンした後、VS Code でディレクトリを開くと、自動的に Python 拡張機能のインストールが提案されます。上記で説明したように miniconda もインストールしてください。
 
@@ -118,7 +118,7 @@ GitHub Codespaces を使用して API キーを安全に管理するためには
 
 他の学習者と交流できるように、私たちは[公式の AI Discord サーバー](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)にチャンネルを作成しました。生成 AI の技術を向上したいと考える他の方々、たとえば、志の同じ起業家、開発者、学生、そして、どなたとでも交流していただく事が可能です。  
 
-[![Discord チャンネルに参加](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)
+[![Discord チャンネルに参加](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-yoterada)
 
 このプロジェクトを開発したチーム・メンバーも、この Discord サーバーに参加し学習者を支援しています。  
 

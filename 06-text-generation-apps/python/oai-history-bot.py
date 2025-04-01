@@ -1,9 +1,9 @@
 from openai import OpenAI
 import os
-import dotenv
+from dotenv import load_dotenv
 
-# import dotenv
-dotenv.load_dotenv()
+# load environment variables from .env file
+load_dotenv()
 
 # configure Azure OpenAI service client 
 client = OpenAI()

@@ -1,3 +1,5 @@
+[![Open Source Models](./images/17-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+
 ## Introduction
 
 AI Agents represent an exciting development in Generative AI, enabling Large Language Models (LLMs) to evolve from assistants into agents capable of taking actions. AI Agent frameworks enable developers to create applications that give LLMs access to tools and state management. These frameworks also enhance visibility, allowing users and developers to monitor the actions planned by LLMs, thereby improving experience management.
@@ -28,7 +30,7 @@ Let's define these terms:
 
 **Large Language Models** - These are the models referred throughout this course such as GPT-3.5, GPT-4, Llama-2, etc.
 
-**State** - This refers to the context that the LLM is working in. The LLM uses the context of its past actions and the current context, guiding its decision-making for subsequent actions.. AI Agent Frameworks allow developers to maintain this context easier.
+**State** - This refers to the context that the LLM is working in. The LLM uses the context of its past actions and the current context, guiding its decision-making for subsequent actions. AI Agent Frameworks allow developers to maintain this context easier.
 
 **Tools** - To complete the task that the user has requested and that the LLM has planned out, the LLM needs access to tools. Some examples of tools can be a database, an API, an external application or even another LLM!
 
@@ -36,7 +38,7 @@ These definitions will hopefully give you a good grounding going forward as we l
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/modules/agents/?WT.mc_id=academic-105485-koreyst) is an implementation of the definitions we provided above.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) is an implementation of the definitions we provided above.
 
 To manage the **state** , it uses a built-in function called the `AgentExecutor`. This accepts the defined `agent` and the `tools` that are available to it.
 

@@ -1,6 +1,6 @@
 # さまざまな LLM の調査と比較
 
-[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=36c6795a-e63c-46dd-8d69-df8bbe6e7bc9?WT.mc_id=academic-105485-yoterada)
+[![Exploring and comparing different LLMs](../../images/02-lesson-banner.png?WT.mc_id=academic-105485-yoterada)](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(上記の画像をクリックすると、レッスン・ビデオを表示します)_
 
@@ -62,7 +62,7 @@ LLM モデルには、さまざまな種類があり、どのモデルを選択�
 
 大規模言語モデル（LLM）を分類する別の方法として、それがオープンソースなのか、もしくはプロプライエタリな物なのか、という観点もあります。
 
-オープンソース・モデルは、一般に公開され、誰でも利用できるモデルです。これらは多くの場合、そのモデルを開発した企業や研究コミュニティによって提供されます。これらのモデルは、LLM の様々な用途に合わせて検証、変更、カスタマイズの許可がされています。しかし、常に本番環境での利用に最適化されているわけではなく、プロプライエタリモデルほど高いパフォーマンスを発揮しない場合もあります。さらに、オープンソース・モデルの資金調達は限られており、長期的に継続できない可能性や、最新の研究に基づいて更新されていない可能性もあります。[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-yoterada)、[Bloom](https://sapling.ai/llm/bloom?WT.mc_id=academic-105485-yoterada)、[LLaMA](https://sapling.ai/llm/llama?WT.mc_id=academic-105485-yoterada) などが人気のオープンソース・モデルの例です。
+オープンソース・モデルは、一般に公開され、誰でも利用できるモデルです。これらは多くの場合、そのモデルを開発した企業や研究コミュニティによって提供されます。これらのモデルは、LLM の様々な用途に合わせて検証、変更、カスタマイズの許可がされています。しかし、常に本番環境での利用に最適化されているわけではなく、プロプライエタリモデルほど高いパフォーマンスを発揮しない場合もあります。さらに、オープンソース・モデルの資金調達は限られており、長期的に継続できない可能性や、最新の研究に基づいて更新されていない可能性もあります。[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-yoterada)、[Bloom](https://huggingface.co/bigscience/bloom)、[LLaMA](https://llama.meta.com) などが人気のオープンソース・モデルの例です。
 
 プロプライエタリ・モデルは、企業が所有し一般には公開されていないモデルです。これらのモデルは、通常本番環境での利用に最適化されています。しかし異なるユースケースに対して、検証、変更、カスタマイズは許可されていません。また、常に無料で利用できるわけではなく、利用するためには、サブスクリプション等による支払いが必要な場合もあります。さらに、利用者はモデルをトレーニングする際に使用するデータをコントロールできず、データのプライバシーや、責任ある AI の原則に基づく使用をモデル・プロバイダが保証しているのを信用しなければなりません。[OpenAI のモデル](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-yoterada)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-yoterada)、[Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-yoterada) などが人気のプロプライエタリ・モデルです。
 

@@ -39,7 +39,7 @@ conda activate ai4beg
 
 ### 使用 Visual Studio Code Python 插件
 
-学习本课程，建议使用 [Visual Studio Code](http://code.visualstudio.com/?WT.mc_id=academic-77998-bethanycheum) 的 [Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-77998-bethanycheum).
+学习本课程，建议使用 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77998-bethanycheum) 的 [Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-77998-bethanycheum).
 
 > **注意**：在 VS Code 中克隆并打开该目录后，会自动建议您安装 Python 插件。 还必须如上所述要求安装 miniconda。
 
@@ -82,7 +82,7 @@ jupyterhub
 
 我们在官方 [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) 中创建了学习频道，用于结识其他学习者。 这是与其他志同道合的企业家、学生以及任何希望在生成式人工智能领域提升水平的人建立联系的方式。
 
-[![加入 Discord 频道](https://dcbadge.vercel.app/api/server/ByRwuEEgH4?WT.mc_id=academic-105485-koreyst)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![加入 Discord 频道](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 项目团队也将在这个 Discord server 上为任何学习者提供帮助。
 

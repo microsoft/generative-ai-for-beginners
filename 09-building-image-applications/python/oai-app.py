@@ -6,7 +6,6 @@ import dotenv
 
 # import dotenv
 dotenv.load_dotenv()
-
  
 client = OpenAI()
 
@@ -42,7 +41,7 @@ try:
     image.show()
 
 # catch exceptions
-except client.error.InvalidRequestError as err:
+except openai.InvalidRequestError as err:
     print(err)
 
 # ---creating variation below---

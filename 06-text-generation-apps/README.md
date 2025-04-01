@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=bf3f3528-9871-4628-8616-b4b03cb23dcd?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -192,7 +192,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
    messages = [{"role": "user", "content": prompt}]
 
    # make completion
-   completion = client.chat.completions.create(model=deployment, messages=messages)
+   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
 
    # print response
    print(completion.choices[0].message.content)
@@ -399,9 +399,9 @@ Now that we have played out a scenario, let's write code to match the demonstrat
 1. Let's change the code in the following way:
 
    ```python
-   no_recipes = input("No of recipes (for example, 5: ")
+   no_recipes = input("No of recipes (for example, 5): ")
 
-   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
    # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
@@ -410,8 +410,8 @@ Now that we have played out a scenario, let's write code to match the demonstrat
    Taking the code for a test run, could look like this:
 
    ```output
-   No of recipes (for example, 5: 3
-   List of ingredients (for example, chicken, potatoes, and carrots: milk,strawberries
+   No of recipes (for example, 5): 3
+   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
 
    -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
    -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
@@ -427,7 +427,7 @@ To further improve it, we want to add the following:
 - **Filter out ingredients**. We want to be able to filter out ingredients we don't like or are allergic to. To accomplish this change, we can edit our existing prompt and add a filter condition to the end of it like so:
 
   ```python
-  filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
 
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
@@ -437,9 +437,9 @@ To further improve it, we want to add the following:
   An example input of running the program can now look like so:
 
   ```output
-  No of recipes (for example, 5: 3
-  List of ingredients (for example, chicken, potatoes, and carrots: onion,milk
-  Filter (for example, vegetarian, vegan, or gluten-free: no milk
+  No of recipes (for example, 5): 3
+  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free): no milk
 
   1. French Onion Soup
 
@@ -539,9 +539,9 @@ To further improve it, we want to add the following:
      Taking this code for a spin, we now arrive at the following output:
 
      ```output
-     No of recipes (for example, 5: 2
-     List of ingredients (for example, chicken, potatoes, and carrots: apple,flour
-     Filter (for example, vegetarian, vegan, or gluten-free: sugar
+     No of recipes (for example, 5): 2
+     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free): sugar
 
 
      -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
