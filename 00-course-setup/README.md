@@ -40,7 +40,7 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add th
 
    Windows:
    ```cmd
-   echo. > .env
+   echo . > .env
    ```
 
 3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following line to the file, replacing `your_github_token_here` with your actual GitHub token:
