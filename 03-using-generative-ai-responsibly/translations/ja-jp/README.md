@@ -134,7 +134,7 @@ AI モデルとその出力によって引き起こされる、潜在的な問�
 
 A: 2 と 3 が正解です。責任ある AI を導入し、害を及ぼす可能性のある影響や偏見をどのように緩和できるか、さらにその他のさまざまな問題について考える手助けにもなります。
 
-## 🚀 Challenge
+## 🚀 チャレンジ
 
 [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-yoterada) について調べ、ご自身の用途に適用できるかご検討ください。
 
