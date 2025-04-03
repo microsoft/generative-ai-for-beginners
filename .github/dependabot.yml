@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # For Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/" # Location of the requirements.txt file
+    schedule:
+      interval: "weekly"
+
+  # For Node.js dependencies
+  - package-ecosystem: "npm"
+    directory: "/" # Location of the package.json file
+    schedule:
+      interval: "weekly"
+
+  # Optional: For GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of the .github/workflows directory
+    schedule:
+      interval: "weekly"
