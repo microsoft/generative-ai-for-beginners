@@ -1,0 +1,264 @@
+[33m22a488e[m[33m ([m[1;36mHEAD -> [m[1;32mPeter[m[33m)[m Vietnamese language
+[33m81d66f7[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #716 from angpt/setup-readme-patch
+[33m1c8b84c[m Merge pull request #715 from sxdleroy/main
+[33m1a7d03a[m Merge pull request #705 from erencanbas/main
+[33mb29f3e5[m Merge pull request #704 from jun216tee/main
+[33mf1899b9[m Update README.md
+[33m5c44227[m Update README.md
+[33m72dcdca[m Update README.md
+[33m65c46ac[m Merge pull request #706 from angpt/setup-readme-patch
+[33m928f88e[m Updating setup documentation
+[33m7695428[m feat: course 4  readme.md turkish version added
+[33m3294cdd[m feat: course 3 readme.md turkish version added
+[33m24e5a5d[m feat: course 2 readme.md turkish versions added
+[33m38471c3[m feat: course setup.md and readme.md turkish versions added
+[33mb5d9d4c[m Update README.md
+[33m7cfd809[m Update README.md
+[33mcec44a9[m Merge pull request #702 from microsoft/softchris-patch-1
+[33m43864c4[m Update README.md
+[33m4ece3a5[m introduction to genai readme turkish translation
+[33m04a7104[m fix: img urls
+[33mb1dad04[m fix: image urls
+[33mab73186[m fix: image urls
+[33m8345df6[m course setup turkish translation
+[33m398a59b[m Merge pull request #694 from jun216tee/main
+[33m44abe37[m Merge pull request #699 from erencanbas/main
+[33m187cb18[m Merge pull request #672 from Wingless-Archangel/main
+[33mb97b9e7[m Merge pull request #700 from predator4hack/fix_env
+[33mc157409[m Update README.md
+[33md1762a3[m Update README.md
+[33mee3933e[m Merge branch 'microsoft:main' into main
+[33m3a5b52a[m Merge pull request #698 from dbsectrainer/fix-function-calling-docs
+[33ma7e1230[m Fixed the environment.yml file: added microsoft channel and pip for installing azure-ai-ml
+[33m0979a52[m Added Turkish translations for course and resources list
+[33m5b722f7[m Fix grammatical errors and clarify function calling documentation in oai-assignment.ipynb (fixes #689)
+[33m8ed21db[m Update README.md
+[33ma1494ba[m Update README.md
+[33m771b026[m Update README.md
+[33m5a80961[m Update README.md
+[33mfd029ff[m Merge pull request #693 from microsoft/leestott-patch-2
+[33m2d6c393[m Update README.md
+[33mb63fb7f[m Merge pull request #688 from jun216tee/main
+[33m0356e61[m Merge pull request #691 from ykoh42/main
+[33m85d0284[m docs: fix broken image path in translations/ko/README.md
+[33ma9d520d[m fix(python): fix module error
+[33m2ba317e[m Update README.md
+[33me16e4d7[m Update README.md
+[33m373d322[m Update README.md
+[33m325de82[m Merge pull request #676 from FacerAin/main
+[33m3284f42[m Update README.md
+[33m41d049d[m Merge pull request #678 from maximevtush/patch-1
+[33mdda99aa[m Merge pull request #687 from microsoft/dependabot/npm_and_yarn/06-text-generation-apps/typescript/recipe-app/cross-spawn-7.0.6
+[33m357d57c[m Bump cross-spawn in /06-text-generation-apps/typescript/recipe-app
+[33m081de17[m Merge pull request #686 from microsoft/dependabot/npm_and_yarn/multi-e9e5c8b3b5
+[33mf1343b9[m Bump dompurify, docsify and docsify-server-renderer
+[33mfc1c478[m Merge pull request #685 from microsoft/dependabot/npm_and_yarn/07-building-chat-applications/typescript/chat-completions-app/cross-spawn-7.0.6
+[33m3405865[m Merge pull request #670 from Saibernard/main
+[33m3c1675c[m Merge pull request #684 from microsoft/leestott-patch-1
+[33md4337c8[m Bump cross-spawn
+[33m43cda59[m Add new Generative AI course link
+[33m527c4ff[m Merge pull request #668 from yourowndisaster09/patch-1
+[33m58dbde0[m Update README.md
+[33mbbdcf1b[m Merge pull request #683 from microsoft/mbaiza27-patch-1
+[33mbc4c00f[m Update README.md
+[33m3746114[m Update README.md
+[33m4702230[m Update aoai-assignment.ipynb
+[33m08c9fba[m docs: fix broken links for korean
+[33meb14763[m docs: fix README broken links for korean translation
+[33m99266ea[m docs: fix README for korean translations
+[33me96917f[m docs: minor README update for korean
+[33mafd706a[m docs: update README for korean
+[33mc7ad838[m docs: add navbar item for korean translation
+[33m49266e1[m Merge pull request #663 from john0isaac/fix-vscode-urls
+[33mc4d07e3[m Merge pull request #662 from shaymolcho/main
+[33m1499963[m edited the code for first text generation app - had minor errors
+[33m1f5355b[m Update devcontainer.json
+[33m925d6a2[m use https instead of http for vscode urls
+[33m68432d5[m Removed unnecessary period for consistency
+[33m3033072[m Merge pull request #658 from CrazyAILearner/main
+[33mb39aae2[m Merge pull request #660 from iamarunbrahma/fix/wandb_broken_link
+[33m5b49380[m Update fine-tuning resources in RESOURCES.md and translations, correcting URLs and enhancing descriptions for clarity and consistency.
+[33mb7730f1[m update finetuning url in RESOURCES.md
+[33m5d13158[m update RESOURCES.md
+[33mb8092c4[m revert azure openai finetuning link change
+[33md266063[m update RESOURCES.md
+[33m0d49fa0[m Merge pull request #644 from microsoft/dependabot/npm_and_yarn/11-integrating-with-function-calling/typescript/function-app/cross-spawn-7.0.6
+[33mc32cdf4[m Merge pull request #643 from microsoft/dependabot/npm_and_yarn/09-building-image-applications/typescript/image-generation-app/cross-spawn-7.0.6
+[33m31064aa[m Merge pull request #659 from bmerkle/main
+[33me137107[m Merge pull request #657 from ChromaticRanger/patch-1
+[33m5461341[m Merge pull request #655 from priyanksonis/main
+[33maddcbea[m Merge pull request #654 from lapellaniz/fix/ch09-remove-aoai0imagevar
+[33m9ddf79f[m Merge pull request #652 from peterhauke/patch-1
+[33m0e1d265[m Merge pull request #650 from hyoshioka0128/patch-18
+[33ma0c05ee[m Merge pull request #648 from bmerkle/fix647OpenAI
+[33m5c84b00[m Merge branch 'microsoft:main' into main
+[33mb722b01[m Update environment.yml
+[33mb672ee6[m Update README.md
+[33ma3d7dea[m Update README.md
+[33mdacfbd0[m cleanup
+[33mf9c986f[m removed code only supported in OpenAI.
+[33m0cf22b5[m Add missing article (an approach) and make minor edits
+[33mf76029b[m Update aoai-assignment.ipynb (Typo "Azure Open AI"→"Azure OpenAI")
+[33mc7e5375[m Merge pull request #649 from john0isaac/fix-sec-issue
+[33m37b447e[m Security Update with Bug Fixes
+[33mb191c57[m - oia examples only contain OpenAI imports+calls - use dotenv in consistent way
+[33ma76f94e[m Merge pull request #635 from shahpreetk/fix-broken-links
+[33me61bf8a[m changes to the langchain links
+[33mf6ea1cf[m Merge branch 'main' into pr/635
+[33ma353e16[m Merge pull request #639 from 2024-OpenSW-OpenCode/add-ko-translations-19-21
+[33m6b28dbc[m Bump cross-spawn
+[33m94b4e65[m Merge pull request #640 from poemDead/update-cn-translation-for-v3
+[33m37fb848[m Bump cross-spawn
+[33ma5810d2[m Merge pull request #641 from bmerkle/fix-for-592
+[33md66699d[m Merge pull request #642 from 2024-OpenSW-OpenCode/fix-typos
+[33m82f5290[m fix typos
+[33m3f6d707[m added requirements.txt for easy pip deployment
+[33mbe10bf0[m Trigger Github Actions
+[33m0db0597[m fix: replace URL with archive.org link to bypass false broken URL checks
+[33m3ad39a8[m Replace broke link - langchain agents
+[33m2f9021d[m Replace Broken links for langchain prompt template link
+[33m1d5b854[m add folder and empty readme files for futher translation
+[33mac2b3dd[m Update top page CN translation from version 1 to version 3
+[33me3a279a[m Update 19 Lecture ko README.md
+[33mb762d3c[m Merge pull request #634 from shahpreetk/fix-closing-brackets
+[33me089efc[m Add ko translations
+[33mca53911[m Delete 21-meta/21-meta directory
+[33mcf48b54[m Add 19 Lecture ko translations
+[33m0db51ac[m 21 Lecture Translated
+[33m25502d2[m Add ko translations
+[33md3e4e3d[m Add ko translations
+[33mdf76b9e[m fix: reverting change of link
+[33m3ec8855[m fix: remove unwanted changes and params
+[33m3c57ca1[m fix: updated translation URLs
+[33m61d79f1[m fix: updated dcbadge discord URLs
+[33mfd30824[m fix: fixed microsoft URLs
+[33mb978b96[m fix: corrected links that have moved
+[33m7190c54[m fix: added missing closing brackets
+[33m7256782[m Merge pull request #629 from shiftpx/fix/chapter-1-image-list-indent
+[33maa38f48[m docs(chapter-1): Fix broken image URL and list indentation
+[33mb8c62ea[m Merge pull request #610 from zkewal/patch-1
+[33mb5d6e40[m Merge pull request #608 from bmerkle/fix#chapter21#jupyternotebook
+[33mfc8887d[m Merge pull request #606 from bmerkle/patch-8
+[33mae15a37[m Merge pull request #604 from bmerkle/bmerkle-patch-1
+[33m8fc097c[m Merge pull request #607 from bmerkle/patch-9
+[33m4f243ae[m fix: correct readme for meta models description
+[33mad71b7c[m - fixed text layout for lama model variants - added necessary pip install commands
+[33m8268fac[m Update README.md
+[33mbd9ad87[m Update README.md
+[33mb3d8bc0[m Update README.md
+[33m282ea17[m Update README.md
+[33me63e64a[m Add files via upload
+[33md743f7f[m Add files via upload
+[33mdefb0b5[m Merge pull request #603 from microsoft/koreyspace-patch-5
+[33me4b8dbe[m Update README.md
+[33m094588b[m Merge pull request #598 from skasturi/main
+[33m19ff579[m add meta lesson
+[33m8e37099[m added meta lesson
+[33m078a44d[m Merge pull request #602 from microsoft/koreyspace-patch-4
+[33m4e14462[m Update README.md
+[33m05ba502[m Merge pull request #601 from koreyspace/main
+[33meab8271[m cleaned up readme
+[33m6c8454a[m Added Mistral Lesson
+[33mcca75e2[m added mistral sample
+[33m4d96f21[m Merge pull request #586 from kinfey/main
+[33m75d82cc[m Add pip dep, azure-ai-inference
+[33mfe0fdb9[m Merge pull request #596 from koreyspace/main
+[33m3d3daf2[m added function calling gh models lesson
+[33m1aa9b15[m adding search applications app
+[33md070296[m added the chat appilication lesson
+[33m72c03ab[m added an app.js for lesson 6
+[33mc5a520d[m recipe-testjs
+[33m8139eff[m Merge pull request #595 from microsoft/dependabot/npm_and_yarn/11-integrating-with-function-calling/typescript/function-app/braces-3.0.3
+[33mb510fb8[m Merge pull request #590 from bmerkle/fix#589
+[33m3290089[m Merge pull request #588 from bmerkle/fix#587
+[33m2cffd5b[m Merge pull request #584 from bmerkle/patch-7
+[33m5920c91[m Merge pull request #583 from bmerkle/patch-6
+[33md4a9e7f[m Merge pull request #577 from bmerkle/Fix#542
+[33m20d9fb0[m Bump braces
+[33mcf0981e[m Merge pull request #571 from microsoft/dependabot/npm_and_yarn/11-integrating-with-function-calling/typescript/function-app/axios-1.7.4
+[33mfffe4fe[m Merge pull request #539 from microsoft/dependabot/npm_and_yarn/08-building-search-applications/typescript/search-app/braces-3.0.3
+[33m0fbf712[m Merge pull request #570 from ryubidragonfire/ryubidragonfire/04
+[33m5a0e222[m Merge pull request #558 from omahs/patch-1
+[33m6f9b722[m Merge pull request #557 from hyoshioka0128/patch-16
+[33mb4712cc[m Merge pull request #564 from lucasm/main
+[33m3cc3003[m reverted metadatachanges
+[33mfe6b547[m removed copilot generated cell
+[33m1ecbe52[m documentation improvements for githubmodels-assignment.ipynb fix#589
+[33me877f9b[m Merge branch 'main' of https://github.com/bmerkle/generative-ai-for-beginners
+[33mff23d07[m Merge branch 'microsoft:main' into main
+[33m7a1030c[m fix issue 587: list index out of range
+[33mb3f5b23[m Merge pull request #582 from bmerkle/patch-5
+[33mc3e5457[m Merge pull request #581 from bmerkle/patch-4
+[33m7c8ae42[m Merge pull request #578 from bmerkle/Fix#540
+[33m0d87cd7[m Merge pull request #580 from bmerkle/patch-3
+[33mc1f1da5[m Merge pull request #579 from bmerkle/patch-2
+[33m6581745[m Update README.md
+[33m6ace5fb[m fixed link in SLM content
+[33md853b65[m add slm content
+[33m342d9cb[m Merge branch 'Fix#542'
+[33m88fb41f[m Fix#542: improve PS Script, Move-Item -Force if file is already there
+[33macce990[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33mb14f807[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33mb3d0ad2[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33m6365b4f[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33md0b4677[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33m1cf32cc[m fix for https://github.com/microsoft/generative-ai-for-beginners/issues/574
+[33m1943d80[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33mbda8ada[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33mf857c60[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33m6950dd3[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33meb44d6c[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33m7686fc8[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33mda5db8d[m Fix#540: Renamed AZURE_OPENAI_KEY to AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33m80c935a[m Fix#540: Renamed AZURE_OPENAI_KEY to  AZURE_OPENAI_API_KEY to use a consistent naming schema
+[33m21e7547[m Fix#542: unified environment handling with other samples. Always load .env file and not rely on env-variable only. Added prepare_transcript_ai_show scripts for powershell and cmd
+[33m442f866[m Bump axios
+[33m9b579dc[m Merge pull request #560 from ryubidragonfire/chyam/06
+[33m3d34a09[m correct documentation
+[33ma0e94d6[m Merge pull request #565 from hyoshioka0128/patch-17
+[33m417991f[m Merge pull request #566 from anxsec/patch-1
+[33m81c63eb[m Merge pull request #567 from ryubidragonfire/ryubidragonfire/04
+[33m444d61f[m Merge pull request #568 from ryubidragonfire/ryubidragonfire/07
+[33m6a7fa20[m removed url
+[33mf8df5de[m added githubmodels-assignment-simple.ipynb
+[33m6783adf[m added 07-building-chat-applications/python/githubmodels-assignment.ipynb
+[33mc4ac40a[m added githubmodels-assignment.ipynb
+[33m1f75679[m updated requirements.txt
+[33m364bcb9[m Merge pull request #548 from gameliee/gameliee-patch-1
+[33m8c9c662[m Merge pull request #537 from bmerkle/main
+[33m72f3576[m Merge pull request #545 from bmerkle/Fix#544
+[33md075fad[m Merge branch 'microsoft:main' into main
+[33m9e1a4a0[m fix: cn translation typo
+[33m4239291[m Update README.md (Typo "Open AI"→"OpenAI")
+[33m4fe851b[m fx: pt-BR translation README.md
+[33m74f7af9[m 06, added githubmodels-app.py, updated githubmodels-assignment.ipynb
+[33m1c5828b[m fix typo
+[33m922919c[m fix typos
+[33m2478302[m fix typos
+[33mddd27da[m fix typos
+[33md1c4825[m Update README.md (ja-jp:Overtranslation "Code: コード："→"Code:")
+[33m1b29c52[m Merge pull request #554 from microsoft/leestott-patch-7
+[33m26de0db[m Update README.md
+[33mdbbf3dc[m Merge pull request #550 from amynic/amyb-githubmodels-textapp
+[33mfa6bb54[m Merge pull request #553 from john0isaac/fixes/chores
+[33m3e4b224[m fix broken url
+[33md9adbbd[m fix broken urls
+[33mcedede7[m fix paths tracking
+[33m54ca303[m fix broken paths
+[33ma01e447[m Update githubmodels-assignment.ipynb
+[33mdb9637e[m Update githubmodels-assignment.ipynb
+[33md198766[m add Github Models solution for exercise
+[33m77176e3[m Update 09-building-image-applications/README.md
+[33mb7c53cf[m Fix #544: upgrade openai library from version 0.28 to version 1.x.
+[33m961f555[m Merge branch 'microsoft:main' into main
+[33m963bd54[m Merge pull request #532 from JianChuanting/patch-1
+[33mbc513ae[m Merge pull request #531 from jpark011/fix/table-markdown
+[33m7d18726[m Merge pull request #530 from deniskyashif/patch-1
+[33m45a4cc0[m Merge pull request #526 from rohis06/main
+[33mf9c3638[m Merge pull request #529 from Inder24/Adding-OpenAIFile-And-Fixing-Grammer
+[33m0430ce2[m Merge pull request #525 from jack-white9/main
+[33m9b1b725[m Bump braces in /08-building-search-applications/typescript/search-app
+[33mcb154e1[m Merge pull request #430 from Whitegabriella789/patch-1
+[33m46635a6[m Merge pull request #485 from microsoft/dependabot/npm_and_yarn/07-building-chat-applications/typescript/chat-completions-app/braces-3.0.3
+[33mdd4afe9[m Merge pull request #426 from doggy8088/zh-tw
+[33mcbf62ba[m .gitignore should ignore downloaded files of sample 08-building-search-applications #536
