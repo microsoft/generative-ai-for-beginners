@@ -117,4 +117,4 @@ Weź dowolne aplikacje AI, które dotychczas zbudowałeś, rozważ wdrożenie po
 
 Po ukończeniu tej lekcji, sprawdź naszą [Kolekcję nauki o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej AI!
 
-Przejdź do Lekcji 13, gdzie przyjrzymy się, jak [zabezpieczać aplikacje AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 13, gdzie przyjrzymy się, jak [zabezpieczać aplikacje AI](../../../13-securing-ai-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

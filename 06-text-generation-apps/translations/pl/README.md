@@ -654,4 +654,4 @@ Pracując nad zadaniem, spróbuj zmieniać temperaturę, spróbuj ustawić ją n
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów edukacyjnych o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby nadal podnosić swoją wiedzę o Generatywnej AI!
 
-Przejdź do Lekcji 7, gdzie przyjrzymy się, jak [budować aplikacje czatowe](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 7, gdzie przyjrzymy się, jak [budować aplikacje czatowe](../../../07-building-chat-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

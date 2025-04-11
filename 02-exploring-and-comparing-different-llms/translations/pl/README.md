@@ -200,4 +200,4 @@ Przeczytaj więcej o tym, jak możesz [używać RAG](https://learn.microsoft.com
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów do nauki Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej SI!
 
-Przejdź do Lekcji 3, gdzie przyjrzymy się [budowaniu z Generatywną SI w sposób odpowiedzialny](../../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 3, gdzie przyjrzymy się [budowaniu z Generatywną SI w sposób odpowiedzialny](../../../03-using-generative-ai-responsibly/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

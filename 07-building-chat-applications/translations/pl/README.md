@@ -60,7 +60,7 @@ Przy budowaniu aplikacji czatowej świetnym pierwszym krokiem jest ocena tego, c
 - **Łatwiejsza konserwacja**: Aktualizacje i ulepszenia są łatwiejsze do zarządzania, ponieważ większość API i SDK wymaga jedynie aktualizacji biblioteki, gdy zostanie wydana nowsza wersja.
 - **Dostęp do najnowocześniejszych technologii**: Wykorzystanie modeli, które zostały dostrojone i wytrenowane na obszernych zbiorach danych, zapewnia Twojej aplikacji możliwości przetwarzania języka naturalnego.
 
-Dostęp do funkcjonalności SDK lub API zazwyczaj wymaga uzyskania pozwolenia na korystanie z dostarczanych usług, co często odbywa się poprzez użycie unikalnego klucza lub tokenu uwierzytelniającego. Użyjemy Biblioteki Python OpenAI, aby zobaczyć, jak to wygląda. Możesz także spróbować samodzielnie w następującym [notatniku dla OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) lub [notatniku dla Usług Azure OpenAI](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) do tej lekcji.
+Dostęp do funkcjonalności SDK lub API zazwyczaj wymaga uzyskania pozwolenia na korystanie z dostarczanych usług, co często odbywa się poprzez użycie unikalnego klucza lub tokenu uwierzytelniającego. Użyjemy Biblioteki Python OpenAI, aby zobaczyć, jak to wygląda. Możesz także spróbować samodzielnie w następującym [notatniku dla OpenAI](../../python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) lub [notatniku dla Usług Azure OpenAI](../../python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) do tej lekcji.
 
 ```python
 import os
@@ -175,10 +175,10 @@ Podejście Microsoftu do Odpowiedzialnej SI zidentyfikowało sześć zasad, któ
 
 ## Zadanie
 
-Zobacz [zadanie](./python?WT.mc_id=academic-105485-koreyst), które przeprowadzi Cię przez serię ćwiczeń od uruchomienia pierwszych promptów czatowych, po klasyfikację i podsumowywanie tekstu i więcej. Zauważ, że zadania są dostępne w różnych językach programowania!
+Zobacz [zadanie](../../python?WT.mc_id=academic-105485-koreyst), które przeprowadzi Cię przez serię ćwiczeń od uruchomienia pierwszych promptów czatowych, po klasyfikację i podsumowywanie tekstu i więcej. Zauważ, że zadania są dostępne w różnych językach programowania!
 
 ## Świetna Praca! Kontynuuj Podróż
 
 Po ukończeniu tej lekcji, sprawdź naszą [Kolekcję Edukacyjną Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby nadal podnosić swoją wiedzę o Generatywnej SI!
 
-Przejdź do Lekcji 8, aby zobaczyć, jak możesz zacząć [budować aplikacje wyszukiwania](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 8, aby zobaczyć, jak możesz zacząć [budować aplikacje wyszukiwania](../../../08-building-search-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

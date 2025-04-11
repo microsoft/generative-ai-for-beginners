@@ -133,4 +133,4 @@ A: 3, LLM jest niedeterministyczny, odpowiedź się różni, jednak możesz kont
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów do nauki Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej SI!
 
-Przejdź do Lekcji 2, gdzie przyjrzymy się [eksploracji i porównaniu różnych typów LLM](../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 2, gdzie przyjrzymy się [eksploracji i porównaniu różnych typów LLM](../../../02-exploring-and-comparing-different-llms/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

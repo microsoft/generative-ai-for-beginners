@@ -352,4 +352,4 @@ Spróbuj wykorzystać technikę "wskazówki" z promptem: Dokończ zdanie "Pokaż
 
 Chcesz dowiedzieć się więcej o różnych koncepcjach Inżynierii Promptów? Przejdź do [strony kontynuacji nauki](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby znaleźć inne świetne zasoby na ten temat.
 
-Przejdź do Lekcji 5, gdzie przyjrzymy się [zaawansowanym technikom promptowania](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 5, gdzie przyjrzymy się [zaawansowanym technikom promptowania](../../../05-advanced-prompts/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

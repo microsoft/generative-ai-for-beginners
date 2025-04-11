@@ -61,7 +61,7 @@ Przekazalibyśmy tekst do API osadzeń OpenAI, a on zwróciłby następujące os
 
 ## Jak tworzony jest indeks osadzeń?
 
-Indeks osadzeń dla tej lekcji został utworzony za pomocą serii skryptów Pythona. Znajdziesz skrypty wraz z instrukcjami w pliku [README](../scripts/README.md?WT.mc_id=academic-105485-koreyst) w folderze 'scripts` dla tej lekcji. Nie musisz uruchamiać tych skryptów, aby ukończyć tę lekcję, ponieważ indeks osadzeń jest dostarczony dla Ciebie.
+Indeks osadzeń dla tej lekcji został utworzony za pomocą serii skryptów Pythona. Znajdziesz skrypty wraz z instrukcjami w pliku [README](../../scripts/README.md?WT.mc_id=academic-105485-koreyst) w folderze 'scripts` dla tej lekcji. Nie musisz uruchamiać tych skryptów, aby ukończyć tę lekcję, ponieważ indeks osadzeń jest dostarczony dla Ciebie.
 
 Skrypty wykonują następujące operacje:
 
@@ -160,4 +160,4 @@ Gdy uruchomisz notatnik, zostaniesz poproszony o wprowadzenie zapytania. Pole wp
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów edukacyjnych na temat Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby nadal podnosić swoją wiedzę o Generatywnej SI!
 
-Przejdź do Lekcji 9, gdzie przyjrzymy się, jak [budować aplikacje generujące obrazy](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 9, gdzie przyjrzymy się, jak [budować aplikacje generujące obrazy](../../../09-building-image-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

@@ -455,4 +455,4 @@ Wskazówka: Zapoznaj się ze [stroną dokumentacji referencyjnej API Learn](http
 
 Po ukończeniu tej lekcji sprawdź naszą [Kolekcję nauki Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej podnosić swoją wiedzę na temat Generatywnej SI!
 
-Przejdź do Lekcji 12, gdzie przyjrzymy się, jak [projektować UX dla aplikacji SI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 12, gdzie przyjrzymy się, jak [projektować UX dla aplikacji SI](../../../12-designing-ux-for-ai-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

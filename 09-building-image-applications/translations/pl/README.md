@@ -462,4 +462,4 @@ except openai.InvalidRequestError as err:
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów edukacyjnych Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej podnosić swoją wiedzę o Generatywnej SI!
 
-Przejdź do Lekcji 10, gdzie przyjrzymy się [budowaniu aplikacji AI z wykorzystaniem narzędzi niskokodowych](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Przejdź do Lekcji 10, gdzie przyjrzymy się [budowaniu aplikacji AI z wykorzystaniem narzędzi niskokodowych](../../../10-building-low-code-ai-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)

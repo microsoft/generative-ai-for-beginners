@@ -161,4 +161,4 @@ Przeczytaj więcej o tym, jak możesz [zarządzać i chronić wrażliwe informac
 
 Po ukończeniu tej lekcji, sprawdź naszą [Kolekcję nauki o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej AI!
 
-Przejdź do Lekcji 14, w której przyjrzymy się [cyklowi życia aplikacji Generatywnej AI](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 14, w której przyjrzymy się [cyklowi życia aplikacji Generatywnej AI](../../../14-the-generative-ai-application-lifecycle/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

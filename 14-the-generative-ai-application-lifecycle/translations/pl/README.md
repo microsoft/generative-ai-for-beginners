@@ -84,4 +84,4 @@ Konstruuj, od dowodu koncepcji (POC) aż po aplikacje na dużą skalę za pomoc�
 Niesamowite, teraz dowiedz się więcej o tym, jak strukturyzujemy aplikację, aby wykorzystać te koncepcje w [Aplikacji Contoso Chat](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys), aby sprawdzić, jak Cloud Advocacy dodaje te koncepcje w demonstracjach. Aby uzyskać więcej treści, sprawdź naszą [sesję breakout na Ignite!
 ](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Teraz sprawdź Lekcję 15, aby zrozumieć, jak [Retrieval Augmented Generation i Bazy Danych Wektorowe](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) wpływają na Generatywną AI i jak tworzyć bardziej angażujące aplikacje!
+Teraz sprawdź Lekcję 15, aby zrozumieć, jak [Retrieval Augmented Generation i Bazy Danych Wektorowe](../../../15-rag-and-vector-databases/translations/pl/README.md?WT.mc_id=academic-105485-koreyst) wpływają na Generatywną AI i jak tworzyć bardziej angażujące aplikacje!

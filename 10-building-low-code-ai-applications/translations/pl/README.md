@@ -243,4 +243,4 @@ Aby dowiedzieć się, jak używać tego Modelu SI w Power Automate, przejdź prz
 
 Po ukończeniu tej lekcji sprawdź naszą [Kolekcję nauki Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować pogłębianie wiedzy na temat Generatywnej SI!
 
-Przejdź do Lekcji 11, gdzie przyjrzymy się, jak [integrować Generatywną SI z Wywołaniami Funkcji](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 11, gdzie przyjrzymy się, jak [integrować Generatywną SI z Wywołaniami Funkcji](../../../11-integrating-with-function-calling/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

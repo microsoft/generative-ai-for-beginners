@@ -613,7 +613,7 @@ Proszę spróbuj rozwiązać zadanie, dodając odpowiednie prompty do kodu.
 > [!TIP]
 > Sformułuj prompt prosząc o ulepszenie, dobrym pomysłem jest ograniczenie liczby ulepszeń. Możesz również poprosić o ulepszenie w określony sposób, na przykład architekturę, wydajność, bezpieczeństwo itp.
 
-[Rozwiązanie](./python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
+[Rozwiązanie](../../python/aoai-solution.py?WT.mc_id=academic-105485-koreyst)
 
 ## Sprawdzenie wiedzy
 
@@ -633,4 +633,4 @@ Właśnie użyłeś techniki self-refine w zadaniu. Weź dowolny program, który
 
 Po ukończeniu tej lekcji sprawdź naszą [kolekcję materiałów dydaktycznych dotyczących Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej AI!
 
-Przejdź do Lekcji 6, gdzie zastosujemy naszą wiedzę o Inżynierii Promptów, [budując aplikacje generujące tekst](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Przejdź do Lekcji 6, aby zobaczyć, jak możesz zacząć [budować aplikacje generujące tekst](../../../06-text-generation-apps/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!

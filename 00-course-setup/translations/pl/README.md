@@ -211,4 +211,4 @@ Ten projekt przyjął [Kodeks Postępowania Microsoft Open Source](https://opens
 
 ## Rozpocznijmy
 
-Teraz, gdy wykonałeś wszystkie potrzebne kroki do ukończenia tego kursu, zacznijmy od [wprowadzenia do Generatywnej SI i modeli LLM](../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Teraz, gdy wykonałeś wszystkie potrzebne kroki do ukończenia tego kursu, zacznijmy od [wprowadzenia do Generatywnej SI i modeli LLM](../../../01-introduction-to-genai/translations/pl/README.md?WT.mc_id=academic-105485-koreyst).

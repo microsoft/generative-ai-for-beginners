@@ -100,7 +100,7 @@ Może to być również używanie technik takich jak Retrieval Augmented Generat
 
 - **Doświadczenie Użytkownika**. Ostatnia warstwa to miejsce, gdzie użytkownik bezpośrednio wchodzi w interakcję z modelem poprzez interfejs naszej aplikacji w jakiś sposób. W ten sposób możemy zaprojektować UI/UX, aby ograniczyć użytkownika w zakresie rodzajów danych wejściowych, które mogą wysłać do modelu, a także tekstu lub obrazów wyświetlanych użytkownikowi. Podczas wdrażania aplikacji SI musimy również być przejrzyści co do tego, co nasza aplikacja Generatywnej SI może i czego nie może zrobić.
 
-Mamy całą lekcję poświęconą [Projektowaniu UX dla Aplikacji SI](../../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Mamy całą lekcję poświęconą [Projektowaniu UX dla Aplikacji SI](../../../12-designing-ux-for-ai-applications/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **Ocena modelu**. Praca z modelami LLM może być trudna, ponieważ nie zawsze mamy kontrolę nad danymi, na których model był trenowany. Niezależnie od tego, zawsze powinniśmy oceniać wydajność modelu i jego rezultaty. Nadal ważne jest mierzenie dokładności modelu, podobieństwa, ugruntowania i istotności rezultatu. Pomaga to zapewnić przejrzystość i zaufanie dla interesariuszy i użytkowników.
 
@@ -130,4 +130,4 @@ Przeczytaj więcej o [Azure AI Content Safety](https://learn.microsoft.com/azure
 
 Po ukończeniu tej lekcji, sprawdź naszą [kolekcję materiałów do nauki Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy o Generatywnej SI!
 
-Przejdź do Lekcji 4, gdzie przyjrzymy się [Podstawom Inżynierii Promptów](../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 4, gdzie przyjrzymy się [Podstawom Inżynierii Promptów](../../../04-prompt-engineering-fundamentals/translations/pl/README.md?WT.mc_id=academic-105485-koreyst)!
