@@ -1,4 +1,4 @@
-![Generative AI For Beginners](../images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
+![Generative AI For Beginners](../../images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
 
 ### 21 Lekcji uczących wszystkiego, co musisz wiedzieć, aby zacząć budować aplikacje wykorzystujące Sztuczną Inteligencję Generatywną
 

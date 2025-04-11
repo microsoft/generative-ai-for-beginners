@@ -37,7 +37,7 @@ Notebook Jupyter towarzyszący tej lekcji zapewnia środowisko _sandbox_, w któ
 
 1. **Klucza API Azure OpenAI** - punktu końcowego usługi dla wdrożonego LLM.
 2. **Środowiska Wykonawczego Python** - w którym można uruchomić Notebook.
-3. **Lokalnych Zmiennych Środowiskowych** - _wykonaj teraz kroki [SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst), aby być gotowym_.
+3. **Lokalnych Zmiennych Środowiskowych** - _wykonaj teraz kroki [SETUP](../../../00-course-setup/translations/pl/SETUP.md?WT.mc_id=academic-105485-koreyst), aby być gotowym_.
 
 Notebook zawiera ćwiczenia _startowe_ - ale zachęcamy do dodawania własnych sekcji _Markdown_ (opis) i _Code_ (żądania promptów), aby wypróbować więcej przykładów lub pomysłów - i zbudować swoją intuicję dotyczącą projektowania promptów.
 

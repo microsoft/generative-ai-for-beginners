@@ -2,7 +2,7 @@
 
 ## Wprowadzenie
 
-Świat modeli LLM typu open-source jest ekscytujący i ciągle się rozwija. Ta lekcja ma na celu zapewnienie dogłębnego spojrzenia na modele open source. Jeśli szukasz informacji na temat porównania modeli zastrzeżonych z modelami open source, przejdź do lekcji ["Odkrywanie i porównywanie różnych LLM"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Ta lekcja obejmie również temat dostrajania (fine-tuning), ale bardziej szczegółowe wyjaśnienie można znaleźć w lekcji ["Dostrajanie LLM"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+Świat modeli LLM typu open-source jest ekscytujący i ciągle się rozwija. Ta lekcja ma na celu zapewnienie dogłębnego spojrzenia na modele open source. Jeśli szukasz informacji na temat porównania modeli zastrzeżonych z modelami open source, przejdź do lekcji ["Odkrywanie i porównywanie różnych LLM"](../../../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Ta lekcja obejmie również temat dostrajania (fine-tuning), ale bardziej szczegółowe wyjaśnienie można znaleźć w lekcji ["Dostrajanie LLM"](../../../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
 ## Cele nauki
 

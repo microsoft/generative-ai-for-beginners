@@ -160,7 +160,7 @@ Oto niektóre kluczowe cechy NVIDIA NIM:
 
 NIM jest częścią NVIDIA AI Enterprise, która ma na celu uproszczenie wdrażania i operacjonalizacji modeli AI, zapewniając ich efektywne działanie na GPU NVIDIA.
 
-- Demo: Używanie Nividia NIM do wywołania Phi-3.5-Vision-API [[Kliknij ten link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Używanie Nividia NIM do wywołania Phi-3.5-Vision-API [[Kliknij ten link](../../python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 ### Wnioskowanie Phi-3/3.5 w środowisku lokalnym
 
@@ -183,11 +183,11 @@ Hugging Face Transformers to potężna biblioteka przeznaczona do przetwarzania 
 
 Jest to najczęściej stosowana metoda, ale wymaga również przyspieszenia GPU. W końcu sceny takie jak Vision i MoE wymagają wielu obliczeń, które będą bardzo ograniczone w CPU, jeśli nie zostaną skwantyzowane.
 
-- Demo: Używanie Transformera do wywołania Phi-3.5-Instuct [[Kliknij ten link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Używanie Transformera do wywołania Phi-3.5-Instuct [[Kliknij ten link](../../python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)]
 
-- Demo: Używanie Transformera do wywołania Phi-3.5-Vision [[Kliknij ten link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Używanie Transformera do wywołania Phi-3.5-Vision [[Kliknij ten link](../../python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)]
 
-- Demo: Używanie Transformera do wywołania Phi-3.5-MoE [[Kliknij ten link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Używanie Transformera do wywołania Phi-3.5-MoE [[Kliknij ten link](../../python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 **Ollama**
 

@@ -96,7 +96,7 @@ Teraz czas znaleźć sposoby, w jakie możemy zapobiec lub ograniczyć potencjal
 
 - **Metaprompt**. Metaprompty i ugruntowanie są sposobami, w jakie możemy kierować lub ograniczać model na podstawie pewnych zachowań i informacji. Może to być używanie danych wejściowych systemu do definiowania pewnych ograniczeń modelu. Dodatkowo, dostarczanie rezultatów, które są bardziej odpowiednie dla zakresu lub domeny systemu.
 
-Może to być również używanie technik takich jak Retrieval Augmented Generation (RAG), aby model pobierał informacje tylko z wyboru zaufanych źródeł. Jest lekcja później w tym kursie o [budowaniu aplikacji wyszukiwania](../../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Może to być również używanie technik takich jak Retrieval Augmented Generation (RAG), aby model pobierał informacje tylko z wyboru zaufanych źródeł. Jest lekcja później w tym kursie o [budowaniu aplikacji wyszukiwania](../../../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 - **Doświadczenie Użytkownika**. Ostatnia warstwa to miejsce, gdzie użytkownik bezpośrednio wchodzi w interakcję z modelem poprzez interfejs naszej aplikacji w jakiś sposób. W ten sposób możemy zaprojektować UI/UX, aby ograniczyć użytkownika w zakresie rodzajów danych wejściowych, które mogą wysłać do modelu, a także tekstu lub obrazów wyświetlanych użytkownikowi. Podczas wdrażania aplikacji SI musimy również być przejrzyści co do tego, co nasza aplikacja Generatywnej SI może i czego nie może zrobić.
 

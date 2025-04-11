@@ -150,7 +150,7 @@ az cognitiveservices account deployment create \
 
 ## Rozwiązanie
 
-Otwórz [notatnik z rozwiązaniem](../python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) w GitHub Codespaces i postępuj zgodnie z instrukcjami w Jupyter Notebook.
+Otwórz [notatnik z rozwiązaniem](../../python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) w GitHub Codespaces i postępuj zgodnie z instrukcjami w Jupyter Notebook.
 
 Gdy uruchomisz notatnik, zostaniesz poproszony o wprowadzenie zapytania. Pole wprowadzania będzie wyglądać tak:
 
