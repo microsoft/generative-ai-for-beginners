@@ -483,6 +483,4 @@ Azure Open AI Function Calling の学習を続けるために、以下を試し�
 
 このレッスン修了後、[生成 AI 学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-yoterada) をチェックして、Generative AI の知識をレベルアップさせましょう。
 
-Head over to Lesson 12 where we will look at how to !
-
 次のレッスン 12 では、[AI アプリケーション用の UX デザイン](../../../12-designing-ux-for-ai-applications/translations/ja-jp/README.md?WT.mc_id=academic-105485-yoterada)について学びます！
