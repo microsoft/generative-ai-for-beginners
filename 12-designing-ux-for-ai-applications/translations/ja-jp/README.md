@@ -25,7 +25,7 @@
 
 ### 前提
 
-少し時間を取ってこちらの、[MS Laern: ユーザー・エクスペリエンスとデザイン思考](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-yoterada)の基礎について学んでみましょう。
+少し時間を取ってこちらの、[MS Laern: ユーザーエクスペリエンスとデザイン思考の基礎](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-yoterada)について学んでみましょう。
 
 ## ユーザー・エクスペリエンスの概要と利用者ニーズの理解
 
