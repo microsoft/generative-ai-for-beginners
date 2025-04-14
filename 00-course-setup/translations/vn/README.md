@@ -40,7 +40,7 @@ Dưới đây là hướng dẫn tạo file `.env` trong Python và thêm `GITHU
 
    Windows:
    ```cmd
-   echo . > .env
+   echo. > .env
    ```
 
 3. **Chỉnh sửa file `.env`**: Mở file `.env` trong trình soạn thảo văn bản (ví dụ: VS Code, Notepad++ hoặc trình khác). Thêm dòng sau vào file, thay thế `your_github_token_here` bằng token GitHub thực tế của bạn:
@@ -211,4 +211,4 @@ Dự án này đã áp dụng [Bộ Quy Tắc Ứng Xử Mã Nguồn Mở của 
 
 ## Bắt đầu thôi
 
-Giờ bạn đã hoàn tất các bước thiết lập, hãy bắt đầu bằng cách đọc [Giới thiệu về Generative AI và LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Giờ bạn đã hoàn tất các bước thiết lập, hãy bắt đầu bằng cách đọc [Giới thiệu về Generative AI và LLMs](../../../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
