@@ -87,10 +87,10 @@ pip install openai
 下記の手順に従い操作を行なってください：
 
 - Azure のアカウントを作成します。[https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-yoterada)
-- Azure Open AI へのアクセス権限を取得します。[https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-yoterada) からアクセス申請を提出します
+- Azure OpenAI へのアクセス権限を取得します。[https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-yoterada) からアクセス申請を提出します
 
   > [!NOTE]
-  > 本記事の執筆時には、Azure Open AI へのアクセスを申請する必要があります。
+  > 本記事の執筆時には、Azure OpenAI へのアクセスを申請する必要があります。
 
 - Python をインストールします。 <https://www.python.org/>
 - Azure OpenAI Service リソースを作成します。[リソースの作成方法](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-yoterada)については、こちらのガイドをご参照ください。
@@ -122,7 +122,7 @@ openai.api_base = os.getenv("API_BASE")
 
 上記は、それぞれ下記の設定を行っています：
 
-- `api_type`を`azure`に設定します。これにより、ライブラリは OpenAI ではなく Azure Open AI に接続します。
+- `api_type`を`azure`に設定します。これにより、ライブラリは OpenAI ではなく Azure OpenAI に接続します。
 - `api_key`は、Azure Portal で取得した API キーを設定します。
 - `api_version`は、使用する API のバージョンです。執筆時点での最新バージョンは`2023-05-15`です。
 - `api_base` は API のエンドポイントです。これは、Azure Portal の API キーの下側に記載されています。
