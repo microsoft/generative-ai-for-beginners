@@ -154,7 +154,7 @@ Phi-3.5-MoE 包含 16 个 3.8B 专家模块，仅需 6.6B 活跃参数即可实�
 - 标准化 API 支持
 - 企业级安全控制
 
-- 演示：[使用 NVIDIA NIM 调用 Phi-3.5-Vision-API](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)
+- 演示：[使用 NVIDIA NIM 调用 Phi-3.5-Vision-API](../../python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)
 
 ### 本地环境推理
 
@@ -169,9 +169,9 @@ Phi-3.5-MoE 包含 16 个 3.8B 专家模块，仅需 6.6B 活跃参数即可实�
 注意：视觉和 MoE 场景需要 GPU 加速，未量化的 CPU 推理效率有限。
 
 - 演示：
-  - [调用 Phi-3.5-Instuct](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
-  - [调用 Phi-3.5-Vision](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
-  - [调用 Phi-3.5-MoE](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+  - [调用 Phi-3.5-Instuct](../../python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+  - [调用 Phi-3.5-Vision](../../python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+  - [调用 Phi-3.5-MoE](../../python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
 
