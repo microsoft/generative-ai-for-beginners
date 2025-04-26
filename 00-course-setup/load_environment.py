@@ -9,6 +9,6 @@ load_dotenv()
 
 # Print the environment variables
 print("Environment Variables:")
-print("GITHUB_TOKEN:    ", os.getenv("GITHUB_TOKEN"))
-print("GITHUB_REPO:     ", os.getenv("GITHUB_REPO"))
-print("GITHUB_USERNAME: ", os.getenv("GITHUB_USERNAME"))
+print("   GITHUB_TOKEN:", os.getenv("GITHUB_TOKEN"))
+print("    GITHUB_REPO:", os.getenv("GITHUB_REPO"))
+print("GITHUB_USERNAME:", os.getenv("GITHUB_USERNAME"))
