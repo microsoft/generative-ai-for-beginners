@@ -1,4 +1,5 @@
 Welcome to Alesio!
+From F-1!
 [Generative AI For Beginners](./images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
 
 ### 21 Lessons teaching everything you need to know to start building Generative AI applications
