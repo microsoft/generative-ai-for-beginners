@@ -2,7 +2,7 @@ name: dev
 channels:
  - defaults
 dependencies:
-- python=3.10.0
+- python=3.13.2
 - openai
 - python-dotenv
 - pip
