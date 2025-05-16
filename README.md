@@ -47,7 +47,9 @@ If you are looking for more advanced code samples, check out our [collection of 
 
 ## 🗣️ Meet Other Learners, Get Support
 
-Join our [official AI Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
+Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
+
+Ask questions or share product feedback in our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) on Github.
 
 ## 🚀 Building a Startup?
 
