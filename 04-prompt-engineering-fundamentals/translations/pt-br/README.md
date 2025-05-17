@@ -108,7 +108,7 @@ Veja como o resultado agora está ajustado para refletir o objetivo desejado e o
 
 Agora que sabemos como os prompts são processados pelos LLMs, vamos falar sobre _por que_ precisamos de Engenharia de Prompt. A resposta está no fato de que os LLMs atuais apresentam uma série de desafios que tornam as _completions confiáveis e consistentes_ mais difíceis de alcançar sem esforço na criação e otimização do prompt. Por exemplo:
 
-1. **As respostas do modelo são estocásticas.** O _mesmo prompt_ provavelmente produzirá respostas diferentes com modelos ou versões diferentes do modelo. E pode até mesmo produzir resultados diferentes com o _mesmo modelo_ em momentos diferentes. _Técnicas de Wngenharia de Prompt podem nos ajudar a minimizar essas variações fornecendo melhores diretrizes_.
+1. **As respostas do modelo são estocásticas.** O _mesmo prompt_ provavelmente produzirá respostas diferentes com modelos ou versões diferentes do modelo. E pode até mesmo produzir resultados diferentes com o _mesmo modelo_ em momentos diferentes. _Técnicas de Engenharia de Prompt podem nos ajudar a minimizar essas variações fornecendo melhores diretrizes_.
 
 1. **Os modelos podem criar respostas imaginárias.** Os modelos são pré-treinados com conjuntos de dados _grandes, mas finitos_, o que significa que eles não têm conhecimento sobre conceitos fora desse escopo de treinamento. Como resultado, podem produzir completions imprecisas, imaginárias ou diretamente contraditórias aos fatos conhecidos. _Técnicas de Engenharia de Prompt ajudam os usuários a identificar e mitigar alucinações, por exemplo, pedindo à IA por citações ou raciocínio_.
 
