@@ -130,4 +130,4 @@ Infórmate sobre [Seguridad del contenido de la IA de Azure](https://learn.micro
 
 Después de completar esta lección, consulta nuestra [Colección de aprendizaje de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir mejorando tus conocimientos sobre IA generativa.
 
-Dirígete a la Lección 4, donde veremos los [Fundamentos de ingeniería de indicaciones](../../../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst).
+Dirígete a la Lección 4, donde veremos los [Fundamentos de ingeniería de indicaciones](../../../04-prompt-engineering-fundamentals/translations/es-mx/README.md?WT.mc_id=academic-105485-koreyst).
