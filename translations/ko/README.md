@@ -1,113 +1,122 @@
-![생성형 AI 입문자를 위한 과정](../../images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst)
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "c2ee25895ebbfa1a52868bb6eab686fc",
+  "translation_date": "2025-05-19T10:57:17+00:00",
+  "source_file": "README.md",
+  "language_code": "ko"
+}
+-->
+![초보자를 위한 생성 AI](../../translated_images/repo-thumbnailv4-fixed.ac68b8309b9f8955508d377c5daeb48e1abdf9cf3c5eefba9b95ab79fafebd4c.ko.png)
 
-### 생성형 AI 애플리케이션 개발에 필요한 모든 것을 가르치는 21개의 강의
+### 생성 AI 애플리케이션을 시작하는 데 필요한 모든 것을 가르치는 21개의 레슨
 
-[![GitHub 라이선스](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
-[![GitHub 기여자](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
-[![GitHub 이슈](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
-[![GitHub 풀 리퀘스트](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PR 환영](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+### 🌐 다국어 지원
 
-[![GitHub 워쳐](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![GitHub 포크](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![GitHub 스타](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+#### GitHub Action을 통해 지원됨 (자동 및 항상 최신 상태)
+[프랑스어](../fr/README.md) | [스페인어](../es/README.md) | [독일어](../de/README.md) | [러시아어](../ru/README.md) | [아랍어](../ar/README.md) | [페르시아어 (파르시)](../fa/README.md) | [우르두어](../ur/README.md) | [중국어 (간체)](../zh/README.md) | [중국어 (번체, 마카오)](../mo/README.md) | [중국어 (번체, 홍콩)](../hk/README.md) | [중국어 (번체, 대만)](../tw/README.md) | [일본어](../ja/README.md) | [한국어](./README.md) | [힌디어](../hi/README.md) | [벵골어](../bn/README.md) | [마라티어](../mr/README.md) | [네팔어](../ne/README.md) | [펀자브어 (구르무키)](../pa/README.md) | [포르투갈어 (포르투갈)](../pt/README.md) | [포르투갈어 (브라질)](../br/README.md) | [이탈리아어](../it/README.md) | [폴란드어](../pl/README.md) | [터키어](../tr/README.md) | [그리스어](../el/README.md) | [태국어](../th/README.md) | [스웨덴어](../sv/README.md) | [덴마크어](../da/README.md) | [노르웨이어](../no/README.md) | [핀란드어](../fi/README.md) | [네덜란드어](../nl/README.md) | [히브리어](../he/README.md) | [베트남어](../vi/README.md) | [인도네시아어](../id/README.md) | [말레이어](../ms/README.md) | [타갈로그어 (필리핀어)](../tl/README.md) | [스와힐리어](../sw/README.md) | [헝가리어](../hu/README.md) | [체코어](../cs/README.md) | [슬로바키아어](../sk/README.md) | [루마니아어](../ro/README.md) | [불가리아어](../bg/README.md) | [세르비아어 (키릴)](../sr/README.md) | [크로아티아어](../hr/README.md) | [슬로베니아어](../sl/README.md)
+# 초보자를 위한 생성형 AI (버전 3) - 강좌
 
-[![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-
-# 입문자를 위한 생성형 AI (버전 3) - 강좌
-
-Microsoft 클라우드 전문가들이 제공하는 21개 강의로 구성된 종합적인 강좌를 통해 생성형 AI 애플리케이션 개발의 기초를 배워보세요.
+Microsoft Cloud Advocates의 21개 레슨 종합 강좌를 통해 생성형 AI 애플리케이션을 구축하는 기초를 배워보세요.
 
 ## 🌱 시작하기
 
-이 강좌는 21개의 강의로 구성되어 있습니다. 각 강의는 독립적인 주제를 다루므로 원하는 곳부터 시작하실 수 있습니다!
+이 강좌는 총 21개의 레슨으로 구성되어 있습니다. 각 레슨은 독립적인 주제를 다루고 있으니 원하는 곳에서 시작하세요!
 
-강의는 생성형 AI 개념을 설명하는 "학습" 강의와 개념 설명과 함께 가능한 경우 **Python**과 **TypeScript** 코드 예제를 모두 제공하는 "실습" 강의로 구분됩니다.
+레슨은 생성형 AI 개념을 설명하는 "Learn" 레슨과 가능한 경우 **Python** 및 **TypeScript** 코드 예제를 포함하여 개념을 설명하는 "Build" 레슨으로 나뉩니다.
 
-각 강의에는 추가 학습 자료를 제공하는 "더 배우기" 섹션도 포함되어 있습니다.
+.NET 개발자를 위해 [초보자를 위한 생성형 AI (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)를 확인하세요!
 
-## 필요한 것
-### 이 강좌의 코드를 실행하기 위해 다음 중 하나를 사용할 수 있습니다:
- - [Azure OpenAI 서비스](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) - **강의:** "aoai-assignment"
- - [GitHub Marketplace 모델 카탈로그](https://github.com/marketplace/models?WT.mc_id=academic-105485-koreyst) - **강의:** "githubmodels"
- - [OpenAI API](https://platform.openai.com/docs/quickstart?context=python?WT.mc_id=academic-105485-koreyst) - **강의:** "oai-assignment"
+각 레슨에는 추가 학습 도구가 포함된 "계속 학습하기" 섹션도 포함되어 있습니다.
+
+## 필요 사항
+### 이 강좌의 코드를 실행하려면 다음을 사용할 수 있습니다:
+ - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **레슨:** "aoai-assignment"
+ - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **레슨:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **레슨:** "oai-assignment" 
    
-- Python 또는 TypeScript의 기초 지식이 도움됩니다 - \*완전 초보자의 경우 이 [Python](https://learn.microsoft.com/training/paths/python-language/?WT.mc_id=academic-105485-koreyst)과 [TypeScript](https://learn.microsoft.com/training/paths/build-javascript-applications-typescript/?WT.mc_id=academic-105485-koreyst) 강좌를 확인해보세요
-- [전체 리포지토리를 포크](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst)하기 위한 GitHub 계정
+- Python 또는 TypeScript의 기본 지식이 도움이 됩니다 - \*절대 초보자를 위해 이 [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) 및 [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) 강좌를 확인하세요
+- 자신의 GitHub 계정에 [이 전체 저장소를 포크](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst)하려면 GitHub 계정이 필요합니다
 
-개발 환경 설정을 돕기 위해 **[강좌 설정](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 강의를 만들었습니다.
+개발 환경 설정에 도움이 되는 **[강좌 설정](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 레슨을 준비했습니다.
 
-나중에 쉽게 찾을 수 있도록 [이 리포지토리에 스타(🌟)를 부여](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)하는 것을 잊지 마세요.
+나중에 쉽게 찾을 수 있도록 [이 저장소에 별표(🌟)를 추가](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)하는 것을 잊지 마세요.
 
-## 🧠 배포할 준비가 되셨나요?
+## 🧠 배포 준비 완료?
 
-더 고급 수준의 코드 샘플을 찾고 계시다면, **Python**과 **TypeScript**로 작성된 [생성형 AI 코드 샘플 모음](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)을 확인해보세요.
+더 고급 코드 샘플을 찾고 있다면 **Python** 및 **TypeScript**로 작성된 [생성형 AI 코드 샘플 모음](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)을 확인하세요.
 
-## 🗣️ 다른 학습자 만나기, 지원받기
+## 🗣️ 다른 학습자 만나기, 지원 받기
 
-[공식 AI Discord 서버](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)에 참여하여 이 강좌를 수강하는 다른 학습자들과 만나고 네트워크를 형성하며 지원을 받으세요.
+이 강좌를 수강하는 다른 학습자들과 만나고 네트워크를 형성하며 지원을 받을 수 있는 [공식 Azure AI Foundry Discord 서버](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)에 가입하세요.
 
-## 🚀 스타트업을 운영하시나요?
+GitHub의 [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum)에서 질문을 하거나 제품 피드백을 공유하세요.
 
-[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)에 가입하여 **무료 OpenAI 크레딧**과 Azure OpenAI 서비스를 통한 OpenAI 모델 액세스를 위한 **최대 $150,000의 Azure 크레딧**을 받으세요.
+## 🚀 스타트업을 구축 중이신가요?
+
+[Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)에 가입하여 **무료 OpenAI 크레딧**과 **Azure OpenAI Services를 통해 OpenAI 모델에 액세스할 수 있는 Azure 크레딧 최대 $150k**를 받으세요.
 
 ## 🙏 도움을 주고 싶으신가요?
 
-제안사항이 있거나 맞춤법 또는 코드 오류를 발견하셨나요? [이슈를 제기](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)하거나 [풀 리퀘스트를 생성](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)해주세요.
+제안이 있거나 철자 또는 코드 오류를 발견하셨나요? [문제를 제기](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)하거나 [풀 리퀘스트 생성](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)을 해주세요.
 
-## 📂 각 강의는 다음을 포함합니다:
+## 📂 각 레슨에는 다음이 포함됩니다:
 
 - 주제에 대한 짧은 비디오 소개
-- README에 있는 서면 강의
-- Azure OpenAI와 OpenAI API를 지원하는 Python 및 TypeScript 코드 샘플
-- 학습을 계속하기 위한 추가 자료 링크
+- README에 위치한 작성된 레슨
+- Azure OpenAI 및 OpenAI API를 지원하는 Python 및 TypeScript 코드 샘플
+- 학습을 계속할 수 있는 추가 리소스 링크
 
-다음은 전체 강의 목록을 한글로 번역한 테이블입니다. 각 문서 링크는 한글 번역 경로를 반영하여 변경되었습니다.
+## 🗃️ 레슨
 
----
+| #   | **레슨 링크**                                                                                                                              | **설명**                                                                                 | **비디오**                                                                   | **추가 학습**                                                             |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 00  | [강좌 설정](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **학습:** 개발 환경 설정 방법                                            | 곧 비디오 제공                                                                 | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [생성형 AI 및 LLM 소개](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **학습:** 생성형 AI가 무엇인지와 대규모 언어 모델(LLM)이 어떻게 작동하는지 이해하기       | [비디오](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [다양한 LLM 탐색 및 비교](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **학습:** 사용 사례에 맞는 올바른 모델 선택 방법                                      | [비디오](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [책임감 있게 생성형 AI 사용하기](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **학습:** 책임감 있게 생성형 AI 애플리케이션 구축하기                                  | [비디오](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [프롬프트 엔지니어링 기초 이해하기](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **학습:** 프롬프트 엔지니어링 모범 사례 실습                                           | [비디오](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [고급 프롬프트 생성](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **학습:** 프롬프트의 결과를 개선하는 프롬프트 엔지니어링 기술을 적용하는 방법 | [비디오](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [텍스트 생성 애플리케이션 구축](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **구축:** Azure OpenAI / OpenAI API를 사용한 텍스트 생성 앱                                | [비디오](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [채팅 애플리케이션 구축](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **구축:** 효율적으로 채팅 애플리케이션을 구축하고 통합하는 기술               | [비디오](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [검색 앱 벡터 데이터베이스 구축](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **구축:** 임베딩을 사용하여 데이터를 검색하는 검색 애플리케이션                        | [비디오](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [이미지 생성 애플리케이션 구축](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **구축:** 이미지 생성 애플리케이션                                                       | [비디오](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [로우 코드 AI 애플리케이션 구축](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **구축:** 로우 코드 도구를 사용한 생성 AI 애플리케이션                                     | [비디오](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [함수 호출로 외부 애플리케이션 통합](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** 함수 호출이란 무엇이며 애플리케이션에서의 사용 사례                          | [비디오](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [AI 애플리케이션을 위한 UX 설계](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **학습:** 생성 AI 애플리케이션 개발 시 UX 설계 원칙 적용 방법         | [비디오](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [생성 AI 애플리케이션 보안 강화](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **학습:** AI 시스템에 대한 위협과 위험 및 이러한 시스템을 보호하는 방법             | [비디오](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [생성 AI 애플리케이션 수명 주기](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **학습:** LLM 수명 주기 및 LLMOps 관리를 위한 도구와 지표                         | [비디오](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [검색 증강 생성(RAG)과 벡터 데이터베이스](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** 벡터 데이터베이스에서 임베딩을 검색하기 위해 RAG 프레임워크를 사용하는 애플리케이션 | [비디오](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [오픈 소스 모델과 허깅 페이스](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** 허깅 페이스에서 제공하는 오픈 소스 모델을 사용하는 애플리케이션 | [비디오](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI 에이전트](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** AI 에이전트 프레임워크를 사용하는 애플리케이션 | [비디오](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [LLMs 미세 조정](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst) | **학습:** LLMs 미세 조정의 필요성과 방법 | [비디오](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [SLMs로 구축하기](./19-slm/README.md?WT.mc_id=academic-105485-koreyst) | **학습:** 작은 언어 모델로 구축하는 것의 이점 | 비디오 곧 공개 | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [미스트랄 모델로 구축하기](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst) | **학습:** 미스트랄 패밀리 모델의 기능과 차이점 | 비디오 곧 공개 | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [메타 모델로 구축하기](./21-meta/README.md?WT.mc_id=academic-105485-koreyst) | **학습:** 메타 패밀리 모델의 기능과 차이점 | 비디오 곧 공개 | [자세히 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-## 🗃️ 강의 목록
+### 🌟 특별 감사
 
-| #   | **강의 링크**                                                                                                                              | **설명**                                                                                      | **강의 영상**                                                                   | **추가 학습 자료**                                                             |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [강의 소개 - 이 강의를 수강하는 방법](../../00-course-setup/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                | **학습 내용:** 개발 환경을 설정하는 방법                                                       | 준비 중                                                                         | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [생성형 AI 및 LLM 개요](../../01-introduction-to-genai/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                       | **학습 내용:** 생성형 AI란 무엇이며, 대규모 언어 모델(LLM)이 어떻게 작동하는지 이해하기          | [영상](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)      | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [다양한 LLM 탐색 및 비교](../../02-exploring-and-comparing-different-llms/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)    | **학습 내용:** 사용 사례에 적합한 모델을 선택하는 방법                                        | [영상](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [책임감 있는 생성형 AI 활용](../../03-using-generative-ai-responsibly/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)        | **학습 내용:** 윤리적이고 책임감 있는 생성형 AI 애플리케이션 구축하기                          | [영상](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [프롬프트 엔지니어링 기초](../../04-prompt-engineering-fundamentals/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)         | **학습 내용:** 효과적인 프롬프트 작성법과 실습                                                | [영상](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [고급 프롬프트 작성법](../../05-advanced-prompts/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                           | **학습 내용:** 프롬프트의 성능을 향상시키는 고급 기법 적용                                    | [영상](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [텍스트 생성 애플리케이션 구축](../../06-text-generation-apps/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)               | **실습:** Azure OpenAI / OpenAI API를 활용한 텍스트 생성 앱 개발                               | [영상](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [챗봇 애플리케이션 구축](../../07-building-chat-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                 | **실습:** 효율적인 챗봇 애플리케이션 개발 및 통합 방법                                       | [영상](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)      | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [벡터 데이터베이스를 활용한 검색 애플리케이션 구축](../../08-building-search-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst) | **실습:** 임베딩을 활용한 검색 애플리케이션 개발                                               | [영상](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [이미지 생성 애플리케이션 구축](../../09-building-image-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)         | **실습:** 이미지 생성 애플리케이션 개발                                                       | [영상](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)       | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [로우코드 AI 애플리케이션 구축](../../10-building-low-code-ai-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)   | **실습:** 로우코드 도구를 활용한 생성형 AI 애플리케이션 개발                                  | [영상](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)      | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [외부 애플리케이션과 함수 호출 통합](../../11-integrating-with-function-calling/translations/ko/README.md?WT.mc_id=academic-105485-koreyst) | **학습 내용:** 함수 호출(Function Calling)의 개념과 다양한 애플리케이션 활용 사례 | [영상](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [AI 애플리케이션을 위한 UX 디자인](../../12-designing-ux-for-ai-applications/translations/ko/README.md?WT.mc_id=academic-105485-koreyst) | **학습 내용:** 생성형 AI 애플리케이션을 개발할 때 적용할 UX 디자인 원칙            | [영상](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [생성형 AI 애플리케이션 보안 (번역 중)](../../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) | **학습 내용:** AI 시스템이 직면하는 위협과 보안 방법                            | [영상](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [생성형 AI 애플리케이션 라이프사이클 (번역 중)](../../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst) | **학습 내용:** LLM 라이프사이클 및 LLMOps를 관리하기 위한 도구와 메트릭          | [영상](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [RAG 및 벡터 데이터베이스 (번역 중)](../../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** 벡터 데이터베이스에서 임베딩을 검색하는 RAG 프레임워크 애플리케이션   | [영상](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [오픈소스 모델 및 Hugging Face 활용 (번역 중)](../../16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst) | **구축:** Hugging Face에서 제공하는 오픈소스 모델을 활용한 애플리케이션         | [영상](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI 에이전트 (번역 중)](../../17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                           | **구축:** AI 에이전트 프레임워크를 활용한 애플리케이션 개발                     | [영상](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLM 파인튜닝 (번역 중)](../../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                         | **학습 내용:** LLM 파인튜닝의 개념, 필요성 및 방법                              | [영상](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)  | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [SLM(Small Language Models) 활용](../../19-slm/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)               | **학습 내용:** 소형 언어 모델(SLM)의 장점과 활용 사례                          | 영상 준비 중                                                               | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Mistral 모델 활용](../../20-mistral/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                        | **학습 내용:** Mistral 계열 모델의 특징과 활용 방법                  | 준비 중                                                               | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Meta 모델 활용](../../21-meta/translations/ko/README.md?WT.mc_id=academic-105485-koreyst)                              | **학습 내용:** Meta의 Llama 등 주요 생성형 AI 모델의 특징과 비교     | 준비 중                                                               | [더 알아보기](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+모든 GitHub 액션과 워크플로를 만들어 주신 [**John Aziz**](https://www.linkedin.com/in/john0isaac/)에게 특별히 감사드립니다.
 
-### 🌟 Special Thanks
+각 수업의 학습자와 코드 경험을 개선하기 위해 중요한 기여를 해주신 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/)에게도 감사드립니다.
 
-모든 GitHub Actions와 워크플로우를 만든 [**John Aziz**](https://www.linkedin.com/in/john0isaac/)에게 특별한 감사를 드립니다.
+## 🎒 다른 강좌
 
-각 강의의 학습자 경험과 코드 경험을 개선하는데 핵심적인 기여를 한 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/)에게도 감사드립니다.
+우리 팀은 다른 강좌도 제작합니다! 확인해 보세요:
 
-## 🎒 다른 강좌들
+- [**NEW** 초보자를 위한 AI 에이전트](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [**NEW** .NET을 사용한 초보자를 위한 생성 AI](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+- [**NEW** JavaScript를 사용한 초보자를 위한 생성 AI](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 ML](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 데이터 과학](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 AI](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 사이버 보안](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
+- [초보자를 위한 웹 개발](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 IoT](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+- [초보자를 위한 XR 개발](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [GitHub Copilot로 AI 페어 프로그래밍 마스터하기](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+- [C#/.NET 개발자를 위한 GitHub Copilot 마스터하기](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+- [나만의 Copilot 모험 선택하기](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
-우리 팀은 다른 강좌들도 제작하고 있습니다! 확인해보세요:
-
-- [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-- [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-- [Cybersecurity for Beginners](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
-- [Web Dev for Beginners](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-- [IoT for Beginners](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-- [XR Development for Beginners](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [GitHub Copilot을 활용한 AI 페어 프로그래밍 마스터하기](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+**면책 조항**:  
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 우리는 정확성을 위해 노력하지만, 자동 번역은 오류나 부정확성을 포함할 수 있음을 유의하십시오. 원본 문서는 해당 언어로 작성된 문서를 권위 있는 자료로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역을 사용하여 발생하는 오해나 오역에 대해 책임을 지지 않습니다.
