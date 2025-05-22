@@ -14,7 +14,7 @@
 
 [![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-### 🌐 Multi-Language Support
+### 🌐 Multi-Language Supports
 
 #### Supported via GitHub Action (Automated & Always Up-to-Date)
 
