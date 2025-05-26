@@ -35,6 +35,7 @@ For .NET Developers checkout [Generative AI for Beginners (.NET Edition)](https:
 Each lesson also includes a "Keep Learning" section with additional learning tools.
 
 ## What You Need
+
 ### To run the code of this course, you can use either: 
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
