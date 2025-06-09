@@ -1,7 +1,7 @@
 ipywidgets==8.1.7
 matplotlib==3.9.4
 numpy==1.24.2
-pandas==1.5.3
+pandas==2.3.0
 tqdm==4.67.1
 python-dotenv==1.0.0
 openai>=0.28.0
