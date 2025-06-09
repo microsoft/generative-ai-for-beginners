@@ -76,7 +76,8 @@ app.get('/', [
 
   const { name, email } = req.query;
   const escapedName = escape(name);
-  res.send(`Hello ${escapedName} (${email})!`);
+  const escapedEmail = escape(email);
+  res.send(`Hello ${escapedName} (${escapedEmail})!`);
 });
 
 // Use HTTPS instead of HTTP
