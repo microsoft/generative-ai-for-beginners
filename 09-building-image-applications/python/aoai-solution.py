@@ -12,9 +12,9 @@ dotenv.load_dotenv()
 
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 client = AzureOpenAI(
-  api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-  api_version = "2023-12-01-preview",
-  azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
+  api_key=os.environ['AZURE_OPENAI_API_DALLE_KEY'],  # this is also the default, it can be omitted
+  api_version = os.environ['AZURE_OPENAI_API_DALLE_VERSION'],  # e.g. "2023-06-01-preview"
+  azure_endpoint=os.environ['AZURE_OPENAI_DALLE_ENDPOINT'] 
   )
 
 model = os.environ['AZURE_OPENAI_DEPLOYMENT']
@@ -46,6 +46,7 @@ try:
         model=model,
         prompt=prompt,    # Enter your prompt text here
         size='1024x1024',
+        style='natural',  # Optional: specify the style of the image
         n=1
     )
 
