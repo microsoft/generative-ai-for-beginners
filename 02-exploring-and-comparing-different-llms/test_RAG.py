@@ -9,14 +9,14 @@ credential = DefaultAzureCredential()
 token_provider = get_bearer_token_provider(credential, "https://cognitiveservices.azure.com/.default")
 openai_client = AzureOpenAI(
     api_version="2024-06-01",
-    azure_endpoint="https://phi4-test-resource.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview",
+    azure_endpoint="",
     azure_ad_token_provider=token_provider
 )
 
 search_client = SearchClient(
     endpoint="https://hotels-sample-index.search.windows.net",
     index_name="hotels-sample-index",
-    credential=AzureKeyCredential("M8wpWZga2bQglwkC4ygX2skVnStLkO4lsSHsf7EXAwAzSeBOdL6H")
+    credential=AzureKeyCredential("")
 )
 
 # This prompt provides instructions to the model. 
@@ -49,7 +49,7 @@ response = openai_client.chat.completions.create(
             "content": GROUNDED_PROMPT.format(query=query, sources=sources_formatted)
         }
     ],
-    model="gpt-4.1"
+    model=""
 )
 
 print(response.choices[0].message.content)
