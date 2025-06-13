@@ -103,11 +103,11 @@ Uma vez que você tenha tudo verificado, pode começar!
 [Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) é um instalador leve para instalar [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, assim como alguns pacotes.
 Conda em si é um gerenciador de pacotes, que facilita a configuração e alternância entre diferentes [**ambientes virtuais**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) Python e pacotes. Ele também é útil para instalar pacotes que não estão disponíveis via `pip`.
 
-You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
+Você pode seguir o [guia de instalação do MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) para configurá-lo.
 
-With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
+Com o Miniconda instalado, você precisa clonar o [repositório](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (caso ainda não tenha feito isso).
 
-Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
+Em seguida, você precisa criar um ambiente virtual. Para fazer isso com o Conda, crie um novo arquivo de ambiente (_environment.yml_). Se estiver usando Codespaces, crie-o dentro do diretório `.devcontainer`, portanto, `.devcontainer/environment.yml`.
 
 Vá em frente e preencha seu arquivo de ambiente com o trecho abaixo:
 
@@ -171,21 +171,21 @@ jupyterhub
 
 Isso iniciará uma instância do Jupyter e o URL para acessá-lo será mostrado na janela da linha de comando.
 
-Uma vez que você acessa o URL, deve ver o esboço do curso e ser capaz de navegar para qualquer arquivo `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
+Uma vez que você acessa o URL, deve ver o esboço do curso e ser capaz de navegar para qualquer arquivo `*.ipynb`. Por Exemplo, `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Running in a container
+### Executando em um contêiner
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+Uma alternativa à configuração de tudo no seu computador ou no Codespace é usar um [contêiner](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). A pasta especial `.devcontainer` dentro do repositório do curso permite que o VS Code configure o projeto dentro de um contêiner. Fora do Codespaces, isso exigirá a instalação do Docker e, francamente, envolve um pouco de trabalho, por isso recomendamos isso apenas para aqueles com experiência em trabalhar com contêineres.
 
-One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
+Uma das melhores maneiras de manter suas chaves de API seguras ao usar o GitHub Codespaces é usar o Codespace Secrets. Siga o guia [Gerenciamento de segredos do Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) para saber mais sobre isso.
 
-## Lessons and Technical Requirements
+## Lições e Requisitos Técnicos
 
-The course has 6 concept lessons and 6 coding lessons.
+O curso tem 6 lições conceituais e 6 lições de codificação.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Para as lições de codificação, estamos usando o Serviço Azure OpenAI. Você precisará de acesso ao serviço Azure OpenAI e de uma chave de API para executar este código. Você pode solicitar acesso [preenchendo esta inscrição](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` onde pode visualizar o código e os resultados.
+Enquanto você aguarda o processamento da sua inscrição, cada lição de codificação também inclui um `README.md` onde você pode visualizar o código e os resultados.
 
 ## Usando o Serviço Azure OpenAI pela primeira vez
 
