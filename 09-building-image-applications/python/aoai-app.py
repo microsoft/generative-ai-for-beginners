@@ -12,13 +12,12 @@ dotenv.load_dotenv()
 
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 client = AzureOpenAI(
-  api_key=os.environ['AZURE_OPENAI_API_DALLE_KEY'],  # this is also the default, it can be omitted
-  api_version = os.environ['AZURE_OPENAI_API_DALLE_VERSION'],  # e.g. "2023-06-01-preview"
-  azure_endpoint= os.environ['AZURE_OPENAI_DALLE_ENDPOINT']
+  api_key=os.environ['AZURE_DALLE_API_KEY'],  # this is also the default, it can be omitted
+  api_version = os.environ['AZURE_DALLE_API_VERSION'],  # e.g. "2023-06-01-preview"
+  azure_endpoint= os.environ['AZURE_DALLE_ENDPOINT']
   )
 
-model = "dall-e-3"
-
+model = os.environ['AZURE_DALLE_DEPLOYMENT']  # e.g. "dall-e-2" or "dall-e-3"
 
 try:
     # Create an image by using the image generation API

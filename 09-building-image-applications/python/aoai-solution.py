@@ -12,12 +12,12 @@ dotenv.load_dotenv()
 
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 client = AzureOpenAI(
-  api_key=os.environ['AZURE_OPENAI_API_DALLE_KEY'],  # this is also the default, it can be omitted
-  api_version = os.environ['AZURE_OPENAI_API_DALLE_VERSION'],  # e.g. "2023-06-01-preview"
-  azure_endpoint=os.environ['AZURE_OPENAI_DALLE_ENDPOINT'] 
+  api_key=os.environ['AZURE_DALLE_API_KEY'],  # this is also the default, it can be omitted
+  api_version = os.environ['AZURE_DALLE_API_VERSION'],  # e.g. "2023-06-01-preview"
+  azure_endpoint=os.environ['AZURE_DALLE_ENDPOINT'] 
   )
 
-model = os.environ['AZURE_OPENAI_DEPLOYMENT']
+model = os.environ['AZURE_DALLE_DEPLOYMENT']
 
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
