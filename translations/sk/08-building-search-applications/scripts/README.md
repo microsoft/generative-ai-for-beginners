@@ -2,27 +2,27 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:54:34+00:00",
+  "translation_date": "2025-06-25T16:59:14+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "sk"
 }
 -->
 # Príprava transkripčných dát
 
-Skripty na prípravu transkripčných dát sťahujú prepisy videí z YouTube a pripravujú ich na použitie so vzorovým projektom Semantic Search s OpenAI Embeddings a Functions.
+Skripty na prípravu transkripčných dát sťahujú prepisy videí z YouTube a pripravujú ich na použitie so vzorom Semantického vyhľadávania pomocou OpenAI Embeddings a Funkcií.
 
-Skripty na prípravu transkripčných dát boli testované na najnovších verziách Windows 11, macOS Ventura a Ubuntu 22.04 (a vyšších).
+Skripty na prípravu transkripčných dát boli testované na najnovších vydaniach Windows 11, macOS Ventura a Ubuntu 22.04 (a novších).
 
-## Vytvorenie potrebných zdrojov služby Azure OpenAI
+## Vytvorenie potrebných zdrojov Azure OpenAI Service
 
 > [!IMPORTANT]
-> Odporúčame aktualizovať Azure CLI na najnovšiu verziu, aby bola zaistená kompatibilita s OpenAI.
+> Odporúčame aktualizovať Azure CLI na najnovšiu verziu, aby bola zaistená kompatibilita s OpenAI
 > Pozrite si [Dokumentáciu](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Vytvorte skupinu zdrojov
 
 > [!NOTE]
-> Pre tieto pokyny používame skupinu zdrojov s názvom "semantic-video-search" v oblasti East US.
+> Pre tieto pokyny používame skupinu zdrojov s názvom "semantic-video-search" vo východných USA.
 > Môžete zmeniť názov skupiny zdrojov, ale pri zmene umiestnenia zdrojov 
 > skontrolujte [tabuľku dostupnosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
@@ -30,14 +30,14 @@ Skripty na prípravu transkripčných dát boli testované na najnovších verzi
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Vytvorte zdroj služby Azure OpenAI.
+1. Vytvorte zdroj Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Získajte koncový bod a kľúče na použitie v tejto aplikácii
+1. Získajte koncový bod a kľúče pre použitie v tejto aplikácii
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -70,13 +70,13 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## Požadovaný softvér
+## Potrebný softvér
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) alebo novší
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) alebo vyšší
 
 ## Premenné prostredia
 
-Nasledujúce premenné prostredia sú potrebné na spustenie skriptov na prípravu transkripčných dát z YouTube.
+Na spustenie skriptov na prípravu transkripčných dát z YouTube sú potrebné nasledujúce premenné prostredia.
 
 ### Na Windows
 
@@ -104,7 +104,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Inštalácia potrebných Python knižníc
 
 1. Nainštalujte [git klienta](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ak ešte nie je nainštalovaný.
-1. Z `Terminal` okna klonujte vzorový projekt do preferovaného priečinka pre repozitáre.
+1. Z `Terminal` okna naklonujte vzor do preferovaného priečinka repozitára.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -124,7 +124,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    Na macOS a Linuxe:
+    Na macOS a Linux:
 
     ```bash
     python3 -m venv .venv
@@ -138,7 +138,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   Na macOS a Linuxe:
+   Na macOS a Linux:
 
    ```bash
    source .venv/bin/activate
@@ -152,7 +152,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   Na macOS a Linuxe:
+   Na macOS a Linux:
 
    ```bash
    pip3 install -r requirements.txt
@@ -166,11 +166,11 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### Na macOS a Linuxe
+### Na macOS a Linux
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou AI prekladovej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

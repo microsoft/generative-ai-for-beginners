@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:46:07+00:00",
+  "translation_date": "2025-06-25T16:49:12+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "en"
 }
@@ -23,7 +23,7 @@ The transcription data prep scripts have been tested on the latest releases of W
 
 > [!NOTE]
 > For these instructions, we're using the resource group named "semantic-video-search" in East US.
-> You can change the name of the resource group, but when changing the location for the resources,
+> You can change the name of the resource group, but when changing the location for the resources, 
 > check the [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console

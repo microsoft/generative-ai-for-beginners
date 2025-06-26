@@ -2,28 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:51:53+00:00",
+  "translation_date": "2025-06-25T16:56:35+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "fi"
 }
 -->
-# Puheentunnistusdatan valmistelu
+# Transkriptiodatan valmistelu
 
-Puheentunnistusdatan valmisteluskriptit lataavat YouTube-videoiden tekstitykset ja valmistelevat ne käytettäväksi Semantic Search with OpenAI Embeddings and Functions -esimerkin kanssa.
+Transkriptiodatan valmisteluskriptit lataavat YouTube-videoiden transkriptit ja valmistelevat ne käytettäväksi Semantic Search with OpenAI Embeddings and Functions -esimerkin kanssa.
 
-Puheentunnistusdatan valmisteluskriptit on testattu uusimmilla Windows 11, macOS Ventura ja Ubuntu 22.04 (ja uudemmat) julkaisuilla.
+Transkriptiodatan valmisteluskriptit on testattu uusimmilla versioilla Windows 11, macOS Ventura ja Ubuntu 22.04 (ja uudemmat).
 
 ## Luo tarvittavat Azure OpenAI Service -resurssit
 
 > [!IMPORTANT]
-> Suosittelemme päivittämään Azure CLI:n uusimpaan versioon varmistaaksesi yhteensopivuuden OpenAI:n kanssa
+> Suosittelemme päivittämään Azure CLI:n uusimpaan versioon yhteensopivuuden varmistamiseksi OpenAI:n kanssa
 > Katso [dokumentaatio](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Luo resurssiryhmä
 
 > [!NOTE]
-> Näissä ohjeissa käytämme resurssiryhmää nimeltä "semantic-video-search" Itäisessä Yhdysvalloissa.
-> Voit muuttaa resurssiryhmän nimeä, mutta kun muutat resurssien sijaintia, 
+> Näissä ohjeissa käytämme resurssiryhmää nimeltä "semantic-video-search" East US:ssa.
+> Voit muuttaa resurssiryhmän nimeä, mutta kun muutat resurssien sijaintia,
 > tarkista [mallien saatavuustaulukko](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Hanki päätepiste ja avaimet tämän sovelluksen käyttöön
+1. Hanki päätepiste ja avaimet tämän sovelluksen käyttöä varten
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -70,17 +70,17 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## Tarvittava ohjelmisto
+## Vaadittu ohjelmisto
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) tai uudempi
 
 ## Ympäristömuuttujat
 
-Seuraavat ympäristömuuttujat ovat tarpeen YouTube-puheentunnistusdatan valmisteluskriptien suorittamiseen.
+Seuraavat ympäristömuuttujat ovat välttämättömiä YouTube-transkriptiodatan valmisteluskriptien suorittamiseksi.
 
-### Windowsissa
+### Windowsilla
 
-Suosittelemme lisäämään muuttujat käyttäjäkohtaisiin `user` environment variables.
+Suositellaan lisäämään muuttujat `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -90,9 +90,9 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### Linuxissa ja macOS:ssa
+### Linuxilla ja macOS:llä
 
-Suosittelemme lisäämään seuraavat vientikomentorivit tiedostoon `~/.bashrc` or `~/.zshrc`.
+Suositellaan lisäämään seuraavat eksportit `~/.bashrc` or `~/.zshrc` tiedostoon.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Asenna tarvittavat Python-kirjastot
 
-1. Asenna [git-asiakasohjelma](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos se ei ole jo asennettuna.
+1. Asenna [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos se ei ole jo asennettu.
 1. Avaa `Terminal`-ikkuna ja kloonaa esimerkki haluamaasi repo-kansioon.
 
     ```bash
@@ -118,13 +118,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Luo Python-virtuaaliympäristö.
 
-    Windowsissa:
+    Windowsilla:
 
     ```powershell
     python -m venv .venv
     ```
 
-    macOS:ssa ja Linuxissa:
+    macOS:llä ja Linuxilla:
 
     ```bash
     python3 -m venv .venv
@@ -132,13 +132,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Aktivoi Python-virtuaaliympäristö.
 
-   Windowsissa:
+   Windowsilla:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   macOS:ssa ja Linuxissa:
+   macOS:llä ja Linuxilla:
 
    ```bash
    source .venv/bin/activate
@@ -146,31 +146,31 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Asenna tarvittavat kirjastot.
 
-   Windowsissa:
+   Windowsilla:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   macOS:ssa ja Linuxissa:
+   macOS:llä ja Linuxilla:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Suorita YouTube-puheentunnistusdatan valmisteluskriptit
+## Suorita YouTube-transkriptiodatan valmisteluskriptit
 
-### Windowsissa
+### Windowsilla
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### macOS:ssa ja Linuxissa
+### macOS:llä ja Linuxilla
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomaa, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa mahdollisista väärinkäsityksistä tai virheellisistä tulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälyyn perustuvaa käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisten tietojen osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.

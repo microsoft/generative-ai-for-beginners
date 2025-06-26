@@ -2,18 +2,18 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:50:44+00:00",
+  "translation_date": "2025-06-25T16:55:32+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "th"
 }
 -->
 # การเตรียมข้อมูลการถอดเสียง
 
-สคริปต์การเตรียมข้อมูลการถอดเสียงจะดาวน์โหลดถอดเสียงวิดีโอจาก YouTube และเตรียมพร้อมสำหรับการใช้กับตัวอย่าง Semantic Search ด้วย OpenAI Embeddings และ Functions
+สคริปต์เตรียมข้อมูลการถอดเสียงดาวน์โหลดการถอดเสียงวิดีโอจาก YouTube และเตรียมข้อมูลเพื่อใช้กับตัวอย่างการค้นหาความหมายด้วย OpenAI Embeddings และ Functions
 
-สคริปต์การเตรียมข้อมูลการถอดเสียงได้รับการทดสอบบน Windows 11, macOS Ventura และ Ubuntu 22.04 (และสูงกว่า)
+สคริปต์เตรียมข้อมูลการถอดเสียงได้รับการทดสอบบน Windows 11, macOS Ventura และ Ubuntu 22.04 (และรุ่นที่สูงกว่า)
 
-## สร้างทรัพยากร Azure OpenAI Service ที่จำเป็น
+## สร้างทรัพยากรที่จำเป็นสำหรับบริการ Azure OpenAI
 
 > [!IMPORTANT]
 > เราแนะนำให้คุณอัปเดต Azure CLI เป็นเวอร์ชันล่าสุดเพื่อให้แน่ใจว่าเข้ากันได้กับ OpenAI
@@ -22,22 +22,22 @@ CO_OP_TRANSLATOR_METADATA:
 1. สร้างกลุ่มทรัพยากร
 
 > [!NOTE]
-> สำหรับคำแนะนำเหล่านี้ เราใช้กลุ่มทรัพยากรชื่อ "semantic-video-search" ใน East US
-> คุณสามารถเปลี่ยนชื่อกลุ่มทรัพยากรได้ แต่เมื่อเปลี่ยนตำแหน่งที่ตั้งสำหรับทรัพยากร 
-> ตรวจสอบ [ตารางความพร้อมใช้งานของโมเดล](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)
+> สำหรับคำแนะนำเหล่านี้เราใช้กลุ่มทรัพยากรชื่อ "semantic-video-search" ใน East US
+> คุณสามารถเปลี่ยนชื่อกลุ่มทรัพยากรได้ แต่เมื่อเปลี่ยนตำแหน่งของทรัพยากร 
+> ตรวจสอบ [ตารางความพร้อมของโมเดล](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. สร้างทรัพยากร Azure OpenAI Service
+1. สร้างทรัพยากรบริการ Azure OpenAI
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. รับ endpoint และคีย์สำหรับใช้งานในแอปพลิเคชันนี้
+1. รับ endpoint และคีย์สำหรับการใช้งานในแอปพลิเคชันนี้
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -80,7 +80,7 @@ az cognitiveservices account deployment create \
 
 ### บน Windows
 
-แนะนำให้เพิ่มตัวแปรไปยัง `user` environment variables.
+แนะนำให้เพิ่มตัวแปรใน `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`
 
 ```text
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### บน Linux และ macOS
 
-แนะนำให้เพิ่มการ export ต่อไปนี้ในไฟล์ `~/.bashrc` or `~/.zshrc`
+แนะนำให้เพิ่มการส่งออกต่อไปนี้ในไฟล์ `~/.bashrc` or `~/.zshrc`
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -104,19 +104,19 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## ติดตั้งไลบรารี Python ที่จำเป็น
 
 1. ติดตั้ง [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) หากยังไม่ได้ติดตั้ง
-1. จากหน้าต่าง `Terminal` โคลนตัวอย่างไปยังโฟลเดอร์ repo ที่คุณต้องการ
+1. จากหน้าต่าง `Terminal` ให้โคลนตัวอย่างไปยังโฟลเดอร์ repo ที่คุณต้องการ
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. ไปที่โฟลเดอร์ `data_prep`
+1. ไปยังโฟลเดอร์ `data_prep`
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. สร้างสภาพแวดล้อมเสมือน Python
+1. สร้างสภาพแวดล้อมเสมือนของ Python
 
     บน Windows:
 
@@ -130,7 +130,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. เปิดใช้งานสภาพแวดล้อมเสมือน Python
+1. เปิดใช้งานสภาพแวดล้อมเสมือนของ Python
 
    บน Windows:
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาที่เป็นต้นฉบับควรถูกพิจารณาว่าเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้การแปลโดยมนุษย์ที่มีความเชี่ยวชาญ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้เกิดความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้การแปลโดยมนุษย์มืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้

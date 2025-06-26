@@ -2,24 +2,22 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:35:01+00:00",
+  "translation_date": "2025-06-25T19:59:43+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "tl"
 }
 -->
 # Pagsasama sa pagtawag ng function
 
-[![Pagsasama sa pagtawag ng function](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.tl.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+Natuto ka na ng marami sa mga nakaraang aralin. Gayunpaman, maaari pa tayong mag-improve. Ilan sa mga bagay na maaari nating tugunan ay kung paano makakakuha ng mas pare-parehong format ng tugon upang mas madali itong magamit sa mga susunod na sistema. Gayundin, maaari nating gustong magdagdag ng data mula sa ibang mga pinagmulan upang higit pang mapalawak ang ating aplikasyon.
 
-Marami ka nang natutunan sa mga nakaraang aralin. Gayunpaman, maaari pa nating pagbutihin ito. Ilan sa mga bagay na maaari nating talakayin ay kung paano makakakuha ng mas pare-parehong format ng tugon upang mas madali itong gamitin sa mga tugon sa hinaharap. Gayundin, maaaring gusto nating magdagdag ng data mula sa ibang mga pinagmulan upang higit pang pagyamanin ang ating aplikasyon.
-
-Ang mga nabanggit na problema ay ang tinutugunan ng kabanatang ito.
+Ang mga nabanggit na problema ay ang tatalakayin ng kabanatang ito.
 
 ## Panimula
 
-Saklaw ng araling ito ang:
+Tatalakayin ng araling ito ang:
 
-- Ipaliwanag kung ano ang pagtawag ng function at ang mga gamit nito.
+- Ipaliwanag kung ano ang pagtawag ng function at ang mga kaso ng paggamit nito.
 - Paglikha ng pagtawag ng function gamit ang Azure OpenAI.
 - Paano isama ang pagtawag ng function sa isang aplikasyon.
 
@@ -29,38 +27,38 @@ Sa pagtatapos ng araling ito, magagawa mong:
 
 - Ipaliwanag ang layunin ng paggamit ng pagtawag ng function.
 - I-setup ang Function Call gamit ang Azure OpenAI Service.
-- Magdisenyo ng epektibong pagtawag ng function para sa kaso ng paggamit ng iyong aplikasyon.
+- Magdisenyo ng mabisang pagtawag ng function para sa kaso ng paggamit ng iyong aplikasyon.
 
-## Senaryo: Pagpapahusay ng aming chatbot gamit ang mga function
+## Senaryo: Pagpapahusay ng ating chatbot gamit ang mga function
 
-Para sa araling ito, nais naming bumuo ng tampok para sa aming startup sa edukasyon na nagpapahintulot sa mga gumagamit na gumamit ng chatbot upang maghanap ng mga teknikal na kurso. Magrerekomenda kami ng mga kurso na angkop sa kanilang antas ng kasanayan, kasalukuyang tungkulin at teknolohiya ng interes.
+Para sa araling ito, nais nating bumuo ng tampok para sa ating startup sa edukasyon na nagpapahintulot sa mga gumagamit na gumamit ng chatbot upang makahanap ng mga teknikal na kurso. Magrerekomenda kami ng mga kurso na angkop sa kanilang antas ng kasanayan, kasalukuyang papel at teknolohiyang interes.
 
-Upang makumpleto ang senaryong ito, gagamit kami ng kombinasyon ng:
+Upang makumpleto ang senaryong ito, gagamit tayo ng kumbinasyon ng:
 
 - `Azure OpenAI` upang lumikha ng karanasan sa chat para sa gumagamit.
 - `Microsoft Learn Catalog API` upang tulungan ang mga gumagamit na makahanap ng mga kurso batay sa kahilingan ng gumagamit.
 - `Function Calling` upang kunin ang query ng gumagamit at ipadala ito sa isang function upang gumawa ng API request.
 
-Upang makapagsimula, tingnan natin kung bakit nais nating gamitin ang pagtawag ng function sa unang lugar:
+Upang makapagsimula, tingnan natin kung bakit natin gustong gamitin ang pagtawag ng function sa unang lugar:
 
 ## Bakit Pagtawag ng Function
 
-Bago ang pagtawag ng function, ang mga tugon mula sa isang LLM ay hindi istraktura at hindi pare-pareho. Kinakailangan ng mga developer na magsulat ng kumplikadong code sa pag-validate upang matiyak na kaya nilang hawakan ang bawat pagkakaiba-iba ng tugon. Hindi makakuha ng mga sagot ang mga gumagamit tulad ng "Ano ang kasalukuyang panahon sa Stockholm?". Ito ay dahil ang mga modelo ay limitado sa oras kung kailan sinanay ang data.
+Bago ang pagtawag ng function, ang mga tugon mula sa isang LLM ay hindi nakaayos at hindi pare-pareho. Kinakailangan ng mga developer na magsulat ng kumplikadong code ng pagpapatunay upang matiyak na kaya nilang hawakan ang bawat pagkakaiba-iba ng tugon. Hindi makakakuha ang mga gumagamit ng mga sagot tulad ng "Ano ang kasalukuyang panahon sa Stockholm?". Ito ay dahil limitado ang mga modelo sa oras na na-train ang data.
 
-Ang Pagtawag ng Function ay isang tampok ng Azure OpenAI Service upang malampasan ang mga sumusunod na limitasyon:
+Ang Pagtawag ng Function ay isang tampok ng Azure OpenAI Service upang mapagtagumpayan ang mga sumusunod na limitasyon:
 
-- **Pare-parehong format ng tugon**. Kung mas mahusay nating makokontrol ang format ng tugon, mas madali nating maisasama ang tugon sa hinaharap sa ibang mga sistema.
+- **Pare-parehong format ng tugon**. Kung mas makokontrol natin ang format ng tugon, mas madali nating maisasama ang tugon sa mga susunod na sistema.
 - **Panlabas na data**. Kakayahang gumamit ng data mula sa ibang mga pinagmulan ng isang aplikasyon sa konteksto ng chat.
 
-## Paglalarawan ng problema sa pamamagitan ng isang senaryo
+## Paglalarawan ng problema sa pamamagitan ng senaryo
 
-> Inirerekumenda namin na gamitin mo ang [kasamang notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) kung nais mong patakbuhin ang senaryo sa ibaba. Maaari mo ring basahin ito habang sinusubukan naming ilarawan ang isang problema kung saan makakatulong ang mga function upang matugunan ang problema.
+> Inirerekomenda naming gamitin ang [kasamang notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) kung nais mong patakbuhin ang senaryong nasa ibaba. Maaari mo ring basahin ito habang sinusubukan naming ilarawan ang isang problema kung saan makakatulong ang mga function na tugunan ang problema.
 
-Tingnan natin ang halimbawa na naglalarawan sa problema ng format ng tugon:
+Tingnan natin ang halimbawa na naglalarawan ng problema sa format ng tugon:
 
-Sabihin nating nais nating lumikha ng database ng data ng estudyante upang makapagsuggest kami ng tamang kurso sa kanila. Sa ibaba mayroon tayong dalawang paglalarawan ng mga estudyante na halos pareho sa data na kanilang nilalaman.
+Sabihin nating gusto nating lumikha ng isang database ng data ng mga estudyante upang makapag-suggest tayo ng tamang kurso sa kanila. Sa ibaba ay may dalawang paglalarawan ng mga estudyante na halos magkapareho sa data na kanilang taglay.
 
-1. Gumawa ng koneksyon sa aming Azure OpenAI resource:
+1. Lumikha ng koneksyon sa aming Azure OpenAI resource:
 
    ```python
    import os
@@ -77,7 +75,7 @@ Sabihin nating nais nating lumikha ng database ng data ng estudyante upang makap
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Sa ibaba ay ilang Python code para sa pag-configure ng aming koneksyon sa Azure OpenAI kung saan isinet namin ang `api_type`, `api_base`, `api_version` and `api_key`.
+   Sa ibaba ay ilang Python code para sa pag-configure ng aming koneksyon sa Azure OpenAI kung saan itinakda namin ang `api_type`, `api_base`, `api_version` and `api_key`.
 
 1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
 
@@ -87,9 +85,9 @@ Sabihin nating nais nating lumikha ng database ng data ng estudyante upang makap
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Nais naming ipadala ang mga paglalarawan ng estudyante sa itaas sa isang LLM upang i-parse ang data. Ang data na ito ay maaaring gamitin sa aming aplikasyon at maipadala sa isang API o maimbak sa isang database.
+   Gusto naming ipadala ang mga paglalarawan ng estudyante sa itaas sa isang LLM upang i-parse ang data. Ang data na ito ay maaari pang magamit sa aming aplikasyon at maipadala sa isang API o maimbak sa isang database.
 
-1. Gumawa tayo ng dalawang magkaparehong prompt kung saan inuutusan natin ang LLM kung anong impormasyon ang interesado tayo:
+1. Gumawa tayo ng dalawang magkaparehong prompt kung saan inutusan natin ang LLM kung anong impormasyon ang interesado tayo:
 
    ```python
    prompt1 = f'''
@@ -121,7 +119,7 @@ Sabihin nating nais nating lumikha ng database ng data ng estudyante upang makap
 
    Ang mga prompt sa itaas ay nag-uutos sa LLM na kunin ang impormasyon at ibalik ang tugon sa format na JSON.
 
-1. Pagkatapos i-setup ang mga prompt at ang koneksyon sa Azure OpenAI, ngayon ay ipapadala natin ang mga prompt sa LLM gamit ang `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Ito ay upang gayahin ang isang mensahe mula sa isang gumagamit na isinusulat sa isang chatbot.
+1. Pagkatapos i-setup ang mga prompt at ang koneksyon sa Azure OpenAI, ipapadala na natin ang mga prompt sa LLM gamit ang `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Ito ay upang gayahin ang isang mensahe mula sa isang gumagamit na isinulat sa isang chatbot.
 
    ```python
    # response from prompt one
@@ -139,7 +137,7 @@ Sabihin nating nais nating lumikha ng database ng data ng estudyante upang makap
    openai_response2.choices[0].message.content
    ```
 
-Ngayon ay maaari nating ipadala ang parehong mga kahilingan sa LLM at suriin ang tugon na natanggap natin sa pamamagitan ng paghahanap nito tulad ng `openai_response1['choices'][0]['message']['content']`.
+Ngayon maaari nating ipadala ang parehong mga kahilingan sa LLM at suriin ang tugon na natanggap natin sa pamamagitan ng paghahanap nito tulad ng `openai_response1['choices'][0]['message']['content']`.
 
 1. Lastly, we can convert the response to JSON format by calling `json.loads`:
 
@@ -179,7 +177,7 @@ Ngayon ay maaari nating ipadala ang parehong mga kahilingan sa LLM at suriin ang
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.tl.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.tl.png)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -201,7 +199,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.tl.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.tl.png)
 
 ### Step 1 - creating messages
 
@@ -213,11 +211,11 @@ The `role` can be either `system` (creating rules), `assistant` (the model) or `
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Sa pamamagitan ng pagtatalaga ng iba't ibang mga tungkulin, malinaw na ipinapakita sa LLM kung ito ay ang sistema na nagsasabi ng isang bagay o ang gumagamit, na tumutulong sa pagbuo ng kasaysayan ng pag-uusap na maaaring pagbasehan ng LLM.
+Sa pamamagitan ng pagtatalaga ng iba't ibang mga papel, naging malinaw sa LLM kung ito ba ay ang sistema na nagsasabi ng isang bagay o ang gumagamit, na nakakatulong sa pagbuo ng kasaysayan ng pag-uusap na maaari pang pagyamanin ng LLM.
 
-### Hakbang 2 - paggawa ng mga function
+### Hakbang 2 - paglikha ng mga function
 
-Susunod, magtatakda tayo ng isang function at ang mga parameter ng function na iyon. Gagamit tayo ng isang function dito na tinatawag na `search_courses` but you can create multiple functions.
+Susunod, magde-define tayo ng isang function at ang mga parameter ng function na iyon. Gagamit tayo ng isang function dito na tinatawag na `search_courses` but you can create multiple functions.
 
 > **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
 
@@ -271,7 +269,7 @@ After defining a function, we now need to include it in the call to the Chat Com
 
 There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` at sa gayon ay nagbibigay sa LLM ng pagpipilian kung kailan tatawagin ang mga function na ibinibigay namin:
+Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` at sa gayon ay binibigyan ang LLM ng pagpipilian kung kailan tatawagin ang mga function na ibinibigay natin dito:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -302,7 +300,7 @@ The conclusion the LLM was able to find the data to fit the arguments of the fun
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Tulad ng nakikita mo, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+Gaya ng nakikita mo, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
 
 Next, we need to see how we can use this in our app.
 
@@ -320,7 +318,7 @@ To integrate this into our application, let's take the following steps:
    response_message = response.choices[0].message
    ```
 
-1. Ngayon ay itatakda natin ang function na tatawag sa Microsoft Learn API upang makakuha ng listahan ng mga kurso:
+1. Ngayon ay ide-define natin ang function na tatawag sa Microsoft Learn API upang makakuha ng listahan ng mga kurso:
 
    ```python
    import requests
@@ -342,11 +340,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Pansinin kung paano tayo ngayon ay lumikha ng isang aktwal na Python function na tumutugma sa mga pangalan ng function na ipinakilala sa `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   Pansinin kung paano tayo ngayon lumikha ng aktwal na function ng Python na tumutugma sa mga pangalan ng function na ipinakilala sa `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` ay bahagi nito at tawagin ang itinuro na function. Narito kung paano mo magagawa ang nabanggit na pagsusuri sa ibaba:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` ay bahagi nito at tawagin ang tinukoy na function. Narito kung paano mo magagawa ang nabanggit na pagsusuri sa ibaba:
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +389,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   Ang tatlong linya na ito, tiyakin na kunin natin ang pangalan ng function, ang mga argumento at gawin ang tawag:
+   Ang tatlong linyang ito, tiyakin na makuha natin ang pangalan ng function, ang mga argumento at gawin ang tawag:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -400,7 +398,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   Sa ibaba ay ang output mula sa pagpapatakbo ng aming code:
+   Sa ibaba ay ang output mula sa pagpapatakbo ng ating code:
 
    **Output**
 
@@ -421,7 +419,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Ngayon ay ipapadala natin ang na-update na mensahe, `messages` sa LLM upang makakuha tayo ng tugon sa natural na wika sa halip na tugon na API JSON formatted.
+1. Ngayon ay ipapadala natin ang na-update na mensahe, `messages` sa LLM upang makakuha tayo ng natural na wika na tugon sa halip na isang API JSON na format ng tugon.
 
    ```python
    print("Messages in next request:")
@@ -450,21 +448,21 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
    ```
 
-## Takdang-Aralin
+## Takdang Aralin
 
 Upang ipagpatuloy ang iyong pag-aaral ng Azure OpenAI Function Calling maaari kang bumuo ng:
 
-- Higit pang mga parameter ng function na maaaring makatulong sa mga nag-aaral na makahanap ng mas maraming kurso.
-- Gumawa ng isa pang pagtawag ng function na kumukuha ng mas maraming impormasyon mula sa nag-aaral tulad ng kanilang katutubong wika.
-- Gumawa ng paghawak ng error kapag ang pagtawag ng function at/o pagtawag ng API ay hindi nagbalik ng anumang angkop na kurso.
+- Higit pang mga parameter ng function na maaaring makatulong sa mga nag-aaral na makahanap ng higit pang mga kurso.
+- Lumikha ng isa pang pagtawag ng function na kumukuha ng higit pang impormasyon mula sa nag-aaral tulad ng kanilang katutubong wika.
+- Lumikha ng error handling kapag ang pagtawag ng function at/o pagtawag ng API ay hindi nagbabalik ng anumang angkop na kurso.
 
-Pahiwatig: Sundan ang [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) na pahina upang makita kung paano at saan magagamit ang data na ito.
+Pahiwatig: Sundin ang [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) na pahina upang makita kung paano at saan magagamit ang data na ito.
 
 ## Mahusay na Trabaho! Ipagpatuloy ang Paglalakbay
 
 Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pag-level up ng iyong kaalaman sa Generative AI!
 
-Pumunta sa Aralin 12, kung saan titingnan natin kung paano [disenyo ng UX para sa AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pumunta sa Aralin 12, kung saan titingnan natin kung paano [magdisenyo ng UX para sa mga AI application](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Habang nagsusumikap kami para sa kawastuhan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatumpak. Ang orihinal na dokumento sa kanyang katutubong wika ay dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot para sa anumang hindi pagkakaintindihan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatumpak. Ang orihinal na dokumento sa kanyang katutubong wika ay dapat ituring na mapagkakatiwalaang pinagmulan. Para sa kritikal na impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Kami ay hindi mananagot para sa anumang hindi pagkakaintindihan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

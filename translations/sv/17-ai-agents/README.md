@@ -2,60 +2,60 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:24:42+00:00",
+  "translation_date": "2025-06-26T00:18:58+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "sv"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.sv.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sv.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Introduktion
 
-AI-agenter representerar en spännande utveckling inom Generativ AI, vilket gör att Stora Språkmodeller (LLMs) kan utvecklas från assistenter till agenter som kan vidta åtgärder. AI-agentramverk gör det möjligt för utvecklare att skapa applikationer som ger LLMs tillgång till verktyg och tillståndshantering. Dessa ramverk förbättrar också synligheten, vilket gör det möjligt för användare och utvecklare att övervaka de åtgärder som LLMs planerar, vilket förbättrar upplevelsehanteringen.
+AI-agenter representerar en spännande utveckling inom Generativ AI, vilket gör det möjligt för stora språkmodeller (LLMs) att utvecklas från assistenter till agenter som kan utföra handlingar. AI-agentramverk gör det möjligt för utvecklare att skapa applikationer som ger LLMs tillgång till verktyg och tillståndshantering. Dessa ramverk förbättrar också synligheten, vilket gör det möjligt för användare och utvecklare att övervaka de handlingar som LLMs planerar, vilket förbättrar upplevelsehanteringen.
 
-Lektionen kommer att täcka följande områden:
+Lektionens innehåll kommer att täcka följande områden:
 
-- Förstå vad en AI-agent är - Vad är egentligen en AI-agent?
+- Förstå vad en AI-agent är - Vad exakt är en AI-agent?
 - Utforska fyra olika AI-agentramverk - Vad gör dem unika?
-- Tillämpa dessa AI-agenter på olika användningsfall - När bör vi använda AI-agenter?
+- Tillämpa dessa AI-agenter på olika användningsområden - När ska vi använda AI-agenter?
 
 ## Lärandemål
 
 Efter att ha tagit denna lektion kommer du att kunna:
 
 - Förklara vad AI-agenter är och hur de kan användas.
-- Ha en förståelse för skillnaderna mellan några av de populära AI-agentramverken och hur de skiljer sig.
-- Förstå hur AI-agenter fungerar för att bygga applikationer med dem.
+- Ha en förståelse för skillnaderna mellan några av de populära AI-agentramverken, och hur de skiljer sig åt.
+- Förstå hur AI-agenter fungerar för att kunna bygga applikationer med dem.
 
 ## Vad är AI-agenter?
 
-AI-agenter är ett mycket spännande område inom Generativ AI. Med denna spänning kommer ibland en förvirring av termer och deras tillämpning. För att hålla saker enkelt och inkluderande för de flesta av de verktyg som refererar till AI-agenter, kommer vi att använda denna definition:
+AI-agenter är ett mycket spännande område inom generativ AI. Med denna spänning kommer ibland en förvirring av termer och deras tillämpning. För att hålla saker enkla och inkluderande för de flesta verktyg som refererar till AI-agenter, kommer vi att använda denna definition:
 
-AI-agenter tillåter Stora Språkmodeller (LLMs) att utföra uppgifter genom att ge dem tillgång till ett **tillstånd** och **verktyg**.
+AI-agenter tillåter stora språkmodeller (LLMs) att utföra uppgifter genom att ge dem tillgång till ett **tillstånd** och **verktyg**.
 
-![Agent Model](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.sv.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sv.png)
 
 Låt oss definiera dessa termer:
 
-**Stora Språkmodeller** - Dessa är de modeller som nämns genom hela kursen, såsom GPT-3.5, GPT-4, Llama-2, etc.
+**Stora språkmodeller** - Dessa är de modeller som refereras genom denna kurs som GPT-3.5, GPT-4, Llama-2, etc.
 
-**Tillstånd** - Detta refererar till den kontext som LLM arbetar i. LLM använder kontexten av sina tidigare handlingar och den nuvarande kontexten, vilket styr dess beslutsfattande för efterföljande handlingar. AI-agentramverk gör det lättare för utvecklare att upprätthålla denna kontext.
+**Tillstånd** - Detta hänvisar till det sammanhang som LLM arbetar i. LLM använder sammanhanget av sina tidigare handlingar och det nuvarande sammanhanget, vilket vägleder dess beslutsfattande för efterföljande handlingar. AI-agentramverk gör det enklare för utvecklare att upprätthålla detta sammanhang.
 
-**Verktyg** - För att slutföra den uppgift som användaren har begärt och som LLM har planerat, behöver LLM tillgång till verktyg. Några exempel på verktyg kan vara en databas, ett API, en extern applikation eller till och med en annan LLM!
+**Verktyg** - För att slutföra uppgiften som användaren har begärt och som LLM har planerat, behöver LLM tillgång till verktyg. Några exempel på verktyg kan vara en databas, ett API, en extern applikation eller till och med en annan LLM!
 
-Dessa definitioner kommer förhoppningsvis att ge dig en bra grund när vi går vidare och tittar på hur de implementeras. Låt oss utforska några olika AI-agentramverk:
+Dessa definitioner kommer förhoppningsvis att ge dig en bra grund framöver när vi tittar på hur de implementeras. Låt oss utforska några olika AI-agentramverk:
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) är en implementation av definitionerna vi gav ovan.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) är en implementering av de definitioner vi gav ovan.
 
-För att hantera **tillståndet**, använder det en inbyggd funktion kallad `AgentExecutor`. Denna accepterar den definierade `agent` och `tools` som är tillgängliga för den.
+För att hantera **tillståndet**, använder den en inbyggd funktion kallad `AgentExecutor`. Denna accepterar den definierade `agent` och de `tools` som är tillgängliga för den.
 
-`Agent Executor` lagrar också chattens historia för att ge kontexten för chatten.
+`Agent Executor` lagrar också chatthistoriken för att ge kontext till chatten.
 
-![Langchain Agents](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.sv.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sv.png)
 
-LangChain erbjuder en [katalog av verktyg](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) som kan importeras i din applikation där LLM kan få tillgång till dem. Dessa är skapade av gemenskapen och av LangChain-teamet.
+LangChain erbjuder en [katalog av verktyg](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) som kan importeras till din applikation där LLM kan få tillgång till. Dessa är skapade av communityn och av LangChain-teamet.
 
 Du kan sedan definiera dessa verktyg och skicka dem till `Agent Executor`.
 
@@ -81,30 +81,30 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Tillstånd och Verktyg
 
-För att ändra och hantera tillstånd genererar en assistentagent Python-kod för att slutföra uppgiften.
+För att ändra och hantera tillstånd, genererar en assistentagent Python-kod för att slutföra uppgiften.
 
 Här är ett exempel på processen:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.sv.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sv.png)
 
-#### LLM Definierad med ett Systemmeddelande
+#### LLM definierad med ett systemmeddelande
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Detta systemmeddelande styr denna specifika LLM till vilka funktioner som är relevanta för dess uppgift. Kom ihåg att med AutoGen kan du ha flera definierade AssistantAgents med olika systemmeddelanden.
+Detta systemmeddelande vägleder denna specifika LLM till vilka funktioner som är relevanta för dess uppgift. Kom ihåg, med AutoGen kan du ha flera definierade AssistantAgents med olika systemmeddelanden.
 
-#### Chatt Startas av Användaren
+#### Chat initieras av användaren
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Detta meddelande från user_proxy (Människa) är vad som kommer att starta processen för Agenten att utforska de möjliga funktioner som den bör utföra.
+Detta meddelande från user_proxy (Människa) är vad som kommer att starta processen för agenten att utforska de möjliga funktioner som den bör utföra.
 
-#### Funktion Utförs
+#### Funktion utförs
 
 ```bash
 chatbot (to user_proxy):
@@ -115,7 +115,7 @@ chatbot (to user_proxy):
 
 ```
 
-När den initiala chatten har bearbetats kommer Agenten att skicka det föreslagna verktyget att anropa. I detta fall är det en funktion kallad `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+När den initiala chatten har bearbetats, kommer agenten att föreslå vilket verktyg som ska anropas. I detta fall är det en funktion kallad `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
 
 You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
 
@@ -127,47 +127,47 @@ The next agent framework we will explore is [Taskweaver](https://microsoft.githu
 
 To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. Detta kan vara Python-klasser eller en allmän kodtolk. Dessa plugins lagras som embeddings så att LLM kan bättre söka efter rätt plugin.
+To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. Detta kan vara Python-klasser eller en allmän kodtolkare. Dessa plugins lagras som inbäddningar så att LLM kan bättre söka efter rätt plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.sv.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sv.png)
 
-Här är ett exempel på ett plugin för att hantera avvikelsedetektering:
+Här är ett exempel på en plugin för att hantera anomalidetektering:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Koden verifieras innan den körs. En annan funktion för att hantera kontext i Taskweaver är `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+Koden verifieras innan den utförs. En annan funktion för att hantera kontext i Taskweaver är `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` av konversationen och `tools` är andra AI-modeller. Varje AI-modell är specialiserade modeller som utför vissa uppgifter såsom objektdetektering, transkription eller bildbeskrivning.
+The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` av konversationen och `tools`är andra AI-modeller. Var och en av AI-modellerna är specialiserade modeller som utför vissa uppgifter som objektigenkänning, transkription eller bildbeskrivning.
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.sv.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sv.png)
 
-LLM, som är en allmän modell, tar emot förfrågan från användaren och identifierar den specifika uppgiften och eventuella argument/data som behövs för att slutföra uppgiften.
+LLM, som är en allmän modell, tar emot begäran från användaren och identifierar den specifika uppgiften och eventuella argument/data som behövs för att slutföra uppgiften.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM formaterar sedan förfrågan på ett sätt som den specialiserade AI-modellen kan tolka, såsom JSON. När AI-modellen har returnerat sin förutsägelse baserat på uppgiften, tar LLM emot svaret.
+LLM formaterar sedan begäran på ett sätt som den specialiserade AI-modellen kan tolka, såsom JSON. När AI-modellen har returnerat sin förutsägelse baserat på uppgiften, tar LLM emot svaret.
 
-Om flera modeller krävs för att slutföra uppgiften, kommer den också att tolka svaret från dessa modeller innan de sammanförs för att generera svaret till användaren.
+Om flera modeller krävs för att slutföra uppgiften, kommer den också att tolka svaren från dessa modeller innan de sammanställs för att generera svaret till användaren.
 
 Exemplet nedan visar hur detta skulle fungera när en användare begär en beskrivning och antal av objekten i en bild:
 
 ## Uppgift
 
-För att fortsätta din inlärning av AI-agenter kan du bygga med AutoGen:
+För att fortsätta ditt lärande om AI-agenter kan du bygga med AutoGen:
 
-- En applikation som simulerar ett affärsmöte med olika avdelningar i en utbildningsstart.
-- Skapa systemmeddelanden som vägleder LLMs i att förstå olika personor och prioriteringar, och gör det möjligt för användaren att presentera en ny produktidé.
-- LLM bör sedan generera uppföljningsfrågor från varje avdelning för att förfina och förbättra presentationen och produktidén.
+- En applikation som simulerar ett affärsmöte med olika avdelningar på en utbildningsstartup.
+- Skapa systemmeddelanden som vägleder LLMs i att förstå olika personas och prioriteringar, och möjliggör för användaren att pitcha en ny produktidé.
+- LLM ska sedan generera uppföljningsfrågor från varje avdelning för att förfina och förbättra pitch och produktidé.
 
 ## Lärandet slutar inte här, fortsätt resan
 
-Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om Generativ AI!
+Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta höja din kunskap om Generativ AI!
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på sitt modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Vi strävar efter noggrannhet, men var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller misstolkningar som uppstår vid användning av denna översättning.

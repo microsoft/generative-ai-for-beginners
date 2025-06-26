@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T22:08:50+00:00",
+  "translation_date": "2025-06-25T20:39:02+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "en"
 }
@@ -19,7 +19,7 @@ This lesson will cover:
 
 ## Learning Goals
 
-After completing this lesson, you will understand:
+After completing this lesson, you will have an understanding of:
 
 - The threats and risks to AI systems.
 - Common methods and practices for securing AI systems.
@@ -54,19 +54,17 @@ Here are examples of how data poisoning can affect your models:
 4. **Backdoor Attacks**: An adversary inserts a hidden pattern (backdoor) into the training data. The model learns to recognize this pattern and behaves maliciously when triggered.\
    **Example**: A face recognition system trained with backdoored images that misidentifies a specific person.
 
-The MITRE Corporation has created [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), a knowledgebase of tactics and techniques employed by adversaries in real-world attacks on AI systems.
+The MITRE Corporation has created ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems), a knowledgebase of tactics and techniques employed by adversaries in real-world attacks on AI systems.
 
-> There are a growing number of vulnerabilities in AI-enabled systems, as the incorporation of AI increases the attack surface of existing systems beyond those of traditional cyber-attacks. We developed ATLAS to raise awareness of these unique and evolving vulnerabilities, as the global community increasingly incorporates AI into various systems. ATLAS is modeled after the MITRE ATT&CK® framework and its tactics, techniques, and procedures (TTPs) are complementary to those in ATT&CK.
+Much like the MITRE ATT&CK® framework, which is extensively used in traditional cybersecurity for planning advanced threat emulation scenarios, ATLAS provides an easily searchable set TTPs that can help to better understand and prepare for defending against emerging attacks.
 
-Much like the MITRE ATT&CK® framework, which is extensively used in traditional cybersecurity for planning advanced threat emulation scenarios, ATLAS provides an easily searchable set of TTPs that can help to better understand and prepare for defending against emerging attacks.
-
-Additionally, the Open Web Application Security Project (OWASP) has created a "[Top 10 list](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" of the most critical vulnerabilities found in applications utilizing LLMs. The list highlights the risks of threats such as the aforementioned data poisoning along with others such as:
+Additionally, the Open Web Application Security Project (OWASP) has created a "Top 10 list" of the most critical vulnerabilities found in applications utilizing LLMs. The list highlights the risks of threats such as the aforementioned data poisoning along with others such as:
 
 - **Prompt Injection**: a technique where attackers manipulate a Large Language Model (LLM) through carefully crafted inputs, causing it to behave outside of its intended behavior.
 - **Supply Chain Vulnerabilities**: The components and software that make up the applications used by an LLM, such as Python modules or external datasets, can themselves be compromised leading to unexpected results, introduced biases and even vulnerabilities in the underlying infrastructure.
 - **Overreliance**: LLMs are fallible and have been prone to hallucinate, providing inaccurate or unsafe results. In several documented circumstances, people have taken the results at face value leading to unintended real-world negative consequences.
 
-Microsoft Cloud Advocate Rod Trent has written a free ebook, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), that dives deeply into these and other emerging AI threats and provides extensive guidance on how to best tackle these scenarios.
+Microsoft Cloud Advocate Rod Trent has written a free ebook, Must Learn AI Security, that dives deeply into these and other emerging AI threats and provides extensive guidance on how to best tackle these scenarios.
 
 ## Security Testing for AI Systems and LLMs
 
@@ -79,21 +77,21 @@ Security testing is the process of evaluating the security of an AI system or LL
 - **Model verification**: This is the process of verifying the correctness and completeness of the model parameters or architecture of an AI system or LLM. Model verification can help detect and prevent model stealing by ensuring that the model is protected and authenticated.
 - **Output validation**: This is the process of validating the quality and reliability of the output of an AI system or LLM. Output validation can help detect and correct malicious manipulation by ensuring that the output is consistent and accurate.
 
-OpenAI, a leader in AI systems, has set up a series of _safety evaluations_ as part of their red teaming network initiative, aimed at testing the output AI systems in the hopes of contributing to AI safety.
+OpenAI, a leader in AI systems, has setup a series of safety evaluations as part of their red teaming network initiative, aimed at testing the output AI systems in the hopes of contributing to AI safety.
 
 > Evaluations can range from simple Q&A tests to more-complex simulations. As concrete examples, here are sample evaluations developed by OpenAI for evaluating AI behaviors from a number of angles:
 
 #### Persuasion
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): How well can an AI system trick another AI system into saying a secret word?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): How well can an AI system convince another AI system to donate money?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): How well can an AI system influence another AI system’s support of a political proposition?
+- MakeMeSay: How well can an AI system trick another AI system into saying a secret word?
+- MakeMePay: How well can an AI system convince another AI system to donate money?
+- Ballot Proposal: How well can an AI system influence another AI system’s support of a political proposition?
 
 #### Steganography (hidden messaging)
 
-- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): How well can an AI system ​​pass secret messages without being caught by another AI system?
-- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): How well can an AI system compress and decompress messages, to enable hiding secret messages?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): How well can an AI system coordinate with another AI system, without direct communication?
+- Steganography: How well can an AI system ​​pass secret messages without being caught by another AI system?
+- Text Compression: How well can an AI system compress and decompress messages, to enable hiding secret messages?
+- Schelling Point: How well can an AI system coordinate with another AI system, without direct communication?
 
 ### AI Security
 
@@ -128,7 +126,7 @@ Data security, governance, and compliance are critical for any organization that
 
 Emulating real-world threats is now considered a standard practice in building resilient AI systems by employing similar tools, tactics, procedures to identify the risks to systems and test the response of defenders.
 
-> The practice of AI red teaming has evolved to take on a more expanded meaning: it not only covers probing for security vulnerabilities, but also includes probing for other system failures, such as the generation of potentially harmful content. AI systems come with new risks, and red teaming is core to understanding those novel risks, such as prompt injection and producing ungrounded content. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+> The practice of AI red teaming has evolved to take on a more expanded meaning: it not only covers probing for security vulnerabilities, but also includes probing for other system failures, such as the generation of potentially harmful content. AI systems come with new risks, and red teaming is core to understanding those novel risks, such as prompt injection and producing ungrounded content. - Microsoft AI Red Team building future of safer AI
 
 Below are key insights that have shaped Microsoft’s AI Red Team program.
 
@@ -139,14 +137,14 @@ Below are key insights that have shaped Microsoft’s AI Red Team program.
 3. **Dynamic Nature of AI Systems:**
    AI applications constantly evolve. In large language model applications, developers adapt to changing requirements. Continuous red teaming ensures ongoing vigilance and adaptation to evolving risks.
 
-AI red teaming is not all-encompassing and should be considered a complementary motion to additional controls such as [role-based access control (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) and comprehensive data management solutions. It's meant to supplement a security strategy that focuses on employing safe and responsible AI solutions that account for privacy and security while aspiring to minimize biases, harmful content, and misinformation that can erode user confidence.
+AI red teaming is not all encompassing and should be considered a complementary motion to additional controls such as role-based access control (RBAC) and comprehensive data management solutions. It's meant to supplement a security strategy that focuses on employing safe and responsible AI solutions that account for privacy and security while aspiring to minimize biases, harmful content and misinformation that can erode user confidence.
 
 Here's a list of additional reading that can help you better understand how red teaming can help identify and mitigate risks in your AI systems:
 
-- [Planning red teaming for large language models (LLMs) and their applications](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
-- [What is the OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
-- [AI Red Teaming - A Key Practice for Building Safer and More Responsible AI Solutions](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
-- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), a knowledgebase of tactics and techniques employed by adversaries in real-world attacks on AI systems.
+- Planning red teaming for large language models (LLMs) and their applications
+- What is the OpenAI Red Teaming Network?
+- AI Red Teaming - A Key Practice for Building Safer and More Responsible AI Solutions
+- MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems), a knowledgebase of tactics and techniques employed by adversaries in real-world attacks on AI systems.
 
 ## Knowledge check
 
@@ -160,13 +158,13 @@ A:1, While all three are great recommendations, ensuring that you're assigning t
 
 ## 🚀 Challenge
 
-Read up more on how you can [govern and protect sensitive information](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) in the age of AI.
+Read up more on how you can govern and protect sensitive information in the age of AI.
 
 ## Great Work, Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our Generative AI Learning collection to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 14 where we will look at [the Generative AI Application Lifecycle](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 14 where we will look at the Generative AI Application Lifecycle!
 
 **Disclaimer**:  
-This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

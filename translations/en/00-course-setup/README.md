@@ -2,16 +2,16 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "9f4785899ee92500f524b4acb26e3bb3",
-  "translation_date": "2025-05-19T12:16:21+00:00",
+  "translation_date": "2025-06-25T08:33:41+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "en"
 }
 -->
 # Getting Started with this course
 
-We are very excited for you to start this course and see what you get inspired to build with Generative AI!
+We are thrilled for you to begin this course and discover what you can create with Generative AI!
 
-To ensure your success, this page outlines setup steps, technical requirements, and where to get help if needed.
+To ensure your success, this page outlines setup steps, technical requirements, and where to find help if needed.
 
 ## Setup Steps
 
@@ -19,7 +19,7 @@ To start taking this course, you will need to complete the following steps.
 
 ### 1. Fork this Repo
 
-[Fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos easier.
+[Fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to modify any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos more easily.
 
 ### 2. Create a codespace
 
@@ -31,7 +31,8 @@ This can be created by selecting the `Code` option on your forked version of thi
 
 ### 3. Storing Your API Keys
 
-Keeping your API keys safe and secure is important when building any type of application. We recommend not to store any API keys directly in your code. Committing those details to a public repository could result in security issues and even unwanted costs if used by a bad actor. Here's a step-by-step guide on how to create a `.env` file for Python and add the `GITHUB_TOKEN`:
+Keeping your API keys safe and secure is important when building any type of application. We recommend not storing any API keys directly in your code. Committing those details to a public repository could result in security issues and even unwanted costs if used by a bad actor.
+Here's a step-by-step guide on how to create a `.env` file for Python and add the `GITHUB_TOKEN`:
 
 1. **Navigate to Your Project Directory**: Open your terminal or command prompt and navigate to your project's root directory where you want to create the `.env` file.
 
@@ -95,11 +96,12 @@ cd generative-ai-for-beginners
 
 Once you have everything checked out, you can get started!
 
-## Optional Steps
+## Optional Steps 
 
-### Installing Miniconda
+### Installing Miniconda 
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, as well as a few packages. Conda itself is a package manager, that makes it easy to setup and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It also comes in handy for installing packages that are not available via `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, as well as a few packages.
+Conda itself is a package manager that makes it easy to set up and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It also comes in handy for installing packages that are not available via `pip`.
 
 You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
 
@@ -124,7 +126,7 @@ dependencies:
 
 ```
 
-If you find you getting errors using conda you can manually install the Microsoft AI Libraries using the following command in a terminal.
+If you find you are getting errors using conda, you can manually install the Microsoft AI Libraries using the following command in a terminal.
 
 ```
 conda install -c microsoft azure-ai-ml
@@ -143,7 +145,7 @@ Refer to the [Conda environments guide](https://docs.conda.io/projects/conda/en/
 
 ### Using Visual Studio Code with the Python support extension
 
-We recommend using the [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) editor with the [Python support extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) installed for this course. This is, however, more of a recommendation and not a definite requirement
+We recommend using the [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) editor with the [Python support extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) installed for this course. This is, however, more of a recommendation and not a definite requirement.
 
 > **Note**: By opening the course repository in VS Code, you have the option to set the project up within a container. This is because of the [special `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) directory found within the course repository. More on this later.
 

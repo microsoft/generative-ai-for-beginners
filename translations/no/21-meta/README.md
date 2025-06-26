@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:12:40+00:00",
+  "translation_date": "2025-06-26T03:32:16+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "no"
 }
@@ -13,15 +13,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 Denne leksjonen vil dekke:
 
-- Utforske de to hovedmodellene i Meta-familien - Llama 3.1 og Llama 3.2
-- Forstå bruksområdene og scenariene for hver modell
+- Utforsking av de to hovedmodellene i Meta-familien - Llama 3.1 og Llama 3.2
+- Forståelse av bruksområder og scenarier for hver modell
 - Kodeeksempel for å vise de unike funksjonene til hver modell
 
 ## Meta-familien av modeller
 
-I denne leksjonen skal vi utforske to modeller fra Meta-familien eller "Llama-flokken" - Llama 3.1 og Llama 3.2
+I denne leksjonen vil vi utforske 2 modeller fra Meta-familien eller "Llama Herd" - Llama 3.1 og Llama 3.2
 
-Disse modellene kommer i forskjellige varianter og er tilgjengelige på GitHub Model-markedsplassen. Her er mer informasjon om hvordan du bruker GitHub Models til å [prototypere med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Disse modellene kommer i forskjellige varianter og er tilgjengelige på GitHub Model-markedsplassen. Her er flere detaljer om bruk av GitHub Models til [prototyping med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Modellvarianter:
 - Llama 3.1 - 70B Instruct
@@ -33,35 +33,35 @@ Modellvarianter:
 
 ## Llama 3.1
 
-Med 405 milliarder parametere passer Llama 3.1 inn i kategorien for åpne kildekode LLM.
+Med 405 milliarder parametere passer Llama 3.1 inn i kategorien for åpen kildekode LLM.
 
-Modellen er en oppgradering fra den tidligere utgaven Llama 3 ved å tilby:
+Modellen er en oppgradering fra den tidligere utgivelsen Llama 3 ved å tilby:
 
 - Større kontekstvindu - 128k tokens vs 8k tokens
 - Større maks utgangstokens - 4096 vs 2048
-- Bedre flerspråklig støtte - på grunn av økningen i treningstokens
+- Bedre flerspråklig støtte - på grunn av økning i treningstokens
 
-Dette gjør at Llama 3.1 kan håndtere mer komplekse brukstilfeller når man bygger GenAI-applikasjoner, inkludert:
-- Innfødt funksjonskall - evnen til å kalle eksterne verktøy og funksjoner utenfor LLM-arbeidsflyten
+Disse gjør det mulig for Llama 3.1 å håndtere mer komplekse bruksområder når man bygger GenAI-applikasjoner, inkludert:
+- Innfødt funksjonskalling - evnen til å kalle eksterne verktøy og funksjoner utenfor LLM-arbeidsflyten
 - Bedre RAG-ytelse - på grunn av det høyere kontekstvinduet
 - Syntetisk datagenerering - evnen til å lage effektiv data for oppgaver som finjustering
 
-### Innfødt funksjonskall
+### Innfødt funksjonskalling
 
-Llama 3.1 har blitt finjustert for å være mer effektiv ved å utføre funksjons- eller verktøykall. Den har også to innebygde verktøy som modellen kan identifisere som nødvendige å bruke basert på brukerens forespørsel. Disse verktøyene er:
+Llama 3.1 har blitt finjustert for å være mer effektiv til å utføre funksjons- eller verktøykall. Den har også to innebygde verktøy som modellen kan identifisere som nødvendige å bruke basert på brukerens forespørsel. Disse verktøyene er:
 
 - **Brave Search** - Kan brukes til å få oppdatert informasjon som været ved å utføre et nettsøk
-- **Wolfram Alpha** - Kan brukes for mer komplekse matematiske beregninger, slik at du ikke trenger å skrive dine egne funksjoner.
+- **Wolfram Alpha** - Kan brukes til mer komplekse matematiske beregninger, slik at du ikke trenger å skrive dine egne funksjoner.
 
 Du kan også lage dine egne tilpassede verktøy som LLM kan kalle.
 
 I kodeeksempelet nedenfor:
 
-- Vi definerer de tilgjengelige verktøyene (brave_search, wolfram_alpha) i systemprompten.
-- Sender en brukerprompt som spør om været i en bestemt by.
+- Vi definerer de tilgjengelige verktøyene (brave_search, wolfram_alpha) i systemforespørselen.
+- Sender en brukerforespørsel som spør om været i en bestemt by.
 - LLM vil svare med et verktøykall til Brave Search-verktøyet som vil se slik ut `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Merk: Dette eksempelet utfører bare verktøykallet, hvis du vil få resultatene, må du opprette en gratis konto på Brave API-siden og definere funksjonen selv*
+*Merk: Dette eksempelet gjør bare verktøykallet, hvis du ønsker å få resultatene, må du opprette en gratis konto på Brave API-siden og definere funksjonen selv*
 
 ```python 
 import os
@@ -103,13 +103,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Til tross for å være en LLM, har Llama 3.1 en begrensning når det gjelder multimodalitet. Det vil si å kunne bruke forskjellige typer input som bilder som forespørsler og gi svar. Denne evnen er en av hovedfunksjonene til Llama 3.2. Disse funksjonene inkluderer også:
+Selv om det er en LLM, har Llama 3.1 en begrensning når det gjelder multimodalitet. Det vil si å kunne bruke forskjellige typer input som bilder som forespørsler og gi svar. Denne evnen er en av hovedfunksjonene til Llama 3.2. Disse funksjonene inkluderer også:
 
 - Multimodalitet - har evnen til å evaluere både tekst- og bildeforespørsler
-- Små til mellomstore størrelsesvarianter (11B og 90B) - dette gir fleksible distribusjonsmuligheter,
-- Kun tekstvarianter (1B og 3B) - dette lar modellen distribueres på edge / mobile enheter og gir lav latens
+- Små til mellomstore størrelsesvarianter (11B og 90B) - dette gir fleksible distribusjonsalternativer,
+- Tekstbare varianter (1B og 3B) - dette gjør det mulig å distribuere modellen på kant- / mobile enheter og gir lav ventetid
 
-Den multimodale støtten representerer et stort skritt i verden av åpne kildekode-modeller. Kodeeksempelet nedenfor tar både et bilde og en tekstforespørsel for å få en analyse av bildet fra Llama 3.2 90B.
+Den multimodale støtten representerer et stort skritt i verden av åpen kildekode-modeller. Kodeeksempelet nedenfor tar både en bilde- og tekstforespørsel for å få en analyse av bildet fra Llama 3.2 90B.
 
 ### Multimodal støtte med Llama 3.2
 
@@ -160,7 +160,7 @@ print(response.choices[0].message.content)
 
 ## Læringen stopper ikke her, fortsett reisen
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å øke din kunnskap om generativ AI!
+Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å heve din kunnskap om Generativ AI!
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet har blitt oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi etterstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

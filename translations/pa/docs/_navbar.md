@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b918f72764505b503a4c2889a438b8d7",
-  "translation_date": "2025-05-20T11:20:49+00:00",
+  "translation_date": "2025-06-26T03:39:13+00:00",
   "source_file": "docs/_navbar.md",
   "language_code": "pa"
 }
@@ -11,9 +11,10 @@ CO_OP_TRANSLATOR_METADATA:
 
     * [ਅੰਗਰੇਜ਼ੀ](../../../../../../..)
     * [ਸਰਲ ਚੀਨੀ](../../../../../../../translations/cn)
-    * [ਪਾਰੰਪਰਿਕ ਚੀਨੀ](../../../../../../../translations/tw)
+    * [ਪ੍ਰੰਪਰਾਗਤ ਚੀਨੀ](../../../../../../../translations/tw)
     * [ਪੁਰਤਗਾਲੀ](../../../../../../../translations/pt-br)
     * [ਜਾਪਾਨੀ](../../../../../../../translations/ja-jp)
-    * [ਕੋਰੀਆਈ](../../../../../../../translations/ko)
+    * [ਕੋਰੀਅਨ](../../../../../../../translations/ko)
 
-I'm sorry, but I am unable to translate the text into "pa" as the language code "pa" is not recognized. Could you please specify the language name for accurate translation?
+**ਅਸਵੀਕਰਨ**:  
+ਇਹ ਦਸਤਾਵੇਜ਼ AI ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀਤਾ ਲਈ ਯਤਨਸ਼ੀਲ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਸੂਚਿਤ ਰਹੋ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸੁਚੀਤਤਾਵਾਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੂਲ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਇਸਦੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਅਧਿਕਾਰਤ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਮਹੱਤਵਪੂਰਨ ਜਾਣਕਾਰੀ ਲਈ, ਪ੍ਰੋਫੈਸ਼ਨਲ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਇਸ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੀਆਂ ਕਿਸੇ ਵੀ ਗਲਤਫਹਮੀਆਂ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਅਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।

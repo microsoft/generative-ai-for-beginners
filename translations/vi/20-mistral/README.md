@@ -2,46 +2,47 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:00:09+00:00",
+  "translation_date": "2025-06-26T03:19:41+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "vi"
 }
 -->
-# Xây dựng với các Mô hình Mistral
+# Xây dựng với Mô hình Mistral
 
 ## Giới thiệu
 
 Bài học này sẽ bao gồm:
 - Khám phá các mô hình Mistral khác nhau
-- Hiểu các trường hợp sử dụng và kịch bản cho từng mô hình
+- Hiểu các trường hợp sử dụng và tình huống cho từng mô hình
 - Mẫu mã cho thấy các đặc điểm độc đáo của từng mô hình.
 
 ## Các Mô hình Mistral
 
 Trong bài học này, chúng ta sẽ khám phá 3 mô hình Mistral khác nhau: **Mistral Large**, **Mistral Small** và **Mistral Nemo**.
 
-Mỗi mô hình này đều có sẵn miễn phí trên chợ mô hình Github. Mã trong sổ ghi chép này sẽ sử dụng các mô hình này để chạy mã. Dưới đây là thêm chi tiết về việc sử dụng Mô hình Github để [tạo mẫu với mô hình AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Mỗi mô hình này đều có sẵn miễn phí trên thị trường Model của Github. Mã trong notebook này sẽ sử dụng các mô hình này để chạy mã. Dưới đây là chi tiết về việc sử dụng Github Models để [tạo mẫu với mô hình AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 hiện là mô hình hàng đầu từ Mistral và được thiết kế cho sử dụng doanh nghiệp.
 
-Mô hình này là một bản nâng cấp cho Mistral Large gốc bằng cách cung cấp:
+Mistral Large 2 hiện là mô hình hàng đầu từ Mistral và được thiết kế cho sử dụng trong doanh nghiệp.
+
+Mô hình này là một bản nâng cấp từ Mistral Large ban đầu bằng cách cung cấp
 - Cửa sổ ngữ cảnh lớn hơn - 128k so với 32k
 - Hiệu suất tốt hơn trong các nhiệm vụ Toán học và Lập trình - độ chính xác trung bình 76.9% so với 60.4%
-- Tăng cường hiệu suất đa ngôn ngữ - các ngôn ngữ bao gồm: Tiếng Anh, Tiếng Pháp, Tiếng Đức, Tiếng Tây Ban Nha, Tiếng Ý, Tiếng Bồ Đào Nha, Tiếng Hà Lan, Tiếng Nga, Tiếng Trung, Tiếng Nhật, Tiếng Hàn, Tiếng Ả Rập và Tiếng Hindi.
+- Hiệu suất đa ngôn ngữ tăng lên - các ngôn ngữ bao gồm: Tiếng Anh, Tiếng Pháp, Tiếng Đức, Tiếng Tây Ban Nha, Tiếng Ý, Tiếng Bồ Đào Nha, Tiếng Hà Lan, Tiếng Nga, Tiếng Trung, Tiếng Nhật, Tiếng Hàn, Tiếng Ả Rập, và Tiếng Hindi.
 
-Với những tính năng này, Mistral Large xuất sắc trong:
-- *Tạo nội dung tăng cường từ truy vấn (RAG)* - nhờ cửa sổ ngữ cảnh lớn hơn
-- *Gọi hàm* - mô hình này có gọi hàm gốc cho phép tích hợp với các công cụ và API bên ngoài. Các cuộc gọi này có thể được thực hiện đồng thời hoặc lần lượt theo thứ tự.
+Với những đặc điểm này, Mistral Large vượt trội trong
+- *Retrieval Augmented Generation (RAG)* - nhờ cửa sổ ngữ cảnh lớn hơn
+- *Gọi hàm* - mô hình này có khả năng gọi hàm gốc cho phép tích hợp với các công cụ và API bên ngoài. Các cuộc gọi này có thể được thực hiện song song hoặc tuần tự.
 - *Tạo mã* - mô hình này xuất sắc trong việc tạo mã Python, Java, TypeScript và C++.
 
 ### Ví dụ RAG sử dụng Mistral Large 2
 
-Trong ví dụ này, chúng ta sử dụng Mistral Large 2 để chạy một mẫu RAG trên một tài liệu văn bản. Câu hỏi được viết bằng tiếng Hàn và hỏi về các hoạt động của tác giả trước khi vào đại học.
+Trong ví dụ này, chúng ta đang sử dụng Mistral Large 2 để chạy một mẫu RAG trên một tài liệu văn bản. Câu hỏi được viết bằng tiếng Hàn và hỏi về hoạt động của tác giả trước khi vào đại học.
 
-Nó sử dụng Mô hình Cohere Embeddings để tạo các nhúng của tài liệu văn bản cũng như câu hỏi. Trong mẫu này, nó sử dụng gói faiss của Python như một kho lưu trữ vector.
+Nó sử dụng Cohere Embeddings Model để tạo các embeddings của tài liệu văn bản cũng như câu hỏi. Trong mẫu này, nó sử dụng gói faiss Python làm kho lưu trữ vector.
 
-Đề xuất gửi đến mô hình Mistral bao gồm cả câu hỏi và các đoạn văn bản được truy vấn tương tự với câu hỏi. Mô hình sau đó cung cấp một câu trả lời ngôn ngữ tự nhiên.
+Đề xuất gửi đến mô hình Mistral bao gồm cả câu hỏi và các đoạn văn bản được truy xuất tương tự với câu hỏi. Mô hình sau đó cung cấp một phản hồi bằng ngôn ngữ tự nhiên.
 
 ```python 
 pip install faiss-cpu
@@ -138,21 +139,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small là một mô hình khác trong gia đình mô hình Mistral thuộc hạng mục hàng đầu/doanh nghiệp. Như tên gọi, mô hình này là một Mô hình Ngôn ngữ Nhỏ (SLM). Những lợi ích của việc sử dụng Mistral Small là:
+
+Mistral Small là một mô hình khác trong gia đình mô hình Mistral thuộc danh mục hàng đầu/doanh nghiệp. Như tên gọi, mô hình này là một Mô hình Ngôn ngữ Nhỏ (SLM). Các lợi ích của việc sử dụng Mistral Small là:
 - Tiết kiệm chi phí so với các LLM của Mistral như Mistral Large và NeMo - giảm giá 80%
 - Độ trễ thấp - phản hồi nhanh hơn so với các LLM của Mistral
 - Linh hoạt - có thể triển khai trên nhiều môi trường khác nhau với ít hạn chế về tài nguyên yêu cầu.
 
-Mistral Small rất tuyệt cho:
+Mistral Small rất tốt cho:
 - Các nhiệm vụ dựa trên văn bản như tóm tắt, phân tích cảm xúc và dịch thuật.
-- Các ứng dụng nơi có yêu cầu thường xuyên do tính hiệu quả về chi phí
-- Các nhiệm vụ mã hóa độ trễ thấp như xem xét và đề xuất mã
+- Các ứng dụng nơi yêu cầu thường xuyên được thực hiện do tính hiệu quả về chi phí
+- Nhiệm vụ mã có độ trễ thấp như đánh giá và gợi ý mã
 
 ## So sánh Mistral Small và Mistral Large
 
-Để cho thấy sự khác biệt về độ trễ giữa Mistral Small và Large, chạy các ô dưới đây.
+Để cho thấy sự khác biệt về độ trễ giữa Mistral Small và Large, hãy chạy các ô dưới đây.
 
-Bạn nên thấy sự khác biệt về thời gian phản hồi từ 3-5 giây. Cũng lưu ý độ dài và phong cách phản hồi trên cùng một đề xuất.
+Bạn sẽ thấy sự khác biệt về thời gian phản hồi từ 3-5 giây. Cũng lưu ý độ dài và phong cách phản hồi trên cùng một đề xuất.
 
 ```python 
 
@@ -214,23 +216,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-So với hai mô hình khác được thảo luận trong bài học này, Mistral NeMo là mô hình miễn phí duy nhất với giấy phép Apache2.
+So với hai mô hình khác được thảo luận trong bài học này, Mistral NeMo là mô hình miễn phí duy nhất với Giấy phép Apache2.
 
-Nó được xem là một nâng cấp cho LLM mã nguồn mở trước đó từ Mistral, Mistral 7B.
+Nó được xem như một bản nâng cấp từ LLM nguồn mở trước đó từ Mistral, Mistral 7B.
 
 Một số đặc điểm khác của mô hình NeMo là:
 
-- *Mã hóa hiệu quả hơn:* Mô hình này sử dụng bộ mã hóa Tekken thay vì bộ mã hóa tiktoken thường dùng. Điều này cho phép hiệu suất tốt hơn trên nhiều ngôn ngữ và mã hơn.
+- *Tokenization hiệu quả hơn:* Mô hình này sử dụng bộ token Tekken thay vì tiktoken thường được sử dụng. Điều này cho phép hiệu suất tốt hơn trên nhiều ngôn ngữ và mã.
 
-- *Tinh chỉnh:* Mô hình cơ bản có sẵn để tinh chỉnh. Điều này cho phép linh hoạt hơn cho các trường hợp sử dụng cần tinh chỉnh.
+- *Tùy chỉnh:* Mô hình cơ bản có sẵn để tùy chỉnh. Điều này cho phép linh hoạt hơn cho các trường hợp sử dụng nơi cần tùy chỉnh.
 
-- *Gọi hàm gốc* - Giống như Mistral Large, mô hình này đã được huấn luyện về gọi hàm. Điều này làm cho nó trở nên độc đáo khi là một trong những mô hình mã nguồn mở đầu tiên làm điều này.
+- *Gọi hàm gốc* - Giống như Mistral Large, mô hình này đã được đào tạo trên việc gọi hàm. Điều này làm cho nó trở nên độc đáo khi là một trong những mô hình nguồn mở đầu tiên làm điều này.
 
-### So sánh các bộ mã hóa
+### So sánh các Tokenizers
 
-Trong mẫu này, chúng ta sẽ xem cách Mistral NeMo xử lý mã hóa so với Mistral Large.
+Trong mẫu này, chúng ta sẽ xem cách Mistral NeMo xử lý tokenization so với Mistral Large.
 
-Cả hai mẫu đều lấy cùng một đề xuất nhưng bạn nên thấy rằng NeMo trả về ít mã hơn so với Mistral Large.
+Cả hai mẫu đều sử dụng cùng một đề xuất nhưng bạn sẽ thấy rằng NeMo trả về ít token hơn so với Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -348,9 +350,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Học không dừng lại ở đây, tiếp tục Hành trình
+## Học tập không dừng lại ở đây, tiếp tục hành trình
 
-Sau khi hoàn thành bài học này, hãy xem [Bộ sưu tập Học AI Tạo sinh](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) của chúng tôi để tiếp tục nâng cao kiến thức về AI Tạo sinh của bạn!
+Sau khi hoàn thành bài học này, hãy khám phá bộ sưu tập [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) để tiếp tục nâng cao kiến thức về Generative AI của bạn!
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc nên được coi là nguồn đáng tin cậy. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp của con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp của con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

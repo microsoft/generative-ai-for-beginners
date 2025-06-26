@@ -2,47 +2,46 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:59:35+00:00",
+  "translation_date": "2025-06-26T03:19:05+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "nl"
 }
 -->
-# Bouwen met Mistral Modellen
+# Bouwen met Mistral-modellen
 
-## Introductie
+## Inleiding
 
 Deze les behandelt:
-- Het verkennen van de verschillende Mistral Modellen
-- Begrijpen van de gebruiksscenario's voor elk model
+- Het verkennen van de verschillende Mistral-modellen
+- Het begrijpen van de gebruikssituaties en scenario's voor elk model
 - Codevoorbeelden tonen de unieke kenmerken van elk model.
 
-## De Mistral Modellen
+## De Mistral-modellen
 
-In deze les zullen we 3 verschillende Mistral modellen verkennen: **Mistral Large**, **Mistral Small** en **Mistral Nemo**.
+In deze les zullen we 3 verschillende Mistral-modellen verkennen: **Mistral Large**, **Mistral Small** en **Mistral Nemo**.
 
-Elk van deze modellen is gratis beschikbaar op de Github Model marketplace. De code in dit notebook zal deze modellen gebruiken om de code uit te voeren. Hier zijn meer details over het gebruik van Github Models om te [prototypen met AI modellen](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Elk van deze modellen is gratis beschikbaar op de Github Model-marktplaats. De code in dit notebook zal deze modellen gebruiken om de code uit te voeren. Hier zijn meer details over het gebruik van Github Models om te [prototypen met AI-modellen](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-
 Mistral Large 2 is momenteel het vlaggenschipmodel van Mistral en is ontworpen voor zakelijk gebruik.
 
-Het model is een upgrade van de originele Mistral Large en biedt:
-- Groter Contextvenster - 128k vs 32k
-- Betere prestaties bij Wiskunde en Coderingstaken - 76.9% gemiddelde nauwkeurigheid vs 60.4%
-- Verbeterde meertalige prestaties - talen zijn onder andere: Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaans, Arabisch en Hindi.
+Het model is een upgrade van de originele Mistral Large door het aanbieden van:
+- Groter contextvenster - 128k vs 32k
+- Betere prestaties bij wiskunde- en coderingstaken - 76,9% gemiddelde nauwkeurigheid vs 60,4%
+- Verhoogde meertalige prestaties - talen omvatten: Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaans, Arabisch en Hindi.
 
 Met deze kenmerken blinkt Mistral Large uit in:
 - *Retrieval Augmented Generation (RAG)* - dankzij het grotere contextvenster
-- *Functie Aanroepen* - dit model heeft native functieaanroepen die integratie met externe tools en API's mogelijk maken. Deze oproepen kunnen zowel parallel als opeenvolgend worden uitgevoerd.
-- *Codegeneratie* - dit model blinkt uit in Python, Java, TypeScript en C++ generatie.
+- *Functieaanroepen* - dit model heeft native functieaanroepen waarmee integratie met externe tools en API's mogelijk is. Deze oproepen kunnen zowel parallel als achtereenvolgens worden uitgevoerd.
+- *Codegeneratie* - dit model blinkt uit in Python-, Java-, TypeScript- en C++-generatie.
 
-### RAG Voorbeeld met Mistral Large 2
+### RAG-voorbeeld met Mistral Large 2
 
-In dit voorbeeld gebruiken we Mistral Large 2 om een RAG-patroon uit te voeren over een tekstdocument. De vraag is in het Koreaans geschreven en vraagt naar de activiteiten van de auteur voor de universiteit.
+In dit voorbeeld gebruiken we Mistral Large 2 om een RAG-patroon over een tekstdocument uit te voeren. De vraag is geschreven in het Koreaans en vraagt naar de activiteiten van de auteur vóór de universiteit.
 
-Het gebruikt het Cohere Embeddings Model om embeddings van het tekstdocument en de vraag te maken. Voor dit voorbeeld gebruikt het het faiss Python-pakket als een vectorstore.
+Het gebruikt het Cohere Embeddings Model om embeddings van het tekstdocument en de vraag te maken. Voor dit voorbeeld gebruikt het de faiss Python-package als een vectoropslag.
 
-De prompt die naar het Mistral model wordt gestuurd, bevat zowel de vragen als de opgehaalde stukken die vergelijkbaar zijn met de vraag. Het model geeft vervolgens een antwoord in natuurlijke taal.
+De prompt die naar het Mistral-model wordt gestuurd, bevat zowel de vragen als de opgevraagde stukken die vergelijkbaar zijn met de vraag. Het model geeft vervolgens een antwoord in natuurlijke taal.
 
 ```python 
 pip install faiss-cpu
@@ -139,22 +138,21 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-
-Mistral Small is een ander model in de Mistral familie van modellen onder de premier/enterprise categorie. Zoals de naam al aangeeft, is dit model een Small Language Model (SLM). De voordelen van het gebruik van Mistral Small zijn dat het:
+Mistral Small is een ander model in de Mistral-familie van modellen onder de premier/enterprise-categorie. Zoals de naam al aangeeft, is dit model een Small Language Model (SLM). De voordelen van het gebruik van Mistral Small zijn dat het:
 - Kostenbesparend is vergeleken met Mistral LLMs zoals Mistral Large en NeMo - 80% prijsdaling
 - Lage latentie heeft - snellere respons vergeleken met Mistral's LLMs
-- Flexibel is - kan in verschillende omgevingen worden ingezet met minder beperkingen op vereiste middelen.
+- Flexibel is - kan worden ingezet in verschillende omgevingen met minder beperkingen op benodigde middelen.
 
-Mistral Small is uitstekend geschikt voor:
+Mistral Small is geweldig voor:
 - Tekstgebaseerde taken zoals samenvatting, sentimentanalyse en vertaling.
-- Toepassingen waar frequente verzoeken worden gedaan vanwege zijn kosteneffectiviteit
-- Taken met lage latentie zoals code review en codesuggesties
+- Toepassingen waar frequente verzoeken worden gedaan vanwege de kosteneffectiviteit
+- Taken met lage latentie zoals codebeoordeling en codevoorstellen
 
-## Vergelijking van Mistral Small en Mistral Large
+## Vergelijking tussen Mistral Small en Mistral Large
 
-Om verschillen in latentie tussen Mistral Small en Large te laten zien, voer de onderstaande cellen uit.
+Om verschillen in latentie tussen Mistral Small en Large te tonen, voer de onderstaande cellen uit.
 
-Je zou een verschil in responstijden van 3-5 seconden moeten zien. Let ook op de lengte en stijl van de reacties bij dezelfde prompt.
+Je zou een verschil in responstijden van 3-5 seconden moeten zien. Let ook op de responslengtes en stijl bij dezelfde prompt.
 
 ```python 
 
@@ -216,21 +214,21 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-In vergelijking met de andere twee modellen die in deze les worden besproken, is Mistral NeMo het enige gratis model met een Apache2 Licentie.
+In vergelijking met de andere twee modellen die in deze les worden besproken, is Mistral NeMo het enige gratis model met een Apache2-licentie.
 
 Het wordt gezien als een upgrade van de eerdere open source LLM van Mistral, Mistral 7B.
 
-Enkele andere kenmerken van het NeMo model zijn:
+Enkele andere kenmerken van het NeMo-model zijn:
 
-- *Efficiëntere tokenisatie:* Dit model gebruikt de Tekken tokenizer in plaats van de meer algemeen gebruikte tiktoken. Dit zorgt voor betere prestaties over meer talen en code.
+- *Efficiëntere tokenisatie:* Dit model gebruikt de Tekken-tokenizer in plaats van de meer algemeen gebruikte tiktoken. Dit zorgt voor betere prestaties bij meer talen en code.
 
-- *Fijn afstemmen:* Het basismodel is beschikbaar voor fijn afstemmen. Dit zorgt voor meer flexibiliteit voor gebruiksscenario's waar fijn afstemmen nodig kan zijn.
+- *Fijnafstelling:* Het basismodel is beschikbaar voor fijnafstelling. Dit biedt meer flexibiliteit voor gebruikssituaties waar fijnafstelling nodig kan zijn.
 
-- *Native Functie Aanroepen* - Net als Mistral Large is dit model getraind op functieaanroepen. Dit maakt het uniek als een van de eerste open source modellen die dit doet.
+- *Native Functieaanroepen* - Net als Mistral Large is dit model getraind op functieaanroepen. Dit maakt het uniek als een van de eerste open source modellen die dit doet.
 
-### Vergelijking van Tokenizers
+### Vergelijking van tokenizers
 
-In dit voorbeeld zullen we kijken hoe Mistral NeMo omgaat met tokenisatie in vergelijking met Mistral Large.
+In dit voorbeeld zullen we kijken hoe Mistral NeMo tokenisatie behandelt in vergelijking met Mistral Large.
 
 Beide voorbeelden nemen dezelfde prompt, maar je zou moeten zien dat NeMo minder tokens teruggeeft dan Mistral Large.
 
@@ -350,9 +348,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Het leren stopt hier niet, ga door met de reis
+## Leren stopt hier niet, vervolg de reis
 
-Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder te vergroten!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning-collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis over Generative AI verder te ontwikkelen!
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het oorspronkelijke document in zijn oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.

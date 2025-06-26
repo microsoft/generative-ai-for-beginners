@@ -2,28 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:46:18+00:00",
+  "translation_date": "2025-06-25T16:50:10+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "ru"
 }
 -->
 # Подготовка данных для транскрипции
 
-Скрипты подготовки данных для транскрипции загружают транскрипции видео с YouTube и подготавливают их для использования с примером семантического поиска с OpenAI Embeddings и Functions.
+Скрипты для подготовки данных транскрипции загружают расшифровки видео с YouTube и подготавливают их для использования в примере семантического поиска с OpenAI Embeddings и Functions.
 
-Скрипты подготовки данных для транскрипции были протестированы на последних версиях Windows 11, macOS Ventura и Ubuntu 22.04 (и выше).
+Скрипты для подготовки данных транскрипции были протестированы на последних версиях Windows 11, macOS Ventura и Ubuntu 22.04 (и выше).
 
 ## Создание необходимых ресурсов Azure OpenAI Service
 
 > [!IMPORTANT]
 > Мы рекомендуем обновить Azure CLI до последней версии для обеспечения совместимости с OpenAI
-> См. [документацию](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> См. [Документацию](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Создайте группу ресурсов
 
 > [!NOTE]
-> В этих инструкциях мы используем группу ресурсов с именем "semantic-video-search" в регионе East US.
-> Вы можете изменить имя группы ресурсов, но при изменении местоположения ресурсов
+> Для этих инструкций мы используем группу ресурсов с именем "semantic-video-search" в регионе East US.
+> Вы можете изменить имя группы ресурсов, но при изменении местоположения для ресурсов
 > проверьте [таблицу доступности моделей](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -76,11 +76,11 @@ az cognitiveservices account deployment create \
 
 ## Переменные окружения
 
-Следующие переменные окружения необходимы для запуска скриптов подготовки данных для транскрипции YouTube.
+Следующие переменные окружения необходимы для запуска скриптов подготовки данных транскрипции YouTube.
 
 ### На Windows
 
-Рекомендуется добавить переменные в `user` environment variables.
+Рекомендуется добавить переменные в ваш `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### На Linux и macOS
 
-Рекомендуется добавить следующие экспорты в файл `~/.bashrc` or `~/.zshrc`.
+Рекомендуется добавить следующие экспорты в ваш файл `~/.bashrc` or `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -104,7 +104,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Установка необходимых библиотек Python
 
 1. Установите [git клиент](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), если он еще не установлен.
-1. Из окна `Terminal` клонируйте пример в предпочитаемую папку репозитория.
+1. Из окна `Терминал` клонируйте пример в предпочитаемую папку репозитория.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -158,7 +158,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Запуск скриптов подготовки данных для транскрипции YouTube
+## Запуск скриптов подготовки данных транскрипции YouTube
 
 ### На Windows
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Отказ от ответственности**:  
-Этот документ был переведен с помощью службы автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Мы стремимся к точности, однако, пожалуйста, учтите, что автоматизированные переводы могут содержать ошибки или неточности. Оригинальный документ на его родном языке должен считаться авторитетным источником. Для критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за недопонимание или неправильное толкование, возникшее в результате использования этого перевода.
+Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Мы стремимся к точности, но, пожалуйста, имейте в виду, что автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на родном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несем ответственности за любые недоразумения или неверные толкования, возникшие в результате использования этого перевода.

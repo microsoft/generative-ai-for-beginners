@@ -2,47 +2,47 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:52:11+00:00",
+  "translation_date": "2025-06-26T03:12:29+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "mo"
 }
 -->
-# Mistral Models ile Çalışmak
+# 使用 Mistral 模型進行建構
 
-## Giriş
+## 介紹
 
-Bu ders şunları kapsayacak:
-- Farklı Mistral Modellerini keşfetmek
-- Her model için kullanım alanları ve senaryoları anlamak
-- Her modelin benzersiz özelliklerini gösteren kod örnekleri.
+這堂課將涵蓋：
+- 探索不同的 Mistral 模型
+- 理解每個模型的使用案例和情境
+- 代碼範例展示每個模型的獨特功能
 
-## Mistral Modelleri
+## Mistral 模型
 
-Bu derste, 3 farklı Mistral modelini keşfedeceğiz:
-**Mistral Large**, **Mistral Small** ve **Mistral Nemo**.
+在這堂課中，我們將探索三個不同的 Mistral 模型：**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。
 
-Bu modellerin her biri Github Model pazarında ücretsiz olarak mevcuttur. Bu not defterindeki kod, bu modelleri kullanarak çalıştırılacaktır. [AI modelleriyle prototipleme](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) için Github Modellerini kullanma hakkında daha fazla bilgi burada.
+這些模型都可以在 Github 模型市場上免費獲得。本筆記本中的代碼將使用這些模型來運行代碼。這裡有更多關於使用 Github 模型進行 [AI 模型原型設計](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) 的詳細信息。
 
 ## Mistral Large 2 (2407)
-Mistral Large 2, şu anda Mistral'ın amiral gemisi modelidir ve kurumsal kullanım için tasarlanmıştır.
 
-Model, orijinal Mistral Large'a yükseltme olarak şu özellikleri sunar:
-- Daha Büyük Bağlam Penceresi - 128k vs 32k
-- Matematik ve Kodlama Görevlerinde Daha İyi Performans - %76.9 ortalama doğruluk vs %60.4
-- Artan çok dilli performans - diller arasında: İngilizce, Fransızca, Almanca, İspanyolca, İtalyanca, Portekizce, Hollandaca, Rusça, Çince, Japonca, Korece, Arapça ve Hintçe.
+Mistral Large 2 目前是 Mistral 的旗艦模型，專為企業使用而設計。
 
-Bu özelliklerle, Mistral Large şu konularda mükemmel:
-- *Retrieval Augmented Generation (RAG)* - daha büyük bağlam penceresi sayesinde
-- *Fonksiyon Çağrısı* - bu model, dış araçlar ve API'lerle entegrasyona olanak tanıyan yerel fonksiyon çağrısına sahiptir. Bu çağrılar hem paralel hem de ardışık sırayla yapılabilir.
-- *Kod Üretimi* - bu model Python, Java, TypeScript ve C++ üretiminde başarılıdır.
+該模型是原始 Mistral Large 的升級版，提供：
+- 更大的上下文窗口 - 128k vs 32k
+- 在數學和編碼任務上的更好性能 - 平均準確率 76.9% vs 60.4%
+- 增強的多語言性能 - 包括英語、法語、德語、西班牙語、意大利語、葡萄牙語、荷蘭語、俄語、中文、日語、韓語、阿拉伯語和印地語
 
-### Mistral Large 2 Kullanarak RAG Örneği
+憑藉這些特性，Mistral Large 擅長：
+- *檢索增強生成 (RAG)* - 因為有更大的上下文窗口
+- *函數調用* - 該模型具有原生函數調用功能，可與外部工具和 API 集成。這些調用可以並行進行，也可以按順序依次進行。
+- *代碼生成* - 該模型在 Python、Java、TypeScript 和 C++ 生成方面表現出色
 
-Bu örnekte, bir metin belgesi üzerinde RAG deseni çalıştırmak için Mistral Large 2 kullanıyoruz. Soru Korece yazılmış ve yazarın üniversite öncesi faaliyetlerini sormaktadır.
+### 使用 Mistral Large 2 的 RAG 示例
 
-Metin belgesinin ve sorunun yerleştirmelerini oluşturmak için Cohere Embeddings Model kullanılır. Bu örnek için, faiss Python paketi vektör deposu olarak kullanılır.
+在此示例中，我們使用 Mistral Large 2 在文本文件上運行 RAG 模式。問題用韓文寫成，詢問作者在上大學之前的活動。
 
-Mistral modeline gönderilen istem, hem soruları hem de soruya benzer olan alınan parçaları içerir. Model daha sonra doğal dilde bir yanıt sağlar.
+它使用 Cohere 嵌入模型來創建文本文件和問題的嵌入。在此範例中，它使用 faiss Python 套件作為向量存儲。
+
+發送到 Mistral 模型的提示包括問題和與問題相似的檢索到的片段。然後模型提供自然語言回應。
 
 ```python 
 pip install faiss-cpu
@@ -139,21 +139,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small, Mistral modelleri ailesinin premier/kurumsal kategorisindeki başka bir modeldir. Adından da anlaşılacağı gibi, bu model Küçük Dil Modeli (SLM) olarak adlandırılır. Mistral Small kullanmanın avantajları şunlardır:
-- Mistral Large ve NeMo gibi Mistral LLM'lere kıyasla maliyet tasarrufu - %80 fiyat düşüşü
-- Düşük gecikme süresi - Mistral'ın LLM'lerine kıyasla daha hızlı yanıt
-- Esnek - farklı ortamlarda daha az kaynak gereksinimiyle dağıtılabilir.
 
-Mistral Small şu konularda harikadır:
-- Özetleme, duygu analizi ve çeviri gibi metin tabanlı görevler.
-- Maliyet etkinliği nedeniyle sık sık istek yapılan uygulamalar
-- İnceleme ve kod önerileri gibi düşük gecikmeli kod görevleri
+Mistral Small 是 Mistral 模型系列中另一個屬於高端/企業類別的模型。顧名思義，該模型是一個小型語言模型 (SLM)。使用 Mistral Small 的優勢在於：
+- 與 Mistral 大型語言模型 (LLMs) 如 Mistral Large 和 NeMo 相比，成本節約 - 價格下降 80%
+- 低延遲 - 相較於 Mistral 的大型語言模型，回應速度更快
+- 靈活性 - 可以在不同環境中部署，對所需資源的限制較少
 
-## Mistral Small ve Mistral Large Karşılaştırması
+Mistral Small 非常適合：
+- 基於文本的任務，例如摘要、情感分析和翻譯
+- 由於其成本效益，適合需要頻繁請求的應用
+- 低延遲代碼任務，如審查和代碼建議
 
-Mistral Small ve Large arasındaki gecikme farklarını göstermek için aşağıdaki hücreleri çalıştırın.
+## 比較 Mistral Small 和 Mistral Large
 
-Aynı istem üzerinde yanıt süreleri arasında 3-5 saniye fark görmelisiniz. Ayrıca yanıt uzunluklarını ve tarzını not edin.
+為了展示 Mistral Small 和 Large 之間的延遲差異，運行下面的單元格。
+
+您應該會看到回應時間之間有 3-5 秒的差異。還要注意在相同提示下的回應長度和風格。
 
 ```python 
 
@@ -215,23 +216,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Bu derste tartışılan diğer iki modele kıyasla, Mistral NeMo Apache2 Lisansı ile sunulan tek ücretsiz modeldir.
+與本課程中討論的其他兩個模型相比，Mistral NeMo 是唯一具有 Apache2 許可證的免費模型。
 
-Önceki açık kaynaklı LLM olan Mistral 7B'nin bir yükseltmesi olarak görülmektedir.
+它被視為 Mistral 早期開源大型語言模型 Mistral 7B 的升級版。
 
-NeMo modelinin bazı diğer özellikleri şunlardır:
+NeMo 模型的其他一些特點包括：
 
-- *Daha verimli ayrıştırma:* Bu model, daha yaygın kullanılan tiktoken yerine Tekken ayrıştırıcısını kullanır. Bu, daha fazla dil ve kod üzerinde daha iyi performans sağlar.
+- *更高效的分詞：* 此模型使用 Tekken 分詞器，而不是更常用的 tiktoken。這使得在更多語言和代碼上有更好的性能。
 
-- *İnce ayar:* Temel model ince ayar için kullanılabilir. İnce ayarın gerekli olabileceği kullanım alanları için daha fazla esneklik sağlar.
+- *微調：* 基礎模型可用於微調。這提供了更多靈活性，適合需要微調的使用案例。
 
-- *Yerel Fonksiyon Çağrısı* - Mistral Large gibi, bu model fonksiyon çağrısında eğitilmiştir. Bu, açık kaynaklı modeller arasında ilklerden biri olmasını sağlar.
+- *原生函數調用：* 像 Mistral Large 一樣，該模型已經過函數調用的訓練。這使它成為第一個做到這一點的開源模型之一。
 
-### Ayrıştırıcıları Karşılaştırma
+### 比較分詞器
 
-Bu örnekte, Mistral NeMo'nun ayrıştırmayı Mistral Large ile karşılaştırarak nasıl ele aldığını inceleyeceğiz.
+在此示例中，我們將查看 Mistral NeMo 如何處理分詞與 Mistral Large 的比較。
 
-Her iki örnek de aynı istemi alır, ancak NeMo'nun Mistral Large'a göre daha az token döndürdüğünü görmelisiniz.
+兩個示例使用相同的提示，但您應該會看到 NeMo 返回的標記比 Mistral Large 少。
 
 ```bash
 pip install mistral-common
@@ -349,8 +350,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Öğrenme burada bitmiyor, Yolculuğa Devam Edin
+## 學習不止於此，繼續探索
 
-Bu dersi tamamladıktan sonra, [Generative AI Learning koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyerek Generative AI bilginizi artırmaya devam edin!
+完成本課程後，查看我們的 [生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
 
-I'm sorry, but I need clarification on what you mean by "mo." If you are referring to a specific language, could you please provide more details or specify the language you want the text translated into?
+**免責聲明**：
+本文檔是使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯的。儘管我們努力追求準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的本地語言版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對於使用此翻譯而引起的任何誤解或誤譯不承擔責任。

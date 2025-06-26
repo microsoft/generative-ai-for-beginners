@@ -2,74 +2,74 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T18:16:26+00:00",
+  "translation_date": "2025-06-25T16:03:30+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "sl"
 }
 -->
-# Izdelava klepetalnih aplikacij z generativno umetno inteligenco
+# Gradnja klepetalnih aplikacij, ki jih poganja generativna umetna inteligenca
 
-[![Izdelava klepetalnih aplikacij z generativno umetno inteligenco](../../../translated_images/07-lesson-banner.0f61145112d724a50d32abfb0b1841777f3ecec301d6f96a0b7f9d6b0e4756b9.sl.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Gradnja klepetalnih aplikacij, ki jih poganja generativna umetna inteligenca](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.sl.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Kliknite na sliko zgoraj za ogled videa te lekcije)_
+> _(Kliknite zgornjo sliko za ogled videa te lekcije)_
 
-Zdaj, ko smo videli, kako lahko izdelamo aplikacije za generiranje besedila, si oglejmo klepetalne aplikacije.
+Zdaj, ko smo videli, kako lahko gradimo aplikacije za generiranje besedila, poglejmo klepetalne aplikacije.
 
-Klepetalne aplikacije so postale del našega vsakdanjega življenja in ponujajo več kot le sredstvo za priložnostne pogovore. So bistveni del storitev za stranke, tehnične podpore in celo kompleksnih svetovalnih sistemov. Verjetno ste pred kratkim dobili pomoč od klepetalne aplikacije. Ko v te platforme vključujemo naprednejše tehnologije, kot je generativna umetna inteligenca, se kompleksnost povečuje, prav tako pa se povečujejo izzivi.
+Klepetalne aplikacije so postale del našega vsakdana in ponujajo več kot le sredstvo za neformalno komunikacijo. So sestavni deli storitev za stranke, tehnične podpore in celo naprednih svetovalnih sistemov. Verjetno ste pred kratkim prejeli pomoč prek klepetalne aplikacije. Z vključevanjem naprednih tehnologij, kot je generativna umetna inteligenca, se povečuje kompleksnost in s tem tudi izzivi.
 
 Nekatera vprašanja, na katera moramo odgovoriti, so:
 
-- **Izdelava aplikacije**. Kako učinkovito izdelati in brezhibno integrirati te aplikacije, ki jih poganja umetna inteligenca, za specifične primere uporabe?
-- **Spremljanje**. Ko so aplikacije nameščene, kako jih lahko spremljamo in zagotovimo, da delujejo na najvišji ravni kakovosti, tako v smislu funkcionalnosti kot upoštevanja [šestih načel odgovorne umetne inteligence](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **Gradnja aplikacije**. Kako učinkovito zgradimo in brezhibno vključimo te aplikacije, ki jih poganja umetna inteligenca, za specifične primere uporabe?
+- **Nadzor**. Ko so aplikacije uvedene, kako lahko spremljamo in zagotovimo, da delujejo na najvišji ravni kakovosti, tako v smislu funkcionalnosti kot spoštovanja [šestih načel odgovorne umetne inteligence](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Ko se premikamo v obdobje, ki ga opredeljuje avtomatizacija in brezhibna interakcija med človekom in strojem, postaja razumevanje, kako generativna umetna inteligenca spreminja obseg, globino in prilagodljivost klepetalnih aplikacij, bistveno. Ta lekcija bo preučila vidike arhitekture, ki podpirajo te kompleksne sisteme, se poglobila v metodologije za njihovo fino nastavitev za naloge, specifične za določen domen, in ocenila merila ter premisleke, pomembne za zagotavljanje odgovornega uvajanja umetne inteligence.
+Ko se pomikamo v dobo, ki jo opredeljuje avtomatizacija in brezhibna interakcija med ljudmi in stroji, postaja razumevanje, kako generativna umetna inteligenca preoblikuje obseg, globino in prilagodljivost klepetalnih aplikacij, bistveno. Ta lekcija bo raziskala vidike arhitekture, ki podpirajo te zapletene sisteme, poglobila se bo v metodologije za njihovo prilagajanje specifičnim nalogam in ocenila metrike ter premisleke, pomembne za zagotavljanje odgovornega uvajanja umetne inteligence.
 
 ## Uvod
 
-Ta lekcija zajema:
+Ta lekcija pokriva:
 
-- Tehnike za učinkovito izdelavo in integracijo klepetalnih aplikacij.
-- Kako uporabiti prilagajanje in fino nastavitev aplikacij.
+- Tehnike za učinkovito gradnjo in integracijo klepetalnih aplikacij.
+- Kako prilagoditi in fino nastaviti aplikacije.
 - Strategije in premisleki za učinkovito spremljanje klepetalnih aplikacij.
 
 ## Cilji učenja
 
-Do konca te lekcije boste sposobni:
+Do konca te lekcije boste lahko:
 
-- Opišite premisleke za izdelavo in integracijo klepetalnih aplikacij v obstoječe sisteme.
-- Prilagodite klepetalne aplikacije za specifične primere uporabe.
-- Prepoznajte ključne metrike in premisleke za učinkovito spremljanje in vzdrževanje kakovosti klepetalnih aplikacij, ki jih poganja umetna inteligenca.
-- Zagotovite, da klepetalne aplikacije odgovorno izkoriščajo umetno inteligenco.
+- Opisali premisleke za gradnjo in integracijo klepetalnih aplikacij v obstoječe sisteme.
+- Prilagodili klepetalne aplikacije za specifične primere uporabe.
+- Prepoznali ključne metrike in premisleke za učinkovito spremljanje in vzdrževanje kakovosti klepetalnih aplikacij, ki jih poganja umetna inteligenca.
+- Zagotovili, da klepetalne aplikacije odgovorno izkoriščajo umetno inteligenco.
 
 ## Integracija generativne umetne inteligence v klepetalne aplikacije
 
-Izboljšanje klepetalnih aplikacij z generativno umetno inteligenco ni osredotočeno le na njihovo pametnejše delovanje; gre za optimizacijo njihove arhitekture, zmogljivosti in uporabniškega vmesnika za zagotavljanje kakovostne uporabniške izkušnje. To vključuje preučevanje arhitekturnih temeljev, integracij API-jev in premislekov uporabniškega vmesnika. Ta razdelek vam želi ponuditi celovit načrt za navigacijo po teh kompleksnih pokrajinah, ne glede na to, ali jih priključujete v obstoječe sisteme ali jih gradite kot samostojne platforme.
+Povišanje klepetalnih aplikacij z generativno umetno inteligenco ni osredotočeno le na njihovo pametnejše delovanje; gre za optimizacijo njihove arhitekture, zmogljivosti in uporabniškega vmesnika za zagotavljanje kakovostne uporabniške izkušnje. To vključuje raziskovanje arhitekturnih temeljev, integracij API-jev in premislekov o uporabniškem vmesniku. Ta odsek vam želi ponuditi celovit načrt za navigacijo po teh kompleksnih pokrajinah, ne glede na to, ali jih priključujete v obstoječe sisteme ali jih gradite kot samostojne platforme.
 
-Do konca tega razdelka boste opremljeni z znanjem, potrebnim za učinkovito izdelavo in vključitev klepetalnih aplikacij.
+Do konca tega odseka boste opremljeni z znanjem, potrebnim za učinkovito gradnjo in vključevanje klepetalnih aplikacij.
 
 ### Klepetalni robot ali klepetalna aplikacija?
 
-Preden se poglobimo v izdelavo klepetalnih aplikacij, primerjajmo 'klepetalne robote' s 'klepetalnimi aplikacijami, ki jih poganja umetna inteligenca', ki imajo različne vloge in funkcionalnosti. Glavni namen klepetalnega robota je avtomatizacija specifičnih nalog pogovora, kot je odgovarjanje na pogosta vprašanja ali sledenje paketu. Običajno ga vodi logika, ki temelji na pravilih, ali kompleksni algoritmi umetne inteligence. Nasprotno pa je klepetalna aplikacija, ki jo poganja umetna inteligenca, veliko bolj obsežno okolje, zasnovano za olajšanje različnih oblik digitalne komunikacije, kot so besedilni, glasovni in video klepeti med človeškimi uporabniki. Njena ključna značilnost je integracija generativnega modela umetne inteligence, ki simulira natančne, človeške pogovore, generira odgovore na podlagi različnih vnosov in kontekstualnih namigov. Klepetalna aplikacija, ki jo poganja generativna umetna inteligenca, se lahko vključuje v odprte pogovore, se prilagaja razvijajočim se kontekstom pogovora in celo ustvarja kreativne ali kompleksne dialoge.
+Preden se poglobimo v gradnjo klepetalnih aplikacij, primerjajmo 'klepetalne robote' z 'aplikacijami za klepet, ki jih poganja umetna inteligenca,' ki služijo različnim vlogam in funkcionalnostim. Glavni namen klepetalnega robota je avtomatizacija specifičnih pogovornih nalog, kot so odgovarjanje na pogosto zastavljena vprašanja ali sledenje paketu. Običajno ga upravljajo pravila ali zapleteni algoritmi umetne inteligence. Nasprotno pa je klepetalna aplikacija, ki jo poganja umetna inteligenca, veliko bolj obsežno okolje, zasnovano za olajšanje različnih oblik digitalne komunikacije, kot so besedilni, glasovni in video klepeti med človeškimi uporabniki. Njena opredeljujoča značilnost je integracija generativnega modela umetne inteligence, ki simulira nianse, človeku podobne pogovore, in ustvarja odgovore na podlagi široke palete vnosov in kontekstualnih namigov. Klepetalna aplikacija, ki jo poganja generativna umetna inteligenca, se lahko vključi v odprte pogovore, prilagodi spreminjajočim se kontekstom pogovorov in celo ustvari ustvarjalne ali zapletene dialoge.
 
-Spodnja tabela opisuje ključne razlike in podobnosti, da nam pomaga razumeti njihove edinstvene vloge v digitalni komunikaciji.
+Spodnja tabela prikazuje ključne razlike in podobnosti, ki nam pomagajo razumeti njihove edinstvene vloge v digitalni komunikaciji.
 
-| Klepetalni robot                      | Klepetalna aplikacija, ki jo poganja generativna umetna inteligenca |
-| ------------------------------------- | ------------------------------------------------------------------ |
-| Osredotočenost na naloge in pravila   | Zavedanje konteksta                                                |
-| Pogosto integriran v večje sisteme    | Lahko gosti enega ali več klepetalnih robotov                      |
-| Omejen na programirane funkcije       | Vključuje generativne modele umetne inteligence                    |
-| Specializirane in strukturirane interakcije | Sposobnost odprtih pogovorov                                     |
+| Klepetalni robot                       | Klepetalna aplikacija, ki jo poganja generativna AI |
+| -------------------------------------- | -------------------------------------------------- |
+| Osredotočen na naloge in temelji na pravilih | Zavedanje konteksta                                |
+| Pogosto integriran v večje sisteme     | Lahko gosti enega ali več klepetalnih robotov      |
+| Omejen na programirane funkcije        | Vključuje generativne AI modele                     |
+| Specializirane in strukturirane interakcije | Sposoben odprtih pogovorov                        |
 
-### Izkoristitev že pripravljenih funkcionalnosti z SDK-ji in API-ji
+### Izkoristek vnaprej pripravljenih funkcionalnosti z SDK-ji in API-ji
 
-Ko gradimo klepetalno aplikacijo, je odličen prvi korak oceniti, kaj je že na voljo. Uporaba SDK-jev in API-jev za gradnjo klepetalnih aplikacij je koristna strategija iz več razlogov. Z integracijo dobro dokumentiranih SDK-jev in API-jev strateško postavljate svojo aplikacijo za dolgoročni uspeh, saj naslavljate pomisleke glede razširljivosti in vzdrževanja.
+Pri gradnji klepetalne aplikacije je dober prvi korak oceniti, kaj že obstaja. Uporaba SDK-jev in API-jev za gradnjo klepetalnih aplikacij je ugodna strategija iz različnih razlogov. Z integracijo dobro dokumentiranih SDK-jev in API-jev strateško postavljate svojo aplikacijo za dolgoročni uspeh, obravnavate vprašanja skalabilnosti in vzdrževanja.
 
-- **Pospešuje razvojni proces in zmanjšuje stroške**: Zanašanje na že pripravljene funkcionalnosti namesto dragega procesa njihove izdelave vam omogoča, da se osredotočite na druge vidike vaše aplikacije, ki se vam zdijo bolj pomembni, kot je poslovna logika.
-- **Boljša zmogljivost**: Ko gradite funkcionalnost iz nič, se boste sčasoma vprašali "Kako se razširja? Ali je ta aplikacija sposobna obvladati nenaden pritok uporabnikov?" Dobro vzdrževani SDK-ji in API-ji pogosto vsebujejo vgrajene rešitve za te pomisleke.
-- **Lažje vzdrževanje**: Posodobitve in izboljšave je lažje upravljati, saj večina API-jev in SDK-jev zahteva le posodobitev knjižnice, ko je izdana novejša različica.
-- **Dostop do najnovejše tehnologije**: Uporaba modelov, ki so bili fino nastavljeni in usposobljeni na obsežnih podatkovnih zbirkah, omogoča vaši aplikaciji naravne jezikovne sposobnosti.
+- **Pospeši razvojni proces in zmanjšuje stroške**: Zanašanje na vnaprej pripravljene funkcionalnosti namesto na drag postopek njihove lastne gradnje vam omogoča, da se osredotočite na druge vidike svoje aplikacije, ki jih morda ocenjujete kot pomembnejše, kot je poslovna logika.
+- **Boljša zmogljivost**: Ko gradite funkcionalnost od začetka, se boste sčasoma vprašali "Kako se to širi? Ali je ta aplikacija sposobna obvladati nenaden porast uporabnikov?" Dobro vzdrževani SDK-ji in API-ji pogosto vsebujejo vgrajene rešitve za te skrbi.
+- **Lažje vzdrževanje**: Posodobitve in izboljšave so lažje za upravljanje, saj večina API-jev in SDK-jev zahteva le posodobitev knjižnice, ko je izdana novejša različica.
+- **Dostop do najnovejše tehnologije**: Izkoristek modelov, ki so bili fino nastavljeni in usposobljeni na obsežnih podatkovnih nizih, zagotavlja vaši aplikaciji naravne jezikovne sposobnosti.
 
-Dostop do funkcionalnosti SDK-ja ali API-ja običajno vključuje pridobitev dovoljenja za uporabo ponujenih storitev, kar je pogosto preko uporabe edinstvenega ključa ali avtentikacijskega žetona. Uporabili bomo knjižnico OpenAI Python, da raziščemo, kako to izgleda. Lahko poskusite sami v naslednjem [notebooku za OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) ali [notebooku za Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) za to lekcijo.
+Dostop do funkcionalnosti SDK-ja ali API-ja običajno vključuje pridobitev dovoljenja za uporabo ponujenih storitev, kar je pogosto izvedeno z uporabo edinstvenega ključa ali avtentikacijskega žetona. Uporabili bomo knjižnico OpenAI Python, da raziščemo, kako to izgleda. Lahko pa to preizkusite sami v naslednjem [zvezku za OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) ali [zvezku za Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) za to lekcijo.
 
 ```python
 import os
@@ -84,83 +84,83 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Zgornji primer uporablja model GPT-3.5 Turbo za dokončanje poziva, vendar opazite, da je ključ API nastavljen pred tem. Prejeli boste napako, če ne nastavite ključa.
+Zgornji primer uporablja model GPT-3.5 Turbo za dokončanje poziva, vendar opazite, da je ključ API nastavljen pred tem. Prejeli boste napako, če ključa ne nastavite.
 
 ## Uporabniška izkušnja (UX)
 
-Splošna načela UX veljajo za klepetalne aplikacije, vendar so tukaj nekateri dodatni premisleki, ki postanejo posebej pomembni zaradi komponent strojnega učenja.
+Splošna načela UX veljajo za klepetalne aplikacije, vendar so tukaj nekateri dodatni premisleki, ki postanejo še posebej pomembni zaradi vključenih komponent strojnega učenja.
 
-- **Mehanizem za reševanje dvoumnosti**: Generativni modeli umetne inteligence občasno ustvarjajo dvoumne odgovore. Funkcija, ki omogoča uporabnikom, da zahtevajo pojasnila, je lahko koristna, če naletijo na ta problem.
-- **Ohranjanje konteksta**: Napredni generativni modeli umetne inteligence imajo sposobnost zapomniti si kontekst znotraj pogovora, kar je lahko nujno za uporabniško izkušnjo. Dajanje uporabnikom možnosti za nadzor in upravljanje konteksta izboljšuje uporabniško izkušnjo, vendar uvaja tveganje ohranjanja občutljivih informacij uporabnika. Premisleki o tem, kako dolgo se te informacije hranijo, kot je uvedba politike hrambe, lahko uravnotežijo potrebo po kontekstu proti zasebnosti.
-- **Personalizacija**: S sposobnostjo učenja in prilagajanja modeli umetne inteligence ponujajo individualizirano izkušnjo za uporabnika. Prilagajanje uporabniške izkušnje skozi funkcije, kot so uporabniški profili, ne le da uporabnika počuti razumljenega, ampak tudi pomaga pri iskanju specifičnih odgovorov, kar ustvarja bolj učinkovito in zadovoljivo interakcijo.
+- **Mehanizem za obravnavanje nejasnosti**: Generativni AI modeli občasno ustvarjajo dvoumne odgovore. Funkcija, ki uporabnikom omogoča, da zahtevajo pojasnila, je lahko koristna, če naletijo na to težavo.
+- **Ohranjanje konteksta**: Napredni generativni AI modeli imajo sposobnost, da si zapomnijo kontekst znotraj pogovora, kar je lahko potrebna prednost za uporabniško izkušnjo. Uporabnikom omogočanje nadzora in upravljanja konteksta izboljšuje uporabniško izkušnjo, vendar uvaja tveganje zadrževanja občutljivih uporabniških informacij. Premisleki o tem, kako dolgo se te informacije shranjujejo, kot je uvedba politike zadrževanja, lahko uravnotežijo potrebo po kontekstu z zasebnostjo.
+- **Personalizacija**: S sposobnostjo učenja in prilagajanja AI modeli ponujajo individualizirano izkušnjo za uporabnika. Prilagajanje uporabniške izkušnje z značilnostmi, kot so uporabniški profili, ne samo, da uporabnika naredi razumljenega, ampak tudi pomaga pri iskanju specifičnih odgovorov, kar ustvarja bolj učinkovito in zadovoljivo interakcijo.
 
-Eden takih primerov personalizacije je nastavitev "Custom instructions" v OpenAI-jevi ChatGPT. Omogoča vam, da zagotovite informacije o sebi, ki so lahko pomemben kontekst za vaše pozive. Tukaj je primer prilagojene instrukcije.
+Eden takšnih primerov personalizacije je nastavitev "Custom instructions" v OpenAI-jevem ChatGPT. Omogoča vam, da posredujete informacije o sebi, ki so lahko pomemben kontekst za vaše pozive. Tukaj je primer prilagojene instrukcije.
 
-![Nastavitve prilagojenih instrukcij v ChatGPT](../../../translated_images/custom-instructions.950e3bf1d66f052ff5c50cd6722f1fcb532089abe33d833c190a3796f4a09827.sl.png)
+![Nastavitve prilagojenih instrukcij v ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.sl.png)
 
-Ta "profil" poziva ChatGPT, da ustvari načrt lekcije o povezanih seznamih. Opazite, da ChatGPT upošteva, da uporabnik morda želi bolj poglobljen načrt lekcije glede na njeno izkušnjo.
+Ta "profil" poziva ChatGPT, da ustvari načrt lekcije o povezanih seznamih. Opazite, da ChatGPT upošteva, da uporabnik morda želi bolj poglobljen načrt lekcije glede na njene izkušnje.
 
-![Poziv v ChatGPT za načrt lekcije o povezanih seznamih](../../../translated_images/lesson-plan-prompt.23083d9c80ec7670b3aaf3b093d79a13ed42920da81b851b29f6167b6150aae9.sl.png)
+![Poziv v ChatGPT za načrt lekcije o povezanih seznamih](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.sl.png)
 
-### Microsoftov okvir sistemskih sporočil za modele velikih jezikov
+### Microsoftov okvir sistemskih sporočil za velike jezikovne modele
 
-[Microsoft je zagotovil smernice](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) za pisanje učinkovitih sistemskih sporočil pri generiranju odgovorov iz LLM-jev, razdeljene na 4 področja:
+[Microsoft je zagotovil smernice](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) za pisanje učinkovitih sistemskih sporočil pri generiranju odgovorov iz velikih jezikovnih modelov, razdeljene na 4 področja:
 
-1. Določanje, za koga je model namenjen, ter njegove sposobnosti in omejitve.
-2. Določanje izhodnega formata modela.
-3. Zagotavljanje specifičnih primerov, ki prikazujejo nameravano vedenje modela.
-4. Zagotavljanje dodatnih varoval vedenja.
+1. Določitev, za koga je model, ter njegove sposobnosti in omejitve.
+2. Določitev izhodnega formata modela.
+3. Nudenje specifičnih primerov, ki prikazujejo nameravano vedenje modela.
+4. Nudenje dodatnih varovalnih ukrepov za vedenje.
 
 ### Dostopnost
 
-Ne glede na to, ali ima uporabnik vidne, slušne, motorične ali kognitivne omejitve, bi morala biti dobro zasnovana klepetalna aplikacija uporabna za vse. Naslednji seznam razčlenjuje specifične funkcije, namenjene izboljšanju dostopnosti za različne uporabniške omejitve.
+Ne glede na to, ali ima uporabnik vizualne, slušne, motorične ali kognitivne motnje, bi morala biti dobro zasnovana klepetalna aplikacija uporabna za vse. Naslednji seznam razčlenjuje specifične funkcije, namenjene izboljšanju dostopnosti za različne uporabniške motnje.
 
-- **Funkcije za vidne omejitve**: Teme z visokim kontrastom in prilagodljivo besedilo, združljivost z bralnikom zaslona.
-- **Funkcije za slušne omejitve**: Funkcije pretvorbe besedila v govor in govora v besedilo, vizualni namigi za avdio obvestila.
-- **Funkcije za motorične omejitve**: Podpora za navigacijo s tipkovnico, glasovni ukazi.
-- **Funkcije za kognitivne omejitve**: Poenostavljene možnosti jezika.
+- **Funkcije za vizualne motnje**: Teme z visokim kontrastom in prilagodljivo besedilo, združljivost z bralnikom zaslona.
+- **Funkcije za slušne motnje**: Funkcije pretvorbe besedila v govor in govora v besedilo, vizualni namigi za zvočna obvestila.
+- **Funkcije za motorične motnje**: Podpora za navigacijo s tipkovnico, glasovni ukazi.
+- **Funkcije za kognitivne motnje**: Možnosti poenostavljenega jezika.
 
-## Prilagajanje in fino nastavljanje za jezikovne modele, specifične za domeno
+## Prilagajanje in fino nastavljanje za jezikovne modele specifične za področje
 
-Predstavljajte si klepetalno aplikacijo, ki razume žargon vaše podjetja in predvideva specifične poizvedbe, ki jih ima njena uporabniška baza. Obstajata dva pristopa, ki sta vredna omembe:
+Predstavljajte si klepetalno aplikacijo, ki razume žargon vašega podjetja in predvideva specifične poizvedbe, ki jih ima njegova uporabniška baza. Obstaja nekaj pristopov, ki jih je vredno omeniti:
 
-- **Izkoristitev modelov DSL**. DSL pomeni jezik, specifičen za domeno. Uporabite lahko tako imenovani model DSL, usposobljen na specifičnem področju, da razume njegove koncepte in scenarije.
-- **Uporaba finega nastavljanja**. Fino nastavljanje je proces nadaljnjega usposabljanja vašega modela s specifičnimi podatki.
+- **Izkoristek modelov DSL**. DSL pomeni jezik specifičen za področje. Lahko izkoristite tako imenovani model DSL, usposobljen na specifičnem področju, da razume njegove koncepte in scenarije.
+- **Uporaba finega nastavljanja**. Fino nastavljanje je postopek nadaljnjega usposabljanja vašega modela s specifičnimi podatki.
 
 ## Prilagajanje: Uporaba DSL
 
-Izkoristitev modelov jezika, specifičnega za domeno (DSL modeli), lahko izboljša angažiranost uporabnikov s ponujanjem specializiranih, kontekstualno relevantnih interakcij. To je model, ki je usposobljen ali fino nastavljen za razumevanje in generiranje besedila, povezanega s specifičnim področjem, industrijo ali predmetom. Možnosti uporabe modela DSL se lahko razlikujejo od usposabljanja enega iz nič, do uporabe že obstoječih prek SDK-jev in API-jev. Druga možnost je fino nastavljanje, ki vključuje uporabo obstoječega predusposobljenega modela in njegovo prilagajanje za specifično domeno.
+Izkoristek jezikovnih modelov specifičnih za področje (DSL modeli) lahko izboljša angažiranost uporabnikov z zagotavljanjem specializiranih, kontekstualno relevantnih interakcij. To je model, ki je usposobljen ali fino nastavljen za razumevanje in generiranje besedila, povezanega z določenim področjem, industrijo ali predmetom. Možnosti za uporabo modela DSL se lahko razlikujejo od usposabljanja enega od začetka do uporabe že obstoječih prek SDK-jev in API-jev. Druga možnost je fino nastavljanje, ki vključuje prilagoditev že obstoječega modela za specifično področje.
 
 ## Prilagajanje: Uporaba finega nastavljanja
 
-Fino nastavljanje se pogosto upošteva, ko predusposobljen model ne dosega pričakovanj na specializiranem področju ali specifični nalogi.
+Fino nastavljanje se pogosto uporablja, ko vnaprej usposobljen model ne zadostuje na specializiranem področju ali za specifično nalogo.
 
-Na primer, medicinske poizvedbe so kompleksne in zahtevajo veliko konteksta. Ko medicinski strokovnjak diagnosticira pacienta, temelji na različnih dejavnikih, kot so življenjski slog ali predhodne bolezni, in se lahko celo zanaša na nedavne medicinske članke, da potrdi svojo diagnozo. V takih niansiranih scenarijih splošna klepetalna aplikacija umetne inteligence ne more biti zanesljiv vir.
+Na primer, medicinske poizvedbe so zapletene in zahtevajo veliko konteksta. Ko medicinski strokovnjak diagnosticira pacienta, temelji na različnih dejavnikih, kot so življenjski slog ali obstoječa stanja, in se lahko celo opira na nedavne medicinske revije, da potrdi svojo diagnozo. V takih niansiranih scenarijih splošno usmerjena AI klepetalna aplikacija ne more biti zanesljiv vir.
 
 ### Scenarij: medicinska aplikacija
 
-Razmislite o klepetalni aplikaciji, zasnovani za pomoč medicinskim strokovnjakom z zagotavljanjem hitrih referenc na smernice zdravljenja, interakcije med zdravili ali nedavne raziskovalne ugotovitve.
+Razmislite o klepetalni aplikaciji, zasnovani za pomoč medicinskim strokovnjakom z zagotavljanjem hitrih referenc na smernice zdravljenja, interakcije zdravil ali nedavne raziskovalne ugotovitve.
 
-Splošen model je morda ustrezen za odgovarjanje na osnovna medicinska vprašanja ali zagotavljanje splošnih nasvetov, vendar lahko težko obvladuje naslednje:
+Splošno usmerjen model bi bil morda primeren za odgovarjanje na osnovna medicinska vprašanja ali zagotavljanje splošnih nasvetov, vendar bi lahko imel težave z naslednjim:
 
-- **Zelo specifični ali kompleksni primeri**. Na primer, nevrolog lahko vpraša aplikacijo: "Kakšne so trenutne najboljše prakse za obvladovanje epilepsije, odporne na zdravila, pri pediatričnih pacientih?"
-- **Manjkajoči nedavni napredki**. Splošen model bi lahko imel težave pri zagotavljanju trenutnega odgovora, ki vključuje najnovejše napredke v nevrologiji in farmakologiji.
+- **Zelo specifični ali zapleteni primeri**. Na primer, nevrolog bi lahko vprašal aplikacijo: "Kakšne so trenutne najboljše prakse za obvladovanje epilepsije, odporne na zdravila, pri pediatričnih bolnikih?"
+- **Pomanjkanje nedavnih napredkov**. Splošno usmerjen model bi se lahko trudil zagotoviti trenutni odgovor, ki vključuje najnovejše napredke v nevrologiji in farmakologiji.
 
-V takih primerih lahko fino nastavljanje modela s specializirano medicinsko podatkovno zbirko bistveno izboljša njegovo sposobnost obravnavanja teh zapletenih medicinskih poizvedb bolj natančno in zanesljivo. To zahteva dostop do velike in ustrezne podatkovne zbirke, ki predstavlja izzive in vprašanja, specifične za domeno, ki jih je treba obravnavati.
+V primerih, kot so ti, lahko fino nastavljanje modela z specializiranim medicinskim podatkovnim nizom bistveno izboljša njegovo sposobnost obravnave teh zapletenih medicinskih poizvedb bolj natančno in zanesljivo. To zahteva dostop do velikega in ustreznega podatkovnega niza, ki predstavlja izzive in vprašanja specifična za področje, ki jih je treba obravnavati.
 
-## Premisleki za kakovostno izkušnjo klepeta, ki jo poganja umetna inteligenca
+## Premisleki za visoko kakovostno izkušnjo z AI-poganjanimi klepeti
 
-Ta razdelek opisuje merila za "visokokakovostne" klepetalne aplikacije, ki vključujejo zajem merljivih metrik in upoštevanje okvira, ki odgovorno izkorišča tehnologijo umetne inteligence.
+Ta odsek opisuje merila za "visoko kakovostne" klepetalne aplikacije, ki vključujejo zajemanje ukrepnih metrik in upoštevanje okvira, ki odgovorno izkorišča tehnologijo umetne inteligence.
 
 ### Ključne metrike
 
-Za vzdrževanje visokokakovostne zmogljivosti aplikacije je nujno spremljati ključne metrike in premisleke. Te meritve ne le zagotavljajo funkcionalnost aplikacije, temveč tudi ocenjujejo kakovost modela umetne inteligence in uporabniško izkušnjo. Spodaj je seznam, ki pokriva osnovne, AI in uporabniške izkušnje metrike, ki jih je treba upoštevati.
+Za ohranjanje visoko kakovostne zmogljivosti aplikacije je bistveno, da spremljate ključne metrike in premisleke. Te meritve ne zagotavljajo le funkcionalnosti aplikacije, temveč tudi ocenjujejo kakovost AI modela in uporabniško izkušnjo. Spodaj je seznam, ki pokriva osnovne, AI in uporabniške izkušnje metrike, ki jih je treba upoštevati.
 
-| Metrika                       | Definicija                                                                                                            | Premisleki za razvijalca klepeta                                          |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Čas delovanja**             | Meri čas, ko je aplikacija operativna in dostopna uporabnikom.                                                        | Kako boste zmanjšali čas nedelovanja?                                     |
-| **Čas odgovora**              | Čas, ki ga aplikacija potrebuje za odgovor na poizvedbo uporabnika.                                                   | Kako lahko optimizirate obdelavo poizvedb za izboljšanje časa odgovora?   |
-| **Natančnost**                | Razmer
+| Metrika                      | Definicija                                                                                                             | Premisleki za razvijalca klepeta                                         |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Čas delovanja**            | Meri čas, ko je aplikacija operativna in dostopna uporabnikom.                                                        | Kako boste zmanjšali izpad?                                              |
+| **Čas odziva**               | Čas, ki ga aplikacija potrebuje za odgovor na uporabnikovo poizvedbo.                                                  | Kako lahko optimizirate obdelavo poizvedb za izboljšanje časa odziva?    |
+|
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za kritične informacije se priporoča strokovno človeško prevajanje. Ne odgovarjamo za morebitna napačna razumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije se priporoča strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

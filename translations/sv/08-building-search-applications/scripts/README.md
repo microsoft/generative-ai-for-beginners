@@ -2,28 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:51:02+00:00",
+  "translation_date": "2025-06-25T16:55:50+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "sv"
 }
 -->
 # Förberedelse av transkriptionsdata
 
-Skript för förberedelse av transkriptionsdata laddar ner transkriptioner från YouTube-videor och förbereder dem för användning med Semantic Search med OpenAI Embeddings och Functions-exemplet.
+Skript för förberedelse av transkriptionsdata laddar ner transkriptioner från YouTube-videor och förbereder dem för användning med exempel på Semantisk Sökning med OpenAI Embeddings och Funktioner.
 
 Skript för förberedelse av transkriptionsdata har testats på de senaste versionerna av Windows 11, macOS Ventura och Ubuntu 22.04 (och senare).
 
 ## Skapa nödvändiga Azure OpenAI Service-resurser
 
 > [!IMPORTANT]
-> Vi rekommenderar att du uppdaterar Azure CLI till den senaste versionen för att säkerställa kompatibilitet med OpenAI
+> Vi föreslår att du uppdaterar Azure CLI till den senaste versionen för att säkerställa kompatibilitet med OpenAI
 > Se [Dokumentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Skapa en resursgrupp
 
 > [!NOTE]
 > För dessa instruktioner använder vi resursgruppen med namnet "semantic-video-search" i East US.
-> Du kan ändra namnet på resursgruppen, men när du ändrar plats för resurserna,
+> Du kan ändra namnet på resursgruppen, men när du ändrar platsen för resurserna,
 > kontrollera [modellens tillgänglighetstabell](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -76,7 +76,7 @@ az cognitiveservices account deployment create \
 
 ## Miljövariabler
 
-Följande miljövariabler krävs för att köra YouTube-transkriptionsdatapreparationsskripten.
+Följande miljövariabler krävs för att köra skripten för förberedelse av YouTube-transkriptionsdata.
 
 ### På Windows
 
@@ -110,13 +110,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Navigera till mappen `data_prep`.
+1. Navigera till `data_prep`-mappen.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Skapa en virtuell Python-miljö.
+1. Skapa en Python-virtuell miljö.
 
     På Windows:
 
@@ -130,7 +130,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivera den virtuella Python-miljön.
+1. Aktivera Python-virtuella miljön.
 
    På Windows:
 
@@ -158,7 +158,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Kör YouTube-transkriptionsdatapreparationsskripten
+## Kör skripten för förberedelse av YouTube-transkriptionsdata
 
 ### På Windows
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användningen av denna översättning.

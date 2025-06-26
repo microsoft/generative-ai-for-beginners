@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:44:29+00:00",
+  "translation_date": "2025-06-26T03:09:55+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "en"
 }
@@ -28,9 +28,9 @@ Each of these models is available free on the Github Model marketplace. The code
 Mistral Large 2 is currently the flagship model from Mistral and is designed for enterprise use. 
 
 The model is an upgrade to the original Mistral Large by offering 
--  Larger Context Window - 128k vs 32k 
--  Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
--  Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
+- Larger Context Window - 128k vs 32k 
+- Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
+- Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
 
 With these features, Mistral Large excels at 
 - *Retrieval Augmented Generation (RAG)* - due to the larger context window
@@ -145,7 +145,6 @@ Mistral Small is another model in the Mistral family of models under the premier
 - Low latency - faster response compared to Mistral's LLMs
 - Flexible - can be deployed across different environments with less restrictions on required resources. 
 
-
 Mistral Small is great for: 
 - Text based tasks such as summarization, sentiment analysis and translation. 
 - Applications where frequent requests are made due to its cost effectiveness 
@@ -228,7 +227,6 @@ Some other features of the NeMo model are:
 - *Finetuning:* The base model is available for finetuning. This allows for more flexibility for use-cases where finetuning may be needed. 
 
 - *Native Function Calling* - Like Mistral Large, this model has been trained on function calling. This makes it unique as being one of the first open source models to do so. 
-
 
 ### Comparing Tokenizers 
 

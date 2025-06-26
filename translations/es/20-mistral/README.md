@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:44:59+00:00",
+  "translation_date": "2025-06-26T03:10:27+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "es"
 }
@@ -14,34 +14,35 @@ CO_OP_TRANSLATOR_METADATA:
 Esta lección cubrirá:
 - Exploración de los diferentes Modelos Mistral
 - Comprensión de los casos de uso y escenarios para cada modelo
-- Ejemplos de código que muestran las características únicas de cada modelo.
+- Muestras de código que muestran las características únicas de cada modelo.
 
 ## Los Modelos Mistral
 
 En esta lección, exploraremos 3 modelos diferentes de Mistral: **Mistral Large**, **Mistral Small** y **Mistral Nemo**.
 
-Cada uno de estos modelos está disponible gratuitamente en el mercado de Modelos de Github. El código en este cuaderno utilizará estos modelos para ejecutar el código. Aquí hay más detalles sobre cómo usar los Modelos de Github para [prototipar con modelos de IA](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Cada uno de estos modelos está disponible de forma gratuita en el mercado de Modelos de Github. El código en este cuaderno utilizará estos modelos para ejecutar el código. Aquí hay más detalles sobre el uso de los Modelos de Github para [prototipar con modelos de IA](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
+
 Mistral Large 2 es actualmente el modelo insignia de Mistral y está diseñado para uso empresarial.
 
 El modelo es una mejora del Mistral Large original al ofrecer:
-- Ventana de Contexto más grande - 128k vs 32k
-- Mejor rendimiento en tareas de Matemáticas y Codificación - 76.9% de precisión promedio vs 60.4%
-- Mayor rendimiento multilingüe - los idiomas incluyen: inglés, francés, alemán, español, italiano, portugués, holandés, ruso, chino, japonés, coreano, árabe e hindi.
+- Ventana de contexto más grande - 128k vs 32k
+- Mejor rendimiento en tareas de matemáticas y codificación - 76.9% de precisión promedio vs 60.4%
+- Mayor rendimiento multilingüe - los idiomas incluyen: inglés, francés, alemán, español, italiano, portugués, neerlandés, ruso, chino, japonés, coreano, árabe e hindi.
 
 Con estas características, Mistral Large sobresale en:
 - *Generación Aumentada por Recuperación (RAG)* - debido a la ventana de contexto más grande
-- *Llamadas de Función* - este modelo tiene llamadas de función nativas que permiten la integración con herramientas y API externas. Estas llamadas pueden hacerse tanto en paralelo como una tras otra en orden secuencial.
+- *Llamada de Funciones* - este modelo tiene llamadas de función nativas que permiten la integración con herramientas y API externas. Estas llamadas se pueden hacer tanto en paralelo como una tras otra en orden secuencial.
 - *Generación de Código* - este modelo sobresale en la generación de Python, Java, TypeScript y C++.
 
 ### Ejemplo de RAG usando Mistral Large 2
 
 En este ejemplo, estamos usando Mistral Large 2 para ejecutar un patrón RAG sobre un documento de texto. La pregunta está escrita en coreano y pregunta sobre las actividades del autor antes de la universidad.
 
-Utiliza el Modelo de Embeddings de Cohere para crear embeddings del documento de texto así como de la pregunta. Para este ejemplo, utiliza el paquete de Python faiss como un almacén de vectores.
+Utiliza el Modelo de Embeddings de Cohere para crear embeddings del documento de texto así como de la pregunta. Para este ejemplo, utiliza el paquete Python faiss como un almacén vectorial.
 
-El prompt enviado al modelo Mistral incluye tanto las preguntas como los fragmentos recuperados que son similares a la pregunta. El modelo luego proporciona una respuesta en lenguaje natural.
+El mensaje enviado al modelo Mistral incluye tanto las preguntas como los fragmentos recuperados que son similares a la pregunta. El modelo luego proporciona una respuesta en lenguaje natural.
 
 ```python 
 pip install faiss-cpu
@@ -138,21 +139,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small es otro modelo en la familia de modelos Mistral bajo la categoría premier/empresarial. Como su nombre lo indica, este modelo es un Modelo de Lenguaje Pequeño (SLM). Las ventajas de usar Mistral Small son que es:
-- Ahorro de costos en comparación con los LLMs de Mistral como Mistral Large y NeMo - 80% de reducción de precio
-- Baja latencia - respuesta más rápida en comparación con los LLMs de Mistral
-- Flexible - puede ser desplegado en diferentes entornos con menos restricciones en los recursos requeridos.
 
-Mistral Small es excelente para:
+Mistral Small es otro modelo en la familia de modelos Mistral bajo la categoría premier/empresarial. Como su nombre indica, este modelo es un Modelo de Lenguaje Pequeño (SLM). Las ventajas de usar Mistral Small son que es:
+- Ahorro de costos en comparación con los LLM de Mistral como Mistral Large y NeMo - 80% de reducción de precio
+- Baja latencia - respuesta más rápida en comparación con los LLM de Mistral
+- Flexible - se puede desplegar en diferentes entornos con menos restricciones en los recursos requeridos.
+
+Mistral Small es ideal para:
 - Tareas basadas en texto como resumen, análisis de sentimientos y traducción.
-- Aplicaciones donde se realizan solicitudes frecuentes debido a su efectividad de costos
+- Aplicaciones donde se realizan solicitudes frecuentes debido a su rentabilidad
 - Tareas de código de baja latencia como revisión y sugerencias de código
 
-## Comparación entre Mistral Small y Mistral Large
+## Comparando Mistral Small y Mistral Large
 
 Para mostrar las diferencias en latencia entre Mistral Small y Large, ejecuta las celdas a continuación.
 
-Deberías ver una diferencia en los tiempos de respuesta entre 3-5 segundos. También nota las longitudes y estilo de respuesta sobre el mismo prompt.
+Deberías ver una diferencia en los tiempos de respuesta entre 3-5 segundos. También nota las longitudes y estilos de respuesta sobre el mismo mensaje.
 
 ```python 
 
@@ -220,17 +222,17 @@ Se considera una mejora del anterior LLM de código abierto de Mistral, Mistral 
 
 Algunas otras características del modelo NeMo son:
 
-- *Tokenización más eficiente:* Este modelo utiliza el tokenizer Tekken en lugar del más comúnmente utilizado tiktoken. Esto permite un mejor rendimiento en más idiomas y código.
+- *Tokenización más eficiente:* Este modelo usa el tokenizador Tekken en lugar del más comúnmente usado tiktoken. Esto permite un mejor rendimiento en más idiomas y código.
 
-- *Afinación fina:* El modelo base está disponible para afinación fina. Esto permite más flexibilidad para casos de uso donde la afinación fina puede ser necesaria.
+- *Ajuste fino:* El modelo base está disponible para ajuste fino. Esto permite más flexibilidad para casos de uso donde se pueda necesitar ajuste fino.
 
-- *Llamadas de Función Nativas* - Al igual que Mistral Large, este modelo ha sido entrenado en llamadas de función. Esto lo hace único por ser uno de los primeros modelos de código abierto en hacerlo.
+- *Llamada de Funciones Nativa* - Al igual que Mistral Large, este modelo ha sido entrenado en la llamada de funciones. Esto lo hace único al ser uno de los primeros modelos de código abierto en hacerlo.
 
-### Comparación de Tokenizers
+### Comparando Tokenizadores
 
 En este ejemplo, veremos cómo Mistral NeMo maneja la tokenización en comparación con Mistral Large.
 
-Ambos ejemplos toman el mismo prompt pero deberías ver que NeMo devuelve menos tokens en comparación con Mistral Large.
+Ambos ejemplos toman el mismo mensaje pero deberías ver que NeMo devuelve menos tokens en comparación con Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -348,9 +350,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## El aprendizaje no se detiene aquí, continúa el viaje
+## El aprendizaje no termina aquí, continúa el viaje
 
-Después de completar esta lección, consulta nuestra [colección de aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir mejorando tus conocimientos sobre IA Generativa.
+Después de completar esta lección, consulta nuestra [colección de aprendizaje de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir mejorando tus conocimientos sobre IA generativa.
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción humana profesional. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda la traducción humana profesional. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.

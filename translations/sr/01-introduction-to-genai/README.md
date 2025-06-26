@@ -2,128 +2,123 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-05-19T13:39:37+00:00",
+  "translation_date": "2025-06-25T10:08:05+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "sr"
 }
 -->
-# Uvod u Generativnu veštačku inteligenciju i velike jezičke modele
+# Увод у генеративну вештачку интелигенцију и моделе великог језика
 
-_(Kliknite na sliku iznad da pogledate video ove lekcije)_
+_(Кликните на слику изнад да бисте погледали видео овог часа)_
 
-Generativna veštačka inteligencija je vrsta veštačke inteligencije sposobna da generiše tekst, slike i druge vrste sadržaja. Ono što je čini fantastičnom tehnologijom je to što demokratizuje veštačku inteligenciju, svako može da je koristi sa samo jednim tekstualnim promptom, rečenicom napisanom na prirodnom jeziku. Nema potrebe da učite jezik kao što je Java ili SQL da biste postigli nešto vredno, sve što vam treba je da koristite svoj jezik, navedete šta želite i dobijete sugestiju od AI modela. Aplikacije i uticaj ovoga su ogromni, možete pisati ili razumeti izveštaje, pisati aplikacije i još mnogo toga, sve u sekundi.
+Генеративна вештачка интелигенција је вештачка интелигенција способна да генерише текст, слике и друге типове садржаја. Оно што је чини фантастичном технологијом је то што демократизује вештачку интелигенцију, свако може да је користи са само текстуалним упитом, реченицом написаном на природном језику. Не морате да учите језик попут Јаве или SQL-а да бисте постигли нешто вредно, све што треба да урадите је да користите свој језик, кажете шта желите и добијете предлог од модела вештачке интелигенције. Примене и утицај овога су огромни, пишете или разумете извештаје, пишете апликације и још много тога, све за неколико секунди.
 
-U ovom kurikulumu istražićemo kako naš startup koristi generativnu veštačku inteligenciju da otključa nove scenarije u svetu obrazovanja i kako se suočavamo sa neizbežnim izazovima vezanim za društvene implikacije njene primene i tehnološka ograničenja.
+У овом курикулуму истражићемо како наша стартап компанија користи генеративну вештачку интелигенцију да откључа нове сценарије у свету образовања и како се суочавамо са неизбежним изазовима повезаним са друштвеним импликацијама њене примене и ограничењима технологије.
 
-## Uvod
+## Увод
 
-Ova lekcija će pokriti:
+Овај час ће обухватити:
 
-- Uvod u poslovni scenario: našu startup ideju i misiju.
-- Generativnu veštačku inteligenciju i kako smo stigli do trenutnog tehnološkog pejzaža.
-- Unutrašnje funkcionisanje velikog jezičkog modela.
-- Glavne sposobnosti i praktične primene velikih jezičkih modela.
+- Увод у пословни сценарио: наша стартап идеја и мисија.
+- Генеративна вештачка интелигенција и како смо стигли до тренутног технолошког пејзажа.
+- Унутрашњи рад модела великог језика.
+- Главне способности и практични случајеви употребе модела великог језика.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Nakon završetka ove lekcije, razumećete:
+Након завршетка овог часа, разумећете:
 
-- Šta je generativna veštačka inteligencija i kako funkcionišu veliki jezički modeli.
-- Kako možete koristiti velike jezičke modele za različite primene, sa fokusom na obrazovne scenarije.
+- Шта је генеративна вештачка интелигенција и како функционишу модели великог језика.
+- Како можете користити моделе великог језика за различите случајеве употребе, са фокусом на сценарије образовања.
 
-## Scenario: naš obrazovni startup
+## Сценарио: наша образовна стартап компанија
 
-Generativna veštačka inteligencija (AI) predstavlja vrhunac AI tehnologije, pomerajući granice onoga što se nekada smatralo nemogućim. Generativni AI modeli imaju nekoliko sposobnosti i primena, ali za ovaj kurikulum istražićemo kako revolucionišu obrazovanje kroz fiktivni startup. Ovaj startup ćemo nazvati _naš startup_. Naš startup radi u oblasti obrazovanja sa ambicioznom misijom
+Генеративна вештачка интелигенција представља врхунац технологије вештачке интелигенције, померајући границе онога што се некада сматрало немогућим. Генеративни AI модели имају неколико способности и примена, али за овај курикулум ћемо истражити како она револуционише образовање кроз фиктивну стартап компанију. Назваћемо ову стартап компанију _наш стартап_. Наш стартап ради у области образовања са амбициозном мисијом
 
-> _poboljšanje pristupačnosti u učenju, na globalnom nivou, osiguravanje ravnopravnog pristupa obrazovanju i pružanje personalizovanih iskustava učenja svakom učeniku, prema njihovim potrebama_.
+> _побољшање приступачности учењу, на глобалном нивоу, осигурање равноправног приступа образовању и пружање персонализованих искустава учења сваком ученику, према њиховим потребама_.
 
-Tim našeg startupa je svestan da nećemo moći da postignemo ovaj cilj bez korišćenja jednog od najmoćnijih alata modernog doba – velikih jezičkih modela (LLMs).
+Наш тим је свестан да нећемо моћи да постигнемо овај циљ без коришћења једног од најмоћнијих алата модерног доба – модела великог језика (LLMs).
 
-Očekuje se da će generativna veštačka inteligencija revolucionisati način na koji danas učimo i predajemo, sa studentima koji imaju na raspolaganju virtuelne nastavnike 24 sata dnevno koji pružaju ogromne količine informacija i primera, i nastavnicima koji mogu koristiti inovativne alate za ocenjivanje svojih učenika i davanje povratnih informacija.
+Очекује се да генеративна вештачка интелигенција револуционише начин на који данас учимо и предајемо, са студентима који имају на располагању виртуелне учитеље 24 сата дневно који пружају велике количине информација и примера, и учитељима који могу користити иновативне алате за процену својих ученика и давање повратних информација.
 
-Da bismo počeli, definišimo neke osnovne pojmove i terminologiju koju ćemo koristiti tokom celog kurikuluma.
+Да бисмо започели, дефинишемо неке основне концепте и терминологију коју ћемо користити током курикулума.
 
-## Kako smo dobili generativnu veštačku inteligenciju?
+## Како смо добили генеративну вештачку интелигенцију?
 
-Uprkos izuzetnom _hajpu_ koji je nedavno stvoren objavljivanjem generativnih AI modela, ova tehnologija je decenijama u nastajanju, sa prvim istraživačkim naporima koji datiraju još iz 60-ih. Sada smo na tački gde AI ima ljudske kognitivne sposobnosti, kao što je razgovor, što je prikazano, na primer, sa [OpenAI ChatGPT](https://openai.com/chatgpt) ili [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), koji takođe koristi GPT model za pretragu na Bing-u.
+Упркос изузетној _хипи_ која је недавно створена објављивањем генеративних AI модела, ова технологија се развија деценијама, са првим истраживачким напорима који датирају из 60-их година. Сада смо на тачки где AI има људске когнитивне способности, као што је разговор, што показује на пример [OpenAI ChatGPT](https://openai.com/chatgpt) или [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), који такође користи GPT модел за претрагу веба Bing разговоре.
 
-Vratimo se malo unazad, prvi prototipovi AI su se sastojali od pisaćih chatbotova, oslanjajući se na bazu znanja izvučenu iz grupe stručnjaka i predstavljenu u računaru. Odgovori u bazi znanja su se aktivirali ključnim rečima koje su se pojavljivale u ulaznom tekstu. Međutim, ubrzo je postalo jasno da takav pristup, koristeći pisaće chatbotove, nije dobro skalirao.
+Враћајући се мало уназад, први прототипови AI-а су се састојали од писаних четботова, ослањајући се на базу знања извучену од групе стручњака и представљену у рачунару. Одговори у бази знања су били покренути кључним речима које се појављују у улазном тексту.
+Међутим, убрзо је постало јасно да такав приступ, користећи писане четботове, није добро скалирао.
 
-### Statistički pristup AI: Mašinsko učenje
+### Статистички приступ вештачкој интелигенцији: Машинско учење
 
-Prelomna tačka je stigla tokom 90-ih, primenom statističkog pristupa analizi teksta. Ovo je dovelo do razvoja novih algoritama – poznatih kao mašinsko učenje – sposobnih da uče obrasce iz podataka bez eksplicitnog programiranja. Ovaj pristup omogućava mašinama da simuliraju razumevanje ljudskog jezika: statistički model se obučava na uparivanju tekst-oznaka, omogućavajući modelu da klasifikuje nepoznat ulazni tekst sa unapred definisanom oznakom koja predstavlja nameru poruke.
+Преломна тачка је стигла током 90-их, са применом статистичког приступа анализи текста. Ово је довело до развоја нових алгоритама – познатих као машинско учење – способних да уче обрасце из података без да су експлицитно програмирани. Овај приступ омогућава машинама да симулирају разумевање људског језика: статистички модел се обучава на паровима текст-ознака, омогућавајући моделу да класификује непознати улазни текст са предефинисаном ознаком која представља намеру поруке.
 
-### Neuronske mreže i moderni virtuelni asistenti
+### Неуронске мреже и модерни виртуелни асистенти
 
-U poslednjih nekoliko godina, tehnološka evolucija hardvera, sposobnog da obrađuje veće količine podataka i složenije proračune, podstakla je istraživanje u AI, što je dovelo do razvoja naprednih algoritama mašinskog učenja poznatih kao neuronske mreže ili algoritmi dubokog učenja.
+У последњим годинама, технолошка еволуција хардвера, способног да обрађује веће количине података и сложеније прорачуне, подстакла је истраживање у области вештачке интелигенције, што је довело до развоја напредних алгоритама машинског учења познатих као неуронске мреже или алгоритми дубоког учења.
 
-Neuronske mreže (i posebno Recurrent Neural Networks – RNNs) značajno su unapredile obradu prirodnog jezika, omogućavajući reprezentaciju značenja teksta na smisleniji način, vrednujući kontekst reči u rečenici.
+Неуронске мреже (а посебно рекурентне неуронске мреже – RNNs) значајно су побољшале обраду природног језика, омогућавајући представљање значења текста на значајнији начин, вреднујући контекст речи у реченици.
 
-Ovo je tehnologija koja je pokretala virtuelne asistente rođene u prvoj deceniji novog veka, vrlo sposobne u tumačenju ljudskog jezika, identifikovanju potrebe i izvršavanju akcije da je zadovolje – kao što je odgovaranje sa unapred definisanim skriptom ili korišćenje usluge treće strane.
+Ово је технологија која је покретала виртуелне асистенте рођене у првој деценији новог века, веома способне у тумачењу људског језика, идентификовању потребе и извршавању акције да би је задовољили – као што је одговарање са предефинисаним скриптом или коришћење услуге треће стране.
 
-### Danas, Generativna veštačka inteligencija
+### Данашњи дан, генеративна вештачка интелигенција
 
-Tako smo stigli do generativne veštačke inteligencije danas, koja se može smatrati podskupom dubokog učenja.
+Тако смо дошли до генеративне вештачке интелигенције данас, која се може посматрати као подскуп дубоког учења.
 
-Nakon decenija istraživanja u oblasti AI, nova arhitektura modela – nazvana _Transformer_ – prevazišla je ograničenja RNNs, sposobna da primi mnogo duže sekvence teksta kao ulaz. Transformeri su zasnovani na mehanizmu pažnje, omogućavajući modelu da daje različite težine ulazima koje prima, 'obraćajući više pažnje' tamo gde je koncentrisana najrelevantnija informacija, bez obzira na njihov redosled u tekstualnoj sekvenci.
+Након деценија истраживања у области вештачке интелигенције, нова архитектура модела – названа _Transformer_ – превазишла је ограничења RNN-ова, омогућавајући добијање много дужих секвенци текста као улаз. Трансформери се заснивају на механизму пажње, омогућавајући моделу да даје различите тежине улазима које прима, ‘обраћајући више пажње’ тамо где је концентрисана најрелевантнија информација, без обзира на њихов редослед у текстуалној секвенци.
 
-Većina nedavnih generativnih AI modela – takođe poznatih kao veliki jezički modeli (LLMs), jer rade sa tekstualnim ulazima i izlazima – zaista su zasnovani na ovoj arhitekturi. Ono što je zanimljivo kod ovih modela – obučenih na ogromnoj količini neoznačenih podataka iz različitih izvora kao što su knjige, članci i veb sajtovi – jeste da se mogu prilagoditi širokom spektru zadataka i generisati gramatički ispravan tekst sa naznakama kreativnosti. Dakle, ne samo da su neverovatno unapredili sposobnost mašine da 'razume' ulazni tekst, već su omogućili njihovu sposobnost da generišu originalan odgovor na ljudskom jeziku.
+Већина недавних генеративних AI модела – такође познатих као модели великог језика (LLMs), јер раде са текстуалним улазима и излазима – заиста се заснива на овој архитектури. Оно што је занимљиво код ових модела – обучених на огромној количини необележених података из различитих извора као што су књиге, чланци и веб-сајтови – је то што се могу прилагодити широком спектру задатака и генерисати граматички исправан текст са привидом креативности. Дакле, не само да су невероватно побољшали способност машине да ‘разуме’ улазни текст, већ су омогућили њихову способност да генеришу оригиналан одговор на људском језику.
 
-## Kako funkcionišu veliki jezički modeli?
+## Како функционишу модели великог језика?
 
-U sledećem poglavlju ćemo istražiti različite vrste generativnih AI modela, ali za sada hajde da pogledamo kako funkcionišu veliki jezički modeli, sa fokusom na OpenAI GPT (Generative Pre-trained Transformer) modele.
+У следећем поглављу ћемо истражити различите типове генеративних AI модела, али за сада да погледамо како функционишу модели великог језика, са фокусом на OpenAI GPT (Generative Pre-trained Transformer) моделе.
 
-- **Tokenizator, tekst u brojeve**: Veliki jezički modeli primaju tekst kao ulaz i generišu tekst kao izlaz. Međutim, budući da su statistički modeli, mnogo bolje rade sa brojevima nego sa tekstualnim sekvencama. Zato se svaki ulaz u model obrađuje pomoću tokenizatora, pre nego što ga koristi osnovni model. Token je deo teksta – koji se sastoji od promenljivog broja karaktera, tako da je glavna uloga tokenizatora razdvajanje ulaza u niz tokena. Zatim, svaki token se mapira sa indeksom tokena, što je celobrojno kodiranje originalnog dela teksta.
+- **Tokenizer, текст у бројеве**: Модели великог језика примају текст као улаз и генеришу текст као излаз. Међутим, будући да су статистички модели, они боље раде са бројевима него са текстуалним секвенцама. Зато се сваки улаз у модел обрађује помоћу токенизера, пре него што га користи основни модел. Токен је део текста – који се састоји од променљивог броја карактера, па је главни задатак токенизера да подели улаз у низ токена. Затим, сваки токен се мапира са индексом токена, што је целобројно кодирање оригиналног дела текста.
 
-- **Predviđanje izlaznih tokena**: S obzirom na n tokena kao ulaz (sa maksimalnim n koji varira od jednog modela do drugog), model je u stanju da predvidi jedan token kao izlaz. Ovaj token se zatim uključuje u ulaz sledeće iteracije, u obrascu proširujućeg prozora, omogućavajući bolje korisničko iskustvo dobijanja jedne (ili više) rečenice kao odgovora. Ovo objašnjava zašto, ako ste ikada koristili ChatGPT, možda ste primetili da ponekad izgleda kao da se zaustavlja na sredini rečenice.
+- **Предвиђање излазних токена**: Датих n токена као улаз (са максималним n који варира од модела до модела), модел је способан да предвиди један токен као излаз. Овај токен се затим укључује у улаз следеће итерације, у проширујућем прозорском шаблону, омогућавајући боље корисничко искуство добијања једне (или више) реченице као одговора. Ово објашњава зашто, ако сте се икада играли са ChatGPT, можда сте приметили да понекад изгледа као да престаје у средини реченице.
 
-- **Proces selekcije, distribucija verovatnoće**: Izlazni token bira model prema verovatnoći njegovog pojavljivanja nakon trenutne tekstualne sekvence. Ovo je zato što model predviđa distribuciju verovatnoće nad svim mogućim 'sledećim tokenima', izračunatu na osnovu svog treninga. Međutim, nije uvek izabran token sa najvećom verovatnoćom iz rezultirajuće distribucije. Stupanj slučajnosti se dodaje ovom izboru, na način da model deluje u nedeterminističkoj modi - ne dobijamo potpuno isti izlaz za isti ulaz. Ovaj stepen slučajnosti se dodaje kako bi se simulirao proces kreativnog razmišljanja i može se podesiti pomoću parametra modela zvanog temperatura.
+- **Процес селекције, расподела вероватноће**: Излазни токен је изабран од стране модела према његовој вероватноћи да се јави након тренутне текстуалне секвенце. То је зато што модел предвиђа расподелу вероватноће над свим могућим ‘следећим токенима’, израчунату на основу његове обуке. Међутим, није увек изабран токен са највишом вероватноћом из резултирајуће расподеле. Степен случајности се додаје овом избору, на начин да модел делује на недетерминистички начин - не добијамо потпуно исти излаз за исти улаз. Овај степен случајности се додаје да симулира процес креативног размишљања и може се подесити помоћу параметра модела који се назива температура.
 
-## Kako naš startup može iskoristiti velike jezičke modele?
+## Како наша стартап компанија може искористити моделе великог језика?
 
-Sada kada bolje razumemo unutrašnje funkcionisanje velikog jezičkog modela, hajde da vidimo neke praktične primere najčešćih zadataka koje mogu prilično dobro obaviti, sa osvrtom na naš poslovni scenario.
-Rekli smo da je glavna sposobnost velikog jezičkog modela _generisanje teksta od nule, počevši od tekstualnog ulaza, napisanog na prirodnom jeziku_.
+Сада када боље разумемо унутрашњи рад модела великог језика, да видимо неке практичне примере најчешћих задатака које могу прилично добро обављати, са пажњом на наш пословни сценарио.
+Рекли смо да је главна способност модела великог језика _генерисање текста од нуле, почевши од текстуалног улаза, написаног на природном језику_.
 
-Ali kakav tekstualni ulaz i izlaz?
-Ulaz velikog jezičkog modela je poznat kao prompt, dok je izlaz poznat kao completion, termin koji se odnosi na mehanizam modela za generisanje sledećeg tokena za kompletiranje trenutnog ulaza. Uronićemo duboko u to šta je prompt i kako ga dizajnirati na način da izvučemo maksimum iz našeg modela. Ali za sada, recimo samo da prompt može uključivati:
+Али какав текстуални улаз и излаз?
+Улаз модела великог језика је познат као упит, док је излаз познат као завршетак, термин који се односи на механизам модела за генерисање следећег токена за довршавање тренутног улаза. Ући ћемо дубоко у то шта је упит и како га дизајнирати на начин да добијемо највише од нашег модела. Али за сада, рецимо само да упит може укључивати:
 
-- **Instrukciju** koja specificira vrstu izlaza koju očekujemo od modela. Ova instrukcija ponekad može uključivati neke primere ili dodatne podatke.
+- **Инструкцију** која специфицира тип излаза који очекујемо од модела. Ова инструкција понекад може укључивати неке примере или додатне податке.
 
-  1. Rezime članka, knjige, recenzija proizvoda i više, zajedno sa izvlačenjem uvida iz nestrukturiranih podataka.
+  1. Сажетак чланка, књиге, рецензија производа и више, заједно са извлачењем увида из неструктурираних података.
   
-  2. Kreativno osmišljavanje i dizajn članka, eseja, zadatka ili više.
+  2. Креативно идејно решење и дизајн чланка, есеја, задатка или више.
 
-- **Pitanje**, postavljeno u obliku razgovora sa agentom.
+- **Питање**, постављено у облику разговора са агентом.
 
-- Deo **teksta za dopunjavanje**, što implicitno znači traženje pomoći u pisanju.
+- Део **текста за довршавање**, што имплицитно представља захтев за помоћ у писању.
 
-- Deo **koda** zajedno sa zahtevom za objašnjenjem i dokumentovanjem, ili komentar koji traži generisanje dela koda koji obavlja određeni zadatak.
+- Део **кода** заједно са захтевом за објашњење и документацију, или коментар који тражи генерисање дела кода који обавља одређени задатак.
 
-Gore navedeni primeri su prilično jednostavni i nisu zamišljeni kao iscrpna demonstracija sposobnosti velikih jezičkih modela. Oni su namenjeni da pokažu potencijal korišćenja generativne veštačke inteligencije, posebno ali ne ograničavajući se na obrazovne kontekste.
+Горњи примери су прилично једноставни и нису намењени да буду исцрпна демонстрација способности модела великог језика. Они су намењени да покажу потенцијал коришћења генеративне вештачке интелигенције, посебно али не само у образовним контекстима.
 
-Takođe, izlaz generativnog AI modela nije savršen i ponekad kreativnost modela može delovati protiv njega, rezultirajući izlazom koji je kombinacija reči koju ljudski korisnik može protumačiti kao mistifikaciju stvarnosti, ili može biti uvredljiv. Generativna veštačka inteligencija nije inteligentna - barem u širem smislu definicije inteligencije, uključujući kritičko i kreativno razmišljanje ili emocionalnu inteligenciju; nije deterministička, i nije pouzdana, jer izmišljotine, kao što su pogrešne reference, sadržaj i izjave, mogu biti kombinovane sa tačnim informacijama, i predstavljene na ubedljiv i samouveren način. U sledećim lekcijama bavićemo se svim ovim ograničenjima i videćemo šta možemo učiniti da ih ublažimo.
+Такође, излаз генеративног AI модела није савршен и понекад креативност модела може радити против њега, резултирајући излазом који је комбинација речи коју људски корисник може тумачити као мистификацију стварности, или може бити увредљив. Генеративна вештачка интелигенција није интелигентна - барем у свеобухватнијој дефиницији интелигенције, укључујући критичко и креативно резоновање или емоционалну интелигенцију; није детерминистичка и није поуздана, јер измишљотине, као што су погрешне референце, садржај и изјаве, могу бити комбиноване са исправним информацијама и представљене на убедљив и самоуверен начин. У следећим часовима, бавићемо се свим овим ограничењима и видећемо шта можемо учинити да их ублажимо.
 
-## Zadaci
+## Задатак
 
-Vaš zadatak je da pročitate više o [generativnoj veštačkoj inteligenciji](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) i pokušate da identifikujete oblast u kojoj biste danas dodali generativnu veštačku inteligenciju koja je trenutno nema. Kako bi uticaj bio drugačiji od obavljanja na "stari način", možete li učiniti nešto što niste mogli ranije, ili ste brži? Napišite sažetak od 300 reči o tome kako bi izgledao vaš startup iz snova u oblasti veštačke inteligencije i uključite naslove kao što su "Problem", "Kako bih koristio veštačku inteligenciju", "Uticaj" i opciono poslovni plan.
+Ваш задатак је да прочитате више о [генеративној вештачкој интелигенцији](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) и покушате да идентификујете област у којој бисте данас додали генеративну вештачку интелигенцију која је нема. Како би утицај био другачији у односу на рад "старим начином", можете ли учинити нешто што раније нисте могли, или сте бржи? Напишите резиме од 300 речи о томе како би изгледала ваша AI стартап компанија из снова и укључите заглавља као што су "Проблем", "Како бих користио AI", "Утицај" и опционално пословни план.
 
-Ako ste uradili ovaj zadatak, možda ste čak spremni da se prijavite za Microsoft-ov inkubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) nudimo kredite za Azure, OpenAI, mentorstvo i mnogo više, pogledajte!
+Ако сте урадили овај задатак, можда сте чак спремни да се пријавите у Microsoft-ов инкубатор, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) нудимо кредите за Azure, OpenAI, менторство и много више, погледајте!
 
-## Provera znanja
+## Провера знања
 
-Šta je tačno u vezi sa velikim jezičkim modelima?
+Шта је тачно о моделима великог језика?
 
-1. Dobijate potpuno isti odgovor svaki put.
-2. Radi stvari savršeno, odlično u sabiranju brojeva, proizvodnji funkcionalnog koda itd.
-3. Odgovor može varirati uprkos korišćenju istog prompta. Takođe je odličan u davanju prvog nacrta nečega, bilo da je to tekst ili kod. Ali treba da unapredite rezultate.
+1. Добијате потпуно исти одговор сваки пут.
+1. Савршено обавља задатке, одлично у сабирању бројева, производњи исправног кода итд.
+1. Одговор може варирати упркос коришћењу истог упита. Такође је одличан у пружању првог нацрта нечега, било текста или кода. Али треба да побољшате резултате.
 
-Odgovor: 3, LLM je nedeterministički, odgovor varira, međutim, možete kontrolisati njegovu varijansu putem podešavanja temperature. Takođe ne bi trebalo da očekujete da radi stvari savršeno, tu je da obavi težak posao za vas, što često znači da dobijate dobar prvi pokušaj nečega što treba postepeno poboljšati.
+А: 3, LLM је недетерминистички, одговор варира, међутим, можете контролисати његову варијансу путем подешавања температуре. Такође не треба очекивати да ради саврш
 
-## Odličan rad! Nastavite putovanje
-
-Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje generativne veštačke inteligencije](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa unapređivanjem svog znanja o generativnoj veštačkoj inteligenciji!
-
-Pređite na Lekciju 2 gde ćemo istražiti kako [istražiti i uporediti različite tipove LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
-
-**Ограничење одговорности**:  
-Овај документ је преведен користећи AI услугу превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да постигнемо тачност, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.
+**Одричање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да преводи буду тачни, имајте на уму да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква неспоразумевања или погрешна тумачења која произилазе из коришћења овог превода.

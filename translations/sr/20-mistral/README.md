@@ -2,46 +2,47 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:03:33+00:00",
+  "translation_date": "2025-06-26T03:23:04+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "sr"
 }
 -->
-# Izgradnja sa Mistral Modelima
+# Изградња са Мистрал моделима
 
-## Uvod
+## Увод
 
-Ova lekcija pokriva:
-- Istraživanje različitih Mistral modela
-- Razumevanje slučajeva upotrebe i scenarija za svaki model
-- Primeri koda koji pokazuju jedinstvene karakteristike svakog modela.
+Ова лекција ће обухватити:
+- Истраживање различитих Мистрал модела
+- Разумевање употребе и сценарија за сваки модел
+- Примери кода показују јединствене карактеристике сваког модела.
 
-## Mistral modeli
+## Мистрал модели
 
-U ovoj lekciji ćemo istražiti 3 različita Mistral modela: **Mistral Large**, **Mistral Small** i **Mistral Nemo**.
+У овој лекцији, истражићемо 3 различита Мистрал модела: **Мистрал Велики**, **Мистрал Мали** и **Мистрал Немо**.
 
-Svaki od ovih modela je dostupan besplatno na Github Model tržištu. Kod u ovom beležniku će koristiti ove modele za pokretanje koda. Ovde su dodatni detalji o korišćenju Github Modela za [prototipiziranje sa AI modelima](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Сваки од ових модела је доступан бесплатно на Github Model тржишту. Код у овом нотебуку ће користити ове моделе за покретање кода. Овде су детаљи о коришћењу Github модела за [прототип са AI моделима](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-## Mistral Large 2 (2407)
-Mistral Large 2 je trenutno vodeći model iz Mistrala i dizajniran je za poslovnu upotrebu.
+## Мистрал Велики 2 (2407)
 
-Model je unapređenje originalnog Mistral Large sa:
-- Većim kontekstualnim prozorom - 128k naspram 32k
-- Boljom performansom na matematičkim i programerskim zadacima - 76.9% prosečne tačnosti naspram 60.4%
-- Povećanom višelingvalnom performansom - jezici uključuju: engleski, francuski, nemački, španski, italijanski, portugalski, holandski, ruski, kineski, japanski, korejski, arapski i hindi.
+Мистрал Велики 2 је тренутно водећи модел из Мистрала и дизајниран је за употребу у предузећима.
 
-Sa ovim karakteristikama, Mistral Large se ističe u:
-- *Generaciji sa poboljšanim preuzimanjem (RAG)* - zbog većeg kontekstualnog prozora
-- *Pozivanju funkcija* - ovaj model ima nativno pozivanje funkcija što omogućava integraciju sa spoljnim alatima i API-jevima. Ova pozivanja mogu biti izvršena paralelno ili jedno nakon drugog u sekvencijalnom redu.
-- *Generaciji koda* - ovaj model se ističe u generaciji za Python, Java, TypeScript i C++.
+Модел је надоградња оригиналног Мистрал Великог и нуди
+- Већи прозор контекста - 128k наспрам 32k
+- Боље перформансе у математичким и кодирајућим задацима - 76.9% просечна тачност наспрам 60.4%
+- Повећане перформансе у више језика - језици укључују: енглески, француски, немачки, шпански, италијански, португалски, холандски, руски, кинески, јапански, корејски, арапски и хинди.
 
-### RAG primer korišćenjem Mistral Large 2
+Са овим карактеристикама, Мистрал Велики је одличан у
+- *Генерација уз помоћ претраживања (RAG)* - захваљујући већем прозору контекста
+- *Позивање функција* - овај модел има нативно позивање функција што омогућава интеграцију са спољним алатима и API-јима. Ови позиви се могу извршити паралелно или један за другим у секвенцијалном редоследу.
+- *Генерација кода* - овај модел је одличан у генерацији Python, Java, TypeScript и C++ кода.
 
-U ovom primeru koristimo Mistral Large 2 za pokretanje RAG šablona preko teksta. Pitanje je napisano na korejskom i postavlja se o aktivnostima autora pre fakulteta.
+### RAG Пример користећи Мистрал Велики 2
 
-Koristi Cohere Embeddings Model za kreiranje embedinga tekstualnog dokumenta kao i pitanja. Za ovaj primer koristi faiss Python paket kao vektorsku prodavnicu.
+У овом примеру, користимо Мистрал Велики 2 за покретање RAG шаблона преко текстуалног документа. Питање је написано на корејском и пита о активностима аутора пре факултета.
 
-Upit poslat Mistral modelu uključuje i pitanja i preuzete delove koji su slični pitanju. Model zatim pruža odgovor na prirodnom jeziku.
+Користи Cohere Embeddings Model за креирање ембединга текстуалног документа као и питања. За овај пример, користи faiss Python пакет као векторску продавницу.
+
+Промпт послат Мистрал моделу укључује и питања и извучене делове који су слични питању. Модел затим пружа одговор на природном језику.
 
 ```python 
 pip install faiss-cpu
@@ -137,22 +138,23 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
-Mistral Small je još jedan model iz Mistral porodice modela u premier/enterprise kategoriji. Kao što ime sugeriše, ovaj model je Mali Jezički Model (SLM). Prednosti korišćenja Mistral Small su:
-- Ušteda troškova u poređenju sa Mistral LLM-ovima poput Mistral Large i NeMo - 80% niža cena
-- Niska latencija - brži odgovor u poređenju sa Mistralovim LLM-ovima
-- Fleksibilnost - može biti implementiran u različitim okruženjima sa manje ograničenja na potrebne resurse.
+## Мистрал Мали
 
-Mistral Small je odličan za:
-- Zadaci bazirani na tekstu kao što su sažimanje, analiza sentimenta i prevođenje.
-- Aplikacije gde se često prave zahtevi zbog njegove isplativosti
-- Zadaci sa niskom latencijom kao što su pregled i sugestije koda
+Мистрал Мали је још један модел у породици Мистрал модела под премијум/предузећем категоријом. Како назив имплицира, овај модел је Мали Језички Модел (SLM). Предности коришћења Мистрал Малог су:
+- Уштеда трошкова у поређењу са Мистрал LLM-овима као што су Мистрал Велики и NeMo - пад цене од 80%
+- Ниска латенција - бржи одговор у поређењу са Мистрал LLM-овима
+- Флексибилност - може се распоредити у различитим окружењима са мање ограничења на потребне ресурсе.
 
-## Poređenje Mistral Small i Mistral Large
+Мистрал Мали је одличан за:
+- Задаци засновани на тексту као што су сумирање, анализа осећаја и превођење.
+- Апликације где се често праве захтеви због његове економичности
+- Задаци кода са ниском латенцијом као што су преглед и предлози кода
 
-Da biste pokazali razlike u latenciji između Mistral Small i Large, pokrenite sledeće ćelije.
+## Поређење Мистрал Малог и Мистрал Великог
 
-Trebalo bi da vidite razliku u vremenu odgovora između 3-5 sekundi. Takođe obratite pažnju na dužinu i stil odgovora na isti upit.
+Да покажемо разлике у латенцији између Мистрал Малог и Великог, покрените доле наведене ћелије.
+
+Требало би да видите разлику у временима одговора између 3-5 секунди. Такође обратите пажњу на дужину и стил одговора на исти промпт.
 
 ```python 
 
@@ -212,25 +214,25 @@ print(response.choices[0].message.content)
 
 ```
 
-## Mistral NeMo
+## Мистрал Немо
 
-U poređenju sa druga dva modela diskutovana u ovoj lekciji, Mistral NeMo je jedini besplatni model sa Apache2 licencom.
+У поређењу са друга два модела о којима се говори у овој лекцији, Мистрал Немо је једини бесплатни модел са Apache2 лиценцом.
 
-Smatra se unapređenjem ranijeg open source LLM-a iz Mistrala, Mistral 7B.
+Сматра се надоградњом ранијег отвореног кода LLM из Мистрала, Мистрал 7B.
 
-Neke druge karakteristike NeMo modela su:
+Неке друге карактеристике NeMo модела су:
 
-- *Efikasnija tokenizacija:* Ovaj model koristi Tekken tokenizator umesto češće korišćenog tiktokena. Ovo omogućava bolje performanse za više jezika i kodova.
+- *Ефикаснија токенизација:* Овај модел користи Tekken токенизатор уместо уобичајенијег tiktoken-а. Ово омогућава боље перформансе у више језика и кода.
 
-- *Fino podešavanje:* Osnovni model je dostupan za fino podešavanje. Ovo omogućava veću fleksibilnost za slučajeve upotrebe gde je fino podešavanje možda potrebno.
+- *Финетјунинг:* Основни модел је доступан за финетјунинг. Ово омогућава више флексибилности за случајеве употребе где је финетјунинг можда потребан.
 
-- *Nativno pozivanje funkcija* - Kao i Mistral Large, ovaj model je treniran na pozivanju funkcija. Ovo ga čini jedinstvenim kao jednim od prvih open source modela koji to radi.
+- *Нативно позивање функција* - Као Мистрал Велики, овај модел је обучен за позивање функција. Ово га чини јединственим као једним од првих модела отвореног кода који то чини.
 
-### Poređenje tokenizatora
+### Поређење токенизатора
 
-U ovom primeru ćemo pogledati kako Mistral NeMo rukuje tokenizacijom u poređenju sa Mistral Large.
+У овом примеру, погледаћемо како Мистрал Немо обрађује токенизацију у поређењу са Мистрал Великим.
 
-Oba primera uzimaju isti upit, ali trebalo bi da vidite da NeMo vraća manje tokena u odnosu na Mistral Large.
+Оба примера узимају исти промпт, али требало би да видите да Немо враћа мање токена у поређењу са Мистрал Великим.
 
 ```bash
 pip install mistral-common
@@ -348,9 +350,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Učenje se ne zaustavlja ovde, nastavite putovanje
+## Учење се не зауставља овде, наставите путовање
 
-Nakon završetka ove lekcije, pogledajte našu [Generativnu AI kolekciju za učenje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili da unapređujete svoje znanje o Generativnoj AI!
+Након завршетка ове лекције, погледајте нашу [Generative AI Learning колекцију](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да наставите са усавршавањем вашег знања о генеративној вештачкој интелигенцији!
 
-**Одричање од одговорности**:  
-Овај документ је преведен користећи AI услугу превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква погрешна разумевања или тумачења која произилазе из употребе овог превода.
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква неспоразума или погрешна тумачења која проистичу из коришћења овог превода.

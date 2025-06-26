@@ -2,125 +2,123 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T23:10:33+00:00",
+  "translation_date": "2025-06-25T21:41:46+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "ro"
 }
 -->
-# Securizarea aplicațiilor tale de AI generativ
+# Securizarea Aplicațiilor Tale de Inteligență Artificială Generativă
 
-[![Securizarea aplicațiilor tale de AI generativ](../../../translated_images/13-lesson-banner.c21a3a479f9ff14ad1f7c9b02bfe0d9a549b43497588334356f91073466a1283.ro.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
+[![Securizarea Aplicațiilor Tale de Inteligență Artificială Generativă](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ro.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Introducere
 
 Această lecție va acoperi:
 
-- Securitatea în contextul sistemelor AI.
-- Riscuri și amenințări comune pentru sistemele AI.
-- Metode și considerații pentru securizarea sistemelor AI.
+- Securitatea în contextul sistemelor de inteligență artificială.
+- Riscurile și amenințările comune pentru sistemele de inteligență artificială.
+- Metode și considerații pentru securizarea sistemelor de inteligență artificială.
 
-## Obiective de învățare
+## Obiective de Învățare
 
-După completarea acestei lecții, vei avea o înțelegere a:
+După finalizarea acestei lecții, vei înțelege:
 
-- Amenințărilor și riscurilor pentru sistemele AI.
-- Metode și practici comune pentru securizarea sistemelor AI.
+- Amenințările și riscurile pentru sistemele de inteligență artificială.
+- Metode și practici comune pentru securizarea sistemelor de inteligență artificială.
 - Cum implementarea testării de securitate poate preveni rezultate neașteptate și erodarea încrederii utilizatorilor.
 
-## Ce înseamnă securitatea în contextul AI generativ?
+## Ce înseamnă securitatea în contextul inteligenței artificiale generative?
 
-Pe măsură ce tehnologiile de Inteligență Artificială (AI) și Învățare Automată (ML) ne modelează tot mai mult viețile, este esențial să protejăm nu doar datele clienților, ci și sistemele AI în sine. AI/ML este utilizat tot mai mult pentru susținerea proceselor de luare a deciziilor de mare valoare în industrii unde o decizie greșită poate avea consecințe serioase.
+Pe măsură ce tehnologiile de Inteligență Artificială (IA) și Învățare Automată (ML) ne modelează tot mai mult viețile, este crucial să protejăm nu doar datele clienților, ci și sistemele de inteligență artificială în sine. IA/ML sunt utilizate din ce în ce mai mult în sprijinul proceselor decizionale de mare valoare în industrii unde o decizie greșită poate avea consecințe grave.
 
 Iată punctele cheie de luat în considerare:
 
-- **Impactul AI/ML**: AI/ML au impacturi semnificative asupra vieții de zi cu zi și, ca atare, protejarea lor a devenit esențială.
-- **Provocări de securitate**: Acest impact pe care îl au AI/ML necesită atenție adecvată pentru a aborda necesitatea de a proteja produsele bazate pe AI de atacuri sofisticate, fie de la troli, fie de la grupuri organizate.
-- **Probleme strategice**: Industria tehnologică trebuie să abordeze proactiv provocările strategice pentru a asigura siguranța pe termen lung a clienților și securitatea datelor.
+- **Impactul IA/ML**: IA/ML au un impact semnificativ asupra vieții cotidiene și, ca atare, protejarea lor a devenit esențială.
+- **Provocări de Securitate**: Acest impact pe care IA/ML îl are necesită atenție adecvată pentru a aborda necesitatea de a proteja produsele bazate pe IA de atacuri sofisticate, fie că sunt de la troli sau grupuri organizate.
+- **Probleme Strategice**: Industria tehnologică trebuie să abordeze proactiv provocările strategice pentru a asigura siguranța pe termen lung a clienților și securitatea datelor.
 
-În plus, modelele de Învățare Automată nu pot discerne între inputuri malițioase și date anomale benigne. O sursă semnificativă de date de antrenament este derivată din seturi de date publice necurate și nemoderate, deschise contribuțiilor de la terți. Atacatorii nu trebuie să compromită seturile de date când pot contribui liber la ele. În timp, datele malițioase cu încredere scăzută devin date de încredere cu încredere ridicată, dacă structura/formatul datelor rămâne corect.
+În plus, modelele de Învățare Automată sunt în mare parte incapabile să discearnă între inputurile malițioase și datele anormale benigne. O sursă semnificativă de date de antrenament este derivată din seturi de date publice necurate, nemoderate, care sunt deschise contribuțiilor terților. Atacatorii nu trebuie să compromită seturile de date atunci când sunt liberi să contribuie la ele. În timp, datele malițioase cu încredere scăzută devin date de încredere cu înaltă încredere, dacă structura/formatul datelor rămâne corect.
 
-De aceea este crucial să asigurăm integritatea și protecția depozitelor de date pe care modelele tale le folosesc pentru a lua decizii.
+De aceea, este esențial să asiguri integritatea și protecția depozitelor de date pe care modelele tale le folosesc pentru a lua decizii.
 
-## Înțelegerea amenințărilor și riscurilor AI
+## Înțelegerea amenințărilor și riscurilor IA
 
-În termeni de AI și sisteme conexe, otrăvirea datelor se evidențiază ca cea mai semnificativă amenințare de securitate astăzi. Otrăvirea datelor este atunci când cineva modifică intenționat informațiile folosite pentru a antrena un AI, cauzându-l să facă greșeli. Aceasta se datorează absenței metodelor standardizate de detectare și atenuare, combinată cu dependența noastră de seturi de date publice necurate sau neîncredere pentru antrenament. Pentru a menține integritatea datelor și a preveni un proces de antrenament defectuos, este crucial să urmărim originea și linia datelor tale. Altfel, vechea zicală „gunoi intră, gunoi iese” se aplică, ducând la compromiterea performanței modelului.
+În ceea ce privește IA și sistemele conexe, otrăvirea datelor se remarcă ca cea mai semnificativă amenințare de securitate de astăzi. Otrăvirea datelor este atunci când cineva schimbă intenționat informațiile folosite pentru a antrena o IA, determinând-o să facă greșeli. Acest lucru se datorează lipsei metodelor standardizate de detectare și atenuare, cuplate cu dependența noastră de seturi de date publice necurate sau necurate pentru antrenament. Pentru a menține integritatea datelor și a preveni un proces de antrenament defectuos, este crucial să urmărești originea și proveniența datelor tale. În caz contrar, vechea zicală „gunoi înăuntru, gunoi afară” se aplică, ducând la o performanță compromisă a modelului.
 
-Iată exemple de cum otrăvirea datelor poate afecta modelele tale:
+Iată exemple despre cum otrăvirea datelor poate afecta modelele tale:
 
 1. **Inversarea etichetelor**: Într-o sarcină de clasificare binară, un adversar inversează intenționat etichetele unui subset mic de date de antrenament. De exemplu, mostrele benigne sunt etichetate ca malițioase, determinând modelul să învețe asocieri incorecte.\
-   **Exemplu**: Un filtru de spam care clasifică greșit emailurile legitime ca spam din cauza etichetelor manipulate.
-2. **Otrăvirea caracteristicilor**: Un atacator modifică subtil caracteristicile în datele de antrenament pentru a introduce bias sau a induce în eroare modelul.\
+   **Exemplu**: Un filtru de spam clasifică greșit emailurile legitime ca spam din cauza etichetelor manipulate.
+2. **Otrăvirea caracteristicilor**: Un atacator modifică subtil caracteristicile din datele de antrenament pentru a introduce părtiniri sau a induce în eroare modelul.\
    **Exemplu**: Adăugarea de cuvinte-cheie irelevante la descrierile produselor pentru a manipula sistemele de recomandare.
-3. **Injectarea datelor**: Injectarea de date malițioase în setul de antrenament pentru a influența comportamentul modelului.\
+3. **Injecția de date**: Injectarea de date malițioase în setul de antrenament pentru a influența comportamentul modelului.\
    **Exemplu**: Introducerea de recenzii false ale utilizatorilor pentru a denatura rezultatele analizei sentimentului.
-4. **Atacuri prin ușă din spate**: Un adversar introduce un model ascuns (ușă din spate) în datele de antrenament. Modelul învață să recunoască acest model și se comportă malițios când este declanșat.\
+4. **Atacuri cu ușă din spate**: Un adversar introduce un model ascuns (ușă din spate) în datele de antrenament. Modelul învață să recunoască acest model și se comportă malițios când este declanșat.\
    **Exemplu**: Un sistem de recunoaștere facială antrenat cu imagini cu ușă din spate care identifică greșit o persoană specifică.
 
-Corporația MITRE a creat [ATLAS (Peisajul Amenințărilor Adversariale pentru Sistemele de Inteligență Artificială)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), o bază de cunoștințe despre tactici și tehnici utilizate de adversari în atacurile reale asupra sistemelor AI.
+MITRE Corporation a creat [ATLAS (Peisajul de Amenințări Adversariale pentru Sistemele de Inteligență Artificială)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), o bază de cunoștințe despre tacticile și tehnicile folosite de adversari în atacurile reale asupra sistemelor de inteligență artificială.
 
-> Există un număr tot mai mare de vulnerabilități în sistemele activate de AI, pe măsură ce integrarea AI crește suprafața de atac a sistemelor existente dincolo de cele ale atacurilor cibernetice tradiționale. Am dezvoltat ATLAS pentru a crește conștientizarea acestor vulnerabilități unice și în evoluție, pe măsură ce comunitatea globală integrează tot mai mult AI în diverse sisteme. ATLAS este modelat după cadrul MITRE ATT&CK® și tacticile, tehnicile și procedurile (TTP) ale acestuia sunt complementare celor din ATT&CK.
+> Există un număr tot mai mare de vulnerabilități în sistemele activate de IA, deoarece integrarea IA mărește suprafața de atac a sistemelor existente dincolo de cele ale atacurilor cibernetice tradiționale. Am dezvoltat ATLAS pentru a crește conștientizarea acestor vulnerabilități unice și în evoluție, pe măsură ce comunitatea globală integrează din ce în ce mai mult IA în diverse sisteme. ATLAS este modelat după cadrul MITRE ATT&CK® și tacticile, tehnicile și procedurile sale (TTP) sunt complementare celor din ATT&CK.
 
 La fel ca cadrul MITRE ATT&CK®, care este utilizat pe scară largă în securitatea cibernetică tradițională pentru planificarea scenariilor avansate de emulare a amenințărilor, ATLAS oferă un set de TTP-uri ușor de căutat care pot ajuta la o mai bună înțelegere și pregătire pentru apărarea împotriva atacurilor emergente.
 
-În plus, Proiectul de Securitate a Aplicațiilor Web Deschise (OWASP) a creat o "[listă de top 10](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" a celor mai critice vulnerabilități găsite în aplicațiile care utilizează LLM-uri. Lista evidențiază riscurile amenințărilor precum otrăvirea datelor menționată anterior, împreună cu altele precum:
+În plus, Proiectul de Securitate a Aplicațiilor Web Deschise (OWASP) a creat o "[listă Top 10](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" a celor mai critice vulnerabilități găsite în aplicațiile care utilizează LLM-uri. Lista evidențiază riscurile amenințărilor, cum ar fi otrăvirea datelor menționată anterior, alături de altele, cum ar fi:
 
-- **Injectarea de sugestii**: o tehnică prin care atacatorii manipulează un Model de Limbaj Mare (LLM) prin intrări atent elaborate, determinându-l să se comporte în afara comportamentului său intenționat.
-- **Vulnerabilități ale lanțului de aprovizionare**: Componentele și software-ul care alcătuiesc aplicațiile utilizate de un LLM, cum ar fi modulele Python sau seturile de date externe, pot fi ele însele compromise, ducând la rezultate neașteptate, introducerea de biasuri și chiar vulnerabilități în infrastructura de bază.
-- **Supradependență**: LLM-urile sunt imperfecte și au fost predispuse să halucineze, oferind rezultate inexacte sau nesigure. În mai multe circumstanțe documentate, oamenii au luat rezultatele la valoarea nominală, ducând la consecințe negative neintenționate în lumea reală.
+- **Injecția de Prompt**: o tehnică în care atacatorii manipulează un Model de Limbaj Mare (LLM) prin inputuri atent concepute, determinându-l să se comporte în afara comportamentului său intenționat.
+- **Vulnerabilități ale lanțului de aprovizionare**: Componentele și software-ul care alcătuiesc aplicațiile utilizate de un LLM, cum ar fi modulele Python sau seturile de date externe, pot fi ele însele compromise, ducând la rezultate neașteptate, părtiniri introduse și chiar vulnerabilități în infrastructura de bază.
+- **Supradependență**: LLM-urile sunt imperfecte și au fost predispuse să halucineze, oferind rezultate inexacte sau nesigure. În mai multe circumstanțe documentate, oamenii au luat rezultatele ca atare, ducând la consecințe negative neintenționate în lumea reală.
 
-Rod Trent, Cloud Advocate la Microsoft, a scris un ebook gratuit, [Trebuie să înveți securitatea AI](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), care aprofundează aceste și alte amenințări emergente ale AI și oferă îndrumări extinse despre cum să abordezi cel mai bine aceste scenarii.
+Advocatul Microsoft Cloud, Rod Trent, a scris un ebook gratuit, [Trebuie să înveți Securitatea IA](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), care analizează în profunzime aceste și alte amenințări emergente ale IA și oferă ghiduri extinse despre cum să abordezi cel mai bine aceste scenarii.
 
-## Testarea securității pentru sistemele AI și LLM-uri
+## Testarea Securității pentru Sisteme IA și LLM-uri
 
-Inteligența artificială (AI) transformă diverse domenii și industrii, oferind noi posibilități și beneficii pentru societate. Cu toate acestea, AI prezintă și provocări și riscuri semnificative, cum ar fi confidențialitatea datelor, biasul, lipsa de explicabilitate și utilizarea potențială greșită. Prin urmare, este crucial să ne asigurăm că sistemele AI sunt securizate și responsabile, ceea ce înseamnă că respectă standardele etice și legale și pot fi de încredere de către utilizatori și părțile interesate.
+Inteligența artificială (IA) transformă diverse domenii și industrii, oferind noi posibilități și beneficii pentru societate. Cu toate acestea, IA ridică și provocări și riscuri semnificative, cum ar fi confidențialitatea datelor, părtinirea, lipsa de explicabilitate și utilizarea potențială greșită. Prin urmare, este esențial să ne asigurăm că sistemele IA sunt sigure și responsabile, ceea ce înseamnă că respectă standardele etice și legale și pot fi de încredere pentru utilizatori și părțile interesate.
 
-Testarea securității este procesul de evaluare a securității unui sistem AI sau LLM, prin identificarea și exploatarea vulnerabilităților lor. Aceasta poate fi realizată de către dezvoltatori, utilizatori sau auditori terți, în funcție de scopul și domeniul testării. Unele dintre cele mai comune metode de testare a securității pentru sistemele AI și LLM-uri sunt:
+Testarea securității este procesul de evaluare a securității unui sistem IA sau LLM, prin identificarea și exploatarea vulnerabilităților acestora. Aceasta poate fi realizată de dezvoltatori, utilizatori sau auditori terți, în funcție de scopul și amploarea testării. Unele dintre cele mai comune metode de testare a securității pentru sistemele IA și LLM-uri sunt:
 
-- **Sanitizarea datelor**: Acesta este procesul de eliminare sau anonimizare a informațiilor sensibile sau private din datele de antrenament sau intrările unui sistem AI sau LLM. Sanitizarea datelor poate ajuta la prevenirea scurgerii de date și manipulării malițioase prin reducerea expunerii datelor confidențiale sau personale.
-- **Testarea adversarială**: Acesta este procesul de generare și aplicare a exemplelor adversariale la intrările sau ieșirile unui sistem AI sau LLM pentru a evalua robustețea și rezistența acestuia împotriva atacurilor adversariale. Testarea adversarială poate ajuta la identificarea și atenuarea vulnerabilităților și slăbiciunilor unui sistem AI sau LLM care pot fi exploatate de atacatori.
-- **Verificarea modelului**: Acesta este procesul de verificare a corectitudinii și completitudinii parametrilor modelului sau arhitecturii unui sistem AI sau LLM. Verificarea modelului poate ajuta la detectarea și prevenirea furtului de model prin asigurarea că modelul este protejat și autentificat.
-- **Validarea ieșirii**: Acesta este procesul de validare a calității și fiabilității ieșirii unui sistem AI sau LLM. Validarea ieșirii poate ajuta la detectarea și corectarea manipulării malițioase prin asigurarea că ieșirea este consistentă și precisă.
+- **Sanitizarea datelor**: Acesta este procesul de eliminare sau anonimizare a informațiilor sensibile sau private din datele de antrenament sau inputul unui sistem IA sau LLM. Sanitizarea datelor poate ajuta la prevenirea scurgerilor de date și manipulării malițioase prin reducerea expunerii datelor confidențiale sau personale.
+- **Testarea adversarială**: Acesta este procesul de generare și aplicare a exemplelor adversariale la inputul sau outputul unui sistem IA sau LLM pentru a evalua robustețea și rezistența acestuia împotriva atacurilor adversariale. Testarea adversarială poate ajuta la identificarea și atenuarea vulnerabilităților și slăbiciunilor unui sistem IA sau LLM care pot fi exploatate de atacatori.
+- **Verificarea modelului**: Acesta este procesul de verificare a corectitudinii și completitudinii parametrilor sau arhitecturii modelului unui sistem IA sau LLM. Verificarea modelului poate ajuta la detectarea și prevenirea furtului de modele prin asigurarea că modelul este protejat și autentificat.
+- **Validarea outputului**: Acesta este procesul de validare a calității și fiabilității outputului unui sistem IA sau LLM. Validarea outputului poate ajuta la detectarea și corectarea manipulării malițioase prin asigurarea că outputul este consistent și precis.
 
-OpenAI, un lider în sistemele AI, a stabilit o serie de _evaluări de siguranță_ ca parte a inițiativei lor de rețea de echipă roșie, menită să testeze ieșirile sistemelor AI în speranța de a contribui la siguranța AI.
+OpenAI, un lider în sisteme IA, a stabilit o serie de _evaluări de siguranță_ ca parte a inițiativei lor de rețea de testare, având ca scop testarea outputului sistemelor IA în speranța de a contribui la siguranța IA.
 
-> Evaluările pot varia de la teste simple de întrebări și răspunsuri la simulări mai complexe. Ca exemple concrete, iată evaluări de probă dezvoltate de OpenAI pentru evaluarea comportamentelor AI din mai multe unghiuri:
+> Evaluările pot varia de la teste simple de întrebări și răspunsuri la simulări mai complexe. Ca exemple concrete, iată evaluări de probă dezvoltate de OpenAI pentru evaluarea comportamentelor IA din mai multe unghiuri:
 
 #### Persuasiune
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI păcăli un alt sistem AI să spună un cuvânt secret?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI convinge un alt sistem AI să doneze bani?
-- [Propunere de vot](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI influența sprijinul unui alt sistem AI pentru o propunere politică?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să păcălească un alt sistem IA să spună un cuvânt secret?
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să convingă un alt sistem IA să doneze bani?
+- [Propunere de Vot](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să influențeze sprijinul unui alt sistem IA pentru o propunere politică?
 
 #### Steganografie (mesaje ascunse)
 
-- [Steganografie](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI să transmită mesaje secrete fără a fi prins de un alt sistem AI?
-- [Compresia textului](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI comprima și decomprima mesaje, pentru a permite ascunderea mesajelor secrete?
-- [Punctul Schelling](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem AI să se coordoneze cu un alt sistem AI, fără comunicare directă?
+- [Steganografie](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să transmită mesaje secrete fără a fi prins de un alt sistem IA?
+- [Compresia Textului](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să comprime și să decompresieze mesaje, pentru a permite ascunderea mesajelor secrete?
+- [Punctul Schelling](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Cât de bine poate un sistem IA să coordoneze cu un alt sistem IA, fără comunicare directă?
 
-### Securitatea AI
+### Securitatea IA
 
-Este imperativ să ne propunem să protejăm sistemele AI de atacuri malițioase, utilizare greșită sau consecințe neintenționate. Acest lucru include luarea de măsuri pentru a asigura siguranța, fiabilitatea și încrederea sistemelor AI, cum ar fi:
+Este imperativ să ne propunem să protejăm sistemele IA de atacuri malițioase, utilizare greșită sau consecințe neintenționate. Aceasta include luarea de măsuri pentru a asigura siguranța, fiabilitatea și încrederea sistemelor IA, cum ar fi:
 
-- Securizarea datelor și algoritmilor care sunt folosiți pentru a antrena și rula modele AI
-- Prevenirea accesului neautorizat, manipulării sau sabotării sistemelor AI
-- Detectarea și atenuarea biasului, discriminării sau problemelor etice în sistemele AI
-- Asigurarea responsabilității, transparenței și explicabilității deciziilor și acțiunilor AI
-- Alinierea obiectivelor și valorilor sistemelor AI cu cele ale oamenilor și societății
+- Securizarea datelor și algoritmilor care sunt utilizați pentru a antrena și rula modele IA
+- Prevenirea accesului neautorizat, manipulării sau sabotajului sistemelor IA
+- Detectarea și atenuarea părtinirii, discriminării sau problemelor etice în sistemele IA
+- Asigurarea responsabilității, transparenței și explicabilității deciziilor și acțiunilor IA
+- Alinierea obiectivelor și valorilor sistemelor IA cu cele ale oamenilor și societății
 
-Securitatea AI este importantă pentru asigurarea integrității, disponibilității și confidențialității sistemelor și datelor AI. Unele dintre provocările și oportunitățile securității AI sunt:
+Securitatea IA este importantă pentru asigurarea integrității, disponibilității și confidențialității sistemelor IA și a datelor. Unele dintre provocările și oportunitățile securității IA sunt:
 
-- Oportunitate: Integrarea AI în strategiile de securitate cibernetică, deoarece poate juca un rol crucial în identificarea amenințărilor și îmbunătățirea timpilor de răspuns. AI poate ajuta la automatizarea și augmentarea detectării și atenuării atacurilor cibernetice, cum ar fi phishing-ul, malware-ul sau ransomware-ul.
-- Provocare: AI poate fi folosită și de adversari pentru a lansa atacuri sofisticate, cum ar fi generarea de conținut fals sau înșelător, impersonarea utilizatorilor sau exploatarea vulnerabilităților în sistemele AI. Prin urmare, dezvoltatorii AI au o responsabilitate unică de a proiecta sisteme care sunt robuste și rezistente împotriva utilizării greșite.
+- Oportunitate: Integrarea IA în strategiile de securitate cibernetică, deoarece poate juca un rol crucial în identificarea amenințărilor și îmbunătățirea timpilor de răspuns. IA poate ajuta la automatizarea și augmentarea detectării și atenuării atacurilor cibernetice, cum ar fi phishing-ul, malware-ul sau ransomware-ul.
+- Provocare: IA poate fi, de asemenea, utilizată de adversari pentru a lansa atacuri sofisticate, cum ar fi generarea de conținut fals sau înșelător, impersonarea utilizatorilor sau exploatarea vulnerabilităților în sistemele IA. Prin urmare, dezvoltatorii IA au o responsabilitate unică de a proiecta sisteme care sunt robuste și rezistente împotriva utilizării greșite.
 
-### Protecția datelor
+### Protecția Datelor
 
-LLM-urile pot prezenta riscuri pentru confidențialitatea și securitatea datelor pe care le utilizează. De exemplu, LLM-urile pot memora și scurge informații sensibile din datele lor de antrenament, cum ar fi nume personale, adrese, parole sau numere de carduri de credit. Ele pot fi, de asemenea, manipulate sau atacate de actori malițioși care doresc să exploateze vulnerabilitățile sau biasurile lor. Prin urmare, este important să fim conștienți de aceste riscuri și să luăm măsuri adecvate pentru a proteja datele utilizate cu LLM-uri. Există câțiva pași pe care îi poți lua pentru a proteja datele utilizate cu LLM-uri. Acești pași includ:
+LLM-urile pot prezenta riscuri pentru confidențialitatea și securitatea datelor pe care le utilizează. De exemplu, LLM-urile pot memora și divulga potențial informații sensibile din datele lor de antrenament, cum ar fi nume personale, adrese, parole sau numere de carduri de credit. Ele pot fi, de asemenea, manipulate sau atacate de actori malițioși care doresc să exploateze vulnerabilitățile sau părtinirile lor. Prin urmare, este important să fim conștienți de aceste riscuri și să luăm măsuri adecvate pentru a proteja datele utilizate cu LLM-uri. Există mai mulți pași pe care îi poți lua pentru a proteja datele utilizate cu LLM-uri. Acești pași includ:
 
-- **Limitarea cantității și tipului de date pe care le partajezi cu LLM-uri**: Partajează doar datele care sunt necesare și relevante pentru scopurile intenționate și evită partajarea oricăror date care sunt sensibile, confidențiale sau personale. Utilizatorii ar trebui, de asemenea, să anonimizeze sau să cripteze datele pe care le partajează cu LLM-uri, cum ar fi prin eliminarea sau mascarea oricărei informații de identificare sau utilizarea canalelor de comunicare securizate.
-- **Verificarea datelor pe care le generează LLM-urile**: Verifică întotdeauna acuratețea și calitatea ieșirii generate de LLM-uri pentru a te asigura că nu conțin informații nedorite sau nepotrivite.
-- **Raportarea și alertarea oricăror breșe de date sau incidente**: Fii vigilent la orice activități sau comportamente suspecte sau anormale ale LLM-urilor, cum ar fi generarea de texte care sunt irelevante, inexacte, ofensatoare sau dăunătoare. Acesta ar putea fi un indiciu al unei breșe de date sau al unui incident de securitate.
+- **Limitarea cantității și tipului de date pe care le împărtășesc cu LLM-uri**: Împărtășește doar datele care sunt necesare și relevante pentru scopurile intenționate și evită să împărtășești orice date care sunt sensibile, confidențiale sau personale. Utilizatorii ar trebui, de asemenea, să anonimizeze sau să cripteze datele pe care le împărtășesc cu LLM-uri, cum ar fi eliminarea sau mascarea oricăror informații de identificare sau utilizarea canalelor de comunicare securizate.
+- **Verificarea datelor generate de LLM-uri**: Verifică întotdeauna acuratețea și calitatea outputului generat de LLM-uri pentru a te asigura că nu conțin informații nedorite sau nepotrivite.
+- **Raportarea și alertarea oricăror breșe de date sau incidente**: Fii vigilent la orice activități sau comportamente suspecte sau anormale ale LLM-urilor, cum ar fi generarea de texte care sunt irelevante, inexacte, ofensatoare sau dăunătoare. Acest lucru ar putea
 
-Securitatea, guvernanța și conformitatea datelor sunt critice pentru orice organizație care dorește să valorifice puterea datelor și AI într-un mediu multi-cloud. Securizarea și guvernarea tuturor datelor tale este o întreprindere complexă
-
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu suntem răspunzători pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

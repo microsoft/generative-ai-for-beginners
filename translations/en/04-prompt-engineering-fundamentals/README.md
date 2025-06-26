@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "a45c318dc6ebc2604f35b8b829f93af2",
-  "translation_date": "2025-05-19T14:55:17+00:00",
+  "translation_date": "2025-06-25T11:38:44+00:00",
   "source_file": "04-prompt-engineering-fundamentals/README.md",
   "language_code": "en"
 }
@@ -10,9 +10,9 @@ CO_OP_TRANSLATOR_METADATA:
 # Prompt Engineering Fundamentals
 
 ## Introduction
-This module covers essential concepts and techniques for creating effective prompts in generative AI models. The way you write your prompt to an LLM also matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer in this chapter and the next.
+This module covers essential concepts and techniques for creating effective prompts in generative AI models. How you write your prompt to an LLM also matters. A carefully-crafted prompt can achieve a better quality of response. But what exactly do terms like _prompt_ and _prompt engineering_ mean? And how do I improve the prompt _input_ that I send to the LLM? These are the questions we'll try to answer in this chapter and the next.
 
-_Generative AI_ is capable of creating new content (e.g., text, images, audio, code etc.) in response to user requests. It achieves this using _Large Language Models_ like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
+_Generative AI_ is capable of creating new content (e.g., text, images, audio, code, etc.) in response to user requests. It achieves this using _Large Language Models_ like OpenAI's GPT ("Generative Pre-trained Transformer") series that are trained for using natural language and code.
 
 Users can now interact with these models using familiar paradigms like chat, without needing any technical expertise or training. The models are _prompt-based_ - users send a text input (prompt) and get back the AI response (completion). They can then "chat with the AI" iteratively, in multi-turn conversations, refining their prompt until the response matches their expectations.
 
@@ -22,7 +22,7 @@ Users can now interact with these models using familiar paradigms like chat, wit
 
 In this lesson, we learn what Prompt Engineering is, why it matters, and how we can craft more effective prompts for a given model and application objective. We'll understand core concepts and best practices for prompt engineering - and learn about an interactive Jupyter Notebooks "sandbox" environment where we can see these concepts applied to real examples.
 
-By the end of this lesson we will be able to:
+By the end of this lesson, we will be able to:
 
 1. Explain what prompt engineering is and why it matters.
 2. Describe the components of a prompt and how they are used.
@@ -31,8 +31,8 @@ By the end of this lesson we will be able to:
 
 ## Key Terms
 
-Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.
-Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.
+Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.  
+Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.  
 Instruction-Tuned LLMs: Large Language Models (LLMs) that have been fine-tuned with specific instructions to improve their response accuracy and relevance.
 
 ## Learning Sandbox
@@ -90,7 +90,7 @@ But what if the user wanted to see something specific that met some criteria or 
 
 ### Concept: Instruction Tuned LLMs
 
-An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempts to follow that instruction.
+An [Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) starts with the foundation model and fine-tunes it with examples or input/output pairs (e.g., multi-turn "messages") that can contain clear instructions - and the response from the AI attempt to follow that instruction.
 
 This uses techniques like Reinforcement Learning with Human Feedback (RLHF) that can train the model to _follow instructions_ and _learn from feedback_ so that it produces responses that are better-suited to practical applications and more relevant to user objectives.
 
@@ -112,7 +112,7 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
-- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
+- Use the same prompt with different LLM deployments (e.g., OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
 - Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
 
 ### Fabrications Example
@@ -126,12 +126,6 @@ Want to get a sense of how fabrications work? Think of a prompt that instructs t
 A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event.
 
 So what happens when we run this prompt with different LLM providers?
-
-> **Response 1**: OpenAI Playground (GPT-35)
-
-> **Response 2**: Azure OpenAI Playground (GPT-35)
-
-> **Response 3**: : Hugging Face Chat Playground (LLama-2)
 
 As expected, each model (or model version) produces slightly different responses thanks to stochastic behavior and model capability variations. For instance, one model targets an 8th-grade audience while the other assumes a high-school student. But all three models did generate responses that could convince an uninformed user that the event was real.
 
@@ -162,10 +156,6 @@ We've seen why prompt engineering is important - now let's understand how prompt
 
 Let's start with the basic prompt: a text input sent to the model with no other context. Here's an example - when we send the first few words of the US national anthem to the OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) it instantly _completes_ the response with the next few lines, illustrating the basic prediction behavior.
 
-| Prompt (Input)     | Completion (Output)                                                                                                                        |
-| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| Oh say can you see | It sounds like you're starting the lyrics to "The Star-Spangled Banner," the national anthem of the United States. The full lyrics are ... |
-
 ### Complex Prompt
 
 Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) lets us construct a complex prompt as a collection of _messages_ with:
@@ -179,28 +169,45 @@ The request is now in the form below, where the _tokenization_ effectively captu
 
 In the above examples, the user prompt was a simple text query that can be interpreted as a request for information. With _instruction_ prompts, we can use that text to specify a task in more detail, providing better guidance to the AI. Here's an example:
 
-| Prompt (Input)                                                                                                                                                                                                                         | Completion (Output)                                                                                                        | Instruction Type    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
-| Write a description of the Civil War                                                                                                                                                                                                   | _returned a simple paragraph_                                                                                              | Simple              |
-| Write a description of the Civil War. Provide key dates and events and describe their significance                                                                                                                                     | _returned a paragraph followed by a list of key event dates with descriptions_                                             | Complex             |
-| Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _returns more extensive details in a text box, formatted as JSON that you can copy-paste to a file and validate as needed_ | Complex. Formatted. |
-
-## Primary Content
+### Primary Content
 
 In the above examples, the prompt was still fairly open-ended, allowing the LLM to decide what part of its pre-trained dataset was relevant. With the _primary content_ design pattern, the input text is divided into two parts:
 
-- an instruction
-Finally, the true value of templates lies in the ability to create and publish _prompt libraries_ for specific application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring, etc.
+- an instruction (action)
+- relevant content (that influences action)
+
+Here's an example where the instruction is to "summarize this in 2 sentences".
+
+The primary content segment can be used in various ways to drive more effective instructions:
+
+- **Examples** - instead of telling the model what to do with an explicit instruction, give it examples of what to do and let it infer the pattern.
+- **Cues** - follow the instruction with a "cue" that primes the completion, guiding the model towards more relevant responses.
+- **Templates** - these are repeatable 'recipes' for prompts with placeholders (variables) that can be customized with data for specific use cases.
+
+Let's explore these in action.
+
+### Using Examples
+
+This is an approach where you use the primary content to "feed the model" some examples of the desired output for a given instruction, and let it infer the pattern for the desired output. Based on the number of examples provided, we can have zero-shot prompting, one-shot prompting, few-shot prompting, etc.
+
+The prompt now consists of three components:
+
+- A task description
+- A few examples of the desired output
+- The start of a new example (which becomes an implicit task description)
+
+Note how we had to provide explicit instruction ("Translate to Spanish") in zero-shot prompting, but it gets inferred in the one-shot prompting example. The few-shot example shows how adding more examples allows models to make more
+Finally, the real value of templates lies in the ability to create and publish _prompt libraries_ for specific application domains - where the prompt template is now _optimized_ to reflect application-specific context or examples that make the responses more relevant and accurate for the targeted user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repository is a great example of this approach, curating a library of prompts for the education domain with emphasis on key objectives like lesson planning, curriculum design, student tutoring, etc.
 
 ## Supporting Content
 
-If we consider prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies, etc. that can help the model _tailor_ its response to suit the desired user objectives or expectations.
+If we think about prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies, etc., that can help the model _tailor_ its response to suit the desired user objectives or expectations.
 
 For example: Given a course catalog with extensive metadata (name, description, level, metadata tags, instructor, etc.) on all the available courses in the curriculum:
 
-- We can define an instruction to "summarize the course catalog for Fall 2023"
-- We can use the primary content to provide a few examples of the desired output
-- We can use the secondary content to identify the top 5 "tags" of interest.
+- we can define an instruction to "summarize the course catalog for Fall 2023"
+- we can use the primary content to provide a few examples of the desired output
+- we can use the secondary content to identify the top 5 "tags" of interest.
 
 Now, the model can provide a summary in the format shown by the few examples - but if a result has multiple tags, it can prioritize the 5 tags identified in secondary content.
 
@@ -214,11 +221,11 @@ Now that we know how prompts can be _constructed_, we can start thinking about h
 
 Prompt Engineering is a trial-and-error process, so keep three broad guiding factors in mind:
 
-1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide the model towards familiar usage patterns.
+1. **Domain Understanding Matters.** Response accuracy and relevance are a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide the model towards familiar usage patterns.
 
 2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capabilities they provide (e.g., via API or SDK), and the type of content they are optimized for (e.g., code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to _prioritize tasks_ or build _customized templates_ that are optimized for the model's capabilities.
 
-3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria for _your_ specific application that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g., prompt libraries) that can be used as a new baseline by others, for faster iterations in the future.
+3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria for _your_ specific application that may not apply to the broader community. Use prompt engineering tools & techniques to "jump-start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g., prompt libraries) that can be used as a new baseline by others, for faster iterations in the future.
 
 ## Best Practices
 
@@ -227,7 +234,7 @@ Now let's look at common best practices that are recommended by [OpenAI](https:/
 | What                              | Why                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Evaluate the latest models.       | New model generations are likely to have improved features and quality - but may also incur higher costs. Evaluate them for impact, then make migration decisions.                                                                                |
-| Separate instructions & context   | Check if your model/provider defines _delimiters_ to distinguish instructions, primary and secondary content more clearly. This can help models assign weights more accurately to tokens.                                                         |
+| Separate instructions & context   | Check if your model/provider defines _delimiters_ to distinguish instructions, primary, and secondary content more clearly. This can help models assign weights more accurately to tokens.                                                         |
 | Be specific and clear             | Give more details about the desired context, outcome, length, format, style, etc. This will improve both the quality and consistency of responses. Capture recipes in reusable templates.                                                          |
 | Be descriptive, use examples      | Models may respond better to a "show and tell" approach. Start with a `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
 | Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
@@ -271,21 +278,21 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 You're all set to run the exercises. Note that there are no _right and wrong_ answers here - just exploring options by trial-and-error and building intuition for what works for a given model and application domain.
 
-_For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that shows one example output for reference._
+_For this reason, there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that shows one example output for reference._
 
 ## Knowledge check
 
 Which of the following is a good prompt following some reasonable best practices?
 
-1. Show me an image of red car
-2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
-3. Show me an image of red car of make Volvo and model XC90
+1. Show me an image of a red car
+2. Show me an image of a red car of make Volvo and model XC90 parked by a cliff with the sun setting
+3. Show me an image of a red car of make Volvo and model XC90
 
 A: 2, it's the best prompt as it provides details on "what" and goes into specifics (not just any car but a specific make and model) and it also describes the overall setting. 3 is next best as it also contains a lot of description.
 
 ## 🚀 Challenge
 
-See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it?
+See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of a red car of make Volvo and ". What does it respond with, and how would you improve it?
 
 ## Great Work! Continue Your Learning
 
@@ -293,5 +300,9 @@ Want to learn more about different Prompt Engineering concepts? Go to the [conti
 
 Head over to Lesson 5 where we will look at [advanced prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
 
+Certainly! Here's the translation:
+
+---
+
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

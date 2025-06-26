@@ -1,121 +1,123 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c2ee25895ebbfa1a52868bb6eab686fc",
-  "translation_date": "2025-05-19T11:33:12+00:00",
+  "original_hash": "6e3f4c8a4f323b8eab1cf11ded304b0f",
+  "translation_date": "2025-06-25T07:39:14+00:00",
   "source_file": "README.md",
   "language_code": "mo"
 }
 -->
-![जेनरेटिव एआई के लिए शुरुआती गाइड](../../translated_images/repo-thumbnailv4-fixed.ac68b8309b9f8955508d377c5daeb48e1abdf9cf3c5eefba9b95ab79fafebd4c.mo.png)
+![生成式 AI 初學者指南](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.mo.png)
 
-### 21 पाठ जो आपको जेनरेटिव एआई एप्लिकेशन बनाने के लिए जानने की जरूरत है
+### 21 篇課程教你所需的一切，以開始構建生成式 AI 應用程式
 
-### 🌐 बहु-भाषा समर्थन
+### 🌐 多語言支援
 
-#### GitHub एक्शन के माध्यम से समर्थित (स्वचालित और हमेशा अद्यतन)
-[法文](../fr/README.md) | [西班牙文](../es/README.md) | [德文](../de/README.md) | [俄文](../ru/README.md) | [阿拉伯文](../ar/README.md) | [波斯文 (法尔西)](../fa/README.md) | [乌尔都文](../ur/README.md) | [简体中文](../zh/README.md) | [繁体中文 (澳门)](./README.md) | [繁体中文 (香港)](../hk/README.md) | [繁体中文 (台湾)](../tw/README.md) | [日文](../ja/README.md) | [韩文](../ko/README.md) | [印地文](../hi/README.md) | [孟加拉文](../bn/README.md) | [马拉地文](../mr/README.md) | [尼泊尔文](../ne/README.md) | [旁遮普文 (古木基)](../pa/README.md) | [葡萄牙文 (葡萄牙)](../pt/README.md) | [葡萄牙文 (巴西)](../br/README.md) | [意大利文](../it/README.md) | [波兰文](../pl/README.md) | [土耳其文](../tr/README.md) | [希腊文](../el/README.md) | [泰文](../th/README.md) | [瑞典文](../sv/README.md) | [丹麦文](../da/README.md) | [挪威文](../no/README.md) | [芬兰文](../fi/README.md) | [荷兰文](../nl/README.md) | [希伯来文](../he/README.md) | [越南文](../vi/README.md) | [印尼文](../id/README.md) | [马来文](../ms/README.md) | [他加禄文 (菲律宾语)](../tl/README.md) | [斯瓦希里文](../sw/README.md) | [匈牙利文](../hu/README.md) | [捷克文](../cs/README.md) | [斯洛伐克文](../sk/README.md) | [罗马尼亚文](../ro/README.md) | [保加利亚文](../bg/README.md) | [塞尔维亚文 (西里尔字母)](../sr/README.md) | [克罗地亚文](../hr/README.md) | [斯洛文尼亚文](../sl/README.md)
-# Generative AI for Beginners (Version 3) - A Course
+#### 透過 GitHub Action 支援（自動更新且始終保持最新）
 
-Learn the fundamentals of building Generative AI applications with our 21-lesson comprehensive course by Microsoft Cloud Advocates.
+# 初學者生成式 AI (版本 3) - 一門課程
 
-## 🌱 Getting Started
+透過微軟雲端倡導者的這門 21 節課程，學習構建生成式 AI 應用程式的基礎知識。
 
-This course has 21 lessons. Each lesson covers its own topic so start wherever you like!
+## 🌱 開始學習
 
-Lessons are labeled either "Learn" lessons explaining a Generative AI concept or "Build" lessons that explain a concept and code examples in both **Python** and **TypeScript** when possible.
+這門課程共有 21 節課。每節課涵蓋不同的主題，所以可以從任何你感興趣的地方開始！
 
-For .NET Developers checkout [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+課程分為兩種類型：「學習」課程解釋生成式 AI 的概念，「構建」課程則解釋概念並提供 **Python** 和 **TypeScript** 的代碼範例（若可能）。
 
-Each lesson also includes a "Keep Learning" section with additional learning tools.
+針對 .NET 開發者，請查看 [初學者生成式 AI (.NET 版)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)！
 
-## What You Need
-### To run the code of this course, you can use either: 
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
+每節課還包含「持續學習」部分，提供額外的學習工具。
+
+## 你需要準備什麼
+### 要運行這門課程的代碼，你可以使用以下任一選項：
+ - [Azure OpenAI 服務](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **課程:** "aoai-assignment"
+ - [GitHub Marketplace 模型目錄](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **課程:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **課程:** "oai-assignment" 
    
-- Basic knowledge of Python or TypeScript is helpful - \*For absolute beginners check out these [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) courses
-- A GitHub account to [fork this entire repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) to your own GitHub account
+- 基本的 Python 或 TypeScript 知識是有幫助的 - \*對於絕對初學者，請查看這些 [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) 和 [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) 課程
+- 一個 GitHub 帳戶，以便 [fork 這個完整的 repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) 到你自己的 GitHub 帳戶
 
-We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you with setting up your development environment.
+我們已經創建了一個 **[課程設置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 課程，幫助你設置開發環境。
 
-Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it easier later.
+別忘了 [star (🌟) 這個 repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) 以便日後更容易找到。
 
-## 🧠 Ready to Deploy?
+## 🧠 準備好部署了嗎？
 
-If you are looking for more advanced code samples, check out our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) in both **Python** and **TypeScript**.
+如果你在尋找更高級的代碼範例，請查看我們的 [生成式 AI 代碼範例集合](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)，包括 **Python** 和 **TypeScript**。
 
-## 🗣️ Meet Other Learners, Get Support
+## 🗣️ 與其他學習者交流，獲得支持
 
-Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
+加入我們的 [官方 Azure AI Foundry Discord 伺服器](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)，與其他正在學習這門課程的學習者見面和交流，並獲得支持。
 
-Ask questions or share product feedback in our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) on Github.
+在我們的 [Azure AI Foundry 開發者論壇](https://aka.ms/azureaifoundry/forum) 上提出問題或分享產品反饋。
 
-## 🚀 Building a Startup?
+## 🚀 建立一家初創公司？
 
-Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) to receive **free OpenAI credits** and up to **$150k towards Azure credits to access OpenAI models through Azure OpenAI Services**.
+註冊 [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst)，以獲得 **免費的 OpenAI 點數** 和高達 **$150k 的 Azure 點數，用於通過 Azure OpenAI 服務訪問 OpenAI 模型**。
 
-## 🙏 Want to help?
+## 🙏 想要幫忙？
 
-Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+你有建議或發現拼寫或代碼錯誤嗎？[提出問題](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) 或 [創建一個拉取請求](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-## 📂 Each lesson includes:
+## 📂 每節課包括：
 
-- A short video introduction to the topic
-- A written lesson located in the README
-- Python and TypeScript code samples supporting Azure OpenAI and OpenAI API
-- Links to extra resources to continue your learning
+- 一個主題的短視頻介紹
+- 位於 README 中的書面課程
+- 支持 Azure OpenAI 和 OpenAI API 的 Python 和 TypeScript 代碼範例
+- 繼續學習的額外資源鏈接
 
-## 🗃️ Lessons
+## 🗃️ 課程
 
-| #   | **Lesson Link**                                                                                                                              | **Description**                                                                                 | **Video**                                                                   | **Extra Learning**                                                             |
+| #   | **課程鏈接**                                                                                                                              | **描述**                                                                                 | **視頻**                                                                   | **額外學習**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** How to Setup Your Development Environment                                            | Video Coming Soon                                                                 | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Understanding what Generative AI is and how Large Language Models (LLMs) work.       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** How to select the right model for your use case                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Learn:** How to build Generative AI Applications responsibly                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Understanding Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** Hands-on Prompt Engineering Best Practices                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Creando Prompts Avanzados](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Aprender:** Cómo aplicar técnicas de ingeniería de prompts que mejoran el resultado de tus prompts. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Construyendo Aplicaciones de Generación de Texto](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Construir:** Una aplicación de generación de texto usando Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Construyendo Aplicaciones de Chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Construir:** Técnicas para construir e integrar aplicaciones de chat eficientemente.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Construyendo Aplicaciones de Búsqueda con Bases de Datos Vectoriales](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Construir:** Una aplicación de búsqueda que utiliza Embeddings para buscar datos.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Construyendo Aplicaciones de Generación de Imágenes](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Construir:** Una aplicación de generación de imágenes                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Construyendo Aplicaciones de IA con Código Reducido](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Construir:** Una aplicación de IA Generativa usando herramientas de Código Reducido                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integrando Aplicaciones Externas con Llamadas a Funciones](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Construir:** Qué es la llamada a funciones y sus casos de uso para aplicaciones                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Diseñando UX para Aplicaciones de IA](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Aprender:** Cómo aplicar principios de diseño UX al desarrollar aplicaciones de IA Generativa         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Asegurando Tus Aplicaciones de IA Generativa](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Aprender:** Las amenazas y riesgos para los sistemas de IA y métodos para asegurar estos sistemas.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [El Ciclo de Vida de las Aplicaciones de IA Generativa](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Aprender:** Las herramientas y métricas para gestionar el Ciclo de Vida de LLM y LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Más información](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) and Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Үзгүлтүксүз:** Вектордук маалымат базаларынан эмбеддингдерди алуу үчүн RAG фреймворкун колдонгон колдонмо түзүңүз  | [Видео](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Ачык булактуу моделдер жана Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Үзгүлтүксүз:** Hugging Face'те жеткиликтүү болгон ачык булактуу моделдерди колдонгон колдонмо түзүңүз                    | [Видео](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI Агенттери](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Үзгүлтүксүз:** AI Агент Фреймворкун колдонгон колдонмо түзүңүз                                           | [Видео](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLM'дерди Тууралоо](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Үйрөнүңүз:** LLM'дерди тууралоонун эмне экендигин, эмне үчүн жана кантип жасалаарын                                            | [Видео](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [SLM'дер менен куруу](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Үйрөнүңүз:** Кичинекей тил моделдери менен куруунун артыкчылыктары                                            | Видео жакында | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Mistral Моделдери менен куруу](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Үйрөнүңүз:** Mistral үй-бүлө моделдеринин өзгөчөлүктөрү жана айырмачылыктары                                           | Видео жакында | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Meta Моделдери менен куруу](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Үйрөнүңүз:** Meta үй-бүлө моделдеринин өзгөчөлүктөрү жана айырмачылыктары                                           | Видео жакында | [Көбүрөөк билүү](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [課程設置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **學習:** 如何設置你的開發環境                                            | 即將推出視頻                                                                 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [生成式 AI 和 LLMs 介紹](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **學習:** 了解生成式 AI 是什麼以及大型語言模型 (LLMs) 如何運作       | [視頻](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [探索和比較不同的 LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **學習:** 如何選擇適合你使用案例的模型                                      | [視頻](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [負責任地使用生成式 AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **學習:** 如何負責任地構建生成式 AI 應用程式                                  | [視頻](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [理解提示工程的基本原理](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **學習:** 實踐提示工程的最佳實踐                                           | [視頻](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [創建高級提示](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **學習：** 如何應用提示工程技術以改善提示的效果。 | [影片](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [構建文本生成應用](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **構建：** 使用 Azure OpenAI / OpenAI API 的文本生成應用                                | [影片](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [構建聊天應用](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **構建：** 高效構建和整合聊天應用的技術。               | [影片](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [構建搜索應用向量數據庫](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **構建：** 使用嵌入搜索數據的搜索應用。                        | [影片](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [構建圖像生成應用](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **構建：** 圖像生成應用                                                       | [影片](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [構建低代碼 AI 應用](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **構建：** 使用低代碼工具的生成式 AI 應用                                     | [影片](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [通過函數調用整合外部應用](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **構建：** 什麼是函數調用及其應用案例                          | [影片](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [設計 AI 應用的用戶體驗](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **學習：** 開發生成式 AI 應用時如何應用用戶體驗設計原則         | [影片](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [保護您的生成式 AI 應用](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **學習：** AI 系統的威脅和風險以及保護這些系統的方法。             | [影片](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [生成式 AI 應用生命周期](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **學習：** 管理 LLM 生命周期和 LLMOps 的工具和指標                         | [影片](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [檢索增強生成 (RAG) 和向量資料庫](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **構建：** 使用 RAG 框架從向量資料庫中檢索嵌入的應用程式  | [影片](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [開源模型和 Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **構建：** 使用 Hugging Face 上可用的開源模型的應用程式                    | [影片](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI 代理](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **構建：** 使用 AI 代理框架的應用程式                                           | [影片](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [微調大型語言模型 (LLMs)](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **學習：** 微調 LLMs 的內容、原因和方法                                            | [影片](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [使用小型語言模型 (SLMs) 構建](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **學習：** 使用小型語言模型構建的好處                                            | 影片即將推出 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [使用 Mistral 模型構建](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **學習：** Mistral 系列模型的特點和差異                                           | 影片即將推出 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [使用 Meta 模型構建](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **學習：** Meta 系列模型的特點和差異                                           | 影片即將推出 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-### 🌟 Арнайы ыраазычылык
+### 🌟 特別感謝
 
-[**John Aziz**](https://www.linkedin.com/in/john0isaac/)ке бардык GitHub Actions жана workflows түзгөнү үчүн атайын ыраазычылык
+特別感謝 [**John Aziz**](https://www.linkedin.com/in/john0isaac/) 創建所有的 GitHub Actions 和工作流程
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) ар бир сабакка үйрөнүүчү жана код тажрыйбасын жакшыртуу үчүн маанилүү салым кошкону үчүн. 
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) 在每個課程中做出重要貢獻，以提升學習者和代碼的體驗。
 
-## 🎒 Башка курстар
+## 🎒 其他課程
 
-Биздин команда башка курстарды да чыгарат! Төмөнкүлөрдү текшериңиз:
+我們的團隊製作其他課程！請查看：
 
-- [**ЖАҢЫ** AI Агенттери үчүн Башталгычтар](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [**ЖАҢЫ** .NET колдонуп Генеративдүү AI үчүн Башталгычтар](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-- [**ЖАҢЫ** JavaScript колдонуп Генеративдүү AI үчүн Башталгычтар](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн ML](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн Маалымат Илим](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн AI](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн Киберкоопсуздук](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
-- [Башталгычтар үчүн Веб Өнүктүрүү](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн IoT](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-- [Башталгычтар үчүн XR Өнүктүрүү](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [GitHub Copilot ကို AI Paired Programming အတွက် ကျွမ်းကျင်စွာ အသုံးပြုခြင်း](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-- [GitHub Copilot ကို C#/.NET Developer များအတွက် ကျွမ်းကျင်စွာ အသုံးပြုခြင်း](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-- [ကိုယ်ပိုင် Copilot စွန့်စားမှုကို ရွေးချယ်ပါ](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+- [**新** 模型上下文協議初學者指南](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [AI 代理初學者指南](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [使用 .NET 的生成式 AI 初學者指南](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+- [使用 JavaScript 的生成式 AI 初學者指南](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
+- [機器學習初學者指南](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+- [數據科學初學者指南](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+- [AI 初學者指南](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [網路安全初學者指南](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
+- [網頁開發初學者指南](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [物聯網初學者指南](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+- [初學者的XR開發](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [精通GitHub Copilot以進行AI配對編程](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+- [精通GitHub Copilot為C#/.NET開發者](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+- [選擇你的Copilot冒險](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
-I'm sorry, but I'm unable to provide a translation to "mo" as it is not clear which language you are referring to. If you meant a specific language, please specify it, and I'll do my best to assist you.
+**免責聲明**：  
+本文檔已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於關鍵信息，建議使用專業人工翻譯。對於因使用此翻譯而產生的任何誤解或誤解，我們不承擔責任。

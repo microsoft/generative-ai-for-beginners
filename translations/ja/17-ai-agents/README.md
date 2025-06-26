@@ -2,70 +2,70 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:11:41+00:00",
+  "translation_date": "2025-06-26T00:11:57+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "ja"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.ja.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![オープンソースモデル](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ja.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
 ## はじめに
 
-AIエージェントは、生成AIの中での興味深い進展を表しており、大規模言語モデル（LLM）がアシスタントから行動を取るエージェントへと進化することを可能にします。AIエージェントフレームワークは、開発者がLLMにツールと状態管理へのアクセスを提供するアプリケーションを作成できるようにします。これらのフレームワークはまた、LLMが計画した行動をユーザーや開発者が監視できるようにすることで、エクスペリエンス管理を向上させます。
+AIエージェントは、生成AIの中でエキサイティングな進化を遂げており、大規模言語モデル（LLM）がアシスタントから行動を起こせるエージェントへと進化することを可能にします。AIエージェントフレームワークは、開発者がLLMにツールと状態管理へのアクセスを提供するアプリケーションを作成することを可能にします。これらのフレームワークはまた、LLMが計画したアクションをユーザーや開発者が監視できるようにすることで、エクスペリエンス管理を向上させます。
 
-このレッスンでは、以下の領域をカバーします：
+このレッスンでは以下の内容を扱います：
 
 - AIエージェントとは何かを理解する - AIエージェントとは具体的に何か？
-- 4つの異なるAIエージェントフレームワークを探求する - それぞれの独自性とは？
-- これらのAIエージェントをさまざまなユースケースに適用する - AIエージェントをいつ使用すべきか？
+- 4つの異なるAIエージェントフレームワークを探る - それぞれの特徴は何か？
+- これらのAIエージェントを異なるユースケースに適用する - AIエージェントをいつ使うべきか？
 
 ## 学習目標
 
 このレッスンを受けた後、次のことができるようになります：
 
-- AIエージェントが何であり、どのように使用できるかを説明する。
-- 人気のあるAIエージェントフレームワークの違いを理解し、それらがどのように異なるかを理解する。
-- AIエージェントがどのように機能するかを理解し、それらを使用してアプリケーションを構築する。
+- AIエージェントとは何か、そしてそれをどのように使うことができるかを説明する。
+- 人気のあるAIエージェントフレームワークの違いを理解し、それらがどのように異なるかを把握する。
+- AIエージェントがどのように機能するかを理解し、それを使ってアプリケーションを構築する。
 
 ## AIエージェントとは？
 
-AIエージェントは、生成AIの世界で非常に興味深い分野です。この興奮には、時折用語やその適用に対する混乱が伴います。AIエージェントを指すほとんどのツールを含むシンプルで包括的な定義を使用します：
+AIエージェントは、生成AIの世界で非常にエキサイティングな分野です。この興奮とともに、用語やその応用に対する混乱が生じることもあります。AIエージェントと呼ばれるツールのほとんどを包含しつつシンプルに保つために、以下の定義を使用します：
 
-AIエージェントは、大規模言語モデル（LLM）に**状態**と**ツール**へのアクセスを提供することで、タスクを実行できるようにします。
+AIエージェントは、大規模言語モデル（LLM）が**状態**と**ツール**にアクセスすることでタスクを実行できるようにします。
 
-![Agent Model](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.ja.png)
+![エージェントモデル](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ja.png)
 
 これらの用語を定義しましょう：
 
-**大規模言語モデル** - これらはこのコースを通じて言及されているモデルで、GPT-3.5、GPT-4、Llama-2などがあります。
+**大規模言語モデル** - これはこのコース全体で言及されているモデルで、GPT-3.5、GPT-4、Llama-2などがあります。
 
-**状態** - これは、LLMが作業しているコンテキストを指します。LLMは、過去の行動のコンテキストと現在のコンテキストを使用して、次の行動の意思決定を導きます。AIエージェントフレームワークは、開発者がこのコンテキストを簡単に維持できるようにします。
+**状態** - これはLLMが動作しているコンテキストを指します。LLMは過去のアクションと現在のコンテキストを利用し、次のアクションの意思決定を導きます。AIエージェントフレームワークは、開発者がこのコンテキストをより簡単に維持できるようにします。
 
-**ツール** - ユーザーが要求したタスクを完了するために、LLMはツールへのアクセスが必要です。ツールの例としては、データベース、API、外部アプリケーション、さらには別のLLMもあります！
+**ツール** - ユーザーが要求したタスクを完了するため、またLLMが計画したタスクを完了するために、LLMはツールへのアクセスが必要です。ツールの例としては、データベース、API、外部アプリケーション、さらには別のLLMなどがあります。
 
-これらの定義が、これから見る実装方法を理解するための良い基礎を提供することを願っています。さまざまなAIエージェントフレームワークを探ってみましょう：
+これらの定義は、これから見ていく実装方法についての基礎を提供するでしょう。それでは、いくつかの異なるAIエージェントフレームワークを探ってみましょう：
 
 ## LangChainエージェント
 
-[LangChainエージェント](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst)は、上記の定義を実装したものです。
+[LangChainエージェント](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst)は、上記で提供した定義の実装です。
 
-**状態**を管理するために、`AgentExecutor`という組み込み関数を使用します。これは、定義された`agent`と利用可能な`tools`を受け入れます。
+**状態**を管理するために、`AgentExecutor`という組み込み関数を使用します。これは定義された`agent`と利用可能な`tools`を受け入れます。
 
-`Agent Executor`はまた、チャットの履歴を保存して、チャットのコンテキストを提供します。
+`Agent Executor`はまた、チャット履歴を保存してチャットのコンテキストを提供します。
 
-![Langchain Agents](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.ja.png)
+![LangChainエージェント](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ja.png)
 
-LangChainは、LLMがアクセスできるようにアプリケーションにインポートできる[ツールのカタログ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)を提供しています。これらはコミュニティやLangChainチームによって作成されています。
+LangChainは、LLMがアクセスできるあなたのアプリケーションにインポートできる[ツールのカタログ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)を提供しています。これらはコミュニティやLangChainチームによって作成されています。
 
 これらのツールを定義して`Agent Executor`に渡すことができます。
 
-AIエージェントについて話すとき、可視性はもう一つの重要な側面です。アプリケーション開発者がLLMがどのツールを使用しているか、なぜ使用しているかを理解することが重要です。そのために、LangChainのチームはLangSmithを開発しました。
+AIエージェントについて話すとき、可視性はもう一つの重要な側面です。アプリケーション開発者がLLMがどのツールを使っているか、そしてなぜそれを使っているかを理解することが重要です。そのために、LangChainのチームはLangSmithを開発しました。
 
 ## AutoGen
 
 次に紹介するAIエージェントフレームワークは[AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)です。AutoGenの主な焦点は会話です。エージェントは**会話可能**であり、**カスタマイズ可能**です。
 
-**会話可能 -** LLMはタスクを完了するために別のLLMと会話を開始し、続けることができます。これは`AssistantAgents`を作成し、特定のシステムメッセージを与えることで行われます。
+**会話可能 -** LLMは他のLLMと会話を開始し、続けることでタスクを完了することができます。これは`AssistantAgents`を作成し、特定のシステムメッセージを与えることで行われます。
 
 ```python
 
@@ -73,7 +73,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**カスタマイズ可能** - エージェントはLLMだけでなく、ユーザーやツールとしても定義できます。開発者として、タスクを完了するためのフィードバックをユーザーとやり取りする`UserProxyAgent`を定義できます。このフィードバックは、タスクの実行を続行するか停止するかを決定できます。
+**カスタマイズ可能** - エージェントはLLMとしてだけでなく、ユーザーやツールとしても定義できます。開発者として、タスクの完了に対するフィードバックをユーザーとやり取りする役割を持つ`UserProxyAgent`を定義することができます。このフィードバックは、タスクの実行を続けるか、停止するかを決定します。
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -83,9 +83,9 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 状態を変更し管理するために、アシスタントエージェントはPythonコードを生成してタスクを完了します。
 
-プロセスの例を示します：
+プロセスの例は以下の通りです：
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.ja.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ja.png)
 
 #### システムメッセージで定義されたLLM
 
@@ -93,7 +93,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-このシステムメッセージは、この特定のLLMにタスクに関連する関数を指示します。AutoGenを使用すると、異なるシステムメッセージを持つ複数の定義されたAssistantAgentsを持つことができます。
+このシステムメッセージは、特定のLLMにそのタスクに関連する関数を指示します。AutoGenでは、異なるシステムメッセージを持つ複数のAssistantAgentsを定義することができます。
 
 #### ユーザーによって開始されるチャット
 
@@ -102,7 +102,7 @@ user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next wee
 
 ```
 
-このuser_proxy（人間）からのメッセージは、エージェントが実行すべき可能性のある関数を探求するプロセスを開始します。
+user_proxy（人間）からのこのメッセージは、エージェントが実行すべき可能性のある関数を探索するプロセスを開始します。
 
 #### 関数が実行される
 
@@ -115,7 +115,7 @@ chatbot (to user_proxy):
 
 ```
 
-初期チャットが処理されると、エージェントは呼び出すツールを提案します。この場合、それは`get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+最初のチャットが処理されると、エージェントは呼び出すべきツールを提案します。この場合、それは`get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
 
 You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
 
@@ -127,47 +127,47 @@ The next agent framework we will explore is [Taskweaver](https://microsoft.githu
 
 To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`という関数です。これはPythonクラスや一般的なコードインタープリタである可能性があります。これらのプラグインは埋め込みとして保存されており、LLMが正しいプラグインをより良く検索できるようにしています。
+To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`という関数です。これはPythonクラスや一般的なコードインタープリターである可能性があります。このプラグインは埋め込みとして保存され、LLMが正しいプラグインをよりよく検索できるようにします。
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.ja.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ja.png)
 
-異常検出を処理するためのプラグインの例を示します：
+異常検出を処理するためのプラグインの例は以下の通りです：
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-コードは実行前に検証されます。Taskweaverでコンテキストを管理するもう一つの機能は、会話の`experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+コードは実行前に検証されます。Taskweaverでコンテキストを管理するためのもう一つの機能は、会話の`experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state`と`tools`が他のAIモデルです。それぞれのAIモデルは、物体検出、転写、画像キャプションなど特定のタスクを実行する専門のモデルです。
+The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state`であり、`tools`は他のAIモデルです。各AIモデルは、物体検出、転写、画像キャプションなどの特定のタスクを実行する専門のモデルです。
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.ja.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ja.png)
 
-LLMは、汎用モデルとして、ユーザーからのリクエストを受け取り、特定のタスクとそのタスクを完了するために必要な引数/データを識別します。
+LLMは汎用モデルとして、ユーザーからのリクエストを受け取り、特定のタスクとその完了に必要な引数/データを特定します。
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-その後、LLMはリクエストを専門のAIモデルが解釈できる形式（例えばJSON）にフォーマットします。AIモデルがタスクに基づいて予測を返すと、LLMは応答を受け取ります。
+その後、LLMはリクエストを専門のAIモデルが解釈できる形式、例えばJSONにフォーマットします。AIモデルがタスクに基づいて予測を返したら、LLMはその応答を受け取ります。
 
 タスクを完了するために複数のモデルが必要な場合、それらのモデルからの応答を解釈し、それらを統合してユーザーへの応答を生成します。
 
-以下の例は、ユーザーが画像内の物体の説明と数を要求した場合の動作を示しています：
+以下の例は、ユーザーが画像内のオブジェクトの説明とカウントを要求した場合にどのように機能するかを示しています：
 
 ## 課題
 
-AutoGenを使用してAIエージェントを構築し、学習を続けましょう：
+AIエージェントの学習を続けるために、AutoGenを使用して以下を構築できます：
 
-- 教育スタートアップの異なる部門とのビジネスミーティングをシミュレートするアプリケーションを作成します。
-- LLMが異なるペルソナと優先順位を理解し、新製品アイデアを提案するためのシステムメッセージを作成します。
-- その後、LLMは各部門からのフォローアップ質問を生成し、提案と製品アイデアを洗練し、改善します。
+- 教育系スタートアップの異なる部門とのビジネス会議をシミュレートするアプリケーション。
+- LLMが異なるペルソナと優先順位を理解するのを導くシステムメッセージを作成し、ユーザーが新しい製品アイデアを提案できるようにする。
+- その後、LLMは各部門からのフォローアップ質問を生成し、提案と製品アイデアを洗練し改善する。
 
 ## 学習はここで終わりません、旅を続けましょう
 
-このレッスンを終えた後、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらに深めましょう！
+このレッスンを完了した後は、[生成AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらに高めてください！
 
-**免責事項**:  
-この文書は、AI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確さを期すよう努めていますが、自動翻訳には誤りや不正確さが含まれる可能性があります。元の言語で書かれた原文を権威ある情報源として考慮してください。重要な情報については、専門の人間による翻訳をお勧めします。この翻訳の使用に起因する誤解や誤解釈については責任を負いません。
+**免責事項**:
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確さを追求しておりますが、機械翻訳には誤りや不正確さが含まれる可能性があることをご了承ください。元の文書を原文として信頼できる情報源とするべきです。重要な情報については、専門の人間による翻訳をお勧めします。この翻訳の使用により生じる誤解や誤った解釈については責任を負いません。

@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:14:21+00:00",
+  "translation_date": "2025-06-26T03:33:54+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "ms"
 }
@@ -19,9 +19,9 @@ Pelajaran ini akan merangkumi:
 
 ## Keluarga Model Meta
 
-Dalam pelajaran ini, kita akan meneroka 2 model daripada keluarga Meta atau "Kawanan Llama" - Llama 3.1 dan Llama 3.2
+Dalam pelajaran ini, kita akan meneroka 2 model dari keluarga Meta atau "Llama Herd" - Llama 3.1 dan Llama 3.2
 
-Model-model ini datang dalam pelbagai varian dan boleh didapati di pasaran Model GitHub. Berikut adalah maklumat lanjut tentang menggunakan Model GitHub untuk [prototip dengan model AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Model-model ini datang dalam pelbagai varian dan boleh didapati di pasaran Model GitHub. Berikut adalah lebih banyak butiran mengenai menggunakan Model GitHub untuk [membuat prototaip dengan model AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Varian Model:
 - Llama 3.1 - 70B Instruct
@@ -33,35 +33,35 @@ Varian Model:
 
 ## Llama 3.1
 
-Dengan 405 Bilion Parameter, Llama 3.1 termasuk dalam kategori LLM sumber terbuka.
+Dengan 405 Bilion Parameter, Llama 3.1 tergolong dalam kategori LLM sumber terbuka.
 
-Model ini merupakan peningkatan kepada keluaran terdahulu Llama 3 dengan menawarkan:
+Mod ini adalah peningkatan kepada keluaran terdahulu Llama 3 dengan menawarkan:
 
-- Tetingkap konteks yang lebih besar - 128k token berbanding 8k token
-- Token Output Maksimum Lebih Besar - 4096 berbanding 2048
-- Sokongan Multibahasa Lebih Baik - disebabkan peningkatan dalam token latihan
+- Tingkap konteks yang lebih besar - 128k token berbanding 8k token
+- Token Output Maksimum yang lebih besar - 4096 berbanding 2048
+- Sokongan Multibahasa yang Lebih Baik - disebabkan peningkatan dalam token latihan
 
-Ini membolehkan Llama 3.1 mengendalikan kes penggunaan yang lebih kompleks apabila membina aplikasi GenAI termasuk:
-- Pemanggilan Fungsi Asli - keupayaan untuk memanggil alat dan fungsi luaran di luar aliran kerja LLM
-- Prestasi RAG Lebih Baik - disebabkan tetingkap konteks yang lebih tinggi
-- Penjanaan Data Sintetik - keupayaan untuk mencipta data yang berkesan untuk tugas seperti penalaan halus
+Ini membolehkan Llama 3.1 menangani kes penggunaan yang lebih kompleks apabila membina aplikasi GenAI termasuk:
+- Pemanggilan Fungsi Asli - keupayaan untuk memanggil alat dan fungsi luar di luar aliran kerja LLM
+- Prestasi RAG yang Lebih Baik - disebabkan tingkap konteks yang lebih tinggi
+- Penjanaan Data Sintetik - keupayaan untuk mencipta data berkesan untuk tugas seperti penalaan halus
 
 ### Pemanggilan Fungsi Asli
 
-Llama 3.1 telah ditala halus untuk lebih berkesan dalam membuat panggilan fungsi atau alat. Ia juga mempunyai dua alat terbina dalam yang boleh dikenal pasti oleh model sebagai perlu digunakan berdasarkan arahan daripada pengguna. Alat-alat ini adalah:
+Llama 3.1 telah disesuaikan untuk menjadi lebih berkesan dalam membuat panggilan fungsi atau alat. Ia juga mempunyai dua alat terbina dalam yang model boleh kenal pasti sebagai perlu digunakan berdasarkan arahan daripada pengguna. Alat-alat ini adalah:
 
 - **Brave Search** - Boleh digunakan untuk mendapatkan maklumat terkini seperti cuaca dengan melakukan carian web
-- **Wolfram Alpha** - Boleh digunakan untuk pengiraan matematik yang lebih kompleks jadi anda tidak perlu menulis fungsi anda sendiri.
+- **Wolfram Alpha** - Boleh digunakan untuk pengiraan matematik yang lebih kompleks jadi menulis fungsi sendiri tidak diperlukan.
 
-Anda juga boleh mencipta alat tersuai anda sendiri yang boleh dipanggil oleh LLM.
+Anda juga boleh mencipta alat khusus anda sendiri yang LLM boleh panggil.
 
 Dalam contoh kod di bawah:
 
-- Kami mendefinisikan alat yang tersedia (brave_search, wolfram_alpha) dalam arahan sistem.
-- Hantar arahan pengguna yang bertanya tentang cuaca di bandar tertentu.
+- Kami mentakrifkan alat yang tersedia (brave_search, wolfram_alpha) dalam arahan sistem.
+- Menghantar arahan pengguna yang bertanya tentang cuaca di bandar tertentu.
 - LLM akan bertindak balas dengan panggilan alat kepada alat Brave Search yang akan kelihatan seperti ini `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Nota: Contoh ini hanya membuat panggilan alat, jika anda ingin mendapatkan keputusan, anda perlu membuat akaun percuma di halaman API Brave dan mendefinisikan fungsi itu sendiri`
+*Nota: Contoh ini hanya membuat panggilan alat, jika anda ingin mendapatkan hasilnya, anda perlu membuat akaun percuma di halaman API Brave dan mentakrifkan fungsi itu sendiri`
 
 ```python 
 import os
@@ -103,11 +103,11 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Walaupun menjadi LLM, satu kekurangan yang ada pada Llama 3.1 adalah multimodaliti. Iaitu, keupayaan untuk menggunakan pelbagai jenis input seperti imej sebagai arahan dan memberikan respons. Keupayaan ini adalah salah satu ciri utama Llama 3.2. Ciri-ciri ini juga termasuk:
+Walaupun menjadi LLM, satu kekangan yang Llama 3.1 ada adalah multimodaliti. Iaitu, keupayaan untuk menggunakan pelbagai jenis input seperti imej sebagai arahan dan memberikan respons. Keupayaan ini adalah salah satu ciri utama Llama 3.2. Ciri-ciri ini juga termasuk:
 
 - Multimodaliti - mempunyai keupayaan untuk menilai kedua-dua arahan teks dan imej
-- Variasi saiz kecil hingga sederhana (11B dan 90B) - ini menyediakan pilihan penyebaran yang fleksibel,
-- Variasi teks sahaja (1B dan 3B) - ini membolehkan model disebarkan pada peranti tepi / mudah alih dan menyediakan kependaman rendah
+- Variasi saiz Kecil ke Sederhana (11B dan 90B) - ini memberikan pilihan pengedaran yang fleksibel,
+- Variasi hanya teks (1B dan 3B) - ini membolehkan model diedarkan pada peranti tepi / mudah alih dan memberikan latensi rendah
 
 Sokongan multimodal mewakili langkah besar dalam dunia model sumber terbuka. Contoh kod di bawah mengambil kedua-dua arahan imej dan teks untuk mendapatkan analisis imej daripada Llama 3.2 90B.
 
@@ -160,7 +160,7 @@ print(response.choices[0].message.content)
 
 ## Pembelajaran tidak berhenti di sini, teruskan Perjalanan
 
-Selepas melengkapkan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif anda!
+Selepas menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif anda!
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk mencapai ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau tafsiran yang timbul daripada penggunaan terjemahan ini.

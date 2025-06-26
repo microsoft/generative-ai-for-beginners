@@ -2,90 +2,90 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:19:32+00:00",
+  "translation_date": "2025-06-25T17:30:00+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "tl"
 }
 -->
-# Pagbuo ng mga Aplikasyon para sa Pagbuo ng Imahe
+# Pagbuo ng mga Aplikasyon para sa Paggawa ng Larawan
 
-May higit pa sa LLMs kaysa sa pagbuo ng teksto. Posible ring bumuo ng mga imahe mula sa mga paglalarawan ng teksto. Ang pagkakaroon ng mga imahe bilang isang modality ay maaaring maging lubos na kapaki-pakinabang sa iba't ibang larangan mula sa MedTech, arkitektura, turismo, pag-unlad ng laro at iba pa. Sa kabanatang ito, titingnan natin ang dalawang pinakasikat na modelo ng pagbuo ng imahe, DALL-E at Midjourney.
+May higit pa sa LLMs kaysa sa paggawa ng teksto. Posible ring gumawa ng mga larawan mula sa mga deskripsyon ng teksto. Ang pagkakaroon ng mga larawan bilang isang modality ay maaaring maging lubos na kapaki-pakinabang sa iba't ibang larangan mula sa MedTech, arkitektura, turismo, pagbuo ng laro at iba pa. Sa kabanatang ito, titingnan natin ang dalawang pinakasikat na modelo ng paggawa ng larawan, ang DALL-E at Midjourney.
 
 ## Panimula
 
-Sa araling ito, saklaw natin:
+Sa leksyong ito, tatalakayin natin:
 
-- Pagbuo ng imahe at kung bakit ito kapaki-pakinabang.
-- DALL-E at Midjourney, ano sila, at paano sila gumagana.
-- Paano ka makakagawa ng isang app para sa pagbuo ng imahe.
+- Paggawa ng larawan at kung bakit ito kapaki-pakinabang.
+- DALL-E at Midjourney, ano ang mga ito, at paano ito gumagana.
+- Paano ka makakabuo ng isang app para sa paggawa ng larawan.
 
 ## Mga Layunin sa Pag-aaral
 
-Pagkatapos makumpleto ang araling ito, magagawa mong:
+Pagkatapos makumpleto ang leksyon na ito, magagawa mong:
 
-- Bumuo ng isang aplikasyon para sa pagbuo ng imahe.
-- Tukuyin ang mga hangganan para sa iyong aplikasyon gamit ang meta prompts.
-- Makipagtulungan sa DALL-E at Midjourney.
+- Bumuo ng isang aplikasyon para sa paggawa ng larawan.
+- Tukuyin ang mga hangganan para sa iyong aplikasyon gamit ang mga meta prompt.
+- Magtrabaho gamit ang DALL-E at Midjourney.
 
-## Bakit bumuo ng isang aplikasyon para sa pagbuo ng imahe?
+## Bakit bumuo ng isang aplikasyon para sa paggawa ng larawan?
 
-Ang mga aplikasyon para sa pagbuo ng imahe ay isang mahusay na paraan upang tuklasin ang kakayahan ng Generative AI. Maaari silang magamit para sa, halimbawa:
+Ang mga aplikasyon para sa paggawa ng larawan ay isang mahusay na paraan upang tuklasin ang mga kakayahan ng Generative AI. Maaari silang magamit para sa, halimbawa:
 
-- **Pag-edit at pag-synthesize ng imahe**. Maaari kang bumuo ng mga imahe para sa iba't ibang mga kaso ng paggamit, tulad ng pag-edit ng imahe at pag-synthesize ng imahe.
+- **Pag-edit at pag-synthesize ng larawan**. Maaari kang lumikha ng mga larawan para sa iba't ibang gamit, tulad ng pag-edit ng larawan at pag-synthesize ng larawan.
 
-- **Inilapat sa iba't ibang industriya**. Maaari rin silang magamit upang bumuo ng mga imahe para sa iba't ibang industriya tulad ng Medtech, Turismo, Pag-unlad ng Laro at iba pa.
+- **Maaaring gamitin sa iba't ibang industriya**. Maaari rin silang magamit upang lumikha ng mga larawan para sa iba't ibang industriya tulad ng Medtech, Turismo, Pagbuo ng laro at iba pa.
 
 ## Scenario: Edu4All
 
-Bilang bahagi ng araling ito, magpapatuloy tayo sa pakikipagtulungan sa aming startup, Edu4All, sa araling ito. Ang mga mag-aaral ay lilikha ng mga imahe para sa kanilang mga pagsusuri, kung ano ang mga imahe ay nasa mga mag-aaral, ngunit maaari silang maging mga ilustrasyon para sa kanilang sariling kwento o lumikha ng bagong karakter para sa kanilang kwento o tulungan silang mailarawan ang kanilang mga ideya at konsepto.
+Bilang bahagi ng leksyon na ito, ipagpapatuloy natin ang pagtatrabaho sa ating startup, ang Edu4All, sa leksyon na ito. Ang mga estudyante ay lilikha ng mga larawan para sa kanilang mga pagsusuri, anuman ang mga larawan ay nasa mga estudyante, ngunit maaari silang maging mga ilustrasyon para sa kanilang sariling fairytale o lumikha ng bagong karakter para sa kanilang kwento o tulungan silang maisalarawan ang kanilang mga ideya at konsepto.
 
-Narito kung ano ang maaaring mabuo ng mga mag-aaral ng Edu4All halimbawa kung sila ay nagtatrabaho sa klase sa mga monumento:
+Narito ang maaaring malikha ng mga estudyante ng Edu4All kung sila ay nagtatrabaho sa klase sa mga monumento:
 
-![Edu4All startup, klase sa mga monumento, Eiffel Tower](../../../translated_images/startup.ec211d74fef9f4175010c3334942b715514230415744b9dd0a69a19f4ad68786.tl.png)
+![Edu4All startup, klase sa mga monumento, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.tl.png)
 
-gamit ang prompt tulad ng
+gamit ang isang prompt tulad ng
 
 > "Aso sa tabi ng Eiffel Tower sa maagang sikat ng araw"
 
 ## Ano ang DALL-E at Midjourney?
 
-Ang [DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) at [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ay dalawa sa mga pinakasikat na modelo ng pagbuo ng imahe, pinapayagan ka nilang gumamit ng mga prompt upang bumuo ng mga imahe.
+Ang [DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) at [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ay dalawa sa pinakasikat na mga modelo ng paggawa ng larawan, pinapayagan ka nilang gumamit ng mga prompt upang makabuo ng mga larawan.
 
 ### DALL-E
 
-Magsimula tayo sa DALL-E, na isang Generative AI model na bumubuo ng mga imahe mula sa mga paglalarawan ng teksto.
+Magsimula tayo sa DALL-E, na isang Generative AI model na gumagawa ng mga larawan mula sa mga deskripsyon ng teksto.
 
-> [Ang DALL-E ay isang kombinasyon ng dalawang modelo, CLIP at diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+> [Ang DALL-E ay isang kumbinasyon ng dalawang modelo, CLIP at diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, ay isang modelo na bumubuo ng embeddings, na mga numerikal na representasyon ng data, mula sa mga imahe at teksto.
+- **CLIP**, ay isang modelo na gumagawa ng mga embeddings, na mga numerikal na representasyon ng data, mula sa mga larawan at teksto.
 
-- **Diffused attention**, ay isang modelo na bumubuo ng mga imahe mula sa embeddings. Ang DALL-E ay sinanay sa isang dataset ng mga imahe at teksto at maaaring magamit upang bumuo ng mga imahe mula sa mga paglalarawan ng teksto. Halimbawa, ang DALL-E ay maaaring magamit upang bumuo ng mga imahe ng isang pusa na may sombrero, o isang aso na may mohawk.
+- **Diffused attention**, ay isang modelo na gumagawa ng mga larawan mula sa embeddings. Ang DALL-E ay sinanay sa isang dataset ng mga larawan at teksto at maaaring gamitin upang makabuo ng mga larawan mula sa mga deskripsyon ng teksto. Halimbawa, ang DALL-E ay maaaring gamitin upang makabuo ng mga larawan ng isang pusa na may sombrero, o isang aso na may mohawk.
 
 ### Midjourney
 
-Ang Midjourney ay gumagana sa isang katulad na paraan sa DALL-E, ito ay bumubuo ng mga imahe mula sa mga text prompt. Ang Midjourney, ay maaari ring magamit upang bumuo ng mga imahe gamit ang mga prompt tulad ng “isang pusa na may sombrero”, o isang “aso na may mohawk”.
+Ang Midjourney ay gumagana sa katulad na paraan sa DALL-E, ito ay gumagawa ng mga larawan mula sa mga text prompt. Ang Midjourney, ay maaari ring gamitin upang makabuo ng mga larawan gamit ang mga prompt tulad ng "isang pusa na may sombrero", o isang "aso na may mohawk".
 
-![Imahe na nabuo ng Midjourney, mekanikal na kalapati](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Kredito sa Imahe Wikipedia, imahe na nabuo ng Midjourney_
+![Larawang nalikha ng Midjourney, mekanikal na kalapati](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_Larawang kredito Wikipedia, larawang nalikha ng Midjourney_
 
-## Paano Gumagana ang DALL-E at Midjourney
+## Paano gumagana ang DALL-E at Midjourney
 
 Una, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). Ang DALL-E ay isang Generative AI model batay sa transformer architecture na may _autoregressive transformer_.
 
-Ang _autoregressive transformer_ ay nagtatakda kung paano bumubuo ang isang modelo ng mga imahe mula sa mga paglalarawan ng teksto, ito ay bumubuo ng isang pixel sa isang pagkakataon, at pagkatapos ay ginagamit ang mga nabuo na pixel upang bumuo ng susunod na pixel. Dumadaan sa maraming layer sa isang neural network, hanggang sa makumpleto ang imahe.
+Ang _autoregressive transformer_ ay tumutukoy kung paano gumagawa ang isang modelo ng mga larawan mula sa mga deskripsyon ng teksto, ito ay gumagawa ng isang pixel sa bawat pagkakataon, at pagkatapos ay ginagamit ang mga nalikhang pixel upang makabuo ng susunod na pixel. Dumadaan ito sa maraming layer sa isang neural network, hanggang sa makumpleto ang larawan.
 
-Sa prosesong ito, ang DALL-E, ay kumokontrol sa mga katangian, mga bagay, mga katangian, at higit pa sa imahe na ito ay bumubuo. Gayunpaman, ang DALL-E 2 at 3 ay may higit na kontrol sa nabuo na imahe.
+Sa prosesong ito, kinokontrol ng DALL-E ang mga katangian, bagay, katangian, at higit pa sa larawang nalilikha nito. Gayunpaman, ang DALL-E 2 at 3 ay may higit na kontrol sa nalikhang larawan.
 
-## Pagbuo ng iyong unang aplikasyon para sa pagbuo ng imahe
+## Pagbuo ng iyong unang aplikasyon para sa paggawa ng larawan
 
-Ano ang kinakailangan upang bumuo ng isang aplikasyon para sa pagbuo ng imahe? Kailangan mo ang mga sumusunod na library:
+Ano ang kinakailangan upang makabuo ng isang aplikasyon para sa paggawa ng larawan? Kailangan mo ang mga sumusunod na library:
 
-- **python-dotenv**, lubos na inirerekomenda na gamitin ang library na ito upang itago ang iyong mga lihim sa isang _.env_ na file na malayo sa code.
-- **openai**, ang library na ito ay kung ano ang gagamitin mo upang makipag-ugnayan sa OpenAI API.
-- **pillow**, upang magtrabaho sa mga imahe sa Python.
-- **requests**, upang tulungan kang gumawa ng mga HTTP request.
+- **python-dotenv**, lubos na inirerekomenda na gamitin ang library na ito upang itago ang iyong mga sikreto sa isang _.env_ na file na hiwalay sa code.
+- **openai**, ito ang library na gagamitin mo upang makipag-ugnayan sa OpenAI API.
+- **pillow**, upang magtrabaho sa mga larawan sa Python.
+- **requests**, upang makatulong sa paggawa ng mga HTTP request.
 
-1. Lumikha ng isang file _.env_ na may sumusunod na nilalaman:
+1. Gumawa ng isang file na _.env_ na may ganitong nilalaman:
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
@@ -94,7 +94,7 @@ Ano ang kinakailangan upang bumuo ng isang aplikasyon para sa pagbuo ng imahe? K
 
    Hanapin ang impormasyong ito sa Azure Portal para sa iyong resource sa seksyon na "Keys and Endpoint".
 
-1. Kolektahin ang mga library sa itaas sa isang file na tinatawag na _requirements.txt_ tulad nito:
+1. Kolektahin ang mga nabanggit na library sa isang file na tinatawag na _requirements.txt_ tulad nito:
 
    ```text
    python-dotenv
@@ -103,7 +103,7 @@ Ano ang kinakailangan upang bumuo ng isang aplikasyon para sa pagbuo ng imahe? K
    requests
    ```
 
-1. Susunod, lumikha ng virtual environment at i-install ang mga library:
+1. Susunod, gumawa ng virtual na kapaligiran at i-install ang mga library:
 
    ```bash
    python3 -m venv venv
@@ -111,7 +111,7 @@ Ano ang kinakailangan upang bumuo ng isang aplikasyon para sa pagbuo ng imahe? K
    pip install -r requirements.txt
    ```
 
-   Para sa Windows, gamitin ang mga sumusunod na command upang lumikha at i-activate ang iyong virtual environment:
+   Para sa Windows, gamitin ang mga sumusunod na utos upang lumikha at i-activate ang iyong virtual na kapaligiran:
 
    ```bash
    python3 -m venv venv
@@ -175,7 +175,7 @@ Ano ang kinakailangan upang bumuo ng isang aplikasyon para sa pagbuo ng imahe? K
 
 Ipaliwanag natin ang code na ito:
 
-- Una, ina-import natin ang mga library na kailangan natin, kabilang ang OpenAI library, ang dotenv library, ang requests library, at ang Pillow library.
+- Una, ina-import natin ang mga library na kailangan natin, kabilang ang OpenAI library, dotenv library, requests library, at Pillow library.
 
   ```python
   import openai
@@ -185,14 +185,14 @@ Ipaliwanag natin ang code na ito:
   import dotenv
   ```
 
-- Susunod, in-load natin ang mga environment variables mula sa _.env_ na file.
+- Susunod, ini-load natin ang mga environment variable mula sa _.env_ na file.
 
   ```python
   # import dotenv
   dotenv.load_dotenv()
   ```
 
-- Pagkatapos nito, itinakda natin ang endpoint, key para sa OpenAI API, version at type.
+- Pagkatapos nito, itinakda natin ang endpoint, key para sa OpenAI API, bersyon at uri.
 
   ```python
   # Get endpoint and key from environment variables
@@ -204,7 +204,7 @@ Ipaliwanag natin ang code na ito:
   openai.api_type = 'azure'
   ```
 
-- Susunod, bumubuo tayo ng imahe:
+- Susunod, nalilikha natin ang larawan:
 
   ```python
   # Create an image by using the image generation API
@@ -216,18 +216,18 @@ Ipaliwanag natin ang code na ito:
   )
   ```
 
-  Ang code sa itaas ay tumutugon sa isang JSON object na naglalaman ng URL ng nabuo na imahe. Maaari nating gamitin ang URL upang i-download ang imahe at i-save ito sa isang file.
+  Ang code sa itaas ay tumutugon ng isang JSON object na naglalaman ng URL ng nalikhang larawan. Maaari nating gamitin ang URL upang i-download ang larawan at i-save ito sa isang file.
 
-- Sa huli, binubuksan natin ang imahe at ginagamit ang standard image viewer upang ipakita ito:
+- Sa wakas, binubuksan natin ang larawan at ginagamit ang standard image viewer upang ipakita ito:
 
   ```python
   image = Image.open(image_path)
   image.show()
   ```
 
-### Higit pang mga detalye sa pagbuo ng imahe
+### Higit pang detalye sa pagbuo ng larawan
 
-Tingnan natin ang code na bumubuo ng imahe sa mas detalyadong paraan:
+Tingnan natin ang code na bumubuo ng larawan nang mas detalyado:
 
 ```python
 generation_response = openai.Image.create(
@@ -238,20 +238,20 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, ay ang text prompt na ginagamit upang bumuo ng imahe. Sa kasong ito, ginagamit natin ang prompt na "Bunny sa kabayo, may hawak na lollipop, sa foggy meadow kung saan tumutubo ang daffodils".
-- **size**, ay ang laki ng imahe na nabuo. Sa kasong ito, bumubuo tayo ng imahe na 1024x1024 pixels.
-- **n**, ay ang bilang ng mga imahe na nabuo. Sa kasong ito, bumubuo tayo ng dalawang imahe.
-- **temperature**, ay isang parameter na kumokontrol sa randomness ng output ng isang Generative AI model. Ang temperatura ay isang halaga sa pagitan ng 0 at 1 kung saan ang 0 ay nangangahulugang ang output ay deterministic at 1 ay nangangahulugang ang output ay random. Ang default na halaga ay 0.7.
+- **prompt**, ay ang text prompt na ginagamit upang lumikha ng larawan. Sa kasong ito, ginagamit natin ang prompt na "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils".
+- **size**, ay ang laki ng larawang nalilikha. Sa kasong ito, gumagawa tayo ng larawan na may sukat na 1024x1024 pixels.
+- **n**, ay ang bilang ng mga larawang nalilikha. Sa kasong ito, gumagawa tayo ng dalawang larawan.
+- **temperature**, ay isang parameter na kumokontrol sa randomness ng output ng isang Generative AI model. Ang temperatura ay isang halaga sa pagitan ng 0 at 1 kung saan ang 0 ay nangangahulugang ang output ay deterministic at ang 1 ay nangangahulugang ang output ay random. Ang default na halaga ay 0.7.
 
-Mayroon pang mga bagay na maaari mong gawin sa mga imahe na saklaw natin sa susunod na seksyon.
+Mayroon pang ibang mga bagay na maaari mong gawin sa mga larawan na tatalakayin natin sa susunod na seksyon.
 
-## Karagdagang kakayahan ng pagbuo ng imahe
+## Karagdagang kakayahan ng paggawa ng larawan
 
-Nakita mo na sa ngayon kung paano tayo nakabuo ng isang imahe gamit ang ilang linya sa Python. Gayunpaman, may higit pang mga bagay na maaari mong gawin sa mga imahe.
+Nakita mo na kung paano tayo nakagawa ng larawan gamit ang ilang linya sa Python. Gayunpaman, may iba pang mga bagay na maaari mong gawin sa mga larawan.
 
 Maaari mo ring gawin ang mga sumusunod:
 
-- **Gumawa ng mga edit**. Sa pamamagitan ng pagbibigay ng isang umiiral na imahe ng mask at isang prompt, maaari mong baguhin ang isang imahe. Halimbawa, maaari kang magdagdag ng isang bagay sa isang bahagi ng imahe. Isipin ang ating imahe ng kuneho, maaari kang magdagdag ng sombrero sa kuneho. Paano mo gagawin iyon ay sa pamamagitan ng pagbibigay ng imahe, isang mask (pagkilala sa bahagi ng lugar para sa pagbabago) at isang text prompt upang sabihin kung ano ang dapat gawin.
+- **Gumawa ng mga pagbabago**. Sa pamamagitan ng pagbibigay ng isang umiiral na larawan ng mask at isang prompt, maaari mong baguhin ang isang larawan. Halimbawa, maaari kang magdagdag ng isang bagay sa isang bahagi ng larawan. Isipin ang ating larawan ng kuneho, maaari kang magdagdag ng sombrero sa kuneho. Paano mo ito gagawin ay sa pamamagitan ng pagbibigay ng larawan, isang mask (na tumutukoy sa bahagi ng lugar para sa pagbabago) at isang text prompt upang sabihin kung ano ang dapat gawin.
 
   ```python
   response = openai.Image.create_edit(
@@ -264,9 +264,9 @@ Maaari mo ring gawin ang mga sumusunod:
   image_url = response['data'][0]['url']
   ```
 
-  Ang base image ay maglalaman lamang ng kuneho ngunit ang panghuling imahe ay magkakaroon ng sombrero sa kuneho.
+  Ang base image ay naglalaman lamang ng kuneho ngunit ang pangwakas na larawan ay magkakaroon ng sombrero sa kuneho.
 
-- **Lumikha ng mga variation**. Ang ideya ay kumuha ka ng isang umiiral na imahe at humiling na lumikha ng mga variation. Upang lumikha ng isang variation, nagbibigay ka ng imahe at isang text prompt at code tulad nito:
+- **Lumikha ng mga variation**. Ang ideya ay kumuha ka ng isang umiiral na larawan at hilingin na lumikha ng mga variation. Upang lumikha ng variation, magbigay ng isang larawan at isang text prompt at code tulad nito:
 
   ```python
   response = openai.Image.create_variation(
@@ -281,19 +281,19 @@ Maaari mo ring gawin ang mga sumusunod:
 
 ## Temperatura
 
-Ang temperatura ay isang parameter na kumokontrol sa randomness ng output ng isang Generative AI model. Ang temperatura ay isang halaga sa pagitan ng 0 at 1 kung saan ang 0 ay nangangahulugang ang output ay deterministic at 1 ay nangangahulugang ang output ay random. Ang default na halaga ay 0.7.
+Ang temperatura ay isang parameter na kumokontrol sa randomness ng output ng isang Generative AI model. Ang temperatura ay isang halaga sa pagitan ng 0 at 1 kung saan ang 0 ay nangangahulugang ang output ay deterministic at ang 1 ay nangangahulugang ang output ay random. Ang default na halaga ay 0.7.
 
-Tingnan natin ang isang halimbawa kung paano gumagana ang temperatura, sa pamamagitan ng pagtakbo ng prompt na ito ng dalawang beses:
+Tingnan natin ang isang halimbawa kung paano gumagana ang temperatura, sa pamamagitan ng pagtakbo sa prompt na ito nang dalawang beses:
 
-> Prompt: "Bunny sa kabayo, may hawak na lollipop, sa foggy meadow kung saan tumutubo ang daffodils"
+> Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny sa kabayo na may hawak na lollipop, bersyon 1](../../../translated_images/v1-generated-image.208ba0525ed6ae505504aa852e28d334c0440e9931b7c97f9508176a22d2dd54.tl.png)
+![Bunny on a horse holding a lollipop, bersyon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.tl.png)
 
-Ngayon ay patakbuhin natin ang parehong prompt upang makita na hindi natin makukuha ang parehong imahe ng dalawang beses:
+Ngayon subukan nating patakbuhin ang parehong prompt upang makita na hindi natin makukuha ang parehong larawan nang dalawang beses:
 
-![Nabuo na imahe ng bunny sa kabayo](../../../translated_images/v2-generated-image.f0a88c05ef476e95f3682d4b21c9ba2f4807ae71cc29e9c05b42ebbf497cf61b.tl.png)
+![Generated image ng kuneho sa kabayo](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.tl.png)
 
-Tulad ng nakikita mo, ang mga imahe ay magkatulad, ngunit hindi pareho. Subukan natin baguhin ang halaga ng temperatura sa 0.1 at tingnan kung ano ang mangyayari:
+Tulad ng nakikita mo, ang mga larawan ay magkatulad, ngunit hindi pareho. Subukan nating baguhin ang halaga ng temperatura sa 0.1 at tingnan kung ano ang mangyayari:
 
 ```python
  generation_response = openai.Image.create(
@@ -305,7 +305,7 @@ Tulad ng nakikita mo, ang mga imahe ay magkatulad, ngunit hindi pareho. Subukan 
 
 ### Pagbabago ng temperatura
 
-Kaya subukan nating gawing mas deterministic ang tugon. Mapapansin natin mula sa dalawang imahe na nabuo na sa unang imahe, mayroong isang bunny at sa pangalawang imahe, mayroong isang kabayo, kaya't ang mga imahe ay lubos na nag-iiba.
+Kaya't subukan nating gawing mas deterministic ang tugon. Mapapansin natin mula sa dalawang larawang nalikha na sa unang larawan, mayroong kuneho at sa pangalawang larawan, mayroong kabayo, kaya't ang mga larawan ay lubos na nag-iiba.
 
 Kaya't baguhin natin ang ating code at itakda ang temperatura sa 0, tulad nito:
 
@@ -318,28 +318,28 @@ generation_response = openai.Image.create(
     )
 ```
 
-Ngayon kapag patakbuhin mo ang code na ito, makakakuha ka ng mga sumusunod na dalawang imahe:
+Ngayon kapag pinatakbo mo ang code na ito, makakakuha ka ng mga larawang ito:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.d8557be792b5c81c2c6d2804cb7b210fe8b340106fe4ffcadf9cf7de1cd7b991.tl.png)
-- ![Temperatura 0 , v2](../../../translated_images/v2-temp-generated-image.bd412fcfbd43379312b1382212a332aa311ca1a80ea692dea50a8b876a487c61.tl.png)
+- ![Temperatura 0, bersyon 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.tl.png)
+- ![Temperatura 0 , bersyon 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.tl.png)
 
-Dito makikita mo nang malinaw kung paano mas magkatulad ang mga imahe.
+Dito mo malinaw na makikita kung paano mas nagkakahawig ang mga larawan.
 
 ## Paano tukuyin ang mga hangganan para sa iyong aplikasyon gamit ang metaprompts
 
-Sa aming demo, maaari na kaming bumuo ng mga imahe para sa aming mga kliyente. Gayunpaman, kailangan nating lumikha ng ilang mga hangganan para sa aming aplikasyon.
+Sa aming demo, maaari na tayong makagawa ng mga larawan para sa aming mga kliyente. Gayunpaman, kailangan nating lumikha ng ilang mga hangganan para sa aming aplikasyon.
 
-Halimbawa, ayaw naming bumuo ng mga imahe na hindi ligtas para sa trabaho, o na hindi angkop para sa mga bata.
+Halimbawa, ayaw nating lumikha ng mga larawan na hindi ligtas para sa trabaho, o hindi angkop para sa mga bata.
 
-Magagawa natin ito gamit ang _metaprompts_. Ang metaprompts ay mga text prompt na ginagamit upang kontrolin ang output ng isang Generative AI model. Halimbawa, maaari nating gamitin ang metaprompts upang kontrolin ang output, at tiyakin na ang mga nabuo na imahe ay ligtas para sa trabaho, o angkop para sa mga bata.
+Maaari nating gawin ito gamit ang _metaprompts_. Ang Metaprompts ay mga text prompt na ginagamit upang kontrolin ang output ng isang Generative AI model. Halimbawa, maaari nating gamitin ang metaprompts upang kontrolin ang output, at matiyak na ang mga nalikhang larawan ay ligtas para sa trabaho, o angkop para sa mga bata.
 
 ### Paano ito gumagana?
 
-Ngayon, paano gumagana ang mga meta prompt?
+Ngayon, paano gumagana ang meta prompts?
 
-Ang mga meta prompt ay mga text prompt na ginagamit upang kontrolin ang output ng isang Generative AI model, sila ay inilalagay bago ang text prompt, at ginagamit upang kontrolin ang output ng modelo at naka-embed sa mga aplikasyon upang kontrolin ang output ng modelo. Ini-encapsulate ang input ng prompt at ang input ng meta prompt sa isang solong text prompt.
+Ang Meta prompts ay mga text prompt na ginagamit upang kontrolin ang output ng isang Generative AI model, sila ay nakaposisyon bago ang text prompt, at ginagamit upang kontrolin ang output ng modelo at naka-embed sa mga aplikasyon upang kontrolin ang output ng modelo. Ikinukulong ang input ng prompt at ang input ng meta prompt sa isang text prompt.
 
-Ang isang halimbawa ng meta prompt ay ang sumusunod:
+Isang halimbawa ng meta prompt ay ang sumusunod:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -358,7 +358,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Ngayon, tingnan natin kung paano natin magagamit ang mga meta prompt sa ating demo.
+Ngayon, tingnan natin kung paano natin magagamit ang meta prompts sa ating demo.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -383,13 +383,13 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Mula sa prompt sa itaas, makikita mo kung paano ang lahat ng mga imahe na nilikha ay isinasaalang-alang ang metaprompt.
+Mula sa prompt sa itaas, makikita mo kung paano isinasaalang-alang ng lahat ng mga larawang nalikha ang metaprompt.
 
-## Takdang-aralin - hayaan nating paganahin ang mga mag-aaral
+## Takdang-aralin - pasiglahin natin ang mga estudyante
 
-Ipinakilala namin ang Edu4All sa simula ng araling ito. Ngayon ay oras na upang paganahin ang mga mag-aaral na bumuo ng mga imahe para sa kanilang mga pagsusuri.
+Ipinakilala natin ang Edu4All sa simula ng leksyon na ito. Ngayon ay oras na upang pasiglahin ang mga estudyante na lumikha ng mga larawan para sa kanilang mga pagsusuri.
 
-Ang mga mag-aaral ay lilikha ng mga imahe para sa kanilang mga pagsusuri na naglalaman ng mga monumento, kung ano ang mga monumento ay nasa mga mag-aaral. Ang mga mag-aaral ay hinihiling na gamitin ang kanilang pagkamalikhain sa gawaing ito upang ilagay ang mga monumento sa iba't ibang konteksto.
+Ang mga estudyante ay lilikha ng mga larawan para sa kanilang mga pagsusuri na naglalaman ng mga monumento, eksaktong anong mga monumento ang nasa mga estudyante. Ang mga estudyante ay hinihiling na gamitin ang kanilang pagkamalikhain sa gawaing ito upang ilagay ang mga monumento sa iba't ibang konteksto.
 
 ## Solusyon
 
@@ -467,9 +467,9 @@ except openai.InvalidRequestError as err:
 
 ## Magaling na Trabaho! Ipagpatuloy ang Iyong Pag-aaral
 
-Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapahusay ng iyong kaalaman sa Generative AI!
+Matapos makumpleto ang leksyon na ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
 
-Pumunta sa Lesson 10 kung saan titingnan natin kung paano [bumuo ng mga AI application na may low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Pumunta sa Lesson 10 kung saan titingnan natin kung paano [bumuo ng AI applications gamit ang low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat pinagsisikapan naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatumpak. Ang orihinal na dokumento sa sarili nitong wika ay dapat ituring na mapagkakatiwalaang sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaintindihan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Habang nagsusumikap kami para sa katumpakan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatumpak. Ang orihinal na dokumento sa sarili nitong wika ay dapat ituring na mapagkakatiwalaang mapagkukunan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot para sa anumang hindi pagkakaintindihan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

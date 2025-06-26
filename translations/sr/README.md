@@ -1,122 +1,123 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c2ee25895ebbfa1a52868bb6eab686fc",
-  "translation_date": "2025-05-19T12:05:02+00:00",
+  "original_hash": "6e3f4c8a4f323b8eab1cf11ded304b0f",
+  "translation_date": "2025-06-25T08:17:25+00:00",
   "source_file": "README.md",
   "language_code": "sr"
 }
 -->
-![Generativna veštačka inteligencija za početnike](../../translated_images/repo-thumbnailv4-fixed.ac68b8309b9f8955508d377c5daeb48e1abdf9cf3c5eefba9b95ab79fafebd4c.sr.png)
+![Генеративна вештачка интелигенција за почетнике](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.sr.png)
 
-### 21 lekcija koje vas uče svemu što treba da znate da biste počeli sa izradom aplikacija sa generativnom veštačkom inteligencijom
+### 21 лекција које вас уче свему што треба да знате за почетак изградње апликација са генеративном вештачком интелигенцијом
 
-### 🌐 Podrška za više jezika
+### 🌐 Подршка за више језика
 
-#### Podržano putem GitHub Action (Automatizovano i uvek ažurirano)
-[Francuski](../fr/README.md) | [Španski](../es/README.md) | [Nemački](../de/README.md) | [Ruski](../ru/README.md) | [Arapski](../ar/README.md) | [Persijski (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kineski (pojednostavljeni)](../zh/README.md) | [Kineski (tradicionalni, Makao)](../mo/README.md) | [Kineski (tradicionalni, Hong Kong)](../hk/README.md) | [Kineski (tradicionalni, Tajvan)](../tw/README.md) | [Japanski](../ja/README.md) | [Korejski](../ko/README.md) | [Hindski](../hi/README.md) | [Bengalski](../bn/README.md) | [Marati](../mr/README.md) | [Nepalski](../ne/README.md) | [Pandžabi (Gurmuki)](../pa/README.md) | [Portugalski (Portugal)](../pt/README.md) | [Portugalski (Brazil)](../br/README.md) | [Italijanski](../it/README.md) | [Poljski](../pl/README.md) | [Turski](../tr/README.md) | [Grčki](../el/README.md) | [Tajlandski](../th/README.md) | [Švedski](../sv/README.md) | [Danski](../da/README.md) | [Norveški](../no/README.md) | [Finski](../fi/README.md) | [Holandski](../nl/README.md) | [Hebrejski](../he/README.md) | [Vijetnamski](../vi/README.md) | [Indonežanski](../id/README.md) | [Malajski](../ms/README.md) | [Tagalog (Filipinski)](../tl/README.md) | [Svahili](../sw/README.md) | [Mađarski](../hu/README.md) | [Češki](../cs/README.md) | [Slovački](../sk/README.md) | [Rumunski](../ro/README.md) | [Bugarski](../bg/README.md) | [Srpski (ćirilica)](./README.md) | [Hrvatski](../hr/README.md) | [Slovenački](../sl/README.md)
-# Generativna veštačka inteligencija za početnike (Verzija 3) - Kurs
+#### Подржано преко GitHub акције (Аутоматизовано и увек ажурирано)
 
-Naučite osnove izrade aplikacija sa generativnom veštačkom inteligencijom uz naš sveobuhvatan kurs od 21 lekcije koji su pripremili Microsoft Cloud zagovornici.
+# Генеративна вештачка интелигенција за почетнике (Верзија 3) - Курс
 
-## 🌱 Početak
+Научите основе изградње апликација са генеративном вештачком интелигенцијом уз наш свеобухватни курс од 21 лекције који пружају Microsoft Cloud Advocates.
 
-Ovaj kurs sadrži 21 lekciju. Svaka lekcija pokriva svoju temu, tako da možete početi gde god želite!
+## 🌱 Почетак
 
-Lekcije su označene kao "Learn" lekcije koje objašnjavaju koncept generativne veštačke inteligencije ili "Build" lekcije koje objašnjavaju koncept i primere koda u oba jezika **Python** i **TypeScript** kad god je to moguće.
+Овај курс има 21 лекцију. Свака лекција покрива своју тему, па можете почети где год желите!
 
-Za .NET programere pogledajte [Generativna veštačka inteligencija za početnike (.NET izdanje)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+Лекције су означене као "Learn" лекције које објашњавају концепт генеративне вештачке интелигенције или "Build" лекције које објашњавају концепт и дају примере кода на **Python** и **TypeScript** када је то могуће.
 
-Svaka lekcija takođe uključuje sekciju "Nastavite sa učenjem" sa dodatnim alatima za učenje.
+За .NET програмере погледајте [Генеративна вештачка интелигенција за почетнике (.NET издање)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-## Šta Vam Treba
-### Da biste pokrenuli kod ovog kursa, možete koristiti:
-- [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcije:** "aoai-assignment"
-- [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lekcije:** "githubmodels"
-- [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcije:** "oai-assignment"
+Свака лекција такође укључује део "Наставите учење" са додатним алатима за учење.
 
-- Osnovno znanje Python ili TypeScript je korisno - \*Za apsolutne početnike pogledajte ove kurseve [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) i [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- GitHub nalog za [forkovanje ovog repozitorijuma](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) na vaš GitHub nalog
+## Шта вам је потребно
+### Да бисте покренули код са овог курса, можете користити:
+- [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Лекције:** "aoai-assignment"
+- [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Лекције:** "githubmodels"
+- [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Лекције:** "oai-assignment" 
 
-Kreirali smo lekciju **[Postavljanje Kursa](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** da vam pomognemo u postavljanju vašeg razvojnog okruženja.
+- Основно познавање Python или TypeScript је корисно - \*За апсолутне почетнике погледајте ове [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) и [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) курсеве
+- GitHub налог да [форкујете цео овај репозиторијум](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) на свој GitHub налог
 
-Ne zaboravite da [zvezdica (🌟) ovaj repozitorijum](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) kako biste ga lakše pronašli kasnije.
+Креирали смо лекцију **[Подешавање курса](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** да вам помогне у подешавању вашег развојног окружења.
 
-## 🧠 Spremni za implementaciju?
+Не заборавите да [означите (🌟) овај репозиторијум](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) да га лакше пронађете касније.
 
-Ako tražite naprednije primere koda, pogledajte našu [kolekciju primera koda za generativnu veštačku inteligenciju](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) u oba jezika **Python** i **TypeScript**.
+## 🧠 Спремни за примену?
 
-## 🗣️ Upoznajte druge učenike, dobijte podršku
+Ако тражите напредније примере кода, погледајте нашу [колекцију примера кода за генеративну вештачку интелигенцију](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) на **Python** и **TypeScript**.
 
-Pridružite se našem [zvaničnom Azure AI Foundry Discord serveru](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) kako biste se upoznali i povezali sa drugim učenicima koji pohađaju ovaj kurs i dobili podršku.
+## 🗣️ Упознајте друге ученике, добијте подршку
 
-Postavite pitanja ili podelite povratne informacije o proizvodu na našem [Azure AI Foundry Developer Forumu](https://aka.ms/azureaifoundry/forum) na Githubu.
+Придружите се нашем [званичном Azure AI Foundry Discord серверу](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) да упознате и повежете се са другим ученицима који похађају овај курс и добијете подршку.
 
-## 🚀 Pokrećete startup?
+Поставите питања или поделите повратне информације о производу на нашем [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) на Github-у.
 
-Prijavite se za [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) da biste dobili **besplatne OpenAI kredite** i do **150.000 USD za Azure kredite za pristup OpenAI modelima putem Azure OpenAI usluga**.
+## 🚀 Градите стартап?
 
-## 🙏 Želite da pomognete?
+Пријавите се за [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) да добијете **бесплатне OpenAI кредите** и до **150 хиљада долара за Azure кредите за приступ OpenAI моделима кроз Azure OpenAI Services**.
 
-Imate li predloge ili ste pronašli greške u pisanju ili kodu? [Otvorite problem](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ili [Kreirajte zahtev za povlačenje](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+## 🙏 Желите да помогнете?
 
-## 📂 Svaka lekcija uključuje:
+Имате ли предлоге или сте пронашли правописне или код грешке? [Покрените проблем](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) или [Креирајте pull захтев](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-- Kratak video uvod u temu
-- Pisanu lekciju smeštenu u README
-- Python i TypeScript primere koda koji podržavaju Azure OpenAI i OpenAI API
-- Linkove ka dodatnim resursima za nastavak učenja
+## 📂 Свака лекција укључује:
 
-## 🗃️ Lekcije
+- Кратак видео увод у тему
+- Писану лекцију која се налази у README
+- Python и TypeScript примере кода који подржавају Azure OpenAI и OpenAI API
+- Линкове до додатних ресурса за наставак учења
 
-| #   | **Link Lekcije**                                                                                                                              | **Opis**                                                                                       | **Video**                                                                   | **Dodatno Učenje**                                                             |
+## 🗃️ Лекције
+
+| #   | **Линк до лекције**                                                                                                                            | **Опис**                                                                                         | **Видео**                                                                   | **Додатно учење**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Postavljanje Kursa](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                            | **Learn:** Kako postaviti razvojno okruženje                                                    | Video uskoro dolazi                                                         | [Saznajte Više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Uvod u Generativnu AI i LLM-ove](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Learn:** Razumevanje šta je Generativna AI i kako funkcionišu Veliki Jezički Modeli (LLM-ovi) | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte Više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Istraživanje i poređenje različitih LLM-ova](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)        | **Learn:** Kako izabrati pravi model za vašu upotrebu                                           | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte Više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Odgovorna upotreba Generativne AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                        | **Learn:** Kako odgovorno izraditi aplikacije sa Generativnom AI                               | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte Više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Razumevanje osnova inženjeringa upita](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                     | **Learn:** Praktične najbolje prakse inženjeringa upita                                        | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte Više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Kreiranje naprednih upita](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Naučite:** Kako primeniti tehnike inženjeringa upita koje poboljšavaju ishod vaših upita. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Izgradnja aplikacija za generisanje teksta](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Izgradite:** Aplikaciju za generisanje teksta koristeći Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Izgradnja aplikacija za chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Izgradite:** Tehnike za efikasnu izgradnju i integraciju aplikacija za chat.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Izgradnja aplikacija za pretragu sa vektorskim bazama podataka](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Izgradite:** Aplikaciju za pretragu koja koristi ugrađene vektore za pretragu podataka.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Izgradnja aplikacija za generisanje slika](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Izgradite:** Aplikaciju za generisanje slika                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Izgradnja AI aplikacija sa malo koda](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Izgradite:** Generativnu AI aplikaciju koristeći alate sa malo koda                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integracija eksternih aplikacija sa pozivanjem funkcija](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Izgradite:** Šta je pozivanje funkcija i njegovi slučajevi upotrebe za aplikacije                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Dizajniranje korisničkog iskustva za AI aplikacije](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Naučite:** Kako primeniti principe dizajna korisničkog iskustva prilikom razvoja generativnih AI aplikacija         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Osiguranje vaših generativnih AI aplikacija](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Naučite:** Pretnje i rizici za AI sisteme i metode za osiguranje ovih sistema.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Životni ciklus generativne AI aplikacije](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Naučite:** Alate i metrike za upravljanje životnim ciklusom LLM i LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Generisanje uz podršku pretrage (RAG) i Vektorske baze podataka](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Izgradite:** Aplikaciju koristeći RAG okvir za preuzimanje ugrađivanja iz Vektorskih baza podataka  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Modeli otvorenog koda i Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Izgradite:** Aplikaciju koristeći modele otvorenog koda dostupne na Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI Agenti](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Izgradite:** Aplikaciju koristeći AI Agent okvir                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Fino podešavanje LLM-ova](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučite:** Šta, zašto i kako fino podešavati LLM-ove                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Izgradnja sa SLM-ovima](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučite:** Prednosti izgradnje sa malim jezičkim modelima                                            | Video uskoro | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Izgradnja sa Mistral modelima](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučite:** Karakteristike i razlike Mistral porodice modela                                           | Video uskoro | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Izgradnja sa Meta modelima](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučite:** Karakteristike i razlike Meta porodice modela                                           | Video uskoro | [Saznajte više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Подешавање курса](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Учите:** Како подесити ваше развојно окружење                                                  | Видео ускоро                                                                 | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Увод у генеративну вештачку интелигенцију и LLM-ове](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                 | **Учите:** Разумевање шта је генеративна вештачка интелигенција и како функционишу велики језички модели (LLM-ови). | [Видео](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Истраживање и поређење различитих LLM-ова](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)           | **Учите:** Како одабрати прави модел за ваш случај употребе                                      | [Видео](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Одговорна употреба генеративне вештачке интелигенције](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)     | **Учите:** Како одговорно изградити апликације са генеративном вештачком интелигенцијом          | [Видео](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Разумевање основа инжењеринга упита](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                       | **Учите:** Практичне најбоље праксе инжењеринга упита                                           | [Видео](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Креирање Напредних Подстицаја](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Научите:** Како применити технике инжењеринга подстицаја које побољшавају резултат ваших подстицаја. | [Видео](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Изградња Апликација за Генерисање Текста](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Изградите:** Апликацију за генерисање текста користећи Azure OpenAI / OpenAI API                                | [Видео](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Изградња Апликација за Ћаскање](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Изградите:** Технике за ефикасно изградњу и интеграцију апликација за ћаскање.               | [Видео](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Изградња Апликација за Претраживање Векторских База Података](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Изградите:** Апликацију за претраживање која користи Уградње за претрагу података.                        | [Видео](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Изградња Апликација за Генерисање Слика](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Изградите:** Апликацију за генерисање слика                                                       | [Видео](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Изградња AI Апликација са Мало Кода](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Изградите:** Генеративну AI апликацију користећи алате са мало кода                                     | [Видео](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Интеграција Спољашњих Апликација са Позивом Функција](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Изградите:** Шта је позив функција и његови случајеви употребе за апликације                          | [Видео](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [Дизајнирање UX за AI Апликације](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Научите:** Како применити принципе дизајна корисничког искуства приликом развоја Генеративних AI Апликација         | [Видео](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Обезбеђивање Ваших Генеративних AI Апликација](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Научите:** Претње и ризици за AI системе и методе за обезбеђивање ових система.             | [Видео](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Животни Циклус Генеративних AI Апликација](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Научите:** Алатке и метрике за управљање животним циклусом LLM и LLMOps                         | [Видео](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте Више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Опознато Генерисање (RAG) и Векторске Базе Података](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Изградња:** Апликација користећи RAG оквир за преузимање уградњи из векторске базе података  | [Видео](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Отворени Модели и Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Изградња:** Апликација користећи моделе отвореног кода доступне на Hugging Face                    | [Видео](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI Агенти](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Изградња:** Апликација користећи оквир за AI агенте                                           | [Видео](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Фино подешавање LLM-ова](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Учите:** Шта, зашто и како фино подешавати LLM-ове                                            | [Видео](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Изградња са SLM-овима](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Учите:** Предности изградње са малим језичким моделима                                            | Видео ускоро | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Изградња са Мистрал моделима](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Учите:** Карактеристике и разлике Мистрал породице модела                                           | Видео ускоро | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Изградња са Мета моделима](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Учите:** Карактеристике и разлике Мета породице модела                                           | Видео ускоро | [Сазнајте више](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-### 🌟 Posebna zahvalnost
+### 🌟 Посебна захвалност
 
-Posebna zahvalnost [**John Azizu**](https://www.linkedin.com/in/john0isaac/) za kreiranje svih GitHub akcija i tokova rada
+Посебна захвалност [**Џону Азизу**](https://www.linkedin.com/in/john0isaac/) за креирање свих GitHub акција и радних токова
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) za ključne doprinose svakoj lekciji kako bi poboljšao iskustvo učenika i koda.
+[**Бернхард Меркле**](https://www.linkedin.com/in/bernhard-merkle-738b73/) за значајан допринос свакој лекцији у побољшању искуства учења и кода.
 
-## 🎒 Drugi kursevi
+## 🎒 Други курсеви
 
-Naš tim proizvodi i druge kurseve! Pogledajte:
+Наш тим производи и друге курсеве! Погледајте:
 
-- [**NOVO** AI Agenti za početnike](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [**NOVO** Generativna AI za početnike koristeći .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-- [**NOVO** Generativna AI za početnike koristeći JavaScript](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
-- [ML za početnike](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-- [Nauka o podacima za početnike](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI za početnike](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-- [Sajber bezbednost za početnike](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
-- [Web razvoj za početnike](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-- [IoT za početnike](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-- [XR razvoj za početnike](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [Ovladavanje GitHub Copilot-om za AI parno programiranje](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-- [Ovladavanje GitHub Copilot-om za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-- [Izaberite svoju avanturu sa Copilot-om](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+- [**НОВО** Протокол контекста модела за почетнике](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [AI Агенти за почетнике](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Генеративна AI за почетнике користећи .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+- [Генеративна AI за почетнике користећи JavaScript](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
+- [ML за почетнике](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+- [Наука о подацима за почетнике](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+- [AI за почетнике](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+- [Сајбер безбедност за почетнике](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
+- [Веб развој за почетнике](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+- [IoT за почетнике](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+- [XR развој за почетнике](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Савладавање GitHub Copilot за AI парно програмирање](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+- [Савладавање GitHub Copilot за C#/.NET програмере](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+- [Изабери своју авантуру са Copilot-ом](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
-**Ограничење одговорности**:  
-Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да преводи буду тачни, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људског преводиоца. Не сносимо одговорност за било какве неспоразуме или погрешна тумачења која могу настати услед коришћења овог превода.
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо ка тачности, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква погрешна разумевања или погрешна тумачења која произилазе из употребе овог превода.

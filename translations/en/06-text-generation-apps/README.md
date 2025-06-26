@@ -2,20 +2,20 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T16:37:12+00:00",
+  "translation_date": "2025-06-25T13:51:04+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "en"
 }
 -->
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.en.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.en.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Click the image above to view video of this lesson)_
+> _(Click the image above to view the video of this lesson)_
 
-Throughout this curriculum, you've seen core concepts like prompts and the field known as "prompt engineering". Many tools such as ChatGPT, Office 365, Microsoft Power Platform, and more allow you to use prompts to achieve various tasks.
+Throughout this curriculum, you've encountered core concepts like prompts and the discipline known as "prompt engineering." Many tools, such as ChatGPT, Office 365, Microsoft Power Platform, and others, support using prompts to achieve various tasks.
 
-To add such functionality to an app, you need to understand concepts like prompts, completions, and choose a library to work with. This chapter will teach you exactly that.
+To add such an experience to an app, you need to understand concepts like prompts, completions, and choose a library to work with. This chapter will guide you through these concepts.
 
 ## Introduction
 
@@ -31,13 +31,13 @@ By the end of this lesson, you'll be able to:
 
 - Explain what a text generation app is.
 - Build a text generation app using openai.
-- Configure your app to use more or fewer tokens and also adjust the temperature for varied output.
+- Configure your app to use more or fewer tokens and change the temperature for varied output.
 
 ## What is a text generation app?
 
-When you build an app, it usually has some kind of interface, such as:
+Typically, when you build an app, it has some kind of interface like the following:
 
-- Command-based. Console apps are typical apps where you type a command, and it performs a task. For example, `git` is a command-based app.
+- Command-based. Console apps are typical apps where you type a command, and it carries out a task. For example, `git` is a command-based app.
 - User interface (UI). Some apps have graphical user interfaces (GUIs) where you click buttons, input text, select options, and more.
 
 ### Console and UI apps are limited
@@ -49,16 +49,16 @@ Compared to a command-based app where you type a command:
 
 ### Benefits of text generation apps
 
-How is a text generation app different?
+So how is a text generation app different?
 
-In a text generation app, you have more flexibility, as you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that you're interacting with a data source trained on a vast corpus of information, whereas a traditional app might be limited to what's in a database.
+In a text generation app, you have more flexibility. You're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that you're interacting with a data source trained on a vast corpus of information, whereas a traditional app might be limited to what's in a database.
 
 ### What can I build with a text generation app?
 
-There are many things you can build. For example:
+There are many possibilities, for example:
 
-- **A chatbot**. A chatbot answering questions about topics like your company and its products could be a good match.
-- **Helper**. LLMs are great at summarizing text, extracting insights, producing text like resumes, and more.
+- **A chatbot**. A chatbot answering questions about topics, like your company and its products, could be a good match.
+- **Helper**. LLMs are great at summarizing text, getting insights from text, producing text like resumes, and more.
 - **Code assistant**. Depending on the language model you use, you can build a code assistant that helps you write code. For example, you can use a product like GitHub Copilot as well as ChatGPT to help you write code.
 
 ## How can I get started?
@@ -70,11 +70,11 @@ You need to find a way to integrate with an LLM, which usually involves the foll
 
 ## Libraries/SDKs
 
-There are a few well-known libraries for working with LLMs like:
+There are a few well-known libraries for working with LLMs, such as:
 
 - **openai**, this library makes it easy to connect to your model and send in prompts.
 
-Then there are libraries that operate on a higher level like:
+Then there are libraries that operate on a higher level, like:
 
 - **Langchain**. Langchain is well-known and supports Python.
 - **Semantic Kernel**. Semantic Kernel is a library by Microsoft supporting the languages C#, Python, and Java.
@@ -85,7 +85,7 @@ Let's see how we can build our first app, what libraries we need, how much is re
 
 ### Install openai
 
-There are many libraries available for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages like C#, Python, JavaScript, Java, and more. We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
+There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well, like C#, Python, JavaScript, Java, and more. We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
 
 ```bash
 pip install openai
@@ -102,7 +102,7 @@ You need to carry out the following steps:
   > At the time of writing, you need to apply for access to Azure OpenAI.
 
 - Install Python <https://www.python.org/>
-- Create an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Locate API key and endpoint
 
@@ -120,7 +120,7 @@ Now that you have this information copied, let's instruct the libraries to use i
 
 ### Setup configuration Azure
 
-If you're using Azure OpenAI, here's how you setup configuration:
+If you're using Azure OpenAI, here's how you set up the configuration:
 
 ```python
 openai.api_type = 'azure'
@@ -129,7 +129,7 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Above we're setting the following:
+Above, we're setting the following:
 
 - `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
 - `api_key`, this is your API key found in the Azure Portal.
@@ -153,7 +153,7 @@ In the above code, we create a completion object and pass in the model we want t
 
 ### Chat completions
 
-So far, you've seen how we've been using `Completion` to generate text. But there's another class called `ChatCompletion` that is more suited for chatbots. Here's an example of using it:
+So far, you've seen how we've been using `Completion` to generate text. But there's another class called `ChatCompletion`, which is more suited for chatbots. Here's an example of using it:
 
 ```python
 import openai
@@ -168,7 +168,7 @@ More on this functionality in an upcoming chapter.
 
 ## Exercise - your first text generation app
 
-Now that we learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
+Now that we have learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
 
 1. Create a virtual environment and install openai:
 
@@ -225,12 +225,12 @@ Now you've seen how to generate text using a prompt. You even have a program up 
 Prompts can be used for all sorts of tasks. For example:
 
 - **Generate a type of text**. For example, you can generate a poem, questions for a quiz, etc.
-- **Lookup information**. You can use prompts to look for information like the following example 'What does CORS mean in web development?'.
-- **Generate code**. You can use prompts to generate code, for example, developing a regular expression used to validate emails or even generate an entire program, like a web app.
+- **Lookup information**. You can use prompts to look for information like the following example: 'What does CORS mean in web development?'.
+- **Generate code**. You can use prompts to generate code, for example, developing a regular expression used to validate emails or even generating an entire program, like a web app.
 
 ## A more practical use case: a recipe generator
 
-Imagine you have ingredients at home and you want to cook something. For that, you need a recipe. A way to find recipes is to use a search engine or you could use an LLM to do so.
+Imagine you have ingredients at home and you want to cook something. For that, you need a recipe. One way to find recipes is to use a search engine, or you could use an LLM to do so.
 
 You could write a prompt like so:
 
@@ -300,10 +300,10 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-This outcome is great, I know what to cook. At this point, what could be useful improvements are:
+This outcome is great, I know what to cook. At this point, useful improvements could be:
 
 - Filtering out ingredients I don't like or am allergic to.
-- Produce a shopping list, in case I don't have all the ingredients at home.
+- Producing a shopping list, in case I don't have all the ingredients at home.
 
 For the above cases, let's add an additional prompt:
 
@@ -382,7 +382,7 @@ That's your five recipes, with no garlic mentioned, and you also have a shopping
 
 Now that we have played out a scenario, let's write code to match the demonstrated scenario. To do so, follow these steps:
 
-1. Use the existing _app.py_ file as a starting point
+1. Use the existing _app.py_ file as a starting point.
 1. Locate the `prompt` variable and change its code to the following:
 
    ```python
@@ -403,7 +403,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
 
    > NOTE, your LLM is nondeterministic, so you might get different results every time you run the program.
 
-   Great, let's see how we can improve things. To improve things, we want to make sure the code is flexible, so ingredients and number of recipes can be improved and changed.
+   Great, let's see how we can improve things. To improve things, we want to make sure the code is flexible, so ingredients and the number of recipes can be improved and changed.
 
 1. Let's change the code in the following way:
 
@@ -416,7 +416,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Taking the code for a test run, could look like this:
+   Taking the code for a test run could look like this:
 
    ```output
    No of recipes (for example, 5): 3
@@ -441,9 +441,9 @@ To further improve it, we want to add the following:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Above, we add `{filter}` to the end of the prompt and we also capture the filter value from the user.
+  Above, we add `{filter}` to the end of the prompt, and we also capture the filter value from the user.
 
-  An example input of running the program can now look like so:
+  An example input of running the program can now look like this:
 
   ```output
   No of recipes (for example, 5): 3
@@ -539,7 +539,7 @@ To further improve it, we want to add the following:
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. We make a new request, but also considering the number of tokens we asked for in the first prompt, so this time we say `max_tokens` is 1200.
+  1. We make a new request, but also consider the number of tokens we asked for in the first prompt, so this time we say `max_tokens` is 1200.
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
@@ -613,15 +613,15 @@ For this assignment, you can choose what to build.
 
 Here are some suggestions:
 
-- Tweak the recipe generator app to improve it further. Play around with temperature values, and the prompts to see what you can come up with.
+- Tweak the recipe generator app to improve it further. Play around with temperature values and the prompts to see what you can come up with.
 - Build a "study buddy". This app should be able to answer questions about a topic, for example, Python. You could have prompts like "What is a certain topic in Python?", or you could have a prompt that says, show me code for a certain topic, etc.
-- History bot, make history come alive, instruct the bot to play a certain historical character and ask it questions about its life and times.
+- History bot, make history come alive. Instruct the bot to play a certain historical character and ask it questions about its life and times.
 
 ## Solution
 
 ### Study buddy
 
-Below is a starter prompt, see how you can use it and tweak it to your liking.
+Below is a starter prompt. See how you can use it and tweak it to your liking.
 
 ```text
 - "You're an expert on the Python language
@@ -647,21 +647,23 @@ Here are some prompts you could be using:
 
 ## Knowledge check
 
-What does the concept temperature do?
+What does the concept of temperature do?
 
 1. It controls how random the output is.
-2. It controls how big the response is.
-3. It controls how many tokens are used.
+1. It controls how big the response is.
+1. It controls how many tokens are used.
 
 ## 🚀 Challenge
 
-When working on the assignment, try to vary the temperature, try setting it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most. What value works best for your app?
+When working on the assignment, try to vary the temperature. Try setting it to 0, 0.5, and 1. Remember that 0 is the least varied, and 1 is the most. What value works best for your app?
 
 ## Great Work! Continue Your Learning
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
-Head over to Lesson 7 where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head over to Lesson 7, where we will look at how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+Sure, here is the translation of the disclaimer:
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T06:43:33+00:00",
+  "translation_date": "2025-06-25T23:44:34+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "ro"
 }
 -->
-# Introducere în Rețele Neurale: Perceptron
+# Introducere în Rețele Neuronale: Perceptron
 
-Una dintre primele încercări de a implementa ceva asemănător cu o rețea neurală modernă a fost realizată de Frank Rosenblatt de la Cornell Aeronautical Laboratory în 1957. A fost o implementare hardware numită "Mark-1", proiectată pentru a recunoaște figuri geometrice primitive, precum triunghiuri, pătrate și cercuri.
+Una dintre primele încercări de a implementa ceva similar unei rețele neuronale moderne a fost realizată de Frank Rosenblatt de la Cornell Aeronautical Laboratory în 1957. A fost o implementare hardware numită "Mark-1", proiectată pentru a recunoaște figuri geometrice primitive, cum ar fi triunghiuri, pătrate și cercuri.
 
 |      |      |
 |--------------|-----------|
@@ -17,11 +17,11 @@ Una dintre primele încercări de a implementa ceva asemănător cu o rețea neu
 
 > Imagini de pe Wikipedia
 
-O imagine de intrare era reprezentată de o matrice de fotocelule de 20x20, astfel încât rețeaua neurală avea 400 de intrări și o ieșire binară. O rețea simplă conținea un neuron, numit și **unitate logică de prag**. Greutățile rețelei neurale acționau ca niște potențiometre care necesitau ajustare manuală în timpul fazei de antrenament.
+O imagine de intrare era reprezentată de o matrice de fotocelule de 20x20, astfel încât rețeaua neuronală avea 400 de intrări și o ieșire binară. O rețea simplă conținea un neuron, numit și **unitate logică de prag**. Greutățile rețelei neuronale acționau ca niște potențiometre care necesitau ajustare manuală în timpul fazei de antrenament.
 
 > ✅ Un potențiometru este un dispozitiv care permite utilizatorului să ajusteze rezistența unui circuit.
 
-> The New York Times a scris despre perceptron la acea vreme: *embrionul unui computer electronic pe care [Marina] se așteaptă să fie capabil să meargă, să vorbească, să vadă, să scrie, să se reproducă și să fie conștient de existența sa.*
+> New York Times a scris despre perceptron la acea vreme: *embrionul unui computer electronic despre care [Marina] așteaptă să fie capabil să meargă, să vorbească, să vadă, să scrie, să se reproducă și să fie conștient de existența sa.*
 
 ## Modelul Perceptron
 
@@ -29,20 +29,20 @@ Să presupunem că avem N caracteristici în modelul nostru, caz în care vector
 
 y(x) = f(w<sup>T</sup>x)
 
-unde f este o funcție de activare treaptă
+unde f este o funcție de activare de tip treaptă
 
 ## Antrenarea Perceptronului
 
-Pentru a antrena un perceptron, trebuie să găsim un vector de greutăți w care să clasifice corect majoritatea valorilor, adică să rezulte în cel mai mic **eroare**. Această eroare este definită de **criteriul perceptronului** în următorul mod:
+Pentru a antrena un perceptron, trebuie să găsim un vector de greutăți w care clasifică corect majoritatea valorilor, adică rezultă în cel mai mic **eroare**. Această eroare este definită de **criteriul perceptronului** în următorul mod:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 unde:
 
-* suma se face pe acele puncte de date de antrenament i care duc la clasificare greșită
+* suma este luată pe acele puncte de date de antrenament i care rezultă în clasificare greșită
 * x<sub>i</sub> este datele de intrare, iar t<sub>i</sub> este fie -1, fie +1 pentru exemple negative și pozitive, respectiv.
 
-Acest criteriu este considerat ca o funcție a greutăților w și trebuie să-l minimizăm. Adesea, se folosește o metodă numită **descendentă a gradientului**, în care începem cu unele greutăți inițiale w<sup>(0)</sup>, și apoi la fiecare pas actualizăm greutățile conform formulei:
+Acest criteriu este considerat ca o funcție a greutăților w, și trebuie să-l minimizăm. Adesea, se folosește o metodă numită **gradient descendent**, în care începem cu niște greutăți inițiale w<sup>(0)</sup>, și apoi la fiecare pas actualizăm greutățile conform formulei:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
@@ -78,20 +78,20 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## 🚀 Provocare
 
-Dacă doriți să încercați să construiți propriul perceptron, încercați acest laborator pe Microsoft Learn care folosește designerul Azure ML.
+Dacă doriți să încercați să construiți propriul perceptron, încercați acest laborator pe Microsoft Learn care folosește Azure ML designer.
 
 ## Recenzie și Studiu Individual
 
-Pentru a vedea cum putem folosi perceptronul pentru a rezolva o problemă de jucărie, precum și probleme din viața reală, și pentru a continua învățarea - mergeți la notebook-ul Perceptron.
+Pentru a vedea cum putem folosi perceptronul pentru a rezolva o problemă de jucărie, precum și probleme din viața reală, și pentru a continua să învățați - mergeți la notebook-ul Perceptron.
 
 Iată și un articol interesant despre perceptroni.
 
 ## Temă
 
-În această lecție, am implementat un perceptron pentru o sarcină de clasificare binară și l-am folosit pentru a clasifica între două cifre scrise de mână. În acest laborator, vi se cere să rezolvați problema clasificării cifrelor în întregime, adică să determinați care cifră este cel mai probabil să corespundă unei imagini date.
+În această lecție, am implementat un perceptron pentru o sarcină de clasificare binară și l-am folosit pentru a clasifica între două cifre scrise de mână. În acest laborator, vi se cere să rezolvați complet problema clasificării cifrelor, adică să determinați care cifră este cel mai probabil să corespundă unei imagini date.
 
 * Instrucțiuni
 * Notebook
 
 **Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea umană profesională. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

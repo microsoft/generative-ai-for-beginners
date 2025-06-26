@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:56:42+00:00",
+  "translation_date": "2025-06-26T03:16:37+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "pl"
 }
@@ -11,38 +11,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Wprowadzenie
 
-Ta lekcja obejmuje:
+Ta lekcja obejmie:
 - Badanie różnych modeli Mistral
-- Zrozumienie przypadków użycia i scenariuszy dla każdego modelu
-- Przykłady kodu pokazujące unikalne cechy każdego modelu.
+- Zrozumienie zastosowań i scenariuszy dla każdego modelu
+- Przykłady kodu pokazujące unikalne cechy każdego modelu
 
 ## Modele Mistral
 
 W tej lekcji zbadamy 3 różne modele Mistral: **Mistral Large**, **Mistral Small** i **Mistral Nemo**.
 
-Każdy z tych modeli jest dostępny za darmo na rynku modeli Github. Kod w tym notatniku będzie korzystał z tych modeli do uruchomienia kodu. Oto więcej informacji o korzystaniu z modeli Github do [prototypowania z modelami AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Każdy z tych modeli jest dostępny za darmo na rynku modeli Github. Kod w tym notebooku będzie korzystał z tych modeli do uruchamiania kodu. Oto więcej szczegółów na temat używania modeli Github do [prototypowania z modelami AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
 
-Mistral Large 2 to obecnie flagowy model od Mistral i jest zaprojektowany do użytku w przedsiębiorstwach.
+Mistral Large 2 jest obecnie flagowym modelem Mistral i jest zaprojektowany do użytku korporacyjnego.
 
-Model jest ulepszeniem oryginalnego Mistral Large, oferując
+Model ten jest ulepszeniem oryginalnego Mistral Large, oferując:
 - Większe okno kontekstowe - 128k vs 32k
-- Lepszą wydajność w zadaniach matematycznych i kodowaniu - średnia dokładność 76,9% vs 60,4%
-- Zwiększoną wielojęzyczną wydajność - języki obejmują: angielski, francuski, niemiecki, hiszpański, włoski, portugalski, holenderski, rosyjski, chiński, japoński, koreański, arabski i hindi.
+- Lepszą wydajność w zadaniach matematycznych i programistycznych - średnia dokładność 76,9% vs 60,4%
+- Zwiększoną wydajność wielojęzyczną - języki obejmują: angielski, francuski, niemiecki, hiszpański, włoski, portugalski, holenderski, rosyjski, chiński, japoński, koreański, arabski i hindi.
 
 Dzięki tym funkcjom, Mistral Large doskonale sprawdza się w:
 - *Retrieval Augmented Generation (RAG)* - dzięki większemu oknu kontekstowemu
-- *Wywołania funkcji* - ten model ma natywne wywołania funkcji, które umożliwiają integrację z zewnętrznymi narzędziami i API. Te wywołania mogą być wykonywane równolegle lub jeden po drugim w kolejności sekwencyjnej.
-- *Generowanie kodu* - ten model doskonale sprawdza się w generowaniu kodu w Python, Java, TypeScript i C++.
+- *Wywołaniach funkcji* - ten model ma wbudowane wywołania funkcji, co pozwala na integrację z zewnętrznymi narzędziami i API. Te wywołania mogą być realizowane zarówno równolegle, jak i sekwencyjnie.
+- *Generacji kodu* - model ten świetnie radzi sobie z generowaniem kodu w Pythonie, Java, TypeScript i C++.
 
 ### Przykład RAG z użyciem Mistral Large 2
 
-W tym przykładzie używamy Mistral Large 2 do uruchomienia wzorca RAG na dokumencie tekstowym. Pytanie jest napisane w języku koreańskim i dotyczy działań autora przed rozpoczęciem studiów.
+W tym przykładzie używamy Mistral Large 2 do uruchomienia wzorca RAG na dokumencie tekstowym. Pytanie jest napisane po koreańsku i dotyczy działań autora przed studiami.
 
-Używa modelu Cohere Embeddings do tworzenia osadzeń dokumentu tekstowego oraz pytania. W tym przykładzie używa pakietu faiss Python jako magazynu wektorów.
+Używa modelu Cohere Embeddings do tworzenia osadzeń dokumentu tekstowego oraz pytania. Dla tego przykładu używa pakietu faiss Python jako magazynu wektorów.
 
-Podpowiedź wysłana do modelu Mistral zawiera zarówno pytania, jak i pobrane fragmenty podobne do pytania. Model następnie dostarcza odpowiedź w języku naturalnym.
+Zachęta wysłana do modelu Mistral zawiera zarówno pytania, jak i pobrane fragmenty podobne do pytania. Model następnie dostarcza odpowiedź w języku naturalnym.
 
 ```python 
 pip install faiss-cpu
@@ -140,21 +140,21 @@ print(chat_response.choices[0].message.content)
 
 ## Mistral Small
 
-Mistral Small to kolejny model w rodzinie modeli Mistral z kategorii premier/enterprise. Jak sama nazwa wskazuje, ten model to Small Language Model (SLM). Zaletami korzystania z Mistral Small są:
-- Oszczędność kosztów w porównaniu do Mistral LLM, takich jak Mistral Large i NeMo - obniżka ceny o 80%
-- Niska latencja - szybsza odpowiedź w porównaniu do LLM Mistral
+Mistral Small to kolejny model z rodziny modeli Mistral w kategorii premier/korporacyjnej. Jak sama nazwa wskazuje, jest to mały model językowy (SLM). Zalety korzystania z Mistral Small to:
+- Oszczędność kosztów w porównaniu do LLM-ów Mistral, takich jak Mistral Large i NeMo - 80% spadek ceny
+- Niska latencja - szybsza odpowiedź w porównaniu do LLM-ów Mistral
 - Elastyczność - może być wdrażany w różnych środowiskach z mniejszymi ograniczeniami dotyczącymi wymaganych zasobów.
 
 Mistral Small jest doskonały do:
-- Zadań tekstowych, takich jak podsumowywanie, analiza sentymentu i tłumaczenie.
-- Aplikacji, w których często są składane żądania, dzięki jego opłacalności
-- Zadań kodowych o niskiej latencji, takich jak przegląd i sugestie kodu
+- Zadań opartych na tekście, takich jak streszczenie, analiza sentymentu i tłumaczenie.
+- Aplikacji, w których składane są częste żądania ze względu na efektywność kosztową
+- Zadań związanych z kodem o niskiej latencji, takich jak przegląd i sugestie kodu
 
 ## Porównanie Mistral Small i Mistral Large
 
 Aby pokazać różnice w latencji między Mistral Small i Large, uruchom poniższe komórki.
 
-Powinieneś zobaczyć różnicę w czasach odpowiedzi między 3-5 sekund. Zwróć również uwagę na długość i styl odpowiedzi na ten sam prompt.
+Powinieneś zauważyć różnicę w czasach odpowiedzi między 3-5 sekund. Zwróć również uwagę na długości i styl odpowiedzi dla tej samej zachęty.
 
 ```python 
 
@@ -216,23 +216,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-W porównaniu do dwóch innych modeli omówionych w tej lekcji, Mistral NeMo jest jedynym darmowym modelem z licencją Apache2.
+W porównaniu do dwóch pozostałych modeli omówionych w tej lekcji, Mistral NeMo jest jedynym darmowym modelem z licencją Apache2.
 
-Jest postrzegany jako ulepszenie wcześniejszego otwartego źródła LLM od Mistral, Mistral 7B.
+Jest postrzegany jako ulepszenie wcześniejszego open source LLM od Mistral, Mistral 7B.
 
 Niektóre inne cechy modelu NeMo to:
 
-- *Bardziej efektywna tokenizacja:* Ten model używa tokenizera Tekken zamiast bardziej powszechnie używanego tiktoken. To pozwala na lepszą wydajność w większej liczbie języków i kodów.
+- *Bardziej efektywna tokenizacja:* Ten model używa tokenizera Tekken zamiast bardziej powszechnie używanego tiktoken. Pozwala to na lepszą wydajność w większej liczbie języków i kodów.
 
-- *Dostosowywanie:* Model bazowy jest dostępny do dostosowywania. To pozwala na większą elastyczność w przypadkach użycia, gdzie dostosowywanie może być potrzebne.
+- *Dostrajanie:* Model bazowy jest dostępny do dostrajania. Pozwala to na większą elastyczność w przypadkach użycia, w których dostrajanie może być potrzebne.
 
-- *Natywne wywołania funkcji* - Podobnie jak Mistral Large, ten model został przeszkolony na wywołania funkcji. Czyni go to unikalnym jako jeden z pierwszych modeli open source, który to robi.
+- *Wbudowane wywołania funkcji* - Podobnie jak Mistral Large, ten model został przeszkolony do wywoływania funkcji. Czyni go to jednym z pierwszych modeli open source, które to robią.
 
 ### Porównanie tokenizatorów
 
 W tym przykładzie przyjrzymy się, jak Mistral NeMo radzi sobie z tokenizacją w porównaniu do Mistral Large.
 
-Oba przykłady biorą ten sam prompt, ale powinieneś zobaczyć, że NeMo zwraca mniej tokenów w porównaniu do Mistral Large.
+Oba przykłady przyjmują tę samą zachętę, ale powinieneś zauważyć, że NeMo zwraca mniej tokenów w porównaniu do Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -350,9 +350,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Nauka nie kończy się tutaj, kontynuuj podróż
+## Nauka się nie kończy tutaj, kontynuuj podróż
 
-Po ukończeniu tej lekcji, sprawdź naszą [kolekcję nauki o generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować rozwijanie wiedzy o generatywnej AI!
+Po ukończeniu tej lekcji, sprawdź naszą [kolekcję nauki o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować rozwijanie swojej wiedzy o Generatywnej AI!
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć staramy się zapewnić dokładność, prosimy mieć na uwadze, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za wszelkie nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za wszelkie nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

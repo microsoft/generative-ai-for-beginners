@@ -2,48 +2,48 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-05-19T12:15:42+00:00",
+  "translation_date": "2025-06-25T08:32:21+00:00",
   "source_file": "SECURITY.md",
   "language_code": "sr"
 }
 -->
-## Bezbednost
+## Безбедност
 
-Microsoft ozbiljno shvata bezbednost naših softverskih proizvoda i usluga, što uključuje sve repozitorijume izvornog koda kojima upravljamo kroz naše GitHub organizacije, uključujući [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) i [naše GitHub organizacije](https://opensource.microsoft.com/).
+Мајкрософт веома озбиљно схвата безбедност наших софтверских производа и услуга, што укључује све репозиторијуме изворног кода који се управљају преко наших GitHub организација, укључујући [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), и [наше GitHub организације](https://opensource.microsoft.com/).
 
-Ako verujete da ste pronašli bezbednosnu ranjivost u bilo kom repozitorijumu koji je u vlasništvu Microsoft-a i koji ispunjava [Microsoftovu definiciju bezbednosne ranjivosti](https://aka.ms/opensource/security/definition), molimo vas da je prijavite na način opisan u nastavku.
+Ако верујете да сте пронашли безбедносни пропуст у било ком репозиторијуму који је у власништву Мајкрософта и који испуњава [Мајкрософтову дефиницију безбедносног пропуста](https://aka.ms/opensource/security/definition), молимо вас да нам га пријавите како је описано у наставку.
 
-## Prijavljivanje Bezbednosnih Problema
+## Пријављивање безбедносних проблема
 
-**Molimo vas da ne prijavljujete bezbednosne ranjivosti putem javnih GitHub problema.**
+**Молимо вас да не пријављујете безбедносне пропусте преко јавних GitHub питања.**
 
-Umesto toga, prijavite ih Microsoft Security Response Center (MSRC) na [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
+Уместо тога, молимо вас да их пријавите Центру за одговор на безбедносне инциденте Мајкрософта (MSRC) на [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
 
-Ako želite da pošaljete prijavu bez prijavljivanja, pošaljite email na [secure@microsoft.com](mailto:secure@microsoft.com). Ako je moguće, šifrujte svoju poruku našim PGP ključem; molimo vas da ga preuzmete sa [Microsoft Security Response Center PGP Key page](https://aka.ms/opensource/security/pgpkey).
+Ако више волите да пошаљете без пријављивања, пошаљите е-пошту на [secure@microsoft.com](mailto:secure@microsoft.com). Ако је могуће, шифрујте своју поруку нашим PGP кључем; молимо вас да га преузмете са [странице Microsoft Security Response Center PGP Key](https://aka.ms/opensource/security/pgpkey).
 
-Treba da dobijete odgovor u roku od 24 sata. Ako iz nekog razloga ne dobijete odgovor, molimo vas da se ponovo obratite putem email-a kako biste se uverili da smo primili vašu originalnu poruku. Dodatne informacije možete pronaći na [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
+Требало би да добијете одговор у року од 24 сата. Ако из неког разлога не добијете, молимо вас да нас контактирате путем е-поште да бисте били сигурни да смо примили вашу оригиналну поруку. Додатне информације можете наћи на [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
 
-Molimo vas da uključite tražene informacije navedene ispod (koliko god možete da obezbedite) kako biste nam pomogli da bolje razumemo prirodu i obim mogućeg problema:
+Молимо вас да укључите тражене информације наведене у наставку (колико год можете да пружите) да нам помогнете да боље разумемо природу и обим могућег проблема:
 
-  * Tip problema (npr. prekoračenje bafera, SQL injekcija, skriptovanje sa druge strane, itd.)
-  * Puni putanje izvornog fajla/fajlova povezanih sa manifestacijom problema
-  * Lokacija pogođenog izvornog koda (oznaka/grana/komit ili direktni URL)
-  * Svaka posebna konfiguracija potrebna za reprodukciju problema
-  * Korak-po-korak uputstva za reprodukciju problema
-  * Dokaz koncepta ili eksploatacioni kod (ako je moguće)
-  * Uticaj problema, uključujući kako napadač može iskoristiti problem
+  * Тип проблема (нпр. преливање бафера, SQL инјекција, cross-site скриптовање, итд.)
+  * Пуне путање изворне датотеке(а) везане за манифестацију проблема
+  * Локација погођеног изворног кода (ознака/грана/комит или директан URL)
+  * Свака посебна конфигурација потребна за репродукцију проблема
+  * Упутства корак по корак за репродукцију проблема
+  * Код за доказ концепта или експлоатацију (ако је могуће)
+  * Утицај проблема, укључујући како нападач може да искористи проблем
 
-Ove informacije će nam pomoći da brže procenimo vaš izveštaj.
+Ове информације ће нам помоћи да брже проценимо ваш извештај.
 
-Ako prijavljujete za nagradu za grešku, kompletniji izveštaji mogu doprineti većoj nagradi. Molimo vas da posetite našu [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) stranicu za više detalja o našim aktivnim programima.
+Ако пријављујете за програм награде за грешке, потпунији извештаји могу допринети већој награди. Молимо вас да посетите нашу [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) страницу за више детаља о нашим активним програмима.
 
-## Preferirani Jezici
+## Преферирани језици
 
-Preferiramo da sva komunikacija bude na engleskom jeziku.
+Препоручујемо да сва комуникација буде на енглеском језику.
 
-## Politika
+## Политика
 
-Microsoft prati princip [Koordinisanog Otkrivanja Ranjivosti](https://aka.ms/opensource/security/cvd).
+Мајкрософт следи принцип [Координисаног откривања пропуста](https://aka.ms/opensource/security/cvd).
 
-**Одрицање од одговорности**:
-Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални превод од стране људи. Не преузимамо одговорност за било какве неспоразуме или погрешна тумачења која произилазе из коришћења овог превода.
+**Одричање од одговорности**:  
+Овај документ је преведен користећи AI услугу превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да будемо прецизни, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква погрешна схватања или погрешне интерпретације које произилазе из коришћења овог превода.

@@ -2,80 +2,80 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:08:29+00:00",
+  "translation_date": "2025-06-25T17:18:44+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "it"
 }
 -->
-# Creazione di Applicazioni per la Generazione di Immagini
+# Costruire Applicazioni di Generazione di Immagini
 
-C'è più nei LLM che la semplice generazione di testo. È possibile anche generare immagini a partire da descrizioni testuali. Avere immagini come modalità può essere estremamente utile in diversi settori, dalla tecnologia medica, architettura, turismo, sviluppo di giochi e altro ancora. In questo capitolo, esamineremo i due modelli di generazione di immagini più popolari, DALL-E e Midjourney.
+C'è di più nei LLM rispetto alla generazione di testo. È anche possibile generare immagini da descrizioni testuali. Avere immagini come modalità può essere estremamente utile in numerosi settori come MedTech, architettura, turismo, sviluppo di giochi e altro ancora. In questo capitolo, esamineremo i due modelli di generazione di immagini più popolari, DALL-E e Midjourney.
 
 ## Introduzione
 
-In questa lezione, tratteremo:
+In questa lezione, copriremo:
 
-- La generazione di immagini e perché è utile.
+- Generazione di immagini e perché è utile.
 - DALL-E e Midjourney, cosa sono e come funzionano.
-- Come costruire un'app per la generazione di immagini.
+- Come costruire un'app di generazione di immagini.
 
-## Obiettivi di Apprendimento
+## Obiettivi di apprendimento
 
 Dopo aver completato questa lezione, sarai in grado di:
 
-- Costruire un'applicazione per la generazione di immagini.
+- Costruire un'applicazione di generazione di immagini.
 - Definire i confini per la tua applicazione con meta prompt.
 - Lavorare con DALL-E e Midjourney.
 
-## Perché costruire un'applicazione per la generazione di immagini?
+## Perché costruire un'applicazione di generazione di immagini?
 
-Le applicazioni per la generazione di immagini sono un ottimo modo per esplorare le capacità dell'Intelligenza Artificiale Generativa. Possono essere utilizzate, per esempio:
+Le applicazioni di generazione di immagini sono un ottimo modo per esplorare le capacità dell'Intelligenza Artificiale Generativa. Possono essere utilizzate, ad esempio, per:
 
-- **Modifica e sintesi delle immagini**. Puoi generare immagini per una varietà di casi d'uso, come la modifica e la sintesi delle immagini.
+- **Modifica e sintesi di immagini**. Puoi generare immagini per una varietà di casi d'uso, come la modifica e la sintesi di immagini.
 
-- **Applicate a una varietà di settori**. Possono essere utilizzate per generare immagini per una varietà di settori come Medtech, Turismo, Sviluppo di giochi e altro.
+- **Applicate a una varietà di settori**. Possono anche essere utilizzate per generare immagini per una varietà di settori come Medtech, Turismo, Sviluppo di giochi e altro.
 
 ## Scenario: Edu4All
 
-Come parte di questa lezione, continueremo a lavorare con la nostra startup, Edu4All. Gli studenti creeranno immagini per le loro valutazioni, esattamente quali immagini dipende dagli studenti, ma potrebbero essere illustrazioni per la loro fiaba o creare un nuovo personaggio per la loro storia o aiutarli a visualizzare le loro idee e concetti.
+Come parte di questa lezione, continueremo a lavorare con la nostra startup, Edu4All, in questa lezione. Gli studenti creeranno immagini per le loro valutazioni, esattamente quali immagini spetta agli studenti, ma potrebbero essere illustrazioni per la loro fiaba o creare un nuovo personaggio per la loro storia o aiutarli a visualizzare le loro idee e concetti.
 
-Ecco cosa potrebbero generare gli studenti di Edu4All, per esempio, se stanno lavorando in classe sui monumenti:
+Ecco cosa potrebbero generare gli studenti di Edu4All, ad esempio, se stanno lavorando in classe sui monumenti:
 
 usando un prompt come
 
-> "Cane accanto alla Torre Eiffel al sole del mattino presto"
+> "Cane accanto alla Torre Eiffel nella luce del sole del primo mattino"
 
-## Cos'è DALL-E e Midjourney?
+## Cosa sono DALL-E e Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) e [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sono due dei modelli di generazione di immagini più popolari, permettono di usare prompt per generare immagini.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) e [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sono due dei modelli di generazione di immagini più popolari, ti permettono di usare prompt per generare immagini.
 
 ### DALL-E
 
-Iniziamo con DALL-E, che è un modello di AI Generativa che genera immagini da descrizioni testuali.
+Iniziamo con DALL-E, che è un modello di Intelligenza Artificiale Generativa che genera immagini da descrizioni testuali.
 
-- **CLIP**, è un modello che genera embeddings, che sono rappresentazioni numeriche dei dati, da immagini e testo.
+- **CLIP**, è un modello che genera embedding, che sono rappresentazioni numeriche di dati, da immagini e testo.
 
-- **Diffused attention**, è un modello che genera immagini dagli embeddings. DALL-E è addestrato su un dataset di immagini e testo e può essere utilizzato per generare immagini da descrizioni testuali. Per esempio, DALL-E può essere utilizzato per generare immagini di un gatto con un cappello, o un cane con una cresta.
+- **Attenzione diffusa**, è un modello che genera immagini dagli embedding. DALL-E è addestrato su un dataset di immagini e testo e può essere utilizzato per generare immagini da descrizioni testuali. Ad esempio, DALL-E può essere utilizzato per generare immagini di un gatto con un cappello, o di un cane con una cresta.
 
 ### Midjourney
 
-Midjourney funziona in modo simile a DALL-E, genera immagini da prompt testuali. Midjourney può anche essere utilizzato per generare immagini usando prompt come “un gatto con un cappello”, o un “cane con una cresta”.
+Midjourney funziona in modo simile a DALL-E, genera immagini da prompt testuali. Midjourney, può anche essere utilizzato per generare immagini usando prompt come "un gatto con un cappello", o un "cane con una cresta".
 
 ## Come funzionano DALL-E e Midjourney
 
-Innanzitutto, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E è un modello di AI Generativa basato sull'architettura del trasformatore con un _trasformatore autoregressivo_.
+Prima, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E è un modello di Intelligenza Artificiale Generativa basato sull'architettura transformer con un _transformer autoregressivo_.
 
-Un _trasformatore autoregressivo_ definisce come un modello genera immagini da descrizioni testuali, genera un pixel alla volta, e poi usa i pixel generati per generare il prossimo pixel. Passando attraverso più livelli in una rete neurale, fino a che l'immagine è completa.
+Un _transformer autoregressivo_ definisce come un modello genera immagini da descrizioni testuali, genera un pixel alla volta, e poi utilizza i pixel generati per generare il pixel successivo. Passando attraverso più livelli in una rete neurale, fino a quando l'immagine è completa.
 
-Con questo processo, DALL-E controlla attributi, oggetti, caratteristiche e altro nell'immagine che genera. Tuttavia, DALL-E 2 e 3 hanno più controllo sull'immagine generata.
+Con questo processo, DALL-E, controlla attributi, oggetti, caratteristiche e altro nell'immagine che genera. Tuttavia, DALL-E 2 e 3 hanno più controllo sull'immagine generata.
 
 ## Costruire la tua prima applicazione di generazione di immagini
 
-Quindi, cosa serve per costruire un'applicazione di generazione di immagini? Hai bisogno delle seguenti librerie:
+Allora cosa serve per costruire un'applicazione di generazione di immagini? Hai bisogno delle seguenti librerie:
 
-- **python-dotenv**, si consiglia vivamente di usare questa libreria per mantenere i tuoi segreti in un file _.env_ lontano dal codice.
-- **openai**, questa libreria è quella che userai per interagire con l'API di OpenAI.
-- **pillow**, per lavorare con immagini in Python.
+- **python-dotenv**, si consiglia vivamente di utilizzare questa libreria per mantenere i tuoi segreti in un file _.env_ lontano dal codice.
+- **openai**, questa libreria è quella che utilizzerai per interagire con l'API OpenAI.
+- **pillow**, per lavorare con le immagini in Python.
 - **requests**, per aiutarti a fare richieste HTTP.
 
 1. Crea un file _.env_ con il seguente contenuto:
@@ -85,9 +85,9 @@ Quindi, cosa serve per costruire un'applicazione di generazione di immagini? Hai
    AZURE_OPENAI_API_KEY=<your key>
    ```
 
-   Trova queste informazioni nel portale Azure per la tua risorsa nella sezione "Keys and Endpoint".
+   Trova queste informazioni nel portale di Azure per la tua risorsa nella sezione "Chiavi e Endpoint".
 
-1. Raccogli le librerie sopra in un file chiamato _requirements.txt_ così:
+1. Raccogli le librerie sopra in un file chiamato _requirements.txt_ in questo modo:
 
    ```text
    python-dotenv
@@ -168,7 +168,7 @@ Quindi, cosa serve per costruire un'applicazione di generazione di immagini? Hai
 
 Spieghiamo questo codice:
 
-- Innanzitutto, importiamo le librerie di cui abbiamo bisogno, inclusa la libreria OpenAI, la libreria dotenv, la libreria requests e la libreria Pillow.
+- Per prima cosa, importiamo le librerie di cui abbiamo bisogno, inclusa la libreria OpenAI, la libreria dotenv, la libreria requests e la libreria Pillow.
 
   ```python
   import openai
@@ -178,14 +178,14 @@ Spieghiamo questo codice:
   import dotenv
   ```
 
-- Successivamente, carichiamo le variabili di ambiente dal file _.env_.
+- Successivamente, carichiamo le variabili d'ambiente dal file _.env_.
 
   ```python
   # import dotenv
   dotenv.load_dotenv()
   ```
 
-- Dopo di che, impostiamo l'endpoint, la chiave per l'API di OpenAI, la versione e il tipo.
+- Dopodiché, impostiamo l'endpoint, la chiave per l'API OpenAI, la versione e il tipo.
 
   ```python
   # Get endpoint and key from environment variables
@@ -209,7 +209,7 @@ Spieghiamo questo codice:
   )
   ```
 
-  Il codice sopra risponde con un oggetto JSON che contiene l'URL dell'immagine generata. Possiamo usare l'URL per scaricare l'immagine e salvarla in un file.
+  Il codice sopra risponde con un oggetto JSON che contiene l'URL dell'immagine generata. Possiamo utilizzare l'URL per scaricare l'immagine e salvarla in un file.
 
 - Infine, apriamo l'immagine e usiamo il visualizzatore di immagini standard per visualizzarla:
 
@@ -231,20 +231,20 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, è il prompt testuale che viene utilizzato per generare l'immagine. In questo caso, stiamo usando il prompt "Coniglio su cavallo, con un lecca-lecca, su un prato nebbioso dove crescono narcisi".
+- **prompt**, è il prompt testuale che viene utilizzato per generare l'immagine. In questo caso, stiamo usando il prompt "Coniglio su cavallo, con in mano un lecca-lecca, in un prato nebbioso dove crescono i narcisi".
 - **size**, è la dimensione dell'immagine che viene generata. In questo caso, stiamo generando un'immagine di 1024x1024 pixel.
 - **n**, è il numero di immagini che vengono generate. In questo caso, stiamo generando due immagini.
-- **temperature**, è un parametro che controlla la casualità dell'output di un modello di AI Generativa. La temperatura è un valore tra 0 e 1 dove 0 significa che l'output è deterministico e 1 significa che l'output è casuale. Il valore predefinito è 0.7.
+- **temperature**, è un parametro che controlla la casualità dell'output di un modello di Intelligenza Artificiale Generativa. La temperatura è un valore compreso tra 0 e 1 dove 0 significa che l'output è deterministico e 1 significa che l'output è casuale. Il valore predefinito è 0,7.
 
-Ci sono più cose che puoi fare con le immagini che tratteremo nella sezione successiva.
+Ci sono più cose che puoi fare con le immagini che copriremo nella sezione successiva.
 
 ## Capacità aggiuntive della generazione di immagini
 
-Hai visto finora come siamo stati in grado di generare un'immagine usando poche righe in Python. Tuttavia, ci sono più cose che puoi fare con le immagini.
+Finora hai visto come siamo stati in grado di generare un'immagine utilizzando poche righe in Python. Tuttavia, ci sono più cose che puoi fare con le immagini.
 
 Puoi anche fare quanto segue:
 
-- **Effettuare modifiche**. Fornendo un'immagine esistente una maschera e un prompt, puoi alterare un'immagine. Per esempio, puoi aggiungere qualcosa a una parte di un'immagine. Immagina la nostra immagine di coniglio, puoi aggiungere un cappello al coniglio. Come lo faresti è fornendo l'immagine, una maschera (identificando la parte dell'area per il cambiamento) e un prompt testuale per dire cosa dovrebbe essere fatto.
+- **Eseguire modifiche**. Fornendo un'immagine esistente, una maschera e un prompt, puoi alterare un'immagine. Ad esempio, puoi aggiungere qualcosa a una porzione di un'immagine. Immagina la nostra immagine del coniglio, puoi aggiungere un cappello al coniglio. Come lo faresti è fornendo l'immagine, una maschera (identificando la parte dell'area per il cambiamento) e un prompt testuale per dire cosa dovrebbe essere fatto.
 
   ```python
   response = openai.Image.create_edit(
@@ -257,9 +257,9 @@ Puoi anche fare quanto segue:
   image_url = response['data'][0]['url']
   ```
 
-  L'immagine base conterrebbe solo il coniglio ma l'immagine finale avrebbe il cappello sul coniglio.
+  L'immagine di base conterrebbe solo il coniglio, ma l'immagine finale avrebbe il cappello sul coniglio.
 
-- **Creare variazioni**. L'idea è che prendi un'immagine esistente e chiedi che vengano create variazioni. Per creare una variazione, fornisci un'immagine e un prompt testuale e codice come segue:
+- **Creare variazioni**. L'idea è che prendi un'immagine esistente e chiedi che vengano create delle variazioni. Per creare una variazione, fornisci un'immagine e un prompt testuale e il codice in questo modo:
 
   ```python
   response = openai.Image.create_variation(
@@ -274,15 +274,15 @@ Puoi anche fare quanto segue:
 
 ## Temperatura
 
-La temperatura è un parametro che controlla la casualità dell'output di un modello di AI Generativa. La temperatura è un valore tra 0 e 1 dove 0 significa che l'output è deterministico e 1 significa che l'output è casuale. Il valore predefinito è 0.7.
+La temperatura è un parametro che controlla la casualità dell'output di un modello di Intelligenza Artificiale Generativa. La temperatura è un valore compreso tra 0 e 1 dove 0 significa che l'output è deterministico e 1 significa che l'output è casuale. Il valore predefinito è 0,7.
 
-Vediamo un esempio di come funziona la temperatura, eseguendo questo prompt due volte:
+Esaminiamo un esempio di come funziona la temperatura, eseguendo questo prompt due volte:
 
-> Prompt : "Coniglio su cavallo, con un lecca-lecca, su un prato nebbioso dove crescono narcisi"
+> Prompt: "Coniglio su cavallo, con in mano un lecca-lecca, in un prato nebbioso dove crescono i narcisi"
 
 Ora eseguiamo lo stesso prompt solo per vedere che non otterremo la stessa immagine due volte:
 
-Come puoi vedere, le immagini sono simili, ma non uguali. Proviamo a cambiare il valore della temperatura a 0.1 e vediamo cosa succede:
+Come puoi vedere, le immagini sono simili, ma non uguali. Proviamo a cambiare il valore della temperatura a 0,1 e vediamo cosa succede:
 
 ```python
  generation_response = openai.Image.create(
@@ -294,9 +294,9 @@ Come puoi vedere, le immagini sono simili, ma non uguali. Proviamo a cambiare il
 
 ### Cambiare la temperatura
 
-Quindi proviamo a rendere la risposta più deterministica. Abbiamo potuto osservare dalle due immagini che abbiamo generato che nella prima immagine c'è un coniglio e nella seconda immagine c'è un cavallo, quindi le immagini variano notevolmente.
+Quindi proviamo a rendere la risposta più deterministica. Potremmo osservare dalle due immagini che abbiamo generato che nella prima immagine c'è un coniglio e nella seconda immagine c'è un cavallo, quindi le immagini variano notevolmente.
 
-Pertanto, cambiamo il nostro codice e impostiamo la temperatura a 0, così:
+Quindi cambiamo il nostro codice e impostiamo la temperatura a 0, in questo modo:
 
 ```python
 generation_response = openai.Image.create(
@@ -309,23 +309,23 @@ generation_response = openai.Image.create(
 
 Ora quando esegui questo codice, ottieni queste due immagini:
 
-Qui puoi vedere chiaramente come le immagini si somigliano di più.
+Qui puoi chiaramente vedere come le immagini si assomigliano di più.
 
 ## Come definire i confini per la tua applicazione con metaprompt
 
 Con la nostra demo, possiamo già generare immagini per i nostri clienti. Tuttavia, dobbiamo creare alcuni confini per la nostra applicazione.
 
-Per esempio, non vogliamo generare immagini che non siano sicure per il lavoro, o che non siano appropriate per i bambini.
+Ad esempio, non vogliamo generare immagini che non siano sicure per il lavoro, o che non siano appropriate per i bambini.
 
-Possiamo farlo con _metaprompt_. I metaprompt sono prompt testuali che vengono utilizzati per controllare l'output di un modello di AI Generativa. Per esempio, possiamo usare metaprompt per controllare l'output e garantire che le immagini generate siano sicure per il lavoro o appropriate per i bambini.
+Possiamo farlo con i _metaprompt_. I metaprompt sono prompt testuali che vengono utilizzati per controllare l'output di un modello di Intelligenza Artificiale Generativa. Ad esempio, possiamo utilizzare i metaprompt per controllare l'output e garantire che le immagini generate siano sicure per il lavoro o appropriate per i bambini.
 
 ### Come funziona?
 
-Ora, come funzionano i metaprompt?
+Ora, come funzionano i meta prompt?
 
-I metaprompt sono prompt testuali che vengono utilizzati per controllare l'output di un modello di AI Generativa, sono posizionati prima del prompt testuale e vengono utilizzati per controllare l'output del modello e incorporati nelle applicazioni per controllare l'output del modello. Incapsulando l'input del prompt e l'input del metaprompt in un unico prompt testuale.
+I meta prompt sono prompt testuali che vengono utilizzati per controllare l'output di un modello di Intelligenza Artificiale Generativa, sono posizionati prima del prompt testuale e vengono utilizzati per controllare l'output del modello e incorporati nelle applicazioni per controllare l'output del modello. Incapsulando l'input del prompt e l'input del meta prompt in un unico prompt testuale.
 
-Un esempio di metaprompt sarebbe il seguente:
+Un esempio di un meta prompt sarebbe il seguente:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -344,7 +344,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Ora, vediamo come possiamo usare i metaprompt nella nostra demo.
+Ora, vediamo come possiamo utilizzare i meta prompt nella nostra demo.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -371,11 +371,11 @@ Create an image of a bunny on a horse, holding a lollipop"
 
 Dal prompt sopra, puoi vedere come tutte le immagini create considerano il metaprompt.
 
-## Compito - abilitiamo gli studenti
+## Compito - diamo potere agli studenti
 
 Abbiamo introdotto Edu4All all'inizio di questa lezione. Ora è il momento di abilitare gli studenti a generare immagini per le loro valutazioni.
 
-Gli studenti creeranno immagini per le loro valutazioni contenenti monumenti, esattamente quali monumenti dipende dagli studenti. Gli studenti sono invitati a usare la loro creatività in questo compito per posizionare questi monumenti in contesti diversi.
+Gli studenti creeranno immagini per le loro valutazioni contenenti monumenti, esattamente quali monumenti spetta agli studenti. Gli studenti sono invitati a usare la loro creatività in questo compito per collocare questi monumenti in contesti diversi.
 
 ## Soluzione
 
@@ -453,9 +453,9 @@ except openai.InvalidRequestError as err:
 
 ## Ottimo lavoro! Continua il tuo apprendimento
 
-Dopo aver completato questa lezione, dai un'occhiata alla nostra [collezione di apprendimento sull'AI Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) per continuare a migliorare la tua conoscenza sull'AI Generativa!
+Dopo aver completato questa lezione, dai un'occhiata alla nostra [collezione di apprendimento sull'Intelligenza Artificiale Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) per continuare a migliorare le tue conoscenze sull'Intelligenza Artificiale Generativa!
 
-Vai alla Lezione 10 dove esamineremo come [costruire applicazioni AI con low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Passa alla Lezione 10 dove vedremo come [costruire applicazioni AI con low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-**Disclaimer**:
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per l'accuratezza, si prega di essere consapevoli che le traduzioni automatiche possono contenere errori o inesattezze. Il documento originale nella sua lingua madre dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia la traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua madre dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale umana. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall'uso di questa traduzione.

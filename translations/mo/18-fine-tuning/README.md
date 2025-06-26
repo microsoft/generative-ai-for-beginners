@@ -2,107 +2,108 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "68664f7e754a892ae1d8d5e2b7bd2081",
-  "translation_date": "2025-05-20T07:38:49+00:00",
+  "translation_date": "2025-06-26T00:33:19+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "mo"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.8487555c3e3225eefc1dc84e72c8e00bce1ee76db867a080628fb0fbb04aa0d2.mo.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![開源模型](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.mo.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
 
-# Tuning Model Language Wali
+# 微調您的大型語言模型
 
-Kutumia mifano mikubwa ya lugha kujenga programu za AI zinazozalisha inakuja na changamoto mpya. Tatizo kuu ni kuhakikisha ubora wa majibu (usahihi na umuhimu) katika maudhui yanayozalishwa na modeli kwa ombi la mtumiaji. Katika masomo yaliyopita, tulijadili mbinu kama uhandisi wa maelekezo na kizazi kilichoongezwa na utafutaji ambavyo vinajaribu kutatua tatizo kwa _kubadilisha pembejeo ya maelekezo_ kwa modeli iliyopo.
+使用大型語言模型來建立生成式人工智能應用程式會帶來新的挑戰。一個關鍵問題是確保模型對給定用戶請求生成的內容的回應質量（準確性和相關性）。在之前的課程中，我們討論了提示工程和檢索增強生成等技術，這些技術試圖通過修改現有模型的提示輸入來解決問題。
 
-Katika somo la leo, tunajadili mbinu ya tatu, **tuning**, ambayo inajaribu kushughulikia changamoto kwa _kufundisha upya modeli yenyewe_ na data ya ziada. Hebu tuingie katika maelezo.
+在今天的課程中，我們討論第三種技術，**微調**，它試圖通過用額外的數據重新訓練模型本身來解決挑戰。讓我們深入了解細節。
 
-## Malengo ya Kujifunza
+## 學習目標
 
-Somo hili linaanzisha dhana ya tuning kwa mifano ya lugha iliyofunzwa tayari, linaangalia faida na changamoto za mbinu hii, na linatoa mwongozo wa wakati na jinsi ya kutumia tuning ili kuboresha utendaji wa mifano yako ya AI inayozalisha.
+本課程介紹預訓練語言模型的微調概念，探討這種方法的優勢和挑戰，並提供何時以及如何使用微調來提高生成式人工智能模型性能的指導。
 
-Mwisho wa somo hili, unapaswa kuwa na uwezo wa kujibu maswali yafuatayo:
+在本課程結束時，您應該能夠回答以下問題：
 
-- Tuning ya mifano ya lugha ni nini?
-- Wakati gani, na kwa nini, tuning ni muhimu?
-- Ninawezaje kutune modeli iliyofunzwa tayari?
-- Je, tuning ina mipaka gani?
+- 什麼是語言模型的微調？
+- 何時以及為什麼微調有用？
+- 我如何微調預訓練模型？
+- 微調的限制是什麼？
 
-Tayari? Hebu tuanze.
+準備好了嗎？讓我們開始吧。
 
-## Mwongozo wa Picha
+## 圖解指南
 
-Unataka kupata picha kubwa ya kile tutakachofunika kabla ya kuingia ndani? Angalia mwongozo huu wa picha unaoelezea safari ya kujifunza kwa somo hili - kutoka kujifunza dhana kuu na motisha ya tuning, hadi kuelewa mchakato na mbinu bora za kutekeleza kazi ya tuning. Hili ni somo la kuvutia la uchunguzi, kwa hivyo usisahau kuangalia ukurasa wa [Rasilimali](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa viungo vya ziada vya kusaidia safari yako ya kujifunza kwa kujiongoza!
+想在深入了解之前掌握我們將涵蓋的整體概念嗎？查看這份圖解指南，它描述了本課程的學習旅程——從學習微調的核心概念和動機，到理解執行微調任務的過程和最佳實踐。這是一個引人入勝的探索主題，所以不要忘記查看[資源](./RESOURCES.md?WT.mc_id=academic-105485-koreyst)頁面以獲取更多支持自我導向學習的鏈接！
 
-![Mwongozo wa Picha kwa Tuning ya Mifano ya Lugha](../../../translated_images/18-fine-tuning-sketchnote.92733966235199dd260184b1aae3a84b877c7496bc872d8e63ad6fa2dd96bafc.mo.png)
+![語言模型微調圖解指南](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.mo.png)
 
-## Tuning ya Mifano ya Lugha ni nini?
+## 什麼是語言模型的微調？
 
-Kwa ufafanuzi, mifano mikubwa ya lugha imefunzwa _tayari_ kwenye idadi kubwa ya maandiko yaliyotolewa kutoka vyanzo mbalimbali ikiwa ni pamoja na mtandao. Kama tulivyojifunza katika masomo yaliyopita, tunahitaji mbinu kama _uhandisi wa maelekezo_ na _kizazi kilichoongezwa na utafutaji_ ili kuboresha ubora wa majibu ya modeli kwa maswali ya mtumiaji ("maelekezo").
+按定義，大型語言模型是從包括互聯網在內的多個來源獲取的大量文本中預訓練的。正如我們在之前的課程中所學，我們需要像提示工程和檢索增強生成這樣的技術來提高模型對用戶問題（“提示”）的回應質量。
 
-Mbinu maarufu ya uhandisi wa maelekezo inahusisha kutoa mwongozo zaidi kwa modeli juu ya kile kinachotarajiwa katika jibu aidha kwa kutoa _maelekezo_ (mwongozo wa wazi) au _kuipa mifano michache_ (mwongozo usio wazi). Hii inajulikana kama _ujifunzaji wa mifano michache_ lakini ina mipaka miwili:
+一種流行的提示工程技術涉及通過提供指令（明確指導）或提供一些例子（隱含指導）來給模型更多的指導，這被稱為少樣本學習，但它有兩個限制：
 
-- Vikomo vya tokeni vya modeli vinaweza kuzuia idadi ya mifano unayoweza kutoa, na kupunguza ufanisi.
-- Gharama za tokeni za modeli zinaweza kufanya kuwa ghali kuongeza mifano kwa kila maelekezo, na kupunguza kubadilika.
+- 模型令牌限制可能會限制您能提供的示例數量，並限制效果。
+- 模型令牌成本可能使每個提示添加示例變得昂貴，並限制靈活性。
 
-Tuning ni mazoezi ya kawaida katika mifumo ya kujifunza kwa mashine ambapo tunachukua modeli iliyofunzwa tayari na kuifundisha upya na data mpya ili kuboresha utendaji wake kwenye kazi maalum. Katika muktadha wa mifano ya lugha, tunaweza kutune modeli iliyofunzwa tayari _na seti ya mifano iliyochaguliwa kwa kazi au eneo la programu_ ili kuunda modeli **maalum** ambayo inaweza kuwa sahihi zaidi na muhimu kwa kazi au eneo hilo maalum. Faida ya ziada ya tuning ni kwamba inaweza pia kupunguza idadi ya mifano inayohitajika kwa ujifunzaji wa mifano michache - kupunguza matumizi ya tokeni na gharama zinazohusiana.
+微調是機器學習系統中的常見做法，我們採用預訓練模型並用新數據重新訓練以提高其在特定任務上的性能。在語言模型的背景下，我們可以用為特定任務或應用領域精心策劃的一組示例微調預訓練模型，以創建可能更準確和相關的**自定義模型**。微調的一個附帶好處是，它也可以減少少樣本學習所需的示例數量——減少令牌使用和相關成本。
 
-## Wakati gani na kwa nini tunapaswa kutune modeli?
+## 何時以及為什麼應該微調模型？
 
-Katika _muktadha huu_, tunapozungumzia tuning, tunazungumzia tuning ya **kusimamiwa** ambapo kufundisha upya kunafanywa kwa **kuongeza data mpya** ambayo haikuwa sehemu ya seti ya data ya mafunzo ya awali. Hii ni tofauti na mbinu ya tuning isiyosimamiwa ambapo modeli inafundishwa upya kwenye data ya awali, lakini kwa vigezo tofauti vya hyper.
+在這個背景下，當我們談論微調時，我們指的是**監督**微調，其中重新訓練是通過**添加新數據**來完成的，這些數據不在原始訓練數據集中。這與無監督微調方法不同，後者是在原始數據上重新訓練模型，但使用不同的超參數。
 
-Jambo muhimu la kukumbuka ni kwamba tuning ni mbinu ya juu ambayo inahitaji kiwango fulani cha utaalamu ili kupata matokeo yanayotarajiwa. Ikiwa imefanywa vibaya, inaweza kutoa maboresho yanayotarajiwa, na inaweza hata kuharibu utendaji wa modeli kwa eneo lako lengwa.
+關鍵是要記住微調是一種需要一定專業知識才能獲得預期結果的高級技術。如果操作不當，它可能無法提供預期的改進，甚至可能降低模型在目標領域的性能。
 
-Kwa hivyo, kabla ya kujifunza "jinsi" ya kutune mifano ya lugha, unahitaji kujua "kwa nini" unapaswa kuchukua njia hii, na "lini" kuanza mchakato wa tuning. Anza kwa kujiuliza maswali haya:
+因此，在學習“如何”微調語言模型之前，您需要知道“為什麼”您應該選擇這條路徑，以及“何時”開始微調過程。首先問自己這些問題：
 
-- **Matumizi**: Je, _matumizi_ yako ni yapi kwa tuning? Ni kipengele gani cha modeli ya sasa iliyofunzwa tayari unataka kuboresha?
-- **Njia mbadala**: Je, umejaribu _mbinu nyingine_ ili kufikia matokeo yanayotakiwa? Tumia kuzalisha msingi wa kulinganisha.
-  - Uhandisi wa maelekezo: Jaribu mbinu kama maelekezo ya mifano michache na mifano ya majibu ya maelekezo muhimu. Pima ubora wa majibu.
-  - Kizazi kilichoongezwa na utafutaji: Jaribu kuongeza maelekezo na matokeo ya maswali yaliyopatikana kwa kutafuta data yako. Pima ubora wa majibu.
-- **Gharama**: Je, umebaini gharama za tuning?
-  - Uwezo wa kutune - je, modeli iliyofunzwa tayari inapatikana kwa tuning?
-  - Juhudi - kwa kuandaa data ya mafunzo, kutathmini & kuboresha modeli.
-  - Kompyuta - kwa kuendesha kazi za tuning, na kutuma modeli iliyotunzwa
-  - Data - upatikanaji wa mifano ya ubora wa kutosha kwa athari ya tuning
-- **Faida**: Je, umethibitisha faida za tuning?
-  - Ubora - je, modeli iliyotunzwa ilizidi msingi?
-  - Gharama - je, inapunguza matumizi ya tokeni kwa kurahisisha maelekezo?
-  - Uwezo wa kupanua - je, unaweza kutumia tena modeli ya msingi kwa maeneo mapya?
+- **使用案例**：您的微調使用案例是什麼？您想改善當前預訓練模型的哪個方面？
+- **替代方案**：您是否嘗試過其他技術來達到預期結果？使用它們創建基準以進行比較。
+  - 提示工程：嘗試使用相關提示回應示例進行少樣本提示技術。評估回應質量。
+  - 檢索增強生成：嘗試用搜索數據檢索的查詢結果增強提示。評估回應質量。
+- **成本**：您是否識別了微調的成本？
+  - 可調性——預訓練模型是否可用於微調？
+  - 努力——準備訓練數據、評估和完善模型。
+  - 計算——運行微調作業和部署微調模型的成本
+  - 數據——是否有足夠的優質示例以影響微調
+- **收益**：您是否確認了微調的收益？
+  - 質量——微調模型是否超越了基準？
+  - 成本——是否通過簡化提示減少令牌使用？
+  - 可擴展性——您是否可以將基礎模型重新用於新領域？
 
-Kwa kujibu maswali haya, unapaswa kuwa na uwezo wa kuamua ikiwa tuning ni mbinu sahihi kwa matumizi yako. Kimsingi, mbinu ni sahihi tu ikiwa faida zinazidi gharama. Mara unapochagua kuendelea, ni wakati wa kufikiria _jinsi_ unavyoweza kutune modeli iliyofunzwa tayari.
+通過回答這些問題，您應該能夠決定微調是否是您的使用案例的正確方法。理想情況下，只有當收益超過成本時，該方法才有效。一旦您決定繼續，就該考慮如何微調預訓練模型。
 
-Unataka kupata maarifa zaidi juu ya mchakato wa kufanya maamuzi? Angalia [Kutune au kutotune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+想獲得更多決策過程的見解？觀看[是否要進行微調](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Tunawezaje kutune modeli iliyofunzwa tayari?
+## 我們如何微調預訓練模型？
 
-Ili kutune modeli iliyofunzwa tayari, unahitaji kuwa na:
+要微調預訓練模型，您需要：
 
-- modeli iliyofunzwa tayari ya kutune
-- seti ya data ya kutumia kwa tuning
-- mazingira ya mafunzo ya kuendesha kazi ya tuning
-- mazingira ya kutuma modeli iliyotunzwa
+- 一個可供微調的預訓練模型
+- 用於微調的數據集
+- 運行微調作業的訓練環境
+- 部署微調模型的託管環境
 
-## Tuning Katika Vitendo
+## 微調實踐
 
-Rasilimali zifuatazo zinatoa mafunzo hatua kwa hatua ili kukutembeza kupitia mfano halisi kwa kutumia modeli iliyochaguliwa na seti ya data iliyochaguliwa. Ili kufanya kazi kupitia mafunzo haya, unahitaji akaunti kwenye mtoa huduma maalum, pamoja na upatikanaji wa modeli na seti za data husika.
+以下資源提供逐步教程，帶您通過使用精選模型和精心策劃的數據集的真實示例。要完成這些教程，您需要在特定提供商上擁有一個帳戶，並能訪問相關模型和數據集。
 
-| Mtoa huduma  | Mafunzo                                                                                                                                                                       | Maelezo                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Jinsi ya kutune modeli za mazungumzo](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Jifunze kutune `gpt-35-turbo` kwa eneo maalum ("msaidizi wa mapishi") kwa kuandaa data ya mafunzo, kuendesha kazi ya tuning, na kutumia modeli iliyotunzwa kwa uchambuzi.                                                                                                                                                                                                                                              |
-| Azure OpenAI | [Mafunzo ya tuning ya GPT 3.5 Turbo](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Jifunze kutune `gpt-35-turbo-0613` **katika Azure** kwa kuchukua hatua za kuunda & kupakia data ya mafunzo, kuendesha kazi ya tuning. Tuma & tumia modeli mpya.                                                                                                                                                                                                                                                                 |
-| Hugging Face | [Kutune LLMs na Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Chapisho hili la blogu linakutembeza kutune _LLM wazi_ (mfano: `CodeLlama 7B`) kwa kutumia maktaba ya [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) na seti za data wazi [datasets](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) kwenye Hugging Face. |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Kutune LLMs na AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (au AutoTrain Advanced) ni maktaba ya python iliyotengenezwa na Hugging Face inayoruhusu tuning kwa kazi nyingi tofauti ikiwa ni pamoja na tuning ya LLM. AutoTrain ni suluhisho lisilo na msimbo na tuning inaweza kufanywa katika wingu lako mwenyewe, kwenye Hugging Face Spaces au kwa ndani. Inasaidia GUI ya wavuti, CLI na mafunzo kupitia faili za usanidi za yaml.                                                                               |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 提供商       | 教程                                                                                                                                                                       | 描述                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI       | [如何微調聊天模型](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                       | 學習微調`gpt-35-turbo`以特定領域（“食譜助手”）為例，準備訓練數據，運行微調作業，並使用微調模型進行推理。                                                                                                                                                                                                                                                                            |
+| Azure OpenAI | [GPT 3.5 Turbo微調教程](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst)         | 學習在**Azure**上微調`gpt-35-turbo-0613`模型，採取步驟創建和上傳訓練數據，運行微調作業。部署並使用新模型。                                                                                                                                                                                                                                                                             |
+| Hugging Face | [使用Hugging Face微調LLM](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                                     | 本博客文章帶您使用[transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst)庫和[Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst])以及Hugging Face上的開源[數據集](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst)微調開放LLM（例如`CodeLlama 7B`）。 |
+|              |                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 🤗 AutoTrain | [使用AutoTrain微調LLM](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                               | AutoTrain（或AutoTrain Advanced）是由Hugging Face開發的Python庫，允許針對多種不同任務進行微調，包括LLM微調。AutoTrain是一種無代碼解決方案，微調可以在您的雲端、Hugging Face Spaces或本地完成。它支持基於網頁的GUI、CLI和通過yaml配置文件進行訓練。                                                                                       |
+|              |                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-## Kazi
+## 作業
 
-Chagua moja ya mafunzo hapo juu na utembee kupitia. _Tunaweza kurudia toleo la mafunzo haya katika Notebooks za Jupyter katika repo hii kwa marejeleo tu. Tafadhali tumia vyanzo vya asili moja kwa moja kupata matoleo ya hivi karibuni_.
+選擇上述教程之一並完成它們。我們可能會在此倉庫中使用Jupyter Notebooks複製這些教程的版本僅供參考。請直接使用原始來源以獲取最新版本。
 
-## Kazi Nzuri! Endelea Kujifunza Kwako.
+## 幹得好！繼續您的學習。
 
-Baada ya kukamilisha somo hili, angalia mkusanyiko wetu wa Kujifunza AI Inayozalisha [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuimarisha maarifa yako ya AI Inayozalisha!
+完成本課程後，請查看我們的[生成式人工智能學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)以繼續提升您的生成式人工智能知識！
 
-Hongera!! Umekamilisha somo la mwisho kutoka kwa mfululizo wa v2 kwa kozi hii! Usikome kujifunza na kujenga. \*\*Angalia ukurasa wa [Rasilimali](RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa orodha ya mapendekezo ya ziada kwa mada hii tu.
+恭喜您！！您已完成本課程的v2系列的最後一課！不要停止學習和建造。**查看[資源](RESOURCES.md?WT.mc_id=academic-105485-koreyst)頁面以獲取更多僅針對此主題的建議。
 
-Mfululizo wetu wa v1 wa masomo pia umeboreshwa na kazi zaidi na dhana. Kwa hivyo chukua dakika kuboresha maarifa yako - na tafadhali [shiriki maswali na maoni yako](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ili kutusaidia kuboresha masomo haya kwa jamii.
+我們的v1系列課程也已更新了更多作業和概念。花點時間刷新您的知識——並請[分享您的問題和反饋](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)以幫助我們改善這些課程以服務社群。
 
-I'm sorry, but I'm not sure what you mean by "mo." Could you please clarify the language you would like the text translated into?
+**免責聲明**：
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤譯不承擔責任。

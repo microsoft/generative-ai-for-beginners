@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T06:42:38+00:00",
+  "translation_date": "2025-06-25T23:43:40+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "hu"
 }
 -->
 # Bevezetés a neurális hálózatokba: Perceptron
 
-Az egyik első kísérlet egy modern neurális hálózat megvalósítására Frank Rosenblatt nevéhez fűződik, aki a Cornell Aeronautical Laboratoryban dolgozott 1957-ben. Ez egy hardveres megvalósítás volt, amit "Mark-1"-nek hívtak, és primitív geometriai alakzatok, például háromszögek, négyzetek és körök felismerésére tervezték.
+Az első próbálkozások egy modern neurális hálózathoz hasonló rendszer megvalósítására Frank Rosenblatt nevéhez fűződnek, aki a Cornell Aeronautical Laboratory-nál dolgozott 1957-ben. Ez egy hardveres megvalósítás volt, amelyet "Mark-1"-nek neveztek, és amelyet primitív geometriai alakzatok, például háromszögek, négyzetek és körök felismerésére terveztek.
 
 |      |      |
 |--------------|-----------|
@@ -17,15 +17,15 @@ Az egyik első kísérlet egy modern neurális hálózat megvalósítására Fra
 
 > Képek a Wikipédiáról
 
-A bemeneti kép egy 20x20 fotocella mátrixként volt reprezentálva, így a neurális hálózatnak 400 bemenete és egy bináris kimenete volt. Egy egyszerű hálózat egy neuront tartalmazott, amit **küszöb logikai egységnek** is neveztek. A neurális hálózat súlyai potenciométerekként működtek, amelyek kézi beállítást igényeltek a tanulási fázis során.
+A bemeneti kép egy 20x20-as fotocella mátrixként volt reprezentálva, így a neurális hálózatnak 400 bemenete és egy bináris kimenete volt. Egy egyszerű hálózat egy neuront tartalmazott, amelyet **küszöblogikai egységnek** is neveztek. A neurális hálózat súlyai potenciométerként működtek, amelyeket kézzel kellett beállítani a tanulási fázis során.
 
 > ✅ A potenciométer egy olyan eszköz, amely lehetővé teszi a felhasználó számára, hogy beállítsa egy áramkör ellenállását.
 
-> A New York Times abban az időben így írt a perceptronról: *az elektronikus számítógép embriója, amelyről [a Haditengerészet] azt várja, hogy képes lesz járni, beszélni, látni, írni, reprodukálni önmagát és tudatában lenni a létezésének.*
+> A New York Times akkoriban ezt írta a perceptronról: *az elektronikus számítógép embriója, amelyről [a Haditengerészet] azt várja, hogy képes lesz járni, beszélni, látni, írni, önmagát reprodukálni és tudatában lenni a létezésének.*
 
 ## Perceptron modell
 
-Tegyük fel, hogy N jellemzőnk van a modellünkben, ebben az esetben a bemeneti vektor egy N méretű vektor lenne. A perceptron egy **bináris osztályozási** modell, azaz két osztályt tud megkülönböztetni a bemeneti adatok közül. Feltételezzük, hogy minden bemeneti vektor x esetén a perceptronunk kimenete +1 vagy -1 lesz, az osztálytól függően. A kimenet a következő képlet alapján kerül kiszámításra:
+Tegyük fel, hogy N jellemzőnk van a modellünkben, ebben az esetben a bemeneti vektor egy N méretű vektor lesz. A perceptron egy **bináris osztályozási** modell, azaz két osztály közötti különbségtételre képes a bemeneti adatok alapján. Feltételezzük, hogy minden bemeneti vektor x esetében a perceptron kimenete vagy +1, vagy -1 lesz, az osztálytól függően. A kimenetet az alábbi képlet alapján számítjuk ki:
 
 y(x) = f(w<sup>T</sup>x)
 
@@ -33,24 +33,24 @@ ahol f egy lépés aktivációs függvény
 
 ## A perceptron tanítása
 
-A perceptron tanításához meg kell találnunk egy súlyvektort w, amely a legtöbb értéket helyesen osztályozza, azaz a legkisebb **hibát** eredményezi. Ez a hiba a **perceptron kritérium** alapján van definiálva a következő módon:
+A perceptron tanításához meg kell találnunk egy súlyvektort w, amely a legtöbb értéket helyesen osztályozza, azaz a legkisebb **hibát** eredményezi. Ezt a hibát a **perceptron kritérium** határozza meg a következő módon:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 ahol:
 
-* az összeg azoknál a tanulási adatpontoknál i van véve, amelyek helytelen osztályozást eredményeznek
-* x<sub>i</sub> a bemeneti adat, és t<sub>i</sub> vagy -1 vagy +1 a negatív és pozitív példák esetén.
+* az összeg azokra a tanulási adatpontokra vonatkozik i, amelyek hibás osztályozást eredményeznek
+* x<sub>i</sub> a bemeneti adat, és t<sub>i</sub> -1 vagy +1 a negatív és pozitív példák esetében.
 
-Ezt a kritériumot a súlyok w függvényének tekintjük, és minimalizálnunk kell. Gyakran egy **gradiens csökkenés** nevű módszert alkalmaznak, amely során néhány kezdeti súllyal w<sup>(0)</sup> kezdünk, majd minden lépésnél frissítjük a súlyokat a következő képlet szerint:
+Ezt a kritériumot a súlyok w függvényeként tekintjük, és minimalizálnunk kell. Gyakran egy **gradiens csökkenés** nevű módszert alkalmaznak, amelyben néhány kezdeti súlyokkal w<sup>(0)</sup> kezdünk, majd minden lépésben frissítjük a súlyokat az alábbi képlet szerint:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Itt η az úgynevezett **tanulási ráta**, és ∇E(w) jelöli az E **gradiensét**. Miután kiszámítjuk a gradienset, a következőképpen végzünk:
+Itt η az úgynevezett **tanulási ráta**, és ∇E(w) az E **gradiensét** jelöli. Miután kiszámítottuk a gradienset, az alábbi képletet kapjuk:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
-Az algoritmus Pythonban így néz ki:
+A Python algoritmus így néz ki:
 
 ```python
 def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
@@ -74,24 +74,24 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Következtetés
 
-Ebben a leckében megismerkedtél a perceptronnal, amely egy bináris osztályozási modell, és megtanultad, hogyan lehet tanítani egy súlyvektor használatával.
+Ebben a leckében megismerkedtél a perceptronnal, amely egy bináris osztályozási modell, és megtanultad, hogyan kell tanítani egy súlyvektor használatával.
 
 ## 🚀 Kihívás
 
-Ha szeretnéd kipróbálni saját perceptron létrehozását, próbáld ki ezt a labort a Microsoft Learn-en, amely az Azure ML tervezőt használja.
+Ha szeretnéd kipróbálni saját perceptronod építését, próbáld ki ezt a labort a Microsoft Learn oldalon, amely az Azure ML tervezőt használja.
 
 ## Áttekintés és önálló tanulás
 
-Ha szeretnéd látni, hogyan használhatjuk a perceptront játékos problémák és valós életbeli problémák megoldására, és folytatni a tanulást - menj a Perceptron jegyzetfüzethez.
+Ha szeretnéd látni, hogyan lehet perceptront használni egy játékszerű probléma, valamint valós életbeli problémák megoldására, és szeretnéd folytatni a tanulást, látogass el a Perceptron jegyzetfüzetbe.
 
-Itt van egy érdekes cikk a perceptronokról is.
+Itt egy érdekes cikk is található a perceptronokról.
 
 ## Feladat
 
-Ebben a leckében megvalósítottunk egy perceptront bináris osztályozási feladathoz, és használtuk két kézzel írott számjegy közötti osztályozásra. Ebben a laborban arra kérünk, hogy teljesen oldd meg a számjegyosztályozás problémáját, azaz határozd meg, melyik számjegy valószínűleg megfelel egy adott képnek.
+Ebben a leckében megvalósítottunk egy perceptront bináris osztályozási feladathoz, és használtuk két kézzel írt számjegy osztályozására. Ebben a laborban arra kérünk, hogy oldd meg a számjegy osztályozás problémáját teljes egészében, azaz határozd meg, melyik számjegy valószínűleg megfelel egy adott képnek.
 
-* Útmutatások
+* Utasítások
 * Jegyzetfüzet
 
-**Felelősség kizárása**:  
-Ez a dokumentum a [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén professzionális emberi fordítás ajánlott. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félremagyarázásokért.
+**Jogi nyilatkozat**:  
+Ezt a dokumentumot a [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítószolgáltatás segítségével fordítottuk le. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum anyanyelvén tekintendő a hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félremagyarázásokért.

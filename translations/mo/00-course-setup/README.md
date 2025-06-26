@@ -2,71 +2,71 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "9f4785899ee92500f524b4acb26e3bb3",
-  "translation_date": "2025-05-19T12:19:19+00:00",
+  "translation_date": "2025-06-25T08:39:09+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "mo"
 }
 -->
-# Kursusni qanday boshlash kerak
+# 開始這門課程
 
-Sizni ushbu kursni boshlashingiz va Generativ AI bilan nima qurishga ilhomlanishingizni ko'rishdan juda xursandmiz!
+我們非常期待您開始這門課程，看看您會被生成式 AI 激發出什麼創意！
 
-Muvaffaqiyatingizni ta'minlash uchun, ushbu sahifada sozlash qadamlarini, texnik talablarni va kerak bo'lsa yordam olish joylarini ko'rsatamiz.
+為了確保您的成功，這頁面概述了設置步驟、技術要求以及需要幫助時的求助途徑。
 
-## Sozlash qadamlar
+## 設置步驟
 
-Ushbu kursni boshlash uchun quyidagi qadamlarni bajarishingiz kerak bo'ladi.
+要開始這門課程，您需要完成以下步驟。
 
-### 1. Ushbu repozitoriyani fork qilish
+### 1. Fork 此 Repo
 
-[Fork qiling](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) ushbu repozitoriyani o'zingizning GitHub hisobingizga, kodni o'zgartirish va vazifalarni bajarish imkoniyatiga ega bo'lishingiz uchun. Shuningdek, [yulduzcha qo'yishingiz](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) ham mumkin, bu repozitoriyani va unga o'xshashlarni topishni osonlashtiradi.
+[Fork 整個 repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst)到您自己的 GitHub 帳戶，以便能夠更改任何代碼並完成挑戰。您也可以[star (🌟) 此 repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)，以便更容易找到它和相關的 repo。
 
-### 2. Codespace yaratish
+### 2. 創建一個 codespace
 
-Kod ishlatishda biror bog'liqlik muammolaridan qochish uchun, biz ushbu kursni [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) da ishlatishni tavsiya etamiz.
+為了避免運行代碼時的依賴問題，我們建議在 [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst)中運行此課程。
 
-Bu sizning fork qilingan repozitoriyangizda `Code` opsiyasini tanlash va **Codespaces** opsiyasini tanlash orqali yaratiladi.
+這可以通過在您 fork 的版本中選擇 `Code` 選項並選擇 **Codespaces** 選項來創建。
 
-![Codespace yaratish tugmalari ko'rsatilgan dialog](../../../00-course-setup/images/who-will-pay.webp)
+![顯示創建 codespace 按鈕的對話框](../../../00-course-setup/images/who-will-pay.webp)
 
-### 3. API kalitlaringizni saqlash
+### 3. 存儲您的 API 密鑰
 
-Har qanday turdagi ilovalarni yaratishda API kalitlaringizni xavfsiz va ishonchli saqlash muhimdir. Biz API kalitlarini to'g'ridan-to'g'ri kodda saqlamaslikni tavsiya etamiz. Ushbu ma'lumotlarni jamoat repozitoriyasiga qo'shish xavfsizlik muammolariga va yomon niyatli shaxslar tomonidan ishlatilsa, keraksiz xarajatlarga olib kelishi mumkin.
-Mana Python uchun `.env` faylini yaratish va `GITHUB_TOKEN` qo'shish bo'yicha bosqichma-bosqich qo'llanma:
+在構建任何類型的應用程序時，保持您的 API 密鑰安全非常重要。我們建議不要直接將任何 API 密鑰存儲在您的代碼中。將這些詳細信息提交到公共存儲庫可能會導致安全問題，甚至會被不良分子使用而產生不必要的費用。
+以下是一個關於如何為 Python 創建 `.env` 文件並添加 `GITHUB_TOKEN` 的分步指南：
 
-1. **Loyihangiz katalogiga o'ting**: Terminal yoki buyruqlar satrini oching va `.env` faylini yaratmoqchi bo'lgan loyihangizning ildiz katalogiga o'ting.
+1. **導航到您的項目目錄**：打開您的終端或命令提示符，導航到您要創建 `.env` 文件的項目根目錄。
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **`.env` Faylini yarating**: Sevimli matn muharriringizdan foydalanib, `.env` nomli yangi fayl yarating. Agar buyruqlar satridan foydalansangiz, `touch` (on Unix-based systems) or `echo` (Windowsda):
+2. **創建 `.env` 文件**：使用您喜愛的文本編輯器創建一個名為 `.env` 的新文件。如果您使用命令行，您可以使用 `touch` (on Unix-based systems) or `echo`（在 Windows 上）：
 
-   Unix tizimlari:
+   Unix 系統：
    ```bash
    touch .env
    ```
 
-   Windows:
+   Windows：
    ```cmd
    echo . > .env
    ```
 
-3. **`.env` Faylini tahrirlash**: `.env` faylini matn muharririda (masalan, VS Code, Notepad++ yoki boshqa muharrir) oching. Quyidagi qatorni faylga qo'shing, `your_github_token_here` ni haqiqiy GitHub tokeningiz bilan almashtiring:
+3. **編輯 `.env` 文件**：在文本編輯器中打開 `.env` 文件（例如，VS Code、Notepad++ 或其他編輯器）。在文件中添加以下行，將 `your_github_token_here` 替換為您的實際 GitHub 令牌：
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **Faylni saqlang**: O'zgarishlarni saqlang va matn muharririni yoping.
+4. **保存文件**：保存更改並關閉文本編輯器。
 
-5. **`python-dotenv`**: If you haven't already, you'll need to install the `python-dotenv` paketini o'rnating**: Python ilovangizda `.env` faylidan muhit o'zgaruvchilarini yuklash uchun foydalaning. Uni `pip` yordamida o'rnatishingiz mumkin:
+5. **安裝 `python-dotenv`**: If you haven't already, you'll need to install the `python-dotenv` 包以從 `.env` 文件中加載環境變量到您的 Python 應用程序。您可以使用 `pip` 來安裝它：
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Python skriptingizda muhit o'zgaruvchilarini yuklang**: `.env` faylidan muhit o'zgaruvchilarini yuklash uchun `python-dotenv` paketidan foydalaning:
+6. **在您的 Python 腳本中加載環境變量**：在您的 Python 腳本中，使用 `python-dotenv` 包從 `.env` 文件中加載環境變量：
 
    ```python
    from dotenv import load_dotenv
@@ -81,35 +81,35 @@ Mana Python uchun `.env` faylini yaratish va `GITHUB_TOKEN` qo'shish bo'yicha bo
    print(github_token)
    ```
 
-Mana shu! Siz `.env` faylini yaratdingiz, GitHub tokeningizni qo'shdingiz va uni Python ilovangizga yukladingiz.
+就是這樣！您已成功創建了 `.env` 文件，添加了您的 GitHub 令牌，並將其加載到您的 Python 應用程序中。
 
-## Kompyuteringizda lokal ishlatish
+## 如何在您的電腦上本地運行
 
-Kodlarni kompyuteringizda lokal ishlatish uchun, sizda [Python versiyasi](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) o'rnatilgan bo'lishi kerak.
+要在您的電腦上本地運行代碼，您需要安裝某個版本的 [Python](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst)。
 
-Shundan so'ng repozitoriyani ishlatish uchun uni klonlashingiz kerak:
+然後使用存儲庫，您需要克隆它：
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Hammasini tekshirib ko'rganingizdan so'ng, boshlashingiz mumkin!
+一旦您檢出所有內容，您就可以開始了！
 
-## Ixtiyoriy qadamlar
+## 可選步驟
 
-### Miniconda o'rnatish
+### 安裝 Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) bu [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python va bir nechta paketlarni o'rnatish uchun engil o'rnatuvchi hisoblanadi.
-Conda o'zi paket menejeri bo'lib, turli Python [**virtual muhitlarini**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) va paketlarni o'rnatish va ularga o'tishni osonlashtiradi. Shuningdek, `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) 是一個輕量級的安裝程序，用於安裝 [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst)、Python，以及一些包。
+Conda 本身是一個包管理器，可以輕鬆設置和切換不同的 Python [**虛擬環境**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst)和包。它還有助於安裝不通過 `pip`.
 
 You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
 
 With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
 
-Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml` orqali mavjud bo'lmagan paketlarni o'rnatishda ham foydali bo'ladi.
+Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml` 提供的包。
 
-Quyidagi kod parchasini muhit faylingizga qo'shing:
+繼續用下面的片段填充您的環境文件：
 
 ```yml
 name: <environment-name>
@@ -126,52 +126,52 @@ dependencies:
 
 ```
 
-Agar conda ishlatishda xatolar yuzaga kelsa, Microsoft AI kutubxonalarini quyidagi buyruqni terminalda ishlatib qo'lda o'rnatishingiz mumkin.
+如果您發現使用 conda 時出現錯誤，您可以手動使用以下命令在終端中安裝 Microsoft AI 庫。
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-Muhit fayli bizga kerak bo'lgan bog'liqliklarni belgilaydi. `<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` bu Pythonning so'nggi asosiy versiyasi.
+環境文件指定了我們需要的依賴項。`<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` 是 Python 的最新主要版本。
 
-Shundan so'ng, quyidagi buyruqlarni buyruq satrida/terminalda ishlatib Conda muhitini yaratishingiz mumkin.
+完成後，您可以繼續運行以下命令來創建您的 Conda 環境：
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
 conda activate ai4beg
 ```
 
-Agar muammolarga duch kelsangiz, [Conda muhitlari qo'llanmasiga](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) murojaat qiling.
+如果您遇到任何問題，請參考 [Conda 環境指南](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst)。
 
-### Python qo'llab-quvvatlash kengaytmasi bilan Visual Studio Code'dan foydalanish
+### 使用 Python 支持擴展的 Visual Studio Code
 
-Ushbu kurs uchun [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) muharriridan [Python qo'llab-quvvatlash kengaytmasi](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) bilan foydalanishni tavsiya etamiz. Biroq, bu tavsiya bo'lib, majburiy emas.
+我們建議使用 [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) 編輯器，並安裝 [Python 支持擴展](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) 來進行此課程。這只是建議，而不是絕對要求。
 
-> **Eslatma**: Kurs repozitoriyasini VS Code'da ochib, loyihani konteyner ichida sozlash imkoniyatiga ega bo'lasiz. Buning sababi kurs repozitoriyasida mavjud [maxsus `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) katalogidir. Bu haqda keyinroq ko'proq ma'lumot.
+> **注意**：通過在 VS Code 中打開課程存儲庫，您可以選擇在容器中設置項目。這是因為課程存儲庫中有一個 [特殊的 `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) 目錄。稍後會有更多介紹。
 
-> **Eslatma**: Agar repozitoriyani VS Code'da klonlab ochsangiz, u avtomatik ravishda Python qo'llab-quvvatlash kengaytmasini o'rnatishni taklif qiladi.
+> **注意**：一旦您克隆並在 VS Code 中打開目錄，它會自動建議您安裝 Python 支持擴展。
 
-> **Eslatma**: Agar VS Code repozitoriyani konteynerda qayta ochishni taklif qilsa, lokal o'rnatilgan Python versiyasidan foydalanish uchun ushbu taklifni rad eting.
+> **注意**：如果 VS Code 建議您在容器中重新打開存儲庫，請拒絕此請求以便使用本地安裝的 Python 版本。
 
-### Brauzerda Jupyter'dan foydalanish
+### 在瀏覽器中使用 Jupyter
 
-Siz loyihada [Jupyter muhitida](https://jupyter.org?WT.mc_id=academic-105485-koreyst) to'g'ridan-to'g'ri brauzeringizda ishlashingiz mumkin. Klassik Jupyter va [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) avtomatik to'ldirish, kodni yoritish kabi xususiyatlari bilan juda yoqimli rivojlanish muhitini taqdim etadi.
+您也可以直接在瀏覽器中使用 [Jupyter 環境](https://jupyter.org?WT.mc_id=academic-105485-koreyst)來完成項目。經典 Jupyter 和 [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst)都提供了相當愉快的開發環境，具有自動完成、代碼高亮等功能。
 
-Jupyter'ni lokal ishga tushirish uchun terminal/buyruqlar satriga o'ting, kurs katalogiga o'ting va quyidagilarni bajaring:
+要在本地啟動 Jupyter，請打開終端/命令行，導航到課程目錄，並執行：
 
 ```bash
 jupyter notebook
 ```
 
-yoki
+或者
 
 ```bash
 jupyterhub
 ```
 
-Bu Jupyter instansiyasini ishga tushiradi va unga kirish uchun URL buyruqlar satri oynasida ko'rsatiladi.
+這將啟動一個 Jupyter 實例，訪問它的 URL 將顯示在命令行窗口中。
 
-URL'ga kirganingizda, kurs rejasini ko'rishingiz va har qanday `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
+一旦您訪問該 URL，您應該能看到課程大綱並能導航到任何 `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
 
 ### Running in a container
 
@@ -185,40 +185,41 @@ The course has 6 concept lessons and 6 coding lessons.
 
 For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` fayliga o'tishingiz, kod va chiqishlarni ko'rishingiz mumkin.
+While you wait for your application to be processed, each coding lesson also includes a `README.md` 文件，您可以查看代碼和輸出。
 
-## Birinchi marta Azure OpenAI xizmatidan foydalanish
+## 第一次使用 Azure OpenAI 服務
 
-Agar bu sizning birinchi marta Azure OpenAI xizmatidan foydalanishingiz bo'lsa, [Azure OpenAI xizmat resursini yaratish va joylashtirish](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) bo'yicha ushbu qo'llanmaga amal qiling.
+如果這是您第一次使用 Azure OpenAI 服務，請按照此指南了解如何[創建和部署 Azure OpenAI 服務資源](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)。
 
-## Birinchi marta OpenAI API'dan foydalanish
+## 第一次使用 OpenAI API
 
-Agar bu sizning birinchi marta OpenAI API'dan foydalanishingiz bo'lsa, [interfeysni yaratish va foydalanish](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst) bo'yicha qo'llanmaga amal qiling.
+如果這是您第一次使用 OpenAI API，請按照指南了解如何[創建和使用界面](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)。
 
-## Boshqa o'quvchilar bilan tanishing
+## 與其他學員見面
 
-Biz rasmiy [AI Community Discord serverimizda](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) boshqa o'quvchilar bilan uchrashish uchun kanallar yaratdik. Bu boshqa o'xshash fikrlaydigan tadbirkorlar, quruvchilar, talabalar va Generativ AI'da rivojlanishni istagan har qanday kishilar bilan tarmoq tuzishning ajoyib usuli.
+我們在官方 [AI 社區 Discord 服務器](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)中創建了頻道，以便與其他學員見面。這是一個與其他志同道合的企業家、建造者、學生和任何希望在生成式 AI 中提升的人交流的好方式。
 
-[![Discord kanaliga qo'shiling](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![加入 Discord 頻道](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-Loyiha jamoasi ham ushbu Discord serverida bo'ladi va har qanday o'quvchilarga yordam beradi.
+項目團隊也會在這個 Discord 服務器上幫助任何學員。
 
-## Hissa qo'shish
+## 貢獻
 
-Ushbu kurs ochiq manba tashabbusidir. Agar yaxshilanishi yoki muammolarni ko'rsangiz, iltimos, [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) yarating yoki [GitHub masalasi](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) qoldiring.
+這門課程是一個開源項目。如果您看到改進或問題的地方，請創建 [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) 或記錄 [GitHub 問題](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)。
 
-Loyiha jamoasi barcha hissalarni kuzatib boradi. Ochiq manbaga hissa qo'shish Generativ AI'da karyerangizni qurishning ajoyib usuli hisoblanadi.
+項目團隊將跟踪所有貢獻。貢獻開源是構建您在生成式 AI 領域的職業生涯的一種驚人的方式。
 
-Ko'pgina hissalar sizdan Contributor License Agreement (CLA) ni qabul qilishni talab qiladi, bu sizga hissa qo'shish huquqiga ega ekanligingizni va bizga sizning hissangizni ishlatish huquqlarini berishingizni bildiradi. Tafsilotlar uchun [CLA, Contributor License Agreement veb-saytiga](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) tashrif buyuring.
+大多數貢獻要求您同意貢獻者許可協議 (CLA)，聲明您有權並實際授予我們使用您的貢獻的權利。詳情請訪問 [CLA，貢獻者許可協議網站](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst)。
 
-Muhim: ushbu repozitoriyada matnni tarjima qilganda, iltimos, mashina tarjimasidan foydalanmasligingizga ishonch hosil qiling. Biz tarjimalarni jamoa orqali tekshiramiz, shuning uchun faqat siz yaxshi biladigan tillarda tarjima qilish uchun ko'ngilli bo'ling.
+重要提示：翻譯此 repo 中的文本時，請確保不要使用機器翻譯。我們將通過社區驗證翻譯，因此請僅在您精通的語言中自願翻譯。
 
-Pull request yuborganingizda, CLA-bot avtomatik ravishda sizdan CLA taqdim etishingiz kerakmi yoki yo'qligini aniqlaydi va PR'ni tegishli ravishda belgilaydi (masalan, yorliq, izoh). Bot tomonidan berilgan ko'rsatmalarga amal qiling. Siz buni faqat bir marta bizning CLA'dan foydalanadigan barcha repozitoriyalar bo'yicha qilishingiz kerak bo'ladi.
+當您提交拉取請求時，CLA 機器人將自動確定您是否需要提供 CLA 並適當地裝飾 PR（例如，標籤、評論）。只需按照機器人提供的指示進行操作即可。您只需在使用我們的 CLA 的所有存儲庫中執行一次此操作。
 
-Ushbu loyiha [Microsoft Ochiq Manba Axloq Kodeksini](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) qabul qildi. Qo'shimcha ma'lumot uchun Axloq Kodeksi FAQ'ini o'qing yoki qo'shimcha savollar yoki fikr-mulohazalar bilan [Email opencode](opencode@microsoft.com) ga murojaat qiling.
+此項目已採用 [Microsoft 開源行為準則](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst)。欲了解更多信息，請閱讀行為準則 FAQ 或聯繫 [Email opencode](opencode@microsoft.com) 提出任何其他問題或意見。
 
-## Boshlash
+## 開始吧
 
-Endi siz ushbu kursni yakunlash uchun kerakli qadamlarni bajardingiz, keling, [Generativ AI va LLM'lar kirish](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) bilan boshlaymiz.
+現在您已完成完成此課程所需的步驟，讓我們通過 [生成式 AI 和 LLMs 介紹](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)開始吧。
 
-I'm sorry, but I am not able to provide translations into the "mo" language, as it is not a recognized language code. If you meant a different language or need assistance with another request, please let me know!
+**免責聲明**：
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文檔案作為權威來源。對於重要資訊，建議使用專業人工翻譯。我們不對使用此翻譯而產生的任何誤解或誤釋承擔責任。

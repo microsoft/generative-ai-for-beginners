@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:08:28+00:00",
+  "translation_date": "2025-06-25T06:58:00+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "en"
 }
@@ -60,7 +60,7 @@ To make sure that your links are working properly simply use VS code to check th
 
 For example, when you hover over any link in your files you will be prompted to follow the link by pressing on **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.en.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.en.png)
 
 If you click on a link and it's not working locally then, surely it will trigger the workflow and won't work on GitHub.
 
@@ -68,7 +68,7 @@ To fix this issue, try to type the link with the help of VS code.
 
 When you type `./` or `../` VS code will prompt you to choose from the available options according to what you typed.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.en.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.en.png)
 
 Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
 
@@ -82,7 +82,7 @@ To make sure your relative paths have tracking in them simply check for the foll
 
 If not, you may get the following error.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.en.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.en.png)
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
 
@@ -96,7 +96,7 @@ To make sure your URLs have tracking in them simply check for the following text
 
 If not, you may get the following error.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.en.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.en.png)
 
 To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
 
@@ -110,7 +110,7 @@ To make sure your URLs don't have country locale in them simply check for the fo
 
 If not, you may get the following error.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.en.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.en.png)
 
 To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
 
@@ -118,5 +118,7 @@ Once you remove the country locale, save, and push your changes the workflow wil
 
 Congratulations! We will get back to you as soon as possible with feedback about your contribution.
 
+Sure, here's the translation of the text to English:
+
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

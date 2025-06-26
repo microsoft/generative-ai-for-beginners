@@ -2,62 +2,61 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f12faf55ab620aef9f6761679b7ac68b",
-  "translation_date": "2025-05-19T13:00:55+00:00",
+  "translation_date": "2025-06-25T09:30:20+00:00",
   "source_file": "00-course-setup/SETUP.md",
   "language_code": "sr"
 }
 -->
-# Podesite svoje razvojno okruženje
+# Подешавање Вашег Развојног Окружења
 
-Ovaj repozitorijum i kurs smo postavili sa [razvojnim kontejnerom](https://containers.dev?WT.mc_id=academic-105485-koreyst) koji ima univerzalno okruženje koje može podržati razvoj u Python3, .NET, Node.js i Java. Povezana konfiguracija je definisana u `devcontainer.json` fajlu koji se nalazi u `.devcontainer/` folderu na početku ovog repozitorijuma.
+Ми смо подесили овај репозиторијум и курс са [развојним контејнером](https://containers.dev?WT.mc_id=academic-105485-koreyst) који има универзално окружење које може подржати развој на Python3, .NET, Node.js и Java. Повезана конфигурација је дефинисана у `devcontainer.json` датотеци која се налази у `.devcontainer/` фасцикли на корену овог репозиторијума.
 
-Da biste aktivirali razvojni kontejner, pokrenite ga u [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (za okruženje hostovano u oblaku) ili u [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (za lokalno okruženje na uređaju). Pročitajte [ovu dokumentaciju](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) za više detalja o tome kako razvojni kontejneri rade unutar VS Code.
+Да бисте активирали развојни контејнер, покрените га у [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (за окружење хостовано у облаку) или у [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (за окружење хостовано на локалном уређају). Прочитајте [ову документацију](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) за више детаља о томе како развојни контејнери раде у оквиру VS Code.
 
 > [!TIP]  
-> Preporučujemo korišćenje GitHub Codespaces za brz početak sa minimalnim naporom. Pruža velikodušnu [besplatnu kvotu](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) za lične naloge. Konfigurišite [vremenske limite](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) da zaustavite ili obrišete neaktivne kodspese kako biste maksimalno iskoristili svoju kvotu.
+> Препоручујемо коришћење GitHub Codespaces за брзи почетак уз минималан напор. Пружа великодушну [бесплатну квоту коришћења](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) за личне налоге. Конфигуришите [временске ограничења](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) да зауставите или избришете неактивне codespaces како бисте максимизовали своју квоту.
 
+## 1. Извршавање Задатака
 
-## 1. Izvršavanje zadataka
+Свака лекција ће имати _опционе_ задатке који могу бити дати у једном или више програмских језика, укључујући: Python, .NET/C#, Java и JavaScript/TypeScript. Овај одељак пружа опште смернице у вези са извршавањем тих задатака.
 
-Svaka lekcija će imati _opciono_ zadatke koji mogu biti dati u jednom ili više programskih jezika uključujući: Python, .NET/C#, Java i JavaScript/TypeScript. Ovaj deo pruža opšte smernice vezane za izvršavanje tih zadataka.
+### 1.1 Задаци у Python-у
 
-### 1.1 Python zadaci
+Python задаци су дати или као апликације (`.py` датотеке) или Jupyter свеске (`.ipynb` датотеке).
+- Да бисте покренули свеску, отворите је у Visual Studio Code, затим кликните на _Select Kernel_ (горе десно) и изаберите подразумевану Python 3 опцију која је приказана. Сада можете кликнути на _Run All_ да извршите свеску.
+- Да бисте покренули Python апликације из командне линије, пратите специфична упутства за задатке како бисте осигурали да одаберете праве датотеке и обезбедите потребне аргументе.
 
-Python zadaci su dati ili kao aplikacije (`.py` fajlovi) ili Jupyter sveske (`.ipynb` fajlovi).
-- Da biste pokrenuli svesku, otvorite je u Visual Studio Code, zatim kliknite _Select Kernel_ (gore desno) i izaberite podrazumevanu Python 3 opciju koja se prikazuje. Sada možete _Run All_ da izvršite svesku.
-- Da biste pokrenuli Python aplikacije sa komandne linije, pratite instrukcije specifične za zadatak kako biste osigurali da izaberete prave fajlove i obezbedite potrebne argumente.
+## 2. Конфигурисање Провајдера
 
-## 2. Konfigurisanje provajdera
+Задаци **могу** такође бити подешени да раде против једне или више имплементација великог језичког модела (LLM) преко подржаног провајдера услуга као што су OpenAI, Azure или Hugging Face. Ови провајдери пружају _хостовани крајњи тачка_ (API) који можемо програмски приступити са правим акредитацијама (API кључ или токен). У овом курсу, разматрамо следеће провајдере:
 
-Zadaci **mogu** biti postavljeni da rade sa jednim ili više Large Language Model (LLM) implementacija putem podržanog provajdera usluga kao što su OpenAI, Azure ili Hugging Face. Oni pružaju _hostovan endpoint_ (API) kojem možemo pristupiti programatski sa pravim akreditivima (API ključ ili token). U ovom kursu, razmatramo ove provajdere:
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) са различитим моделима укључујући основну серију GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) за OpenAI моделе са фокусом на спремност за предузећа.
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) за моделе отвореног кода и сервер за инференцију.
 
-- [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) sa raznovrsnim modelima uključujući osnovnu GPT seriju.
-- [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) za OpenAI modele sa fokusom na spremnost za preduzeća.
-- [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) za open-source modele i server za inferencu.
+**Требаће вам ваши налози за ове вежбе**. Задаци су опциони, тако да можете изабрати да подесите један, све - или ниједан - од провајдера у зависности од ваших интересовања. Неке смернице за регистрацију:
 
-**Trebaće vam sopstveni nalozi za ove vežbe**. Zadaci su opcioni, tako da možete izabrati da postavite jednog, sve - ili nijednog - provajdera, u zavisnosti od vaših interesa. Neke smernice za prijavu:
-
-| Prijava | Trošak | API ključ | Igralište | Komentari |
+| Регистрација | Цена | API Кључ | Игралиште | Коментари |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Cena](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Bazirano na projektu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Bez koda, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Više modela dostupno |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Cena](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Brzi početak](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Brzi početak](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Morate se unapred prijaviti za pristup](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Cena](https://huggingface.co/pricing) | [Pristupni tokeni](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat ima ograničene modele](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Цене](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Пројектно базирано](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Без кода, веб](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Доступни су различити модели |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Цене](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Брзи почетак SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Брзи почетак студија](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Мора се унапред пријавити за приступ](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Цене](https://huggingface.co/pricing) | [Приступни токени](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat има ограничене моделе](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Pratite dole navedene upute za _konfigurisanje_ ovog repozitorijuma za upotrebu sa različitim provajderima. Zadaci koji zahtevaju određenog provajdera će sadržati jedan od ovih tagova u svom imenu fajla:
-- `aoai` - zahteva Azure OpenAI endpoint, ključ
-- `oai` - zahteva OpenAI endpoint, ključ
-- `hf` - zahteva Hugging Face token
+Пратите доле наведена упутства да _конфигуришете_ овај репозиторијум за употребу са различитим провајдерима. Задаци који захтевају специфичног провајдера ће садржати један од ових ознака у свом имену датотеке:
+ - `aoai` - захтева Azure OpenAI крајњу тачку, кључ
+ - `oai` - захтева OpenAI крајњу тачку, кључ
+ - `hf` - захтева Hugging Face токен
 
-Možete konfigurisati jednog, nijednog ili sve provajdere. Povezani zadaci će jednostavno prijaviti grešku na nedostajućim akreditivima.
+Можете конфигурисати једног, ниједног, или све провајдере. Повезани задаци ће једноставно јавити грешку у случају недостатка акредитација.
 
-### 2.1. Kreirajte `.env` fajl
+### 2.1. Креирање `.env` датотеке
 
-Pretpostavljamo da ste već pročitali smernice iznad i prijavili se kod relevantnog provajdera, te dobili potrebne akreditivne podatke (API_KEY ili token). U slučaju Azure OpenAI, pretpostavljamo da imate validnu implementaciju Azure OpenAI servisa (endpoint) sa barem jednim GPT modelom implementiranim za završavanje razgovora.
+Претпостављамо да сте већ прочитали горе наведене смернице и регистровали се код релевантног провајдера, и добили потребне акредитације за аутентификацију (API_KEY или токен). У случају Azure OpenAI, претпостављамо да такође имате важећу имплементацију Azure OpenAI услуге (крајња тачка) са бар једним GPT моделом имплементираним за завршетак чата.
 
-Sledeći korak je da konfigurišete svoje **lokalne varijable okruženja** na sledeći način:
+Следећи корак је да конфигуришете своје **локалне променљиве окружења** на следећи начин:
 
-1. Potražite u osnovnom folderu `.env.copy` fajl koji bi trebalo da ima sadržaj poput ovog:
+1. Погледајте у коренску фасциклу за `.env.copy` датотеку која би требало да има садржај као што је овај:
 
    ```bash
    # OpenAI Provider
@@ -74,73 +73,73 @@ Sledeći korak je da konfigurišete svoje **lokalne varijable okruženja** na sl
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Kopirajte taj fajl u `.env` koristeći komandu ispod. Ovaj fajl je _gitignore-d_, čuvajući tajne bezbednim.
+2. Копирајте ту датотеку у `.env` користећи команду испод. Ова датотека је _gitignore-д_, чувајући тајне безбедним.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Popunite vrednosti (zamenite rezervisana mesta na desnoj strani `=`) kao što je opisano u sledećem delu.
+3. Попуните вредности (замените резервисана места на десној страни `=`) као што је описано у следећем одељку.
 
-3. (Opcija) Ako koristite GitHub Codespaces, imate opciju da sačuvate varijable okruženja kao _Codespaces tajne_ povezane sa ovim repozitorijumom. U tom slučaju, nećete morati da postavljate lokalni .env fajl. **Međutim, imajte na umu da ova opcija radi samo ako koristite GitHub Codespaces.** I dalje ćete morati da postavite .env fajl ako koristite Docker Desktop.
+3. (Опција) Ако користите GitHub Codespaces, имате опцију да сачувате променљиве окружења као _Codespaces тајне_ повезане са овим репозиторијумом. У том случају, нећете морати да подешавате локалну .env датотеку. **Међутим, напомињемо да ова опција ради само ако користите GitHub Codespaces.** И даље ћете морати да подесите .env датотеку ако користите Docker Desktop.
 
-### 2.2. Popunite `.env` fajl
+### 2.2. Попуњавање `.env` датотеке
 
-Pogledajmo brzo nazive varijabli da bismo razumeli šta predstavljaju:
+Погледајмо брзо имена променљивих да разумемо шта представљају:
 
-| Varijabla  | Opis  |
+| Променљива  | Опис  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Ovo je korisnički pristupni token koji ste postavili u svom profilu |
-| OPENAI_API_KEY | Ovo je autorizacioni ključ za korišćenje servisa za ne-Azure OpenAI endpoint |
-| AZURE_OPENAI_API_KEY | Ovo je autorizacioni ključ za korišćenje tog servisa |
-| AZURE_OPENAI_ENDPOINT | Ovo je implementirani endpoint za Azure OpenAI resurs |
-| AZURE_OPENAI_DEPLOYMENT | Ovo je _text generation_ model implementacioni endpoint |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Ovo je _text embeddings_ model implementacioni endpoint |
+| HUGGING_FACE_API_KEY | Ово је приступни токен корисника који сте поставили у свом профилу |
+| OPENAI_API_KEY | Ово је кључ за ауторизацију за коришћење услуге за не-Azure OpenAI крајње тачке |
+| AZURE_OPENAI_API_KEY | Ово је кључ за ауторизацију за коришћење те услуге |
+| AZURE_OPENAI_ENDPOINT | Ово је имплементирана крајња тачка за Azure OpenAI ресурс |
+| AZURE_OPENAI_DEPLOYMENT | Ово је _имплементациона_ крајња тачка модела за генерисање текста |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Ово је _имплементациона_ крајња тачка модела за текстуалне уградње |
 | | |
 
-Napomena: Poslednje dve Azure OpenAI varijable odražavaju podrazumevani model za završavanje razgovora (generisanje teksta) i pretragu vektora (embeddings) respektivno. Uputstva za njihovo postavljanje biće definisana u relevantnim zadacima.
+Напомена: Последње две Azure OpenAI променљиве одражавају подразумевани модел за завршетак чата (генерисање текста) и претрагу вектора (уградње) респективно. Упутства за њихово подешавање биће дефинисана у релевантним задацима.
 
-### 2.3 Konfigurišite Azure: Sa Portala
+### 2.3 Конфигуришите Azure: Из Портала
 
-Azure OpenAI endpoint i ključ vrednosti će se naći na [Azure Portalu](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), pa krenimo odatle.
+Azure OpenAI крајња тачка и вредности кључа ће бити пронађени у [Azure Порталу](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), па хајде да почнемо тамо.
 
-1. Idite na [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Kliknite opciju **Keys and Endpoint** u bočnom panelu (meni levo).
-1. Kliknite **Show Keys** - trebalo bi da vidite sledeće: KEY 1, KEY 2 i Endpoint.
-1. Koristite KEY 1 vrednost za AZURE_OPENAI_API_KEY
-1. Koristite Endpoint vrednost za AZURE_OPENAI_ENDPOINT
+1. Идите на [Azure Портал](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Кликните на опцију **Кључеви и крајња тачка** у бочној траци (мени са леве стране).
+1. Кликните на **Прикажи кључеве** - требало би да видите следеће: КЉУЧ 1, КЉУЧ 2 и крајња тачка.
+1. Користите вредност КЉУЧ 1 за AZURE_OPENAI_API_KEY
+1. Користите вредност крајње тачке за AZURE_OPENAI_ENDPOINT
 
-Dalje, trebaće nam endpointi za specifične modele koje smo implementirali.
+Следеће, потребне су нам крајње тачке за специфичне моделе које смо имплементирали.
 
-1. Kliknite opciju **Model deployments** u bočnom panelu (meni levo) za Azure OpenAI resurs.
-1. Na odredišnoj stranici kliknite **Manage Deployments**
+1. Кликните на опцију **Имплементације модела** у бочној траци (леви мени) за Azure OpenAI ресурс.
+1. На одредишној страници, кликните на **Управљање имплементацијама**
 
-Ovo će vas odvesti na Azure OpenAI Studio web stranicu, gde ćemo naći druge vrednosti kao što je opisano ispod.
+Ово ће вас одвести на Azure OpenAI Studio вебсајт, где ћемо пронаћи друге вредности као што је описано у наставку.
 
-### 2.4 Konfigurišite Azure: Sa Studija
+### 2.4 Конфигуришите Azure: Из Студија
 
-1. Idite na [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **iz vašeg resursa** kao što je opisano iznad.
-1. Kliknite na karticu **Deployments** (bočni panel, levo) da biste videli trenutno implementirane modele.
-1. Ako vaš željeni model nije implementiran, koristite **Create new deployment** da ga implementirate.
-1. Trebaće vam _text-generation_ model - preporučujemo: **gpt-35-turbo**
-1. Trebaće vam _text-embedding_ model - preporučujemo **text-embedding-ada-002**
+1. Идите на [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **из вашег ресурса** као што је горе описано.
+1. Кликните на таб **Имплементације** (бочна трака, лево) да видите тренутно имплементиране моделе.
+1. Ако ваш жељени модел није имплементиран, користите **Креирај нову имплементацију** да га имплементирате.
+1. Потребан вам је модел за _генерисање текста_ - препоручујемо: **gpt-35-turbo**
+1. Потребан вам је модел за _текстуалне уградње_ - препоручујемо **text-embedding-ada-002**
 
-Sada ažurirajte varijable okruženja da odražavaju _Deployment name_ koji ste koristili. Ovo će obično biti isto kao ime modela osim ako ga niste eksplicitno promenili. Dakle, kao primer, možda imate:
+Сада ажурирајте променљиве окружења да одражавају _Име имплементације_ које сте користили. Ово ће обично бити исто као име модела осим ако га нисте експлицитно променили. Дакле, као пример, можете имати:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Ne zaboravite da sačuvate .env fajl kada završite**. Sada možete zatvoriti fajl i vratiti se uputstvima za pokretanje sveske.
+**Не заборавите да сачувате .env датотеку када завршите**. Сада можете изаћи из датотеке и вратити се на упутства за покретање свеске.
 
-### 2.5 Konfigurišite OpenAI: Sa profila
+### 2.5 Конфигуришите OpenAI: Из Профила
 
-Vaš OpenAI API ključ možete pronaći na svom [OpenAI nalogu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ako ga nemate, možete se prijaviti za nalog i kreirati API ključ. Kada imate ključ, možete ga koristiti za popunjavanje `OPENAI_API_KEY` varijable u `.env` fajlu.
+Ваш OpenAI API кључ се може пронаћи у вашем [OpenAI налогу](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ако га немате, можете се пријавити за налог и креирати API кључ. Када добијете кључ, можете га користити да попуните `OPENAI_API_KEY` променљиву у `.env` датотеци.
 
-### 2.6 Konfigurišite Hugging Face: Sa profila
+### 2.6 Конфигуришите Hugging Face: Из Профила
 
-Vaš Hugging Face token možete pronaći u svom profilu pod [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nemojte ih objavljivati ili deliti javno. Umesto toga, kreirajte novi token za upotrebu u ovom projektu i kopirajte ga u `.env` fajl pod varijablom `HUGGING_FACE_API_KEY`. _Napomena:_ Ovo tehnički nije API ključ, ali se koristi za autentifikaciju, tako da zadržavamo tu konvenciju imenovanja radi doslednosti.
+Ваш Hugging Face токен се може пронаћи у вашем профилу под [Приступни токени](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Немојте их објављивати или делити јавно. Уместо тога, креирајте нови токен за ову пројектну употребу и копирајте га у `.env` датотеку под `HUGGING_FACE_API_KEY` променљивом. _Напомена:_ Ово технички није API кључ, али се користи за аутентификацију, тако да задржавамо ту конвенцију именовања ради доследности.
 
 **Одрицање од одговорности**:  
-Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо ка тачности, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Нисмо одговорни за било каква погрешна разумевања или погрешна тумачења која произилазе из коришћења овог превода.
+Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било какве неспоразуме или погрешна тумачења која могу произаћи из коришћења овог превода.

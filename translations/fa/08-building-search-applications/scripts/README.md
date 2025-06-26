@@ -2,29 +2,29 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:46:45+00:00",
+  "translation_date": "2025-06-25T16:50:34+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "fa"
 }
 -->
 # آماده‌سازی داده‌های رونویسی
 
-اسکریپت‌های آماده‌سازی داده‌های رونویسی، رونویسی‌های ویدیوهای یوتیوب را دانلود کرده و آنها را برای استفاده در نمونه جستجوی معنایی با جاسازی‌ها و توابع OpenAI آماده می‌کنند.
+اسکریپت‌های آماده‌سازی داده‌های رونویسی، رونویسی‌های ویدیوهای یوتیوب را دانلود کرده و آن‌ها را برای استفاده با نمونه جستجوی معنایی با تعبیه‌های OpenAI و توابع آماده می‌کنند.
 
-اسکریپت‌های آماده‌سازی داده‌های رونویسی بر روی آخرین نسخه‌های ویندوز 11، macOS Ventura و Ubuntu 22.04 (و بالاتر) تست شده‌اند.
+اسکریپت‌های آماده‌سازی داده‌های رونویسی بر روی آخرین نسخه‌های ویندوز 11، macOS Ventura و اوبونتو 22.04 (و بالاتر) آزمایش شده‌اند.
 
 ## ایجاد منابع مورد نیاز سرویس Azure OpenAI
 
 > [!IMPORTANT]
-> پیشنهاد می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا از سازگاری با OpenAI اطمینان حاصل کنید
-> به [مستندات](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) مراجعه کنید
+> پیشنهاد می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا سازگاری با OpenAI تضمین شود.
+> به [مستندات](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) مراجعه کنید.
 
 1. ایجاد یک گروه منابع
 
 > [!NOTE]
-> برای این دستورالعمل‌ها از گروه منابعی به نام "semantic-video-search" در شرق ایالات متحده استفاده می‌کنیم.
-> می‌توانید نام گروه منابع را تغییر دهید، اما هنگام تغییر مکان منابع،
-> جدول دسترسی مدل را بررسی کنید [جدول دسترسی مدل](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> برای این دستورالعمل‌ها، ما از گروه منابعی با نام "semantic-video-search" در شرق ایالات متحده استفاده می‌کنیم.
+> شما می‌توانید نام گروه منابع را تغییر دهید، اما هنگام تغییر مکان برای منابع، 
+> جدول در دسترس بودن مدل را بررسی کنید. [جدول دسترس‌پذیری مدل](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -46,7 +46,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. مدل‌های زیر را مستقر کنید:
+1. استقرار مدل‌های زیر:
    - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
    - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
 
@@ -76,12 +76,12 @@ az cognitiveservices account deployment create \
 
 ## متغیرهای محیطی
 
-متغیرهای محیطی زیر برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب مورد نیاز هستند.
+متغیرهای محیطی زیر برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب لازم هستند.
 
 ### در ویندوز
 
 توصیه می‌شود متغیرها را به `user` environment variables.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New` اضافه کنید.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New` خود اضافه کنید.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### در لینوکس و macOS
 
-توصیه می‌شود اکسپورت‌های زیر را به فایل `~/.bashrc` or `~/.zshrc` خود اضافه کنید.
+توصیه می‌شود که صادرات زیر را به فایل `~/.bashrc` or `~/.zshrc` خود اضافه کنید.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -101,10 +101,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## نصب کتابخانه‌های مورد نیاز پایتون
+## نصب کتابخانه‌های پایتون مورد نیاز
 
-1. نصب [کلاینت git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) اگر هنوز نصب نشده است.
-1. از یک پنجره `Terminal`، نمونه را به پوشه ریپوی مورد نظر خود کلون کنید.
+1. اگر کلاینت [git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) نصب نشده است، آن را نصب کنید.
+1. از یک پنجره `ترمینال`، نمونه را به پوشه مخزن دلخواه خود کلون کنید.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما برای دقت تلاش می‌کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی اشتباهات یا نادرستی‌هایی باشند. سند اصلی به زبان مادری باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفاسیر نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما برای دقت تلاش می‌کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نادرستی‌هایی باشند. سند اصلی به زبان مادری خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال هرگونه سوءتفاهم یا تفسیر نادرست ناشی از استفاده از این ترجمه نداریم.

@@ -2,35 +2,35 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:52:25+00:00",
+  "translation_date": "2025-06-25T16:57:03+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "he"
 }
 -->
 # הכנת נתוני תמלול
 
-סקריפטי הכנת נתוני התמלול מורידים תמלולים של סרטוני יוטיוב ומכינים אותם לשימוש עם החיפוש הסמנטי באמצעות OpenAI Embeddings ו-Functions.
+סקריפטים להכנת נתוני תמלול מורידים תמלולים של סרטוני יוטיוב ומכינים אותם לשימוש עם החיפוש הסמנטי באמצעות OpenAI Embeddings ו-Functions.
 
-סקריפטי הכנת נתוני התמלול נבדקו על הגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
+הסקריפטים להכנת נתוני תמלול נבדקו על הגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
 
 ## יצירת משאבים נדרשים של Azure OpenAI Service
 
 > [!IMPORTANT]
-> אנו ממליצים לעדכן את Azure CLI לגרסה האחרונה כדי להבטיח תאימות עם OpenAI
+> אנו ממליצים לעדכן את Azure CLI לגרסה האחרונה כדי להבטיח תאימות עם OpenAI.
 > ראו [תיעוד](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. יצירת קבוצת משאבים
 
 > [!NOTE]
-> להוראות אלה אנו משתמשים בקבוצת המשאבים בשם "semantic-video-search" במזרח ארה"ב.
-> ניתן לשנות את שם קבוצת המשאבים, אך בעת שינוי המיקום למשאבים,
+> להוראות אלו אנו משתמשים בקבוצת המשאבים בשם "semantic-video-search" במזרח ארה"ב.
+> ניתן לשנות את שם קבוצת המשאבים, אך כשמשנים את המיקום עבור המשאבים,
 > בדקו את [טבלת זמינות המודלים](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. יצירת משאב Azure OpenAI Service.
+1. יצירת משאב של Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
@@ -46,7 +46,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. פרסו את המודלים הבאים:
+1. פריסת המודלים הבאים:
    - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
    - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
 
@@ -72,11 +72,11 @@ az cognitiveservices account deployment create \
 
 ## תוכנה נדרשת
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) או גרסה מתקדמת יותר
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) או גרסה חדשה יותר
 
 ## משתני סביבה
 
-המשתנים הבאים נדרשים להפעלת סקריפטי הכנת נתוני התמלול מיוטיוב.
+משתני הסביבה הבאים נדרשים להפעלת הסקריפטים להכנת נתוני תמלול של יוטיוב.
 
 ### ב-Windows
 
@@ -90,9 +90,9 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### ב-Linux וב-macOS
+### ב-Linux ו-macOS
 
-מומלץ להוסיף את ההגדרות הבאות לקובץ `~/.bashrc` or `~/.zshrc`.
+מומלץ להוסיף את ה-exports הבאים לקובץ `~/.bashrc` or `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## התקנת ספריות Python הנדרשות
 
-1. התקנת [לקוח git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
+1. התקינו את [לקוח git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
 1. מחלון `Terminal`, שיבטו את הדוגמה לתיקיית הריפו המועדפת עליכם.
 
     ```bash
@@ -158,7 +158,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## הפעלת סקריפטי הכנת נתוני התמלול מיוטיוב
+## הפעלת הסקריפטים להכנת נתוני תמלול של יוטיוב
 
 ### ב-Windows
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל טעויות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לכל אי הבנות או פרשנויות שגויות הנובעות מהשימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד אנו שואפים לדיוק, אנא היו מודעים לכך שתרגומים אוטומטיים עשויים להכיל טעויות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. למידע קריטי, מומלץ להשתמש בתרגום אנושי מקצועי. אנו לא אחראים לכל אי הבנה או פרשנות שגויה הנובעים מהשימוש בתרגום זה.

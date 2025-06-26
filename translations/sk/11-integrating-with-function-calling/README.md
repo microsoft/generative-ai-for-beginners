@@ -2,18 +2,18 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:37:26+00:00",
+  "translation_date": "2025-06-25T20:01:50+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "sk"
 }
 -->
 # Integrácia s volaním funkcií
 
-[![Integrácia s volaním funkcií](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.sk.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integrácia s volaním funkcií](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sk.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-V predchádzajúcich lekciách ste sa už dosť naučili. Avšak, stále sa môžeme zlepšovať. Niektoré veci, ktoré môžeme riešiť, sú ako získať konzistentnejší formát odpovede, aby sa s ňou ľahšie pracovalo v ďalšej fáze. Tiež by sme mohli pridať údaje z iných zdrojov na ďalšie obohatenie našej aplikácie.
+V predchádzajúcich lekciách ste sa naučili dosť veľa. Avšak, môžeme sa ešte zlepšiť. Niektoré veci, ktoré môžeme riešiť, sú ako získať konzistentnejší formát odpovede, aby sa s ňou ľahšie pracovalo ďalej. Taktiež môžeme pridať údaje z iných zdrojov na ďalšie obohatenie našej aplikácie.
 
-Vyššie uvedené problémy sú tie, ktorým sa táto kapitola venuje.
+Vyššie uvedené problémy sú tie, ktoré sa táto kapitola snaží riešiť.
 
 ## Úvod
 
@@ -28,39 +28,39 @@ Táto lekcia pokryje:
 Na konci tejto lekcie budete schopní:
 
 - Vysvetliť účel používania volania funkcií.
-- Nastaviť volanie funkcie pomocou služby Azure OpenAI.
-- Navrhnúť efektívne volania funkcií pre použitie vo vašej aplikácii.
+- Nastaviť volanie funkcií pomocou služby Azure OpenAI.
+- Navrhnúť efektívne volania funkcií pre potreby vašej aplikácie.
 
-## Scenár: Zlepšenie nášho chatbota pomocou funkcií
+## Scenár: Zlepšenie nášho chatbotu pomocou funkcií
 
-V tejto lekcii chceme vytvoriť funkciu pre náš vzdelávací startup, ktorá umožní používateľom používať chatbota na vyhľadanie technických kurzov. Odporučíme kurzy, ktoré zodpovedajú ich úrovni zručností, súčasnej roli a záujmu o technológiu.
+V tejto lekcii chceme vybudovať funkciu pre náš startup v oblasti vzdelávania, ktorá umožní používateľom používať chatbot na vyhľadanie technických kurzov. Odporučíme kurzy, ktoré zodpovedajú ich úrovni zručností, aktuálnej úlohe a technológii, o ktorú majú záujem.
 
 Na dokončenie tohto scenára použijeme kombináciu:
 
-- `Azure OpenAI` na vytvorenie chatovej skúsenosti pre používateľa.
+- `Azure OpenAI` na vytvorenie chatovacej skúsenosti pre používateľa.
 - `Microsoft Learn Catalog API` na pomoc používateľom nájsť kurzy na základe ich požiadavky.
-- `Function Calling` na prijatie používateľského dotazu a jeho odoslanie do funkcie na vytvorenie API požiadavky.
+- `Function Calling` na spracovanie dotazu používateľa a jeho odoslanie do funkcie na vykonanie API požiadavky.
 
-Aby sme mohli začať, pozrime sa, prečo by sme vôbec chceli použiť volanie funkcií:
+Aby sme začali, pozrime sa, prečo by sme chceli používať volanie funkcií:
 
 ## Prečo volanie funkcií
 
-Pred volaním funkcií boli odpovede z LLM neštruktúrované a nekonzistentné. Vývojári museli písať zložitý validačný kód, aby zabezpečili, že dokážu spracovať každú variáciu odpovede. Používatelia nemohli získať odpovede ako "Aké je aktuálne počasie v Štokholme?". To je preto, že modely boli obmedzené na čas, kedy boli údaje trénované.
+Pred volaním funkcií boli odpovede z LLM neštruktúrované a nekonzistentné. Vývojári museli písať zložitý validačný kód, aby sa uistili, že dokážu spracovať každú variáciu odpovede. Používatelia nemohli dostať odpovede ako "Aké je aktuálne počasie v Štokholme?". To je preto, že modely boli obmedzené na čas, kedy boli údaje trénované.
 
 Volanie funkcií je funkcia služby Azure OpenAI, ktorá prekonáva nasledujúce obmedzenia:
 
-- **Konzistentný formát odpovede**. Ak môžeme lepšie kontrolovať formát odpovede, môžeme ju ľahšie integrovať do ďalších systémov.
+- **Konzistentný formát odpovede**. Ak dokážeme lepšie kontrolovať formát odpovede, môžeme ľahšie integrovať odpoveď ďalej do iných systémov.
 - **Externé údaje**. Schopnosť používať údaje z iných zdrojov aplikácie v kontexte chatu.
 
 ## Ilustrácia problému prostredníctvom scenára
 
-> Odporúčame použiť [priložený notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), ak chcete spustiť nižšie uvedený scenár. Môžete si tiež jednoducho prečítať, ako sa snažíme ilustrovať problém, kde môžu funkcie pomôcť riešiť problém.
+> Odporúčame použiť [priložený notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), ak chcete spustiť nižšie uvedený scenár. Môžete si ho aj len prečítať, pretože sa snažíme ilustrovať problém, kde funkcie môžu pomôcť riešiť problém.
 
 Pozrime sa na príklad, ktorý ilustruje problém s formátom odpovede:
 
 Povedzme, že chceme vytvoriť databázu údajov o študentoch, aby sme im mohli odporučiť správny kurz. Nižšie máme dva popisy študentov, ktoré sú veľmi podobné v údajoch, ktoré obsahujú.
 
-1. Vytvorte pripojenie k nášmu Azure OpenAI zdroju:
+1. Vytvorte pripojenie k nášmu zdroju Azure OpenAI:
 
    ```python
    import os
@@ -77,7 +77,7 @@ Povedzme, že chceme vytvoriť databázu údajov o študentoch, aby sme im mohli
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Nižšie je niekoľko Python kódu na konfiguráciu nášho pripojenia k Azure OpenAI, kde nastavíme `api_type`, `api_base`, `api_version` and `api_key`.
+   Nižšie je nejaký Python kód na konfiguráciu nášho pripojenia k Azure OpenAI, kde nastavíme `api_type`, `api_base`, `api_version` and `api_key`.
 
 1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
 
@@ -87,9 +87,9 @@ Povedzme, že chceme vytvoriť databázu údajov o študentoch, aby sme im mohli
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Chceme odoslať vyššie uvedené popisy študentov do LLM na analýzu údajov. Tieto údaje môžu byť neskôr použité v našej aplikácii a odoslané do API alebo uložené v databáze.
+   Chceme poslať vyššie uvedené popisy študentov do LLM na analýzu údajov. Tieto údaje môžu byť neskôr použité v našej aplikácii a poslané do API alebo uložené v databáze.
 
-1. Vytvorme dva identické prompty, v ktorých inštruujeme LLM, o aké informácie máme záujem:
+1. Vytvorme dva identické výzvy, v ktorých inštruujeme LLM, aké informácie nás zaujímajú:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Povedzme, že chceme vytvoriť databázu údajov o študentoch, aby sme im mohli
    '''
    ```
 
-   Vyššie uvedené prompty inštruujú LLM, aby extrahovalo informácie a vrátilo odpoveď vo formáte JSON.
+   Vyššie uvedené výzvy inštruujú LLM, aby extrahoval informácie a vrátil odpoveď vo formáte JSON.
 
-1. Po nastavení promptov a pripojenia k Azure OpenAI teraz pošleme prompty do LLM pomocou `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Toto simuluje správu od používateľa, ktorá je napísaná chatbotu.
+1. Po nastavení výziev a pripojení k Azure OpenAI teraz pošleme výzvy do LLM pomocou `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Toto napodobňuje správu od používateľa napísanú do chatbota.
 
    ```python
    # response from prompt one
@@ -173,13 +173,13 @@ Teraz môžeme poslať obe požiadavky do LLM a preskúmať odpoveď, ktorú dos
    }
    ```
 
-   Aj keď sú prompty rovnaké a popisy sú podobné, vidíme hodnoty `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Aj keď sú výzvy rovnaké a popisy sú podobné, vidíme hodnoty `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
 
    This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.sk.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sk.png)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -201,7 +201,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.sk.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sk.png)
 
 ### Step 1 - creating messages
 
@@ -217,7 +217,7 @@ Priradením rôznych rolí je LLM jasné, či niečo hovorí systém alebo použ
 
 ### Krok 2 - vytváranie funkcií
 
-Ďalej definujeme funkciu a parametre tejto funkcie. Použijeme len jednu funkciu nazvanú `search_courses` but you can create multiple functions.
+Ďalej definujeme funkciu a parametre tejto funkcie. Tu použijeme len jednu funkciu nazvanú `search_courses` but you can create multiple functions.
 
 > **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
 
@@ -252,7 +252,7 @@ functions = [
 ]
 ```
 
-Popíšme podrobnejšie každý prípad funkcie nižšie:
+Podrobnejšie popíšeme každú inštanciu funkcie nižšie:
 
 - `name` - The name of the function that we want to have called.
 - `description` - This is the description of how the function works. Here it's important to be specific and clear.
@@ -294,9 +294,9 @@ Odpoveď, ktorá teraz prichádza, vyzerá takto:
 }
 ```
 
-Tu môžeme vidieť, ako funkcia `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+Tu vidíme, ako funkcia `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` hodnotu:
+The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` hodnota:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
@@ -320,7 +320,7 @@ To integrate this into our application, let's take the following steps:
    response_message = response.choices[0].message
    ```
 
-1. Teraz definujeme funkciu, ktorá zavolá Microsoft Learn API na získanie zoznamu kurzov:
+1. Teraz definujeme funkciu, ktorá zavolá API Microsoft Learn na získanie zoznamu kurzov:
 
    ```python
    import requests
@@ -342,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Všimnite si, ako teraz vytvárame skutočnú Python funkciu, ktorá sa mapuje na názvy funkcií zavedených v `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   Všimnite si, ako teraz vytvárame skutočnú Python funkciu, ktorá mapuje na názvy funkcií uvedené v `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` je súčasťou a zavolá určenú funkciu. Tu je, ako môžete vykonať spomínanú kontrolu nižšie:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` je jej súčasťou a volá určenú funkciu. Tu je, ako môžete vykonať uvedenú kontrolu nižšie:
 
    ```python
    # Check if the model wants to call a function
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Teraz pošleme aktualizovanú správu, `messages`, do LLM, aby sme mohli dostať odpoveď v prirodzenom jazyku namiesto odpovede vo formáte API JSON.
+1. Teraz pošleme aktualizovanú správu, `messages` do LLM, aby sme mohli dostať odpoveď v prirodzenom jazyku namiesto odpovede vo formáte API JSON.
 
    ```python
    print("Messages in next request:")
@@ -452,19 +452,19 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## Úloha
 
-Na pokračovanie v učení o Azure OpenAI Function Calling môžete vytvoriť:
+Na pokračovanie vášho učenia o Azure OpenAI Function Calling môžete vytvoriť:
 
 - Viac parametrov funkcie, ktoré môžu pomôcť študentom nájsť viac kurzov.
-- Vytvoriť ďalšie volanie funkcie, ktoré vezme viac informácií od študenta, ako je jeho rodný jazyk.
-- Vytvoriť spracovanie chýb, keď volanie funkcie a/alebo API nevráti žiadne vhodné kurzy.
+- Vytvoriť ďalšie volanie funkcie, ktoré zoberie viac informácií od študenta, ako je jeho rodný jazyk.
+- Vytvoriť spracovanie chýb, keď volanie funkcie a/alebo API volanie nevráti žiadne vhodné kurzy.
 
-Tip: Sledujte stránku [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), aby ste videli, ako a kde sú tieto údaje dostupné.
+Tip: Sledujte stránku [Learn API referenčná dokumentácia](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), aby ste videli, ako a kde sú tieto údaje dostupné.
 
 ## Skvelá práca! Pokračujte v ceste
 
-Po dokončení tejto lekcie si pozrite našu [Generatívnu AI Learning kolekciu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste pokračovali vo zvyšovaní vašich znalostí o generatívnej AI!
+Po dokončení tejto lekcie si pozrite našu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste pokračovali v zvyšovaní svojich znalostí o Generatívnej AI!
 
-Prejdite na lekciu 12, kde sa pozrieme na to, ako [navrhnúť UX pre AI aplikácie](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Prejdite na Lekciu 12, kde sa pozrieme na to, ako [navrhnúť UX pre AI aplikácie](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Upozornenie**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vzniknuté z použitia tohto prekladu.

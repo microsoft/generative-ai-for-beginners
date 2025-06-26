@@ -2,89 +2,90 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0bba96e53ab841d99db731892a51fab8",
-  "translation_date": "2025-05-20T06:48:33+00:00",
+  "translation_date": "2025-06-25T23:50:24+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "mo"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.7b9ebf8cdea6669d74be8212360e99a5653b0cd3ec513f50f12693ffec984ff1.mo.png)](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst)
+[![開源模型](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.mo.png)](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst)
 
-## مقدمة
+## 介紹
 
-عالم نماذج المصادر المفتوحة مثير ويتطور باستمرار. تهدف هذه الدرسة إلى تقديم نظرة معمقة على النماذج المفتوحة المصدر. إذا كنت تبحث عن معلومات حول كيفية مقارنة النماذج المملوكة بالنماذج المفتوحة المصدر، توجه إلى درس ["استكشاف ومقارنة النماذج اللغوية المختلفة"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). ستتناول هذه الدرسة أيضًا موضوع تحسين الأداء، لكن يمكن العثور على شرح أكثر تفصيلًا في درس ["تحسين أداء النماذج اللغوية"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+開源LLM的世界充滿了刺激和不斷演變。本課旨在深入了解開源模型。如果您正在尋找有關專有模型與開源模型比較的信息，請參閱["探索和比較不同LLM"課程](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)。本課程還將涵蓋微調的主題，但更詳細的解釋可以在["微調LLM"課程](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)中找到。
 
-## أهداف التعلم
+## 學習目標
 
-- اكتساب فهم حول نماذج المصادر المفتوحة
-- فهم فوائد العمل مع نماذج المصادر المفتوحة
-- استكشاف النماذج المفتوحة المتاحة على Hugging Face واستوديو Azure AI
+- 了解開源模型
+- 理解使用開源模型的好處
+- 探索Hugging Face和Azure AI Studio上的開源模型
 
-## ما هي نماذج المصادر المفتوحة؟
+## 什麼是開源模型？
 
-لعبت البرمجيات المفتوحة المصدر دورًا حاسمًا في نمو التكنولوجيا عبر مختلف المجالات. حددت مبادرة المصدر المفتوح (OSI) [10 معايير للبرمجيات](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) لتصنيفها كمصدر مفتوح. يجب مشاركة الشيفرة المصدرية علنًا تحت رخصة معتمدة من OSI.
+開源軟件在各個領域的技術發展中發揮了關鍵作用。開源倡議（OSI）已定義了[10個軟件標準](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst)以將其歸類為開源。源代碼必須在OSI批准的許可下公開共享。
 
-على الرغم من أن تطوير النماذج اللغوية الكبيرة يشبه تطوير البرمجيات، إلا أن العملية ليست متطابقة تمامًا. وقد أثار هذا الكثير من النقاش في المجتمع حول تعريف المصدر المفتوح في سياق النماذج اللغوية الكبيرة. لكي يتماشى النموذج مع التعريف التقليدي للمصدر المفتوح، يجب أن تكون المعلومات التالية متاحة للجمهور:
+雖然LLM的開發與軟件開發有相似的元素，但過程並不完全相同。這在社群中引發了許多關於在LLM背景下開源定義的討論。要使模型符合傳統的開源定義，以下信息應公開：
 
-- مجموعات البيانات المستخدمة لتدريب النموذج.
-- الأوزان الكاملة للنموذج كجزء من التدريب.
-- شيفرة التقييم.
-- شيفرة تحسين الأداء.
-- الأوزان الكاملة للنموذج ومقاييس التدريب.
+- 用於訓練模型的數據集。
+- 作為訓練的一部分的完整模型權重。
+- 評估代碼。
+- 微調代碼。
+- 完整的模型權重和訓練指標。
 
-حاليًا، هناك عدد قليل فقط من النماذج التي تتطابق مع هذه المعايير. يعد [نموذج OLMo الذي أنشأه معهد ألين للذكاء الاصطناعي (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) واحدًا من هذه الفئة.
+目前只有少數模型符合這些標準。由Allen Institute for Artificial Intelligence (AllenAI)創建的[OLMo模型](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst)符合此類別。
 
-بالنسبة لهذه الدرسة، سنشير إلى النماذج على أنها "نماذج مفتوحة" نظرًا لأنها قد لا تتطابق مع المعايير المذكورة أعلاه في وقت الكتابة.
+在本課程中，我們將繼續將這些模型稱為"開放模型"，因為它們在撰寫本文時可能不符合上述標準。
 
-## فوائد النماذج المفتوحة
+## 開放模型的好處
 
-**قابلة للتخصيص بدرجة عالية** - نظرًا لأن النماذج المفتوحة تُنشر مع معلومات تدريب مفصلة، يمكن للباحثين والمطورين تعديل داخل النموذج. يتيح ذلك إنشاء نماذج متخصصة للغاية محسنة لمهمة معينة أو مجال دراسة معين. بعض الأمثلة على ذلك هي توليد الشيفرة، العمليات الرياضية، وعلم الأحياء.
+**高度可定制** - 由於開放模型發布了詳細的訓練信息，研究人員和開發者可以修改模型的內部結構。這使得可以創建高度專門化的模型，這些模型針對特定任務或研究領域進行微調。一些例子包括代碼生成、數學運算和生物學。
 
-**التكلفة** - تكلفة الاستخدام ونشر هذه النماذج لكل رمز أقل من النماذج المملوكة. عند بناء تطبيقات الذكاء الاصطناعي التوليدي، يجب النظر إلى الأداء مقابل السعر عند العمل مع هذه النماذج لحالتك الخاصة.
+**成本** - 使用和部署這些模型的每個令牌成本低於專有模型。在構建生成式AI應用程序時，應根據您的使用情況考慮性能與價格。
 
-![Model Cost](../../../translated_images/model-price.bf4c17ebea0f13045f3c10fb8615e171c6a664837cb2f4107c312552149ae88d.mo.png)
-المصدر: Artificial Analysis
+![模型成本](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.mo.png)
+來源：人工分析
 
-**المرونة** - العمل مع النماذج المفتوحة يتيح لك المرونة من حيث استخدام نماذج مختلفة أو دمجها. مثال على ذلك هو [مساعدي HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) حيث يمكن للمستخدم اختيار النموذج المستخدم مباشرة في واجهة المستخدم:
+**靈活性** - 使用開放模型可以讓您在使用不同模型或結合它們方面具有靈活性。一個例子是[HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)，用戶可以直接在用戶界面中選擇使用的模型：
 
-![Choose Model](../../../translated_images/choose-model.1f574fd269d66a894a92f8b8a1c4c3e7cf9e2d9ece5fc66c7d95efdc5d01501d.mo.png)
+![選擇模型](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.mo.png)
 
-## استكشاف النماذج المفتوحة المختلفة
+## 探索不同的開放模型
 
-### لاما 2
+### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst)، الذي طورته Meta، هو نموذج مفتوح محسن لتطبيقات الدردشة. يعود ذلك إلى طريقة تحسين الأداء الخاصة به، التي شملت كمية كبيرة من الحوارات وردود الفعل البشرية. باستخدام هذه الطريقة، ينتج النموذج نتائج أكثر توافقًا مع توقعات البشر، مما يوفر تجربة مستخدم أفضل.
+由Meta開發的[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst)是一個針對聊天應用程序優化的開放模型。這是由於其微調方法，包括大量對話和人類反饋。使用這種方法，模型生成的結果更符合人類期望，提供了更好的用戶體驗。
 
-بعض الأمثلة على النسخ المحسنة من لاما تشمل [لاما الياباني](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst)، الذي يتخصص في اللغة اليابانية و[لاما برو](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst)، وهو نسخة محسنة من النموذج الأساسي.
+一些微調版本的Llama包括[Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst)，專注於日語，[Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst)，是基礎模型的增強版本。
 
-### ميسترال
+### Mistral
 
-[ميسترال](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) هو نموذج مفتوح يركز بشكل كبير على الأداء العالي والكفاءة. يستخدم نهج "مزيج الخبراء" الذي يجمع مجموعة من النماذج المتخصصة في نظام واحد، حيث يتم اختيار نماذج معينة لاستخدامها بناءً على المدخلات. هذا يجعل الحساب أكثر فعالية حيث تتعامل النماذج فقط مع المدخلات التي تتخصص فيها.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst)是一個開放模型，強調高性能和效率。它使用專家混合方法，將一組專門的專家模型組合成一個系統，根據輸入選擇使用某些模型。這使得計算更加有效，因為模型僅處理它們專業的輸入。
 
-بعض الأمثلة على النسخ المحسنة من ميسترال تشمل [بيوميسترال](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst)، الذي يركز على المجال الطبي و[أوبن ماث ميسترال](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst)، الذي يقوم بإجراء العمليات الحسابية الرياضية.
+一些微調版本的Mistral包括[BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst)，專注於醫療領域，[OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst)，進行數學運算。
 
-### فالكون
+### Falcon
 
-[فالكون](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) هو نموذج لغوي كبير تم إنشاؤه من قبل معهد الابتكار التكنولوجي (**TII**). تم تدريب فالكون-40B على 40 مليار بارامتر، مما أظهر أداءً أفضل من GPT-3 بميزانية حسابية أقل. يعود ذلك إلى استخدامه لخوارزمية FlashAttention والانتباه المتعدد الاستعلامات الذي يمكنه من تقليل متطلبات الذاكرة في وقت الاستدلال. مع هذا الوقت المستقطع في الاستدلال، فإن فالكون-40B مناسب لتطبيقات الدردشة.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst)是由技術創新研究所（**TII**）創建的LLM。Falcon-40B在400億個參數上進行了訓練，已顯示出在計算預算較少的情況下表現優於GPT-3。這是由於其使用了FlashAttention算法和多查詢注意力，能夠在推理時減少內存需求。由於推理時間減少，Falcon-40B適合聊天應用。
 
-بعض الأمثلة على النسخ المحسنة من فالكون هي [المساعد المفتوح](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst)، مساعد مبني على النماذج المفتوحة و[GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst)، الذي يقدم أداءً أعلى من النموذج الأساسي.
+一些微調版本的Falcon包括[OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst)，基於開放模型構建的助手，[GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst)，提供比基礎模型更高的性能。
 
-## كيفية الاختيار
+## 如何選擇
 
-لا توجد إجابة واحدة لاختيار نموذج مفتوح. مكان جيد للبدء هو استخدام ميزة التصفية حسب المهمة في استوديو Azure AI. سيساعدك ذلك على فهم أنواع المهام التي تم تدريب النموذج عليها. كما يحتفظ Hugging Face بلوحة قيادة للنماذج اللغوية الكبيرة تعرض لك أفضل النماذج أداءً بناءً على معايير معينة.
+選擇開放模型沒有唯一的答案。可以從使用Azure AI Studio的任務篩選功能開始。這將幫助您了解模型已訓練的任務類型。Hugging Face還維護了一個LLM排行榜，顯示了基於某些指標的最佳表現模型。
 
-عند النظر إلى مقارنة النماذج اللغوية الكبيرة عبر الأنواع المختلفة، فإن [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) هو مورد رائع آخر:
+在不同類型的LLM中進行比較時，[人工分析](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)是另一個很好的資源：
 
-![Model Quality](../../../translated_images/model-quality.10696c659e8e327352b6c2352d000092a0a91abb31a1ffd337fb16a9edcb7d9c.mo.png)
-المصدر: Artificial Analysis
+![模型質量](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.mo.png)
+來源：人工分析
 
-إذا كنت تعمل على حالة استخدام معينة، فإن البحث عن نسخ محسنة تركز على نفس المجال يمكن أن يكون فعالًا. التجربة مع نماذج مفتوحة متعددة لمعرفة كيف تؤدي وفقًا لتوقعاتك وتوقعات مستخدميك هي ممارسة جيدة أخرى.
+如果在特定使用情況下工作，尋找專注於相同領域的微調版本可能是有效的。嘗試多個開放模型以查看它們根據您和您的用戶期望的表現是另一個良好做法。
 
-## الخطوات التالية
+## 下一步
 
-أفضل جزء في النماذج المفتوحة هو أنه يمكنك البدء في العمل معها بسرعة كبيرة. اطلع على [كتالوج النماذج في استوديو Azure AI](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)، الذي يحتوي على مجموعة خاصة من Hugging Face مع هذه النماذج التي ناقشناها هنا.
+開放模型的最佳部分是您可以快速開始使用它們。查看[Azure AI Studio模型目錄](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)，其中包含我們在此處討論的模型的特定Hugging Face集合。
 
-## التعلم لا يتوقف هنا، واصل الرحلة
+## 學習不止於此，繼續旅程
 
-بعد إكمال هذه الدرسة، اطلع على [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تعزيز معرفتك في مجال الذكاء الاصطناعي التوليدي!
+完成本課程後，查看我們的[生成式AI學習系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式AI知識！
 
-I'm sorry, but it seems like "mo" is not recognized as a language code or a specific language. Could you please provide more details or clarify the language you're referring to?
+**免責聲明**：
+本文檔已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力追求準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於關鍵信息，建議使用專業人工翻譯。對於因使用此翻譯而引起的任何誤解或誤釋，我們不承擔責任。

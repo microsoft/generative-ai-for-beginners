@@ -2,107 +2,107 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:06:17+00:00",
+  "translation_date": "2025-06-25T23:09:28+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "cs"
 }
 -->
-# Rámce pro neuronové sítě
+# Frameworky pro neuronové sítě
 
 Jak jsme se již naučili, abychom mohli efektivně trénovat neuronové sítě, musíme udělat dvě věci:
 
-* Pracovat s tensory, např. násobit, sčítat a počítat některé funkce jako sigmoid nebo softmax
-* Počítat gradienty všech výrazů, abychom mohli provádět optimalizaci metodou gradientního sestupu
+* Operovat s tensory, např. násobit, sčítat a počítat některé funkce jako sigmoid nebo softmax
+* Vypočítat gradienty všech výrazů, abychom mohli provádět optimalizaci pomocí gradientního sestupu
 
-Zatímco knihovna `numpy` zvládne první část, potřebujeme nějaký mechanismus pro výpočet gradientů. V našem rámci, který jsme vyvinuli v předchozí sekci, jsme museli ručně programovat všechny derivátové funkce uvnitř metody `backward`, která provádí zpětnou propagaci. Ideálně by nám rámec měl umožnit počítat gradienty *jakéhokoli výrazu*, který můžeme definovat.
+Zatímco knihovna `numpy` zvládne první část, potřebujeme nějaký mechanismus pro výpočet gradientů. V našem frameworku, který jsme vyvinuli v předchozí sekci, jsme museli ručně programovat všechny derivace funkcí uvnitř metody `backward`, která provádí zpětnou propagaci. Ideálně by nám framework měl poskytnout možnost vypočítat gradienty *jakéhokoliv výrazu*, který můžeme definovat.
 
-Další důležitou věcí je být schopen provádět výpočty na GPU nebo jiných specializovaných výpočetních jednotkách, jako je TPU. Trénování hlubokých neuronových sítí vyžaduje *hodně* výpočtů a je velmi důležité tyto výpočty paralelizovat na GPU.
+Další důležitou věcí je schopnost provádět výpočty na GPU nebo jiných specializovaných výpočetních jednotkách, jako je TPU. Trénink hlubokých neuronových sítí vyžaduje *mnoho* výpočtů a možnost paralelizace těchto výpočtů na GPU je velmi důležitá.
 
 > ✅ Termín 'paralelizovat' znamená rozdělit výpočty mezi více zařízení.
 
-V současnosti jsou dva nejpopulárnější neuronové rámce: TensorFlow a PyTorch. Oba poskytují nízkoúrovňové API pro práci s tensory jak na CPU, tak na GPU. Nad nízkoúrovňovým API existuje také vyšší úroveň API, nazývaná Keras a PyTorch Lightning.
+V současné době jsou dvě nejpopulárnější frameworky pro neuronové sítě: TensorFlow a PyTorch. Oba poskytují nízkoúrovňové API pro operace s tensory na CPU i GPU. Nad nízkoúrovňovým API existuje také vyšší úrovňové API, které se odpovídajícím způsobem nazývá Keras a PyTorch Lightning.
 
-Nízkoúrovňové API | TensorFlow| PyTorch
+Nízkoúrovňové API | TensorFlow | PyTorch
 -----------------|-------------------------------------|--------------------------------
-Vysokoúrovňové API| Keras| Pytorch
+Vyšší úrovňové API | Keras | PyTorch Lightning
 
-**Nízkoúrovňové API** v obou rámcích vám umožňuje stavět tzv. **výpočetní grafy**. Tento graf definuje, jak vypočítat výstup (obvykle ztrátovou funkci) s danými vstupními parametry a může být odeslán k výpočtu na GPU, pokud je dostupný. Existují funkce pro diferenciaci tohoto výpočetního grafu a výpočet gradientů, které pak mohou být použity pro optimalizaci parametrů modelu.
+**Nízkoúrovňová API** v obou frameworkech vám umožňují vytvářet tzv. **výpočetní grafy**. Tento graf definuje, jak vypočítat výstup (obvykle ztrátovou funkci) s danými vstupními parametry a může být poslán k výpočtu na GPU, pokud je k dispozici. Existují funkce pro diferenciaci tohoto výpočetního grafu a výpočet gradientů, které pak mohou být použity k optimalizaci parametrů modelu.
 
-**Vysokoúrovňové API** v podstatě považují neuronové sítě za **sekvenci vrstev** a usnadňují konstrukci většiny neuronových sítí. Trénování modelu obvykle vyžaduje přípravu dat a následné volání funkce `fit`, aby se práce vykonala.
+**Vyšší úrovňová API** považují neuronové sítě v podstatě za **sekvenci vrstev** a konstrukce většiny neuronových sítí je tak mnohem jednodušší. Trénování modelu obvykle vyžaduje přípravu dat a poté zavolání funkce `fit` pro provedení úkolu.
 
-Vysokoúrovňové API vám umožňuje velmi rychle sestavit typické neuronové sítě, aniž byste se museli starat o mnoho detailů. Zároveň nízkoúrovňové API nabízí mnohem větší kontrolu nad trénovacím procesem, a proto se hodně používají ve výzkumu, když se zabýváte novými architekturami neuronových sítí.
+Vyšší úrovňové API vám umožní velmi rychle vytvořit typické neuronové sítě bez starostí o mnoho detailů. Zároveň nízkoúrovňové API nabízí mnohem větší kontrolu nad tréninkovým procesem, a proto jsou často používána ve výzkumu, když se zabýváte novými architekturami neuronových sítí.
 
-Je také důležité pochopit, že můžete použít obě API společně, např. můžete vyvinout vlastní architekturu vrstvy sítě pomocí nízkoúrovňového API a poté ji použít v rámci větší sítě sestavené a trénované pomocí vysokoúrovňového API. Nebo můžete definovat síť pomocí vysokoúrovňového API jako sekvenci vrstev a poté použít vlastní nízkoúrovňovou trénovací smyčku k provedení optimalizace. Obě API používají stejné základní koncepty a jsou navrženy tak, aby spolu dobře fungovaly.
+Je také důležité pochopit, že můžete použít obě API dohromady, např. můžete vyvinout svou vlastní architekturu vrstvy s použitím nízkoúrovňového API a pak ji použít v rámci větší sítě vytvořené a trénované s vyšší úrovňovým API. Nebo můžete definovat síť pomocí vyšší úrovňového API jako sekvenci vrstev a pak použít vlastní nízkoúrovňovou tréninkovou smyčku k provedení optimalizace. Obě API používají stejné základní koncepty a jsou navržena tak, aby dobře spolupracovala.
 
 ## Učení
 
-V tomto kurzu nabízíme většinu obsahu jak pro PyTorch, tak pro TensorFlow. Můžete si vybrat svůj preferovaný rámec a projít pouze odpovídajícími poznámkovými bloky. Pokud si nejste jisti, který rámec zvolit, přečtěte si některé diskuse na internetu ohledně **PyTorch vs. TensorFlow**. Můžete se také podívat na oba rámce, abyste získali lepší představu.
+V tomto kurzu nabízíme většinu obsahu jak pro PyTorch, tak pro TensorFlow. Můžete si vybrat preferovaný framework a projít pouze odpovídajícími zápisníky. Pokud si nejste jisti, který framework zvolit, přečtěte si nějaké diskuse na internetu ohledně **PyTorch vs. TensorFlow**. Můžete se také podívat na oba frameworky pro lepší pochopení.
 
-Kde je to možné, použijeme vysokoúrovňová API pro jednoduchost. Nicméně věříme, že je důležité pochopit, jak neuronové sítě fungují od základů, proto začínáme prací s nízkoúrovňovým API a tensory. Pokud však chcete začít rychle a nechcete trávit hodně času učením těchto detailů, můžete je přeskočit a přejít přímo k poznámkovým blokům vysokoúrovňového API.
+Kde to bude možné, použijeme vyšší úrovňová API pro jednoduchost. Nicméně věříme, že je důležité pochopit, jak neuronové sítě fungují od základu, takže na začátku začneme pracovat s nízkoúrovňovým API a tensory. Nicméně pokud chcete rychle začít a nechcete trávit mnoho času učením těchto detailů, můžete tyto části přeskočit a jít rovnou do zápisníků s vyšší úrovňovým API.
 
-## ✍️ Cvičení: Rámce
+## ✍️ Cvičení: Frameworky
 
-Pokračujte ve svém učení v následujících poznámkových blocích:
+Pokračujte ve svém učení v následujících zápisnících:
 
-Nízkoúrovňové API | TensorFlow+Keras Notebook | PyTorch
+Nízkoúrovňové API | TensorFlow+Keras Zápisník | PyTorch
 -----------------|-------------------------------------|--------------------------------
-Vysokoúrovňové API| Keras | *PyTorch Lightning*
+Vyšší úrovňové API | Keras | *PyTorch Lightning*
 
-Po zvládnutí rámců si zopakujme pojem přetrénování.
+Po zvládnutí frameworků si zopakujme pojem přetrénování.
 
 # Přetrénování
 
-Přetrénování je velmi důležitý koncept v strojovém učení a je velmi důležité ho pochopit správně!
+Přetrénování je velmi důležitý koncept v oblasti strojového učení a je velmi důležité ho správně pochopit!
 
 Zvažte následující problém aproximace 5 bodů (reprezentovaných `x` na grafech níže):
 
-!linear | overfit
+!lineární | přetrénování
 -------------------------|--------------------------
 **Lineární model, 2 parametry** | **Nelineární model, 7 parametrů**
-Chyba trénování = 5.3 | Chyba trénování = 0
-Chyba validace = 5.1 | Chyba validace = 20
+Tréninková chyba = 5.3 | Tréninková chyba = 0
+Validační chyba = 5.1 | Validační chyba = 20
 
-* Vlevo vidíme dobrou aproximaci přímkou. Protože počet parametrů je adekvátní, model správně pochopí rozložení bodů.
-* Vpravo je model příliš výkonný. Protože máme pouze 5 bodů a model má 7 parametrů, může se nastavit tak, aby procházel všemi body, což způsobí, že chyba trénování bude 0. To však brání modelu pochopit správný vzor v datech, takže chyba validace je velmi vysoká.
+* Vlevo vidíme dobré přímkové přiblížení. Protože počet parametrů je adekvátní, model správně chápe rozložení bodů.
+* Vpravo je model příliš výkonný. Protože máme pouze 5 bodů a model má 7 parametrů, může se přizpůsobit tak, aby procházel všemi body, čímž je tréninková chyba 0. To však brání modelu pochopit správný vzor v datech, takže validační chyba je velmi vysoká.
 
-Je velmi důležité najít správnou rovnováhu mezi bohatostí modelu (počtem parametrů) a počtem trénovacích vzorků.
+Je velmi důležité najít správnou rovnováhu mezi bohatostí modelu (počtem parametrů) a počtem tréninkových vzorků.
 
 ## Proč přetrénování nastává
 
-  * Nedostatek trénovacích dat
+  * Nedostatek tréninkových dat
   * Příliš výkonný model
   * Příliš mnoho šumu ve vstupních datech
 
-## Jak zjistit přetrénování
+## Jak detekovat přetrénování
 
-Jak můžete vidět z výše uvedeného grafu, přetrénování lze zjistit velmi nízkou chybou trénování a vysokou chybou validace. Během trénování obvykle vidíme, že chyby trénování i validace začínají klesat, a pak v určitém bodě může chyba validace přestat klesat a začít růst. To bude známkou přetrénování a indikátorem, že bychom pravděpodobně měli trénování v tomto bodě zastavit (nebo alespoň udělat snímek modelu).
+Jak můžete vidět z grafu výše, přetrénování lze detekovat velmi nízkou tréninkovou chybou a vysokou validační chybou. Obvykle během tréninku vidíme, jak tréninková i validační chyba začínají klesat, a pak v určitém bodě může validační chyba přestat klesat a začít stoupat. To bude známka přetrénování a indikátor, že bychom pravděpodobně měli zastavit trénink v tomto bodě (nebo alespoň udělat snímek modelu).
 
 ## Jak zabránit přetrénování
 
 Pokud vidíte, že přetrénování nastává, můžete udělat jedno z následujících:
 
- * Zvýšit množství trénovacích dat
+ * Zvýšit množství tréninkových dat
  * Snížit složitost modelu
- * Použít nějakou regularizační techniku, jako je Dropout, kterou se budeme zabývat později.
+ * Použít nějakou regularizační techniku, jako je Dropout, kterou později zvážíme.
 
-## Přetrénování a kompromis mezi zkreslením a rozptylem
+## Přetrénování a kompromis mezi odchylkou a rozptylem
 
-Přetrénování je ve skutečnosti případ obecnějšího problému ve statistice nazývaného kompromis mezi zkreslením a rozptylem. Pokud zvažujeme možné zdroje chyby v našem modelu, můžeme vidět dva typy chyb:
+Přetrénování je vlastně případ obecnějšího problému ve statistice nazývaného kompromis mezi odchylkou a rozptylem. Pokud zvažujeme možné zdroje chyb v našem modelu, můžeme vidět dva typy chyb:
 
-* **Chyby zkreslení** jsou způsobeny tím, že náš algoritmus nedokáže správně zachytit vztah mezi trénovacími daty. Může to být důsledek toho, že náš model není dostatečně výkonný (**podtrénování**).
+* **Chyby odchylky** jsou způsobeny tím, že náš algoritmus nedokáže správně zachytit vztah mezi tréninkovými daty. Může to být důsledek toho, že náš model není dostatečně výkonný (**podtrénování**).
 * **Chyby rozptylu**, které jsou způsobeny tím, že model aproximuje šum ve vstupních datech místo smysluplného vztahu (**přetrénování**).
 
-Během trénování chyby zkreslení klesají (jak se náš model učí aproximovat data) a chyby rozptylu rostou. Je důležité zastavit trénování - buď ručně (když zjistíme přetrénování) nebo automaticky (zavedením regularizace) - abychom zabránili přetrénování.
+Během tréninku chyby odchylky klesají (jak se náš model učí aproximovat data) a chyby rozptylu rostou. Je důležité zastavit trénink - buď ručně (když detekujeme přetrénování) nebo automaticky (zavedením regularizace) - aby se zabránilo přetrénování.
 
 ## Závěr
 
-V této lekci jste se naučili o rozdílech mezi různými API pro dva nejpopulárnější AI rámce, TensorFlow a PyTorch. Kromě toho jste se naučili o velmi důležitém tématu, přetrénování.
+V této lekci jste se naučili o rozdílech mezi různými API pro dva nejpopulárnější AI frameworky, TensorFlow a PyTorch. Kromě toho jste se naučili o velmi důležitém tématu, přetrénování.
 
 ## 🚀 Výzva
 
-V přiložených poznámkových blocích najdete 'úkoly' na konci; projděte si poznámkové bloky a dokončete úkoly.
+V doprovodných zápisnících najdete na konci 'úkoly'; projděte si zápisníky a splňte úkoly.
 
-## Přehled a samostudium
+## Recenze & Samostudium
 
 Proveďte výzkum na následující témata:
 
@@ -110,14 +110,14 @@ Proveďte výzkum na následující témata:
 - PyTorch
 - Přetrénování
 
-Zeptejte se sami sebe na následující otázky:
+Položte si následující otázky:
 
 - Jaký je rozdíl mezi TensorFlow a PyTorch?
 - Jaký je rozdíl mezi přetrénováním a podtrénováním?
 
-## Zadání
+## Úkol
 
-V tomto laboratorním cvičení jste požádáni, abyste vyřešili dva klasifikační problémy pomocí jedno- a vícevrstvých plně propojených sítí pomocí PyTorch nebo TensorFlow.
+V tomto cvičení jste požádáni, abyste vyřešili dva klasifikační problémy pomocí jedno- a vícevrstvých plně propojených sítí s využitím PyTorch nebo TensorFlow.
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, uvědomte si, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro kritické informace je doporučen profesionální lidský překlad. Neodpovídáme za jakékoli nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, vezměte prosím na vědomí, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument ve svém původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme zodpovědní za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

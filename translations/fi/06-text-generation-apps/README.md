@@ -2,75 +2,75 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T17:03:44+00:00",
+  "translation_date": "2025-06-25T14:32:31+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "fi"
 }
 -->
 # Tekstintuotantosovellusten rakentaminen
 
-[![Tekstintuotantosovellusten rakentaminen](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.fi.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Tekstintuotantosovellusten rakentaminen](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.fi.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Napsauta yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
-Olet tähän mennessä nähnyt, että on olemassa keskeisiä käsitteitä kuten kehotteet ja jopa kokonainen ala nimeltä "kehotetekniikka". Monet työkalut, kuten ChatGPT, Office 365, Microsoft Power Platform ja muut, tukevat kehotteiden käyttöä jonkin asian saavuttamiseksi.
+Tässä opetussuunnitelmassa olet tähän mennessä nähnyt, että on olemassa keskeisiä käsitteitä kuten kehotteet ja jopa kokonainen ala nimeltään "kehotetekniikka". Monet työkalut, kuten ChatGPT, Office 365, Microsoft Power Platform ja muut, tukevat sinua kehotteiden avulla saavuttamaan jotain.
 
-Jotta voisit lisätä tällaisen kokemuksen sovellukseen, sinun on ymmärrettävä käsitteet kuten kehotteet, täydennykset ja valittava kirjasto, jonka kanssa työskennellä. Juuri tämän opit tässä luvussa.
+Jos haluat lisätä tällaisen kokemuksen sovellukseen, sinun on ymmärrettävä käsitteitä kuten kehotteet, täydennykset ja valittava kirjasto, jonka kanssa työskennellä. Juuri tämän opit tässä luvussa.
 
 ## Johdanto
 
 Tässä luvussa opit:
 
 - openai-kirjastosta ja sen keskeisistä käsitteistä.
-- Rakentamaan tekstintuotantosovelluksen käyttäen openai-kirjastoa.
-- Ymmärtämään, miten käyttää käsitteitä kuten kehotteet, lämpötila ja tokenit tekstintuotantosovelluksen rakentamiseen.
+- Rakentamaan tekstintuotantosovelluksen käyttäen openai:ta.
+- Ymmärtämään, kuinka käyttää käsitteitä kuten kehotteet, lämpötila ja tokenit rakentaaksesi tekstintuotantosovelluksen.
 
 ## Oppimistavoitteet
 
 Tämän oppitunnin lopussa osaat:
 
 - Selittää, mikä tekstintuotantosovellus on.
-- Rakentaa tekstintuotantosovelluksen käyttäen openai-kirjastoa.
-- Määrittää sovelluksesi käyttämään enemmän tai vähemmän tokeneita ja myös muuttaa lämpötilaa saadaksesi vaihtelevan lopputuloksen.
+- Rakentaa tekstintuotantosovelluksen käyttäen openai:ta.
+- Konfiguroida sovelluksesi käyttämään enemmän tai vähemmän tokeneita ja myös muuttamaan lämpötilaa, jotta saat monipuolisia tuloksia.
 
 ## Mikä on tekstintuotantosovellus?
 
-Normaalisti kun rakennat sovelluksen, sillä on jonkinlainen käyttöliittymä, kuten seuraavat:
+Normaalisti, kun rakennat sovelluksen, siinä on jonkinlainen käyttöliittymä, kuten seuraavat:
 
 - Komentopohjainen. Konsolisovellukset ovat tyypillisiä sovelluksia, joissa kirjoitat komennon ja se suorittaa tehtävän. Esimerkiksi `git` on komentopohjainen sovellus.
-- Käyttöliittymä (UI). Joillakin sovelluksilla on graafiset käyttöliittymät (GUI), joissa voit napsauttaa painikkeita, syöttää tekstiä, valita vaihtoehtoja ja muuta.
+- Käyttöliittymä (UI). Joissakin sovelluksissa on graafisia käyttöliittymiä (GUI), joissa napsautat painikkeita, syötät tekstiä, valitset vaihtoehtoja ja muuta.
 
-### Konsoli- ja käyttöliittymäsovellukset ovat rajallisia
+### Konsoli- ja käyttöliittymäsovellusten rajoitukset
 
 Vertaa sitä komentopohjaiseen sovellukseen, jossa kirjoitat komennon:
 
-- **Se on rajallinen**. Et voi vain kirjoittaa mitä tahansa komentoa, vain niitä, joita sovellus tukee.
-- **Kielikohtainen**. Jotkut sovellukset tukevat monia kieliä, mutta oletusarvoisesti sovellus on rakennettu tietylle kielelle, vaikka voitkin lisätä lisää kielitukea.
+- **Se on rajallinen**. Et voi kirjoittaa mitä tahansa komentoa, vaan vain niitä, joita sovellus tukee.
+- **Kielispesifinen**. Jotkut sovellukset tukevat monia kieliä, mutta oletuksena sovellus on rakennettu tietylle kielelle, vaikka voitkin lisätä enemmän kielitukea.
 
 ### Tekstintuotantosovellusten edut
 
 Miten tekstintuotantosovellus sitten eroaa?
 
-Tekstintuotantosovelluksessa sinulla on enemmän joustavuutta, et ole rajoitettu tiettyihin komentoihin tai tiettyyn syöttökieleen. Sen sijaan voit käyttää luonnollista kieltä vuorovaikutuksessa sovelluksen kanssa. Toinen etu on, että koska olet jo vuorovaikutuksessa tietolähteen kanssa, joka on koulutettu laajalla tietokorpuksella, perinteinen sovellus saattaa olla rajoitettu siihen, mitä tietokannassa on.
+Tekstintuotantosovelluksessa sinulla on enemmän joustavuutta, et ole rajoittunut joukkoon komentoja tai tiettyyn syöttökieleen. Sen sijaan voit käyttää luonnollista kieltä vuorovaikutukseen sovelluksen kanssa. Toinen etu on, että koska olet jo vuorovaikutuksessa tietolähteen kanssa, joka on koulutettu laajalla tietomäärällä, perinteinen sovellus saattaa olla rajoittunut siihen, mitä tietokannassa on.
 
 ### Mitä voin rakentaa tekstintuotantosovelluksella?
 
-Voit rakentaa monia asioita. Esimerkiksi:
+On monia asioita, joita voit rakentaa. Esimerkiksi:
 
-- **Chatbot**. Chatbot, joka vastaa kysymyksiin aiheista, kuten yrityksestäsi ja sen tuotteista, voisi olla hyvä valinta.
-- **Apuväline**. LLM:t ovat erinomaisia esimerkiksi tekstin tiivistämisessä, tekstistä oivallusten saamisessa, tekstin tuottamisessa kuten ansioluetteloissa ja muussa.
-- **Koodiassistentti**. Riippuen käyttämästäsi kielimallista, voit rakentaa koodiassistentin, joka auttaa sinua kirjoittamaan koodia. Esimerkiksi voit käyttää tuotetta kuten GitHub Copilot sekä ChatGPT auttaaksesi sinua koodin kirjoittamisessa.
+- **Chatbot**. Chatbot, joka vastaa kysymyksiin aiheista, kuten yrityksesi ja sen tuotteet, voisi olla hyvä valinta.
+- **Apuväline**. LLM:t ovat erinomaisia asioissa kuten tekstin tiivistäminen, oivallusten saaminen tekstistä, tekstin tuottaminen kuten ansioluetteloiden luominen ja paljon muuta.
+- **Koodiassistentti**. Riippuen käyttämästäsi kielimallista, voit rakentaa koodiassistentin, joka auttaa sinua kirjoittamaan koodia. Esimerkiksi voit käyttää tuotetta kuten GitHub Copilot sekä ChatGPT:tä auttamaan sinua koodin kirjoittamisessa.
 
-## Miten voin aloittaa?
+## Miten pääsen alkuun?
 
 Sinun on löydettävä tapa integroitua LLM:ään, mikä yleensä sisältää seuraavat kaksi lähestymistapaa:
 
-- Käytä API:a. Tässä rakennat verkkopyyntöjä kehotteellasi ja saat takaisin tuotettua tekstiä.
-- Käytä kirjastoa. Kirjastot auttavat kapseloimaan API-kutsut ja tekevät niistä helpompia käyttää.
+- Käytä API:ta. Tässä rakennat verkkopyyntöjä kehotteesi kanssa ja saat takaisin tuotettua tekstiä.
+- Käytä kirjastoa. Kirjastot auttavat kapseloimaan API-kutsut ja tekevät niistä helpommin käytettäviä.
 
 ## Kirjastot/SDK:t
 
-On muutamia tunnettuja kirjastoja, jotka toimivat LLM:ien kanssa, kuten:
+On muutamia tunnettuja kirjastoja, joiden kanssa voi työskennellä LLM:ien kanssa, kuten:
 
 - **openai**, tämä kirjasto tekee malliin yhdistämisestä ja kehotteiden lähettämisestä helppoa.
 
@@ -79,13 +79,13 @@ Sitten on kirjastoja, jotka toimivat korkeammalla tasolla, kuten:
 - **Langchain**. Langchain on hyvin tunnettu ja tukee Pythonia.
 - **Semantic Kernel**. Semantic Kernel on Microsoftin kirjasto, joka tukee kieliä kuten C#, Python ja Java.
 
-## Ensimmäinen sovellus käyttäen openai
+## Ensimmäinen sovellus käyttäen openai:ta
 
-Katsotaan, miten voimme rakentaa ensimmäisen sovelluksemme, mitä kirjastoja tarvitsemme, kuinka paljon on tarpeen ja niin edelleen.
+Katsotaanpa, miten voimme rakentaa ensimmäisen sovelluksemme, mitä kirjastoja tarvitsemme, kuinka paljon tarvitaan ja niin edelleen.
 
 ### Asenna openai
 
-On monia kirjastoja, jotka mahdollistavat OpenAI:n tai Azure OpenAI:n kanssa vuorovaikutuksen. On mahdollista käyttää useita ohjelmointikieliä kuten C#, Python, JavaScript, Java ja muita. Olemme valinneet käyttää `openai` Python-kirjastoa, joten käytämme `pip` sen asentamiseen.
+On olemassa monia kirjastoja OpenAI:n tai Azure OpenAI:n kanssa vuorovaikutukseen. On mahdollista käyttää lukuisia ohjelmointikieliä kuten C#, Python, JavaScript, Java ja paljon muuta. Olemme valinneet käyttää `openai` Python-kirjastoa, joten käytämme `pip` asentaaksemme sen.
 
 ```bash
 pip install openai
@@ -95,32 +95,32 @@ pip install openai
 
 Sinun on suoritettava seuraavat vaiheet:
 
-- Luo tili Azuren palvelussa [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Hanki pääsy Azure OpenAI:hin. Mene osoitteeseen [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja pyydä pääsyä.
+- Luo tili Azuren [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst) kautta.
+- Hanki pääsy Azure OpenAI:hin. Mene [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja pyydä pääsyä.
 
   > [!NOTE]
-  > Kirjoitushetkellä sinun on haettava pääsyä Azure OpenAI:hin.
+  > Tämän kirjoittamisen aikaan sinun on haettava pääsyä Azure OpenAI:hin.
 
 - Asenna Python <https://www.python.org/>
-- Luo Azure OpenAI Service -resurssi. Katso tämä opas, miten [luodaan resurssi](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Luo Azure OpenAI Service -resurssi. Katso tämä opas siitä, miten [luoda resurssi](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Paikanna API-avain ja päätepiste
 
-Tässä vaiheessa sinun on kerrottava `openai` kirjastolle, mitä API-avainta käyttää. Löytääksesi API-avaimesi, mene "Avaimet ja päätepiste" osioon Azure OpenAI -resurssissasi ja kopioi "Avain 1" arvo.
+Tässä vaiheessa sinun on kerrottava `openai` kirjastollesi, mitä API-avainta käyttää. Löytääksesi API-avaimesi, mene "Avaimet ja päätepiste" -osioon Azure OpenAI -resurssissasi ja kopioi "Avain 1" arvo.
 
-![Avaimet ja päätepiste -resurssinäkymä Azure-portaalissa](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Avaimet ja päätepiste -resurssiterä Azure-portaalissa](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Nyt kun olet kopioinut tämän tiedon, annetaan kirjastojen käyttää sitä.
+Nyt kun olet kopioinut tämän tiedon, ohjeistetaan kirjastoja käyttämään sitä.
 
 > [!NOTE]
-> On suositeltavaa erottaa API-avain koodistasi. Voit tehdä tämän käyttämällä ympäristömuuttujia.
+> On syytä erottaa API-avain koodistasi. Voit tehdä tämän käyttämällä ympäristömuuttujia.
 >
 > - Aseta ympäristömuuttuja `OPENAI_API_KEY` to your API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Määritä konfiguraatio Azurelle
+### Azure-konfiguraation asetus
 
-Jos käytät Azure OpenAI:ta, tässä on ohjeet konfiguraation asettamiseen:
+Jos käytät Azure OpenAI:ta, tässä on, miten asetat konfiguraation:
 
 ```python
 openai.api_type = 'azure'
@@ -140,7 +140,7 @@ Yllä asetamme seuraavat:
 
 ## Generate text
 
-The way to generate text is to use the `Completion` luokka. Tässä on esimerkki:
+The way to generate text is to use the `Completion`-luokka. Tässä on esimerkki:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-Yllä olevassa koodissa luomme täydennysobjektin ja annamme sille mallin, jota haluamme käyttää, sekä kehotteen. Sitten tulostamme tuotetun tekstin.
+Yllä olevassa koodissa luomme täydennysobjektin ja välitämme mallin, jota haluamme käyttää, sekä kehotteen. Sitten tulostamme tuotetun tekstin.
 
-### Keskustelutäydennykset
+### Chat-täydennykset
 
-Tähän mennessä olet nähnyt, kuinka olemme käyttäneet `Completion` to generate text. But there's another class called `ChatCompletion`, joka sopii paremmin chatboteille. Tässä on esimerkki sen käytöstä:
+Tähän mennessä olet nähnyt, kuinka olemme käyttäneet `Completion` to generate text. But there's another class called `ChatCompletion`, joka soveltuu paremmin chatboteille. Tässä on esimerkki sen käytöstä:
 
 ```python
 import openai
@@ -168,7 +168,7 @@ Lisää tästä toiminnallisuudesta tulevassa luvussa.
 
 ## Harjoitus - ensimmäinen tekstintuotantosovelluksesi
 
-Nyt kun olemme oppineet, miten openai asennetaan ja konfiguroidaan, on aika rakentaa ensimmäinen tekstintuotantosovelluksesi. Rakenna sovelluksesi seuraamalla näitä vaiheita:
+Nyt kun olemme oppineet, kuinka openai asennetaan ja konfiguroidaan, on aika rakentaa ensimmäinen tekstintuotantosovelluksesi. Rakenna sovelluksesi seuraamalla näitä vaiheita:
 
 1. Luo virtuaaliympäristö ja asenna openai:
 
@@ -184,7 +184,7 @@ Nyt kun olemme oppineet, miten openai asennetaan ja konfiguroidaan, on aika rake
    > [!NOTE]
    > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` arvo.
 
-1. Luo _app.py_ tiedosto ja anna sille seuraava koodi:
+1. Luo _app.py_-tiedosto ja anna sille seuraava koodi:
 
    ```python
    import openai
@@ -210,7 +210,7 @@ Nyt kun olemme oppineet, miten openai asennetaan ja konfiguroidaan, on aika rake
    > [!NOTE]
    > Jos käytät Azure OpenAI:ta, sinun on asetettava `api_type` to `azure` and set the `api_key` Azure OpenAI -avaimeesi.
 
-   Sinun pitäisi nähdä tuloste, joka näyttää seuraavalta:
+   Sinun pitäisi nähdä seuraavanlainen tulos:
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ Nyt kun olemme oppineet, miten openai asennetaan ja konfiguroidaan, on aika rake
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Erilaiset kehotteet, erilaisiin asioihin
+## Eri tyyppisiä kehotteita eri asioihin
 
-Nyt olet nähnyt, miten tekstiä voidaan tuottaa kehotteella. Sinulla on jopa ohjelma käynnissä, jota voit muokata ja muuttaa tuottamaan erilaisia tekstejä.
+Nyt olet nähnyt, kuinka tuottaa tekstiä käyttämällä kehotetta. Sinulla on jopa toimiva ohjelma, jota voit muokata ja muuttaa tuottaaksesi erilaista tekstiä.
 
-Kehotteita voidaan käyttää kaikenlaisiin tehtäviin. Esimerkiksi:
+Kehotteita voidaan käyttää monenlaisiin tehtäviin. Esimerkiksi:
 
-- **Tuottaa tietynlaista tekstiä**. Voit esimerkiksi tuottaa runon, kysymyksiä tietovisaan jne.
-- **Etsiä tietoa**. Voit käyttää kehotteita etsimään tietoa, kuten seuraava esimerkki 'Mitä CORS tarkoittaa web-kehityksessä?'.
-- **Tuottaa koodia**. Voit käyttää kehotteita tuottamaan koodia, esimerkiksi kehittää säännöllinen lauseke sähköpostien validointiin tai miksei tuottaa kokonainen ohjelma, kuten web-sovellus?
+- **Tuota tietyn tyyppistä tekstiä**. Esimerkiksi voit tuottaa runon, kysymyksiä visaan jne.
+- **Etsi tietoa**. Voit käyttää kehotteita etsimään tietoa, kuten seuraavassa esimerkissä 'Mitä CORS tarkoittaa web-kehityksessä?'.
+- **Tuota koodia**. Voit käyttää kehotteita tuottamaan koodia, esimerkiksi kehittämään säännöllisen lausekkeen, jota käytetään sähköpostien validointiin tai miksei tuottamaan kokonaisen ohjelman, kuten verkkosovelluksen?
 
 ## Käytännöllisempi käyttötapaus: reseptigeneraattori
 
-Kuvittele, että sinulla on aineksia kotona ja haluat kokata jotain. Tarvitset siihen reseptin. Yksi tapa löytää reseptejä on käyttää hakukonetta tai voit käyttää LLM:ää siihen.
+Kuvittele, että sinulla on ainesosia kotona ja haluat kokata jotain. Tarvitset siihen reseptin. Yksi tapa löytää reseptejä on käyttää hakukonetta tai voisit käyttää LLM:ää tähän.
 
-Voit kirjoittaa kehotteen seuraavasti:
+Voisit kirjoittaa kehotteen seuraavasti:
 
-> "Näytä minulle 5 reseptiä ruoalle, jossa on seuraavat ainekset: kana, perunat ja porkkanat. Listaa per resepti kaikki käytetyt ainekset"
+> "Näytä minulle 5 reseptiä ruokalajille, jossa on seuraavat ainesosat: kana, perunat ja porkkanat. Per resepti, listaa kaikki käytetyt ainesosat"
 
-Annetun kehotteen perusteella saatat saada vastauksen, joka näyttää tältä:
+Yllä olevan kehotteen perusteella saatat saada vastauksen, joka on samanlainen kuin:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,14 +300,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Tämä lopputulos on hieno, tiedän mitä kokata. Tässä vaiheessa hyödyllisiä parannuksia voisivat olla:
+Tämä tulos on loistava, tiedän mitä kokata. Tässä vaiheessa, mikä voisi olla hyödyllisiä parannuksia, ovat:
 
-- Suodattaa pois ainekset, joista en pidä tai joille olen allerginen.
-- Tuottaa ostoslista, jos minulla ei ole kaikkia aineksia kotona.
+- Poista ainesosat, joista en pidä tai joille olen allerginen.
+- Tuota ostoslista, jos minulla ei ole kaikkia ainesosia kotona.
 
-Yllä oleviin tapauksiin lisätään lisäkehotus:
+Yllä olevissa tapauksissa lisätään lisäkehotus:
 
-> "Poista reseptit, joissa on valkosipulia, sillä olen allerginen ja korvaa se jollakin muulla. Tuota myös ostoslista resepteille, huomioiden että minulla on jo kana, perunat ja porkkanat kotona."
+> "Poista reseptit, joissa on valkosipulia, koska olen allerginen, ja korvaa se jollain muulla. Myös, tuota ostoslista resepteille, ottaen huomioon, että minulla on jo kanaa, perunoita ja porkkanoita kotona."
 
 Nyt sinulla on uusi tulos, nimittäin:
 
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-Siinä on viisi reseptiäsi ilman valkosipulia ja sinulla on myös ostoslista huomioiden mitä sinulla on jo kotona.
+Siinä on viisi reseptiäsi, joissa ei mainita valkosipulia, ja sinulla on myös ostoslista ottaen huomioon, mitä sinulla on jo kotona.
 
 ## Harjoitus - rakenna reseptigeneraattori
 
-Nyt kun olemme käyneet läpi skenaarion, kirjoitetaan koodi vastaamaan esitettyä skenaariota. Tee niin seuraamalla näitä vaiheita:
+Nyt kun olemme käyneet läpi skenaarion, kirjoitetaan koodi vastaamaan esitettyä skenaariota. Tee näin seuraavat vaiheet:
 
-1. Käytä olemassa olevaa _app.py_ tiedostoa lähtökohtana
-1. Paikanna `prompt` muuttuja ja muuta sen koodi seuraavaksi:
+1. Käytä olemassa olevaa _app.py_-tiedostoa lähtökohtana
+1. Paikanna `prompt`-muuttuja ja muuta sen koodi seuraavaksi:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Jos ajat koodin nyt, sinun pitäisi nähdä tuloste, joka näyttää tältä:
+   Jos ajat koodin nyt, sinun pitäisi nähdä tulos, joka on samanlainen kuin:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Nyt kun olemme käyneet läpi skenaarion, kirjoitetaan koodi vastaamaan esitetty
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > HUOMIO, LLM on epädeterministinen, joten saatat saada erilaisia tuloksia joka kerta, kun suoritat ohjelman.
+   > HUOM, LLM:si on epädeterministinen, joten saatat saada erilaisia tuloksia joka kerta, kun ajat ohjelman.
 
-   Hienoa, katsotaanpa miten voimme parantaa asioita. Parantaaksemme asioita, haluamme varmistaa, että koodi on joustava, joten ainesosia ja reseptien määrää voidaan parantaa ja muuttaa.
+   Hienoa, katsotaanpa, kuinka voimme parantaa asioita. Parantaaksemme asioita, haluamme varmistaa, että koodi on joustava, jotta ainesosia ja reseptien määrää voidaan parantaa ja muuttaa.
 
-1. Muutetaan koodi seuraavasti:
+1. Muutetaan koodia seuraavalla tavalla:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Nyt kun olemme käyneet läpi skenaarion, kirjoitetaan koodi vastaamaan esitetty
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Koodin testaaminen voisi näyttää tältä:
+   Koodin testiajo voisi näyttää tältä:
 
    ```output
    No of recipes (for example, 5): 3
@@ -429,11 +429,11 @@ Nyt kun olemme käyneet läpi skenaarion, kirjoitetaan koodi vastaamaan esitetty
 
 ### Paranna lisäämällä suodatin ja ostoslista
 
-Nyt meillä on toimiva sovellus, joka pystyy tuottamaan reseptejä ja se on joustava, koska se perustuu käyttäjän syötteisiin, sekä reseptien määrään että käytettyihin aineksiin.
+Meillä on nyt toimiva sovellus, joka pystyy tuottamaan reseptejä ja se on joustava, koska se perustuu käyttäjän antamiin syötteisiin, sekä reseptien määrän että käytettyjen ainesosien osalta.
 
 Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
 
-- **Suodata ainekset pois**. Haluamme pystyä suodattamaan pois ainekset, joista emme pidä tai joille olemme allergisia. Tämän muutoksen saavuttamiseksi voimme muokata olemassa olevaa kehotettamme ja lisätä suodatin ehto sen loppuun seuraavasti:
+- **Suodata ainesosat**. Haluamme voida suodattaa ainesosia, joista emme pidä tai joille olemme allergisia. Tämän muutoksen toteuttamiseksi voimme muokata olemassa olevaa kehotettamme ja lisätä suodatusehdon sen loppuun seuraavasti:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Yllä, lisäämme `{filter}` kehotteen loppuun ja otamme myös suodatin arvon käyttäjältä.
+  Yllä, lisäämme `{filter}` kehotteen loppuun ja myös otamme suodatinarvon käyttäjältä.
 
-  Esimerkki ohjelman ajamisesta voisi nyt näyttää tältä:
+  Esimerkkisyöte ohjelman suorittamisesta voi nyt näyttää tältä:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,13 +510,13 @@ Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Kuten näet, kaikki reseptit, joissa on maitoa, on suodatettu pois. Mutta jos olet laktoosi-intolerantti, saatat haluta suodattaa pois myös reseptit, joissa on juustoa, joten on tarpeen olla selkeä.
+  Kuten näet, kaikki reseptit, joissa on maitoa, on suodatettu pois. Mutta jos olet laktoosi-intolerantti, saatat haluta suodattaa myös reseptit, joissa on juustoa, joten on tarpeen olla selkeä.
 
-- **Tuottaa ostoslista**. Haluamme tuottaa ostoslistan, huomioiden mitä meillä jo on kotona.
+- **Tuota ostoslista**. Haluamme tuottaa ostoslistan, ottaen huomioon, mitä meillä jo on kotona.
 
-  Tämän toiminnallisuuden osalta voisimme joko yrittää ratkaista kaiken yhdellä kehotteella tai voisimme jakaa sen kahteen kehotteeseen. Kokeillaan jälkimmäistä lähestymistapaa. Tässä ehdotamme lisäkehotteen lisäämistä, mutta jotta se toimisi, meidän on lisättävä ensimmäisen kehotteen tulos kontekstiksi toiselle kehotteelle.
+  Tämän toiminnallisuuden osalta voisimme joko yrittää ratkaista kaiken yhdessä kehotteessa tai voisimme jakaa sen kahteen kehotteeseen. Kokeillaan jälkimmäistä lähestymistapaa. Tässä ehdotamme lisäämään lisäkehotteen, mutta jotta se toimisi, meidän on lisättävä ensimmäisen kehotteen tulos kontekstina toiselle kehotteelle.
 
-  Paikanna koodissa osa, joka tulostaa ensimmäisen kehotteen tuloksen ja lisää seuraava koodi sen alle:
+  Paikanna koodin osa, joka tulostaa ensimmäisen kehotteen tuloksen, ja lisää seuraava koodi sen alapuolelle:
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -531,7 +531,7 @@ Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
   print(completion.choices[0].message.content)
   ```
 
-  Huomaa seuraavat:
+  Huomaa seuraavat asiat:
 
   1. Rakennamme uuden kehotteen lisäämällä ensimmäisen kehotteen tuloksen uuteen kehotteeseen:
 
@@ -539,13 +539,13 @@ Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Teemme uuden pyynnön, mutta huomioimme myös ensimmäisessä kehotteessa pyydettyjen tokenien määrän, joten tällä kertaa sanomme `max_tokens` olevan 1200.
+  1. Teemme uuden pyynnön, mutta myös ottaen huomioon ensimmäisessä kehotteessa pyytämämme tokenien määrän, joten tällä kertaa sanomme, että `max_tokens` on 1200.
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     Kun otamme tämän koodin testiin, saamme seuraavan tuloksen:
+     Testaamalla tätä koodia saamme nyt seuraavan tuloksen:
 
      ```output
      No of recipes (for example, 5): 2
@@ -561,11 +561,11 @@ Parantaaksemme sitä edelleen, haluamme lisätä seuraavat:
 
 ## Paranna asennustasi
 
-Mitä meillä on tähän mennessä, on koodi, joka toimii, mutta on joitain hienosäätöjä, jotka meidän pitäisi tehdä parantaaksemme asioita edelleen. Joitakin asioita, joita meidän pitäisi tehdä, ovat:
+Mitä meillä on tähän mennessä, on koodi, joka toimii, mutta on joitakin säätöjä, joita meidän pitäisi tehdä parantaaksemme asioita edelleen. Jotkut asiat, jotka meidän pitäisi tehdä, ovat:
 
-- **Erota salaisuudet koodista**, kuten API-avain. Salaisuudet eivät kuulu koodiin ja ne tulisi tallentaa turvalliseen paikkaan. Erottaa salaisuudet koodista, voimme käyttää ympäristömuuttujia ja kirjastoja kuten `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **Erottele salaisuudet koodista**, kuten API-avain. Salaisuudet eivät kuulu koodiin ja ne tulisi tallentaa turvalliseen paikkaan. Salaisuuksien erottamiseksi koodista voimme käyttää ympäristömuuttujia ja kirjastoja kuten `python-dotenv` to load them from a file. Here's how that would look like in code:
 
-  1. Create a `.env` tiedosto seuraavalla sisällöllä:
+  1. Create a `.env`-tiedostoa seuraavalla sisällöllä:
 
      ```bash
      OPENAI_API_KEY=sk-...
@@ -589,15 +589,11 @@ Mitä meillä on tähän mennessä, on koodi, joka toimii, mutta on joitain hien
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Sana tokenien pituudesta**. Meidän tulisi harkita, kuinka monta tokenia tarvitsemme tekstin tuottamiseen. Tokenit maksavat rahaa, joten missä mahdollista, meidän tulisi yrittää olla taloudellisia käyttämämme tokenien määrän suhteen. Esimerkiksi, voimmeko muotoilla kehotteen niin, että voimme käyttää vähemmän tokeneita?
+- **Sana token-pituudesta**. Meidän tulisi harkita, kuinka monta tokenia tarvitsemme tuottaaksemme haluamamme tekstin. Tokenit maksavat rahaa, joten mahdollisuuksien mukaan meidän tulisi yrittää olla säästäväisiä käyttämissämme tokeneissa. Esimerkiksi, voimmeko muotoilla kehotteen niin, että voimme käyttää vähemmän tokeneita?
 
-  Muuttaaksesi käytettyjä tokeneita, voit käyttää `max_tokens` parametriä. Esimerkiksi, jos haluat käyttää 100 tokenia, tekisit seuraavasti:
+  Muuttaaksesi käytettyjä tokeneita, voit käyttää `max_tokens`-parametria. Esimerkiksi, jos haluat käyttää 100 tokenia, tekisit:
 
-  ```python
-  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
-  ```
-
-- **Kokeile lämpötilan kanssa**. Lämpötila on jotain, jota emme ole tähän mennessä maininneet, mutta se on tärkeä konteksti sille, miten ohjelmamme toimii. Mitä korkeampi lämpötila-arvo on, sitä satunna
+  @@CODE
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää auktoritatiivisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virheellisistä tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälyyn perustuvaa käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.

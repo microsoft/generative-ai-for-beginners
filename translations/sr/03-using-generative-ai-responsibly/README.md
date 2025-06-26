@@ -2,134 +2,134 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T14:51:51+00:00",
+  "translation_date": "2025-06-25T11:33:56+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "sr"
 }
 -->
-# Odgovorno korišćenje generativne veštačke inteligencije
+# Одговорно коришћење генеративне вештачке интелигенције
 
-> _Kliknite na sliku iznad da biste pogledali video lekciju_
+> _Кликните на слику изнад да погледате видео лекције_
 
-Lako je biti fasciniran veštačkom inteligencijom, a posebno generativnom veštačkom inteligencijom, ali treba razmisliti kako je koristiti odgovorno. Treba uzeti u obzir kako obezbediti da rezultati budu pravični, neštetni i još mnogo toga. Ovo poglavlje ima za cilj da vam pruži kontekst, šta treba uzeti u obzir i kako preduzeti aktivne korake za poboljšanje vašeg korišćenja veštačke inteligencije.
+Лако је бити фасциниран вештачком интелигенцијом, а посебно генеративном вештачком интелигенцијом, али треба да размотрите како да је користите одговорно. Треба да размотрите ствари као што су како да обезбедите да излаз буде фер, нештетан и више. Ово поглавље има за циљ да вам пружи наведени контекст, шта да размотрите и како да предузмете активне кораке за побољшање вашег коришћења вештачке интелигенције.
 
-## Uvod
+## Увод
 
-Ova lekcija će pokriti:
+Ова лекција ће покрити:
 
-- Zašto bi trebalo da prioritizujete Odgovornu veštačku inteligenciju prilikom izgradnje aplikacija sa generativnom veštačkom inteligencijom.
-- Osnovne principe Odgovorne veštačke inteligencije i kako se oni odnose na generativnu veštačku inteligenciju.
-- Kako primeniti ove principe Odgovorne veštačke inteligencije kroz strategiju i alate.
+- Зашто треба да приоритетно поставите одговорну вештачку интелигенцију приликом изградње апликација са генеративном вештачком интелигенцијом.
+- Основне принципе одговорне вештачке интелигенције и како се они односе на генеративну вештачку интелигенцију.
+- Како применити ове принципе одговорне вештачке интелигенције кроз стратегију и алате.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Nakon završetka ove lekcije znaćete:
+Након завршетка ове лекције, знаћете:
 
-- Značaj Odgovorne veštačke inteligencije prilikom izgradnje aplikacija sa generativnom veštačkom inteligencijom.
-- Kada razmišljati i primeniti osnovne principe Odgovorne veštačke inteligencije prilikom izgradnje aplikacija sa generativnom veštačkom inteligencijom.
-- Koji alati i strategije su vam dostupni da biste koncept Odgovorne veštačke inteligencije sproveli u praksu.
+- Значај одговорне вештачке интелигенције приликом изградње апликација са генеративном вештачком интелигенцијом.
+- Када размишљати и применити основне принципе одговорне вештачке интелигенције приликом изградње апликација са генеративном вештачком интелигенцијом.
+- Који алати и стратегије су вам доступни да примените концепт одговорне вештачке интелигенције.
 
-## Principi Odgovorne veštačke inteligencije
+## Принципи одговорне вештачке интелигенције
 
-Uzbuđenje oko generativne veštačke inteligencije nikada nije bilo veće. Ovo uzbuđenje je privuklo mnogo novih programera, pažnje i finansiranja u ovu oblast. Iako je ovo veoma pozitivno za svakoga ko želi da gradi proizvode i kompanije koristeći generativnu veštačku inteligenciju, važno je da postupamo odgovorno.
+Узбуђење око генеративне вештачке интелигенције никада није било веће. Ово узбуђење је привукло много нових програмера, пажње и финансирања у ову област. Иако је ово веома позитивно за било кога ко жели да гради производе и компаније користећи генеративну вештачку интелигенцију, важно је да поступамо одговорно.
 
-Tokom ovog kursa, fokusiramo se na izgradnju našeg startapa i našeg proizvoda za edukaciju o veštačkoj inteligenciji. Koristićemo principe Odgovorne veštačke inteligencije: Pravičnost, Uključivost, Pouzdanost/Sigurnost, Bezbednost i Privatnost, Transparentnost i Odgovornost. Sa ovim principima, istražićemo kako se oni odnose na naše korišćenje generativne veštačke inteligencije u našim proizvodima.
+Кроз овај курс, фокусираћемо се на изградњу нашег стартапа и нашег образовног производа вештачке интелигенције. Користићемо принципе одговорне вештачке интелигенције: Правичност, Инклузивност, Поузданост/Безбедност, Сигурност и Приватност, Транспарентност и Одговорност. Са овим принципима, истражићемо како се они односе на наше коришћење генеративне вештачке интелигенције у нашим производима.
 
-## Zašto bi trebalo da prioritizujete Odgovornu veštačku inteligenciju
+## Зашто треба да приоритетно поставите одговорну вештачку интелигенцију
 
-Prilikom izgradnje proizvoda, pristup usmeren na ljude koji ima u vidu najbolji interes korisnika vodi do najboljih rezultata.
+Када градите производ, узимање приступа усредсређеног на људе тако што ћете имати у виду најбољи интерес вашег корисника доводи до најбољих резултата.
 
-Jedinstvenost generativne veštačke inteligencije je njena moć da stvara korisne odgovore, informacije, smernice i sadržaj za korisnike. Ovo se može postići bez mnogo manuelnih koraka, što može dovesti do veoma impresivnih rezultata. Bez odgovarajućeg planiranja i strategija, to takođe može nažalost dovesti do nekih štetnih rezultata za vaše korisnike, vaš proizvod i društvo u celini.
+Јединственост генеративне вештачке интелигенције је њена моћ да ствара корисне одговоре, информације, упутства и садржај за кориснике. Ово се може урадити без много ручних корака, што може довести до веома импресивних резултата. Без правилног планирања и стратегија, то такође, нажалост, може довести до неких штетних резултата за ваше кориснике, ваш производ и друштво у целини.
 
-Pogledajmo neke (ali ne sve) od tih potencijalno štetnih rezultata:
+Погледајмо неке (али не све) од ових потенцијално штетних резултата:
 
-### Halucinacije
+### Халуцинације
 
-Halucinacije su termin koji se koristi da opiše kada LLM proizvodi sadržaj koji je ili potpuno besmislen ili nešto što znamo da je činjenično pogrešno na osnovu drugih izvora informacija.
+Халуцинације су термин који се користи да опише када модел великог језичког модела (LLM) производи садржај који је или потпуно бесмислен или нешто што знамо да је фактички погрешно на основу других извора информација.
 
-Uzmimo na primer da gradimo funkciju za naš startap koja omogućava studentima da postavljaju istorijska pitanja modelu. Student postavlja pitanje `Who was the sole survivor of Titanic?`
+Узмимо за пример да изградимо функцију за наш стартап која омогућава студентима да постављају историјска питања моделу. Студент поставља питање `Who was the sole survivor of Titanic?`
 
-Model proizvodi odgovor kao što je onaj ispod:
+Модел производи одговор као што је онај испод:
 
-Ovo je veoma samouveren i detaljan odgovor. Nažalost, on je netačan. Čak i sa minimalnom količinom istraživanja, neko bi otkrio da je više od jedne osobe preživelo nesreću Titanika. Za studenta koji tek počinje da istražuje ovu temu, ovaj odgovor može biti dovoljno ubedljiv da ne bude doveden u pitanje i tretiran kao činjenica. Posledice ovoga mogu dovesti do toga da AI sistem bude nepouzdan i negativno utiče na reputaciju našeg startapa.
+Ово је веома самоуверен и детаљан одговор. Нажалост, он је нетачан. Чак и уз минимално истраживање, неко би открио да је било више од једног преживелог катастрофе Титаника. За студента који тек почиње да истражује ову тему, овај одговор може бити довољно уверљив да не буде доведен у питање и третиран као чињеница. Последице овога могу довести до тога да систем вештачке интелигенције буде непоуздан и негативно утиче на репутацију нашег стартапа.
 
-Sa svakom iteracijom bilo kog datog LLM-a, videli smo poboljšanja u performansama u vezi sa minimizacijom halucinacija. Čak i sa ovim poboljšanjem, mi kao graditelji aplikacija i korisnici i dalje moramo biti svesni ovih ograničenja.
+Са сваком итерацијом било ког датог модела великог језичког модела (LLM), видели смо побољшања у перформансама око минимизирања халуцинација. Чак и уз ово побољшање, ми као програмери апликација и корисници и даље треба да останемо свесни ових ограничења.
 
-### Štetni sadržaj
+### Штетан садржај
 
-Pokrijemo u prethodnom delu kada LLM proizvodi netačne ili besmislene odgovore. Drugi rizik o kojem moramo biti svesni je kada model odgovara štetnim sadržajem.
+Покрили смо у ранијем делу када модел великог језичког модела (LLM) производи нетачне или бесмислене одговоре. Још један ризик који треба да будемо свесни је када модел одговара штетним садржајем.
 
-Štetni sadržaj može biti definisan kao:
+Штетан садржај може се дефинисати као:
 
-- Pružanje uputstava ili podsticanje na samopovređivanje ili povređivanje određenih grupa.
-- Mrziteljski ili ponižavajući sadržaj.
-- Usmeravanje planiranja bilo kakvih napada ili nasilnih dela.
-- Pružanje uputstava o tome kako pronaći ilegalan sadržaj ili počiniti ilegalna dela.
-- Prikazivanje seksualno eksplicitnog sadržaja.
+- Пружање упутстава или охрабривање самоповређивања или повреде одређених група.
+- Мрзитељски или омаловажавајући садржај.
+- Усмеравање планирања било које врсте напада или насилних аката.
+- Пружање упутстава о томе како пронаћи илегалан садржај или починити илегалне радње.
+- Приказивање сексуално експлицитног садржаја.
 
-Za naš startap, želimo da budemo sigurni da imamo prave alate i strategije na mestu kako bismo sprečili da ovaj tip sadržaja bude viđen od strane studenata.
+За наш стартап, желимо да се уверимо да имамо праве алате и стратегије да спречимо ову врсту садржаја да буде виђена од стране студената.
 
-### Nedostatak pravičnosti
+### Недостатак правичности
 
-Pravičnost je definisana kao “osiguravanje da je AI sistem slobodan od pristrasnosti i diskriminacije i da se prema svima odnosi pravično i jednako.” U svetu generativne veštačke inteligencije, želimo da osiguramo da isključujući svetski pogledi marginalizovanih grupa nisu ojačani izlazom modela.
+Правичност се дефинише као „осигурање да систем вештачке интелигенције буде без пристрасности и дискриминације и да третира све праведно и једнако.“ У свету генеративне вештачке интелигенције, желимо да осигурамо да искључујући светски погледи маргинализованих група нису ојачани излазом модела.
 
-Ovi tipovi izlaza nisu samo destruktivni za izgradnju pozitivnih iskustava proizvoda za naše korisnike, već uzrokuju i dalju društvenu štetu. Kao graditelji aplikacija, uvek treba da imamo široku i raznoliku bazu korisnika na umu kada gradimo rešenja sa generativnom veštačkom inteligencijom.
+Ове врсте излаза нису само деструктивне за изградњу позитивних искустава производа за наше кориснике, већ такође узрокују даљу друштвену штету. Као програмери апликација, увек треба да имамо на уму широку и разнолику базу корисника када градимо решења са генеративном вештачком интелигенцијом.
 
-## Kako koristiti generativnu veštačku inteligenciju odgovorno
+## Како одговорно користити генеративну вештачку интелигенцију
 
-Sada kada smo identifikovali značaj Odgovorne generativne veštačke inteligencije, hajde da pogledamo 4 koraka koje možemo preduzeti da odgovorno gradimo naša AI rešenja:
+Сада када смо идентификовали значај одговорне генеративне вештачке интелигенције, погледајмо 4 корака које можемо предузети да одговорно градимо наша решења вештачке интелигенције:
 
-### Merenje potencijalnih šteta
+### Мерење потенцијалних штета
 
-U testiranju softvera, testiramo očekivane akcije korisnika na aplikaciji. Slično tome, testiranje raznovrsnog skupa upita koje korisnici najverovatnije koriste je dobar način za merenje potencijalne štete.
+У тестирању софтвера, тестираћемо очекиване радње корисника на апликацији. Слично томе, тестирање разноликог скупа упита које корисници највероватније ће користити је добар начин за мерење потенцијалне штете.
 
-Pošto naš startap gradi edukativni proizvod, bilo bi dobro pripremiti listu upita vezanih za edukaciju. Ovo bi moglo pokriti određeni predmet, istorijske činjenice i upite o studentskom životu.
+Пошто наш стартап гради образовни производ, било би добро припремити листу упита везаних за образовање. Ово би могло да покрива одређени предмет, историјске чињенице и упите о студентском животу.
 
-### Ublažavanje potencijalnih šteta
+### Ублажавање потенцијалних штета
 
-Sada je vreme da pronađemo načine kako možemo sprečiti ili ograničiti potencijalnu štetu uzrokovanu modelom i njegovim odgovorima. Ovo možemo pogledati u 4 različita sloja:
+Сада је време да пронађемо начине где можемо спречити или ограничити потенцијалну штету коју узрокује модел и његови одговори. Можемо гледати на ово кроз 4 различита слоја:
 
-- **Model**. Biranje pravog modela za pravi slučaj upotrebe. Veći i složeniji modeli poput GPT-4 mogu izazvati veći rizik od štetnog sadržaja kada se primenjuju na manje i specifične slučajeve upotrebe. Korišćenje vaših podataka za obuku za fino podešavanje takođe smanjuje rizik od štetnog sadržaja.
+- **Модел**. Избор правог модела за прави случај употребе. Већи и сложенији модели као што је GPT-4 могу изазвати већи ризик од штетног садржаја када се примењују на мање и специфичније случајеве употребе. Коришћење ваших података за обуку за фино подешавање такође смањује ризик од штетног садржаја.
 
-- **Sigurnosni sistem**. Sigurnosni sistem je skup alata i konfiguracija na platformi koja služi modelu kako bi pomogla u ublažavanju štete. Primer ovoga je sistem za filtriranje sadržaja na Azure OpenAI servisu. Sistemi takođe treba da detektuju napade iz zatvora i neželjene aktivnosti poput zahteva od strane botova.
+- **Систем безбедности**. Систем безбедности је сет алата и конфигурација на платформи која служи моделу и помаже у ублажавању штете. Пример овога је систем филтрирања садржаја на Azure OpenAI сервису. Системи такође треба да откривају нападе који заобилазе безбедност и нежељене активности као што су захтеви од ботова.
 
-- **Metaprompt**. Metaprompts i uzemljenje su načini na koje možemo usmeriti ili ograničiti model na osnovu određenih ponašanja i informacija. Ovo bi moglo biti korišćenje ulaza sistema za definisanje određenih granica modela. Pored toga, pružanje izlaza koji su relevantniji za obim ili domen sistema.
+- **Метапромпт**. Метапромпти и усмеравање су начини на које можемо усмерити или ограничити модел на основу одређених понашања и информација. Ово може бити коришћење системских уноса да дефинишемо одређене границе модела. Поред тога, пружање излаза који су релевантнији за опсег или домен система.
 
-Takođe može biti korišćenje tehnika poput Retrieval Augmented Generation (RAG) kako bi model povlačio informacije samo iz odabranih pouzdanih izvora. Postoji lekcija kasnije u ovom kursu za [izgradnju pretraživačkih aplikacija](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Такође може бити коришћење техника као што је Ретријевал Аугментед Генератион (RAG) да би модел само извлачио информације из избора поузданих извора. Постоји лекција касније у овом курсу за [изградњу апликација за претрагу](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Korisničko iskustvo**. Poslednji sloj je gde korisnik direktno komunicira sa modelom kroz interfejs naše aplikacije na neki način. Na ovaj način možemo dizajnirati UI/UX kako bismo ograničili korisnika na tipove unosa koje mogu poslati modelu, kao i tekst ili slike prikazane korisniku. Kada implementiramo AI aplikaciju, takođe moramo biti transparentni o tome šta naša generativna veštačka inteligencija može i ne može da uradi.
+- **Корисничко искуство**. Завршни слој је где корисник директно интерагује са моделом кроз интерфејс наше апликације на неки начин. На овај начин можемо дизајнирати UI/UX да ограничимо корисника на типове уноса које може послати моделу као и текст или слике приказане кориснику. Када имплементирамо апликацију вештачке интелигенције, такође морамо бити транспарентни о томе шта наша апликација генеративне вештачке интелигенције може и не може да уради.
 
-Imamo celu lekciju posvećenu [dizajniranju UX za AI aplikacije](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Имамо целу лекцију посвећену [дизајнирању UX за апликације вештачке интелигенције](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Evaluacija modela**. Rad sa LLM-ovima može biti izazovno jer nemamo uvek kontrolu nad podacima na kojima je model obučen. Bez obzira na to, uvek treba da procenimo performanse i izlaze modela. I dalje je važno meriti tačnost, sličnost, uzemljenost i relevantnost izlaza modela. Ovo pomaže da se obezbedi transparentnost i poverenje za zainteresovane strane i korisnike.
+- **Евалуација модела**. Рад са моделима великог језичког модела (LLM) може бити изазов јер увек немамо контролу над подацима на којима је модел обучен. Без обзира на то, увек треба да процењујемо перформансе и излазе модела. И даље је важно мерити тачност, сличност, основаност и релевантност излаза модела. Ово помаже у пружању транспарентности и поверења заинтересованим странама и корисницима.
 
-### Operativno odgovorno generativno AI rešenje
+### Операција одговорног решења генеративне вештачке интелигенције
 
-Izgradnja operativne prakse oko vaših AI aplikacija je poslednja faza. Ovo uključuje partnerstvo sa drugim delovima našeg startapa kao što su Pravni i Bezbednosni kako bismo osigurali da smo u skladu sa svim regulatornim politikama. Pre lansiranja, takođe želimo da izgradimo planove oko isporuke, rešavanja incidenata i vraćanja na prethodno stanje kako bismo sprečili bilo kakvu štetu našim korisnicima od rasta.
+Изградња оперативне праксе око ваших апликација вештачке интелигенције је завршна фаза. Ово укључује партнерство са другим деловима нашег стартапа као што су правни и безбедносни тимови да се осигурамо да смо у складу са свим регулаторним политикама. Пре покретања, такође желимо да изградимо планове око испоруке, управљања инцидентима и повратка да спречимо било какву штету нашим корисницима од раста.
 
-## Alati
+## Алати
 
-Iako rad na razvoju rešenja za Odgovornu veštačku inteligenciju može izgledati kao mnogo posla, to je posao koji se isplati. Kako oblast generativne veštačke inteligencije raste, sve više alata za pomoć programerima da efikasno integrišu odgovornost u svoje radne tokove će sazrevati. Na primer, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) može pomoći u otkrivanju štetnog sadržaja i slika putem API zahteva.
+Иако рад на развоју решења одговорне вештачке интелигенције може изгледати као много, то је рад који се добро исплати. Како област генеративне вештачке интелигенције расте, више алата који помажу програмерима да ефикасно интегришу одговорност у своје радне токове ће сазрети. На пример, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) може помоћи у откривању штетног садржаја и слика путем API захтева.
 
-## Provera znanja
+## Провера знања
 
-Na koje stvari treba da obratite pažnju kako biste osigurali odgovorno korišćenje veštačke inteligencije?
+Које су неке ствари о којима треба да бринете да бисте осигурали одговорну употребу вештачке интелигенције?
 
-1. Da je odgovor tačan.
-1. Štetna upotreba, da se AI ne koristi u kriminalne svrhe.
-1. Osiguranje da je AI slobodan od pristrasnosti i diskriminacije.
+1. Да је одговор тачан.
+1. Штетна употреба, да се вештачка интелигенција не користи за криминалне сврхе.
+1. Осигурање да вештачка интелигенција буде без пристрасности и дискриминације.
 
-A: 2 i 3 su tačne. Odgovorna veštačka inteligencija pomaže vam da razmislite kako da ublažite štetne efekte i pristrasnosti i još mnogo toga.
+О: 2 и 3 су тачни. Одговорна вештачка интелигенција вам помаже да размислите како да ублажите штетне ефекте и пристрасности и више.
 
-## 🚀 Izazov
+## 🚀 Изазов
 
-Pročitajte više o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) i vidite šta možete usvojiti za svoju upotrebu.
+Прочитајте о [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) и видите шта можете усвојити за вашу употребу.
 
-## Odličan rad, nastavite sa učenjem
+## Одличан рад, наставите своје учење
 
-Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje o generativnoj veštačkoj inteligenciji](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili sa unapređivanjem svog znanja o generativnoj veštačkoj inteligenciji!
+Након завршетка ове лекције, погледајте нашу [колекцију учења о генеративној вештачкој интелигенцији](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да наставите са унапређењем вашег знања о генеративној вештачкој интелигенцији!
 
-Pređite na Lekciju 4 gde ćemo pogledati [osnove inženjeringa upita](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Прелазите на лекцију 4 где ћемо погледати [Основе инжењеринга упита](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Одрицање од одговорности**:  
-Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, имајте на уму да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални превод од стране људи. Нисмо одговорни за било каква неспоразума или погрешна тумачења која могу настати коришћењем овог превода.
+**Одричање од одговорности**:  
+Овај документ је преведен коришћењем услуге за превођење путем вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква погрешна тумачења или неспоразуме који проистичу из употребе овог превода.

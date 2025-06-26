@@ -2,178 +2,278 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "e2861bbca91c0567ef32bc77fe054f9e",
-  "translation_date": "2025-05-20T01:44:44+00:00",
+  "translation_date": "2025-06-25T22:47:18+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "sr"
 }
 -->
-# Generacija uz podršku pretraživanja (RAG) i vektorske baze podataka
+# Генерација уз помоћ претраживања (RAG) и векторске базе података
 
-U lekciji o aplikacijama za pretragu, ukratko smo naučili kako da integrišemo vaše sopstvene podatke u velike jezičke modele (LLM). U ovoj lekciji, detaljnije ćemo istražiti koncepte utemeljenja vaših podataka u vašoj LLM aplikaciji, mehanizme procesa i metode za skladištenje podataka, uključujući i ugradnje i tekst.
+[![Генерација уз помоћ претраживања (RAG) и векторске базе података](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.sr.png)](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)
 
-## Uvod
+У лекцији о апликацијама за претрагу, укратко смо научили како да интегришемо сопствене податке у моделе великог језика (LLMs). У овој лекцији, детаљније ћемо се упознати са концептима интеграције ваших података у LLM апликацију, механизмима процеса и методама за складиштење података, укључујући уградње и текст.
 
-U ovoj lekciji pokrićemo sledeće:
+> **Видео ускоро долази**
 
-- Uvod u RAG, šta je to i zašto se koristi u veštačkoj inteligenciji (AI).
+## Увод
 
-- Razumevanje šta su vektorske baze podataka i kreiranje jedne za našu aplikaciju.
+У овој лекцији обрадићемо следеће:
 
-- Praktičan primer kako integrisati RAG u aplikaciju.
+- Увод у RAG, шта је то и зашто се користи у вештачкој интелигенцији (AI).
 
-## Ciljevi učenja
+- Разумевање шта су векторске базе података и креирање једне за нашу апликацију.
 
-Nakon završetka ove lekcije, moći ćete da:
+- Практичан пример како интегрисати RAG у апликацију.
 
-- Objasnite značaj RAG-a u preuzimanju i obradi podataka.
+## Циљеви учења
 
-- Postavite RAG aplikaciju i utemeljite vaše podatke na LLM-u
+Након завршетка ове лекције, бићете у могућности да:
 
-- Efikasna integracija RAG-a i vektorskih baza podataka u LLM aplikacijama.
+- Објасните значај RAG у преузимању и обради података.
 
-## Naš scenario: unapređenje naših LLM-ova sa našim sopstvenim podacima
+- Подесите RAG апликацију и интегришете ваше податке у LLM
 
-Za ovu lekciju, želimo da dodamo naše sopstvene beleške u edukativni startap, koji omogućava chatbotu da dobije više informacija o različitim temama. Koristeći beleške koje imamo, učenici će moći bolje da uče i razumeju različite teme, olakšavajući im pripremu za ispite. Da bismo kreirali naš scenario, koristićemo:
+- Ефективно интегришете RAG и векторске базе података у LLM апликације.
 
-- `Azure OpenAI:` LLM koji ćemo koristiti da kreiramo naš chatbot
+## Наш сценарио: побољшање наших LLMs са сопственим подацима
 
-- `AI for beginners' lesson on Neural Networks`: ovo će biti podaci na kojima ćemo utemeljiti naš LLM
+За ову лекцију, желимо да додамо сопствене белешке у едукативни стартуп, што омогућава четботу да добије више информација о различитим темама. Коришћењем бележака које имамо, ученици ће моћи боље да уче и разумеју различите теме, чиме ће им бити лакше да се припреме за испите. Да бисмо креирали наш сценарио, користићемо:
 
-- `Azure AI Search` i `Azure Cosmos DB:` vektorsku bazu podataka za skladištenje naših podataka i kreiranje indeksa pretrage
+- `Azure OpenAI:` LLM који ћемо користити за креирање нашег четбота
 
-Korisnici će moći da kreiraju kvizove za vežbanje iz svojih beleški, kartice za reviziju i sažmu ih u koncizne preglede. Da bismo počeli, pogledajmo šta je RAG i kako funkcioniše:
+- `AI for beginners' lesson on Neural Networks`: ово ће бити подаци на којима ћемо засновати наш LLM
 
-## Generacija uz podršku pretraživanja (RAG)
+- `Azure AI Search` и `Azure Cosmos DB:` векторска база података за складиштење наших података и креирање индекса за претрагу
 
-Chatbot pokretan LLM-om obrađuje korisničke zahteve da generiše odgovore. Dizajniran je da bude interaktivan i angažuje se sa korisnicima na širokom spektru tema. Međutim, njegovi odgovori su ograničeni kontekstom koji mu je dat i njegovim osnovnim podacima za obuku. Na primer, GPT-4 prekid znanja je septembar 2021, što znači da mu nedostaje znanje o događajima koji su se dogodili nakon ovog perioda. Osim toga, podaci korišćeni za obuku LLM-ova isključuju poverljive informacije kao što su lične beleške ili priručnik za proizvode kompanije.
+Корисници ће моћи да креирају вежбе квизова из својих бележака, картице за ревизију и да их сумирају у концизне прегледе. Да бисмо започели, погледајмо шта је RAG и како функционише:
 
-### Kako RAG-ovi (Generacija uz podršku pretraživanja) funkcionišu
+## Генерација уз помоћ претраживања (RAG)
 
-Pretpostavimo da želite da postavite chatbot koji kreira kvizove iz vaših beleški, biće vam potrebna veza sa bazom znanja. Tu dolazi RAG. RAG-ovi funkcionišu na sledeći način:
+Четбот који покреће LLM обрађује упите корисника да би генерисао одговоре. Дизајниран је да буде интерактиван и да се ангажује са корисницима на широком спектру тема. Међутим, његови одговори су ограничени на контекст који је обезбеђен и основне податке за обуку. На пример, знање GPT-4 је ограничено до септембра 2021, што значи да му недостаје знање о догађајима који су се десили након овог периода. Поред тога, подаци коришћени за обуку LLMs искључују поверљиве информације као што су личне белешке или приручник за производ компаније.
 
-- **Baza znanja:** Pre preuzimanja, ovi dokumenti moraju biti uneti i prethodno obrađeni, obično razbijajući velike dokumente u manje delove, pretvarajući ih u tekstualne ugradnje i skladišteći ih u bazi podataka.
+### Како функционишу RAGs (Генерација уз помоћ претраживања)
 
-- **Korisnički upit:** korisnik postavlja pitanje
+![цртеж који показује како функционишу RAGs](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.sr.png)
 
-- **Preuzimanje:** Kada korisnik postavi pitanje, model za ugradnju preuzima relevantne informacije iz naše baze znanja da pruži više konteksta koji će biti uključen u zahtev.
+Претпоставимо да желите да поставите четбот који креира квизове из ваших бележака, биће вам потребна веза са базом знања. Овде RAG долази у помоћ. RAGs функционишу на следећи начин:
 
-- **Generacija uz podršku:** LLM poboljšava svoj odgovor na osnovu preuzetih podataka. Omogućava da generisani odgovor bude ne samo zasnovan na prethodno obučenim podacima već i na relevantnim informacijama iz dodatog konteksta. Preuzeti podaci se koriste za poboljšanje odgovora LLM-a. LLM zatim vraća odgovor na korisničko pitanje.
+- **База знања:** Пре преузимања, ови документи морају бити унети и претходно обрађени, обично раздвајањем великих докумената на мање делове, претварањем у текстуалне уградње и складиштењем у базу података.
 
-Arhitektura za RAG-ove se implementira korišćenjem transformatora koji se sastoje iz dva dela: kodera i dekodera. Na primer, kada korisnik postavi pitanje, ulazni tekst se 'kodira' u vektore koji hvataju značenje reči, a vektori se 'dekodiraju' u naš indeks dokumenata i generišu novi tekst na osnovu korisničkog upita. LLM koristi model kodera-dekodera da generiše izlaz.
+- **Упит корисника:** корисник поставља питање
 
-Dva pristupa pri implementaciji RAG-a prema predloženom radu: [Generacija uz podršku pretraživanja za zadatke NLP-a (softver za obradu prirodnog jezika) koji intenzivno koriste znanje](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) su:
+- **Преузимање:** Када корисник постави питање, модел уградње преузима релевантне информације из наше базе знања како би пружио више контекста који ће бити укључен у упит.
 
-- **_RAG-Sekvenca_** koristeći preuzete dokumente da predvidi najbolji mogući odgovor na korisnički upit
+- **Проширена генерација:** LLM побољшава свој одговор на основу преузетих података. То омогућава да одговор буде не само заснован на унапред обученим подацима већ и на релевантним информацијама из додатог контекста. Преузети подаци се користе за проширење одговора LLM-а. LLM затим враћа одговор на питање корисника.
 
-- **RAG-Tok** koristeći dokumente da generiše sledeći tok, zatim ih preuzme da odgovori na korisnički upit
+![цртеж који показује архитектуру RAGs](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.sr.png)
 
-### Zašto biste koristili RAG-ove? 
+Архитектура за RAGs се имплементира коришћењем трансформатора који се састоје од два дела: енкодера и декодера. На пример, када корисник постави питање, улазни текст се 'кодира' у векторе који хватају значење речи, а вектори се 'декодирају' у индекс нашег документа и генеришу нови текст на основу упита корисника. LLM користи и модел енкодера и декодера за генерисање излаза.
 
-- **Bogatsvo informacija:** osigurava da tekstualni odgovori budu ažurirani i aktuelni. Stoga poboljšava performanse na zadacima specifičnim za domen pristupom unutrašnjoj bazi znanja.
+Два приступа приликом имплементације RAG према предложеном раду: [Генерација уз помоћ претраживања за задатке обраде природног језика који захтевају знање](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) су:
 
-- Smanjuje fabrikaciju korišćenjem **proverljivih podataka** u bazi znanja da pruži kontekst korisničkim upitima.
+- **_RAG-Секвенца_** користећи преузете документе за предвиђање најбољег могућег одговора на упит корисника
 
-- **Ekonomičan je** jer su ekonomičniji u poređenju sa finim podešavanjem LLM-a.
+- **RAG-Токен** користећи документе за генерисање следећег токена, а затим их преузимање за одговор на упит корисника
 
-## Kreiranje baze znanja
+### Зашто бисте користили RAGs? 
 
-Naša aplikacija se zasniva na našim ličnim podacima tj. lekciji o neuronskim mrežama u kurikulumu AI za početnike.
+- **Богатство информација:** обезбеђује да су текстуални одговори ажурирани и актуелни. Према томе, побољшава перформансе на задацима специфичним за домен приступом интерној бази знања.
 
-### Vektorske baze podataka
+- Смањује фабрикацију коришћењем **проверљивих података** у бази знања за пружање контекста упитима корисника.
 
-Vektorska baza podataka, za razliku od tradicionalnih baza podataka, je specijalizovana baza podataka dizajnirana da skladišti, upravlja i pretražuje ugrađene vektore. Skladišti numeričke reprezentacije dokumenata. Razbijanje podataka na numeričke ugradnje olakšava našem AI sistemu da razume i obradi podatke.
+- **Исплативост** јер су економичнији у поређењу са фино подешавањем LLM-а
 
-Skladištimo naše ugradnje u vektorskim bazama podataka jer LLM-ovi imaju ograničenje broja tokena koje prihvataju kao ulaz. Kako ne možete proslediti sve ugradnje LLM-u, moraćemo da ih razbijemo na delove i kada korisnik postavi pitanje, ugradnje koje su najbliže pitanju će biti vraćene zajedno sa zahtevom. Razbijanje takođe smanjuje troškove broja tokena koji se prosleđuju kroz LLM.
+## Креирање базе знања
 
-Neke popularne vektorske baze podataka uključuju Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant i DeepLake. Možete kreirati model Azure Cosmos DB koristeći Azure CLI sa sledećom komandom:
+Наша апликација је заснована на нашим личним подацима, тј. лекцији о неуронским мрежама у курикулуму AI за почетнике.
 
-### Od teksta do ugradnji
+### Векторске базе података
 
-Pre nego što skladištimo naše podatke, moramo ih pretvoriti u vektorske ugradnje pre nego što budu skladišteni u bazi podataka. Ako radite sa velikim dokumentima ili dugim tekstovima, možete ih razbiti na osnovu upita koje očekujete. Razbijanje se može uraditi na nivou rečenice ili na nivou paragrafa. Kako razbijanje izvodi značenja iz reči oko njih, možete dodati neki drugi kontekst delu, na primer, dodavanjem naslova dokumenta ili uključivanjem nekog teksta pre ili posle dela. Možete razbiti podatke na sledeći način:
+Векторска база података, за разлику од традиционалних база података, је специјализована база података дизајнирана за складиштење, управљање и претрагу уграђених вектора. Она складишти нумеричке представе докумената. Раздвајање података на нумеричке уградње олакшава нашем AI систему разумевање и обраду података.
 
-Jednom kada su razbijeni, možemo zatim ugraditi naš tekst koristeći različite modele za ugradnju. Neki modeli koje možete koristiti uključuju: word2vec, ada-002 od OpenAI, Azure Computer Vision i mnoge druge. Odabir modela za korišćenje zavisiće od jezika koje koristite, tipa sadržaja koji se kodira (tekst/slike/audio), veličine ulaza koji može kodirati i dužine izlaza ugradnje.
+Уграђујемо наше уградње у векторске базе података јер LLMs имају ограничење броја токена које прихватају као улаз. Како не можете пренети целокупне уградње у LLM, мораћемо да их раздвојимо на делове и када корисник постави питање, уградње које су најсличније питању ће бити враћене заједно са упитом. Раздвајање такође смањује трошкове на броју токена који се преносе кроз LLM.
 
-Primer ugrađenog teksta koristeći OpenAI-ov model `text-embedding-ada-002` je:
+Неки популарни векторски базе података укључују Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant и DeepLake. Можете креирати модел Azure Cosmos DB користећи Azure CLI са следећом командом:
 
-## Preuzimanje i vektorska pretraga
+```bash
+az login
+az group create -n <resource-group-name> -l <location>
+az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
+az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
+```
 
-Kada korisnik postavi pitanje, preuzimač ga transformiše u vektor koristeći kodera upita, zatim pretražuje kroz naš indeks pretrage dokumenata za relevantne vektore u dokumentu koji su povezani sa ulazom. Kada završi, konvertuje i ulazni vektor i vektore dokumenata u tekst i prosleđuje ih kroz LLM.
+### Од текста до уградње
 
-### Preuzimanje
+Пре него што складиштимо наше податке, мораћемо да их претворимо у векторске уградње пре него што их складиштимо у базу података. Ако радите са великим документима или дугим текстовима, можете их раздвојити на основу упита које очекујете. Раздвајање се може урадити на нивоу реченице или на нивоу параграфа. Како раздвајање изводи значења из речи око њих, можете додати неки други контекст делу, на пример, додавањем наслова документа или укључивањем неког текста пре или после дела. Можете раздвојити податке на следећи начин:
 
-Preuzimanje se dešava kada sistem pokušava brzo da pronađe dokumente iz indeksa koji zadovoljavaju kriterijume pretrage. Cilj preuzimača je da dobije dokumente koji će se koristiti za pružanje konteksta i utemeljenje LLM-a na vašim podacima.
+```python
+def split_text(text, max_length, min_length):
+    words = text.split()
+    chunks = []
+    current_chunk = []
 
-Postoji nekoliko načina za obavljanje pretrage unutar naše baze podataka kao što su:
+    for word in words:
+        current_chunk.append(word)
+        if len(' '.join(current_chunk)) < max_length and len(' '.join(current_chunk)) > min_length:
+            chunks.append(' '.join(current_chunk))
+            current_chunk = []
 
-- **Pretraga po ključnim rečima** - koristi se za tekstualne pretrage
+    # If the last chunk didn't reach the minimum length, add it anyway
+    if current_chunk:
+        chunks.append(' '.join(current_chunk))
 
-- **Semantička pretraga** - koristi semantičko značenje reči
+    return chunks
+```
 
-- **Vektorska pretraga** - konvertuje dokumente iz teksta u vektorske reprezentacije koristeći modele za ugradnju. Preuzimanje će se obaviti upitom dokumenata čije su vektorske reprezentacije najbliže korisničkom pitanju.
+Када их раздвојимо, можемо уградити наш текст користећи различите моделе уградње. Неки модели које можете користити укључују: word2vec, ada-002 од OpenAI, Azure Computer Vision и многе друге. Избор модела зависиће од језика које користите, типа садржаја који се кодира (текст/слике/аудио), величине улаза који може кодирати и дужине излаза уградње.
 
-- **Hibridna** - kombinacija pretrage po ključnim rečima i vektorske pretrage.
+Пример уграђеног текста користећи OpenAI-јев `text-embedding-ada-002` модел је:
+![уградња речи мачка](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.sr.png)
 
-Izazov sa preuzimanjem dolazi kada nema sličnog odgovora na upit u bazi podataka, sistem će tada vratiti najbolje informacije koje može dobiti, međutim, možete koristiti taktike kao što je postavljanje maksimalne udaljenosti za relevantnost ili korišćenje hibridne pretrage koja kombinuje i ključne reči i vektorsku pretragu. U ovoj lekciji ćemo koristiti hibridnu pretragu, kombinaciju vektorske i pretrage po ključnim rečima. Skladištićemo naše podatke u okvir podataka sa kolonama koje sadrže delove kao i ugradnje.
+## Преузимање и векторска претрага
 
-### Vektorska sličnost
+Када корисник постави питање, преузимач га претвара у вектор користећи кодер упита, затим претражује наш индекс претраге докумената за релевантне векторе у документу који су повезани са улазом. Када је завршено, претвара и улазни вектор и векторе докумената у текст и преноси их кроз LLM.
 
-Preuzimač će pretraživati kroz bazu znanja za ugradnje koje su blizu jedna drugoj, najbliži sused, jer su to tekstovi koji su slični. U slučaju da korisnik postavi upit, prvo se ugrađuje, zatim se poklapa sa sličnim ugradnjama. Zajednička mera koja se koristi da se utvrdi koliko su slični različiti vektori je kosinusna sličnost koja se zasniva na uglu između dva vektora.
+### Преузимање
 
-Možemo meriti sličnost koristeći druge alternative koje možemo koristiti su Euklidska udaljenost koja je prava linija između krajnjih tačaka vektora i skalarni proizvod koji meri zbir proizvoda odgovarajućih elemenata dva vektora.
+Преузимање се дешава када систем покушава брзо пронаћи документе из индекса који задовољавају критеријуме претраге. Циљ преузимача је да добије документе који ће се користити за пружање контекста и заснивање LLM-а на вашим подацима.
 
-### Indeks pretrage
+Постоји неколико начина за извођење претраге унутар наше базе података, као што су:
 
-Kada radimo preuzimanje, moraćemo da izgradimo indeks pretrage za našu bazu znanja pre nego što obavimo pretragu. Indeks će skladištiti naše ugradnje i može brzo preuzeti najsličnije delove čak i u velikoj bazi podataka. Možemo kreirati naš indeks lokalno koristeći:
+- **Претрага по кључним речима** - користи се за текстуалне претраге
 
-### Ponovno rangiranje
+- **Семантичка претрага** - користи семантичко значење речи
 
-Kada ste upitali bazu podataka, možda ćete morati da sortirate rezultate od najrelevantnijih. LLM za ponovno rangiranje koristi mašinsko učenje da poboljša relevantnost rezultata pretrage tako što ih poređa od najrelevantnijih. Koristeći Azure AI pretragu, ponovno rangiranje se automatski obavlja za vas koristeći semantičko ponovno rangiranje. Primer kako ponovno rangiranje funkcioniše koristeći najbliže susede:
+- **Векторска претрага** - претвара документе из текста у векторске представе користећи моделе уградње. Преузимање ће се вршити упитом докумената чије су векторске представе најближе питању корисника.
 
-## Sve zajedno
+- **Хибридна** - комбинација претраге по кључним речима и векторске претраге.
 
-Poslednji korak je dodavanje našeg LLM-a u kombinaciju da bismo mogli da dobijemo odgovore koji su utemeljeni na našim podacima. Možemo ga implementirati na sledeći način:
+Изазов са преузимањем настаје када у бази података нема сличног одговора на упит, систем ће тада вратити најбоље информације које могу добити, међутим, можете користити тактике као што је постављање максималне удаљености за релевантност или коришћење хибридне претраге која комбинује и кључне речи и векторску претрагу. У овој лекцији користићемо хибридну претрагу, комбинацију и векторске и претраге по кључним речима. Складиштићемо наше податке у датафраму са колонама које садрже делове као и уградње.
 
-## Evaluacija naše aplikacije
+### Векторска сличност
 
-### Metodologija evaluacije
+Преузимач ће претражити базу знања за уградње које су близу једна другој, најближи сусед, јер су то текстови који су слични. У сценарију када корисник постави упит, он се прво уграђује, а затим упоређује са сличним уградњама. Уобичајена мера која се користи за проналажење сличности различитих вектора је косинусна сличност која се заснива на углу између два вектора.
 
-- Kvalitet odgovora koji se isporučuju osiguravajući da zvuče prirodno, tečno i kao ljudski
+Можемо мерити сличност користећи друге алтернативе које можемо користити, као што је Евклидска удаљеност која је права линија између крајњих тачака вектора и скаларни производ који мери збир производа одговарајућих елемената два вектора.
 
-- Utemeljenost podataka: evaluacija da li je odgovor došao iz dostavljenih dokumenata
+### Индекс претраге
 
-- Relevantnost: evaluacija da li odgovor odgovara i da li je povezan sa postavljenim pitanjem
+Када вршимо преузимање, мораћемо да изградимо индекс претраге за нашу базу знања пре него што извршимо претрагу. Индекс ће складиштити наше уградње и може брзо пронаћи најсличније делове чак и у великој бази података. Можемо креирати наш индекс локално користећи:
 
-- Tečnost - da li odgovor ima smisla gramatički
+```python
+from sklearn.neighbors import NearestNeighbors
 
-## Upotrebe za korišćenje RAG-a (Generacija uz podršku pretraživanja) i vektorskih baza podataka
+embeddings = flattened_df['embeddings'].to_list()
 
-Postoji mnogo različitih upotreba gde pozivi funkcija mogu poboljšati vašu aplikaciju kao što su:
+# Create the search index
+nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-- Postavljanje pitanja i odgovaranje: utemeljenje podataka vaše kompanije na chat koji zaposleni mogu koristiti za postavljanje pitanja.
+# To query the index, you can use the kneighbors method
+distances, indices = nbrs.kneighbors(embeddings)
+```
 
-- Sistemi preporuka: gde možete kreirati sistem koji poklapa najsličnije vrednosti npr. filmove, restorane i mnoge druge.
+### Поновно рангирање
 
-- Usluge chatbota: možete skladištiti istoriju chatova i personalizovati razgovor na osnovu korisničkih podataka.
+Када упитате базу података, можда ћете морати да сортирате резултате од најрелевантнијих. LLM за поновно рангирање користи машинско учење за побољшање релевантности резултата претраге тако што их поређа од најрелевантнијих. Користећи Azure AI претрагу, поновно рангирање се аутоматски врши за вас користећи семантичко поновно рангирање. Пример како поновно рангирање функционише користећи најближе суседе:
 
-- Pretraga slika zasnovana na vektorskim ugradnjama, korisna kada radite prepoznavanje slika i otkrivanje anomalija.
+```python
+# Find the most similar documents
+distances, indices = nbrs.kneighbors([query_vector])
 
-## Rezime
+index = []
+# Print the most similar documents
+for i in range(3):
+    index = indices[0][i]
+    for index in indices[0]:
+        print(flattened_df['chunks'].iloc[index])
+        print(flattened_df['path'].iloc[index])
+        print(flattened_df['distances'].iloc[index])
+    else:
+        print(f"Index {index} not found in DataFrame")
+```
 
-Pokrićemo osnovne oblasti RAG-a od dodavanja naših podataka u aplikaciju, korisničkog upita i izlaza. Da biste pojednostavili kreiranje RAG-a, možete koristiti okvire kao što su Semanti Kernel, Langchain ili Autogen.
+## Спајање свега заједно
 
-## Zadaci
+Последњи корак је додавање нашег LLM-а у мешавину да бисмо могли да добијемо одговоре који су засновани на нашим подацима. Можемо га имплементирати на следећи начин:
 
-Da nastavite vaše učenje Generacije uz podršku pretraživanja (RAG) možete izgraditi:
+```python
+user_input = "what is a perceptron?"
 
-- Izgradite front-end za aplikaciju koristeći okvir po vašem izboru
+def chatbot(user_input):
+    # Convert the question to a query vector
+    query_vector = create_embeddings(user_input)
 
-- Iskoristite okvir, bilo LangChain ili Semantic Kernel, i ponovo kreirajte vašu aplikaciju.
+    # Find the most similar documents
+    distances, indices = nbrs.kneighbors([query_vector])
 
-Čestitamo na završetku lekcije 👏.
+    # add documents to query  to provide context
+    history = []
+    for index in indices[0]:
+        history.append(flattened_df['chunks'].iloc[index])
 
-## Učenje ne prestaje ovde, nastavite putovanje
+    # combine the history and the user input
+    history.append(user_input)
 
-Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje generativne AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa unapređenjem vašeg znanja o generativnoj AI!
+    # create a message object
+    messages=[
+        {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
+        {"role": "user", "content": history[-1]}
+    ]
 
-**Одрекување од одговорност**:  
-Овој документ е преведен користејќи услуга за AI превод [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудиме за точност, ве молиме имајте предвид дека автоматските преводи може да содржат грешки или неточности. Оригиналниот документ на неговиот изворен јазик треба да се смета за авторитетен извор. За критични информации, се препорачува професионален човечки превод. Не сме одговорни за никакви недоразбирања или погрешни толкувања кои произлегуваат од користењето на овој превод.
+    # use chat completion to generate a response
+    response = openai.chat.completions.create(
+        model="gpt-4",
+        temperature=0.7,
+        max_tokens=800,
+        messages=messages
+    )
+
+    return response.choices[0].message
+
+chatbot(user_input)
+```
+
+## Евалуација наше апликације
+
+### Метрички критеријуми евалуације
+
+- Квалитет одговора, обезбеђивање да звучи природно, течно и људски
+
+- Заснованост података: евалуација да ли је одговор потекао из достављених докумената
+
+- Релевантност: евалуација да ли одговор одговара и повезан је са постављеним питањем
+
+- Течност - да ли одговор има смисла граматички
+
+## Корисни случајеви за коришћење RAG (Генерација уз помоћ претраживања) и векторских база података
+
+Постоји много различитих случајева употребе где функције позива могу побољшати вашу апликацију, као што су:
+
+- Питање и одговарање: заснивање података ваше компаније на чету који могу користити запослени за постављање питања.
+
+- Системи препорука: где можете креирати систем који одговара најсличнијим вредностима нпр. филмови, ресторани и још много тога.
+
+- Услуге четбота: можете складиштити историју чата и персонализовати разговор на основу података корисника.
+
+- Претрага слика на основу векторских уградњи, корисна при препознавању слика и детекцији аномалија.
+
+## Резиме
+
+Обрадили смо основне области RAG од додавања наших података у апликацију, упита корисника и излаза. Да бисте поједноставили креирање RAG, можете користити оквире као што су Semanti Kernel, Langchain или Autogen.
+
+## Задатак
+
+Да бисте наставили учење о Генерацији уз помоћ претраживања (RAG) можете изградити:
+
+- Изградите предњи део апликације користећи оквир по вашем избору
+
+- Искористите оквир, било LangChain или Semantic Kernel, и поново креирајте вашу апликацију.
+
+Честитамо на завршетку лекције 👏.
+
+## Учење се не завршава овде, наставите путовање
+
+Н
+
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква неспоразума или погрешна тумачења која произилазе из употребе овог превода.

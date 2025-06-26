@@ -2,12 +2,12 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "68664f7e754a892ae1d8d5e2b7bd2081",
-  "translation_date": "2025-05-20T07:33:54+00:00",
+  "translation_date": "2025-06-26T00:28:37+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "en"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.8487555c3e3225eefc1dc84e72c8e00bce1ee76db867a080628fb0fbb04aa0d2.en.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.en.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
 
 # Fine-Tuning Your LLM
 
@@ -17,12 +17,12 @@ In today's lesson, we discuss a third technique, **fine-tuning**, which tries to
 
 ## Learning Objectives
 
-This lesson introduces the concept of fine-tuning for pre-trained language models, explores the benefits and challenges of this approach, and provides guidance on when and how to use fine tuning to improve the performance of your generative AI models.
+This lesson introduces the concept of fine-tuning for pre-trained language models, explores the benefits and challenges of this approach, and provides guidance on when and how to use fine-tuning to improve the performance of your generative AI models.
 
 By the end of this lesson, you should be able to answer the following questions:
 
-- What is fine tuning for language models?
-- When, and why, is fine tuning useful?
+- What is fine-tuning for language models?
+- When, and why, is fine-tuning useful?
 - How can I fine-tune a pre-trained model?
 - What are the limitations of fine-tuning?
 
@@ -32,7 +32,7 @@ Ready? Let's get started.
 
 Want to get the big picture of what we'll cover before we dive in? Check out this illustrated guide that describes the learning journey for this lesson - from learning the core concepts and motivation for fine-tuning, to understanding the process and best practices for executing the fine-tuning task. This is a fascinating topic for exploration, so don't forget to check out the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for additional links to support your self-guided learning journey!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.92733966235199dd260184b1aae3a84b877c7496bc872d8e63ad6fa2dd96bafc.en.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.en.png)
 
 ## What is fine-tuning for language models?
 
@@ -67,7 +67,7 @@ So, before you learn "how" to fine-tune language models, you need to know "why" 
   - Cost - does it reduce token usage by simplifying prompts?
   - Extensibility - can you repurpose the base model for new domains?
 
-By answering these questions, you should be able to decide if fine-tuning is the right approach for your use case. Ideally, the approach is valid only if the benefits outweigh the costs. Once you decide to proceed, it's time to think about _how_ you can fine tune the pre-trained model.
+By answering these questions, you should be able to decide if fine-tuning is the right approach for your use case. Ideally, the approach is valid only if the benefits outweigh the costs. Once you decide to proceed, it's time to think about _how_ you can fine-tune the pre-trained model.
 
 Want to get more insights on the decision-making process? Watch [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
@@ -106,4 +106,4 @@ Congratulations!! You have completed the final lesson from the v2 series for thi
 Our v1 series of lessons has also been updated with more assignments and concepts. So take a minute to refresh your knowledge - and please [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us improve these lessons for the community.
 
 **Disclaimer**:  
-This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
