@@ -2,46 +2,46 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:52:51+00:00",
+  "translation_date": "2025-06-26T03:13:04+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "tw"
 }
 -->
-# 使用 Mistral 模型构建
+# 使用 Mistral 模型構建
 
-## 介绍
+## 介紹
 
-本课将涵盖：
+本課程將涵蓋：
 - 探索不同的 Mistral 模型
-- 了解每个模型的使用案例和场景
-- 代码示例展示每个模型的独特功能
+- 了解每個模型的使用情境和案例
+- 代碼範例展示每個模型的獨特特徵
 
 ## Mistral 模型
 
-在本课中，我们将探索三种不同的 Mistral 模型：**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。
+在本課程中，我們將探索三種不同的 Mistral 模型：**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。
 
-这些模型都可以在 Github 模型市场上免费获取。本笔记本中的代码将使用这些模型来运行代码。有关使用 Github 模型进行 [AI 模型原型设计](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) 的更多详细信息，请参阅此链接。
+這些模型均可在 Github 模型市場免費獲得。本筆記本中的代碼將使用這些模型來運行代碼。這裡有更多關於使用 Github 模型來[原型設計 AI 模型](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的詳細信息。
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 目前是 Mistral 的旗舰模型，专为企业使用而设计。
+Mistral Large 2 是目前 Mistral 的旗艦模型，專為企業用途設計。
 
-该模型是对原始 Mistral Large 的升级，提供：
-- 更大的上下文窗口 - 128k 对比 32k
-- 更好的数学和编程任务性能 - 平均准确率为 76.9% 对比 60.4%
-- 增强的多语言性能 - 包括英语、法语、德语、西班牙语、意大利语、葡萄牙语、荷兰语、俄语、中文、日语、韩语、阿拉伯语和印地语
+此模型是對原始 Mistral Large 的升級，提供了：
+- 更大的上下文窗口 - 128k 對比 32k
+- 更好的數學和編碼任務性能 - 平均準確率 76.9% 對比 60.4%
+- 增強的多語言性能 - 包括語言：英語、法語、德語、西班牙語、意大利語、葡萄牙語、荷蘭語、俄語、中文、日語、韓語、阿拉伯語和印地語。
 
-凭借这些功能，Mistral Large 在以下方面表现出色：
-- *增强检索生成 (RAG)* - 因为有更大的上下文窗口
-- *函数调用* - 该模型具有原生函数调用功能，允许与外部工具和 API 集成。这些调用可以并行进行，也可以按顺序一个接一个进行。
-- *代码生成* - 该模型在 Python、Java、TypeScript 和 C++ 生成方面表现出色。
+憑藉這些特性，Mistral Large 在以下方面表現出色：
+- *檢索增強生成 (RAG)* - 由於更大的上下文窗口
+- *函數調用* - 此模型具有原生函數調用功能，允許與外部工具和 API 集成。這些調用可以並行或按順序進行。
+- *代碼生成* - 此模型在 Python、Java、TypeScript 和 C++ 生成方面表現出色。
 
-### 使用 Mistral Large 2 的 RAG 示例
+### 使用 Mistral Large 2 的 RAG 範例
 
-在此示例中，我们使用 Mistral Large 2 对文本文档运行 RAG 模式。问题用韩文写成，询问作者在上大学前的活动。
+在此範例中，我們使用 Mistral Large 2 在文本文件上運行 RAG 模式。問題以韓語書寫，詢問作者在大學前的活動。
 
-它使用 Cohere Embeddings Model 来创建文本文档和问题的嵌入。在此示例中，它使用 faiss Python 包作为向量存储。
+它使用 Cohere Embeddings 模型來創建文本文件和問題的嵌入。對於此範例，它使用 faiss Python 套件作為向量存儲。
 
-发送给 Mistral 模型的提示包括问题和与问题相似的检索块。然后模型提供自然语言响应。
+發送到 Mistral 模型的提示包括問題和與問題相似的檢索塊。然後模型提供自然語言回應。
 
 ```python 
 pip install faiss-cpu
@@ -138,21 +138,21 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small 是 Mistral 模型系列中另一个属于高级/企业类别的模型。顾名思义，该模型是一个小型语言模型 (SLM)。使用 Mistral Small 的优势在于：
-- 与 Mistral 大型语言模型 (LLM) 如 Mistral Large 和 NeMo 相比，节省成本 - 价格下降 80%
-- 低延迟 - 相比 Mistral 的大型语言模型响应更快
-- 灵活 - 可以在不同环境中部署，对所需资源的限制较少
+Mistral Small 是 Mistral 模型家族中另一個在高級/企業類別下的模型。如其名，此模型是一個小型語言模型 (SLM)。使用 Mistral Small 的優勢在於：
+- 與 Mistral LLMs 如 Mistral Large 和 NeMo 相比，節省成本 - 價格降低 80%
+- 低延遲 - 相比 Mistral 的 LLMs 更快的響應
+- 靈活 - 可以在不同環境中部署，對所需資源的限制較少。
 
-Mistral Small 非常适合：
-- 基于文本的任务，如摘要、情感分析和翻译
-- 由于其成本效益而频繁请求的应用
-- 低延迟代码任务，如审查和代码建议
+Mistral Small 非常適合：
+- 基於文本的任務，如摘要、情感分析和翻譯。
+- 由於其成本效益，在需要頻繁請求的應用中使用
+- 低延遲代碼任務，如審查和代碼建議
 
-## 比较 Mistral Small 和 Mistral Large
+## 比較 Mistral Small 和 Mistral Large
 
-为了展示 Mistral Small 和 Large 之间的延迟差异，运行以下单元格。
+為了展示 Mistral Small 和 Large 之間的延遲差異，運行以下單元格。
 
-你应该会看到响应时间在 3-5 秒之间的差异。还请注意在相同提示下的响应长度和风格。
+您應該會看到響應時間之間的差異約為 3-5 秒。還要注意相同提示下的響應長度和風格。
 
 ```python 
 
@@ -214,23 +214,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-与本课讨论的其他两个模型相比，Mistral NeMo 是唯一一个具有 Apache2 许可证的免费模型。
+與本課程中討論的其他兩個模型相比，Mistral NeMo 是唯一擁有 Apache2 許可的免費模型。
 
-它被视为早期开源大型语言模型 Mistral 7B 的升级版。
+它被視為 Mistral 早期開源 LLM，Mistral 7B 的升級版。
 
-NeMo 模型的其他一些特点是：
+NeMo 模型的其他一些特點包括：
 
-- *更高效的分词：* 该模型使用 Tekken 分词器，而不是更常用的 tiktoken。这使得它在更多语言和代码上表现更好。
+- *更高效的分詞：* 此模型使用 Tekken 分詞器而非更常用的 tiktoken。這使其在更多語言和代碼上表現更佳。
 
-- *微调：* 基础模型可用于微调。这为需要微调的使用案例提供了更多灵活性。
+- *微調：* 基礎模型可供微調。這在需要微調的使用情境中提供了更多靈活性。
 
-- *原生函数调用* - 像 Mistral Large 一样，该模型经过函数调用训练。这使其成为首批开源模型之一。
+- *原生函數調用* - 像 Mistral Large 一樣，此模型經過函數調用訓練。這使其成為首批這樣做的開源模型之一。
 
-### 比较分词器
+### 比較分詞器
 
-在此示例中，我们将看看 Mistral NeMo 如何处理与 Mistral Large 的分词。
+在此範例中，我們將觀察 Mistral NeMo 如何處理分詞與 Mistral Large 的比較。
 
-两个示例使用相同的提示，但你应该看到 NeMo 返回的标记比 Mistral Large 少。
+兩個範例使用相同的提示，但您應該看到 NeMo 返回的 token 比 Mistral Large 少。
 
 ```bash
 pip install mistral-common
@@ -348,9 +348,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## 学习不会止步于此，继续旅程
+## 學習不止於此，繼續學習之旅
 
-完成本课后，请查看我们的 [生成式 AI 学习集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 以继续提升你的生成式 AI 知识！
+完成此課程後，查看我們的[生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
 
 **免責聲明**：
-本文檔已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。儘管我們努力確保準確性，但請注意自動翻譯可能包含錯誤或不準確之處。應將原始文檔視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤讀不承擔責任。
+本文件已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。儘管我們努力確保準確性，請注意自動翻譯可能包含錯誤或不準確之處。應將原始文件的母語版本視為權威來源。對於關鍵信息，建議使用專業人工翻譯。對於因使用此翻譯而產生的任何誤解或誤釋，我們不承擔責任。

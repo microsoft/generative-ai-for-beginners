@@ -2,41 +2,41 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:47:41+00:00",
+  "translation_date": "2025-06-25T16:51:32+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "hk"
 }
 -->
 # 轉錄數據準備
 
-轉錄數據準備腳本會下載 YouTube 視頻轉錄並將其準備好用於 OpenAI 嵌入和功能樣本的語義搜索。
+轉錄數據準備腳本會下載 YouTube 視頻轉錄內容，並將其準備好用於 OpenAI 嵌入和函數範例的語義搜索。
 
 轉錄數據準備腳本已在最新版本的 Windows 11、macOS Ventura 和 Ubuntu 22.04（及以上）上進行了測試。
 
 ## 創建所需的 Azure OpenAI 服務資源
 
 > [!IMPORTANT]
-> 我們建議您將 Azure CLI 更新到最新版本，以確保與 OpenAI 的兼容性
-> 請參閱[文檔](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> 我們建議您將 Azure CLI 更新到最新版本，以確保與 OpenAI 的兼容性。
+> 請參閱 [文檔](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. 創建資源組
+1. 創建一個資源組
 
 > [!NOTE]
-> 在這些指示中，我們使用名為 "semantic-video-search" 的資源組位於美國東部。
-> 您可以更改資源組的名稱，但在更改資源位置時，請查看[模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
+> 在這些指引中，我們使用位於美國東部的名為 "semantic-video-search" 的資源組。
+> 您可以更改資源組的名稱，但在更改資源位置時，請檢查 [模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. 創建 Azure OpenAI 服務資源。
+1. 創建一個 Azure OpenAI 服務資源。
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. 獲取用於此應用程序的端點和密鑰
+1. 獲取此應用程序使用的端點和密鑰
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -102,20 +102,20 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## 安裝所需的 Python 庫
 
-1. 安裝 [git 客戶端](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)（如果尚未安裝）。
-1. 從 `Terminal` 窗口中，克隆樣本到您首選的倉庫文件夾。
+1. 如果尚未安裝，請安裝 [git 客戶端](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)。
+1. 在 `Terminal` 視窗中，將範例克隆到您偏好的 repo 資料夾。
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. 進入 `data_prep` 文件夾。
+1. 導航到 `data_prep` 資料夾。
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. 創建 Python 虛擬環境。
+1. 創建一個 Python 虛擬環境。
 
     在 Windows 上：
 
@@ -171,5 +171,5 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**免責聲明**：  
-此文件是使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯的。我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+**免責聲明**：
+本文件已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。儘管我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於重要信息，建議進行專業人工翻譯。我們不對因使用此翻譯而引起的任何誤解或誤釋承擔責任。

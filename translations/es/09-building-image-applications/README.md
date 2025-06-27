@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T10:27:57+00:00",
+  "translation_date": "2025-06-25T17:02:40+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "es"
 }
 -->
 # Construyendo Aplicaciones de Generación de Imágenes
 
-[![Construyendo Aplicaciones de Generación de Imágenes](../../../translated_images/09-lesson-banner.d0229c79fda6596b8a678478e20301b74964cb8161e0c2e4a7c203655c623330.es.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Construyendo Aplicaciones de Generación de Imágenes](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.es.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
 Hay más en los LLMs que solo la generación de texto. También es posible generar imágenes a partir de descripciones de texto. Tener imágenes como una modalidad puede ser muy útil en varias áreas como MedTech, arquitectura, turismo, desarrollo de videojuegos y más. En este capítulo, exploraremos los dos modelos de generación de imágenes más populares, DALL-E y Midjourney.
 
@@ -19,11 +19,11 @@ En esta lección, cubriremos:
 
 - Generación de imágenes y por qué es útil.
 - DALL-E y Midjourney, qué son y cómo funcionan.
-- Cómo construirías una aplicación de generación de imágenes.
+- Cómo construir una aplicación de generación de imágenes.
 
 ## Objetivos de Aprendizaje
 
-Después de completar esta lección, podrás:
+Después de completar esta lección, serás capaz de:
 
 - Construir una aplicación de generación de imágenes.
 - Definir límites para tu aplicación con meta prompts.
@@ -31,19 +31,19 @@ Después de completar esta lección, podrás:
 
 ## ¿Por qué construir una aplicación de generación de imágenes?
 
-Las aplicaciones de generación de imágenes son una excelente manera de explorar las capacidades de la IA Generativa. Pueden ser utilizadas, por ejemplo:
+Las aplicaciones de generación de imágenes son una excelente manera de explorar las capacidades de la IA Generativa. Pueden ser utilizadas, por ejemplo, para:
 
-- **Edición y síntesis de imágenes**. Puedes generar imágenes para una variedad de casos de uso, como edición de imágenes y síntesis de imágenes.
+- **Edición y síntesis de imágenes**. Puedes generar imágenes para una variedad de casos de uso, como la edición y síntesis de imágenes.
 
-- **Aplicadas a una variedad de industrias**. También se pueden usar para generar imágenes para una variedad de industrias como Medtech, Turismo, Desarrollo de videojuegos y más.
+- **Aplicadas a una variedad de industrias**. También pueden ser utilizadas para generar imágenes para una variedad de industrias como Medtech, Turismo, Desarrollo de videojuegos y más.
 
 ## Escenario: Edu4All
 
-Como parte de esta lección, continuaremos trabajando con nuestra startup, Edu4All. Los estudiantes crearán imágenes para sus evaluaciones, exactamente qué imágenes depende de los estudiantes, pero podrían ser ilustraciones para su propio cuento de hadas o crear un nuevo personaje para su historia o ayudarlos a visualizar sus ideas y conceptos.
+Como parte de esta lección, continuaremos trabajando con nuestra startup, Edu4All, en esta lección. Los estudiantes crearán imágenes para sus evaluaciones, exactamente qué imágenes depende de los estudiantes, pero podrían ser ilustraciones para su propio cuento de hadas o crear un nuevo personaje para su historia o ayudarlos a visualizar sus ideas y conceptos.
 
 Aquí está lo que los estudiantes de Edu4All podrían generar, por ejemplo, si están trabajando en clase sobre monumentos:
 
-![Startup Edu4All, clase sobre monumentos, Torre Eiffel](../../../translated_images/startup.ec211d74fef9f4175010c3334942b715514230415744b9dd0a69a19f4ad68786.es.png)
+![Startup Edu4All, clase sobre monumentos, Torre Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.es.png)
 
 usando un prompt como
 
@@ -61,28 +61,28 @@ Comencemos con DALL-E, que es un modelo de IA Generativa que genera imágenes a 
 
 - **CLIP**, es un modelo que genera embeddings, que son representaciones numéricas de datos, a partir de imágenes y texto.
 
-- **Atención difusa**, es un modelo que genera imágenes a partir de embeddings. DALL-E está entrenado en un conjunto de datos de imágenes y texto y puede usarse para generar imágenes a partir de descripciones de texto. Por ejemplo, DALL-E puede usarse para generar imágenes de un gato con un sombrero, o un perro con una cresta.
+- **Atención difusa**, es un modelo que genera imágenes a partir de embeddings. DALL-E está entrenado en un conjunto de datos de imágenes y texto y puede ser usado para generar imágenes a partir de descripciones de texto. Por ejemplo, DALL-E puede ser usado para generar imágenes de un gato con un sombrero, o un perro con un mohawk.
 
 ### Midjourney
 
-Midjourney funciona de manera similar a DALL-E, genera imágenes a partir de prompts de texto. Midjourney también puede usarse para generar imágenes usando prompts como "un gato con un sombrero" o "un perro con una cresta".
+Midjourney funciona de manera similar a DALL-E, genera imágenes a partir de prompts de texto. Midjourney, también puede ser usado para generar imágenes usando prompts como “un gato con un sombrero”, o un “perro con un mohawk”.
 
 ![Imagen generada por Midjourney, paloma mecánica](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Crédito de la imagen Wikipedia, imagen generada por Midjourney_
+_Crédito de imagen Wikipedia, imagen generada por Midjourney_
 
-## ¿Cómo funcionan DALL-E y Midjourney?
+## Cómo funcionan DALL-E y Midjourney
 
-Primero, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E es un modelo de IA Generativa basado en la arquitectura transformer con un _transformer autorregresivo_.
+Primero, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E es un modelo de IA Generativa basado en la arquitectura de transformador con un _transformador autorregresivo_.
 
-Un _transformer autorregresivo_ define cómo un modelo genera imágenes a partir de descripciones de texto, genera un píxel a la vez y luego usa los píxeles generados para generar el siguiente píxel. Pasando por múltiples capas en una red neuronal, hasta que la imagen está completa.
+Un _transformador autorregresivo_ define cómo un modelo genera imágenes a partir de descripciones de texto, genera un píxel a la vez, y luego usa los píxeles generados para generar el siguiente píxel. Pasando por múltiples capas en una red neuronal, hasta que la imagen está completa.
 
-Con este proceso, DALL-E controla atributos, objetos, características y más en la imagen que genera. Sin embargo, DALL-E 2 y 3 tienen más control sobre la imagen generada.
+Con este proceso, DALL-E, controla atributos, objetos, características y más en la imagen que genera. Sin embargo, DALL-E 2 y 3 tienen más control sobre la imagen generada.
 
 ## Construyendo tu primera aplicación de generación de imágenes
 
 Entonces, ¿qué se necesita para construir una aplicación de generación de imágenes? Necesitas las siguientes bibliotecas:
 
-- **python-dotenv**, se recomienda encarecidamente usar esta biblioteca para mantener tus secretos en un archivo _.env_ alejado del código.
+- **python-dotenv**, se recomienda encarecidamente usar esta biblioteca para mantener tus secretos en un archivo _.env_ lejos del código.
 - **openai**, esta biblioteca es la que usarás para interactuar con la API de OpenAI.
 - **pillow**, para trabajar con imágenes en Python.
 - **requests**, para ayudarte a hacer solicitudes HTTP.
@@ -94,9 +94,9 @@ Entonces, ¿qué se necesita para construir una aplicación de generación de im
    AZURE_OPENAI_API_KEY=<your key>
    ```
 
-   Ubica esta información en el Portal de Azure para tu recurso en la sección "Claves y Punto de conexión".
+   Localiza esta información en el Portal de Azure para tu recurso en la sección "Claves y Endpoint".
 
-1. Reúne las bibliotecas anteriores en un archivo llamado _requirements.txt_ de la siguiente manera:
+1. Reúne las bibliotecas anteriores en un archivo llamado _requirements.txt_ así:
 
    ```text
    python-dotenv
@@ -194,7 +194,7 @@ Expliquemos este código:
   dotenv.load_dotenv()
   ```
 
-- Después de eso, configuramos el punto de conexión, clave para la API de OpenAI, versión y tipo.
+- Después de eso, configuramos el endpoint, la clave para la API de OpenAI, la versión y el tipo.
 
   ```python
   # Get endpoint and key from environment variables
@@ -206,7 +206,7 @@ Expliquemos este código:
   openai.api_type = 'azure'
   ```
 
-- A continuación, generamos la imagen:
+- Luego, generamos la imagen:
 
   ```python
   # Create an image by using the image generation API
@@ -240,10 +240,10 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, es el prompt de texto que se usa para generar la imagen. En este caso, estamos usando el prompt "Conejo en caballo, sosteniendo una piruleta, en un prado brumoso donde crecen narcisos".
+- **prompt**, es el prompt de texto que se utiliza para generar la imagen. En este caso, estamos usando el prompt "Conejo en caballo, sosteniendo una paleta, en un prado con niebla donde crecen narcisos".
 - **size**, es el tamaño de la imagen que se genera. En este caso, estamos generando una imagen de 1024x1024 píxeles.
 - **n**, es el número de imágenes que se generan. En este caso, estamos generando dos imágenes.
-- **temperature**, es un parámetro que controla la aleatoriedad del resultado de un modelo de IA Generativa. La temperatura es un valor entre 0 y 1 donde 0 significa que el resultado es determinista y 1 significa que el resultado es aleatorio. El valor predeterminado es 0.7.
+- **temperature**, es un parámetro que controla la aleatoriedad de la salida de un modelo de IA Generativa. La temperatura es un valor entre 0 y 1 donde 0 significa que la salida es determinista y 1 significa que la salida es aleatoria. El valor predeterminado es 0.7.
 
 Hay más cosas que puedes hacer con imágenes que cubriremos en la siguiente sección.
 
@@ -253,7 +253,7 @@ Has visto hasta ahora cómo pudimos generar una imagen usando unas pocas líneas
 
 También puedes hacer lo siguiente:
 
-- **Realizar ediciones**. Al proporcionar una imagen existente, una máscara y un prompt, puedes alterar una imagen. Por ejemplo, puedes agregar algo a una parte de una imagen. Imagina nuestra imagen de conejo, puedes agregar un sombrero al conejo. Cómo harías eso es proporcionando la imagen, una máscara (identificando la parte del área para el cambio) y un prompt de texto para decir qué se debe hacer.
+- **Realizar ediciones**. Al proporcionar una imagen existente, una máscara y un prompt, puedes alterar una imagen. Por ejemplo, puedes agregar algo a una parte de una imagen. Imagina nuestra imagen del conejo, puedes agregar un sombrero al conejo. Cómo harías eso es proporcionando la imagen, una máscara (identificando la parte del área para el cambio) y un prompt de texto para decir qué se debe hacer.
 
   ```python
   response = openai.Image.create_edit(
@@ -268,7 +268,7 @@ También puedes hacer lo siguiente:
 
   La imagen base solo contendría el conejo, pero la imagen final tendría el sombrero en el conejo.
 
-- **Crear variaciones**. La idea es que tomas una imagen existente y pides que se creen variaciones. Para crear una variación, proporcionas una imagen y un prompt de texto y un código como este:
+- **Crear variaciones**. La idea es que tomes una imagen existente y pidas que se creen variaciones. Para crear una variación, proporcionas una imagen y un prompt de texto y código así:
 
   ```python
   response = openai.Image.create_variation(
@@ -279,23 +279,23 @@ También puedes hacer lo siguiente:
   image_url = response['data'][0]['url']
   ```
 
-  > Nota, esto solo es compatible en OpenAI
+  > Nota, esto solo es compatible con OpenAI
 
 ## Temperatura
 
-La temperatura es un parámetro que controla la aleatoriedad del resultado de un modelo de IA Generativa. La temperatura es un valor entre 0 y 1 donde 0 significa que el resultado es determinista y 1 significa que el resultado es aleatorio. El valor predeterminado es 0.7.
+La temperatura es un parámetro que controla la aleatoriedad de la salida de un modelo de IA Generativa. La temperatura es un valor entre 0 y 1 donde 0 significa que la salida es determinista y 1 significa que la salida es aleatoria. El valor predeterminado es 0.7.
 
 Veamos un ejemplo de cómo funciona la temperatura, ejecutando este prompt dos veces:
 
-> Prompt: "Conejo en caballo, sosteniendo una piruleta, en un prado brumoso donde crecen narcisos"
+> Prompt : "Conejo en caballo, sosteniendo una paleta, en un prado con niebla donde crecen narcisos"
 
-![Conejo en un caballo sosteniendo una piruleta, versión 1](../../../translated_images/v1-generated-image.208ba0525ed6ae505504aa852e28d334c0440e9931b7c97f9508176a22d2dd54.es.png)
+![Conejo en un caballo sosteniendo una paleta, versión 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.es.png)
 
 Ahora ejecutemos ese mismo prompt solo para ver que no obtendremos la misma imagen dos veces:
 
-![Imagen generada de conejo en caballo](../../../translated_images/v2-generated-image.f0a88c05ef476e95f3682d4b21c9ba2f4807ae71cc29e9c05b42ebbf497cf61b.es.png)
+![Imagen generada de conejo en caballo](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.es.png)
 
-Como puedes ver, las imágenes son similares, pero no iguales. Intentemos cambiar el valor de la temperatura a 0.1 y veamos qué sucede:
+Como puedes ver, las imágenes son similares, pero no son iguales. Intentemos cambiar el valor de temperatura a 0.1 y veamos qué sucede:
 
 ```python
  generation_response = openai.Image.create(
@@ -307,7 +307,7 @@ Como puedes ver, las imágenes son similares, pero no iguales. Intentemos cambia
 
 ### Cambiando la temperatura
 
-Así que intentemos hacer la respuesta más determinista. Pudimos observar en las dos imágenes que generamos que en la primera imagen, hay un conejo y en la segunda imagen, hay un caballo, por lo que las imágenes varían mucho.
+Entonces intentemos hacer la respuesta más determinista. Pudimos observar en las dos imágenes que generamos que en la primera imagen, hay un conejo y en la segunda imagen, hay un caballo, por lo que las imágenes varían mucho.
 
 Por lo tanto, cambiemos nuestro código y establezcamos la temperatura a 0, así:
 
@@ -320,10 +320,10 @@ generation_response = openai.Image.create(
     )
 ```
 
-Ahora, cuando ejecutes este código, obtendrás estas dos imágenes:
+Ahora, cuando ejecutas este código, obtienes estas dos imágenes:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.d8557be792b5c81c2c6d2804cb7b210fe8b340106fe4ffcadf9cf7de1cd7b991.es.png)
-- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.bd412fcfbd43379312b1382212a332aa311ca1a80ea692dea50a8b876a487c61.es.png)
+- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.es.png)
+- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.es.png)
 
 Aquí puedes ver claramente cómo las imágenes se parecen más entre sí.
 
@@ -333,13 +333,13 @@ Con nuestra demostración, ya podemos generar imágenes para nuestros clientes. 
 
 Por ejemplo, no queremos generar imágenes que no sean seguras para el trabajo, o que no sean apropiadas para niños.
 
-Podemos hacer esto con _metaprompts_. Los metaprompts son prompts de texto que se utilizan para controlar el resultado de un modelo de IA Generativa. Por ejemplo, podemos usar metaprompts para controlar el resultado y asegurarnos de que las imágenes generadas sean seguras para el trabajo o apropiadas para niños.
+Podemos hacer esto con _metaprompts_. Los metaprompts son prompts de texto que se utilizan para controlar la salida de un modelo de IA Generativa. Por ejemplo, podemos usar metaprompts para controlar la salida, y asegurarnos de que las imágenes generadas sean seguras para el trabajo, o apropiadas para niños.
 
 ### ¿Cómo funciona?
 
 Ahora, ¿cómo funcionan los metaprompts?
 
-Los metaprompts son prompts de texto que se utilizan para controlar el resultado de un modelo de IA Generativa, se posicionan antes del prompt de texto y se utilizan para controlar el resultado del modelo y se integran en aplicaciones para controlar el resultado del modelo. Encapsulando la entrada del prompt y la entrada del metaprompt en un solo prompt de texto.
+Los metaprompts son prompts de texto que se utilizan para controlar la salida de un modelo de IA Generativa, se posicionan antes del prompt de texto, y se utilizan para controlar la salida del modelo y se incrustan en aplicaciones para controlar la salida del modelo. Encapsulando la entrada del prompt y la entrada del metaprompt en un solo prompt de texto.
 
 Un ejemplo de un metaprompt sería el siguiente:
 
@@ -385,11 +385,11 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-En el prompt anterior, puedes ver cómo todas las imágenes creadas consideran el metaprompt.
+Del prompt anterior, puedes ver cómo todas las imágenes que se crean consideran el metaprompt.
 
-## Asignación - vamos a habilitar a los estudiantes
+## Tarea - vamos a habilitar a los estudiantes
 
-Introdujimos Edu4All al comienzo de esta lección. Ahora es el momento de habilitar a los estudiantes para que generen imágenes para sus evaluaciones.
+Presentamos Edu4All al principio de esta lección. Ahora es el momento de habilitar a los estudiantes para que generen imágenes para sus evaluaciones.
 
 Los estudiantes crearán imágenes para sus evaluaciones que contengan monumentos, exactamente qué monumentos depende de los estudiantes. Se les pide a los estudiantes que usen su creatividad en esta tarea para colocar estos monumentos en diferentes contextos.
 
@@ -467,11 +467,11 @@ except openai.InvalidRequestError as err:
     print(err)
 ```
 
-## ¡Gran Trabajo! Continúa Tu Aprendizaje
+## ¡Buen trabajo! Continúa tu aprendizaje
 
-Después de completar esta lección, consulta nuestra [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir ampliando tus conocimientos sobre IA Generativa.
+Después de completar esta lección, revisa nuestra [colección de Aprendizaje de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para seguir mejorando tus conocimientos en IA Generativa.
 
-Dirígete a la Lección 10 donde veremos cómo [construir aplicaciones de IA con bajo código](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Dirígete a la Lección 10 donde veremos cómo [construir aplicaciones de IA con código bajo](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda la traducción profesional humana. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.

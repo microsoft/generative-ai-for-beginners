@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "e2861bbca91c0567ef32bc77fe054f9e",
-  "translation_date": "2025-05-20T00:58:27+00:00",
+  "translation_date": "2025-06-25T22:14:03+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "en"
 }
@@ -43,7 +43,7 @@ For this lesson, we want to add our own notes into the education startup, which 
 
 - `Azure AI Search` and `Azure Cosmos DB:` vector database to store our data and create a search index
 
-Users will be able to create practice quizzes from their notes, revision flash cards and summarize it to concise overviews. To get started, let us look at what is RAG and how works:
+Users will be able to create practice quizzes from their notes, revision flash cards and summarize it to concise overviews. To get started, let us look at what is RAG and how it works:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -268,5 +268,9 @@ Congratulations for completing the lesson 👏.
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 
+Certainly! Here's the translated text:
+
+---
+
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

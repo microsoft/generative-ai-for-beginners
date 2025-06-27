@@ -2,140 +2,141 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T22:23:05+00:00",
+  "translation_date": "2025-06-25T20:51:56+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "mo"
 }
 -->
-# Hifz e Aap ke Generative AI Applications
+# 保護您的生成式 AI 應用程式
 
-## Taaruf
+## 簡介
 
-Is sabaq mein hum cover kareinge:
+本課程將涵蓋：
 
-- AI systems ke tanazur mein security.
-- AI systems ke aam khatarat aur dhamkiyan.
-- AI systems ko mehfooz banane ke tareeqe aur soch.
+- AI 系統中的安全性。
+- AI 系統常見的風險和威脅。
+- 保護 AI 系統的方法和考量。
 
-## Seekhne ke Maqsad
+## 學習目標
 
-Is sabaq ko mukammal karne ke baad, aap samajh sakeinge:
+完成本課程後，您將了解：
 
-- AI systems ke khatarat aur dhamkiyan.
-- AI systems ko mehfooz banane ke aam tareeqe aur amal.
-- Kaise security testing ka amal unexpected natayij aur user ka trust kam hone se bacha sakta hai.
+- AI 系統的威脅和風險。
+- 保護 AI 系統的常見方法和實踐。
+- 如何通過實施安全測試來防止意外結果和用戶信任的流失。
 
-## Generative AI ke tanazur mein security ka kya matlab hai?
+## 在生成式 AI 的背景下，安全性意味著什麼？
 
-Jab ke Artificial Intelligence (AI) aur Machine Learning (ML) technologies hamari zindagiyon ko zyada se zyada shaakal dene lage hain, ye na sirf customer data balki AI systems ko bhi mehfooz rakhna zaroori hai. AI/ML ko ab un industries mein zyada se zyada istamal kiya ja raha hai jahan ghalat faisla sanjeeda natayij ka sabab ban sakta hai.
+隨著人工智慧 (AI) 和機器學習 (ML) 技術日益影響我們的生活，保護客戶數據以及 AI 系統本身變得至關重要。AI/ML 日益用於支持高價值決策過程的行業中，錯誤的決策可能導致嚴重後果。
 
-Yahan kuch ahem points hain jo sochne laayak hain:
+以下是需要考慮的關鍵點：
 
-- **AI/ML ka asar**: AI/ML ka roz marra ki zindagi par ahem asar hota hai aur isliye inka mehfooz hona zaroori hai.
-- **Security Challenges**: AI/ML ke is asar ko sahi tawajju dena zaroori hai taake AI-based products ko trolls ya organized groups ki sophisticated attacks se mehfooz rakha ja sake.
-- **Strategic Problems**: Tech industry ko proactive approach apnani chahiye taake customer ki lambay arse tak safety aur data security ko ensure kiya ja sake.
+- **AI/ML 的影響**：AI/ML 對日常生活有重大影響，因此保護它們已成為必需。
+- **安全挑戰**：AI/ML 的影響需要適當的關注，以解決保護基於 AI 的產品免受精密攻擊的需求，無論是來自惡作劇者還是有組織的團體。
+- **策略問題**：科技行業必須積極應對策略挑戰，以確保長期的客戶安全和數據安全。
 
-Iske ilawa, Machine Learning models aksar malicious input aur benign anomalous data ke darmiyan farq nahi kar sakte. Training data ka ahem hissa uncurated, unmoderated, public datasets se aata hai, jo 3rd-party contributions ke liye khula hai. Attackers ko datasets ko compromise karne ki zaroorat nahi hoti jab woh in datasets mein freely contribute kar sakte hain. Waqt ke saath, low-confidence malicious data high-confidence trusted data ban jata hai, agar data structure/formatting sahi rahe.
+此外，機器學習模型大多無法區分惡意輸入和良性異常數據。訓練數據的一個重要來源是來自未經整理、未經審核的公共數據集，這些數據集對第三方貢獻開放。攻擊者不需要破壞數據集，因為他們可以自由地向其中貢獻數據。隨著時間的推移，低置信度的惡意數據會變成高置信度的可信數據，只要數據結構/格式保持正確。
 
-Yehi wajah hai ke aapke models jo faislay karte hain un data stores ki integrity aur protection ko ensure karna intahi zaroori hai.
+因此，確保模型用來做決策的數據存儲的完整性和保護是至關重要的。
 
-## AI ke khatarat aur risks ko samajhna
+## 理解 AI 的威脅和風險
 
-AI aur related systems ke tanazur mein, data poisoning aaj ka sabse bara security threat hai. Data poisoning tab hota hai jab koi shakhs jaan bujh kar AI ko train karne ke liye istamal hone wale maaloomat ko badal deta hai, jisse AI ghalatiyan karne lagta hai. Ye isliye hota hai kyunki standardized detection aur mitigation methods ka fukdan hota hai, aur hamara reliance untrusted ya uncurated public datasets par hota hai training ke liye. Data integrity ko maintain karne aur flawed training process se bachne ke liye, aapke data ke asal aur lineage ko track karna intahi ahem hai. Warna purani kahawat “garbage in, garbage out” sahi sabit hoti hai, jisse model performance compromised ho jati hai.
+在 AI 和相關系統方面，數據中毒是當今最顯著的安全威脅。數據中毒是指有人故意更改用於訓練 AI 的信息，導致其出錯。這是由於缺乏標準化的檢測和緩解方法，加上我們依賴未經信任或未經整理的公共數據集進行訓練。為了維持數據的完整性並防止訓練過程的缺陷，追蹤數據的來源和沿襲是至關重要的。否則，“垃圾進，垃圾出”的老話會成真，導致模型性能受損。
 
-Yahan kuch misalay hain ke data poisoning aapke models ko kaise asar kar sakti hai:
+以下是數據中毒如何影響您的模型的例子：
 
-1. **Label Flipping**: Binary classification task mein, ek dushman jaan bujh kar training data ke chhote subset ke labels ko flip kar deta hai. Misal ke taur par, benign samples ko malicious label kiya jata hai, jisse model ghalat associations seekhta hai.\
-   **Misal**: Spam filter jo legitimate emails ko spam ke taur par misclassify karta hai labels ko manipulate karne ki wajah se.
-2. **Feature Poisoning**: Ek attacker training data mein features ko subtle tor par modify karta hai taake bias introduce ya model ko mislead kar sake.\
-   **Misal**: Product descriptions mein irrelevant keywords add karna taake recommendation systems ko manipulate kiya ja sake.
-3. **Data Injection**: Training set mein malicious data inject karna taake model ke behavior ko influence kiya ja sake.\
-   **Misal**: Fake user reviews introduce karna taake sentiment analysis results ko skew kiya ja sake.
-4. **Backdoor Attacks**: Ek dushman training data mein hidden pattern (backdoor) insert karta hai. Model is pattern ko seekhta hai aur trigger hone par malicious behavior karta hai.\
-   **Misal**: Face recognition system jo backdoored images ke sath train kiya gaya ho jo specific shakhs ko misidentify karta hai.
+1. **標籤翻轉**：在二元分類任務中，對手故意翻轉一小部分訓練數據的標籤。例如，將良性樣本標記為惡意，導致模型學習錯誤的關聯。\
+   **例子**：由於標籤被操縱，垃圾郵件過濾器錯誤地將合法電子郵件分類為垃圾郵件。
+2. **特徵中毒**：攻擊者微妙地修改訓練數據中的特徵以引入偏差或誤導模型。\
+   **例子**：在產品描述中添加無關的關鍵詞以操縱推薦系統。
+3. **數據注入**：將惡意數據注入訓練集以影響模型的行為。\
+   **例子**：引入虛假的用戶評論以扭曲情感分析結果。
+4. **後門攻擊**：對手在訓練數據中插入隱藏的模式（後門）。模型學會識別此模式並在觸發時表現出惡意行為。\
+   **例子**：人臉識別系統使用後門圖像訓練，錯誤識別特定人物。
 
-MITRE Corporation ne [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst) banaya hai, ek knowledgebase tactics aur techniques ka jo adversaries ne real-world attacks mein AI systems par istamal kiya hai.
+MITRE 公司創建了 [ATLAS (人工智慧系統對抗性威脅景觀)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst)，這是一個用於記錄對手在現實世界中攻擊 AI 系統時所使用的策略和技術的知識庫。
 
-> AI-enabled systems mein vulnerabilities ki taadaad mein izafa ho raha hai, kyunki AI ka incorporation existing systems ke attack surface ko traditional cyber-attacks se aage barhata hai. Hamne ATLAS ko banaya taake in unique aur evolving vulnerabilities ke baare mein awareness barh sake, kyunki global community zyada se zyada AI ko mukhtalif systems mein incorporate kar rahi hai. ATLAS ko MITRE ATT&CK® framework ke baad model kiya gaya hai aur iske tactics, techniques, aur procedures (TTPs) ATT&CK ke sath complementary hain.
+> 隨著 AI 的整合增加，AI 驅動的系統中的漏洞數量不斷增長，這增加了現有系統的攻擊面，超出了傳統網絡攻擊的範疇。我們開發了 ATLAS 以提高對這些獨特且不斷演變的漏洞的認識，因為全球社區越來越多地將 AI 整合到各種系統中。ATLAS 是模仿 MITRE ATT&CK® 框架的模型，其策略、技術和程序（TTP）與 ATT&CK 中的互補。
 
-Bilkul MITRE ATT&CK® framework ki tarah, jo traditional cybersecurity mein extensively istamal hota hai advanced threat emulation scenarios plan karne ke liye, ATLAS ek easily searchable set TTPs provide karta hai jo emerging attacks se defend karne ke liye behtar samajh aur tayyari mein madad kar sakta hai.
+就像 MITRE ATT&CK® 框架在傳統網絡安全中廣泛用於規劃高級威脅模擬場景一樣，ATLAS 提供了一組易於搜索的 TTP，有助於更好地理解和準備應對新興攻擊。
 
-Iske ilawa, Open Web Application Security Project (OWASP) ne "[Top 10 list](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" banaya hai jo applications jo LLMs ko utilize karte hain unmein paaye jane wale sabse critical vulnerabilities ko highlight karta hai. Ye list un khatarat ko highlight karti hai jaise ke aforementioned data poisoning aur doosre khatarat jaise:
+此外，開放網絡應用程序安全項目 (OWASP) 創建了一個 "[前 10 名列表](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)"，列出了使用大型語言模型 (LLM) 的應用程序中發現的最關鍵漏洞。該列表強調了如前述數據中毒等威脅的風險，還有其他威脅，如：
 
-- **Prompt Injection**: Ek technique jahan attackers Large Language Model (LLM) ko carefully crafted inputs ke zariye manipulate karte hain, jisse ye apne intended behavior se bahar ho jata hai.
-- **Supply Chain Vulnerabilities**: Woh components aur software jo LLM ke applications ko banate hain, jaise ke Python modules ya external datasets, khud compromised ho sakte hain jisse unexpected results, introduced biases aur hatta ke underlying infrastructure mein vulnerabilities aa sakti hain.
-- **Overreliance**: LLMs fallible hain aur hallucinate karne ke prone rahe hain, inaccurate ya unsafe results provide karte hain. Kai documented circumstances mein, log results ko face value par le lete hain jisse unintended real-world negative consequences hote hain.
+- **提示注入**：一種技術，攻擊者通過精心設計的輸入操縱大型語言模型 (LLM)，使其行為偏離預期。
+- **供應鏈漏洞**：構成 LLM 所使用應用程序的組件和軟件，如 Python 模塊或外部數據集，本身可能被破壞，導致意外結果、引入偏見甚至基礎設施的漏洞。
+- **過度依賴**：LLM 是不可靠的，容易產生幻覺，提供不準確或不安全的結果。在一些記錄的情況下，人們將結果視為理所當然，導致意想不到的現實世界負面後果。
 
-Microsoft Cloud Advocate Rod Trent ne ek free ebook likhi hai, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), jo in aur doosri emerging AI threats mein deeply dive karti hai aur ye scenarios best tackle karne ke extensive guidance provide karti hai.
+Microsoft Cloud Advocate Rod Trent 撰寫了一本免費電子書，[必學 AI 安全](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst)，深入探討這些和其他新興的 AI 威脅，並提供廣泛的指導，說明如何最好地應對這些情況。
 
-## AI Systems aur LLMs ke liye Security Testing
+## AI 系統和 LLM 的安全測試
 
-Artificial intelligence (AI) mukhtalif domains aur industries ko transform kar raha hai, society ke liye naye possibilities aur benefits offer kar raha hai. Magar, AI significant challenges aur risks bhi pose karta hai, jaise ke data privacy, bias, lack of explainability, aur potential misuse. Isliye, ye zaroori hai ke AI systems secure aur responsible hon, matlab ye ethical aur legal standards ko adhere karte hon aur users aur stakeholders ke liye trusted hon.
+人工智慧 (AI) 正在改變各個領域和行業，為社會提供新的可能性和好處。然而，AI 也帶來了重大挑戰和風險，例如數據隱私、偏見、缺乏解釋性和潛在濫用。因此，確保 AI 系統安全和負責任是至關重要的，這意味著它們遵循道德和法律標準，並且能夠被用戶和利益相關者信任。
 
-Security testing ek AI system ya LLM ke security ko evaluate karne ka process hai, jo unke vulnerabilities ko identify aur exploit karne ke zariye kiya jata hai. Ye developers, users, ya third-party auditors ke zariye kiya ja sakta hai, depending on testing ka purpose aur scope. AI systems aur LLMs ke liye sabse aam security testing methods kuch ye hain:
+安全測試是評估 AI 系統或 LLM 安全性的一個過程，通過識別和利用其漏洞來進行評估。根據測試的目的和範圍，這可以由開發人員、用戶或第三方審計員進行。AI 系統和 LLM 的一些最常見的安全測試方法包括：
 
-- **Data sanitization**: Ye sensitive ya private information ko training data ya AI system ya LLM ke input se remove ya anonymize karne ka process hai. Data sanitization data leakage aur malicious manipulation ko prevent karne mein madad kar sakta hai confidential ya personal data ki exposure ko kam karke.
-- **Adversarial testing**: Ye adversarial examples ko AI system ya LLM ke input ya output par generate aur apply karne ka process hai taake uski robustness aur resilience ko adversarial attacks ke against evaluate kiya ja sake. Adversarial testing AI system ya LLM ki vulnerabilities aur weaknesses ko identify aur mitigate karne mein madad kar sakta hai jo attackers exploit kar sakte hain.
-- **Model verification**: Ye AI system ya LLM ke model parameters ya architecture ki correctness aur completeness ko verify karne ka process hai. Model verification model stealing ko detect aur prevent karne mein madad kar sakta hai ye ensure karke ke model protected aur authenticated hai.
-- **Output validation**: Ye AI system ya LLM ke output ki quality aur reliability ko validate karne ka process hai. Output validation malicious manipulation ko detect aur correct karne mein madad kar sakta hai ye ensure karke ke output consistent aur accurate hai.
+- **數據淨化**：這是從 AI 系統或 LLM 的訓練數據或輸入中移除或匿名化敏感或私人信息的過程。數據淨化可以通過減少機密或個人數據的暴露來防止數據洩漏和惡意操縱。
+- **對抗性測試**：這是生成和應用對抗性例子到 AI 系統或 LLM 的輸入或輸出以評估其對抗對抗性攻擊的魯棒性和韌性的過程。對抗性測試可以幫助識別和緩解可能被攻擊者利用的 AI 系統或 LLM 的漏洞和弱點。
+- **模型驗證**：這是驗證 AI 系統或 LLM 的模型參數或架構的正確性和完整性的過程。模型驗證可以通過確保模型受到保護和認證來檢測和防止模型竊取。
+- **輸出驗證**：這是驗證 AI 系統或 LLM 的輸出質量和可靠性的過程。輸出驗證可以通過確保輸出一致且準確來檢測和糾正惡意操縱。
 
-OpenAI, AI systems mein leader, ne _safety evaluations_ ka silsila setup kiya hai jo unke red teaming network initiative ka hissa hai, jo AI systems ke output ko test karne ke liye hai taake AI safety mein contribute kiya ja sake.
+OpenAI 作為 AI 系統的領導者，已經設置了一系列 _安全評估_ 作為其紅隊網絡計劃的一部分，旨在測試 AI 系統的輸出，希望為 AI 安全做出貢獻。
 
-> Evaluations simple Q&A tests se lekar more-complex simulations tak range kar sakti hain. Yahan kuch concrete examples hain jo OpenAI ne AI behaviors ko mukhtalif angles se evaluate karne ke liye develop kiye hain:
+> 評估可以從簡單的問答測試到更複雜的模擬。例如，以下是 OpenAI 為從多個角度評估 AI 行為而開發的樣本評估：
 
-#### Persuasion
+#### 說服力
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Ek AI system doosri AI system ko secret word kehne mein kitna achha trick kar sakta hai?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Ek AI system doosri AI system ko paise donate karne mein kitna achha convince kar sakta hai?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Ek AI system doosri AI system ki political proposition ki support ko kitna achha influence kar sakta hai?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地欺騙另一個 AI 系統說出秘密詞語？
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地說服另一個 AI 系統捐款？
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地影響另一個 AI 系統對政治提案的支持？
 
-#### Steganography (hidden messaging)
+#### 隱寫術（隱藏信息）
 
-- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Ek AI system secret messages ko doosri AI system ke zariye bina pakde jaaye pass karne mein kitna achha hai?
-- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Ek AI system messages ko compress aur decompress karne mein kitna achha hai, taake secret messages ko chhupaya ja sake?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Ek AI system doosri AI system ke sath bina direct communication ke coordinate karne mein kitna achha hai?
+- [隱寫術](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地在不被另一個 AI 系統抓住的情況下傳遞秘密信息？
+- [文本壓縮](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地壓縮和解壓縮信息，以實現隱藏秘密信息？
+- [Schelling 點](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst)：AI 系統能多好地與另一個 AI 系統協調，而不需要直接溝通？
 
-### AI Security
+### AI 安全性
 
-Ye intahi zaroori hai ke ham AI systems ko malicious attacks, misuse, ya unintended consequences se mehfooz rakhne ki koshish karein. Isme ye steps lena shamil hai taake AI systems ki safety, reliability, aur trustworthiness ko ensure kiya ja sake, jaise:
+我們必須努力保護 AI 系統免受惡意攻擊、濫用或意外後果。這包括採取措施確保 AI 系統的安全性、可靠性和可信度，例如：
 
-- AI models ko train aur run karne ke liye istamal hone wale data aur algorithms ko secure karna
-- AI systems ki unauthorized access, manipulation, ya sabotage ko prevent karna
-- AI systems mein bias, discrimination, ya ethical issues ko detect aur mitigate karna
-- AI decisions aur actions ki accountability, transparency, aur explainability ko ensure karna
-- AI systems ke goals aur values ko insano aur society ke sath align karna
+- 保護用於訓練和運行 AI 模型的數據和算法
+- 防止未經授權的訪問、操縱或破壞 AI 系統
+- 檢測和緩解 AI 系統中的偏見、歧視或道德問題
+- 確保 AI 決策和行動的責任、透明度和解釋性
+- 使 AI 系統的目標和價值觀與人類和社會的一致
 
-AI security AI systems aur data ki integrity, availability, aur confidentiality ko ensure karne ke liye ahem hai. AI security ke kuch challenges aur opportunities hain:
+AI 安全性對於確保 AI 系統和數據的完整性、可用性和機密性至關重要。AI 安全性的一些挑戰和機會包括：
 
-- Opportunity: AI ko cybersecurity strategies mein incorporate karna kyunki ye threats ko identify aur response times ko improve karne mein crucial role play kar sakta hai. AI cyberattacks jaise phishing, malware, ya ransomware ki detection aur mitigation ko automate aur augment karne mein madad kar sakta hai.
-- Challenge: AI ko adversaries sophisticated attacks launch karne ke liye bhi istamal kar sakte hain, jaise fake ya misleading content generate karna, users ko impersonate karna, ya AI systems mein vulnerabilities ko exploit karna. Isliye, AI developers ki unique responsibility hai ke wo systems ko design karein jo misuse ke against robust aur resilient hon.
+- 機會：將 AI 納入網絡安全策略中，因為它可以在識別威脅和提高響應時間方面發揮重要作用。AI 可以幫助自動化和增強對網絡攻擊（如網絡釣魚、惡意軟件或勒索軟件）的檢測和緩解。
+- 挑戰：對手也可以利用 AI 發動複雜的攻擊，例如生成虛假或誤導性的內容、冒充用戶或利用 AI 系統中的漏洞。因此，AI 開發人員有責任設計出對濫用具有魯棒性和韌性的系統。
 
-### Data Protection
+### 數據保護
 
-LLMs un data ki privacy aur security ke liye risks pose kar sakte hain jo wo istamal karte hain. Misal ke taur par, LLMs apne training data se sensitive information jaise personal names, addresses, passwords, ya credit card numbers ko memorize aur leak kar sakte hain. Ye malicious actors ke zariye manipulate ya attack bhi ho sakte hain jo unke vulnerabilities ya biases ko exploit karna chahte hain. Isliye, ye risks se waqif hona aur LLMs ke sath istamal hone wale data ko protect karne ke liye munasib iqdamat lena ahem hai. LLMs ke sath istamal hone wale data ko protect karne ke liye kuch steps hain jo aap le sakte hain. Ye steps shamil hain:
+LLM 可能對其使用的數據的隱私和安全構成風險。例如，LLM 可能會記住和洩露其訓練數據中的敏感信息，例如個人姓名、地址、密碼或信用卡號碼。它們也可能被惡意行為者操縱或攻擊，這些人想要利用其漏洞或偏見。因此，了解這些風險並採取適當措施保護與 LLM 使用的數據是很重要的。您可以採取幾個步驟來保護與 LLM 使用的數據。這些步驟包括：
 
-- **LLMs ke sath share hone wale data ki amount aur type ko limit karna**: Sirf wo data share karein jo intended purposes ke liye zaroori aur relevant hai, aur koi sensitive, confidential, ya personal data share karne se gurez karein. Users ko LLMs ke sath share hone wale data ko anonymize ya encrypt bhi karna chahiye, jaise ke kisi identifying information ko remove ya mask karna, ya secure communication channels ko istamal karna.
-- **LLMs ke generate kiye gaye data ko verify karna**: LLMs ke generate kiye gaye output ki accuracy aur quality ko hamesha check karein taake ye unwanted ya inappropriate information na contain kare.
-- **Kisi bhi data breach ya incident ko report aur alert karna**: LLMs se kisi bhi suspicious ya abnormal activities ya behaviors ke liye hoshiyar rahein, jaise irrelevant, inaccurate, offensive, ya harmful texts generate karna. Ye data breach ya security incident ki indication ho sakta hai.
+- **限制與 LLM 共享的數據量和類型**：僅共享必要且相關的數據以達到預期目的，並避免共享任何敏感、機密或個人數據。用戶還應匿名化或加密與 LLM 共享的數據，例如刪除或掩蓋任何識別信息，或使用安全的通信渠道。
+- **驗證 LLM 生成的數據**：始終檢查 LLM 生成的輸出的準確性和質量，以確保它們不包含任何不需要或不當的信息。
+- **報告和警示任何數據洩露或事件**：警惕 LLM 的任何可疑或異常活動或行為，例如生成不相關、不準確、冒犯或有害的文本。這可能表明數據洩露或安全事件。
 
-Data security, governance, aur compliance kisi bhi organization ke liye critical hain jo multi-cloud environment mein data aur AI ki power ko leverage karna chahti hai. Apne data ko secure aur govern karna ek complex aur multifaceted undertaking hai. Aapko mukhtalif types ke data (structured, unstructured, aur AI ke zariye generate kiya gaya data) ko mukhtalif locations mein across multiple clouds secure aur govern karna hai, aur aapko existing aur future data security, governance, aur AI regulations ko account karna hai. Apne data ko protect karne ke liye, aapko kuch best practices aur precautions adopt karna hoga, jaise:
+數據安全、治理和合規對於任何希望在多雲環境中利用數據和 AI 力量的組織來說都是至關重要的。保護和治理所有數據是一項複雜且多方面的工作。您需要保護和治理不同類型的數據（結構化、非結構化和 AI 生成的數據）在多個雲中的不同位置，並且您需要考慮現有和未來的數據安全、治理和 AI 法規。要保護您的數據，您需要採用一些最佳實踐和預防措施，例如：
 
-- Cloud services ya platforms ko istamal karna jo data protection aur privacy features offer karte hain.
-- Data quality aur validation tools ko istamal karna taake apne data ko errors, inconsistencies, ya anomalies ke liye check kar sakein.
-- Data governance aur ethics frameworks ko istamal karna taake apne data ko responsible aur transparent manner mein istamal karna ensure kiya ja sake.
+- 使用提供數據保護和隱私功能的雲服務或平台。
+- 使用數據質量和驗證工具檢查數據中的錯誤、不一致或異常。
+- 使用數據治理和道德框架來確保您的數據以負責任和透明的方式使用。
 
-### Real-world threats ko emulate karna - AI red teaming
+### 模擬現實威脅 - AI 紅隊
 
-Real-world threats ko emulate karna resilient AI systems banane mein ab ek standard practice maana jata hai jo similar tools, tactics, procedures ko employ karte hain taake systems ke risks ko identify kiya ja sake aur defenders ki response ko test kiya ja sake.
+模擬現實威脅現在被視為構建有彈性 AI 系統的標準做法，通過使用類似的工具、策略、程序來識別系統的風險並測試防禦者的反應。
 
-> AI red teaming ka practice ab ek expanded meaning le chuka hai: ye sirf security vulnerabilities ke liye probing ko cover nahi karta, balki doosre system failures ke liye probing ko bhi shamil karta hai, jaise potentially harmful content ka generation. AI systems naye risks ke sath aate hain, aur red teaming un novel risks ko samajhne mein core hai, jaise prompt injection aur ungrounded content ka production. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+> AI 紅隊實踐已經演變為更擴展的意義：它不僅涵蓋安全漏洞的探查，還包括探查其他系統故障，例如生成潛在有害內容。AI 系統帶來了新的風險，紅隊是了解這些新風險的核心，例如提示注入和生成無依據的內容。 - [微軟 AI 紅隊構建更安全 AI 的未來](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-Neeche kuch key insights hain jo Microsoft ke AI Red Team program ko shape kar chuke hain.
+以下是塑造微軟 AI 紅隊計劃的關鍵見解。
 
-1. **AI Red Teaming ka Expansive Scope:**
-   AI red teaming ab security aur Responsible AI (RAI) outcomes dono ko encompass karta hai. Traditionally, red teaming security aspects par focus karta tha, model ko ek vector ke taur par treat karta tha (misal ke taur par, underlying model ko steal karna). Magar, AI systems naye security vulnerabilities (misal ke taur par, prompt injection, poisoning) introduce karte hain, jo special attention ka talabb karte hain. Security ke ilawa, AI red teaming fairness issues (misal ke taur par, stereotyping) aur harmful content (misal ke taur par, violence ki glorification) ko bhi probe karta hai. In issues ka early identification defense investments ko prioritize karne ki ijazat deta hai.
-2. **Malicious aur Benign Failures:**
-   AI red teaming failures ko malicious aur benign perspectives se consider karta hai. Misal ke taur par, jab new Bing ko red team kiya jata hai, ham na sirf ye explore karte hain ke malicious adversaries kaise system ko subvert kar sakte hain balki regular users kaise problematic ya harmful content ka samna kar sakte hain. Traditional security red teaming jo mainly malicious actors par focus karta hai, AI red teaming broader range of personas aur potential failures ko account karta hai.
-3. **AI Systems
+1. **AI 紅隊的廣泛範圍**：
+   AI 紅隊現在涵蓋了安全性和負責任 AI (RAI) 結果。傳統上，紅隊專注於安全方面，將模型視為向量（例如，竊取底層模型）。然而，AI 系統引入了新的安全漏洞（例如，提示注入、數據中毒），需要特別關注。除了安全性之外，AI 紅隊還探查公平性問題（例如，刻板印象）和有害內容（例如，美化暴力）。提前識別這些問題可以優先進行防禦投資。
+2. **惡意和良性失敗**：
+   AI 紅隊考慮從惡意和良性角度的失敗。例如，在紅隊新的 Bing 時，我們不僅探討惡意對手如何顛覆系統，還探討普通用戶如何遇到有問題或有害的內容。與傳統安全紅隊主要關注惡意行為者不同，AI 紅隊考慮更廣泛的人物角色和潛在失敗。
+3. **AI 系統的動態
 
-I'm sorry, but it seems there might be a typo in your request as "mo" is not a recognized language code. Could you please specify the language you would like the text to be translated into?
+**免責聲明**：
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原文文件作為權威來源。對於重要信息，建議尋求專業人工翻譯。我們不對因使用此翻譯而產生的任何誤解或誤讀承擔責任。

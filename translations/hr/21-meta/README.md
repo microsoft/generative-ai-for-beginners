@@ -2,26 +2,26 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:17:06+00:00",
+  "translation_date": "2025-06-26T03:36:26+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "hr"
 }
 -->
-# Izgradnja s Meta obiteljskim modelima
+# Izgradnja s modelima obitelji Meta
 
 ## Uvod
 
-Ova lekcija pokriva:
+Ova lekcija će pokriti:
 
-- Istraživanje dva glavna Meta obiteljska modela - Llama 3.1 i Llama 3.2
-- Razumijevanje primjena i scenarija za svaki model
+- Istraživanje dva glavna modela obitelji Meta - Llama 3.1 i Llama 3.2
+- Razumijevanje upotrebe i scenarija za svaki model
 - Primjer koda koji pokazuje jedinstvene značajke svakog modela
 
-## Meta obitelj modela
+## Obitelj modela Meta
 
-U ovoj lekciji istražit ćemo 2 modela iz Meta obitelji ili "Llama krda" - Llama 3.1 i Llama 3.2
+U ovoj lekciji istražit ćemo 2 modela iz obitelji Meta ili "Llama Herd" - Llama 3.1 i Llama 3.2
 
-Ovi modeli dolaze u različitim varijantama i dostupni su na GitHub Model marketplaceu. Ovdje su dodatni detalji o korištenju GitHub modela za [prototipiranje s AI modelima](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Ovi modeli dolaze u različitim varijantama i dostupni su na GitHub Model marketplace. Evo više detalja o korištenju GitHub modela za [prototipiranje s AI modelima](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Varijante modela:
 - Llama 3.1 - 70B Instruct
@@ -35,33 +35,33 @@ Varijante modela:
 
 S 405 milijardi parametara, Llama 3.1 spada u kategoriju otvorenog izvora LLM.
 
-Model je nadogradnja na raniju verziju Llama 3, nudeći:
+Model je nadogradnja na ranije izdanje Llama 3 nudeći:
 
-- Veći kontekstualni prozor - 128k tokena naspram 8k tokena
+- Veći kontekstni prozor - 128k tokena naspram 8k tokena
 - Veći maksimalni izlazni tokeni - 4096 naspram 2048
-- Bolja podrška za više jezika - zbog povećanja broja trening tokena
+- Bolja podrška za više jezika - zbog povećanja broja tokena za obuku
 
-To omogućuje Llama 3.1 da se nosi s kompleksnijim slučajevima korištenja pri izgradnji GenAI aplikacija, uključujući:
+Ovo omogućava Llama 3.1 da se nosi s kompleksnijim slučajevima korištenja pri izgradnji GenAI aplikacija, uključujući:
 - Pozivanje nativnih funkcija - sposobnost pozivanja vanjskih alata i funkcija izvan LLM tijeka rada
-- Bolja RAG izvedba - zbog većeg kontekstualnog prozora
+- Bolja izvedba RAG - zbog većeg kontekstnog prozora
 - Generiranje sintetičkih podataka - sposobnost stvaranja učinkovitih podataka za zadatke kao što je fino podešavanje
 
 ### Pozivanje nativnih funkcija
 
-Llama 3.1 je fino podešena da bude učinkovitija u pozivanju funkcija ili alata. Također ima dva ugrađena alata koje model može prepoznati kao potrebne za korištenje na temelju korisničkog upita. Ti alati su:
+Llama 3.1 je fino podešena da bude učinkovitija u pozivanju funkcija ili alata. Također ima dva ugrađena alata koje model može identificirati kao potrebne za korištenje na temelju upita korisnika. Ti alati su:
 
-- **Brave Search** - Može se koristiti za dobivanje ažurnih informacija poput vremenske prognoze putem web pretraživanja
-- **Wolfram Alpha** - Može se koristiti za složenije matematičke izračune, tako da nije potrebno pisati vlastite funkcije.
+- **Brave Search** - Može se koristiti za dobivanje ažuriranih informacija poput vremena putem web pretraživanja
+- **Wolfram Alpha** - Može se koristiti za složenije matematičke izračune tako da pisanje vlastitih funkcija nije potrebno.
 
-Također možete stvoriti vlastite prilagođene alate koje LLM može pozivati.
+Možete također stvoriti vlastite prilagođene alate koje LLM može pozvati.
 
-U primjeru koda dolje:
+U primjeru koda ispod:
 
 - Definiramo dostupne alate (brave_search, wolfram_alpha) u sistemskom upitu.
 - Šaljemo korisnički upit koji pita o vremenu u određenom gradu.
 - LLM će odgovoriti pozivom alata Brave Search koji će izgledati ovako `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Napomena: Ovaj primjer samo poziva alat, ako želite dobiti rezultate, trebate stvoriti besplatan račun na Brave API stranici i definirati samu funkciju`
+*Napomena: Ovaj primjer samo vrši poziv alata, ako želite dobiti rezultate, trebate kreirati besplatan račun na stranici Brave API i definirati samu funkciju`
 
 ```python 
 import os
@@ -103,13 +103,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Unatoč tome što je LLM, jedno ograničenje koje Llama 3.1 ima je multimodalnost. To jest, sposobnost korištenja različitih vrsta ulaza, kao što su slike, kao upiti i davanje odgovora. Ova sposobnost je jedna od glavnih značajki Llama 3.2. Te značajke također uključuju:
+Unatoč tome što je LLM, jedna ograničenja koju Llama 3.1 ima je multimodalnost. To jest, sposobnost korištenja različitih vrsta unosa kao što su slike kao upiti i davanje odgovora. Ova sposobnost je jedna od glavnih značajki Llama 3.2. Te značajke također uključuju:
 
-- Multimodalnost - ima sposobnost evaluacije tekstualnih i slikovnih upita
-- Varijacije malih do srednjih veličina (11B i 90B) - to pruža fleksibilne opcije implementacije,
-- Varijacije samo za tekst (1B i 3B) - to omogućuje modelu da se implementira na rubnim / mobilnim uređajima i pruža nisku latenciju
+- Multimodalnost - ima sposobnost procjene i tekstualnih i slikovnih upita
+- Male do srednje varijacije veličine (11B i 90B) - ovo pruža fleksibilne opcije implementacije,
+- Samo tekstualne varijacije (1B i 3B) - ovo omogućava da se model implementira na rubnim / mobilnim uređajima i pruža nisku latenciju
 
-Podrška za multimodalnost predstavlja veliki korak u svijetu modela otvorenog izvora. Primjer koda dolje uzima i slikovni i tekstualni upit za dobivanje analize slike iz Llama 3.2 90B.
+Podrška za multimodalnost predstavlja veliki korak u svijetu modela otvorenog izvora. Primjer koda ispod uzima i sliku i tekstualni upit kako bi dobio analizu slike iz Llama 3.2 90B.
 
 ### Podrška za multimodalnost s Llama 3.2
 
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Učenje ne završava ovdje, nastavi putovanje
+## Učenje ne prestaje ovdje, nastavite putovanje
 
-Nakon završetka ove lekcije, pogledajte našu [Generative AI Learning kolekciju](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili unapređivati svoje znanje o Generative AI!
+Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje generativne AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili unapređivati svoje znanje o generativnoj AI!
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako se trudimo da prevod bude tačan, imajte na umu da automatski prijevodi mogu sadržavati greške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne odgovaramo za bilo kakva nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge prevođenja [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, molimo vas da budete svjesni da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na njegovom izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne odgovaramo za nesporazume ili pogrešna tumačenja koja mogu nastati korištenjem ovog prijevoda.

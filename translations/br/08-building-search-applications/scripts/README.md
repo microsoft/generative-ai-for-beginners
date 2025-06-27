@@ -2,21 +2,21 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T10:26:21+00:00",
+  "translation_date": "2025-06-25T16:54:16+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "br"
 }
 -->
 # Preparação de dados de transcrição
 
-Os scripts de preparação de dados de transcrição baixam transcrições de vídeos do YouTube e as preparam para uso com o exemplo de Pesquisa Semântica com Embeddings e Funções do OpenAI.
+Os scripts de preparação de dados de transcrição baixam transcrições de vídeos do YouTube e as preparam para uso com a Pesquisa Semântica com Embeddings e Funções do OpenAI.
 
 Os scripts de preparação de dados de transcrição foram testados nas últimas versões do Windows 11, macOS Ventura e Ubuntu 22.04 (e superiores).
 
 ## Criar os recursos necessários do Azure OpenAI Service
 
 > [!IMPORTANT]
-> Sugerimos que você atualize o Azure CLI para a versão mais recente para garantir a compatibilidade com o OpenAI
+> Sugerimos que você atualize o Azure CLI para a versão mais recente para garantir compatibilidade com o OpenAI
 > Veja [Documentação](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Crie um grupo de recursos
@@ -46,7 +46,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Implante os seguintes modelos:
+1. Faça o deploy dos seguintes modelos:
    - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
    - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
 
@@ -80,8 +80,8 @@ As seguintes variáveis de ambiente são necessárias para executar os scripts d
 
 ### No Windows
 
-Recomendamos adicionar as variáveis ao seu `usuário` environment variables.
-`Iniciar Windows` > `Editar as variáveis de ambiente do sistema` > `Variáveis de Ambiente` > `Variáveis do usuário` for [USER] > `Novo`.
+Recomenda-se adicionar as variáveis ao seu `usuário` environment variables.
+`Iniciar do Windows` > `Editar as variáveis de ambiente do sistema` > `Variáveis de Ambiente` > `Variáveis de usuário` for [USER] > `Novo`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### No Linux e macOS
 
-Recomendamos adicionar as seguintes exportações ao seu arquivo `~/.bashrc` or `~/.zshrc`.
+Recomenda-se adicionar as seguintes exportações ao seu arquivo `~/.bashrc` or `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -104,7 +104,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Instalar as bibliotecas Python necessárias
 
 1. Instale o [cliente git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) se ainda não estiver instalado.
-1. A partir de uma janela do `Terminal`, clone o exemplo para a pasta de repositório de sua preferência.
+1. A partir de uma janela `Terminal`, clone o exemplo para sua pasta de repositório preferida.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Aviso Legal**:  
-Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para alcançar precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações errôneas decorrentes do uso desta tradução.

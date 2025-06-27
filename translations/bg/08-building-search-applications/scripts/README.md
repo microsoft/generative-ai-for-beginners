@@ -2,18 +2,18 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:55:04+00:00",
+  "translation_date": "2025-06-25T16:59:42+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "bg"
 }
 -->
 # Подготовка на данни за транскрипция
 
-Скриптовете за подготовка на данни за транскрипция изтеглят транскрипции на видеоклипове от YouTube и ги подготвят за използване с Пример за семантично търсене с OpenAI Embeddings и Functions.
+Скриптовете за подготовка на данни за транскрипция изтеглят транскрипции на видеоклипове от YouTube и ги подготвят за използване с примера за Семантично търсене с OpenAI Embeddings и Функции.
 
 Скриптовете за подготовка на данни за транскрипция са тествани на последните версии на Windows 11, macOS Ventura и Ubuntu 22.04 (и по-нови).
 
-## Създаване на необходимите ресурси на Azure OpenAI Service
+## Създаване на необходимите ресурси за Azure OpenAI Service
 
 > [!IMPORTANT]
 > Препоръчваме да актуализирате Azure CLI до последната версия, за да осигурите съвместимост с OpenAI
@@ -23,21 +23,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 > [!NOTE]
 > За тези инструкции използваме ресурсната група с име "semantic-video-search" в East US.
-> Можете да промените името на ресурсната група, но когато променяте местоположението на ресурсите,
+> Можете да промените името на ресурсната група, но при промяна на местоположението за ресурсите,
 > проверете [таблицата за наличност на модели](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Създайте ресурс на Azure OpenAI Service.
+1. Създайте ресурс за Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Получете крайна точка и ключове за използване в това приложение
+1. Вземете крайна точка и ключове за използване в това приложение
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -74,13 +74,13 @@ az cognitiveservices account deployment create \
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) или по-нова версия
 
-## Променливи на средата
+## Променливи на околната среда
 
-Следните променливи на средата са необходими за изпълнение на скриптовете за подготовка на данни за транскрипция от YouTube.
+Следните променливи на околната среда са необходими за изпълнение на скриптовете за подготовка на данни за транскрипция от YouTube.
 
-### В Windows
+### На Windows
 
-Препоръчваме да добавите променливите към вашия `user` environment variables.
+Препоръчваме добавяне на променливите към вашия `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -90,9 +90,9 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### В Linux и macOS
+### На Linux и macOS
 
-Препоръчваме да добавите следните експорти към вашия файл `~/.bashrc` or `~/.zshrc`.
+Препоръчваме добавяне на следните експорти към вашия файл `~/.bashrc` or `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -101,10 +101,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Инсталиране на необходимите Python библиотеки
+## Инсталирайте необходимите Python библиотеки
 
-1. Инсталирайте [git клиента](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ако не е инсталиран.
-1. Отворете `Terminal` и клонирайте примера в предпочитаната от вас папка за репо.
+1. Инсталирайте [git клиента](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ако не е вече инсталиран.
+1. От прозорец на `Terminal`, клонирайте примера в предпочитаната от вас папка за репозитории.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -118,13 +118,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Създайте виртуална среда за Python.
 
-    В Windows:
+    На Windows:
 
     ```powershell
     python -m venv .venv
     ```
 
-    В macOS и Linux:
+    На macOS и Linux:
 
     ```bash
     python3 -m venv .venv
@@ -132,13 +132,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Активирайте виртуалната среда за Python.
 
-   В Windows:
+   На Windows:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   В macOS и Linux:
+   На macOS и Linux:
 
    ```bash
    source .venv/bin/activate
@@ -146,31 +146,31 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Инсталирайте необходимите библиотеки.
 
-   В Windows:
+   На Windows:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   В macOS и Linux:
+   На macOS и Linux:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Изпълнение на скриптовете за подготовка на данни за транскрипция от YouTube
+## Изпълнете скриптовете за подготовка на данни за транскрипция от YouTube
 
-### В Windows
+### На Windows
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### В macOS и Linux
+### На macOS и Linux
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
-**Отказ от отговорност**: 
-Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Докато се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за недоразумения или погрешни тълкувания, произтичащи от използването на този превод.
+**Отказ от отговорност**:  
+Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматичните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетния източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за каквито и да било недоразумения или погрешни тълкувания, произтичащи от използването на този превод.

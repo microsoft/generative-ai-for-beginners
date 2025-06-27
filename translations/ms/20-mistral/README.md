@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:00:47+00:00",
+  "translation_date": "2025-06-26T03:20:16+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "ms"
 }
@@ -18,31 +18,30 @@ Pelajaran ini akan merangkumi:
 
 ## Model Mistral
 
-Dalam pelajaran ini, kita akan meneroka 3 model Mistral yang berbeza: **Mistral Large**, **Mistral Small**, dan **Mistral Nemo**.
+Dalam pelajaran ini, kita akan meneroka 3 model Mistral yang berbeza: **Mistral Large**, **Mistral Small** dan **Mistral Nemo**.
 
-Setiap model ini boleh didapati secara percuma di pasaran Model Github. Kod dalam buku nota ini akan menggunakan model-model ini untuk menjalankan kod. Berikut adalah lebih banyak maklumat tentang menggunakan Model Github untuk [prototip dengan model AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Setiap model ini boleh didapati secara percuma di pasaran Model Github. Kod dalam buku nota ini akan menggunakan model-model ini untuk menjalankan kod. Berikut adalah butiran lanjut tentang menggunakan Model Github untuk [prototip dengan model AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
+Mistral Large 2 kini merupakan model utama dari Mistral dan direka untuk kegunaan perusahaan.
 
-Mistral Large 2 kini adalah model utama dari Mistral dan direka untuk kegunaan perusahaan.
+Model ini adalah peningkatan kepada Mistral Large yang asal dengan menawarkan
+- Tetingkap Konteks Lebih Besar - 128k berbanding 32k
+- Prestasi lebih baik pada Tugasan Matematik dan Pengkodan - 76.9% ketepatan purata berbanding 60.4%
+- Peningkatan prestasi berbilang bahasa - bahasa termasuk: Inggeris, Perancis, Jerman, Sepanyol, Itali, Portugis, Belanda, Rusia, Cina, Jepun, Korea, Arab, dan Hindi.
 
-Model ini adalah peningkatan kepada Mistral Large asal dengan menawarkan:
-- Tingkap Konteks Lebih Besar - 128k berbanding 32k
-- Prestasi Lebih Baik pada Tugas Matematik dan Pengkodan - purata ketepatan 76.9% berbanding 60.4%
-- Prestasi pelbagai bahasa yang meningkat - bahasa termasuk: Inggeris, Perancis, Jerman, Sepanyol, Itali, Portugis, Belanda, Rusia, Cina, Jepun, Korea, Arab, dan Hindi.
-
-Dengan ciri-ciri ini, Mistral Large unggul dalam:
-- *Retrieval Augmented Generation (RAG)* - disebabkan tingkap konteks yang lebih besar
-- *Pemanggilan Fungsi* - model ini mempunyai pemanggilan fungsi asli yang membolehkan integrasi dengan alat dan API luaran. Panggilan ini boleh dibuat secara selari atau satu demi satu dalam urutan berurutan.
-- *Penjanaan Kod* - model ini unggul dalam penjanaan Python, Java, TypeScript, dan C++.
+Dengan ciri-ciri ini, Mistral Large cemerlang dalam
+- *Penjanaan Diperkaya Pengambilan (RAG)* - disebabkan tetingkap konteks yang lebih besar
+- *Pemanggilan Fungsi* - model ini mempunyai pemanggilan fungsi asli yang membolehkan integrasi dengan alat dan API luaran. Panggilan ini boleh dibuat secara selari atau satu demi satu dalam urutan.
+- *Penjanaan Kod* - model ini cemerlang dalam penjanaan Python, Java, TypeScript dan C++.
 
 ### Contoh RAG menggunakan Mistral Large 2
 
 Dalam contoh ini, kita menggunakan Mistral Large 2 untuk menjalankan corak RAG ke atas dokumen teks. Soalan ditulis dalam bahasa Korea dan bertanya tentang aktiviti penulis sebelum kolej.
 
-Ia menggunakan Model Embeddings Cohere untuk membuat embeddings dokumen teks serta soalan. Untuk sampel ini, ia menggunakan pakej Python faiss sebagai stor vektor.
+Ia menggunakan Model Embeddings Cohere untuk mencipta embeddings dokumen teks serta soalan. Untuk sampel ini, ia menggunakan pakej faiss Python sebagai stor vektor.
 
-Prompt yang dihantar kepada model Mistral termasuk kedua-dua soalan dan cebisan yang diambil yang serupa dengan soalan. Model kemudian memberikan respons dalam bahasa semula jadi.
+Prompt yang dihantar ke model Mistral termasuk kedua-dua soalan dan cebisan yang diperoleh yang serupa dengan soalan. Model kemudian memberikan respons dalam bahasa semula jadi.
 
 ```python 
 pip install faiss-cpu
@@ -139,22 +138,21 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-
-Mistral Small adalah satu lagi model dalam keluarga model Mistral di bawah kategori premier/perusahaan. Seperti namanya, model ini adalah Model Bahasa Kecil (SLM). Kelebihan menggunakan Mistral Small adalah ia:
+Mistral Small adalah model lain dalam keluarga model Mistral di bawah kategori premier/perusahaan. Seperti yang tersirat dari namanya, model ini adalah Model Bahasa Kecil (SLM). Kelebihan menggunakan Mistral Small adalah:
 - Penjimatan Kos berbanding LLM Mistral seperti Mistral Large dan NeMo - penurunan harga 80%
 - Latensi Rendah - respons lebih cepat berbanding LLM Mistral
 - Fleksibel - boleh digunakan di pelbagai persekitaran dengan kurang sekatan pada sumber yang diperlukan.
 
 Mistral Small sangat baik untuk:
-- Tugas berasaskan teks seperti penjelasan, analisis sentimen dan terjemahan.
-- Aplikasi di mana permintaan kerap dibuat kerana keberkesanan kosnya
-- Tugas kod latensi rendah seperti semakan dan cadangan kod
+- Tugasan berasaskan teks seperti penjumlahan, analisis sentimen dan terjemahan.
+- Aplikasi di mana permintaan kerap dibuat disebabkan keberkesanan kosnya
+- Tugasan kod latensi rendah seperti semakan dan cadangan kod
 
 ## Membandingkan Mistral Small dan Mistral Large
 
 Untuk menunjukkan perbezaan latensi antara Mistral Small dan Large, jalankan sel di bawah.
 
-Anda seharusnya melihat perbezaan masa respons antara 3-5 saat. Juga perhatikan panjang dan gaya respons ke atas prompt yang sama.
+Anda sepatutnya melihat perbezaan dalam masa respons antara 3-5 saat. Juga perhatikan panjang dan gaya respons untuk prompt yang sama.
 
 ```python 
 
@@ -222,17 +220,17 @@ Ia dilihat sebagai peningkatan kepada LLM sumber terbuka terdahulu dari Mistral,
 
 Beberapa ciri lain model NeMo adalah:
 
-- *Penjadualan token lebih efisien:* Model ini menggunakan penjadual token Tekken berbanding tiktoken yang lebih biasa digunakan. Ini membolehkan prestasi lebih baik ke atas lebih banyak bahasa dan kod.
+- *Penandaan token yang lebih cekap:* Model ini menggunakan penanda Tekken berbanding tiktoken yang lebih biasa digunakan. Ini membolehkan prestasi lebih baik dalam lebih banyak bahasa dan kod.
 
-- *Penalaan halus:* Model asas boleh didapati untuk penalaan halus. Ini membolehkan lebih fleksibiliti untuk kes penggunaan di mana penalaan halus mungkin diperlukan.
+- *Penyelarasan:* Model asas boleh diselaraskan. Ini membolehkan lebih fleksibiliti untuk kes penggunaan di mana penyelarasan mungkin diperlukan.
 
 - *Pemanggilan Fungsi Asli* - Seperti Mistral Large, model ini telah dilatih pada pemanggilan fungsi. Ini menjadikannya unik sebagai salah satu model sumber terbuka pertama yang melakukannya.
 
-### Membandingkan Penjadual Token
+### Membandingkan Penanda Token
 
-Dalam sampel ini, kita akan melihat bagaimana Mistral NeMo mengendalikan penjadualan token berbanding Mistral Large.
+Dalam sampel ini, kita akan melihat bagaimana Mistral NeMo menangani penandaan token berbanding Mistral Large.
 
-Kedua-dua sampel mengambil prompt yang sama tetapi anda seharusnya melihat bahawa NeMo mengembalikan kurang token berbanding Mistral Large.
+Kedua-dua sampel mengambil prompt yang sama tetapi anda sepatutnya melihat bahawa NeMo mengembalikan kurang token berbanding Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -352,7 +350,7 @@ print(len(tokens))
 
 ## Pembelajaran tidak berhenti di sini, teruskan Perjalanan
 
-Selepas menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif anda!
+Selepas menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif anda!
 
-**Penafian**: 
+**Penafian**:  
 Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:04:41+00:00",
+  "translation_date": "2025-06-26T03:24:45+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "en"
 }
@@ -108,7 +108,7 @@ Despite being an LLM, one limitation that Llama 3.1 has is multimodality. That i
 
 - Multimodality - has the ability to evaluate both text and image prompts 
 - Small to Medium size variations (11B and 90B) - this provides flexible deployment options, 
-- Text-only variations (1B and 3B) - this allows the model to be deployed on edge / mobile devices and provides low latency 
+- Text-only variations (1B and 3B) - this allows the model to be deployed on edge/mobile devices and provides low latency 
 
 The multimodal support represents a big step in the world of open source models. The code example below takes both an image and text prompt to get an analysis of the image from Llama 3.2 90B. 
 
@@ -163,6 +163,8 @@ print(response.choices[0].message.content)
 ## Learning does not stop here, continue the Journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+
+Certainly! Here is the translation of the disclaimer:
 
 **Disclaimer**:  
 This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

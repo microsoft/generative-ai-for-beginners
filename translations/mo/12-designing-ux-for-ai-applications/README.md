@@ -2,110 +2,125 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ec385b41ee50579025d50cc03bfb3a25",
-  "translation_date": "2025-05-19T21:45:35+00:00",
+  "translation_date": "2025-06-25T20:12:34+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "mo"
 }
 -->
-# Desain UX untuk Aplikasi AI
+# 設計人工智慧應用的使用者體驗
 
-Pengalaman pengguna adalah aspek yang sangat penting dalam membangun aplikasi. Pengguna perlu dapat menggunakan aplikasi Anda dengan cara yang efisien untuk melakukan tugas. Efisiensi adalah satu hal, tetapi Anda juga perlu merancang aplikasi agar dapat digunakan oleh semua orang, membuatnya _terjangkau_. Bab ini akan fokus pada area ini sehingga Anda semoga akhirnya merancang aplikasi yang dapat dan ingin digunakan orang.
+使用者體驗是構建應用程式的一個非常重要的方面。使用者需要能夠有效地使用您的應用程式來執行任務。有效率是一回事，但您還需要設計應用程式，使每個人都能使用，讓它變得_可及_。本章將專注於這個領域，希望您最終能設計出人們能夠並且願意使用的應用程式。
 
-## Pengantar
+## 介紹
 
-Pengalaman pengguna adalah bagaimana seorang pengguna berinteraksi dengan dan menggunakan produk atau layanan tertentu, baik itu sistem, alat, atau desain. Saat mengembangkan aplikasi AI, pengembang tidak hanya fokus pada memastikan pengalaman pengguna efektif tetapi juga etis. Dalam pelajaran ini, kami membahas cara membangun aplikasi Kecerdasan Buatan (AI) yang memenuhi kebutuhan pengguna.
+使用者體驗是使用者如何與特定產品或服務互動和使用，不論是系統、工具或設計。在開發人工智慧應用程式時，開發者不僅要確保使用者體驗有效，還要確保其道德性。在本課程中，我們將探討如何構建滿足使用者需求的人工智慧（AI）應用程式。
 
-Pelajaran ini akan mencakup area berikut:
+本課程將涵蓋以下領域：
 
-- Pengantar Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
-- Merancang Aplikasi AI untuk Kepercayaan dan Transparansi
-- Merancang Aplikasi AI untuk Kolaborasi dan Umpan Balik
+- 使用者體驗介紹及理解使用者需求
+- 設計人工智慧應用以促進信任和透明度
+- 設計人工智慧應用以促進合作和反饋
 
-## Tujuan Pembelajaran
+## 學習目標
 
-Setelah mengikuti pelajaran ini, Anda akan dapat:
+完成本課程後，您將能夠：
 
-- Memahami cara membangun aplikasi AI yang memenuhi kebutuhan pengguna.
-- Merancang aplikasi AI yang mendorong kepercayaan dan kolaborasi.
+- 理解如何構建滿足使用者需求的人工智慧應用程式。
+- 設計促進信任和合作的人工智慧應用程式。
 
-### Prasyarat
+### 前置條件
 
-Luangkan waktu dan baca lebih lanjut tentang [pengalaman pengguna dan pemikiran desain.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+花些時間閱讀更多關於[使用者體驗和設計思維](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)。
 
-## Pengantar Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
+## 使用者體驗介紹及理解使用者需求
 
-Dalam startup pendidikan fiktif kami, kami memiliki dua pengguna utama, guru dan siswa. Masing-masing dari dua pengguna ini memiliki kebutuhan unik. Desain yang berpusat pada pengguna memprioritaskan pengguna, memastikan produk relevan dan bermanfaat bagi mereka yang ditujukan.
+在我們虛構的教育初創公司中，我們有兩個主要使用者，教師和學生。這兩個使用者都有獨特的需求。以使用者為中心的設計優先考慮使用者，確保產品對其目標使用者而言是相關且有益的。
 
-Aplikasi harus **berguna, dapat diandalkan, terjangkau, dan menyenangkan** untuk memberikan pengalaman pengguna yang baik.
+應用程式應該是**有用、可靠、可及且愉悅**的，以提供良好的使用者體驗。
 
-### Kegunaan
+### 可用性
 
-Menjadi berguna berarti aplikasi memiliki fungsionalitas yang sesuai dengan tujuan yang dimaksudkan, seperti mengotomatisasi proses penilaian atau menghasilkan kartu kilat untuk revisi. Aplikasi yang mengotomatisasi proses penilaian harus dapat secara akurat dan efisien memberikan skor pada pekerjaan siswa berdasarkan kriteria yang telah ditentukan. Demikian pula, aplikasi yang menghasilkan kartu kilat revisi harus dapat membuat pertanyaan yang relevan dan beragam berdasarkan datanya.
+有用意味著應用程式具有符合其預期目的的功能，例如自動化評分過程或生成複習用的抽認卡。自動化評分過程的應用程式應能根據預定義標準準確且有效地給學生的作業分數。同樣，生成複習抽認卡的應用程式應能根據其資料創建相關且多樣化的問題。
 
-### Keandalan
+### 可靠性
 
-Menjadi dapat diandalkan berarti aplikasi dapat melakukan tugasnya secara konsisten dan tanpa kesalahan. Namun, AI seperti manusia tidak sempurna dan mungkin rentan terhadap kesalahan. Aplikasi mungkin mengalami kesalahan atau situasi tak terduga yang memerlukan intervensi atau koreksi manusia. Bagaimana Anda menangani kesalahan? Pada bagian terakhir dari pelajaran ini, kami akan membahas bagaimana sistem dan aplikasi AI dirancang untuk kolaborasi dan umpan balik.
+可靠意味著應用程式能夠一致且無錯誤地執行其任務。然而，人工智慧就像人類一樣並不完美，可能容易出錯。應用程式可能會遇到需要人工干預或修正的錯誤或意外情況。您如何處理錯誤？在本課程的最後一部分，我們將探討人工智慧系統和應用程式如何設計以促進合作和反饋。
 
-### Keterjangkauan
+### 可及性
 
-Menjadi terjangkau berarti memperluas pengalaman pengguna kepada pengguna dengan berbagai kemampuan, termasuk mereka yang memiliki disabilitas, memastikan tidak ada yang tertinggal. Dengan mengikuti pedoman dan prinsip keterjangkauan, solusi AI menjadi lebih inklusif, dapat digunakan, dan bermanfaat bagi semua pengguna.
+可及意味著擴展使用者體驗至各種能力的使用者，包括殘障人士，確保沒有人被排除在外。遵循可及性指南和原則，人工智慧解決方案變得更加包容、可用且對所有使用者都有益。
 
-### Menyenangkan
+### 愉悅
 
-Menjadi menyenangkan berarti aplikasi ini menyenangkan untuk digunakan. Pengalaman pengguna yang menarik dapat memiliki dampak positif pada pengguna, mendorong mereka untuk kembali ke aplikasi dan meningkatkan pendapatan bisnis.
+愉悅意味著應用程式使用起來令人愉快。一個吸引人的使用者體驗可以對使用者產生積極影響，鼓勵他們回到應用程式並增加業務收入。
 
-Tidak setiap tantangan dapat diselesaikan dengan AI. AI hadir untuk meningkatkan pengalaman pengguna Anda, baik itu mengotomatisasi tugas manual, atau mempersonalisasi pengalaman pengguna.
+![展示人工智慧中的使用者體驗考量的圖片](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.mo.png)
 
-## Merancang Aplikasi AI untuk Kepercayaan dan Transparansi
+並非所有挑戰都能用人工智慧解決。人工智慧進入以增強您的使用者體驗，不論是自動化手動任務，或是個性化使用者體驗。
 
-Membangun kepercayaan sangat penting saat merancang aplikasi AI. Kepercayaan memastikan seorang pengguna yakin bahwa aplikasi akan menyelesaikan pekerjaan, memberikan hasil secara konsisten, dan hasilnya adalah apa yang dibutuhkan pengguna. Risiko dalam area ini adalah ketidakpercayaan dan kepercayaan berlebihan. Ketidakpercayaan terjadi ketika seorang pengguna memiliki sedikit atau tidak ada kepercayaan pada sistem AI, ini menyebabkan pengguna menolak aplikasi Anda. Kepercayaan berlebihan terjadi ketika seorang pengguna melebih-lebihkan kemampuan sistem AI, yang menyebabkan pengguna terlalu mempercayai sistem AI. Misalnya, sistem penilaian otomatis dalam kasus kepercayaan berlebihan mungkin menyebabkan guru tidak memeriksa beberapa makalah untuk memastikan sistem penilaian bekerja dengan baik. Ini dapat mengakibatkan nilai yang tidak adil atau tidak akurat bagi siswa, atau kesempatan yang terlewatkan untuk umpan balik dan perbaikan.
+## 設計人工智慧應用以促進信任和透明度
 
-Dua cara untuk memastikan bahwa kepercayaan ditempatkan tepat di pusat desain adalah keterjelasan dan kendali.
+在設計人工智慧應用程式時，建立信任至關重要。信任確保使用者相信應用程式能夠完成工作，穩定地交付結果且結果符合使用者的需求。這方面的風險是不信任和過度信任。不信任發生在使用者對人工智慧系統幾乎沒有或沒有信任，這會導致使用者拒絕您的應用程式。過度信任發生在使用者高估人工智慧系統的能力，導致使用者過度信任人工智慧系統。例如，在過度信任的情況下，教師可能不會仔細檢查某些試卷，以確保評分系統運行良好。這可能導致學生的成績不公平或不準確，或錯過反饋和改進的機會。
 
-### Keterjelasan
+確保信任成為設計中心的兩種方法是可解釋性和控制。
 
-Ketika AI membantu menginformasikan keputusan seperti menyampaikan pengetahuan kepada generasi mendatang, penting bagi guru dan orang tua untuk memahami bagaimana keputusan AI dibuat. Ini adalah keterjelasan - memahami bagaimana aplikasi AI membuat keputusan. Merancang untuk keterjelasan termasuk menambahkan rincian contoh tentang apa yang dapat dilakukan aplikasi AI. Misalnya, alih-alih "Mulai dengan AI guru", sistem dapat menggunakan: "Ringkas catatan Anda untuk revisi lebih mudah menggunakan AI."
+### 可解釋性
 
-Contoh lainnya adalah bagaimana AI menggunakan data pengguna dan pribadi. Misalnya, seorang pengguna dengan persona siswa mungkin memiliki batasan berdasarkan persona mereka. AI mungkin tidak dapat mengungkapkan jawaban atas pertanyaan tetapi dapat membantu memandu pengguna untuk memikirkan bagaimana mereka dapat menyelesaikan masalah.
+當人工智慧幫助做出決策，例如將知識傳授給下一代時，教師和家長了解人工智慧決策的方式至關重要。這就是可解釋性 - 理解人工智慧應用程式如何做出決策。設計可解釋性包括添加人工智慧應用程式可以做什麼的例子細節。例如，系統可以使用：“使用人工智慧總結您的筆記以便於複習”，而不是“開始使用人工智慧教師”。
 
-Bagian terakhir yang penting dari keterjelasan adalah penyederhanaan penjelasan. Siswa dan guru mungkin bukan ahli AI, oleh karena itu penjelasan tentang apa yang dapat atau tidak dapat dilakukan aplikasi harus disederhanakan dan mudah dipahami.
+![應用程式著陸頁展示人工智慧應用中的可解釋性的清晰例子](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.mo.png)
 
-### Kendali
+另一個例子是人工智慧如何使用使用者和個人資料。例如，具有學生角色的使用者可能根據其角色有一些限制。人工智慧可能無法揭示問題的答案，但可以幫助引導使用者思考如何解決問題。
 
-AI generatif menciptakan kolaborasi antara AI dan pengguna, di mana misalnya seorang pengguna dapat memodifikasi prompt untuk hasil yang berbeda. Selain itu, setelah output dihasilkan, pengguna harus dapat memodifikasi hasil memberi mereka rasa kendali. Misalnya, saat menggunakan Bing, Anda dapat menyesuaikan prompt Anda berdasarkan format, nada, dan panjang. Selain itu, Anda dapat menambahkan perubahan pada output Anda dan memodifikasi output seperti yang ditunjukkan di bawah ini:
+![人工智慧根據角色回答問題](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.mo.png)
 
-Fitur lain di Bing yang memungkinkan pengguna memiliki kendali atas aplikasi adalah kemampuan untuk memilih masuk dan keluar dari data yang digunakan AI. Untuk aplikasi sekolah, seorang siswa mungkin ingin menggunakan catatan mereka serta sumber daya guru sebagai bahan revisi.
+可解釋性的最後一個關鍵部分是簡化解釋。學生和教師可能不是人工智慧專家，因此應用程式能做什麼或不能做什麼的解釋應該簡化並易於理解。
 
-> Saat merancang aplikasi AI, kesengajaan adalah kunci untuk memastikan pengguna tidak terlalu percaya, menetapkan harapan yang tidak realistis terhadap kemampuannya. Salah satu cara untuk melakukannya adalah dengan menciptakan gesekan antara prompt dan hasil. Mengingatkan pengguna bahwa ini adalah AI dan bukan sesama manusia
+![人工智慧能力的簡化解釋](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.mo.png)
 
-## Merancang Aplikasi AI untuk Kolaborasi dan Umpan Balik
+### 控制
 
-Seperti yang disebutkan sebelumnya, AI generatif menciptakan kolaborasi antara pengguna dan AI. Sebagian besar keterlibatan adalah dengan pengguna memasukkan prompt dan AI menghasilkan output. Bagaimana jika outputnya salah? Bagaimana aplikasi menangani kesalahan jika terjadi? Apakah AI menyalahkan pengguna atau meluangkan waktu untuk menjelaskan kesalahan?
+生成式人工智慧創造了人工智慧與使用者之間的合作，例如使用者可以修改提示以獲得不同的結果。此外，一旦生成了輸出，使用者應能夠修改結果，讓他們感受到控制。例如，使用 Bing 時，您可以根據格式、語氣和長度調整您的提示。此外，您可以對輸出進行更改並修改輸出，如下所示：
 
-Aplikasi AI harus dibangun untuk menerima dan memberikan umpan balik. Ini tidak hanya membantu sistem AI meningkat tetapi juga membangun kepercayaan dengan pengguna. Sebuah loop umpan balik harus dimasukkan dalam desain, contohnya bisa berupa jempol ke atas atau ke bawah pada output.
+![Bing 搜索結果，提供修改提示和輸出的選項](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.mo.png)
 
-Cara lain untuk menangani ini adalah dengan secara jelas mengkomunikasikan kemampuan dan batasan sistem. Ketika seorang pengguna membuat kesalahan meminta sesuatu di luar kemampuan AI, harus ada cara untuk menangani ini, seperti yang ditunjukkan di bawah ini.
+Bing 的另一個功能是允許使用者控制應用程式，即能夠選擇加入或退出人工智慧使用的資料。對於學校應用程式，學生可能希望使用自己的筆記以及教師的資源作為複習材料。
 
-Kesalahan sistem umum terjadi dengan aplikasi di mana pengguna mungkin memerlukan bantuan dengan informasi di luar cakupan AI atau aplikasi mungkin memiliki batasan tentang berapa banyak pertanyaan/mata pelajaran yang dapat dihasilkan pengguna. Misalnya, aplikasi AI yang dilatih dengan data pada mata pelajaran terbatas, misalnya Sejarah dan Matematika mungkin tidak dapat menangani pertanyaan seputar Geografi. Untuk mengatasi ini, sistem AI dapat memberikan respons seperti: "Maaf, produk kami telah dilatih dengan data dalam mata pelajaran berikut....., saya tidak dapat merespons pertanyaan yang Anda ajukan."
+![Bing 搜索結果，提供修改提示和輸出的選項](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.mo.png)
 
-Aplikasi AI tidak sempurna, oleh karena itu, mereka cenderung membuat kesalahan. Saat merancang aplikasi Anda, Anda harus memastikan Anda menciptakan ruang untuk umpan balik dari pengguna dan penanganan kesalahan dengan cara yang sederhana dan mudah dijelaskan.
+> 在設計人工智慧應用程式時，故意性是關鍵，確保使用者不過度信任，設置不切實際的期望。做到這一點的一種方法是在提示和結果之間創造摩擦。提醒使用者，這是人工智慧而不是一個同類人
 
-## Tugas
+## 設計人工智慧應用以促進合作和反饋
 
-Ambil aplikasi AI apa pun yang telah Anda bangun sejauh ini, pertimbangkan untuk menerapkan langkah-langkah berikut dalam aplikasi Anda:
+如前所述，生成式人工智慧創造了使用者與人工智慧之間的合作。大多數互動是使用者輸入提示，人工智慧生成輸出。如果輸出不正確呢？應用程式如何處理錯誤？人工智慧是否責怪使用者或花時間解釋錯誤？
 
-- **Menyenangkan:** Pertimbangkan bagaimana Anda dapat membuat aplikasi Anda lebih menyenangkan. Apakah Anda menambahkan penjelasan di mana-mana? Apakah Anda mendorong pengguna untuk menjelajah? Bagaimana Anda merangkai pesan kesalahan Anda?
+人工智慧應用程式應該內建接收和提供反饋。這不僅幫助人工智慧系統改善，還能與使用者建立信任。設計中應包含反饋迴路，例子可以是輸出上的簡單的讚或踩。
 
-- **Kegunaan:** Membangun aplikasi web. Pastikan aplikasi Anda dapat dinavigasi dengan baik oleh mouse dan keyboard.
+另一種處理方式是明確溝通系統的能力和限制。當使用者要求超出人工智慧能力的內容時，應該有一種方式來處理，如下所示。
 
-- **Kepercayaan dan transparansi:** Jangan sepenuhnya mempercayai AI dan outputnya, pertimbangkan bagaimana Anda akan menambahkan manusia ke proses untuk memverifikasi output. Juga, pertimbangkan dan terapkan cara lain untuk mencapai kepercayaan dan transparansi.
+![提供反饋和處理錯誤](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.mo.png)
 
-- **Kendali:** Berikan pengguna kendali atas data yang mereka berikan kepada aplikasi. Terapkan cara pengguna dapat memilih masuk dan keluar dari pengumpulan data dalam aplikasi AI.
+系統錯誤在應用程式中很常見，使用者可能需要超出人工智慧範圍的信息或應用程式可能限制使用者生成摘要的問題/主題數量。例如，僅接受歷史和數學資料訓練的人工智慧應用程式可能無法處理地理問題。為了減輕這一點，人工智慧系統可以回應：“抱歉，我們的產品已經接受以下主題的資料訓練……，我無法回答您所問的問題。”
 
-## Lanjutkan Pembelajaran Anda!
+人工智慧應用程式並不完美，因此，它們可能會犯錯誤。在設計您的應用程式時，您應確保創造使用者反饋和錯誤處理的空間，以簡單且易於解釋的方式進行。
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif Anda!
+## 作業
 
-Lanjutkan ke Pelajaran 13, di mana kita akan melihat bagaimana [mengamankan aplikasi AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+選擇您到目前為止構建的任何人工智慧應用程式，考慮在您的應用程式中實施以下步驟：
 
-It seems there might be a misunderstanding, as "mo" is not a recognized language code. Could you please specify the language you would like the text translated into?
+- **愉悅：** 考慮如何使您的應用程式更愉悅。您是否在各處添加了解釋？您是否鼓勵使用者探索？您如何措辭您的錯誤消息？
+
+- **可用性：** 構建網頁應用程式。確保您的應用程式可以通過鼠標和鍵盤導航。
+
+- **信任和透明度：** 不要完全信任人工智慧及其輸出，考慮如何將人類加入流程以驗證輸出。此外，考慮並實施其他方式以實現信任和透明度。
+
+- **控制：** 讓使用者控制他們提供給應用程式的資料。在人工智慧應用程式中實施使用者可以選擇加入或退出資料收集的方法。
+
+## 繼續學習！
+
+完成本課程後，請查看我們的[生成式人工智慧學習系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)以繼續提升您的生成式人工智慧知識！
+
+前往第 13 課，我們將探討如何[保護人工智慧應用程式](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+
+**免責聲明**：
+本文檔已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力追求準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵信息，建議使用專業人工翻譯。對於使用此翻譯所產生的任何誤解或誤釋，我們不承擔責任。

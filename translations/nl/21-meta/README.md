@@ -2,26 +2,26 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:13:17+00:00",
+  "translation_date": "2025-06-26T03:32:50+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "nl"
 }
 -->
-# Bouwen met de Meta Familie Modellen
+# Bouwen met de Meta Family Modellen
 
 ## Inleiding
 
 Deze les behandelt:
 
-- Het verkennen van de twee belangrijkste Meta familie modellen - Llama 3.1 en Llama 3.2
-- Het begrijpen van de gebruiksscenario's voor elk model
-- Een codevoorbeeld om de unieke kenmerken van elk model te laten zien
+- Het verkennen van de twee belangrijkste Meta family modellen - Llama 3.1 en Llama 3.2
+- Begrijpen van de gebruiksscenario's voor elk model
+- Codevoorbeeld om de unieke kenmerken van elk model te tonen
 
-## De Meta Familie van Modellen
+## De Meta Family van Modellen
 
-In deze les verkennen we 2 modellen uit de Meta familie of "Llama Kudde" - Llama 3.1 en Llama 3.2
+In deze les verkennen we 2 modellen uit de Meta family of "Llama Herd" - Llama 3.1 en Llama 3.2
 
-Deze modellen komen in verschillende varianten en zijn beschikbaar op de GitHub Model marktplaats. Hier zijn meer details over het gebruik van GitHub Modellen om te [prototypen met AI-modellen](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Deze modellen komen in verschillende varianten en zijn beschikbaar op de GitHub Model marketplace. Hier zijn meer details over het gebruik van GitHub Models om [te prototypen met AI-modellen](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Modelvarianten:
 - Llama 3.1 - 70B Instruct
@@ -29,28 +29,28 @@ Modelvarianten:
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Opmerking: Llama 3 is ook beschikbaar op GitHub Modellen maar zal niet in deze les worden behandeld*
+*Opmerking: Llama 3 is ook beschikbaar op GitHub Models maar wordt in deze les niet behandeld*
 
 ## Llama 3.1
 
-Met 405 miljard parameters valt Llama 3.1 in de open source LLM categorie.
+Met 405 miljard parameters valt Llama 3.1 in de categorie open source LLM.
 
-De modus is een upgrade van de eerdere release Llama 3 door het bieden van:
+De modus is een upgrade van de eerdere release Llama 3 door het aanbieden van:
 
-- Groter contextvenster - 128k tokens vs 8k tokens
-- Grotere Max Output Tokens - 4096 vs 2048
-- Betere meertalige ondersteuning - door toename in training tokens
+- Groter contextvenster - 128k tokens versus 8k tokens
+- Grotere Max Output Tokens - 4096 versus 2048
+- Betere meertalige ondersteuning - door de toename van training tokens
 
-Dit stelt Llama 3.1 in staat om complexere gebruiksscenario's aan te pakken bij het bouwen van GenAI-toepassingen, waaronder:
-- Native Function Calling - de mogelijkheid om externe tools en functies buiten de LLM workflow aan te roepen
+Hierdoor kan Llama 3.1 meer complexe gebruiksscenario's aan bij het bouwen van GenAI-toepassingen, waaronder:
+- Native Function Calling - de mogelijkheid om externe tools en functies buiten de LLM-workflow aan te roepen
 - Betere RAG-prestaties - dankzij het grotere contextvenster
 - Synthese van gegevens - de mogelijkheid om effectieve gegevens te creëren voor taken zoals fine-tuning
 
 ### Native Function Calling
 
-Llama 3.1 is verfijnd om effectiever te zijn in het maken van functie- of tooloproepen. Het heeft ook twee ingebouwde tools die het model kan identificeren als nodig om te worden gebruikt op basis van de prompt van de gebruiker. Deze tools zijn:
+Llama 3.1 is verfijnd om effectiever te zijn in het maken van functie- of tooloproepen. Het heeft ook twee ingebouwde tools die het model kan identificeren als nodig op basis van de prompt van de gebruiker. Deze tools zijn:
 
-- **Brave Search** - Kan worden gebruikt om actuele informatie zoals het weer te verkrijgen door een webzoekopdracht uit te voeren
+- **Brave Search** - Kan worden gebruikt om actuele informatie te krijgen, zoals het weer, door een webzoekopdracht uit te voeren
 - **Wolfram Alpha** - Kan worden gebruikt voor complexere wiskundige berekeningen, zodat het schrijven van je eigen functies niet nodig is.
 
 Je kunt ook je eigen aangepaste tools maken die LLM kan aanroepen.
@@ -103,11 +103,11 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Ondanks dat het een LLM is, heeft Llama 3.1 een beperking op het gebied van multimodaliteit. Dat wil zeggen, het kunnen gebruiken van verschillende soorten invoer zoals afbeeldingen als prompts en het geven van antwoorden. Deze mogelijkheid is een van de belangrijkste kenmerken van Llama 3.2. Deze kenmerken omvatten ook:
+Ondanks dat het een LLM is, heeft Llama 3.1 een beperking op het gebied van multimodaliteit. Dat wil zeggen, het kunnen gebruiken van verschillende soorten input zoals afbeeldingen als prompts en het geven van antwoorden. Deze mogelijkheid is een van de belangrijkste kenmerken van Llama 3.2. Deze kenmerken omvatten ook:
 
 - Multimodaliteit - heeft de mogelijkheid om zowel tekst- als afbeeldingsprompts te evalueren
-- Kleine tot middelgrote variaties (11B en 90B) - dit biedt flexibele implementatie-opties,
-- Alleen tekstvariaties (1B en 3B) - dit stelt het model in staat om op rand- / mobiele apparaten te worden ingezet en biedt lage latentie
+- Kleine tot middelgrote variaties (11B en 90B) - dit biedt flexibele implementatieopties,
+- Alleen tekstvariaties (1B en 3B) - dit maakt het mogelijk om het model op rand- / mobiele apparaten te implementeren en biedt lage latentie
 
 De multimodale ondersteuning vertegenwoordigt een grote stap in de wereld van open source modellen. Het codevoorbeeld hieronder neemt zowel een afbeelding als een tekstprompt om een analyse van de afbeelding te krijgen van Llama 3.2 90B.
 
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Het leren stopt hier niet, vervolg de Reis
+## Het leren stopt hier niet, vervolg de reis
 
-Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generatieve AI verder uit te breiden!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder te verdiepen!
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het oorspronkelijke document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

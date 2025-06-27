@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T10:25:43+00:00",
+  "translation_date": "2025-06-25T16:49:43+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "es"
 }
 -->
 # Preparación de datos de transcripción
 
-Los scripts de preparación de datos de transcripción descargan las transcripciones de videos de YouTube y las preparan para su uso con el ejemplo de Búsqueda Semántica con OpenAI Embeddings y Functions.
+Los scripts de preparación de datos de transcripción descargan transcripciones de videos de YouTube y las preparan para su uso con la búsqueda semántica con OpenAI Embeddings y Functions.
 
 Los scripts de preparación de datos de transcripción han sido probados en las últimas versiones de Windows 11, macOS Ventura y Ubuntu 22.04 (y superiores).
 
@@ -24,7 +24,7 @@ Los scripts de preparación de datos de transcripción han sido probados en las 
 > [!NOTE]
 > Para estas instrucciones estamos usando el grupo de recursos llamado "semantic-video-search" en East US.
 > Puedes cambiar el nombre del grupo de recursos, pero al cambiar la ubicación de los recursos,
-> verifica la [tabla de disponibilidad de modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> consulta la [tabla de disponibilidad de modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Obtener el punto final y las claves para su uso en esta aplicación
+1. Obtener el punto final y las claves para su uso en esta aplicación.
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -80,8 +80,8 @@ Se requieren las siguientes variables de entorno para ejecutar los scripts de pr
 
 ### En Windows
 
-Se recomienda agregar las variables a tu `usuario` environment variables.
-`Inicio de Windows` > `Editar las variables de entorno del sistema` > `Variables de entorno` > `Variables de usuario` for [USER] > `Nuevo`.
+Se recomienda agregar las variables a tu `user` environment variables.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -110,7 +110,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Navega a la carpeta `data_prep`.
+1. Navegar a la carpeta `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción humana profesional. No somos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional humana. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.

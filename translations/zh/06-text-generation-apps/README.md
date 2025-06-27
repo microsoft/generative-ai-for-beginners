@@ -2,90 +2,90 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T10:04:48+00:00",
+  "translation_date": "2025-06-25T14:00:54+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "zh"
 }
 -->
 # 构建文本生成应用程序
 
-[![构建文本生成应用程序](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.zh.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![构建文本生成应用程序](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.zh.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(点击上方图片观看本课视频)_
+> _(点击上面的图片查看本课视频)_
 
-在这门课程中，您已经看到了一些核心概念，比如提示以及一个被称为“提示工程”的学科。许多您可以与之互动的工具，如ChatGPT、Office 365、Microsoft Power Platform等，支持您使用提示来实现某些目标。
+通过本课程，你已经了解到一些核心概念，比如提示词，还有一个叫做“提示词工程”的学科。许多工具可以与您互动，例如 ChatGPT、Office 365、Microsoft Power Platform 等，支持您使用提示词来实现某些目标。
 
-要将这种体验添加到应用程序中，您需要理解提示、完成等概念，并选择一个库进行工作。这正是您将在本章中学习的内容。
+如果您想在应用程序中添加这样的体验，您需要理解提示词、完成等概念，并选择一个库进行操作。这正是您将在本章中学习的内容。
 
 ## 简介
 
 在本章中，您将：
 
-- 了解openai库及其核心概念。
-- 使用openai构建一个文本生成应用程序。
-- 理解如何使用提示、温度和令牌等概念来构建文本生成应用程序。
+- 了解 openai 库及其核心概念。
+- 使用 openai 构建一个文本生成应用程序。
+- 了解如何使用提示词、温度和令牌等概念来构建文本生成应用程序。
 
 ## 学习目标
 
 在本课结束时，您将能够：
 
 - 解释什么是文本生成应用程序。
-- 使用openai构建文本生成应用程序。
-- 配置您的应用程序以使用更多或更少的令牌，并改变温度，以获得不同的输出。
+- 使用 openai 构建文本生成应用程序。
+- 配置您的应用程序以使用更多或更少的令牌，并改变温度，以获得多样化的输出。
 
 ## 什么是文本生成应用程序？
 
-通常，当您构建一个应用程序时，它具有某种界面，如下所示：
+通常，当您构建一个应用程序时，它有某种界面，如下所示：
 
-- 基于命令。控制台应用程序是典型的应用程序，您输入命令，它执行任务。例如，`git` 是一个基于命令的应用程序。
+- 命令型。控制台应用程序是典型的应用程序，您输入一个命令，它就执行一个任务。例如，`git` 是一个命令型应用程序。
 - 用户界面 (UI)。一些应用程序具有图形用户界面 (GUI)，您可以点击按钮、输入文本、选择选项等。
 
-### 控制台和UI应用程序的局限性
+### 控制台和 UI 应用程序的局限性
 
-与基于命令的应用程序相比，您输入命令：
+与输入命令的命令型应用程序相比：
 
-- **有限制**。您不能随意输入任何命令，只能输入应用程序支持的命令。
-- **语言特定**。一些应用程序支持多种语言，但默认情况下，应用程序是为特定语言构建的，即使您可以添加更多语言支持。
+- **它有限制**。您不能随意输入任何命令，只能输入应用程序支持的命令。
+- **语言特定**。一些应用程序支持多种语言，但默认情况下应用程序是为特定语言构建的，即使您可以添加更多语言支持。
 
 ### 文本生成应用程序的优势
 
 那么文本生成应用程序有什么不同呢？
 
-在文本生成应用程序中，您有更多的灵活性，不受限于一组命令或特定的输入语言。相反，您可以使用自然语言与应用程序交互。另一个好处是，由于您已经在与一个经过大量信息训练的数据源交互，而传统应用程序可能仅限于数据库中的内容。
+在文本生成应用程序中，您有更多的灵活性，不受限于一组命令或特定的输入语言。相反，您可以使用自然语言与应用程序进行互动。另一个好处是，由于您已经在与一个经过大量信息训练的数据源进行互动，而传统应用程序可能会受限于数据库中的内容。
 
 ### 我可以用文本生成应用程序构建什么？
 
-您可以构建很多东西。例如：
+有很多事情可以构建。例如：
 
-- **聊天机器人**。聊天机器人回答关于主题的问题，比如您的公司及其产品可能是一个很好的匹配。
-- **助手**。LLMs在总结文本、从文本中获取洞察、生成简历等文本方面非常出色。
-- **代码助手**。根据您使用的语言模型，您可以构建一个代码助手来帮助您编写代码。例如，您可以使用GitHub Copilot以及ChatGPT等产品来帮助您编写代码。
+- **聊天机器人**。一个聊天机器人回答关于主题的问题，比如您的公司及其产品可能是一个不错的选择。
+- **助手**。LLM 在总结文本、从文本中获取见解、生成简历等文本方面表现出色。
+- **代码助手**。根据您使用的语言模型，您可以构建一个代码助手来帮助您编写代码。例如，您可以使用 GitHub Copilot 以及 ChatGPT 来帮助您编写代码。
 
 ## 我如何开始？
 
-您需要找到一种方法来集成LLM，这通常涉及以下两种方法：
+那么，您需要找到一种方式来与 LLM 集成，通常包括以下两种方法：
 
-- 使用API。在这里，您构建网络请求，带有您的提示，并获取生成的文本。
-- 使用库。库帮助封装API调用，使其更易于使用。
+- 使用 API。在这里，您构建网络请求，发送您的提示词并获取生成的文本。
+- 使用库。库帮助封装 API 调用，使其更易于使用。
 
 ## 库/SDK
 
-有一些众所周知的库可以用于处理LLMs，比如：
+有一些著名的库用于处理 LLM，比如：
 
-- **openai**，这个库使您可以轻松连接到您的模型并发送提示。
+- **openai**，这个库使连接到您的模型并发送提示词变得容易。
 
-然后还有一些操作在更高层次的库，比如：
+还有一些操作在更高层次的库，比如：
 
-- **Langchain**。Langchain非常知名，支持Python。
-- **Semantic Kernel**。Semantic Kernel是Microsoft提供的一个库，支持C#、Python和Java语言。
+- **Langchain**。Langchain 以支持 Python 而闻名。
+- **Semantic Kernel**。Semantic Kernel 是微软支持 C#、Python 和 Java 语言的库。
 
-## 使用openai构建第一个应用程序
+## 使用 openai 的第一个应用程序
 
-让我们看看如何构建我们的第一个应用程序，我们需要哪些库，需要多少等。
+让我们看看如何构建我们的第一个应用程序，所需的库，所需的资源等。
 
-### 安装openai
+### 安装 openai
 
-有很多库可以与OpenAI或Azure OpenAI进行交互。可以使用多种编程语言，比如C#、Python、JavaScript、Java等。我们选择使用`openai` Python库，因此我们将使用`pip`来安装它。
+有很多库可以与 OpenAI 或 Azure OpenAI 进行交互。可以使用多种编程语言，比如 C#、Python、JavaScript、Java 等。我们选择使用 `openai` Python 库，因此我们将使用 `pip` 来安装它。
 
 ```bash
 pip install openai
@@ -95,32 +95,32 @@ pip install openai
 
 您需要执行以下步骤：
 
-- 在Azure上创建一个帐户 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
-- 获取Azure OpenAI的访问权限。访问 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并申请访问。
+- 在 Azure 上创建一个帐户 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
+- 获得 Azure OpenAI 的访问权限。前往 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 并申请访问。
 
   > [!NOTE]
-  > 在撰写本文时，您需要申请访问Azure OpenAI。
+  > 在撰写本文时，您需要申请访问 Azure OpenAI。
 
-- 安装Python <https://www.python.org/>
-- 创建一个Azure OpenAI服务资源。请参阅此指南了解如何[创建资源](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
+- 安装 Python <https://www.python.org/>
+- 创建一个 Azure OpenAI 服务资源。请参阅此指南了解如何[创建资源](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
 
-### 查找API密钥和终端
+### 找到 API 密钥和终端
 
-此时，您需要告诉您的`openai`库使用哪个API密钥。要查找您的API密钥，请转到您的Azure OpenAI资源的“密钥和终端”部分，并复制“密钥1”的值。
+此时，您需要告诉您的 `openai` 库使用哪个 API 密钥。要找到您的 API 密钥，请前往 Azure OpenAI 资源的“密钥和终端”部分并复制“Key 1”值。
 
-![Azure门户中的密钥和终端资源面板](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Azure Portal 中的密钥和终端资源页](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 现在您已经复制了这些信息，让我们指示库使用它。
 
 > [!NOTE]
-> 将API密钥与代码分离是值得的。您可以通过使用环境变量来实现。
+> 将您的 API 密钥与代码分开是值得的。您可以通过使用环境变量来做到这一点。
 >
 > - 设置环境变量 `OPENAI_API_KEY` to your API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### 设置Azure配置
+### 设置 Azure 配置
 
-如果您使用的是Azure OpenAI，以下是设置配置的方法：
+如果您使用的是 Azure OpenAI，以下是如何设置配置：
 
 ```python
 openai.api_type = 'azure'
@@ -129,7 +129,7 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-上述代码中，我们设置了以下内容：
+上面我们设置了以下内容：
 
 - `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
 - `api_key`, this is your API key found in the Azure Portal.
@@ -140,7 +140,7 @@ openai.api_base = os.getenv("API_BASE")
 
 ## Generate text
 
-The way to generate text is to use the `Completion`类。以下是一个示例：
+The way to generate text is to use the `Completion` 类。以下是一个示例：
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-在上面的代码中，我们创建了一个完成对象，并传入我们想使用的模型和提示。然后我们打印生成的文本。
+在上述代码中，我们创建了一个完成对象并传入我们想要使用的模型和提示词。然后我们打印生成的文本。
 
 ### 聊天完成
 
-到目前为止，您已经看到我们一直在使用`Completion` to generate text. But there's another class called `ChatCompletion`，它更适合聊天机器人。以下是一个使用它的示例：
+到目前为止，您已经看到我们一直在使用 `Completion` to generate text. But there's another class called `ChatCompletion` 更适合聊天机器人。以下是使用它的示例：
 
 ```python
 import openai
@@ -164,13 +164,13 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-更多关于此功能的信息将在即将到来的章节中介绍。
+更多关于此功能的内容将在接下来的章节中介绍。
 
 ## 练习 - 您的第一个文本生成应用程序
 
-现在我们已经学习了如何设置和配置openai，是时候构建您的第一个文本生成应用程序了。要构建您的应用程序，请按照以下步骤：
+现在我们已经学习了如何设置和配置 openai，是时候构建您的第一个文本生成应用程序了。要构建您的应用程序，请按照以下步骤操作：
 
-1. 创建一个虚拟环境并安装openai：
+1. 创建一个虚拟环境并安装 openai：
 
    ```bash
    python -m venv venv
@@ -179,12 +179,12 @@ print(completion.choices[0].message.content)
    ```
 
    > [!NOTE]
-   > 如果您使用的是Windows，请输入`venv\Scripts\activate` instead of `source venv/bin/activate`.
+   > 如果您使用的是 Windows，请输入 `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1`值。
+   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` 值。
 
-1. 创建一个_app.py_文件并给它以下代码：
+1. 创建一个 _app.py_ 文件并输入以下代码：
 
    ```python
    import openai
@@ -208,9 +208,9 @@ print(completion.choices[0].message.content)
    ```
 
    > [!NOTE]
-   > 如果您使用的是Azure OpenAI，您需要将`api_type` to `azure` and set the `api_key`设置为您的Azure OpenAI密钥。
+   > 如果您使用 Azure OpenAI，您需要将 `api_type` to `azure` and set the `api_key` 设置为您的 Azure OpenAI 密钥。
 
-   您应该看到如下输出：
+   您应该会看到类似以下的输出：
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ print(completion.choices[0].message.content)
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## 不同类型的提示，用于不同的事情
+## 不同类型的提示词，用于不同的任务
 
-现在您已经看到如何使用提示生成文本。您甚至有一个程序正在运行，您可以修改和更改以生成不同类型的文本。
+现在您已经看到如何使用提示词生成文本。您甚至有一个正在运行的程序，您可以修改和更改以生成不同类型的文本。
 
-提示可以用于各种任务。例如：
+提示词可以用于各种任务。例如：
 
-- **生成一种类型的文本**。例如，您可以生成一首诗、测验问题等。
-- **查找信息**。您可以使用提示来查找信息，比如以下示例“在网络开发中CORS是什么意思？”。
-- **生成代码**。您可以使用提示生成代码，例如开发用于验证电子邮件的正则表达式，或者为什么不生成整个程序，比如一个网络应用程序？
+- **生成一种文本**。例如，您可以生成一首诗、测验的问题等。
+- **查找信息**。您可以使用提示词查找信息，比如下面的例子“在网络开发中，CORS是什么意思？”。
+- **生成代码**。您可以使用提示词生成代码，例如开发用于验证电子邮件的正则表达式，或者为什么不生成整个程序，比如一个网络应用程序？
 
-## 更实用的用例：食谱生成器
+## 更实际的用例：食谱生成器
 
-想象一下，您在家里有一些食材，您想做点东西。为此，您需要一个食谱。找到食谱的方法是使用搜索引擎，或者您可以使用LLM来完成。
+想象一下您在家里有食材并想做点什么。为此，您需要一个食谱。找到食谱的一种方法是使用搜索引擎，或者您可以使用 LLM 来做到这一点。
 
-您可以编写一个这样的提示：
+您可以这样写一个提示词：
 
-> “给我展示5个包含以下食材的菜肴食谱：鸡肉、土豆和胡萝卜。每个食谱列出所有使用的食材。”
+> "给我展示五个包含以下食材的菜肴食谱：鸡肉、土豆和胡萝卜。每个食谱列出所有使用的食材"
 
-根据上述提示，您可能会得到类似的响应：
+给出上述提示词，您可能会得到类似这样的响应：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,14 +300,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-这个结果很好，我知道该做什么。在这个时候，有用的改进可能是：
+这个结果很好，我知道该做什么菜了。此时，可能有用的改进是：
 
 - 过滤掉我不喜欢或过敏的食材。
-- 生成购物清单，以防我家里没有所有的食材。
+- 生成购物清单，以防我家里没有所有食材。
 
-对于上述情况，让我们添加一个额外的提示：
+对于上述情况，让我们添加一个额外的提示词：
 
-> “请移除含有大蒜的食谱，因为我过敏，并用其他东西代替。此外，请为这些食谱生成一个购物清单，考虑到我家里已经有鸡肉、土豆和胡萝卜。”
+> "请移除含有大蒜的食谱，因为我过敏，并用其他东西替换。同时，请生成一个购物清单，考虑到我已经有鸡肉、土豆和胡萝卜在家。"
 
 现在您有了新的结果，即：
 
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-这是您的五个食谱，没有提到大蒜，并且您还根据家里已有的食材生成了一个购物清单。
+这是您的五个食谱，没有提到大蒜，您还拥有一个购物清单，考虑到您已经在家有的食材。
 
-## 练习 - 构建食谱生成器
+## 练习 - 构建一个食谱生成器
 
-现在我们已经演示了一个场景，让我们编写代码来匹配演示的场景。为此，请按照以下步骤：
+现在我们已经演示了一个场景，让我们编写代码来匹配演示的场景。为此，请按照以下步骤操作：
 
-1. 使用现有的_app.py_文件作为起点
-1. 找到`prompt`变量并将其代码更改为以下内容：
+1. 使用现有的 _app.py_ 文件作为起点
+1. 找到 `prompt` 变量并将其代码更改为以下内容：
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   如果您现在运行代码，您应该看到类似的输出：
+   如果您现在运行代码，您应该会看到类似以下的输出：
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,9 +401,9 @@ Shopping List:
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > 注意，您的LLM是非确定性的，因此每次运行程序时可能会得到不同的结果。
+   > 注意，您的 LLM 是不确定性的，因此您每次运行程序时可能会得到不同的结果。
 
-   很好，让我们看看如何改进。为了改进，我们希望确保代码是灵活的，因此食材和食谱数量可以改进和更改。
+   很好，让我们看看如何改进。为了改进，我们想确保代码是灵活的，以便可以改进和更改食材和食谱数量。
 
 1. 让我们以以下方式更改代码：
 
@@ -416,7 +416,7 @@ Shopping List:
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   测试代码可能看起来像这样：
+   运行代码测试可能会如下所示：
 
    ```output
    No of recipes (for example, 5): 3
@@ -427,13 +427,13 @@ Shopping List:
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### 通过添加过滤器和购物清单来改进
+### 通过添加过滤器和购物清单进行改进
 
-我们现在有一个能够生成食谱的工作应用程序，它是灵活的，因为它依赖于用户输入，无论是食谱数量还是使用的食材。
+我们现在有一个能够生成食谱的工作应用程序，并且它是灵活的，因为它依赖于用户的输入，包括食谱数量和使用的食材。
 
 为了进一步改进，我们希望添加以下内容：
 
-- **过滤掉食材**。我们希望能够过滤掉我们不喜欢或过敏的食材。要实现此更改，我们可以编辑现有的提示并在末尾添加一个过滤条件，如下所示：
+- **过滤掉食材**。我们希望能够过滤掉我们不喜欢或过敏的食材。为了实现这一变化，我们可以编辑现有的提示词并在其末尾添加一个过滤条件，如下所示：
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Shopping List:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  上面，我们在提示末尾添加了`{filter}`，并且我们还从用户那里获取过滤器值。
+  上面，我们在提示词末尾添加了 `{filter}`，我们还从用户那里捕获了过滤器值。
 
-  现在运行程序的示例输入可能看起来像这样：
+  现在运行程序的示例输入可能如下所示：
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,13 +510,13 @@ Shopping List:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  如您所见，任何含有牛奶的食谱都被过滤掉了。但是，如果您对乳糖不耐受，您可能还希望过滤掉含有奶酪的食谱，因此需要明确说明。
+  如您所见，含有牛奶的食谱已被过滤掉。但是，如果您乳糖不耐，您可能还希望过滤掉含有奶酪的食谱，因此需要明确说明。
 
-- **生成购物清单**。我们希望生成购物清单，考虑到我们家里已经有的食材。
+- **生成购物清单**。我们希望生成一个购物清单，考虑到我们已经在家有的食材。
 
-  对于此功能，我们可以尝试在一个提示中解决所有问题，也可以将其分为两个提示。让我们尝试后者方法。在这里，我们建议添加一个额外的提示，但为了使其工作，我们需要将第一个提示的结果作为上下文添加到第二个提示中。
+  对于此功能，我们可以尝试在一个提示词中解决所有问题，或者我们可以将其分成两个提示词。让我们尝试后一种方法。这里我们建议添加一个额外的提示词，但为了使其工作，我们需要将前一个提示词的结果作为上下文添加到后一个提示词中。
 
-  找到代码中打印第一个提示结果的部分，并在下面添加以下代码：
+  找到代码中打印第一个提示词结果的部分，并在其下方添加以下代码：
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -531,15 +531,15 @@ Shopping List:
   print(completion.choices[0].message.content)
   ```
 
-  请注意以下几点：
+  注意以下几点：
 
-  1. 我们通过将第一个提示的结果添加到新提示中来构建一个新提示：
+  1. 我们通过将第一个提示词的结果添加到新提示词中来构建一个新提示词：
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. 我们进行新的请求，但也考虑到我们在第一个提示中请求的令牌数量，因此这次我们说`max_tokens`是1200。
+  1. 我们进行一个新的请求，但也考虑到我们在第一个提示词中要求的令牌数量，因此这次我们说 `max_tokens` 是 1200。
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
@@ -561,17 +561,17 @@ Shopping List:
 
 ## 改善您的设置
 
-到目前为止，我们的代码是有效的，但有一些调整我们应该进行以进一步改进。一些我们应该做的事情是：
+我们到目前为止有的代码是可以工作的，但我们应该进行一些调整以进一步改善。我们应该做的一些事情是：
 
-- **将秘密与代码分离**，例如API密钥。秘密不属于代码中，应该存储在安全的位置。要将秘密与代码分离，我们可以使用环境变量和库，比如`python-dotenv` to load them from a file. Here's how that would look like in code:
+- **将秘密与代码分开**，例如 API 密钥。秘密不属于代码，应该存储在安全位置。为了将秘密与代码分开，我们可以使用环境变量和库，比如 `python-dotenv` to load them from a file. Here's how that would look like in code:
 
-  1. Create a `.env`文件，内容如下：
+  1. Create a `.env` 文件，其内容如下：
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > 注意，对于Azure，您需要设置以下环境变量：
+     > 注意，对于 Azure，您需要设置以下环境变量：
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -589,23 +589,23 @@ Shopping List:
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **关于令牌长度的说明**。我们应该考虑生成我们想要的文本需要多少令牌。令牌是有成本的，因此在可能的情况下，我们应该尝试节省使用的令牌数量。例如，我们可以重新措辞提示以便使用更少的令牌吗？
+- **关于令牌长度的建议**。我们应该考虑需要多少令牌来生成我们想要的文本。令牌是有成本的，因此在可能的情况下，我们应该尝试在使用的令牌数量上节省。例如，我们能否调整提示词以使用更少的令牌？
 
-  要更改使用的令牌，您可以使用`max_tokens`参数。例如，如果您想使用100个令牌，您可以这样做：
+  要更改使用的令牌数量，您可以使用 `max_tokens` 参数。例如，如果您想使用 100 个令牌，您可以这样做：
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **尝试温度**。温度是我们到目前为止没有提到的，但对于我们的程序表现非常重要。温度值越高，输出越随机。相反，温度值越低，输出越可预测。考虑您是否希望输出有所变化。
+- **尝试温度**。温度是我们到目前为止没有提到的重要概念，但它对程序的表现非常重要。温度值越高，输出越随机。相反，温度值越低，输出越可预测。考虑您是否希望输出有变化。
 
-  要改变温度，您可以使用`temperature`参数。例如，如果您想使用0.5的温度，您可以这样做：
+  要改变温度，您可以使用 `temperature` 参数。例如，如果您想使用 0.5 的温度，您可以这样做：
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > 注意，越接近1.0，输出越多样化。
+  > 注意，越接近 1.0，输出越多样化。
 
 ## 作业
 
@@ -613,15 +613,15 @@ Shopping List:
 
 以下是一些建议：
 
-- 调整食谱生成器应用程序以进一步改进。尝试不同的温度值，和提示，看看您能做些什么。
-- 构建一个“学习伙伴”。这个应用程序应该能够回答关于某个主题的问题，例如Python，您可以有这样的提示“Python中的某个主题是什么？”，或者您可以有一个提示，显示某个主题的代码等。
-- 历史机器人，让历史变得生动，指示机器人扮演某个历史角色，并询问它关于其生活和时代的问题。
+- 调整食谱生成器应用程序以进一步改进。尝试不同的温度值和提示词，看看您能想到什么。
+- 构建一个“学习伙伴”。这个应用程序应该能够回答关于某个主题的问题，例如 Python，您可以有提示词，比如“Python 中某个主题是什么？”，或者您可以有一个提示词，显示某个主题的代码等。
+- 历史机器人，让历史变得生动，指示机器人扮演某个历史人物，并询问它关于其生活和时代的问题。
 
 ## 解决方案
 
 ### 学习伙伴
 
-以下是一个起始提示，看看您如何使用它并根据自己的喜好进行调整。
+下面是一个初始提示词，看看您如何使用它并根据您的喜好进行调整。
 
 ```text
 - "You're an expert on the Python language
@@ -636,7 +636,7 @@ Shopping List:
 
 ### 历史机器人
 
-以下是一些您可以使用的提示：
+以下是一些您可以使用的提示词：
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -647,7 +647,7 @@ Shopping List:
 
 ## 知识检查
 
-温度概念的作用是什么？
+温度的概念是什么？
 
 1. 它控制输出的随机性。
 1. 它控制响应的大小。
@@ -655,13 +655,13 @@ Shopping List:
 
 ## 🚀 挑战
 
-在完成作业时，尝试改变温度，尝试设置为0、0.5和1。记住0是变化最小的，1是变化最大的，哪个值最适合您的应用程序？
+在处理作业时，尝试改变温度，尝试设置为 0、0.5 和 1。记住 0 是最不变的，1 是最变的，哪个值最适合您的应用程序？
 
-## 很棒的工作！继续您的学习
+## 出色的工作！继续学习
 
-完成本课后，请查看我们的[生成式AI学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升您的生成式AI知识！
+完成本课后，请查看我们的[生成式 AI 学习集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)以继续提升您的生成式 AI 知识！
 
-前往第7课，我们将探讨如何[构建聊天应用程序](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+前往第 7 课，我们将研究如何[构建聊天应用程序](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
 **免责声明**：
-本文档已使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。虽然我们努力确保准确性，但请注意，自动翻译可能包含错误或不准确之处。应将原始语言的文档视为权威来源。对于关键信息，建议进行专业人工翻译。对于因使用此翻译而引起的任何误解或误读，我们不承担责任。
+本文件已使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。虽然我们努力确保准确性，但请注意自动翻译可能包含错误或不准确之处。原始文件的母语版本应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。

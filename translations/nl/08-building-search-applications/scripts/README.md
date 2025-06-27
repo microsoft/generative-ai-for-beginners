@@ -2,29 +2,29 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:52:12+00:00",
+  "translation_date": "2025-06-25T16:56:49+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "nl"
 }
 -->
-# Voorbereiding van transcriptiegegevens
+# Transcriptiegegevens voorbereiden
 
-De scripts voor het voorbereiden van transcriptiegegevens downloaden YouTube-video transcripties en maken ze gereed voor gebruik met het voorbeeld van Semantische Zoekopdracht met OpenAI Embeddings en Functies.
+De scripts voor het voorbereiden van transcriptiegegevens downloaden YouTube-video-transcripten en maken ze klaar voor gebruik met het voorbeeld van Semantisch Zoeken met OpenAI Embeddings en Functies.
 
-De scripts voor het voorbereiden van transcriptiegegevens zijn getest op de nieuwste versies van Windows 11, macOS Ventura en Ubuntu 22.04 (en hoger).
+De transcriptiegegevens voorbereidingsscripts zijn getest op de nieuwste versies van Windows 11, macOS Ventura en Ubuntu 22.04 (en hoger).
 
 ## Vereiste Azure OpenAI Service resources aanmaken
 
 > [!IMPORTANT]
-> We raden aan de Azure CLI te updaten naar de nieuwste versie om compatibiliteit met OpenAI te garanderen.
+> We raden aan om de Azure CLI bij te werken naar de nieuwste versie om compatibiliteit met OpenAI te garanderen.
 > Zie [Documentatie](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Maak een resourcegroep aan
 
 > [!NOTE]
 > Voor deze instructies gebruiken we de resourcegroep genaamd "semantic-video-search" in East US.
-> Je kunt de naam van de resourcegroep wijzigen, maar wanneer je de locatie voor de resources verandert,
-> controleer dan de [modelbeschikbaarheidstabel](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Je kunt de naam van de resourcegroep wijzigen, maar controleer bij het wijzigen van de locatie voor de resources
+> de [modelbeschikbaarheidstabel](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Verkrijg de endpoint en sleutels voor gebruik in deze applicatie
+1. Verkrijg het eindpunt en de sleutels voor gebruik in deze applicatie
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -81,7 +81,7 @@ De volgende omgevingsvariabelen zijn vereist om de YouTube transcriptiegegevens 
 ### Op Windows
 
 Aanbevolen om de variabelen toe te voegen aan je `user` environment variables.
-`Windows Start` > `Systeemomgevingsvariabelen bewerken` > `Omgevingsvariabelen` > `Gebruikersvariabelen` for [USER] > `Nieuw`.
+`Windows Start` > `Bewerk de systeemomgevingsvariabelen` > `Omgevingsvariabelen` > `Gebruikersvariabelen` for [USER] > `Nieuw`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -101,10 +101,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Installeer de vereiste Python bibliotheken
+## Installeer de vereiste Python-bibliotheken
 
 1. Installeer de [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) als deze nog niet is geïnstalleerd.
-1. Vanuit een `Terminal` venster, kloon het voorbeeld naar je gewenste repo map.
+1. Vanuit een `Terminal`-venster, kloon het voorbeeld naar je voorkeursrepo-map.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het oorspronkelijke document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.

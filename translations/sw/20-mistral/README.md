@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:01:31+00:00",
+  "translation_date": "2025-06-26T03:20:54+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "sw"
 }
@@ -11,37 +11,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Utangulizi
 
-Somohili litajumuisha:
-- Kuchunguza mifano tofauti ya Mistral
+Somo hili litafunika:
+- Kuchunguza mifano mbalimbali ya Mistral
 - Kuelewa matumizi na hali za kila mfano
-- Sampuli za kodi zinaonyesha sifa za kipekee za kila mfano.
+- Sampuli za kodi zinaonyesha vipengele vya kipekee vya kila mfano.
 
 ## Mifano ya Mistral
 
-Katika somo hili, tutachunguza mifano 3 tofauti ya Mistral: **Mistral Large**, **Mistral Small**, na **Mistral Nemo**.
+Katika somo hili, tutachunguza mifano 3 tofauti ya Mistral:
+**Mistral Large**, **Mistral Small** na **Mistral Nemo**.
 
-Kila moja ya mifano hii inapatikana bure kwenye soko la Github Model. Kodi katika daftari hili itatumia mifano hii kuendesha kodi. Hapa kuna maelezo zaidi juu ya kutumia Mifano ya Github [kujaribu na mifano ya AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Kila moja ya mifano hii inapatikana bure kwenye soko la Modeli la Github. Kodi katika daftari hili itatumia mifano hii kuendesha kodi. Hapa kuna maelezo zaidi juu ya kutumia Mifano ya Github [kuunda mfano wa AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 kwa sasa ni mfano wa bendera kutoka Mistral na imeundwa kwa matumizi ya biashara.
+Mistral Large 2 kwa sasa ni mfano mkuu kutoka Mistral na imeundwa kwa matumizi ya biashara.
 
 Mfano huu ni uboreshaji wa Mistral Large ya awali kwa kutoa:
-- Dirisha la Muktadha Kubwa - 128k vs 32k
-- Utendaji bora kwenye Majukumu ya Hisabati na Uandishi wa Kodi - 76.9% usahihi wa wastani vs 60.4%
-- Utendaji ulioboreshwa wa lugha nyingi - lugha zinajumuisha: Kiingereza, Kifaransa, Kijerumani, Kihispania, Kiitaliano, Kireno, Kiholanzi, Kirusi, Kichina, Kijapani, Kikorea, Kiarabu, na Kihindi.
+- Dirisha la muktadha kubwa zaidi - 128k dhidi ya 32k
+- Utendaji bora kwenye kazi za Hisabati na Uandishi wa Kodi - 76.9% usahihi wa wastani dhidi ya 60.4%
+- Utendaji bora wa lugha nyingi - lugha zinajumuisha: Kiingereza, Kifaransa, Kijerumani, Kihispania, Kiitaliano, Kireno, Kiholanzi, Kirusi, Kichina, Kijapani, Kikorea, Kiarabu, na Kihindi.
 
-Kwa sifa hizi, Mistral Large inang'aa katika:
-- *Uzalishaji Ulioimarishwa kwa Urejeleaji (RAG)* - kutokana na dirisha kubwa la muktadha
-- *Kuita Kazi* - mfano huu una kuita kazi asili ambayo inaruhusu kuunganishwa na zana za nje na API. Simu hizi zinaweza kufanywa kwa pamoja au moja baada ya nyingine kwa mpangilio wa mfululizo.
-- *Uzalishaji wa Kodi* - mfano huu unafanya vizuri katika uzalishaji wa Python, Java, TypeScript, na C++.
+Kwa vipengele hivi, Mistral Large ina uwezo wa juu katika:
+- *Utoaji wa Kuimarishwa kwa Urejeshaji (RAG)* - kutokana na dirisha kubwa la muktadha
+- *Kuita Kazi* - mfano huu una uwezo wa kuita kazi asili ambayo inaruhusu ushirikiano na zana na API za nje. Mito hii inaweza kufanywa kwa pamoja au moja baada ya nyingine kwa mpangilio wa mfuatano.
+- *Utoaji wa Kodi* - mfano huu ni bora katika uundaji wa Python, Java, TypeScript na C++.
 
-### Mfano wa RAG ukitumia Mistral Large 2
+### Mfano wa RAG kutumia Mistral Large 2
 
 Katika mfano huu, tunatumia Mistral Large 2 kuendesha muundo wa RAG juu ya hati ya maandishi. Swali limeandikwa kwa Kikorea na linauliza kuhusu shughuli za mwandishi kabla ya chuo.
 
-Inatumia Mfano wa Embeddings wa Cohere kuunda embeddings za hati ya maandishi pamoja na swali. Kwa sampuli hii, inatumia kifurushi cha faiss Python kama duka la vector.
+Inatumia Mfano wa Uwekaji wa Cohere kuunda uwekaji wa hati ya maandishi pamoja na swali. Kwa sampuli hii, inatumia pakiti ya faiss Python kama duka la vector.
 
-Hojaji iliyotumwa kwa mfano wa Mistral inajumuisha maswali pamoja na vipande vilivyopatikana ambavyo ni sawa na swali. Mfano kisha hutoa majibu kwa lugha ya asili.
+Kidokezo kilichotumwa kwa mfano wa Mistral kinajumuisha maswali na vipande vilivyopatikana ambavyo vinafanana na swali. Mfano kisha hutoa jibu la lugha ya asili.
 
 ```python 
 pip install faiss-cpu
@@ -138,21 +139,21 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small ni mfano mwingine katika familia ya mifano ya Mistral chini ya kategoria ya premier/biashara. Kama jina linavyoashiria, mfano huu ni Mfano Mdogo wa Lugha (SLM). Faida za kutumia Mistral Small ni kwamba:
-- Inaokoa gharama ikilinganishwa na LLM za Mistral kama Mistral Large na NeMo - upunguzaji wa bei kwa 80%
-- Upungufu wa muda wa kusubiri - majibu ya haraka ikilinganishwa na LLM za Mistral
-- Kubadilika - inaweza kutumiwa katika mazingira tofauti na vizuizi vichache juu ya rasilimali zinazohitajika.
+Mistral Small ni mfano mwingine katika familia ya mifano ya Mistral chini ya kikundi cha kipaumbele/biashara. Kama jina linavyoonyesha, mfano huu ni Mfano wa Lugha Ndogo (SLM). Faida za kutumia Mistral Small ni kwamba:
+- Hupunguza gharama ikilinganishwa na Mistral LLMs kama Mistral Large na NeMo - upunguzaji wa bei kwa 80%
+- Latency ya chini - majibu ya haraka ikilinganishwa na LLMs za Mistral
+- Kubadilika - inaweza kutekelezwa katika mazingira tofauti na vizuizi vichache juu ya rasilimali zinazohitajika.
 
 Mistral Small ni nzuri kwa:
-- Majukumu yanayohusiana na maandishi kama muhtasari, uchambuzi wa hisia na tafsiri.
-- Programu ambapo maombi ya mara kwa mara yanatolewa kutokana na ufanisi wa gharama zake
-- Majukumu ya kodi ya upungufu wa muda wa kusubiri kama ukaguzi na mapendekezo ya kodi
+- Kazi za msingi wa maandishi kama muhtasari, uchambuzi wa hisia na tafsiri.
+- Programu ambapo maombi ya mara kwa mara yanafanywa kutokana na ufanisi wa gharama yake
+- Kazi za kodi za latency ya chini kama ukaguzi na mapendekezo ya kodi
 
 ## Kulinganisha Mistral Small na Mistral Large
 
-Kuonyesha tofauti za muda wa kusubiri kati ya Mistral Small na Large, endesha seli zilizo hapa chini.
+Kuonyesha tofauti za latency kati ya Mistral Small na Large, endesha seli zilizo hapa chini.
 
-Unapaswa kuona tofauti ya muda wa majibu kati ya sekunde 3-5. Pia kumbuka urefu wa majibu na mtindo juu ya hojaji ile ile.
+Unapaswa kuona tofauti katika nyakati za majibu kati ya sekunde 3-5. Pia angalia urefu wa majibu na mtindo juu ya kidokezo sawa.
 
 ```python 
 
@@ -216,21 +217,21 @@ print(response.choices[0].message.content)
 
 Ikilinganishwa na mifano mingine miwili iliyojadiliwa katika somo hili, Mistral NeMo ni mfano pekee wa bure na Leseni ya Apache2.
 
-Inachukuliwa kama uboreshaji wa LLM ya awali ya chanzo wazi kutoka Mistral, Mistral 7B.
+Inachukuliwa kama uboreshaji wa LLM ya awali ya chanzo huria kutoka Mistral, Mistral 7B.
 
-Baadhi ya sifa nyingine za mfano wa NeMo ni:
+Baadhi ya vipengele vingine vya mfano wa NeMo ni:
 
-- *Uwekaji alama wa tokeni wenye ufanisi zaidi:* Mfano huu unatumia tokenizer ya Tekken juu ya tiktoken inayotumiwa kwa kawaida. Hii inaruhusu utendaji bora juu ya lugha zaidi na kodi.
+- *Uwekaji wa tokeni bora zaidi:* Mfano huu unatumia tokeni ya Tekken badala ya tiktoken inayotumiwa zaidi. Hii inaruhusu utendaji bora zaidi juu ya lugha nyingi na kodi.
 
-- *Kubadilisha faini:* Mfano wa msingi unapatikana kwa kubadilisha faini. Hii inaruhusu kubadilika zaidi kwa matumizi ambapo kubadilisha faini kunaweza kuhitajika.
+- *Kufinyanga:* Mfano wa msingi unapatikana kwa kufinyanga. Hii inaruhusu kubadilika zaidi kwa matumizi ambapo kufinyanga kunaweza kuhitajika.
 
-- *Kuita Kazi Asili* - Kama Mistral Large, mfano huu umefundishwa kwenye kuita kazi. Hii inafanya kuwa wa kipekee kama mmoja wa mifano ya chanzo wazi ya kwanza kufanya hivyo.
+- *Kuita Kazi Asili* - Kama Mistral Large, mfano huu umefundishwa juu ya kuita kazi. Hii inafanya kuwa ya kipekee kama mojawapo ya mifano ya kwanza ya chanzo huria kufanya hivyo.
 
-### Kulinganisha Tokenizers
+### Kulinganisha Tokeni
 
-Katika sampuli hii, tutaangalia jinsi Mistral NeMo inavyoshughulikia uwekaji alama wa tokeni ikilinganishwa na Mistral Large.
+Katika sampuli hii, tutatazama jinsi Mistral NeMo inavyoshughulikia uwekaji wa tokeni ikilinganishwa na Mistral Large.
 
-Sampuli zote zinachukua hojaji ile ile lakini unapaswa kuona kwamba NeMo inarejesha tokeni chache ikilinganishwa na Mistral Large.
+Sampuli zote mbili zinachukua kidokezo sawa lakini unapaswa kuona kwamba NeMo inarejesha tokeni chache ikilinganishwa na Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -348,9 +349,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Kujifunza hakusimami hapa, endelea na Safari
+## Kujifunza hakuishii hapa, endelea na Safari
 
-Baada ya kukamilisha somo hili, angalia [mkusanyiko wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kizazi!
+Baada ya kukamilisha somo hili, angalia mkusanyiko wetu wa [Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kizazi!
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuelewana. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya kibinadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo chenye mamlaka. Kwa habari muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuwajibiki kwa kutokuelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

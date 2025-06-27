@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "a45c318dc6ebc2604f35b8b829f93af2",
-  "translation_date": "2025-05-19T16:07:12+00:00",
+  "translation_date": "2025-06-25T13:15:57+00:00",
   "source_file": "04-prompt-engineering-fundamentals/README.md",
   "language_code": "sw"
 }
@@ -10,183 +10,189 @@ CO_OP_TRANSLATOR_METADATA:
 # Misingi ya Uhandisi wa Maagizo
 
 ## Utangulizi
-Moduli hii inashughulikia dhana muhimu na mbinu za kuunda maagizo bora katika mifano ya AI inayozalisha. Jinsi unavyoandika agizo lako kwa LLM pia ni muhimu. Agizo lililotengenezwa kwa uangalifu linaweza kufanikisha majibu bora. Lakini maneno kama _agizo_ na _uhandisi wa maagizo_ yanamaanisha nini hasa? Na ninawezaje kuboresha _ingizo la agizo_ ambalo ninatuma kwa LLM? Haya ndiyo maswali tutakayojaribu kujibu katika sura hii na inayofuata.
+Moduli hii inashughulikia dhana muhimu na mbinu za kuunda maagizo yenye ufanisi katika mifano ya AI inayozalisha. Jinsi unavyoandika agizo lako kwa LLM pia ni muhimu. Agizo lililotengenezwa kwa uangalifu linaweza kufikia ubora bora wa majibu. Lakini maneno kama _agizo_ na _uhandisi wa maagizo_ yanamaanisha nini hasa? Na ninawezaje kuboresha _ingizo la agizo_ ambalo ninatuma kwa LLM? Haya ni maswali tutakayojaribu kujibu katika sura hii na inayofuata.
 
-_Generative AI_ inaweza kuunda maudhui mapya (mfano, maandishi, picha, sauti, msimbo n.k.) kwa kukabiliana na maombi ya watumiaji. Hii inafanikishwa kwa kutumia _Mifano Mikubwa ya Lugha_ kama mfululizo wa GPT wa OpenAI ("Generative Pre-trained Transformer") ambayo imefundishwa kwa kutumia lugha ya asili na msimbo.
+AI inayozalisha inaweza kuunda maudhui mapya (mfano, maandishi, picha, sauti, n.k.) kujibu maombi ya watumiaji. Inafanikiwa kufanya hivyo kwa kutumia _Mifano Mikubwa ya Lugha_ kama mfululizo wa GPT wa OpenAI ("Generative Pre-trained Transformer") ambao umefundishwa kutumia lugha ya asili na kanuni.
 
-Watumiaji sasa wanaweza kuingiliana na mifano hii kwa kutumia mifumo ya kawaida kama mazungumzo, bila kuhitaji utaalamu wa kiufundi au mafunzo. Mifano ni _inayotegemea maagizo_ - watumiaji hutuma ingizo la maandishi (agizo) na kupata jibu la AI (kukamilika). Kisha wanaweza "kuzungumza na AI" kwa njia ya kurudia, katika mazungumzo ya mzunguko mingi, wakiboresha agizo lao hadi jibu litakapolingana na matarajio yao.
+Watumiaji sasa wanaweza kuingiliana na mifano hii kwa kutumia mitindo ya kawaida kama mazungumzo, bila hitaji la utaalamu wa kiufundi au mafunzo. Mifano hii inategemea _maagizo_ - watumiaji hutuma maandishi ya kuingiza (agizo) na kupata majibu ya AI (ukamilisho). Kisha wanaweza "kuzungumza na AI" kwa kurudia, katika mazungumzo ya zamu nyingi, wakiboresha agizo lao hadi jibu litakapolingana na matarajio yao.
 
-"Maagizo" sasa yanakuwa kiolesura cha msingi cha _programu_ kwa programu za AI zinazozalisha, zikieleza mifano inachotakiwa kufanya na kuathiri ubora wa majibu yanayorejeshwa. "Uhandisi wa Maagizo" ni uwanja unaokua kwa kasi wa masomo unaozingatia _usanifu na uboreshaji_ wa maagizo ili kutoa majibu thabiti na bora kwa kiwango.
+"Maagizo" sasa yanakuwa kiolesura kikuu cha _programu_ kwa programu za AI zinazozalisha, zikieleza mifano nini cha kufanya na kuathiri ubora wa majibu yanayorejeshwa. "Uhandisi wa Maagizo" ni uwanja wa masomo unaokua haraka ambao unalenga katika _kubuni na kuboresha_ maagizo ili kutoa majibu ya ubora na thabiti kwa kiwango kikubwa.
 
 ## Malengo ya Kujifunza
 
-Katika somo hili, tunajifunza nini Uhandisi wa Maagizo ni, kwa nini ni muhimu, na jinsi tunavyoweza kuunda maagizo bora zaidi kwa mfano na lengo la programu lililotolewa. Tutaelewa dhana kuu na mbinu bora za uhandisi wa maagizo - na kujifunza kuhusu mazingira ya "sandbox" ya Jupyter Notebooks ambapo tunaweza kuona dhana hizi zikitekelezwa kwa mifano halisi.
+Katika somo hili, tunajifunza Uhandisi wa Maagizo ni nini, kwa nini ni muhimu, na jinsi tunavyoweza kuunda maagizo yenye ufanisi zaidi kwa mfano na lengo la maombi lililopewa. Tutaelewa dhana kuu na mbinu bora za uhandisi wa maagizo - na kujifunza kuhusu mazingira ya majaribio ya "sandbox" ya Jupyter Notebooks ambapo tunaweza kuona dhana hizi zikitekelezwa kwa mifano halisi.
 
-Mwisho wa somo hili tutaweza:
+Mwisho wa somo hili tutakuwa na uwezo wa:
 
-1. Eleza nini uhandisi wa maagizo ni na kwa nini ni muhimu.
-2. Eleza vipengele vya agizo na jinsi vinavyotumika.
-3. Jifunze mbinu bora na mbinu za uhandisi wa maagizo.
-4. Tumia mbinu zilizojifunza kwa mifano halisi, kwa kutumia mwisho wa OpenAI.
+1. Kueleza uhandisi wa maagizo ni nini na kwa nini ni muhimu.
+2. Kufafanua vipengele vya agizo na jinsi vinavyotumika.
+3. Kujifunza mbinu bora na mbinu za uhandisi wa maagizo.
+4. Kutumia mbinu zilizojifunza kwa mifano halisi, kwa kutumia mwisho wa OpenAI.
 
 ## Maneno Muhimu
 
-Uhandisi wa Maagizo: Mazoezi ya kubuni na kuboresha ingizo ili kuelekeza mifano ya AI kuelekea kutoa matokeo yanayotakiwa.
-Tokenization: Mchakato wa kubadilisha maandishi kuwa vitengo vidogo, vinavyoitwa tokeni, ambavyo mfano unaweza kuelewa na kuchakata.
-LLM Zilizotunzwa kwa Maagizo: Mifano Mikubwa ya Lugha (LLMs) ambazo zimefanyiwa marekebisho maalum na maagizo ili kuboresha usahihi wa majibu yao na umuhimu.
+Uhandisi wa Maagizo: Utaratibu wa kubuni na kuboresha ingizo ili kuongoza mifano ya AI kuelekea kutoa matokeo yaliyohitajika.
+Tokenization: Utaratibu wa kubadilisha maandishi kuwa vitengo vidogo, vinavyoitwa tokeni, ambavyo mfano unaweza kuelewa na kushughulikia.
+LLMs Zilizotunzwa na Maagizo: Mifano Mikubwa ya Lugha (LLMs) ambazo zimeboreshwa kwa maagizo maalum ili kuboresha usahihi na umuhimu wa majibu yao.
 
 ## Mazingira ya Kujifunza
 
-Uhandisi wa maagizo kwa sasa ni zaidi ya sanaa kuliko sayansi. Njia bora ya kuboresha hisia zetu juu yake ni _kufanya mazoezi zaidi_ na kutumia mbinu ya jaribio-na-kosa inayochanganya utaalamu wa uwanja wa maombi na mbinu zinazopendekezwa na uboreshaji maalum wa mifano.
+Uhandisi wa maagizo kwa sasa ni zaidi ya sanaa kuliko sayansi. Njia bora ya kuboresha intuisia yetu ni _kufanya mazoezi zaidi_ na kuchukua mbinu ya majaribio na makosa ambayo inachanganya utaalamu wa uwanja wa maombi na mbinu zilizopendekezwa na ubinafsishaji maalum wa mfano.
 
-Notebook ya Jupyter inayosindikiza somo hili inatoa mazingira ya _sandbox_ ambapo unaweza kujaribu unachojifunza - unapoendelea au kama sehemu ya changamoto ya msimbo mwishoni. Ili kutekeleza mazoezi, utahitaji:
+Jupyter Notebook inayosindikiza somo hili inatoa mazingira ya _sandbox_ ambapo unaweza kujaribu unachojifunza - unapokuwa ukiendelea au kama sehemu ya changamoto ya kanuni mwishoni. Ili kutekeleza mazoezi, utahitaji:
 
-1. **Ufunguo wa Azure OpenAI API** - huduma ya mwisho kwa LLM iliyotumika.
+1. **Funguo ya API ya Azure OpenAI** - mwisho wa huduma kwa LLM iliyowekwa.
 2. **Muda wa Python** - ambapo Notebook inaweza kutekelezwa.
-3. **Mabadiliko ya Mazingira ya Ndani** - _kamilisha hatua za [SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst) sasa ili uwe tayari_.
+3. **Mabadiliko ya Mazingira ya Kienyeji** - _kamilisha hatua za [SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst) sasa ili kujiandaa_.
 
-Notebook inakuja na mazoezi ya _kuanzia_ - lakini unahimizwa kuongeza sehemu zako za _Markdown_ (maelezo) na _Msimbo_ (maombi ya maagizo) kujaribu mifano zaidi au mawazo - na kujenga hisia zako za kubuni maagizo.
+Notebook inakuja na mazoezi ya _kuanzia_ - lakini unahimizwa kuongeza sehemu zako za _Markdown_ (maelezo) na _Kanuni_ (maombi ya agizo) ili kujaribu mifano zaidi au mawazo - na kujenga intuisia yako kwa kubuni maagizo.
 
-## Mwongozo Ulioonyeshwa
+## Mwongozo wa Picha
 
-Unataka kupata picha kubwa ya kile somo hili linashughulikia kabla ya kuzama ndani? Angalia mwongozo huu ulioonyeshwa, ambao unakupa hisia ya mada kuu zinazoshughulikiwa na mambo muhimu ya kuzingatia kwa kila moja. Ramani ya somo inakupeleka kutoka kuelewa dhana kuu na changamoto hadi kuzishughulikia na mbinu za uhandisi wa maagizo zinazofaa na mbinu bora. Kumbuka kwamba sehemu ya "Mbinu za Juu" katika mwongozo huu inahusu maudhui yaliyoshughulikiwa katika sura _inayofuata_ ya mtaala huu.
+Unataka kupata picha kubwa ya kile somo hili kinashughulikia kabla ya kuingia ndani? Angalia mwongozo huu wa picha, ambao unakupa hisia ya mada kuu zinazoshughulikiwa na mambo muhimu ya kufikiria katika kila moja. Ramani ya somo inakupeleka kutoka kuelewa dhana kuu na changamoto hadi kuzishughulikia kwa mbinu na mbinu bora za uhandisi wa maagizo. Kumbuka kuwa sehemu ya "Mbinu za Juu" katika mwongozo huu inahusu maudhui yanayoshughulikiwa katika sura _inayofuata_ ya mtaala huu.
 
-## Uanzishaji Wetu
+## Kuanza kwa Kwanza
 
-Sasa, hebu tuzungumze juu ya jinsi _mada hii_ inavyohusiana na dhamira yetu ya kuanzisha [kuleta ubunifu wa AI katika elimu](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Tunataka kujenga programu za kujifunza zinazotumia AI za _ujifunzaji wa kibinafsi_ - hivyo hebu tufikirie jinsi watumiaji tofauti wa programu yetu wanaweza "kubuni" maagizo:
+Sasa, hebu tuzungumze kuhusu jinsi _mada hii_ inavyohusiana na dhamira yetu ya kuanzisha [kuleta uvumbuzi wa AI katika elimu](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Tunataka kujenga programu zinazotumia AI za _kujifunza kibinafsi_ - kwa hivyo wacha tufikirie jinsi watumiaji tofauti wa programu yetu wanaweza "kubuni" maagizo:
 
-- **Watawala** wanaweza kuuliza AI _kuchambua data ya mtaala ili kubaini mapungufu katika usambazaji_. AI inaweza kufupisha matokeo au kuyaonyesha kwa msimbo.
-- **Waelimishaji** wanaweza kuuliza AI _kuunda mpango wa somo kwa hadhira na mada inayolengwa_. AI inaweza kujenga mpango wa kibinafsi katika muundo uliotajwa.
-- **Wanafunzi** wanaweza kuuliza AI _kuwafundisha katika somo gumu_. AI sasa inaweza kuwaongoza wanafunzi na masomo, vidokezo na mifano iliyobinafsishwa kwa kiwango chao.
+- **Watawala** wanaweza kuuliza AI _kuchambua data ya mtaala ili kubaini mapungufu katika ufunikaji_. AI inaweza kufupisha matokeo au kuyaonyesha kwa kanuni.
+- **Walimu** wanaweza kuuliza AI _kuunda mpango wa somo kwa hadhira na mada lengwa_. AI inaweza kujenga mpango wa kibinafsi kwa muundo maalum.
+- **Wanafunzi** wanaweza kuuliza AI _kuwafundisha katika somo gumu_. AI sasa inaweza kuwaongoza wanafunzi na masomo, vidokezo na mifano inayolingana na kiwango chao.
 
-Hiyo ni sehemu tu ya kile kinachowezekana. Angalia [Maagizo kwa Elimu](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - maktaba ya maagizo ya chanzo wazi iliyokusanywa na wataalamu wa elimu - ili kupata hisia pana ya uwezekano! _Jaribu kuendesha baadhi ya maagizo hayo kwenye sandbox au kwa kutumia OpenAI Playground ili kuona kinachotokea!_
+Huo ni mwanzo tu wa kile kinachowezekana. Angalia [Maagizo kwa Elimu](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - maktaba ya maagizo ya chanzo wazi yaliyokusanywa na wataalamu wa elimu - kupata hisia pana ya uwezekano! _Jaribu kuendesha baadhi ya maagizo hayo kwenye sandbox au kutumia OpenAI Playground ili kuona kinachotokea!_
 
 ## Uhandisi wa Maagizo ni Nini?
 
-Tulianza somo hili kwa kufafanua **Uhandisi wa Maagizo** kama mchakato wa _kubuni na kuboresha_ ingizo la maandishi (maagizo) ili kutoa majibu thabiti na bora (kukamilika) kwa lengo la programu lililotolewa na mfano. Tunaweza kufikiria hili kama mchakato wa hatua mbili:
+Tulianza somo hili kwa kufafanua **Uhandisi wa Maagizo** kama mchakato wa _kubuni na kuboresha_ maandishi ya kuingiza (maagizo) ili kutoa majibu ya ubora na thabiti (ukamilisho) kwa lengo la maombi lililopewa na mfano. Tunaweza kufikiria hii kama mchakato wa hatua mbili:
 
-- _kubuni_ agizo la awali kwa mfano na lengo lililotolewa
+- _kubuni_ agizo la awali kwa mfano na lengo lililopewa
 - _kuboresha_ agizo kwa kurudia ili kuboresha ubora wa jibu
 
-Huu ni mchakato wa lazima wa jaribio-na-kosa unaohitaji hisia na jitihada za mtumiaji ili kupata matokeo bora. Kwa nini ni muhimu? Ili kujibu swali hilo, kwanza tunahitaji kuelewa dhana tatu:
+Hii ni lazima iwe mchakato wa majaribio na makosa unaohitaji intuisia ya mtumiaji na juhudi ili kupata matokeo bora. Kwa nini ni muhimu? Ili kujibu swali hilo, kwanza tunahitaji kuelewa dhana tatu:
 
 - _Tokenization_ = jinsi mfano "unaona" agizo
-- _Base LLMs_ = jinsi mfano wa msingi "unachakata" agizo
-- _Instruction-Tuned LLMs_ = jinsi mfano unaweza sasa kuona "kazi"
+- _Base LLMs_ = jinsi mfano wa msingi "unavyoshughulikia" agizo
+- _LLMs Zilizotunzwa na Maagizo_ = jinsi mfano unavyoweza kuona "kazi" sasa
 
 ### Tokenization
 
-LLM inaona maagizo kama _mfuatano wa tokeni_ ambapo mifano tofauti (au matoleo ya mfano) inaweza kutengeneza tokeni kwa agizo moja kwa njia tofauti. Kwa kuwa LLMs zimefundishwa kwa tokeni (na si kwa maandishi mabichi), jinsi maagizo yanavyotengeneza tokeni ina athari ya moja kwa moja kwenye ubora wa jibu linalozalishwa.
+LLM inaona maagizo kama _mlolongo wa tokeni_ ambapo mifano tofauti (au matoleo ya mfano) inaweza kugawa agizo sawa kwa njia tofauti. Kwa kuwa LLMs zimefundishwa kwenye tokeni (na sio kwenye maandishi asili), jinsi maagizo yanavyogawanywa kwa tokeni ina athari ya moja kwa moja kwenye ubora wa jibu lililotolewa.
 
-Ili kupata hisia ya jinsi tokenization inavyofanya kazi, jaribu zana kama [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) inayoonyeshwa hapa chini. Nakili agizo lako - na uone jinsi hilo linavyobadilishwa kuwa tokeni, ukizingatia jinsi herufi za nafasi na alama za uakifishaji zinavyoshughulikiwa. Kumbuka kuwa mfano huu unaonyesha LLM ya zamani (GPT-3) - hivyo kujaribu hii na mfano mpya inaweza kutoa matokeo tofauti.
+Ili kupata intuisia ya jinsi tokenization inavyofanya kazi, jaribu zana kama [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) iliyoonyeshwa hapa chini. Nakili agizo lako - na uone jinsi linavyobadilishwa kuwa tokeni, ukizingatia jinsi herufi za nafasi na alama za uakifishaji zinavyoshughulikiwa. Kumbuka kuwa mfano huu unaonyesha LLM ya zamani (GPT-3) - kwa hivyo kujaribu hii na mfano mpya zaidi kunaweza kutoa matokeo tofauti.
 
 ### Dhana: Mifano ya Msingi
 
-Mara tu agizo linapokuwa na tokeni, kazi ya msingi ya ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (au Mfano wa Msingi) ni kutabiri tokeni katika mfuatano huo. Kwa kuwa LLMs zimefundishwa kwa seti kubwa za data za maandishi, zina uelewa mzuri wa uhusiano wa takwimu kati ya tokeni na zinaweza kufanya utabiri huo kwa ujasiri fulani. Kumbuka kwamba hazielewi _maana_ ya maneno katika agizo au tokeni; zinaona tu muundo ambao zinaweza "kukamilisha" na utabiri wao unaofuata. Zinaweza kuendelea kutabiri mfuatano hadi kusimamishwa na uingiliaji wa mtumiaji au hali fulani iliyowekwa awali.
+Mara agizo linapogawanywa kwa tokeni, kazi kuu ya ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (au mfano wa Msingi) ni kutabiri tokeni katika mlolongo huo. Kwa kuwa LLMs zimefundishwa kwenye seti kubwa za maandishi, zina hisia nzuri ya uhusiano wa kistatistiki kati ya tokeni na zinaweza kufanya utabiri huo kwa ujasiri fulani. Kumbuka kuwa hazielewi _maana_ ya maneno katika agizo au tokeni; zinaona tu muundo ambao zinaweza "kukamilisha" na utabiri wao unaofuata. Zinaweza kuendelea kutabiri mlolongo hadi zimalizike na kuingilia kati kwa mtumiaji au hali fulani iliyowekwa awali.
 
-Unataka kuona jinsi kukamilika kwa agizo kunavyofanya kazi? Ingiza agizo hapo juu kwenye [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) ya Azure OpenAI Studio na mipangilio ya kawaida. Mfumo umewekwa kutibu maagizo kama maombi ya habari - hivyo unapaswa kuona kukamilika kunakotosheleza muktadha huu.
+Unataka kuona jinsi ukamilishaji wa msingi wa agizo unavyofanya kazi? Ingiza agizo hapo juu kwenye [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) ya Azure OpenAI Studio na mipangilio chaguo-msingi. Mfumo umewekwa ili kutibu maagizo kama maombi ya habari - kwa hivyo unapaswa kuona ukamilisho unaoridhisha muktadha huu.
 
-Lakini vipi ikiwa mtumiaji alitaka kuona kitu maalum ambacho kinakidhi baadhi ya vigezo au lengo la kazi? Hapa ndipo LLMs zilizotunzwa kwa maagizo zinapoingia kwenye picha.
+Lakini je, mtumiaji alitaka kuona kitu maalum kinachokidhi vigezo au lengo la kazi? Hapa ndipo _LLMs zilizotunzwa na maagizo_ zinapokuja katika picha.
 
-### Dhana: LLMs Zilizotunzwa kwa Maagizo
+### Dhana: LLMs Zilizotunzwa na Maagizo
 
-LLM [zilizotunzwa kwa maagizo](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) zinaanza na mfano wa msingi na kuufanyia marekebisho kwa mifano au jozi za ingizo/utoaji (mfano, "ujumbe" wa mzunguko mwingi) ambazo zinaweza kuwa na maagizo wazi - na jibu kutoka kwa AI linajaribu kufuata agizo hilo.
+[LLM iliyotunzwa na Maagizo](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) huanza na mfano wa msingi na kuuboreshwa kwa mifano au jozi za ingizo/mahitaji (mfano, "ujumbe" wa zamu nyingi) ambazo zinaweza kuwa na maagizo wazi - na jibu kutoka kwa AI linajaribu kufuata maagizo hayo.
 
-Hii inatumia mbinu kama Kujifunza Kuimarisha na Maoni ya Binadamu (RLHF) ambazo zinaweza kufundisha mfano kufuata maagizo na kujifunza kutoka kwa maoni ili kutoa majibu ambayo yanafaa zaidi kwa matumizi ya vitendo na muhimu zaidi kwa malengo ya mtumiaji.
+Hii inatumia mbinu kama Kujifunza kwa Kuimarisha na Maoni ya Binadamu (RLHF) ambazo zinaweza kufundisha mfano _kufuata maagizo_ na _kujifunza kutokana na maoni_ ili kwamba inatoa majibu yanayofaa zaidi kwa maombi ya vitendo na yanayohusiana zaidi na malengo ya mtumiaji.
 
-Hebu tujaribu - rejelea agizo hapo juu, lakini sasa badilisha _ujumbe wa mfumo_ kutoa maagizo yafuatayo kama muktadha:
+Hebu tujaribu - rejea agizo hapo juu, lakini sasa badilisha _ujumbe wa mfumo_ ili kutoa maagizo yafuatayo kama muktadha:
 
 > _Fupisha maudhui unayopewa kwa mwanafunzi wa darasa la pili. Weka matokeo katika aya moja na pointi 3-5 za risasi._
 
-Ona jinsi matokeo sasa yanavyotunzwa ili kuonyesha lengo na muundo unaotakiwa? Mwalimu sasa anaweza kutumia jibu hili moja kwa moja katika slaidi zao kwa darasa hilo.
+Ona jinsi matokeo sasa yanavyotunzwa ili kuonyesha lengo na muundo uliotakiwa? Mwalimu sasa anaweza kutumia moja kwa moja jibu hili kwenye slaidi zao kwa darasa hilo.
 
 ## Kwa nini tunahitaji Uhandisi wa Maagizo?
 
-Sasa kwa kuwa tunajua jinsi maagizo yanavyosindikwa na LLMs, hebu tuzungumze kuhusu _kwa nini_ tunahitaji uhandisi wa maagizo. Jibu liko katika ukweli kwamba LLMs za sasa zinakabiliwa na changamoto kadhaa ambazo zinafanya _kukamilika kwa kuaminika na thabiti_ kuwa ngumu zaidi kufanikisha bila kuweka juhudi katika ujenzi na uboreshaji wa maagizo. Kwa mfano:
+Sasa kwa kuwa tunajua jinsi maagizo yanavyoshughulikiwa na LLMs, hebu tuzungumze kuhusu _kwa nini_ tunahitaji uhandisi wa maagizo. Jibu linapatikana katika ukweli kwamba LLMs za sasa zinaweka changamoto kadhaa ambazo zinafanya _ukamilishaji wa kuaminika na thabiti_ kuwa changamoto zaidi kufikia bila kuweka juhudi katika ujenzi na uboreshaji wa maagizo. Kwa mfano:
 
-1. **Majibu ya mfano ni ya nasibu.** _Agizo lilelile_ linaweza kutoa majibu tofauti na mifano tofauti au matoleo ya mfano. Na linaweza hata kutoa matokeo tofauti na _mfano uleule_ kwa nyakati tofauti. _Mbinu za uhandisi wa maagizo zinaweza kutusaidia kupunguza tofauti hizi kwa kutoa ulinzi bora_.
+1. **Majibu ya mfano ni ya kubahatisha.** _Agizo sawa_ litaweza kutoa majibu tofauti na mifano tofauti au matoleo ya mfano. Na linaweza hata kutoa matokeo tofauti na _mfano huo huo_ kwa nyakati tofauti. _Mbinu za uhandisi wa maagizo zinaweza kutusaidia kupunguza tofauti hizi kwa kutoa miongozo bora_.
 
-1. **Mifano inaweza kutunga majibu.** Mifano imefundishwa na _seti kubwa lakini finyu_ za data, ikimaanisha hazina ujuzi kuhusu dhana nje ya upeo wa mafunzo hayo. Kama matokeo, zinaweza kutoa kukamilika ambayo si sahihi, ya kufikirika, au inakinzana moja kwa moja na ukweli unaojulikana. _Mbinu za uhandisi wa maagizo zinasaidia watumiaji kutambua na kupunguza utungaji huo mf. kwa kuomba AI kwa marejeleo au mantiki_.
+2. **Mifano inaweza kutengeneza majibu.** Mifano imefundishwa awali na _seti kubwa lakini ndogo_ za data, ikimaanisha hawana ujuzi kuhusu dhana nje ya upeo wa mafunzo hayo. Kama matokeo, zinaweza kutoa ukamilishaji ambao hauko sahihi, wa kufikirika, au unaopingana moja kwa moja na ukweli unaojulikana. _Mbinu za uhandisi wa maagizo husaidia watumiaji kutambua na kupunguza utengenezaji huo kwa mfano, kwa kuomba AI kutoa marejeleo au sababu_.
 
-1. **Uwezo wa mifano utatofautiana.** Mifano mpya au vizazi vya mfano vitakuwa na uwezo zaidi lakini pia huleta kasoro za kipekee na biashara za gharama na ugumu. _Uhandisi wa maagizo unaweza kutusaidia kukuza mbinu bora na mikondo ya kazi ambayo inajumuisha tofauti na kuzoea mahitaji maalum ya mfano kwa njia zinazoweza kupimika, na bila mshono_.
+3. **Uwezo wa mifano utatofautiana.** Mifano mpya au vizazi vya mfano vitakuwa na uwezo zaidi lakini pia huleta quirks na mapungufu ya kipekee katika gharama na ugumu. _Uhandisi wa maagizo unaweza kutusaidia kukuza mbinu bora na mtiririko wa kazi ambao huficha tofauti na kuzoea mahitaji maalum ya mfano kwa njia zinazoweza kupanuliwa na zisizo na mshono_.
 
-Hebu tuone hili likifanya kazi katika OpenAI au Azure OpenAI Playground:
+Hebu tuone hili likifanyika katika OpenAI au Azure OpenAI Playground:
 
-- Tumia agizo lilelile na matoleo tofauti ya LLM (mfano, OpenAI, Azure OpenAI, Hugging Face) - uliona tofauti?
-- Tumia agizo lilelile mara kwa mara na _toleo lilelile_ la LLM (mfano, uwanja wa kucheza wa Azure OpenAI) - jinsi tofauti hizi zilivyotofautiana?
+- Tumia agizo moja na utoaji tofauti wa LLM (mfano, OpenAI, Azure OpenAI, Hugging Face) - je, uliona tofauti?
+- Tumia agizo moja mara kwa mara na utoaji _huo huo_ wa LLM (mfano, uwanja wa kucheza wa Azure OpenAI) - tofauti hizi zilikuwa tofauti vipi?
 
-### Mfano wa Utungaji
+### Mfano wa Utengenezaji
 
-Katika kozi hii, tunatumia neno **"utungaji"** kurejelea hali ambapo LLMs wakati mwingine huzalisha habari zisizo sahihi kutokana na mapungufu katika mafunzo yao au vizuizi vingine. Unaweza pia kuwa umesikia hii ikirejelewa kama _"maono"_ katika makala maarufu au karatasi za utafiti. Hata hivyo, tunapendekeza sana kutumia _"utungaji"_ kama neno ili tusije tukahusisha tabia ya kibinadamu na matokeo yanayosababishwa na mashine. Hii pia inaimarisha [miongozo ya AI inayowajibika](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) kutoka kwa mtazamo wa istilahi, kuondoa maneno ambayo yanaweza pia kuchukuliwa kuwa ya kukera au yasiyojumuisha katika baadhi ya muktadha.
+Katika kozi hii, tunatumia neno **"utengenezaji"** kurejelea hali ambapo LLMs wakati mwingine huzalisha taarifa zisizo sahihi kutokana na mapungufu katika mafunzo yao au vikwazo vingine. Unaweza pia kuwa umesikia hii ikirejelewa kama _"maono ya uongo"_ katika makala maarufu au karatasi za utafiti. Hata hivyo, tunapendekeza sana kutumia _"utengenezaji"_ kama neno ili tusijaribu kupeana tabia ya kibinadamu kwa matokeo yanayotokana na mashine. Hii pia inaimarisha miongozo ya [AI inayowajibika](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) kutoka kwa mtazamo wa istilahi, kuondoa maneno ambayo yanaweza pia kuzingatiwa kuwa ya kukera au yasiyo ya kujumuisha katika baadhi ya muktadha.
 
-Unataka kupata hisia ya jinsi utungaji unavyofanya kazi? Fikiria agizo linaloelekeza AI kuunda maudhui kwa mada isiyokuwepo (ili kuhakikisha haipatikani katika seti ya data ya mafunzo). Kwa mfano - nilijaribu agizo hili:
+Unataka kupata hisia ya jinsi utengenezaji unavyofanya kazi? Fikiria agizo linaloelekeza AI kuunda maudhui kwa mada isiyokuwepo (ili kuhakikisha haipatikani katika seti ya mafunzo). Kwa mfano - nilijaribu agizo hili:
 
-> **Agizo:** tengeneza mpango wa somo kuhusu Vita vya Mirihi vya 2076.
+> **Agizo:** tengeneza mpango wa somo juu ya Vita vya Mars vya 2076.
 
-Utafutaji wa wavuti ulionyesha kuwa kulikuwa na akaunti za kubuni (mfano, mfululizo wa televisheni au vitabu) juu ya vita vya Mirihi - lakini hakuna katika 2076. Akili ya kawaida pia inatuambia kwamba 2076 ni _katika siku zijazo_ na hivyo, haiwezi kuhusishwa na tukio halisi.
+Utafutaji wa mtandao ulionyesha kuwa kulikuwa na akaunti za kubuni (mfano, mfululizo wa televisheni au vitabu) juu ya vita vya Mars - lakini hakuna katika 2076. Hisia ya kawaida pia inatuambia kuwa 2076 ni _katika siku zijazo_ na hivyo, haiwezi kuhusishwa na tukio halisi.
 
-Kwa hivyo ni nini kinachotokea tunapotekeleza agizo hili na watoa huduma tofauti wa LLM?
+Kwa hivyo ni nini kinachotokea tunapokimbia agizo hili na watoa huduma tofauti wa LLM?
 
-Kama ilivyotarajiwa, kila mfano (au toleo la mfano) hutoa majibu tofauti kidogo kutokana na tabia ya nasibu na tofauti za uwezo wa mfano. Kwa mfano, mfano mmoja unalenga hadhira ya darasa la 8 huku mwingine ukichukulia mwanafunzi wa shule ya upili. Lakini mifano yote mitatu ilizalisha majibu ambayo yanaweza kumshawishi mtumiaji asiye na habari kwamba tukio hilo lilikuwa la kweli.
+> **Jibu 1**: OpenAI Playground (GPT-35)
 
-Mbinu za uhandisi wa maagizo kama _metaprompting_ na _usanidi wa joto_ zinaweza kupunguza utungaji wa mfano kwa kiasi fulani. Miundo mpya ya uhandisi wa maagizo pia inajumuisha zana na mbinu mpya kwa njia isiyo na mshono katika mtiririko wa maagizo, ili kupunguza au kupunguza baadhi ya athari hizi.
+> **Jibu 2**: Azure OpenAI Playground (GPT-35)
 
-## Uchunguzi wa Kesi: GitHub Copilot
+> **Jibu 3**: : Hugging Face Chat Playground (LLama-2)
 
-Hebu tuhitimishe sehemu hii kwa kupata hisia ya jinsi uhandisi wa maagizo unavyotumika katika suluhisho za ulimwengu wa kweli kwa kuangalia Uchunguzi mmoja wa Kesi: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Kama ilivyotarajiwa, kila mfano (au toleo la mfano) hutoa majibu tofauti kidogo kutokana na tabia ya kubahatisha na tofauti za uwezo wa mfano. Kwa mfano, mfano mmoja unalenga hadhira ya darasa la 8 wakati mwingine unadhani mwanafunzi wa shule ya sekondari. Lakini mifano yote mitatu ilizalisha majibu ambayo yanaweza kumshawishi mtumiaji asiye na taarifa kwamba tukio hilo lilikuwa halisi.
 
-GitHub Copilot ni "Mwandishi wa Programu wa AI" wako - inabadilisha maagizo ya maandishi kuwa kukamilika kwa msimbo na imeunganishwa katika mazingira yako ya maendeleo (mfano, Visual Studio Code) kwa uzoefu wa mtumiaji bila mshono. Kama ilivyorekodiwa katika mfululizo wa blogi hapa chini, toleo la awali lilitegemea mfano
-Hatimaye, thamani halisi ya templeti ni uwezo wa kuunda na kuchapisha _maktaba za maelekezo_ kwa ajili ya matumizi ya wima - ambapo templeti ya maelekezo sasa imeboreshwa ili kuakisi muktadha maalum wa matumizi au mifano inayofanya majibu kuwa muhimu zaidi na sahihi kwa hadhira inayolengwa. Repositori ya [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) ni mfano mzuri wa mbinu hii, ikikusanya maktaba ya maelekezo kwa uwanja wa elimu kwa mkazo kwenye malengo muhimu kama upangaji wa masomo, muundo wa mtaala, ushauri wa wanafunzi n.k.
+Mbinu za uhandisi wa maagizo kama _metaprompting_ na _usimamizi wa joto_ zinaweza kupunguza utengenezaji wa mfano kwa kiwango fulani. _Miundo_ mipya ya uhandisi wa maagizo pia inajumuisha zana na mbinu mpya kwa urahisi katika mtiririko wa maagizo, ili kupunguza au kupunguza baadhi ya athari hizi.
 
-## Maudhui ya Msaada
+## Utafiti wa Kesi: GitHub Copilot
 
-Ikiwa tunafikiria kuhusu uundaji wa maelekezo kama kuwa na maagizo (kazi) na lengo (maudhui ya msingi), basi _maudhui ya sekondari_ ni kama muktadha wa ziada tunaotoa ili **kuathiri matokeo kwa namna fulani**. Inaweza kuwa vigezo vya kurekebisha, maagizo ya muundo, taksonomia za mada n.k. zinazoweza kusaidia modeli _kuboresha_ majibu yake ili yafae malengo au matarajio ya mtumiaji.
+Hebu tumalize sehemu hii kwa kupata hisia ya jinsi uhandisi wa maagizo unavyotumika katika suluhisho za ulimwengu halisi kwa kuangalia Utafiti mmoja wa Kesi: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-Kwa mfano: Ukiwa na katalogi ya kozi yenye metadata nyingi (jina, maelezo, kiwango, lebo za metadata, mwalimu n.k.) kwenye kozi zote zinazopatikana katika mtaala:
+Git
+Mwishowe, thamani halisi ya templeti inapatikana katika uwezo wa kuunda na kuchapisha _maktaba za msukumo_ kwa maeneo ya matumizi wima - ambapo templeti ya msukumo sasa inaboreshwa kuonyesha muktadha maalum wa programu au mifano inayofanya majibu kuwa muhimu zaidi na sahihi kwa hadhira inayolengwa. Rejesta ya [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) ni mfano mzuri wa mbinu hii, ikikusanya maktaba ya misukumo kwa ajili ya elimu yenye mkazo kwenye malengo muhimu kama kupanga masomo, kubuni mtaala, kufundisha wanafunzi n.k.
 
-- tunaweza kufafanua agizo la "kujumlisha katalogi ya kozi kwa Msimu wa Kuanguka 2023"
+## Maudhui ya Kusaidia
+
+Tukifikiria kuhusu ujenzi wa msukumo kama kuwa na maagizo (kazi) na lengo (maudhui ya msingi), basi _maudhui ya sekondari_ ni kama muktadha wa ziada tunaotoa ili **kuathiri matokeo kwa namna fulani**. Inaweza kuwa kurekebisha vigezo, maagizo ya muundo, taksonomia za mada n.k. ambazo zinaweza kusaidia mfano _kubinafsisha_ majibu yake kufaa malengo au matarajio ya mtumiaji yaliyokusudiwa.
+
+Kwa mfano: Ukiwa na katalogi ya kozi yenye metadata nyingi (jina, maelezo, kiwango, vitambulisho vya metadata, mwalimu n.k.) kwenye kozi zote zinazopatikana katika mtaala:
+
+- tunaweza kufafanua maagizo ya "kufupisha katalogi ya kozi kwa Msimu wa Kuanguka 2023"
 - tunaweza kutumia maudhui ya msingi kutoa mifano michache ya matokeo yanayotakiwa
-- tunaweza kutumia maudhui ya sekondari kutambua lebo 5 za juu za maslahi.
+- tunaweza kutumia maudhui ya sekondari kutambua vitambulisho 5 vya juu vya maslahi.
 
-Sasa, modeli inaweza kutoa muhtasari kwa muundo unaoonyeshwa na mifano michache - lakini ikiwa matokeo yana lebo nyingi, inaweza kupa kipaumbele lebo 5 zilizotambuliwa katika maudhui ya sekondari.
+Sasa, mfano unaweza kutoa muhtasari kwa muundo ulioonyeshwa na mifano michache - lakini ikiwa matokeo yana vitambulisho vingi, inaweza kipaumbele vitambulisho 5 vilivyotambuliwa kwenye maudhui ya sekondari.
 
 ---
 
 <!--
-TEMPLATE YA SOMO:
-Kipengele hiki kinapaswa kufunika dhana ya msingi #1.
-Imarisha dhana kwa mifano na marejeleo.
+MFANO WA SOMO:
+Kitengo hiki kinapaswa kufunika dhana ya msingi #1.
+Imarisha dhana hiyo kwa mifano na marejeleo.
 
 DHANA #3:
-Mbinu za Uhandisi wa Maelekezo.
-Ni mbinu zipi za msingi za uhandisi wa maelekezo?
-Onyesha kwa mazoezi.
+Mbinu za Uhandisi wa Msukumo.
+Je, ni mbinu gani za msingi za uhandisi wa msukumo?
+Onyesha kwa mazoezi fulani.
 -->
 
-## Mazoezi Bora ya Utoaji Maelekezo
+## Mazoea Bora ya Msukumo
 
-Sasa tunajua jinsi maelekezo yanavyoweza _kuundwa_, tunaweza kuanza kufikiria jinsi ya _kuyaunda_ ili kuakisi mazoea bora. Tunaweza kufikiria kuhusu hili kwa sehemu mbili - kuwa na _mtazamo_ sahihi na kutumia _mbinu_ sahihi.
+Sasa kwa kuwa tunajua jinsi misukumo inaweza kujengwa, tunaweza kuanza kufikiria jinsi ya kuibuni ili kuonyesha mazoea bora. Tunaweza kufikiria hili katika sehemu mbili - kuwa na _mtazamo_ sahihi na kutumia _mbinu_ sahihi.
 
-### Mtazamo wa Uhandisi wa Maelekezo
+### Mtazamo wa Uhandisi wa Msukumo
 
-Uhandisi wa Maelekezo ni mchakato wa majaribio na makosa hivyo zingatia mambo matatu ya jumla:
+Uhandisi wa Msukumo ni mchakato wa majaribio na makosa kwa hivyo kumbuka mambo matatu makubwa ya kuongoza:
 
-1. **Uelewa wa Uwanja Unaleta Mabadiliko.** Usahihi wa majibu na umuhimu ni kazi ya _uwanja_ ambao matumizi au mtumiaji anafanya kazi. Tumia intuisheni yako na utaalamu wa uwanja ili **kurekebisha mbinu** zaidi. Kwa mfano, fafanua _tabia maalum za uwanja_ katika maelekezo ya mfumo wako, au tumia _templeti maalum za uwanja_ katika maelekezo ya mtumiaji wako. Toa maudhui ya sekondari yanayoakisi muktadha maalum wa uwanja, au tumia _vidokezo na mifano maalum ya uwanja_ kuongoza modeli kuelekea mifumo ya matumizi inayofahamika.
+1. **Uelewa wa Maeneo ni Muhimu.** Usahihi na umuhimu wa majibu ni kazi ya _eneo_ ambalo programu au mtumiaji anafanya kazi. Tumia intuisheni yako na utaalamu wa eneo lako ili **kubinafsisha mbinu** zaidi. Kwa mfano, fafanua _tabia maalum za eneo_ katika misukumo ya mfumo wako, au tumia _templeti maalum za eneo_ katika misukumo ya mtumiaji wako. Toa maudhui ya sekondari yanayoonyesha muktadha maalum wa eneo, au tumia _vidokezo na mifano maalum ya eneo_ kuongoza mfano kuelekea mifumo ya matumizi inayofahamika.
 
-2. **Uelewa wa Modeli Unaleta Mabadiliko.** Tunajua modeli ni za kiukusanyaji kwa asili. Lakini utekelezaji wa modeli unaweza pia kutofautiana kwa suala la seti ya data ya mafunzo wanayotumia (maarifa ya awali), uwezo wanaotoa (mfano, kupitia API au SDK) na aina ya maudhui ambayo yameboreshwa kwa ajili yake (mfano, kodi vs. picha vs. maandishi). Elewa nguvu na mapungufu ya modeli unayotumia, na tumia maarifa hayo _kupa kipaumbele kazi_ au kujenga _templeti maalum_ ambazo zimeboreshwa kwa uwezo wa modeli.
+2. **Uelewa wa Mfano ni Muhimu.** Tunajua mifano ni ya kubahatisha kiasili. Lakini utekelezaji wa mifano unaweza pia kutofautiana kwa mujibu wa seti ya mafunzo wanayotumia (maarifa yaliyofunzwa awali), uwezo wanaotoa (kwa mfano, kupitia API au SDK) na aina ya maudhui wanayoboreshwa kwa ajili yake (kwa mfano, msimbo dhidi ya picha dhidi ya maandishi). Elewa nguvu na mapungufu ya mfano unaotumia, na tumia maarifa hayo _kipaumbele kazi_ au kujenga _templeti zilizobinafsishwa_ ambazo zimeboreshwa kwa ajili ya uwezo wa mfano.
 
-3. **Ukariri na Uthibitishaji Unaleta Mabadiliko.** Modeli zinabadilika haraka, na hivyo ndivyo mbinu za uhandisi wa maelekezo. Kama mtaalamu wa uwanja, unaweza kuwa na muktadha mwingine au vigezo vya _matumizi yako_ maalum, ambavyo huenda havitumiki kwa jamii pana. Tumia zana na mbinu za uhandisi wa maelekezo "kuanzisha" uundaji wa maelekezo, kisha rudia na uthibitishe matokeo kwa kutumia intuisheni yako na utaalamu wa uwanja. Rekodi maarifa yako na unda **msingi wa maarifa** (mfano, maktaba ya maelekezo) ambayo yanaweza kutumika kama msingi mpya na wengine, kwa ukariri wa haraka zaidi katika siku zijazo.
+3. **Kurudia & Uthibitishaji ni Muhimu.** Mifano inabadilika haraka, na hivyo ndivyo mbinu za uhandisi wa msukumo. Kama mtaalamu wa eneo, unaweza kuwa na muktadha mwingine au vigezo _programu yako_ maalum, ambavyo vinaweza visitumike kwa jamii pana. Tumia zana za uhandisi wa msukumo na mbinu za "kuanzisha" ujenzi wa msukumo, kisha rudia na thibitisha matokeo kwa kutumia intuisheni yako na utaalamu wa eneo lako. Rekodi maarifa yako na unda **msingi wa maarifa** (kwa mfano, maktaba za msukumo) ambazo zinaweza kutumika kama msingi mpya na wengine, kwa marudio ya haraka katika siku zijazo.
 
-## Mazoezi Bora
+## Mazoea Bora
 
-Sasa tuangalie mazoea bora yanayopendekezwa na [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) na watendaji wa [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
+Sasa tuangalie mazoea bora ya kawaida yanayopendekezwa na [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) na wataalamu wa [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
 
-| Nini                              | Kwa nini                                                                                                                                                                                                                                               |
-| :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tathmini modeli za hivi karibuni. | Vizazi vipya vya modeli vina uwezekano wa kuwa na vipengele na ubora ulioboreshwa - lakini vinaweza pia kuhusisha gharama za juu. Tathmini athari zake, kisha fanya maamuzi ya uhamaji.                                                                  |
-| Tenganisha maagizo na muktadha    | Angalia ikiwa modeli/mtu anayetoa huduma yako anafafanua _vifupisho_ ili kutofautisha maagizo, maudhui ya msingi na ya sekondari kwa uwazi zaidi. Hii inaweza kusaidia modeli kutoa uzito kwa usahihi zaidi kwa tokeni.                                  |
-| Kuwa maalum na wazi               | Toa maelezo zaidi kuhusu muktadha unaotakiwa, matokeo, urefu, muundo, mtindo n.k. Hii itaboresha ubora na uthabiti wa majibu. Kamatia mapishi katika templeti zinazoweza kutumika tena.                                                                 |
-| Kuwa na maelezo, tumia mifano     | Modeli zinaweza kujibu vyema zaidi kwa mbinu ya "onyesha na sema". Anza na `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
+| Nini                                | Kwa nini                                                                                                                                                                                                                                              |
+| :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tathmini mifano mipya zaidi.       | Vizazi vipya vya mifano vina uwezekano wa kuwa na vipengele na ubora ulioboreshwa - lakini pia vinaweza kuwa na gharama kubwa zaidi. Tathmini athari zake, kisha fanya maamuzi ya uhamisho.                                                           |
+| Tenganisha maagizo na muktadha     | Angalia ikiwa mfano wako/mtoa huduma anafafanua _vitengele_ ili kutofautisha maagizo, maudhui ya msingi na ya sekondari kwa uwazi zaidi. Hii inaweza kusaidia mifano kugawa uzito kwa usahihi zaidi kwa tokeni.                                        |
+| Kuwa maalum na wazi                | Toa maelezo zaidi kuhusu muktadha unaotakiwa, matokeo, urefu, muundo, mtindo n.k. Hii itaboresha ubora na uthabiti wa majibu. Kamatia mapishi katika templeti zinazoweza kutumika tena.                                                               |
+| Kuwa na maelezo, tumia mifano      | Mifano inaweza kujibu vizuri zaidi kwa mbinu ya "onyesha na eleza". Anza na `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
 | Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
 | Double Down                       | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.                                                         |
 | Order Matters                     | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.                                                               |
@@ -220,40 +226,40 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 ### Next, configure your environment variables
 
-- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Rudi kwenye [Sehemu ya Sandbox ya Kujifunza](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals) kujifunza jinsi.
+- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Rejelea [sehemu ya Kujifunza Sandbox](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals) ili kujifunza jinsi.
 
 ### Kisha, fungua Jupyter Notebook
 
-- Chagua kernel ya runtime. Ikiwa unatumia chaguo 1 au 2, chagua tu kernel ya Python 3.10.x iliyotolewa na kontena la maendeleo.
+- Chagua kernel ya wakati wa kukimbia. Ikiwa unatumia chaguo 1 au 2, chagua tu kernel ya Python 3.10.x ya msingi inayotolewa na kontena la maendeleo.
 
-Uko tayari kuendesha mazoezi. Kumbuka kwamba hakuna _sahihi na makosa_ hapa - ni kuchunguza chaguo kwa majaribio na makosa na kujenga intuisheni ya kile kinachofanya kazi kwa modeli na uwanja wa matumizi uliotolewa.
+Uko tayari kuendesha mazoezi. Kumbuka kuwa hakuna majibu sahihi na mabaya hapa - ni kuchunguza chaguo kwa majaribio na makosa na kujenga intuisheni kwa kile kinachofanya kazi kwa mfano fulani na eneo la programu.
 
-_Kwa sababu hii hakuna sehemu za Suluhisho la Kodi katika somo hili. Badala yake, Notebook itakuwa na seli za Markdown zenye kichwa "Suluhisho Langu:" zinazoonyesha mfano mmoja wa matokeo kwa marejeleo._
+_Kwa sababu hii hakuna sehemu za Suluhisho la Msimbo katika somo hili. Badala yake, Notebook itakuwa na seli za Markdown zilizoandikwa "Suluhisho Langu:" zinazoonyesha mfano mmoja wa matokeo kwa marejeleo._
 
-<!--
-TEMPLATE YA SOMO:
-Funga sehemu na muhtasari na rasilimali za kujifunza kwa kujiongoza.
+ <!--
+MFANO WA SOMO:
+Funga sehemu hiyo na muhtasari na rasilimali za kujifunza binafsi.
 -->
 
 ## Ukaguzi wa Maarifa
 
-Ni ipi kati ya zifuatazo ni maelekezo mazuri yanayofuata baadhi ya mazoea bora yanayofaa?
+Ni ipi kati ya zifuatazo ni msukumo mzuri kufuata baadhi ya mazoea bora yanayofaa?
 
 1. Nionyeshe picha ya gari jekundu
-2. Nionyeshe picha ya gari jekundu la Volvo na modeli XC90 limeegeshwa karibu na mwamba na jua linapozama
-3. Nionyeshe picha ya gari jekundu la Volvo na modeli XC90
+2. Nionyeshe picha ya gari jekundu la aina Volvo na mfano XC90 lililopaki kando ya mwamba huku jua likizama
+3. Nionyeshe picha ya gari jekundu la aina Volvo na mfano XC90
 
-A: 2, ni maelekezo bora zaidi kwani yanatoa maelezo kuhusu "nini" na yanaingia katika undani (sio gari lolote bali ni muundo na modeli maalum) na pia inaelezea muktadha wa jumla. 3 ni bora ijayo kwani pia ina maelezo mengi.
+J: 2, ni msukumo bora zaidi kwani inatoa maelezo kuhusu "nini" na inaenda kwenye maalum (si gari lolote bali aina maalum na mfano) na pia inaelezea mazingira ya jumla. 3 ni bora zaidi kwani pia ina maelezo mengi.
 
 ## 🚀 Changamoto
 
-Jaribu kutumia mbinu ya "kidokezo" na maelekezo: Kamilisha sentensi "Nionyeshe picha ya gari jekundu la Volvo na ". Inajibu nini, na ungeiboresha vipi?
+Angalia ikiwa unaweza kutumia mbinu ya "kijisehemu" na msukumo: Kamilisha sentensi "Nionyeshe picha ya gari jekundu la aina Volvo na ". Inajibu nini, na ungeboreshaje?
 
 ## Kazi Nzuri! Endelea Kujifunza
 
-Unataka kujifunza zaidi kuhusu dhana tofauti za Uhandisi wa Maelekezo? Nenda kwenye [ukurasa wa kujifunza unaoendelea](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kupata rasilimali nyingine nzuri kuhusu mada hii.
+Unataka kujifunza zaidi kuhusu dhana tofauti za Uhandisi wa Msukumo? Nenda kwenye [ukurasa wa kuendelea kujifunza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kupata rasilimali nyingine nzuri juu ya mada hii.
 
-Nenda kwenye Somo la 5 ambapo tutatazama [mbinu za juu za utoaji maelekezo](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Nenda kwenye Somo la 5 ambapo tutaangalia [mbinu za hali ya juu za msukumo](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Kanusho**: 
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwepo kwa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya kibinadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kanusho**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuelewana. Hati asili katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo chenye mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

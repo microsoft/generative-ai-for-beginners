@@ -2,26 +2,26 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:12:57+00:00",
+  "translation_date": "2025-06-26T03:32:34+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "fi"
 }
 -->
-# Rakentaminen Meta-perheen mallien kanssa
+# Rakentaminen Meta-perheen mallien avulla
 
 ## Johdanto
 
-Tässä oppitunnissa käsitellään:
+Tämä oppitunti käsittelee:
 
-- Kahden pääasiallisen Meta-perheen mallin, Llama 3.1:n ja Llama 3.2:n, tutkiminen
-- Kunkin mallin käyttötapaukset ja skenaariot
+- Tutustumista kahteen päämalliin Meta-perheessä - Llama 3.1 ja Llama 3.2
+- Ymmärtämistä kunkin mallin käyttötapauksista ja skenaarioista
 - Koodiesimerkki, joka näyttää kunkin mallin ainutlaatuiset ominaisuudet
 
-## Meta-mallien perhe
+## Meta-perheen mallit
 
-Tässä oppitunnissa tutkimme kahta mallia Meta-perheestä eli "Llama Herdistä" - Llama 3.1 ja Llama 3.2.
+Tässä oppitunnissa tutustumme kahteen malliin Meta-perheestä eli "Llama Herdistä" - Llama 3.1 ja Llama 3.2
 
-Nämä mallit ovat saatavilla eri muunnelmina GitHub Model -markkinapaikalla. Tässä on lisätietoja GitHub Modelsin käytöstä [prototyyppien luomiseen tekoälymalleilla](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Nämä mallit ovat saatavilla eri variantteina GitHub Model -markkinapaikalla. Tässä on lisätietoja GitHub-mallien käyttämisestä [AI-mallien prototypointiin](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Mallivariantit:
 - Llama 3.1 - 70B Instruct
@@ -29,39 +29,39 @@ Mallivariantit:
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Huom: Llama 3 on myös saatavilla GitHub Modelsissa, mutta sitä ei käsitellä tässä oppitunnissa*
+*Huom: Llama 3 on myös saatavilla GitHub-malleissa, mutta sitä ei käsitellä tässä oppitunnissa*
 
 ## Llama 3.1
 
 405 miljardilla parametrilla Llama 3.1 kuuluu avoimen lähdekoodin LLM-kategoriaan.
 
-Malli on päivitys aiempaan julkaisuun Llama 3 tarjoamalla:
+Malli on päivitys aiempaan Llama 3 -julkaisuun tarjoamalla:
 
 - Suurempi kontekstin ikkuna - 128k tokenia vs 8k tokenia
-- Suurempi maksimiulostulotokenit - 4096 vs 2048
+- Suurempi maksimi ulostulotokenien määrä - 4096 vs 2048
 - Parempi monikielinen tuki - johtuen koulutustokenien lisääntymisestä
 
-Nämä mahdollistavat Llama 3.1:n käsitellä monimutkaisempia käyttötapauksia GenAI-sovelluksia rakennettaessa, kuten:
-- Alkuperäisten funktiokutsujen tekeminen - kyky kutsua ulkoisia työkaluja ja funktioita LLM-työnkulun ulkopuolella
-- Parempi RAG-suorituskyky - suuremman kontekstin ikkunan ansiosta
-- Synteettisen datan generointi - kyky luoda tehokasta dataa tehtäviin kuten hienosäätö
+Nämä mahdollistavat Llama 3.1:n käsitellä monimutkaisempia käyttötapauksia GenAI-sovellusten rakentamisessa, mukaan lukien:
+- Alkuperäinen funktiokutsu - kyky kutsua ulkoisia työkaluja ja funktioita LLM-työnkulun ulkopuolella
+- Parempi RAG-suorituskyky - korkeamman kontekstin ikkunan ansiosta
+- Synteettinen datan luonti - kyky luoda tehokasta dataa tehtäviin, kuten hienosäätöön
 
-### Alkuperäisten funktiokutsujen tekeminen
+### Alkuperäinen funktiokutsu
 
-Llama 3.1 on hienosäädetty tehokkaampaan funktioiden tai työkalujen kutsumiseen. Siinä on myös kaksi sisäänrakennettua työkalua, jotka malli voi tunnistaa tarpeellisiksi käyttää käyttäjän antaman kehotteen perusteella. Nämä työkalut ovat:
+Llama 3.1 on hienosäädetty olemaan tehokkaampi funktioiden tai työkalujen kutsumisessa. Sillä on myös kaksi sisäänrakennettua työkalua, jotka malli voi tunnistaa tarvittaviksi käyttäjän antaman kehotteen perusteella. Nämä työkalut ovat:
 
-- **Brave Search** - Voi käyttää saadakseen ajankohtaista tietoa, kuten säätiedotuksia, suorittamalla verkkohaku
-- **Wolfram Alpha** - Voi käyttää monimutkaisempiin matemaattisiin laskutoimituksiin, joten omien funktioiden kirjoittaminen ei ole tarpeen.
+- **Brave Search** - Voidaan käyttää ajan tasalla olevan tiedon saamiseen, kuten sää, tekemällä verkkohaku
+- **Wolfram Alpha** - Voidaan käyttää monimutkaisempiin matemaattisiin laskelmiin, joten omien funktioiden kirjoittaminen ei ole tarpeen.
 
-Voit myös luoda omia mukautettuja työkaluja, joita LLM voi kutsua.
+Voit myös luoda omia räätälöityjä työkaluja, joita LLM voi kutsua.
 
 Alla olevassa koodiesimerkissä:
 
-- Määrittelemme käytettävissä olevat työkalut (brave_search, wolfram_alpha) järjestelmän kehotteessa.
-- Lähetämme käyttäjän kehotteen, joka kysyy säästä tietyssä kaupungissa.
-- LLM vastaa työkaluhaulla Brave Search -työkaluun, joka näyttää tältä `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Määrittelemme käytettävissä olevat työkalut (brave_search, wolfram_alpha) järjestelmäkehotteessa.
+- Lähetämme käyttäjäkehotteen, joka kysyy sään tietystä kaupungista.
+- LLM vastaa työkalukutsulla Brave Search -työkaluun, joka näyttää tältä `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Huom: Tämä esimerkki tekee vain työkalukutsun, jos haluat saada tulokset, sinun tulee luoda ilmainen tili Brave API -sivulla ja määritellä funktio itse*
+*Huom: Tämä esimerkki tekee vain työkalukutsun, jos haluat saada tulokset, sinun on luotava ilmainen tili Brave API -sivulla ja määriteltävä funktio itse*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Vaikka Llama 3.1 on LLM, sillä on yksi rajoitus, joka on multimodaalisuus. Eli kyky käyttää erilaisia syötteitä, kuten kuvia, kehotteina ja antaa vastauksia. Tämä kyky on yksi Llama 3.2:n pääominaisuuksista. Näihin ominaisuuksiin kuuluvat myös:
+Vaikka Llama 3.1 on LLM, yksi sen rajoituksista on multimodaalisuus. Eli kyky käyttää erilaisia syötetyyppejä, kuten kuvia kehotteina ja antaa vastauksia. Tämä kyky on yksi Llama 3.2:n pääominaisuuksista. Näihin ominaisuuksiin kuuluu myös:
 
-- Multimodaalisuus - kyky arvioida sekä teksti- että kuvakehotteita
-- Pienet ja keskikokoiset variaatiot (11B ja 90B) - tämä tarjoaa joustavat käyttöönottoasetukset
-- Vain teksti -variaatiot (1B ja 3B) - tämä mahdollistaa mallin käyttöönoton reunalla/mobiililaitteilla ja tarjoaa matalan viiveen
+- Multimodaalisuus - kykenee arvioimaan sekä teksti- että kuvakehotteita
+- Pieniä ja keskikokoisia variaatioita (11B ja 90B) - tarjoaa joustavia käyttöönotto vaihtoehtoja
+- Vain teksti -variaatiot (1B ja 3B) - mahdollistaa mallin käyttöönoton reunalaitteilla / mobiililaitteilla ja tarjoaa alhaisen viiveen
 
-Multimodaalituki edustaa suurta askelta avoimen lähdekoodin mallien maailmassa. Alla oleva koodiesimerkki ottaa sekä kuvan että tekstikehotteen saadakseen analyysin kuvasta Llama 3.2 90B:ltä.
+Multimodaalinen tuki edustaa suurta askelta avoimen lähdekoodin mallien maailmassa. Alla oleva koodiesimerkki ottaa sekä kuvan että tekstikehotteen saadakseen kuvan analyysin Llama 3.2 90B:ltä.
 
-### Multimodaalituki Llama 3.2:lla
+### Multimodaalinen tuki Llama 3.2:n kanssa
 
 ```python 
 import os
@@ -160,7 +160,7 @@ print(response.choices[0].message.content)
 
 ## Oppiminen ei lopu tähän, jatka matkaa
 
-Tämän oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning -kokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generative AI -tietämyksesi kehittämistä!
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittistä tietoa varten suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa mahdollisista väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

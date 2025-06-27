@@ -2,82 +2,80 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T16:59:51+00:00",
+  "translation_date": "2025-06-25T14:28:54+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "sv"
 }
 -->
-# Bygga textgenereringsapplikationer
-
-[![Bygga textgenereringsapplikationer](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.sv.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+# Bygga Textgenereringsapplikationer
 
 > _(Klicka på bilden ovan för att se videon av denna lektion)_
 
-Hittills har du sett genom denna läroplan att det finns kärnkoncept som uppmaningar och till och med en hel disciplin som kallas "prompt engineering". Många verktyg som du kan interagera med, som ChatGPT, Office 365, Microsoft Power Platform och fler, stödjer dig i att använda uppmaningar för att åstadkomma något.
+Genom denna kursplan har du hittills sett att det finns kärnkoncept som prompts och till och med en hel disciplin som kallas "prompt engineering". Många verktyg som du kan interagera med, som ChatGPT, Office 365, Microsoft Power Platform och fler, stödjer dig genom att använda prompts för att åstadkomma något.
 
-För att du ska kunna lägga till en sådan upplevelse i en app behöver du förstå koncept som uppmaningar, slutföranden och välja ett bibliotek att arbeta med. Det är precis vad du kommer att lära dig i detta kapitel.
+För att du ska kunna lägga till en sådan upplevelse till en app behöver du förstå koncept som prompts, completions och välja ett bibliotek att arbeta med. Det är precis vad du kommer att lära dig i detta kapitel.
 
 ## Introduktion
 
 I detta kapitel kommer du att:
 
 - Lära dig om openai-biblioteket och dess kärnkoncept.
-- Bygga en textgenereringsapp med openai.
-- Förstå hur man använder koncept som uppmaning, temperatur och tokens för att bygga en textgenereringsapp.
+- Bygga en textgenereringsapp med hjälp av openai.
+- Förstå hur man använder koncept som prompt, temperatur och tokens för att bygga en textgenereringsapp.
 
-## Inlärningsmål
+## Lärandemål
 
 I slutet av denna lektion kommer du att kunna:
 
 - Förklara vad en textgenereringsapp är.
-- Bygga en textgenereringsapp med openai.
-- Konfigurera din app för att använda fler eller färre tokens och även ändra temperaturen för ett varierat resultat.
+- Bygga en textgenereringsapp med hjälp av openai.
+- Konfigurera din app för att använda fler eller färre tokens och även ändra temperaturen, för ett varierat resultat.
 
 ## Vad är en textgenereringsapp?
 
-Normalt när du bygger en app har den någon form av gränssnitt som följande:
+Vanligtvis när du bygger en app har den någon form av gränssnitt som följande:
 
-- Kommando-baserad. Konsolappar är typiska appar där du skriver ett kommando och den utför en uppgift. Till exempel är `git` en kommando-baserad app.
+- Kommandobaserad. Konsolappar är typiska appar där du skriver ett kommando och den utför en uppgift. Till exempel är `git` en kommandobaserad app.
 - Användargränssnitt (UI). Vissa appar har grafiska användargränssnitt (GUIs) där du klickar på knappar, matar in text, väljer alternativ och mer.
 
 ### Konsol- och UI-appar är begränsade
 
-Jämför det med en kommando-baserad app där du skriver ett kommando:
+Jämför det med en kommandobaserad app där du skriver ett kommando:
 
 - **Det är begränsat**. Du kan inte bara skriva vilket kommando som helst, bara de som appen stödjer.
-- **Språkspecifik**. Vissa appar stödjer många språk, men som standard är appen byggd för ett specifikt språk, även om du kan lägga till fler språkstöd.
+- **Språkspecifik**. Vissa appar stödjer många språk, men som standard är appen byggd för ett specifikt språk, även om du kan lägga till mer språksupport.
 
 ### Fördelar med textgenereringsappar
 
 Så hur är en textgenereringsapp annorlunda?
 
-I en textgenereringsapp har du mer flexibilitet, du är inte begränsad till en uppsättning kommandon eller ett specifikt inmatningsspråk. Istället kan du använda naturligt språk för att interagera med appen. En annan fördel är att eftersom du redan interagerar med en datakälla som har tränats på en stor mängd information, medan en traditionell app kan vara begränsad till vad som finns i en databas.
+I en textgenereringsapp har du mer flexibilitet, du är inte begränsad till en uppsättning kommandon eller ett specifikt inmatningsspråk. Istället kan du använda naturligt språk för att interagera med appen. En annan fördel är att eftersom du redan interagerar med en datakälla som har tränats på ett stort korpus av information, medan en traditionell app kan vara begränsad till vad som finns i en databas.
 
 ### Vad kan jag bygga med en textgenereringsapp?
 
 Det finns många saker du kan bygga. Till exempel:
 
 - **En chatbot**. En chatbot som svarar på frågor om ämnen, som ditt företag och dess produkter, kan vara en bra matchning.
-- **Hjälpare**. LLMs är bra på saker som att sammanfatta text, få insikter från text, producera text som CV:n och mer.
-- **Kodassistent**. Beroende på språket du använder kan du bygga en kodassistent som hjälper dig att skriva kod. Till exempel kan du använda en produkt som GitHub Copilot samt ChatGPT för att hjälpa dig skriva kod.
+- **Hjälpare**. LLMs är bra på saker som att sammanfatta text, få insikter från text, producera text som CV och mer.
+- **Kodassistent**. Beroende på språkmodellen du använder kan du bygga en kodassistent som hjälper dig att skriva kod. Till exempel kan du använda en produkt som GitHub Copilot samt ChatGPT för att hjälpa dig att skriva kod.
 
 ## Hur kan jag komma igång?
 
 Tja, du behöver hitta ett sätt att integrera med en LLM vilket vanligtvis innebär följande två tillvägagångssätt:
 
-- Använda ett API. Här konstruerar du webbförfrågningar med din uppmaning och får genererad text tillbaka.
-- Använda ett bibliotek. Bibliotek hjälper till att kapsla in API-anropen och göra dem lättare att använda.
+- Använd ett API. Här konstruerar du webbförfrågningar med din prompt och får genererad text tillbaka.
+- Använd ett bibliotek. Bibliotek hjälper till att kapsla in API-anrop och göra dem enklare att använda.
 
-## Bibliotek/SDK:er
+## Bibliotek/SDKs
 
 Det finns några välkända bibliotek för att arbeta med LLMs som:
 
-- **openai**, detta bibliotek gör det enkelt att ansluta till din modell och skicka in uppmaningar.
+- **openai**, detta bibliotek gör det enkelt att ansluta till din modell och skicka in prompts.
 
 Sedan finns det bibliotek som fungerar på en högre nivå som:
 
 - **Langchain**. Langchain är välkänt och stödjer Python.
-- **Semantic Kernel**. Semantic Kernel är ett bibliotek av Microsoft som stödjer språken C#, Python och Java.
+- **Semantic Kernel**. Semantic Kernel är ett bibliotek från Microsoft som stödjer språken C#, Python och Java.
 
 ## Första appen med openai
 
@@ -85,7 +83,7 @@ Låt oss se hur vi kan bygga vår första app, vilka bibliotek vi behöver, hur 
 
 ### Installera openai
 
-Det finns många bibliotek där ute för att interagera med OpenAI eller Azure OpenAI. Det är möjligt att använda flera programmeringsspråk som C#, Python, JavaScript, Java och mer. Vi har valt att använda `openai` Python-biblioteket, så vi kommer att använda `pip` för att installera det.
+Det finns många bibliotek där ute för att interagera med OpenAI eller Azure OpenAI. Det är möjligt att använda många programmeringsspråk som C#, Python, JavaScript, Java och fler. Vi har valt att använda `openai` Python-biblioteket, så vi kommer att använda `pip` för att installera det.
 
 ```bash
 pip install openai
@@ -99,18 +97,16 @@ Du behöver utföra följande steg:
 - Få tillgång till Azure OpenAI. Gå till [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) och begär åtkomst.
 
   > [!NOTE]
-  > Vid skrivande stund behöver du ansöka om åtkomst till Azure OpenAI.
+  > Vid tidpunkten för skrivandet behöver du ansöka om åtkomst till Azure OpenAI.
 
 - Installera Python <https://www.python.org/>
 - Ha skapat en Azure OpenAI Service-resurs. Se denna guide för hur man [skapar en resurs](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Hitta API-nyckel och slutpunkt
 
-Vid denna punkt behöver du tala om för ditt `openai`-bibliotek vilken API-nyckel som ska användas. För att hitta din API-nyckel, gå till avsnittet "Keys and Endpoint" i din Azure OpenAI-resurs och kopiera värdet för "Key 1".
+Vid denna tidpunkt behöver du tala om för ditt `openai` bibliotek vilken API-nyckel som ska användas. För att hitta din API-nyckel, gå till avsnittet "Nycklar och Slutpunkt" i din Azure OpenAI-resurs och kopiera värdet för "Nyckel 1".
 
-![Keys and Endpoint-resursblad i Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
-
-Nu när du har kopierat denna information, låt oss instruera biblioteken att använda den.
+Nu när du har denna information kopierad, låt oss instruera biblioteken att använda den.
 
 > [!NOTE]
 > Det är värt att separera din API-nyckel från din kod. Du kan göra det genom att använda miljövariabler.
@@ -118,9 +114,9 @@ Nu när du har kopierat denna information, låt oss instruera biblioteken att an
 > - Ställ in miljövariabeln `OPENAI_API_KEY` to your API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Konfigurera Azure
+### Konfigurera Azure-inställningar
 
-Om du använder Azure OpenAI, här är hur du konfigurerar det:
+Om du använder Azure OpenAI, här är hur du ställer in konfigurationen:
 
 ```python
 openai.api_type = 'azure'
@@ -140,7 +136,7 @@ Ovan ställer vi in följande:
 
 ## Generate text
 
-The way to generate text is to use the `Completion` klass. Här är ett exempel:
+The way to generate text is to use the `Completion` class. Här är ett exempel:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,9 +145,9 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-I koden ovan skapar vi ett slutförandeobjekt och skickar in modellen vi vill använda och uppmaningen. Sedan skriver vi ut den genererade texten.
+I koden ovan skapar vi ett completion-objekt och skickar in modellen vi vill använda och prompten. Sedan skriver vi ut den genererade texten.
 
-### Chat-slutföranden
+### Chatcompletions
 
 Hittills har du sett hur vi har använt `Completion` to generate text. But there's another class called `ChatCompletion` som är mer lämpad för chatbots. Här är ett exempel på att använda det:
 
@@ -168,7 +164,7 @@ Mer om denna funktionalitet i ett kommande kapitel.
 
 ## Övning - din första textgenereringsapp
 
-Nu när vi har lärt oss hur man sätter upp och konfigurerar openai är det dags att bygga din första textgenereringsapp. För att bygga din app, följ dessa steg:
+Nu när vi lärt oss hur man ställer in och konfigurerar openai, är det dags att bygga din första textgenereringsapp. För att bygga din app, följ dessa steg:
 
 1. Skapa en virtuell miljö och installera openai:
 
@@ -182,9 +178,9 @@ Nu när vi har lärt oss hur man sätter upp och konfigurerar openai är det dag
    > Om du använder Windows skriv `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` värde.
+   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
 
-1. Skapa en _app.py_-fil och ge den följande kod:
+1. Skapa en _app.py_ fil och ge den följande kod:
 
    ```python
    import openai
@@ -208,9 +204,9 @@ Nu när vi har lärt oss hur man sätter upp och konfigurerar openai är det dag
    ```
 
    > [!NOTE]
-   > Om du använder Azure OpenAI behöver du ställa in `api_type` to `azure` and set the `api_key` till din Azure OpenAI-nyckel.
+   > Om du använder Azure OpenAI, behöver du ställa in `api_type` to `azure` and set the `api_key` till din Azure OpenAI-nyckel.
 
-   Du bör se ett resultat som ser ut så här:
+   Du bör se ett utdata som liknar följande:
 
    ```output
     very unhappy _____.
@@ -218,25 +214,25 @@ Nu när vi har lärt oss hur man sätter upp och konfigurerar openai är det dag
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Olika typer av uppmaningar, för olika saker
+## Olika typer av prompts, för olika saker
 
-Nu har du sett hur man genererar text med en uppmaning. Du har till och med ett program igång som du kan modifiera och ändra för att generera olika typer av text.
+Nu har du sett hur man genererar text med en prompt. Du har till och med ett program igång som du kan modifiera och ändra för att generera olika typer av text.
 
-Uppmaningar kan användas för alla möjliga uppgifter. Till exempel:
+Prompts kan användas för alla möjliga uppgifter. Till exempel:
 
-- **Generera en typ av text**. Till exempel kan du generera en dikt, frågor till ett quiz etc.
-- **Slå upp information**. Du kan använda uppmaningar för att leta efter information som följande exempel 'Vad betyder CORS i webbutveckling?'.
-- **Generera kod**. Du kan använda uppmaningar för att generera kod, till exempel utveckla ett reguljärt uttryck som används för att validera e-post eller varför inte generera ett helt program, som en webbapp?
+- **Generera en typ av text**. Till exempel kan du generera en dikt, frågor för en frågesport etc.
+- **Söka information**. Du kan använda prompts för att söka efter information som följande exempel 'Vad betyder CORS i webbutveckling?'.
+- **Generera kod**. Du kan använda prompts för att generera kod, till exempel utveckla ett reguljärt uttryck som används för att validera e-post eller varför inte generera ett helt program, som en webbapp?
 
 ## Ett mer praktiskt användningsfall: en receptgenerator
 
-Tänk dig att du har ingredienser hemma och vill laga något. För det behöver du ett recept. Ett sätt att hitta recept är att använda en sökmotor eller så kan du använda en LLM för att göra det.
+Föreställ dig att du har ingredienser hemma och du vill laga något. För det behöver du ett recept. Ett sätt att hitta recept är att använda en sökmotor eller så kan du använda en LLM för att göra det.
 
-Du kan skriva en uppmaning som så:
+Du kan skriva en prompt så här:
 
 > "Visa mig 5 recept för en maträtt med följande ingredienser: kyckling, potatis och morötter. För varje recept, lista alla ingredienser som används"
 
-Med den ovanstående uppmaningen kan du få ett svar som liknar:
+Med tanke på ovanstående prompt, kan du få ett svar som liknar:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,14 +296,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Detta resultat är fantastiskt, jag vet vad jag ska laga. Vid denna punkt, vad som skulle kunna vara användbara förbättringar är:
+Detta resultat är bra, jag vet vad jag ska laga. Vid denna tidpunkt, vad som kan vara användbara förbättringar är:
 
 - Filtrera bort ingredienser jag inte gillar eller är allergisk mot.
-- Producera en inköpslista, ifall jag inte har alla ingredienser hemma.
+- Skapa en inköpslista, om jag inte har alla ingredienser hemma.
 
-För de ovanstående fallen, låt oss lägga till en ytterligare uppmaning:
+För ovanstående fall, låt oss lägga till en ytterligare prompt:
 
-> "Vänligen ta bort recept med vitlök eftersom jag är allergisk och ersätt det med något annat. Producera också en inköpslista för recepten, med tanke på att jag redan har kyckling, potatis och morötter hemma."
+> "Vänligen ta bort recept med vitlök eftersom jag är allergisk och ersätt det med något annat. Skapa också en inköpslista för recepten, med tanke på att jag redan har kyckling, potatis och morötter hemma."
 
 Nu har du ett nytt resultat, nämligen:
 
@@ -376,20 +372,20 @@ Shopping List:
 - Pepper
 ```
 
-Det är dina fem recept, utan vitlök nämnd och du har också en inköpslista med tanke på vad du redan har hemma.
+Det är dina fem recept, utan nämnd vitlök och du har också en inköpslista med tanke på vad du redan har hemma.
 
 ## Övning - bygg en receptgenerator
 
 Nu när vi har spelat ut ett scenario, låt oss skriva kod för att matcha det demonstrerade scenariot. För att göra det, följ dessa steg:
 
-1. Använd den befintliga _app.py_-filen som en startpunkt
-1. Hitta variabeln `prompt` och ändra dess kod till följande:
+1. Använd den befintliga _app.py_ filen som en startpunkt
+1. Hitta `prompt`-variabeln och ändra dess kod till följande:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Om du nu kör koden bör du se ett resultat som liknar:
+   Om du nu kör koden, bör du se ett utdata som liknar:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,9 +397,9 @@ Nu när vi har spelat ut ett scenario, låt oss skriva kod för att matcha det d
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > OBS, din LLM är icke-deterministisk, så du kan få olika resultat varje gång du kör programmet.
+   > NOTE, din LLM är icke-deterministisk, så du kan få olika resultat varje gång du kör programmet.
 
-   Bra, låt oss se hur vi kan förbättra saker. För att förbättra saker vill vi se till att koden är flexibel, så ingredienser och antal recept kan förbättras och ändras.
+   Bra, låt oss se hur vi kan förbättra saker. För att förbättra saker, vill vi se till att koden är flexibel, så att ingredienser och antal recept kan förbättras och ändras.
 
 1. Låt oss ändra koden på följande sätt:
 
@@ -416,7 +412,7 @@ Nu när vi har spelat ut ett scenario, låt oss skriva kod för att matcha det d
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Att ta koden för en testrunda, kan se ut så här:
+   Att testa koden kan se ut så här:
 
    ```output
    No of recipes (for example, 5): 3
@@ -431,9 +427,9 @@ Nu när vi har spelat ut ett scenario, låt oss skriva kod för att matcha det d
 
 Vi har nu en fungerande app som kan producera recept och den är flexibel eftersom den förlitar sig på inmatningar från användaren, både på antalet recept men också de ingredienser som används.
 
-För att ytterligare förbättra den vill vi lägga till följande:
+För att ytterligare förbättra det, vill vi lägga till följande:
 
-- **Filtrera bort ingredienser**. Vi vill kunna filtrera bort ingredienser vi inte gillar eller är allergiska mot. För att åstadkomma denna förändring kan vi redigera vår befintliga uppmaning och lägga till ett filtervillkor i slutet av den som så här:
+- **Filtrera bort ingredienser**. Vi vill kunna filtrera bort ingredienser vi inte gillar eller är allergiska mot. För att åstadkomma denna förändring, kan vi redigera vår befintliga prompt och lägga till ett filtervillkor i slutet av den så här:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +437,9 @@ För att ytterligare förbättra den vill vi lägga till följande:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Ovan lägger vi till `{filter}` i slutet av uppmaningen och vi fångar också filtervärdet från användaren.
+  Ovan lägger vi till `{filter}` i slutet av prompten och vi fångar också filtervärdet från användaren.
 
-  Ett exempel på inmatning vid körning av programmet kan nu se ut så här:
+  Ett exempel på inmatning av att köra programmet kan nu se ut så här:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,13 +506,13 @@ För att ytterligare förbättra den vill vi lägga till följande:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Som du kan se har alla recept med mjölk i det filtrerats bort. Men om du är laktosintolerant kanske du också vill filtrera bort recept med ost i dem, så det finns ett behov av att vara tydlig.
+  Som du kan se har alla recept med mjölk i filtrerats bort. Men om du är laktosintolerant kanske du vill filtrera bort recept med ost i också, så det finns ett behov av att vara tydlig.
 
-- **Producera en inköpslista**. Vi vill producera en inköpslista, med tanke på vad vi redan har hemma.
+- **Skapa en inköpslista**. Vi vill skapa en inköpslista, med tanke på vad vi redan har hemma.
 
-  För denna funktionalitet kan vi antingen försöka lösa allt i en uppmaning eller så kan vi dela upp det i två uppmaningar. Låt oss försöka med det senare tillvägagångssättet. Här föreslår vi att lägga till en ytterligare uppmaning, men för att det ska fungera måste vi lägga till resultatet av den första uppmaningen som kontext till den senare uppmaningen.
+  För denna funktionalitet, kan vi antingen försöka lösa allt i en prompt eller så kan vi dela upp det i två prompts. Låt oss prova det senare tillvägagångssättet. Här föreslår vi att lägga till en ytterligare prompt, men för att det ska fungera, behöver vi lägga till resultatet från den första prompten som kontext till den senare prompten.
 
-  Hitta den del i koden som skriver ut resultatet från den första uppmaningen och lägg till följande kod nedanför:
+  Hitta delen i koden som skriver ut resultatet från den första prompten och lägg till följande kod nedanför:
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -531,21 +527,21 @@ För att ytterligare förbättra den vill vi lägga till följande:
   print(completion.choices[0].message.content)
   ```
 
-  Notera följande:
+  Observera följande:
 
-  1. Vi konstruerar en ny uppmaning genom att lägga till resultatet från den första uppmaningen till den nya uppmaningen:
+  1. Vi konstruerar en ny prompt genom att lägga till resultatet från den första prompten till den nya prompten:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Vi gör en ny förfrågan, men också med hänsyn till antalet tokens vi bad om i den första uppmaningen, så denna gång säger vi att `max_tokens` är 1200.
+  1. Vi gör en ny förfrågan, men också med hänsyn till antalet tokens vi bad om i den första prompten, så den här gången säger vi att `max_tokens` är 1200.
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     När vi tar denna kod för en testrunda, kommer vi nu fram till följande resultat:
+     Att testa denna kod, vi kommer nu till följande utdata:
 
      ```output
      No of recipes (for example, 5): 2
@@ -561,17 +557,17 @@ För att ytterligare förbättra den vill vi lägga till följande:
 
 ## Förbättra din setup
 
-Det vi har hittills är kod som fungerar, men det finns några justeringar vi bör göra för att förbättra saker ytterligare. Några saker vi bör göra är:
+Vad vi har hittills är kod som fungerar, men det finns några justeringar vi bör göra för att förbättra saker ytterligare. Några saker vi bör göra är:
 
-- **Separera hemligheter från kod**, som API-nyckeln. Hemligheter hör inte hemma i kod och bör lagras på en säker plats. För att separera hemligheter från kod kan vi använda miljövariabler och bibliotek som `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **Separera hemligheter från kod**, som API-nyckeln. Hemligheter hör inte hemma i kod och bör lagras på en säker plats. För att separera hemligheter från kod, kan vi använda miljövariabler och bibliotek som `python-dotenv` to load them from a file. Here's how that would look like in code:
 
-  1. Create a `.env`-fil med följande innehåll:
+  1. Create a `.env` fil med följande innehåll:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Notera, för Azure, behöver du ställa in följande miljövariabler:
+     > Observera, för Azure, behöver du ställa in följande miljövariabler:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -579,7 +575,7 @@ Det vi har hittills är kod som fungerar, men det finns några justeringar vi b�
      OPENAI_API_BASE=<replace>
      ```
 
-     I kod skulle du ladda miljövariablerna så här:
+     I kod, skulle du ladda miljövariablerna så här:
 
      ```python
      from dotenv import load_dotenv
@@ -589,23 +585,23 @@ Det vi har hittills är kod som fungerar, men det finns några justeringar vi b�
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Ett ord om token-längd**. Vi bör överväga hur många tokens vi behöver för att generera den text vi vill ha. Tokens kostar pengar, så där det är möjligt bör vi försöka vara ekonomiska med antalet tokens vi använder. Till exempel, kan vi formulera uppmaningen så att vi kan använda färre tokens?
+- **Ett ord om tokenlängd**. Vi bör överväga hur många tokens vi behöver för att generera texten vi vill ha. Tokens kostar pengar, så där det är möjligt, bör vi försöka vara ekonomiska med antalet tokens vi använder. Till exempel, kan vi formulera prompten så att vi kan använda färre tokens?
 
-  För att ändra de tokens som används kan du använda parametern `max_tokens`. Till exempel, om du vill använda 100 tokens, skulle du göra:
+  För att ändra de tokens som används, kan du använda `max_tokens`-parametern. Till exempel, om du vill använda 100 tokens, skulle du göra:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Experimentera med temperatur**. Temperatur är något vi inte har nämnt hittills men är en viktig kontext för hur vårt program presterar. Ju högre temperaturvärde desto mer slumpmässigt blir resultatet. Omvänt, ju lägre temperaturvärde desto mer förutsägbart blir resultatet. Överväg om du vill ha variation i ditt resultat eller inte.
+- **Experimentera med temperatur**. Temperatur är något vi inte har nämnt hittills men är en viktig kontext för hur vårt program presterar. Ju högre temperaturvärdet är desto mer slumpmässigt blir resultatet. Omvänt, ju lägre temperaturvärdet är desto mer förutsägbart blir resultatet. Överväg om du vill ha variation i ditt resultat eller inte.
 
-  För att ändra temperaturen kan du använda parametern `temperature`. Till exempel, om du vill använda en temperatur på 0.5, skulle du göra:
+  För att ändra temperaturen, kan du använda `temperature`-parametern. Till exempel, om du vill använda en temperatur på 0,5, skulle du göra:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Notera, ju närmare 1.0, desto mer varierat blir resultatet.
+  > Observera, ju närmare 1,0, desto mer varierat blir resultatet.
 
 ## Uppgift
 
@@ -613,15 +609,15 @@ För denna uppgift kan du välja vad du vill bygga.
 
 Här är några förslag:
 
-- Justera receptgenerator-appen för att förbättra den ytterligare. Lek med temperaturvärden och uppmaningarna för att se vad du kan komma på.
-- Bygg en "studiekamrat". Denna app bör kunna svara på frågor om ett ämne, till exempel Python, du kan ha uppmaningar som "Vad är ett visst ämne i Python?", eller du kan ha en uppmaning som säger, visa mig kod för ett visst ämne etc.
-- Historiebot, få historien att komma till liv, instruera boten att spela en viss historisk karaktär och ställ frågor om dess liv och tider.
+- Justera receptgenerator-appen för att förbättra den ytterligare. Lek med temperaturvärden och prompts för att se vad du kan komma på.
+- Bygg en "studiekamrat". Denna app bör kunna svara på frågor om ett ämne, till exempel Python, du kan ha prompts som "Vad är ett visst ämne i Python?", eller du kan ha en prompt som säger, visa mig kod för ett visst ämne etc.
+- Historiebot, gör historia levande, instruera boten att spela en viss historisk karaktär och ställ frågor om dess liv och tider.
 
 ## Lösning
 
 ### Studiekamrat
 
-Nedan är en startuppmaning, se hur du kan använda den och justera den efter dina önskemål.
+Nedan är en startprompt, se hur du kan använda den och justera den efter dina önskemål.
 
 ```text
 - "You're an expert on the Python language
@@ -636,7 +632,7 @@ Nedan är en startuppmaning, se hur du kan använda den och justera den efter di
 
 ### Historiebot
 
-Här är några uppmaningar du kan använda:
+Här är några prompts du kan använda:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -649,8 +645,17 @@ Här är några uppmaningar du kan använda:
 
 Vad gör konceptet temperatur?
 
-1. Det kontrollerar hur slumpmässigt resultatet är.
-1. Det kontroller
+1. Det styr hur slumpmässigt resultatet är.
+1. Det styr hur stort svaret är.
+1. Det styr hur många tokens som används.
+
+## 🚀 Utmaning
+
+När du arbetar med uppgiften, försök att variera temperaturen, försök ställa in den på 0, 0,5 och 1. Kom ihåg att 0 är minst varierad och 1 är mest, vilket värde fungerar bäst för din app?
+
+## Bra Jobbat! Fortsätt Ditt Lärande
+
+Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din Generative AI-k
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller misstolkningar som uppstår vid användningen av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Vi strävar efter noggrannhet, men var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller misstolkningar som uppstår vid användning av denna översättning.

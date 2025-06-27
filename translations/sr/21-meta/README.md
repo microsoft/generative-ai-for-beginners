@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:16:44+00:00",
+  "translation_date": "2025-06-26T03:36:09+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "sr"
 }
 -->
-# Izgradnja sa Meta porodicom modela
+# Изградња са моделима породице Мета
 
-## Uvod
+## Увод
 
-Ova lekcija će pokriti:
+Ова лекција ће покрити:
 
-- Istraživanje dva glavna modela iz Meta porodice - Llama 3.1 i Llama 3.2
-- Razumevanje upotrebe i scenarija za svaki model
-- Primer koda koji pokazuje jedinstvene karakteristike svakog modela
+- Истраживање два главна модела породице Мета - Лама 3.1 и Лама 3.2
+- Разумевање случајева употребе и сценарија за сваки модел
+- Пример кода који показује јединствене карактеристике сваког модела
 
-## Meta porodica modela
+## Породица модела Мета
 
-U ovoj lekciji ćemo istražiti 2 modela iz Meta porodice ili "Llama stada" - Llama 3.1 i Llama 3.2
+У овој лекцији ћемо истражити 2 модела из породице Мета или "стада Лама" - Лама 3.1 и Лама 3.2
 
-Ovi modeli dolaze u različitim varijantama i dostupni su na GitHub Model tržištu. Ovde su dodatne informacije o korišćenju GitHub Modela za [prototipiranje sa AI modelima](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Ови модели долазе у различитим варијантама и доступни су на тржишту модела на ГитХабу. Овде су детаљи о коришћењу ГитХаб модела за [прототиписање са AI моделима](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Varijante modela:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Варијанте модела:
+- Лама 3.1 - 70Б Инструкт
+- Лама 3.1 - 405Б Инструкт
+- Лама 3.2 - 11Б Визија Инструкт
+- Лама 3.2 - 90Б Визија Инструкт
 
-*Napomena: Llama 3 je takođe dostupna na GitHub Modelima, ali neće biti pokrivena u ovoj lekciji*
+*Напомена: Лама 3 је такође доступна на ГитХаб моделима, али неће бити покривена у овој лекцији*
 
-## Llama 3.1
+## Лама 3.1
 
-Sa 405 milijardi parametara, Llama 3.1 spada u kategoriju open source LLM.
+Са 405 милијарди параметара, Лама 3.1 се уклапа у категорију отвореног кода LLM.
 
-Model je unapređenje ranijeg izdanja Llama 3 i nudi:
+Модел је надоградња претходног издања Лама 3, нудећи:
 
-- Veći kontekstualni prozor - 128k tokena naspram 8k tokena
-- Veći maksimalni izlazni tokeni - 4096 naspram 2048
-- Bolja podrška za više jezika - zbog povećanja broja trening tokena
+- Већи прозор контекста - 128k токена наспрам 8k токена
+- Већи максимални излазни токени - 4096 наспрам 2048
+- Боља подршка за више језика - због повећања броја токена за обуку
 
-Ovo omogućava Llama 3.1 da se nosi sa složenijim slučajevima upotrebe pri izradi GenAI aplikacija, uključujući:
-- Pozivanje nativnih funkcija - sposobnost pozivanja eksternih alata i funkcija izvan LLM radnog toka
-- Bolje RAG performanse - zbog većeg kontekstualnog prozora
-- Generisanje sintetičkih podataka - sposobnost kreiranja efektivnih podataka za zadatke kao što je fino podešavanje
+Ово омогућава Лами 3.1 да обради сложеније случајеве употребе при изградњи GenAI апликација, укључујући:
+- Позивање изворних функција - могућност позивања спољних алата и функција ван LLM радног процеса
+- Бољи RAG перформанси - због већег прозора контекста
+- Генерација синтетичких података - могућност креирања ефикасних података за задатке као што је фино подешавање
 
-### Pozivanje nativnih funkcija
+### Позивање изворних функција
 
-Llama 3.1 je fino podešena da bude efikasnija u pravljenju poziva funkcija ili alata. Takođe ima dva ugrađena alata koje model može prepoznati kao potrebne za korišćenje na osnovu korisničkog zahteva. Ovi alati su:
+Лама 3.1 је фино подешена да буде ефикаснија у прављењу позива функција или алата. Такође има два уграђена алата које модел може идентификовати као потребне за употребу на основу корисничког упита. Ови алати су:
 
-- **Brave Search** - Može se koristiti za dobijanje najnovijih informacija kao što je vreme putem web pretrage
-- **Wolfram Alpha** - Može se koristiti za složenije matematičke proračune, tako da pisanje sopstvenih funkcija nije potrebno.
+- **Brave Search** - Може се користити за добијање актуелних информација као што је временска прогноза путем веб претраге
+- **Wolfram Alpha** - Може се користити за сложеније математичке прорачуне тако да писање сопствених функција није потребно.
 
-Takođe možete kreirati sopstvene prilagođene alate koje LLM može pozvati.
+Такође можете креирати сопствене прилагођене алате које LLM може позвати.
 
-U sledećem primeru koda:
+У примеру кода испод:
 
-- Definišemo dostupne alate (brave_search, wolfram_alpha) u sistemskom zahtevu.
-- Šaljemo korisnički zahtev koji pita o vremenu u određenom gradu.
-- LLM će odgovoriti pozivom alata Brave Search, koji će izgledati ovako `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Дефинишемо доступне алате (brave_search, wolfram_alpha) у системском упиту.
+- Пошаљите кориснички упит који пита о времену у одређеном граду.
+- LLM ће одговорити позивом алата Brave Search који ће изгледати овако `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Napomena: Ovaj primer samo pravi poziv alata, ako želite da dobijete rezultate, potrebno je da kreirate besplatan nalog na Brave API stranici i definišete samu funkciju*
+*Напомена: Овај пример само прави позив алата, ако желите да добијете резултате, потребно је да креирате бесплатан налог на Brave API страници и дефинишете саму функцију`
 
 ```python 
 import os
@@ -101,17 +101,17 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Лама 3.2
 
-Iako je LLM, jedno ograničenje koje Llama 3.1 ima je multimodalnost. To jest, sposobnost korišćenja različitih tipova ulaza kao što su slike kao zahtevi i pružanje odgovora. Ova sposobnost je jedna od glavnih karakteristika Llama 3.2. Ove karakteristike takođe uključuju:
+Иако је LLM, једно ограничење које Лама 3.1 има је мултимодалност. То јест, способност коришћења различитих типова уноса као што су слике као упити и пружање одговора. Ова способност је једна од главних карактеристика Ламе 3.2. Ове карактеристике такође укључују:
 
-- Multimodalnost - ima sposobnost evaluacije i tekstualnih i slikovnih zahteva
-- Varijacije male do srednje veličine (11B i 90B) - ovo pruža fleksibilne opcije za implementaciju,
-- Varijacije samo za tekst (1B i 3B) - ovo omogućava modelu da bude implementiran na edge/mobilnim uređajima i pruža nisku latenciju
+- Мултимодалност - има способност процене и текстуалних и сликовних упита
+- Варијације малих до средњих величина (11Б и 90Б) - ово пружа флексибилне опције за примену,
+- Варијације само текста (1Б и 3Б) - ово омогућава моделу да се примени на edge / мобилним уређајима и пружа ниску латенцију
 
-Podrška za multimodalnost predstavlja veliki korak u svetu open source modela. Sledeći primer koda uzima i slikovni i tekstualni zahtev kako bi dobio analizu slike od Llama 3.2 90B.
+Подршка за мултимодалност представља велики корак у свету модела отвореног кода. Пример кода испод узима и сликовни и текстуални упит да би добио анализу слике од Ламе 3.2 90Б.
 
-### Multimodalna podrška sa Llama 3.2
+### Подршка за мултимодалност са Лама 3.2
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Učenje se ne završava ovde, nastavite putovanje
+## Учење се овде не завршава, наставите путовање
 
-Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje generativne AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa usavršavanjem svog znanja o generativnoj AI!
+Након завршетка ове лекције, погледајте нашу [Generative AI Learning колекцију](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да наставите да унапређујете своје знање о Generative AI!
 
 **Одрицање од одговорности**:  
-Овај документ је преведен користећи AI услугу превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални људски превод. Не преузимамо одговорност за било каква неспоразума или погрешна тумачења која проистичу из употребе овог превода.
+Овај документ је преведен користећи AI услугу превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални превод од стране људи. Нисмо одговорни за било каква погрешна разумевања или интерпретације које произилазе из употребе овог превода.

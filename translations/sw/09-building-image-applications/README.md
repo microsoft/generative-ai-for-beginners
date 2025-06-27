@@ -2,92 +2,92 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:20:21+00:00",
+  "translation_date": "2025-06-25T17:30:47+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "sw"
 }
 -->
 # Kujenga Programu za Uzalishaji wa Picha
 
-[![Kujenga Programu za Uzalishaji wa Picha](../../../translated_images/09-lesson-banner.d0229c79fda6596b8a678478e20301b74964cb8161e0c2e4a7c203655c623330.sw.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Kujenga Programu za Uzalishaji wa Picha](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sw.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
-Kuna mengi zaidi kwenye LLMs kuliko uzalishaji wa maandishi. Inawezekana pia kuzalisha picha kutoka kwa maelezo ya maandishi. Kuwa na picha kama njia inaweza kuwa muhimu sana katika maeneo kadhaa kama MedTech, usanifu, utalii, ukuzaji wa michezo na zaidi. Katika sura hii, tutachunguza mifano miwili maarufu ya uzalishaji wa picha, DALL-E na Midjourney.
+Kuna zaidi kwa LLMs kuliko uzalishaji wa maandishi. Pia inawezekana kuzalisha picha kutoka kwa maelezo ya maandishi. Kuwa na picha kama njia inaweza kuwa muhimu sana katika maeneo kadhaa kutoka MedTech, usanifu, utalii, maendeleo ya michezo na zaidi. Katika sura hii, tutaangalia mifano miwili maarufu ya uzalishaji wa picha, DALL-E na Midjourney.
 
 ## Utangulizi
 
 Katika somo hili, tutajadili:
 
 - Uzalishaji wa picha na kwa nini ni muhimu.
-- DALL-E na Midjourney, ni nini, na jinsi zinavyofanya kazi.
-- Jinsi ya kujenga programu ya uzalishaji wa picha.
+- DALL-E na Midjourney, ni nini na jinsi zinavyofanya kazi.
+- Jinsi unavyoweza kujenga programu ya uzalishaji wa picha.
 
 ## Malengo ya Kujifunza
 
 Baada ya kukamilisha somo hili, utaweza:
 
 - Kujenga programu ya uzalishaji wa picha.
-- Kufafanua mipaka kwa programu yako kwa kutumia meta prompts.
+- Kufafanua mipaka ya programu yako kwa kutumia maelekezo ya meta.
 - Kufanya kazi na DALL-E na Midjourney.
 
 ## Kwa nini kujenga programu ya uzalishaji wa picha?
 
-Programu za uzalishaji wa picha ni njia nzuri ya kuchunguza uwezo wa AI ya Kizazi. Zinatumika, kwa mfano:
+Programu za uzalishaji wa picha ni njia nzuri ya kuchunguza uwezo wa AI ya Kizazi. Zinaweza kutumika kwa mfano:
 
 - **Uhariri na usanisi wa picha**. Unaweza kuzalisha picha kwa matumizi mbalimbali, kama vile uhariri wa picha na usanisi wa picha.
 
-- **Kutumika katika sekta mbalimbali**. Zinatumika pia kuzalisha picha kwa sekta mbalimbali kama Medtech, Utalii, Ukuzaji wa michezo na zaidi.
+- **Kutumika katika sekta mbalimbali**. Pia zinaweza kutumika kuzalisha picha kwa sekta mbalimbali kama Medtech, Utalii, Maendeleo ya michezo na zaidi.
 
 ## Hali: Edu4All
 
-Kama sehemu ya somo hili, tutaendelea kufanya kazi na kampuni yetu mpya, Edu4All. Wanafunzi wataunda picha kwa ajili ya tathmini zao, ni picha gani ni juu ya wanafunzi, lakini wanaweza kuwa michoro ya hadithi yao wenyewe au kuunda mhusika mpya kwa hadithi yao au kuwasaidia kuona mawazo na dhana zao.
+Kama sehemu ya somo hili, tutaendelea kufanya kazi na kampuni yetu changa, Edu4All, katika somo hili. Wanafunzi wataunda picha kwa tathmini zao, ni picha gani ni juu ya wanafunzi, lakini zinaweza kuwa vielelezo vya hadithi yao ya hadithi au kuunda mhusika mpya kwa hadithi yao au kuwasaidia kuona mawazo na dhana zao.
 
-Hivi ndivyo wanafunzi wa Edu4All wanaweza kuzalisha kwa mfano ikiwa wanajifunza darasani kuhusu makaburi:
+Hapa kuna kile wanafunzi wa Edu4All wanaweza kuzalisha kwa mfano ikiwa wanafanya kazi darasani kwenye makaburi:
 
-![Kampuni ya Edu4All, darasa kuhusu makaburi, Mnara wa Eiffel](../../../translated_images/startup.ec211d74fef9f4175010c3334942b715514230415744b9dd0a69a19f4ad68786.sw.png)
+![Edu4All startup, darasa juu ya makaburi, Mnara wa Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sw.png)
 
-kutumia maelezo kama
+kutumia maelekezo kama
 
-> "Mbwa karibu na Mnara wa Eiffel katika mwanga wa jua wa asubuhi"
+> "Mbwa karibu na Mnara wa Eiffel asubuhi mapema katika mwanga wa jua"
 
 ## DALL-E na Midjourney ni nini?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) na [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ni mifano miwili maarufu ya uzalishaji wa picha, zinakuruhusu kutumia maelezo kuzalisha picha.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) na [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ni mifano miwili maarufu ya uzalishaji wa picha, zinakuwezesha kutumia maelekezo kuzalisha picha.
 
 ### DALL-E
 
-Tuanze na DALL-E, ambayo ni mfano wa AI ya Kizazi inayozalisha picha kutoka kwa maelezo ya maandishi.
+Tuanzie na DALL-E, ambayo ni mfano wa AI ya Kizazi ambao huzalisha picha kutoka kwa maelezo ya maandishi.
 
 > [DALL-E ni mchanganyiko wa mifano miwili, CLIP na diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, ni mfano unaozalisha embeddings, ambazo ni uwakilishi wa nambari wa data, kutoka kwa picha na maandishi.
+- **CLIP**, ni mfano unaozalisha embeddings, ambazo ni uwakilishi wa data kwa njia ya nambari, kutoka kwa picha na maandishi.
 
-- **Diffused attention**, ni mfano unaozalisha picha kutoka kwa embeddings. DALL-E imefundishwa kwenye seti ya data ya picha na maandishi na inaweza kutumika kuzalisha picha kutoka kwa maelezo ya maandishi. Kwa mfano, DALL-E inaweza kutumika kuzalisha picha za paka aliyevaa kofia, au mbwa aliye na mohawk.
+- **Diffused attention**, ni mfano unaozalisha picha kutoka kwa embeddings. DALL-E imefundishwa kwenye seti ya data ya picha na maandishi na inaweza kutumika kuzalisha picha kutoka kwa maelezo ya maandishi. Kwa mfano, DALL-E inaweza kutumika kuzalisha picha za paka aliyevaa kofia, au mbwa mwenye mohawk.
 
 ### Midjourney
 
-Midjourney inafanya kazi kwa njia sawa na DALL-E, inazalisha picha kutoka kwa maelezo ya maandishi. Midjourney, inaweza pia kutumika kuzalisha picha kwa kutumia maelezo kama "paka aliyevaa kofia", au "mbwa aliye na mohawk".
+Midjourney inafanya kazi kwa njia sawa na DALL-E, inazalisha picha kutoka kwa maelekezo ya maandishi. Midjourney, pia inaweza kutumika kuzalisha picha kwa kutumia maelekezo kama "paka aliyevaa kofia", au "mbwa mwenye mohawk".
 
 ![Picha iliyozalishwa na Midjourney, njiwa wa mitambo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Makredi ya Picha Wikipedia, picha iliyozalishwa na Midjourney_
+_Cred ya picha Wikipedia, picha iliyozalishwa na Midjourney_
 
-## DALL-E na Midjourney hufanya kazi vipi
+## Jinsi DALL-E na Midjourney Zinavyofanya Kazi
 
-Kwanza, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E ni mfano wa AI ya Kizazi inayotegemea usanifu wa transformer na _autoregressive transformer_.
+Kwanza, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E ni mfano wa AI ya Kizazi unaotegemea usanifu wa transformer na _autoregressive transformer_.
 
-_Autoregressive transformer_ inafafanua jinsi mfano unavyotoa picha kutoka kwa maelezo ya maandishi, inazalisha pikseli moja kwa wakati, na kisha kutumia pikseli zilizozalishwa kuzalisha pikseli inayofuata. Kupitia tabaka nyingi kwenye mtandao wa neva, hadi picha itakapokamilika.
+_Autoregressive transformer_ inafafanua jinsi mfano unavyozalisha picha kutoka kwa maelezo ya maandishi, inazalisha pikseli moja kwa wakati, na kisha kutumia pikseli zilizozalishwa kuzalisha pikseli inayofuata. Kupitia tabaka nyingi katika mtandao wa neva, hadi picha ikamilike.
 
-Kwa mchakato huu, DALL-E, inadhibiti sifa, vitu, tabia, na zaidi katika picha inayozalishwa. Hata hivyo, DALL-E 2 na 3 zina udhibiti zaidi juu ya picha iliyozalishwa.
+Kwa mchakato huu, DALL-E, inadhibiti sifa, vitu, tabia, na zaidi katika picha inayoizalisha. Hata hivyo, DALL-E 2 na 3 zina udhibiti zaidi juu ya picha inayozalishwa.
 
 ## Kujenga programu yako ya kwanza ya uzalishaji wa picha
 
-Je, inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zifuatazo:
+Kwa hiyo inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zifuatazo:
 
 - **python-dotenv**, inashauriwa sana kutumia maktaba hii kuweka siri zako kwenye faili ya _.env_ mbali na msimbo.
-- **openai**, maktaba hii ndio utatumia kuingiliana na API ya OpenAI.
+- **openai**, maktaba hii ndiyo utakayotumia kuingiliana na API ya OpenAI.
 - **pillow**, kufanya kazi na picha katika Python.
 - **requests**, kusaidia kufanya maombi ya HTTP.
 
-1. Unda faili _.env_ na maudhui yafuatayo:
+1. Unda faili _.env_ yenye maudhui yafuatayo:
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
@@ -96,7 +96,7 @@ Je, inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zi
 
    Pata taarifa hii katika Azure Portal kwa rasilimali yako katika sehemu ya "Keys and Endpoint".
 
-1. Kusanya maktaba zilizo juu katika faili inayoitwa _requirements.txt_ kama ifuatavyo:
+1. Kusanya maktaba zilizo hapo juu katika faili inayoitwa _requirements.txt_ kama ifuatavyo:
 
    ```text
    python-dotenv
@@ -105,7 +105,7 @@ Je, inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zi
    requests
    ```
 
-1. Kisha, unda mazingira ya virtual na usakinishe maktaba:
+1. Kisha, unda mazingira ya kawaida na usakinishe maktaba:
 
    ```bash
    python3 -m venv venv
@@ -113,7 +113,7 @@ Je, inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zi
    pip install -r requirements.txt
    ```
 
-   Kwa Windows, tumia amri zifuatazo kuunda na kuamsha mazingira yako ya virtual:
+   Kwa Windows, tumia amri zifuatazo kuunda na kuamsha mazingira yako ya kawaida:
 
    ```bash
    python3 -m venv venv
@@ -177,7 +177,7 @@ Je, inachukua nini kujenga programu ya uzalishaji wa picha? Unahitaji maktaba zi
 
 Tueleze msimbo huu:
 
-- Kwanza, tunaleta maktaba tunazohitaji, ikiwa ni pamoja na maktaba ya OpenAI, maktaba ya dotenv, maktaba ya requests, na maktaba ya Pillow.
+- Kwanza, tunapakia maktaba tunazohitaji, ikiwa ni pamoja na maktaba ya OpenAI, maktaba ya dotenv, maktaba ya requests, na maktaba ya Pillow.
 
   ```python
   import openai
@@ -187,14 +187,14 @@ Tueleze msimbo huu:
   import dotenv
   ```
 
-- Kisha, tunapakia vigezo vya mazingira kutoka kwenye faili ya _.env_.
+- Kisha, tunapakia vigezo vya mazingira kutoka kwa faili ya _.env_.
 
   ```python
   # import dotenv
   dotenv.load_dotenv()
   ```
 
-- Baada ya hapo, tunaset endpoint, key kwa API ya OpenAI, version na type.
+- Baada ya hapo, tunasetisha endpoint, ufunguo kwa API ya OpenAI, toleo na aina.
 
   ```python
   # Get endpoint and key from environment variables
@@ -218,9 +218,9 @@ Tueleze msimbo huu:
   )
   ```
 
-  Msimbo wa juu unajibu kwa kitu cha JSON ambacho kina URL ya picha iliyozalishwa. Tunaweza kutumia URL kupakua picha na kuihifadhi kwenye faili.
+  Msimbo hapo juu unajibu na kitu cha JSON ambacho kina URL ya picha iliyozalishwa. Tunaweza kutumia URL kupakua picha na kuihifadhi kwenye faili.
 
-- Mwisho, tunafungua picha na kutumia kionyeshi cha picha cha kawaida kuionyesha:
+- Mwisho, tunafungua picha na kutumia kionesha picha cha kawaida kuiangalia:
 
   ```python
   image = Image.open(image_path)
@@ -229,7 +229,7 @@ Tueleze msimbo huu:
 
 ### Maelezo zaidi juu ya kuzalisha picha
 
-Tuangalie msimbo unaozalisha picha kwa undani zaidi:
+Hebu tuangalie msimbo unaozalisha picha kwa undani zaidi:
 
 ```python
 generation_response = openai.Image.create(
@@ -240,20 +240,20 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, ni maelezo ya maandishi yanayotumika kuzalisha picha. Katika kesi hii, tunatumia maelezo "Sungura juu ya farasi, ameshika pipi, kwenye uwanda wa ukungu ambapo inakua daffodils".
-- **size**, ni ukubwa wa picha inayozalishwa. Katika kesi hii, tunazalisha picha yenye pikseli 1024x1024.
+- **prompt**, ni maelekezo ya maandishi yanayotumika kuzalisha picha. Katika kesi hii, tunatumia maelekezo "Sungura juu ya farasi, ameshika pipi, katika uwanda wenye ukungu ambapo zinamea daffodils".
+- **size**, ni ukubwa wa picha inayozalishwa. Katika kesi hii, tunazalisha picha ambayo ni pikseli 1024x1024.
 - **n**, ni idadi ya picha zinazozalishwa. Katika kesi hii, tunazalisha picha mbili.
-- **temperature**, ni parameter inayodhibiti nasibu ya matokeo ya mfano wa AI ya Kizazi. Joto ni thamani kati ya 0 na 1 ambapo 0 inamaanisha kuwa matokeo ni ya uhakika na 1 inamaanisha kuwa matokeo ni ya nasibu. Thamani ya default ni 0.7.
+- **temperature**, ni kigezo kinachodhibiti nasibu ya matokeo ya mfano wa AI ya Kizazi. Joto ni thamani kati ya 0 na 1 ambapo 0 inamaanisha kuwa matokeo ni ya uhakika na 1 inamaanisha kuwa matokeo ni ya nasibu. Thamani ya kawaida ni 0.7.
 
-Kuna mambo zaidi unayoweza kufanya na picha ambayo tutajadili katika sehemu inayofuata.
+Kuna mambo zaidi unaweza kufanya na picha ambayo tutajadili katika sehemu inayofuata.
 
 ## Uwezo wa ziada wa uzalishaji wa picha
 
-Umeona hadi sasa jinsi tulivyoweza kuzalisha picha kwa kutumia mistari michache katika Python. Hata hivyo, kuna mambo zaidi unayoweza kufanya na picha.
+Umeona hadi sasa jinsi tulivyoweza kuzalisha picha kwa mistari michache katika Python. Hata hivyo, kuna mambo zaidi unaweza kufanya na picha.
 
 Unaweza pia kufanya yafuatayo:
 
-- **Fanya uhariri**. Kwa kutoa picha iliyopo mask na maelezo, unaweza kubadilisha picha. Kwa mfano, unaweza kuongeza kitu kwenye sehemu ya picha. Fikiria picha yetu ya sungura, unaweza kuongeza kofia kwa sungura. Jinsi unavyoweza kufanya hivyo ni kwa kutoa picha, mask (kutambulisha sehemu ya eneo la mabadiliko) na maelezo ya maandishi kusema nini kinapaswa kufanywa.
+- **Kufanya uhariri**. Kwa kutoa picha iliyopo na mask na maelekezo, unaweza kubadilisha picha. Kwa mfano, unaweza kuongeza kitu kwenye sehemu ya picha. Fikiria picha yetu ya sungura, unaweza kuongeza kofia kwa sungura. Jinsi unavyofanya hivyo ni kwa kutoa picha, mask (kutambulisha sehemu ya eneo la mabadiliko) na maelekezo ya maandishi kusema nini kinachopaswa kufanywa.
 
   ```python
   response = openai.Image.create_edit(
@@ -266,9 +266,9 @@ Unaweza pia kufanya yafuatayo:
   image_url = response['data'][0]['url']
   ```
 
-  Picha ya msingi ingekuwa na sungura tu lakini picha ya mwisho ingekuwa na kofia juu ya sungura.
+  Picha ya msingi ingekuwa na sungura pekee lakini picha ya mwisho ingekuwa na kofia kwenye sungura.
 
-- **Unda tofauti**. Wazo ni kwamba unachukua picha iliyopo na kuuliza kwamba tofauti zinaundwa. Kuunda tofauti, unatoa picha na maelezo ya maandishi na msimbo kama ifuatavyo:
+- **Kuzalisha tofauti**. Wazo ni kwamba unachukua picha iliyopo na kuomba kwamba tofauti zitengenezwe. Ili kuunda tofauti, unatoa picha na maelekezo ya maandishi na msimbo kama ifuatavyo:
 
   ```python
   response = openai.Image.create_variation(
@@ -283,19 +283,19 @@ Unaweza pia kufanya yafuatayo:
 
 ## Joto
 
-Joto ni parameter inayodhibiti nasibu ya matokeo ya mfano wa AI ya Kizazi. Joto ni thamani kati ya 0 na 1 ambapo 0 inamaanisha kuwa matokeo ni ya uhakika na 1 inamaanisha kuwa matokeo ni ya nasibu. Thamani ya default ni 0.7.
+Joto ni kigezo kinachodhibiti nasibu ya matokeo ya mfano wa AI ya Kizazi. Joto ni thamani kati ya 0 na 1 ambapo 0 inamaanisha kuwa matokeo ni ya uhakika na 1 inamaanisha kuwa matokeo ni ya nasibu. Thamani ya kawaida ni 0.7.
 
-Tuangalie mfano wa jinsi joto linavyofanya kazi, kwa kuendesha maelezo haya mara mbili:
+Hebu tuangalie mfano wa jinsi joto linavyofanya kazi, kwa kuendesha maelekezo haya mara mbili:
 
-> Maelezo : "Sungura juu ya farasi, ameshika pipi, kwenye uwanda wa ukungu ambapo inakua daffodils"
+> Maelekezo : "Sungura juu ya farasi, ameshika pipi, katika uwanda wenye ukungu ambapo zinamea daffodils"
 
-![Sungura juu ya farasi ameshika pipi, toleo la 1](../../../translated_images/v1-generated-image.208ba0525ed6ae505504aa852e28d334c0440e9931b7c97f9508176a22d2dd54.sw.png)
+![Sungura juu ya farasi ameshika pipi, toleo 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sw.png)
 
-Sasa tuendeshe maelezo hayo tena ili kuona kwamba hatutapata picha sawa mara mbili:
+Sasa hebu tuendeshe maelekezo hayo tena ili kuona kwamba hatutapata picha sawa mara mbili:
 
-![Picha iliyozalishwa ya sungura juu ya farasi](../../../translated_images/v2-generated-image.f0a88c05ef476e95f3682d4b21c9ba2f4807ae71cc29e9c05b42ebbf497cf61b.sw.png)
+![Picha iliyozalishwa ya sungura juu ya farasi](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sw.png)
 
-Kama unavyoona, picha zinafanana, lakini si sawa. Hebu jaribu kubadilisha thamani ya joto hadi 0.1 na kuona nini kinatokea:
+Kama unavyoona, picha zinafanana, lakini si sawa. Hebu jaribu kubadilisha thamani ya joto hadi 0.1 na kuona kinachotokea:
 
 ```python
  generation_response = openai.Image.create(
@@ -307,9 +307,9 @@ Kama unavyoona, picha zinafanana, lakini si sawa. Hebu jaribu kubadilisha thaman
 
 ### Kubadilisha joto
 
-Kwa hivyo jaribu kufanya majibu yawe ya uhakika zaidi. Tunaweza kuona kutoka kwa picha mbili tulizozalisha kwamba kwenye picha ya kwanza, kuna sungura na kwenye picha ya pili, kuna farasi, kwa hivyo picha zinatofautiana sana.
+Kwa hiyo hebu jaribu kufanya jibu liwe la uhakika zaidi. Tunaweza kuona kutoka kwa picha mbili tulizozalisha kwamba katika picha ya kwanza, kuna sungura na katika picha ya pili, kuna farasi, kwa hiyo picha zinatofautiana sana.
 
-Kwa hivyo hebu tubadilishe msimbo wetu na kuweka joto hadi 0, kama ifuatavyo:
+Kwa hiyo hebu tubadilishe msimbo wetu na kuweka joto hadi 0, kama ifuatavyo:
 
 ```python
 generation_response = openai.Image.create(
@@ -322,26 +322,26 @@ generation_response = openai.Image.create(
 
 Sasa unapoendesha msimbo huu, unapata picha hizi mbili:
 
-- ![Joto 0, v1](../../../translated_images/v1-temp-generated-image.d8557be792b5c81c2c6d2804cb7b210fe8b340106fe4ffcadf9cf7de1cd7b991.sw.png)
-- ![Joto 0, v2](../../../translated_images/v2-temp-generated-image.bd412fcfbd43379312b1382212a332aa311ca1a80ea692dea50a8b876a487c61.sw.png)
+- ![Joto 0, toleo 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sw.png)
+- ![Joto 0 , toleo 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sw.png)
 
 Hapa unaweza kuona wazi jinsi picha zinavyofanana zaidi.
 
-## Jinsi ya kufafanua mipaka kwa programu yako kwa kutumia metaprompts
+## Jinsi ya kufafanua mipaka ya programu yako kwa metaprompts
 
-Kwa demo yetu, tunaweza tayari kuzalisha picha kwa wateja wetu. Hata hivyo, tunahitaji kuunda mipaka kwa programu yetu.
+Kwa demo yetu, tayari tunaweza kuzalisha picha kwa wateja wetu. Hata hivyo, tunahitaji kuunda mipaka kwa programu yetu.
 
-Kwa mfano, hatutaki kuzalisha picha ambazo hazifai kwa kazi, au ambazo hazifai kwa watoto.
+Kwa mfano, hatutaki kuzalisha picha ambazo si salama kwa kazi, au ambazo hazifai kwa watoto.
 
-Tunaweza kufanya hivi kwa kutumia _metaprompts_. Metaprompts ni maelezo ya maandishi yanayotumika kudhibiti matokeo ya mfano wa AI ya Kizazi. Kwa mfano, tunaweza kutumia metaprompts kudhibiti matokeo, na kuhakikisha kwamba picha zinazozalishwa zinafaa kwa kazi, au zinafaa kwa watoto.
+Tunaweza kufanya hivyo kwa _metaprompts_. Metaprompts ni maelekezo ya maandishi yanayotumika kudhibiti matokeo ya mfano wa AI ya Kizazi. Kwa mfano, tunaweza kutumia metaprompts kudhibiti matokeo, na kuhakikisha kwamba picha zinazozalishwa ni salama kwa kazi, au zinafaa kwa watoto.
 
 ### Inafanyaje kazi?
 
-Sasa, metaprompts zinafanyaje kazi?
+Sasa, metaprompts hufanyaje kazi?
 
-Metaprompts ni maelezo ya maandishi yanayotumika kudhibiti matokeo ya mfano wa AI ya Kizazi, yanawekwa kabla ya maelezo ya maandishi, na yanatumika kudhibiti matokeo ya mfano na kuingizwa katika programu kudhibiti matokeo ya mfano. Kukusanya maelezo ya ingizo na maelezo ya metaprompt katika maelezo moja ya maandishi.
+Metaprompts ni maelekezo ya maandishi yanayotumika kudhibiti matokeo ya mfano wa AI ya Kizazi, yanapangwa kabla ya maelekezo ya maandishi, na yanatumika kudhibiti matokeo ya mfano na kupachikwa katika programu kudhibiti matokeo ya mfano. Inachukua maelekezo ya maingizo na maelekezo ya meta katika maelekezo moja ya maandishi.
 
-Mfano mmoja wa metaprompt ungekuwa kama ifuatavyo:
+Mfano mmoja wa maelekezo ya meta ungekuwa kama ifuatavyo:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -360,7 +360,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Sasa, tuone jinsi tunavyoweza kutumia metaprompts katika demo yetu.
+Sasa, hebu tuone jinsi tunavyoweza kutumia maelekezo ya meta katika demo yetu.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -385,13 +385,13 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Kutoka kwa maelezo ya juu, unaweza kuona jinsi picha zote zinazoundwa zinazingatia metaprompt.
+Kutoka kwa maelekezo hapo juu, unaweza kuona jinsi picha zote zinazoundwa zinavyozingatia metaprompt.
 
 ## Kazi - hebu tuwawezeshe wanafunzi
 
 Tulianzisha Edu4All mwanzoni mwa somo hili. Sasa ni wakati wa kuwawezesha wanafunzi kuzalisha picha kwa tathmini zao.
 
-Wanafunzi wataunda picha kwa tathmini zao zinazohusisha makaburi, ni makaburi gani ni juu ya wanafunzi. Wanafunzi wanatakiwa kutumia ubunifu wao katika kazi hii kuweka makaburi haya katika muktadha tofauti.
+Wanafunzi wataunda picha kwa tathmini zao zinazohusisha makaburi, ni makaburi gani ni juu ya wanafunzi. Wanafunzi wanahimizwa kutumia ubunifu wao katika kazi hii kuweka makaburi haya katika muktadha tofauti.
 
 ## Suluhisho
 
@@ -467,11 +467,11 @@ except openai.InvalidRequestError as err:
     print(err)
 ```
 
-## Kazi Nzuri! Endelea Kujifunza
+## Kazi Nzuri! Endelea Kujifunza Kwako
 
-Baada ya kukamilisha somo hili, angalia mkusanyiko wetu wa [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuimarisha maarifa yako ya AI ya Kizazi!
+Baada ya kukamilisha somo hili, angalia [mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kizazi!
 
-Nenda kwenye Somo la 10 ambapo tutatazama jinsi ya [kujenga programu za AI kwa kutumia kodikidogo](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Nenda kwenye Somo la 10 ambapo tutaangalia jinsi ya [kujenga programu za AI kwa kutumia msimbo mdogo](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-**Kanusho**: 
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya kibinadamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Kanusho**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya kibinadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

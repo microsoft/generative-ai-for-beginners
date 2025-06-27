@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:02:11+00:00",
+  "translation_date": "2025-06-26T03:21:29+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "cs"
 }
@@ -11,37 +11,37 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Úvod
 
-Tato lekce pokrývá:
-- Prozkoumání různých modelů Mistral
-- Pochopení použití a scénářů pro každý model
-- Ukázky kódu, které ukazují jedinečné vlastnosti každého modelu.
+Tato lekce se bude zabývat:
+- Prozkoumáním různých modelů Mistral
+- Porozuměním případům použití a scénářům pro každý model
+- Ukázky kódu, které ukazují jedinečné vlastnosti každého modelu
 
 ## Modely Mistral
 
 V této lekci prozkoumáme 3 různé modely Mistral: **Mistral Large**, **Mistral Small** a **Mistral Nemo**.
 
-Každý z těchto modelů je zdarma dostupný na tržišti modelů Github. Kód v tomto notebooku bude používat tyto modely ke spuštění kódu. Zde jsou další podrobnosti o používání modelů Github k [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Každý z těchto modelů je k dispozici zdarma na trhu modelů Github. Kód v tomto zápisníku bude používat tyto modely k běhu kódu. Zde jsou další podrobnosti o používání Github Modelů pro [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 je v současnosti vlajkový model od Mistral a je navržen pro podnikové použití.
+Mistral Large 2 je v současnosti vlajkový model od Mistralu a je navržen pro podnikové použití.
 
-Model je vylepšením původního Mistral Large tím, že nabízí:
+Model je vylepšením původního Mistral Large a nabízí
 - Větší kontextové okno - 128k vs 32k
-- Lepší výkon při matematických a programovacích úlohách - průměrná přesnost 76,9 % vs 60,4 %
-- Zvýšený výkon pro vícejazyčné použití - jazyky zahrnují: angličtinu, francouzštinu, němčinu, španělštinu, italštinu, portugalštinu, holandštinu, ruštinu, čínštinu, japonštinu, korejštinu, arabštinu a hindštinu.
+- Lepší výkon při matematických a programovacích úlohách - 76,9% průměrná přesnost vs 60,4%
+- Zvýšený výkon v mnoha jazycích - jazyky zahrnují: angličtinu, francouzštinu, němčinu, španělštinu, italštinu, portugalštinu, nizozemštinu, ruštinu, čínštinu, japonštinu, korejštinu, arabštinu a hindštinu.
 
-Díky těmto vlastnostem Mistral Large vyniká v:
+S těmito funkcemi Mistral Large exceluje v
 - *Retrieval Augmented Generation (RAG)* - díky většímu kontextovému oknu
-- *Volání funkcí* - tento model má nativní volání funkcí, což umožňuje integraci s externími nástroji a API. Tato volání lze provádět jak paralelně, tak sekvenčně.
-- *Generování kódu* - tento model vyniká při generování kódu v Pythonu, Javě, TypeScriptu a C++.
+- *Volání funkcí* - tento model má nativní volání funkcí, což umožňuje integraci s externími nástroji a API. Tyto volání lze provádět paralelně nebo po jednom v sekvenčním pořadí.
+- *Generování kódu* - tento model exceluje v generování Pythonu, Javy, TypeScriptu a C++.
 
-### Příklad RAG s použitím Mistral Large 2
+### Příklad RAG pomocí Mistral Large 2
 
-V tomto příkladu používáme Mistral Large 2 k provedení RAG vzoru nad textovým dokumentem. Otázka je napsána v korejštině a ptá se na autorovy aktivity před vysokou školou.
+V tomto příkladu používáme Mistral Large 2 k běhu RAG vzoru nad textovým dokumentem. Otázka je napsána v korejštině a ptá se na aktivity autora před vysokou školou.
 
 Používá model Cohere Embeddings k vytvoření vnoření textového dokumentu i otázky. Pro tento příklad používá Python balíček faiss jako vektorový úložiště.
 
-Výzva zaslaná modelu Mistral zahrnuje jak otázky, tak i získané části, které jsou podobné otázce. Model pak poskytne odpověď v přirozeném jazyce.
+Výzva zaslaná modelu Mistral zahrnuje jak otázky, tak získané části, které jsou podobné otázce. Model poté poskytuje odpověď v přirozeném jazyce.
 
 ```python 
 pip install faiss-cpu
@@ -138,15 +138,15 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small je dalším modelem v rodině modelů Mistral v kategorii premier/podnikové. Jak název napovídá, tento model je malý jazykový model (SLM). Výhody používání Mistral Small jsou, že je:
-- Úspora nákladů ve srovnání s Mistral LLM jako Mistral Large a NeMo - 80% pokles ceny
-- Nízká latence - rychlejší odezva ve srovnání s Mistral LLM
-- Flexibilní - lze nasadit napříč různými prostředími s menšími omezeními na potřebné zdroje.
+Mistral Small je další model v rodině modelů Mistral pod kategorií premier/podnikové. Jak název napovídá, tento model je Malý jazykový model (SLM). Výhody používání Mistral Small jsou, že je:
+- Úsporný ve srovnání s Mistral LLM jako Mistral Large a NeMo - pokles ceny o 80%
+- Nízká latence - rychlejší odezva ve srovnání s LLM od Mistralu
+- Flexibilní - může být nasazen napříč různými prostředími s menšími omezeními na požadované zdroje.
 
 Mistral Small je skvělý pro:
-- Úkoly založené na textu, jako jsou shrnutí, analýza sentimentu a překlad.
-- Aplikace, kde jsou časté požadavky díky jeho nákladové efektivnosti
-- Úkoly s nízkou latencí, jako je revize a návrhy kódu
+- Úlohy založené na textu, jako je shrnutí, analýza sentimentu a překlad.
+- Aplikace, kde se často provádějí požadavky díky jeho nákladové efektivitě
+- Úlohy s nízkou latencí, jako je kontrola a návrhy kódu
 
 ## Porovnání Mistral Small a Mistral Large
 
@@ -214,23 +214,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Ve srovnání s dalšími dvěma modely probíranými v této lekci je Mistral NeMo jediným bezplatným modelem s licencí Apache2.
+Ve srovnání s dalšími dvěma modely diskutovanými v této lekci je Mistral NeMo jediným volně dostupným modelem s licencí Apache2.
 
-Je považován za vylepšení dřívějšího open source LLM od Mistral, Mistral 7B.
+Je považován za vylepšení dřívějšího open source LLM od Mistralu, Mistral 7B.
 
-Některé další funkce modelu NeMo jsou:
+Některé další vlastnosti modelu NeMo jsou:
 
-- *Efektivnější tokenizace:* Tento model používá tokenizer Tekken místo běžněji používaného tiktoken. To umožňuje lepší výkon pro více jazyků a kód.
+- *Efektivnější tokenizace:* Tento model používá tokenizátor Tekken namísto běžněji používaného tiktoken. To umožňuje lepší výkon v různých jazycích a kódech.
 
-- *Doladění:* Základní model je k dispozici pro doladění. To umožňuje větší flexibilitu pro případy použití, kde může být potřeba doladění.
+- *Doladění:* Základní model je k dispozici pro doladění. To umožňuje větší flexibilitu pro případy použití, kde může být doladění potřebné.
 
-- *Nativní volání funkcí* - Stejně jako Mistral Large, i tento model byl trénován na volání funkcí. To z něj činí jedinečný jako jeden z prvních open source modelů, který to umí.
+- *Nativní volání funkcí* - Stejně jako Mistral Large byl tento model vycvičen na volání funkcí. To ho činí jedním z prvních open source modelů, který to dokáže.
 
-### Porovnání tokenizérů
+### Porovnání tokenizátorů
 
 V tomto příkladu se podíváme, jak Mistral NeMo zpracovává tokenizaci ve srovnání s Mistral Large.
 
-Oba příklady berou stejnou výzvu, ale měli byste vidět, že NeMo vrací méně tokenů než Mistral Large.
+Oba příklady mají stejnou výzvu, ale měli byste vidět, že NeMo vrací méně tokenů než Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -350,7 +350,7 @@ print(len(tokens))
 
 ## Učení zde nekončí, pokračujte v cestě
 
-Po dokončení této lekce se podívejte na naši [Generativní AI Learning kolekci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali v rozšiřování svých znalostí o generativní AI!
+Po dokončení této lekce se podívejte na naši [kolekci učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali ve zvyšování svých znalostí o generativní AI!
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, vezměte prosím na vědomí, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí AI překladové služby [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za žádné nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

@@ -2,88 +2,90 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:16:06+00:00",
+  "translation_date": "2025-06-25T17:26:13+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "nl"
 }
 -->
-# Toepassingen voor afbeeldingsgeneratie bouwen
+# Bouw Toepassingen voor Beeldgeneratie
 
-Er is meer aan LLMs dan alleen tekstgeneratie. Het is ook mogelijk om afbeeldingen te genereren vanuit tekstbeschrijvingen. Afbeeldingen als modaliteit kunnen zeer nuttig zijn in verschillende gebieden, van MedTech, architectuur, toerisme, game-ontwikkeling en meer. In dit hoofdstuk zullen we kijken naar de twee meest populaire modellen voor afbeeldingsgeneratie, DALL-E en Midjourney.
+[![Bouw Toepassingen voor Beeldgeneratie](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.nl.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+
+Er is meer aan LLMs dan alleen tekstgeneratie. Het is ook mogelijk om beelden te genereren vanuit tekstbeschrijvingen. Beelden als een modaliteit kunnen zeer nuttig zijn in verschillende gebieden, van MedTech, architectuur, toerisme, spelontwikkeling en meer. In dit hoofdstuk zullen we de twee populairste beeldgeneratiemodellen, DALL-E en Midjourney, bekijken.
 
 ## Inleiding
 
 In deze les behandelen we:
 
-- Afbeeldingsgeneratie en waarom het nuttig is.
+- Beeldgeneratie en waarom het nuttig is.
 - DALL-E en Midjourney, wat ze zijn en hoe ze werken.
-- Hoe je een applicatie voor afbeeldingsgeneratie zou bouwen.
+- Hoe je een beeldgeneratietoepassing zou bouwen.
 
 ## Leerdoelen
 
 Na het voltooien van deze les kun je:
 
-- Een applicatie voor afbeeldingsgeneratie bouwen.
-- Grenzen voor je applicatie definiëren met metaprompts.
+- Een beeldgeneratietoepassing bouwen.
+- Grenzen voor je toepassing definiëren met metaprompts.
 - Werken met DALL-E en Midjourney.
 
-## Waarom een applicatie voor afbeeldingsgeneratie bouwen?
+## Waarom een beeldgeneratietoepassing bouwen?
 
-Applicaties voor afbeeldingsgeneratie zijn een geweldige manier om de mogelijkheden van Generatieve AI te verkennen. Ze kunnen bijvoorbeeld worden gebruikt voor:
+Beeldgeneratietoepassingen zijn een geweldige manier om de mogelijkheden van Generatieve AI te verkennen. Ze kunnen bijvoorbeeld worden gebruikt voor:
 
-- **Afbeeldingsbewerking en synthese**. Je kunt afbeeldingen genereren voor verschillende toepassingen, zoals afbeeldingsbewerking en afbeeldingssynthese.
+- **Beeldbewerking en synthese**. Je kunt beelden genereren voor verschillende toepassingen, zoals beeldbewerking en beeldsynthese.
 
-- **Toegepast in verschillende industrieën**. Ze kunnen ook worden gebruikt om afbeeldingen te genereren voor verschillende industrieën zoals Medtech, Toerisme, Game-ontwikkeling en meer.
+- **Toegepast in verschillende industrieën**. Ze kunnen ook worden gebruikt om beelden te genereren voor verschillende industrieën zoals Medtech, Toerisme, Spelontwikkeling en meer.
 
 ## Scenario: Edu4All
 
-Als onderdeel van deze les blijven we werken met onze startup, Edu4All. De studenten zullen afbeeldingen maken voor hun beoordelingen, precies welke afbeeldingen is aan de studenten, maar ze kunnen illustraties zijn voor hun eigen sprookje of een nieuw personage voor hun verhaal creëren of hen helpen hun ideeën en concepten te visualiseren.
+Als onderdeel van deze les zullen we verder werken met onze startup, Edu4All. De studenten zullen beelden creëren voor hun beoordelingen, precies welke beelden is aan de studenten, maar ze kunnen illustraties maken voor hun eigen sprookje of een nieuw personage voor hun verhaal creëren of hen helpen hun ideeën en concepten te visualiseren.
 
-Hier is een voorbeeld van wat Edu4All's studenten zouden kunnen genereren als ze in de klas werken aan monumenten:
+Hier is een voorbeeld van wat de studenten van Edu4All zouden kunnen genereren als ze in de klas werken aan monumenten:
 
-![Edu4All startup, klas over monumenten, Eiffeltoren](../../../translated_images/startup.ec211d74fef9f4175010c3334942b715514230415744b9dd0a69a19f4ad68786.nl.png)
+![Edu4All startup, klas over monumenten, Eiffeltoren](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.nl.png)
 
 met een prompt zoals
 
 > "Hond naast de Eiffeltoren in de vroege ochtendzon"
 
-## Wat zijn DALL-E en Midjourney?
+## Wat is DALL-E en Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) en [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) zijn twee van de meest populaire modellen voor afbeeldingsgeneratie, ze stellen je in staat om met prompts afbeeldingen te genereren.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) en [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) zijn twee van de populairste beeldgeneratiemodellen, ze stellen je in staat om prompts te gebruiken om beelden te genereren.
 
 ### DALL-E
 
-Laten we beginnen met DALL-E, een Generatieve AI-model dat afbeeldingen genereert vanuit tekstbeschrijvingen.
+Laten we beginnen met DALL-E, een Generatieve AI-model dat beelden genereert vanuit tekstbeschrijvingen.
 
 > [DALL-E is een combinatie van twee modellen, CLIP en diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, is een model dat embeddings genereert, wat numerieke representaties van data zijn, vanuit afbeeldingen en tekst.
+- **CLIP**, is een model dat embeddings genereert, wat numerieke representaties van data zijn, vanuit beelden en tekst.
 
-- **Diffused attention**, is een model dat afbeeldingen genereert vanuit embeddings. DALL-E is getraind op een dataset van afbeeldingen en tekst en kan worden gebruikt om afbeeldingen te genereren vanuit tekstbeschrijvingen. Bijvoorbeeld, DALL-E kan worden gebruikt om afbeeldingen te genereren van een kat met een hoed, of een hond met een hanenkam.
+- **Diffused attention**, is een model dat beelden genereert vanuit embeddings. DALL-E is getraind op een dataset van beelden en tekst en kan worden gebruikt om beelden te genereren vanuit tekstbeschrijvingen. Bijvoorbeeld, DALL-E kan worden gebruikt om beelden te genereren van een kat met een hoed, of een hond met een hanenkam.
 
 ### Midjourney
 
-Midjourney werkt op een vergelijkbare manier als DALL-E, het genereert afbeeldingen vanuit tekstprompts. Midjourney kan ook worden gebruikt om afbeeldingen te genereren met prompts zoals "een kat met een hoed", of een "hond met een hanenkam".
+Midjourney werkt op een vergelijkbare manier als DALL-E, het genereert beelden vanuit tekstprompts. Midjourney kan ook worden gebruikt om beelden te genereren met prompts zoals "een kat met een hoed", of een "hond met een hanenkam".
 
-![Afbeelding gegenereerd door Midjourney, mechanische duif](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Afbeelding cred Wikipedia, afbeelding gegenereerd door Midjourney_
+![Beeld gegenereerd door Midjourney, mechanische duif](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_Beeldcred Wikipedia, beeld gegenereerd door Midjourney_
 
 ## Hoe werken DALL-E en Midjourney
 
-Eerst, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E is een Generatieve AI-model gebaseerd op de transformer architectuur met een _autoregressieve transformer_.
+Ten eerste, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E is een Generatieve AI-model gebaseerd op de transformerarchitectuur met een _autoregressieve transformer_.
 
-Een _autoregressieve transformer_ definieert hoe een model afbeeldingen genereert vanuit tekstbeschrijvingen, het genereert één pixel tegelijk, en gebruikt dan de gegenereerde pixels om de volgende pixel te genereren. Dit proces gaat door meerdere lagen in een neuraal netwerk, totdat de afbeelding compleet is.
+Een _autoregressieve transformer_ definieert hoe een model beelden genereert vanuit tekstbeschrijvingen, het genereert één pixel tegelijk, en gebruikt vervolgens de gegenereerde pixels om de volgende pixel te genereren. Het doorloopt meerdere lagen in een neuraal netwerk, totdat het beeld compleet is.
 
-Met dit proces controleert DALL-E, attributen, objecten, kenmerken en meer in de afbeelding die het genereert. Echter, DALL-E 2 en 3 hebben meer controle over de gegenereerde afbeelding.
+Met dit proces controleert DALL-E attributen, objecten, kenmerken en meer in het beeld dat het genereert. Echter, DALL-E 2 en 3 hebben meer controle over het gegenereerde beeld.
 
-## Je eerste applicatie voor afbeeldingsgeneratie bouwen
+## Je eerste beeldgeneratietoepassing bouwen
 
-Wat is er nodig om een applicatie voor afbeeldingsgeneratie te bouwen? Je hebt de volgende bibliotheken nodig:
+Wat is er nodig om een beeldgeneratietoepassing te bouwen? Je hebt de volgende bibliotheken nodig:
 
-- **python-dotenv**, je wordt sterk aangeraden om deze bibliotheek te gebruiken om je geheimen in een _.env_ bestand weg te houden van de code.
+- **python-dotenv**, het wordt sterk aanbevolen om deze bibliotheek te gebruiken om je geheimen in een _.env_ bestand weg van de code te bewaren.
 - **openai**, deze bibliotheek gebruik je om te communiceren met de OpenAI API.
-- **pillow**, om met afbeeldingen in Python te werken.
-- **requests**, om je te helpen HTTP-verzoeken te maken.
+- **pillow**, om met beelden in Python te werken.
+- **requests**, om je te helpen HTTP-verzoeken te doen.
 
 1. Maak een bestand _.env_ met de volgende inhoud:
 
@@ -111,7 +113,7 @@ Wat is er nodig om een applicatie voor afbeeldingsgeneratie te bouwen? Je hebt d
    pip install -r requirements.txt
    ```
 
-   Voor Windows, gebruik de volgende commando's om je virtuele omgeving te maken en te activeren:
+   Voor Windows, gebruik de volgende commando's om je virtuele omgeving te creëren en te activeren:
 
    ```bash
    python3 -m venv venv
@@ -175,7 +177,7 @@ Wat is er nodig om een applicatie voor afbeeldingsgeneratie te bouwen? Je hebt d
 
 Laten we deze code uitleggen:
 
-- Eerst importeren we de bibliotheken die we nodig hebben, inclusief de OpenAI bibliotheek, de dotenv bibliotheek, de requests bibliotheek en de Pillow bibliotheek.
+- Eerst importeren we de bibliotheken die we nodig hebben, inclusief de OpenAI bibliotheek, de dotenv bibliotheek, de requests bibliotheek, en de Pillow bibliotheek.
 
   ```python
   import openai
@@ -204,7 +206,7 @@ Laten we deze code uitleggen:
   openai.api_type = 'azure'
   ```
 
-- Vervolgens genereren we de afbeelding:
+- Vervolgens genereren we het beeld:
 
   ```python
   # Create an image by using the image generation API
@@ -216,18 +218,18 @@ Laten we deze code uitleggen:
   )
   ```
 
-  De bovenstaande code reageert met een JSON-object dat de URL van de gegenereerde afbeelding bevat. We kunnen de URL gebruiken om de afbeelding te downloaden en op te slaan in een bestand.
+  De bovenstaande code reageert met een JSON-object dat de URL van het gegenereerde beeld bevat. We kunnen de URL gebruiken om het beeld te downloaden en op te slaan in een bestand.
 
-- Ten slotte openen we de afbeelding en gebruiken de standaard afbeeldingsviewer om deze weer te geven:
+- Ten slotte openen we het beeld en gebruiken we de standaard beeldviewer om het weer te geven:
 
   ```python
   image = Image.open(image_path)
   image.show()
   ```
 
-### Meer details over het genereren van de afbeelding
+### Meer details over het genereren van het beeld
 
-Laten we naar de code kijken die de afbeelding genereert in meer detail:
+Laten we de code die het beeld genereert in meer detail bekijken:
 
 ```python
 generation_response = openai.Image.create(
@@ -238,20 +240,20 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, is de tekstprompt die wordt gebruikt om de afbeelding te genereren. In dit geval gebruiken we de prompt "Konijn op paard, met een lolly, op een mistige weide waar narcissen groeien".
-- **size**, is de grootte van de afbeelding die wordt gegenereerd. In dit geval genereren we een afbeelding van 1024x1024 pixels.
-- **n**, is het aantal afbeeldingen dat wordt gegenereerd. In dit geval genereren we twee afbeeldingen.
+- **prompt**, is de tekstprompt die wordt gebruikt om het beeld te genereren. In dit geval gebruiken we de prompt "Konijn op paard, met een lolly, op een mistige weide waar narcissen groeien".
+- **size**, is de grootte van het beeld dat wordt gegenereerd. In dit geval genereren we een beeld van 1024x1024 pixels.
+- **n**, is het aantal beelden dat wordt gegenereerd. In dit geval genereren we twee beelden.
 - **temperature**, is een parameter die de willekeurigheid van de output van een Generatieve AI-model controleert. De temperatuur is een waarde tussen 0 en 1 waarbij 0 betekent dat de output deterministisch is en 1 betekent dat de output willekeurig is. De standaardwaarde is 0.7.
 
-Er zijn meer dingen die je met afbeeldingen kunt doen die we in de volgende sectie zullen behandelen.
+Er zijn meer dingen die je kunt doen met beelden die we in het volgende gedeelte zullen behandelen.
 
-## Aanvullende mogelijkheden van afbeeldingsgeneratie
+## Aanvullende mogelijkheden van beeldgeneratie
 
-Je hebt tot nu toe gezien hoe we in staat waren om een afbeelding te genereren met een paar regels in Python. Er zijn echter meer dingen die je met afbeeldingen kunt doen.
+Je hebt tot nu toe gezien hoe we een beeld konden genereren met een paar regels in Python. Er zijn echter meer dingen die je kunt doen met beelden.
 
 Je kunt ook het volgende doen:
 
-- **Bewerkingen uitvoeren**. Door een bestaande afbeelding een masker en een prompt te geven, kun je een afbeelding wijzigen. Bijvoorbeeld, je kunt iets toevoegen aan een deel van een afbeelding. Stel je onze konijnenafbeelding voor, je kunt een hoed toevoegen aan het konijn. Hoe je dat zou doen is door de afbeelding, een masker (dat het deel van het gebied voor de verandering identificeert) en een tekstprompt te geven om te zeggen wat er moet worden gedaan.
+- **Bewerkingen uitvoeren**. Door een bestaand beeld een masker en een prompt te geven, kun je een beeld wijzigen. Bijvoorbeeld, je kunt iets toevoegen aan een deel van een beeld. Stel je ons konijnbeeld voor, je kunt een hoed aan het konijn toevoegen. Hoe je dat zou doen is door het beeld, een masker (dat het deel van het gebied voor de wijziging identificeert) en een tekstprompt te geven om te zeggen wat er moet worden gedaan.
 
   ```python
   response = openai.Image.create_edit(
@@ -264,9 +266,9 @@ Je kunt ook het volgende doen:
   image_url = response['data'][0]['url']
   ```
 
-  De basisafbeelding zou alleen het konijn bevatten, maar de uiteindelijke afbeelding zou de hoed op het konijn hebben.
+  Het basisbeeld zou alleen het konijn bevatten, maar het uiteindelijke beeld zou de hoed op het konijn hebben.
 
-- **Variaties creëren**. Het idee is dat je een bestaande afbeelding neemt en vraagt dat er variaties worden gemaakt. Om een variatie te creëren, geef je een afbeelding en een tekstprompt en code zoals volgt:
+- **Variaties creëren**. Het idee is dat je een bestaand beeld neemt en vraagt dat er variaties worden gemaakt. Om een variatie te creëren, geef je een beeld en een tekstprompt en code zoals volgt:
 
   ```python
   response = openai.Image.create_variation(
@@ -283,17 +285,17 @@ Je kunt ook het volgende doen:
 
 Temperatuur is een parameter die de willekeurigheid van de output van een Generatieve AI-model controleert. De temperatuur is een waarde tussen 0 en 1 waarbij 0 betekent dat de output deterministisch is en 1 betekent dat de output willekeurig is. De standaardwaarde is 0.7.
 
-Laten we eens kijken naar een voorbeeld van hoe temperatuur werkt, door deze prompt twee keer uit te voeren:
+Laten we een voorbeeld bekijken van hoe temperatuur werkt, door deze prompt twee keer uit te voeren:
 
-> Prompt: "Konijn op paard, met een lolly, op een mistige weide waar narcissen groeien"
+> Prompt : "Konijn op paard, met een lolly, op een mistige weide waar narcissen groeien"
 
-![Konijn op een paard met een lolly, versie 1](../../../translated_images/v1-generated-image.208ba0525ed6ae505504aa852e28d334c0440e9931b7c97f9508176a22d2dd54.nl.png)
+![Konijn op een paard met een lolly, versie 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.nl.png)
 
-Laten we nu diezelfde prompt nog eens uitvoeren om te zien dat we niet twee keer dezelfde afbeelding krijgen:
+Nu laten we dezelfde prompt nog een keer uitvoeren om te zien dat we niet hetzelfde beeld twee keer krijgen:
 
-![Gegenereerde afbeelding van konijn op paard](../../../translated_images/v2-generated-image.f0a88c05ef476e95f3682d4b21c9ba2f4807ae71cc29e9c05b42ebbf497cf61b.nl.png)
+![Gegenereerd beeld van konijn op paard](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.nl.png)
 
-Zoals je kunt zien, zijn de afbeeldingen vergelijkbaar, maar niet hetzelfde. Laten we proberen de temperatuurwaarde te veranderen naar 0.1 en zien wat er gebeurt:
+Zoals je kunt zien, zijn de beelden vergelijkbaar, maar niet hetzelfde. Laten we proberen de temperatuurwaarde te veranderen naar 0.1 en zien wat er gebeurt:
 
 ```python
  generation_response = openai.Image.create(
@@ -305,7 +307,7 @@ Zoals je kunt zien, zijn de afbeeldingen vergelijkbaar, maar niet hetzelfde. Lat
 
 ### De temperatuur veranderen
 
-Laten we dus proberen de reactie meer deterministisch te maken. We konden observeren van de twee afbeeldingen die we genereerden dat in de eerste afbeelding er een konijn is en in de tweede afbeelding een paard, dus de afbeeldingen variëren sterk.
+Laten we proberen de respons meer deterministisch te maken. We konden observeren van de twee beelden die we genereerden dat er in het eerste beeld een konijn is en in het tweede beeld een paard, dus de beelden variëren sterk.
 
 Laten we daarom onze code veranderen en de temperatuur instellen op 0, zoals volgt:
 
@@ -318,26 +320,26 @@ generation_response = openai.Image.create(
     )
 ```
 
-Nu, wanneer je deze code uitvoert, krijg je deze twee afbeeldingen:
+Nu wanneer je deze code uitvoert, krijg je deze twee beelden:
 
-- ![Temperatuur 0, v1](../../../translated_images/v1-temp-generated-image.d8557be792b5c81c2c6d2804cb7b210fe8b340106fe4ffcadf9cf7de1cd7b991.nl.png)
-- ![Temperatuur 0, v2](../../../translated_images/v2-temp-generated-image.bd412fcfbd43379312b1382212a332aa311ca1a80ea692dea50a8b876a487c61.nl.png)
+- ![Temperatuur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.nl.png)
+- ![Temperatuur 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.nl.png)
 
-Hier kun je duidelijk zien hoe de afbeeldingen meer op elkaar lijken.
+Hier kun je duidelijk zien hoe de beelden elkaar meer lijken.
 
-## Hoe grenzen voor je applicatie definiëren met metaprompts
+## Hoe grenzen voor je toepassing te definiëren met metaprompts
 
-Met onze demo kunnen we al afbeeldingen genereren voor onze klanten. We moeten echter enkele grenzen creëren voor onze applicatie.
+Met onze demo kunnen we al beelden genereren voor onze klanten. Echter, we moeten enkele grenzen voor onze toepassing creëren.
 
-Bijvoorbeeld, we willen geen afbeeldingen genereren die niet geschikt zijn voor werk, of die niet geschikt zijn voor kinderen.
+Bijvoorbeeld, we willen geen beelden genereren die niet veilig zijn voor werk, of die niet geschikt zijn voor kinderen.
 
-We kunnen dit doen met _metaprompts_. Metaprompts zijn tekstprompts die worden gebruikt om de output van een Generatieve AI-model te controleren. Bijvoorbeeld, we kunnen metaprompts gebruiken om de output te controleren en ervoor te zorgen dat de gegenereerde afbeeldingen geschikt zijn voor werk, of geschikt zijn voor kinderen.
+We kunnen dit doen met _metaprompts_. Metaprompts zijn tekstprompts die worden gebruikt om de output van een Generatieve AI-model te controleren. Bijvoorbeeld, we kunnen metaprompts gebruiken om de output te controleren, en ervoor zorgen dat de gegenereerde beelden veilig zijn voor werk, of geschikt voor kinderen.
 
 ### Hoe werkt het?
 
 Nu, hoe werken metaprompts?
 
-Metaprompts zijn tekstprompts die worden gebruikt om de output van een Generatieve AI-model te controleren, ze worden vóór de tekstprompt geplaatst en worden gebruikt om de output van het model te controleren en ingebed in applicaties om de output van het model te controleren. Ze kapselen de promptinvoer en de metapromptinvoer in een enkele tekstprompt in.
+Metaprompts zijn tekstprompts die worden gebruikt om de output van een Generatieve AI-model te controleren, ze worden vóór de tekstprompt geplaatst, en worden gebruikt om de output van het model te controleren en ingebed in toepassingen om de output van het model te controleren. De promptinput en de metapromptinput in één tekstprompt samenvoegen.
 
 Een voorbeeld van een metaprompt zou het volgende zijn:
 
@@ -358,7 +360,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Laten we nu eens kijken hoe we metaprompts kunnen gebruiken in onze demo.
+Nu, laten we zien hoe we metaprompts in onze demo kunnen gebruiken.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -383,13 +385,13 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Uit de bovenstaande prompt kun je zien hoe alle afbeeldingen die worden gemaakt rekening houden met de metaprompt.
+Uit de bovenstaande prompt kun je zien hoe alle beelden die worden gecreëerd rekening houden met de metaprompt.
 
 ## Opdracht - laten we studenten in staat stellen
 
-We hebben Edu4All aan het begin van deze les geïntroduceerd. Nu is het tijd om de studenten in staat te stellen afbeeldingen te genereren voor hun beoordelingen.
+We introduceerden Edu4All aan het begin van deze les. Nu is het tijd om de studenten in staat te stellen beelden te genereren voor hun beoordelingen.
 
-De studenten zullen afbeeldingen maken voor hun beoordelingen die monumenten bevatten, precies welke monumenten is aan de studenten. De studenten worden gevraagd hun creativiteit in deze taak te gebruiken om deze monumenten in verschillende contexten te plaatsen.
+De studenten zullen beelden creëren voor hun beoordelingen met monumenten, precies welke monumenten is aan de studenten. De studenten worden gevraagd hun creativiteit te gebruiken in deze taak om deze monumenten in verschillende contexten te plaatsen.
 
 ## Oplossing
 
@@ -465,11 +467,11 @@ except openai.InvalidRequestError as err:
     print(err)
 ```
 
-## Geweldig werk! Ga door met je leerproces
+## Goed Werk! Ga Verder met Je Leren
 
-Na het voltooien van deze les, bekijk onze [Generatieve AI Leerverzameling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis over Generatieve AI verder te verdiepen!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generatieve AI verder uit te breiden!
 
-Ga naar Les 10 waar we zullen kijken hoe we [AI-toepassingen met low-code kunnen bouwen](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Ga naar Les 10 waar we zullen kijken naar hoe je [AI-toepassingen kunt bouwen met low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.

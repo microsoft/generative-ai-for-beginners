@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T06:41:44+00:00",
+  "translation_date": "2025-06-25T23:42:49+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "ms"
 }
 -->
 # Pengenalan kepada Rangkaian Neural: Perceptron
 
-Salah satu percubaan pertama untuk melaksanakan sesuatu yang serupa dengan rangkaian neural moden telah dilakukan oleh Frank Rosenblatt dari Cornell Aeronautical Laboratory pada tahun 1957. Ia adalah pelaksanaan perkakasan yang dipanggil "Mark-1", direka untuk mengenali bentuk geometri primitif, seperti segitiga, segi empat dan bulatan.
+Salah satu percubaan pertama untuk melaksanakan sesuatu yang serupa dengan rangkaian neural moden telah dilakukan oleh Frank Rosenblatt dari Cornell Aeronautical Laboratory pada tahun 1957. Ia adalah pelaksanaan perkakasan yang dipanggil "Mark-1", direka untuk mengenali bentuk geometri primitif, seperti segi tiga, segi empat dan bulatan.
 
 |      |      |
 |--------------|-----------|
@@ -17,36 +17,36 @@ Salah satu percubaan pertama untuk melaksanakan sesuatu yang serupa dengan rangk
 
 > Imej dari Wikipedia
 
-Imej input diwakili oleh susunan fotocell 20x20, jadi rangkaian neural mempunyai 400 input dan satu output binari. Rangkaian mudah mengandungi satu neuron, juga dipanggil **unit logik ambang**. Berat rangkaian neural bertindak seperti potensiometer yang memerlukan pelarasan manual semasa fasa latihan.
+Imej input diwakili oleh tatasusunan fotocell 20x20, jadi rangkaian neural mempunyai 400 input dan satu output binari. Rangkaian mudah mengandungi satu neuron, juga dipanggil **unit logik ambang**. Berat rangkaian neural bertindak seperti potensiometer yang memerlukan pelarasan manual semasa fasa latihan.
 
-> ✅ Potensiometer ialah peranti yang membolehkan pengguna melaraskan rintangan litar.
+> ✅ Potensiometer adalah peranti yang membolehkan pengguna melaraskan rintangan litar.
 
-> The New York Times menulis tentang perceptron pada masa itu: *embrio komputer elektronik yang [Tentera Laut] jangkakan akan dapat berjalan, bercakap, melihat, menulis, membiak sendiri dan sedar akan kewujudannya.*
+> The New York Times menulis tentang perceptron pada masa itu: *embrio komputer elektronik yang [Tentera Laut] harapkan dapat berjalan, bercakap, melihat, menulis, membiak sendiri dan sedar akan kewujudannya.*
 
 ## Model Perceptron
 
-Katakan kita mempunyai N ciri dalam model kita, dalam hal ini vektor input akan menjadi vektor bersaiz N. Perceptron ialah model **pengelasan binari**, iaitu ia boleh membezakan antara dua kelas data input. Kami akan mengandaikan bahawa untuk setiap vektor input x output perceptron kami akan sama ada +1 atau -1, bergantung pada kelas. Output akan dikira menggunakan formula:
+Anggap kita mempunyai N ciri dalam model kita, dalam kes ini vektor input adalah vektor saiz N. Perceptron adalah model **pengelasan binari**, iaitu ia boleh membezakan antara dua kelas data input. Kita akan menganggap bahawa untuk setiap vektor input x output perceptron kita adalah sama ada +1 atau -1, bergantung pada kelas. Output akan dikira menggunakan formula:
 
 y(x) = f(w<sup>T</sup>x)
 
-di mana f ialah fungsi pengaktifan langkah
+di mana f adalah fungsi pengaktifan langkah
 
 ## Melatih Perceptron
 
-Untuk melatih perceptron kita perlu mencari vektor berat w yang mengelaskan kebanyakan nilai dengan betul, iaitu menghasilkan **ralat** yang paling kecil. Ralat ini ditakrifkan oleh **kriteria perceptron** dengan cara berikut:
+Untuk melatih perceptron kita perlu mencari vektor berat w yang mengklasifikasikan kebanyakan nilai dengan betul, iaitu menghasilkan **ralat** terkecil. Ralat ini ditakrifkan oleh **kriteria perceptron** dengan cara berikut:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 di mana:
 
-* jumlah diambil pada titik data latihan i yang mengakibatkan pengelasan salah
-* x<sub>i</sub> ialah data input, dan t<sub>i</sub> sama ada -1 atau +1 untuk contoh negatif dan positif mengikut keperluan.
+* jumlah diambil pada titik data latihan i yang menghasilkan pengelasan salah
+* x<sub>i</sub> adalah data input, dan t<sub>i</sub> adalah sama ada -1 atau +1 untuk contoh negatif dan positif sewajarnya.
 
-Kriteria ini dianggap sebagai fungsi berat w, dan kita perlu meminimumkannya. Selalunya, kaedah yang dipanggil **kecerunan menurun** digunakan, di mana kita bermula dengan beberapa berat awal w<sup>(0)</sup>, dan kemudian pada setiap langkah mengemas kini berat mengikut formula:
+Kriteria ini dianggap sebagai fungsi berat w, dan kita perlu meminimumkannya. Selalunya, kaedah yang dipanggil **penurunan kecerunan** digunakan, di mana kita bermula dengan beberapa berat awal w<sup>(0)</sup>, dan kemudian pada setiap langkah mengemas kini berat mengikut formula:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Di sini η dipanggil **kadar pembelajaran**, dan ∇E(w) menandakan **kecerunan** E. Selepas kita mengira kecerunan, kita akan mendapat
+Di sini η adalah **kadar pembelajaran**, dan ∇E(w) menunjukkan **kecerunan** E. Selepas kita mengira kecerunan, kita berakhir dengan
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
@@ -74,7 +74,7 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Kesimpulan
 
-Dalam pelajaran ini, anda telah belajar tentang perceptron, yang merupakan model pengelasan binari, dan cara melatihnya dengan menggunakan vektor berat.
+Dalam pelajaran ini, anda belajar tentang perceptron, yang merupakan model pengelasan binari, dan cara melatihnya dengan menggunakan vektor berat.
 
 ## 🚀 Cabaran
 
@@ -88,10 +88,10 @@ Berikut adalah artikel menarik tentang perceptrons juga.
 
 ## Tugasan
 
-Dalam pelajaran ini, kami telah melaksanakan perceptron untuk tugas pengelasan binari, dan kami telah menggunakannya untuk mengelaskan antara dua digit tulisan tangan. Dalam makmal ini, anda diminta untuk menyelesaikan masalah pengelasan digit sepenuhnya, iaitu menentukan digit mana yang paling mungkin sepadan dengan imej yang diberikan.
+Dalam pelajaran ini, kami telah melaksanakan perceptron untuk tugas pengelasan binari, dan kami telah menggunakannya untuk mengklasifikasikan antara dua digit tulisan tangan. Dalam makmal ini, anda diminta untuk menyelesaikan masalah pengelasan digit sepenuhnya, iaitu menentukan digit mana yang paling mungkin sepadan dengan imej yang diberikan.
 
 * Arahan
-* Buku nota
+* Buku Nota
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

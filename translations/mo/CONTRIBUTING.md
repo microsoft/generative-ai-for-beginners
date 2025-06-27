@@ -2,121 +2,121 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:11:13+00:00",
+  "translation_date": "2025-06-25T07:02:31+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "mo"
 }
 -->
-# Contributing
+# 貢獻
 
-This project encourages contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) stating that you have the rights to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
+此專案歡迎貢獻和建議。大多數貢獻需要您同意貢獻者許可協議 (CLA)，聲明您有權並實際授予我們使用您貢獻的權利。詳情請訪問 <https://cla.microsoft.com>。
 
-> Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
+> 重要：在翻譯此儲存庫中的文字時，請確保不使用機器翻譯。我們將通過社群驗證翻譯，因此請僅自願翻譯您精通的語言。
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and appropriately mark the PR (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
+當您提交 pull request 時，CLA-bot 將自動確定您是否需要提供 CLA 並適當標記 PR（例如，標籤、評論）。只需按照機器人的指示進行操作。您只需在所有使用我們 CLA 的儲存庫中執行一次此操作。
 
-## Code of Conduct
+## 行為準則
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
-For more information, read the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+此專案採用了 [Microsoft 開源行為準則](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst)。如需更多資訊，請閱讀 [行為準則 FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) 或聯繫 [opencode@microsoft.com](mailto:opencode@microsoft.com) 提出其他問題或評論。
 
-## Question or Problem?
+## 問題或疑問？
 
-Please do not open GitHub issues for general support questions as the GitHub list should be used for feature requests and bug reports. This way we can more easily track actual issues or bugs from the code and keep the general discussion separate from the actual code.
+請不要為一般支持問題開 GitHub 問題，因為 GitHub 列表應用於功能請求和錯誤報告。這樣我們可以更輕鬆地追蹤實際問題或程式碼中的錯誤，並將一般討論與實際程式碼分開。
 
-## Typos, Issues, Bugs and contributions
+## 錯字、問題、錯誤和貢獻
 
-Whenever you are submitting any changes to the Generative AI for Beginners repository, please follow these recommendations.
+每當您提交任何更改到 Generative AI for Beginners 儲存庫時，請遵循以下建議。
 
-* Always fork the repository to your own account before making your modifications.
-* Do not combine multiple changes into one pull request. For example, submit any bug fix and documentation updates using separate PRs.
-* If your pull request shows merge conflicts, make sure to update your local main to mirror what's in the main repository before making your modifications.
-* If you are submitting a translation, please create one PR for all the translated files as we don't accept partial translations for the content.
-* If you are submitting a typo or documentation fix, you can combine modifications into a single PR where suitable.
+* 在進行修改之前，始終將儲存庫 fork 到您自己的帳戶
+* 不要將多個更改合併到一個 pull request 中。例如，提交任何錯誤修復和文件更新時，請使用單獨的 PR
+* 如果您的 pull request 顯示合併衝突，請確保在進行修改之前更新您本地的 main 以鏡像主儲存庫中的內容
+* 如果您提交的是翻譯，請為所有翻譯的文件創建一個 PR，因為我們不接受內容的部分翻譯
+* 如果您提交的是錯字或文件修復，您可以在合適的地方將修改合併到單個 PR
 
-## General Guidance for writing
+## 撰寫的一般指導
 
-- Ensure that all your URLs are wrapped in square brackets followed by a parenthesis with no extra spaces around them or inside them `[](../..)`.
-- Ensure that any relative link (i.e., links to other files and folders in the repository) starts with a `./` referring to a file or a folder located in the current working directory or a `../` referring to a file or a folder located in a parent working directory.
-- Ensure that any relative link (i.e., links to other files and folders in the repository) has a tracking ID (i.e., `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
-- Ensure that any URL from the following domains _github.com, microsoft.com, visualstudio.com, aka.ms, and azure.com_ has a tracking ID (i.e., `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
-- Ensure that your links don't have country-specific locale in them (i.e., `/en-us/` or `/en/`).
-- Ensure that all images are stored in the `./images` folder.
-- Ensure that the images have descriptive names using English characters, numbers, and dashes in the name of your image.
+- 確保所有的 URL 都用方括號包裹，後跟括號，括號內外沒有多餘的空格 `[](../..)`。
+- 確保任何相對連結（即儲存庫中其他文件和資料夾的連結）以 `./` 開頭，指向當前工作目錄中的文件或資料夾，或者以 `../` 開頭，指向父工作目錄中的文件或資料夾。
+- 確保任何相對連結（即儲存庫中其他文件和資料夾的連結）在末尾有一個追蹤 ID（即 `?` 或 `&`，然後是 `wt.mc_id=` 或 `WT.mc_id=`）。
+- 確保以下域名的任何 URL _github.com, microsoft.com, visualstudio.com, aka.ms, 和 azure.com_ 在末尾有一個追蹤 ID（即 `?` 或 `&`，然後是 `wt.mc_id=` 或 `WT.mc_id=`）。
+- 確保您的連結中沒有特定國家的語言區域（即 `/en-us/` 或 `/en/`）。
+- 確保所有圖片都存儲在 `./images` 資料夾中。
+- 確保圖片使用描述性的名稱，名稱中使用英文字符、數字和短橫線。
 
-## GitHub Workflows
+## GitHub 工作流程
 
-When you submit a pull request, four different workflows will be triggered to validate the previous rules. Simply follow the instructions listed here to pass the workflow checks.
+當您提交 pull request 時，將觸發四種不同的工作流程以驗證之前的規則。只需按照此處列出的指示即可通過工作流程檢查。
 
-- [Check Broken Relative Paths](../..)
-- [Check Paths Have Tracking](../..)
-- [Check URLs Have Tracking](../..)
-- [Check URLs Don't Have Locale](../..)
+- [檢查損壞的相對路徑](../..)
+- [檢查路徑是否有追蹤](../..)
+- [檢查 URL 是否有追蹤](../..)
+- [檢查 URL 是否沒有區域](../..)
 
-### Check Broken Relative Paths
+### 檢查損壞的相對路徑
 
-This workflow ensures that any relative path in your files is working. This repository is deployed to GitHub pages so you need to be very careful when you type the links that glue everything together to not direct anyone to the wrong place.
+此工作流程確保文件中的任何相對路徑都有效。此儲存庫部署到 GitHub 頁面，因此在鍵入將所有內容粘合在一起的連結時需要非常小心，以免將任何人引導到錯誤的地方。
 
-To make sure that your links are working properly simply use VS code to check that.
+為確保您的連結正常工作，只需使用 VS code 檢查即可。
 
-For example, when you hover over any link in your files you will be prompted to follow the link by pressing on **ctrl + click**
+例如，當您將滑鼠懸停在文件中的任何連結上時，系統會提示您按 **ctrl + click** 以跟隨連結。
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.mo.png)
+![VS code 跟隨連結截圖](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.mo.png)
 
-If you click on a link and it's not working locally then, surely it will trigger the workflow and won't work on GitHub.
+如果您點擊連結並且它在本地不起作用，那麼它肯定會觸發工作流程並且在 GitHub 上也不起作用。
 
-To fix this issue, try to type the link with the help of VS code.
+要修復此問題，請嘗試在 VS code 的幫助下鍵入連結。
 
-When you type `./` or `../` VS code will prompt you to choose from the available options according to what you typed.
+當您鍵入 `./` 或 `../` 時，VS code 會提示您根據您鍵入的內容從可用選項中選擇。
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.mo.png)
+![VS code 選擇相對路徑截圖](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.mo.png)
 
-Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
+通過點擊所需的文件或資料夾來跟隨路徑，您可以確保路徑沒有損壞。
 
-Once you add the correct relative path, save, and push your changes the workflow will be triggered again to verify your changes. If you pass the check then you are good to go.
+一旦您添加了正確的相對路徑，保存並推送更改，工作流程將再次觸發以驗證您的更改。如果您通過了檢查，那麼您就可以繼續了。
 
-### Check Paths Have Tracking
+### 檢查路徑是否有追蹤
 
-This workflow ensures that any relative path has tracking in it. This repository is deployed to GitHub pages so we need to track the movement between the different files and folders.
+此工作流程確保任何相對路徑中都有追蹤。此儲存庫部署到 GitHub 頁面，因此我們需要追蹤不同文件和資料夾之間的移動。
 
-To make sure your relative paths have tracking in them simply check for the following text `?wt.mc_id=` at the end of the path. If it's appended to your relative paths then you will pass this check.
+為確保您的相對路徑中有追蹤，只需檢查路徑末尾的以下文字 `?wt.mc_id=`。如果它被附加到您的相對路徑中，那麼您將通過此檢查。
 
-If not, you may get the following error.
+如果沒有，您可能會收到以下錯誤。
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.mo.png)
+![GitHub 檢查路徑缺少追蹤評論截圖](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.mo.png)
 
-To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
+要修復此問題，請嘗試打開工作流程突出顯示的文件路徑，並在相對路徑的末尾添加追蹤 ID。
 
-Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes. If you pass the check then you are good to go.
+一旦您添加了追蹤 ID，保存並推送更改，工作流程將再次觸發以驗證您的更改。如果您通過了檢查，那麼您就可以繼續了。
 
-### Check URLs Have Tracking
+### 檢查 URL 是否有追蹤
 
-This workflow ensures that any web URL has tracking in it. This repository is available to everyone so you need to make sure to track the access to know from where the traffic is coming.
+此工作流程確保任何網絡 URL 中都有追蹤。此儲存庫對所有人開放，因此您需要確保追蹤訪問，以了解流量的來源。
 
-To make sure your URLs have tracking in them simply check for the following text `?wt.mc_id=` at the end of the URL. If it's appended to your URLs then you will pass this check.
+為確保您的 URL 中有追蹤，只需檢查 URL 末尾的以下文字 `?wt.mc_id=`。如果它被附加到您的 URL 中，那麼您將通過此檢查。
 
-If not, you may get the following error.
+如果沒有，您可能會收到以下錯誤。
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.mo.png)
+![GitHub 檢查 URL 缺少追蹤評論截圖](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.mo.png)
 
-To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
+要修復此問題，請嘗試打開工作流程突出顯示的文件路徑，並在 URL 的末尾添加追蹤 ID。
 
-Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes. If you pass the check then you are good to go.
+一旦您添加了追蹤 ID，保存並推送更改，工作流程將再次觸發以驗證您的更改。如果您通過了檢查，那麼您就可以繼續了。
 
-### Check URLs Don't Have Locale
+### 檢查 URL 是否沒有區域
 
-This workflow ensures that any web URL doesn't have a country-specific locale in it. This repository is available to everyone around the world so you need to make sure not to include your country's locale in URLs.
+此工作流程確保任何網絡 URL 中沒有特定國家的區域。此儲存庫對全球所有人開放，因此您需要確保不在 URL 中包含您國家的區域。
 
-To make sure your URLs don't have a country locale in them simply check for the following text `/en-us/` or `/en/` or any other language locale anywhere in the URL. If it's not present in your URLs then you will pass this check.
+為確保您的 URL 中沒有國家區域，只需檢查 URL 中是否有以下文字 `/en-us/` 或 `/en/` 或任何其他語言區域。如果它不存在於您的 URL 中，那麼您將通過此檢查。
 
-If not, you may get the following error.
+如果沒有，您可能會收到以下錯誤。
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.mo.png)
+![GitHub 檢查國家區域評論截圖](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.mo.png)
 
-To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
+要修復此問題，請嘗試打開工作流程突出顯示的文件路徑，並從 URL 中刪除國家區域。
 
-Once you remove the country locale, save, and push your changes the workflow will be triggered again to verify your changes. If you pass the check then you are good to go.
+一旦您刪除了國家區域，保存並推送更改，工作流程將再次觸發以驗證您的更改。如果您通過了檢查，那麼您就可以繼續了。
 
-Congratulations! We will get back to you as soon as possible with feedback about your contribution.
+恭喜！我們將盡快給您反饋您的貢獻。
 
-I'm sorry, but I can't assist with translating text into "mo" as it doesn't appear to be a recognized language code or language name. If you meant a specific language, please provide more information or clarify, and I'll be happy to help with translation to a supported language.
+**免責聲明**：  
+本文件已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力追求準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於關鍵信息，建議使用專業人工翻譯。對於因使用此翻譯而產生的任何誤解或誤釋，我們概不負責。

@@ -2,16 +2,16 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:32:36+00:00",
+  "translation_date": "2025-06-25T19:57:14+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "nl"
 }
 -->
-# Integreren met functieverzoeken
+# Integreren met functieaanroepen
 
-[![Integreren met functieverzoeken](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.nl.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integreren met functieaanroepen](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.nl.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-Je hebt al aardig wat geleerd in de vorige lessen. Echter, we kunnen nog verder verbeteren. Enkele zaken die we kunnen aanpakken zijn hoe we een consistenter reactieformaat kunnen krijgen om het gemakkelijker te maken om met de reactie verder te werken. Ook willen we misschien data van andere bronnen toevoegen om onze applicatie verder te verrijken.
+Je hebt al behoorlijk wat geleerd in de vorige lessen. Echter, we kunnen nog verder verbeteren. Enkele zaken die we kunnen aanpakken zijn hoe we een consistenter antwoordformaat kunnen krijgen om het gemakkelijker te maken om met het antwoord verder te werken. Ook willen we mogelijk data uit andere bronnen toevoegen om onze applicatie verder te verrijken.
 
 De bovengenoemde problemen zijn wat dit hoofdstuk wil aanpakken.
 
@@ -19,46 +19,46 @@ De bovengenoemde problemen zijn wat dit hoofdstuk wil aanpakken.
 
 Deze les behandelt:
 
-- Uitleggen wat functieverzoeken zijn en hun gebruikscases.
-- Een functieverzoek maken met Azure OpenAI.
-- Hoe een functieverzoek in een applicatie te integreren.
+- Uitleggen wat functieaanroepen zijn en hun toepassingsmogelijkheden.
+- Een functieaanroep maken met Azure OpenAI.
+- Hoe een functieaanroep in een applicatie te integreren.
 
 ## Leerdoelen
 
-Aan het einde van deze les zul je in staat zijn om:
+Aan het einde van deze les kun je:
 
-- Het doel van het gebruik van functieverzoeken uit te leggen.
-- Een Functieverzoek op te zetten met de Azure OpenAI Service.
-- Effectieve functieverzoeken te ontwerpen voor de use case van je applicatie.
+- Het doel van het gebruik van functieaanroepen uitleggen.
+- Functieaanroep instellen met de Azure OpenAI Service.
+- Effectieve functieaanroepen ontwerpen voor het gebruiksscenario van je applicatie.
 
-## Scenario: Verbeteren van onze chatbot met functies
+## Scenario: Onze chatbot verbeteren met functies
 
-Voor deze les willen we een functie bouwen voor onze educatieve startup waarmee gebruikers een chatbot kunnen gebruiken om technische cursussen te vinden. We zullen cursussen aanbevelen die passen bij hun vaardigheidsniveau, huidige rol en interesse in technologie.
+Voor deze les willen we een functie bouwen voor onze educatieve startup die gebruikers in staat stelt om via een chatbot technische cursussen te vinden. We zullen cursussen aanbevelen die passen bij hun vaardigheidsniveau, huidige rol en interesse in technologie.
 
 Om dit scenario te voltooien, zullen we een combinatie gebruiken van:
 
 - `Azure OpenAI` om een chatervaring voor de gebruiker te creëren.
-- `Microsoft Learn Catalog API` om gebruikers te helpen cursussen te vinden op basis van het verzoek van de gebruiker.
-- `Function Calling` om de vraag van de gebruiker te nemen en deze naar een functie te sturen om het API-verzoek te doen.
+- `Microsoft Learn Catalog API` om gebruikers te helpen cursussen te vinden op basis van hun verzoek.
+- `Function Calling` om de vraag van de gebruiker te nemen en naar een functie te sturen om de API-aanroep te doen.
 
-Om te beginnen, laten we eens kijken waarom we in de eerste plaats functieverzoeken zouden willen gebruiken:
+Om te beginnen, laten we kijken waarom we in de eerste plaats functieaanroepen zouden willen gebruiken:
 
-## Waarom Functieverzoeken
+## Waarom Functieaanroepen
 
-Voor functieverzoeken waren reacties van een LLM ongestructureerd en inconsistent. Ontwikkelaars moesten complexe validatiecode schrijven om ervoor te zorgen dat ze elke variatie van een reactie konden verwerken. Gebruikers konden geen antwoorden krijgen zoals "Wat is het huidige weer in Stockholm?". Dit komt omdat modellen beperkt waren tot de tijd waarop de data was getraind.
+Voor functieaanroepen waren de antwoorden van een LLM ongestructureerd en inconsistent. Ontwikkelaars moesten complexe validatiecode schrijven om ervoor te zorgen dat ze elke variatie van een antwoord konden afhandelen. Gebruikers konden geen antwoorden krijgen zoals "Wat is het huidige weer in Stockholm?". Dit komt omdat modellen beperkt waren tot de tijd waarop de data getraind was.
 
-Functieverzoeken zijn een functie van de Azure OpenAI Service om de volgende beperkingen te overwinnen:
+Functieaanroepen zijn een functie van de Azure OpenAI Service om de volgende beperkingen te overwinnen:
 
-- **Consistent reactieformaat**. Als we het reactieformaat beter kunnen controleren, kunnen we de reactie gemakkelijker integreren in andere systemen.
+- **Consistent antwoordformaat**. Als we het antwoordformaat beter kunnen controleren, kunnen we het antwoord gemakkelijker integreren met andere systemen.
 - **Externe data**. Mogelijkheid om data uit andere bronnen van een applicatie te gebruiken in een chatcontext.
 
 ## Het probleem illustreren door middel van een scenario
 
-> We raden je aan om de [bijgevoegde notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) te gebruiken als je het onderstaande scenario wilt uitvoeren. Je kunt ook gewoon meelezen terwijl we proberen een probleem te illustreren waar functies kunnen helpen om het probleem aan te pakken.
+> We raden aan om de [bijgevoegde notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) te gebruiken als je het onderstaande scenario wilt uitvoeren. Je kunt ook gewoon meelezen terwijl we proberen een probleem te illustreren waar functies kunnen helpen om het probleem aan te pakken.
 
-Laten we eens kijken naar het voorbeeld dat het probleem met het reactieformaat illustreert:
+Laten we naar het voorbeeld kijken dat het probleem van het antwoordformaat illustreert:
 
-Stel dat we een database van studentgegevens willen maken, zodat we hen de juiste cursus kunnen voorstellen. Hieronder hebben we twee beschrijvingen van studenten die erg op elkaar lijken qua gegevens die ze bevatten.
+Stel dat we een database van studentgegevens willen maken zodat we de juiste cursus aan hen kunnen voorstellen. Hieronder hebben we twee beschrijvingen van studenten die erg op elkaar lijken in de data die ze bevatten.
 
 1. Maak een verbinding met onze Azure OpenAI-bron:
 
@@ -77,7 +77,7 @@ Stel dat we een database van studentgegevens willen maken, zodat we hen de juist
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Hieronder staat wat Python-code voor het configureren van onze verbinding met Azure OpenAI, waarbij we `api_type`, `api_base`, `api_version` and `api_key`.
+   Hieronder staat wat Python-code om onze verbinding met Azure OpenAI te configureren waarbij we `api_type`, `api_base`, `api_version` and `api_key`.
 
 1. Creating two student descriptions using variables `student_1_description` and `student_2_description` instellen.
 
@@ -87,7 +87,7 @@ Stel dat we een database van studentgegevens willen maken, zodat we hen de juist
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   We willen de bovenstaande studentbeschrijvingen naar een LLM sturen om de gegevens te parseren. Deze gegevens kunnen later in onze applicatie worden gebruikt en naar een API worden gestuurd of in een database worden opgeslagen.
+   We willen de bovenstaande studentbeschrijvingen naar een LLM sturen om de data te ontleden. Deze data kan later in onze applicatie worden gebruikt en naar een API worden gestuurd of in een database worden opgeslagen.
 
 1. Laten we twee identieke prompts maken waarin we de LLM instrueren over welke informatie we geïnteresseerd zijn:
 
@@ -119,9 +119,9 @@ Stel dat we een database van studentgegevens willen maken, zodat we hen de juist
    '''
    ```
 
-   De bovenstaande prompts instrueren de LLM om informatie te extraheren en de reactie in JSON-formaat terug te geven.
+   De bovenstaande prompts instrueren de LLM om informatie te extraheren en het antwoord in JSON-formaat te retourneren.
 
-1. Nadat we de prompts en de verbinding met Azure OpenAI hebben ingesteld, sturen we nu de prompts naar de LLM door `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` te gebruiken. Dit is om een bericht van een gebruiker naar een chatbot na te bootsen.
+1. Na het instellen van de prompts en de verbinding met Azure OpenAI, zullen we nu de prompts naar de LLM sturen door `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` te gebruiken. Dit is om een bericht van een gebruiker na te bootsen dat naar een chatbot wordt geschreven.
 
    ```python
    # response from prompt one
@@ -139,7 +139,7 @@ Stel dat we een database van studentgegevens willen maken, zodat we hen de juist
    openai_response2.choices[0].message.content
    ```
 
-Nu kunnen we beide verzoeken naar de LLM sturen en de reactie die we ontvangen onderzoeken door deze als volgt te vinden `openai_response1['choices'][0]['message']['content']`.
+Nu kunnen we beide verzoeken naar de LLM sturen en het antwoord dat we ontvangen onderzoeken door het als volgt te vinden `openai_response1['choices'][0]['message']['content']`.
 
 1. Lastly, we can convert the response to JSON format by calling `json.loads`:
 
@@ -149,7 +149,7 @@ Nu kunnen we beide verzoeken naar de LLM sturen en de reactie die we ontvangen o
    json_response1
    ```
 
-   Reactie 1:
+   Antwoord 1:
 
    ```json
    {
@@ -161,7 +161,7 @@ Nu kunnen we beide verzoeken naar de LLM sturen en de reactie die we ontvangen o
    }
    ```
 
-   Reactie 2:
+   Antwoord 2:
 
    ```json
    {
@@ -179,7 +179,7 @@ Nu kunnen we beide verzoeken naar de LLM sturen en de reactie die we ontvangen o
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.nl.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.nl.png)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -201,7 +201,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.nl.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.nl.png)
 
 ### Step 1 - creating messages
 
@@ -213,11 +213,11 @@ The `role` can be either `system` (creating rules), `assistant` (the model) or `
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Door verschillende rollen toe te wijzen, wordt het voor de LLM duidelijk of het het systeem is dat iets zegt of de gebruiker, wat helpt om een gespreksgeschiedenis op te bouwen waarop de LLM kan voortbouwen.
+Door verschillende rollen toe te wijzen, wordt het voor de LLM duidelijk of het systeem iets zegt of de gebruiker, wat helpt om een gesprekshistorie op te bouwen waarop de LLM kan voortbouwen.
 
-### Stap 2 - functies maken
+### Stap 2 - functies creëren
 
-Vervolgens definiëren we een functie en de parameters van die functie. We zullen hier slechts één functie gebruiken genaamd `search_courses` but you can create multiple functions.
+Vervolgens zullen we een functie en de parameters van die functie definiëren. We zullen hier slechts één functie gebruiken genaamd `search_courses` but you can create multiple functions.
 
 > **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
 
@@ -252,7 +252,7 @@ functions = [
 ]
 ```
 
-Laten we elke instantie van de functie hieronder meer in detail beschrijven:
+Laten we elke functie-instantie hieronder in meer detail beschrijven:
 
 - `name` - The name of the function that we want to have called.
 - `description` - This is the description of how the function works. Here it's important to be specific and clear.
@@ -271,7 +271,7 @@ After defining a function, we now need to include it in the call to the Chat Com
 
 There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` en daarmee de LLM de keuze geven wanneer de functies die we aanbieden aan te roepen:
+Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` en daarmee de LLM de keuze geven wanneer de functies die we het bieden aan te roepen:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-De reactie die nu terugkomt ziet er als volgt uit:
+Het antwoord dat nu terugkomt ziet er als volgt uit:
 
 ```json
 {
@@ -320,7 +320,7 @@ To integrate this into our application, let's take the following steps:
    response_message = response.choices[0].message
    ```
 
-1. Nu zullen we de functie definiëren die de Microsoft Learn API aanroept om een lijst met cursussen te krijgen:
+1. Nu zullen we de functie definiëren die de Microsoft Learn API zal aanroepen om een lijst met cursussen te krijgen:
 
    ```python
    import requests
@@ -346,7 +346,7 @@ To integrate this into our application, let's take the following steps:
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` is er onderdeel van en de aangewezen functie aanroept. Hier is hoe je de genoemde controle hieronder kunt uitvoeren:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` maakt er deel van uit en roept de aangegeven functie aan. Hier is hoe je de genoemde controle hieronder kunt uitvoeren:
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   Deze drie regels zorgen ervoor dat we de functienaam, de argumenten extraheren en de aanroep doen:
+   Deze drie regels zorgen ervoor dat we de functienaam, de argumenten extraheren en de oproep doen:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -400,7 +400,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   Hieronder is de uitvoer van het uitvoeren van onze code:
+   Hieronder staat de uitvoer van het uitvoeren van onze code:
 
    **Uitvoer**
 
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Nu zullen we het bijgewerkte bericht, `messages` naar de LLM sturen zodat we een reactie in natuurlijke taal kunnen ontvangen in plaats van een API JSON-geformatteerde reactie.
+1. Nu zullen we het bijgewerkte bericht, `messages` naar de LLM sturen zodat we een natuurlijk taalantwoord kunnen ontvangen in plaats van een API JSON-geformatteerd antwoord.
 
    ```python
    print("Messages in next request:")
@@ -452,19 +452,19 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## Opdracht
 
-Om je leerproces van Azure OpenAI Functieverzoeken voort te zetten, kun je bouwen:
+Om je kennis van Azure OpenAI Functieaanroepen verder te ontwikkelen, kun je bouwen:
 
 - Meer parameters van de functie die leerlingen kunnen helpen meer cursussen te vinden.
-- Een andere functieverzoek maken die meer informatie van de leerling opneemt, zoals hun moedertaal.
-- Foutafhandeling maken wanneer het functieverzoek en/of API-aanroep geen geschikte cursussen retourneert.
+- Maak een andere functieaanroep die meer informatie van de leerling neemt, zoals hun moedertaal.
+- Maak foutafhandeling wanneer de functieaanroep en/of API-aanroep geen geschikte cursussen retourneert.
 
-Hint: Volg de [Learn API referentiedocumentatie](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) pagina om te zien hoe en waar deze gegevens beschikbaar zijn.
+Tip: Volg de [Learn API referentiedocumentatie](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) pagina om te zien hoe en waar deze data beschikbaar is.
 
-## Goed gedaan! Zet de reis voort
+## Goed gedaan! Ga door met de reis
 
-Na het voltooien van deze les, bekijk onze [Generatieve AI Leercollectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generatieve AI verder te ontwikkelen!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder uit te breiden!
 
-Ga verder naar Les 12, waar we zullen kijken naar hoe we [UX voor AI-applicaties ontwerpen](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Ga verder naar Les 12, waar we zullen kijken hoe we [UX voor AI-toepassingen ontwerpen](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Disclaimer**:
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, moet u zich ervan bewust zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.
+**Disclaimer**:  
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.

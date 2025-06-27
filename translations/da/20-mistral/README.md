@@ -2,46 +2,46 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:58:32+00:00",
+  "translation_date": "2025-06-26T03:18:14+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "da"
 }
 -->
-# Byg med Mistral-modeller
+# Bygning med Mistral-modeller
 
 ## Introduktion
 
 Denne lektion vil dække:
 - Udforskning af de forskellige Mistral-modeller
 - Forståelse af anvendelsesmuligheder og scenarier for hver model
-- Kodeeksempler viser de unikke funktioner ved hver model.
+- Kodeeksempler viser de unikke funktioner i hver model.
 
 ## Mistral-modellerne
 
 I denne lektion vil vi udforske 3 forskellige Mistral-modeller: **Mistral Large**, **Mistral Small** og **Mistral Nemo**.
 
-Hver af disse modeller er tilgængelige gratis på Github Model-markedspladsen. Koden i denne notesbog vil bruge disse modeller til at køre koden. Her er flere detaljer om brug af Github-modeller til [prototype med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Hver af disse modeller er gratis tilgængelige på Github Model-markedspladsen. Koden i denne notesbog vil bruge disse modeller til at køre koden. Her er flere detaljer om brugen af Github-modeller til [prototyping med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 er i øjeblikket den førende model fra Mistral og er designet til erhvervsbrug.
+Mistral Large 2 er i øjeblikket Mistrals flagskibsmodel og er designet til virksomhedsanvendelse.
 
-Modellen er en opgradering til den originale Mistral Large ved at tilbyde:
+Modellen er en opgradering til den originale Mistral Large ved at tilbyde
 - Større kontekstvindue - 128k vs 32k
 - Bedre ydeevne på matematik- og kodningsopgaver - 76,9% gennemsnitlig nøjagtighed vs 60,4%
 - Øget flersproget ydeevne - sprog inkluderer: engelsk, fransk, tysk, spansk, italiensk, portugisisk, hollandsk, russisk, kinesisk, japansk, koreansk, arabisk og hindi.
 
-Med disse funktioner udmærker Mistral Large sig ved:
+Med disse funktioner udmærker Mistral Large sig i
 - *Retrieval Augmented Generation (RAG)* - på grund af det større kontekstvindue
-- *Funktionskald* - denne model har indbygget funktionskald, som tillader integration med eksterne værktøjer og API'er. Disse kald kan foretages både parallelt eller efter hinanden i en sekventiel rækkefølge.
+- *Funktionskald* - denne model har native funktionskald, som tillader integration med eksterne værktøjer og API'er. Disse kald kan foretages både parallelt eller efter hinanden i en sekventiel rækkefølge.
 - *Kodegenerering* - denne model udmærker sig i Python, Java, TypeScript og C++ generering.
 
-### RAG Eksempel ved brug af Mistral Large 2
+### RAG-eksempel ved brug af Mistral Large 2
 
-I dette eksempel bruger vi Mistral Large 2 til at køre et RAG-mønster over et tekst-dokument. Spørgsmålet er skrevet på koreansk og spørger om forfatterens aktiviteter før college.
+I dette eksempel bruger vi Mistral Large 2 til at køre et RAG-mønster over et tekstdokument. Spørgsmålet er skrevet på koreansk og spørger om forfatterens aktiviteter før college.
 
-Den bruger Cohere Embeddings Model til at skabe embeddings af tekst-dokumentet samt spørgsmålet. For dette eksempel bruger den faiss Python-pakken som en vektorlagring.
+Den bruger Cohere Embeddings Model til at skabe indlejringer af tekstdokumentet såvel som spørgsmålet. For dette eksempel bruger den faiss Python-pakken som en vektorlager.
 
-Prompten sendt til Mistral-modellen inkluderer både spørgsmålene og de hentede stykker, der ligner spørgsmålet. Modellen giver derefter et svar på naturligt sprog.
+Prompten, der sendes til Mistral-modellen, inkluderer både spørgsmålene og de hentede stykker, der ligner spørgsmålet. Modellen giver derefter et svar i naturligt sprog.
 
 ```python 
 pip install faiss-cpu
@@ -139,20 +139,20 @@ print(chat_response.choices[0].message.content)
 
 ## Mistral Small
 Mistral Small er en anden model i Mistral-familien af modeller under premier/enterprise-kategorien. Som navnet antyder, er denne model en Small Language Model (SLM). Fordelene ved at bruge Mistral Small er, at den er:
-- Omkostningsbesparende sammenlignet med Mistral LLMs som Mistral Large og NeMo - 80% prisfald
-- Lav ventetid - hurtigere respons sammenlignet med Mistrals LLMs
-- Fleksibel - kan implementeres på tværs af forskellige miljøer med færre begrænsninger på nødvendige ressourcer.
+- Omkostningsbesparende sammenlignet med Mistral LLM'er som Mistral Large og NeMo - 80% prisfald
+- Lav latenstid - hurtigere respons sammenlignet med Mistrals LLM'er
+- Fleksibel - kan implementeres på tværs af forskellige miljøer med færre begrænsninger på krævede ressourcer.
 
-Mistral Small er fremragende til:
+Mistral Small er fantastisk til:
 - Tekstbaserede opgaver som opsummering, sentimentanalyse og oversættelse.
-- Applikationer hvor der laves hyppige forespørgsler på grund af dens omkostningseffektivitet
-- Lav ventetids kodeopgaver som gennemgang og kodeforslag
+- Applikationer, hvor der foretages hyppige anmodninger på grund af dens omkostningseffektivitet
+- Lav latenstid kodeopgaver som gennemgang og kodeforslag
 
 ## Sammenligning af Mistral Small og Mistral Large
 
-For at vise forskelle i ventetid mellem Mistral Small og Large, kør nedenstående celler.
+For at vise forskelle i latenstid mellem Mistral Small og Large, kør nedenstående celler.
 
-Du bør se en forskel i responstider mellem 3-5 sekunder. Bemærk også responslængder og stil over den samme prompt.
+Du bør se en forskel i svartider mellem 3-5 sekunder. Bemærk også svarlængderne og stilen over den samme prompt.
 
 ```python 
 
@@ -214,17 +214,17 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Sammenlignet med de to andre modeller, der er diskuteret i denne lektion, er Mistral NeMo den eneste gratis model med en Apache2-licens.
+Sammenlignet med de to andre modeller, der diskuteres i denne lektion, er Mistral NeMo den eneste gratis model med en Apache2-licens.
 
 Den betragtes som en opgradering til den tidligere open source LLM fra Mistral, Mistral 7B.
 
-Nogle andre funktioner ved NeMo-modellen er:
+Nogle andre funktioner i NeMo-modellen er:
 
-- *Mere effektiv tokenisering:* Denne model bruger Tekken-tokenizeren i stedet for den mere almindeligt brugte tiktoken. Dette tillader bedre ydeevne på flere sprog og kode.
+- *Mere effektiv tokenisering:* Denne model bruger Tekken-tokenizeren i stedet for den mere almindeligt anvendte tiktoken. Dette tillader bedre ydeevne over flere sprog og kode.
 
-- *Finjustering:* Basismodellen er tilgængelig til finjustering. Dette giver mere fleksibilitet til anvendelsesscenarier, hvor finjustering kan være nødvendig.
+- *Finjustering:* Basismodellen er tilgængelig for finjustering. Dette giver mere fleksibilitet til anvendelsesmuligheder, hvor finjustering kan være nødvendig.
 
-- *Indbygget funktionskald* - Ligesom Mistral Large er denne model blevet trænet på funktionskald. Dette gør den unik som en af de første open source-modeller til at gøre det.
+- *Native Funktionskald* - Ligesom Mistral Large er denne model trænet på funktionskald. Dette gør den unik som en af de første open source-modeller til at gøre dette.
 
 ### Sammenligning af tokenizere
 
@@ -348,9 +348,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Læringen stopper ikke her, fortsæt rejsen
+## Læring stopper ikke her, fortsæt rejsen
 
-Efter at have gennemført denne lektion, tjek vores [Generativ AI Læringssamling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at opbygge din viden om Generativ AI!
+Efter at have gennemført denne lektion, tjek vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at forbedre din viden om Generative AI!
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Mens vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå ved brugen af denne oversættelse.

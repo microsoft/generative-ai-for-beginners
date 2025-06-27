@@ -2,35 +2,35 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T10:25:55+00:00",
+  "translation_date": "2025-06-25T16:49:29+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "fr"
 }
 -->
 # Préparation des données de transcription
 
-Les scripts de préparation des données de transcription téléchargent les transcriptions de vidéos YouTube et les préparent pour une utilisation avec l'exemple de Recherche Sémantique avec OpenAI Embeddings et Functions.
+Les scripts de préparation des données de transcription téléchargent les transcriptions des vidéos YouTube et les préparent pour être utilisées avec l'exemple de recherche sémantique avec les embeddings et fonctions d'OpenAI.
 
 Les scripts de préparation des données de transcription ont été testés sur les dernières versions de Windows 11, macOS Ventura et Ubuntu 22.04 (et au-delà).
 
-## Créer les ressources nécessaires pour le service Azure OpenAI
+## Créer les ressources nécessaires du service Azure OpenAI
 
 > [!IMPORTANT]
-> Nous vous suggérons de mettre à jour l'Azure CLI à la dernière version pour garantir la compatibilité avec OpenAI
+> Nous vous suggérons de mettre à jour l'Azure CLI à la dernière version pour garantir la compatibilité avec OpenAI.
 > Voir [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Créer un groupe de ressources
 
 > [!NOTE]
-> Pour ces instructions, nous utilisons le groupe de ressources nommé "semantic-video-search" dans l'Est des États-Unis.
-> Vous pouvez changer le nom du groupe de ressources, mais lorsque vous modifiez l'emplacement des ressources,
+> Pour ces instructions, nous utilisons le groupe de ressources nommé "semantic-video-search" à East US.
+> Vous pouvez changer le nom du groupe de ressources, mais en changeant l'emplacement des ressources,
 > vérifiez le [tableau de disponibilité des modèles](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Créer une ressource Azure OpenAI Service.
+1. Créer une ressource du service Azure OpenAI.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
@@ -76,7 +76,7 @@ az cognitiveservices account deployment create \
 
 ## Variables d'environnement
 
-Les variables d'environnement suivantes sont nécessaires pour exécuter les scripts de préparation des données de transcription YouTube.
+Les variables d'environnement suivantes sont requises pour exécuter les scripts de préparation des données de transcription YouTube.
 
 ### Sur Windows
 
@@ -104,7 +104,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Installer les bibliothèques Python requises
 
 1. Installez le [client git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) s'il n'est pas déjà installé.
-1. Depuis une fenêtre de `Terminal`, clonez l'exemple dans votre dossier de dépôt préféré.
+1. Depuis une fenêtre `Terminal`, clonez l'exemple dans le dossier de dépôt de votre choix.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -172,5 +172,5 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Clause de non-responsabilité** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction professionnelle humaine. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.
+**Avertissement** :  
+Ce document a été traduit à l'aide du service de traduction IA [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatiques peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.

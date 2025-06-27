@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T02:38:17+00:00",
+  "translation_date": "2025-06-25T23:41:54+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "nl"
 }
@@ -13,40 +13,40 @@ Een van de eerste pogingen om iets vergelijkbaars met een modern neuraal netwerk
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='De Mark 1 Perceptron' />|
+|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
 
 > Afbeeldingen van Wikipedia
 
-Een invoerafbeelding werd weergegeven door een 20x20 fotocelarray, dus het neurale netwerk had 400 ingangen en één binaire uitvoer. Een eenvoudig netwerk bevatte één neuron, ook wel een **drempellogica-eenheid** genoemd. De gewichten van het neurale netwerk fungeerden als potentiometers die handmatige aanpassing vereisten tijdens de trainingsfase.
+Een invoerafbeelding werd weergegeven door een 20x20 fotocelmatrix, dus het neurale netwerk had 400 ingangen en één binaire uitvoer. Een eenvoudig netwerk bevatte één neuron, ook wel een **drempellogica-eenheid** genoemd. De gewichten van het neurale netwerk fungeerden als potentiometers die handmatig moesten worden aangepast tijdens de trainingsfase.
 
 > ✅ Een potentiometer is een apparaat waarmee de gebruiker de weerstand van een circuit kan aanpassen.
 
-> The New York Times schreef destijds over perceptron: *het embryo van een elektronische computer waarvan [de marine] verwacht dat het zal kunnen lopen, praten, zien, schrijven, zichzelf reproduceren en zich bewust zijn van zijn bestaan.*
+> De New York Times schreef destijds over de perceptron: *het embryo van een elektronische computer waarvan [de Marine] verwacht dat het kan lopen, praten, zien, schrijven, zichzelf reproduceren en zich bewust is van zijn bestaan.*
 
 ## Perceptron Model
 
-Stel dat we N kenmerken in ons model hebben, in dat geval zou de invoervector een vector van grootte N zijn. Een perceptron is een **binaire classificatie** model, d.w.z. het kan onderscheid maken tussen twee klassen van invoergegevens. We zullen aannemen dat voor elke invoervector x de uitvoer van ons perceptron ofwel +1 of -1 zou zijn, afhankelijk van de klasse. De uitvoer wordt berekend met de formule:
+Stel dat we N kenmerken in ons model hebben, in welk geval de invoervector een vector van grootte N zou zijn. Een perceptron is een **binaire classificatie** model, dat wil zeggen dat het onderscheid kan maken tussen twee klassen van invoergegevens. We zullen aannemen dat voor elke invoervector x de uitvoer van onze perceptron ofwel +1 of -1 zou zijn, afhankelijk van de klasse. De uitvoer wordt berekend met behulp van de formule:
 
 y(x) = f(w<sup>T</sup>x)
 
 waarbij f een stap-activatiefunctie is
 
-## Het Perceptron Trainen
+## Het trainen van de Perceptron
 
-Om een perceptron te trainen moeten we een gewichtenvector w vinden die de meeste waarden correct classificeert, d.w.z. resulteert in de kleinste **fout**. Deze fout wordt gedefinieerd door het **perceptroncriterium** op de volgende manier:
+Om een perceptron te trainen moeten we een gewichtenvector w vinden die de meeste waarden correct classificeert, dat wil zeggen resulteert in de kleinste **fout**. Deze fout wordt gedefinieerd door het **perceptroncriterium** op de volgende manier:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 waarbij:
 
-* de som wordt genomen over die trainingsdatapunten i die resulteren in een verkeerde classificatie
-* x<sub>i</sub> de invoergegevens zijn, en t<sub>i</sub> is respectievelijk -1 of +1 voor negatieve en positieve voorbeelden.
+* de som wordt genomen over die trainingsgegevenspunten i die resulteren in de verkeerde classificatie
+* x<sub>i</sub> de invoergegevens zijn, en t<sub>i</sub> ofwel -1 of +1 is voor respectievelijk negatieve en positieve voorbeelden.
 
 Dit criterium wordt beschouwd als een functie van gewichten w, en we moeten het minimaliseren. Vaak wordt een methode genaamd **gradient descent** gebruikt, waarbij we beginnen met enkele initiële gewichten w<sup>(0)</sup>, en vervolgens bij elke stap de gewichten bijwerken volgens de formule:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Hierbij is η de zogenaamde **leerparameter**, en ∇E(w) duidt de **gradiënt** van E aan. Nadat we de gradiënt hebben berekend, krijgen we
+Hier is η de zogenaamde **leersnelheid**, en ∇E(w) duidt de **gradiënt** van E aan. Nadat we de gradiënt hebben berekend, eindigen we met
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
@@ -74,24 +74,24 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Conclusie
 
-In deze les heb je geleerd over een perceptron, wat een binaire classificatiemodel is, en hoe je het kunt trainen met behulp van een gewichtenvector.
+In deze les heb je geleerd over een perceptron, een binaire classificatiemodel, en hoe je het kunt trainen met behulp van een gewichtenvector.
 
 ## 🚀 Uitdaging
 
 Als je je eigen perceptron wilt bouwen, probeer dan deze lab op Microsoft Learn die de Azure ML designer gebruikt.
 
-## Review & Zelfstudie
+## Herziening & Zelfstudie
 
-Om te zien hoe we een perceptron kunnen gebruiken om zowel een speelgoedprobleem als echte problemen op te lossen, en om verder te leren - ga naar het Perceptron notitieboek.
+Om te zien hoe we perceptron kunnen gebruiken om zowel een speelgoedprobleem als echte problemen op te lossen, en om verder te leren - ga naar het Perceptron-notitieboek.
 
 Hier is ook een interessant artikel over perceptrons.
 
 ## Opdracht
 
-In deze les hebben we een perceptron geïmplementeerd voor een binaire classificatietaak, en hebben we het gebruikt om onderscheid te maken tussen twee handgeschreven cijfers. In deze lab word je gevraagd om het probleem van cijferclassificatie volledig op te lossen, d.w.z. te bepalen welk cijfer het meest waarschijnlijk overeenkomt met een gegeven afbeelding.
+In deze les hebben we een perceptron geïmplementeerd voor een binaire classificatietaak, en we hebben het gebruikt om te classificeren tussen twee handgeschreven cijfers. In dit lab wordt je gevraagd het probleem van cijferclassificatie volledig op te lossen, dat wil zeggen te bepalen welk cijfer het meest waarschijnlijk overeenkomt met een gegeven afbeelding.
 
 * Instructies
 * Notitieboek
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het oorspronkelijke document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.

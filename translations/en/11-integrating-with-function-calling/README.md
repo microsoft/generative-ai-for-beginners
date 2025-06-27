@@ -2,22 +2,22 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:17:54+00:00",
+  "translation_date": "2025-06-25T19:41:32+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "en"
 }
 -->
 # Integrating with function calling
 
-You've learned quite a bit in the previous lessons. However, we can still improve. Some areas to focus on include achieving a more consistent response format to facilitate downstream processing and incorporating data from other sources to enrich our application.
+You've learned a fair bit so far in the previous lessons. However, we can improve further. Some things we can address are how we can get a more consistent response format to make it easier to work with the response downstream. Also, we might want to add data from other sources to further enrich our application.
 
-These challenges are what this chapter aims to tackle.
+The above-mentioned problems are what this chapter is looking to address.
 
 ## Introduction
 
 This lesson will cover:
 
-- Explaining what function calling is and its use cases.
+- Explain what function calling is and its use cases.
 - Creating a function call using Azure OpenAI.
 - How to integrate a function call into an application.
 
@@ -36,27 +36,27 @@ For this lesson, we want to build a feature for our education startup that allow
 To complete this scenario, we will use a combination of:
 
 - `Azure OpenAI` to create a chat experience for the user.
-- `Microsoft Learn Catalog API` to help users find courses based on their request.
+- `Microsoft Learn Catalog API` to help users find courses based on the request of the user.
 - `Function Calling` to take the user's query and send it to a function to make the API request.
 
-To get started, let's explore why we would want to use function calling in the first place:
+To get started, let's look at why we would want to use function calling in the first place:
 
 ## Why Function Calling
 
-Before function calling, responses from an LLM were unstructured and inconsistent. Developers had to write complex validation code to handle each variation of a response. Users couldn't get answers like "What is the current weather in Stockholm?" because models were limited to the time the data was trained on.
+Before function calling, responses from an LLM were unstructured and inconsistent. Developers were required to write complex validation code to make sure they were able to handle each variation of a response. Users could not get answers like "What is the current weather in Stockholm?". This is because models were limited to the time the data was trained on.
 
 Function Calling is a feature of the Azure OpenAI Service to overcome the following limitations:
 
-- **Consistent response format**. Better control over the response format makes it easier to integrate the response downstream into other systems.
+- **Consistent response format**. If we can better control the response format we can more easily integrate the response downstream to other systems.
 - **External data**. Ability to use data from other sources of an application in a chat context.
 
 ## Illustrating the problem through a scenario
 
-> We recommend using the [included notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) if you want to run the scenario below. You can also just read along as we illustrate a problem where functions can help to address the issue.
+> We recommend you to use the [included notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) if you want to run the below scenario. You can also just read along as we're trying to illustrate a problem where functions can help to address the problem.
 
-Let's examine an example illustrating the response format problem:
+Let's look at the example that illustrates the response format problem:
 
-Suppose we want to create a database of student data to suggest the right course to them. Below, we have two descriptions of students that are very similar in the data they contain.
+Let's say we want to create a database of student data so we can suggest the right course to them. Below we have two descriptions of students that are very similar in the data they contain.
 
 1. Create a connection to our Azure OpenAI resource:
 
@@ -119,7 +119,7 @@ Suppose we want to create a database of student data to suggest the right course
 
    The above prompts instruct the LLM to extract information and return the response in JSON format.
 
-1. After setting up the prompts and the connection to Azure OpenAI, we will now send the prompts to the LLM by using `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. This mimics a message from a user being written to a chatbot.
+1. After setting up the prompts and the connection to Azure OpenAI, we will now send the prompts to the LLM by using `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. This is to mimic a message from a user being written to a chatbot.
 
    ```python
    # response from prompt one
@@ -177,7 +177,7 @@ Now we can send both requests to the LLM and examine the response we receive by 
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.en.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.en.png)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -199,7 +199,7 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.en.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.en.png)
 
 ### Step 1 - creating messages
 
@@ -389,7 +389,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   These three lines ensure we extract the function name, the arguments, and make the call:
+   These three lines, ensure we extract the function name, the arguments and make the call:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -464,5 +464,7 @@ After completing this lesson, check out our [Generative AI Learning collection](
 
 Head over to Lesson 12, where we will look at how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Sure, here is the translated text in English:
+
+**Disclaimer**: 
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

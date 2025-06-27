@@ -2,20 +2,20 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T10:06:19+00:00",
+  "translation_date": "2025-06-25T13:53:27+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "de"
 }
 -->
-# Erstellung von Anwendungen zur Textgenerierung
+# Aufbau von Textgenerierungsanwendungen
 
-[![Erstellung von Anwendungen zur Textgenerierung](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.de.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Aufbau von Textgenerierungsanwendungen](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.de.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 
-Bisher haben Sie in diesem Lehrplan festgestellt, dass es Kernkonzepte wie Prompts gibt und sogar eine ganze Disziplin namens "Prompt Engineering". Viele Tools, mit denen Sie interagieren können, wie ChatGPT, Office 365, Microsoft Power Platform und mehr, unterstützen Sie dabei, Prompts zu verwenden, um etwas zu erreichen.
+Bisher haben Sie in diesem Lehrplan gesehen, dass es grundlegende Konzepte wie Eingabeaufforderungen gibt und sogar eine ganze Disziplin namens "Prompt Engineering". Viele Tools, mit denen Sie interagieren können, wie ChatGPT, Office 365, Microsoft Power Platform und mehr, unterstützen Sie dabei, mit Eingabeaufforderungen etwas zu erreichen.
 
-Um eine solche Erfahrung zu einer App hinzuzufügen, müssen Sie Konzepte wie Prompts, Completions verstehen und eine Bibliothek auswählen, mit der Sie arbeiten möchten. Genau das werden Sie in diesem Kapitel lernen.
+Um solch eine Erfahrung zu einer App hinzuzufügen, müssen Sie Konzepte wie Eingabeaufforderungen, Vervollständigungen verstehen und eine Bibliothek auswählen, mit der Sie arbeiten möchten. Genau das werden Sie in diesem Kapitel lernen.
 
 ## Einführung
 
@@ -23,7 +23,7 @@ In diesem Kapitel werden Sie:
 
 - Die openai-Bibliothek und ihre Kernkonzepte kennenlernen.
 - Eine Textgenerierungs-App mit openai erstellen.
-- Verstehen, wie man Konzepte wie Prompt, Temperatur und Tokens verwendet, um eine Textgenerierungs-App zu erstellen.
+- Verstehen, wie man Konzepte wie Eingabeaufforderung, Temperatur und Tokens verwendet, um eine Textgenerierungs-App zu erstellen.
 
 ## Lernziele
 
@@ -31,61 +31,61 @@ Am Ende dieser Lektion werden Sie in der Lage sein:
 
 - Erklären, was eine Textgenerierungs-App ist.
 - Eine Textgenerierungs-App mit openai erstellen.
-- Ihre App so konfigurieren, dass sie mehr oder weniger Tokens verwendet und auch die Temperatur ändert, für ein variierendes Ergebnis.
+- Ihre App so konfigurieren, dass sie mehr oder weniger Tokens verwendet und auch die Temperatur ändert, um ein variierendes Ergebnis zu erzielen.
 
 ## Was ist eine Textgenerierungs-App?
 
 Normalerweise hat eine App, die Sie erstellen, eine Art Schnittstelle wie die folgende:
 
 - Befehlsbasiert. Konsolen-Apps sind typische Apps, bei denen Sie einen Befehl eingeben und eine Aufgabe ausgeführt wird. Zum Beispiel ist `git` eine befehlsbasierte App.
-- Benutzeroberfläche (UI). Einige Apps haben grafische Benutzeroberflächen (GUIs), bei denen Sie Schaltflächen klicken, Text eingeben, Optionen auswählen und mehr.
+- Benutzeroberfläche (UI). Einige Apps haben grafische Benutzeroberflächen (GUIs), bei denen Sie Schaltflächen anklicken, Text eingeben, Optionen auswählen und mehr.
 
 ### Konsolen- und UI-Apps sind begrenzt
 
 Vergleichen Sie dies mit einer befehlsbasierten App, bei der Sie einen Befehl eingeben:
 
-- **Es ist begrenzt**. Sie können nicht einfach jeden Befehl eingeben, sondern nur die, die die App unterstützt.
+- **Es ist begrenzt**. Sie können nicht einfach jeden Befehl eingeben, nur die, die die App unterstützt.
 - **Sprachspezifisch**. Einige Apps unterstützen viele Sprachen, aber standardmäßig ist die App für eine bestimmte Sprache entwickelt, auch wenn Sie mehr Sprachunterstützung hinzufügen können.
 
 ### Vorteile von Textgenerierungs-Apps
 
 Wie unterscheidet sich eine Textgenerierungs-App?
 
-In einer Textgenerierungs-App haben Sie mehr Flexibilität, Sie sind nicht auf eine Reihe von Befehlen oder eine bestimmte Eingabesprache beschränkt. Stattdessen können Sie natürliche Sprache verwenden, um mit der App zu interagieren. Ein weiterer Vorteil ist, dass Sie bereits mit einer Datenquelle interagieren, die auf einem umfangreichen Korpus von Informationen trainiert wurde, während eine traditionelle App möglicherweise auf das beschränkt ist, was sich in einer Datenbank befindet.
+In einer Textgenerierungs-App haben Sie mehr Flexibilität, Sie sind nicht auf eine Reihe von Befehlen oder eine bestimmte Eingabesprache beschränkt. Stattdessen können Sie natürliche Sprache verwenden, um mit der App zu interagieren. Ein weiterer Vorteil ist, dass Sie bereits mit einer Datenquelle interagieren, die auf einem großen Korpus von Informationen trainiert wurde, während eine traditionelle App möglicherweise auf das beschränkt ist, was sich in einer Datenbank befindet.
 
 ### Was kann ich mit einer Textgenerierungs-App erstellen?
 
 Es gibt viele Dinge, die Sie erstellen können. Zum Beispiel:
 
 - **Ein Chatbot**. Ein Chatbot, der Fragen zu Themen beantwortet, wie Ihr Unternehmen und seine Produkte, könnte eine gute Wahl sein.
-- **Helfer**. LLMs sind hervorragend darin, Texte zusammenzufassen, Einblicke aus Texten zu gewinnen, Texte wie Lebensläufe zu erstellen und mehr.
-- **Code-Assistent**. Je nach Sprachmodell, das Sie verwenden, können Sie einen Code-Assistenten erstellen, der Ihnen beim Schreiben von Code hilft. Zum Beispiel können Sie ein Produkt wie GitHub Copilot sowie ChatGPT verwenden, um Ihnen beim Schreiben von Code zu helfen.
+- **Helfer**. LLMs sind großartig in Dingen wie dem Zusammenfassen von Text, dem Gewinnen von Einblicken aus Text, dem Erstellen von Texten wie Lebensläufen und mehr.
+- **Code-Assistent**. Abhängig vom Sprachmodell, das Sie verwenden, können Sie einen Code-Assistenten erstellen, der Ihnen beim Schreiben von Code hilft. Zum Beispiel können Sie ein Produkt wie GitHub Copilot sowie ChatGPT verwenden, um Ihnen beim Schreiben von Code zu helfen.
 
 ## Wie kann ich anfangen?
 
-Nun, Sie müssen einen Weg finden, sich mit einem LLM zu integrieren, was normalerweise die folgenden zwei Ansätze umfasst:
+Nun, Sie müssen einen Weg finden, sich mit einem LLM zu integrieren, was normalerweise die folgenden zwei Ansätze beinhaltet:
 
-- Verwenden Sie eine API. Hier erstellen Sie Webanfragen mit Ihrem Prompt und erhalten generierten Text zurück.
-- Verwenden Sie eine Bibliothek. Bibliotheken helfen, die API-Aufrufe zu kapseln und sie einfacher zu verwenden.
+- Verwenden Sie eine API. Hierbei erstellen Sie Webanfragen mit Ihrer Eingabeaufforderung und erhalten generierten Text zurück.
+- Verwenden Sie eine Bibliothek. Bibliotheken helfen dabei, die API-Aufrufe zu kapseln und sie einfacher zu verwenden.
 
 ## Bibliotheken/SDKs
 
-Es gibt einige bekannte Bibliotheken für die Arbeit mit LLMs wie:
+Es gibt einige bekannte Bibliotheken zur Arbeit mit LLMs wie:
 
-- **openai**, diese Bibliothek macht es einfach, sich mit Ihrem Modell zu verbinden und Prompts zu senden.
+- **openai**, diese Bibliothek macht es einfach, sich mit Ihrem Modell zu verbinden und Eingabeaufforderungen zu senden.
 
-Dann gibt es Bibliotheken, die auf einer höheren Ebene arbeiten, wie:
+Dann gibt es Bibliotheken, die auf einer höheren Ebene arbeiten wie:
 
 - **Langchain**. Langchain ist bekannt und unterstützt Python.
 - **Semantic Kernel**. Semantic Kernel ist eine Bibliothek von Microsoft, die die Sprachen C#, Python und Java unterstützt.
 
 ## Erste App mit openai
 
-Schauen wir mal, wie wir unsere erste App erstellen können, welche Bibliotheken wir benötigen, wie viel erforderlich ist und so weiter.
+Sehen wir uns an, wie wir unsere erste App erstellen können, welche Bibliotheken wir benötigen, wie viel erforderlich ist und so weiter.
 
 ### openai installieren
 
-Es gibt viele Bibliotheken da draußen, um mit OpenAI oder Azure OpenAI zu interagieren. Es ist möglich, zahlreiche Programmiersprachen zu verwenden, wie C#, Python, JavaScript, Java und mehr. Wir haben uns entschieden, die `openai` Python-Bibliothek zu verwenden, also werden wir `pip` verwenden, um sie zu installieren.
+Es gibt viele Bibliotheken, um mit OpenAI oder Azure OpenAI zu interagieren. Es ist möglich, zahlreiche Programmiersprachen zu verwenden, wie C#, Python, JavaScript, Java und mehr. Wir haben uns entschieden, die `openai` Python-Bibliothek zu verwenden, daher werden wir `pip` verwenden, um sie zu installieren.
 
 ```bash
 pip install openai
@@ -95,16 +95,16 @@ pip install openai
 
 Sie müssen die folgenden Schritte ausführen:
 
-- Erstellen Sie ein Konto auf Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Zugriff auf Azure OpenAI erhalten. Gehen Sie zu [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) und beantragen Sie Zugang.
+- Erstellen Sie ein Konto bei Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Erhalten Sie Zugang zu Azure OpenAI. Gehen Sie zu [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) und beantragen Sie den Zugang.
 
   > [!NOTE]
-  > Zum Zeitpunkt des Schreibens müssen Sie Zugang zu Azure OpenAI beantragen.
+  > Zum Zeitpunkt des Schreibens müssen Sie den Zugang zu Azure OpenAI beantragen.
 
-- Python installieren <https://www.python.org/>
-- Eine Azure OpenAI Service-Ressource erstellt haben. Siehe diese Anleitung, wie man [eine Ressource erstellt](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Installieren Sie Python <https://www.python.org/>
+- Haben Sie eine Azure OpenAI Service-Ressource erstellt. Sehen Sie sich diesen Leitfaden an, um zu erfahren, wie Sie [eine Ressource erstellen](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### API-Schlüssel und Endpunkt finden
+### API-Schlüssel und Endpunkt lokalisieren
 
 An diesem Punkt müssen Sie Ihrer `openai` Bibliothek mitteilen, welchen API-Schlüssel sie verwenden soll. Um Ihren API-Schlüssel zu finden, gehen Sie zum Abschnitt "Keys and Endpoint" Ihrer Azure OpenAI-Ressource und kopieren Sie den Wert "Key 1".
 
@@ -118,7 +118,7 @@ Jetzt, da Sie diese Informationen kopiert haben, lassen Sie uns die Bibliotheken
 > - Setzen Sie die Umgebungsvariable `OPENAI_API_KEY` to your API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Azure-Konfiguration einrichten
+### Konfiguration Azure einrichten
 
 Wenn Sie Azure OpenAI verwenden, erfahren Sie hier, wie Sie die Konfiguration einrichten:
 
@@ -129,7 +129,7 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Oben setzen wir Folgendes:
+Oben setzen wir das Folgende:
 
 - `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
 - `api_key`, this is your API key found in the Azure Portal.
@@ -140,7 +140,7 @@ Oben setzen wir Folgendes:
 
 ## Generate text
 
-The way to generate text is to use the `Completion`-Klasse. Hier ist ein Beispiel:
+The way to generate text is to use the `Completion` Klasse. Hier ist ein Beispiel:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-Im obigen Code erstellen wir ein Completion-Objekt und übergeben das Modell, das wir verwenden möchten, und den Prompt. Dann drucken wir den generierten Text aus.
+Im obigen Code erstellen wir ein Completion-Objekt und übergeben das Modell, das wir verwenden möchten, und die Eingabeaufforderung. Dann drucken wir den generierten Text.
 
-### Chat Completions
+### Chat-Vervollständigungen
 
-Bisher haben Sie gesehen, wie wir `Completion` to generate text. But there's another class called `ChatCompletion` verwendet haben, das besser für Chatbots geeignet ist. Hier ist ein Beispiel für die Verwendung:
+Bisher haben Sie gesehen, wie wir `Completion` to generate text. But there's another class called `ChatCompletion` verwendet haben, das besser für Chatbots geeignet ist. Hier ist ein Beispiel, wie man es verwendet:
 
 ```python
 import openai
@@ -168,7 +168,7 @@ Mehr zu dieser Funktionalität in einem kommenden Kapitel.
 
 ## Übung - Ihre erste Textgenerierungs-App
 
-Jetzt, da wir gelernt haben, wie man openai einrichtet und konfiguriert, ist es an der Zeit, Ihre erste Textgenerierungs-App zu erstellen. Um Ihre App zu erstellen, befolgen Sie diese Schritte:
+Jetzt, da wir gelernt haben, wie man openai einrichtet und konfiguriert, ist es Zeit, Ihre erste Textgenerierungs-App zu erstellen. Um Ihre App zu erstellen, folgen Sie diesen Schritten:
 
 1. Erstellen Sie eine virtuelle Umgebung und installieren Sie openai:
 
@@ -182,9 +182,9 @@ Jetzt, da wir gelernt haben, wie man openai einrichtet und konfiguriert, ist es 
    > Wenn Sie Windows verwenden, geben Sie `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1`-Wert ein.
+   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` ein.
 
-1. Erstellen Sie eine _app.py_-Datei und geben Sie ihr den folgenden Code:
+1. Erstellen Sie eine _app.py_ Datei und geben Sie ihr den folgenden Code:
 
    ```python
    import openai
@@ -208,7 +208,7 @@ Jetzt, da wir gelernt haben, wie man openai einrichtet und konfiguriert, ist es 
    ```
 
    > [!NOTE]
-   > Wenn Sie Azure OpenAI verwenden, müssen Sie `api_type` to `azure` and set the `api_key` auf Ihren Azure OpenAI-Schlüssel setzen.
+   > Wenn Sie Azure OpenAI verwenden, müssen Sie den `api_type` to `azure` and set the `api_key` auf Ihren Azure OpenAI-Schlüssel setzen.
 
    Sie sollten eine Ausgabe wie die folgende sehen:
 
@@ -218,25 +218,25 @@ Jetzt, da wir gelernt haben, wie man openai einrichtet und konfiguriert, ist es 
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Verschiedene Arten von Prompts für verschiedene Dinge
+## Verschiedene Arten von Eingabeaufforderungen für verschiedene Dinge
 
-Jetzt haben Sie gesehen, wie man Text mit einem Prompt generiert. Sie haben sogar ein Programm am Laufen, das Sie modifizieren und ändern können, um verschiedene Arten von Text zu generieren.
+Jetzt haben Sie gesehen, wie man mit einer Eingabeaufforderung Text generiert. Sie haben sogar ein Programm am Laufen, das Sie modifizieren und ändern können, um verschiedene Arten von Text zu generieren.
 
-Prompts können für alle möglichen Aufgaben verwendet werden. Zum Beispiel:
+Eingabeaufforderungen können für alle möglichen Aufgaben verwendet werden. Zum Beispiel:
 
 - **Eine Art von Text generieren**. Zum Beispiel können Sie ein Gedicht, Fragen für ein Quiz usw. generieren.
-- **Informationen abrufen**. Sie können Prompts verwenden, um nach Informationen zu suchen, wie im folgenden Beispiel: "Was bedeutet CORS in der Webentwicklung?".
-- **Code generieren**. Sie können Prompts verwenden, um Code zu generieren, zum Beispiel eine reguläre Ausdrucksvalidierung für E-Mails zu entwickeln oder warum nicht ein ganzes Programm, wie eine Web-App, generieren?
+- **Informationen abrufen**. Sie können Eingabeaufforderungen verwenden, um nach Informationen zu suchen, wie im folgenden Beispiel 'Was bedeutet CORS in der Webentwicklung?'.
+- **Code generieren**. Sie können Eingabeaufforderungen verwenden, um Code zu generieren, zum Beispiel eine reguläre Ausdruck zur Validierung von E-Mails oder warum nicht ein ganzes Programm generieren, wie eine Web-App?
 
 ## Ein praktischerer Anwendungsfall: ein Rezeptgenerator
 
-Stellen Sie sich vor, Sie haben Zutaten zu Hause und möchten etwas kochen. Dafür benötigen Sie ein Rezept. Eine Möglichkeit, Rezepte zu finden, ist die Verwendung einer Suchmaschine oder Sie könnten ein LLM verwenden.
+Stellen Sie sich vor, Sie haben Zutaten zu Hause und möchten etwas kochen. Dafür benötigen Sie ein Rezept. Eine Möglichkeit, Rezepte zu finden, ist die Verwendung einer Suchmaschine oder Sie könnten ein LLM dafür verwenden.
 
-Sie könnten einen Prompt wie folgt schreiben:
+Sie könnten eine Eingabeaufforderung wie folgt schreiben:
 
-> "Zeige mir 5 Rezepte für ein Gericht mit den folgenden Zutaten: Hähnchen, Kartoffeln und Karotten. Pro Rezept liste alle verwendeten Zutaten auf"
+> "Zeigen Sie mir 5 Rezepte für ein Gericht mit den folgenden Zutaten: Huhn, Kartoffeln und Karotten. Pro Rezept alle verwendeten Zutaten auflisten"
 
-Angesichts des obigen Prompts könnten Sie eine Antwort ähnlich der folgenden erhalten:
+Angesichts der obigen Eingabeaufforderung könnten Sie eine Antwort ähnlich der folgenden erhalten:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -302,12 +302,12 @@ Ingredients:
 
 Dieses Ergebnis ist großartig, ich weiß, was ich kochen soll. An diesem Punkt könnten nützliche Verbesserungen sein:
 
-- Zutaten herausfiltern, die ich nicht mag oder gegen die ich allergisch bin.
+- Zutaten herausfiltern, die ich nicht mag oder auf die ich allergisch bin.
 - Eine Einkaufsliste erstellen, falls ich nicht alle Zutaten zu Hause habe.
 
-Für die oben genannten Fälle fügen wir einen zusätzlichen Prompt hinzu:
+Für die oben genannten Fälle fügen wir eine zusätzliche Eingabeaufforderung hinzu:
 
-> "Bitte entferne Rezepte mit Knoblauch, da ich allergisch bin, und ersetze ihn durch etwas anderes. Erstelle auch eine Einkaufsliste für die Rezepte, wobei ich bereits Hähnchen, Kartoffeln und Karotten zu Hause habe."
+> "Bitte entfernen Sie Rezepte mit Knoblauch, da ich allergisch bin, und ersetzen Sie ihn durch etwas anderes. Bitte erstellen Sie auch eine Einkaufsliste für die Rezepte, da ich bereits Huhn, Kartoffeln und Karotten zu Hause habe."
 
 Jetzt haben Sie ein neues Ergebnis, nämlich:
 
@@ -380,10 +380,10 @@ Das sind Ihre fünf Rezepte, ohne Knoblauch erwähnt, und Sie haben auch eine Ei
 
 ## Übung - einen Rezeptgenerator erstellen
 
-Jetzt, da wir ein Szenario durchgespielt haben, schreiben wir Code, um das demonstrierte Szenario zu erfüllen. Gehen Sie dazu wie folgt vor:
+Jetzt, da wir ein Szenario durchgespielt haben, schreiben wir Code, um das demonstrierte Szenario nachzubilden. Um dies zu tun, folgen Sie diesen Schritten:
 
-1. Verwenden Sie die vorhandene _app.py_-Datei als Ausgangspunkt
-1. Finden Sie die `prompt`-Variable und ändern Sie ihren Code wie folgt:
+1. Verwenden Sie die bestehende _app.py_ Datei als Ausgangspunkt
+1. Suchen Sie die `prompt` Variable und ändern Sie deren Code wie folgt:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
@@ -401,9 +401,9 @@ Jetzt, da wir ein Szenario durchgespielt haben, schreiben wir Code, um das demon
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE, Ihr LLM ist nicht deterministisch, sodass Sie bei jedem Ausführen des Programms unterschiedliche Ergebnisse erhalten können.
+   > HINWEIS, Ihr LLM ist nicht deterministisch, sodass Sie bei jedem Ausführen des Programms unterschiedliche Ergebnisse erhalten können.
 
-   Großartig, sehen wir, wie wir die Dinge verbessern können. Um die Dinge zu verbessern, möchten wir sicherstellen, dass der Code flexibel ist, sodass Zutaten und Anzahl der Rezepte verbessert und geändert werden können.
+   Großartig, lassen Sie uns sehen, wie wir die Dinge verbessern können. Um die Dinge zu verbessern, möchten wir sicherstellen, dass der Code flexibel ist, sodass Zutaten und die Anzahl der Rezepte verbessert und geändert werden können.
 
 1. Ändern wir den Code auf folgende Weise:
 
@@ -427,13 +427,13 @@ Jetzt, da wir ein Szenario durchgespielt haben, schreiben wir Code, um das demon
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Verbesserung durch Hinzufügen von Filter und Einkaufsliste
+### Verbesserung durch Hinzufügen eines Filters und einer Einkaufsliste
 
-Wir haben jetzt eine funktionierende App, die Rezepte erstellen kann, und sie ist flexibel, da sie auf Eingaben des Benutzers angewiesen ist, sowohl in Bezug auf die Anzahl der Rezepte als auch auf die verwendeten Zutaten.
+Wir haben jetzt eine funktionierende App, die Rezepte erstellen kann, und sie ist flexibel, da sie auf Benutzereingaben angewiesen ist, sowohl in Bezug auf die Anzahl der Rezepte als auch auf die verwendeten Zutaten.
 
 Um es weiter zu verbessern, möchten wir Folgendes hinzufügen:
 
-- **Zutaten herausfiltern**. Wir möchten in der Lage sein, Zutaten herauszufiltern, die wir nicht mögen oder gegen die wir allergisch sind. Um diese Änderung zu erreichen, können wir unseren bestehenden Prompt bearbeiten und am Ende eine Filterbedingung hinzufügen, wie folgt:
+- **Zutaten herausfiltern**. Wir möchten in der Lage sein, Zutaten herauszufiltern, die wir nicht mögen oder auf die wir allergisch sind. Um diese Änderung zu erreichen, können wir unsere bestehende Eingabeaufforderung bearbeiten und am Ende eine Filterbedingung hinzufügen, wie folgt:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,7 +441,7 @@ Um es weiter zu verbessern, möchten wir Folgendes hinzufügen:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Oben fügen wir `{filter}` am Ende des Prompts hinzu und erfassen auch den Filterwert vom Benutzer.
+  Oben fügen wir `{filter}` am Ende der Eingabeaufforderung hinzu und erfassen auch den Filterwert vom Benutzer.
 
   Ein Beispiel für die Eingabe beim Ausführen des Programms könnte jetzt so aussehen:
 
@@ -510,13 +510,13 @@ Um es weiter zu verbessern, möchten wir Folgendes hinzufügen:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Wie Sie sehen, wurden alle Rezepte mit Milch herausgefiltert. Aber wenn Sie laktoseintolerant sind, möchten Sie vielleicht auch Rezepte mit Käse herausfiltern, sodass es notwendig ist, klar zu sein.
+  Wie Sie sehen können, wurden alle Rezepte mit Milch herausgefiltert. Aber wenn Sie laktoseintolerant sind, möchten Sie möglicherweise auch Rezepte mit Käse herausfiltern, sodass es notwendig ist, klar zu sein.
 
 - **Eine Einkaufsliste erstellen**. Wir möchten eine Einkaufsliste erstellen, unter Berücksichtigung dessen, was wir bereits zu Hause haben.
 
-  Für diese Funktionalität könnten wir entweder versuchen, alles in einem Prompt zu lösen oder wir könnten es in zwei Prompts aufteilen. Lassen Sie uns den letzteren Ansatz ausprobieren. Hier schlagen wir vor, einen zusätzlichen Prompt hinzuzufügen, aber damit das funktioniert, müssen wir das Ergebnis des ersten Prompts als Kontext für den zweiten Prompt verwenden.
+  Für diese Funktionalität könnten wir entweder versuchen, alles in einer Eingabeaufforderung zu lösen, oder wir könnten es in zwei Eingabeaufforderungen aufteilen. Lassen Sie uns den letzteren Ansatz versuchen. Hier schlagen wir vor, eine zusätzliche Eingabeaufforderung hinzuzufügen, aber damit das funktioniert, müssen wir das Ergebnis der ersten Eingabeaufforderung als Kontext zur zweiten Eingabeaufforderung hinzufügen.
 
-  Finden Sie den Teil im Code, der das Ergebnis des ersten Prompts ausgibt, und fügen Sie den folgenden Code darunter hinzu:
+  Finden Sie den Teil im Code, der das Ergebnis der ersten Eingabeaufforderung ausgibt, und fügen Sie den folgenden Code darunter hinzu:
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -533,19 +533,19 @@ Um es weiter zu verbessern, möchten wir Folgendes hinzufügen:
 
   Beachten Sie Folgendes:
 
-  1. Wir erstellen einen neuen Prompt, indem wir das Ergebnis des ersten Prompts zum neuen Prompt hinzufügen:
+  1. Wir konstruieren eine neue Eingabeaufforderung, indem wir das Ergebnis der ersten Eingabeaufforderung zur neuen Eingabeaufforderung hinzufügen:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Wir machen eine neue Anfrage, berücksichtigen aber auch die Anzahl der Tokens, die wir im ersten Prompt angefordert haben, sodass wir diesmal sagen, `max_tokens` ist 1200.
+  1. Wir machen eine neue Anfrage, berücksichtigen aber auch die Anzahl der Tokens, die wir in der ersten Eingabeaufforderung angefordert haben, daher sagen wir diesmal, dass `max_tokens` 1200 ist.
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     Nehmen wir diesen Code für einen Testlauf, erhalten wir nun die folgende Ausgabe:
+     Wenn wir diesen Code testen, erhalten wir jetzt die folgende Ausgabe:
 
      ```output
      No of recipes (for example, 5): 2
@@ -561,11 +561,11 @@ Um es weiter zu verbessern, möchten wir Folgendes hinzufügen:
 
 ## Verbessern Sie Ihre Einrichtung
 
-Was wir bisher haben, ist Code, der funktioniert, aber es gibt einige Anpassungen, die wir vornehmen sollten, um die Dinge weiter zu verbessern. Einige Dinge, die wir tun sollten, sind:
+Was wir bisher haben, ist ein funktionierender Code, aber es gibt einige Anpassungen, die wir vornehmen sollten, um die Dinge weiter zu verbessern. Einige Dinge, die wir tun sollten, sind:
 
-- **Geheimnisse vom Code trennen**, wie den API-Schlüssel. Geheimnisse gehören nicht in den Code und sollten an einem sicheren Ort gespeichert werden. Um Geheimnisse vom Code zu trennen, können wir Umgebungsvariablen und Bibliotheken wie `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **Trennen Sie Geheimnisse vom Code**, wie den API-Schlüssel. Geheimnisse gehören nicht in den Code und sollten an einem sicheren Ort gespeichert werden. Um Geheimnisse vom Code zu trennen, können wir Umgebungsvariablen und Bibliotheken wie `python-dotenv` to load them from a file. Here's how that would look like in code:
 
-  1. Create a `.env`-Datei mit folgendem Inhalt verwenden:
+  1. Create a `.env` Datei mit folgendem Inhalt verwenden:
 
      ```bash
      OPENAI_API_KEY=sk-...
@@ -589,39 +589,39 @@ Was wir bisher haben, ist Code, der funktioniert, aber es gibt einige Anpassunge
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Ein Wort zur Tokenlänge**. Wir sollten überlegen, wie viele Tokens wir benötigen, um den Text zu generieren, den wir wollen. Tokens kosten Geld, daher sollten wir, wo möglich, versuchen, wirtschaftlich mit der Anzahl der verwendeten Tokens umzugehen. Zum Beispiel, können wir den Prompt so formulieren, dass wir weniger Tokens verwenden können?
+- **Ein Wort zur Token-Länge**. Wir sollten überlegen, wie viele Tokens wir benötigen, um den Text zu generieren, den wir möchten. Tokens kosten Geld, daher sollten wir, wo möglich, versuchen, sparsam mit der Anzahl der verwendeten Tokens umzugehen. Zum Beispiel, können wir die Eingabeaufforderung so formulieren, dass wir weniger Tokens verwenden können?
 
-  Um die verwendeten Tokens zu ändern, können Sie den `max_tokens`-Parameter verwenden. Zum Beispiel, wenn Sie 100 Tokens verwenden möchten, würden Sie tun:
+  Um die verwendeten Tokens zu ändern, können Sie den Parameter `max_tokens` verwenden. Zum Beispiel, wenn Sie 100 Tokens verwenden möchten, würden Sie dies tun:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Experimentieren mit der Temperatur**. Temperatur ist etwas, das wir bisher nicht erwähnt haben, aber ein wichtiger Kontext dafür, wie unser Programm funktioniert. Je höher der Temperaturwert, desto zufälliger wird das Ergebnis sein. Umgekehrt, je niedriger der Temperaturwert, desto vorhersehbarer wird das Ergebnis sein. Überlegen Sie, ob Sie Variation in Ihrem Ergebnis wünschen oder nicht.
+- **Experimentieren mit der Temperatur**. Temperatur ist etwas, das wir bisher nicht erwähnt haben, aber es ist ein wichtiger Kontext dafür, wie unser Programm funktioniert. Je höher der Temperaturwert, desto zufälliger wird das Ergebnis. Umgekehrt, je niedriger der Temperaturwert, desto vorhersehbarer wird das Ergebnis. Überlegen Sie, ob Sie eine Variation in Ihrem Ergebnis wünschen oder nicht.
 
-  Um die Temperatur zu ändern, können Sie den `temperature`-Parameter verwenden. Zum Beispiel, wenn Sie eine Temperatur von 0,5 verwenden möchten, würden Sie tun:
+  Um die Temperatur zu ändern, können Sie den Parameter `temperature` verwenden. Zum Beispiel, wenn Sie eine Temperatur von 0,5 verwenden möchten, würden Sie dies tun:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Hinweis, je näher an 1.0, desto variierter das Ergebnis.
+  > Hinweis, je näher an 1,0, desto vielfältiger das Ergebnis.
 
 ## Aufgabe
 
-Für diese Aufgabe können Sie wählen, was Sie bauen möchten.
+Für diese Aufgabe können Sie wählen, was Sie erstellen möchten.
 
 Hier sind einige Vorschläge:
 
-- Optimieren Sie die Rezeptgenerator-App, um sie weiter zu verbessern. Spielen Sie mit Temperaturwerten und den Prompts, um zu sehen, was Sie erreichen können.
-- Erstellen Sie einen "Study Buddy". Diese App sollte in der Lage sein, Fragen zu einem Thema zu beantworten, zum Beispiel Python. Sie könnten Prompts haben wie "Was ist ein bestimmtes Thema in Python?", oder Sie könnten einen Prompt haben, der sagt, zeigen Sie mir Code zu einem bestimmten Thema usw.
-- Geschichtsbot, lassen Sie die Geschichte lebendig werden, weisen Sie den Bot an, einen bestimmten historischen Charakter zu spielen und stellen Sie ihm Fragen zu seinem Leben und seiner Zeit.
+- Optimieren Sie die Rezeptgenerator-App, um sie weiter zu verbessern. Spielen Sie mit Temperaturwerten und den Eingabeaufforderungen, um zu sehen, was Sie sich einfallen lassen können.
+- Erstellen Sie einen "Study Buddy". Diese App sollte in der Lage sein, Fragen zu einem Thema zu beantworten, zum Beispiel Python. Sie könnten Eingabeaufforderungen wie "Was ist ein bestimmtes Thema in Python?" haben oder Sie könnten eine Eingabeaufforderung haben, die sagt, zeigen Sie mir Code für ein bestimmtes Thema usw.
+- Geschichtsbot, lassen Sie Geschichte lebendig werden, indem Sie den Bot anweisen, eine bestimmte historische Figur zu spielen und ihm Fragen zu seinem Leben und seiner Zeit zu stellen.
 
 ## Lösung
 
 ### Study Buddy
 
-Unten ist ein Starter-Prompt, sehen Sie, wie Sie ihn verwenden und nach Ihrem Geschmack anpassen können.
+Unten ist eine Starter-Eingabeaufforderung, sehen Sie, wie Sie sie verwenden und nach Ihren Wünschen anpassen können.
 
 ```text
 - "You're an expert on the Python language
@@ -636,7 +636,7 @@ Unten ist ein Starter-Prompt, sehen Sie, wie Sie ihn verwenden und nach Ihrem Ge
 
 ### Geschichtsbot
 
-Hier sind einige Prompts, die Sie verwenden könnten:
+Hier sind einige Eingabeaufforderungen, die Sie verwenden könnten:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -651,17 +651,7 @@ Was bewirkt das Konzept der Temperatur?
 
 1. Es steuert, wie zufällig das Ergebnis ist.
 1. Es steuert, wie groß die Antwort ist.
-1. Es steuert, wie viele Tokens verwendet werden.
-
-## 🚀 Herausforderung
-
-Versuchen Sie bei der Arbeit an der Aufgabe, die Temperatur zu variieren, setzen Sie sie auf 0, 0,5 und 1. Denken Sie daran, dass 0 am wenigsten variabel ist und 1 am variabelsten, welcher Wert funktioniert am besten für Ihre App?
-
-## Großartige Arbeit! Setzen Sie Ihr Lernen fort
-
-Nachdem Sie diese Lektion abgeschlossen haben, sehen Sie sich unsere [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über generative KI weiter zu vertiefen!
-
-Gehen Sie zu Lektion 7
+1.
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle angesehen werden. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir haften nicht für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir haften nicht für Missverständnisse oder Fehlinterpretationen, die sich aus der Verwendung dieser Übersetzung ergeben.

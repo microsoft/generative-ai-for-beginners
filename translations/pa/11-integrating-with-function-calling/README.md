@@ -2,63 +2,63 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:26:12+00:00",
+  "translation_date": "2025-06-25T19:50:41+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "pa"
 }
 -->
-# ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਨਾਲ ਇੰਟੀਗ੍ਰੇਸ਼ਨ
+# ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਨਾਲ ਇੱਕੀਕਰਨ
 
-ਤੁਸੀਂ ਪਿਛਲੇ ਪਾਠਾਂ ਵਿੱਚ ਕਾਫ਼ੀ ਕੁਝ ਸਿੱਖਿਆ ਹੈ। ਹਾਲਾਂਕਿ, ਅਸੀਂ ਹੋਰ ਸੁਧਾਰ ਕਰ ਸਕਦੇ ਹਾਂ। ਕੁਝ ਗੱਲਾਂ ਜੋ ਅਸੀਂ ਹੱਲ ਕਰ ਸਕਦੇ ਹਾਂ ਉਹ ਹਨ ਕਿ ਅਸੀਂ ਜਵਾਬ ਨੂੰ ਹੋਰ ਵਧੀਆ ਫਾਰਮੈਟ ਵਿੱਚ ਕਿਵੇਂ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹਾਂ ਤਾਂ ਜੋ ਜਵਾਬ ਨਾਲ ਕੰਮ ਕਰਨਾ ਆਸਾਨ ਹੋ ਜਾਵੇ। ਇਸਦੇ ਨਾਲ-ਨਾਲ, ਅਸੀਂ ਹੋਰ ਸਰੋਤਾਂ ਤੋਂ ਡਾਟਾ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹਾਂ ਤਾਂ ਜੋ ਸਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਹੋਰ ਸੁਧਾਰਿਆ ਜਾ ਸਕੇ।
+ਤੁਸੀਂ ਪਿਛਲੇ ਪਾਠਾਂ ਵਿੱਚ ਕਾਫ਼ੀ ਕੁਝ ਸਿੱਖਿਆ ਹੈ। ਹਾਲਾਂਕਿ, ਅਸੀਂ ਹੋਰ ਸੁਧਾਰ ਕਰ ਸਕਦੇ ਹਾਂ। ਕੁਝ ਚੀਜ਼ਾਂ ਜਿਨ੍ਹਾਂ ਨੂੰ ਅਸੀਂ ਸੰਬੋਧਿਤ ਕਰ ਸਕਦੇ ਹਾਂ ਉਹ ਇਹ ਹਨ ਕਿ ਅਸੀਂ ਜਵਾਬ ਦੇ ਡਾਢੇ ਨੂੰ ਹੋਰ ਸਥਿਰ ਫਾਰਮੈਟ ਵਿੱਚ ਕਿਵੇਂ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹਾਂ ਤਾਂ ਕਿ ਇਹ ਜਵਾਬ ਨਾਲ ਹੇਠਾਂ ਕੰਮ ਕਰਨ ਵਿੱਚ ਸੌਖਾ ਬਣ ਸਕੇ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਅਸੀਂ ਹੋਰ ਸਰੋਤਾਂ ਤੋਂ ਡਾਟਾ ਜੋੜਨਾ ਚਾਹੁੰਦੇ ਹਾਂ ਤਾਂ ਕਿ ਸਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਹੋਰ ਸੰਮ੍ਰਿਧ ਕੀਤਾ ਜਾ ਸਕੇ।
 
-ਉਪਰੋਕਤ ਸਮੱਸਿਆਵਾਂ ਇਸ ਅਧਿਆਇ ਵਿੱਚ ਹੱਲ ਕਰਨ ਲਈ ਹਨ।
+ਉਪਰੋਕਤ ਸਮੱਸਿਆਵਾਂ ਇਸ ਅਧਿਆਇ ਵਿੱਚ ਸੰਬੋਧਨ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।
 
-## ਜਾਣ ਪਛਾਣ
+## ਪਰੇਚਾ
 
-ਇਸ ਪਾਠ ਵਿੱਚ ਕਵਰ ਕੀਤਾ ਜਾਵੇਗਾ:
+ਇਹ ਪਾਠ ਕਵਰ ਕਰੇਗਾ:
 
-- ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਕੀ ਹੈ ਅਤੇ ਇਸਦੇ ਉਪਯੋਗ ਮਾਮਲੇ ਸਮਝਾਓ।
+- ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਕੀ ਹੈ ਅਤੇ ਇਸਦੇ ਉਪਯੋਗ ਮਾਮਲੇ ਨੂੰ ਸਮਝਾਉਣਾ।
 - Azure OpenAI ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਇੱਕ ਫੰਕਸ਼ਨ ਕਾਲ ਬਣਾਉਣਾ।
-- ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਫੰਕਸ਼ਨ ਕਾਲ ਨੂੰ ਕਿਵੇਂ ਇੰਟੀਗ੍ਰੇਟ ਕਰਨਾ ਹੈ।
+- ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਫੰਕਸ਼ਨ ਕਾਲ ਨੂੰ ਕਿਵੇਂ ਇੱਕੀਕਰਿਤ ਕਰਨਾ ਹੈ।
 
 ## ਸਿੱਖਣ ਦੇ ਲਕਸ਼
 
-ਇਸ ਪਾਠ ਦੇ ਅੰਤ ਤੱਕ, ਤੁਸੀਂ ਸਮਰਥ ਹੋਵੋਗੇ:
+ਇਸ ਪਾਠ ਦੇ ਅੰਤ ਤੱਕ, ਤੁਸੀਂ ਸਮਰੱਥ ਹੋਵੋਗੇ:
 
-- ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੇ ਉਦੇਸ਼ ਨੂੰ ਸਮਝਾਓ।
-- Azure OpenAI ਸੇਵਾ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਫੰਕਸ਼ਨ ਕਾਲ ਸੈਟਅੱਪ ਕਰੋ।
-- ਤੁਹਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਉਪਯੋਗ ਮਾਮਲੇ ਲਈ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਫੰਕਸ਼ਨ ਕਾਲ ਡਿਜ਼ਾਈਨ ਕਰੋ।
+- ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੀ ਵਰਤੋਂ ਦੇ ਉਦੇਸ਼ ਨੂੰ ਸਮਝਾਉਣਾ।
+- Azure OpenAI ਸਰਵਿਸ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਫੰਕਸ਼ਨ ਕਾਲ ਸੈਟਅਪ ਕਰਨਾ।
+- ਆਪਣੇ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਉਪਯੋਗ ਮਾਮਲੇ ਲਈ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਫੰਕਸ਼ਨ ਕਾਲਾਂ ਡਿਜ਼ਾਇਨ ਕਰਨਾ।
 
-## ਦ੍ਰਿਸ਼: ਸਾਡੇ ਚੈਟਬਾਟ ਨੂੰ ਫੰਕਸ਼ਨ ਨਾਲ ਸੁਧਾਰਨਾ
+## ਸਨੇਰੀਓ: ਸਾਡੇ ਚੈਟਬੋਟ ਨੂੰ ਫੰਕਸ਼ਨਾਂ ਨਾਲ ਸੁਧਾਰਨਾ
 
-ਇਸ ਪਾਠ ਲਈ, ਅਸੀਂ ਆਪਣੇ ਸਿੱਖਿਆ ਸਟਾਰਟਅੱਪ ਲਈ ਇੱਕ ਫੀਚਰ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਜੋ ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ ਤਕਨੀਕੀ ਕੋਰਸਾਂ ਖੋਜਣ ਲਈ ਚੈਟਬਾਟ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ। ਅਸੀਂ ਉਹ ਕੋਰਸ ਸਿਫਾਰਸ਼ ਕਰਾਂਗੇ ਜੋ ਉਨ੍ਹਾਂ ਦੇ ਹੁਨਰ ਪੱਧਰ, ਮੌਜੂਦਾ ਭੂਮਿਕਾ ਅਤੇ ਰੁਚੀ ਦੀ ਤਕਨਾਲੋਜੀ ਦੇ ਅਨੁਕੂਲ ਹੋਵੇ।
+ਇਸ ਪਾਠ ਲਈ, ਅਸੀਂ ਆਪਣੀ ਸਿੱਖਿਆ ਸਟਾਰਟਅਪ ਲਈ ਇੱਕ ਫੀਚਰ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਜੋ ਯੂਜ਼ਰਾਂ ਨੂੰ ਟੈਕਨੀਕਲ ਕੋਰਸਾਂ ਨੂੰ ਲੱਭਣ ਲਈ ਚੈਟਬੋਟ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ। ਅਸੀਂ ਉਹ ਕੋਰਸਾਂ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਾਂਗੇ ਜੋ ਉਨ੍ਹਾਂ ਦੇ ਹੁਨਰ ਪੱਧਰ, ਮੌਜੂਦਾ ਭੂਮਿਕਾ ਅਤੇ ਰੁਚੀ ਦੀ ਤਕਨਾਲੋਜੀ ਦੇ ਅਨੁਕੂਲ ਹੋਣ।
 
-ਇਸ ਦ੍ਰਿਸ਼ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ, ਅਸੀਂ ਇੱਕ ਕੌਂਬੋ ਦੇ ਨਾਲ ਵਰਤੋਂ ਕਰਾਂਗੇ:
+ਇਸ ਸਨੇਰੀਓ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ, ਅਸੀਂ ਇੱਕ ਕੰਬੀਨੇਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰਾਂਗੇ:
 
-- `Azure OpenAI` ਉਪਭੋਗਤਾ ਲਈ ਇੱਕ ਚੈਟ ਅਨੁਭਵ ਬਣਾਉਣ ਲਈ।
-- `Microsoft Learn Catalog API` ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ ਉਪਭੋਗਤਾ ਦੀ ਬੇਨਤੀ ਦੇ ਆਧਾਰ 'ਤੇ ਕੋਰਸ ਖੋਜਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ।
-- `Function Calling` ਉਪਭੋਗਤਾ ਦੀ ਕਵੈਰੀ ਨੂੰ ਲੈਣ ਅਤੇ API ਬੇਨਤੀ ਕਰਨ ਲਈ ਇੱਕ ਫੰਕਸ਼ਨ ਨੂੰ ਭੇਜਣ ਲਈ।
+- `Azure OpenAI` ਯੂਜ਼ਰ ਲਈ ਚੈਟ ਅਨੁਭਵ ਬਣਾਉਣ ਲਈ।
+- `Microsoft Learn Catalog API` ਯੂਜ਼ਰ ਦੀ ਬੇਨਤੀ ਦੇ ਅਧਾਰ 'ਤੇ ਕੋਰਸ ਲੱਭਣ ਵਿੱਚ ਯੂਜ਼ਰਾਂ ਦੀ ਮਦਦ ਕਰਨ ਲਈ।
+- `Function Calling` ਯੂਜ਼ਰ ਦੀ ਪੁੱਛਤਾਛ ਨੂੰ ਲੈਣ ਅਤੇ API ਬੇਨਤੀ ਕਰਨ ਲਈ ਇਸਨੂੰ ਇੱਕ ਫੰਕਸ਼ਨ ਨੂੰ ਭੇਜਣ ਲਈ।
 
-ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਆਓ ਵੇਖੀਏ ਕਿ ਅਸੀਂ ਪਹਿਲਾਂ ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੀ ਵਰਤੋਂ ਕਿਉਂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹਾਂ:
+ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਆਓ ਪਹਿਲੀ ਜਗ੍ਹਾ ਵਿੱਚ ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੇ ਕਾਰਨ 'ਤੇ ਨਜ਼ਰ ਪਾਈਏ:
 
-## ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਕਿਉਂ
+## ਕਿਉਂ ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ
 
-ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਤੋਂ ਪਹਿਲਾਂ, ਇੱਕ LLM ਤੋਂ ਪ੍ਰਾਪਤ ਹੋਣ ਵਾਲੇ ਜਵਾਬ ਅਸੰਰਚਿਤ ਅਤੇ ਅਸੰਗਤ ਹੁੰਦੇ ਸਨ। ਡਿਵੈਲਪਰਾਂ ਨੂੰ ਹਰ ਜਵਾਬ ਦੇ ਰੂਪਾਂ ਨੂੰ ਸੰਭਾਲਣ ਯੋਗ ਬਣਾਉਣ ਲਈ ਜਟਿਲ ਵੈਲੀਡੇਸ਼ਨ ਕੋਡ ਲਿਖਣ ਦੀ ਲੋੜ ਸੀ। ਉਪਭੋਗਤਾ "ਸਟਾਕਹੋਮ ਵਿੱਚ ਮੌਜੂਦਾ ਮੌਸਮ ਕੀ ਹੈ?" ਵਰਗੇ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਨਹੀਂ ਲੈ ਸਕਦੇ ਸਨ। ਇਹ ਇਸ ਲਈ ਕਿ ਮਾਡਲਾਂ ਨੂੰ ਉਸ ਸਮੇਂ ਦੀ ਤਕਦੀਰ ਨਾਲ ਸੀਮਿਤ ਕੀਤਾ ਗਿਆ ਸੀ ਜਦੋਂ ਡਾਟਾ ਨੂੰ ਪ੍ਰਸ਼ਿਕਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਸੀ।
+ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਤੋਂ ਪਹਿਲਾਂ, LLM ਤੋਂ ਜਵਾਬ ਅਸੰਰਚਿਤ ਅਤੇ ਅਸਥਿਰ ਹੁੰਦੇ ਸਨ। ਵਿਕਾਸਕਾਂ ਨੂੰ ਹਰ ਜਵਾਬ ਦੇ ਵੈਰੀਏਸ਼ਨ ਨੂੰ ਸਹਿਣ ਕਰਨ ਲਈ ਜਟਿਲ ਵੈਧਤਾ ਕੋਡ ਲਿਖਣ ਦੀ ਲੋੜ ਹੁੰਦੀ ਸੀ। ਯੂਜ਼ਰਾਂ ਨੂੰ "ਸਟਾਕਹੋਮ ਵਿੱਚ ਮੌਜੂਦਾ ਮੌਸਮ ਕੀ ਹੈ?" ਵਰਗੇ ਜਵਾਬ ਨਹੀਂ ਮਿਲ ਸਕਦੇ ਸਨ। ਇਹ ਇਸ ਲਈ ਹੈ ਕਿਉਂਕਿ ਮਾਡਲਾਂ ਨੂੰ ਉਸ ਸਮੇਂ ਦੀ ਸਿੱਖਿਆ 'ਤੇ ਸੀਮਿਤ ਕੀਤਾ ਗਿਆ ਸੀ।
 
-ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ Azure OpenAI ਸੇਵਾ ਦੀ ਇੱਕ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ ਜੋ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਪਾਬੰਦੀਆਂ ਨੂੰ ਪਾਰ ਕਰਨ ਲਈ ਹੈ:
+ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ Azure OpenAI ਸਰਵਿਸ ਦੀ ਇੱਕ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ ਜੋ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਸੀਮਾਵਾਂ ਨੂੰ ਪਾਰ ਕਰਨ ਲਈ:
 
-- **ਸੰਗਤ ਜਵਾਬ ਫਾਰਮੈਟ**. ਜੇ ਅਸੀਂ ਜਵਾਬ ਫਾਰਮੈਟ ਨੂੰ ਵਧੀਆ ਤਰੀਕੇ ਨਾਲ ਕੰਟਰੋਲ ਕਰ ਸਕਦੇ ਹਾਂ ਤਾਂ ਅਸੀਂ ਹੋਰ ਸਿਸਟਮਾਂ ਵਿੱਚ ਜਵਾਬ ਨੂੰ ਹੋਰ ਆਸਾਨੀ ਨਾਲ ਇੰਟੀਗ੍ਰੇਟ ਕਰ ਸਕਦੇ ਹਾਂ।
-- **ਬਾਹਰੀ ਡਾਟਾ**. ਇੱਕ ਚੈਟ ਸੰਦਰਭ ਵਿੱਚ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਹੋਰ ਸਰੋਤਾਂ ਤੋਂ ਡਾਟਾ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਸਮਰਥਾ।
+- **ਸਥਿਰ ਜਵਾਬ ਫਾਰਮੈਟ**. ਜੇਕਰ ਅਸੀਂ ਜਵਾਬ ਦੇ ਫਾਰਮੈਟ ਨੂੰ ਬਿਹਤਰ ਤਰੀਕੇ ਨਾਲ ਨਿਯੰਤਰਿਤ ਕਰ ਸਕਦੇ ਹਾਂ ਤਾਂ ਅਸੀਂ ਹੋਰ ਸੌਖੇ ਤਰੀਕੇ ਨਾਲ ਜਵਾਬ ਨੂੰ ਹੋਰ ਸਿਸਟਮਾਂ ਵਿੱਚ ਇੱਕੀਕਰਿਤ ਕਰ ਸਕਦੇ ਹਾਂ।
+- **ਬਾਹਰੀ ਡਾਟਾ**. ਇੱਕ ਚੈਟ ਸੰਦਰਭ ਵਿੱਚ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਹੋਰ ਸਰੋਤਾਂ ਤੋਂ ਡਾਟਾ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਯੋਗਤਾ।
 
-## ਦ੍ਰਿਸ਼ ਦੁਆਰਾ ਸਮੱਸਿਆ ਦਾ ਚਿੱਤਰ
+## ਸਨੇਰੀਓ ਰਾਹੀਂ ਸਮੱਸਿਆ ਨੂੰ ਦਰਸਾਉਣਾ
 
-> ਅਸੀਂ ਤੁਹਾਨੂੰ [ਸ਼ਾਮਲ ਨੋਟਬੁੱਕ](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਜੇ ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੇ ਦ੍ਰਿਸ਼ ਨੂੰ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ। ਤੁਸੀਂ ਸਿਰਫ ਪੜ੍ਹ ਵੀ ਸਕਦੇ ਹੋ ਜਿਵੇਂ ਕਿ ਅਸੀਂ ਇੱਕ ਸਮੱਸਿਆ ਦਾ ਚਿੱਤਰ ਪੇਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹਾਂ ਜਿੱਥੇ ਫੰਕਸ਼ਨ ਸਮੱਸਿਆ ਨੂੰ ਹੱਲ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ।
+> ਅਸੀਂ ਤੁਹਾਨੂੰ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਕਿ ਜੇਕਰ ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੇ ਸਨੇਰੀਓ ਨੂੰ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ [ਸ਼ਾਮਲ ਨੋਟਬੁਕ](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) ਦੀ ਵਰਤੋਂ ਕਰੋ। ਤੁਸੀਂ ਸਿਰਫ਼ ਪੜ੍ਹ ਸਕਦੇ ਹੋ ਕਿਉਂਕਿ ਅਸੀਂ ਇੱਕ ਸਮੱਸਿਆ ਨੂੰ ਦਰਸਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹਾਂ ਜਿੱਥੇ ਫੰਕਸ਼ਨ ਸਮੱਸਿਆ ਨੂੰ ਸੰਬੋਧਿਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ।
 
-ਆਓ ਉਸ ਉਦਾਹਰਣ ਨੂੰ ਦੇਖੀਏ ਜੋ ਜਵਾਬ ਦੇ ਫਾਰਮੈਟ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਚਿੱਤਰਿਤ ਕਰਦਾ ਹੈ:
+ਆਓ ਉਦਾਹਰਨ 'ਤੇ ਨਜ਼ਰ ਪਾਈਏ ਜੋ ਜਵਾਬ ਦੇ ਫਾਰਮੈਟ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਦਰਸਾਉਂਦੀ ਹੈ:
 
-ਮੰਨ ਲਓ ਕਿ ਅਸੀਂ ਵਿਦਿਆਰਥੀਆਂ ਦੇ ਡਾਟਾ ਦਾ ਡਾਟਾਬੇਸ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਤਾਂ ਜੋ ਅਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਸਹੀ ਕੋਰਸ ਦੀ ਸਿਫਾਰਸ਼ ਕਰ ਸਕੀਏ। ਹੇਠਾਂ ਸਾਡੇ ਕੋਲ ਵਿਦਿਆਰਥੀਆਂ ਦੇ ਦੋ ਵਰਣਨ ਹਨ ਜੋ ਆਪਣੇ ਡਾਟਾ ਵਿੱਚ ਬਹੁਤ ਮਿਲਦੇ-ਜੁਲਦੇ ਹਨ।
+ਮੰਨ ਲਓ ਕਿ ਅਸੀਂ ਵਿਦਿਆਰਥੀ ਡਾਟਾ ਦੀ ਇੱਕ ਡਾਟਾਬੇਸ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਤਾਂ ਕਿ ਅਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਸਹੀ ਕੋਰਸ ਦੀ ਸਿਫਾਰਸ਼ ਕਰ ਸਕੀਏ। ਹੇਠਾਂ ਸਾਡੇ ਕੋਲ ਵਿਦਿਆਰਥੀਆਂ ਦੇ ਦੋ ਵੇਰਵੇ ਹਨ ਜੋ ਉਨ੍ਹਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਡਾਟਾ ਵਿੱਚ ਬਹੁਤ ਹੀ ਸਮਾਨ ਹਨ।
 
-1. ਸਾਡੇ Azure OpenAI ਸਰੋਤ ਨਾਲ ਇੱਕ ਕੁਨੈਕਸ਼ਨ ਬਣਾਓ:
+1. ਸਾਡੇ Azure OpenAI ਸਰੋਤ ਨਾਲ ਇੱਕ ਕਨੈਕਸ਼ਨ ਬਣਾਉ:
 
    ```python
    import os
@@ -75,9 +75,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   ਹੇਠਾਂ ਕੁਝ ਪਾਈਥਨ ਕੋਡ ਹੈ ਜੋ ਸਾਡੇ ਕੁਨੈਕਸ਼ਨ ਨੂੰ Azure OpenAI ਨਾਲ ਸੰਰਚਿਤ ਕਰਨ ਲਈ ਹੈ ਜਿੱਥੇ ਅਸੀਂ `api_type`, `api_base`, `api_version` and `api_key`.
+   ਹੇਠਾਂ ਕੁਝ Python ਕੋਡ ਹੈ ਜੋ ਸਾਡੇ ਕਨੈਕਸ਼ਨ ਨੂੰ Azure OpenAI ਨਾਲ ਸੰਰਚਿਤ ਕਰਨ ਲਈ ਹੈ ਜਿੱਥੇ ਅਸੀਂ `api_type`, `api_base`, `api_version` and `api_key`.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description` ਸੈੱਟ ਕਰਦੇ ਹਾਂ।
+1. Creating two student descriptions using variables `student_1_description` and `student_2_description` ਸੈਟ ਕਰਦੇ ਹਾਂ।
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -85,9 +85,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   ਅਸੀਂ ਉਪਰੋਕਤ ਵਿਦਿਆਰਥੀ ਵਰਣਨਾਂ ਨੂੰ ਇੱਕ LLM ਨੂੰ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਤਾਂ ਜੋ ਡਾਟਾ ਨੂੰ ਪਾਰਸ ਕੀਤਾ ਜਾ ਸਕੇ। ਇਹ ਡਾਟਾ ਬਾਅਦ ਵਿੱਚ ਸਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ API ਨੂੰ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ ਜਾਂ ਡਾਟਾਬੇਸ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
+   ਅਸੀਂ ਉਪਰੋਕਤ ਵਿਦਿਆਰਥੀ ਵੇਰਵੇ ਨੂੰ LLM ਨੂੰ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹਾਂ ਤਾਂ ਕਿ ਡਾਟਾ ਨੂੰ ਪਾਰਸ ਕੀਤਾ ਜਾ ਸਕੇ। ਇਹ ਡਾਟਾ ਬਾਅਦ ਵਿੱਚ ਸਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ API ਨੂੰ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੈ ਜਾਂ ਡਾਟਾਬੇਸ ਵਿੱਚ ਸਟੋਰ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
 
-1. ਆਓ ਦੋ ਇਕਸਾਰ ਪ੍ਰਾਂਪਟ ਬਣਾਈਏ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਅਸੀਂ LLM ਨੂੰ ਇਹ ਸਿੱਧਾ ਦਿਸ਼ਾ ਦਿੰਦੇ ਹਾਂ ਕਿ ਅਸੀਂ ਕਿਸ ਜਾਣਕਾਰੀ ਵਿੱਚ ਰੁਚੀ ਰੱਖਦੇ ਹਾਂ:
+1. ਆਓ ਦੋ ਇਕਸਾਰ ਪ੍ਰੋਮਪਟ ਬਣਾਈਏ ਜਿਸ ਵਿੱਚ ਅਸੀਂ LLM ਨੂੰ ਇਹ ਦਿਸ਼ਾ ਨਿਰਦੇਸ਼ ਦਿੰਦੇ ਹਾਂ ਕਿ ਅਸੀਂ ਕਿਹੜੀ ਜਾਣਕਾਰੀ ਵਿੱਚ ਦਿਲਚਸਪੀ ਰੱਖਦੇ ਹਾਂ:
 
    ```python
    prompt1 = f'''
@@ -117,9 +117,9 @@ CO_OP_TRANSLATOR_METADATA:
    '''
    ```
 
-   ਉਪਰੋਕਤ ਪ੍ਰਾਂਪਟ LLM ਨੂੰ ਜਾਣਕਾਰੀ ਨਿਕਾਲਣ ਅਤੇ ਜਵਾਬ ਨੂੰ JSON ਫਾਰਮੈਟ ਵਿੱਚ ਵਾਪਸ ਕਰਨ ਲਈ ਦਿਸ਼ਾ ਦਿੰਦੇ ਹਨ।
+   ਉਪਰੋਕਤ ਪ੍ਰੋਮਪਟ LLM ਨੂੰ ਜਾਣਕਾਰੀ ਕੱਢਣ ਅਤੇ JSON ਫਾਰਮੈਟ ਵਿੱਚ ਜਵਾਬ ਵਾਪਸ ਕਰਨ ਲਈ ਦਿਸ਼ਾ ਨਿਰਦੇਸ਼ ਦਿੰਦੇ ਹਨ।
 
-1. ਪ੍ਰਾਂਪਟ ਅਤੇ Azure OpenAI ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਸੈੱਟਅੱਪ ਕਰਨ ਦੇ ਬਾਅਦ, ਅਸੀਂ ਹੁਣ ਪ੍ਰਾਂਪਟ ਨੂੰ LLM ਨੂੰ ਭੇਜਾਂਗੇ `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` ਦੀ ਵਰਤੋਂ ਕਰਕੇ। ਇਹ ਉਪਭੋਗਤਾ ਵੱਲੋਂ ਇੱਕ ਚੈਟਬਾਟ ਨੂੰ ਲਿਖਿਆ ਗਿਆ ਸੁਨੇਹਾ ਨਕਲ ਕਰਨ ਲਈ ਹੈ।
+1. ਪ੍ਰੋਮਪਟ ਅਤੇ Azure OpenAI ਨਾਲ ਕਨੈਕਸ਼ਨ ਸੈਟਅਪ ਕਰਨ ਦੇ ਬਾਅਦ, ਅਸੀਂ ਹੁਣ `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਪ੍ਰੋਮਪਟ ਨੂੰ LLM ਨੂੰ ਭੇਜਾਂਗੇ। ਇਹ ਇੱਕ ਯੂਜ਼ਰ ਤੋਂ ਇੱਕ ਚੈਟਬੋਟ ਨੂੰ ਲਿਖੀ ਗਈ ਸੁਨੇਹਾ ਦੀ ਨਕਲ ਕਰਨ ਲਈ ਹੈ।
 
    ```python
    # response from prompt one
@@ -137,7 +137,7 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-ਹੁਣ ਅਸੀਂ ਦੋਵੇਂ ਬੇਨਤੀਆਂ ਨੂੰ LLM ਨੂੰ ਭੇਜ ਸਕਦੇ ਹਾਂ ਅਤੇ ਪ੍ਰਾਪਤ ਜਵਾਬ ਦੀ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹਾਂ ਜਿਸਨੂੰ ਇਸ ਤਰੀਕੇ ਨਾਲ ਲੱਭਿਆ ਜਾ ਸਕਦਾ ਹੈ `openai_response1['choices'][0]['message']['content']`.
+ਹੁਣ ਅਸੀਂ ਦੋਵੇਂ ਬੇਨਤੀਆਂ ਨੂੰ LLM ਨੂੰ ਭੇਜ ਸਕਦੇ ਹਾਂ ਅਤੇ ਪ੍ਰਾਪਤ ਕੀਤੇ ਗਏ ਜਵਾਬ ਦੀ ਜਾਂਚ ਇਸ ਤਰੀਕੇ ਨਾਲ ਕਰ ਸਕਦੇ ਹਾਂ `openai_response1['choices'][0]['message']['content']`.
 
 1. Lastly, we can convert the response to JSON format by calling `json.loads`:
 
@@ -171,13 +171,13 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   ਹਾਲਾਂਕਿ ਪ੍ਰਾਂਪਟ ਇੱਕੋ ਜਿਹੇ ਹਨ ਅਤੇ ਵਰਣਨ ਸਮਾਨ ਹਨ, ਅਸੀਂ ਵੇਖਦੇ ਹਾਂ ਕਿ `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   ਹਾਲਾਂਕਿ ਪ੍ਰੋਮਪਟ ਇਕੋ ਜਿਹੇ ਹਨ ਅਤੇ ਵੇਰਵੇ ਸਮਾਨ ਹਨ, ਅਸੀਂ `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
 
    This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
 
 So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.pa.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.pa.png)
 
 We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
 
@@ -199,23 +199,23 @@ The process of creating a function call includes 3 main steps:
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
 3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.pa.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.pa.png)
 
 ### Step 1 - creating messages
 
 The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` ਅਤੇ ਇੱਕ ਉਦਾਹਰਨ ਸਵਾਲ ਦੇ ਮੁੱਲ।
+The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` ਅਤੇ ਇੱਕ ਉਦਾਹਰਣ ਸਵਾਲ ਦੇ ਮੁੱਲ ਵੇਖਦੇ ਹਾਂ।
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-ਵੱਖ-ਵੱਖ ਭੂਮਿਕਾਵਾਂ ਨਿਰਧਾਰਤ ਕਰਕੇ, ਇਹ LLM ਲਈ ਸਪਸ਼ਟ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਕਿ ਕੀ ਇਹ ਪ੍ਰਣਾਲੀ ਕੁਝ ਕਹਿ ਰਹੀ ਹੈ ਜਾਂ ਉਪਭੋਗਤਾ, ਜੋ ਕਿ ਇੱਕ ਗੱਲਬਾਤ ਦਾ ਇਤਿਹਾਸ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਜਿਸ 'ਤੇ LLM ਨਿਰਮਾਣ ਕਰ ਸਕਦਾ ਹੈ।
+ਵੱਖਰੇ ਭੂਮਿਕਾਵਾਂ ਨੂੰ ਸੌਂਪ ਕੇ, ਇਹ LLM ਲਈ ਸਪਸ਼ਟ ਕੀਤਾ ਗਿਆ ਹੈ ਕਿ ਕੀ ਇਹ ਸਿਸਟਮ ਕੁਝ ਕਹਿ ਰਿਹਾ ਹੈ ਜਾਂ ਯੂਜ਼ਰ, ਜਿਸ ਨਾਲ ਇੱਕ ਗੱਲਬਾਤ ਦਾ ਇਤਿਹਾਸ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਮਿਲਦੀ ਹੈ ਜਿਸ 'ਤੇ LLM ਬਣਾਉਣ ਕਰ ਸਕਦਾ ਹੈ।
 
 ### ਕਦਮ 2 - ਫੰਕਸ਼ਨ ਬਣਾਉਣਾ
 
-ਅਗਲੇ, ਅਸੀਂ ਇੱਕ ਫੰਕਸ਼ਨ ਅਤੇ ਉਸ ਫੰਕਸ਼ਨ ਦੇ ਪੈਰਾਮੀਟਰ ਨਿਰਧਾਰਤ ਕਰਾਂਗੇ। ਅਸੀਂ ਇੱਥੇ ਸਿਰਫ ਇੱਕ ਫੰਕਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰਾਂਗੇ ਜਿਸਨੂੰ `search_courses` but you can create multiple functions.
+ਅਗਲਾ, ਅਸੀਂ ਇੱਕ ਫੰਕਸ਼ਨ ਅਤੇ ਉਸ ਫੰਕਸ਼ਨ ਦੇ ਪੈਰਾਮੀਟਰਾਂ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਕਰਾਂਗੇ। ਅਸੀਂ ਇੱਥੇ ਸਿਰਫ ਇੱਕ ਫੰਕਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰਾਂਗੇ ਜਿਸਨੂੰ `search_courses` but you can create multiple functions.
 
 > **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
 
@@ -250,7 +250,7 @@ functions = [
 ]
 ```
 
-ਆਓ ਹੇਠਾਂ ਹਰੇਕ ਫੰਕਸ਼ਨ ਦੀ ਘਟਨਾ ਨੂੰ ਹੋਰ ਵਿਸਥਾਰ ਵਿੱਚ ਵੇਖੀਏ:
+ਆਓ ਹੇਠਾਂ ਹਰ ਫੰਕਸ਼ਨ ਇੰਸਟੈਂਸ ਨੂੰ ਹੋਰ ਵਿਸਥਾਰ ਵਿੱਚ ਦਰਸਾਉਂਦੇ ਹਾਂ:
 
 - `name` - The name of the function that we want to have called.
 - `description` - This is the description of how the function works. Here it's important to be specific and clear.
@@ -269,7 +269,7 @@ After defining a function, we now need to include it in the call to the Chat Com
 
 There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` ਅਤੇ ਇਸ ਤਰੀਕੇ ਨਾਲ LLM ਨੂੰ ਫੰਕਸ਼ਨ ਕਾਲ ਕਰਨ ਦਾ ਚੋਣ ਦਿੰਦੇ ਹਾਂ ਜਦੋਂ ਅਸੀਂ ਇਸਨੂੰ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਾਂ:
+Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` ਅਤੇ ਇਸ ਤਰੀਕੇ ਨਾਲ LLM ਨੂੰ ਫੰਕਸ਼ਨ ਕਾਲ ਕਰਨ ਦੀ ਚੋਣ ਦੇ ਰਹੇ ਹਾਂ ਜਦੋਂ ਅਸੀਂ ਇਸ ਨੂੰ ਮੁਹੱਈਆ ਕਰਦੇ ਹਾਂ:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +280,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-ਹੁਣ ਵਾਪਸ ਆਉਣ ਵਾਲਾ ਜਵਾਬ ਇਸ ਤਰੀਕੇ ਦਾ ਲੱਗਦਾ ਹੈ:
+ਹੁਣ ਵਾਪਸ ਆਉਣ ਵਾਲਾ ਜਵਾਬ ਇਸ ਤਰੀਕੇ ਨਾਲ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ:
 
 ```json
 {
@@ -300,7 +300,7 @@ The conclusion the LLM was able to find the data to fit the arguments of the fun
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-ਜਿਵੇਂ ਕਿ ਤੁਸੀਂ ਦੇਖ ਸਕਦੇ ਹੋ, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+ਜਿਵੇਂ ਤੁਸੀਂ ਵੇਖ ਸਕਦੇ ਹੋ, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
 
 Next, we need to see how we can use this in our app.
 
@@ -312,13 +312,13 @@ After we have tested the formatted response from the LLM, we can now integrate t
 
 To integrate this into our application, let's take the following steps:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`।
+1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. ਹੁਣ ਅਸੀਂ ਉਸ ਫੰਕਸ਼ਨ ਨੂੰ ਨਿਰਧਾਰਤ ਕਰਾਂਗੇ ਜੋ Microsoft Learn API ਨੂੰ ਕੋਰਸਾਂ ਦੀ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਕਾਲ ਕਰੇਗਾ:
+1. ਹੁਣ ਅਸੀਂ ਇੱਕ ਫੰਕਸ਼ਨ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਕਰਾਂਗੇ ਜੋ Microsoft Learn API ਨੂੰ ਕੋਰਸਾਂ ਦੀ ਸੂਚੀ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਕਾਲ ਕਰੇਗਾ:
 
    ```python
    import requests
@@ -340,11 +340,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   ਧਿਆਨ ਦਿਓ ਕਿ ਅਸੀਂ ਹੁਣ ਇੱਕ ਅਸਲੀ ਪਾਈਥਨ ਫੰਕਸ਼ਨ ਬਣਾਉਂਦੇ ਹਾਂ ਜੋ `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   ਨੋਟ ਕਰੋ ਕਿ ਅਸੀਂ ਹੁਣ ਇੱਕ ਅਸਲ Python ਫੰਕਸ਼ਨ ਬਣਾਉਂਦੇ ਹਾਂ ਜੋ `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` ਵਿੱਚ ਲਿਆਂਦੇ ਗਏ ਫੰਕਸ਼ਨ ਨਾਮਾਂ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ ਅਤੇ ਇਹ ਇਸਦਾ ਹਿੱਸਾ ਹੈ ਅਤੇ ਨਿਰਧਾਰਿਤ ਫੰਕਸ਼ਨ ਨੂੰ ਕਾਲ ਕਰਦਾ ਹੈ। ਹੇਠਾਂ ਦਿੱਤੇ ਚੈਕ ਨੂੰ ਕਰਨ ਦਾ ਤਰੀਕਾ ਇਹ ਹੈ:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` ਵਿੱਚ ਪੇਸ਼ ਕੀਤੇ ਫੰਕਸ਼ਨ ਨਾਮਾਂ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ ਅਤੇ ਇਸਦਾ ਹਿੱਸਾ ਹੈ ਅਤੇ ਦਰਸਾਏ ਗਏ ਫੰਕਸ਼ਨ ਨੂੰ ਕਾਲ ਕਰਦਾ ਹੈ। ਇੱਥੇ ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੇ ਚੈੱਕ ਨੂੰ ਬਣਾਉਣ ਦੀ ਯੋਗਤਾ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ:
 
    ```python
    # Check if the model wants to call a function
@@ -389,7 +389,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   ਇਹ ਤਿੰਨ ਲਾਈਨਾਂ, ਇਹ ਯਕੀਨੀ ਬਣਾਉਂਦੀਆਂ ਹਨ ਕਿ ਅਸੀਂ ਫੰਕਸ਼ਨ ਦਾ ਨਾਮ, ਪੈਰਾਮੀਟਰ ਅਤੇ ਕਾਲ ਨੂੰ ਕੱਢਦੇ ਹਾਂ:
+   ਇਹ ਤਿੰਨ ਲਾਈਨਾਂ, ਫੰਕਸ਼ਨ ਨਾਮ, ਦਲੀਲਾਂ ਕੱਢਣ ਅਤੇ ਕਾਲ ਕਰਨ ਦੀ ਯਕੀਨੀਤਾ ਦਿੰਦੇ ਹਨ:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -398,7 +398,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   ਹੇਠਾਂ ਸਾਡੇ ਕੋਡ ਨੂੰ ਚਲਾਉਣ ਤੋਂ ਆਉਟਪੁੱਟ ਹੈ:
+   ਹੇਠਾਂ ਸਾਡੇ ਕੋਡ ਨੂੰ ਚਲਾਉਣ ਤੋਂ ਪ੍ਰਾਪਤ ਆਉਟਪੁੱਟ ਹੈ:
 
    **ਆਉਟਪੁੱਟ**
 
@@ -419,7 +419,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. ਹੁਣ ਅਸੀਂ ਅਪਡੇਟ ਕੀਤਾ ਸੁਨੇਹਾ, `messages` ਨੂੰ LLM ਨੂੰ ਭੇਜਾਂਗੇ ਤਾਂ ਜੋ ਅਸੀਂ ਇੱਕ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਵਿੱਚ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰ ਸਕੀਏ ਨਾ ਕਿ API JSON ਫਾਰਮੈਟ ਵਿੱਚ ਜਵਾਬ।
+1. ਹੁਣ ਅਸੀਂ ਅਪਡੇਟ ਕੀਤੀ ਗਈ ਸੁਨੇਹਾ, `messages` ਨੂੰ LLM ਨੂੰ ਭੇਜਾਂਗੇ ਤਾਂ ਕਿ ਅਸੀਂ API JSON ਫਾਰਮੈਟ ਕੀਤੇ ਜਵਾਬ ਦੇ ਬਦਲੇ ਇੱਕ ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰ ਸਕੀਏ।
 
    ```python
    print("Messages in next request:")
@@ -450,18 +450,19 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## ਅਸਾਈਨਮੈਂਟ
 
-Azure OpenAI ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੇ ਆਪਣੇ ਸਿੱਖਣ ਨੂੰ ਜਾਰੀ ਰੱਖਣ ਲਈ ਤੁਸੀਂ ਇਹ ਬਣਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹੋ:
+Azure OpenAI ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਦੇ ਸਿੱਖਣ ਨੂੰ ਜਾਰੀ ਰੱਖਣ ਲਈ ਤੁਸੀਂ ਬਣਾਉਣ ਕਰ ਸਕਦੇ ਹੋ:
 
-- ਫੰਕਸ਼ਨ ਦੇ ਹੋਰ ਪੈਰਾਮੀਟਰ ਜੋ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨੂੰ ਹੋਰ ਕੋਰਸਾਂ ਲੱਭਣ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ।
-- ਇੱਕ ਹੋਰ ਫੰਕਸ਼ਨ ਕਾਲ ਬਣਾਓ ਜੋ ਸਿੱਖਣ ਵਾਲੇ ਤੋਂ ਹੋਰ ਜਾਣਕਾਰੀ ਲੈਂਦਾ ਹੈ ਜਿਵੇਂ ਕਿ ਉਨ੍ਹਾਂ ਦੀ ਮੂਲ ਭਾਸ਼ਾ
-- ਜਦੋਂ ਫੰਕਸ਼ਨ ਕਾਲ ਅਤੇ/ਜਾਂ API ਕਾਲ ਕੋਈ ਉਚਿਤ ਕੋਰਸ ਵਾਪਸ ਨਹੀਂ ਕਰਦਾ ਹੈ ਤਾਂ ਗਲਤੀ ਸੰਭਾਲ ਬਣਾਓ
+- ਫੰਕਸ਼ਨ ਦੇ ਹੋਰ ਪੈਰਾਮੀਟਰ ਜੋ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨੂੰ ਹੋਰ ਕੋਰਸ ਲੱਭਣ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ।
+- ਇੱਕ ਹੋਰ ਫੰਕਸ਼ਨ ਕਾਲ ਬਣਾਉ ਜੋ ਸਿੱਖਣ ਵਾਲੇ ਤੋਂ ਹੋਰ ਜਾਣਕਾਰੀ ਲੈਂਦਾ ਹੈ ਜਿਵੇਂ ਕਿ ਉਨ੍ਹਾਂ ਦੀ ਮੂਲ ਭਾਸ਼ਾ
+- ਫੰਕਸ਼ਨ ਕਾਲ ਅਤੇ/ਜਾਂ API ਕਾਲ ਸੂਟਬਲ ਕੋਰਸ ਨਾ ਵਾਪਸ ਕਰਨ ਤੇ ਗਲਤੀ ਸੰਭਾਲਣਾ
 
-ਸੰਕੇਤ: [Learn API ਸੰਦਰਭ ਦਸਤਾਵੇਜ਼](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) ਪੰਨਾ ਦੇਖੋ ਕਿ ਇਹ ਡਾਟਾ ਕਿਵੇਂ ਅਤੇ ਕਿੱਥੇ ਉਪਲਬਧ ਹੈ।
+ਸੁਝਾਅ: ਇਹ ਡਾਟਾ ਕਿਵੇਂ ਅਤੇ ਕਿੱਥੇ ਉਪਲਬਧ ਹੈ ਇਹ ਦੇਖਣ ਲਈ [Learn API ਸੰਦਰਭ ਦਸਤਾਵੇਜ਼](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) ਪੰਨਾ ਦੀ ਪਾਲਣਾ ਕਰੋ।
 
-## ਸ਼ਾਨਦਾਰ ਕੰਮ! ਯਾਤਰਾ ਜਾਰੀ ਰੱਖੋ
+## ਵਧੀਆ ਕੰਮ! ਯਾਤਰਾ ਜਾਰੀ ਰੱਖੋ
 
-ਇਸ ਪਾਠ ਨੂੰ ਪੂਰਾ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਸਾਡੀ [Generative AI ਸਿੱਖਣ ਸੰਗ੍ਰਹਿ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ਨੂੰ ਵੇਖੋ ਤਾਂ ਜੋ ਤੁਹਾਡੀ Generative AI ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਹੋਰ ਉੱਚਾ ਕੀਤਾ ਜਾ ਸਕੇ!
+ਇਹ ਪਾਠ ਪੂਰਾ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਸਾਡੀ [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ਦੀ ਜਾਂਚ ਕਰੋ ਤਾਂ ਕਿ ਆਪਣੇ Generative AI ਗਿਆਨ ਨੂੰ ਉੱਚਾ ਕਰ ਸਕੀਏ!
 
-ਪਾਠ 12 ਵੱਲ ਜਾਓ, ਜਿੱਥੇ ਅਸੀਂ ਦੇਖਾਂਗੇ ਕਿ [AI ਐਪਲੀਕੇਸ਼ਨ ਲਈ UX ਕਿਵੇਂ ਡਿਜ਼ਾਈਨ ਕਰਨਾ ਹੈ](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+ਪਾਠ 12 ਵੱਲ ਜਾਓ, ਜਿੱਥੇ ਅਸੀਂ ਵੇਖਾਂਗੇ ਕਿ ਕਿਵੇਂ [AI ਐਪਲੀਕੇਸ਼ਨ ਲਈ UX ਡਿਜ਼ਾਇਨ ਕਰਨਾ ਹੈ](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-I'm sorry, but I can't assist with that request.
+**ਅਸਵੀਕਤੀ**:  
+ਇਹ ਦਸਤਾਵੇਜ਼ AI ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀ ਹੋਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਦੇ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਜਾਣੋ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸੁਚੱਜੇਪਨ ਹੋ ਸਕਦੇ ਹਨ। ਇਸਦੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਮੂਲ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਅਧਿਕਾਰਤ ਸਰੋਤ ਸਮਝਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਮਹੱਤਵਪੂਰਨ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਇਸ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੀਆਂ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀਆਂ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਅਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।

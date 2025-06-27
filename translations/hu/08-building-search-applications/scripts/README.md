@@ -2,42 +2,42 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:53:58+00:00",
+  "translation_date": "2025-06-25T16:58:41+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "hu"
 }
 -->
-# Átirat adat-előkészítés
+# Átirat adat előkészítése
 
-Az átirat adat-előkészítő szkriptek letöltik a YouTube videók átiratait, és előkészítik azokat a Semantikus keresés OpenAI Beágyazásokkal és Funkciókkal minta használatához.
+Az átirat adat előkészítő szkriptek letöltik a YouTube videók átiratait és előkészítik őket az OpenAI Beágyazásokkal és Funkciókkal való Szemantikai Keresés mintához.
 
-Az átirat adat-előkészítő szkripteket tesztelték a legújabb Windows 11, macOS Ventura és Ubuntu 22.04 (és újabb) kiadásokon.
+Az átirat adat előkészítő szkriptek tesztelve lettek a legújabb Windows 11, macOS Ventura és Ubuntu 22.04 (és újabb) kiadásokon.
 
-## Szükséges Azure OpenAI Szolgáltatás erőforrások létrehozása
+## Szükséges Azure OpenAI Service erőforrások létrehozása
 
 > [!IMPORTANT]
 > Javasoljuk, hogy frissítse az Azure CLI-t a legújabb verzióra a kompatibilitás biztosítása érdekében az OpenAI-val.
 > Lásd [Dokumentáció](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. Hozzon létre egy erőforráscsoportot
+1. Erőforrás csoport létrehozása
 
 > [!NOTE]
-> Ezekhez az utasításokhoz az "semantic-video-search" nevű erőforráscsoportot használjuk Kelet-USA-ban.
-> Megváltoztathatja az erőforráscsoport nevét, de amikor az erőforrások helyét változtatja, 
+> Ezekhez az utasításokhoz a "semantic-video-search" nevű erőforrás csoportot használjuk Kelet USA-ban.
+> Megváltoztathatja az erőforrás csoport nevét, de ha megváltoztatja az erőforrások helyét, 
 > ellenőrizze a [modell elérhetőségi táblázatot](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Hozzon létre egy Azure OpenAI Szolgáltatás erőforrást.
+1. Azure OpenAI Service erőforrás létrehozása.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Szerezze be a végpontot és a kulcsokat az alkalmazás használatához
+1. Szerezze meg az alkalmazás használatához szükséges végpontot és kulcsokat.
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -70,18 +70,18 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## Szükséges szoftver
+## Szükséges szoftverek
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) vagy újabb
 
 ## Környezeti változók
 
-A következő környezeti változók szükségesek a YouTube átirat adat-előkészítő szkriptek futtatásához.
+A következő környezeti változók szükségesek a YouTube átirat adat előkészítő szkriptek futtatásához.
 
 ### Windows-on
 
-Javasoljuk, hogy adja hozzá a változókat a `user` environment variables.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
+Ajánlott hozzáadni a változókat a `user` environment variables.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`-hoz.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -90,9 +90,9 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### Linux és macOS esetén
+### Linux és macOS-en
 
-Javasoljuk, hogy adja hozzá a következő exportokat a `~/.bashrc` or `~/.zshrc` fájlhoz.
+Ajánlott hozzáadni a következő exportokat a `~/.bashrc` or `~/.zshrc` fájlhoz.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -101,10 +101,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## A szükséges Python könyvtárak telepítése
+## Szükséges Python könyvtárak telepítése
 
-1. Telepítse a [git klienst](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ha még nincs telepítve.
-1. Egy `Terminál` ablakból klónozza a mintát a preferált repo mappájába.
+1. Telepítse a [git kliens](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)-t, ha még nincs telepítve.
+1. Egy `Terminal` ablakból klónozza a mintát a kívánt repo mappába.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -124,7 +124,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    macOS és Linux esetén:
+    macOS és Linux-on:
 
     ```bash
     python3 -m venv .venv
@@ -138,7 +138,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   macOS és Linux esetén:
+   macOS és Linux-on:
 
    ```bash
    source .venv/bin/activate
@@ -152,13 +152,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   macOS és Linux esetén:
+   macOS és Linux-on:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## A YouTube átirat adat-előkészítő szkriptek futtatása
+## Futtassa a YouTube átirat adat előkészítő szkripteket
 
 ### Windows-on
 
@@ -166,11 +166,11 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### macOS és Linux esetén
+### macOS és Linux-on
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
-**Felelősség kizárása**:  
-Ezt a dokumentumot az AI fordítási szolgáltatással, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő a hiteles forrásnak. Fontos információk esetén javasolt a professzionális emberi fordítás. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félremagyarázásokért.
+**Jogi nyilatkozat**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatással lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.

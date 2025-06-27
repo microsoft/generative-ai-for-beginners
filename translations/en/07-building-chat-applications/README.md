@@ -2,12 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T17:28:15+00:00",
+  "translation_date": "2025-06-25T15:02:41+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "en"
 }
 -->
 # Building Generative AI-Powered Chat Applications
+
+> _(Click the image above to view video of this lesson)_
 
 Now that we've seen how we can build text-generation apps, let's look into chat applications.
 
@@ -61,9 +63,9 @@ The table below outlines the key differences and similarities to help us underst
 When building a chat application, a great first step is to assess what is already out there. Using SDKs and APIs to build chat applications is an advantageous strategy for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
 
 - **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
-- **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built in solutions for these concerns.
+- **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built-in solutions for these concerns.
 - **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
-- **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
+- **Access to cutting edge technology**: Leveraging models that have been fine-tuned and trained on extensive datasets provides your application with natural language capabilities.
 
 Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) or [notebook for Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) for this lesson.
 
@@ -92,11 +94,7 @@ General UX principles apply to chat applications, but here are some additional c
 
 One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
 
-![Custom Instructions Settings in ChatGPT](../../../translated_images/custom-instructions.950e3bf1d66f052ff5c50cd6722f1fcb532089abe33d833c190a3796f4a09827.en.png)
-
-This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in depth lesson plan based on her experience.
-
-![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/lesson-plan-prompt.23083d9c80ec7670b3aaf3b093d79a13ed42920da81b851b29f6167b6150aae9.en.png)
+This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in-depth lesson plan based on her experience.
 
 ### Microsoft's System Message Framework for Large Language Models
 
@@ -120,18 +118,18 @@ Whether a user has visual, auditory, motor, or cognitive impairments, a well-des
 
 Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
 
-- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand its concepts and scenarios.
+- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so-called DSL model trained on a specific domain to understand its concepts and scenarios.
 - **Apply fine-tuning**. Fine-tuning is the process of further training your model with specific data.
 
 ## Customization: Using a DSL
 
-Leveraging a domain-specific language models (DSL Models) can enhance user engagement by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+Leveraging a domain-specific language model (DSL Model) can enhance user engagement by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
 
 ## Customization: Apply fine-tuning
 
 Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task.
 
-For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source.
+For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient, it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source.
 
 ### Scenario: a medical application
 
@@ -188,5 +186,9 @@ After completing this lesson, check out our [Generative AI Learning collection](
 
 Head over to Lesson 8 to see how you can start [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
+Certainly! Here's the translated text:
+
+---
+
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

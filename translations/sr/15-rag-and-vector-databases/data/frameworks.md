@@ -2,122 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:08:29+00:00",
+  "translation_date": "2025-06-25T23:11:30+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "sr"
 }
 -->
-# Okviri neuronskih mreža
+# Оквири за неуронске мреже
 
-Kao što smo već naučili, da bismo mogli efikasno trenirati neuronske mreže, potrebno je da uradimo dve stvari:
+Као што смо већ научили, да бисмо могли ефикасно да обучавамо неуронске мреже, потребно је да урадимо две ствари:
 
-* Da radimo sa tenzorima, npr. da množimo, sabiramo i računamo neke funkcije kao što su sigmoid ili softmax
-* Da izračunamo gradijente svih izraza, kako bismo izvršili optimizaciju spuštanjem gradijenta
+* Да радимо са тенсорима, на пример, да множимо, сабирамо и рачунамо неке функције као што су сигмоид или софтмакс
+* Да израчунамо градијенте свих израза, како бисмо извршили оптимизацију градијентним спуштањем
 
-Dok `numpy` biblioteka može da uradi prvi deo, potrebna nam je neka mehanizam za računanje gradijenata. U našem okviru koji smo razvili u prethodnom odeljku morali smo ručno da programiramo sve funkcije derivacija unutar `backward` metode, koja vrši povratnu propagaciju. Idealno, okvir bi trebalo da nam pruži mogućnost da izračunamo gradijente *bilo kog izraza* koji možemo definisati.
+Док `numpy` библиотека може да уради први део, потребан нам је неки механизам за израчунавање градијената. У нашем оквиру који смо развили у претходном одељку морали смо ручно да програмирамо све функције изводница унутар `backward` метода, који ради назадно распрострањивање. Идеално, оквир би нам требао омогућити израчунавање градијената *било ког израза* који можемо дефинисати.
 
-Još jedna važna stvar je da možemo da obavljamo proračune na GPU, ili bilo kojim drugim specijalizovanim jedinicama za proračun, kao što je TPU. Trening dubokih neuronskih mreža zahteva *mnogo* proračuna, i mogućnost da se ti proračuni paralelizuju na GPU-ima je veoma važna.
+Још једна важна ствар је да будемо у могућности да извршавамо прорачуне на GPU, или било којој другој специјализованој јединици за рачунање, као што је TPU. Обука дубоких неуронских мрежа захтева *много* прорачуна, и веома је важно да можемо паралелизовати те прорачуне на GPU-овима.
 
-> ✅ Termin 'paralelizacija' znači raspodelu proračuna na više uređaja.
+> ✅ Термин 'паралелизовати' значи расподелити прорачуне на више уређаја.
 
-Trenutno, dva najpopularnija okvira za neuronske mreže su: TensorFlow i PyTorch. Oba pružaju API niskog nivoa za rad sa tenzorima na CPU i GPU. Na vrhu API-ja niskog nivoa, postoji i API višeg nivoa, koji se zove Keras i PyTorch Lightning, respektivno.
+Тренутно, два најпопуларнија оквира за неуронске мреже су: TensorFlow и PyTorch. Оба пружају ниско-ниво API за рад са тенсорима на CPU и GPU. На врху ниско-ниво API-а, постоји и високо-ниво API, који се зове Keras и PyTorch Lightning.
 
-API niskog nivoa | TensorFlow| PyTorch
+Ниско-ниво API | TensorFlow| PyTorch
 --------------|-------------------------------------|--------------------------------
-API visokog nivoa| Keras| Pytorch
+Високо-ниво API| Keras| Pytorch
 
-**API niskog nivoa** u oba okvira omogućavaju vam da gradite takozvane **grafove proračuna**. Ovaj graf definiše kako izračunati izlaz (obično funkciju gubitka) sa datim ulaznim parametrima, i može biti gurnut za proračun na GPU, ako je dostupan. Postoje funkcije za diferencijaciju ovog grafika proračuna i računanje gradijenata, koje se zatim mogu koristiti za optimizaciju parametara modela.
+**Ниско-ниво API-и** у оба оквира вам омогућавају да изградите такозване **рачунске графове**. Овај граф дефинише како да израчунате излаз (обично функцију губитка) са датим улазним параметрима, и може се проследити за прорачун на GPU, ако је доступан. Постоје функције за диференцирање овог рачунског графа и израчунавање градијената, који се затим могу користити за оптимизацију параметара модела.
 
-**API visokog nivoa** uglavnom smatraju neuronske mreže kao **sekvencu slojeva**, i čine konstrukciju većine neuronskih mreža mnogo lakšom. Trening modela obično zahteva pripremu podataka i zatim pozivanje `fit` funkcije da obavi posao.
+**Високо-ниво API-и** углавном сматрају неуронске мреже као **секвенцу слојева**, и чине конструкцију већине неуронских мрежа много лакшом. Обука модела обично захтева припрему података, а затим позивање `fit` функције да уради посао.
 
-API visokog nivoa omogućava vam da brzo konstruirate tipične neuronske mreže bez brige o mnogim detaljima. Istovremeno, API niskog nivoa pruža mnogo više kontrole nad procesom treninga, i zbog toga se puno koriste u istraživanju, kada se bavite novim arhitekturama neuronskih mreža.
+Високо-ниво API вам омогућава да веома брзо конструишете типичне неуронске мреже без бриге о многим детаљима. Истовремено, ниско-ниво API пружа много више контроле над процесом обуке, и стога се много користи у истраживањима, када се бавите новим архитектурама неуронских мрежа.
 
-Takođe je važno razumeti da možete koristiti oba API-ja zajedno, npr. možete razviti svoju arhitekturu slojeva mreže koristeći API niskog nivoa, a zatim je koristiti unutar veće mreže konstruisane i trenirane sa API-jem visokog nivoa. Ili možete definisati mrežu koristeći API visokog nivoa kao sekvencu slojeva, a zatim koristiti svoj sopstveni trening loop niskog nivoa da izvršite optimizaciju. Oba API-ja koriste iste osnovne koncepte, i dizajnirani su da dobro rade zajedno.
+Такође је важно разумети да можете користити оба API-а заједно, на пример, можете развити сопствену архитектуру слоја мреже користећи ниско-ниво API, а затим је користити унутар веће мреже конструисане и обучене са високо-ниво API. Или можете дефинисати мрежу користећи високо-ниво API као секвенцу слојева, а затим користити сопствени ниско-ниво циклус обуке за извршавање оптимизације. Оба API-а користе исте основне концепте и дизајнирани су да добро раде заједно.
 
-## Učenje
+## Учење
 
-U ovom kursu, nudimo većinu sadržaja kako za PyTorch, tako i za TensorFlow. Možete izabrati svoj preferirani okvir i proći samo kroz odgovarajuće beležnice. Ako niste sigurni koji okvir da izaberete, pročitajte neke diskusije na internetu o **PyTorch vs. TensorFlow**. Takođe možete pogledati oba okvira da biste stekli bolje razumevanje.
+У овом курсу, нудимо већину садржаја како за PyTorch, тако и за TensorFlow. Можете изабрати свој омиљени оквир и проћи само кроз одговарајуће свеске. Ако нисте сигурни који оквир да изаберете, прочитајте неке дискусије на интернету о **PyTorch vs. TensorFlow**. Такође можете погледати оба оквира да бисте боље разумели.
 
-Gde god je moguće, koristićemo API visokog nivoa radi jednostavnosti. Međutim, verujemo da je važno razumeti kako neuronske mreže funkcionišu od temelja, stoga na početku počinjemo sa radom sa API-jem niskog nivoa i tenzorima. Međutim, ako želite brzo da krenete i ne želite da potrošite puno vremena na učenje ovih detalja, možete ih preskočiti i odmah preći na beležnice API-ja visokog nivoa.
+Где је могуће, користићемо високо-ниво API-е ради једноставности. Међутим, верујемо да је важно разумети како неуронске мреже раде од основе, стога на почетку почињемо радом са ниско-ниво API-ом и тенсорима. Међутим, ако желите брзо да кренете и не желите да проведете много времена учећи ове детаље, можете их прескочити и директно прећи на свеске високо-ниво API-а.
 
-## ✍️ Vežbe: Okviri
+## ✍️ Вежбе: Оквири
 
-Nastavite svoje učenje u sledećim beležnicama:
+Наставите своје учење у следећим свескама:
 
-API niskog nivoa | Beležnica TensorFlow+Keras | PyTorch
+Ниско-ниво API | TensorFlow+Keras свеска | PyTorch
 --------------|-------------------------------------|--------------------------------
-API visokog nivoa| Keras | *PyTorch Lightning*
+Високо-ниво API| Keras | *PyTorch Lightning*
 
-Nakon savladavanja okvira, hajde da ponovimo pojam prekomernog prilagođavanja.
+Након савладавања оквира, да резимирамо појам преоптерећења.
 
-# Prekomerno prilagođavanje
+# Преоптерећење
 
-Prekomerno prilagođavanje je izuzetno važan koncept u mašinskom učenju, i veoma je važno da ga pravilno razumemo!
+Преоптерећење је изузетно важан концепт у машинском учењу, и веома је важно да га правилно разумемо!
 
-Razmotrite sledeći problem aproksimacije 5 tačaka (predstavljenih sa `x` na grafikonima ispod):
+Размотримо следећи проблем апроксимације 5 тачака (представљених са `x` на графиконима испод):
 
-!linear | prekomerno prilagođavanje
+!линеарно | преоптерећено
 -------------------------|--------------------------
-**Linearni model, 2 parametra** | **Nelinearni model, 7 parametara**
-Greška treninga = 5.3 | Greška treninga = 0
-Greška validacije = 5.1 | Greška validacije = 20
+**Линеарни модел, 2 параметра** | **Нелинеарни модел, 7 параметара**
+Грешка у обуци = 5.3 | Грешка у обуци = 0
+Грешка у валидацији = 5.1 | Грешка у валидацији = 20
 
-* Levo vidimo dobru aproksimaciju pravom linijom. Zato što je broj parametara adekvatan, model pravilno razume distribuciju tačaka.
-* Desno, model je previše moćan. Zato što imamo samo 5 tačaka, a model ima 7 parametara, može se prilagoditi na takav način da prođe kroz sve tačke, čineći grešku treninga 0. Međutim, to sprečava model da razume ispravan obrazac podataka, stoga je greška validacije veoma visoka.
+* Лево видимо добру апроксимацију правом линијом. Због адекватног броја параметара, модел правилно разуме расподелу тачака.
+* Десно, модел је превише моћан. Пошто имамо само 5 тачака, а модел има 7 параметара, може се прилагодити тако да пролази кроз све тачке, чинећи грешку у обуци 0. Међутим, то спречава модел да разуме правилан образац иза података, стога је грешка у валидацији веома висока.
 
-Veoma je važno postići pravilan balans između bogatstva modela (broja parametara) i broja uzoraka za trening.
+Веома је важно успоставити правилну равнотежу између богатства модела (број параметара) и броја узорака за обуку.
 
-## Zašto dolazi do prekomernog prilagođavanja
+## Зашто долази до преоптерећења
 
-  * Nedovoljno podataka za trening
-  * Previše moćan model
-  * Previše šuma u ulaznim podacima
+  * Недовољно података за обуку
+  * Превише моћан модел
+  * Превише шума у улазним подацима
 
-## Kako otkriti prekomerno prilagođavanje
+## Како открити преоптерећење
 
-Kao što možete videti sa grafikona iznad, prekomerno prilagođavanje može se otkriti vrlo niskom greškom treninga i visokom greškom validacije. Obično tokom treninga vidimo da greške treninga i validacije počinju da se smanjuju, a zatim u nekom trenutku greška validacije može prestati da se smanjuje i početi da raste. To će biti znak prekomernog prilagođavanja i indikator da verovatno treba da prestanemo sa treningom u tom trenutku (ili barem da napravimo snimak modela).
+Као што можете видети са графикона изнад, преоптерећење се може открити веома ниском грешком у обуци и високом грешком у валидацији. Обично током обуке видимо како и грешка у обуци и грешка у валидацији почињу да опадају, а онда у једном тренутку грешка у валидацији може престати да опада и почети да расте. Ово ће бити знак преоптерећења и показатељ да би требало да вероватно престанемо са обуком у том тренутку (или барем направимо снимак модела).
 
-## Kako sprečiti prekomerno prilagođavanje
+преоптерећење
 
-Ako vidite da dolazi do prekomernog prilagođavanja, možete uraditi jedno od sledećeg:
+## Како спречити преоптерећење
 
- * Povećajte količinu podataka za trening
- * Smanjite složenost modela
- * Koristite neku tehniku regularizacije, kao što je Dropout, koju ćemo razmotriti kasnije.
+Ако видите да долази до преоптерећења, можете урадити једно од следећег:
 
-## Prekomerno prilagođavanje i kompromis pristrasnosti-varijanse
+ * Повећајте количину података за обуку
+ * Смањите сложеност модела
+ * Користите неку технику регуларизације, као што је Dropout, коју ћемо касније размотрити.
 
-Prekomerno prilagođavanje je zapravo slučaj opšteg problema u statistici koji se zove kompromis pristrasnosti-varijanse. Ako razmotrimo moguće izvore greške u našem modelu, možemo videti dve vrste grešaka:
+## Преоптерећење и компромис пристрасности и варијансе
 
-* **Greške pristrasnosti** su uzrokovane time što naš algoritam nije u stanju da pravilno uhvati odnos između podataka za trening. To može biti rezultat činjenice da naš model nije dovoljno moćan (**nedovoljno prilagođavanje**).
-* **Greške varijanse**, koje su uzrokovane time što model aproksimira šum u ulaznim podacima umesto smislenog odnosa (**prekomerno prilagođavanje**).
+Преоптерећење је заправо случај једног општијег проблема у статистици који се назива компромис пристрасности и варијансе. Ако размотримо могуће изворе грешке у нашем моделу, можемо видети два типа грешака:
 
-Tokom treninga, greška pristrasnosti se smanjuje (kako naš model uči da aproksimira podatke), a greška varijanse se povećava. Važno je prestati sa treningom - ili ručno (kada otkrijemo prekomerno prilagođavanje) ili automatski (uvođenjem regularizacije) - da bismo sprečili prekomerno prilagođavanje.
+* **Грешке пристрасности** настају јер наш алгоритам није у стању да правилно ухвати однос између података за обуку. То може бити резултат чињенице да наш модел није довољно моћан (**недовољно подешен**).
+* **Грешке варијансе**, које настају јер модел апроксимира шум у улазним подацима уместо значајног односа (**преоптерећен**).
 
-## Zaključak
+Током обуке, грешка пристрасности опада (како наш модел учи да апроксимира податке), а грешка варијансе расте. Важно је зауставити обуку - било ручно (када откријемо преоптерећење) или аутоматски (увођењем регуларизације) - да бисмо спречили преоптерећење.
 
-U ovoj lekciji ste naučili o razlikama između različitih API-ja za dva najpopularnija AI okvira, TensorFlow i PyTorch. Pored toga, naučili ste o veoma važnoj temi, prekomernom prilagođavanju.
+## Закључак
 
-## 🚀 Izazov
+У овој лекцији, научили сте о разликама између различитих API-а за два најпопуларнија AI оквира, TensorFlow и PyTorch. Поред тога, научили сте о веома важној теми, преоптерећењу.
 
-U pratećim beležnicama, pronaći ćete 'zadatke' na dnu; prođite kroz beležnice i završite zadatke.
+## 🚀 Изазов
 
-## Pregled i samostalno učenje
+У пратећим свескама, наћи ћете 'задатке' на дну; прођите кроз свеске и завршите задатке.
 
-Uradite istraživanje o sledećim temama:
+## Преглед и самостално учење
+
+Истражите следеће теме:
 
 - TensorFlow
 - PyTorch
-- Prekomerno prilagođavanje
+- Преоптерећење
 
-Postavite sebi sledeća pitanja:
+Поставите себи следећа питања:
 
-- Koja je razlika između TensorFlow i PyTorch?
-- Koja je razlika između prekomernog prilagođavanja i nedovoljnog prilagođavanja?
+- Која је разлика између TensorFlow и PyTorch?
+- Која је разлика између преоптерећења и недовољног подешавања?
 
-## Zadatak
+## Задатак
 
-U ovoj laboratoriji, od vas se traži da rešite dva problema klasifikacije koristeći jednostruke i višeslojne potpuno povezane mreže koristeći PyTorch ili TensorFlow.
+У овој лабораторији, од вас се тражи да решите два проблема класификације користећи једнослојне и вишеслојне потпуно повезане мреже користећи PyTorch или TensorFlow.
 
 **Одрицање од одговорности**:  
-Овај документ је преведен коришћењем услуге превођења вештачком интелигенцијом [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква неспоразумевања или погрешна тумачења која могу произаћи из коришћења овог превода.
+Овај документ је преведен користећи услугу за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални превод од стране људи. Нисмо одговорни за било каква неразумевања или погрешна тумачења која произилазе из коришћења овог превода.

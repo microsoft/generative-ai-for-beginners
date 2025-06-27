@@ -2,138 +2,138 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:44:05+00:00",
+  "translation_date": "2025-06-25T16:44:17+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "sr"
 }
 -->
-# Izgradnja aplikacija za pretragu
+# Изградња апликација за претрагу
 
-[![Uvod u generativnu AI i velike jezičke modele](../../../translated_images/08-lesson-banner.358a98d5a1d7df54f5eaf5fd69392931ea660c923effa48ffb8384f5fa4ab172.sr.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Увод у Генеративну вештачку интелигенцију и велике језичке моделе](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sr.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
-> > _Kliknite na sliku iznad da pogledate video ovog lekcije_
+> > _Кликните на слику изнад да бисте погледали видео овог часа_
 
-LLM-ovi su više od samo chatbota i generisanja teksta. Takođe je moguće izgraditi aplikacije za pretragu koristeći Ugrađivanja. Ugrađivanja su numerički prikazi podataka poznati i kao vektori, i mogu se koristiti za semantičku pretragu podataka.
+Велики језички модели (LLM) нису само за чет-ботове и генерисање текста. Такође је могуће изградити апликације за претрагу користећи уграђене представе. Уграђене представе су нумеричке репрезентације података познате и као вектори и могу се користити за семантичку претрагу података.
 
-U ovoj lekciji, izgradićete aplikaciju za pretragu za našu edukativnu startup organizaciju. Naša organizacija je neprofitna organizacija koja pruža besplatno obrazovanje studentima u zemljama u razvoju. Naša organizacija ima veliki broj YouTube videa koje studenti mogu koristiti za učenje o AI. Naša organizacija želi da izgradi aplikaciju za pretragu koja omogućava studentima da pretražuju YouTube video tako što će uneti pitanje.
+У овом часу, изградићете апликацију за претрагу за нашу образовну стартап компанију. Наша стартап компанија је непрофитна организација која пружа бесплатно образовање ученицима у земљама у развоју. Имамо велики број YouTube видео снимака које ученици могу користити да науче о вештачкој интелигенцији. Наша стартап компанија жели да изгради апликацију за претрагу која омогућава ученицима да претражују YouTube видео тако што ће уписати питање.
 
-Na primer, student može uneti 'Šta su Jupyter Notebooks?' ili 'Šta je Azure ML' i aplikacija za pretragu će vratiti listu YouTube videa koji su relevantni za pitanje, i još bolje, aplikacija za pretragu će vratiti link do mesta u videu gde se nalazi odgovor na pitanje.
+На пример, ученик може уписати 'Шта су Jupyter бележнице?' или 'Шта је Azure ML' и апликација за претрагу ће вратити листу YouTube видео снимака који су релевантни за питање, а још боље, апликација ће вратити линк до места у видеу где се налази одговор на питање.
 
-## Uvod
+## Увод
 
-U ovoj lekciji, pokrićemo:
+У овом часу ћемо покрити:
 
-- Semantička vs pretraga po ključnim rečima.
-- Šta su tekstualna ugrađivanja.
-- Kreiranje indeksa tekstualnih ugrađivanja.
-- Pretraga indeksa tekstualnih ugrađivanja.
+- Семантичка vs Кључна претрага.
+- Шта су текстуалне уграђене представе.
+- Креирање индекса текстуалних уграђених представа.
+- Претраживање индекса текстуалних уграђених представа.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Nakon završetka ove lekcije, bićete u mogućnosti da:
+Након завршетка овог часа, моћи ћете:
 
-- Razlikujete semantičku pretragu od pretrage po ključnim rečima.
-- Objasnite šta su tekstualna ugrađivanja.
-- Kreirate aplikaciju koristeći ugrađivanja za pretragu podataka.
+- Разликовати семантичку и кључну претрагу.
+- Објаснити шта су текстуалне уграђене представе.
+- Креирати апликацију користећи уграђене представе за претрагу података.
 
-## Zašto izgraditi aplikaciju za pretragu?
+## Зашто изградити апликацију за претрагу?
 
-Kreiranje aplikacije za pretragu će vam pomoći da razumete kako koristiti ugrađivanja za pretragu podataka. Takođe ćete naučiti kako izgraditi aplikaciju za pretragu koju studenti mogu koristiti za brzo pronalaženje informacija.
+Креирање апликације за претрагу ће вам помоћи да разумете како да користите уграђене представе за претрагу података. Такође ћете научити како да изградите апликацију за претрагу коју ученици могу користити да брзо пронађу информације.
 
-Lekcija uključuje Indeks Ugrađivanja YouTube transkripata za Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube kanal. AI Show je YouTube kanal koji vas uči o AI i mašinskom učenju. Indeks Ugrađivanja sadrži Ugrađivanja za svaki od YouTube transkripata do oktobra 2023. Koristićete Indeks Ugrađivanja da izgradite aplikaciju za pretragu za našu organizaciju. Aplikacija za pretragu vraća link do mesta u videu gde se nalazi odgovor na pitanje. Ovo je odličan način za studente da brzo pronađu informacije koje im trebaju.
+Лекција укључује индекс уграђених представа транскрипата YouTube канала Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1). AI Show је YouTube канал који вас учи о вештачкој интелигенцији и машинском учењу. Индекс уграђених представа садржи уграђене представе за сваки од транскрипата YouTube видеа до октобра 2023. Користићете индекс уграђених представа да изградите апликацију за претрагу за наш стартап. Апликација за претрагу враћа линк до места у видеу где се налази одговор на питање. Ово је одличан начин да ученици брзо пронађу информације које им требају.
 
-Sledeći je primer semantičkog upita za pitanje 'da li možete koristiti rstudio sa azure ml?'. Pogledajte YouTube url, videćete da url sadrži vremenski pečat koji vas vodi do mesta u videu gde se nalazi odgovor na pitanje.
+Следећи је пример семантичке претраге за питање 'можете ли користити rstudio са azure ml?'. Погледајте YouTube URL, видећете да URL садржи временску ознаку која вас води до места у видеу где се налази одговор на питање.
 
-![Semantički upit za pitanje "da li možete koristiti rstudio sa Azure ML"](../../../translated_images/query-results.506ee9aac38278ee496377ca3d0bf751a9bffda30c3cbd56d5024dcb9c8f8e9e.sr.png)
+![Семантичка претрага за питање "можете ли користити rstudio са Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sr.png)
 
-## Šta je semantička pretraga?
+## Шта је семантичка претрага?
 
-Sada se možda pitate, šta je semantička pretraga? Semantička pretraga je tehnika pretrage koja koristi semantiku, ili značenje, reči u upitu da vrati relevantne rezultate.
+Сада се можда питате, шта је семантичка претрага? Семантичка претрага је техника претраге која користи семантику, или значење, речи у упиту да врати релевантне резултате.
 
-Evo primera semantičke pretrage. Recimo da želite da kupite auto, mogli biste pretražiti 'moj san auto', semantička pretraga razume da ne govorite o snu o autu, već da želite da kupite svoj auto iz snova. Semantička pretraga razume vašu nameru i vraća relevantne rezultate. Alternativa je pretraga po ključnim rečima koja bi doslovno pretraživala snove o autima i često vraćala nerelevantne rezultate.
+Ево примера семантичке претраге. Рецимо да желите да купите ауто, могли бисте да претражите 'мој аутомобил из снова', семантичка претрага разуме да не говорите о аутомобилу, већ да желите да купите свој аутомобил из снова. Семантичка претрага разуме вашу намеру и враћа релевантне резултате. Алтернатива је кључна претрага која би буквално претраживала снове о аутомобилима и често враћала нерелевантне резултате.
 
-## Šta su tekstualna ugrađivanja?
+## Шта су текстуалне уграђене представе?
 
-[Textualna ugrađivanja](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) su tehnika prikaza teksta koja se koristi u [obradi prirodnog jezika](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstualna ugrađivanja su semantički numerički prikazi teksta. Ugrađivanja se koriste za prikaz podataka na način koji je lak za mašinu da razume. Postoji mnogo modela za kreiranje tekstualnih ugrađivanja, u ovoj lekciji, fokusiraćemo se na generisanje ugrađivanja koristeći OpenAI Model Ugrađivanja.
+[Текстуалне уграђене представе](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) су техника репрезентације текста која се користи у [обради природног језика](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Текстуалне уграђене представе су семантичке нумеричке репрезентације текста. Уграђене представе се користе да представе податке на начин који је лак за разумевање машини. Постоји много модела за изградњу текстуалних уграђених представа, у овом часу ћемо се фокусирати на генерисање уграђених представа користећи OpenAI Embedding Model.
 
-Evo primera, zamislite da je sledeći tekst u transkriptu iz jedne od epizoda na AI Show YouTube kanalu:
+Ево примера, замислите да је следећи текст у транскрипту једне од епизода на AI Show YouTube каналу:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Proslijedili bismo tekst OpenAI Embedding API-ju i on bi vratio sledeće ugrađivanje koje se sastoji od 1536 brojeva, odnosno vektor. Svaki broj u vektoru predstavlja različit aspekt teksta. Radi sažetosti, evo prvih 10 brojeva u vektoru.
+Прошли бисмо текст кроз OpenAI Embedding API и он би вратио следећу уграђену представу која се састоји од 1536 бројева, познатих и као вектор. Сваки број у вектору представља различит аспект текста. Ради краћег приказа, ево првих 10 бројева у вектору.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## Kako se kreira indeks ugrađivanja?
+## Како је креиран индекс уграђених представа?
 
-Indeks ugrađivanja za ovu lekciju je kreiran pomoću serije Python skripti. Naći ćete skripte zajedno sa uputstvima u [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) u folderu 'scripts' za ovu lekciju. Ne morate pokretati ove skripte da biste završili ovu lekciju jer je Indeks Ugrađivanja obezbeđen za vas.
+Индекс уграђених представа за овај час је креиран серијом Python скрипти. Наћи ћете скрипте заједно са упутствима у [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) у 'scripts' фолдеру за овај час. Не морате да покрећете ове скрипте да бисте завршили овај час, јер је индекс уграђених представа већ обезбеђен за вас.
 
-Skripte obavljaju sledeće operacije:
+Скрипте извршавају следеће операције:
 
-1. Transkript za svaki YouTube video u [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) playlisti se preuzima.
-2. Koristeći [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), pokušava se izvući ime govornika iz prvih 3 minuta YouTube transkripta. Ime govornika za svaki video se čuva u Indeksu Ugrađivanja pod nazivom `embedding_index_3m.json`.
-3. Tekst transkripta se zatim deli na **3-minutne tekstualne segmente**. Segment uključuje oko 20 reči koje se preklapaju iz sledećeg segmenta kako bi se osiguralo da Ugrađivanje za segment nije prekinuto i da se obezbedi bolji kontekst pretrage.
-4. Svaki tekstualni segment se zatim šalje OpenAI Chat API-ju da sažme tekst u 60 reči. Sažetak se takođe čuva u Indeksu Ugrađivanja `embedding_index_3m.json`.
-5. Konačno, tekst segmenta se šalje OpenAI Embedding API-ju. Embedding API vraća vektor od 1536 brojeva koji predstavljaju semantičko značenje segmenta. Segment zajedno sa OpenAI Embedding vektorom se čuva u Indeksu Ugrađivanja `embedding_index_3m.json`.
+1. Транскрипт за сваки YouTube видео у [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) плејлисти се преузима.
+2. Користећи [OpenAI функције](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), покушава се извлачење имена говорника из прве 3 минуте транскрипта YouTube видеа. Име говорника за сваки видео се чува у индексу уграђених представа под именом `embedding_index_3m.json`.
+3. Текст транскрипта се затим дели на **текстуалне сегменте од 3 минута**. Сегмент укључује око 20 речи које се преклапају са следећим сегментом како би се осигурало да уграђена представа сегмента није прекинута и да би се обезбедила боља контекстуална претрага.
+4. Сваки текстуални сегмент се затим шаље на OpenAI Chat API да сажме текст у 60 речи. Сажетак се такође чува у индексу уграђених представа `embedding_index_3m.json`.
+5. На крају, текст сегмента се шаље на OpenAI Embedding API. Embedding API враћа вектор од 1536 бројева који представљају семантичко значење сегмента. Сегмент заједно са OpenAI уграђеним вектором се чува у индексу уграђених представа `embedding_index_3m.json`.
 
-### Vektorske baze podataka
+### Векторске базе података
 
-Radi jednostavnosti lekcije, Indeks Ugrađivanja je čuvan u JSON datoteci pod nazivom `embedding_index_3m.json` i učitan u Pandas DataFrame. Međutim, u produkciji, Indeks Ugrađivanja bi bio čuvan u vektorskoj bazi podataka kao što su [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), da navedemo samo neke.
+Због једноставности часа, индекс уграђених представа се чува у JSON фајлу под именом `embedding_index_3m.json` и учитава се у Pandas DataFrame. Међутим, у продукцији, индекс уграђених представа би се чувао у векторској бази података као што су [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), да наведемо само неке.
 
-## Razumevanje kosinusne sličnosti
+## Разумевање косинусне сличности
 
-Naučili smo o tekstualnim ugrađivanjima, sledeći korak je da naučimo kako koristiti tekstualna ugrađivanja za pretragu podataka i posebno pronaći najviše slična ugrađivanja za dati upit koristeći kosinusnu sličnost.
+Научили смо о текстуалним уграђеним представама, следећи корак је да научимо како да користимо текстуалне уграђене представе за претрагу података и посебно да пронађемо најсличније уграђене представе за дати упит користећи косинусну сличност.
 
-### Šta je kosinusna sličnost?
+### Шта је косинусна сличност?
 
-Kosinusna sličnost je mera sličnosti između dva vektora, često ćete čuti da se to naziva `nearest neighbor search`. Da biste obavili pretragu kosinusne sličnosti, potrebno je da _vektorizujete_ tekst upita koristeći OpenAI Embedding API. Zatim izračunajte _kosinusnu sličnost_ između vektora upita i svakog vektora u Indeksu Ugrađivanja. Zapamtite, Indeks Ugrađivanja ima vektor za svaki tekstualni segment YouTube transkripta. Na kraju, sortirajte rezultate po kosinusnoj sličnosti i tekstualni segmenti sa najvišom kosinusnom sličnosti su najviše slični upitu.
+Косинусна сличност је мера сличности између два вектора, такође ћете чути да се ово назива и `nearest neighbor search`. Да бисте извршили претрагу користећи косинусну сличност, потребно је да _векторизујете_ текст _упита_ користећи OpenAI Embedding API. Затим израчунајте _косинусну сличност_ између вектора упита и сваког вектора у индексу уграђених представа. Запамтите, индекс уграђених представа има вектор за сваки текстуални сегмент транскрипта YouTube видеа. На крају, сортирајте резултате по косинусној сличности и текстуални сегменти са највишом косинусном сличношћу су најсличнији упиту.
 
-Iz matematičke perspektive, kosinusna sličnost meri kosinus ugla između dva vektora projektovana u višedimenzionalnom prostoru. Ova mera je korisna, jer ako su dva dokumenta daleko po Euklidskoj distanci zbog veličine, i dalje mogu imati manji ugao između njih i stoga veću kosinusnu sličnost. Za više informacija o jednačinama kosinusne sličnosti, pogledajte [Kosinusna sličnost](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Из математичке перспективе, косинусна сличност мери косинус угла између два вектора пројектована у вишедимензионалном простору. Ова мера је корисна, јер ако су два документа удаљена један од другог по Евклидовој удаљености због величине, могла би имати мањи угао између њих и стога већу косинусну сличност. За више информација о једначинама косинусне сличности, погледајте [Косинусна сличност](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Izgradnja vaše prve aplikacije za pretragu
+## Изградња ваше прве апликације за претрагу
 
-Sledeće, naučićemo kako izgraditi aplikaciju za pretragu koristeći Ugrađivanja. Aplikacija za pretragu će omogućiti studentima da pretražuju video tako što će uneti pitanje. Aplikacija za pretragu će vratiti listu videa koji su relevantni za pitanje. Aplikacija za pretragu će takođe vratiti link do mesta u videu gde se nalazi odgovor na pitanje.
+Следеће, научићемо како да изградимо апликацију за претрагу користећи уграђене представе. Апликација за претрагу ће омогућити ученицима да претраже видео тако што ће уписати питање. Апликација за претрагу ће вратити листу видео снимака који су релевантни за питање. Апликација за претрагу ће такође вратити линк до места у видеу где се налази одговор на питање.
 
-Ovo rešenje je izgrađeno i testirano na Windows 11, macOS, i Ubuntu 22.04 koristeći Python 3.10 ili noviji. Python možete preuzeti sa [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Ово решење је изграђено и тестирано на Windows 11, macOS и Ubuntu 22.04 користећи Python 3.10 или новији. Можете преузети Python са [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-## Zadatak - izgradnja aplikacije za pretragu, da omogućite studentima
+## Задатак - изградња апликације за претрагу, да омогућимо ученицима
 
-Predstavili smo našu startup organizaciju na početku ove lekcije. Sada je vreme da omogućite studentima da izgrade aplikaciju za pretragu za njihove zadatke.
+Представили смо наш стартап на почетку овог часа. Сада је време да омогућимо ученицима да изграде апликацију за претрагу за своје процене.
 
-U ovom zadatku, kreiraćete Azure OpenAI Services koje će se koristiti za izgradnju aplikacije za pretragu. Kreiraćete sledeće Azure OpenAI Services. Trebaće vam Azure pretplata da završite ovaj zadatak.
+У овом задатку, креираћете Azure OpenAI услуге које ће се користити за изградњу апликације за претрагу. Креираћете следеће Azure OpenAI услуге. Биће вам потребна Azure претплата да завршите овај задатак.
 
-### Pokrenite Azure Cloud Shell
+### Покрените Azure Cloud Shell
 
-1. Prijavite se na [Azure portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
-2. Izaberite ikonu Cloud Shell u gornjem desnom uglu Azure portala.
-3. Izaberite **Bash** za tip okruženja.
+1. Пријавите се на [Azure портал](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
+2. Изаберите икону Cloud Shell у горњем десном углу Azure портала.
+3. Изаберите **Bash** за тип окружења.
 
-#### Kreirajte grupu resursa
+#### Креирајте ресурсну групу
 
-> Za ove instrukcije, koristimo grupu resursa pod nazivom "semantic-video-search" u Istočnom SAD-u.
-> Možete promeniti ime grupe resursa, ali kada menjate lokaciju za resurse,
-> proverite [tabelu dostupnosti modela](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> За ова упутства, користимо ресурсну групу под именом "semantic-video-search" у истоку САД.
+> Можете променити име ресурсне групе, али када мењате локацију за ресурсе,
+> проверите [табелу доступности модела](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### Kreirajte resurs Azure OpenAI Service
+#### Креирајте ресурс Azure OpenAI услуге
 
-Iz Azure Cloud Shell-a, pokrenite sledeću komandu da kreirate resurs Azure OpenAI Service.
+Из Azure Cloud Shell-а, покрените следећу команду да креирате ресурс Azure OpenAI услуге.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-#### Preuzmite krajnju tačku i ključeve za korišćenje u ovoj aplikaciji
+#### Добијте крајњу тачку и кључеве за коришћење у овој апликацији
 
-Iz Azure Cloud Shell-a, pokrenite sledeće komande da preuzmete krajnju tačku i ključeve za resurs Azure OpenAI Service.
+Из Azure Cloud Shell-а, покрените следеће команде да добијете крајњу тачку и кључеве за ресурс Azure OpenAI услуге.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -142,9 +142,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### Implementirajte OpenAI Embedding model
+#### Деплојујте OpenAI модел уграђених представа
 
-Iz Azure Cloud Shell-a, pokrenite sledeću komandu da implementirate OpenAI Embedding model.
+Из Azure Cloud Shell-а, покрените следећу команду да деплојујете OpenAI модел уграђених представа.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -157,19 +157,19 @@ az cognitiveservices account deployment create \
     --sku-capacity 100 --sku-name "Standard"
 ```
 
-## Rešenje
+## Решение
 
-Otvorite [rešenje notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) u GitHub Codespaces i pratite uputstva u Jupyter Notebook-u.
+Отворите [решение у нотебуку](../../../08-building-search-applications/python/aoai-solution.ipynb) у GitHub Codespaces и пратите упутства у Jupyter нотебуку.
 
-Kada pokrenete notebook, bićete upitani da unesete upit. Polje za unos će izgledati ovako:
+Када покренете нотебук, биће вам затражено да унесете упит. Улазно поље ће изгледати овако:
 
-![Polje za unos za korisnika da unese upit](../../../translated_images/notebook-search.31eabddd06254ea17ca4fe27dec0373d294da1abe4c1e8b7edc0dd31a18aeb9a.sr.png)
+![Улазно поље за корисника да унесе упит](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sr.png)
 
-## Odličan rad! Nastavite sa učenjem
+## Одличан рад! Наставите са учењем
 
-Nakon završetka ove lekcije, pogledajte našu [Generativnu AI kolekciju za učenje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa unapređivanjem svog znanja o Generativnoj AI!
+Након завршетка овог часа, погледајте нашу [колекцију учења о Генеративној вештачкој интелигенцији](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да наставите са унапређивањем вашег знања о Генеративној вештачкој интелигенцији!
 
-Pređite na Lekciju 9 gde ćemo pogledati kako [izgraditi aplikacije za generisanje slika](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Идите на Лекцију 9 где ћемо погледати како да [изградимо апликације за генерисање слика](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Одричање од одговорности**:  
-Овај документ је преведен коришћењем услуге AI превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Нисмо одговорни за било каква погрешна разумевања или интерпретације које произилазе из употребе овог превода.
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални људски превод. Нисмо одговорни за било каква неразумевања или погрешна тумачења настала коришћењем овог превода.

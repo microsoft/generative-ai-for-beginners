@@ -2,213 +2,193 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "e2f686f2eb794941761252ac5e8e090b",
-  "translation_date": "2025-05-19T14:08:04+00:00",
+  "translation_date": "2025-06-25T10:47:24+00:00",
   "source_file": "02-exploring-and-comparing-different-llms/README.md",
   "language_code": "fi"
 }
 -->
-# Eri laajojen kielimallien tutkiminen ja vertailu
-
-[![Eri laajojen kielimallien tutkiminen ja vertailu](../../../translated_images/02-lesson-banner.722fb0fdf701564d4479112ef4c4fa964c98dce0c241decbe12aae32e9fb4659.fi.png)](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)
+# Eri LLM:ien tutkiminen ja vertailu
 
 > _Napsauta yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon_
 
-Edellisessä oppitunnissa näimme, kuinka Generatiivinen AI muuttaa teknologian maisemaa, kuinka laajat kielimallit (LLM:t) toimivat ja kuinka yritys - kuten startupimme - voi soveltaa niitä omiin käyttötapauksiinsa ja kasvaa! Tässä luvussa vertailemme ja vastakkainasettelemme erilaisia laajoja kielimalleja (LLM:t) ymmärtääksemme niiden hyvät ja huonot puolet.
+Edellisessä oppitunnissa näimme, miten generatiivinen tekoäly muuttaa teknologiakenttää, miten suurten kielimallien (LLM) toiminta perustuu ja miten yritys - kuten meidän startup - voi soveltaa niitä omiin käyttötapauksiinsa ja kasvaa! Tässä luvussa aiomme vertailla ja vastakkainasettaa erilaisia suuria kielimalleja (LLM) ymmärtääksemme niiden hyviä ja huonoja puolia.
 
-Seuraava askel startupimme matkalla on tutkia nykyistä LLM-maailmaa ja ymmärtää, mitkä ovat sopivia käyttötapaukseemme.
+Seuraava askel startupimme matkalla on tutkia nykyistä LLM-kenttää ja ymmärtää, mitkä niistä sopivat käyttötapaukseemme.
 
 ## Johdanto
 
-Tämä oppitunti käsittelee:
+Tämä oppitunti kattaa:
 
-- Erilaisia LLM-tyyppejä nykyisessä maisemassa.
-- Erilaisten mallien testaamista, iterointia ja vertailua Azure-ympäristössä.
-- Kuinka ottaa LLM käyttöön.
+- Eri tyyppiset LLM:t nykyisessä kentässä.
+- Eri mallien testaaminen, iterointi ja vertailu käyttötapaukseesi Azure-ympäristössä.
+- Miten LLM otetaan käyttöön.
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen osaat:
+Oppitunnin suorittamisen jälkeen osaat:
 
 - Valita oikean mallin käyttötapaukseesi.
-- Ymmärtää, kuinka testata, iterointia ja parantaa mallisi suorituskykyä.
-- Tietää, kuinka yritykset ottavat malleja käyttöön.
+- Ymmärtää, miten testata, iteroida ja parantaa mallisi suorituskykyä.
+- Tietää, miten yritykset ottavat malleja käyttöön.
 
-## Ymmärrä erilaiset LLM-tyypit
+## Ymmärrä eri tyyppisiä LLM:iä
 
-LLM:t voidaan luokitella eri tavoin niiden arkkitehtuurin, koulutusdatan ja käyttötapauksen perusteella. Näiden erojen ymmärtäminen auttaa startupiamme valitsemaan oikean mallin tilanteeseen ja ymmärtämään, kuinka testata, iterointia ja parantaa suorituskykyä.
+LLM:t voidaan luokitella useilla tavoilla arkkitehtuurin, koulutusdatan ja käyttötapauksen perusteella. Näiden erojen ymmärtäminen auttaa startupiamme valitsemaan oikean mallin tilanteeseen ja ymmärtämään, miten testata, iteroida ja parantaa suorituskykyä.
 
-LLM-malleja on monenlaisia, ja mallin valinta riippuu siitä, mihin aiot niitä käyttää, datastasi, kuinka paljon olet valmis maksamaan ja muista tekijöistä.
+On monia erilaisia LLM-malleja, ja mallin valinta riippuu siitä, mihin aiot niitä käyttää, datastasi, kuinka paljon olet valmis maksamaan ja muista tekijöistä.
 
-Riippuen siitä, aiotko käyttää malleja tekstin, äänen, videon, kuvan generointiin ja niin edelleen, saatat valita erilaisen mallityypin.
+Riippuen siitä, aiotko käyttää malleja tekstin, äänen, videon, kuvien luomiseen jne., saatat valita eri tyyppisen mallin.
 
-- **Äänen ja puheen tunnistus**. Tätä tarkoitusta varten Whisper-tyyppiset mallit ovat erinomainen valinta, koska ne ovat yleiskäyttöisiä ja tarkoitettu puheen tunnistukseen. Ne on koulutettu monipuolisella äänellä ja pystyvät monikieliseen puheen tunnistukseen. Lue lisää [Whisper-tyyppisistä malleista täällä](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Ääni ja puheentunnistus**. Tähän tarkoitukseen Whisper-tyyppiset mallit ovat loistava valinta, sillä ne ovat yleiskäyttöisiä ja suunnattu puheentunnistukseen. Ne on koulutettu monipuolisella äänidatalla ja ne voivat suorittaa monikielistä puheentunnistusta. Lue lisää [Whisper-tyyppisistä malleista täältä](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Kuvagenerointi**. Kuvagenerointiin DALL-E ja Midjourney ovat kaksi hyvin tunnettua vaihtoehtoa. DALL-E on saatavilla Azure OpenAI:ssa. [Lue lisää DALL-E:stä täällä](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) ja myös tämän kurssin luvussa 9.
+- **Kuvien luominen**. Kuvien luomiseen DALL-E ja Midjourney ovat kaksi hyvin tunnettua vaihtoehtoa. DALL-E on saatavilla Azure OpenAI:n kautta. [Lue lisää DALL-E:stä täältä](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) ja myös tämän opetussuunnitelman luvusta 9.
 
-- **Tekstigenerointi**. Useimmat mallit on koulutettu tekstigenerointiin, ja sinulla on laaja valikoima vaihtoehtoja GPT-3.5:stä GPT-4:ään. Ne ovat eri hintaisia, ja GPT-4 on kallein. Kannattaa tutustua [Azure OpenAI -leikkikenttään](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) arvioidaksesi, mitkä mallit sopivat parhaiten tarpeisiisi kykyjen ja kustannusten suhteen.
+- **Tekstin luominen**. Useimmat mallit on koulutettu tekstin luomiseen, ja sinulla on laaja valikoima vaihtoehtoja GPT-3.5:stä GPT-4:ään. Ne tulevat eri hintaluokissa, joista GPT-4 on kallein. Kannattaa tutustua [Azure OpenAI -leikkikenttään](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) arvioidaksesi, mitkä mallit parhaiten sopivat tarpeisiisi kyvykkyyden ja kustannusten osalta.
 
-- **Monimodaalisuus**. Jos haluat käsitellä useita datatyyppejä syötteessä ja tulosteessa, saatat haluta tutustua malleihin kuten [gpt-4 turbo with vision tai gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - OpenAI:n uusimmat julkaisut - jotka pystyvät yhdistämään luonnollisen kielen käsittelyn visuaaliseen ymmärrykseen, mahdollistavat vuorovaikutuksen monimodaalisten käyttöliittymien kautta.
+- **Monimodaliteetti**. Jos haluat käsitellä useita datatyyppejä syötteessä ja tulosteessa, saatat haluta tutustua malleihin kuten [gpt-4 turbo visionilla tai gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - OpenAI-mallien uusimpiin julkaisuihin - jotka kykenevät yhdistämään luonnollisen kielen käsittelyn visuaaliseen ymmärtämiseen, mahdollistamalla vuorovaikutukset monimodaalisten käyttöliittymien kautta.
 
-Mallin valinta tarkoittaa, että saat joitain peruskykyjä, jotka eivät kuitenkaan välttämättä riitä. Usein sinulla on yrityskohtaisia tietoja, jotka sinun jollain tavalla täytyy kertoa LLM:lle. On muutamia eri vaihtoehtoja lähestyä tätä, lisää siitä tulevissa osioissa.
+Mallin valitseminen tarkoittaa, että saat joitakin perusominaisuuksia, jotka eivät kuitenkaan välttämättä riitä. Usein sinulla on yrityskohtaisia tietoja, jotka sinun täytyy jotenkin kertoa LLM:lle. On muutamia eri vaihtoehtoja, miten lähestyä tätä, lisää tästä tulevissa osioissa.
 
 ### Perusmallit vs. LLM:t
 
-Perusmalli-termi [keksittiin Stanfordin tutkijoiden toimesta](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) ja määriteltiin AI-malliksi, joka täyttää joitakin kriteerejä, kuten:
+Termin "Perusmalli" loivat [Stanfordin tutkijat](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) ja se määritellään tekoälymalliksi, joka noudattaa tiettyjä kriteerejä, kuten:
 
-- **Ne on koulutettu käyttämällä ohjaamatonta oppimista tai itseohjautuvaa oppimista**, eli ne on koulutettu merkitsemättömällä monimodaalisella datalla, eikä niiden koulutusprosessi vaadi ihmisen annotointia tai datan merkitsemistä.
-- **Ne ovat erittäin suuria malleja**, perustuen erittäin syviin neuroverkkoihin, jotka on koulutettu miljardeilla parametreilla.
-- **Ne on yleensä tarkoitettu toimimaan muiden mallien 'perustana'**, eli niitä voidaan käyttää lähtökohtana muiden mallien rakentamiseen, mikä voidaan tehdä hienosäätämällä.
+- **Ne koulutetaan valvomattomalla oppimisella tai itsevalvotulla oppimisella**, mikä tarkoittaa, että ne koulutetaan merkkaamattomalla monimodaalisella datalla, eikä niiden koulutusprosessi vaadi ihmisen annotaatiota tai datan merkkausta.
+- **Ne ovat erittäin suuria malleja**, perustuen erittäin syviin neuroverkkoihin, jotka on koulutettu miljardilla parametrilla.
+- **Ne on yleensä tarkoitettu toimimaan 'perustana' muille malleille**, mikä tarkoittaa, että niitä voidaan käyttää lähtökohtana muille malleille, jotka voidaan rakentaa niiden päälle hienosäätämällä.
 
-![Perusmallit vs. LLM:t](../../../translated_images/FoundationModel.1b89e9d94c6a60a9af557b1c0a10faa3a55c0cbc6bb357eb144512ab833d162c.fi.png)
+Kuvan lähde: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Kuvan lähde: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
-](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
+Selventääksemme tätä erottelua tarkemmin, otetaan esimerkiksi ChatGPT. ChatGPT:n ensimmäisen version rakentamisessa mallina toimi GPT-3.5, joka toimi perustamallina. Tämä tarkoittaa, että OpenAI käytti joitakin keskusteluihin liittyviä tietoja luodakseen hienosäädetyn version GPT-3.5:stä, joka oli erikoistunut toimimaan hyvin keskusteluskenaarioissa, kuten chatboteissa.
 
-Tämän erottelun selventämiseksi otetaan ChatGPT esimerkkinä. Ensimmäisen version ChatGPT:stä rakentamiseksi käytettiin mallia nimeltä GPT-3.5 perusmallina. Tämä tarkoittaa, että OpenAI käytti joitakin chat-spesifisiä tietoja luodakseen GPT-3.5:n viritetyn version, joka oli erikoistunut toimimaan hyvin keskusteluskenaarioissa, kuten chatbotit.
+### Avoimen lähdekoodin vs. omistetut mallit
 
-![Perusmalli](../../../translated_images/Multimodal.41df52bb0de979b80e9643ba34f8f1b53d7791cebd88bceedda6497241495f27.fi.png)
+Toinen tapa luokitella LLM:t on se, ovatko ne avoimen lähdekoodin vai omistettuja.
 
-Kuvan lähde: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+Avoimen lähdekoodin mallit ovat malleja, jotka ovat yleisön saatavilla ja joita kuka tahansa voi käyttää. Ne ovat usein yrityksen, joka ne loi, tai tutkimusyhteisön saatavilla. Näitä malleja voidaan tarkastella, muokata ja räätälöidä erilaisiin LLM-käyttötapauksiin. Ne eivät kuitenkaan aina ole optimoitu tuotantokäyttöön, ja ne eivät välttämättä ole yhtä suorituskykyisiä kuin omistetut mallit. Lisäksi avoimen lähdekoodin mallien rahoitus voi olla rajallista, ja niitä ei välttämättä ylläpidetä pitkällä aikavälillä tai päivitetä uusimmalla tutkimuksella. Suosittuja avoimen lähdekoodin malleja ovat esimerkiksi [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) ja [LLaMA](https://llama.meta.com).
 
-### Avoimen lähdekoodin vs. Oikeudelliset mallit
+Omistetut mallit ovat malleja, jotka ovat yrityksen omistamia ja joita ei ole saatavilla yleisölle. Nämä mallit ovat usein optimoitu tuotantokäyttöön. Ne eivät kuitenkaan ole sallittuja tarkasteltavaksi, muokattavaksi tai räätälöitäväksi eri käyttötapauksiin. Lisäksi ne eivät ole aina saatavilla ilmaiseksi, ja niiden käyttö saattaa vaatia tilauksen tai maksun. Käyttäjillä ei myöskään ole kontrollia mallin koulutuksessa käytettyyn dataan, mikä tarkoittaa, että heidän tulee luottaa mallin omistajaan tietosuojan ja tekoälyn vastuullisen käytön varmistamiseksi. Suosittuja omistettuja malleja ovat esimerkiksi [OpenAI-mallit](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) tai [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
 
-Toinen tapa luokitella LLM:t on, ovatko ne avoimen lähdekoodin vai oikeudellisia.
+### Upotukset vs. Kuvien luominen vs. Tekstin ja koodin luominen
 
-Avoimen lähdekoodin mallit ovat malleja, jotka ovat julkisesti saatavilla ja joita kuka tahansa voi käyttää. Ne ovat usein saatavilla yrityksen tai tutkimusyhteisön toimesta, joka on ne luonut. Näitä malleja saa tarkastella, muokata ja räätälöidä erilaisiin LLM-käyttötapauksiin. Ne eivät kuitenkaan ole aina optimoitu tuotantokäyttöön, eivätkä välttämättä ole yhtä suorituskykyisiä kuin oikeudelliset mallit. Lisäksi rahoitus avoimen lähdekoodin malleille voi olla rajallista, eikä niitä välttämättä ylläpidetä pitkällä aikavälillä tai päivitetä uusimmalla tutkimuksella. Suosittuja avoimen lähdekoodin malleja ovat esimerkiksi [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) ja [LLaMA](https://llama.meta.com).
+LLM:t voidaan myös luokitella niiden tuottaman sisällön perusteella.
 
-Oikeudelliset mallit ovat malleja, jotka ovat yrityksen omistamia, eikä niitä ole saatavilla julkisesti. Nämä mallit ovat usein optimoitu tuotantokäyttöön. Niitä ei kuitenkaan saa tarkastella, muokata tai räätälöidä eri käyttötapauksiin. Lisäksi ne eivät ole aina saatavilla ilmaiseksi, ja niiden käyttö saattaa vaatia tilauksen tai maksun. Käyttäjillä ei myöskään ole kontrollia datasta, jota käytetään mallin kouluttamiseen, mikä tarkoittaa, että heidän tulisi luottaa mallin omistajaan datan yksityisyyden ja vastuullisen AI:n käytön varmistamisessa. Suosittuja oikeudellisia malleja ovat esimerkiksi [OpenAI-mallit](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) tai [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Upotukset ovat joukko malleja, jotka voivat muuntaa tekstin numeeriseen muotoon, jota kutsutaan upotukseksi. Upotukset helpottavat koneiden ymmärtää sanojen tai lauseiden välisiä suhteita ja niitä voidaan käyttää syötteinä muille malleille, kuten luokittelumalleille tai klusterointimalleille, jotka toimivat paremmin numeerisella datalla. Upotusmalleja käytetään usein siirto-oppimisessa, jossa malli rakennetaan korvaavalle tehtävälle, jolle on runsaasti dataa, ja sitten mallin painoja (upotuksia) käytetään uudelleen muihin tehtäviin. Esimerkki tästä kategoriasta on [OpenAI upotukset](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-### Upottaminen vs. Kuvagenerointi vs. Teksti- ja koodigenerointi
+Kuvien luomismallit ovat malleja, jotka luovat kuvia. Näitä malleja käytetään usein kuvien muokkaukseen, kuvasynteesiin ja kuvien kääntämiseen. Kuvien luomismallit koulutetaan usein suurilla kuvadatoilla, kuten [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uusien kuvien luomiseen tai olemassa olevien kuvien muokkaamiseen sisäänmaalaus-, superresoluutio- ja väritystekniikoilla. Esimerkkejä ovat [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ja [Stable Diffusion -mallit](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-LLM:t voidaan myös luokitella niiden tuottaman tuloksen perusteella.
+Tekstin ja koodin luomismallit ovat malleja, jotka luovat tekstiä tai koodia. Näitä malleja käytetään usein tekstin tiivistämiseen, kääntämiseen ja kysymyksiin vastaamiseen. Tekstin luomismallit koulutetaan usein suurilla tekstidatoilla, kuten [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uuden tekstin luomiseen tai kysymyksiin vastaamiseen. Koodin luomismallit, kuten [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), koulutetaan usein suurilla koodidatoilla, kuten GitHubilla, ja niitä voidaan käyttää uuden koodin luomiseen tai olemassa olevan koodin virheiden korjaamiseen.
 
-Upottaminen on joukko malleja, jotka voivat muuntaa tekstin numeeriseen muotoon, jota kutsutaan upottamiseksi, ja joka on syötetyn tekstin numeerinen esitys. Upottaminen helpottaa koneiden ymmärtää sanojen tai lauseiden välisiä suhteita ja niitä voidaan käyttää syötteinä muille malleille, kuten luokittelumalleille tai klusterointimalleille, joilla on parempi suorituskyky numeerisella datalla. Upotusmalleja käytetään usein siirto-oppimisessa, jossa malli rakennetaan korvaavalle tehtävälle, jolle on runsaasti dataa, ja sitten mallin painoja (upotuksia) käytetään uudelleen muille jälkikäteen tehtäville. Esimerkki tästä kategoriasta on [OpenAI-upotukset](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+### Koodaaja-dekooderi vs. Pelkkä dekooderi
 
-![Upottaminen](../../../translated_images/Embedding.fbf261f314681a51994056854fd928b69b253616bb313e68a9ce19a2b15c8768.fi.png)
+Puhutaanpa LLM:ien eri arkkitehtuurityypeistä analogian avulla.
 
-Kuvagenerointimallit ovat malleja, jotka tuottavat kuvia. Näitä malleja käytetään usein kuvan muokkaukseen, kuvan synteesiin ja kuvan kääntämiseen. Kuvagenerointimallit koulutetaan usein suurilla kuvadatasetillä, kuten [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uusien kuvien luomiseen tai olemassa olevien kuvien muokkaamiseen sisämaalauksen, superresoluution ja väritystekniikoiden avulla. Esimerkkejä ovat [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ja [Stable Diffusion -mallit](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Kuvittele, että esimiehesi antoi sinulle tehtävän laatia tietovisa opiskelijoille. Sinulla on kaksi kollegaa; toinen vastaa sisällön luomisesta ja toinen niiden tarkistamisesta.
 
-![Kuvagenerointi](../../../translated_images/Image.fffee8e361cc35ed409975f6fc85502ae3d20b8eb01273cd327294e26318a049.fi.png)
+Sisällöntuottaja on kuin pelkkä dekooderimalli, hän voi katsoa aihetta ja nähdä, mitä olet jo kirjoittanut, ja sitten hän voi kirjoittaa kurssin sen perusteella. Hän on erittäin hyvä kirjoittamaan mukaansatempaavaa ja informatiivista sisältöä, mutta ei ole kovin hyvä ymmärtämään aihetta ja oppimistavoitteita. Esimerkkejä dekooderimalleista ovat GPT-perheen mallit, kuten GPT-3.
 
-Teksti- ja koodigenerointimallit ovat malleja, jotka tuottavat tekstiä tai koodia. Näitä malleja käytetään usein tekstin tiivistämiseen, kääntämiseen ja kysymyksiin vastaamiseen. Tekstigenerointimallit koulutetaan usein suurilla tekstidatasetillä, kuten [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uuden tekstin tuottamiseen tai kysymyksiin vastaamiseen. Koodigenerointimallit, kuten [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), koulutetaan usein suurilla koodidatasetillä, kuten GitHub, ja niitä voidaan käyttää uuden koodin tuottamiseen tai olemassa olevan koodin virheiden korjaamiseen.
+Tarkistaja on kuin pelkkä koodaajamalli, hän katsoo kirjoitettua kurssia ja vastauksia, huomaa niiden välisen suhteen ja ymmärtää kontekstin, mutta ei ole hyvä sisällön tuottamisessa. Esimerkki pelkästä koodaajamallista olisi BERT.
 
-![Teksti- ja koodigenerointi](../../../translated_images/Text.35cfbe12e08d5b5615cf7db5174fe477bf96f45c5b82d53c29523bd8b94bdc17.fi.png)
+Kuvittele, että meillä voisi olla joku, joka voisi sekä luoda että tarkistaa visan, tämä on koodaaja-dekooderimalli. Esimerkkejä olisivat BART ja T5.
 
-### Kooderi-dekooderi vs. Vain dekooderi
+### Palvelu vs. malli
 
-Puhutaan eri tyyppisistä LLM-arkkitehtuureista, käytetään analogiaa.
+Puhutaan nyt palvelun ja mallin välisestä erosta. Palvelu on pilvipalveluntarjoajan tarjoama tuote, ja se on usein yhdistelmä malleja, dataa ja muita komponentteja. Malli on palvelun ydinosa, ja se on usein perustamalli, kuten LLM.
 
-Kuvittele, että esimiehesi antoi sinulle tehtävän laatia visailu opiskelijoille. Sinulla on kaksi kollegaa; yksi vastaa sisällön luomisesta ja toinen niiden tarkistamisesta.
+Palvelut ovat usein optimoitu tuotantokäyttöön ja ne ovat usein helpompia käyttää kuin mallit, graafisen käyttöliittymän kautta. Palvelut eivät kuitenkaan ole aina saatavilla ilmaiseksi, ja niiden käyttö saattaa vaatia tilauksen tai maksun, vastineeksi palvelun omistajan laitteiston ja resurssien hyödyntämisestä, kustannusten optimoinnista ja helppoa skaalaamista. Esimerkki palvelusta on [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), joka tarjoaa maksua käytön mukaan -suunnitelman, mikä tarkoittaa, että käyttäjiltä veloitetaan suhteellisesti sen mukaan, kuinka paljon he käyttävät palvelua. Lisäksi Azure OpenAI Service tarjoaa yritystason turvallisuuden ja vastuullisen tekoälykehyksen mallien kyvykkyyksien päälle.
 
-Sisällöntuottaja on kuin vain dekooderimalli, hän voi katsoa aihetta ja nähdä, mitä olet jo kirjoittanut, ja sitten hän voi kirjoittaa kurssin sen perusteella. He ovat erittäin hyviä kirjoittamaan mukaansatempaavaa ja informatiivista sisältöä, mutta eivät kovin hyviä ymmärtämään aihetta ja oppimistavoitteita. Jotkut dekooderimallien esimerkit ovat GPT-perheen mallit, kuten GPT-3.
+Mallit ovat vain neuroverkko, parametreineen, painoineen ja muineen. Ne mahdollistavat yritysten ajon paikallisesti, mutta vaativat laitteiden hankintaa, rakenteen rakentamista skaalaamiseksi ja lisenssin ostamista tai avoimen lähdekoodin mallin käyttöä. LLaMA-malli on saatavilla käytettäväksi, ja sen ajamiseen vaaditaan laskentatehoa.
 
-Tarkistaja on kuin vain kooderimalli, hän katsoo kirjoitettua kurssia ja vastauksia, huomaten niiden välisen suhteen ja ymmärtäen kontekstin, mutta ei ole hyvä sisällön tuottamisessa. Kooderimallin esimerkki olisi BERT.
+## Miten testata ja iterata eri malleilla suorituskyvyn ymmärtämiseksi Azure-ympäristössä
 
-Kuvittele, että voisimme saada myös jonkun, joka voisi luoda ja tarkistaa visailun, tämä on kooderi-dekooderimalli. Joitakin esimerkkejä olisivat BART ja T5.
+Kun tiimimme on tutkinut nykyistä LLM-kenttää ja tunnistanut hyviä ehdokkaita heidän skenaarioihinsa, seuraava askel on testata niitä heidän datallaan ja työkuormallaan. Tämä on iteratiivinen prosessi, joka tehdään kokeiden ja mittausten avulla. Useimmat aiemmissa kappaleissa mainitsemistamme malleista (OpenAI-mallit, avoimen lähdekoodin mallit kuten Llama2 ja Hugging Face -transformaattorit) ovat saatavilla [Model Catalogissa](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) [Azure AI Studiossa](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-### Palvelu vs. Malli
+[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) on pilvialusta, joka on suunniteltu kehittäjille generatiivisten tekoälysovellusten rakentamiseen ja koko kehityselinkaaren hallintaan - kokeilusta arviointiin - yhdistämällä kaikki Azure AI -palvelut yhdeksi keskukseksi kätevällä käyttöliittymällä. Azure AI Studion Model Catalog mahdollistaa käyttäjän:
 
-Puhutaan nyt erosta palvelun ja mallin välillä. Palvelu on tuote, jota tarjoaa pilvipalveluntarjoaja, ja se on usein yhdistelmä malleja, dataa ja muita komponentteja. Malli on palvelun ydinosa, ja se on usein perusmalli, kuten LLM.
+- Löytää kiinnostava perustamalli katalogista - joko omistettu tai avoimen lähdekoodin, suodattamalla tehtävän, lisenssin tai nimen perusteella. Hakukelpoisuuden parantamiseksi mallit on järjestetty kokoelmiin, kuten Azure OpenAI -kokoelma, Hugging Face -kokoelma ja enemmän.
 
-Palvelut ovat usein optimoitu tuotantokäyttöön ja ovat usein helpompia käyttää kuin mallit, graafisen käyttöliittymän kautta. Palvelut eivät kuitenkaan ole aina saatavilla ilmaiseksi, ja niiden käyttö saattaa vaatia tilauksen tai maksun, vastineeksi palvelun omistajan laitteiden ja resurssien hyödyntämisestä, kulujen optimoinnista ja skaalautuvuuden helpottamisesta. Esimerkki palvelusta on [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), joka tarjoaa maksa-käytön-mukaan -hinnoittelusuunnitelman, eli käyttäjät veloitetaan suhteessa siihen, kuinka paljon he käyttävät palvelua. Lisäksi Azure OpenAI Service tarjoaa yritystason turvallisuutta ja vastuullisen AI-kehyksen mallien kykyjen päälle.
+- Tarkistaa mallikortti, mukaan lukien yksityiskohtainen kuvaus aiotusta käytöstä ja koulutusdatasta, koodiesimerkit ja arviointitulokset sisäisestä arviointikirjastosta.
+- Vertaa alan eri mallien ja datojen vertailuarvoja arvioidaksesi, mikä niistä täyttää liiketoimintaskenaarion, [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) -paneelin kautta.
 
-Mallit ovat vain neuroverkko, parametreilla, painoilla ja muilla. Mahdollistaen yrityksille paikallisen käytön, mutta vaatisi laitteiden ostamista, rakenteen rakentamista skaalautuvuuden mahdollistamiseksi ja lisenssin ostamista tai avoimen lähdekoodin mallin käyttöä. Malli kuten LLaMA on saatavilla käytettäväksi, vaatii laskentatehoa mallin käyttämiseen.
+![Mallien vertailuarvot](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.fi.png)
 
-## Kuinka testata ja iterointia eri mallien kanssa suorituskyvyn ymmärtämiseksi Azure-ympäristössä
+- Hienosäädä mallia mukautetulla harjoitusdatalla parantaaksesi mallin suorituskykyä tietyssä työkuormassa hyödyntämällä Azure AI Studion kokeilu- ja seurantakykyjä.
 
-Kun tiimimme on tutkinut nykyistä LLM-maailmaa ja tunnistanut hyviä ehdokkaita skenaarioihinsa, seuraava askel on testata niitä datalla ja työkuormalla. Tämä on iteratiivinen prosessi, joka tehdään kokeiluilla ja mittauksilla.
-Useimmat aiemmissa kappaleissa mainitsemamme mallit (OpenAI-mallit, avoimen lähdekoodin mallit kuten Llama2, ja Hugging Face -muuntimet) ovat saatavilla [mallikatalogissa](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) [Azure AI Studiosta](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
+![Mallin hienosäätö](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.fi.png)
 
-[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) on pilvialusta, joka on suunniteltu kehittäjille generatiivisten AI-sovellusten rakentamiseen ja koko kehityssyklin hallintaan - kokeilusta arviointiin - yhdistämällä kaikki Azure AI -palvelut yhdeksi keskukseksi kätevällä graafisella käyttöliittymällä. Mallikatalogi Azure AI Studiossa mahdollistaa käyttäjän:
+- Ota alkuperäinen esikoulutettu malli tai hienosäädetty versio käyttöön etäkäytössä reaaliaikaisessa ennustelaskennassa - hallinnoitu laskenta - tai palvelimettomassa API-päätepisteessä - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - jotta sovellukset voivat käyttää sitä.
 
-- Löytää kiinnostavan perusmallin katalogista - joko oikeudellinen tai avoimen lähdekoodin, suodattamalla tehtävän, lisenssin tai nimen mukaan. Parantaakseen hakumahdollisuuksia, mallit on järjestetty kokoelmiin, kuten Azure OpenAI -kokoelma, Hugging Face -kokoelma ja muita.
-
-![Mallikatalogi](../../../translated_images/AzureAIStudioModelCatalog.e34ac207ac348d31e74246c4f91d10086444783b72bbee3658e0453918aa5d22.fi.png)
-
-- Tarkistaa mallikortin, joka sisältää yksityiskohtaisen kuvauksen aiotusta käytöstä ja koulutusdatasta, koodinäytteitä ja arviointituloksia sisäisestä arviointikirjastosta.
-
-![Mallikortti](./images/ModelCard.png?WT.mc_id=academic
-- Vertaa teollisuudessa käytettävissä olevien mallien ja datasetien vertailuarvoja arvioidaksesi, mikä niistä täyttää liiketoimintaskenaarion, [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) -paneelin kautta.
-
-![Model benchmarks](../../../translated_images/ModelBenchmarks.b3b4182f762db04b59267af64ce77cc936d38adf40fb032f12acec9063578008.fi.png)
-
-- Hienosäädä mallia mukautetulla koulutusdatalla parantaaksesi mallin suorituskykyä tietyssä työkuormassa hyödyntämällä Azure AI Studion kokeilu- ja seurantakykyjä.
-
-![Model fine-tuning](../../../translated_images/FineTuning.f93db4ecbdc85b4a20ff1198fb82f5e2daa3a1ee328733b17d603727db20f5c0.fi.png)
-
-- Ota käyttöön alkuperäinen esikoulutettu malli tai hienosäädetty versio etä reaaliaikaisessa päättelyssä - hallinnoitu laskenta - tai serverittömässä api-päätepisteessä - [maksa käytön mukaan](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - jotta sovellukset voivat käyttää sitä.
-
-![Model deployment](../../../translated_images/ModelDeploy.7c78c2c5841567abf820d5da8354be454d3f20b62168905645aeac99e50c2562.fi.png)
+![Mallin käyttöönotto](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.fi.png)
 
 > [!NOTE]
-> Kaikkia katalogin malleja ei tällä hetkellä ole saatavilla hienosäätöön ja/tai maksa käytön mukaan -käyttöönottoon. Tarkista mallikortti saadaksesi lisätietoja mallin kyvyistä ja rajoituksista.
+> Kaikkia malliston malleja ei tällä hetkellä voi hienosäätää ja/tai ottaa käyttöön pay-as-you-go-mallilla. Tarkista mallikortti saadaksesi lisätietoja mallin ominaisuuksista ja rajoituksista.
 
 ## LLM-tulosten parantaminen
 
-Olemme tutkineet startup-tiimimme kanssa erilaisia LLM:itä ja pilvialustaa (Azure Machine Learning), joka mahdollistaa erilaisten mallien vertailun, niiden arvioinnin testidatalla, suorituskyvyn parantamisen ja niiden käyttöönoton päättelypisteissä.
+Olemme startup-tiimimme kanssa tutkineet erilaisia LLM-malleja ja pilvialustaa (Azure Machine Learning), jotka mahdollistavat erilaisten mallien vertailun, niiden arvioinnin testidatalla, suorituskyvyn parantamisen ja käyttöönoton ennustepäätepisteissä.
 
-Mutta milloin heidän pitäisi harkita mallin hienosäätöä sen sijaan, että käyttäisivät esikoulutettua mallia? Onko muita lähestymistapoja mallin suorituskyvyn parantamiseksi tietyissä työkuormissa?
+Mutta milloin heidän tulisi harkita mallin hienosäätöä esikoulutetun mallin sijaan? Onko muita lähestymistapoja mallin suorituskyvyn parantamiseksi tietyissä työkuormissa?
 
-On useita lähestymistapoja, joita yritys voi käyttää saadakseen tarvitsemansa tulokset LLM:stä. Voit valita erilaisia malleja, joilla on eri koulutustasoja, kun otat LLM:n käyttöön tuotannossa, eri monimutkaisuus-, kustannus- ja laatutasoilla. Tässä on joitakin erilaisia lähestymistapoja:
+On olemassa useita lähestymistapoja, joita yritys voi käyttää saadakseen tarvitsemansa tulokset LLM-mallista. Voit valita erilaisia malleja, joilla on eri koulutustaso, kun otat LLM:n käyttöön tuotannossa, eri monimutkaisuus-, kustannus- ja laatutasojen kanssa. Tässä muutamia eri lähestymistapoja:
 
-- **Kehotteen suunnittelu kontekstin kanssa**. Ajatuksena on antaa riittävästi kontekstia kehotettaessa, jotta saat tarvittavat vastaukset.
+- **Kehoteinsinöinti kontekstilla**. Ajatuksena on antaa riittävästi kontekstia, kun annat kehotteen, jotta saat tarvitsemasi vastaukset.
 
-- **Hakupohjainen generointi, RAG**. Tietosi saattaa olla esimerkiksi tietokannassa tai verkkopäätepisteessä, varmistaaksesi, että tämä data tai sen alijoukko sisältyy kehotuksen aikana, voit hakea asiaankuuluvat tiedot ja tehdä niistä osan käyttäjän kehotetta.
+- **Hakupohjainen sukupolvi, RAG**. Datasi saattaa olla esimerkiksi tietokannassa tai verkkopäätepisteessä, jotta tämä data tai sen alijoukko sisältyy kehotteen aikana, voit hakea asiaankuuluvan datan ja tehdä siitä osan käyttäjän kehotetta.
 
-- **Hienosäädetty malli**. Tässä olet kouluttanut mallia edelleen omalla datallasi, mikä tekee mallista tarkemman ja responsiivisemman tarpeisiisi, mutta saattaa olla kallista.
+- **Hienosäädetty malli**. Tässä koulutat mallia lisää omalla datallasi, mikä tekee mallista tarkemman ja vastaavan tarpeitasi, mutta se voi olla kallista.
 
-![LLMs deployment](../../../translated_images/Deploy.09224ecfe6a5ef47996fd0a44288772990139305451440c430662d43ac323ecd.fi.png)
+![LLM-mallien käyttöönotto](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.fi.png)
 
-Kuvan lähde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Kuvan lähde: [Neljä tapaa, joilla yritykset ottavat käyttöön LLM-malleja | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Kehotteen suunnittelu kontekstin kanssa
+### Kehoteinsinöinti kontekstilla
 
-Esikoulutetut LLM:t toimivat erittäin hyvin yleisissä luonnollisen kielen tehtävissä, jopa lyhyellä kehotteella, kuten lauseen täydentämisellä tai kysymyksellä – niin kutsutulla "zero-shot" oppimisella.
+Esikoulutetut LLM-mallit toimivat erittäin hyvin yleisissä luonnollisen kielen tehtävissä, jopa lyhyellä kehotteella, kuten lauseen täydentämisellä tai kysymyksellä – niin sanottu "zero-shot" oppiminen.
 
-Kuitenkin mitä enemmän käyttäjä voi kehystää kyselynsä yksityiskohtaisella pyynnöllä ja esimerkeillä – Kontekstilla – sitä tarkempi ja lähempänä käyttäjän odotuksia vastaus tulee olemaan. Tässä tapauksessa puhumme "one-shot" oppimisesta, jos kehotteessa on vain yksi esimerkki, ja "few-shot" oppimisesta, jos siinä on useita esimerkkejä.
-Kehotteen suunnittelu kontekstin kanssa on kustannustehokkain tapa aloittaa.
+Kuitenkin, mitä enemmän käyttäjä voi muotoilla kyselynsä, yksityiskohtaisella pyynnöllä ja esimerkeillä – konteksti – sitä tarkempi ja lähempänä käyttäjän odotuksia vastaus tulee olemaan. Tässä tapauksessa puhutaan "one-shot" oppimisesta, jos kehotteessa on vain yksi esimerkki, ja "few-shot oppimisesta", jos siinä on useita esimerkkejä.
+Kehoteinsinöinti kontekstilla on kustannustehokkain lähestymistapa aloittaa.
 
-### Hakupohjainen generointi (RAG)
+### Hakupohjainen sukupolvi (RAG)
 
-LLM:illä on rajoitus, että ne voivat käyttää vain dataa, joka on käytetty niiden koulutuksen aikana vastauksen tuottamiseen. Tämä tarkoittaa, että ne eivät tiedä mitään tosiasioista, jotka ovat tapahtuneet koulutusprosessin jälkeen, eivätkä ne voi käyttää ei-julkista tietoa (kuten yrityksen dataa).
-Tätä voidaan kiertää RAG:in avulla, tekniikka, joka laajentaa kehotetta ulkoisella datalla dokumenttien palasina, ottaen huomioon kehotteen pituusrajat. Tätä tukevat Vektoritietokantatyökalut (kuten [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), jotka hakevat hyödylliset palaset erilaisista ennalta määritellyistä datalähteistä ja lisäävät ne kehotteen kontekstiin.
+LLM-malleilla on rajoitus, että ne voivat käyttää vain dataa, joka on käytetty niiden koulutuksen aikana vastauksen luomiseen. Tämä tarkoittaa, että ne eivät tiedä mitään tosiasioista, jotka tapahtuivat koulutusprosessin jälkeen, eikä niillä ole pääsyä ei-julkiseen tietoon (kuten yritysdataan).
+Tämä voidaan voittaa RAG:n avulla, tekniikalla, joka laajentaa kehotetta ulkoisella datalla dokumenttien palasina, ottaen huomioon kehotteen pituusrajoitukset. Tämä on mahdollista vektoripohjaisten tietokantatyökalujen avulla (kuten [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), jotka hakevat hyödylliset palaset erilaisista ennalta määritellyistä datalähteistä ja lisäävät ne kehotteen kontekstiin.
 
-Tämä tekniikka on erittäin hyödyllinen, kun yrityksellä ei ole tarpeeksi dataa, aikaa tai resursseja hienosäätää LLM:ää, mutta haluaa silti parantaa suorituskykyä tietyssä työkuormassa ja vähentää mystifikaation riskejä, eli todellisuuden vääristymistä tai haitallista sisältöä.
+Tämä tekniikka on erittäin hyödyllinen, kun yrityksellä ei ole tarpeeksi dataa, aikaa tai resursseja hienosäätää LLM-mallia, mutta se haluaa silti parantaa suorituskykyä tietyssä työkuormassa ja vähentää vääristymien riskiä, eli todellisuuden vääristämistä tai haitallista sisältöä.
 
 ### Hienosäädetty malli
 
-Hienosäätö on prosessi, joka hyödyntää siirto-oppimista "mukauttamaan" mallin alavirran tehtävään tai ratkaisemaan tietty ongelma. Eroaa few-shot oppimisesta ja RAG:ista siinä, että se tuottaa uuden mallin, jossa on päivitetyt painot ja vinoumat. Se vaatii joukon koulutusesimerkkejä, jotka koostuvat yhdestä syötteestä (kehotteesta) ja siihen liittyvästä ulostulosta (täydentämisestä).
-Tämä olisi suositeltu lähestymistapa, jos:
+Hienosäätö on prosessi, joka hyödyntää siirto-oppimista "sopeuttamaan" mallia alaspäin suuntautuvaan tehtävään tai ratkaisemaan tietty ongelma. Eroaa muutaman esimerkin oppimisesta ja RAG:sta siinä, että se johtaa uuden mallin luomiseen, päivitettyjen painojen ja harhojen kanssa. Se vaatii joukon harjoitusesimerkkejä, jotka koostuvat yhdestä syötteestä (kehotteesta) ja sen liittyvästä tulosteesta (täydentämisestä).
+Tämä olisi suosituin lähestymistapa, jos:
 
-- **Käyttää hienosäädettyjä malleja**. Yritys haluaa käyttää hienosäädettyjä vähemmän kykeneviä malleja (kuten upotusmalleja) sen sijaan, että käyttäisi suorituskykyisiä malleja, mikä johtaa kustannustehokkaampaan ja nopeampaan ratkaisuun.
+- **Hienosäädettyjen mallien käyttö**. Yritys haluaa käyttää hienosäädettyjä vähemmän kykeneviä malleja (kuten upotettuja malleja) korkean suorituskyvyn mallien sijaan, mikä johtaa kustannustehokkaampaan ja nopeampaan ratkaisuun.
 
-- **Huomioi viive**. Viive on tärkeä tietyssä käyttötapauksessa, joten ei ole mahdollista käyttää erittäin pitkiä kehotteita tai esimerkkien määrää, jotka mallin pitäisi oppia, ei sovi kehotteen pituusrajaan.
+- **Viiveen huomioon ottaminen**. Viive on tärkeä tietylle käyttötapaukselle, joten ei ole mahdollista käyttää erittäin pitkiä kehotteita tai esimerkkien määrää, jotka pitäisi oppia mallista, ei sovi kehotteen pituusrajaan.
 
-- **Pysyä ajan tasalla**. Yrityksellä on paljon korkealaatuista dataa ja totuudenmukaisia merkintöjä sekä resurssit ylläpitää tätä dataa ajan tasalla.
+- **Pysyminen ajan tasalla**. Yrityksellä on paljon korkealaatuista dataa ja totuudenmukaisia merkintöjä ja tarvittavat resurssit pitää tämä data ajan tasalla ajan myötä.
 
 ### Koulutettu malli
 
-LLM:n kouluttaminen alusta alkaen on epäilemättä vaikein ja monimutkaisin lähestymistapa, joka vaatii valtavia määriä dataa, taitavia resursseja ja sopivaa laskentatehoa. Tätä vaihtoehtoa tulisi harkita vain skenaariossa, jossa yrityksellä on alakohtainen käyttötapaus ja suuri määrä alakeskeistä dataa.
+LLM-mallin kouluttaminen alusta alkaen on epäilemättä vaikein ja monimutkaisin lähestymistapa, joka vaatii valtavia määriä dataa, taitavia resursseja ja sopivaa laskentatehoa. Tätä vaihtoehtoa tulisi harkita vain tilanteessa, jossa yrityksellä on alakohtainen käyttötapaus ja suuri määrä alakohtaista dataa.
 
 ## Tietotesti
 
-Mikä voisi olla hyvä lähestymistapa LLM:n täydentämistulosten parantamiseen?
+Mikä voisi olla hyvä lähestymistapa LLM-täydentämistulosten parantamiseksi?
 
-1. Kehotteen suunnittelu kontekstin kanssa
+1. Kehoteinsinöinti kontekstilla
 1. RAG
 1. Hienosäädetty malli
 
-A:3, jos sinulla on aikaa ja resursseja sekä korkealaatuista dataa, hienosäätö on parempi vaihtoehto pysyä ajan tasalla. Kuitenkin, jos tarkastelet asioiden parantamista ja sinulla ei ole aikaa, kannattaa harkita ensin RAG:ia.
+A:3, jos sinulla on aikaa ja resursseja sekä korkealaatuista dataa, hienosäätö on parempi vaihtoehto pysyä ajan tasalla. Kuitenkin, jos etsit parannusta ja sinulla on ajan puute, kannattaa harkita ensin RAG:ia.
 
 ## 🚀 Haaste
 
 Lue lisää siitä, kuinka voit [käyttää RAG:ia](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) yrityksellesi.
 
-## Hienoa työtä, jatka oppimistasi
+## Hienoa työtä, jatka oppimista
 
-Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning -kokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generative AI -tietämyksesi kehittämistä!
+Tämän oppitunnin suorittamisen jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generative AI -tietosi kehittämistä!
 
-Siirry oppituntiin 3, jossa tarkastelemme, kuinka [rakentaa Generative AI:ta vastuullisesti](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Siirry oppituntiin 3, jossa tarkastelemme, kuinka [rakentaa vastuullisesti Generative AI:lla](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälyyn perustuvaa käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, on hyvä huomioida, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon kohdalla suositellaan ammattimaista ihmiskääntäjää. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttäen tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

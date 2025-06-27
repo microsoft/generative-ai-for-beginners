@@ -2,42 +2,42 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:55:22+00:00",
+  "translation_date": "2025-06-25T16:59:58+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "sr"
 }
 -->
-# Priprema podataka za transkripciju
+# Припрема података за транскрипцију
 
-Skripte za pripremu podataka za transkripciju preuzimaju transkripte YouTube videa i pripremaju ih za korišćenje sa primerom Semantičke pretrage koristeći OpenAI Ugradnje i Funkcije.
+Скрипте за припрему података за транскрипцију преузимају транскрипте са YouTube видеа и припремају их за коришћење са примером Семантичке претраге помоћу OpenAI Embeddings и Functions.
 
-Skripte za pripremu podataka za transkripciju su testirane na najnovijim verzijama Windows 11, macOS Ventura i Ubuntu 22.04 (i novijim).
+Скрипте за припрему података за транскрипцију су тестиране на најновијим издањима Windows 11, macOS Ventura и Ubuntu 22.04 (и новијим).
 
-## Kreiranje potrebnih resursa za Azure OpenAI uslugu
+## Креирање потребних ресурса за Azure OpenAI Service
 
 > [!IMPORTANT]
-> Preporučujemo da ažurirate Azure CLI na najnoviju verziju kako biste osigurali kompatibilnost sa OpenAI
-> Pogledajte [Dokumentaciju](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Препоручујемо да ажурирате Azure CLI на најновију верзију како бисте обезбедили компатибилност са OpenAI
+> Погледајте [документацију](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. Kreirajte grupu resursa
+1. Креирајте ресурсну групу
 
 > [!NOTE]
-> Za ova uputstva koristimo grupu resursa nazvanu "semantic-video-search" u East US.
-> Možete promeniti ime grupe resursa, ali kada menjate lokaciju za resurse,
-> proverite [tabelu dostupnosti modela](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> За ова упутства користимо ресурсну групу под именом "semantic-video-search" у East US.
+> Можете променити име ресурсне групе, али када мењате локацију за ресурсе,
+> проверите [табелу доступности модела](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Kreirajte resurs za Azure OpenAI uslugu.
+1. Креирајте ресурс за Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Preuzmite krajnju tačku i ključeve za korišćenje u ovoj aplikaciji
+1. Преузмите крајњу тачку и кључеве за коришћење у овој апликацији
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -46,7 +46,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Implementirajte sledeće modele:
+1. Дистрибуирајте следеће моделе:
    - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
    - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
 
@@ -70,17 +70,17 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## Potreban softver
+## Потребан софтвер
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ili noviji
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) или новији
 
-## Promenljive okruženja
+## Енвиронмент променљиве
 
-Sledeće promenljive okruženja su potrebne za pokretanje skripti za pripremu podataka za transkripciju sa YouTube-a.
+Следеће енвиронмент променљиве су потребне за покретање скрипти за припрему података за транскрипцију са YouTube-а.
 
-### Na Windows-u
+### На Windows-у
 
-Preporučujemo dodavanje promenljivih u vaš `user` environment variables.
+Препоручујемо додавање променљивих у ваш `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -90,9 +90,9 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### Na Linux-u i macOS-u
+### На Linux и macOS
 
-Preporučujemo dodavanje sledećih eksportova u vaš `~/.bashrc` or `~/.zshrc` fajl.
+Препоручујемо додавање следећих извозних команди у ваш `~/.bashrc` or `~/.zshrc` фајл.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -101,76 +101,76 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Instalacija potrebnih Python biblioteka
+## Инсталирајте потребне Python библиотеке
 
-1. Instalirajte [git klijent](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ako već nije instaliran.
-1. Iz `Terminal` prozora, klonirajte primer u željeni folder za repozitorijume.
+1. Инсталирајте [git клијент](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ако већ није инсталиран.
+1. Из `Terminal` прозора, клонирајте пример у жељени фолдер репоа.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Idite u `data_prep` folder.
+1. Идите у `data_prep` фолдер.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Kreirajte Python virtuelno okruženje.
+1. Креирајте Python виртуелно окружење.
 
-    Na Windows-u:
+    На Windows-у:
 
     ```powershell
     python -m venv .venv
     ```
 
-    Na macOS-u i Linux-u:
+    На macOS и Linux:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Aktivirajte Python virtuelno okruženje.
+1. Активирајте Python виртуелно окружење.
 
-   Na Windows-u:
+   На Windows-у:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   Na macOS-u i Linux-u:
+   На macOS и Linux:
 
    ```bash
    source .venv/bin/activate
    ```
 
-1. Instalirajte potrebne biblioteke.
+1. Инсталирајте потребне библиотеке.
 
-   Na Windows-u:
+   На Windows-у:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   Na macOS-u i Linux-u:
+   На macOS и Linux:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Pokrenite skripte za pripremu podataka za transkripciju sa YouTube-a
+## Покрените скрипте за припрему података за транскрипцију са YouTube-а
 
-### Na Windows-u
+### На Windows-у
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### Na macOS-u i Linux-u
+### На macOS и Linux
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
 **Одрицање од одговорности**:  
-Овај документ је преведен користећи AI услугу за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било каква неспоразума или погрешна тумачења која произилазе из употребе овог превода.
+Овај документ је преведен коришћењем услуге за превођење вештачком интелигенцијом [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква неразумевања или погрешна тумачења настала коришћењем овог превода.
