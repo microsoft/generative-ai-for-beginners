@@ -23,7 +23,7 @@ Follow the directions below to _configure_ this repository for use with differen
 
 You can configure one, none, or all providers. Related assignments will simply error out on missing credentials.
 
-###  2.1. Create `.env` file
+## Create `.env` file
 
 We assume that you have already read the guidance above and signed up with the relevant provider, and obtained the required authentication credentials (API_KEY or token). In the case of Azure OpenAI, we assume you also have a valid deployment of an Azure OpenAI Service (endpoint) with at least one GPT model deployed for chat completion.
 
@@ -56,8 +56,7 @@ The next step is to configure your **local environment variables** as follows:
 
 4. (Option) If you use GitHub Codespaces, you have the option to save environment variables as _Codespaces secrets_ associated with this repository. In that case, you won't need to setup a local .env file. **However, note that this option works only if you use GitHub Codespaces.** You will still need to setup the .env file if you use Docker Desktop instead.
 
-
-### 2.2. Populate `.env` file
+## Populate `.env` file
 
 Let's take a quick look at the variable names to understand what they represent:
 
@@ -73,8 +72,7 @@ Let's take a quick look at the variable names to understand what they represent:
 
 Note: The last two Azure OpenAI variables reflect a default model for chat completion (text generation) and vector search (embeddings) respectively. Instructions for setting them will be defined in relevant assignments.
 
-
-### 2.3 Configure Azure: From Portal
+## Configure Azure: From Portal
 
 The Azure OpenAI endpoint and key values will be found in the [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) so let's start there.
 
@@ -91,7 +89,7 @@ Next, we need the endpoints for the specific models we've deployed.
 
 This will take you to the Azure OpenAI Studio website, where we'll find the other values as described below.
 
-### 2.4 Configure Azure: From Studio
+## Configure Azure: From Studio
 
 1. Navigate to [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **from your resource** as described above.
 1. Click the **Deployments** tab (sidebar, left) to view currently deployed models.
@@ -108,10 +106,10 @@ AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 
 **Don't forget to save the .env file when done**. You can now exit the file and return to the instructions for running the notebook.
 
-### 2.5 Configure OpenAI: From Profile
+## Configure OpenAI: From Profile
 
 Your OpenAI API key can be found in your [OpenAI account](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). If you don't have one, you can sign up for an account and create an API key. Once you have the key, you can use it to populate the `OPENAI_API_KEY` variable in the `.env` file.
 
-### 2.6 Configure Hugging Face: From Profile
+## Configure Hugging Face: From Profile
 
 Your Hugging Face token can be found in your profile under [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Don't post or share these publicly. Instead, create a new token for this project usage and copy that into the `.env` file under the `HUGGING_FACE_API_KEY` variable. _Note:_ This is technically not an API key but is used for authentication so we are keeping that naming convention for consistency.
