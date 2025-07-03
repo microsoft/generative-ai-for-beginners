@@ -3,8 +3,8 @@
 * Select Language
 
     * [English](/)
-    * [Simplified Chinese](/translations/cn/)
+    * [Simplified Chinese](/translations/zh/)
     * [Traditional Chinese](/translations/tw/)
-    * [Portuguese](/translations/pt-br/)
-    * [Japanese](/translations/ja-jp/)
+    * [Portuguese](/translations/pt/)
+    * [Japanese](/translations/ja/)
     * [Korean](/translations/ko/)
