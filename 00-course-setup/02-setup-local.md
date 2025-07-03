@@ -193,7 +193,7 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add th
 That's it! You've successfully created a `.env` file, added your GitHub token, and loaded it into your Python application.
 
 🔐 Never commit .env—it’s already in .gitignore.
-Full provider instructions live in [`providers.md`](providers.md).
+Full provider instructions live in [`providers.md`](03-providers.md).
 
 ## 4. What’s next?
 
@@ -201,7 +201,7 @@ Full provider instructions live in [`providers.md`](providers.md).
 |---------------------|-------------------------------------------------------------------------|
 | Start Lesson 1      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
 | Work offline        | [`setup-local.md`](../setup-local.md)                                      |
-| Setup an LLM Provider | [`providers.md`](providers.md)                                       |
+| Setup an LLM Provider | [`providers.md`](03-providers.md)                                       |
 | Meet other learners | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## 5. Troubleshooting
