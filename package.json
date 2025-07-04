@@ -28,6 +28,6 @@
 	"dependencies": {
 		"@azure-rest/ai-inference": "^1.0.0-beta.2",
 		"@azure/core-auth": "^1.9.0",
-		"openai": "^4.103.0"
+		"openai": "^5.8.2"
 	}
 }
