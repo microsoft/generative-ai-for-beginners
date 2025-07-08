@@ -80,7 +80,7 @@ So what does it take to build an image generation application? You need the foll
 
 ## Create and deploy an Azure OpenAI model
 
-If not done already, follow the instructions on the [Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) page
+If not done already, follow the instructions on the [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) page
 to create an Azure OpenAI resource and model. Select DALL-E 3 as model.  
 
 ## Create the app
