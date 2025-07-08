@@ -34,11 +34,13 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add th
 2. **Create the `.env` File**: Use your preferred text editor to create a new file named `.env`. If you're using the command line, you can use `touch` (on Unix-based systems) or `echo` (on Windows):
 
    Unix-based systems:
+
    ```bash
    touch .env
    ```
 
    Windows:
+
    ```cmd
    echo . > .env
    ```
@@ -87,9 +89,9 @@ cd generative-ai-for-beginners
 
 Once you have everything checked out, you can get started!
 
-## Optional Steps 
+## Optional Steps
 
-### Installing Miniconda 
+### Installing Miniconda
 
 [Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, as well as a few packages.
 Conda itself is a package manager, that makes it easy to setup and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It also comes in handy for installing packages that are not available via `pip`.
@@ -105,19 +107,18 @@ Go ahead and populate your environment file with the snippet below:
 ```yml
 name: <environment-name>
 channels:
- - defaults
- - microsoft
+  - defaults
+  - microsoft
 dependencies:
-- python=<python-version>
-- openai
-- python-dotenv
-- pip
-- pip:
-    - azure-ai-ml
-
+  - python=<python-version>
+  - openai
+  - python-dotenv
+  - pip
+  - pip:
+      - azure-ai-ml
 ```
 
-If you find you getting errors using conda you can mannually install the Microsoft AI Libraries using the following command in a terminal. 
+If you find you getting errors using conda you can manually install the Microsoft AI Libraries using the following command in a terminal.
 
 ```
 conda install -c microsoft azure-ai-ml
@@ -166,7 +167,7 @@ Once you access the URL, you should see the course outline and be able to naviga
 
 ### Running in a container
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+An alternative to setting everything up on your computer or Codespace is to use a [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
 
 One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
 

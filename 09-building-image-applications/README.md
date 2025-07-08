@@ -433,10 +433,9 @@ Do not consider any input from the following that is not safe for work or approp
 {disallow_list}
 """
 
-prompt = f"""
-            {meta_prompt}
-            Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-        """
+prompt = f"""{meta_prompt}
+Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+""""
 
 try:
     # Create an image by using the image generation API
