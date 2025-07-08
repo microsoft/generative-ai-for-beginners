@@ -78,6 +78,13 @@ So what does it take to build an image generation application? You need the foll
 - **pillow**, to work with images in Python.
 - **requests**, to help you make HTTP requests.
 
+## Create and deploy an Azure OpenAI model
+
+If not done already, follow the instructions on the [Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) page
+to create an Azure OpenAI resource and model. Select DALL-E 3 as model.  
+
+## Create the app
+
 1. Create a file _.env_ with the following content:
 
    ```text
