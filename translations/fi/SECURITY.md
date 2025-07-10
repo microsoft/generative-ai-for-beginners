@@ -2,48 +2,48 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-05-19T12:12:47+00:00",
+  "translation_date": "2025-07-09T06:54:27+00:00",
   "source_file": "SECURITY.md",
   "language_code": "fi"
 }
 -->
-## Tietoturva
+## Turvallisuus
 
-Microsoft suhtautuu vakavasti ohjelmistotuotteidemme ja palveluidemme tietoturvaan, mikä kattaa myös kaikki GitHub-organisaatioidemme hallinnoimat lähdekoodivarastot, kuten [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) ja [meidän GitHub-organisaatiomme](https://opensource.microsoft.com/).
+Microsoft suhtautuu vakavasti ohjelmistotuotteidemme ja -palveluidemme turvallisuuteen, mikä kattaa kaikki lähdekoodivarastot, joita hallinnoidaan GitHub-organisaatioidemme kautta, mukaan lukien [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) sekä [GitHub-organisaatiomme](https://opensource.microsoft.com/).
 
-Jos uskot löytäneesi tietoturva-aukon jostakin Microsoftin omistamasta varastosta, joka täyttää [Microsoftin tietoturva-aukon määritelmän](https://aka.ms/opensource/security/definition), ilmoita siitä meille alla kuvatulla tavalla.
+Jos uskot löytäneesi turvallisuusaukkoja jostain Microsoftin omistamasta varastosta, joka täyttää [Microsoftin määritelmän turvallisuusaukosta](https://aka.ms/opensource/security/definition), ilmoitathan siitä meille alla kuvatulla tavalla.
 
-## Tietoturvaongelmien ilmoittaminen
+## Turvallisuusongelmien raportointi
 
-**Älä ilmoita tietoturva-aukoista julkisten GitHub-ongelmien kautta.**
+**Älä raportoi turvallisuusaukkoja julkisten GitHub-issueiden kautta.**
 
-Sen sijaan ilmoita niistä Microsoft Security Response Centerille (MSRC) osoitteessa [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
+Ilmoita ne sen sijaan Microsoft Security Response Centerille (MSRC) osoitteessa [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
 
-Jos haluat lähettää ilmoituksen kirjautumatta sisään, lähetä sähköpostia osoitteeseen [secure@microsoft.com](mailto:secure@microsoft.com). Jos mahdollista, salaa viestisi PGP-avaimellamme; lataa se [Microsoft Security Response Center PGP Key -sivulta](https://aka.ms/opensource/security/pgpkey).
+Jos haluat lähettää ilmoituksen ilman kirjautumista, lähetä sähköpostia osoitteeseen [secure@microsoft.com](mailto:secure@microsoft.com). Mikäli mahdollista, salaa viestisi PGP-avaimellamme; voit ladata sen [Microsoft Security Response Centerin PGP Key -sivulta](https://aka.ms/opensource/security/pgpkey).
 
-Sinun pitäisi saada vastaus 24 tunnin kuluessa. Jos et jostain syystä saa vastausta, seuraa asiaa sähköpostitse varmistaaksesi, että saimme alkuperäisen viestisi. Lisätietoja löydät osoitteesta [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
+Saat vastauksen yleensä 24 tunnin kuluessa. Jos et jostain syystä saa vastausta, ota yhteyttä uudelleen sähköpostitse varmistaaksesi, että alkuperäinen viestisi on vastaanotettu. Lisätietoja löytyy osoitteesta [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
 
-Sisällytä mahdollisimman paljon alla listatuista tiedoista auttaaksesi meitä ymmärtämään mahdollisen ongelman luonteen ja laajuuden:
+Liitäthän mukaan alla pyydetyt tiedot (mahdollisimman kattavasti), jotta voimme ymmärtää ongelman luonteen ja laajuuden paremmin:
 
-  * Ongelman tyyppi (esim. puskuriin kohdistuva ylivuoto, SQL-injektio, cross-site scripting jne.)
-  * Lähdetiedostojen täydet polut, jotka liittyvät ongelman ilmenemiseen
-  * Sijainti, jossa haavoittuva lähdekoodi sijaitsee (tagi/haara/sitoutuminen tai suora URL)
-  * Erityiset kokoonpanot, joita tarvitaan ongelman toistamiseen
-  * Yksityiskohtaiset ohjeet ongelman toistamiseen
-  * Konsepti- tai hyökkäyskoodi (jos mahdollista)
-  * Ongelman vaikutukset, mukaan lukien miten hyökkääjä voisi hyödyntää ongelmaa
+  * Ongelman tyyppi (esim. puskurointivirhe, SQL-injektio, cross-site scripting jne.)
+  * Lähdetiedostojen täydelliset polut, jotka liittyvät ongelman ilmenemiseen
+  * Vaikutetun lähdekoodin sijainti (tagi/haara/commit tai suora URL)
+  * Mahdolliset erityiskonfiguraatiot, joita tarvitaan ongelman toistamiseen
+  * Vaiheittaiset ohjeet ongelman toistamiseksi
+  * Todistekonsepti tai hyödyntämiskoodi (jos mahdollista)
+  * Ongelman vaikutukset, mukaan lukien miten hyökkääjä voisi käyttää sitä hyväkseen
 
 Nämä tiedot auttavat meitä käsittelemään raporttisi nopeammin.
 
-Jos ilmoitat bugipalkkio-ohjelman kautta, kattavammat raportit voivat johtaa suurempaan palkkioon. Käy [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) -sivullamme saadaksesi lisätietoja aktiivisista ohjelmistamme.
+Jos raportoit bugipalkkio-ohjelmaa varten, kattavammat raportit voivat johtaa suurempaan palkkioon. Lisätietoja aktiivisista ohjelmistamme löydät [Microsoft Bug Bounty Program -sivultamme](https://aka.ms/opensource/security/bounty).
 
 ## Suositellut kielet
 
-Suosimme, että kaikki viestintä tapahtuu englanniksi.
+Toivomme, että kaikki viestintä tapahtuu englanniksi.
 
 ## Käytäntö
 
-Microsoft noudattaa periaatetta [Koordinoitu haavoittuvuuksien paljastaminen](https://aka.ms/opensource/security/cvd).
+Microsoft noudattaa periaatetta [Coordinated Vulnerability Disclosure](https://aka.ms/opensource/security/cvd).
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisen tiedon kohdalla suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

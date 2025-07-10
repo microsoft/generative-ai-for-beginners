@@ -1,145 +1,145 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T14:49:37+00:00",
+  "original_hash": "7f8f4c11f8c1cb6e1794442dead414ea",
+  "translation_date": "2025-07-09T09:02:35+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "sk"
 }
 -->
-# Zodpovedné používanie generatívnej AI
+# Používanie generatívnej AI zodpovedne
 
-[![Zodpovedné používanie generatívnej AI](../../../translated_images/03-lesson-banner.63a265562d8a9f9230f5c636ab303a0137d11420177528f475b0a05c5f6a9ff9.sk.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
+[![Používanie generatívnej AI zodpovedne](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.sk.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
-> _Kliknite na obrázok vyššie a pozrite si video tejto lekcie_
+> _Kliknite na obrázok vyššie pre zobrazenie videa k tejto lekcii_
 
-Je ľahké byť fascinovaný AI, obzvlášť generatívnou AI, ale je potrebné zvážiť, ako ju používať zodpovedne. Je potrebné zvážiť veci ako zabezpečenie spravodlivého a neškodného výstupu a ďalšie. Táto kapitola sa snaží poskytnúť vám uvedený kontext, čo zvážiť a ako podniknúť aktívne kroky na zlepšenie používania AI.
+Je ľahké byť fascinovaný AI, najmä generatívnou AI, no je potrebné zvážiť, ako ju používať zodpovedne. Treba brať do úvahy, ako zabezpečiť, aby výstupy boli spravodlivé, neškodné a ďalšie aspekty. Táto kapitola vám poskytne potrebný kontext, na čo myslieť a ako aktívne zlepšiť svoje používanie AI.
 
 ## Úvod
 
-Táto lekcia pokryje:
+V tejto lekcii sa dozviete:
 
-- Prečo by ste mali uprednostniť zodpovednú AI pri budovaní aplikácií generatívnej AI.
-- Základné princípy zodpovednej AI a ako sa vzťahujú na generatívnu AI.
-- Ako uplatniť tieto princípy zodpovednej AI v praxi prostredníctvom stratégie a nástrojov.
+- Prečo by ste mali uprednostniť Zodpovednú AI pri tvorbe aplikácií s generatívnou AI.
+- Základné princípy Zodpovednej AI a ich vzťah k generatívnej AI.
+- Ako tieto princípy Zodpovednej AI uviesť do praxe pomocou stratégie a nástrojov.
 
 ## Ciele učenia
 
 Po dokončení tejto lekcie budete vedieť:
 
-- Dôležitosť zodpovednej AI pri budovaní aplikácií generatívnej AI.
-- Kedy premýšľať a uplatniť základné princípy zodpovednej AI pri budovaní aplikácií generatívnej AI.
-- Aké nástroje a stratégie sú dostupné, aby ste koncept zodpovednej AI uviedli do praxe.
+- Aký význam má Zodpovedná AI pri tvorbe aplikácií s generatívnou AI.
+- Kedy myslieť na a aplikovať základné princípy Zodpovednej AI pri tvorbe generatívnych AI aplikácií.
+- Aké nástroje a stratégie máte k dispozícii na praktickú implementáciu konceptu Zodpovednej AI.
 
-## Princípy zodpovednej AI
+## Princípy Zodpovednej AI
 
-Nadšenie z generatívnej AI nikdy nebolo vyššie. Toto nadšenie prinieslo do tejto oblasti množstvo nových vývojárov, pozornosť a financovanie. Aj keď je to veľmi pozitívne pre každého, kto chce budovať produkty a spoločnosti pomocou generatívnej AI, je tiež dôležité pokračovať zodpovedne.
+Nadšenie pre generatívnu AI nikdy nebolo väčšie. Toto nadšenie pritiahlo množstvo nových vývojárov, pozornosť a financovanie do tejto oblasti. Hoci je to veľmi pozitívne pre každého, kto chce budovať produkty a firmy využívajúce generatívnu AI, je rovnako dôležité postupovať zodpovedne.
 
-Počas tohto kurzu sa zameriavame na budovanie nášho startupu a nášho vzdelávacieho produktu AI. Použijeme princípy zodpovednej AI: Spravodlivosť, Inkluzívnosť, Spoľahlivosť/Bezpečnosť, Zabezpečenie a Súkromie, Transparentnosť a Zodpovednosť. S týmito princípmi preskúmame, ako sa vzťahujú na naše používanie generatívnej AI v našich produktoch.
+V priebehu tohto kurzu sa zameriavame na budovanie nášho startupu a nášho vzdelávacieho AI produktu. Použijeme princípy Zodpovednej AI: Spravodlivosť, Inkluzívnosť, Spoľahlivosť/Bezpečnosť, Bezpečnosť a Ochrana súkromia, Transparentnosť a Zodpovednosť. Pomocou týchto princípov preskúmame, ako súvisia s naším využitím generatívnej AI v našich produktoch.
 
-## Prečo by ste mali uprednostniť zodpovednú AI
+## Prečo by ste mali uprednostniť Zodpovednú AI
 
-Pri budovaní produktu, zaujatie prístupu zameraného na človeka tým, že máte na pamäti najlepší záujem vašich používateľov, vedie k najlepším výsledkom.
+Pri tvorbe produktu vedie k najlepším výsledkom prístup zameraný na človeka, ktorý má na pamäti najlepší záujem používateľa.
 
-Unikátnosť generatívnej AI je jej schopnosť vytvárať užitočné odpovede, informácie, rady a obsah pre používateľov. To sa dá urobiť bez mnohých manuálnych krokov, čo môže viesť k veľmi pôsobivým výsledkom. Bez správneho plánovania a stratégií to môže bohužiaľ tiež viesť k škodlivým výsledkom pre vašich používateľov, váš produkt a spoločnosť ako celok.
+Jedinečnosť generatívnej AI spočíva v jej schopnosti vytvárať užitočné odpovede, informácie, usmernenia a obsah pre používateľov. To môže byť dosiahnuté bez mnohých manuálnych krokov, čo vedie k veľmi pôsobivým výsledkom. Bez správneho plánovania a stratégií však môže, žiaľ, viesť aj k škodlivým dôsledkom pre vašich používateľov, váš produkt a spoločnosť ako celok.
 
-Pozrime sa na niektoré (ale nie všetky) z týchto potenciálne škodlivých výsledkov:
+Pozrime sa na niektoré (ale nie všetky) z týchto potenciálne škodlivých dôsledkov:
 
 ### Halucinácie
 
-Halucinácie sú termín používaný na popis, keď LLM produkuje obsah, ktorý je buď úplne nezmyselný, alebo niečo, o čom vieme, že je fakticky nesprávne na základe iných zdrojov informácií.
+Halucinácie sú termín používaný na opis situácie, keď LLM vytvorí obsah, ktorý je buď úplne nezmyselný, alebo vieme, že je fakticky nesprávny na základe iných zdrojov informácií.
 
-Predstavme si, že vytvoríme funkciu pre náš startup, ktorá umožní študentom klásť historické otázky modelu. Študent sa pýta otázku `Who was the sole survivor of Titanic?`
+Napríklad, ak vytvoríme funkciu pre náš startup, ktorá umožňuje študentom klásť historické otázky modelu. Študent sa opýta: `Kto bol jediným preživším Titanicu?`
 
-Model produkuje odpoveď, ako je tá nižšie:
+Model vygeneruje odpoveď ako táto:
 
-![Výzva s textom "Kto bol jediným preživším z Titanicu"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
 > _(Zdroj: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
-Toto je veľmi sebavedomá a dôkladná odpoveď. Bohužiaľ, je nesprávna. Aj s minimálnym množstvom výskumu by sa zistilo, že z katastrofy Titanicu prežilo viac ako jedna osoba. Pre študenta, ktorý práve začína skúmať túto tému, môže byť táto odpoveď presvedčivá natoľko, že ju nebude spochybňovať a bude ju považovať za fakt. Dôsledky tohto môžu viesť k tomu, že AI systém bude nespoľahlivý a negatívne ovplyvní reputáciu nášho startupu.
+Ide o veľmi sebavedomú a dôkladnú odpoveď. Bohužiaľ, je nesprávna. Aj pri minimálnom výskume by sme zistili, že prežilo viac ako jedna osoba z katastrofy Titanicu. Pre študenta, ktorý práve začína skúmať túto tému, môže byť táto odpoveď dostatočne presvedčivá na to, aby ju nepochyboval a považoval za fakt. Dôsledkom môže byť, že AI systém bude považovaný za nespoľahlivý a negatívne to ovplyvní reputáciu nášho startupu.
 
-Pri každej iterácii daného LLM sme zaznamenali zlepšenie výkonu pri minimalizovaní halucinácií. Aj pri tomto zlepšení, my ako tvorcovia aplikácií a používatelia stále musíme byť si vedomí týchto obmedzení.
+S každou novou verziou LLM sme zaznamenali zlepšenia v minimalizácii halucinácií. Napriek tomu ako tvorcovia aplikácií a používatelia musíme byť stále vedomí týchto obmedzení.
 
 ### Škodlivý obsah
 
-V predchádzajúcej časti sme sa venovali tomu, keď LLM produkuje nesprávne alebo nezmyselné odpovede. Ďalším rizikom, ktoré musíme mať na pamäti, je, keď model odpovedá škodlivým obsahom.
+V predchádzajúcej časti sme sa venovali situáciám, keď LLM vytvára nesprávne alebo nezmyselné odpovede. Ďalším rizikom, na ktoré musíme dávať pozor, je, keď model odpovedá škodlivým obsahom.
 
-Škodlivý obsah môže byť definovaný ako:
+Škodlivý obsah možno definovať ako:
 
-- Poskytovanie pokynov alebo podpora sebapoškodzovania alebo poškodzovania určitých skupín.
+- Poskytovanie inštrukcií alebo povzbudzovanie k sebapoškodzovaniu alebo poškodeniu určitých skupín.
 - Nenávistný alebo ponižujúci obsah.
-- Návody na plánovanie akéhokoľvek typu útoku alebo násilných činov.
-- Poskytovanie pokynov na nájdenie nelegálneho obsahu alebo spáchanie nelegálnych činov.
+- Usmerňovanie plánovania akéhokoľvek útoku alebo násilných činov.
+- Poskytovanie návodov, ako nájsť nelegálny obsah alebo spáchať nelegálne činy.
 - Zobrazovanie sexuálne explicitného obsahu.
 
-Pre náš startup chceme zabezpečiť, že máme správne nástroje a stratégie na zabránenie tomu, aby sa tento typ obsahu dostal k študentom.
+Pre náš startup chceme zabezpečiť, aby sme mali správne nástroje a stratégie na zabránenie tomu, aby študenti videli takýto obsah.
 
 ### Nedostatok spravodlivosti
 
-Spravodlivosť je definovaná ako „zabezpečenie, že AI systém je bez predsudkov a diskriminácie a že zaobchádza so všetkými spravodlivo a rovnako“. Vo svete generatívnej AI chceme zabezpečiť, že vylučujúce svetonázory marginalizovaných skupín nie sú posilnené výstupom modelu.
+Spravodlivosť znamená „zabezpečiť, aby AI systém bol bez predsudkov a diskriminácie a aby všetkých spravodlivo a rovnako zaobchádzal.“ V oblasti generatívnej AI chceme zabezpečiť, aby model nevytváral výstupy, ktoré by posilňovali vylučujúce pohľady na svet voči marginalizovaným skupinám.
 
-Tieto typy výstupov sú nielen deštruktívne pre budovanie pozitívnych produktových zážitkov pre našich používateľov, ale tiež spôsobujú ďalšie spoločenské škody. Ako tvorcovia aplikácií by sme mali vždy mať na pamäti širokú a rozmanitú základňu používateľov pri budovaní riešení s generatívnou AI.
+Takéto výstupy nielenže ničia pozitívne používateľské skúsenosti, ale spôsobujú aj ďalšiu spoločenskú ujmu. Ako tvorcovia aplikácií by sme mali vždy myslieť na širokú a rôznorodú používateľskú základňu pri budovaní riešení s generatívnou AI.
 
 ## Ako používať generatívnu AI zodpovedne
 
-Teraz, keď sme identifikovali dôležitosť zodpovednej generatívnej AI, pozrime sa na 4 kroky, ktoré môžeme podniknúť, aby sme zodpovedne budovali naše AI riešenia:
+Keďže sme si uvedomili význam Zodpovednej generatívnej AI, pozrime sa na 4 kroky, ktoré môžeme podniknúť, aby sme naše AI riešenia budovali zodpovedne:
 
-![Cyklus zmierňovania](../../../translated_images/mitigate-cycle.f82610b2048bda5a84aaa3a3cb2cda8b35fe614a7269743fdc63cbc2cbb8f20f.sk.png)
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.sk.png)
 
 ### Meranie potenciálnych škôd
 
-V softvérovom testovaní testujeme očakávané akcie používateľa na aplikácii. Podobne, testovanie rôznorodého súboru výziev, ktoré používatelia pravdepodobne použijú, je dobrý spôsob, ako merať potenciálnu škodu.
+Pri testovaní softvéru testujeme očakávané akcie používateľa v aplikácii. Podobne je dobré otestovať rôzne typy promptov, ktoré používatelia pravdepodobne použijú, aby sme zmerali potenciálne škody.
 
-Keďže náš startup buduje vzdelávací produkt, bolo by dobré pripraviť zoznam výziev súvisiacich so vzdelávaním. To by mohlo pokrývať určitý predmet, historické fakty a výzvy týkajúce sa života študentov.
+Keďže náš startup buduje vzdelávací produkt, je vhodné pripraviť zoznam promptov súvisiacich so vzdelávaním. Môžu pokrývať konkrétny predmet, historické fakty alebo otázky o študentskom živote.
 
 ### Zmiernenie potenciálnych škôd
 
-Teraz je čas nájsť spôsoby, ako môžeme zabrániť alebo obmedziť potenciálnu škodu spôsobenú modelom a jeho odpoveďami. Môžeme sa na to pozrieť v 4 rôznych vrstvách:
+Teraz je čas nájsť spôsoby, ako zabrániť alebo obmedziť potenciálne škody spôsobené modelom a jeho odpoveďami. Môžeme to posudzovať v 4 rôznych vrstvách:
 
-![Vrstvy zmierňovania](../../../translated_images/mitigation-layers.db2d802e3affb2f49681cf8ae39e8f1a67ff1ce29c3f1099c96948a841d62037.sk.png)
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.sk.png)
 
-- **Model**. Výber správneho modelu pre správny prípad použitia. Väčšie a zložitejšie modely ako GPT-4 môžu spôsobiť väčšie riziko škodlivého obsahu, keď sú aplikované na menšie a špecifické prípady použitia. Použitie vašich tréningových dát na jemné doladenie tiež znižuje riziko škodlivého obsahu.
+- **Model**. Vybrať správny model pre konkrétny prípad použitia. Väčšie a zložitejšie modely ako GPT-4 môžu predstavovať väčšie riziko škodlivého obsahu pri použití v menších a špecifickejších prípadoch. Použitie vlastných tréningových dát na doladenie modelu tiež znižuje riziko škodlivého obsahu.
 
-- **Bezpečnostný systém**. Bezpečnostný systém je súbor nástrojov a konfigurácií na platforme, ktorá poskytuje model, ktoré pomáhajú zmierniť škodu. Príkladom je systém filtrovania obsahu na službe Azure OpenAI. Systémy by tiež mali detekovať útoky typu jailbreak a nežiaducu aktivitu, ako sú požiadavky od botov.
+- **Bezpečnostný systém**. Bezpečnostný systém je súbor nástrojov a nastavení na platforme, ktorá model poskytuje, a pomáha zmierniť škody. Príkladom je systém filtrovania obsahu v službe Azure OpenAI. Systémy by mali tiež detegovať útoky typu jailbreak a nežiaducu aktivitu, napríklad požiadavky od botov.
 
-- **Metaprompt**. Metaprompt a ukotvenie sú spôsoby, ako môžeme usmerniť alebo obmedziť model na základe určitých správaní a informácií. To by mohlo byť použitie systémových vstupov na definovanie určitých limitov modelu. Okrem toho poskytovanie výstupov, ktoré sú relevantnejšie pre rozsah alebo doménu systému.
+- **Metaprompt**. Metaprompt a zakotvenie sú spôsoby, ako môžeme model usmerniť alebo obmedziť na základe určitých správaní a informácií. Môže to byť použitie systémových vstupov na definovanie určitých limitov modelu. Okrem toho poskytovanie výstupov, ktoré sú relevantnejšie pre rozsah alebo doménu systému.
 
-Môže to byť tiež použitie techník ako Retrieval Augmented Generation (RAG), aby model čerpal informácie iba z výberu dôveryhodných zdrojov. V tejto lekcii je neskôr lekcia pre [budovanie vyhľadávacích aplikácií](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Môže to tiež zahŕňať techniky ako Retrieval Augmented Generation (RAG), kde model čerpá informácie len z vybraných dôveryhodných zdrojov. V tomto kurze je neskôr lekcia o [budovaní vyhľadávacích aplikácií](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-- **Používateľská skúsenosť**. Posledná vrstva je miesto, kde používateľ interaguje priamo s modelom prostredníctvom rozhrania našej aplikácie určitým spôsobom. Týmto spôsobom môžeme navrhnúť UI/UX tak, aby sme obmedzili používateľa na typy vstupov, ktoré môže posielať modelu, ako aj text alebo obrázky zobrazované používateľovi. Pri nasadzovaní AI aplikácie musíme tiež byť transparentní ohľadom toho, čo naša generatívna AI aplikácia môže a nemôže robiť.
+- **Používateľská skúsenosť**. Posledná vrstva je, kde používateľ priamo interaguje s modelom cez rozhranie našej aplikácie. Môžeme navrhnúť UI/UX tak, aby sme obmedzili typy vstupov, ktoré môže používateľ posielať modelu, ako aj text alebo obrázky, ktoré sa mu zobrazujú. Pri nasadzovaní AI aplikácie musíme byť tiež transparentní o tom, čo naša generatívna AI aplikácia dokáže a čo nie.
 
-Máme celú lekciu venovanú [navrhovaniu UX pre AI aplikácie](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Máme celú lekciu venovanú [navrhovaniu UX pre AI aplikácie](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-- **Vyhodnotenie modelu**. Práca s LLM môže byť náročná, pretože nemáme vždy kontrolu nad dátami, na ktorých bol model trénovaný. Bez ohľadu na to, by sme mali vždy vyhodnotiť výkon a výstupy modelu. Je stále dôležité merať presnosť, podobnosť, ukotvenie a relevantnosť výstupu modelu. To pomáha poskytovať transparentnosť a dôveru pre zainteresované strany a používateľov.
+- **Vyhodnotenie modelu**. Práca s LLM môže byť náročná, pretože nemáme vždy kontrolu nad dátami, na ktorých bol model trénovaný. Napriek tomu by sme mali vždy vyhodnocovať výkon a výstupy modelu. Je dôležité merať presnosť modelu, podobnosť, zakotvenosť a relevantnosť výstupu. To pomáha zabezpečiť transparentnosť a dôveru u zainteresovaných strán a používateľov.
 
-### Prevádzkovanie zodpovedného riešenia generatívnej AI
+### Prevádzka zodpovedného generatívneho AI riešenia
 
-Budovanie operačnej praxe okolo vašich AI aplikácií je posledná fáza. To zahŕňa partnerstvo s inými časťami nášho startupu, ako sú Právne a Bezpečnosť, aby sme zabezpečili, že sme v súlade so všetkými regulačnými politikami. Pred uvedením na trh tiež chceme budovať plány okolo doručovania, riešenia incidentov a rollbacku, aby sme zabránili akémukoľvek poškodeniu našich používateľov.
+Vybudovanie prevádzkovej praxe okolo vašich AI aplikácií je záverečným krokom. Zahŕňa spoluprácu s ďalšími časťami nášho startupu, ako sú právne a bezpečnostné oddelenia, aby sme zabezpečili súlad so všetkými regulačnými požiadavkami. Pred spustením chceme tiež vytvoriť plány na doručenie, riešenie incidentov a návrat k predchádzajúcej verzii, aby sme predišli škodám na používateľoch.
 
 ## Nástroje
 
-Aj keď sa práca na vývoji zodpovedných AI riešení môže zdať veľa, je to práca, ktorá stojí za to. Ako sa oblasť generatívnej AI rozrastá, viac nástrojov na pomoc vývojárom efektívne integrovať zodpovednosť do ich pracovných tokov bude dozrievať. Napríklad, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) môže pomôcť detekovať škodlivý obsah a obrázky prostredníctvom API požiadavky.
+Hoci sa vývoj riešení Zodpovednej AI môže zdať náročný, je to práca, ktorá sa oplatí. Ako oblasť generatívnej AI rastie, vyvíjajú sa aj nástroje, ktoré pomáhajú vývojárom efektívne začleniť zodpovednosť do ich pracovných postupov. Napríklad [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) dokáže cez API požiadavku detegovať škodlivý obsah a obrázky.
 
 ## Kontrola vedomostí
 
-Na čo je potrebné dbať, aby sa zabezpečilo zodpovedné používanie AI?
+Na čo by ste mali dbať, aby ste zabezpečili zodpovedné používanie AI?
 
-1. Že odpoveď je správna.
-1. Škodlivé použitie, aby AI nebola použitá na kriminálne účely.
-1. Zabezpečenie, že AI je bez predsudkov a diskriminácie.
+1. Aby bola odpoveď správna.
+1. Aby sa AI nepoužívala na kriminálne účely.
+1. Aby AI bola bez predsudkov a diskriminácie.
 
-A: 2 a 3 sú správne. Zodpovedná AI vám pomáha zvážiť, ako zmierniť škodlivé účinky a predsudky a viac.
+Odpoveď: Správne sú body 2 a 3. Zodpovedná AI vám pomáha zvážiť, ako zmierniť škodlivé účinky, predsudky a ďalšie.
 
 ## 🚀 Výzva
 
-Prečítajte si o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) a zistite, čo môžete prijať pre svoje použitie.
+Prečítajte si o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) a zistite, čo môžete vo svojom používaní prijať.
 
-## Skvelá práca, pokračujte vo svojom učení
+## Skvelá práca, pokračujte v učení
 
-Po dokončení tejto lekcie si pozrite našu [kolekciu učenia o generatívnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste pokračovali v rozširovaní svojich vedomostí o generatívnej AI!
+Po dokončení tejto lekcie si pozrite našu [kolekciu Generatívne AI učenia](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte v rozširovaní svojich znalostí o generatívnej AI!
 
-Prejdite na lekciu 4, kde sa pozrieme na [Základy inžinierstva výziev](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Prejdite na Lekciu 4, kde sa pozrieme na [Základy prompt engineeringu](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou AI prekladovej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

@@ -1,95 +1,102 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:15:20+00:00",
+  "original_hash": "1a7fd0f95f9eb673b79da47c0814f4d4",
+  "translation_date": "2025-07-09T13:28:03+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "fi"
 }
 -->
-# Kuvien luontisovellusten rakentaminen
+# Kuvageneraattorisovellusten rakentaminen
 
-LLM-mallit tarjoavat muutakin kuin tekstin luomista. On myös mahdollista luoda kuvia tekstikuvauksista. Kuvien käyttö voi olla erittäin hyödyllistä monilla aloilla, kuten lääketeknologiassa, arkkitehtuurissa, matkailussa, pelikehityksessä ja muussa. Tässä luvussa tarkastelemme kahta suosituinta kuvien luontimallia, DALL-E:tä ja Midjourneytä.
+[![Kuvageneraattorisovellusten rakentaminen](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.fi.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+
+LLM-mallit eivät rajoitu pelkkään tekstin generointiin. Niillä on myös mahdollista luoda kuvia tekstikuvauksista. Kuvien käyttäminen modaliteettina voi olla erittäin hyödyllistä monilla aloilla, kuten MedTechissä, arkkitehtuurissa, matkailussa, pelikehityksessä ja monessa muussa. Tässä luvussa tutustumme kahteen suosituimpaan kuvageneraattorimalliin, DALL-E:hen ja Midjourneyhin.
 
 ## Johdanto
 
 Tässä oppitunnissa käsittelemme:
 
-- Kuvien luomista ja miksi se on hyödyllistä.
-- DALL-E ja Midjourney, mitä ne ovat ja miten ne toimivat.
-- Miten rakentaa kuvien luontisovellus.
+- Kuvagenerointia ja sen hyötyjä.
+- DALL-E:tä ja Midjourneyta, mitä ne ovat ja miten ne toimivat.
+- Kuinka rakentaa kuvageneraattorisovellus.
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen osaat:
+Oppitunnin jälkeen osaat:
 
-- Rakentaa kuvien luontisovelluksen.
-- Määritellä sovelluksesi rajat meta-kehotteilla.
+- Rakentaa kuvageneraattorisovelluksen.
+- Määritellä sovelluksesi rajat metaprompteilla.
 - Työskennellä DALL-E:n ja Midjourneyn kanssa.
 
-## Miksi rakentaa kuvien luontisovellus?
+## Miksi rakentaa kuvageneraattorisovellus?
 
-Kuvien luontisovellukset ovat loistava tapa tutkia Generatiivisen AI:n kykyjä. Niitä voidaan käyttää esimerkiksi:
+Kuvageneraattorisovellukset ovat erinomainen tapa tutkia Generatiivisen tekoälyn mahdollisuuksia. Niitä voi käyttää esimerkiksi:
 
-- **Kuvien muokkaus ja synteesi**. Voit luoda kuvia erilaisiin käyttötarkoituksiin, kuten kuvien muokkaukseen ja synteesiin.
+- **Kuvien muokkaamiseen ja synteesiin**. Voit luoda kuvia monenlaisiin käyttötarkoituksiin, kuten kuvien muokkaukseen ja synteesiin.
 
-- **Sovellettavissa eri toimialoille**. Niitä voidaan käyttää myös kuvien luomiseen eri toimialoille, kuten lääketeknologia, matkailu, pelikehitys ja muu.
+- **Soveltamiseen eri toimialoilla**. Niitä voidaan käyttää myös kuvien luomiseen eri aloille, kuten Medtechiin, matkailuun, pelikehitykseen ja muihin.
 
-## Tilanne: Edu4All
+## Tilannekuva: Edu4All
 
-Osana tätä oppituntia jatkamme työskentelyä startupimme, Edu4All:n, kanssa. Oppilaat luovat kuvia arviointejaan varten, tarkalleen millaisia kuvia, on oppilaiden päätettävissä, mutta ne voivat olla kuvituksia omalle sadulleen tai uuden hahmon luomista tarinaansa varten tai auttamaan heitä visualisoimaan ideoitaan ja käsitteitään.
+Tämän oppitunnin osana jatkamme startup-yrityksemme Edu4Allin kanssa työskentelyä. Oppilaat luovat kuvia arviointeihinsa; millaisia kuvia, sen oppilaat päättävät itse. Kuvina voi olla esimerkiksi omien satujen kuvituksia, uusia hahmoja tarinoihin tai apua ideoiden ja konseptien visualisointiin.
 
-Esimerkiksi, jos Edu4All:n oppilaat työskentelevät luokassa monumenttien parissa, he voisivat luoda tällaisia kuvia:
+Tässä esimerkki siitä, mitä Edu4Allin oppilaat voisivat luoda, jos he työstävät luokassa monumentteja:
 
-käyttäen kehotetta kuten
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.fi.png)
 
-> "Koira Eiffel-tornin vieressä varhaisen aamun auringonvalossa"
+käyttäen kehotetta
+
+> "Koira Eiffel-tornin vieressä aamun varhaisessa auringonvalossa"
 
 ## Mitä ovat DALL-E ja Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) ja [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ovat kaksi suosituinta kuvien luontimallia, jotka mahdollistavat kuvien luomisen kehotteiden avulla.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) ja [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) ovat kaksi suosituimmista kuvageneraattorimalleista, joiden avulla voit käyttää kehotteita kuvien luomiseen.
 
 ### DALL-E
 
-Aloitetaan DALL-E:stä, joka on Generatiivinen AI-malli, joka luo kuvia tekstikuvauksista.
+Aloitetaan DALL-E:stä, joka on Generatiivinen tekoälymalli, joka luo kuvia tekstikuvauksista.
 
-> [DALL-E on yhdistelmä kahta mallia, CLIP ja diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+> [DALL-E on kahden mallin, CLIPin ja diffused attentionin, yhdistelmä](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, on malli, joka luo upotuksia, jotka ovat numeerisia esityksiä datasta, kuvista ja tekstistä.
+- **CLIP** on malli, joka luo upotuksia eli numeerisia esityksiä datasta kuvista ja tekstistä.
 
-- **Diffused attention**, on malli, joka luo kuvia upotuksista. DALL-E on koulutettu kuvien ja tekstin tietokannalla ja sitä voidaan käyttää kuvien luomiseen tekstikuvauksista. Esimerkiksi, DALL-E:llä voi luoda kuvia kissasta hatun kanssa tai koirasta irokeesilla.
+- **Diffused attention** on malli, joka luo kuvia upotuksista. DALL-E on koulutettu kuvien ja tekstin datasetillä, ja sitä voi käyttää kuvien luomiseen tekstikuvauksista. Esimerkiksi DALL-E voi luoda kuvia kissasta hatussa tai koirasta, jolla on mohikaani.
 
 ### Midjourney
 
-Midjourney toimii samalla tavalla kuin DALL-E, se luo kuvia tekstikehotteista. Midjourneytä voidaan käyttää myös kuvien luomiseen kehotteilla kuten "kissa hatussa" tai "koira irokeesilla".
+Midjourney toimii samankaltaisesti kuin DALL-E, se luo kuvia tekstikehotteiden perusteella. Midjourneyllä voi myös luoda kuvia kehotteilla kuten ”kissa hatussa” tai ”koira mohikaanilla”.
+
+![Midjourneyn luoma kuva, mekaaninen pulu](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_Kuvan lähde Wikipedia, kuva luotu Midjourneyllä_
 
 ## Miten DALL-E ja Midjourney toimivat
 
-Ensinnäkin, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E on Generatiivinen AI-malli, joka perustuu transformer-arkkitehtuuriin _autoregressiivisella transformerilla_.
+Aloitetaan [DALL-E:stä](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E on Generatiivinen tekoälymalli, joka perustuu transformer-arkkitehtuuriin ja käyttää _autoregressiivista transformeria_.
 
-_Autoregressiivinen transformer_ määrittelee, miten malli luo kuvia tekstikuvauksista, se luo yhden pikselin kerrallaan ja käyttää sitten luotuja pikseleitä seuraavan pikselin luomiseen. Tämä tapahtuu kulkemalla useiden hermoverkon kerrosten läpi, kunnes kuva on valmis.
+Autoregressiivinen transformer määrittelee, miten malli luo kuvia tekstikuvauksista: se generoi kuvan pikseli kerrallaan ja käyttää jo luotuja pikseleitä seuraavan pikselin luomiseen. Prosessi kulkee useiden neuroverkon kerrosten läpi, kunnes kuva on valmis.
 
-Tällä prosessilla DALL-E hallitsee ominaisuuksia, esineitä, piirteitä ja muuta luomassaan kuvassa. Kuitenkin DALL-E 2 ja 3 tarjoavat enemmän kontrollia luotuun kuvaan.
+Tämän prosessin avulla DALL-E hallitsee kuvan ominaisuuksia, kohteita ja piirteitä. DALL-E 2 ja 3 tarjoavat vielä tarkemman hallinnan luotuihin kuviin.
 
-## Ensimmäisen kuvien luontisovelluksen rakentaminen
+## Ensimmäisen kuvageneraattorisovelluksen rakentaminen
 
-Mitä siis tarvitaan kuvien luontisovelluksen rakentamiseen? Tarvitset seuraavat kirjastot:
+Mitä tarvitaan kuvageneraattorisovelluksen rakentamiseen? Tarvitset seuraavat kirjastot:
 
-- **python-dotenv**, on suositeltavaa käyttää tätä kirjastoa pitämään salaisuudet _.env_ tiedostossa erillään koodista.
-- **openai**, tämä kirjasto on se, jota käytät ollaksesi vuorovaikutuksessa OpenAI API:n kanssa.
+- **python-dotenv**, tätä kirjastoa suositellaan vahvasti, jotta salaisuudet voi pitää _.env_-tiedostossa erillään koodista.
+- **openai**, tätä kirjastoa käytetään OpenAI API:n kanssa kommunikointiin.
 - **pillow**, kuvien käsittelyyn Pythonissa.
-- **requests**, auttamaan HTTP-pyyntöjen tekemisessä.
+- **requests**, HTTP-pyyntöjen tekemiseen.
 
-1. Luo tiedosto _.env_ seuraavalla sisällöllä:
+1. Luo tiedosto _.env_, jonka sisältö on seuraava:
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
    AZURE_OPENAI_API_KEY=<your key>
    ```
 
-   Etsi tämä tieto Azure Portaalista resurssillesi "Keys and Endpoint" -osiossa.
+   Löydät nämä tiedot Azure-portaalista resurssisi "Keys and Endpoint" -osiosta.
 
-1. Kerää yllä olevat kirjastot tiedostoon nimeltä _requirements.txt_ näin:
+1. Kerää yllä mainitut kirjastot tiedostoon _requirements.txt_ näin:
 
    ```text
    python-dotenv
@@ -98,7 +105,7 @@ Mitä siis tarvitaan kuvien luontisovelluksen rakentamiseen? Tarvitset seuraavat
    requests
    ```
 
-1. Seuraavaksi luo virtuaaliympäristö ja asenna kirjastot:
+1. Luo virtuaaliympäristö ja asenna kirjastot:
 
    ```bash
    python3 -m venv venv
@@ -106,14 +113,14 @@ Mitä siis tarvitaan kuvien luontisovelluksen rakentamiseen? Tarvitset seuraavat
    pip install -r requirements.txt
    ```
 
-   Windowsissa käytä seuraavia komentoja luodaksesi ja aktivoidaksesi virtuaaliympäristön:
+   Windowsilla käytä seuraavia komentoja virtuaaliympäristön luomiseen ja aktivointiin:
 
    ```bash
    python3 -m venv venv
    venv\Scripts\activate.bat
    ```
 
-1. Lisää seuraava koodi tiedostoon nimeltä _app.py_:
+1. Lisää seuraava koodi tiedostoon _app.py_:
 
    ```python
    import openai
@@ -170,7 +177,7 @@ Mitä siis tarvitaan kuvien luontisovelluksen rakentamiseen? Tarvitset seuraavat
 
 Selitetään tämä koodi:
 
-- Ensin tuomme tarvitsemamme kirjastot, mukaan lukien OpenAI-kirjasto, dotenv-kirjasto, requests-kirjasto ja Pillow-kirjasto.
+- Ensin tuodaan tarvittavat kirjastot, mukaan lukien OpenAI-kirjasto, dotenv, requests ja Pillow.
 
   ```python
   import openai
@@ -180,14 +187,14 @@ Selitetään tämä koodi:
   import dotenv
   ```
 
-- Seuraavaksi lataamme ympäristömuuttujat _.env_ tiedostosta.
+- Seuraavaksi ladataan ympäristömuuttujat _.env_-tiedostosta.
 
   ```python
   # import dotenv
   dotenv.load_dotenv()
   ```
 
-- Sen jälkeen asetamme OpenAI API:n päätepisteen, avaimen, version ja tyypin.
+- Tämän jälkeen asetetaan OpenAI API:n endpoint, avain, versio ja tyyppi.
 
   ```python
   # Get endpoint and key from environment variables
@@ -199,7 +206,7 @@ Selitetään tämä koodi:
   openai.api_type = 'azure'
   ```
 
-- Seuraavaksi luomme kuvan:
+- Seuraavaksi generoidaan kuva:
 
   ```python
   # Create an image by using the image generation API
@@ -211,18 +218,18 @@ Selitetään tämä koodi:
   )
   ```
 
-  Yllä oleva koodi vastaa JSON-objektilla, joka sisältää luodun kuvan URL-osoitteen. Voimme käyttää URL-osoitetta ladataksemme kuvan ja tallentaaksemme sen tiedostoon.
+  Yllä oleva koodi vastaa JSON-objektilla, joka sisältää luodun kuvan URL-osoitteen. Voimme käyttää URL:ia kuvan lataamiseen ja tallentamiseen tiedostoon.
 
-- Lopuksi avaamme kuvan ja käytämme standardia kuvan katseluohjelmaa sen näyttämiseen:
+- Lopuksi avataan kuva ja näytetään se tavallisella kuvan katseluohjelmalla:
 
   ```python
   image = Image.open(image_path)
   image.show()
   ```
 
-### Tarkemmin kuvan luomisesta
+### Tarkempi katsaus kuvan generointiin
 
-Katsotaan tarkemmin koodia, joka luo kuvan:
+Katsotaan tarkemmin koodia, joka generoi kuvan:
 
 ```python
 generation_response = openai.Image.create(
@@ -233,20 +240,20 @@ generation_response = openai.Image.create(
     )
 ```
 
-- **prompt**, on tekstikehote, jota käytetään kuvan luomiseen. Tässä tapauksessa käytämme kehotetta "Pupu hevosella, pidellen tikkaria, sumuisella niityllä, jossa kasvaa narsisseja".
-- **size**, on luodun kuvan koko. Tässä tapauksessa luomme kuvan, joka on 1024x1024 pikseliä.
-- **n**, on luotavien kuvien määrä. Tässä tapauksessa luomme kaksi kuvaa.
-- **temperature**, on parametri, joka ohjaa Generatiivisen AI-mallin tuottaman tuloksen satunnaisuutta. Lämpötila on arvo välillä 0 ja 1, jossa 0 tarkoittaa, että tulos on deterministinen ja 1 tarkoittaa, että tulos on satunnainen. Oletusarvo on 0.7.
+- **prompt** on tekstikehote, jota käytetään kuvan luomiseen. Tässä tapauksessa käytämme kehotetta "Jänis hevosella, pitää tikkaria, sumuisella niityllä, jossa kasvaa narsisseja".
+- **size** on generoidun kuvan koko. Tässä luodaan kuva, jonka koko on 1024x1024 pikseliä.
+- **n** on generoitavien kuvien määrä. Tässä luodaan kaksi kuvaa.
+- **temperature** on parametri, joka säätelee Generatiivisen tekoälyn mallin satunnaisuutta. Arvo on välillä 0–1, jossa 0 tarkoittaa determinististä eli ennustettavaa tulosta ja 1 satunnaista tulosta. Oletusarvo on 0.7.
 
-On paljon muitakin asioita, joita voit tehdä kuvilla, ja käsittelemme niitä seuraavassa osiossa.
+Seuraavassa osiossa käymme läpi lisää kuviin liittyviä toimintoja.
 
-## Kuvien luomisen lisäominaisuudet
+## Kuvageneroinnin lisäominaisuudet
 
-Olet nähnyt, miten pystyimme luomaan kuvan muutamalla rivillä Pythonia. Kuitenkin, on muitakin asioita, joita voit tehdä kuvilla.
+Olet nähnyt, miten kuvan voi luoda muutamalla Python-rivillä. Kuvilla voi kuitenkin tehdä paljon muutakin.
 
-Voit myös tehdä seuraavaa:
+Voit myös:
 
-- **Suorittaa muokkauksia**. Antamalla olemassa olevan kuvan maskin ja kehotteen, voit muuttaa kuvaa. Esimerkiksi voit lisätä jotain kuvan osaan. Kuvittele pupumme kuva, voit lisätä hatun pupulle. Tämä tehdään antamalla kuva, maski (joka tunnistaa osan alueesta muutosta varten) ja tekstikehote, joka kertoo mitä pitäisi tehdä.
+- **Muokata kuvia**. Antamalla olemassa olevan kuvan, maskin ja kehotteen, voit muuttaa kuvaa. Esimerkiksi voit lisätä jotain kuvan osaan. Kuvittele jänis-kuvamme, voit lisätä jänikselle hatun. Tämä tehdään antamalla kuva, maski (joka määrittää muutettavan alueen) ja tekstikehote, joka kertoo, mitä tehdään.
 
   ```python
   response = openai.Image.create_edit(
@@ -259,9 +266,9 @@ Voit myös tehdä seuraavaa:
   image_url = response['data'][0]['url']
   ```
 
-  Peruskuva sisältäisi vain pupun, mutta lopullisessa kuvassa pupulla olisi hattu.
+  Peruskuvassa on vain jänis, mutta lopullisessa kuvassa jäniksellä on hattu.
 
-- **Luoda variaatioita**. Ajatuksena on, että otat olemassa olevan kuvan ja pyydät, että siitä luodaan variaatioita. Luodaksesi variaation, annat kuvan ja tekstikehotteen ja koodin näin:
+- **Luoda variaatioita**. Ajatuksena on ottaa olemassa oleva kuva ja pyytää siitä variaatioita. Variaation luomiseksi annetaan kuva ja tekstikehote, ja koodi toimii näin:
 
   ```python
   response = openai.Image.create_variation(
@@ -272,19 +279,23 @@ Voit myös tehdä seuraavaa:
   image_url = response['data'][0]['url']
   ```
 
-  > Huomaa, tämä on tuettu vain OpenAI:ssa
+  > Huomaa, että tämä ominaisuus on tuettu vain OpenAI:ssa.
 
-## Lämpötila
+## Temperature
 
-Lämpötila on parametri, joka ohjaa Generatiivisen AI-mallin tuottaman tuloksen satunnaisuutta. Lämpötila on arvo välillä 0 ja 1, jossa 0 tarkoittaa, että tulos on deterministinen ja 1 tarkoittaa, että tulos on satunnainen. Oletusarvo on 0.7.
+Temperature on parametri, joka säätelee Generatiivisen tekoälyn mallin satunnaisuutta. Arvo on välillä 0–1, jossa 0 tarkoittaa determinististä tulosta ja 1 satunnaista. Oletusarvo on 0.7.
 
-Katsotaan esimerkkiä, miten lämpötila toimii, ajamalla tämä kehote kahdesti:
+Katsotaan esimerkki temperature-arvon vaikutuksesta ajamalla sama kehotte kahdesti:
 
-> Kehote: "Pupu hevosella, pidellen tikkaria, sumuisella niityllä, jossa kasvaa narsisseja"
+> Kehote: "Jänis hevosella, pitää tikkaria, sumuisella niityllä, jossa kasvaa narsisseja"
 
-Nyt ajetaan sama kehote uudelleen vain nähdäksemme, ettemme saa samaa kuvaa kahdesti:
+![Jänis hevosella, versio 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.fi.png)
 
-Kuten näet, kuvat ovat samanlaisia, mutta eivät samoja. Kokeillaan muuttaa lämpötila-arvoa 0.1:een ja katsotaan mitä tapahtuu:
+Ajetaan sama kehotte uudelleen, jotta näemme, ettei saatu kuva ole täsmälleen sama:
+
+![Jänis hevosella, versio 2](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.fi.png)
+
+Kuten näet, kuvat ovat samankaltaisia, mutta eivät identtisiä. Kokeillaan muuttaa temperature-arvo 0.1:een ja katsotaan, mitä tapahtuu:
 
 ```python
  generation_response = openai.Image.create(
@@ -294,11 +305,11 @@ Kuten näet, kuvat ovat samanlaisia, mutta eivät samoja. Kokeillaan muuttaa lä
     )
 ```
 
-### Lämpötilan muuttaminen
+### Temperature-arvon muuttaminen
 
-Kokeillaan tehdä vastaus deterministisemmäksi. Voimme havaita kahdesta luodusta kuvasta, että ensimmäisessä kuvassa on pupu ja toisessa kuvassa on hevonen, joten kuvat eroavat suuresti.
+Yritetään tehdä vastauksesta deterministisempi. Huomasimme kahdesta generoidusta kuvasta, että ensimmäisessä kuvassa on jänis ja toisessa hevonen, joten kuvat eroavat paljon.
 
-Muutetaan siis koodiamme ja asetetaan lämpötila 0:ksi, näin:
+Muutetaan siis koodia ja asetetaan temperature-arvoksi 0 näin:
 
 ```python
 generation_response = openai.Image.create(
@@ -309,25 +320,28 @@ generation_response = openai.Image.create(
     )
 ```
 
-Nyt kun ajat tämän koodin, saat nämä kaksi kuvaa:
+Kun ajat tämän koodin, saat nämä kaksi kuvaa:
 
-Tässä näet selvästi, kuinka kuvat muistuttavat toisiaan enemmän.
+- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.fi.png)
+- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.fi.png)
 
-## Miten määritellä sovelluksesi rajat meta-kehotteilla
+Tässä näet selvästi, että kuvat muistuttavat toisiaan enemmän.
 
-Demonstraatiomme avulla voimme jo luoda kuvia asiakkaillemme. Kuitenkin, meidän on luotava joitain rajoja sovelluksellemme.
+## Kuinka määritellä sovelluksesi rajat metaprompteilla
 
-Esimerkiksi emme halua luoda kuvia, jotka eivät ole sopivia työpaikalle tai eivät ole sopivia lapsille.
+Demossamme voimme jo luoda kuvia asiakkaillemme. Tarvitsemme kuitenkin sovelluksellemme rajoja.
 
-Voimme tehdä tämän _meta-kehotteilla_. Meta-kehotteet ovat tekstikehotteita, joita käytetään ohjaamaan Generatiivisen AI-mallin tuottamaa tulosta. Esimerkiksi, voimme käyttää meta-kehotteita ohjaamaan tulosta ja varmistamaan, että luodut kuvat ovat sopivia työpaikalle tai sopivia lapsille.
+Esimerkiksi emme halua luoda kuvia, jotka eivät ole työpaikalle sopivia tai eivät sovi lapsille.
 
-### Miten se toimii?
+Tämän voi tehdä _metaprompteilla_. Metapromptit ovat tekstikehotteita, joita käytetään Generatiivisen tekoälyn mallin tuloksen ohjaamiseen. Voimme esimerkiksi käyttää metaprompteja varmistamaan, että luodut kuvat ovat työpaikalle sopivia tai lapsille turvallisia.
 
-Nyt, miten meta-kehotteet toimivat?
+### Miten metapromptit toimivat?
 
-Meta-kehotteet ovat tekstikehotteita, joita käytetään ohjaamaan Generatiivisen AI-mallin tuottamaa tulosta, ne sijoitetaan tekstikehotteen eteen ja niitä käytetään ohjaamaan mallin tuottamaa tulosta ja ne upotetaan sovelluksiin ohjaamaan mallin tuottamaa tulosta. Yhdistäen kehoteinputin ja meta-kehoteinputin yhdeksi tekstikehotteeksi.
+Miten metapromptit toimivat?
 
-Yksi esimerkki meta-kehotteesta voisi olla seuraava:
+Metapromptit ovat tekstikehotteita, jotka ohjaavat Generatiivisen tekoälyn mallin tulosta. Ne sijoitetaan varsinaisen tekstikehotteen eteen ja ne upotetaan sovelluksiin ohjaamaan mallin tuottamaa sisältöä. Näin metapromptin ja varsinaisen kehotteen yhdistelmä muodostaa yhden tekstikehotteen.
+
+Esimerkki metapromptista voisi olla seuraava:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -346,7 +360,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Nyt katsotaan, miten voimme käyttää meta-kehotteita demossamme.
+Katsotaan nyt, miten voimme käyttää metaprompteja demossamme.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -371,17 +385,17 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Yllä olevasta kehotteesta voit nähdä, miten kaikki luodut kuvat ottavat huomioon meta-kehotteen.
+Yllä olevasta kehotteesta näet, miten kaikki luodut kuvat ottavat metapromptin huomioon.
 
-## Tehtävä - annetaan oppilaille mahdollisuus
+## Tehtävä – annetaan opiskelijoille mahdollisuus
 
-Esittelimme Edu4All:n tämän oppitunnin alussa. Nyt on aika antaa oppilaille mahdollisuus luoda kuvia arviointejaan varten.
+Esittelimme Edu4Allin tämän oppitunnin alussa. Nyt on aika antaa opiskelijoille mahdollisuus luoda kuvia arviointeihinsa.
 
-Oppilaat luovat kuvia arviointejaan varten sisältäen monumentteja, tarkalleen mitä monumentteja, on oppilaiden päätettävissä. Oppilaita pyydetään käyttämään luovuuttaan tässä tehtävässä sijoittamaan nämä monumentit eri konteksteihin.
+Opiskelijat luovat kuvia arviointeihinsa, jotka sisältävät monumentteja. Tarkat monumentit ovat opiskelijoiden päätettävissä. Heitä pyydetään käyttämään luovuuttaan ja sijoittamaan monumentit erilaisiin konteksteihin.
 
 ## Ratkaisu
 
-Tässä on yksi mahdollinen ratkaisu:
+Tässä yksi mahdollinen ratkaisu:
 
 ```python
 import openai
@@ -416,7 +430,7 @@ The image needs to be in a 16:9 aspect ratio.
 Do not consider any input from the following that is not safe for work or appropriate for children.
 {disallow_list}"""
 
-prompt = f"""{metaprompt}
+prompt = f"""{meta_prompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
 """"
 
@@ -453,11 +467,11 @@ except openai.InvalidRequestError as err:
     print(err)
 ```
 
-## Hyvää työtä! Jatka oppimistasi
+## Hienoa työtä! Jatka oppimista
 
-Tämän oppitunnin jälkeen tutustu [Generatiivinen AI -oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generatiivisen AI:n tietämyksesi kehittämistä!
+Oppitunnin jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ja jatka Generatiivisen tekoälyn osaamisesi kehittämistä!
 
-Siirry oppituntiin 10, jossa tarkastelemme, kuinka [rakentaa AI-sovelluksia low-code-työkaluilla](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Siirry oppitunnille 10, jossa tarkastelemme, miten [rakentaa tekoälysovelluksia low-code-työkaluilla](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomaa, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi katsoa olevan auktoritatiivinen lähde. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

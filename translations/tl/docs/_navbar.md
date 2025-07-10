@@ -1,20 +1,20 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b918f72764505b503a4c2889a438b8d7",
-  "translation_date": "2025-05-20T11:23:56+00:00",
+  "original_hash": "55168a94c75ef46d671743c607f8f9ff",
+  "translation_date": "2025-07-09T19:17:12+00:00",
   "source_file": "docs/_navbar.md",
   "language_code": "tl"
 }
 -->
 * Piliin ang Wika
 
-    * [Ingles](../../../../../../..)
-    * [Simplified Chinese](../../../../../../../translations/cn)
+    * [English](../../../../../../..)
+    * [Simplified Chinese](../../../../../../../translations/zh)
     * [Traditional Chinese](../../../../../../../translations/tw)
-    * [Portuguese](../../../../../../../translations/pt-br)
-    * [Japanese](../../../../../../../translations/ja-jp)
+    * [Portuguese](../../../../../../../translations/pt)
+    * [Japanese](../../../../../../../translations/ja)
     * [Korean](../../../../../../../translations/ko)
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat pinagsisikapan naming maging tama, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatumpak. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaintindihan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
+**Paalala**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

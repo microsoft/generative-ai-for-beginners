@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:14:57+00:00",
+  "translation_date": "2025-07-09T19:12:23+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "sw"
 }
 -->
-# Kujenga na Mifano ya Familia ya Meta
+# Kujenga Kwa Modeli za Familia ya Meta
 
 ## Utangulizi
 
-Somo hili litaangazia:
+Somo hili litajumuisha:
 
-- Kuchunguza mifano miwili kuu ya familia ya Meta - Llama 3.1 na Llama 3.2
-- Kuelewa matumizi na hali za kila mfano
-- Mfano wa msimbo kuonyesha sifa za kipekee za kila mfano
+- Kuchunguza modeli kuu mbili za familia ya Meta - Llama 3.1 na Llama 3.2  
+- Kuelewa matumizi na hali za kila modeli  
+- Mfano wa msimbo unaoonyesha sifa za kipekee za kila modeli  
 
-## Familia ya Mifano ya Meta
+## Familia ya Modeli za Meta
 
-Katika somo hili, tutachunguza mifano 2 kutoka familia ya Meta au "Llama Herd" - Llama 3.1 na Llama 3.2
+Katika somo hili, tutachunguza modeli 2 kutoka familia ya Meta au "Llama Herd" - Llama 3.1 na Llama 3.2
 
-Mifano hii inakuja katika aina tofauti na inapatikana kwenye soko la mifano la GitHub. Hapa kuna maelezo zaidi kuhusu kutumia Mifano ya GitHub [kutengeneza prototipu na mifano ya AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Modeli hizi zinakuja katika aina tofauti na zinapatikana kwenye soko la Modeli la GitHub. Hapa kuna maelezo zaidi kuhusu kutumia Modeli za GitHub kwa [kufanya majaribio na modeli za AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Aina za Mfano:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Aina za Modeli:  
+- Llama 3.1 - 70B Instruct  
+- Llama 3.1 - 405B Instruct  
+- Llama 3.2 - 11B Vision Instruct  
+- Llama 3.2 - 90B Vision Instruct  
 
-*Kumbuka: Llama 3 pia inapatikana kwenye Mifano ya GitHub lakini haitajadiliwa katika somo hili*
+*Note: Llama 3 pia inapatikana kwenye Modeli za GitHub lakini haitajadiliwa katika somo hili*
 
 ## Llama 3.1
 
-Kwa Parameters Bilioni 405, Llama 3.1 inaingia katika kundi la LLM za chanzo wazi.
+Kwa Parameta Bilioni 405, Llama 3.1 inaingia katika kundi la LLM za chanzo huria.
 
-Mfano huu ni uboreshaji wa toleo la awali Llama 3 kwa kutoa:
+Modeli hii ni toleo lililoboreshwa la Llama 3 lililotanguliwa kwa kutoa:
 
-- Dirisha kubwa la muktadha - alama 128k dhidi ya alama 8k
-- Alama za Max Output kubwa - 4096 dhidi ya 2048
-- Msaada bora wa lugha nyingi - kutokana na ongezeko la alama za mafunzo
+- Dirisha kubwa la muktadha - tokeni 128k dhidi ya tokeni 8k  
+- Idadi kubwa zaidi ya Tokeni za Matokeo - 4096 dhidi ya 2048  
+- Msaada bora wa Lugha Nyingi - kutokana na ongezeko la tokeni za mafunzo  
 
-Hii inawezesha Llama 3.1 kushughulikia matumizi magumu zaidi wakati wa kujenga programu za GenAI ikiwa ni pamoja na:
-- Kupiga Simu za Kazi za Asili - uwezo wa kupiga simu za zana na kazi za nje ya mtiririko wa kazi wa LLM
-- Utendaji Bora wa RAG - kutokana na dirisha kubwa la muktadha
-- Uzalishaji wa Takwimu Bandia - uwezo wa kuunda data bora kwa kazi kama vile kurekebisha
+Hii inamwezesha Llama 3.1 kushughulikia matumizi magumu zaidi wakati wa kujenga programu za GenAI ikijumuisha:  
+- Kupiga Simu za Kazi za Asili - uwezo wa kupiga simu kwa zana na kazi za nje ya mtiririko wa LLM  
+- Utendaji Bora wa RAG - kutokana na dirisha kubwa la muktadha  
+- Uundaji wa Data Bandia - uwezo wa kuunda data yenye ufanisi kwa kazi kama vile kufinyangwa  
 
 ### Kupiga Simu za Kazi za Asili
 
-Llama 3.1 imeboreshwa kuwa bora zaidi katika kupiga simu za kazi au zana. Pia ina zana mbili zilizojengwa ndani ambazo mfano unaweza kutambua kama zinahitajika kutumika kulingana na agizo kutoka kwa mtumiaji. Zana hizi ni:
+Llama 3.1 imeboreshwa ili iwe na ufanisi zaidi katika kupiga simu za kazi au zana. Pia ina zana mbili zilizojengwa ndani ambazo modeli inaweza kutambua zinahitajika kutumika kulingana na maelekezo kutoka kwa mtumiaji. Zana hizi ni:
 
-- **Brave Search** - Inaweza kutumika kupata taarifa za kisasa kama hali ya hewa kwa kufanya utafutaji wa wavuti
-- **Wolfram Alpha** - Inaweza kutumika kwa mahesabu magumu zaidi ya kihisabati hivyo kuandika kazi zako mwenyewe hakuhitajiki.
+- **Brave Search** - Inaweza kutumika kupata taarifa za hivi karibuni kama hali ya hewa kwa kufanya utafutaji mtandaoni  
+- **Wolfram Alpha** - Inaweza kutumika kwa mahesabu magumu zaidi ya hisabati hivyo kuandika kazi zako mwenyewe si lazima  
 
-Unaweza pia kuunda zana zako mwenyewe ambazo LLM inaweza kupiga simu.
+Unaweza pia kuunda zana zako maalum ambazo LLM inaweza kupiga simu.
 
 Katika mfano wa msimbo hapa chini:
 
-- Tunaelezea zana zinazopatikana (brave_search, wolfram_alpha) katika agizo la mfumo.
-- Tuma agizo la mtumiaji linalouliza kuhusu hali ya hewa katika mji fulani.
-- LLM itajibu kwa simu ya zana kwa zana ya Brave Search ambayo itaonekana kama hii `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Tunaeleza zana zinazopatikana (brave_search, wolfram_alpha) katika maelekezo ya mfumo.  
+- Tunatuma maelekezo ya mtumiaji yanayouliza kuhusu hali ya hewa katika mji fulani.  
+- LLM itajibu kwa kupiga simu ya zana kwa Brave Search ambayo itaonekana kama hii `<|python_tag|>brave_search.call(query="Stockholm weather")`  
 
-*Kumbuka: Mfano huu unafanya tu simu ya zana, kama ungependa kupata matokeo, utahitaji kuunda akaunti ya bure kwenye ukurasa wa API ya Brave na kuelezea kazi yenyewe*
+*Note: Mfano huu unafanya tu simu ya zana, ikiwa ungependa kupata matokeo, utahitaji kuunda akaunti ya bure kwenye ukurasa wa Brave API na kufafanua kazi yenyewe*  
 
 ```python 
 import os
@@ -103,13 +103,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Licha ya kuwa LLM, moja ya mipaka ambayo Llama 3.1 ina ni uwezo wa multimodality. Hii ni, kuwa na uwezo wa kutumia aina tofauti za ingizo kama picha kama maagizo na kutoa majibu. Uwezo huu ni moja ya sifa kuu za Llama 3.2. Sifa hizi pia zinajumuisha:
+Licha ya kuwa LLM, kizuizi kimoja ambacho Llama 3.1 kina ni uwezo wa kutumia aina tofauti za pembejeo kama picha kama maelekezo na kutoa majibu. Uwezo huu ni mojawapo ya sifa kuu za Llama 3.2. Sifa hizi pia ni pamoja na:
 
-- Multimodality - ina uwezo wa kutathmini maagizo ya maandishi na picha
-- Tofauti za ukubwa mdogo hadi wa kati (11B na 90B) - hii inatoa chaguzi za utekelezaji zinazobadilika,
-- Tofauti za maandishi tu (1B na 3B) - hii inaruhusu mfano kutekelezwa kwenye vifaa vya pembeni / simu na kutoa ucheleweshaji mdogo
+- Multimodality - ina uwezo wa kutathmini maelekezo ya maandishi na picha  
+- Aina ndogo hadi za kati (11B na 90B) - hii hutoa chaguzi za usambazaji zinazobadilika,  
+- Aina za maandishi tu (1B na 3B) - hii inaruhusu modeli kusambazwa kwenye vifaa vya edge / simu na hutoa ucheleweshaji mdogo  
 
-Msaada wa multimodal unawakilisha hatua kubwa katika ulimwengu wa mifano ya chanzo wazi. Mfano wa msimbo hapa chini unachukua picha na maandishi kama agizo kupata uchambuzi wa picha kutoka Llama 3.2 90B.
+Msaada wa multimodal ni hatua kubwa katika ulimwengu wa modeli za chanzo huria. Mfano wa msimbo hapa chini unachukua picha na maelekezo ya maandishi kupata uchambuzi wa picha kutoka Llama 3.2 90B.
 
 ### Msaada wa Multimodal na Llama 3.2
 
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Kujifunza hakuishii hapa, endelea na Safari
+## Kujifunza hakukomi hapa, endelea Safari
 
-Baada ya kumaliza somo hili, angalia [mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuboresha ujuzi wako wa AI ya Kizazi!
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa AI ya Kizazi!
 
-**Kataa:**
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu. Hati asilia katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa habari muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

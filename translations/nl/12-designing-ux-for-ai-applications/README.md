@@ -2,129 +2,129 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ec385b41ee50579025d50cc03bfb3a25",
-  "translation_date": "2025-05-19T21:59:21+00:00",
+  "translation_date": "2025-07-09T15:00:21+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "nl"
 }
 -->
-# Het Ontwerpen van UX voor AI-toepassingen
+# UX ontwerpen voor AI-toepassingen
 
-[![Het Ontwerpen van UX voor AI-toepassingen](../../../translated_images/12-lesson-banner.f98188f63dee5f2a9016055c93c766061b9cb95b320bf29d4d2d67ada792572e.nl.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
+[![Designing UX for AI Applications](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.nl.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
-Gebruikerservaring is een zeer belangrijk aspect bij het bouwen van apps. Gebruikers moeten uw app op een efficiënte manier kunnen gebruiken om taken uit te voeren. Efficiënt zijn is één ding, maar u moet ook apps ontwerpen zodat ze door iedereen gebruikt kunnen worden, om ze _toegankelijk_ te maken. Dit hoofdstuk richt zich op dit gebied zodat u hopelijk een app ontwerpt die mensen kunnen en willen gebruiken.
+Gebruikerservaring is een zeer belangrijk aspect bij het bouwen van apps. Gebruikers moeten je app op een efficiënte manier kunnen gebruiken om taken uit te voeren. Efficiënt zijn is één ding, maar je moet apps ook zo ontwerpen dat ze door iedereen gebruikt kunnen worden, om ze _toegankelijk_ te maken. Dit hoofdstuk richt zich op dit gebied, zodat je hopelijk een app ontwerpt die mensen kunnen en willen gebruiken.
 
-## Inleiding
+## Introductie
 
-Gebruikerservaring is hoe een gebruiker interacteert met en gebruikmaakt van een specifiek product of dienst, of het nu een systeem, tool of ontwerp is. Bij het ontwikkelen van AI-toepassingen richten ontwikkelaars zich niet alleen op het waarborgen van een effectieve gebruikerservaring, maar ook op ethische aspecten. In deze les behandelen we hoe je toepassingen voor Kunstmatige Intelligentie (AI) bouwt die tegemoetkomen aan de behoeften van gebruikers.
+Gebruikerservaring is hoe een gebruiker interactie heeft met en gebruikmaakt van een specifiek product of dienst, of het nu een systeem, tool of ontwerp is. Bij het ontwikkelen van AI-toepassingen richten ontwikkelaars zich niet alleen op het zorgen voor een effectieve gebruikerservaring, maar ook op ethiek. In deze les behandelen we hoe je Artificial Intelligence (AI)-toepassingen bouwt die inspelen op de behoeften van gebruikers.
 
-De les behandelt de volgende gebieden:
+De les behandelt de volgende onderwerpen:
 
-- Inleiding tot gebruikerservaring en begrip van gebruikersbehoeften
-- Het ontwerpen van AI-toepassingen voor vertrouwen en transparantie
-- Het ontwerpen van AI-toepassingen voor samenwerking en feedback
+- Introductie tot gebruikerservaring en het begrijpen van gebruikersbehoeften
+- AI-toepassingen ontwerpen voor vertrouwen en transparantie
+- AI-toepassingen ontwerpen voor samenwerking en feedback
 
 ## Leerdoelen
 
 Na het volgen van deze les kun je:
 
-- Begrijpen hoe je AI-toepassingen bouwt die voldoen aan de behoeften van de gebruiker.
+- Begrijpen hoe je AI-toepassingen bouwt die voldoen aan de behoeften van gebruikers.
 - AI-toepassingen ontwerpen die vertrouwen en samenwerking bevorderen.
 
-### Vereiste voorkennis
+### Vereisten
 
-Neem de tijd en lees meer over [gebruikerservaring en design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Neem de tijd om meer te lezen over [gebruikerservaring en design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Inleiding tot Gebruikerservaring en Begrip van Gebruikersbehoeften
+## Introductie tot gebruikerservaring en het begrijpen van gebruikersbehoeften
 
-In onze fictieve onderwijsstartup hebben we twee primaire gebruikers: docenten en studenten. Elk van deze gebruikers heeft unieke behoeften. Een gebruikersgericht ontwerp geeft prioriteit aan de gebruiker en zorgt ervoor dat de producten relevant en nuttig zijn voor degenen voor wie ze bedoeld zijn.
+In onze fictieve onderwijs-startup hebben we twee primaire gebruikers: leraren en studenten. Elk van deze gebruikers heeft unieke behoeften. Een gebruikersgericht ontwerp plaatst de gebruiker centraal, zodat de producten relevant en nuttig zijn voor degenen voor wie ze bedoeld zijn.
 
-De applicatie moet **nuttig, betrouwbaar, toegankelijk en aangenaam** zijn om een goede gebruikerservaring te bieden.
+De applicatie moet **bruikbaar, betrouwbaar, toegankelijk en prettig** zijn om een goede gebruikerservaring te bieden.
 
 ### Bruikbaarheid
 
-Nuttig zijn betekent dat de applicatie functionaliteit heeft die overeenkomt met het beoogde doel, zoals het automatiseren van het beoordelingsproces of het genereren van flitskaarten voor herziening. Een applicatie die het beoordelingsproces automatiseert, moet in staat zijn om nauwkeurig en efficiënt scores toe te kennen aan het werk van studenten op basis van vooraf gedefinieerde criteria. Evenzo moet een applicatie die flitskaarten voor herziening genereert, relevante en diverse vragen kunnen maken op basis van zijn data.
+Bruikbaar zijn betekent dat de applicatie functionaliteit heeft die aansluit bij het beoogde doel, zoals het automatiseren van het beoordelingsproces of het genereren van flashcards voor herhaling. Een applicatie die het beoordelingsproces automatiseert, moet in staat zijn om nauwkeurig en efficiënt scores toe te kennen aan het werk van studenten op basis van vooraf bepaalde criteria. Evenzo moet een applicatie die flashcards genereert, relevante en gevarieerde vragen kunnen maken op basis van de beschikbare data.
 
 ### Betrouwbaarheid
 
-Betrouwbaar zijn betekent dat de applicatie zijn taak consistent en zonder fouten kan uitvoeren. Echter, AI is net als mensen niet perfect en kan gevoelig zijn voor fouten. De applicaties kunnen fouten tegenkomen of onverwachte situaties die menselijke tussenkomst of correctie vereisen. Hoe ga je om met fouten? In het laatste gedeelte van deze les behandelen we hoe AI-systemen en -toepassingen zijn ontworpen voor samenwerking en feedback.
+Betrouwbaar zijn betekent dat de applicatie zijn taak consistent en zonder fouten kan uitvoeren. AI is echter, net als mensen, niet perfect en kan fouten maken. De applicaties kunnen fouten of onverwachte situaties tegenkomen die menselijke tussenkomst of correctie vereisen. Hoe ga je om met fouten? In het laatste deel van deze les behandelen we hoe AI-systemen en applicaties ontworpen worden voor samenwerking en feedback.
 
 ### Toegankelijkheid
 
-Toegankelijk zijn betekent dat de gebruikerservaring wordt uitgebreid naar gebruikers met verschillende mogelijkheden, inclusief mensen met een handicap, zodat niemand wordt buitengesloten. Door toegankelijkheidsrichtlijnen en -principes te volgen, worden AI-oplossingen inclusiever, bruikbaarder en nuttiger voor alle gebruikers.
+Toegankelijk zijn betekent dat de gebruikerservaring wordt uitgebreid naar gebruikers met verschillende mogelijkheden, inclusief mensen met een beperking, zodat niemand wordt buitengesloten. Door richtlijnen en principes voor toegankelijkheid te volgen, worden AI-oplossingen inclusiever, gebruiksvriendelijker en nuttiger voor alle gebruikers.
 
-### Aangenaam
+### Prettig
 
-Aangenaam zijn betekent dat de applicatie prettig in gebruik is. Een aantrekkelijke gebruikerservaring kan een positieve impact hebben op de gebruiker, hen aanmoedigen om terug te keren naar de applicatie en de bedrijfsinkomsten verhogen.
+Prettig zijn betekent dat de applicatie plezierig is om te gebruiken. Een aantrekkelijke gebruikerservaring kan een positieve invloed hebben op de gebruiker, waardoor deze terugkeert naar de applicatie en de omzet van het bedrijf stijgt.
 
-![afbeelding die UX-overwegingen in AI illustreert](../../../translated_images/uxinai.26a003eb0524d011d3e36d15f6837df5be66ee0d965ee0df6d004edd5097a87d.nl.png)
+![afbeelding die UX-overwegingen in AI illustreert](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.nl.png)
 
-Niet elke uitdaging kan met AI worden opgelost. AI komt om uw gebruikerservaring te verbeteren, of het nu gaat om het automatiseren van handmatige taken of het personaliseren van gebruikerservaringen.
+Niet elke uitdaging kan met AI worden opgelost. AI komt om je gebruikerservaring te versterken, bijvoorbeeld door handmatige taken te automatiseren of gebruikerservaringen te personaliseren.
 
-## Het Ontwerpen van AI-toepassingen voor Vertrouwen en Transparantie
+## AI-toepassingen ontwerpen voor vertrouwen en transparantie
 
-Vertrouwen opbouwen is cruciaal bij het ontwerpen van AI-toepassingen. Vertrouwen zorgt ervoor dat een gebruiker er zeker van is dat de applicatie het werk zal doen, consistent resultaten levert en dat de resultaten zijn wat de gebruiker nodig heeft. Een risico in dit gebied is wantrouwen en oververtrouwen. Wantrouwen treedt op wanneer een gebruiker weinig of geen vertrouwen heeft in een AI-systeem, wat ertoe leidt dat de gebruiker uw applicatie afwijst. Oververtrouwen treedt op wanneer een gebruiker de capaciteit van een AI-systeem overschat, waardoor gebruikers te veel vertrouwen hebben in het AI-systeem. Bijvoorbeeld, een geautomatiseerd beoordelingssysteem kan in het geval van oververtrouwen ertoe leiden dat de docent sommige papieren niet controleert om ervoor te zorgen dat het beoordelingssysteem goed werkt. Dit kan resulteren in oneerlijke of onnauwkeurige cijfers voor de studenten, of gemiste kansen voor feedback en verbetering.
+Vertrouwen opbouwen is cruciaal bij het ontwerpen van AI-toepassingen. Vertrouwen zorgt ervoor dat een gebruiker erop vertrouwt dat de applicatie het werk doet, consequent resultaten levert en dat die resultaten zijn wat de gebruiker nodig heeft. Een risico in dit gebied is wantrouwen en overmatig vertrouwen. Wantrouwen ontstaat wanneer een gebruiker weinig of geen vertrouwen heeft in een AI-systeem, wat ertoe leidt dat de gebruiker je applicatie afwijst. Overmatig vertrouwen ontstaat wanneer een gebruiker de capaciteiten van een AI-systeem overschat, waardoor gebruikers het AI-systeem te veel vertrouwen. Bijvoorbeeld, bij een geautomatiseerd beoordelingssysteem kan overmatig vertrouwen ertoe leiden dat een leraar sommige papieren niet meer controleert om te zien of het beoordelingssysteem goed werkt. Dit kan resulteren in oneerlijke of onnauwkeurige cijfers voor studenten, of gemiste kansen voor feedback en verbetering.
 
 Twee manieren om ervoor te zorgen dat vertrouwen centraal staat in het ontwerp zijn uitlegbaarheid en controle.
 
 ### Uitlegbaarheid
 
-Wanneer AI helpt bij het informeren van beslissingen, zoals het overdragen van kennis aan toekomstige generaties, is het cruciaal voor docenten en ouders om te begrijpen hoe AI-beslissingen worden genomen. Dit is uitlegbaarheid - begrijpen hoe AI-toepassingen beslissingen nemen. Ontwerpen voor uitlegbaarheid omvat het toevoegen van details van voorbeelden van wat een AI-toepassing kan doen. Bijvoorbeeld, in plaats van "Aan de slag met AI-leraar", kan het systeem gebruiken: "Vat uw aantekeningen samen voor gemakkelijkere herziening met behulp van AI."
+Wanneer AI helpt bij het nemen van beslissingen, zoals het overdragen van kennis aan toekomstige generaties, is het essentieel dat leraren en ouders begrijpen hoe AI-beslissingen worden genomen. Dit is uitlegbaarheid – begrijpen hoe AI-toepassingen beslissingen maken. Ontwerpen voor uitlegbaarheid betekent onder andere het toevoegen van voorbeelden van wat een AI-applicatie kan doen. Bijvoorbeeld, in plaats van "Begin met AI-leraar", kan het systeem zeggen: "Vat je aantekeningen samen voor makkelijker herhalen met AI."
 
-![een app-landingspagina met duidelijke illustratie van uitlegbaarheid in AI-toepassingen](../../../translated_images/explanability-in-ai.19a61ee8eec9aec2d55d420c49cc3bb167db208c05bddb8d4e1e9e10ea8746b8.nl.png)
+![een app-startpagina met duidelijke illustratie van uitlegbaarheid in AI-toepassingen](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.nl.png)
 
-Een ander voorbeeld is hoe AI gebruikmaakt van gebruikers- en persoonlijke gegevens. Bijvoorbeeld, een gebruiker met de persona student kan beperkingen hebben op basis van hun persona. De AI kan misschien geen antwoorden op vragen onthullen, maar kan de gebruiker helpen nadenken over hoe ze een probleem kunnen oplossen.
+Een ander voorbeeld is hoe AI gebruikers- en persoonlijke gegevens gebruikt. Bijvoorbeeld, een gebruiker met de persona student kan beperkingen hebben op basis van die persona. De AI kan mogelijk geen antwoorden geven op vragen, maar kan de gebruiker wel helpen nadenken over hoe ze een probleem kunnen oplossen.
 
-![AI die reageert op vragen op basis van persona](../../../translated_images/solving-questions.9158f66fb9fd71ed57fd00978358d14dbccc72bd2b1e4db5140fcb1579aef295.nl.png)
+![AI die vragen beantwoordt op basis van persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.nl.png)
 
-Een laatste belangrijk onderdeel van uitlegbaarheid is de vereenvoudiging van uitleg. Studenten en docenten zijn misschien geen AI-experts, daarom moeten uitleggen van wat de applicatie wel of niet kan doen, vereenvoudigd en gemakkelijk te begrijpen zijn.
+Een laatste belangrijk onderdeel van uitlegbaarheid is het vereenvoudigen van uitleg. Studenten en leraren zijn misschien geen AI-experts, daarom moeten de uitleg over wat de applicatie wel of niet kan doen eenvoudig en makkelijk te begrijpen zijn.
 
-![vereenvoudigde uitleg over AI-capaciteiten](../../../translated_images/simplified-explanations.4a23e7b2260406a771a2cd853970a0661388a63f1900737935c0a788daf16dc8.nl.png)
+![vereenvoudigde uitleg over AI-mogelijkheden](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.nl.png)
 
 ### Controle
 
-Generatieve AI creëert een samenwerking tussen AI en de gebruiker, waarbij bijvoorbeeld een gebruiker prompts kan wijzigen voor verschillende resultaten. Bovendien, zodra een output is gegenereerd, moeten gebruikers in staat zijn de resultaten te wijzigen, waardoor ze een gevoel van controle krijgen. Bijvoorbeeld, bij het gebruik van Bing kunt u uw prompt aanpassen op basis van formaat, toon en lengte. Bovendien kunt u wijzigingen aanbrengen in uw output en de output aanpassen zoals hieronder weergegeven:
+Generatieve AI creëert een samenwerking tussen AI en de gebruiker, waarbij een gebruiker bijvoorbeeld prompts kan aanpassen voor verschillende resultaten. Daarnaast moeten gebruikers, zodra een output is gegenereerd, de resultaten kunnen aanpassen, zodat ze het gevoel van controle hebben. Bijvoorbeeld, bij het gebruik van Bing kun je je prompt afstemmen op formaat, toon en lengte. Ook kun je wijzigingen aanbrengen in je output en deze aanpassen, zoals hieronder te zien is:
 
-![Bing-zoekresultaten met opties om de prompt en output te wijzigen](../../../translated_images/bing1.6024fe7d103ff4b54c58b873654403a1e56f81010da05a1f0a210c5ac7a1b8b5.nl.png)
+![Bing-zoekresultaten met opties om prompt en output aan te passen](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.nl.png)
 
-Een andere functie in Bing die een gebruiker controle over de applicatie geeft, is de mogelijkheid om in te schrijven en uit te schrijven voor de gegevens die AI gebruikt. Voor een schoolapplicatie wil een student misschien zijn aantekeningen gebruiken, evenals de bronnen van de docenten als herzieningsmateriaal.
+Een andere functie in Bing die gebruikers controle geeft over de applicatie is de mogelijkheid om in- en uit te schakelen welke data AI gebruikt. Voor een schoolapplicatie wil een student misschien zijn eigen aantekeningen gebruiken, evenals de bronnen van de leraren als studiemateriaal.
 
-![Bing-zoekresultaten met opties om de prompt en output te wijzigen](../../../translated_images/bing2.a01fd420e9d52912126965a59c1766e5865f4dd9aaa45408d525e717d0ef3cce.nl.png)
+![Bing-zoekresultaten met opties om prompt en output aan te passen](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.nl.png)
 
-> Bij het ontwerpen van AI-toepassingen is intentionaliteit de sleutel om ervoor te zorgen dat gebruikers niet te veel vertrouwen, waardoor onrealistische verwachtingen van de capaciteiten ontstaan. Een manier om dit te doen is door wrijving te creëren tussen de prompts en de resultaten. De gebruiker eraan herinneren dat dit AI is en geen medemens.
+> Bij het ontwerpen van AI-toepassingen is doelgerichtheid essentieel om te voorkomen dat gebruikers te veel vertrouwen krijgen en onrealistische verwachtingen van de mogelijkheden ontwikkelen. Een manier om dit te doen is door wrijving te creëren tussen de prompts en de resultaten. Zo herinner je de gebruiker eraan dat dit AI is en geen medemens.
 
-## Het Ontwerpen van AI-toepassingen voor Samenwerking en Feedback
+## AI-toepassingen ontwerpen voor samenwerking en feedback
 
-Zoals eerder vermeld, creëert generatieve AI een samenwerking tussen de gebruiker en AI. De meeste interacties zijn met een gebruiker die een prompt invoert en de AI die een output genereert. Wat als de output onjuist is? Hoe gaat de applicatie om met fouten als ze zich voordoen? Geeft de AI de gebruiker de schuld of neemt het de tijd om de fout uit te leggen?
+Zoals eerder genoemd, creëert generatieve AI een samenwerking tussen de gebruiker en AI. Meestal voert een gebruiker een prompt in en genereert de AI een output. Wat als de output onjuist is? Hoe gaat de applicatie om met fouten als die optreden? Geeft de AI de gebruiker de schuld of neemt het de tijd om de fout uit te leggen?
 
-AI-toepassingen moeten worden gebouwd om feedback te ontvangen en te geven. Dit helpt niet alleen het AI-systeem te verbeteren, maar bouwt ook vertrouwen op bij de gebruikers. Een feedbacklus moet in het ontwerp worden opgenomen, een voorbeeld kan een eenvoudige duim omhoog of omlaag op de output zijn.
+AI-toepassingen moeten zo worden gebouwd dat ze feedback kunnen ontvangen en geven. Dit helpt niet alleen het AI-systeem te verbeteren, maar bouwt ook vertrouwen op bij de gebruikers. Een feedbacklus moet worden opgenomen in het ontwerp, bijvoorbeeld een simpele duim omhoog of omlaag bij de output.
 
-Een andere manier om hiermee om te gaan is door duidelijk de capaciteiten en beperkingen van het systeem te communiceren. Wanneer een gebruiker een fout maakt door iets te vragen buiten de capaciteiten van de AI, moet er ook een manier zijn om hiermee om te gaan, zoals hieronder weergegeven.
+Een andere manier om hiermee om te gaan is door duidelijk te communiceren wat de mogelijkheden en beperkingen van het systeem zijn. Wanneer een gebruiker een fout maakt door iets te vragen wat buiten de capaciteiten van de AI ligt, moet er ook een manier zijn om dit af te handelen, zoals hieronder wordt getoond.
 
-![Feedback geven en fouten afhandelen](../../../translated_images/feedback-loops.2abf91e576a435333eb1b37c823a69497337abc5b50ff80c4b9ddbd52bfdbf84.nl.png)
+![Feedback geven en omgaan met fouten](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.nl.png)
 
-Systeemfouten komen vaak voor bij applicaties waar de gebruiker mogelijk hulp nodig heeft met informatie buiten de reikwijdte van de AI of de applicatie kan een limiet hebben op hoeveel vragen/onderwerpen een gebruiker samenvattingen kan genereren. Bijvoorbeeld, een AI-toepassing die is getraind met gegevens over beperkte onderwerpen, bijvoorbeeld Geschiedenis en Wiskunde, kan misschien geen vragen over Aardrijkskunde behandelen. Om dit te verzachten, kan het AI-systeem een reactie geven zoals: "Sorry, ons product is getraind met gegevens in de volgende onderwerpen....., ik kan niet reageren op de vraag die je stelde."
+Systeemfouten komen vaak voor bij applicaties waarbij de gebruiker mogelijk hulp nodig heeft met informatie buiten het bereik van de AI, of wanneer de applicatie een limiet heeft op het aantal vragen/onderwerpen waarvoor een gebruiker samenvattingen kan genereren. Bijvoorbeeld, een AI-applicatie die getraind is met data over beperkte vakken, zoals geschiedenis en wiskunde, kan mogelijk geen vragen over aardrijkskunde beantwoorden. Om dit te voorkomen kan het AI-systeem een reactie geven zoals: "Sorry, ons product is getraind met data over de volgende vakken....., ik kan de vraag die je stelde niet beantwoorden."
 
-AI-toepassingen zijn niet perfect, daarom zullen ze fouten maken. Bij het ontwerpen van uw toepassingen moet u ervoor zorgen dat u ruimte creëert voor feedback van gebruikers en foutafhandeling op een manier die eenvoudig en gemakkelijk te begrijpen is.
+AI-toepassingen zijn niet perfect, daarom zullen ze fouten maken. Bij het ontwerpen van je applicaties moet je ruimte creëren voor feedback van gebruikers en foutafhandeling op een manier die eenvoudig en makkelijk uit te leggen is.
 
 ## Opdracht
 
-Neem alle AI-apps die je tot nu toe hebt gebouwd en overweeg de onderstaande stappen in je app te implementeren:
+Neem een AI-app die je tot nu toe hebt gebouwd en overweeg de onderstaande stappen in je app te implementeren:
 
-- **Aangenaam:** Overweeg hoe je je app aangenamer kunt maken. Voeg je overal uitleg toe? Moedig je de gebruiker aan om te verkennen? Hoe formuleer je je foutmeldingen?
+- **Prettig:** Denk na over hoe je je app prettiger kunt maken. Voeg je overal uitleg toe? Moedig je de gebruiker aan om te verkennen? Hoe formuleer je je foutmeldingen?
 
-- **Bruikbaarheid:** Bouw een webapp. Zorg ervoor dat je app zowel met de muis als het toetsenbord navigeerbaar is.
+- **Bruikbaarheid:** Bouw je een webapp? Zorg ervoor dat je app navigeerbaar is met zowel muis als toetsenbord.
 
-- **Vertrouwen en transparantie:** Vertrouw niet volledig op de AI en de output ervan, overweeg hoe je een mens zou toevoegen aan het proces om de output te verifiëren. Overweeg en implementeer ook andere manieren om vertrouwen en transparantie te bereiken.
+- **Vertrouwen en transparantie:** Vertrouw niet volledig op de AI en de output. Overweeg hoe je een mens kunt toevoegen aan het proces om de output te verifiëren. Overweeg en implementeer ook andere manieren om vertrouwen en transparantie te bereiken.
 
-- **Controle:** Geef de gebruiker controle over de gegevens die ze aan de applicatie verstrekken. Implementeer een manier waarop een gebruiker kan kiezen om wel of niet deel te nemen aan gegevensverzameling in de AI-toepassing.
+- **Controle:** Geef de gebruiker controle over de data die ze aan de applicatie leveren. Implementeer een manier waarop een gebruiker kan kiezen om wel of niet mee te doen aan dataverzameling in de AI-applicatie.
 
-## Ga Verder met Leren!
+## Ga door met leren!
 
-Na het voltooien van deze les, bekijk onze [Generatieve AI Leercollectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis over Generatieve AI verder te vergroten!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder te verdiepen!
 
-Ga naar Les 13, waar we zullen kijken naar hoe we [AI-toepassingen beveiligen](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Ga door naar Les 13, waar we kijken naar hoe je [AI-toepassingen beveiligt](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

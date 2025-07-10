@@ -2,70 +2,70 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:33:28+00:00",
+  "translation_date": "2025-07-09T17:32:41+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "sl"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.sl.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sl.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Uvod
 
-AI agenti predstavljajo vznemirljiv napredek v Generativni AI, saj omogočajo velikim jezikovnim modelom (LLM), da se razvijejo iz pomočnikov v agente, sposobne izvajanja dejanj. Okviri AI agentov omogočajo razvijalcem ustvarjanje aplikacij, ki LLM-jem omogočajo dostop do orodij in upravljanja stanja. Ti okviri prav tako izboljšajo preglednost, kar uporabnikom in razvijalcem omogoča spremljanje dejanj, ki jih načrtujejo LLM-ji, s čimer se izboljša upravljanje izkušenj.
+AI agenti predstavljajo razburljiv razvoj na področju Generativne umetne inteligence, saj omogočajo, da se veliki jezikovni modeli (LLM) razvijejo iz pomočnikov v agente, ki lahko izvajajo dejanja. Okviri za AI agente razvijalcem omogočajo ustvarjanje aplikacij, ki LLM-jem omogočajo dostop do orodij in upravljanje stanja. Ti okviri prav tako izboljšajo preglednost, saj uporabnikom in razvijalcem omogočajo spremljanje dejanj, ki jih LLM načrtuje, s čimer izboljšajo upravljanje uporabniške izkušnje.
 
-Lekcija bo zajemala naslednja področja:
+V tej lekciji bomo obravnavali naslednja področja:
 
-- Razumevanje, kaj je AI agent - Kaj pravzaprav je AI agent?
-- Raziskovanje štirih različnih okvirov AI agentov - Kaj jih dela edinstvene?
-- Uporaba teh AI agentov v različnih primerih uporabe - Kdaj naj uporabimo AI agente?
+- Razumevanje, kaj je AI agent – Kaj pravzaprav je AI agent?
+- Pregled štirih različnih okvirov za AI agente – Kaj jih naredi edinstvene?
+- Uporaba teh AI agentov v različnih primerih uporabe – Kdaj naj uporabimo AI agente?
 
 ## Cilji učenja
 
-Po tej lekciji boste lahko:
+Po opravljeni lekciji boste znali:
 
-- Pojasnili, kaj so AI agenti in kako jih lahko uporabimo.
-- Razumeli razlike med nekaterimi priljubljenimi okviri AI agentov in kako se razlikujejo.
-- Razumeli, kako delujejo AI agenti, da bi lahko z njimi gradili aplikacije.
+- Razložiti, kaj so AI agenti in kako jih lahko uporabimo.
+- Razumeti razlike med nekaterimi priljubljenimi okviri za AI agente in kako se razlikujejo.
+- Razumeti, kako AI agenti delujejo, da boste lahko z njimi gradili aplikacije.
 
 ## Kaj so AI agenti?
 
-AI agenti so zelo vznemirljivo področje v svetu Generativne AI. Z vznemirjenjem včasih pride tudi zmeda glede terminologije in njihove uporabe. Da bi stvari poenostavili in vključili večino orodij, ki se nanašajo na AI agente, bomo uporabili to definicijo:
+AI agenti so zelo razburljivo področje v svetu Generativne umetne inteligence. S tem navdušenjem pa včasih pride tudi do zmede glede izrazov in njihove uporabe. Da bo vse preprosto in vključujoče za večino orodij, ki se nanašajo na AI agente, bomo uporabili naslednjo definicijo:
 
-AI agenti omogočajo velikim jezikovnim modelom (LLM), da opravljajo naloge, tako da jim omogočijo dostop do **stanja** in **orodij**.
+AI agenti omogočajo velikim jezikovnim modelom (LLM), da opravljajo naloge tako, da jim omogočijo dostop do **stanja** in **orodij**.
 
-![Agent Model](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.sl.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sl.png)
 
-Opredelimo te izraze:
+Pojasnimo te izraze:
 
-**Veliki jezikovni modeli** - To so modeli, o katerih govorimo v tem tečaju, kot so GPT-3.5, GPT-4, Llama-2 itd.
+**Veliki jezikovni modeli** – To so modeli, na katere se sklicujemo v tem tečaju, kot so GPT-3.5, GPT-4, Llama-2 itd.
 
-**Stanje** - To se nanaša na kontekst, v katerem LLM deluje. LLM uporablja kontekst svojih preteklih dejanj in trenutni kontekst, kar vodi njegovo odločanje za nadaljnja dejanja. Okviri AI agentov omogočajo razvijalcem lažje vzdrževanje tega konteksta.
+**Stanje** – Nanaša se na kontekst, v katerem LLM deluje. LLM uporablja kontekst svojih preteklih dejanj in trenutni kontekst, ki usmerja njegovo odločanje za nadaljnja dejanja. Okviri za AI agente razvijalcem olajšajo vzdrževanje tega konteksta.
 
-**Orodja** - Da bi LLM dokončal nalogo, ki jo je uporabnik zahteval in ki jo je LLM načrtoval, potrebuje dostop do orodij. Nekateri primeri orodij so lahko baza podatkov, API, zunanja aplikacija ali celo drug LLM!
+**Orodja** – Da bi LLM lahko opravil nalogo, ki jo je uporabnik zahteval in jo je LLM načrtoval, potrebuje dostop do orodij. Nekateri primeri orodij so baza podatkov, API, zunanja aplikacija ali celo drug LLM!
 
-Te definicije vam bodo upamo zagotovile dobro osnovo za nadaljevanje, ko bomo raziskovali, kako so implementirane. Raziskujmo nekaj različnih okvirov AI agentov:
+Upamo, da vam bodo te definicije pomagale bolje razumeti, ko bomo pogledali, kako so ti agenti implementirani. Raziščimo nekaj različnih okvirov za AI agente:
 
-## LangChain agenti
+## LangChain Agents
 
-[LangChain agenti](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) so implementacija zgoraj podanih definicij.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) je implementacija zgornjih definicij.
 
-Za upravljanje **stanja** uporablja vgrajeno funkcijo, imenovano `AgentExecutor`. Ta sprejema definirano `agent` in `tools`, ki so na voljo.
+Za upravljanje **stanja** uporablja vgrajeno funkcijo z imenom `AgentExecutor`. Ta sprejme definiran `agent` in `tools`, ki so mu na voljo.
 
-`Agent Executor` prav tako shranjuje zgodovino klepeta, da zagotovi kontekst klepeta.
+`AgentExecutor` prav tako shranjuje zgodovino pogovora, da zagotovi kontekst pogovora.
 
-![Langchain Agents](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.sl.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sl.png)
 
-LangChain ponuja [katalog orodij](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), ki jih je mogoče uvoziti v vašo aplikacijo, v kateri lahko LLM dobi dostop do njih. Ta orodja so ustvarjena s strani skupnosti in ekipe LangChain.
+LangChain ponuja [katalog orodij](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), ki jih lahko uvozite v svojo aplikacijo in do katerih lahko LLM dostopa. Ta orodja ustvarja skupnost in ekipa LangChain.
 
-Nato lahko definirate ta orodja in jih posredujete `Agent Executor`.
+Nato lahko ta orodja definirate in jih posredujete `AgentExecutor`.
 
-Preglednost je še en pomemben vidik, ko govorimo o AI agentih. Pomembno je, da razvijalci aplikacij razumejo, katero orodje LLM uporablja in zakaj. Za to je ekipa pri LangChain razvila LangSmith.
+Preglednost je še en pomemben vidik pri pogovoru o AI agentih. Pomembno je, da razvijalci aplikacij razumejo, katero orodje LLM uporablja in zakaj. Za to je ekipa LangChain razvila LangSmith.
 
 ## AutoGen
 
-Naslednji okvir AI agentov, ki ga bomo obravnavali, je [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Glavni poudarek AutoGen je na pogovorih. Agenti so tako **pogovorni** kot **prilagodljivi**.
+Naslednji okvir za AI agente, o katerem bomo govorili, je [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Glavni fokus AutoGen je pogovor. Agenti so tako **pogovorni** kot **prilagodljivi**.
 
-**Pogovorni -** LLM-ji lahko začnejo in nadaljujejo pogovor z drugim LLM-jem, da dokončajo nalogo. To se naredi z ustvarjanjem `AssistantAgents` in jim dodeli specifično sistemsko sporočilo.
+**Pogovorni** – LLM lahko začne in nadaljuje pogovor z drugim LLM, da opravi nalogo. To se doseže z ustvarjanjem `AssistantAgents` in dodelitvijo specifičnega sistemskega sporočila.
 
 ```python
 
@@ -73,7 +73,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Prilagodljivi** - Agenti se lahko definirajo ne le kot LLM-ji, temveč kot uporabnik ali orodje. Kot razvijalec lahko definirate `UserProxyAgent`, ki je odgovoren za interakcijo z uporabnikom za povratne informacije pri dokončanju naloge. Te povratne informacije lahko nadaljujejo izvedbo naloge ali jo ustavijo.
+**Prilagodljivi** – Agente lahko definiramo ne le kot LLM, ampak tudi kot uporabnika ali orodje. Kot razvijalec lahko definirate `UserProxyAgent`, ki je odgovoren za interakcijo z uporabnikom za povratne informacije pri opravljanju naloge. Te povratne informacije lahko nadaljujejo izvajanje naloge ali ga ustavijo.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -81,30 +81,30 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Stanje in orodja
 
-Za spreminjanje in upravljanje stanja, pomočnik Agent generira Python kodo za dokončanje naloge.
+Za spreminjanje in upravljanje stanja asistent Agent generira Python kodo za dokončanje naloge.
 
 Tukaj je primer procesa:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.sl.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sl.png)
 
-#### LLM Definiran s Sistemsko Sporočilo
+#### LLM definiran s sistemskim sporočilom
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-To sistemsko sporočilo usmerja specifični LLM, katere funkcije so relevantne za njegovo nalogo. Ne pozabite, z AutoGen lahko imate več definiranih AssistantAgentov z različnimi sistemskimi sporočili.
+To sistemsko sporočilo usmerja ta specifični LLM, katere funkcije so pomembne za njegovo nalogo. Ne pozabite, da lahko z AutoGen imate več definiranih AssistantAgents z različnimi sistemskimi sporočili.
 
-#### Klepet se Začne s Strani Uporabnika
+#### Pogovor začne uporabnik
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-To sporočilo s strani user_proxy (Človek) je tisto, kar bo začelo proces Agenta, da razišče možne funkcije, ki bi jih moral izvršiti.
+To sporočilo od user_proxy (človek) bo sprožilo proces, da agent razišče možne funkcije, ki jih mora izvesti.
 
-#### Funkcija se Izvrši
+#### Funkcija se izvede
 
 ```bash
 chatbot (to user_proxy):
@@ -115,59 +115,59 @@ chatbot (to user_proxy):
 
 ```
 
-Ko se začetni klepet obdela, Agent pošlje predlagano orodje za klic. V tem primeru je to funkcija, imenovana `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+Ko je začetni pogovor obdelan, bo agent poslal predlagano orodje za klic. V tem primeru je to funkcija z imenom `get_weather`. Glede na vašo konfiguracijo se ta funkcija lahko samodejno izvede in prebere s strani agenta ali pa se izvede na podlagi uporabniškega vnosa.
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+Za nadaljnje raziskovanje, kako začeti z gradnjo, lahko najdete seznam [AutoGen primerov kode](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst).
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+Naslednji okvir za agente, ki ga bomo raziskali, je [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Znano je kot "code-first" orodje, saj namesto dela izključno z `nizi` lahko dela s podatkovnimi okviri (DataFrames) v Pythonu. To je izjemno uporabno za naloge analize podatkov in generiranja. To so lahko stvari, kot so ustvarjanje grafov in diagramov ali generiranje naključnih števil.
 
-### State and Tools
+### Stanje in orodja
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+Za upravljanje stanja pogovora TaskWeaver uporablja koncept `Planner`. `Planner` je LLM, ki prejme zahtevo uporabnika in načrtuje naloge, ki jih je treba opraviti za izpolnitev te zahteve.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. To so lahko Python razredi ali splošni tolmač kode. Ti vtičniki so shranjeni kot vdelave, da lahko LLM bolje išče pravilni vtičnik.
+Za dokončanje nalog je `Planner` povezan z zbirko orodij, imenovanih `Plugins`. To so lahko Python razredi ali splošni interpretator kode. Ti vtičniki so shranjeni kot vdelave (embeddings), da lahko LLM lažje poišče pravi vtičnik.
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.sl.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sl.png)
 
-Tukaj je primer vtičnika za obravnavo zaznavanja anomalij:
+Tukaj je primer vtičnika za zaznavanje anomalij:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Koda se preveri pred izvedbo. Druga funkcija za upravljanje konteksta v Taskweaver je `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+Koda se preveri pred izvajanjem. Druga funkcija za upravljanje konteksta v Taskweaverju je `experience`. Experience omogoča, da se kontekst pogovora shrani za daljše obdobje v YAML datoteko. To je mogoče konfigurirati tako, da se LLM skozi čas izboljšuje pri določenih nalogah, če je izpostavljen prejšnjim pogovorom.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` pogovora in `tools`so drugi AI modeli. Vsak izmed AI modelov so specializirani modeli, ki opravljajo določene naloge, kot so zaznavanje objektov, transkripcija ali podnaslovljanje slik.
+Zadnji okvir za agente, ki ga bomo raziskali, je [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Edinstvenost JARVIS-a je v tem, da uporablja LLM za upravljanje `stanja` pogovora, medtem ko so `orodja` drugi AI modeli. Vsak od teh AI modelov je specializiran za določene naloge, kot so zaznavanje predmetov, prepisovanje ali opisovanje slik.
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.sl.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sl.png)
 
-LLM, kot splošni model, prejme zahtevo od uporabnika in prepozna specifično nalogo ter morebitne argumente/podatke, ki so potrebni za dokončanje naloge.
+LLM, kot model splošne rabe, prejme zahtevo uporabnika in identificira specifično nalogo ter morebitne argumente/podatke, potrebne za dokončanje naloge.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM nato oblikuje zahtevo na način, ki ga specializirani AI model lahko interpretira, kot je JSON. Ko AI model vrne svojo napoved glede na nalogo, LLM prejme odgovor.
+LLM nato oblikuje zahtevo na način, ki ga specializirani AI model lahko interpretira, na primer v JSON formatu. Ko AI model vrne svojo napoved na podlagi naloge, LLM prejme odgovor.
 
-Če je za dokončanje naloge potrebno več modelov, bo prav tako interpretiral odgovor teh modelov, preden jih združi in generira odgovor za uporabnika.
+Če je za dokončanje naloge potrebnih več modelov, bo interpretiral tudi odgovore teh modelov, preden jih združi in ustvari odgovor za uporabnika.
 
-Spodnji primer prikazuje, kako bi to delovalo, ko uporabnik zahteva opis in štetje objektov na sliki:
+Primer spodaj prikazuje, kako bi to delovalo, ko uporabnik zahteva opis in štetje predmetov na sliki:
 
 ## Naloga
 
 Za nadaljevanje učenja o AI agentih lahko zgradite z AutoGen:
 
-- Aplikacijo, ki simulira poslovni sestanek z različnimi oddelki izobraževalnega startup podjetja.
-- Ustvarite sistemska sporočila, ki usmerjajo LLM-je v razumevanju različnih osebnosti in prioritet ter omogočajo uporabniku, da predstavi novo idejo o produktu.
-- LLM naj nato generira nadaljnja vprašanja iz vsakega oddelka za izboljšanje predstavitve in ideje o produktu.
+- Aplikacijo, ki simulira poslovni sestanek z različnimi oddelki izobraževalnega startupa.
+- Ustvarite sistemska sporočila, ki usmerjajo LLM-je pri razumevanju različnih osebnosti in prioritet ter omogočajo uporabniku predstavitev nove ideje za izdelek.
+- LLM naj nato generira nadaljnja vprašanja iz vsakega oddelka za izpopolnitev in izboljšanje predstavitve ter ideje za izdelek.
 
 ## Učenje se tukaj ne konča, nadaljujte pot
 
-Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgradnjo svojega znanja o Generativni AI!
+Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da še naprej nadgrajujete svoje znanje o Generativni umetni inteligenci!
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljivo profesionalno človeško prevajanje. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za avtomatski prevod AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.

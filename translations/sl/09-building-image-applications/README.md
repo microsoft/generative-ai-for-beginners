@@ -1,89 +1,91 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:27:42+00:00",
+  "original_hash": "1a7fd0f95f9eb673b79da47c0814f4d4",
+  "translation_date": "2025-07-09T13:35:30+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "sl"
 }
 -->
-# Izgradnja aplikacij za generiranje slik
+# Gradnja aplikacij za generiranje slik
 
-LLM-ji niso namenjeni le generiranju besedila. Možno je tudi generirati slike iz besedilnih opisov. Imati slike kot način izražanja je lahko zelo koristno na številnih področjih, od medicinske tehnologije, arhitekture, turizma, razvoja iger in še več. V tem poglavju bomo pogledali dva najbolj priljubljena modela za generiranje slik, DALL-E in Midjourney.
+[![Gradnja aplikacij za generiranje slik](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sl.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+
+LLM-ji niso namenjeni le generiranju besedil. Prav tako je mogoče ustvarjati slike na podlagi besedilnih opisov. Slike kot modaliteta so lahko zelo uporabne na številnih področjih, od MedTech, arhitekture, turizma, razvoja iger in še več. V tem poglavju bomo spoznali dva najbolj priljubljena modela za generiranje slik, DALL-E in Midjourney.
 
 ## Uvod
 
-V tej lekciji bomo pokrili:
+V tej lekciji bomo obravnavali:
 
 - Generiranje slik in zakaj je koristno.
 - DALL-E in Midjourney, kaj sta in kako delujeta.
-- Kako bi zgradili aplikacijo za generiranje slik.
+- Kako zgraditi aplikacijo za generiranje slik.
 
 ## Cilji učenja
 
-Po zaključku te lekcije boste lahko:
+Po zaključku te lekcije boste znali:
 
-- Zgradili aplikacijo za generiranje slik.
-- Določili meje za vašo aplikacijo z metaprompti.
-- Delali z DALL-E in Midjourney.
+- Zgraditi aplikacijo za generiranje slik.
+- Določiti meje vaše aplikacije z meta pozivi.
+- Delati z DALL-E in Midjourney.
 
 ## Zakaj zgraditi aplikacijo za generiranje slik?
 
-Aplikacije za generiranje slik so odličen način za raziskovanje zmogljivosti generativne umetne inteligence. Uporabljajo se lahko na primer za:
+Aplikacije za generiranje slik so odličen način za raziskovanje zmogljivosti Generativne AI. Uporabljajo se lahko na primer za:
 
-- **Urejanje in sintezo slik**. Lahko generirate slike za različne primere uporabe, kot so urejanje slik in sinteza slik.
+- **Urejanje in sintezo slik**. Lahko ustvarjate slike za različne primere uporabe, kot so urejanje in sinteza slik.
 
-- **Uporaba v različnih industrijah**. Prav tako se lahko uporabijo za generiranje slik za različne industrije, kot so medicinska tehnologija, turizem, razvoj iger in še več.
+- **Uporaba v različnih panogah**. Prav tako jih lahko uporabite za generiranje slik v različnih panogah, kot so Medtech, turizem, razvoj iger in še več.
 
 ## Scenarij: Edu4All
 
-Kot del te lekcije bomo nadaljevali delo z našim startupom, Edu4All. Študenti bodo ustvarjali slike za svoje ocenjevanje, katere slike bodo ustvarili, je odvisno od njih. Lahko bi bile ilustracije za njihovo lastno pravljico, ustvarjanje novega lika za njihovo zgodbo ali pomoč pri vizualizaciji njihovih idej in konceptov.
+Kot del te lekcije bomo nadaljevali delo z našim startupom Edu4All. Študenti bodo ustvarjali slike za svoje ocene, kakšne slike bodo točno, pa je prepuščeno njim – lahko so ilustracije za njihovo pravljico, ustvarijo nove like za svojo zgodbo ali pa jim pomagajo vizualizirati njihove ideje in koncepte.
 
-Tukaj je primer, kaj bi lahko študenti Edu4All ustvarili, če bi delali v razredu na temo spomenikov:
+Tukaj je primer, kaj bi lahko študenti Edu4All ustvarili, če delajo v razredu o spomenikih:
 
-![Edu4All startup, razred na temo spomenikov, Eifflov stolp](../../../translated_images/startup.ec211d74fef9f4175010c3334942b715514230415744b9dd0a69a19f4ad68786.sl.png)
+![Edu4All startup, razred o spomenikih, Eifflov stolp](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sl.png)
 
-uporabljajoč prompt, kot je
+z uporabo poziva, kot je
 
-> "Pes poleg Eifflovega stolpa v jutranji sončni svetlobi"
+> "Pes ob Eifflovem stolpu v zgodnjih jutranjih sončnih žarkih"
 
 ## Kaj sta DALL-E in Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) in [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sta dva izmed najbolj priljubljenih modelov za generiranje slik, ki omogočata uporabo promptov za generiranje slik.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) in [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sta dva najbolj priljubljena modela za generiranje slik, ki omogočata ustvarjanje slik na podlagi pozivov.
 
 ### DALL-E
 
-Začnimo z DALL-E, ki je model generativne umetne inteligence, ki generira slike iz besedilnih opisov.
+Začnimo z DALL-E, ki je model Generativne AI, ki ustvarja slike iz besedilnih opisov.
 
-> [DALL-E je kombinacija dveh modelov, CLIP in difuzne pozornosti](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+> [DALL-E je kombinacija dveh modelov, CLIP in diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP** je model, ki generira vdelave, kar so numerične predstavitve podatkov, iz slik in besedila.
+- **CLIP** je model, ki ustvarja vdelave (embeddings), to so numerične predstavitve podatkov, iz slik in besedil.
 
-- **Difuzna pozornost** je model, ki generira slike iz vdelav. DALL-E je treniran na naboru podatkov slik in besedila ter se lahko uporablja za generiranje slik iz besedilnih opisov. Na primer, DALL-E se lahko uporablja za generiranje slik mačke s klobukom ali psa z irokezo.
+- **Diffused attention** je model, ki ustvarja slike iz teh vdelav. DALL-E je usposobljen na naboru slik in besedil ter se uporablja za generiranje slik iz besedilnih opisov. Na primer, DALL-E lahko ustvari sliko mačke s klobukom ali psa z mohawkom.
 
 ### Midjourney
 
-Midjourney deluje na podoben način kot DALL-E, generira slike iz besedilnih promptov. Midjourney se lahko uporablja tudi za generiranje slik z uporabo promptov, kot so "mačka s klobukom" ali "pes z irokezo".
+Midjourney deluje podobno kot DALL-E, ustvarja slike na podlagi besedilnih pozivov. Midjourney lahko prav tako generira slike z uporabo pozivov, kot so “mačka s klobukom” ali “pes z mohawkom”.
 
-![Slika, generirana z Midjourney, mehanski golob](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Slika iz Wikipedije, generirana z Midjourney_
+![Slika, ustvarjena z Midjourney, mehanski golob](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_Slika: Wikipedia, slika ustvarjena z Midjourney_
 
 ## Kako delujeta DALL-E in Midjourney
 
-Najprej, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E je model generativne umetne inteligence, ki temelji na arhitekturi transformatorja z _avtoregresivnim transformatorjem_.
+Najprej [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E je model Generativne AI, ki temelji na arhitekturi transformatorja z _avtoregresivnim transformatorjem_.
 
-_Avtoregresivni transformator_ določa, kako model generira slike iz besedilnih opisov, generira eno slikovno piko naenkrat, nato pa uporablja generirane slikovne pike za generiranje naslednje slikovne pike. Prehaja skozi več plasti v nevronski mreži, dokler slika ni dokončana.
+Avtoregresivni transformator določa, kako model ustvarja slike iz besedilnih opisov – generira en piksel naenkrat in nato uporabi ustvarjene piksle za generiranje naslednjega. Prehaja skozi več plasti v nevronski mreži, dokler slika ni dokončana.
 
-S tem procesom DALL-E nadzira atribute, objekte, značilnosti in še več na sliki, ki jo generira. Vendar pa imata DALL-E 2 in 3 več nadzora nad generirano sliko.
+S tem postopkom DALL-E nadzoruje atribute, predmete, značilnosti in še več v ustvarjeni sliki. Vendar pa imata DALL-E 2 in 3 večji nadzor nad generirano sliko.
 
-## Izgradnja vaše prve aplikacije za generiranje slik
+## Gradnja vaše prve aplikacije za generiranje slik
 
-Kaj je potrebno za izgradnjo aplikacije za generiranje slik? Potrebujete naslednje knjižnice:
+Kaj potrebujete za gradnjo aplikacije za generiranje slik? Potrebujete naslednje knjižnice:
 
-- **python-dotenv**, zelo priporočljivo je, da uporabite to knjižnico za shranjevanje vaših skrivnosti v datoteki _.env_ stran od kode.
-- **openai**, ta knjižnica se uporablja za interakcijo z OpenAI API-jem.
+- **python-dotenv**, priporočamo uporabo te knjižnice za shranjevanje skrivnosti v datoteko _.env_, ločeno od kode.
+- **openai**, ta knjižnica omogoča interakcijo z OpenAI API.
 - **pillow**, za delo s slikami v Pythonu.
-- **requests**, za pomoč pri izvajanju HTTP zahtevkov.
+- **requests**, za pošiljanje HTTP zahtevkov.
 
 1. Ustvarite datoteko _.env_ z naslednjo vsebino:
 
@@ -92,9 +94,9 @@ Kaj je potrebno za izgradnjo aplikacije za generiranje slik? Potrebujete nasledn
    AZURE_OPENAI_API_KEY=<your key>
    ```
 
-   Poiščite te informacije v Azure Portalu za vaš vir v razdelku "Ključi in končna točka".
+   Te podatke poiščite v Azure Portalu za vaš vir v razdelku "Keys and Endpoint".
 
-1. Zberite zgoraj navedene knjižnice v datoteki _requirements.txt_ tako:
+1. Zberite zgornje knjižnice v datoteko _requirements.txt_ tako:
 
    ```text
    python-dotenv
@@ -111,7 +113,7 @@ Kaj je potrebno za izgradnjo aplikacije za generiranje slik? Potrebujete nasledn
    pip install -r requirements.txt
    ```
 
-   Za Windows uporabite naslednje ukaze za ustvarjanje in aktiviranje vašega virtualnega okolja:
+   Za Windows uporabite naslednje ukaze za ustvarjanje in aktivacijo virtualnega okolja:
 
    ```bash
    python3 -m venv venv
@@ -175,7 +177,7 @@ Kaj je potrebno za izgradnjo aplikacije za generiranje slik? Potrebujete nasledn
 
 Pojasnimo to kodo:
 
-- Najprej uvozimo knjižnice, ki jih potrebujemo, vključno z OpenAI knjižnico, dotenv knjižnico, requests knjižnico in Pillow knjižnico.
+- Najprej uvozimo potrebne knjižnice, vključno z OpenAI, dotenv, requests in Pillow.
 
   ```python
   import openai
@@ -192,7 +194,7 @@ Pojasnimo to kodo:
   dotenv.load_dotenv()
   ```
 
-- Po tem nastavimo končno točko, ključ za OpenAI API, različico in tip.
+- Po tem nastavimo endpoint, ključ za OpenAI API, verzijo in tip.
 
   ```python
   # Get endpoint and key from environment variables
@@ -216,9 +218,9 @@ Pojasnimo to kodo:
   )
   ```
 
-  Zgornja koda se odzove z JSON objektom, ki vsebuje URL generirane slike. Uporabimo lahko URL za prenos slike in shranjevanje v datoteko.
+  Zgornja koda vrne JSON objekt, ki vsebuje URL generirane slike. URL lahko uporabimo za prenos slike in shranjevanje v datoteko.
 
-- Na koncu odpremo sliko in uporabimo standardni pregledovalnik slik za prikaz:
+- Na koncu odpremo sliko in jo prikažemo z običajnim pregledovalnikom slik:
 
   ```python
   image = Image.open(image_path)
@@ -227,7 +229,7 @@ Pojasnimo to kodo:
 
 ### Več podrobnosti o generiranju slike
 
-Poglejmo kodo, ki generira sliko, bolj podrobno:
+Poglejmo kodo, ki generira sliko, podrobneje:
 
 ```python
 generation_response = openai.Image.create(
@@ -239,19 +241,19 @@ generation_response = openai.Image.create(
 ```
 
 - **prompt** je besedilni poziv, ki se uporablja za generiranje slike. V tem primeru uporabljamo poziv "Zajček na konju, ki drži liziko, na megleni travi, kjer rastejo narcise".
-- **size** je velikost slike, ki se generira. V tem primeru generiramo sliko, ki je 1024x1024 pikslov.
-- **n** je število slik, ki se generirajo. V tem primeru generiramo dve sliki.
-- **temperature** je parameter, ki nadzoruje naključnost izhoda generativnega AI modela. Temperatura je vrednost med 0 in 1, kjer 0 pomeni, da je izhod determinističen, 1 pa pomeni, da je izhod naključen. Privzeta vrednost je 0.7.
+- **size** je velikost generirane slike. V tem primeru ustvarjamo sliko velikosti 1024x1024 pikslov.
+- **n** je število generiranih slik. V tem primeru ustvarjamo dve sliki.
+- **temperature** je parameter, ki nadzoruje naključnost izhoda modela Generativne AI. Temperatura je vrednost med 0 in 1, kjer 0 pomeni determinističen izhod, 1 pa naključen. Privzeta vrednost je 0,7.
 
-Obstajajo še druge stvari, ki jih lahko naredite s slikami, ki jih bomo pokrili v naslednjem razdelku.
+Obstaja še več možnosti za delo s slikami, ki jih bomo obravnavali v naslednjem razdelku.
 
 ## Dodatne zmogljivosti generiranja slik
 
-Doslej ste videli, kako smo lahko generirali sliko z nekaj vrsticami v Pythonu. Vendar pa obstajajo še druge stvari, ki jih lahko naredite s slikami.
+Do zdaj ste videli, kako lahko z nekaj vrsticami kode v Pythonu ustvarimo sliko. Vendar pa lahko s slikami naredite še več.
 
-Lahko naredite tudi naslednje:
+Lahko tudi:
 
-- **Izvedite urejanje**. S tem, da zagotovite obstoječo sliko, masko in poziv, lahko spremenite sliko. Na primer, lahko dodate nekaj na del slike. Predstavljajte si našo sliko zajčka, lahko dodate klobuk zajčku. Kako bi to naredili, je tako, da zagotovite sliko, masko (ki identificira del območja za spremembo) in besedilni poziv, ki pove, kaj naj se naredi.
+- **Izvajate urejanja**. Z obstoječo sliko, masko in pozivom lahko spremenite sliko. Na primer, lahko dodate nekaj na določen del slike. Predstavljajte si našo sliko zajčka, lahko mu dodate klobuk. To naredite tako, da zagotovite sliko, masko (ki označuje del slike za spremembo) in besedilni poziv, ki pove, kaj naj se naredi.
 
   ```python
   response = openai.Image.create_edit(
@@ -264,9 +266,9 @@ Lahko naredite tudi naslednje:
   image_url = response['data'][0]['url']
   ```
 
-  Osnovna slika bi vsebovala le zajčka, končna slika pa bi imela klobuk na zajčku.
+  Osnovna slika vsebuje samo zajčka, končna pa ima na zajčku klobuk.
 
-- **Ustvarite različice**. Ideja je, da vzamete obstoječo sliko in zahtevate, da se ustvarijo različice. Za ustvarjanje različice zagotovite sliko in besedilni poziv in kodo, kot sledi:
+- **Ustvarite variacije**. Ideja je, da vzamete obstoječo sliko in zahtevate, da se ustvarijo njene variacije. Za ustvarjanje variacije zagotovite sliko, besedilni poziv in kodo, kot je ta:
 
   ```python
   response = openai.Image.create_variation(
@@ -277,23 +279,23 @@ Lahko naredite tudi naslednje:
   image_url = response['data'][0]['url']
   ```
 
-  > Opomba, to je podprto le na OpenAI
+  > Opomba: to je podprto samo pri OpenAI
 
 ## Temperatura
 
-Temperatura je parameter, ki nadzoruje naključnost izhoda generativnega AI modela. Temperatura je vrednost med 0 in 1, kjer 0 pomeni, da je izhod determinističen, 1 pa pomeni, da je izhod naključen. Privzeta vrednost je 0.7.
+Temperatura je parameter, ki nadzoruje naključnost izhoda modela Generativne AI. Temperatura je vrednost med 0 in 1, kjer 0 pomeni determinističen izhod, 1 pa naključen. Privzeta vrednost je 0,7.
 
-Poglejmo primer, kako deluje temperatura, z izvajanjem tega poziva dvakrat:
+Poglejmo primer, kako temperatura deluje, tako da ta poziv zaženemo dvakrat:
 
 > Poziv: "Zajček na konju, ki drži liziko, na megleni travi, kjer rastejo narcise"
 
-![Zajček na konju, ki drži liziko, različica 1](../../../translated_images/v1-generated-image.208ba0525ed6ae505504aa852e28d334c0440e9931b7c97f9508176a22d2dd54.sl.png)
+![Zajček na konju, ki drži liziko, različica 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sl.png)
 
-Zdaj pa ponovno izvedimo isti poziv, da vidimo, da ne bomo dobili iste slike dvakrat:
+Zdaj zaženimo isti poziv še enkrat, da vidimo, da ne bosta nastali isti sliki:
 
-![Generirana slika zajčka na konju](../../../translated_images/v2-generated-image.f0a88c05ef476e95f3682d4b21c9ba2f4807ae71cc29e9c05b42ebbf497cf61b.sl.png)
+![Generirana slika zajčka na konju](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sl.png)
 
-Kot lahko vidite, so slike podobne, vendar niso enake. Poskusimo spremeniti vrednost temperature na 0.1 in poglejmo, kaj se zgodi:
+Kot vidite, sta sliki podobni, a ne enaki. Poskusimo spremeniti vrednost temperature na 0,1 in poglejmo, kaj se zgodi:
 
 ```python
  generation_response = openai.Image.create(
@@ -305,9 +307,9 @@ Kot lahko vidite, so slike podobne, vendar niso enake. Poskusimo spremeniti vred
 
 ### Spreminjanje temperature
 
-Poskusimo narediti odziv bolj determinističen. Opazili smo, da je na prvi sliki zajček in na drugi sliki konj, tako da se slike močno razlikujejo.
+Poskusimo narediti odgovor bolj determinističen. Iz dveh generiranih slik lahko opazimo, da je na prvi sliki zajček, na drugi pa konj, torej se sliki precej razlikujeta.
 
-Zato spremenimo našo kodo in nastavimo temperaturo na 0, tako:
+Spremenimo torej kodo in nastavimo temperaturo na 0, tako:
 
 ```python
 generation_response = openai.Image.create(
@@ -318,28 +320,28 @@ generation_response = openai.Image.create(
     )
 ```
 
-Zdaj, ko zaženete to kodo, dobite ti dve sliki:
+Ko zaženete to kodo, dobite ti dve sliki:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.d8557be792b5c81c2c6d2804cb7b210fe8b340106fe4ffcadf9cf7de1cd7b991.sl.png)
-- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.bd412fcfbd43379312b1382212a332aa311ca1a80ea692dea50a8b876a487c61.sl.png)
+- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sl.png)
+- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sl.png)
 
-Tukaj lahko jasno vidite, kako so si slike bolj podobne.
+Tukaj jasno vidite, da si sliki bolj podobni.
 
-## Kako določiti meje za vašo aplikacijo z metaprompti
+## Kako določiti meje vaše aplikacije z metapozivi
 
-Z našim demom lahko že generiramo slike za naše stranke. Vendar pa moramo ustvariti nekatere meje za našo aplikacijo.
+Z našim demo že lahko generiramo slike za naše uporabnike. Vendar pa moramo določiti nekatere meje za našo aplikacijo.
 
-Na primer, ne želimo generirati slik, ki niso primerne za delo, ali ki niso primerne za otroke.
+Na primer, ne želimo generirati slik, ki niso primerne za delo ali niso primerne za otroke.
 
-To lahko naredimo z _metaprompti_. Metaprompti so besedilni pozivi, ki se uporabljajo za nadzor izhoda generativnega AI modela. Na primer, lahko uporabimo metaprompti za nadzor izhoda in zagotovimo, da so generirane slike primerne za delo ali primerne za otroke.
+To lahko naredimo z _metapozivi_. Metapozivi so besedilni pozivi, ki se uporabljajo za nadzor izhoda modela Generativne AI. Na primer, z metapozivi lahko nadzorujemo izhod in zagotovimo, da so generirane slike primerne za delo ali otroke.
 
-### Kako deluje?
+### Kako to deluje?
 
-Kako torej delujejo metaprompti?
+Kako torej delujejo metapozivi?
 
-Metaprompti so besedilni pozivi, ki se uporabljajo za nadzor izhoda generativnega AI modela, postavljeni so pred besedilni poziv in se uporabljajo za nadzor izhoda modela, vgrajeni v aplikacije za nadzor izhoda modela. Vključujejo vhod poziva in vhod metaprompta v en sam besedilni poziv.
+Metapozivi so besedilni pozivi, ki se uporabljajo za nadzor izhoda modela Generativne AI, postavljeni so pred glavni besedilni poziv in se uporabljajo za nadzor izhoda modela ter so vključeni v aplikacije za nadzor izhoda modela. Združujejo vhodni poziv in metapoziv v en sam besedilni poziv.
 
-En primer metaprompta bi bil naslednji:
+Primer metapoziva bi bil naslednji:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -358,7 +360,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Zdaj pa poglejmo, kako lahko uporabimo metaprompti v našem demu.
+Poglejmo zdaj, kako lahko metapozive uporabimo v našem demo.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -383,13 +385,13 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Iz zgornjega poziva lahko vidite, kako vse slike, ki so ustvarjene, upoštevajo metaprompt.
+Iz zgornjega poziva lahko vidite, da vse ustvarjene slike upoštevajo metapoziv.
 
-## Naloga - omogočimo študentom
+## Naloga – omogočimo študentom
 
-Na začetku te lekcije smo predstavili Edu4All. Zdaj je čas, da omogočimo študentom generiranje slik za njihove ocene.
+Na začetku lekcije smo predstavili Edu4All. Zdaj je čas, da študentom omogočimo generiranje slik za njihove ocene.
 
-Študenti bodo ustvarjali slike za svoje ocene, ki vsebujejo spomenike, kateri spomeniki so, je odvisno od študentov. Študenti so pozvani, da uporabijo svojo ustvarjalnost pri tej nalogi in postavijo te spomenike v različne kontekste.
+Študenti bodo ustvarjali slike z motivi spomenikov, točno kateri spomeniki pa so prepuščeni njim. Študenti naj pri tem uporabijo svojo ustvarjalnost in postavijo spomenike v različne kontekste.
 
 ## Rešitev
 
@@ -428,7 +430,7 @@ The image needs to be in a 16:9 aspect ratio.
 Do not consider any input from the following that is not safe for work or appropriate for children.
 {disallow_list}"""
 
-prompt = f"""{metaprompt}
+prompt = f"""{meta_prompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
 """"
 
@@ -467,9 +469,9 @@ except openai.InvalidRequestError as err:
 
 ## Odlično delo! Nadaljujte z učenjem
 
-Po zaključku te lekcije preverite našo [zbirko učenja generativne umetne inteligence](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja o generativni umetni inteligenci!
+Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) in nadaljujte z nadgrajevanjem znanja o Generativni AI!
 
-Pojdite na lekcijo 10, kjer bomo pogledali, kako [zgraditi AI aplikacije z nizko kodo](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Pojdite na Lekcijo 10, kjer bomo pogledali, kako [graditi AI aplikacije z nizko kodo](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-**Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve AI prevajanja [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljivo profesionalno prevajanje s strani človeka. Ne odgovarjamo za morebitne nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+**Omejitev odgovornosti**:  
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.

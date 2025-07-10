@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:06:51+00:00",
+  "translation_date": "2025-07-09T19:06:47+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "zh"
 }
 -->
-# 使用Meta家族模型进行构建
+# 使用 Meta 家族模型构建
 
 ## 介绍
 
 本课将涵盖：
 
-- 探索Meta家族的两个主要模型——Llama 3.1和Llama 3.2
-- 了解每个模型的使用场景和案例
-- 代码示例展示每个模型的独特功能
+- 探索 Meta 家族的两个主要模型——Llama 3.1 和 Llama 3.2  
+- 了解每个模型的使用场景和适用情况  
+- 通过代码示例展示每个模型的独特功能  
 
-## Meta家族模型
+## Meta 家族模型
 
-在本课中，我们将探索Meta家族或“Llama Herd”的两个模型——Llama 3.1和Llama 3.2。
+本课将介绍 Meta 家族或称“Llama Herd”的两个模型——Llama 3.1 和 Llama 3.2。
 
-这些模型有不同的变体，并在GitHub模型市场上提供。这里有更多关于使用GitHub模型进行[AI模型原型开发](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的详细信息。
+这些模型有不同的变体，并且可以在 GitHub Model 市场上获取。以下是关于如何使用 GitHub Models 来[用 AI 模型进行原型设计](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的更多信息。
 
-模型变体：
-- Llama 3.1 - 70B 指令
-- Llama 3.1 - 405B 指令
-- Llama 3.2 - 11B 视觉指令
-- Llama 3.2 - 90B 视觉指令
+模型变体：  
+- Llama 3.1 - 70B Instruct  
+- Llama 3.1 - 405B Instruct  
+- Llama 3.2 - 11B Vision Instruct  
+- Llama 3.2 - 90B Vision Instruct  
 
-*注意：Llama 3也在GitHub模型上提供，但本课不涉及*
+*注意：Llama 3 也可在 GitHub Models 上使用，但本课不涉及该模型*
 
 ## Llama 3.1
 
-拥有4050亿参数的Llama 3.1属于开源LLM类别。
+Llama 3.1 拥有 4050 亿参数，属于开源大型语言模型（LLM）类别。
 
-该模型是早期发布的Llama 3的升级版，提供：
+该模型是对早期版本 Llama 3 的升级，提供了：
 
-- 更大的上下文窗口 - 128k tokens对比8k tokens
-- 更大的最大输出tokens - 4096对比2048
-- 更好的多语言支持 - 由于训练tokens的增加
+- 更大的上下文窗口——128k 令牌，相比之前的 8k 令牌  
+- 更大的最大输出令牌数——4096，相比之前的 2048  
+- 更好的多语言支持——得益于训练令牌数量的增加  
 
-这些使得Llama 3.1在构建生成AI应用时能够处理更复杂的用例，包括：
-- 原生函数调用 - 能够调用LLM工作流之外的外部工具和函数
-- 更好的RAG性能 - 由于更高的上下文窗口
-- 合成数据生成 - 能够为微调等任务创建有效数据
+这些改进使 Llama 3.1 能够处理更复杂的生成式 AI 应用场景，包括：  
+- 原生函数调用——能够调用 LLM 工作流之外的外部工具和函数  
+- 更优的 RAG 性能——得益于更大的上下文窗口  
+- 合成数据生成——能够为微调等任务创建有效数据  
 
 ### 原生函数调用
 
-Llama 3.1经过微调，更加有效地进行函数或工具调用。它还内置了两个工具，模型可以根据用户的提示识别出需要使用这些工具。这些工具是：
+Llama 3.1 经过微调，能更有效地进行函数或工具调用。它内置了两个工具，模型可以根据用户的提示识别并调用它们。这些工具是：
 
-- **Brave Search** - 可以通过网络搜索获取最新信息，如天气
-- **Wolfram Alpha** - 可以用于更复杂的数学计算，因此不需要编写自己的函数
+- **Brave Search**——可用于通过网络搜索获取最新信息，如天气  
+- **Wolfram Alpha**——可用于更复杂的数学计算，无需自己编写函数  
 
-你还可以创建自己的自定义工具供LLM调用。
+你也可以创建自定义工具供 LLM 调用。
 
-在下面的代码示例中：
+下面的代码示例中：
 
-- 我们在系统提示中定义了可用的工具（brave_search, wolfram_alpha）。
-- 发送一个用户提示，询问某个城市的天气。
-- LLM将通过工具调用Brave Search工具进行响应，看起来像这样 `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- 在系统提示中定义了可用工具（brave_search，wolfram_alpha）。  
+- 发送一个询问某城市天气的用户提示。  
+- LLM 会响应一个调用 Brave Search 工具的请求，形式类似 `<|python_tag|>brave_search.call(query="Stockholm weather")`。
 
-*注意：此示例仅进行工具调用，如果您想获得结果，您需要在Brave API页面上创建一个免费账户并定义函数本身*
+*注意：此示例仅展示工具调用，如果想获取结果，需要在 Brave API 页面创建免费账户并定义相应函数。*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-尽管是一个LLM，Llama 3.1的一个限制是多模态性。也就是说，能够使用不同类型的输入（如图像）作为提示并提供响应。这种能力是Llama 3.2的主要特点之一。这些功能还包括：
+尽管 Llama 3.1 是一个大型语言模型，但它的一个限制是缺乏多模态能力，即无法使用图像等不同类型的输入作为提示并给出响应。Llama 3.2 的主要特点之一就是具备这种能力。其功能还包括：
 
-- 多模态性 - 能够评估文本和图像提示
-- 小到中等尺寸变体（11B和90B） - 提供灵活的部署选项
-- 仅文本变体（1B和3B） - 允许模型在边缘/移动设备上部署并提供低延迟
+- 多模态——能够同时处理文本和图像提示  
+- 小到中等规模变体（11B 和 90B）——提供灵活的部署选项  
+- 纯文本变体（1B 和 3B）——支持边缘/移动设备部署，延迟低  
 
-多模态支持代表了开源模型世界的一大进步。下面的代码示例同时使用图像和文本提示来获取Llama 3.2 90B对图像的分析。
+多模态支持是开源模型领域的一大进步。下面的代码示例展示了如何使用 Llama 3.2 90B 同时输入图像和文本提示，获取对图像的分析。
 
-### Llama 3.2的多模态支持
+### Llama 3.2 的多模态支持
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## 学习不止于此，继续探索之旅
+## 学习永不止步，继续前行
 
-完成本课后，请查看我们的[生成AI学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升您的生成AI知识！
+完成本课后，欢迎访问我们的[生成式 AI 学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升你的生成式 AI 知识！
 
 **免责声明**：  
-本文档使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。虽然我们努力确保准确性，但请注意，自动翻译可能包含错误或不准确之处。应将原始语言的文档视为权威来源。对于关键信息，建议进行专业人工翻译。对于因使用此翻译而产生的任何误解或误读，我们不承担责任。
+本文件使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。虽然我们力求准确，但请注意，自动翻译可能包含错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议采用专业人工翻译。对于因使用本翻译而产生的任何误解或误释，我们概不负责。

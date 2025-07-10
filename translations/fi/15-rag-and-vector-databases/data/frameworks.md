@@ -2,124 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:01:27+00:00",
+  "translation_date": "2025-07-09T16:33:34+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "fi"
 }
 -->
-# Neuraaliverkkojen kehykset
+# Neuroverkkojen kehykset
 
-Kuten olemme jo oppineet, tehokkaaseen neuraaliverkkojen kouluttamiseen tarvitaan kaksi asiaa:
+Kuten olemme jo oppineet, neuroverkkojen tehokkaaseen kouluttamiseen tarvitsemme kaksi asiaa:
 
-* Operoida tensorien kanssa, esimerkiksi kertoa, lisätä ja laskea joitain funktioita kuten sigmoid tai softmax
-* Laskea kaikkien lausekkeiden gradientit, jotta voidaan suorittaa gradienttilaskeutumisoptimointi
+* Kyvyn käsitellä tensoreita, esimerkiksi kertoa, laskea yhteen ja suorittaa funktioita kuten sigmoid tai softmax
+* Kyvyn laskea kaikkien lausekkeiden gradientit gradienttilaskennan suorittamiseksi
 
-Vaikka `numpy`-kirjasto pystyy tekemään ensimmäisen osan, tarvitsemme jonkin mekanismin gradienttien laskemiseen. Kehyksessämme, jonka kehitimme edellisessä osassa, jouduimme ohjelmoimaan kaikki derivatiivifunktiot manuaalisesti `backward`-menetelmän sisällä, joka tekee takapropagoinnin. Ihanteellisesti kehyksen tulisi antaa meille mahdollisuus laskea *minkä tahansa lausekkeen* gradientit, joita voimme määritellä.
+Vaikka `numpy`-kirjasto pystyy hoitamaan ensimmäisen osan, tarvitsemme mekanismin gradienttien laskemiseen. Kehyksessämme, jonka kehitimme edellisessä osassa, jouduimme ohjelmoimaan kaikki derivaatat manuaalisesti `backward`-metodiin, joka suorittaa takaisinkytkennän. Ihanteellisesti kehys antaisi mahdollisuuden laskea gradientit *mille tahansa lausekkeelle*, jonka voimme määritellä.
 
-Toinen tärkeä asia on kyetä suorittamaan laskutoimituksia GPU:lla tai muilla erikoistuneilla laskentayksiköillä, kuten TPU:lla. Syvien neuraaliverkkojen kouluttaminen vaatii *paljon* laskutoimituksia, ja niiden laskutoimitusten rinnakkaistaminen GPU:illa on erittäin tärkeää.
+Toinen tärkeä asia on kyky suorittaa laskutoimituksia GPU:lla tai muilla erikoistuneilla laskentayksiköillä, kuten TPU:lla. Syvien neuroverkkojen koulutus vaatii *paljon* laskentaa, ja laskentojen rinnakkaistaminen GPU:illa on erittäin tärkeää.
 
-> ✅ Termi 'rinnakkaistaminen' tarkoittaa laskutoimitusten jakamista useille laitteille.
+> ✅ Termi 'rinnakkaistaa' tarkoittaa laskentojen jakamista useille laitteille.
 
-Tällä hetkellä kaksi suosituinta neuraaliverkkojen kehystä ovat: TensorFlow ja PyTorch. Molemmat tarjoavat matalan tason API:n tensorien käsittelyyn sekä CPU:lla että GPU:lla. Matalan tason API:n lisäksi on myös korkean tason API, nimeltään vastaavasti Keras ja PyTorch Lightning.
+Tällä hetkellä kaksi suosituimpaa neuroverkkokehystä ovat TensorFlow ja PyTorch. Molemmat tarjoavat matalan tason API:n tensorien käsittelyyn sekä CPU:lla että GPU:lla. Matalan tason API:n päällä on myös korkean tason API, nimeltään vastaavasti Keras ja PyTorch Lightning.
 
-Matalan tason API | TensorFlow| PyTorch
---------------|-------------------------------------|--------------------------------
-Korkean tason API| Keras| Pytorch
+Matalan tason API | TensorFlow | PyTorch
+-----------------|------------|---------
+Korkean tason API| Keras      | PyTorch
 
-**Matalan tason API:t** molemmissa kehyksissä mahdollistavat niin kutsuttujen **laskentagraafien** rakentamisen. Tämä graafi määrittelee, miten lasketaan ulostulo (yleensä häviöfunktio) annettujen syöttöparametrien kanssa, ja se voidaan työntää laskettavaksi GPU:lle, jos se on saatavilla. On olemassa funktioita, jotka erottavat tämän laskentagraafin ja laskevat gradientit, joita voidaan sitten käyttää malliparametrien optimointiin.
+**Matalan tason API:t** molemmissa kehyksissä mahdollistavat ns. **laskentakaavioiden** rakentamisen. Tämä kaavio määrittelee, miten lasketaan lähtöarvo (yleensä häviöfunktio) annetuilla syöteparametreilla, ja se voidaan suorittaa GPU:lla, jos sellainen on käytettävissä. On olemassa funktioita, joilla tätä laskentakaaviota voidaan derivoida ja laskea gradientit, joita voidaan käyttää mallin parametrien optimointiin.
 
-**Korkean tason API:t** käsittelevät neuraaliverkkoja pääasiassa **kerrosten sarjana**, ja tekevät useimpien neuraaliverkkojen rakentamisesta paljon helpompaa. Mallin kouluttaminen vaatii yleensä datan valmistelua ja sitten `fit`-funktion kutsumista työn tekemiseksi.
+**Korkean tason API:t** käsittelevät neuroverkkoja käytännössä **kerrosten sarjana**, mikä helpottaa useimpien neuroverkkojen rakentamista huomattavasti. Mallin koulutus vaatii yleensä datan valmistelun ja sitten `fit`-funktion kutsumisen työn suorittamiseksi.
 
-Korkean tason API:n avulla voit rakentaa tyypillisiä neuraaliverkkoja erittäin nopeasti ilman huolta monista yksityiskohdista. Samalla matalan tason API tarjoaa paljon enemmän kontrollia koulutusprosessiin, ja siksi niitä käytetään paljon tutkimuksessa, kun käsitellään uusia neuraaliverkkoarkkitehtuureja.
+Korkean tason API:n avulla voit rakentaa tyypillisiä neuroverkkoja nopeasti ilman, että sinun tarvitsee huolehtia monista yksityiskohdista. Samaan aikaan matalan tason API tarjoaa paljon enemmän kontrollia koulutusprosessiin, ja siksi sitä käytetään paljon tutkimuksessa, kun työskennellään uusien neuroverkkorakenteiden parissa.
 
-On myös tärkeää ymmärtää, että voit käyttää molempia API:ta yhdessä, esimerkiksi voit kehittää oman verkon kerrosarkkitehtuurin matalan tason API:n avulla ja sitten käyttää sitä suuremmassa verkossa, joka on rakennettu ja koulutettu korkean tason API:lla. Tai voit määritellä verkon korkean tason API:n avulla kerrosten sarjana ja sitten käyttää omaa matalan tason koulutusloopia optimoinnin suorittamiseen. Molemmat API:t käyttävät samoja peruskäsitteitä, ja ne on suunniteltu toimimaan hyvin yhdessä.
+On myös tärkeää ymmärtää, että molempia API:ita voi käyttää yhdessä, esimerkiksi voit kehittää oman verkon kerrosarkkitehtuurin matalan tason API:lla ja käyttää sitä sitten suuremmassa verkossa, joka on rakennettu ja koulutettu korkean tason API:lla. Tai voit määritellä verkon korkean tason API:lla kerrosten sarjana ja käyttää omaa matalan tason koulutussilmukkaasi optimointiin. Molemmat API:t perustuvat samoihin peruskäsitteisiin ja on suunniteltu toimimaan hyvin yhdessä.
 
 ## Oppiminen
 
-Tässä kurssissa tarjoamme suurimman osan sisällöstä sekä PyTorchille että TensorFlow'lle. Voit valita mieluisan kehyksen ja käydä läpi vastaavat muistikirjat. Jos et ole varma, minkä kehyksen valitsisit, lue keskusteluja internetissä **PyTorch vs. TensorFlow**. Voit myös tutustua molempiin kehyksiin saadaksesi paremman ymmärryksen.
+Tässä kurssissa tarjoamme suurimman osan sisällöstä sekä PyTorchille että TensorFlow:lle. Voit valita mieluisimman kehyksen ja käydä läpi vain siihen liittyvät muistikirjat. Jos et ole varma, kumpaa kehystä valita, lue netistä keskusteluja aiheesta **PyTorch vs. TensorFlow**. Voit myös tutustua molempiin kehyksiin saadaksesi paremman käsityksen.
 
-Missä mahdollista, käytämme korkean tason API:ta yksinkertaisuuden vuoksi. Uskomme kuitenkin, että on tärkeää ymmärtää, miten neuraaliverkot toimivat alusta alkaen, joten aluksi aloitamme työskentelemällä matalan tason API:n ja tensorien kanssa. Kuitenkin, jos haluat päästä nopeasti alkuun etkä halua käyttää paljon aikaa näiden yksityiskohtien oppimiseen, voit ohittaa ne ja siirtyä suoraan korkean tason API-muistikirjoihin.
+Missä mahdollista, käytämme yksinkertaisuuden vuoksi korkean tason API:ita. Uskomme kuitenkin, että on tärkeää ymmärtää neuroverkkojen toiminta alusta alkaen, joten aluksi työskentelemme matalan tason API:n ja tensorien kanssa. Jos haluat kuitenkin päästä nopeasti alkuun etkä halua käyttää paljon aikaa näiden yksityiskohtien oppimiseen, voit hypätä suoraan korkean tason API:n muistikirjoihin.
 
 ## ✍️ Harjoitukset: Kehykset
 
 Jatka oppimista seuraavissa muistikirjoissa:
 
-Matalan tason API | TensorFlow+Keras Notebook | PyTorch
---------------|-------------------------------------|--------------------------------
-Korkean tason API| Keras | *PyTorch Lightning*
+Matalan tason API | TensorFlow+Keras -muistikirja | PyTorch
+-----------------|-------------------------------|---------
+Korkean tason API| Keras                         | *PyTorch Lightning*
 
-Kun olet hallinnut kehykset, kerrataan ylikapasitoinnin käsite.
+Kun olet hallinnut kehykset, kerrataan vielä ylisovittamisen käsite.
 
-# Ylikapasitointi
+# Ylisovittaminen
 
-Ylikapasitointi on erittäin tärkeä käsite koneoppimisessa, ja on erittäin tärkeää saada se oikein!
+Ylisovittaminen on erittäin tärkeä käsite koneoppimisessa, ja sen ymmärtäminen oikein on ratkaisevan tärkeää!
 
-Tarkastellaan seuraavaa ongelmaa, jossa pyritään arvioimaan 5 pistettä (edustettuna `x` alla olevissa graafeissa):
+Tarkastellaan seuraavaa ongelmaa, jossa pyritään approksimoimaan 5 pistettä (joita on merkitty `x` alla olevissa kaavioissa):
 
-!lineaarinen | ylikapasitointi
+!linear | overfit
 -------------------------|--------------------------
 **Lineaarinen malli, 2 parametria** | **Ei-lineaarinen malli, 7 parametria**
-Koulutusvirhe = 5.3 | Koulutusvirhe = 0
+Koulutuksen virhe = 5.3 | Koulutuksen virhe = 0
 Validointivirhe = 5.1 | Validointivirhe = 20
 
-* Vasemmalla näemme hyvän suoran viivan arvioinnin. Koska parametrien määrä on riittävä, malli ymmärtää pistejakautuman oikein.
-* Oikealla malli on liian voimakas. Koska meillä on vain 5 pistettä ja mallilla on 7 parametria, se voi säätää itsensä siten, että se kulkee kaikkien pisteiden läpi, mikä tekee koulutusvirheestä 0. Tämä estää mallia ymmärtämästä datan oikeaa mallia, ja siksi validointivirhe on erittäin korkea.
+* Vasemmalla näemme hyvän suoran viivan approksimaation. Koska parametrien määrä on sopiva, malli ymmärtää pisteiden jakauman oikein.
+* Oikealla malli on liian voimakas. Koska meillä on vain 5 pistettä ja mallilla on 7 parametria, se voi sovittaa kaikki pisteet tarkasti, jolloin koulutuksen virhe on 0. Tämä estää mallia ymmärtämästä datan oikeaa kaavaa, minkä vuoksi validointivirhe on hyvin korkea.
 
 On erittäin tärkeää löytää oikea tasapaino mallin rikkauden (parametrien määrä) ja koulutusnäytteiden määrän välillä.
 
-## Miksi ylikapasitointi tapahtuu
+## Miksi ylisovittaminen tapahtuu
 
-  * Ei tarpeeksi koulutusdataa
+  * Liian vähän koulutusdataa
   * Liian voimakas malli
-  * Liikaa kohinaa syöttödatoissa
+  * Liikaa kohinaa syötteessä
 
-## Kuinka havaita ylikapasitointi
+## Miten havaita ylisovittaminen
 
-Kuten yllä olevasta graafista näet, ylikapasitointi voidaan havaita erittäin alhaisella koulutusvirheellä ja korkealla validointivirheellä. Normaalisti koulutuksen aikana näemme sekä koulutus- että validointivirheiden alkavan pienentyä, ja sitten jossain vaiheessa validointivirhe saattaa lakata pienentymästä ja alkaa kasvaa. Tämä on merkki ylikapasitoinnista, ja indikaattori siitä, että meidän pitäisi luultavasti lopettaa koulutus tässä vaiheessa (tai ainakin tehdä mallista tilannekuva).
+Kuten yllä olevasta kaaviosta näkyy, ylisovittaminen voidaan havaita hyvin matalasta koulutusvirheestä ja korkeasta validointivirheestä. Tavallisesti koulutuksen aikana sekä koulutus- että validointivirheet alkavat pienentyä, mutta jossain vaiheessa validointivirhe saattaa lakata pienentymästä ja alkaa kasvaa. Tämä on merkki ylisovittamisesta ja osoitus siitä, että koulutus kannattaa todennäköisesti lopettaa tässä vaiheessa (tai ainakin tallentaa mallin tilanne).
 
-ylikapasitointi
+ylisovittaminen
 
-## Kuinka estää ylikapasitointi
+## Miten estää ylisovittamista
 
-Jos huomaat, että ylikapasitointia tapahtuu, voit tehdä jonkin seuraavista:
+Jos huomaat ylisovittamista, voit tehdä seuraavia asioita:
 
- * Lisää koulutusdatan määrää
- * Vähennä mallin monimutkaisuutta
- * Käytä jotakin säännöllistämistekniikkaa, kuten Dropout, jota käsittelemme myöhemmin.
+ * Lisätä koulutusdatan määrää
+ * Vähentää mallin monimutkaisuutta
+ * Käyttää jonkinlaista regularisointitekniikkaa, kuten Dropoutia, jota käsittelemme myöhemmin.
 
-## Ylikapasitointi ja harha-varianssi kompromissi
+## Ylisovittaminen ja bias-varianssi-vaihtokauppa
 
-Ylikapasitointi on itse asiassa tapaus yleisemmästä ongelmasta tilastotieteessä, nimeltään harha-varianssi kompromissi. Jos tarkastelemme mahdollisia virhelähteitä mallissamme, näemme kaksi tyyppistä virhettä:
+Ylisovittaminen on itse asiassa osa laajempaa tilastotieteellistä ongelmaa, jota kutsutaan bias-varianssi-vaihtokaupaksi. Kun tarkastelemme mallin virhelähteitä, voimme erottaa kaksi virhetyyppiä:
 
-* **Harhavirheet** johtuvat siitä, että algoritmimme ei pysty sieppaamaan koulutusdatan välistä suhdetta oikein. Se voi johtua siitä, että mallimme ei ole tarpeeksi voimakas (**alikapasitointi**).
-* **Varianssivirheet**, jotka johtuvat siitä, että malli arvioi syöttödatan kohinaa merkityksellisen suhteen sijasta (**ylikapasitointi**).
+* **Bias-virheet** johtuvat siitä, että algoritmimme ei pysty mallintamaan koulutusdatan ja mallin välistä suhdetta oikein. Tämä voi johtua siitä, että mallimme ei ole tarpeeksi voimakas (**alisovittaminen**).
+* **Varianssivirheet** johtuvat siitä, että malli sovittaa kohinaa syötteessä merkityksellisen suhteen sijaan (**ylisovittaminen**).
 
-Koulutuksen aikana harhavirhe vähenee (kun mallimme oppii arvioimaan dataa), ja varianssivirhe kasvaa. On tärkeää lopettaa koulutus - joko manuaalisesti (kun havaitsemme ylikapasitoinnin) tai automaattisesti (säännöllistämisen avulla) - estääksemme ylikapasitoinnin.
+Koulutuksen aikana bias-virhe pienenee (kun malli oppii approksimoimaan dataa), mutta varianssivirhe kasvaa. On tärkeää lopettaa koulutus joko manuaalisesti (kun havaitsemme ylisovittamisen) tai automaattisesti (ottamalla käyttöön regularisointi) ylisovittamisen estämiseksi.
 
-## Johtopäätös
+## Yhteenveto
 
-Tässä oppitunnissa opit eroja kahden suosituimman AI-kehyksen, TensorFlow'n ja PyTorchin, eri API:iden välillä. Lisäksi opit erittäin tärkeästä aiheesta, ylikapasitoinnista.
+Tässä oppitunnissa opit eroja kahden suosituimman tekoälykehyksen, TensorFlow:n ja PyTorchin, eri API:iden välillä. Lisäksi opit erittäin tärkeästä aiheesta, ylisovittamisesta.
 
 ## 🚀 Haaste
 
-Liitetyissä muistikirjoissa löydät 'tehtäviä' alareunassa; käy läpi muistikirjat ja suorita tehtävät.
+Mukana olevissa muistikirjoissa löydät tehtäviä sivun alareunasta; käy muistikirjat läpi ja suorita tehtävät.
 
-## Katsaus ja itseopiskelu
+## Kertaus & Itsenäinen opiskelu
 
-Tee tutkimusta seuraavista aiheista:
+Tutki seuraavia aiheita:
 
 - TensorFlow
 - PyTorch
-- Ylikapasitointi
+- Ylisovittaminen
 
 Kysy itseltäsi seuraavat kysymykset:
 
-- Mikä on ero TensorFlow'n ja PyTorchin välillä?
-- Mikä on ero ylikapasitoinnin ja alikapasitoinnin välillä?
+- Mikä on ero TensorFlow:n ja PyTorchin välillä?
+- Mikä on ero ylisovittamisen ja alisovittamisen välillä?
 
 ## Tehtävä
 
-Tässä laboratoriossa sinua pyydetään ratkaisemaan kaksi luokitteluongelmaa käyttäen yksikerroksisia ja monikerroksisia täysin kytkettyjä verkkoja PyTorchilla tai TensorFlow'lla.
+Tässä laboratoriossa sinun tulee ratkaista kaksi luokitteluongelmaa käyttäen yksikerroksisia ja monikerroksisia täysin yhdistettyjä verkkoja PyTorchilla tai TensorFlow:lla.
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta ole tietoinen siitä, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää virallisena lähteenä. Kriittisen tiedon kohdalla suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinkäsityksistä tai virheellisistä tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

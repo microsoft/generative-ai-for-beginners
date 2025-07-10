@@ -1,135 +1,145 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T09:25:57+00:00",
+  "original_hash": "7f8f4c11f8c1cb6e1794442dead414ea",
+  "translation_date": "2025-07-09T08:55:14+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "pl"
 }
 -->
-# Odpowiedzialne Wykorzystanie Generatywnej AI
+# Odpowiedzialne korzystanie z Generatywnej AI
 
-> _Kliknij powyższy obrazek, aby obejrzeć wideo tej lekcji_
+[![Odpowiedzialne korzystanie z Generatywnej AI](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.pl.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
-Łatwo jest zafascynować się sztuczną inteligencją, a szczególnie generatywną AI, ale musisz zastanowić się, jak używać jej odpowiedzialnie. Trzeba rozważyć takie rzeczy, jak zapewnienie, że wyniki są sprawiedliwe, nie szkodzą i inne. Ten rozdział ma na celu dostarczenie kontekstu, co należy rozważyć i jak podjąć aktywne kroki, aby poprawić swoje korzystanie z AI.
+> _Kliknij powyższy obraz, aby obejrzeć wideo z tej lekcji_
+
+Łatwo jest zafascynować się AI, a szczególnie generatywną AI, ale trzeba zastanowić się, jak korzystać z niej odpowiedzialnie. Należy wziąć pod uwagę takie kwestie, jak zapewnienie, że wyniki są sprawiedliwe, nieszkodliwe i inne. Ten rozdział ma na celu dostarczyć Ci kontekstu, na co zwracać uwagę i jak podejmować aktywne kroki, aby poprawić sposób korzystania z AI.
 
 ## Wprowadzenie
 
-Ta lekcja obejmie:
+W tej lekcji omówimy:
 
-- Dlaczego powinieneś priorytetowo traktować Odpowiedzialną AI przy tworzeniu aplikacji Generatywnej AI.
-- Główne zasady Odpowiedzialnej AI i jak odnoszą się one do Generatywnej AI.
-- Jak wdrażać te zasady Odpowiedzialnej AI w praktyce poprzez strategie i narzędzia.
+- Dlaczego warto priorytetowo traktować Responsible AI podczas tworzenia aplikacji Generatywnej AI.
+- Podstawowe zasady Responsible AI i ich związek z Generatywną AI.
+- Jak wdrożyć zasady Responsible AI w praktyce poprzez strategię i narzędzia.
 
 ## Cele nauki
 
 Po ukończeniu tej lekcji będziesz wiedzieć:
 
-- Jak ważna jest Odpowiedzialna AI przy tworzeniu aplikacji Generatywnej AI.
-- Kiedy myśleć i stosować główne zasady Odpowiedzialnej AI przy tworzeniu aplikacji Generatywnej AI.
-- Jakie narzędzia i strategie są dostępne, aby wprowadzić koncepcję Odpowiedzialnej AI w życie.
+- Jak ważne jest Responsible AI przy tworzeniu aplikacji Generatywnej AI.
+- Kiedy myśleć o i stosować podstawowe zasady Responsible AI podczas tworzenia aplikacji Generatywnej AI.
+- Jakie narzędzia i strategie są dostępne, aby wprowadzić koncepcję Responsible AI w życie.
 
-## Zasady Odpowiedzialnej AI
+## Zasady Responsible AI
 
-Ekscytacja Generatywną AI nigdy nie była większa. Ta ekscytacja przyciągnęła wielu nowych deweloperów, uwagę i finansowanie do tej przestrzeni. Chociaż jest to bardzo pozytywne dla każdego, kto chce budować produkty i firmy z wykorzystaniem Generatywnej AI, ważne jest, aby postępować odpowiedzialnie.
+Ekscytacja wokół Generatywnej AI nigdy nie była większa. Ta ekscytacja przyciągnęła wielu nowych deweloperów, uwagę i finansowanie do tej dziedziny. Choć jest to bardzo pozytywne dla każdego, kto chce budować produkty i firmy wykorzystujące Generatywną AI, ważne jest, aby działać odpowiedzialnie.
 
-W całym tym kursie skupiamy się na budowaniu naszego startupu i naszego produktu edukacyjnego AI. Użyjemy zasad Odpowiedzialnej AI: Sprawiedliwość, Włączanie, Niezawodność/Bezpieczeństwo, Bezpieczeństwo i Prywatność, Przejrzystość i Odpowiedzialność. Dzięki tym zasadom zbadamy, jak odnoszą się one do naszego wykorzystania Generatywnej AI w naszych produktach.
+W trakcie tego kursu skupiamy się na budowaniu naszego startupu i produktu edukacyjnego opartego na AI. Będziemy korzystać z zasad Responsible AI: Sprawiedliwość, Włączanie, Niezawodność/Bezpieczeństwo, Bezpieczeństwo i Prywatność, Przejrzystość oraz Odpowiedzialność. Na podstawie tych zasad przeanalizujemy, jak odnoszą się one do naszego wykorzystania Generatywnej AI w produktach.
 
-## Dlaczego Powinieneś Priorytetowo Traktować Odpowiedzialną AI
+## Dlaczego warto priorytetowo traktować Responsible AI
 
-Podczas budowania produktu, podejście zorientowane na człowieka, które uwzględnia najlepsze interesy użytkownika, prowadzi do najlepszych wyników.
+Podczas tworzenia produktu podejście skoncentrowane na człowieku, z myślą o dobru użytkownika, prowadzi do najlepszych rezultatów.
 
-Unikalność Generatywnej AI polega na jej mocy tworzenia pomocnych odpowiedzi, informacji, wskazówek i treści dla użytkowników. Można to zrobić bez wielu ręcznych kroków, co może prowadzić do bardzo imponujących wyników. Bez odpowiedniego planowania i strategii, niestety, może to również prowadzić do szkodliwych wyników dla użytkowników, produktu i całego społeczeństwa.
+Unikalność Generatywnej AI polega na jej zdolności do tworzenia pomocnych odpowiedzi, informacji, wskazówek i treści dla użytkowników. Można to osiągnąć bez wielu ręcznych kroków, co może prowadzić do imponujących efektów. Jednak bez odpowiedniego planowania i strategii może to niestety prowadzić do szkodliwych skutków dla użytkowników, produktu i społeczeństwa jako całości.
 
-Przyjrzyjmy się niektórym (choć nie wszystkim) z tych potencjalnie szkodliwych wyników:
+Przyjrzyjmy się niektórym (choć nie wszystkim) potencjalnie szkodliwym skutkom:
 
 ### Halucynacje
 
-Halucynacje to termin używany do opisania sytuacji, gdy LLM generuje treść, która jest całkowicie bezsensowna lub coś, co wiemy, że jest faktycznie błędne na podstawie innych źródeł informacji.
+Halucynacje to termin używany do opisania sytuacji, gdy LLM generuje treści, które są całkowicie bezsensowne lub wiemy, że są faktograficznie błędne na podstawie innych źródeł informacji.
 
-Weźmy na przykład, że budujemy funkcję dla naszego startupu, która pozwala studentom zadawać modelowi pytania historyczne. Student zadaje pytanie `Who was the sole survivor of Titanic?`
+Weźmy na przykład funkcję w naszym startupie, która pozwala studentom zadawać pytania historyczne modelowi. Student pyta: `Kto był jedynym ocalałym z Titanica?`
 
-Model generuje odpowiedź taką jak poniżej:
+Model generuje odpowiedź podobną do poniższej:
 
-To jest bardzo pewna siebie i szczegółowa odpowiedź. Niestety, jest nieprawidłowa. Nawet przy minimalnym badaniu można by odkryć, że więcej niż jedna osoba przeżyła katastrofę Titanica. Dla studenta, który dopiero zaczyna badać ten temat, ta odpowiedź może być na tyle przekonująca, że nie zostanie zakwestionowana i potraktowana jako fakt. Konsekwencje tego mogą prowadzić do tego, że system AI będzie niewiarygodny i negatywnie wpłynie na reputację naszego startupu.
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
-Z każdą iteracją danego LLM widzimy poprawę wydajności w zakresie minimalizowania halucynacji. Nawet przy tej poprawie, jako twórcy aplikacji i użytkownicy, musimy być świadomi tych ograniczeń.
+> _(Źródło: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
-### Szkodliwe Treści
+To bardzo pewna i szczegółowa odpowiedź. Niestety jest błędna. Nawet przy minimalnym researchu można odkryć, że ocalałych z katastrofy Titanica było więcej niż jeden. Dla studenta, który dopiero zaczyna zgłębiać ten temat, odpowiedź może być na tyle przekonująca, że nie zostanie poddana w wątpliwość i potraktowana jako fakt. Konsekwencje tego mogą sprawić, że system AI stanie się niewiarygodny i negatywnie wpłynie na reputację naszego startupu.
 
-Omówiliśmy w poprzedniej sekcji, kiedy LLM generuje nieprawidłowe lub bezsensowne odpowiedzi. Innym ryzykiem, które musimy mieć na uwadze, jest sytuacja, gdy model odpowiada szkodliwymi treściami.
+Z każdą kolejną wersją dowolnego LLM obserwujemy poprawę w minimalizowaniu halucynacji. Mimo tych postępów my, jako twórcy aplikacji i użytkownicy, musimy być świadomi tych ograniczeń.
+
+### Szkodliwe treści
+
+W poprzedniej sekcji omówiliśmy sytuacje, gdy LLM generuje niepoprawne lub bezsensowne odpowiedzi. Innym ryzykiem, o którym musimy pamiętać, jest sytuacja, gdy model odpowiada szkodliwymi treściami.
 
 Szkodliwe treści można zdefiniować jako:
 
-- Dostarczanie instrukcji lub zachęcanie do samookaleczeń lub krzywdzenia określonych grup.
+- Udzielanie instrukcji lub zachęcanie do samookaleczenia lub krzywdzenia określonych grup.
 - Treści nienawistne lub poniżające.
-- Kierowanie planowaniem jakiegokolwiek rodzaju ataku lub aktów przemocy.
-- Dostarczanie instrukcji, jak znaleźć nielegalne treści lub popełniać nielegalne czyny.
-- Wyświetlanie treści o charakterze seksualnym.
+- Pomoc w planowaniu ataków lub aktów przemocy.
+- Udzielanie instrukcji, jak znaleźć nielegalne treści lub popełnić przestępstwa.
+- Prezentowanie treści o charakterze seksualnym.
 
-Dla naszego startupu chcemy mieć pewność, że mamy odpowiednie narzędzia i strategie, aby zapobiec widoczności tego typu treści przez studentów.
+Dla naszego startupu ważne jest, aby mieć odpowiednie narzędzia i strategie zapobiegające wyświetlaniu tego typu treści studentom.
 
-### Brak Sprawiedliwości
+### Brak sprawiedliwości
 
-Sprawiedliwość definiuje się jako "zapewnienie, że system AI jest wolny od uprzedzeń i dyskryminacji oraz że traktuje wszystkich sprawiedliwie i równo". W świecie Generatywnej AI chcemy upewnić się, że wykluczające światopoglądy marginalizowanych grup nie są wzmacniane przez output modelu.
+Sprawiedliwość definiuje się jako „zapewnienie, że system AI jest wolny od uprzedzeń i dyskryminacji oraz traktuje wszystkich uczciwie i równo.” W świecie Generatywnej AI chcemy mieć pewność, że wykluczające poglądy na temat grup marginalizowanych nie są wzmacniane przez wyniki modelu.
 
-Tego typu wyniki nie tylko niszczą pozytywne doświadczenia produktowe dla naszych użytkowników, ale także powodują dalsze szkody społeczne. Jako twórcy aplikacji powinniśmy zawsze mieć na uwadze szeroką i zróżnicowaną bazę użytkowników podczas budowania rozwiązań z Generatywną AI.
+Takie wyniki nie tylko niszczą pozytywne doświadczenia użytkowników, ale także powodują dalsze szkody społeczne. Jako twórcy aplikacji powinniśmy zawsze mieć na uwadze szeroką i zróżnicowaną bazę użytkowników podczas tworzenia rozwiązań z wykorzystaniem Generatywnej AI.
 
-## Jak Odpowiedzialnie Wykorzystywać Generatywną AI
+## Jak korzystać z Generatywnej AI odpowiedzialnie
 
-Teraz, gdy zidentyfikowaliśmy znaczenie Odpowiedzialnej Generatywnej AI, przyjrzyjmy się 4 krokom, które możemy podjąć, aby odpowiedzialnie budować nasze rozwiązania AI:
+Skoro już wiemy, jak ważne jest Responsible Generative AI, przyjrzyjmy się 4 krokom, które możemy podjąć, aby budować nasze rozwiązania AI odpowiedzialnie:
 
-### Mierzenie Potencjalnych Szkód
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.pl.png)
 
-W testowaniu oprogramowania testujemy oczekiwane działania użytkownika na aplikacji. Podobnie, testowanie różnorodnego zestawu podpowiedzi, których użytkownicy najprawdopodobniej użyją, jest dobrym sposobem na zmierzenie potencjalnych szkód.
+### Mierzenie potencjalnych szkód
 
-Ponieważ nasz startup buduje produkt edukacyjny, dobrze byłoby przygotować listę podpowiedzi związanych z edukacją. Mogłoby to obejmować pewien przedmiot, fakty historyczne i podpowiedzi dotyczące życia studenckiego.
+W testowaniu oprogramowania sprawdzamy oczekiwane działania użytkownika w aplikacji. Podobnie testowanie różnorodnych promptów, które użytkownicy najprawdopodobniej będą używać, to dobry sposób na ocenę potencjalnych szkód.
 
-### Ograniczanie Potencjalnych Szkód
+Ponieważ nasz startup tworzy produkt edukacyjny, warto przygotować listę promptów związanych z edukacją. Mogą one dotyczyć określonych przedmiotów, faktów historycznych oraz życia studenckiego.
 
-Teraz czas znaleźć sposoby, w jakie możemy zapobiec lub ograniczyć potencjalne szkody spowodowane przez model i jego odpowiedzi. Możemy na to spojrzeć w 4 różnych warstwach:
+### Minimalizowanie potencjalnych szkód
 
-- **Model**. Wybór odpowiedniego modelu do odpowiedniego przypadku użycia. Większe i bardziej złożone modele, takie jak GPT-4, mogą powodować większe ryzyko szkodliwych treści, gdy są stosowane do mniejszych i bardziej specyficznych przypadków użycia. Używanie danych treningowych do dopasowania również zmniejsza ryzyko szkodliwych treści.
+Nadszedł czas, aby znaleźć sposoby zapobiegania lub ograniczania potencjalnych szkód spowodowanych przez model i jego odpowiedzi. Możemy to rozpatrywać na 4 różnych poziomach:
 
-- **System Bezpieczeństwa**. System bezpieczeństwa to zestaw narzędzi i konfiguracji na platformie obsługującej model, które pomagają ograniczać szkody. Przykładem tego jest system filtrowania treści w usłudze Azure OpenAI. Systemy powinny również wykrywać ataki jailbreak i niepożądane działania, takie jak żądania od botów.
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.pl.png)
 
-- **Metaprompt**. Metaprompt i uzasadnienie to sposoby, w jakie możemy kierować lub ograniczać model w oparciu o pewne zachowania i informacje. Mogłoby to polegać na używaniu danych wejściowych systemu do określenia pewnych ograniczeń modelu. Dodatkowo, dostarczanie wyników bardziej związanych z zakresem lub dziedziną systemu.
+- **Model**. Wybór odpowiedniego modelu do konkretnego zastosowania. Większe i bardziej złożone modele, takie jak GPT-4, mogą stwarzać większe ryzyko generowania szkodliwych treści, gdy są stosowane w mniejszych i bardziej specyficznych przypadkach użycia. Dostosowanie modelu na podstawie własnych danych treningowych również zmniejsza ryzyko szkodliwych treści.
 
-Może to również polegać na używaniu technik takich jak Retrieval Augmented Generation (RAG), aby model pobierał informacje tylko z wybranych zaufanych źródeł. Jest później w tym kursie lekcja dotycząca [budowania aplikacji wyszukiwania](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+- **System bezpieczeństwa**. System bezpieczeństwa to zestaw narzędzi i konfiguracji na platformie obsługującej model, które pomagają ograniczać szkody. Przykładem jest system filtrowania treści w usłudze Azure OpenAI. Systemy te powinny także wykrywać ataki typu jailbreak oraz niepożądane działania, takie jak zapytania od botów.
 
-- **Doświadczenie Użytkownika**. Ostatnia warstwa to miejsce, gdzie użytkownik wchodzi w bezpośrednią interakcję z modelem poprzez interfejs naszej aplikacji w jakiś sposób. W ten sposób możemy zaprojektować UI/UX, aby ograniczyć użytkownika w typach danych wejściowych, które może wysłać do modelu, a także tekstów lub obrazów wyświetlanych użytkownikowi. Podczas wdrażania aplikacji AI musimy również być przejrzystymi na temat tego, co nasza aplikacja Generatywnej AI może i czego nie może zrobić.
+- **Metaprompt**. Metaprompt i grounding to sposoby, dzięki którym możemy kierować lub ograniczać model na podstawie określonych zachowań i informacji. Może to być wykorzystanie wejść systemowych do definiowania pewnych ograniczeń modelu. Dodatkowo, dostarczanie wyników bardziej adekwatnych do zakresu lub domeny systemu.
 
-Mamy całą lekcję poświęconą [Projektowaniu UX dla Aplikacji AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Może to również obejmować techniki takie jak Retrieval Augmented Generation (RAG), które pozwalają modelowi pobierać informacje tylko z wybranych, zaufanych źródeł. W dalszej części kursu znajduje się lekcja dotycząca [budowania aplikacji wyszukiwawczych](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-- **Ewaluacja modelu**. Praca z LLM może być wyzwaniem, ponieważ nie zawsze mamy kontrolę nad danymi, na których model był trenowany. Niemniej jednak, zawsze powinniśmy oceniać wydajność i wyniki modelu. Wciąż ważne jest mierzenie dokładności modelu, podobieństwa, uzasadnienia i trafności wyniku. To pomaga zapewnić przejrzystość i zaufanie dla interesariuszy i użytkowników.
+- **Doświadczenie użytkownika**. Ostatnia warstwa to miejsce, gdzie użytkownik bezpośrednio wchodzi w interakcję z modelem za pośrednictwem interfejsu naszej aplikacji. Możemy zaprojektować UI/UX tak, aby ograniczyć użytkownika w zakresie typów danych wejściowych, które może wysyłać do modelu, a także tekstów lub obrazów wyświetlanych użytkownikowi. Podczas wdrażania aplikacji AI musimy być również transparentni co do tego, co nasza aplikacja Generatywnej AI potrafi, a czego nie.
 
-### Operowanie Odpowiedzialnym Rozwiązaniem Generatywnej AI
+Mamy całą lekcję poświęconą [projektowaniu UX dla aplikacji AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-Budowanie praktyki operacyjnej wokół aplikacji AI to ostatni etap. Obejmuje to współpracę z innymi częściami naszego startupu, takimi jak Dział Prawny i Bezpieczeństwa, aby upewnić się, że jesteśmy zgodni z wszystkimi politykami regulacyjnymi. Przed uruchomieniem chcemy również budować plany dotyczące dostarczania, obsługi incydentów i wycofywania, aby zapobiec jakimkolwiek szkodom dla naszych użytkowników.
+- **Ocena modelu**. Praca z LLM bywa wyzwaniem, ponieważ nie zawsze mamy kontrolę nad danymi, na których model był trenowany. Mimo to powinniśmy zawsze oceniać wydajność i wyniki modelu. Ważne jest mierzenie dokładności, podobieństwa, ugruntowania i trafności wyników. To pomaga zapewnić przejrzystość i budować zaufanie wśród interesariuszy i użytkowników.
+
+### Zarządzanie odpowiedzialnym rozwiązaniem Generatywnej AI
+
+Budowanie praktyki operacyjnej wokół aplikacji AI to ostatni etap. Obejmuje to współpracę z innymi działami naszego startupu, takimi jak dział prawny i bezpieczeństwa, aby zapewnić zgodność z obowiązującymi przepisami. Przed uruchomieniem chcemy także opracować plany dotyczące dostarczania, obsługi incydentów i wycofywania zmian, aby zapobiec szkodom dla naszych użytkowników.
 
 ## Narzędzia
 
-Chociaż praca nad opracowaniem Odpowiedzialnych Rozwiązań AI może wydawać się trudna, jest to praca warta wysiłku. W miarę jak obszar Generatywnej AI rośnie, więcej narzędzi pomagających deweloperom efektywnie integrować odpowiedzialność w ich przepływy pracy będzie się rozwijać. Na przykład, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) może pomóc w wykrywaniu szkodliwych treści i obrazów za pomocą żądania API.
+Choć praca nad tworzeniem rozwiązań Responsible AI może wydawać się wymagająca, jest to wysiłek wart podjęcia. W miarę rozwoju Generatywnej AI pojawia się coraz więcej narzędzi, które pomagają deweloperom efektywnie integrować odpowiedzialność w ich procesach. Na przykład [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) może pomóc wykrywać szkodliwe treści i obrazy za pomocą zapytań API.
 
 ## Sprawdzenie wiedzy
 
-Na co musisz zwrócić uwagę, aby zapewnić odpowiedzialne użycie AI?
+O czym musisz pamiętać, aby zapewnić odpowiedzialne korzystanie z AI?
 
-1. Że odpowiedź jest poprawna.
-2. Szkodliwe użycie, że AI nie jest wykorzystywana do celów przestępczych.
-3. Zapewnienie, że AI jest wolna od uprzedzeń i dyskryminacji.
+1. Żeby odpowiedź była poprawna.  
+1. Unikanie szkodliwego użycia, aby AI nie było wykorzystywane do celów przestępczych.  
+1. Zapewnienie, że AI jest wolne od uprzedzeń i dyskryminacji.
 
-Odpowiedź: 2 i 3 są poprawne. Odpowiedzialna AI pomaga rozważyć, jak łagodzić szkodliwe skutki i uprzedzenia oraz więcej.
+Odpowiedź: 2 i 3 są poprawne. Responsible AI pomaga rozważyć, jak ograniczać szkodliwe skutki, uprzedzenia i inne kwestie.
 
 ## 🚀 Wyzwanie
 
-Przeczytaj o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) i zobacz, co możesz zaadaptować do swojego użycia.
+Przeczytaj o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) i sprawdź, co możesz zaadaptować do swojego zastosowania.
 
-## Świetna Robota, Kontynuuj Nauczanie
+## Świetna robota, kontynuuj naukę
 
-Po ukończeniu tej lekcji, sprawdź naszą [Kolekcję Nauki o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować podnoszenie swojej wiedzy na temat Generatywnej AI!
+Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki o Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę o Generatywnej AI!
 
-Przejdź do Lekcji 4, gdzie przyjrzymy się [Podstawom Inżynierii Podpowiedzi](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 4, gdzie omówimy [Podstawy inżynierii promptów](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się o dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku istotnych informacji zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Niniejszy dokument został przetłumaczony przy użyciu automatycznej usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym należy traktować jako źródło wiążące. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.

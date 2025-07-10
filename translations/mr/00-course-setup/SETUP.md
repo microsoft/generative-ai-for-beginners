@@ -2,61 +2,62 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f12faf55ab620aef9f6761679b7ac68b",
-  "translation_date": "2025-05-19T12:44:40+00:00",
+  "translation_date": "2025-07-09T07:26:50+00:00",
   "source_file": "00-course-setup/SETUP.md",
   "language_code": "mr"
 }
 -->
-# तुमचे देव वातावरण सेटअप करा
+# तुमचे डेव्हलपमेंट वातावरण सेट करा
 
-आम्ही या रिपॉझिटरी आणि कोर्ससाठी एक [विकसनशील कंटेनर](https://containers.dev?WT.mc_id=academic-105485-koreyst) सेटअप केला आहे ज्यामध्ये Python3, .NET, Node.js आणि Java विकासाला समर्थन देणारा युनिव्हर्सल रनटाइम आहे. संबंधित कॉन्फिगरेशन `devcontainer.json` फाइलमध्ये परिभाषित आहे जी या रिपॉझिटरीच्या मुळामध्ये `.devcontainer/` फोल्डरमध्ये आहे.
+आम्ही या रेपॉझिटरी आणि कोर्ससाठी [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) वापरला आहे ज्यामध्ये Python3, .NET, Node.js आणि Java विकासासाठी Universal runtime आहे. संबंधित कॉन्फिगरेशन `devcontainer.json` फाईलमध्ये परिभाषित आहे जी या रेपॉझिटरीच्या मूळ `.devcontainer/` फोल्डरमध्ये आहे.
 
-डेव कंटेनर सक्रिय करण्यासाठी, [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (क्लाउड-होस्टेड रनटाइमसाठी) किंवा [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (स्थानिक डिव्हाइस-होस्टेड रनटाइमसाठी) मध्ये लॉन्च करा. VS Code मध्ये डेव कंटेनर कसे कार्य करतात याबद्दल अधिक तपशीलांसाठी [हे दस्तऐवजीकरण](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) वाचा.
+डेव्ह कंटेनर सक्रिय करण्यासाठी, ते [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (क्लाउड-होस्टेड runtime साठी) किंवा [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (लोकल डिव्हाइस-होस्टेड runtime साठी) मध्ये सुरू करा. VS Code मध्ये dev containers कसे कार्य करतात याबाबत अधिक माहितीसाठी [ही दस्तऐवज वाचा](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst).
 
 > [!TIP]  
-> कमी प्रयत्नात जलद सुरुवातीसाठी GitHub Codespaces वापरण्याची शिफारस आम्ही करतो. हे वैयक्तिक खात्यांसाठी उदार [मोफत वापर कोटा](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) प्रदान करते. तुमचा कोटा वापर वाढवण्यासाठी निष्क्रिय कोडस्पेसेस थांबवण्यासाठी किंवा हटवण्यासाठी [timeouts](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) कॉन्फिगर करा.
+> आम्ही GitHub Codespaces वापरण्याचा सल्ला देतो कारण ते कमी प्रयत्नात जलद सुरुवात करण्यास मदत करते. वैयक्तिक खात्यांसाठी ते उदार [फ्री वापर कोटा](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) देते. तुमचा कोटा जास्तीत जास्त वापरण्यासाठी निष्क्रिय codespaces थांबवण्यासाठी किंवा हटवण्यासाठी [timeouts](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) कॉन्फिगर करा.
 
-## 1. असाइनमेंट्स कार्यान्वित करणे
 
-प्रत्येक धडा मध्ये _ऐच्छिक_ असाइनमेंट्स असतील ज्यात एक किंवा अधिक प्रोग्रामिंग भाषा वापरल्या जाऊ शकतात: Python, .NET/C#, Java आणि JavaScript/TypeScript. या विभागात त्या असाइनमेंट्स कार्यान्वित करण्यासंबंधी सामान्य मार्गदर्शन दिले आहे.
+## 1. असाइनमेंट्स चालविणे
+
+प्रत्येक धड्यात _ऐच्छिक_ असाइनमेंट्स असू शकतात जे Python, .NET/C#, Java आणि JavaScript/TypeScript यांसारख्या एक किंवा अधिक प्रोग्रामिंग भाषांमध्ये दिले जातील. या विभागात त्या असाइनमेंट्स चालविण्याबाबत सामान्य मार्गदर्शन दिले आहे.
 
 ### 1.1 Python असाइनमेंट्स
 
-Python असाइनमेंट्स ऍप्लिकेशन्स (`.py` फाइल्स) किंवा Jupyter नोटबुक्स (`.ipynb` फाइल्स) म्हणून दिले जातात.
-- नोटबुक चालवण्यासाठी, Visual Studio Code मध्ये ते उघडा आणि _Select Kernel_ (वर उजवीकडे) क्लिक करा आणि दर्शविलेला डीफॉल्ट Python 3 पर्याय निवडा. तुम्ही आता _Run All_ क्लिक करून नोटबुक चालवू शकता.
-- कमांड-लाइन वरून Python ऍप्लिकेशन्स चालवण्यासाठी, योग्य फाइल्स निवडण्यासाठी आणि आवश्यक आर्ग्युमेंट्स प्रदान करण्यासाठी असाइनमेंट-विशिष्ट सूचनांचे पालन करा.
+Python असाइनमेंट्स अ‍ॅप्लिकेशन्स (`.py` फाइल्स) किंवा Jupyter notebooks (`.ipynb` फाइल्स) स्वरूपात दिले जातात.  
+- नोटबुक चालविण्यासाठी, Visual Studio Code मध्ये ते उघडा, नंतर वर उजव्या कोपऱ्यातील _Select Kernel_ वर क्लिक करा आणि दिसणाऱ्या डीफॉल्ट Python 3 पर्यायाची निवड करा. आता तुम्ही _Run All_ करून नोटबुक चालवू शकता.  
+- कमांड-लाइनवरून Python अ‍ॅप्लिकेशन्स चालविण्यासाठी, असाइनमेंट-विशिष्ट सूचना पाळा ज्यामुळे योग्य फाइल्स निवडता येतील आणि आवश्यक आर्ग्युमेंट्स दिले जातील.
 
-## 2. प्रदात्यांचे कॉन्फिगरेशन करणे
+## 2. प्रदाते कॉन्फिगर करणे
 
-असाइनमेंट्स **कदाचित** एक किंवा अधिक मोठ्या भाषा मॉडेल (LLM) डिप्लॉयमेंट्स विरुद्ध कार्य करण्यासाठी OpenAI, Azure किंवा Hugging Face सारख्या समर्थित सेवा प्रदात्याद्वारे सेटअप केले जातील. हे एक _होस्टेड एंडपॉइंट_ (API) प्रदान करतात ज्यामध्ये योग्य क्रेडेन्शियल्स (API की किंवा टोकन) सह प्रोग्रामेटिकली प्रवेश केला जाऊ शकतो. या कोर्समध्ये, आम्ही या प्रदात्यांचा विचार करतो:
+असाइनमेंट्स **कदाचित** एक किंवा अधिक Large Language Model (LLM) डिप्लॉयमेंट्ससाठी OpenAI, Azure किंवा Hugging Face सारख्या समर्थित सेवा प्रदात्यांद्वारे काम करण्यासाठी सेटअप केले जाऊ शकतात. हे प्रदाते _hosted endpoint_ (API) पुरवतात ज्याला योग्य प्रमाणपत्रांसह (API key किंवा token) प्रोग्रामॅटिकली प्रवेश करता येतो. या कोर्समध्ये आम्ही खालील प्रदात्यांवर चर्चा करतो:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) विविध मॉडेल्ससह ज्यात मुख्य GPT मालिका आहे.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI मॉडेल्ससाठी जे एंटरप्राइज रेडीनेसवर लक्ष केंद्रित करते
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) ओपन-सोर्स मॉडेल्स आणि इनफेरन्स सर्व्हरसाठी
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) ज्यामध्ये मुख्य GPT सिरीजसह विविध मॉडेल्स आहेत.  
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) जे OpenAI मॉडेल्ससाठी एंटरप्राइझ रेडीनेसवर लक्ष केंद्रित करते  
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) मुक्त स्रोत मॉडेल्स आणि इन्फरन्स सर्व्हरसाठी
 
-**तुम्हाला या व्यायामांसाठी तुमचे स्वतःचे खाते वापरणे आवश्यक आहे**. असाइनमेंट्स ऐच्छिक आहेत म्हणून तुम्ही तुमच्या आवडींनुसार एक, सर्व - किंवा काहीही सेटअप करण्याचे निवडू शकता. साइनअपसाठी काही मार्गदर्शन:
+**या व्यायामांसाठी तुम्हाला तुमची स्वतःची खाती वापरावी लागतील**. असाइनमेंट्स ऐच्छिक आहेत त्यामुळे तुम्ही तुमच्या आवडीनुसार एक, सर्व किंवा कोणतेही प्रदाते सेटअप करू शकता. साइनअपसाठी काही मार्गदर्शन:
 
-| साइनअप | खर्च | API की | प्लेग्राउंड | टिप्पण्या |
+| Signup | Cost | API Key | Playground | Comments |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [किंमत](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [प्रोजेक्ट-आधारित](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [नो-कोड, वेब](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | अनेक मॉडेल्स उपलब्ध |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [किंमत](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK जलद प्रारंभ](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [स्टुडिओ जलद प्रारंभ](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [प्रवेशासाठी आधी अर्ज करणे आवश्यक](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [किंमत](https://huggingface.co/pricing) | [ऍक्सेस टोकन्स](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat मध्ये मर्यादित मॉडेल्स आहेत](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Pricing](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Project-based](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | अनेक मॉडेल्स उपलब्ध |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [प्रवेशासाठी पूर्व अर्ज आवश्यक](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Pricing](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat मध्ये मर्यादित मॉडेल्स आहेत](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-खालील निर्देशांचे अनुसरण करा या रिपॉझिटरीला विविध प्रदात्यांसह वापरण्यासाठी _कॉन्फिगर_ करण्यासाठी. विशिष्ट प्रदात्याची आवश्यकता असलेल्या असाइनमेंट्स त्यांच्या फाइलनाममध्ये या टॅग्सपैकी एक असतील:
- - `aoai` - Azure OpenAI एंडपॉइंट, की आवश्यक आहे
- - `oai` - OpenAI एंडपॉइंट, की आवश्यक आहे
- - `hf` - Hugging Face टोकन आवश्यक आहे
+वेगवेगळ्या प्रदात्यांसाठी या रेपॉझिटरीला _कॉन्फिगर_ करण्यासाठी खालील सूचनांचे पालन करा. विशिष्ट प्रदाता आवश्यक असलेल्या असाइनमेंट्सच्या फाइलनाम्यात खालील टॅग्स असतील:  
+ - `aoai` - Azure OpenAI endpoint, key आवश्यक  
+ - `oai` - OpenAI endpoint, key आवश्यक  
+ - `hf` - Hugging Face token आवश्यक  
 
-तुम्ही एक, काहीही किंवा सर्व प्रदाते कॉन्फिगर करू शकता. संबंधित असाइनमेंट्स फक्त अनुपस्थित क्रेडेन्शियल्सवर त्रुटी दर्शवतील.
+तुम्ही एक, काहीही किंवा सर्व प्रदाते कॉन्फिगर करू शकता. संबंधित असाइनमेंट्समध्ये प्रमाणपत्रे नसल्यास त्रुटी येतील.
 
-### 2.1. `.env` फाइल तयार करा
+###  2.1. `.env` फाइल तयार करा
 
-आम्ही मानतो की तुम्ही वरील मार्गदर्शन आधीच वाचले आहे आणि संबंधित प्रदात्यांसह साइन अप केले आहे आणि आवश्यक प्रमाणीकरण क्रेडेन्शियल्स (API_KEY किंवा टोकन) मिळवले आहे. Azure OpenAI च्या बाबतीत, आम्ही मानतो की तुमच्याकडे किमान एक GPT मॉडेल चॅट पूर्ण करण्यासाठी तैनात केलेल्या Azure OpenAI सेवा (एंडपॉइंट) ची वैध तैनाती देखील आहे.
+आम्ही गृहित धरतो की तुम्ही वरील मार्गदर्शन वाचले आहे, संबंधित प्रदात्यांसाठी साइन अप केले आहे आणि आवश्यक प्रमाणीकरण क्रेडेन्शियल्स (API_KEY किंवा token) मिळवले आहेत. Azure OpenAI च्या बाबतीत, तुम्हाकडे Azure OpenAI सेवा (endpoint) ची वैध डिप्लॉयमेंट आणि किमान एक GPT मॉडेल चॅट पूर्णतेसाठी डिप्लॉय केलेले आहे.
 
-पुढील चरण तुमच्या **स्थानिक पर्यावरणीय व्हेरिएबल्स** कॉन्फिगर करणे आहे:
+पुढील पायरी म्हणजे तुमच्या **लोकल पर्यावरणातील व्हेरिएबल्स** खालीलप्रमाणे कॉन्फिगर करणे:
 
-1. मुख्य फोल्डरमध्ये `.env.copy` फाइल पहा ज्यामध्ये खालीलप्रमाणे सामग्री असावी:
+1. मूळ फोल्डरमध्ये `.env.copy` नावाची फाइल शोधा ज्यामध्ये खालीलप्रमाणे सामग्री असावी:
 
    ```bash
    # OpenAI Provider
@@ -73,73 +74,73 @@ Python असाइनमेंट्स ऍप्लिकेशन्स (`.py
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. खालील आदेश वापरून ती फाइल `.env` मध्ये कॉपी करा. ही फाइल _gitignore-d_ आहे, गुपिते सुरक्षित ठेवण्यासाठी.
+2. खालील कमांड वापरून ती फाइल `.env` मध्ये कॉपी करा. ही फाइल _gitignore_ केलेली आहे, त्यामुळे गुपिते सुरक्षित राहतात.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. पुढील विभागात वर्णन केल्याप्रमाणे मूल्ये भरा ( `=` च्या उजव्या बाजूला placeholders बदला).
+3. पुढील विभागात दिल्याप्रमाणे `=` च्या उजव्या बाजूला असलेली जागा योग्य माहितीने भरा.
 
-3. (पर्याय) तुम्ही GitHub Codespaces वापरत असल्यास, तुम्हाला या रिपॉझिटरीशी संबंधित पर्यावरणीय व्हेरिएबल्स _Codespaces secrets_ म्हणून सेव्ह करण्याचा पर्याय आहे. त्या बाबतीत, तुम्हाला स्थानिक .env फाइल सेटअप करण्याची आवश्यकता नाही. **तथापि, लक्षात ठेवा की हा पर्याय फक्त तुम्ही GitHub Codespaces वापरत असल्यास कार्य करतो.** तुम्ही Docker Desktop वापरत असल्यास तुम्हाला तरीही .env फाइल सेटअप करणे आवश्यक आहे.
+3. (पर्यायी) जर तुम्ही GitHub Codespaces वापरत असाल, तर तुम्हाला या रेपॉझिटरीशी संबंधित _Codespaces secrets_ म्हणून पर्यावरणीय व्हेरिएबल्स जतन करण्याचा पर्याय आहे. अशा परिस्थितीत तुम्हाला लोकल .env फाइल सेटअप करण्याची गरज नाही. **तथापि, हा पर्याय फक्त GitHub Codespaces वापरत असल्यासच कार्य करतो.** Docker Desktop वापरत असल्यास तुम्हाला .env फाइल सेटअप करावीच लागेल.
 
 ### 2.2. `.env` फाइल भरा
 
-व्हेरिएबल्स काय दर्शवतात हे समजण्यासाठी चल नावांकडे जलद दृष्टीक्षेप टाकूया:
+व्हेरिएबल्स काय दर्शवतात हे समजून घेण्यासाठी त्यांची नावे पाहूया:
 
-| व्हेरिएबल | वर्णन |
+| Variable  | वर्णन  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | हे तुमच्या प्रोफाइलमध्ये सेट केलेले वापरकर्ता ऍक्सेस टोकन आहे |
-| OPENAI_API_KEY | हे non-Azure OpenAI एंडपॉइंट्ससाठी सेवा वापरण्याचे अधिकृत की आहे |
-| AZURE_OPENAI_API_KEY | हे त्या सेवेसाठी वापरण्याचे अधिकृत की आहे |
-| AZURE_OPENAI_ENDPOINT | हे Azure OpenAI संसाधनासाठी तैनात एंडपॉइंट आहे |
-| AZURE_OPENAI_DEPLOYMENT | हे _टेक्स्ट जनरेशन_ मॉडेल तैनाती एंडपॉइंट आहे |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | हे _टेक्स्ट एम्बेडिंग्स_ मॉडेल तैनाती एंडपॉइंट आहे |
+| HUGGING_FACE_API_KEY | हा तुमच्या प्रोफाइलमध्ये सेट केलेला वापरकर्ता प्रवेश टोकन आहे |
+| OPENAI_API_KEY | Azure नसलेल्या OpenAI endpoints साठी सेवा वापरण्याचा अधिकृत की |
+| AZURE_OPENAI_API_KEY | Azure OpenAI सेवा वापरण्याचा अधिकृत की |
+| AZURE_OPENAI_ENDPOINT | Azure OpenAI संसाधनासाठी डिप्लॉय केलेला endpoint |
+| AZURE_OPENAI_DEPLOYMENT | _टेक्स्ट जनरेशन_ मॉडेल डिप्लॉयमेंट endpoint |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _टेक्स्ट एम्बेडिंग्स_ मॉडेल डिप्लॉयमेंट endpoint |
 | | |
 
-टीप: शेवटचे दोन Azure OpenAI व्हेरिएबल्स एक डीफॉल्ट मॉडेल चॅट पूर्ण करण्यासाठी (टेक्स्ट जनरेशन) आणि व्हेक्टर शोध (एम्बेडिंग्स) साठी दर्शवतात. त्यांना सेट करण्याच्या सूचना संबंधित असाइनमेंट्समध्ये परिभाषित केल्या जातील.
+टीप: शेवटचे दोन Azure OpenAI व्हेरिएबल्स चॅट पूर्णता (टेक्स्ट जनरेशन) आणि व्हेक्टर शोध (एम्बेडिंग्स) साठी डीफॉल्ट मॉडेल दर्शवतात. त्यांचे सेटअप संबंधित असाइनमेंट्समध्ये दिले जाईल.
 
 ### 2.3 Azure कॉन्फिगर करा: पोर्टलमधून
 
-Azure OpenAI एंडपॉइंट आणि की मूल्ये [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) मध्ये सापडतील म्हणून चला तेथे सुरुवात करूया.
+Azure OpenAI endpoint आणि key ची माहिती [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) मध्ये मिळेल, तर तेथे सुरुवात करूया.
 
-1. [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) वर जा
-1. साइडबार (डाव्या मेनू) मध्ये **Keys and Endpoint** पर्याय क्लिक करा.
-1. **Show Keys** क्लिक करा - तुम्हाला खालीलप्रमाणे दिसेल: KEY 1, KEY 2 आणि Endpoint.
-1. AZURE_OPENAI_API_KEY साठी KEY 1 मूल्य वापरा
-1. AZURE_OPENAI_ENDPOINT साठी Endpoint मूल्य वापरा
+1. [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) वर जा  
+1. साइडबारमधील (डाव्या बाजूचा मेनू) **Keys and Endpoint** पर्यायावर क्लिक करा  
+1. **Show Keys** वर क्लिक करा - KEY 1, KEY 2 आणि Endpoint दिसतील  
+1. AZURE_OPENAI_API_KEY साठी KEY 1 वापरा  
+1. AZURE_OPENAI_ENDPOINT साठी Endpoint वापरा  
 
-पुढे, आपण तैनात केलेल्या विशिष्ट मॉडेल्ससाठी एंडपॉइंट्स आवश्यक आहेत.
+आता आपल्याला डिप्लॉय केलेल्या विशिष्ट मॉडेल्ससाठी endpoints लागतील.
 
-1. Azure OpenAI संसाधनासाठी साइडबार (डाव्या मेनू) मध्ये **Model deployments** पर्याय क्लिक करा.
-1. गंतव्य पृष्ठावर, **Manage Deployments** क्लिक करा
+1. Azure OpenAI संसाधनासाठी साइडबारमधील **Model deployments** पर्यायावर क्लिक करा  
+1. गंतव्य पृष्ठावर, **Manage Deployments** वर क्लिक करा  
 
-हे तुम्हाला Azure OpenAI Studio वेबसाइटवर घेऊन जाईल, जिथे आम्हाला खाली वर्णन केल्याप्रमाणे इतर मूल्ये सापडतील.
+हे तुम्हाला Azure OpenAI Studio वेबसाइटवर घेऊन जाईल, जिथे पुढील मूल्ये मिळतील.
 
 ### 2.4 Azure कॉन्फिगर करा: स्टुडिओमधून
 
-1. [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **तुमच्या संसाधनातून** वर वर्णन केल्याप्रमाणे नेव्हिगेट करा.
-1. साइडबार, डाव्या बाजूस **Deployments** टॅब क्लिक करा, सध्या तैनात मॉडेल्स पाहण्यासाठी.
-1. तुमचे इच्छित मॉडेल तैनात नसल्यास, **Create new deployment** वापरून ते तैनात करा.
-1. तुम्हाला _टेक्स्ट जनरेशन_ मॉडेल आवश्यक आहे - आम्ही शिफारस करतो: **gpt-35-turbo**
-1. तुम्हाला _टेक्स्ट एम्बेडिंग_ मॉडेल आवश्यक आहे - आम्ही शिफारस करतो **text-embedding-ada-002**
+1. वर दिलेल्या प्रमाणे तुमच्या संसाधनातून [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) वर जा  
+1. साइडबारमधील (डावीकडील) **Deployments** टॅबवर क्लिक करा जेथे सध्या डिप्लॉय केलेले मॉडेल्स दिसतील  
+1. तुमचे इच्छित मॉडेल डिप्लॉय नसेल तर **Create new deployment** वापरून ते डिप्लॉय करा  
+1. तुम्हाला _text-generation_ मॉडेलची गरज आहे - आम्ही **gpt-35-turbo** शिफारस करतो  
+1. तुम्हाला _text-embedding_ मॉडेलची गरज आहे - आम्ही **text-embedding-ada-002** शिफारस करतो  
 
-आता पर्यावरणीय व्हेरिएबल्स अपडेट करा जे तैनाती नाव दर्शवतात. हे सहसा मॉडेल नावासारखेच असेल, जोपर्यंत तुम्ही ते स्पष्टपणे बदलले नाही. म्हणून, उदाहरण म्हणून, तुमच्याकडे असे असू शकते:
+आता पर्यावरणीय व्हेरिएबल्समध्ये _Deployment name_ अपडेट करा. हे सहसा मॉडेलच्या नावासारखेच असते जोपर्यंत तुम्ही ते स्पष्टपणे बदलले नसेल. उदाहरणार्थ:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**पूर्ण झाल्यावर .env फाइल सेव्ह करायला विसरू नका**. तुम्ही आता फाइल बंद करू शकता आणि नोटबुक चालवण्याच्या सूचनांकडे परत जाऊ शकता.
+**काम पूर्ण झाल्यावर .env फाइल जतन करायला विसरू नका**. आता तुम्ही फाइल बंद करू शकता आणि नोटबुक चालविण्याच्या सूचनांकडे परत जाऊ शकता.
 
 ### 2.5 OpenAI कॉन्फिगर करा: प्रोफाइलमधून
 
-तुमची OpenAI API की तुमच्या [OpenAI खात्यामध्ये](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) सापडू शकते. तुम्हाला एक नसल्यास, तुम्ही खाते तयार करू शकता आणि API की तयार करू शकता. एकदा तुम्हाला की मिळाल्यानंतर, तुम्ही `.env` फाइलमध्ये `OPENAI_API_KEY` व्हेरिएबल भरण्यासाठी वापरू शकता.
+तुमचा OpenAI API key तुमच्या [OpenAI खात्यात](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) सापडेल. जर तुमच्याकडे खाते नसेल तर तुम्ही साइन अप करून API key तयार करू शकता. की मिळाल्यानंतर `.env` फाइलमधील `OPENAI_API_KEY` व्हेरिएबलमध्ये ती भरा.
 
 ### 2.6 Hugging Face कॉन्फिगर करा: प्रोफाइलमधून
 
-तुमचे Hugging Face टोकन तुमच्या प्रोफाइलमध्ये [ऍक्सेस टोकन्स](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) अंतर्गत सापडू शकते. हे सार्वजनिकपणे पोस्ट किंवा शेअर करू नका. त्याऐवजी, या प्रकल्पाच्या वापरासाठी नवीन टोकन तयार करा आणि `.env` फाइलमध्ये `HUGGING_FACE_API_KEY` व्हेरिएबल अंतर्गत कॉपी करा. _टीप:_ हे तांत्रिकदृष्ट्या API की नाही परंतु प्रमाणीकरणासाठी वापरले जाते म्हणून आम्ही सुसंगततेसाठी ती नामकरण पद्धती ठेवत आहोत.
+तुमचा Hugging Face टोकन तुमच्या प्रोफाइलमधील [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) मध्ये सापडेल. हे सार्वजनिकपणे पोस्ट करू नका किंवा शेअर करू नका. त्याऐवजी, या प्रोजेक्टसाठी नवीन टोकन तयार करा आणि ते `.env` फाइलमधील `HUGGING_FACE_API_KEY` व्हेरिएबलमध्ये कॉपी करा. _टीप:_ हे तांत्रिकदृष्ट्या API key नाही, पण प्रमाणीकरणासाठी वापरले जाते म्हणून आम्ही नाव ठेवले आहे जेणेकरून सुसंगतता राहील.
 
-**अस्वीकृती**:  
-हा दस्तऐवज AI भाषांतर सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून भाषांतरित केला गेला आहे. आम्ही अचूकतेसाठी प्रयत्नशील असलो तरी कृपया लक्षात ठेवा की स्वयंचलित भाषांतरांमध्ये त्रुटी किंवा अचूकतेचा अभाव असू शकतो. मूळ भाषेतील दस्तऐवज हा अधिकृत स्रोत मानला जावा. अत्यावश्यक माहितीसाठी, व्यावसायिक मानवी भाषांतराची शिफारस केली जाते. या भाषांतराच्या वापरामुळे उद्भवणाऱ्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थ लावण्यास आम्ही जबाबदार नाही.
+**अस्वीकरण**:  
+हा दस्तऐवज AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून अनुवादित केला आहे. आम्ही अचूकतेसाठी प्रयत्नशील असलो तरी, कृपया लक्षात घ्या की स्वयंचलित अनुवादांमध्ये चुका किंवा अचूकतेत त्रुटी असू शकतात. मूळ दस्तऐवज त्याच्या स्थानिक भाषेत अधिकृत स्रोत मानला जावा. महत्त्वाच्या माहितीसाठी व्यावसायिक मानवी अनुवाद करण्याची शिफारस केली जाते. या अनुवादाच्या वापरामुळे उद्भवणाऱ्या कोणत्याही गैरसमजुती किंवा चुकीच्या अर्थलागी आम्ही जबाबदार नाही.

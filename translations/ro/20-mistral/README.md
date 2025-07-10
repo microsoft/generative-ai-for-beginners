@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:02:55+00:00",
+  "translation_date": "2025-07-09T19:03:39+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "ro"
 }
@@ -11,35 +11,36 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introducere
 
-Această lecție va acoperi:
-- Explorarea diferitelor modele Mistral
-- Înțelegerea cazurilor de utilizare și scenariilor pentru fiecare model
-- Exemple de cod care arată caracteristicile unice ale fiecărui model.
+Această lecție va acoperi:  
+- Explorarea diferitelor modele Mistral  
+- Înțelegerea cazurilor de utilizare și scenariilor pentru fiecare model  
+- Exemple de cod care evidențiază caracteristicile unice ale fiecărui model.
 
 ## Modelele Mistral
 
-În această lecție, vom explora 3 modele Mistral diferite: **Mistral Large**, **Mistral Small** și **Mistral Nemo**.
+În această lecție, vom explora 3 modele diferite Mistral:  
+**Mistral Large**, **Mistral Small** și **Mistral Nemo**.
 
 Fiecare dintre aceste modele este disponibil gratuit pe piața de modele Github. Codul din acest notebook va folosi aceste modele pentru a rula codul. Iată mai multe detalii despre utilizarea modelelor Github pentru [prototiparea cu modele AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-## Mistral Large 2 (2407)
-Mistral Large 2 este în prezent modelul de vârf de la Mistral și este conceput pentru utilizarea în întreprinderi.
+## Mistral Large 2 (2407)  
+Mistral Large 2 este în prezent modelul de top de la Mistral și este conceput pentru utilizare în mediul enterprise.
 
-Modelul este o actualizare la Mistral Large original, oferind:
-- Fereastră de context mai mare - 128k vs 32k
-- Performanță mai bună la sarcini de matematică și codare - acuratețe medie de 76.9% vs 60.4%
-- Performanță multilingvistică crescută - limbile includ: engleză, franceză, germană, spaniolă, italiană, portugheză, olandeză, rusă, chineză, japoneză, coreeană, arabă și hindi.
+Modelul reprezintă un upgrade față de Mistral Large original, oferind:  
+- Fereastră de context mai mare - 128k față de 32k  
+- Performanțe mai bune la sarcini de matematică și programare - acuratețe medie de 76,9% față de 60,4%  
+- Performanță multilingvă îmbunătățită - limbile incluse sunt: engleză, franceză, germană, spaniolă, italiană, portugheză, olandeză, rusă, chineză, japoneză, coreeană, arabă și hindi.
 
-Cu aceste caracteristici, Mistral Large excelează la:
-- *Generarea augmentată prin recuperare (RAG)* - datorită ferestrei de context mai mari
-- *Apelarea funcțiilor* - acest model are apelarea funcțiilor nativă, care permite integrarea cu instrumente externe și API-uri. Aceste apeluri pot fi făcute atât în paralel, cât și una după alta, într-o ordine secvențială.
-- *Generarea de cod* - acest model excelează la generarea de cod în Python, Java, TypeScript și C++.
+Cu aceste caracteristici, Mistral Large excelează la:  
+- *Retrieval Augmented Generation (RAG)* - datorită ferestrei de context mai mari  
+- *Function Calling* - acest model are apeluri native către funcții, permițând integrarea cu instrumente și API-uri externe. Aceste apeluri pot fi făcute atât în paralel, cât și secvențial, unul după altul.  
+- *Generare de cod* - acest model excelează în generarea de cod Python, Java, TypeScript și C++.
 
 ### Exemplu RAG folosind Mistral Large 2
 
-În acest exemplu, folosim Mistral Large 2 pentru a rula un model RAG pe un document text. Întrebarea este scrisă în coreeană și întreabă despre activitățile autorului înainte de facultate.
+În acest exemplu, folosim Mistral Large 2 pentru a rula un pattern RAG pe un document text. Întrebarea este scrisă în coreeană și întreabă despre activitățile autorului înainte de facultate.
 
-Folosește Modelul de Încapsulare Cohere pentru a crea încapsulări ale documentului text precum și ale întrebării. Pentru acest exemplu, folosește pachetul Python faiss ca magazin de vectori.
+Se folosește modelul Cohere Embeddings pentru a crea embedding-uri ale documentului text, precum și ale întrebării. Pentru acest exemplu, se utilizează pachetul Python faiss ca vector store.
 
 Promptul trimis modelului Mistral include atât întrebările, cât și fragmentele recuperate care sunt similare cu întrebarea. Modelul oferă apoi un răspuns în limbaj natural.
 
@@ -137,22 +138,22 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
-Mistral Small este un alt model din familia de modele Mistral din categoria premier/enterprise. După cum sugerează și numele, acest model este un Small Language Model (SLM). Avantajele utilizării Mistral Small sunt că este:
-- Economisire de costuri comparativ cu LLM-urile Mistral, cum ar fi Mistral Large și NeMo - reducere de preț de 80%
-- Latență redusă - răspuns mai rapid comparativ cu LLM-urile Mistral
-- Flexibil - poate fi implementat în diferite medii cu mai puține restricții asupra resurselor necesare.
+## Mistral Small  
+Mistral Small este un alt model din familia Mistral, în categoria premier/enterprise. După cum sugerează și numele, acest model este un Small Language Model (SLM). Avantajele utilizării Mistral Small sunt:  
+- Economii de cost comparativ cu LLM-urile Mistral precum Mistral Large și NeMo - reducere de preț de 80%  
+- Latentă scăzută - răspuns mai rapid comparativ cu LLM-urile Mistral  
+- Flexibil - poate fi implementat în diferite medii cu mai puține restricții privind resursele necesare.
 
-Mistral Small este ideal pentru:
-- Sarcini bazate pe text, cum ar fi sumarizarea, analiza sentimentului și traducerea.
-- Aplicații unde se fac cereri frecvente datorită eficienței sale de cost
-- Sarcini de cod cu latență redusă, cum ar fi revizuirea și sugestiile de cod
+Mistral Small este ideal pentru:  
+- Sarcini bazate pe text, cum ar fi sumarizarea, analiza sentimentelor și traducerea.  
+- Aplicații unde se fac cereri frecvente datorită costului redus  
+- Sarcini de cod cu latență scăzută, cum ar fi revizuirea și sugestiile de cod
 
 ## Compararea Mistral Small și Mistral Large
 
-Pentru a arăta diferențele de latență între Mistral Small și Large, rulați celulele de mai jos.
+Pentru a evidenția diferențele de latență între Mistral Small și Large, rulează celulele de mai jos.
 
-Ar trebui să vedeți o diferență în timpii de răspuns între 3-5 secunde. De asemenea, notați lungimile și stilul răspunsurilor pentru același prompt.
+Ar trebui să observi o diferență în timpii de răspuns între 3-5 secunde. De asemenea, observă lungimea și stilul răspunsurilor pentru același prompt.
 
 ```python 
 
@@ -216,21 +217,21 @@ print(response.choices[0].message.content)
 
 Comparativ cu celelalte două modele discutate în această lecție, Mistral NeMo este singurul model gratuit cu licență Apache2.
 
-Este văzut ca o actualizare la LLM-ul open source anterior de la Mistral, Mistral 7B.
+Este considerat un upgrade față de primul LLM open source de la Mistral, Mistral 7B.
 
 Alte caracteristici ale modelului NeMo sunt:
 
-- *Tokenizare mai eficientă:* Acest model folosește tokenizer-ul Tekken în locul celui mai frecvent utilizat tiktoken. Acest lucru permite o performanță mai bună în mai multe limbi și coduri.
+- *Tokenizare mai eficientă:* Acest model folosește tokenizer-ul Tekken în locul celui mai des folosit tiktoken. Aceasta permite performanțe mai bune pe mai multe limbi și cod.
 
-- *Finisare:* Modelul de bază este disponibil pentru finisare. Acest lucru permite mai multă flexibilitate pentru cazurile de utilizare unde poate fi necesară finisarea.
+- *Finetuning:* Modelul de bază este disponibil pentru finetuning. Aceasta oferă mai multă flexibilitate pentru cazurile de utilizare unde este nevoie de ajustări suplimentare.
 
-- *Apelarea funcțiilor nativă* - La fel ca Mistral Large, acest model a fost antrenat pentru apelarea funcțiilor. Acest lucru îl face unic, fiind unul dintre primele modele open source care fac acest lucru.
+- *Native Function Calling* - La fel ca Mistral Large, acest model a fost antrenat pentru apeluri către funcții. Aceasta îl face unic, fiind unul dintre primele modele open source care oferă această funcționalitate.
 
-### Compararea Tokenizatoarelor
+### Compararea Tokenizer-elor
 
-În acest exemplu, vom analiza cum Mistral NeMo gestionează tokenizarea comparativ cu Mistral Large.
+În acest exemplu, vom vedea cum Mistral NeMo gestionează tokenizarea comparativ cu Mistral Large.
 
-Ambele exemple folosesc același prompt, dar ar trebui să vedeți că NeMo returnează mai puțini tokeni față de Mistral Large.
+Ambele exemple folosesc același prompt, dar vei observa că NeMo returnează mai puțini tokeni față de Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -350,7 +351,7 @@ print(len(tokens))
 
 ## Învățarea nu se oprește aici, continuă călătoria
 
-După ce ai terminat această lecție, verifică colecția noastră [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să îți dezvolți cunoștințele despre Generative AI!
+După ce ai terminat această lecție, consultă colecția noastră de [Învățare Generativă AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a-ți continua dezvoltarea cunoștințelor despre Generative AI!
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să obținem acuratețe, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu suntem responsabili pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.

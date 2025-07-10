@@ -2,307 +2,452 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "a45c318dc6ebc2604f35b8b829f93af2",
-  "translation_date": "2025-05-19T09:47:11+00:00",
+  "translation_date": "2025-07-09T09:30:13+00:00",
   "source_file": "04-prompt-engineering-fundamentals/README.md",
   "language_code": "zh"
 }
 -->
-# 提示工程基础
+# Prompt Engineering Fundamentals
+
+[![Prompt Engineering Fundamentals](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.zh.png)](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)
 
 ## 介绍
+本模块涵盖了在生成式 AI 模型中创建有效提示词的基本概念和技巧。你向大型语言模型（LLM）编写提示词的方式同样重要。精心设计的提示词能够获得更高质量的回复。但“提示词”和“提示工程”这些术语到底是什么意思？我该如何改进发送给 LLM 的提示词输入？这些问题将在本章及下一章中为你解答。
 
-本模块涵盖了为生成式AI模型创建有效提示的基本概念和技术。编写提示的方式对大型语言模型（LLM）也很重要。精心设计的提示可以获得更高质量的响应。那么，像 _提示_ 和 _提示工程_ 这样的术语究竟是什么意思？我该如何改进发送给LLM的提示 _输入_ 呢？这些是我们将在本章和下一章中试图回答的问题。
+_生成式 AI_ 能够根据用户请求创造新的内容（例如文本、图像、音频、代码等）。它通过使用像 OpenAI 的 GPT（“生成式预训练变换器”）系列这样的大型语言模型实现，这些模型经过自然语言和代码的训练。
 
-_生成式AI_ 能够根据用户请求创建新内容（例如，文本、图像、音频、代码等）。它使用类似于OpenAI的GPT（"生成预训练变换器"）系列的大型语言模型，通过自然语言和代码进行训练。
+用户现在可以通过类似聊天的熟悉方式与这些模型交互，无需任何技术专长或培训。这些模型是基于_提示词_的——用户发送文本输入（提示词），模型返回 AI 回复（完成内容）。用户可以通过多轮对话不断“与 AI 聊天”，不断优化提示词，直到回复符合预期。
 
-用户现在可以使用聊天等熟悉的方式与这些模型进行交互，而无需任何技术专长或培训。这些模型是 _基于提示_ 的——用户发送文本输入（提示）并获得AI响应（完成）。他们可以在多轮对话中迭代地与AI聊天，逐步调整提示，直到响应符合他们的期望。
-
-“提示”现在成为生成式AI应用程序的主要 _编程接口_，告诉模型要做什么，并影响返回响应的质量。“提示工程”是一个快速发展的研究领域，专注于提示的 _设计和优化_，以大规模提供一致和高质量的响应。
+“提示词”现已成为生成式 AI 应用的主要_编程接口_，告诉模型该做什么，并影响返回回复的质量。“提示工程”是一个快速发展的研究领域，专注于_设计和优化_提示词，以实现规模化的稳定且高质量的回复。
 
 ## 学习目标
 
-在本课中，我们将学习什么是提示工程、它的重要性，以及如何为特定模型和应用目标制作更有效的提示。我们将了解提示工程的核心概念和最佳实践——并了解一个交互式Jupyter Notebooks "沙盒" 环境，在那里我们可以看到这些概念应用于实际示例。
+本课将介绍什么是提示工程、它为何重要，以及如何为特定模型和应用目标设计更有效的提示词。我们将理解提示工程的核心概念和最佳实践，并了解一个交互式 Jupyter Notebook “沙盒”环境，在那里可以看到这些概念如何应用于实际示例。
 
-到本课结束时，我们将能够：
+完成本课后，你将能够：
 
 1. 解释什么是提示工程及其重要性。
-2. 描述提示的组成部分及其使用方式。
-3. 学习提示工程的最佳实践和技术。
-4. 将所学技术应用于实际示例，使用OpenAI端点。
+2. 描述提示词的组成部分及其用途。
+3. 学习提示工程的最佳实践和技巧。
+4. 使用 OpenAI 端点将所学技巧应用于实际示例。
 
-## 关键术语
+## 关键词
 
-提示工程：设计和优化输入以指导AI模型生成期望输出的实践。
-标记化：将文本转换为模型可以理解和处理的小单位（称为标记）的过程。
-指令调优的LLM：经过特定指令微调以提高响应准确性和相关性的大型语言模型（LLM）。
+提示工程：设计和优化输入以引导 AI 模型生成期望输出的实践。  
+分词（Tokenization）：将文本转换为模型可以理解和处理的更小单元（称为“token”）的过程。  
+指令调优大型语言模型（Instruction-Tuned LLMs）：经过特定指令微调以提升回复准确性和相关性的大型语言模型。
 
 ## 学习沙盒
 
-提示工程目前更像是一门艺术而非科学。提高直觉的最佳方法是 _多加练习_，并采用结合应用领域专业知识与推荐技术和模型特定优化的试错方法。
+提示工程目前更多是一门艺术而非科学。提升直觉的最佳方式是_多加练习_，采用结合应用领域专业知识、推荐技巧和模型特定优化的反复试验方法。
 
-本课附带的Jupyter Notebook提供了一个 _沙盒_ 环境，您可以在其中尝试所学内容——无论是随时进行还是作为最后代码挑战的一部分。要执行练习，您将需要：
+本课配套的 Jupyter Notebook 提供了一个_沙盒_环境，你可以在学习过程中或课后代码挑战中尝试所学内容。执行练习需要：
 
-1. **一个Azure OpenAI API密钥** - 部署LLM的服务端点。
-2. **一个Python运行时** - 在其中可以执行Notebook。
-3. **本地环境变量** - _现在完成[设置](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst)步骤以做好准备_。
+1. **Azure OpenAI API 密钥**——已部署 LLM 的服务端点。  
+2. **Python 运行环境**——用于执行 Notebook。  
+3. **本地环境变量**——请先完成[SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst)步骤以准备环境。
 
-该Notebook附带 _入门_ 练习——但鼓励您添加自己的 _Markdown_（描述）和 _代码_（提示请求）部分，以尝试更多示例或想法——并建立对提示设计的直觉。
+Notebook 附带了_入门_练习，但鼓励你添加自己的_Markdown_（描述）和_代码_（提示请求）部分，尝试更多示例或想法，培养提示设计的直觉。
 
 ## 图解指南
 
-想在深入学习之前了解本课涵盖的内容吗？查看这个图解指南，它可以让您了解涵盖的主要主题以及每个主题需要考虑的关键要点。课程路线图将带您从理解核心概念和挑战到使用相关提示工程技术和最佳实践解决这些问题。请注意，本指南中的“高级技术”部分指的是本课程下一章中涵盖的内容。
+想在深入学习前先了解本课的整体内容吗？看看这份图解指南，它帮助你把握主要主题和每个主题的关键要点。课程路线图将带你从理解核心概念和挑战，到用相关提示工程技巧和最佳实践应对这些挑战。请注意，本指南中的“高级技巧”部分涉及本课程_下一章_的内容。
 
-## 我们的创业公司
+![Illustrated Guide to Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.zh.png)
 
-现在，让我们谈谈 _这个主题_ 如何与我们创业使命相关，即[将AI创新带入教育](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)。我们希望构建AI驱动的 _个性化学习_ 应用程序——所以让我们思考一下我们应用程序的不同用户如何“设计”提示：
+## 我们的创业项目
 
-- **管理员**可能会要求AI _分析课程数据以识别覆盖中的差距_。AI可以总结结果或用代码可视化它们。
-- **教育者**可能会要求AI _为目标受众和主题生成课程计划_。AI可以以指定格式构建个性化计划。
-- **学生**可能会要求AI _辅导他们解决困难科目_。AI现在可以根据他们的水平为学生提供量身定制的课程、提示和示例。
+现在，让我们谈谈_本主题_如何与我们创业项目的使命相关——[将 AI 创新带入教育](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst)。我们希望构建基于 AI 的_个性化学习_应用——所以让我们思考不同用户如何“设计”提示词：
 
-这只是冰山一角。查看[教育提示](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst)——一个由教育专家策划的开源提示库——以获得更广泛的可能性！_尝试在沙盒中运行其中一些提示或使用OpenAI Playground看看会发生什么！_
+- **管理员**可能会让 AI_分析课程数据以识别覆盖的空白点_。AI 可以总结结果或用代码进行可视化。  
+- **教育者**可能会让 AI_为特定受众和主题生成课程计划_。AI 可以以指定格式构建个性化计划。  
+- **学生**可能会让 AI_辅导他们攻克难题_。AI 现在可以根据学生水平提供课程、提示和示例。
+
+这只是冰山一角。查看[教育提示词库](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst)——由教育专家策划的开源提示词库，了解更多可能性！_试着在沙盒或 OpenAI Playground 中运行这些提示词，看看效果！_
+
+<!--
+LESSON TEMPLATE:
+This unit should cover core concept #1.
+Reinforce the concept with examples and references.
+
+CONCEPT #1:
+Prompt Engineering.
+Define it and explain why it is needed.
+-->
 
 ## 什么是提示工程？
 
-我们从定义**提示工程**开始本课，即为给定应用目标和模型 _设计和优化_ 文本输入（提示）以提供一致和高质量响应（完成）的过程。我们可以将其视为一个两步过程：
+我们从定义**提示工程**开始，它是为特定应用目标和模型_设计和优化_文本输入（提示词），以提供稳定且高质量回复（完成内容）的过程。可以把它看作一个两步走的过程：
 
-- 为给定模型和目标 _设计_ 初始提示
-- 迭代地 _优化_ 提示以提高响应质量
+- 为特定模型和目标_设计_初始提示词  
+- 反复_优化_提示词以提升回复质量
 
-这必然是一个需要用户直觉和努力才能获得最佳结果的试错过程。那么为什么它很重要？要回答这个问题，我们首先需要了解三个概念：
+这必然是一个反复试验的过程，需要用户的直觉和努力才能获得最佳结果。那么它为何重要？为回答这个问题，我们先了解三个概念：
 
-- _标记化_ = 模型如何“看到”提示
-- _基础LLM_ = 基础模型如何“处理”提示
-- _指令调优的LLM_ = 模型如何现在可以看到“任务”
+- _分词_ = 模型如何“看待”提示词  
+- _基础 LLM_ = 基础模型如何“处理”提示词  
+- _指令调优 LLM_ = 模型如何“理解任务”
 
-### 标记化
+### 分词
 
-LLM将提示视为 _标记序列_，不同模型（或模型版本）可以以不同方式标记相同提示。由于LLM是基于标记（而不是原始文本）进行训练的，因此提示的标记化方式直接影响生成响应的质量。
+LLM 将提示词视为_一串 token_，不同模型（或同一模型的不同版本）对同一提示词的分词方式可能不同。由于 LLM 是基于 token（而非原始文本）训练的，提示词的分词方式直接影响生成回复的质量。
 
-要了解标记化的工作原理，请尝试使用下面显示的[OpenAI标记化工具](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)。复制您的提示——看看它是如何转换为标记的，注意空白字符和标点符号的处理方式。请注意，此示例显示的是较旧的LLM（GPT-3）——因此尝试使用较新的模型可能会产生不同的结果。
+想了解分词如何工作，可以试试下面的[OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)工具。复制你的提示词，观察它如何被转换成 token，注意空格和标点的处理方式。请注意，此示例使用的是较旧的 LLM（GPT-3），用新模型测试可能结果不同。
+
+![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.zh.png)
 
 ### 概念：基础模型
 
-一旦提示被标记化，["基础LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)（或基础模型）的主要功能就是预测序列中的标记。由于LLM在大量文本数据集上进行了训练，它们对标记之间的统计关系有很好的了解，并可以有信心地进行预测。请注意，它们并不理解提示或标记中的单词 _含义_；它们只是看到一个可以通过下一个预测“完成”的模式。它们可以继续预测序列，直到被用户干预或某个预设条件终止。
+提示词分词后，["基础 LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)（或基础模型）的主要功能是预测序列中的下一个 token。由于 LLM 训练于海量文本数据，它们对 token 之间的统计关系有较好把握，能较自信地做出预测。请注意，它们并不理解提示词或 token 的_含义_，只是看到一个可以“补全”的模式。它们会持续预测序列，直到用户干预或达到预设条件。
 
-想看看基于提示的完成是如何工作的？将上述提示输入Azure OpenAI Studio的[_聊天游乐场_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)并使用默认设置。系统被配置为将提示视为信息请求——因此您应该看到一个满足此上下文的完成。
+想看看基于提示词的完成是如何工作的吗？将上述提示词输入 Azure OpenAI Studio 的[_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst)，使用默认设置。系统将提示词视为信息请求，你应该会看到符合该上下文的回复。
 
-但如果用户想要看到符合某些标准或任务目标的特定内容怎么办？这就是 _指令调优_ 的LLM的用武之地。
+但如果用户想看到符合某些条件或任务目标的特定内容呢？这时就需要用到_指令调优_的 LLM。
 
-### 概念：指令调优的LLM
+![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.zh.png)
 
-一个[指令调优的LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)从基础模型开始，并通过示例或输入/输出对（例如，多轮“消息”）进行微调，这些对可以包含明确的指令——AI尝试遵循这些指令的响应。
+### 概念：指令调优 LLM
 
-这使用了诸如人类反馈强化学习（RLHF）等技术，可以训练模型 _遵循指令_ 并 _从反馈中学习_，以便生成更适合实际应用并更符合用户目标的响应。
+[指令调优 LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst)是在基础模型基础上，通过示例或输入/输出对（例如多轮“消息”）进行微调，这些示例包含明确指令，AI 的回复尝试遵循这些指令。
 
-让我们试试看——重新审视上面的提示，但现在更改 _系统消息_，提供以下指令作为上下文：
+这采用了如人类反馈强化学习（RLHF）等技术，训练模型_遵循指令_并_从反馈中学习_，使其生成更适合实际应用且更符合用户目标的回复。
 
-> _将您提供的内容总结为二年级学生。将结果保持在一段中，包含3-5个要点。_
+我们来试试——回到上面的提示词，将_系统消息_改为以下指令作为上下文：
 
-看看结果如何现在被调优以反映期望的目标和格式？教育者现在可以直接在他们的幻灯片中使用此响应。
+> _为二年级学生总结你收到的内容。结果保持为一段话，包含3-5个要点。_
 
-## 为什么我们需要提示工程？
+看看结果如何调整以反映期望的目标和格式？教育者现在可以直接将此回复用于课堂幻灯片。
 
-现在我们知道LLM如何处理提示，让我们来谈谈 _为什么_ 我们需要提示工程。答案在于当前的LLM存在许多挑战，使得在不投入提示构建和优化的情况下实现 _可靠和一致的完成_ 更具挑战性。例如：
+![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.zh.png)
 
-1. **模型响应是随机的。** _相同的提示_ 可能会在不同的模型或模型版本上产生不同的响应。甚至在 _相同模型_ 上的不同时间也可能产生不同的结果。_提示工程技术可以帮助我们通过提供更好的防护措施来最大限度地减少这些变化_。
+## 为什么需要提示工程？
 
-2. **模型可能会捏造响应。** 模型是用 _大但有限_ 的数据集进行预训练的，这意味着它们缺乏关于超出训练范围的概念的知识。因此，它们可能会生成不准确、虚构或直接与已知事实相矛盾的完成。_提示工程技术帮助用户识别和减轻这些捏造，例如，通过要求AI提供引用或推理_。
+既然我们知道提示词是如何被 LLM 处理的，接下来谈谈_为什么_需要提示工程。原因在于当前 LLM 存在一些挑战，使得_可靠且一致的完成内容_难以在不投入提示构建和优化工作的情况下实现。例如：
 
-3. **模型能力会有所不同。** 较新的模型或模型代将具有更丰富的功能，但也带来了成本和复杂性方面的独特怪癖和权衡。_提示工程可以帮助我们开发最佳实践和工作流程，以抽象掉差异并以可扩展、无缝的方式适应模型特定要求_。
+1. **模型回复具有随机性。**_相同的提示词_在不同模型或模型版本中可能产生不同回复，甚至同一模型在不同时间也可能产生不同结果。_提示工程技巧能帮助我们通过更好的约束减少这些差异_。
 
-让我们在OpenAI或Azure OpenAI Playground中看到这一点：
+1. **模型可能编造回复。**模型预训练于_庞大但有限_的数据集，缺乏训练范围外的知识。因此，它们可能生成不准确、虚构或与已知事实直接矛盾的内容。_提示工程技巧帮助用户识别并减轻此类编造，例如要求 AI 提供引用或推理_。
 
-- 使用不同的LLM部署（例如，OpenAI、Azure OpenAI、Hugging Face）使用相同的提示——您是否看到了变化？
-- 在 _相同_ 的LLM部署（例如，Azure OpenAI playground）上重复使用相同的提示——这些变化有何不同？
+1. **模型能力各异。**新模型或新一代模型功能更强，但也带来成本和复杂性的独特权衡。_提示工程能帮助我们制定最佳实践和工作流程，抽象差异并适应模型特定需求，实现可扩展且无缝的应用_。
 
-### 捏造示例
+让我们在 OpenAI 或 Azure OpenAI Playground 中实际体验：
 
-在本课程中，我们使用术语 **“捏造”** 来指代LLM由于训练限制或其他限制有时生成事实不正确的信息的现象。您可能也在流行文章或研究论文中听到过称为 _“幻觉”_ 的说法。然而，我们强烈建议使用 _“捏造”_ 作为术语，以免通过将人类特征归因于机器驱动的结果而无意中将行为拟人化。这也从术语角度加强了[负责任AI指南](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)，去除了可能在某些情况下被认为具有攻击性或非包容性的术语。
+- 用相同提示词测试不同 LLM 部署（如 OpenAI、Azure OpenAI、Hugging Face）——你发现了哪些差异？  
+- 用相同提示词多次测试_同一_ LLM 部署（如 Azure OpenAI Playground）——这些差异如何变化？
 
-想了解捏造是如何工作的吗？想一个提示，指示AI为一个不存在的主题生成内容（以确保它不在训练数据集中）。例如——我尝试了这个提示：
+### 编造示例
 
-> **提示：** 为2076年的火星战争生成一个课程计划。
+在本课程中，我们用**“编造”**一词指代 LLM 有时因训练限制或其他约束而生成事实错误信息的现象。你可能在流行文章或研究论文中听过“幻觉”（hallucinations）一词，但我们强烈建议使用“编造”，以避免将机器行为拟人化，赋予其人类特质。这也符合[负责任 AI 指南](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)的术语规范，避免使用在某些语境下可能被视为冒犯或不包容的词汇。
 
-网络搜索显示有关于火星战争的虚构账户（例如，电视连续剧或书籍）——但没有在2076年。常识也告诉我们2076年是 _未来_，因此不能与真实事件相关联。
+想了解编造是如何发生的吗？想象一个提示词，指示 AI 生成一个不存在主题的内容（确保该主题不在训练数据中）。例如——我尝试了这个提示词：
+# 火星战争2076年课程计划
 
-那么，当我们使用不同的LLM提供商运行此提示时会发生什么？
+## 课程目标
+- 了解2076年火星战争的背景和起因
+- 分析战争的主要事件和关键战役
+- 探讨战争对地球和火星社会的影响
+- 培养学生的批判性思维和历史分析能力
 
-> **响应1**：OpenAI Playground（GPT-35）
+## 课程大纲
 
-> **响应2**：Azure OpenAI Playground（GPT-35）
+### 第一课：火星战争的背景
+- 火星殖民的发展历程
+- 地球与火星之间的政治经济关系
+- 导致战争爆发的主要因素
 
-> **响应3**：Hugging Face Chat Playground（LLama-2）
+### 第二课：战争的爆发与初期战况
+- 2076年战争爆发的导火索
+- 主要参战方介绍
+- 初期战役的战略与战术分析
 
-正如预期的那样，由于随机行为和模型能力的变化，每个模型（或模型版本）产生略有不同的响应。例如，一个模型针对8年级观众，而另一个假设高中学生。但所有三个模型都生成了可能让不知情的用户相信事件是真实的响应
+### 第三课：关键战役与转折点
+- 重要战役回顾
+- 技术与武器的应用
+- 战争进程中的重大转折
 
-提示工程技术如 _元提示_ 和 _温度配置_ 可以在一定程度上减少模型捏造。新的提示工程 _架构_ 也无缝地将新工具和技术融入提示流中，以减轻或减少其中一些影响。
+### 第四课：战争的结束与后果
+- 和平协议的签订过程
+- 战争对火星和地球的影响
+- 战争遗留的问题与未来展望
+
+## 教学活动建议
+- 小组讨论：战争爆发的原因及其合理性
+- 角色扮演：模拟和平谈判
+- 资料分析：研究战争期间的新闻报道和官方文件
+
+## 评估方式
+- 课堂参与和讨论表现
+- 书面报告：分析某一关键战役
+- 期末考试：涵盖战争背景、过程及影响的综合题目
+网络搜索显示，有关于火星战争的虚构故事（例如电视剧或书籍）存在，但没有发生在2076年。常识也告诉我们，2076年是_未来_，因此不可能与真实事件相关联。
+
+那么，当我们用不同的LLM提供商运行这个提示时，会发生什么？
+
+> **Response 1**: OpenAI Playground (GPT-35)
+
+![Response 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.zh.png)
+
+> **Response 2**: Azure OpenAI Playground (GPT-35)
+
+![Response 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.zh.png)
+
+> **Response 3**: : Hugging Face Chat Playground (LLama-2)
+
+![Response 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.zh.png)
+
+正如预期，每个模型（或模型版本）由于随机性行为和模型能力的差异，产生了略有不同的回答。例如，一个模型面向8年级学生，而另一个则假设是高中生。但这三个模型都生成了可能让不了解情况的用户相信该事件真实存在的回答。
+
+像_元提示_和_温度配置_这样的提示工程技术，可能在一定程度上减少模型的虚构内容。新的提示工程_架构_也将新工具和技术无缝集成到提示流程中，以缓解或减少这些影响。
 
 ## 案例研究：GitHub Copilot
 
-让我们通过一个案例研究来了解提示工程在实际解决方案中的应用： [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst)。
+让我们通过一个案例研究来了解提示工程在现实解决方案中的应用：[GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst)。
 
-GitHub Copilot是您的“AI对编程伙伴”——它将文本提示转换为代码完成，并集成到您的开发环境中（例如，Visual Studio Code），提供无缝的用户体验。如下面系列博客中所述，最早的版本基于OpenAI Codex模型——工程师很快意识到需要微调模型并开发更好的提示工程技术，以提高代码质量。在7月，他们推出了[超越Codex的改进AI模型，以提供更快速的建议](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)。
+GitHub Copilot 是你的“AI 编程搭档”——它将文本提示转换为代码补全，并集成在你的开发环境中（例如 Visual Studio Code），提供无缝的用户体验。正如下面一系列博客所述，最早的版本基于 OpenAI Codex 模型——工程师们很快意识到需要微调模型并开发更好的提示工程技术，以提升代码质量。今年7月，他们[推出了超越 Codex 的改进型 AI 模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)，以实现更快的建议。
 
-按顺序阅读这些帖子，以了解他们的学习历程。
+请按顺序阅读这些文章，跟随他们的学习历程。
 
-- **2023年5月** | [GitHub Copilot正在更好地理解您的代码](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- **2023年5月** | [在GitHub内部：与GitHub Copilot背后的LLM合作](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst)。
-- **2023年6月** | [如何为GitHub Copilot编写更好的提示](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst)。
-- **2023年7月** | [.. GitHub Copilot超越Codex的改进AI模型](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
-- **2023年7月** | [开发者指南：提示工程和LLM](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
-- **2023年9月** | [如何构建企业级LLM应用程序：GitHub Copilot的经验教训](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023年5月** | [GitHub Copilot 在理解你的代码方面变得更好](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **2023年5月** | [GitHub 内部揭秘：与 GitHub Copilot 背后的 LLMs 合作](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023年6月** | [如何为 GitHub Copilot 编写更好的提示](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **2023年7月** | [GitHub Copilot 通过改进的 AI 模型超越 Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **2023年7月** | [开发者的提示工程与 LLM 指南](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **2023年9月** | [如何构建企业级 LLM 应用：GitHub Copilot 的经验教训](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-您还可以浏览他们的[工程博客](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst)，了解更多类似[这个](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst)的帖子，展示这些模型和技术如何 _应用_ 于推动现实世界的应用。
-
-## 提示构建
-
-我们已经了解了提示工程的重要性——现在让我们了解提示是如何 _构建_ 的，以便我们可以评估不同的技术以设计更有效的提示。
-
-### 基本提示
-
-让我们从基本提示开始：没有其他上下文的文本输入发送到模型。以下是一个示例——当我们将美国国歌的前几句话发送到OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst)时，它立即 _完成_ 了响应，显示了基本的预测行为。
-
-| 提示（输入） | 完成（输出） |
-| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| Oh say can you see | 听起来您正在开始“星条旗永不落”的歌词，美国国歌。完整歌词是... |
-
-### 复杂提示
-
-现在让我们为该基本提示添加上下文和指令。[聊天完成API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst)允许我们将复杂提示构建为 _消息_ 的集合，其中：
-
-- 输入/输出对反映 _用户_ 输入和 _助手_ 响应。
-- 系统消息设置助手行为或个性的上下文。
-
-请求现在采用以下形式，其中 _标记化_ 有效地捕获上下文和对话中的相关信息。现在，更改系统上下文可以对完成的质量产生与提供的用户输入同样重要的影响。
-
-### 指令提示
-
-在上述示例中，用户提示是一个简单的文本查询，可以被解释为信息请求。使用 _指令_ 提示，我们可以使用该文本更详细地指定任务，为AI提供更好的指导。以下是一个示例：
-
-| 提示（输入） | 完成（输出） | 指令类型 |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
-| 写一篇关于内战的描述 | _返回一个简单的段落_ | 简单 |
-| 写一篇关于内战的描述。提供关键日期和事件并描述其重要性 | _返回一个段落，随后是关键事件日期列表和描述_ | 复杂 |
-| 写一篇关于内战的描述，限
-模板的真正价值在于能够为垂直应用领域创建和发布_提示库_——此时的提示模板已被_优化_，以反映特定应用的上下文或示例，使响应对目标用户群体更加相关和准确。[Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) 仓库就是这种方法的一个很好例子，专注于课程计划、课程设计、学生辅导等关键目标，策划了一个教育领域的提示库。
-
-## 支持内容
-
-如果我们将提示构建视为包含指令（任务）和目标（主要内容），那么_次要内容_就像我们提供的额外上下文，用于**以某种方式影响输出**。它可以是调优参数、格式说明、主题分类等，帮助模型_定制_其响应以符合用户的目标或期望。
-
-例如：给定一个课程目录，包含所有课程的丰富元数据（名称、描述、级别、元数据标签、教师等）：
-
-- 我们可以定义一个指令来“总结2023年秋季的课程目录”
-- 我们可以使用主要内容提供几个期望输出的示例
-- 我们可以使用次要内容来识别最感兴趣的5个“标签”。
-
-现在，模型可以按照几个示例展示的格式提供摘要——但如果结果有多个标签，它可以优先考虑次要内容中识别的5个标签。
+你还可以浏览他们的[工程博客](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst)，阅读更多类似[这篇](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst)的文章，了解这些模型和技术如何_应用_于推动现实世界的项目。
 
 ---
 
 <!--
-课程模板：
-这个单元应涵盖核心概念#1。
-通过示例和参考来强化概念。
+LESSON TEMPLATE:
+This unit should cover core concept #2.
+Reinforce the concept with examples and references.
 
-概念#3：
-提示工程技术。
-提示工程有哪些基本技术？
-通过一些练习来说明。
+CONCEPT #2:
+Prompt Design.
+Illustrated with examples.
 -->
 
-## 提示最佳实践
+## 提示构建
 
-现在我们知道如何_构建_提示，我们可以开始思考如何_设计_它们以反映最佳实践。我们可以从两个方面考虑——拥有正确的_心态_和应用正确的_技术_。
+我们已经了解了提示工程为何重要——现在让我们理解提示是如何_构建_的，以便评估不同技术，实现更有效的提示设计。
 
-### 提示工程心态
+### 基础提示
 
-提示工程是一个试错过程，因此请牢记三个广泛的指导因素：
+先从基础提示开始：向模型发送一段没有其他上下文的文本输入。举个例子——当我们将美国国歌的开头几句发送给 OpenAI 的[Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst)，它会立即_补全_接下来的几句，展示了基本的预测行为。
 
-1. **领域理解很重要。** 响应的准确性和相关性是应用或用户操作的_领域_的函数。运用你的直觉和领域专业知识来进一步**定制技术**。例如，在系统提示中定义_领域特定的个性_，或在用户提示中使用_领域特定的模板_。提供反映领域特定上下文的次要内容，或使用_领域特定的提示和示例_来引导模型走向熟悉的使用模式。
+| Prompt (输入)       | Completion (输出)                                                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| Oh say can you see | 听起来你正在开始唱《星条旗永不落》（The Star-Spangled Banner），这是美国的国歌。完整歌词是... |
 
-2. **模型理解很重要。** 我们知道模型本质上是随机的。但模型实现也可能因其使用的训练数据集（预训练知识）、它们提供的功能（例如，通过API或SDK）以及它们优化的内容类型（例如，代码 vs. 图片 vs. 文本）而有所不同。了解你使用的模型的优点和限制，并利用这些知识来_优先化任务_或构建_定制模板_，以优化模型的能力。
+### 复杂提示
 
-3. **迭代与验证很重要。** 模型正在迅速发展，提示工程的技术也是如此。作为领域专家，你可能有其他上下文或标准适用于_你的_特定应用，而不适用于更广泛的社区。使用提示工程工具和技术来“快速启动”提示构建，然后利用你的直觉和领域专业知识进行迭代和验证结果。记录你的见解并创建一个**知识库**（例如，提示库），供其他人使用，作为未来更快迭代的新基线。
+现在让我们在基础提示上添加上下文和指令。[Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst)允许我们将复杂提示构建为一组_消息_，包括：
 
-## 最佳实践
+- 反映_用户_输入和_助手_回复的输入/输出对。
+- 设置助手行为或个性的系统消息。
 
-现在让我们看看[OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst)和[Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst)从业者推荐的常见最佳实践。
+请求现在采用如下形式，其中_分词_有效捕捉了上下文和对话中的相关信息。改变系统上下文对补全质量的影响，可能和用户输入一样显著。
 
-| 内容                              | 原因                                                                                                                                                                                                                                               |
-| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 评估最新模型。                   | 新一代模型可能具有改进的功能和质量——但也可能产生更高的成本。评估它们的影响，然后做出迁移决策。                                                                                                                                                |
-| 分离指令和上下文                 | 检查你的模型/提供者是否定义了_分隔符_以更清楚地区分指令、主要和次要内容。这可以帮助模型更准确地分配权重给标记。                                                                                                                         |
-| 具体且清晰                       | 提供更多关于期望上下文、结果、长度、格式、风格等的细节。这将提高响应的质量和一致性。将配方捕获到可重用的模板中。                                                                                                                          |
-| 描述性，使用示例                 | 模型可能对“展示和讲解”方法响应更好。开始使用`zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
-| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
-| Double Down                       | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.                                                         |
-| Order Matters                     | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.                                                               |
-| Give the model an “out”           | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses.                                                         |
-|                                   |                                                                                                                                                                                                                                                   |
+```python
+response = openai.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Who won the world series in 2020?"},
+        {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+        {"role": "user", "content": "Where was it played?"}
+    ]
+)
+```
 
-As with any best practice, remember that _your mileage may vary_ based on the model, the task and the domain. Use these as a starting point, and iterate to find what works best for you. Constantly re-evaluate your prompt engineering process as new models and tools become available, with a focus on process scalability and response quality.
+### 指令提示
+
+在上述示例中，用户提示是一个简单的文本查询，可以被理解为信息请求。使用_指令_提示，我们可以用文本更详细地指定任务，为AI提供更好的指导。举个例子：
+
+| Prompt (输入)                                                                                                                                                                                                                         | Completion (输出)                                                                                                        | 指令类型            |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
+| Write a description of the Civil War                                                                                                                                                                                                   | _返回了一个简单段落_                                                                                              | 简单                |
+| Write a description of the Civil War. Provide key dates and events and describe their significance                                                                                                                                     | _返回了一个段落，后面跟着关键事件日期及描述的列表_                                             | 复杂                |
+| Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _返回了更详细的内容，格式为JSON文本框，你可以复制粘贴到文件中并根据需要验证_ | 复杂，格式化        |
+
+## 主要内容
+
+在上述示例中，提示仍然相当开放，允许LLM决定其预训练数据集中哪些部分相关。使用_主要内容_设计模式，输入文本被分为两部分：
+
+- 指令（动作）
+- 相关内容（影响动作）
+
+下面是一个示例，指令是“用两句话总结这段内容”。
+
+| Prompt (输入)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Completion (输出)                                                                                                                                                                                                                                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.[19] When viewed from Earth, Jupiter can be bright enough for its reflected light to cast visible shadows,[20] and is on average the third-brightest natural object in the night sky after the Moon and Venus. <br/> **Summarize this in 2 short sentences** | 木星是太阳系中第五颗行星，也是最大的行星。它是一颗气态巨行星，质量是太阳的千分之一，但却是太阳系其他所有行星质量总和的两倍半。木星是夜空中肉眼可见的最亮天体之一，自古代文明以来就为人所知。它以罗马神朱庇特命名。[19] 从地球观察，木星反射的光线足够明亮，甚至能投下可见的影子，[20] 平均而言，它是夜空中继月亮和金星之后第三亮的自然天体。<br/>**用两句话简短总结这段内容** | 木星是太阳系中第五颗行星，也是最大的行星，夜空中最亮的天体之一。它以罗马神朱庇特命名，是一颗质量相当于其他所有行星总和两倍半的气态巨行星。 |
+
+主要内容部分可以用多种方式来驱动更有效的指令：
+
+- **示例**——不是直接告诉模型该做什么，而是给出示例，让模型推断模式。
+- **提示**——在指令后跟一个“提示”，引导模型生成更相关的回答。
+- **模板**——可重复使用的“配方”，带有占位符（变量），可用具体数据定制以满足特定需求。
+
+让我们来看看这些方法的实际应用。
+
+### 使用示例
+
+这是一种用主要内容“喂给模型”一些期望输出示例的方法，让模型推断出期望输出的模式。根据示例数量不同，可以有零样本提示、一样本提示、少样本提示等。
+
+提示现在包含三个部分：
+
+- 任务描述
+- 一些期望输出的示例
+- 新示例的开头（隐含的任务描述）
+
+| 学习类型       | Prompt (输入)                                                                                                                                        | Completion (输出)         |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
+| 零样本         | "The Sun is Shining". Translate to Spanish                                                                                                            | "El Sol está brillando".    |
+| 一样本         | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                 | "Es un día frío y ventoso". |
+| 少样本         | The player ran the bases => Baseball <br/> The player hit an ace => Tennis <br/> The player hit a six => Cricket <br/> The player made a slam-dunk => | Basketball                  |
+|               |                                                                                                                                                       |                             |
+
+注意，在零样本提示中我们必须明确指令（“Translate to Spanish”），但在一样本提示中，模型能推断出指令。少样本示例显示，增加更多示例可以让模型在没有额外指令的情况下做出更准确的推断。
+
+### 提示线索
+
+另一种使用主要内容的技巧是提供_线索_而非示例。在这种情况下，我们通过_先给出_一个反映期望回答格式的片段，给模型一个正确方向的提示。模型随后“接住线索”，继续以相同风格生成内容。
+
+| 线索数量       | Prompt (输入)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Completion (输出)                                                                                                                                                                                                                                                                                       |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | 木星是太阳系中第五颗行星，也是最大的行星。它是一颗气态巨行星，质量是太阳的千分之一，但却是太阳系其他所有行星质量总和的两倍半。木星是夜空中肉眼可见的最亮天体之一，自古代文明以来就为人所知。
+
+**Summarize This**                                       | 木星是太阳系中最大的行星，也是距离太阳第五远的行星。它是一颗气态巨行星，质量约为太阳的千分之一，但比其他所有行星的总和还要重。古代文明早已知晓木星，它在夜空中非常容易被看到。 |
+| 1              | 木星是距离太阳第五的行星，也是太阳系中最大的行星。它是一颗气态巨行星，质量约为太阳的千分之一，但比太阳系中所有其他行星的总和还要重两倍半。木星是夜空中肉眼可见的最亮天体之一，自有文字记载之前就已为古代文明所知。<br/>**Summarize This** <br/> 我们了解到，木星 | 是距离太阳第五的行星，也是太阳系中最大的行星。它是一颗气态巨行星，质量约为太阳的千分之一，但比所有其他行星的总和还要重两倍半。它肉眼可见，自古以来就为人所知。                        |
+| 2              | 木星是距离太阳第五的行星，也是太阳系中最大的行星。它是一颗气态巨行星，质量约为太阳的千分之一，但比太阳系中所有其他行星的总和还要重两倍半。木星是夜空中肉眼可见的最亮天体之一，自有文字记载之前就已为古代文明所知。<br/>**Summarize This** <br/> 我们学到的三大事实：         | 1. 木星是距离太阳第五的行星，也是太阳系中最大的行星。<br/> 2. 它是一颗气态巨行星，质量约为太阳的千分之一……<br/> 3. 木星自古以来就能用肉眼看到……                                                                       |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
+
+### Prompt Templates
+
+提示模板是一种_预定义的提示配方_，可以存储并根据需要重复使用，以实现更一致的大规模用户体验。最简单的形式，就是像[OpenAI的这个示例](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)那样，提供交互式提示组件（用户和系统消息）以及基于API的请求格式——支持重复使用。
+
+更复杂的形式，如[LangChain的示例](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst)，包含_占位符_，可以用来自各种来源的数据（用户输入、系统上下文、外部数据源等）动态替换，从而生成提示。这使我们能够创建可编程的可重用提示库，用于驱动一致的用户体验。
+
+最终，模板的真正价值在于能够为垂直应用领域创建和发布_提示库_——提示模板经过_优化_，反映特定应用的上下文或示例，使响应对目标用户更相关、更准确。[Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst)仓库就是一个很好的例子，专注于教育领域，强调课程规划、课程设计、学生辅导等关键目标，策划了一系列提示。
+
+## Supporting Content
+
+如果我们把提示构建看作包含指令（任务）和目标（主要内容），那么_次要内容_就像是我们提供的额外上下文，用来**以某种方式影响输出**。它可以是调优参数、格式说明、主题分类等，帮助模型_调整_响应以满足期望的用户目标或需求。
+
+例如：给定一个包含丰富元数据（名称、描述、级别、元数据标签、讲师等）的课程目录：
+
+- 我们可以定义一个指令“总结2023年秋季课程目录”
+- 用主要内容提供几个期望输出的示例
+- 用次要内容确定最关注的5个“标签”
+
+这样，模型可以按照示例格式给出总结——如果结果包含多个标签，则优先考虑次要内容中确定的5个标签。
+
+---
 
 <!--
 LESSON TEMPLATE:
-This unit should provide a code challenge if applicable
+本单元应涵盖核心概念#1。
+通过示例和参考资料强化该概念。
 
-CHALLENGE:
-Link to a Jupyter Notebook with only the code comments in the instructions (code sections are empty).
+概念#3：
+提示工程技术。
+有哪些基本的提示工程技术？
+通过练习进行说明。
+-->
 
-SOLUTION:
-Link to a copy of that Notebook with the prompts filled in and run, showing what one example could be.
+## Prompting Best Practices
+
+既然我们知道了提示如何_构建_，接下来可以开始思考如何_设计_提示以体现最佳实践。可以从两个方面考虑——拥有正确的_心态_和应用合适的_技巧_。
+
+### Prompt Engineering Mindset
+
+提示工程是一个反复试验的过程，请牢记以下三大指导原则：
+
+1. **领域理解很重要。** 响应的准确性和相关性取决于应用或用户所处的_领域_。运用你的直觉和领域专业知识，进一步**定制技巧**。例如，在系统提示中定义_领域特定的角色_，或在用户提示中使用_领域特定的模板_。提供反映领域上下文的次要内容，或用_领域特定的线索和示例_引导模型采用熟悉的用法。
+
+2. **模型理解很重要。** 我们知道模型本质上是随机的。但不同模型在训练数据（预训练知识）、提供的能力（如API或SDK）以及优化内容类型（代码、图像、文本等）方面可能不同。了解你所用模型的优势和局限，利用这些知识_优先安排任务_或构建_针对模型能力优化的定制模板_。
+
+3. **迭代与验证很重要。** 模型和提示工程技术都在快速发展。作为领域专家，你可能有特定应用的其他背景或标准，这些可能不适用于更广泛的社区。利用提示工程工具和技术“快速启动”提示构建，然后用你的直觉和领域专业知识迭代验证结果。记录你的见解，创建一个**知识库**（如提示库），供他人作为新基线，加快未来迭代。
+
+## Best Practices
+
+下面是[OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst)和[Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst)实践者推荐的常见最佳实践。
+
+| 内容                              | 原因                                                                                                                                                                                                                                               |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 评估最新模型                     | 新一代模型通常功能更强、质量更高，但可能成本更高。评估其影响后再决定是否迁移。                                                                                                                                                |
+| 分离指令与上下文                 | 检查你的模型/服务是否定义了_分隔符_，以更清晰地区分指令、主要内容和次要内容。这有助于模型更准确地为各部分分配权重。                                                                                                                         |
+| 具体且清晰                       | 提供更多关于期望上下文、结果、长度、格式、风格等细节，有助于提升响应质量和一致性。将配方记录在可复用模板中。                                                                                                                          |
+| 详细描述，使用示例               | 模型对“示范加说明”的方式反应更好。先用“零样本”方式给出指令（无示例），再用“少样本”方式提供几个期望输出示例进行优化。可用类比辅助说明。                                                                                                   |
+| 用线索启动完成                 | 通过给出一些引导词或短语，帮助模型从期望的方向开始生成响应。                                                                                                               |
+| 反复强调                         | 有时需要对模型重复说明。可在主要内容前后都给出指令，或同时使用指令和线索。不断迭代验证，找出有效方法。                                                                                                                         |
+| 顺序很重要                       | 向模型呈现信息的顺序可能影响输出，尤其是示例中，因近期偏好效应。尝试不同顺序，找出最佳方案。                                                               |
+| 给模型“退路”                   | 给模型一个_备用_的完成响应，以防无法完成任务。这能减少模型生成错误或虚假信息的概率。                                                         |
+|                                   |                                                                                                                                                                                                                                                   |
+
+和任何最佳实践一样，记住_实际效果因模型、任务和领域而异_。将这些作为起点，反复调整，找到最适合你的方法。随着新模型和工具的出现，持续重新评估你的提示工程流程，重点关注流程的可扩展性和响应质量。
+
+<!--
+LESSON TEMPLATE:
+本单元如适用，应提供代码挑战
+
+挑战：
+链接到一个Jupyter Notebook，指令中只有代码注释（代码部分为空）。
+
+解决方案：
+链接到该Notebook的一个副本，填充并运行提示，展示一个示例输出。
 -->
 
 ## Assignment
 
-Congratulations! You made it to the end of the lesson! It's time to put some of those concepts and techniques to the test with real examples!
+恭喜你完成本课！现在是时候用真实示例检验所学的概念和技巧了！
 
-For our assignment, we'll be using a Jupyter Notebook with exercises you can complete interactively. You can also extend the Notebook with your own Markdown and Code cells to explore ideas and techniques on your own.
+本次作业将使用一个Jupyter Notebook，里面有可交互完成的练习。你也可以在Notebook中添加自己的Markdown和代码单元，探索更多想法和技巧。
 
-### To get started, fork the repo, then
+### 开始前，先fork仓库，然后
 
-- (Recommended) Launch GitHub Codespaces
-- (Alternatively) Clone the repo to your local device and use it with Docker Desktop
-- (Alternatively) Open the Notebook with your preferred Notebook runtime environment.
+- （推荐）启动GitHub Codespaces
+- （或者）将仓库克隆到本地设备，配合Docker Desktop使用
+- （或者）用你喜欢的Notebook运行环境打开Notebook
 
-### Next, configure your environment variables
+### 接下来，配置环境变量
 
-- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT`值。回到[学习沙盒部分](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals)了解如何。
+- 将仓库根目录下的`.env.copy`文件复制为`.env`，填写`AZURE_OPENAI_API_KEY`、`AZURE_OPENAI_ENDPOINT`和`AZURE_OPENAI_DEPLOYMENT`的值。然后回到[学习沙盒部分](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals)了解具体操作。
 
-### 接下来，打开 Jupyter Notebook
+### 然后，打开Jupyter Notebook
 
-- 选择运行时内核。如果使用选项1或2，只需选择开发容器提供的默认 Python 3.10.x 内核。
+- 选择运行内核。如果使用方案1或2，直接选择开发容器提供的默认Python 3.10.x内核即可。
 
-你已经准备好进行练习。请注意，这里没有_正确与错误_的答案——只是通过试错探索选项，并为给定模型和应用领域建立直觉。
+你已经准备好运行练习了。请注意，这里没有“对错”答案——只是通过反复试验探索选项，培养对特定模型和应用领域有效方法的直觉。
 
-_因此，本课中没有代码解决方案部分。相反，Notebook将有标题为“我的解决方案”的Markdown单元格，显示一个示例输出供参考。_
+_因此本课没有代码解决方案部分。Notebook中会有标题为“我的解决方案：”的Markdown单元，展示一个示例输出供参考。_
 
  <!--
-课程模板：
-用总结和自学资源来结束部分。
+LESSON TEMPLATE:
+用总结和自学资源结束本节。
 -->
 
-## 知识检查
+## Knowledge check
 
-以下哪个是遵循合理最佳实践的良好提示？
+以下哪个提示符合合理的最佳实践？
 
-1. 给我看一辆红色汽车的图片
-2. 给我看一辆红色汽车的图片，品牌为沃尔沃，型号为XC90，停在悬崖边，夕阳西下
-3. 给我看一辆红色汽车的图片，品牌为沃尔沃，型号为XC90
+1. 给我一张红色汽车的图片
+2. 给我一张红色沃尔沃XC90汽车停在悬崖边，夕阳西下的图片
+3. 给我一张红色沃尔沃XC90汽车的图片
 
-A: 2，它是最好的提示，因为它提供了“什么”的细节并深入到具体（不仅仅是任何汽车，而是特定品牌和型号），还描述了整体环境。3是次优，因为它也包含了很多描述。
+答：2是最佳提示，因为它详细说明了“什么”，并具体到车型，还描述了整体场景。3次之，也包含了较多描述。
 
-## 🚀 挑战
+## 🚀 Challenge
 
-看看你能否利用“提示”技术完成提示：“完成句子‘给我看一辆红色汽车的图片，品牌为沃尔沃和’”。它会如何响应，你会如何改进？
+试试用“线索”技巧完成提示：“Complete the sentence 'Show me an image of red car of make Volvo and '”。它会如何回应？你会如何改进？
 
-## 出色的工作！继续学习
+## Great Work! Continue Your Learning
 
-想了解更多不同的提示工程概念？访问[继续学习页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)以找到其他关于此主题的优秀资源。
+想了解更多提示工程的概念？请访问[继续学习页面](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，这里有更多优质资源。
 
-前往第5课，我们将探讨[高级提示技术](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)！
+接下来进入第5课，我们将学习[高级提示技巧](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)！
 
-**免责声明**：
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。虽然我们努力确保准确性，但请注意自动翻译可能包含错误或不准确之处。应将原始文档的母语版本视为权威来源。对于关键信息，建议使用专业人工翻译。对于因使用此翻译而产生的任何误解或误读，我们不承担责任。
+**免责声明**：  
+本文件使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。虽然我们力求准确，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于重要信息，建议使用专业人工翻译。对于因使用本翻译而产生的任何误解或误释，我们不承担任何责任。

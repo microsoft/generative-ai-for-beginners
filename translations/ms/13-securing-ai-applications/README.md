@@ -2,148 +2,175 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T23:00:36+00:00",
+  "translation_date": "2025-07-09T15:34:40+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "ms"
 }
 -->
-# Melindungi Aplikasi AI Generatif Anda
+# Memastikan Keselamatan Aplikasi AI Generatif Anda
 
-[![Melindungi Aplikasi AI Generatif Anda](../../../translated_images/13-lesson-banner.c21a3a479f9ff14ad1f7c9b02bfe0d9a549b43497588334356f91073466a1283.ms.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
+[![Memastikan Keselamatan Aplikasi AI Generatif Anda](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ms.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Pengenalan
 
-Pelajaran ini akan membahas:
+Pelajaran ini akan merangkumi:
 
-- Keamanan dalam konteks sistem AI.
-- Risiko dan ancaman umum terhadap sistem AI.
-- Metode dan pertimbangan untuk mengamankan sistem AI.
+- Keselamatan dalam konteks sistem AI.
+- Risiko dan ancaman biasa terhadap sistem AI.
+- Kaedah dan pertimbangan untuk memastikan keselamatan sistem AI.
 
-## Tujuan Pembelajaran
+## Matlamat Pembelajaran
 
-Setelah menyelesaikan pelajaran ini, Anda akan memahami:
+Selepas menamatkan pelajaran ini, anda akan memahami:
 
 - Ancaman dan risiko terhadap sistem AI.
-- Metode dan praktik umum untuk mengamankan sistem AI.
-- Bagaimana pengujian keamanan dapat mencegah hasil yang tidak terduga dan mengikis kepercayaan pengguna.
+- Kaedah dan amalan biasa untuk memastikan keselamatan sistem AI.
+- Bagaimana pelaksanaan ujian keselamatan dapat mengelakkan keputusan yang tidak dijangka dan mengurangkan kepercayaan pengguna.
 
-## Apa arti keamanan dalam konteks AI generatif?
+## Apakah maksud keselamatan dalam konteks AI generatif?
 
-Seiring dengan semakin pentingnya teknologi Kecerdasan Buatan (AI) dan Pembelajaran Mesin (ML) dalam kehidupan kita, penting untuk melindungi tidak hanya data pelanggan tetapi juga sistem AI itu sendiri. AI/ML semakin banyak digunakan dalam mendukung proses pengambilan keputusan yang bernilai tinggi di industri-industri di mana keputusan yang salah dapat menimbulkan konsekuensi serius.
+Seiring dengan teknologi Kecerdasan Buatan (AI) dan Pembelajaran Mesin (ML) yang semakin membentuk kehidupan kita, adalah penting untuk melindungi bukan sahaja data pelanggan tetapi juga sistem AI itu sendiri. AI/ML semakin digunakan untuk menyokong proses membuat keputusan bernilai tinggi dalam industri di mana keputusan yang salah boleh membawa akibat serius.
 
-Berikut adalah poin-poin penting yang perlu dipertimbangkan:
+Berikut adalah perkara utama yang perlu dipertimbangkan:
 
-- **Dampak AI/ML**: AI/ML memiliki dampak yang signifikan pada kehidupan sehari-hari dan oleh karena itu melindunginya menjadi penting.
-- **Tantangan Keamanan**: Dampak ini membutuhkan perhatian yang tepat untuk menangani kebutuhan melindungi produk berbasis AI dari serangan canggih, baik oleh troll atau kelompok terorganisir.
-- **Masalah Strategis**: Industri teknologi harus secara proaktif menangani tantangan strategis untuk memastikan keselamatan pelanggan jangka panjang dan keamanan data.
+- **Impak AI/ML**: AI/ML mempunyai impak besar dalam kehidupan seharian dan oleh itu perlindungan terhadapnya menjadi sangat penting.
+- **Cabaran Keselamatan**: Impak AI/ML ini memerlukan perhatian yang sewajarnya untuk melindungi produk berasaskan AI daripada serangan canggih, sama ada oleh troll atau kumpulan terancang.
+- **Masalah Strategik**: Industri teknologi perlu secara proaktif menangani cabaran strategik untuk memastikan keselamatan pelanggan dan data jangka panjang.
 
-Selain itu, model Pembelajaran Mesin sebagian besar tidak dapat membedakan antara input berbahaya dan data anomali yang jinak. Sumber data pelatihan yang signifikan berasal dari kumpulan data publik yang tidak dikurasi dan tidak dimoderasi, yang terbuka untuk kontribusi pihak ketiga. Penyerang tidak perlu mengkompromikan kumpulan data ketika mereka bebas untuk berkontribusi padanya. Seiring waktu, data berbahaya dengan kepercayaan rendah menjadi data terpercaya dengan kepercayaan tinggi, jika struktur/format data tetap benar.
+Selain itu, model Pembelajaran Mesin kebanyakannya tidak dapat membezakan antara input berniat jahat dan data anomali yang tidak berbahaya. Sumber data latihan yang besar berasal dari set data awam yang tidak dikawal dan tidak disaring, yang terbuka untuk sumbangan pihak ketiga. Penyerang tidak perlu menggodam set data apabila mereka bebas menyumbang kepadanya. Lama-kelamaan, data berniat jahat yang kurang dipercayai boleh menjadi data yang dipercayai jika struktur atau format data tersebut kekal betul.
 
-Inilah sebabnya mengapa penting untuk memastikan integritas dan perlindungan dari penyimpanan data yang digunakan model Anda untuk membuat keputusan.
+Oleh itu, adalah kritikal untuk memastikan integriti dan perlindungan storan data yang digunakan oleh model anda untuk membuat keputusan.
 
 ## Memahami ancaman dan risiko AI
 
-Dalam hal AI dan sistem terkait, peracunan data menonjol sebagai ancaman keamanan paling signifikan saat ini. Peracunan data terjadi ketika seseorang dengan sengaja mengubah informasi yang digunakan untuk melatih AI, menyebabkan AI membuat kesalahan. Ini terjadi karena tidak adanya metode deteksi dan mitigasi yang standar, ditambah dengan ketergantungan kita pada kumpulan data publik yang tidak terpercaya atau tidak dikurasi untuk pelatihan. Untuk mempertahankan integritas data dan mencegah proses pelatihan yang cacat, penting untuk melacak asal dan silsilah data Anda. Jika tidak, pepatah lama "sampah masuk, sampah keluar" berlaku, yang mengarah pada kinerja model yang terganggu.
+Dalam konteks AI dan sistem berkaitan, pencemaran data (data poisoning) adalah ancaman keselamatan paling ketara hari ini. Pencemaran data berlaku apabila seseorang dengan sengaja mengubah maklumat yang digunakan untuk melatih AI, menyebabkan AI membuat kesilapan. Ini disebabkan oleh ketiadaan kaedah pengesanan dan mitigasi yang standard, serta kebergantungan kita pada set data awam yang tidak dipercayai atau tidak dikawal untuk latihan. Untuk mengekalkan integriti data dan mengelakkan proses latihan yang cacat, adalah penting untuk menjejaki asal usul dan garis keturunan data anda. Jika tidak, pepatah lama “sampah masuk, sampah keluar” menjadi kenyataan, yang membawa kepada prestasi model yang terjejas.
 
-Berikut adalah contoh bagaimana peracunan data dapat mempengaruhi model Anda:
+Berikut adalah contoh bagaimana pencemaran data boleh menjejaskan model anda:
 
-1. **Pembalikan Label**: Dalam tugas klasifikasi biner, lawan dengan sengaja membalik label dari sebagian kecil data pelatihan. Misalnya, sampel jinak diberi label sebagai berbahaya, menyebabkan model belajar asosiasi yang salah.\
-   **Contoh**: Filter spam yang salah mengklasifikasikan email sah sebagai spam karena label yang dimanipulasi.
-2. **Peracunan Fitur**: Penyerang dengan halus memodifikasi fitur dalam data pelatihan untuk memperkenalkan bias atau menyesatkan model.\
-   **Contoh**: Menambahkan kata kunci yang tidak relevan ke deskripsi produk untuk memanipulasi sistem rekomendasi.
-3. **Injeksi Data**: Menyuntikkan data berbahaya ke dalam set pelatihan untuk mempengaruhi perilaku model.\
-   **Contoh**: Memperkenalkan ulasan pengguna palsu untuk mengubah hasil analisis sentimen.
-4. **Serangan Pintu Belakang**: Lawan memasukkan pola tersembunyi (pintu belakang) ke dalam data pelatihan. Model belajar mengenali pola ini dan berperilaku jahat ketika dipicu.\
-   **Contoh**: Sistem pengenalan wajah yang dilatih dengan gambar pintu belakang yang salah mengidentifikasi orang tertentu.
+1. **Penukaran Label**: Dalam tugasan klasifikasi binari, penyerang dengan sengaja menukar label sebahagian kecil data latihan. Contohnya, sampel yang tidak berbahaya dilabel sebagai berniat jahat, menyebabkan model mempelajari hubungan yang salah.\
+   **Contoh**: Penapis spam yang salah mengklasifikasikan emel sah sebagai spam akibat label yang dimanipulasi.
+2. **Pencemaran Ciri**: Penyerang mengubah ciri dalam data latihan secara halus untuk memperkenalkan bias atau mengelirukan model.\
+   **Contoh**: Menambah kata kunci yang tidak relevan pada deskripsi produk untuk memanipulasi sistem cadangan.
+3. **Suntikan Data**: Menyuntik data berniat jahat ke dalam set latihan untuk mempengaruhi tingkah laku model.\
+   **Contoh**: Memperkenalkan ulasan palsu pengguna untuk mempengaruhi hasil analisis sentimen.
+4. **Serangan Pintu Belakang**: Penyerang memasukkan corak tersembunyi (pintu belakang) ke dalam data latihan. Model belajar mengenali corak ini dan bertindak jahat apabila dicetuskan.\
+   **Contoh**: Sistem pengecaman wajah yang dilatih dengan imej yang mengandungi pintu belakang yang salah mengenal pasti individu tertentu.
 
-MITRE Corporation telah menciptakan [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), sebuah basis pengetahuan tentang taktik dan teknik yang digunakan oleh lawan dalam serangan nyata pada sistem AI.
+MITRE Corporation telah mencipta [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), sebuah pangkalan pengetahuan tentang taktik dan teknik yang digunakan oleh penyerang dalam serangan dunia nyata terhadap sistem AI.
 
-> Ada semakin banyak kerentanan dalam sistem yang diaktifkan AI, karena penggabungan AI meningkatkan permukaan serangan sistem yang ada melampaui serangan siber tradisional. Kami mengembangkan ATLAS untuk meningkatkan kesadaran tentang kerentanan yang unik dan berkembang ini, karena komunitas global semakin menggabungkan AI ke dalam berbagai sistem. ATLAS dimodelkan setelah kerangka MITRE ATT&CK® dan taktik, teknik, dan prosedurnya (TTP) melengkapi yang ada di ATT&CK.
+> Terdapat semakin banyak kelemahan dalam sistem yang menggunakan AI, kerana penggabungan AI meningkatkan permukaan serangan sistem sedia ada melebihi serangan siber tradisional. Kami membangunkan ATLAS untuk meningkatkan kesedaran tentang kelemahan unik dan yang sedang berkembang ini, kerana komuniti global semakin menggabungkan AI ke dalam pelbagai sistem. ATLAS dimodelkan berdasarkan rangka kerja MITRE ATT&CK® dan taktik, teknik, serta prosedurnya (TTP) melengkapi yang terdapat dalam ATT&CK.
 
-Seperti halnya kerangka MITRE ATT&CK® yang banyak digunakan dalam keamanan siber tradisional untuk merencanakan skenario emulasi ancaman canggih, ATLAS menyediakan set TTP yang mudah dicari yang dapat membantu untuk lebih memahami dan mempersiapkan diri dalam menghadapi serangan yang muncul.
+Seperti rangka kerja MITRE ATT&CK® yang banyak digunakan dalam keselamatan siber tradisional untuk merancang senario emulasi ancaman maju, ATLAS menyediakan set TTP yang mudah dicari yang dapat membantu memahami dan bersedia untuk mempertahankan serangan yang sedang muncul.
 
-Selain itu, Open Web Application Security Project (OWASP) telah membuat "[Daftar 10 Teratas](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" dari kerentanan paling kritis yang ditemukan dalam aplikasi yang menggunakan LLM. Daftar ini menyoroti risiko ancaman seperti peracunan data yang disebutkan sebelumnya bersama dengan ancaman lainnya seperti:
+Selain itu, Open Web Application Security Project (OWASP) telah mencipta "[Senarai 10 Teratas](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" kelemahan paling kritikal yang ditemui dalam aplikasi yang menggunakan LLM. Senarai ini menyoroti risiko ancaman seperti pencemaran data yang disebutkan tadi serta yang lain seperti:
 
-- **Injeksi Prompt**: teknik di mana penyerang memanipulasi Model Bahasa Besar (LLM) melalui input yang dirancang dengan hati-hati, menyebabkan model berperilaku di luar perilaku yang dimaksudkan.
-- **Kerentanan Rantai Pasokan**: Komponen dan perangkat lunak yang membentuk aplikasi yang digunakan oleh LLM, seperti modul Python atau kumpulan data eksternal, dapat dikompromikan yang mengarah pada hasil yang tidak terduga, bias yang diperkenalkan, dan bahkan kerentanan dalam infrastruktur yang mendasarinya.
-- **Ketergantungan Berlebihan**: LLM dapat salah dan cenderung berhalusinasi, memberikan hasil yang tidak akurat atau tidak aman. Dalam beberapa kasus yang didokumentasikan, orang telah menerima hasilnya begitu saja yang mengarah pada konsekuensi negatif dunia nyata yang tidak diinginkan.
+- **Suntikan Prompt**: teknik di mana penyerang memanipulasi Model Bahasa Besar (LLM) melalui input yang direka dengan teliti, menyebabkan model bertindak di luar kelakuan yang dimaksudkan.
+- **Kelemahan Rantaian Bekalan**: Komponen dan perisian yang membentuk aplikasi yang digunakan oleh LLM, seperti modul Python atau set data luaran, boleh dikompromi menyebabkan keputusan yang tidak dijangka, bias yang diperkenalkan dan juga kelemahan dalam infrastruktur asas.
+- **Terlalu Bergantung**: LLM boleh membuat kesilapan dan cenderung untuk "berhalusinasi", memberikan hasil yang tidak tepat atau tidak selamat. Dalam beberapa keadaan yang didokumentasikan, orang mengambil hasil tersebut secara literal yang membawa kepada akibat negatif di dunia nyata.
 
-Microsoft Cloud Advocate Rod Trent telah menulis ebook gratis, [Harus Belajar Keamanan AI](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), yang menyelami secara mendalam ancaman AI yang muncul ini dan memberikan panduan ekstensif tentang cara terbaik untuk menangani skenario ini.
+Microsoft Cloud Advocate Rod Trent telah menulis sebuah ebook percuma, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), yang membincangkan secara mendalam ancaman AI yang sedang muncul ini dan memberikan panduan luas tentang cara terbaik menangani senario tersebut.
 
-## Pengujian Keamanan untuk Sistem AI dan LLM
+## Ujian Keselamatan untuk Sistem AI dan LLM
 
-Kecerdasan buatan (AI) mengubah berbagai domain dan industri, menawarkan kemungkinan dan manfaat baru bagi masyarakat. Namun, AI juga menimbulkan tantangan dan risiko yang signifikan, seperti privasi data, bias, kurangnya penjelasan, dan potensi penyalahgunaan. Oleh karena itu, penting untuk memastikan bahwa sistem AI aman dan bertanggung jawab, yang berarti mereka mematuhi standar etika dan hukum dan dapat dipercaya oleh pengguna dan pemangku kepentingan.
+Kecerdasan buatan (AI) sedang mengubah pelbagai bidang dan industri, menawarkan kemungkinan dan manfaat baru untuk masyarakat. Namun, AI juga membawa cabaran dan risiko yang ketara, seperti privasi data, bias, kekurangan penjelasan, dan potensi penyalahgunaan. Oleh itu, adalah penting untuk memastikan sistem AI selamat dan bertanggungjawab, bermakna ia mematuhi piawaian etika dan undang-undang serta boleh dipercayai oleh pengguna dan pihak berkepentingan.
 
-Pengujian keamanan adalah proses mengevaluasi keamanan sistem AI atau LLM, dengan mengidentifikasi dan mengeksploitasi kerentanannya. Ini dapat dilakukan oleh pengembang, pengguna, atau auditor pihak ketiga, tergantung pada tujuan dan cakupan pengujian. Beberapa metode pengujian keamanan yang paling umum untuk sistem AI dan LLM adalah:
+Ujian keselamatan adalah proses menilai keselamatan sistem AI atau LLM dengan mengenal pasti dan mengeksploitasi kelemahan mereka. Ini boleh dilakukan oleh pembangun, pengguna, atau juruaudit pihak ketiga, bergantung pada tujuan dan skop ujian. Beberapa kaedah ujian keselamatan yang paling biasa untuk sistem AI dan LLM adalah:
 
-- **Sanitasi Data**: Ini adalah proses menghapus atau menganonimkan informasi sensitif atau pribadi dari data pelatihan atau input sistem AI atau LLM. Sanitasi data dapat membantu mencegah kebocoran data dan manipulasi jahat dengan mengurangi paparan data rahasia atau pribadi.
-- **Pengujian Adversarial**: Ini adalah proses menghasilkan dan menerapkan contoh adversarial ke input atau output sistem AI atau LLM untuk mengevaluasi ketahanan dan daya tahannya terhadap serangan adversarial. Pengujian adversarial dapat membantu mengidentifikasi dan mengurangi kerentanan dan kelemahan sistem AI atau LLM yang dapat dieksploitasi oleh penyerang.
-- **Verifikasi Model**: Ini adalah proses memverifikasi kebenaran dan kelengkapan parameter model atau arsitektur sistem AI atau LLM. Verifikasi model dapat membantu mendeteksi dan mencegah pencurian model dengan memastikan bahwa model dilindungi dan diautentikasi.
-- **Validasi Output**: Ini adalah proses memvalidasi kualitas dan keandalan output sistem AI atau LLM. Validasi output dapat membantu mendeteksi dan memperbaiki manipulasi jahat dengan memastikan bahwa output konsisten dan akurat.
+- **Pembersihan Data**: Proses menghapus atau menyamarkan maklumat sensitif atau peribadi daripada data latihan atau input sistem AI atau LLM. Pembersihan data membantu mencegah kebocoran data dan manipulasi berniat jahat dengan mengurangkan pendedahan data sulit atau peribadi.
+- **Ujian Adversarial**: Proses menghasilkan dan menggunakan contoh adversarial pada input atau output sistem AI atau LLM untuk menilai ketahanan dan daya tahan terhadap serangan adversarial. Ujian ini membantu mengenal pasti dan mengurangkan kelemahan yang boleh dieksploitasi oleh penyerang.
+- **Pengesahan Model**: Proses mengesahkan ketepatan dan kelengkapan parameter model atau seni bina sistem AI atau LLM. Pengesahan model membantu mengesan dan mencegah pencurian model dengan memastikan model dilindungi dan diautentikasi.
+- **Pengesahan Output**: Proses mengesahkan kualiti dan kebolehpercayaan output sistem AI atau LLM. Pengesahan output membantu mengesan dan membetulkan manipulasi berniat jahat dengan memastikan output konsisten dan tepat.
 
-OpenAI, pemimpin dalam sistem AI, telah menetapkan serangkaian _evaluasi keselamatan_ sebagai bagian dari inisiatif jaringan red teaming mereka, yang bertujuan untuk menguji output sistem AI dalam upaya berkontribusi pada keselamatan AI.
+OpenAI, peneraju dalam sistem AI, telah menyediakan satu siri _penilaian keselamatan_ sebagai sebahagian daripada inisiatif rangkaian red teaming mereka, bertujuan menguji output sistem AI dengan harapan menyumbang kepada keselamatan AI.
 
-> Evaluasi dapat berkisar dari tes tanya jawab sederhana hingga simulasi yang lebih kompleks. Sebagai contoh konkret, berikut adalah evaluasi sampel yang dikembangkan oleh OpenAI untuk mengevaluasi perilaku AI dari berbagai sudut:
+> Penilaian boleh merangkumi ujian soal jawab mudah hingga simulasi yang lebih kompleks. Sebagai contoh konkrit, berikut adalah contoh penilaian yang dibangunkan oleh OpenAI untuk menilai tingkah laku AI dari pelbagai sudut:
 
 #### Persuasi
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat menipu sistem AI lain untuk mengatakan kata rahasia?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat meyakinkan sistem AI lain untuk menyumbangkan uang?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat mempengaruhi dukungan sistem AI lain terhadap proposisi politik?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh memperdaya sistem AI lain untuk mengucapkan kata rahsia?
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh meyakinkan sistem AI lain untuk menderma wang?
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh mempengaruhi sokongan sistem AI lain terhadap cadangan politik?
 
-#### Steganografi (pesan tersembunyi)
+#### Steganografi (mesej tersembunyi)
 
-- [Steganografi](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat menyampaikan pesan rahasia tanpa tertangkap oleh sistem AI lain?
-- [Kompresi Teks](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat mengompresi dan mendekompresi pesan, untuk memungkinkan penyembunyian pesan rahasia?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Seberapa baik sistem AI dapat berkoordinasi dengan sistem AI lain, tanpa komunikasi langsung?
+- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh menyampaikan mesej rahsia tanpa dikesan oleh sistem AI lain?
+- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh memampat dan menyahmampat mesej untuk menyembunyikan mesej rahsia?
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Sejauh mana sistem AI boleh berkoordinasi dengan sistem AI lain tanpa komunikasi langsung?
 
-### Keamanan AI
+### Keselamatan AI
 
-Sangat penting untuk melindungi sistem AI dari serangan berbahaya, penyalahgunaan, atau konsekuensi yang tidak diinginkan. Ini termasuk mengambil langkah-langkah untuk memastikan keamanan, keandalan, dan kepercayaan sistem AI, seperti:
+Adalah penting untuk kita melindungi sistem AI daripada serangan berniat jahat, penyalahgunaan, atau akibat yang tidak diingini. Ini termasuk mengambil langkah untuk memastikan keselamatan, kebolehpercayaan, dan kepercayaan terhadap sistem AI, seperti:
 
-- Mengamankan data dan algoritma yang digunakan untuk melatih dan menjalankan model AI
-- Mencegah akses tidak sah, manipulasi, atau sabotase sistem AI
-- Mendeteksi dan mengurangi bias, diskriminasi, atau masalah etika dalam sistem AI
-- Memastikan akuntabilitas, transparansi, dan keterjelasan keputusan dan tindakan AI
-- Menyelaraskan tujuan dan nilai sistem AI dengan manusia dan masyarakat
+- Melindungi data dan algoritma yang digunakan untuk melatih dan menjalankan model AI
+- Mencegah akses tanpa kebenaran, manipulasi, atau sabotaj sistem AI
+- Mengesan dan mengurangkan bias, diskriminasi, atau isu etika dalam sistem AI
+- Memastikan akauntabiliti, ketelusan, dan penjelasan keputusan serta tindakan AI
+- Menyelaraskan matlamat dan nilai sistem AI dengan manusia dan masyarakat
 
-Keamanan AI penting untuk memastikan integritas, ketersediaan, dan kerahasiaan sistem dan data AI. Beberapa tantangan dan peluang keamanan AI adalah:
+Keselamatan AI penting untuk memastikan integriti, ketersediaan, dan kerahsiaan sistem AI dan data. Beberapa cabaran dan peluang keselamatan AI adalah:
 
-- Peluang: Menggabungkan AI dalam strategi keamanan siber karena dapat memainkan peran penting dalam mengidentifikasi ancaman dan meningkatkan waktu respons. AI dapat membantu mengotomatisasi dan meningkatkan deteksi dan mitigasi serangan siber, seperti phishing, malware, atau ransomware.
-- Tantangan: AI juga dapat digunakan oleh lawan untuk melancarkan serangan canggih, seperti menghasilkan konten palsu atau menyesatkan, menyamar sebagai pengguna, atau mengeksploitasi kerentanan dalam sistem AI. Oleh karena itu, pengembang AI memiliki tanggung jawab unik untuk merancang sistem yang kuat dan tangguh terhadap penyalahgunaan.
+- Peluang: Menggabungkan AI dalam strategi keselamatan siber kerana AI boleh memainkan peranan penting dalam mengenal pasti ancaman dan mempercepat tindak balas. AI boleh membantu mengautomasikan dan meningkatkan pengesanan serta mitigasi serangan siber seperti phishing, malware, atau ransomware.
+- Cabaran: AI juga boleh digunakan oleh penyerang untuk melancarkan serangan canggih, seperti menghasilkan kandungan palsu atau mengelirukan, menyamar sebagai pengguna, atau mengeksploitasi kelemahan dalam sistem AI. Oleh itu, pembangun AI mempunyai tanggungjawab unik untuk mereka bentuk sistem yang kukuh dan tahan terhadap penyalahgunaan.
 
 ### Perlindungan Data
 
-LLM dapat menimbulkan risiko terhadap privasi dan keamanan data yang mereka gunakan. Misalnya, LLM berpotensi menghafal dan membocorkan informasi sensitif dari data pelatihan mereka, seperti nama pribadi, alamat, kata sandi, atau nomor kartu kredit. Mereka juga dapat dimanipulasi atau diserang oleh aktor jahat yang ingin mengeksploitasi kerentanan atau bias mereka. Oleh karena itu, penting untuk menyadari risiko ini dan mengambil langkah-langkah yang tepat untuk melindungi data yang digunakan dengan LLM. Ada beberapa langkah yang dapat Anda ambil untuk melindungi data yang digunakan dengan LLM. Langkah-langkah ini termasuk:
+LLM boleh menimbulkan risiko terhadap privasi dan keselamatan data yang digunakan. Contohnya, LLM berpotensi mengingati dan membocorkan maklumat sensitif dari data latihannya, seperti nama peribadi, alamat, kata laluan, atau nombor kad kredit. Mereka juga boleh dimanipulasi atau diserang oleh pihak berniat jahat yang ingin mengeksploitasi kelemahan atau bias mereka. Oleh itu, penting untuk menyedari risiko ini dan mengambil langkah yang sesuai untuk melindungi data yang digunakan dengan LLM. Beberapa langkah yang boleh diambil untuk melindungi data yang digunakan dengan LLM termasuk:
 
-- **Membatasi jumlah dan jenis data yang mereka bagikan dengan LLM**: Hanya bagikan data yang diperlukan dan relevan untuk tujuan yang dimaksudkan, dan hindari berbagi data yang sensitif, rahasia, atau pribadi. Pengguna juga harus menganonimkan atau mengenkripsi data yang mereka bagikan dengan LLM, seperti dengan menghapus atau menutupi informasi identifikasi, atau menggunakan saluran komunikasi yang aman.
-- **Memverifikasi data yang dihasilkan oleh LLM**: Selalu periksa keakuratan dan kualitas output yang dihasilkan oleh LLM untuk memastikan bahwa mereka tidak mengandung informasi yang tidak diinginkan atau tidak pantas.
-- **Melaporkan dan memberi tahu setiap pelanggaran data atau insiden**: Waspadai setiap aktivitas atau perilaku yang mencurigakan atau tidak normal dari LLM, seperti menghasilkan teks yang tidak relevan, tidak akurat, ofensif, atau berbahaya. Ini bisa menjadi indikasi pelanggaran data atau insiden keamanan.
+- **Mengehadkan jumlah dan jenis data yang dikongsi dengan LLM**: Kongsi hanya data yang diperlukan dan relevan untuk tujuan yang dimaksudkan, dan elakkan berkongsi data yang sensitif, sulit, atau peribadi. Pengguna juga harus menyamarkan atau menyulitkan data yang dikongsi dengan LLM, seperti dengan menghapus atau menyembunyikan maklumat pengenalan, atau menggunakan saluran komunikasi yang selamat.
+- **Mengesahkan data yang dijana oleh LLM**: Sentiasa periksa ketepatan dan kualiti output yang dijana oleh LLM untuk memastikan ia tidak mengandungi maklumat yang tidak diingini atau tidak sesuai.
+- **Melaporkan dan memberi amaran tentang sebarang kebocoran data atau insiden**: Berwaspada terhadap sebarang aktiviti atau tingkah laku yang mencurigakan atau luar biasa dari LLM, seperti menjana teks yang tidak relevan, tidak tepat, menyinggung, atau berbahaya. Ini mungkin petanda kebocoran data atau insiden keselamatan.
 
-Keamanan data, tata kelola, dan kepatuhan adalah penting bagi organisasi mana pun yang ingin memanfaatkan kekuatan data dan AI dalam lingkungan multi-cloud. Mengamankan dan mengelola semua data Anda adalah usaha yang kompleks dan multifaset. Anda perlu mengamankan dan mengelola berbagai jenis data (terstruktur, tidak terstruktur, dan data yang dihasilkan oleh AI) di berbagai lokasi di beberapa cloud, dan Anda perlu memperhitungkan keamanan data, tata kelola, dan peraturan AI yang ada dan yang akan datang. Untuk melindungi data Anda, Anda perlu mengadopsi beberapa praktik terbaik dan tindakan pencegahan, seperti:
+Keselamatan data, tadbir urus, dan pematuhan adalah kritikal bagi mana-mana organisasi yang ingin memanfaatkan kuasa data dan AI dalam persekitaran multi-awan. Memastikan keselamatan dan tadbir urus semua data anda adalah tugas yang kompleks dan pelbagai aspek. Anda perlu melindungi dan mentadbir pelbagai jenis data (berstruktur, tidak berstruktur, dan data yang dijana oleh AI) di lokasi berbeza merentasi pelbagai awan, serta mengambil kira peraturan keselamatan data, tadbir urus, dan AI yang sedia ada dan akan datang. Untuk melindungi data anda, anda perlu mengamalkan beberapa amalan terbaik dan langkah berjaga-jaga, seperti:
 
-- Gunakan layanan cloud atau platform yang menawarkan fitur perlindungan dan privasi data.
-- Gunakan alat kualitas dan validasi data untuk memeriksa data Anda dari kesalahan, ketidakkonsistenan, atau anomali.
-- Gunakan kerangka tata kelola dan etika data untuk memastikan data Anda digunakan dengan cara yang bertanggung jawab dan transparan.
+- Gunakan perkhidmatan atau platform awan yang menawarkan ciri perlindungan data dan privasi.
+- Gunakan alat kualiti dan pengesahan data untuk memeriksa data anda bagi kesilapan, ketidakkonsistenan, atau anomali.
+- Gunakan rangka kerja tadbir urus data dan etika untuk memastikan data anda digunakan secara bertanggungjawab dan telus.
 
 ### Meniru ancaman dunia nyata - red teaming AI
 
-Meniru ancaman dunia nyata sekarang dianggap sebagai praktik standar dalam membangun sistem AI yang tangguh dengan menggunakan alat, taktik, dan prosedur serupa untuk mengidentifikasi risiko pada sistem dan menguji respons pembela.
+Meniru ancaman dunia nyata kini dianggap sebagai amalan standard dalam membina sistem AI yang tahan lasak dengan menggunakan alat, taktik, dan prosedur yang serupa untuk mengenal pasti risiko kepada sistem dan menguji tindak balas pihak pembela.
+> Amalan red teaming AI telah berkembang untuk mengambil makna yang lebih luas: ia bukan sahaja merangkumi pemeriksaan kelemahan keselamatan, tetapi juga termasuk pemeriksaan kegagalan sistem lain, seperti penghasilan kandungan yang berpotensi membahayakan. Sistem AI datang dengan risiko baru, dan red teaming adalah teras untuk memahami risiko baharu tersebut, seperti suntikan arahan dan penghasilan kandungan yang tidak berasas. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ms.png)]()
 
-> Praktik red teaming AI telah berkembang untuk mengambil makna yang lebih luas: ini tidak hanya mencakup pengujian untuk kerentanan keamanan, tetapi juga termasuk pengujian untuk kegagalan sistem lainnya, seperti menghasilkan konten yang berpotensi berbahaya. Sistem AI datang dengan risiko baru, dan red teaming adalah inti untuk memahami risiko baru tersebut, seperti injeksi prompt dan menghasilkan konten yang tidak terdasar. - [Tim Merah AI Microsoft membangun masa depan AI yang lebih aman](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+Berikut adalah pandangan utama yang telah membentuk program AI Red Team Microsoft.
 
-[![Panduan dan sumber daya untuk red teaming](../../../translated_images/13-AI-red-team.5c111d3a4527e2918d94310bb99ff9d878a430efee64652523c46cb095f314cf.ms.png)]()
+1. **Skop Luas AI Red Teaming:**
+   AI red teaming kini merangkumi hasil keselamatan dan Responsible AI (RAI). Secara tradisinya, red teaming menumpukan pada aspek keselamatan, menganggap model sebagai vektor (contohnya, mencuri model asas). Namun, sistem AI memperkenalkan kelemahan keselamatan baru (contohnya, suntikan arahan, pencemaran), yang memerlukan perhatian khusus. Selain keselamatan, AI red teaming juga meneliti isu keadilan (contohnya, stereotaip) dan kandungan berbahaya (contohnya, pemuliaan keganasan). Pengenalpastian awal isu ini membolehkan keutamaan pelaburan pertahanan.
 
-Berikut adalah wawasan utama yang telah membentuk program Tim Merah AI Microsoft.
+2. **Kegagalan Berniat Jahat dan Tidak Berniat Jahat:**
+   AI red teaming mengambil kira kegagalan dari perspektif berniat jahat dan tidak berniat jahat. Contohnya, ketika melakukan red teaming pada Bing baru, kami bukan sahaja meneroka bagaimana penyerang berniat jahat boleh menyalahi sistem tetapi juga bagaimana pengguna biasa mungkin menghadapi kandungan bermasalah atau berbahaya. Berbeza dengan red teaming keselamatan tradisional yang lebih fokus pada pelaku berniat jahat, AI red teaming mengambil kira pelbagai persona dan potensi kegagalan.
 
-1. **Lingkup Luas Red Teaming AI:**
-   Red teaming AI sekarang mencakup hasil keamanan dan AI Bertanggung Jawab (RAI). Secara tradisional, red teaming berfokus pada aspek keamanan, memperlakukan model sebagai vektor (misalnya, mencuri model yang mendasarinya). Namun, sistem AI memperkenalkan kerentanan keamanan baru (misalnya, injeksi prompt, peracunan), yang memerlukan perhatian khusus. Selain keamanan, red teaming AI juga menguji masalah keadilan (misalnya, stereotip) dan konten berbahaya (misalnya, pengagungan kekerasan). Identifikasi awal masalah ini memungkinkan prioritas investasi pertahanan.
-2. **Kegagalan Berbahaya dan Jinak:**
-   Red teaming AI mempertimbangkan kegagalan dari perspektif berbahaya dan jinak. Misalnya, ketika red teaming Bing baru, kami tidak hanya mengeksplorasi bagaimana penyerang berbahaya dapat menyabot sistem tetapi juga bagaimana pengguna biasa dapat menghadapi konten yang bermasalah atau berbahaya. Tidak seperti red teaming keamanan tradisional, yang berfokus terutama pada aktor berbahaya, red teaming AI memperhitungkan berbagai persona dan potensi kegagalan.
-3. **Sifat Dinamis Sistem AI:**
-   Aplikasi AI terus berkembang. Dalam aplikasi model bahasa besar, pengembang beradaptasi dengan persyaratan yang berubah. Red teaming terus-menerus memastikan kewaspadaan dan adaptasi yang berkelanjutan terhadap risiko yang berkembang.
+3. **Sifat Dinamik Sistem AI:**
+   Aplikasi AI sentiasa berkembang. Dalam aplikasi model bahasa besar, pembangun menyesuaikan diri dengan keperluan yang berubah. Red teaming berterusan memastikan kewaspadaan dan penyesuaian terhadap risiko yang sentiasa berubah.
 
-Red teaming AI tidak mencakup semuanya dan harus dianggap sebagai gerakan pelengkap untuk kontrol tambahan seperti [kontrol akses berbasis peran (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) dan solusi manajemen data yang komprehensif. Ini dimaksudkan untuk melengkapi strategi keamanan yang berfokus pada penerapan solusi AI yang aman dan bertanggung jawab yang memperhitungkan priv
+AI red teaming bukanlah penyelesaian menyeluruh dan harus dianggap sebagai gerakan pelengkap kepada kawalan tambahan seperti [role-based access control (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) dan penyelesaian pengurusan data yang komprehensif. Ia bertujuan untuk melengkapkan strategi keselamatan yang menumpukan pada penggunaan penyelesaian AI yang selamat dan bertanggungjawab yang mengambil kira privasi dan keselamatan sambil berusaha mengurangkan bias, kandungan berbahaya dan maklumat salah yang boleh merosakkan keyakinan pengguna.
+
+Berikut adalah senarai bacaan tambahan yang boleh membantu anda memahami dengan lebih baik bagaimana red teaming boleh membantu mengenal pasti dan mengurangkan risiko dalam sistem AI anda:
+
+- [Perancangan red teaming untuk model bahasa besar (LLM) dan aplikasinya](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [Apakah OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
+- [AI Red Teaming - Amalan Utama untuk Membangun Penyelesaian AI yang Lebih Selamat dan Bertanggungjawab](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
+- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), pangkalan pengetahuan tentang taktik dan teknik yang digunakan oleh penyerang dalam serangan dunia nyata ke atas sistem AI.
+
+## Semakan Pengetahuan
+
+Apakah pendekatan yang baik untuk mengekalkan integriti data dan mengelakkan penyalahgunaan?
+
+1. Mempunyai kawalan berasaskan peranan yang kukuh untuk akses data dan pengurusan data  
+1. Melaksanakan dan mengaudit pelabelan data untuk mengelakkan salah gambaran atau penyalahgunaan data  
+1. Memastikan infrastruktur AI anda menyokong penapisan kandungan  
+
+A:1, Walaupun ketiga-tiga adalah cadangan yang baik, memastikan anda memberikan hak akses data yang betul kepada pengguna akan banyak membantu mengelakkan manipulasi dan salah gambaran data yang digunakan oleh LLM.
+
+## 🚀 Cabaran
+
+Baca lebih lanjut tentang bagaimana anda boleh [mentadbir dan melindungi maklumat sensitif](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) di era AI.
+
+## Kerja Hebat, Teruskan Pembelajaran Anda
+
+Selepas menamatkan pelajaran ini, lihat koleksi [Pembelajaran Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI anda!
+
+Teruskan ke Pelajaran 14 di mana kita akan melihat [Kitaran Hayat Aplikasi Generative AI](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

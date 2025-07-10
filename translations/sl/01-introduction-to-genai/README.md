@@ -2,128 +2,144 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-05-19T13:41:13+00:00",
+  "translation_date": "2025-07-09T08:04:24+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "sl"
 }
 -->
-# Uvod v generativno umetno inteligenco in velike jezikovne modele
+# Uvod v generativno AI in velike jezikovne modele
 
-_(Kliknite zgornjo sliko, da si ogledate video te lekcije)_
+[![Uvod v generativno AI in velike jezikovne modele](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.sl.png)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
-Generativna umetna inteligenca je umetna inteligenca, sposobna ustvarjanja besedila, slik in drugih vrst vsebin. Kaj jo naredi izjemno tehnologijo, je, da demokratizira umetno inteligenco; vsakdo jo lahko uporabi z le nekaj besedilnimi ukazi, stavkom, napisanim v naravnem jeziku. Ni vam treba naučiti se jezika, kot sta Java ali SQL, da bi dosegli nekaj vrednega; vse, kar potrebujete, je uporaba vašega jezika, navedete, kaj želite, in AI model poda predlog. Aplikacije in vpliv tega so ogromni, lahko pišete ali razumete poročila, pišete aplikacije in še veliko več, vse v nekaj sekundah.
+_(Kliknite na zgornjo sliko za ogled videa te lekcije)_
 
-V tem učnem načrtu bomo raziskali, kako naš startup izkorišča generativno umetno inteligenco za odpiranje novih scenarijev v svetu izobraževanja ter kako se spopadamo z neizogibnimi izzivi, povezanimi s socialnimi posledicami njene uporabe in tehnološkimi omejitvami.
+Generativna AI je umetna inteligenca, ki zna ustvarjati besedila, slike in druge vrste vsebin. Njena prednost je, da demokratizira AI – vsak jo lahko uporablja z le nekaj besedami, napisano v naravnem jeziku. Ni vam treba znati programskih jezikov, kot sta Java ali SQL, da bi dosegli nekaj uporabnega; dovolj je, da uporabite svoj jezik, izrazite, kaj želite, in AI model vam ponudi predlog. Uporaba in vpliv so ogromni – pišete ali razumete poročila, ustvarjate aplikacije in še več, vse v nekaj sekundah.
+
+V tem učnem načrtu bomo raziskali, kako naš startup uporablja generativno AI za odpiranje novih možnosti v izobraževanju ter kako se spopadamo z neizogibnimi izzivi, ki jih prinašajo družbeni vplivi uporabe te tehnologije in njene omejitve.
 
 ## Uvod
 
 Ta lekcija bo zajemala:
 
-- Uvod v poslovni scenarij: ideja našega startupa in poslanstvo.
-- Generativna umetna inteligenca in kako smo pristali na trenutni tehnološki pokrajini.
+- Predstavitev poslovnega scenarija: ideja in poslanstvo našega startupa.
+- Generativno AI in kako smo prišli do trenutnega tehnološkega stanja.
 - Notranje delovanje velikega jezikovnega modela.
-- Glavne sposobnosti in praktični primeri uporabe velikih jezikovnih modelov.
+- Glavne zmožnosti in praktične uporabe velikih jezikovnih modelov.
 
 ## Cilji učenja
 
 Po zaključku te lekcije boste razumeli:
 
-- Kaj je generativna umetna inteligenca in kako delujejo veliki jezikovni modeli.
+- Kaj je generativna AI in kako delujejo veliki jezikovni modeli.
 - Kako lahko izkoristite velike jezikovne modele za različne primere uporabe, s poudarkom na izobraževalnih scenarijih.
 
 ## Scenarij: naš izobraževalni startup
 
-Generativna umetna inteligenca (AI) predstavlja vrhunec tehnologije AI, ki premika meje, ki so bile nekoč mišljene kot nemogoče. Generativni AI modeli imajo več sposobnosti in aplikacij, vendar bomo za ta učni načrt raziskali, kako revolucionira izobraževanje prek izmišljenega startupa. Ta startup bomo imenovali _naš startup_. Naš startup deluje na področju izobraževanja z ambicioznim poslanstvom
+Generativna umetna inteligenca (AI) predstavlja vrhunec AI tehnologije, saj premika meje tega, kar je bilo nekoč nepredstavljivo. Generativni AI modeli imajo številne zmožnosti in uporabe, a v tem učnem načrtu bomo raziskali, kako spreminjajo izobraževanje skozi fiktivni startup, ki ga bomo imenovali _naš startup_. Naš startup deluje na področju izobraževanja z ambicioznim poslanstvom:
 
-> _izboljšati dostopnost do učenja na globalni ravni, zagotoviti enakopraven dostop do izobraževanja in ponuditi prilagojene učne izkušnje vsakemu učencu, glede na njegove potrebe_.
+> _izboljšati dostopnost do učenja na globalni ravni, zagotoviti pravičen dostop do izobraževanja in nuditi personalizirane učne izkušnje vsakemu učencu glede na njegove potrebe_.
 
-Ekipa našega startupa se zaveda, da tega cilja ne bomo mogli doseči brez izkoriščanja enega najmočnejših orodij sodobnega časa – velikih jezikovnih modelov (LLMs).
+Ekipa našega startupa se zaveda, da tega cilja ne bomo dosegli brez uporabe enega najmočnejših orodij sodobnega časa – velikih jezikovnih modelov (LLM).
 
-Generativna umetna inteligenca naj bi revolucionirala način, kako se danes učimo in poučujemo, s študenti, ki imajo na voljo virtualne učitelje 24 ur na dan, ki ponujajo velike količine informacij in primerov, ter učitelji, ki lahko izkoristijo inovativna orodja za ocenjevanje svojih študentov in podajanje povratnih informacij.
+Pričakuje se, da bo generativna AI revolucionirala način, kako danes učimo in se učimo, saj bodo imeli študenti na voljo virtualne učitelje 24 ur na dan, ki bodo zagotavljali ogromno količino informacij in primerov, učitelji pa bodo lahko uporabljali inovativna orodja za ocenjevanje in povratne informacije.
 
-Za začetek opredelimo nekaj osnovnih konceptov in terminologije, ki jih bomo uporabljali skozi celoten učni načrt.
+![Pet mladih učencev gleda v monitor - slika avtor DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.sl.png)
 
-## Kako smo dobili generativno umetno inteligenco?
+Za začetek si poglejmo nekaj osnovnih pojmov in terminologije, ki jih bomo uporabljali skozi celoten učni načrt.
 
-Kljub izjemnemu _hypeu_, ki ga je v zadnjem času ustvarila napoved generativnih AI modelov, je ta tehnologija nastajala desetletja, pri čemer segajo prvi raziskovalni napori v 60. leta. Zdaj smo na točki, ko ima AI človeške kognitivne sposobnosti, kot je pogovor, kar je razvidno na primer iz [OpenAI ChatGPT](https://openai.com/chatgpt) ali [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), ki prav tako uporablja GPT model za spletno iskanje Bing pogovorov.
+## Kako smo prišli do generativne AI?
 
-Če se nekoliko vrnemo nazaj, so prvi prototipi AI sestavljali pisalni chatbot-i, ki so se zanašali na bazo znanja, pridobljeno od skupine strokovnjakov in predstavljeno v računalniku. Odgovori v bazi znanja so bili sproženi s ključnimi besedami, ki so se pojavile v vnosnem besedilu. Vendar je kmalu postalo jasno, da takšen pristop, ki uporablja pisalne chatbot-e, ni dobro skaliran.
+Kljub izjemnemu _navdušenju_, ki ga je v zadnjem času povzročilo pojavljanje generativnih AI modelov, je ta tehnologija v razvoju že desetletja, pri čemer segajo prvi raziskovalni napori v 60. leta prejšnjega stoletja. Danes smo na točki, ko AI dosega človeške kognitivne sposobnosti, kot je na primer pogovor, kar prikazujeta [OpenAI ChatGPT](https://openai.com/chatgpt) ali [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), ki prav tako uporablja GPT model za spletno iskanje in pogovore.
+
+Če se vrnemo nazaj, so bili prvi prototipi AI tipkani chatbot-i, ki so temeljili na bazi znanja, pridobljeni od skupine strokovnjakov in vneseni v računalnik. Odgovori v bazi so se sprožili na podlagi ključnih besed v vhodnem besedilu. Kmalu pa je postalo jasno, da tak pristop s tipkanimi chatbot-i ni dobro skalabilen.
 
 ### Statistični pristop k AI: strojno učenje
 
-Prelomnica je nastopila v 90-ih letih, z uporabo statističnega pristopa k analizi besedila. To je pripeljalo do razvoja novih algoritmov – znanih kot strojno učenje – sposobnih učenja vzorcev iz podatkov brez eksplicitnega programiranja. Ta pristop omogoča strojem simulacijo razumevanja človeškega jezika: statistični model je usposobljen na parih besedilo-oznaka, kar omogoča modelu klasifikacijo neznanega vhodnega besedila s predhodno določeno oznako, ki predstavlja namen sporočila.
+Prelomnica je nastopila v 90. letih, ko je bil uporabljen statistični pristop k analizi besedil. To je privedlo do razvoja novih algoritmov – znanih kot strojno učenje – ki so sposobni prepoznavati vzorce v podatkih brez eksplicitnega programiranja. Ta pristop omogoča strojem simulacijo razumevanja človeškega jezika: statistični model se uči na parih besedilo-oznaka, kar mu omogoča, da razvrsti neznano vhodno besedilo z vnaprej določenimi oznakami, ki predstavljajo namen sporočila.
 
 ### Nevronske mreže in sodobni virtualni asistenti
 
-V zadnjih letih je tehnološka evolucija strojne opreme, sposobna obdelave večjih količin podatkov in bolj zapletenih izračunov, spodbudila raziskave v AI, kar je privedlo do razvoja naprednih algoritmov strojnega učenja, znanih kot nevronske mreže ali algoritmi globokega učenja.
+V zadnjih letih je tehnološki razvoj strojne opreme, ki lahko obdeluje večje količine podatkov in bolj zapletene izračune, spodbudil raziskave na področju AI, kar je privedlo do razvoja naprednih algoritmov strojnega učenja, znanih kot nevronske mreže ali globoko učenje.
 
-Nevronske mreže (in zlasti Recurrent Neural Networks – RNNs) so znatno izboljšale obdelavo naravnega jezika, omogočajoč reprezentacijo pomena besedila na bolj smiseln način, vrednotenje konteksta besede v stavku.
+Nevronske mreže (še posebej rekurentne nevronske mreže – RNN) so močno izboljšale obdelavo naravnega jezika, saj omogočajo bolj smiselno predstavitev pomena besedila, upoštevajoč kontekst besede v stavku.
 
-To je tehnologija, ki je poganjala virtualne asistente, rojene v prvem desetletju novega stoletja, zelo spretne pri interpretaciji človeškega jezika, prepoznavanju potrebe in izvedbi dejanja, da jo zadovoljijo – kot je odgovor z vnaprej določenim skriptom ali uporaba storitve tretje osebe.
+To je tehnologija, ki je poganjala virtualne asistente, rojene v prvem desetletju novega stoletja, zelo spretne pri razumevanju človeškega jezika, prepoznavanju potreb in izvajanju dejanj za njihovo zadovoljitev – na primer odgovarjanje s prednastavljenimi skripti ali uporaba storitev tretjih oseb.
 
-### Današnji dan, generativna umetna inteligenca
+### Današnji čas, generativna AI
 
-Tako smo prišli do generativne umetne inteligence danes, ki jo lahko vidimo kot podskupino globokega učenja.
+Tako smo prišli do današnje generativne AI, ki jo lahko razumemo kot podskupino globokega učenja.
 
-Po desetletjih raziskav na področju umetne inteligence je nova arhitektura modelov – imenovana _Transformer_ – presegla omejitve RNNs, saj je sposobna sprejemati veliko daljše sekvence besedila kot vhod. Transformatorji temeljijo na mehanizmu pozornosti, kar omogoča modelu, da daje različne teže vhodom, ki jih prejme, 'posveča več pozornosti' tam, kjer je najbolj relevantna informacija skoncentrirana, ne glede na njihov vrstni red v besedilni sekvenci.
+![AI, ML, DL in generativna AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.sl.png)
 
-Večina nedavnih generativnih AI modelov – znanih tudi kot veliki jezikovni modeli (LLMs), saj delujejo z besedilnimi vhodnimi in izhodnimi podatki – je dejansko temelji na tej arhitekturi. Kar je zanimivo pri teh modelih – usposobljenih na ogromni količini neoznačenih podatkov iz različnih virov, kot so knjige, članki in spletne strani – je, da jih je mogoče prilagoditi za široko paleto nalog in generirati slovnično pravilno besedilo z videzom ustvarjalnosti. Torej, ne le da so neverjetno izboljšali sposobnost stroja, da 'razume' vhodno besedilo, ampak so omogočili njihovo sposobnost generiranja izvirnega odziva v človeškem jeziku.
+Po desetletjih raziskav na področju AI je nova arhitektura modela – imenovana _Transformer_ – premagala omejitve RNN-jev, saj lahko obdeluje veliko daljše zaporedje besedila kot vhod. Transformerji temeljijo na mehanizmu pozornosti, ki modelu omogoča, da različnim vhodom dodeli različne uteži, ‘posveča več pozornosti’ tam, kjer je zgoščena najbolj relevantna informacija, ne glede na njihov vrstni red v besedilnem zaporedju.
+
+Večina sodobnih generativnih AI modelov – znanih tudi kot veliki jezikovni modeli (LLM), saj delujejo z besedilnimi vhodi in izhodi – temelji prav na tej arhitekturi. Zanimivo pri teh modelih, ki so usposobljeni na ogromnih količinah neoznačenih podatkov iz različnih virov, kot so knjige, članki in spletne strani, je, da jih je mogoče prilagoditi za širok spekter nalog in ustvarjati slovnično pravilno besedilo z določeno mero ustvarjalnosti. Tako niso le močno izboljšali sposobnost stroja, da ‘razume’ vhodno besedilo, ampak so mu omogočili tudi ustvarjanje izvirnih odgovorov v človeškem jeziku.
 
 ## Kako delujejo veliki jezikovni modeli?
 
-V naslednjem poglavju bomo raziskali različne vrste generativnih AI modelov, vendar za zdaj poglejmo, kako delujejo veliki jezikovni modeli, s poudarkom na modelih OpenAI GPT (Generative Pre-trained Transformer).
+V naslednjem poglavju bomo raziskali različne vrste generativnih AI modelov, za zdaj pa si poglejmo, kako delujejo veliki jezikovni modeli, s poudarkom na OpenAI GPT (Generative Pre-trained Transformer) modelih.
 
-- **Tokenizator, besedilo v številke**: Veliki jezikovni modeli prejmejo besedilo kot vhod in generirajo besedilo kot izhod. Vendar, ker so statistični modeli, delujejo veliko bolje s številkami kot z besedilnimi sekvencami. Zato se vsak vhod v model obdeluje s tokenizatorjem, preden ga uporabi jedro modela. Token je kos besedila – sestavljen iz spremenljivega števila znakov, zato je glavna naloga tokenizatorja razdelitev vhoda v niz tokenov. Nato se vsak token preslika z indeksom tokena, kar je celoštevilčno kodiranje izvirnega dela besedila.
+- **Tokenizer, pretvorba besedila v številke**: Veliki jezikovni modeli prejmejo besedilo kot vhod in ustvarijo besedilo kot izhod. Ker pa so statistični modeli, bolje delujejo s številkami kot z besedilnimi zaporedji. Zato vsak vhod pred uporabo v jedru modela obdela tokenizer. Token je kos besedila – sestavljen iz spremenljivega števila znakov, zato je glavna naloga tokenizerja razdeliti vhod na niz tokenov. Nato je vsak token povezan z indeksom tokena, kar je celoštevilska koda izvirnega kosa besedila.
 
-- **Napovedovanje izhodnih tokenov**: Glede na n tokenov kot vhod (z največ n, ki se razlikuje od modela do modela), model lahko napove en token kot izhod. Ta token je nato vključen v vhod naslednje iteracije, v vzorcu razširjajočega se okna, kar omogoča boljšo uporabniško izkušnjo pridobivanja ene (ali več) stavkov kot odgovora. To pojasnjuje, zakaj, če ste se kdaj igrali z ChatGPT, ste morda opazili, da se včasih zdi, da se ustavi sredi stavka.
+![Primer tokenizacije](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.sl.png)
 
-- **Postopek izbire, porazdelitev verjetnosti**: Izhodni token izbere model glede na verjetnost njegovega pojavljanja po trenutni besedilni sekvenci. To je zato, ker model napoveduje porazdelitev verjetnosti za vse možne 'naslednje tokene', izračunano na podlagi njegovega usposabljanja. Vendar ni vedno izbran token z najvišjo verjetnostjo iz rezultatne porazdelitve. Stopnja naključnosti je dodana tej izbiri, na način, da model deluje na nedeterminističen način - ne dobimo popolnoma enakega izhoda za isti vhod. Ta stopnja naključnosti je dodana, da simulira proces ustvarjalnega razmišljanja in jo je mogoče prilagoditi z uporabo parametra modela, imenovanega temperatura.
+- **Napovedovanje izhodnih tokenov**: Model, ki prejme n tokenov kot vhod (maksimalno število n se razlikuje med modeli), lahko napove en token kot izhod. Ta token se nato vključi v vhod naslednje iteracije, v vzorcu razširjajočega se okna, kar omogoča boljšo uporabniško izkušnjo, saj dobite enega (ali več) stavkov kot odgovor. To pojasnjuje, zakaj se vam je morda zdelo, da ChatGPT včasih ustavi sredi stavka.
+
+- **Postopek izbire, porazdelitev verjetnosti**: Izhodni token izbere model glede na verjetnost njegovega pojavljanja po trenutnem besedilnem zaporedju. Model napove porazdelitev verjetnosti za vse možne ‘naslednje tokene’, izračunano na podlagi usposabljanja. Vendar pa ni vedno izbran token z najvišjo verjetnostjo. Dodana je mera naključnosti, tako da model deluje nedeterministično – za isti vhod ne dobimo vedno enakega izhoda. Ta naključnost simulira proces ustvarjalnega razmišljanja in jo lahko nastavimo z parametrom temperature.
 
 ## Kako lahko naš startup izkoristi velike jezikovne modele?
 
-Zdaj, ko bolje razumemo notranje delovanje velikega jezikovnega modela, si oglejmo nekaj praktičnih primerov najpogostejših nalog, ki jih lahko opravljajo zelo dobro, s pogledom na naš poslovni scenarij.
-Rekli smo, da je glavna sposobnost velikega jezikovnega modela _generiranje besedila iz nič, izhajajoč iz besedilnega vhoda, napisanega v naravnem jeziku_.
+Zdaj, ko bolje razumemo notranje delovanje velikega jezikovnega modela, si poglejmo nekaj praktičnih primerov najpogostejših nalog, ki jih ti modeli zelo dobro opravijo, z mislijo na naš poslovni scenarij. Glavna zmožnost velikega jezikovnega modela je _generiranje besedila iz nič, na podlagi besedilnega vhoda, napisanega v naravnem jeziku_.
 
-Toda kakšen je lahko besedilni vhod in izhod?
-Vhod velikega jezikovnega modela je znan kot poziv, medtem ko je izhod znan kot dokončanje, izraz, ki se nanaša na mehanizem modela za generiranje naslednjega tokena za dokončanje trenutnega vhoda. Poglobili se bomo v to, kaj je poziv in kako ga oblikovati na način, da iz modela dobimo največ. Toda za zdaj recimo, da poziv lahko vključuje:
+Kakšen vhod in izhod torej?
+Vhod velikega jezikovnega modela imenujemo prompt, izhod pa completion, kar se nanaša na mehanizem modela za generiranje naslednjega tokena, ki dopolni trenutni vhod. Podrobno bomo raziskali, kaj je prompt in kako ga oblikovati, da bomo iz modela izvlekli največ. Za zdaj pa naj povemo, da prompt lahko vključuje:
 
-- **Navodilo**, ki določa vrsto izhoda, ki ga pričakujemo od modela. To navodilo včasih lahko vključuje nekaj primerov ali dodatnih podatkov.
+- **Navodilo**, ki določa vrsto izhoda, ki ga pričakujemo od modela. To navodilo včasih vsebuje tudi primere ali dodatne podatke.
 
-  1. Povzetek članka, knjige, pregledov izdelkov in več, skupaj z izluščitvijo vpogledov iz nestrukturiranih podatkov.
+  1. Povzetek članka, knjige, ocen izdelkov in več, skupaj z izvlečkom vpogledov iz nestrukturiranih podatkov.
+    
+    ![Primer povzetka](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.sl.png)
   
-  2. Ustvarjalno snovanje in oblikovanje članka, eseja, naloge ali več.
+  2. Kreativno ustvarjanje in oblikovanje članka, eseja, naloge ali več.
+      
+     ![Primer kreativnega pisanja](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.sl.png)
+
+- **Vprašanje**, postavljeno v obliki pogovora z agentom.
   
-- **Vprašanje**, zastavljeno v obliki pogovora z agentom.
+  ![Primer pogovora](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.sl.png)
 
-- Kos **besedila za dokončanje**, kar implicitno pomeni zahtevo za pomoč pri pisanju.
+- Kos **besedila za dopolnitev**, kar implicitno pomeni prošnjo za pomoč pri pisanju.
+  
+  ![Primer dopolnitve besedila](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.sl.png)
 
-- Kos **kode** skupaj z zahtevo za razlago in dokumentiranje, ali komentar, ki zahteva generiranje kosa kode, ki opravlja določeno nalogo.
+- Kos **kode** skupaj z zahtevo po razlagi in dokumentaciji ali komentarjem, ki prosi za generiranje dela kode za določeno nalogo.
+  
+  ![Primer kodiranja](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.sl.png)
 
-Zgornji primeri so precej preprosti in niso namenjeni kot izčrpna demonstracija sposobnosti velikih jezikovnih modelov. Namenjeni so prikazu potenciala uporabe generativne umetne inteligence, zlasti, vendar ne omejeno na izobraževalne kontekste.
+Zgornji primeri so precej preprosti in niso namenjeni izčrpnemu prikazu zmožnosti velikih jezikovnih modelov. Namenjeni so prikazu potenciala uporabe generativne AI, zlasti, a ne izključno, v izobraževalnih okoljih.
 
-Poleg tega izhod generativnega AI modela ni popoln in včasih lahko ustvarjalnost modela deluje proti njemu, kar povzroči izhod, ki je kombinacija besed, ki jih lahko človeški uporabnik interpretira kot izkrivljanje resničnosti, ali je lahko žaljiv. Generativna umetna inteligenca ni inteligentna - vsaj v bolj celoviti definiciji inteligence, ki vključuje kritično in ustvarjalno razmišljanje ali čustveno inteligenco; ni deterministična in ni zanesljiva, saj lahko napačne reference, vsebina in izjave kombinira s pravilnimi informacijami in jih predstavi na prepričljiv in samozavesten način. V naslednjih lekcijah se bomo ukvarjali z vsemi temi omejitvami in videli, kaj lahko storimo za njihovo zmanjšanje.
+Prav tako izhod generativnega AI modela ni popoln in včasih lahko ustvarjalnost modela deluje proti njemu, kar vodi do izhoda, ki je kombinacija besed, ki jih uporabnik lahko dojema kot zavajanje ali pa je lahko žaljiv. Generativna AI ni inteligentna – vsaj ne v širšem pomenu inteligence, ki vključuje kritično in ustvarjalno razmišljanje ali čustveno inteligenco; ni deterministična in ni zanesljiva, saj se lahko napačne informacije, kot so netočne reference, vsebine in izjave, pomešajo s pravilnimi in so predstavljene na prepričljiv in samozavesten način. V naslednjih lekcijah se bomo ukvarjali z vsemi temi omejitvami in pogledali, kako jih lahko omilimo.
 
 ## Naloga
 
-Vaša naloga je, da preberete več o [generativni umetni inteligenci](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) in poskusite identificirati področje, kjer bi danes dodali generativno umetno inteligenco, ki je še nima. Kako bi bil vpliv drugačen od izvajanja na "star način", ali lahko storite nekaj, česar prej niste mogli, ali ste hitrejši? Napišite 300-besedno povzetek o tem, kako bi izgledal vaš sanjski AI startup in vključite naslove, kot so "Problem", "Kako bi uporabil AI", "Vpliv" in po želji poslovni načrt.
+Vaša naloga je, da preberete več o [generativni AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) in poskušate identificirati področje, kjer bi danes dodali generativno AI, če je še nima. Kako bi bil vpliv drugačen v primerjavi s “starim načinom”? Ali lahko naredite nekaj, česar prej niste mogli, ali ste hitrejši? Napišite 300 besed dolg povzetek o tem, kakšen bi bil vaš sanjski AI startup, in vključite naslove, kot so "Problem", "Kako bi uporabil AI", "Vpliv" in po želji poslovni načrt.
 
-Če ste opravili to nalogo, ste morda celo pripravljeni za prijavo v Microsoftov inkubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), kjer ponujamo kredite za Azure, OpenAI, mentorstvo in še veliko več, preverite!
+Če opravite to nalogo, boste morda pripravljeni prijaviti se v Microsoftov inkubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), kjer ponujamo kredite za Azure, OpenAI, mentorstvo in še več, preverite!
 
 ## Preverjanje znanja
 
-Kaj drži o velikih jezikovnih modelih?
+Kaj drži za velike jezikovne modele?
 
-1. Vsakič dobite popolnoma enak odgovor.
-1. Stvari opravi popolno, odlično pri seštevanju številk, ustvarjanju delujoče kode itd.
-1. Odziv se lahko razlikuje kljub uporabi istega poziva. Prav tako je odličen pri podajanju prvega osnutka nečesa, naj bo to besedilo ali koda. Vendar morate izboljšati rezultate.
+1. Vedno dobite točno isti odgovor.
+1. Delajo popolno, odlično seštejejo številke, ustvarjajo delujočo kodo itd.
+1. Odgovor se lahko razlikuje, tudi če uporabite isti prompt. Prav tako so odlični za pripravo prvega osnutka nečesa, bodisi besedila ali kode. Rezultate pa je treba izboljšati.
 
-A: 3, LLM je nedeterminističen, odziv se razlikuje, vendar lahko nadzorujete njegovo variabilnost z nastavitvijo temperature. Prav tako ne bi smeli pričakovati, da bo stvari opravil popolno, tukaj je, da opravi težko delo za vas, kar pogosto pomeni, da dobite dober prvi poskus nečesa, kar morate postopoma izboljšati.
+Odgovor: 3, LLM je nedeterminističen, odgovor se razlikuje, vendar lahko njegovo variabilnost nadzorujete z nastavitvijo temperature. Prav tako ne smete pričakovati popolnosti; model je tu, da opravi težje delo, kar pogosto pomeni, da dobite dober prvi poskus, ki ga je treba postopoma izboljšati.
 
-## Odlično delo! Nadaljujte potovanje
+## Odlično delo! Nadaljujte pot
 
-Po zaključku te lekcije si oglejte našo [kolekcijo učenja o generativni umetni inteligenci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z dvigovanjem vašega znanja o generativni umetni inteligenci!
-
-Pojdite na Lekcijo 2, kjer bomo raziskali in primerjali različne vrste LLMs!
+Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) in nadaljujte z nadgrajevanjem svojega znanja o generativni AI!
+Pojdite na Lekcijo 2, kjer bomo raziskali, kako [raziskati in primerjati različne vrste LLM-jev](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije se priporoča profesionalni prevod s strani človeka. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.

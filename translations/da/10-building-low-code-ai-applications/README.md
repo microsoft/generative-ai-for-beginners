@@ -2,194 +2,254 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f5ff3b6204a695a117d6f452403c95f7",
-  "translation_date": "2025-05-19T20:30:48+00:00",
+  "translation_date": "2025-07-09T14:02:15+00:00",
   "source_file": "10-building-low-code-ai-applications/README.md",
   "language_code": "da"
 }
 -->
-# Bygge Low Code AI-applikationer
+# Bygning af Low Code AI-applikationer
 
-[![Bygge Low Code AI-applikationer](../../../translated_images/10-lesson-banner.84b607fa749c0d53ffe98212c5c3b81292bb041d1aec07da8fd720e9c01b5718.da.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Low Code AI Applications](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.da.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Klik på billedet ovenfor for at se videoen af denne lektion)_
+> _(Klik på billedet ovenfor for at se videoen til denne lektion)_
 
 ## Introduktion
 
-Nu hvor vi har lært at bygge billedgenererende applikationer, lad os tale om low code. Generativ AI kan bruges i forskellige områder, herunder low code, men hvad er low code, og hvordan kan vi tilføje AI til det?
+Nu hvor vi har lært at bygge applikationer, der genererer billeder, lad os tale om low code. Generativ AI kan bruges inden for mange forskellige områder, herunder low code, men hvad er low code, og hvordan kan vi tilføje AI til det?
 
-At bygge apps og løsninger er blevet lettere for både traditionelle udviklere og ikke-udviklere gennem brugen af Low Code Development Platforms. Low Code Development Platforms gør det muligt at bygge apps og løsninger med lidt eller ingen kode. Dette opnås ved at tilbyde et visuelt udviklingsmiljø, der giver dig mulighed for at trække og slippe komponenter for at bygge apps og løsninger. Dette gør det muligt at bygge apps og løsninger hurtigere og med færre ressourcer. I denne lektion dykker vi dybt ned i, hvordan man bruger Low Code og hvordan man forbedrer low code udvikling med AI ved hjælp af Power Platform.
+At bygge apps og løsninger er blevet nemmere for både traditionelle udviklere og ikke-udviklere gennem brugen af Low Code Development Platforms. Low Code Development Platforms gør det muligt at bygge apps og løsninger med lidt eller ingen kode. Dette opnås ved at tilbyde et visuelt udviklingsmiljø, hvor du kan trække og slippe komponenter for at bygge apps og løsninger. Det gør det muligt at bygge apps og løsninger hurtigere og med færre ressourcer. I denne lektion dykker vi dybt ned i, hvordan man bruger Low Code, og hvordan man forbedrer low code-udvikling med AI ved hjælp af Power Platform.
 
 Power Platform giver organisationer mulighed for at styrke deres teams til at bygge deres egne løsninger gennem et intuitivt low-code eller no-code miljø. Dette miljø hjælper med at forenkle processen med at bygge løsninger. Med Power Platform kan løsninger bygges på dage eller uger i stedet for måneder eller år. Power Platform består af fem nøgleprodukter: Power Apps, Power Automate, Power BI, Power Pages og Copilot Studio.
 
 Denne lektion dækker:
 
-- Introduktion til Generativ AI i Power Platform
-- Introduktion til Copilot og hvordan man bruger det
-- Brug af Generativ AI til at bygge apps og flows i Power Platform
-- Forståelse af AI-modeller i Power Platform med AI Builder
+- Introduktion til Generativ AI i Power Platform  
+- Introduktion til Copilot og hvordan man bruger det  
+- Brug af Generativ AI til at bygge apps og flows i Power Platform  
+- Forståelse af AI-modeller i Power Platform med AI Builder  
 
 ## Læringsmål
 
-Ved slutningen af denne lektion vil du være i stand til at:
+Når du er færdig med denne lektion, vil du kunne:
 
 - Forstå hvordan Copilot fungerer i Power Platform.
 
-- Bygge en Studenteropgave Tracker App til vores uddannelsesstartup.
+- Bygge en Student Assignment Tracker App til vores uddannelses-startup.
 
-- Bygge et Fakturabehandlingsflow, der bruger AI til at udtrække information fra fakturaer.
+- Bygge et Invoice Processing Flow, der bruger AI til at udtrække information fra fakturaer.
 
 - Anvende bedste praksis ved brug af Create Text med GPT AI Model.
 
 De værktøjer og teknologier, du vil bruge i denne lektion, er:
 
-- **Power Apps**, til Studenteropgave Tracker appen, som giver et low-code udviklingsmiljø til at bygge apps til at spore, administrere og interagere med data.
+- **Power Apps**, til Student Assignment Tracker appen, som tilbyder et low-code udviklingsmiljø til at bygge apps til at spore, administrere og interagere med data.
 
-- **Dataverse**, til at lagre dataene for Studenteropgave Tracker appen, hvor Dataverse vil give en low-code dataplatform til lagring af appens data.
+- **Dataverse**, til lagring af data for Student Assignment Tracker appen, hvor Dataverse vil levere en low-code dataplatform til at gemme appens data.
 
-- **Power Automate**, til Fakturabehandlingsflowet, hvor du vil have et low-code udviklingsmiljø til at bygge workflows for at automatisere Fakturabehandlingsprocessen.
+- **Power Automate**, til Invoice Processing flowet, hvor du får et low-code udviklingsmiljø til at bygge workflows, der automatiserer fakturabehandlingen.
 
-- **AI Builder**, til Fakturabehandlings AI-modellen, hvor du vil bruge forudbyggede AI-modeller til at behandle fakturaerne for vores startup.
+- **AI Builder**, til Invoice Processing AI Model, hvor du bruger forbyggede AI-modeller til at behandle fakturaerne for vores startup.
 
 ## Generativ AI i Power Platform
 
-At forbedre low-code udvikling og applikation med generativ AI er et nøglefokusområde for Power Platform. Målet er at give alle mulighed for at bygge AI-drevne apps, sites, dashboards og automatisere processer med AI, _uden at kræve nogen datavidenskabsekspertise_. Dette mål opnås ved at integrere generativ AI i low-code udviklingsoplevelsen i Power Platform i form af Copilot og AI Builder.
+At forbedre low-code udvikling og applikation med generativ AI er et centralt fokusområde for Power Platform. Målet er at gøre det muligt for alle at bygge AI-drevne apps, sites, dashboards og automatisere processer med AI, _uden at kræve nogen data science ekspertise_. Dette mål opnås ved at integrere generativ AI i low-code udviklingsoplevelsen i Power Platform i form af Copilot og AI Builder.
 
-### Hvordan fungerer dette?
+### Hvordan fungerer det?
 
-Copilot er en AI-assistent, der gør det muligt for dig at bygge Power Platform løsninger ved at beskrive dine krav i en række samtaletrin ved hjælp af naturligt sprog. Du kan for eksempel instruere din AI-assistent til at angive, hvilke felter din app vil bruge, og den vil oprette både appen og den underliggende datamodel, eller du kan specificere, hvordan man opsætter et flow i Power Automate.
+Copilot er en AI-assistent, der gør det muligt for dig at bygge Power Platform-løsninger ved at beskrive dine krav i en række samtaletrin med naturligt sprog. Du kan for eksempel instruere din AI-assistent i at angive, hvilke felter din app skal bruge, og den vil skabe både appen og den underliggende datamodel, eller du kan specificere, hvordan et flow skal sættes op i Power Automate.
 
-Du kan bruge Copilot-drevne funktionaliteter som en funktion i dine appskærme for at give brugerne mulighed for at afdække indsigt gennem samtaleinteraktioner.
+Du kan bruge Copilot-drevne funktioner som en feature i dine app-skærme for at give brugerne mulighed for at få indsigt gennem samtalebaserede interaktioner.
 
-AI Builder er en low-code AI-kapabilitet tilgængelig i Power Platform, der gør det muligt for dig at bruge AI-modeller til at hjælpe dig med at automatisere processer og forudsige resultater. Med AI Builder kan du bringe AI til dine apps og flows, der forbinder til dine data i Dataverse eller i forskellige cloud-datakilder, såsom SharePoint, OneDrive eller Azure.
+AI Builder er en low-code AI-funktion i Power Platform, der gør det muligt at bruge AI-modeller til at hjælpe med at automatisere processer og forudsige resultater. Med AI Builder kan du bringe AI til dine apps og flows, der forbinder til dine data i Dataverse eller i forskellige cloud-datakilder som SharePoint, OneDrive eller Azure.
 
-Copilot er tilgængelig i alle Power Platform-produkter: Power Apps, Power Automate, Power BI, Power Pages og Power Virtual Agents. AI Builder er tilgængelig i Power Apps og Power Automate. I denne lektion vil vi fokusere på, hvordan man bruger Copilot og AI Builder i Power Apps og Power Automate til at bygge en løsning til vores uddannelsesstartup.
+Copilot er tilgængelig i alle Power Platform-produkter: Power Apps, Power Automate, Power BI, Power Pages og Power Virtual Agents. AI Builder er tilgængelig i Power Apps og Power Automate. I denne lektion fokuserer vi på, hvordan man bruger Copilot og AI Builder i Power Apps og Power Automate til at bygge en løsning til vores uddannelses-startup.
 
 ### Copilot i Power Apps
 
-Som en del af Power Platform, giver Power Apps et low-code udviklingsmiljø til at bygge apps til at spore, administrere og interagere med data. Det er en suite af appudviklingstjenester med en skalerbar dataplatform og evnen til at forbinde til cloud-tjenester og on-premises data. Power Apps giver dig mulighed for at bygge apps, der kører på browsere, tablets og telefoner, og som kan deles med kolleger. Power Apps gør det lettere for brugere at komme i gang med appudvikling med en simpel grænseflade, så enhver forretningsbruger eller pro-udvikler kan bygge brugerdefinerede apps. Appudviklingsoplevelsen forbedres også med Generativ AI gennem Copilot.
+Som en del af Power Platform tilbyder Power Apps et low-code udviklingsmiljø til at bygge apps, der kan spore, administrere og interagere med data. Det er en samling af app-udviklingstjenester med en skalerbar dataplatform og mulighed for at forbinde til cloud-tjenester og lokale data. Power Apps gør det muligt at bygge apps, der kører på browsere, tablets og telefoner, og som kan deles med kolleger. Power Apps gør det nemt for brugere at komme i gang med app-udvikling via en simpel grænseflade, så både forretningsbrugere og professionelle udviklere kan bygge tilpassede apps. App-udviklingsoplevelsen forbedres også med Generativ AI gennem Copilot.
 
-Copilot AI-assistentfunktionen i Power Apps gør det muligt for dig at beskrive, hvilken slags app du har brug for, og hvilken information du vil have, at din app skal spore, indsamle eller vise. Copilot genererer derefter en responsiv Canvas-app baseret på din beskrivelse. Du kan derefter tilpasse appen til at opfylde dine behov. AI Copilot genererer og foreslår også en Dataverse-tabel med de felter, du har brug for til at lagre de data, du vil spore, og nogle eksempler på data. Vi vil senere i denne lektion se på, hvad Dataverse er, og hvordan du kan bruge det i Power Apps. Du kan derefter tilpasse tabellen til at opfylde dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin. Denne funktion er let tilgængelig fra Power Apps-startskærmen.
+Copilot AI-assistentfunktionen i Power Apps gør det muligt for dig at beskrive, hvilken slags app du har brug for, og hvilken information din app skal spore, indsamle eller vise. Copilot genererer derefter en responsiv Canvas-app baseret på din beskrivelse. Du kan derefter tilpasse appen, så den passer til dine behov. AI Copilot genererer og foreslår også en Dataverse-tabel med de felter, du har brug for til at gemme de data, du vil spore, samt noget eksempeldata. Vi vil senere i denne lektion se nærmere på, hvad Dataverse er, og hvordan du kan bruge det i Power Apps. Du kan derefter tilpasse tabellen, så den passer til dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin. Denne funktion er let tilgængelig fra Power Apps startskærm.
 
 ### Copilot i Power Automate
 
-Som en del af Power Platform, giver Power Automate brugerne mulighed for at oprette automatiserede workflows mellem applikationer og tjenester. Det hjælper med at automatisere gentagne forretningsprocesser som kommunikation, dataindsamling og beslutningsgodkendelser. Den enkle grænseflade giver brugere med enhver teknisk kompetence (fra begyndere til erfarne udviklere) mulighed for at automatisere arbejdstasks. Workflowudviklingsoplevelsen forbedres også med Generativ AI gennem Copilot.
+Som en del af Power Platform giver Power Automate brugerne mulighed for at skabe automatiserede workflows mellem applikationer og tjenester. Det hjælper med at automatisere gentagne forretningsprocesser som kommunikation, dataindsamling og godkendelser. Dets enkle grænseflade gør det muligt for brugere på alle tekniske niveauer (fra begyndere til erfarne udviklere) at automatisere arbejdsopgaver. Workflow-udviklingsoplevelsen forbedres også med Generativ AI gennem Copilot.
 
-Copilot AI-assistentfunktionen i Power Automate gør det muligt for dig at beskrive, hvilken slags flow du har brug for, og hvilke handlinger du vil have, at dit flow skal udføre. Copilot genererer derefter et flow baseret på din beskrivelse. Du kan derefter tilpasse flowet til at opfylde dine behov. AI Copilot genererer og foreslår også de handlinger, du har brug for til at udføre den opgave, du vil automatisere. Vi vil senere i denne lektion se på, hvad flows er, og hvordan du kan bruge dem i Power Automate. Du kan derefter tilpasse handlingerne til at opfylde dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin. Denne funktion er let tilgængelig fra Power Automate-startskærmen.
+Copilot AI-assistentfunktionen i Power Automate gør det muligt for dig at beskrive, hvilken slags flow du har brug for, og hvilke handlinger dit flow skal udføre. Copilot genererer derefter et flow baseret på din beskrivelse. Du kan derefter tilpasse flowet, så det passer til dine behov. AI Copilot genererer og foreslår også de handlinger, du skal bruge for at udføre den opgave, du ønsker at automatisere. Vi vil senere i denne lektion se nærmere på, hvad flows er, og hvordan du kan bruge dem i Power Automate. Du kan derefter tilpasse handlingerne, så de passer til dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin. Denne funktion er let tilgængelig fra Power Automate startskærm.
 
-## Opgave: Administrer studenteropgaver og fakturaer for vores startup ved hjælp af Copilot
+## Opgave: Håndter elevopgaver og fakturaer for vores startup ved hjælp af Copilot
 
-Vores startup tilbyder onlinekurser til studerende. Startuppen er vokset hurtigt og kæmper nu med at følge med efterspørgslen efter sine kurser. Startuppen har ansat dig som Power Platform-udvikler for at hjælpe dem med at bygge en low code-løsning til at hjælpe dem med at administrere deres studenteropgaver og fakturaer. Deres løsning skal kunne hjælpe dem med at spore og administrere studenteropgaver gennem en app og automatisere fakturabehandlingsprocessen gennem et workflow. Du er blevet bedt om at bruge Generativ AI til at udvikle løsningen.
+Vores startup tilbyder onlinekurser til studerende. Startup’en er vokset hurtigt og har nu svært ved at følge med efterspørgslen på kurserne. Startup’en har ansat dig som Power Platform-udvikler for at hjælpe med at bygge en low code-løsning, der kan hjælpe med at håndtere elevopgaver og fakturaer. Deres løsning skal kunne hjælpe med at spore og administrere elevopgaver gennem en app og automatisere fakturabehandlingen gennem et workflow. Du er blevet bedt om at bruge Generativ AI til at udvikle løsningen.
 
-Når du starter med at bruge Copilot, kan du bruge [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) til at komme i gang med promptene. Dette bibliotek indeholder en liste over prompts, som du kan bruge til at bygge apps og flows med Copilot. Du kan også bruge promptene i biblioteket til at få en idé om, hvordan du beskriver dine krav til Copilot.
+Når du kommer i gang med at bruge Copilot, kan du bruge [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) til at komme i gang med prompts. Dette bibliotek indeholder en liste over prompts, som du kan bruge til at bygge apps og flows med Copilot. Du kan også bruge prompts i biblioteket til at få en idé om, hvordan du beskriver dine krav til Copilot.
 
-### Byg en Studenteropgave Tracker App til vores startup
+### Byg en Student Assignment Tracker App til vores startup
 
-Underviserne hos vores startup har haft svært ved at holde styr på studenteropgaver. De har brugt et regneark til at spore opgaverne, men dette er blevet svært at administrere, da antallet af studerende er steget. De har bedt dig om at bygge en app, der vil hjælpe dem med at spore og administrere studenteropgaver. Appen skal give dem mulighed for at tilføje nye opgaver, se opgaver, opdatere opgaver og slette opgaver. Appen skal også give undervisere og studerende mulighed for at se de opgaver, der er blevet bedømt, og dem der ikke er blevet bedømt.
+Underviserne i vores startup har haft svært ved at holde styr på elevopgaver. De har brugt et regneark til at spore opgaverne, men det er blevet svært at administrere, efterhånden som antallet af studerende er steget. De har bedt dig om at bygge en app, der kan hjælpe dem med at spore og administrere elevopgaver. Appen skal gøre det muligt at tilføje nye opgaver, se opgaver, opdatere opgaver og slette opgaver. Appen skal også gøre det muligt for undervisere og studerende at se, hvilke opgaver der er blevet bedømt, og hvilke der ikke er.
 
-Du vil bygge appen ved hjælp af Copilot i Power Apps ved at følge nedenstående trin:
+Du bygger appen ved hjælp af Copilot i Power Apps efter nedenstående trin:
 
-1. Naviger til [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) startskærmen.
+1. Gå til [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) startskærm.
 
-1. Brug tekstområdet på startskærmen til at beskrive den app, du vil bygge. For eksempel, **_Jeg vil bygge en app til at spore og administrere studenteropgaver_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+1. Brug tekstfeltet på startskærmen til at beskrive den app, du vil bygge. For eksempel, **_Jeg vil bygge en app til at spore og administrere elevopgaver_**. Klik på **Send**-knappen for at sende prompten til AI Copilot.
 
-![Beskriv den app, du vil bygge](../../../translated_images/copilot-chat-prompt-powerapps.8b18beb535e7bd1a26be1284c2ef1246dbadb4704fa1656f1b6b35214ddc1c89.da.png)
+![Beskriv den app, du vil bygge](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.da.png)
 
-1. AI Copilot vil foreslå en Dataverse-tabel med de felter, du har brug for til at lagre de data, du vil spore, og nogle eksempler på data. Du kan derefter tilpasse tabellen til at opfylde dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin.
+1. AI Copilot vil foreslå en Dataverse-tabel med de felter, du har brug for til at gemme de data, du vil spore, samt noget eksempeldata. Du kan derefter tilpasse tabellen, så den passer til dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin.
 
-   > **Vigtigt**: Dataverse er den underliggende dataplatform for Power Platform. Det er en low-code dataplatform til lagring af appens data. Det er en fuldt administreret tjeneste, der sikkert lagrer data i Microsoft Cloud og er provisioneret inden for dit Power Platform-miljø. Det kommer med indbyggede datastyringsfunktioner, såsom dataklassifikation, datalinjeage, finkornet adgangskontrol og mere. Du kan lære mere om Dataverse [her](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+   > **Vigtigt**: Dataverse er den underliggende dataplatform for Power Platform. Det er en low-code dataplatform til at gemme appens data. Det er en fuldt administreret tjeneste, der sikkert gemmer data i Microsoft Cloud og er provisioneret inden for dit Power Platform-miljø. Det har indbyggede datastyringsfunktioner som dataklassifikation, data lineage, detaljeret adgangskontrol og mere. Du kan lære mere om Dataverse [her](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Foreslåede felter i din nye tabel](../../../translated_images/copilot-dataverse-table-powerapps.35038be17c72f49f510a76a208db3c2c8b3c0928f08620694dca255b103f2929.da.png)
+   ![Foreslåede felter i din nye tabel](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.da.png)
 
-1. Undervisere ønsker at sende e-mails til de studerende, der har indsendt deres opgaver for at holde dem opdateret om deres opgavers fremskridt. Du kan bruge Copilot til at tilføje et nyt felt til tabellen for at lagre studenter-e-mailen. For eksempel kan du bruge følgende prompt til at tilføje et nyt felt til tabellen: **_Jeg vil tilføje en kolonne til at lagre studenter-e-mail_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+1. Underviserne ønsker at sende e-mails til de studerende, der har afleveret deres opgaver, for at holde dem opdateret om opgavernes status. Du kan bruge Copilot til at tilføje et nyt felt til tabellen til at gemme studerendes e-mail. For eksempel kan du bruge følgende prompt til at tilføje et nyt felt til tabellen: **_Jeg vil tilføje en kolonne til at gemme studerendes e-mail_**. Klik på **Send**-knappen for at sende prompten til AI Copilot.
 
-![Tilføjelse af et nyt felt](../../../translated_images/copilot-new-column.48af3bb080c13599fb73ee32cc18101dc0cf61992d0dfe15b8bc4aa75a6c6a34.da.png)
+![Tilføjelse af nyt felt](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.da.png)
 
-1. AI Copilot vil generere et nyt felt, og du kan derefter tilpasse feltet til at opfylde dine behov.
+1. AI Copilot vil generere et nyt felt, og du kan derefter tilpasse feltet, så det passer til dine behov.
 
-1. Når du er færdig med tabellen, skal du klikke på **Opret app** knappen for at oprette appen.
+1. Når du er færdig med tabellen, klik på **Create app**-knappen for at oprette appen.
 
-1. AI Copilot vil generere en responsiv Canvas-app baseret på din beskrivelse. Du kan derefter tilpasse appen til at opfylde dine behov.
+1. AI Copilot vil generere en responsiv Canvas-app baseret på din beskrivelse. Du kan derefter tilpasse appen, så den passer til dine behov.
 
-1. For at undervisere kan sende e-mails til studerende, kan du bruge Copilot til at tilføje en ny skærm til appen. For eksempel kan du bruge følgende prompt til at tilføje en ny skærm til appen: **_Jeg vil tilføje en skærm til at sende e-mails til studerende_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+1. For at undervisere kan sende e-mails til studerende, kan du bruge Copilot til at tilføje en ny skærm til appen. For eksempel kan du bruge følgende prompt til at tilføje en ny skærm til appen: **_Jeg vil tilføje en skærm til at sende e-mails til studerende_**. Klik på **Send**-knappen for at sende prompten til AI Copilot.
 
-![Tilføjelse af en ny skærm via en prompt instruktion](../../../translated_images/copilot-new-screen.30341e89604440b4c91eb55d258276fd6e283bfab376c57501f0b3caeaaf2fda.da.png)
+![Tilføjelse af ny skærm via prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.da.png)
 
-1. AI Copilot vil generere en ny skærm, og du kan derefter tilpasse skærmen til at opfylde dine behov.
+1. AI Copilot vil generere en ny skærm, og du kan derefter tilpasse skærmen, så den passer til dine behov.
 
-1. Når du er færdig med appen, skal du klikke på **Gem** knappen for at gemme appen.
+1. Når du er færdig med appen, klik på **Save**-knappen for at gemme appen.
 
-1. For at dele appen med underviserne, skal du klikke på **Del** knappen og derefter klikke på **Del** knappen igen. Du kan derefter dele appen med underviserne ved at indtaste deres e-mailadresser.
+1. For at dele appen med underviserne, klik på **Share**-knappen og derefter igen på **Share**. Du kan så dele appen med underviserne ved at indtaste deres e-mailadresser.
 
-> **Din hjemmeopgave**: Appen, du lige har bygget, er et godt startpunkt, men kan forbedres. Med e-mail-funktionen kan undervisere kun sende e-mails til studerende manuelt ved at skulle indtaste deres e-mails. Kan du bruge Copilot til at bygge en automatisering, der gør det muligt for undervisere at sende e-mails til studerende automatisk, når de indsender deres opgaver? Dit hint er, at med den rigtige prompt kan du bruge Copilot i Power Automate til at bygge dette.
+> **Din hjemmearbejde**: Den app, du lige har bygget, er et godt udgangspunkt, men kan forbedres. Med e-mail-funktionen kan underviserne kun sende e-mails manuelt ved at skulle indtaste e-mailadresser. Kan du bruge Copilot til at bygge en automatisering, der gør det muligt for underviserne automatisk at sende e-mails til studerende, når de afleverer deres opgaver? Dit hint er, at med den rette prompt kan du bruge Copilot i Power Automate til at bygge dette.
 
-### Byg en Fakturainformationstabel til vores startup
+### Byg en fakturainformations-tabel til vores startup
 
-Finansholdet i vores startup har haft svært ved at holde styr på fakturaer. De har brugt et regneark til at spore fakturaerne, men dette er blevet svært at administrere, da antallet af fakturaer er steget. De har bedt dig om at bygge en tabel, der vil hjælpe dem med at lagre, spore og administrere informationen om de fakturaer, de modtager. Tabellen skal bruges til at bygge en automatisering, der vil udtrække alle fakturainformationer og lagre dem i tabellen. Tabellen skal også gøre det muligt for finansholdet at se de fakturaer, der er betalt, og dem der ikke er betalt.
+Finansafdelingen i vores startup har haft svært ved at holde styr på fakturaer. De har brugt et regneark til at spore fakturaerne, men det er blevet svært at administrere, efterhånden som antallet af fakturaer er steget. De har bedt dig om at bygge en tabel, der kan hjælpe dem med at gemme, spore og administrere information om de modtagne fakturaer. Tabellen skal bruges til at bygge en automatisering, der udtrækker alle fakturainformationer og gemmer dem i tabellen. Tabellen skal også gøre det muligt for finansafdelingen at se, hvilke fakturaer der er betalt, og hvilke der ikke er.
 
-Power Platform har en underliggende dataplatform kaldet Dataverse, der gør det muligt for dig at lagre dataene for dine apps og løsninger. Dataverse giver en low-code dataplatform til lagring af appens data. Det er en fuldt administreret tjeneste, der sikkert lagrer data i Microsoft Cloud og er provisioneret inden for dit Power Platform-miljø. Det kommer med indbyggede datastyringsfunktioner, såsom dataklassifikation, datalinjeage, finkornet adgangskontrol og mere. Du kan lære mere [om Dataverse her](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+Power Platform har en underliggende dataplatform kaldet Dataverse, som gør det muligt at gemme data til dine apps og løsninger. Dataverse tilbyder en low-code dataplatform til at gemme appens data. Det er en fuldt administreret tjeneste, der sikkert gemmer data i Microsoft Cloud og er provisioneret inden for dit Power Platform-miljø. Det har indbyggede datastyringsfunktioner som dataklassifikation, data lineage, detaljeret adgangskontrol og mere. Du kan lære mere [om Dataverse her](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-Hvorfor skal vi bruge Dataverse til vores startup? Standard- og brugerdefinerede tabeller i Dataverse giver en sikker og cloud-baseret lageroption til dine data. Tabeller gør det muligt at lagre forskellige typer data, svarende til hvordan du måske bruger flere regneark i en enkelt Excel-arbejdsbog. Du kan bruge tabeller til at lagre data, der er specifikke for din organisation eller forretningsbehov. Nogle af de fordele, vores startup vil få fra at bruge Dataverse, inkluderer men er ikke begrænset til:
+Hvorfor skal vi bruge Dataverse til vores startup? Standard- og brugerdefinerede tabeller i Dataverse giver en sikker og cloud-baseret lagringsmulighed for dine data. Tabeller lader dig gemme forskellige typer data, ligesom du måske bruger flere regneark i en enkelt Excel-projektmappe. Du kan bruge tabeller til at gemme data, der er specifikke for din organisation eller forretningsbehov. Nogle af fordelene, vores startup får ved at bruge Dataverse, inkluderer, men er ikke begrænset til:
+- **Let at administrere**: Både metadata og data gemmes i skyen, så du behøver ikke bekymre dig om detaljerne omkring, hvordan de lagres eller administreres. Du kan fokusere på at bygge dine apps og løsninger.
 
-- **Let at administrere**: Både metadata og data lagres i skyen, så du behøver ikke bekymre dig om detaljerne om, hvordan de lagres eller administreres. Du kan fokusere på at bygge dine apps og løsninger.
+- **Sikkert**: Dataverse tilbyder en sikker og skybaseret lagringsmulighed for dine data. Du kan styre, hvem der har adgang til dataene i dine tabeller, og hvordan de kan få adgang ved hjælp af rollebaseret sikkerhed.
 
-- **Sikker**: Dataverse giver en sikker og cloud-baseret lageroption til dine data. Du kan kontrollere, hvem der har adgang til dataene i dine tabeller, og hvordan de kan få adgang til det ved hjælp af rollebaseret sikkerhed.
+- **Rige metadata**: Datatyper og relationer bruges direkte i Power Apps
 
-- **Rig metadata**: Datatyper og relationer bruges direkte inden for Power Apps.
+- **Logik og validering**: Du kan bruge forretningsregler, beregnede felter og valideringsregler til at håndhæve forretningslogik og sikre datanøjagtighed.
 
-- **Logik og validering**: Du kan bruge forretningsregler, beregnede felter og valideringsregler til at håndhæve forretningslogik og opretholde datanøjagtighed.
+Nu hvor du ved, hvad Dataverse er, og hvorfor du bør bruge det, lad os se på, hvordan du kan bruge Copilot til at oprette en tabel i Dataverse, der opfylder kravene fra vores økonomiteam.
 
-Nu hvor du ved, hvad Dataverse er, og hvorfor du skal bruge det, lad os se på, hvordan du kan bruge Copilot til at oprette en tabel i Dataverse for at opfylde kravene fra vores finanshold.
+> **Note** : Du vil bruge denne tabel i næste afsnit til at bygge en automatisering, der udtrækker alle fakturainformationer og gemmer dem i tabellen.
 
-> **Bemærk**: Du vil bruge denne tabel i næste afsnit til at bygge en automatisering, der vil udtrække alle fakturainformationer og lagre dem i tabellen.
-For at oprette en tabel i Dataverse ved hjælp af Copilot, følg nedenstående trin: 1. Naviger til [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) startskærmen. 2. På venstre navigationsbjælke, vælg **Tabeller** og klik derefter på **Beskriv den nye tabel**. ![Vælg ny tabel](../../../translated_images/describe-new-table.545cd3568f4bee6aded8021cc0653013ff982f4ccdc628b4800d1f0be5ddff9b.da.png) 1. På **Beskriv den nye tabel** skærmen, brug tekstområdet til at beskrive den tabel, du vil oprette. For eksempel
-en tekst. - **Sentimentanalyse**: Denne model registrerer positiv, negativ, neutral eller blandet sentiment i tekst. - **Visitkortlæser**: Denne model udtrækker information fra visitkort. - **Tekstgenkendelse**: Denne model udtrækker tekst fra billeder. - **Objektdetektion**: Denne model registrerer og udtrækker objekter fra billeder. - **Dokumentbehandling**: Denne model udtrækker information fra formularer. - **Fakturabehandling**: Denne model udtrækker information fra fakturaer. Med Custom AI Models kan du bringe din egen model ind i AI Builder, så den kan fungere som enhver AI Builder custom model, hvilket giver dig mulighed for at træne modellen ved hjælp af dine egne data. Du kan bruge disse modeller til at automatisere processer og forudsige resultater i både Power Apps og Power Automate. Når du bruger din egen model, er der begrænsninger, der gælder. Læs mere om disse [begrænsninger](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst). ![AI builder modeller](../../../translated_images/ai-builder-models.f3ee8c064873d55cdfbcc9c633cdd8cf00843954019ad500795832eee420448e.da.png)
+For at oprette en tabel i Dataverse ved hjælp af Copilot, følg trinene nedenfor:
 
-## Opgave #2 - Byg et fakturabehandlingsflow til vores startup
+1. Gå til [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) startskærm.
 
-Finansafdelingen har haft svært ved at behandle fakturaer. De har brugt et regneark til at holde styr på fakturaerne, men det er blevet vanskeligt at håndtere, da antallet af fakturaer er steget. De har bedt dig om at bygge en arbejdsgang, der vil hjælpe dem med at behandle fakturaer ved hjælp af AI. Arbejdsgangen skal give dem mulighed for at udtrække information fra fakturaer og gemme informationen i en Dataverse-tabel. Arbejdsgangen skal også give dem mulighed for at sende en e-mail til finansafdelingen med den udtrukne information.
+2. På venstre navigationsbjælke vælg **Tables** og klik derefter på **Describe the new Table**.
 
-Nu hvor du ved, hvad AI Builder er, og hvorfor du bør bruge det, lad os se på, hvordan du kan bruge fakturabehandlingsmodellen i AI Builder, som vi dækkede tidligere, til at bygge en arbejdsgang, der vil hjælpe finansafdelingen med at behandle fakturaer. For at bygge en arbejdsgang, der vil hjælpe finansafdelingen med at behandle fakturaer ved hjælp af fakturabehandlingsmodellen i AI Builder, skal du følge nedenstående trin:
+![Select new table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.da.png)
 
-1. Naviger til [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) startskærmen.
-2. Brug tekstområdet på startskærmen til at beskrive den arbejdsgang, du vil bygge. For eksempel, **_Behandl en faktura, når den ankommer i min postkasse_**. Klik på **Send**-knappen for at sende prompten til AI Copilot. ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.0a21031a7ae6b1fb5dd61ce5c09d530454a93ee65c166b5c286e49c1a9312039.da.png)
-3. AI Copilot vil foreslå de handlinger, du skal udføre for at automatisere opgaven. Du kan klikke på **Næste**-knappen for at gå gennem de næste trin.
-4. I det næste trin vil Power Automate bede dig om at opsætte de nødvendige forbindelser til flowet. Når du er færdig, klik på **Opret flow**-knappen for at oprette flowet.
+3. På skærmen **Describe the new Table** brug tekstfeltet til at beskrive den tabel, du ønsker at oprette. For eksempel, **_I want to create a table to store invoice information_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+
+![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.da.png)
+
+4. AI Copilot vil foreslå en Dataverse-tabel med de felter, du har brug for til at gemme de data, du vil spore, samt nogle eksempler på data. Du kan derefter tilpasse tabellen, så den passer til dine behov ved hjælp af AI Copilot-assistentfunktionen gennem samtaletrin.
+
+![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.da.png)
+
+5. Økonomiteamet ønsker at sende en e-mail til leverandøren for at opdatere dem om den aktuelle status på deres faktura. Du kan bruge Copilot til at tilføje et nyt felt til tabellen til at gemme leverandørens e-mail. For eksempel kan du bruge følgende prompt til at tilføje et nyt felt til tabellen: **_I want to add a column to store supplier email_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+
+6. AI Copilot vil generere et nyt felt, og du kan derefter tilpasse feltet, så det passer til dine behov.
+
+7. Når du er færdig med tabellen, klik på **Create** knappen for at oprette tabellen.
+
+## AI Models in Power Platform with AI Builder
+
+AI Builder er en low-code AI-funktion i Power Platform, der gør det muligt for dig at bruge AI Models til at automatisere processer og forudsige resultater. Med AI Builder kan du bringe AI ind i dine apps og flows, som forbinder til dine data i Dataverse eller i forskellige skybaserede datakilder som SharePoint, OneDrive eller Azure.
+
+## Prebuilt AI Models vs Custom AI Models
+
+AI Builder tilbyder to typer AI Models: Prebuilt AI Models og Custom AI Models. Prebuilt AI Models er færdigtrænede AI-modeller, som Microsoft har udviklet og gjort tilgængelige i Power Platform. Disse hjælper dig med at tilføje intelligens til dine apps og flows uden at skulle indsamle data og derefter bygge, træne og publicere dine egne modeller. Du kan bruge disse modeller til at automatisere processer og forudsige resultater.
+
+Nogle af de Prebuilt AI Models, der er tilgængelige i Power Platform, inkluderer:
+
+- **Key Phrase Extraction**: Denne model udtrækker nøglefraser fra tekst.
+- **Language Detection**: Denne model registrerer sproget i en tekst.
+- **Sentiment Analysis**: Denne model registrerer positiv, negativ, neutral eller blandet stemning i tekst.
+- **Business Card Reader**: Denne model udtrækker information fra visitkort.
+- **Text Recognition**: Denne model udtrækker tekst fra billeder.
+- **Object Detection**: Denne model registrerer og udtrækker objekter fra billeder.
+- **Document processing**: Denne model udtrækker information fra formularer.
+- **Invoice Processing**: Denne model udtrækker information fra fakturaer.
+
+Med Custom AI Models kan du bringe din egen model ind i AI Builder, så den kan fungere som enhver anden AI Builder custom model, hvilket giver dig mulighed for at træne modellen med dine egne data. Du kan bruge disse modeller til at automatisere processer og forudsige resultater i både Power Apps og Power Automate. Når du bruger din egen model, gælder der visse begrænsninger. Læs mere om disse [begrænsninger](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
+
+![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.da.png)
+
+## Assignment #2 - Build an Invoice Processing Flow for Our Startup
+
+Økonomiteamet har haft svært ved at behandle fakturaer. De har brugt et regneark til at holde styr på fakturaerne, men det er blevet svært at administrere, efterhånden som antallet af fakturaer er steget. De har bedt dig om at bygge en workflow, der kan hjælpe dem med at behandle fakturaer ved hjælp af AI. Workflowet skal gøre det muligt for dem at udtrække information fra fakturaer og gemme informationen i en Dataverse-tabel. Workflowet skal også gøre det muligt for dem at sende en e-mail til økonomiteamet med den udtrukne information.
+
+Nu hvor du ved, hvad AI Builder er, og hvorfor du bør bruge det, lad os se på, hvordan du kan bruge Invoice Processing AI Model i AI Builder, som vi tidligere har gennemgået, til at bygge en workflow, der hjælper økonomiteamet med at behandle fakturaer.
+
+For at bygge en workflow, der hjælper økonomiteamet med at behandle fakturaer ved hjælp af Invoice Processing AI Model i AI Builder, følg trinene nedenfor:
+
+1. Gå til [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) startskærm.
+
+2. Brug tekstfeltet på startskærmen til at beskrive den workflow, du ønsker at bygge. For eksempel, **_Process an invoice when it arrives in my mailbox_**. Klik på **Send** knappen for at sende prompten til AI Copilot.
+
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.da.png)
+
+3. AI Copilot vil foreslå de handlinger, du skal udføre for at automatisere den ønskede opgave. Du kan klikke på **Next** knappen for at gå videre til næste trin.
+
+4. I næste trin vil Power Automate bede dig om at opsætte de nødvendige forbindelser til flowet. Når du er færdig, klik på **Create flow** knappen for at oprette flowet.
+
 5. AI Copilot vil generere et flow, og du kan derefter tilpasse flowet, så det passer til dine behov.
-6. Opdater triggeren for flowet og indstil **Mappen** til den mappe, hvor fakturaerne vil blive gemt. For eksempel kan du indstille mappen til **Indbakke**. Klik på **Vis avancerede indstillinger** og indstil **Kun med vedhæftninger** til **Ja**. Dette vil sikre, at flowet kun kører, når en e-mail med en vedhæftning modtages i mappen.
-7. Fjern følgende handlinger fra flowet: **HTML til tekst**, **Sammensæt**, **Sammensæt 2**, **Sammensæt 3** og **Sammensæt 4**, da du ikke vil bruge dem.
-8. Fjern **Betingelse**-handlingen fra flowet, da du ikke vil bruge den. Det skal se ud som følgende skærmbillede: ![power automate, fjern handlinger](../../../translated_images/powerautomate-remove-actions.ea4e8386e075a56b2b6a87ccbcb2484f146e869ba4273948abee6acdb3567c09.da.png)
-9. Klik på **Tilføj en handling**-knappen og søg efter **Dataverse**. Vælg **Tilføj en ny række**-handlingen.
-10. På **Udtræk information fra fakturaer**-handlingen, opdater **Fakturafil** til at pege på **Vedhæftningsindhold** fra e-mailen. Dette vil sikre, at flowet udtrækker information fra fakturavedhæftningen.
-11. Vælg den **Tabel**, du oprettede tidligere. For eksempel kan du vælge **Fakturainformation**-tabellen. Vælg det dynamiske indhold fra den forrige handling for at udfylde følgende felter:
+
+6. Opdater triggeren for flowet og sæt **Folder** til den mappe, hvor fakturaerne vil blive gemt. For eksempel kan du sætte mappen til **Inbox**. Klik på **Show advanced options** og sæt **Only with Attachments** til **Yes**. Dette sikrer, at flowet kun kører, når en e-mail med en vedhæftning modtages i mappen.
+
+7. Fjern følgende handlinger fra flowet: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** og **Compose 4**, da du ikke vil bruge dem.
+
+8. Fjern **Condition** handlingen fra flowet, da du ikke vil bruge den. Det skal se ud som på følgende screenshot:
+
+   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.da.png)
+
+9. Klik på **Add an action** knappen og søg efter **Dataverse**. Vælg handlingen **Add a new row**.
+
+10. På handlingen **Extract Information from invoices**, opdater **Invoice File** til at pege på **Attachment Content** fra e-mailen. Dette sikrer, at flowet udtrækker information fra fakturaens vedhæftning.
+
+11. Vælg den **Table**, du oprettede tidligere. For eksempel kan du vælge tabellen **Invoice Information**. Vælg det dynamiske indhold fra den forrige handling til at udfylde følgende felter:
+
     - ID
-    - Beløb
-    - Dato
-    - Navn
-    - Status
-    - Indstil **Status** til **Afventer**.
-    - Leverandør e-mail
-    - Brug **Fra** dynamisk indhold fra **Når en ny e-mail ankommer** triggeren. ![power automate tilføj række](../../../translated_images/powerautomate-add-row.d27c9166313cb7b3683e45f3059c13f9435e8257b357c0150652d60523dab3e9.da.png)
-12. Når du er færdig med flowet, klik på **Gem**-knappen for at gemme flowet. Du kan derefter teste flowet ved at sende en e-mail med en faktura til den mappe, du specificerede i triggeren.
+    - Amount
+    - Date
+    - Name
+    - Status - Sæt **Status** til **Pending**.
+    - Supplier Email - Brug det dynamiske indhold **From** fra triggeren **When a new email arrives**.
 
-> **Din hjemmearbejde**: Det flow, du lige har bygget, er en god start, nu skal du tænke over, hvordan du kan bygge en automatisering, der vil gøre det muligt for vores finansafdeling at sende en e-mail til leverandøren for at opdatere dem med den aktuelle status for deres faktura. Dit hint: flowet skal køre, når fakturaens status ændres.
+    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.da.png)
 
-## Brug en tekstgenererings-AI-model i Power Automate
+12. Når du er færdig med flowet, klik på **Save** knappen for at gemme flowet. Du kan derefter teste flowet ved at sende en e-mail med en faktura til den mappe, du har angivet i triggeren.
 
-Opret tekst med GPT AI Model i AI Builder gør det muligt at generere tekst baseret på en prompt og er drevet af Microsoft Azure OpenAI Service. Med denne kapacitet kan du inkorporere GPT (Generative Pre-Trained Transformer) teknologi i dine apps og flows for at bygge en række automatiserede flows og indsigtsfulde applikationer.
+> **Din lektie**: Det flow, du lige har bygget, er et godt udgangspunkt. Nu skal du tænke over, hvordan du kan bygge en automatisering, der gør det muligt for vores økonomiteam at sende en e-mail til leverandøren for at opdatere dem om den aktuelle status på deres faktura. Dit hint: flowet skal køre, når status på fakturaen ændres.
 
-GPT-modeller gennemgår omfattende træning på store mængder data, hvilket gør dem i stand til at producere tekst, der tæt ligner menneskesprog, når de får en prompt. Når de integreres med arbejdsgangsautomatisering, kan AI-modeller som GPT udnyttes til at strømline og automatisere en bred vifte af opgaver.
+## Use a Text Generation AI Model in Power Automate
 
-For eksempel kan du bygge flows til automatisk at generere tekst til en række anvendelsestilfælde, såsom: udkast til e-mails, produktbeskrivelser og mere. Du kan også bruge modellen til at generere tekst til en række apps, såsom chatbots og kundeserviceapps, der gør det muligt for kundeservicemedarbejdere at reagere effektivt og effektivt på kundehenvendelser.
+Create Text with GPT AI Model i AI Builder gør det muligt for dig at generere tekst baseret på en prompt og drives af Microsoft Azure OpenAI Service. Med denne funktion kan du integrere GPT (Generative Pre-Trained Transformer) teknologi i dine apps og flows for at bygge en række automatiserede flows og indsigtsskabende applikationer.
 
-![opret en prompt](../../../translated_images/create-prompt-gpt.dd95b0323841a7be30684e4a48445f063209ea7ebb81e5f7f56787b12cf9c04b.da.png)
+GPT-modeller gennemgår omfattende træning på store mængder data, hvilket gør dem i stand til at producere tekst, der ligner menneskelig sprogbrug, når de får en prompt. Når de integreres med workflow-automatisering, kan AI-modeller som GPT bruges til at effektivisere og automatisere mange forskellige opgaver.
 
-For at lære, hvordan du bruger denne AI Model i Power Automate, gennemgå [Tilføj intelligens med AI Builder og GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modulet.
+For eksempel kan du bygge flows, der automatisk genererer tekst til forskellige formål, såsom udkast til e-mails, produktbeskrivelser og mere. Du kan også bruge modellen til at generere tekst til forskellige apps, såsom chatbots og kundeserviceapps, der hjælper kundeservicemedarbejdere med at svare effektivt og hurtigt på kundehenvendelser.
 
-## Godt arbejde! Fortsæt din læring
+![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.da.png)
 
-Efter at have gennemført denne lektion, tjek vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at opgradere din viden om Generativ AI!
+For at lære, hvordan du bruger denne AI Model i Power Automate, gennemgå modulet [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 
-Gå videre til Lektion 11, hvor vi vil se på, hvordan man [integrerer Generativ AI med funktionkald](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
+## Great Work! Continue Your Learning
+
+Efter at have gennemført denne lektion, tjek vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at udvikle din viden om Generative AI!
+
+Gå videre til Lektion 11, hvor vi ser på, hvordan man [integrerer Generative AI med Function Calling](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Mens vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiske oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

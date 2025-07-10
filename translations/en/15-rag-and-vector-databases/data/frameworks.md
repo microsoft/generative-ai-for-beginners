@@ -2,122 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T01:47:36+00:00",
+  "translation_date": "2025-07-09T16:24:16+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "en"
 }
 -->
 # Neural Network Frameworks
 
-As we have learned already, to efficiently train neural networks we need to do two things:
+As we have already learned, to train neural networks efficiently, we need to do two things:
 
-* Operate on tensors, e.g., multiply, add, and compute functions like sigmoid or softmax
-* Compute gradients of all expressions to perform gradient descent optimization
+* Work with tensors, for example, to multiply, add, and compute functions like sigmoid or softmax
+* Calculate gradients of all expressions to perform gradient descent optimization
 
-While the `numpy` library can handle the first part, we need a mechanism to compute gradients. In the framework we developed in the previous section, we had to manually program all derivative functions inside the `backward` method, which does backpropagation. Ideally, a framework should allow us to compute gradients of *any expression* we define.
+While the `numpy` library can handle the first part, we need a way to compute gradients. In the framework we developed in the previous section, we had to manually program all derivative functions inside the `backward` method, which performs backpropagation. Ideally, a framework should allow us to compute gradients of *any expression* we define.
 
-Another important aspect is performing computations on GPUs or other specialized compute units like TPUs. Deep neural network training requires *a lot* of computations, and being able to parallelize these computations on GPUs is crucial.
+Another key aspect is the ability to run computations on GPUs or other specialized hardware like TPUs. Training deep neural networks requires *a lot* of computation, so being able to parallelize these operations on GPUs is crucial.
 
-> ✅ The term 'parallelize' means to distribute computations over multiple devices.
+> ✅ The term 'parallelize' means distributing computations across multiple devices.
 
-Currently, the two most popular neural frameworks are TensorFlow and PyTorch. Both provide a low-level API to work with tensors on both CPU and GPU. On top of the low-level API, there is also a higher-level API, called Keras and PyTorch Lightning, respectively.
+Currently, the two most popular neural network frameworks are TensorFlow and PyTorch. Both provide low-level APIs to work with tensors on CPU and GPU. On top of these low-level APIs, there are higher-level APIs called Keras and PyTorch Lightning, respectively.
 
 Low-Level API | TensorFlow | PyTorch
---------------|------------|--------
-High-Level API| Keras      | PyTorch Lightning
+--------------|------------|---------
+High-level API| Keras      | PyTorch Lightning
 
-**Low-level APIs** in both frameworks allow you to build so-called **computational graphs**. This graph defines how to compute the output (usually the loss function) with given input parameters and can be pushed for computation on GPU if available. There are functions to differentiate this computational graph and compute gradients, which can then be used for optimizing model parameters.
+**Low-level APIs** in both frameworks let you build **computational graphs**. These graphs define how to compute outputs (usually the loss function) from given inputs and can be executed on GPUs if available. There are functions to differentiate these graphs and compute gradients, which are then used to optimize model parameters.
 
-**High-level APIs** generally view neural networks as a **sequence of layers**, making it much easier to construct most neural networks. Training the model usually involves preparing the data and then calling a `fit` function to do the job.
+**High-level APIs** treat neural networks as a **sequence of layers**, making it much easier to build most neural networks. Training typically involves preparing the data and then calling a `fit` function to start the process.
 
-The high-level API allows you to construct typical neural networks quickly without worrying about many details. At the same time, low-level APIs offer much more control over the training process, making them widely used in research when dealing with new neural network architectures.
+The high-level API lets you quickly build typical neural networks without worrying about many details. Meanwhile, the low-level API offers much more control over training, which is why it’s often used in research when experimenting with new network architectures.
 
-It is also important to understand that you can use both APIs together. For example, you can develop your own network layer architecture using a low-level API and then use it within a larger network constructed and trained with the high-level API. Or you can define a network using the high-level API as a sequence of layers and then use your own low-level training loop to perform optimization. Both APIs use the same basic underlying concepts and are designed to work well together.
+It’s also important to know you can combine both APIs. For example, you can create your own network layer architecture using the low-level API and then use it within a larger network built and trained with the high-level API. Or you can define a network with the high-level API as a sequence of layers and then use your own low-level training loop for optimization. Both APIs share the same core concepts and are designed to work well together.
 
 ## Learning
 
-In this course, we offer most of the content for both PyTorch and TensorFlow. You can choose your preferred framework and go through the corresponding notebooks. If you are unsure which framework to choose, read some discussions on the internet about **PyTorch vs. TensorFlow**. You can also explore both frameworks to gain a better understanding.
+In this course, we provide most content for both PyTorch and TensorFlow. You can choose your preferred framework and follow only the corresponding notebooks. If you’re unsure which to pick, check out online discussions about **PyTorch vs. TensorFlow**. You can also explore both frameworks to get a better understanding.
 
-Where possible, we will use High-Level APIs for simplicity. However, we believe it is important to understand how neural networks work from the ground up, so we start by working with low-level API and tensors. However, if you want to get started quickly and do not want to spend a lot of time learning these details, you can skip those and go straight into high-level API notebooks.
+Where possible, we’ll use High-Level APIs for simplicity. However, we believe it’s important to understand how neural networks work from the ground up, so we start by working with low-level APIs and tensors. If you want to get started quickly and don’t want to spend much time on these details, you can skip ahead to the high-level API notebooks.
 
 ## ✍️ Exercises: Frameworks
 
 Continue your learning in the following notebooks:
 
 Low-Level API | TensorFlow+Keras Notebook | PyTorch
---------------|---------------------------|--------
-High-Level API| Keras                     | PyTorch Lightning
+--------------|----------------------------|---------
+High-level API| Keras                      | *PyTorch Lightning*
 
-After mastering the frameworks, let's revisit the concept of overfitting.
+After mastering the frameworks, let’s review the concept of overfitting.
 
 # Overfitting
 
-Overfitting is an extremely important concept in machine learning, and it is crucial to get it right!
+Overfitting is a crucial concept in machine learning, and it’s very important to understand it well!
 
-Consider the following problem of approximating 5 dots (represented by `x` on the graphs below):
+Consider the problem of approximating 5 points (marked as `x` on the graphs below):
 
 !linear | overfit
---------|--------
+-------------------------|--------------------------
 **Linear model, 2 parameters** | **Non-linear model, 7 parameters**
 Training error = 5.3 | Training error = 0
 Validation error = 5.1 | Validation error = 20
 
-* On the left, we see a good straight line approximation. Because the number of parameters is adequate, the model captures the idea behind point distribution correctly.
-* On the right, the model is too powerful. Since we only have 5 points and the model has 7 parameters, it can adjust to pass through all points, making the training error 0. However, this prevents the model from understanding the correct pattern behind the data, resulting in a very high validation error.
+* On the left, we see a good straight-line approximation. Because the number of parameters is appropriate, the model captures the general pattern behind the points.
+* On the right, the model is too complex. With only 5 points but 7 parameters, it can fit all points exactly, resulting in zero training error. However, this prevents the model from learning the true underlying pattern, causing a very high validation error.
 
-It is very important to strike the right balance between the model's richness (number of parameters) and the number of training samples.
+It’s essential to find the right balance between the model’s complexity (number of parameters) and the amount of training data.
 
-## Why overfitting occurs
+## Why overfitting happens
 
   * Not enough training data
-  * Too powerful model
-  * Too much noise in input data
+  * Model is too complex
+  * Too much noise in the input data
 
 ## How to detect overfitting
 
-As you can see from the graph above, overfitting can be detected by a very low training error and a high validation error. Normally during training, we will see both training and validation errors start to decrease, and then at some point, the validation error might stop decreasing and start rising. This will be a sign of overfitting and an indicator that we should probably stop training at this point (or at least make a snapshot of the model).
+As shown in the graph above, overfitting can be detected by very low training error combined with high validation error. Typically, during training, both training and validation errors decrease at first, but at some point, the validation error stops decreasing and starts to rise. This signals overfitting and indicates that training should probably be stopped at this point (or at least save a snapshot of the model).
+
+overfitting
 
 ## How to prevent overfitting
 
-If you notice that overfitting occurs, you can do one of the following:
+If you notice overfitting, you can try one of the following:
 
  * Increase the amount of training data
- * Decrease the complexity of the model
- * Use some regularization technique, such as Dropout, which we will discuss later.
+ * Reduce the model’s complexity
+ * Use regularization techniques like Dropout, which we will cover later
 
-## Overfitting and Bias-Variance Tradeoff
+## Overfitting and the Bias-Variance Tradeoff
 
-Overfitting is actually a case of a more generic problem in statistics called Bias-Variance Tradeoff. If we consider the possible sources of error in our model, we can see two types of errors:
+Overfitting is a specific case of a broader statistical problem called the Bias-Variance Tradeoff. When considering sources of error in our model, there are two types:
 
-* **Bias errors** are caused by our algorithm not being able to capture the relationship between training data correctly. It can result from our model not being powerful enough (**underfitting**).
-* **Variance errors**, which are caused by the model approximating noise in the input data instead of a meaningful relationship (**overfitting**).
+* **Bias errors** occur when the algorithm can’t capture the relationship in the training data properly. This usually happens when the model is too simple (**underfitting**).
+* **Variance errors** happen when the model fits noise in the input data instead of the true relationship (**overfitting**).
 
-During training, bias error decreases (as our model learns to approximate the data), and variance error increases. It is important to stop training—either manually (when we detect overfitting) or automatically (by introducing regularization)—to prevent overfitting.
+During training, bias error decreases as the model learns, but variance error increases. It’s important to stop training—either manually (when overfitting is detected) or automatically (using regularization)—to avoid overfitting.
 
 ## Conclusion
 
-In this lesson, you learned about the differences between the various APIs for the two most popular AI frameworks, TensorFlow and PyTorch. Additionally, you learned about a very important topic, overfitting.
+In this lesson, you learned about the differences between the various APIs in the two most popular AI frameworks, TensorFlow and PyTorch. You also covered an important topic: overfitting.
 
 ## 🚀 Challenge
 
-In the accompanying notebooks, you will find 'tasks' at the bottom; work through the notebooks and complete the tasks.
+In the accompanying notebooks, you’ll find 'tasks' at the end; work through the notebooks and complete these tasks.
 
 ## Review & Self Study
 
-Do some research on the following topics:
+Research the following topics:
 
 - TensorFlow
 - PyTorch
 - Overfitting
 
-Ask yourself the following questions:
+Ask yourself:
 
-- What is the difference between TensorFlow and PyTorch?
-- What is the difference between overfitting and underfitting?
+- What are the differences between TensorFlow and PyTorch?
+- How do overfitting and underfitting differ?
 
 ## Assignment
 
-In this lab, you are asked to solve two classification problems using single- and multi-layered fully-connected networks using PyTorch or TensorFlow.
+In this lab, you are asked to solve two classification problems using single- and multi-layer fully connected networks with either PyTorch or TensorFlow.
 
 **Disclaimer**:  
-This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

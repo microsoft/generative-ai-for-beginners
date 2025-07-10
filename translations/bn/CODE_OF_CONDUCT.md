@@ -2,20 +2,20 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
-  "translation_date": "2025-05-19T11:03:11+00:00",
+  "translation_date": "2025-07-09T05:44:36+00:00",
   "source_file": "CODE_OF_CONDUCT.md",
   "language_code": "bn"
 }
 -->
-# মাইক্রোসফট ওপেন সোর্স আচরণবিধি
+# Microsoft ওপেন সোর্স আচরণবিধি
 
-এই প্রকল্পটি [মাইক্রোসফট ওপেন সোর্স আচরণবিধি](https://opensource.microsoft.com/codeofconduct/) গ্রহণ করেছে।
+এই প্রকল্পটি [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) গ্রহণ করেছে।
 
-সম্পদসমূহ:
+সাধনসমূহ:
 
-- [মাইক্রোসফট ওপেন সোর্স আচরণবিধি](https://opensource.microsoft.com/codeofconduct/)
-- [মাইক্রোসফট আচরণবিধি প্রায়শই জিজ্ঞাসিত প্রশ্ন](https://opensource.microsoft.com/codeofconduct/faq/)
-- প্রশ্ন বা উদ্বেগের জন্য [opencode@microsoft.com](mailto:opencode@microsoft.com) এর সাথে যোগাযোগ করুন
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+- প্রশ্ন বা উদ্বেগের জন্য যোগাযোগ করুন [opencode@microsoft.com](mailto:opencode@microsoft.com)
 
 **অস্বীকৃতি**:  
-এই নথিটি AI অনুবাদ পরিষেবা [Co-op Translator](https://github.com/Azure/co-op-translator) ব্যবহার করে অনুবাদ করা হয়েছে। আমরা যথাসাধ্য সঠিকতা নিশ্চিত করার চেষ্টা করি, তবে অনুগ্রহ করে সচেতন থাকুন যে স্বয়ংক্রিয় অনুবাদে ত্রুটি বা অসঙ্গতি থাকতে পারে। মূল নথিটি তার নিজস্ব ভাষায় প্রামাণিক উৎস হিসেবে বিবেচিত হওয়া উচিত। গুরুত্বপূর্ণ তথ্যের জন্য, পেশাদার মানব অনুবাদ সুপারিশ করা হয়। এই অনুবাদ ব্যবহারের ফলে উদ্ভূত কোন ভুল বোঝাবুঝি বা ভুল ব্যাখ্যার জন্য আমরা দায়ী নই।
+এই নথিটি AI অনুবাদ সেবা [Co-op Translator](https://github.com/Azure/co-op-translator) ব্যবহার করে অনূদিত হয়েছে। আমরা যথাসাধ্য সঠিকতার চেষ্টা করি, তবে স্বয়ংক্রিয় অনুবাদে ত্রুটি বা অসঙ্গতি থাকতে পারে। মূল নথিটি তার নিজস্ব ভাষায়ই কর্তৃত্বপূর্ণ উৎস হিসেবে বিবেচিত হওয়া উচিত। গুরুত্বপূর্ণ তথ্যের জন্য পেশাদার মানব অনুবাদ গ্রহণ করার পরামর্শ দেওয়া হয়। এই অনুবাদের ব্যবহারে সৃষ্ট কোনো ভুল বোঝাবুঝি বা ভুল ব্যাখ্যার জন্য আমরা দায়ী নই।

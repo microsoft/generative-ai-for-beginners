@@ -2,280 +2,452 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "a45c318dc6ebc2604f35b8b829f93af2",
-  "translation_date": "2025-05-19T15:25:50+00:00",
+  "translation_date": "2025-07-09T10:02:34+00:00",
   "source_file": "04-prompt-engineering-fundamentals/README.md",
   "language_code": "pt"
 }
 -->
-# Fundamentos da Engenharia de Prompts
+# Fundamentos de Engenharia de Prompts
 
-## Introdução
-Este módulo aborda conceitos e técnicas essenciais para criar prompts eficazes em modelos de IA generativa. A forma como você escreve seu prompt para um LLM também é importante. Um prompt bem elaborado pode alcançar uma resposta de melhor qualidade. Mas o que exatamente significam termos como _prompt_ e _engenharia de prompts_? E como posso melhorar o _input_ do prompt que envio para o LLM? Estas são as perguntas que tentaremos responder neste capítulo e no próximo.
+[![Fundamentos de Engenharia de Prompts](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.pt.png)](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)
 
-A _IA generativa_ é capaz de criar novo conteúdo (por exemplo, texto, imagens, áudio, código etc.) em resposta a solicitações dos usuários. Ela alcança isso usando _Modelos de Linguagem de Grande Escala_ como a série GPT ("Transformador Pré-treinado Generativo") da OpenAI, que são treinados para usar linguagem natural e código.
+## Introdução  
+Este módulo aborda conceitos e técnicas essenciais para criar prompts eficazes em modelos de IA generativa. A forma como escreve o seu prompt para um LLM também é importante. Um prompt cuidadosamente elaborado pode alcançar uma melhor qualidade de resposta. Mas o que significam exatamente termos como _prompt_ e _engenharia de prompts_? E como posso melhorar o _input_ do prompt que envio para o LLM? Estas são as questões que tentaremos responder neste capítulo e no seguinte.
 
-Os usuários agora podem interagir com esses modelos usando paradigmas familiares, como chat, sem precisar de qualquer conhecimento técnico ou treinamento. Os modelos são _baseados em prompts_ - os usuários enviam uma entrada de texto (prompt) e recebem a resposta da IA (conclusão). Eles podem então "conversar com a IA" de forma iterativa, em conversas de múltiplas rodadas, refinando seu prompt até que a resposta atenda às suas expectativas.
+_A IA generativa_ é capaz de criar novo conteúdo (por exemplo, texto, imagens, áudio, código, etc.) em resposta a pedidos dos utilizadores. Isto é conseguido através de _Modelos de Linguagem de Grande Escala_ como a série GPT da OpenAI ("Generative Pre-trained Transformer"), que são treinados para usar linguagem natural e código.
 
-Os "prompts" agora se tornam a principal _interface de programação_ para aplicativos de IA generativa, dizendo aos modelos o que fazer e influenciando a qualidade das respostas retornadas. A "Engenharia de Prompts" é um campo de estudo em rápido crescimento que se concentra no _design e otimização_ de prompts para entregar respostas consistentes e de qualidade em escala.
+Os utilizadores podem agora interagir com estes modelos usando paradigmas familiares como o chat, sem necessidade de conhecimentos técnicos ou formação. Os modelos são _baseados em prompts_ – os utilizadores enviam um texto (prompt) e recebem a resposta da IA (completação). Podem depois "conversar com a IA" de forma iterativa, em conversas de múltiplas interações, refinando o prompt até que a resposta corresponda às suas expectativas.
+
+Os "prompts" tornam-se assim a principal _interface de programação_ para aplicações de IA generativa, dizendo aos modelos o que fazer e influenciando a qualidade das respostas devolvidas. A "Engenharia de Prompts" é um campo em rápido crescimento que se foca no _design e otimização_ dos prompts para fornecer respostas consistentes e de qualidade em larga escala.
 
 ## Objetivos de Aprendizagem
 
-Nesta lição, aprenderemos o que é Engenharia de Prompts, por que ela é importante e como podemos criar prompts mais eficazes para um modelo e objetivo de aplicação dados. Vamos entender os conceitos principais e as melhores práticas para engenharia de prompts - e aprender sobre um ambiente interativo de "sandbox" no Jupyter Notebooks onde podemos ver esses conceitos aplicados a exemplos reais.
+Nesta lição, vamos aprender o que é Engenharia de Prompts, por que é importante e como podemos criar prompts mais eficazes para um dado modelo e objetivo de aplicação. Vamos compreender os conceitos fundamentais e as melhores práticas para engenharia de prompts – e conhecer um ambiente interativo em Jupyter Notebooks onde podemos ver estes conceitos aplicados a exemplos reais.
 
-Ao final desta lição, seremos capazes de:
+No final desta lição seremos capazes de:
 
-1. Explicar o que é engenharia de prompts e por que ela é importante.
-2. Descrever os componentes de um prompt e como eles são usados.
-3. Aprender as melhores práticas e técnicas para engenharia de prompts.
-4. Aplicar as técnicas aprendidas a exemplos reais, usando um endpoint da OpenAI.
+1. Explicar o que é engenharia de prompts e por que é importante.  
+2. Descrever os componentes de um prompt e como são usados.  
+3. Aprender as melhores práticas e técnicas para engenharia de prompts.  
+4. Aplicar as técnicas aprendidas a exemplos reais, usando um endpoint OpenAI.
 
-## Termos-chave
+## Termos-Chave
 
-Engenharia de Prompts: A prática de projetar e refinar entradas para guiar modelos de IA na produção de saídas desejadas.
-Tokenização: O processo de converter texto em unidades menores, chamadas tokens, que um modelo pode entender e processar.
-LLMs Ajustados por Instrução: Modelos de Linguagem de Grande Escala (LLMs) que foram ajustados com instruções específicas para melhorar a precisão e a relevância de suas respostas.
+Engenharia de Prompts: A prática de desenhar e refinar inputs para guiar modelos de IA a produzir as saídas desejadas.  
+Tokenização: O processo de converter texto em unidades menores, chamadas tokens, que um modelo consegue entender e processar.  
+LLMs Ajustados por Instruções: Modelos de Linguagem de Grande Escala (LLMs) que foram ajustados com instruções específicas para melhorar a precisão e relevância das suas respostas.
 
-## Sandbox de Aprendizagem
+## Ambiente de Aprendizagem
 
-A engenharia de prompts é atualmente mais uma arte do que uma ciência. A melhor maneira de melhorar nossa intuição sobre isso é _praticar mais_ e adotar uma abordagem de tentativa e erro que combine conhecimento do domínio de aplicação com técnicas recomendadas e otimizações específicas de modelo.
+A engenharia de prompts é atualmente mais uma arte do que uma ciência. A melhor forma de melhorar a nossa intuição é _praticar mais_ e adotar uma abordagem de tentativa e erro que combine conhecimento do domínio da aplicação com técnicas recomendadas e otimizações específicas do modelo.
 
-O Jupyter Notebook que acompanha esta lição fornece um ambiente de _sandbox_ onde você pode experimentar o que aprendeu - conforme avança ou como parte do desafio de código no final. Para executar os exercícios, você precisará de:
+O Jupyter Notebook que acompanha esta lição oferece um ambiente _sandbox_ onde pode experimentar o que aprende – à medida que avança ou como parte do desafio de código no final. Para executar os exercícios, vai precisar de:
 
-1. **Uma chave da API do Azure OpenAI** - o endpoint de serviço para um LLM implantado.
-2. **Um Runtime Python** - no qual o Notebook pode ser executado.
-3. **Variáveis de Ambiente Locais** - _complete agora as etapas do [SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst) para se preparar_.
+1. **Uma chave API Azure OpenAI** – o endpoint do serviço para um LLM implementado.  
+2. **Um ambiente Python** – onde o Notebook pode ser executado.  
+3. **Variáveis de Ambiente Locais** – _complete agora os passos do [SETUP](./../00-course-setup/SETUP.md?WT.mc_id=academic-105485-koreyst) para estar preparado_.
 
-O notebook vem com exercícios _iniciais_ - mas você é incentivado a adicionar suas próprias seções de _Markdown_ (descrição) e _Código_ (solicitações de prompt) para experimentar mais exemplos ou ideias - e construir sua intuição para o design de prompts.
+O notebook inclui exercícios _inicializadores_ – mas é encorajado a adicionar as suas próprias secções de _Markdown_ (descrição) e _Código_ (pedidos de prompt) para experimentar mais exemplos ou ideias – e desenvolver a sua intuição para o design de prompts.
 
 ## Guia Ilustrado
 
-Quer ter uma visão geral do que esta lição cobre antes de mergulhar? Confira este guia ilustrado, que dá uma ideia dos principais tópicos abordados e dos principais pontos a serem considerados em cada um. O roteiro da lição leva você desde a compreensão dos conceitos e desafios principais até abordá-los com técnicas de engenharia de prompts relevantes e melhores práticas. Observe que a seção "Técnicas Avançadas" neste guia refere-se ao conteúdo abordado no _próximo_ capítulo deste currículo.
+Quer ter uma visão geral do que esta lição cobre antes de começar? Veja este guia ilustrado, que lhe dá uma ideia dos principais tópicos abordados e dos pontos-chave para refletir em cada um. O roteiro da lição leva-o desde a compreensão dos conceitos e desafios centrais até à sua resolução com técnicas relevantes de engenharia de prompts e melhores práticas. Note que a secção "Técnicas Avançadas" neste guia refere-se a conteúdos abordados no _próximo_ capítulo deste currículo.
 
-## Nossa Startup
+![Guia Ilustrado de Engenharia de Prompts](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.pt.png)
 
-Agora, vamos falar sobre como _este tópico_ se relaciona com nossa missão de startup de [trazer inovação em IA para a educação](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Queremos construir aplicativos de aprendizado personalizado movidos por IA - então vamos pensar sobre como diferentes usuários de nosso aplicativo podem "projetar" prompts:
+## A Nossa Startup
 
-- **Administradores** podem pedir à IA para _analisar dados do currículo para identificar lacunas na cobertura_. A IA pode resumir resultados ou visualizá-los com código.
-- **Educadores** podem pedir à IA para _gerar um plano de aula para um público-alvo e tópico específicos_. A IA pode construir o plano personalizado em um formato especificado.
-- **Estudantes** podem pedir à IA para _tutoreá-los em uma matéria difícil_. A IA agora pode orientar os alunos com lições, dicas e exemplos adaptados ao seu nível.
+Agora, vamos falar sobre como _este tema_ se relaciona com a missão da nossa startup de [trazer inovação em IA para a educação](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Queremos construir aplicações de IA para _aprendizagem personalizada_ – por isso, vamos pensar em como diferentes utilizadores da nossa aplicação podem "desenhar" prompts:
 
-Isso é apenas a ponta do iceberg. Confira [Prompts Para Educação](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - uma biblioteca de prompts de código aberto organizada por especialistas em educação - para ter uma noção mais ampla das possibilidades! _Experimente executar alguns desses prompts no sandbox ou usando o OpenAI Playground para ver o que acontece!_
+- **Administradores** podem pedir à IA para _analisar dados curriculares e identificar lacunas na cobertura_. A IA pode resumir os resultados ou visualizá-los com código.  
+- **Educadores** podem pedir à IA para _gerar um plano de aula para um público-alvo e tema específicos_. A IA pode construir o plano personalizado num formato especificado.  
+- **Estudantes** podem pedir à IA para _os ajudar numa disciplina difícil_. A IA pode agora guiar os estudantes com aulas, dicas e exemplos adaptados ao seu nível.
+
+Isto é apenas a ponta do iceberg. Veja [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) – uma biblioteca open-source de prompts curada por especialistas em educação – para ter uma noção mais ampla das possibilidades! _Experimente executar alguns desses prompts no sandbox ou no OpenAI Playground para ver o que acontece!_
+
+<!--  
+MODELO DE LIÇÃO:  
+Esta unidade deve cobrir o conceito central #1.  
+Reforce o conceito com exemplos e referências.
+
+CONCEITO #1:  
+Engenharia de Prompts.  
+Defina e explique por que é necessária.  
+-->
 
 ## O que é Engenharia de Prompts?
 
-Começamos esta lição definindo **Engenharia de Prompts** como o processo de _projetar e otimizar_ entradas de texto (prompts) para entregar respostas consistentes e de qualidade (conclusões) para um objetivo de aplicação e modelo dados. Podemos pensar nisso como um processo de 2 etapas:
+Começámos esta lição definindo **Engenharia de Prompts** como o processo de _desenhar e otimizar_ inputs de texto (prompts) para fornecer respostas consistentes e de qualidade (completações) para um dado objetivo de aplicação e modelo. Podemos pensar nisso como um processo em 2 etapas:
 
-- _projetar_ o prompt inicial para um modelo e objetivo dados
+- _desenhar_ o prompt inicial para um dado modelo e objetivo  
 - _refinar_ o prompt iterativamente para melhorar a qualidade da resposta
 
-Isso é necessariamente um processo de tentativa e erro que requer intuição e esforço do usuário para obter resultados ótimos. Então, por que é importante? Para responder a essa pergunta, primeiro precisamos entender três conceitos:
+Este é necessariamente um processo de tentativa e erro que requer intuição e esforço do utilizador para obter resultados ótimos. Então, por que é importante? Para responder a essa pergunta, primeiro precisamos entender três conceitos:
 
-- _Tokenização_ = como o modelo "vê" o prompt
-- _Base LLMs_ = como o modelo de base "processa" um prompt
-- _LLMs Ajustados por Instrução_ = como o modelo pode agora ver "tarefas"
+- _Tokenização_ = como o modelo "vê" o prompt  
+- _LLMs Base_ = como o modelo base "processa" um prompt  
+- _LLMs Ajustados por Instruções_ = como o modelo pode agora interpretar "tarefas"
 
 ### Tokenização
 
-Um LLM vê prompts como uma _sequência de tokens_ onde diferentes modelos (ou versões de um modelo) podem tokenizar o mesmo prompt de maneiras diferentes. Como os LLMs são treinados em tokens (e não em texto bruto), a forma como os prompts são tokenizados tem um impacto direto na qualidade da resposta gerada.
+Um LLM vê os prompts como uma _sequência de tokens_, onde diferentes modelos (ou versões de um modelo) podem tokenizar o mesmo prompt de formas diferentes. Como os LLMs são treinados com tokens (e não com texto bruto), a forma como os prompts são tokenizados tem um impacto direto na qualidade da resposta gerada.
 
-Para ter uma intuição de como a tokenização funciona, experimente ferramentas como o [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) mostrado abaixo. Copie seu prompt - e veja como ele é convertido em tokens, prestando atenção em como os caracteres de espaço em branco e sinais de pontuação são tratados. Observe que este exemplo mostra um LLM mais antigo (GPT-3) - então tentar isso com um modelo mais novo pode produzir um resultado diferente.
+Para ter uma intuição de como a tokenização funciona, experimente ferramentas como o [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) mostrado abaixo. Copie o seu prompt – e veja como ele é convertido em tokens, prestando atenção a como são tratados os espaços em branco e os sinais de pontuação. Note que este exemplo mostra um LLM mais antigo (GPT-3) – por isso, experimentar com um modelo mais recente pode produzir um resultado diferente.
 
-### Conceito: Modelos de Base
+![Tokenização](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.pt.png)
 
-Uma vez que um prompt é tokenizado, a função principal do ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (ou modelo de base) é prever o token nessa sequência. Como os LLMs são treinados em enormes conjuntos de dados de texto, eles têm uma boa noção das relações estatísticas entre os tokens e podem fazer essa previsão com alguma confiança. Observe que eles não entendem o _significado_ das palavras no prompt ou token; eles apenas veem um padrão que podem "completar" com sua próxima previsão. Eles podem continuar prevendo a sequência até serem interrompidos por intervenção do usuário ou alguma condição pré-estabelecida.
+### Conceito: Modelos Base
 
-Quer ver como funciona a conclusão baseada em prompt? Insira o prompt acima no [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) do Azure OpenAI Studio com as configurações padrão. O sistema está configurado para tratar prompts como solicitações de informações - então você deve ver uma conclusão que satisfaça esse contexto.
+Depois de um prompt ser tokenizado, a função principal do ["LLM Base"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (ou modelo base) é prever o token seguinte nessa sequência. Como os LLMs são treinados com enormes conjuntos de dados textuais, eles têm uma boa noção das relações estatísticas entre tokens e podem fazer essa previsão com alguma confiança. Note que eles não entendem o _significado_ das palavras no prompt ou token; apenas veem um padrão que podem "completar" com a sua próxima previsão. Podem continuar a prever a sequência até serem interrompidos por intervenção do utilizador ou alguma condição predefinida.
 
-Mas e se o usuário quisesse ver algo específico que atendesse a alguns critérios ou objetivos de tarefa? É aqui que os LLMs _ajustados por instrução_ entram em cena.
+Quer ver como funciona a completação baseada em prompt? Insira o prompt acima no Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) com as definições padrão. O sistema está configurado para tratar os prompts como pedidos de informação – por isso deverá ver uma resposta que satisfaz este contexto.
 
-### Conceito: LLMs Ajustados por Instrução
+Mas e se o utilizador quiser ver algo específico que cumpra certos critérios ou objetivos de tarefa? É aqui que os LLMs _ajustados por instruções_ entram em cena.
 
-Um [LLM Ajustado por Instrução](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) começa com o modelo de base e o ajusta com exemplos ou pares de entrada/saída (por exemplo, "mensagens" de múltiplas rodadas) que podem conter instruções claras - e a resposta da IA tenta seguir essa instrução.
+![Completação de Chat com LLM Base](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.pt.png)
 
-Isso usa técnicas como Aprendizado por Reforço com Feedback Humano (RLHF) que podem treinar o modelo para _seguir instruções_ e _aprender com feedback_ para que produza respostas mais adequadas a aplicações práticas e mais relevantes para os objetivos dos usuários.
+### Conceito: LLMs Ajustados por Instruções
 
-Vamos experimentar - revisite o prompt acima, mas agora mude a _mensagem do sistema_ para fornecer a seguinte instrução como contexto:
+Um [LLM Ajustado por Instruções](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) começa com o modelo base e é afinado com exemplos ou pares input/output (por exemplo, "mensagens" de múltiplas interações) que podem conter instruções claras – e a resposta da IA tenta seguir essa instrução.
 
-> _Resuma o conteúdo que você recebeu para um aluno da segunda série. Mantenha o resultado em um parágrafo com 3-5 tópicos._
+Isto usa técnicas como Aprendizagem por Reforço com Feedback Humano (RLHF) que podem treinar o modelo para _seguir instruções_ e _aprender com o feedback_, de modo a produzir respostas mais adequadas a aplicações práticas e mais relevantes para os objetivos do utilizador.
 
-Veja como o resultado agora é ajustado para refletir o objetivo e o formato desejados? Um educador agora pode usar diretamente essa resposta em seus slides para aquela aula.
+Vamos experimentar – volte ao prompt acima, mas agora altere a _mensagem do sistema_ para fornecer a seguinte instrução como contexto:
+
+> _Resuma o conteúdo fornecido para um aluno do segundo ano. Mantenha o resultado num parágrafo com 3-5 pontos principais._
+
+Veja como o resultado está agora ajustado para refletir o objetivo e formato desejados? Um educador pode usar diretamente esta resposta nos seus slides para essa aula.
+
+![Completação de Chat com LLM Ajustado por Instruções](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.pt.png)
 
 ## Por que precisamos de Engenharia de Prompts?
 
-Agora que sabemos como os prompts são processados pelos LLMs, vamos falar sobre _por que_ precisamos de engenharia de prompts. A resposta está no fato de que os LLMs atuais apresentam vários desafios que tornam _conclusões confiáveis e consistentes_ mais difíceis de alcançar sem colocar esforço na construção e otimização de prompts. Por exemplo:
+Agora que sabemos como os prompts são processados pelos LLMs, vamos falar sobre _por que_ precisamos de engenharia de prompts. A resposta está no facto de que os LLMs atuais apresentam vários desafios que tornam mais difícil obter _completações fiáveis e consistentes_ sem esforço na construção e otimização do prompt. Por exemplo:
 
-1. **As respostas dos modelos são estocásticas.** O _mesmo prompt_ provavelmente produzirá respostas diferentes com diferentes modelos ou versões de modelo. E pode até produzir resultados diferentes com o _mesmo modelo_ em momentos diferentes. _As técnicas de engenharia de prompts podem nos ajudar a minimizar essas variações fornecendo melhores diretrizes_.
+1. **As respostas dos modelos são estocásticas.** O _mesmo prompt_ provavelmente produzirá respostas diferentes com modelos ou versões diferentes. E pode até produzir resultados diferentes com o _mesmo modelo_ em momentos distintos. _As técnicas de engenharia de prompts podem ajudar a minimizar estas variações, fornecendo melhores limites_.
 
-1. **Os modelos podem fabricar respostas.** Os modelos são pré-treinados com _conjuntos de dados grandes, mas finitos_, o que significa que eles não têm conhecimento sobre conceitos fora desse escopo de treinamento. Como resultado, eles podem produzir conclusões que são imprecisas, imaginárias ou diretamente contraditórias aos fatos conhecidos. _As técnicas de engenharia de prompts ajudam os usuários a identificar e mitigar essas fabricações, por exemplo, pedindo à IA citações ou raciocínio_.
+1. **Os modelos podem inventar respostas.** Os modelos são pré-treinados com conjuntos de dados _grandes mas finitos_, o que significa que não têm conhecimento sobre conceitos fora desse âmbito de treino. Como resultado, podem produzir respostas imprecisas, imaginárias ou diretamente contraditórias a factos conhecidos. _As técnicas de engenharia de prompts ajudam os utilizadores a identificar e mitigar estas invenções, por exemplo, pedindo à IA citações ou raciocínios_.
 
-1. **As capacidades dos modelos irão variar.** Modelos mais novos ou gerações de modelos terão capacidades mais ricas, mas também trarão peculiaridades únicas e trade-offs em custo e complexidade. _A engenharia de prompts pode nos ajudar a desenvolver melhores práticas e fluxos de trabalho que abstraem as diferenças e se adaptam aos requisitos específicos do modelo de maneira escalável e contínua_.
+1. **As capacidades dos modelos variam.** Modelos mais recentes ou gerações novas terão capacidades mais ricas, mas também trazem peculiaridades e compromissos únicos em custo e complexidade. _A engenharia de prompts pode ajudar a desenvolver melhores práticas e fluxos de trabalho que abstraem as diferenças e se adaptam a requisitos específicos do modelo de forma escalável e fluida_.
 
-Vamos ver isso em ação no OpenAI ou no Azure OpenAI Playground:
+Vamos ver isto em ação no OpenAI ou Azure OpenAI Playground:
 
-- Use o mesmo prompt com diferentes implantações de LLM (por exemplo, OpenAI, Azure OpenAI, Hugging Face) - você viu as variações?
-- Use o mesmo prompt repetidamente com a _mesma_ implantação de LLM (por exemplo, playground do Azure OpenAI) - como essas variações diferiram?
+- Use o mesmo prompt com diferentes implementações de LLM (por exemplo, OpenAI, Azure OpenAI, Hugging Face) – notou variações?  
+- Use o mesmo prompt repetidamente com a _mesma_ implementação de LLM (por exemplo, Azure OpenAI playground) – como diferiram essas variações?
 
-### Exemplo de Fabricações
+### Exemplo de Invenções
 
-Neste curso, usamos o termo **"fabricação"** para referenciar o fenômeno em que os LLMs às vezes geram informações factualmente incorretas devido a limitações em seu treinamento ou outras restrições. Você também pode ter ouvido isso referido como _"alucinações"_ em artigos populares ou artigos de pesquisa. No entanto, recomendamos fortemente o uso do termo _"fabricação"_ para que não atribuímos acidentalmente um traço humano a um resultado gerado por máquina. Isso também reforça as [diretrizes de IA Responsável](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) do ponto de vista da terminologia, removendo termos que também podem ser considerados ofensivos ou não inclusivos em alguns contextos.
+Neste curso, usamos o termo **"invenção"** para referir o fenómeno em que os LLMs por vezes geram informação factualmente incorreta devido a limitações no seu treino ou outras restrições. Também pode ter ouvido este fenómeno referido como _"alucinações"_ em artigos populares ou trabalhos de investigação. No entanto, recomendamos fortemente usar _"invenção"_ como termo para não antropomorfizar o comportamento, atribuindo uma característica humana a um resultado gerado por máquina. Isto também reforça as [diretrizes de IA responsável](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) do ponto de vista terminológico, eliminando termos que podem ser considerados ofensivos ou não inclusivos em alguns contextos.
 
-Quer ter uma ideia de como as fabricações funcionam? Pense em um prompt que instrua a IA a gerar conteúdo para um tópico inexistente (para garantir que ele não seja encontrado no conjunto de dados de treinamento). Por exemplo - eu tentei este prompt:
+Quer perceber como funcionam as invenções? Pense num prompt que instrua a IA a gerar conteúdo sobre um tema inexistente (para garantir que não está presente no conjunto de treino). Por exemplo – experimentei este prompt:
+# Plano de Aula: A Guerra Marciana de 2076
 
-> **Prompt:** gere um plano de aula sobre a Guerra Marciana de 2076.
+## Objetivos da Aula
+- Compreender as causas e consequências da Guerra Marciana de 2076.
+- Analisar os principais eventos e estratégias militares utilizadas durante o conflito.
+- Refletir sobre o impacto da guerra na sociedade terrestre e marciana.
 
-Uma pesquisa na web me mostrou que havia relatos fictícios (por exemplo, séries de televisão ou livros) sobre guerras marcianas - mas nenhum em 2076. O senso comum também nos diz que 2076 está _no futuro_ e, portanto, não pode estar associado a um evento real.
+## Materiais Necessários
+- Slides com cronologia dos eventos
+- Vídeos documentais sobre a Guerra Marciana
+- Mapas interativos do sistema solar
+- Artigos e relatos de testemunhas oculares
 
-Então, o que acontece quando executamos este prompt com diferentes provedores de LLM?
+## Estrutura da Aula
 
-Como esperado, cada modelo (ou versão de modelo) produz respostas ligeiramente diferentes graças ao comportamento estocástico e às variações de capacidade do modelo. Por exemplo, um modelo direciona um público de 8ª série, enquanto o outro assume um aluno do ensino médio. Mas todos os três modelos geraram respostas que poderiam convencer um usuário desinformado de que o evento era real.
+### 1. Introdução (15 minutos)
+- Apresentar o contexto histórico e político que levou à Guerra Marciana.
+- Explicar a importância do planeta Marte para a humanidade em 2076.
+- Mostrar um breve vídeo introdutório.
 
-Técnicas de engenharia de prompts como _metaprompting_ e _configuração de temperatura_ podem reduzir as fabricações do modelo até certo ponto. Novas _arquiteturas_ de engenharia de prompts também incorporam novas ferramentas e técnicas de forma contínua no fluxo de prompts, para mitigar ou reduzir alguns desses efeitos.
+### 2. Desenvolvimento (40 minutos)
+- Detalhar as principais batalhas e estratégias militares.
+- Discutir as tecnologias utilizadas por ambos os lados.
+- Analisar as consequências imediatas do conflito para a Terra e Marte.
+- Atividade em grupo: debate sobre as decisões tomadas pelos líderes durante a guerra.
+
+### 3. Conclusão (15 minutos)
+- Recapitular os pontos-chave da aula.
+- Refletir sobre as lições aprendidas com a Guerra Marciana.
+- Propor uma atividade de escrita: imaginar um futuro pós-guerra e descrever como seria a vida em Marte.
+
+## Avaliação
+- Participação no debate em grupo.
+- Trabalho escrito sobre o futuro pós-guerra.
+- Questionário de compreensão sobre os eventos da Guerra Marciana.
+
+## Comentários Finais
+- Incentivar os alunos a pesquisarem mais sobre a exploração espacial e os desafios da colonização de outros planetas.
+- Destacar a importância da diplomacia para evitar conflitos interplanetários no futuro.
+Uma pesquisa na web mostrou-me que existiam relatos fictícios (por exemplo, séries de televisão ou livros) sobre guerras em Marte – mas nenhum em 2076. O bom senso também nos diz que 2076 está _no futuro_ e, portanto, não pode estar associado a um evento real.
+
+Então, o que acontece quando executamos este prompt com diferentes fornecedores de LLM?
+
+> **Resposta 1**: OpenAI Playground (GPT-35)
+
+![Resposta 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.pt.png)
+
+> **Resposta 2**: Azure OpenAI Playground (GPT-35)
+
+![Resposta 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.pt.png)
+
+> **Resposta 3**: : Hugging Face Chat Playground (LLama-2)
+
+![Resposta 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.pt.png)
+
+Como esperado, cada modelo (ou versão do modelo) produz respostas ligeiramente diferentes graças ao comportamento estocástico e às variações na capacidade do modelo. Por exemplo, um modelo dirige-se a um público do 8º ano enquanto o outro assume um estudante do ensino secundário. Mas os três modelos geraram respostas que poderiam convencer um utilizador desinformado de que o evento era real.
+
+Técnicas de engenharia de prompts como _metaprompting_ e _configuração de temperatura_ podem reduzir as fabricacões do modelo até certo ponto. Novas _arquiteturas_ de engenharia de prompts também incorporam novas ferramentas e técnicas de forma integrada no fluxo do prompt, para mitigar ou reduzir alguns destes efeitos.
 
 ## Estudo de Caso: GitHub Copilot
 
-Vamos encerrar esta seção obtendo uma noção de como a engenharia de prompts é usada em soluções do mundo real, examinando um Estudo de Caso: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Vamos terminar esta secção tendo uma ideia de como a engenharia de prompts é usada em soluções do mundo real, olhando para um Estudo de Caso: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-O GitHub Copilot é seu "Programador Parceiro de IA" - ele converte prompts de texto em conclusões de código e está integrado ao seu ambiente de desenvolvimento (por exemplo, Visual Studio Code) para uma experiência de usuário contínua. Conforme documentado na série de blogs abaixo, a versão mais antiga foi baseada no modelo Codex da OpenAI - com engenheiros rapidamente percebendo a necessidade de ajustar o modelo e desenvolver melhores técnicas de engenharia de prompts para melhorar a qualidade do código. Em julho, eles [estrearam um modelo de IA aprimorado que vai além do Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) para sugestões ainda mais rápidas.
+O GitHub Copilot é o seu "Programador Parceiro de IA" – converte prompts de texto em completamentos de código e está integrado no seu ambiente de desenvolvimento (por exemplo, Visual Studio Code) para uma experiência de utilizador fluida. Conforme documentado na série de blogs abaixo, a versão inicial baseava-se no modelo OpenAI Codex – com os engenheiros a perceberem rapidamente a necessidade de ajustar o modelo e desenvolver melhores técnicas de engenharia de prompts para melhorar a qualidade do código. Em julho, eles [lançaram um modelo de IA melhorado que vai além do Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) para sugestões ainda mais rápidas.
 
-Leia os posts na ordem, para acompanhar a jornada de aprendizado deles.
+Leia os posts por ordem para acompanhar a sua jornada de aprendizagem.
 
-Você também pode navegar pelo [blog de Engenharia](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) deles para mais posts como [este](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) que mostra como esses modelos e técnicas são _aplicados_ para impulsionar aplicações do mundo real.
+- **Maio 2023** | [O GitHub Copilot está a melhorar na compreensão do seu código](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **Maio 2023** | [Dentro do GitHub: Trabalhar com os LLMs por trás do GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **Junho 2023** | [Como escrever melhores prompts para o GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **Julho 2023** | [.. GitHub Copilot vai além do Codex com modelo de IA melhorado](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **Julho 2023** | [Guia do Programador para Engenharia de Prompts e LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **Setembro 2023** | [Como construir uma aplicação empresarial com LLM: Lições do GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-## Construção de Prompts
+Pode também explorar o seu [blog de Engenharia](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) para mais posts como [este](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) que mostra como estes modelos e técnicas são _aplicados_ para impulsionar aplicações do mundo real.
 
-Vimos por que a engenharia de prompts é importante - agora vamos entender como os prompts são _construídos_ para que possamos avaliar diferentes técnicas para um design de prompt mais eficaz.
+---
+
+<!--
+MODELO DE LIÇÃO:
+Esta unidade deve cobrir o conceito principal #2.
+Reforce o conceito com exemplos e referências.
+
+CONCEITO #2:
+Design de Prompt.
+Ilustrado com exemplos.
+-->
+
+## Construção de Prompt
+
+Já vimos porque a engenharia de prompts é importante – agora vamos entender como os prompts são _construídos_ para podermos avaliar diferentes técnicas para um design de prompt mais eficaz.
 
 ### Prompt Básico
 
-Vamos começar com o prompt básico: uma entrada de texto enviada ao modelo sem nenhum outro contexto. Aqui está um exemplo - quando enviamos as primeiras palavras do hino nacional dos EUA para a [API de Conclusão](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) da OpenAI, ela instantaneamente _completa_ a resposta com as próximas linhas, ilustrando o comportamento básico de previsão.
+Vamos começar com o prompt básico: uma entrada de texto enviada ao modelo sem outro contexto. Aqui está um exemplo – quando enviamos as primeiras palavras do hino nacional dos EUA para a OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) ele instantaneamente _completa_ a resposta com as linhas seguintes, ilustrando o comportamento básico de previsão.
+
+| Prompt (Entrada)     | Completação (Saída)                                                                                                                        |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| Oh say can you see | Parece que está a começar a letra de "The Star-Spangled Banner", o hino nacional dos Estados Unidos. A letra completa é ... |
 
 ### Prompt Complexo
 
-Agora vamos adicionar contexto e instruções a esse prompt básico. A [API de Conclusão de Chat](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) nos permite construir um prompt complexo como uma coleção de _mensagens_ com:
+Agora vamos adicionar contexto e instruções a esse prompt básico. A [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) permite-nos construir um prompt complexo como uma coleção de _mensagens_ com:
 
-- Pares de entrada/saída refletindo a entrada do _usuário_ e a resposta do _assistente_.
-- Mensagem do sistema definindo o contexto para o comportamento ou personalidade do assistente.
+- Pares de entrada/saída que refletem a entrada do _utilizador_ e a resposta do _assistente_.
+- Mensagem do sistema que define o contexto para o comportamento ou personalidade do assistente.
 
-A solicitação agora está no formato abaixo, onde a _tokenização_ captura efetivamente informações relevantes do contexto e da conversa. Agora, mudar o contexto do sistema pode ser tão impactante na qualidade das conclusões quanto as entradas do usuário fornecidas.
+O pedido está agora na forma abaixo, onde a _tokenização_ captura efetivamente a informação relevante do contexto e da conversa. Agora, mudar o contexto do sistema pode ser tão impactante na qualidade das completions quanto as entradas do utilizador fornecidas.
+
+```python
+response = openai.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Who won the world series in 2020?"},
+        {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+        {"role": "user", "content": "Where was it played?"}
+    ]
+)
+```
 
 ### Prompt de Instrução
 
-Nos exemplos acima, o prompt do usuário era uma consulta de texto simples que pode ser interpretada como uma solicitação de informações. Com _prompts de instrução_, podemos usar esse texto para especificar uma tarefa com mais detalhes, fornecendo melhor orientação para a IA. Aqui está um exemplo:
+Nos exemplos acima, o prompt do utilizador foi uma simples pergunta de texto que pode ser interpretada como um pedido de informação. Com prompts de _instrução_, podemos usar esse texto para especificar uma tarefa com mais detalhe, fornecendo uma orientação melhor à IA. Aqui está um exemplo:
 
-### Conteúdo Primário
+| Prompt (Entrada)                                                                                                                                                                                                                         | Completação (Saída)                                                                                                        | Tipo de Instrução    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
+| Escreve uma descrição da Guerra Civil                                                                                                                                                                                                   | _retornou um parágrafo simples_                                                                                              | Simples              |
+| Escreve uma descrição da Guerra Civil. Fornece datas e eventos chave e descreve a sua importância                                                                                                                                     | _retornou um parágrafo seguido de uma lista de datas de eventos chave com descrições_                                             | Complexo             |
+| Escreve uma descrição da Guerra Civil em 1 parágrafo. Fornece 3 pontos com datas chave e a sua importância. Fornece mais 3 pontos com figuras históricas importantes e as suas contribuições. Retorna a saída num ficheiro JSON | _retorna detalhes mais extensos numa caixa de texto, formatados como JSON que pode copiar e colar para um ficheiro e validar conforme necessário_ | Complexo. Formatado. |
 
-Nos exemplos acima, o prompt ainda era bastante aberto, permitindo que o LLM decidisse qual parte de seu conjunto de dados pré-treinado era relevante. Com o padrão de design de _conteúdo primário_, o texto de entrada é dividido em duas partes:
+## Conteúdo Principal
+
+Nos exemplos acima, o prompt ainda era bastante aberto, permitindo ao LLM decidir que parte do seu conjunto de dados pré-treinado era relevante. Com o padrão de design de _conteúdo principal_, o texto de entrada é dividido em duas partes:
 
 - uma instrução (ação)
 - conteúdo relevante (que influencia a ação)
 
-O segmento de conteúdo primário pode ser usado de várias maneiras para conduzir instruções mais eficazes:
+Aqui está um exemplo onde a instrução é "resume isto em 2 frases".
 
-- **Exemplos** - em vez de dizer ao modelo o que fazer com uma instrução explícita, dê-lhe exemplos do que fazer e deixe-o inferir o padrão.
-- **Dicas** - siga a instrução com uma "dica" que prepara a conclusão, orientando o modelo para respostas mais relevantes.
-- **Modelos** - são 'receitas' repetíveis para prompts com espaços reservados (variáveis) que podem
-Finalmente, o verdadeiro valor dos modelos está na capacidade de criar e publicar _bibliotecas de prompts_ para domínios de aplicação vertical - onde o modelo de prompt agora está _otimizado_ para refletir o contexto ou exemplos específicos da aplicação, tornando as respostas mais relevantes e precisas para o público-alvo. O repositório [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) é um ótimo exemplo dessa abordagem, organizando uma biblioteca de prompts para o domínio educacional com ênfase em objetivos chave como planejamento de aulas, design curricular, tutoria de estudantes, etc.
+| Prompt (Entrada)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Completação (Saída)                                                                                                                                                                                                                                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Júpiter é o quinto planeta a partir do Sol e o maior do Sistema Solar. É um gigante gasoso com uma massa mil vezes menor que a do Sol, mas duas vezes e meia a massa de todos os outros planetas do Sistema Solar juntos. Júpiter é um dos objetos mais brilhantes visíveis a olho nu no céu noturno, e tem sido conhecido por civilizações antigas desde antes da história registada. É nomeado em homenagem ao deus romano Júpiter.[19] Quando visto da Terra, Júpiter pode ser suficientemente brilhante para que a sua luz refletida projete sombras visíveis,[20] e é em média o terceiro objeto natural mais brilhante no céu noturno depois da Lua e Vénus. <br/> **Resume isto em 2 frases curtas** | Júpiter, o quinto planeta a partir do Sol, é o maior do Sistema Solar e é conhecido por ser um dos objetos mais brilhantes no céu noturno. Nomeado em homenagem ao deus romano Júpiter, é um gigante gasoso cuja massa é duas vezes e meia a de todos os outros planetas do Sistema Solar juntos. |
+
+O segmento de conteúdo principal pode ser usado de várias formas para conduzir instruções mais eficazes:
+
+- **Exemplos** – em vez de dizer ao modelo o que fazer com uma instrução explícita, dê-lhe exemplos do que fazer e deixe-o inferir o padrão.
+- **Pistas** – siga a instrução com uma "pista" que prepara a completitude, guiando o modelo para respostas mais relevantes.
+- **Modelos** – são 'receitas' repetíveis para prompts com espaços reservados (variáveis) que podem ser personalizados com dados para casos de uso específicos.
+
+Vamos explorar estes em ação.
+
+### Usar Exemplos
+
+Esta é uma abordagem onde usa o conteúdo principal para "alimentar o modelo" com alguns exemplos do resultado desejado para uma dada instrução, e deixa-o inferir o padrão para o resultado pretendido. Com base no número de exemplos fornecidos, podemos ter prompting zero-shot, one-shot, few-shot, etc.
+
+O prompt agora consiste em três componentes:
+
+- Uma descrição da tarefa
+- Alguns exemplos do resultado desejado
+- O início de um novo exemplo (que se torna uma descrição implícita da tarefa)
+
+| Tipo de Aprendizagem | Prompt (Entrada)                                                                                                                                        | Completação (Saída)         |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
+| Zero-shot     | "O Sol está a brilhar". Traduz para espanhol                                                                                                            | "El Sol está brillando".    |
+| One-shot      | "O Sol está a brilhar" => ""El Sol está brillando". <br> "É um dia frio e ventoso" =>                                                                 | "Es un día frío y ventoso". |
+| Few-shot      | O jogador correu as bases => Baseball <br/> O jogador fez um ace => Ténis <br/> O jogador marcou um seis => Críquete <br/> O jogador fez um slam-dunk => | Basquetebol                |
+|               |                                                                                                                                                       |                             |
+
+Note como tivemos de fornecer uma instrução explícita ("Traduz para espanhol") no prompting zero-shot, mas esta é inferida no exemplo one-shot. O exemplo few-shot mostra como adicionar mais exemplos permite aos modelos fazer inferências mais precisas sem instruções adicionais.
+
+### Pistas no Prompt
+
+Outra técnica para usar o conteúdo principal é fornecer _pistas_ em vez de exemplos. Neste caso, estamos a dar ao modelo um empurrão na direção certa ao _começar_ com um excerto que reflete o formato de resposta desejado. O modelo então "aproveita a pista" para continuar nesse sentido.
+
+| Número de Pistas | Prompt (Entrada)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Completação (Saída)                                                                                                                                                                                                                                                                                       |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | Júpiter é o quinto planeta a partir do Sol e o maior do Sistema Solar. É um gigante gasoso com uma massa mil vezes menor que a do Sol, mas duas vezes e meia a massa de todos os outros planetas do Sistema Solar juntos. Júpiter é um dos objetos mais brilhantes visíveis a olho nu no céu noturno, e tem sido conhecido por civilizações antigas desde antes da história registada.
+
+**Resumir Isto**                                       | Júpiter é o maior planeta do nosso Sistema Solar e o quinto a contar do Sol. É um gigante gasoso com uma massa equivalente a 1/1000 da do Sol, mas é mais pesado do que todos os outros planetas juntos. Civilizações antigas conhecem Júpiter há muito tempo, e ele é facilmente visível no céu noturno. |
+| 1              | Júpiter é o quinto planeta a contar do Sol e o maior do Sistema Solar. É um gigante gasoso com uma massa equivalente a um milésimo da do Sol, mas duas vezes e meia a massa de todos os outros planetas do Sistema Solar juntos. Júpiter é um dos objetos mais brilhantes visíveis a olho nu no céu noturno, e é conhecido por civilizações antigas desde antes da história registada. <br/>**Resumir Isto** <br/> O que aprendemos é que Júpiter | é o quinto planeta a contar do Sol e o maior do Sistema Solar. É um gigante gasoso com uma massa equivalente a um milésimo da do Sol, mas duas vezes e meia a massa de todos os outros planetas juntos. É facilmente visível a olho nu e é conhecido desde a antiguidade.                        |
+| 2              | Júpiter é o quinto planeta a contar do Sol e o maior do Sistema Solar. É um gigante gasoso com uma massa equivalente a um milésimo da do Sol, mas duas vezes e meia a massa de todos os outros planetas do Sistema Solar juntos. Júpiter é um dos objetos mais brilhantes visíveis a olho nu no céu noturno, e é conhecido por civilizações antigas desde antes da história registada. <br/>**Resumir Isto** <br/> Top 3 Factos que Aprendemos:         | 1. Júpiter é o quinto planeta a contar do Sol e o maior do Sistema Solar. <br/> 2. É um gigante gasoso com uma massa equivalente a um milésimo da do Sol...<br/> 3. Júpiter tem sido visível a olho nu desde a antiguidade ...                                                                       |
+|                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
+
+### Modelos de Prompt
+
+Um modelo de prompt é uma _receita pré-definida para um prompt_ que pode ser guardada e reutilizada conforme necessário, para proporcionar experiências de utilizador mais consistentes em larga escala. Na sua forma mais simples, é simplesmente uma coleção de exemplos de prompt como [este da OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) que fornece tanto os componentes interativos do prompt (mensagens do utilizador e do sistema) como o formato de pedido orientado pela API – para suportar a reutilização.
+
+Na sua forma mais complexa, como [este exemplo da LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), contém _placeholders_ que podem ser substituídos por dados de várias fontes (entrada do utilizador, contexto do sistema, fontes de dados externas, etc.) para gerar um prompt dinamicamente. Isto permite criar uma biblioteca de prompts reutilizáveis que podem ser usados para proporcionar experiências de utilizador consistentes **programaticamente** em larga escala.
+
+Finalmente, o verdadeiro valor dos modelos está na capacidade de criar e publicar _bibliotecas de prompts_ para domínios de aplicação verticais – onde o modelo de prompt é agora _otimizado_ para refletir contextos ou exemplos específicos da aplicação que tornam as respostas mais relevantes e precisas para o público-alvo. O repositório [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) é um excelente exemplo desta abordagem, reunindo uma biblioteca de prompts para o domínio da educação com ênfase em objetivos chave como planeamento de aulas, design curricular, tutoria a estudantes, etc.
 
 ## Conteúdo de Apoio
 
-Se pensarmos na construção de prompts como tendo uma instrução (tarefa) e um alvo (conteúdo principal), então o _conteúdo secundário_ é como um contexto adicional que fornecemos para **influenciar a saída de alguma forma**. Pode ser ajuste de parâmetros, instruções de formatação, taxonomias de tópicos, etc., que podem ajudar o modelo a _adaptar_ sua resposta para atender aos objetivos ou expectativas desejadas do usuário.
+Se pensarmos na construção de um prompt como tendo uma instrução (tarefa) e um alvo (conteúdo principal), então o _conteúdo secundário_ é como um contexto adicional que fornecemos para **influenciar a saída de alguma forma**. Pode ser parâmetros de afinação, instruções de formatação, taxonomias de tópicos, etc., que ajudam o modelo a _adaptar_ a sua resposta para corresponder aos objetivos ou expectativas do utilizador.
 
-Por exemplo: Dado um catálogo de cursos com metadados extensivos (nome, descrição, nível, tags de metadados, instrutor, etc.) sobre todos os cursos disponíveis no currículo:
+Por exemplo: Dado um catálogo de cursos com metadados extensos (nome, descrição, nível, etiquetas de metadados, instrutor, etc.) sobre todos os cursos disponíveis no currículo:
 
-- podemos definir uma instrução para "resumir o catálogo de cursos para o outono de 2023"
+- podemos definir uma instrução para "resumir o catálogo de cursos para o Outono de 2023"
 - podemos usar o conteúdo principal para fornecer alguns exemplos do resultado desejado
-- podemos usar o conteúdo secundário para identificar as 5 principais "tags" de interesse.
+- podemos usar o conteúdo secundário para identificar as 5 principais "etiquetas" de interesse.
 
-Agora, o modelo pode fornecer um resumo no formato mostrado pelos poucos exemplos - mas se um resultado tiver várias tags, ele pode priorizar as 5 tags identificadas no conteúdo secundário.
+Agora, o modelo pode fornecer um resumo no formato mostrado pelos exemplos – mas se um resultado tiver múltiplas etiquetas, pode priorizar as 5 etiquetas identificadas no conteúdo secundário.
 
 ---
 
-## Melhores Práticas de Criação de Prompts
+<!--
+MODELO DE AULA:
+Esta unidade deve cobrir o conceito principal #1.
+Reforce o conceito com exemplos e referências.
 
-Agora que sabemos como os prompts podem ser _construídos_, podemos começar a pensar em como _desenhá-los_ para refletir as melhores práticas. Podemos pensar nisso em duas partes - ter a mentalidade certa e aplicar as técnicas corretas.
+CONCEITO #3:
+Técnicas de Engenharia de Prompt.
+Quais são algumas técnicas básicas para engenharia de prompt?
+Ilustre com alguns exercícios.
+-->
 
-### Mentalidade para Engenharia de Prompts
+## Melhores Práticas para Prompting
 
-A Engenharia de Prompts é um processo de tentativa e erro, então mantenha três fatores amplos em mente:
+Agora que sabemos como os prompts podem ser _construídos_, podemos começar a pensar em como _desenhá-los_ para refletir as melhores práticas. Podemos pensar nisso em duas partes – ter a _mentalidade_ certa e aplicar as _técnicas_ corretas.
 
-1. **Entendimento do Domínio é Importante.** A precisão e relevância da resposta é uma função do _domínio_ em que aquela aplicação ou usuário opera. Aplique sua intuição e expertise no domínio para **customizar técnicas** ainda mais. Por exemplo, defina _personalidades específicas do domínio_ em seus prompts de sistema, ou use _modelos específicos do domínio_ em seus prompts de usuário. Forneça conteúdo secundário que reflita contextos específicos do domínio, ou use _dicas e exemplos específicos do domínio_ para guiar o modelo em direção a padrões de uso familiares.
+### Mentalidade de Engenharia de Prompt
 
-2. **Entendimento do Modelo é Importante.** Sabemos que os modelos são estocásticos por natureza. Mas as implementações de modelo também podem variar em termos do conjunto de dados de treinamento que usam (conhecimento pré-treinado), as capacidades que fornecem (por exemplo, via API ou SDK) e o tipo de conteúdo para o qual são otimizados (por exemplo, código vs. imagens vs. texto). Entenda as forças e limitações do modelo que você está usando, e use esse conhecimento para _priorizar tarefas_ ou construir _modelos customizados_ que são otimizados para as capacidades do modelo.
+A Engenharia de Prompt é um processo de tentativa e erro, por isso tenha em mente três fatores orientadores gerais:
 
-3. **Iteração e Validação são Importantes.** Os modelos estão evoluindo rapidamente, e as técnicas para engenharia de prompts também. Como especialista no domínio, você pode ter outro contexto ou critérios _sua_ aplicação específica, que pode não se aplicar à comunidade mais ampla. Use ferramentas e técnicas de engenharia de prompts para "dar um pontapé inicial" na construção de prompts, depois itere e valide os resultados usando sua própria intuição e expertise no domínio. Registre seus insights e crie uma **base de conhecimento** (por exemplo, bibliotecas de prompts) que podem ser usadas como uma nova base por outros, para iterações mais rápidas no futuro.
+1. **Compreensão do Domínio é Importante.** A precisão e relevância da resposta dependem do _domínio_ em que a aplicação ou utilizador opera. Use a sua intuição e conhecimento do domínio para **personalizar as técnicas**. Por exemplo, defina _personalidades específicas do domínio_ nos seus prompts de sistema, ou use _modelos específicos do domínio_ nos seus prompts de utilizador. Forneça conteúdo secundário que reflita contextos específicos do domínio, ou use _pistas e exemplos específicos do domínio_ para guiar o modelo para padrões de uso familiares.
+
+2. **Compreensão do Modelo é Importante.** Sabemos que os modelos são estocásticos por natureza. Mas as implementações do modelo podem também variar em termos do conjunto de dados de treino que usam (conhecimento pré-treinado), das capacidades que oferecem (por exemplo, via API ou SDK) e do tipo de conteúdo para o qual estão otimizados (por exemplo, código vs imagens vs texto). Compreenda os pontos fortes e limitações do modelo que está a usar, e use esse conhecimento para _priorizar tarefas_ ou construir _modelos personalizados_ otimizados para as capacidades do modelo.
+
+3. **Iteração e Validação são Importantes.** Os modelos estão a evoluir rapidamente, e também as técnicas de engenharia de prompt. Como especialista no domínio, pode ter outro contexto ou critérios para a sua aplicação específica, que podem não se aplicar à comunidade em geral. Use ferramentas e técnicas de engenharia de prompt para "dar o pontapé de saída" na construção do prompt, depois itere e valide os resultados usando a sua própria intuição e conhecimento do domínio. Registe as suas perceções e crie uma **base de conhecimento** (por exemplo, bibliotecas de prompts) que possam ser usadas como nova referência por outros, para iterações mais rápidas no futuro.
 
 ## Melhores Práticas
 
-Agora vamos olhar para práticas comuns recomendadas por praticantes do [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) e [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
+Vamos agora ver algumas melhores práticas comuns recomendadas pelos praticantes da [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) e [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst).
 
-| O que                              | Por que                                                                                                                                                                                                                                               |
+| O Quê                             | Porquê                                                                                                                                                                                                                                            |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Avaliar os modelos mais recentes. | Novas gerações de modelos provavelmente têm recursos e qualidade melhorados - mas também podem incorrer em custos mais altos. Avalie-os para impacto e, em seguida, tome decisões de migração.                                                                                 |
-| Separe instruções e contexto      | Verifique se seu modelo/provedor define _delimitadores_ para distinguir instruções, conteúdo principal e secundário de forma mais clara. Isso pode ajudar os modelos a atribuir pesos mais precisos aos tokens.                                                            |
-| Seja específico e claro           | Dê mais detalhes sobre o contexto desejado, resultado, comprimento, formato, estilo, etc. Isso melhorará tanto a qualidade quanto a consistência das respostas. Capture receitas em modelos reutilizáveis.                                                           |
-| Seja descritivo, use exemplos     | Os modelos podem responder melhor a uma abordagem de "mostrar e contar". Comece com um `zero-shot` approach where you give it an instruction (but no examples) then try `few-shot` as a refinement, providing a few examples of the desired output. Use analogies. |
-| Use cues to jumpstart completions | Nudge it towards a desired outcome by giving it some leading words or phrases that it can use as a starting point for the response.                                                                                                               |
-| Double Down                       | Sometimes you may need to repeat yourself to the model. Give instructions before and after your primary content, use an instruction and a cue, etc. Iterate & validate to see what works.                                                         |
-| Order Matters                     | The order in which you present information to the model may impact the output, even in the learning examples, thanks to recency bias. Try different options to see what works best.                                                               |
-| Give the model an “out”           | Give the model a _fallback_ completion response it can provide if it cannot complete the task for any reason. This can reduce chances of models generating false or fabricated responses.                                                         |
-|                                   |                                                                                                                                                                                                                                                   |
+| Avalie os modelos mais recentes.  | Novas gerações de modelos provavelmente têm funcionalidades e qualidade melhoradas – mas podem também implicar custos mais elevados. Avalie o impacto e depois tome decisões de migração.                                                         |
+| Separe instruções e contexto      | Verifique se o seu modelo/fornecedor define _delimitadores_ para distinguir instruções, conteúdo principal e secundário de forma mais clara. Isto pode ajudar os modelos a atribuir pesos mais precisos aos tokens.                              |
+| Seja específico e claro           | Dê mais detalhes sobre o contexto desejado, resultado, extensão, formato, estilo, etc. Isto melhora tanto a qualidade como a consistência das respostas. Registe receitas em modelos reutilizáveis.                                               |
+| Seja descritivo, use exemplos     | Os modelos podem responder melhor a uma abordagem de "mostrar e contar". Comece com uma abordagem `zero-shot` onde dá uma instrução (mas sem exemplos) e depois experimente `few-shot` como refinamento, fornecendo alguns exemplos do resultado desejado. Use analogias. |
+| Use pistas para iniciar respostas | Incentive o modelo para um resultado desejado dando-lhe algumas palavras ou frases iniciais que possa usar como ponto de partida para a resposta.                                                                                                |
+| Reforce                         | Por vezes pode ser necessário repetir-se para o modelo. Dê instruções antes e depois do conteúdo principal, use uma instrução e uma pista, etc. Itere e valide para ver o que funciona.                                                          |
+| A ordem importa                  | A ordem em que apresenta a informação ao modelo pode influenciar a saída, mesmo nos exemplos de aprendizagem, devido ao viés de recência. Experimente diferentes opções para ver o que funciona melhor.                                           |
+| Dê ao modelo uma “saída”         | Dê ao modelo uma resposta de _fallback_ que possa fornecer se não conseguir completar a tarefa por qualquer motivo. Isto pode reduzir a probabilidade de o modelo gerar respostas falsas ou inventadas.                                          |
+|                                 |                                                                                                                                                                                                                                                   |
 
-As with any best practice, remember that _your mileage may vary_ based on the model, the task and the domain. Use these as a starting point, and iterate to find what works best for you. Constantly re-evaluate your prompt engineering process as new models and tools become available, with a focus on process scalability and response quality.
+Como em qualquer melhor prática, lembre-se que _os resultados podem variar_ consoante o modelo, a tarefa e o domínio. Use estas recomendações como ponto de partida e itere para encontrar o que funciona melhor para si. Reavalie constantemente o seu processo de engenharia de prompt à medida que novos modelos e ferramentas ficam disponíveis, com foco na escalabilidade do processo e na qualidade da resposta.
 
 <!--
-LESSON TEMPLATE:
-This unit should provide a code challenge if applicable
+MODELO DE AULA:
+Esta unidade deve fornecer um desafio de código, se aplicável
 
-CHALLENGE:
-Link to a Jupyter Notebook with only the code comments in the instructions (code sections are empty).
+DESAFIO:
+Link para um Jupyter Notebook com apenas os comentários de código nas instruções (as secções de código estão vazias).
 
-SOLUTION:
-Link to a copy of that Notebook with the prompts filled in and run, showing what one example could be.
+SOLUÇÃO:
+Link para uma cópia desse Notebook com os prompts preenchidos e executados, mostrando um exemplo de resultado.
 -->
 
-## Assignment
+## Tarefa
 
-Congratulations! You made it to the end of the lesson! It's time to put some of those concepts and techniques to the test with real examples!
+Parabéns! Chegou ao fim da lição! É hora de pôr alguns desses conceitos e técnicas à prova com exemplos reais!
 
-For our assignment, we'll be using a Jupyter Notebook with exercises you can complete interactively. You can also extend the Notebook with your own Markdown and Code cells to explore ideas and techniques on your own.
+Para a nossa tarefa, vamos usar um Jupyter Notebook com exercícios que pode completar interativamente. Pode também expandir o Notebook com as suas próprias células de Markdown e Código para explorar ideias e técnicas por conta própria.
 
-### To get started, fork the repo, then
+### Para começar, faça um fork do repositório, depois
 
-- (Recommended) Launch GitHub Codespaces
-- (Alternatively) Clone the repo to your local device and use it with Docker Desktop
-- (Alternatively) Open the Notebook with your preferred Notebook runtime environment.
+- (Recomendado) Inicie o GitHub Codespaces
+- (Alternativamente) Clone o repositório para o seu dispositivo local e use-o com Docker Desktop
+- (Alternativamente) Abra o Notebook com o seu ambiente de runtime preferido.
 
-### Next, configure your environment variables
+### A seguir, configure as suas variáveis de ambiente
 
-- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` valores. Volte para a [seção de Sandbox de Aprendizado](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals) para aprender como.
+- Copie o ficheiro `.env.copy` na raiz do repositório para `.env` e preencha os valores `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` e `AZURE_OPENAI_DEPLOYMENT`. Volte à [secção Learning Sandbox](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals) para aprender como.
 
-### Em seguida, abra o Jupyter Notebook
+### Depois, abra o Jupyter Notebook
 
-- Selecione o kernel de runtime. Se estiver usando as opções 1 ou 2, basta selecionar o kernel padrão Python 3.10.x fornecido pelo contêiner de desenvolvimento.
+- Selecione o kernel de runtime. Se usar as opções 1 ou 2, basta selecionar o kernel Python 3.10.x padrão fornecido pelo contentor de desenvolvimento.
 
-Você está pronto para executar os exercícios. Note que não há respostas _certas e erradas_ aqui - apenas explorando opções por tentativa e erro e construindo intuição sobre o que funciona para um modelo e domínio de aplicação específicos.
+Está tudo pronto para executar os exercícios. Note que não existem respostas _certas ou erradas_ aqui – apenas explorar opções por tentativa e erro e construir intuição sobre o que funciona para um dado modelo e domínio de aplicação.
 
-_Por esta razão, não há segmentos de Solução de Código nesta lição. Em vez disso, o Notebook terá células Markdown intituladas "Minha Solução:" que mostram um exemplo de saída para referência._
+_Por esta razão, não existem segmentos de Solução de Código nesta lição. Em vez disso, o Notebook terá células Markdown intituladas "A Minha Solução:" que mostram um exemplo de saída para referência._
+
+ <!--
+MODELO DE AULA:
+Encerre a secção com um resumo e recursos para aprendizagem autónoma.
+-->
 
 ## Verificação de Conhecimento
 
-Qual das opções a seguir é um bom prompt seguindo algumas práticas razoáveis?
+Qual dos seguintes é um bom prompt seguindo algumas práticas recomendadas razoáveis?
 
-1. Mostre-me uma imagem de carro vermelho
-2. Mostre-me uma imagem de carro vermelho da marca Volvo e modelo XC90 estacionado à beira de um penhasco com o sol se pondo
-3. Mostre-me uma imagem de carro vermelho da marca Volvo e modelo XC90
+1. Mostra-me uma imagem de um carro vermelho  
+2. Mostra-me uma imagem de um carro vermelho da marca Volvo e modelo XC90 estacionado junto a um penhasco com o sol a pôr-se  
+3. Mostra-me uma imagem de um carro vermelho da marca Volvo e modelo XC90
 
-A: 2, é o melhor prompt, pois fornece detalhes sobre "o quê" e entra em especificidades (não apenas qualquer carro, mas uma marca e modelo específicos) e também descreve o cenário geral. 3 é o próximo melhor, pois também contém muita descrição.
+R: 2, é o melhor prompt pois fornece detalhes sobre o "quê" e entra em pormenores (não é qualquer carro, mas uma marca e modelo específicos) e também descreve o cenário geral. O 3 é o segundo melhor pois também contém muita descrição.
 
 ## 🚀 Desafio
 
-Veja se você consegue aproveitar a técnica de "dica" com o prompt: Complete a frase "Mostre-me uma imagem de carro vermelho da marca Volvo e ". Com o que ele responde, e como você melhoraria isso?
+Veja se consegue usar a técnica da "pista" com o prompt: Complete a frase "Mostra-me uma imagem de um carro vermelho da marca Volvo e ". O que responde, e como melhoraria?
 
-## Ótimo Trabalho! Continue Seu Aprendizado
+## Excelente Trabalho! Continue a Aprender
 
-Quer aprender mais sobre diferentes conceitos de Engenharia de Prompts? Vá para a [página de aprendizado contínuo](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tópico.
+Quer aprender mais sobre diferentes conceitos de Engenharia de Prompt? Vá à [página de aprendizagem contínua](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para encontrar outros ótimos recursos sobre este tema.
 
-Vá para a Lição 5, onde veremos [técnicas avançadas de prompting](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Siga para a Lição 5 onde vamos explorar [técnicas avançadas de prompting](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Aviso Legal**:  
-Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos por garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

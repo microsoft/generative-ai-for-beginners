@@ -2,28 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:51:53+00:00",
+  "translation_date": "2025-07-09T13:10:55+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "fi"
 }
 -->
-# Puheentunnistusdatan valmistelu
+# Puheen tekstitysdataprep
 
-Puheentunnistusdatan valmisteluskriptit lataavat YouTube-videoiden tekstitykset ja valmistelevat ne käytettäväksi Semantic Search with OpenAI Embeddings and Functions -esimerkin kanssa.
+Puheen tekstitysdataprep-skriptit lataavat YouTube-videoiden tekstitykset ja valmistavat ne käytettäväksi Semantic Search with OpenAI Embeddings and Functions -esimerkin kanssa.
 
-Puheentunnistusdatan valmisteluskriptit on testattu uusimmilla Windows 11, macOS Ventura ja Ubuntu 22.04 (ja uudemmat) julkaisuilla.
+Puheen tekstitysdataprep-skriptejä on testattu uusimmilla Windows 11-, macOS Ventura- ja Ubuntu 22.04 (ja uudemmilla) versioilla.
 
 ## Luo tarvittavat Azure OpenAI Service -resurssit
 
 > [!IMPORTANT]
-> Suosittelemme päivittämään Azure CLI:n uusimpaan versioon varmistaaksesi yhteensopivuuden OpenAI:n kanssa
-> Katso [dokumentaatio](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Suosittelemme päivittämään Azure CLI:n uusimpaan versioon yhteensopivuuden varmistamiseksi OpenAI:n kanssa
+> Katso [Dokumentaatio](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Luo resurssiryhmä
 
 > [!NOTE]
-> Näissä ohjeissa käytämme resurssiryhmää nimeltä "semantic-video-search" Itäisessä Yhdysvalloissa.
-> Voit muuttaa resurssiryhmän nimeä, mutta kun muutat resurssien sijaintia, 
+> Näissä ohjeissa käytämme "semantic-video-search" nimistä resurssiryhmää East US -alueella.
+> Voit vaihtaa resurssiryhmän nimeä, mutta jos vaihdat resurssien sijaintia,
 > tarkista [mallien saatavuustaulukko](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Hanki päätepiste ja avaimet tämän sovelluksen käyttöön
+1. Hanki tämän sovelluksen käyttöön tarvittavat päätepiste ja avaimet
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -47,8 +47,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Ota käyttöön seuraavat mallit:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
+   - `text-embedding-ada-002` versio `2` tai uudempi, nimeltään `text-embedding-ada-002`
+   - `gpt-35-turbo` versio `0613` tai uudempi, nimeltään `gpt-35-turbo`
 
 ```console
 az cognitiveservices account deployment create \
@@ -76,12 +76,12 @@ az cognitiveservices account deployment create \
 
 ## Ympäristömuuttujat
 
-Seuraavat ympäristömuuttujat ovat tarpeen YouTube-puheentunnistusdatan valmisteluskriptien suorittamiseen.
+Seuraavat ympäristömuuttujat ovat pakollisia YouTube-tekstitysdatan valmisteluskriptien suorittamiseen.
 
-### Windowsissa
+### Windowsilla
 
-Suosittelemme lisäämään muuttujat käyttäjäkohtaisiin `user` environment variables.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
+Suosittelemme lisäämään muuttujat käyttäjän ympäristömuuttujiin.
+`Windowsin Käynnistä` > `Muokkaa järjestelmän ympäristömuuttujia` > `Ympäristömuuttujat` > `Käyttäjämuuttujat` kohdalla [USER] > `Uusi`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -90,9 +90,11 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### Linuxissa ja macOS:ssa
 
-Suosittelemme lisäämään seuraavat vientikomentorivit tiedostoon `~/.bashrc` or `~/.zshrc`.
+
+### Linuxilla ja macOS:llä
+
+Suosittelemme lisäämään seuraavat export-komennot tiedostoon `~/.bashrc` tai `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,8 +105,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Asenna tarvittavat Python-kirjastot
 
-1. Asenna [git-asiakasohjelma](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos se ei ole jo asennettuna.
-1. Avaa `Terminal`-ikkuna ja kloonaa esimerkki haluamaasi repo-kansioon.
+1. Asenna [git-asiakasohjelma](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos sitä ei ole jo asennettu.
+1. Avaa `Terminal`-ikkuna ja kloonaa esimerkkikansio haluamaasi repositorioon.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -118,13 +120,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Luo Python-virtuaaliympäristö.
 
-    Windowsissa:
+    Windowsilla:
 
     ```powershell
     python -m venv .venv
     ```
 
-    macOS:ssa ja Linuxissa:
+    macOS:llä ja Linuxilla:
 
     ```bash
     python3 -m venv .venv
@@ -132,13 +134,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Aktivoi Python-virtuaaliympäristö.
 
-   Windowsissa:
+   Windowsilla:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   macOS:ssa ja Linuxissa:
+   macOS:llä ja Linuxilla:
 
    ```bash
    source .venv/bin/activate
@@ -146,31 +148,31 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Asenna tarvittavat kirjastot.
 
-   Windowsissa:
+   Windowsilla:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   macOS:ssa ja Linuxissa:
+   macOS:llä ja Linuxilla:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Suorita YouTube-puheentunnistusdatan valmisteluskriptit
+## Suorita YouTube-tekstitysdatan valmisteluskriptit
 
-### Windowsissa
+### Windowsilla
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### macOS:ssa ja Linuxissa
+### macOS:llä ja Linuxilla
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomaa, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa mahdollisista väärinkäsityksistä tai virheellisistä tulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

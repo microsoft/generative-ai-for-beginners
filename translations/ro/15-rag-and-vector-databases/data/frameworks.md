@@ -2,124 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:07:18+00:00",
+  "translation_date": "2025-07-09T16:37:08+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "ro"
 }
 -->
-# Framework-uri pentru rețele neuronale
+# Framework-uri pentru Rețele Neuronale
 
-Așa cum am învățat deja, pentru a putea antrena rețele neuronale eficient trebuie să facem două lucruri:
+Așa cum am învățat deja, pentru a putea antrena rețele neuronale eficient, trebuie să facem două lucruri:
 
-* Să operăm pe tensori, de exemplu să înmulțim, să adunăm și să calculăm funcții precum sigmoid sau softmax
-* Să calculăm gradientele tuturor expresiilor, pentru a efectua optimizarea prin gradient descent
+* Să operăm cu tensori, de exemplu să înmulțim, să adunăm și să calculăm funcții precum sigmoid sau softmax
+* Să calculăm gradientele tuturor expresiilor, pentru a putea efectua optimizarea prin gradient descendent
 
-Deși biblioteca `numpy` poate face prima parte, avem nevoie de un mecanism pentru a calcula gradientele. În cadrul nostru pe care l-am dezvoltat în secțiunea anterioară, a trebuit să programăm manual toate funcțiile derivate în metoda `backward`, care face backpropagation. Ideal, un cadru ar trebui să ne ofere oportunitatea de a calcula gradientele *oricărei expresii* pe care o putem defini.
+Deși biblioteca `numpy` poate face prima parte, avem nevoie de un mecanism pentru a calcula gradientele. În cadrul nostru, pe care l-am dezvoltat în secțiunea anterioară, a trebuit să programăm manual toate funcțiile derivate în metoda `backward`, care realizează backpropagation. Ideal, un framework ar trebui să ne ofere posibilitatea de a calcula gradientele *oricărei expresii* pe care o putem defini.
 
-Un alt aspect important este să putem efectua calcule pe GPU sau pe alte unități de calcul specializate, precum TPU. Antrenamentul rețelelor neuronale profunde necesită *foarte multe* calcule, iar posibilitatea de a paraleliza aceste calcule pe GPU-uri este foarte importantă.
+Un alt aspect important este să putem efectua calcule pe GPU sau pe alte unități specializate de calcul, cum ar fi TPU. Antrenarea rețelelor neuronale profunde necesită *foarte multe* calcule, iar posibilitatea de a paraleliza aceste calcule pe GPU-uri este esențială.
 
-> ✅ Termenul 'paralelizare' înseamnă distribuirea calculelor pe mai multe dispozitive.
+> ✅ Termenul „paraleliza” înseamnă distribuirea calculelor pe mai multe dispozitive.
 
-În prezent, cele mai populare două cadre pentru rețele neuronale sunt: TensorFlow și PyTorch. Ambele oferă o API de nivel scăzut pentru a opera cu tensori atât pe CPU, cât și pe GPU. Pe lângă API-ul de nivel scăzut, există și un API de nivel înalt, numit Keras și, respectiv, PyTorch Lightning.
+În prezent, cele două framework-uri de rețele neuronale cele mai populare sunt: TensorFlow și PyTorch. Ambele oferă o API la nivel scăzut pentru a opera cu tensori atât pe CPU, cât și pe GPU. Deasupra acestei API la nivel scăzut, există și o API la nivel înalt, numită Keras, respectiv PyTorch Lightning.
 
-API de nivel scăzut | TensorFlow | PyTorch
---------------------|-------------------------------------|--------------------------------
-API de nivel înalt  | Keras | PyTorch Lightning
+Low-Level API | TensorFlow| PyTorch
+--------------|-------------------------------------|--------------------------------
+High-level API| Keras| PyTorch
 
-**API-urile de nivel scăzut** din ambele cadre îți permit să construiești așa-numitele **grafuri computaționale**. Acest graf definește cum să se calculeze ieșirea (de obicei funcția de pierdere) cu parametrii de intrare dați și poate fi transferat pentru calcul pe GPU, dacă este disponibil. Există funcții pentru a diferenția acest graf computațional și a calcula gradientele, care pot fi apoi folosite pentru optimizarea parametrilor modelului.
+**API-urile la nivel scăzut** din ambele framework-uri permit construirea așa-numitelor **grafuri computaționale**. Acest graf definește cum să calculăm ieșirea (de obicei funcția de pierdere) pentru parametrii de intrare dați și poate fi trimis pentru calcul pe GPU, dacă este disponibil. Există funcții pentru a diferenția acest graf computațional și a calcula gradientele, care pot fi apoi folosite pentru optimizarea parametrilor modelului.
 
-**API-urile de nivel înalt** consideră în mare parte rețelele neuronale ca o **secvență de straturi** și fac construirea majorității rețelelor neuronale mult mai ușoară. Antrenarea modelului necesită de obicei pregătirea datelor și apoi apelarea unei funcții `fit` pentru a face treaba.
+**API-urile la nivel înalt** tratează rețelele neuronale ca o **secvență de straturi** și facilitează mult construirea majorității rețelelor neuronale. Antrenarea modelului necesită de obicei pregătirea datelor și apoi apelarea funcției `fit` pentru a face treaba.
 
-API-ul de nivel înalt îți permite să construiești rețele neuronale tipice foarte rapid, fără să te îngrijorezi de multe detalii. În același timp, API-urile de nivel scăzut oferă mult mai mult control asupra procesului de antrenament și astfel sunt folosite mult în cercetare, când te ocupi de noi arhitecturi de rețele neuronale.
+API-ul la nivel înalt îți permite să construiești rapid rețele neuronale tipice fără să te preocupi de multe detalii. În același timp, API-ul la nivel scăzut oferă mult mai mult control asupra procesului de antrenare, motiv pentru care este folosit frecvent în cercetare, când lucrezi cu arhitecturi noi de rețele neuronale.
 
-Este, de asemenea, important să înțelegi că poți folosi ambele API-uri împreună, de exemplu, poți dezvolta propria arhitectură de strat de rețea folosind API-ul de nivel scăzut și apoi să o folosești în rețeaua mai mare construită și antrenată cu API-ul de nivel înalt. Sau poți defini o rețea folosind API-ul de nivel înalt ca o secvență de straturi și apoi să folosești propriul tău ciclu de antrenament de nivel scăzut pentru a efectua optimizarea. Ambele API-uri folosesc aceleași concepte de bază și sunt proiectate să funcționeze bine împreună.
+Este important să înțelegi că poți folosi ambele API-uri împreună, de exemplu poți dezvolta propria arhitectură de strat de rețea folosind API-ul la nivel scăzut și apoi să o folosești într-o rețea mai mare construită și antrenată cu API-ul la nivel înalt. Sau poți defini o rețea folosind API-ul la nivel înalt ca o secvență de straturi și apoi să folosești propriul tău ciclu de antrenare la nivel scăzut pentru optimizare. Ambele API-uri folosesc aceleași concepte de bază și sunt proiectate să funcționeze bine împreună.
 
 ## Învățare
 
-În acest curs, oferim majoritatea conținutului atât pentru PyTorch, cât și pentru TensorFlow. Poți alege cadrul preferat și să parcurgi doar notițele corespunzătoare. Dacă nu ești sigur ce cadru să alegi, citește câteva discuții pe internet despre **PyTorch vs. TensorFlow**. Poți, de asemenea, să arunci o privire asupra ambelor cadre pentru a obține o înțelegere mai bună.
+În acest curs, oferim majoritatea conținutului atât pentru PyTorch, cât și pentru TensorFlow. Poți alege framework-ul preferat și să parcurgi doar notebook-urile corespunzătoare. Dacă nu ești sigur ce framework să alegi, citește câteva discuții de pe internet despre **PyTorch vs. TensorFlow**. Poți, de asemenea, să arunci o privire la ambele framework-uri pentru a înțelege mai bine.
 
-Acolo unde este posibil, vom folosi API-urile de nivel înalt pentru simplitate. Totuși, credem că este important să înțelegi cum funcționează rețelele neuronale de la bază, așa că la început începem prin a lucra cu API-ul de nivel scăzut și tensori. Totuși, dacă vrei să începi rapid și nu vrei să petreci mult timp învățând aceste detalii, poți să le sari și să mergi direct la notițele cu API-ul de nivel înalt.
+Ori de câte ori este posibil, vom folosi API-urile la nivel înalt pentru simplitate. Totuși, considerăm că este important să înțelegi cum funcționează rețelele neuronale de la bază, așa că la început vom lucra cu API-ul la nivel scăzut și cu tensori. Dacă vrei să începi rapid și nu vrei să pierzi mult timp cu aceste detalii, poți sări peste ele și să mergi direct la notebook-urile cu API la nivel înalt.
 
 ## ✍️ Exerciții: Framework-uri
 
-Continuă învățarea în următoarele notițe:
+Continuă-ți învățarea în următoarele notebook-uri:
 
-API de nivel scăzut | Notiță TensorFlow+Keras | PyTorch
---------------------|-------------------------------------|--------------------------------
-API de nivel înalt  | Keras | *PyTorch Lightning*
+Low-Level API | TensorFlow+Keras Notebook | PyTorch
+--------------|-------------------------------------|--------------------------------
+High-level API| Keras | *PyTorch Lightning*
 
-După ce ai stăpânit cadrele, să recapitulăm noțiunea de overfitting.
+După ce stăpânești framework-urile, să recapitulăm noțiunea de overfitting.
 
 # Overfitting
 
-Overfitting este un concept extrem de important în învățarea automată și este foarte important să-l înțelegi corect!
+Overfitting-ul este un concept extrem de important în învățarea automată și este esențial să îl înțelegem corect!
 
-Consideră următoarea problemă de aproximare a 5 puncte (reprezentate de `x` pe graficele de mai jos):
+Consideră următoarea problemă de aproximare a 5 puncte (reprezentate prin `x` pe graficele de mai jos):
 
-!liniear | overfit
+!linear | overfit
 -------------------------|--------------------------
 **Model liniar, 2 parametri** | **Model neliniar, 7 parametri**
-Eroare antrenament = 5.3 | Eroare antrenament = 0
-Eroare validare = 5.1 | Eroare validare = 20
+Eroare de antrenare = 5.3 | Eroare de antrenare = 0
+Eroare de validare = 5.1 | Eroare de validare = 20
 
-* În stânga, vedem o bună aproximare printr-o linie dreaptă. Deoarece numărul de parametri este adecvat, modelul înțelege corect distribuția punctelor.
-* În dreapta, modelul este prea puternic. Deoarece avem doar 5 puncte și modelul are 7 parametri, se poate ajusta astfel încât să treacă prin toate punctele, făcând ca eroarea de antrenament să fie 0. Totuși, acest lucru împiedică modelul să înțeleagă corect modelul datelor, astfel că eroarea de validare este foarte mare.
+* În stânga, vedem o aproximare bună printr-o linie dreaptă. Deoarece numărul de parametri este adecvat, modelul surprinde corect distribuția punctelor.
+* În dreapta, modelul este prea puternic. Pentru că avem doar 5 puncte, iar modelul are 7 parametri, acesta se poate ajusta astfel încât să treacă prin toate punctele, făcând eroarea de antrenare să fie 0. Totuși, acest lucru împiedică modelul să înțeleagă corect tiparul din spatele datelor, astfel eroarea de validare este foarte mare.
 
-Este foarte important să găsești un echilibru corect între bogăția modelului (numărul de parametri) și numărul de eșantioane de antrenament.
+Este foarte important să găsim un echilibru corect între complexitatea modelului (numărul de parametri) și numărul de exemple de antrenament.
 
 ## De ce apare overfitting-ul
 
-  * Nu sunt suficiente date de antrenament
-  * Model prea puternic
+  * Date insuficiente pentru antrenament
+  * Model prea complex
   * Prea mult zgomot în datele de intrare
 
-## Cum să detectezi overfitting-ul
+## Cum detectăm overfitting-ul
 
-După cum poți vedea din graficul de mai sus, overfitting-ul poate fi detectat printr-o eroare de antrenament foarte mică și o eroare de validare mare. În mod normal, în timpul antrenamentului vom vedea atât erorile de antrenament, cât și cele de validare începând să scadă, și apoi la un moment dat eroarea de validare s-ar putea opri din scădere și să înceapă să crească. Acesta va fi un semn de overfitting și un indicator că probabil ar trebui să oprim antrenamentul în acest punct (sau cel puțin să facem o captură de moment a modelului).
+După cum se vede în graficul de mai sus, overfitting-ul poate fi detectat printr-o eroare foarte mică la antrenament și o eroare mare la validare. De obicei, în timpul antrenamentului, atât eroarea de antrenament, cât și cea de validare scad, iar apoi, la un moment dat, eroarea de validare se oprește din scăzut și începe să crească. Acesta este un semn de overfitting și indică faptul că probabil ar trebui să oprim antrenamentul în acel punct (sau cel puțin să salvăm o copie a modelului).
 
 overfitting
 
-## Cum să previi overfitting-ul
+## Cum prevenim overfitting-ul
 
-Dacă vezi că apare overfitting-ul, poți face unul dintre următoarele lucruri:
+Dacă observi că apare overfitting, poți face una dintre următoarele:
 
- * Crește cantitatea de date de antrenament
- * Redu complexitatea modelului
- * Folosește o tehnică de regularizare, cum ar fi Dropout, pe care o vom considera mai târziu.
+ * Crește cantitatea de date pentru antrenament
+ * Scade complexitatea modelului
+ * Folosește o tehnică de regularizare, cum ar fi Dropout, pe care o vom analiza mai târziu.
 
-## Overfitting și compromisul Bias-Varianță
+## Overfitting și compromisului Bias-Varianță
 
-Overfitting-ul este de fapt un caz al unei probleme mai generale în statistică numită Compromisul Bias-Varianță. Dacă luăm în considerare sursele posibile de eroare în modelul nostru, putem vedea două tipuri de erori:
+Overfitting-ul este, de fapt, un caz particular al unei probleme mai generale din statistică numită compromis Bias-Varianță. Dacă analizăm sursele posibile de eroare în modelul nostru, putem identifica două tipuri de erori:
 
-* **Erorile de bias** sunt cauzate de faptul că algoritmul nostru nu poate captura corect relația dintre datele de antrenament. Poate rezulta din faptul că modelul nostru nu este suficient de puternic (**underfitting**).
-* **Erorile de varianță**, care sunt cauzate de modelul care aproximează zgomotul din datele de intrare în loc de relația semnificativă (**overfitting**).
+* **Erorile de bias** sunt cauzate de incapacitatea algoritmului de a surprinde corect relația dintre datele de antrenament. Acestea pot apărea dacă modelul nu este suficient de puternic (**underfitting**).
+* **Erorile de varianță**, care apar atunci când modelul încearcă să aproximeze zgomotul din datele de intrare în loc de relația semnificativă (**overfitting**).
 
-În timpul antrenamentului, eroarea de bias scade (pe măsură ce modelul nostru învață să aproximeze datele), iar eroarea de varianță crește. Este important să oprim antrenamentul - fie manual (când detectăm overfitting-ul) fie automat (introducând regularizare) - pentru a preveni overfitting-ul.
+În timpul antrenamentului, eroarea de bias scade (pe măsură ce modelul învață să aproximeze datele), iar eroarea de varianță crește. Este important să oprim antrenamentul – fie manual (când detectăm overfitting) sau automat (prin introducerea regularizării) – pentru a preveni overfitting-ul.
 
 ## Concluzie
 
-În această lecție, ai învățat despre diferențele dintre diversele API-uri pentru cele mai populare două cadre AI, TensorFlow și PyTorch. În plus, ai învățat despre un subiect foarte important, overfitting-ul.
+În această lecție, ai învățat despre diferențele dintre diversele API-uri pentru cele două framework-uri AI cele mai populare, TensorFlow și PyTorch. În plus, ai aflat despre un subiect foarte important, overfitting-ul.
 
 ## 🚀 Provocare
 
-În notițele însoțitoare, vei găsi 'sarcini' la final; parcurge notițele și completează sarcinile.
+În notebook-urile însoțitoare vei găsi „sarcini” la final; parcurge notebook-urile și rezolvă sarcinile.
 
-## Recapitulare și auto-studiu
+## Recapitulare & Studiu individual
 
-Fă câteva cercetări pe următoarele subiecte:
+Caută informații despre următoarele subiecte:
 
 - TensorFlow
 - PyTorch
 - Overfitting
 
-Întreabă-te următoarele întrebări:
+Răspunde-ți la următoarele întrebări:
 
 - Care este diferența dintre TensorFlow și PyTorch?
 - Care este diferența dintre overfitting și underfitting?
 
-## Temă
+## Tema
 
-În acest laborator, ți se cere să rezolvi două probleme de clasificare folosind rețele complet conectate cu un singur strat și cu mai multe straturi folosind PyTorch sau TensorFlow.
+În acest laborator, ți se cere să rezolvi două probleme de clasificare folosind rețele complet conectate cu un singur strat și cu mai multe straturi, folosind PyTorch sau TensorFlow.
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu suntem responsabili pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.

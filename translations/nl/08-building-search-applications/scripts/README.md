@@ -2,28 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:52:12+00:00",
+  "translation_date": "2025-07-09T13:11:05+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "nl"
 }
 -->
-# Voorbereiding van transcriptiegegevens
+# Transcription data prep
 
-De scripts voor het voorbereiden van transcriptiegegevens downloaden YouTube-video transcripties en maken ze gereed voor gebruik met het voorbeeld van Semantische Zoekopdracht met OpenAI Embeddings en Functies.
+De scripts voor het voorbereiden van transcriptiegegevens downloaden YouTube-video-transcripten en maken deze klaar voor gebruik met het voorbeeld Semantic Search met OpenAI Embeddings en Functions.
 
 De scripts voor het voorbereiden van transcriptiegegevens zijn getest op de nieuwste versies van Windows 11, macOS Ventura en Ubuntu 22.04 (en hoger).
 
 ## Vereiste Azure OpenAI Service resources aanmaken
 
 > [!IMPORTANT]
-> We raden aan de Azure CLI te updaten naar de nieuwste versie om compatibiliteit met OpenAI te garanderen.
+> We raden aan om de Azure CLI bij te werken naar de nieuwste versie om compatibiliteit met OpenAI te garanderen
 > Zie [Documentatie](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Maak een resourcegroep aan
 
 > [!NOTE]
-> Voor deze instructies gebruiken we de resourcegroep genaamd "semantic-video-search" in East US.
-> Je kunt de naam van de resourcegroep wijzigen, maar wanneer je de locatie voor de resources verandert,
+> Voor deze instructies gebruiken we de resourcegroep met de naam "semantic-video-search" in East US.
+> Je kunt de naam van de resourcegroep wijzigen, maar als je de locatie van de resources aanpast,
 > controleer dan de [modelbeschikbaarheidstabel](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Verkrijg de endpoint en sleutels voor gebruik in deze applicatie
+1. Haal de endpoint en sleutels op voor gebruik in deze applicatie
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -47,8 +47,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Implementeer de volgende modellen:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
+   - `text-embedding-ada-002` versie `2` of hoger, genaamd `text-embedding-ada-002`
+   - `gpt-35-turbo` versie `0613` of hoger, genaamd `gpt-35-turbo`
 
 ```console
 az cognitiveservices account deployment create \
@@ -76,12 +76,12 @@ az cognitiveservices account deployment create \
 
 ## Omgevingsvariabelen
 
-De volgende omgevingsvariabelen zijn vereist om de YouTube transcriptiegegevens voorbereidingsscripts uit te voeren.
+De volgende omgevingsvariabelen zijn vereist om de YouTube transcriptie data prep scripts uit te voeren.
 
 ### Op Windows
 
-Aanbevolen om de variabelen toe te voegen aan je `user` environment variables.
-`Windows Start` > `Systeemomgevingsvariabelen bewerken` > `Omgevingsvariabelen` > `Gebruikersvariabelen` for [USER] > `Nieuw`.
+We raden aan om de variabelen toe te voegen aan je `user` omgevingsvariabelen.
+`Windows Start` > `Systeemomgevingsvariabelen bewerken` > `Omgevingsvariabelen` > `Gebruikersvariabelen` voor [USER] > `Nieuw`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### Op Linux en macOS
 
-Aanbevolen om de volgende exports toe te voegen aan je `~/.bashrc` or `~/.zshrc` bestand.
+We raden aan om de volgende exports toe te voegen aan je `~/.bashrc` of `~/.zshrc` bestand.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,8 +103,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Installeer de vereiste Python bibliotheken
 
-1. Installeer de [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) als deze nog niet is geïnstalleerd.
-1. Vanuit een `Terminal` venster, kloon het voorbeeld naar je gewenste repo map.
+1. Installeer de [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) als deze nog niet geïnstalleerd is.
+1. Clone vanuit een `Terminal` venster de sample naar je gewenste repo map.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -158,7 +158,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Voer de YouTube transcriptiegegevens voorbereidingsscripts uit
+## Voer de YouTube transcriptie data prep scripts uit
 
 ### Op Windows
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

@@ -1,126 +1,126 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T17:08:50+00:00",
+  "original_hash": "ce8224073b86b728ed52b19bed7932fd",
+  "translation_date": "2025-07-09T12:03:45+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Aplikasi Generasi Teks
 
-[![Membangun Aplikasi Generasi Teks](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.id.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.id.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Klik gambar di atas untuk melihat video pelajaran ini)_
+> _(Klik gambar di atas untuk menonton video pelajaran ini)_
 
-Sejauh ini, melalui kurikulum ini, Anda telah melihat konsep inti seperti prompt dan bahkan seluruh disiplin yang disebut "rekayasa prompt". Banyak alat yang dapat Anda gunakan seperti ChatGPT, Office 365, Microsoft Power Platform, dan lainnya, mendukung penggunaan prompt untuk mencapai sesuatu.
+Sejauh ini dalam kurikulum ini, Anda telah melihat ada konsep inti seperti prompt dan bahkan disiplin khusus yang disebut "prompt engineering". Banyak alat yang bisa Anda gunakan seperti ChatGPT, Office 365, Microsoft Power Platform, dan lainnya, mendukung penggunaan prompt untuk menyelesaikan sesuatu.
 
-Untuk menambahkan pengalaman semacam itu ke dalam aplikasi, Anda perlu memahami konsep seperti prompt, penyelesaian, dan memilih pustaka untuk digunakan. Itulah yang akan Anda pelajari dalam bab ini.
+Agar Anda bisa menambahkan pengalaman seperti itu ke dalam sebuah aplikasi, Anda perlu memahami konsep seperti prompt, completions, dan memilih pustaka yang akan digunakan. Itulah yang akan Anda pelajari di bab ini.
 
-## Pengantar
+## Pendahuluan
 
-Dalam bab ini, Anda akan:
+Di bab ini, Anda akan:
 
-- Mempelajari tentang pustaka openai dan konsep intinya.
+- Mempelajari tentang pustaka openai dan konsep utamanya.
 - Membangun aplikasi generasi teks menggunakan openai.
-- Memahami cara menggunakan konsep seperti prompt, suhu, dan token untuk membangun aplikasi generasi teks.
+- Memahami cara menggunakan konsep seperti prompt, temperature, dan tokens untuk membangun aplikasi generasi teks.
 
-## Tujuan Pembelajaran
+## Tujuan pembelajaran
 
-Pada akhir pelajaran ini, Anda akan dapat:
+Di akhir pelajaran ini, Anda akan mampu:
 
 - Menjelaskan apa itu aplikasi generasi teks.
 - Membangun aplikasi generasi teks menggunakan openai.
-- Mengonfigurasi aplikasi Anda untuk menggunakan lebih banyak atau lebih sedikit token dan juga mengubah suhu, untuk keluaran yang bervariasi.
+- Mengonfigurasi aplikasi Anda untuk menggunakan lebih banyak atau lebih sedikit token serta mengubah temperature, untuk menghasilkan output yang bervariasi.
 
 ## Apa itu aplikasi generasi teks?
 
-Biasanya ketika Anda membangun aplikasi, aplikasi tersebut memiliki semacam antarmuka seperti berikut:
+Biasanya saat Anda membangun aplikasi, aplikasi tersebut memiliki semacam antarmuka seperti berikut:
 
-- Berbasis perintah. Aplikasi konsol adalah aplikasi khas di mana Anda mengetik perintah dan menjalankan tugas. Misalnya, `git` adalah aplikasi berbasis perintah.
-- Antarmuka pengguna (UI). Beberapa aplikasi memiliki antarmuka pengguna grafis (GUI) di mana Anda mengklik tombol, memasukkan teks, memilih opsi, dan lainnya.
+- Berbasis perintah. Aplikasi konsol adalah aplikasi khas di mana Anda mengetik perintah dan aplikasi menjalankan tugas. Misalnya, `git` adalah aplikasi berbasis perintah.
+- Antarmuka pengguna (UI). Beberapa aplikasi memiliki antarmuka grafis (GUI) di mana Anda mengklik tombol, memasukkan teks, memilih opsi, dan lainnya.
 
-### Aplikasi Konsol dan UI terbatas
+### Aplikasi konsol dan UI memiliki keterbatasan
 
 Bandingkan dengan aplikasi berbasis perintah di mana Anda mengetik perintah:
 
-- **Terbatas**. Anda tidak bisa hanya mengetik sembarang perintah, hanya yang didukung oleh aplikasi.
-- **Spesifik bahasa**. Beberapa aplikasi mendukung banyak bahasa, tetapi secara default aplikasi dibangun untuk bahasa tertentu, meskipun Anda dapat menambahkan dukungan bahasa lebih banyak.
+- **Terbatas**. Anda tidak bisa mengetik sembarang perintah, hanya perintah yang didukung aplikasi.
+- **Spesifik bahasa**. Beberapa aplikasi mendukung banyak bahasa, tapi secara default aplikasi dibangun untuk bahasa tertentu, meskipun Anda bisa menambahkan dukungan bahasa lain.
 
 ### Manfaat aplikasi generasi teks
 
-Jadi bagaimana aplikasi generasi teks berbeda?
+Lalu, apa yang membedakan aplikasi generasi teks?
 
-Dalam aplikasi generasi teks, Anda memiliki lebih banyak fleksibilitas, Anda tidak terbatas pada serangkaian perintah atau bahasa input tertentu. Sebaliknya, Anda dapat menggunakan bahasa alami untuk berinteraksi dengan aplikasi. Manfaat lainnya adalah karena Anda sudah berinteraksi dengan sumber data yang telah dilatih pada korpus informasi yang luas, sementara aplikasi tradisional mungkin terbatas pada apa yang ada dalam database.
+Dalam aplikasi generasi teks, Anda memiliki fleksibilitas lebih, tidak terbatas pada sekumpulan perintah atau bahasa input tertentu. Sebaliknya, Anda bisa menggunakan bahasa alami untuk berinteraksi dengan aplikasi. Manfaat lain adalah karena Anda sudah berinteraksi dengan sumber data yang telah dilatih pada korpus informasi yang sangat luas, sementara aplikasi tradisional mungkin terbatas pada apa yang ada di database.
 
 ### Apa yang bisa saya bangun dengan aplikasi generasi teks?
 
-Ada banyak hal yang bisa Anda bangun. Misalnya:
+Ada banyak hal yang bisa Anda buat. Misalnya:
 
-- **Chatbot**. Chatbot menjawab pertanyaan tentang topik, seperti perusahaan Anda dan produknya bisa menjadi pilihan yang baik.
-- **Pembantu**. LLM sangat baik dalam hal seperti merangkum teks, mendapatkan wawasan dari teks, menghasilkan teks seperti resume dan lainnya.
-- **Asisten kode**. Tergantung pada model bahasa yang Anda gunakan, Anda dapat membangun asisten kode yang membantu Anda menulis kode. Misalnya, Anda dapat menggunakan produk seperti GitHub Copilot serta ChatGPT untuk membantu Anda menulis kode.
+- **Chatbot**. Chatbot yang menjawab pertanyaan tentang topik tertentu, seperti perusahaan Anda dan produknya, bisa menjadi pilihan yang tepat.
+- **Asisten**. LLM sangat bagus untuk hal-hal seperti meringkas teks, mendapatkan wawasan dari teks, menghasilkan teks seperti resume, dan lainnya.
+- **Asisten kode**. Tergantung pada model bahasa yang Anda gunakan, Anda bisa membangun asisten kode yang membantu menulis kode. Misalnya, Anda bisa menggunakan produk seperti GitHub Copilot maupun ChatGPT untuk membantu menulis kode.
 
-## Bagaimana saya bisa memulai?
+## Bagaimana cara memulai?
 
-Nah, Anda perlu menemukan cara untuk berintegrasi dengan LLM yang biasanya melibatkan dua pendekatan berikut:
+Anda perlu menemukan cara untuk mengintegrasikan dengan LLM yang biasanya melibatkan dua pendekatan berikut:
 
 - Menggunakan API. Di sini Anda membuat permintaan web dengan prompt Anda dan mendapatkan teks yang dihasilkan kembali.
-- Menggunakan pustaka. Pustaka membantu mengenkapsulasi panggilan API dan membuatnya lebih mudah digunakan.
+- Menggunakan pustaka. Pustaka membantu membungkus panggilan API dan membuatnya lebih mudah digunakan.
 
 ## Pustaka/SDK
 
 Ada beberapa pustaka terkenal untuk bekerja dengan LLM seperti:
 
-- **openai**, pustaka ini membuatnya mudah untuk terhubung ke model Anda dan mengirimkan prompt.
+- **openai**, pustaka ini memudahkan untuk terhubung ke model Anda dan mengirim prompt.
 
-Kemudian ada pustaka yang beroperasi pada tingkat yang lebih tinggi seperti:
+Kemudian ada pustaka yang beroperasi di tingkat yang lebih tinggi seperti:
 
-- **Langchain**. Langchain terkenal dan mendukung Python.
-- **Semantic Kernel**. Semantic Kernel adalah pustaka oleh Microsoft yang mendukung bahasa C#, Python, dan Java.
+- **Langchain**. Langchain cukup terkenal dan mendukung Python.
+- **Semantic Kernel**. Semantic Kernel adalah pustaka dari Microsoft yang mendukung bahasa C#, Python, dan Java.
 
 ## Aplikasi pertama menggunakan openai
 
-Mari kita lihat bagaimana kita dapat membangun aplikasi pertama kita, pustaka apa yang kita butuhkan, seberapa banyak yang diperlukan, dan sebagainya.
+Mari kita lihat bagaimana membangun aplikasi pertama kita, pustaka apa yang dibutuhkan, berapa banyak yang diperlukan, dan sebagainya.
 
 ### Instal openai
 
-Ada banyak pustaka di luar sana untuk berinteraksi dengan OpenAI atau Azure OpenAI. Dimungkinkan untuk menggunakan berbagai bahasa pemrograman juga seperti C#, Python, JavaScript, Java, dan lainnya. Kami telah memilih untuk menggunakan pustaka Python `openai`, jadi kami akan menggunakan `pip` untuk menginstalnya.
+Ada banyak pustaka untuk berinteraksi dengan OpenAI atau Azure OpenAI. Anda bisa menggunakan berbagai bahasa pemrograman seperti C#, Python, JavaScript, Java, dan lainnya. Kami memilih menggunakan pustaka Python `openai`, jadi kita akan menggunakan `pip` untuk menginstalnya.
 
 ```bash
 pip install openai
 ```
 
-### Buat sumber daya
+### Membuat resource
 
 Anda perlu melakukan langkah-langkah berikut:
 
 - Buat akun di Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Dapatkan akses ke Azure OpenAI. Kunjungi [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) dan minta akses.
+- Dapatkan akses ke Azure OpenAI. Kunjungi [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) dan ajukan permohonan akses.
 
   > [!NOTE]
-  > Pada saat penulisan, Anda perlu mengajukan permohonan untuk mendapatkan akses ke Azure OpenAI.
+  > Pada saat penulisan, Anda perlu mengajukan permohonan akses ke Azure OpenAI.
 
 - Instal Python <https://www.python.org/>
-- Telah membuat sumber daya Azure OpenAI Service. Lihat panduan ini untuk cara [membuat sumber daya](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Sudah membuat resource Azure OpenAI Service. Lihat panduan ini untuk cara [membuat resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Temukan kunci API dan titik akhir
+### Temukan API key dan endpoint
 
-Pada titik ini, Anda perlu memberi tahu pustaka `openai` apa kunci API yang akan digunakan. Untuk menemukan kunci API Anda, pergi ke bagian "Keys and Endpoint" dari sumber daya Azure OpenAI Anda dan salin nilai "Key 1".
+Saat ini, Anda perlu memberi tahu pustaka `openai` API key mana yang akan digunakan. Untuk menemukan API key Anda, buka bagian "Keys and Endpoint" dari resource Azure OpenAI Anda dan salin nilai "Key 1".
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Sekarang setelah Anda memiliki informasi ini disalin, mari kita instruksikan pustaka untuk menggunakannya.
+Setelah Anda menyalin informasi ini, mari instruksikan pustaka untuk menggunakannya.
 
 > [!NOTE]
-> Ada baiknya memisahkan kunci API Anda dari kode Anda. Anda dapat melakukannya dengan menggunakan variabel lingkungan.
+> Sebaiknya pisahkan API key Anda dari kode. Anda bisa melakukannya dengan menggunakan variabel lingkungan.
 >
-> - Setel variabel lingkungan `OPENAI_API_KEY` to your API key.
+> - Set variabel lingkungan `OPENAI_API_KEY` ke API key Anda.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Pengaturan konfigurasi Azure
+### Konfigurasi setup Azure
 
-Jika Anda menggunakan Azure OpenAI, berikut adalah cara Anda mengatur konfigurasi:
+Jika Anda menggunakan Azure OpenAI, berikut cara mengatur konfigurasinya:
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Di atas kami menetapkan hal-hal berikut:
+Di atas kita mengatur hal berikut:
 
-- `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
-- `api_key`, this is your API key found in the Azure Portal.
-- `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
-- `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key.
+- `api_type` ke `azure`. Ini memberi tahu pustaka untuk menggunakan Azure OpenAI, bukan OpenAI.
+- `api_key`, ini adalah API key Anda yang ditemukan di Azure Portal.
+- `api_version`, ini adalah versi API yang ingin Anda gunakan. Pada saat penulisan, versi terbaru adalah `2023-05-15`.
+- `api_base`, ini adalah endpoint API. Anda bisa menemukannya di Azure Portal di samping API key Anda.
 
-> [!NOTE] > `os.getenv` is a function that reads environment variables. You can use it to read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set these environment variables in your terminal or by using a library like `dotenv`.
+> [!NOTE] > `os.getenv` adalah fungsi yang membaca variabel lingkungan. Anda bisa menggunakannya untuk membaca variabel lingkungan seperti `OPENAI_API_KEY` dan `API_BASE`. Set variabel lingkungan ini di terminal Anda atau dengan menggunakan pustaka seperti `dotenv`.
 
-## Generate text
+## Menghasilkan teks
 
-The way to generate text is to use the `Completion` class. Berikut adalah contohnya:
+Cara menghasilkan teks adalah dengan menggunakan kelas `Completion`. Berikut contohnya:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-Dalam kode di atas, kami membuat objek penyelesaian dan memasukkan model yang ingin kami gunakan dan prompt. Kemudian kami mencetak teks yang dihasilkan.
+Dalam kode di atas, kita membuat objek completion dan memasukkan model yang ingin digunakan serta prompt. Kemudian kita cetak teks yang dihasilkan.
 
-### Penyelesaian obrolan
+### Chat completions
 
-Sejauh ini, Anda telah melihat bagaimana kami menggunakan `Completion` to generate text. But there's another class called `ChatCompletion` yang lebih cocok untuk chatbot. Berikut adalah contoh penggunaannya:
+Sejauh ini, Anda telah melihat bagaimana kita menggunakan `Completion` untuk menghasilkan teks. Tapi ada kelas lain bernama `ChatCompletion` yang lebih cocok untuk chatbot. Berikut contoh penggunaannya:
 
 ```python
 import openai
@@ -164,13 +164,13 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-Lebih lanjut tentang fungsionalitas ini dalam bab yang akan datang.
+Lebih lanjut tentang fungsi ini akan dibahas di bab berikutnya.
 
 ## Latihan - aplikasi generasi teks pertama Anda
 
-Sekarang kita telah mempelajari cara mengatur dan mengkonfigurasi openai, saatnya untuk membangun aplikasi generasi teks pertama Anda. Untuk membangun aplikasi Anda, ikuti langkah-langkah berikut:
+Sekarang setelah kita belajar cara mengatur dan mengonfigurasi openai, saatnya membangun aplikasi generasi teks pertama Anda. Untuk membangun aplikasi, ikuti langkah-langkah berikut:
 
-1. Buat lingkungan virtual dan instal openai:
+1. Buat virtual environment dan instal openai:
 
    ```bash
    python -m venv venv
@@ -179,12 +179,12 @@ Sekarang kita telah mempelajari cara mengatur dan mengkonfigurasi openai, saatny
    ```
 
    > [!NOTE]
-   > Jika Anda menggunakan Windows ketik `venv\Scripts\activate` instead of `source venv/bin/activate`.
+   > Jika Anda menggunakan Windows, ketik `venv\Scripts\activate` bukan `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+   > Temukan kunci Azure OpenAI Anda dengan membuka [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), cari `Open AI`, pilih `Open AI resource`, lalu pilih `Keys and Endpoint` dan salin nilai `Key 1`.
 
-1. Buat file _app.py_ dan berikan kode berikut:
+1. Buat file _app.py_ dan isi dengan kode berikut:
 
    ```python
    import openai
@@ -208,9 +208,9 @@ Sekarang kita telah mempelajari cara mengatur dan mengkonfigurasi openai, saatny
    ```
 
    > [!NOTE]
-   > Jika Anda menggunakan Azure OpenAI, Anda perlu mengatur `api_type` to `azure` and set the `api_key` ke kunci Azure OpenAI Anda.
+   > Jika Anda menggunakan Azure OpenAI, Anda perlu mengatur `api_type` ke `azure` dan `api_key` ke kunci Azure OpenAI Anda.
 
-   Anda akan melihat keluaran seperti berikut:
+   Anda akan melihat output seperti berikut:
 
    ```output
     very unhappy _____.
@@ -220,23 +220,23 @@ Sekarang kita telah mempelajari cara mengatur dan mengkonfigurasi openai, saatny
 
 ## Jenis prompt yang berbeda, untuk hal yang berbeda
 
-Sekarang Anda telah melihat cara menghasilkan teks menggunakan prompt. Anda bahkan memiliki program yang berjalan yang dapat Anda modifikasi dan ubah untuk menghasilkan jenis teks yang berbeda.
+Sekarang Anda sudah melihat cara menghasilkan teks menggunakan prompt. Anda bahkan sudah memiliki program yang berjalan dan bisa Anda modifikasi untuk menghasilkan jenis teks yang berbeda.
 
-Prompt dapat digunakan untuk berbagai tugas. Misalnya:
+Prompt bisa digunakan untuk berbagai tugas. Misalnya:
 
-- **Menghasilkan jenis teks**. Misalnya, Anda dapat menghasilkan puisi, pertanyaan untuk kuis, dll.
-- **Mencari informasi**. Anda dapat menggunakan prompt untuk mencari informasi seperti contoh berikut 'Apa arti CORS dalam pengembangan web?'.
-- **Menghasilkan kode**. Anda dapat menggunakan prompt untuk menghasilkan kode, misalnya mengembangkan ekspresi reguler yang digunakan untuk memvalidasi email atau mengapa tidak menghasilkan seluruh program, seperti aplikasi web?
+- **Menghasilkan jenis teks tertentu**. Misalnya, Anda bisa menghasilkan puisi, pertanyaan kuis, dan sebagainya.
+- **Mencari informasi**. Anda bisa menggunakan prompt untuk mencari informasi seperti contoh berikut 'Apa arti CORS dalam pengembangan web?'.
+- **Menghasilkan kode**. Anda bisa menggunakan prompt untuk menghasilkan kode, misalnya membuat regular expression untuk memvalidasi email atau bahkan membuat program lengkap seperti aplikasi web.
 
-## Kasus penggunaan yang lebih praktis: generator resep
+## Kasus penggunaan yang lebih praktis: pembuat resep
 
-Bayangkan Anda memiliki bahan-bahan di rumah dan Anda ingin memasak sesuatu. Untuk itu, Anda membutuhkan resep. Cara untuk menemukan resep adalah dengan menggunakan mesin pencari atau Anda dapat menggunakan LLM untuk melakukannya.
+Bayangkan Anda punya bahan-bahan di rumah dan ingin memasak sesuatu. Untuk itu, Anda butuh resep. Cara mencari resep bisa dengan menggunakan mesin pencari atau Anda bisa menggunakan LLM.
 
 Anda bisa menulis prompt seperti ini:
 
-> "Tunjukkan 5 resep untuk hidangan dengan bahan-bahan berikut: ayam, kentang, dan wortel. Per resep, daftarkan semua bahan yang digunakan"
+> "Tunjukkan 5 resep untuk hidangan dengan bahan-bahan berikut: ayam, kentang, dan wortel. Untuk setiap resep, cantumkan semua bahan yang digunakan"
 
-Berdasarkan prompt di atas, Anda mungkin mendapatkan respons seperti:
+Dengan prompt di atas, Anda mungkin mendapatkan respons seperti:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,16 +300,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Hasil ini sangat bagus, saya tahu apa yang harus dimasak. Pada titik ini, apa yang bisa menjadi perbaikan yang berguna adalah:
+Hasil ini bagus, saya tahu apa yang akan dimasak. Pada titik ini, perbaikan yang berguna bisa berupa:
 
-- Menyaring bahan yang tidak saya suka atau alergi.
-- Menghasilkan daftar belanja, jika saya tidak memiliki semua bahan di rumah.
+- Menyaring bahan yang tidak saya suka atau saya alergi.
+- Membuat daftar belanja, jika saya tidak memiliki semua bahan di rumah.
 
-Untuk kasus-kasus di atas, mari kita tambahkan prompt tambahan:
+Untuk kasus di atas, mari tambahkan prompt tambahan:
 
-> "Tolong hilangkan resep yang mengandung bawang putih karena saya alergi dan gantikan dengan yang lain. Juga, tolong buat daftar belanja untuk resep-resep tersebut, dengan mempertimbangkan bahwa saya sudah memiliki ayam, kentang, dan wortel di rumah."
+> "Tolong hapus resep yang mengandung bawang putih karena saya alergi dan ganti dengan bahan lain. Juga, buatkan daftar belanja untuk resep-resep tersebut, dengan mempertimbangkan saya sudah punya ayam, kentang, dan wortel di rumah."
 
-Sekarang Anda memiliki hasil baru, yaitu:
+Sekarang Anda punya hasil baru, yaitu:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-Itulah lima resep Anda, tanpa bawang putih yang disebutkan dan Anda juga memiliki daftar belanja dengan mempertimbangkan apa yang sudah Anda miliki di rumah.
+Itulah lima resep Anda, tanpa bawang putih, dan Anda juga punya daftar belanja dengan mempertimbangkan bahan yang sudah ada di rumah.
 
-## Latihan - membangun generator resep
+## Latihan - buat pembuat resep
 
-Sekarang setelah kita memainkan skenario, mari kita tulis kode untuk mencocokkan skenario yang ditunjukkan. Untuk melakukannya, ikuti langkah-langkah berikut:
+Setelah kita memainkan skenario ini, mari tulis kode yang sesuai dengan skenario tersebut. Untuk melakukannya, ikuti langkah-langkah berikut:
 
-1. Gunakan file _app.py_ yang ada sebagai titik awal
-1. Temukan variabel `prompt` dan ubah kodenya menjadi yang berikut:
+1. Gunakan file _app.py_ yang sudah ada sebagai titik awal
+1. Temukan variabel `prompt` dan ubah kodenya menjadi seperti berikut:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Jika Anda sekarang menjalankan kode, Anda akan melihat keluaran yang mirip dengan:
+   Jika Anda menjalankan kode sekarang, Anda akan melihat output yang mirip dengan:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Sekarang setelah kita memainkan skenario, mari kita tulis kode untuk mencocokkan
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE, LLM Anda tidak deterministik, jadi Anda mungkin mendapatkan hasil yang berbeda setiap kali Anda menjalankan program.
+   > NOTE, LLM Anda bersifat nondeterministik, jadi Anda mungkin mendapatkan hasil berbeda setiap kali menjalankan program.
 
-   Bagus, mari kita lihat bagaimana kita dapat memperbaiki keadaan. Untuk memperbaiki keadaan, kita ingin memastikan kode fleksibel, sehingga bahan dan jumlah resep dapat ditingkatkan dan diubah.
+   Bagus, mari kita lihat bagaimana cara memperbaikinya. Untuk memperbaiki, kita ingin membuat kode lebih fleksibel, sehingga bahan dan jumlah resep bisa diubah dan ditingkatkan.
 
-1. Mari kita ubah kode dengan cara berikut:
+1. Mari ubah kode seperti berikut:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Sekarang setelah kita memainkan skenario, mari kita tulis kode untuk mencocokkan
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Mengambil kode untuk uji coba, bisa terlihat seperti ini:
+   Contoh kode untuk pengujian bisa seperti ini:
 
    ```output
    No of recipes (for example, 5): 3
@@ -427,13 +427,13 @@ Sekarang setelah kita memainkan skenario, mari kita tulis kode untuk mencocokkan
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Meningkatkan dengan menambahkan filter dan daftar belanja
+### Perbaiki dengan menambahkan filter dan daftar belanja
 
-Kami sekarang memiliki aplikasi yang berfungsi yang mampu menghasilkan resep dan fleksibel karena bergantung pada input dari pengguna, baik pada jumlah resep maupun bahan yang digunakan.
+Sekarang kita punya aplikasi yang bisa menghasilkan resep dan cukup fleksibel karena bergantung pada input pengguna, baik jumlah resep maupun bahan yang digunakan.
 
-Untuk lebih meningkatkan, kami ingin menambahkan yang berikut:
+Untuk memperbaikinya lebih lanjut, kita ingin menambahkan hal berikut:
 
-- **Menyaring bahan**. Kami ingin dapat menyaring bahan yang tidak kami suka atau alergi. Untuk mencapai perubahan ini, kami dapat mengedit prompt yang ada dan menambahkan kondisi filter di akhir seperti ini:
+- **Menyaring bahan**. Kita ingin bisa menyaring bahan yang tidak disukai atau yang alergi. Untuk melakukan ini, kita bisa mengedit prompt yang sudah ada dan menambahkan kondisi filter di akhir seperti ini:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Untuk lebih meningkatkan, kami ingin menambahkan yang berikut:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Di atas, kami menambahkan `{filter}` di akhir prompt dan kami juga menangkap nilai filter dari pengguna.
+  Di atas, kita menambahkan `{filter}` di akhir prompt dan juga menangkap nilai filter dari pengguna.
 
-  Contoh input menjalankan program sekarang dapat terlihat seperti ini:
+  Contoh input saat menjalankan program sekarang bisa seperti ini:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,13 +510,13 @@ Untuk lebih meningkatkan, kami ingin menambahkan yang berikut:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Seperti yang Anda lihat, resep dengan susu telah disaring. Tetapi, jika Anda intoleran laktosa, Anda mungkin ingin menyaring resep dengan keju di dalamnya juga, jadi ada kebutuhan untuk jelas.
+  Seperti yang Anda lihat, resep yang mengandung susu sudah disaring. Tapi, jika Anda intoleran laktosa, Anda mungkin juga ingin menyaring resep yang mengandung keju, jadi perlu penjelasan yang jelas.
 
-- **Menghasilkan daftar belanja**. Kami ingin menghasilkan daftar belanja, dengan mempertimbangkan apa yang sudah kami miliki di rumah.
+- **Membuat daftar belanja**. Kita ingin membuat daftar belanja dengan mempertimbangkan bahan yang sudah ada di rumah.
 
-  Untuk fungsionalitas ini, kita bisa mencoba menyelesaikan semuanya dalam satu prompt atau kita bisa membaginya menjadi dua prompt. Mari kita coba pendekatan terakhir. Di sini kami menyarankan untuk menambahkan prompt tambahan, tetapi agar itu berhasil, kami perlu menambahkan hasil dari prompt sebelumnya sebagai konteks untuk prompt berikutnya.
+  Untuk fungsi ini, kita bisa mencoba menyelesaikan semuanya dalam satu prompt atau membaginya menjadi dua prompt. Mari coba pendekatan kedua. Di sini kita menyarankan menambahkan prompt tambahan, tapi agar ini berhasil, kita perlu menambahkan hasil dari prompt pertama sebagai konteks ke prompt kedua.
 
-  Temukan bagian dalam kode yang mencetak hasil dari prompt pertama dan tambahkan kode berikut di bawah ini:
+  Temukan bagian kode yang mencetak hasil dari prompt pertama dan tambahkan kode berikut di bawahnya:
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -531,23 +531,22 @@ Untuk lebih meningkatkan, kami ingin menambahkan yang berikut:
   print(completion.choices[0].message.content)
   ```
 
-  Catat hal-hal berikut:
+  Perhatikan hal berikut:
 
-  1. Kami membuat prompt baru dengan menambahkan hasil dari prompt pertama ke prompt baru:
+  1. Kita membuat prompt baru dengan menambahkan hasil dari prompt pertama ke prompt baru:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
+1. Kita membuat permintaan baru, tapi juga mempertimbangkan jumlah token yang kita minta di prompt pertama, jadi kali ini kita menetapkan `max_tokens` menjadi 1200.
 
-  1. Kami membuat permintaan baru, tetapi juga mempertimbangkan jumlah token yang kami minta dalam prompt pertama, jadi kali ini kami mengatakan `max_tokens` adalah 1200.
-
-     ```python
+```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     Mengambil kode ini untuk uji coba, kami sekarang tiba pada keluaran berikut:
+Mencoba kode ini, kita sekarang mendapatkan output berikut:
 
-     ```output
+```output
      No of recipes (for example, 5): 2
      List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
      Filter (for example, vegetarian, vegan, or gluten-free): sugar
@@ -561,17 +560,18 @@ Untuk lebih meningkatkan, kami ingin menambahkan yang berikut:
 
 ## Tingkatkan pengaturan Anda
 
-Apa yang kita miliki sejauh ini adalah kode yang berfungsi, tetapi ada beberapa penyesuaian yang harus kita lakukan untuk lebih meningkatkan keadaan. Beberapa hal yang harus kita lakukan adalah:
+Apa yang kita miliki sejauh ini adalah kode yang berjalan, tapi ada beberapa penyesuaian yang sebaiknya kita lakukan untuk memperbaikinya lebih jauh. Beberapa hal yang sebaiknya dilakukan adalah:
 
-- **Pisahkan rahasia dari kode**, seperti kunci API. Rahasia tidak boleh ada dalam kode dan harus disimpan di lokasi yang aman. Untuk memisahkan rahasia dari kode, kita dapat menggunakan variabel lingkungan dan pustaka seperti `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **Pisahkan rahasia dari kode**, seperti API key. Rahasia tidak seharusnya ada di dalam kode dan harus disimpan di tempat yang aman. Untuk memisahkan rahasia dari kode, kita bisa menggunakan variabel lingkungan dan pustaka seperti `python-dotenv` untuk memuatnya dari sebuah file. Berikut contoh bagaimana itu terlihat dalam kode:
 
-  1. Create a `.env` file dengan konten berikut:
+  1. Buat file `.env` dengan isi berikut:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Catatan, untuk Azure, Anda perlu mengatur variabel lingkungan berikut:
+     
+> Catatan, untuk Azure, Anda perlu mengatur variabel lingkungan berikut:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -589,39 +589,39 @@ Apa yang kita miliki sejauh ini adalah kode yang berfungsi, tetapi ada beberapa 
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Kata tentang panjang token**. Kita harus mempertimbangkan berapa banyak token yang kita butuhkan untuk menghasilkan teks yang kita inginkan. Token berharga uang, jadi jika memungkinkan, kita harus mencoba bersikap ekonomis dengan jumlah token yang kita gunakan. Misalnya, bisakah kita menyusun prompt sehingga kita dapat menggunakan lebih sedikit token?
+- **Sedikit penjelasan tentang panjang token**. Kita harus mempertimbangkan berapa banyak token yang dibutuhkan untuk menghasilkan teks yang kita inginkan. Token berbayar, jadi jika memungkinkan, kita harus berusaha hemat dalam penggunaan token. Misalnya, bisakah kita menyusun prompt agar menggunakan token lebih sedikit?
 
-  Untuk mengubah token yang digunakan, Anda dapat menggunakan parameter `max_tokens`. Misalnya, jika Anda ingin menggunakan 100 token, Anda akan melakukannya:
+  Untuk mengubah jumlah token yang digunakan, Anda bisa memakai parameter `max_tokens`. Contohnya, jika ingin menggunakan 100 token, Anda bisa melakukan:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Bereksperimen dengan suhu**. Suhu adalah sesuatu yang belum kita sebutkan sejauh ini tetapi merupakan konteks penting untuk bagaimana program kita berfungsi. Semakin tinggi nilai suhu semakin acak hasilnya. Sebaliknya semakin rendah nilai suhu semakin dapat diprediksi hasilnya. Pertimbangkan apakah Anda menginginkan variasi dalam keluaran Anda atau tidak.
+- **Bereksperimen dengan temperature**. Temperature adalah hal yang belum kita bahas sebelumnya tapi penting untuk konteks bagaimana program kita bekerja. Semakin tinggi nilai temperature, output akan semakin acak. Sebaliknya, semakin rendah nilai temperature, output akan semakin dapat diprediksi. Pertimbangkan apakah Anda ingin variasi dalam output atau tidak.
 
-  Untuk mengubah suhu, Anda dapat menggunakan parameter `temperature`. Misalnya, jika Anda ingin menggunakan suhu 0.5, Anda akan melakukannya:
+  Untuk mengubah temperature, Anda bisa menggunakan parameter `temperature`. Misalnya, jika ingin menggunakan temperature 0.5, Anda bisa melakukan:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Catatan, semakin dekat ke 1.0, semakin bervariasi keluaran.
+  > Catatan, semakin mendekati 1.0, output akan semakin bervariasi.
 
 ## Tugas
 
-Untuk tugas ini, Anda dapat memilih apa yang akan dibangun.
+Untuk tugas ini, Anda bebas memilih apa yang ingin dibuat.
 
-Berikut adalah beberapa saran:
+Berikut beberapa saran:
 
-- Sesuaikan aplikasi generator resep untuk meningkatkannya lebih lanjut. Mainkan dengan nilai suhu, dan prompt untuk melihat apa yang bisa Anda hasilkan.
-- Bangun "teman belajar". Aplikasi ini harus dapat menjawab pertanyaan tentang topik misalnya Python, Anda dapat memiliki prompt seperti "Apa topik tertentu dalam Python?", atau Anda dapat memiliki prompt yang mengatakan, tunjukkan kode untuk topik tertentu dll.
-- Bot sejarah, hidupkan sejarah, instruksikan bot untuk bermain sebagai karakter sejarah tertentu dan ajukan pertanyaan tentang kehidupan dan waktunya.
+- Ubah aplikasi pembuat resep untuk memperbaikinya lebih jauh. Coba-coba dengan nilai temperature dan prompt untuk melihat apa yang bisa Anda hasilkan.
+- Buat "study buddy". Aplikasi ini harus bisa menjawab pertanyaan tentang suatu topik, misalnya Python, Anda bisa membuat prompt seperti "Apa itu topik tertentu dalam Python?", atau prompt yang meminta contoh kode untuk topik tertentu, dan sebagainya.
+- Bot sejarah, buat sejarah menjadi hidup, instruksikan bot untuk berperan sebagai tokoh sejarah tertentu dan tanyakan tentang kehidupan dan zamannya.
 
 ## Solusi
 
-### Teman belajar
+### Study buddy
 
-Di bawah ini adalah prompt awal, lihat bagaimana Anda dapat menggunakannya dan menyesuaikannya sesuai keinginan Anda.
+Berikut adalah prompt awal, lihat bagaimana Anda bisa menggunakannya dan mengubahnya sesuai keinginan.
 
 ```text
 - "You're an expert on the Python language
@@ -636,7 +636,7 @@ Di bawah ini adalah prompt awal, lihat bagaimana Anda dapat menggunakannya dan m
 
 ### Bot sejarah
 
-Berikut adalah beberapa prompt yang bisa Anda gunakan:
+Berikut beberapa prompt yang bisa Anda gunakan:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -647,21 +647,21 @@ Berikut adalah beberapa prompt yang bisa Anda gunakan:
 
 ## Pemeriksaan pengetahuan
 
-Apa yang dilakukan konsep suhu?
+Apa fungsi konsep temperature?
 
-1. Ini mengontrol seberapa acak keluaran.
-1. Ini mengontrol seberapa besar responsnya.
-1. Ini mengontrol berapa banyak token yang digunakan.
+1. Mengontrol seberapa acak outputnya.
+1. Mengontrol seberapa besar responsnya.
+1. Mengontrol berapa banyak token yang digunakan.
 
 ## 🚀 Tantangan
 
-Saat mengerjakan tugas, coba variasikan suhu, coba setel ke 0, 0.5, dan 1. Ingatlah bahwa 0 adalah yang paling tidak bervariasi dan 1 adalah yang paling bervariasi, nilai apa yang paling cocok untuk aplikasi Anda?
+Saat mengerjakan tugas, coba variasikan temperature, coba atur ke 0, 0.5, dan 1. Ingat bahwa 0 adalah yang paling sedikit variasi dan 1 adalah yang paling banyak. Nilai mana yang paling cocok untuk aplikasi Anda?
 
-## Kerja bagus! Lanjutkan Pembelajaran Anda
+## Kerja Bagus! Lanjutkan Pembelajaran Anda
 
-Setelah menyelesaikan pelajaran ini, lihat [Koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif Anda!
+Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
 
-Lanjutkan ke Pelajaran 7 di mana kita akan melihat bagaimana [membangun aplikasi obrolan](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Lanjut ke Pelajaran 7 di mana kita akan membahas cara [membangun aplikasi chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk mencapai akurasi, harap disadari bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi penting, disarankan menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.

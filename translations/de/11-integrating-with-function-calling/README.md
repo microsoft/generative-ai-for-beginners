@@ -2,61 +2,63 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:19:06+00:00",
+  "translation_date": "2025-07-09T14:22:28+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "de"
 }
 -->
-# Integration mit Funktionsaufrufen
+# Integration mit Function Calling
 
-Du hast in den vorherigen Lektionen bereits einiges gelernt. Dennoch können wir uns weiter verbessern. Einige Dinge, die wir angehen können, sind, wie wir ein konsistenteres Antwortformat erhalten, um die Arbeit mit der Antwort zu erleichtern. Außerdem möchten wir möglicherweise Daten aus anderen Quellen hinzufügen, um unsere Anwendung weiter zu bereichern.
+[![Integration mit Function Calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.de.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-Die oben genannten Probleme sind das, was dieses Kapitel zu lösen versucht.
+Du hast in den vorherigen Lektionen schon einiges gelernt. Dennoch können wir uns weiter verbessern. Einige Punkte, die wir angehen können, sind, wie wir ein konsistenteres Antwortformat erhalten, um die Weiterverarbeitung der Antwort zu erleichtern. Außerdem möchten wir möglicherweise Daten aus anderen Quellen hinzufügen, um unsere Anwendung weiter anzureichern.
+
+Die oben genannten Probleme werden in diesem Kapitel behandelt.
 
 ## Einführung
 
 Diese Lektion behandelt:
 
-- Erklären, was Funktionsaufrufe sind und ihre Anwendungsfälle.
-- Erstellen eines Funktionsaufrufs mit Azure OpenAI.
-- Wie man einen Funktionsaufruf in eine Anwendung integriert.
+- Erklärung, was Function Calling ist und wofür es verwendet wird.
+- Erstellen eines Function Calls mit Azure OpenAI.
+- Wie man einen Function Call in eine Anwendung integriert.
 
 ## Lernziele
 
 Am Ende dieser Lektion wirst du in der Lage sein:
 
-- Den Zweck der Verwendung von Funktionsaufrufen zu erklären.
-- Einen Funktionsaufruf mit dem Azure OpenAI Service einzurichten.
-- Effektive Funktionsaufrufe für den Anwendungsfall deiner Anwendung zu entwerfen.
+- Den Zweck von Function Calling zu erklären.
+- Function Call mit dem Azure OpenAI Service einzurichten.
+- Effektive Function Calls für den Anwendungsfall deiner App zu entwerfen.
 
 ## Szenario: Verbesserung unseres Chatbots mit Funktionen
 
-Für diese Lektion möchten wir eine Funktion für unser Bildungs-Startup entwickeln, die es Nutzern ermöglicht, einen Chatbot zu verwenden, um technische Kurse zu finden. Wir werden Kurse empfehlen, die ihrem Fähigkeitsniveau, ihrer aktuellen Rolle und ihrem Interessengebiet entsprechen.
+Für diese Lektion wollen wir eine Funktion für unser Bildungs-Startup entwickeln, die es Nutzern ermöglicht, über einen Chatbot technische Kurse zu finden. Wir empfehlen Kurse, die zu ihrem Kenntnisstand, ihrer aktuellen Rolle und der gewünschten Technologie passen.
 
-Um dieses Szenario abzuschließen, verwenden wir eine Kombination aus:
+Um dieses Szenario umzusetzen, verwenden wir eine Kombination aus:
 
-- `Azure OpenAI`, um eine Chaterfahrung für den Benutzer zu erstellen.
-- `Microsoft Learn Catalog API`, um Nutzern zu helfen, Kurse basierend auf ihrer Anfrage zu finden.
-- `Function Calling`, um die Anfrage des Nutzers zu nehmen und an eine Funktion zu senden, um die API-Anfrage zu stellen.
+- `Azure OpenAI`, um eine Chat-Erfahrung für den Nutzer zu schaffen.
+- `Microsoft Learn Catalog API`, um Nutzern bei der Suche nach Kursen basierend auf ihrer Anfrage zu helfen.
+- `Function Calling`, um die Nutzeranfrage an eine Funktion weiterzuleiten, die dann die API-Anfrage ausführt.
 
-Um zu beginnen, schauen wir uns an, warum wir überhaupt Funktionsaufrufe verwenden möchten:
+Um zu starten, schauen wir uns an, warum wir Function Calling überhaupt verwenden wollen:
 
-## Warum Funktionsaufrufe
+## Warum Function Calling
 
-Vor den Funktionsaufrufen waren die Antworten eines LLM unstrukturiert und inkonsistent. Entwickler mussten komplexen Validierungscode schreiben, um sicherzustellen, dass sie jede Variation einer Antwort verarbeiten konnten. Benutzer konnten keine Antworten wie "Wie ist das aktuelle Wetter in Stockholm?" erhalten. Dies liegt daran, dass Modelle auf die Zeit beschränkt waren, in der die Daten trainiert wurden.
+Vor Function Calling waren Antworten von LLMs unstrukturiert und inkonsistent. Entwickler mussten komplexen Validierungscode schreiben, um mit jeder möglichen Antwortvariante umgehen zu können. Nutzer konnten keine Antworten auf Fragen wie „Wie ist das aktuelle Wetter in Stockholm?“ erhalten, da die Modelle nur auf den Trainingszeitraum begrenzte Daten hatten.
 
-Funktionsaufrufe sind ein Feature des Azure OpenAI Service, um die folgenden Einschränkungen zu überwinden:
+Function Calling ist eine Funktion des Azure OpenAI Service, die folgende Einschränkungen überwindet:
 
-- **Konsistentes Antwortformat**. Wenn wir das Antwortformat besser kontrollieren können, können wir die Antwort leichter in andere Systeme integrieren.
-- **Externe Daten**. Fähigkeit, Daten aus anderen Quellen einer Anwendung in einem Chat-Kontext zu verwenden.
+- **Konsistentes Antwortformat**. Wenn wir das Antwortformat besser steuern können, lässt sich die Antwort leichter in nachgelagerte Systeme integrieren.
+- **Externe Daten**. Möglichkeit, Daten aus anderen Quellen einer Anwendung im Chat-Kontext zu verwenden.
 
-## Problemveranschaulichung durch ein Szenario
+## Das Problem anhand eines Szenarios verdeutlichen
 
-> Wir empfehlen dir, das [beigelegte Notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) zu verwenden, wenn du das unten stehende Szenario ausführen möchtest. Du kannst auch einfach mitlesen, während wir versuchen, ein Problem zu veranschaulichen, bei dem Funktionen helfen können, das Problem zu lösen.
+> Wir empfehlen, das [beigefügte Notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) zu verwenden, wenn du das folgende Szenario selbst ausprobieren möchtest. Du kannst aber auch einfach weiterlesen, da wir hier ein Problem veranschaulichen wollen, bei dem Funktionen helfen können.
 
-Schauen wir uns das Beispiel an, das das Problem des Antwortformats veranschaulicht:
+Schauen wir uns ein Beispiel an, das das Problem mit dem Antwortformat verdeutlicht:
 
-Angenommen, wir möchten eine Datenbank mit Studentendaten erstellen, damit wir ihnen den richtigen Kurs vorschlagen können. Unten haben wir zwei Beschreibungen von Studenten, die sich in den enthaltenen Daten sehr ähnlich sind.
+Angenommen, wir wollen eine Datenbank mit Studentendaten erstellen, um ihnen passende Kurse vorschlagen zu können. Unten haben wir zwei Beschreibungen von Studenten, die sehr ähnliche Daten enthalten.
 
 1. Erstelle eine Verbindung zu unserer Azure OpenAI-Ressource:
 
@@ -75,9 +77,9 @@ Angenommen, wir möchten eine Datenbank mit Studentendaten erstellen, damit wir 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Unten ist etwas Python-Code zur Konfiguration unserer Verbindung zu Azure OpenAI, wo wir `api_type`, `api_base`, `api_version` and `api_key`.
+   Unten ist ein Python-Code, der unsere Verbindung zu Azure OpenAI konfiguriert, wobei wir `api_type`, `api_base`, `api_version` und `api_key` setzen.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description` festlegen.
+1. Erstelle zwei Studentenbeschreibungen mit den Variablen `student_1_description` und `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -85,9 +87,9 @@ Angenommen, wir möchten eine Datenbank mit Studentendaten erstellen, damit wir 
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Wir möchten die obigen Studentenbeschreibungen an ein LLM senden, um die Daten zu analysieren. Diese Daten können später in unserer Anwendung verwendet und an eine API gesendet oder in einer Datenbank gespeichert werden.
+   Wir wollen die oben genannten Studentenbeschreibungen an ein LLM senden, um die Daten zu parsen. Diese Daten können später in unserer Anwendung verwendet, an eine API gesendet oder in einer Datenbank gespeichert werden.
 
-1. Lass uns zwei identische Aufforderungen erstellen, in denen wir das LLM anweisen, welche Informationen uns interessieren:
+1. Erstelle zwei identische Prompts, in denen wir das LLM anweisen, welche Informationen wir benötigen:
 
    ```python
    prompt1 = f'''
@@ -117,9 +119,9 @@ Angenommen, wir möchten eine Datenbank mit Studentendaten erstellen, damit wir 
    '''
    ```
 
-   Die obigen Aufforderungen weisen das LLM an, Informationen zu extrahieren und die Antwort im JSON-Format zurückzugeben.
+   Die obigen Prompts fordern das LLM auf, Informationen zu extrahieren und die Antwort im JSON-Format zurückzugeben.
 
-1. Nachdem wir die Aufforderungen und die Verbindung zu Azure OpenAI eingerichtet haben, senden wir die Aufforderungen nun an das LLM, indem wir `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` verwenden. Dies soll eine Nachricht eines Benutzers simulieren, die an einen Chatbot geschrieben wird.
+1. Nachdem wir die Prompts und die Verbindung zu Azure OpenAI eingerichtet haben, senden wir die Prompts mit `openai.ChatCompletion`. Wir speichern den Prompt in der Variable `messages` und weisen die Rolle `user` zu. So wird eine Nachricht eines Nutzers an einen Chatbot simuliert.
 
    ```python
    # response from prompt one
@@ -137,9 +139,9 @@ Angenommen, wir möchten eine Datenbank mit Studentendaten erstellen, damit wir 
    openai_response2.choices[0].message.content
    ```
 
-Jetzt können wir beide Anfragen an das LLM senden und die Antwort, die wir erhalten, wie folgt untersuchen `openai_response1['choices'][0]['message']['content']`.
+Jetzt können wir beide Anfragen an das LLM senden und die Antwort untersuchen, indem wir sie so abrufen: `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. Schließlich können wir die Antwort mit `json.loads` in ein JSON-Format umwandeln:
 
    ```python
    # Loading the response as a JSON object
@@ -171,55 +173,55 @@ Jetzt können wir beide Anfragen an das LLM senden und die Antwort, die wir erha
    }
    ```
 
-   Obwohl die Aufforderungen gleich sind und die Beschreibungen ähnlich, sehen wir Werte der `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Obwohl die Prompts gleich sind und die Beschreibungen ähnlich, sehen wir, dass die Werte der Eigenschaft `Grades` unterschiedlich formatiert sind, z. B. `3.7` oder `3.7 GPA`.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   Dieses Ergebnis entsteht, weil das LLM unstrukturierte Daten in Form des geschriebenen Prompts erhält und ebenfalls unstrukturierte Daten zurückgibt. Wir brauchen ein strukturiertes Format, damit wir wissen, was wir erwarten können, wenn wir diese Daten speichern oder verwenden.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+Wie lösen wir also das Formatierungsproblem? Mit Function Calling können wir sicherstellen, dass wir strukturierte Daten zurückbekommen. Beim Function Calling ruft das LLM keine Funktionen auf oder führt sie aus. Stattdessen erstellen wir eine Struktur, der das LLM für seine Antworten folgen soll. Diese strukturierten Antworten nutzen wir dann, um zu wissen, welche Funktion in unserer Anwendung ausgeführt werden soll.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.de.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.de.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+Wir können dann das Ergebnis der Funktion nehmen und zurück an das LLM senden. Das LLM antwortet dann in natürlicher Sprache, um die Nutzeranfrage zu beantworten.
 
-## Use Cases for using function calls
+## Anwendungsfälle für Function Calls
 
-There are many different use cases where function calls can improve your app like:
+Es gibt viele verschiedene Anwendungsfälle, bei denen Function Calls deine App verbessern können, z. B.:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **Aufruf externer Tools**. Chatbots sind gut darin, Fragen von Nutzern zu beantworten. Mit Function Calling können Chatbots Nutzeranfragen nutzen, um bestimmte Aufgaben zu erledigen. Zum Beispiel kann ein Student den Chatbot bitten: „Schick eine E-Mail an meinen Dozenten und sag, dass ich mehr Unterstützung bei diesem Thema brauche.“ Das kann einen Funktionsaufruf an `send_email(to: string, body: string)` auslösen.
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Erstellen von API- oder Datenbankabfragen**. Nutzer können Informationen in natürlicher Sprache anfragen, die in eine formatierte Abfrage oder API-Anfrage umgewandelt wird. Ein Beispiel wäre ein Lehrer, der fragt: „Wer hat die letzte Aufgabe abgeschlossen?“, was eine Funktion `get_completed(student_name: string, assignment: int, current_status: string)` aufruft.
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Erstellen strukturierter Daten**. Nutzer können einen Textblock oder CSV verwenden und das LLM wichtige Informationen daraus extrahieren lassen. Zum Beispiel kann ein Student einen Wikipedia-Artikel über Friedensabkommen in KI-Lernkarten umwandeln. Das kann mit einer Funktion `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` geschehen.
 
-## Creating Your First Function Call
+## Erstellen deines ersten Function Calls
 
-The process of creating a function call includes 3 main steps:
+Der Prozess zum Erstellen eines Function Calls umfasst 3 Hauptschritte:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **Aufruf** der Chat Completions API mit einer Liste deiner Funktionen und einer Nutzeranfrage.
+2. **Auswertung** der Antwort des Modells, um eine Aktion auszuführen, z. B. eine Funktion oder API aufzurufen.
+3. **Erneuter Aufruf** der Chat Completions API mit der Antwort deiner Funktion, um damit eine Antwort für den Nutzer zu erstellen.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.de.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.de.png)
 
-### Step 1 - creating messages
+### Schritt 1 – Nachrichten erstellen
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+Der erste Schritt ist, eine Nutzer-Nachricht zu erstellen. Diese kann dynamisch durch einen Texteingabewert gesetzt werden oder du kannst hier einen Wert festlegen. Wenn du zum ersten Mal mit der Chat Completions API arbeitest, müssen wir die `role` und den `content` der Nachricht definieren.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` und eine Beispiel-Frage.
+Die `role` kann `system` (Regeln erstellen), `assistant` (das Modell) oder `user` (der Endnutzer) sein. Für Function Calling setzen wir sie auf `user` und geben eine Beispielanfrage an.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Durch die Zuweisung unterschiedlicher Rollen wird dem LLM klar gemacht, ob es das System ist, das etwas sagt, oder der Benutzer, was hilft, eine Gesprächshistorie aufzubauen, auf der das LLM aufbauen kann.
+Durch die Zuweisung verschiedener Rollen wird dem LLM klar, ob es sich um eine Systemnachricht oder eine Nutzeranfrage handelt, was hilft, einen Gesprächsverlauf aufzubauen, auf dem das LLM aufbauen kann.
 
-### Schritt 2 - Erstellen von Funktionen
+### Schritt 2 – Funktionen erstellen
 
-Als nächstes definieren wir eine Funktion und die Parameter dieser Funktion. Wir verwenden hier nur eine Funktion namens `search_courses` but you can create multiple functions.
+Als nächstes definieren wir eine Funktion und deren Parameter. Hier verwenden wir nur eine Funktion namens `search_courses`, aber du kannst auch mehrere Funktionen erstellen.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **Wichtig**: Funktionen werden in der Systemnachricht an das LLM übergeben und zählen zu den verfügbaren Tokens.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+Unten erstellen wir die Funktionen als Array von Objekten. Jedes Objekt ist eine Funktion mit den Eigenschaften `name`, `description` und `parameters`:
 
 ```python
 functions = [
@@ -250,26 +252,26 @@ functions = [
 ]
 ```
 
-Lass uns jede Instanz der Funktion unten genauer beschreiben:
+Beschreiben wir die einzelnen Eigenschaften der Funktion etwas genauer:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` – Der Name der Funktion, die aufgerufen werden soll.
+- `description` – Beschreibung, wie die Funktion funktioniert. Hier ist es wichtig, klar und präzise zu sein.
+- `parameters` – Eine Liste von Werten und Formaten, die das Modell in seiner Antwort liefern soll. Das Parameter-Array besteht aus Objekten mit folgenden Eigenschaften:
+  1. `type` – Der Datentyp, in dem die Eigenschaften gespeichert werden.
+  2. `properties` – Liste der spezifischen Werte, die das Modell in der Antwort verwenden soll.
+     1. `name` – Der Schlüsselname der Eigenschaft, z. B. `product`.
+     2. `type` – Der Datentyp dieser Eigenschaft, z. B. `string`.
+     3. `description` – Beschreibung der Eigenschaft.
 
-There's also an optional property `required` - required property for the function call to be completed.
+Es gibt auch eine optionale Eigenschaft `required` – Pflichtfelder, die für den Funktionsaufruf benötigt werden.
 
-### Step 3 - Making the function call
+### Schritt 3 – Den Funktionsaufruf durchführen
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+Nachdem wir eine Funktion definiert haben, müssen wir sie in den Aufruf der Chat Completion API einbinden. Das machen wir, indem wir `functions` zur Anfrage hinzufügen, also `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+Es gibt auch die Option, `function_call` auf `auto` zu setzen. Das bedeutet, dass das LLM selbst entscheidet, welche Funktion basierend auf der Nutzeranfrage aufgerufen wird, anstatt dass wir das vorgeben.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` und damit dem LLM die Wahl geben, wann es die von uns bereitgestellten Funktionen aufrufen soll:
+Hier ein Beispielcode, in dem wir `ChatCompletion.create` aufrufen, wobei wir `functions=functions` und `function_call="auto"` setzen und dem LLM so die Wahl lassen, wann es die Funktionen aufruft:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Die zurückkommende Antwort sieht jetzt so aus:
+Die Antwort sieht dann etwa so aus:
 
 ```json
 {
@@ -292,33 +294,33 @@ Die zurückkommende Antwort sieht jetzt so aus:
 }
 ```
 
-Hier sehen wir, wie die Funktion `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+Hier sehen wir, wie die Funktion `search_courses` aufgerufen wurde und mit welchen Argumenten, die in der Eigenschaft `arguments` der JSON-Antwort aufgelistet sind.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` Wert:
+Das LLM konnte die Daten so extrahieren, dass sie zu den Argumenten der Funktion passen, da es die Werte aus dem `messages`-Parameter im Chat Completion-Aufruf entnommen hat. Unten zur Erinnerung der Wert von `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Wie du siehst, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+Wie du siehst, wurden `student`, `Azure` und `beginner` aus `messages` extrahiert und als Eingabe an die Funktion übergeben. Funktionen auf diese Weise zu nutzen, ist eine großartige Methode, um Informationen aus einem Prompt zu extrahieren, aber auch um dem LLM Struktur zu geben und wiederverwendbare Funktionalität zu schaffen.
 
-Next, we need to see how we can use this in our app.
+Als Nächstes schauen wir, wie wir das in unserer App verwenden können.
 
-## Integrating Function Calls into an Application
+## Integration von Function Calls in eine Anwendung
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+Nachdem wir die formatierte Antwort des LLM getestet haben, können wir diese nun in eine Anwendung integrieren.
 
-### Managing the flow
+### Ablauf steuern
 
-To integrate this into our application, let's take the following steps:
+Um das in unsere Anwendung zu integrieren, gehen wir wie folgt vor:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. Zuerst rufen wir den OpenAI-Service auf und speichern die Nachricht in einer Variablen namens `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. Jetzt definieren wir die Funktion, die die Microsoft Learn API aufruft, um eine Liste von Kursen zu erhalten:
+1. Nun definieren wir die Funktion, die die Microsoft Learn API aufruft, um eine Liste von Kursen zu erhalten:
 
    ```python
    import requests
@@ -340,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Beachte, wie wir jetzt eine tatsächliche Python-Funktion erstellen, die auf die in den `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   Beachte, dass wir jetzt eine echte Python-Funktion erstellen, die den Funktionsnamen aus der `functions`-Variable zuordnet. Außerdem führen wir echte externe API-Aufrufe aus, um die benötigten Daten abzurufen. In diesem Fall greifen wir auf die Microsoft Learn API zu, um Trainingsmodule zu suchen.
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+Okay, wir haben die `functions`-Variable und eine entsprechende Python-Funktion erstellt – wie sagen wir dem LLM, wie es diese beiden zusammenbringen soll, damit unsere Python-Funktion aufgerufen wird?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` eingeführten Funktionsnamen abbildet und die angezeigte Funktion aufruft. Hier ist, wie du die genannte Überprüfung unten durchführen kannst:
+1. Um zu prüfen, ob wir eine Python-Funktion aufrufen müssen, schauen wir in die Antwort des LLM, ob `function_call` darin enthalten ist, und rufen dann die angegebene Funktion auf. So kannst du die Prüfung durchführen:
 
    ```python
    # Check if the model wants to call a function
@@ -389,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   Diese drei Zeilen stellen sicher, dass wir den Funktionsnamen, die Argumente extrahieren und den Aufruf durchführen:
+   Diese drei Zeilen sorgen dafür, dass wir den Funktionsnamen und die Argumente extrahieren und den Aufruf ausführen:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -398,7 +400,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   Unten ist die Ausgabe von unserem Code:
+   Unten siehst du die Ausgabe unseres Codes:
 
    **Ausgabe**
 
@@ -419,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Jetzt senden wir die aktualisierte Nachricht, `messages`, an das LLM, damit wir eine Antwort in natürlicher Sprache statt einer API-JSON-formatierten Antwort erhalten können.
+1. Jetzt senden wir die aktualisierte Nachricht `messages` an das LLM, damit wir eine Antwort in natürlicher Sprache erhalten, anstatt eine API-Antwort im JSON-Format.
 
    ```python
    print("Messages in next request:")
@@ -450,19 +452,18 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## Aufgabe
 
-Um dein Lernen über Azure OpenAI Funktionsaufrufe fortzusetzen, kannst du Folgendes erstellen:
+Um dein Wissen zu Azure OpenAI Function Calling weiter zu vertiefen, kannst du folgendes umsetzen:
 
-- Weitere Parameter der Funktion, die Lernenden helfen könnten, mehr Kurse zu finden.
-- Einen weiteren Funktionsaufruf, der mehr Informationen vom Lernenden wie seine Muttersprache entgegennimmt.
-- Fehlerbehandlung erstellen, wenn der Funktionsaufruf und/oder API-Aufruf keine geeigneten Kurse zurückgibt.
-
-Hinweis: Folge der [Learn API-Referenzdokumentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) Seite, um zu sehen, wie und wo diese Daten verfügbar sind.
+- Weitere Parameter für die Funktion hinzufügen, die Lernenden helfen, mehr Kurse zu finden.
+- Einen weiteren Function Call erstellen, der mehr Informationen vom Lernenden abfragt, z. B. deren Muttersprache.
+- Fehlerbehandlung implementieren, falls der Funktionsaufruf und/oder API-Aufruf keine passenden Kurse zurückliefert.
+Hinweis: Folgen Sie der [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), um zu sehen, wie und wo diese Daten verfügbar sind.
 
 ## Großartige Arbeit! Setze die Reise fort
 
-Nach Abschluss dieser Lektion schau dir unsere [Generative AI Learning Collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um dein Wissen über Generative KI weiter auszubauen!
+Nachdem du diese Lektion abgeschlossen hast, schau dir unsere [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um dein Wissen über Generative KI weiter auszubauen!
 
-Gehe zu Lektion 12, wo wir uns ansehen, wie man [UX für KI-Anwendungen gestaltet](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Gehe zu Lektion 12, in der wir uns ansehen, wie man [UX für KI-Anwendungen gestaltet](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle angesehen werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir haften nicht für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

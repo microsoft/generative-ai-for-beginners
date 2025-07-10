@@ -2,138 +2,138 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:44:05+00:00",
+  "translation_date": "2025-07-09T13:03:05+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "sr"
 }
 -->
-# Izgradnja aplikacija za pretragu
+# Прављење претраживачких апликација
 
-[![Uvod u generativnu AI i velike jezičke modele](../../../translated_images/08-lesson-banner.358a98d5a1d7df54f5eaf5fd69392931ea660c923effa48ffb8384f5fa4ab172.sr.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Увод у генеративну вештачку интелигенцију и велике језичке моделе](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sr.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
-> > _Kliknite na sliku iznad da pogledate video ovog lekcije_
+> > _Кликните на слику изнад да бисте погледали видео о овој лекцији_
 
-LLM-ovi su više od samo chatbota i generisanja teksta. Takođe je moguće izgraditi aplikacije za pretragu koristeći Ugrađivanja. Ugrađivanja su numerički prikazi podataka poznati i kao vektori, i mogu se koristiti za semantičku pretragu podataka.
+Велики језички модели нису само за ћаскање и генерисање текста. Могуће је направити и претраживачке апликације користећи Ембеддинге. Ембеддинзи су нумерички прикази података, познати и као вектори, и могу се користити за семантичко претраживање података.
 
-U ovoj lekciji, izgradićete aplikaciju za pretragu za našu edukativnu startup organizaciju. Naša organizacija je neprofitna organizacija koja pruža besplatno obrazovanje studentima u zemljama u razvoju. Naša organizacija ima veliki broj YouTube videa koje studenti mogu koristiti za učenje o AI. Naša organizacija želi da izgradi aplikaciju za pretragu koja omogućava studentima da pretražuju YouTube video tako što će uneti pitanje.
+У овој лекцији направићете претраживачку апликацију за наш едукативни стартап. Наш стартап је непрофитна организација која пружа бесплатну едукацију студентима у земљама у развоју. Наш стартап има велики број YouTube видео снимака које студенти могу користити за учење о вештачкој интелигенцији. Стартап жели да направи претраживачку апликацију која омогућава студентима да претражују YouTube видео снимке тако што ће унети питање.
 
-Na primer, student može uneti 'Šta su Jupyter Notebooks?' ili 'Šta je Azure ML' i aplikacija za pretragu će vratiti listu YouTube videa koji su relevantni za pitanje, i još bolje, aplikacija za pretragu će vratiti link do mesta u videu gde se nalazi odgovor na pitanje.
+На пример, студент може унети „Шта су Јупитер нотебоокови?“ или „Шта је Azure ML“, а претраживачка апликација ће вратити листу YouTube видео снимака релевантних за питање, а још боље, апликација ће вратити и линк до места у видеу где се налази одговор на питање.
 
-## Uvod
+## Увод
 
-U ovoj lekciji, pokrićemo:
+У овој лекцији ћемо обрадити:
 
-- Semantička vs pretraga po ključnim rečima.
-- Šta su tekstualna ugrađivanja.
-- Kreiranje indeksa tekstualnih ugrađivanja.
-- Pretraga indeksa tekstualnih ugrađivanja.
+- Семантичко у односу на кључне речи претраживање.
+- Шта су текстуални ембеддинзи.
+- Креирање индекса текстуалних ембеддинга.
+- Претраживање индекса текстуалних ембеддинга.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Nakon završetka ove lekcije, bićete u mogućnosti da:
+Након завршетка ове лекције, моћи ћете да:
 
-- Razlikujete semantičku pretragu od pretrage po ključnim rečima.
-- Objasnite šta su tekstualna ugrađivanja.
-- Kreirate aplikaciju koristeći ugrađivanja za pretragu podataka.
+- Разликујете семантичко и претраживање по кључним речима.
+- Објасните шта су текстуални ембеддинзи.
+- Направите апликацију која користи ембеддинге за претраживање података.
 
-## Zašto izgraditi aplikaciju za pretragu?
+## Зашто правити претраживачку апликацију?
 
-Kreiranje aplikacije za pretragu će vam pomoći da razumete kako koristiti ugrađivanja za pretragu podataka. Takođe ćete naučiti kako izgraditi aplikaciju za pretragu koju studenti mogu koristiti za brzo pronalaženje informacija.
+Прављење претраживачке апликације помоћи ће вам да разумете како да користите ембеддинге за претраживање података. Такође ћете научити како да направите апликацију коју студенти могу користити да брзо пронађу информације.
 
-Lekcija uključuje Indeks Ugrađivanja YouTube transkripata za Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube kanal. AI Show je YouTube kanal koji vas uči o AI i mašinskom učenju. Indeks Ugrađivanja sadrži Ugrađivanja za svaki od YouTube transkripata do oktobra 2023. Koristićete Indeks Ugrađivanja da izgradite aplikaciju za pretragu za našu organizaciju. Aplikacija za pretragu vraća link do mesta u videu gde se nalazi odgovor na pitanje. Ovo je odličan način za studente da brzo pronađu informacije koje im trebaju.
+Лекција укључује индекс ембеддинга YouTube транскрипата за Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube канал. AI Show је YouTube канал који вас учи о вештачкој интелигенцији и машинском учењу. Индекс ембеддинга садржи ембеддинге за сваки од YouTube транскрипата до октобра 2023. Користићете овај индекс да направите претраживачку апликацију за наш стартап. Апликација враћа линк до места у видеу где се налази одговор на питање. Ово је одличан начин да студенти брзо пронађу потребне информације.
 
-Sledeći je primer semantičkog upita za pitanje 'da li možete koristiti rstudio sa azure ml?'. Pogledajte YouTube url, videćete da url sadrži vremenski pečat koji vas vodi do mesta u videu gde se nalazi odgovor na pitanje.
+Следећи пример показује семантички упит за питање „можете ли користити rstudio са azure ml?“. Погледајте YouTube URL, видећете да URL садржи временски жиг који вас води до места у видеу где се налази одговор на питање.
 
-![Semantički upit za pitanje "da li možete koristiti rstudio sa Azure ML"](../../../translated_images/query-results.506ee9aac38278ee496377ca3d0bf751a9bffda30c3cbd56d5024dcb9c8f8e9e.sr.png)
+![Семантички упит за питање "можете ли користити rstudio са Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sr.png)
 
-## Šta je semantička pretraga?
+## Шта је семантичко претраживање?
 
-Sada se možda pitate, šta je semantička pretraga? Semantička pretraga je tehnika pretrage koja koristi semantiku, ili značenje, reči u upitu da vrati relevantne rezultate.
+Можда се питате, шта је семантичко претраживање? Семантичко претраживање је техника претраживања која користи семантику, односно значење речи у упиту, да би вратила релевантне резултате.
 
-Evo primera semantičke pretrage. Recimo da želite da kupite auto, mogli biste pretražiti 'moj san auto', semantička pretraga razume da ne govorite o snu o autu, već da želite da kupite svoj auto iz snova. Semantička pretraga razume vašu nameru i vraća relevantne rezultate. Alternativa je pretraga po ključnim rečima koja bi doslovno pretraživala snove o autima i često vraćala nerelevantne rezultate.
+Ево примера семантичког претраживања. Рецимо да тражите да купите ауто, можда ћете претраживати „мој аутомобил из снова“, семантичко претраживање разуме да не сањате о аутомобилу, већ да тражите свој „идеалан“ ауто. Семантичко претраживање разуме вашу намеру и враћа релевантне резултате. Алтернатива је претраживање по кључним речима које би буквално тражило снове о аутомобилима и често враћало нерелевантне резултате.
 
-## Šta su tekstualna ugrađivanja?
+## Шта су текстуални ембеддинзи?
 
-[Textualna ugrađivanja](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) su tehnika prikaza teksta koja se koristi u [obradi prirodnog jezika](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstualna ugrađivanja su semantički numerički prikazi teksta. Ugrađivanja se koriste za prikaz podataka na način koji je lak za mašinu da razume. Postoji mnogo modela za kreiranje tekstualnih ugrađivanja, u ovoj lekciji, fokusiraćemo se na generisanje ugrađivanja koristeći OpenAI Model Ugrađivanja.
+[Текстуални ембеддинзи](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) су техника представљања текста која се користи у [обради природног језика](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Текстуални ембеддинзи су семантички нумерички прикази текста. Ембеддинзи се користе да представе податке на начин који је лак за разумевање машинама. Постоји много модела за прављење текстуалних ембеддинга, а у овој лекцији ћемо се фокусирати на генерисање ембеддинга коришћењем OpenAI Embedding модела.
 
-Evo primera, zamislite da je sledeći tekst u transkriptu iz jedne od epizoda na AI Show YouTube kanalu:
+Ево примера, замислите да је следећи текст из транскрипта једне епизоде на AI Show YouTube каналу:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Proslijedili bismo tekst OpenAI Embedding API-ju i on bi vratio sledeće ugrađivanje koje se sastoji od 1536 brojeva, odnosno vektor. Svaki broj u vektoru predstavlja različit aspekt teksta. Radi sažetosti, evo prvih 10 brojeva u vektoru.
+Текст бисмо проследили OpenAI Embedding API-ју који би вратио ембеддинг састављен од 1536 бројева, односно вектор. Сваки број у вектору представља различит аспект текста. За краткоћу, ево првих 10 бројева у вектору.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## Kako se kreira indeks ugrađivanja?
+## Како се креира индекс ембеддинга?
 
-Indeks ugrađivanja za ovu lekciju je kreiran pomoću serije Python skripti. Naći ćete skripte zajedno sa uputstvima u [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) u folderu 'scripts' za ovu lekciju. Ne morate pokretati ove skripte da biste završili ovu lekciju jer je Indeks Ugrađivanja obezbeđen za vas.
+Индекс ембеддинга за ову лекцију направљен је серијом Python скрипти. Скрипте и упутства налазе се у [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) фајлу у фасцикли 'scripts' за ову лекцију. Не морате да покрећете ове скрипте да бисте завршили лекцију јер је индекс ембеддинга већ обезбеђен.
 
-Skripte obavljaju sledeće operacije:
+Скрипте извршавају следеће операције:
 
-1. Transkript za svaki YouTube video u [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) playlisti se preuzima.
-2. Koristeći [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), pokušava se izvući ime govornika iz prvih 3 minuta YouTube transkripta. Ime govornika za svaki video se čuva u Indeksu Ugrađivanja pod nazivom `embedding_index_3m.json`.
-3. Tekst transkripta se zatim deli na **3-minutne tekstualne segmente**. Segment uključuje oko 20 reči koje se preklapaju iz sledećeg segmenta kako bi se osiguralo da Ugrađivanje za segment nije prekinuto i da se obezbedi bolji kontekst pretrage.
-4. Svaki tekstualni segment se zatim šalje OpenAI Chat API-ju da sažme tekst u 60 reči. Sažetak se takođe čuva u Indeksu Ugrađivanja `embedding_index_3m.json`.
-5. Konačno, tekst segmenta se šalje OpenAI Embedding API-ju. Embedding API vraća vektor od 1536 brojeva koji predstavljaju semantičko značenje segmenta. Segment zajedno sa OpenAI Embedding vektorom se čuva u Indeksu Ugrađivanja `embedding_index_3m.json`.
+1. Преузима се транскрипт за сваки YouTube видео у [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) плејлисти.
+2. Коришћењем [OpenAI функција](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) покушава се издвојити име говорника из прва 3 минута транскрипта. Име говорника за сваки видео се чува у индексу ембеддинга под именом `embedding_index_3m.json`.
+3. Текст транскрипта се дели на сегменте од **3 минута**. Сегмент укључује око 20 речи преклапања са следећим сегментом како би се обезбедило да ембеддинг сегмента није прекинут и да се обезбеди бољи контекст за претрагу.
+4. Сваки сегмент текста се прослеђује OpenAI Chat API-ју да се сажме у 60 речи. Сажетак се такође чува у индексу ембеддинга `embedding_index_3m.json`.
+5. На крају, текст сегмента се шаље OpenAI Embedding API-ју. Embedding API враћа вектор од 1536 бројева који представља семантичко значење сегмента. Сегмент заједно са OpenAI Embedding вектором се чува у индексу ембеддинга `embedding_index_3m.json`.
 
-### Vektorske baze podataka
+### Векторске базе података
 
-Radi jednostavnosti lekcije, Indeks Ugrađivanja je čuvan u JSON datoteci pod nazivom `embedding_index_3m.json` i učitan u Pandas DataFrame. Međutim, u produkciji, Indeks Ugrađivanja bi bio čuvan u vektorskoj bazi podataka kao što su [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), da navedemo samo neke.
+Због једноставности лекције, индекс ембеддинга је сачуван у JSON фајлу под именом `embedding_index_3m.json` и учитан у Pandas DataFrame. Међутим, у продукцији би индекс ембеддинга био сачуван у векторској бази података као што су [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), да набројимо само неке.
 
-## Razumevanje kosinusne sličnosti
+## Разумевање косинусне сличности
 
-Naučili smo o tekstualnim ugrađivanjima, sledeći korak je da naučimo kako koristiti tekstualna ugrađivanja za pretragu podataka i posebno pronaći najviše slična ugrađivanja za dati upit koristeći kosinusnu sličnost.
+Након што смо научили о текстуалним ембеддинзима, следећи корак је да научимо како да користимо текстуалне ембеддинге за претраживање података и посебно како да пронађемо најсличније ембеддинге датој претрази користећи косинусну сличност.
 
-### Šta je kosinusna sličnost?
+### Шта је косинусна сличност?
 
-Kosinusna sličnost je mera sličnosti između dva vektora, često ćete čuti da se to naziva `nearest neighbor search`. Da biste obavili pretragu kosinusne sličnosti, potrebno je da _vektorizujete_ tekst upita koristeći OpenAI Embedding API. Zatim izračunajte _kosinusnu sličnost_ između vektora upita i svakog vektora u Indeksu Ugrađivanja. Zapamtite, Indeks Ugrađivanja ima vektor za svaki tekstualni segment YouTube transkripta. Na kraju, sortirajte rezultate po kosinusnoj sličnosti i tekstualni segmenti sa najvišom kosinusnom sličnosti su najviše slični upitu.
+Косинусна сличност је мера сличности између два вектора, често се назива и `претрага најближег суседа`. Да бисте извршили претрагу по косинусној сличности, потребно је да _векторизујете_ текст упита користећи OpenAI Embedding API. Затим израчунате _косинусну сличност_ између вектора упита и сваког вектора у индексу ембеддинга. Запамтите, индекс ембеддинга садржи вектор за сваки сегмент текста из YouTube транскрипта. На крају, сортирате резултате по косинусној сличности, а сегменти текста са највишом косинусном сличношћу су најсличнији упиту.
 
-Iz matematičke perspektive, kosinusna sličnost meri kosinus ugla između dva vektora projektovana u višedimenzionalnom prostoru. Ova mera je korisna, jer ako su dva dokumenta daleko po Euklidskoj distanci zbog veličine, i dalje mogu imati manji ugao između njih i stoga veću kosinusnu sličnost. Za više informacija o jednačinama kosinusne sličnosti, pogledajte [Kosinusna sličnost](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Из математичке перспективе, косинусна сличност мери косинус угла између два вектора пројектована у вишедимензионалном простору. Ова мера је корисна јер, ако су два документа удаљена по Евклидовој удаљености због величине, могу и даље имати мањи угао између себе и самим тим већу косинусну сличност. За више информација о формулама косинусне сличности, погледајте [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Izgradnja vaše prve aplikacije za pretragu
+## Прављење ваше прве претраживачке апликације
 
-Sledeće, naučićemo kako izgraditi aplikaciju za pretragu koristeći Ugrađivanja. Aplikacija za pretragu će omogućiti studentima da pretražuju video tako što će uneti pitanje. Aplikacija za pretragu će vratiti listu videa koji su relevantni za pitanje. Aplikacija za pretragu će takođe vratiti link do mesta u videu gde se nalazi odgovor na pitanje.
+Следеће ћемо научити како да направимо претраживачку апликацију користећи ембеддинге. Апликација ће омогућити студентима да претражују видео тако што ће унети питање. Апликација ће вратити листу видео снимака релевантних за питање. Такође ће вратити линк до места у видеу где се налази одговор на питање.
 
-Ovo rešenje je izgrađeno i testirano na Windows 11, macOS, i Ubuntu 22.04 koristeći Python 3.10 ili noviji. Python možete preuzeti sa [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Ово решење је направљено и тестирано на Windows 11, macOS и Ubuntu 22.04 користећи Python 3.10 или новији. Python можете преузети са [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-## Zadatak - izgradnja aplikacije za pretragu, da omogućite studentima
+## Задатак - прављење претраживачке апликације за студенте
 
-Predstavili smo našu startup organizaciju na početku ove lekcije. Sada je vreme da omogućite studentima da izgrade aplikaciju za pretragu za njihove zadatke.
+На почетку лекције представили смо наш стартап. Сада је време да омогућите студентима да направе претраживачку апликацију за своје задатке.
 
-U ovom zadatku, kreiraćete Azure OpenAI Services koje će se koristiti za izgradnju aplikacije za pretragu. Kreiraćete sledeće Azure OpenAI Services. Trebaće vam Azure pretplata da završite ovaj zadatak.
+У овом задатку креираћете Azure OpenAI услуге које ће се користити за прављење претраживачке апликације. Креираћете следеће Azure OpenAI услуге. За овај задатак потребна вам је Azure претплата.
 
-### Pokrenite Azure Cloud Shell
+### Покретање Azure Cloud Shell-а
 
-1. Prijavite se na [Azure portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
-2. Izaberite ikonu Cloud Shell u gornjem desnom uglu Azure portala.
-3. Izaberite **Bash** za tip okruženja.
+1. Пријавите се на [Azure портал](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
+2. Изаберите икону Cloud Shell у горњем десном углу Azure портала.
+3. Изаберите **Bash** као тип окружења.
 
-#### Kreirajte grupu resursa
+#### Креирање групе ресурса
 
-> Za ove instrukcije, koristimo grupu resursa pod nazivom "semantic-video-search" u Istočnom SAD-u.
-> Možete promeniti ime grupe resursa, ali kada menjate lokaciju za resurse,
-> proverite [tabelu dostupnosti modela](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> За ове инструкције користимо групу ресурса под именом "semantic-video-search" у East US.
+> Можете променити име групе ресурса, али када мењате локацију ресурса,
+> проверите [табелу доступности модела](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### Kreirajte resurs Azure OpenAI Service
+#### Креирање Azure OpenAI Service ресурса
 
-Iz Azure Cloud Shell-a, pokrenite sledeću komandu da kreirate resurs Azure OpenAI Service.
+У Azure Cloud Shell-у покрените следећу команду да бисте креирали Azure OpenAI Service ресурс.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-#### Preuzmite krajnju tačku i ključeve za korišćenje u ovoj aplikaciji
+#### Добијање endpoint-а и кључева за коришћење у овој апликацији
 
-Iz Azure Cloud Shell-a, pokrenite sledeće komande da preuzmete krajnju tačku i ključeve za resurs Azure OpenAI Service.
+У Azure Cloud Shell-у покрените следеће команде да бисте добили endpoint и кључеве за Azure OpenAI Service ресурс.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -142,9 +142,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### Implementirajte OpenAI Embedding model
+#### Деплој OpenAI Embedding модела
 
-Iz Azure Cloud Shell-a, pokrenite sledeću komandu da implementirate OpenAI Embedding model.
+У Azure Cloud Shell-у покрените следећу команду да бисте деплојовали OpenAI Embedding модел.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -157,19 +157,19 @@ az cognitiveservices account deployment create \
     --sku-capacity 100 --sku-name "Standard"
 ```
 
-## Rešenje
+## Решење
 
-Otvorite [rešenje notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) u GitHub Codespaces i pratite uputstva u Jupyter Notebook-u.
+Отворите [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) у GitHub Codespaces и пратите упутства у Jupyter Notebook-у.
 
-Kada pokrenete notebook, bićete upitani da unesete upit. Polje za unos će izgledati ovako:
+Када покренете notebook, бићете упитани да унесете упит. Поље за унос ће изгледати овако:
 
-![Polje za unos za korisnika da unese upit](../../../translated_images/notebook-search.31eabddd06254ea17ca4fe27dec0373d294da1abe4c1e8b7edc0dd31a18aeb9a.sr.png)
+![Поље за унос упита](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sr.png)
 
-## Odličan rad! Nastavite sa učenjem
+## Одличан посао! Наставите са учењем
 
-Nakon završetka ove lekcije, pogledajte našu [Generativnu AI kolekciju za učenje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa unapređivanjem svog znanja o Generativnoj AI!
+Након завршетка ове лекције, погледајте нашу [Generative AI Learning колекцију](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да бисте наставили да унапређујете своје знање о генеративној вештачкој интелигенцији!
 
-Pređite na Lekciju 9 gde ćemo pogledati kako [izgraditi aplikacije za generisanje slika](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Прелазимо на Лекцију 9 где ћемо погледати како да [правимо апликације за генерисање слика](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Одричање од одговорности**:  
-Овај документ је преведен коришћењем услуге AI превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Нисмо одговорни за било каква погрешна разумевања или интерпретације које произилазе из употребе овог превода.
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитетним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.
