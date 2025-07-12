@@ -8,6 +8,9 @@ on:
     paths:
       - '**.md'
       - '**.ipynb'
+    paths-ignore:
+      - 'translations/**'
+      - 'translated_images/**'
 
 permissions:
   contents: read
