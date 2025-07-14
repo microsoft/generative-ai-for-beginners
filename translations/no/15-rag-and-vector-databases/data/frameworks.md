@@ -2,51 +2,51 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:00:54+00:00",
+  "translation_date": "2025-07-09T16:33:14+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "no"
 }
 -->
 # Nevrale nettverksrammeverk
 
-Som vi allerede har lært, for å kunne trene nevrale nettverk effektivt, må vi gjøre to ting:
+Som vi allerede har lært, for å kunne trene nevrale nettverk effektivt må vi gjøre to ting:
 
-* Operere på tensorer, for eksempel å multiplisere, legge til, og beregne noen funksjoner som sigmoid eller softmax
-* Beregne gradienter av alle uttrykk, for å utføre gradientdescent-optimalisering
+* Å operere på tensorer, f.eks. å multiplisere, legge til, og beregne noen funksjoner som sigmoid eller softmax
+* Å beregne gradienter av alle uttrykk, for å kunne utføre gradientnedstigningsoptimalisering
 
-Mens `numpy`-biblioteket kan gjøre den første delen, trenger vi en mekanisme for å beregne gradienter. I vårt rammeverk som vi har utviklet i forrige seksjon, måtte vi manuelt programmere alle deriverte funksjoner inne i `backward`-metoden, som utfører backpropagation. Ideelt sett bør et rammeverk gi oss muligheten til å beregne gradienter av *ethvert uttrykk* som vi kan definere.
+Mens `numpy`-biblioteket kan gjøre den første delen, trenger vi en mekanisme for å beregne gradienter. I rammeverket vi utviklet i forrige seksjon måtte vi programmere alle deriverte funksjoner manuelt inne i `backward`-metoden, som utfører backpropagation. Ideelt sett bør et rammeverk gi oss muligheten til å beregne gradienter av *hvilket som helst uttrykk* vi kan definere.
 
-En annen viktig ting er å kunne utføre beregninger på GPU, eller andre spesialiserte beregningsenheter, som TPU. Trening av dype nevrale nettverk krever *mye* beregninger, og det er veldig viktig å kunne parallellisere disse beregningene på GPUer.
+En annen viktig ting er å kunne utføre beregninger på GPU, eller andre spesialiserte beregningsenheter, som TPU. Dyp nevralt nettverkstrening krever *mye* beregninger, og det er svært viktig å kunne parallellisere disse beregningene på GPUer.
 
 > ✅ Begrepet 'parallellisere' betyr å fordele beregningene over flere enheter.
 
-For tiden er de to mest populære nevrale rammeverkene: TensorFlow og PyTorch. Begge gir et lavnivå-API for å operere med tensorer på både CPU og GPU. På toppen av lavnivå-APIet er det også et høyere nivå API, kalt henholdsvis Keras og PyTorch Lightning.
+For øyeblikket er de to mest populære nevrale rammeverkene: TensorFlow og PyTorch. Begge tilbyr et lavnivå-API for å operere med tensorer på både CPU og GPU. I tillegg til lavnivå-API finnes det også høyere nivå API, kalt Keras og PyTorch Lightning henholdsvis.
 
-Lavnivå-API | TensorFlow| PyTorch
---------------|-------------------------------------|--------------------------------
-Høynivå-API| Keras| Pytorch
+Lavnivå-API | TensorFlow | PyTorch  
+------------|-------------------------------|-----------------------------  
+Høynivå-API | Keras | PyTorch
 
-**Lavnivå-APIer** i begge rammeverkene lar deg bygge såkalte **beregningsgrafer**. Denne grafen definerer hvordan man beregner utgangen (vanligvis tapsfunksjonen) med gitte inngangsparametere, og kan skyves for beregning på GPU, hvis den er tilgjengelig. Det finnes funksjoner for å differensiere denne beregningsgrafen og beregne gradienter, som deretter kan brukes til å optimalisere modellparametere.
+**Lavnivå-APIer** i begge rammeverkene lar deg bygge såkalte **beregningsgrafer**. Denne grafen definerer hvordan man beregner output (vanligvis tapsfunksjonen) med gitte inputparametere, og kan kjøres på GPU hvis det er tilgjengelig. Det finnes funksjoner for å differensiere denne beregningsgrafen og beregne gradienter, som deretter kan brukes til å optimalisere modellparametere.
 
-**Høynivå-APIer** betrakter stort sett nevrale nettverk som en **sekvens av lag**, og gjør konstruksjonen av de fleste nevrale nettverk mye enklere. Å trene modellen krever vanligvis å forberede dataene og deretter kalle en `fit`-funksjon for å gjøre jobben.
+**Høynivå-APIer** ser på nevrale nettverk som en **sekvens av lag**, og gjør det mye enklere å bygge de fleste nevrale nettverk. Trening av modellen krever vanligvis å forberede dataene og deretter kalle en `fit`-funksjon for å utføre treningen.
 
-Høynivå-APIet lar deg konstruere typiske nevrale nettverk veldig raskt uten å bekymre deg for mange detaljer. Samtidig tilbyr lavnivå-APIet mye mer kontroll over treningsprosessen, og derfor brukes de mye i forskning, når du jobber med nye nevrale nettverksarkitekturer.
+Høynivå-API lar deg raskt bygge typiske nevrale nettverk uten å bekymre deg for mange detaljer. Samtidig gir lavnivå-API mye mer kontroll over treningsprosessen, og brukes derfor mye i forskning når man jobber med nye nevrale nettverksarkitekturer.
 
-Det er også viktig å forstå at du kan bruke begge APIene sammen, for eksempel kan du utvikle din egen nettverkslagsarkitektur ved hjelp av lavnivå-APIet, og deretter bruke den inne i det større nettverket konstruert og trent med høynivå-APIet. Eller du kan definere et nettverk ved hjelp av høynivå-APIet som en sekvens av lag, og deretter bruke din egen lavnivå treningssløyfe for å utføre optimalisering. Begge APIene bruker de samme grunnleggende underliggende konseptene, og de er designet for å fungere godt sammen.
+Det er også viktig å forstå at du kan bruke begge APIene sammen, f.eks. kan du utvikle din egen nettverkslagarkitektur med lavnivå-API, og deretter bruke den i et større nettverk bygget og trent med høynivå-API. Eller du kan definere et nettverk med høynivå-API som en sekvens av lag, og deretter bruke din egen lavnivå treningssløyfe for å utføre optimalisering. Begge APIene bruker de samme grunnleggende konseptene, og er designet for å fungere godt sammen.
 
 ## Læring
 
-I dette kurset tilbyr vi det meste av innholdet både for PyTorch og TensorFlow. Du kan velge ditt foretrukne rammeverk og bare gå gjennom de tilsvarende notatbøkene. Hvis du ikke er sikker på hvilket rammeverk du skal velge, les noen diskusjoner på internett angående **PyTorch vs. TensorFlow**. Du kan også se på begge rammeverkene for å få en bedre forståelse.
+I dette kurset tilbyr vi mesteparten av innholdet både for PyTorch og TensorFlow. Du kan velge ditt foretrukne rammeverk og kun gå gjennom de tilhørende notatbøkene. Hvis du er usikker på hvilket rammeverk du skal velge, kan du lese noen diskusjoner på internett om **PyTorch vs. TensorFlow**. Du kan også se på begge rammeverkene for å få bedre forståelse.
 
-Der det er mulig, vil vi bruke høynivå-APIer for enkelhets skyld. Imidlertid tror vi det er viktig å forstå hvordan nevrale nettverk fungerer fra grunnen av, derfor begynner vi med å jobbe med lavnivå-APIet og tensorer. Men hvis du vil komme i gang raskt og ikke ønsker å bruke mye tid på å lære disse detaljene, kan du hoppe over disse og gå rett inn i notatbøkene for høynivå-APIet.
+Der det er mulig, vil vi bruke høynivå-API for enkelhets skyld. Vi mener imidlertid det er viktig å forstå hvordan nevrale nettverk fungerer helt fra bunnen av, så i starten jobber vi med lavnivå-API og tensorer. Men hvis du vil komme raskt i gang og ikke ønsker å bruke mye tid på å lære disse detaljene, kan du hoppe over dem og gå rett til høynivå-API-notatbøkene.
 
 ## ✍️ Øvelser: Rammeverk
 
 Fortsett læringen i følgende notatbøker:
 
-Lavnivå-API | TensorFlow+Keras Notatbok | PyTorch
---------------|-------------------------------------|--------------------------------
-Høynivå-API| Keras | *PyTorch Lightning*
+Lavnivå-API | TensorFlow+Keras Notebook | PyTorch  
+------------|-------------------------------|-----------------------------  
+Høynivå-API | Keras | *PyTorch Lightning*
 
 Etter å ha mestret rammeverkene, la oss oppsummere begrepet overtilpasning.
 
@@ -54,70 +54,72 @@ Etter å ha mestret rammeverkene, la oss oppsummere begrepet overtilpasning.
 
 Overtilpasning er et ekstremt viktig konsept innen maskinlæring, og det er veldig viktig å få det riktig!
 
-Tenk på følgende problem med å tilnærme 5 punkter (representert av `x` på grafene nedenfor):
+Se for deg følgende problem med å tilnærme 5 punkter (representert med `x` på grafene under):
 
-!lineær | overtilpasning
--------------------------|--------------------------
-**Lineær modell, 2 parametere** | **Ikke-lineær modell, 7 parametere**
-Treningsfeil = 5.3 | Treningsfeil = 0
+!linear | overfit  
+-------------------------|--------------------------  
+**Lineær modell, 2 parametere** | **Ikke-lineær modell, 7 parametere**  
+Treningsfeil = 5.3 | Treningsfeil = 0  
 Valideringsfeil = 5.1 | Valideringsfeil = 20
 
-* Til venstre ser vi en god rett linje tilnærming. Fordi antall parametere er tilstrekkelig, får modellen ideen bak punktfordelingen riktig.
-* Til høyre er modellen for kraftig. Fordi vi bare har 5 punkter og modellen har 7 parametere, kan den justere seg slik at den passerer gjennom alle punktene, noe som gjør at treningsfeilen blir 0. Imidlertid forhindrer dette modellen fra å forstå det riktige mønsteret bak dataene, og dermed er valideringsfeilen veldig høy.
+* Til venstre ser vi en god rett linje-tilnærming. Fordi antallet parametere er passende, fanger modellen opp fordelingen av punktene riktig.
+* Til høyre er modellen for kraftig. Fordi vi bare har 5 punkter og modellen har 7 parametere, kan den justere seg slik at den går gjennom alle punktene, og treningsfeilen blir 0. Dette hindrer modellen i å forstå det riktige mønsteret bak dataene, og valideringsfeilen blir derfor veldig høy.
 
-Det er veldig viktig å finne en riktig balanse mellom modellens rikdom (antall parametere) og antall treningsprøver.
+Det er svært viktig å finne en riktig balanse mellom modellens kompleksitet (antall parametere) og antall treningsprøver.
 
 ## Hvorfor overtilpasning oppstår
 
   * Ikke nok treningsdata
   * For kraftig modell
-  * For mye støy i inngangsdataene
+  * For mye støy i inputdata
 
 ## Hvordan oppdage overtilpasning
 
-Som du kan se fra grafen ovenfor, kan overtilpasning oppdages ved en veldig lav treningsfeil, og en høy valideringsfeil. Normalt under trening vil vi se både trenings- og valideringsfeil begynne å avta, og deretter på et tidspunkt kan valideringsfeilen slutte å avta og begynne å stige. Dette vil være et tegn på overtilpasning, og indikatoren på at vi sannsynligvis bør stoppe treningen på dette punktet (eller i det minste ta et øyeblikksbilde av modellen).
+Som du kan se fra grafen over, kan overtilpasning oppdages ved veldig lav treningsfeil og høy valideringsfeil. Vanligvis under trening vil både trenings- og valideringsfeil begynne å synke, men på et tidspunkt kan valideringsfeilen slutte å synke og begynne å øke. Dette er et tegn på overtilpasning, og en indikasjon på at vi sannsynligvis bør stoppe treningen på dette tidspunktet (eller i det minste ta et øyeblikksbilde av modellen).
+
+overfitting
 
 ## Hvordan forhindre overtilpasning
 
-Hvis du kan se at overtilpasning oppstår, kan du gjøre en av følgende:
+Hvis du ser at overtilpasning oppstår, kan du gjøre en av følgende:
 
  * Øke mengden treningsdata
  * Redusere modellens kompleksitet
- * Bruke en eller annen reguleringsteknikk, som Dropout, som vi vil vurdere senere.
+ * Bruke en form for regularisering, som Dropout, som vi vil se nærmere på senere.
 
-## Overtilpasning og skjevhet-varians-avveining
+## Overtilpasning og Bias-Variance Tradeoff
 
-Overtilpasning er faktisk et tilfelle av et mer generisk problem i statistikk kalt skjevhet-varians-avveining. Hvis vi vurderer de mulige kildene til feil i vår modell, kan vi se to typer feil:
+Overtilpasning er egentlig et tilfelle av et mer generelt problem i statistikk kalt Bias-Variance Tradeoff. Hvis vi ser på mulige feilkilder i modellen vår, kan vi skille to typer feil:
 
-* **Skjevhetsfeil** skyldes at algoritmen vår ikke klarer å fange forholdet mellom treningsdataene riktig. Det kan skyldes at modellen vår ikke er kraftig nok (**undertilpasning**).
-* **Variansfeil**, som skyldes at modellen tilnærmer støy i inngangsdataene i stedet for meningsfullt forhold (**overtilpasning**).
+* **Bias-feil** skyldes at algoritmen vår ikke klarer å fange forholdet i treningsdataene riktig. Dette kan komme av at modellen ikke er kraftig nok (**undertilpasning**).
+* **Variansfeil** skyldes at modellen tilpasser seg støy i inputdataene i stedet for meningsfulle sammenhenger (**overtilpasning**).
 
-Under trening avtar skjevhetsfeilen (ettersom modellen vår lærer å tilnærme dataene), og variansfeilen øker. Det er viktig å stoppe treningen - enten manuelt (når vi oppdager overtilpasning) eller automatisk (ved å introdusere regulering) - for å forhindre overtilpasning.
+Under trening minker bias-feilen (etter hvert som modellen lærer å tilnærme dataene), mens variansfeilen øker. Det er viktig å stoppe treningen – enten manuelt (når vi oppdager overtilpasning) eller automatisk (ved å innføre regularisering) – for å forhindre overtilpasning.
 
 ## Konklusjon
 
-I denne leksjonen lærte du om forskjellene mellom de ulike APIene for de to mest populære AI-rammeverkene, TensorFlow og PyTorch. I tillegg lærte du om et veldig viktig emne, overtilpasning.
+I denne leksjonen har du lært om forskjellene mellom de ulike APIene for de to mest populære AI-rammeverkene, TensorFlow og PyTorch. I tillegg har du lært om et svært viktig tema, overtilpasning.
 
 ## 🚀 Utfordring
 
-I de medfølgende notatbøkene finner du 'oppgaver' nederst; arbeid deg gjennom notatbøkene og fullfør oppgavene.
+I de medfølgende notatbøkene finner du 'oppgaver' nederst; jobb deg gjennom notatbøkene og fullfør oppgavene.
 
-## Gjennomgang og selvstudium
+## Gjennomgang & Selvstudium
 
-Gjør litt research på følgende emner:
+Gjør litt research på følgende temaer:
 
-- TensorFlow
-- PyTorch
+- TensorFlow  
+- PyTorch  
 - Overtilpasning
 
-Spør deg selv følgende spørsmål:
+Still deg selv følgende spørsmål:
 
-- Hva er forskjellen mellom TensorFlow og PyTorch?
+- Hva er forskjellen mellom TensorFlow og PyTorch?  
 - Hva er forskjellen mellom overtilpasning og undertilpasning?
 
 ## Oppgave
 
-I dette laboratoriet blir du bedt om å løse to klassifiseringsproblemer ved hjelp av enkelt- og flerlags fullt tilkoblede nettverk ved hjelp av PyTorch eller TensorFlow.
+I dette laboratoriet skal du løse to klassifiseringsproblemer ved hjelp av enkelt- og flerlags fulltilkoblede nettverk ved bruk av PyTorch eller TensorFlow.
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet har blitt oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Vi streber etter nøyaktighet, men vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalspråket skal anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

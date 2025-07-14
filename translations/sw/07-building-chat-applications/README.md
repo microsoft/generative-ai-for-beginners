@@ -2,74 +2,74 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T18:03:38+00:00",
+  "translation_date": "2025-07-09T12:36:58+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "sw"
 }
 -->
-# Kujenga Programu za Gumzo Zinazoendeshwa na AI ya Kizazi
+# Kujenga Programu za Mazungumzo Zinazotumia AI ya Kizazi
 
-[![Kujenga Programu za Gumzo Zinazoendeshwa na AI ya Kizazi](../../../translated_images/07-lesson-banner.0f61145112d724a50d32abfb0b1841777f3ecec301d6f96a0b7f9d6b0e4756b9.sw.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Kujenga Programu za Mazungumzo Zinazotumia AI ya Kizazi](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.sw.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Bofya picha hapo juu kutazama video ya somo hili)_
+> _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-Sasa tumeona jinsi tunavyoweza kujenga programu za kizazi cha maandishi, hebu tuangalie programu za gumzo.
+Sasa tumeona jinsi tunavyoweza kujenga programu za kizazi cha maandishi, hebu tuchunguze programu za mazungumzo.
 
-Programu za gumzo zimekuwa sehemu ya maisha yetu ya kila siku, zikitoa zaidi ya njia ya mazungumzo ya kawaida. Ni sehemu muhimu za huduma kwa wateja, msaada wa kiufundi, na hata mifumo ya ushauri wa hali ya juu. Ni uwezekano mkubwa kwamba umepata msaada kutoka kwa programu ya gumzo hivi karibuni. Tunapojumuisha teknolojia za hali ya juu kama AI ya kizazi kwenye majukwaa haya, ugumu unaongezeka na changamoto pia zinaongezeka.
+Programu za mazungumzo zimejumuishwa katika maisha yetu ya kila siku, zikitoa zaidi ya njia ya mazungumzo ya kawaida. Ni sehemu muhimu za huduma kwa wateja, msaada wa kiufundi, na hata mifumo ya ushauri wa hali ya juu. Inawezekana umepata msaada kutoka kwa programu ya mazungumzo hivi karibuni. Tunapoingiza teknolojia za hali ya juu kama AI ya kizazi katika majukwaa haya, ugumu unaongezeka na changamoto pia.
 
-Baadhi ya maswali tunayotakiwa kujibu ni:
+Maswali ambayo tunahitaji majibu ni:
 
-- **Kujenga programu**. Je, tunajenga na kuunganisha programu hizi zinazoendeshwa na AI kwa ufanisi kwa matumizi maalum?
-- **Ufuatiliaji**. Mara tu zinapowekwa, tunawezaje kufuatilia na kuhakikisha kwamba programu zinatoa kiwango cha juu cha ubora, katika suala la utendaji na kufuata [kanuni sita za AI yenye uwajibikaji](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **Kujenga programu**. Tunawezaje kujenga na kuunganisha programu hizi zinazoendeshwa na AI kwa ufanisi kwa matumizi maalum?
+- **Ufuatiliaji**. Baada ya kuzinduliwa, tunawezaje kufuatilia na kuhakikisha programu zinafanya kazi kwa kiwango cha juu cha ubora, kwa upande wa utendaji na pia kufuata [kanuni sita za AI yenye uwajibikaji](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Tunaposonga mbele katika zama zinazoelezewa na otomatiki na mwingiliano wa mashine na binadamu bila kikwazo, kuelewa jinsi AI ya kizazi inavyobadilisha upeo, kina, na kubadilika kwa programu za gumzo inakuwa muhimu. Somo hili litachunguza vipengele vya usanifu vinavyounga mkono mifumo hii tata, kuingia katika mbinu za kuifanyia marekebisho kwa kazi maalum za kikoa, na kutathmini vipimo na maoni muhimu ili kuhakikisha uwekaji wa AI yenye uwajibikaji.
+Tunapoendelea katika enzi inayotawaliwa na uendeshaji wa kiotomatiki na mwingiliano usio na mshono kati ya binadamu na mashine, kuelewa jinsi AI ya kizazi inavyobadilisha upeo, kina, na uwezo wa kubadilika wa programu za mazungumzo ni muhimu. Somo hili litaangazia vipengele vya usanifu vinavyounga mkono mifumo hii tata, mbinu za kuiboresha kwa kazi maalum, na tathmini ya vipimo na mambo yanayohusiana na kuhakikisha matumizi ya AI kwa uwajibikaji.
 
 ## Utangulizi
 
-Somo hili linashughulikia:
+Somo hili linajumuisha:
 
-- Mbinu za kujenga na kuunganisha programu za gumzo kwa ufanisi.
-- Jinsi ya kutumia ubinafsishaji na marekebisho kwa programu.
-- Mikakati na maoni ya kufuatilia programu za gumzo kwa ufanisi.
+- Mbinu za kujenga na kuunganisha programu za mazungumzo kwa ufanisi.
+- Jinsi ya kutumia ubinafsishaji na uboreshaji wa programu.
+- Mikakati na mambo ya kuzingatia kufuatilia programu za mazungumzo kwa ufanisi.
 
 ## Malengo ya Kujifunza
 
 Mwisho wa somo hili, utaweza:
 
-- Eleza maoni ya kujenga na kuunganisha programu za gumzo kwenye mifumo iliyopo.
-- Kubinafsisha programu za gumzo kwa matumizi maalum.
-- Tambua vipimo muhimu na maoni ya kufuatilia na kudumisha ubora wa programu za gumzo zinazoendeshwa na AI.
-- Hakikisha programu za gumzo zinatumia AI kwa uwajibikaji.
+- Kuelezea mambo ya kuzingatia wakati wa kujenga na kuunganisha programu za mazungumzo katika mifumo iliyopo.
+- Kubinafsisha programu za mazungumzo kwa matumizi maalum.
+- Kutambua vipimo muhimu na mambo ya kuzingatia kufuatilia na kudumisha ubora wa programu za mazungumzo zinazoendeshwa na AI.
+- Kuhakikisha programu za mazungumzo zinatumia AI kwa uwajibikaji.
 
-## Kuunganisha AI ya Kizazi kwenye Programu za Gumzo
+## Kuunganisha AI ya Kizazi katika Programu za Mazungumzo
 
-Kuboresha programu za gumzo kupitia AI ya kizazi haiko tu kwenye kuzifanya ziwe na akili zaidi; ni kuhusu kuboresha usanifu, utendaji, na kiolesura cha mtumiaji ili kutoa uzoefu bora wa mtumiaji. Hii inahusisha kuchunguza misingi ya usanifu, ujumuishaji wa API, na maoni ya kiolesura cha mtumiaji. Sehemu hii inakusudia kukupa ramani kamili ya kuzunguka mandhari haya magumu, iwe unazijumuisha kwenye mifumo iliyopo au unazijenga kama majukwaa ya pekee.
+Kuinua programu za mazungumzo kupitia AI ya kizazi si tu kuwafanya kuwa na akili zaidi; ni kuhusu kuboresha usanifu wao, utendaji, na muonekano wa mtumiaji ili kutoa uzoefu bora kwa mtumiaji. Hii inahusisha kuchunguza misingi ya usanifu, muunganisho wa API, na mambo ya kuzingatia muonekano wa mtumiaji. Sehemu hii inalenga kukupa ramani kamili ya kuongoza katika maeneo haya magumu, iwe unaziunganisha katika mifumo iliyopo au kuzijenga kama majukwaa huru.
 
-Mwisho wa sehemu hii, utakuwa na ujuzi unaohitajika kujenga na kuingiza programu za gumzo kwa ufanisi.
+Mwisho wa sehemu hii, utakuwa na ujuzi unaohitajika kujenga na kuingiza programu za mazungumzo kwa ufanisi.
 
-### Chatbot au Programu ya Gumzo?
+### Chatbot au Programu ya Mazungumzo?
 
-Kabla ya kuingia katika kujenga programu za gumzo, hebu tulinganishe 'chatbots' dhidi ya 'programu za gumzo zinazoendeshwa na AI,' ambazo zinatumika katika majukumu na utendaji tofauti. Kusudi kuu la chatbot ni kuendesha kazi maalum za mazungumzo, kama vile kujibu maswali yanayoulizwa mara kwa mara au kufuatilia kifurushi. Kwa kawaida inaongozwa na mantiki inayotegemea sheria au algorithmu za AI tata. Kwa upande mwingine, programu ya gumzo inayoendeshwa na AI ni mazingira pana zaidi yaliyoundwa kuwezesha aina mbalimbali za mawasiliano ya kidijitali, kama vile maandishi, sauti, na video kati ya watumiaji wa binadamu. Kipengele chake kinachofafanua ni ujumuishaji wa modeli ya AI ya kizazi inayosimulia mazungumzo ya kina, yanayofanana na binadamu, ikitoa majibu kulingana na anuwai ya pembejeo na ishara za muktadha. Programu ya gumzo inayoendeshwa na AI ya kizazi inaweza kushiriki katika mijadala ya kikoa wazi, kubadilika kulingana na muktadha wa mazungumzo yanayobadilika, na hata kutoa mazungumzo ya ubunifu au tata.
+Kabla hatujaanza kujenga programu za mazungumzo, hebu tulinganishe 'chatbots' na 'programu za mazungumzo zinazoendeshwa na AI,' ambazo zina majukumu na kazi tofauti. Kusudi kuu la chatbot ni kuendesha kazi maalum za mazungumzo kwa njia ya kiotomatiki, kama kujibu maswali yanayoulizwa mara kwa mara au kufuatilia kifurushi. Kwa kawaida hutegemea mantiki ya kanuni au algoriti tata za AI. Kinyume chake, programu ya mazungumzo inayotumia AI ni mazingira pana zaidi yaliyoundwa kuwezesha aina mbalimbali za mawasiliano ya kidijitali, kama mazungumzo ya maandishi, sauti, na video kati ya watumiaji wa binadamu. Kipengele chake kikuu ni kuingiza mfano wa AI wa kizazi unaoiga mazungumzo ya kina, ya kibinadamu, ukizalisha majibu kulingana na aina mbalimbali za pembejeo na muktadha. Programu ya mazungumzo inayotumia AI ya kizazi inaweza kushiriki katika mijadala ya wazi, kubadilika kulingana na muktadha unaobadilika wa mazungumzo, na hata kuunda mazungumzo ya ubunifu au tata.
 
-Jedwali hapa chini linaonyesha tofauti kuu na kufanana ili kutusaidia kuelewa majukumu yao ya kipekee katika mawasiliano ya kidijitali.
+Jedwali hapa chini linaonyesha tofauti na mfanano muhimu kusaidia kuelewa majukumu yao ya kipekee katika mawasiliano ya kidijitali.
 
-| Chatbot                               | Programu ya Gumzo Zinazoendeshwa na AI ya Kizazi |
-| ------------------------------------- | -------------------------------------- |
-| Inalenga kazi na inategemea sheria    | Inajua muktadha                        |
-| Mara nyingi hujumuishwa katika mifumo mikubwa | Inaweza kuwa na chatbots moja au nyingi |
-| Inategemea kazi zilizopangwa          | Inajumuisha modeli za AI ya kizazi     |
-| Mwingiliano maalum na uliopangwa      | Ina uwezo wa mijadala ya kikoa wazi    |
+| Chatbot                               | Programu ya Mazungumzo Inayotumia AI ya Kizazi |
+| ------------------------------------- | ---------------------------------------------- |
+| Inazingatia kazi maalum na kanuni    | Inaelewa muktadha                              |
+| Mara nyingi huunganishwa katika mifumo mikubwa | Inaweza kuwa mwenyeji wa chatbot moja au zaidi  |
+| Inazingatia kazi zilizopangwa tu      | Inajumuisha mifano ya AI ya kizazi             |
+| Mazungumzo maalum na yaliyopangwa     | Ina uwezo wa mijadala ya wazi                   |
 
-### Kutumia Utendaji Uliojengwa Tayari na SDKs na APIs
+### Kutumia vipengele vilivyotengenezwa tayari kwa SDK na API
 
-Unapojenga programu ya gumzo, hatua nzuri ya kwanza ni kutathmini kilichopo tayari. Kutumia SDKs na APIs kujenga programu za gumzo ni mkakati wa faida kwa sababu mbalimbali. Kwa kujumuisha SDKs na APIs zilizoandikwa vizuri, unaweka programu yako kimkakati kwa mafanikio ya muda mrefu, kushughulikia maswala ya upanuzi na matengenezo.
+Unapojenga programu ya mazungumzo, hatua nzuri ya kwanza ni kutathmini kile kilichopo tayari. Kutumia SDK na API kujenga programu za mazungumzo ni mkakati wenye faida kwa sababu mbalimbali. Kwa kuingiza SDK na API zilizoandikwa vizuri, unaweka programu yako katika nafasi nzuri ya mafanikio ya muda mrefu, ukitatua masuala ya upanuzi na matengenezo.
 
-- **Inaharakisha mchakato wa maendeleo na kupunguza gharama**: Kutegemea utendaji uliojengwa tayari badala ya mchakato wa gharama kubwa wa kuujenga mwenyewe hukuruhusu kuzingatia vipengele vingine vya programu yako ambavyo unaweza kuona ni muhimu zaidi, kama vile mantiki ya biashara.
-- **Utendaji bora**: Unapojenga utendaji kutoka mwanzo, mwishowe utauliza "Je, inapanuka? Je, programu hii ina uwezo wa kushughulikia ongezeko la ghafla la watumiaji?" SDK na APIs zinazotunzwa vizuri mara nyingi zina suluhisho za ndani kwa maswala haya.
-- **Matengenezo rahisi**: Sasisho na maboresho ni rahisi kudhibiti kwani API na SDK nyingi zinahitaji tu sasisho kwa maktaba wakati toleo jipya linatolewa.
-- **Ufikiaji wa teknolojia ya kisasa**: Kutumia modeli ambazo zimefanyiwa marekebisho na kufundishwa kwenye seti kubwa za data kunatoa programu yako uwezo wa lugha asilia.
+- **Hurahisisha mchakato wa maendeleo na kupunguza mzigo**: Kutegemea vipengele vilivyotengenezwa tayari badala ya mchakato wa gharama kubwa wa kuviunda mwenyewe kunakuwezesha kuzingatia sehemu nyingine za programu yako ambazo unaweza kuona ni muhimu zaidi, kama mantiki ya biashara.
+- **Utendaji bora**: Unapojenga kipengele kutoka mwanzo, hatimaye utajiuliza "Je, kinaweza kupanuka vipi? Je, programu hii inaweza kushughulikia wateja wengi kwa ghafla?" SDK na API zilizoendelezwa vizuri mara nyingi zina suluhisho zilizojengwa kwa masuala haya.
+- **Matengenezo rahisi**: Sasisho na maboresho ni rahisi kusimamia kwani API na SDK nyingi zinahitaji tu sasisho la maktaba wakati toleo jipya linapotolewa.
+- **Kupata teknolojia ya kisasa**: Kutumia mifano iliyoboreshwa na kufunzwa kwa seti kubwa za data kunatoa programu yako uwezo wa lugha asilia.
 
-Kufikia utendaji wa SDK au API kwa kawaida kunahusisha kupata ruhusa ya kutumia huduma zinazotolewa, ambayo mara nyingi ni kupitia matumizi ya ufunguo wa kipekee au tokeni ya uthibitisho. Tutatumia Maktaba ya Python ya OpenAI kuchunguza jinsi hii inavyoonekana. Unaweza pia kujaribu mwenyewe kwenye [notebook ya OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) au [notebook ya Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) kwa somo hili.
+Kupata huduma za SDK au API kawaida huhitaji ruhusa ya kutumia huduma zinazotolewa, mara nyingi kupitia ufunguo wa kipekee au tokeni ya uthibitishaji. Tutatumia Maktaba ya OpenAI Python kuchunguza mfano huu. Unaweza pia kujaribu mwenyewe katika [daftari la OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) au [daftari la Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) kwa somo hili.
 
 ```python
 import os
@@ -84,87 +84,111 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Mfano hapo juu unatumia modeli ya GPT-3.5 Turbo kukamilisha ombi, lakini angalia kwamba ufunguo wa API umewekwa kabla ya kufanya hivyo. Ungepokea kosa ikiwa hukuweka ufunguo.
+Mfano hapo juu unatumia mfano wa GPT-3.5 Turbo kukamilisha maelekezo, lakini angalia kuwa ufunguo wa API umewekwa kabla ya kufanya hivyo. Utapokea kosa kama hutaunda ufunguo huo.
 
 ## Uzoefu wa Mtumiaji (UX)
 
-Kanuni za jumla za UX zinatumika kwa programu za gumzo, lakini hapa kuna maoni ya ziada ambayo yanakuwa muhimu hasa kutokana na vipengele vya ujifunzaji wa mashine vilivyohusika.
+Kanuni za jumla za UX zinatumika kwa programu za mazungumzo, lakini hapa kuna mambo ya ziada ambayo yanakuwa muhimu hasa kutokana na vipengele vya kujifunza kwa mashine vinavyohusika.
 
-- **Njia ya kushughulikia utata**: Modeli za AI ya kizazi mara kwa mara hutoa majibu yasiyoeleweka. Kipengele kinachoruhusu watumiaji kuuliza ufafanuzi kinaweza kusaidia iwapo watakutana na tatizo hili.
-- **Uhifadhi wa muktadha**: Modeli za AI za kizazi cha hali ya juu zina uwezo wa kukumbuka muktadha ndani ya mazungumzo, ambayo inaweza kuwa mali muhimu kwa uzoefu wa mtumiaji. Kuwapa watumiaji uwezo wa kudhibiti na kusimamia muktadha huboresha uzoefu wa mtumiaji, lakini huleta hatari ya kuhifadhi taarifa nyeti za mtumiaji. Maoni ya muda gani taarifa hii inahifadhiwa, kama vile kuanzisha sera ya uhifadhi, yanaweza kuleta usawa kati ya hitaji la muktadha na faragha.
-- **Ubinafsishaji**: Kwa uwezo wa kujifunza na kubadilika, modeli za AI zinatoa uzoefu wa kibinafsi kwa mtumiaji. Kubinafsisha uzoefu wa mtumiaji kupitia vipengele kama vile profaili za mtumiaji sio tu hufanya mtumiaji ajisikie kueleweka, lakini pia husaidia katika kutafuta majibu maalum, na kuunda mwingiliano bora na wa kuridhisha.
+- **Mbinu ya kushughulikia ukosefu wa uhakika**: Mifano ya AI ya kizazi mara nyingine huunda majibu yenye ukosefu wa uhakika. Kipengele kinachowezesha watumiaji kuomba ufafanuzi kinaweza kusaidia wanapokutana na tatizo hili.
+- **Kuhifadhi muktadha**: Mifano ya AI ya kizazi ya hali ya juu ina uwezo wa kukumbuka muktadha ndani ya mazungumzo, jambo ambalo linaweza kuwa msaada muhimu kwa uzoefu wa mtumiaji. Kuwapa watumiaji uwezo wa kudhibiti na kusimamia muktadha huongeza uzoefu wa mtumiaji, lakini huleta hatari ya kuhifadhi taarifa nyeti za mtumiaji. Kujali kwa muda gani taarifa hizi zinahifadhiwa, kama kuanzisha sera ya uhifadhi, kunaweza kusawazisha hitaji la muktadha dhidi ya faragha.
+- **Ubinafsishaji**: Kwa uwezo wa kujifunza na kubadilika, mifano ya AI hutoa uzoefu wa mtu binafsi kwa mtumiaji. Kubinafsisha uzoefu wa mtumiaji kupitia vipengele kama wasifu wa mtumiaji si tu hufanya mtumiaji ahisi kueleweka, bali pia husaidia katika kutafuta majibu maalum, na kuunda mwingiliano wenye ufanisi na kuridhisha zaidi.
 
-Mfano mmoja wa ubinafsishaji ni mipangilio ya "Maagizo Maalum" katika ChatGPT ya OpenAI. Inakuwezesha kutoa taarifa kuhusu wewe mwenyewe ambayo inaweza kuwa muktadha muhimu kwa maombi yako. Hapa kuna mfano wa maagizo maalum.
+Mfano mmoja wa ubinafsishaji ni mipangilio ya "Maelekezo Maalum" katika ChatGPT ya OpenAI. Inakuwezesha kutoa taarifa kuhusu wewe mwenyewe ambazo zinaweza kuwa muktadha muhimu kwa maelekezo yako. Hapa kuna mfano wa maelekezo maalum.
 
-![Mipangilio ya Maagizo Maalum katika ChatGPT](../../../translated_images/custom-instructions.950e3bf1d66f052ff5c50cd6722f1fcb532089abe33d833c190a3796f4a09827.sw.png)
+![Mipangilio ya Maelekezo Maalum katika ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.sw.png)
 
-Profaili hii inachochea ChatGPT kuunda mpango wa somo kuhusu orodha zilizounganishwa. Angalia kwamba ChatGPT inazingatia kwamba mtumiaji anaweza kutaka mpango wa somo wa kina zaidi kulingana na uzoefu wake.
+"Wasifu" huu unahimiza ChatGPT kuunda mpango wa somo kuhusu linked lists. Angalia kuwa ChatGPT inazingatia kuwa mtumiaji anaweza kutaka mpango wa somo wa kina zaidi kulingana na uzoefu wake.
 
-![Ombi katika ChatGPT kwa mpango wa somo kuhusu orodha zilizounganishwa](../../../translated_images/lesson-plan-prompt.23083d9c80ec7670b3aaf3b093d79a13ed42920da81b851b29f6167b6150aae9.sw.png)
+![Maelekezo katika ChatGPT kwa mpango wa somo kuhusu linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.sw.png)
 
-### Mfumo wa Ujumbe wa Mfumo wa Microsoft kwa Modeli Kubwa za Lugha
+### Mfumo wa Microsoft wa Ujumbe wa Mfumo kwa Mifano Mikubwa ya Lugha
 
-[Microsoft imetoa mwongozo](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) wa kuandika ujumbe wa mfumo mzuri wakati wa kutoa majibu kutoka kwa LLMs iliyogawanywa katika maeneo 4:
+[Microsoft imetoa mwongozo](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) wa kuandika ujumbe mzuri wa mfumo wakati wa kuzalisha majibu kutoka kwa LLMs uliogawanywa katika maeneo 4:
 
-1. Kufafanua nani modeli ni kwa ajili ya, pamoja na uwezo wake na mapungufu yake.
-2. Kufafanua muundo wa matokeo ya modeli.
-3. Kutoa mifano maalum inayoonyesha tabia inayokusudiwa ya modeli.
-4. Kutoa miongozo ya ziada ya tabia.
+1. Kuelezea ni nani mfano ni kwa ajili yake, pamoja na uwezo na vikwazo vyake.
+2. Kuelezea muundo wa matokeo ya mfano.
+3. Kutoa mifano maalum inayoonyesha tabia inayotarajiwa ya mfano.
+4. Kutoa mipaka ya ziada ya tabia.
 
 ### Upatikanaji
 
-Iwe mtumiaji ana ulemavu wa kuona, kusikia, motor, au utambuzi, programu ya gumzo iliyoundwa vizuri inapaswa kutumika na kila mtu. Orodha ifuatayo inavunja vipengele maalum vinavyolenga kuboresha upatikanaji kwa watumiaji wenye ulemavu mbalimbali.
+Iwe mtumiaji ana matatizo ya kuona, kusikia, mwendo, au akili, programu ya mazungumzo iliyoundwa vizuri inapaswa kutumika na wote. Orodha ifuatayo inaelezea vipengele maalum vinavyolenga kuboresha upatikanaji kwa aina mbalimbali za ulemavu wa mtumiaji.
 
-- **Vipengele kwa Ulemavu wa Kuona**: Mandhari yenye tofauti ya juu na maandishi yanayoweza kupanuka, ushirikiano wa wasomaji wa skrini.
-- **Vipengele kwa Ulemavu wa Kusikia**: Vipengele vya maandishi-kwa-sauti na sauti-kwa-maandishi, vihisishi vya kuona kwa arifa za sauti.
-- **Vipengele kwa Ulemavu wa Motor**: Msaada wa urambazaji kwa kibodi, amri za sauti.
-- **Vipengele kwa Ulemavu wa Utambuzi**: Chaguo za lugha rahisi.
+- **Vipengele kwa Ulemavu wa Kuona**: Mandhari yenye tofauti kubwa ya rangi na maandishi yanayoweza kubadilika ukubwa, usaidizi wa kusoma skrini.
+- **Vipengele kwa Ulemavu wa Kusikia**: Kazi za maandishi-kwa-sauti na sauti-kwa-maandishi, ishara za kuona kwa arifa za sauti.
+- **Vipengele kwa Ulemavu wa Mwendo**: Msaada wa urambazaji kwa kibodi, amri za sauti.
+- **Vipengele kwa Ulemavu wa Akili**: Chaguzi za lugha rahisi.
 
-## Ubinafsishaji na Marekebisho kwa Modeli za Lugha za Kikoa Maalum
+## Ubinafsishaji na Uboreshaji kwa Mifano ya Lugha Maalum kwa Sekta
 
-Fikiria programu ya gumzo inayofahamu istilahi ya kampuni yako na kutabiri maswali maalum ambayo msingi wa watumiaji wake huwa nayo mara kwa mara. Kuna njia kadhaa zinazostahili kutajwa:
+Fikiria programu ya mazungumzo inayofahamu istilahi ya kampuni yako na kutabiri maswali maalum ambayo watumiaji wake mara nyingi huuliza. Kuna mbinu kadhaa zinazostahili kutajwa:
 
-- **Kutumia modeli za DSL**. DSL inasimama kwa lugha maalum ya kikoa. Unaweza kutumia modeli ya DSL inayoitwa hivyo ambayo imefundishwa kwenye kikoa maalum ili kuelewa dhana zake na hali zake.
-- **Tumia marekebisho**. Marekebisho ni mchakato wa kufundisha zaidi modeli yako na data maalum.
+- **Kutumia mifano ya DSL**. DSL inasimama kwa domain specific language (lugha maalum ya sekta). Unaweza kutumia mfano wa DSL uliotengenezwa kwa sekta maalum kuelewa dhana na hali zake.
+- **Tumia uboreshaji**. Uboreshaji ni mchakato wa kufunza zaidi mfano wako kwa data maalum.
 
 ## Ubinafsishaji: Kutumia DSL
 
-Kutumia modeli za lugha maalum za kikoa (Modeli za DSL) kunaweza kuongeza ushiriki wa watumiaji na kutoa mwingiliano maalum, unaofaa kwa muktadha. Ni modeli ambayo imefundishwa au kufanyiwa marekebisho ili kuelewa na kutoa maandishi yanayohusiana na uwanja maalum, tasnia, au somo. Chaguo za kutumia modeli ya DSL zinaweza kutofautiana kutoka kwa kufundisha moja kutoka mwanzo, hadi kutumia zile zilizopo kupitia SDKs na APIs. Chaguo lingine ni marekebisho, ambayo yanahusisha kuchukua modeli iliyofundishwa tayari na kuibadilisha kwa kikoa maalum.
+Kutumia mifano ya lugha maalum ya sekta (DSL Models) kunaweza kuongeza ushiriki wa mtumiaji kwa kutoa mazungumzo maalum, yanayohusiana na muktadha. Ni mfano uliotengenezwa au kuboreshwa kuelewa na kuzalisha maandishi yanayohusiana na uwanja, sekta, au somo fulani. Chaguzi za kutumia mfano wa DSL zinaweza kuanzia kufunza mmoja kutoka mwanzo, hadi kutumia zilizopo kupitia SDK na API. Chaguo jingine ni uboreshaji, unaohusisha kuchukua mfano uliotanguliwa na kuubadilisha kwa sekta maalum.
 
-## Ubinafsishaji: Tumia Marekebisho
+## Ubinafsishaji: Tumia uboreshaji
 
-Marekebisho mara nyingi huchukuliwa wakati modeli iliyofundishwa tayari inashindwa katika kikoa maalum au kazi maalum.
+Uboreshaji mara nyingi huzingatiwa wakati mfano uliotanguliwa haukidhi mahitaji katika sekta maalum au kazi fulani.
 
-Kwa mfano, maswali ya matibabu ni tata na yanahitaji muktadha mwingi. Wakati mtaalamu wa matibabu anapogundua mgonjwa inategemea mambo mbalimbali kama vile mtindo wa maisha au hali zilizopo, na inaweza hata kutegemea majarida ya matibabu ya hivi karibuni ili kuthibitisha utambuzi wao. Katika hali kama hizi za kina, programu ya gumzo ya AI ya kusudi la jumla haiwezi kuwa chanzo cha kuaminika.
+Kwa mfano, maswali ya matibabu ni magumu na yanahitaji muktadha mwingi. Wakati mtaalamu wa matibabu anapotathmini mgonjwa, hutegemea mambo mbalimbali kama mtindo wa maisha au hali zilizopo awali, na hata hutegemea majarida ya hivi karibuni ya matibabu kuthibitisha utambuzi wake. Katika hali hizi tata, programu ya mazungumzo ya AI ya matumizi ya jumla haiwezi kuwa chanzo cha kuaminika.
 
-### Hali: programu ya matibabu
+### Mfano: programu ya matibabu
 
-Fikiria programu ya gumzo iliyoundwa kusaidia wataalamu wa matibabu kwa kutoa marejeo ya haraka kwa miongozo ya matibabu, mwingiliano wa dawa, au matokeo ya utafiti wa hivi karibuni.
+Fikiria programu ya mazungumzo iliyoundwa kusaidia wataalamu wa matibabu kwa kutoa marejeleo ya haraka ya miongozo ya matibabu, mwingiliano wa dawa, au matokeo ya utafiti wa hivi karibuni.
 
-Modeli ya kusudi la jumla inaweza kutosha kujibu maswali ya kimsingi ya matibabu au kutoa ushauri wa jumla, lakini inaweza kukumbana na changamoto zifuatazo:
+Mfano wa matumizi ya jumla unaweza kutosha kujibu maswali ya msingi ya matibabu au kutoa ushauri wa jumla, lakini unaweza kushindwa na yafuatayo:
 
-- **Hali maalum au tata sana**. Kwa mfano, mtaalamu wa neva anaweza kuuliza programu, "Je, ni mazoea bora ya sasa ya kusimamia kifafa kisichotii dawa kwa wagonjwa wa watoto?"
-- **Kukosa maendeleo ya hivi karibuni**. Modeli ya kusudi la jumla inaweza kukumbana na changamoto ya kutoa jibu la sasa ambalo linajumuisha maendeleo ya hivi karibuni katika neurologia na pharmacologia.
+- **Hali maalum au ngumu sana**. Kwa mfano, mtaalamu wa neva anaweza kumuuliza programu, "Ni mbinu bora za sasa za kusimamia kifafa kisichojibu dawa kwa watoto?"
+- **Ukosefu wa maendeleo ya hivi karibuni**. Mfano wa jumla unaweza kushindwa kutoa jibu la sasa linalojumuisha maendeleo ya hivi karibuni katika neurology na pharmacology.
 
-Katika hali kama hizi, kufanyia marekebisho modeli na seti ya data maalum ya matibabu kunaweza kuboresha uwezo wake wa kushughulikia maswali haya ya matibabu ya kina kwa usahihi na kwa kuaminika. Hii inahitaji ufikiaji wa seti kubwa na inayofaa ya data inayowakilisha changamoto na maswali maalum ya kikoa yanayohitaji kushughulikiwa.
+Katika hali kama hizi, kuboresha mfano kwa seti maalum ya data za matibabu kunaweza kuboresha sana uwezo wake wa kushughulikia maswali haya magumu kwa usahihi na kuaminika zaidi. Hii inahitaji upatikanaji wa seti kubwa na husika ya data inayowakilisha changamoto na maswali maalum ya sekta yanayohitaji kushughulikiwa.
 
-## Maoni ya Uzoefu wa Gumzo wa AI wa Ubora wa Juu
+## Mambo ya Kuzingatia kwa Uzoefu wa Mazungumzo wa AI wa Ubora wa Juu
 
-Sehemu hii inaelezea vigezo vya programu za gumzo za "ubora wa juu," ambazo zinajumuisha kukamata vipimo vinavyoweza kutekelezwa na kufuata mfumo unaotumia teknolojia ya AI kwa uwajibikaji.
+Sehemu hii inaelezea vigezo vya programu za mazungumzo "za ubora wa juu," vinavyojumuisha ukusanyaji wa vipimo vinavyoweza kuchukuliwa hatua na kufuata mfumo unaotumia teknolojia ya AI kwa uwajibikaji.
 
 ### Vipimo Muhimu
 
-Ili kudumisha utendaji wa ubora wa juu wa programu, ni muhimu kufuatilia vipimo muhimu na maoni. Vipimo hivi sio tu vinahakikisha utendaji wa programu lakini pia vinatathmini ubora wa modeli ya AI na uzoefu wa mtumiaji. Hapa chini ni orodha inayofunika vipimo vya msingi, AI, na uzoefu wa mtumiaji vya kuzingatia.
+Ili kudumisha utendaji wa ubora wa juu wa programu, ni muhimu kufuatilia vipimo na mambo ya kuzingatia. Vipimo hivi si tu vinahakikisha utendaji wa programu bali pia hupima ubora wa mfano wa AI na uzoefu wa mtumiaji. Hapa chini ni orodha inayojumuisha vipimo vya msingi, AI, na uzoefu wa mtumiaji vya kuzingatia.
 
-| Kipimo                        | Ufafanuzi                                                                                                             | Maoni kwa Msanidi wa Gumzo                                         |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Uptime**                    | Inapima muda ambao programu inafanya kazi na kupatikana kwa watumiaji.                                              | Je, utapunguza muda wa kutofanya kazi vipi?                                           |
-| **Muda wa Kujibu**             | Muda unaochukuliwa na programu kujibu swali la mtumiaji.                                                          | Je, unaweza kuboresha usindikaji wa swali ili kuboresha muda wa kujibu?           |
-| **Usahihi**                 | Uwiano wa utabiri sahihi wa kweli kwa jumla ya utabiri wa kweli                                     | Je, utathibitisha usahihi wa modeli yako vipi?                        |
-| **Recall (Unyeti)**      | Uwiano wa utabiri sahihi wa kweli kwa idadi halisi ya usahihi                                               | Je, utapima na kuboresha recall vipi?                                  |
-| **F1 Score**                  | Wastani wa harmonic wa usahihi na recall, unaosawazisha biashara kati ya zote mbili.                                   | Je, ni F1 Score yako inayolengwa? Je, utasawazisha usahihi na recall vipi?  |
-| **Perplexity**                | Inapima jinsi usambazaji wa uwezekano uliotabiriwa na modeli unavyolingana na usambazaji halisi wa data. | Je, utapunguza perplexity vipi?                                         |
-| **Vipimo vya Kuridhika kwa Mtumiaji** | Inapima mtazamo wa mtumiaji kuhusu programu. Mara nyingi hukamatwa kupitia tafiti.                                     | Je, utakusanya maoni ya mtumiaji mara ngapi
+| Kipimo                       | Maelezo                                                                                                               | Mambo ya Kuzingatia kwa Mjenzi wa Programu za Mazungumzo             |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Uptime**                   | Hupima muda programu inavyofanya kazi na kupatikana kwa watumiaji.                                                   | Utapunguza vipi muda wa kutofanya kazi?                              |
+| **Muda wa Kujibu**           | Muda unaochukuliwa na programu kujibu swali la mtumiaji.                                                             | Unawezaje kuboresha usindikaji wa maswali ili kupunguza muda wa kujibu? |
+| **Usahihi**                  | Uwiano wa utabiri sahihi wa chanya kwa jumla ya utabiri chanya.                                                       | Utathmini vipi usahihi wa mfano wako?                               |
+| **Kumbukumbu (Uwezo wa Kugundua)** | Uwiano wa utabiri sahihi wa chanya kwa idadi halisi ya chanya.                                                        | Utapima na kuboresha vipi kumbukumbu?                               |
+| **Alama ya F1**              | Wastani wa harmonic wa usahihi na kumbukumbu, unaosawazisha mabadiliko kati ya vyote viwili.                          | Lengo lako la Alama ya F1 ni lipi? Utasawazisha vipi usahihi na kumbukumbu? |
+| **Ugumu (Perplexity)**       | Hupima jinsi usambazaji wa uwezekano unaotabiriwa na mfano unavyolingana na usambazaji halisi wa data.                 | Utapunguza vipi ugumu?                                              |
+| **Vipimo vya Kuridhika kwa Mtumiaji** | Hupima mtazamo wa mt
+| **Ugunduzi wa Anomali**         | Zana na mbinu za kubaini mifumo isiyo ya kawaida ambayo haifuati tabia inayotarajiwa.                        | Utajibu vipi anomali?                                        |
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwepo kwa usahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa habari muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya kibinadamu. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+### Kutekeleza Mazoea ya AI yenye Uwajibikaji katika Programu za Chat
+
+Mbinu ya Microsoft kuhusu AI yenye Uwajibikaji imebaini kanuni sita ambazo zinapaswa kuongoza maendeleo na matumizi ya AI. Hapa chini ni kanuni hizo, ufafanuzi wake, na mambo ambayo mtaalamu wa chat anapaswa kuzingatia pamoja na sababu za kuzichukulia kwa umakini.
+
+| Kanuni                 | Ufafanuzi wa Microsoft                                | Mambo ya Kuzingatia kwa Mtaalamu wa Chat                        | Kwa Nini Ni Muhimu                                                                     |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Haki                   | Mifumo ya AI inapaswa kutendea watu wote kwa haki.   | Hakikisha programu ya chat haibaguani kwa misingi ya data za watumiaji. | Kujenga imani na ushirikishwaji miongoni mwa watumiaji; kuepuka matatizo ya kisheria.  |
+| Uaminifu na Usalama    | Mifumo ya AI inapaswa kufanya kazi kwa uaminifu na usalama. | Tekeleza majaribio na mbinu za kuzuia makosa na hatari.          | Kuhakikisha kuridhika kwa mtumiaji na kuzuia madhara yanayoweza kutokea.               |
+| Faragha na Usalama     | Mifumo ya AI inapaswa kuwa salama na kuheshimu faragha. | Tekeleza usimbaji fiche imara na hatua za kulinda data.          | Kulinda data nyeti za watumiaji na kuzingatia sheria za faragha.                      |
+| Ushirikishwaji         | Mifumo ya AI inapaswa kuwawezesha watu wote na kuwashirikisha. | Tengeneza UI/UX inayopatikana na rahisi kutumia kwa hadhira mbalimbali. | Kuhakikisha watu wengi zaidi wanaweza kutumia programu kwa ufanisi.                    |
+| Uwazi                  | Mifumo ya AI inapaswa kueleweka.                      | Toa nyaraka wazi na sababu za majibu ya AI.                      | Watumiaji wana uwezekano mkubwa wa kuamini mfumo ikiwa wanaelewa jinsi maamuzi yanavyofanywa. |
+| Uwajibikaji            | Watu wanapaswa kuwajibika kwa mifumo ya AI.           | Weka mchakato wazi wa ukaguzi na kuboresha maamuzi ya AI.       | Kuwezesha maboresho endelevu na hatua za kurekebisha makosa yanapotokea.              |
+
+## Kazi ya Nyumbani
+
+Tazama [assignment](../../../07-building-chat-applications/python) itakupeleka kupitia mfululizo wa mazoezi kuanzia kuendesha maelekezo yako ya kwanza ya chat, hadi kuainisha na kufupisha maandishi na zaidi. Tambua kuwa kazi hizi zinapatikana kwa lugha mbalimbali za programu!
+
+## Kazi Nzuri! Endelea Safari
+
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa AI ya Kizazi!
+
+Nenda kwenye Somo la 8 kuona jinsi unavyoweza kuanza [kujenga programu za utafutaji](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

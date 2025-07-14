@@ -2,29 +2,28 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T10:26:34+00:00",
+  "translation_date": "2025-07-09T13:08:12+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "ko"
 }
 -->
 # 전사 데이터 준비
 
-전사 데이터 준비 스크립트는 YouTube 비디오 전사를 다운로드하고 OpenAI 임베딩 및 함수 샘플을 사용한 의미 검색에 사용하도록 준비합니다.
+전사 데이터 준비 스크립트는 YouTube 동영상 자막을 다운로드하고, OpenAI 임베딩 및 함수와 함께 사용하는 시맨틱 검색 샘플에 맞게 준비합니다.
 
-전사 데이터 준비 스크립트는 최신 릴리스인 Windows 11, macOS Ventura 및 Ubuntu 22.04(이상)에서 테스트되었습니다.
+전사 데이터 준비 스크립트는 최신 Windows 11, macOS Ventura, Ubuntu 22.04 이상 버전에서 테스트되었습니다.
 
 ## 필요한 Azure OpenAI 서비스 리소스 생성
 
 > [!IMPORTANT]
-> OpenAI와의 호환성을 보장하기 위해 Azure CLI를 최신 버전으로 업데이트할 것을 권장합니다.
-> [문서](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)를 참조하세요.
+> OpenAI와의 호환성을 위해 Azure CLI를 최신 버전으로 업데이트할 것을 권장합니다.
+> 자세한 내용은 [문서](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)를 참고하세요.
 
 1. 리소스 그룹 생성
 
 > [!NOTE]
-> 이 지침에서는 동부 미국에 "semantic-video-search"라는 리소스 그룹을 사용하고 있습니다.
-> 리소스 그룹의 이름을 변경할 수 있지만, 리소스의 위치를 변경할 때는 
-> [모델 가용성 표](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)를 확인하세요.
+> 이 지침에서는 East US 지역에 "semantic-video-search"라는 이름의 리소스 그룹을 사용합니다.
+> 리소스 그룹 이름은 변경할 수 있지만, 리소스 위치를 변경할 경우 [모델 가용성 표](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)를 확인하세요.
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -37,7 +36,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. 이 애플리케이션에서 사용하기 위한 엔드포인트와 키를 가져옵니다.
+1. 이 애플리케이션에서 사용할 엔드포인트와 키를 가져옵니다.
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -47,8 +46,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. 다음 모델을 배포합니다:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
+   - `text-embedding-ada-002` 버전 `2` 이상, 이름은 `text-embedding-ada-002`
+   - `gpt-35-turbo` 버전 `0613` 이상, 이름은 `gpt-35-turbo`
 
 ```console
 az cognitiveservices account deployment create \
@@ -70,18 +69,18 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## 필요한 소프트웨어
+## 필수 소프트웨어
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 이상
 
 ## 환경 변수
 
-YouTube 전사 데이터 준비 스크립트를 실행하기 위해 다음 환경 변수가 필요합니다.
+YouTube 전사 데이터 준비 스크립트를 실행하려면 다음 환경 변수가 필요합니다.
 
 ### Windows에서
 
-변수를 `user` environment variables.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`에 추가할 것을 권장합니다.
+`user` 환경 변수에 추가하는 것을 권장합니다.  
+`Windows 시작` > `시스템 환경 변수 편집` > `환경 변수` > [사용자]의 `사용자 변수` > `새로 만들기`
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -92,7 +91,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### Linux 및 macOS에서
 
-다음 내보내기를 `~/.bashrc` or `~/.zshrc` 파일에 추가할 것을 권장합니다.
+다음 export 구문을 `~/.bashrc` 또는 `~/.zshrc` 파일에 추가하는 것을 권장합니다.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## 필요한 Python 라이브러리 설치
 
-1. [git 클라이언트](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)를 설치하지 않았다면 설치합니다.
-1. `Terminal` 창에서 샘플을 원하는 저장소 폴더로 클론합니다.
+1. [git 클라이언트](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)가 설치되어 있지 않다면 설치하세요.  
+1. `터미널` 창에서 샘플을 원하는 저장소 폴더로 클론합니다.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -173,4 +172,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 우리는 정확성을 위해 노력하지만, 자동 번역에는 오류나 부정확성이 있을 수 있음을 유의하시기 바랍니다. 원본 문서는 해당 언어로 작성된 문서를 권위 있는 출처로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역을 사용함으로써 발생하는 오해나 잘못된 해석에 대해서는 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확한 부분이 있을 수 있음을 유의해 주시기 바랍니다. 원문은 해당 언어의 원본 문서가 권위 있는 자료로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.

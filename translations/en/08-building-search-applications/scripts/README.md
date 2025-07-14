@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:46:07+00:00",
+  "translation_date": "2025-07-09T13:06:05+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "en"
 }
@@ -16,14 +16,14 @@ The transcription data prep scripts have been tested on the latest releases of W
 ## Create required Azure OpenAI Service resources
 
 > [!IMPORTANT]
-> We suggest you update the Azure CLI to the latest version to ensure compatibility with OpenAI
+> We recommend updating the Azure CLI to the latest version to ensure compatibility with OpenAI
 > See [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Create a resource group
 
 > [!NOTE]
 > For these instructions, we're using the resource group named "semantic-video-search" in East US.
-> You can change the name of the resource group, but when changing the location for the resources,
+> You can change the resource group name, but if you change the location of the resources, 
 > check the [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -37,7 +37,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Get the endpoint and keys for usage in this application
+1. Get the endpoint and keys for use in this application
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -47,8 +47,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Deploy the following models:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
+   - `text-embedding-ada-002` version `2` or higher, named `text-embedding-ada-002`
+   - `gpt-35-turbo` version `0613` or higher, named `gpt-35-turbo`
 
 ```console
 az cognitiveservices account deployment create \
@@ -72,7 +72,7 @@ az cognitiveservices account deployment create \
 
 ## Required software
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) or greater
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) or higher
 
 ## Environment variables
 
@@ -80,7 +80,7 @@ The following environment variables are required to run the YouTube transcriptio
 
 ### On Windows
 
-Recommend adding the variables to your `user` environment variables.
+We recommend adding the variables to your `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -90,9 +90,11 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+
+
 ### On Linux and macOS
 
-Recommend adding the following exports to your `~/.bashrc` or `~/.zshrc` file.
+We recommend adding the following exports to your `~/.bashrc` or `~/.zshrc` file.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +105,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Install the required Python libraries
 
-1. Install the [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) if it's not already installed.
+1. Install the [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) if it’s not already installed.
 1. From a `Terminal` window, clone the sample to your preferred repo folder.
 
     ```bash
@@ -173,4 +175,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **Disclaimer**:  
-This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.

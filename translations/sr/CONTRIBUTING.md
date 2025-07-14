@@ -2,134 +2,134 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:26:07+00:00",
+  "translation_date": "2025-07-09T06:13:07+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "sr"
 }
 -->
-# Doprinos
+# Допринос
 
-Ovaj projekat pozdravlja doprinose i sugestije. Većina doprinosa zahteva da se složite sa Sporazumom o licenci za doprinose (CLA) koji potvrđuje da imate pravo da nam ustupite prava na korišćenje vašeg doprinosa. Za detalje posetite <https://cla.microsoft.com>.
+Овај пројекат поздравља доприносе и предлоге. Већина доприноса захтева да се сложите са Уговором о лиценци за доприносе (CLA) којим изјављујете да имате право и заиста нам дајете права да користимо ваш допринос. За детаље посетите <https://cla.microsoft.com>.
 
-> Važno: kada prevodite tekst u ovom repozitorijumu, molimo vas da ne koristite mašinski prevod. Verifikovaćemo prevode putem zajednice, pa se prijavite za prevode samo na jezike koje dobro poznajete.
+> Важно: приликом превођења текста у овом репозиторијуму, молимо вас да не користите машински превод. Преводе ће проверити заједница, па се пријављујте само за преводе на језике које добро познајете.
 
-Kada podnesete pull request, CLA-bot će automatski utvrditi da li treba da obezbedite CLA i adekvatno ukrasiti PR (npr. oznaka, komentar). Jednostavno pratite instrukcije koje vam bot daje. Ovo ćete morati da uradite samo jednom za sve repozitorijume koji koriste naš CLA.
+Када пошаљете pull request, CLA-bot ће аутоматски одредити да ли је потребно да доставите CLA и одговарајуће означити PR (нпр. ознака, коментар). Једноставно пратите упутства бота. Ово ћете морати урадити само једном за све репозиторијуме који користе наш CLA.
 
-## Pravila ponašanja
+## Кодекс понашања
 
-Ovaj projekat je usvojio [Microsoftov Kodeks ponašanja za otvoreni kod](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
-Za više informacija pročitajte [FAQ o kodeksu ponašanja](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) ili kontaktirajte [opencode@microsoft.com](mailto:opencode@microsoft.com) za bilo kakva dodatna pitanja ili komentare.
+Овај пројекат је усвојио [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+За више информација прочитајте [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) или контактирајте [opencode@microsoft.com](mailto:opencode@microsoft.com) за додатна питања или коментаре.
 
-## Pitanja ili problemi?
+## Питање или проблем?
 
-Molimo vas da ne otvarate GitHub probleme za opšta pitanja podrške, jer GitHub lista treba da se koristi za zahteve za funkcionalnosti i prijave grešaka. Na taj način možemo lakše pratiti stvarne probleme ili greške iz koda i držati opštu diskusiju odvojenu od samog koda.
+Молимо вас да не отварате GitHub issues за општа питања подршке јер се листа на GitHub-у користи за захтеве за нове функције и пријаве грешака. На овај начин лакше пратимо стварне проблеме или грешке у коду и одржавамо општу дискусију одвојеном од самог кода.
 
-## Greške u kucanju, problemi, greške i doprinosi
+## Типографске грешке, проблеми, багови и доприноси
 
-Kad god podnosite bilo kakve promene u Generative AI for Beginners repozitorijumu, molimo vas da pratite ove preporuke.
+Када шаљете измене у репозиторијум Generative AI for Beginners, молимо вас да пратите следеће препоруке.
 
-* Uvek forkujte repozitorijum na svoj nalog pre nego što napravite izmene
-* Ne kombinujte više promena u jedan pull request. Na primer, podnesite bilo koju ispravku grešaka i ažuriranja dokumentacije koristeći odvojene PR-ove
-* Ako vaš pull request pokazuje konflikte prilikom spajanja, pobrinite se da ažurirate lokalni main da bude ogledalo onoga što je u glavnom repozitorijumu pre nego što napravite izmene
-* Ako podnosite prevod, molimo vas da napravite jedan PR za sve prevedene fajlove jer ne prihvatamo delimične prevode sadržaja
-* Ako podnosite ispravku greške u kucanju ili dokumentaciji, možete kombinovati izmene u jedan PR gde je to prikladno
+* Увек направите fork репозиторијума на свој налог пре него што направите измене
+* Не комбинујте више промена у један pull request. На пример, пошаљите исправке багова и ажурирања документације у посебним PR-овима
+* Ако ваш pull request показује конфликте приликом спајања, обавезно ажурирајте свој локални main да буде огледало онога што је у главном репозиторијуму пре него што направите измене
+* Ако шаљете превод, молимо вас да направите један PR за све преведене фајлове јер не прихватамо делимичне преводе садржаја
+* Ако шаљете исправку типографске грешке или документације, можете комбиновати измене у један PR где је то прикладно
 
-## Opšte smernice za pisanje
+## Општа упутства за писање
 
-- Pobrinite se da svi vaši URL-ovi budu obuhvaćeni uglastim zagradama, a zatim zagradama bez dodatnih razmaka oko njih ili unutar njih `[](../..)`.
-- Pobrinite se da bilo koji relativni link (tj. linkovi ka drugim fajlovima i folderima u repozitorijumu) počinje sa `./` koji se odnosi na fajl ili folder lociran u trenutnom radnom direktorijumu ili `../` koji se odnosi na fajl ili folder lociran u nadređenom radnom direktorijumu.
-- Pobrinite se da bilo koji relativni link (tj. linkovi ka drugim fajlovima i folderima u repozitorijumu) ima ID za praćenje (tj. `?` ili `&` zatim `wt.mc_id=` ili `WT.mc_id=`) na kraju.
-- Pobrinite se da bilo koji URL sa sledećih domena _github.com, microsoft.com, visualstudio.com, aka.ms, i azure.com_ ima ID za praćenje (tj. `?` ili `&` zatim `wt.mc_id=` ili `WT.mc_id=`) na kraju.
-- Pobrinite se da vaši linkovi nemaju specifičnu lokalizaciju zemlje u njima (tj. `/en-us/` ili `/en/`).
-- Pobrinite se da su sve slike smeštene u `./images` folder.
-- Pobrinite se da slike imaju opisne nazive koristeći engleske karaktere, brojeve i crtice u nazivu slike.
+- Уверите се да су сви ваши URL-ови обавијени у угластим заградама, а затим у заградама без додатних размакa око или унутар њих `[](../..)`.
+- Уверите се да сваки релативни линк (нпр. линкови ка другим фајловима и фасциклама у репозиторијуму) почиње са `./` који се односи на фајл или фасциклу у тренутном радном директоријуму или са `../` који се односи на фајл или фасциклу у родитељском радном директоријуму.
+- Уверите се да сваки релативни линк има на крају ID за праћење (нпр. `?` или `&` па `wt.mc_id=` или `WT.mc_id=`).
+- Уверите се да сваки URL са следећих домена _github.com, microsoft.com, visualstudio.com, aka.ms, и azure.com_ има на крају ID за праћење (нпр. `?` или `&` па `wt.mc_id=` или `WT.mc_id=`).
+- Уверите се да ваши линкови немају локализацију специфичну за земљу (нпр. `/en-us/` или `/en/`).
+- Уверите се да су све слике смештене у фасциклу `./images`.
+- Уверите се да слике имају описна имена користећи енглеска слова, бројеве и цртице у имену слике.
 
-## GitHub tokovi rada
+## GitHub Workflows
 
-Kada podnesete pull request, četiri različita toka rada će biti pokrenuta da validiraju prethodna pravila.
-Jednostavno pratite instrukcije navedene ovde da biste prošli provere tokova rada.
+Када пошаљете pull request, покренуће се четири различита workflow-а да провере претходна правила.
+Једноставно пратите упутства наведена овде да бисте прошли проверу workflow-а.
 
-- [Proveri neispravne relativne putanje](../..)
-- [Proveri putanje imaju praćenje](../..)
-- [Proveri URL-ove imaju praćenje](../..)
-- [Proveri URL-ovi nemaju lokalizaciju](../..)
+- [Провера покварених релативних путања](../..)
+- [Провера да путање имају праћење](../..)
+- [Провера да URL-ови имају праћење](../..)
+- [Провера да URL-ови немају локализацију](../..)
 
-### Proveri neispravne relativne putanje
+### Провера покварених релативних путања
 
-Ovaj tok rada osigurava da bilo koja relativna putanja u vašim fajlovima funkcioniše.
-Ovaj repozitorijum je postavljen na GitHub stranice pa morate biti veoma pažljivi kada kucate linkove koji povezuju sve da ne usmerite nikoga na pogrešno mesto.
+Овај workflow осигурава да свака релативна путања у вашим фајловима ради.
+Овај репозиторијум је постављен на GitHub pages па морате бити веома пажљиви када куцате линкове који све повезују да не бисте упутили некога на погрешно место.
 
-Da biste se uverili da vaši linkovi pravilno funkcionišu, jednostavno koristite VS kod da proverite to.
+Да бисте били сигурни да ваши линкови раде исправно, једноставно користите VS code за проверу.
 
-Na primer, kada pređete preko bilo kog linka u vašim fajlovima, biće vam ponuđeno da pratite link pritiskom na **ctrl + klik**
+На пример, када пређете курсором преко било ког линка у вашим фајловима, биће вам понуђено да пратите линк притиском на **ctrl + клик**
 
-![VS kod prati linkove snimak ekrana](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.sr.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.sr.png)
 
-Ako kliknete na link i ne funkcioniše lokalno, onda će sigurno pokrenuti tok rada i neće raditi na GitHub-u.
+Ако кликнете на линк и он не ради локално, сигурно ће покренути workflow и неће радити на GitHub-у.
 
-Da biste rešili ovaj problem, pokušajte da ukucate link uz pomoć VS koda.
+Да бисте решили овај проблем, покушајте да куцате линк уз помоћ VS code-а.
 
-Kada kucate `./` ili `../` VS kod će vam ponuditi da izaberete iz dostupnih opcija prema onome što ste ukucali.
+Када куцате `./` или `../`, VS code ће вам понудити опције у складу са тим што сте куцали.
 
-![VS kod izaberi relativnu putanju snimak ekrana](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.sr.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.sr.png)
 
-Pratite putanju klikom na željeni fajl ili folder i bićete sigurni da vaša putanja nije neispravna.
+Пратите путању кликом на жељени фајл или фасциклу и бићете сигурни да ваша путања није покварена.
 
-Kada dodate ispravnu relativnu putanju, sačuvajte i pošaljite svoje izmene, tok rada će ponovo biti pokrenut da verifikuje vaše izmene.
-Ako prođete proveru, onda ste spremni.
+Када додате исправну релативну путању, сачувајте и пошаљите измене, workflow ће поново бити покренут да провери ваше измене.
+Ако прођете проверу, спремни сте.
 
-### Proveri putanje imaju praćenje
+### Провера да путање имају праћење
 
-Ovaj tok rada osigurava da bilo koja relativna putanja ima praćenje u njoj.
-Ovaj repozitorijum je postavljen na GitHub stranice pa moramo pratiti kretanje između različitih fajlova i foldera.
+Овај workflow осигурава да свака релативна путања има праћење.
+Овај репозиторијум је постављен на GitHub pages па морамо пратити кретање између различитих фајлова и фасцикли.
 
-Da biste se uverili da vaše relativne putanje imaju praćenje u njima, jednostavno proverite sledeći tekst `?wt.mc_id=` na kraju putanje.
-Ako je dodato vašim relativnim putanjama, onda ćete proći ovu proveru.
+Да бисте били сигурни да ваше релативне путање имају праћење, једноставно проверите да ли се на крају путање налази текст `?wt.mc_id=`.
+Ако је додат на ваше релативне путање, проћи ћете ову проверу.
 
-Ako nije, možete dobiti sledeću grešku.
+У супротном, можете добити следећу грешку.
 
-![GitHub proveri putanje nedostaje praćenje komentar snimak ekrana](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.sr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.sr.png)
 
-Da biste rešili ovaj problem, pokušajte da otvorite putanju fajla koju je tok rada istakao i dodajte ID za praćenje na kraj relativnih putanja.
+Да бисте решили овај проблем, отворите фајл који је workflow означио и додајте ID за праћење на крај релативних путања.
 
-Kada dodate ID za praćenje, sačuvajte i pošaljite svoje izmene, tok rada će ponovo biti pokrenut da verifikuje vaše izmene.
-Ako prođete proveru, onda ste spremni.
+Када додате ID за праћење, сачувајте и пошаљите измене, workflow ће поново бити покренут да провери ваше измене.
+Ако прођете проверу, спремни сте.
 
-### Proveri URL-ove imaju praćenje
+### Провера да URL-ови имају праћење
 
-Ovaj tok rada osigurava da bilo koji web URL ima praćenje u njemu.
-Ovaj repozitorijum je dostupan svima pa morate biti sigurni da pratite pristup da biste znali odakle dolazi saobraćaj.
+Овај workflow осигурава да сваки веб URL има праћење.
+Овај репозиторијум је доступан свима па морате бити сигурни да пратите приступ да бисте знали одакле долази саобраћај.
 
-Da biste se uverili da vaši URL-ovi imaju praćenje u njima, jednostavno proverite sledeći tekst `?wt.mc_id=` na kraju URL-a.
-Ako je dodato vašim URL-ovima, onda ćete proći ovu proveru.
+Да бисте били сигурни да ваши URL-ови имају праћење, једноставно проверите да ли се на крају URL-а налази текст `?wt.mc_id=`.
+Ако је додат вашим URL-овима, проћи ћете ову проверу.
 
-Ako nije, možete dobiti sledeću grešku.
+У супротном, можете добити следећу грешку.
 
-![GitHub proveri URL-ove nedostaje praćenje komentar snimak ekrana](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.sr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.sr.png)
 
-Da biste rešili ovaj problem, pokušajte da otvorite putanju fajla koju je tok rada istakao i dodajte ID za praćenje na kraj URL-ova.
+Да бисте решили овај проблем, отворите фајл који је workflow означио и додајте ID за праћење на крај URL-ова.
 
-Kada dodate ID za praćenje, sačuvajte i pošaljite svoje izmene, tok rada će ponovo biti pokrenut da verifikuje vaše izmene.
-Ako prođete proveru, onda ste spremni.
+Када додате ID за праћење, сачувајте и пошаљите измене, workflow ће поново бити покренут да провери ваше измене.
+Ако прођете проверу, спремни сте.
 
-### Proveri URL-ovi nemaju lokalizaciju
+### Провера да URL-ови немају локализацију
 
-Ovaj tok rada osigurava da bilo koji web URL nema specifičnu lokalizaciju zemlje u njemu.
-Ovaj repozitorijum je dostupan svima širom sveta pa morate biti sigurni da ne uključujete lokalizaciju vaše zemlje u URL-ove.
+Овај workflow осигурава да сваки веб URL нема локализацију специфичну за земљу.
+Овај репозиторијум је доступан свима широм света па морате бити сигурни да не укључујете локализацију своје земље у URL-ове.
 
-Da biste se uverili da vaši URL-ovi nemaju lokalizaciju zemlje u njima, jednostavno proverite sledeći tekst `/en-us/` ili `/en/` ili bilo koju drugu jezičku lokalizaciju bilo gde u URL-u.
-Ako nije prisutno u vašim URL-ovima, onda ćete proći ovu proveru.
+Да бисте били сигурни да ваши URL-ови немају локализацију земље, једноставно проверите да ли се у URL-у налази текст `/en-us/` или `/en/` или било која друга језичка локализација.
+Ако није присутна у вашим URL-овима, проћи ћете ову проверу.
 
-Ako nije, možete dobiti sledeću grešku.
+У супротном, можете добити следећу грешку.
 
-![GitHub proveri lokalizaciju zemlje komentar snimak ekrana](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.sr.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.sr.png)
 
-Da biste rešili ovaj problem, pokušajte da otvorite putanju fajla koju je tok rada istakao i uklonite lokalizaciju zemlje iz URL-ova.
+Да бисте решили овај проблем, отворите фајл који је workflow означио и уклоните локализацију земље из URL-ова.
 
-Kada uklonite lokalizaciju zemlje, sačuvajte i pošaljite svoje izmene, tok rada će ponovo biti pokrenut da verifikuje vaše izmene.
-Ako prođete proveru, onda ste spremni.
+Када уклоните локализацију земље, сачувајте и пошаљите измене, workflow ће поново бити покренут да провери ваше измене.
+Ако прођете проверу, спремни сте.
 
-Čestitamo! Javićemo vam se čim pre sa povratnim informacijama o vašem doprinosu.
+Честитамо! Јавићемо вам се што пре са повратном информацијом о вашем доприносу.
 
-**Ограничење одговорности**:  
-Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било какве неспоразуме или погрешна тумачења која проистичу из коришћења овог превода.
+**Одрицање одговорности**:  
+Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо прецизности, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитетним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.

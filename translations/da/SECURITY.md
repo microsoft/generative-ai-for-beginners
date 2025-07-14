@@ -2,40 +2,40 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-05-19T12:12:19+00:00",
+  "translation_date": "2025-07-09T06:54:10+00:00",
   "source_file": "SECURITY.md",
   "language_code": "da"
 }
 -->
 ## Sikkerhed
 
-Microsoft tager sikkerheden af vores softwareprodukter og -tjenester alvorligt, hvilket inkluderer alle kildekode-repositorier, der administreres gennem vores GitHub-organisationer, som inkluderer [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) og [vores GitHub-organisationer](https://opensource.microsoft.com/).
+Microsoft tager sikkerheden for vores softwareprodukter og -tjenester alvorligt, hvilket inkluderer alle kildekoderepositorier, der administreres gennem vores GitHub-organisationer, som omfatter [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) og [vores GitHub-organisationer](https://opensource.microsoft.com/).
 
-Hvis du mener, du har fundet en sikkerhedssårbarhed i et Microsoft-ejet repository, der opfylder [Microsofts definition af en sikkerhedssårbarhed](https://aka.ms/opensource/security/definition), bedes du rapportere det til os som beskrevet nedenfor.
+Hvis du mener, at du har fundet en sikkerhedssårbarhed i et Microsoft-ejet repository, som opfylder [Microsofts definition af en sikkerhedssårbarhed](https://aka.ms/opensource/security/definition), bedes du rapportere det til os som beskrevet nedenfor.
 
 ## Rapportering af sikkerhedsproblemer
 
-**Rapporter venligst ikke sikkerhedssårbarheder gennem offentlige GitHub-issues.**
+**Rapportér venligst ikke sikkerhedssårbarheder via offentlige GitHub-issues.**
 
-Rapporter dem i stedet til Microsoft Security Response Center (MSRC) på [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
+Rapportér dem i stedet til Microsoft Security Response Center (MSRC) på [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
 
-Hvis du foretrækker at indsende uden at logge ind, send en e-mail til [secure@microsoft.com](mailto:secure@microsoft.com). Hvis muligt, krypter din besked med vores PGP-nøgle; venligst download den fra [Microsoft Security Response Center PGP Key page](https://aka.ms/opensource/security/pgpkey).
+Hvis du foretrækker at indsende uden at logge ind, send en e-mail til [secure@microsoft.com](mailto:secure@microsoft.com). Hvis muligt, krypter din besked med vores PGP-nøgle; du kan hente den fra [Microsoft Security Response Center PGP Key-siden](https://aka.ms/opensource/security/pgpkey).
 
-Du bør modtage et svar inden for 24 timer. Hvis du af en eller anden grund ikke gør det, bedes du følge op via e-mail for at sikre, at vi har modtaget din oprindelige besked. Yderligere information kan findes på [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
+Du bør modtage et svar inden for 24 timer. Hvis du af en eller anden grund ikke gør, bedes du følge op via e-mail for at sikre, at vi har modtaget din oprindelige besked. Yderligere information kan findes på [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
 
-Inkluder venligst de ønskede oplysninger nedenfor (så meget som du kan give) for at hjælpe os med bedre at forstå arten og omfanget af det mulige problem:
+Inkludér venligst de ønskede oplysninger nedenfor (så mange som muligt), så vi bedre kan forstå arten og omfanget af det mulige problem:
 
-  * Type af problem (f.eks. buffer overflow, SQL injection, cross-site scripting, osv.)
-  * Fuldstændige stier til kildefil(er) relateret til manifestationen af problemet
+  * Type af problem (f.eks. buffer overflow, SQL injection, cross-site scripting osv.)
+  * Fuld sti til kildefil(er) relateret til problemets opståen
   * Placeringen af den berørte kildekode (tag/branch/commit eller direkte URL)
-  * Eventuel speciel konfiguration krævet for at genskabe problemet
-  * Trin-for-trin instruktioner for at genskabe problemet
+  * Eventuel særlig konfiguration, der kræves for at genskabe problemet
+  * Trin-for-trin instruktioner til at genskabe problemet
   * Proof-of-concept eller exploit-kode (hvis muligt)
-  * Indvirkning af problemet, inklusive hvordan en angriber kunne udnytte problemet
+  * Problemets konsekvenser, herunder hvordan en angriber kunne udnytte det
 
-Denne information vil hjælpe os med at triagere din rapport hurtigere.
+Disse oplysninger hjælper os med at håndtere din rapport hurtigere.
 
-Hvis du rapporterer for en bug bounty, kan mere komplette rapporter bidrage til en højere bounty-belønning. Besøg venligst vores [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) side for flere detaljer om vores aktive programmer.
+Hvis du rapporterer for en bug bounty, kan mere komplette rapporter bidrage til en højere belønning. Besøg venligst vores [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) side for flere detaljer om vores aktive programmer.
 
 ## Foretrukne sprog
 
@@ -43,7 +43,7 @@ Vi foretrækker, at al kommunikation foregår på engelsk.
 
 ## Politik
 
-Microsoft følger princippet om [Koordineret sårbarhedsafsløring](https://aka.ms/opensource/security/cvd).
+Microsoft følger princippet om [Koordineret Sårbarhedsafsløring](https://aka.ms/opensource/security/cvd).
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på at opnå nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

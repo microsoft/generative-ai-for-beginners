@@ -2,30 +2,30 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f5ff3b6204a695a117d6f452403c95f7",
-  "translation_date": "2025-05-19T20:36:03+00:00",
+  "translation_date": "2025-07-09T14:03:57+00:00",
   "source_file": "10-building-low-code-ai-applications/README.md",
   "language_code": "fi"
 }
 -->
-# Rakentamassa Low Code AI -sovelluksia
+# Low Code -tekoälysovellusten rakentaminen
 
-[![Rakentamassa Low Code AI -sovelluksia](../../../translated_images/10-lesson-banner.84b607fa749c0d53ffe98212c5c3b81292bb041d1aec07da8fd720e9c01b5718.fi.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Low Code AI Applications](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.fi.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Klikkaa yllä olevaa kuvaa nähdäksesi videon tästä oppitunnista)_
+> _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
 ## Johdanto
 
-Nyt kun olemme oppineet rakentamaan kuvien luomiseen tarkoitettuja sovelluksia, puhutaanpa low codesta. Generatiivista AI:ta voidaan käyttää monilla eri alueilla, mukaan lukien low code, mutta mitä low code oikeastaan on ja miten voimme lisätä siihen AI:n?
+Nyt kun olemme oppineet rakentamaan kuvia generoivia sovelluksia, puhutaan low codesta. Generatiivista tekoälyä voidaan hyödyntää monilla eri alueilla, myös low codessa, mutta mitä low code oikeastaan on ja miten tekoäly voidaan siihen lisätä?
 
-Sovellusten ja ratkaisujen rakentaminen on tullut helpommaksi perinteisille kehittäjille ja ei-kehittäjille Low Code Development Platforms -alustojen avulla. Low Code Development Platforms -alustat mahdollistavat sovellusten ja ratkaisujen rakentamisen vähäisellä tai olemattomalla koodilla. Tämä saavutetaan tarjoamalla visuaalinen kehitysympäristö, joka mahdollistaa komponenttien vetämisen ja pudottamisen sovellusten ja ratkaisujen rakentamiseksi. Tämä mahdollistaa sovellusten ja ratkaisujen nopeamman rakentamisen vähemmillä resursseilla. Tässä oppitunnissa sukellamme syvälle siihen, miten käyttää Low Code -alustaa ja miten parantaa low code -kehitystä AI:n avulla Power Platformin kautta.
+Sovellusten ja ratkaisujen rakentaminen on helpottunut perinteisille kehittäjille ja ei-kehittäjille Low Code -kehitysalustojen avulla. Low Code -kehitysalustat mahdollistavat sovellusten ja ratkaisujen rakentamisen vähällä tai ilman koodia. Tämä saavutetaan tarjoamalla visuaalinen kehitysympäristö, jossa komponentteja voi vetää ja pudottaa sovellusten ja ratkaisujen rakentamiseksi. Näin sovelluksia ja ratkaisuja voidaan rakentaa nopeammin ja vähemmillä resursseilla. Tässä oppitunnissa sukellamme syvälle low coden käyttöön ja siihen, miten tekoälyllä voidaan tehostaa low code -kehitystä Power Platformin avulla.
 
-Power Platform tarjoaa organisaatioille mahdollisuuden antaa tiimeilleen voimaa rakentaa omia ratkaisujaan intuitiivisessa low-code- tai no-code-ympäristössä. Tämä ympäristö auttaa yksinkertaistamaan ratkaisujen rakentamisen prosessia. Power Platformin avulla ratkaisuja voidaan rakentaa päivissä tai viikoissa kuukausien tai vuosien sijaan. Power Platform koostuu viidestä keskeisestä tuotteesta: Power Apps, Power Automate, Power BI, Power Pages ja Copilot Studio.
+Power Platform tarjoaa organisaatioille mahdollisuuden antaa tiimeilleen valtuudet rakentaa omia ratkaisujaan intuitiivisessa low-code- tai no-code-ympäristössä. Tämä ympäristö yksinkertaistaa ratkaisujen rakentamisen prosessia. Power Platformilla ratkaisut voidaan rakentaa päivissä tai viikoissa kuukausien tai vuosien sijaan. Power Platform koostuu viidestä keskeisestä tuotteesta: Power Apps, Power Automate, Power BI, Power Pages ja Copilot Studio.
 
-Tämä oppitunti kattaa:
+Tässä oppitunnissa käsitellään:
 
-- Johdanto generatiiviseen AI:hin Power Platformissa
+- Johdanto generatiiviseen tekoälyyn Power Platformissa
 - Johdanto Copilotiin ja sen käyttöön
-- Generatiivisen AI:n käyttö sovellusten ja virtausten rakentamisessa Power Platformissa
+- Generatiivisen tekoälyn hyödyntäminen sovellusten ja työnkulkujen rakentamisessa Power Platformissa
 - AI-mallien ymmärtäminen Power Platformissa AI Builderin avulla
 
 ## Oppimistavoitteet
@@ -34,124 +34,222 @@ Oppitunnin lopussa osaat:
 
 - Ymmärtää, miten Copilot toimii Power Platformissa.
 
-- Rakentaa opiskelijan tehtävien seurantaan tarkoitettu sovellus koulutusstartupillemme.
+- Rakentaa opiskelijoiden tehtävien seurantasovelluksen koulutusstartupillemme.
 
-- Rakentaa laskujen käsittelyvirta, joka käyttää AI:ta tietojen poimimiseen laskuista.
+- Rakentaa laskujen käsittelytyönkulun, joka käyttää tekoälyä laskujen tietojen poimimiseen.
 
-- Soveltaa parhaita käytäntöjä GPT AI -mallin tekstin luomisessa.
+- Soveltaa parhaita käytäntöjä Create Text with GPT -tekoälymallin käytössä.
 
 Tässä oppitunnissa käytettävät työkalut ja teknologiat ovat:
 
-- **Power Apps**, opiskelijan tehtävien seurantaan tarkoitettu sovellus, joka tarjoaa low-code-kehitysympäristön sovellusten rakentamiseen tietojen seuraamiseen, hallintaan ja vuorovaikutukseen.
+- **Power Apps**, opiskelijoiden tehtävien seurantasovellukseen, joka tarjoaa low-code-kehitysympäristön sovellusten rakentamiseen tietojen seuraamiseksi, hallitsemiseksi ja vuorovaikutukseen.
 
-- **Dataverse**, opiskelijan tehtävien seurantaan tarkoitetun sovelluksen tietojen tallentamiseen, jossa Dataverse tarjoaa low-code-tietojen tallennusalustan sovelluksen tietojen tallentamiseen.
+- **Dataverse**, opiskelijoiden tehtävien seurantasovelluksen tietojen tallentamiseen, joka tarjoaa low-code-tietoplatformin sovelluksen datan säilytykseen.
 
-- **Power Automate**, laskujen käsittelyvirtaan, jossa sinulla on low-code-kehitysympäristö työnkulkujen rakentamiseen laskujen käsittelyprosessin automatisoimiseksi.
+- **Power Automate**, laskujen käsittelytyönkulkuun, jossa on low-code-kehitysympäristö työnkulkujen rakentamiseen laskujen käsittelyprosessin automatisoimiseksi.
 
-- **AI Builder**, laskujen käsittelyyn tarkoitettuun AI-malliin, jossa käytät valmiita AI-malleja laskujen käsittelyyn startupillemme.
+- **AI Builder**, laskujen käsittelyyn käytettävään tekoälymalliin, jossa hyödynnetään valmiita tekoälymalleja startupimme laskujen käsittelyssä.
 
-## Generatiivinen AI Power Platformissa
+## Generatiivinen tekoäly Power Platformissa
 
-Low-code-kehityksen ja sovellusten parantaminen generatiivisella AI:lla on keskeinen painopiste Power Platformissa. Tavoitteena on mahdollistaa kaikille AI:lla tehostettujen sovellusten, sivustojen, kojelautojen rakentaminen ja prosessien automatisointi _ilman datatieteen asiantuntemusta_. Tämä tavoite saavutetaan integroimalla generatiivinen AI low-code-kehityskokemukseen Power Platformissa Copilotin ja AI Builderin muodossa.
+Low-code-kehityksen ja sovellusten parantaminen generatiivisella tekoälyllä on Power Platformin keskeinen painopistealue. Tavoitteena on mahdollistaa kaikkien rakentaa tekoälyllä tehostettuja sovelluksia, sivustoja, koontinäyttöjä ja automatisoida prosesseja tekoälyn avulla _ilman tarvetta datatieteen asiantuntemukselle_. Tämä tavoite saavutetaan integroimalla generatiivinen tekoäly low-code-kehityskokemukseen Power Platformissa Copilotin ja AI Builderin muodossa.
 
 ### Miten tämä toimii?
 
-Copilot on AI-avustaja, joka mahdollistaa Power Platform -ratkaisujen rakentamisen kuvailemalla vaatimuksesi sarjassa keskustelullisia vaiheita luonnollisella kielellä. Voit esimerkiksi ohjeistaa AI-avustajaasi kertomaan, mitä kenttiä sovelluksesi käyttää, ja se luo sekä sovelluksen että sen taustalla olevan tietomallin tai voit määrittää, miten asettaa virta Power Automateen.
+Copilot on tekoälyavustaja, joka mahdollistaa Power Platform -ratkaisujen rakentamisen kuvailemalla vaatimuksesi luonnollisella kielellä sarjassa keskustelumuotoisia vaiheita. Voit esimerkiksi ohjeistaa tekoälyavustajaa kertomaan, mitä kenttiä sovelluksesi käyttää, jolloin se luo sekä sovelluksen että taustalla olevan tietomallin, tai voit määritellä, miten työnkulku Power Automatessa asetetaan.
 
-Voit käyttää Copilot-ohjattuja toimintoja sovelluksesi näytöissä, jotta käyttäjät voivat löytää oivalluksia keskustelullisten vuorovaikutusten kautta.
+Voit käyttää Copilotin ohjaamia toimintoja sovelluksesi näytöillä, jotta käyttäjät voivat löytää oivalluksia keskustelupohjaisen vuorovaikutuksen kautta.
 
-AI Builder on Power Platformissa saatavilla oleva low-code AI-ominaisuus, joka mahdollistaa AI-mallien käytön prosessien automatisoimiseen ja tulosten ennustamiseen. AI Builderin avulla voit tuoda AI:n sovelluksiisi ja virtoihisi, jotka yhdistyvät Dataverse-tietoihisi tai eri pilvitietolähteisiin, kuten SharePoint, OneDrive tai Azure.
+AI Builder on Power Platformissa saatavilla oleva low-code-tekoälyominaisuus, joka mahdollistaa tekoälymallien käytön prosessien automatisointiin ja tulosten ennustamiseen. AI Builderin avulla voit tuoda tekoälyn sovelluksiisi ja työnkulkuihisi, jotka yhdistyvät dataan Dataversessa tai erilaisissa pilvitietolähteissä, kuten SharePointissa, OneDrivessa tai Azurella.
 
-Copilot on saatavilla kaikissa Power Platformin tuotteissa: Power Apps, Power Automate, Power BI, Power Pages ja Power Virtual Agents. AI Builder on saatavilla Power Appsissa ja Power Automatessa. Tässä oppitunnissa keskitymme siihen, miten käyttää Copilotia ja AI Builderia Power Appsissa ja Power Automatessa rakentaaksemme ratkaisun koulutusstartupillemme.
+Copilot on saatavilla kaikissa Power Platformin tuotteissa: Power Apps, Power Automate, Power BI, Power Pages ja Power Virtual Agents. AI Builder on saatavilla Power Appsissa ja Power Automatessa. Tässä oppitunnissa keskitymme Copilotin ja AI Builderin käyttöön Power Appsissa ja Power Automatessa ratkaisun rakentamiseksi koulutusstartupillemme.
 
 ### Copilot Power Appsissa
 
-Osana Power Platformia Power Apps tarjoaa low-code-kehitysympäristön sovellusten rakentamiseen tietojen seuraamiseen, hallintaan ja vuorovaikutukseen. Se on sovelluskehityspalveluiden paketti, jossa on skaalautuva tietojen tallennusalusta ja kyky yhdistyä pilvipalveluihin ja paikallisiin tietoihin. Power Apps mahdollistaa sovellusten rakentamisen, jotka toimivat selaimissa, tableteissa ja puhelimissa, ja joita voidaan jakaa työkavereiden kanssa. Power Apps helpottaa käyttäjiä sovelluskehitykseen yksinkertaisella käyttöliittymällä, jotta jokainen liiketoiminnan käyttäjä tai ammattikehittäjä voi rakentaa mukautettuja sovelluksia. Sovelluskehityskokemusta parannetaan myös Generatiivisella AI:lla Copilotin kautta.
+Power Platformin osana Power Apps tarjoaa low-code-kehitysympäristön sovellusten rakentamiseen, joiden avulla voidaan seurata, hallita ja olla vuorovaikutuksessa datan kanssa. Se on sovelluskehityspalveluiden kokonaisuus, jossa on skaalautuva tietoplatform ja kyky yhdistää pilvipalveluihin ja paikallisiin tietoihin. Power Appsilla voit rakentaa sovelluksia, jotka toimivat selaimissa, tableteissa ja puhelimissa, ja joita voi jakaa työkavereille. Power Apps helpottaa käyttäjiä sovelluskehityksessä yksinkertaisen käyttöliittymän avulla, jotta jokainen liiketoiminnan käyttäjä tai ammattilaiskehittäjä voi rakentaa räätälöityjä sovelluksia. Sovelluskehityskokemusta parantaa myös generatiivinen tekoäly Copilotin kautta.
 
-Copilot AI-avustajaominaisuus Power Appsissa mahdollistaa sen, että kuvailet millaisen sovelluksen tarvitset ja mitä tietoja haluat sovelluksesi seuraavan, keräävän tai näyttävän. Copilot luo sitten reagoivan Canvas-sovelluksen kuvauksesi perusteella. Voit sitten mukauttaa sovelluksen vastaamaan tarpeitasi. AI Copilot myös luo ja ehdottaa Dataverse-taulukkoa, jossa on kentät, joita tarvitset tietojen tallentamiseen, ja esimerkkitietoja. Tarkastelemme myöhemmin tässä oppitunnissa, mitä Dataverse on ja miten voit käyttää sitä Power Appsissa. Voit sitten mukauttaa taulukkoa vastaamaan tarpeitasi käyttämällä AI Copilot -avustajatoimintoa keskustelullisten vaiheiden kautta. Tämä ominaisuus on helposti saatavilla Power Apps -aloitusnäytöstä.
+Power Appsissa Copilot-tekoälyavustajaominaisuus mahdollistaa sovelluksen tarpeiden kuvaamisen ja sen, mitä tietoja sovelluksen tulee seurata, kerätä tai näyttää. Copilot luo kuvauksesi perusteella responsiivisen Canvas-sovelluksen. Voit sitten muokata sovellusta tarpeidesi mukaan. AI Copilot luo ja ehdottaa myös Dataverse-taulua, jossa on kentät, joita tarvitset tallentaaksesi haluamasi seurattavat tiedot, sekä esimerkkidataa. Tarkastelemme myöhemmin tässä oppitunnissa, mitä Dataverse on ja miten sitä voi käyttää Power Appsissa. Voit muokata taulua tarpeidesi mukaan AI Copilot -avustajan avulla keskusteluvaiheiden kautta. Tämä ominaisuus on helposti saatavilla Power Appsin aloitusnäytöltä.
 
 ### Copilot Power Automatessa
 
-Osana Power Platformia Power Automate antaa käyttäjille mahdollisuuden luoda automatisoituja työnkulkuja sovellusten ja palveluiden välillä. Se auttaa automatisoimaan toistuvia liiketoimintaprosesseja, kuten viestintää, tietojen keräämistä ja päätösten hyväksymistä. Sen yksinkertainen käyttöliittymä mahdollistaa käyttäjille, joilla on kaikenlainen tekninen osaaminen (aloittelijoista kokeneisiin kehittäjiin), työntehtävien automatisoinnin. Työnkulun kehityskokemusta parannetaan myös Generatiivisella AI:lla Copilotin kautta.
+Power Platformin osana Power Automate antaa käyttäjille mahdollisuuden luoda automatisoituja työnkulkuja sovellusten ja palveluiden välille. Se auttaa automatisoimaan toistuvia liiketoimintaprosesseja, kuten viestintää, tiedonkeruuta ja päätösten hyväksyntää. Sen yksinkertainen käyttöliittymä mahdollistaa käyttäjille kaikilla teknisillä taidoilla (aloittelijoista kokeneisiin kehittäjiin) työtehtävien automatisoinnin. Työnkulkujen kehityskokemusta parantaa myös generatiivinen tekoäly Copilotin kautta.
 
-Copilot AI-avustajaominaisuus Power Automatessa mahdollistaa sen, että kuvailet millaisen virran tarvitset ja mitä toimintoja haluat virran suorittavan. Copilot luo sitten virran kuvauksesi perusteella. Voit sitten mukauttaa virran vastaamaan tarpeitasi. AI Copilot myös luo ja ehdottaa toimintoja, joita tarvitset tehtävän automatisoimiseksi. Tarkastelemme myöhemmin tässä oppitunnissa, mitä virtaukset ovat ja miten voit käyttää niitä Power Automatessa. Voit sitten mukauttaa toimintoja vastaamaan tarpeitasi käyttämällä AI Copilot -avustajatoimintoa keskustelullisten vaiheiden kautta. Tämä ominaisuus on helposti saatavilla Power Automate -aloitusnäytöstä.
+Power Automatessa Copilot-tekoälyavustajaominaisuus mahdollistaa työnkulun tarpeiden kuvaamisen ja haluttujen toimintojen määrittämisen. Copilot luo kuvauksesi perusteella työnkulun. Voit sitten muokata työnkulkua tarpeidesi mukaan. AI Copilot luo ja ehdottaa myös toimintoja, joita tarvitset haluamasi tehtävän automatisoimiseksi. Tarkastelemme myöhemmin tässä oppitunnissa, mitä työnkulut ovat ja miten niitä voi käyttää Power Automatessa. Voit muokata toimintoja tarpeidesi mukaan AI Copilot -avustajan avulla keskusteluvaiheiden kautta. Tämä ominaisuus on helposti saatavilla Power Automaten aloitusnäytöltä.
 
 ## Tehtävä: Hallitse opiskelijoiden tehtäviä ja laskuja startupillemme Copilotin avulla
 
-Startupimme tarjoaa verkkokursseja opiskelijoille. Startup on kasvanut nopeasti ja kamppailee nyt kurssiensa kysynnän kanssa. Startup on palkannut sinut Power Platform -kehittäjäksi auttamaan heitä rakentamaan low code -ratkaisun, joka auttaa heitä hallitsemaan opiskelijoiden tehtäviä ja laskuja. Ratkaisun tulisi auttaa heitä seuraamaan ja hallitsemaan opiskelijoiden tehtäviä sovelluksen kautta ja automatisoimaan laskujen käsittelyprosessin työnkulun kautta. Sinua on pyydetty käyttämään generatiivista AI:ta ratkaisun kehittämiseen.
+Startupimme tarjoaa opiskelijoille verkkokursseja. Startup on kasvanut nopeasti ja kamppailee nyt kurssien kysynnän kanssa. Startup on palkannut sinut Power Platform -kehittäjäksi auttamaan heitä rakentamaan low code -ratkaisun opiskelijoiden tehtävien ja laskujen hallintaan. Ratkaisun tulisi auttaa seuraamaan ja hallitsemaan opiskelijoiden tehtäviä sovelluksen avulla sekä automatisoimaan laskujen käsittelyprosessi työnkulun avulla. Sinua on pyydetty käyttämään generatiivista tekoälyä ratkaisun kehittämiseen.
 
-Kun aloitat Copilotin käytön, voit käyttää [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) -kirjastoa aloittaaksesi kehotteiden kanssa. Tämä kirjasto sisältää luettelon kehotteista, joita voit käyttää sovellusten ja virtausten rakentamiseen Copilotilla. Voit myös käyttää kirjaston kehotteita saadaksesi käsityksen siitä, miten kuvailla vaatimuksiasi Copilotille.
+Kun aloitat Copilotin käytön, voit käyttää [Power Platform Copilot Prompt Libraryä](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) aloittaaksesi kehotteiden kanssa. Tämä kirjasto sisältää listan kehotteista, joita voit käyttää sovellusten ja työnkulkujen rakentamiseen Copilotin avulla. Voit myös käyttää kirjaston kehotteita saadaksesi idean siitä, miten kuvata vaatimuksesi Copilotille.
 
-### Rakennetaan opiskelijan tehtävien seurantaan tarkoitettu sovellus startupillemme
+### Rakenna opiskelijoiden tehtävien seurantasovellus startupillemme
 
-Startupimme opettajat ovat kamppailleet opiskelijoiden tehtävien seuraamisen kanssa. He ovat käyttäneet laskentataulukkoa tehtävien seuraamiseen, mutta tämä on tullut vaikeaksi hallita opiskelijoiden määrän kasvaessa. He ovat pyytäneet sinua rakentamaan sovelluksen, joka auttaa heitä seuraamaan ja hallitsemaan opiskelijoiden tehtäviä. Sovelluksen tulisi mahdollistaa uusien tehtävien lisääminen, tehtävien tarkastelu, tehtävien päivittäminen ja tehtävien poistaminen. Sovelluksen tulisi myös mahdollistaa opettajien ja opiskelijoiden tarkastella arvioituja ja arvioimattomia tehtäviä.
+Startupimme kouluttajat ovat kamppailleet opiskelijoiden tehtävien seuraamisessa. He ovat käyttäneet tehtävien seurantaan taulukkolaskentaa, mutta opiskelijoiden määrän kasvaessa sen hallinta on vaikeutunut. He pyysivät sinua rakentamaan sovelluksen, joka auttaa heitä seuraamaan ja hallitsemaan opiskelijoiden tehtäviä. Sovelluksen tulisi mahdollistaa uusien tehtävien lisääminen, tehtävien katselu, päivittäminen ja poistaminen. Sovelluksen tulisi myös antaa kouluttajien ja opiskelijoiden nähdä arvioidut ja arvioimattomat tehtävät.
 
-Rakennat sovelluksen käyttämällä Copilotia Power Appsissa seuraavien vaiheiden mukaan:
+Rakennat sovelluksen Copilotin avulla Power Appsissa seuraavien vaiheiden mukaisesti:
 
-1. Siirry [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) -aloitusnäyttöön.
+1. Siirry [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) aloitusnäyttöön.
 
-1. Käytä aloitusnäytön tekstialuetta kuvaamaan sovellusta, jonka haluat rakentaa. Esimerkiksi, **_Haluan rakentaa sovelluksen opiskelijoiden tehtävien seuraamiseen ja hallintaan_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
+1. Käytä aloitusnäytön tekstialuetta kuvataksesi sovelluksen, jonka haluat rakentaa. Esimerkiksi **_Haluan rakentaa sovelluksen opiskelijoiden tehtävien seuraamiseen ja hallintaan_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-![Kuvaile sovellus, jonka haluat rakentaa](../../../translated_images/copilot-chat-prompt-powerapps.8b18beb535e7bd1a26be1284c2ef1246dbadb4704fa1656f1b6b35214ddc1c89.fi.png)
+![Kuvaile sovellusta, jonka haluat rakentaa](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.fi.png)
 
-1. AI Copilot ehdottaa Dataverse-taulukkoa, jossa on kentät, joita tarvitset tietojen tallentamiseen, ja esimerkkitietoja. Voit sitten mukauttaa taulukkoa vastaamaan tarpeitasi käyttämällä AI Copilot -avustajatoimintoa keskustelullisten vaiheiden kautta.
+1. AI Copilot ehdottaa Dataverse-taulua kenttineen, joita tarvitset tallentaaksesi haluamasi seurattavat tiedot, sekä esimerkkidataa. Voit muokata taulua tarpeidesi mukaan AI Copilot -avustajan avulla keskusteluvaiheiden kautta.
 
-   > **Tärkeää**: Dataverse on Power Platformin taustalla oleva tietojen tallennusalusta. Se on low-code-tietojen tallennusalusta sovelluksen tietojen tallentamiseen. Se on täysin hallittu palvelu, joka tallentaa tiedot turvallisesti Microsoft Cloudissa ja on käytettävissä Power Platform -ympäristössäsi. Siinä on sisäänrakennetut tietojen hallintakyvyt, kuten tietojen luokittelu, tietojen alkuperä, hienojakoiset käyttöoikeudet ja paljon muuta. Voit oppia lisää Dataversesta [täältä](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+   > **Tärkeää**: Dataverse on Power Platformin taustalla oleva tietoplatform. Se on low-code-tietoplatform sovelluksen datan tallentamiseen. Se on täysin hallinnoitu palvelu, joka tallentaa tiedot turvallisesti Microsoftin pilveen ja on provisionoitu Power Platform -ympäristöösi. Se sisältää sisäänrakennettuja tietohallinnan ominaisuuksia, kuten tietojen luokittelun, tietojen jäljitettävyyden, hienojakoisen käyttöoikeuksien hallinnan ja muuta. Voit oppia lisää Dataversesta [täältä](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Ehdotetut kentät uudessa taulukossasi](../../../translated_images/copilot-dataverse-table-powerapps.35038be17c72f49f510a76a208db3c2c8b3c0928f08620694dca255b103f2929.fi.png)
+   ![Ehdotetut kentät uudessa taulussasi](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.fi.png)
 
-1. Opettajat haluavat lähettää sähköpostia opiskelijoille, jotka ovat palauttaneet tehtävänsä, pitääkseen heidät ajan tasalla tehtäviensä edistymisestä. Voit käyttää Copilotia lisätäksesi uuden kentän taulukkoon opiskelijan sähköpostin tallentamista varten. Esimerkiksi, voit käyttää seuraavaa kehotetta lisätäksesi uuden kentän taulukkoon: **_Haluan lisätä sarakkeen opiskelijan sähköpostin tallentamista varten_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
+1. Kouluttajat haluavat lähettää sähköposteja opiskelijoille, jotka ovat palauttaneet tehtävänsä, jotta he pysyvät ajan tasalla tehtävien etenemisestä. Voit käyttää Copilotia lisätäksesi uuden kentän tauluun opiskelijoiden sähköpostiosoitteiden tallentamista varten. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden kentän: **_Haluan lisätä sarakkeen opiskelijoiden sähköpostiosoitteiden tallentamista varten_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-![Lisää uusi kenttä](../../../translated_images/copilot-new-column.48af3bb080c13599fb73ee32cc18101dc0cf61992d0dfe15b8bc4aa75a6c6a34.fi.png)
+![Uuden kentän lisääminen](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.fi.png)
 
-1. AI Copilot luo uuden kentän, ja voit sitten mukauttaa kentän vastaamaan tarpeitasi.
+1. AI Copilot luo uuden kentän, jonka voit muokata tarpeidesi mukaan.
 
-1. Kun olet valmis taulukon kanssa, klikkaa **Luo sovellus** -painiketta luodaksesi sovelluksen.
+1. Kun taulu on valmis, klikkaa **Luo sovellus** -painiketta luodaksesi sovelluksen.
 
-1. AI Copilot luo reagoivan Canvas-sovelluksen kuvauksesi perusteella. Voit sitten mukauttaa sovelluksen vastaamaan tarpeitasi.
+1. AI Copilot luo kuvauksesi perusteella responsiivisen Canvas-sovelluksen. Voit muokata sovellusta tarpeidesi mukaan.
 
-1. Jotta opettajat voivat lähettää sähköpostia opiskelijoille, voit käyttää Copilotia lisätäksesi uuden näytön sovellukseen. Esimerkiksi, voit käyttää seuraavaa kehotetta lisätäksesi uuden näytön sovellukseen: **_Haluan lisätä näytön sähköpostien lähettämiseksi opiskelijoille_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
+1. Kouluttajien sähköpostien lähettämistä varten voit käyttää Copilotia lisätäksesi uuden näytön sovellukseen. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden näytön: **_Haluan lisätä näytön sähköpostien lähettämistä varten opiskelijoille_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-![Lisää uusi näyttö kehotteen avulla](../../../translated_images/copilot-new-screen.30341e89604440b4c91eb55d258276fd6e283bfab376c57501f0b3caeaaf2fda.fi.png)
+![Uuden näytön lisääminen kehotteen avulla](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.fi.png)
 
-1. AI Copilot luo uuden näytön, ja voit sitten mukauttaa näytön vastaamaan tarpeitasi.
+1. AI Copilot luo uuden näytön, jonka voit muokata tarpeidesi mukaan.
 
-1. Kun olet valmis sovelluksen kanssa, klikkaa **Tallenna**-painiketta tallentaaksesi sovelluksen.
+1. Kun sovellus on valmis, klikkaa **Tallenna**-painiketta tallentaaksesi sovelluksen.
 
-1. Jotta voit jakaa sovelluksen opettajille, klikkaa **Jaa**-painiketta ja sitten klikkaa **Jaa**-painiketta uudelleen. Voit sitten jakaa sovelluksen opettajille syöttämällä heidän sähköpostiosoitteensa.
+1. Jaa sovellus kouluttajille klikkaamalla **Jaa**-painiketta ja sen jälkeen uudelleen **Jaa**-painiketta. Voit jakaa sovelluksen kouluttajille syöttämällä heidän sähköpostiosoitteensa.
 
-> **Kotitehtäväsi**: Juuri rakentamasi sovellus on hyvä alku, mutta sitä voidaan parantaa. Sähköpostiominaisuuden avulla opettajat voivat lähettää sähköpostia opiskelijoille vain manuaalisesti kirjoittamalla heidän sähköpostinsa. Voitko käyttää Copilotia rakentaaksesi automaation, joka mahdollistaa opettajien lähettää sähköpostia opiskelijoille automaattisesti, kun he palauttavat tehtävänsä? Vihjeesi on, että oikealla kehotteella voit käyttää Copilotia Power Automatessa tämän rakentamiseen.
+> **Kotitehtäväsi**: Rakentamasi sovellus on hyvä alku, mutta sitä voi parantaa. Sähköpostiominaisuudella kouluttajat voivat lähettää sähköposteja opiskelijoille vain manuaalisesti kirjoittamalla heidän sähköpostinsa. Voitko käyttää Copilotia rakentaaksesi automaation, joka mahdollistaa kouluttajien lähettää sähköposteja opiskelijoille automaattisesti, kun he palauttavat tehtävänsä? Vihjeesi on, että oikealla kehotteella voit käyttää Copilotia Power Automatessa tämän rakentamiseen.
 
-### Rakennetaan laskujen tietotaulukko startupillemme
+### Rakenna laskujen tietotaulu startupillemme
 
-Startupimme taloustiimi on kamppailut laskujen seuraamisen kanssa. He ovat käyttäneet laskentataulukkoa laskujen seuraamiseen, mutta tämä on tullut vaikeaksi hallita laskujen määrän kasvaessa. He ovat pyytäneet sinua rakentamaan taulukon, joka auttaa heitä tallentamaan, seuraamaan ja hallitsemaan vastaanotettujen laskujen tietoja. Taulukkoa tulisi käyttää automaation rakentamiseen, joka poimii kaikki laskujen tiedot ja tallentaa ne taulukkoon. Taulukon tulisi myös mahdollistaa taloustiimin tarkastella maksettuja ja maksamattomia laskuja.
+Startupimme taloustiimi on kamppaillut laskujen seuraamisessa. He ovat käyttäneet taulukkolaskentaa laskujen seurantaan, mutta laskujen määrän kasvaessa sen hallinta on vaikeutunut. He pyysivät sinua rakentamaan taulun, joka auttaa heitä tallentamaan, seuraamaan ja hallitsemaan vastaanotettujen laskujen tietoja. Taulua käytetään automaation rakentamiseen, joka poimii kaikki laskutiedot ja tallentaa ne tauluun. Taulun tulisi myös mahdollistaa taloustiimin nähdä maksetut ja maksamattomat laskut.
 
-Power Platformilla on taustalla oleva tietojen tallennusalusta nimeltä Dataverse, joka mahdollistaa sovellustesi ja ratkaisujesi tietojen tallentamisen. Dataverse tarjoaa low-code-tietojen tallennusalustan sovelluksen tietojen tallentamiseen. Se on täysin hallittu palvelu, joka tallentaa tiedot turvallisesti Microsoft Cloudissa ja on käytettävissä Power Platform -ympäristössäsi. Siinä on sisäänrakennetut tietojen hallintakyvyt, kuten tietojen luokittelu, tietojen alkuperä, hienojakoiset käyttöoikeudet ja paljon muuta. Voit oppia lisää [Dataversesta täältä](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+Power Platformilla on taustalla tietoplatform nimeltä Dataverse, joka mahdollistaa sovellusten ja ratkaisujen datan tallentamisen. Dataverse tarjoaa low-code-tietoplatformin sovelluksen datan säilytykseen. Se on täysin hallinnoitu palvelu, joka tallentaa tiedot turvallisesti Microsoftin pilveen ja on provisionoitu Power Platform -ympäristöösi. Se sisältää sisäänrakennettuja tietohallinnan ominaisuuksia, kuten tietojen luokittelun, tietojen jäljitettävyyden, hienojakoisen käyttöoikeuksien hallinnan ja muuta. Voit oppia lisää [Dataversesta täältä](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-Miksi meidän pitäisi käyttää Dataverseä startupillemme? Dataversen vakio- ja mukautetut taulukot tarjoavat turvallisen ja pilvipohjaisen tallennusvaihtoehdon tiedoillesi. Taulukot mahdollistavat erilaisten tietojen tallentamisen, kuten käyttäisit useita laskentataulukoita yhdessä Excel-työkirjassa. Voit käyttää taulukoita tallentamaan tietoja, jotka ovat erityisiä organisaatiosi tai liiketoimintatarpeidesi kannalta. Joitakin etuja, joita startupimme saa Dataversen käytöstä, ovat muun muassa:
+Miksi meidän pitäisi käyttää Dataverseä startupissamme? Dataversen standardi- ja mukautetut taulut tarjoavat turvallisen ja pilvipohjaisen tallennusvaihtoehdon datallesi. Taulut antavat mahdollisuuden tallentaa erilaisia tietotyyppejä, samalla tavalla kuin käyttäisit useita laskentataulukoita yhdessä Excel-työkirjassa. Voit käyttää tauluja tallentaaksesi dataa, joka on organisaatiosi tai liiketoimintasi tarpeiden mukaista. Joitakin hyötyjä, joita startupimme saa Dataversen käytöstä, ovat muun muassa:
+- **Helppo hallita**: Sekä metatiedot että data tallennetaan pilveen, joten sinun ei tarvitse huolehtia siitä, miten ne tallennetaan tai hallitaan. Voit keskittyä sovellustesi ja ratkaisujesi rakentamiseen.
 
-- **Helppo hallita**: Sekä metadata että tiedot tallennetaan pilveen, joten sinun ei tarvitse huolehtia niiden tallennus- tai hallintatiedoista. Voit keskittyä sovellustesi ja ratkaisujesi rakentamiseen.
+- **Turvallinen**: Dataverse tarjoaa turvallisen ja pilvipohjaisen tallennusvaihtoehdon tiedoillesi. Voit hallita, kuka pääsee käsiksi taulujesi tietoihin ja miten he voivat käyttää niitä roolipohjaisen tietoturvan avulla.
 
-- **Turvallinen**: Dataverse tarjoaa turvallisen ja pilvipohjaisen tallennusvaihtoehdon tiedoillesi. Voit hallita, kenellä on pääsy taulukoidesi
-teksti. - **Tunneanalyysi**: Tämä malli tunnistaa positiivisen, negatiivisen, neutraalin tai sekoitetun tunteen tekstistä. - **Käyntikortin lukija**: Tämä malli poimii tietoa käyntikorteista. - **Tekstin tunnistus**: Tämä malli poimii tekstiä kuvista. - **Objektin tunnistus**: Tämä malli tunnistaa ja poimii objekteja kuvista. - **Asiakirjojen käsittely**: Tämä malli poimii tietoa lomakkeista. - **Laskujen käsittely**: Tämä malli poimii tietoa laskuista. Custom AI Models -mallien avulla voit tuoda oman mallisi AI Builderiin, jotta se voi toimia kuten mikä tahansa AI Builderin mukautettu malli, jolloin voit kouluttaa mallia omalla datallasi. Voit käyttää näitä malleja prosessien automatisointiin ja tulosten ennustamiseen sekä Power Appsissa että Power Automatessa. Kun käytät omaa malliasi, tietyt rajoitukset koskevat sen käyttöä. Lue lisää näistä [rajoituksista](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst). ![AI builder mallit](../../../translated_images/ai-builder-models.f3ee8c064873d55cdfbcc9c633cdd8cf00843954019ad500795832eee420448e.fi.png) ## Tehtävä #2 - Rakenna laskujen käsittelyprosessi startupillemme Taloustiimi on kamppaillut laskujen käsittelyn kanssa. He ovat käyttäneet laskujen seuraamiseen taulukkoa, mutta tämän hallitseminen on käynyt vaikeaksi laskujen määrän kasvaessa. He ovat pyytäneet sinua rakentamaan työnkulun, joka auttaa heitä käsittelemään laskuja AI:n avulla. Työnkulun tulisi mahdollistaa laskujen tietojen poimiminen ja tallentaminen Dataverse-taulukkoon. Työnkulun tulisi myös mahdollistaa sähköpostin lähettäminen taloustiimille poimituilla tiedoilla. Nyt kun tiedät, mitä AI Builder on ja miksi sitä kannattaa käyttää, tarkastellaan, kuinka voit käyttää AI Builderin laskujen käsittelymallia, jota käsittelimme aiemmin, rakentaaksesi työnkulun, joka auttaa taloustiimiä laskujen käsittelyssä. Rakentaaksesi työnkulun, joka auttaa taloustiimiä laskujen käsittelyssä AI Builderin laskujen käsittelymallin avulla, noudata alla olevia ohjeita: 1. Siirry [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) -etusivulle. 2. Käytä etusivun tekstialuetta kuvaamaan työnkulku, jonka haluat rakentaa. Esimerkiksi, **_Käsittele lasku, kun se saapuu postilaatikkooni_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen AI Copilotille. ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.0a21031a7ae6b1fb5dd61ce5c09d530454a93ee65c166b5c286e49c1a9312039.fi.png) 3. AI Copilot ehdottaa toimia, joita sinun on tehtävä haluamasi tehtävän automatisoimiseksi. Voit klikata **Seuraava**-painiketta siirtyäksesi seuraaviin vaiheisiin. 4. Seuraavassa vaiheessa Power Automate kehottaa sinua määrittämään virran vaaditut yhteydet. Kun olet valmis, klikkaa **Luo virta**-painiketta luodaksesi virran. 5. AI Copilot luo virran, ja voit sitten mukauttaa virtaa tarpeidesi mukaan. 6. Päivitä virran käynnistin ja aseta **Kansio** kansioon, johon laskut tallennetaan. Esimerkiksi voit asettaa kansion **Saapuneet**. Klikkaa **Näytä lisäasetukset** ja aseta **Vain liitteillä** kohtaan **Kyllä**. Tämä varmistaa, että virta käynnistyy vain, kun kansioon saapuu sähköposti liitteen kanssa. 7. Poista seuraavat toiminnot virrasta: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** ja **Compose 4**, koska et käytä niitä. 8. Poista **Ehto**-toiminto virrasta, koska et käytä sitä. Sen tulisi näyttää seuraavalta kuvakaappaukselta: ![power automate, poista toiminnot](../../../translated_images/powerautomate-remove-actions.ea4e8386e075a56b2b6a87ccbcb2484f146e869ba4273948abee6acdb3567c09.fi.png) 9. Klikkaa **Lisää toiminto**-painiketta ja etsi **Dataverse**. Valitse **Lisää uusi rivi**-toiminto. 10. **Poimi tietoa laskuista**-toiminnossa päivitä **Laskutiedosto** osoittamaan sähköpostin **Liitteen sisältö**-kohtaan. Tämä varmistaa, että virta poimii tietoa laskuliitteestä. 11. Valitse aiemmin luomasi **Taulukko**. Esimerkiksi voit valita **Laskutiedot**-taulukon. Valitse aiemman toiminnon dynaaminen sisältö täyttääksesi seuraavat kentät: - ID - Summa - Päivämäärä - Nimi - Tila - Aseta **Tila** kohtaan **Odottava**. - Toimittajan sähköposti - Käytä **Lähettäjä**-dynaamista sisältöä **Kun uusi sähköposti saapuu**-käynnistimestä. ![power automate lisää rivi](../../../translated_images/powerautomate-add-row.d27c9166313cb7b3683e45f3059c13f9435e8257b357c0150652d60523dab3e9.fi.png) 12. Kun olet valmis virran kanssa, klikkaa **Tallenna**-painiketta tallentaaksesi virran. Voit sitten testata virtaa lähettämällä sähköpostin laskun kanssa kansioon, jonka määritit käynnistimessä. > **Kotitehtäväsi**: Virta, jonka juuri rakensit, on hyvä alku, nyt sinun tulee miettiä, kuinka voit rakentaa automaation, joka mahdollistaa taloustiimimme lähettämään sähköpostin toimittajalle päivittääkseen heidät laskunsa nykyisestä tilasta. Vihjeesi: virran tulee käynnistyä, kun laskun tila muuttuu.
+- **Rikkaita metatietoja**: Tietotyyppejä ja suhteita käytetään suoraan Power Appsissa
 
-## Käytä tekstin generointia AI-mallilla Power Automatessa
+- **Logiikka ja validointi**: Voit käyttää liiketoimintasääntöjä, laskettuja kenttiä ja validointisääntöjä liiketoimintalogiikan toteuttamiseen ja tietojen tarkkuuden ylläpitämiseen.
 
-Luo tekstiä GPT AI-mallilla AI Builderissa mahdollistaa tekstin generoinnin kehotteen perusteella ja toimii Microsoft Azure OpenAI -palvelun avulla. Tämän ominaisuuden avulla voit sisällyttää GPT (Generative Pre-Trained Transformer) -teknologian sovelluksiisi ja virtoihisi rakentaaksesi monenlaisia automatisoituja virtoja ja oivaltavia sovelluksia.
+Nyt kun tiedät, mitä Dataverse on ja miksi sitä kannattaa käyttää, katsotaan, miten voit käyttää Copilotia luodaksesi taulun Dataverseen, joka täyttää taloustiimimme vaatimukset.
 
-GPT-mallit käyvät läpi laajaa koulutusta valtavilla tietomäärillä, mikä mahdollistaa tekstin tuottamisen, joka muistuttaa läheisesti ihmiskieltä kehotteen perusteella. Kun ne yhdistetään työnkulkuautomaatioon, AI-malleja kuten GPT:tä voidaan hyödyntää monenlaisten tehtävien tehostamiseen ja automatisointiin.
+> **Note** : Käytät tätä taulua seuraavassa osiossa rakentaaksesi automaation, joka poimii kaikki laskutiedot ja tallentaa ne tauluun.
 
-Esimerkiksi voit rakentaa virtoja, jotka automaattisesti generoivat tekstiä monenlaisiin käyttötarkoituksiin, kuten: sähköpostiluonnoksia, tuotekuvauksia ja muuta. Voit myös käyttää mallia tekstin generointiin monenlaisissa sovelluksissa, kuten chatboteissa ja asiakaspalvelusovelluksissa, jotka mahdollistavat asiakaspalveluedustajien vastaamisen tehokkaasti ja sujuvasti asiakaskyselyihin.
+Taulun luomiseksi Dataverseen Copilotin avulla, toimi seuraavasti:
 
-![luo kehotus](../../../translated_images/create-prompt-gpt.dd95b0323841a7be30684e4a48445f063209ea7ebb81e5f7f56787b12cf9c04b.fi.png)
+1. Siirry [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) aloitusnäyttöön.
 
-Oppiaksesi käyttämään tätä AI-mallia Power Automatessa, käy läpi [Lisää älykkyyttä AI Builderilla ja GPT:llä](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) -moduuli.
+2. Valitse vasemman reunan navigointipalkista **Tables** ja klikkaa sitten **Describe the new Table**.
 
-## Hyvää työtä! Jatka oppimistasi
+![Select new table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.fi.png)
 
-Kun olet suorittanut tämän oppitunnin, tutustu [Generatiivisen AI:n oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen AI:n osaamisen kehittämistä!
+3. **Describe the new Table** -näytöllä käytä tekstialuetta kuvaillaksesi taulua, jonka haluat luoda. Esimerkiksi **_Haluan luoda taulun laskutietojen tallentamista varten_**. Klikkaa **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-Siirry oppituntiin 11, jossa tarkastelemme, kuinka [integroida generatiivinen AI funktiokutsujen kanssa](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
+![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.fi.png)
+
+4. AI Copilot ehdottaa Dataverse-taulua, jossa on kentät, joita tarvitset tallentaaksesi seurattavat tiedot, sekä esimerkkitietoja. Voit sitten räätälöidä taulua tarpeidesi mukaan AI Copilot -avustajan avulla keskustelupohjaisesti.
+
+![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.fi.png)
+
+5. Taloustiimi haluaa lähettää sähköpostin toimittajalle päivittääkseen heidät laskun nykytilasta. Voit käyttää Copilotia lisätäksesi tauluun uuden kentän toimittajan sähköpostin tallentamista varten. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden kentän tauluun: **_Haluan lisätä sarakkeen toimittajan sähköpostin tallentamista varten_**. Klikkaa **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
+
+6. AI Copilot luo uuden kentän, jonka voit räätälöidä tarpeidesi mukaan.
+
+7. Kun olet valmis taulun kanssa, klikkaa **Create**-painiketta luodaksesi taulun.
+
+## AI-mallit Power Platformissa AI Builderin avulla
+
+AI Builder on Power Platformin matalan koodin AI-ominaisuus, jonka avulla voit käyttää AI-malleja prosessien automatisointiin ja tulosten ennustamiseen. AI Builderin avulla voit tuoda tekoälyn sovelluksiisi ja työnkulkuihisi, jotka yhdistävät tietosi Dataversessa tai erilaisissa pilvitietolähteissä, kuten SharePointissa, OneDrivessa tai Azurella.
+
+## Valmiit AI-mallit vs. räätälöidyt AI-mallit
+
+AI Builder tarjoaa kahta tyyppiä AI-malleja: valmiita AI-malleja ja räätälöityjä AI-malleja. Valmiit AI-mallit ovat Microsoftin kouluttamia ja Power Platformissa valmiina käytettävissä olevia malleja. Ne auttavat sinua lisäämään älykkyyttä sovelluksiisi ja työnkulkuihisi ilman, että sinun tarvitsee kerätä dataa, rakentaa, kouluttaa ja julkaista omia mallejasi. Näitä malleja voi käyttää prosessien automatisointiin ja tulosten ennustamiseen.
+
+Joistakin Power Platformin valmiista AI-malleista:
+
+- **Key Phrase Extraction**: Tämä malli poimii avainsanoja tekstistä.
+- **Language Detection**: Tämä malli tunnistaa tekstin kielen.
+- **Sentiment Analysis**: Tämä malli tunnistaa tekstin positiivisen, negatiivisen, neutraalin tai sekoitetun tunnelman.
+- **Business Card Reader**: Tämä malli poimii tietoja käyntikorteista.
+- **Text Recognition**: Tämä malli poimii tekstiä kuvista.
+- **Object Detection**: Tämä malli tunnistaa ja poimii esineitä kuvista.
+- **Document processing**: Tämä malli poimii tietoja lomakkeista.
+- **Invoice Processing**: Tämä malli poimii tietoja laskuista.
+
+Räätälöityjen AI-mallien avulla voit tuoda oman mallisi AI Builderiin, jolloin se toimii kuten mikä tahansa AI Builderin räätälöity malli ja voit kouluttaa mallia omilla tiedoillasi. Näitä malleja voi käyttää prosessien automatisointiin ja tulosten ennustamiseen sekä Power Appsissa että Power Automatessa. Oman mallin käytössä on kuitenkin rajoituksia. Lue lisää näistä [rajoituksista](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
+
+![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.fi.png)
+
+## Tehtävä #2 – Rakenna laskujen käsittelytyönkulku startupillemme
+
+Taloustiimi on kamppaillut laskujen käsittelyn kanssa. He ovat käyttäneet laskujen seurantaan taulukkolaskentaa, mutta laskujen määrän kasvaessa sen hallinta on käynyt vaikeaksi. He pyysivät sinua rakentamaan työnkulun, joka auttaa heitä käsittelemään laskuja tekoälyn avulla. Työnkulun tulee mahdollistaa tietojen poimiminen laskuista ja tallentaminen Dataverse-tauluun. Työnkulun tulee myös mahdollistaa sähköpostin lähettäminen taloustiimille poimituilla tiedoilla.
+
+Nyt kun tiedät, mitä AI Builder on ja miksi sitä kannattaa käyttää, katsotaan, miten voit käyttää Invoice Processing -AI-mallia AI Builderissa, jonka kävimme aiemmin läpi, rakentaaksesi työnkulun, joka auttaa taloustiimiä käsittelemään laskuja.
+
+Rakentaaksesi työnkulun, joka auttaa taloustiimiä käsittelemään laskuja Invoice Processing -AI-mallin avulla AI Builderissa, toimi seuraavasti:
+
+1. Siirry [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) aloitusnäyttöön.
+
+2. Käytä aloitusnäytön tekstialuetta kuvaillaksesi työnkulun, jonka haluat rakentaa. Esimerkiksi **_Käsittele lasku, kun se saapuu postilaatikkooni_**. Klikkaa **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
+
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.fi.png)
+
+3. AI Copilot ehdottaa toimenpiteitä, joita tarvitset haluamasi tehtävän automatisointiin. Voit klikata **Next**-painiketta edetäksesi seuraaviin vaiheisiin.
+
+4. Seuraavassa vaiheessa Power Automate pyytää sinua määrittämään työnkulun tarvitsemat yhteydet. Kun olet valmis, klikkaa **Create flow** -painiketta luodaksesi työnkulun.
+
+5. AI Copilot luo työnkulun, jonka voit räätälöidä tarpeidesi mukaan.
+
+6. Päivitä työnkulun laukaisija ja aseta **Folder** kansioon, johon laskut tallennetaan. Esimerkiksi voit asettaa kansion **Inbox**. Klikkaa **Show advanced options** ja aseta **Only with Attachments** arvoksi **Yes**. Tämä varmistaa, että työnkulku käynnistyy vain, kun kansioon saapuu sähköposti liitteellä.
+
+7. Poista työnkulusta seuraavat toiminnot: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** ja **Compose 4**, koska et tule käyttämään niitä.
+
+8. Poista työnkulusta **Condition**-toiminto, koska et tule käyttämään sitä. Työnkulun tulisi näyttää seuraavalta:
+
+   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.fi.png)
+
+9. Klikkaa **Add an action** -painiketta ja etsi **Dataverse**. Valitse **Add a new row** -toiminto.
+
+10. **Extract Information from invoices** -toiminnossa päivitä **Invoice File** osoittamaan sähköpostin **Attachment Content** -kenttään. Tämä varmistaa, että työnkulku poimii tiedot laskuliitteestä.
+
+11. Valitse aiemmin luomasi **Table**. Esimerkiksi voit valita **Invoice Information** -taulun. Valitse dynaaminen sisältö edellisestä toiminnosta täyttääksesi seuraavat kentät:
+
+    - ID
+    - Amount
+    - Date
+    - Name
+    - Status – Aseta **Status** arvoksi **Pending**.
+    - Supplier Email – Käytä **From**-dynaamista sisältöä **When a new email arrives** -laukaisijasta.
+
+    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.fi.png)
+
+12. Kun olet valmis työnkulun kanssa, klikkaa **Save**-painiketta tallentaaksesi työnkulun. Voit testata työnkulkua lähettämällä sähköpostin, jossa on lasku, kansioon, jonka määritit laukaisijassa.
+
+> **Kotitehtäväsi**: Juuri rakentamasi työnkulku on hyvä alku, nyt sinun täytyy miettiä, miten voit rakentaa automaation, joka mahdollistaa taloustiimimme lähettävän sähköpostin toimittajalle päivittääkseen heidät laskun nykytilasta. Vihjeesi: työnkulun täytyy käynnistyä, kun laskun tila muuttuu.
+
+## Käytä tekstin generointiin tarkoitettua AI-mallia Power Automatessa
+
+Create Text with GPT -AI-malli AI Builderissa mahdollistaa tekstin luomisen kehotteen perusteella, ja se käyttää Microsoft Azure OpenAI -palvelua. Tämän ominaisuuden avulla voit integroida GPT-teknologian (Generative Pre-Trained Transformer) sovelluksiisi ja työnkulkuihisi rakentaaksesi monenlaisia automatisoituja työnkulkuja ja älykkäitä sovelluksia.
+
+GPT-mallit käyvät läpi laajan koulutuksen valtavilla tietomäärillä, mikä mahdollistaa tekstin tuottamisen, joka muistuttaa ihmiskieltä, kun niille annetaan kehotteita. Kun ne yhdistetään työnkulkuautomaatioon, GPT:n kaltaisia AI-malleja voidaan hyödyntää monien tehtävien sujuvoittamiseen ja automatisointiin.
+
+Esimerkiksi voit rakentaa työnkulkuja, jotka automaattisesti luovat tekstiä moniin käyttötarkoituksiin, kuten sähköpostiluonnoksiin, tuotekuvauksiin ja muihin. Voit myös käyttää mallia tekstin luomiseen erilaisissa sovelluksissa, kuten chatboteissa ja asiakaspalvelusovelluksissa, jotka auttavat asiakaspalvelijoita vastaamaan tehokkaasti ja sujuvasti asiakkaiden kyselyihin.
+
+![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.fi.png)
+
+Oppiaksesi käyttämään tätä AI-mallia Power Automatessa, käy läpi [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) -moduuli.
+
+## Hienoa työtä! Jatka oppimista
+
+Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) -kokoelmaamme jatkaaksesi Generative AI -osaamisesi kehittämistä!
+
+Siirry oppitunnille 11, jossa tarkastelemme, miten [integroida Generative AI Function Callingin kanssa](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, ole tietoinen, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisten tietojen kohdalla suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

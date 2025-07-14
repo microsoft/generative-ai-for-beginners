@@ -2,143 +2,221 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-05-20T09:16:45+00:00",
+  "translation_date": "2025-07-09T18:21:35+00:00",
   "source_file": "19-slm/README.md",
   "language_code": "hk"
 }
 -->
-# 初學者生成式 AI 的小語言模型介紹
+# 初學者生成式 AI 小型語言模型入門  
+生成式 AI 是人工智能中一個令人著迷的領域，專注於創建能夠生成新內容的系統。這些內容可以涵蓋文字、圖像、音樂，甚至整個虛擬環境。生成式 AI 最令人興奮的應用之一，就是語言模型領域。
 
-生成式 AI 是人工智能的一個迷人領域，專注於創建能夠生成新內容的系統。這些內容可以從文本和圖像到音樂，甚至整個虛擬環境。生成式 AI 最令人興奮的應用之一是在語言模型的領域。
+## 什麼是小型語言模型？  
+小型語言模型（SLM）是大型語言模型（LLM）的縮小版本，採用了許多大型模型的架構原理和技術，但計算資源需求大幅降低。
 
-## 什麼是小語言模型？
+SLM 是一類專門用來生成類似人類語言文本的語言模型。與 GPT-4 等大型模型相比，SLM 更加精簡且高效，適合在計算資源有限的場景中使用。儘管體積較小，它們仍能執行多種任務。通常，SLM 是通過壓縮或蒸餾大型語言模型而來，目標是保留原模型大部分功能和語言能力。模型規模的縮小降低了整體複雜度，使 SLM 在記憶體使用和計算需求上更為高效。經過這些優化後，SLM 仍能完成多種自然語言處理（NLP）任務：
 
-小語言模型（SLM）代表了一種縮小版的大語言模型（LLM），利用了許多 LLM 的架構原則和技術，同時展現出顯著減少的計算足跡。SLM 是一種語言模型的子集，設計用來生成類似人類的文本。與其較大的對應物（如 GPT-4）不同，SLM 更緊湊和高效，使其成為計算資源有限的應用程序的理想選擇。儘管其尺寸較小，它們仍然可以執行各種任務。通常，SLM 是通過壓縮或蒸餾 LLM 構建的，旨在保留原始模型功能和語言能力的大部分。這種模型尺寸的減少降低了整體複雜性，使 SLM 在內存使用和計算需求方面更高效。儘管有這些優化，SLM 仍然可以執行廣泛的自然語言處理（NLP）任務：
-- 文本生成：創建連貫且上下文相關的句子或段落。
-- 文本補全：根據給定的提示預測和完成句子。
-- 翻譯：將文本從一種語言轉換為另一種語言。
-- 摘要：將長文本壓縮為更短、更易消化的摘要。
+- 文字生成：創造連貫且符合語境的句子或段落。  
+- 文字補全：根據提示預測並完成句子。  
+- 翻譯：將文字從一種語言轉換成另一種語言。  
+- 摘要：將冗長的文字濃縮成簡短易懂的摘要。  
 
-儘管與其較大的對應物相比，在性能或理解深度上有一些取捨。
+當然，相較於大型模型，SLM 在性能或理解深度上會有一定的取捨。
 
-## 小語言模型如何運作？
+## 小型語言模型如何運作？  
+SLM 透過大量文本數據進行訓練。在訓練過程中，模型學習語言的模式和結構，使其能生成語法正確且符合語境的文字。訓練流程包括：
 
-SLM 是在大量文本數據上訓練的。在訓練過程中，它們學習語言的模式和結構，使其能夠生成語法正確且上下文適當的文本。訓練過程包括：
-- 數據收集：從各種來源收集大量文本數據。
-- 預處理：清理和組織數據，使其適合訓練。
-- 訓練：使用機器學習算法教模型如何理解和生成文本。
-- 微調：調整模型以提高其在特定任務上的性能。
+- 數據收集：從多種來源蒐集大量文本資料。  
+- 預處理：清理並整理數據，使其適合訓練。  
+- 訓練：利用機器學習算法教模型理解並生成文字。  
+- 微調：調整模型以提升特定任務的表現。  
 
-SLM 的開發符合在資源受限環境中部署模型的日益增長的需求，例如移動設備或邊緣計算平台，在這些平台上，完整的 LLM 可能由於其資源需求過高而不切實際。通過專注於效率，SLM 在性能和可訪問性之間取得平衡，使其能夠在各個領域中廣泛應用。
+SLM 的發展符合在資源受限環境（如行動裝置或邊緣運算平台）部署模型的需求，因為大型模型在這些場景中往往因資源消耗過大而不切實際。SLM 著重效率，平衡性能與可用性，促進在各領域的廣泛應用。
 
-![slm](../../../translated_images/slm.e63e171d8045c28356253bb772597c333b20c51bc33ce7191b8b38a2e1375614.hk.png)
+![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.hk.png)
 
-## 學習目標
+## 學習目標  
+本課程旨在介紹 SLM 的基本知識，並結合 Microsoft Phi-3，學習文字內容、視覺及 MoE 等不同應用場景。
 
-在本課中，我們希望介紹 SLM 的知識，並將其與 Microsoft Phi-3 結合，學習文本內容、視覺和 MoE 的不同場景。通過本課，你應該能夠回答以下問題：
-- 什麼是 SLM
-- SLM 和 LLM 的區別是什麼
-- 什麼是 Microsoft Phi-3/3.5 系列
-- 如何推理 Microsoft Phi-3/3.5 系列
+完成本課程後，你應該能回答以下問題：
+
+- 什麼是 SLM  
+- SLM 與 LLM 有何不同  
+- 什麼是 Microsoft Phi-3/3.5 系列  
+- 如何推理 Microsoft Phi-3/3.5 系列  
 
 準備好了嗎？讓我們開始吧。
 
-## 大語言模型（LLM）和小語言模型（SLM）之間的區別
+## 大型語言模型（LLM）與小型語言模型（SLM）的區別  
+LLM 與 SLM 都基於機率機器學習的基本原理，架構設計、訓練方法、數據生成流程及模型評估技術相似，但兩者在幾個關鍵方面存在差異。
 
-LLM 和 SLM 都建立在概率機器學習的基礎原則之上，在其架構設計、訓練方法、數據生成過程和模型評估技術上採取相似的方法。然而，這兩種類型的模型之間存在幾個關鍵差異。
-
-## 小語言模型的應用
-
+## 小型語言模型的應用  
 SLM 有廣泛的應用，包括：
-- 聊天機器人：以對話方式提供客戶支持和與用戶互動。
-- 內容創作：通過生成想法甚至撰寫整篇文章來協助作家。
-- 教育：幫助學生完成寫作作業或學習新語言。
-- 無障礙：創建供殘疾人士使用的工具，如文本轉語音系統。
 
-**尺寸**
+- 聊天機器人：提供客戶支援，與用戶進行對話互動。  
+- 內容創作：協助作家產生靈感或撰寫文章草稿。  
+- 教育：幫助學生完成寫作作業或學習新語言。  
+- 無障礙輔助：為有障礙人士打造工具，如文字轉語音系統。  
 
-LLM 和 SLM 之間的主要區別在於模型的規模。LLM，如 ChatGPT（GPT-4），可以包含估計 1.76 萬億個參數，而開源 SLM 如 Mistral 7B 的設計參數顯著更少——大約 70 億。這種差異主要是由於模型架構和訓練過程的差異。例如，ChatGPT 在編碼器-解碼器框架內使用自注意力機制，而 Mistral 7B 使用滑動窗口注意力，這使得在僅解碼器模型內進行更高效的訓練。這種架構差異對這些模型的複雜性和性能有深遠影響。
+**規模**  
+LLM 與 SLM 最大的差異在於模型規模。LLM（如 ChatGPT GPT-4）參數量約達 1.76 兆，而開源的 SLM（如 Mistral 7B）參數量約為 70 億。這主要源於架構和訓練流程的不同。例如，ChatGPT 採用編碼器-解碼器架構中的自注意力機制，而 Mistral 7B 則使用滑動窗口注意力，能在僅解碼器架構中更有效率地訓練。這種架構差異對模型的複雜度和性能有深遠影響。
 
-**理解**
+**理解能力**  
+SLM 通常針對特定領域優化，專精度高但在跨領域的廣泛語境理解上可能有限。相對地，LLM 旨在模擬更全面的人類智能，透過龐大且多元的數據集訓練，能在多個領域表現出色，具備更高的多功能性和適應性。因此，LLM 更適合用於多樣化的下游任務，如自然語言處理和程式設計。
 
-SLM 通常針對特定領域的性能進行優化，使其高度專業化，但在提供跨多個知識領域的廣泛上下文理解能力方面可能有限。相比之下，LLM 旨在在更全面的水平上模擬類似人類的智能。在大量、多樣化的數據集上訓練，LLM 被設計為在各個領域中表現良好，提供更大的多功能性和適應性。因此，LLM 更適合於更廣泛的下游任務，如自然語言處理和編程。
+**計算需求**  
+LLM 的訓練與部署資源消耗巨大，通常需要龐大的 GPU 叢集。例如，從零開始訓練 ChatGPT 可能需數千張 GPU 持續運算數週。相比之下，SLM 參數較少，對計算資源的需求較低。像 Mistral 7B 這類模型可在配備中階 GPU 的本地機器上訓練和運行，但訓練仍需數小時並使用多張 GPU。
 
-**計算**
+**偏見問題**  
+LLM 偏見問題主要源自訓練數據的特性。這些模型多依賴網路上公開的原始數據，可能存在對某些群體的低代表性或錯誤標註，並受方言、地理差異及語法規則影響的語言偏見。此外，LLM 複雜的架構可能無意中加劇偏見，若未經細心微調，偏見問題難以察覺。相較之下，SLM 由於訓練數據較為受限且專注於特定領域，偏見風險較低，但仍不可完全排除。
 
-LLM 的訓練和部署是資源密集型過程，通常需要大量的計算基礎設施，包括大規模 GPU 集群。例如，從頭開始訓練像 ChatGPT 這樣的模型可能需要數千個 GPU 經過長時間的運行。相比之下，SLM 由於其較小的參數數量，在計算資源方面更具可訪問性。像 Mistral 7B 這樣的模型可以在配備中等 GPU 能力的本地機器上進行訓練和運行，儘管訓練仍然需要在多個 GPU 上花費數小時。
+**推理速度**  
+SLM 較小的模型規模使其在推理速度上具明顯優勢，能在本地硬體上高效生成結果，無需大量並行運算。反觀 LLM，因體積龐大且結構複雜，通常需大量並行計算資源才能達到可接受的推理時間。多用戶同時使用時，LLM 的回應速度更容易受到影響。
 
-**偏見**
+總結來說，LLM 與 SLM 雖同屬機器學習基礎，但在模型大小、資源需求、語境理解、偏見敏感度及推理速度上有顯著差異。這些差異反映了它們在不同應用場景的適用性：LLM 多功能但資源密集，SLM 則在特定領域提供更高效的解決方案。
 
-偏見是 LLM 的一個已知問題，主要是由於訓練數據的性質。這些模型通常依賴於來自互聯網的原始、公開可用數據，這可能會低估或錯誤表示某些群體，引入錯誤標籤，或反映受方言、地理變異和語法規則影響的語言偏見。此外，LLM 架構的複雜性可能會無意中加劇偏見，如果不仔細微調，這可能會被忽視。另一方面，SLM 由於在更受限的、特定領域的數據集上進行訓練，固有地不太容易受到這些偏見的影響，儘管它們並非免疫。
+***Note：本章將以 Microsoft Phi-3 / 3.5 為例介紹 SLM。***
 
-**推理**
+## 介紹 Phi-3 / Phi-3.5 系列  
+Phi-3 / 3.5 系列主要針對文字、視覺及 Agent（MoE）應用場景：
 
-SLM 的尺寸減小使其在推理速度方面具有顯著優勢，允許其在本地硬件上高效生成輸出，而無需大量的並行處理。相比之下，由於其尺寸和複雜性，LLM 通常需要大量的並行計算資源來實現可接受的推理時間。多個並發用戶的存在進一步減慢了 LLM 的響應時間，尤其是在大規模部署時。
+### Phi-3 / 3.5 Instruct  
+主要用於文字生成、聊天補全及內容資訊提取等。
 
-總之，雖然 LLM 和 SLM 都在機器學習的基礎上共享，但它們在模型尺寸、資源需求、上下文理解、偏見易感性和推理速度方面存在顯著差異。這些區別反映了它們在不同用例中的適用性，LLM 更加多功能但資源密集，而 SLM 則提供更具領域特定的效率和較低的計算需求。
+**Phi-3-mini**  
+3.8B 參數的語言模型，可在 Microsoft Azure AI Studio、Hugging Face 和 Ollama 使用。Phi-3 系列在多項基準測試中顯著超越同等或更大規模的語言模型（以下基準數據越高越好）。Phi-3-mini 表現優於兩倍參數量的模型，而 Phi-3-small 和 Phi-3-medium 則超越包括 GPT-3.5 在內的更大模型。
 
-***注意：在本章中，我們將以 Microsoft Phi-3 / 3.5 作為例子來介紹 SLM。***
+**Phi-3-small & medium**  
+僅有 7B 參數的 Phi-3-small 在多種語言、推理、程式碼及數學基準測試中擊敗 GPT-3.5T。  
+14B 參數的 Phi-3-medium 延續此趨勢，表現優於 Gemini 1.0 Pro。
 
-## Phi-3 / Phi-3.5 系列介紹
+**Phi-3.5-mini**  
+可視為 Phi-3-mini 的升級版。參數數量不變，但增強了多語言支持（支援 20 多種語言：阿拉伯語、中文、捷克語、丹麥語、荷蘭語、英語、芬蘭語、法語、德語、希伯來語、匈牙利語、義大利語、日語、韓語、挪威語、波蘭語、葡萄牙語、俄語、西班牙語、瑞典語、泰語、土耳其語、烏克蘭語），並加強了長上下文的處理能力。  
+3.8B 參數的 Phi-3.5-mini 表現超越同規模模型，並與兩倍參數量的模型不相上下。
 
-Phi-3 / 3.5 系列主要針對文本、視覺和代理（MoE）應用場景：
+### Phi-3 / 3.5 Vision  
+可將 Phi-3/3.5 的 Instruct 模型視為 Phi 的理解能力，而 Vision 則賦予 Phi 觀察世界的「眼睛」。
 
-### Phi-3 / 3.5 指導
+**Phi-3-Vision**  
+僅有 4.2B 參數的 Phi-3-Vision 延續優勢，在一般視覺推理、OCR、表格及圖表理解任務中，表現優於更大模型如 Claude-3 Haiku 和 Gemini 1.0 Pro V。
 
-主要用於文本生成、聊天完成和內容信息提取等。
+**Phi-3.5-Vision**  
+Phi-3.5-Vision 是 Phi-3-Vision 的升級版，新增多張圖片支持。可視為視覺能力的提升，不僅能看圖片，還能處理影片。  
+Phi-3.5-Vision 在 OCR、表格及圖表理解任務中超越 Claude-3.5 Sonnet 和 Gemini 1.5 Flash，並在一般視覺知識推理任務中表現相當。支持多幀輸入，即可對多張圖片進行推理。
 
-**Phi-3-mini**
+### Phi-3.5-MoE  
+***Mixture of Experts（MoE）*** 讓模型能以更少的計算資源完成預訓練，意味著在相同計算預算下，模型或數據集規模可大幅擴展。MoE 模型在預訓練階段能更快達到與密集模型相同的品質。
 
-這款 3.8B 語言模型可在 Microsoft Azure AI Studio、Hugging Face 和 Ollama 上獲得。Phi-3 模型在關鍵基準測試上顯著超越同等和更大尺寸的語言模型（見下方基準數字，數字越高越好）。Phi-3-mini 超越了比其大兩倍的模型，而 Phi-3-small 和 Phi-3-medium 則超越了更大的模型，包括 GPT-3.5。
+Phi-3.5-MoE 包含 16 個 3.8B 參數的專家模組。  
+Phi-3.5-MoE 僅有 6.6B 活躍參數，卻能達到與更大模型相當的推理、語言理解及數學能力。
 
-**Phi-3-small & medium**
+我們可根據不同場景使用 Phi-3/3.5 系列模型。與 LLM 不同，Phi-3/3.5-mini 或 Phi-3/3.5-Vision 可部署於邊緣設備。
 
-Phi-3-small 僅有 7B 參數，在各種語言、推理、編碼和數學基準上擊敗了 GPT-3.5T。Phi-3-medium 擁有 14B 參數，繼續這一趨勢，並超越了 Gemini 1.0 Pro。
+## 如何使用 Phi-3/3.5 系列模型  
+我們希望在不同場景下使用 Phi-3/3.5。接下來將介紹基於不同場景的 Phi-3/3.5 使用方式。
 
-**Phi-3.5-mini**
+![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.hk.png)
 
-我們可以將其視為 Phi-3-mini 的升級版。雖然參數保持不變，但它提高了支持多種語言的能力（支持 20 多種語言：阿拉伯語、中文、捷克語、丹麥語、荷蘭語、英語、芬蘭語、法語、德語、希伯來語、匈牙利語、意大利語、日語、韓語、挪威語、波蘭語、葡萄牙語、俄語、西班牙語、瑞典語、泰語、土耳其語、烏克蘭語）並增加了對長上下文的更強支持。Phi-3.5-mini 擁有 3.8B 參數，超越了同尺寸的語言模型，並與尺寸大兩倍的模型相當。
+### 推理差異與雲端 API  
 
-### Phi-3 / 3.5 視覺
+**GitHub Models**  
+GitHub Models 是最直接的方式。你可以透過 GitHub Models 快速存取 Phi-3/3.5-Instruct 模型，結合 Azure AI Inference SDK / OpenAI SDK，透過程式碼調用 API 完成 Phi-3/3.5-Instruct 的呼叫。也可透過 Playground 測試不同效果。
 
-我們可以將 Phi-3/3.5 的指導模型視為 Phi 理解能力，而視覺則賦予 Phi 理解世界的眼睛。
+- Demo：Phi-3-mini 與 Phi-3.5-mini 在中文場景的效果比較
 
-**Phi-3-Vision**
+![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.hk.png)
 
-Phi-3-vision 僅有 4.2B 參數，繼續這一趨勢，在一般視覺推理任務、OCR 和表格及圖表理解任務上超越了更大的模型，如 Claude-3 Haiku 和 Gemini 1.0 Pro V。
+![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.hk.png)
 
-**Phi-3.5-Vision**
+**Azure AI Studio**  
+若想使用視覺及 MoE 模型，可透過 Azure AI Studio 完成呼叫。若有興趣，可參考 Phi-3 Cookbook，學習如何透過 Azure AI Studio 調用 Phi-3/3.5 Instruct、Vision、MoE [點此連結](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
-Phi-3.5-Vision 也是 Phi-3-Vision 的升級版，增加了對多張圖像的支持。您可以將其視為視覺的改進，不僅可以查看圖片，還可以查看視頻。Phi-3.5-vision 在 OCR、表格和圖表理解任務上超越了更大的模型，如 Claude-3.5 Sonnet 和 Gemini 1.5 Flash，並在一般視覺知識推理任務上相當。支持多幀輸入，即對多個輸入圖像進行推理。
+**NVIDIA NIM**  
+除了 Azure 和 GitHub 提供的雲端模型目錄解決方案外，你也可以使用 [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) 完成相關呼叫。NVIDIA NIM（NVIDIA Inference Microservices）是一套加速推理微服務，幫助開發者在雲端、資料中心及工作站等多種環境中高效部署 AI 模型。
 
-### Phi-3.5-MoE
+NVIDIA NIM 的主要特點包括：
 
-***專家混合（MoE）*** 使模型能夠以更少的計算預訓練，這意味著您可以在與密集模型相同的計算預算下大幅擴展模型或數據集的大小。特別是，MoE 模型在預訓練期間應能更快地達到與其密集對應物相同的質量。Phi-3.5-MoE 包含 16x3.8B 專家模塊。Phi-3.5-MoE 僅用 6.6B 活動參數實現了類似於更大模型的推理、語言理解和數學水平。
+- **部署簡便：** 只需一條指令即可部署 AI 模型，輕鬆整合現有工作流程。  
+- **效能優化：** 利用 NVIDIA 預優化的推理引擎，如 TensorRT 和 TensorRT-LLM，確保低延遲與高吞吐量。  
+- **可擴展性：** 支援 Kubernetes 自動擴展，有效應對不同工作負載。
+- **安全與控制：** 組織可以透過在自家管理的基礎設施上自行部署 NIM 微服務，來維持對其數據和應用程式的掌控。
+- **標準 API：** NIM 提供業界標準的 API，方便構建和整合聊天機器人、AI 助理等 AI 應用。
 
-我們可以根據不同場景使用 Phi-3/3.5 系列模型。與 LLM 不同，您可以在邊緣設備上部署 Phi-3/3.5-mini 或 Phi-3/3.5-Vision。
+NIM 是 NVIDIA AI Enterprise 的一部分，旨在簡化 AI 模型的部署與運營，確保它們能在 NVIDIA GPU 上高效運行。
 
-## 如何使用 Phi-3/3.5 系列模型
+- Demo：使用 Nividia NIM 調用 Phi-3.5-Vision-API  [[點擊此連結](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
-我們希望在不同的場景中使用 Phi-3/3.5。接下來，我們將根據不同的場景使用 Phi-3/3.5。
 
-![phi3](../../../translated_images/phi3.031cf9ca915915dbb4e8bc1e2b8e1e93d4d8a865ec4ea6ecdff5847b027a5113.hk.png)
+### 在本地環境推理 Phi-3/3.5
+關於 Phi-3 或任何類似 GPT-3 的語言模型，推理指的是根據輸入生成回應或預測的過程。當你向 Phi-3 提供提示或問題時，它會利用訓練好的神經網絡，通過分析訓練數據中的模式和關聯，推斷出最可能且相關的回應。
 
-### 推理差異
+**Hugging Face Transformer**  
+Hugging Face Transformers 是一個強大的庫，專為自然語言處理（NLP）及其他機器學習任務設計。以下是它的一些重點：
 
-雲的 API
+1. **預訓練模型**：提供數千個預訓練模型，可用於文本分類、命名實體識別、問答、摘要、翻譯和文本生成等多種任務。
 
-**GitHub 模型**
+2. **框架互通性**：支援多種深度學習框架，包括 PyTorch、TensorFlow 和 JAX，讓你能在一個框架中訓練模型，並在另一個框架中使用。
 
-GitHub
-Models係最直接嘅方法。你可以透過GitHub Models快速訪問Phi-3/3.5-Instruct模型。結合Azure AI Inference SDK/OpenAI SDK，你可以通過代碼訪問API完成Phi-3/3.5-Instruct調用。你仲可以通過Playground測試唔同效果。- Demo: Phi-3-mini同Phi-3.5-mini喺中文場景嘅效果比較 ![phi3](../../../translated_images/gh1.33134727688b27f6eaeac67bd84dbef85626e2d8fe452d826d0b3c353e29a472.hk.png) ![phi35](../../../translated_images/gh2.9f09152ff1c8dfdb777bb774f961c9ddf743879fc2fb640597bb413b1f320b8a.hk.png) **Azure AI Studio** 或者如果我哋想使用Vision同MoE模型，你可以使用Azure AI Studio完成調用。如果你有興趣，你可以閱讀Phi-3 Cookbook學習如何通過Azure AI Studio調用Phi-3/3.5 Instruct、Vision、MoE [點擊呢個鏈接](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst) **NVIDIA NIM** 除咗Azure同GitHub提供嘅基於雲端嘅模型目錄解決方案，你仲可以使用[Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst)完成相關調用。你可以訪問NIVIDA NIM完成Phi-3/3.5系列嘅API調用。NVIDIA NIM（NVIDIA推理微服務）係一套加速推理微服務，旨喺幫助開發者高效地喺各種環境中部署AI模型，包括雲端、數據中心同工作站。以下係NVIDIA NIM嘅一些關鍵特點：- **部署簡易性：** NIM允許通過單個命令部署AI模型，使其容易集成到現有工作流程中。- **性能優化：** 它利用NVIDIA預先優化嘅推理引擎，如TensorRT同TensorRT-LLM，以確保低延遲同高吞吐量。- **可擴展性：** NIM支持喺Kubernetes上自動擴展，使其能夠有效地處理變化嘅工作負載。- **安全同控制：** 組織可以通過喺自己管理嘅基礎設施上自托管NIM微服務來保持對其數據同應用嘅控制。- **標準API：** NIM提供行業標準API，使其容易構建同集成AI應用，如聊天機器人、AI助手等。NIM係NVIDIA AI Enterprise嘅一部分，旨喺簡化AI模型嘅部署同運營化，確保其喺NVIDIA GPU上高效運行。- Demo: 使用Nividia NIM調用Phi-3.5-Vision-API [[點擊呢個鏈接](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)] ### 喺本地環境推理Phi-3/3.5 推理與Phi-3或任何語言模型如GPT-3相關，指根據其接收嘅輸入生成回應或預測嘅過程。當你提供提示或問題俾Phi-3時，它使用其訓練嘅神經網絡通過分析其訓練數據中嘅模式同關係來推斷最可能同相關嘅回應。 **Hugging Face Transformer** Hugging Face Transformers係一個為自然語言處理（NLP）同其他機器學習任務設計嘅強大庫。以下係關於佢嘅一些重點：1. **預訓練模型：** 它提供數千個預訓練模型，可用於各種任務，如文本分類、命名實體識別、問題回答、摘要、翻譯同文本生成。2. **框架互操作性：** 該庫支持多個深度學習框架，包括PyTorch、TensorFlow同JAX。這使你可以喺一個框架中訓練模型並喺另一個框架中使用。3. **多模態能力：** 除咗NLP，Hugging Face Transformers仲支持計算機視覺（例如圖像分類、物體檢測）同音頻處理（例如語音識別、音頻分類）嘅任務。4. **易用性：** 該庫提供API同工具，容易下載同微調模型，使其對初學者同專家都可訪問。5. **社區同資源：** Hugging Face擁有活躍嘅社區同豐富嘅文檔、教程同指南，以幫助用戶開始並充分利用該庫。[官方文檔](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst)或者佢哋嘅[GitHub存儲庫](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst)。這係最常用嘅方法，但亦需要GPU加速。畢竟，像Vision同MoE嘅場景需要大量計算，如果唔係量化嘅話喺CPU中會非常有限。- Demo: 使用Transformer調用Phi-3.5-Instuct [點擊呢個鏈接](../../../19-slm/python/phi35-instruct-demo.ipynb) - Demo: 使用Transformer調用Phi-3.5-Vision[點擊呢個鏈接](../../../19-slm/python/phi35-vision-demo.ipynb) - Demo: 使用Transformer調用Phi-3.5-MoE[點擊呢個鏈接](../../../19-slm/python/phi35_moe_demo.ipynb) **Ollama** [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)係一個旨喺使本地運行大型語言模型（LLMs）更容易嘅平台。它支持各種模型，如Llama 3.1、Phi 3、Mistral同Gemma 2等。該平台通過將模型權重、配置同數據捆綁成一個單一包來簡化過程，使其對用戶更可訪問以定制同創建自己嘅模型。Ollama可用於macOS、Linux同Windows。如果你想實驗或部署LLMs而唔依賴雲服務，這係一個很棒嘅工具。Ollama係最直接嘅方法，你只需要執行以下語句。```bash
+3. **多模態能力**：除了 NLP，Hugging Face Transformers 還支援計算機視覺（如圖像分類、物體檢測）和音頻處理（如語音識別、音頻分類）任務。
+
+4. **易用性**：提供 API 和工具，方便下載和微調模型，適合初學者和專家使用。
+
+5. **社群與資源**：擁有活躍的社群和豐富的文件、教學與指南，幫助用戶快速上手並充分利用該庫。  
+[官方文件](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) 或其 [GitHub 倉庫](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst)。
+
+這是最常用的方法，但同時也需要 GPU 加速。畢竟像 Vision 和 MoE 這類場景需要大量計算，若未量化，CPU 的運算能力會非常有限。
+
+
+- Demo：使用 Transformer 調用 Phi-3.5-Instuct [點擊此連結](../../../19-slm/python/phi35-instruct-demo.ipynb)
+
+- Demo：使用 Transformer 調用 Phi-3.5-Vision [點擊此連結](../../../19-slm/python/phi35-vision-demo.ipynb)
+
+- Demo：使用 Transformer 調用 Phi-3.5-MoE [點擊此連結](../../../19-slm/python/phi35_moe_demo.ipynb)
+
+**Ollama**  
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) 是一個讓你更輕鬆在本地機器上運行大型語言模型（LLM）的平台。它支援多種模型，如 Llama 3.1、Phi 3、Mistral 和 Gemma 2 等。該平台將模型權重、配置和數據打包成一個整合包，簡化了用戶自訂和創建模型的流程。Ollama 支援 macOS、Linux 和 Windows。如果你想在不依賴雲端服務的情況下試驗或部署 LLM，Ollama 是最直接的選擇，只需執行以下語句即可。
+
+
+```bash
 
 ollama run phi3.5
 
-``` **ONNX Runtime for GenAI** [ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst)係一個跨平台推理同訓練機器學習加速器。ONNX Runtime for Generative AI (GENAI)係一個強大嘅工具，幫助你喺各種平台上高效地運行生成性AI模型。## 乜嘢係ONNX Runtime? ONNX Runtime係一個開源項目，支持機器學習模型嘅高性能推理。它支持Open Neural Network Exchange (ONNX)格式嘅模型，這係表示機器學習模型嘅標準。ONNX Runtime推理可以支持來自深度學習框架如PyTorch同TensorFlow/Keras以及經典機器學習庫如scikit-learn、LightGBM、XGBoost等嘅模型，從而實現更快嘅客戶體驗同降低成本。ONNX Runtime兼容不同嘅硬件、驅動同操作系統，並通過利用硬件加速器（如果適用）同圖優化同轉換提供最佳性能## 乜嘢係生成性AI？生成性AI指能夠根據訓練嘅數據生成新內容（例如文本、圖像或音樂）嘅AI系統。例子包括語言模型如GPT-3同圖像生成模型如Stable Diffusion。ONNX Runtime for GenAI庫提供ONNX模型嘅生成性AI循環，包括使用ONNX Runtime進行推理、logits處理、搜索同採樣同KV緩存管理。## ONNX Runtime for GENAI ONNX Runtime for GENAI擴展咗ONNX Runtime嘅能力，以支持生成性AI模型。以下係一些關鍵特點：- **廣泛平台支持：** 它可以喺各種平台上工作，包括Windows、Linux、macOS、Android同iOS。- **模型支持：** 它支持許多流行嘅生成性AI模型，如LLaMA、GPT-Neo、BLOOM等。- **性能優化：** 它包括對唔同硬件加速器（如NVIDIA GPUs、AMD GPUs等）嘅優化。- **易用性：** 它提供API以便容易集成到應用中，允許你用最少代碼生成文本、圖像同其他內容。- 用戶可以調用高級generate()方法，或者喺循環中運行模型嘅每次迭代，每次生成一個token，並可選擇喺循環中更新生成參數。- ONNX runtime仲支持貪婪/beam搜索同TopP、TopK採樣以生成token序列同內置logits處理如重複懲罰。你亦可以容易地添加自定義評分。## 開始使用 要開始使用ONNX Runtime for GENAI，你可以遵循以下步驟：### 安裝ONNX Runtime: ```Python
+```
+
+
+**ONNX Runtime for GenAI**
+
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) 是一個跨平台的機器學習推理與訓練加速器。ONNX Runtime for Generative AI (GENAI) 是一個強大的工具，幫助你在多種平台上高效運行生成式 AI 模型。
+
+## 什麼是 ONNX Runtime？  
+ONNX Runtime 是一個開源專案，能夠高效推理機器學習模型。它支援 Open Neural Network Exchange (ONNX) 格式的模型，這是一種機器學習模型的標準格式。ONNX Runtime 推理能提升用戶體驗並降低成本，支援來自深度學習框架如 PyTorch 和 TensorFlow/Keras，以及經典機器學習庫如 scikit-learn、LightGBM、XGBoost 等的模型。ONNX Runtime 相容於不同硬體、驅動和作業系統，並透過硬體加速器、圖優化和轉換來提供最佳效能。
+
+## 什麼是生成式 AI？  
+生成式 AI 指的是能根據訓練數據生成新內容的 AI 系統，如文本、圖像或音樂。例子包括 GPT-3 這類語言模型，以及 Stable Diffusion 這類圖像生成模型。ONNX Runtime for GenAI 庫提供了 ONNX 模型的生成式 AI 流程，包括使用 ONNX Runtime 進行推理、logits 處理、搜尋與採樣，以及 KV 快取管理。
+
+## ONNX Runtime for GENAI  
+ONNX Runtime for GENAI 擴展了 ONNX Runtime 的功能，以支援生成式 AI 模型。主要特點包括：
+
+- **廣泛的平台支援：** 適用於 Windows、Linux、macOS、Android 和 iOS 等多種平台。
+- **模型支援：** 支援多種流行的生成式 AI 模型，如 LLaMA、GPT-Neo、BLOOM 等。
+- **效能優化：** 包含針對 NVIDIA GPU、AMD GPU 等硬體加速器的優化。
+- **易用性：** 提供 API，方便整合到應用程式中，讓你能以最少程式碼生成文本、圖像及其他內容。
+- 用戶可以呼叫高階的 generate() 方法，或在迴圈中逐步執行模型，每次生成一個 token，並可在迴圈內更新生成參數。
+- ONNX Runtime 也支援貪婪搜尋、beam search 以及 TopP、TopK 採樣來生成 token 序列，並內建如重複懲罰等 logits 處理。你也可以輕鬆添加自訂評分。
+
+## 快速開始  
+要開始使用 ONNX Runtime for GENAI，可以依照以下步驟：
+
+### 安裝 ONNX Runtime：  
+```Python
 pip install onnxruntime
-``` ### 安裝生成性AI擴展: ```Python
+```  
+### 安裝生成式 AI 擴充套件：  
+```Python
 pip install onnxruntime-genai
-``` ### 運行模型: 以下係Python中嘅簡單示例：```Python
+```
+
+### 執行模型：以下是 Python 的簡單範例：  
+```Python
 import onnxruntime_genai as og
 
 model = og.Model('path_to_your_model.onnx')
@@ -154,7 +232,11 @@ output_tokens = model.generate(input_tokens)
 output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
-``` ### Demo: 使用ONNX Runtime GenAI調用Phi-3.5-Vision ```python
+```  
+### Demo：使用 ONNX Runtime GenAI 調用 Phi-3.5-Vision
+
+
+```python
 
 import onnxruntime_genai as og
 
@@ -202,7 +284,17 @@ while not generator.is_done():
     
     print(tokenizer_stream.decode(new_token), end='', flush=True)
 
-``` **其他** 除咗ONNX Runtime同Ollama參考方法，我哋仲可以根據唔同製造商提供嘅模型參考方法完成定量模型嘅參考。比如Apple MLX框架同Apple Metal、Qualcomm QNN同NPU、Intel OpenVINO同CPU/GPU等。你仲可以從[Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)獲得更多內容 ## 更多 我哋已經學習咗Phi-3/3.5系列嘅基本知識，但要學習更多關於SLM嘅知識，我哋需要更多知識。你可以喺Phi-3 Cookbook中找到答案。如果你想學習更多，請訪問[Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)。
+```
+
+
+**其他**
+
+除了 ONNX Runtime 和 Ollama 參考方法外，我們還可以根據不同廠商提供的模型參考方法，完成量化模型的參考。例如 Apple MLX 框架搭配 Apple Metal、Qualcomm QNN 搭配 NPU、Intel OpenVINO 搭配 CPU/GPU 等。你也可以從 [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst) 獲取更多內容。
+
+
+## 更多
+
+我們已經了解了 Phi-3/3.5 家族的基礎，但若想深入學習 SLM，還需要更多知識。你可以在 Phi-3 Cookbook 中找到答案。如果想進一步了解，請造訪 [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)。
 
 **免責聲明**：  
-此文件已使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原文應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤讀概不負責。
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或誤釋承擔責任。

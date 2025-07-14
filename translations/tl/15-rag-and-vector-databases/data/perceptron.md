@@ -2,51 +2,51 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T06:42:02+00:00",
+  "translation_date": "2025-07-09T17:00:01+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "tl"
 }
 -->
 # Panimula sa Neural Networks: Perceptron
 
-Isa sa mga unang pagtatangka na ipatupad ang isang bagay na katulad ng modernong neural network ay ginawa ni Frank Rosenblatt mula sa Cornell Aeronautical Laboratory noong 1957. Ito ay isang hardware na implementasyon na tinawag na "Mark-1", na dinisenyo upang makilala ang mga primitibong hugis na geometric, tulad ng mga tatsulok, parisukat, at bilog.
+Isa sa mga unang pagsubok na gumawa ng katulad ng modernong neural network ay ginawa ni Frank Rosenblatt mula sa Cornell Aeronautical Laboratory noong 1957. Isa itong hardware implementation na tinawag na "Mark-1", na idinisenyo upang makilala ang mga simpleng hugis tulad ng tatsulok, parisukat, at bilog.
 
 |      |      |
 |--------------|-----------|
 |<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
 
-> Mga imahe mula sa Wikipedia
+> Mga larawan mula sa Wikipedia
 
-Ang input na imahe ay kinakatawan ng 20x20 photocell array, kaya ang neural network ay may 400 na inputs at isang binary na output. Ang simpleng network ay naglalaman ng isang neuron, na tinatawag ding **threshold logic unit**. Ang mga bigat ng neural network ay kumikilos tulad ng mga potentiometer na nangangailangan ng manwal na pagsasaayos sa panahon ng pagsasanay.
+Ang input na imahe ay kinakatawan ng 20x20 na photocell array, kaya ang neural network ay may 400 inputs at isang binary output. Ang simpleng network ay may isang neuron, na tinatawag ding **threshold logic unit**. Ang mga timbang ng neural network ay kumikilos tulad ng mga potentiometer na kailangang mano-manong i-adjust sa panahon ng training.
 
-> ✅ Ang potentiometer ay isang aparato na nagpapahintulot sa gumagamit na ayusin ang resistensya ng isang circuit.
+> ✅ Ang potentiometer ay isang aparato na nagpapahintulot sa gumagamit na baguhin ang resistensya ng isang circuit.
 
-> Sinulat ng The New York Times tungkol sa perceptron noong panahong iyon: *ang embryo ng isang electronic computer na [ang Navy] ay umaasa na makakalakad, makakapagsalita, makakakita, makakasulat, makakagawa ng sarili at magiging mulat sa kanyang pag-iral.*
+> Sinulat ng The New York Times tungkol sa perceptron noong panahong iyon: *ang simula ng isang electronic computer na inaasahan ng Navy na kaya nang maglakad, magsalita, makakita, magsulat, magparami ng sarili, at maging mulat sa sariling pag-iral.*
 
 ## Modelo ng Perceptron
 
-Ipagpalagay natin na mayroon tayong N na mga tampok sa ating modelo, kung saan ang input vector ay magiging isang vector ng laki N. Ang isang perceptron ay isang **binary classification** na modelo, ibig sabihin maaari itong makilala sa pagitan ng dalawang klase ng input na data. Ipagpalagay natin na para sa bawat input vector x ang output ng ating perceptron ay magiging alinman sa +1 o -1, depende sa klase. Ang output ay kakalkulahin gamit ang pormula:
+Ipagpalagay natin na mayroon tayong N na features sa ating modelo, kaya ang input vector ay isang vector na may sukat na N. Ang perceptron ay isang **binary classification** na modelo, ibig sabihin kaya nitong paghiwalayin ang dalawang klase ng input data. Ipagpalagay natin na para sa bawat input vector x, ang output ng ating perceptron ay +1 o -1, depende sa klase. Ang output ay kakalkulahin gamit ang pormula:
 
 y(x) = f(w<sup>T</sup>x)
 
 kung saan ang f ay isang step activation function
 
-## Pagsasanay sa Perceptron
+## Pagsasanay ng Perceptron
 
-Upang sanayin ang isang perceptron kailangan nating makahanap ng isang weights vector w na nag-uuri ng karamihan sa mga halaga nang tama, ibig sabihin nagreresulta sa pinakamaliit na **error**. Ang error na ito ay tinukoy ng **perceptron criterion** sa sumusunod na paraan:
+Para sanayin ang perceptron, kailangan nating hanapin ang weights vector w na tama ang pagklasipika sa karamihan ng mga halaga, ibig sabihin ay nagreresulta sa pinakamaliit na **error**. Ang error na ito ay tinutukoy ng **perceptron criterion** sa sumusunod na paraan:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 kung saan:
 
-* ang kabuuan ay kinuha sa mga training data points i na nagreresulta sa maling klasipikasyon
-* x<sub>i</sub> ay ang input data, at t<sub>i</sub> ay alinman sa -1 o +1 para sa mga negatibo at positibong halimbawa nang naaayon.
+* ang suma ay kinukuha sa mga training data points i na nagreresulta sa maling klasipikasyon
+* ang x<sub>i</sub> ay input data, at ang t<sub>i</sub> ay -1 o +1 para sa mga negatibo at positibong halimbawa ayon sa pagkakasunod
 
-Ang pamantayang ito ay itinuturing bilang isang function ng weights w, at kailangan nating i-minimize ito. Madalas, isang paraan na tinatawag na **gradient descent** ang ginagamit, kung saan nagsisimula tayo sa ilang inisyal na weights w<sup>(0)</sup>, at pagkatapos sa bawat hakbang ay ina-update ang weights ayon sa pormula:
+Ang kriteriang ito ay itinuturing na isang function ng weights w, at kailangan natin itong i-minimize. Madalas, ginagamit ang isang paraan na tinatawag na **gradient descent**, kung saan nagsisimula tayo sa ilang initial weights w<sup>(0)</sup>, at sa bawat hakbang ay ina-update ang weights gamit ang pormula:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Dito ang η ay tinatawag na **learning rate**, at ang ∇E(w) ay nangangahulugang **gradient** ng E. Pagkatapos nating kalkulahin ang gradient, nagtatapos tayo sa
+Dito, ang η ay tinatawag na **learning rate**, at ang ∇E(w) ay ang **gradient** ng E. Pagkatapos makalkula ang gradient, nagiging:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
@@ -74,24 +74,25 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Konklusyon
 
-Sa araling ito, natutunan mo ang tungkol sa isang perceptron, na isang binary classification na modelo, at kung paano ito sanayin gamit ang isang weights vector.
+Sa araling ito, natutunan mo ang tungkol sa perceptron, isang binary classification na modelo, at kung paano ito sanayin gamit ang weights vector.
 
 ## 🚀 Hamon
 
-Kung gusto mong subukang bumuo ng iyong sariling perceptron, subukan ang lab na ito sa Microsoft Learn na gumagamit ng Azure ML designer
+Kung gusto mong subukan gumawa ng sarili mong perceptron, subukan ang lab na ito sa Microsoft Learn na gumagamit ng Azure ML designer
 
-## Pagsusuri at Pag-aaral sa Sarili
 
-Upang makita kung paano natin magagamit ang perceptron upang lutasin ang isang laruan na problema pati na rin ang mga totoong problema, at upang magpatuloy sa pag-aaral - pumunta sa Perceptron notebook.
+## Review at Sariling Pag-aaral
 
-Narito rin ang isang kawili-wiling artikulo tungkol sa mga perceptrons.
+Para makita kung paano natin magagamit ang perceptron sa paglutas ng mga simpleng problema pati na rin sa mga totoong buhay na problema, at para magpatuloy sa pag-aaral - pumunta sa Perceptron notebook.
 
-## Takdang Aralin
+Narito rin ang isang kawili-wiling artikulo tungkol sa mga perceptron.
 
-Sa araling ito, nagpatupad tayo ng isang perceptron para sa binary classification na gawain, at ginamit natin ito upang uriin sa pagitan ng dalawang manuskrito na numero. Sa lab na ito, ikaw ay hiniling na lutasin ang problema ng pagkilala sa numero nang buo, ibig sabihin tukuyin kung aling numero ang pinaka-malamang na tumutugma sa isang ibinigay na imahe.
+## Takdang-Aralin
+
+Sa araling ito, nakagawa tayo ng perceptron para sa binary classification na gawain, at ginamit natin ito para magklasipika sa pagitan ng dalawang handwritten digits. Sa lab na ito, hihilingin kang lutasin ang problema ng digit classification nang buo, ibig sabihin ay tukuyin kung aling digit ang pinaka-malamang na tumutugma sa isang ibinigay na imahe.
 
 * Mga Tagubilin
 * Notebook
 
-**Pagtatatuwa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga error o hindi pagkakatumpak. Ang orihinal na dokumento sa kanyang katutubong wika ay dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot para sa anumang hindi pagkakaunawaan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
+**Paalala**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

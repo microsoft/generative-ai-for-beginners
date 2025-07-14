@@ -2,124 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:03:38+00:00",
+  "translation_date": "2025-07-09T16:34:48+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "id"
 }
 -->
-# Kerangka Jaringan Saraf
+# Neural Network Frameworks
 
-Seperti yang telah kita pelajari, untuk dapat melatih jaringan saraf dengan efisien kita perlu melakukan dua hal:
+Seperti yang sudah kita pelajari, untuk dapat melatih neural network secara efisien kita perlu melakukan dua hal:
 
-* Mengoperasikan tensor, misalnya untuk mengalikan, menambahkan, dan menghitung beberapa fungsi seperti sigmoid atau softmax
-* Menghitung gradien dari semua ekspresi, untuk melakukan optimisasi penurunan gradien
+* Mengoperasikan tensor, misalnya mengalikan, menjumlahkan, dan menghitung beberapa fungsi seperti sigmoid atau softmax
+* Menghitung gradien dari semua ekspresi, untuk melakukan optimisasi dengan gradient descent
 
-Sementara perpustakaan `numpy` dapat melakukan bagian pertama, kita memerlukan mekanisme untuk menghitung gradien. Dalam kerangka kerja yang telah kita kembangkan di bagian sebelumnya, kita harus memprogram secara manual semua fungsi turunan di dalam metode `backward`, yang melakukan backpropagation. Idealnya, sebuah kerangka kerja harus memberi kita kesempatan untuk menghitung gradien dari *setiap ekspresi* yang dapat kita definisikan.
+Meskipun library `numpy` dapat melakukan bagian pertama, kita membutuhkan mekanisme untuk menghitung gradien. Dalam framework yang telah kita kembangkan di bagian sebelumnya, kita harus memprogram semua fungsi turunan secara manual di dalam metode `backward`, yang melakukan backpropagation. Idealnya, sebuah framework harus memberikan kesempatan untuk menghitung gradien dari *ekspresi apapun* yang bisa kita definisikan.
 
-Hal penting lainnya adalah dapat melakukan perhitungan pada GPU, atau unit komputasi khusus lainnya, seperti TPU. Pelatihan jaringan saraf dalam memerlukan *banyak* perhitungan, dan kemampuan untuk memparalelkan perhitungan tersebut pada GPU sangatlah penting.
+Hal penting lainnya adalah kemampuan melakukan komputasi di GPU, atau unit komputasi khusus lainnya, seperti TPU. Pelatihan deep neural network membutuhkan *banyak* komputasi, dan kemampuan untuk memparalelkan komputasi tersebut di GPU sangatlah penting.
 
-> ✅ Istilah 'memparalelkan' berarti mendistribusikan perhitungan ke beberapa perangkat.
+> ✅ Istilah 'memparalelkan' berarti mendistribusikan komputasi ke beberapa perangkat.
 
-Saat ini, dua kerangka kerja saraf yang paling populer adalah: TensorFlow dan PyTorch. Keduanya menyediakan API tingkat rendah untuk beroperasi dengan tensor pada CPU dan GPU. Di atas API tingkat rendah, ada juga API tingkat tinggi, yang disebut Keras dan PyTorch Lightning masing-masing.
+Saat ini, dua framework neural network yang paling populer adalah: TensorFlow dan PyTorch. Keduanya menyediakan API tingkat rendah untuk mengoperasikan tensor di CPU maupun GPU. Di atas API tingkat rendah, juga ada API tingkat tinggi, yang disebut Keras dan PyTorch Lightning secara berurutan.
 
-API Tingkat Rendah | TensorFlow| PyTorch
--------------------|-------------------------------------|--------------------------------
-API Tingkat Tinggi | Keras| Pytorch
+Low-Level API | TensorFlow | PyTorch  
+--------------|-------------------------------|------------------------------  
+High-level API| Keras | PyTorch
 
-**API tingkat rendah** di kedua kerangka kerja memungkinkan Anda membangun apa yang disebut **grafik komputasi**. Grafik ini mendefinisikan cara menghitung output (biasanya fungsi kerugian) dengan parameter input yang diberikan, dan dapat didorong untuk perhitungan pada GPU, jika tersedia. Ada fungsi untuk membedakan grafik komputasi ini dan menghitung gradien, yang kemudian dapat digunakan untuk mengoptimalkan parameter model.
+**API tingkat rendah** di kedua framework memungkinkan Anda membangun yang disebut **computational graphs**. Graph ini mendefinisikan bagaimana menghitung output (biasanya fungsi loss) dengan parameter input yang diberikan, dan dapat dijalankan di GPU jika tersedia. Ada fungsi untuk mendiferensiasi computational graph ini dan menghitung gradien, yang kemudian dapat digunakan untuk mengoptimalkan parameter model.
 
-**API tingkat tinggi** umumnya menganggap jaringan saraf sebagai **urutan lapisan**, dan membuat konstruksi sebagian besar jaringan saraf menjadi lebih mudah. Melatih model biasanya memerlukan persiapan data dan kemudian memanggil fungsi `fit` untuk menyelesaikan pekerjaan.
+**API tingkat tinggi** lebih memandang neural network sebagai **rangkaian layer**, dan membuat konstruksi sebagian besar neural network menjadi jauh lebih mudah. Melatih model biasanya hanya perlu menyiapkan data dan kemudian memanggil fungsi `fit` untuk menjalankan proses pelatihan.
 
-API tingkat tinggi memungkinkan Anda membangun jaringan saraf khas dengan sangat cepat tanpa perlu khawatir tentang banyak detail. Pada saat yang sama, API tingkat rendah menawarkan lebih banyak kontrol atas proses pelatihan, dan karena itu banyak digunakan dalam penelitian, ketika Anda berurusan dengan arsitektur jaringan saraf baru.
+API tingkat tinggi memungkinkan Anda membangun neural network tipikal dengan cepat tanpa harus memikirkan banyak detail. Sementara itu, API tingkat rendah menawarkan kontrol lebih besar atas proses pelatihan, sehingga sering digunakan dalam riset, terutama saat Anda berhadapan dengan arsitektur neural network baru.
 
-Penting juga untuk memahami bahwa Anda dapat menggunakan kedua API tersebut bersama-sama, misalnya Anda dapat mengembangkan arsitektur lapisan jaringan Anda sendiri menggunakan API tingkat rendah, dan kemudian menggunakannya di dalam jaringan yang lebih besar yang dibangun dan dilatih dengan API tingkat tinggi. Atau Anda dapat mendefinisikan jaringan menggunakan API tingkat tinggi sebagai urutan lapisan, dan kemudian menggunakan loop pelatihan tingkat rendah Anda sendiri untuk melakukan optimisasi. Kedua API menggunakan konsep dasar yang sama, dan mereka dirancang untuk bekerja dengan baik bersama-sama.
+Penting juga untuk memahami bahwa Anda bisa menggunakan kedua API ini secara bersamaan, misalnya Anda bisa mengembangkan arsitektur layer jaringan Anda sendiri menggunakan API tingkat rendah, lalu menggunakannya di dalam jaringan yang lebih besar yang dibangun dan dilatih dengan API tingkat tinggi. Atau Anda bisa mendefinisikan jaringan menggunakan API tingkat tinggi sebagai rangkaian layer, lalu menggunakan loop pelatihan tingkat rendah Anda sendiri untuk melakukan optimisasi. Kedua API menggunakan konsep dasar yang sama, dan dirancang agar bisa bekerja dengan baik bersama.
 
 ## Pembelajaran
 
-Dalam kursus ini, kami menawarkan sebagian besar konten baik untuk PyTorch maupun TensorFlow. Anda dapat memilih kerangka kerja yang Anda sukai dan hanya mengikuti notebook yang sesuai. Jika Anda tidak yakin kerangka kerja mana yang harus dipilih, baca beberapa diskusi di internet mengenai **PyTorch vs. TensorFlow**. Anda juga dapat melihat kedua kerangka kerja untuk mendapatkan pemahaman yang lebih baik.
+Dalam kursus ini, kami menyediakan sebagian besar konten untuk PyTorch dan TensorFlow. Anda bisa memilih framework yang Anda sukai dan hanya mengikuti notebook yang sesuai. Jika Anda belum yakin memilih framework mana, baca beberapa diskusi di internet mengenai **PyTorch vs. TensorFlow**. Anda juga bisa melihat kedua framework untuk mendapatkan pemahaman yang lebih baik.
 
-Di mana mungkin, kami akan menggunakan API Tingkat Tinggi untuk kesederhanaan. Namun, kami percaya penting untuk memahami cara kerja jaringan saraf dari bawah ke atas, sehingga pada awalnya kami mulai dengan bekerja dengan API tingkat rendah dan tensor. Namun, jika Anda ingin segera memulai dan tidak ingin menghabiskan banyak waktu untuk mempelajari detail ini, Anda dapat melewatkannya dan langsung ke notebook API tingkat tinggi.
+Jika memungkinkan, kami akan menggunakan API Tingkat Tinggi untuk kesederhanaan. Namun, kami percaya penting untuk memahami cara kerja neural network dari dasar, sehingga di awal kita mulai dengan bekerja menggunakan API tingkat rendah dan tensor. Namun, jika Anda ingin cepat memulai dan tidak ingin menghabiskan banyak waktu mempelajari detail ini, Anda bisa melewati bagian tersebut dan langsung ke notebook API tingkat tinggi.
 
-## ✍️ Latihan: Kerangka Kerja
+## ✍️ Latihan: Frameworks
 
 Lanjutkan pembelajaran Anda di notebook berikut:
 
-API Tingkat Rendah | Notebook TensorFlow+Keras | PyTorch
--------------------|-------------------------------------|--------------------------------
-API Tingkat Tinggi | Keras | *PyTorch Lightning*
+Low-Level API | TensorFlow+Keras Notebook | PyTorch  
+--------------|-------------------------------|------------------------------  
+High-level API| Keras | *PyTorch Lightning*
 
-Setelah menguasai kerangka kerja, mari kita ulas kembali konsep overfitting.
+Setelah menguasai framework, mari kita ulas kembali konsep overfitting.
 
 # Overfitting
 
-Overfitting adalah konsep yang sangat penting dalam pembelajaran mesin, dan sangat penting untuk memahaminya dengan benar!
+Overfitting adalah konsep yang sangat penting dalam machine learning, dan sangat penting untuk memahaminya dengan benar!
 
-Pertimbangkan masalah berikut ini tentang mendekati 5 titik (diwakili oleh `x` pada grafik di bawah):
+Pertimbangkan masalah berikut dalam mengaproksimasi 5 titik (diwakili oleh `x` pada grafik di bawah):
 
-!linear | overfit
--------------------------|--------------------------
-**Model Linear, 2 parameter** | **Model Non-linear, 7 parameter**
-Kesalahan pelatihan = 5.3 | Kesalahan pelatihan = 0
-Kesalahan validasi = 5.1 | Kesalahan validasi = 20
+!linear | overfit  
+-------------------------|--------------------------  
+**Model linear, 2 parameter** | **Model non-linear, 7 parameter**  
+Error pelatihan = 5.3 | Error pelatihan = 0  
+Error validasi = 5.1 | Error validasi = 20
 
-* Di sebelah kiri, kita melihat aproksimasi garis lurus yang baik. Karena jumlah parameter memadai, model memahami distribusi titik dengan benar.
-* Di sebelah kanan, model terlalu kuat. Karena kita hanya memiliki 5 titik dan model memiliki 7 parameter, model dapat menyesuaikan sedemikian rupa sehingga melewati semua titik, membuat kesalahan pelatihan menjadi 0. Namun, ini mencegah model memahami pola yang benar di balik data, sehingga kesalahan validasi sangat tinggi.
+* Di sebelah kiri, kita melihat aproksimasi garis lurus yang baik. Karena jumlah parameter cukup, model dapat menangkap pola distribusi titik dengan benar.  
+* Di sebelah kanan, model terlalu kuat. Karena kita hanya memiliki 5 titik dan model memiliki 7 parameter, model dapat menyesuaikan sedemikian rupa sehingga melewati semua titik, membuat error pelatihan menjadi 0. Namun, ini membuat model gagal memahami pola yang benar di balik data, sehingga error validasi sangat tinggi.
 
-Sangat penting untuk mencapai keseimbangan yang tepat antara kekayaan model (jumlah parameter) dan jumlah sampel pelatihan.
+Sangat penting untuk menemukan keseimbangan yang tepat antara kompleksitas model (jumlah parameter) dan jumlah sampel pelatihan.
 
 ## Mengapa overfitting terjadi
 
-  * Data pelatihan tidak cukup
-  * Model terlalu kuat
-  * Terlalu banyak noise dalam data input
+  * Data pelatihan tidak cukup banyak  
+  * Model terlalu kompleks  
+  * Terlalu banyak noise pada data input
 
 ## Cara mendeteksi overfitting
 
-Seperti yang dapat Anda lihat dari grafik di atas, overfitting dapat dideteksi dengan kesalahan pelatihan yang sangat rendah, dan kesalahan validasi yang tinggi. Biasanya selama pelatihan kita akan melihat baik kesalahan pelatihan maupun validasi mulai menurun, dan kemudian pada titik tertentu kesalahan validasi mungkin berhenti menurun dan mulai naik. Ini akan menjadi tanda overfitting, dan indikator bahwa kita mungkin harus menghentikan pelatihan pada titik ini (atau setidaknya membuat snapshot model).
+Seperti yang terlihat pada grafik di atas, overfitting dapat dideteksi dari error pelatihan yang sangat rendah, dan error validasi yang tinggi. Biasanya selama pelatihan kita akan melihat error pelatihan dan validasi sama-sama menurun, lalu pada titik tertentu error validasi mungkin berhenti menurun dan mulai naik. Ini adalah tanda overfitting, dan indikator bahwa kita sebaiknya menghentikan pelatihan pada titik ini (atau setidaknya membuat snapshot model).
 
 overfitting
 
 ## Cara mencegah overfitting
 
-Jika Anda melihat bahwa overfitting terjadi, Anda dapat melakukan salah satu dari berikut ini:
+Jika Anda melihat overfitting terjadi, Anda bisa melakukan salah satu hal berikut:
 
- * Meningkatkan jumlah data pelatihan
- * Mengurangi kompleksitas model
+ * Menambah jumlah data pelatihan  
+ * Mengurangi kompleksitas model  
  * Menggunakan teknik regularisasi, seperti Dropout, yang akan kita bahas nanti.
 
 ## Overfitting dan Bias-Variance Tradeoff
 
-Overfitting sebenarnya adalah kasus dari masalah yang lebih umum dalam statistik yang disebut Bias-Variance Tradeoff. Jika kita mempertimbangkan sumber kesalahan yang mungkin dalam model kita, kita dapat melihat dua jenis kesalahan:
+Overfitting sebenarnya adalah kasus dari masalah yang lebih umum dalam statistik yang disebut Bias-Variance Tradeoff. Jika kita melihat sumber kesalahan dalam model kita, kita dapat membedakan dua jenis kesalahan:
 
-* **Kesalahan bias** disebabkan oleh algoritma kita yang tidak dapat menangkap hubungan antara data pelatihan dengan benar. Ini dapat terjadi karena model kita tidak cukup kuat (**underfitting**).
-* **Kesalahan varians**, yang disebabkan oleh model yang mengaproksimasi noise dalam data input daripada hubungan yang bermakna (**overfitting**).
+* **Bias error** disebabkan oleh algoritma kita yang tidak mampu menangkap hubungan dalam data pelatihan dengan benar. Ini bisa terjadi karena model kita tidak cukup kuat (**underfitting**).  
+* **Variance error**, yang disebabkan oleh model yang mengaproksimasi noise dalam data input daripada hubungan yang bermakna (**overfitting**).
 
-Selama pelatihan, kesalahan bias menurun (karena model kita belajar mengaproksimasi data), dan kesalahan varians meningkat. Penting untuk menghentikan pelatihan - baik secara manual (ketika kita mendeteksi overfitting) atau secara otomatis (dengan memperkenalkan regularisasi) - untuk mencegah overfitting.
+Selama pelatihan, bias error menurun (karena model belajar mengaproksimasi data), dan variance error meningkat. Penting untuk menghentikan pelatihan - baik secara manual (ketika kita mendeteksi overfitting) atau otomatis (dengan memperkenalkan regularisasi) - untuk mencegah overfitting.
 
 ## Kesimpulan
 
-Dalam pelajaran ini, Anda mempelajari tentang perbedaan antara berbagai API untuk dua kerangka kerja AI yang paling populer, TensorFlow dan PyTorch. Selain itu, Anda mempelajari tentang topik yang sangat penting, overfitting.
+Dalam pelajaran ini, Anda telah belajar tentang perbedaan berbagai API untuk dua framework AI paling populer, TensorFlow dan PyTorch. Selain itu, Anda juga mempelajari topik yang sangat penting, yaitu overfitting.
 
 ## 🚀 Tantangan
 
-Dalam notebook yang menyertainya, Anda akan menemukan 'tugas' di bagian bawah; kerjakan notebook dan selesaikan tugas-tugas tersebut.
+Di notebook pendamping, Anda akan menemukan 'tugas' di bagian bawah; kerjakan notebook tersebut dan selesaikan tugas-tugasnya.
 
-## Tinjauan & Studi Mandiri
+## Review & Belajar Mandiri
 
-Lakukan beberapa penelitian tentang topik berikut:
+Lakukan riset tentang topik berikut:
 
-- TensorFlow
-- PyTorch
+- TensorFlow  
+- PyTorch  
 - Overfitting
 
 Tanyakan pada diri Anda pertanyaan berikut:
 
-- Apa perbedaan antara TensorFlow dan PyTorch?
+- Apa perbedaan antara TensorFlow dan PyTorch?  
 - Apa perbedaan antara overfitting dan underfitting?
 
 ## Tugas
 
-Dalam lab ini, Anda diminta untuk menyelesaikan dua masalah klasifikasi menggunakan jaringan berlapis tunggal dan multi-layer yang sepenuhnya terhubung menggunakan PyTorch atau TensorFlow.
+Dalam lab ini, Anda diminta untuk menyelesaikan dua masalah klasifikasi menggunakan jaringan fully-connected satu dan multi-layer dengan PyTorch atau TensorFlow.
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk mencapai akurasi, harap diingat bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi penting, disarankan menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sah. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang salah yang timbul dari penggunaan terjemahan ini.

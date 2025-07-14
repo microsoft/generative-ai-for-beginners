@@ -2,121 +2,134 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:14:46+00:00",
+  "translation_date": "2025-07-09T05:53:44+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "pt"
 }
 -->
-# Contribuindo
+# Contribuir
 
-Este projeto aceita contribuições e sugestões. A maioria das contribuições exige que você concorde com um Acordo de Licença de Contribuidor (CLA) declarando que você tem o direito de, e realmente concede a nós, os direitos de usar sua contribuição. Para mais detalhes, visite <https://cla.microsoft.com>.
+Este projeto aceita contribuições e sugestões. A maioria das contribuições exige que concorde com um Acordo de Licença de Contribuidor (CLA) declarando que tem o direito, e efetivamente concede, os direitos para usarmos a sua contribuição. Para mais detalhes, visite <https://cla.microsoft.com>.
 
-> Importante: ao traduzir texto neste repositório, por favor, certifique-se de não usar tradução automática. Verificaremos as traduções através da comunidade, então, por favor, só se ofereça para traduções em idiomas nos quais você é proficiente.
+> Importante: ao traduzir texto neste repositório, por favor, assegure-se de não usar tradução automática. Iremos verificar as traduções através da comunidade, por isso só se voluntarie para traduções em línguas que domine.
 
-Quando você enviar um pull request, um CLA-bot determinará automaticamente se você precisa fornecer um CLA e decorará o PR apropriadamente (por exemplo, rótulo, comentário). Basta seguir as instruções fornecidas pelo bot. Você só precisará fazer isso uma vez em todos os repositórios que usam nosso CLA.
+Quando submeter um pull request, um bot CLA irá automaticamente determinar se precisa de fornecer um CLA e irá decorar o PR adequadamente (por exemplo, etiqueta, comentário). Basta seguir as instruções fornecidas pelo bot. Só precisará de fazer isto uma vez em todos os repositórios que usam o nosso CLA.
 
 ## Código de Conduta
 
-Este projeto adotou o [Código de Conduta de Código Aberto da Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Para mais informações, leia o [FAQ do Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) ou entre em contato com [opencode@microsoft.com](mailto:opencode@microsoft.com) para quaisquer perguntas ou comentários adicionais.
+Este projeto adotou o [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).  
+Para mais informações, leia as [Perguntas Frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) ou contacte [opencode@microsoft.com](mailto:opencode@microsoft.com) para quaisquer questões ou comentários adicionais.
 
 ## Pergunta ou Problema?
 
-Por favor, não abra problemas no GitHub para perguntas gerais de suporte, pois a lista do GitHub deve ser usada para solicitações de recursos e relatórios de bugs. Desta forma, podemos rastrear mais facilmente problemas ou bugs reais do código e manter a discussão geral separada do código real.
+Por favor, não abra issues no GitHub para questões gerais de suporte, pois a lista do GitHub deve ser usada para pedidos de funcionalidades e relatórios de bugs. Desta forma, podemos acompanhar mais facilmente problemas ou erros reais no código e manter a discussão geral separada do código propriamente dito.
 
-## Erros de digitação, Problemas, Bugs e Contribuições
+## Erros, Problemas, Bugs e contribuições
 
-Sempre que você estiver enviando quaisquer alterações para o repositório Generative AI for Beginners, por favor, siga estas recomendações.
+Sempre que submeter alterações ao repositório Generative AI for Beginners, por favor siga estas recomendações.
 
-* Sempre faça um fork do repositório para sua própria conta antes de fazer suas modificações
-* Não combine várias alterações em um único pull request. Por exemplo, envie qualquer correção de bug e atualizações de documentação usando PRs separados
-* Se seu pull request mostrar conflitos de mesclagem, certifique-se de atualizar seu main local para ser um espelho do que está no repositório principal antes de fazer suas modificações
-* Se você estiver enviando uma tradução, por favor, crie um PR para todos os arquivos traduzidos, pois não aceitamos traduções parciais para o conteúdo
-* Se você estiver enviando uma correção de erro de digitação ou documentação, você pode combinar modificações em um único PR onde for adequado
+* Faça sempre um fork do repositório para a sua própria conta antes de fazer as suas modificações  
+* Não combine várias alterações num único pull request. Por exemplo, submeta correções de bugs e atualizações de documentação em PRs separados  
+* Se o seu pull request apresentar conflitos de merge, certifique-se de atualizar o seu main local para ser um espelho do que está no repositório principal antes de fazer as suas modificações  
+* Se estiver a submeter uma tradução, por favor crie um único PR para todos os ficheiros traduzidos, pois não aceitamos traduções parciais do conteúdo  
+* Se estiver a submeter uma correção de erro tipográfico ou documentação, pode combinar modificações num único PR quando apropriado
 
-## Orientações Gerais para Escrita
+## Orientações Gerais para escrita
 
-- Certifique-se de que todos os seus URLs estejam envolvidos entre colchetes seguidos por um parêntese sem espaços extras ao redor ou dentro deles `[](../..)`.
-- Certifique-se de que qualquer link relativo (ou seja, links para outros arquivos e pastas no repositório) comece com um `./` referindo-se a um arquivo ou uma pasta localizada no diretório de trabalho atual ou um `../` referindo-se a um arquivo ou uma pasta localizada em um diretório de trabalho pai.
-- Certifique-se de que qualquer link relativo (ou seja, links para outros arquivos e pastas no repositório) tenha um ID de rastreamento (ou seja, `?` ou `&` então `wt.mc_id=` ou `WT.mc_id=`) no final dele.
-- Certifique-se de que qualquer URL dos seguintes domínios _github.com, microsoft.com, visualstudio.com, aka.ms, e azure.com_ tenha um ID de rastreamento (ou seja, `?` ou `&` então `wt.mc_id=` ou `WT.mc_id=`) no final dele.
-- Certifique-se de que seus links não tenham localidade específica de país neles (ou seja, `/en-us/` ou `/en/`).
-- Certifique-se de que todas as imagens estejam armazenadas na pasta `./images`.
-- Certifique-se de que as imagens tenham nomes descritivos usando caracteres em inglês, números e traços no nome da sua imagem.
+- Certifique-se de que todos os seus URLs estão entre colchetes seguidos de parênteses, sem espaços extra à volta ou dentro deles `[](../..)`.  
+- Certifique-se de que qualquer link relativo (ou seja, links para outros ficheiros e pastas no repositório) começa com `./` referindo-se a um ficheiro ou pasta na diretoria atual, ou `../` referindo-se a um ficheiro ou pasta numa diretoria superior.  
+- Certifique-se de que qualquer link relativo (ou seja, links para outros ficheiros e pastas no repositório) tem um ID de tracking (ou seja, `?` ou `&` seguido de `wt.mc_id=` ou `WT.mc_id=`) no final.  
+- Certifique-se de que qualquer URL dos seguintes domínios _github.com, microsoft.com, visualstudio.com, aka.ms, e azure.com_ tem um ID de tracking (ou seja, `?` ou `&` seguido de `wt.mc_id=` ou `WT.mc_id=`) no final.  
+- Certifique-se de que os seus links não contêm localizações específicas de país (ou seja, `/en-us/` ou `/en/`).  
+- Certifique-se de que todas as imagens estão guardadas na pasta `./images`.  
+- Certifique-se de que as imagens têm nomes descritivos usando caracteres em inglês, números e hífens no nome da imagem.
 
-## Fluxos de Trabalho do GitHub
+## Workflows do GitHub
 
-Quando você enviar um pull request, quatro fluxos de trabalho diferentes serão acionados para validar as regras anteriores. Basta seguir as instruções listadas aqui para passar nas verificações dos fluxos de trabalho.
+Quando submeter um pull request, quatro workflows diferentes serão acionados para validar as regras anteriores.  
+Basta seguir as instruções listadas aqui para passar as verificações dos workflows.
 
-- [Verificar Caminhos Relativos Quebrados](../..)
-- [Verificar Caminhos com Rastreamento](../..)
-- [Verificar URLs com Rastreamento](../..)
-- [Verificar URLs Sem Localidade](../..)
+- [Verificar Caminhos Relativos Quebrados](../..)  
+- [Verificar Se os Caminhos Têm Tracking](../..)  
+- [Verificar Se as URLs Têm Tracking](../..)  
+- [Verificar Se as URLs Não Têm Localização](../..)
 
 ### Verificar Caminhos Relativos Quebrados
 
-Este fluxo de trabalho garante que qualquer caminho relativo em seus arquivos esteja funcionando. Este repositório é implantado no GitHub Pages, então você precisa ter muito cuidado ao digitar os links que conectam tudo para não direcionar ninguém para o lugar errado.
+Este workflow garante que qualquer caminho relativo nos seus ficheiros está a funcionar.  
+Este repositório é publicado no GitHub pages, por isso precisa de ter muito cuidado ao escrever os links que ligam tudo para não direcionar ninguém para o local errado.
 
-Para garantir que seus links estejam funcionando corretamente, basta usar o VS Code para verificar isso.
+Para garantir que os seus links funcionam corretamente, use o VS Code para verificar isso.
 
-Por exemplo, quando você passa o mouse sobre qualquer link em seus arquivos, você será solicitado a seguir o link pressionando **ctrl + clique**
+Por exemplo, quando passar o cursor sobre qualquer link nos seus ficheiros, será sugerido que siga o link pressionando **ctrl + clique**
 
-![Captura de tela do VS code seguindo links](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.pt.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.pt.png)
 
-Se você clicar em um link e ele não estiver funcionando localmente, então, certamente, ele acionará o fluxo de trabalho e não funcionará no GitHub.
+Se clicar num link e ele não funcionar localmente, certamente irá disparar o workflow e não funcionará no GitHub.
 
-Para corrigir esse problema, tente digitar o link com a ajuda do VS Code.
+Para corrigir este problema, tente escrever o link com a ajuda do VS Code.
 
-Quando você digita `./` ou `../`, o VS Code o orientará a escolher entre as opções disponíveis de acordo com o que você digitou.
+Quando escrever `./` ou `../`, o VS Code irá sugerir opções disponíveis de acordo com o que escreveu.
 
-![Captura de tela do VS code selecionando caminho relativo](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.pt.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.pt.png)
 
-Siga o caminho clicando no arquivo ou pasta desejado e você terá certeza de que seu caminho não está quebrado.
+Siga o caminho clicando no ficheiro ou pasta desejada e terá a certeza de que o seu caminho não está quebrado.
 
-Assim que você adicionar o caminho relativo correto, salvar e enviar suas alterações, o fluxo de trabalho será acionado novamente para verificar suas alterações. Se você passar na verificação, então está tudo certo.
+Depois de adicionar o caminho relativo correto, guarde e envie as suas alterações; o workflow será acionado novamente para verificar as suas alterações.  
+Se passar a verificação, está pronto para continuar.
 
-### Verificar Caminhos com Rastreamento
+### Verificar Se os Caminhos Têm Tracking
 
-Este fluxo de trabalho garante que qualquer caminho relativo tenha rastreamento nele. Este repositório é implantado no GitHub Pages, então precisamos rastrear o movimento entre os diferentes arquivos e pastas.
+Este workflow garante que qualquer caminho relativo tem tracking.  
+Este repositório é publicado no GitHub pages, por isso precisamos de rastrear o movimento entre os diferentes ficheiros e pastas.
 
-Para garantir que seus caminhos relativos tenham rastreamento neles, basta verificar o seguinte texto `?wt.mc_id=` no final do caminho. Se ele estiver anexado aos seus caminhos relativos, então você passará nessa verificação.
+Para garantir que os seus caminhos relativos têm tracking, verifique se o texto `?wt.mc_id=` está no final do caminho.  
+Se estiver adicionado aos seus caminhos relativos, passará esta verificação.
 
-Se não, você pode receber o seguinte erro.
+Caso contrário, poderá receber o seguinte erro.
 
-![Captura de tela do comentário do GitHub verificando caminhos sem rastreamento](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.pt.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.pt.png)
 
-Para corrigir esse problema, tente abrir o caminho do arquivo que o fluxo de trabalho destacou e adicione o ID de rastreamento ao final dos caminhos relativos.
+Para corrigir este problema, abra o caminho do ficheiro que o workflow indicou e adicione o ID de tracking no final dos caminhos relativos.
 
-Assim que você adicionar o ID de rastreamento, salvar e enviar suas alterações, o fluxo de trabalho será acionado novamente para verificar suas alterações. Se você passar na verificação, então está tudo certo.
+Depois de adicionar o ID de tracking, guarde e envie as suas alterações; o workflow será acionado novamente para verificar as suas alterações.  
+Se passar a verificação, está pronto para continuar.
 
-### Verificar URLs com Rastreamento
+### Verificar Se as URLs Têm Tracking
 
-Este fluxo de trabalho garante que qualquer URL da web tenha rastreamento nele. Este repositório está disponível para todos, então você precisa garantir o rastreamento do acesso para saber de onde vem o tráfego.
+Este workflow garante que qualquer URL web tem tracking.  
+Este repositório está disponível para todos, por isso precisa de garantir o tracking para saber de onde vem o tráfego.
 
-Para garantir que seus URLs tenham rastreamento neles, basta verificar o seguinte texto `?wt.mc_id=` no final do URL. Se ele estiver anexado aos seus URLs, então você passará nessa verificação.
+Para garantir que as suas URLs têm tracking, verifique se o texto `?wt.mc_id=` está no final da URL.  
+Se estiver adicionado às suas URLs, passará esta verificação.
 
-Se não, você pode receber o seguinte erro.
+Caso contrário, poderá receber o seguinte erro.
 
-![Captura de tela do comentário do GitHub verificando URLs sem rastreamento](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.pt.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.pt.png)
 
-Para corrigir esse problema, tente abrir o caminho do arquivo que o fluxo de trabalho destacou e adicione o ID de rastreamento ao final dos URLs.
+Para corrigir este problema, abra o caminho do ficheiro que o workflow indicou e adicione o ID de tracking no final das URLs.
 
-Assim que você adicionar o ID de rastreamento, salvar e enviar suas alterações, o fluxo de trabalho será acionado novamente para verificar suas alterações. Se você passar na verificação, então está tudo certo.
+Depois de adicionar o ID de tracking, guarde e envie as suas alterações; o workflow será acionado novamente para verificar as suas alterações.  
+Se passar a verificação, está pronto para continuar.
 
-### Verificar URLs Sem Localidade
+### Verificar Se as URLs Não Têm Localização
 
-Este fluxo de trabalho garante que qualquer URL da web não tenha localidade específica de país nele. Este repositório está disponível para todos ao redor do mundo, então você precisa garantir que não inclua a localidade do seu país nos URLs.
+Este workflow garante que qualquer URL web não tem localização específica de país.  
+Este repositório está disponível para todos no mundo, por isso precisa de garantir que não inclui a localização do seu país nas URLs.
 
-Para garantir que seus URLs não tenham localidade de país neles, basta verificar o seguinte texto `/en-us/` ou `/en/` ou qualquer outra localidade de idioma em qualquer lugar no URL. Se ele não estiver presente nos seus URLs, então você passará nessa verificação.
+Para garantir que as suas URLs não têm localização de país, verifique se o texto `/en-us/` ou `/en/` ou qualquer outra localização de idioma não está presente em qualquer parte da URL.  
+Se não estiver presente nas suas URLs, passará esta verificação.
 
-Se não, você pode receber o seguinte erro.
+Caso contrário, poderá receber o seguinte erro.
 
-![Captura de tela do comentário do GitHub verificando localidade de país](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.pt.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.pt.png)
 
-Para corrigir esse problema, tente abrir o caminho do arquivo que o fluxo de trabalho destacou e remover a localidade do país dos URLs.
+Para corrigir este problema, abra o caminho do ficheiro que o workflow indicou e remova a localização do país das URLs.
 
-Assim que você remover a localidade do país, salvar e enviar suas alterações, o fluxo de trabalho será acionado novamente para verificar suas alterações. Se você passar na verificação, então está tudo certo.
+Depois de remover a localização do país, guarde e envie as suas alterações; o workflow será acionado novamente para verificar as suas alterações.  
+Se passar a verificação, está pronto para continuar.
 
-Parabéns! Retornaremos o mais rápido possível com feedback sobre sua contribuição.
+Parabéns! Entraremos em contacto consigo o mais breve possível com feedback sobre a sua contribuição.
 
 **Aviso Legal**:  
-Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se a tradução humana profissional. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações errôneas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

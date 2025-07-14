@@ -2,18 +2,18 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T23:15:11+00:00",
+  "translation_date": "2025-07-09T15:41:52+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "hr"
 }
 -->
-# Osiguranje Vaših Generativnih AI Aplikacija
+# Osiguravanje vaših generativnih AI aplikacija
 
-[![Osiguranje Vaših Generativnih AI Aplikacija](../../../translated_images/13-lesson-banner.c21a3a479f9ff14ad1f7c9b02bfe0d9a549b43497588334356f91073466a1283.hr.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
+[![Osiguravanje vaših generativnih AI aplikacija](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.hr.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Uvod
 
-Ova lekcija će pokriti:
+Ova lekcija obuhvaća:
 
 - Sigurnost u kontekstu AI sustava.
 - Uobičajene rizike i prijetnje AI sustavima.
@@ -21,110 +21,154 @@ Ova lekcija će pokriti:
 
 ## Ciljevi učenja
 
-Nakon završetka ove lekcije, razumjet ćete:
+Nakon završetka ove lekcije, imat ćete razumijevanje o:
 
-- Prijetnje i rizike za AI sustave.
-- Uobičajene metode i prakse za osiguranje AI sustava.
-- Kako implementacija sigurnosnog testiranja može spriječiti neočekivane rezultate i smanjenje povjerenja korisnika.
+- Prijetnjama i rizicima za AI sustave.
+- Uobičajenim metodama i praksama za osiguranje AI sustava.
+- Kako implementacija sigurnosnog testiranja može spriječiti neočekivane rezultate i gubitak povjerenja korisnika.
 
-## Što znači sigurnost u kontekstu generativne AI?
+## Što sigurnost znači u kontekstu generativne AI?
 
-Kako tehnologije Umjetne Inteligencije (AI) i Strojno Učenje (ML) sve više oblikuju naše živote, ključno je zaštititi ne samo podatke korisnika već i same AI sustave. AI/ML se sve više koristi u podršci donošenju odluka visoke vrijednosti u industrijama gdje pogrešna odluka može imati ozbiljne posljedice.
+Kako tehnologije umjetne inteligencije (AI) i strojnog učenja (ML) sve više oblikuju naše živote, ključno je zaštititi ne samo podatke korisnika, već i same AI sustave. AI/ML se sve češće koristi u podršci donošenju važnih odluka u industrijama gdje pogrešna odluka može imati ozbiljne posljedice.
 
-Evo ključnih točaka za razmatranje:
+Evo ključnih točaka za razmotriti:
 
-- **Utjecaj AI/ML**: AI/ML imaju značajan utjecaj na svakodnevni život i stoga je njihovo osiguranje postalo nužno.
-- **Sigurnosni izazovi**: Ovaj utjecaj AI/ML zahtijeva odgovarajuću pažnju kako bi se riješila potreba za zaštitom AI proizvoda od sofisticiranih napada, bilo od strane trolova ili organiziranih skupina.
-- **Strateški problemi**: Tehnološka industrija mora proaktivno rješavati strateške izazove kako bi osigurala dugoročnu sigurnost korisnika i sigurnost podataka.
+- **Utjecaj AI/ML**: AI/ML imaju značajan utjecaj na svakodnevni život, stoga je njihova zaštita postala neophodna.
+- **Izazovi sigurnosti**: Taj utjecaj zahtijeva posebnu pažnju kako bi se zaštitili AI proizvodi od sofisticiranih napada, bilo od trolova ili organiziranih skupina.
+- **Strateški problemi**: Tehnološka industrija mora proaktivno rješavati strateške izazove kako bi osigurala dugoročnu sigurnost korisnika i zaštitu podataka.
 
-Dodatno, modeli strojnog učenja uglavnom nisu sposobni razlučiti između zlonamjernog unosa i benignih anomalnih podataka. Značajan izvor podataka za obuku dolazi iz nekontroliranih, nemoderiranih, javnih skupova podataka, koji su otvoreni za doprinose trećih strana. Napadači ne trebaju kompromitirati skupove podataka kada im je slobodno doprinositi. S vremenom, zlonamjerni podaci niskog povjerenja postaju podaci visokog povjerenja, ako struktura/format podataka ostaje ispravna.
+Osim toga, modeli strojnog učenja uglavnom ne mogu razlikovati zlonamjerne unose od bezopasnih anomalija. Značajan dio podataka za treniranje dolazi iz nekuriranih, nemoderiranih javnih skupova podataka, otvorenih za doprinose trećih strana. Napadači ne moraju kompromitirati skupove podataka ako mogu slobodno doprinositi njima. S vremenom, podaci s niskim povjerenjem mogu postati podaci s visokim povjerenjem, ako struktura i format podataka ostanu ispravni.
 
-Zato je ključno osigurati integritet i zaštitu spremišta podataka koje vaši modeli koriste za donošenje odluka.
+Zato je ključno osigurati integritet i zaštitu skladišta podataka koje vaši modeli koriste za donošenje odluka.
 
-## Razumijevanje prijetnji i rizika AI
+## Razumijevanje prijetnji i rizika AI-a
 
-U smislu AI i srodnih sustava, trovanje podacima ističe se kao najznačajnija sigurnosna prijetnja danas. Trovanje podacima je kada netko namjerno mijenja informacije korištene za obuku AI, uzrokujući da AI čini pogreške. To je zbog nedostatka standardiziranih metoda detekcije i ublažavanja, u kombinaciji s našim oslanjanjem na nepouzdane ili nekontrolirane javne skupove podataka za obuku. Da biste održali integritet podataka i spriječili pogrešan proces obuke, ključno je pratiti porijeklo i rodoslovlje vaših podataka. Inače, stara izreka "smeće unutra, smeće van" vrijedi, što dovodi do kompromitiranih performansi modela.
+Kad govorimo o AI i povezanim sustavima, trovanje podataka je danas najznačajnija sigurnosna prijetnja. Trovanje podataka događa se kada netko namjerno mijenja informacije koje se koriste za treniranje AI-a, uzrokujući pogreške. To je zbog nedostatka standardiziranih metoda za otkrivanje i ublažavanje, kao i oslanjanja na nepouzdane ili nekurirane javne skupove podataka za treniranje. Kako biste održali integritet podataka i spriječili pogrešan proces treniranja, ključno je pratiti podrijetlo i povijest podataka. Inače vrijedi stara izreka „smeće unutra, smeće van“, što dovodi do narušene izvedbe modela.
 
-Evo primjera kako trovanje podacima može utjecati na vaše modele:
+Evo primjera kako trovanje podataka može utjecati na vaše modele:
 
-1. **Promjena oznaka**: U zadatku binarne klasifikacije, protivnik namjerno mijenja oznake malog podskupa podataka za obuku. Na primjer, benigni uzorci označeni su kao zlonamjerni, što dovodi model do učenja pogrešnih asocijacija.\
-   **Primjer**: Filtriranje neželjene pošte koje pogrešno klasificira legitimne e-poruke kao neželjene zbog manipuliranih oznaka.
-2. **Trovanje značajki**: Napadač suptilno mijenja značajke u podacima za obuku kako bi uveo pristranost ili zavarao model.\
-   **Primjer**: Dodavanje irelevantnih ključnih riječi opisima proizvoda za manipulaciju sustavima preporuka.
-3. **Ubacivanje podataka**: Ubacivanje zlonamjernih podataka u skup za obuku kako bi se utjecalo na ponašanje modela.\
-   **Primjer**: Uvođenje lažnih korisničkih recenzija kako bi se iskrivili rezultati analize sentimenta.
-4. **Napadi stražnjih vrata**: Protivnik ubacuje skriveni uzorak (stražnja vrata) u podatke za obuku. Model uči prepoznati ovaj uzorak i ponaša se zlonamjerno kada se aktivira.\
-   **Primjer**: Sustav prepoznavanja lica obučen sa slikama sa stražnjim vratima koje pogrešno identificiraju određenu osobu.
+1. **Preokretanje oznaka (Label Flipping)**: U zadatku binarne klasifikacije, napadač namjerno mijenja oznake malog dijela podataka za treniranje. Na primjer, bezopasni uzorci se označavaju kao zlonamjerni, što model navodi na pogrešne zaključke.\
+   **Primjer**: Spam filter koji pogrešno klasificira legitimne e-mailove kao spam zbog manipuliranih oznaka.
+2. **Trovanje značajki (Feature Poisoning)**: Napadač suptilno mijenja značajke u podacima za treniranje kako bi unio pristranost ili zavaravao model.\
+   **Primjer**: Dodavanje irelevantnih ključnih riječi u opise proizvoda kako bi se manipuliralo sustavima preporuka.
+3. **Ubacivanje podataka (Data Injection)**: Ubacivanje zlonamjernih podataka u skup za treniranje kako bi se utjecalo na ponašanje modela.\
+   **Primjer**: Uvođenje lažnih korisničkih recenzija za iskrivljenje rezultata analize sentimenta.
+4. **Napadi s tajnim ulazom (Backdoor Attacks)**: Napadač ubacuje skriveni uzorak (backdoor) u podatke za treniranje. Model uči prepoznati taj uzorak i ponaša se zlonamjerno kad se aktivira.\
+   **Primjer**: Sustav za prepoznavanje lica treniran s backdoor slikama koje pogrešno identificiraju određenu osobu.
 
-MITRE Corporation je stvorila [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), bazu znanja o taktikama i tehnikama koje koriste protivnici u stvarnim napadima na AI sustave.
+MITRE Corporation je kreirala [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), bazu znanja o taktikama i tehnikama koje koriste napadači u stvarnim napadima na AI sustave.
 
-> Postoji sve veći broj ranjivosti u sustavima s omogućenim AI, jer uključivanje AI povećava površinu napada postojećih sustava izvan tradicionalnih cyber-napada. Razvili smo ATLAS kako bismo podigli svijest o tim jedinstvenim i evoluirajućim ranjivostima, jer globalna zajednica sve više uključuje AI u različite sustave. ATLAS je modeliran prema MITRE ATT&CK® okviru, a njegove taktike, tehnike i procedure (TTP) su komplementarne onima u ATT&CK.
+> Broj ranjivosti u sustavima s AI-jem raste, jer integracija AI-ja povećava površinu napada postojećih sustava izvan tradicionalnih cyber-napada. Razvili smo ATLAS kako bismo podigli svijest o ovim jedinstvenim i razvijajućim ranjivostima, budući da globalna zajednica sve više uključuje AI u različite sustave. ATLAS je modeliran prema MITRE ATT&CK® okviru, a njegove taktike, tehnike i procedure (TTP) nadopunjuju one u ATT&CK.
 
-Slično kao i MITRE ATT&CK® okvir, koji se široko koristi u tradicionalnoj kibernetičkoj sigurnosti za planiranje naprednih scenarija emulacije prijetnji, ATLAS pruža lako pretraživi skup TTP-ova koji mogu pomoći u boljem razumijevanju i pripremi za obranu od novih napada.
+Slično kao MITRE ATT&CK® okvir, koji se široko koristi u tradicionalnoj kibernetičkoj sigurnosti za planiranje scenarija napredne emulacije prijetnji, ATLAS pruža lako pretraživi skup TTP-ova koji pomažu bolje razumjeti i pripremiti se za obranu od novih napada.
 
-Dodatno, Open Web Application Security Project (OWASP) je stvorio "[Top 10 listu](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" najkritičnijih ranjivosti pronađenih u aplikacijama koje koriste LLM-ove. Lista naglašava rizike prijetnji kao što su spomenuto trovanje podacima zajedno s drugima kao što su:
+Također, Open Web Application Security Project (OWASP) je kreirao "[Top 10 listu](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" najkritičnijih ranjivosti u aplikacijama koje koriste LLM-ove. Lista ističe rizike prijetnji poput spomenutog trovanja podataka, kao i drugih poput:
 
-- **Ubrizgavanje upita**: tehnika gdje napadači manipuliraju Velikim Jezičnim Modelom (LLM) kroz pažljivo osmišljene unose, uzrokujući da se ponaša izvan svog predviđenog ponašanja.
-- **Ranjivosti lanca opskrbe**: Komponente i softver koji čine aplikacije koje koristi LLM, poput Python modula ili vanjskih skupova podataka, mogu sami biti kompromitirani što dovodi do neočekivanih rezultata, uvedenih pristranosti pa čak i ranjivosti u temeljnoj infrastrukturi.
-- **Prekomjerno oslanjanje**: LLM-ovi su pogrešivi i skloni su halucinacijama, pružajući netočne ili nesigurne rezultate. U nekoliko dokumentiranih okolnosti, ljudi su uzeli rezultate zdravo za gotovo što je dovelo do neočekivanih negativnih posljedica u stvarnom svijetu.
+- **Prompt Injection**: tehnika u kojoj napadači manipuliraju velikim jezičnim modelom (LLM) pažljivo osmišljenim unosima, uzrokujući da se ponaša izvan predviđenog ponašanja.
+- **Ranjivosti u lancu opskrbe**: Komponente i softver koji čine aplikacije korištene od strane LLM-a, poput Python modula ili vanjskih skupova podataka, mogu biti kompromitirani, što dovodi do neočekivanih rezultata, uvedenih pristranosti pa čak i ranjivosti u osnovnoj infrastrukturi.
+- **Preveliko oslanjanje**: LLM-ovi su podložni pogreškama i skloni su halucinacijama, dajući netočne ili nesigurne rezultate. U nekoliko dokumentiranih slučajeva ljudi su uzimali rezultate zdravo za gotovo, što je dovelo do neželjenih negativnih posljedica u stvarnom svijetu.
 
-Microsoft Cloud Advocate Rod Trent je napisao besplatnu e-knjigu, [Mora se naučiti AI sigurnost](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), koja duboko ulazi u ove i druge nove AI prijetnje i pruža opsežne smjernice kako najbolje riješiti ove scenarije.
+Microsoft Cloud Advocate Rod Trent napisao je besplatnu e-knjigu, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), koja detaljno obrađuje ove i druge nove AI prijetnje te pruža opsežne smjernice kako najbolje pristupiti tim scenarijima.
 
-## Sigurnosno testiranje za AI sustave i LLM-ove
+## Sigurnosno testiranje AI sustava i LLM-ova
 
-Umjetna inteligencija (AI) transformira različite domene i industrije, nudeći nove mogućnosti i koristi za društvo. Međutim, AI također predstavlja značajne izazove i rizike, kao što su privatnost podataka, pristranost, nedostatak objašnjivosti i potencijalna zloupotreba. Stoga je ključno osigurati da AI sustavi budu sigurni i odgovorni, što znači da se pridržavaju etičkih i pravnih standarda i da im korisnici i dionici mogu vjerovati.
+Umjetna inteligencija (AI) mijenja različite domene i industrije, nudeći nove mogućnosti i koristi za društvo. Međutim, AI donosi i značajne izazove i rizike, poput privatnosti podataka, pristranosti, nedostatka objašnjivosti i potencijalne zloupotrebe. Stoga je ključno osigurati da AI sustavi budu sigurni i odgovorni, što znači da se pridržavaju etičkih i zakonskih standarda te da im korisnici i dionici mogu vjerovati.
 
-Sigurnosno testiranje je proces procjene sigurnosti AI sustava ili LLM-a, identificiranjem i iskorištavanjem njihovih ranjivosti. To mogu provesti programeri, korisnici ili neovisni revizori, ovisno o svrsi i opsegu testiranja. Neke od najčešćih metoda sigurnosnog testiranja za AI sustave i LLM-ove su:
+Sigurnosno testiranje je proces procjene sigurnosti AI sustava ili LLM-a, identificiranjem i iskorištavanjem njihovih ranjivosti. To mogu provoditi programeri, korisnici ili neovisni revizori, ovisno o svrsi i opsegu testiranja. Neki od najčešćih metoda sigurnosnog testiranja AI sustava i LLM-ova su:
 
-- **Sanitizacija podataka**: Ovo je proces uklanjanja ili anonimizacije osjetljivih ili privatnih informacija iz podataka za obuku ili ulaza AI sustava ili LLM-a. Sanitizacija podataka može pomoći u sprječavanju curenja podataka i zlonamjerne manipulacije smanjenjem izloženosti povjerljivih ili osobnih podataka.
-- **Adversarijalno testiranje**: Ovo je proces generiranja i primjene adversarijalnih primjera na ulaz ili izlaz AI sustava ili LLM-a kako bi se procijenila njegova robusnost i otpornost protiv adversarijalnih napada. Adversarijalno testiranje može pomoći u identificiranju i ublažavanju ranjivosti i slabosti AI sustava ili LLM-a koje bi napadači mogli iskoristiti.
-- **Verifikacija modela**: Ovo je proces verifikacije ispravnosti i potpunosti parametara modela ili arhitekture AI sustava ili LLM-a. Verifikacija modela može pomoći u otkrivanju i sprječavanju krađe modela osiguravanjem da je model zaštićen i autentificiran.
-- **Validacija izlaza**: Ovo je proces validacije kvalitete i pouzdanosti izlaza AI sustava ili LLM-a. Validacija izlaza može pomoći u otkrivanju i ispravljanju zlonamjerne manipulacije osiguravanjem da je izlaz dosljedan i točan.
+- **Sanitacija podataka**: Proces uklanjanja ili anonimizacije osjetljivih ili privatnih informacija iz podataka za treniranje ili unosa AI sustava ili LLM-a. Sanitacija podataka pomaže spriječiti curenje podataka i zlonamjernu manipulaciju smanjenjem izloženosti povjerljivim ili osobnim podacima.
+- **Adversarialno testiranje**: Proces generiranja i primjene adversarialnih primjera na ulaz ili izlaz AI sustava ili LLM-a kako bi se procijenila njegova otpornost i izdržljivost protiv napada. Adversarialno testiranje pomaže identificirati i ublažiti ranjivosti i slabosti AI sustava ili LLM-a koje napadači mogu iskoristiti.
+- **Verifikacija modela**: Proces provjere ispravnosti i potpunosti parametara modela ili arhitekture AI sustava ili LLM-a. Verifikacija modela pomaže otkriti i spriječiti krađu modela osiguravajući da je model zaštićen i autentificiran.
+- **Validacija izlaza**: Proces provjere kvalitete i pouzdanosti izlaza AI sustava ili LLM-a. Validacija izlaza pomaže otkriti i ispraviti zlonamjernu manipulaciju osiguravajući da je izlaz dosljedan i točan.
 
-OpenAI, lider u AI sustavima, postavio je niz _evaluacija sigurnosti_ kao dio svoje inicijative crvenog tima, usmjerene na testiranje izlaza AI sustava u nadi da će doprinijeti sigurnosti AI.
+OpenAI, vodeći u AI sustavima, uspostavio je niz _sigurnosnih evaluacija_ kao dio svoje inicijative red teaming mreže, s ciljem testiranja izlaza AI sustava u nadi da će doprinijeti sigurnosti AI-ja.
 
-> Evaluacije mogu varirati od jednostavnih Q&A testova do složenijih simulacija. Kao konkretni primjeri, evo uzoraka evaluacija koje je razvio OpenAI za procjenu ponašanja AI iz različitih uglova:
+> Evaluacije mogu varirati od jednostavnih Q&A testova do složenijih simulacija. Kao konkretne primjere, evo nekoliko evaluacija koje je OpenAI razvio za procjenu ponašanja AI-ja iz različitih perspektiva:
 
 #### Uvjeravanje
 
 - [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može prevariti drugi AI sustav da izgovori tajnu riječ?
 - [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može uvjeriti drugi AI sustav da donira novac?
-- [Prijedlog glasačkog listića](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može utjecati na podršku drugog AI sustava političkom prijedlogu?
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može utjecati na podršku drugog AI sustava političkoj inicijativi?
 
-#### Steganografija (skriveno slanje poruka)
+#### Steganografija (skrivena poruka)
 
-- [Steganografija](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može proći tajne poruke bez da ga uhvati drugi AI sustav?
-- [Kompresija teksta](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može komprimirati i dekomprimirati poruke kako bi omogućio skrivanje tajnih poruka?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može koordinirati s drugim AI sustavom, bez izravne komunikacije?
+- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može prenijeti tajne poruke bez da ga drugi AI sustav otkrije?
+- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može komprimirati i dekomprimirati poruke kako bi omogućio skrivanje tajnih poruka?
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Koliko dobro AI sustav može koordinirati s drugim AI sustavom bez izravne komunikacije?
 
-### Sigurnost AI
+### Sigurnost AI-ja
 
-Imperativ je da nastojimo zaštititi AI sustave od zlonamjernih napada, zloupotrebe ili nenamjernih posljedica. To uključuje poduzimanje koraka za osiguranje sigurnosti, pouzdanosti i vjerodostojnosti AI sustava, kao što su:
+Neophodno je zaštititi AI sustave od zlonamjernih napada, zloupotrebe ili neželjenih posljedica. To uključuje poduzimanje koraka za osiguranje sigurnosti, pouzdanosti i vjerodostojnosti AI sustava, kao što su:
 
-- Osiguranje podataka i algoritama koji se koriste za obuku i rad AI modela
-- Sprečavanje neovlaštenog pristupa, manipulacije ili sabotaže AI sustava
-- Otkrivanje i ublažavanje pristranosti, diskriminacije ili etičkih pitanja u AI sustavima
-- Osiguranje odgovornosti, transparentnosti i objašnjivosti AI odluka i radnji
-- Usklađivanje ciljeva i vrijednosti AI sustava s onima ljudi i društva
+- Osiguranje podataka i algoritama koji se koriste za treniranje i rad AI modela
+- Sprječavanje neovlaštenog pristupa, manipulacije ili sabotaže AI sustava
+- Otkrivanje i ublažavanje pristranosti, diskriminacije ili etičkih problema u AI sustavima
+- Osiguranje odgovornosti, transparentnosti i objašnjivosti AI odluka i postupaka
+- Usuglašavanje ciljeva i vrijednosti AI sustava s onima ljudi i društva
 
-Sigurnost AI je važna za osiguranje integriteta, dostupnosti i povjerljivosti AI sustava i podataka. Neki od izazova i prilika sigurnosti AI su:
+Sigurnost AI-ja važna je za očuvanje integriteta, dostupnosti i povjerljivosti AI sustava i podataka. Neki od izazova i prilika sigurnosti AI-ja su:
 
-- Prilika: Uključivanje AI u strategije kibernetičke sigurnosti jer može igrati ključnu ulogu u identificiranju prijetnji i poboljšanju vremena odgovora. AI može pomoći u automatizaciji i poboljšanju detekcije i ublažavanja kibernetičkih napada, kao što su phishing, malware ili ransomware.
-- Izazov: AI također može biti korišten od strane protivnika za pokretanje sofisticiranih napada, kao što su generiranje lažnog ili obmanjujućeg sadržaja, lažno predstavljanje korisnika ili iskorištavanje ranjivosti u AI sustavima. Stoga, AI programeri imaju jedinstvenu odgovornost dizajnirati sustave koji su robusni i otporni na zloupotrebu.
+- Prilika: Uključivanje AI-ja u strategije kibernetičke sigurnosti jer može igrati ključnu ulogu u prepoznavanju prijetnji i poboljšanju vremena odgovora. AI može pomoći u automatizaciji i unapređenju otkrivanja i ublažavanja cyber-napada, poput phishinga, zlonamjernog softvera ili ransomwarea.
+- Izazov: AI također mogu koristiti napadači za izvođenje sofisticiranih napada, poput generiranja lažnog ili obmanjujućeg sadržaja, lažnog predstavljanja korisnika ili iskorištavanja ranjivosti u AI sustavima. Stoga programeri AI-ja imaju jedinstvenu odgovornost dizajnirati sustave koji su robusni i otporni na zloupotrebu.
 
 ### Zaštita podataka
 
-LLM-ovi mogu predstavljati rizike za privatnost i sigurnost podataka koje koriste. Na primjer, LLM-ovi mogu potencijalno zapamtiti i otkriti osjetljive informacije iz svojih podataka za obuku, kao što su osobna imena, adrese, lozinke ili brojevi kreditnih kartica. Također mogu biti manipulirani ili napadnuti od strane zlonamjernih aktera koji žele iskoristiti njihove ranjivosti ili pristranosti. Stoga je važno biti svjestan tih rizika i poduzeti odgovarajuće mjere za zaštitu podataka korištenih s LLM-ovima. Postoji nekoliko koraka koje možete poduzeti za zaštitu podataka korištenih s LLM-ovima. Ti koraci uključuju:
+LLM-ovi mogu predstavljati rizike za privatnost i sigurnost podataka koje koriste. Na primjer, LLM-ovi mogu potencijalno zapamtiti i otkriti osjetljive informacije iz svojih podataka za treniranje, poput osobnih imena, adresa, lozinki ili brojeva kreditnih kartica. Također ih mogu manipulirati ili napadati zlonamjerni akteri koji žele iskoristiti njihove ranjivosti ili pristranosti. Stoga je važno biti svjestan ovih rizika i poduzeti odgovarajuće mjere za zaštitu podataka korištenih s LLM-ovima. Neki od koraka koje možete poduzeti za zaštitu podataka korištenih s LLM-ovima uključuju:
 
-- **Ograničavanje količine i vrste podataka koje dijele s LLM-ovima**: Dijelite samo podatke koji su nužni i relevantni za predviđene svrhe, i izbjegavajte dijeljenje bilo kakvih podataka koji su osjetljivi, povjerljivi ili osobni. Korisnici također trebaju anonimizirati ili šifrirati podatke koje dijele s LLM-ovima, kao što je uklanjanje ili maskiranje bilo kakvih identifikacijskih informacija, ili korištenje sigurnih komunikacijskih kanala.
-- **Provjera podataka koje LLM-ovi generiraju**: Uvijek provjerite točnost i kvalitetu izlaza generiranog od strane LLM-ova kako biste osigurali da ne sadrže neželjene ili neprikladne informacije.
-- **Prijavljivanje i upozoravanje na bilo kakve povrede podataka ili incidente**: Budite oprezni prema bilo kakvim sumnjivim ili abnormalnim aktivnostima ili ponašanjima LLM-ova, kao što je generiranje tekstova koji su irelevantni, netočni, uvredljivi ili štetni. To bi mogao biti pokazatelj povrede podataka ili sigurnosnog incidenta.
+- **Ograničavanje količine i vrste podataka koje dijelite s LLM-ovima**: Dijelite samo podatke koji su nužni i relevantni za predviđene svrhe, izbjegavajući dijeljenje osjetljivih, povjerljivih ili osobnih podataka. Korisnici bi također trebali anonimizirati ili šifrirati podatke koje dijele s LLM-ovima, primjerice uklanjanjem ili maskiranjem identifikacijskih podataka ili korištenjem sigurnih komunikacijskih kanala.
+- **Provjera podataka koje LLM-ovi generiraju**: Uvijek provjeravajte točnost i kvalitetu izlaza koje generiraju LLM-ovi kako biste osigurali da ne sadrže neželjene ili neprikladne informacije.
+- **Prijavljivanje i upozoravanje na bilo kakve povrede podataka ili incidente**: Budite oprezni prema sumnjivim ili abnormalnim aktivnostima ili ponašanjima LLM-ova, poput generiranja tekstova koji su irelevantni, netočni, uvredljivi ili štetni. To može biti znak povrede podataka ili sigurnosnog incidenta.
 
-Sigurnost podataka, upravljanje i usklađenost su kritični za svaku organizaciju koja želi iskoristiti moć podataka i AI u višestrukom oblaku. Osiguranje i upravljanje svim vašim podacima je složen i višestruki zadatak. Morate osigurati i upravljati različitim vrstama podataka (strukturiranim, nestrukturiranim i podacima generiranim od strane AI) na različitim lokacijama u više oblaka, i morate uzeti u obzir postojeće i buduće sigurnosne, upravljačke i AI regulative. Za zaštitu vaših podataka, trebate usvojiti neke najbolje prakse i mjere opreza, kao što su:
+Sigurnost podataka, upravljanje i usklađenost ključni su za svaku organizaciju koja želi iskoristiti snagu podataka i AI-ja u multi-cloud okruženju. Osiguranje i upravljanje svim vašim podacima složen je i višeslojan zadatak. Potrebno je osigurati i upravljati različitim vrstama podataka (strukturirani, nestrukturirani i podaci generirani AI-jem) na različitim lokacijama u više cloudova, uzimajući u obzir postojeće i buduće propise o sigurnosti podataka, upravljanju i AI-ju. Za zaštitu podataka potrebno je usvojiti najbolje prakse i mjere opreza, kao što su:
 
-- Korištenje usluga ili platformi u oblaku koje nude značajke zaštite podataka i privatnosti.
-- Korištenje alata za provjeru kvalitete i validaciju podataka kako biste provjerili svoje podatke na pogreške, nedosljednosti ili anomalije.
-- Korištenje okvira za upravljanje podacima i etiku
+- Korištenje cloud usluga ili platformi koje nude značajke zaštite podataka i privatnosti.
+- Korištenje alata za provjeru kvalitete i validaciju podataka kako biste provjerili podatke na pogreške, nedosljednosti ili anomalije.
+- Korištenje okvira za upravljanje podacima i etiku kako biste osigurali odgovornu i transparentnu upotrebu podataka.
+
+### Emulacija prijetnji iz stvarnog svijeta - AI red teaming
+
+Emulacija prijetnji iz stvarnog svijeta sada se smatra standardnom praksom u izgradnji otpornijih AI sustava, koristeći slične alate, taktike i procedure za identificiranje rizika sustava i testiranje reakcije branitelja.
+> Praksa AI red teaminga razvila se i sada ima šire značenje: ne odnosi se samo na traženje sigurnosnih ranjivosti, već uključuje i ispitivanje drugih kvarova sustava, poput generiranja potencijalno štetnog sadržaja. AI sustavi donose nove rizike, a red teaming je ključan za razumijevanje tih novih prijetnji, poput prompt injectiona i stvaranja neutemeljenog sadržaja. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.hr.png)]()
+
+Ispod su ključni uvidi koji su oblikovali Microsoftov AI Red Team program.
+
+1. **Širok opseg AI red teaminga:**  
+   AI red teaming sada obuhvaća i sigurnosne i Responsible AI (RAI) ishode. Tradicionalno, red teaming se fokusirao na sigurnosne aspekte, tretirajući model kao vektor (npr. krađa osnovnog modela). Međutim, AI sustavi uvode nove sigurnosne ranjivosti (npr. prompt injection, trovanje), što zahtijeva posebnu pažnju. Osim sigurnosti, AI red teaming također istražuje pitanja pravednosti (npr. stereotipizaciju) i štetnog sadržaja (npr. glorifikaciju nasilja). Rana identifikacija ovih problema omogućuje prioritetno ulaganje u obranu.  
+2. **Zlonamjerne i nenamjerne pogreške:**  
+   AI red teaming razmatra pogreške iz zlonamjerne i nenamjerne perspektive. Na primjer, prilikom red teaminga novog Binga, istražujemo ne samo kako zlonamjerni napadači mogu podmititi sustav, već i kako obični korisnici mogu naići na problematičan ili štetan sadržaj. Za razliku od tradicionalnog sigurnosnog red teaminga, koji se uglavnom fokusira na zlonamjerne aktere, AI red teaming uzima u obzir širi spektar korisničkih profila i potencijalnih pogrešaka.  
+3. **Dinamična priroda AI sustava:**  
+   AI aplikacije se stalno razvijaju. U aplikacijama velikih jezičnih modela, developeri se prilagođavaju promjenjivim zahtjevima. Kontinuirani red teaming osigurava stalnu budnost i prilagodbu novim rizicima.
+
+AI red teaming nije sveobuhvatan i treba ga smatrati dopunskom aktivnošću uz dodatne kontrole poput [role-based access control (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) i sveobuhvatna rješenja za upravljanje podacima. Namijenjen je kao dodatak sigurnosnoj strategiji koja se fokusira na korištenje sigurnih i odgovornih AI rješenja koja uzimaju u obzir privatnost i sigurnost, a istovremeno nastoje minimizirati pristranosti, štetan sadržaj i dezinformacije koje mogu narušiti povjerenje korisnika.
+
+Evo popisa dodatnih materijala koji vam mogu pomoći bolje razumjeti kako red teaming može pomoći u prepoznavanju i ublažavanju rizika u vašim AI sustavima:
+
+- [Planiranje red teaminga za velike jezične modele (LLM) i njihove primjene](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)  
+- [Što je OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)  
+- [AI Red Teaming - Ključna praksa za izgradnju sigurnijih i odgovornih AI rješenja](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)  
+- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), baza znanja o taktikama i tehnikama koje koriste napadači u stvarnim napadima na AI sustave.
+
+## Provjera znanja
+
+Koji bi mogao biti dobar pristup održavanju integriteta podataka i sprječavanju zloupotrebe?
+
+1. Imati snažne kontrole pristupa podacima temeljene na ulogama i upravljanje podacima  
+1. Implementirati i nadzirati označavanje podataka kako bi se spriječila pogrešna reprezentacija ili zloupotreba podataka  
+1. Osigurati da vaša AI infrastruktura podržava filtriranje sadržaja
+
+A:1, Iako su sva tri odlične preporuke, osiguravanje da korisnicima dodjeljujete odgovarajuće privilegije pristupa podacima znatno će pomoći u sprječavanju manipulacije i pogrešne reprezentacije podataka koje koriste LLM-ovi.
+
+## 🚀 Izazov
+
+Pročitajte više o tome kako možete [upravljati i štititi osjetljive informacije](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) u doba AI.
+
+## Odličan posao, nastavite s učenjem
+
+Nakon što završite ovu lekciju, pogledajte našu [Generative AI Learning kolekciju](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili unapređivati svoje znanje o Generativnoj AI!
+
+Krenite na Lekciju 14 gdje ćemo pogledati [Životni ciklus Generativnih AI aplikacija](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden koristeći AI uslugu prevođenja [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo ka točnosti, imajte na umu da automatski prijevodi mogu sadržavati greške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni ljudski prijevod. Ne odgovaramo za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati službenim i autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

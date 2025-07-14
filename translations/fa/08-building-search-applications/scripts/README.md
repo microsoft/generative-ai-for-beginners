@@ -2,42 +2,42 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-05-19T18:46:45+00:00",
+  "translation_date": "2025-07-09T13:07:03+00:00",
   "source_file": "08-building-search-applications/scripts/README.md",
   "language_code": "fa"
 }
 -->
 # آماده‌سازی داده‌های رونویسی
 
-اسکریپت‌های آماده‌سازی داده‌های رونویسی، رونویسی‌های ویدیوهای یوتیوب را دانلود کرده و آنها را برای استفاده در نمونه جستجوی معنایی با جاسازی‌ها و توابع OpenAI آماده می‌کنند.
+اسکریپت‌های آماده‌سازی داده‌های رونویسی، متن‌های ویدیوهای یوتیوب را دانلود کرده و برای استفاده در نمونه جستجوی معنایی با OpenAI Embeddings و Functions آماده می‌کنند.
 
-اسکریپت‌های آماده‌سازی داده‌های رونویسی بر روی آخرین نسخه‌های ویندوز 11، macOS Ventura و Ubuntu 22.04 (و بالاتر) تست شده‌اند.
+این اسکریپت‌ها روی آخرین نسخه‌های ویندوز ۱۱، macOS Ventura و اوبونتو ۲۲.۰۴ (و بالاتر) تست شده‌اند.
 
 ## ایجاد منابع مورد نیاز سرویس Azure OpenAI
 
 > [!IMPORTANT]
-> پیشنهاد می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا از سازگاری با OpenAI اطمینان حاصل کنید
+> پیشنهاد می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا از سازگاری با OpenAI اطمینان حاصل شود
 > به [مستندات](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) مراجعه کنید
 
-1. ایجاد یک گروه منابع
+1. یک گروه منبع ایجاد کنید
 
 > [!NOTE]
-> برای این دستورالعمل‌ها از گروه منابعی به نام "semantic-video-search" در شرق ایالات متحده استفاده می‌کنیم.
-> می‌توانید نام گروه منابع را تغییر دهید، اما هنگام تغییر مکان منابع،
-> جدول دسترسی مدل را بررسی کنید [جدول دسترسی مدل](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> در این دستورالعمل‌ها از گروه منبعی به نام "semantic-video-search" در منطقه East US استفاده می‌کنیم.
+> می‌توانید نام گروه منبع را تغییر دهید، اما هنگام تغییر مکان منابع،
+> جدول [دسترسی مدل‌ها](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) را بررسی کنید.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ایجاد یک منبع سرویس Azure OpenAI.
+1. یک منبع سرویس Azure OpenAI ایجاد کنید.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. دریافت نقطه پایانی و کلیدها برای استفاده در این برنامه
+1. نقطه پایان و کلیدهای لازم برای استفاده در این برنامه را دریافت کنید
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -47,8 +47,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. مدل‌های زیر را مستقر کنید:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or greater, named `gpt-35-turbo`
+   - نسخه `2` یا بالاتر از `text-embedding-ada-002` با نام `text-embedding-ada-002`
+   - نسخه `0613` یا بالاتر از `gpt-35-turbo` با نام `gpt-35-turbo`
 
 ```console
 az cognitiveservices account deployment create \
@@ -70,18 +70,18 @@ az cognitiveservices account deployment create \
     --sku-name "Standard"
 ```
 
-## نرم‌افزار مورد نیاز
+## نرم‌افزارهای مورد نیاز
 
-- [پایتون 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) یا بالاتر
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) یا بالاتر
 
 ## متغیرهای محیطی
 
-متغیرهای محیطی زیر برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب مورد نیاز هستند.
+برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب، متغیرهای محیطی زیر لازم است.
 
 ### در ویندوز
 
-توصیه می‌شود متغیرها را به `user` environment variables.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New` اضافه کنید.
+توصیه می‌شود متغیرها را به متغیرهای محیطی `user` خود اضافه کنید.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` برای [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -92,7 +92,7 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 
 ### در لینوکس و macOS
 
-توصیه می‌شود اکسپورت‌های زیر را به فایل `~/.bashrc` or `~/.zshrc` خود اضافه کنید.
+توصیه می‌شود موارد زیر را به فایل `~/.bashrc` یا `~/.zshrc` خود اضافه کنید.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,8 +103,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## نصب کتابخانه‌های مورد نیاز پایتون
 
-1. نصب [کلاینت git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) اگر هنوز نصب نشده است.
-1. از یک پنجره `Terminal`، نمونه را به پوشه ریپوی مورد نظر خود کلون کنید.
+1. اگر کلاینت [git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) نصب نیست، آن را نصب کنید.
+1. از پنجره `Terminal`، نمونه را در پوشه مخزن مورد نظر خود کلون کنید.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -116,7 +116,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. یک محیط مجازی پایتون ایجاد کنید.
+1. یک محیط مجازی پایتون بسازید.
 
     در ویندوز:
 
@@ -173,4 +173,4 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما برای دقت تلاش می‌کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی اشتباهات یا نادرستی‌هایی باشند. سند اصلی به زبان مادری باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفاسیر نادرست ناشی از استفاده از این ترجمه نداریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نواقصی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوءتفاهم یا تفسیر نادرستی که از استفاده از این ترجمه ناشی شود، نیستیم.

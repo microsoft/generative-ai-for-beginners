@@ -2,129 +2,129 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ec385b41ee50579025d50cc03bfb3a25",
-  "translation_date": "2025-05-19T22:03:26+00:00",
+  "translation_date": "2025-07-09T15:03:09+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "hu"
 }
 -->
 # UX tervezése AI alkalmazásokhoz
 
-[![UX tervezése AI alkalmazásokhoz](../../../translated_images/12-lesson-banner.f98188f63dee5f2a9016055c93c766061b9cb95b320bf29d4d2d67ada792572e.hu.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
+[![Designing UX for AI Applications](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.hu.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Kattints a fenti képre az óra videójának megtekintéséhez)_
+> _(Kattints a fenti képre a lecke videójának megtekintéséhez)_
 
-A felhasználói élmény nagyon fontos aspektusa az alkalmazások építésének. A felhasználóknak hatékonyan kell tudniuk használni az alkalmazást a feladatok elvégzéséhez. A hatékonyság fontos, de az alkalmazásokat úgy is kell tervezni, hogy mindenki használni tudja őket, hogy _hozzáférhetőek_ legyenek. Ez a fejezet erre a területre összpontosít, hogy végül olyan alkalmazást tervezhess, amelyet az emberek használni akarnak és tudnak.
+A felhasználói élmény nagyon fontos szempont az alkalmazások fejlesztésénél. A felhasználóknak hatékonyan kell tudniuk használni az alkalmazásodat a feladatok elvégzéséhez. A hatékonyság fontos, de az alkalmazásokat úgy is kell tervezni, hogy mindenki számára használhatóak legyenek, vagyis _akadálymentesek_. Ez a fejezet erre a területre fókuszál, hogy végül olyan alkalmazást tervezz, amit az emberek szívesen és könnyen használnak.
 
 ## Bevezetés
 
-A felhasználói élmény az, ahogyan a felhasználó interakcióba lép és használ egy adott terméket vagy szolgáltatást, legyen az rendszer, eszköz vagy dizájn. Amikor AI alkalmazásokat fejlesztenek, a fejlesztők nemcsak arra összpontosítanak, hogy a felhasználói élmény hatékony legyen, hanem arra is, hogy etikus legyen. Ebben az órában azt tárgyaljuk, hogyan építsünk mesterséges intelligencia (AI) alkalmazásokat, amelyek a felhasználói igényeket szolgálják.
+A felhasználói élmény azt jelenti, hogy a felhasználó hogyan lép kapcsolatba és használ egy adott terméket vagy szolgáltatást, legyen az rendszer, eszköz vagy dizájn. AI alkalmazások fejlesztésekor a fejlesztők nemcsak arra figyelnek, hogy a felhasználói élmény hatékony legyen, hanem arra is, hogy etikus legyen. Ebben a leckében azt tárgyaljuk, hogyan lehet olyan mesterséges intelligencia (AI) alkalmazásokat építeni, amelyek megfelelnek a felhasználók igényeinek.
 
-Az óra a következő területeket fedi le:
+A lecke a következő területeket fogja érinteni:
 
-- Bevezetés a felhasználói élménybe és a felhasználói igények megértésébe
-- AI alkalmazások tervezése bizalom és átláthatóság érdekében
-- AI alkalmazások tervezése együttműködés és visszajelzés érdekében
+- Bevezetés a felhasználói élménybe és a felhasználói igények megértése
+- AI alkalmazások tervezése bizalom és átláthatóság jegyében
+- AI alkalmazások tervezése együttműködésre és visszacsatolásra
 
 ## Tanulási célok
 
-Az óra elvégzése után képes leszel:
+A lecke elvégzése után képes leszel:
 
-- Megérteni, hogyan építs AI alkalmazásokat, amelyek megfelelnek a felhasználói igényeknek.
-- AI alkalmazásokat tervezni, amelyek elősegítik a bizalmat és az együttműködést.
+- Megérteni, hogyan lehet olyan AI alkalmazásokat építeni, amelyek megfelelnek a felhasználói igényeknek.
+- Olyan AI alkalmazásokat tervezni, amelyek elősegítik a bizalmat és az együttműködést.
 
 ### Előfeltétel
 
-Szánj időt arra, hogy többet olvass a [felhasználói élményről és a dizájn gondolkodásról.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Szánj időt, és olvass többet a [felhasználói élményről és a design gondolkodásról.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Bevezetés a felhasználói élménybe és a felhasználói igények megértésébe
+## Bevezetés a felhasználói élménybe és a felhasználói igények megértése
 
-Képzeletbeli oktatási startupunkban két fő felhasználónk van, tanárok és diákok. Mindkét felhasználónak egyedi igényei vannak. A felhasználóközpontú tervezés a felhasználót helyezi előtérbe, biztosítva, hogy a termékek relevánsak és hasznosak legyenek azok számára, akiknek szánják.
+A képzeletbeli oktatási startupunkban két fő felhasználó van: tanárok és diákok. Mindkét felhasználónak egyedi igényei vannak. A felhasználóközpontú tervezés a felhasználót helyezi előtérbe, biztosítva, hogy a termékek relevánsak és hasznosak legyenek azok számára, akiknek szánják őket.
 
-Az alkalmazásnak **hasznosnak, megbízhatónak, hozzáférhetőnek és kellemesnek** kell lennie, hogy jó felhasználói élményt nyújtson.
+Az alkalmazásnak **hasznosnak, megbízhatónak, akadálymentesnek és kellemesnek** kell lennie, hogy jó felhasználói élményt nyújtson.
 
 ### Használhatóság
 
-Hasznosnak lenni azt jelenti, hogy az alkalmazás olyan funkciókkal rendelkezik, amelyek megfelelnek a tervezett célnak, például az értékelési folyamat automatizálása vagy villámkártyák létrehozása a felkészüléshez. Az alkalmazásnak, amely automatizálja az értékelési folyamatot, képesnek kell lennie arra, hogy pontosan és hatékonyan osztályozza a diákok munkáját előre meghatározott kritériumok alapján. Hasonlóképpen, az alkalmazásnak, amely villámkártyákat generál, képesnek kell lennie releváns és változatos kérdéseket létrehozni az adatai alapján.
+Hasznosnak lenni azt jelenti, hogy az alkalmazás olyan funkciókkal rendelkezik, amelyek megfelelnek a rendeltetésének, például az értékelési folyamat automatizálása vagy ismétlő kártyák generálása a tanuláshoz. Egy olyan alkalmazás, amely automatizálja az értékelést, pontosan és hatékonyan kell, hogy pontozza a diákok munkáját előre meghatározott kritériumok alapján. Hasonlóképpen, egy ismétlő kártyákat generáló alkalmazásnak releváns és változatos kérdéseket kell tudnia létrehozni az adatai alapján.
 
 ### Megbízhatóság
 
-Megbízhatónak lenni azt jelenti, hogy az alkalmazás képes következetesen és hibamentesen végrehajtani a feladatát. Az AI azonban, akárcsak az emberek, nem tökéletes, és hajlamos lehet hibákra. Az alkalmazások találkozhatnak hibákkal vagy váratlan helyzetekkel, amelyek emberi beavatkozást vagy korrekciót igényelnek. Hogyan kezeljük a hibákat? Az óra utolsó részében arról fogunk beszélni, hogyan tervezik az AI rendszereket és alkalmazásokat együttműködés és visszajelzés érdekében.
+Megbízhatónak lenni azt jelenti, hogy az alkalmazás következetesen és hibamentesen végzi el a feladatát. Azonban az AI, akárcsak az emberek, nem tökéletes, és hibák előfordulhatnak. Az alkalmazások hibákkal vagy váratlan helyzetekkel találkozhatnak, amelyek emberi beavatkozást vagy javítást igényelnek. Hogyan kezeled a hibákat? A lecke utolsó részében bemutatjuk, hogyan terveznek AI rendszereket és alkalmazásokat együttműködésre és visszacsatolásra.
 
-### Hozzáférhetőség
+### Akadálymentesség
 
-Hozzáférhetőnek lenni azt jelenti, hogy a felhasználói élményt kiterjesztjük különböző képességű felhasználókra, beleértve a fogyatékkal élőket is, biztosítva, hogy senki ne maradjon ki. Az akadálymentességi irányelvek és elvek követésével az AI megoldások inkluzívabbá, használhatóbbá és hasznosabbá válnak minden felhasználó számára.
+Akadálymentesnek lenni azt jelenti, hogy a felhasználói élményt kiterjesztjük különböző képességű felhasználókra, beleértve a fogyatékkal élőket is, biztosítva, hogy senki ne maradjon ki. Az akadálymentességi irányelvek és elvek követésével az AI megoldások befogadóbbá, használhatóbbá és minden felhasználó számára előnyösebbé válnak.
 
 ### Kellemes
 
-Kellemesnek lenni azt jelenti, hogy az alkalmazás élvezetes a használat során. Egy vonzó felhasználói élmény pozitív hatással lehet a felhasználóra, ösztönözve őket arra, hogy visszatérjenek az alkalmazáshoz, és növeljék az üzleti bevételt.
+Kellemesnek lenni azt jelenti, hogy az alkalmazás élvezetes a használata. Egy vonzó felhasználói élmény pozitív hatással lehet a felhasználóra, ösztönözve őt az alkalmazás újrahasználatára, ami növeli az üzleti bevételt.
 
-![képet illusztrálva az AI felhasználói élmény szempontjait](../../../translated_images/uxinai.26a003eb0524d011d3e36d15f6837df5be66ee0d965ee0df6d004edd5097a87d.hu.png)
+![image illustrating UX considerations in AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.hu.png)
 
-Nem minden kihívást lehet AI-val megoldani. Az AI kiegészíti a felhasználói élményt, legyen szó manuális feladatok automatizálásáról vagy felhasználói élmények személyre szabásáról.
+Nem minden kihívás oldható meg AI-val. Az AI arra szolgál, hogy kiegészítse a felhasználói élményt, legyen szó manuális feladatok automatizálásáról vagy a felhasználói élmények személyre szabásáról.
 
-## AI alkalmazások tervezése bizalom és átláthatóság érdekében
+## AI alkalmazások tervezése bizalom és átláthatóság jegyében
 
-A bizalom építése kulcsfontosságú az AI alkalmazások tervezésekor. A bizalom biztosítja, hogy a felhasználó magabiztosan bízik abban, hogy az alkalmazás elvégzi a munkát, következetesen szállítja az eredményeket, és az eredmények megfelelnek a felhasználó igényeinek. A bizalommal kapcsolatos kockázat a bizalmatlanság és a túlzott bizalom. A bizalmatlanság akkor fordul elő, amikor a felhasználó kevés vagy nincs bizalma egy AI rendszer iránt, ami az alkalmazás elutasításához vezet. A túlzott bizalom akkor fordul elő, amikor a felhasználó túlbecsüli egy AI rendszer képességeit, ami ahhoz vezet, hogy a felhasználók túlzottan bíznak az AI rendszerben. Például egy automatizált értékelési rendszer esetében a túlzott bizalom azt eredményezheti, hogy a tanár nem ellenőrzi néhány dolgozatot, hogy megbizonyosodjon arról, hogy az értékelési rendszer jól működik. Ez igazságtalan vagy pontatlan osztályzatokat eredményezhet a diákok számára, vagy elmaradt lehetőségeket a visszajelzésre és a fejlődésre.
+A bizalom kiépítése kulcsfontosságú AI alkalmazások tervezésekor. A bizalom biztosítja, hogy a felhasználó bízik abban, hogy az alkalmazás elvégzi a feladatot, következetesen szállítja az eredményeket, és az eredmények megfelelnek a felhasználó igényeinek. Ebben a területben kockázatot jelent a bizalmatlanság és a túlzott bizalom. A bizalmatlanság akkor fordul elő, amikor a felhasználó kevés vagy semmilyen bizalmat nem táplál az AI rendszer iránt, ami az alkalmazás elutasításához vezet. A túlzott bizalom pedig akkor, amikor a felhasználó túlbecsüli az AI rendszer képességeit, és túlzottan megbízik benne. Például egy automatikus értékelő rendszer esetén a túlzott bizalom miatt a tanár nem ellenőrzi át a dolgozatokat, hogy megbizonyosodjon az értékelő rendszer helyességéről. Ez igazságtalan vagy pontatlan jegyekhez, illetve elmaradt visszajelzési és fejlesztési lehetőségekhez vezethet.
 
-Két módja annak, hogy a bizalom központi szerepet kapjon a tervezésben, az a magyarázhatóság és az ellenőrzés.
+Két módja annak, hogy a bizalom a tervezés középpontjába kerüljön: az érthetőség és az irányítás.
 
-### Magyarázhatóság
+### Érthetőség
 
-Amikor az AI segít döntéseket hozni, például a jövő generációinak tudásának átadásában, fontos, hogy a tanárok és a szülők megértsék, hogyan születnek az AI döntések. Ez a magyarázhatóság - megérteni, hogyan hoznak döntéseket az AI alkalmazások. A magyarázhatóság tervezése magában foglalja az AI alkalmazás példáinak részleteinek hozzáadását. Például a "Kezdje az AI tanárral" helyett a rendszer használhatja: "Összegezze jegyzeteit könnyebb felkészüléshez az AI segítségével."
+Amikor az AI döntések meghozatalában segít, például a tudás átadásában a jövő generációinak, fontos, hogy a tanárok és a szülők megértsék, hogyan születnek az AI döntések. Ez az érthetőség – annak megértése, hogyan hoznak döntéseket az AI alkalmazások. Az érthetőség tervezése magában foglalja annak bemutatását, hogy az AI alkalmazás mit tud csinálni példákkal illusztrálva. Például ahelyett, hogy az alkalmazás azt mondaná: „Kezdj el dolgozni az AI tanárral”, inkább így fogalmazhat: „Foglalja össze jegyzeteit az egyszerűbb ismétléshez AI segítségével.”
 
-![egy alkalmazás kezdőlapja, amely világosan illusztrálja az AI alkalmazások magyarázhatóságát](../../../translated_images/explanability-in-ai.19a61ee8eec9aec2d55d420c49cc3bb167db208c05bddb8d4e1e9e10ea8746b8.hu.png)
+![an app landing page with clear illustration of explainability in AI applications](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.hu.png)
 
-Egy másik példa arra, hogyan használja az AI a felhasználói és személyes adatokat. Például egy diák szerepkörrel rendelkező felhasználónak korlátozásai lehetnek szerepköre alapján. Az AI nem tud válaszokat adni a kérdésekre, de segíthet a felhasználónak átgondolni, hogyan tudják megoldani a problémát.
+Egy másik példa arra, hogyan használja az AI a felhasználói és személyes adatokat. Például egy diák személyiségű felhasználónak lehetnek korlátai a személyisége alapján. Az AI nem feltétlenül árulhatja el a válaszokat, de segíthet abban, hogy a felhasználó átgondolja, hogyan oldhat meg egy problémát.
 
-![AI válaszol kérdésekre szerepkör alapján](../../../translated_images/solving-questions.9158f66fb9fd71ed57fd00978358d14dbccc72bd2b1e4db5140fcb1579aef295.hu.png)
+![AI replying to questions based on persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.hu.png)
 
-A magyarázhatóság utolsó kulcsfontosságú része a magyarázatok egyszerűsítése. A diákok és tanárok nem feltétlenül AI szakértők, ezért az alkalmazás képességeinek és korlátainak magyarázata egyszerű és könnyen érthető legyen.
+Az érthetőség utolsó fontos eleme a magyarázatok egyszerűsítése. A diákok és tanárok nem feltétlenül AI szakértők, ezért az alkalmazás képességeiről szóló magyarázatoknak egyszerűnek és könnyen érthetőnek kell lenniük.
 
-![AI képességek egyszerűsített magyarázatai](../../../translated_images/simplified-explanations.4a23e7b2260406a771a2cd853970a0661388a63f1900737935c0a788daf16dc8.hu.png)
+![simplified explanations on AI capabilities](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.hu.png)
 
-### Ellenőrzés
+### Irányítás
 
-A generatív AI létrehoz egy együttműködést az AI és a felhasználó között, ahol például a felhasználó módosíthatja az utasításokat különböző eredmények érdekében. Ezenkívül, ha egy eredmény generálódik, a felhasználók képesek legyenek módosítani az eredményeket, így érzik a kontrollt. Például a Bing használatakor testre szabhatod az utasítást formátum, hangnem és hossz alapján. Ezenkívül változtatásokat adhatsz hozzá az eredményhez, és módosíthatod az eredményt, ahogy az alább látható:
+A generatív AI együttműködést teremt az AI és a felhasználó között, ahol például a felhasználó módosíthatja a promptokat a különböző eredmények érdekében. Emellett, ha egyszer létrejött egy eredmény, a felhasználók módosíthatják azt, így kontrollt kapnak az eredmény felett. Például a Bing használatakor a promptot formátum, hangnem és hosszúság szerint alakíthatod. Emellett módosíthatod az eredményt is, ahogy az alábbi képen látható:
 
-![Bing keresési eredmények, amelyek lehetőséget kínálnak az utasítás és az eredmény módosítására](../../../translated_images/bing1.6024fe7d103ff4b54c58b873654403a1e56f81010da05a1f0a210c5ac7a1b8b5.hu.png)
+![Bing search results with options to modify the prompt and output](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.hu.png)
 
-A Bing egy másik funkciója, amely lehetővé teszi a felhasználó számára, hogy ellenőrzést gyakoroljon az alkalmazás felett, az a képesség, hogy bekapcsolja vagy kikapcsolja az AI által használt adatokat. Egy iskolai alkalmazás esetében egy diák szeretné használni jegyzeteit, valamint a tanárok forrásait felkészülési anyagként.
+Egy másik Bing funkció, amely lehetővé teszi a felhasználó számára az irányítást, az az adatfelhasználásra való beleegyezés vagy elutasítás lehetősége. Egy iskolai alkalmazás esetén a diák szeretné használni a saját jegyzeteit, valamint a tanárok anyagait ismétlő anyagként.
 
-![Bing keresési eredmények, amelyek lehetőséget kínálnak az utasítás és az eredmény módosítására](../../../translated_images/bing2.a01fd420e9d52912126965a59c1766e5865f4dd9aaa45408d525e717d0ef3cce.hu.png)
+![Bing search results with options to modify the prompt and output](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.hu.png)
 
-> Az AI alkalmazások tervezésekor a szándékosság kulcsfontosságú annak biztosításában, hogy a felhasználók ne bízzanak túlzottan az AI-ban, irreális elvárásokat támasztva annak képességeivel szemben. Ennek egyik módja a súrlódás létrehozása az utasítások és az eredmények között. Emlékeztetve a felhasználót arra, hogy ez AI és nem egy másik ember
+> AI alkalmazások tervezésekor a szándékosság kulcsfontosságú annak biztosításában, hogy a felhasználók ne bízzanak túlzottan az AI-ban, és ne állítsanak fel irreális elvárásokat a képességeivel kapcsolatban. Ennek egyik módja, hogy súrlódást teremtsünk a promptok és az eredmények között, emlékeztetve a felhasználót, hogy ez AI, nem pedig egy másik ember.
 
-## AI alkalmazások tervezése együttműködés és visszajelzés érdekében
+## AI alkalmazások tervezése együttműködésre és visszacsatolásra
 
-Ahogy korábban említettük, a generatív AI létrehoz egy együttműködést a felhasználó és az AI között. A legtöbb interakció a felhasználó által beírt utasításokkal és az AI által generált eredményekkel történik. Mi van, ha az eredmény helytelen? Hogyan kezeli az alkalmazás a hibákat, ha előfordulnak? Az AI hibáztatja a felhasználót, vagy szán időt a hiba magyarázatára?
+Ahogy korábban említettük, a generatív AI együttműködést teremt a felhasználó és az AI között. A legtöbb interakció úgy zajlik, hogy a felhasználó beír egy promptot, az AI pedig generál egy választ. Mi történik, ha az eredmény hibás? Hogyan kezeli az alkalmazás a hibákat, ha előfordulnak? Az AI a felhasználót hibáztatja, vagy időt szán arra, hogy elmagyarázza a hibát?
 
-Az AI alkalmazásokat úgy kell építeni, hogy képesek legyenek visszajelzést fogadni és adni. Ez nemcsak az AI rendszer javítását segíti, hanem a felhasználókkal való bizalomépítést is. Egy visszajelzési ciklusnak szerepelnie kell a tervezésben, például egy egyszerű felfelé vagy lefelé mutató hüvelykujj az eredményen.
+Az AI alkalmazásokat úgy kell megépíteni, hogy képesek legyenek visszajelzést fogadni és adni. Ez nemcsak az AI rendszer fejlesztését segíti, hanem növeli a felhasználók bizalmát is. A tervezésbe be kell építeni egy visszacsatolási hurkot, például egy egyszerű „tetszik” vagy „nem tetszik” gombot az eredmény mellett.
 
-Egy másik módja ennek kezelésére a rendszer képességeinek és korlátainak egyértelmű kommunikálása. Ha a felhasználó hibát követ el, kérve valamit az AI képességein túl, ennek kezelésére is legyen mód, ahogy az alább látható.
+Egy másik módja a hibakezelésnek, ha világosan kommunikáljuk a rendszer képességeit és korlátait. Ha a felhasználó olyan kérést tesz, ami meghaladja az AI képességeit, akkor erre is legyen mód a kezelésre, ahogy az alábbi ábra mutatja.
 
-![Visszajelzés adása és hibák kezelése](../../../translated_images/feedback-loops.2abf91e576a435333eb1b37c823a69497337abc5b50ff80c4b9ddbd52bfdbf84.hu.png)
+![Giving feedback and handling errors](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.hu.png)
 
-Rendszerhibák gyakoriak olyan alkalmazásokban, ahol a felhasználónak szüksége lehet segítségre az AI hatókörén kívüli információkkal kapcsolatban, vagy az alkalmazás korlátozhatja, hogy hány kérdést/témát generálhat összefoglalókat. Például egy AI alkalmazás, amely korlátozott tárgyakra van kiképezve, például történelem és matematika, nem biztos, hogy tud kezelni földrajzi kérdéseket. Ennek enyhítésére az AI rendszer adhat olyan választ, mint: "Sajnálom, termékünket az alábbi tárgyak adataival képeztük ki....., nem tudok válaszolni a kérdésre, amit feltettél."
+A rendszerhibák gyakoriak olyan alkalmazásoknál, ahol a felhasználónak olyan információra lehet szüksége, ami kívül esik az AI hatókörén, vagy az alkalmazás korlátozhatja, hogy hány kérdésre vagy témára lehet összefoglalót generálni. Például egy AI alkalmazás, amely csak történelem és matematika témakörében van betanítva, nem biztos, hogy képes földrajzi kérdésekre válaszolni. Ennek elkerülésére az AI rendszer válasza lehet például: „Sajnálom, termékünket az alábbi tantárgyak adatai alapján képeztük ki..., nem tudok válaszolni a feltett kérdésre.”
 
-Az AI alkalmazások nem tökéletesek, ezért hibákat követhetnek el. Az alkalmazások tervezésekor biztosítani kell, hogy a felhasználói visszajelzésekre és a hibakezelésre helyet biztosítsanak egyszerű és könnyen érthető módon.
+Az AI alkalmazások nem tökéletesek, ezért hibázhatnak. Az alkalmazás tervezésekor biztosítani kell, hogy legyen hely a felhasználói visszajelzéseknek és a hibakezelésnek, egyszerű és könnyen érthető módon.
 
 ## Feladat
 
-Vegyél bármilyen AI alkalmazást, amit eddig építettél, és fontold meg, hogy beépíted az alábbi lépéseket az alkalmazásodba:
+Vegyél elő bármilyen AI alkalmazást, amit eddig készítettél, és fontold meg az alábbi lépések beépítését az alkalmazásodba:
 
-- **Kellemes:** Fontold meg, hogyan teheted kellemesebbé az alkalmazásodat. Mindenhol adsz magyarázatokat? Ösztönzöd a felhasználót a felfedezésre? Hogyan fogalmazod meg a hibaüzeneteidet?
+- **Kellemes:** Gondold át, hogyan tehetnéd az alkalmazásodat élvezetesebbé. Mindenhol adsz magyarázatokat? Bátorítod a felhasználót a felfedezésre? Hogyan fogalmazod meg a hibajelzéseket?
 
-- **Használhatóság:** Webes alkalmazás építése. Biztosítsd, hogy az alkalmazásod egérrel és billentyűzettel is navigálható legyen.
+- **Használhatóság:** Webalkalmazás építésekor ügyelj arra, hogy az alkalmazás egérrel és billentyűzettel egyaránt navigálható legyen.
 
-- **Bizalom és átláthatóság:** Ne bízz teljesen az AI-ban és annak eredményeiben, fontold meg, hogyan adhatnál hozzá egy embert a folyamatba az eredmények ellenőrzésére. Fontold meg és valósíts meg más módokat a bizalom és átláthatóság elérésére.
+- **Bizalom és átláthatóság:** Ne bízz teljesen az AI-ban és az általa adott eredményekben, gondold át, hogyan vonhatnál be egy embert az eredmények ellenőrzésére. Emellett fontold meg és valósíts meg más módszereket is a bizalom és átláthatóság növelésére.
 
-- **Ellenőrzés:** Adj a felhasználónak ellenőrzést az alkalmazásnak megadott adatok felett. Valósíts meg egy módot, amely lehetővé teszi a felhasználó számára, hogy bekapcsolja vagy kikapcsolja az adatgyűjtést az AI alkalmazásban.
+- **Irányítás:** Adj a felhasználónak kontrollt az általa az alkalmazásnak megadott adatok felett. Valósíts meg olyan megoldást, amely lehetővé teszi a felhasználó számára, hogy beleegyezzen vagy elutasítsa az adatgyűjtést az AI alkalmazásban.
 
 ## Folytasd a tanulást!
 
-Az óra elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a Generatív AI ismereteidet!
+A lecke elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd generatív AI ismereteidet!
 
-Lépj tovább a 13. órára, ahol megvizsgáljuk, hogyan [biztosítsuk az AI alkalmazásokat](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Lépj tovább a 13. leckére, ahol az AI alkalmazások [biztonságáról](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) lesz szó!
 
-**Felelősségkizárás**:  
-Ezt a dokumentumot AI fordítási szolgáltatással, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordították le. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Jogi nyilatkozat**:  
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

@@ -2,65 +2,65 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:22:36+00:00",
+  "translation_date": "2025-07-09T14:26:24+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "tw"
 }
 -->
-# 與函數呼叫整合
+# 與 function calling 整合
 
-[![Integrating with function calling](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.tw.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integrating with function calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.tw.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-你在前面的課程中已經學到了不少東西。然而，我們還可以進一步提升。有些事情我們可以解決，例如如何獲得更一致的回應格式，以便更容易在後續工作中使用回應。此外，我們可能希望從其他來源添加數據，以進一步豐富我們的應用程式。
+到目前為止，你已經在前面的課程中學到不少內容。不過，我們還能進一步提升。有些問題我們可以著手解決，例如如何取得更一致的回應格式，讓後續處理回應時更方便。此外，我們也可能想要加入來自其他來源的資料，進一步豐富我們的應用程式。
 
-上述問題正是本章要解決的。
+上述問題正是本章節想要解決的重點。
 
 ## 介紹
 
 本課程將涵蓋：
 
-- 解釋什麼是函數呼叫及其使用案例。
-- 使用 Azure OpenAI 創建函數呼叫。
-- 如何將函數呼叫整合到應用程式中。
+- 解釋什麼是 function calling 及其使用情境。
+- 使用 Azure OpenAI 建立 function call。
+- 如何將 function call 整合到應用程式中。
 
 ## 學習目標
 
 完成本課程後，你將能夠：
 
-- 解釋使用函數呼叫的目的。
-- 設置 Azure OpenAI 服務的函數呼叫。
-- 為應用程式的使用案例設計有效的函數呼叫。
+- 解釋使用 function calling 的目的。
+- 使用 Azure OpenAI 服務設定 Function Call。
+- 為你的應用程式設計有效的 function calls。
 
-## 情境：使用函數提升我們的聊天機器人
+## 情境：用 functions 改善我們的聊天機器人
 
-在本課程中，我們希望為我們的教育初創公司構建一個功能，允許用戶使用聊天機器人查找技術課程。我們將推薦適合他們技能水平、當前角色和感興趣技術的課程。
+在本課程中，我們想為教育新創公司打造一個功能，讓使用者能透過聊天機器人尋找技術課程。我們會根據使用者的技能等級、目前職務和感興趣的技術推薦合適的課程。
 
-要完成此情境，我們將使用以下組合：
+為了完成這個情境，我們將結合以下技術：
 
-- `Azure OpenAI` 創建用戶的聊天體驗。
-- `Microsoft Learn Catalog API` 幫助用戶根據用戶的請求查找課程。
-- `Function Calling` 接收用戶的查詢並將其發送到函數以進行 API 請求。
+- 使用 `Azure OpenAI` 為使用者建立聊天體驗。
+- 使用 `Microsoft Learn Catalog API` 幫助使用者根據需求尋找課程。
+- 使用 `Function Calling` 將使用者的查詢傳送給函式，進行 API 請求。
 
-首先，我們來看看為什麼要使用函數呼叫：
+首先，讓我們來看看為什麼我們會想使用 function calling：
 
-## 為什麼要使用函數呼叫
+## 為什麼要使用 Function Calling
 
-在函數呼叫之前，LLM 的回應是非結構化且不一致的。開發者需要編寫複雜的驗證代碼，以確保能夠處理每個回應的變體。用戶無法得到像「斯德哥爾摩目前的天氣如何？」這樣的答案。這是因為模型受到訓練數據時間的限制。
+在 function calling 出現之前，LLM 的回應是非結構化且不一致的。開發者必須撰寫複雜的驗證程式碼，才能處理各種不同的回應變化。使用者無法直接得到像「斯德哥爾摩現在的天氣如何？」這樣的答案，因為模型的資料只限於訓練時的時間點。
 
-函數呼叫是 Azure OpenAI 服務的一項功能，旨在克服以下限制：
+Function Calling 是 Azure OpenAI 服務的一項功能，用來克服以下限制：
 
-- **一致的回應格式**。如果我們能更好地控制回應格式，我們可以更容易地將回應整合到其他系統中。
-- **外部數據**。能夠在聊天上下文中使用應用程式其他來源的數據。
+- **一致的回應格式**。如果我們能更好地控制回應格式，就能更輕鬆地將回應整合到其他系統中。
+- **外部資料**。能夠在聊天情境中使用應用程式其他來源的資料。
 
-## 通過情境說明問題
+## 透過情境說明問題
 
-> 如果你想運行下面的情境，我們建議你使用[附帶的筆記本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)。你也可以跟著閱讀，我們試圖說明函數如何幫助解決問題。
+> 建議你使用[附帶的筆記本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)來執行以下情境。當然你也可以直接閱讀，我們會示範一個 function 可以幫助解決的問題。
 
-我們來看看說明回應格式問題的例子：
+讓我們看一個說明回應格式問題的範例：
 
-假設我們想創建一個學生數據庫，以便向他們推薦合適的課程。下面我們有兩個非常相似的學生描述。
+假設我們想建立一個學生資料庫，以便推薦合適的課程。以下有兩個學生描述，資料內容非常相似。
 
-1. 建立到我們的 Azure OpenAI 資源的連接：
+1. 建立與 Azure OpenAI 資源的連線：
 
    ```python
    import os
@@ -77,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   下面是一些 Python 代碼，用於配置我們與 Azure OpenAI 的連接，其中設置 `api_type`, `api_base`, `api_version` and `api_key`.
+   以下是一些 Python 程式碼，用來設定與 Azure OpenAI 的連線，包括 `api_type`、`api_base`、`api_version` 和 `api_key`。
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`。
+1. 使用變數 `student_1_description` 和 `student_2_description` 建立兩個學生描述。
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   我們希望將上述學生描述發送到 LLM 以解析數據。這些數據可以在我們的應用程式中使用，並發送到 API 或存儲在數據庫中。
+   我們想將上述學生描述傳給 LLM 解析。這些資料之後可以用在應用程式中，或傳送給 API，或存入資料庫。
 
-1. 我們創建兩個相同的提示，告訴 LLM 我們感興趣的信息：
+1. 建立兩個相同的提示，指示 LLM 我們想要的資訊：
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
    '''
    ```
 
-   上述提示指示 LLM 提取信息並以 JSON 格式返回回應。
+   上述提示指示 LLM 擷取資訊並以 JSON 格式回傳。
 
-1. 設置提示和與 Azure OpenAI 的連接後，我們將使用 `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` 將提示發送到 LLM。這是為了模仿用戶向聊天機器人寫消息。
+1. 設定好提示和 Azure OpenAI 連線後，我們使用 `openai.ChatCompletion` 將提示傳給 LLM。我們將提示存入 `messages` 變數，並將角色設定為 `user`，模擬使用者對聊天機器人發送訊息。
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-現在我們可以向 LLM 發送兩個請求，並通過 `openai_response1['choices'][0]['message']['content']`.
+現在我們可以將兩個請求都送給 LLM，並透過 `openai_response1['choices'][0]['message']['content']` 取得回應內容。
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads` 找到的方式檢查收到的回應：
+1. 最後，我們可以使用 `json.loads` 將回應轉成 JSON 格式：
 
    ```python
    # Loading the response as a JSON object
@@ -173,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   即使提示相同且描述相似，我們看到 `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   雖然提示相同且描述相似，但我們看到 `Grades` 屬性的格式不同，有時是 `3.7`，有時是 `3.7 GPA`。
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   這是因為 LLM 接收的是非結構化的文字提示，回傳的也是非結構化資料。我們需要結構化的格式，才能確定在儲存或使用資料時的預期。
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+那麼，我們該如何解決格式問題呢？透過 function calling，我們可以確保收到結構化的資料。使用 function calling 時，LLM 並不會真正呼叫或執行函式，而是依照我們建立的結構來回應。接著，我們根據這些結構化回應，決定在應用程式中要執行哪個函式。
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.tw.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.tw.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+接著，我們可以將函式回傳的結果再送回給 LLM，LLM 會用自然語言回應使用者的查詢。
 
-## Use Cases for using function calls
+## 使用 function calls 的應用場景
 
-There are many different use cases where function calls can improve your app like:
+function calls 可以在許多情境中提升你的應用程式，例如：
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **呼叫外部工具**。聊天機器人擅長回答使用者問題。透過 function calling，聊天機器人可以根據使用者訊息執行特定任務。例如，學生可以請聊天機器人「寄封信給我的講師，說我需要更多這科目的協助」，這時會呼叫 `send_email(to: string, body: string)` 函式。
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **建立 API 或資料庫查詢**。使用者可以用自然語言查詢，轉換成格式化的查詢或 API 請求。例如，老師詢問「誰完成了最後一個作業？」就會呼叫 `get_completed(student_name: string, assignment: int, current_status: string)` 函式。
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **建立結構化資料**。使用者可以將一段文字或 CSV 交給 LLM 擷取重要資訊。例如，學生可以將維基百科關於和平協議的文章轉成 AI 快閃卡，透過 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` 函式完成。
 
-## Creating Your First Function Call
+## 建立你的第一個 Function Call
 
-The process of creating a function call includes 3 main steps:
+建立 function call 的流程包含三個主要步驟：
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. 使用函式清單和使用者訊息呼叫 Chat Completions API。
+2. 讀取模型回應以執行動作，例如執行函式或 API 呼叫。
+3. 使用函式回應再呼叫 Chat Completions API，利用該資訊產生對使用者的回應。
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.tw.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.tw.png)
 
-### Step 1 - creating messages
+### 步驟 1 - 建立訊息
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+第一步是建立使用者訊息。這可以動態從文字輸入取得，也可以直接指定值。如果你是第一次使用 Chat Completions API，需要定義訊息的 `role` 和 `content`。
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` 和一個示例問題的值。
+`role` 可以是 `system`（建立規則）、`assistant`（模型）或 `user`（最終使用者）。在 function calling 中，我們會將其設定為 `user`，並給出範例問題。
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-通過分配不同的角色，向 LLM 明確表示是系統在說話還是用戶，這有助於建立 LLM 可以基於的對話歷史。
+透過指定不同角色，LLM 能清楚知道是系統還是使用者在說話，有助於建立對話歷史，讓 LLM 能基於此進行回應。
 
-### 步驟 2 - 創建函數
+### 步驟 2 - 建立函式
 
-接下來，我們將定義一個函數及其參數。我們在這裡只使用一個名為 `search_courses` but you can create multiple functions.
+接著，我們會定義一個函式及其參數。這裡只用一個函式 `search_courses`，但你也可以建立多個函式。
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **重要**：函式會包含在傳給 LLM 的系統訊息中，會佔用你可用的 token 數量。
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters` 的函數：
+以下我們將函式建立成陣列，每個項目是一個函式，包含 `name`、`description` 和 `parameters` 屬性：
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-下面我們更詳細地描述每個函數實例：
+以下是對每個函式項目的詳細說明：
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - 想要呼叫的函式名稱。
+- `description` - 函式的功能描述，這裡要具體且清楚。
+- `parameters` - 模型回應中要產生的值和格式清單。`parameters` 陣列包含多個項目，每個項目有以下屬性：
+  1. `type` - 屬性資料型態。
+  2. `properties` - 模型回應中會使用的具體值清單。
+     1. `name` - 屬性名稱，模型會在格式化回應中使用，例如 `product`。
+     2. `type` - 屬性資料型態，例如 `string`。
+     3. `description` - 屬性說明。
 
-There's also an optional property `required` - required property for the function call to be completed.
+還有一個可選屬性 `required`，表示函式呼叫時必須提供的屬性。
 
-### Step 3 - Making the function call
+### 步驟 3 - 執行函式呼叫
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+定義函式後，我們需要在呼叫 Chat Completion API 時將函式包含進去。做法是將 `functions` 加入請求中，這裡是 `functions=functions`。
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+也可以設定 `function_call` 為 `auto`，讓 LLM 根據使用者訊息決定要呼叫哪個函式，而非由我們指定。
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"`，從而給 LLM 選擇何時呼叫我們提供的函數的選擇：
+以下程式碼示範呼叫 `ChatCompletion.create`，注意我們設定了 `functions=functions` 和 `function_call="auto"`，讓 LLM 自行決定何時呼叫函式：
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-現在回應看起來像這樣：
+回應看起來如下：
 
 ```json
 {
@@ -294,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-在這裡我們可以看到函數 `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+我們可以看到函式 `search_courses` 被呼叫，並帶入了 `arguments` 屬性中列出的參數。
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` 的值：
+LLM 能找到符合函式參數的資料，是因為它從傳給 `messages` 參數的值中擷取了資訊。以下是 `messages` 的內容提醒：
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-如你所見，`student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+如你所見，`student`、`Azure` 和 `beginner` 從 `messages` 中被擷取並作為函式輸入。這種使用函式的方式，不僅能從提示中擷取資訊，也能為 LLM 提供結構，並實現可重複使用的功能。
 
-Next, we need to see how we can use this in our app.
+接下來，我們要看看如何在應用程式中使用這個功能。
 
-## Integrating Function Calls into an Application
+## 將 Function Calls 整合到應用程式中
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+在測試過 LLM 回傳的結構化回應後，我們可以將它整合到應用程式中。
 
-### Managing the flow
+### 管理流程
 
-To integrate this into our application, let's take the following steps:
+要整合到應用程式，我們採取以下步驟：
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`。
+1. 先呼叫 OpenAI 服務，並將訊息存入變數 `response_message`。
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. 現在我們將定義一個函數，該函數將呼叫 Microsoft Learn API 以獲取課程列表：
+1. 接著定義一個函式，呼叫 Microsoft Learn API 取得課程清單：
 
    ```python
    import requests
@@ -342,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   注意我們現在創建了一個實際的 Python 函數，該函數映射到 `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   注意，我們現在建立一個對應於 `functions` 變數中函式名稱的 Python 函式，並且實際呼叫外部 API 取得所需資料。這裡是呼叫 Microsoft Learn API 搜尋訓練模組。
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+好，我們建立了 `functions` 變數和對應的 Python 函式，接著要怎麼告訴 LLM 兩者的對應關係，讓 Python 函式被呼叫呢？
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` 中引入的函數名稱，並呼叫指出的函數。以下是如何進行下面提到的檢查：
+1. 要判斷是否需要呼叫 Python 函式，我們要檢查 LLM 回應中是否包含 `function_call`，並呼叫指定的函式。以下是檢查方式：
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   這三行確保我們提取函數名稱、參數並進行呼叫：
+   這三行程式碼確保我們擷取函式名稱、參數並執行呼叫：
 
    ```python
    function_to_call = available_functions[function_name]
@@ -400,7 +400,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   下面是運行我們代碼的輸出：
+   以下是執行程式後的輸出：
 
    **輸出**
 
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. 現在我們將更新的消息 `messages` 發送到 LLM，以便我們可以接收到自然語言回應，而不是 API JSON 格式的回應。
+1. 現在我們將更新後的訊息 `messages` 再送給 LLM，讓它回傳自然語言回應，而非 API JSON 格式的回應。
 
    ```python
    print("Messages in next request:")
@@ -452,19 +452,18 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## 作業
 
-要繼續學習 Azure OpenAI 函數呼叫，你可以構建：
+為了繼續學習 Azure OpenAI Function Calling，你可以嘗試：
 
-- 函數的更多參數，可能幫助學習者找到更多課程。
-- 創建另一個函數呼叫，從學習者那裡獲取更多信息，例如他們的母語。
-- 創建錯誤處理，當函數呼叫和/或 API 呼叫未返回任何合適課程時。
+- 增加函式的參數，幫助學習者找到更多課程。
+- 建立另一個函式，收集學習者更多資訊，例如母語。
+- 建立錯誤處理機制，當函式呼叫和/或 API 呼叫未回傳合適課程時處理錯誤。
+提示：請參考 [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 頁面，了解這些資料如何以及在哪裡可用。
 
-提示：請參閱[Learn API 參考文檔](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst)頁面，以查看此數據的可用位置。
+## 做得好！繼續前進
 
-## 做得好！繼續學習之旅
+完成本課程後，請查看我們的 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
-完成本課程後，請查看我們的[生成式 AI 學習集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，以繼續提升你的生成式 AI 知識！
-
-前往第 12 課，我們將探討如何[設計 AI 應用程式的 UX](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+接著前往第12課，我們將探討如何 [為 AI 應用設計使用者體驗](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
 **免責聲明**：  
-本文檔使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力追求準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文件視為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對使用此翻譯而引起的任何誤解或錯誤不承擔責任。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。

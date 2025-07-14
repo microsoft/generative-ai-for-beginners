@@ -2,74 +2,74 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T18:00:55+00:00",
+  "translation_date": "2025-07-09T12:35:38+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "ms"
 }
 -->
-# Membangun Aplikasi Chat yang Dikuasai AI Generatif
+# Membangunkan Aplikasi Sembang Berkuasa AI Generatif
 
-[![Membangun Aplikasi Chat yang Dikuasai AI Generatif](../../../translated_images/07-lesson-banner.0f61145112d724a50d32abfb0b1841777f3ecec301d6f96a0b7f9d6b0e4756b9.ms.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Membangunkan Aplikasi Sembang Berkuasa AI Generatif](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ms.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Klik gambar di atas untuk melihat video pelajaran ini)_
+> _(Klik imej di atas untuk menonton video pelajaran ini)_
 
-Sekarang setelah kita melihat bagaimana kita dapat membangun aplikasi pembangkit teks, mari kita lihat aplikasi chat.
+Kini setelah kita melihat bagaimana membina aplikasi penjanaan teks, mari kita terokai aplikasi sembang.
 
-Aplikasi chat telah menjadi bagian dari kehidupan sehari-hari kita, menawarkan lebih dari sekadar sarana percakapan santai. Mereka adalah bagian integral dari layanan pelanggan, dukungan teknis, dan bahkan sistem penasihat yang canggih. Kemungkinan besar Anda telah mendapatkan bantuan dari aplikasi chat belum lama ini. Saat kita mengintegrasikan teknologi yang lebih canggih seperti AI generatif ke dalam platform ini, kompleksitas meningkat dan begitu juga tantangannya.
+Aplikasi sembang telah menjadi sebahagian daripada kehidupan harian kita, menawarkan lebih daripada sekadar medium perbualan santai. Ia merupakan bahagian penting dalam perkhidmatan pelanggan, sokongan teknikal, dan juga sistem penasihat yang canggih. Mungkin anda baru-baru ini mendapat bantuan daripada aplikasi sembang. Apabila kita mengintegrasikan teknologi lebih maju seperti AI generatif ke dalam platform ini, kerumitan dan cabaran juga meningkat.
 
-Beberapa pertanyaan yang perlu dijawab adalah:
+Beberapa soalan yang perlu dijawab adalah:
 
-- **Membangun aplikasi**. Bagaimana kita dapat membangun dan mengintegrasikan aplikasi yang dikuasai AI ini dengan efisien untuk kasus penggunaan tertentu?
-- **Pemantauan**. Setelah diterapkan, bagaimana kita dapat memantau dan memastikan bahwa aplikasi beroperasi pada tingkat kualitas tertinggi, baik dari segi fungsionalitas maupun mematuhi [enam prinsip AI yang bertanggung jawab](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **Membangunkan aplikasi**. Bagaimana kita membina dan mengintegrasikan aplikasi berkuasa AI ini dengan cekap untuk kes penggunaan tertentu?
+- **Pemantauan**. Setelah dilancarkan, bagaimana kita memantau dan memastikan aplikasi beroperasi pada tahap kualiti tertinggi, dari segi fungsi dan mematuhi [enam prinsip AI bertanggungjawab](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Saat kita semakin memasuki era yang ditentukan oleh otomatisasi dan interaksi manusia-mesin yang mulus, memahami bagaimana AI generatif mengubah cakupan, kedalaman, dan adaptabilitas aplikasi chat menjadi penting. Pelajaran ini akan menyelidiki aspek arsitektur yang mendukung sistem rumit ini, menggali metodologi untuk menyempurnakannya untuk tugas-tugas khusus domain, dan mengevaluasi metrik dan pertimbangan yang relevan untuk memastikan penerapan AI yang bertanggung jawab.
+Ketika kita melangkah ke era yang ditakrifkan oleh automasi dan interaksi manusia-mesin yang lancar, memahami bagaimana AI generatif mengubah skop, kedalaman, dan kebolehsuaian aplikasi sembang menjadi penting. Pelajaran ini akan menyelidiki aspek seni bina yang menyokong sistem rumit ini, mendalami metodologi untuk melaraskan mereka bagi tugasan khusus domain, dan menilai metrik serta pertimbangan yang berkaitan untuk memastikan penggunaan AI yang bertanggungjawab.
 
 ## Pengenalan
 
-Pelajaran ini mencakup:
+Pelajaran ini merangkumi:
 
-- Teknik untuk membangun dan mengintegrasikan aplikasi chat dengan efisien.
-- Bagaimana menerapkan kustomisasi dan penyempurnaan pada aplikasi.
-- Strategi dan pertimbangan untuk memantau aplikasi chat dengan efektif.
+- Teknik untuk membina dan mengintegrasikan aplikasi sembang dengan cekap.
+- Cara menerapkan penyesuaian dan pelarasan halus pada aplikasi.
+- Strategi dan pertimbangan untuk memantau aplikasi sembang dengan berkesan.
 
-## Tujuan Pembelajaran
+## Matlamat Pembelajaran
 
-Pada akhir pelajaran ini, Anda akan dapat:
+Menjelang akhir pelajaran ini, anda akan dapat:
 
-- Menggambarkan pertimbangan untuk membangun dan mengintegrasikan aplikasi chat ke dalam sistem yang ada.
-- Menyesuaikan aplikasi chat untuk kasus penggunaan tertentu.
-- Mengidentifikasi metrik utama dan pertimbangan untuk memantau dan menjaga kualitas aplikasi chat yang dikuasai AI dengan efektif.
-- Memastikan aplikasi chat memanfaatkan AI dengan bertanggung jawab.
+- Menerangkan pertimbangan untuk membina dan mengintegrasikan aplikasi sembang ke dalam sistem sedia ada.
+- Menyesuaikan aplikasi sembang untuk kes penggunaan tertentu.
+- Mengenal pasti metrik utama dan pertimbangan untuk memantau dan mengekalkan kualiti aplikasi sembang berkuasa AI dengan berkesan.
+- Memastikan aplikasi sembang menggunakan AI secara bertanggungjawab.
 
-## Mengintegrasikan AI Generatif ke dalam Aplikasi Chat
+## Mengintegrasikan AI Generatif ke dalam Aplikasi Sembang
 
-Meningkatkan aplikasi chat melalui AI generatif tidak hanya berpusat pada membuatnya lebih cerdas; ini tentang mengoptimalkan arsitektur, kinerja, dan antarmuka pengguna mereka untuk memberikan pengalaman pengguna yang berkualitas. Ini melibatkan penyelidikan fondasi arsitektur, integrasi API, dan pertimbangan antarmuka pengguna. Bagian ini bertujuan untuk menawarkan Anda peta jalan yang komprehensif untuk menavigasi lanskap kompleks ini, baik Anda menghubungkannya ke sistem yang ada atau membangunnya sebagai platform mandiri.
+Meningkatkan aplikasi sembang melalui AI generatif bukan sahaja tentang menjadikannya lebih pintar; ia juga mengenai mengoptimumkan seni bina, prestasi, dan antara muka pengguna untuk memberikan pengalaman pengguna yang berkualiti. Ini melibatkan penyelidikan asas seni bina, integrasi API, dan pertimbangan antara muka pengguna. Bahagian ini bertujuan memberikan anda peta jalan menyeluruh untuk menavigasi landskap kompleks ini, sama ada anda menyambungkannya ke sistem sedia ada atau membinanya sebagai platform berdiri sendiri.
 
-Pada akhir bagian ini, Anda akan dilengkapi dengan keahlian yang diperlukan untuk membangun dan menggabungkan aplikasi chat dengan efisien.
+Menjelang akhir bahagian ini, anda akan dilengkapi dengan kepakaran yang diperlukan untuk membina dan menggabungkan aplikasi sembang dengan cekap.
 
-### Chatbot atau Aplikasi Chat?
+### Chatbot atau Aplikasi Sembang?
 
-Sebelum kita menyelami pembangunan aplikasi chat, mari kita bandingkan 'chatbot' dengan 'aplikasi chat yang dikuasai AI,' yang memiliki peran dan fungsi yang berbeda. Tujuan utama chatbot adalah mengotomatisasi tugas percakapan tertentu, seperti menjawab pertanyaan yang sering diajukan atau melacak paket. Biasanya diatur oleh logika berbasis aturan atau algoritma AI yang kompleks. Sebaliknya, aplikasi chat yang dikuasai AI adalah lingkungan yang jauh lebih luas yang dirancang untuk memfasilitasi berbagai bentuk komunikasi digital, seperti teks, suara, dan video chat di antara pengguna manusia. Fitur yang menentukan adalah integrasi model AI generatif yang mensimulasikan percakapan yang bernuansa dan mirip manusia, menghasilkan respons berdasarkan berbagai masukan dan petunjuk kontekstual. Aplikasi chat yang dikuasai AI generatif dapat terlibat dalam diskusi domain terbuka, beradaptasi dengan konteks percakapan yang berkembang, dan bahkan menghasilkan dialog yang kreatif atau kompleks.
+Sebelum kita menyelami pembangunan aplikasi sembang, mari bandingkan 'chatbot' dengan 'aplikasi sembang berkuasa AI,' yang mempunyai peranan dan fungsi berbeza. Tujuan utama chatbot adalah untuk mengautomasikan tugasan perbualan tertentu, seperti menjawab soalan lazim atau mengesan bungkusan. Ia biasanya dikawal oleh logik berasaskan peraturan atau algoritma AI yang kompleks. Sebaliknya, aplikasi sembang berkuasa AI adalah persekitaran yang jauh lebih luas yang direka untuk memudahkan pelbagai bentuk komunikasi digital, seperti sembang teks, suara, dan video antara pengguna manusia. Ciri utamanya adalah integrasi model AI generatif yang mensimulasikan perbualan yang halus dan menyerupai manusia, menghasilkan respons berdasarkan pelbagai input dan petunjuk konteks. Aplikasi sembang berkuasa AI generatif boleh terlibat dalam perbincangan domain terbuka, menyesuaikan diri dengan konteks perbualan yang berubah, dan bahkan menghasilkan dialog kreatif atau kompleks.
 
-Tabel di bawah ini menguraikan perbedaan dan kesamaan utama untuk membantu kita memahami peran unik mereka dalam komunikasi digital.
+Jadual di bawah menggariskan perbezaan dan persamaan utama untuk membantu kita memahami peranan unik mereka dalam komunikasi digital.
 
-| Chatbot                               | Aplikasi Chat yang Dikuasai AI Generatif |
-| ------------------------------------- | ---------------------------------------- |
-| Berfokus pada tugas dan berbasis aturan| Sadar konteks                             |
-| Sering diintegrasikan ke dalam sistem yang lebih besar | Dapat menampung satu atau beberapa chatbot |
-| Terbatas pada fungsi yang diprogram    | Menggabungkan model AI generatif          |
-| Interaksi khusus & terstruktur         | Mampu diskusi domain terbuka              |
+| Chatbot                               | Aplikasi Sembang Berkuasa AI Generatif |
+| ------------------------------------- | -------------------------------------- |
+| Fokus pada tugasan dan berasaskan peraturan | Sedar konteks                          |
+| Selalunya diintegrasikan ke dalam sistem lebih besar | Boleh menempatkan satu atau beberapa chatbot |
+| Terhad kepada fungsi yang diprogramkan | Menggabungkan model AI generatif       |
+| Interaksi khusus & berstruktur         | Mampu perbincangan domain terbuka      |
 
-### Memanfaatkan Fungsionalitas Pra-Bangun dengan SDK dan API
+### Memanfaatkan fungsi sedia ada dengan SDK dan API
 
-Saat membangun aplikasi chat, langkah pertama yang bagus adalah menilai apa yang sudah ada. Menggunakan SDK dan API untuk membangun aplikasi chat adalah strategi yang menguntungkan karena berbagai alasan. Dengan mengintegrasikan SDK dan API yang terdokumentasi dengan baik, Anda secara strategis memposisikan aplikasi Anda untuk sukses jangka panjang, menangani masalah skalabilitas dan pemeliharaan.
+Apabila membina aplikasi sembang, langkah pertama yang baik adalah menilai apa yang sudah tersedia. Menggunakan SDK dan API untuk membina aplikasi sembang adalah strategi yang menguntungkan atas pelbagai sebab. Dengan mengintegrasikan SDK dan API yang didokumentasikan dengan baik, anda meletakkan aplikasi anda secara strategik untuk kejayaan jangka panjang, menangani kebimbangan skala dan penyelenggaraan.
 
-- **Mempercepat proses pengembangan dan mengurangi overhead**: Mengandalkan fungsionalitas pra-bangun daripada proses mahal untuk membangunnya sendiri memungkinkan Anda fokus pada aspek lain dari aplikasi Anda yang mungkin Anda anggap lebih penting, seperti logika bisnis.
-- **Kinerja yang lebih baik**: Saat membangun fungsionalitas dari awal, Anda pada akhirnya akan bertanya pada diri sendiri "Bagaimana skalanya? Apakah aplikasi ini mampu menangani lonjakan pengguna yang tiba-tiba?" SDK dan API yang terawat baik sering kali memiliki solusi bawaan untuk masalah ini.
-- **Pemeliharaan yang lebih mudah**: Pembaruan dan perbaikan lebih mudah dikelola karena sebagian besar API dan SDK hanya memerlukan pembaruan ke perpustakaan saat versi yang lebih baru dirilis.
-- **Akses ke teknologi mutakhir**: Memanfaatkan model yang telah disempurnakan dan dilatih pada dataset yang luas memberikan aplikasi Anda kemampuan bahasa alami.
+- **Mempercepat proses pembangunan dan mengurangkan beban**: Bergantung pada fungsi sedia ada daripada membinanya sendiri yang mahal membolehkan anda memberi tumpuan kepada aspek lain aplikasi yang lebih penting, seperti logik perniagaan.
+- **Prestasi lebih baik**: Apabila membina fungsi dari awal, anda akan bertanya "Bagaimana ia boleh diskalakan? Adakah aplikasi ini mampu mengendalikan lonjakan pengguna secara tiba-tiba?" SDK dan API yang dijaga dengan baik biasanya mempunyai penyelesaian terbina untuk kebimbangan ini.
+- **Penyelenggaraan lebih mudah**: Kemas kini dan penambahbaikan lebih mudah diurus kerana kebanyakan API dan SDK hanya memerlukan kemas kini perpustakaan apabila versi baru dikeluarkan.
+- **Akses kepada teknologi terkini**: Memanfaatkan model yang telah dilaraskan halus dan dilatih pada set data yang luas memberikan aplikasi anda keupayaan bahasa semula jadi.
 
-Mengakses fungsionalitas SDK atau API biasanya melibatkan memperoleh izin untuk menggunakan layanan yang disediakan, yang sering kali dilakukan melalui penggunaan kunci unik atau token autentikasi. Kami akan menggunakan Perpustakaan Python OpenAI untuk menjelajahi seperti apa ini. Anda juga dapat mencobanya sendiri dalam [notebook untuk OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) atau [notebook untuk Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) untuk pelajaran ini.
+Mengakses fungsi SDK atau API biasanya melibatkan mendapatkan kebenaran untuk menggunakan perkhidmatan yang disediakan, yang sering melalui penggunaan kunci unik atau token pengesahan. Kita akan menggunakan Perpustakaan Python OpenAI untuk meneroka bagaimana ini dilakukan. Anda juga boleh mencubanya sendiri dalam [notebook untuk OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) atau [notebook untuk Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) untuk pelajaran ini.
 
 ```python
 import os
@@ -84,113 +84,113 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Contoh di atas menggunakan model GPT-3.5 Turbo untuk menyelesaikan prompt, tetapi perhatikan bahwa kunci API diatur sebelum melakukannya. Anda akan menerima kesalahan jika Anda tidak mengatur kunci.
+Contoh di atas menggunakan model GPT-3.5 Turbo untuk melengkapkan arahan, tetapi perhatikan bahawa kunci API ditetapkan terlebih dahulu. Anda akan menerima ralat jika tidak menetapkan kunci tersebut.
 
 ## Pengalaman Pengguna (UX)
 
-Prinsip UX umum berlaku untuk aplikasi chat, tetapi berikut adalah beberapa pertimbangan tambahan yang menjadi sangat penting karena komponen pembelajaran mesin yang terlibat.
+Prinsip UX umum terpakai pada aplikasi sembang, tetapi berikut adalah beberapa pertimbangan tambahan yang menjadi sangat penting kerana komponen pembelajaran mesin yang terlibat.
 
-- **Mekanisme untuk menangani ambiguitas**: Model AI generatif terkadang menghasilkan jawaban yang ambigu. Fitur yang memungkinkan pengguna meminta klarifikasi dapat membantu jika mereka menghadapi masalah ini.
-- **Retensi konteks**: Model AI generatif canggih memiliki kemampuan untuk mengingat konteks dalam percakapan, yang dapat menjadi aset yang diperlukan untuk pengalaman pengguna. Memberikan pengguna kemampuan untuk mengontrol dan mengelola konteks meningkatkan pengalaman pengguna, tetapi memperkenalkan risiko mempertahankan informasi pengguna yang sensitif. Pertimbangan tentang berapa lama informasi ini disimpan, seperti memperkenalkan kebijakan retensi, dapat menyeimbangkan kebutuhan konteks terhadap privasi.
-- **Personalisasi**: Dengan kemampuan untuk belajar dan beradaptasi, model AI menawarkan pengalaman yang dipersonalisasi untuk pengguna. Menyesuaikan pengalaman pengguna melalui fitur seperti profil pengguna tidak hanya membuat pengguna merasa dipahami, tetapi juga membantu mereka dalam mencari jawaban spesifik, menciptakan interaksi yang lebih efisien dan memuaskan.
+- **Mekanisme untuk menangani kekaburan**: Model AI generatif kadang-kadang menghasilkan jawapan yang kabur. Ciri yang membolehkan pengguna meminta penjelasan boleh membantu jika mereka menghadapi masalah ini.
+- **Pengekalan konteks**: Model AI generatif maju mempunyai keupayaan untuk mengingati konteks dalam perbualan, yang boleh menjadi aset penting untuk pengalaman pengguna. Memberi pengguna kawalan dan pengurusan konteks meningkatkan pengalaman pengguna, tetapi memperkenalkan risiko mengekalkan maklumat sensitif pengguna. Pertimbangan tentang berapa lama maklumat ini disimpan, seperti memperkenalkan polisi pengekalan, boleh mengimbangi keperluan konteks dengan privasi.
+- **Personalisasi**: Dengan keupayaan untuk belajar dan menyesuaikan diri, model AI menawarkan pengalaman yang diperibadikan untuk pengguna. Menyesuaikan pengalaman pengguna melalui ciri seperti profil pengguna bukan sahaja membuat pengguna rasa difahami, tetapi juga membantu mereka mencari jawapan khusus dengan lebih cekap dan memuaskan.
 
-Salah satu contoh personalisasi adalah pengaturan "Instruksi Kustom" di ChatGPT OpenAI. Ini memungkinkan Anda memberikan informasi tentang diri Anda yang mungkin menjadi konteks penting untuk prompt Anda. Berikut adalah contoh instruksi kustom.
+Satu contoh personalisasi adalah tetapan "Custom instructions" dalam ChatGPT OpenAI. Ia membolehkan anda memberikan maklumat tentang diri anda yang mungkin menjadi konteks penting untuk arahan anda. Berikut adalah contoh arahan tersuai.
 
-![Pengaturan Instruksi Kustom di ChatGPT](../../../translated_images/custom-instructions.950e3bf1d66f052ff5c50cd6722f1fcb532089abe33d833c190a3796f4a09827.ms.png)
+![Tetapan Custom Instructions dalam ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ms.png)
 
-"Profil" ini meminta ChatGPT untuk membuat rencana pelajaran tentang linked lists. Perhatikan bahwa ChatGPT mempertimbangkan bahwa pengguna mungkin menginginkan rencana pelajaran yang lebih mendalam berdasarkan pengalamannya.
+"Profil" ini mengarahkan ChatGPT untuk membuat pelan pelajaran mengenai linked lists. Perhatikan bahawa ChatGPT mengambil kira bahawa pengguna mungkin mahukan pelan pelajaran yang lebih mendalam berdasarkan pengalamannya.
 
-![Prompt di ChatGPT untuk rencana pelajaran tentang linked lists](../../../translated_images/lesson-plan-prompt.23083d9c80ec7670b3aaf3b093d79a13ed42920da81b851b29f6167b6150aae9.ms.png)
+![Arahan dalam ChatGPT untuk pelan pelajaran tentang linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ms.png)
 
-### Kerangka Pesan Sistem Microsoft untuk Model Bahasa Besar
+### Rangka Kerja Mesej Sistem Microsoft untuk Model Bahasa Besar
 
-[Microsoft telah memberikan panduan](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) untuk menulis pesan sistem yang efektif saat menghasilkan respons dari LLM yang dibagi menjadi 4 area:
+[Microsoft telah menyediakan panduan](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) untuk menulis mesej sistem yang berkesan apabila menjana respons dari LLM yang dibahagikan kepada 4 bidang:
 
-1. Mendefinisikan siapa model itu untuk, serta kemampuan dan batasannya.
-2. Mendefinisikan format keluaran model.
-3. Memberikan contoh spesifik yang menunjukkan perilaku yang diinginkan dari model.
-4. Memberikan pagar perilaku tambahan.
+1. Menentukan siapa model itu untuk, serta keupayaan dan hadnya.
+2. Menentukan format output model.
+3. Memberikan contoh khusus yang menunjukkan tingkah laku yang dimaksudkan model.
+4. Memberikan panduan tingkah laku tambahan.
 
-### Aksesibilitas
+### Kebolehcapaian
 
-Apakah pengguna memiliki gangguan visual, pendengaran, motorik, atau kognitif, aplikasi chat yang dirancang dengan baik harus dapat digunakan oleh semua orang. Daftar berikut memecah fitur spesifik yang ditujukan untuk meningkatkan aksesibilitas bagi berbagai gangguan pengguna.
+Sama ada pengguna mempunyai kecacatan penglihatan, pendengaran, motor, atau kognitif, aplikasi sembang yang direka dengan baik harus boleh digunakan oleh semua. Senarai berikut memecahkan ciri khusus yang bertujuan meningkatkan kebolehcapaian untuk pelbagai kecacatan pengguna.
 
-- **Fitur untuk Gangguan Visual**: Tema kontras tinggi dan teks yang dapat diubah ukurannya, kompatibilitas pembaca layar.
-- **Fitur untuk Gangguan Pendengaran**: Fungsi teks-ke-suara dan suara-ke-teks, petunjuk visual untuk notifikasi audio.
-- **Fitur untuk Gangguan Motorik**: Dukungan navigasi keyboard, perintah suara.
-- **Fitur untuk Gangguan Kognitif**: Opsi bahasa yang disederhanakan.
+- **Ciri untuk Kecacatan Penglihatan**: Tema kontras tinggi dan teks boleh diubah saiz, keserasian pembaca skrin.
+- **Ciri untuk Kecacatan Pendengaran**: Fungsi teks-ke-ucapan dan ucapan-ke-teks, isyarat visual untuk pemberitahuan audio.
+- **Ciri untuk Kecacatan Motor**: Sokongan navigasi papan kekunci, arahan suara.
+- **Ciri untuk Kecacatan Kognitif**: Pilihan bahasa yang dipermudahkan.
 
-## Kustomisasi dan Penyempurnaan untuk Model Bahasa Khusus Domain
+## Penyesuaian dan Pelarasan Halus untuk Model Bahasa Khusus Domain
 
-Bayangkan aplikasi chat yang memahami jargon perusahaan Anda dan mengantisipasi pertanyaan spesifik yang biasa diajukan oleh basis pengguna. Ada beberapa pendekatan yang patut disebutkan:
+Bayangkan aplikasi sembang yang memahami jargon syarikat anda dan menjangka soalan khusus yang sering ditanya oleh pengguna. Terdapat beberapa pendekatan yang patut disebut:
 
-- **Memanfaatkan model DSL**. DSL adalah singkatan dari bahasa khusus domain. Anda dapat memanfaatkan model DSL yang dilatih pada domain tertentu untuk memahami konsep dan skenario.
-- **Menerapkan penyempurnaan**. Penyempurnaan adalah proses melatih model Anda lebih lanjut dengan data spesifik.
+- **Memanfaatkan model DSL**. DSL bermaksud domain specific language (bahasa khusus domain). Anda boleh menggunakan model DSL yang dilatih pada domain tertentu untuk memahami konsep dan senarionya.
+- **Menerapkan pelarasan halus**. Pelarasan halus adalah proses melatih model anda lebih lanjut dengan data khusus.
 
-## Kustomisasi: Menggunakan DSL
+## Penyesuaian: Menggunakan DSL
 
-Memanfaatkan model bahasa khusus domain (Model DSL) dapat meningkatkan keterlibatan pengguna dengan menyediakan interaksi yang spesialis dan relevan secara kontekstual. Ini adalah model yang dilatih atau disempurnakan untuk memahami dan menghasilkan teks terkait dengan bidang, industri, atau subjek tertentu. Opsi untuk menggunakan model DSL dapat bervariasi dari melatihnya dari awal, hingga menggunakan yang sudah ada melalui SDK dan API. Opsi lain adalah penyempurnaan, yang melibatkan mengambil model yang sudah ada dan melatihnya lebih lanjut untuk domain tertentu.
+Memanfaatkan model bahasa khusus domain (Model DSL) boleh meningkatkan penglibatan pengguna dengan menyediakan interaksi yang khusus dan relevan mengikut konteks. Ia adalah model yang dilatih atau dilaraskan halus untuk memahami dan menjana teks berkaitan bidang, industri, atau subjek tertentu. Pilihan menggunakan model DSL boleh berbeza dari melatih model baru, hingga menggunakan yang sedia ada melalui SDK dan API. Pilihan lain adalah pelarasan halus, yang melibatkan mengambil model pra-latih sedia ada dan menyesuaikannya untuk domain tertentu.
 
-## Kustomisasi: Menerapkan Penyempurnaan
+## Penyesuaian: Menerapkan pelarasan halus
 
-Penyempurnaan sering dipertimbangkan ketika model yang sudah dilatih kurang dalam domain khusus atau tugas tertentu.
+Pelarasan halus sering dipertimbangkan apabila model pra-latih tidak mencukupi dalam domain khusus atau tugasan tertentu.
 
-Misalnya, pertanyaan medis kompleks dan memerlukan banyak konteks. Ketika seorang profesional medis mendiagnosis pasien, itu berdasarkan berbagai faktor seperti gaya hidup atau kondisi yang sudah ada, dan bahkan mungkin mengandalkan jurnal medis terbaru untuk memvalidasi diagnosis mereka. Dalam skenario yang rumit seperti ini, aplikasi chat AI tujuan umum tidak dapat menjadi sumber yang dapat diandalkan.
+Sebagai contoh, soalan perubatan adalah kompleks dan memerlukan banyak konteks. Apabila seorang profesional perubatan mendiagnosis pesakit, ia berdasarkan pelbagai faktor seperti gaya hidup atau keadaan sedia ada, dan mungkin juga bergantung pada jurnal perubatan terkini untuk mengesahkan diagnosis mereka. Dalam senario yang rumit sebegini, aplikasi sembang AI tujuan umum tidak boleh menjadi sumber yang boleh dipercayai.
 
-### Skenario: aplikasi medis
+### Senario: aplikasi perubatan
 
-Pertimbangkan aplikasi chat yang dirancang untuk membantu praktisi medis dengan menyediakan referensi cepat untuk pedoman perawatan, interaksi obat, atau temuan penelitian terbaru.
+Pertimbangkan aplikasi sembang yang direka untuk membantu pengamal perubatan dengan menyediakan rujukan pantas kepada garis panduan rawatan, interaksi ubat, atau penemuan penyelidikan terkini.
 
-Model tujuan umum mungkin cukup untuk menjawab pertanyaan medis dasar atau memberikan saran umum, tetapi mungkin kesulitan dengan yang berikut:
+Model tujuan umum mungkin mencukupi untuk menjawab soalan perubatan asas atau memberikan nasihat umum, tetapi mungkin menghadapi kesukaran dengan perkara berikut:
 
-- **Kasus yang sangat spesifik atau kompleks**. Misalnya, seorang ahli saraf mungkin bertanya kepada aplikasi, "Apa praktik terbaik saat ini untuk mengelola epilepsi resisten obat pada pasien pediatrik?"
-- **Kurang kemajuan terbaru**. Model tujuan umum dapat kesulitan memberikan jawaban terkini yang menggabungkan kemajuan terbaru dalam neurologi dan farmakologi.
+- **Kes yang sangat khusus atau kompleks**. Contohnya, seorang pakar neurologi mungkin bertanya kepada aplikasi, "Apakah amalan terbaik terkini untuk menguruskan epilepsi tahan ubat pada pesakit pediatrik?"
+- **Kekurangan kemajuan terkini**. Model tujuan umum mungkin sukar memberikan jawapan terkini yang merangkumi kemajuan terbaru dalam neurologi dan farmakologi.
 
-Dalam contoh seperti ini, menyempurnakan model dengan dataset medis yang khusus dapat secara signifikan meningkatkan kemampuannya untuk menangani pertanyaan medis yang rumit ini dengan lebih akurat dan andal. Ini memerlukan akses ke dataset yang besar dan relevan yang mewakili tantangan dan pertanyaan khusus domain yang perlu diatasi.
+Dalam kes seperti ini, pelarasan halus model dengan set data perubatan khusus boleh meningkatkan keupayaannya untuk mengendalikan pertanyaan perubatan rumit ini dengan lebih tepat dan boleh dipercayai. Ini memerlukan akses kepada set data besar dan relevan yang mewakili cabaran dan soalan khusus domain yang perlu ditangani.
 
-## Pertimbangan untuk Pengalaman Chat yang Dikuasai AI Berkualitas Tinggi
+## Pertimbangan untuk Pengalaman Sembang Berkuasa AI Berkualiti Tinggi
 
-Bagian ini menguraikan kriteria untuk aplikasi chat "berkualitas tinggi," yang mencakup penangkapan metrik yang dapat ditindaklanjuti dan kepatuhan pada kerangka kerja yang memanfaatkan teknologi AI dengan bertanggung jawab.
+Bahagian ini menggariskan kriteria untuk aplikasi sembang "berkualiti tinggi," yang merangkumi pengumpulan metrik boleh diambil tindakan dan pematuhan kepada rangka kerja yang menggunakan teknologi AI secara bertanggungjawab.
 
 ### Metrik Utama
 
-Untuk mempertahankan kinerja berkualitas tinggi dari aplikasi, sangat penting untuk melacak metrik utama dan pertimbangan. Pengukuran ini tidak hanya memastikan fungsionalitas aplikasi tetapi juga menilai kualitas model AI dan pengalaman pengguna. Di bawah ini adalah daftar yang mencakup metrik dasar, AI, dan pengalaman pengguna untuk dipertimbangkan.
+Untuk mengekalkan prestasi aplikasi yang berkualiti tinggi, adalah penting untuk menjejaki metrik dan pertimbangan utama. Ukuran ini bukan sahaja memastikan fungsi aplikasi tetapi juga menilai kualiti model AI dan pengalaman pengguna. Berikut adalah senarai yang merangkumi metrik asas, AI, dan pengalaman pengguna yang perlu dipertimbangkan.
 
-| Metrik                        | Definisi                                                                                                             | Pertimbangan untuk Pengembang Chat                                        |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Waktu Aktif**               | Mengukur waktu aplikasi beroperasi dan dapat diakses oleh pengguna.                                                  | Bagaimana Anda akan meminimalkan waktu tidak aktif?                        |
-| **Waktu Respons**             | Waktu yang diperlukan aplikasi untuk membalas pertanyaan pengguna.                                                  | Bagaimana Anda dapat mengoptimalkan pemrosesan pertanyaan untuk meningkatkan waktu respons? |
-| **Presisi**                   | Rasio prediksi positif yang benar terhadap jumlah total prediksi positif                                             | Bagaimana Anda akan memvalidasi presisi model Anda?                        |
-| **Recall (Sensitivitas)**     | Rasio prediksi positif yang benar terhadap jumlah positif yang sebenarnya                                           | Bagaimana Anda akan mengukur dan meningkatkan recall?                      |
-| **Skor F1**                   | Rata-rata harmonis dari presisi dan recall, yang menyeimbangkan trade-off antara keduanya.                           | Apa target Skor F1 Anda? Bagaimana Anda akan menyeimbangkan presisi dan recall? |
-| **Perplexity**                | Mengukur seberapa baik distribusi probabilitas yang diprediksi oleh model selaras dengan distribusi data yang sebenarnya. | Bagaimana Anda akan meminimalkan perplexity?                              |
-| **Metrik Kepuasan Pengguna**  | Mengukur persepsi pengguna terhadap aplikasi. Sering kali ditangkap melalui survei.                                  | Seberapa sering Anda akan mengumpulkan umpan balik pengguna? Bagaimana Anda akan beradaptasi berdasarkan itu? |
-| **Tingkat Kesalahan**         | Tingkat di mana model membuat kesalahan dalam memahami atau output.                                                 | Strategi apa yang Anda miliki untuk mengurangi tingkat kesalahan?          |
-| **Siklus Pelatihan Ulang**    | Frekuensi di mana model diperbarui untuk memasukkan data dan wawasan baru.                                         | Seberapa sering Anda akan melatih ulang model? Apa yang memicu siklus pelatihan ulang? |
-| **Deteksi Anomali**           | Alat dan teknik untuk mengidentifikasi pola yang tidak biasa yang tidak sesuai dengan perilaku yang diharapkan.      | Bagaimana Anda akan merespons anomali?                                    |
+| Metrik                        | Definisi                                                                                                             | Pertimbangan untuk Pembangun Sembang                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Masa Beroperasi (Uptime)**  | Mengukur masa aplikasi beroperasi dan boleh diakses oleh pengguna.                                                    | Bagaimana anda akan meminimumkan masa tidak beroperasi?              |
+| **Masa Respons**              | Masa yang diambil oleh aplikasi untuk membalas pertanyaan pengguna.                                                  | Bagaimana anda boleh mengoptimumkan pemprosesan pertanyaan untuk mempercepat masa respons? |
+| **Ketepatan (Precision)**     | Nisbah ramalan benar positif kepada jumlah ramalan positif.                                                          | Bagaimana anda akan mengesahkan ketepatan model anda?                |
+| **Ingatan Semula (Recall/Sensitiviti)** | Nisbah ramalan benar positif kepada jumlah sebenar positif.                                                        | Bagaimana anda akan mengukur dan meningkatkan ingatan semula?        |
+| **Skor F1**                  | Purata harmonik ketepatan dan ingatan semula, yang mengimbangi pertukaran antara kedua-duanya.                        | Apakah sasaran Skor F1 anda? Bagaimana anda akan mengimbangi ketepatan dan ingatan semula? |
+| **Perplexity**               | Mengukur sejauh mana taburan kebarangkalian yang diramalkan oleh model sejajar dengan taburan sebenar data.           | Bagaimana anda akan meminimumkan perplexity?                         |
+| **Metrik Kepuasan Pengguna** | Mengukur persepsi pengguna terhadap aplikasi. Selalunya dikumpul melalui tinjauan.                                   | Berapa kerap anda akan mengumpul maklum balas pengguna? Bagaimana anda akan menyesuaikan berdasarkan maklum balas itu? |
+| **Kadar Ralat**              | Kadar di mana model membuat kesilapan dalam pemahaman atau output.                                                    | Apakah strategi yang anda ada untuk mengurangkan kadar ralat?       |
+| **Kitaran Latihan Semula**   | Kekerapan model dikemas kini untuk memasukkan data dan pandangan baru.                                               | Berapa kerap anda akan melatih semula model? Apakah pencetus untuk kitaran latihan semula? |
+| **Pengesanan Anomali**         | Alat dan teknik untuk mengenal pasti corak luar biasa yang tidak mematuhi tingkah laku yang dijangka.                        | Bagaimana anda akan bertindak balas terhadap anomali?                                        |
 
-### Menerapkan Praktik AI yang Bertanggung Jawab dalam Aplikasi Chat
+### Melaksanakan Amalan AI Bertanggungjawab dalam Aplikasi Chat
 
-Pendekatan Microsoft untuk AI yang Bertanggung Jawab telah mengidentifikasi enam prinsip yang harus memandu pengembangan dan penggunaan AI. Di bawah ini adalah prinsip-prinsip, definisi mereka, dan hal-hal yang harus dipertimbangkan oleh pengembang chat dan mengapa mereka harus menganggapnya serius.
+Pendekatan Microsoft terhadap AI Bertanggungjawab telah mengenal pasti enam prinsip yang harus menjadi panduan dalam pembangunan dan penggunaan AI. Berikut adalah prinsip-prinsip tersebut, definisinya, serta perkara yang perlu dipertimbangkan oleh pembangun chat dan mengapa mereka harus mengambilnya dengan serius.
 
-| Prinsip                  | Definisi Microsoft                                         | Pertimbangan untuk Pengembang Chat                                       | Mengapa Ini Penting                                                                       |
-| ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Keadilan                 | Sistem AI harus memperlakukan semua orang dengan adil.     | Pastikan aplikasi chat tidak mendiskriminasi berdasarkan data pengguna.   | Untuk membangun kepercayaan dan inklusivitas di antara pengguna; menghindari konsekuensi hukum. |
-| Keandalan dan Keamanan   | Sistem AI harus berfungsi dengan andal dan aman.          | Terapkan pengujian dan pengaman untuk meminimalkan kesalahan dan risiko.  | Memastikan kepuasan pengguna dan mencegah potensi bahaya.                                 |
-| Privasi dan Keamanan     | Sistem AI harus aman dan menghormati privasi.             | Terapkan enkripsi yang kuat dan langkah-langkah perlindungan data.       | Untuk melindungi data pengguna yang sensitif dan mematuhi undang-undang privasi.          |
-| Inklusivitas             | Sistem AI harus memberdayakan semua orang dan melibatkan orang. | Rancang UI/UX yang dapat diakses dan mudah digunakan untuk audiens yang beragam. | Memastikan lebih banyak orang dapat menggunakan aplikasi dengan efektif.                  |
-| Transparansi             | Sistem AI harus dapat dipahami.                           | Berikan dokumentasi yang jelas dan alasan untuk respons AI.              | Pengguna lebih cenderung mempercayai sistem jika mereka dapat memahami bagaimana keputusan dibuat. |
-| Akuntabilitas            | Orang harus bertanggung jawab atas sistem AI.             | Menetapkan proses yang jelas untuk mengaudit dan meningkatkan keputusan AI. | Memungkinkan peningkatan berkelanjutan dan tindakan korektif jika terjadi kesalahan.     |
+| Prinsip                | Definisi Microsoft                                    | Pertimbangan untuk Pembangun Chat                                      | Mengapa Ia Penting                                                                     |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Keadilan               | Sistem AI harus melayan semua orang dengan adil.      | Pastikan aplikasi chat tidak mendiskriminasi berdasarkan data pengguna. | Untuk membina kepercayaan dan keterangkuman di kalangan pengguna; mengelakkan implikasi undang-undang.                |
+| Kebolehpercayaan dan Keselamatan | Sistem AI harus berfungsi dengan boleh dipercayai dan selamat. | Laksanakan ujian dan mekanisme keselamatan untuk mengurangkan kesilapan dan risiko.         | Memastikan kepuasan pengguna dan mengelakkan potensi bahaya.                                 |
+| Privasi dan Keselamatan | Sistem AI harus selamat dan menghormati privasi.      | Laksanakan penyulitan kuat dan langkah perlindungan data.              | Melindungi data sensitif pengguna dan mematuhi undang-undang privasi.                         |
+| Keterangkuman          | Sistem AI harus memberdayakan semua orang dan melibatkan mereka. | Reka bentuk UI/UX yang boleh diakses dan mudah digunakan untuk pelbagai audiens. | Memastikan lebih ramai orang dapat menggunakan aplikasi dengan berkesan.                   |
+| Ketelusan              | Sistem AI harus mudah difahami.                        | Sediakan dokumentasi yang jelas dan alasan bagi respons AI.            | Pengguna lebih cenderung mempercayai sistem jika mereka memahami bagaimana keputusan dibuat. |
+| Akauntabiliti          | Orang harus bertanggungjawab terhadap sistem AI.      | Wujudkan proses yang jelas untuk audit dan penambahbaikan keputusan AI.     | Membolehkan penambahbaikan berterusan dan tindakan pembetulan sekiranya berlaku kesilapan.               |
 
-## Tugas
+## Tugasan
 
-Lihat [tugas](../../../07-building-chat-applications/python) yang akan membawa Anda melalui serangkaian latihan dari menjalankan prompt chat pertama Anda, hingga mengklasifikasikan dan meringkas teks dan lainnya. Perhatikan bahwa tugas tersedia dalam berbagai bahasa pemrograman!
+Lihat [assignment](../../../07-building-chat-applications/python) yang akan membawa anda melalui beberapa latihan dari menjalankan arahan chat pertama anda, mengklasifikasikan dan meringkaskan teks dan banyak lagi. Perhatikan bahawa tugasan tersedia dalam pelbagai bahasa pengaturcaraan!
 
-## Kerja Bagus! Lanjutkan Perjalanan
+## Kerja Hebat! Teruskan Perjalanan
 
-Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif Anda!
+Selepas menamatkan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI anda!
 
-Pergilah ke Pelajaran 8 untuk melihat bagaimana
+Teruskan ke Pelajaran 8 untuk melihat bagaimana anda boleh mula [membangunkan aplikasi carian](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

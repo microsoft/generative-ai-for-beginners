@@ -2,13 +2,13 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4d1335b77a62c821d972c35ef82c586a",
-  "translation_date": "2025-05-20T11:32:31+00:00",
+  "translation_date": "2025-07-09T19:20:36+00:00",
   "source_file": "docs/_sidebar.md",
   "language_code": "sw"
 }
 -->
-- Kuanza
-  - [Utangulizi wa AI ya Kizazi](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)
+- Kuanzia
+  - [Utangulizi wa AI Inayozalisha](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuelewana. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa maelewano potofu au tafsiri zisizo sahihi zinazosababishwa na matumizi ya tafsiri hii.
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

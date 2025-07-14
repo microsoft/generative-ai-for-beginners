@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T06:43:33+00:00",
+  "translation_date": "2025-07-09T17:01:02+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "ro"
 }
 -->
-# Introducere în Rețele Neurale: Perceptron
+# Introducere în Rețele Neuronale: Perceptron
 
-Una dintre primele încercări de a implementa ceva asemănător cu o rețea neurală modernă a fost realizată de Frank Rosenblatt de la Cornell Aeronautical Laboratory în 1957. A fost o implementare hardware numită "Mark-1", proiectată pentru a recunoaște figuri geometrice primitive, precum triunghiuri, pătrate și cercuri.
+Una dintre primele încercări de a implementa ceva similar cu o rețea neuronală modernă a fost realizată de Frank Rosenblatt de la Cornell Aeronautical Laboratory în 1957. A fost o implementare hardware numită „Mark-1”, concepută să recunoască figuri geometrice primitive, cum ar fi triunghiuri, pătrate și cercuri.
 
 |      |      |
 |--------------|-----------|
@@ -17,13 +17,13 @@ Una dintre primele încercări de a implementa ceva asemănător cu o rețea neu
 
 > Imagini de pe Wikipedia
 
-O imagine de intrare era reprezentată de o matrice de fotocelule de 20x20, astfel încât rețeaua neurală avea 400 de intrări și o ieșire binară. O rețea simplă conținea un neuron, numit și **unitate logică de prag**. Greutățile rețelei neurale acționau ca niște potențiometre care necesitau ajustare manuală în timpul fazei de antrenament.
+O imagine de intrare era reprezentată printr-un tablou de 20x20 celule foto, astfel încât rețeaua neuronală avea 400 de intrări și o ieșire binară. O rețea simplă conținea un singur neuron, numit și **unitate logică cu prag**. Greutățile rețelei neuronale funcționau ca potențiometre care necesitau ajustare manuală în timpul fazei de antrenament.
 
 > ✅ Un potențiometru este un dispozitiv care permite utilizatorului să ajusteze rezistența unui circuit.
 
-> The New York Times a scris despre perceptron la acea vreme: *embrionul unui computer electronic pe care [Marina] se așteaptă să fie capabil să meargă, să vorbească, să vadă, să scrie, să se reproducă și să fie conștient de existența sa.*
+> The New York Times scria despre perceptron în acea perioadă: *embrionul unui calculator electronic care [Marina] se așteaptă să poată merge, vorbi, vedea, scrie, să se reproducă și să fie conștient de existența sa.*
 
-## Modelul Perceptron
+## Modelul Perceptronului
 
 Să presupunem că avem N caracteristici în modelul nostru, caz în care vectorul de intrare ar fi un vector de dimensiune N. Un perceptron este un model de **clasificare binară**, adică poate distinge între două clase de date de intrare. Vom presupune că pentru fiecare vector de intrare x, ieșirea perceptronului nostru va fi fie +1, fie -1, în funcție de clasă. Ieșirea va fi calculată folosind formula:
 
@@ -33,20 +33,20 @@ unde f este o funcție de activare treaptă
 
 ## Antrenarea Perceptronului
 
-Pentru a antrena un perceptron, trebuie să găsim un vector de greutăți w care să clasifice corect majoritatea valorilor, adică să rezulte în cel mai mic **eroare**. Această eroare este definită de **criteriul perceptronului** în următorul mod:
+Pentru a antrena un perceptron trebuie să găsim un vector de greutăți w care să clasifice corect majoritatea valorilor, adică să conducă la cea mai mică **eroare**. Această eroare este definită prin **criteriul perceptronului** în felul următor:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 unde:
 
-* suma se face pe acele puncte de date de antrenament i care duc la clasificare greșită
+* suma se face peste acele puncte de date de antrenament i care duc la clasificare greșită
 * x<sub>i</sub> este datele de intrare, iar t<sub>i</sub> este fie -1, fie +1 pentru exemple negative și pozitive, respectiv.
 
-Acest criteriu este considerat ca o funcție a greutăților w și trebuie să-l minimizăm. Adesea, se folosește o metodă numită **descendentă a gradientului**, în care începem cu unele greutăți inițiale w<sup>(0)</sup>, și apoi la fiecare pas actualizăm greutățile conform formulei:
+Acest criteriu este considerat o funcție a greutăților w, iar noi trebuie să îl minimizăm. Adesea, se folosește o metodă numită **gradient descent** (coborâre pe gradient), în care începem cu niște greutăți inițiale w<sup>(0)</sup>, iar apoi la fiecare pas actualizăm greutățile conform formulei:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Aici η este așa-numita **rată de învățare**, iar ∇E(w) denotă **gradientul** lui E. După ce calculăm gradientul, ajungem la
+Aici η este așa-numita **rată de învățare**, iar ∇E(w) reprezintă **gradientul** lui E. După ce calculăm gradientul, ajungem la:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
@@ -74,24 +74,25 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Concluzie
 
-În această lecție, ați învățat despre un perceptron, care este un model de clasificare binară, și cum să-l antrenați folosind un vector de greutăți.
+În această lecție, ai învățat despre perceptron, un model de clasificare binară, și cum să îl antrenezi folosind un vector de greutăți.
 
 ## 🚀 Provocare
 
-Dacă doriți să încercați să construiți propriul perceptron, încercați acest laborator pe Microsoft Learn care folosește designerul Azure ML.
+Dacă vrei să încerci să construiești propriul perceptron, încearcă acest laborator pe Microsoft Learn care folosește Azure ML designer
 
-## Recenzie și Studiu Individual
 
-Pentru a vedea cum putem folosi perceptronul pentru a rezolva o problemă de jucărie, precum și probleme din viața reală, și pentru a continua învățarea - mergeți la notebook-ul Perceptron.
+## Recapitulare & Studiu Individual
+
+Pentru a vedea cum putem folosi perceptronul pentru a rezolva o problemă simplă, dar și probleme din viața reală, și pentru a continua să înveți - accesează notebook-ul Perceptron.
 
 Iată și un articol interesant despre perceptroni.
 
-## Temă
+## Tema
 
-În această lecție, am implementat un perceptron pentru o sarcină de clasificare binară și l-am folosit pentru a clasifica între două cifre scrise de mână. În acest laborator, vi se cere să rezolvați problema clasificării cifrelor în întregime, adică să determinați care cifră este cel mai probabil să corespundă unei imagini date.
+În această lecție, am implementat un perceptron pentru o sarcină de clasificare binară și l-am folosit pentru a clasifica între două cifre scrise de mână. În acest laborator, ți se cere să rezolvi problema clasificării cifrelor în întregime, adică să determini care cifră este cea mai probabilă pentru o imagine dată.
 
 * Instrucțiuni
 * Notebook
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea umană profesională. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.

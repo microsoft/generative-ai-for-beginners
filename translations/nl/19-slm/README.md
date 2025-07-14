@@ -2,147 +2,245 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-05-20T10:09:02+00:00",
+  "translation_date": "2025-07-09T18:39:27+00:00",
   "source_file": "19-slm/README.md",
   "language_code": "nl"
 }
 -->
-# Introductie tot Kleine Taalmodellen voor Generatieve AI voor Beginners
+# Introductie tot Kleine Taalmodellen voor Generatieve AI voor Beginners  
+Generatieve AI is een fascinerend vakgebied binnen kunstmatige intelligentie dat zich richt op het creëren van systemen die in staat zijn nieuwe content te genereren. Deze content kan variëren van tekst en afbeeldingen tot muziek en zelfs complete virtuele omgevingen. Een van de meest spannende toepassingen van generatieve AI ligt op het gebied van taalmodellen.
 
-Generatieve AI is een fascinerend gebied van kunstmatige intelligentie dat zich richt op het creëren van systemen die in staat zijn nieuwe inhoud te genereren. Deze inhoud kan variëren van tekst en afbeeldingen tot muziek en zelfs volledige virtuele omgevingen. Een van de meest spannende toepassingen van generatieve AI is in het domein van taalmodellen.
+## Wat Zijn Kleine Taalmodellen?  
 
-## Wat zijn Kleine Taalmodellen?
+Een Klein Taalmodel (SLM) is een verkleinde variant van een groot taalmodel (LLM), waarbij veel van de architecturale principes en technieken van LLMs worden gebruikt, maar met een aanzienlijk kleinere rekencapaciteit.  
 
-Een Klein Taalmodel (SLM) vertegenwoordigt een verkleinde variant van een groot taalmodel (LLM), waarbij veel van de architecturale principes en technieken van LLM's worden benut, terwijl het een aanzienlijk verminderd computationeel voetafdruk vertoont. SLM's zijn een subset van taalmodellen ontworpen om mensachtige tekst te genereren. In tegenstelling tot hun grotere tegenhangers, zoals GPT-4, zijn SLM's compacter en efficiënter, waardoor ze ideaal zijn voor toepassingen waar computationele middelen beperkt zijn. Ondanks hun kleinere omvang kunnen ze nog steeds een verscheidenheid aan taken uitvoeren. Typisch worden SLM's geconstrueerd door LLM's te comprimeren of te distilleren, met als doel een substantieel deel van de oorspronkelijke modelfunctionaliteit en taalkundige capaciteiten te behouden. Deze vermindering in modelgrootte vermindert de algehele complexiteit, waardoor SLM's efficiënter worden in termen van zowel geheugengebruik als computationele vereisten. Ondanks deze optimalisaties kunnen SLM's nog steeds een breed scala aan natuurlijke taalverwerkingstaken (NLP) uitvoeren:
+SLM’s zijn een subset van taalmodellen die ontworpen zijn om mensachtige tekst te genereren. In tegenstelling tot hun grotere tegenhangers, zoals GPT-4, zijn SLM’s compacter en efficiënter, waardoor ze ideaal zijn voor toepassingen waar de rekencapaciteit beperkt is. Ondanks hun kleinere omvang kunnen ze nog steeds diverse taken uitvoeren. Meestal worden SLM’s gebouwd door LLM’s te comprimeren of te distilleren, met als doel een groot deel van de functionaliteit en taalkundige capaciteiten van het oorspronkelijke model te behouden. Deze verkleining van het model vermindert de complexiteit, waardoor SLM’s efficiënter zijn in zowel geheugengebruik als rekenkracht. Ondanks deze optimalisaties kunnen SLM’s een breed scala aan natuurlijke taalverwerkingstaken uitvoeren:  
 
-- Tekstgeneratie: Het creëren van coherente en contextueel relevante zinnen of alinea's.
-- Tekstvoltooiing: Voorspellen en voltooien van zinnen op basis van een gegeven prompt.
-- Vertaling: Het omzetten van tekst van de ene taal naar de andere.
-- Samenvatting: Het verkorten van lange stukken tekst tot kortere, beter verteerbare samenvattingen.
+- Tekstgeneratie: Het creëren van samenhangende en contextueel relevante zinnen of paragrafen.  
+- Tekstafwerking: Het voorspellen en aanvullen van zinnen op basis van een gegeven prompt.  
+- Vertaling: Het omzetten van tekst van de ene taal naar de andere.  
+- Samenvatting: Het inkorten van lange teksten tot kortere, beter behapbare samenvattingen.  
 
-Hoewel met enkele afwegingen in prestaties of diepte van begrip vergeleken met hun grotere tegenhangers.
+Alhoewel dit soms gepaard gaat met enige concessies in prestaties of diepgang van begrip vergeleken met hun grotere tegenhangers.
 
-## Hoe werken Kleine Taalmodellen?
+## Hoe Werken Kleine Taalmodellen?  
+SLM’s worden getraind op enorme hoeveelheden tekstdata. Tijdens het trainen leren ze de patronen en structuren van taal, waardoor ze tekst kunnen genereren die zowel grammaticaal correct als contextueel passend is. Het trainingsproces omvat:  
 
-SLM's worden getraind op enorme hoeveelheden tekstdata. Tijdens de training leren ze de patronen en structuren van taal, waardoor ze tekst kunnen genereren die zowel grammaticaal correct als contextueel passend is. Het trainingsproces omvat:
+- Data Verzameling: Het verzamelen van grote datasets met tekst uit diverse bronnen.  
+- Voorbewerking: Het opschonen en organiseren van de data om deze geschikt te maken voor training.  
+- Training: Het gebruik van machine learning-algoritmes om het model te leren tekst te begrijpen en te genereren.  
+- Fijnslijpen: Het aanpassen van het model om de prestaties op specifieke taken te verbeteren.  
 
-- Gegevensverzameling: Het verzamelen van grote datasets van tekst uit verschillende bronnen.
-- Voorbewerking: Het opschonen en organiseren van de data om deze geschikt te maken voor training.
-- Training: Het gebruik van machine learning-algoritmen om het model te leren begrijpen en tekst te genereren.
-- Fine-Tuning: Het aanpassen van het model om zijn prestaties op specifieke taken te verbeteren.
+De ontwikkeling van SLM’s sluit aan bij de groeiende behoefte aan modellen die ingezet kunnen worden in omgevingen met beperkte middelen, zoals mobiele apparaten of edge computing-platforms, waar volledige LLM’s vaak onpraktisch zijn vanwege hun zware resourcegebruik. Door te focussen op efficiëntie, bieden SLM’s een balans tussen prestaties en toegankelijkheid, wat bredere toepassingen in verschillende domeinen mogelijk maakt.
 
-De ontwikkeling van SLM's sluit aan bij de toenemende behoefte aan modellen die kunnen worden ingezet in omgevingen met beperkte middelen, zoals mobiele apparaten of edge computing-platforms, waar full-scale LLM's mogelijk onpraktisch zijn vanwege hun zware resource-eisen. Door te focussen op efficiëntie, balanceren SLM's prestaties met toegankelijkheid, waardoor bredere toepassing in verschillende domeinen mogelijk wordt.
+![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.nl.png)
 
-![slm](../../../translated_images/slm.e63e171d8045c28356253bb772597c333b20c51bc33ce7191b8b38a2e1375614.nl.png)
+## Leerdoelen  
 
-## Leerdoelen
+In deze les willen we kennis over SLM introduceren en dit combineren met Microsoft Phi-3 om verschillende scenario’s te leren in tekstcontent, visie en MoE.
 
-In deze les hopen we de kennis van SLM te introduceren en deze te combineren met Microsoft Phi-3 om verschillende scenario's in tekstinhoud, visie en MoE te leren. Aan het einde van deze les zou je de volgende vragen moeten kunnen beantwoorden:
+Aan het einde van deze les zou je de volgende vragen moeten kunnen beantwoorden:  
 
-- Wat is SLM
-- Wat is het verschil tussen SLM en LLM
-- Wat is Microsoft Phi-3/3.5 Familie
-- Hoe inferentie Microsoft Phi-3/3.5 Familie
+- Wat is SLM  
+- Wat is het verschil tussen SLM en LLM  
+- Wat is Microsoft Phi-3/3.5 Familie  
+- Hoe voer je inferentie uit met Microsoft Phi-3/3.5 Familie  
 
 Klaar? Laten we beginnen.
 
-## De Verschillen tussen Grote Taalmodellen (LLM's) en Kleine Taalmodellen (SLM's)
+## De Verschillen tussen Grote Taalmodellen (LLM’s) en Kleine Taalmodellen (SLM’s)  
 
-Zowel LLM's als SLM's zijn gebouwd op basisprincipes van probabilistische machine learning, waarbij vergelijkbare benaderingen worden gevolgd in hun architectonisch ontwerp, trainingsmethodologieën, gegevensgeneratieprocessen en modelevaluatietechnieken. Echter, verschillende belangrijke factoren onderscheiden deze twee soorten modellen.
+Zowel LLM’s als SLM’s zijn gebaseerd op fundamentele principes van probabilistische machine learning en volgen vergelijkbare benaderingen in hun architectuur, trainingsmethoden, datageneratieprocessen en modelbeoordelingstechnieken. Toch zijn er een aantal belangrijke factoren die deze twee typen modellen onderscheiden.
 
-## Toepassingen van Kleine Taalmodellen
+## Toepassingen van Kleine Taalmodellen  
 
-SLM's hebben een breed scala aan toepassingen, waaronder:
+SLM’s hebben een breed scala aan toepassingen, waaronder:  
 
-- Chatbots: Klantenondersteuning bieden en met gebruikers communiceren op een conversatie manier.
-- Contentcreatie: Schrijvers helpen door ideeën te genereren of zelfs volledige artikelen op te stellen.
-- Onderwijs: Studenten helpen bij schrijfopdrachten of het leren van nieuwe talen.
-- Toegankelijkheid: Hulpmiddelen creëren voor individuen met een handicap, zoals tekst-naar-spraak systemen.
+- Chatbots: Het bieden van klantenservice en het voeren van gesprekken met gebruikers.  
+- Contentcreatie: Het ondersteunen van schrijvers door ideeën te genereren of zelfs hele artikelen te schrijven.  
+- Onderwijs: Het helpen van studenten bij schrijfopdrachten of het leren van nieuwe talen.  
+- Toegankelijkheid: Het creëren van hulpmiddelen voor mensen met een beperking, zoals tekst-naar-spraak systemen.  
 
-**Grootte**
+**Grootte**  
 
-Een primair onderscheid tussen LLM's en SLM's ligt in de schaal van de modellen. LLM's, zoals ChatGPT (GPT-4), kunnen naar schatting 1,76 biljoen parameters bevatten, terwijl open-source SLM's zoals Mistral 7B zijn ontworpen met aanzienlijk minder parameters—ongeveer 7 miljard. Deze discrepantie is voornamelijk te wijten aan verschillen in modelarchitectuur en trainingsprocessen. Bijvoorbeeld, ChatGPT gebruikt een zelf-aandachtsmechanisme binnen een encoder-decoder raamwerk, terwijl Mistral 7B gebruik maakt van sliding window aandacht, wat efficiëntere training binnen een decoder-only model mogelijk maakt. Deze architectonische variatie heeft diepgaande implicaties voor de complexiteit en prestaties van deze modellen.
+Een belangrijk verschil tussen LLM’s en SLM’s zit in de schaal van de modellen. LLM’s, zoals ChatGPT (GPT-4), kunnen naar schatting 1,76 biljoen parameters bevatten, terwijl open-source SLM’s zoals Mistral 7B ontworpen zijn met aanzienlijk minder parameters — ongeveer 7 miljard. Dit verschil komt vooral door variaties in modelarchitectuur en trainingsprocessen. Zo gebruikt ChatGPT een self-attention mechanisme binnen een encoder-decoder structuur, terwijl Mistral 7B sliding window attention toepast, wat efficiëntere training mogelijk maakt binnen een decoder-only model. Deze architecturale verschillen hebben grote gevolgen voor de complexiteit en prestaties van de modellen.
 
-**Begrip**
+**Begrip**  
 
-SLM's zijn doorgaans geoptimaliseerd voor prestaties binnen specifieke domeinen, waardoor ze zeer gespecialiseerd zijn maar mogelijk beperkt in hun vermogen om brede contextuele begrip te bieden over meerdere kennisgebieden. Daarentegen streven LLM's ernaar om mensachtige intelligentie op een meer uitgebreide niveau te simuleren. Getraind op enorme, diverse datasets, zijn LLM's ontworpen om goed te presteren in een verscheidenheid aan domeinen, waardoor ze grotere veelzijdigheid en aanpasbaarheid bieden. Daardoor zijn LLM's geschikter voor een breder scala aan downstream taken, zoals natuurlijke taalverwerking en programmeren.
+SLM’s zijn meestal geoptimaliseerd voor prestaties binnen specifieke domeinen, waardoor ze zeer gespecialiseerd zijn maar mogelijk beperkt in hun vermogen om brede contextuele kennis over meerdere vakgebieden te bieden. LLM’s daarentegen streven ernaar menselijke intelligentie op een meer omvattend niveau te simuleren. Ze worden getraind op enorme, diverse datasets en zijn ontworpen om goed te presteren in verschillende domeinen, wat zorgt voor grotere veelzijdigheid en aanpassingsvermogen. Hierdoor zijn LLM’s beter geschikt voor een breder scala aan downstream-taken, zoals natuurlijke taalverwerking en programmeren.
 
-**Computing**
+**Rekenkracht**  
 
-De training en inzet van LLM's zijn resource-intensieve processen, vaak vereist significante computationele infrastructuur, inclusief grootschalige GPU-clusters. Bijvoorbeeld, het trainen van een model zoals ChatGPT vanaf nul kan duizenden GPU's gedurende langere perioden vereisen. Daarentegen zijn SLM's, met hun kleinere parameteraantallen, toegankelijker in termen van computationele middelen. Modellen zoals Mistral 7B kunnen worden getraind en uitgevoerd op lokale machines uitgerust met matige GPU-capaciteiten, hoewel training nog steeds meerdere uren over verschillende GPU's vereist.
+Het trainen en inzetten van LLM’s is een resource-intensief proces, dat vaak aanzienlijke rekeninfrastructuur vereist, zoals grootschalige GPU-clusters. Zo kan het trainen van een model als ChatGPT vanaf nul duizenden GPU’s over lange periodes vereisen. SLM’s, met hun kleinere aantal parameters, zijn daarentegen toegankelijker qua rekenkracht. Modellen zoals Mistral 7B kunnen getraind en uitgevoerd worden op lokale machines met gemiddelde GPU-capaciteit, hoewel training nog steeds enkele uren op meerdere GPU’s kan vergen.
 
-**Bias**
+**Bias**  
 
-Bias is een bekend probleem in LLM's, voornamelijk vanwege de aard van de trainingsdata. Deze modellen vertrouwen vaak op rauwe, open beschikbare data van het internet, wat bepaalde groepen mogelijk ondervertegenwoordigt of verkeerd vertegenwoordigt, verkeerde labeling introduceert, of linguïstische biases reflecteert beïnvloed door dialect, geografische variaties, en grammaticale regels. Bovendien kan de complexiteit van LLM-architecturen onbedoeld bias verergeren, die mogelijk onopgemerkt blijft zonder zorgvuldige fine-tuning. Aan de andere kant zijn SLM's, getraind op meer beperkte, domeinspecifieke datasets, inherent minder vatbaar voor dergelijke biases, hoewel ze er niet immuun voor zijn.
+Bias is een bekend probleem bij LLM’s, vooral door de aard van de trainingsdata. Deze modellen vertrouwen vaak op ruwe, vrij beschikbare data van het internet, die bepaalde groepen kan ondervertegenwoordigen of verkeerd kan weergeven, foutieve labeling kan bevatten, of taalkundige vooroordelen kan weerspiegelen door dialecten, geografische variaties en grammaticale regels. Daarnaast kan de complexiteit van LLM-architecturen bias onbedoeld versterken, wat zonder zorgvuldige fijnslijping onopgemerkt kan blijven. SLM’s, die getraind worden op meer beperkte, domeinspecifieke datasets, zijn van nature minder vatbaar voor dergelijke biases, hoewel ze er niet volledig immuun voor zijn.
 
-**Inferentie**
+**Inferentie**  
 
-De verminderde omvang van SLM's biedt hen een aanzienlijk voordeel in termen van inferentiesnelheid, waardoor ze efficiënt output kunnen genereren op lokale hardware zonder de noodzaak van uitgebreide parallelle verwerking. Daarentegen vereisen LLM's, vanwege hun omvang en complexiteit, vaak substantiële parallelle computationele middelen om acceptabele inferentietijden te bereiken. De aanwezigheid van meerdere gelijktijdige gebruikers vertraagt verder de reactietijden van LLM's, vooral wanneer ze op schaal worden ingezet.
+De kleinere omvang van SLM’s geeft ze een groot voordeel in inferentiesnelheid, waardoor ze efficiënt output kunnen genereren op lokale hardware zonder uitgebreide parallelle verwerking. LLM’s daarentegen vereisen vanwege hun grootte en complexiteit vaak aanzienlijke parallelle rekenmiddelen om acceptabele inferentietijden te bereiken. Het gelijktijdig gebruik door meerdere gebruikers vertraagt bovendien de reactietijden van LLM’s, vooral bij grootschalige inzet.
 
-Samenvattend, hoewel zowel LLM's als SLM's een fundamentele basis in machine learning delen, verschillen ze aanzienlijk in termen van modelgrootte, resourcevereisten, contextueel begrip, vatbaarheid voor bias, en inferentiesnelheid. Deze verschillen weerspiegelen hun respectieve geschiktheid voor verschillende gebruikssituaties, waarbij LLM's veelzijdiger maar resource-intensief zijn, en SLM's meer domeinspecifieke efficiëntie bieden met verminderde computationele eisen.
+Samenvattend, hoewel LLM’s en SLM’s een gemeenschappelijke basis in machine learning delen, verschillen ze sterk in modelgrootte, resourcebehoefte, contextueel begrip, gevoeligheid voor bias en inferentiesnelheid. Deze verschillen bepalen hun geschiktheid voor uiteenlopende toepassingen, waarbij LLM’s veelzijdiger maar resource-intensiever zijn, en SLM’s efficiënter en meer domeinspecifiek met lagere rekenvereisten.
 
-***Opmerking: In dit hoofdstuk zullen we SLM introduceren met Microsoft Phi-3 / 3.5 als voorbeeld.***
+***Note：In dit hoofdstuk introduceren we SLM aan de hand van Microsoft Phi-3 / 3.5 als voorbeeld.***
 
-## Introduceer Phi-3 / Phi-3.5 Familie
+## Introductie Phi-3 / Phi-3.5 Familie  
 
-Phi-3 / 3.5 Familie richt zich voornamelijk op tekst, visie, en Agent (MoE) toepassingsscenario's:
+De Phi-3 / 3.5 Familie richt zich vooral op tekst-, visie- en Agent (MoE) toepassingsscenario’s:
 
-### Phi-3 / 3.5 Instruct
+### Phi-3 / 3.5 Instruct  
 
-Voornamelijk voor tekstgeneratie, chatvoltooiing, en inhoudsinformatie-extractie, enz.
+Voornamelijk voor tekstgeneratie, chatafwerking en contentinformatie-extractie, enzovoort.
 
-**Phi-3-mini**
+**Phi-3-mini**  
 
-Het 3.8B taalmodel is beschikbaar op Microsoft Azure AI Studio, Hugging Face, en Ollama. Phi-3 modellen presteren aanzienlijk beter dan taalmodellen van gelijke en grotere omvang op belangrijke benchmarks (zie benchmarknummers hieronder, hogere nummers zijn beter). Phi-3-mini presteert beter dan modellen die twee keer zo groot zijn, terwijl Phi-3-small en Phi-3-medium grotere modellen, inclusief GPT-3.5, overtreffen.
+Het 3,8 miljard parameters tellende taalmodel is beschikbaar op Microsoft Azure AI Studio, Hugging Face en Ollama. Phi-3 modellen presteren aanzienlijk beter dan taalmodellen van gelijke en grotere omvang op belangrijke benchmarks (zie benchmarkcijfers hieronder, hogere cijfers zijn beter). Phi-3-mini presteert beter dan modellen die twee keer zo groot zijn, terwijl Phi-3-small en Phi-3-medium grotere modellen, waaronder GPT-3.5, overtreffen.
 
-**Phi-3-small & medium**
+**Phi-3-small & medium**  
 
-Met slechts 7B parameters verslaat Phi-3-small GPT-3.5T op een verscheidenheid aan taal-, redeneer-, coderings-, en wiskundige benchmarks. De Phi-3-medium met 14B parameters zet deze trend voort en overtreft de Gemini 1.0 Pro.
+Met slechts 7 miljard parameters verslaat Phi-3-small GPT-3.5T op diverse taal-, redeneer-, codeer- en wiskundebenchmarks.
 
-**Phi-3.5-mini**
+Phi-3-medium met 14 miljard parameters zet deze trend voort en presteert beter dan Gemini 1.0 Pro.
 
-We kunnen het beschouwen als een upgrade van Phi-3-mini. Terwijl de parameters onveranderd blijven, verbetert het de mogelijkheid om meerdere talen te ondersteunen (Ondersteunt 20+ talen: Arabisch, Chinees, Tsjechisch, Deens, Nederlands, Engels, Fins, Frans, Duits, Hebreeuws, Hongaars, Italiaans, Japans, Koreaans, Noors, Pools, Portugees, Russisch, Spaans, Zweeds, Thais, Turks, Oekraïens) en voegt sterkere ondersteuning toe voor lange contexten. Phi-3.5-mini met 3.8B parameters presteert beter dan taalmodellen van dezelfde omvang en is gelijkwaardig aan modellen die twee keer zo groot zijn.
+**Phi-3.5-mini**  
 
-### Phi-3 / 3.5 Visie
+Dit kan worden gezien als een upgrade van Phi-3-mini. Hoewel het aantal parameters gelijk blijft, verbetert het de ondersteuning voor meerdere talen (ondersteunt 20+ talen: Arabisch, Chinees, Tsjechisch, Deens, Nederlands, Engels, Fins, Frans, Duits, Hebreeuws, Hongaars, Italiaans, Japans, Koreaans, Noors, Pools, Portugees, Russisch, Spaans, Zweeds, Thai, Turks, Oekraïens) en voegt het sterkere ondersteuning toe voor lange context.
 
-We kunnen het Instruct-model van Phi-3/3.5 beschouwen als Phi's vermogen om te begrijpen, en Visie is wat Phi ogen geeft om de wereld te begrijpen.
+Phi-3.5-mini met 3,8 miljard parameters presteert beter dan taalmodellen van dezelfde grootte en is vergelijkbaar met modellen die twee keer zo groot zijn.
 
-**Phi-3-Vision**
+### Phi-3 / 3.5 Vision  
 
-Phi-3-vision, met slechts 4.2B parameters, zet deze trend voort en overtreft grotere modellen zoals Claude-3 Haiku en Gemini 1.0 Pro V op algemene visuele redeneertaken, OCR, en tabel- en diagrambegripstaken.
+We kunnen het Instruct-model van Phi-3/3.5 zien als Phi’s vermogen om te begrijpen, en Vision is wat Phi ogen geeft om de wereld te begrijpen.
 
-**Phi-3.5-Vision**
+**Phi-3-Vision**  
 
-Phi-3.5-Vision is ook een upgrade van Phi-3-Vision, met ondersteuning voor meerdere afbeeldingen. Je kunt het beschouwen als een verbetering in visie, niet alleen kunnen ze afbeeldingen zien, maar ook video's. Phi-3.5-vision overtreft grotere modellen zoals Claude-3.5 Sonnet en Gemini 1.5 Flash op OCR, tabel- en grafiekbegripstaken en gelijkwaardig op algemene visuele kennisredeneertaken. Ondersteunt multi-frame invoer, d.w.z. uitvoeren van redeneren op meerdere invoerafbeeldingen.
+Phi-3-vision, met slechts 4,2 miljard parameters, zet deze trend voort en presteert beter dan grotere modellen zoals Claude-3 Haiku en Gemini 1.0 Pro V op algemene visuele redeneertaken, OCR, en taken rondom het begrijpen van tabellen en diagrammen.
 
-### Phi-3.5-MoE
+**Phi-3.5-Vision**  
 
-***Mixture of Experts (MoE)*** stelt modellen in staat om met veel minder rekencapaciteit vooraf getraind te worden, wat betekent dat je het model of de datasetgrootte dramatisch kunt opschalen met hetzelfde rekenbudget als een dicht model. In het bijzonder zou een MoE-model dezelfde kwaliteit als zijn dichte tegenhanger veel sneller moeten bereiken tijdens pretraining. Phi-3.5-MoE omvat 16x3.8B expertmodules. Phi-3.5-MoE met slechts 6.6B actieve parameters bereikt een vergelijkbaar niveau van redeneren, taalbegrip, en wiskunde als veel grotere modellen.
+Phi-3.5-Vision is ook een upgrade van Phi-3-Vision, met ondersteuning voor meerdere afbeeldingen. Je kunt het zien als een verbetering in visie: niet alleen kan het plaatjes zien, maar ook video’s.
 
-We kunnen het Phi-3/3.5 Familie model gebruiken op basis van verschillende scenario's. In tegenstelling tot LLM, kun je Phi-3/3.5-mini of Phi-3/3.5-Vision op randapparaten inzetten.
+Phi-3.5-vision presteert beter dan grotere modellen zoals Claude-3.5 Sonnet en Gemini 1.5 Flash op OCR-, tabel- en grafiekbegripstaken en is vergelijkbaar op algemene visuele kennis- en redeneertaken. Ondersteunt multi-frame input, oftewel redeneren over meerdere invoerafbeeldingen.
 
-## Hoe Phi-3/3.5 Familie modellen te gebruiken
+### Phi-3.5-MoE  
 
-We hopen Phi-3/3.5 in verschillende scenario's te gebruiken. Vervolgens zullen we Phi-3/3.5 gebruiken op basis van verschillende scenario's.
+***Mixture of Experts (MoE)*** maakt het mogelijk modellen te pretrainen met veel minder rekenkracht, wat betekent dat je het model of de dataset aanzienlijk kunt opschalen met hetzelfde rekenbudget als een dense model. Met name zou een MoE-model dezelfde kwaliteit als zijn dense tegenhanger veel sneller moeten bereiken tijdens pretraining.
 
-![phi3](../../../translated_images/phi3.031cf9ca915915dbb4e8bc1e2b8e1e93d4d8a865ec4ea6ecdff5847b027a5113.nl.png)
+Phi-3.5-MoE bestaat uit 16x3,8 miljard expertmodules. Phi-3.5-MoE met slechts 6,6 miljard actieve parameters bereikt een vergelijkbaar niveau van redeneren, taalbegrip en wiskunde als veel grotere modellen.
 
-### Inferentie verschil
+We kunnen het Phi-3/3.5 Familie model gebruiken op basis van verschillende scenario’s. In tegenstelling tot LLM kun je Phi-3/3.5-mini of Phi-3/3.5-Vision op edge-apparaten inzetten.
 
-Cloud's API
+## Hoe gebruik je Phi-3/3.5 Familie modellen  
 
-**GitHub Modellen**
+We willen Phi-3/3.5 in verschillende scenario’s gebruiken. Hieronder laten we zien hoe je Phi-3/3.5 in verschillende situaties kunt toepassen.
 
-GitHub
-Modellen zijn de meest directe manier. Je kunt snel toegang krijgen tot het Phi-3/3.5-Instruct model via GitHub Models. Gecombineerd met de Azure AI Inference SDK / OpenAI SDK, kun je via code toegang krijgen tot de API om de Phi-3/3.5-Instruct oproep te voltooien. Je kunt ook verschillende effecten testen via Playground. - Demo:Vergelijking van de effecten van Phi-3-mini en Phi-3.5-mini in Chinese scenario's ![phi3](../../../translated_images/gh1.33134727688b27f6eaeac67bd84dbef85626e2d8fe452d826d0b3c353e29a472.nl.png) ![phi35](../../../translated_images/gh2.9f09152ff1c8dfdb777bb774f961c9ddf743879fc2fb640597bb413b1f320b8a.nl.png) **Azure AI Studio** Of als we de vision- en MoE-modellen willen gebruiken, kun je Azure AI Studio gebruiken om de oproep te voltooien. Als je geïnteresseerd bent, kun je de Phi-3 Cookbook lezen om te leren hoe je Phi-3/3.5 Instruct, Vision, MoE kunt oproepen via Azure AI Studio [Klik op deze link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst) **NVIDIA NIM** Naast de cloudgebaseerde Model Catalog-oplossingen die door Azure en GitHub worden aangeboden, kun je ook [Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) gebruiken om gerelateerde oproepen te voltooien. Je kunt NIVIDA NIM bezoeken om de API-oproepen van de Phi-3/3.5 Family te voltooien. NVIDIA NIM (NVIDIA Inference Microservices) is een reeks versnelde inferentie-microservices die zijn ontworpen om ontwikkelaars te helpen AI-modellen efficiënt in verschillende omgevingen te implementeren, waaronder clouds, datacenters en werkstations. Hier zijn enkele belangrijke kenmerken van NVIDIA NIM: - **Eenvoud van implementatie:** NIM maakt de implementatie van AI-modellen mogelijk met een enkele opdracht, waardoor het eenvoudig kan worden geïntegreerd in bestaande workflows. - **Geoptimaliseerde prestaties:** Het maakt gebruik van NVIDIA's vooraf geoptimaliseerde inferentie-engines, zoals TensorRT en TensorRT-LLM, om lage latentie en hoge doorvoer te garanderen. - **Schaalbaarheid:** NIM ondersteunt autoscaling op Kubernetes, waardoor het effectief kan omgaan met variërende workloads. - **Beveiliging en controle:** Organisaties kunnen controle behouden over hun gegevens en applicaties door NIM-microservices zelf te hosten op hun eigen beheerde infrastructuur. - **Standaard API's:** NIM biedt industrienorm API's, waardoor het eenvoudig is om AI-applicaties zoals chatbots, AI-assistenten en meer te bouwen en te integreren. NIM maakt deel uit van NVIDIA AI Enterprise, dat tot doel heeft de implementatie en operationalisatie van AI-modellen te vereenvoudigen, zodat ze efficiënt draaien op NVIDIA GPU's. - Demo: Het gebruik van Nividia NIM om Phi-3.5-Vision-API aan te roepen [[Klik op deze link](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)] ### Inferentie Phi-3/3.5 in lokale omgeving Inferentie in relatie tot Phi-3, of een taalmodel zoals GPT-3, verwijst naar het proces van het genereren van antwoorden of voorspellingen op basis van de input die het ontvangt. Wanneer je een prompt of vraag aan Phi-3 geeft, gebruikt het zijn getrainde neurale netwerk om het meest waarschijnlijke en relevante antwoord te infereren door patronen en relaties in de gegevens waarop het is getraind te analyseren. **Hugging Face Transformer** Hugging Face Transformers is een krachtige bibliotheek ontworpen voor natuurlijke taalverwerking (NLP) en andere machine learning-taken. Hier zijn enkele belangrijke punten over: 1. **Voorgetrainde modellen**: Het biedt duizenden voorgetrainde modellen die kunnen worden gebruikt voor verschillende taken zoals tekstclassificatie, naamherkenning, vraagbeantwoording, samenvatting, vertaling en tekstgeneratie. 2. **Framework interoperabiliteit**: De bibliotheek ondersteunt meerdere deep learning-frameworks, waaronder PyTorch, TensorFlow en JAX. Dit stelt je in staat om een model in één framework te trainen en het in een ander te gebruiken. 3. **Multimodale mogelijkheden**: Naast NLP ondersteunt Hugging Face Transformers ook taken in computer vision (bijv. beeldclassificatie, objectdetectie) en audioprocessing (bijv. spraakherkenning, audioclassificatie). 4. **Gebruiksgemak**: De bibliotheek biedt API's en tools om eenvoudig modellen te downloaden en te verfijnen, waardoor het toegankelijk is voor zowel beginners als experts. 5. **Community en bronnen**: Hugging Face heeft een levendige community en uitgebreide documentatie, tutorials en handleidingen om gebruikers te helpen aan de slag te gaan en het meeste uit de bibliotheek te halen. [officiële documentatie](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) of hun [GitHub-repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst). Dit is de meest gebruikte methode, maar het vereist ook GPU-versnelling. Uiteindelijk vereisen scènes zoals Vision en MoE veel berekeningen, wat zeer beperkt zal zijn in de CPU als ze niet zijn gekwantificeerd. - Demo:Het gebruik van Transformer om Phi-3.5-Instuct aan te roepen [Klik op deze link](../../../19-slm/python/phi35-instruct-demo.ipynb) - Demo:Het gebruik van Transformer om Phi-3.5-Vision aan te roepen[Klik op deze link](../../../19-slm/python/phi35-vision-demo.ipynb) - Demo:Het gebruik van Transformer om Phi-3.5-MoE aan te roepen[Klik op deze link](../../../19-slm/python/phi35_moe_demo.ipynb) **Ollama** [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) is een platform dat is ontworpen om het gemakkelijker te maken om grote taalmodellen (LLM's) lokaal op je machine uit te voeren. Het ondersteunt verschillende modellen zoals Llama 3.1, Phi 3, Mistral en Gemma 2, onder andere. Het platform vereenvoudigt het proces door modelgewichten, configuratie en gegevens in één pakket te bundelen, waardoor het toegankelijker wordt voor gebruikers om hun eigen modellen aan te passen en te creëren. Ollama is beschikbaar voor macOS, Linux en Windows. Het is een geweldig hulpmiddel als je wilt experimenteren met of LLM's wilt implementeren zonder afhankelijk te zijn van clouddiensten. Ollama is de meest directe manier, je hoeft alleen de volgende instructie uit te voeren. ```bash
+![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.nl.png)
+
+### Verschil in inferentie via Cloud API  
+
+**GitHub Models**  
+
+GitHub Models is de meest directe manier. Je kunt snel toegang krijgen tot het Phi-3/3.5-Instruct model via GitHub Models. In combinatie met de Azure AI Inference SDK / OpenAI SDK kun je via code de API aanroepen om Phi-3/3.5-Instruct te gebruiken. Je kunt ook verschillende resultaten testen via Playground.
+
+- Demo: Vergelijking van de prestaties van Phi-3-mini en Phi-3.5-mini in Chinese scenario’s
+
+![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.nl.png)
+
+![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.nl.png)
+
+**Azure AI Studio**  
+
+Of als je de vision- en MoE-modellen wilt gebruiken, kun je Azure AI Studio inzetten om de aanroepen te doen. Als je geïnteresseerd bent, kun je de Phi-3 Cookbook lezen om te leren hoe je Phi-3/3.5 Instruct, Vision, MoE via Azure AI Studio aanroept [Klik op deze link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+
+**NVIDIA NIM**  
+
+Naast de cloudgebaseerde Model Catalog-oplossingen van Azure en GitHub, kun je ook [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) gebruiken om gerelateerde aanroepen te doen. Je kunt NVIDIA NIM bezoeken om API-aanroepen van de Phi-3/3.5 Familie te voltooien. NVIDIA NIM (NVIDIA Inference Microservices) is een set geoptimaliseerde inferentie-microservices die ontwikkelaars helpen AI-modellen efficiënt te implementeren in verschillende omgevingen, waaronder clouds, datacenters en werkstations.
+
+Hier zijn enkele belangrijke kenmerken van NVIDIA NIM:  
+
+- **Eenvoudige Implementatie:** NIM maakt het mogelijk AI-modellen met één commando te implementeren, wat integratie in bestaande workflows eenvoudig maakt.  
+- **Geoptimaliseerde Prestaties:** Het maakt gebruik van NVIDIA’s vooraf geoptimaliseerde inferentie-engines, zoals TensorRT en TensorRT-LLM, voor lage latentie en hoge doorvoer.  
+- **Schaalbaarheid:** NIM ondersteunt autoscaling op Kubernetes, waardoor het effectief kan omgaan met wisselende workloads.
+- **Beveiliging en Controle:** Organisaties kunnen de controle over hun data en applicaties behouden door NIM-microservices zelf te hosten op hun eigen beheerde infrastructuur.
+- **Standaard API’s:** NIM biedt industrieel erkende API’s, waardoor het eenvoudig is om AI-toepassingen zoals chatbots, AI-assistenten en meer te bouwen en te integreren.
+
+NIM maakt deel uit van NVIDIA AI Enterprise, dat als doel heeft het inzetten en operationeel maken van AI-modellen te vereenvoudigen, zodat deze efficiënt draaien op NVIDIA GPU’s.
+
+- Demo: Gebruik van Nvidia NIM om Phi-3.5-Vision-API aan te roepen [[Klik op deze link](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+
+
+### Inference Phi-3/3.5 in lokale omgeving
+Inference met betrekking tot Phi-3, of elk taalmodel zoals GPT-3, verwijst naar het proces van het genereren van antwoorden of voorspellingen op basis van de input die het ontvangt. Wanneer je een prompt of vraag aan Phi-3 geeft, gebruikt het zijn getrainde neurale netwerk om de meest waarschijnlijke en relevante reactie af te leiden door patronen en verbanden in de trainingsdata te analyseren.
+
+**Hugging Face Transformer**  
+Hugging Face Transformers is een krachtige bibliotheek ontworpen voor natuurlijke taalverwerking (NLP) en andere machine learning taken. Hier zijn enkele belangrijke punten:
+
+1. **Voorgetrainde Modellen:** Het biedt duizenden voorgetrainde modellen die gebruikt kunnen worden voor diverse taken zoals tekstclassificatie, named entity recognition, vraagbeantwoording, samenvatting, vertaling en tekstgeneratie.
+
+2. **Framework Interoperabiliteit:** De bibliotheek ondersteunt meerdere deep learning frameworks, waaronder PyTorch, TensorFlow en JAX. Dit maakt het mogelijk om een model in het ene framework te trainen en in het andere te gebruiken.
+
+3. **Multimodale Mogelijkheden:** Naast NLP ondersteunt Hugging Face Transformers ook taken in computer vision (bijv. beeldclassificatie, objectdetectie) en audioprocessing (bijv. spraakherkenning, audioclassificatie).
+
+4. **Gebruiksgemak:** De bibliotheek biedt API’s en tools om modellen eenvoudig te downloaden en fijn af te stemmen, waardoor het toegankelijk is voor zowel beginners als experts.
+
+5. **Community en Resources:** Hugging Face heeft een levendige community en uitgebreide documentatie, tutorials en handleidingen om gebruikers op weg te helpen en het meeste uit de bibliotheek te halen.  
+[officiële documentatie](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) of hun [GitHub repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
+
+Dit is de meest gebruikte methode, maar het vereist ook GPU-versnelling. Immers, toepassingen zoals Vision en MoE vragen veel rekenkracht, wat op de CPU erg beperkt zal zijn als ze niet gequantiseerd zijn.
+
+
+- Demo: Gebruik van Transformer om Phi-3.5-Instruct aan te roepen [Klik op deze link](../../../19-slm/python/phi35-instruct-demo.ipynb)
+
+- Demo: Gebruik van Transformer om Phi-3.5-Vision aan te roepen [Klik op deze link](../../../19-slm/python/phi35-vision-demo.ipynb)
+
+- Demo: Gebruik van Transformer om Phi-3.5-MoE aan te roepen [Klik op deze link](../../../19-slm/python/phi35_moe_demo.ipynb)
+
+**Ollama**  
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) is een platform dat het makkelijker maakt om grote taalmodellen (LLM’s) lokaal op je eigen machine te draaien. Het ondersteunt diverse modellen zoals Llama 3.1, Phi 3, Mistral en Gemma 2, onder andere. Het platform vereenvoudigt het proces door modelgewichten, configuratie en data in één pakket te bundelen, waardoor het toegankelijker wordt voor gebruikers om hun eigen modellen aan te passen en te creëren. Ollama is beschikbaar voor macOS, Linux en Windows. Het is een uitstekend hulpmiddel als je wilt experimenteren met of LLM’s wilt inzetten zonder afhankelijk te zijn van cloudservices. Ollama is de meest directe manier, je hoeft alleen de volgende opdracht uit te voeren.
+
+
+```bash
 
 ollama run phi3.5
 
-``` **ONNX Runtime voor GenAI** [ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) is een cross-platform inferentie- en trainingsmachine-learning accelerator. ONNX Runtime voor Generative AI (GENAI) is een krachtig hulpmiddel dat je helpt generatieve AI-modellen efficiënt te laten draaien op verschillende platforms. ## Wat is ONNX Runtime? ONNX Runtime is een open-source project dat hoge-prestatie inferentie van machine learning-modellen mogelijk maakt. Het ondersteunt modellen in het Open Neural Network Exchange (ONNX) formaat, wat een standaard is voor het representeren van machine learning-modellen.ONNX Runtime inferentie kan snellere klantervaringen en lagere kosten mogelijk maken, modellen ondersteunen van deep learning-frameworks zoals PyTorch en TensorFlow/Keras evenals klassieke machine learning-bibliotheken zoals scikit-learn, LightGBM, XGBoost, enz. ONNX Runtime is compatibel met verschillende hardware, drivers en besturingssystemen, en biedt optimale prestaties door gebruik te maken van hardwareversnellers waar van toepassing naast grafiekoptimalisaties en transformaties ## Wat is Generative AI? Generative AI verwijst naar AI-systemen die nieuwe inhoud kunnen genereren, zoals tekst, afbeeldingen of muziek, op basis van de gegevens waarop ze zijn getraind. Voorbeelden zijn taalmodellen zoals GPT-3 en beeldgeneratiemodellen zoals Stable Diffusion. De ONNX Runtime voor GenAI bibliotheek biedt de generatieve AI-loop voor ONNX-modellen, inclusief inferentie met ONNX Runtime, logitsverwerking, zoeken en sampling, en KV cachebeheer. ## ONNX Runtime voor GENAI ONNX Runtime voor GENAI breidt de mogelijkheden van ONNX Runtime uit om generatieve AI-modellen te ondersteunen. Hier zijn enkele belangrijke kenmerken: - **Brede platformondersteuning:** Het werkt op verschillende platforms, waaronder Windows, Linux, macOS, Android en iOS. - **Modelondersteuning:** Het ondersteunt veel populaire generatieve AI-modellen, zoals LLaMA, GPT-Neo, BLOOM, en meer. - **Prestatieoptimalisatie:** Het bevat optimalisaties voor verschillende hardwareversnellers zoals NVIDIA GPU's, AMD GPU's, en meer2. - **Gebruiksgemak:** Het biedt API's voor eenvoudige integratie in applicaties, waardoor je tekst, afbeeldingen en andere inhoud kunt genereren met minimale code - Gebruikers kunnen een high-level generate() methode aanroepen, of elke iteratie van het model in een loop uitvoeren, waarbij één token per keer wordt gegenereerd, en optioneel generatieparameters binnen de loop worden bijgewerkt. - ONNX runtime heeft ook ondersteuning voor greedy/beam search en TopP, TopK sampling om tokensequenties te genereren en ingebouwde logitsverwerking zoals herhalingsstraffen. Je kunt ook eenvoudig aangepaste scoring toevoegen. ## Aan de slag Om aan de slag te gaan met ONNX Runtime voor GENAI, kun je de volgende stappen volgen: ### Installeer ONNX Runtime: ```Python
+```
+
+
+**ONNX Runtime voor GenAI**
+
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) is een cross-platform accelerator voor inference en training van machine learning modellen. ONNX Runtime voor Generative AI (GENAI) is een krachtig hulpmiddel dat je helpt generatieve AI-modellen efficiënt te draaien op verschillende platforms.
+
+## Wat is ONNX Runtime?  
+ONNX Runtime is een open-source project dat high-performance inference van machine learning modellen mogelijk maakt. Het ondersteunt modellen in het Open Neural Network Exchange (ONNX) formaat, een standaard voor het representeren van machine learning modellen. ONNX Runtime inference kan zorgen voor snellere gebruikerservaringen en lagere kosten, en ondersteunt modellen van deep learning frameworks zoals PyTorch en TensorFlow/Keras, evenals klassieke machine learning bibliotheken zoals scikit-learn, LightGBM, XGBoost, enzovoort. ONNX Runtime is compatibel met verschillende hardware, drivers en besturingssystemen, en levert optimale prestaties door gebruik te maken van hardwareversnellers waar mogelijk, naast grafiekoptimalisaties en transformaties.
+
+## Wat is Generative AI?  
+Generative AI verwijst naar AI-systemen die nieuwe content kunnen genereren, zoals tekst, afbeeldingen of muziek, op basis van de data waarop ze getraind zijn. Voorbeelden zijn taalmodellen zoals GPT-3 en beeldgeneratiemodellen zoals Stable Diffusion. De ONNX Runtime voor GenAI bibliotheek biedt de generatieve AI-cyclus voor ONNX-modellen, inclusief inference met ONNX Runtime, logitsverwerking, zoek- en samplingmethoden, en KV-cachebeheer.
+
+## ONNX Runtime voor GENAI  
+ONNX Runtime voor GENAI breidt de mogelijkheden van ONNX Runtime uit om generatieve AI-modellen te ondersteunen. Hier zijn enkele belangrijke kenmerken:
+
+- **Brede Platformondersteuning:** Het werkt op diverse platforms, waaronder Windows, Linux, macOS, Android en iOS.  
+- **Modelondersteuning:** Het ondersteunt veel populaire generatieve AI-modellen, zoals LLaMA, GPT-Neo, BLOOM en meer.  
+- **Prestatieoptimalisatie:** Het bevat optimalisaties voor verschillende hardwareversnellers zoals NVIDIA GPU’s, AMD GPU’s, en meer.  
+- **Gebruiksgemak:** Het biedt API’s voor eenvoudige integratie in applicaties, waarmee je tekst, afbeeldingen en andere content kunt genereren met minimale code.  
+- Gebruikers kunnen een high-level generate() methode aanroepen, of elke iteratie van het model in een lus uitvoeren, waarbij telkens één token wordt gegenereerd en optioneel generatieparameters binnen de lus worden aangepast.  
+- ONNX Runtime ondersteunt ook greedy/beam search en TopP, TopK sampling om tokenreeksen te genereren, en ingebouwde logitsverwerking zoals herhalingsstraffen. Je kunt ook eenvoudig eigen scoringsmethoden toevoegen.
+
+## Aan de slag  
+Om te beginnen met ONNX Runtime voor GENAI, kun je de volgende stappen volgen:
+
+### Installeer ONNX Runtime:  
+```Python
 pip install onnxruntime
-``` ### Installeer de Generative AI-extensies: ```Python
+```  
+### Installeer de Generative AI Extensions:  
+```Python
 pip install onnxruntime-genai
-``` ### Voer een model uit: Hier is een eenvoudig voorbeeld in Python: ```Python
+```
+
+### Draai een model: Hier is een eenvoudig voorbeeld in Python:  
+```Python
 import onnxruntime_genai as og
 
 model = og.Model('path_to_your_model.onnx')
@@ -158,7 +256,11 @@ output_tokens = model.generate(input_tokens)
 output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
-``` ### Demo:Het gebruik van ONNX Runtime GenAI om Phi-3.5-Vision aan te roepen ```python
+```  
+### Demo: Gebruik van ONNX Runtime GenAI om Phi-3.5-Vision aan te roepen
+
+
+```python
 
 import onnxruntime_genai as og
 
@@ -206,7 +308,17 @@ while not generator.is_done():
     
     print(tokenizer_stream.decode(new_token), end='', flush=True)
 
-``` **Overige** Naast ONNX Runtime en Ollama referentiemethoden, kunnen we ook de referentie van kwantitatieve modellen voltooien op basis van de modelreferentiemethoden die door verschillende fabrikanten worden aangeboden. Zoals Apple MLX-framework met Apple Metal, Qualcomm QNN met NPU, Intel OpenVINO met CPU/GPU, enz. Je kunt ook meer inhoud krijgen van [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst) ## Meer We hebben de basisprincipes van de Phi-3/3.5 Family geleerd, maar om meer te leren over SLM hebben we meer kennis nodig. Je kunt de antwoorden vinden in de Phi-3 Cookbook. Als je meer wilt leren, bezoek dan de [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+```
+
+
+**Overige**
+
+Naast ONNX Runtime en Ollama referentiemethoden kunnen we ook de referentie van kwantitatieve modellen afronden op basis van de modelreferentiemethoden die door verschillende fabrikanten worden aangeboden. Denk aan het Apple MLX framework met Apple Metal, Qualcomm QNN met NPU, Intel OpenVINO met CPU/GPU, enzovoort. Je kunt ook meer informatie vinden in de [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+
+
+## Meer
+
+We hebben de basis van de Phi-3/3.5 familie geleerd, maar om meer te weten te komen over SLM hebben we meer kennis nodig. Je vindt de antwoorden in de Phi-3 Cookbook. Wil je meer leren, bezoek dan de [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

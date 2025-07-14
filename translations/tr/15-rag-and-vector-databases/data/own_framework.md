@@ -2,91 +2,91 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-05-20T02:19:32+00:00",
+  "translation_date": "2025-07-09T16:46:16+00:00",
   "source_file": "15-rag-and-vector-databases/data/own_framework.md",
   "language_code": "tr"
 }
 -->
-# Sinir Ağlarına Giriş. Çok Katmanlı Algılayıcı
+# Sinir Ağlarına Giriş. Çok Katmanlı Perceptron
 
-Önceki bölümde, en basit sinir ağı modeli olan tek katmanlı algılayıcıyı, yani iki sınıflı bir doğrusal sınıflandırma modelini öğrendiniz.
+Önceki bölümde, en basit sinir ağı modeli olan tek katmanlı perceptron’u, yani doğrusal iki sınıflı sınıflandırma modelini öğrendiniz.
 
-Bu bölümde bu modeli daha esnek bir çerçeveye genişleteceğiz, böylece:
+Bu bölümde, bu modeli daha esnek bir yapıya genişleteceğiz ve şunları yapmamıza olanak tanıyacağız:
 
-* iki sınıfa ek olarak **çok sınıflı sınıflandırma** yapabiliriz
-* sınıflandırmaya ek olarak **regresyon problemlerini** çözebiliriz
-* doğrusal olarak ayrılabilir olmayan sınıfları ayırabiliriz
+* İki sınıflı sınıflandırmanın yanı sıra **çok sınıflı sınıflandırma** yapmak
+* Sınıflandırmanın yanı sıra **regresyon problemlerini** çözmek
+* Doğrusal olarak ayrılamayan sınıfları ayırmak
 
-Ayrıca, farklı sinir ağı mimarileri oluşturmamıza olanak tanıyacak kendi modüler çerçevemizi Python'da geliştireceğiz.
+Ayrıca, farklı sinir ağı mimarileri oluşturabilmemizi sağlayacak kendi modüler Python çerçevemizi geliştireceğiz.
 
 ## Makine Öğrenmesinin Formalizasyonu
 
-Makine Öğrenmesi problemini formüle ederek başlayalım. Diyelim ki **X** adlı bir eğitim veri setimiz ve **Y** adlı etiketlerimiz var ve en doğru tahminleri yapacak bir model *f* oluşturmalıyız. Tahminlerin kalitesi **Kayıp fonksiyonu** ℒ ile ölçülür. Aşağıdaki kayıp fonksiyonları sıkça kullanılır:
+Makine Öğrenmesi problemini formalize ederek başlayalım. Diyelim ki etiketleri **Y** olan bir eğitim veri setimiz **X** var ve en doğru tahminleri yapacak bir model *f* inşa etmemiz gerekiyor. Tahminlerin kalitesi **Kayıp fonksiyonu** ℒ ile ölçülür. Aşağıdaki kayıp fonksiyonları sıkça kullanılır:
 
-* Regresyon problemi için, bir sayı tahmin etmemiz gerektiğinde, **mutlak hata** ∑<sub>i</sub>|f(x<sup>(i)</sup>)-y<sup>(i)</sup>| veya **karesel hata** ∑<sub>i</sub>(f(x<sup>(i)</sup>)-y<sup>(i)</sup>)<sup>2</sup> kullanabiliriz
-* Sınıflandırma için, **0-1 kaybı** (temelde modelin **doğruluğu** ile aynıdır) veya **lojistik kayıp** kullanırız.
+* Regresyon problemi için, yani bir sayı tahmin etmemiz gerektiğinde, **mutlak hata** ∑<sub>i</sub>|f(x<sup>(i)</sup>)-y<sup>(i)</sup>| veya **kare hata** ∑<sub>i</sub>(f(x<sup>(i)</sup>)-y<sup>(i)</sup>)<sup>2</sup> kullanılabilir
+* Sınıflandırma için, **0-1 kaybı** (temelde modelin **doğruluğu** ile aynı) veya **lojistik kayıp** kullanılır.
 
-Tek seviyeli algılayıcı için, *f* fonksiyonu *f(x)=wx+b* şeklinde doğrusal bir fonksiyon olarak tanımlanmıştır (burada *w* ağırlık matrisi, *x* girdi özelliklerinin vektörü ve *b* önyargı vektörüdür). Farklı sinir ağı mimarileri için, bu fonksiyon daha karmaşık bir form alabilir.
+Tek katmanlı perceptron için, *f* fonksiyonu doğrusal bir fonksiyon olarak tanımlanmıştı: *f(x)=wx+b* (burada *w* ağırlık matrisi, *x* giriş özellikleri vektörü, *b* ise bias vektörüdür). Farklı sinir ağı mimarileri için bu fonksiyon daha karmaşık bir biçim alabilir.
 
-> Sınıflandırma durumunda, ağ çıktısı olarak ilgili sınıfların olasılıklarını elde etmek genellikle arzu edilir. Keyfi sayıları olasılıklara dönüştürmek (örneğin, çıktıyı normalize etmek) için sıklıkla **softmax** fonksiyonu σ kullanırız ve *f* fonksiyonu *f(x)=σ(wx+b)* olur
+> Sınıflandırma durumunda, ağ çıktısı olarak ilgili sınıfların olasılıklarını almak genellikle tercih edilir. Rastgele sayıları olasılıklara dönüştürmek (örneğin çıktıyı normalize etmek) için sıklıkla **softmax** fonksiyonu σ kullanılır ve fonksiyon *f* şu hale gelir: *f(x)=σ(wx+b)*
 
-Yukarıdaki *f* tanımında, *w* ve *b* **parametreler** olarak adlandırılır θ=⟨*w,b*⟩. Veri seti ⟨**X**,**Y**⟩ verildiğinde, parametreler θ'nın bir fonksiyonu olarak tüm veri seti üzerinde toplam hatayı hesaplayabiliriz.
+Yukarıdaki *f* tanımında, *w* ve *b* **parametreler** olarak adlandırılır ve θ=⟨*w,b*⟩ ile gösterilir. Veri seti ⟨**X**,**Y**⟩ verildiğinde, parametrelerin bir fonksiyonu olarak tüm veri seti üzerindeki toplam hatayı hesaplayabiliriz.
 
-> ✅ **Sinir ağı eğitiminin amacı, parametreleri θ değiştirerek hatayı en aza indirmektir**
+> ✅ **Sinir ağı eğitiminin amacı, parametreler θ’yi değiştirerek hatayı minimize etmektir**
 
-## Gradient Descent Optimizasyonu
+## Gradyan İnişi Optimizasyonu
 
-Fonksiyon optimizasyonunun iyi bilinen bir yöntemi olan **gradient descent** vardır. Fikir, parametrelere göre kayıp fonksiyonunun türevini (çok boyutlu durumda **gradient** olarak adlandırılır) hesaplayabileceğimiz ve parametreleri hatanın azalacağı şekilde değiştirebileceğimizdir. Bu şu şekilde formüle edilebilir:
+Fonksiyon optimizasyonunda iyi bilinen bir yöntem olan **gradyan inişi** vardır. Fikir, kayıp fonksiyonunun parametrelere göre türevini (çok boyutlu durumda buna **gradyan** denir) hesaplayıp, parametreleri hatayı azaltacak şekilde değiştirmektir. Bu şu şekilde formalize edilebilir:
 
-* Parametreleri bazı rastgele değerlerle başlat w<sup>(0)</sup>, b<sup>(0)</sup>
+* Parametreleri rastgele değerlerle başlat w<sup>(0)</sup>, b<sup>(0)</sup>
 * Aşağıdaki adımı birçok kez tekrarla:
     - w<sup>(i+1)</sup> = w<sup>(i)</sup>-η∂ℒ/∂w
     - b<sup>(i+1)</sup> = b<sup>(i)</sup>-η∂ℒ/∂b
 
-Eğitim sırasında, optimizasyon adımlarının tüm veri seti dikkate alınarak hesaplanması gerekir (unutmayın ki kayıp, tüm eğitim örnekleri üzerinden bir toplam olarak hesaplanır). Ancak, gerçek hayatta veri setinin küçük parçaları olan **minibatch**'leri alırız ve verilerin bir alt kümesine dayanarak gradyanları hesaplarız. Her seferinde rastgele bir alt küme alındığı için, bu yöntem **stokastik gradient descent** (SGD) olarak adlandırılır.
+Eğitim sırasında, optimizasyon adımları tüm veri seti göz önünde bulundurularak hesaplanmalıdır (kayıp tüm eğitim örnekleri üzerinden toplanarak hesaplanır). Ancak pratikte, veri setinden küçük parçalar olan **minibatch**’ler alınır ve gradyanlar bu alt küme üzerinden hesaplanır. Her seferinde rastgele alt küme seçildiği için bu yönteme **stokastik gradyan inişi** (SGD) denir.
 
-## Çok Katmanlı Algılayıcılar ve Geri Yayılım
+## Çok Katmanlı Perceptronlar ve Geri Yayılım
 
-Yukarıda gördüğümüz gibi, tek katmanlı ağ doğrusal olarak ayrılabilir sınıfları sınıflandırabilir. Daha zengin bir model oluşturmak için ağın birkaç katmanını birleştirebiliriz. Matematiksel olarak, *f* fonksiyonu daha karmaşık bir form alacak ve birkaç adımda hesaplanacaktır:
+Yukarıda gördüğümüz tek katmanlı ağ, doğrusal olarak ayrılabilen sınıfları sınıflandırabilir. Daha zengin bir model oluşturmak için ağın birkaç katmanını birleştirebiliriz. Matematiksel olarak bu, *f* fonksiyonunun daha karmaşık bir biçim alması ve birkaç adımda hesaplanması anlamına gelir:
 * z<sub>1</sub>=w<sub>1</sub>x+b<sub>1</sub>
 * z<sub>2</sub>=w<sub>2</sub>α(z<sub>1</sub>)+b<sub>2</sub>
 * f = σ(z<sub>2</sub>)
 
-Burada, α **doğrusal olmayan aktivasyon fonksiyonu**, σ softmax fonksiyonu ve parametreler θ=<*w<sub>1</sub>,b<sub>1</sub>,w<sub>2</sub>,b<sub>2</sub>*>'dir.
+Burada, α **doğrusal olmayan aktivasyon fonksiyonu**, σ softmax fonksiyonu ve parametreler θ=<*w<sub>1</sub>,b<sub>1</sub>,w<sub>2</sub>,b<sub>2</sub>*>.
 
-Gradient descent algoritması aynı kalır, ancak gradyanları hesaplamak daha zor olur. Zincir türevleme kuralı verilmişken, türevleri şu şekilde hesaplayabiliriz:
+Gradyan inişi algoritması aynı kalır, ancak gradyanları hesaplamak daha zorlaşır. Zincir türev kuralı kullanılarak türevler şu şekilde hesaplanabilir:
 
 * ∂ℒ/∂w<sub>2</sub> = (∂ℒ/∂σ)(∂σ/∂z<sub>2</sub>)(∂z<sub>2</sub>/∂w<sub>2</sub>)
 * ∂ℒ/∂w<sub>1</sub> = (∂ℒ/∂σ)(∂σ/∂z<sub>2</sub>)(∂z<sub>2</sub>/∂α)(∂α/∂z<sub>1</sub>)(∂z<sub>1</sub>/∂w<sub>1</sub>)
 
-> ✅ Zincir türevleme kuralı, parametrelere göre kayıp fonksiyonunun türevlerini hesaplamak için kullanılır.
+> ✅ Kayıp fonksiyonunun parametrelere göre türevlerini hesaplamak için zincir türev kuralı kullanılır.
 
-Bu ifadelerin sol tarafındaki kısmı aynı olduğundan, türevleri etkili bir şekilde kayıp fonksiyonundan başlayarak ve hesaplama grafiği boyunca "geri giderek" hesaplayabiliriz. Dolayısıyla, çok katmanlı bir algılayıcıyı eğitme yöntemi **geri yayılım** veya 'backprop' olarak adlandırılır.
+Dikkat edin, tüm bu ifadelerin en solundaki kısım aynıdır, bu yüzden türevleri kayıp fonksiyonundan başlayarak hesaplama grafiğinde "geriye doğru" etkili bir şekilde hesaplayabiliriz. Bu nedenle çok katmanlı perceptron eğitme yöntemi **geri yayılım** veya 'backprop' olarak adlandırılır.
 
-> TODO: görsel kaynak
+> TODO: resim atıfı
 
-> ✅ Not defteri örneğimizde geri yayılımı çok daha detaylı ele alacağız.
+> ✅ Geri yayılımı not defteri örneğimizde çok daha detaylı inceleyeceğiz.
 
 ## Sonuç
 
-Bu derste, kendi sinir ağı kütüphanemizi oluşturduk ve bunu basit bir iki boyutlu sınıflandırma görevi için kullandık.
+Bu derste, kendi sinir ağı kütüphanemizi oluşturduk ve bunu basit iki boyutlu bir sınıflandırma görevi için kullandık.
 
 ## 🚀 Meydan Okuma
 
-Eşlik eden not defterinde, çok katmanlı algılayıcılar oluşturmak ve eğitmek için kendi çerçevenizi uygulayacaksınız. Modern sinir ağlarının nasıl çalıştığını detaylı olarak görebileceksiniz.
+Yanındaki not defterinde, çok katmanlı perceptronlar oluşturup eğitmek için kendi çerçevenizi uygulayacaksınız. Modern sinir ağlarının nasıl çalıştığını ayrıntılı olarak görebileceksiniz.
 
 OwnFramework not defterine geçin ve üzerinde çalışın.
 
-## İnceleme ve Kendi Kendine Çalışma
+## Gözden Geçirme & Kendi Kendine Çalışma
 
-Geri yayılım, AI ve ML'de yaygın olarak kullanılan bir algoritmadır, daha detaylı incelenmeye değerdir.
+Geri yayılım, yapay zeka ve makine öğrenmesinde yaygın kullanılan bir algoritmadır ve daha detaylı incelenmeye değerdir.
 
 ## Ödev
 
-Bu laboratuvarda, bu derste oluşturduğunuz çerçeveyi kullanarak MNIST el yazısı rakam sınıflandırmasını çözmeniz isteniyor.
+Bu laboratuvarda, bu derste oluşturduğunuz çerçeveyi kullanarak MNIST el yazısı rakam sınıflandırma problemini çözmeniz isteniyor.
 
 * Talimatlar
 * Not defteri
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğu sağlamak için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlaşılma veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
