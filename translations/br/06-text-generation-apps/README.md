@@ -143,7 +143,7 @@ Acima estamos definindo o seguinte:
 A forma de gerar texto é usar a classe `Completion`. Veja um exemplo:
 
 ```python
-prompt = "Complete the following: Once upon a time there was a"
+prompt = "Complete o seguinte: Era uma vez um"
 
 completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
@@ -196,8 +196,8 @@ Agora que aprendemos como configurar e usar openai, é hora de construir seu pri
    openai.api_base = "<endpoint found in Azure Portal where your API key is>"
    deployment_name = "<deployment name>"
 
-   # add your completion code
-   prompt = "Complete the following: Once upon a time there was a"
+   # adicione seu código de conclusão
+   prompt = "Complete o seguinte: Era uma vez um"
    messages = [{"role": "user", "content": prompt}]
 
    # make completion
@@ -213,9 +213,9 @@ Agora que aprendemos como configurar e usar openai, é hora de construir seu pri
    Você deve ver uma saída parecida com esta:
 
    ```output
-    very unhappy _____.
+    muito infeliz _____.
 
-   Once upon a time there was a very unhappy mermaid.
+    Era uma vez uma sereia muito infeliz.
    ```
 
 ## Diferentes tipos de prompts, para diferentes propósitos
@@ -239,65 +239,65 @@ Você poderia escrever um prompt assim:
 Dado o prompt acima, você pode receber uma resposta parecida com:
 
 ```output
-1. Roasted Chicken and Vegetables:
-Ingredients:
-- 4 chicken thighs
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 2 tablespoons olive oil
-- 2 cloves garlic, minced
-- 1 teaspoon dried thyme
-- 1 teaspoon dried oregano
-- Salt and pepper, to taste
+1. Frango Assado com Legumes:
+Ingredientes:
+- 4 coxas de frango
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 2 colheres de sopa de azeite
+- 2 dentes de alho picados
+- 1 colher de chá de tomilho seco
+- 1 colher de chá de orégano seco
+- Sal e pimenta a gosto
 
-2. Chicken and Potato Stew:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+2. Ensopado de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 1 cebola picada
+- 2 dentes de alho picados
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 1 xícara de caldo de galinha
+- Sal e pimenta a gosto
 
-3. Chicken and Potato Bake:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+3. Frango e Batata Assados:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 cebola picada
+- 2 dentes de alho picados
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 1 xícara de caldo de galinha
+- Sal e pimenta a gosto
 
-4. Chicken and Potato Soup:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 4 cups chicken broth
-- Salt and pepper, to taste
+4. Sopa de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 1 cebola picada
+- 2 dentes de alho picados
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 4 xícaras de caldo de galinha
+- Sal e pimenta a gosto
 
-5. Chicken and Potato Hash:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 1 teaspoon dried oregano
+5. Picadinho de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 cebola picada
+- 2 dentes de alho picado
+- 1 colher de chá de orégano seco
 ```
 
 Esse resultado é ótimo, já sei o que cozinhar. Neste ponto, melhorias úteis poderiam ser:
@@ -312,68 +312,68 @@ Para esses casos, vamos adicionar um prompt adicional:
 Agora você tem um novo resultado, a saber:
 
 ```output
-1. Roasted Chicken and Vegetables:
-Ingredients:
-- 4 chicken thighs
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 2 tablespoons olive oil
-- 1 teaspoon dried thyme
-- 1 teaspoon dried oregano
-- Salt and pepper, to taste
+1. Frango Assado com Legumes:
+Ingredientes:
+- 4 coxas de frango
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 2 colheres de sopa de azeite
+- 1 colher de chá de tomilho seco
+- 1 colher de chá de orégano seco
+- Sal e pimenta a gosto
 
-2. Chicken and Potato Stew:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+2. Ensopado de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 1 cebola picada
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 1 xícara de caldo de galinha
+- Sal e pimenta a gosto
 
-3. Chicken and Potato Bake:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+3. Frango e Batata Assados:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 cebola picada
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 1 xícara de caldo de galinha
+- Sal e pimenta a gosto
 
-4. Chicken and Potato Soup:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 4 cups chicken broth
-- Salt and pepper, to taste
+4. Sopa de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 1 cebola picada
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 colher de chá de orégano seco
+- 1 colher de chá de tomilho seco
+- 4 xícaras de caldo de galinha
+- Sal e pimenta a gosto
 
-5. Chicken and Potato Hash:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 1 teaspoon dried oregano
+5. Picadinho de Frango com Batata:
+Ingredientes:
+- 2 colheres de sopa de azeite
+- 2 peitos de frango cortados em cubos
+- 2 batatas cortadas em cubos
+- 2 cenouras cortadas em cubos
+- 1 cebola picada
+- 1 colher de chá de orégano seco
 
-Shopping List:
-- Olive oil
-- Onion
-- Thyme
-- Oregano
-- Salt
-- Pepper
+Lista de Compras:
+- Azeite
+- Cebola
+- Tomilho
+- Orégano
+- Sal
+- Pimenta
 ```
 
 Essas são suas cinco receitas, sem alho mencionado, e você também tem uma lista de compras considerando o que já tem em casa.
@@ -385,21 +385,21 @@ Agora que encenamos um cenário, vamos escrever código para corresponder ao cen
 1. Use o arquivo _app.py_ existente como ponto de partida
 1. Localize a variável `prompt` e altere seu código para o seguinte:
 
-   ```python
-   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
-   ```
+```python
+   prompt = "Mostre-me 5 receitas de um prato com os seguintes ingredientes: frango, batata e cenoura. Liste todos os ingredientes usados para cada receita."
+```
 
    Se você executar o código agora, deve ver uma saída parecida com:
 
-   ```output
-   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
-   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
-   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
+```output
+   - Ensopado de Frango com Batatas e Cenouras: 3 colheres de sopa de azeite, 1 cebola picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 ramo de tomilho, 1/2 colher de chá de sal, 1/4 de colher de chá de pimenta-do-reino, 1 1/2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 2 colheres de sopa de salsa fresca picada, 2 colheres de sopa de manteiga sem sal, 1 1/2 libra de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm.
+    - Frango Assado no Forno com Batatas e Cenouras: 3 colheres de sopa de azeite extravirgem, 1 colher de sopa de mostarda Dijon, 1 colher de sopa de alecrim fresco picado, 1 colher de sopa de tomilho fresco picado, 4 dentes de alho picados, 1 1/2 libra de batatas vermelhas pequenas cortadas em quatro, 1 1/2 libra de cenouras cortadas em quatro no sentido do comprimento, 1/2 colher de chá de sal. 1/4 colher de chá de pimenta-do-reino, 1 frango inteiro (1,8 kg)
+    - Caçarola de Frango, Batata e Cenoura: spray de cozinha, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e ralada, 1 batata descascada e ralada, 1/2 colher de chá de folhas de tomilho secas, 1/4 colher de chá de sal, 1/4 colher de chá de pimenta-do-reino, 2 xícaras de caldo de galinha desnatado com baixo teor de sódio, 1 xícara de ervilhas congeladas, 1/4 xícara de farinha de trigo, 1 xícara de leite com 2% de gordura reduzida, 1/4 xícara de queijo parmesão ralado
 
-   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
+    - Jantar de Frango e Batata em Uma Panela: 2 colheres de sopa de azeite, 450 g de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm, 1 cebola grande picada, 3 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 ramo de tomilho, 1/2 colher de chá Sal, 1/4 colher de chá de pimenta-do-reino, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco
 
-   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
-   ```
+    - Curry de Frango, Batata e Cenoura: 1 colher de sopa de óleo vegetal, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 colher de chá de coentro em pó, 1 colher de chá de cominho em pó, 1/2 colher de chá de cúrcuma em pó, 1/2 colher de chá de gengibre em pó, 1/4 colher de chá de pimenta caiena, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 1 lata (425 g) de grão-de-bico escorrido e lavado, 1/2 xícara de passas, 1/2 xícara de coentro fresco picado
+```
 
    > NOTE, seu LLM é não determinístico, então você pode obter resultados diferentes a cada execução.
 
@@ -407,25 +407,25 @@ Agora que encenamos um cenário, vamos escrever código para corresponder ao cen
 
 1. Vamos alterar o código da seguinte forma:
 
-   ```python
-   no_recipes = input("No of recipes (for example, 5): ")
+```python
+   no_recipes = input("Número de receitas (por exemplo, 5):")
 
-   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
+   ingredients = input("Lista de ingredientes (por exemplo, frango, batatas e cenouras):")
 
-   # interpolate the number of recipes into the prompt an ingredients
-   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
-   ```
+   # interpolar o número de receitas no prompt e ingredientes
+   prompt = f"Mostre-me {no_recipes} receitas para um prato com os seguintes ingredientes: {ingredients}. Por receita, liste todos os ingredientes usadosd"
+```
 
    Um teste rápido com o código poderia ser assim:
 
-   ```output
-   No of recipes (for example, 5): 3
-   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
+```output
+    Número de receitas (por exemplo, 5): 3
+    Lista de ingredientes (por exemplo, frango, batatas e cenouras): leite, morangos
 
-   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
-   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
-   -Strawberry milk: milk, strawberries, sugar, vanilla extract
-   ```
+    - Milkshake de morango: leite, morangos, açúcar, extrato de baunilha, cubos de gelo
+    - Torta de morango: leite, farinha, fermento em pó, açúcar, sal, manteiga sem sal, morangos, chantilly
+    - Leite de morango: leite, morangos, açúcar, extrato de baunilha
+  ```
 
 ### Melhorar adicionando filtro e lista de compras
 
@@ -435,80 +435,81 @@ Para melhorar ainda mais, queremos adicionar o seguinte:
 
 - **Filtrar ingredientes**. Queremos poder filtrar ingredientes que não gostamos ou somos alérgicos. Para isso, podemos editar nosso prompt existente e adicionar uma condição de filtro no final, assim:
 
-  ```python
-  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
+```python
+  filter = input("Filtro (por exemplo, vegetariano, vegano ou sem glúten): ")
 
-  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
-  ```
+  prompt = f"Mostre-me {no_recipes} receitas para um prato com os seguintes ingredientes: {ingredients}. Por receita, liste todos os ingredientes usados, sem {filter}"
+```
 
   Acima, adicionamos `{filter}` ao final do prompt e também capturamos o valor do filtro do usuário.
 
   Um exemplo de entrada ao rodar o programa pode ser assim:
 
-  ```output
-  No of recipes (for example, 5): 3
-  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
-  Filter (for example, vegetarian, vegan, or gluten-free): no milk
-
-  1. French Onion Soup
-
-  Ingredients:
-
-  -1 large onion, sliced
-  -3 cups beef broth
-  -1 cup milk
-  -6 slices french bread
-  -1/4 cup shredded Parmesan cheese
-  -1 tablespoon butter
-  -1 teaspoon dried thyme
-  -1/4 teaspoon salt
-  -1/4 teaspoon black pepper
-
-  Instructions:
-
-  1. In a large pot, sauté onions in butter until golden brown.
-  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
-  3. Reduce heat and simmer for 10 minutes.
-  4. Place french bread slices on soup bowls.
-  5. Ladle soup over bread.
-  6. Sprinkle with Parmesan cheese.
-
-  2. Onion and Potato Soup
-
-  Ingredients:
-
-  -1 large onion, chopped
-  -2 cups potatoes, diced
-  -3 cups vegetable broth
-  -1 cup milk
-  -1/4 teaspoon black pepper
-
-  Instructions:
-
-  1. In a large pot, sauté onions in butter until golden brown.
-  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
-  3. Reduce heat and simmer for 10 minutes.
-  4. Serve hot.
-
-  3. Creamy Onion Soup
-
-  Ingredients:
-
-  -1 large onion, chopped
-  -3 cups vegetable broth
-  -1 cup milk
-  -1/4 teaspoon black pepper
-  -1/4 cup all-purpose flour
-  -1/2 cup shredded Parmesan cheese
-
-  Instructions:
-
-  1. In a large pot, sauté onions in butter until golden brown.
-  2. Add vegetable broth, milk, and pepper. Bring to a boil.
-  3. Reduce heat and simmer for 10 minutes.
-  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
-  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
-  ```
+```output
+  Número de receitas (por exemplo, 5): 3
+  Lista de ingredientes (por exemplo, frango, batata e cenoura): cebola, leite
+  Filtro (por exemplo, vegetariano, vegano ou sem glúten): sem leite
+  
+  1. Sopa de Cebola Francesa
+  
+  Ingredientes:
+  
+  -1 cebola grande fatiada
+  -3 xícaras de caldo de carne
+  -1 xícara de leite
+  -6 fatias de pão francês
+  -1/4 de xícara de queijo parmesão ralado
+  -1 colher de sopa de manteiga
+  -1 colher de chá de tomilho seco
+  -1/4 de colher de chá de sal
+  -1/4 de colher de chá de pimenta-do-reino
+  
+  Instruções:
+  
+  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
+  2. Adicione o caldo de carne, o leite, o tomilho, o sal e a pimenta. Deixe ferver.
+  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
+  4. Coloque as fatias de pão francês em tigelas de sopa.
+  5. Coloque a sopa sobre o pão.
+  6. Polvilhe com queijo parmesão.
+  
+  2. Sopa de Cebola e Batata
+  
+  Ingredientes:
+  
+  - 1 cebola grande picada
+  - 2 xícaras de batatas em cubos
+  - 3 xícaras de caldo de legumes
+  - 1 xícara de leite
+  - 1/4 colher de chá de pimenta-do-reino
+  
+  Modo de Preparo:
+  
+  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
+  2. Adicione as batatas, o caldo de legumes, o leite e a pimenta. Deixe ferver.
+  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
+  4. Sirva quente.
+  
+  3. Sopa Cremosa de Cebola
+  
+  Ingredientes:
+  
+  - 1 cebola grande picada
+  - 3 xícaras de caldo de legumes
+  - 1 xícara de leite
+  - 1/4 colher de chá de pimenta-do-reino
+  - 1/4 xícara de farinha de trigo
+  - 1/2 xícara de queijo parmesão ralado
+  
+  Modo de Preparo:
+  
+  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
+  2. Adicione o caldo de legumes, o leite e a pimenta. Deixe ferver.
+  
+  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
+  4. Em uma tigela pequena, misture a farinha e o queijo parmesão até obter uma mistura homogênea.
+  5. Adicione à sopa e cozinhe em fogo baixo por mais 5 minutos ou até engrossar.
+```
 
   Como você pode ver, qualquer receita com leite foi filtrada. Mas, se você for intolerante à lactose, pode querer filtrar receitas com queijo também, então é importante ser claro.
 
@@ -518,45 +519,44 @@ Para melhorar ainda mais, queremos adicionar o seguinte:
 
   Localize a parte do código que imprime o resultado do primeiro prompt e adicione o seguinte código logo abaixo:
 
-  ```python
+```python
   old_prompt_result = completion.choices[0].message.content
-  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
+  prompt = "Elabore uma lista de compras para as receitas geradas e, por favor, não inclua ingredientes que eu já tenha."
 
   new_prompt = f"{old_prompt_result} {prompt}"
   messages = [{"role": "user", "content": new_prompt}]
   completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
 
   # print response
-  print("Shopping list:")
+  print("Lista de compras:")
   print(completion.choices[0].message.content)
-  ```
+```
 
   Note o seguinte:
 
   1. Estamos construindo um novo prompt adicionando o resultado do primeiro prompt ao novo prompt:
 
-     ```python
-     new_prompt = f"{old_prompt_result} {prompt}"
-     ```
+```python
+  new_prompt = f"{old_prompt_result} {prompt}"
+```
 1. Fazemos uma nova requisição, mas também considerando o número de tokens que pedimos no primeiro prompt, então desta vez definimos `max_tokens` como 1200.
 
 ```python
-     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-     ```
+  completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+```
 
 Testando esse código, chegamos agora à seguinte saída:
 
 ```output
-     No of recipes (for example, 5): 2
-     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
-     Filter (for example, vegetarian, vegan, or gluten-free): sugar
-
-
-     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
-     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
-     Shopping list:
-     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
-     ```
+  Número de receitas (por exemplo, 5): 2
+  Lista de ingredientes (por exemplo, frango, batata e cenoura): maçã, farinha
+  Filtro (por exemplo, vegetariano, vegano ou sem glúten): açúcar
+  
+  - Panquecas de maçã e farinha: 1 xícara de farinha, 1/2 colher de chá de fermento em pó, 1/2 colher de chá de bicarbonato de sódio, 1/4 colher de chá de sal, 1 colher de sopa de açúcar, 1 ovo, 1 xícara de leitelho ou leite azedo, 1/4 xícara de manteiga derretida, 1 maçã Granny Smith descascada e ralada
+  - Bolinhos de maçã: 1 1/2 xícaras de farinha, 1 colher de chá de fermento em pó, 1/4 colher de chá de sal, 1/4 colher de chá de bicarbonato de sódio, 1/4 colher de chá de noz-moscada, 1/4 colher de chá de canela, 1/4 colher de chá de pimenta da Jamaica, 1/4 xícara de açúcar, 1/4 xícara de gordura vegetal, 1/4 xícara de leite, 1 ovo, 2 xícaras Maçãs raladas e descascadas
+  Lista de compras:
+  - Farinha, fermento em pó, bicarbonato de sódio, sal, açúcar, ovo, leitelho, manteiga, maçã, noz-moscada, canela, pimenta-da-jamaica
+```
 
 ## Melhore sua configuração
 
@@ -573,21 +573,21 @@ O que temos até agora é um código que funciona, mas há alguns ajustes que de
      
 > Note que, para Azure, você precisa definir as seguintes variáveis de ambiente:
 
-     ```bash
+```bash
      OPENAI_API_TYPE=azure
      OPENAI_API_VERSION=2023-05-15
      OPENAI_API_BASE=<replace>
-     ```
+```
 
-     No código, você carregaria as variáveis de ambiente assim:
+No código, você carregaria as variáveis de ambiente assim:
 
-     ```python
+```python
      from dotenv import load_dotenv
 
      load_dotenv()
 
      openai.api_key = os.environ["OPENAI_API_KEY"]
-     ```
+```
 
 - **Uma palavra sobre o comprimento dos tokens**. Devemos considerar quantos tokens precisamos para gerar o texto desejado. Tokens custam dinheiro, então, sempre que possível, devemos tentar ser econômicos com a quantidade de tokens usados. Por exemplo, podemos reformular o prompt para usar menos tokens?
 
@@ -624,14 +624,14 @@ Aqui estão algumas sugestões:
 Abaixo está um prompt inicial, veja como você pode usá-lo e ajustá-lo ao seu gosto.
 
 ```text
-- "You're an expert on the Python language
+- "Você é um especialista na linguagem Python
 
-    Suggest a beginner lesson for Python in the following format:
+Sugira uma aula para iniciantes em Python no seguinte formato:
 
-    Format:
-    - concepts:
-    - brief explanation of the lesson:
-    - exercise in code with solutions"
+Formato:
+- conceitos:
+- breve explicação da aula:
+- exercício de código com soluções"
 ```
 
 ### Bot de história
@@ -639,10 +639,10 @@ Abaixo está um prompt inicial, veja como você pode usá-lo e ajustá-lo ao seu
 Aqui estão alguns prompts que você poderia usar:
 
 ```text
-- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
-- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
+- "Você é Abe Lincoln, conte-me sobre você em 3 frases e responda usando gramática e palavras que Abe teria usado"
+- "Você é Abe Lincoln, responda usando gramática e palavras que Abe teria usado:
 
-   Tell me about your greatest accomplishments, in 300 words"
+Conte-me sobre suas maiores realizações, em 300 palavras"
 ```
 
 ## Verificação de conhecimento
