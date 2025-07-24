@@ -2,70 +2,70 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:10:18+00:00",
+  "translation_date": "2025-07-09T17:20:07+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "mo"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.mo.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.mo.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
-## مقدمة
+## 介紹
 
-تمثل الوكلاء الذكاء الاصطناعي تطورًا مثيرًا في الذكاء الاصطناعي التوليدي، مما يمكن نماذج اللغة الكبيرة (LLMs) من التطور من مساعدين إلى وكلاء قادرين على اتخاذ الإجراءات. تُمكِّن أطر عمل الوكلاء الذكاء الاصطناعي المطورين من إنشاء تطبيقات تمنح LLMs الوصول إلى الأدوات وإدارة الحالة. كما تعزز هذه الأطر الرؤية، مما يسمح للمستخدمين والمطورين بمراقبة الإجراءات المخطط لها من قبل LLMs، وبالتالي تحسين إدارة التجربة.
+AI Agents 是生成式 AI 領域中令人振奮的發展，讓大型語言模型（LLMs）從助理進化成能夠採取行動的代理人。AI Agent 框架讓開發者能夠創建應用程式，賦予 LLMs 使用工具和狀態管理的能力。這些框架也提升了可視性，讓使用者和開發者能監控 LLMs 計劃的行動，從而改善體驗管理。
 
-ستغطي الدرس المجالات التالية:
+本課程將涵蓋以下主題：
 
-- فهم ما هو وكيل الذكاء الاصطناعي - ما هو وكيل الذكاء الاصطناعي بالضبط؟
-- استكشاف أربع أطر عمل مختلفة لوكلاء الذكاء الاصطناعي - ما الذي يجعلها فريدة؟
-- تطبيق هؤلاء الوكلاء الذكاء الاصطناعي على حالات استخدام مختلفة - متى يجب أن نستخدم وكلاء الذكاء الاصطناعي؟
+- 了解什麼是 AI Agent — AI Agent 究竟是什麼？
+- 探索四種不同的 AI Agent 框架 — 它們有何獨特之處？
+- 將這些 AI Agents 應用於不同的使用案例 — 什麼時候該使用 AI Agents？
 
-## أهداف التعلم
+## 學習目標
 
-بعد أخذ هذا الدرس، ستكون قادرًا على:
+完成本課程後，你將能夠：
 
-- شرح ما هي وكلاء الذكاء الاصطناعي وكيف يمكن استخدامها.
-- فهم الاختلافات بين بعض أطر عمل وكلاء الذكاء الاصطناعي الشهيرة، وكيف تختلف.
-- فهم كيفية عمل وكلاء الذكاء الاصطناعي لبناء تطبيقات بها.
+- 解釋什麼是 AI Agents 以及它們的應用方式。
+- 了解一些熱門 AI Agent 框架之間的差異及其不同之處。
+- 理解 AI Agents 的運作原理，進而構建相關應用。
 
-## ما هي وكلاء الذكاء الاصطناعي؟
+## 什麼是 AI Agents？
 
-وكلاء الذكاء الاصطناعي مجال مثير للغاية في عالم الذكاء الاصطناعي التوليدي. مع هذا الإثارة يأتي أحيانًا ارتباك في المصطلحات وتطبيقها. للحفاظ على الأمور بسيطة وشاملة لمعظم الأدوات التي تشير إلى وكلاء الذكاء الاصطناعي، سنستخدم هذا التعريف:
+AI Agents 是生成式 AI 領域中非常令人興奮的領域。隨著熱潮而來的，往往也會有術語和應用上的混淆。為了簡化並涵蓋大多數稱為 AI Agents 的工具，我們將採用以下定義：
 
-تسمح وكلاء الذكاء الاصطناعي لنماذج اللغة الكبيرة (LLMs) بتنفيذ المهام من خلال منحها الوصول إلى **الحالة** و **الأدوات**.
+AI Agents 讓大型語言模型（LLMs）能夠透過獲取**狀態**和**工具**來執行任務。
 
-![نموذج الوكيل](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.mo.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.mo.png)
 
-لنعرّف هذه المصطلحات:
+讓我們定義這些術語：
 
-**نماذج اللغة الكبيرة** - هذه هي النماذج المشار إليها طوال هذه الدورة مثل GPT-3.5، GPT-4، Llama-2، إلخ.
+**大型語言模型** — 指本課程中提及的模型，如 GPT-3.5、GPT-4、Llama-2 等。
 
-**الحالة** - يشير هذا إلى السياق الذي يعمل فيه LLM. يستخدم LLM سياق أفعاله السابقة والسياق الحالي، مما يوجه اتخاذ القرار للخطوات التالية. تسمح أطر عمل وكلاء الذكاء الاصطناعي للمطورين بالحفاظ على هذا السياق بشكل أسهل.
+**狀態** — 指 LLM 正在運作的上下文。LLM 利用過去行動的上下文和當前情境，來指導後續行動的決策。AI Agent 框架讓開發者更容易維護這個上下文。
 
-**الأدوات** - لإكمال المهمة التي طلبها المستخدم والتي خطط لها LLM، يحتاج LLM إلى الوصول إلى الأدوات. بعض الأمثلة على الأدوات يمكن أن تكون قاعدة بيانات، واجهة برمجة تطبيقات، تطبيق خارجي أو حتى LLM آخر!
+**工具** — 為了完成使用者請求且 LLM 已規劃的任務，LLM 需要使用工具。工具的例子包括資料庫、API、外部應用程式，甚至是另一個 LLM！
 
-هذه التعريفات ستوفر لك أساسًا جيدًا للمضي قدمًا أثناء استكشاف كيفية تنفيذها. لنستكشف بعض أطر عمل وكلاء الذكاء الاصطناعي المختلفة:
+這些定義將幫助你在接下來了解它們如何被實作時有良好的基礎。接下來讓我們探索幾種不同的 AI Agent 框架：
 
-## وكلاء LangChain
+## LangChain Agents
 
-[وكلاء LangChain](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) هو تنفيذ للتعريفات التي قدمناها أعلاه.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) 是上述定義的實作範例。
 
-لإدارة **الحالة**، يستخدم وظيفة مدمجة تسمى `AgentExecutor`. يقبل هذا `agent` المحددة و`tools` المتاحة له.
+為了管理**狀態**，它使用一個內建函式 `AgentExecutor`。此函式接受已定義的 `agent` 和可用的 `tools`。
 
-كما يخزن `Agent Executor` تاريخ الدردشة لتوفير سياق الدردشة.
+`AgentExecutor` 也會儲存聊天歷史，以提供對話的上下文。
 
-![وكلاء Langchain](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.mo.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.mo.png)
 
-يقدم LangChain [كتالوج الأدوات](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) التي يمكن استيرادها إلى تطبيقك حيث يمكن للLLM الوصول إليها. يتم إنشاء هذه الأدوات من قبل المجتمع وفريق LangChain.
+LangChain 提供一個[工具目錄](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)，可以匯入你的應用程式，讓 LLM 獲得存取權。這些工具由社群和 LangChain 團隊共同開發。
 
-يمكنك بعد ذلك تحديد هذه الأدوات وتمريرها إلى `Agent Executor`.
+你可以定義這些工具並傳遞給 `AgentExecutor`。
 
-الرؤية هي جانب مهم آخر عند الحديث عن وكلاء الذكاء الاصطناعي. من المهم لمطوري التطبيقات فهم أي أداة يستخدمها LLM ولماذا. لذلك، قام فريق LangChain بتطوير LangSmith.
+在談論 AI Agents 時，可視性也是一個重要面向。應用程式開發者需要了解 LLM 正在使用哪個工具以及原因。為此，LangChain 團隊開發了 LangSmith。
 
 ## AutoGen
 
-الإطار التالي لوكيل الذكاء الاصطناعي الذي سنناقشه هو [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). يركز AutoGen بشكل أساسي على المحادثات. الوكلاء هم **قابلون للمحادثة** و **قابلون للتخصيص**.
+接下來要介紹的 AI Agent 框架是 [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)。AutoGen 的主要焦點是對話。Agents 既是**可對話的**，也是**可自訂的**。
 
-**قابل للمحادثة -** يمكن للLLMs بدء ومتابعة محادثة مع LLM آخر لإكمال مهمة. يتم ذلك عن طريق إنشاء `AssistantAgents` ومنحهم رسالة نظام محددة.
+**可對話的** — LLMs 可以與另一個 LLM 開始並持續對話，以完成任務。這是透過建立 `AssistantAgents` 並給予特定的系統訊息來實現。
 
 ```python
 
@@ -73,38 +73,38 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**قابل للتخصيص** - يمكن تعريف الوكلاء ليس فقط كLLMs ولكن كأداة أو مستخدم. كمطور، يمكنك تعريف `UserProxyAgent` الذي يكون مسؤولًا عن التفاعل مع المستخدم للحصول على الملاحظات في إكمال مهمة. يمكن أن تواصل هذه الملاحظات تنفيذ المهمة أو توقفها.
+**可自訂的** — Agents 不僅可以定義為 LLM，也可以是使用者或工具。作為開發者，你可以定義一個 `UserProxyAgent`，負責與使用者互動以取得完成任務的回饋。這些回饋可以用來繼續執行任務或停止任務。
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
 ```
 
-### الحالة والأدوات
+### 狀態與工具
 
-لتغيير وإدارة الحالة، يقوم وكيل المساعد بإنشاء كود Python لإكمال المهمة.
+為了變更和管理狀態，助理 Agent 會產生 Python 程式碼來完成任務。
 
-إليك مثال على العملية:
+以下是流程範例：
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.mo.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.mo.png)
 
-#### LLM معرف برسالة نظام
+#### 以系統訊息定義 LLM
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-توجه رسالة النظام هذه LLM المحدد إلى الوظائف ذات الصلة بمهمته. تذكر، مع AutoGen يمكنك أن يكون لديك العديد من وكلاء المساعدين المحددين برسائل نظام مختلفة.
+此系統訊息指示特定 LLM 哪些函式與其任務相關。請記得，使用 AutoGen 你可以定義多個具有不同系統訊息的 AssistantAgents。
 
-#### الدردشة تبدأ من قبل المستخدم
+#### 對話由使用者啟動
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-هذه الرسالة من الوكيل البشري (Human) هي ما سيبدأ عملية الوكيل لاستكشاف الوظائف المحتملة التي ينبغي تنفيذها.
+這則來自 user_proxy（人類）的訊息會啟動 Agent 探索應該執行的可能函式。
 
-#### تنفيذ الوظيفة
+#### 執行函式
 
 ```bash
 chatbot (to user_proxy):
@@ -115,58 +115,59 @@ chatbot (to user_proxy):
 
 ```
 
-بمجرد معالجة الدردشة الأولية، سيرسل الوكيل الأداة المقترحة لاستدعاء. في هذه الحالة، هي وظيفة تسمى `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+初始對話處理後，Agent 會送出建議呼叫的工具。在此例中，是名為 `get_weather` 的函式。根據你的設定，此函式可以由 Agent 自動執行並讀取結果，或根據使用者輸入執行。
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+你可以參考[AutoGen 程式碼範例](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst)以進一步了解如何開始構建。
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+接下來要探討的代理框架是 [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst)。它被稱為「以程式碼為先」的代理，因為它不僅處理 `strings`，還能處理 Python 中的 DataFrames。這對於資料分析和生成任務非常有用，例如製作圖表或產生隨機數字。
 
-### State and Tools
+### 狀態與工具
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+為了管理對話狀態，TaskWeaver 採用 `Planner` 的概念。`Planner` 是一個 LLM，負責接收使用者請求並規劃完成該請求所需的任務。
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. يمكن أن تكون هذه فئات Python أو مترجم كود عام. يتم تخزين هذه المكونات الإضافية كتمثيلات لتساعد LLM على البحث بشكل أفضل عن المكون الإضافي الصحيح.
+為了完成任務，`Planner` 可使用稱為 `Plugins` 的工具集合。這些可以是 Python 類別或通用程式碼解譯器。這些插件以嵌入向量形式儲存，讓 LLM 更容易搜尋正確的插件。
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.mo.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.mo.png)
 
-إليك مثال على مكون إضافي للتعامل مع اكتشاف الشذوذ:
+以下是一個用於異常偵測的插件範例：
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-يتم التحقق من الكود قبل التنفيذ. ميزة أخرى لإدارة السياق في Taskweaver هي `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+程式碼會在執行前進行驗證。Taskweaver 管理上下文的另一個功能是 `experience`。Experience 允許將對話上下文長期儲存在 YAML 檔案中。這可設定讓 LLM 隨著時間累積先前對話經驗，提升特定任務的表現。
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` للمحادثة و`tools` هي نماذج ذكاء اصطناعي أخرى. كل من نماذج الذكاء الاصطناعي هي نماذج متخصصة تؤدي مهام معينة مثل اكتشاف الكائنات، النسخ أو وصف الصور.
+最後要介紹的代理框架是 [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)。JARVIS 的獨特之處在於它使用 LLM 來管理對話的 `state`，而 `tools` 則是其他 AI 模型。這些 AI 模型是專門執行特定任務的模型，如物件偵測、語音轉錄或影像描述。
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.mo.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.mo.png)
 
-يستقبل LLM، كونه نموذجًا متعدد الأغراض، الطلب من المستخدم ويحدد المهمة المحددة وأي حجج/بيانات مطلوبة لإكمال المهمة.
+作為通用模型的 LLM 接收使用者請求，識別具體任務及完成任務所需的參數或資料。
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-ثم يقوم LLM بتنسيق الطلب بطريقة يمكن لنموذج الذكاء الاصطناعي المتخصص تفسيرها، مثل JSON. بمجرد أن يقوم نموذج الذكاء الاصطناعي بإرجاع توقعه بناءً على المهمة، يستقبل LLM الرد.
+LLM 會將請求格式化成專門 AI 模型能理解的格式，例如 JSON。當 AI 模型根據任務回傳預測結果後，LLM 會接收回應。
 
-إذا كانت هناك حاجة إلى نماذج متعددة لإكمال المهمة، فإنه سيفسر الرد من تلك النماذج قبل جمعها لتوليد الرد للمستخدم.
+若任務需要多個模型協作，LLM 也會解讀這些模型的回應，然後整合產生回覆給使用者。
 
-يوضح المثال أدناه كيف سيعمل هذا عندما يطلب المستخدم وصفًا وعددًا للأشياء في صورة:
+以下範例展示當使用者請求描述及計算圖片中物件數量時的運作方式：
 
-## المهمة
+## 作業
 
-لمواصلة تعلمك لوكلاء الذكاء الاصطناعي يمكنك البناء باستخدام AutoGen:
+為了持續學習 AI Agents，你可以使用 AutoGen 建立：
 
-- تطبيق يحاكي اجتماع عمل مع أقسام مختلفة من شركة ناشئة في مجال التعليم.
-- إنشاء رسائل نظام توجه LLMs في فهم الشخصيات المختلفة والأولويات، وتمكين المستخدم من تقديم فكرة منتج جديدة.
-- يجب أن يقوم LLM بعد ذلك بإنشاء أسئلة متابعة من كل قسم لتحسين وتطوير الفكرة والمنتج.
+- 一個模擬教育新創公司不同部門商務會議的應用程式。
+- 創建系統訊息，引導 LLM 理解不同角色和優先事項，並讓使用者推銷新產品構想。
+- LLM 應根據各部門提出的後續問題，精煉並改進推銷和產品構想。
 
-## التعلم لا يتوقف هنا، استمر في الرحلة
+## 學習不止於此，繼續前行
 
-بعد الانتهاء من هذا الدرس، تحقق من [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة رفع مستوى معرفتك بالذكاء الاصطناعي التوليدي!
+完成本課程後，請參考我們的[生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
-I'm sorry, but I'm not familiar with a language named "mo." If "mo" refers to a specific language or dialect, could you please provide more context or clarify the language name?
+**免責聲明**：  
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤譯負責。

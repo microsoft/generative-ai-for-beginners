@@ -2,133 +2,134 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:19:06+00:00",
+  "translation_date": "2025-07-09T06:08:36+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "fi"
 }
 -->
 # Osallistuminen
 
-Tämä projekti toivottaa tervetulleiksi osallistumiset ja ehdotukset. Useimmat osallistumiset edellyttävät, että hyväksyt Contributor License Agreement (CLA) -sopimuksen, jossa ilmoitat, että sinulla on oikeus myöntää meille oikeudet käyttää panostasi. Lisätietoja löytyy osoitteesta <https://cla.microsoft.com>.
+Tämä projekti toivottaa tervetulleiksi panokset ja ehdotukset. Useimmat panokset edellyttävät, että hyväksyt Contributor License Agreementin (CLA), jossa vahvistat, että sinulla on oikeus ja todellisuudessa myönnät meille oikeudet käyttää panostasi. Lisätietoja löytyy osoitteesta <https://cla.microsoft.com>.
 
-> Tärkeää: Kun käännät tekstiä tässä repoissa, varmista, ettet käytä konekäännöstä. Varmistamme käännökset yhteisön kautta, joten tarjoudu käännöksiin vain kielillä, joissa olet taitava.
+> Tärkeää: kun käännät tekstiä tässä repossa, varmista, ettet käytä konekäännöstä. Tarkistamme käännökset yhteisön avulla, joten ilmoittaudu vapaaehtoiseksi vain kielissä, joissa olet taitava.
 
-Kun lähetät pull requestin, CLA-bot määrittää automaattisesti, tarvitsetko CLA:n, ja merkitsee PR:n asianmukaisesti (esim. label, kommentti). Seuraa yksinkertaisesti botin antamia ohjeita. Sinun tarvitsee tehdä tämä vain kerran kaikissa CLA:ta käyttävissä repossa.
+Kun lähetät pull requestin, CLA-botti määrittää automaattisesti, tarvitsetko CLA:n ja merkitsee PR:n asianmukaisesti (esim. tunniste, kommentti). Noudata vain botin antamia ohjeita. Tämä riittää tekemään vain kerran kaikissa CLA:ta käyttävissä repohin.
 
 ## Käyttäytymissäännöt
 
-Tämä projekti on omaksunut [Microsoftin avoimen lähdekoodin käyttäytymissäännöt](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Lisätietoja löytyy [käyttäytymissääntöjen UKK:sta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) tai ota yhteyttä [opencode@microsoft.com](mailto:opencode@microsoft.com) lisäkysymyksissä tai -kommenteissa.
+Tämä projekti on ottanut käyttöön [Microsoft Open Source Code of Conductin](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).  
+Lisätietoja löydät [Code of Conduct FAQ:sta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) tai ota yhteyttä osoitteeseen [opencode@microsoft.com](mailto:opencode@microsoft.com) lisäkysymyksiä tai kommentteja varten.
 
 ## Kysymys tai ongelma?
 
-Älä avaa GitHub-ongelmia yleisille tukikysymyksille, sillä GitHub-listaa tulisi käyttää ominaisuuspyyntöihin ja virheraportteihin. Näin voimme helpommin seurata varsinaisia ongelmia tai bugeja koodista ja pitää yleisen keskustelun erillään varsinaisesta koodista.
+Älä avaa GitHub-issueita yleisille tukikysymyksille, sillä GitHub-listaa tulisi käyttää ominaisuuspyyntöihin ja bugiraportteihin. Näin voimme helpommin seurata todellisia ongelmia tai bugeja koodissa ja pitää yleisen keskustelun erillään varsinaisesta koodista.
 
-## Kirjoitusvirheet, ongelmat, bugit ja osallistumiset
+## Kirjoitusvirheet, ongelmat, bugit ja panokset
 
-Aina kun teet muutoksia Generative AI for Beginners -repossa, seuraa näitä suosituksia.
+Kun teet muutoksia Generative AI for Beginners -repossa, noudata seuraavia suosituksia.
 
-* Tee aina fork omalle tilillesi ennen kuin teet muutoksia
-* Älä yhdistä useita muutoksia yhteen pull requestiin. Esimerkiksi, lähetä bugikorjaukset ja dokumentaatiopäivitykset erillisinä PR:inä
-* Jos pull requestisi näyttää yhdistämiskonflikteja, varmista, että päivität paikallisen päähaaran vastaamaan päärepon sisältöä ennen kuin teet muutoksia
-* Jos lähetät käännöksen, luo yksi PR kaikille käännetyille tiedostoille, sillä emme hyväksy osittaisia käännöksiä sisällölle
-* Jos lähetät kirjoitusvirheen tai dokumentaation korjauksen, voit yhdistää muutokset yhteen PR:ään, jos se on sopivaa
+* Tee aina oma fork reposta ennen kuin teet muutoksia
+* Älä yhdistä useita muutoksia yhteen pull requestiin. Esimerkiksi lähetä bugikorjaukset ja dokumentaatiopäivitykset erillisinä PR:inä
+* Jos pull requestissasi on merge-konflikteja, varmista, että päivität paikallisen main-haarasi vastaamaan päärepossa olevaa main-haaraa ennen muutosten tekemistä
+* Jos lähetät käännöksen, tee yksi PR kaikista käännetyistä tiedostoista, sillä emme hyväksy osittaisia käännöksiä sisällöstä
+* Jos lähetät kirjoitusvirheen tai dokumentaatiokorjauksen, voit yhdistää muutokset yhteen PR:ään, jos se on sopivaa
 
-## Yleiset ohjeet kirjoittamiseen
+## Yleisiä ohjeita kirjoittamiseen
 
-- Varmista, että kaikki URL-osoitteesi on kääritty hakasulkeisiin, joita seuraa sulku ilman ylimääräisiä välilyöntejä niiden ympärillä tai sisällä `[](../..)`.
-- Varmista, että kaikki suhteelliset linkit (eli linkit muihin tiedostoihin ja kansioihin repossa) alkavat `./` viitaten tiedostoon tai kansioon nykyisessä työskentelyhakemistossa tai `../` viitaten tiedostoon tai kansioon päätyöskentelyhakemistossa.
-- Varmista, että kaikki suhteelliset linkit (eli linkit muihin tiedostoihin ja kansioihin repossa) sisältävät seurantatunnuksen (eli `?` tai `&` sitten `wt.mc_id=` tai `WT.mc_id=`) niiden lopussa.
-- Varmista, että kaikki URL-osoitteet seuraavista domaineista _github.com, microsoft.com, visualstudio.com, aka.ms, ja azure.com_ sisältävät seurantatunnuksen (eli `?` tai `&` sitten `wt.mc_id=` tai `WT.mc_id=`) niiden lopussa.
-- Varmista, ettei linkeissäsi ole maakohtaista lokaalia (eli `/en-us/` tai `/en/`).
-- Varmista, että kaikki kuvat on tallennettu `./images` kansioon.
-- Varmista, että kuvilla on kuvaavat nimet käyttäen englanninkielisiä merkkejä, numeroita ja viivoja kuvan nimessä.
+- Varmista, että kaikki URL-osoitteesi ovat hakasulkeissa ja niitä seuraa sulkeet ilman ylimääräisiä välilyöntejä `[](../..)`.
+- Varmista, että kaikki suhteelliset linkit (eli linkit muihin tiedostoihin ja kansioihin repossa) alkavat `./` viitaten nykyisen työskentelykansion tiedostoon tai kansioon tai `../` viitaten ylemmän tason kansioon tai tiedostoon.
+- Varmista, että kaikissa suhteellisissa linkeissä on seuranta-ID (eli `?` tai `&` ja sitten `wt.mc_id=` tai `WT.mc_id=`) linkin lopussa.
+- Varmista, että kaikissa seuraavien domainien URL-osoitteissa _github.com, microsoft.com, visualstudio.com, aka.ms ja azure.com_ on seuranta-ID (eli `?` tai `&` ja sitten `wt.mc_id=` tai `WT.mc_id=`) linkin lopussa.
+- Varmista, ettei linkeissäsi ole maakohtaisia paikallisasetuksia (esim. `/en-us/` tai `/en/`).
+- Varmista, että kaikki kuvat ovat tallennettu `./images`-kansioon.
+- Varmista, että kuvilla on kuvaavat nimet, joissa on englanninkielisiä merkkejä, numeroita ja väliviivoja.
 
 ## GitHub-työnkulut
 
-Kun lähetät pull requestin, neljä erilaista työnkulkua aktivoituu tarkistamaan edelliset säännöt.
-Seuraa yksinkertaisesti täällä listattuja ohjeita läpäistäksesi työnkulun tarkistukset.
+Kun lähetät pull requestin, neljä eri työnkulkua käynnistyy tarkistamaan yllä olevat säännöt.  
+Noudata tässä annettuja ohjeita läpäistäksesi työnkulkujen tarkistukset.
 
 - [Tarkista rikkinäiset suhteelliset polut](../..)
-- [Tarkista, että poluilla on seuranta](../..)
-- [Tarkista, että URL-osoitteilla on seuranta](../..)
-- [Tarkista, ettei URL-osoitteilla ole lokaalia](../..)
+- [Tarkista, että poluissa on seuranta](../..)
+- [Tarkista, että URL-osoitteissa on seuranta](../..)
+- [Tarkista, ettei URL-osoitteissa ole paikallisasetuksia](../..)
 
 ### Tarkista rikkinäiset suhteelliset polut
 
-Tämä työnkulku varmistaa, että kaikki suhteelliset polut tiedostoissasi toimivat.
-Tämä repositorio on otettu käyttöön GitHub-sivuilla, joten sinun on oltava hyvin varovainen kirjoittaessasi linkkejä, jotka yhdistävät kaiken, jotta et ohjaa ketään väärään paikkaan.
+Tämä työnkulku varmistaa, että tiedostoissasi olevat suhteelliset polut toimivat.  
+Tämä repo on julkaistu GitHub Pages -palvelussa, joten sinun täytyy olla tarkkana linkkien kanssa, jotta kukaan ei päädy väärään paikkaan.
 
-Varmistaaksesi, että linkkisi toimivat oikein, käytä yksinkertaisesti VS-koodia tarkistaaksesi sen.
+Varmista linkkien toimivuus käyttämällä VS Codea.
 
-Esimerkiksi, kun viet hiiren minkä tahansa linkin päälle tiedostoissasi, sinua kehotetaan seuraamaan linkkiä painamalla **ctrl + klikkaa**
+Esimerkiksi, kun viet hiiren minkä tahansa linkin päälle tiedostoissasi, voit seurata linkkiä painamalla **ctrl + klikkaus**
 
-![VS-koodi seuraa linkkejä kuvakaappaus](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.fi.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.fi.png)
 
-Jos klikkaat linkkiä eikä se toimi paikallisesti, se varmasti laukaisee työnkulun eikä toimi GitHubissa.
+Jos klikkaat linkkiä ja se ei toimi paikallisesti, työnkulku varmasti epäonnistuu eikä linkki toimi GitHubissa.
 
-Korjataksesi tämän ongelman, yritä kirjoittaa linkki VS-koodin avulla.
+Korjataksesi tämän, kirjoita linkki VS Coden avulla.
 
-Kun kirjoitat `./` tai `../`, VS-koodi kehottaa sinua valitsemaan saatavilla olevista vaihtoehdoista sen mukaan, mitä kirjoitit.
+Kun kirjoitat `./` tai `../`, VS Code ehdottaa käytettävissä olevia vaihtoehtoja kirjoittamasi perusteella.
 
-![VS-koodi valitse suhteellinen polku kuvakaappaus](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.fi.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.fi.png)
 
-Seuraa polkua klikkaamalla haluttua tiedostoa tai kansiota, ja voit olla varma, ettei polkusi ole rikkinäinen.
+Seuraa polkua klikkaamalla haluamaasi tiedostoa tai kansiota, niin voit olla varma, ettei polkusi ole rikki.
 
-Kun lisäät oikean suhteellisen polun, tallenna ja työnnä muutoksesi, työnkulku laukaistaan uudelleen tarkistamaan muutoksesi.
-Jos läpäiset tarkistuksen, olet valmis jatkamaan.
+Kun lisäät oikean suhteellisen polun, tallenna ja työnnä muutokset, työnkulku käynnistyy uudelleen tarkistamaan muutokset.  
+Jos tarkistus menee läpi, voit jatkaa.
 
-### Tarkista, että poluilla on seuranta
+### Tarkista, että poluissa on seuranta
 
-Tämä työnkulku varmistaa, että kaikilla suhteellisilla poluilla on seuranta.
-Tämä repositorio on otettu käyttöön GitHub-sivuilla, joten meidän on seurattava liikkumista eri tiedostojen ja kansioiden välillä.
+Tämä työnkulku varmistaa, että kaikissa suhteellisissa poluissa on seuranta.  
+Repo on julkaistu GitHub Pages -palvelussa, joten meidän täytyy seurata liikkumista eri tiedostojen ja kansioiden välillä.
 
-Varmistaaksesi, että suhteellisilla poluillasi on seuranta, tarkista yksinkertaisesti seuraava teksti `?wt.mc_id=` polun lopussa.
-Jos se on liitetty suhteellisiin polkuihisi, läpäiset tämän tarkistuksen.
-
-Jos ei, saatat saada seuraavan virheen.
-
-![GitHub tarkista polkujen puuttuva seuranta kommentti kuvakaappaus](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.fi.png)
-
-Korjataksesi tämän ongelman, yritä avata tiedostopolku, jonka työnkulku korosti, ja lisää seurantatunnus suhteellisten polkujen loppuun.
-
-Kun lisäät seurantatunnuksen, tallenna ja työnnä muutoksesi, työnkulku laukaistaan uudelleen tarkistamaan muutoksesi.
-Jos läpäiset tarkistuksen, olet valmis jatkamaan.
-
-### Tarkista, että URL-osoitteilla on seuranta
-
-Tämä työnkulku varmistaa, että kaikilla web-URL-osoitteilla on seuranta.
-Tämä repositorio on kaikkien saatavilla, joten sinun on varmistettava, että seuraat pääsyä tietääksesi, mistä liikenne tulee.
-
-Varmistaaksesi, että URL-osoitteillasi on seuranta, tarkista yksinkertaisesti seuraava teksti `?wt.mc_id=` URL-osoitteen lopussa.
-Jos se on liitetty URL-osoitteisiisi, läpäiset tämän tarkistuksen.
+Varmista, että suhteellisissa poluissasi on seuranta tarkistamalla, että polun lopussa on teksti `?wt.mc_id=`.  
+Jos se on lisätty, tarkistus menee läpi.
 
 Jos ei, saatat saada seuraavan virheen.
 
-![GitHub tarkista URL-osoitteiden puuttuva seuranta kommentti kuvakaappaus](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.fi.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.fi.png)
 
-Korjataksesi tämän ongelman, yritä avata tiedostopolku, jonka työnkulku korosti, ja lisää seurantatunnus URL-osoitteiden loppuun.
+Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja lisää seuranta-ID suhteellisten polkujen loppuun.
 
-Kun lisäät seurantatunnuksen, tallenna ja työnnä muutoksesi, työnkulku laukaistaan uudelleen tarkistamaan muutoksesi.
-Jos läpäiset tarkistuksen, olet valmis jatkamaan.
+Kun lisäät seuranta-ID:n, tallenna ja työnnä muutokset, työnkulku käynnistyy uudelleen tarkistamaan muutokset.  
+Jos tarkistus menee läpi, voit jatkaa.
 
-### Tarkista, ettei URL-osoitteilla ole lokaalia
+### Tarkista, että URL-osoitteissa on seuranta
 
-Tämä työnkulku varmistaa, ettei millään web-URL-osoitteella ole maakohtaista lokaalia.
-Tämä repositorio on kaikkien saatavilla ympäri maailmaa, joten sinun on varmistettava, ettet sisällytä maasi lokaalia URL-osoitteisiin.
+Tämä työnkulku varmistaa, että kaikissa web-URL-osoitteissa on seuranta.  
+Repo on kaikkien saatavilla, joten sinun täytyy varmistaa, että liikenteen lähde voidaan jäljittää.
 
-Varmistaaksesi, ettei URL-osoitteillasi ole maakohtaista lokaalia, tarkista yksinkertaisesti seuraava teksti `/en-us/` tai `/en/` tai mikä tahansa muu kielilokaali URL-osoitteessa.
-Jos se ei ole läsnä URL-osoitteissasi, läpäiset tämän tarkistuksen.
+Varmista, että URL-osoitteissasi on seuranta tarkistamalla, että URL:n lopussa on teksti `?wt.mc_id=`.  
+Jos se on lisätty, tarkistus menee läpi.
 
 Jos ei, saatat saada seuraavan virheen.
 
-![GitHub tarkista maan lokaali kommentti kuvakaappaus](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.fi.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.fi.png)
 
-Korjataksesi tämän ongelman, yritä avata tiedostopolku, jonka työnkulku korosti, ja poista maan lokaali URL-osoitteista.
+Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja lisää seuranta-ID URL-osoitteiden loppuun.
 
-Kun poistat maan lokaalin, tallenna ja työnnä muutoksesi, työnkulku laukaistaan uudelleen tarkistamaan muutoksesi.
-Jos läpäiset tarkistuksen, olet valmis jatkamaan.
+Kun lisäät seuranta-ID:n, tallenna ja työnnä muutokset, työnkulku käynnistyy uudelleen tarkistamaan muutokset.  
+Jos tarkistus menee läpi, voit jatkaa.
 
-Onnittelut! Palaamme asiaan mahdollisimman pian palautteen kanssa osallistumisestasi.
+### Tarkista, ettei URL-osoitteissa ole paikallisasetuksia
+
+Tämä työnkulku varmistaa, ettei web-URL-osoitteissa ole maakohtaisia paikallisasetuksia.  
+Repo on kaikkien saatavilla ympäri maailmaa, joten sinun täytyy varmistaa, ettei URL-osoitteissa ole oman maasi paikallisasetusta.
+
+Varmista, ettei URL-osoitteissasi ole paikallisasetusta tarkistamalla, ettei URL:ssa ole tekstiä `/en-us/`, `/en/` tai muita kielikohtaisia paikallisasetuksia.  
+Jos niitä ei ole, tarkistus menee läpi.
+
+Jos on, saatat saada seuraavan virheen.
+
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.fi.png)
+
+Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja poista maakohtainen paikallisasetus URL-osoitteista.
+
+Kun poistat paikallisasetuksen, tallenna ja työnnä muutokset, työnkulku käynnistyy uudelleen tarkistamaan muutokset.  
+Jos tarkistus menee läpi, voit jatkaa.
+
+Onnittelut! Otamme sinuun yhteyttä mahdollisimman pian palautteen kanssa panoksestasi.
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, ole tietoinen siitä, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntäjää. Emme ole vastuussa väärinkäsityksistä tai virheellisistä tulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

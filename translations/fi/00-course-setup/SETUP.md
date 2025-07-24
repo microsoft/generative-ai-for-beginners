@@ -2,63 +2,61 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f12faf55ab620aef9f6761679b7ac68b",
-  "translation_date": "2025-05-19T12:52:00+00:00",
+  "translation_date": "2025-07-09T07:32:20+00:00",
   "source_file": "00-course-setup/SETUP.md",
   "language_code": "fi"
 }
 -->
-# Aseta kehitysympäristösi
+# Määritä kehitysympäristösi
 
-Olemme luoneet tämän repositorion ja kurssin [kehityskontin](https://containers.dev?WT.mc_id=academic-105485-koreyst) avulla, joka sisältää universaalin suoritusympäristön, joka tukee Python3-, .NET-, Node.js- ja Java-kehitystä. Asiaan liittyvä konfiguraatio on määritelty `devcontainer.json`-tiedostossa, joka sijaitsee `.devcontainer/`-kansiossa tämän repositorion juurella.
+Olemme määrittäneet tämän repositorion ja kurssin [kehityssäiliöllä](https://containers.dev?WT.mc_id=academic-105485-koreyst), jossa on Universal runtime, joka tukee Python3-, .NET-, Node.js- ja Java-kehitystä. Asiaankuuluva konfiguraatio on määritelty `devcontainer.json`-tiedostossa, joka sijaitsee `.devcontainer/`-kansiossa tämän repositorion juurihakemistossa.
 
-Aktivoidaksesi kehityskontin, käynnistä se [GitHub Codespacesissa](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (pilvipohjainen suoritusympäristö) tai [Docker Desktopissa](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (paikallisesti laitteella). Lue [tämä dokumentaatio](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) saadaksesi lisätietoja kehityskonttien toiminnasta VS Codessa.  
+Aktivoi kehityssäiliö käynnistämällä se [GitHub Codespacesissa](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (pilvipohjainen runtime) tai [Docker Desktopissa](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (paikallinen laite). Lue [tämä dokumentaatio](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) saadaksesi lisätietoja siitä, miten kehityssäiliöt toimivat VS Codessa.
 
 > [!TIP]  
-> Suosittelemme käyttämään GitHub Codespacesia nopeaan aloitukseen minimaalisella vaivalla. Se tarjoaa avokätisen [ilmaisen käyttökiintiön](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) henkilökohtaisille tileille. Konfiguroi [aikakatkaisut](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) lopettaaksesi tai poistaaksesi käyttämättömät codespacet maksimoidaksesi kiintiön käyttöä.
-
+> Suosittelemme GitHub Codespacesin käyttöä nopeaan alkuun mahdollisimman vähällä vaivalla. Se tarjoaa anteliaan [ilmaisen käyttökiintiön](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) henkilökohtaisille tileille. Määritä [aikakatkaisut](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) pysäyttämään tai poistamaan käyttämättömät codespacet, jotta saat kiintiöstäsi parhaan hyödyn.
 
 ## 1. Tehtävien suorittaminen
 
-Jokaisessa oppitunnissa on _valinnaisia_ tehtäviä, jotka voivat olla saatavilla yhdessä tai useammassa ohjelmointikielessä, kuten: Python, .NET/C#, Java ja JavaScript/TypeScript. Tämä osio tarjoaa yleisiä ohjeita tehtävien suorittamiseen.
+Jokaisella oppitunnilla on _valinnaisia_ tehtäviä, jotka voivat olla tarjolla yhdessä tai useammassa ohjelmointikielessä, kuten Python, .NET/C#, Java ja JavaScript/TypeScript. Tässä osiossa annetaan yleisiä ohjeita näiden tehtävien suorittamiseen.
 
 ### 1.1 Python-tehtävät
 
-Python-tehtävät ovat joko sovelluksia (`.py`-tiedostoja) tai Jupyter-notebookeja (`.ipynb`-tiedostoja). 
-- Ajaaksesi notebookin, avaa se Visual Studio Codessa, klikkaa _Select Kernel_ (oikealla ylhäällä) ja valitse oletus Python 3 -vaihtoehto. Voit nyt _Run All_ suorittaaksesi notebookin.
-- Ajaaksesi Python-sovelluksia komentoriviltä, seuraa tehtäväkohtaisia ohjeita varmistaaksesi, että valitset oikeat tiedostot ja annat tarvittavat argumentit.
+Python-tehtävät toimitetaan joko sovelluksina (`.py`-tiedostot) tai Jupyter-muistikirjoina (`.ipynb`-tiedostot).  
+- Suorittaaksesi muistikirjan, avaa se Visual Studio Codessa, klikkaa _Select Kernel_ (oikeassa yläkulmassa) ja valitse näkyviin tuleva oletusvaihtoehto Python 3. Voit nyt valita _Run All_ suorittaaksesi koko muistikirjan.  
+- Python-sovellusten suorittamiseksi komentoriviltä noudata tehtäväkohtaisia ohjeita varmistaaksesi, että valitset oikeat tiedostot ja annat tarvittavat argumentit.
 
-## 2. Palveluntarjoajien konfigurointi
+## 2. Palveluntarjoajien määrittäminen
 
-Tehtävät **voivat** olla asetettu toimimaan yhden tai useamman suuren kielimallin (LLM) käyttöönoton kanssa tuetun palveluntarjoajan, kuten OpenAI, Azure tai Hugging Face, kautta. Nämä tarjoavat _hostatun päätepisteen_ (API), jota voimme käyttää ohjelmallisesti oikeilla tunnuksilla (API-avain tai token). Tässä kurssissa käsittelemme näitä palveluntarjoajia:
+Tehtävät **voivat** myös olla määritetty toimimaan yhden tai useamman suuren kielimallin (LLM) käyttöönoton kanssa tuetun palveluntarjoajan, kuten OpenAI:n, Azuren tai Hugging Facen kautta. Nämä tarjoavat _isännöidyn päätepisteen_ (API), johon pääsemme ohjelmallisesti käsiksi oikeilla tunnistetiedoilla (API-avain tai token). Tässä kurssissa käsittelemme seuraavia palveluntarjoajia:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) erilaisilla malleilla, mukaan lukien ydin GPT-sarja.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI-malleille keskittyen yritysvalmiuteen
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) avoimen lähdekoodin malleille ja ennustepalvelimelle
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), jolla on monipuolisia malleja, mukaan lukien GPT-sarjan ydint mallit.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst), joka keskittyy OpenAI-malleihin yrityskäyttövalmiudella
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) avoimen lähdekoodin malleille ja inferenssipalvelimelle
 
-**Sinun tulee käyttää omia tilejäsi näissä harjoituksissa**. Tehtävät ovat valinnaisia, joten voit valita yhden, kaikki - tai ei mitään - palveluntarjoajista kiinnostuksesi mukaan. Jotkin ohjeet rekisteröitymiseen:
+**Näitä harjoituksia varten tarvitset omat tilisi**. Tehtävät ovat valinnaisia, joten voit valita, määritätkö yhden, kaikki vai et yhtään palveluntarjoajaa kiinnostuksesi mukaan. Tässä ohjeita rekisteröitymiseen:
 
-| Rekisteröityminen | Kustannus | API-avain | Leikkikenttä | Kommentit |
+| Rekisteröityminen | Hinta | API-avain | Playground | Kommentit |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Projektiin perustuva](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Ei-koodia, verkko](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Useita malleja saatavilla |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK-pikakäynnistys](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio-pikakäynnistys](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Täytyy hakea etukäteen](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://huggingface.co/pricing) | [Pääsytokenit](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chatilla on rajoitetusti malleja](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst) | [Projektikohtainen](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Ei-koodia, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Useita malleja saatavilla |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst) | [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Pääsyyn on haettava etukäteen](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst) | [Hugging Chatissa on rajattu määrä malleja](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Noudata alla olevia ohjeita _konfiguroidaksesi_ tämä repositorio eri palveluntarjoajien käyttöön. Tehtävät, jotka vaativat tietyn palveluntarjoajan, sisältävät jonkin näistä tageista tiedostonimessään:
- - `aoai` - vaatii Azure OpenAI -päätepisteen, avaimen
- - `oai` - vaatii OpenAI -päätepisteen, avaimen
- - `hf` - vaatii Hugging Face -tokenin
+Noudata alla olevia ohjeita määrittääksesi tämän repositorion käytettäväksi eri palveluntarjoajien kanssa. Tehtävissä, jotka vaativat tietyn palveluntarjoajan, tiedoston nimessä on jokin seuraavista tunnisteista:  
+ - `aoai` - vaatii Azure OpenAI -päätepisteen ja avaimen  
+ - `oai` - vaatii OpenAI-päätepisteen ja avaimen  
+ - `hf` - vaatii Hugging Face -tokenin  
 
-Voit konfiguroida yhden, ei mitään tai kaikki palveluntarjoajat. Asiaan liittyvät tehtävät yksinkertaisesti epäonnistuvat, jos tunnuksia puuttuu.
+Voit määrittää yhden, useamman tai kaikki palveluntarjoajat. Tehtävät, jotka vaativat tietyn palveluntarjoajan, antavat virheen, jos tunnistetietoja ei ole.
 
-###  2.1. Luo `.env`-tiedosto
+### 2.1. Luo `.env`-tiedosto
 
-Oletamme, että olet jo lukenut yllä olevat ohjeet ja rekisteröitynyt asianmukaisen palveluntarjoajan kanssa sekä saanut tarvittavat tunnukset (API_KEY tai token). Azure OpenAI:n tapauksessa oletamme, että sinulla on myös voimassa oleva Azure OpenAI -palvelun (päätepiste) käyttöönotto, jossa on vähintään yksi GPT-malli otettu käyttöön keskustelun täydentämiseksi.
+Oletamme, että olet jo lukenut yllä olevat ohjeet, rekisteröitynyt asianmukaiselle palveluntarjoajalle ja saanut tarvittavat tunnistetiedot (API_KEY tai token). Azuren OpenAI:n tapauksessa oletamme myös, että sinulla on voimassa oleva käyttöönotto Azure OpenAI -palvelussa (päätepiste), jossa on vähintään yksi GPT-malli chat-suoritusta varten.
 
-Seuraava vaihe on konfiguroida **paikalliset ympäristömuuttujasi** seuraavasti:
+Seuraava vaihe on määrittää **paikalliset ympäristömuuttujat** seuraavasti:
 
-
-1. Katso juurikansiosta `.env.copy`-tiedostoa, jonka sisältö on seuraavanlainen:
+1. Etsi juurihakemistosta `.env.copy`-tiedosto, jonka sisältö on suunnilleen tällainen:
 
    ```bash
    # OpenAI Provider
@@ -75,75 +73,73 @@ Seuraava vaihe on konfiguroida **paikalliset ympäristömuuttujasi** seuraavasti
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Kopioi tiedosto `.env`-tiedostoksi alla olevan komennon avulla. Tämä tiedosto on _gitignore-d_, pitäen salaisuudet turvassa.
+2. Kopioi tiedosto nimellä `.env` alla olevalla komennolla. Tämä tiedosto on _gitignore:ssa_, joten salaisuudet pysyvät turvassa.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Täytä arvot (korvaa paikkamerkit oikealla puolella `=`) kuten seuraavassa osiossa kuvataan.
+3. Täytä arvot (korvaa oikealla puolella olevat paikkamerkit) seuraavan osion ohjeiden mukaisesti.
 
-3. (Vaihtoehto) Jos käytät GitHub Codespacesia, sinulla on mahdollisuus tallentaa ympäristömuuttujat _Codespaces-salaisuuksina_ tähän repositorioon liittyen. Tässä tapauksessa sinun ei tarvitse luoda paikallista .env-tiedostoa. **Huomaa kuitenkin, että tämä vaihtoehto toimii vain, jos käytät GitHub Codespacesia.** Sinun on silti luotava .env-tiedosto, jos käytät Docker Desktopia.
-
+3. (Valinnainen) Jos käytät GitHub Codespacesia, voit tallentaa ympäristömuuttujat _Codespaces-salaisuuksina_, jotka liittyvät tähän repositorioon. Tällöin sinun ei tarvitse määrittää paikallista .env-tiedostoa. **Huomaa kuitenkin, että tämä vaihtoehto toimii vain GitHub Codespacesin kanssa.** Jos käytät Docker Desktopia, sinun on silti määritettävä .env-tiedosto.
 
 ### 2.2. Täytä `.env`-tiedosto
 
-Katsotaanpa nopeasti muuttujien nimiä ymmärtääksemme, mitä ne edustavat:
+Katsotaan nopeasti muuttujien nimet ja mitä ne tarkoittavat:
 
 | Muuttuja  | Kuvaus  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Tämä on käyttäjän pääsytoken, jonka asetat profiilissasi |
-| OPENAI_API_KEY | Tämä on valtuutusavain palvelun käyttöön ei-Azure OpenAI -päätepisteille |
+| HUGGING_FACE_API_KEY | Tämä on käyttäjän käyttöoikeustoken, jonka määritit profiilissasi |
+| OPENAI_API_KEY | Tämä on valtuutusavain palvelun käyttöön ei-Azure OpenAI -päätepisteissä |
 | AZURE_OPENAI_API_KEY | Tämä on valtuutusavain kyseisen palvelun käyttöön |
-| AZURE_OPENAI_ENDPOINT | Tämä on otettu käyttöön Azure OpenAI -resurssin päätepiste |
-| AZURE_OPENAI_DEPLOYMENT | Tämä on _tekstin luomisen_ mallin käyttöönottopäätepiste |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tämä on _tekstin upotusten_ mallin käyttöönottopäätepiste |
+| AZURE_OPENAI_ENDPOINT | Tämä on käyttöönotettu päätepiste Azure OpenAI -resurssille |
+| AZURE_OPENAI_DEPLOYMENT | Tämä on _tekstin generointiin_ käytettävän mallin käyttöönoton päätepiste |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tämä on _tekstin upotuksiin_ käytettävän mallin käyttöönoton päätepiste |
 | | |
 
-Huomaa: Kaksi viimeistä Azure OpenAI -muuttujaa heijastavat oletusmallia keskustelun täydentämiseen (tekstin luominen) ja vektorihakuun (upotukset) vastaavasti. Ohjeet niiden asettamiseen määritetään asiaan liittyvissä tehtävissä.
+Huom: Viimeiset kaksi Azure OpenAI -muuttujaa viittaavat oletusmalliin chat-suoritusta (tekstin generointi) ja vektorihaun (upotukset) osalta. Niiden määrittämisohjeet löytyvät asiaankuuluvista tehtävistä.
 
+### 2.3. Määritä Azure: Portaalista
 
-### 2.3 Konfiguroi Azure: Portaalista
+Azure OpenAI -päätepisteen ja avaimen arvot löytyvät [Azure-portaalista](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), joten aloitetaan sieltä.
 
-Azure OpenAI -päätepisteen ja avainarvot löytyvät [Azure-portaalista](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), joten aloitetaan sieltä.
+1. Mene [Azure-portaaliin](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)  
+2. Klikkaa vasemman laidan valikosta **Keys and Endpoint**  
+3. Klikkaa **Show Keys** -näet seuraavat arvot: KEY 1, KEY 2 ja Endpoint  
+4. Käytä KEY 1 -arvoa muuttujalle AZURE_OPENAI_API_KEY  
+5. Käytä Endpoint-arvoa muuttujalle AZURE_OPENAI_ENDPOINT  
 
-1. Mene [Azure-portaaliin](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Klikkaa **Keys and Endpoint** -vaihtoehtoa sivupalkissa (valikossa vasemmalla).
-1. Klikkaa **Show Keys** - sinun pitäisi nähdä seuraavat: KEY 1, KEY 2 ja Endpoint.
-1. Käytä KEY 1 -arvoa AZURE_OPENAI_API_KEY:lle
-1. Käytä Endpoint-arvoa AZURE_OPENAI_ENDPOINT:lle
+Seuraavaksi tarvitsemme käyttöönotettujen mallien päätepisteet.
 
-Seuraavaksi tarvitsemme päätepisteet käyttöönotetuille malleille.
+1. Klikkaa vasemman laidan valikosta **Model deployments** Azure OpenAI -resurssille  
+2. Kohdesivulla klikkaa **Manage Deployments**
 
-1. Klikkaa **Model deployments** -vaihtoehtoa sivupalkissa (vasemmalla valikossa) Azure OpenAI -resurssille.
-1. Kohdesivulla, klikkaa **Manage Deployments**
+Tämä vie sinut Azure OpenAI Studio -sivustolle, josta löydämme muut arvot alla kuvatulla tavalla.
 
-Tämä vie sinut Azure OpenAI Studio -verkkosivustolle, jossa löydämme muut arvot kuten alla kuvataan.
+### 2.4. Määritä Azure: Studiosta
 
-### 2.4 Konfiguroi Azure: Studiosta
+1. Siirry [Azure OpenAI Studioon](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **resurssiltasi** kuten yllä on kuvattu.  
+2. Klikkaa vasemman laidan välilehteä **Deployments** nähdäksesi tällä hetkellä käytössä olevat mallit.  
+3. Jos haluamaasi mallia ei ole käytössä, käytä **Create new deployment** -toimintoa ottaaksesi sen käyttöön.  
+4. Tarvitset _tekstin generointiin_ tarkoitetun mallin – suosittelemme: **gpt-35-turbo**  
+5. Tarvitset _tekstin upotuksiin_ tarkoitetun mallin – suosittelemme **text-embedding-ada-002**
 
-1. Siirry [Azure OpenAI Studioon](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **resurssistasi** kuten yllä kuvattiin.
-1. Klikkaa **Deployments**-välilehteä (sivupalkki, vasemmalla) nähdäksesi tällä hetkellä käyttöön otetut mallit.
-1. Jos haluttu malli ei ole otettu käyttöön, käytä **Create new deployment** sen käyttöön ottamiseksi.
-1. Tarvitset _tekstin luomisen_ mallin - suosittelemme: **gpt-35-turbo**
-1. Tarvitset _tekstin upotusten_ mallin - suosittelemme **text-embedding-ada-002**
-
-Päivitä nyt ympäristömuuttujat heijastamaan _käyttöönottotunnusta_, jota käytettiin. Tämä on tyypillisesti sama kuin mallin nimi, ellei sitä muutettu eksplisiittisesti. Joten esimerkiksi sinulla saattaa olla:
+Päivitä nyt ympäristömuuttujat vastaamaan käytettyä _Deployment name_ -arvoa. Tämä on yleensä sama kuin mallin nimi, ellei sitä ole erikseen muutettu. Esimerkiksi:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Älä unohda tallentaa .env-tiedostoa, kun olet valmis**. Voit nyt sulkea tiedoston ja palata ohjeisiin notebookin suorittamiseksi.
+**Muista tallentaa .env-tiedosto, kun olet valmis**. Voit nyt sulkea tiedoston ja palata ohjeisiin muistikirjan suorittamisesta.
 
-### 2.5 Konfiguroi OpenAI: Profiilista
+### 2.5. Määritä OpenAI: Profiilista
 
-OpenAI API-avaimesi löytyy [OpenAI-tililtäsi](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jos sinulla ei ole avainta, voit rekisteröityä tilille ja luoda API-avaimen. Kun sinulla on avain, voit käyttää sitä täyttämään `OPENAI_API_KEY`-muuttujan `.env`-tiedostossa.
+OpenAI API-avaimesi löytyy [OpenAI-tililtäsi](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jos sinulla ei vielä ole avainta, voit rekisteröityä tilille ja luoda API-avaimen. Kun sinulla on avain, voit lisätä sen `OPENAI_API_KEY`-muuttujaan `.env`-tiedostossa.
 
-### 2.6 Konfiguroi Hugging Face: Profiilista
+### 2.6. Määritä Hugging Face: Profiilista
 
-Hugging Face -tokenisi löytyy profiilistasi kohdasta [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Älä julkaise tai jaa näitä julkisesti. Sen sijaan, luo uusi token tämän projektin käyttöön ja kopioi se `.env`-tiedostoon `HUGGING_FACE_API_KEY`-muuttujan alle. _Huom:_ Tämä ei ole teknisesti API-avain, mutta sitä käytetään autentikointiin, joten pidämme nimeämiskäytännön johdonmukaisena.
+Hugging Face -tokenisi löytyy profiilistasi kohdasta [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Älä julkaise tai jaa näitä julkisesti. Sen sijaan luo uusi token tätä projektia varten ja kopioi se `.env`-tiedostoon muuttujan `HUGGING_FACE_API_KEY` arvoksi. _Huom:_ Tämä ei teknisesti ole API-avain, mutta sitä käytetään tunnistautumiseen, joten pidämme nimeämiskäytännön johdonmukaisena.
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoriteettina. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntäjää. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

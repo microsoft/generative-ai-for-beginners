@@ -2,87 +2,91 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-05-20T02:28:29+00:00",
+  "translation_date": "2025-07-09T16:52:12+00:00",
   "source_file": "15-rag-and-vector-databases/data/own_framework.md",
   "language_code": "sl"
 }
 -->
 # Uvod v nevronske mreže. Večplastni perceptron
 
-V prejšnjem razdelku ste spoznali najpreprostejši model nevronske mreže - enoplastni perceptron, linearen model za dvoplastno klasifikacijo.
+V prejšnjem poglavju ste spoznali najpreprostejši model nevronske mreže – enoplastni perceptron, linearen model za dvo-razredno klasifikacijo.
 
-V tem razdelku bomo ta model razširili v bolj prilagodljiv okvir, ki nam bo omogočil:
+V tem poglavju bomo ta model razširili v bolj prilagodljiv okvir, ki nam omogoča:
 
-* izvajanje **večplastne klasifikacije** poleg dvoplastne
+* izvajanje **večrazredne klasifikacije** poleg dvo-razredne
 * reševanje **regresijskih problemov** poleg klasifikacije
 * ločevanje razredov, ki niso linearno ločljivi
 
-Razvili bomo tudi svoj modularni okvir v Pythonu, ki nam bo omogočil konstrukcijo različnih arhitektur nevronskih mrež.
+Razvili bomo tudi lasten modularni okvir v Pythonu, ki nam bo omogočil sestavljanje različnih arhitektur nevronskih mrež.
 
 ## Formalizacija strojnega učenja
 
-Začnimo z formalizacijo problema strojnega učenja. Predpostavimo, da imamo učni podatkovni niz **X** z oznakami **Y**, in potrebujemo zgraditi model *f*, ki bo podajal najbolj natančne napovedi. Kakovost napovedi merimo z **funkcijo izgube** ℒ. Pogosto uporabljene funkcije izgube so:
+Začnimo s formalizacijo problema strojnega učenja. Predpostavimo, da imamo učni niz podatkov **X** z oznakami **Y** in želimo zgraditi model *f*, ki bo dajal čim natančnejše napovedi. Kakovost napovedi merimo z **funkcijo izgube** ℒ. Pogosto uporabljene funkcije izgube so:
 
-* Pri regresijskem problemu, ko moramo napovedati število, lahko uporabimo **absolutno napako** ∑<sub>i</sub>|f(x<sup>(i)</sup>)-y<sup>(i)</sup>|, ali **kvadratno napako** ∑<sub>i</sub>(f(x<sup>(i)</sup>)-y<sup>(i)</sup>)<sup>2</sup>
-* Pri klasifikaciji uporabljamo **0-1 izgubo** (ki je v bistvu enaka **natančnosti** modela), ali **logistično izgubo**.
+* Za regresijski problem, ko napovedujemo število, lahko uporabimo **absolutno napako** ∑<sub>i</sub>|f(x<sup>(i)</sup>)-y<sup>(i)</sup>| ali **kvadratno napako** ∑<sub>i</sub>(f(x<sup>(i)</sup>)-y<sup>(i)</sup>)<sup>2</sup>
+* Za klasifikacijo uporabljamo **0-1 izgubo** (kar je v bistvu enako kot **natančnost** modela) ali **logistično izgubo**.
 
-Pri enoplastnem perceptronu je bila funkcija *f* definirana kot linearna funkcija *f(x)=wx+b* (tu je *w* matrica uteži, *x* je vektor vhodnih značilnosti, in *b* je vektor pristranskosti). Pri različnih arhitekturah nevronskih mrež lahko ta funkcija dobi bolj zapleteno obliko.
+Za enoplastni perceptron je bila funkcija *f* definirana kot linearna funkcija *f(x)=wx+b* (tukaj je *w* matrika uteži, *x* vektor vhodnih značilk, *b* pa vektor pristranskosti). Pri različnih arhitekturah nevronskih mrež lahko ta funkcija zavzame bolj zapleteno obliko.
 
-> Pri klasifikaciji je pogosto zaželeno, da dobimo verjetnosti ustreznih razredov kot izhod mreže. Za pretvorbo poljubnih številk v verjetnosti (npr. za normalizacijo izhoda) pogosto uporabljamo **softmax** funkcijo σ, in funkcija *f* postane *f(x)=σ(wx+b)*
+> Pri klasifikaciji je pogosto zaželeno, da kot izhod mreže dobimo verjetnosti pripadajočih razredov. Za pretvorbo poljubnih števil v verjetnosti (npr. za normalizacijo izhoda) pogosto uporabimo **softmax** funkcijo σ, in funkcija *f* postane *f(x)=σ(wx+b)*
 
-V zgornji definiciji *f* sta *w* in *b* imenovana **parametra** θ=⟨*w,b*⟩. Glede na podatkovni niz ⟨**X**,**Y**⟩ lahko izračunamo skupno napako na celotnem podatkovnem nizu kot funkcijo parametrov θ.
+V zgornji definiciji *f* sta *w* in *b* imenovana **parametra** θ=⟨*w,b*⟩. Glede na podatkovni niz ⟨**X**,**Y**⟩ lahko izračunamo skupno napako na celotnem naboru kot funkcijo parametrov θ.
 
-> ✅ **Cilj treniranja nevronske mreže je zmanjšati napako s spreminjanjem parametrov θ**
+> ✅ **Cilj učenja nevronske mreže je minimizirati napako z variiranjem parametrov θ**
 
-## Optimizacija s spustom po gradientu
+## Optimizacija z gradientnim spustom
 
-Obstaja dobro znana metoda optimizacije funkcij, imenovana **spust po gradientu**. Ideja je, da lahko izračunamo odvod (v večdimenzionalnem primeru imenovan **gradient**) funkcije izgube glede na parametre, in spreminjamo parametre tako, da se napaka zmanjša. To lahko formaliziramo takole:
+Obstaja dobro znana metoda optimizacije funkcij, imenovana **gradientni spust**. Ideja je, da lahko izračunamo odvod (v večdimenzionalnem primeru **gradient**) funkcije izgube glede na parametre in parametre spreminjamo tako, da se napaka zmanjša. To lahko formaliziramo takole:
 
-* Inicializiramo parametre z nekimi naključnimi vrednostmi w<sup>(0)</sup>, b<sup>(0)</sup>
+* Inicializiramo parametre z naključnimi vrednostmi w<sup>(0)</sup>, b<sup>(0)</sup>
 * Večkrat ponovimo naslednji korak:
     - w<sup>(i+1)</sup> = w<sup>(i)</sup>-η∂ℒ/∂w
     - b<sup>(i+1)</sup> = b<sup>(i)</sup>-η∂ℒ/∂b
 
-Med treniranjem naj bi bili koraki optimizacije izračunani ob upoštevanju celotnega podatkovnega niza (spomnite se, da se izguba izračuna kot vsota skozi vse učne vzorce). V resničnem življenju pa vzamemo majhne dele podatkovnega niza, imenovane **minibatches**, in izračunamo gradient na podlagi podniza podatkov. Ker je podniz vsakokrat naključno izbran, je taka metoda imenovana **stohastični spust po gradientu** (SGD).
+Med učenjem naj bi optimizacijske korake računali na celotnem naboru podatkov (spomnimo se, da je izguba izračunana kot vsota preko vseh učnih primerov). V praksi pa vzamemo majhne dele podatkov, imenovane **minibatches**, in izračunamo gradient glede na podmnožico podatkov. Ker je podmnožica vsakič izbrana naključno, temu pravimo **stohastični gradientni spust** (SGD).
 
-## Večplastni perceptroni in povratno razširjanje
+## Večplastni perceptroni in povratno širjenje napake
 
-Enoplastna mreža, kot smo videli zgoraj, je sposobna klasificirati linearno ločljive razrede. Za izgradnjo bogatejšega modela lahko kombiniramo več plasti mreže. Matematično bi to pomenilo, da ima funkcija *f* bolj zapleteno obliko, in bo izračunana v več korakih:
+Enoplastna mreža, kot smo videli zgoraj, zmore klasificirati linearno ločljive razrede. Za gradnjo bogatejšega modela lahko združimo več plasti mreže. Matematično to pomeni, da bo funkcija *f* imela bolj zapleteno obliko in se bo izračunala v več korakih:
 * z<sub>1</sub>=w<sub>1</sub>x+b<sub>1</sub>
 * z<sub>2</sub>=w<sub>2</sub>α(z<sub>1</sub>)+b<sub>2</sub>
 * f = σ(z<sub>2</sub>)
 
-Tu je α **ne-linearna aktivacijska funkcija**, σ je softmax funkcija, in parametri θ=<*w<sub>1</sub>,b<sub>1</sub>,w<sub>2</sub>,b<sub>2</sub>*>.
+Tukaj je α **nenelinearna aktivacijska funkcija**, σ pa softmax funkcija, parametri pa θ=<*w<sub>1</sub>,b<sub>1</sub>,w<sub>2</sub>,b<sub>2</sub>*>.
 
-Algoritem spusta po gradientu ostane enak, vendar bo težje izračunati gradiente. Glede na pravilo verižne diferenciacije lahko izračunamo odvode kot:
+Algoritem gradientnega spusta ostane enak, a izračun gradientov je zahtevnejši. Glede na pravilo verižne diferenciacije lahko odvode izračunamo kot:
 
 * ∂ℒ/∂w<sub>2</sub> = (∂ℒ/∂σ)(∂σ/∂z<sub>2</sub>)(∂z<sub>2</sub>/∂w<sub>2</sub>)
 * ∂ℒ/∂w<sub>1</sub> = (∂ℒ/∂σ)(∂σ/∂z<sub>2</sub>)(∂z<sub>2</sub>/∂α)(∂α/∂z<sub>1</sub>)(∂z<sub>1</sub>/∂w<sub>1</sub>)
 
-> ✅ Pravilo verižne diferenciacije se uporablja za izračun odvoda funkcije izgube glede na parametre.
+> ✅ Za izračun odvodov funkcije izgube glede na parametre uporabimo pravilo verižne diferenciacije.
 
-Upoštevajte, da je levi del vseh teh izrazov enak, zato lahko učinkovito izračunamo odvode, začenši z funkcijo izgube in gremo "nazaj" skozi računski graf. Tako se metoda treniranja večplastnega perceptrona imenuje **povratno razširjanje**, ali 'backprop'.
+Opazimo, da je levi del vseh izrazov enak, zato lahko odvode učinkovito računamo, začenši pri funkciji izgube in se premikamo "nazaj" skozi računski graf. Metoda učenja večplastnega perceptrona se zato imenuje **povratno širjenje napake** ali 'backprop'.
+
+> TODO: navedba slike
+
+> ✅ Povratno širjenje bomo podrobneje obravnavali v našem primerku zvezka.
 
 ## Zaključek
 
-V tej lekciji smo zgradili svojo knjižnico nevronskih mrež in jo uporabili za preprosto dvodimenzionalno klasifikacijsko nalogo.
+V tej lekciji smo zgradili lastno knjižnico nevronskih mrež in jo uporabili za preprosto dvodimenzionalno klasifikacijsko nalogo.
 
 ## 🚀 Izziv
 
-V priloženi beležnici boste implementirali svoj okvir za gradnjo in treniranje večplastnih perceptronov. Videli boste podrobnosti delovanja sodobnih nevronskih mrež.
+V spremljajočem zvezku boste implementirali lasten okvir za gradnjo in učenje večplastnih perceptronov. Podrobno boste spoznali, kako delujejo sodobne nevronske mreže.
 
-Nadaljujte v beležnici OwnFramework in jo predelajte.
+Nadaljujte v OwnFramework zvezek in ga preglejte.
 
-## Pregled & Samostojno učenje
+## Pregled in samostojno učenje
 
-Povratno razširjanje je pogost algoritem, uporabljen v AI in ML, vreden podrobnejšega študija.
+Povratno širjenje je pogost algoritem v AI in ML, ki ga je vredno podrobneje preučiti.
 
 ## Naloga
 
-V tem laboratoriju morate uporabiti okvir, ki ste ga zgradili v tej lekciji, za reševanje klasifikacije ročno pisanih številk MNIST.
+V tej vaji uporabite okvir, ki ste ga zgradili v tej lekciji, za reševanje klasifikacije ročno pisanih številk MNIST.
 
 * Navodila
-* Beležnica
+* Zvezek
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije se priporoča profesionalni prevod s strani človeka. Ne odgovarjamo za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za avtomatski prevod AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.

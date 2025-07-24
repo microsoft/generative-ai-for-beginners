@@ -2,90 +2,90 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "0bba96e53ab841d99db731892a51fab8",
-  "translation_date": "2025-05-20T06:59:04+00:00",
+  "translation_date": "2025-07-09T17:12:06+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "he"
 }
 -->
-[![מודלים של קוד פתוח](../../../translated_images/16-lesson-banner.7b9ebf8cdea6669d74be8212360e99a5653b0cd3ec513f50f12693ffec984ff1.he.png)](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.he.png)](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst)
 
-## הקדמה
+## מבוא
 
-עולם ה-LLM בקוד פתוח מרגש ומתפתח כל הזמן. שיעור זה נועד לספק מבט מעמיק על מודלים בקוד פתוח. אם אתם מחפשים מידע על איך מודלים קנייניים משתווים למודלים בקוד פתוח, גשו לשיעור ["חקר והשוואת LLMs שונים"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). שיעור זה יעסוק גם בנושא של כיוונון עדין, אך הסבר מפורט יותר ניתן למצוא בשיעור ["כיוונון עדין של LLMs"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+עולם ה-LLM בקוד פתוח מרגש ומתפתח כל הזמן. השיעור הזה נועד לספק מבט מעמיק על מודלים בקוד פתוח. אם אתם מחפשים מידע על השוואה בין מודלים קנייניים למודלים בקוד פתוח, עברו לשיעור ["Exploring and Comparing Different LLMs"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). שיעור זה יעסוק גם בנושא ה-fine-tuning, אך הסבר מפורט יותר ניתן למצוא בשיעור ["Fine-Tuning LLMs"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
-## מטרות למידה
+## מטרות הלמידה
 
-- להבין מודלים בקוד פתוח
-- להבין את היתרונות בעבודה עם מודלים בקוד פתוח
-- חקר המודלים הפתוחים הזמינים ב-Hugging Face וב-Azure AI Studio
+- להבין את עולם המודלים בקוד פתוח  
+- להבין את היתרונות בעבודה עם מודלים בקוד פתוח  
+- להכיר את המודלים הפתוחים הזמינים ב-Hugging Face וב-Azure AI Studio  
 
 ## מה הם מודלים בקוד פתוח?
 
-תוכנה בקוד פתוח שיחקה תפקיד חשוב בצמיחה של טכנולוגיה בתחומים שונים. יוזמת הקוד הפתוח (OSI) הגדירה [10 קריטריונים לתוכנה](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) כדי להיחשב כקוד פתוח. קוד המקור חייב להיות משותף בפומבי תחת רישיון שאושר על ידי OSI.
+תוכנה בקוד פתוח שיחקה תפקיד מרכזי בהתפתחות הטכנולוגיה בתחומים שונים. ה-Open Source Initiative (OSI) הגדיר [10 קריטריונים לתוכנה](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) כדי שתסווג כקוד פתוח. קוד המקור חייב להיות משותף באופן גלוי תחת רישיון שאושר על ידי OSI.
 
-בעוד שפיתוח LLMs כולל אלמנטים דומים לפיתוח תוכנה, התהליך אינו זהה בדיוק. זה הביא לדיונים רבים בקהילה על הגדרת הקוד הפתוח בהקשר של LLMs. כדי שמודל יעמוד בהגדרה המסורתית של קוד פתוח, המידע הבא צריך להיות זמין לציבור:
+בעוד שפיתוח LLMs כולל אלמנטים דומים לפיתוח תוכנה, התהליך אינו זהה במדויק. הדבר עורר דיון רב בקהילה לגבי ההגדרה של קוד פתוח בהקשר של LLMs. כדי שמודל ייחשב תואם להגדרה המסורתית של קוד פתוח, המידע הבא צריך להיות זמין לציבור:
 
-- מערכי הנתונים ששימשו לאימון המודל.
-- משקל המודל המלא כחלק מהאימון.
-- קוד ההערכה.
-- קוד הכיוונון העדין.
-- משקל המודל המלא ומדדי האימון.
+- מערכי הנתונים ששימשו לאימון המודל  
+- משקלי המודל המלאים כחלק מהאימון  
+- קוד ההערכה  
+- קוד ה-fine-tuning  
+- משקלי המודל המלאים ומדדי האימון  
 
-נכון לעכשיו, ישנם רק מספר מועט של מודלים שעומדים בקריטריונים הללו. [המודל OLMo שנוצר על ידי מכון אלן לאינטליגנציה מלאכותית (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) הוא אחד מהם.
+כרגע קיימים רק מספר מועט של מודלים שעומדים בקריטריונים אלו. [המודל OLMo שפותח על ידי Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) הוא אחד מהם.
 
-בשיעור זה נתייחס למודלים כ"מודלים פתוחים" מכיוון שהם עשויים שלא לעמוד בקריטריונים הללו בזמן כתיבת השיעור.
+בשיעור זה, נתייחס למודלים כ"מודלים פתוחים" מכיוון שהם עשויים לא לעמוד בקריטריונים המדויקים בזמן הכתיבה.
 
 ## יתרונות של מודלים פתוחים
 
-**מותאם אישית במיוחד** - מכיוון שמודלים פתוחים משוחררים עם מידע אימון מפורט, חוקרים ומפתחים יכולים לשנות את פנימיות המודל. זה מאפשר יצירה של מודלים מתמחים במיוחד המכווננים למטלה או תחום לימוד ספציפי. דוגמאות לכך כוללות יצירת קוד, פעולות מתמטיות וביולוגיה.
+**גמישות גבוהה בהתאמה** – מכיוון שהמודלים הפתוחים משוחררים עם מידע מפורט על האימון, חוקרים ומפתחים יכולים לשנות את הפנימיות של המודל. זה מאפשר יצירת מודלים מותאמים במיוחד למשימות או תחומי מחקר ספציפיים. דוגמאות לכך הן יצירת קוד, פעולות מתמטיות וביולוגיה.
 
-**עלות** - עלות לשימוש ופריסה של מודלים אלה נמוכה יותר מאשר מודלים קנייניים. כאשר בונים יישומי בינה מלאכותית גנרטיבית, יש לשקול את הביצועים מול המחיר בעת עבודה עם מודלים אלה במקרה השימוש שלכם.
+**עלות** – העלות לפריט לשימוש והטמעה של מודלים אלו נמוכה יותר מזו של מודלים קנייניים. כשבונים יישומי Generative AI, חשוב לשקול את היחס בין ביצועים למחיר בעבודה עם מודלים אלו בהתאם למקרה השימוש שלכם.
 
-![עלות מודל](../../../translated_images/model-price.bf4c17ebea0f13045f3c10fb8615e171c6a664837cb2f4107c312552149ae88d.he.png)
-מקור: ניתוח מלאכותי
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.he.png)  
+מקור: Artificial Analysis
 
-**גמישות** - עבודה עם מודלים פתוחים מאפשרת להיות גמישים מבחינת שימוש במודלים שונים או שילובם. דוגמה לכך היא [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) שבה משתמש יכול לבחור את המודל בו משתמשים ישירות בממשק המשתמש:
+**גמישות** – עבודה עם מודלים פתוחים מאפשרת גמישות בשימוש במודלים שונים או בשילוב ביניהם. דוגמה לכך היא [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) שבה המשתמש יכול לבחור את המודל ישירות בממשק המשתמש:
 
-![בחירת מודל](../../../translated_images/choose-model.1f574fd269d66a894a92f8b8a1c4c3e7cf9e2d9ece5fc66c7d95efdc5d01501d.he.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.he.png)
 
-## חקר מודלים פתוחים שונים
+## היכרות עם מודלים פתוחים שונים
 
 ### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), שפותח על ידי Meta, הוא מודל פתוח המותאם ליישומים מבוססי צ'אט. זאת בשל שיטת הכיוונון העדין שלו, שכללה כמות גדולה של דיאלוג ומשוב אנושי. בשיטה זו, המודל מייצר יותר תוצאות התואמות את ציפיות האדם, מה שמספק חוויית משתמש טובה יותר.
+[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), שפותח על ידי Meta, הוא מודל פתוח המותאם במיוחד ליישומי שיחה. זאת בזכות שיטת ה-fine-tuning שלו, שכללה כמות גדולה של דיאלוגים ומשוב אנושי. שיטה זו מאפשרת למודל להניב תוצאות שמתאימות יותר לציפיות אנושיות, מה שמשפר את חוויית המשתמש.
 
-כמה דוגמאות לגרסאות מכווננות של Llama כוללות את [Llama היפני](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), שמתמחה ביפנית, ו[Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), שהיא גרסה משופרת של המודל הבסיסי.
+דוגמאות לגרסאות מותאמות של Llama כוללות את [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), שמתמחה ביפנית, ואת [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), שהיא גרסה משופרת של המודל הבסיסי.
 
 ### Mistral
 
-[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) הוא מודל פתוח עם דגש חזק על ביצועים גבוהים ויעילות. הוא משתמש בגישת Mixture-of-Experts המשלבת קבוצת מודלים מתמחים למערכת אחת שבה בהתאם לקלט, מודלים מסוימים נבחרים לשימוש. זה הופך את החישוב ליעיל יותר מכיוון שהמודלים מטפלים רק בקלטים שבהם הם מתמחים.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) הוא מודל פתוח עם דגש חזק על ביצועים ויעילות. הוא משתמש בגישת Mixture-of-Experts, שמשלבת קבוצת מודלים מומחים מתמחים למערכת אחת, שבה בהתאם לקלט, נבחרים מודלים מסוימים לשימוש. זה הופך את החישוב ליעיל יותר, שכן המודלים מתמקדים רק בקלטים שבהם הם מומחים.
 
-כמה דוגמאות לגרסאות מכווננות של Mistral כוללות את [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), שמתמקד בתחום הרפואי, ו[OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), שמבצע חישוב מתמטי.
+דוגמאות לגרסאות מותאמות של Mistral כוללות את [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), שמתמקד בתחום הרפואה, ואת [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), שמתמחה בחישובים מתמטיים.
 
 ### Falcon
 
-[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) הוא LLM שנוצר על ידי מכון חדשנות טכנולוגית (TII). Falcon-40B אומן על 40 מיליארד פרמטרים והוכח כיעיל יותר מ-GPT-3 עם תקציב חישוב נמוך יותר. זאת בזכות השימוש שלו באלגוריתם FlashAttention ובתשומת לב מרובת שאילתות המאפשרים לו להקטין את דרישות הזיכרון בזמן ניבוי. עם זמן הניבוי המופחת הזה, Falcon-40B מתאים ליישומי צ'אט.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) הוא LLM שפותח על ידי Technology Innovation Institute (**TII**). ה-Falcon-40B אומן על 40 מיליארד פרמטרים, והוכח שהוא מתפקד טוב יותר מ-GPT-3 עם תקציב חישוב נמוך יותר. זאת בזכות השימוש באלגוריתם FlashAttention וב-multiquery attention, שמאפשרים להפחית את דרישות הזיכרון בזמן ההסקה. בזכות זמן ההסקה המופחת, ה-Falcon-40B מתאים ליישומי שיחה.
 
-כמה דוגמאות לגרסאות מכווננות של Falcon כוללות את [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), עוזר שנבנה על מודלים פתוחים, ו[GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), שמספק ביצועים גבוהים יותר מהמודל הבסיסי.
+דוגמאות לגרסאות מותאמות של Falcon הן [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), עוזר שנבנה על מודלים פתוחים, ו-[GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), שמספק ביצועים גבוהים יותר מהמודל הבסיסי.
 
-## כיצד לבחור
+## איך לבחור
 
-אין תשובה אחת לבחירת מודל פתוח. מקום טוב להתחיל בו הוא להשתמש בתכונת הסינון לפי מטלה של Azure AI Studio. זה יעזור לכם להבין אילו סוגי מטלות המודל אומן עבורן. Hugging Face גם מתחזקת לוח תוצאות LLM שמראה לכם את המודלים בעלי הביצועים הטובים ביותר על בסיס מדדים מסוימים.
+אין תשובה אחת נכונה לבחירת מודל פתוח. מקום טוב להתחיל בו הוא שימוש בפילטר לפי משימה ב-Azure AI Studio. זה יעזור לכם להבין לאילו סוגי משימות המודל אומן. Hugging Face גם מחזיקה בלוח מובילים של LLM שמציג את המודלים הטובים ביותר לפי מדדים מסוימים.
 
-כאשר מסתכלים להשוות LLMs בין סוגים שונים, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) הוא משאב נהדר נוסף:
+כשמחפשים להשוות בין LLMs מסוגים שונים, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) הוא משאב מצוין נוסף:
 
-![איכות מודל](../../../translated_images/model-quality.10696c659e8e327352b6c2352d000092a0a91abb31a1ffd337fb16a9edcb7d9c.he.png)
-מקור: ניתוח מלאכותי
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.he.png)  
+מקור: Artificial Analysis
 
-אם עובדים על מקרה שימוש ספציפי, חיפוש גרסאות מכווננות שמתמקדות באותו תחום יכול להיות יעיל. ניסוי עם מספר מודלים פתוחים כדי לראות איך הם מבצעים בהתאם לציפיות שלכם ושל המשתמשים שלכם הוא עוד פרקטיקה טובה.
+אם אתם עובדים על מקרה שימוש ספציפי, חיפוש אחר גרסאות מותאמות שמתמקדות באותו תחום יכול להיות יעיל. ניסוי עם מספר מודלים פתוחים כדי לראות איך הם מתפקדים בהתאם לציפיות שלכם ושל המשתמשים הוא גם פרקטיקה מומלצת.
 
 ## צעדים הבאים
 
-החלק הטוב ביותר במודלים פתוחים הוא שניתן להתחיל לעבוד איתם במהירות יחסית. בדקו את [קטלוג המודלים של Azure AI Studio](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), הכולל אוסף ספציפי של Hugging Face עם המודלים שדיברנו עליהם כאן.
+החלק הטוב ביותר במודלים פתוחים הוא שניתן להתחיל לעבוד איתם די מהר. בדקו את [Azure AI Studio Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), שמכיל אוסף מיוחד של Hugging Face עם המודלים שדיברנו עליהם כאן.
 
-## הלמידה אינה עוצרת כאן, המשיכו את המסע
+## הלמידה לא נגמרת כאן, המשיכו במסע
 
-לאחר השלמת שיעור זה, בדקו את [אוסף הלמידה של בינה מלאכותית גנרטיבית](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך ולהעמיק את הידע שלכם בבינה מלאכותית גנרטיבית!
+לאחר שסיימתם את השיעור הזה, בדקו את [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) שלנו כדי להמשיך להעמיק את הידע שלכם ב-Generative AI!
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד אנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל טעויות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או פירושים שגויים הנובעים משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפת המקור שלו נחשב למקור הסמכותי. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי מתרגם אנושי. אנו לא נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.

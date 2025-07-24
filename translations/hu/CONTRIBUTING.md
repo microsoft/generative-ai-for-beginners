@@ -2,134 +2,134 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:23:08+00:00",
+  "translation_date": "2025-07-09T06:11:21+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "hu"
 }
 -->
-# Közreműködés
+# Hozzájárulás
 
-Ez a projekt örömmel fogadja a hozzájárulásokat és javaslatokat. A legtöbb hozzájárulás megköveteli, hogy beleegyezzen egy Közreműködői Licencszerződésbe (CLA), amely kijelenti, hogy jogában áll, és ténylegesen megadja nekünk a jogokat a hozzájárulása használatához. További részletekért látogasson el a <https://cla.microsoft.com> oldalra.
+Ez a projekt szívesen fogad hozzájárulásokat és javaslatokat. A legtöbb hozzájáruláshoz el kell fogadnod egy Contributor License Agreement (CLA) licencszerződést, amelyben kijelented, hogy jogodban áll, és ténylegesen megadod nekünk a jogot a hozzájárulásod felhasználására. Részletekért látogass el a <https://cla.microsoft.com> oldalra.
 
-> Fontos: amikor szöveget fordít ebben a repóban, kérjük, ügyeljen arra, hogy ne használjon gépi fordítást. A fordításokat a közösség ellenőrzi, ezért kérjük, csak olyan nyelveken vállaljon fordítást, amelyeken jártas.
+> Fontos: amikor ebben a tárolóban szöveget fordítasz, kérjük, ne használj gépi fordítást. A fordításokat a közösség ellenőrzi, ezért csak olyan nyelvekre vállalj önkéntes fordítást, amelyben jártas vagy.
 
-Amikor benyújt egy pull requestet, a CLA-bot automatikusan meghatározza, hogy szükséges-e CLA-t biztosítania, és ennek megfelelően díszíti a PR-t (például címkével, megjegyzéssel). Egyszerűen kövesse a bot által megadott utasításokat. Ezt csak egyszer kell megtennie az összes repó esetében, amelyik a CLA-t használja.
+Amikor pull request-et nyújtas be, egy CLA-bot automatikusan megállapítja, hogy szükséges-e CLA-t benyújtanod, és ennek megfelelően jelöli meg a PR-t (pl. címkével, hozzászólással). Egyszerűen kövesd a bot utasításait. Ezt csak egyszer kell megtenned az összes CLA-t használó tárolóban.
 
 ## Magatartási kódex
 
-Ez a projekt elfogadta a [Microsoft Nyílt Forráskódú Magatartási Kódexét](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
-További információkért olvassa el a [Magatartási Kódex GYIK-et](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) vagy lépjen kapcsolatba az [opencode@microsoft.com](mailto:opencode@microsoft.com) címen bármilyen további kérdéssel vagy megjegyzéssel.
+Ez a projekt elfogadta a [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) magatartási kódexet.  
+További információért olvasd el a [Code of Conduct GYIK-et](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst), vagy írj az [opencode@microsoft.com](mailto:opencode@microsoft.com) címre, ha kérdésed vagy észrevételed van.
 
 ## Kérdés vagy probléma?
 
-Kérjük, ne nyisson GitHub problémákat általános támogatási kérdésekre, mivel a GitHub listát funkciókérésekre és hibajelentésekre kell használni. Így könnyebben nyomon követhetjük a tényleges problémákat vagy hibákat a kódból, és elkülöníthetjük az általános vitát a tényleges kódtól.
+Kérjük, ne nyiss GitHub issue-t általános támogatási kérdések miatt, mivel a GitHub lista funkciókérések és hibajelentések kezelésére szolgál. Így könnyebben nyomon követhetjük a tényleges problémákat vagy hibákat a kódban, és a közös beszélgetést elkülöníthetjük a kódtól.
 
-## Hibák, problémák, bugok és hozzájárulások
+## Elírások, problémák, hibák és hozzájárulások
 
-Amikor bármilyen változtatást benyújt a Generatív AI Kezdőknek repóba, kérjük, kövesse ezeket az ajánlásokat.
+Amikor bármilyen módosítást küldesz be a Generative AI for Beginners tárolóba, kérjük, kövesd az alábbi ajánlásokat.
 
-* Mindig forkolja a repót a saját fiókjába, mielőtt módosításokat végezne
-* Ne kombináljon több változtatást egy pull requestbe. Például külön PR-ben nyújtson be bármilyen hibajavítást és dokumentációfrissítést
-* Ha a pull requestje ütközéseket mutat, győződjön meg arról, hogy frissíti a helyi main-t, hogy tükrözze a fő repóban lévő állapotot, mielőtt módosításokat végezne
-* Ha fordítást nyújt be, kérjük, hozzon létre egy PR-t az összes lefordított fájlhoz, mivel nem fogadunk el részleges fordításokat a tartalomhoz
-* Ha hibát vagy dokumentációjavítást nyújt be, egyetlen PR-ben kombinálhatja a módosításokat, ahol megfelelő
+* Mindig forkold a tárolót a saját fiókodba, mielőtt módosításokat végzel
+* Ne egyesíts több változtatást egy pull request-be. Például hibajavítást és dokumentáció frissítést külön PR-ben nyújts be
+* Ha a pull request-ed összeolvadási konfliktust jelez, frissítsd a helyi main ágat úgy, hogy tükrözze a fő tároló main ágát, mielőtt módosítasz
+* Ha fordítást nyújtasz be, kérjük, egy PR-ben add be az összes lefordított fájlt, mivel részleges fordításokat nem fogadunk el
+* Ha elírást vagy dokumentációs javítást küldesz be, akkor megfelelő esetben egy PR-ben is egyesítheted a módosításokat
 
-## Általános útmutató az íráshoz
+## Általános iránymutatás íráshoz
 
-- Győződjön meg arról, hogy minden URL-je szögletes zárójelekbe van foglalva, majd zárójel követi, anélkül, hogy felesleges szóköz lenne körülötte vagy benne `[](../..)`.
-- Győződjön meg arról, hogy minden relatív link (azaz a repóban lévő más fájlokhoz és mappákhoz vezető linkek) `./`-val kezdődik, amely a jelenlegi munkakönyvtárban lévő fájlra vagy mappára utal, vagy `../`-vel, amely egy szülő munkakönyvtárban lévő fájlra vagy mappára utal.
-- Győződjön meg arról, hogy minden relatív link (azaz a repóban lévő más fájlokhoz és mappákhoz vezető linkek) rendelkezik nyomkövetési azonosítóval (azaz `?` vagy `&`, majd `wt.mc_id=` vagy `WT.mc_id=`) a végén.
-- Győződjön meg arról, hogy a következő domainekről származó URL-ek _github.com, microsoft.com, visualstudio.com, aka.ms, és azure.com_ rendelkeznek nyomkövetési azonosítóval (azaz `?` vagy `&`, majd `wt.mc_id=` vagy `WT.mc_id=`) a végén.
-- Győződjön meg arról, hogy a linkjei nem tartalmaznak ország-specifikus nyelvi kódot (azaz `/en-us/` vagy `/en/`).
-- Győződjön meg arról, hogy minden kép a `./images` mappában van tárolva.
-- Győződjön meg arról, hogy a képek leíró neveket tartalmaznak angol karakterekkel, számokkal és kötőjelekkel a kép nevében.
+- Győződj meg róla, hogy minden URL szögletes zárójelben van, amit kerek zárójel követ, és nincs bennük vagy körülöttük felesleges szóköz `[](../..)`.
+- Biztosítsd, hogy minden relatív hivatkozás (azaz a tároló más fájljaira és mappáira mutató linkek) `./`-vel kezdődjön, ami az aktuális munkakönyvtárban lévő fájlra vagy mappára utal, vagy `../`-vel, ami a szülő munkakönyvtárban lévő fájlra vagy mappára.
+- Biztosítsd, hogy minden relatív hivatkozás végén legyen követőkód (azaz `?` vagy `&` után `wt.mc_id=` vagy `WT.mc_id=`).
+- Biztosítsd, hogy az alábbi domainekről származó URL-ek (_github.com, microsoft.com, visualstudio.com, aka.ms, és azure.com_) végén legyen követőkód (azaz `?` vagy `&` után `wt.mc_id=` vagy `WT.mc_id=`).
+- Győződj meg róla, hogy a linkjeid nem tartalmaznak ország-specifikus nyelvi beállítást (pl. `/en-us/` vagy `/en/`).
+- Biztosítsd, hogy minden kép a `./images` mappában legyen tárolva.
+- Biztosítsd, hogy a képek nevei leíró jellegűek legyenek, angol karaktereket, számokat és kötőjeleket tartalmazzanak.
 
-## GitHub Munkafolyamatok
+## GitHub munkafolyamatok
 
-Amikor benyújt egy pull requestet, négy különböző munkafolyamat aktiválódik, hogy ellenőrizze a korábbi szabályokat.
-Egyszerűen kövesse az itt felsorolt utasításokat, hogy teljesítse a munkafolyamat ellenőrzéseit.
+Amikor pull request-et nyújtasz be, négy különböző munkafolyamat indul el az előző szabályok ellenőrzésére.  
+Egyszerűen kövesd az itt felsorolt utasításokat, hogy átmenj a munkafolyamat ellenőrzéseken.
 
-- [Ellenőrizze a hibás relatív útvonalakat](../..)
-- [Ellenőrizze, hogy az útvonalak rendelkeznek-e nyomkövetéssel](../..)
-- [Ellenőrizze, hogy az URL-ek rendelkeznek-e nyomkövetéssel](../..)
-- [Ellenőrizze, hogy az URL-ek nem tartalmaznak-e nyelvi kódot](../..)
+- [Törött relatív útvonalak ellenőrzése](../..)
+- [Útvonalak követőkódjának ellenőrzése](../..)
+- [URL-ek követőkódjának ellenőrzése](../..)
+- [URL-ek nyelvi beállításának ellenőrzése](../..)
 
-### Ellenőrizze a hibás relatív útvonalakat
+### Törött relatív útvonalak ellenőrzése
 
-Ez a munkafolyamat biztosítja, hogy bármely relatív útvonal a fájljaiban működjön.
-Ez a repó a GitHub oldalakra van telepítve, ezért nagyon óvatosnak kell lennie, amikor a linkeket írja, amelyek mindent összekapcsolnak, hogy ne irányítsa senkit rossz helyre.
+Ez a munkafolyamat biztosítja, hogy a fájljaidban szereplő relatív útvonalak működőképesek legyenek.  
+Ez a tároló GitHub Pages-re van telepítve, ezért nagyon figyelj arra, hogy a linkeket helyesen írd, nehogy valakit rossz helyre irányítsanak.
 
-Annak biztosítása érdekében, hogy a linkjei megfelelően működjenek, egyszerűen használja a VS code-t, hogy ellenőrizze azt.
+Annak ellenőrzésére, hogy a linkjeid megfelelően működnek, egyszerűen használd a VS Code-ot.
 
-Például, amikor bármely link fölé viszi az egeret a fájljaiban, a rendszer felkéri, hogy kövesse a linket az **ctrl + kattintás** megnyomásával
+Például, ha az egérrel egy link fölé viszed a kurzort, megjelenik egy lehetőség, hogy a **ctrl + kattintás** segítségével kövesd a linket.
 
-![VS code linkek követése képernyőkép](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.hu.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.hu.png)
 
-Ha rákattint egy linkre és az nem működik helyben, akkor biztosan aktiválja a munkafolyamatot, és nem fog működni a GitHubon.
+Ha rákattintasz egy linkre, és az helyileg nem működik, akkor biztosan a munkafolyamat is hibát jelez majd, és a GitHub-on sem fog működni.
 
-A probléma megoldásához próbálja meg a linket a VS code segítségével beírni.
+A probléma megoldásához próbáld meg a linket a VS Code segítségével beírni.
 
-Amikor beírja `./` vagy `../`, a VS code felkéri, hogy válasszon a rendelkezésre álló lehetőségek közül az alapján, amit beírt.
+Amikor beírod a `./` vagy `../` karaktereket, a VS Code felajánlja a választható lehetőségeket az alapján, amit beírtál.
 
-![VS code relatív útvonal választás képernyőkép](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.hu.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.hu.png)
 
-Kövesse az útvonalat a kívánt fájlra vagy mappára kattintva, és biztos lehet benne, hogy az útvonala nem törött.
+Kattints a kívánt fájlra vagy mappára, így biztos lehetsz benne, hogy az útvonalad nem törött.
 
-Miután hozzáadta a helyes relatív útvonalat, mentse el, és nyomja meg a változtatásait, a munkafolyamat újra aktiválódik, hogy ellenőrizze a változtatásait.
-Ha átmegy az ellenőrzésen, akkor minden rendben van.
+Ha megadtad a helyes relatív útvonalat, mentsd el, és push-old a változtatásokat, a munkafolyamat újra lefut, hogy ellenőrizze a módosításokat.  
+Ha átmentél az ellenőrzésen, mehetsz tovább.
 
-### Ellenőrizze, hogy az útvonalak rendelkeznek-e nyomkövetéssel
+### Útvonalak követőkódjának ellenőrzése
 
-Ez a munkafolyamat biztosítja, hogy bármely relatív útvonal rendelkezik nyomkövetéssel.
-Ez a repó a GitHub oldalakra van telepítve, ezért nyomon kell követnünk a mozgást a különböző fájlok és mappák között.
+Ez a munkafolyamat biztosítja, hogy minden relatív útvonal tartalmazzon követőkódot.  
+Ez a tároló GitHub Pages-re van telepítve, ezért nyomon kell követnünk a fájlok és mappák közötti mozgást.
 
-Annak biztosítása érdekében, hogy a relatív útvonalak rendelkeznek nyomkövetéssel, egyszerűen ellenőrizze a következő szöveget `?wt.mc_id=` az útvonal végén.
-Ha hozzá van fűzve a relatív útvonalaihoz, akkor átmegy az ellenőrzésen.
+Annak ellenőrzésére, hogy a relatív útvonalak tartalmaznak-e követőkódot, egyszerűen keresd a `?wt.mc_id=` szöveget az útvonal végén.  
+Ha ez szerepel az útvonalakon, át fogsz menni az ellenőrzésen.
 
-Ha nem, akkor a következő hibát kaphatja.
+Ha nem, a következő hibaüzenetet kaphatod.
 
-![GitHub útvonalak hiányzó nyomkövetési megjegyzés képernyőkép](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.hu.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.hu.png)
 
-A probléma megoldásához próbálja meg megnyitni a fájl útvonalát, amelyet a munkafolyamat kiemelt, és adja hozzá a nyomkövetési azonosítót a relatív útvonalak végéhez.
+A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és add hozzá a követőkódot a relatív útvonalak végéhez.
 
-Miután hozzáadta a nyomkövetési azonosítót, mentse el, és nyomja meg a változtatásait, a munkafolyamat újra aktiválódik, hogy ellenőrizze a változtatásait.
-Ha átmegy az ellenőrzésen, akkor minden rendben van.
+Ha hozzáadtad a követőkódot, mentsd el, és push-old a változtatásokat, a munkafolyamat újra lefut, hogy ellenőrizze a módosításokat.  
+Ha átmentél az ellenőrzésen, mehetsz tovább.
 
-### Ellenőrizze, hogy az URL-ek rendelkeznek-e nyomkövetéssel
+### URL-ek követőkódjának ellenőrzése
 
-Ez a munkafolyamat biztosítja, hogy bármely webes URL rendelkezik nyomkövetéssel.
-Ez a repó mindenki számára elérhető, ezért biztosítania kell, hogy nyomon kövesse a hozzáférést, hogy tudja, honnan érkezik a forgalom.
+Ez a munkafolyamat biztosítja, hogy minden webes URL tartalmazzon követőkódot.  
+Ez a tároló mindenki számára elérhető, ezért nyomon kell követnünk a hozzáféréseket, hogy tudjuk, honnan érkezik a forgalom.
 
-Annak biztosítása érdekében, hogy az URL-ek rendelkeznek nyomkövetéssel, egyszerűen ellenőrizze a következő szöveget `?wt.mc_id=` az URL végén.
-Ha hozzá van fűzve az URL-jeihez, akkor átmegy az ellenőrzésen.
+Annak ellenőrzésére, hogy az URL-ek tartalmaznak-e követőkódot, egyszerűen keresd a `?wt.mc_id=` szöveget az URL végén.  
+Ha ez szerepel az URL-ek végén, át fogsz menni az ellenőrzésen.
 
-Ha nem, akkor a következő hibát kaphatja.
+Ha nem, a következő hibaüzenetet kaphatod.
 
-![GitHub URL-ek hiányzó nyomkövetési megjegyzés képernyőkép](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.hu.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.hu.png)
 
-A probléma megoldásához próbálja meg megnyitni a fájl útvonalát, amelyet a munkafolyamat kiemelt, és adja hozzá a nyomkövetési azonosítót az URL-ek végéhez.
+A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és add hozzá a követőkódot az URL-ek végéhez.
 
-Miután hozzáadta a nyomkövetési azonosítót, mentse el, és nyomja meg a változtatásait, a munkafolyamat újra aktiválódik, hogy ellenőrizze a változtatásait.
-Ha átmegy az ellenőrzésen, akkor minden rendben van.
+Ha hozzáadtad a követőkódot, mentsd el, és push-old a változtatásokat, a munkafolyamat újra lefut, hogy ellenőrizze a módosításokat.  
+Ha átmentél az ellenőrzésen, mehetsz tovább.
 
-### Ellenőrizze, hogy az URL-ek nem tartalmaznak-e nyelvi kódot
+### URL-ek nyelvi beállításának ellenőrzése
 
-Ez a munkafolyamat biztosítja, hogy bármely webes URL nem tartalmaz ország-specifikus nyelvi kódot.
-Ez a repó mindenki számára elérhető világszerte, ezért ügyelnie kell arra, hogy ne tartalmazza az ország nyelvi kódját az URL-ekben.
+Ez a munkafolyamat biztosítja, hogy a webes URL-ek ne tartalmazzanak ország-specifikus nyelvi beállítást.  
+Ez a tároló világszerte elérhető, ezért ügyelni kell arra, hogy ne kerüljön be az adott ország nyelvi beállítása az URL-ekbe.
 
-Annak biztosítása érdekében, hogy az URL-ek nem tartalmaznak ország nyelvi kódot, egyszerűen ellenőrizze a következő szöveget `/en-us/` vagy `/en/` vagy bármely más nyelvi kódot bárhol az URL-ben.
-Ha nincs jelen az URL-jeiben, akkor átmegy az ellenőrzésen.
+Annak ellenőrzésére, hogy az URL-ek nem tartalmaznak ország-specifikus nyelvi beállítást, keresd a `/en-us/`, `/en/` vagy bármilyen más nyelvi beállítást az URL-ekben.  
+Ha nincs ilyen az URL-ekben, át fogsz menni az ellenőrzésen.
 
-Ha nem, akkor a következő hibát kaphatja.
+Ha van, a következő hibaüzenetet kaphatod.
 
-![GitHub ország nyelvi kód megjegyzés képernyőkép](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.hu.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.hu.png)
 
-A probléma megoldásához próbálja meg megnyitni a fájl útvonalát, amelyet a munkafolyamat kiemelt, és távolítsa el az ország nyelvi kódot az URL-ekből.
+A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és távolítsd el az ország-specifikus nyelvi beállítást az URL-ekből.
 
-Miután eltávolította az ország nyelvi kódot, mentse el, és nyomja meg a változtatásait, a munkafolyamat újra aktiválódik, hogy ellenőrizze a változtatásait.
-Ha átmegy az ellenőrzésen, akkor minden rendben van.
+Ha eltávolítottad a nyelvi beállítást, mentsd el, és push-old a változtatásokat, a munkafolyamat újra lefut, hogy ellenőrizze a módosításokat.  
+Ha átmentél az ellenőrzésen, mehetsz tovább.
 
-Gratulálunk! A lehető leghamarabb visszajelzést adunk a hozzájárulásáról.
+Gratulálunk! Hamarosan visszajelzést adunk a hozzájárulásodról.
 
 **Jogi nyilatkozat**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) mesterséges intelligencia fordítószolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

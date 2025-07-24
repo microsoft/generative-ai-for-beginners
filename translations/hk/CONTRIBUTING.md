@@ -2,133 +2,135 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-05-19T11:11:34+00:00",
+  "translation_date": "2025-07-09T05:50:07+00:00",
   "source_file": "CONTRIBUTING.md",
   "language_code": "hk"
 }
 -->
-# 貢獻
+# Contributing
 
-這個項目歡迎大家的貢獻和建議。大多數貢獻需要你同意一份貢獻者許可協議 (CLA)，聲明你有權利並且實際上授予我們使用你貢獻的權利。詳情請訪問 <https://cla.microsoft.com>。
+本項目歡迎各種貢獻和建議。大部分貢獻都需要您同意一份 Contributor License Agreement (CLA)，聲明您有權利並且確實授權我們使用您的貢獻。詳情請參閱  
+<https://cla.microsoft.com>。
 
-> 重要提示：在翻譯這個庫中的文本時，請確保不要使用機器翻譯。我們將通過社區驗證翻譯，因此請僅在你熟練的語言中自願參與翻譯。
+> 重要提示：在翻譯本倉庫中的文字時，請務必避免使用機器翻譯。我們會透過社群驗證翻譯品質，因此請只自願翻譯您熟悉的語言。
 
-當你提交一個 pull request 時，CLA 機器人會自動確定你是否需要提供 CLA 並適當地裝飾 PR（例如，標籤，評論）。只需按照機器人提供的說明進行操作。這在所有使用我們 CLA 的庫中只需要做一次。
+當您提交 pull request 時，CLA-bot 會自動判斷您是否需要提供 CLA，並適當標註 PR（例如標籤、評論）。只需按照機器人的指示操作即可。您在所有使用我們 CLA 的倉庫中只需完成一次此流程。
 
-## 行為準則
+## Code of Conduct
 
-這個項目採用了 [Microsoft 開源行為準則](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst)。如需更多信息，請閱讀 [行為準則常見問題](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) 或通過 [opencode@microsoft.com](mailto:opencode@microsoft.com) 聯繫我們以獲取更多問題或評論。
+本項目已採用 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst)。  
+欲了解更多資訊，請閱讀 [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst)，或透過 [opencode@microsoft.com](mailto:opencode@microsoft.com) 聯絡我們，提出任何問題或意見。
 
-## 有問題或疑問？
+## Question or Problem?
 
-請不要為一般支持問題打開 GitHub 問題，因為 GitHub 列表應用於功能請求和錯誤報告。這樣，我們可以更容易地跟蹤實際問題或錯誤，並將一般討論與實際代碼分開。
+請勿針對一般支援問題開啟 GitHub issue，因為 GitHub 用於功能請求和錯誤回報。這樣我們能更有效追蹤程式碼中的實際問題或錯誤，並將一般討論與程式碼問題分開。
 
-## 拼寫錯誤、問題、錯誤和貢獻
+## Typos, Issues, Bugs and contributions
 
-每當你提交對初學者生成式 AI 庫的任何更改時，請遵循以下建議。
+每當您對 Generative AI for Beginners 倉庫提交任何更改時，請遵循以下建議：
 
-* 在進行修改之前，請始終將庫 fork 到你自己的帳戶
-* 不要將多個更改合併到一個 pull request 中。例如，提交任何錯誤修復和文檔更新時，請使用單獨的 PR
-* 如果你的 pull request 顯示合併衝突，請確保在進行修改之前更新本地 main 以鏡像主庫中的內容
-* 如果你提交翻譯，請為所有翻譯文件創建一個 PR，因為我們不接受內容的部分翻譯
-* 如果你提交拼寫錯誤或文檔修復，可以將修改合併到一個合適的 PR 中
+* 修改前，務必先 fork 倉庫到您自己的帳號
+* 不要將多個更改合併到同一個 pull request。例如，錯誤修正和文件更新請分別提交不同的 PR
+* 若您的 pull request 顯示有合併衝突，請先將本地 main 分支更新為主倉庫的最新狀態，再進行修改
+* 若您提交翻譯，請將所有翻譯檔案合併成一個 PR，因為我們不接受部分內容的翻譯
+* 若您提交錯字或文件修正，適合時可將多項修改合併成一個 PR
 
-## 寫作的一般指導
+## General Guidance for writing
 
-- 確保所有的 URL 都用方括號包裹，然後用括號跟著，裡面沒有多餘的空格 `[](../..)`。
-- 確保任何相對鏈接（即指向庫中其他文件和文件夾的鏈接）以 `./` 開頭，指的是當前工作目錄中的文件或文件夾，或 `../` 指的是父工作目錄中的文件或文件夾。
-- 確保任何相對鏈接（即指向庫中其他文件和文件夾的鏈接）在結尾有一個跟蹤 ID（即 `?` 或 `&` 然後 `wt.mc_id=` 或 `WT.mc_id=`）。
-- 確保來自以下域名的任何 URL _github.com, microsoft.com, visualstudio.com, aka.ms, 和 azure.com_ 在結尾有一個跟蹤 ID（即 `?` 或 `&` 然後 `wt.mc_id=` 或 `WT.mc_id=`）。
-- 確保你的鏈接中沒有特定國家的語言地區（即 `/en-us/` 或 `/en/`）。
-- 確保所有圖片都存儲在 `./images` 文件夾中。
-- 確保圖片有描述性的名稱，使用英文字符、數字和破折號作為圖片名稱。
+- 確保所有 URL 都用中括號包住，後面緊接著小括號，且中間及內部無多餘空格 `[](../..)`。
+- 確保任何相對連結（即指向倉庫內其他檔案或資料夾的連結）以 `./` 開頭，指向當前工作目錄的檔案或資料夾，或以 `../` 開頭，指向上層工作目錄的檔案或資料夾。
+- 確保任何相對連結的結尾都帶有追蹤 ID（即 `?` 或 `&` 後接 `wt.mc_id=` 或 `WT.mc_id=`）。
+- 確保以下網域的 URL _github.com、microsoft.com、visualstudio.com、aka.ms、azure.com_ 都帶有追蹤 ID（即 `?` 或 `&` 後接 `wt.mc_id=` 或 `WT.mc_id=`）。
+- 確保您的連結中不包含特定國家地區語系（例如 `/en-us/` 或 `/en/`）。
+- 確保所有圖片都存放在 `./images` 資料夾中。
+- 確保圖片檔名具描述性，且使用英文字母、數字及連字號。
 
-## GitHub 工作流程
+## GitHub Workflows
 
-當你提交一個 pull request 時，將觸發四種不同的工作流程來驗證之前的規則。
-只需按照這裡列出的說明進行操作以通過工作流程檢查。
+當您提交 pull request 時，會觸發四個不同的工作流程來驗證上述規則。  
+只要依照這裡列出的指示操作，即可通過工作流程檢查。
 
-- [檢查斷裂的相對路徑](../..)
-- [檢查路徑有跟蹤](../..)
-- [檢查 URL 有跟蹤](../..)
-- [檢查 URL 沒有語言地區](../..)
+- [Check Broken Relative Paths](../..)
+- [Check Paths Have Tracking](../..)
+- [Check URLs Have Tracking](../..)
+- [Check URLs Don't Have Locale](../..)
 
-### 檢查斷裂的相對路徑
+### Check Broken Relative Paths
 
-此工作流程確保你文件中的任何相對路徑都能正常工作。
-這個庫被部署到 GitHub 頁面，因此在輸入將所有內容粘合在一起的鏈接時，你需要非常小心，不要將任何人引導到錯誤的地方。
+此工作流程確保您檔案中的相對路徑有效。  
+本倉庫部署於 GitHub Pages，因此您在輸入連結時必須非常小心，避免導向錯誤位置。
 
-要確保你的鏈接正常工作，只需使用 VS code 檢查即可。
+要確認連結是否正常，請使用 VS Code 檢查。
 
-例如，當你將鼠標懸停在文件中的任何鏈接上時，會提示你按 **ctrl + click** 來跟隨鏈接
+例如，當您將滑鼠移到檔案中的連結上時，會提示您按 **ctrl + click** 以跟隨連結。
 
-![VS code 跟隨鏈接截圖](../../translated_images/vscode-follow-link.f8e8fd9192241d8163db78371e22a7a4e032a1ca9219696d7eb3eb103d1b7544.hk.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.hk.png)
 
-如果你點擊一個鏈接並且它在本地不起作用，那麼它肯定會觸發工作流程並且不會在 GitHub 上工作。
+如果您點擊連結後在本地無法開啟，工作流程也會失敗，GitHub 上同樣無法正常運作。
 
-要解決此問題，請嘗試在 VS code 的幫助下輸入鏈接。
+要修正此問題，請利用 VS Code 輸入連結。
 
-當你輸入 `./` 或 `../` 時，VS code 會提示你從根據你輸入的內容提供的選項中選擇。
+當您輸入 `./` 或 `../` 時，VS Code 會根據您輸入的內容提示可選擇的檔案或資料夾。
 
-![VS code 選擇相對路徑截圖](../../translated_images/vscode-select-relative-path.b2cf754af764c28401e8098dbd372d00e8d2ac89c6b75e59f1450f99cb6a4ede.hk.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.hk.png)
 
-通過點擊所需的文件或文件夾來跟隨路徑，你就可以確保你的路徑沒有損壞。
+點擊想要的檔案或資料夾，即可確保路徑正確無誤。
 
-一旦你添加了正確的相對路徑，保存並推送你的更改，工作流程將再次被觸發以驗證你的更改。
-如果你通過了檢查，那麼你就可以開始了。
+加入正確的相對路徑後，儲存並推送更改，工作流程會再次執行驗證。  
+通過檢查後即可繼續。
 
-### 檢查路徑有跟蹤
+### Check Paths Have Tracking
 
-此工作流程確保任何相對路徑中都有跟蹤。
-這個庫被部署到 GitHub 頁面，因此我們需要跟蹤不同文件和文件夾之間的移動。
+此工作流程確保所有相對路徑都帶有追蹤參數。  
+本倉庫部署於 GitHub Pages，因此我們需要追蹤不同檔案和資料夾間的流量。
 
-要確保你的相對路徑中有跟蹤，只需檢查路徑末尾的以下文本 `?wt.mc_id=`。
-如果它附加到你的相對路徑中，那麼你將通過此檢查。
+要確認相對路徑有追蹤參數，請檢查路徑結尾是否有 `?wt.mc_id=`。  
+若有，則可通過此檢查。
 
-如果沒有，你可能會收到以下錯誤。
+若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub 檢查路徑缺少跟蹤評論截圖](../../translated_images/github-check-paths-missing-tracking-comment.1442630ba6e07efa327f46d27447178ae1c6d3b9960023dee1a69dd50f8a3653.hk.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.hk.png)
 
-要解決此問題，請嘗試打開工作流程突出顯示的文件路徑，並將跟蹤 ID 添加到相對路徑的末尾。
+要修正此問題，請打開工作流程標示的檔案路徑，並在相對路徑結尾加上追蹤 ID。
 
-一旦你添加了跟蹤 ID，保存並推送你的更改，工作流程將再次被觸發以驗證你的更改。
-如果你通過了檢查，那麼你就可以開始了。
+加入追蹤 ID 後，儲存並推送更改，工作流程會再次執行驗證。  
+通過檢查後即可繼續。
 
-### 檢查 URL 有跟蹤
+### Check URLs Have Tracking
 
-此工作流程確保任何 web URL 中都有跟蹤。
-這個庫對所有人開放，因此你需要確保跟蹤訪問以了解流量來自何處。
+此工作流程確保所有網頁 URL 都帶有追蹤參數。  
+本倉庫對所有人開放，因此需要追蹤流量來源。
 
-要確保你的 URL 中有跟蹤，只需檢查 URL 末尾的以下文本 `?wt.mc_id=`。
-如果它附加到你的 URL 中，那麼你將通過此檢查。
+要確認 URL 有追蹤參數，請檢查 URL 結尾是否有 `?wt.mc_id=`。  
+若有，則可通過此檢查。
 
-如果沒有，你可能會收到以下錯誤。
+若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub 檢查 URL 缺少跟蹤評論截圖](../../translated_images/github-check-urls-missing-tracking-comment.acd262e537606c01187cb5f4d248176839b5f512342ff9b6c367509ec285eebc.hk.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.hk.png)
 
-要解決此問題，請嘗試打開工作流程突出顯示的文件路徑，並將跟蹤 ID 添加到 URL 的末尾。
+要修正此問題，請打開工作流程標示的檔案路徑，並在 URL 結尾加上追蹤 ID。
 
-一旦你添加了跟蹤 ID，保存並推送你的更改，工作流程將再次被觸發以驗證你的更改。
-如果你通過了檢查，那麼你就可以開始了。
+加入追蹤 ID 後，儲存並推送更改，工作流程會再次執行驗證。  
+通過檢查後即可繼續。
 
-### 檢查 URL 沒有語言地區
+### Check URLs Don't Have Locale
 
-此工作流程確保任何 web URL 中沒有特定國家的語言地區。
-這個庫對全球所有人開放，因此你需要確保不要在 URL 中包含你的國家地區。
+此工作流程確保所有網頁 URL 不包含特定國家地區語系。  
+本倉庫面向全球使用者，因此請勿在 URL 中加入您所在國家的語系。
 
-要確保你的 URL 中沒有國家地區，只需檢查 URL 中的以下文本 `/en-us/` 或 `/en/` 或任何其他語言地區。
-如果它不在你的 URL 中，那麼你將通過此檢查。
+要確認 URL 不含國家語系，請檢查 URL 中是否有 `/en-us/`、`/en/` 或其他語言代碼。  
+若沒有，則可通過此檢查。
 
-如果沒有，你可能會收到以下錯誤。
+若有，您可能會看到以下錯誤訊息。
 
-![GitHub 檢查國家地區評論截圖](../../translated_images/github-check-country-locale-comment.15ae33688215cfe678e813c4dc0bf40d5d9341ee36dc95d6cc0684fa9a204224.hk.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.hk.png)
 
-要解決此問題，請嘗試打開工作流程突出顯示的文件路徑，並從 URL 中刪除國家地區。
+要修正此問題，請打開工作流程標示的檔案路徑，並移除 URL 中的國家語系。
 
-一旦你刪除了國家地區，保存並推送你的更改，工作流程將再次被觸發以驗證你的更改。
-如果你通過了檢查，那麼你就可以開始了。
+移除後，儲存並推送更改，工作流程會再次執行驗證。  
+通過檢查後即可繼續。
 
-恭喜！我們將盡快與你聯繫，反饋你的貢獻。
+恭喜！我們會盡快回覆您對貢獻的反饋。
 
-**免責聲明**：
-本文件使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。雖然我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原語言的文件作為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤讀不承擔責任。
+**免責聲明**：  
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或誤釋承擔責任。

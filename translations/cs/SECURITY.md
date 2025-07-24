@@ -2,48 +2,48 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-05-19T12:14:44+00:00",
+  "translation_date": "2025-07-09T06:55:45+00:00",
   "source_file": "SECURITY.md",
   "language_code": "cs"
 }
 -->
-## Zabezpečení
+## Bezpečnost
 
-Microsoft bere bezpečnost našich softwarových produktů a služeb vážně, což zahrnuje všechny repozitáře zdrojového kódu spravované prostřednictvím našich organizací na GitHubu, mezi které patří [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) a [naše GitHub organizace](https://opensource.microsoft.com/).
+Microsoft bere bezpečnost našich softwarových produktů a služeb vážně, což zahrnuje všechny repozitáře zdrojového kódu spravované prostřednictvím našich GitHub organizací, mezi které patří [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) a [naše GitHub organizace](https://opensource.microsoft.com/).
 
-Pokud máte podezření, že jste objevili bezpečnostní zranitelnost v jakémkoli repozitáři vlastněném Microsoftem, která splňuje [definici bezpečnostní zranitelnosti Microsoftu](https://aka.ms/opensource/security/definition), nahlaste ji nám, jak je popsáno níže.
+Pokud se domníváte, že jste našli bezpečnostní zranitelnost v jakémkoli repozitáři vlastněném Microsoftem, která splňuje [definici bezpečnostní zranitelnosti podle Microsoftu](https://aka.ms/opensource/security/definition), prosím nahlaste ji podle níže uvedených pokynů.
 
-## Hlášení bezpečnostních problémů
+## Hlásení bezpečnostních problémů
 
-**Bezpečnostní zranitelnosti prosím nehlaste prostřednictvím veřejných GitHub issues.**
+**Prosím, nehlaste bezpečnostní zranitelnosti prostřednictvím veřejných GitHub issues.**
 
-Místo toho je prosím nahlaste Microsoft Security Response Center (MSRC) na [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
+Místo toho je nahlaste Microsoft Security Response Center (MSRC) na [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
 
-Pokud dáváte přednost odeslání bez přihlášení, pošlete e-mail na [secure@microsoft.com](mailto:secure@microsoft.com). Pokud je to možné, zašifrujte svou zprávu naším PGP klíčem; stáhněte si jej prosím ze stránky [Microsoft Security Response Center PGP Key](https://aka.ms/opensource/security/pgpkey).
+Pokud dáváte přednost odeslání bez přihlášení, zašlete e-mail na [secure@microsoft.com](mailto:secure@microsoft.com). Pokud je to možné, zašifrujte svou zprávu pomocí našeho PGP klíče; stáhněte si jej prosím ze stránky [Microsoft Security Response Center PGP Key](https://aka.ms/opensource/security/pgpkey).
 
-Odpověď byste měli obdržet do 24 hodin. Pokud z nějakého důvodu ne, prosím kontaktujte nás e-mailem, abyste se ujistili, že jsme obdrželi vaši původní zprávu. Další informace naleznete na [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
+Odpověď byste měli obdržet do 24 hodin. Pokud z nějakého důvodu neobdržíte odpověď, prosím kontaktujte nás znovu e-mailem, abychom potvrdili přijetí vaší původní zprávy. Další informace najdete na [microsoft.com/msrc](https://aka.ms/opensource/security/msrc).
 
-Prosím zahrňte požadované informace uvedené níže (pokud možno co nejvíce), abychom lépe pochopili povahu a rozsah možného problému:
+Prosíme, zahrňte níže uvedené požadované informace (co nejvíce z nich můžete poskytnout), aby nám to pomohlo lépe pochopit povahu a rozsah možného problému:
 
-  * Typ problému (např. přetečení bufferu, SQL injekce, cross-site scripting atd.)
-  * Úplné cesty ke zdrojovým souborům souvisejícím s projevy problému
-  * Umístění postiženého zdrojového kódu (tag/větev/commit nebo přímá URL)
-  * Jakákoliv speciální konfigurace potřebná k reprodukci problému
+  * Typ problému (např. přetečení bufferu, SQL injection, cross-site scripting atd.)
+  * Kompletní cesty ke zdrojovým souborům souvisejícím s projevy problému
+  * Umístění postiženého zdrojového kódu (tag/branch/commit nebo přímý URL)
+  * Jakákoli speciální konfigurace potřebná k reprodukci problému
   * Krok za krokem instrukce k reprodukci problému
   * Proof-of-concept nebo exploit kód (pokud je to možné)
-  * Dopad problému, včetně toho, jak by útočník mohl problém zneužít
+  * Dopad problému, včetně toho, jak by mohl útočník problém zneužít
 
-Tyto informace nám pomohou rychleji zpracovat vaši zprávu.
+Tyto informace nám pomohou rychleji zpracovat váš report.
 
-Pokud hlásíte pro bug bounty, úplnější zprávy mohou přispět k vyšší odměně. Prosím navštivte naši stránku [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) pro více podrobností o našich aktivních programech.
+Pokud hlásíte chybu v rámci bug bounty programu, podrobnější zprávy mohou přispět k vyšší odměně. Více informací o našich aktivních programech najdete na stránce [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty).
 
 ## Preferované jazyky
 
-Preferujeme, aby veškerá komunikace byla vedena v angličtině.
+Preferujeme, aby veškerá komunikace probíhala v angličtině.
 
 ## Politika
 
-Microsoft se řídí principem [Koordinovaného zveřejňování zranitelností](https://aka.ms/opensource/security/cvd).
+Microsoft dodržuje princip [Koordinovaného zveřejňování zranitelností](https://aka.ms/opensource/security/cvd).
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože se snažíme o přesnost, uvědomte si prosím, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme zodpovědní za jakékoli nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

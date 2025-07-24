@@ -2,165 +2,254 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f5ff3b6204a695a117d6f452403c95f7",
-  "translation_date": "2025-05-19T20:19:47+00:00",
+  "translation_date": "2025-07-09T13:58:34+00:00",
   "source_file": "10-building-low-code-ai-applications/README.md",
   "language_code": "tr"
 }
 -->
-# Düşük Kodlu AI Uygulamaları Oluşturma
+# Düşük Kodlu AI Uygulamaları Geliştirme
 
-[![Düşük Kodlu AI Uygulamaları Oluşturma](../../../translated_images/10-lesson-banner.84b607fa749c0d53ffe98212c5c3b81292bb041d1aec07da8fd720e9c01b5718.tr.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
+[![Düşük Kodlu AI Uygulamaları Geliştirme](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.tr.png)](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Bu dersin videosunu izlemek için yukarıdaki resme tıklayın)_
+> _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
 ## Giriş
 
-Artık görüntü üreten uygulamalar nasıl oluşturulur öğrendiğimize göre, düşük koddan bahsedelim. Üretken AI, düşük kod dahil olmak üzere çeşitli alanlarda kullanılabilir, ancak düşük kod nedir ve AI'yi buna nasıl ekleyebiliriz?
+Artık görüntü oluşturma uygulamaları geliştirmeyi öğrendiğimize göre, düşük kod konusuna geçelim. Üretken AI, düşük kod da dahil olmak üzere birçok farklı alanda kullanılabilir, peki düşük kod nedir ve AI’yı buna nasıl entegre edebiliriz?
 
-Düşük Kod Geliştirme Platformları sayesinde geleneksel geliştiriciler ve geliştirici olmayanlar için uygulama ve çözümler oluşturmak daha kolay hale geldi. Düşük Kod Geliştirme Platformları, az veya hiç kod kullanmadan uygulama ve çözümler oluşturmanıza olanak tanır. Bu, bileşenleri sürükleyip bırakarak uygulama ve çözümler oluşturmanızı sağlayan görsel bir geliştirme ortamı sunarak sağlanır. Bu, uygulama ve çözümleri daha hızlı ve daha az kaynakla oluşturmanıza olanak tanır. Bu derste, Düşük Kod'u nasıl kullanacağımızı ve AI ile düşük kod geliştirmeyi Power Platform kullanarak nasıl geliştireceğimizi derinlemesine inceleyeceğiz.
+Düşük Kod Geliştirme Platformları sayesinde, geleneksel geliştiriciler ve geliştirici olmayanlar için uygulama ve çözümler oluşturmak daha kolay hale geldi. Düşük Kod Geliştirme Platformları, az veya hiç kod yazmadan uygulama ve çözümler oluşturmanızı sağlar. Bu, uygulama ve çözümleri oluşturmak için bileşenleri sürükleyip bırakabileceğiniz görsel bir geliştirme ortamı sunarak mümkün olur. Böylece uygulamalar ve çözümler daha hızlı ve daha az kaynakla geliştirilebilir. Bu derste, Düşük Kod kullanımı ve Power Platform ile AI’yı kullanarak düşük kod geliştirmeyi nasıl geliştirebileceğimizi derinlemesine inceleyeceğiz.
 
-Power Platform, kuruluşlara ekiplerini kendi çözümlerini sezgisel bir düşük kod veya kodsuz ortamda oluşturmaları için güçlendirme fırsatı sunar. Bu ortam, çözümler oluşturma sürecini basitleştirmeye yardımcı olur. Power Platform ile çözümler aylar veya yıllar yerine günler veya haftalar içinde oluşturulabilir. Power Platform beş ana üründen oluşur: Power Apps, Power Automate, Power BI, Power Pages ve Copilot Studio.
+Power Platform, organizasyonlara ekiplerini sezgisel bir düşük kod veya kodsuz ortamda kendi çözümlerini geliştirmeleri için güçlendirme fırsatı sunar. Bu ortam, çözüm oluşturma sürecini basitleştirir. Power Platform ile çözümler aylar veya yıllar yerine günler veya haftalar içinde oluşturulabilir. Power Platform beş temel üründen oluşur: Power Apps, Power Automate, Power BI, Power Pages ve Copilot Studio.
 
 Bu ders şunları kapsar:
 
-- Power Platform'da Üretken AI'ye Giriş
-- Copilot'a Giriş ve nasıl kullanılacağı
-- Power Platform'da uygulama ve akışlar oluşturmak için Üretken AI kullanma
-- AI Builder ile Power Platform'daki AI Modellerini Anlama
+- Power Platform’da Üretken AI’ya Giriş  
+- Copilot’a Giriş ve nasıl kullanılır  
+- Power Platform’da Üretken AI kullanarak uygulama ve akışlar oluşturma  
+- AI Builder ile Power Platform’daki AI Modellerini anlama  
 
 ## Öğrenme Hedefleri
 
-Bu dersin sonunda:
+Bu dersin sonunda şunları yapabileceksiniz:
 
-- Power Platform'da Copilot'un nasıl çalıştığını anlayabileceksiniz.
+- Power Platform’da Copilot’un nasıl çalıştığını anlamak.
 
-- Eğitim girişimimiz için bir Öğrenci Görev İzleyici Uygulaması oluşturabileceksiniz.
+- Eğitim girişimimiz için Öğrenci Ödev Takip Uygulaması geliştirmek.
 
-- Faturalardan bilgi çıkarmak için AI kullanan bir Fatura İşleme Akışı oluşturabileceksiniz.
+- Faturalardan bilgi çıkarmak için AI kullanan Fatura İşleme Akışı oluşturmak.
 
-- GPT AI Modeli ile Metin Oluşturma kullanırken en iyi uygulamaları uygulayabileceksiniz.
+- Create Text with GPT AI Model kullanırken en iyi uygulamaları uygulamak.
 
-Bu derste kullanacağınız araçlar ve teknolojiler şunlardır:
+Bu derste kullanacağınız araçlar ve teknolojiler:
 
-- **Power Apps**, öğrenci görev izleyici uygulaması için, veri izleme, yönetme ve etkileşim kurma uygulamaları oluşturmak için düşük kodlu bir geliştirme ortamı sağlar.
+- **Power Apps**, Öğrenci Ödev Takip uygulaması için, verileri takip etmek, yönetmek ve etkileşimde bulunmak için düşük kodlu bir geliştirme ortamı sağlar.
 
-- **Dataverse**, öğrenci görev izleyici uygulamasının verilerini saklamak için, uygulamanın verilerini saklamak için düşük kodlu bir veri platformu sağlayacak.
+- **Dataverse**, Öğrenci Ödev Takip uygulamasının verilerini depolamak için, uygulamanın verilerini saklamak üzere düşük kodlu bir veri platformu sunar.
 
-- **Power Automate**, fatura işleme sürecini otomatikleştirmek için iş akışları oluşturmak için düşük kodlu bir geliştirme ortamı sağlayacak.
+- **Power Automate**, Fatura İşleme akışı için, Fatura İşleme sürecini otomatikleştirmek için iş akışları oluşturabileceğiniz düşük kodlu geliştirme ortamı sağlar.
 
-- **AI Builder**, girişimimiz için faturaları işlemek için önceden oluşturulmuş AI Modellerini kullanacağınız Fatura İşleme AI Modeli için.
+- **AI Builder**, Fatura İşleme AI Modeli için, önceden oluşturulmuş AI Modellerini kullanarak faturaları işlemek için kullanılır.
 
-## Power Platform'da Üretken AI
+## Power Platform’da Üretken AI
 
-Düşük kod geliştirme ve uygulamayı üretken AI ile geliştirmek, Power Platform için önemli bir odak alanıdır. Amaç, _herhangi bir veri bilimi uzmanlığı gerektirmeden_ AI destekli uygulamalar, siteler, panolar oluşturmak ve süreçleri otomatikleştirmek için herkesi yetkilendirmektir. Bu amaç, Power Platform'daki düşük kod geliştirme deneyimine Copilot ve AI Builder şeklinde üretken AI entegrasyonu ile sağlanır.
+Üretken AI ile düşük kod geliştirme ve uygulama geliştirmeyi güçlendirmek, Power Platform’un önemli odak alanlarından biridir. Amaç, herkesin veri bilimi uzmanlığı gerektirmeden AI destekli uygulamalar, siteler, panolar oluşturmasını ve süreçleri AI ile otomatikleştirmesini sağlamaktır. Bu hedef, Copilot ve AI Builder şeklinde üretken AI’yı Power Platform’daki düşük kod geliştirme deneyimine entegre ederek gerçekleştirilir.
 
 ### Bu nasıl çalışır?
 
-Copilot, doğal dil kullanarak bir dizi konuşma adımı ile gereksinimlerinizi tanımlayarak Power Platform çözümleri oluşturmanıza olanak tanıyan bir AI asistanıdır. Örneğin, AI asistanınıza uygulamanızın hangi alanları kullanacağını belirtebilir ve hem uygulamayı hem de temel veri modelini oluşturabilir veya Power Automate'de bir akışın nasıl kurulacağını belirtebilirsiniz.
+Copilot, doğal dil kullanarak gereksinimlerinizi bir dizi sohbet adımıyla tanımlayarak Power Platform çözümleri oluşturmanızı sağlayan bir AI asistanıdır. Örneğin, AI asistanınıza uygulamanızın hangi alanları kullanacağını söyleyebilir ve o hem uygulamayı hem de temel veri modelini oluşturabilir ya da Power Automate’te bir akışın nasıl kurulacağını belirtebilirsiniz.
 
-Copilot destekli işlevleri, kullanıcıların konuşma etkileşimleri yoluyla içgörüleri ortaya çıkarmasını sağlamak için uygulama ekranlarınızdaki bir özellik olarak kullanabilirsiniz.
+Copilot destekli işlevleri, kullanıcıların sohbet yoluyla içgörüler keşfetmesini sağlamak için uygulama ekranlarınızda bir özellik olarak kullanabilirsiniz.
 
-AI Builder, Power Platform'da mevcut olan düşük kodlu bir AI yeteneğidir ve süreçleri otomatikleştirmenize ve sonuçları tahmin etmenize yardımcı olmak için AI Modelleri kullanmanıza olanak tanır. AI Builder ile Dataverse'teki veya SharePoint, OneDrive veya Azure gibi çeşitli bulut veri kaynaklarındaki verilerinize bağlanan uygulamalarınıza ve akışlarınıza AI getirebilirsiniz.
+AI Builder, Power Platform’da bulunan düşük kodlu bir AI yeteneğidir ve AI Modellerini kullanarak süreçleri otomatikleştirmenize ve sonuçları tahmin etmenize yardımcı olur. AI Builder ile Dataverse veya SharePoint, OneDrive, Azure gibi çeşitli bulut veri kaynaklarına bağlanan uygulamalarınıza ve akışlarınıza AI katabilirsiniz.
 
-Copilot, Power Platform'un tüm ürünlerinde mevcuttur: Power Apps, Power Automate, Power BI, Power Pages ve Power Virtual Agents. AI Builder, Power Apps ve Power Automate'de mevcuttur. Bu derste, eğitim girişimimiz için bir çözüm oluşturmak amacıyla Power Apps ve Power Automate'de Copilot ve AI Builder'ı nasıl kullanacağımıza odaklanacağız.
+Copilot, Power Apps, Power Automate, Power BI, Power Pages ve Power Virtual Agents dahil tüm Power Platform ürünlerinde mevcuttur. AI Builder ise Power Apps ve Power Automate’te bulunur. Bu derste, eğitim girişimimiz için bir çözüm oluşturmak üzere Power Apps ve Power Automate’te Copilot ve AI Builder kullanmaya odaklanacağız.
 
-### Power Apps'te Copilot
+### Power Apps’te Copilot
 
-Power Platform'un bir parçası olan Power Apps, veri izleme, yönetme ve etkileşim kurma uygulamaları oluşturmak için düşük kodlu bir geliştirme ortamı sağlar. Tarayıcılarda, tabletlerde ve telefonlarda çalışan ve iş arkadaşlarınızla paylaşılabilen uygulamalar oluşturmanıza olanak tanır. Power Apps, her iş kullanıcısı veya profesyonel geliştiricinin özel uygulamalar oluşturabilmesi için basit bir arayüzle kullanıcıları uygulama geliştirmeye yönlendirir. Uygulama geliştirme deneyimi, Copilot aracılığıyla Üretken AI ile de geliştirilmiştir.
+Power Platform’un bir parçası olarak Power Apps, verileri takip etmek, yönetmek ve etkileşimde bulunmak için uygulamalar oluşturabileceğiniz düşük kodlu bir geliştirme ortamı sunar. Bulut hizmetlerine ve kurum içi verilere bağlanabilen ölçeklenebilir bir veri platformu ve uygulama geliştirme hizmetleri paketidir. Power Apps, tarayıcılar, tabletler ve telefonlarda çalışan uygulamalar oluşturmanıza ve bunları iş arkadaşlarınızla paylaşmanıza olanak tanır. Power Apps, basit arayüzü sayesinde her iş kullanıcısının veya profesyonel geliştiricinin özel uygulamalar oluşturmasını kolaylaştırır. Uygulama geliştirme deneyimi, Copilot aracılığıyla Üretken AI ile de geliştirilmiştir.
 
-Power Apps'teki Copilot AI asistanı özelliği, ne tür bir uygulamaya ihtiyacınız olduğunu ve uygulamanızın ne tür bilgileri izlemesi, toplaması veya göstermesi gerektiğini tanımlamanıza olanak tanır. Copilot daha sonra tanımınıza dayalı olarak duyarlı bir Canvas uygulaması oluşturur. Ardından uygulamayı ihtiyaçlarınıza göre özelleştirebilirsiniz. AI Copilot ayrıca izlemek istediğiniz verileri depolamak için ihtiyaç duyduğunuz alanlarla bir Dataverse Tablosu önerir ve bazı örnek veriler sağlar. Dataverse'in ne olduğunu ve Power Apps'te nasıl kullanabileceğinizi bu derste daha sonra inceleyeceğiz. Ardından, AI Copilot asistan özelliğini kullanarak tablonuzu konuşma adımlarıyla ihtiyaçlarınıza göre özelleştirebilirsiniz. Bu özellik, Power Apps ana ekranından kolayca erişilebilir.
+Power Apps’teki copilot AI asistan özelliği, ne tür bir uygulamaya ihtiyacınız olduğunu ve uygulamanızın hangi bilgileri takip, toplamak veya göstermek istediğini tanımlamanızı sağlar. Copilot, açıklamanıza dayanarak duyarlı bir Canvas uygulaması oluşturur. Ardından uygulamayı ihtiyaçlarınıza göre özelleştirebilirsiniz. AI Copilot ayrıca, takip etmek istediğiniz verileri depolamak için gereken alanlarla birlikte bir Dataverse Tablosu oluşturur ve örnek veriler sunar. Bu derste daha sonra Dataverse’in ne olduğunu ve Power Apps’te nasıl kullanılacağını inceleyeceğiz. AI Copilot asistan özelliğiyle sohbet adımları aracılığıyla tabloyu ihtiyaçlarınıza göre özelleştirebilirsiniz. Bu özellik Power Apps ana ekranından kolayca erişilebilir.
 
-### Power Automate'te Copilot
+### Power Automate’te Copilot
 
-Power Platform'un bir parçası olan Power Automate, kullanıcıların uygulamalar ve hizmetler arasında otomatik iş akışları oluşturmasına olanak tanır. İletişim, veri toplama ve karar onayları gibi tekrarlayan iş süreçlerini otomatikleştirmeye yardımcı olur. Basit arayüzü, her teknik yeterlilikteki kullanıcıların (başlangıç seviyesinden deneyimli geliştiricilere kadar) iş görevlerini otomatikleştirmesine olanak tanır. İş akışı geliştirme deneyimi, Copilot aracılığıyla Üretken AI ile de geliştirilmiştir.
+Power Platform’un bir parçası olarak Power Automate, kullanıcıların uygulamalar ve hizmetler arasında otomatik iş akışları oluşturmasını sağlar. İletişim, veri toplama ve karar onayları gibi tekrarlayan iş süreçlerini otomatikleştirmeye yardımcı olur. Basit arayüzü sayesinde her teknik seviyeden kullanıcı (yeni başlayanlardan deneyimli geliştiricilere kadar) iş görevlerini otomatikleştirebilir. İş akışı geliştirme deneyimi, Copilot aracılığıyla Üretken AI ile de geliştirilmiştir.
 
-Power Automate'teki Copilot AI asistanı özelliği, ne tür bir akışa ihtiyacınız olduğunu ve akışınızın hangi işlemleri gerçekleştirmesini istediğinizi tanımlamanıza olanak tanır. Copilot daha sonra tanımınıza dayalı olarak bir akış oluşturur. Ardından akışı ihtiyaçlarınıza göre özelleştirebilirsiniz. AI Copilot ayrıca otomatikleştirmek istediğiniz görevi gerçekleştirmek için ihtiyaç duyduğunuz işlemleri önerir ve oluşturur. Bu derste daha sonra akışların ne olduğunu ve Power Automate'te nasıl kullanabileceğinizi inceleyeceğiz. Ardından, AI Copilot asistan özelliğini kullanarak işlemleri ihtiyaçlarınıza göre özelleştirebilirsiniz. Bu özellik, Power Automate ana ekranından kolayca erişilebilir.
+Power Automate’teki copilot AI asistan özelliği, ne tür bir akışa ihtiyacınız olduğunu ve akışınızın hangi işlemleri yapmasını istediğinizi tanımlamanızı sağlar. Copilot, açıklamanıza dayanarak bir akış oluşturur. Ardından akışı ihtiyaçlarınıza göre özelleştirebilirsiniz. AI Copilot ayrıca, otomatikleştirmek istediğiniz görevi gerçekleştirmek için gereken işlemleri oluşturur ve önerir. Bu derste daha sonra akışların ne olduğunu ve Power Automate’te nasıl kullanılacağını inceleyeceğiz. AI Copilot asistan özelliğiyle sohbet adımları aracılığıyla işlemleri ihtiyaçlarınıza göre özelleştirebilirsiniz. Bu özellik Power Automate ana ekranından kolayca erişilebilir.
 
-## Görev: Eğitim girişimimizin öğrenci görevlerini ve faturalarını Copilot kullanarak yönetin
+## Ödev: Copilot kullanarak girişimimiz için öğrenci ödevleri ve faturaları yönetin
 
-Girişimimiz öğrencilere çevrimiçi kurslar sunmaktadır. Girişim hızla büyüdü ve şimdi kurslarına olan talebe yetişmekte zorlanıyor. Girişim, öğrenci görevlerini ve faturalarını yönetmelerine yardımcı olacak düşük kodlu bir çözüm oluşturmak için sizi Power Platform geliştiricisi olarak işe aldı. Çözüm, öğrenci görevlerini bir uygulama aracılığıyla izleyip yönetmelerine ve fatura işleme sürecini bir iş akışı aracılığıyla otomatikleştirmelerine yardımcı olmalıdır. Çözümü geliştirmek için Üretken AI kullanmanız istendi.
+Girişimimiz öğrencilere çevrimiçi kurslar sunuyor. Girişim hızla büyüdü ve artık kurslara olan talebi karşılamakta zorlanıyor. Girişim, öğrenci ödevlerini ve faturalarını yönetmelerine yardımcı olacak düşük kodlu bir çözüm geliştirmek için sizi Power Platform geliştiricisi olarak işe aldı. Çözüm, öğrenci ödevlerini bir uygulama aracılığıyla takip edip yönetmelerine ve fatura işleme sürecini bir iş akışıyla otomatikleştirmelerine yardımcı olmalıdır. Çözümü geliştirmek için Üretken AI kullanmanız istendi.
 
-Copilot'u kullanmaya başlarken, [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) ile başlayabilirsiniz. Bu kütüphane, Copilot ile uygulamalar ve akışlar oluşturmak için kullanabileceğiniz istemlerin bir listesini içerir. Ayrıca kütüphanedeki istemleri kullanarak Copilot'a gereksinimlerinizi nasıl tanımlayacağınız konusunda bir fikir edinebilirsiniz.
+Copilot kullanmaya başlarken, [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) kütüphanesini kullanarak promptlarla başlayabilirsiniz. Bu kütüphane, Copilot ile uygulama ve akışlar oluşturmak için kullanabileceğiniz promptların bir listesini içerir. Ayrıca, gereksinimlerinizi Copilot’a nasıl tanımlayacağınız konusunda fikir edinmek için de kullanabilirsiniz.
 
-### Girişimimiz için Bir Öğrenci Görev İzleyici Uygulaması Oluşturun
+### Girişimimiz için Öğrenci Ödev Takip Uygulaması Oluşturun
 
-Girişimimizdeki eğitimciler, öğrenci görevlerini izlemekte zorlanıyor. Görevleri izlemek için bir elektronik tablo kullanıyorlardı, ancak öğrenci sayısı arttıkça bu yönetilmesi zor hale geldi. Sizden, öğrenci görevlerini izlemelerine ve yönetmelerine yardımcı olacak bir uygulama oluşturmanızı istediler. Uygulama, onlara yeni görevler ekleme, görevleri görüntüleme, görevleri güncelleme ve görevleri silme olanağı sağlamalıdır. Uygulama ayrıca eğitimcilerin ve öğrencilerin derecelendirilen ve derecelendirilmeyen görevleri görüntülemelerine olanak tanımalıdır.
+Girişimimizdeki eğitimciler, öğrenci ödevlerini takip etmekte zorlanıyorlar. Ödevleri takip etmek için bir elektronik tablo kullanıyorlardı ancak öğrenci sayısı arttıkça bu yönetilmesi zor hale geldi. Size, öğrenci ödevlerini takip edip yönetmelerine yardımcı olacak bir uygulama oluşturmanız istendi. Uygulama, yeni ödev eklemeye, ödevleri görüntülemeye, güncellemeye ve silmeye olanak tanımalıdır. Ayrıca eğitimciler ve öğrenciler, notlandırılmış ve notlandırılmamış ödevleri görebilmelidir.
 
-Uygulamayı, aşağıdaki adımları izleyerek Power Apps'te Copilot kullanarak oluşturacaksınız:
+Uygulamayı Power Apps’te Copilot kullanarak aşağıdaki adımlarla oluşturacaksınız:
 
 1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) ana ekranına gidin.
 
-2. Ana ekrandaki metin alanını kullanarak oluşturmak istediğiniz uygulamayı tanımlayın. Örneğin, **_Öğrenci görevlerini izlemek ve yönetmek için bir uygulama oluşturmak istiyorum_**. İstemi AI Copilot'a göndermek için **Gönder** düğmesine tıklayın.
+1. Ana ekrandaki metin alanını kullanarak oluşturmak istediğiniz uygulamayı tanımlayın. Örneğin, **_Öğrenci ödevlerini takip ve yönetmek için bir uygulama oluşturmak istiyorum_**. AI Copilot’a promptu göndermek için **Gönder** butonuna tıklayın.
 
-![Oluşturmak istediğiniz uygulamayı tanımlayın](../../../translated_images/copilot-chat-prompt-powerapps.8b18beb535e7bd1a26be1284c2ef1246dbadb4704fa1656f1b6b35214ddc1c89.tr.png)
+![Oluşturmak istediğiniz uygulamayı tanımlayın](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.tr.png)
 
-3. AI Copilot, izlemek istediğiniz verileri depolamak için ihtiyaç duyduğunuz alanlarla bir Dataverse Tablosu önerir ve bazı örnek veriler sağlar. Ardından, AI Copilot asistan özelliğini kullanarak tablonuzu konuşma adımlarıyla ihtiyaçlarınıza göre özelleştirebilirsiniz.
+1. AI Copilot, takip etmek istediğiniz verileri depolamak için gereken alanlarla birlikte bir Dataverse Tablosu ve örnek veriler önerir. Ardından AI Copilot asistan özelliğiyle sohbet adımları aracılığıyla tabloyu ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
-   > **Önemli**: Dataverse, Power Platform'un temel veri platformudur. Uygulamanın verilerini saklamak için düşük kodlu bir veri platformudur. Microsoft Cloud'da güvenli bir şekilde veri depolayan ve Power Platform ortamınızda sağlanan tam yönetilen bir hizmettir. Veri sınıflandırması, veri soy ağacı, ince ayarlı erişim kontrolü ve daha fazlası gibi yerleşik veri yönetimi yetenekleri ile birlikte gelir. Dataverse hakkında daha fazla bilgi edinebilirsiniz [buradan](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+   > **Önemli**: Dataverse, Power Platform’un temel veri platformudur. Uygulamanın verilerini depolamak için düşük kodlu bir veri platformudur. Microsoft Bulutu’nda güvenli bir şekilde veri depolayan ve Power Platform ortamınızda sağlanan tam yönetilen bir hizmettir. Veri sınıflandırması, veri kökeni, ayrıntılı erişim kontrolü gibi yerleşik veri yönetişimi özellikleriyle birlikte gelir. Dataverse hakkında daha fazla bilgiye [buradan](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko) ulaşabilirsiniz.
 
-   ![Yeni tablonuzdaki önerilen alanlar](../../../translated_images/copilot-dataverse-table-powerapps.35038be17c72f49f510a76a208db3c2c8b3c0928f08620694dca255b103f2929.tr.png)
+   ![Yeni tablonuzdaki önerilen alanlar](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.tr.png)
 
-4. Eğitimciler, görevlerini teslim eden öğrencilere e-posta göndermek ve görevlerinin ilerleyişi hakkında onları bilgilendirmek istiyor. Tabloda öğrenci e-postasını saklamak için yeni bir alan eklemek üzere Copilot'u kullanabilirsiniz. Örneğin, tabloya yeni bir alan eklemek için şu istemi kullanabilirsiniz: **_Öğrenci e-postasını saklamak için bir sütun eklemek istiyorum_**. İstemi AI Copilot'a göndermek için **Gönder** düğmesine tıklayın.
+1. Eğitimciler, ödevlerini teslim eden öğrencilere ödevlerin durumu hakkında bilgi vermek için e-posta göndermek istiyorlar. Tabloya öğrenci e-posta adresini depolamak için yeni bir alan eklemek üzere Copilot’u kullanabilirsiniz. Örneğin, tabloya yeni bir alan eklemek için şu promptu kullanabilirsiniz: **_Öğrenci e-postasını depolamak için bir sütun eklemek istiyorum_**. AI Copilot’a promptu göndermek için **Gönder** butonuna tıklayın.
 
-![Yeni bir alan ekleme](../../../translated_images/copilot-new-column.48af3bb080c13599fb73ee32cc18101dc0cf61992d0dfe15b8bc4aa75a6c6a34.tr.png)
+![Yeni alan ekleme](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.tr.png)
 
-5. AI Copilot yeni bir alan oluşturacak ve ardından alanı ihtiyaçlarınıza göre özelleştirebilirsiniz.
+1. AI Copilot yeni bir alan oluşturacak ve ardından bu alanı ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
-6. Tabloyu tamamladığınızda, uygulamayı oluşturmak için **Uygulama oluştur** düğmesine tıklayın.
+1. Tabloyu tamamladıktan sonra, uygulamayı oluşturmak için **Uygulama oluştur** butonuna tıklayın.
 
-7. AI Copilot, tanımınıza dayalı olarak duyarlı bir Canvas uygulaması oluşturur. Ardından uygulamayı ihtiyaçlarınıza göre özelleştirebilirsiniz.
+1. AI Copilot, açıklamanıza dayanarak duyarlı bir Canvas uygulaması oluşturacak. Ardından uygulamayı ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
-8. Eğitimcilerin öğrencilere e-posta göndermesi için uygulamaya yeni bir ekran eklemek üzere Copilot'u kullanabilirsiniz. Örneğin, uygulamaya yeni bir ekran eklemek için şu istemi kullanabilirsiniz: **_Öğrencilere e-posta göndermek için bir ekran eklemek istiyorum_**. İstemi AI Copilot'a göndermek için **Gönder** düğmesine tıklayın.
+1. Eğitimcilerin öğrencilere e-posta gönderebilmesi için uygulamaya yeni bir ekran eklemek üzere Copilot’u kullanabilirsiniz. Örneğin, uygulamaya yeni bir ekran eklemek için şu promptu kullanabilirsiniz: **_Öğrencilere e-posta göndermek için bir ekran eklemek istiyorum_**. AI Copilot’a promptu göndermek için **Gönder** butonuna tıklayın.
 
-![Bir istem talimatıyla yeni ekran ekleme](../../../translated_images/copilot-new-screen.30341e89604440b4c91eb55d258276fd6e283bfab376c57501f0b3caeaaf2fda.tr.png)
+![Prompt talimatıyla yeni ekran ekleme](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.tr.png)
 
-9. AI Copilot yeni bir ekran oluşturacak ve ardından ekranı ihtiyaçlarınıza göre özelleştirebilirsiniz.
+1. AI Copilot yeni bir ekran oluşturacak ve ardından bu ekranı ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
-10. Uygulamayı tamamladığınızda, uygulamayı kaydetmek için **Kaydet** düğmesine tıklayın.
+1. Uygulamayı tamamladıktan sonra, uygulamayı kaydetmek için **Kaydet** butonuna tıklayın.
 
-11. Uygulamayı eğitimcilerle paylaşmak için **Paylaş** düğmesine ve ardından tekrar **Paylaş** düğmesine tıklayın. Ardından eğitimcilerin e-posta adreslerini girerek uygulamayı onlarla paylaşabilirsiniz.
+1. Uygulamayı eğitimcilerle paylaşmak için **Paylaş** butonuna tıklayın ve ardından tekrar **Paylaş** butonuna tıklayın. Eğitimcilerin e-posta adreslerini girerek uygulamayı onlarla paylaşabilirsiniz.
 
-> **Ödeviniz**: Yeni oluşturduğunuz uygulama iyi bir başlangıç ama geliştirilebilir. E-posta özelliği ile eğitimciler, öğrencilere e-postaları manuel olarak yazmak zorunda kalarak gönderebilir. Eğitimcilerin, öğrenciler görevlerini teslim ettiklerinde otomatik olarak e-posta göndermelerini sağlayacak bir otomasyon oluşturmak için Copilot'u kullanabilir misiniz? İpucunuz, doğru istemle Power Automate'te Copilot'u kullanarak bunu oluşturabileceğinizdir.
+> **Ödeviniz**: Az önce oluşturduğunuz uygulama iyi bir başlangıç ancak geliştirilebilir. E-posta özelliği ile eğitimciler sadece e-postaları manuel olarak yazarak öğrencilere e-posta gönderebiliyor. Copilot’u kullanarak, eğitimcilerin ödev teslim ettiklerinde öğrencilere otomatik olarak e-posta göndermesini sağlayacak bir otomasyon oluşturabilir misiniz? İpucunuz, doğru prompt ile Power Automate’te Copilot’u kullanarak bunu yapabilirsiniz.
 
-### Girişimimiz için Bir Fatura Bilgi Tablosu Oluşturun
+### Girişimimiz için Fatura Bilgi Tablosu Oluşturun
 
-Girişimimizin finans ekibi, faturaları takip etmekte zorlanıyor. Faturaları izlemek için bir elektronik tablo kullanıyorlardı, ancak fatura sayısı arttıkça bu yönetilmesi zor hale geldi. Sizden, aldıkları faturaların bilgilerini saklamak, izlemek ve yönetmek için bir tablo oluşturmanızı istediler. Tablo, tüm fatura bilgilerini çıkarmak ve tabloya kaydetmek için bir otomasyon oluşturmak için kullanılmalıdır. Tablo ayrıca finans ekibinin ödenmiş ve ödenmemiş faturaları görüntülemesine olanak tanımalıdır.
+Girişimimizin finans ekibi, faturaları takip etmekte zorlanıyor. Faturaları takip etmek için bir elektronik tablo kullanıyorlardı ancak fatura sayısı arttıkça bu yönetilmesi zor hale geldi. Size, aldıkları faturaların bilgilerini depolamalarına, takip etmelerine ve yönetmelerine yardımcı olacak bir tablo oluşturmanız istendi. Bu tablo, tüm fatura bilgilerini çıkaracak ve tabloya kaydedecek bir otomasyon oluşturmak için kullanılacaktır. Tablo ayrıca finans ekibinin ödenmiş ve ödenmemiş faturaları görmesini sağlamalıdır.
 
-Power Platform'un, uygulamalarınız ve çözümleriniz için verileri saklamanıza olanak tanıyan bir temel veri platformu olan Dataverse vardır. Dataverse, uygulamanızın verilerini saklamak için düşük kodlu bir veri platformu sağlar. Microsoft Cloud'da güvenli bir şekilde veri depolayan ve Power Platform ortamınızda sağlanan tam yönetilen bir hizmettir. Veri sınıflandırması, veri soy ağacı, ince ayarlı erişim kontrolü ve daha fazlası gibi yerleşik veri yönetimi yetenekleri ile birlikte gelir. [Dataverse hakkında daha fazla bilgiyi buradan](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko) öğrenebilirsiniz.
+Power Platform’un altında yatan veri platformu Dataverse, uygulamalarınız ve çözümleriniz için veri depolamanıza olanak tanır. Dataverse, uygulamanın verilerini depolamak için düşük kodlu bir veri platformudur. Microsoft Bulutu’nda güvenli bir şekilde veri depolayan ve Power Platform ortamınızda sağlanan tam yönetilen bir hizmettir. Veri sınıflandırması, veri kökeni, ayrıntılı erişim kontrolü gibi yerleşik veri yönetişimi özellikleriyle birlikte gelir. Dataverse hakkında daha fazla bilgiye [buradan](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko) ulaşabilirsiniz.
 
-Girişimimiz için neden Dataverse kullanmalıyız? Dataverse içindeki standart ve özel tablolar, verileriniz için güvenli ve bulut tabanlı bir depolama seçeneği sunar. Tablolar, tek bir Excel çalışma kitabındaki birden fazla çalışma sayfasını nasıl kullanıyorsanız, farklı türde verileri saklamanıza olanak tanır. Tabloları, kuruluşunuz veya iş ihtiyaçlarınıza özel verileri saklamak için kullanabilirsiniz. Girişimimizin Dataverse kullanmaktan elde edeceği bazı faydalar şunlardır, ancak bunlarla sınırlı değildir:
+Neden girişimimiz için Dataverse kullanmalıyız? Dataverse içindeki standart ve özel tablolar, verileriniz için güvenli ve bulut tabanlı bir depolama seçeneği sunar. Tablolar, bir Excel çalışma kitabındaki birden fazla çalışma sayfası gibi farklı türde verileri depolamanıza olanak tanır. Tabloları, organizasyonunuza veya iş ihtiyaçlarınıza özgü verileri depolamak için kullanabilirsiniz. Girişimimizin Dataverse kullanarak elde edeceği bazı avantajlar şunlardır ancak bunlarla sınırlı değildir:
+- **Kolay yönetim**: Hem meta veriler hem de veriler bulutta saklanır, bu yüzden nasıl saklandıkları veya yönetildikleriyle ilgili detaylarla uğraşmanıza gerek yoktur. Uygulamalarınızı ve çözümlerinizi geliştirmeye odaklanabilirsiniz.
 
-- **Kolay yönetim**: Hem meta veriler hem de veriler bulutta saklanır, bu nedenle nasıl saklandıkları veya yönetildikleri konusunda endişelenmenize gerek yoktur. Uygulamalarınızı ve çözümlerinizi oluşturmaya odaklanabilirsiniz.
+- **Güvenli**: Dataverse, verileriniz için güvenli ve bulut tabanlı bir depolama seçeneği sunar. Tablo verilerinize kimlerin erişebileceğini ve nasıl erişebileceğini rol tabanlı güvenlik ile kontrol edebilirsiniz.
 
-- **Güvenli**: Dataverse, verileriniz için güvenli ve bulut tabanlı bir depolama seçeneği sunar. Tablolarınızdaki verilere kimin erişebileceğini ve nasıl erişebileceğini rol tabanlı güvenlik kullanarak kontrol edebilirsiniz.
+- **Zengin meta veri**: Veri türleri ve ilişkiler doğrudan Power Apps içinde kullanılır.
 
-- **Zengin meta veriler**: Veri türleri ve ilişkiler doğrudan Power Apps içinde kullanılır.
+- **Mantık ve doğrulama**: İş kurallarını, hesaplanmış alanları ve doğrulama kurallarını kullanarak iş mantığını uygulayabilir ve veri doğruluğunu koruyabilirsiniz.
 
-- **Mantık ve doğrulama**: İş kuralları, hesaplanmış alanlar ve doğrulama kuralları kullanarak iş mantığını uygulayabilir ve veri doğruluğunu koruyabilirsiniz.
+Artık Dataverse’in ne olduğunu ve neden kullanmanız gerektiğini bildiğinize göre, finans ekibimizin gereksinimlerini karşılamak için Dataverse’te bir tablo oluşturmak üzere Copilot’u nasıl kullanabileceğinize bakalım.
 
-Artık Dataverse'in ne olduğunu ve neden kullanmanız gerektiğini bildiğinize göre, finans ekibimizin gereksinimlerini karşılamak için Dataverse'de bir tablo oluşturmak üzere Copilot'u nasıl kullanabileceğinize bir göz atalım.
+> **Note** : Bu tabloyu, sonraki bölümde tüm fatura bilgilerini çıkaracak ve tabloya kaydedecek bir otomasyon oluşturmak için kullanacaksınız.
 
-> **Not**: Bu tabloyu, bir sonraki bölümde tüm fatura bilgilerini çıkarmak ve tabloya kaydetmek için bir otomasyon oluşturmak için kullanacaksınız.
-Dataverse'de Copilot kullanarak bir tablo oluşturmak için aşağıdaki adımları izleyin: 1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) ana ekranına gidin. 2. Sol navigasyon ç
-a metin. - **Duygu Analizi**: Bu model metindeki olumlu, olumsuz, nötr veya karışık duyguları algılar. - **Kartvizit Okuyucu**: Bu model kartvizitlerden bilgi çıkarır. - **Metin Tanıma**: Bu model görüntülerden metin çıkarır. - **Nesne Tespiti**: Bu model görüntülerden nesneleri tespit eder ve çıkarır. - **Belge İşleme**: Bu model formlardan bilgi çıkarır. - **Fatura İşleme**: Bu model faturadan bilgi çıkarır. Kendi AI Modellerinizle, kendi modelinizi AI Builder'a getirebilir ve herhangi bir AI Builder özel modeli gibi çalışmasını sağlayabilirsiniz; böylece modeli kendi verilerinizle eğitebilirsiniz. Bu modelleri, Power Apps ve Power Automate'te süreçleri otomatikleştirmek ve sonuçları tahmin etmek için kullanabilirsiniz. Kendi modelinizi kullanırken geçerli olan sınırlamalar vardır. Bu [sınırlamalar](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi edinin. ![AI builder modelleri](../../../translated_images/ai-builder-models.f3ee8c064873d55cdfbcc9c633cdd8cf00843954019ad500795832eee420448e.tr.png) ## Görev #2 - Girişimimiz için Bir Fatura İşleme Akışı Oluşturun Finans ekibi faturaları işlemekle zorlanıyor. Faturaları takip etmek için bir elektronik tablo kullanıyorlardı ancak fatura sayısı arttıkça bu yönetilmesi zor hale geldi. Sizden, faturaları AI kullanarak işlemelerine yardımcı olacak bir iş akışı oluşturmanızı istediler. İş akışı, faturadan bilgi çıkarmalarına ve bilgiyi bir Dataverse tablosunda saklamalarına olanak tanımalıdır. İş akışı ayrıca çıkarılan bilgileri finans ekibine e-posta ile göndermelerine de olanak tanımalıdır. Artık AI Builder'ın ne olduğunu ve neden kullanmanız gerektiğini bildiğinize göre, daha önce ele aldığımız AI Builder'daki Fatura İşleme AI Modelini kullanarak finans ekibinin faturaları işlemesine yardımcı olacak bir iş akışı nasıl oluşturabileceğinize bir göz atalım. AI Builder'daki Fatura İşleme AI Modelini kullanarak finans ekibinin faturaları işlemesine yardımcı olacak bir iş akışı oluşturmak için aşağıdaki adımları izleyin: 1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) ana ekranına gidin. 2. Ana ekrandaki metin alanını, oluşturmak istediğiniz iş akışını tanımlamak için kullanın. Örneğin, **_Fatura posta kutuma ulaştığında işle_**. İsteği AI Copilot'a göndermek için **Gönder** düğmesine tıklayın. ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.0a21031a7ae6b1fb5dd61ce5c09d530454a93ee65c166b5c286e49c1a9312039.tr.png) 3. AI Copilot, otomatikleştirmek istediğiniz görevi gerçekleştirmek için yapmanız gereken eylemleri önerecektir. Sonraki adımları görmek için **İleri** düğmesine tıklayabilirsiniz. 4. Sonraki adımda, Power Automate size akış için gerekli bağlantıları kurmanızı isteyecektir. İşiniz bittiğinde, akışı oluşturmak için **Akış oluştur** düğmesine tıklayın. 5. AI Copilot bir akış oluşturacak ve ardından akışı ihtiyaçlarınıza göre özelleştirebilirsiniz. 6. Akışın tetikleyicisini güncelleyin ve **Klasör**ü faturaların saklanacağı klasöre ayarlayın. Örneğin, klasörü **Gelen Kutusu** olarak ayarlayabilirsiniz. **Gelişmiş seçenekleri göster**e tıklayın ve **Yalnızca Eklerle**yi **Evet** olarak ayarlayın. Bu, yalnızca ekli bir e-posta klasöre ulaştığında akışın çalışmasını sağlar. 7. Akıştan şu eylemleri kaldırın: **HTML'den metne**, **Oluştur**, **Oluştur 2**, **Oluştur 3** ve **Oluştur 4** çünkü bunları kullanmayacaksınız. 8. **Koşul** eylemini akıştan kaldırın çünkü kullanmayacaksınız. Aşağıdaki ekran görüntüsüne benzemelidir: ![power automate, eylemleri kaldır](../../../translated_images/powerautomate-remove-actions.ea4e8386e075a56b2b6a87ccbcb2484f146e869ba4273948abee6acdb3567c09.tr.png) 9. **Bir eylem ekle** düğmesine tıklayın ve **Dataverse** arayın. **Yeni bir satır ekle** eylemini seçin. 10. **Faturalardan Bilgi Çıkar** eyleminde, **Fatura Dosyası**nı e-postadaki **Ek İçeriği**ne yönlendirmek için güncelleyin. Bu, akışın fatura ekinden bilgi çıkarmasını sağlar. 11. Daha önce oluşturduğunuz **Tablo**yu seçin. Örneğin, **Fatura Bilgisi** tablosunu seçebilirsiniz. Aşağıdaki alanları doldurmak için önceki eylemden dinamik içeriği seçin: - ID - Tutar - Tarih - İsim - Durum - **Durumu** **Beklemede** olarak ayarlayın. - Tedarikçi E-posta - **Yeni bir e-posta geldiğinde** tetikleyicisinden **Gönderen** dinamik içeriğini kullanın. ![power automate satır ekle](../../../translated_images/powerautomate-add-row.d27c9166313cb7b3683e45f3059c13f9435e8257b357c0150652d60523dab3e9.tr.png) 12. Akışla işiniz bittiğinde, akışı kaydetmek için **Kaydet** düğmesine tıklayın. Ardından, tetikleyicide belirttiğiniz klasöre bir fatura içeren e-posta göndererek akışı test edebilirsiniz. > **Ödeviniz**: Yeni oluşturduğunuz akış iyi bir başlangıç, şimdi finans ekibimizin tedarikçiye faturalarının güncel durumu hakkında bilgi veren bir e-posta göndermelerini sağlayacak bir otomasyon nasıl oluşturabileceğinizi düşünmeniz gerekiyor. İpucunuz: akış, fatura durumu değiştiğinde çalışmalıdır.
+Copilot kullanarak Dataverse’te tablo oluşturmak için aşağıdaki adımları izleyin:
 
-## Power Automate'te Bir Metin Üretme AI Modeli Kullanın
+1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) ana ekranına gidin.
 
-AI Builder'daki GPT AI Modeli ile Metin Oluşturma, bir isteme dayalı metin oluşturmanıza olanak tanır ve Microsoft Azure OpenAI Hizmeti tarafından desteklenir. Bu yetenekle, GPT (Üretken Önceden Eğitilmiş Dönüştürücü) teknolojisini uygulamalarınıza ve akışlarınıza entegre ederek çeşitli otomatik akışlar ve içgörülü uygulamalar oluşturabilirsiniz.
+2. Sol gezinme çubuğunda **Tables** seçeneğine tıklayın ve ardından **Describe the new Table** seçeneğine tıklayın.
 
-GPT modelleri, geniş veri kümeleri üzerinde yoğun eğitim alır ve bu sayede bir istem verildiğinde insan diline yakın metinler üretebilir. İş akışı otomasyonu ile entegre edildiğinde, GPT gibi AI modelleri, çok çeşitli görevleri kolaylaştırmak ve otomatikleştirmek için kullanılabilir.
+![Select new table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.tr.png)
 
-Örneğin, e-posta taslakları, ürün açıklamaları ve daha fazlası gibi çeşitli kullanım durumları için otomatik olarak metin oluşturacak akışlar oluşturabilirsiniz. Ayrıca, müşteri hizmetleri temsilcilerinin müşteri taleplerine etkili ve verimli bir şekilde yanıt vermelerini sağlayan sohbet botları ve müşteri hizmetleri uygulamaları gibi çeşitli uygulamalar için modelden metin oluşturmak için de kullanabilirsiniz.
+3. **Describe the new Table** ekranında, oluşturmak istediğiniz tabloyu açıklamak için metin alanını kullanın. Örneğin, **_Fatura bilgilerini saklamak için bir tablo oluşturmak istiyorum_**. İsteği AI Copilot’a göndermek için **Send** düğmesine tıklayın.
 
-![bir istem oluşturun](../../../translated_images/create-prompt-gpt.dd95b0323841a7be30684e4a48445f063209ea7ebb81e5f7f56787b12cf9c04b.tr.png)
+![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.tr.png)
 
-Bu AI Modelini Power Automate'te nasıl kullanacağınızı öğrenmek için [AI Builder ve GPT ile Zeka Ekleyin](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modülünü inceleyin.
+4. AI Copilot, takip etmek istediğiniz verileri saklamak için gereken alanlarla birlikte bir Dataverse Tablosu ve bazı örnek veriler önerecektir. Daha sonra AI Copilot asistan özelliğini kullanarak sohbet adımlarıyla tabloyu ihtiyaçlarınıza göre özelleştirebilirsiniz.
+
+![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.tr.png)
+
+5. Finans ekibi, tedarikçiye faturalarının mevcut durumu hakkında bilgi vermek için bir e-posta göndermek istiyor. Tedarikçi e-postasını saklamak için tabloya yeni bir alan eklemek üzere Copilot’u kullanabilirsiniz. Örneğin, tabloya yeni bir alan eklemek için şu isteği kullanabilirsiniz: **_Tedarikçi e-postasını saklamak için bir sütun eklemek istiyorum_**. İsteği AI Copilot’a göndermek için **Send** düğmesine tıklayın.
+
+6. AI Copilot yeni bir alan oluşturacak ve ardından alanı ihtiyaçlarınıza göre özelleştirebilirsiniz.
+
+7. Tabloyu tamamladıktan sonra, tabloyu oluşturmak için **Create** düğmesine tıklayın.
+
+## Power Platform’da AI Modelleri ve AI Builder
+
+AI Builder, Power Platform’da bulunan düşük kodlu bir yapay zeka yeteneğidir ve AI Modellerini kullanarak süreçleri otomatikleştirmenize ve sonuçları tahmin etmenize olanak tanır. AI Builder ile Dataverse veya SharePoint, OneDrive ya da Azure gibi çeşitli bulut veri kaynaklarına bağlanan uygulamalarınıza ve akışlarınıza yapay zekayı entegre edebilirsiniz.
+
+## Önceden Oluşturulmuş AI Modelleri ve Özel AI Modelleri
+
+AI Builder, iki tür AI Modeli sunar: Önceden Oluşturulmuş AI Modelleri ve Özel AI Modelleri. Önceden Oluşturulmuş AI Modelleri, Microsoft tarafından eğitilmiş ve Power Platform’da kullanıma hazır modellerdir. Bu modeller, kendi verilerinizi toplamak, model oluşturmak, eğitmek ve yayınlamak zorunda kalmadan uygulamalarınıza ve akışlarınıza zeka katmanıza yardımcı olur. Bu modelleri süreçleri otomatikleştirmek ve sonuçları tahmin etmek için kullanabilirsiniz.
+
+Power Platform’da bulunan bazı Önceden Oluşturulmuş AI Modelleri şunlardır:
+
+- **Key Phrase Extraction**: Metinden anahtar ifadeleri çıkarır.
+- **Language Detection**: Metnin dilini tespit eder.
+- **Sentiment Analysis**: Metindeki olumlu, olumsuz, nötr veya karışık duyguyu belirler.
+- **Business Card Reader**: Kartvizitlerden bilgi çıkarır.
+- **Text Recognition**: Görsellerden metin çıkarır.
+- **Object Detection**: Görsellerden nesneleri tespit eder ve çıkarır.
+- **Document processing**: Formlardan bilgi çıkarır.
+- **Invoice Processing**: Faturalardan bilgi çıkarır.
+
+Özel AI Modelleri ile kendi modelinizi AI Builder’a getirebilir ve kendi verilerinizle eğiterek AI Builder özel modeli gibi çalışmasını sağlayabilirsiniz. Bu modelleri hem Power Apps hem de Power Automate içinde süreçleri otomatikleştirmek ve sonuçları tahmin etmek için kullanabilirsiniz. Kendi modelinizi kullanırken bazı sınırlamalar geçerlidir. Bu sınırlamalar hakkında daha fazla bilgi için [buraya](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst) bakabilirsiniz.
+
+![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.tr.png)
+
+## Ödev #2 - Startup’ımız için Fatura İşleme Akışı Oluşturun
+
+Finans ekibi, faturaları işlemek konusunda zorlanıyor. Faturaları takip etmek için bir elektronik tablo kullanıyorlardı ancak fatura sayısı arttıkça yönetmek zorlaştı. Sizden, AI kullanarak faturaları işlemelerine yardımcı olacak bir iş akışı oluşturmanızı istediler. İş akışı, faturalar üzerindeki bilgileri çıkarıp bu bilgileri bir Dataverse tablosuna kaydetmeli. Ayrıca, çıkarılan bilgilerle finans ekibine e-posta göndermelerini sağlamalı.
+
+Artık AI Builder’ın ne olduğunu ve neden kullanmanız gerektiğini bildiğinize göre, daha önce incelediğimiz Invoice Processing AI Modelini kullanarak finans ekibinin faturaları işlemesine yardımcı olacak bir iş akışı nasıl oluşturulur, buna bakalım.
+
+Invoice Processing AI Modelini kullanarak finans ekibinin faturaları işlemesine yardımcı olacak bir iş akışı oluşturmak için aşağıdaki adımları izleyin:
+
+1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) ana ekranına gidin.
+
+2. Ana ekrandaki metin alanını kullanarak oluşturmak istediğiniz iş akışını açıklayın. Örneğin, **_Posta kutuma gelen faturayı işleme al_**. İsteği AI Copilot’a göndermek için **Send** düğmesine tıklayın.
+
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.tr.png)
+
+3. AI Copilot, otomatikleştirmek istediğiniz görevi gerçekleştirmek için yapmanız gereken eylemleri önerecektir. Sonraki adımlara geçmek için **Next** düğmesine tıklayabilirsiniz.
+
+4. Sonraki adımda, Power Automate iş akışı için gerekli bağlantıları kurmanızı isteyecektir. İşlemi tamamladıktan sonra iş akışını oluşturmak için **Create flow** düğmesine tıklayın.
+
+5. AI Copilot bir iş akışı oluşturacak ve ardından iş akışını ihtiyaçlarınıza göre özelleştirebilirsiniz.
+
+6. İş akışının tetikleyicisini güncelleyin ve **Folder** (Klasör) ayarını faturaların saklanacağı klasöre ayarlayın. Örneğin, klasörü **Inbox** olarak belirleyebilirsiniz. **Show advanced options** (Gelişmiş seçenekleri göster) seçeneğine tıklayın ve **Only with Attachments** (Sadece ekli olanlar) seçeneğini **Yes** (Evet) olarak ayarlayın. Bu, iş akışının yalnızca ekli e-posta alındığında çalışmasını sağlar.
+
+7. İş akışından şu eylemleri kaldırın: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** ve **Compose 4** çünkü bunları kullanmayacaksınız.
+
+8. İş akışından **Condition** (Koşul) eylemini kaldırın çünkü bunu kullanmayacaksınız. İş akışınız aşağıdaki ekran görüntüsündeki gibi görünmelidir:
+
+   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.tr.png)
+
+9. **Add an action** (Eylem ekle) düğmesine tıklayın ve **Dataverse** araması yapın. **Add a new row** (Yeni satır ekle) eylemini seçin.
+
+10. **Extract Information from invoices** (Faturalardan bilgi çıkar) eyleminde, **Invoice File** (Fatura Dosyası) alanını e-postadan gelen **Attachment Content** (Ek İçeriği) olarak ayarlayın. Bu, iş akışının fatura ekinden bilgi çıkarmasını sağlar.
+
+11. Daha önce oluşturduğunuz **Table** (Tablo)yu seçin. Örneğin, **Invoice Information** (Fatura Bilgileri) tablosunu seçebilirsiniz. Önceki eylemden dinamik içeriği kullanarak aşağıdaki alanları doldurun:
+
+    - ID
+    - Amount (Tutar)
+    - Date (Tarih)
+    - Name (İsim)
+    - Status (Durum) - **Status** alanını **Pending** (Beklemede) olarak ayarlayın.
+    - Supplier Email (Tedarikçi E-postası) - **When a new email arrives** (Yeni e-posta geldiğinde) tetikleyicisinden **From** (Kimden) dinamik içeriğini kullanın.
+
+    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.tr.png)
+
+12. İş akışını tamamladıktan sonra, iş akışını kaydetmek için **Save** düğmesine tıklayın. Ardından, tetikleyicide belirttiğiniz klasöre bir fatura içeren e-posta göndererek iş akışını test edebilirsiniz.
+
+> **Ödeviniz**: Az önce oluşturduğunuz iş akışı iyi bir başlangıç, şimdi finans ekibimizin tedarikçiye faturalarının mevcut durumu hakkında bilgi vermek için e-posta göndermesini sağlayacak bir otomasyon nasıl oluşturabileceğinizi düşünmelisiniz. İpucunuz: İş akışı, faturanın durumu değiştiğinde çalışmalıdır.
+
+## Power Automate’te Metin Üretimi AI Modeli Kullanımı
+
+AI Builder’daki Create Text with GPT AI Modeli, bir isteme (prompt) dayalı metin üretmenizi sağlar ve Microsoft Azure OpenAI Servisi tarafından desteklenir. Bu özellik sayesinde, GPT (Generative Pre-Trained Transformer) teknolojisini uygulamalarınıza ve akışlarınıza entegre ederek çeşitli otomatik akışlar ve bilgi sağlayan uygulamalar oluşturabilirsiniz.
+
+GPT modelleri, çok büyük veri setleri üzerinde kapsamlı eğitim alır ve verilen bir isteme karşılık insan diline çok benzeyen metinler üretebilir. İş akışı otomasyonuyla entegre edildiğinde, GPT gibi AI modelleri çok çeşitli görevleri kolaylaştırmak ve otomatikleştirmek için kullanılabilir.
+
+Örneğin, e-posta taslakları, ürün açıklamaları gibi çeşitli kullanım senaryoları için otomatik metin oluşturmak üzere akışlar oluşturabilirsiniz. Ayrıca, müşteri hizmetleri temsilcilerinin müşteri taleplerine etkili ve verimli yanıt vermesini sağlayan sohbet botları ve müşteri hizmetleri uygulamaları gibi uygulamalar için de metin üretmek üzere modeli kullanabilirsiniz.
+
+![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.tr.png)
+
+Power Automate’te bu AI Modelini nasıl kullanacağınızı öğrenmek için [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modülünü inceleyin.
 
 ## Harika İş! Öğrenmeye Devam Edin
 
-Bu dersi tamamladıktan sonra, Generative AI bilginizi artırmaya devam etmek için [Generative AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atın!
+Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) koleksiyonumuza göz atın!
 
-Generative AI'yi Fonksiyon Çağırma ile nasıl entegre edeceğimizi inceleyeceğimiz 11. Derse geçin!
+Bir sonraki ders olan Ders 11’e geçin; burada [Generative AI’nin Function Calling ile entegrasyonunu](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) inceleyeceğiz!
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.

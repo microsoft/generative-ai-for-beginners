@@ -2,147 +2,245 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-05-20T09:58:24+00:00",
+  "translation_date": "2025-07-09T18:36:27+00:00",
   "source_file": "19-slm/README.md",
   "language_code": "sv"
 }
 -->
-# Introduktion till små språkmodeller för generativ AI för nybörjare
+# Introduktion till små språkmodeller för generativ AI för nybörjare  
+Generativ AI är ett fascinerande område inom artificiell intelligens som fokuserar på att skapa system som kan generera nytt innehåll. Detta innehåll kan vara allt från text och bilder till musik och till och med hela virtuella miljöer. En av de mest spännande tillämpningarna av generativ AI är inom språkmodeller.
 
-Generativ AI är ett fascinerande område inom artificiell intelligens som fokuserar på att skapa system som kan generera nytt innehåll. Detta innehåll kan sträcka sig från text och bilder till musik och till och med hela virtuella miljöer. En av de mest spännande tillämpningarna av generativ AI är inom området språkmodeller.
+## Vad är små språkmodeller?  
 
-## Vad är små språkmodeller?
+En liten språkmodell (SLM) är en nedskalad variant av en stor språkmodell (LLM) som använder många av de arkitektoniska principerna och teknikerna från LLM, men med en betydligt mindre beräkningsmässig belastning.  
 
-En liten språkmodell (SLM) representerar en nedskalad variant av en stor språkmodell (LLM), som utnyttjar många av de arkitektoniska principerna och teknikerna hos LLMs, samtidigt som den uppvisar en betydligt reducerad beräkningsfotavtryck. SLMs är en undergrupp av språkmodeller som är utformade för att generera människoliknande text. Till skillnad från deras större motsvarigheter, såsom GPT-4, är SLMs mer kompakta och effektiva, vilket gör dem idealiska för tillämpningar där beräkningsresurser är begränsade. Trots sin mindre storlek kan de fortfarande utföra en mängd olika uppgifter. Typiskt konstrueras SLMs genom att komprimera eller destillera LLMs, med målet att behålla en betydande del av den ursprungliga modellens funktionalitet och språkliga kapaciteter. Denna minskning av modellstorlek minskar den övergripande komplexiteten, vilket gör SLMs mer effektiva både vad gäller minnesanvändning och beräkningskrav. Trots dessa optimeringar kan SLMs fortfarande utföra ett brett spektrum av uppgifter inom naturlig språkbehandling (NLP):
+SLM är en undergrupp av språkmodeller som är designade för att generera text som liknar mänskligt språk. Till skillnad från sina större motsvarigheter, som GPT-4, är SLM mer kompakta och effektiva, vilket gör dem idealiska för applikationer där beräkningsresurser är begränsade. Trots sin mindre storlek kan de fortfarande utföra en rad olika uppgifter. Vanligtvis byggs SLM genom att komprimera eller destillera LLM, med målet att behålla en stor del av den ursprungliga modellens funktionalitet och språkliga förmågor. Denna minskning i modellstorlek minskar den totala komplexiteten, vilket gör SLM mer effektiva både vad gäller minnesanvändning och beräkningskrav. Trots dessa optimeringar kan SLM fortfarande utföra en mängd olika uppgifter inom naturlig språkbehandling (NLP):
 
-- Textgenerering: Skapa sammanhängande och kontextuellt relevanta meningar eller stycken.
-- Textkomplettering: Förutsäga och komplettera meningar baserat på en given uppmaning.
-- Översättning: Konvertera text från ett språk till ett annat.
-- Sammanfattning: Komprimera långa textstycken till kortare, mer lättsmälta sammanfattningar.
+- Textgenerering: Skapa sammanhängande och kontextuellt relevanta meningar eller stycken.  
+- Textkomplettering: Förutsäga och slutföra meningar baserat på en given prompt.  
+- Översättning: Översätta text från ett språk till ett annat.  
+- Sammanfattning: Kondensera långa texter till kortare, mer lättsmälta sammanfattningar.  
 
-Även om det finns vissa kompromisser i prestanda eller djup förståelse jämfört med deras större motsvarigheter.
+Dock med vissa kompromisser i prestanda eller djupare förståelse jämfört med deras större motsvarigheter.
 
-## Hur fungerar små språkmodeller?
+## Hur fungerar små språkmodeller?  
+SLM tränas på enorma mängder textdata. Under träningen lär de sig språkets mönster och strukturer, vilket gör att de kan generera text som är både grammatiskt korrekt och kontextuellt passande. Träningsprocessen innefattar:
 
-SLMs tränas på stora mängder textdata. Under träningen lär de sig språkets mönster och strukturer, vilket gör det möjligt för dem att generera text som är både grammatiskt korrekt och kontextuellt lämplig. Träningsprocessen innefattar:
+- Datainsamling: Samla in stora textdatamängder från olika källor.  
+- Förbehandling: Rensa och organisera data för att göra den lämplig för träning.  
+- Träning: Använda maskininlärningsalgoritmer för att lära modellen att förstå och generera text.  
+- Finjustering: Justera modellen för att förbättra dess prestanda på specifika uppgifter.  
 
-- Datainsamling: Samla stora dataset av text från olika källor.
-- Förbearbetning: Rensa och organisera data för att göra den lämplig för träning.
-- Träning: Använda maskininlärningsalgoritmer för att lära modellen att förstå och generera text.
-- Finjustering: Justera modellen för att förbättra dess prestanda på specifika uppgifter.
+Utvecklingen av SLM är i linje med det ökande behovet av modeller som kan användas i miljöer med begränsade resurser, som mobila enheter eller edge computing-plattformar, där fullskaliga LLM kan vara opraktiska på grund av deras höga resurskrav. Genom att fokusera på effektivitet balanserar SLM prestanda med tillgänglighet, vilket möjliggör bredare användning inom olika områden.
 
-Utvecklingen av SLMs ligger i linje med det ökande behovet av modeller som kan distribueras i resursbegränsade miljöer, såsom mobila enheter eller edge-datorplattformar, där fullskaliga LLMs kan vara opraktiska på grund av deras höga resurskrav. Genom att fokusera på effektivitet balanserar SLMs prestanda med tillgänglighet, vilket möjliggör bredare tillämpning över olika domäner.
+![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.sv.png)
 
-![slm](../../../translated_images/slm.e63e171d8045c28356253bb772597c333b20c51bc33ce7191b8b38a2e1375614.sv.png)
+## Lärandemål  
 
-## Lärandemål
+I denna lektion hoppas vi introducera kunskap om SLM och kombinera det med Microsoft Phi-3 för att lära oss olika scenarier inom textinnehåll, vision och MoE.
 
-I denna lektion hoppas vi kunna introducera kunskapen om SLM och kombinera den med Microsoft Phi-3 för att lära olika scenarier inom textinnehåll, vision och MoE. I slutet av denna lektion bör du kunna svara på följande frågor:
+I slutet av lektionen bör du kunna svara på följande frågor:
 
-- Vad är SLM
-- Vad är skillnaden mellan SLM och LLM
-- Vad är Microsoft Phi-3/3.5 Family
-- Hur man drar slutsatser om Microsoft Phi-3/3.5 Family
+- Vad är SLM  
+- Vad är skillnaden mellan SLM och LLM  
+- Vad är Microsoft Phi-3/3.5-familjen  
+- Hur man gör inferens med Microsoft Phi-3/3.5-familjen  
 
-Redo? Låt oss börja.
+Redo? Då kör vi.
 
-## Skillnaderna mellan stora språkmodeller (LLMs) och små språkmodeller (SLMs)
+## Skillnaderna mellan stora språkmodeller (LLM) och små språkmodeller (SLM)  
 
-Både LLMs och SLMs bygger på grundläggande principer för probabilistisk maskininlärning, och följer liknande tillvägagångssätt i sin arkitektoniska design, träningsmetoder, datagenereringsprocesser och modelevalueringstekniker. Dock finns det flera viktiga faktorer som skiljer dessa två typer av modeller.
+Både LLM och SLM bygger på grundläggande principer inom probabilistisk maskininlärning och följer liknande tillvägagångssätt i arkitektur, träningsmetoder, datagenerering och utvärdering av modeller. Men flera viktiga faktorer skiljer dessa två typer av modeller åt.
 
-## Tillämpningar av små språkmodeller
+## Användningsområden för små språkmodeller  
 
-SLMs har ett brett spektrum av tillämpningar, inklusive:
+SLM har ett brett användningsområde, bland annat:
 
-- Chatbots: Tillhandahålla kundsupport och engagera användare på ett konversationsmässigt sätt.
-- Innehållsskapande: Hjälpa skribenter genom att generera idéer eller till och med utforma hela artiklar.
-- Utbildning: Hjälpa studenter med skrivuppgifter eller att lära sig nya språk.
-- Tillgänglighet: Skapa verktyg för personer med funktionsnedsättningar, såsom text-till-tal-system.
+- Chatbots: Ge kundsupport och interagera med användare i samtal.  
+- Innehållsskapande: Hjälpa författare genom att generera idéer eller till och med utkast till hela artiklar.  
+- Utbildning: Stödja elever med skrivuppgifter eller språkinlärning.  
+- Tillgänglighet: Skapa verktyg för personer med funktionsnedsättningar, som text-till-tal-system.  
 
-**Storlek**
+**Storlek**  
 
-En primär skillnad mellan LLMs och SLMs ligger i modellernas skala. LLMs, såsom ChatGPT (GPT-4), kan omfatta uppskattningsvis 1,76 biljoner parametrar, medan öppna SLMs som Mistral 7B är designade med betydligt färre parametrar—ungefär 7 miljarder. Denna skillnad beror främst på skillnader i modellarkitektur och träningsprocesser. Till exempel använder ChatGPT en självuppmärksamhetsmekanism inom en kodare-avkodare-ramverk, medan Mistral 7B använder glidande fönsteruppmärksamhet, vilket möjliggör mer effektiv träning inom en kodare-endast modell. Denna arkitektoniska variation har djupgående konsekvenser för modellernas komplexitet och prestanda.
+En huvudskillnad mellan LLM och SLM är modellernas storlek. LLM, som ChatGPT (GPT-4), kan bestå av uppskattningsvis 1,76 biljoner parametrar, medan öppna SLM som Mistral 7B är designade med betydligt färre parametrar – cirka 7 miljarder. Denna skillnad beror främst på skillnader i modellarkitektur och träningsprocesser. Till exempel använder ChatGPT en självuppmärksamhetsmekanism inom en encoder-decoder-arkitektur, medan Mistral 7B använder sliding window attention, vilket möjliggör effektivare träning inom en decoder-only-modell. Denna arkitektoniska skillnad har stor påverkan på modellernas komplexitet och prestanda.
 
-**Förståelse**
+**Förståelse**  
 
-SLMs är vanligtvis optimerade för prestanda inom specifika domäner, vilket gör dem mycket specialiserade men potentiellt begränsade i deras förmåga att ge bred kontextuell förståelse över flera kunskapsområden. I kontrast syftar LLMs till att simulera människoliknande intelligens på en mer omfattande nivå. Tränade på stora, mångsidiga datasets, är LLMs designade för att prestera bra över en mängd olika domäner, vilket erbjuder större mångsidighet och anpassningsförmåga. Följaktligen är LLMs mer lämpliga för ett bredare spektrum av efterföljande uppgifter, såsom naturlig språkbehandling och programmering.
+SLM är vanligtvis optimerade för prestanda inom specifika domäner, vilket gör dem mycket specialiserade men potentiellt begränsade i sin förmåga att ge bred kontextuell förståelse över flera kunskapsområden. LLM strävar däremot efter att simulera mänsklig intelligens på en mer omfattande nivå. Tränade på stora, varierade dataset är LLM designade för att prestera väl inom många olika områden, vilket ger större mångsidighet och anpassningsförmåga. Därför är LLM mer lämpade för ett bredare spektrum av uppgifter, som naturlig språkbehandling och programmering.
 
-**Beräkning**
+**Beräkning**  
 
-Träning och distribution av LLMs är resursintensiva processer, som ofta kräver betydande beräkningsinfrastruktur, inklusive storskaliga GPU-kluster. Till exempel kan träning av en modell som ChatGPT från grunden kräva tusentals GPUer över längre perioder. I kontrast är SLMs, med sina mindre antal parametrar, mer tillgängliga när det gäller beräkningsresurser. Modeller som Mistral 7B kan tränas och köras på lokala maskiner utrustade med måttliga GPU-kapaciteter, även om träning fortfarande kräver flera timmar över flera GPUer.
+Träning och användning av LLM är resurskrävande processer som ofta kräver omfattande beräkningsinfrastruktur, inklusive stora GPU-kluster. Till exempel kan träning av en modell som ChatGPT från grunden kräva tusentals GPU:er under långa perioder. SLM, med sina mindre antal parametrar, är däremot mer tillgängliga vad gäller beräkningsresurser. Modeller som Mistral 7B kan tränas och köras på lokala maskiner med måttliga GPU-kapaciteter, även om träningen fortfarande kräver flera timmar över flera GPU:er.
 
-**Bias**
+**Bias**  
 
-Bias är ett känt problem i LLMs, främst på grund av träningens datakaraktär. Dessa modeller förlitar sig ofta på rå, öppet tillgänglig data från internet, vilket kan underrepresentera eller felrepresentera vissa grupper, introducera felaktig märkning, eller reflektera språkliga fördomar påverkade av dialekt, geografiska variationer, och grammatiska regler. Dessutom kan komplexiteten i LLM-arkitekturer oavsiktligt förstärka bias, vilket kan gå obemärkt förbi utan noggrann finjustering. Å andra sidan är SLMs, som tränas på mer begränsade, domänspecifika datasets, i sig mindre mottagliga för sådana bias, även om de inte är immuna mot dem.
+Bias är ett känt problem i LLM, främst på grund av träningsdata. Dessa modeller förlitar sig ofta på rå, öppet tillgänglig data från internet, vilket kan underrepresentera eller felaktigt representera vissa grupper, introducera felaktig märkning eller spegla språkliga bias som påverkas av dialekter, geografiska variationer och grammatiska regler. Dessutom kan den komplexa arkitekturen i LLM oavsiktligt förstärka bias, vilket kan gå obemärkt förbi utan noggrann finjustering. SLM, som tränas på mer begränsade, domänspecifika dataset, är i regel mindre mottagliga för sådana bias, även om de inte är helt immuna.
 
-**Slutsats**
+**Inferens**  
 
-Den reducerade storleken på SLMs ger dem en betydande fördel när det gäller inferenshastighet, vilket gör det möjligt för dem att generera utdata effektivt på lokal hårdvara utan behov av omfattande parallell bearbetning. I kontrast kräver LLMs, på grund av deras storlek och komplexitet, ofta betydande parallella beräkningsresurser för att uppnå acceptabla inferenstider. När flera samtidiga användare finns närvarande fördröjs LLMs svarstider ytterligare, särskilt när de distribueras i stor skala.
+Den mindre storleken på SLM ger en betydande fördel i inferenshastighet, vilket gör att de kan generera resultat effektivt på lokal hårdvara utan behov av omfattande parallell bearbetning. LLM kräver däremot ofta stora parallella beräkningsresurser för att uppnå acceptabla inferenstider på grund av sin storlek och komplexitet. När flera användare är aktiva samtidigt kan LLM:s svarstider dessutom förlängas, särskilt vid storskalig användning.
 
-Sammanfattningsvis, medan både LLMs och SLMs delar en grundläggande bas i maskininlärning, skiljer de sig betydligt när det gäller modellstorlek, resurskrav, kontextuell förståelse, mottaglighet för bias, och inferenshastighet. Dessa skillnader reflekterar deras respektive lämplighet för olika användningsområden, med LLMs som är mer mångsidiga men resurskrävande, och SLMs som erbjuder mer domänspecifik effektivitet med reducerade beräkningskrav.
+Sammanfattningsvis, även om både LLM och SLM bygger på maskininlärning, skiljer de sig avsevärt i modellstorlek, resursbehov, kontextuell förståelse, mottaglighet för bias och inferenshastighet. Dessa skillnader speglar deras respektive lämplighet för olika användningsområden, där LLM är mer mångsidiga men resurskrävande, medan SLM erbjuder mer domänspecifik effektivitet med lägre beräkningskrav.
 
-***Notera: I detta kapitel kommer vi att introducera SLM med Microsoft Phi-3 / 3.5 som ett exempel.***
+***Note：I detta kapitel kommer vi att introducera SLM med Microsoft Phi-3 / 3.5 som exempel.***
 
-## Introducera Phi-3 / Phi-3.5 Family
+## Introduktion till Phi-3 / Phi-3.5-familjen  
 
-Phi-3 / 3.5 Family riktar sig främst mot text-, vision- och agent (MoE) applikationsscenarier:
+Phi-3 / 3.5-familjen riktar sig främst mot text-, vision- och Agent (MoE) applikationsscenarier:
 
-### Phi-3 / 3.5 Instruct
+### Phi-3 / 3.5 Instruct  
 
-Främst för textgenerering, chattkomplettering och innehållsinformationsutvinning, etc.
+Främst för textgenerering, chattkomplettering och extrahering av innehållsinformation med mera.
 
-**Phi-3-mini**
+**Phi-3-mini**  
 
-Den 3.8B språkmodellen är tillgänglig på Microsoft Azure AI Studio, Hugging Face och Ollama. Phi-3 modeller överträffar betydligt språkmodeller av lika och större storlekar på viktiga benchmarks (se benchmarknummer nedan, högre nummer är bättre). Phi-3-mini överträffar modeller dubbelt så stora, medan Phi-3-small och Phi-3-medium överträffar större modeller, inklusive GPT-3.5
+Den 3,8 miljarder parametrar stora språkmodellen finns tillgänglig på Microsoft Azure AI Studio, Hugging Face och Ollama. Phi-3-modeller presterar betydligt bättre än språkmodeller av samma eller större storlek på viktiga benchmarktester (se benchmark-siffror nedan, högre är bättre). Phi-3-mini överträffar modeller som är dubbelt så stora, medan Phi-3-small och Phi-3-medium presterar bättre än större modeller, inklusive GPT-3.5.
 
-**Phi-3-small & medium**
+**Phi-3-small & medium**  
 
-Med bara 7B parametrar slår Phi-3-small GPT-3.5T på en mängd språk-, resonemangs-, kodnings- och mattebenchmarks. Phi-3-medium med 14B parametrar fortsätter denna trend och överträffar Gemini 1.0 Pro.
+Med endast 7 miljarder parametrar slår Phi-3-small GPT-3.5T på en rad språk-, resonemangs-, kodnings- och matematikbenchmarks.
 
-**Phi-3.5-mini**
+Phi-3-medium med 14 miljarder parametrar fortsätter denna trend och presterar bättre än Gemini 1.0 Pro.
 
-Vi kan tänka oss det som en uppgradering av Phi-3-mini. Medan parametrarna förblir oförändrade, förbättrar det förmågan att stödja flera språk (stöd för 20+ språk: arabiska, kinesiska, tjeckiska, danska, nederländska, engelska, finska, franska, tyska, hebreiska, ungerska, italienska, japanska, koreanska, norska, polska, portugisiska, ryska, spanska, svenska, thailändska, turkiska, ukrainska) och lägger till starkare stöd för lång kontext. Phi-3.5-mini med 3.8B parametrar överträffar språkmodeller av samma storlek och är i nivå med modeller dubbelt så stora.
+**Phi-3.5-mini**  
 
-### Phi-3 / 3.5 Vision
+Kan ses som en uppgradering av Phi-3-mini. Parametrarna är oförändrade, men den förbättrar stödet för flera språk (stödjer 20+ språk: arabiska, kinesiska, tjeckiska, danska, nederländska, engelska, finska, franska, tyska, hebreiska, ungerska, italienska, japanska, koreanska, norska, polska, portugisiska, ryska, spanska, svenska, thailändska, turkiska, ukrainska) och ger starkare stöd för långa kontexter.
 
-Vi kan tänka oss Instruct-modellen av Phi-3/3.5 som Phis förmåga att förstå, och Vision är det som ger Phi ögon att förstå världen.
+Phi-3.5-mini med 3,8 miljarder parametrar presterar bättre än språkmodeller av samma storlek och är i nivå med modeller som är dubbelt så stora.
 
-**Phi-3-Vision**
+### Phi-3 / 3.5 Vision  
 
-Phi-3-vision, med bara 4.2B parametrar, fortsätter denna trend och överträffar större modeller såsom Claude-3 Haiku och Gemini 1.0 Pro V på allmänna visuella resonemangsuppgifter, OCR och tabell- och diagramförståelseuppgifter.
+Vi kan se Instruct-modellen i Phi-3/3.5 som Phis förmåga att förstå, och Vision är det som ger Phi ögon för att förstå världen.
 
-**Phi-3.5-Vision**
+**Phi-3-Vision**  
 
-Phi-3.5-Vision är också en uppgradering av Phi-3-Vision, som lägger till stöd för flera bilder. Du kan tänka dig det som en förbättring av visionen, inte bara kan du se bilder, utan också videor. Phi-3.5-vision överträffar större modeller såsom Claude-3.5 Sonnet och Gemini 1.5 Flash över OCR, tabell- och diagramförståelseuppgifter och i nivå på allmänna visuella kunskapsresonemangsuppgifter. Stöd för flerbildsinmatning, dvs. utföra resonemang på flera inmatningsbilder
+Phi-3-Vision, med endast 4,2 miljarder parametrar, fortsätter denna trend och presterar bättre än större modeller som Claude-3 Haiku och Gemini 1.0 Pro V på allmänna visuella resonemangsuppgifter, OCR samt tabell- och diagramförståelse.
 
-### Phi-3.5-MoE
+**Phi-3.5-Vision**  
 
-***Mixture of Experts (MoE)*** möjliggör modeller att förtränas med betydligt mindre beräkning, vilket innebär att du kan dramatiskt skala upp modell- eller datasetstorleken med samma beräkningsbudget som en tät modell. I synnerhet bör en MoE-modell uppnå samma kvalitet som sin täta motsvarighet mycket snabbare under förträning. Phi-3.5-MoE består av 16x3.8B expertmoduler. Phi-3.5-MoE med bara 6.6B aktiva parametrar uppnår en liknande nivå av resonemang, språkförståelse och matte som mycket större modeller
+Phi-3.5-Vision är också en uppgradering av Phi-3-Vision och lägger till stöd för flera bilder. Du kan se det som en förbättring inom vision – inte bara kan du se bilder, utan även videor.
 
-Vi kan använda Phi-3/3.5 Family-modellen baserat på olika scenarier. Till skillnad från LLM kan du distribuera Phi-3/3.5-mini eller Phi-3/3.5-Vision på edge-enheter.
+Phi-3.5-Vision presterar bättre än större modeller som Claude-3.5 Sonnet och Gemini 1.5 Flash inom OCR, tabell- och diagramförståelse och är i nivå med dem på allmänna visuella kunskapsresonemangsuppgifter. Stöder multi-frame input, dvs. resonemang över flera inmatade bilder.
 
-## Hur man använder Phi-3/3.5 Family-modeller
+### Phi-3.5-MoE  
 
-Vi hoppas kunna använda Phi-3/3.5 i olika scenarier. Nästa steg kommer vi att använda Phi-3/3.5 baserat på olika scenarier.
+***Mixture of Experts (MoE)*** möjliggör att modeller kan förtränas med betydligt mindre beräkningskraft, vilket innebär att du kan skala upp modell- eller datasetstorleken dramatiskt med samma beräkningsbudget som en tät modell. Specifikt bör en MoE-modell uppnå samma kvalitet som sin täta motsvarighet mycket snabbare under förträning.
 
-![phi3](../../../translated_images/phi3.031cf9ca915915dbb4e8bc1e2b8e1e93d4d8a865ec4ea6ecdff5847b027a5113.sv.png)
+Phi-3.5-MoE består av 16x3,8 miljarder expertmoduler. Phi-3.5-MoE med endast 6,6 miljarder aktiva parametrar uppnår en liknande nivå av resonemang, språkförståelse och matematik som mycket större modeller.
 
-### Inferensskillnad
+Vi kan använda Phi-3/3.5-familjens modeller baserat på olika scenarier. Till skillnad från LLM kan du distribuera Phi-3/3.5-mini eller Phi-3/3.5-Vision på edge-enheter.
 
-Molnets API
+## Hur man använder Phi-3/3.5-familjens modeller  
 
-**GitHub-modeller**
+Vi vill använda Phi-3/3.5 i olika scenarier. Nästa steg är att använda Phi-3/3.5 baserat på olika användningsområden.
 
-GitHub
-Modeller är det mest direkta sättet. Du kan snabbt komma åt Phi-3/3.5-Instruct-modellen via GitHub Modeller. I kombination med Azure AI Inference SDK / OpenAI SDK kan du komma åt API:et genom kod för att slutföra Phi-3/3.5-Instruct-anropet. Du kan också testa olika effekter genom Playground. - Demo: Jämförelse av effekterna av Phi-3-mini och Phi-3.5-mini i kinesiska scenarier ![phi3](../../../translated_images/gh1.33134727688b27f6eaeac67bd84dbef85626e2d8fe452d826d0b3c353e29a472.sv.png) ![phi35](../../../translated_images/gh2.9f09152ff1c8dfdb777bb774f961c9ddf743879fc2fb640597bb413b1f320b8a.sv.png) **Azure AI Studio** Eller om vi vill använda vision- och MoE-modellerna kan du använda Azure AI Studio för att slutföra anropet. Om du är intresserad kan du läsa Phi-3 Cookbook för att lära dig hur man anropar Phi-3/3.5 Instruct, Vision, MoE genom Azure AI Studio [Klicka på denna länk](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst) **NVIDIA NIM** Förutom de molnbaserade Model Catalog-lösningarna som tillhandahålls av Azure och GitHub kan du också använda [Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) för att slutföra relaterade anrop. Du kan besöka NIVIDA NIM för att slutföra API-anropen av Phi-3/3.5 Family. NVIDIA NIM (NVIDIA Inference Microservices) är en uppsättning accelererade inferensmikrotjänster som är utformade för att hjälpa utvecklare att effektivt distribuera AI-modeller över olika miljöer, inklusive moln, datacenter och arbetsstationer. Här är några nyckelfunktioner hos NVIDIA NIM: - **Enkel distribution:** NIM möjliggör distribution av AI-modeller med ett enda kommando, vilket gör det enkelt att integrera i befintliga arbetsflöden. - **Optimerad prestanda:** Den utnyttjar NVIDIAs föroptimerade inferensmotorer, såsom TensorRT och TensorRT-LLM, för att säkerställa låg latens och hög genomströmning. - **Skalbarhet:** NIM stöder autoskalning på Kubernetes, vilket gör det möjligt att effektivt hantera varierande arbetsbelastningar. - **Säkerhet och kontroll:** Organisationer kan behålla kontrollen över sina data och applikationer genom att självhosta NIM-mikrotjänster på sin egen hanterade infrastruktur. - **Standard-API:er:** NIM tillhandahåller branschstandard-API:er, vilket gör det enkelt att bygga och integrera AI-applikationer som chattbottar, AI-assistenter och mer. NIM är en del av NVIDIA AI Enterprise, som syftar till att förenkla distributionen och operationaliseringen av AI-modeller, vilket säkerställer att de körs effektivt på NVIDIA GPU:er. - Demo: Använda Nividia NIM för att anropa Phi-3.5-Vision-API [[Klicka på denna länk](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)] ### Inference Phi-3/3.5 i lokal miljö Inferens i relation till Phi-3, eller någon språkmodell som GPT-3, avser processen att generera svar eller förutsägelser baserat på den input den får. När du ger en prompt eller fråga till Phi-3 använder den sitt tränade neurala nätverk för att dra slutsatser om det mest sannolika och relevanta svaret genom att analysera mönster och relationer i de data den har tränats på. **Hugging Face Transformer** Hugging Face Transformers är ett kraftfullt bibliotek designat för naturlig språkbehandling (NLP) och andra maskininlärningsuppgifter. Här är några viktiga punkter om det: 1. **Förtränade modeller**: Det tillhandahåller tusentals förtränade modeller som kan användas för olika uppgifter som textklassificering, namngiven enhetsigenkänning, frågesvar, sammanfattning, översättning och textgenerering. 2. **Ramsamverkan**: Biblioteket stöder flera djupinlärningsramverk, inklusive PyTorch, TensorFlow och JAX. Detta gör att du kan träna en modell i ett ramverk och använda den i ett annat. 3. **Multimodala funktioner**: Förutom NLP stöder Hugging Face Transformers också uppgifter inom datorsyn (t.ex. bildklassificering, objektdetektion) och ljudbehandling (t.ex. taligenkänning, ljudklassificering). 4. **Användarvänlighet**: Biblioteket erbjuder API:er och verktyg för att enkelt ladda ner och finjustera modeller, vilket gör det tillgängligt för både nybörjare och experter. 5. **Gemenskap och resurser**: Hugging Face har en livlig gemenskap och omfattande dokumentation, handledningar och guider för att hjälpa användare att komma igång och få ut det mesta av biblioteket. [officiell dokumentation](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) eller deras [GitHub-repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst). Detta är den mest använda metoden, men det kräver också GPU-acceleration. När allt kommer omkring kräver scener som Vision och MoE mycket beräkningar, vilket kommer att vara mycket begränsat i CPU om de inte kvantiseras. - Demo: Använda Transformer för att anropa Phi-3.5-Instuct [Klicka på denna länk](../../../19-slm/python/phi35-instruct-demo.ipynb) - Demo: Använda Transformer för att anropa Phi-3.5-Vision[Klicka på denna länk](../../../19-slm/python/phi35-vision-demo.ipynb) - Demo: Använda Transformer för att anropa Phi-3.5-MoE[Klicka på denna länk](../../../19-slm/python/phi35_moe_demo.ipynb) **Ollama** [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) är en plattform designad för att göra det enklare att köra stora språkmodeller (LLMs) lokalt på din maskin. Den stöder olika modeller som Llama 3.1, Phi 3, Mistral och Gemma 2, bland andra. Plattformen förenklar processen genom att paketera modellvikter, konfiguration och data i ett enda paket, vilket gör det mer tillgängligt för användare att anpassa och skapa sina egna modeller. Ollama är tillgänglig för macOS, Linux och Windows. Det är ett utmärkt verktyg om du vill experimentera med eller distribuera LLMs utan att förlita dig på molntjänster. Ollama är det mest direkta sättet, du behöver bara köra följande uttalande. ```bash
+![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.sv.png)
+
+### Skillnader i inferens via molnets API  
+
+**GitHub Models**  
+
+GitHub Models är det mest direkta sättet. Du kan snabbt få tillgång till Phi-3/3.5-Instruct-modellen via GitHub Models. Tillsammans med Azure AI Inference SDK / OpenAI SDK kan du nå API:et via kod för att göra anrop till Phi-3/3.5-Instruct. Du kan också testa olika effekter via Playground.
+
+- Demo: Jämförelse av effekterna av Phi-3-mini och Phi-3.5-mini i kinesiska scenarier
+
+![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.sv.png)
+
+![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.sv.png)
+
+**Azure AI Studio**  
+
+Om du vill använda vision- och MoE-modeller kan du använda Azure AI Studio för att göra anrop. Om du är intresserad kan du läsa Phi-3 Cookbook för att lära dig hur du anropar Phi-3/3.5 Instruct, Vision, MoE via Azure AI Studio [Klicka på denna länk](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+
+**NVIDIA NIM**  
+
+Utöver molnbaserade Model Catalog-lösningar från Azure och GitHub kan du även använda [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) för att göra relaterade anrop. Du kan besöka NVIDIA NIM för att göra API-anrop för Phi-3/3.5-familjen. NVIDIA NIM (NVIDIA Inference Microservices) är en uppsättning accelererade inferens-mikrotjänster som hjälper utvecklare att effektivt distribuera AI-modeller i olika miljöer, inklusive moln, datacenter och arbetsstationer.
+
+Här är några nyckelfunktioner i NVIDIA NIM:
+
+- **Enkel distribution:** NIM möjliggör distribution av AI-modeller med ett enda kommando, vilket gör det enkelt att integrera i befintliga arbetsflöden.  
+- **Optimerad prestanda:** Den utnyttjar NVIDIA:s föroptimerade inferensmotorer, som TensorRT och TensorRT-LLM, för att säkerställa låg latens och hög genomströmning.  
+- **Skalbarhet:** NIM stödjer autoskalning på Kubernetes, vilket gör att den effektivt kan hantera varierande arbetsbelastningar.
+- **Säkerhet och kontroll:** Organisationer kan behålla kontrollen över sina data och applikationer genom att självhosta NIM-mikrotjänster på sin egen hanterade infrastruktur.  
+- **Standard-API:er:** NIM erbjuder branschstandard-API:er, vilket gör det enkelt att bygga och integrera AI-applikationer som chatbots, AI-assistenter och mer.
+
+NIM är en del av NVIDIA AI Enterprise, som syftar till att förenkla distribution och drift av AI-modeller, och säkerställa att de körs effektivt på NVIDIA GPU:er.
+
+- Demo: Använda Nvidia NIM för att anropa Phi-3.5-Vision-API [[Klicka på denna länk](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+
+
+### Inferens Phi-3/3.5 i lokal miljö  
+Inferens i relation till Phi-3, eller någon språkmodell som GPT-3, avser processen att generera svar eller förutsägelser baserat på den input den får. När du ger en prompt eller fråga till Phi-3 använder den sitt tränade neurala nätverk för att dra slutsatsen om det mest sannolika och relevanta svaret genom att analysera mönster och samband i den data den tränats på.
+
+**Hugging Face Transformer**  
+Hugging Face Transformers är ett kraftfullt bibliotek designat för naturlig språkbehandling (NLP) och andra maskininlärningsuppgifter. Här är några viktiga punkter om det:
+
+1. **Förtränade modeller:** Det erbjuder tusentals förtränade modeller som kan användas för olika uppgifter som textklassificering, namngiven entity-igenkänning, frågesvar, sammanfattning, översättning och textgenerering.
+
+2. **Ramverkskompatibilitet:** Biblioteket stödjer flera djupinlärningsramverk, inklusive PyTorch, TensorFlow och JAX. Detta gör att du kan träna en modell i ett ramverk och använda den i ett annat.
+
+3. **Multimodala möjligheter:** Förutom NLP stödjer Hugging Face Transformers även uppgifter inom datorseende (t.ex. bildklassificering, objektigenkänning) och ljudbehandling (t.ex. taligenkänning, ljudklassificering).
+
+4. **Användarvänlighet:** Biblioteket erbjuder API:er och verktyg för att enkelt ladda ner och finjustera modeller, vilket gör det tillgängligt för både nybörjare och experter.
+
+5. **Community och resurser:** Hugging Face har en livlig community och omfattande dokumentation, tutorials och guider för att hjälpa användare att komma igång och få ut mesta möjliga av biblioteket.  
+[officiell dokumentation](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) eller deras [GitHub-repo](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
+
+Detta är den mest använda metoden, men den kräver också GPU-acceleration. Scenarier som Vision och MoE kräver mycket beräkningar, vilket blir mycket begränsat på CPU om de inte kvantiseras.
+
+
+- Demo: Använda Transformer för att anropa Phi-3.5-Instruct [Klicka på denna länk](../../../19-slm/python/phi35-instruct-demo.ipynb)
+
+- Demo: Använda Transformer för att anropa Phi-3.5-Vision [Klicka på denna länk](../../../19-slm/python/phi35-vision-demo.ipynb)
+
+- Demo: Använda Transformer för att anropa Phi-3.5-MoE [Klicka på denna länk](../../../19-slm/python/phi35_moe_demo.ipynb)
+
+**Ollama**  
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) är en plattform som gör det enklare att köra stora språkmodeller (LLM) lokalt på din dator. Den stödjer olika modeller som Llama 3.1, Phi 3, Mistral och Gemma 2, bland andra. Plattformen förenklar processen genom att paketera modellvikter, konfiguration och data i ett enda paket, vilket gör det mer tillgängligt för användare att anpassa och skapa egna modeller. Ollama finns för macOS, Linux och Windows. Det är ett utmärkt verktyg om du vill experimentera med eller distribuera LLM utan att förlita dig på molntjänster. Ollama är det mest direkta sättet, du behöver bara köra följande kommando.
+
+
+```bash
 
 ollama run phi3.5
 
-``` **ONNX Runtime för GenAI** [ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) är en plattformsoberoende inferens- och träningsaccelerator för maskininlärning. ONNX Runtime för Generative AI (GENAI) är ett kraftfullt verktyg som hjälper dig att köra generativa AI-modeller effektivt över olika plattformar. ## Vad är ONNX Runtime? ONNX Runtime är ett open-source-projekt som möjliggör högpresterande inferens av maskininlärningsmodeller. Det stöder modeller i Open Neural Network Exchange (ONNX)-formatet, vilket är en standard för att representera maskininlärningsmodeller. ONNX Runtime-inferens kan möjliggöra snabbare kundupplevelser och lägre kostnader, stödja modeller från djupinlärningsramverk som PyTorch och TensorFlow/Keras samt klassiska maskininlärningsbibliotek som scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime är kompatibel med olika hårdvara, drivrutiner och operativsystem och ger optimal prestanda genom att utnyttja hårdvaruacceleratorer där det är tillämpligt tillsammans med grafoptimeringar och transformationer ## Vad är Generative AI? Generative AI avser AI-system som kan generera nytt innehåll, såsom text, bilder eller musik, baserat på de data de har tränats på. Exempel inkluderar språkmodeller som GPT-3 och bildgenereringsmodeller som Stable Diffusion. ONNX Runtime för GenAI-biblioteket tillhandahåller den generativa AI-loopen för ONNX-modeller, inklusive inferens med ONNX Runtime, logitbehandling, sökning och sampling samt KV-cachehantering. ## ONNX Runtime för GENAI ONNX Runtime för GENAI utökar kapaciteterna hos ONNX Runtime för att stödja generativa AI-modeller. Här är några nyckelfunktioner: - **Brett plattformsstöd:** Det fungerar på olika plattformar, inklusive Windows, Linux, macOS, Android och iOS. - **Modellstöd:** Det stöder många populära generativa AI-modeller, såsom LLaMA, GPT-Neo, BLOOM och mer. - **Prestandaoptimering:** Det inkluderar optimeringar för olika hårdvaruacceleratorer som NVIDIA GPU:er, AMD GPU:er och mer2. - **Användarvänlighet:** Det tillhandahåller API:er för enkel integration i applikationer, vilket gör att du kan generera text, bilder och annat innehåll med minimal kod - Användare kan anropa en hög nivå generate()-metod eller köra varje iteration av modellen i en loop, generera en token i taget och valfritt uppdatera genereringsparametrar inuti loopen. - ONNX runtime har också stöd för girig/strålsökning och TopP, TopK sampling för att generera tokensekvenser och inbyggd logitbehandling som repetitionsstraff. Du kan också enkelt lägga till anpassad poängsättning. ## Komma igång För att komma igång med ONNX Runtime för GENAI kan du följa dessa steg: ### Installera ONNX Runtime: ```Python
+```
+
+
+**ONNX Runtime för GenAI**
+
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) är en plattformsoberoende accelerator för inferens och träning av maskininlärning. ONNX Runtime för Generative AI (GENAI) är ett kraftfullt verktyg som hjälper dig att köra generativa AI-modeller effektivt över olika plattformar.
+
+## Vad är ONNX Runtime?  
+ONNX Runtime är ett open source-projekt som möjliggör högpresterande inferens av maskininlärningsmodeller. Det stödjer modeller i Open Neural Network Exchange (ONNX)-formatet, som är en standard för att representera maskininlärningsmodeller. ONNX Runtime-inferens kan möjliggöra snabbare kundupplevelser och lägre kostnader, och stödjer modeller från djupinlärningsramverk som PyTorch och TensorFlow/Keras samt klassiska maskininlärningsbibliotek som scikit-learn, LightGBM, XGBoost med flera. ONNX Runtime är kompatibelt med olika hårdvaror, drivrutiner och operativsystem, och ger optimal prestanda genom att utnyttja hårdvaruacceleration där det är möjligt, tillsammans med grafoptimeringar och transformationer.
+
+## Vad är Generativ AI?  
+Generativ AI avser AI-system som kan skapa nytt innehåll, såsom text, bilder eller musik, baserat på den data de tränats på. Exempel inkluderar språkmodeller som GPT-3 och bildgenereringsmodeller som Stable Diffusion. ONNX Runtime för GenAI-biblioteket tillhandahåller den generativa AI-loopen för ONNX-modeller, inklusive inferens med ONNX Runtime, logitsbearbetning, sökning och sampling samt hantering av KV-cache.
+
+## ONNX Runtime för GENAI  
+ONNX Runtime för GENAI utökar ONNX Runtimes kapabiliteter för att stödja generativa AI-modeller. Här är några viktiga funktioner:
+
+- **Brett plattformsstöd:** Fungerar på olika plattformar, inklusive Windows, Linux, macOS, Android och iOS.  
+- **Modellstöd:** Stöder många populära generativa AI-modeller, såsom LLaMA, GPT-Neo, BLOOM med flera.  
+- **Prestandaoptimering:** Inkluderar optimeringar för olika hårdvaruacceleratorer som NVIDIA GPU:er, AMD GPU:er med flera.  
+- **Användarvänlighet:** Erbjuder API:er för enkel integration i applikationer, vilket gör att du kan generera text, bilder och annat innehåll med minimal kod.  
+- Användare kan anropa en hög-nivå generate()-metod, eller köra varje iteration av modellen i en loop, generera en token i taget och valfritt uppdatera genereringsparametrar inuti loopen.  
+- ONNX Runtime har även stöd för greedy/beam search och TopP, TopK-sampling för att generera tokensekvenser samt inbyggd logitsbearbetning som repetitionsstraff. Du kan också enkelt lägga till egen poängsättning.
+
+## Kom igång  
+För att komma igång med ONNX Runtime för GENAI kan du följa dessa steg:
+
+### Installera ONNX Runtime:  
+```Python
 pip install onnxruntime
-``` ### Installera Generative AI Extensions: ```Python
+```  
+### Installera Generative AI Extensions:  
+```Python
 pip install onnxruntime-genai
-``` ### Kör en modell: Här är ett enkelt exempel i Python: ```Python
+```
+
+### Kör en modell: Här är ett enkelt exempel i Python:  
+```Python
 import onnxruntime_genai as og
 
 model = og.Model('path_to_your_model.onnx')
@@ -158,7 +256,11 @@ output_tokens = model.generate(input_tokens)
 output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
-``` ### Demo: Använda ONNX Runtime GenAI för att anropa Phi-3.5-Vision ```python
+```  
+### Demo: Använda ONNX Runtime GenAI för att anropa Phi-3.5-Vision
+
+
+```python
 
 import onnxruntime_genai as og
 
@@ -206,7 +308,17 @@ while not generator.is_done():
     
     print(tokenizer_stream.decode(new_token), end='', flush=True)
 
-``` **Andra** Förutom ONNX Runtime och Ollama-referensmetoder kan vi också slutföra referensen av kvantitativa modeller baserat på modellreferensmetoder som tillhandahålls av olika tillverkare. Såsom Apple MLX-ramverk med Apple Metal, Qualcomm QNN med NPU, Intel OpenVINO med CPU/GPU, etc. Du kan också få mer innehåll från [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst) ## Mer Vi har lärt oss grunderna i Phi-3/3.5 Family, men för att lära oss mer om SLM behöver vi mer kunskap. Du kan hitta svaren i Phi-3 Cookbook. Om du vill lära dig mer, vänligen besök [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+```
+
+
+**Övrigt**
+
+Utöver ONNX Runtime och Ollama-referensmetoder kan vi också komplettera referensen för kvantitativa modeller baserat på modellreferensmetoder som tillhandahålls av olika tillverkare. Såsom Apple MLX-ramverket med Apple Metal, Qualcomm QNN med NPU, Intel OpenVINO med CPU/GPU med mera. Du kan också hitta mer innehåll i [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
+
+
+## Mer
+
+Vi har lärt oss grunderna i Phi-3/3.5-familjen, men för att lära oss mer om SLM behöver vi mer kunskap. Du kan hitta svaren i Phi-3 Cookbook. Om du vill lära dig mer, besök gärna [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Vi strävar efter noggrannhet, men var medveten om att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på sitt modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användningen av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

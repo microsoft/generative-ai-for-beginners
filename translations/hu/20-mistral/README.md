@@ -2,46 +2,48 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:01:49+00:00",
+  "translation_date": "2025-07-09T19:02:56+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "hu"
 }
 -->
-# Építés Mistral Modellek segítségével
+# Építés Mistral modellekkel
 
 ## Bevezetés
 
-Ez a lecke a következőkről szól:
-- A különböző Mistral Modellek felfedezése
-- Az egyes modellek használati eseteinek és forgatókönyveinek megértése
-- Kódminták, amelyek bemutatják az egyes modellek egyedi jellemzőit.
+Ebben a leckében a következőkről lesz szó:  
+- A különböző Mistral modellek felfedezése  
+- Az egyes modellek használati eseteinek és helyzeteinek megértése  
+- Kódpéldák, amelyek bemutatják az egyes modellek egyedi jellemzőit.
 
-## A Mistral Modellek
+## A Mistral modellek
 
-Ebben a leckében 3 különböző Mistral modellt fogunk megvizsgálni: **Mistral Large**, **Mistral Small** és **Mistral Nemo**.
+Ebben a leckében három különböző Mistral modellt ismerünk meg:  
+**Mistral Large**, **Mistral Small** és **Mistral Nemo**.
 
-Ezek a modellek ingyenesen elérhetők a Github Model piacon. A jegyzetfüzetben szereplő kód ezekkel a modellekkel futtatja a kódot. További részletek a Github Modellek használatáról az [AI modellekkel való prototípus-készítéshez](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Ezek a modellek ingyenesen elérhetők a Github Model piacterén. A jegyzetfüzetben található kód ezekkel a modellekkel fog futni. További részletek a Github Modellek használatáról az [AI modellekkel való prototípus készítéshez](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-A Mistral Large 2 jelenleg a Mistral zászlóshajó modellje, és vállalati felhasználásra készült.
 
-A modell fejlesztést jelent az eredeti Mistral Large-hoz képest, a következőkkel:
-- Nagyobb kontextusablak - 128k vs 32k
-- Jobb teljesítmény matematikai és kódolási feladatoknál - 76,9% átlagos pontosság vs 60,4%
-- Növelt többnyelvű teljesítmény - a nyelvek között: angol, francia, német, spanyol, olasz, portugál, holland, orosz, kínai, japán, koreai, arab és hindi.
+A Mistral Large 2 jelenleg a Mistral zászlóshajó modellje, amely vállalati használatra készült.
 
-Ezekkel a funkciókkal a Mistral Large kiemelkedik a következőkben:
-- *Retrieval Augmented Generation (RAG)* - a nagyobb kontextusablak miatt
-- *Függvényhívás* - ez a modell natív függvényhívással rendelkezik, amely lehetővé teszi a külső eszközökkel és API-kkal való integrációt. Ezek a hívások párhuzamosan vagy egymás után, szekvenciálisan is elvégezhetők.
-- *Kódgenerálás* - ez a modell kiválóan teljesít a Python, Java, TypeScript és C++ generálásban.
+Ez a modell az eredeti Mistral Large továbbfejlesztett változata, amely  
+- Nagyobb kontextusablakot kínál – 128k vs 32k  
+- Jobb teljesítményt nyújt matematikai és kódolási feladatokban – 76,9% átlagos pontosság vs 60,4%  
+- Javított többnyelvű teljesítményt – a támogatott nyelvek között szerepel az angol, francia, német, spanyol, olasz, portugál, holland, orosz, kínai, japán, koreai, arab és hindi.
 
-### RAG Példa a Mistral Large 2 használatával
+Ezekkel a tulajdonságokkal a Mistral Large kiválóan alkalmas  
+- *Retrieval Augmented Generation (RAG)* feladatokra – a nagyobb kontextusablak miatt  
+- *Funkcióhívásra* – a modell natív funkcióhívást támogat, ami lehetővé teszi külső eszközök és API-k integrációját. Ezek a hívások párhuzamosan vagy egymás után, sorosan is végrehajthatók.  
+- *Kódgenerálásra* – különösen jól teljesít Python, Java, TypeScript és C++ generálásban.
 
-Ebben a példában a Mistral Large 2-t használjuk egy RAG minta futtatására egy szöveges dokumentumon. A kérdés koreaiul van írva, és az író tevékenységeiről kérdez az egyetem előtt.
+### RAG példa Mistral Large 2-vel
 
-A Cohere Embeddings Modelt használja a szöveges dokumentum és a kérdés beágyazásának létrehozásához. Ehhez a példához a faiss Python csomagot használja vektor tárolóként.
+Ebben a példában a Mistral Large 2 modellt használjuk egy RAG mintázat futtatására egy szöveges dokumentumon. A kérdés koreai nyelven íródott, és az író egyetemi előtti tevékenységeiről érdeklődik.
 
-A Mistral modellhez küldött prompt tartalmazza mind a kérdéseket, mind a kérdéshez hasonló visszakeresett részeket. A modell ezután természetes nyelvű választ ad.
+A Cohere Embeddings modellt használja a szöveges dokumentum és a kérdés beágyazásainak létrehozásához. Ehhez a mintához a faiss Python csomagot használja vektortárolóként.
+
+A Mistral modellhez küldött prompt tartalmazza a kérdéseket és a kérdéshez hasonlóan visszakeresett szövegrészeket. A modell ezután természetes nyelvű választ ad.
 
 ```python 
 pip install faiss-cpu
@@ -138,21 +140,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-A Mistral Small egy másik modell a Mistral modellek családjában a prémium/vállalati kategóriában. Ahogy a neve is sugallja, ez a modell egy Kis Nyelvi Modell (SLM). A Mistral Small használatának előnyei a következők:
-- Költségmegtakarítás a Mistral LLM-ekhez képest, mint a Mistral Large és NeMo - 80%-os árcsökkenés
-- Alacsony késleltetés - gyorsabb válasz a Mistral LLM-ekhez képest
-- Rugalmas - különböző környezetekben telepíthető, kevesebb korlátozással a szükséges erőforrásokra.
 
-A Mistral Small nagyszerű a következőkre:
-- Szövegalapú feladatok, mint az összefoglalás, érzelemelemzés és fordítás.
-- Alkalmazások, ahol gyakori kérések érkeznek, költséghatékonysága miatt
-- Alacsony késleltetésű kód feladatok, mint az átnézés és kódjavaslatok
+A Mistral Small a Mistral család egy másik modellje, amely a prémium/vállalati kategóriába tartozik. Ahogy a neve is mutatja, ez egy kis méretű nyelvi modell (SLM). A Mistral Small használatának előnyei:  
+- Költséghatékonyabb a Mistral nagyobb LLM-jeihez, mint a Mistral Large és NeMo képest – 80%-os árcsökkenés  
+- Alacsony késleltetés – gyorsabb válaszidő a Mistral LLM-ekhez képest  
+- Rugalmas – különböző környezetekben telepíthető, kevesebb erőforrás-korlátozással.
+
+A Mistral Small kiválóan alkalmas:  
+- Szöveges feladatokra, mint például összefoglalás, érzelemelemzés és fordítás  
+- Olyan alkalmazásokhoz, ahol gyakori lekérések vannak a költséghatékonyság miatt  
+- Alacsony késleltetésű kódolási feladatokra, például kódáttekintésre és javaslatokra
 
 ## Mistral Small és Mistral Large összehasonlítása
 
-A Mistral Small és Large közötti késleltetési különbségek bemutatására futtassa az alábbi cellákat.
+A késleltetésbeli különbségek bemutatásához a Mistral Small és Large között futtassa le az alábbi cellákat.
 
-Látnia kell a válaszidők közötti különbséget 3-5 másodperc között. Figyelje meg a válaszok hosszát és stílusát is ugyanazon prompt esetén.
+3-5 másodperces válaszidő-különbséget kell tapasztalnia. Figyelje meg a válaszok hosszát és stílusát ugyanazon prompt esetén.
 
 ```python 
 
@@ -214,23 +217,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-A leckében tárgyalt másik két modellhez képest a Mistral NeMo az egyetlen ingyenes modell Apache2 licenccel.
+A leckében tárgyalt két másik modellhez képest a Mistral NeMo az egyetlen ingyenes modell Apache2 licenccel.
 
-Úgy tekintik, mint a korábbi nyílt forráskódú LLM fejlesztése a Mistral-tól, a Mistral 7B-től.
+Ez a modell a korábbi, nyílt forráskódú Mistral 7B modell továbbfejlesztett változatának tekinthető.
 
-A NeMo modell néhány másik jellemzője:
+A NeMo modell további jellemzői:  
 
-- *Hatékonyabb tokenizálás:* Ez a modell a Tekken tokenizálót használja a gyakrabban használt tiktoken helyett. Ez jobb teljesítményt tesz lehetővé több nyelven és kódon.
+- *Hatékonyabb tokenizálás:* Ez a modell a Tekken tokenizálót használja a gyakrabban használt tiktoken helyett. Ez jobb teljesítményt tesz lehetővé több nyelven és kód esetén.
 
-- *Finomhangolás:* Az alapmodell elérhető finomhangolásra. Ez nagyobb rugalmasságot biztosít olyan használati esetekhez, ahol finomhangolásra lehet szükség.
+- *Finomhangolás:* Az alapmodell elérhető finomhangolásra, ami nagyobb rugalmasságot biztosít olyan esetekben, ahol finomhangolásra lehet szükség.
 
-- *Natív függvényhívás* - A Mistral Large-hoz hasonlóan ez a modell is képzett függvényhívásokra. Ez egyedivé teszi, mivel az egyik első nyílt forráskódú modell, amely képes erre.
+- *Natív funkcióhívás* – A Mistral Large-hoz hasonlóan ez a modell is funkcióhívásra lett betanítva. Ez egyedivé teszi, mivel az elsők között van a nyílt forráskódú modellek között, amelyek ezt támogatják.
 
 ### Tokenizálók összehasonlítása
 
 Ebben a példában megnézzük, hogyan kezeli a Mistral NeMo a tokenizálást a Mistral Large-hoz képest.
 
-Mindkét minta ugyanazt a promptot veszi, de látnia kell, hogy a NeMo kevesebb tokent ad vissza, mint a Mistral Large.
+Mindkét minta ugyanazt a promptot használja, de látható, hogy a NeMo kevesebb tokent ad vissza, mint a Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -348,9 +351,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## A tanulás itt nem áll meg, folytassa az utat
+## A tanulás itt nem ér véget, folytasd az utazást
 
-A lecke befejezése után nézze meg a [Generatív AI Tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejlessze generatív AI ismereteit!
+A lecke elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd generatív AI ismereteidet!
 
-**Felelősség kizárása**:  
-Ezt a dokumentumot az AI fordítószolgáltatással, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordították le. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentumot annak eredeti nyelvén kell tekinteni a hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás. Nem vállalunk felelősséget semmilyen félreértésért vagy félremagyarázásért, amely a fordítás használatából ered.
+**Jogi nyilatkozat**:  
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

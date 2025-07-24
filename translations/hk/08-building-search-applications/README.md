@@ -2,138 +2,138 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:22:04+00:00",
+  "translation_date": "2025-07-09T12:49:12+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "hk"
 }
 -->
 # 建立搜尋應用程式
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/08-lesson-banner.358a98d5a1d7df54f5eaf5fd69392931ea660c923effa48ffb8384f5fa4ab172.hk.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.hk.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
-> > _點擊上方圖片觀看本課程的影片_
+> > _點擊上方圖片觀看本課程影片_
 
-大型語言模型不僅限於聊天機器人和文本生成。其實也可以使用嵌入來建立搜尋應用程式。嵌入是數據的數值表示，也稱為向量，可以用於數據的語義搜尋。
+大型語言模型（LLM）不只是用於聊天機器人和文字生成，也可以利用 Embeddings 建立搜尋應用程式。Embeddings 是資料的數值表示，也稱為向量，可用於語意搜尋。
 
-在這節課中，你將為我們的教育創業公司建立一個搜尋應用程式。我們的創業公司是一個非營利組織，為發展中國家的學生提供免費教育。我們的創業公司有大量的 YouTube 影片，學生可以用來學習 AI。我們的創業公司希望建立一個搜尋應用程式，讓學生可以透過輸入問題來搜尋 YouTube 影片。
+在本課程中，你將為我們的教育新創公司建立一個搜尋應用程式。我們的新創公司是一個非牟利組織，為發展中國家的學生提供免費教育。我們擁有大量的 YouTube 影片，供學生學習 AI。我們希望建立一個搜尋應用程式，讓學生能透過輸入問題來搜尋 YouTube 影片。
 
-例如，學生可能會輸入「什麼是 Jupyter Notebooks？」或「什麼是 Azure ML」，搜尋應用程式將返回與問題相關的 YouTube 影片列表，更好的是，搜尋應用程式將返回影片中問題答案所在位置的連結。
+例如，學生可能會輸入「什麼是 Jupyter Notebooks？」或「什麼是 Azure ML」，搜尋應用程式會回傳與問題相關的 YouTube 影片清單，更棒的是，搜尋結果會直接連結到影片中回答該問題的時間點。
 
 ## 介紹
 
-在這節課中，我們將涵蓋：
+本課程將涵蓋：
 
-- 語義搜尋與關鍵字搜尋的區別。
-- 什麼是文本嵌入。
-- 創建文本嵌入索引。
-- 搜尋文本嵌入索引。
+- 語意搜尋與關鍵字搜尋的差異。
+- 什麼是文字 Embeddings。
+- 建立文字 Embeddings 索引。
+- 搜尋文字 Embeddings 索引。
 
 ## 學習目標
 
-完成本課後，你將能夠：
+完成本課程後，你將能夠：
 
-- 分辨語義搜尋與關鍵字搜尋的不同。
-- 解釋什麼是文本嵌入。
-- 使用嵌入創建應用程式來搜尋數據。
+- 分辨語意搜尋與關鍵字搜尋的不同。
+- 解釋什麼是文字 Embeddings。
+- 使用 Embeddings 建立搜尋資料的應用程式。
 
 ## 為什麼要建立搜尋應用程式？
 
-創建搜尋應用程式將幫助你了解如何使用嵌入來搜尋數據。你還將學會如何建立一個可供學生快速找到資訊的搜尋應用程式。
+建立搜尋應用程式能幫助你了解如何使用 Embeddings 來搜尋資料，也能學會如何打造一個讓學生快速找到資訊的搜尋工具。
 
-本課程包含了 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 頻道的影片文字稿的嵌入索引。AI Show 是一個教你關於 AI 和機器學習的 YouTube 頻道。嵌入索引包含截至 2023 年 10 月的每個 YouTube 文字稿的嵌入。你將使用嵌入索引為我們的創業公司建立一個搜尋應用程式。搜尋應用程式會返回影片中問題答案所在位置的連結。這是一個讓學生快速找到所需資訊的好方法。
+本課程包含 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 頻道的影片逐字稿 Embedding 索引。AI Show 是一個教你 AI 與機器學習的 YouTube 頻道。Embedding 索引包含截至 2023 年 10 月的所有影片逐字稿 Embeddings。你將使用這個索引來建立搜尋應用程式，搜尋結果會連結到影片中回答問題的時間點，讓學生能快速找到所需資訊。
 
-以下是一個語義查詢的例子，問題是「你可以用 rstudio 和 azure ml 嗎？」。查看 YouTube 的 URL，你會看到該 URL 包含一個時間戳，會帶你到影片中問題答案所在的位置。
+以下是針對問題「can you use rstudio with azure ml?」的語意查詢範例。查看 YouTube 連結，你會發現網址包含時間戳，直接帶你到影片中回答該問題的片段。
 
-![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/query-results.506ee9aac38278ee496377ca3d0bf751a9bffda30c3cbd56d5024dcb9c8f8e9e.hk.png)
+![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.hk.png)
 
-## 什麼是語義搜尋？
+## 什麼是語意搜尋？
 
-你可能會想，什麼是語義搜尋？語義搜尋是一種使用查詢中詞語的語義或含義來返回相關結果的搜尋技術。
+你可能會好奇，什麼是語意搜尋？語意搜尋是一種利用查詢中詞語的語意或意義來回傳相關結果的搜尋技術。
 
-這裡有一個語義搜尋的例子。假設你想買車，你可能會搜尋「我的夢想車」，語義搜尋理解你不是在 `dreaming` 一輛車，而是你在找你想買的 `ideal` 車。語義搜尋理解你的意圖並返回相關結果。相反的 `keyword search` 會字面搜尋關於車的夢，通常返回不相關的結果。
+舉例來說，假設你想買車，輸入「我的夢想車」，語意搜尋會理解你不是在「夢想」一輛車，而是想找你的「理想」車款。語意搜尋能理解你的意圖並回傳相關結果。相對地，關鍵字搜尋會字面搜尋「夢想」和「車」，常常回傳不相關的結果。
 
-## 什麼是文本嵌入？
+## 什麼是文字 Embeddings？
 
-[文本嵌入](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) 是一種用於[自然語言處理](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst)的文本表示技術。文本嵌入是文本的語義數值表示。嵌入用於以易於機器理解的方式表示數據。有很多模型可以用來構建文本嵌入，在這節課中，我們將專注於使用 OpenAI 嵌入模型生成嵌入。
+[文字 Embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) 是一種用於[自然語言處理](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst)的文字表示技術。文字 Embeddings 是文字的語意數值表示。Embeddings 用來將資料以機器容易理解的方式表示。有許多模型可以建立文字 Embeddings，本課程將專注於使用 OpenAI Embedding 模型來產生 Embeddings。
 
-這裡有一個例子，假設以下文本是 AI Show YouTube 頻道某一集的文字稿：
+舉例來說，假設以下文字來自 AI Show YouTube 頻道某集的逐字稿：
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-我們會將文本傳遞給 OpenAI 嵌入 API，它會返回由 1536 個數字組成的嵌入，也就是一個向量。向量中的每個數字代表文本的不同方面。為了簡便，這裡是向量的前 10 個數字。
+我們會將文字傳給 OpenAI Embedding API，API 會回傳一個包含 1536 個數字的向量。向量中的每個數字代表文字的不同面向。以下為向量的前 10 個數字，為簡潔起見。
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## 嵌入索引是如何創建的？
+## Embedding 索引是如何建立的？
 
-本課的嵌入索引是用一系列 Python 腳本創建的。你會在本課的「scripts」文件夾中的 [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) 找到這些腳本和指示。你不需要運行這些腳本來完成本課，因為嵌入索引已經為你提供。
+本課程的 Embedding 索引是透過一系列 Python 腳本建立。你可以在本課程的 `scripts` 資料夾中的 [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) 找到這些腳本和說明。你不需要執行這些腳本即可完成本課程，因為我們已提供 Embedding 索引。
 
 這些腳本執行以下操作：
 
-1. 下載 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 播放列表中每個 YouTube 影片的文字稿。
-2. 使用 [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)，嘗試從 YouTube 文字稿的前三分鐘中提取講者名稱。每個影片的講者名稱都存儲在名為 `embedding_index_3m.json` 的嵌入索引中。
-3. 然後將文字稿文本分成**三分鐘的文本段**。該段包含約 20 個詞，與下一段重疊，以確保段的嵌入不會被截斷，並提供更好的搜尋上下文。
-4. 然後將每個文本段傳遞給 OpenAI Chat API，將文本總結成 60 個詞。總結也存儲在嵌入索引 `embedding_index_3m.json` 中。
-5. 最後，將段文本傳遞給 OpenAI 嵌入 API。嵌入 API 返回一個由 1536 個數字組成的向量，代表該段的語義意義。該段連同 OpenAI 嵌入向量一起存儲在嵌入索引 `embedding_index_3m.json` 中。
+1. 下載 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 播放清單中每支 YouTube 影片的逐字稿。
+2. 使用 [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) 嘗試從逐字稿的前三分鐘擷取講者名稱。每支影片的講者名稱會儲存在名為 `embedding_index_3m.json` 的 Embedding 索引中。
+3. 將逐字稿文字切分成**三分鐘的文字段落**。每段會與下一段重疊約 20 個字，以確保 Embedding 不會被截斷，並提供更好的搜尋上下文。
+4. 將每段文字傳給 OpenAI Chat API，將文字摘要成 60 字，摘要也會儲存在 `embedding_index_3m.json` 中。
+5. 最後，將文字段落傳給 OpenAI Embedding API，API 回傳一個 1536 維的向量，代表該段文字的語意。段落與向量會一起儲存在 `embedding_index_3m.json`。
 
-### 向量數據庫
+### 向量資料庫
 
-為了簡化課程，嵌入索引存儲在名為 `embedding_index_3m.json` 的 JSON 文件中，並加載到 Pandas DataFrame 中。然而，在生產中，嵌入索引會存儲在一個向量數據庫中，例如 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)、[Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst)、[Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst)、[Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) 等等。
+為簡化課程，Embedding 索引儲存在名為 `embedding_index_3m.json` 的 JSON 檔案中，並載入到 Pandas DataFrame。但在實務中，Embedding 索引會儲存在向量資料庫，例如 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)、[Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst)、[Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst)、[Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) 等。
 
-## 理解餘弦相似度
+## 了解餘弦相似度
 
-我們已經學習了文本嵌入，下一步是學習如何使用文本嵌入來搜尋數據，特別是使用餘弦相似度來找到與給定查詢最相似的嵌入。
+我們已了解文字 Embeddings，接下來學習如何利用文字 Embeddings 搜尋資料，特別是如何用餘弦相似度找到與查詢最相似的 Embeddings。
 
 ### 什麼是餘弦相似度？
 
-餘弦相似度是兩個向量之間相似度的度量，你也會聽到這被稱為 `nearest neighbor search`。要執行餘弦相似度搜尋，你需要使用 OpenAI 嵌入 API 為查詢文本進行_向量化_。然後計算查詢向量與嵌入索引中每個向量之間的_餘弦相似度_。記住，嵌入索引對每個 YouTube 文字稿文本段都有一個向量。最後，按餘弦相似度排序結果，餘弦相似度最高的文本段與查詢最相似。
+餘弦相似度是衡量兩個向量相似度的方法，也稱為「最近鄰搜尋」。要進行餘弦相似度搜尋，需先用 OpenAI Embedding API 將查詢文字「向量化」。接著計算查詢向量與 Embedding 索引中每個向量的餘弦相似度。記得，Embedding 索引中每個向量代表一段 YouTube 逐字稿文字。最後依餘弦相似度排序，數值最高的文字段落即與查詢最相似。
 
-從數學角度來看，餘弦相似度測量兩個向量在多維空間中投影的角度的餘弦值。這個測量是有益的，因為如果兩個文檔因大小而在歐幾里得距離上相距甚遠，它們仍然可能在它們之間有一個較小的角度，因此具有更高的餘弦相似度。關於餘弦相似度方程的更多資訊，請參閱 [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst)。
+從數學角度看，餘弦相似度是多維空間中兩向量夾角的餘弦值。這個度量很有用，因為即使兩份文件在歐氏距離上相距較遠（可能因大小不同），它們的夾角仍可能較小，因而餘弦相似度較高。更多餘弦相似度的數學公式，請參考 [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst)。
 
 ## 建立你的第一個搜尋應用程式
 
-接下來，我們將學習如何使用嵌入建立搜尋應用程式。搜尋應用程式將允許學生通過輸入問題來搜尋影片。搜尋應用程式將返回與問題相關的影片列表。搜尋應用程式還將返回影片中問題答案所在位置的連結。
+接下來，我們將學習如何使用 Embeddings 建立搜尋應用程式。該應用程式允許學生透過輸入問題搜尋影片，並回傳與問題相關的影片清單，還會連結到影片中回答問題的時間點。
 
-此解決方案已在 Windows 11、macOS 和 Ubuntu 22.04 上使用 Python 3.10 或更高版本進行構建和測試。你可以從 [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 下載 Python。
+此解決方案已在 Windows 11、macOS 和 Ubuntu 22.04 上使用 Python 3.10 或更新版本測試。你可以從 [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 下載 Python。
 
-## 作業 - 建立搜尋應用程式，讓學生能夠使用
+## 作業 - 建立搜尋應用程式，幫助學生
 
-我們在本課開始時介紹了我們的創業公司。現在是時候讓學生建立一個搜尋應用程式來進行他們的評估。
+我們在課程開頭介紹了新創公司，現在是時候讓學生自己建立搜尋應用程式，作為評量的一部分。
 
-在這個作業中，你將創建用於建立搜尋應用程式的 Azure OpenAI 服務。你將創建以下 Azure OpenAI 服務。你需要一個 Azure 訂閱才能完成此作業。
+在此作業中，你將建立用於搜尋應用程式的 Azure OpenAI 服務。你需要一個 Azure 訂閱來完成此作業。
 
-### 開始使用 Azure Cloud Shell
+### 啟動 Azure Cloud Shell
 
-1. 登錄 [Azure 入口網站](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)。
-2. 選擇 Azure 入口網站右上角的 Cloud Shell 圖標。
+1. 登入 [Azure 入口網站](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)。
+2. 點選 Azure 入口網站右上角的 Cloud Shell 圖示。
 3. 選擇 **Bash** 作為環境類型。
 
-#### 創建資源組
+#### 建立資源群組
 
-> 對於這些指示，我們使用位於美國東部的名為 "semantic-video-search" 的資源組。
-> 你可以更改資源組的名稱，但在更改資源的位置時，
-> 請檢查 [模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
+> 以下指令使用位於 East US 的資源群組「semantic-video-search」。
+> 你可以更改資源群組名稱，但若更改資源位置，
+> 請參考[模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### 創建 Azure OpenAI 服務資源
+#### 建立 Azure OpenAI 服務資源
 
-從 Azure Cloud Shell 運行以下命令以創建 Azure OpenAI 服務資源。
+在 Azure Cloud Shell 執行以下指令，建立 Azure OpenAI 服務資源。
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-#### 獲取此應用程式使用的端點和密鑰
+#### 取得端點與金鑰以供應用程式使用
 
-從 Azure Cloud Shell 運行以下命令以獲取 Azure OpenAI 服務資源的端點和密鑰。
+在 Azure Cloud Shell 執行以下指令，取得 Azure OpenAI 服務資源的端點與金鑰。
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -142,9 +142,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### 部署 OpenAI 嵌入模型
+#### 部署 OpenAI Embedding 模型
 
-從 Azure Cloud Shell 運行以下命令以部署 OpenAI 嵌入模型。
+在 Azure Cloud Shell 執行以下指令，部署 OpenAI Embedding 模型。
 
 ```shell
 az cognitiveservices account deployment create \
@@ -159,17 +159,17 @@ az cognitiveservices account deployment create \
 
 ## 解決方案
 
-在 GitHub Codespaces 中打開 [解決方案筆記本](../../../08-building-search-applications/python/aoai-solution.ipynb) 並按照 Jupyter Notebook 中的指示進行操作。
+打開 GitHub Codespaces 中的 [解決方案筆記本](../../../08-building-search-applications/python/aoai-solution.ipynb)，並依照 Jupyter Notebook 中的指示操作。
 
-當你運行筆記本時，你將被提示輸入查詢。輸入框看起來像這樣：
+執行筆記本時，系統會提示你輸入查詢。輸入框如下圖所示：
 
-![Input box for the user to input a query](../../../translated_images/notebook-search.31eabddd06254ea17ca4fe27dec0373d294da1abe4c1e8b7edc0dd31a18aeb9a.hk.png)
+![Input box for the user to input a query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.hk.png)
 
-## 做得好！繼續你的學習
+## 做得好！繼續學習
 
-完成本課後，查看我們的 [生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 以繼續提升你的生成式 AI 知識！
+完成本課程後，歡迎參考我們的[生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
-前往第 9 課，我們將看看如何[建立圖像生成應用程式](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+接著前往第 9 課，我們將探討如何[建立影像生成應用程式](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
 **免責聲明**：  
-此文件是使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯的。我們努力確保準確性，但請注意，自動翻譯可能會包含錯誤或不準確之處。應將原文檔的母語版本視為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對使用此翻譯所產生的任何誤解或誤釋不承擔責任。
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或誤釋承擔責任。

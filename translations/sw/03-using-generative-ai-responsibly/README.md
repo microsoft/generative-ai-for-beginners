@@ -1,135 +1,145 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T14:47:30+00:00",
+  "original_hash": "7f8f4c11f8c1cb6e1794442dead414ea",
+  "translation_date": "2025-07-09T09:01:13+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "sw"
 }
 -->
-# Kutumia AI Inayozalisha Kwa Uwajibikaji
+# Kutumia Generative AI kwa Uwajibikaji
 
-> _Bonyeza picha hapo juu ili uangalie video ya somo hili_
+[![Kutumia Generative AI kwa Uwajibikaji](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.sw.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
 
-Ni rahisi kuvutiwa na AI na AI inayozalisha hasa, lakini unahitaji kuzingatia jinsi unavyoweza kuitumia kwa uwajibikaji. Unahitaji kuzingatia mambo kama jinsi ya kuhakikisha matokeo ni ya haki, yasiyo na madhara na zaidi. Sura hii inalenga kukupa muktadha uliotajwa, nini cha kuzingatia, na jinsi ya kuchukua hatua madhubuti kuboresha matumizi yako ya AI.
+> _Bonyeza picha hapo juu kutazama video ya somo hili_
+
+Ni rahisi kuvutiwa na AI na hasa Generative AI, lakini unahitaji kuzingatia jinsi ya kuitumia kwa uwajibikaji. Unahitaji kuzingatia mambo kama kuhakikisha matokeo ni ya haki, hayadhuru, na mengineyo. Sura hii inalenga kukupa muktadha uliotajwa, mambo ya kuzingatia, na jinsi ya kuchukua hatua madhubuti kuboresha matumizi yako ya AI.
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litajumuisha:
 
-- Kwa nini unapaswa kuzingatia AI inayowajibika unapojenga programu za AI inayozalisha.
-- Kanuni kuu za AI inayowajibika na jinsi zinavyohusiana na AI inayozalisha.
-- Jinsi ya kuweka kanuni hizi za AI inayowajibika katika vitendo kupitia mkakati na zana.
+- Kwa nini unapaswa kuipa kipaumbele AI yenye Uwajibikaji unapoanzisha programu za Generative AI.
+- Kanuni kuu za AI yenye Uwajibikaji na jinsi zinavyohusiana na Generative AI.
+- Jinsi ya kuweka kanuni hizi za AI yenye Uwajibikaji katika vitendo kupitia mikakati na zana.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili utajua:
+Baada ya kumaliza somo hili utajua:
 
-- Umuhimu wa AI inayowajibika unapojenga programu za AI inayozalisha.
-- Wakati wa kufikiria na kutumia kanuni kuu za AI inayowajibika unapojenga programu za AI inayozalisha.
-- Zana na mikakati gani inapatikana kwako kuweka dhana ya AI inayowajibika katika vitendo.
+- Umuhimu wa AI yenye Uwajibikaji unapoanzisha programu za Generative AI.
+- Wakati wa kufikiria na kutumia kanuni kuu za AI yenye Uwajibikaji unapoanzisha programu za Generative AI.
+- Zana na mikakati inayopatikana kwako kuweka dhana ya AI yenye Uwajibikaji katika vitendo.
 
-## Kanuni za AI Inayowajibika
+## Kanuni za AI yenye Uwajibikaji
 
-Msisimko wa AI inayozalisha haujawahi kuwa juu zaidi. Msisimko huu umeleta watengenezaji wengi wapya, umakini, na ufadhili katika eneo hili. Ingawa hii ni chanya sana kwa yeyote anayetarajia kujenga bidhaa na kampuni zinazotumia AI inayozalisha, ni muhimu pia tuendelee kwa uwajibikaji.
+Msisimko wa Generative AI haujawahi kuwa mkubwa hivi. Msisimko huu umeleta waendelezaji wengi wapya, umakini, na ufadhili katika eneo hili. Ingawa hili ni jambo zuri kwa yeyote anayetaka kuunda bidhaa na makampuni kwa kutumia Generative AI, pia ni muhimu tuendelee kwa uwajibikaji.
 
-Katika kozi hii, tunazingatia kujenga kampuni yetu ya kuanzisha na bidhaa yetu ya elimu ya AI. Tutatumia kanuni za AI inayowajibika: Haki, Ujumuishaji, Uaminifu/Usalama, Usalama & Faragha, Uwazi na Uwajibikaji. Kwa kanuni hizi, tutachunguza jinsi zinavyohusiana na matumizi yetu ya AI inayozalisha katika bidhaa zetu.
+Katika kozi hii, tunazingatia kujenga startup yetu na bidhaa yetu ya elimu ya AI. Tutatumia kanuni za AI yenye Uwajibikaji: Haki, Ushirikishwaji, Uaminifu/Usalama, Usalama & Faragha, Uwazi na Uwajibikaji. Kwa kanuni hizi, tutaangalia jinsi zinavyohusiana na matumizi yetu ya Generative AI katika bidhaa zetu.
 
-## Kwa Nini Unapaswa Kutilia Mkazo AI Inayowajibika
+## Kwa Nini Unapaswa Kuipa Kipaumbele AI yenye Uwajibikaji
 
-Unapojenga bidhaa, kuchukua njia inayozingatia binadamu kwa kuweka maslahi bora ya mtumiaji wako akilini huleta matokeo bora.
+Unapoanzisha bidhaa, kuchukua mtazamo unaoweka maslahi bora ya mtumiaji wako mbele huleta matokeo bora zaidi.
 
-Ubunifu wa AI inayozalisha ni uwezo wake wa kuunda majibu yenye msaada, taarifa, mwongozo, na maudhui kwa watumiaji. Hii inaweza kufanyika bila hatua nyingi za mwongozo ambazo zinaweza kusababisha matokeo ya kuvutia sana. Bila mipango na mikakati sahihi, inaweza pia kwa bahati mbaya kusababisha matokeo yenye madhara kwa watumiaji wako, bidhaa yako, na jamii kwa ujumla.
+Kipengele cha kipekee cha Generative AI ni uwezo wake wa kutoa majibu yenye msaada, taarifa, mwongozo, na maudhui kwa watumiaji. Hii inaweza kufanyika bila hatua nyingi za mikono ambazo zinaweza kuleta matokeo ya kushangaza. Bila mipango na mikakati sahihi, inaweza pia kusababisha matokeo mabaya kwa watumiaji wako, bidhaa yako, na jamii kwa ujumla.
 
-Hebu tuangalie baadhi (lakini sio yote) ya matokeo haya yanayoweza kuwa na madhara:
+Tuchunguze baadhi ya matokeo haya yanayoweza kusababisha madhara (lakini si yote):
 
-### Hallucinations
+### Halusinasheni
 
-Hallucinations ni neno linalotumiwa kuelezea wakati LLM inazalisha maudhui ambayo ni ya kipuuzi kabisa au kitu ambacho tunajua ni makosa kulingana na vyanzo vingine vya taarifa.
+Halusinasheni ni neno linalotumika kuelezea wakati LLM inazalisha maudhui ambayo ni ya kupotosha kabisa au tunajua ni makosa kulingana na vyanzo vingine vya taarifa.
 
-Hebu tuchukue mfano ambapo tunajenga kipengele kwa kampuni yetu ya kuanzisha kinachoruhusu wanafunzi kuuliza maswali ya kihistoria kwa modeli. Mwanafunzi anauliza swali `Who was the sole survivor of Titanic?`
+Tuchukue mfano tunapojenga kipengele kwa startup yetu kinachowezesha wanafunzi kuuliza maswali ya kihistoria kwa mfano. Mwanafunzi anauliza swali `Nani alikuwa mmojawapo aliyekufa kwenye Titanic?`
 
-Modeli inazalisha jibu kama lile lililo hapa chini:
+Mfano unatoa jibu kama hili hapa chini:
 
-Hili ni jibu la kujiamini sana na la kina. Kwa bahati mbaya, ni makosa. Hata kwa utafiti mdogo, mtu angegundua kulikuwa na zaidi ya manusura mmoja wa janga la Titanic. Kwa mwanafunzi ambaye anaanza tu kufanya utafiti juu ya mada hii, jibu hili linaweza kushawishi vya kutosha kutokubaliwi na kutibiwa kama ukweli. Matokeo ya hili yanaweza kusababisha mfumo wa AI kuwa usioaminika na kuathiri vibaya sifa ya kampuni yetu ya kuanzisha.
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
-Kwa kila kurudia kwa LLM yoyote, tumeona maboresho ya utendaji kuzunguka kupunguza hallucinations. Hata na maboresho haya, sisi kama wajenzi wa programu na watumiaji bado tunahitaji kubaki na ufahamu wa mapungufu haya.
+> _(Chanzo: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
-### Maudhui Yenye Madhara
+Huu ni jibu lenye kujiamini na kinaeleweka vizuri. Kwa bahati mbaya, si sahihi. Hata kwa utafiti mdogo, mtu angegundua kulikuwa na waokolewa zaidi ya mmoja katika ajali ya Titanic. Kwa mwanafunzi anayeanza tu kufanya utafiti juu ya mada hii, jibu hili linaweza kumshawishi asilie na kuchukuliwa kama ukweli. Matokeo yake yanaweza kufanya mfumo wa AI usiwe wa kuaminika na kuathiri vibaya sifa ya startup yetu.
 
-Tulizungumzia katika sehemu ya awali wakati LLM inazalisha majibu yasiyo sahihi au ya kipuuzi. Hatari nyingine tunahitaji kuwa na ufahamu nayo ni wakati modeli inajibu na maudhui yenye madhara.
+Kwa kila toleo jipya la LLM yoyote, tumeshuhudia maboresho ya utendaji katika kupunguza halusinasheni. Hata na maboresho haya, sisi kama waendelezaji wa programu na watumiaji bado tunapaswa kuwa makini na mipaka hii.
 
-Maudhui yenye madhara yanaweza kufafanuliwa kama:
+### Maudhui Yanayoweza Kusababisha Madhara
 
-- Kutoa maagizo au kuhamasisha kujidhuru au kudhuru makundi fulani.
-- Maudhui yenye chuki au kudhalilisha.
-- Kuongoza kupanga shambulio lolote au vitendo vya vurugu.
-- Kutoa maagizo ya jinsi ya kupata maudhui haramu au kufanya vitendo haramu.
-- Kuonyesha maudhui ya ngono wazi.
+Tulijadili katika sehemu ya awali wakati LLM inazalisha majibu yasiyo sahihi au ya kupotosha. Hatari nyingine tunayopaswa kuzingatia ni wakati mfano unajibu kwa maudhui yanayoweza kusababisha madhara.
 
-Kwa kampuni yetu ya kuanzisha, tunataka kuhakikisha tuna zana na mikakati sahihi mahali pa kuzuia aina hii ya maudhui kuonekana na wanafunzi.
+Maudhui yanayoweza kusababisha madhara yanaweza kufafanuliwa kama:
+
+- Kutoa maelekezo au kuhamasisha kujiua au kuumiza makundi fulani.
+- Maudhui ya chuki au ya kudhalilisha.
+- Kuongoza mipango ya aina yoyote ya shambulio au matendo ya vurugu.
+- Kutoa maelekezo ya jinsi ya kupata maudhui haramu au kufanya matendo haramu.
+- Kuonyesha maudhui ya ngono waziwazi.
+
+Kwa startup yetu, tunataka kuhakikisha tuna zana na mikakati sahihi ili kuzuia aina hii ya maudhui kuonekana na wanafunzi.
 
 ### Ukosefu wa Haki
 
-Haki inafafanuliwa kama “kuhakikisha kwamba mfumo wa AI hauna upendeleo na ubaguzi na kwamba unawatendea wote kwa haki na usawa.” Katika ulimwengu wa AI inayozalisha, tunataka kuhakikisha kwamba mitazamo ya kutengwa ya makundi yaliyotengwa hayaimarishwi na matokeo ya modeli.
+Haki inafafanuliwa kama “kuhakikisha mfumo wa AI haujumuishi upendeleo au ubaguzi na unawatendea watu wote kwa usawa na haki.” Katika ulimwengu wa Generative AI, tunataka kuhakikisha kuwa mitazamo ya dunia inayotengwa ya makundi yaliyotengwa haisaidiiwa na matokeo ya mfano.
 
-Aina hizi za matokeo sio tu zinaharibu kujenga uzoefu mzuri wa bidhaa kwa watumiaji wetu, lakini pia husababisha madhara zaidi ya kijamii. Kama wajenzi wa programu, tunapaswa kila mara kuweka msingi mpana na tofauti wa watumiaji akilini wakati tunajenga suluhisho na AI inayozalisha.
+Aina hizi za matokeo si tu zinaharibu ujenzi wa uzoefu mzuri wa bidhaa kwa watumiaji wetu, bali pia husababisha madhara zaidi kwa jamii. Kama waendelezaji wa programu, tunapaswa kila mara kuzingatia msingi mpana na tofauti wa watumiaji tunapojenga suluhisho kwa kutumia Generative AI.
 
-## Jinsi ya Kutumia AI Inayozalisha Kwa Uwajibikaji
+## Jinsi ya Kutumia Generative AI kwa Uwajibikaji
 
-Sasa tumejua umuhimu wa AI inayozalisha kwa uwajibikaji, hebu tuangalie hatua 4 tunazoweza kuchukua kujenga suluhisho zetu za AI kwa uwajibikaji:
+Sasa tumebaini umuhimu wa Generative AI yenye Uwajibikaji, tazama hatua 4 tunazoweza kuchukua kujenga suluhisho zetu za AI kwa uwajibikaji:
 
-### Kupima Madhara Yanayoweza Kutokea
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.sw.png)
 
-Katika majaribio ya programu, tunajaribu hatua zinazotarajiwa za mtumiaji kwenye programu. Vivyo hivyo, kujaribu seti tofauti za maombi ambayo watumiaji wanaweza kutumia ni njia nzuri ya kupima madhara yanayoweza kutokea.
+### Pima Madhara Yanayoweza Kutokea
 
-Kwa kuwa kampuni yetu ya kuanzisha inajenga bidhaa ya elimu, itakuwa vizuri kuandaa orodha ya maombi yanayohusiana na elimu. Hii inaweza kuwa kufunika somo fulani, ukweli wa kihistoria, na maombi kuhusu maisha ya wanafunzi.
+Katika upimaji wa programu, tunapima matendo yanayotarajiwa ya mtumiaji kwenye programu. Vivyo hivyo, kupima seti mbalimbali za maelekezo ambayo watumiaji wana uwezekano mkubwa wa kutumia ni njia nzuri ya kupima madhara yanayoweza kutokea.
 
-### Kupunguza Madhara Yanayoweza Kutokea
+Kwa kuwa startup yetu inajenga bidhaa ya elimu, itakuwa vyema kuandaa orodha ya maelekezo yanayohusiana na elimu. Hii inaweza kuwa kwa kufunika somo fulani, ukweli wa kihistoria, na maelekezo kuhusu maisha ya mwanafunzi.
 
-Sasa ni wakati wa kutafuta njia ambapo tunaweza kuzuia au kupunguza madhara yanayoweza kusababishwa na modeli na majibu yake. Tunaweza kuangalia hili katika tabaka 4 tofauti:
+### Zuia Madhara Yanayoweza Kutokea
 
-- **Modeli**. Kuchagua modeli sahihi kwa matumizi sahihi. Modeli kubwa na ngumu zaidi kama GPT-4 zinaweza kusababisha hatari zaidi ya maudhui yenye madhara zinapotumika kwa matumizi madogo na maalum. Kutumia data yako ya mafunzo kuboresha pia hupunguza hatari ya maudhui yenye madhara.
+Sasa ni wakati wa kutafuta njia za kuzuia au kupunguza madhara yanayoweza kusababishwa na mfano na majibu yake. Tunaweza kuangalia hili kwa tabaka 4 tofauti:
 
-- **Mfumo wa Usalama**. Mfumo wa usalama ni seti ya zana na mipangilio kwenye jukwaa linalohudumia modeli inayosaidia kupunguza madhara. Mfano wa hili ni mfumo wa kuchuja maudhui kwenye huduma ya Azure OpenAI. Mifumo inapaswa pia kugundua mashambulio ya jailbreak na shughuli zisizohitajika kama maombi kutoka kwa roboti.
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.sw.png)
 
-- **Metaprompt**. Metaprompt na kuimarisha ni njia tunazoweza kuelekeza au kupunguza modeli kulingana na tabia na taarifa fulani. Hii inaweza kuwa kutumia pembejeo za mfumo kufafanua mipaka fulani ya modeli. Aidha, kutoa matokeo ambayo yanafaa zaidi kwa upeo au uwanja wa mfumo.
+- **Mfano**. Kuchagua mfano sahihi kwa matumizi sahihi. Mifano mikubwa na tata kama GPT-4 inaweza kusababisha hatari zaidi ya maudhui yanayoweza kusababisha madhara inapotekelezwa kwa matumizi madogo na maalum. Kutumia data yako ya mafunzo kurekebisha mfano pia hupunguza hatari ya maudhui yanayoweza kusababisha madhara.
 
-Inaweza pia kuwa kutumia mbinu kama Uzazi Ulioimarishwa na Urejeshaji (RAG) ili kufanya modeli ivute taarifa tu kutoka kwa uteuzi wa vyanzo vinavyoaminika. Kuna somo baadaye katika kozi hii kwa [kujenga programu za utafutaji](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+- **Mfumo wa Usalama**. Mfumo wa usalama ni seti ya zana na usanidi kwenye jukwaa linalohudumia mfano zinazosaidia kupunguza madhara. Mfano wa hili ni mfumo wa kuchuja maudhui kwenye huduma ya Azure OpenAI. Mifumo pia inapaswa kugundua mashambulio ya jailbreak na shughuli zisizotakikana kama maombi kutoka kwa bots.
 
-- **Uzoefu wa Mtumiaji**. Tabaka la mwisho ni ambapo mtumiaji anawasiliana moja kwa moja na modeli kupitia interface ya programu yetu kwa njia fulani. Kwa njia hii tunaweza kubuni UI/UX ili kupunguza mtumiaji kwenye aina za pembejeo wanazoweza kutuma kwa modeli pamoja na maandishi au picha zinazowekwa kwa mtumiaji. Wakati wa kupeleka programu ya AI, lazima pia tuwe wazi kuhusu kile programu yetu ya AI inayozalisha inaweza na haiwezi kufanya.
+- **Metaprompt**. Metaprompt na kuweka msingi ni njia tunazoweza kuelekeza au kupunguza mfano kulingana na tabia na taarifa fulani. Hii inaweza kuwa kutumia ingizo za mfumo kufafanua mipaka fulani ya mfano. Zaidi ya hayo, kutoa matokeo yanayohusiana zaidi na wigo au eneo la mfumo.
 
-Tuna somo zima lililotolewa kwa [Kubuni UX kwa Programu za AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Pia inaweza kuwa kutumia mbinu kama Retrieval Augmented Generation (RAG) ili mfano uchukue taarifa kutoka kwa vyanzo vinavyoaminika tu. Kuna somo baadaye katika kozi hii kuhusu [kujenga programu za utafutaji](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Kutathmini modeli**. Kufanya kazi na LLMs inaweza kuwa changamoto kwa sababu hatuna udhibiti kila wakati juu ya data ambayo modeli ilifunzwa. Bila kujali, tunapaswa kila mara kutathmini utendaji wa modeli na matokeo. Bado ni muhimu kupima usahihi wa modeli, usawa, msingi, na umuhimu wa matokeo. Hii husaidia kutoa uwazi na uaminifu kwa wadau na watumiaji.
+- **Uzoefu wa Mtumiaji**. Tabaka la mwisho ni pale mtumiaji anaposhirikiana moja kwa moja na mfano kupitia kiolesura cha programu yetu kwa njia fulani. Kwa njia hii tunaweza kubuni UI/UX ili kumzuia mtumiaji aina za maingizo anazoweza kutuma kwa mfano pamoja na maandishi au picha zinazowasilishwa kwa mtumiaji. Tunapoweka programu ya AI, pia lazima tuwe wazi kuhusu kile programu yetu ya Generative AI inaweza na haiwezi kufanya.
 
-### Kuendesha Suluhisho la AI Inayozalisha Kwa Uwajibikaji
+Tuna somo zima lililojikita katika [Kubuni UX kwa Programu za AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-Kujenga mazoezi ya uendeshaji karibu na programu zako za AI ni hatua ya mwisho. Hii ni pamoja na kushirikiana na sehemu nyingine za kampuni yetu ya kuanzisha kama Sheria na Usalama ili kuhakikisha tunafuata sera zote za udhibiti. Kabla ya kuzindua, tunataka pia kujenga mipango karibu na utoaji, kushughulikia matukio, na kurudisha nyuma ili kuzuia madhara yoyote kwa watumiaji wetu kutoka kukua.
+- **Tathmini mfano**. Kufanya kazi na LLM kunaweza kuwa changamoto kwa sababu hatuna udhibiti kila mara juu ya data ambayo mfano ulifundishwa nayo. Hata hivyo, tunapaswa kila mara kutathmini utendaji na matokeo ya mfano. Ni muhimu kupima usahihi wa mfano, ufananishi, msingi, na uhusiano wa matokeo. Hii husaidia kutoa uwazi na kuaminika kwa washikadau na watumiaji.
+
+### Endesha Suluhisho la Generative AI lenye Uwajibikaji
+
+Kujenga utaratibu wa uendeshaji unaozunguka programu zako za AI ni hatua ya mwisho. Hii inajumuisha kushirikiana na sehemu nyingine za startup yetu kama Idara ya Sheria na Usalama kuhakikisha tunazingatia sera zote za udhibiti. Kabla ya kuzindua, pia tunataka kuandaa mipango kuhusu utoaji, kushughulikia matukio, na kurejesha hali ya awali ili kuzuia madhara yoyote kwa watumiaji wetu kuongezeka.
 
 ## Zana
 
-Ingawa kazi ya kuendeleza suluhisho za AI inayowajibika inaweza kuonekana kama nyingi, ni kazi inayostahili jitihada. Kama eneo la AI inayozalisha linavyokua, zana zaidi za kusaidia watengenezaji kuingiza uwajibikaji kwa ufanisi katika mtiririko wao wa kazi zitakomaa. Kwa mfano, [Usalama wa Maudhui ya Azure AI](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) inaweza kusaidia kugundua maudhui na picha zenye madhara kupitia ombi la API.
+Ingawa kazi ya kuendeleza suluhisho za AI yenye Uwajibikaji inaweza kuonekana kuwa nyingi, ni kazi inayostahili juhudi. Kadiri eneo la Generative AI linavyokua, zana zaidi za kusaidia waendelezaji kuingiza uwajibikaji kwa ufanisi katika mchakato wao zitakua. Kwa mfano, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) inaweza kusaidia kugundua maudhui na picha zinazoweza kusababisha madhara kupitia ombi la API.
 
-## Kukagua Maarifa
+## Jaribio la Maarifa
 
-Ni mambo gani unahitaji kuzingatia ili kuhakikisha matumizi ya AI kwa uwajibikaji?
+Ni mambo gani unayopaswa kuyazingatia kuhakikisha matumizi ya AI yenye uwajibikaji?
 
 1. Kwamba jibu ni sahihi.
-1. Matumizi yenye madhara, kwamba AI haitumiwi kwa madhumuni ya jinai.
+1. Matumizi yanayoweza kusababisha madhara, kwamba AI haitumiki kwa madhumuni ya uhalifu.
 1. Kuhakikisha AI haina upendeleo na ubaguzi.
 
-A: 2 na 3 ni sahihi. AI inayowajibika inakusaidia kuzingatia jinsi ya kupunguza madhara na upendeleo na zaidi.
+J: 2 na 3 ni sahihi. AI yenye Uwajibikaji inakusaidia kuzingatia jinsi ya kupunguza madhara na upendeleo na mengineyo.
 
 ## 🚀 Changamoto
 
-Soma kuhusu [Usalama wa Maudhui ya Azure AI](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) na uone ni nini unaweza kupitisha kwa matumizi yako.
+Soma kuhusu [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) na angalia ni nini unaweza kuutumia kwa matumizi yako.
 
 ## Kazi Nzuri, Endelea Kujifunza
 
-Baada ya kukamilisha somo hili, angalia mkusanyiko wetu wa [Kujifunza AI Inayozalisha](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kukuza maarifa yako ya AI inayozalisha!
+Baada ya kumaliza somo hili, tembelea [Mkusanyiko wa Kujifunza Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kuendelea kuongeza ujuzi wako wa Generative AI!
 
-Elekea kwenye Somo la 4 ambapo tutachunguza [Misingi ya Uhandisi wa Maombi](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Nenda kwenye Somo la 4 ambapo tutaangalia [Misingi ya Uhandisi wa Prompt](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuelewana. Hati asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa habari muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inashauriwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

@@ -2,108 +2,108 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "68664f7e754a892ae1d8d5e2b7bd2081",
-  "translation_date": "2025-05-20T07:46:55+00:00",
+  "translation_date": "2025-07-09T17:42:15+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "pl"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.8487555c3e3225eefc1dc84e72c8e00bce1ee76db867a080628fb0fbb04aa0d2.pl.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.pl.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
 
-# Dostrajanie Twojego LLM
+# Dostosowywanie Twojego LLM
 
-Wykorzystanie dużych modeli językowych do budowy aplikacji generatywnej AI wiąże się z nowymi wyzwaniami. Kluczowym problemem jest zapewnienie jakości odpowiedzi (dokładności i trafności) w treściach generowanych przez model dla danego zapytania użytkownika. W poprzednich lekcjach omawialiśmy techniki takie jak inżynieria promptów i generacja wspomagana wyszukiwaniem, które próbują rozwiązać problem poprzez _modyfikację wejścia promptu_ dla istniejącego modelu.
+Wykorzystanie dużych modeli językowych do tworzenia aplikacji generatywnej AI wiąże się z nowymi wyzwaniami. Kluczową kwestią jest zapewnienie jakości odpowiedzi (dokładności i trafności) generowanych przez model na podstawie zapytania użytkownika. W poprzednich lekcjach omawialiśmy techniki takie jak inżynieria promptów oraz generowanie wspomagane wyszukiwaniem, które próbują rozwiązać ten problem poprzez _modyfikację wejściowego promptu_ do istniejącego modelu.
 
-W dzisiejszej lekcji omawiamy trzecią technikę, **dostrajanie**, która próbuje rozwiązać wyzwanie poprzez _ponowne trenowanie samego modelu_ z dodatkowymi danymi. Zanurzmy się w szczegóły.
+W dzisiejszej lekcji porozmawiamy o trzeciej technice, **dostosowywaniu (fine-tuning)**, która stara się rozwiązać ten problem poprzez _ponowne trenowanie samego modelu_ z użyciem dodatkowych danych. Zagłębmy się w szczegóły.
 
 ## Cele nauki
 
-Ta lekcja wprowadza pojęcie dostrajania dla wstępnie wytrenowanych modeli językowych, bada korzyści i wyzwania związane z tym podejściem oraz daje wskazówki, kiedy i jak używać dostrajania, aby poprawić wydajność swoich modeli generatywnej AI.
+Ta lekcja wprowadza pojęcie dostosowywania modeli językowych wstępnie wytrenowanych, omawia korzyści i wyzwania związane z tym podejściem oraz dostarcza wskazówek, kiedy i jak stosować fine-tuning, aby poprawić wydajność Twoich modeli generatywnej AI.
 
-Na koniec tej lekcji powinieneś być w stanie odpowiedzieć na następujące pytania:
+Po zakończeniu tej lekcji powinieneś być w stanie odpowiedzieć na następujące pytania:
 
-- Czym jest dostrajanie dla modeli językowych?
-- Kiedy i dlaczego dostrajanie jest przydatne?
-- Jak mogę dostroić wstępnie wytrenowany model?
-- Jakie są ograniczenia dostrajania?
+- Czym jest fine-tuning modeli językowych?
+- Kiedy i dlaczego fine-tuning jest przydatny?
+- Jak mogę dostosować wstępnie wytrenowany model?
+- Jakie są ograniczenia fine-tuningu?
 
 Gotowy? Zaczynajmy.
 
 ## Ilustrowany przewodnik
 
-Chcesz zobaczyć ogólny obraz tego, co będziemy omawiać, zanim zagłębimy się w szczegóły? Sprawdź ten ilustrowany przewodnik, który opisuje ścieżkę nauki dla tej lekcji - od poznania podstawowych koncepcji i motywacji do dostrajania, po zrozumienie procesu i najlepszych praktyk dotyczących wykonywania zadania dostrajania. To fascynujący temat do eksploracji, więc nie zapomnij sprawdzić strony [Zasoby](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) z dodatkowymi linkami wspierającymi Twoją samodzielną ścieżkę nauki!
+Chcesz zobaczyć ogólny obraz tego, co omówimy, zanim zagłębimy się w szczegóły? Sprawdź ten ilustrowany przewodnik, który opisuje ścieżkę nauki dla tej lekcji – od poznania podstawowych koncepcji i motywacji do fine-tuningu, po zrozumienie procesu i najlepszych praktyk realizacji zadania dostosowywania. To fascynujący temat do zgłębienia, więc nie zapomnij odwiedzić strony [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) po dodatkowe linki wspierające Twoją samodzielną naukę!
 
-![Ilustrowany przewodnik po dostrajaniu modeli językowych](../../../translated_images/18-fine-tuning-sketchnote.92733966235199dd260184b1aae3a84b877c7496bc872d8e63ad6fa2dd96bafc.pl.png)
+![Ilustrowany przewodnik po fine-tuningu modeli językowych](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.pl.png)
 
-## Czym jest dostrajanie dla modeli językowych?
+## Czym jest fine-tuning modeli językowych?
 
-Z definicji, duże modele językowe są _wstępnie wytrenowane_ na dużych ilościach tekstu pochodzącego z różnych źródeł, w tym z internetu. Jak nauczyliśmy się w poprzednich lekcjach, potrzebujemy technik takich jak _inżynieria promptów_ i _generacja wspomagana wyszukiwaniem_, aby poprawić jakość odpowiedzi modelu na pytania użytkownika ("prompty").
+Z definicji, duże modele językowe są _wstępnie wytrenowane_ na dużych ilościach tekstu pochodzącego z różnych źródeł, w tym z internetu. Jak dowiedzieliśmy się w poprzednich lekcjach, potrzebujemy technik takich jak _inżynieria promptów_ i _generowanie wspomagane wyszukiwaniem_, aby poprawić jakość odpowiedzi modelu na pytania użytkownika („prompty”).
 
-Popularna technika inżynierii promptów polega na dostarczeniu modelowi większej ilości wskazówek dotyczących oczekiwanego wyniku odpowiedzi, poprzez dostarczenie _instrukcji_ (wyraźne wskazówki) lub _podanie kilku przykładów_ (niejawne wskazówki). To jest określane jako _uczenie się na kilku przykładach_, ale ma dwie ograniczenia:
+Popularną techniką inżynierii promptów jest dostarczenie modelowi większej ilości wskazówek, co powinno znaleźć się w odpowiedzi, poprzez podanie _instrukcji_ (wskazówki jawne) lub _kilku przykładów_ (wskazówki niejawne). Nazywa się to _uczeniem z niewielką liczbą przykładów (few-shot learning)_, ale ma dwie ograniczenia:
 
-- Limity tokenów modelu mogą ograniczać liczbę przykładów, które możesz podać, i ograniczać skuteczność.
-- Koszty tokenów modelu mogą sprawić, że dodanie przykładów do każdego promptu będzie kosztowne i ograniczać elastyczność.
+- Limity tokenów modelu mogą ograniczać liczbę przykładów, które można podać, co zmniejsza skuteczność.
+- Koszty tokenów modelu mogą sprawić, że dodawanie przykładów do każdego promptu będzie drogie i ograniczy elastyczność.
 
-Dostrajanie jest powszechną praktyką w systemach uczenia maszynowego, gdzie bierzemy wstępnie wytrenowany model i ponownie go trenujemy z nowymi danymi, aby poprawić jego wydajność w konkretnym zadaniu. W kontekście modeli językowych możemy dostroić wstępnie wytrenowany model _z wyselekcjonowanym zestawem przykładów dla danego zadania lub domeny aplikacji_, aby stworzyć **model niestandardowy**, który może być bardziej dokładny i trafny dla tego konkretnego zadania lub domeny. Dodatkową korzyścią dostrajania jest to, że może również zmniejszyć liczbę przykładów potrzebnych do uczenia się na kilku przykładach - zmniejszając zużycie tokenów i związane z tym koszty.
+Fine-tuning to powszechna praktyka w systemach uczenia maszynowego, gdzie bierzemy wstępnie wytrenowany model i ponownie trenujemy go na nowych danych, aby poprawić jego wydajność w konkretnym zadaniu. W kontekście modeli językowych możemy dostosować wstępnie wytrenowany model _za pomocą wyselekcjonowanego zestawu przykładów dla konkretnego zadania lub dziedziny zastosowania_, tworząc **model niestandardowy**, który może być dokładniejszy i bardziej trafny dla tego konkretnego zadania lub dziedziny. Dodatkową korzyścią fine-tuningu jest to, że może on również zmniejszyć liczbę przykładów potrzebnych do few-shot learning – redukując zużycie tokenów i związane z tym koszty.
 
-## Kiedy i dlaczego powinniśmy dostrajać modele?
+## Kiedy i dlaczego powinniśmy dostosowywać modele?
 
-W _tym_ kontekście, gdy mówimy o dostrajaniu, odnosimy się do **nadzorowanego** dostrajania, gdzie ponowne trenowanie odbywa się poprzez **dodanie nowych danych**, które nie były częścią pierwotnego zestawu danych treningowych. Jest to inne niż podejście dostrajania nienadzorowanego, gdzie model jest ponownie trenowany na pierwotnych danych, ale z innymi hiperparametrami.
+W _tym_ kontekście, gdy mówimy o fine-tuningu, mamy na myśli **nadzorowany** fine-tuning, gdzie ponowne trenowanie odbywa się przez **dodanie nowych danych**, które nie były częścią oryginalnego zbioru treningowego. Różni się to od podejścia nienadzorowanego, gdzie model jest ponownie trenowany na oryginalnych danych, ale z innymi hiperparametrami.
 
-Kluczową rzeczą do zapamiętania jest to, że dostrajanie jest zaawansowaną techniką, która wymaga pewnego poziomu wiedzy, aby osiągnąć pożądane rezultaty. Jeśli zostanie wykonane nieprawidłowo, może nie zapewnić oczekiwanych ulepszeń, a nawet pogorszyć wydajność modelu dla Twojej docelowej domeny.
+Kluczową rzeczą do zapamiętania jest to, że fine-tuning to zaawansowana technika, która wymaga pewnego poziomu wiedzy, aby osiągnąć oczekiwane rezultaty. Jeśli zostanie wykonany nieprawidłowo, może nie przynieść oczekiwanych ulepszeń, a nawet pogorszyć wydajność modelu w docelowej dziedzinie.
 
-Więc zanim nauczysz się "jak" dostrajać modele językowe, musisz wiedzieć "dlaczego" powinieneś obrać tę drogę i "kiedy" rozpocząć proces dostrajania. Zacznij od zadania sobie tych pytań:
+Zanim nauczysz się „jak” dostosowywać modele językowe, musisz wiedzieć „dlaczego” warto wybrać tę drogę i „kiedy” rozpocząć proces fine-tuningu. Zacznij od zadania sobie tych pytań:
 
-- **Zastosowanie**: Jaki jest Twój _przypadek użycia_ dla dostrajania? Jaki aspekt obecnego wstępnie wytrenowanego modelu chcesz poprawić?
-- **Alternatywy**: Czy próbowałeś _innych technik_, aby osiągnąć pożądane rezultaty? Użyj ich do stworzenia punktu odniesienia do porównania.
-  - Inżynieria promptów: Wypróbuj techniki takie jak promptowanie na kilku przykładach z odpowiedziami na odpowiednie prompty. Oceń jakość odpowiedzi.
-  - Generacja wspomagana wyszukiwaniem: Wypróbuj augmentację promptów z wynikami zapytań uzyskanymi poprzez wyszukiwanie w swoich danych. Oceń jakość odpowiedzi.
-- **Koszty**: Czy zidentyfikowałeś koszty dostrajania?
-  - Dostępność do dostrajania - czy wstępnie wytrenowany model jest dostępny do dostrajania?
-  - Wysiłek - na przygotowanie danych treningowych, ocenę i udoskonalanie modelu.
-  - Obliczenia - na uruchamianie zadań dostrajania i wdrażanie dostrojonego modelu
-  - Dane - dostęp do wystarczającej ilości jakościowych przykładów dla wpływu dostrajania
-- **Korzyści**: Czy potwierdziłeś korzyści dostrajania?
-  - Jakość - czy dostrojony model przewyższył punkt odniesienia?
-  - Koszt - czy zmniejsza zużycie tokenów przez uproszczenie promptów?
-  - Rozszerzalność - czy możesz ponownie wykorzystać bazowy model dla nowych domen?
+- **Przypadek użycia**: Jaki jest Twój _przypadek użycia_ dla fine-tuningu? Co chcesz poprawić w obecnym wstępnie wytrenowanym modelu?
+- **Alternatywy**: Czy próbowałeś _innych technik_, aby osiągnąć pożądane rezultaty? Użyj ich, aby stworzyć punkt odniesienia do porównań.
+  - Inżynieria promptów: Wypróbuj techniki takie jak few-shot prompting z przykładami odpowiedzi. Oceń jakość odpowiedzi.
+  - Generowanie wspomagane wyszukiwaniem: Spróbuj wzbogacić prompt o wyniki zapytań wyszukiwanych w Twoich danych. Oceń jakość odpowiedzi.
+- **Koszty**: Czy zidentyfikowałeś koszty związane z fine-tuningiem?
+  - Możliwość dostosowania – czy wstępnie wytrenowany model jest dostępny do fine-tuningu?
+  - Nakład pracy – przygotowanie danych treningowych, ocena i dopracowywanie modelu.
+  - Moc obliczeniowa – uruchamianie zadań fine-tuningu i wdrażanie dostosowanego modelu.
+  - Dane – dostęp do wystarczającej liczby przykładów dobrej jakości, aby fine-tuning miał efekt.
+- **Korzyści**: Czy potwierdziłeś korzyści z fine-tuningu?
+  - Jakość – czy dostosowany model przewyższał bazowy?
+  - Koszty – czy zmniejsza zużycie tokenów przez uproszczenie promptów?
+  - Rozszerzalność – czy możesz wykorzystać bazowy model do nowych dziedzin?
 
-Odpowiadając na te pytania, powinieneś być w stanie zdecydować, czy dostrajanie jest właściwym podejściem dla Twojego przypadku użycia. Idealnie, podejście jest ważne tylko wtedy, gdy korzyści przewyższają koszty. Gdy zdecydujesz się kontynuować, czas pomyśleć o _jak_ możesz dostroić wstępnie wytrenowany model.
+Odpowiadając na te pytania, powinieneś być w stanie zdecydować, czy fine-tuning jest odpowiednim podejściem dla Twojego przypadku użycia. Idealnie, podejście to jest uzasadnione tylko wtedy, gdy korzyści przewyższają koszty. Gdy zdecydujesz się kontynuować, czas pomyśleć o tym, _jak_ możesz dostosować wstępnie wytrenowany model.
 
-Chcesz uzyskać więcej informacji na temat procesu podejmowania decyzji? Obejrzyj [Dostroić czy nie dostroić](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Chcesz poznać więcej szczegółów dotyczących procesu podejmowania decyzji? Obejrzyj [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Jak możemy dostroić wstępnie wytrenowany model?
+## Jak możemy dostosować wstępnie wytrenowany model?
 
-Aby dostroić wstępnie wytrenowany model, potrzebujesz:
+Aby dostosować wstępnie wytrenowany model, potrzebujesz:
 
-- wstępnie wytrenowanego modelu do dostrojenia
-- zestawu danych do użycia do dostrajania
-- środowiska treningowego do uruchomienia zadania dostrajania
-- środowiska hostingowego do wdrożenia dostrojonego modelu
+- wstępnie wytrenowanego modelu do dostosowania
+- zbioru danych do fine-tuningu
+- środowiska treningowego do uruchomienia zadania fine-tuningu
+- środowiska hostingowego do wdrożenia dostosowanego modelu
 
-## Dostrajanie w działaniu
+## Fine-Tuning w praktyce
 
-Poniższe zasoby oferują szczegółowe samouczki, które przeprowadzą Cię przez prawdziwy przykład użycia wybranego modelu z wyselekcjonowanym zestawem danych. Aby przejść przez te samouczki, potrzebujesz konta u konkretnego dostawcy, wraz z dostępem do odpowiedniego modelu i zestawów danych.
+Poniższe zasoby oferują samouczki krok po kroku, które przeprowadzą Cię przez rzeczywisty przykład z wybranym modelem i wyselekcjonowanym zbiorem danych. Aby przejść przez te samouczki, potrzebujesz konta u konkretnego dostawcy oraz dostępu do odpowiednich modeli i zbiorów danych.
 
-| Dostawca     | Samouczek                                                                                                                                                                       | Opis                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Jak dostroić modele czatu](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Naucz się dostrajać `gpt-35-turbo` dla konkretnej domeny ("asystent kulinarny") poprzez przygotowanie danych treningowych, uruchomienie zadania dostrajania i użycie dostrojonego modelu do wnioskowania.                                                                                                                                                                                                                                              |
-| Azure OpenAI | [Samouczek dostrajania GPT 3.5 Turbo](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Naucz się dostrajać model `gpt-35-turbo-0613` **na Azure** poprzez podjęcie kroków w celu stworzenia i przesłania danych treningowych, uruchomienia zadania dostrajania. Wdrażaj i używaj nowego modelu.                                                                                                                                                                                                                                                                 |
-| Hugging Face | [Dostrajanie LLM z Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Ten wpis na blogu przeprowadzi Cię przez dostrajanie _otwartego LLM_ (np. `CodeLlama 7B`) przy użyciu biblioteki [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) i [Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) z otwartymi [zestawami danych](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) na Hugging Face. |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Dostrajanie LLM z AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (lub AutoTrain Advanced) to biblioteka Python rozwinięta przez Hugging Face, która umożliwia dostrajanie dla wielu różnych zadań, w tym dostrajanie LLM. AutoTrain to rozwiązanie bez kodu, a dostrajanie można przeprowadzić we własnej chmurze, na Hugging Face Spaces lub lokalnie. Obsługuje zarówno GUI oparte na webie, CLI, jak i trening za pomocą plików konfiguracyjnych yaml.                                                                               |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Provider     | Tutorial                                                                                                                                                                       | Opis                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI       | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Naucz się dostosowywać `gpt-35-turbo` do konkretnej dziedziny („asystent przepisów”) poprzez przygotowanie danych treningowych, uruchomienie zadania fine-tuningu oraz wykorzystanie dostosowanego modelu do inferencji.                                                                                                                                                                                                         |
+| Azure OpenAI | [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Naucz się dostosowywać model `gpt-35-turbo-0613` **na platformie Azure**, wykonując kroki tworzenia i przesyłania danych treningowych, uruchamiania zadania fine-tuningu oraz wdrażania i korzystania z nowego modelu.                                                                                                                                                                                                             |
+| Hugging Face | [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Ten wpis na blogu przeprowadza Cię przez proces fine-tuningu _otwartego LLM_ (np. `CodeLlama 7B`) z użyciem biblioteki [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) oraz [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) z wykorzystaniem otwartych [zbiorów danych](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) na Hugging Face. |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 🤗 AutoTrain | [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (lub AutoTrain Advanced) to biblioteka Pythona stworzona przez Hugging Face, która umożliwia fine-tuning dla wielu różnych zadań, w tym dostosowywanie LLM. AutoTrain to rozwiązanie bez kodu, a fine-tuning można przeprowadzić w własnej chmurze, na Hugging Face Spaces lub lokalnie. Obsługuje zarówno interfejs webowy, CLI, jak i trening za pomocą plików konfiguracyjnych yaml.                                                                                   |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Zadanie
 
-Wybierz jeden z powyższych samouczków i przejdź przez niego. _Możemy zreplikować wersję tych samouczków w Jupyter Notebooks w tym repozytorium tylko do celów referencyjnych. Proszę używać bezpośrednio oryginalnych źródeł, aby uzyskać najnowsze wersje_.
+Wybierz jeden z powyższych samouczków i przejdź przez niego krok po kroku. _Możemy przygotować wersję tych samouczków w Jupyter Notebooks w tym repozytorium wyłącznie jako odniesienie. Prosimy korzystać bezpośrednio z oryginalnych źródeł, aby mieć najnowsze wersje_.
 
 ## Świetna robota! Kontynuuj naukę.
 
-Po ukończeniu tej lekcji, sprawdź naszą [kolekcję nauki Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby kontynuować rozwijanie swojej wiedzy na temat Generative AI!
+Po ukończeniu tej lekcji sprawdź naszą kolekcję [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę o generatywnej AI!
 
-Gratulacje!! Ukończyłeś ostatnią lekcję z serii v2 dla tego kursu! Nie przestawaj się uczyć i budować. **Sprawdź stronę [ZASOBY](RESOURCES.md?WT.mc_id=academic-105485-koreyst) dla listy dodatkowych sugestii dotyczących tego tematu.
+Gratulacje!! Ukończyłeś ostatnią lekcję z serii v2 tego kursu! Nie przestawaj się uczyć i tworzyć. \*\*Sprawdź stronę [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) z listą dodatkowych materiałów dotyczących tego tematu.
 
-Nasza seria lekcji v1 również została zaktualizowana o więcej zadań i koncepcji. Więc poświęć chwilę, aby odświeżyć swoją wiedzę - i proszę [podziel się swoimi pytaniami i opinią](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), aby pomóc nam poprawić te lekcje dla społeczności.
+Nasza seria lekcji v1 została również zaktualizowana o więcej zadań i koncepcji. Poświęć chwilę, aby odświeżyć swoją wiedzę – i prosimy, [dziel się swoimi pytaniami i opiniami](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), aby pomóc nam ulepszać te lekcje dla społeczności.
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za wszelkie nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
