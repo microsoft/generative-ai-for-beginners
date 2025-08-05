@@ -59,7 +59,7 @@ Ask questions or share product feedback in our [Azure AI Foundry Developer Forum
 
 ## 🚀 Building a Startup?
 
-Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) to receive **free OpenAI credits** and up to **$150k towards Azure credits to access OpenAI models through Azure OpenAI Services**.
+Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find out how to get started building with Azure credits today.
 
 ## 🙏 Want to help?
 
