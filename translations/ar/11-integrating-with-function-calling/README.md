@@ -2,63 +2,65 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:19:57+00:00",
+  "translation_date": "2025-07-09T14:23:26+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "ar"
 }
 -->
 # التكامل مع استدعاء الدوال
 
-لقد تعلمت الكثير حتى الآن في الدروس السابقة. ومع ذلك، يمكننا التحسين أكثر. بعض الأمور التي يمكننا معالجتها هي كيفية الحصول على تنسيق استجابة أكثر اتساقًا لتسهيل العمل مع الاستجابة في المستقبل. أيضًا، قد نرغب في إضافة بيانات من مصادر أخرى لزيادة إثراء تطبيقنا.
+[![التكامل مع استدعاء الدوال](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.ar.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-المشاكل المذكورة أعلاه هي ما يسعى هذا الفصل إلى معالجته.
+لقد تعلمت الكثير حتى الآن في الدروس السابقة. ومع ذلك، يمكننا التحسين أكثر. بعض الأمور التي يمكننا معالجتها هي كيفية الحصول على تنسيق استجابة أكثر اتساقًا لتسهيل التعامل مع الاستجابة لاحقًا. أيضًا، قد نرغب في إضافة بيانات من مصادر أخرى لتعزيز تطبيقنا بشكل أكبر.
+
+المشاكل المذكورة أعلاه هي ما يسعى هذا الفصل لمعالجته.
 
 ## المقدمة
 
-سيغطي هذا الدرس:
+سيتناول هذا الدرس:
 
 - شرح ما هو استدعاء الدوال وحالات استخدامه.
-- إنشاء استدعاء دوال باستخدام Azure OpenAI.
-- كيفية دمج استدعاء الدوال في تطبيق.
+- إنشاء استدعاء دالة باستخدام Azure OpenAI.
+- كيفية دمج استدعاء دالة في تطبيق.
 
 ## أهداف التعلم
 
-بحلول نهاية هذا الدرس، ستكون قادرًا على:
+بنهاية هذا الدرس، ستكون قادرًا على:
 
-- شرح الغرض من استخدام استدعاء الدوال.
-- إعداد استدعاء الدوال باستخدام خدمة Azure OpenAI.
+- شرح الهدف من استخدام استدعاء الدوال.
+- إعداد استدعاء دالة باستخدام خدمة Azure OpenAI.
 - تصميم استدعاءات دوال فعالة لحالة استخدام تطبيقك.
 
 ## السيناريو: تحسين روبوت الدردشة الخاص بنا باستخدام الدوال
 
-في هذا الدرس، نريد بناء ميزة لشركتنا الناشئة في مجال التعليم تسمح للمستخدمين باستخدام روبوت الدردشة للعثور على دورات تقنية. سنوصي بالدورات التي تناسب مستوى مهاراتهم، دورهم الحالي، والتكنولوجيا التي يهتمون بها.
+في هذا الدرس، نريد بناء ميزة لشركتنا الناشئة في مجال التعليم تتيح للمستخدمين استخدام روبوت دردشة للعثور على الدورات التقنية. سنوصي بدورات تناسب مستوى مهاراتهم، ودورهم الحالي، والتقنية التي يهتمون بها.
 
 لإكمال هذا السيناريو، سنستخدم مزيجًا من:
 
 - `Azure OpenAI` لإنشاء تجربة دردشة للمستخدم.
 - `Microsoft Learn Catalog API` لمساعدة المستخدمين في العثور على الدورات بناءً على طلب المستخدم.
-- `Function Calling` لأخذ استفسار المستخدم وإرساله إلى دالة لعمل طلب API.
+- `Function Calling` لأخذ استعلام المستخدم وإرساله إلى دالة لتنفيذ طلب API.
 
 لنبدأ بالنظر في سبب رغبتنا في استخدام استدعاء الدوال في المقام الأول:
 
 ## لماذا استدعاء الدوال
 
-قبل استدعاء الدوال، كانت الاستجابات من LLM غير منظمة وغير متسقة. كان على المطورين كتابة كود تحقق معقد للتأكد من أنهم قادرون على التعامل مع كل تنوع في الاستجابة. لم يكن بإمكان المستخدمين الحصول على إجابات مثل "ما هو الطقس الحالي في ستوكهولم؟". وذلك لأن النماذج كانت محدودة بالوقت الذي تم تدريب البيانات عليه.
+قبل استدعاء الدوال، كانت الاستجابات من نموذج اللغة الكبير (LLM) غير منظمة وغير متسقة. كان على المطورين كتابة كود تحقق معقد لضمان التعامل مع كل تنوع في الاستجابة. لم يكن بإمكان المستخدمين الحصول على إجابات مثل "ما هو الطقس الحالي في ستوكهولم؟". وذلك لأن النماذج كانت محدودة بوقت تدريب البيانات.
 
-استدعاء الدوال هو ميزة في خدمة Azure OpenAI للتغلب على القيود التالية:
+استدعاء الدوال هو ميزة في خدمة Azure OpenAI لتجاوز القيود التالية:
 
-- **تنسيق استجابة متسق**. إذا كان بإمكاننا التحكم بشكل أفضل في تنسيق الاستجابة، يمكننا دمج الاستجابة بسهولة أكبر في أنظمة أخرى.
-- **البيانات الخارجية**. القدرة على استخدام بيانات من مصادر أخرى في سياق دردشة.
+- **تنسيق استجابة متسق**. إذا استطعنا التحكم بشكل أفضل في تنسيق الاستجابة، يمكننا دمجها بسهولة أكبر مع أنظمة أخرى لاحقًا.
+- **البيانات الخارجية**. القدرة على استخدام بيانات من مصادر أخرى في التطبيق ضمن سياق الدردشة.
 
 ## توضيح المشكلة من خلال سيناريو
 
-> نوصي باستخدام [المفكرة المرفقة](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) إذا كنت ترغب في تشغيل السيناريو أدناه. يمكنك أيضًا القراءة فقط بينما نحاول توضيح مشكلة حيث يمكن للدوال المساعدة في معالجتها.
+> نوصي باستخدام [الدفتر المرفق](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) إذا أردت تشغيل السيناريو أدناه. يمكنك أيضًا القراءة فقط بينما نحاول توضيح مشكلة يمكن للدوال المساعدة في حلها.
 
-دعونا ننظر إلى المثال الذي يوضح مشكلة تنسيق الاستجابة:
+لننظر إلى المثال الذي يوضح مشكلة تنسيق الاستجابة:
 
-لنفترض أننا نريد إنشاء قاعدة بيانات لبيانات الطلاب حتى نتمكن من اقتراح الدورة المناسبة لهم. أدناه لدينا وصفان للطلاب يشبهان بعضهما البعض في البيانات التي يحتويان عليها.
+لنفترض أننا نريد إنشاء قاعدة بيانات لبيانات الطلاب حتى نتمكن من اقتراح الدورة المناسبة لهم. أدناه لدينا وصفان لطلاب متشابهين جدًا في البيانات التي يحتويانها.
 
-1. إنشاء اتصال بموارد Azure OpenAI الخاصة بنا:
+1. إنشاء اتصال بمورد Azure OpenAI الخاص بنا:
 
    ```python
    import os
@@ -75,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   أدناه يوجد بعض الكود في Python لتكوين اتصالنا بـ Azure OpenAI حيث نحدد `api_type`, `api_base`, `api_version` and `api_key`.
+   أدناه بعض كود بايثون لتكوين اتصالنا بـ Azure OpenAI حيث نحدد `api_type`، `api_base`، `api_version` و `api_key`.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
+1. إنشاء وصفين للطلاب باستخدام المتغيرات `student_1_description` و `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -85,9 +87,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   نريد إرسال أوصاف الطلاب أعلاه إلى LLM لتحليل البيانات. يمكن استخدام هذه البيانات لاحقًا في تطبيقنا وإرسالها إلى API أو تخزينها في قاعدة بيانات.
+   نريد إرسال أوصاف الطلاب أعلاه إلى نموذج اللغة الكبير لتحليل البيانات. يمكن استخدام هذه البيانات لاحقًا في تطبيقنا وإرسالها إلى API أو تخزينها في قاعدة بيانات.
 
-1. دعونا ننشئ مطالبات متطابقة حيث نوجه LLM حول المعلومات التي نهتم بها:
+1. لننشئ طلبين متطابقين نوجه فيهما النموذج إلى المعلومات التي نهتم بها:
 
    ```python
    prompt1 = f'''
@@ -117,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
    '''
    ```
 
-   توجه المطالبات أعلاه LLM لاستخراج المعلومات وإرجاع الاستجابة بتنسيق JSON.
+   الطلبات أعلاه توجه النموذج لاستخراج المعلومات وإرجاع الاستجابة بتنسيق JSON.
 
-1. بعد إعداد المطالبات والاتصال بـ Azure OpenAI، سنرسل الآن المطالبات إلى LLM باستخدام `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. هذا لتقليد رسالة من مستخدم مكتوبة إلى روبوت الدردشة.
+1. بعد إعداد الطلبات والاتصال بـ Azure OpenAI، سنرسل الطلبات إلى النموذج باستخدام `openai.ChatCompletion`. نخزن الطلب في المتغير `messages` ونعين الدور إلى `user`. هذا لمحاكاة رسالة من المستخدم تُكتب إلى روبوت الدردشة.
 
    ```python
    # response from prompt one
@@ -137,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-الآن يمكننا إرسال كلا الطلبين إلى LLM وفحص الاستجابة التي نتلقاها من خلال العثور عليها مثل هذا `openai_response1['choices'][0]['message']['content']`.
+الآن يمكننا إرسال كلا الطلبين إلى النموذج وفحص الاستجابة التي نتلقاها بالعثور عليها هكذا `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. أخيرًا، يمكننا تحويل الاستجابة إلى تنسيق JSON باستدعاء `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -171,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   بالرغم من أن المطالبات هي نفسها والأوصاف متشابهة، نرى قيم `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   بالرغم من أن الطلبات متطابقة والأوصاف متشابهة، نرى أن قيم خاصية `Grades` مُنسقة بشكل مختلف، حيث نحصل أحيانًا على التنسيق `3.7` أو `3.7 GPA` على سبيل المثال.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   هذا نتيجة لأن النموذج يتعامل مع بيانات غير منظمة في شكل الطلب المكتوب ويرجع أيضًا بيانات غير منظمة. نحتاج إلى تنسيق منظم حتى نعرف ما نتوقعه عند تخزين أو استخدام هذه البيانات.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+فكيف نحل مشكلة التنسيق إذًا؟ باستخدام استدعاء الدوال، يمكننا التأكد من أننا نتلقى بيانات منظمة. عند استخدام استدعاء الدوال، لا يقوم النموذج فعليًا باستدعاء أو تشغيل أي دوال. بدلاً من ذلك، ننشئ هيكلًا يتبعه النموذج في استجاباته. ثم نستخدم تلك الاستجابات المنظمة لمعرفة الدالة التي يجب تشغيلها في تطبيقاتنا.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.ar.png)
+![تدفق الدالة](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.ar.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+يمكننا بعد ذلك أخذ ما تم إرجاعه من الدالة وإرساله مرة أخرى إلى النموذج. سيقوم النموذج بعدها بالرد بلغة طبيعية للإجابة على استعلام المستخدم.
 
-## Use Cases for using function calls
+## حالات استخدام استدعاء الدوال
 
-There are many different use cases where function calls can improve your app like:
+هناك العديد من حالات الاستخدام المختلفة حيث يمكن لاستدعاء الدوال تحسين تطبيقك مثل:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **استدعاء أدوات خارجية**. روبوتات الدردشة ممتازة في تقديم إجابات على أسئلة المستخدمين. باستخدام استدعاء الدوال، يمكن لروبوتات الدردشة استخدام رسائل المستخدمين لإكمال مهام معينة. على سبيل المثال، يمكن لطالب أن يطلب من روبوت الدردشة "إرسال بريد إلكتروني إلى مدرسي يقول أنني أحتاج إلى مساعدة إضافية في هذا الموضوع". يمكن أن يقوم هذا باستدعاء دالة `send_email(to: string, body: string)`
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **إنشاء استعلامات API أو قواعد بيانات**. يمكن للمستخدمين العثور على معلومات باستخدام لغة طبيعية تتحول إلى استعلام منسق أو طلب API. مثال على ذلك معلم يطلب "من هم الطلاب الذين أكملوا الواجب الأخير" والذي يمكن أن يستدعي دالة باسم `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **إنشاء بيانات منظمة**. يمكن للمستخدمين أخذ نص أو ملف CSV واستخدام النموذج لاستخراج معلومات مهمة منه. على سبيل المثال، يمكن لطالب تحويل مقال من ويكيبيديا عن اتفاقيات السلام لإنشاء بطاقات تعليمية بالذكاء الاصطناعي. يمكن القيام بذلك باستخدام دالة تسمى `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
-## Creating Your First Function Call
+## إنشاء أول استدعاء دالة لك
 
-The process of creating a function call includes 3 main steps:
+تتضمن عملية إنشاء استدعاء دالة 3 خطوات رئيسية:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **استدعاء** API إكمال الدردشة مع قائمة الدوال الخاصة بك ورسالة المستخدم.
+2. **قراءة** استجابة النموذج لأداء إجراء مثل تنفيذ دالة أو استدعاء API.
+3. **إجراء** استدعاء آخر إلى API إكمال الدردشة مع استجابة دالتك لاستخدام تلك المعلومات لإنشاء رد للمستخدم.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.ar.png)
+![تدفق LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.ar.png)
 
-### Step 1 - creating messages
+### الخطوة 1 - إنشاء الرسائل
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+الخطوة الأولى هي إنشاء رسالة المستخدم. يمكن تعيينها ديناميكيًا بأخذ قيمة من إدخال نصي أو يمكنك تعيين قيمة هنا. إذا كانت هذه هي المرة الأولى التي تعمل فيها مع API إكمال الدردشة، نحتاج إلى تحديد `role` و `content` للرسالة.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` وسؤال مثال.
+يمكن أن يكون `role` إما `system` (إنشاء قواعد)، `assistant` (النموذج) أو `user` (المستخدم النهائي). لاستدعاء الدوال، سنعينها كـ `user` مع مثال سؤال.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-من خلال تعيين أدوار مختلفة، يصبح واضحًا لـ LLM إذا كان النظام يقول شيئًا أو المستخدم، مما يساعد على بناء تاريخ محادثة يمكن لـ LLM البناء عليه.
+بتعيين أدوار مختلفة، يتضح للنموذج إذا كان النظام هو من يتحدث أو المستخدم، مما يساعد في بناء سجل محادثة يمكن للنموذج البناء عليه.
 
 ### الخطوة 2 - إنشاء الدوال
 
-بعد ذلك، سنقوم بتعريف دالة ومعلمات تلك الدالة. سنستخدم هنا دالة واحدة فقط تسمى `search_courses` but you can create multiple functions.
+بعد ذلك، سنحدد دالة ومعاملات تلك الدالة. سنستخدم دالة واحدة هنا تسمى `search_courses` لكن يمكنك إنشاء دوال متعددة.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **مهم**: الدوال مدرجة في رسالة النظام إلى النموذج وستُحتسب ضمن عدد الرموز المتاحة لديك.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+أدناه، ننشئ الدوال كمصفوفة من العناصر. كل عنصر هو دالة وله خصائص `name`، `description` و `parameters`:
 
 ```python
 functions = [
@@ -250,26 +252,26 @@ functions = [
 ]
 ```
 
-لنصف كل حالة دالة بمزيد من التفصيل أدناه:
+لنصف كل دالة بمزيد من التفصيل أدناه:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - اسم الدالة التي نريد استدعاؤها.
+- `description` - وصف لكيفية عمل الدالة. من المهم هنا أن تكون محددًا وواضحًا.
+- `parameters` - قائمة بالقيم والتنسيق الذي تريد أن ينتجه النموذج في استجابته. تتكون مصفوفة المعاملات من عناصر لها الخصائص التالية:
+  1.  `type` - نوع البيانات التي ستُخزن فيها الخصائص.
+  1.  `properties` - قائمة القيم المحددة التي سيستخدمها النموذج في استجابته
+      1. `name` - المفتاح هو اسم الخاصية التي سيستخدمها النموذج في استجابته المنسقة، مثل `product`.
+      1. `type` - نوع بيانات هذه الخاصية، مثل `string`.
+      1. `description` - وصف الخاصية المحددة.
 
-There's also an optional property `required` - required property for the function call to be completed.
+هناك أيضًا خاصية اختيارية `required` - خاصية مطلوبة لإكمال استدعاء الدالة.
 
-### Step 3 - Making the function call
+### الخطوة 3 - إجراء استدعاء الدالة
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+بعد تعريف دالة، نحتاج الآن إلى تضمينها في استدعاء API إكمال الدردشة. نفعل ذلك بإضافة `functions` إلى الطلب. في هذه الحالة `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+هناك أيضًا خيار لتعيين `function_call` إلى `auto`. هذا يعني أننا نترك للنموذج اختيار الدالة التي يجب استدعاؤها بناءً على رسالة المستخدم بدلاً من تعيينها بأنفسنا.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` وبالتالي إعطاء LLM الخيار متى يتم استدعاء الدوال التي نقدمها:
+إليك بعض الكود أدناه حيث نستدعي `ChatCompletion.create`، لاحظ كيف نحدد `functions=functions` و `function_call="auto"` مما يمنح النموذج حرية اختيار متى يستدعي الدوال التي نوفرها له:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-الاستجابة القادمة الآن تبدو هكذا:
+تبدو الاستجابة التي تعود الآن هكذا:
 
 ```json
 {
@@ -292,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-هنا يمكننا أن نرى كيف أن الدالة `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+هنا نرى كيف تم استدعاء الدالة `search_courses` وبأي معطيات، كما هو مدرج في خاصية `arguments` في استجابة JSON.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` قيمة:
+الاستنتاج هو أن النموذج تمكن من العثور على البيانات لتناسب معطيات الدالة لأنه كان يستخرجها من القيمة المقدمة إلى معامل `messages` في استدعاء إكمال الدردشة. أدناه تذكير بقيمة `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-كما ترى، `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+كما ترى، تم استخراج `student`، `Azure` و `beginner` من `messages` وتم تعيينها كمدخلات للدالة. استخدام الدوال بهذه الطريقة طريقة رائعة لاستخراج المعلومات من طلب، وأيضًا لتوفير هيكل للنموذج والحصول على وظائف قابلة لإعادة الاستخدام.
 
-Next, we need to see how we can use this in our app.
+بعد ذلك، نحتاج إلى معرفة كيف يمكننا استخدام هذا في تطبيقنا.
 
-## Integrating Function Calls into an Application
+## دمج استدعاءات الدوال في تطبيق
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+بعد أن اختبرنا الاستجابة المنسقة من النموذج، يمكننا الآن دمجها في تطبيق.
 
-### Managing the flow
+### إدارة التدفق
 
-To integrate this into our application, let's take the following steps:
+لدمج هذا في تطبيقنا، دعنا نتبع الخطوات التالية:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. أولًا، لنقم بالاتصال بخدمات OpenAI وتخزين الرسالة في متغير يسمى `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. الآن سنقوم بتعريف الدالة التي ستستدعي Microsoft Learn API للحصول على قائمة الدورات:
+1. الآن سنعرف الدالة التي ستستدعي Microsoft Learn API للحصول على قائمة الدورات:
 
    ```python
    import requests
@@ -340,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   لاحظ كيف نقوم الآن بإنشاء دالة Python فعلية تتطابق مع أسماء الدوال المقدمة في `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   لاحظ كيف ننشئ الآن دالة بايثون فعلية تطابق أسماء الدوال التي قدمناها في متغير `functions`. نحن أيضًا نجري استدعاءات API خارجية حقيقية لجلب البيانات التي نحتاجها. في هذه الحالة، نستخدم Microsoft Learn API للبحث عن وحدات تدريبية.
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+حسنًا، أنشأنا متغير `functions` ودالة بايثون مقابلة، كيف نخبر النموذج بكيفية ربط هذين معًا حتى يتم استدعاء دالتنا في بايثون؟
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` وهي جزء منها واستدعاء الدالة المحددة. إليك كيفية القيام بالتحقق المذكور أدناه:
+1. للتحقق مما إذا كنا بحاجة لاستدعاء دالة بايثون، نحتاج إلى النظر في استجابة النموذج ومعرفة ما إذا كانت `function_call` جزءًا منها واستدعاء الدالة المشار إليها. إليك كيفية إجراء هذا الفحص أدناه:
 
    ```python
    # Check if the model wants to call a function
@@ -389,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   هذه الأسطر الثلاثة، تضمن أننا نستخرج اسم الدالة، المعلمات ونقوم بالاستدعاء:
+   هذه الأسطر الثلاثة تضمن استخراج اسم الدالة، المعطيات، وتنفيذ الاستدعاء:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -398,9 +400,9 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   أدناه يوجد المخرجات من تشغيل كودنا:
+   أدناه ناتج تشغيل الكود:
 
-   **المخرجات**
+   **الناتج**
 
    ```Recommended Function call:
    {
@@ -419,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. الآن سنرسل الرسالة المحدثة، `messages` إلى LLM حتى نتمكن من تلقي استجابة بلغة طبيعية بدلاً من استجابة API بتنسيق JSON.
+1. الآن سنرسل الرسالة المحدثة، `messages` إلى النموذج حتى نتلقى ردًا بلغة طبيعية بدلاً من استجابة JSON منسقة من API.
 
    ```python
    print("Messages in next request:")
@@ -438,7 +440,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    print(second_response.choices[0].message)
    ```
 
-   **المخرجات**
+   **الناتج**
 
    ```python
    {
@@ -448,21 +450,18 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
    ```
 
-## الواجب
+## المهمة
 
-لمواصلة تعلمك لـ Azure OpenAI Function Calling يمكنك بناء:
+لمتابعة تعلمك لاستدعاء دوال Azure OpenAI يمكنك بناء:
 
 - المزيد من معلمات الدالة التي قد تساعد المتعلمين في العثور على المزيد من الدورات.
-- إنشاء استدعاء دالة آخر يأخذ المزيد من المعلومات من المتعلم مثل لغته الأم
-- إنشاء معالجة للأخطاء عندما لا يعيد استدعاء الدالة و/أو استدعاء API أي دورات مناسبة
+- إنشاء استدعاء دالة آخر يأخذ معلومات إضافية من المتعلم مثل لغته الأم.
+- إنشاء معالجة للأخطاء عندما لا يعيد استدعاء الدالة و/أو استدعاء API أي دورات مناسبة.
+## عمل رائع! استمر في الرحلة
 
-تلميح: اتبع صفحة [وثائق مرجع API التعليمية](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) لمعرفة كيف وأين تتوفر هذه البيانات.
+بعد إكمال هذا الدرس، اطلع على مجموعتنا [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تطوير معرفتك في الذكاء الاصطناعي التوليدي!
 
-## عمل رائع! تابع الرحلة
-
-بعد إكمال هذا الدرس، تحقق من مجموعة [تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تحسين معرفتك بالذكاء الاصطناعي التوليدي!
-
-توجه إلى الدرس 12، حيث سننظر في كيفية [تصميم تجربة المستخدم لتطبيقات الذكاء الاصطناعي](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+توجه إلى الدرس 12، حيث سنستعرض كيفية [تصميم تجربة المستخدم لتطبيقات الذكاء الاصطناعي](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **إخلاء المسؤولية**:  
-تمت ترجمة هذه الوثيقة باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار الوثيقة الأصلية بلغتها الأم المصدر الرسمي. بالنسبة للمعلومات الحساسة، يُوصى بالترجمة البشرية الاحترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسير خاطئ ناتج عن استخدام هذه الترجمة.
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاعتماد على الترجمة البشرية المهنية. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.

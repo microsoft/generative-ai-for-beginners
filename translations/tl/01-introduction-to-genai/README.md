@@ -2,127 +2,144 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-05-19T13:28:58+00:00",
+  "translation_date": "2025-07-09T07:59:04+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "tl"
 }
 -->
-# Panimula sa Generative AI at Malalaking Modelong Pangwika
+# Panimula sa Generative AI at Malalaking Modelo ng Wika
 
-_(I-click ang imahe sa itaas para panoorin ang video ng araling ito)_
+[![Panimula sa Generative AI at Malalaking Modelo ng Wika](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.tl.png)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
-Ang Generative AI ay artipisyal na intelihensiya na may kakayahang bumuo ng teksto, larawan, at iba pang uri ng nilalaman. Ang kahanga-hanga sa teknolohiyang ito ay ang pagdemokratisa nito ng AI; kahit sino ay maaaring gumamit nito sa pamamagitan ng isang text prompt, isang pangungusap na isinulat sa natural na wika. Hindi mo kailangan matutunan ang mga wika tulad ng Java o SQL para makamit ang isang bagay na mahalaga, ang kailangan mo lang ay gamitin ang iyong wika, sabihin kung ano ang gusto mo, at magmumula ang isang mungkahi mula sa isang AI model. Ang mga aplikasyon at epekto nito ay napakalaki; maaari kang magsulat o umunawa ng mga ulat, magsulat ng mga aplikasyon, at marami pang iba, lahat sa ilang segundo.
+_(I-click ang larawan sa itaas para mapanood ang video ng araling ito)_
 
-Sa kurikulum na ito, susuriin natin kung paano ginagamit ng aming startup ang generative AI para buksan ang mga bagong senaryo sa mundo ng edukasyon at paano namin haharapin ang hindi maiiwasang mga hamon na nauugnay sa mga sosyal na implikasyon ng aplikasyon nito at mga limitasyon ng teknolohiya.
+Ang Generative AI ay isang uri ng artipisyal na intelihensiya na kayang gumawa ng teksto, mga larawan, at iba pang uri ng nilalaman. Ang kagandahan nito bilang teknolohiya ay dahil na-demokratisa nito ang AI; kahit sino ay maaaring gumamit nito gamit lamang ang isang simpleng text prompt, isang pangungusap na nakasulat sa natural na wika. Hindi mo na kailangang matutunan ang mga programming language tulad ng Java o SQL para makagawa ng kapaki-pakinabang na bagay; ang kailangan mo lang ay gamitin ang iyong sariling wika, ipahayag ang gusto mo, at lalabas ang mungkahi mula sa isang AI model. Malaki ang mga aplikasyon at epekto nito—makakagawa ka o makakaunawa ng mga ulat, makapagsusulat ng mga aplikasyon, at marami pang iba, lahat ay sa loob ng ilang segundo.
+
+Sa kurikulum na ito, tatalakayin natin kung paano ginagamit ng aming startup ang generative AI upang buksan ang mga bagong posibilidad sa mundo ng edukasyon at kung paano namin hinaharap ang mga hamon na kaakibat ng mga sosyal na epekto ng paggamit nito at mga limitasyon ng teknolohiya.
 
 ## Panimula
 
-Saklaw ng araling ito:
+Saklaw ng araling ito ang mga sumusunod:
 
-- Panimula sa senaryong pang-negosyo: ang aming ideya at misyon ng startup.
-- Generative AI at paano namin narating ang kasalukuyang teknolohikal na tanawin.
-- Panloob na mekanismo ng isang malaking modelong pangwika.
-- Pangunahing kakayahan at praktikal na mga kaso ng paggamit ng Malalaking Modelong Pangwika.
+- Panimula sa senaryo ng negosyo: ang ideya at misyon ng aming startup.
+- Generative AI at kung paano namin narating ang kasalukuyang kalagayan ng teknolohiya.
+- Paano gumagana ang isang malaking modelo ng wika.
+- Pangunahing kakayahan at praktikal na mga gamit ng Malalaking Modelo ng Wika.
 
-## Mga Layunin sa Pag-aaral
+## Mga Layunin sa Pagkatuto
 
-Pagkatapos makumpleto ang araling ito, mauunawaan mo:
+Pagkatapos matapos ang araling ito, mauunawaan mo ang:
 
-- Ano ang generative AI at paano gumagana ang Malalaking Modelong Pangwika.
-- Paano mo magagamit ang malalaking modelong pangwika para sa iba't ibang mga kaso ng paggamit, na may pokus sa mga senaryo ng edukasyon.
+- Ano ang generative AI at kung paano gumagana ang Malalaking Modelo ng Wika.
+- Paano mo magagamit ang malalaking modelo ng wika para sa iba't ibang gamit, lalo na sa mga senaryo sa edukasyon.
 
 ## Senaryo: ang aming educational startup
 
-Ang Generative Artificial Intelligence (AI) ay kumakatawan sa rurok ng teknolohiya ng AI, itinutulak ang mga hangganan ng dating iniisip na imposible. Ang mga generative AI models ay may ilang kakayahan at aplikasyon, ngunit para sa kurikulum na ito, susuriin natin kung paano ito nagre-rebolusyonisa ng edukasyon sa pamamagitan ng isang kathang-isip na startup. Tatawagin natin ang startup na ito bilang _ang aming startup_. Ang aming startup ay gumagana sa larangan ng edukasyon na may ambisyosong pahayag ng misyon na
+Ang Generative Artificial Intelligence (AI) ay kumakatawan sa rurok ng teknolohiya ng AI, na nagtutulak sa mga hangganan ng dating imposible. May iba't ibang kakayahan at aplikasyon ang mga generative AI model, ngunit sa kurikulum na ito, tatalakayin natin kung paano nito binabago ang edukasyon sa pamamagitan ng isang kathang-isip na startup. Tatawagin natin itong _aming startup_. Ang aming startup ay nagtatrabaho sa larangan ng edukasyon na may ambisyosong misyon na
 
-> _pagpapabuti ng accessibility sa pag-aaral, sa pandaigdigang saklaw, pagtiyak ng pantay na access sa edukasyon at pagbibigay ng personalized na karanasan sa pag-aaral sa bawat mag-aaral, ayon sa kanilang pangangailangan_.
+> _pagsusulong ng accessibility sa pag-aaral sa buong mundo, tinitiyak ang patas na access sa edukasyon at pagbibigay ng personalisadong karanasan sa pagkatuto para sa bawat mag-aaral, ayon sa kanilang pangangailangan_.
 
-Alam ng aming koponan sa startup na hindi namin makakamit ang layuning ito nang hindi ginagamit ang isa sa pinakamakapangyarihang kasangkapan ng modernong panahon – Malalaking Modelong Pangwika (LLMs).
+Alam ng aming koponan na hindi namin makakamit ang layuning ito nang hindi ginagamit ang isa sa pinakamakapangyarihang kasangkapan ng makabagong panahon – ang Malalaking Modelo ng Wika (LLMs).
 
-Inaasahan na ang generative AI ay magre-rebolusyonisa ng paraan ng pag-aaral at pagtuturo ngayon, na may mga estudyante na may virtual na guro na magagamit 24 na oras sa isang araw na nagbibigay ng malaking dami ng impormasyon at mga halimbawa, at mga guro na magagamit ang mga makabagong kasangkapan para suriin ang kanilang mga estudyante at magbigay ng feedback.
+Inaasahan na babaguhin ng generative AI ang paraan ng pagkatuto at pagtuturo ngayon, kung saan may mga virtual na guro ang mga estudyante 24 oras sa isang araw na nagbibigay ng malawak na impormasyon at mga halimbawa, at ang mga guro ay maaaring gumamit ng mga makabagong kasangkapan upang suriin ang kanilang mga estudyante at magbigay ng puna.
 
-Upang magsimula, tukuyin natin ang ilang mga pangunahing konsepto at terminolohiya na gagamitin natin sa buong kurikulum.
+![Limang batang estudyante na nakatingin sa monitor - larawan mula sa DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.tl.png)
 
-## Paano natin nakamit ang Generative AI?
+Bilang panimula, tukuyin muna natin ang ilang mga pangunahing konsepto at terminolohiya na gagamitin natin sa buong kurikulum.
 
-Sa kabila ng pambihirang _hype_ na nilikha kamakailan sa pamamagitan ng anunsyo ng mga generative AI models, ang teknolohiyang ito ay dekada na ang paggawa, na may unang mga pagsisikap sa pananaliksik na nagsimula noong dekada '60. Nasa punto na tayo ngayon na ang AI ay may kakayahang pang-kognitibo ng tao, tulad ng pag-uusap na ipinakita ng halimbawa [OpenAI ChatGPT](https://openai.com/chatgpt) o [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), na gumagamit din ng GPT model para sa web search Bing conversations.
+## Paano natin nakuha ang Generative AI?
 
-Balikan ng kaunti, ang pinakaunang mga prototype ng AI ay binubuo ng mga chatbots na isinulat sa makina, na umaasa sa isang knowledge base na nakuha mula sa isang grupo ng mga eksperto at kinatawan sa isang computer. Ang mga sagot sa knowledge base ay na-trigger ng mga keyword na lumalabas sa input text. Gayunpaman, naging malinaw na ang ganitong pamamaraan, gamit ang mga chatbots na isinulat sa makina, ay hindi mahusay na sukat.
+Sa kabila ng napakalaking _hype_ na nilikha kamakailan dahil sa anunsyo ng mga generative AI model, ang teknolohiyang ito ay ilang dekada nang pinag-aaralan, na nagsimula pa noong dekada 60. Ngayon, narating na natin ang punto kung saan ang AI ay may kakayahang kognitibo ng tao, tulad ng pakikipag-usap na ipinapakita ng halimbawa ng [OpenAI ChatGPT](https://openai.com/chatgpt) o [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), na gumagamit din ng GPT model para sa mga pag-uusap sa web search ng Bing.
 
-### Isang estadistikal na pamamaraan sa AI: Machine Learning
+Balikan natin, ang mga unang prototype ng AI ay mga typewritten chatbot na umaasa sa knowledge base na galing sa mga eksperto at inilagay sa isang computer. Ang mga sagot sa knowledge base ay na-trigger ng mga keyword na lumalabas sa input na teksto. Ngunit agad na naging malinaw na ang ganitong paraan, gamit ang typewritten chatbot, ay hindi scalable.
 
-Isang mahalagang pagbabago ang dumating noong dekada '90, sa aplikasyon ng isang estadistikal na pamamaraan sa pagsusuri ng teksto. Ito ay humantong sa pagbuo ng mga bagong algorithm – kilala bilang machine learning – na may kakayahang matuto ng mga pattern mula sa data nang hindi tahasang nakaprograma. Ang pamamaraang ito ay nagbibigay-daan sa mga makina na gayahin ang pag-unawa ng wika ng tao: isang estadistikal na modelo ay sinanay sa mga pares ng teksto-label, na nagbibigay-daan sa modelo na i-classify ang hindi kilalang input text na may isang pre-defined label na kumakatawan sa intensyon ng mensahe.
+### Isang estadistikal na paraan sa AI: Machine Learning
 
-### Neural networks at modernong virtual assistants
+Isang mahalagang pagbabago ang nangyari noong dekada 90, nang ginamit ang estadistikal na paraan sa pagsusuri ng teksto. Nagresulta ito sa pagbuo ng mga bagong algorithm – na tinatawag na machine learning – na kayang matutunan ang mga pattern mula sa data nang hindi kailangang i-programa nang detalyado. Pinapayagan ng pamamaraang ito ang mga makina na gayahin ang pag-unawa ng tao sa wika: ang isang estadistikal na modelo ay sinasanay gamit ang mga pares ng teksto at label, na nagpapahintulot dito na i-klasipika ang mga hindi kilalang input na teksto gamit ang pre-defined na label na kumakatawan sa intensyon ng mensahe.
 
-Sa mga nakaraang taon, ang teknolohikal na ebolusyon ng hardware, na may kakayahang hawakan ang mas malaking dami ng data at mas kumplikadong mga kalkulasyon, ay nag-udyok sa pananaliksik sa AI, na humantong sa pagbuo ng mga advanced na machine learning algorithms na kilala bilang neural networks o deep learning algorithms.
+### Neural networks at mga modernong virtual assistant
 
-Ang neural networks (at partikular na ang Recurrent Neural Networks – RNNs) ay malaki ang pinahusay sa natural language processing, na nagbibigay-daan sa representasyon ng kahulugan ng teksto sa mas makabuluhang paraan, pinahahalagahan ang konteksto ng isang salita sa isang pangungusap.
+Sa mga nakaraang taon, ang pag-unlad ng teknolohiya sa hardware, na kayang magproseso ng mas malaking data at mas kumplikadong kalkulasyon, ay nagbigay-daan sa pananaliksik sa AI, na nagresulta sa pagbuo ng mga advanced na machine learning algorithm na kilala bilang neural networks o deep learning algorithms.
 
-Ito ang teknolohiya na nagpatakbo sa mga virtual assistants na ipinanganak sa unang dekada ng bagong siglo, na napakahusay sa pag-unawa ng wika ng tao, pagtukoy ng pangangailangan, at pagsasagawa ng isang aksyon upang matugunan ito – tulad ng pagsagot sa isang pre-defined na script o pag-consume ng isang 3rd party na serbisyo.
+Malaki ang naitulong ng neural networks (lalo na ang Recurrent Neural Networks – RNNs) sa natural language processing, na nagpapahintulot na maipakita ang kahulugan ng teksto sa mas makabuluhang paraan, na binibigyang halaga ang konteksto ng isang salita sa loob ng pangungusap.
 
-### Kasalukuyang araw, Generative AI
+Ito ang teknolohiyang nagpagana sa mga virtual assistant na ipinanganak noong unang dekada ng bagong siglo, na mahusay sa pag-interpret ng wika ng tao, pagtukoy ng pangangailangan, at pagsasagawa ng aksyon upang matugunan ito – tulad ng pagsagot gamit ang pre-defined na script o paggamit ng serbisyo mula sa ibang kumpanya.
 
-Kaya't ganito natin narating ang Generative AI ngayon, na maaaring makita bilang isang subset ng deep learning.
+### Kasalukuyan, Generative AI
 
-Pagkatapos ng mga dekada ng pananaliksik sa larangan ng AI, isang bagong arkitektura ng modelo – na tinatawag na _Transformer_ – ay nalampasan ang mga limitasyon ng RNNs, na may kakayahang kumuha ng mas mahahabang mga sequence ng teksto bilang input. Ang Transformers ay batay sa mekanismo ng attention, na nagbibigay-daan sa modelo na magbigay ng iba't ibang timbang sa mga input na natatanggap nito, 'nagbibigay ng mas maraming pansin' kung saan nakatuon ang pinaka-makabuluhang impormasyon, hindi alintana ang kanilang pagkakasunod-sunod sa text sequence.
+Ganito natin narating ang Generative AI ngayon, na maaaring ituring bilang isang bahagi ng deep learning.
 
-Karamihan sa mga kamakailang generative AI models – kilala rin bilang Malalaking Modelong Pangwika (LLMs), dahil gumagana sila sa mga textual na input at output – ay batay sa arkitekturang ito. Ang interesante sa mga modelong ito – na sinanay sa napakalaking dami ng hindi naka-label na data mula sa iba't ibang mapagkukunan tulad ng mga libro, artikulo, at mga website – ay maaari silang i-angkop sa iba't ibang mga gawain at bumuo ng gramatikong tamang teksto na may kahawig ng pagkamalikhain. Kaya, hindi lamang nila pinahusay nang husto ang kakayahan ng isang makina na 'maunawaan' ang isang input text, ngunit pinagana nila ang kanilang kakayahan na bumuo ng isang orihinal na tugon sa wika ng tao.
+![AI, ML, DL at Generative AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.tl.png)
 
-## Paano gumagana ang malalaking modelong pangwika?
+Pagkatapos ng mga dekada ng pananaliksik sa larangan ng AI, isang bagong arkitektura ng modelo – na tinatawag na _Transformer_ – ang nalampasan ang mga limitasyon ng RNNs, na kayang tumanggap ng mas mahahabang sunod-sunod na teksto bilang input. Ang mga Transformer ay nakabase sa attention mechanism, na nagpapahintulot sa modelo na bigyan ng iba't ibang bigat ang mga input na natatanggap nito, ‘nagbibigay ng higit na pansin’ sa mga bahagi kung saan nakatuon ang pinakamahalagang impormasyon, kahit na hindi ito magkakasunod sa teksto.
 
-Sa susunod na kabanata, susuriin natin ang iba't ibang uri ng Generative AI models, ngunit sa ngayon tingnan natin kung paano gumagana ang malalaking modelong pangwika, na may pokus sa OpenAI GPT (Generative Pre-trained Transformer) models.
+Karamihan sa mga bagong generative AI model – na kilala rin bilang Malalaking Modelo ng Wika (LLMs), dahil sila ay gumagana gamit ang mga tekstuwal na input at output – ay nakabase sa arkitekturang ito. Ang kagandahan ng mga modelong ito – na sinanay gamit ang napakalaking dami ng unlabeled data mula sa iba't ibang pinagmulan tulad ng mga libro, artikulo, at website – ay kaya nilang i-adapt sa iba't ibang gawain at makabuo ng gramatikal na tamang teksto na may halong pagkamalikhain. Kaya, hindi lang nila napalakas nang husto ang kakayahan ng makina na ‘maunawaan’ ang input na teksto, kundi pinayagan din nila itong gumawa ng orihinal na tugon sa wikang pantao.
 
-- **Tokenizer, teksto sa mga numero**: Ang Malalaking Modelong Pangwika ay tumatanggap ng teksto bilang input at bumubuo ng teksto bilang output. Gayunpaman, bilang mga estadistikal na modelo, mas mahusay silang gumagana sa mga numero kaysa sa mga text sequence. Kaya't ang bawat input sa modelo ay pinoproseso ng isang tokenizer, bago gamitin ng core model. Ang isang token ay isang bahagi ng teksto – na binubuo ng isang variable na bilang ng mga karakter, kaya't ang pangunahing gawain ng tokenizer ay hatiin ang input sa isang array ng mga token. Pagkatapos, ang bawat token ay iniuugnay sa isang token index, na siyang integer encoding ng orihinal na bahagi ng teksto.
+## Paano gumagana ang malalaking modelo ng wika?
 
-- **Pagpapalagay ng output tokens**: Ibinigay ang n tokens bilang input (na may max n na nag-iiba mula sa isang modelo patungo sa iba), ang modelo ay may kakayahang magpalagay ng isang token bilang output. Ang token na ito ay pagkatapos ay isinasama sa input ng susunod na iteration, sa isang pattern na lumalawak na window, na nagbibigay-daan sa mas mahusay na karanasan ng user sa pagkuha ng isang (o maramihang) pangungusap bilang sagot. Ipinaliwanag nito kung bakit, kung sakaling naglaro ka ng ChatGPT, maaaring napansin mo na minsan parang humihinto ito sa gitna ng isang pangungusap.
+Sa susunod na kabanata, tatalakayin natin ang iba't ibang uri ng Generative AI model, ngunit sa ngayon, tingnan muna natin kung paano gumagana ang malalaking modelo ng wika, na nakatuon sa OpenAI GPT (Generative Pre-trained Transformer) models.
 
-- **Proseso ng pagpili, probability distribution**: Ang output token ay pinipili ng modelo ayon sa probability nito na mangyari pagkatapos ng kasalukuyang text sequence. Ito ay dahil ang modelo ay naglalagay ng probability distribution sa lahat ng posibleng 'next tokens', na kinakalkula batay sa kanyang training. Gayunpaman, hindi palaging ang token na may pinakamataas na probability ang pinipili mula sa resulting distribution. Isang antas ng randomness ang idinadagdag sa pagpili na ito, sa paraan na ang modelo ay kumikilos sa isang non-deterministic na paraan - hindi natin nakukuha ang eksaktong parehong output para sa parehong input. Ang antas ng randomness na ito ay idinadagdag upang gayahin ang proseso ng creative thinking at maaari itong i-tune gamit ang isang model parameter na tinatawag na temperature.
+- **Tokenizer, mula teksto patungong numero**: Tumanggap ang Malalaking Modelo ng Wika ng teksto bilang input at gumagawa ng teksto bilang output. Ngunit dahil estadistikal na mga modelo sila, mas mahusay silang gumagana sa mga numero kaysa sa mga sunod-sunod na teksto. Kaya bawat input sa modelo ay pinoproseso muna ng tokenizer bago gamitin ng pangunahing modelo. Ang token ay isang bahagi ng teksto – na binubuo ng iba't ibang bilang ng mga karakter, kaya ang pangunahing gawain ng tokenizer ay hatiin ang input sa isang array ng mga token. Pagkatapos, bawat token ay iniuugnay sa isang token index, na isang integer encoding ng orihinal na bahagi ng teksto.
 
-## Paano magagamit ng aming startup ang Malalaking Modelong Pangwika?
+![Halimbawa ng tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.tl.png)
 
-Ngayon na mayroon tayong mas mahusay na pag-unawa sa panloob na mekanismo ng isang malaking modelong pangwika, tingnan natin ang ilang praktikal na halimbawa ng mga pinaka-karaniwang gawain na maaari nilang gawin nang mahusay, na may mata sa aming senaryong pang-negosyo. Sinabi natin na ang pangunahing kakayahan ng isang Malaking Modelong Pangwika ay _pagbuo ng teksto mula sa simula, simula sa isang textual na input, na isinulat sa natural na wika_.
+- **Pagtataya ng output tokens**: Kapag binigyan ng n tokens bilang input (na may maximum na n na nag-iiba depende sa modelo), kaya ng modelo na hulaan ang isang token bilang output. Ang token na ito ay isinasama sa input ng susunod na iteration, sa isang lumalawak na pattern ng window, na nagpapabuti sa karanasan ng gumagamit sa pagtanggap ng isang (o maraming) pangungusap bilang sagot. Ito ang dahilan kung bakit, kung naglaro ka na ng ChatGPT, mapapansin mong minsan ay parang humihinto ito sa kalagitnaan ng pangungusap.
 
-Ngunit anong uri ng textual na input at output?
-Ang input ng isang malaking modelong pangwika ay kilala bilang isang prompt, habang ang output ay kilala bilang isang completion, isang termino na tumutukoy sa mekanismo ng modelo ng pagbuo ng susunod na token upang makumpleto ang kasalukuyang input. Susuriin natin nang malalim kung ano ang isang prompt at paano ito idisenyo sa paraan upang makuha ang pinakamahusay mula sa aming modelo. Ngunit sa ngayon, sabihin lang natin na ang isang prompt ay maaaring kabilang ang:
+- **Proseso ng pagpili, probability distribution**: Pinipili ng modelo ang output token base sa posibilidad nito na lumabas pagkatapos ng kasalukuyang sunod-sunod na teksto. Ito ay dahil ang modelo ay nagtataya ng probability distribution sa lahat ng posibleng ‘susunod na token’, na kinakalkula base sa pagsasanay nito. Ngunit hindi palaging ang token na may pinakamataas na posibilidad ang pinipili mula sa distribution. May idinadagdag na antas ng randomness sa pagpili, upang ang modelo ay kumilos nang hindi deterministic – hindi natin makukuha ang eksaktong parehong output para sa parehong input. Ang antas ng randomness na ito ay idinadagdag upang gayahin ang proseso ng malikhaing pag-iisip at maaaring i-adjust gamit ang parameter ng modelo na tinatawag na temperature.
 
-- Isang **instruction** na nagsasaad ng uri ng output na inaasahan natin mula sa modelo. Ang instruction na ito minsan ay maaaring maglaman ng ilang mga halimbawa o ilang karagdagang data.
+## Paano magagamit ng aming startup ang Malalaking Modelo ng Wika?
 
-  1. Pagbubuod ng isang artikulo, libro, pagsusuri ng produkto at marami pa, kasama ang pagkuha ng mga pananaw mula sa hindi istrakturang data.
+Ngayon na mas naiintindihan na natin kung paano gumagana ang isang malaking modelo ng wika, tingnan natin ang ilang praktikal na halimbawa ng mga karaniwang gawain na kaya nilang gawin nang mahusay, na may pokus sa aming senaryo sa negosyo. Sinabi natin na ang pangunahing kakayahan ng isang Malaking Modelo ng Wika ay _gumawa ng teksto mula sa simula, simula sa isang tekstuwal na input na nakasulat sa natural na wika_.
 
-  2. Malikhaing ideasyon at disenyo ng isang artikulo, sanaysay, gawain o higit pa.
+Ngunit anong uri ng tekstuwal na input at output?
+Ang input ng isang malaking modelo ng wika ay tinatawag na prompt, habang ang output ay tinatawag na completion, isang termino na tumutukoy sa mekanismo ng modelo sa paggawa ng susunod na token upang kumpletuhin ang kasalukuyang input. Tatalakayin natin nang mas malalim kung ano ang prompt at kung paano ito idinisenyo upang makuha ang pinakamainam mula sa modelo. Ngunit sa ngayon, sabihin na lang natin na ang prompt ay maaaring maglaman ng:
 
-- Isang **tanong**, na tinanong sa anyo ng isang pag-uusap sa isang ahente.
+- Isang **instruksyon** na nagsasaad ng uri ng output na inaasahan natin mula sa modelo. Minsan, ang instruksyong ito ay maaaring maglaman ng ilang halimbawa o karagdagang datos.
 
-- Isang bahagi ng **teksto na kukumpletuhin**, na implicit na isang hiling para sa tulong sa pagsusulat.
+  1. Pagbubuod ng isang artikulo, libro, mga review ng produkto at iba pa, pati na rin ang pagkuha ng mga insight mula sa hindi nakaayos na datos.
+    
+    ![Halimbawa ng pagbubuod](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.tl.png)
+  
+  2. Malikhaing pag-iisip at pagdidisenyo ng isang artikulo, sanaysay, takdang-aralin o iba pa.
+      
+     ![Halimbawa ng malikhaing pagsulat](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.tl.png)
 
-- Isang bahagi ng **code** kasama ang hiling ng pagpapaliwanag at pagdodokumento nito, o isang komento na humihiling na bumuo ng isang piraso ng code na gumagawa ng isang tiyak na gawain.
+- Isang **tanong**, na ipinapahayag sa anyo ng pag-uusap sa isang ahente.
+  
+  ![Halimbawa ng pag-uusap](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.tl.png)
 
-Ang mga halimbawa sa itaas ay medyo simple at hindi nilalayon na maging isang kumpletong demonstrasyon ng mga kakayahan ng Malalaking Modelong Pangwika. Ang mga ito ay nilalayon upang ipakita ang potensyal ng paggamit ng generative AI, partikular ngunit hindi limitado sa mga konteksto ng edukasyon.
+- Isang bahagi ng **teksto na kailangang kumpletuhin**, na implicit na humihiling ng tulong sa pagsulat.
+  
+  ![Halimbawa ng pagkumpleto ng teksto](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.tl.png)
 
-Gayundin, ang output ng isang generative AI model ay hindi perpekto at minsan ang pagkamalikhain ng modelo ay maaaring magtrabaho laban dito, na nagreresulta sa isang output na isang kombinasyon ng mga salita na ang human user ay maaaring ipakahulugan bilang isang pagbaluktot ng realidad, o maaari itong maging nakakasakit. Ang Generative AI ay hindi matalino - sa hindi bababa sa mas komprehensibong kahulugan ng intelihensiya, kabilang ang kritikal at malikhaing pag-iisip o emosyonal na intelihensiya; hindi ito deterministiko, at hindi ito mapagkakatiwalaan, dahil ang mga imbensyon, tulad ng mga maling sanggunian, nilalaman, at pahayag, ay maaaring pagsamahin sa tamang impormasyon, at ipresenta sa isang mapanghikayat at tiwala na paraan. Sa mga susunod na aralin, haharapin natin ang lahat ng mga limitasyong ito at makikita natin kung ano ang magagawa natin upang mabawasan ang mga ito.
+- Isang bahagi ng **code** kasama ang hiling na ipaliwanag at idokumento ito, o isang komento na humihiling na gumawa ng isang piraso ng code na gumagawa ng partikular na gawain.
+  
+  ![Halimbawa ng coding](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.tl.png)
 
-## Gawain
+Ang mga halimbawa sa itaas ay medyo simple at hindi nilalayong maging kumpletong demonstrasyon ng kakayahan ng Malalaking Modelo ng Wika. Layunin lamang nilang ipakita ang potensyal ng paggamit ng generative AI, lalo na ngunit hindi limitado sa mga konteksto ng edukasyon.
 
-Ang iyong gawain ay magbasa pa tungkol sa [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) at subukang tukuyin ang isang lugar kung saan maaari mong idagdag ang generative AI ngayon na wala pa ito. Paano magiging iba ang epekto mula sa paggawa nito sa "lumang paraan", maaari mo bang gawin ang isang bagay na hindi mo magawa dati, o mas mabilis ka ba? Sumulat ng isang 300-word na buod kung ano ang magiging hitsura ng iyong pangarap na AI startup at isama ang mga header tulad ng "Problema", "Paano ko gagamitin ang AI", "Epekto" at opsyonal na plano sa negosyo.
+Gayundin, hindi perpekto ang output ng isang generative AI model at minsan ang pagkamalikhain ng modelo ay maaaring magdulot ng output na kombinasyon ng mga salitang maaaring ma-interpret ng tao bilang isang pagkalito sa realidad, o maaaring nakakasakit. Ang generative AI ay hindi matalino – hindi pa man sa mas malawak na kahulugan ng katalinuhan, kabilang ang kritikal at malikhaing pag-iisip o emosyonal na intelihensiya; hindi ito deterministic, at hindi ito mapagkakatiwalaan, dahil maaaring may halong maling impormasyon, tulad ng mga maling sanggunian, nilalaman, at pahayag, na ipinapakita nang may kumpiyansa at paniniwala. Sa mga susunod na aralin, tatalakayin natin ang lahat ng mga limitasyong ito at titingnan kung paano natin ito mapapagaan.
 
-Kung ginawa mo ang gawaing ito, maaari ka nang maging handa na mag-aplay sa incubator ng Microsoft, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) nag-aalok kami ng mga kredito para sa parehong Azure, OpenAI, mentoring at marami pa, tingnan ito!
+## Takdang-Aralin
 
-## Pagsusuri ng Kaalaman
+Ang iyong takdang-aralin ay magbasa pa tungkol sa [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) at subukang tukuyin ang isang larangan kung saan maaari kang magdagdag ng generative AI ngayon na wala pa nito. Paano magiging iba ang epekto kumpara sa paggawa nito sa “lumang paraan”? May magagawa ka ba na dati ay hindi mo magawa, o mas mabilis ka ba? Sumulat ng 300-salitang buod tungkol sa iyong pangarap na AI startup at isama ang mga header tulad ng "Problema", "Paano Ko Gagamitin ang AI", "Epekto" at opsyonal na plano sa negosyo.
 
-Ano ang totoo tungkol sa malalaking modelong pangwika?
+Kung nagawa mo na ang gawaing ito, maaaring handa ka nang mag-apply sa incubator ng Microsoft, ang [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) kung saan nag-aalok kami ng credits para sa Azure, OpenAI, mentoring, at marami pang iba, silipin mo!
 
-1. Nakukuha mo ang eksaktong parehong tugon tuwing.
-2. Ginagawa nito ang mga bagay nang perpekto, mahusay sa pagdaragdag ng mga numero, paggawa ng gumaganang code atbp.
-3. Ang tugon ay maaaring mag-iba sa kabila ng paggamit ng parehong prompt. Mahusay din ito sa pagbibigay sa iyo ng unang draft ng isang bagay, maging ito man ay teksto o code. Ngunit kailangan mong pagbutihin ang mga resulta.
+## Pagsusulit sa Kaalaman
 
-A: 3, ang isang LLM ay non-deterministic, ang tugon ay nag-iiba, gayunpaman, maaari mong kontrolin ang pagkakaiba nito sa pamamagitan ng isang temperature setting. Hindi mo rin dapat asahan na gawin nito ang mga bagay nang perpekto, nandito ito upang gawin ang mabigat na gawain para sa iyo na madalas nangangahulugang makakakuha ka ng magandang unang pagsubok sa isang bagay na kailangan mong unti-unting pagbutihin.
+Ano ang totoo tungkol sa malalaking modelo ng wika?
 
-## Mahusay na Trabaho! Ipagpatuloy ang Paglalakbay
+1. Palagi kang nakakakuha ng eksaktong parehong sagot.
+1. Ginagawa nito nang perpekto ang mga bagay, mahusay sa pagdaragdag ng numero, paggawa ng gumaganang code, atbp.
+1. Nag-iiba-iba ang sagot kahit na pareho ang prompt. Magaling din ito sa pagbibigay ng unang draft ng isang bagay, maging teksto o code. Ngunit kailangan mong pagbutihin ang mga resulta.
 
-Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang patuloy na pataasin ang iyong kaalaman sa Generative AI!
+Sagot: 3, ang LLM ay non-deterministic, nag-iiba ang sagot, ngunit maaari mong kontrolin ang pagkakaiba nito gamit ang temperature setting. Hindi mo rin dapat asahan na gagawin nito nang perpekto ang lahat; nandito ito para gawin ang mabibigat na gawain para sa iyo na madalas ay nagbibigay ng magandang unang pagtatangka na kailangan mong paunlarin pa.
 
-Pumunta sa Aralin 2 kung saan titingnan natin kung paano [suriin at ihambing ang iba't ibang uri ng LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+## Magaling! Ipagpatuloy ang Paglalakbay
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga error o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang pinagmulan. Para sa kritikal na impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot para sa anumang hindi pagkakaintindihan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Pagkatapos matapos ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang paghasa ng iyong kaalaman sa Generative AI!
+Pumunta sa Lesson 2 kung saan titingnan natin kung paano [suriin at paghambingin ang iba't ibang uri ng LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+
+**Paalala**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

@@ -2,138 +2,138 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:34:32+00:00",
+  "translation_date": "2025-07-09T12:57:25+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "fi"
 }
 -->
 # Hakusovellusten rakentaminen
 
-[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/08-lesson-banner.358a98d5a1d7df54f5eaf5fd69392931ea660c923effa48ffb8384f5fa4ab172.fi.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.fi.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
 
 > > _Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon_
 
-Suuret kielimallit (LLM) tarjoavat enemmän kuin chatbotit ja tekstin luomisen. On myös mahdollista rakentaa hakusovelluksia käyttämällä upotuksia. Upotukset ovat datan numeerisia esityksiä, tunnetaan myös vektoreina, ja niitä voidaan käyttää semanttiseen datan hakuun.
+LLM-mallit eivät rajoitu pelkästään chatbotteihin ja tekstin generointiin. On myös mahdollista rakentaa hakusovelluksia käyttämällä Embeddingeja. Embeddingit ovat numeerisia esityksiä datasta, joita kutsutaan myös vektoreiksi, ja niitä voidaan käyttää semanttiseen hakuun.
 
-Tässä oppitunnissa rakennat hakusovelluksen koulutusstartupillemme. Startupimme on voittoa tavoittelematon organisaatio, joka tarjoaa ilmaista koulutusta opiskelijoille kehittyvissä maissa. Startupillamme on suuri määrä YouTube-videoita, joita opiskelijat voivat käyttää oppiakseen tekoälystä. Startupimme haluaa rakentaa hakusovelluksen, jonka avulla opiskelijat voivat etsiä YouTube-videota kirjoittamalla kysymyksen.
+Tässä oppitunnissa rakennat hakusovelluksen koulutusstartupillemme. Startupimme on voittoa tavoittelematon organisaatio, joka tarjoaa ilmaista koulutusta kehitysmaiden opiskelijoille. Startupillamme on suuri määrä YouTube-videoita, joita opiskelijat voivat käyttää tekoälyn oppimiseen. Startup haluaa rakentaa hakusovelluksen, jonka avulla opiskelijat voivat etsiä YouTube-videoita kirjoittamalla kysymyksen.
 
-Esimerkiksi opiskelija saattaa kirjoittaa 'Mitä ovat Jupyter-muistikirjat?' tai 'Mikä on Azure ML' ja hakusovellus palauttaa listan YouTube-videoista, jotka ovat relevantteja kysymykselle, ja vielä parempaa, hakusovellus palauttaa linkin siihen kohtaan videosta, jossa kysymyksen vastaus sijaitsee.
+Esimerkiksi opiskelija saattaa kirjoittaa 'Mitä ovat Jupyter Notebookit?' tai 'Mikä on Azure ML' ja hakusovellus palauttaa listan YouTube-videoista, jotka liittyvät kysymykseen. Vielä parempaa, hakusovellus palauttaa linkin kohtaan videossa, jossa kysymykseen löytyy vastaus.
 
 ## Johdanto
 
-Tässä oppitunnissa käsitellään:
+Tässä oppitunnissa käsittelemme:
 
-- Semanttinen vs avainsanahaku.
-- Mitä ovat tekstin upotukset.
-- Tekstin upotusindeksin luominen.
-- Tekstin upotusindeksin hakeminen.
+- Semanttinen haku vs avainsanahaku.
+- Mitä ovat tekstin embeddingit.
+- Tekstien embedding-indeksin luominen.
+- Tekstien embedding-indeksin hakeminen.
 
 ## Oppimistavoitteet
 
-Oppitunnin jälkeen osaat:
+Oppitunnin suorittamisen jälkeen osaat:
 
-- Erottaa semanttisen ja avainsanahaun toisistaan.
-- Selittää, mitä tekstin upotukset ovat.
-- Luoda sovelluksen, joka käyttää upotuksia datan hakemiseen.
+- Erottaa semanttisen haun ja avainsanahaun toisistaan.
+- Selittää, mitä tekstin embeddingit ovat.
+- Luoda sovelluksen, joka käyttää embeddingeja datan hakemiseen.
 
 ## Miksi rakentaa hakusovellus?
 
-Hakusovelluksen luominen auttaa sinua ymmärtämään, kuinka käyttää upotuksia datan hakemiseen. Opit myös, kuinka rakentaa hakusovelluksen, jota opiskelijat voivat käyttää tiedon nopeaan löytämiseen.
+Hakusovelluksen rakentaminen auttaa ymmärtämään, miten embeddingeja käytetään datan hakemiseen. Opit myös rakentamaan hakusovelluksen, jota opiskelijat voivat käyttää löytääkseen tietoa nopeasti.
 
-Oppitunnissa on mukana YouTube-transkriptien upotusindeksi Microsoftin [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-kanavalle. AI Show on YouTube-kanava, joka opettaa tekoälystä ja koneoppimisesta. Upotusindeksi sisältää upotukset kullekin YouTube-transkriptille lokakuuhun 2023 asti. Käytät upotusindeksiä rakentaaksesi hakusovelluksen startupillemme. Hakusovellus palauttaa linkin siihen kohtaan videosta, jossa kysymyksen vastaus sijaitsee. Tämä on loistava tapa opiskelijoille löytää tarvitsemaansa tietoa nopeasti.
+Oppitunnissa on mukana embedding-indeksi Microsoftin [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-kanavan tekstityksistä. AI Show on YouTube-kanava, joka opettaa tekoälystä ja koneoppimisesta. Embedding-indeksi sisältää embeddingit jokaisesta YouTube-videoiden tekstityksestä lokakuuhun 2023 asti. Käytät tätä embedding-indeksiä rakentaaksesi hakusovelluksen startupillemme. Hakusovellus palauttaa linkin kohtaan videossa, jossa kysymykseen löytyy vastaus. Tämä on erinomainen tapa opiskelijoille löytää tarvitsemansa tieto nopeasti.
 
-Seuraavassa on esimerkki semanttisesta kyselystä kysymykselle 'voiko rstudioa käyttää azure ml:n kanssa?'. Katso YouTube-url, näet, että url sisältää aikaleiman, joka vie sinut siihen kohtaan videosta, jossa kysymyksen vastaus sijaitsee.
+Alla on esimerkki semanttisesta hausta kysymykselle 'voiko rstudiota käyttää Azure ML:n kanssa?'. Katso YouTube-URL:ia, huomaat, että URL sisältää aikaleiman, joka vie sinut kohtaan videossa, jossa vastaus kysymykseen löytyy.
 
-![Semanttinen kysely kysymykselle "voiko rstudioa käyttää Azure ML:n kanssa"](../../../translated_images/query-results.506ee9aac38278ee496377ca3d0bf751a9bffda30c3cbd56d5024dcb9c8f8e9e.fi.png)
+![Semanttinen haku kysymykselle "voiko rstudiota käyttää Azure ML:n kanssa"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.fi.png)
 
 ## Mitä on semanttinen haku?
 
-Saatat nyt ihmetellä, mitä semanttinen haku on? Semanttinen haku on hakutekniikka, joka käyttää kyselyn sanojen semantiikkaa eli merkitystä palauttaakseen relevantteja tuloksia.
+Saatat miettiä, mitä semanttinen haku tarkoittaa? Semanttinen haku on hakutekniikka, joka käyttää hakulauseen sanojen merkitystä eli semantiikkaa palauttaakseen relevantteja tuloksia.
 
-Tässä on esimerkki semanttisesta hausta. Oletetaan, että etsit autoa ostettavaksi, saatat hakea 'unelma-autoni', semanttinen haku ymmärtää, että et ole `dreaming` autosta, vaan etsit ostettavaksi `ideal` autoa. Semanttinen haku ymmärtää aikomuksesi ja palauttaa relevantteja tuloksia. Vaihtoehtona on `keyword search`, joka kirjaimellisesti hakisi unelmia autoista ja usein palauttaisi epäolennaisia tuloksia.
+Tässä esimerkki semanttisesta hausta. Oletetaan, että haluat ostaa auton ja haet 'unelma-autoani'. Semanttinen haku ymmärtää, ettet unelmoi autosta vaan etsit ihanteellista autoasi. Semanttinen haku ymmärtää aikomuksesi ja palauttaa asiaankuuluvat tulokset. Vaihtoehtona on avainsanahaku, joka etsisi kirjaimellisesti unelmia autoista ja palauttaisi usein epäolennaisia tuloksia.
 
-## Mitä ovat tekstin upotukset?
+## Mitä ovat tekstin embeddingit?
 
-[Tekstin upotukset](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) ovat tekstin esitystekniikka, jota käytetään [luonnollisen kielen prosessoinnissa](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstin upotukset ovat tekstin semanttisia numeerisia esityksiä. Upotuksia käytetään esittämään dataa tavalla, joka on koneelle helppo ymmärtää. On monia malleja tekstin upotusten rakentamiseen, tässä oppitunnissa keskitymme upotusten luomiseen käyttämällä OpenAI:n upotusmallia.
+[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) ovat tekstin esitystekniikka, jota käytetään [luonnollisen kielen käsittelyssä](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstin embeddingit ovat semanttisia numeerisia esityksiä tekstistä. Embeddingeja käytetään esittämään dataa koneen ymmärrettävässä muodossa. On olemassa monia malleja tekstin embeddingien luomiseen, tässä oppitunnissa keskitymme OpenAI Embedding -mallin käyttöön.
 
-Tässä on esimerkki, kuvittele seuraavan tekstin olevan transkriptissä yhdestä AI Show YouTube-kanavan jaksosta:
+Tässä esimerkki: kuvittele, että seuraava teksti on AI Show -kanavan jakson tekstityksessä:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Lähetämme tekstin OpenAI:n upotus-API:lle ja se palauttaa seuraavan upotuksen, joka koostuu 1536 numerosta eli vektorista. Jokainen numero vektorissa edustaa eri aspektia tekstistä. Lyhyyden vuoksi tässä ovat vektorin ensimmäiset 10 numeroa.
+Syötämme tekstin OpenAI Embedding API:lle, joka palauttaa seuraavan embeddingin, joka koostuu 1536 numerosta eli vektorista. Jokainen vektorin luku kuvaa eri puolta tekstistä. Tiiviyden vuoksi tässä ovat vektorin ensimmäiset 10 lukua.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## Kuinka upotusindeksi luodaan?
+## Miten embedding-indeksi luodaan?
 
-Tämän oppitunnin upotusindeksi luotiin sarjalla Python-skriptejä. Löydät skriptit ja ohjeet [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) -tiedostosta 'scripts' -kansiosta tälle oppitunnille. Sinun ei tarvitse suorittaa näitä skriptejä suorittaaksesi tämän oppitunnin, sillä upotusindeksi on tarjottu sinulle.
+Tämän oppitunnin embedding-indeksi on luotu sarjalla Python-skriptejä. Löydät skriptit ja ohjeet [README-tiedostosta](./scripts/README.md?WT.mc_id=academic-105485-koreyst) tämän oppitunnin 'scripts'-kansiosta. Sinun ei tarvitse ajaa näitä skriptejä oppitunnin suorittamiseksi, sillä embedding-indeksi on valmiina.
 
 Skriptit suorittavat seuraavat toiminnot:
 
-1. Transkripti kustakin YouTube-videosta [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) -soittolistalla ladataan.
-2. Käyttäen [OpenAI:n funktioita](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), yritetään poimia puhujan nimi YouTube-transkriptin ensimmäisiltä 3 minuutilta. Kunkin videon puhujan nimi tallennetaan upotusindeksiin nimeltä `embedding_index_3m.json`.
-3. Transkriptiteksti jaetaan **3 minuutin tekstisegmentteihin**. Segmentti sisältää noin 20 sanaa päällekkäin seuraavasta segmentistä varmistaakseen, että segmentin upotus ei katkea ja tarjotakseen paremman hakukontekstin.
-4. Kukin tekstisegmentti lähetetään OpenAI:n chat-API:lle tiivistettäväksi 60 sanaan. Tiivistelmä tallennetaan myös upotusindeksiin `embedding_index_3m.json`.
-5. Lopuksi segmenttiteksti lähetetään OpenAI:n upotus-API:lle. Upotus-API palauttaa vektorin, joka koostuu 1536 numerosta, jotka edustavat segmentin semanttista merkitystä. Segmentti yhdessä OpenAI:n upotusvektorin kanssa tallennetaan upotusindeksiin `embedding_index_3m.json`.
+1. Jokaisen [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) -soittolistan YouTube-videon tekstitys ladataan.
+2. Käyttäen [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) yritetään poimia puhujan nimi YouTube-tekstityksen ensimmäisen 3 minuutin ajalta. Puhujan nimi tallennetaan embedding-indeksiin nimeltä `embedding_index_3m.json`.
+3. Tekstitys jaetaan **3 minuutin tekstipätkiin**. Pätkissä on noin 20 sanan päällekkäisyys seuraavan pätkän kanssa, jotta embedding ei katkea ja haku toimii paremmin.
+4. Jokainen tekstipätkä lähetetään OpenAI Chat API:lle, joka tiivistää tekstin 60 sanaan. Tiivistelmä tallennetaan myös embedding-indeksiin `embedding_index_3m.json`.
+5. Lopuksi tekstipätkä lähetetään OpenAI Embedding API:lle. Embedding API palauttaa 1536-numeroisen vektorin, joka kuvaa pätkän semanttista merkitystä. Pätkä ja vektori tallennetaan embedding-indeksiin `embedding_index_3m.json`.
 
 ### Vektoripohjaiset tietokannat
 
-Oppitunnin yksinkertaisuuden vuoksi upotusindeksi tallennetaan JSON-tiedostoon nimeltä `embedding_index_3m.json` ja ladataan Pandas DataFrameen. Kuitenkin tuotannossa upotusindeksi tallennettaisiin vektoripohjaiseen tietokantaan, kuten [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), vain muutamia mainitakseni.
+Oppitunnin yksinkertaisuuden vuoksi embedding-indeksi tallennetaan JSON-tiedostoon nimeltä `embedding_index_3m.json` ja ladataan Pandas DataFrameen. Tuotantoympäristössä embedding-indeksi tallennettaisiin vektoripohjaiseen tietokantaan, kuten [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) ja moniin muihin.
 
-## Kosinissamankaltaisuuden ymmärtäminen
+## Kosiniläisyyden ymmärtäminen
 
-Olemme oppineet tekstin upotuksista, seuraava askel on oppia käyttämään tekstin upotuksia datan hakemiseen ja erityisesti löytämään samankaltaisimmat upotukset annetulle kyselylle kosinissamankaltaisuuden avulla.
+Olemme oppineet tekstin embeddingeistä, seuraava askel on oppia käyttämään niitä datan hakemiseen ja erityisesti löytämään kyselyä lähimpänä olevat embeddingit kosiniläisyyden avulla.
 
-### Mitä on kosinissamankaltaisuus?
+### Mitä on kosiniläisyys?
 
-Kosinissamankaltaisuus on kahden vektorin samankaltaisuuden mittari, tätä kutsutaan myös `nearest neighbor search`. Kosinissamankaltaisuushaku suoritetaan _vektorisoimalla_ kyselyteksti OpenAI:n upotus-API:n avulla. Sitten lasketaan _kosinissamankaltaisuus_ kyselyvektorin ja kunkin vektorin välillä upotusindeksissä. Muista, että upotusindeksissä on vektori kullekin YouTube-transkriptin tekstisegmentille. Lopuksi järjestä tulokset kosinissamankaltaisuuden mukaan, ja tekstisegmentit, joilla on korkeimmat kosinissamankaltaisuudet, ovat samankaltaisimpia kyselyyn nähden.
+Kosiniläisyys mittaa kahden vektorin samankaltaisuutta, tätä kutsutaan myös `lähimmän naapurin hauksi`. Kosiniläisyyshaku tehdään vektorisoimalla _kyselyteksti_ OpenAI Embedding API:lla. Sitten lasketaan _kosiniläisyys_ kyselyvektorin ja jokaisen embedding-indeksin vektorin välillä. Muista, että embedding-indeksissä on vektori jokaiselle YouTube-tekstipätkälle. Lopuksi tulokset järjestetään kosiniläisyyden mukaan, ja suurimman kosiniläisyyden omaavat tekstipätkät ovat lähimpänä kyselyä.
 
-Matemaattisesta näkökulmasta kosinissamankaltaisuus mittaa kulman kosinia kahden vektorin välillä, jotka on projisoitu monidimensionaaliseen tilaan. Tämä mittaus on hyödyllinen, koska vaikka kaksi dokumenttia olisivat kaukana toisistaan euklidisella etäisyydellä koon vuoksi, niillä voisi silti olla pienempi kulma niiden välillä ja siten korkeampi kosinissamankaltaisuus. Lisätietoja kosinissamankaltaisuusyhtälöistä, katso [Kosinissamankaltaisuus](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Matemaattisesti kosiniläisyys mittaa kahden vektorin välisen kulman kosinia monidimensionaalisessa avaruudessa. Tämä on hyödyllistä, koska vaikka kaksi dokumenttia olisivat kaukana toisistaan euklidisessa etäisyydessä koon vuoksi, niillä voi silti olla pieni kulma ja siten korkea kosiniläisyys. Lisätietoja kosiniläisyyskaavoista löytyy [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst) -artikkelista.
 
-## Ensimmäisen hakusovelluksen rakentaminen
+## Ensimmäisen hakusovelluksesi rakentaminen
 
-Seuraavaksi opimme rakentamaan hakusovelluksen käyttäen upotuksia. Hakusovellus sallii opiskelijoiden hakea videota kirjoittamalla kysymyksen. Hakusovellus palauttaa listan videoista, jotka ovat relevantteja kysymykselle. Hakusovellus palauttaa myös linkin siihen kohtaan videosta, jossa kysymyksen vastaus sijaitsee.
+Seuraavaksi opimme rakentamaan hakusovelluksen embeddingeja käyttäen. Hakusovellus antaa opiskelijoille mahdollisuuden hakea videoita kirjoittamalla kysymyksen. Hakusovellus palauttaa listan videoista, jotka liittyvät kysymykseen. Lisäksi se palauttaa linkin kohtaan videossa, jossa kysymykseen löytyy vastaus.
 
-Tämä ratkaisu on rakennettu ja testattu Windows 11, macOS ja Ubuntu 22.04 -käyttöjärjestelmissä käyttäen Python 3.10 tai uudempi. Voit ladata Pythonin [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) -sivustolta.
+Tämä ratkaisu on rakennettu ja testattu Windows 11:llä, macOS:llä ja Ubuntu 22.04:llä käyttäen Python 3.10 tai uudempaa. Voit ladata Pythonin osoitteesta [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-## Tehtävä - hakusovelluksen rakentaminen, opiskelijoiden mahdollistamiseksi
+## Tehtävä – hakusovelluksen rakentaminen opiskelijoille
 
-Esittelimme startupimme tämän oppitunnin alussa. Nyt on aika mahdollistaa opiskelijoiden rakentaa hakusovellus heidän arviointeihinsa.
+Esittelimme startupimme tämän oppitunnin alussa. Nyt on aika antaa opiskelijoille mahdollisuus rakentaa hakusovellus omiin tehtäviinsä.
 
-Tässä tehtävässä luot Azure OpenAI -palvelut, joita käytetään hakusovelluksen rakentamiseen. Luot seuraavat Azure OpenAI -palvelut. Tarvitset Azure-tilauksen suorittaaksesi tämän tehtävän.
+Tässä tehtävässä luot Azure OpenAI -palvelut, joita käytetään hakusovelluksen rakentamiseen. Luot seuraavat Azure OpenAI -palvelut. Tarvitset Azure-tilauksen tehtävän suorittamiseen.
 
-### Azure Cloud Shellin käynnistäminen
+### Käynnistä Azure Cloud Shell
 
 1. Kirjaudu sisään [Azure-portaaliin](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
 2. Valitse Cloud Shell -kuvake Azure-portaalin oikeasta yläkulmasta.
-3. Valitse **Bash** ympäristötyypiksi.
+3. Valitse ympäristöksi **Bash**.
 
 #### Luo resurssiryhmä
 
-> Näissä ohjeissa käytämme resurssiryhmää nimeltä "semantic-video-search" Itä-Yhdysvalloissa.
-> Voit muuttaa resurssiryhmän nimeä, mutta kun muutat resurssien sijaintia,
-> tarkista [mallin saatavuustaulukko](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Näissä ohjeissa käytämme "semantic-video-search" -nimistä resurssiryhmää East US -alueella.
+> Voit vaihtaa resurssiryhmän nimeä, mutta kun vaihdat resurssien sijaintia,
+> tarkista [mallien saatavuustaulukko](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### Luo Azure OpenAI -palveluresurssi
+#### Luo Azure OpenAI Service -resurssi
 
-Suorita Azure Cloud Shellistä seuraava komento luodaksesi Azure OpenAI -palveluresurssi.
+Azure Cloud Shellissä suorita seuraava komento luodaksesi Azure OpenAI Service -resurssin.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-#### Hanki päätepiste ja avaimet tämän sovelluksen käyttöä varten
+#### Hanki päätepiste ja avaimet sovelluksen käyttöä varten
 
-Suorita Azure Cloud Shellistä seuraavat komennot saadaksesi päätepisteen ja avaimet Azure OpenAI -palveluresurssille.
+Azure Cloud Shellissä suorita seuraavat komennot saadaksesi päätepisteen ja avaimet Azure OpenAI Service -resurssille.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -142,9 +142,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### Ota käyttöön OpenAI:n upotusmalli
+#### Ota käyttöön OpenAI Embedding -malli
 
-Suorita Azure Cloud Shellistä seuraava komento ottaaksesi käyttöön OpenAI:n upotusmalli.
+Azure Cloud Shellissä suorita seuraava komento ottaaksesi käyttöön OpenAI Embedding -mallin.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -159,17 +159,17 @@ az cognitiveservices account deployment create \
 
 ## Ratkaisu
 
-Avaa [ratkaisuvihko](../../../08-building-search-applications/python/aoai-solution.ipynb) GitHub Codespacesissa ja seuraa ohjeita Jupyter-muistikirjassa.
+Avaa [ratkaisun Jupyter Notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) GitHub Codespacesissa ja seuraa ohjeita.
 
-Kun suoritat muistikirjan, sinua pyydetään syöttämään kysely. Syöttöruutu näyttää tältä:
+Kun ajat notebookin, sinulta kysytään hakukyselyä. Syöttökenttä näyttää tältä:
 
-![Syöttöruutu käyttäjälle kyselyn syöttämiseksi](../../../translated_images/notebook-search.31eabddd06254ea17ca4fe27dec0373d294da1abe4c1e8b7edc0dd31a18aeb9a.fi.png)
+![Syöttökenttä käyttäjän hakukyselylle](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.fi.png)
 
 ## Hienoa työtä! Jatka oppimista
 
-Oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyosaamisen kehittämistä!
+Oppitunnin suorittamisen jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisesi kehittämistä!
 
-Siirry oppituntiin 9, jossa tarkastelemme kuinka [rakentaa kuvien luomissovelluksia](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Siirry oppitunnille 9, jossa tutustumme siihen, miten [rakentaa kuvageneraattorisovelluksia](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, on hyvä huomata, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaisen ihmiskääntäjän käyttöä. Emme ole vastuussa väärinkäsityksistä tai virheellisistä tulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

@@ -2,47 +2,47 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:57:02+00:00",
+  "translation_date": "2025-07-09T18:59:49+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "tr"
 }
 -->
-# Mistral Modelleri ile İnşa Etme
+# Mistral Modelleri ile Çalışmak
 
 ## Giriş
 
-Bu ders şunları kapsayacak:
-- Farklı Mistral Modellerini keşfetme
-- Her model için kullanım alanlarını ve senaryoları anlama
-- Kod örnekleri her modelin benzersiz özelliklerini gösterir.
+Bu derste şunlar ele alınacaktır:  
+- Farklı Mistral Modellerinin keşfi  
+- Her modelin kullanım alanları ve senaryolarının anlaşılması  
+- Kod örnekleri ile her modelin benzersiz özelliklerinin gösterilmesi.
 
 ## Mistral Modelleri
 
-Bu derste, 3 farklı Mistral modelini keşfedeceğiz:
+Bu derste, 3 farklı Mistral modeli incelenecektir:  
 **Mistral Large**, **Mistral Small** ve **Mistral Nemo**.
 
-Bu modellerin her biri Github Model pazarında ücretsiz olarak mevcuttur. Bu not defterindeki kod, bu modelleri kullanarak kodu çalıştıracaktır. AI modelleriyle [prototipleme yapma](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi için buraya bakın.
+Bu modellerin her biri Github Model pazarında ücretsiz olarak mevcuttur. Bu not defterindeki kodlar, bu modelleri kullanarak çalıştırılacaktır. Github Modelleri kullanarak [AI modelleri ile prototip oluşturma](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi için buraya bakabilirsiniz.
 
-## Mistral Large 2 (2407)
-Mistral Large 2, Mistral'ın şu anda amiral gemisi modeli olup, kurumsal kullanım için tasarlanmıştır.
+## Mistral Large 2 (2407)  
+Mistral Large 2, şu anda Mistral’ın amiral gemisi modeli olup kurumsal kullanım için tasarlanmıştır.
 
-Model, orijinal Mistral Large'a aşağıdaki geliştirmeleri sunar:
-- Daha Büyük Bağlam Penceresi - 128k vs 32k
-- Matematik ve Kodlama Görevlerinde Daha İyi Performans - %76.9 ortalama doğruluk vs %60.4
-- Artan çok dilli performans - diller: İngilizce, Fransızca, Almanca, İspanyolca, İtalyanca, Portekizce, Hollandaca, Rusça, Çince, Japonca, Korece, Arapça ve Hintçe.
+Model, orijinal Mistral Large modeline göre şu geliştirmeleri sunar:  
+- Daha büyük bağlam penceresi - 128k vs 32k  
+- Matematik ve Kodlama görevlerinde daha iyi performans - %76.9 ortalama doğruluk vs %60.4  
+- Artan çok dilli performans - desteklenen diller: İngilizce, Fransızca, Almanca, İspanyolca, İtalyanca, Portekizce, Hollandaca, Rusça, Çince, Japonca, Korece, Arapça ve Hintçe.
 
-Bu özelliklerle, Mistral Large şu konularda mükemmeldir:
-- *Retrieval Augmented Generation (RAG)* - daha büyük bağlam penceresi sayesinde
-- *Fonksiyon Çağırma* - bu model, harici araçlar ve API'lerle entegrasyona olanak tanıyan yerel fonksiyon çağırma özelliğine sahiptir. Bu çağrılar hem paralel hem de ardışık olarak yapılabilir.
-- *Kod Üretimi* - bu model Python, Java, TypeScript ve C++ üretiminde mükemmeldir.
+Bu özelliklerle Mistral Large şu alanlarda öne çıkar:  
+- *Retrieval Augmented Generation (RAG)* - daha büyük bağlam penceresi sayesinde  
+- *Fonksiyon Çağrısı* - bu model, dış araçlar ve API’lerle entegrasyon sağlayan yerel fonksiyon çağrısı özelliğine sahiptir. Bu çağrılar paralel veya ardışık olarak yapılabilir.  
+- *Kod Üretimi* - Python, Java, TypeScript ve C++ kod üretiminde başarılıdır.
 
-### Mistral Large 2 Kullanarak RAG Örneği
+### Mistral Large 2 ile RAG Örneği
 
-Bu örnekte, bir metin belgesi üzerinde bir RAG deseni çalıştırmak için Mistral Large 2 kullanıyoruz. Soru Korece yazılmış ve yazarın üniversite öncesi aktiviteleri hakkında soruyor.
+Bu örnekte, Mistral Large 2 kullanılarak bir metin belgesi üzerinde RAG deseni uygulanmaktadır. Soru Korece yazılmış olup yazarın üniversite öncesi faaliyetleri hakkında bilgi istemektedir.
 
-Metin belgesinin ve sorunun gömülü hallerini oluşturmak için Cohere Embeddings Model kullanıyor. Bu örnek için faiss Python paketi bir vektör deposu olarak kullanılıyor.
+Metin belgesi ve soru için gömme (embedding) oluşturmak üzere Cohere Embeddings Modeli kullanılır. Bu örnekte, vektör deposu olarak faiss Python paketi tercih edilmiştir.
 
-Mistral modeline gönderilen istem, hem soruları hem de soruya benzer olan alınan parçaları içerir. Model daha sonra doğal dilde bir yanıt sağlar.
+Mistral modeline gönderilen prompt, hem soruları hem de soruya benzer bulunan metin parçalarını içerir. Model daha sonra doğal dilde yanıt verir.
 
 ```python 
 pip install faiss-cpu
@@ -138,22 +138,22 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
-Mistral Small, Mistral model ailesindeki bir başka model olup, premier/kurumsal kategori altında yer alır. İsminin de belirttiği gibi, bu model Küçük Dil Modeli (SLM) olarak bilinir. Mistral Small kullanmanın avantajları şunlardır:
-- Mistral LLM'leri gibi Mistral Large ve NeMo'ya kıyasla maliyet tasarrufu - %80 fiyat düşüşü
-- Düşük gecikme - Mistral'ın LLM'lerine kıyasla daha hızlı yanıt
-- Esnek - farklı ortamlarda daha az kaynak gereksinimi ile dağıtılabilir.
+## Mistral Small  
+Mistral Small, Mistral ailesinin premier/kurumsal kategorisindeki bir diğer modelidir. Adından da anlaşılacağı üzere, bu model Küçük Dil Modeli (SLM) olarak tasarlanmıştır. Mistral Small kullanmanın avantajları şunlardır:  
+- Mistral Large ve NeMo gibi Mistral LLM’lerine kıyasla maliyet tasarrufu - %80 fiyat düşüşü  
+- Düşük gecikme süresi - Mistral’ın diğer LLM’lerine göre daha hızlı yanıt  
+- Esneklik - farklı ortamlarda, gereken kaynaklar konusunda daha az kısıtlamayla dağıtılabilir.
 
-Mistral Small, şu konularda harikadır:
-- Özetleme, duygu analizi ve çeviri gibi metin tabanlı görevler.
-- Maliyet etkinliği nedeniyle sık sık istek yapılan uygulamalar
-- Kod inceleme ve kod önerileri gibi düşük gecikmeli kod görevleri
+Mistral Small şu görevler için idealdir:  
+- Özetleme, duygu analizi ve çeviri gibi metin tabanlı görevler  
+- Sık istek yapılan uygulamalar için maliyet etkinliği nedeniyle  
+- İnceleme ve kod önerileri gibi düşük gecikmeli kod görevleri
 
 ## Mistral Small ve Mistral Large Karşılaştırması
 
-Mistral Small ve Large arasındaki gecikme farkını göstermek için aşağıdaki hücreleri çalıştırın.
+Mistral Small ve Large arasındaki gecikme farkını göstermek için aşağıdaki hücreleri çalıştırabilirsiniz.
 
-Aynı istem üzerinde yanıt süreleri arasında 3-5 saniye fark görmelisiniz. Ayrıca yanıt uzunluklarına ve tarzına dikkat edin.
+Yanıt süreleri arasında 3-5 saniye fark görmelisiniz. Ayrıca aynı prompt için yanıt uzunlukları ve tarzına da dikkat edin.
 
 ```python 
 
@@ -215,23 +215,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Bu derste tartışılan diğer iki modele kıyasla, Mistral NeMo Apache2 Lisansı ile tek ücretsiz modeldir.
+Bu derste ele alınan diğer iki modele kıyasla, Mistral NeMo Apache2 Lisansına sahip tek ücretsiz modeldir.
 
-Mistral'ın daha önceki açık kaynak LLM'si olan Mistral 7B'ye bir yükseltme olarak görülmektedir.
+Mistral NeMo, Mistral’ın önceki açık kaynak LLM’si olan Mistral 7B’nin bir yükseltmesi olarak görülür.
 
-NeMo modelinin bazı diğer özellikleri şunlardır:
+NeMo modelinin diğer bazı özellikleri şunlardır:
 
-- *Daha verimli tokenizasyon:* Bu model, daha yaygın kullanılan tiktoken yerine Tekken tokenlaştırıcıyı kullanır. Bu, daha fazla dil ve kod üzerinde daha iyi performans sağlar.
+- *Daha verimli tokenizasyon:* Bu model, yaygın kullanılan tiktoken yerine Tekken tokenizer kullanır. Bu sayede daha fazla dil ve kod üzerinde daha iyi performans sağlar.
 
-- *İnce Ayar:* Temel model ince ayar için kullanılabilir. Bu, ince ayar gerektirebilecek kullanım senaryoları için daha fazla esneklik sağlar.
+- *İnce ayar (Finetuning):* Temel model ince ayar için kullanılabilir. Bu, ince ayar gerektiren kullanım senaryoları için daha fazla esneklik sunar.
 
-- *Yerel Fonksiyon Çağırma* - Mistral Large gibi, bu model fonksiyon çağırma konusunda eğitilmiştir. Bu, ilk açık kaynak modellerden biri olarak benzersiz kılar.
+- *Yerel Fonksiyon Çağrısı* - Mistral Large gibi, bu model de fonksiyon çağrısı eğitimi almıştır. Bu özelliğiyle açık kaynak modeller arasında öncü konumdadır.
 
 ### Tokenizer Karşılaştırması
 
-Bu örnekte, Mistral NeMo'nun tokenizasyonu Mistral Large ile karşılaştırılarak incelenecektir.
+Bu örnekte, Mistral NeMo’nun tokenizasyonu Mistral Large ile nasıl karşılaştırdığına bakacağız.
 
-Her iki örnek de aynı istemi alır ancak NeMo'nun daha az token geri döndüğünü görmelisiniz.
+Her iki örnek de aynı prompt’u kullanır ancak NeMo’nun Mistral Large’a kıyasla daha az token döndürdüğünü göreceksiniz.
 
 ```bash
 pip install mistral-common
@@ -349,9 +349,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Öğrenme burada bitmez, Yolculuğa Devam Edin
+## Öğrenme burada bitmiyor, yolculuğa devam edin
 
-Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Öğrenme koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyin!
+Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atabilirsiniz!
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çabalasak da, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.

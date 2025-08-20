@@ -2,65 +2,65 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:23:04+00:00",
+  "translation_date": "2025-07-09T14:26:51+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "ja"
 }
 -->
 # 関数呼び出しとの統合
 
-[![関数呼び出しとの統合](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.ja.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![関数呼び出しとの統合](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.ja.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-これまでのレッスンでかなりのことを学びましたが、さらに改善できることがあります。対応できることの一つは、より一貫した応答形式を取得して、応答を下流で扱いやすくする方法です。また、他の情報源からデータを追加してアプリケーションをさらに豊かにしたい場合もあります。
+これまでのレッスンでかなりのことを学びましたが、さらに改善の余地があります。特に、レスポンスの形式をより一貫性のあるものにして、後続の処理をしやすくする方法や、他のデータソースから情報を追加してアプリケーションをより充実させる方法について取り組みたいと思います。
 
-この章では、上記の問題に対処することを目指しています。
+これらの課題が本章で扱う内容です。
 
 ## はじめに
 
 このレッスンでは以下を扱います：
 
-- 関数呼び出しとは何か、その使用例を説明する。
-- Azure OpenAIを使用して関数呼び出しを作成する。
-- アプリケーションに関数呼び出しを統合する方法。
+- 関数呼び出しとは何か、その利用ケースの説明
+- Azure OpenAIを使った関数呼び出しの作成
+- 関数呼び出しをアプリケーションに統合する方法
 
 ## 学習目標
 
-このレッスンの終わりまでに、以下ができるようになります：
+このレッスンを終える頃には、以下ができるようになります：
 
-- 関数呼び出しを使用する目的を説明する。
-- Azure OpenAIサービスを使用して関数呼び出しを設定する。
-- アプリケーションの使用例に合わせた効果的な関数呼び出しを設計する。
+- 関数呼び出しを使う目的を説明できる
+- Azure OpenAI Serviceで関数呼び出しを設定できる
+- アプリケーションのユースケースに合わせた効果的な関数呼び出しを設計できる
 
-## シナリオ：チャットボットを関数で改善する
+## シナリオ：関数でチャットボットを改善する
 
-このレッスンでは、教育系スタートアップの機能を構築し、ユーザーがチャットボットを使って技術コースを見つけられるようにしたいと思います。ユーザーのスキルレベル、現在の役割、興味のある技術に合ったコースを推薦します。
+このレッスンでは、教育系スタートアップ向けに、ユーザーがチャットボットを使って技術コースを探せる機能を作ります。ユーザーのスキルレベル、現在の役割、興味のある技術に合ったコースを推薦します。
 
-このシナリオを完了するために、以下を組み合わせて使用します：
+このシナリオを実現するために、以下を組み合わせて使います：
 
-- `Azure OpenAI`を使用してユーザー向けのチャット体験を作成する。
-- `Microsoft Learn Catalog API`を使用してユーザーのリクエストに基づいてコースを見つける手助けをする。
-- `Function Calling`を使用してユーザーのクエリを関数に送信し、APIリクエストを行う。
+- ユーザー向けのチャット体験を作るための `Azure OpenAI`
+- ユーザーのリクエストに基づいてコースを探すための `Microsoft Learn Catalog API`
+- ユーザーのクエリを関数に渡してAPIリクエストを行うための `Function Calling`
 
-まず、なぜ関数呼び出しを使用するのかを見てみましょう：
+まずは、なぜ関数呼び出しを使いたいのかを見てみましょう。
 
-## なぜ関数呼び出しを使用するのか
+## なぜ関数呼び出しか
 
-関数呼び出しを使用する前は、LLMからの応答は構造化されておらず、一貫性がありませんでした。開発者は、応答の各バリエーションを処理できるようにするために複雑な検証コードを書く必要がありました。ユーザーは「ストックホルムの現在の天気は？」のような質問に答えることができませんでした。これは、モデルがデータのトレーニング時点に制限されていたためです。
+関数呼び出しが登場する前は、LLMからのレスポンスは非構造的で一貫性がありませんでした。開発者はレスポンスのバリエーションに対応するために複雑なバリデーションコードを書く必要がありました。また、「ストックホルムの現在の天気は？」のような質問に答えることもできませんでした。これはモデルが学習時点のデータに制限されていたためです。
 
-Azure OpenAIサービスの機能呼び出しは、以下の制限を克服するための機能です：
+Function CallingはAzure OpenAI Serviceの機能で、以下の制約を克服します：
 
-- **一貫した応答形式**。応答形式をより良く制御できれば、応答を他のシステムに統合しやすくなります。
-- **外部データ**。チャットコンテキストでアプリケーションの他の情報源からのデータを使用する能力。
+- **一貫したレスポンス形式**：レスポンス形式をより厳密に制御できれば、他のシステムへの統合が容易になります。
+- **外部データの利用**：チャットの文脈でアプリケーションの他のデータソースを活用できます。
 
-## シナリオを通じて問題を説明する
+## シナリオで問題を説明する
 
-> 以下のシナリオを実行したい場合は、[付属のノートブック](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)を使用することをお勧めします。単に読み進めるだけでも、関数が問題の解決に役立つ状況を説明しようとしていることを理解できます。
+> 下記のシナリオを実行したい場合は、[付属のノートブック](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)の利用をおすすめします。ここでは関数が問題解決に役立つ例を示すため、読み進めるだけでも構いません。
 
-応答形式の問題を説明する例を見てみましょう：
+レスポンス形式の問題を示す例を見てみましょう：
 
-例えば、学生データのデータベースを作成して、適切なコースを提案したいとします。以下に、非常に似たデータを含む学生の説明が2つあります。
+学生データのデータベースを作成し、適切なコースを提案したいとします。以下に、ほぼ同じ内容の2つの学生の説明があります。
 
-1. Azure OpenAIリソースへの接続を作成する：
+1. Azure OpenAIリソースへの接続を作成します：
 
    ```python
    import os
@@ -77,9 +77,9 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   以下は、Azure OpenAIへの接続を設定するためのPythonコードで、`api_type`, `api_base`, `api_version` and `api_key`.
+   これはPythonコードで、`api_type`、`api_base`、`api_version`、`api_key`を設定してAzure OpenAIへの接続を構成しています。
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`を設定します。
+1. 変数 `student_1_description` と `student_2_description` を使って2つの学生説明を作成します。
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   上記の学生の説明をLLMに送信してデータを解析します。このデータは後でアプリケーションで使用され、APIに送信したりデータベースに保存したりできます。
+   これらの学生説明をLLMに送り、データを解析してもらいます。このデータは後でアプリケーションで使ったり、APIに送ったり、データベースに保存したりできます。
 
-1. LLMに関心のある情報を指示する2つの同一のプロンプトを作成しましょう：
+1. LLMにどの情報を抽出してほしいか指示するため、同じ内容のプロンプトを2つ作成します：
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    '''
    ```
 
-   上記のプロンプトは、LLMに情報を抽出し、応答をJSON形式で返すように指示しています。
+   これらのプロンプトは、LLMに情報を抽出しJSON形式で返すよう指示しています。
 
-1. プロンプトとAzure OpenAIへの接続を設定した後、`openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`を使用してプロンプトをLLMに送信します。これはユーザーがチャットボットに書き込むメッセージを模倣するためです。
+1. プロンプトとAzure OpenAIへの接続を設定したら、`openai.ChatCompletion`を使ってプロンプトをLLMに送信します。`messages`変数にプロンプトを格納し、役割を`user`に設定します。これはユーザーがチャットボットにメッセージを送る状況を模しています。
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    openai_response2.choices[0].message.content
    ```
 
-これで、両方のリクエストをLLMに送信し、応答を受け取って`openai_response1['choices'][0]['message']['content']`.
+両方のリクエストをLLMに送り、`openai_response1['choices'][0]['message']['content']`のようにレスポンスを確認します。
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`のように見つけることができます：
+1. 最後に、`json.loads`を使ってレスポンスをJSON形式に変換します：
 
    ```python
    # Loading the response as a JSON object
@@ -149,7 +149,7 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    json_response1
    ```
 
-   応答1：
+   レスポンス1：
 
    ```json
    {
@@ -161,7 +161,7 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    }
    ```
 
-   応答2：
+   レスポンス2：
 
    ```json
    {
@@ -173,55 +173,55 @@ Azure OpenAIサービスの機能呼び出しは、以下の制限を克服す�
    }
    ```
 
-   プロンプトは同じで、説明も似ているにもかかわらず、`Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   プロンプトは同じで説明も似ているのに、`Grades`プロパティの値のフォーマットが異なります。例えば、`3.7`だったり`3.7 GPA`だったりします。
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   これは、LLMが非構造的なプロンプトを受け取り、非構造的なデータを返しているためです。データを保存・利用する際に何を期待すべきか分かるよう、構造化された形式が必要です。
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+では、フォーマットの問題はどう解決するのでしょうか？関数呼び出しを使うことで、構造化されたデータを確実に受け取れます。関数呼び出しを使う場合、LLMは実際に関数を呼び出したり実行したりしません。代わりに、LLMがレスポンスで従うべき構造を作成します。その構造化されたレスポンスを使って、アプリケーションでどの関数を実行するか判断します。
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.ja.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.ja.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+関数から返された結果をLLMに送り返すこともできます。LLMは自然言語でユーザーの質問に答えます。
 
-## Use Cases for using function calls
+## 関数呼び出しの利用ケース
 
-There are many different use cases where function calls can improve your app like:
+関数呼び出しがアプリを改善できるケースは多岐にわたります：
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **外部ツールの呼び出し**：チャットボットはユーザーの質問に答えるのが得意です。関数呼び出しを使うと、ユーザーのメッセージをもとに特定のタスクを実行できます。例えば、学生が「この科目についてもっと助けが必要だと先生にメールを送って」とチャットボットに頼むと、`send_email(to: string, body: string)`という関数呼び出しが行われます。
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **APIやデータベースクエリの作成**：ユーザーは自然言語で情報を探し、それがフォーマットされたクエリやAPIリクエストに変換されます。例えば、教師が「最後の課題を完了した学生は誰？」と尋ねると、`get_completed(student_name: string, assignment: int, current_status: string)`という関数が呼ばれます。
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **構造化データの作成**：ユーザーはテキストやCSVの塊から重要な情報をLLMに抽出させることができます。例えば、学生が平和協定に関するWikipedia記事をAIフラッシュカードに変換する場合、`get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`という関数を使います。
 
-## Creating Your First Function Call
+## 最初の関数呼び出しを作成する
 
-The process of creating a function call includes 3 main steps:
+関数呼び出しを作成するプロセスは主に3つのステップです：
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. 関数のリストとユーザーメッセージを使ってChat Completions APIを呼び出す
+2. モデルのレスポンスを読み取り、関数やAPIコールを実行するなどのアクションを行う
+3. 関数のレスポンスを使って、ユーザーへの返答を作成するためにChat Completions APIを再度呼び出す
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.ja.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.ja.png)
 
-### Step 1 - creating messages
+### ステップ1 - メッセージの作成
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+最初のステップはユーザーメッセージを作成することです。これはテキスト入力の値を動的に割り当ててもよいですし、ここで直接値を設定しても構いません。Chat Completions APIを初めて使う場合は、`role`と`content`を定義する必要があります。
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user`の値と例の質問が異なることがわかります。
+`role`は`system`（ルール作成）、`assistant`（モデル）、`user`（エンドユーザー）のいずれかです。関数呼び出しでは`user`を割り当て、例として質問を設定します。
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-異なる役割を割り当てることで、LLMがシステムが何かを言っているのか、ユーザーが何かを言っているのかが明確になり、LLMが基づくことができる会話履歴を構築するのに役立ちます。
+異なる役割を割り当てることで、LLMはシステムが話しているのかユーザーが話しているのかを認識し、会話履歴を構築しやすくなります。
 
 ### ステップ2 - 関数の作成
 
-次に、関数とそのパラメータを定義します。ここでは、`search_courses` but you can create multiple functions.
+次に関数とそのパラメーターを定義します。ここでは`search_courses`という1つの関数だけを使いますが、複数作成しても構いません。
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **重要** : 関数はシステムメッセージに含まれ、利用可能なトークン数にカウントされます。
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`という1つの関数だけを使用します：
+以下のように、関数を配列として作成します。各要素は関数で、`name`、`description`、`parameters`のプロパティを持ちます：
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-以下に各関数インスタンスを詳しく説明します：
+各関数の詳細は以下の通りです：
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - 呼び出したい関数の名前
+- `description` - 関数の動作説明。具体的かつ明確に書くことが重要です。
+- `parameters` - モデルがレスポンスで生成すべき値と形式のリスト。`parameters`配列の各要素は以下のプロパティを持ちます：
+  1. `type` - プロパティのデータ型
+  2. `properties` - モデルがレスポンスで使う具体的な値のリスト
+     1. `name` - モデルがフォーマットされたレスポンスで使うキー名（例：`product`）
+     2. `type` - このプロパティのデータ型（例：`string`）
+     3. `description` - プロパティの説明
 
-There's also an optional property `required` - required property for the function call to be completed.
+また、関数呼び出しを完了するために必須のプロパティを指定する`required`もあります（任意）。
 
-### Step 3 - Making the function call
+### ステップ3 - 関数呼び出しの実行
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+関数を定義したら、Chat Completion APIの呼び出しに関数を含める必要があります。これはリクエストに`functions`を追加することで行います。ここでは`functions=functions`とします。
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+また、`function_call`を`auto`に設定するオプションもあります。これはユーザーメッセージに基づいてLLMにどの関数を呼び出すか判断させる設定です。
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"`を使用して、関数を呼び出すタイミングをLLMに選択させます：
+以下のコードは`ChatCompletion.create`を呼び出す例で、`functions=functions`と`function_call="auto"`を設定し、LLMに関数呼び出しのタイミングを任せています：
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-返ってくる応答は次のようになります：
+返ってくるレスポンスは以下のようになります：
 
 ```json
 {
@@ -294,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-ここでは、関数`search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+ここでは`search_courses`関数が呼ばれ、`arguments`プロパティに引数がJSON形式で含まれているのが分かります。
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages`の値を確認できます：
+LLMは`messages`パラメーターに渡された値から引数に合うデータを抽出できたということです。`messages`の値は以下の通りです：
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-ご覧のように、`student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+ご覧の通り、`student`、`Azure`、`beginner`が`messages`から抽出され、関数の入力として設定されています。このように関数を使うことで、プロンプトから情報を抽出しつつ、LLMに構造を与え、再利用可能な機能を持たせることができます。
 
-Next, we need to see how we can use this in our app.
+次に、これをアプリにどう活用するかを見ていきましょう。
 
-## Integrating Function Calls into an Application
+## 関数呼び出しをアプリケーションに統合する
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+LLMからのフォーマットされたレスポンスをテストしたら、これをアプリケーションに統合します。
 
-### Managing the flow
+### フローの管理
 
-To integrate this into our application, let's take the following steps:
+アプリに統合するために、以下のステップを踏みます：
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`の値が表示されます。
+1. まずOpenAIサービスに呼び出しを行い、レスポンスメッセージを`response_message`という変数に保存します。
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. 次に、Microsoft Learn APIを呼び出してコースのリストを取得する関数を定義します：
+1. 次に、Microsoft Learn APIを呼び出してコース一覧を取得する関数を定義します：
 
    ```python
    import requests
@@ -342,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   ここで、`functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   ここでは、`functions`変数で定義した関数名に対応するPython関数を実際に作成しています。また、必要なデータを取得するために外部APIを呼び出しています。この例ではMicrosoft Learn APIに対してトレーニングモジュールを検索しています。
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+さて、`functions`変数と対応するPython関数を作成しましたが、LLMにこれらをどう紐づけてPython関数を呼び出すかを伝えるには？
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call`がその一部であり、指摘された関数を呼び出す実際のPython関数を作成します。以下に示すようにチェックを行う方法です：
+1. Python関数を呼び出す必要があるかどうかは、LLMのレスポンスに`function_call`が含まれているかを確認します。以下のコードでそのチェックを行います：
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   これらの3行は、関数名、引数を抽出し、呼び出しを行うことを保証します：
+   3行で関数名と引数を抽出し、関数を呼び出しています：
 
    ```python
    function_to_call = available_functions[function_name]
@@ -400,7 +400,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   以下はコードを実行した結果です：
+   以下はコード実行時の出力例です：
 
    **出力**
 
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. 次に、更新されたメッセージ`messages`をLLMに送信し、API JSON形式の応答ではなく自然言語の応答を受け取ります。
+1. 更新されたメッセージ`messages`をLLMに送り、APIのJSON形式のレスポンスではなく自然言語の返答を受け取ります。
 
    ```python
    print("Messages in next request:")
@@ -452,19 +452,16 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## 課題
 
-Azure OpenAI関数呼び出しの学習を続けるために、以下を構築できます：
+Azure OpenAI Function Callingの学習を続けるために、以下に取り組んでみてください：
 
-- 学習者がより多くのコースを見つけるのに役立つ関数のより多くのパラメータ。
-- 学習者の母国語のような情報を取得する別の関数呼び出しを作成する。
-- 関数呼び出しやAPI呼び出しが適切なコースを返さない場合のエラー処理を作成する。
+- 学習者がより多くのコースを見つけやすくするための関数のパラメーターを増やす
+- 学習者の母国語など、より多くの情報を受け取る別の関数呼び出しを作成する
+- 関数呼び出しやAPI呼び出しが適切なコースを返さなかった場合のエラーハンドリングを作る
+## 素晴らしい！旅を続けましょう
 
-ヒント：[Learn APIリファレンスドキュメント](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst)ページを参照して、このデータがどのように、どこで利用可能かを確認してください。
+このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) をチェックして、生成AIの知識をさらに深めましょう！
 
-## 素晴らしい仕事！旅を続けましょう
+次はレッスン12へ進み、[AIアプリケーションのUX設計](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
 
-このレッスンを完了した後、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、Generative AIの知識をさらに向上させましょう！
-
-レッスン12に進み、AIアプリケーションのUX設計について学びましょう！[デザインUX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
-
-**免責事項**：
-このドキュメントはAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を期していますが、自動翻訳には誤りや不正確さが含まれる可能性があることをご承知ください。元の言語によるオリジナルのドキュメントが権威ある情報源とみなされるべきです。重要な情報については、プロの人間による翻訳をお勧めします。この翻訳の使用に起因する誤解や誤った解釈に関して、当方は責任を負いません。
+**免責事項**：  
+本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。

@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:07:05+00:00",
+  "translation_date": "2025-07-09T19:06:59+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "mo"
 }
 -->
-# Binaa ma'a Namoothajaat Usrat Meta
+# 使用 Meta 家族模型構建
 
-## Muqadima
+## 介紹
 
-Hadhihi al-dars satughati:
+本課程將涵蓋：
 
-- Istikshaf al-namoothajayn al-ra'iseeyayn li-usrat Meta - Llama 3.1 wa Llama 3.2
-- Fahm al-istekhdamaat wa al-sinariohaat likull namoothaj
-- Namozaj code li-izhar al-mazaat al-fareeda likull namoothaj
+- 探索兩個主要的 Meta 家族模型 - Llama 3.1 和 Llama 3.2
+- 了解每個模型的使用案例和應用場景
+- 透過程式碼範例展示各模型的獨特功能
 
-## Usrat Namoothajaat Meta
+## Meta 家族模型
 
-Fi hadhihi al-dars, sanastakshif 2 namoothajaat min usrat Meta aw "Qati' Llama" - Llama 3.1 wa Llama 3.2.
+在本課程中，我們將探索來自 Meta 家族或「Llama Herd」的兩個模型 - Llama 3.1 和 Llama 3.2
 
-Hadhihi al-namoothajaat tatia fi anwa' mukhtalifa wa tatawafar fi suq GitHub Model. Huna tafasil akthar hawl istikhdam Namoothajaat GitHub li [tashkil namoothajaat AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+這些模型有不同的變體，並可在 GitHub Model 市場上取得。以下是使用 GitHub Models 來[以 AI 模型進行原型設計](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的更多細節。
 
-Anwa' al-Namoothajaat:
+模型變體：
 - Llama 3.1 - 70B Instruct
 - Llama 3.1 - 405B Instruct
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Mulahadha: Llama 3 aydaan mutawafar ala Namoothajaat GitHub walakin lan yughati fi hadhihi al-dars*
+*注意：Llama 3 也可在 GitHub Models 上取得，但本課程不涵蓋該模型*
 
 ## Llama 3.1
 
-Bi 405 milyar mu'addilat, Llama 3.1 yandam ila qism LLM al-maftooh al-masdar.
+擁有 4050 億參數的 Llama 3.1 屬於開源大型語言模型（LLM）類別。
 
-Al-namoothaj huwa tarqiya li-sadr as-sabiq Llama 3 bi-taqdeem:
+此模型是早期版本 Llama 3 的升級版，提供：
 
-- Nafitha siyaq akbar - 128k tokens muqabil 8k tokens
-- Akbar Max Output Tokens - 4096 muqabil 2048
-- Da'am afdal li-lughat muta'addida - bisabab ziyaada fi tokens at-ta'aleem
+- 更大的上下文視窗 - 128k 代幣對比 8k 代幣
+- 更大的最大輸出代幣數 - 4096 對比 2048
+- 更佳的多語言支援 - 由於訓練代幣數增加
 
-Hadhihi al-mazaat tamkin Llama 3.1 min ta'amul ma'a mustakhdamaat akthar taqeedan 'ind bina baramij GenAI bima fiha:
-- Nadha al-funqiyaat al-asliya - al-qadra ala nadha alat wa funqiyaat kharij workflow LLM
-- Ada' RAG afdal - bisabab nafitha siyaq akbar
-- Tawleed bayanat sintetik - al-qadra ala insha bayanat mu'athira li-mahamaat mithla tadhil al-dala'ib
+這些改進使 Llama 3.1 能夠處理更複雜的應用場景，適合用於構建生成式 AI 應用，包括：
+- 原生函數調用 - 能夠呼叫 LLM 工作流程外的外部工具和函數
+- 更佳的 RAG 表現 - 由於更大的上下文視窗
+- 合成數據生成 - 能夠為微調等任務創建有效數據
 
-### Nadha al-funqiyaat al-asliya
+### 原生函數調用
 
-Llama 3.1 qamat bi-tahseen li-takoon akthar fa'aliya fi nadha funqiyaat aw alat. Aydaan, ladayha alat mabniya fi al-namoothaj yumkin an yat'araf 'alayha ka-hajaat li-istikhdam bisabab al-tahadi min al-mustakhdim. Hadhihi al-alat hiya:
+Llama 3.1 經過微調，能更有效地進行函數或工具調用。它內建兩個工具，模型可根據使用者的提示判斷是否需要使用這些工具。這些工具包括：
 
-- **Brave Search** - yumkin istikhdamha li-hasool ala ma'lumaat muwakkata mithla al-taqs bi-tanfidh bahth ala al-internet
-- **Wolfram Alpha** - yumkin istikhdamha li-hisabat riyadiya akthar taqeedan fa la yajib kataba funqiyaatak al-khas.
+- **Brave Search** - 可用於透過網路搜尋獲取最新資訊，如天氣
+- **Wolfram Alpha** - 可用於更複雜的數學計算，無需自行撰寫函數
 
-Yumkin aydaan insha alat khasat bi-ka yumkin nadha min LLM.
+你也可以創建自訂工具供 LLM 調用。
 
-Fi namozaj code adna:
+以下程式碼範例中：
 
-- Nu'arif al-alat al-muwafara (brave_search, wolfram_alpha) fi al-tahadi nitham.
-- Nursil tahadi mustakhdim yas'al hawl al-taqs fi madina mu'ayyana.
-- LLM sayarud bi-nadha alat li-alat Brave Search allati satabdu mithla hatha `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- 我們在系統提示中定義可用工具（brave_search、wolfram_alpha）
+- 傳送一個詢問某城市天氣的使用者提示
+- LLM 將回應一個對 Brave Search 工具的調用，形式如 `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Mulahadha: Hadhihi al-namozaj yujri nadha al-alat faqat, idha turid al-hasool ala al-nata'ij, sa-yajib insha hesab majani fi safhat Brave API wa ta'arif al-funqiya binafsaha*
+*注意：此範例僅示範工具調用，若想取得結果，需在 Brave API 頁面註冊免費帳號並定義該函數本身*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Raghma konha LLM, wahid min al-ma'ayib li-Llama 3.1 huwa al-tawajuh al-mutahaddid. Ay, al-qadra ala istikhdam anwa' mukhtalifa min al-madakhil mithla al-suwar ka-tahadiyat wa taqdeem radud. Hadhihi al-qadra hiya wahid min al-mazaat al-ra'iseeya li-Llama 3.2. Hadhihi al-mazaat aydaan tatawafor:
+雖然 Llama 3.1 是大型語言模型，但其一個限制是多模態能力，也就是能使用不同類型的輸入（如圖片）作為提示並提供回應。這正是 Llama 3.2 的主要特色之一。其他特點包括：
 
-- Tawajuh mutahaddid - ladayha al-qadra ala taqdeer tahadiyat matn wa sura
-- Anwa' sghira ila mutawassita (11B wa 90B) - hada yuqdeem khayarat tawthiq muruna
-- Anwa' matn faqat (1B wa 3B) - hada yasmah li-namoothaj bil-tawthiq ala ajhiza al-hafa / ajhiza al-hatif wa yuqdeem khayarat low latency
+- 多模態能力 - 能同時處理文字和圖片提示
+- 小到中型變體（11B 和 90B） - 提供靈活的部署選項
+- 純文字變體（1B 和 3B） - 允許模型部署於邊緣或行動裝置，並提供低延遲
 
-Da'am mutahaddid yumathil qadam kabeer fi 'alam namoothajaat al-maftooh al-masdar. Namozaj code adna ya'thak wa tahadiyat matn wa sura li-hasool ala tahleel al-sura min Llama 3.2 90B.
+多模態支援是開源模型領域的一大進步。以下程式碼範例同時使用圖片和文字提示，讓 Llama 3.2 90B 對圖片進行分析。
 
-### Da'am mutahaddid ma'a Llama 3.2
+### Llama 3.2 的多模態支援
 
 ```python 
 import os
@@ -158,8 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Al-ta'aleem la yatwaqqaf huna, istamirr fi al-rahlah
+## 學習不止於此，繼續前行
 
-Ba'ad ikmal hadhihi al-dars, itlaq nazhra ala [Majmu'at Ta'aleem AI al-Insha'](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) li-istimrar fi raf'a ma'arifatka fi AI al-Insha!
+完成本課程後，請參考我們的[生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
-I'm sorry, but I can't assist with translating the text into "mo" as it doesn't appear to correspond to a specific language. Could you please clarify or specify the language you need the text translated into?
+**免責聲明**：  
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。

@@ -2,61 +2,61 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f12faf55ab620aef9f6761679b7ac68b",
-  "translation_date": "2025-05-19T12:48:45+00:00",
+  "translation_date": "2025-07-09T07:30:19+00:00",
   "source_file": "00-course-setup/SETUP.md",
   "language_code": "el"
 }
 -->
-# Ρύθμιση του Περιβάλλοντος Ανάπτυξης
+# Ρύθμιση του Περιβάλλοντος Ανάπτυξής σας
 
-Έχουμε δημιουργήσει αυτό το αποθετήριο και το μάθημα με ένα [container ανάπτυξης](https://containers.dev?WT.mc_id=academic-105485-koreyst) που διαθέτει έναν καθολικό χρόνο εκτέλεσης για ανάπτυξη σε Python3, .NET, Node.js και Java. Η σχετική διαμόρφωση ορίζεται στο αρχείο `devcontainer.json` που βρίσκεται στον φάκελο `.devcontainer/` στη ρίζα αυτού του αποθετηρίου.
+Έχουμε ρυθμίσει αυτό το αποθετήριο και το μάθημα με ένα [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) που διαθέτει ένα Universal runtime το οποίο υποστηρίζει ανάπτυξη σε Python3, .NET, Node.js και Java. Η σχετική διαμόρφωση ορίζεται στο αρχείο `devcontainer.json` που βρίσκεται στον φάκελο `.devcontainer/` στη ρίζα αυτού του αποθετηρίου.
 
-Για να ενεργοποιήσετε το container ανάπτυξης, εκκινήστε το στο [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (για χρόνο εκτέλεσης φιλοξενούμενο στο cloud) ή στο [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (για χρόνο εκτέλεσης φιλοξενούμενο σε τοπική συσκευή). Διαβάστε [αυτήν την τεκμηρίωση](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) για περισσότερες λεπτομέρειες σχετικά με το πώς λειτουργούν τα containers ανάπτυξης στο VS Code.
+Για να ενεργοποιήσετε το dev container, εκκινήστε το σε [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (για cloud-hosted runtime) ή σε [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (για τοπικό runtime στη συσκευή σας). Διαβάστε [αυτή την τεκμηρίωση](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) για περισσότερες λεπτομέρειες σχετικά με τη λειτουργία των dev containers μέσα στο VS Code.
 
 > [!TIP]  
-> Προτείνουμε τη χρήση του GitHub Codespaces για γρήγορη εκκίνηση με ελάχιστη προσπάθεια. Παρέχει μια γενναιόδωρη [ποσόστωση δωρεάν χρήσης](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) για προσωπικούς λογαριασμούς. Ρυθμίστε [χρονικά όρια](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) για να σταματήσετε ή να διαγράψετε ανενεργά codespaces για μέγιστη χρήση της ποσόστωσης σας.
+> Συνιστούμε τη χρήση του GitHub Codespaces για γρήγορη εκκίνηση με ελάχιστη προσπάθεια. Παρέχει έναν γενναιόδωρο [δωρεάν όριο χρήσης](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) για προσωπικούς λογαριασμούς. Ρυθμίστε [χρονικά όρια](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) για να σταματούν ή να διαγράφονται ανενεργά codespaces ώστε να μεγιστοποιήσετε τη χρήση του ορίου σας.
 
-## 1. Εκτέλεση Εργασιών
+## 1. Εκτέλεση Ασκήσεων
 
-Κάθε μάθημα θα περιλαμβάνει _προαιρετικές_ εργασίες που μπορεί να προσφέρονται σε μία ή περισσότερες γλώσσες προγραμματισμού όπως: Python, .NET/C#, Java και JavaScript/TypeScript. Αυτή η ενότητα παρέχει γενικές οδηγίες για την εκτέλεση αυτών των εργασιών.
+Κάθε μάθημα θα έχει _προαιρετικές_ ασκήσεις που μπορεί να παρέχονται σε μία ή περισσότερες γλώσσες προγραμματισμού, όπως: Python, .NET/C#, Java και JavaScript/TypeScript. Αυτή η ενότητα παρέχει γενικές οδηγίες σχετικά με την εκτέλεση αυτών των ασκήσεων.
 
-### 1.1 Εργασίες Python
+### 1.1 Ασκήσεις Python
 
-Οι εργασίες Python παρέχονται είτε ως εφαρμογές (αρχεία `.py`) είτε ως σημειωματάρια Jupyter (αρχεία `.ipynb`). 
-- Για να εκτελέσετε το σημειωματάριο, ανοίξτε το στο Visual Studio Code και κάντε κλικ στο _Select Kernel_ (πάνω δεξιά) και επιλέξτε την προεπιλεγμένη επιλογή Python 3 που εμφανίζεται. Μπορείτε τώρα να εκτελέσετε _Run All_ για να εκτελέσετε το σημειωματάριο.
-- Για να εκτελέσετε εφαρμογές Python από τη γραμμή εντολών, ακολουθήστε τις οδηγίες της εργασίας για να βεβαιωθείτε ότι επιλέγετε τα σωστά αρχεία και παρέχετε τα απαιτούμενα επιχειρήματα.
+Οι ασκήσεις Python παρέχονται είτε ως εφαρμογές (`.py` αρχεία) είτε ως Jupyter notebooks (`.ipynb` αρχεία).  
+- Για να τρέξετε το notebook, ανοίξτε το στο Visual Studio Code, κάντε κλικ στο _Select Kernel_ (πάνω δεξιά) και επιλέξτε την προεπιλεγμένη επιλογή Python 3 που εμφανίζεται. Τώρα μπορείτε να κάνετε _Run All_ για να εκτελέσετε το notebook.  
+- Για να τρέξετε εφαρμογές Python από τη γραμμή εντολών, ακολουθήστε τις συγκεκριμένες οδηγίες της άσκησης για να βεβαιωθείτε ότι επιλέγετε τα σωστά αρχεία και παρέχετε τα απαιτούμενα ορίσματα.
 
-## 2. Διαμόρφωση Παρόχων
+## 2. Ρύθμιση Παρόχων
 
-Οι εργασίες **μπορεί** να είναι επίσης ρυθμισμένες για να λειτουργούν με μία ή περισσότερες αναπτύξεις Μεγάλων Γλωσσικών Μοντέλων (LLM) μέσω ενός υποστηριζόμενου παρόχου υπηρεσιών όπως OpenAI, Azure ή Hugging Face. Αυτοί παρέχουν ένα _φιλοξενούμενο σημείο πρόσβασης_ (API) που μπορούμε να προσεγγίσουμε προγραμματιστικά με τα σωστά διαπιστευτήρια (API key ή token). Σε αυτό το μάθημα, συζητάμε αυτούς τους παρόχους:
+Οι ασκήσεις **μπορεί** επίσης να ρυθμιστούν ώστε να λειτουργούν με μία ή περισσότερες αναπτύξεις Μεγάλων Γλωσσικών Μοντέλων (LLM) μέσω υποστηριζόμενου παρόχου υπηρεσιών όπως OpenAI, Azure ή Hugging Face. Αυτοί παρέχουν ένα _hosted endpoint_ (API) στο οποίο μπορούμε να έχουμε πρόσβαση προγραμματιστικά με τα σωστά διαπιστευτήρια (API key ή token). Σε αυτό το μάθημα, συζητάμε τους παρακάτω παρόχους:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) με διάφορα μοντέλα, συμπεριλαμβανομένης της βασικής σειράς GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) για μοντέλα OpenAI με έμφαση στην επιχειρηματική ετοιμότητα
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) για ανοιχτού κώδικα μοντέλα και εξυπηρετητή υπολογισμών
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) με διάφορα μοντέλα, συμπεριλαμβανομένης της βασικής σειράς GPT.  
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) για μοντέλα OpenAI με έμφαση στην επιχειρησιακή ετοιμότητα  
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) για ανοιχτού κώδικα μοντέλα και inference server
 
-**Θα χρειαστεί να χρησιμοποιήσετε τους δικούς σας λογαριασμούς για αυτές τις ασκήσεις**. Οι εργασίες είναι προαιρετικές, επομένως μπορείτε να επιλέξετε να ρυθμίσετε έναν, όλους - ή κανέναν - από τους παρόχους με βάση τα ενδιαφέροντά σας. Κάποιες οδηγίες για την εγγραφή:
+**Θα χρειαστεί να χρησιμοποιήσετε τους δικούς σας λογαριασμούς για αυτές τις ασκήσεις**. Οι ασκήσεις είναι προαιρετικές, οπότε μπορείτε να επιλέξετε να ρυθμίσετε έναν, όλους ή κανέναν από τους παρόχους ανάλογα με τα ενδιαφέροντά σας. Μερικές οδηγίες για εγγραφή:
 
-| Εγγραφή | Κόστος | Κλειδί API | Χώρος Παιχνιδιού | Σχόλια |
+| Εγγραφή | Κόστος | API Key | Playground | Σχόλια |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Τιμές](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Με βάση το έργο](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Χωρίς κώδικα, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Διαθέσιμα πολλαπλά μοντέλα |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Τιμές](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Γρήγορη εκκίνηση SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Γρήγορη εκκίνηση Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Πρέπει να εφαρμόσετε εκ των προτέρων για πρόσβαση](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Τιμές](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Το Hugging Chat έχει περιορισμένα μοντέλα](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst) | [Τιμολόγηση](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst) | [Βασισμένο σε project](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Διαθέσιμα Πολλαπλά Μοντέλα |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst) | [Τιμολόγηση](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst) | [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Απαιτείται Προέγκριση Πρόσβασης](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Τιμολόγηση](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst) | [Το Hugging Chat έχει περιορισμένα μοντέλα](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Ακολουθήστε τις παρακάτω οδηγίες για να _διαμορφώσετε_ αυτό το αποθετήριο για χρήση με διαφορετικούς παρόχους. Οι εργασίες που απαιτούν συγκεκριμένο πάροχο θα περιέχουν μία από αυτές τις ετικέτες στο όνομα του αρχείου τους:
- - `aoai` - απαιτεί το Azure OpenAI endpoint, key
- - `oai` - απαιτεί το OpenAI endpoint, key
- - `hf` - απαιτεί το Hugging Face token
+Ακολουθήστε τις παρακάτω οδηγίες για να _ρυθμίσετε_ αυτό το αποθετήριο ώστε να λειτουργεί με διαφορετικούς παρόχους. Οι ασκήσεις που απαιτούν συγκεκριμένο πάροχο θα περιέχουν ένα από αυτά τα tags στο όνομα αρχείου τους:  
+ - `aoai` - απαιτεί Azure OpenAI endpoint, key  
+ - `oai` - απαιτεί OpenAI endpoint, key  
+ - `hf` - απαιτεί Hugging Face token
 
-Μπορείτε να διαμορφώσετε έναν, κανέναν ή όλους τους παρόχους. Οι σχετικές εργασίες απλά θα εμφανίσουν σφάλμα αν λείπουν τα διαπιστευτήρια.
+Μπορείτε να ρυθμίσετε έναν, κανέναν ή όλους τους παρόχους. Οι σχετικές ασκήσεις απλά θα εμφανίσουν σφάλμα αν λείπουν τα διαπιστευτήρια.
 
-### 2.1 Δημιουργία `.env` αρχείου
+### 2.1. Δημιουργία αρχείου `.env`
 
-Υποθέτουμε ότι έχετε ήδη διαβάσει τις παραπάνω οδηγίες και έχετε εγγραφεί στον σχετικό πάροχο, και έχετε αποκτήσει τα απαιτούμενα διαπιστευτήρια αυθεντικοποίησης (API_KEY ή token). Στην περίπτωση του Azure OpenAI, υποθέτουμε ότι έχετε επίσης μια έγκυρη ανάπτυξη μιας υπηρεσίας Azure OpenAI (endpoint) με τουλάχιστον ένα GPT μοντέλο αναπτυγμένο για ολοκλήρωση συνομιλίας.
+Υποθέτουμε ότι έχετε ήδη διαβάσει τις παραπάνω οδηγίες, έχετε εγγραφεί στον αντίστοιχο πάροχο και έχετε λάβει τα απαιτούμενα διαπιστευτήρια αυθεντικοποίησης (API_KEY ή token). Στην περίπτωση του Azure OpenAI, υποθέτουμε επίσης ότι έχετε μια έγκυρη ανάπτυξη Azure OpenAI Service (endpoint) με τουλάχιστον ένα μοντέλο GPT αναπτυγμένο για chat completion.
 
-Το επόμενο βήμα είναι να διαμορφώσετε τις **τοπικές μεταβλητές περιβάλλοντος** σας ως εξής:
+Το επόμενο βήμα είναι να ρυθμίσετε τις **τοπικές μεταβλητές περιβάλλοντος** ως εξής:
 
-1. Κοιτάξτε στο φάκελο ρίζας για ένα `.env.copy` αρχείο που θα πρέπει να έχει περιεχόμενο όπως αυτό:
+1. Αναζητήστε στον ριζικό φάκελο ένα αρχείο `.env.copy` που θα έχει περιεχόμενο όπως το παρακάτω:
 
    ```bash
    # OpenAI Provider
@@ -73,73 +73,73 @@ CO_OP_TRANSLATOR_METADATA:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Αντιγράψτε αυτό το αρχείο στο `.env` χρησιμοποιώντας την παρακάτω εντολή. Αυτό το αρχείο είναι _gitignore-d_, διατηρώντας τα μυστικά ασφαλή.
+2. Αντιγράψτε αυτό το αρχείο σε `.env` χρησιμοποιώντας την παρακάτω εντολή. Αυτό το αρχείο είναι _gitignore-d_, ώστε να κρατά τα μυστικά ασφαλή.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Συμπληρώστε τις τιμές (αντικαταστήστε τα placeholders στη δεξιά πλευρά του `=`) όπως περιγράφεται στην επόμενη ενότητα.
+3. Συμπληρώστε τις τιμές (αντικαταστήστε τα placeholders στα δεξιά του `=`) όπως περιγράφεται στην επόμενη ενότητα.
 
-3. (Προαιρετικά) Εάν χρησιμοποιείτε το GitHub Codespaces, έχετε την επιλογή να αποθηκεύσετε τις μεταβλητές περιβάλλοντος ως _Codespaces secrets_ που σχετίζονται με αυτό το αποθετήριο. Σε αυτήν την περίπτωση, δεν θα χρειαστεί να ρυθμίσετε ένα τοπικό αρχείο .env. **Ωστόσο, σημειώστε ότι αυτή η επιλογή λειτουργεί μόνο εάν χρησιμοποιείτε το GitHub Codespaces.** Θα χρειαστεί να ρυθμίσετε το αρχείο .env εάν χρησιμοποιείτε το Docker Desktop αντί αυτού.
+3. (Προαιρετικό) Αν χρησιμοποιείτε GitHub Codespaces, έχετε την επιλογή να αποθηκεύσετε τις μεταβλητές περιβάλλοντος ως _Codespaces secrets_ συνδεδεμένα με αυτό το αποθετήριο. Σε αυτή την περίπτωση, δεν θα χρειαστεί να ρυθμίσετε το τοπικό αρχείο .env. **Ωστόσο, σημειώστε ότι αυτή η επιλογή λειτουργεί μόνο αν χρησιμοποιείτε GitHub Codespaces.** Θα χρειαστεί να ρυθμίσετε το αρχείο .env αν χρησιμοποιείτε Docker Desktop.
 
-### 2.2 Συμπλήρωση `.env` αρχείου
+### 2.2. Συμπλήρωση αρχείου `.env`
 
 Ας ρίξουμε μια γρήγορη ματιά στα ονόματα των μεταβλητών για να κατανοήσουμε τι αντιπροσωπεύουν:
 
 | Μεταβλητή  | Περιγραφή  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Αυτό είναι το token πρόσβασης χρήστη που ρυθμίσατε στο προφίλ σας |
-| OPENAI_API_KEY | Αυτό είναι το κλειδί εξουσιοδότησης για τη χρήση της υπηρεσίας για μη-Azure OpenAI endpoints |
-| AZURE_OPENAI_API_KEY | Αυτό είναι το κλειδί εξουσιοδότησης για τη χρήση αυτής της υπηρεσίας |
-| AZURE_OPENAI_ENDPOINT | Αυτό είναι το αναπτυγμένο endpoint για έναν Azure OpenAI πόρο |
-| AZURE_OPENAI_DEPLOYMENT | Αυτό είναι το _text generation_ μοντέλο ανάπτυξης endpoint |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Αυτό είναι το _text embeddings_ μοντέλο ανάπτυξης endpoint |
+| HUGGING_FACE_API_KEY | Αυτό είναι το token πρόσβασης χρήστη που έχετε ρυθμίσει στο προφίλ σας |
+| OPENAI_API_KEY | Αυτό είναι το κλειδί εξουσιοδότησης για χρήση της υπηρεσίας σε μη Azure OpenAI endpoints |
+| AZURE_OPENAI_API_KEY | Αυτό είναι το κλειδί εξουσιοδότησης για χρήση της υπηρεσίας Azure OpenAI |
+| AZURE_OPENAI_ENDPOINT | Αυτό είναι το αναπτυγμένο endpoint για έναν πόρο Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Αυτό είναι το endpoint ανάπτυξης μοντέλου _text generation_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Αυτό είναι το endpoint ανάπτυξης μοντέλου _text embeddings_ |
 | | |
 
-Σημείωση: Οι τελευταίες δύο μεταβλητές του Azure OpenAI αντανακλούν ένα προεπιλεγμένο μοντέλο για ολοκλήρωση συνομιλίας (text generation) και αναζήτηση με διανύσματα (embeddings) αντίστοιχα. Οι οδηγίες για τη ρύθμισή τους θα οριστούν στις σχετικές εργασίες.
+Σημείωση: Οι δύο τελευταίες μεταβλητές του Azure OpenAI αντιστοιχούν σε προεπιλεγμένα μοντέλα για chat completion (παραγωγή κειμένου) και αναζήτηση με διανύσματα (embeddings) αντίστοιχα. Οι οδηγίες για τη ρύθμισή τους θα οριστούν στις σχετικές ασκήσεις.
 
-### 2.3 Διαμόρφωση Azure: Από το Portal
+### 2.3 Ρύθμιση Azure: Από το Portal
 
-Οι τιμές του Azure OpenAI endpoint και key θα βρεθούν στο [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), οπότε ας ξεκινήσουμε από εκεί.
+Οι τιμές για το Azure OpenAI endpoint και το κλειδί θα βρεθούν στο [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), οπότε ας ξεκινήσουμε από εκεί.
 
-1. Πηγαίνετε στο [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Κάντε κλικ στην επιλογή **Keys and Endpoint** στην πλευρική μπάρα (μενού στα αριστερά).
-1. Κάντε κλικ στο **Show Keys** - θα πρέπει να δείτε τα εξής: KEY 1, KEY 2 και Endpoint.
-1. Χρησιμοποιήστε την τιμή KEY 1 για το AZURE_OPENAI_API_KEY
-1. Χρησιμοποιήστε την τιμή Endpoint για το AZURE_OPENAI_ENDPOINT
+1. Μεταβείτε στο [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)  
+2. Κάντε κλικ στην επιλογή **Keys and Endpoint** στο πλαϊνό μενού (αριστερά).  
+3. Κάντε κλικ στο **Show Keys** - θα δείτε τα εξής: KEY 1, KEY 2 και Endpoint.  
+4. Χρησιμοποιήστε την τιμή του KEY 1 για το AZURE_OPENAI_API_KEY  
+5. Χρησιμοποιήστε την τιμή του Endpoint για το AZURE_OPENAI_ENDPOINT
 
-Στη συνέχεια, χρειαζόμαστε τα endpoints για τα συγκεκριμένα μοντέλα που έχουμε αναπτύξει.
+Στη συνέχεια, χρειαζόμαστε τα endpoints για τα συγκεκριμένα μοντέλα που έχετε αναπτύξει.
 
-1. Κάντε κλικ στην επιλογή **Model deployments** στην πλευρική μπάρα (αριστερό μενού) για τον πόρο Azure OpenAI.
-1. Στη σελίδα προορισμού, κάντε κλικ στο **Manage Deployments**
+1. Κάντε κλικ στην επιλογή **Model deployments** στο πλαϊνό μενού (αριστερά) για τον πόρο Azure OpenAI.  
+2. Στη σελίδα που ανοίγει, κάντε κλικ στο **Manage Deployments**
 
-Αυτό θα σας οδηγήσει στην ιστοσελίδα Azure OpenAI Studio, όπου θα βρούμε τις άλλες τιμές όπως περιγράφεται παρακάτω.
+Αυτό θα σας μεταφέρει στην ιστοσελίδα Azure OpenAI Studio, όπου θα βρείτε τις υπόλοιπες τιμές όπως περιγράφεται παρακάτω.
 
-### 2.4 Διαμόρφωση Azure: Από το Studio
+### 2.4 Ρύθμιση Azure: Από το Studio
 
-1. Μεταβείτε στο [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **από τον πόρο σας** όπως περιγράφεται παραπάνω.
-1. Κάντε κλικ στην καρτέλα **Deployments** (πλευρική μπάρα, αριστερά) για να δείτε τα μοντέλα που έχουν ήδη αναπτυχθεί.
-1. Εάν το επιθυμητό μοντέλο σας δεν έχει αναπτυχθεί, χρησιμοποιήστε το **Create new deployment** για να το αναπτύξετε.
-1. Θα χρειαστείτε ένα _text-generation_ μοντέλο - προτείνουμε: **gpt-35-turbo**
-1. Θα χρειαστείτε ένα _text-embedding_ μοντέλο - προτείνουμε **text-embedding-ada-002**
+1. Μεταβείτε στο [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **από τον πόρο σας** όπως περιγράφτηκε παραπάνω.  
+2. Κάντε κλικ στην καρτέλα **Deployments** (πλαϊνό μενού, αριστερά) για να δείτε τα μοντέλα που είναι ήδη αναπτυγμένα.  
+3. Αν το επιθυμητό μοντέλο δεν είναι αναπτυγμένο, χρησιμοποιήστε το **Create new deployment** για να το αναπτύξετε.  
+4. Θα χρειαστείτε ένα μοντέλο _text-generation_ - προτείνουμε: **gpt-35-turbo**  
+5. Θα χρειαστείτε ένα μοντέλο _text-embedding_ - προτείνουμε **text-embedding-ada-002**
 
-Τώρα ενημερώστε τις μεταβλητές περιβάλλοντος για να αντανακλούν το _Deployment name_ που χρησιμοποιήθηκε. Αυτό θα είναι συνήθως το ίδιο με το όνομα του μοντέλου, εκτός αν το αλλάξατε ρητά. Έτσι, ως παράδειγμα, μπορεί να έχετε:
+Τώρα ενημερώστε τις μεταβλητές περιβάλλοντος ώστε να αντικατοπτρίζουν το _Deployment name_ που χρησιμοποιήθηκε. Συνήθως αυτό είναι το ίδιο με το όνομα του μοντέλου, εκτός αν το έχετε αλλάξει ρητά. Για παράδειγμα, μπορεί να έχετε:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Μην ξεχάσετε να αποθηκεύσετε το αρχείο .env όταν τελειώσετε**. Μπορείτε τώρα να κλείσετε το αρχείο και να επιστρέψετε στις οδηγίες για την εκτέλεση του σημειωματάριου.
+**Μην ξεχάσετε να αποθηκεύσετε το αρχείο .env όταν τελειώσετε**. Μπορείτε τώρα να κλείσετε το αρχείο και να επιστρέψετε στις οδηγίες για την εκτέλεση του notebook.
 
-### 2.5 Διαμόρφωση OpenAI: Από το Προφίλ
+### 2.5 Ρύθμιση OpenAI: Από το Προφίλ
 
-Το OpenAI API key σας μπορεί να βρεθεί στον [OpenAI λογαριασμό σας](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Εάν δεν έχετε, μπορείτε να εγγραφείτε για έναν λογαριασμό και να δημιουργήσετε ένα API key. Μόλις έχετε το κλειδί, μπορείτε να το χρησιμοποιήσετε για να συμπληρώσετε τη μεταβλητή `OPENAI_API_KEY` στο `.env` αρχείο.
+Το κλειδί API του OpenAI μπορείτε να το βρείτε στον [λογαριασμό σας στο OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Αν δεν έχετε, μπορείτε να εγγραφείτε και να δημιουργήσετε ένα κλειδί API. Μόλις το αποκτήσετε, μπορείτε να το χρησιμοποιήσετε για να συμπληρώσετε τη μεταβλητή `OPENAI_API_KEY` στο αρχείο `.env`.
 
-### 2.6 Διαμόρφωση Hugging Face: Από το Προφίλ
+### 2.6 Ρύθμιση Hugging Face: Από το Προφίλ
 
-Το Hugging Face token σας μπορεί να βρεθεί στο προφίλ σας κάτω από [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Μην το δημοσιεύετε ή το μοιράζεστε δημόσια. Αντίθετα, δημιουργήστε ένα νέο token για τη χρήση αυτού του έργου και αντιγράψτε το στο `.env` αρχείο κάτω από τη μεταβλητή `HUGGING_FACE_API_KEY`. _Σημείωση:_ Αυτό τεχνικά δεν είναι ένα API key αλλά χρησιμοποιείται για αυθεντικοποίηση, επομένως διατηρούμε αυτήν τη συμβατική ονομασία για συνέπεια.
+Το token σας στο Hugging Face βρίσκεται στο προφίλ σας στην ενότητα [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Μην το δημοσιοποιείτε ή μοιράζεστε δημόσια. Αντίθετα, δημιουργήστε ένα νέο token για τη χρήση αυτού του έργου και αντιγράψτε το στο αρχείο `.env` στη μεταβλητή `HUGGING_FACE_API_KEY`. _Σημείωση:_ Τεχνικά αυτό δεν είναι API key, αλλά χρησιμοποιείται για αυθεντικοποίηση, οπότε διατηρούμε αυτή την ονομασία για λόγους συνέπειας.
 
 **Αποποίηση ευθυνών**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ενώ προσπαθούμε για ακρίβεια, παρακαλώ λάβετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις μπορεί να περιέχουν λάθη ή ανακρίβειες. Το αρχικό έγγραφο στη μητρική του γλώσσα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για οποιεσδήποτε παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που επιδιώκουμε την ακρίβεια, παρακαλούμε να γνωρίζετε ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη γλώσσα του θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.

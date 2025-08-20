@@ -2,20 +2,22 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:21:16+00:00",
+  "translation_date": "2025-07-09T14:25:00+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "zh"
 }
 -->
 # 与函数调用集成
 
-您在前面的课程中已经学习了不少内容。然而，我们可以进一步改进。我们可以解决的一些问题是如何获得更一致的响应格式，以便更容易在下游处理响应。此外，我们可能希望从其他来源添加数据，以进一步丰富我们的应用程序。
+[![Integrating with function calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.zh.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-上述问题正是本章要解决的问题。
+到目前为止，你已经在之前的课程中学到了不少内容。不过，我们还可以进一步改进。一些我们可以解决的问题包括如何获得更一致的响应格式，以便后续处理响应时更方便。同时，我们可能还想从其他来源添加数据，以进一步丰富我们的应用。
+
+上述问题正是本章要解决的内容。
 
 ## 介绍
 
-本课程将涵盖：
+本课将涵盖：
 
 - 解释什么是函数调用及其使用场景。
 - 使用 Azure OpenAI 创建函数调用。
@@ -23,42 +25,42 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 学习目标
 
-在本课程结束时，您将能够：
+完成本课后，你将能够：
 
 - 解释使用函数调用的目的。
 - 使用 Azure OpenAI 服务设置函数调用。
-- 为您的应用程序设计有效的函数调用。
+- 为你的应用场景设计有效的函数调用。
 
-## 场景：用函数改善我们的聊天机器人
+## 场景：通过函数改进我们的聊天机器人
 
-在本课程中，我们希望为我们的教育初创公司构建一个功能，允许用户使用聊天机器人寻找技术课程。我们将推荐符合他们技能水平、当前角色和感兴趣技术的课程。
+本课中，我们希望为教育初创公司构建一个功能，允许用户通过聊天机器人查找技术课程。我们将推荐符合他们技能水平、当前职位和感兴趣技术的课程。
 
-为了完成这个场景，我们将使用以下组合：
+为完成此场景，我们将结合使用：
 
-- `Azure OpenAI` 创建用户的聊天体验。
-- `Microsoft Learn Catalog API` 帮助用户根据请求找到课程。
-- `Function Calling` 接收用户的查询并将其发送到函数以进行 API 请求。
+- `Azure OpenAI` 为用户创建聊天体验。
+- `Microsoft Learn Catalog API` 根据用户请求帮助用户查找课程。
+- `Function Calling` 将用户查询发送到函数以发起 API 请求。
 
 首先，让我们看看为什么我们要使用函数调用：
 
 ## 为什么使用函数调用
 
-在函数调用之前，来自 LLM 的响应是非结构化和不一致的。开发人员需要编写复杂的验证代码，以确保能够处理每种响应变化。用户无法获得像“斯德哥尔摩现在的天气怎么样？”这样的答案。这是因为模型受限于数据训练的时间。
+在函数调用出现之前，LLM 的响应是非结构化且不一致的。开发者需要编写复杂的验证代码来处理各种响应变体。用户无法获得诸如“斯德哥尔摩当前天气如何？”这类问题的答案，因为模型只能基于训练时的数据时间点提供信息。
 
 函数调用是 Azure OpenAI 服务的一项功能，用于克服以下限制：
 
-- **一致的响应格式**。如果我们能更好地控制响应格式，我们可以更容易地将响应集成到其他系统的下游。
-- **外部数据**。能够在聊天环境中使用应用程序的其他来源的数据。
+- **响应格式一致**。如果我们能更好地控制响应格式，就能更轻松地将响应集成到下游系统。
+- **外部数据**。能够在聊天上下文中使用应用程序的其他数据源。
 
 ## 通过场景说明问题
 
-> 我们建议您使用[包含的笔记本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)来运行以下场景。您也可以只阅读下去，因为我们正在尝试说明一个函数可以帮助解决的问题。
+> 我们建议你使用[附带的笔记本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)来运行以下场景。你也可以直接阅读，我们试图说明函数如何帮助解决问题。
 
-让我们看看说明响应格式问题的示例：
+来看一个说明响应格式问题的例子：
 
-假设我们想创建一个学生数据的数据库，以便我们可以向他们推荐合适的课程。下面我们有两个学生的描述，它们在包含的数据上非常相似。
+假设我们想创建一个学生数据数据库，以便为他们推荐合适的课程。下面有两个学生描述，它们包含的数据非常相似。
 
-1. 创建到我们 Azure OpenAI 资源的连接：
+1. 创建与 Azure OpenAI 资源的连接：
 
    ```python
    import os
@@ -75,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   下面是一些用于配置我们与 Azure OpenAI 连接的 Python 代码，其中我们设置了 `api_type`, `api_base`, `api_version` and `api_key`.
+   下面是一些用于配置 Azure OpenAI 连接的 Python 代码，我们设置了 `api_type`、`api_base`、`api_version` 和 `api_key`。
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`。
+1. 使用变量 `student_1_description` 和 `student_2_description` 创建两个学生描述。
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -85,9 +87,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   我们希望将上述学生描述发送到 LLM 以解析数据。此数据稍后可以在我们的应用程序中使用，并发送到 API 或存储在数据库中。
+   我们想将上述学生描述发送给 LLM 以解析数据。之后，这些数据可以在应用中使用，发送到 API 或存储到数据库。
 
-1. 让我们创建两个相同的提示，以指示 LLM 我们感兴趣的信息：
+1. 创建两个相同的提示，指示 LLM 我们感兴趣的信息：
 
    ```python
    prompt1 = f'''
@@ -119,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
    上述提示指示 LLM 提取信息并以 JSON 格式返回响应。
 
-1. 在设置提示和连接到 Azure OpenAI 后，我们现在将通过使用 `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` 将提示发送到 LLM。这是为了模拟用户向聊天机器人写消息。
+1. 设置好提示和 Azure OpenAI 连接后，我们使用 `openai.ChatCompletion` 将提示发送给 LLM。我们将提示存储在 `messages` 变量中，并将角色设置为 `user`，模拟用户向聊天机器人发送消息。
 
    ```python
    # response from prompt one
@@ -137,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-现在我们可以将两个请求发送到 LLM，并通过如下方式检查我们收到的响应：`openai_response1['choices'][0]['message']['content']`.
+现在我们可以向 LLM 发送两个请求，并通过 `openai_response1['choices'][0]['message']['content']` 查看响应。
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`：
+1. 最后，我们可以通过调用 `json.loads` 将响应转换为 JSON 格式：
 
    ```python
    # Loading the response as a JSON object
@@ -171,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   即使提示相同且描述相似，我们看到 `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   尽管提示相同且描述相似，但我们看到 `Grades` 属性的值格式不同，有时是 `3.7`，有时是 `3.7 GPA`。
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   这是因为 LLM 接收的是非结构化的提示文本，返回的也是非结构化数据。我们需要结构化格式，以便在存储或使用数据时知道预期内容。
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+那么，我们如何解决格式问题呢？通过使用函数调用，我们可以确保收到结构化数据。使用函数调用时，LLM 并不会真正调用或执行任何函数，而是我们为 LLM 的响应创建一个结构。然后，我们根据这些结构化响应确定在应用中调用哪个函数。
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.zh.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.zh.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+接着，我们可以将函数返回的结果发送回 LLM，LLM 会用自然语言回答用户的查询。
 
-## Use Cases for using function calls
+## 函数调用的使用场景
 
-There are many different use cases where function calls can improve your app like:
+函数调用可以提升应用的多种场景，例如：
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **调用外部工具**。聊天机器人擅长回答用户问题。通过函数调用，聊天机器人可以根据用户消息完成特定任务。例如，学生可以让聊天机器人“给我的导师发封邮件，说我需要更多这门课的帮助”，这时可以调用函数 `send_email(to: string, body: string)`。
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **创建 API 或数据库查询**。用户用自然语言查找信息，转换成格式化查询或 API 请求。例如，老师请求“哪些学生完成了上次作业”，可以调用函数 `get_completed(student_name: string, assignment: int, current_status: string)`。
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **创建结构化数据**。用户可以将一段文本或 CSV 交给 LLM 提取重要信息。例如，学生可以将关于和平协议的维基百科文章转换成 AI 闪卡，使用函数 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`。
 
-## Creating Your First Function Call
+## 创建你的第一个函数调用
 
-The process of creating a function call includes 3 main steps:
+创建函数调用的过程包括三个主要步骤：
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. 使用函数列表和用户消息调用 Chat Completions API。
+2. 读取模型响应以执行操作，即执行函数或 API 调用。
+3. 使用函数响应再次调用 Chat Completions API，利用该信息生成对用户的回复。
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.zh.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.zh.png)
 
-### Step 1 - creating messages
+### 第一步 - 创建消息
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+第一步是创建用户消息。可以动态赋值，比如从文本输入获取，也可以直接赋值。如果你是第一次使用 Chat Completions API，需要定义消息的 `role` 和 `content`。
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` 和一个示例问题的值。
+`role` 可以是 `system`（创建规则）、`assistant`（模型）或 `user`（最终用户）。函数调用中，我们将其设为 `user` 并给出示例问题。
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-通过分配不同的角色，可以明确 LLM 是系统在说话还是用户在说话，这有助于构建 LLM 可以基于的对话历史。
+通过分配不同角色，LLM 能区分是系统还是用户发言，有助于构建对话历史。
 
-### 步骤 2 - 创建函数
+### 第二步 - 创建函数
 
-接下来，我们将定义一个函数及其参数。我们将在这里使用一个名为 `search_courses` but you can create multiple functions.
+接下来，我们定义一个函数及其参数。这里只用一个函数 `search_courses`，但你可以创建多个函数。
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **重要**：函数包含在发送给 LLM 的系统消息中，会占用可用的 token 数量。
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters` 的函数：
+下面我们将函数定义为一个数组，每个元素是一个函数，包含属性 `name`、`description` 和 `parameters`：
 
 ```python
 functions = [
@@ -250,26 +252,26 @@ functions = [
 ]
 ```
 
-让我们更详细地描述每个函数实例：
+下面详细说明每个函数实例的属性：
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - 要调用的函数名称。
+- `description` - 函数的工作描述，需具体清晰。
+- `parameters` - 模型在响应中应生成的值和格式列表。参数数组包含若干项，每项有以下属性：
+  1. `type` - 属性的数据类型。
+  2. `properties` - 模型用于响应的具体值列表
+     1. `name` - 属性名称，模型在格式化响应中使用，如 `product`。
+     2. `type` - 属性的数据类型，如 `string`。
+     3. `description` - 该属性的描述。
 
-There's also an optional property `required` - required property for the function call to be completed.
+还有一个可选属性 `required`，表示函数调用必须包含的属性。
 
-### Step 3 - Making the function call
+### 第三步 - 发起函数调用
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+定义函数后，需要在调用 Chat Completion API 时包含它。通过添加 `functions` 参数实现，这里是 `functions=functions`。
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+还可以设置 `function_call` 为 `auto`，让 LLM 根据用户消息决定调用哪个函数，而不是我们手动指定。
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` 从而让 LLM 选择何时调用我们提供的函数：
+下面代码展示了调用 `ChatCompletion.create`，注意设置了 `functions=functions` 和 `function_call="auto"`，让 LLM 自主选择调用时机：
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-返回的响应现在看起来如下：
+返回的响应如下：
 
 ```json
 {
@@ -292,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-在这里我们可以看到函数 `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+可以看到函数 `search_courses` 被调用，调用参数列在 JSON 响应的 `arguments` 属性中。
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` 的值：
+LLM 能找到匹配函数参数的数据，是因为它从传入 `messages` 参数的值中提取了信息。下面是 `messages` 的内容回顾：
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-如您所见，`student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+如你所见，`student`、`Azure` 和 `beginner` 从 `messages` 中提取，并作为函数输入。这样使用函数既能从提示中提取信息，也能为 LLM 提供结构化和可复用的功能。
 
-Next, we need to see how we can use this in our app.
+接下来，我们看看如何在应用中使用它。
 
-## Integrating Function Calls into an Application
+## 将函数调用集成到应用程序
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+测试完 LLM 的格式化响应后，我们可以将其集成到应用中。
 
-### Managing the flow
+### 管理流程
 
-To integrate this into our application, let's take the following steps:
+集成到应用中，我们采取以下步骤：
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`。
+1. 首先，调用 OpenAI 服务，将消息存储在变量 `response_message` 中。
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. 现在我们将定义调用 Microsoft Learn API 的函数以获取课程列表：
+1. 定义调用 Microsoft Learn API 获取课程列表的函数：
 
    ```python
    import requests
@@ -340,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   注意我们现在如何创建一个实际的 Python 函数，该函数映射到在 `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   注意这里创建了一个实际的 Python 函数，与 `functions` 变量中定义的函数名对应。我们还发起了真实的外部 API 调用，获取所需数据。这里调用了 Microsoft Learn API 来搜索培训模块。
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+好了，我们创建了 `functions` 变量和对应的 Python 函数，如何告诉 LLM 这两者对应，以便调用我们的 Python 函数呢？
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` 中引入的函数名，并调用指出的函数。以下是您可以进行的检查：
+1. 要判断是否需要调用 Python 函数，需要检查 LLM 的响应中是否包含 `function_call`，并调用指定函数。下面是检查方法：
 
    ```python
    # Check if the model wants to call a function
@@ -389,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   这三行代码确保我们提取函数名、参数并进行调用：
+   这三行代码确保提取函数名、参数并执行调用：
 
    ```python
    function_to_call = available_functions[function_name]
@@ -398,7 +400,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   以下是运行我们代码的输出：
+   下面是运行代码的输出：
 
    **输出**
 
@@ -419,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. 现在我们将发送更新后的消息 `messages` 到 LLM，以便我们可以接收到自然语言响应而不是 API JSON 格式的响应。
+1. 现在，我们将更新后的消息 `messages` 发送给 LLM，以便获得自然语言回复，而非 API JSON 格式响应。
 
    ```python
    print("Messages in next request:")
@@ -448,21 +450,20 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
    ```
 
-## 作业
+## 练习
 
-为了继续学习 Azure OpenAI 函数调用，您可以构建：
+为了继续学习 Azure OpenAI 函数调用，你可以尝试：
 
-- 函数的更多参数，帮助学习者找到更多课程。
-- 创建另一个函数调用，从学习者那里获取更多信息，例如他们的母语。
-- 创建错误处理，当函数调用和/或 API 调用没有返回任何合适的课程时。
+- 增加函数的更多参数，帮助学习者找到更多课程。
+- 创建另一个函数调用，获取学习者的母语等更多信息。
+- 为函数调用和/或 API 调用未返回合适课程时添加错误处理。
+提示：请参考[Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst)页面，了解这些数据的获取方式和位置。
 
-提示：请参考 [Learn API 参考文档](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 页面，查看这些数据的可用位置。
+## 干得好！继续前进
 
-## 干得好！继续旅程
+完成本课后，欢迎查看我们的[生成式 AI 学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升你的生成式 AI 知识！
 
-完成本课程后，请查看我们的 [生成式 AI 学习集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升您的生成式 AI 知识！
+前往第12课，我们将探讨如何[为 AI 应用设计用户体验](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
-前往第 12 课，我们将研究如何 [为 AI 应用设计 UX](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
-
-**免责声明**：
-本文档使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们力求准确，但请注意自动翻译可能包含错误或不准确之处。应将原始文档的母语版本视为权威来源。对于关键信息，建议使用专业人工翻译。对于因使用此翻译而产生的任何误解或误读，我们不承担责任。
+**免责声明**：  
+本文件使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。虽然我们力求准确，但请注意，自动翻译可能包含错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议使用专业人工翻译。对于因使用本翻译而产生的任何误解或误释，我们概不负责。

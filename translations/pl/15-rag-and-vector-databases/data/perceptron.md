@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T02:35:53+00:00",
+  "translation_date": "2025-07-09T16:57:24+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "pl"
 }
 -->
 # Wprowadzenie do sieci neuronowych: Perceptron
 
-Jednym z pierwszych prób wdrożenia czegoś podobnego do współczesnej sieci neuronowej była praca Franka Rosenblatta z Cornell Aeronautical Laboratory w 1957 roku. Była to implementacja sprzętowa nazwana "Mark-1", zaprojektowana do rozpoznawania prymitywnych figur geometrycznych, takich jak trójkąty, kwadraty i koła.
+Jedna z pierwszych prób implementacji czegoś podobnego do współczesnej sieci neuronowej została podjęta przez Franka Rosenblatta z Cornell Aeronautical Laboratory w 1957 roku. Była to implementacja sprzętowa nazwana „Mark-1”, zaprojektowana do rozpoznawania prymitywnych figur geometrycznych, takich jak trójkąty, kwadraty i koła.
 
 |      |      |
 |--------------|-----------|
@@ -17,36 +17,36 @@ Jednym z pierwszych prób wdrożenia czegoś podobnego do współczesnej sieci n
 
 > Obrazy z Wikipedii
 
-Obraz wejściowy był reprezentowany przez matrycę fotokomórek 20x20, więc sieć neuronowa miała 400 wejść i jedno wyjście binarne. Prosta sieć zawierała jeden neuron, nazywany także **jednostką logiczną progową**. Wagi sieci neuronowej działały jak potencjometry, które wymagały ręcznej regulacji podczas fazy treningowej.
+Obraz wejściowy był reprezentowany przez tablicę 20x20 fotokomórek, więc sieć neuronowa miała 400 wejść i jedno wyjście binarne. Prosta sieć zawierała jeden neuron, zwany również **jednostką logiki progowej**. Wagi sieci neuronowej działały jak potencjometry, które wymagały ręcznej regulacji podczas fazy treningu.
 
-> ✅ Potencjometr to urządzenie, które pozwala użytkownikowi regulować opór w obwodzie.
+> ✅ Potencjometr to urządzenie pozwalające użytkownikowi na regulację oporu w obwodzie.
 
-> The New York Times pisał wtedy o perceptronie: *zarodek elektronicznego komputera, który [Marynarka Wojenna] spodziewa się, że będzie potrafił chodzić, mówić, widzieć, pisać, reprodukować się i być świadomym swojego istnienia.*
+> The New York Times pisał wtedy o perceptronie: *zarodek elektronicznego komputera, który [Marynarka Wojenna] spodziewa się, że będzie potrafił chodzić, mówić, widzieć, pisać, rozmnażać się i być świadomy swojego istnienia.*
 
-## Model Perceptronu
+## Model perceptronu
 
-Załóżmy, że mamy N cech w naszym modelu, w takim przypadku wektor wejściowy byłby wektorem o rozmiarze N. Perceptron jest modelem **klasyfikacji binarnej**, czyli potrafi odróżniać dwie klasy danych wejściowych. Założymy, że dla każdego wektora wejściowego x wyjście naszego perceptronu będzie wynosiło +1 lub -1, w zależności od klasy. Wyjście będzie obliczane za pomocą wzoru:
+Załóżmy, że mamy N cech w naszym modelu, w takim przypadku wektor wejściowy będzie wektorem o rozmiarze N. Perceptron to model **klasyfikacji binarnej**, czyli potrafi rozróżnić dwie klasy danych wejściowych. Założymy, że dla każdego wektora wejściowego x wyjście naszego perceptronu będzie albo +1, albo -1, w zależności od klasy. Wyjście jest obliczane według wzoru:
 
 y(x) = f(w<sup>T</sup>x)
 
-gdzie f jest funkcją aktywacji typu schodkowego
+gdzie f to funkcja aktywacji skokowej
 
-## Trenowanie Perceptronu
+## Trenowanie perceptronu
 
-Aby wytrenować perceptron, musimy znaleźć wektor wag w, który klasyfikuje większość wartości poprawnie, czyli prowadzi do najmniejszego **błędu**. Ten błąd jest zdefiniowany przez **kryterium perceptronu** w następujący sposób:
+Aby wytrenować perceptron, musimy znaleźć wektor wag w, który sklasyfikuje większość wartości poprawnie, czyli da najmniejszy **błąd**. Ten błąd jest definiowany przez **kryterium perceptronu** w następujący sposób:
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
 gdzie:
 
-* suma jest brana dla tych punktów danych treningowych i, które prowadzą do błędnej klasyfikacji
-* x<sub>i</sub> to dane wejściowe, a t<sub>i</sub> to -1 lub +1 odpowiednio dla negatywnych i pozytywnych przykładów.
+* suma jest liczona dla tych punktów treningowych i, które skutkują błędną klasyfikacją
+* x<sub>i</sub> to dane wejściowe, a t<sub>i</sub> to -1 lub +1 dla przykładów negatywnych i pozytywnych odpowiednio.
 
-To kryterium jest traktowane jako funkcja wag w, i musimy je zminimalizować. Często stosuje się metodę zwaną **gradient descent**, w której zaczynamy od pewnych początkowych wag w<sup>(0)</sup>, a następnie na każdym kroku aktualizujemy wagi zgodnie ze wzorem:
+To kryterium traktujemy jako funkcję wag w, którą musimy zminimalizować. Często stosuje się metodę zwaną **spadkiem gradientu**, w której zaczynamy od pewnych początkowych wag w<sup>(0)</sup>, a następnie na każdym kroku aktualizujemy wagi według wzoru:
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Tutaj η jest tak zwanym **współczynnikiem uczenia**, a ∇E(w) oznacza **gradient** E. Po obliczeniu gradientu, kończymy z
+Tutaj η to tzw. **współczynnik uczenia**, a ∇E(w) oznacza **gradient** funkcji E. Po obliczeniu gradientu otrzymujemy
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
@@ -74,24 +74,25 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
 
 ## Podsumowanie
 
-W tej lekcji nauczyłeś się o perceptronie, który jest modelem klasyfikacji binarnej, oraz jak go trenować za pomocą wektora wag.
+W tej lekcji dowiedziałeś się, czym jest perceptron, model klasyfikacji binarnej, oraz jak go wytrenować, używając wektora wag.
 
 ## 🚀 Wyzwanie
 
-Jeśli chcesz spróbować zbudować własny perceptron, wypróbuj to laboratorium na Microsoft Learn, które wykorzystuje projektanta Azure ML.
+Jeśli chcesz spróbować zbudować własny perceptron, wypróbuj to laboratorium na Microsoft Learn, które korzysta z Azure ML designer
 
-## Przegląd i Samodzielna Nauka
 
-Aby zobaczyć, jak możemy użyć perceptronu do rozwiązania problemu zabawkowego oraz problemów rzeczywistych, i kontynuować naukę - przejdź do notatnika Perceptron.
+## Przegląd i samodzielna nauka
 
-Tutaj znajduje się również interesujący artykuł o perceptronach.
+Aby zobaczyć, jak można użyć perceptronu do rozwiązania prostego problemu oraz problemów z życia codziennego, i kontynuować naukę – przejdź do notatnika Perceptron.
+
+Oto również ciekawy artykuł o perceptronach.
 
 ## Zadanie
 
-W tej lekcji zaimplementowaliśmy perceptron do zadania klasyfikacji binarnej i użyliśmy go do klasyfikacji dwóch cyfr ręcznie pisanych. W tym laboratorium jesteś proszony o całkowite rozwiązanie problemu klasyfikacji cyfr, czyli określenie, która cyfra najprawdopodobniej odpowiada danemu obrazowi.
+W tej lekcji zaimplementowaliśmy perceptron do zadania klasyfikacji binarnej i użyliśmy go do rozróżnienia dwóch ręcznie pisanych cyfr. W tym laboratorium masz za zadanie rozwiązać problem klasyfikacji cyfr w całości, czyli określić, która cyfra najprawdopodobniej odpowiada danemu obrazowi.
 
 * Instrukcje
 * Notatnik
 
-**Zrzeczenie się odpowiedzialności**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za źródło autorytatywne. W przypadku informacji o krytycznym znaczeniu zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za wszelkie nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+**Zastrzeżenie**:  
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dążymy do jak największej dokładności, prosimy mieć na uwadze, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.

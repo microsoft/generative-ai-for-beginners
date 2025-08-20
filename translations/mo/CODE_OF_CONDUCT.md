@@ -2,19 +2,20 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
-  "translation_date": "2025-05-19T11:03:01+00:00",
+  "translation_date": "2025-07-09T05:44:10+00:00",
   "source_file": "CODE_OF_CONDUCT.md",
   "language_code": "mo"
 }
 -->
-# Kod Etik Microsoft Sumber Terbuka
+# Microsoft 開源行為準則
 
-Proyek ini telah mengadopsi [Kod Etik Microsoft Sumber Terbuka](https://opensource.microsoft.com/codeofconduct/).
+本專案已採用 [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)。
 
-Sumber daya:
+資源：
 
-- [Kod Etik Microsoft Sumber Terbuka](https://opensource.microsoft.com/codeofconduct/)
-- [FAQ Kod Etik Microsoft](https://opensource.microsoft.com/codeofconduct/faq/)
-- Hubungi [opencode@microsoft.com](mailto:opencode@microsoft.com) untuk pertanyaan atau kekhawatiran
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+- 如有疑問或需要協助，請聯絡 [opencode@microsoft.com](mailto:opencode@microsoft.com)
 
-I'm sorry, but I'm not familiar with a language called "mo." If you meant a different language, could you please specify it?
+**免責聲明**：  
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。

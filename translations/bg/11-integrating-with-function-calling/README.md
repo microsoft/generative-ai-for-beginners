@@ -2,65 +2,65 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:38:32+00:00",
+  "translation_date": "2025-07-09T14:43:46+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "bg"
 }
 -->
 # Интегриране с извикване на функции
 
-[![Интегриране с извикване на функции](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.bg.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Интегриране с извикване на функции](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.bg.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
 
-Научихте доста досега в предишните уроци. Въпреки това, можем да се подобрим още повече. Някои неща, които можем да адресираме, са как да получим по-консистентен формат на отговор, за да улесним работата с отговора надолу по веригата. Освен това може да искаме да добавим данни от други източници, за да обогатим допълнително нашето приложение.
+Досега научихте доста от предишните уроци. Въпреки това, можем да се усъвършенстваме още. Някои от нещата, които можем да подобрим, са как да получим по-последователен формат на отговорите, за да улесним работата с тях по-нататък. Също така, може да искаме да добавим данни от други източници, за да обогатим още повече нашето приложение.
 
-Споменатите по-горе проблеми са това, което тази глава се стреми да разреши.
+Гореспоменатите проблеми са тези, които този раздел цели да реши.
 
 ## Въведение
 
-Този урок ще обхване:
+В този урок ще разгледаме:
 
-- Обяснение какво представлява извикването на функции и неговите случаи на употреба.
-- Създаване на извикване на функция с помощта на Azure OpenAI.
-- Как да интегрирате извикване на функция в приложение.
+- Обяснение какво е извикване на функции и кога се използва.
+- Създаване на извикване на функция с Azure OpenAI.
+- Как да интегрираме извикване на функция в приложение.
 
 ## Цели на обучението
 
-До края на този урок ще можете:
+Към края на този урок ще можете да:
 
-- Да обясните целта на използването на извикване на функции.
-- Настройка на извикване на функция с помощта на Azure OpenAI Service.
-- Проектиране на ефективни извиквания на функции за вашия случай на употреба в приложението.
+- Обясните целта на използването на извикване на функции.
+- Настроите извикване на функция с помощта на Azure OpenAI Service.
+- Проектирате ефективни извиквания на функции за конкретния случай на вашето приложение.
 
 ## Сценарий: Подобряване на нашия чатбот с функции
 
-За този урок искаме да създадем функция за нашия стартап за образование, която позволява на потребителите да използват чатбот за намиране на технически курсове. Ще препоръчваме курсове, които отговарят на тяхното ниво на умения, текуща роля и интерес към технологиите.
+За този урок искаме да създадем функция за нашия образователен стартъп, която позволява на потребителите да използват чатбот, за да намерят технически курсове. Ще препоръчваме курсове, които отговарят на нивото им на умения, текущата им роля и интересуващата ги технология.
 
-За да завършим този сценарий, ще използваме комбинация от:
+За да изпълним този сценарий, ще използваме комбинация от:
 
-- `Azure OpenAI` за създаване на чат преживяване за потребителя.
-- `Microsoft Learn Catalog API` за помощ на потребителите да намерят курсове въз основа на тяхната заявка.
-- `Function Calling` за вземане на запитването на потребителя и изпращането му към функция за изпълнение на API заявка.
+- `Azure OpenAI` за създаване на чат изживяване за потребителя.
+- `Microsoft Learn Catalog API`, който помага на потребителите да намерят курсове според техните заявки.
+- `Function Calling`, за да вземем заявката на потребителя и да я изпратим към функция, която да направи API заявката.
 
-За да започнем, нека разгледаме защо бихме искали да използваме извикване на функции на първо място:
+За да започнем, нека разгледаме защо изобщо бихме искали да използваме извикване на функции:
 
 ## Защо извикване на функции
 
-Преди извикването на функции, отговорите от LLM бяха неструктурирани и непоследователни. Разработчиците трябваше да пишат сложен код за валидиране, за да се уверят, че могат да се справят с всяка вариация на отговор. Потребителите не можеха да получат отговори като "Какво е текущото време в Стокхолм?". Това е така, защото моделите бяха ограничени до времето, когато данните бяха обучени.
+Преди извикването на функции, отговорите от LLM бяха неструктурирани и непоследователни. Разработчиците трябваше да пишат сложен код за валидация, за да могат да обработват всяка възможна вариация на отговор. Потребителите не можеха да получат отговори на въпроси като "Какво е текущото време в Стокхолм?". Това се дължи на ограничението на моделите да работят само с данни, с които са били обучени.
 
-Извикването на функции е функция на Azure OpenAI Service, за да преодолее следните ограничения:
+Извикването на функции е функция на Azure OpenAI Service, която преодолява следните ограничения:
 
-- **Консистентен формат на отговор**. Ако можем да контролираме по-добре формата на отговора, можем по-лесно да интегрираме отговора надолу по веригата към други системи.
-- **Външни данни**. Възможност за използване на данни от други източници на приложение в контекста на чат.
+- **Последователен формат на отговорите**. Ако можем по-добре да контролираме формата на отговора, можем по-лесно да интегрираме отговора в други системи.
+- **Външни данни**. Възможност за използване на данни от други източници в приложението в контекста на чат.
 
-## Илюстрация на проблема чрез сценарий
+## Илюстриране на проблема чрез сценарий
 
-> Препоръчваме ви да използвате [включения бележник](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), ако искате да изпълните следния сценарий. Можете също така просто да четете, докато се опитваме да илюстрираме проблем, където функциите могат да помогнат за решаването му.
+> Препоръчваме да използвате [включения тетрадка](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), ако искате да изпълните долния сценарий. Можете и просто да четете, докато илюстрираме проблем, който функциите могат да помогнат да се реши.
 
-Нека разгледаме примера, който илюстрира проблема с формата на отговора:
+Нека разгледаме пример, който илюстрира проблема с формата на отговора:
 
-Да кажем, че искаме да създадем база данни с данни за ученици, за да можем да им предложим правилния курс. По-долу имаме две описания на ученици, които са много сходни по данните, които съдържат.
+Да кажем, че искаме да създадем база данни със студентски данни, за да можем да им предложим подходящ курс. По-долу имаме две описания на студенти, които са много сходни по съдържание.
 
-1. Създайте връзка към нашия ресурс Azure OpenAI:
+1. Създаване на връзка с нашия Azure OpenAI ресурс:
 
    ```python
    import os
@@ -77,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   По-долу е даден Python код за конфигуриране на нашата връзка с Azure OpenAI, където задаваме `api_type`, `api_base`, `api_version` and `api_key`.
+   По-долу е Python код за конфигуриране на връзката с Azure OpenAI, където задаваме `api_type`, `api_base`, `api_version` и `api_key`.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
+1. Създаване на две описания на студенти с променливите `student_1_description` и `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Искаме да изпратим горните описания на учениците на LLM, за да анализираме данните. Тези данни могат по-късно да бъдат използвани в нашето приложение и да бъдат изпратени на API или съхранени в база данни.
+   Искаме да изпратим горните описания на студенти към LLM, за да анализира данните. Тези данни по-късно могат да се използват в нашето приложение и да се изпратят към API или да се съхранят в база данни.
 
-1. Нека създадем две идентични подканяния, в които инструктираме LLM каква информация ни интересува:
+1. Нека създадем два идентични промпта, в които инструктираме LLM каква информация ни интересува:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
    '''
    ```
 
-   Горните подканяния инструктират LLM да извлече информация и да върне отговора във формат JSON.
+   Горните промпти инструктират LLM да извлече информация и да върне отговора във формат JSON.
 
-1. След като настроим подканянията и връзката с Azure OpenAI, сега ще изпратим подканянията към LLM, използвайки `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Това е за имитация на съобщение от потребител, написано на чатбот.
+1. След като настроим промптите и връзката с Azure OpenAI, сега ще изпратим промптите към LLM, използвайки `openai.ChatCompletion`. Съхраняваме промпта в променливата `messages` и задаваме ролята `user`. Това имитира съобщение от потребител, изпратено към чатбот.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-Сега можем да изпратим и двете заявки към LLM и да разгледаме отговора, който получаваме, като го намерим така: `openai_response1['choices'][0]['message']['content']`.
+Сега можем да изпратим и двете заявки към LLM и да разгледаме получения отговор, като го намерим така: `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. Накрая можем да конвертираме отговора във формат JSON, като извикаме `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -173,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   Въпреки че подканянията са еднакви и описанията са сходни, виждаме стойности на `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Въпреки че промптите са еднакви и описанията са сходни, виждаме, че стойностите на свойството `Grades` са форматирани по различен начин, например понякога получаваме формата `3.7`, а друг път `3.7 GPA`.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   Този резултат се дължи на това, че LLM приема неструктурирани данни под формата на написания промпт и връща също неструктурирани данни. Нуждаем се от структуриран формат, за да знаем какво да очакваме при съхранение или използване на тези данни.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+Тогава как решаваме проблема с форматирането? Чрез използване на извикване на функции можем да сме сигурни, че ще получим обратно структурирани данни. При използване на извикване на функции, LLM всъщност не извиква или изпълнява функции. Вместо това създаваме структура, която LLM трябва да следва в отговорите си. След това използваме тези структурирани отговори, за да знаем коя функция да изпълним в нашите приложения.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.bg.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.bg.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+След това можем да вземем това, което функцията връща, и да го изпратим обратно към LLM. LLM ще отговори с естествен език, за да отговори на заявката на потребителя.
 
-## Use Cases for using function calls
+## Приложения на извикване на функции
 
-There are many different use cases where function calls can improve your app like:
+Има много различни случаи, в които извикването на функции може да подобри вашето приложение, като например:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **Извикване на външни инструменти**. Чатботовете са отлични в предоставянето на отговори на въпроси от потребителите. Чрез използване на извикване на функции, чатботовете могат да използват съобщенията от потребителите, за да изпълнят определени задачи. Например, студент може да поиска от чатбота да "Изпрати имейл на моя преподавател, че имам нужда от повече помощ по този предмет". Това може да направи извикване на функция `send_email(to: string, body: string)`.
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Създаване на заявки към API или база данни**. Потребителите могат да търсят информация с естествен език, която се преобразува в форматирана заявка или API повикване. Пример за това може да бъде учител, който пита "Кои са студентите, които са завършили последното задание", което може да извика функция с име `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Създаване на структурирани данни**. Потребителите могат да вземат блок текст или CSV и да използват LLM, за да извлекат важна информация от него. Например, студент може да преобразува статия от Wikipedia за мирни споразумения, за да създаде AI флашкарти. Това може да стане чрез функция `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Creating Your First Function Call
+## Създаване на първото ви извикване на функция
 
-The process of creating a function call includes 3 main steps:
+Процесът на създаване на извикване на функция включва 3 основни стъпки:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **Извикване** на Chat Completions API с листа на вашите функции и съобщение от потребител.
+2. **Четене** на отговора на модела, за да се извърши действие, т.е. изпълнение на функция или API повикване.
+3. **Извършване** на друго извикване към Chat Completions API с отговора от вашата функция, за да използвате тази информация за създаване на отговор към потребителя.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.bg.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.bg.png)
 
-### Step 1 - creating messages
+### Стъпка 1 - създаване на съобщения
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+Първата стъпка е да създадем съобщение от потребител. То може да се зададе динамично, като вземете стойността от текстов вход, или можете да зададете стойност тук. Ако това е първият ви път да работите с Chat Completions API, трябва да дефинираме `role` и `content` на съобщението.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` и примерен въпрос.
+`role` може да бъде `system` (създаване на правила), `assistant` (моделът) или `user` (крайният потребител). За извикване на функции ще зададем `user` и примерен въпрос.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Чрез назначаване на различни роли става ясно на LLM дали системата казва нещо или потребителят, което помага за изграждането на история на разговор, върху която LLM може да се основава.
+Чрез задаване на различни роли, на LLM става ясно дали системата казва нещо или потребителят, което помага за изграждане на история на разговора, върху която LLM може да надгражда.
 
 ### Стъпка 2 - създаване на функции
 
-След това ще дефинираме функция и параметрите на тази функция. Ще използваме само една функция тук, наречена `search_courses` but you can create multiple functions.
+След това ще дефинираме функция и параметрите ѝ. Тук ще използваме само една функция, наречена `search_courses`, но можете да създадете и няколко функции.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **Важно** : Функциите се включват в системното съобщение към LLM и се броят към наличните токени, които имате.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+По-долу създаваме функциите като масив от елементи. Всеки елемент е функция и има свойства `name`, `description` и `parameters`:
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-Нека опишем всяка инстанция на функцията по-подробно по-долу:
+Нека опишем всяка функция по-подробно:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - Името на функцията, която искаме да бъде извикана.
+- `description` - Описание как работи функцията. Тук е важно да бъдем конкретни и ясни.
+- `parameters` - Списък със стойности и формат, които искаме моделът да използва в отговора си. Масивът `parameters` съдържа елементи с следните свойства:
+  1.  `type` - Типът данни, в който ще се съхраняват свойствата.
+  1.  `properties` - Списък със специфичните стойности, които моделът ще използва в отговора си.
+      1. `name` - Ключът е името на свойството, което моделът ще използва във форматирания отговор, например `product`.
+      1. `type` - Типът данни на това свойство, например `string`.
+      1. `description` - Описание на конкретното свойство.
 
-There's also an optional property `required` - required property for the function call to be completed.
+Има и опционално свойство `required` - задължително свойство за изпълнение на извикването на функцията.
 
-### Step 3 - Making the function call
+### Стъпка 3 - Извършване на извикването на функция
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+След като дефинираме функция, сега трябва да я включим в извикването към Chat Completion API. Това става чрез добавяне на `functions` към заявката. В този случай `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+Има и опция да зададете `function_call` на `auto`. Това означава, че ще оставим LLM да реши коя функция да извика въз основа на съобщението на потребителя, вместо да я задаваме ние.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` и по този начин даваме на LLM избора кога да извика функциите, които му предоставяме:
+Ето малко код по-долу, където извикваме `ChatCompletion.create`, като задаваме `functions=functions` и `function_call="auto"`, давайки на LLM възможността да избира кога да извика предоставените функции:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Отговорът, който се връща, изглежда така:
+Отговорът, който получаваме, изглежда така:
 
 ```json
 {
@@ -294,27 +294,27 @@ print(response.choices[0].message)
 }
 ```
 
-Тук можем да видим как функцията `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+Тук виждаме как функцията `search_courses` е била извикана и с какви аргументи, изброени в свойството `arguments` в JSON отговора.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` стойност:
+Заключението е, че LLM е успял да намери данните, които да съответстват на аргументите на функцията, като ги е извлякъл от стойността, подадена в параметъра `messages` в извикването на чат завършване. По-долу е припомняне на стойността на `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Както можете да видите, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+Както виждате, `student`, `Azure` и `beginner` са извлечени от `messages` и зададени като вход към функцията. Използването на функции по този начин е отличен начин да се извлече информация от промпт, но и да се осигури структура на LLM и да се създаде многократно използваема функционалност.
 
-Next, we need to see how we can use this in our app.
+Следва да видим как можем да използваме това в нашето приложение.
 
-## Integrating Function Calls into an Application
+## Интегриране на извиквания на функции в приложение
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+След като тествахме форматирания отговор от LLM, сега можем да го интегрираме в приложение.
 
-### Managing the flow
+### Управление на потока
 
-To integrate this into our application, let's take the following steps:
+За да го интегрираме в нашето приложение, нека предприемем следните стъпки:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. Първо, нека направим извикване към OpenAI услугите и съхраним съобщението в променлива, наречена `response_message`.
 
    ```python
    response_message = response.choices[0].message
@@ -342,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Обърнете внимание как сега създаваме действителна Python функция, която съответства на имената на функциите, въведени в `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   Обърнете внимание, че сега създаваме реална Python функция, която съответства на имената на функциите, въведени в променливата `functions`. Също така правим реални външни API повиквания, за да вземем нужните данни. В този случай използваме Microsoft Learn API, за да търсим обучителни модули.
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+Добре, създадохме променливата `functions` и съответстваща Python функция, как да кажем на LLM как да ги свърже, за да бъде извикана нашата Python функция?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` е част от него и извиква посочената функция. Ето как можете да направите споменатата проверка по-долу:
+1. За да проверим дали трябва да извикаме Python функция, трябва да разгледаме отговора на LLM и да видим дали `function_call` е част от него и да извикаме посочената функция. Ето как можете да направите тази проверка:
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
     )
    ```
 
-   Тези три реда осигуряват извличането на името на функцията, аргументите и извършването на извикването:
+   Тези три реда гарантират, че извличаме името на функцията, аргументите и извършваме извикването:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Сега ще изпратим актуализираното съобщение, `messages` към LLM, за да можем да получим отговор на естествен език вместо отговор във формат API JSON.
+1. Сега ще изпратим обновеното съобщение, `messages`, към LLM, за да получим отговор на естествен език, вместо JSON формат от API.
 
    ```python
    print("Messages in next request:")
@@ -450,21 +450,18 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
    ```
 
-## Задание
+## Задача
 
-За да продължите обучението си по Azure OpenAI Function Calling, можете да изградите:
+За да продължите обучението си по Azure OpenAI Function Calling, можете да създадете:
 
-- Повече параметри на функцията, които могат да помогнат на обучаващите се да намерят повече курсове.
-- Създайте друго извикване на функция, което взема повече информация от обучаващия се, като неговия роден език
-- Създайте обработка на грешки, когато извикването на функция и/или API заявката не връща подходящи курсове
+- Повече параметри на функцията, които да помогнат на обучаващите се да намерят повече курсове.
+- Да създадете друго извикване на функция, което взема повече информация от обучаващия се, като например родния му език.
+- Да добавите обработка на грешки, когато извикването на функция и/или API заявката не връщат подходящи курсове.
+## Отлична работа! Продължавай напред
 
-Подсказка: Следвайте страницата [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), за да видите как и къде са налични тези данни.
+След като завършите този урок, разгледайте нашата [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), за да продължите да развивате знанията си за Генеративния ИИ!
 
-## Страхотна работа! Продължете пътешествието
-
-След завършване на този урок, разгледайте нашата [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), за да продължите да подобрявате знанията си за Generative AI!
-
-Преминете към урок 12, където ще разгледаме как да [проектираме UX за AI приложения](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Отидете на Урок 12, където ще разгледаме как да [проектираме UX за AI приложения](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 **Отказ от отговорност**:  
-Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Докато се стремим към точност, моля, имайте предвид, че автоматизираните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Не носим отговорност за каквито и да е недоразумения или погрешни интерпретации, произтичащи от използването на този превод.
+Този документ е преведен с помощта на AI преводаческа услуга [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматизираните преводи могат да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Ние не носим отговорност за каквито и да е недоразумения или неправилни тълкувания, произтичащи от използването на този превод.

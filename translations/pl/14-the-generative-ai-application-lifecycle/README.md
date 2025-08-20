@@ -2,98 +2,97 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "27a5347a5022d5ef0a72ab029b03526a",
-  "translation_date": "2025-05-19T23:26:53+00:00",
+  "translation_date": "2025-07-09T15:52:47+00:00",
   "source_file": "14-the-generative-ai-application-lifecycle/README.md",
   "language_code": "pl"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.0b85d0b37979269e80a18bb1e758e1ccca0a2195b426a0af666c8ad14aee60b0.pl.png)](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)
+[![Integracja z wywoływaniem funkcji](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.pl.png)](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)
 
 # Cykl życia aplikacji generatywnej AI
 
-Ważnym pytaniem dla wszystkich aplikacji AI jest istotność funkcji AI, ponieważ AI to szybko rozwijająca się dziedzina. Aby zapewnić, że twoja aplikacja pozostaje istotna, niezawodna i solidna, musisz ją stale monitorować, oceniać i doskonalić. W tym miejscu pojawia się cykl życia generatywnej AI.
+Ważnym pytaniem dla wszystkich aplikacji AI jest trafność funkcji AI, ponieważ AI to szybko rozwijająca się dziedzina. Aby Twoja aplikacja pozostała aktualna, niezawodna i solidna, musisz ją nieustannie monitorować, oceniać i ulepszać. W tym właśnie pomaga cykl życia generatywnej AI.
 
-Cykl życia generatywnej AI to ramy, które prowadzą cię przez etapy tworzenia, wdrażania i utrzymywania aplikacji generatywnej AI. Pomaga ci zdefiniować cele, mierzyć wydajność, identyfikować wyzwania i wdrażać rozwiązania. Pomaga również dostosować aplikację do standardów etycznych i prawnych w twojej dziedzinie oraz oczekiwań interesariuszy. Przestrzegając cyklu życia generatywnej AI, możesz zapewnić, że twoja aplikacja zawsze dostarcza wartość i zadowala użytkowników.
+Cykl życia generatywnej AI to ramy, które prowadzą Cię przez etapy tworzenia, wdrażania i utrzymania aplikacji generatywnej AI. Pomaga określić cele, mierzyć wyniki, identyfikować wyzwania i wdrażać rozwiązania. Pomaga także dostosować aplikację do standardów etycznych i prawnych Twojej dziedziny oraz interesariuszy. Stosując się do cyklu życia generatywnej AI, możesz mieć pewność, że Twoja aplikacja zawsze dostarcza wartość i zadowala użytkowników.
 
 ## Wprowadzenie
 
 W tym rozdziale:
 
 - Zrozumiesz zmianę paradygmatu z MLOps na LLMOps
-- Cykl życia LLM
-- Narzędzia cyklu życia
-- Metryfikacja i ocena cyklu życia
+- Poznasz cykl życia LLM
+- Narzędzia wspierające cykl życia
+- Metryfikację i ocenę cyklu życia
 
-## Zrozum zmianę paradygmatu z MLOps na LLMOps
+## Zrozumienie zmiany paradygmatu z MLOps na LLMOps
 
-LLM to nowe narzędzie w arsenale sztucznej inteligencji, niezwykle potężne w zadaniach analizy i generacji dla aplikacji. Jednak ta moc ma pewne konsekwencje w tym, jak usprawniamy zadania AI i klasycznego uczenia maszynowego.
+LLM to nowe narzędzie w arsenale sztucznej inteligencji, niezwykle potężne w zadaniach analizy i generowania dla aplikacji, jednak ta moc niesie ze sobą konsekwencje w sposobie usprawniania zadań AI i klasycznego uczenia maszynowego.
 
-Z tego powodu potrzebujemy nowego paradygmatu, aby dostosować to narzędzie w dynamiczny sposób, z odpowiednimi bodźcami. Możemy kategoryzować starsze aplikacje AI jako "Aplikacje ML", a nowsze jako "Aplikacje GenAI" lub po prostu "Aplikacje AI", odzwierciedlając główne technologie i techniki używane w danym czasie. To zmienia naszą narrację na wiele sposobów, spójrz na poniższe porównanie.
+W związku z tym potrzebujemy nowego paradygmatu, aby dostosować to narzędzie w dynamiczny sposób, z odpowiednimi zachętami. Możemy podzielić starsze aplikacje AI na „ML Apps”, a nowsze na „GenAI Apps” lub po prostu „AI Apps”, odzwierciedlając dominujące technologie i techniki stosowane w danym czasie. To przesuwa naszą narrację na wiele sposobów, spójrz na poniższe porównanie.
 
-![Porównanie LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.82d7bf6eb2d98a01e35f234df654e9aa4ebec89792f274695a5da8dc3f388084.pl.png)
+![Porównanie LLMOps i MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.pl.png)
 
-Zauważ, że w LLMOps skupiamy się bardziej na twórcach aplikacji, wykorzystując integracje jako kluczowy punkt, korzystając z "Modeli jako usługi" i myśląc o następujących punktach dla metryk.
+Zauważ, że w LLMOps skupiamy się bardziej na deweloperach aplikacji, wykorzystując integracje jako kluczowy punkt, stosując „Modele jako usługa” i myśląc o następujących metrykach.
 
 - Jakość: Jakość odpowiedzi
 - Szkoda: Odpowiedzialna AI
-- Uczciwość: Oparcie odpowiedzi (Czy ma sens? Czy jest poprawna?)
+- Uczciwość: Podstawa odpowiedzi (Czy ma sens? Czy jest poprawna?)
 - Koszt: Budżet rozwiązania
 - Opóźnienie: Średni czas odpowiedzi na token
 
 ## Cykl życia LLM
 
-Aby zrozumieć cykl życia i jego modyfikacje, przyjrzyjmy się poniższej infografice.
+Na początek, aby zrozumieć cykl życia i jego modyfikacje, spójrz na poniższą infografikę.
 
-![Infografika LLMOps](../../../translated_images/02-llmops.287de964b5ce9577678b7f053efb3a3c92adf0852c882c5bae94c11b7563e4db.pl.png)
+![Infografika LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.pl.png)
 
-Jak możesz zauważyć, różni się to od zwykłych cykli życia MLOps. LLM mają wiele nowych wymagań, takich jak Promowanie, różne techniki poprawy jakości (Fine-Tuning, RAG, Meta-Prompts), różne oceny i odpowiedzialność w zakresie odpowiedzialnej AI, a na końcu nowe metryki oceny (Jakość, Szkoda, Uczciwość, Koszt i Opóźnienie).
+Jak zauważysz, różni się ona od standardowych cykli życia w MLOps. LLM mają wiele nowych wymagań, takich jak promptowanie, różne techniki poprawy jakości (Fine-Tuning, RAG, Meta-Prompts), inne podejście do oceny i odpowiedzialności w kontekście odpowiedzialnej AI, a także nowe metryki oceny (Jakość, Szkoda, Uczciwość, Koszt i Opóźnienie).
 
-Na przykład, spójrz, jak wymyślamy. Używając inżynierii promptów do eksperymentowania z różnymi LLM, aby zbadać możliwości testowania, czy ich hipotezy mogą być poprawne.
+Na przykład, spójrz jak generujemy pomysły. Używając inżynierii promptów, eksperymentujemy z różnymi LLM, aby zbadać możliwości i sprawdzić, czy ich hipotezy mogą być prawdziwe.
 
-Zauważ, że to nie jest liniowe, ale zintegrowane pętle, iteracyjne i z nadrzędnym cyklem.
+Zauważ, że nie jest to proces liniowy, lecz zintegrowane pętle, iteracyjne i z nadrzędnym cyklem.
 
-Jak możemy eksplorować te kroki? Przejdźmy do szczegółów, jak możemy zbudować cykl życia.
+Jak możemy eksplorować te kroki? Przyjrzyjmy się szczegółowo, jak zbudować cykl życia.
 
-![Przepływ pracy LLMOps](../../../translated_images/03-llm-stage-flows.f3b87c210c1fe37084a7b7408877ff1688e2dc565694789820ec259e76d4ed05.pl.png)
+![Przepływ pracy LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.pl.png)
 
-Może to wyglądać nieco skomplikowanie, skupmy się najpierw na trzech dużych krokach.
+Może to wyglądać trochę skomplikowanie, skupmy się najpierw na trzech głównych etapach.
 
-1. Ideowanie/Eksplorowanie: Eksploracja, tutaj możemy badać zgodnie z naszymi potrzebami biznesowymi. Tworzenie prototypów, tworzenie [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) i testowanie, czy jest wystarczająco efektywne dla naszej hipotezy.
-2. Budowanie/Uzupełnianie: Implementacja, teraz zaczynamy oceniać dla większych zestawów danych, wdrażać techniki, takie jak Fine-tuning i RAG, aby sprawdzić solidność naszego rozwiązania. Jeśli nie działa, ponowne wdrożenie, dodanie nowych kroków w naszym przepływie lub restrukturyzacja danych może pomóc. Po przetestowaniu naszego przepływu i skali, jeśli działa i sprawdzimy nasze metryki, jest gotowe do następnego kroku.
-3. Operacjonalizacja: Integracja, teraz dodajemy systemy monitorowania i alertów do naszego systemu, wdrażanie i integrację aplikacji do naszej aplikacji.
+1. Generowanie pomysłów/Eksploracja: Eksploracja, tutaj możemy badać zgodnie z potrzebami biznesowymi. Prototypowanie, tworzenie [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) i testowanie, czy jest wystarczająco efektywne dla naszej hipotezy.
+1. Budowanie/Ulepszanie: Implementacja, teraz zaczynamy oceniać na większych zbiorach danych, wdrażamy techniki takie jak Fine-tuning i RAG, aby sprawdzić odporność naszego rozwiązania. Jeśli nie działa, ponowna implementacja, dodanie nowych kroków w przepływie lub restrukturyzacja danych może pomóc. Po przetestowaniu przepływu i skali, jeśli działa i spełnia nasze metryki, jest gotowe do kolejnego kroku.
+1. Operacjonalizacja: Integracja, teraz dodajemy systemy monitoringu i alertów, wdrażamy i integrujemy aplikację.
 
 Następnie mamy nadrzędny cykl zarządzania, skupiający się na bezpieczeństwie, zgodności i zarządzaniu.
 
-Gratulacje, teraz twoja aplikacja AI jest gotowa do działania. Aby uzyskać praktyczne doświadczenie, spójrz na [Demo czatu Contoso.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
+Gratulacje, teraz Twoja aplikacja AI jest gotowa do działania i operacyjna. Aby zdobyć praktyczne doświadczenie, zobacz [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
 
-Teraz, jakie narzędzia możemy użyć?
+A jakie narzędzia możemy wykorzystać?
 
-## Narzędzia cyklu życia
+## Narzędzia wspierające cykl życia
 
-Do narzędzi, Microsoft dostarcza [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) i [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst), które ułatwiają i sprawiają, że twój cykl jest łatwy do wdrożenia i gotowy do działania.
+Microsoft oferuje [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) oraz [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst), które ułatwiają i upraszczają wdrażanie cyklu życia.
 
-[Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) pozwala na korzystanie z [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio to portal internetowy, który pozwala na eksplorację modeli, próbek i narzędzi. Zarządzanie zasobami, przepływami rozwoju UI oraz opcjami SDK/CLI dla rozwoju opartego na kodzie.
+[Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) pozwala korzystać z [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio to portal internetowy umożliwiający eksplorację modeli, przykładów i narzędzi. Zarządzanie zasobami, tworzenie przepływów UI oraz opcje SDK/CLI dla programistów preferujących kod.
 
-![Możliwości Azure AI](../../../translated_images/04-azure-ai-platform.bf903e8cdf00f73896d804bd8e6bea62f5280498c998271bd5629c1efa8b466f.pl.png)
+![Możliwości Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.pl.png)
 
-Azure AI pozwala na korzystanie z wielu zasobów do zarządzania operacjami, usługami, projektami, wyszukiwaniem wektorowym i potrzebami baz danych.
+Azure AI pozwala korzystać z wielu zasobów do zarządzania operacjami, usługami, projektami, wyszukiwaniem wektorowym i bazami danych.
 
-![LLMOps z Azure AI](../../../translated_images/05-llm-azure-ai-prompt.dc29c0d74b1dd939f7c6cbf28b1fee54b9a846ba04d4068c40134e2627cb7232.pl.png)
+![LLMOps z Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.pl.png)
 
-Twórz, od Proof-of-Concept (POC) aż do aplikacji na dużą skalę z PromptFlow:
+Buduj od Proof-of-Concept (POC) aż po aplikacje na dużą skalę z PromptFlow:
 
-- Projektuj i twórz aplikacje z VS Code, z wizualnymi i funkcjonalnymi narzędziami
-- Testuj i dopracowuj swoje aplikacje dla jakości AI, z łatwością.
-- Używaj Azure AI Studio do integracji i iteracji z chmurą, wdrażaj i integruj szybko.
+- Projektuj i twórz aplikacje z VS Code, korzystając z narzędzi wizualnych i funkcjonalnych
+- Testuj i dostrajaj aplikacje, aby uzyskać wysoką jakość AI, łatwo i szybko
+- Korzystaj z Azure AI Studio, aby integrować i iterować w chmurze, wypychać i wdrażać dla szybkiej integracji
 
-![LLMOps z PromptFlow](../../../translated_images/06-llm-promptflow.8f0a6fcbea793a042a3db89ca1db1aa8fd540526958c97b5e894748fb4a87edd.pl.png)
+![LLMOps z PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.pl.png)
 
 ## Świetnie! Kontynuuj naukę!
 
-Niesamowite, teraz dowiedz się więcej o tym, jak strukturyzujemy aplikację, aby używać koncepcji z [Aplikacją czatu Contoso](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), aby zobaczyć, jak Cloud Advocacy dodaje te koncepcje w demonstracjach. Aby uzyskać więcej treści, sprawdź nasze [sesje na Ignite!
-](https://www.youtube.com/watch?v=DdOylyrTOWg)
+Fantastycznie, teraz dowiedz się więcej o tym, jak strukturyzujemy aplikację, aby wykorzystać te koncepcje na przykładzie [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), aby zobaczyć, jak Cloud Advocacy wprowadza te koncepcje w demonstracjach. Po więcej materiałów sprawdź naszą [sesję Ignite!](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Teraz sprawdź Lekcję 15, aby zrozumieć, jak [Retrieval Augmented Generation i Bazy Danych Wektorowych](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) wpływają na Generatywną AI i jak tworzyć bardziej angażujące aplikacje!
+Teraz przejdź do Lekcji 15, aby zrozumieć, jak [Retrieval Augmented Generation i bazy danych wektorowych](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) wpływają na Generatywną AI i jak tworzyć bardziej angażujące aplikacje!
 
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku istotnych informacji zalecane jest profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym należy traktować jako źródło wiążące. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.

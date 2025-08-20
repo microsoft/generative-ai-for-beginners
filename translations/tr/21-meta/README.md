@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:11:07+00:00",
+  "translation_date": "2025-07-09T19:09:50+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "tr"
 }
 -->
-# Meta Ailesi Modelleriyle İnşa Etme
+# Meta Aile Modelleri ile İnşa Etmek
 
 ## Giriş
 
-Bu derste ele alınacak konular:
+Bu derste şunlar ele alınacak:
 
-- İki ana Meta ailesi modeli - Llama 3.1 ve Llama 3.2'yi keşfetme
-- Her modelin kullanım alanları ve senaryolarını anlama
-- Her modelin benzersiz özelliklerini gösteren kod örneği
+- İki ana Meta aile modeli olan Llama 3.1 ve Llama 3.2’nin keşfi  
+- Her modelin kullanım alanları ve senaryolarının anlaşılması  
+- Her modelin benzersiz özelliklerini gösteren kod örneği  
 
-## Meta Ailesi Modelleri
+## Meta Aile Modelleri
 
-Bu derste Meta ailesinden veya "Llama Sürüsü"nden 2 modeli - Llama 3.1 ve Llama 3.2 - keşfedeceğiz.
+Bu derste, Meta ailesinden veya "Llama Sürüsü"nden 2 modeli inceleyeceğiz: Llama 3.1 ve Llama 3.2
 
-Bu modeller farklı varyantlarda gelir ve GitHub Model pazarında mevcuttur. AI modelleriyle [prototip oluşturma](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) için GitHub Modellerini kullanma hakkında daha fazla bilgi burada.
+Bu modeller farklı varyantlarda sunulmakta ve GitHub Model pazarında bulunabilir. GitHub Modelleri kullanarak [AI modelleri ile prototip oluşturma](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi için buraya bakabilirsiniz.
 
-Model Varyantları:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Model Varyantları:  
+- Llama 3.1 - 70B Instruct  
+- Llama 3.1 - 405B Instruct  
+- Llama 3.2 - 11B Vision Instruct  
+- Llama 3.2 - 90B Vision Instruct  
 
-*Not: Llama 3 de GitHub Modellerinde mevcuttur ancak bu derste ele alınmayacaktır*
+*Not: Llama 3 de GitHub Modellerinde mevcut ancak bu derste ele alınmayacak*
 
 ## Llama 3.1
 
-405 Milyar Parametre ile Llama 3.1, açık kaynak LLM kategorisine girer.
+405 Milyar Parametre ile Llama 3.1 açık kaynak LLM kategorisine girer.
 
-Model, önceki Llama 3 sürümüne şu şekilde bir yükseltme sunar:
+Bu model, önceki sürüm Llama 3’e göre şu geliştirmeleri sunar:
 
-- Daha geniş bağlam penceresi - 128k token vs 8k token
-- Daha büyük Maksimum Çıktı Tokenları - 4096 vs 2048
-- Daha iyi Çok Dilli Destek - eğitim tokenlarının artışı nedeniyle
+- Daha büyük bağlam penceresi - 128k token vs 8k token  
+- Daha yüksek Maksimum Çıktı Token sayısı - 4096 vs 2048  
+- Daha iyi Çokdillilik Desteği - eğitim token sayısındaki artış sayesinde  
 
-Bu özellikler, Llama 3.1'in GenAI uygulamaları oluştururken daha karmaşık kullanım senaryolarını ele almasını sağlar:
-- Yerel Fonksiyon Çağrısı - LLM iş akışının dışında harici araçları ve fonksiyonları çağırma yeteneği
-- Daha İyi RAG Performansı - daha yüksek bağlam penceresi nedeniyle
-- Sentetik Veri Üretimi - ince ayar gibi görevler için etkili veri oluşturma yeteneği
+Bunlar, Llama 3.1’in GenAI uygulamaları geliştirirken daha karmaşık kullanım senaryolarını yönetmesini sağlar, örneğin:  
+- Native Function Calling - LLM iş akışının dışındaki harici araç ve fonksiyonları çağırabilme yeteneği  
+- Daha iyi RAG Performansı - daha büyük bağlam penceresi sayesinde  
+- Sentetik Veri Üretimi - ince ayar gibi görevler için etkili veri oluşturabilme  
 
-### Yerel Fonksiyon Çağrısı
+### Native Function Calling
 
-Llama 3.1, fonksiyon veya araç çağrıları yapmada daha etkili olacak şekilde ince ayar yapılmıştır. Ayrıca, kullanıcının isteğine göre kullanılacak iki yerleşik araç vardır. Bu araçlar:
+Llama 3.1, fonksiyon veya araç çağrılarında daha etkili olması için ince ayarlandı. Ayrıca, modelin kullanıcıdan gelen isteme göre kullanılması gerektiğini anlayabileceği iki yerleşik aracı vardır. Bu araçlar:
 
-- **Brave Search** - Web araması yaparak hava durumu gibi güncel bilgileri almak için kullanılabilir
-- **Wolfram Alpha** - Daha karmaşık matematiksel hesaplamalar için kullanılabilir, böylece kendi fonksiyonlarınızı yazmanıza gerek kalmaz.
+- **Brave Search** - Web araması yaparak güncel bilgiler (örneğin hava durumu) alınabilir  
+- **Wolfram Alpha** - Daha karmaşık matematiksel hesaplamalar için kullanılabilir, kendi fonksiyonlarınızı yazmanıza gerek kalmaz  
 
-Ayrıca LLM'in çağırabileceği kendi özel araçlarınızı da oluşturabilirsiniz.
+Ayrıca, LLM’nin çağırabileceği kendi özel araçlarınızı da oluşturabilirsiniz.
 
 Aşağıdaki kod örneğinde:
 
-- Sisteme mevcut araçları (brave_search, wolfram_alpha) tanımlarız.
-- Belirli bir şehirdeki hava durumu hakkında bir kullanıcı isteği göndeririz.
-- LLM, Brave Search aracını çağırarak şu şekilde yanıt verecektir `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Sistem isteminde kullanılabilir araçlar (brave_search, wolfram_alpha) tanımlanır.  
+- Belirli bir şehirdeki hava durumu hakkında kullanıcı istemi gönderilir.  
+- LLM, Brave Search aracını çağıran bir yanıt verir, bu şu şekilde görünür: `<|python_tag|>brave_search.call(query="Stockholm weather")`  
 
-*Not: Bu örnek sadece araç çağrısı yapar, sonuçları almak isterseniz, Brave API sayfasında ücretsiz bir hesap oluşturmanız ve fonksiyonu tanımlamanız gerekecektir*
+*Not: Bu örnek sadece araç çağrısını yapar, sonuçları almak için Brave API sayfasında ücretsiz bir hesap oluşturmanız ve fonksiyonu tanımlamanız gerekir*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Bir LLM olmasına rağmen, Llama 3.1'in bir sınırlaması çoklu modluluk eksikliğidir. Yani, farklı türdeki girdileri, örneğin resimleri istem olarak kullanma ve yanıt sağlama yeteneği. Bu yetenek, Llama 3.2'nin ana özelliklerinden biridir. Bu özellikler ayrıca şunları içerir:
+Bir LLM olmasına rağmen, Llama 3.1’in bir sınırlaması multimodalite yani farklı türde girdileri (örneğin görseller) istem olarak kullanabilme ve yanıt verebilme yeteneğidir. Bu yetenek Llama 3.2’nin temel özelliklerinden biridir. Diğer özellikler şunlardır:
 
-- Çoklu Modluluk - hem metin hem de görüntü istemlerini değerlendirme yeteneği
-- Küçük ve Orta boyut varyasyonları (11B ve 90B) - bu, esnek dağıtım seçenekleri sunar,
-- Yalnızca metin varyasyonları (1B ve 3B) - bu, modelin uç / mobil cihazlarda dağıtılmasını sağlar ve düşük gecikme süresi sunar
+- Multimodalite - hem metin hem de görsel istemlerini değerlendirebilme  
+- Küçük ve Orta boy varyantlar (11B ve 90B) - esnek dağıtım seçenekleri sunar  
+- Sadece metin varyantları (1B ve 3B) - modelin uç / mobil cihazlarda düşük gecikmeyle çalışmasını sağlar  
 
-Çoklu modluluk desteği, açık kaynak modeller dünyasında büyük bir adımı temsil eder. Aşağıdaki kod örneği, hem bir görüntü hem de metin istemi alarak Llama 3.2 90B'den görüntünün analizini alır.
+Multimodal destek, açık kaynak modeller dünyasında büyük bir adımdır. Aşağıdaki kod örneği, hem görsel hem de metin istemi alarak Llama 3.2 90B’den görsel analizi yapar.
 
-### Llama 3.2 ile Çoklu Modluluk Desteği
+### Llama 3.2 ile Multimodal Destek
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Öğrenme burada bitmiyor, Yolculuğa devam edin
+## Öğrenme burada bitmiyor, yolculuğa devam edin
 
-Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Öğrenme koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyin!
+Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atabilirsiniz!
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğu sağlamak için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından doğabilecek yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.

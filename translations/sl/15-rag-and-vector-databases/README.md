@@ -2,92 +2,98 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "e2861bbca91c0567ef32bc77fe054f9e",
-  "translation_date": "2025-05-20T01:46:50+00:00",
+  "translation_date": "2025-07-09T16:22:01+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "sl"
 }
 -->
-# Povečana generacija pridobivanja (RAG) in vektorske baze podatkov
+# Retrieval Augmented Generation (RAG) in vektorske baze podatkov
 
-V lekciji o iskalnih aplikacijah smo na kratko spoznali, kako vključiti svoje podatke v velike jezikovne modele (LLM). V tej lekciji se bomo poglobili v koncepte utemeljitve vaših podatkov v vaši aplikaciji LLM, mehaniko procesa in metode za shranjevanje podatkov, vključno z vektorskimi predstavitvami in besedilom.
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.sl.png)](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst)
 
-> **Video prihaja kmalu**
+V lekciji o iskalnih aplikacijah smo na kratko spoznali, kako vključiti lastne podatke v velike jezikovne modele (LLM). V tej lekciji bomo podrobneje raziskali koncept povezovanja vaših podatkov v aplikaciji LLM, mehaniko procesa in metode shranjevanja podatkov, vključno z vektorskimi predstavitvami in besedilom.
+
+> **Video kmalu na voljo**
 
 ## Uvod
 
 V tej lekciji bomo obravnavali naslednje:
 
-- Uvod v RAG, kaj je to in zakaj se uporablja v umetni inteligenci (AI).
+- Uvod v RAG, kaj je in zakaj se uporablja v umetni inteligenci (AI).
 
-- Razumevanje, kaj so vektorske baze podatkov, in ustvarjanje ene za našo aplikacijo.
+- Razumevanje, kaj so vektorske baze podatkov in kako ustvariti eno za našo aplikacijo.
 
 - Praktičen primer, kako integrirati RAG v aplikacijo.
 
 ## Cilji učenja
 
-Po končani lekciji boste lahko:
+Po zaključku te lekcije boste znali:
 
-- Razložili pomen RAG pri pridobivanju in obdelavi podatkov.
+- Pojasniti pomen RAG pri iskanju in obdelavi podatkov.
 
-- Nastavili aplikacijo RAG in utemeljili svoje podatke na LLM.
+- Nastaviti RAG aplikacijo in povezati svoje podatke z LLM.
 
-- Učinkovita integracija RAG in vektorskih baz podatkov v aplikacije LLM.
+- Učinkovito integrirati RAG in vektorske baze podatkov v LLM aplikacije.
 
-## Naš scenarij: izboljšanje naših LLM-ov z lastnimi podatki
+## Naš primer: izboljšanje LLM z lastnimi podatki
 
-Za to lekcijo želimo dodati lastne zapiske v izobraževalni startup, kar omogoča klepetalnemu botu pridobivanje več informacij o različnih predmetih. Z uporabo zapiskov, ki jih imamo, bodo učenci lahko bolje študirali in razumeli različne teme, kar bo olajšalo pripravo na izpite. Za ustvarjanje našega scenarija bomo uporabili:
+Za to lekcijo želimo dodati lastne zapiske v izobraževalni startup, ki omogoča chatbotu, da pridobi več informacij o različnih predmetih. Z uporabo zapiskov bodo učenci lahko bolje študirali in razumeli različne teme, kar jim bo olajšalo pripravo na izpite. Za naš primer bomo uporabili:
 
-- `Azure OpenAI:` LLM, ki ga bomo uporabili za ustvarjanje našega klepetalnega bota
+- `Azure OpenAI:` LLM, ki ga bomo uporabili za izdelavo chatbota
 
-- `AI for beginners' lesson on Neural Networks`: to bodo podatki, na katerih bomo utemeljili naš LLM
+- `Lekcija AI za začetnike o nevronskih mrežah:` to bo podlaga, na kateri bomo povezali naš LLM
 
-- `Azure AI Search` in `Azure Cosmos DB:` vektorska baza podatkov za shranjevanje naših podatkov in ustvarjanje iskalnega indeksa
+- `Azure AI Search` in `Azure Cosmos DB:` vektorska baza podatkov za shranjevanje podatkov in ustvarjanje iskalnega indeksa
 
-Uporabniki bodo lahko ustvarjali vadbene kvize iz svojih zapiskov, kartice za ponavljanje in jih povzemali v jedrnate preglede. Začnimo z razumevanjem, kaj je RAG in kako deluje:
+Uporabniki bodo lahko ustvarjali vaje iz svojih zapiskov, kartice za ponavljanje in povzetke. Za začetek si poglejmo, kaj je RAG in kako deluje:
 
-## Povečana generacija pridobivanja (RAG)
+## Retrieval Augmented Generation (RAG)
 
-Klepetalni bot, ki ga poganja LLM, obdeluje uporabniške pozive za ustvarjanje odgovorov. Namenjen je interaktivnosti in vključuje uporabnike v širok spekter tem. Vendar so njegovi odgovori omejeni na zagotovljeni kontekst in osnovne podatke o usposabljanju. Na primer, GPT-4 ima omejitev znanja do septembra 2021, kar pomeni, da mu manjka znanje o dogodkih, ki so se zgodili po tem obdobju. Poleg tega podatki, uporabljeni za usposabljanje LLM-ov, izključujejo zaupne informacije, kot so osebni zapiski ali priročnik za izdelke podjetja.
+Chatbot, ki ga poganja LLM, obdeluje uporabniške zahteve in ustvarja odgovore. Namenjen je interakciji in pogovoru z uporabniki o različnih temah. Vendar so njegovi odgovori omejeni na kontekst, ki mu je na voljo, in na osnovne podatke, na katerih je bil usposobljen. Na primer, GPT-4 ima znanje do septembra 2021, kar pomeni, da ne pozna dogodkov po tem datumu. Poleg tega podatki, uporabljeni za usposabljanje LLM, ne vključujejo zaupnih informacij, kot so osebni zapiski ali priročniki podjetij.
 
-### Kako delujejo RAG-i (Povečana generacija pridobivanja)
+### Kako delujejo RAG (Retrieval Augmented Generation)
 
-Predpostavimo, da želite uvesti klepetalni bot, ki ustvarja kvize iz vaših zapiskov, potrebovali boste povezavo z bazo znanja. Tukaj pride na pomoč RAG. RAG-i delujejo na naslednji način:
+![risba, ki prikazuje, kako delujejo RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.sl.png)
 
-- **Baza znanja:** Pred pridobivanjem je treba te dokumente vnesti in predhodno obdelati, običajno razdeliti velike dokumente na manjše dele, jih pretvoriti v vektorske predstavitve besedila in jih shraniti v bazo podatkov.
+Recimo, da želite postaviti chatbota, ki ustvarja kvize iz vaših zapiskov; potrebovali boste povezavo z bazo znanja. Tu pride RAG na pomoč. RAG deluje tako:
 
-- **Uporabniško vprašanje:** uporabnik postavi vprašanje
+- **Baza znanja:** Pred iskanjem je treba dokumente vnesti in predobdelati, običajno tako, da velike dokumente razdelimo na manjše dele, jih pretvorimo v vektorske predstavitve in shranimo v bazo podatkov.
 
-- **Pridobivanje:** Ko uporabnik postavi vprašanje, model vektorske predstavitve pridobi ustrezne informacije iz naše baze znanja, da zagotovi več konteksta, ki bo vključen v poziv.
+- **Uporabniški poizvedba:** uporabnik postavi vprašanje
 
-- **Povečana generacija:** LLM izboljša svoj odgovor na podlagi pridobljenih podatkov. Omogoča, da je ustvarjeni odgovor ne le na podlagi predhodno usposobljenih podatkov, temveč tudi na podlagi ustreznih informacij iz dodanega konteksta. Pridobljeni podatki se uporabljajo za povečanje odgovorov LLM-a. LLM nato vrne odgovor na uporabnikovo vprašanje.
+- **Iskanje:** Ko uporabnik postavi vprašanje, model vektorskih predstavitev poišče relevantne informacije v naši bazi znanja, da zagotovi več konteksta, ki se vključi v poziv.
 
-Arhitektura za RAG-e je implementirana z uporabo transformatorjev, ki sestojijo iz dveh delov: kodirnika in dekodirnika. Na primer, ko uporabnik postavi vprašanje, se vhodno besedilo 'kodira' v vektorje, ki zajemajo pomen besed, in vektorji se 'dekodirajo' v naš dokumentni indeks ter generirajo novo besedilo na podlagi uporabniškega vprašanja. LLM uporablja model kodirnik-dekodirnik za generiranje izhoda.
+- **Povečana generacija:** LLM izboljša svoj odgovor na podlagi pridobljenih podatkov. Tako odgovor ni le na podlagi predhodno usposobljenih podatkov, ampak tudi relevantnih informacij iz dodanega konteksta. Pridobljeni podatki se uporabijo za izboljšanje odgovorov LLM. Nato LLM vrne odgovor na uporabnikovo vprašanje.
 
-Dva pristopa pri implementaciji RAG-a po predlaganem članku: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sta:
+![risba, ki prikazuje arhitekturo RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.sl.png)
 
-- **_RAG-Sequence_** uporablja pridobljene dokumente za napovedovanje najboljšega možnega odgovora na uporabniško vprašanje
+Arhitektura RAG temelji na transformatorjih, ki jih sestavljata dve komponenti: enkoder in dekoder. Na primer, ko uporabnik postavi vprašanje, se vhodno besedilo 'zakodira' v vektorje, ki zajamejo pomen besed, ti vektorji pa se 'dekodirajo' v naš indeks dokumentov in ustvarijo nov tekst na podlagi uporabnikove poizvedbe. LLM uporablja model enkoder-dekoder za generiranje izhoda.
 
-- **RAG-Token** uporablja dokumente za generiranje naslednjega znaka, nato jih pridobi za odgovor na uporabniško vprašanje
+Dva pristopa pri implementaciji RAG, kot je opisano v predlaganem članku: [Retrieval-Augmented Generation for Knowledge intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sta:
 
-### Zakaj bi uporabljali RAG-e?
+- **_RAG-Sequence_** uporablja pridobljene dokumente za napoved najbolj možnega odgovora na uporabnikovo vprašanje
 
-- **Bogastvo informacij:** zagotavlja, da so besedilni odgovori ažurni in aktualni. Zato izboljšuje zmogljivost pri nalogah, specifičnih za določeno področje, z dostopom do notranje baze znanja.
+- **RAG-Token** uporablja dokumente za generiranje naslednjega tokena, nato jih pridobi za odgovor na vprašanje uporabnika
 
-- Zmanjšuje izdelavo z uporabo **preverljivih podatkov** v bazi znanja za zagotavljanje konteksta uporabniškim vprašanjem.
+### Zakaj uporabljati RAG?
 
-- Je **stroškovno učinkovit**, saj so bolj ekonomični v primerjavi z fino nastavitvijo LLM-a.
+- **Bogastvo informacij:** zagotavlja, da so besedilni odgovori ažurni in aktualni. S tem izboljša delovanje pri nalogah, specifičnih za določeno področje, z dostopom do notranje baze znanja.
+
+- Zmanjšuje izmišljanje z uporabo **preverljivih podatkov** v bazi znanja, ki zagotavljajo kontekst za uporabnikove poizvedbe.
+
+- Je **stroškovno učinkovito**, saj je cenejše kot dodatno usposabljanje LLM.
 
 ## Ustvarjanje baze znanja
 
-Naša aplikacija temelji na naših osebnih podatkih, tj. lekciji o nevronskih mrežah v učnem načrtu AI za začetnike.
+Naša aplikacija temelji na osebnih podatkih, tj. lekciji o nevronskih mrežah iz kurikuluma AI za začetnike.
 
 ### Vektorske baze podatkov
 
-Vektorska baza podatkov, za razliko od tradicionalnih baz podatkov, je specializirana baza podatkov, zasnovana za shranjevanje, upravljanje in iskanje vektorskih predstavitev. Shranjuje številčne predstavitve dokumentov. Razdelitev podatkov na številčne vektorske predstavitve olajša našemu AI sistemu razumevanje in obdelavo podatkov.
+Vektorska baza podatkov je specializirana baza, namenjena shranjevanju, upravljanju in iskanju vektorskih predstavitev. Shranjuje numerične predstavitve dokumentov. Razbijanje podatkov na numerične vektorske predstavitve omogoča našemu AI sistemu lažje razumevanje in obdelavo podatkov.
 
-Naše vektorske predstavitve shranjujemo v vektorskih bazah podatkov, saj imajo LLM-ji omejitev števila znakov, ki jih sprejmejo kot vhod. Ker ne morete posredovati celotnih vektorskih predstavitev LLM-u, jih bomo morali razdeliti na dele, in ko uporabnik postavi vprašanje, bodo vrnjene vektorske predstavitve, ki so najbolj podobne vprašanju, skupaj s pozivom. Razdelitev na dele tudi zmanjšuje stroške glede na število znakov, ki se posredujejo skozi LLM.
+Naše vektorske predstavitve shranjujemo v vektorskih bazah, saj imajo LLM omejitev števila tokenov, ki jih lahko sprejmejo kot vhod. Ker celotnih predstavitev ne moremo poslati v LLM, jih moramo razdeliti na manjše dele, ki se ob uporabnikovi poizvedbi vrnejo skupaj s pozivom. Razdeljevanje na dele tudi znižuje stroške glede števila tokenov, ki jih LLM obdela.
 
-Nekatere priljubljene vektorske baze podatkov vključujejo Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant in DeepLake. Model Azure Cosmos DB lahko ustvarite z uporabo Azure CLI z naslednjim ukazom:
+Nekatere priljubljene vektorske baze so Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant in DeepLake. Model Azure Cosmos DB lahko ustvarite z ukazom Azure CLI:
 
 ```bash
 az login
@@ -96,9 +102,9 @@ az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
 az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 ```
 
-### Od besedila do vektorskih predstavitev
+### Iz besedila v vektorske predstavitve
 
-Preden shranimo naše podatke, jih bomo morali pretvoriti v vektorske predstavitve, preden jih shranimo v bazo podatkov. Če delate z velikimi dokumenti ali dolgimi besedili, jih lahko razdelite na podlagi pričakovanih vprašanj. Razdelitev lahko izvedete na ravni stavka ali odstavka. Ker razdelitev pridobiva pomene iz besed okoli njih, lahko dodate še nekaj konteksta k delu, na primer z dodajanjem naslova dokumenta ali vključitvijo besedila pred ali po delu. Podatke lahko razdelite na naslednji način:
+Preden shranimo podatke, jih moramo pretvoriti v vektorske predstavitve. Če delate z velikimi dokumenti ali dolgimi besedili, jih lahko razdelite glede na pričakovane poizvedbe. Razdeljevanje lahko poteka na ravni stavkov ali odstavkov. Ker razdeljevanje zajema pomen okoliških besed, lahko dodate tudi dodatni kontekst, na primer naslov dokumenta ali nekaj besedila pred ali za delom. Podatke lahko razdelite tako:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -119,40 +125,40 @@ def split_text(text, max_length, min_length):
     return chunks
 ```
 
-Ko so razdeljeni, lahko nato vstavimo naše besedilo z uporabo različnih modelov vektorskih predstavitev. Nekateri modeli, ki jih lahko uporabite, vključujejo: word2vec, ada-002 s strani OpenAI, Azure Computer Vision in še več. Izbira modela bo odvisna od jezikov, ki jih uporabljate, vrste kodirane vsebine (besedilo/slike/zvok), velikosti vnosa, ki ga lahko kodira, in dolžine izhoda vektorske predstavitve.
+Ko so podatki razdeljeni, jih lahko vektoriziramo z različnimi modeli. Nekateri modeli so word2vec, ada-002 od OpenAI, Azure Computer Vision in še več. Izbira modela je odvisna od uporabljenih jezikov, vrste vsebine (besedilo/slike/zvok), velikosti vhoda in dolžine izhoda vektorske predstavitve.
 
-Primer vstavljenega besedila z uporabo modela OpenAI `text-embedding-ada-002` je:
-![vektorska predstavitev besede mačka](../../../translated_images/cat.3db013cbca4fd5d90438ea7b312ad0364f7686cf79931ab15cd5922151aea53e.sl.png)
+Primer vektorske predstavitve besede "cat" z modelom OpenAI `text-embedding-ada-002` je:
+![vektorska predstavitev besede cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.sl.png)
 
-## Pridobivanje in vektorsko iskanje
+## Iskanje in vektorsko iskanje
 
-Ko uporabnik postavi vprašanje, ga retriver pretvori v vektor z uporabo kodirnika poizvedb, nato pa išče po našem indeksu iskanja dokumentov za ustrezne vektorje v dokumentu, ki so povezani z vhodom. Ko je to storjeno, pretvori tako vhodni vektor kot dokumentne vektorje v besedilo in jih posreduje skozi LLM.
+Ko uporabnik postavi vprašanje, ga iskalnik pretvori v vektor z uporabo enkoderja poizvedbe, nato pa išče v našem indeksu dokumentov ustrezne vektorje, povezane z vhodom. Nato pretvori vhodni in dokumentne vektorje nazaj v besedilo in jih posreduje LLM.
 
-### Pridobivanje
+### Iskanje
 
-Pridobivanje se zgodi, ko sistem poskuša hitro najti dokumente iz indeksa, ki izpolnjujejo iskalna merila. Cilj retriverja je pridobiti dokumente, ki bodo uporabljeni za zagotavljanje konteksta in utemeljitev LLM-a na vaših podatkih.
+Iskanje poteka, ko sistem hitro poišče dokumente v indeksu, ki ustrezajo iskalnim kriterijem. Namen iskalnika je pridobiti dokumente, ki bodo služili kot kontekst in podlaga za LLM.
 
-Obstaja več načinov za iskanje znotraj naše baze podatkov, kot so:
+Iskanje v bazi lahko izvedemo na več načinov:
 
-- **Iskanje po ključnih besedah** - uporablja se za iskanje besedila
+- **Iskanje po ključnih besedah** – za iskanje po besedilu
 
-- **Semantično iskanje** - uporablja semantični pomen besed
+- **Semantično iskanje** – uporablja pomen besed
 
-- **Vektorsko iskanje** - pretvarja dokumente iz besedila v vektorske predstavitve z uporabo modelov vektorskih predstavitev. Pridobivanje bo izvedeno z iskanjem dokumentov, katerih vektorske predstavitve so najbližje uporabniškemu vprašanju.
+- **Vektorsko iskanje** – pretvori dokumente iz besedila v vektorske predstavitve z modeli za vektorizacijo. Iskanje poteka po dokumentih, katerih vektorske predstavitve so najbližje uporabnikovemu vprašanju.
 
-- **Hibridno** - kombinacija iskanja po ključnih besedah in vektorskega iskanja.
+- **Hibridno** – kombinacija iskanja po ključnih besedah in vektorskega iskanja.
 
-Izziv pri pridobivanju se pojavi, ko v bazi podatkov ni podobnega odgovora na poizvedbo, sistem pa bo nato vrnil najboljše informacije, ki jih lahko dobi, vendar lahko uporabite taktike, kot so nastavitev največje razdalje za ustreznost ali uporaba hibridnega iskanja, ki združuje tako iskanje po ključnih besedah kot vektorsko iskanje. V tej lekciji bomo uporabili hibridno iskanje, kombinacijo vektorskega in iskanja po ključnih besedah. Naše podatke bomo shranili v podatkovni okvir s stolpci, ki vsebujejo dele in vektorske predstavitve.
+Izziv pri iskanju nastane, če v bazi ni podobnega odgovora na poizvedbo; sistem bo vrnil najboljše razpoložljive informacije. Za izboljšanje lahko nastavite maksimalno razdaljo za relevantnost ali uporabite hibridno iskanje, ki združuje ključne besede in vektorsko iskanje. V tej lekciji bomo uporabili hibridno iskanje. Podatke bomo shranili v podatkovni okvir s stolpci, ki vsebujejo dele besedila in njihove vektorske predstavitve.
 
 ### Vektorska podobnost
 
-Retriver bo iskal po bazi znanja za vektorske predstavitve, ki so blizu skupaj, najbližji sosed, saj so to besedila, ki so podobna. V scenariju, ko uporabnik postavi poizvedbo, se ta najprej vstavi, nato pa se ujema s podobnimi vektorskimi predstavitvami. Običajna meritev, ki se uporablja za ugotavljanje, kako podobni so različni vektorji, je kosinusna podobnost, ki temelji na kotu med dvema vektorjema.
+Iskalnik bo iskal v bazi znanja vektorske predstavitve, ki so si med seboj blizu, torej najbližji sosedje, saj gre za podobna besedila. Ko uporabnik postavi vprašanje, se to najprej vektorizira in nato primerja s podobnimi vektorskimi predstavitvami. Pogosta mera podobnosti je kosinusna podobnost, ki temelji na kotu med dvema vektorjema.
 
-Podobnost lahko merimo z drugimi alternativami, ki jih lahko uporabimo, so Evklidska razdalja, ki je ravna črta med končnimi točkami vektorjev, in skalarni produkt, ki meri vsoto produktov ustreznih elementov dveh vektorjev.
+Podobnost lahko merimo tudi z drugimi metodami, kot sta evklidska razdalja (najkrajša razdalja med koncema vektorjev) in skalarni produkt (vsota produktov ustreznih elementov dveh vektorjev).
 
 ### Iskalni indeks
 
-Ko izvajamo pridobivanje, bomo morali zgraditi iskalni indeks za našo bazo znanja, preden izvedemo iskanje. Indeks bo shranil naše vektorske predstavitve in lahko hitro pridobil najbolj podobne dele tudi v veliki bazi podatkov. Naš indeks lahko ustvarimo lokalno z uporabo:
+Pred iskanjem moramo zgraditi iskalni indeks za bazo znanja. Indeks shrani naše vektorske predstavitve in omogoča hitro iskanje najbolj podobnih delov tudi v veliki bazi. Indeks lahko ustvarimo lokalno z:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
@@ -166,9 +172,9 @@ nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Ponovno rangiranje
+### Ponovno razvrščanje (re-ranking)
 
-Ko ste poizvedovali po bazi podatkov, boste morda morali rezultate razvrstiti od najbolj relevantnih. Ponovno rangiranje LLM uporablja strojno učenje za izboljšanje ustreznosti iskalnih rezultatov z njihovim urejanjem od najbolj relevantnih. Z uporabo Azure AI Search je ponovno rangiranje samodejno izvedeno za vas z uporabo semantičnega ponovnega rangiranja. Primer, kako ponovno rangiranje deluje z uporabo najbližjih sosedov:
+Ko poizvedujete bazo, boste morda želeli rezultate razvrstiti po relevantnosti. LLM za ponovno razvrščanje uporablja strojno učenje za izboljšanje relevantnosti rezultatov tako, da jih uredi od najbolj do manj relevantnih. Z uporabo Azure AI Search se ponovno razvrščanje izvede samodejno s semantičnim razvrščevalcem. Primer delovanja ponovnega razvrščanja z najbližjimi sosedi:
 
 ```python
 # Find the most similar documents
@@ -186,9 +192,9 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Vse skupaj
+## Vse skupaj združimo
 
-Zadnji korak je dodajanje našega LLM-a v mešanico, da lahko dobimo odgovore, ki so utemeljeni na naših podatkih. To lahko implementiramo na naslednji način:
+Zadnji korak je vključitev našega LLM, da lahko dobimo odgovore, ki temeljijo na naših podatkih. Implementiramo ga lahko tako:
 
 ```python
 user_input = "what is a perceptron?"
@@ -227,47 +233,47 @@ def chatbot(user_input):
 chatbot(user_input)
 ```
 
-## Vrednotenje naše aplikacije
+## Evalvacija naše aplikacije
 
-### Evalvacijske metrike
+### Merila za ocenjevanje
 
-- Kakovost dobavljenih odgovorov, ki zagotavlja, da zvenijo naravno, tekoče in človeško.
+- Kakovost odgovorov: ali zvenijo naravno, tekoče in človeško
 
-- Utemeljenost podatkov: vrednotenje, ali je odgovor prišel iz dobavljenih dokumentov.
+- Povezanost podatkov: ali je odgovor izhajal iz predloženih dokumentov
 
-- Ustreznost: vrednotenje, ali odgovor ustreza in je povezan z zastavljenim vprašanjem.
+- Relevantnost: ali odgovor ustreza in je povezan z zastavljenim vprašanjem
 
-- Tekočnost - ali odgovor smiselno zveni slovnično.
+- Tekočnost – ali je odgovor slovnično smiseln
 
-## Primeri uporabe RAG (Povečana generacija pridobivanja) in vektorskih baz podatkov
+## Primeri uporabe RAG in vektorskih baz podatkov
 
-Obstaja veliko različnih primerov uporabe, kjer lahko klici funkcij izboljšajo vašo aplikacijo, kot so:
+Obstaja veliko primerov, kjer lahko klici funkcij izboljšajo vašo aplikacijo, na primer:
 
-- Vprašanja in odgovori: utemeljevanje podatkov vašega podjetja v klepetu, ki ga lahko uporabljajo zaposleni za postavljanje vprašanj.
+- Vprašanja in odgovori: povezovanje podatkov podjetja s klepetalnikom, ki ga lahko zaposleni uporabljajo za vprašanja.
 
-- Sistemi priporočil: kjer lahko ustvarite sistem, ki ujema najbolj podobne vrednosti, npr. filme, restavracije in še več.
+- Priporočilni sistemi: ustvarjanje sistema, ki najde najbolj podobne vrednosti, npr. filme, restavracije in drugo.
 
-- Storitve klepetalnih botov: lahko shranite zgodovino klepeta in prilagodite pogovor na podlagi uporabniških podatkov.
+- Storitve chatbotov: shranjevanje zgodovine pogovorov in personalizacija pogovora na podlagi uporabniških podatkov.
 
 - Iskanje slik na podlagi vektorskih predstavitev, uporabno pri prepoznavanju slik in odkrivanju anomalij.
 
 ## Povzetek
 
-Pokazali smo osnovna področja RAG, od dodajanja naših podatkov v aplikacijo, uporabniške poizvedbe in izhoda. Za poenostavitev ustvarjanja RAG lahko uporabite ogrodja, kot so Semanti Kernel, Langchain ali Autogen.
+Obravnavali smo osnovna področja RAG, od dodajanja podatkov v aplikacijo, uporabniške poizvedbe do izhoda. Za lažjo izdelavo RAG lahko uporabite ogrodja, kot so Semantic Kernel, Langchain ali Autogen.
 
 ## Naloga
 
-Za nadaljevanje učenja o Povečani generaciji pridobivanja (RAG) lahko zgradite:
+Za nadaljevanje učenja o Retrieval Augmented Generation (RAG) lahko naredite:
 
-- Zgradite sprednji del aplikacije z uporabo ogrodja po vaši izbiri.
+- Ustvarite uporabniški vmesnik za aplikacijo z ogrodjem po vaši izbiri
 
-- Uporabite ogrodje, bodisi LangChain ali Semanti Kernel, in ponovno ustvarite svojo aplikacijo.
+- Uporabite ogrodje, bodisi LangChain ali Semantic Kernel, in ponovno ustvarite svojo aplikacijo.
 
-Čestitamo za dokončanje lekcije 👏.
+Čestitke za uspešen zaključek lekcije 👏.
 
-## Učenje se tukaj ne konča, nadaljujte potovanje
+## Učenje se tukaj ne konča, nadaljujte pot
 
-Po končani lekciji si oglejte našo [Generativno AI učno zbirko](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgradnjo svojega znanja o generativni AI!
+Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) in nadaljujte z nadgrajevanjem svojega znanja o generativni umetni inteligenci!
 
-**Izjava o omejitvi odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljivo profesionalno človeško prevajanje. Ne odgovarjamo za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+**Omejitev odgovornosti**:  
+Ta dokument je bil preveden z uporabo storitve za avtomatski prevod AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.

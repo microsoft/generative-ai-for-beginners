@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:15:35+00:00",
+  "translation_date": "2025-07-09T19:12:47+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "cs"
 }
 -->
-# Stavění s modely rodiny Meta
+# Tvorba s modely rodiny Meta
 
 ## Úvod
 
 Tato lekce pokryje:
 
-- Prozkoumání dvou hlavních modelů rodiny Meta - Llama 3.1 a Llama 3.2
+- Prozkoumání dvou hlavních modelů rodiny Meta – Llama 3.1 a Llama 3.2
 - Pochopení použití a scénářů pro každý model
-- Ukázka kódu pro zobrazení unikátních vlastností každého modelu
+- Ukázkový kód, který demonstruje jedinečné vlastnosti každého modelu
 
 ## Rodina modelů Meta
 
-V této lekci prozkoumáme 2 modely z rodiny Meta nebo "stáda Llama" - Llama 3.1 a Llama 3.2.
+V této lekci prozkoumáme 2 modely z rodiny Meta neboli „Llama Herd“ – Llama 3.1 a Llama 3.2
 
-Tyto modely jsou dostupné v různých variantách a jsou k dispozici na GitHub Model marketplace. Zde jsou další podrobnosti o používání GitHub Models pro [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Tyto modely jsou dostupné v různých variantách a najdete je na GitHub Model marketplace. Více informací o používání GitHub Models k [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Varianty modelů:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+- Llama 3.1 – 70B Instruct
+- Llama 3.1 – 405B Instruct
+- Llama 3.2 – 11B Vision Instruct
+- Llama 3.2 – 90B Vision Instruct
 
-*Poznámka: Llama 3 je také dostupná na GitHub Models, ale nebude pokryta v této lekci*
+*Poznámka: Llama 3 je také dostupná na GitHub Models, ale v této lekci ji nebudeme pokrývat*
 
 ## Llama 3.1
 
 S 405 miliardami parametrů spadá Llama 3.1 do kategorie open source LLM.
 
-Model je vylepšením předchozí verze Llama 3 tím, že nabízí:
+Model je vylepšením předchozí verze Llama 3 a nabízí:
 
-- Větší kontextové okno - 128k tokenů oproti 8k tokenům
-- Větší maximální počet výstupních tokenů - 4096 oproti 2048
-- Lepší vícejazyčnou podporu - díky zvýšení počtu tréninkových tokenů
+- Větší kontextové okno – 128k tokenů oproti 8k tokenům
+- Větší maximální počet výstupních tokenů – 4096 oproti 2048
+- Lepší vícejazyčnou podporu – díky zvýšenému počtu tréninkových tokenů
 
-To umožňuje Llama 3.1 zvládat složitější případy použití při vytváření GenAI aplikací včetně:
-- Volání nativních funkcí - schopnost volat externí nástroje a funkce mimo pracovní postup LLM
-- Lepší výkon RAG - díky vyššímu kontextovému oknu
-- Generování syntetických dat - schopnost vytvářet efektivní data pro úkoly, jako je doladění
+Díky tomu dokáže Llama 3.1 zvládat složitější scénáře při tvorbě GenAI aplikací, včetně:
+- Nativního volání funkcí – schopnost volat externí nástroje a funkce mimo workflow LLM
+- Lepšího výkonu RAG – díky většímu kontextovému oknu
+- Generování syntetických dat – schopnost vytvářet efektivní data pro úkoly jako je doladění modelu
 
-### Volání nativních funkcí
+### Nativní volání funkcí
 
-Llama 3.1 byla doladěna, aby byla efektivnější při volání funkcí nebo nástrojů. Má také dva vestavěné nástroje, které model může identifikovat jako potřebné na základě zadání od uživatele. Tyto nástroje jsou:
+Llama 3.1 byla doladěna tak, aby efektivněji volala funkce nebo nástroje. Má také dva vestavěné nástroje, které model dokáže rozpoznat a použít na základě uživatelského promptu. Tyto nástroje jsou:
 
-- **Brave Search** - Může být použit k získání aktuálních informací, jako je počasí, provedením webového vyhledávání
-- **Wolfram Alpha** - Může být použit pro složitější matematické výpočty, takže není nutné psát vlastní funkce.
+- **Brave Search** – lze použít k získání aktuálních informací, například počasí, pomocí webového vyhledávání
+- **Wolfram Alpha** – slouží pro složitější matematické výpočty, takže není potřeba psát vlastní funkce
 
-Můžete také vytvořit vlastní nástroje, které LLM může volat.
+Můžete si také vytvořit vlastní nástroje, které může LLM volat.
 
 V níže uvedeném příkladu kódu:
 
 - Definujeme dostupné nástroje (brave_search, wolfram_alpha) v systémovém promptu.
-- Pošleme uživatelský prompt, který se ptá na počasí v určitém městě.
+- Odesíláme uživatelský prompt, který se ptá na počasí v určitém městě.
 - LLM odpoví voláním nástroje Brave Search, které bude vypadat takto `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Poznámka: Tento příklad pouze provádí volání nástroje, pokud chcete získat výsledky, budete si muset vytvořit bezplatný účet na stránce Brave API a definovat samotnou funkci*
+*Poznámka: Tento příklad pouze volá nástroj, pokud chcete získat výsledky, musíte si vytvořit bezplatný účet na stránce Brave API a definovat samotnou funkci*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Přestože je Llama 3.1 LLM, má jedno omezení - multimodalitu. To znamená, že je schopna používat různé typy vstupů, jako jsou obrázky, jako prompty a poskytovat odpovědi. Tato schopnost je jednou z hlavních vlastností Llama 3.2. Tyto vlastnosti také zahrnují:
+Přestože je Llama 3.1 LLM, jednou z jejích omezení je multimodalita, tedy schopnost používat různé typy vstupů, například obrázky jako prompt a poskytovat odpovědi. Tato schopnost je jednou z hlavních vlastností Llama 3.2. Mezi další vlastnosti patří:
 
-- Multimodalitu - schopnost vyhodnocovat textové i obrazové prompty
-- Malé až střední velikosti variant (11B a 90B) - to poskytuje flexibilní možnosti nasazení,
-- Pouze textové varianty (1B a 3B) - to umožňuje model nasadit na edge / mobilní zařízení a poskytuje nízkou latenci
+- Multimodalita – schopnost zpracovávat textové i obrazové prompty
+- Varianty malých až středních velikostí (11B a 90B) – poskytují flexibilní možnosti nasazení
+- Textové varianty (1B a 3B) – umožňují nasazení na edge / mobilních zařízeních s nízkou latencí
 
-Podpora multimodality představuje velký krok ve světě open source modelů. Níže uvedený příklad kódu bere jak obrazový, tak textový prompt, aby získal analýzu obrazu z Llama 3.2 90B.
+Podpora multimodality představuje velký krok ve světě open source modelů. Níže uvedený příklad kódu využívá jak obrazový, tak textový prompt k analýze obrázku modelem Llama 3.2 90B.
 
-### Podpora multimodality s Llama 3.2
+### Multimodální podpora s Llama 3.2
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Učení zde nekončí, pokračujte v cestě
+## Učení zde nekončí, pokračujte na své cestě
 
-Po dokončení této lekce si prohlédněte naši [kolekci učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte ve zvyšování svých znalostí o generativní AI!
+Po dokončení této lekce si prohlédněte naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte v rozšiřování svých znalostí o Generative AI!
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby AI překladatele [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.

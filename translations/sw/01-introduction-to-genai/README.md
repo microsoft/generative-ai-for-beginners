@@ -2,129 +2,144 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-05-19T13:29:40+00:00",
+  "translation_date": "2025-07-09T07:59:36+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "sw"
 }
 -->
-# Utangulizi wa AI Inayozalisha na Miundo Mikubwa ya Lugha
+# Utangulizi wa AI Inayozalisha na Modeli Kubwa za Lugha
+
+[![Utangulizi wa AI Inayozalisha na Modeli Kubwa za Lugha](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.sw.png)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
 
 _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-AI Inayozalisha ni akili ya bandia inayoweza kuzalisha maandishi, picha na aina nyingine za maudhui. Kinachofanya teknolojia hii kuwa ya kuvutia ni kwamba inapatikana kwa kila mtu, yeyote anaweza kuitumia kwa kidokezo cha maandishi tu, sentensi iliyoandikwa kwa lugha ya asili. Huna haja ya kujifunza lugha kama Java au SQL ili kufanikisha kitu cha thamani, unachohitaji ni kutumia lugha yako, sema unachotaka na unapata pendekezo kutoka kwa mfano wa AI. Matumizi na athari za hili ni kubwa, unaweza kuandika au kuelewa ripoti, kuandika programu na mengine mengi, yote kwa sekunde.
+AI inayozalisha ni akili bandia inayoweza kuunda maandishi, picha na aina nyingine za maudhui. Kinachofanya teknolojia hii kuwa ya ajabu ni kwamba inafanya AI ipatikane kwa wote, mtu yeyote anaweza kuitumia kwa kutumia tu maelezo mafupi ya maandishi, sentensi iliyotungwa kwa lugha ya asili. Huna haja ya kujifunza lugha kama Java au SQL kufanikisha jambo muhimu, unachohitaji ni kutumia lugha yako, kueleza unachotaka na hutokea pendekezo kutoka kwa mfano wa AI. Matumizi na athari zake ni makubwa, unaweza kuandika au kuelewa ripoti, kuandika maombi na mengine mengi, yote kwa sekunde chache.
 
-Katika mtaala huu, tutachunguza jinsi kampuni yetu ya kuanzisha inavyotumia AI inayozalisha kufungua matukio mapya katika ulimwengu wa elimu na jinsi tunavyoshughulikia changamoto zisizoweza kuepukika zinazohusiana na athari za kijamii za matumizi yake na vikwazo vya teknolojia.
+Katika mtaala huu, tutaangalia jinsi kampuni yetu mpya inavyotumia AI inayozalisha kufungua fursa mpya katika ulimwengu wa elimu na jinsi tunavyoshughulikia changamoto zisizoepukika zinazohusiana na athari za kijamii za matumizi yake na vikwazo vya teknolojia.
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litajumuisha:
 
-- Utangulizi wa hali ya biashara: wazo letu la kuanzisha na dhamira.
-- AI Inayozalisha na jinsi tulivyofikia mandhari ya teknolojia ya sasa.
-- Utendaji wa ndani wa muundo mkubwa wa lugha.
-- Uwezo kuu na matumizi ya vitendo ya Miundo Mikubwa ya Lugha.
+- Utangulizi wa hali ya biashara: wazo na dhamira ya kampuni yetu mpya.
+- AI inayozalisha na jinsi tulivyofikia mazingira ya teknolojia ya sasa.
+- Jinsi mfano mkubwa wa lugha unavyofanya kazi ndani.
+- Uwezo mkuu na matumizi halisi ya Modeli Kubwa za Lugha.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utaelewa:
+Baada ya kumaliza somo hili, utaelewa:
 
-- AI inayozalisha ni nini na jinsi Miundo Mikubwa ya Lugha inavyofanya kazi.
-- Jinsi unavyoweza kutumia miundo mikubwa ya lugha kwa matumizi tofauti, kwa kuzingatia matukio ya elimu.
+- AI inayozalisha ni nini na jinsi Modeli Kubwa za Lugha zinavyofanya kazi.
+- Jinsi unavyoweza kutumia modeli kubwa za lugha kwa matumizi tofauti, hasa katika mazingira ya elimu.
 
-## Hali: kampuni yetu ya elimu
+## Hali ya Mfano: kampuni yetu mpya ya elimu
 
-Akili ya bandia inayozalisha (AI) inawakilisha kilele cha teknolojia ya AI, ikivuka mipaka ya kile kilichokuwa kikiwekwa haiwezekani. Miundo ya AI inayozalisha ina uwezo na matumizi kadhaa, lakini kwa mtaala huu tutachunguza jinsi inavyobadilisha elimu kupitia kampuni ya kubuni. Tutarejelea kampuni hii kama _kampuni yetu_. Kampuni yetu inafanya kazi katika uwanja wa elimu na kauli ya dhamira yenye nia ya
+Akili Bandia Inayozalisha (AI) ni kilele cha teknolojia ya AI, ikipanua mipaka ya kile kilichowahi kudhaniwa kuwa haiwezekani. Modeli za AI zinazozalisha zina uwezo na matumizi mengi, lakini katika mtaala huu tutaangalia jinsi zinavyobadilisha elimu kupitia kampuni ya kubuniwa. Tutaitaja kampuni hii kama _kampuni yetu mpya_. Kampuni yetu mpya inafanya kazi katika sekta ya elimu na kauli mbiu yenye malengo makubwa ya
 
-> _kuboresha upatikanaji katika kujifunza, kwa kiwango cha kimataifa, kuhakikisha upatikanaji sawa wa elimu na kutoa uzoefu wa kujifunza uliozalishwa kwa kila mwanafunzi, kulingana na mahitaji yao_.
+> _kuboresha upatikanaji wa elimu kwa kiwango cha dunia, kuhakikisha usawa wa fursa za elimu na kutoa uzoefu wa kujifunza uliobinafsishwa kwa kila mwanafunzi, kulingana na mahitaji yao_.
 
-Timu yetu ya kampuni inajua hatutaweza kufikia lengo hili bila kutumia mojawapo ya zana zenye nguvu zaidi za nyakati za kisasa – Miundo Mikubwa ya Lugha (LLMs).
+Timu ya kampuni yetu mpya inatambua kuwa hatutaweza kufanikisha lengo hili bila kutumia mojawapo ya zana zenye nguvu zaidi za nyakati za kisasa – Modeli Kubwa za Lugha (LLMs).
 
-AI inayozalisha inatarajiwa kubadilisha jinsi tunavyosoma na kufundisha leo, na wanafunzi kuwa na walimu wa kawaida 24/7 wanaotoa kiasi kikubwa cha habari na mifano, na walimu wakiwa na uwezo wa kutumia zana za ubunifu kutathmini wanafunzi wao na kutoa maoni.
+AI inayozalisha inatarajiwa kubadilisha njia tunavyojifunza na kufundisha leo, ambapo wanafunzi watakuwa na walimu wa mtandaoni masaa 24 kwa siku wanaotoa taarifa nyingi na mifano, na walimu watatumia zana bunifu kutathmini wanafunzi wao na kutoa mrejesho.
 
-Ili kuanza, hebu tufafanue baadhi ya dhana za msingi na istilahi tutakazotumia katika mtaala.
+![Wanafunzi watano vijana wakitazama monitor - picha na DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.sw.png)
+
+Kuanza, hebu tueleze baadhi ya dhana na istilahi za msingi tutakazotumia katika mtaala huu.
 
 ## Tulipataje AI Inayozalisha?
 
-Licha ya _hype_ ya ajabu iliyoundwa hivi karibuni na tangazo la miundo ya AI inayozalisha, teknolojia hii imekuwa ikitengenezwa kwa miongo kadhaa, na juhudi za kwanza za utafiti zikirudi miaka ya 60. Sasa tuko katika hatua ambapo AI ina uwezo wa utambuzi wa kibinadamu, kama mazungumzo yanavyoonyeshwa kwa mfano na [OpenAI ChatGPT](https://openai.com/chatgpt) au [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), ambayo pia hutumia mfano wa GPT kwa mazungumzo ya utafutaji wa wavuti Bing.
+Licha ya shauku kubwa iliyozuka hivi karibuni kutokana na tangazo la modeli za AI zinazozalisha, teknolojia hii imekuwa ikitengenezwa kwa miongo kadhaa, na juhudi za utafiti zianzia miaka ya 60. Sasa tuko katika hatua ambapo AI ina uwezo wa kiakili wa binadamu, kama mazungumzo yanavyoonyeshwa kwa mfano na [OpenAI ChatGPT](https://openai.com/chatgpt) au [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), ambayo pia hutumia mfano wa GPT kwa mazungumzo ya utafutaji wa wavuti ya Bing.
 
-Tukirudi nyuma kidogo, prototypes za kwanza za AI zilikuwa na chatbots za maandishi, zikitegemea msingi wa maarifa uliotolewa kutoka kwa kikundi cha wataalamu na kuwakilishwa kwenye kompyuta. Majibu katika msingi wa maarifa yalichochewa na maneno muhimu yanayoonekana katika maandishi ya pembejeo.
-Hata hivyo, ilionekana wazi kwamba njia kama hiyo, kwa kutumia chatbots za maandishi, haikupimika vizuri.
+Kurejea nyuma kidogo, prototypes za kwanza za AI zilikuwa chatbots za maandishi, zikitegemea hifadhidata ya maarifa iliyotolewa na kundi la wataalamu na kuingizwa kwenye kompyuta. Majibu katika hifadhidata yalitolewa kwa kutumia maneno muhimu yaliyotokea katika maandishi ya kuingiza. Hata hivyo, ilibainika haraka kuwa njia hii, ya kutumia chatbots za maandishi, haikuweza kuongezeka kwa urahisi.
 
 ### Njia ya takwimu kwa AI: Kujifunza kwa Mashine
 
-Mabadiliko makubwa yalifika katika miaka ya 90, na matumizi ya njia ya takwimu kwa uchambuzi wa maandishi. Hii ilisababisha maendeleo ya algorithms mpya – inayojulikana kama kujifunza kwa mashine – yenye uwezo wa kujifunza mifumo kutoka kwa data bila kuandaliwa waziwazi. Njia hii inaruhusu mashine kuiga uelewa wa lugha ya kibinadamu: mfano wa takwimu unafundishwa juu ya maandishi na lebo za pairing, kuwezesha mfano kuainisha maandishi ya pembejeo yasiyojulikana na lebo iliyowekwa tayari inayowakilisha nia ya ujumbe.
+Mabadiliko makubwa yalikuja miaka ya 90, kwa kutumia njia ya takwimu katika uchambuzi wa maandishi. Hii ilisababisha maendeleo ya algoriti mpya – zinazojulikana kama kujifunza kwa mashine – zenye uwezo wa kujifunza mifumo kutoka kwa data bila kuandikwa kwa njia ya moja kwa moja. Njia hii inaruhusu mashine kuiga uelewa wa lugha ya binadamu: mfano wa takwimu hujifunza kwa kutumia maandishi na lebo, kuruhusu mfano kuainisha maandishi yasiyojulikana kwa lebo iliyowekwa awali inayowakilisha nia ya ujumbe.
 
-### Mitandao ya neural na wasaidizi wa kisasa wa virtual
+### Mitandao ya neva na wasaidizi wa mtandaoni wa kisasa
 
-Katika miaka ya hivi karibuni, maendeleo ya kiteknolojia ya vifaa, vyenye uwezo wa kushughulikia kiasi kikubwa cha data na hesabu ngumu zaidi, yalihimiza utafiti katika AI, ikiongoza maendeleo ya algorithms za kujifunza kwa mashine zinazoitwa mitandao ya neural au algorithms za kujifunza kwa kina.
+Katika miaka ya hivi karibuni, maendeleo ya kiteknolojia ya vifaa vya kompyuta, vinavyoweza kushughulikia data nyingi na hesabu ngumu zaidi, vilihamasisha utafiti katika AI, na kusababisha maendeleo ya algoriti za kujifunza kwa mashine za hali ya juu zinazojulikana kama mitandao ya neva au algoriti za kujifunza kwa kina.
 
-Mitandao ya neural (na hasa Mitandao ya Neural Inayorudiwa – RNNs) iliboresha sana usindikaji wa lugha asilia, ikiwezesha uwakilishi wa maana ya maandishi kwa njia ya maana zaidi, ikithamini muktadha wa neno katika sentensi.
+Mitandao ya neva (hasa Recurrent Neural Networks – RNNs) iliboresha sana usindikaji wa lugha asilia, ikiruhusu uwasilishaji wa maana ya maandishi kwa njia yenye maana zaidi, ikizingatia muktadha wa neno katika sentensi.
 
-Hii ndiyo teknolojia iliyowezesha wasaidizi wa virtual waliozaliwa katika muongo wa kwanza wa karne mpya, wenye ustadi mkubwa katika kutafsiri lugha ya kibinadamu, kutambua hitaji, na kufanya kitendo cha kukidhi – kama kujibu kwa script iliyowekwa tayari au kutumia huduma ya 3rd party.
+Hii ndiyo teknolojia iliyoiwezesha wasaidizi wa mtandaoni waliotokea katika muongo wa kwanza wa karne hii mpya, waliokuwa na ufanisi mkubwa katika kuelewa lugha ya binadamu, kubaini hitaji, na kutekeleza hatua za kukidhi hitaji hilo – kama kujibu kwa maandishi yaliyopangwa awali au kutumia huduma za mtu wa tatu.
 
 ### Siku za sasa, AI Inayozalisha
 
-Hivyo ndivyo tulivyofika kwenye AI Inayozalisha leo, ambayo inaweza kuonekana kama subset ya kujifunza kwa kina.
+Hivyo ndivyo tulivyofikia AI inayozalisha ya leo, ambayo inaweza kuonekana kama sehemu ndogo ya kujifunza kwa kina.
 
-Baada ya miongo ya utafiti katika uwanja wa AI, usanifu mpya wa mfano – unaoitwa _Transformer_ – ulivuka mipaka ya RNNs, ukiwa na uwezo wa kupata mlolongo mrefu wa maandishi kama pembejeo. Transformers zinategemea utaratibu wa umakini, kuwezesha mfano kutoa uzito tofauti kwa pembejeo inazopokea, ‘kutilia maanani zaidi’ ambapo habari muhimu zaidi imejikita, bila kujali mpangilio wake katika mlolongo wa maandishi.
+![AI, ML, DL na AI Inayozalisha](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.sw.png)
 
-Miundo mingi ya AI inayozalisha ya hivi karibuni – inayojulikana pia kama Miundo Mikubwa ya Lugha (LLMs), kwani inafanya kazi na pembejeo na matokeo ya maandishi – kwa kweli inategemea usanifu huu. Kinachovutia kuhusu miundo hii – iliyofundishwa juu ya kiasi kikubwa cha data isiyo na lebo kutoka vyanzo mbalimbali kama vitabu, makala na tovuti – ni kwamba inaweza kubadilishwa kwa kazi mbalimbali na kuzalisha maandishi sahihi ya kisarufi na mfanano wa ubunifu. Hivyo, sio tu kwamba iliboresha sana uwezo wa mashine ‘kuelewa’ maandishi ya pembejeo, lakini iliwezesha uwezo wake wa kuzalisha jibu la asili katika lugha ya kibinadamu.
+Baada ya miongo ya utafiti katika uwanja wa AI, usanifu mpya wa mfano – uitwao _Transformer_ – ulizidi vikwazo vya RNNs, ukiruhusu kupokea mfululizo mrefu zaidi wa maandishi kama ingizo. Transformers hutegemea mfumo wa umakini, unaowezesha mfano kutoa uzito tofauti kwa ingizo anazopokea, ‘kuzingatia zaidi’ sehemu zilizo na taarifa muhimu zaidi, bila kujali mpangilio wake katika mfululizo wa maandishi.
 
-## Miundo mikubwa ya lugha inafanyaje kazi?
+Modeli nyingi za hivi karibuni za AI zinazozalisha – pia zinajulikana kama Modeli Kubwa za Lugha (LLMs), kwa kuwa hufanya kazi na maandishi ya ingizo na matokeo – zinatokana na usanifu huu. Kinachovutia kuhusu modeli hizi – zilizofunzwa kwa kiasi kikubwa cha data isiyo na lebo kutoka vyanzo mbalimbali kama vitabu, makala na tovuti – ni kwamba zinaweza kubadilishwa kwa kazi mbalimbali na kuzalisha maandishi sahihi kisarufi yenye ubunifu wa aina fulani. Hivyo, si tu ziliongeza uwezo wa mashine ‘kuelewa’ maandishi ya ingizo, bali pia ziliongeza uwezo wa kuzalisha majibu ya asili kwa lugha ya binadamu.
 
-Katika sura inayofuata tutachunguza aina tofauti za miundo ya AI inayozalisha, lakini kwa sasa hebu tuangalie jinsi miundo mikubwa ya lugha inavyofanya kazi, kwa kuzingatia miundo ya OpenAI GPT (Transformer iliyofunzwa kabla ya kuzalisha).
+## Modeli Kubwa za Lugha zinafanya kazi vipi?
 
-- **Kibandiko, maandishi hadi nambari**: Miundo Mikubwa ya Lugha inapokea maandishi kama pembejeo na kuzalisha maandishi kama matokeo. Hata hivyo, ikiwa ni miundo ya takwimu, inafanya kazi vizuri zaidi na nambari kuliko mlolongo wa maandishi. Ndiyo maana kila pembejeo kwa mfano inachakatwa na kibandiko, kabla ya kutumiwa na mfano wa msingi. Kibandiko ni kipande cha maandishi – kinachojumuisha idadi tofauti ya herufi, hivyo kazi kuu ya kibandiko ni kugawanya pembejeo kuwa safu ya vibandiko. Kisha, kila kibandiko kinafananishwa na kiashiria cha kibandiko, ambacho ni encoding ya integer ya kipande cha maandishi cha asili.
+Katika sura inayofuata tutaangalia aina tofauti za modeli za AI zinazozalisha, lakini kwa sasa tuchunguze jinsi modeli kubwa za lugha zinavyofanya kazi, tukizingatia modeli za OpenAI GPT (Generative Pre-trained Transformer).
 
-- **Kutabiri vibandiko vya matokeo**: Ukipewa vibandiko n kama pembejeo (na n max inayotofautiana kutoka kwa mfano mmoja hadi mwingine), mfano una uwezo wa kutabiri kibandiko kimoja kama matokeo. Kibandiko hiki kisha kinajumuishwa katika pembejeo ya marudio ya pili, katika muundo wa dirisha linalopanuka, kuwezesha uzoefu bora wa mtumiaji wa kupata sentensi moja (au kadhaa) kama jibu. Hii inaelezea kwa nini, ikiwa umewahi kucheza na ChatGPT, unaweza kuwa umenotice kwamba wakati mwingine inaonekana kama inasimama katikati ya sentensi.
+- **Tokenizer, maandishi kuwa nambari**: Modeli Kubwa za Lugha hupokea maandishi kama ingizo na kuzalisha maandishi kama matokeo. Hata hivyo, kwa kuwa ni modeli za takwimu, hufanya kazi vizuri zaidi na nambari kuliko mfululizo wa maandishi. Ndiyo maana kila ingizo la mfano hulazimika kupitia tokenizer kabla ya kutumika na mfano mkuu. Token ni kipande cha maandishi – chenye idadi inayobadilika ya herufi, hivyo kazi kuu ya tokenizer ni kugawanya ingizo kuwa safu ya tokeni. Kila tokeni huambatanishwa na nambari ya tokeni, ambayo ni msimbo wa nambari wa kipande cha maandishi asilia.
 
-- **Mchakato wa uteuzi, usambazaji wa uwezekano**: Kibandiko cha matokeo kinachaguliwa na mfano kulingana na uwezekano wake wa kutokea baada ya mlolongo wa maandishi ya sasa. Hii ni kwa sababu mfano unatoa utabiri wa usambazaji wa uwezekano juu ya ‘vibandiko vya pili’ vinavyowezekana, vilivyohesabiwa kulingana na mafunzo yake. Hata hivyo, si mara zote kibandiko chenye uwezekano wa juu zaidi kinachaguliwa kutoka kwa usambazaji unaotokana. Kiwango cha kutokadirika kinaongezwa kwenye chaguo hili, kwa njia ambayo mfano unafanya kazi kwa mtindo usio wa kimaamuzi - hatupati matokeo sawa kabisa kwa pembejeo sawa. Kiwango hiki cha kutokadirika kinaongezwa ili kuiga mchakato wa kufikiria kwa ubunifu na kinaweza kubadilishwa kwa kutumia parameta ya mfano inayoitwa joto.
+![Mfano wa tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.sw.png)
 
-## Kampuni yetu inaweza kutumia Miundo Mikubwa ya Lugha vipi?
+- **Kutabiri tokeni za matokeo**: Kwa kupewa tokeni n kama ingizo (ambazo n hubadilika kutoka mfano mmoja hadi mwingine), mfano unaweza kutabiri tokeni moja kama matokeo. Tokeni hii huingizwa tena katika ingizo la mzunguko unaofuata, kwa njia ya dirisha linalopanuka, kuruhusu mtumiaji kupata sentensi moja (au zaidi) kama jibu. Hii inaelezea kwanini, kama umewahi kucheza na ChatGPT, unaweza kuwa umeona mara nyingine inaonekana kama inasimama katikati ya sentensi.
 
-Sasa tunayoelewa vizuri utendaji wa ndani wa mfano mkubwa wa lugha, hebu tuone mifano ya vitendo ya kazi za kawaida ambazo zinaweza kufanya vizuri sana, kwa kuzingatia hali yetu ya biashara.
-Tulisema kwamba uwezo mkuu wa Mfano Mkubwa wa Lugha ni _kuzalisha maandishi kutoka mwanzo, kuanzia na pembejeo ya maandishi, iliyoandikwa kwa lugha ya asili_.
+- **Mchakato wa uchaguzi, mgawanyo wa uwezekano**: Tokeni ya matokeo huchaguliwa na mfano kulingana na uwezekano wake wa kutokea baada ya mfululizo wa maandishi wa sasa. Hii ni kwa sababu mfano hutabiri mgawanyo wa uwezekano kwa tokeni zote zinazowezekana ‘zitakazofuata’, zikiwa zimehesabiwa kwa msingi wa mafunzo yake. Hata hivyo, si kila wakati tokeni yenye uwezekano mkubwa zaidi huchaguliwa kutoka mgawanyo huo. Kiwango cha nasibu huongezwa katika uchaguzi huu, kwa njia ambayo mfano hufanya kazi kwa mtindo usio na uhakika – hatupati matokeo sawa kila mara kwa ingizo lile lile. Kiwango hiki cha nasibu huongezwa kuiga mchakato wa kufikiri kwa ubunifu na kinaweza kurekebishwa kwa kutumia kipimo cha mfano kinachoitwa temperature.
 
-Lakini ni aina gani ya pembejeo na matokeo ya maandishi?
-Pembejeo ya mfano mkubwa wa lugha inajulikana kama kidokezo, wakati matokeo yanajulikana kama kukamilika, neno ambalo linarejelea utaratibu wa mfano wa kuzalisha kibandiko cha pili kukamilisha pembejeo ya sasa. Tutaingia ndani zaidi juu ya nini ni kidokezo na jinsi ya kukibuni kwa njia ya kupata zaidi kutoka kwa mfano wetu. Lakini kwa sasa, hebu tuseme tu kwamba kidokezo kinaweza kujumuisha:
+## Kampuni yetu mpya inaweza kutumiaje Modeli Kubwa za Lugha?
 
-- **Maelekezo** yanayobainisha aina ya matokeo tunayotegemea kutoka kwa mfano. Maelekezo haya wakati mwingine yanaweza kujumuisha mifano au data ya ziada.
+Sasa tunapoelewa vizuri jinsi mfano mkubwa wa lugha unavyofanya kazi ndani, tuchunguze mifano halisi ya kazi zinazofanywa vizuri zaidi, tukizingatia hali yetu ya biashara. Tulisema uwezo mkuu wa Modeli Kubwa za Lugha ni _kuzalisha maandishi kutoka mwanzo, kuanzia na ingizo la maandishi, lililotungwa kwa lugha ya asili_.
 
-  1. Muhtasari wa makala, kitabu, maoni ya bidhaa na zaidi, pamoja na uchimbaji wa maarifa kutoka kwa data isiyo na muundo.
+Lakini ni aina gani ya ingizo na matokeo ya maandishi?
+Ingizo la mfano mkubwa wa lugha linajulikana kama prompt, wakati matokeo huitwa completion, neno linalorejelea utaratibu wa mfano wa kuzalisha tokeni inayofuata ili kukamilisha ingizo la sasa. Tutaingia kwa kina zaidi kuhusu prompt na jinsi ya kuibuni ili kupata matokeo bora kutoka kwa mfano wetu. Lakini kwa sasa, tuseme prompt inaweza kujumuisha:
 
-  2. Ubunifu wa ubunifu na muundo wa makala, insha, kazi au zaidi.
+- **Maelekezo** yanayoeleza aina ya matokeo tunayotegemea kutoka kwa mfano. Maelekezo haya mara nyingine yanaweza kujumuisha mifano au data ya ziada.
 
-- **Swali**, lililoulizwa kwa namna ya mazungumzo na wakala.
+  1. Muhtasari wa makala, kitabu, mapitio ya bidhaa na mengine, pamoja na uchimbaji wa maarifa kutoka kwa data isiyo na muundo.
+    
+    ![Mfano wa muhtasari](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.sw.png)
+  
+  2. Ubunifu wa mawazo na uundaji wa makala, insha, kazi za nyumbani au zaidi.
+      
+     ![Mfano wa uandishi wa ubunifu](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.sw.png)
 
-- Kipande cha **maandishi ya kukamilisha**, ambacho kimya kimya ni ombi la msaada wa kuandika.
+- **Swali**, lililoombwa kwa njia ya mazungumzo na wakala.
 
-- Kipande cha **kodi** pamoja na ombi la kuelezea na kuandika, au maoni yanayoomba kuzalisha kipande cha kodi kinachofanya kazi maalum.
+  ![Mfano wa mazungumzo](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.sw.png)
 
-Mifano hapo juu ni rahisi na haikusudiwi kuwa maonyesho ya kina ya uwezo wa Miundo Mikubwa ya Lugha. Zinalenga kuonyesha uwezo wa kutumia AI inayozalisha, hasa lakini sio tu katika muktadha wa elimu.
+- Kipande cha **maandishi ya kukamilisha**, ambacho kwa njia isiyo ya moja kwa moja ni ombi la msaada wa uandishi.
 
-Pia, matokeo ya mfano wa AI inayozalisha si kamilifu na wakati mwingine ubunifu wa mfano unaweza kufanya kazi dhidi yake, na kusababisha matokeo ambayo ni mchanganyiko wa maneno ambayo mtumiaji wa kibinadamu anaweza kufasiri kama upotoshaji wa ukweli, au inaweza kuwa ya kukera. AI inayozalisha si akili - angalau katika ufafanuzi wa kina zaidi wa akili, ikiwa ni pamoja na uamuzi wa ubunifu na wa kukosoa au akili ya kihisia; si ya kimaamuzi, na si ya kuaminika, kwani uundaji, kama marejeleo ya kimakosa, maudhui, na taarifa, inaweza kuunganishwa na habari sahihi, na kuwasilishwa kwa njia ya ushawishi na ya kujiamini. Katika masomo yanayofuata, tutashughulikia vikwazo vyote hivi na tutaona nini tunaweza kufanya ili kuvipunguza.
+  ![Mfano wa kukamilisha maandishi](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.sw.png)
 
-## Kazi
+- Kipande cha **msimbo** pamoja na ombi la kuelezea na kuandika hati zake, au maoni yanayoomba kuzalisha kipande cha msimbo kinachotekeleza kazi fulani.
 
-Kazi yako ni kusoma zaidi kuhusu [AI inayozalisha](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) na kujaribu kutambua eneo ambalo ungeongeza AI inayozalisha leo ambalo halina. Je, athari itakuwa tofauti kutoka kufanya kwa njia "ya zamani", unaweza kufanya kitu ambacho hukuweza kufanya awali, au ni haraka zaidi? Andika muhtasari wa maneno 300 juu ya jinsi kampuni yako ya AI ya ndoto ingekuwa na vichwa kama "Tatizo", "Jinsi ningetumia AI", "Athari" na kwa hiari mpango wa biashara.
+  ![Mfano wa uandishi wa msimbo](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.sw.png)
 
-Ikiwa ulifanya kazi hii, unaweza hata kuwa tayari kuomba kwa incubator ya Microsoft, [Microsoft kwa Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) tunatoa mikopo kwa Azure, OpenAI, ushauri na mengi zaidi, angalia!
+Mifano hapo juu ni rahisi na haikusudiwi kuwa onyesho kamili wa uwezo wa Modeli Kubwa za Lugha. Yalilenga kuonyesha uwezo wa kutumia AI inayozalisha, hasa lakini si tu katika muktadha wa elimu.
 
-## Ukaguzi wa Maarifa
+Pia, matokeo ya mfano wa AI inayozalisha si kamilifu na wakati mwingine ubunifu wa mfano unaweza kufanya kazi dhidi yake, na kusababisha matokeo kuwa mchanganyiko wa maneno ambayo mtumiaji wa binadamu anaweza kuyaona kama udanganyifu wa ukweli, au yanaweza kuwa ya kuudhi. AI inayozalisha si mwerevu – angalau si kwa maana pana ya akili, ikijumuisha fikra za kina na ubunifu au akili ya hisia; si ya uhakika, na si ya kuaminika, kwa kuwa uongo, kama marejeleo yasiyo sahihi, maudhui na taarifa, yanaweza kuunganishwa na taarifa sahihi na kuwasilishwa kwa njia ya kuvutia na yenye kujiamini. Katika masomo yajayo, tutashughulikia vikwazo hivi vyote na tutaona tunachoweza kufanya kupunguza athari zake.
 
-Ni nini sahihi kuhusu miundo mikubwa ya lugha?
+## Kazi ya Nyumbani
 
-1. Unapata jibu sawa kila wakati.
-2. Inafanya mambo kwa ukamilifu, nzuri katika kuongeza nambari, kuzalisha kodi inayofanya kazi nk.
-3. Jibu linaweza kutofautiana licha ya kutumia kidokezo sawa. Pia ni nzuri katika kukupa rasimu ya kwanza ya kitu, iwe maandishi au kodi. Lakini unahitaji kuboresha matokeo.
+Kazi yako ni kusoma zaidi kuhusu [AI inayozalisha](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) na kujaribu kubaini eneo ambalo ungeongeza AI inayozalisha leo ambalo halijatumika. Je, athari itakuwa tofauti vipi ukifanya kwa njia ya "zamani", unaweza kufanya kitu ambacho hukuweza hapo awali, au uko haraka zaidi? Andika muhtasari wa maneno 300 kuhusu kampuni yako ya ndoto ya AI na jumuisha vichwa kama "Tatizo", "Jinsi Nitakavyotumia AI", "Athari" na hiari mpango wa biashara.
 
-A: 3, LLM si ya kimaamuzi, jibu linatofautiana, hata hivyo, unaweza kudhibiti utofauti wake kupitia mpangilio wa joto. Pia haipaswi kutarajia kufanya mambo kwa ukamilifu, iko hapa kufanya kazi nzito kwako ambayo mara nyingi inamaanisha unapata jaribio la kwanza nzuri la kitu ambacho unahitaji kuboresha hatua kwa hatua.
+Kama umefanya kazi hii, unaweza hata kuwa tayari kuomba kwenye incubator ya Microsoft, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) tunatoa mikopo kwa Azure, OpenAI, ushauri na mengine mengi, angalia!
 
-## Kazi Nzuri! Endelea na Safari
+## Mtihani wa Maarifa
 
-Baada ya kukamilisha somo hili, angalia mkusanyiko wetu wa [Kujifunza AI Inayozalisha](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuboresha maarifa yako ya AI Inayozalisha!
+Ni nini kinachosema kweli kuhusu Modeli Kubwa za Lugha?
 
-Nenda kwenye Somo la 2 ambapo tutatazama jinsi ya [kuchunguza na kulinganisha aina tofauti za LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+1. Unapata jibu lile lile kila mara.
+1. Hufanya mambo kwa ukamilifu, ni mzuri kuongeza nambari, kutoa msimbo unaofanya kazi n.k.
+1. Jibu linaweza kutofautiana licha ya kutumia prompt ile ile. Pia ni mzuri kutoa rasimu ya kwanza ya kitu, iwe ni maandishi au msimbo. Lakini unahitaji kuboresha matokeo.
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya asili inapaswa kuzingatiwa kuwa chanzo chenye mamlaka. Kwa habari muhimu, tafsiri ya kitaalamu ya kibinadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+J: 3, LLM si ya uhakika, majibu hubadilika, hata hivyo, unaweza kudhibiti tofauti zake kwa kutumia kipimo cha temperature. Pia hufai kutegemea itafanya mambo kwa ukamilifu, ipo kusaidia kufanya kazi nzito ambayo mara nyingi inamaanisha unapata jaribio zuri la kwanza la kitu ambacho unahitaji kuboresha polepole.
+
+## Kazi Nzuri! Endelea Safari
+
+Baada ya kumaliza somo hili, angalia mkusanyiko wetu wa [Kujifunza AI Inayozalisha](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kuendelea kuongeza maarifa yako kuhusu AI Inayozalisha!
+Nenda kwenye Somo la 2 ambapo tutaangalia jinsi ya [kuchunguza na kulinganisha aina tofauti za LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

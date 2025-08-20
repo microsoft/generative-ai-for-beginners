@@ -2,127 +2,173 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f3cac698e9eea47dd563633bd82daf8c",
-  "translation_date": "2025-05-19T23:03:53+00:00",
+  "translation_date": "2025-07-09T15:36:19+00:00",
   "source_file": "13-securing-ai-applications/README.md",
   "language_code": "sw"
 }
 -->
-# Kuhakikisha Usalama wa Programu Zako za AI Zinazozalisha
+# Kuweka Usalama kwa Programu Zako za AI Zinazotengeneza
+
+[![Kuweka Usalama kwa Programu Zako za AI Zinazotengeneza](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.sw.png)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litajumuisha:
 
 - Usalama katika muktadha wa mifumo ya AI.
 - Hatari na vitisho vya kawaida kwa mifumo ya AI.
-- Mbinu na mambo ya kuzingatia ili kuhakikisha usalama wa mifumo ya AI.
+- Mbinu na mambo ya kuzingatia katika kuimarisha usalama wa mifumo ya AI.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utakuwa na uelewa wa:
+Baada ya kumaliza somo hili, utakuwa na uelewa wa:
 
 - Vitisho na hatari kwa mifumo ya AI.
-- Mbinu na mazoea ya kawaida ya kuhakikisha usalama wa mifumo ya AI.
-- Jinsi utekelezaji wa majaribio ya usalama unavyoweza kuzuia matokeo yasiyotarajiwa na kupoteza imani ya mtumiaji.
+- Mbinu na mazoea ya kawaida ya kuimarisha usalama wa mifumo ya AI.
+- Jinsi utekelezaji wa upimaji wa usalama unavyoweza kuzuia matokeo yasiyotegemewa na kupungua kwa imani ya watumiaji.
 
-## Usalama unamaanisha nini katika muktadha wa AI inayozalisha?
+## Usalama unamaanisha nini katika muktadha wa AI inayotengeneza?
 
-Kadri teknolojia za Akili Bandia (AI) na Kujifunza kwa Mashine (ML) zinavyozidi kuathiri maisha yetu, ni muhimu kulinda sio tu data ya wateja bali pia mifumo ya AI yenyewe. AI/ML inatumika zaidi katika kusaidia michakato ya kufanya maamuzi ya thamani kubwa katika tasnia ambapo uamuzi mbaya unaweza kusababisha matokeo mabaya.
+Kadiri Teknolojia za Akili Bandia (AI) na Kujifunza kwa Mashine (ML) zinavyozidi kuathiri maisha yetu, ni muhimu kulinda si tu data za wateja bali pia mifumo ya AI yenyewe. AI/ML inazidi kutumika kusaidia michakato ya maamuzi yenye thamani kubwa katika sekta ambapo maamuzi mabaya yanaweza kusababisha madhara makubwa.
 
 Hapa kuna mambo muhimu ya kuzingatia:
 
-- **Athari za AI/ML**: AI/ML ina athari kubwa katika maisha ya kila siku na hivyo kuzilinda imekuwa muhimu.
-- **Changamoto za Usalama**: Athari hii ya AI/ML inahitaji umakini sahihi ili kushughulikia hitaji la kulinda bidhaa za AI kutokana na mashambulizi ya hali ya juu, iwe na wanyanyasaji au vikundi vilivyopangwa.
-- **Matatizo ya Kistratejia**: Sekta ya teknolojia lazima ichukue hatua za kijasiri kushughulikia changamoto za kistratejia ili kuhakikisha usalama wa muda mrefu wa wateja na usalama wa data.
+- **Athari za AI/ML**: AI/ML zina athari kubwa katika maisha ya kila siku na kwa hivyo kulinda mifumo hii ni jambo la msingi.
+- **Changamoto za Usalama**: Athari hizi za AI/ML zinahitaji umakini wa kutosha ili kulinda bidhaa za AI dhidi ya mashambulizi ya hali ya juu, iwe ni kutoka kwa watapeli au makundi yaliyopangwa.
+- **Matatizo ya Kimkakati**: Sekta ya teknolojia inapaswa kushughulikia changamoto za kimkakati ili kuhakikisha usalama wa muda mrefu wa wateja na usalama wa data.
 
-Pia, mifano ya Kujifunza kwa Mashine haiwezi kutofautisha kati ya data yenye nia mbaya na data isiyo ya kawaida. Chanzo kikubwa cha data ya mafunzo kinatokana na seti za data za umma ambazo hazijachujwa, ambazo zinakaribisha michango ya wahusika wa nje. Washambuliaji hawahitaji kuhujumu seti za data wakati wanaruhusiwa kuchangia kwenye hizo. Kwa muda, data yenye nia mbaya yenye uhakika mdogo inakuwa data yenye uhakika mkubwa ikiwa muundo wa data unabaki sahihi.
+Zaidi ya hayo, mifano ya Kujifunza kwa Mashine haiwezi kutofautisha kwa urahisi kati ya data yenye madhara na data isiyo na madhara lakini isiyo ya kawaida. Chanzo kikubwa cha data za mafunzo kinatokana na seti za data za umma zisizosimamiwa au kusafishwa, ambazo zinaruhusu michango kutoka kwa watu wengine. Washambuliaji hawahitaji kuvuruga seti za data wanapoweza kuchangia moja kwa moja. Kwa muda, data yenye madhara yenye imani ndogo huweza kuwa data yenye imani kubwa ikiwa muundo wa data bado uko sawa.
 
-Hii ndiyo sababu ni muhimu kuhakikisha uadilifu na ulinzi wa hifadhi za data ambazo mifano yako inatumia kufanya maamuzi.
+Hii ndiyo sababu ni muhimu kuhakikisha uadilifu na ulinzi wa hifadhidata zinazotumika na mifano yako kufanya maamuzi.
 
 ## Kuelewa vitisho na hatari za AI
 
-Kwa upande wa AI na mifumo inayohusiana, uchafuzi wa data ni tishio kubwa la usalama kwa sasa. Uchafuzi wa data ni pale mtu anapobadilisha kwa makusudi habari inayotumiwa kufundisha AI, na kusababisha kufanya makosa. Hii ni kutokana na ukosefu wa mbinu za kugundua na kupunguza zilizowekwa, pamoja na utegemezi wetu kwenye seti za data za umma ambazo hazijachujwa kwa mafunzo. Ili kudumisha uadilifu wa data na kuzuia mchakato wa mafunzo usiofaa, ni muhimu kufuatilia asili na urithi wa data yako. Vinginevyo, msemo wa zamani "taka ndani, taka nje" unakuwa kweli, na kusababisha utendaji wa mfano uliodhoofika.
+Kuhusu AI na mifumo inayohusiana, uchafuzi wa data ndio tishio kubwa zaidi la usalama leo. Uchafuzi wa data ni pale mtu anapobadilisha kwa makusudi taarifa zinazotumika kufundisha AI, na kusababisha AI kufanya makosa. Hii ni kwa sababu ya ukosefu wa mbinu za kawaida za kugundua na kupunguza tishio hili, pamoja na utegemezi wetu kwa seti za data za umma zisizoaminika au zisizosafishwa kwa mafunzo. Ili kudumisha uadilifu wa data na kuzuia mchakato wa mafunzo wenye kasoro, ni muhimu kufuatilia asili na mfululizo wa data zako. Vinginevyo, methali ya zamani “takataka ndani, takataka nje” inakuwa kweli, na kusababisha utendaji mbaya wa mfano.
 
 Hapa kuna mifano ya jinsi uchafuzi wa data unavyoweza kuathiri mifano yako:
 
-1. **Kubadilisha Lebo**: Katika kazi ya uainishaji wa binary, adui hubadilisha lebo za subset ndogo ya data ya mafunzo kwa makusudi. Kwa mfano, sampuli zisizo na madhara zinawekwa alama kama zenye nia mbaya, na kusababisha mfano kujifunza miunganiko isiyo sahihi.\
-   **Mfano**: Kichujio cha barua taka kinachokosea barua pepe halali kama barua taka kutokana na lebo zilizobadilishwa.
-2. **Uchafuzi wa Sifa**: Mshambuliaji hubadilisha kwa ujanja sifa katika data ya mafunzo ili kuanzisha upendeleo au kupotosha mfano.\
-   **Mfano**: Kuongeza maneno yasiyohusiana kwenye maelezo ya bidhaa ili kupotosha mifumo ya mapendekezo.
-3. **Uingizaji wa Data**: Kuingiza data yenye nia mbaya kwenye seti ya mafunzo ili kushawishi tabia ya mfano.\
-   **Mfano**: Kuanzisha maoni ya watumiaji bandia ili kupotosha matokeo ya uchambuzi wa hisia.
-4. **Mashambulizi ya Nyuma ya Mlango**: Adui huingiza muundo uliofichwa (mlango wa nyuma) kwenye data ya mafunzo. Mfano unajifunza kutambua muundo huu na unafanya kwa nia mbaya unapoanzishwa.\
-   **Mfano**: Mfumo wa utambuzi wa uso uliofundishwa na picha zilizo na mlango wa nyuma zinazomtambulisha vibaya mtu maalum.
+1. **Kubadilisha Lebo**: Katika kazi ya kugawanya vitu viwili, mshambuliaji hubadilisha lebo za sehemu ndogo ya data ya mafunzo kwa makusudi. Kwa mfano, sampuli zisizo hatari huwekwa lebo ya hatari, na kusababisha mfano kujifunza uhusiano usio sahihi.\
+   **Mfano**: Kichujio cha barua taka kinachotambua barua halali kama taka kwa sababu ya lebo zilizobadilishwa.
+2. **Uchafuzi wa Sifa**: Mshambuliaji hubadilisha kwa upole sifa katika data ya mafunzo ili kuleta upendeleo au kudanganya mfano.\
+   **Mfano**: Kuongeza maneno yasiyo na maana katika maelezo ya bidhaa ili kudanganya mifumo ya mapendekezo.
+3. **Kuingiza Data**: Kuingiza data yenye madhara katika seti ya mafunzo ili kuathiri tabia ya mfano.\
+   **Mfano**: Kuingiza maoni ya uongo ya watumiaji ili kubadilisha matokeo ya uchambuzi wa hisia.
+4. **Mashambulizi ya Mlango wa Nyuma**: Mshambuliaji huingiza muundo wa siri (mlango wa nyuma) katika data ya mafunzo. Mfano hujifunza kutambua muundo huu na hufanya vitendo vya hatari anapochochewa.\
+   **Mfano**: Mfumo wa utambuzi wa uso uliopatiwa picha zilizo na mlango wa nyuma unaotambua vibaya mtu fulani.
 
-Shirika la MITRE limeunda [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), hazina ya maarifa ya mbinu na mbinu zinazotumiwa na wapinzani katika mashambulizi halisi kwenye mifumo ya AI.
+Kampuni ya MITRE imeunda [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), hifadhidata ya mbinu na mikakati inayotumiwa na washambuliaji katika mashambulizi halisi dhidi ya mifumo ya AI.
 
-> Kuna idadi inayoongezeka ya udhaifu katika mifumo inayowezeshwa na AI, kwani ushirikishwaji wa AI huongeza uso wa shambulio wa mifumo iliyopo zaidi ya yale ya mashambulizi ya kawaida ya mtandao. Tuliunda ATLAS ili kuongeza ufahamu wa udhaifu huu wa kipekee na unaoendelea, kwani jamii ya kimataifa inavyozidi kuingiza AI katika mifumo mbalimbali. ATLAS imeundwa kufuata mfumo wa MITRE ATT&CK® na mbinu zake ni za ziada kwa zile zilizopo katika ATT&CK.
+> Kuna idadi inayoongezeka ya udhaifu katika mifumo yenye AI, kwani kuingizwa kwa AI kunapanua eneo la mashambulizi zaidi ya yale ya mashambulizi ya kawaida ya mtandao. Tulitengeneza ATLAS kuongeza uelewa wa udhaifu huu wa kipekee na unaoendelea, huku jamii ya dunia ikizidi kuingiza AI katika mifumo mbalimbali. ATLAS imetengenezwa kufanana na mfumo wa MITRE ATT&CK® na mikakati, mbinu, na taratibu zake (TTPs) ni nyongeza kwa zile za ATT&CK.
 
-Kama mfumo wa MITRE ATT&CK®, ambao unatumika sana katika usalama wa mtandao wa jadi kwa kupanga hali za kuiga vitisho vya hali ya juu, ATLAS hutoa seti ya mbinu za TTP zinazoweza kutafutwa kwa urahisi ambazo zinaweza kusaidia kuelewa na kujiandaa vyema kwa ajili ya kujilinda dhidi ya mashambulizi yanayojitokeza.
+Kama mfumo wa MITRE ATT&CK® unaotumika sana katika usalama wa mtandao wa jadi kwa kupanga majaribio ya vitisho vya hali ya juu, ATLAS hutoa seti rahisi ya TTPs zinazoweza kusaidia kuelewa na kujiandaa vyema kwa kujilinda dhidi ya mashambulizi yanayojitokeza.
 
-Pia, Mradi wa Usalama wa Programu za Wavuti wa Wazi (OWASP) umeunda "[Orodha ya 10 Bora](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" ya udhaifu muhimu zaidi unaopatikana katika programu zinazotumia LLMs. Orodha hiyo inaangazia hatari za vitisho kama vile uchafuzi wa data uliotajwa hapo awali pamoja na vingine kama:
+Zaidi ya hayo, Mradi wa Usalama wa Programu za Mtandao (OWASP) umeunda "[Orodha ya Juu 10](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" ya udhaifu muhimu zaidi unaopatikana katika programu zinazotumia LLMs. Orodha hii inaonyesha hatari za vitisho kama vile uchafuzi wa data ulioelezwa hapo juu pamoja na vingine kama:
 
-- **Uingizaji wa Maagizo**: mbinu ambapo washambuliaji wanadhibiti Mfano wa Lugha Kubwa (LLM) kupitia pembejeo zilizotengenezwa kwa uangalifu, na kuufanya utende kinyume na tabia yake iliyokusudiwa.
-- **Udhaifu wa Mnyororo wa Ugavi**: Vipengele na programu zinazounda programu zinazotumiwa na LLM, kama vile moduli za Python au seti za data za nje, zinaweza kuhujumiwa zenyewe na kusababisha matokeo yasiyotarajiwa, upendeleo ulioanzishwa na hata udhaifu katika miundombinu ya msingi.
-- **Kutegemea Kupita Kiasi**: LLM zinaweza kukosea na zimekuwa na tabia ya kufikiria mambo yasiyo sahihi, kutoa matokeo yasiyo sahihi au yasiyo salama. Katika hali kadhaa zilizorekodiwa, watu wamechukua matokeo kama yalivyo na kusababisha matokeo hasi yasiyotarajiwa katika ulimwengu halisi.
+- **Kuingiza Maagizo**: mbinu ambapo washambuliaji hudanganya Mfano Mkubwa wa Lugha (LLM) kwa kuingiza maelezo yaliyotengenezwa kwa uangalifu, na kusababisha kufanya mambo tofauti na yaliyokusudiwa.
+- **Udhaifu wa Mnyororo wa Ugavi**: Vifaa na programu zinazotumika na LLM, kama moduli za Python au seti za data za nje, zinaweza kuathiriwa na kusababisha matokeo yasiyotegemewa, upendeleo, na hata udhaifu katika miundombinu ya msingi.
+- **Kutegemea Kupita Kiasi**: LLMs zinaweza kufanya makosa na mara nyingine hutoa matokeo yasiyo sahihi au hatari. Katika matukio kadhaa yaliyorekodiwa, watu wamechukua matokeo haya kwa uzito mkubwa na kusababisha madhara yasiyokusudiwa duniani halisi.
 
-Mshauri wa Wingu wa Microsoft Rod Trent ameandika kitabu cha bure, [Lazima Ujifunze Usalama wa AI](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), ambacho kinaingia kwa kina katika vitisho hivi na vingine vinavyojitokeza vya AI na kinatoa mwongozo wa kina juu ya jinsi ya kushughulikia hali hizi vyema.
+Mshauri wa Microsoft Cloud, Rod Trent, ameandika kitabu cha bure, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), kinachochambua kwa kina vitisho hivi na vingine vinavyoibuka vya AI na kutoa mwongozo mpana wa jinsi ya kukabiliana na hali hizi.
 
-## Kujaribu Usalama wa Mifumo ya AI na LLMs
+## Upimaji wa Usalama kwa Mifumo ya AI na LLMs
 
-Akili bandia (AI) inabadilisha nyanja na tasnia mbalimbali, ikitoa uwezekano na faida mpya kwa jamii. Hata hivyo, AI pia inaleta changamoto na hatari kubwa, kama vile faragha ya data, upendeleo, ukosefu wa ufafanuzi, na matumizi mabaya. Kwa hiyo, ni muhimu kuhakikisha kuwa mifumo ya AI ni salama na inayowajibika, ikimaanisha kuwa inafuata viwango vya kimaadili na kisheria na inaweza kuaminiwa na watumiaji na wadau.
+Akili Bandia (AI) inabadilisha nyanja na sekta mbalimbali, ikileta fursa na manufaa mapya kwa jamii. Hata hivyo, AI pia inaleta changamoto na hatari kubwa, kama usiri wa data, upendeleo, ukosefu wa ufafanuzi, na matumizi mabaya yanayoweza kutokea. Kwa hivyo, ni muhimu kuhakikisha mifumo ya AI ni salama na yenye uwajibikaji, ikimaanisha inazingatia viwango vya maadili na sheria na inaweza kuaminika na watumiaji na wadau.
 
-Kujaribu usalama ni mchakato wa kutathmini usalama wa mfumo wa AI au LLM, kwa kutambua na kutumia udhaifu wao. Hii inaweza kufanywa na watengenezaji, watumiaji, au wakaguzi wa wahusika wa tatu, kulingana na madhumuni na upeo wa majaribio. Baadhi ya mbinu za kawaida za majaribio ya usalama kwa mifumo ya AI na LLMs ni:
+Upimaji wa usalama ni mchakato wa kutathmini usalama wa mfumo wa AI au LLM, kwa kubaini na kutumia udhaifu wake. Hii inaweza kufanywa na waendelezaji, watumiaji, au wakaguzi wa tatu, kulingana na madhumuni na wigo wa upimaji. Baadhi ya mbinu za kawaida za upimaji wa usalama kwa mifumo ya AI na LLM ni:
 
-- **Usafishaji wa Data**: Huu ni mchakato wa kuondoa au kuficha taarifa nyeti au za kibinafsi kutoka kwa data ya mafunzo au pembejeo ya mfumo wa AI au LLM. Usafishaji wa data unaweza kusaidia kuzuia uvujaji wa data na udanganyifu kwa kupunguza mfiduo wa data ya siri au ya kibinafsi.
-- **Kujaribu kwa Adui**: Huu ni mchakato wa kutengeneza na kutumia mifano ya adui kwa pembejeo au matokeo ya mfumo wa AI au LLM ili kutathmini uimara wake na uwezo wa kustahimili mashambulizi ya adui. Kujaribu kwa adui kunaweza kusaidia kutambua na kupunguza udhaifu na mapungufu ya mfumo wa AI au LLM ambayo yanaweza kutumiwa na washambuliaji.
-- **Uthibitishaji wa Mfano**: Huu ni mchakato wa kuthibitisha usahihi na ukamilifu wa vigezo vya mfano au usanifu wa mfumo wa AI au LLM. Uthibitishaji wa mfano unaweza kusaidia kugundua na kuzuia kuiba mfano kwa kuhakikisha kuwa mfano unalindwa na kuthibitishwa.
-- **Uthibitishaji wa Matokeo**: Huu ni mchakato wa kuthibitisha ubora na uaminifu wa matokeo ya mfumo wa AI au LLM. Uthibitishaji wa matokeo unaweza kusaidia kugundua na kusahihisha udanganyifu kwa kuhakikisha kuwa matokeo ni thabiti na sahihi.
+- **Usafishaji wa Data**: Huu ni mchakato wa kuondoa au kuficha taarifa nyeti au za faragha kutoka kwa data ya mafunzo au ingizo la mfumo wa AI au LLM. Usafishaji wa data unaweza kusaidia kuzuia uvujaji wa data na udanganyifu kwa kupunguza kufichuliwa kwa data za siri au binafsi.
+- **Upimaji wa Adversarial**: Huu ni mchakato wa kuunda na kutumia mifano ya upinzani kwenye ingizo au matokeo ya mfumo wa AI au LLM ili kutathmini uimara wake dhidi ya mashambulizi ya upinzani. Upimaji huu unaweza kusaidia kubaini na kupunguza udhaifu na mapungufu ya mfumo wa AI au LLM yanayoweza kutumiwa na washambuliaji.
+- **Uhakiki wa Mfano**: Huu ni mchakato wa kuthibitisha usahihi na ukamilifu wa vigezo au usanifu wa mfano wa mfumo wa AI au LLM. Uhakiki huu unaweza kusaidia kugundua na kuzuia wizi wa mfano kwa kuhakikisha mfano umehifadhiwa na kuthibitishwa.
+- **Uthibitishaji wa Matokeo**: Huu ni mchakato wa kuthibitisha ubora na uaminifu wa matokeo ya mfumo wa AI au LLM. Uthibitishaji huu unaweza kusaidia kugundua na kurekebisha udanganyifu kwa kuhakikisha matokeo ni thabiti na sahihi.
 
-OpenAI, kiongozi katika mifumo ya AI, imeanzisha mfululizo wa _tathmini za usalama_ kama sehemu ya mpango wao wa mtandao wa timu nyekundu, unaolenga kujaribu matokeo ya mifumo ya AI kwa matumaini ya kuchangia usalama wa AI.
+OpenAI, kiongozi katika mifumo ya AI, imeanzisha mfululizo wa _upimaji wa usalama_ kama sehemu ya mtandao wao wa red teaming, unaolenga kupima matokeo ya mifumo ya AI kwa lengo la kuchangia usalama wa AI.
 
-> Tathmini zinaweza kuanzia majaribio rahisi ya maswali na majibu hadi kwenye simulizi tata zaidi. Kama mifano halisi, hapa kuna tathmini za sampuli zilizotengenezwa na OpenAI kwa ajili ya kutathmini tabia za AI kutoka pembejeo mbalimbali:
+> Upimaji unaweza kuwa rahisi kama maswali na majibu hadi kwa majaribio magumu zaidi. Hapa kuna mifano ya upimaji iliyotengenezwa na OpenAI kwa kutathmini tabia za AI kutoka mitazamo mbalimbali:
 
-#### Usadikishaji
+#### Ushawishi
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kumdanganya mfumo mwingine wa AI kusema neno la siri kwa kiwango gani?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kumshawishi mfumo mwingine wa AI kutoa pesa kwa kiwango gani?
-- [Pendekezo la Kura](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kushawishi mfumo mwingine wa AI kuunga mkono pendekezo la kisiasa kwa kiwango gani?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kumdanganya mfumo mwingine wa AI kusema neno la siri?
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kumshawishi mwingine kutoa msaada wa kifedha?
+- [Pendekezo la Kura](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kuathiri msaada wa mfumo mwingine kwa pendekezo la kisiasa?
 
-#### Steganografia (ujumbe uliofichwa)
+#### Steganografia (ujumbe wa siri)
 
-- [Steganografia](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kupitisha ujumbe wa siri bila kugunduliwa na mfumo mwingine wa AI kwa kiwango gani?
-- [Mfinyazo wa Maandishi](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kufinya na kufungua ujumbe, ili kuwezesha kuficha ujumbe wa siri kwa kiwango gani?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kuratibu na mfumo mwingine wa AI, bila mawasiliano ya moja kwa moja kwa kiwango gani?
+- [Steganografia](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kuwasilisha ujumbe wa siri bila kugunduliwa na mfumo mwingine wa AI?
+- [Mfinyazo wa Maandishi](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kufinyaza na kufungua ujumbe ili kuficha ujumbe wa siri?
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Je, mfumo wa AI unaweza kuratibu na mfumo mwingine wa AI bila mawasiliano ya moja kwa moja?
 
 ### Usalama wa AI
 
-Ni muhimu kulenga kulinda mifumo ya AI kutokana na mashambulizi yenye nia mbaya, matumizi mabaya, au matokeo yasiyotarajiwa. Hii inajumuisha kuchukua hatua za kuhakikisha usalama, uaminifu, na kuaminika kwa mifumo ya AI, kama vile:
+Ni muhimu kulenga kulinda mifumo ya AI dhidi ya mashambulizi ya hatari, matumizi mabaya, au matokeo yasiyokusudiwa. Hii inajumuisha kuchukua hatua za kuhakikisha usalama, uaminifu, na kuaminika kwa mifumo ya AI, kama vile:
 
-- Kulinda data na algorithimu zinazotumika kufundisha na kuendesha mifano ya AI
-- Kuzuia ufikiaji usioidhinishwa, udanganyifu, au hujuma ya mifumo ya AI
-- Kugundua na kupunguza upendeleo, ubaguzi, au masuala ya kimaadili katika mifumo ya AI
+- Kuweka usalama wa data na algoriti zinazotumika kufundisha na kuendesha mifano ya AI
+- Kuzuia upatikanaji usioidhinishwa, udanganyifu, au uharibifu wa mifumo ya AI
+- Kugundua na kupunguza upendeleo, ubaguzi, au masuala ya maadili katika mifumo ya AI
 - Kuhakikisha uwajibikaji, uwazi, na ufafanuzi wa maamuzi na vitendo vya AI
-- Kulinganisha malengo na maadili ya mifumo ya AI na yale ya wanadamu na jamii
+- Kulinganisha malengo na maadili ya mifumo ya AI na ya binadamu na jamii
 
-Usalama wa AI ni muhimu kwa kuhakikisha uadilifu, upatikanaji, na usiri wa mifumo ya AI na data. Baadhi ya changamoto na fursa za usalama wa AI ni:
+Usalama wa AI ni muhimu kwa kuhakikisha uadilifu, upatikanaji, na usiri wa mifumo na data za AI. Baadhi ya changamoto na fursa za usalama wa AI ni:
 
-- Fursa: Kujumuisha AI katika mikakati ya usalama wa mtandao kwani inaweza kuwa na jukumu muhimu katika kutambua vitisho na kuboresha nyakati za majibu. AI inaweza kusaidia kuboresha na kuongeza otomatiki katika kugundua na kupunguza mashambulizi ya mtandao, kama vile ulaghai, programu hasidi, au fidia.
-- Changamoto: AI pia inaweza kutumiwa na wapinzani kuzindua mashambulizi ya hali ya juu, kama vile kutengeneza maudhui bandia au ya kupotosha, kuiga watumiaji, au kutumia udhaifu katika mifumo ya AI. Kwa hiyo, watengenezaji wa AI wana jukumu la kipekee la kubuni mifumo ambayo ni thabiti na inayostahimili matumizi mabaya.
+- Fursa: Kuingiza AI katika mikakati ya usalama wa mtandao kwani inaweza kusaidia kugundua vitisho na kuboresha muda wa majibu. AI inaweza kusaidia kuendesha na kuongeza ufanisi wa kugundua na kupunguza mashambulizi ya mtandao kama vile phishing, malware, au ransomware.
+- Changamoto: AI pia inaweza kutumiwa na washambuliaji kuanzisha mashambulizi ya hali ya juu, kama kutengeneza maudhui ya uongo au ya kudanganya, kujifanya watumiaji, au kutumia udhaifu wa mifumo ya AI. Kwa hivyo, waendelezaji wa AI wana jukumu la kipekee la kubuni mifumo imara na yenye ustahimilivu dhidi ya matumizi mabaya.
 
 ### Ulinzi wa Data
 
-LLMs zinaweza kuleta hatari kwa faragha na usalama wa data wanayotumia. Kwa mfano, LLMs zinaweza kukumbuka na kutoa taarifa nyeti kutoka kwa data zao za mafunzo, kama vile majina ya watu, anwani, nywila, au nambari za kadi za mkopo. Pia zinaweza kudanganywa au kushambuliwa na wahusika wenye nia mbaya wanaotaka kutumia udhaifu au upendeleo wao. Kwa hiyo, ni muhimu kuwa na ufahamu wa hatari hizi na kuchukua hatua zinazofaa kulinda data inayotumiwa na LLMs. Kuna hatua kadhaa unazoweza kuchukua kulinda data inayotumiwa na LLMs. Hatua hizi ni pamoja na:
+LLMs zinaweza kuleta hatari kwa faragha na usalama wa data zinazotumia. Kwa mfano, LLMs zinaweza kukumbuka na kuvuja taarifa nyeti kutoka kwa data zao za mafunzo, kama majina binafsi, anwani, nywila, au nambari za kadi za mkopo. Pia zinaweza kudanganywa au kushambuliwa na watu wenye nia mbaya wanaotaka kutumia udhaifu au upendeleo wake. Kwa hivyo, ni muhimu kuwa na ufahamu wa hatari hizi na kuchukua hatua zinazofaa kulinda data zinazotumika na LLMs. Hatua kadhaa unazoweza kuchukua ni:
 
-- **Kuweka mipaka ya kiasi na aina ya data wanayoshiriki na LLMs**: Shiriki tu data ambayo ni muhimu na inayohusiana na madhumuni yaliyokusudiwa, na epuka kushiriki data yoyote ambayo ni nyeti, ya siri, au ya kibinafsi. Watumiaji wanapaswa pia kuficha au kuficha data wanayoshiriki na LLMs, kama vile kwa kuondoa au kuficha taarifa yoyote inayotambulika, au kutumia njia salama za mawasiliano.
-- **Kuthibitisha data ambayo LLMs huzalisha**: Kagua kila mara usahihi na ubora wa matokeo yanayozalishwa na LLMs ili kuhakikisha hayana taarifa zisizohitajika au zisizofaa.
-- **Kuripoti na kutoa tahadhari yoyote ya uvunjaji wa data au matukio**: Kuwa makini na shughuli au tabia yoyote ya kutilia shaka au isiyo ya kawaida kutoka kwa LLMs, kama vile kuzalisha maandishi yasiyo ya maana, yasiyo sahihi, ya kukera, au yenye madhara. Hii inaweza kuwa ishara ya uvunjaji wa data au tukio la usalama.
+- **Kupunguza kiasi na aina ya data unayoshirikiana na LLMs**: Shiriki tu data inayohitajika na inayofaa kwa madhumuni yaliyokusudiwa, na epuka kushiriki data nyeti, za siri, au binafsi. Watumiaji wanapaswa pia kuficha au kusimbua data wanayoshirikiana na LLMs, kama kuondoa au kuficha taarifa za utambulisho, au kutumia njia salama za mawasiliano.
+- **Kukagua data inayotolewa na LLMs**: Hakikisha mara zote usahihi na ubora wa matokeo yanayotolewa na LLMs ili kuhakikisha hayajumuishi taarifa zisizohitajika au zisizofaa.
+- **Kuripoti na kutoa tahadhari kuhusu uvunjaji wa data au matukio**: Kuwa makini na shughuli au tabia zisizo za kawaida kutoka kwa LLMs, kama kutoa maandishi yasiyo na maana, yasiyo sahihi, ya kuudhi, au hatari. Hii inaweza kuwa dalili ya uvunjaji wa data au tukio la usalama.
 
-Usalama wa data, utawala, na kufuata sheria ni muhimu kwa shirika lolote linalotaka kutumia nguvu ya data na AI katika mazingira ya wingu nyingi. Kulinda na kudhibiti data yako yote ni kazi ngumu na ya pande nyingi. Unahitaji kulinda na kudhibiti aina tofauti za data (iliyopangwa, isiyopangwa, na data inayozalishwa na AI) katika maeneo tofauti kwenye wingu nyingi, na unahitaji kuzingatia sheria za sasa na zijazo za usalama wa data, utawala, na AI. Ili kulinda data yako, unahitaji kuchukua baadhi ya mazoea bora na tahadhari, kama vile:
+Usalama wa data, utawala, na ufuataji ni muhimu kwa shirika lolote linalotaka kutumia nguvu ya data na AI katika mazingira ya wingu nyingi. Kuweka usalama na kusimamia data zako zote ni kazi ngumu na yenye vipengele vingi. Unahitaji kulinda na kusimamia aina tofauti za data (zilizo na muundo, zisizo na muundo, na data inayotengenezwa na AI) katika maeneo tofauti kwenye mawingu mengi, na pia kuzingatia kanuni za usalama wa data, utawala, na AI zilizopo na zijazo. Ili kulinda data zako, unahitaji kutumia baadhi ya mbinu bora na tahadhari, kama:
 
-- Tumia huduma za wingu au majukwaa yanayotoa vipengele vya ulinzi wa data na faragha.
-- Tumia zana za ubora wa data na uthibitishaji ili kukagua data yako kwa makosa, kutofautiana, au hali zisizo za kawaida.
-- Tumia mifumo ya utawala wa data na maadili ili kuhakikisha data
+- Tumia huduma au majukwaa ya wingu yanayotoa vipengele vya ulinzi wa data na faragha.
+- Tumia zana za ubora na uthibitishaji wa data kukagua data zako kwa makosa, kutokuelewana, au hali zisizo za kawaida.
+- Tumia mifumo ya utawala na maadili ya data kuhakikisha data zako zinatumika kwa njia yenye uwajibikaji na uwazi.
 
-**Kanusho**: 
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokamilika. Hati asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo rasmi. Kwa habari muhimu, tafsiri ya kitaalamu ya kibinadamu inapendekezwa. Hatuwajibiki kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+### Kuiga vitisho halisi - timu nyekundu ya AI
+
+Kuiga vitisho halisi sasa kinachukuliwa kama mazoea ya kawaida katika kujenga mifumo imara ya AI kwa kutumia zana, mikakati, na taratibu zinazofanana ili kubaini hatari kwa
+> Mazoezi ya AI red teaming yameendelea na sasa yana maana pana zaidi: hayajumuishi tu kugundua udhaifu wa usalama, bali pia yanahusisha kugundua matatizo mengine ya mfumo, kama vile uzalishaji wa maudhui yanayoweza kuwa hatari. Mifumo ya AI inaleta hatari mpya, na red teaming ni muhimu kuelewa hatari hizo mpya, kama vile sindano za prompt na uzalishaji wa maudhui yasiyo na msingi. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.sw.png)]()
+
+Hapa chini kuna maarifa muhimu ambayo yameunda programu ya AI Red Team ya Microsoft.
+
+1. **Upeo Mpana wa AI Red Teaming:**
+   AI red teaming sasa inajumuisha matokeo ya usalama na Responsible AI (RAI). Kawaida, red teaming ilizingatia zaidi masuala ya usalama, ikichukulia mfano kama njia ya kushambulia (mfano, kuiba mfano wa msingi). Hata hivyo, mifumo ya AI inaleta hatari mpya za usalama (mfano, sindano za maelekezo, sumu), hivyo inahitaji umakini maalum. Zaidi ya usalama, AI red teaming pia huchunguza masuala ya usawa (mfano, mitazamo potofu) na maudhui hatarishi (mfano, kuhimiza vurugu). Kugundua mapema masuala haya husaidia kuweka kipaumbele katika uwekezaji wa ulinzi.
+2. **Makosa ya Uovu na Yasiyo ya Uovu:**
+   AI red teaming inazingatia makosa kutoka kwa mtazamo wa uovu na yasiyo ya uovu. Kwa mfano, tunapofanya red teaming kwa Bing mpya, tunachunguza si tu jinsi maadui wa uovu wanavyoweza kudanganya mfumo bali pia jinsi watumiaji wa kawaida wanavyoweza kukutana na maudhui yenye matatizo au hatari. Tofauti na red teaming ya usalama wa kawaida, inayolenga hasa wahalifu, AI red teaming inazingatia aina mbalimbali za watu na makosa yanayoweza kutokea.
+3. **Asili Inayobadilika ya Mifumo ya AI:**
+   Programu za AI hubadilika kila wakati. Katika matumizi ya mifano mikubwa ya lugha, waendelezaji hubadilika kulingana na mahitaji yanayobadilika. Red teaming endelevu huhakikisha uangalizi na mabadiliko yanayohitajika kutokana na hatari zinazobadilika.
+
+AI red teaming si suluhisho la kila kitu na inapaswa kuchukuliwa kama hatua ya kuunga mkono udhibiti mwingine kama vile [role-based access control (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) na suluhisho kamili za usimamizi wa data. Inakusudiwa kuongeza mkakati wa usalama unaolenga kutumia suluhisho salama na zenye uwajibikaji wa AI zinazozingatia faragha na usalama huku zikijaribu kupunguza upendeleo, maudhui hatarishi na taarifa potofu zinazoweza kuathiri imani ya watumiaji.
+
+Hapa kuna orodha ya kusoma zaidi itakayokusaidia kuelewa vyema jinsi red teaming inavyoweza kusaidia kubaini na kupunguza hatari katika mifumo yako ya AI:
+
+- [Kupanga red teaming kwa mifano mikubwa ya lugha (LLMs) na matumizi yake](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [Nini ni OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
+- [AI Red Teaming - Mazoezi Muhimu kwa Kujenga Suluhisho Salama na Zenye Uwajibikaji wa AI](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
+- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), hifadhidata ya mbinu na mikakati inayotumika na maadui katika mashambulizi halisi dhidi ya mifumo ya AI.
+
+## Kagua Maarifa
+
+Ni njia gani nzuri ya kudumisha uadilifu wa data na kuzuia matumizi mabaya?
+
+1. Kuwa na udhibiti madhubuti wa upatikanaji wa data na usimamizi wa data kulingana na majukumu
+1. Tekeleza na hakiki uandikishaji wa data ili kuzuia uwakilishi au matumizi mabaya ya data
+1. Hakikisha miundombinu yako ya AI inaunga mkono uchujaji wa maudhui
+
+J:1, Ingawa zote tatu ni mapendekezo mazuri, kuhakikisha unawapa watumiaji ruhusa sahihi za upatikanaji wa data kutasaidia sana kuzuia udanganyifu na uwakilishi usio sahihi wa data inayotumika na LLMs.
+
+## 🚀 Changamoto
+
+Soma zaidi kuhusu jinsi unavyoweza [kusimamia na kulinda taarifa nyeti](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) katika zama za AI.
+
+## Kazi Nzuri, Endelea Kujifunza
+
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa Generative AI!
+
+Nenda kwenye Somo la 14 ambapo tutaangalia [Mzunguko wa Maisha wa Programu ya Generative AI](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
+
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

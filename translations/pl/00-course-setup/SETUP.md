@@ -2,61 +2,63 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "f12faf55ab620aef9f6761679b7ac68b",
-  "translation_date": "2025-05-19T09:02:14+00:00",
+  "translation_date": "2025-07-09T07:29:29+00:00",
   "source_file": "00-course-setup/SETUP.md",
   "language_code": "pl"
 }
 -->
-# Konfiguracja środowiska deweloperskiego
+# Skonfiguruj swoje środowisko deweloperskie
 
-Skonfigurowaliśmy to repozytorium i kurs za pomocą [kontenera deweloperskiego](https://containers.dev?WT.mc_id=academic-105485-koreyst), który ma uniwersalne środowisko uruchomieniowe wspierające rozwój w Python3, .NET, Node.js i Java. Powiązana konfiguracja jest zdefiniowana w pliku `devcontainer.json` znajdującym się w folderze `.devcontainer/` na głównym poziomie tego repozytorium.
+Ten repozytorium i kurs zostały przygotowane z użyciem [kontenera deweloperskiego](https://containers.dev?WT.mc_id=academic-105485-koreyst), który zawiera uniwersalne środowisko uruchomieniowe wspierające Python3, .NET, Node.js oraz Java. Odpowiednia konfiguracja znajduje się w pliku `devcontainer.json` w folderze `.devcontainer/` w katalogu głównym tego repozytorium.
 
-Aby aktywować kontener deweloperski, uruchom go w [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (dla środowiska uruchomieniowego w chmurze) lub w [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (dla lokalnego środowiska uruchomieniowego). Przeczytaj [tę dokumentację](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst) aby uzyskać więcej informacji o działaniu kontenerów deweloperskich w VS Code.
+Aby uruchomić kontener deweloperski, otwórz go w [GitHub Codespaces](https://docs.github.com/en/codespaces/overview?WT.mc_id=academic-105485-koreyst) (środowisko w chmurze) lub w [Docker Desktop](https://docs.docker.com/desktop/?WT.mc_id=academic-105485-koreyst) (środowisko lokalne). Szczegóły dotyczące działania kontenerów deweloperskich w VS Code znajdziesz w [tej dokumentacji](https://code.visualstudio.com/docs/devcontainers/containers?WT.mc_id=academic-105485-koreyst).  
 
 > [!TIP]  
-> Zalecamy użycie GitHub Codespaces dla szybkiego startu przy minimalnym wysiłku. Zapewnia on hojny [darmowy limit użytkowania](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst) dla kont osobistych. Skonfiguruj [limity czasowe](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst) aby zatrzymać lub usunąć nieaktywne przestrzenie kodowe i maksymalnie wykorzystać swój limit.
+> Zalecamy korzystanie z GitHub Codespaces, aby szybko zacząć pracę przy minimalnym wysiłku. Dla kont osobistych dostępna jest hojną [darmowa pula zasobów](https://docs.github.com/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts?WT.mc_id=academic-105485-koreyst). Skonfiguruj [limit czasu](https://docs.github.com/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces?WT.mc_id=academic-105485-koreyst), aby zatrzymywać lub usuwać nieaktywne codespaces i maksymalnie wykorzystać dostępne zasoby.
+
 
 ## 1. Wykonywanie zadań
 
-Każda lekcja będzie miała _opcjonalne_ zadania, które mogą być dostarczone w jednym lub kilku językach programowania, w tym: Python, .NET/C#, Java i JavaScript/TypeScript. Ta sekcja zawiera ogólne wskazówki dotyczące wykonywania tych zadań.
+Każda lekcja może zawierać _opcjonalne_ zadania dostępne w jednym lub kilku językach programowania, takich jak: Python, .NET/C#, Java oraz JavaScript/TypeScript. W tej sekcji znajdziesz ogólne wskazówki dotyczące uruchamiania tych zadań.
 
 ### 1.1 Zadania w Pythonie
 
-Zadania w Pythonie są dostarczane albo jako aplikacje (pliki `.py`) albo notatniki Jupyter (pliki `.ipynb`).
-- Aby uruchomić notatnik, otwórz go w Visual Studio Code, a następnie kliknij _Select Kernel_ (w prawym górnym rogu) i wybierz domyślną opcję Python 3. Teraz możesz _Run All_ aby wykonać notatnik.
-- Aby uruchomić aplikacje Python z linii poleceń, postępuj zgodnie z instrukcjami specyficznymi dla zadania, aby upewnić się, że wybierasz odpowiednie pliki i dostarczasz wymagane argumenty.
+Zadania w Pythonie są dostarczane jako aplikacje (`.py`) lub notatniki Jupyter (`.ipynb`).  
+- Aby uruchomić notatnik, otwórz go w Visual Studio Code, kliknij _Select Kernel_ (w prawym górnym rogu) i wybierz domyślną opcję Python 3. Następnie możesz wybrać _Run All_, aby wykonać cały notatnik.  
+- Aby uruchomić aplikacje Python z linii poleceń, postępuj zgodnie z instrukcjami zawartymi w konkretnym zadaniu, aby wybrać odpowiednie pliki i podać wymagane argumenty.
 
-## 2. Konfiguracja dostawców
+## 2. Konfiguracja dostawców usług
 
-Zadania **mogą** również być skonfigurowane do pracy z jednym lub więcej wdrożeń dużych modeli językowych (LLM) poprzez obsługiwanego dostawcę usług, takiego jak OpenAI, Azure lub Hugging Face. Zapewniają one _hostowany punkt końcowy_ (API), do którego możemy uzyskać dostęp programowo z odpowiednimi poświadczeniami (klucz API lub token). W tym kursie omawiamy tych dostawców:
+Zadania **mogą** być również skonfigurowane do pracy z jednym lub kilkoma wdrożeniami dużych modeli językowych (LLM) za pośrednictwem obsługiwanych dostawców usług, takich jak OpenAI, Azure czy Hugging Face. Udostępniają oni _hostowany endpoint_ (API), do którego możemy uzyskać dostęp programowo, używając odpowiednich poświadczeń (klucz API lub token). W tym kursie omawiamy następujących dostawców:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) z różnorodnymi modelami, w tym główną serią GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) dla modeli OpenAI z naciskiem na gotowość dla przedsiębiorstw.
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) z różnorodnymi modelami, w tym podstawową serią GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) z modelem OpenAI przygotowanym do zastosowań korporacyjnych.
  - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) dla modeli open-source i serwera inferencyjnego.
 
-**Będziesz musiał użyć własnych kont do tych ćwiczeń**. Zadania są opcjonalne, więc możesz zdecydować się na konfigurację jednego, wszystkich - lub żadnego - z dostawców w zależności od swoich zainteresowań. Kilka wskazówek dotyczących rejestracji:
+**Do tych ćwiczeń będziesz potrzebować własnych kont**. Zadania są opcjonalne, więc możesz skonfigurować jednego, wszystkich lub żadnego z dostawców, w zależności od swoich zainteresowań. Kilka wskazówek dotyczących rejestracji:
 
-| Rejestracja | Koszt | Klucz API | Plac zabaw | Uwagi |
+| Rejestracja | Koszt | Klucz API | Playground | Komentarze |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Cennik](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Na podstawie projektu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Bez kodu, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Dostępne wiele modeli |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Cennik](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Musisz wcześniej aplikować o dostęp](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Cennik](https://huggingface.co/pricing) | [Tokeny dostępu](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat ma ograniczone modele](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst) | [Cennik](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst) | [Klucze projektowe](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Dostępne różne modele |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst) | [Cennik](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst) | [Szybki start SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Szybki start Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Wymaga wcześniejszej rejestracji](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Cennik](https://huggingface.co/pricing) | [Tokeny dostępu](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst) | [Hugging Chat ma ograniczoną liczbę modeli](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Postępuj zgodnie z poniższymi instrukcjami, aby _skonfigurować_ to repozytorium do użycia z różnymi dostawcami. Zadania, które wymagają konkretnego dostawcy, będą zawierały jeden z tych tagów w nazwie pliku:
- - `aoai` - wymaga punktu końcowego Azure OpenAI, klucza
- - `oai` - wymaga punktu końcowego OpenAI, klucza
- - `hf` - wymaga tokenu Hugging Face
+Postępuj zgodnie z poniższymi wskazówkami, aby _skonfigurować_ to repozytorium do pracy z różnymi dostawcami. Zadania wymagające konkretnego dostawcy będą miały w nazwie pliku jeden z następujących tagów:
+ - `aoai` - wymaga endpointu i klucza Azure OpenAI
+ - `oai` - wymaga endpointu i klucza OpenAI
+ - `hf` - wymaga tokena Hugging Face
 
-Możesz skonfigurować jednego, żadnego lub wszystkich dostawców. Powiązane zadania po prostu zakończą się błędem przy braku poświadczeń.
+Możesz skonfigurować jednego, żadnego lub wszystkich dostawców. Zadania powiązane z brakującymi poświadczeniami po prostu zwrócą błąd.
 
-### 2.1. Utwórz plik `.env`
+###  2.1. Utwórz plik `.env`
 
-Zakładamy, że przeczytałeś już powyższe wskazówki, zarejestrowałeś się u odpowiedniego dostawcy i uzyskałeś wymagane poświadczenia uwierzytelniające (API_KEY lub token). W przypadku Azure OpenAI, zakładamy również, że masz ważne wdrożenie usługi Azure OpenAI (punkt końcowy) z co najmniej jednym modelem GPT wdrożonym do uzupełniania czatu.
+Zakładamy, że zapoznałeś się z powyższymi wskazówkami, zarejestrowałeś się u odpowiedniego dostawcy i uzyskałeś wymagane dane uwierzytelniające (API_KEY lub token). W przypadku Azure OpenAI zakładamy również, że masz aktywne wdrożenie usługi Azure OpenAI (endpoint) z co najmniej jednym modelem GPT do czatu.
 
-Następnym krokiem jest skonfigurowanie **lokalnych zmiennych środowiskowych** w następujący sposób:
+Następny krok to skonfigurowanie **lokalnych zmiennych środowiskowych** w następujący sposób:
 
-1. Poszukaj w głównym folderze pliku `.env.copy`, który powinien mieć zawartość podobną do tej:
+
+1. W katalogu głównym znajdź plik `.env.copy`, który powinien zawierać coś takiego:
 
    ```bash
    # OpenAI Provider
@@ -73,73 +75,75 @@ Następnym krokiem jest skonfigurowanie **lokalnych zmiennych środowiskowych** 
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Skopiuj ten plik do `.env` używając poniższego polecenia. Ten plik jest _gitignore-d_, co zapewnia bezpieczeństwo sekretów.
+2. Skopiuj ten plik do `.env` za pomocą poniższego polecenia. Ten plik jest _ignorowany przez git_, co chroni Twoje sekrety.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Wypełnij wartości (zastąpiaj symbole zastępcze po prawej stronie `=`) zgodnie z opisem w następnej sekcji.
+3. Wypełnij wartości (zamień symbole zastępcze po prawej stronie znaku `=`) zgodnie z opisem w następnej sekcji.
 
-3. (Opcja) Jeśli używasz GitHub Codespaces, masz możliwość zapisania zmiennych środowiskowych jako _sekrety Codespaces_ związane z tym repozytorium. W takim przypadku nie będziesz musiał konfigurować lokalnego pliku .env. **Jednakże, pamiętaj, że ta opcja działa tylko wtedy, gdy używasz GitHub Codespaces.** Nadal będziesz musiał skonfigurować plik .env, jeśli używasz Docker Desktop.
+3. (Opcjonalnie) Jeśli korzystasz z GitHub Codespaces, możesz zapisać zmienne środowiskowe jako _sekrety Codespaces_ powiązane z tym repozytorium. W takim przypadku nie musisz tworzyć lokalnego pliku .env. **Pamiętaj jednak, że ta opcja działa tylko w GitHub Codespaces.** Jeśli używasz Docker Desktop, nadal musisz skonfigurować plik .env.
+
 
 ### 2.2. Wypełnij plik `.env`
 
-Przyjrzyjmy się szybko nazwom zmiennych, aby zrozumieć, co reprezentują:
+Przyjrzyjmy się nazwom zmiennych, aby zrozumieć, co oznaczają:
 
 | Zmienna  | Opis  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | To jest token dostępu użytkownika, który skonfigurowałeś w swoim profilu |
-| OPENAI_API_KEY | To jest klucz autoryzacyjny do korzystania z usługi dla punktów końcowych OpenAI, które nie są Azure |
-| AZURE_OPENAI_API_KEY | To jest klucz autoryzacyjny do korzystania z tej usługi |
-| AZURE_OPENAI_ENDPOINT | To jest wdrożony punkt końcowy dla zasobu Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | To jest punkt końcowy wdrożenia modelu _generacji tekstu_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | To jest punkt końcowy wdrożenia modelu _osadzania tekstu_ |
+| HUGGING_FACE_API_KEY | Token dostępu użytkownika, który ustawiasz w swoim profilu |
+| OPENAI_API_KEY | Klucz autoryzacyjny do korzystania z usługi OpenAI (poza Azure OpenAI) |
+| AZURE_OPENAI_API_KEY | Klucz autoryzacyjny do korzystania z usługi Azure OpenAI |
+| AZURE_OPENAI_ENDPOINT | Endpoint wdrożonej usługi Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Endpoint wdrożenia modelu do _generowania tekstu_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Endpoint wdrożenia modelu do _osadzania tekstu_ |
 | | |
 
-Uwaga: Ostatnie dwie zmienne Azure OpenAI odzwierciedlają domyślny model dla uzupełniania czatu (generacji tekstu) i wyszukiwania wektorowego (osadzania) odpowiednio. Instrukcje dotyczące ich ustawienia będą zdefiniowane w odpowiednich zadaniach.
+Uwaga: Ostatnie dwie zmienne Azure OpenAI odpowiadają domyślnemu modelowi do czatu (generowanie tekstu) oraz do wyszukiwania wektorowego (osadzanie). Instrukcje dotyczące ich ustawienia znajdziesz w odpowiednich zadaniach.
 
-### 2.3 Konfiguracja Azure: Z portalu
 
-Wartości punktu końcowego i klucza Azure OpenAI znajdziesz w [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), więc zacznijmy od tego.
+### 2.3 Konfiguracja Azure: z poziomu portalu
+
+Wartości endpointu i klucza Azure OpenAI znajdziesz w [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), więc zacznijmy tam.
 
 1. Przejdź do [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
 1. Kliknij opcję **Keys and Endpoint** w pasku bocznym (menu po lewej).
-1. Kliknij **Show Keys** - powinieneś zobaczyć następujące: KEY 1, KEY 2 i Endpoint.
-1. Użyj wartości KEY 1 dla AZURE_OPENAI_API_KEY
-1. Użyj wartości Endpoint dla AZURE_OPENAI_ENDPOINT
+1. Kliknij **Show Keys** – powinieneś zobaczyć: KEY 1, KEY 2 oraz Endpoint.
+1. Użyj wartości KEY 1 jako AZURE_OPENAI_API_KEY
+1. Użyj wartości Endpoint jako AZURE_OPENAI_ENDPOINT
 
-Następnie potrzebujemy punktów końcowych dla konkretnych modeli, które wdrożyliśmy.
+Następnie potrzebujemy endpointów dla konkretnych wdrożonych modeli.
 
 1. Kliknij opcję **Model deployments** w pasku bocznym (menu po lewej) dla zasobu Azure OpenAI.
 1. Na stronie docelowej kliknij **Manage Deployments**
 
-To przeniesie Cię do strony internetowej Azure OpenAI Studio, gdzie znajdziemy pozostałe wartości zgodnie z opisem poniżej.
+Zostaniesz przeniesiony do witryny Azure OpenAI Studio, gdzie znajdziesz pozostałe wartości, jak opisano poniżej.
 
-### 2.4 Konfiguracja Azure: Z Studio
+### 2.4 Konfiguracja Azure: z poziomu Studio
 
-1. Przejdź do [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **z Twojego zasobu** zgodnie z powyższym opisem.
-1. Kliknij kartę **Deployments** (pasek boczny, lewo), aby zobaczyć aktualnie wdrożone modele.
-1. Jeśli Twój pożądany model nie jest wdrożony, użyj **Create new deployment** aby go wdrożyć.
-1. Będziesz potrzebował modelu _generacji tekstu_ - polecamy: **gpt-35-turbo**
-1. Będziesz potrzebował modelu _osadzania tekstu_ - polecamy **text-embedding-ada-002**
+1. Przejdź do [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **z poziomu swojego zasobu**, jak opisano powyżej.
+1. Kliknij zakładkę **Deployments** (pasek boczny, po lewej), aby zobaczyć aktualnie wdrożone modele.
+1. Jeśli wybrany model nie jest wdrożony, użyj opcji **Create new deployment**, aby go wdrożyć.
+1. Będziesz potrzebować modelu do _generowania tekstu_ – zalecamy: **gpt-35-turbo**
+1. Będziesz potrzebować modelu do _osadzania tekstu_ – zalecamy **text-embedding-ada-002**
 
-Teraz zaktualizuj zmienne środowiskowe, aby odzwierciedlały _nazwę wdrożenia_ używaną. Zazwyczaj będzie to to samo co nazwa modelu, chyba że zmieniłeś ją wyraźnie. Tak więc, na przykład, możesz mieć:
+Teraz zaktualizuj zmienne środowiskowe, aby odzwierciedlały nazwę _Deployment name_ używaną w wdrożeniu. Zazwyczaj jest to ta sama nazwa co model, chyba że zmieniłeś ją ręcznie. Na przykład, możesz mieć:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Nie zapomnij zapisać pliku .env po zakończeniu**. Teraz możesz wyjść z pliku i wrócić do instrukcji dotyczących uruchamiania notatnika.
+**Nie zapomnij zapisać pliku .env po zakończeniu**. Możesz teraz zamknąć plik i wrócić do instrukcji uruchamiania notatnika.
 
-### 2.5 Konfiguracja OpenAI: Z profilu
+### 2.5 Konfiguracja OpenAI: z poziomu profilu
 
-Twój klucz API OpenAI można znaleźć na Twoim [koncie OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jeśli go nie masz, możesz zarejestrować się na konto i utworzyć klucz API. Po uzyskaniu klucza możesz użyć go do wypełnienia zmiennej `OPENAI_API_KEY` w pliku `.env`.
+Klucz API OpenAI znajdziesz w swoim [koncie OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jeśli go nie masz, zarejestruj się i utwórz klucz API. Po uzyskaniu klucza wpisz go w zmienną `OPENAI_API_KEY` w pliku `.env`.
 
-### 2.6 Konfiguracja Hugging Face: Z profilu
+### 2.6 Konfiguracja Hugging Face: z poziomu profilu
 
-Twój token Hugging Face można znaleźć w Twoim profilu w sekcji [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nie publikuj ani nie udostępniaj ich publicznie. Zamiast tego utwórz nowy token do użycia w tym projekcie i skopiuj go do pliku `.env` pod zmienną `HUGGING_FACE_API_KEY`. _Uwaga:_ Technicznie rzecz biorąc, nie jest to klucz API, ale jest używany do uwierzytelniania, więc zachowujemy tę konwencję nazewnictwa dla spójności.
+Token Hugging Face znajdziesz w swoim profilu w sekcji [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nie udostępniaj go publicznie. Zamiast tego utwórz nowy token do użytku w tym projekcie i skopiuj go do pliku `.env` pod zmienną `HUGGING_FACE_API_KEY`. _Uwaga:_ Technicznie nie jest to klucz API, ale służy do uwierzytelniania, dlatego zachowujemy tę nazwę dla spójności.
 
-**Zrzeczenie się odpowiedzialności**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się o dokładność, prosimy pamiętać, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku ojczystym powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się profesjonalne tłumaczenie przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+**Zastrzeżenie**:  
+Niniejszy dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dążymy do dokładności, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.

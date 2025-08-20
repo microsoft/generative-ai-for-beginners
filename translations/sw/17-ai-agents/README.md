@@ -2,70 +2,70 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:29:34+00:00",
+  "translation_date": "2025-07-09T17:29:40+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "sw"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.sw.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sw.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
 
 ## Utangulizi
 
-Wakala wa AI ni maendeleo ya kusisimua katika AI ya Kiangeni, ikiruhusu Mifano Mikubwa ya Lugha (LLMs) kubadilika kutoka wasaidizi kuwa mawakala wanaoweza kuchukua hatua. Mifumo ya Wakala wa AI inawawezesha watengenezaji kuunda programu zinazowapa LLMs ufikiaji wa zana na usimamizi wa hali. Mifumo hii pia inaboresha mwonekano, ikiruhusu watumiaji na watengenezaji kufuatilia hatua zilizopangwa na LLMs, hivyo kuboresha usimamizi wa uzoefu.
+Wakala wa AI ni maendeleo ya kusisimua katika AI ya Kizazi, ambayo inawawezesha Modeli Kubwa za Lugha (LLMs) kuhamia kutoka kuwa wasaidizi hadi kuwa mawakala wanaoweza kuchukua hatua. Mifumo ya Wakala wa AI inawawezesha watengenezaji kuunda programu zinazowapa LLMs ufikiaji wa zana na usimamizi wa hali. Mifumo hii pia huongeza uwazi, kuruhusu watumiaji na watengenezaji kufuatilia hatua zinazopangwa na LLMs, hivyo kuboresha usimamizi wa uzoefu.
 
-Somo litafunika maeneo yafuatayo:
+Somo hili litashughulikia maeneo yafuatayo:
 
-- Kuelewa wakala wa AI ni nini - Wakala wa AI ni nini hasa?
-- Kuchunguza mifumo minne tofauti ya Wakala wa AI - Nini kinachowafanya kuwa wa kipekee?
-- Kutumia mawakala hawa wa AI kwa matumizi tofauti - Ni lini tunapaswa kutumia mawakala wa AI?
+- Kuelewa ni nini Wakala wa AI - Wakala wa AI ni nini hasa?
+- Kuchunguza mifumo minne tofauti ya Wakala wa AI - Nini kinawafanya wawe wa kipekee?
+- Kutumia Wakala hawa wa AI katika matumizi tofauti - Lini tunapaswa kutumia Wakala wa AI?
 
 ## Malengo ya Kujifunza
 
 Baada ya kuchukua somo hili, utaweza:
 
-- Kueleza wakala wa AI ni nini na jinsi wanavyoweza kutumika.
-- Kuwa na uelewa wa tofauti kati ya baadhi ya mifumo maarufu ya Wakala wa AI, na jinsi wanavyotofautiana.
-- Kuelewa jinsi mawakala wa AI wanavyofanya kazi ili kujenga programu nao.
+- Kueleza ni nini Wakala wa AI na jinsi wanavyoweza kutumika.
+- Kuwa na uelewa wa tofauti kati ya baadhi ya mifumo maarufu ya Wakala wa AI, na jinsi zinavyotofautiana.
+- Kuelewa jinsi Wakala wa AI wanavyofanya kazi ili kuweza kujenga programu kwa kutumia wao.
 
-## Wakala wa AI ni nini?
+## Wakala wa AI ni Nini?
 
-Wakala wa AI ni uwanja wa kusisimua sana katika ulimwengu wa AI ya Kiangeni. Pamoja na msisimko huu wakati mwingine kuna mkanganyiko wa maneno na matumizi yao. Ili kuweka mambo rahisi na kujumuisha zana nyingi zinazorejelea mawakala wa AI, tutatumia ufafanuzi huu:
+Wakala wa AI ni eneo la kusisimua sana katika dunia ya AI ya Kizazi. Pamoja na msisimko huu huja mara nyingine mkanganyiko wa maneno na matumizi yao. Ili kuweka mambo rahisi na kujumuisha zana nyingi zinazorejelea Wakala wa AI, tutatumia ufafanuzi huu:
 
-Wakala wa AI huruhusu Mifano Mikubwa ya Lugha (LLMs) kutekeleza majukumu kwa kuwapa ufikiaji wa **hali** na **zana**.
+Wakala wa AI huwapa Modeli Kubwa za Lugha (LLMs) uwezo wa kutekeleza kazi kwa kuwapa ufikiaji wa **hali** na **zana**.
 
-![Mfano wa Wakala](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.sw.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sw.png)
 
-Hebu tueleze maneno haya:
+Hebu tuelezee maneno haya:
 
-**Mifano Mikubwa ya Lugha** - Hizi ni mifano iliyorejelewa katika kozi hii kama vile GPT-3.5, GPT-4, Llama-2, nk.
+**Modeli Kubwa za Lugha** - Hizi ni modeli zinazotajwa katika kozi hii kama GPT-3.5, GPT-4, Llama-2, n.k.
 
-**Hali** - Hii inahusu muktadha ambao LLM inafanya kazi ndani. LLM hutumia muktadha wa vitendo vyake vya zamani na muktadha wa sasa, kuongoza maamuzi yake kwa vitendo vinavyofuata. Mifumo ya Wakala wa AI inawawezesha watengenezaji kudumisha muktadha huu kwa urahisi zaidi.
+**Hali** - Hii inahusu muktadha ambao LLM inafanya kazi ndani yake. LLM hutumia muktadha wa hatua zake za awali na muktadha wa sasa, kuongoza maamuzi yake kwa hatua zinazofuata. Mifumo ya Wakala wa AI huwasaidia watengenezaji kudumisha muktadha huu kwa urahisi zaidi.
 
-**Zana** - Ili kukamilisha jukumu ambalo mtumiaji ameomba na ambalo LLM imepanga, LLM inahitaji ufikiaji wa zana. Baadhi ya mifano ya zana inaweza kuwa hifadhidata, API, programu ya nje au hata LLM nyingine!
+**Zana** - Ili kukamilisha kazi ambayo mtumiaji ameomba na ambayo LLM imepanga, LLM inahitaji ufikiaji wa zana. Mfano wa zana ni kama hifadhidata, API, programu ya nje au hata LLM nyingine!
 
-Ufafanuzi huu utatumaini kukupa msingi mzuri tunapoangalia jinsi wanavyotekelezwa. Hebu tuchunguze mifumo kadhaa tofauti ya Wakala wa AI:
+Ufafanuzi huu unatarajiwa kukupa msingi mzuri unapoendelea tunapochunguza jinsi zinavyotekelezwa. Hebu tuchunguze mifumo tofauti ya Wakala wa AI:
 
-## Mawakala wa LangChain
+## Wakala wa LangChain
 
-[Mawakala wa LangChain](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) ni utekelezaji wa ufafanuzi tuliopeana hapo juu.
+[Wakala wa LangChain](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) ni utekelezaji wa ufafanuzi tuliopewa hapo juu.
 
-Ili kusimamia **hali**, hutumia kazi iliyojengwa ndani inayoitwa `AgentExecutor`. Hii inakubali `agent` iliyoelezwa na `tools` ambazo zinapatikana kwake.
+Ili kusimamia **hali**, hutumia kipengele kilichojengwa kinachoitwa `AgentExecutor`. Hiki hukubali `agent` iliyobainishwa na `tools` zinazopatikana kwake.
 
-`Agent Executor` pia huhifadhi historia ya mazungumzo ili kutoa muktadha wa mazungumzo.
+`Agent Executor` pia huhifadhi historia ya mazungumzo kutoa muktadha wa mazungumzo.
 
-![Mawakala wa Langchain](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.sw.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sw.png)
 
-LangChain inatoa [orodha ya zana](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ambazo zinaweza kuingizwa kwenye programu yako ambayo LLM inaweza kupata. Hizi zinatengenezwa na jamii na timu ya LangChain.
+LangChain hutoa [orodha ya zana](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ambazo zinaweza kuingizwa kwenye programu yako ambapo LLM inaweza kupata ufikiaji. Hizi hutengenezwa na jamii na timu ya LangChain.
 
-Unaweza kisha kufafanua zana hizi na kuzipitisha kwa `Agent Executor`.
+Baadaye unaweza kufafanua zana hizi na kuzipitisha kwa `Agent Executor`.
 
-Mwonekano ni kipengele kingine muhimu tunapozungumza kuhusu Mawakala wa AI. Ni muhimu kwa watengenezaji wa programu kuelewa ni zana gani LLM inatumia na kwa nini. Kwa hilo, timu ya LangChain wameunda LangSmith.
+Uwazi ni kipengele kingine muhimu tunapozungumzia Wakala wa AI. Ni muhimu kwa watengenezaji wa programu kuelewa ni zana gani LLM inazitumia na kwa nini. Kwa ajili hiyo, timu ya LangChain imeunda LangSmith.
 
 ## AutoGen
 
-Mfumo unaofuata wa Wakala wa AI tutakaojadili ni [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Lengo kuu la AutoGen ni mazungumzo. Mawakala ni **wa kuzungumza** na **wa kubinafsishwa**.
+Mfumo mwingine wa Wakala wa AI tutaozungumza ni [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Lengo kuu la AutoGen ni mazungumzo. Wakala ni **waweza kuzungumza** na **waweza kubadilishwa**.
 
-**Wa kuzungumza -** LLMs zinaweza kuanzisha na kuendelea na mazungumzo na LLM nyingine ili kukamilisha jukumu. Hii inafanywa kwa kuunda `AssistantAgents` na kuwapa ujumbe maalum wa mfumo.
+**Waweza kuzungumza -** LLM zinaweza kuanzisha na kuendelea na mazungumzo na LLM nyingine ili kukamilisha kazi. Hii hufanyika kwa kuunda `AssistantAgents` na kuwapa ujumbe maalum wa mfumo.
 
 ```python
 
@@ -73,7 +73,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Wa kubinafsishwa** - Mawakala wanaweza kufafanuliwa sio tu kama LLMs bali kuwa mtumiaji au zana. Kama mtengenezaji, unaweza kufafanua `UserProxyAgent` ambayo inawajibika kwa kuingiliana na mtumiaji kwa maoni katika kukamilisha jukumu. Maoni haya yanaweza kuendelea na utekelezaji wa jukumu au kusimamisha.
+**Waweza kubadilishwa** - Wakala wanaweza kufafanuliwa si tu kama LLM bali pia kama mtumiaji au zana. Kama mtengenezaji, unaweza kufafanua `UserProxyAgent` ambaye anahusika na kuwasiliana na mtumiaji kwa maoni kuhusu kukamilisha kazi. Maoni haya yanaweza kuendelea au kusitisha utekelezaji wa kazi.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -81,28 +81,28 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Hali na Zana
 
-Ili kubadilisha na kusimamia hali, Msaidizi Wakala huzalisha msimbo wa Python kukamilisha jukumu.
+Kusimamia na kubadilisha hali, Msaidizi wa Wakala hutengeneza msimbo wa Python kukamilisha kazi.
 
 Hapa kuna mfano wa mchakato:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.sw.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sw.png)
 
-#### LLM Imefafanuliwa na Ujumbe wa Mfumo
+#### LLM Imefafanuliwa kwa Ujumbe wa Mfumo
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Ujumbe huu wa mfumo unaelekeza LLM maalum kwa kazi zake zinazohusika. Kumbuka, na AutoGen unaweza kuwa na Msaidizi Mawakala wengi waliofafanuliwa na ujumbe tofauti wa mfumo.
+Ujumbe huu wa mfumo unaelekeza LLM hii maalum ni kazi gani zinazohusiana na jukumu lake. Kumbuka, kwa AutoGen unaweza kuwa na AssistantAgents wengi waliobainishwa na ujumbe tofauti wa mfumo.
 
-#### Mazungumzo Yanaanzishwa na Mtumiaji
+#### Mazungumzo Yaanza na Mtumiaji
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Ujumbe huu kutoka kwa user_proxy (Binadamu) ndio utaanzisha mchakato wa Wakala kuchunguza kazi zinazowezekana ambazo inapaswa kutekeleza.
+Ujumbe huu kutoka kwa user_proxy (Binadamu) ndio unaoanzisha mchakato wa Wakala kuchunguza kazi zinazowezekana anazopaswa kutekeleza.
 
 #### Kazi Inatekelezwa
 
@@ -115,59 +115,59 @@ chatbot (to user_proxy):
 
 ```
 
-Mara mazungumzo ya awali yanapochakatwa, Wakala atatuma zana inayopendekezwa kuita. Katika kesi hii, ni kazi inayoitwa `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+Mara mazungumzo ya awali yanaposhughulikiwa, Wakala atatuma zana inayopendekezwa kuitwa. Katika kesi hii, ni kazi iitwayo `get_weather`. Kulingana na usanidi wako, kazi hii inaweza kutekelezwa moja kwa moja na kusomwa na Wakala au kutekelezwa kulingana na maingizo ya mtumiaji.
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+Unaweza kupata orodha ya [mifano ya msimbo wa AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) ili kuchunguza zaidi jinsi ya kuanza kujenga.
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+Mfumo mwingine wa wakala tutaochunguza ni [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Unajulikana kama wakala wa "msimbo kwanza" kwa sababu badala ya kufanya kazi tu na `strings`, unaweza kufanya kazi na DataFrames katika Python. Hii ni muhimu sana kwa kazi za uchambuzi na uzalishaji wa data. Hii inaweza kuwa kama kuunda grafu na chati au kuzalisha nambari za bahati nasibu.
 
-### State and Tools
+### Hali na Zana
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+Kusimamia hali ya mazungumzo, TaskWeaver hutumia dhana ya `Planner`. `Planner` ni LLM inayochukua ombi kutoka kwa watumiaji na kupanga kazi zinazohitajika kukamilishwa ili kutimiza ombi hilo.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. Hii inaweza kuwa madarasa ya Python au mkalimani wa msimbo wa jumla. Plugins hizi zimehifadhiwa kama embeddings ili LLM iweze kutafuta vizuri plugin sahihi.
+Ili kukamilisha kazi, `Planner` inaruhusu kutumia mkusanyiko wa zana unaoitwa `Plugins`. Hizi zinaweza kuwa madarasa ya Python au mfasiri wa msimbo wa jumla. Plugins hizi huhifadhiwa kama embeddings ili LLM iweze kutafuta plugin sahihi kwa urahisi zaidi.
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.sw.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sw.png)
 
-Hapa kuna mfano wa plugin ya kushughulikia utambuzi wa kasoro:
+Hapa kuna mfano wa plugin ya kushughulikia ugunduzi wa kasoro:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Msimbo unathibitishwa kabla ya kutekelezwa. Kipengele kingine cha kusimamia muktadha katika Taskweaver ni `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+Msimbo unathibitishwa kabla ya kutekelezwa. Kipengele kingine cha kusimamia muktadha katika Taskweaver ni `experience`. Experience huruhusu muktadha wa mazungumzo kuhifadhiwa kwa muda mrefu katika faili la YAML. Hii inaweza kusanidiwa ili LLM iboreze kwa muda katika kazi fulani ikizingatia kuwa inapata mazungumzo ya awali.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` ya mazungumzo na `tools` ni mifano mingine ya AI. Kila moja ya mifano ya AI ni mifano maalum inayotekeleza majukumu fulani kama utambuzi wa vitu, unukuzi au uandishi wa picha.
+Mfumo wa mwisho wa wakala tutaochunguza ni [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Kinachomfanya JARVIS kuwa wa kipekee ni kwamba hutumia LLM kusimamia `hali` ya mazungumzo na `zana` ni modeli nyingine za AI. Kila moja ya modeli hizi za AI ni maalum na hufanya kazi fulani kama kugundua vitu, uandishi wa maneno au maelezo ya picha.
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.sw.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sw.png)
 
-LLM, ikiwa ni mfano wa matumizi ya jumla, hupokea ombi kutoka kwa mtumiaji na kutambua jukumu maalum na hoja/data yoyote inayohitajika kukamilisha jukumu.
+LLM, ikiwa ni modeli ya matumizi ya jumla, hupokea ombi kutoka kwa mtumiaji na kubaini kazi maalum na hoja/data inayohitajika kukamilisha kazi.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Kisha LLM hupanga ombi kwa namna ambayo mfano maalum wa AI unaweza kutafsiri, kama JSON. Mara baada ya mfano wa AI kurudisha utabiri wake kulingana na jukumu, LLM hupokea majibu.
+LLM kisha huandaa ombi kwa njia ambayo modeli maalum ya AI inaweza kuelewa, kama JSON. Mara modeli ya AI inapotoa utabiri wake kulingana na kazi, LLM hupokea jibu.
 
-Ikiwa mifano mingi inahitajika kukamilisha jukumu, itatafsiri pia majibu kutoka kwa mifano hiyo kabla ya kuyaleta pamoja ili kutoa jibu kwa mtumiaji.
+Ikiwa modeli nyingi zinahitajika kukamilisha kazi, pia itatafsiri majibu kutoka kwa modeli hizo kabla ya kuziunganisha kutoa jibu kwa mtumiaji.
 
-Mfano ulio hapa chini unaonyesha jinsi hii ingefanya kazi wakati mtumiaji anaomba maelezo na hesabu ya vitu kwenye picha:
+Mfano hapa chini unaonyesha jinsi hii itakavyofanya kazi mtumiaji anapouliza maelezo na hesabu ya vitu vilivyo kwenye picha:
 
-## Kazi
+## Kazi ya Nyumbani
 
-Kuendelea na kujifunza kwako kuhusu Mawakala wa AI unaweza kujenga na AutoGen:
+Ili kuendelea na kujifunza kwako kuhusu Wakala wa AI unaweza kujenga kwa AutoGen:
 
-- Programu inayosimulia mkutano wa biashara na idara tofauti za kampuni ya elimu inayochipukia.
-- Unda ujumbe wa mfumo unaoongoza LLMs kuelewa personas tofauti na vipaumbele, na kuwezesha mtumiaji kutoa wazo jipya la bidhaa.
-- LLM inapaswa kisha kuzalisha maswali ya ufuatiliaji kutoka kila idara ili kuboresha na kuboresha wazo la bidhaa.
+- Programu inayofanikisha mkutano wa biashara kati ya idara tofauti za kampuni ya elimu inayochipukia.
+- Tengeneza ujumbe wa mfumo unaowaongoza LLM kuelewa tabia na vipaumbele tofauti, na kumruhusu mtumiaji kuwasilisha wazo jipya la bidhaa.
+- LLM inapaswa kisha kuzalisha maswali ya kufuatilia kutoka kila idara ili kuboresha na kuimarisha wazo la bidhaa na uwasilishaji wake.
 
-## Kujifunza hakuishii hapa, endelea na Safari
+## Kujifunza hakukomi hapa, endelea Safari
 
-Baada ya kukamilisha somo hili, angalia [mkusanyiko wetu wa Kujifunza AI ya Kiangeni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kiangeni!
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuinua ujuzi wako wa AI ya Kizazi!
 
-**Kanusho**: 
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya awali katika lugha yake asili inapaswa kuchukuliwa kama chanzo chenye mamlaka. Kwa taarifa muhimu, inashauriwa kupata tafsiri ya kitaalamu ya kibinadamu. Hatutawajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Kutotegemea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.

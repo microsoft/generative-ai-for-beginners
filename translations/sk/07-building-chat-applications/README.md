@@ -2,74 +2,74 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T18:08:58+00:00",
+  "translation_date": "2025-07-09T12:39:02+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "sk"
 }
 -->
-# Budovanie chatovacích aplikácií poháňaných generatívnou AI
+# Tvorba chatovacích aplikácií poháňaných generatívnou AI
 
-[![Budovanie chatovacích aplikácií poháňaných generatívnou AI](../../../translated_images/07-lesson-banner.0f61145112d724a50d32abfb0b1841777f3ecec301d6f96a0b7f9d6b0e4756b9.sk.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Tvorba chatovacích aplikácií poháňaných generatívnou AI](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.sk.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
 
-> _(Kliknite na obrázok vyššie a pozrite si video tejto lekcie)_
+> _(Kliknite na obrázok vyššie pre zobrazenie videa k tejto lekcii)_
 
 Teraz, keď sme videli, ako môžeme vytvárať aplikácie na generovanie textu, pozrime sa na chatovacie aplikácie.
 
-Chatovacie aplikácie sa stali súčasťou našich každodenných životov a ponúkajú viac než len prostriedok na neformálnu komunikáciu. Sú neoddeliteľnou súčasťou zákazníckeho servisu, technickej podpory a dokonca aj sofistikovaných poradenských systémov. Je pravdepodobné, že ste nedávno dostali pomoc od chatovacej aplikácie. Ako integrujeme pokročilejšie technológie ako generatívna AI do týchto platforiem, komplexnosť sa zvyšuje a takisto aj výzvy.
+Chatovacie aplikácie sa stali neoddeliteľnou súčasťou nášho každodenného života a ponúkajú viac než len prostriedok na bežný rozhovor. Sú kľúčovou súčasťou zákazníckej podpory, technickej asistencie a dokonca aj sofistikovaných poradenských systémov. Je pravdepodobné, že ste nedávno využili pomoc chatovacej aplikácie. S integráciou pokročilých technológií, ako je generatívna AI, do týchto platforiem rastie aj ich zložitosť a výzvy.
 
-Niektoré otázky, ktoré potrebujeme zodpovedať, sú:
+Niektoré otázky, na ktoré potrebujeme odpovede, sú:
 
-- **Vytváranie aplikácie**. Ako efektívne vytvárať a bezproblémovo integrovať tieto aplikácie poháňané AI pre konkrétne prípady použitia?
-- **Monitorovanie**. Po nasadení, ako môžeme monitorovať a zabezpečiť, že aplikácie fungujú na najvyššej úrovni kvality, čo sa týka funkčnosti a dodržiavania [šiestich princípov zodpovednej AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **Tvorba aplikácie**. Ako efektívne vytvoriť a bezproblémovo integrovať tieto AI-poháňané aplikácie pre konkrétne prípady použitia?
+- **Monitorovanie**. Po nasadení, ako môžeme sledovať a zabezpečiť, že aplikácie fungujú na najvyššej úrovni kvality, a to nielen z hľadiska funkčnosti, ale aj dodržiavania [šiestich princípov zodpovednej AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Ako sa posúvame ďalej do veku definovaného automatizáciou a bezproblémovými interakciami človek-stroj, porozumenie tomu, ako generatívna AI transformuje rozsah, hĺbku a prispôsobivosť chatovacích aplikácií sa stáva nevyhnutným. Táto lekcia preskúma aspekty architektúry, ktoré podporujú tieto zložité systémy, ponorí sa do metodológií pre jemné doladenie na úlohy špecifické pre danú doménu a vyhodnotí metriky a úvahy relevantné pre zabezpečenie zodpovedného nasadenia AI.
+Ako postupujeme do éry definovanej automatizáciou a plynulou interakciou medzi človekom a strojom, je nevyhnutné pochopiť, ako generatívna AI mení rozsah, hĺbku a prispôsobivosť chatovacích aplikácií. Táto lekcia preskúma architektonické aspekty podporujúce tieto zložité systémy, metodológie ich doladenia pre špecifické domény a vyhodnotí metriky a úvahy potrebné na zabezpečenie zodpovedného nasadenia AI.
 
 ## Úvod
 
 Táto lekcia pokrýva:
 
-- Techniky na efektívne budovanie a integráciu chatovacích aplikácií.
-- Ako aplikovať prispôsobenie a jemné doladenie aplikácií.
-- Stratégie a úvahy na efektívne monitorovanie chatovacích aplikácií.
+- Techniky efektívnej tvorby a integrácie chatovacích aplikácií.
+- Ako aplikovať prispôsobenie a doladenie aplikácií.
+- Stratégie a úvahy pre efektívne monitorovanie chatovacích aplikácií.
 
 ## Ciele učenia
 
 Na konci tejto lekcie budete schopní:
 
-- Opísať úvahy pri budovaní a integrácii chatovacích aplikácií do existujúcich systémov.
+- Opísať úvahy pri tvorbe a integrácii chatovacích aplikácií do existujúcich systémov.
 - Prispôsobiť chatovacie aplikácie pre konkrétne prípady použitia.
-- Identifikovať kľúčové metriky a úvahy na efektívne monitorovanie a udržiavanie kvality chatovacích aplikácií poháňaných AI.
+- Identifikovať kľúčové metriky a úvahy pre efektívne monitorovanie a udržiavanie kvality AI-poháňaných chatovacích aplikácií.
 - Zabezpečiť, aby chatovacie aplikácie využívali AI zodpovedne.
 
 ## Integrácia generatívnej AI do chatovacích aplikácií
 
-Zvýšenie kvality chatovacích aplikácií prostredníctvom generatívnej AI nie je len o tom, aby boli inteligentnejšie; je to o optimalizácii ich architektúry, výkonu a používateľského rozhrania na poskytovanie kvalitného používateľského zážitku. To zahŕňa skúmanie architektonických základov, integrácií API a úvah o používateľskom rozhraní. Táto sekcia vám má ponúknuť komplexnú cestovnú mapu pre navigáciu v týchto zložitých prostrediach, či už ich zapájate do existujúcich systémov alebo budujete ako samostatné platformy.
+Vylepšenie chatovacích aplikácií pomocou generatívnej AI nie je len o ich „inteligentnosti“; ide o optimalizáciu ich architektúry, výkonu a používateľského rozhrania tak, aby poskytovali kvalitný používateľský zážitok. To zahŕňa skúmanie architektonických základov, integrácie API a úvahy o používateľskom rozhraní. Táto časť vám poskytne komplexnú cestovnú mapu pre orientáciu v týchto zložitých oblastiach, či už ich pripájate k existujúcim systémom, alebo vytvárate samostatné platformy.
 
-Na konci tejto sekcie budete vybavení odbornými znalosťami potrebnými na efektívnu konštrukciu a integráciu chatovacích aplikácií.
+Na konci tejto časti budete vybavení odbornými znalosťami potrebnými na efektívnu tvorbu a integráciu chatovacích aplikácií.
 
 ### Chatbot alebo chatovacia aplikácia?
 
-Predtým než sa pustíme do budovania chatovacích aplikácií, porovnajme 'chatboty' s 'AI-poháňanými chatovacími aplikáciami', ktoré slúžia na odlišné úlohy a funkcie. Hlavným účelom chatbota je automatizovať konkrétne konverzačné úlohy, ako odpovedanie na často kladené otázky alebo sledovanie balíka. Zvyčajne je riadený logikou založenou na pravidlách alebo komplexnými AI algoritmami. Naopak, AI-poháňaná chatovacia aplikácia je oveľa rozsiahlejšie prostredie navrhnuté na uľahčenie rôznych foriem digitálnej komunikácie, ako sú textové, hlasové a video rozhovory medzi ľudskými používateľmi. Jej definujúcou vlastnosťou je integrácia generatívneho AI modelu, ktorý simuluje nuansované, ľudské rozhovory, generuje odpovede na základe širokej škály vstupov a kontextových podnetov. Chatovacia aplikácia poháňaná generatívnou AI môže zapojiť do otvorených diskusií, prispôsobiť sa meniacim konverzačným kontextom a dokonca produkovať kreatívne alebo komplexné dialógy.
+Predtým, než sa pustíme do tvorby chatovacích aplikácií, porovnajme „chatboty“ a „AI-poháňané chatovacie aplikácie“, ktoré plnia odlišné úlohy a funkcie. Hlavným účelom chatbota je automatizovať konkrétne konverzačné úlohy, ako napríklad odpovedanie na často kladené otázky alebo sledovanie zásielky. Zvyčajne je riadený pravidlovou logikou alebo zložitými AI algoritmami. Naopak, AI-poháňaná chatovacia aplikácia je oveľa rozsiahlejšie prostredie navrhnuté na podporu rôznych foriem digitálnej komunikácie, ako sú textové, hlasové a video chaty medzi ľuďmi. Jej charakteristickým znakom je integrácia generatívneho AI modelu, ktorý simuluje nuansované, ľudsky pôsobiace rozhovory a generuje odpovede na základe širokej škály vstupov a kontextových podnetov. Chatovacia aplikácia poháňaná generatívnou AI môže viesť diskusie na otvorené témy, prispôsobovať sa meniacim sa konverzačným kontextom a dokonca vytvárať kreatívny alebo komplexný dialóg.
 
-Tabuľka nižšie načrtáva kľúčové rozdiely a podobnosti, aby sme pochopili ich jedinečné úlohy v digitálnej komunikácii.
+Nasledujúca tabuľka zhrňuje kľúčové rozdiely a podobnosti, ktoré nám pomôžu pochopiť ich jedinečné úlohy v digitálnej komunikácii.
 
 | Chatbot                               | Chatovacia aplikácia poháňaná generatívnou AI |
-| ------------------------------------- | --------------------------------------------- |
-| Zamerané na úlohy a založené na pravidlách | Kontextovo vnímavé                             |
-| Často integrované do väčších systémov | Môže hostiť jeden alebo viac chatbotov         |
-| Obmedzené na naprogramované funkcie   | Zahŕňa generatívne AI modely                   |
-| Špecializované a štruktúrované interakcie | Schopné otvorených diskusií                   |
+| ------------------------------------- | ---------------------------------------------- |
+| Zameraný na úlohy a pravidlá          | Vníma kontext                                  |
+| Často integrovaný do väčších systémov | Môže hostiť jeden alebo viac chatbotov         |
+| Obmedzený na naprogramované funkcie   | Obsahuje generatívne AI modely                 |
+| Špecializované a štruktúrované interakcie | Schopný viesť diskusie na otvorené témy        |
 
-### Využívanie predpripravených funkcií pomocou SDK a API
+### Využitie predpripravených funkcií cez SDK a API
 
-Pri budovaní chatovacej aplikácie je skvelým prvým krokom posúdenie toho, čo už existuje. Používanie SDK a API na budovanie chatovacích aplikácií je výhodnou stratégiou z rôznych dôvodov. Integráciou dobre dokumentovaných SDK a API strategicky umiestňujete svoju aplikáciu pre dlhodobý úspech, riešenie problémov so škálovateľnosťou a údržbou.
+Pri tvorbe chatovacej aplikácie je dobrým prvým krokom zhodnotiť, čo už existuje. Používanie SDK a API na tvorbu chatovacích aplikácií je výhodná stratégia z viacerých dôvodov. Integráciou dobre zdokumentovaných SDK a API strategicky pripravujete svoju aplikáciu na dlhodobý úspech, riešiac otázky škálovateľnosti a údržby.
 
-- **Urýchľuje vývojový proces a znižuje režijné náklady**: Spoliehanie sa na predpripravené funkcie namiesto drahého procesu ich vlastného vytvárania vám umožňuje sústrediť sa na iné aspekty vašej aplikácie, ktoré považujete za dôležitejšie, ako napríklad obchodnú logiku.
-- **Lepší výkon**: Pri budovaní funkcií od základu si nakoniec položíte otázku "Ako to škáluje? Je táto aplikácia schopná zvládnuť náhly príliv používateľov?" Dobre udržiavané SDK a API často majú zabudované riešenia pre tieto obavy.
-- **Jednoduchšia údržba**: Aktualizácie a zlepšenia sú ľahšie spravovateľné, pretože väčšina API a SDK vyžaduje iba aktualizáciu knižnice, keď je vydaná novšia verzia.
-- **Prístup k špičkovej technológii**: Využívanie modelov, ktoré boli jemne doladené a trénované na rozsiahlych dátových súboroch, poskytuje vašej aplikácii schopnosti prirodzeného jazyka.
+- **Uľahčuje vývoj a znižuje náklady**: Spoľahnutie sa na predpripravené funkcie namiesto nákladného vývoja vlastných vám umožní sústrediť sa na iné aspekty aplikácie, ktoré môžu byť dôležitejšie, napríklad obchodnú logiku.
+- **Lepší výkon**: Pri vývoji funkcií od nuly si nakoniec položíte otázku „Ako to škáluje? Je aplikácia schopná zvládnuť náhly nárast používateľov?“ Dobré SDK a API často obsahujú zabudované riešenia týchto problémov.
+- **Jednoduchšia údržba**: Aktualizácie a vylepšenia sa spravujú ľahšie, pretože väčšina API a SDK vyžaduje len aktualizáciu knižnice pri vydaní novej verzie.
+- **Prístup k špičkovej technológii**: Využitie modelov, ktoré boli doladené a trénované na rozsiahlych dátových súboroch, poskytuje vašej aplikácii schopnosti spracovania prirodzeného jazyka.
 
-Prístup k funkciám SDK alebo API zvyčajne zahŕňa získanie povolenia na používanie poskytovaných služieb, čo sa často dosahuje použitím unikátneho kľúča alebo autentifikačného tokenu. Použijeme OpenAI Python Library, aby sme preskúmali, ako to vyzerá. Môžete si to tiež vyskúšať sami v nasledujúcom [notebooku pre OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) alebo [notebooku pre Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) pre túto lekciu.
+Prístup k funkciám SDK alebo API zvyčajne vyžaduje získanie povolenia na používanie poskytovaných služieb, často prostredníctvom unikátneho kľúča alebo autentifikačného tokenu. Na ukážku použijeme OpenAI Python Library. Môžete si to vyskúšať aj sami v nasledujúcom [notebooku pre OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) alebo [notebooku pre Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) pre túto lekciu.
 
 ```python
 import os
@@ -84,73 +84,103 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Vyššie uvedený príklad používa model GPT-3.5 Turbo na dokončenie výzvy, ale všimnite si, že API kľúč je nastavený predtým, než tak urobíte. Dostali by ste chybu, ak by ste kľúč nenastavili.
+Príklad vyššie používa model GPT-3.5 Turbo na dokončenie promptu, ale všimnite si, že API kľúč je nastavený pred jeho použitím. Bez nastavenia kľúča by ste dostali chybu.
 
 ## Používateľský zážitok (UX)
 
-Všeobecné princípy UX platia pre chatovacie aplikácie, ale tu sú niektoré ďalšie úvahy, ktoré sa stávajú obzvlášť dôležitými kvôli komponentom strojového učenia.
+Všeobecné princípy UX platia aj pre chatovacie aplikácie, no tu sú niektoré ďalšie úvahy, ktoré sú obzvlášť dôležité vzhľadom na zapojené komponenty strojového učenia.
 
-- **Mechanizmus na riešenie nejasností**: Generatívne AI modely občas generujú nejasné odpovede. Funkcia, ktorá umožňuje používateľom požiadať o objasnenie, môže byť užitočná, ak sa stretnú s týmto problémom.
-- **Udržanie kontextu**: Pokročilé generatívne AI modely majú schopnosť zapamätať si kontext v rámci konverzácie, čo môže byť nevyhnutným prínosom pre používateľský zážitok. Poskytnutie možnosti používateľom kontrolovať a spravovať kontext zlepšuje používateľský zážitok, ale prináša riziko uchovávania citlivých používateľských informácií. Úvahy o tom, ako dlho sa tieto informácie uchovávajú, ako napríklad zavedenie politiky uchovávania, môžu vyvážiť potrebu kontextu proti ochrane súkromia.
-- **Personalizácia**: S možnosťou učiť sa a prispôsobovať sa, AI modely ponúkajú individuálny zážitok pre používateľa. Prispôsobenie používateľského zážitku prostredníctvom funkcií ako používateľské profily nielenže robí používateľa pocitom pochopenia, ale tiež pomáha pri hľadaní konkrétnych odpovedí, čím vytvára efektívnejšiu a uspokojivejšiu interakciu.
+- **Mechanizmus riešenia nejasností**: Generatívne AI modely občas generujú nejednoznačné odpovede. Funkcia, ktorá umožní používateľom požiadať o objasnenie, môže byť užitočná, ak sa s týmto problémom stretnú.
+- **Uchovávanie kontextu**: Pokročilé generatívne AI modely majú schopnosť si pamätať kontext v rámci konverzácie, čo môže byť pre používateľský zážitok nevyhnutné. Poskytnutie možnosti používateľom kontrolovať a spravovať kontext zlepšuje UX, ale zároveň prináša riziko uchovávania citlivých informácií. Úvahy o tom, ako dlho sa tieto informácie uchovávajú, napríklad zavedením politiky uchovávania, môžu vyvážiť potrebu kontextu a ochranu súkromia.
+- **Personalizácia**: Vďaka schopnosti učiť sa a prispôsobovať sa ponúkajú AI modely individualizovaný zážitok pre používateľa. Prispôsobenie UX cez funkcie ako používateľské profily nielenže používateľa urobí pocit, že je pochopený, ale tiež mu pomáha efektívnejšie nájsť konkrétne odpovede, čím sa zvyšuje efektivita a spokojnosť.
 
-Jedným z príkladov personalizácie sú nastavenia "Vlastné inštrukcie" v OpenAI's ChatGPT. Umožňuje vám poskytnúť informácie o sebe, ktoré môžu byť dôležitým kontextom pre vaše výzvy. Tu je príklad vlastnej inštrukcie.
+Príkladom personalizácie sú nastavenia „Custom instructions“ v OpenAI ChatGPT. Umožňujú vám poskytnúť informácie o sebe, ktoré môžu byť dôležitým kontextom pre vaše prompt-y. Tu je príklad vlastného nastavenia.
 
-![Nastavenia vlastných inštrukcií v ChatGPT](../../../translated_images/custom-instructions.950e3bf1d66f052ff5c50cd6722f1fcb532089abe33d833c190a3796f4a09827.sk.png)
+![Nastavenia Custom Instructions v ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.sk.png)
 
-Tento "profil" podnecuje ChatGPT vytvoriť plán lekcie o prepojených zoznamoch. Všimnite si, že ChatGPT berie do úvahy, že používateľ môže chcieť podrobnejší plán lekcie na základe jej skúseností.
+Tento „profil“ podnecuje ChatGPT, aby vytvoril plán lekcie o prepojených zoznamoch. Všimnite si, že ChatGPT zohľadňuje, že používateľka môže chcieť podrobnejší plán lekcie na základe svojich skúseností.
 
-![Výzva v ChatGPT pre plán lekcie o prepojených zoznamoch](../../../translated_images/lesson-plan-prompt.23083d9c80ec7670b3aaf3b093d79a13ed42920da81b851b29f6167b6150aae9.sk.png)
+![Prompt v ChatGPT na plán lekcie o prepojených zoznamoch](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.sk.png)
 
-### Microsoftova systémová správa pre veľké jazykové modely
+### Microsoftov rámec systémových správ pre veľké jazykové modely
 
-[Microsoft poskytol usmernenia](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) pre písanie efektívnych systémových správ pri generovaní odpovedí z LLM rozdelené do 4 oblastí:
+[Microsoft poskytol odporúčania](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) na písanie efektívnych systémových správ pri generovaní odpovedí z LLM, rozdelené do 4 oblastí:
 
-1. Definovanie, pre koho je model určený, ako aj jeho schopnosti a obmedzenia.
+1. Definovanie, pre koho je model určený, jeho schopností a obmedzení.
 2. Definovanie formátu výstupu modelu.
 3. Poskytnutie konkrétnych príkladov, ktoré demonštrujú zamýšľané správanie modelu.
-4. Poskytnutie ďalších behaviorálnych bezpečnostných opatrení.
+4. Poskytnutie dodatočných bezpečnostných opatrení.
 
 ### Prístupnosť
 
-Či už má používateľ vizuálne, sluchové, motorické alebo kognitívne postihnutie, dobre navrhnutá chatovacia aplikácia by mala byť použiteľná pre všetkých. Nasledujúci zoznam rozdeľuje konkrétne funkcie zamerané na zlepšenie prístupnosti pre rôzne postihnutia používateľov.
+Či už má používateľ zrakové, sluchové, motorické alebo kognitívne obmedzenia, dobre navrhnutá chatovacia aplikácia by mala byť použiteľná pre všetkých. Nasledujúci zoznam rozdeľuje konkrétne funkcie zamerané na zlepšenie prístupnosti pre rôzne typy obmedzení.
 
-- **Funkcie pre vizuálne postihnutie**: Témy s vysokým kontrastom a prispôsobiteľný text, kompatibilita so čítačkou obrazovky.
-- **Funkcie pre sluchové postihnutie**: Funkcie text-to-speech a speech-to-text, vizuálne signály pre zvukové oznámenia.
-- **Funkcie pre motorické postihnutie**: Podpora navigácie pomocou klávesnice, hlasové príkazy.
-- **Funkcie pre kognitívne postihnutie**: Jednoduchšie jazykové možnosti.
+- **Funkcie pre zrakové postihnutie**: Vysokokontrastné témy a možnosť zväčšenia textu, kompatibilita so čítačkami obrazovky.
+- **Funkcie pre sluchové postihnutie**: Funkcie prevodu textu na reč a reči na text, vizuálne upozornenia na zvukové notifikácie.
+- **Funkcie pre motorické postihnutie**: Podpora navigácie klávesnicou, hlasové príkazy.
+- **Funkcie pre kognitívne postihnutie**: Možnosti zjednodušeného jazyka.
 
-## Prispôsobenie a jemné doladenie pre jazykové modely špecifické pre doménu
+## Prispôsobenie a doladenie pre doménovo špecifické jazykové modely
 
-Predstavte si chatovaciu aplikáciu, ktorá rozumie žargónu vašej firmy a predvída konkrétne dotazy, ktoré jej používateľská základňa bežne má. Existuje niekoľko prístupov, ktoré stojí za zmienku:
+Predstavte si chatovaciu aplikáciu, ktorá rozumie žargónu vašej firmy a predvída konkrétne otázky, ktoré jej používatelia často kladú. Existuje niekoľko prístupov, ktoré stojí za zmienku:
 
-- **Využívanie modelov DSL**. DSL znamená jazyk špecifický pre doménu. Môžete využiť tzv. model DSL, ktorý je trénovaný na konkrétnu doménu, aby rozumel jej konceptom a scenárom.
-- **Aplikácia jemného doladenia**. Jemné doladenie je proces ďalšieho trénovania vášho modelu s konkrétnymi dátami.
+- **Využitie DSL modelov**. DSL znamená doménovo špecifický jazyk. Môžete využiť tzv. DSL model, ktorý je trénovaný na konkrétnu doménu, aby rozumel jej konceptom a scenárom.
+- **Aplikácia doladenia (fine-tuning)**. Doladenie je proces ďalšieho trénovania modelu na špecifických dátach.
 
-## Prispôsobenie: Používanie DSL
+## Prispôsobenie: Použitie DSL
 
-Využívanie jazykových modelov špecifických pre doménu (DSL modely) môže zlepšiť zapojenie používateľov poskytovaním špecializovaných, kontextovo relevantných interakcií. Je to model, ktorý je trénovaný alebo jemne doladený na porozumenie a generovanie textu súvisiaceho s konkrétnym oborom, odvetvím alebo predmetom. Možnosti používania DSL modelu sa môžu líšiť od trénovania jedného od základu po používanie existujúcich prostredníctvom SDK a API. Ďalšou možnosťou je jemné doladenie, ktoré zahŕňa prijatie existujúceho predtrénovaného modelu a prispôsobenie ho pre konkrétnu doménu.
+Využitie doménovo špecifických jazykových modelov (DSL modelov) môže zvýšiť angažovanosť používateľov tým, že poskytuje špecializované, kontextovo relevantné interakcie. Ide o model, ktorý je trénovaný alebo doladený na porozumenie a generovanie textu súvisiaceho s konkrétnou oblasťou, odvetvím alebo témou. Možnosti použitia DSL modelu sa pohybujú od trénovania od základov až po využitie existujúcich modelov cez SDK a API. Ďalšou možnosťou je doladenie, ktoré spočíva v adaptácii existujúceho predtrénovaného modelu pre konkrétnu doménu.
 
-## Prispôsobenie: Aplikácia jemného doladenia
+## Prispôsobenie: Aplikácia doladenia
 
-Jemné doladenie sa často zvažuje, keď predtrénovaný model nedokáže dosiahnuť požadovanú úroveň v špecifickej doméne alebo konkrétnej úlohe.
+Doladenie sa často zvažuje, keď predtrénovaný model nestačí v špecializovanej doméne alebo pre konkrétnu úlohu.
 
-Napríklad, lekárske dotazy sú zložité a vyžadujú veľa kontextu. Keď lekár diagnostikuje pacienta, je to založené na rôznych faktoroch, ako je životný štýl alebo existujúce podmienky, a môže sa dokonca spoliehať na nedávne lekárske časopisy na overenie svojej diagnózy. V takýchto nuansovaných scenároch nemôže byť všeobecný AI chat aplikácia spoľahlivým zdrojom.
+Napríklad lekárske otázky sú zložité a vyžadujú veľa kontextu. Keď lekár diagnostikuje pacienta, vychádza z rôznych faktorov, ako je životný štýl alebo predchádzajúce ochorenia, a môže sa dokonca spoliehať na najnovšie lekárske štúdie na potvrdenie diagnózy. V takýchto zložitých situáciách nemôže byť všeobecná AI chatovacia aplikácia spoľahlivým zdrojom.
 
 ### Scenár: lekárska aplikácia
 
-Zvážte chatovaciu aplikáciu navrhnutú na pomoc lekárom poskytovaním rýchlych referencií k liečebným pokynom, interakciám liekov alebo nedávnym výskumným zisteniam.
+Predstavte si chatovaciu aplikáciu navrhnutú na pomoc lekárom tým, že poskytuje rýchle odkazy na liečebné smernice, interakcie liekov alebo najnovšie výskumné zistenia.
 
-Všeobecný model môže byť dostatočný na odpovedanie na základné lekárske otázky alebo poskytovanie všeobecných rád, ale môže mať problémy s nasledujúcimi:
+Všeobecný model môže byť dostatočný na odpovede na základné lekárske otázky alebo všeobecné rady, ale môže mať problém s:
 
-- **Vysoko špecifické alebo zložité prípady**. Napríklad, neurológ môže položiť aplikácii otázku: "Aké sú súčasné najlepšie praktiky pre riadenie epilepsie odolnej voči liekom u pediatrických pacientov?"
-- **Nedostatok nedávnych pokrokov**. Všeobecný model môže mať problémy poskytnúť aktuálnu odpoveď, ktorá zahŕňa najnovšie pokroky v neurológii a farmakológii.
+- **Veľmi špecifickými alebo zložitými prípadmi**. Napríklad neurológ by mohol aplikácii položiť otázku: „Aké sú aktuálne najlepšie postupy pri liečbe farmakorezistentnej epilepsie u detských pacientov?“
+- **Nedostatkom najnovších poznatkov**. Všeobecný model môže mať problém poskytnúť aktuálnu odpoveď, ktorá zahŕňa najnovšie pokroky v neurológii a farmakológii.
 
-V takýchto prípadoch jemné doladenie modelu špecializovaným lekárskym dátovým súborom môže výrazne zlepšiť jeho schopnosť zvládnuť tieto zložité lekárske otázky presnejšie a spoľahlivejšie. To si vyžaduje prístup k veľkému a relevantnému dátovému súboru, ktorý predstavuje doménové výzvy a otázky, ktoré je potrebné riešiť.
+V takýchto prípadoch môže doladenie modelu so špecializovaným lekárskym datasetom výrazne zlepšiť jeho schopnosť presnejšie a spoľahlivejšie riešiť tieto zložité lekárske otázky. To vyžaduje prístup k veľkému a relevantnému datasetu, ktorý reprezentuje doménovo špecifické výzvy a otázky, ktoré je potrebné riešiť.
 
-## Úvahy pre vysokokvalitný AI-poháňaný chatovací zážitok
+## Úvahy pre kvalitný AI-poháňaný chatovací zážitok
 
-Táto sekcia načrt
+Táto časť načrtáva kritériá pre „vysokokvalitné“ chatovacie aplikácie, ktoré zahŕňajú zachytávanie merateľných metrík a dodržiavanie rámca zodpovedného využívania AI technológií.
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+### Kľúčové metriky
+
+Na udržanie vysokej kvality výkonu aplikácie je nevyhnutné sledovať kľúčové metriky a úvahy. Tieto merania nielen zabezpečujú funkčnosť aplikácie, ale aj hodnotia kvalitu AI modelu a používateľský zážitok. Nižšie je zoznam základných, AI a UX metrík, ktoré treba zvážiť.
+
+| Metrika                      | Definícia                                                                                                             | Úvahy
+| **Detekcia anomálií**         | Nástroje a techniky na identifikáciu nezvyčajných vzorov, ktoré nezodpovedajú očakávanému správaniu.                        | Ako budete reagovať na anomálie?                                        |
+
+### Implementácia zodpovedných AI praktík v chatovacích aplikáciách
+
+Prístup Microsoftu k zodpovednej AI identifikoval šesť princípov, ktoré by mali viesť vývoj a používanie AI. Nižšie sú uvedené princípy, ich definícia a veci, ktoré by mal vývojár chatu zvážiť a prečo by ich mal brať vážne.
+
+| Princípy               | Definícia Microsoftu                                | Úvahy pre vývojára chatu                                      | Prečo je to dôležité                                                                     |
+| ---------------------- | -------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Spravodlivosť          | AI systémy by mali zaobchádzať so všetkými ľuďmi spravodlivo. | Zabezpečiť, aby chatovacia aplikácia nediskriminovala na základe údajov používateľa. | Budovanie dôvery a inkluzivity medzi používateľmi; predchádza právnym problémom.         |
+| Spoľahlivosť a bezpečnosť | AI systémy by mali fungovať spoľahlivo a bezpečne. | Zaviesť testovanie a bezpečnostné opatrenia na minimalizáciu chýb a rizík. | Zabezpečuje spokojnosť používateľov a predchádza možným škodám.                           |
+| Súkromie a bezpečnosť  | AI systémy by mali byť bezpečné a rešpektovať súkromie. | Použiť silné šifrovanie a opatrenia na ochranu údajov.         | Chráni citlivé údaje používateľov a zabezpečuje súlad s právnymi predpismi o ochrane súkromia. |
+| Inkluzívnosť           | AI systémy by mali posilňovať každého a zapájať ľudí. | Navrhnúť UI/UX, ktoré je prístupné a jednoduché na používanie pre rôzne skupiny používateľov. | Zabezpečuje, že aplikáciu môže efektívne používať širšie spektrum ľudí.                   |
+| Transparentnosť        | AI systémy by mali byť zrozumiteľné.               | Poskytnúť jasnú dokumentáciu a vysvetlenie AI odpovedí.        | Používatelia viac dôverujú systému, ak rozumejú, ako sa prijímajú rozhodnutia.            |
+| Zodpovednosť           | Ľudia by mali byť zodpovední za AI systémy.         | Zaviesť jasný proces auditu a zlepšovania AI rozhodnutí.       | Umožňuje priebežné zlepšovanie a nápravu v prípade chýb.                                |
+
+## Zadanie
+
+Pozrite si [zadanie](../../../07-building-chat-applications/python), ktoré vás prevedie sériou cvičení od spustenia prvých chatovacích príkazov, cez klasifikáciu a zhrnutie textu až po ďalšie úlohy. Všimnite si, že zadania sú dostupné v rôznych programovacích jazykoch!
+
+## Skvelá práca! Pokračujte v ceste
+
+Po dokončení tejto lekcie si pozrite našu [kolekciu Generatívnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kde môžete ďalej rozvíjať svoje znalosti o generatívnej AI!
+
+Prejdite na Lekciu 8 a zistite, ako môžete začať [budovať vyhľadávacie aplikácie](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+**Vyhlásenie o zodpovednosti**:  
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
