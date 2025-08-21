@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -64,7 +64,7 @@ jobs:
           private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
       - name: Create Pull Request with translations
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ steps.generate_token.outputs.token }}
           commit-message: "🌐 Update translations via Co-op Translator"
