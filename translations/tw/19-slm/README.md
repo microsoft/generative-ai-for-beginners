@@ -167,7 +167,7 @@ NVIDIA NIM 的主要特色包括：
 
 NIM 是 NVIDIA AI Enterprise 的一部分，旨在簡化 AI 模型的部署與運營，確保它們能在 NVIDIA GPU 上高效運行。
 
-- Demo：使用 Nividia NIM 呼叫 Phi-3.5-Vision-API [[點此連結](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo：使用 Nividia NIM 呼叫 Phi-3.5-Vision-API [[點此連結](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### 在本地環境推論 Phi-3/3.5
@@ -189,11 +189,11 @@ Hugging Face Transformers 是一個強大的函式庫，專為自然語言處理
 
 這是最常用的方法，但同時也需要 GPU 加速。畢竟像 Vision 和 MoE 這類場景需要大量計算，若未量化，CPU 執行會非常有限。
 
-- Demo：使用 Transformer 呼叫 Phi-3.5-Instuct [點此連結](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo：使用 Transformer 呼叫 Phi-3.5-Instuct [點此連結](python/phi35-instruct-demo.ipynb)
 
-- Demo：使用 Transformer 呼叫 Phi-3.5-Vision [點此連結](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo：使用 Transformer 呼叫 Phi-3.5-Vision [點此連結](python/phi35-vision-demo.ipynb)
 
-- Demo：使用 Transformer 呼叫 Phi-3.5-MoE [點此連結](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo：使用 Transformer 呼叫 Phi-3.5-MoE [點此連結](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) 是一個讓你更輕鬆在本機運行大型語言模型（LLM）的平台。它支援多種模型，如 Llama 3.1、Phi 3、Mistral 和 Gemma 2 等。該平台將模型權重、配置和資料打包成單一套件，讓使用者更容易自訂和建立自己的模型。Ollama 支援 macOS、Linux 和 Windows。如果你想在不依賴雲端服務的情況下試驗或部署 LLM，這是個很棒的工具。Ollama 是最直接的方式，你只需執行以下語句。

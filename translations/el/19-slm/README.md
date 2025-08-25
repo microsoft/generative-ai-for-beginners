@@ -133,7 +133,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Το NIM αποτελεί μέρος του NVIDIA AI Enterprise, που στοχεύει στην απλοποίηση της ανάπτυξης και λειτουργίας μοντέλων AI, εξασφαλίζοντας την αποδοτική τους εκτέλεση σε NVIDIA GPUs.
 
-- Demo: Χρήση του Nividia NIM για κλήση του Phi-3.5-Vision-API  [[Κάντε κλικ εδώ](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Χρήση του Nividia NIM για κλήση του Phi-3.5-Vision-API  [[Κάντε κλικ εδώ](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Εκτέλεση inference Phi-3/3.5 σε τοπικό περιβάλλον
@@ -156,11 +156,11 @@ CO_OP_TRANSLATOR_METADATA:
 Αυτή είναι η πιο συχνά χρησιμοποιούμενη μέθοδος, αλλά απαιτεί επιτάχυνση GPU. Άλλωστε, σενάρια όπως Vision και MoE απαιτούν πολλούς υπολογισμούς, που θα είναι πολύ περιορισμένοι στην CPU αν δεν γίνουν ποσοτικοποιήσεις.
 
 
-- Demo: Χρήση Transformer για κλήση Phi-3.5-Instuct [Κάντε κλικ εδώ](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Χρήση Transformer για κλήση Phi-3.5-Instuct [Κάντε κλικ εδώ](python/phi35-instruct-demo.ipynb)
 
-- Demo: Χρήση Transformer για κλήση Phi-3.5-Vision [Κάντε κλικ εδώ](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Χρήση Transformer για κλήση Phi-3.5-Vision [Κάντε κλικ εδώ](python/phi35-vision-demo.ipynb)
 
-- Demo: Χρήση Transformer για κλήση Phi-3.5-MoE [Κάντε κλικ εδώ](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Χρήση Transformer για κλήση Phi-3.5-MoE [Κάντε κλικ εδώ](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) είναι μια πλατφόρμα σχεδιασμένη να διευκολύνει την εκτέλεση μεγάλων γλωσσικών μοντέλων (LLMs) τοπικά στον υπολογιστή σας. Υποστηρίζει διάφορα μοντέλα όπως Llama 3.1, Phi 3, Mistral και Gemma 2, μεταξύ άλλων. Η πλατφόρμα απλοποιεί τη διαδικασία συνδυάζοντας τα βάρη του μοντέλου, τη διαμόρφωση και τα δεδομένα σε ένα πακέτο, καθιστώντας την πιο προσιτή για τους χρήστες να προσαρμόσουν και να δημιουργήσουν τα δικά τους μοντέλα. Το Ollama είναι διαθέσιμο για macOS, Linux και Windows. Είναι ένα εξαιρετικό εργαλείο αν θέλετε να πειραματιστείτε ή να αναπτύξετε LLMs χωρίς να βασίζεστε σε υπηρεσίες cloud. Το Ollama είναι ο πιο άμεσος τρόπος, απλά πρέπει να εκτελέσετε την παρακάτω εντολή.

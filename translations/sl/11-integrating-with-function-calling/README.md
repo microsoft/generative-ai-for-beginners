@@ -54,7 +54,7 @@ Klic funkcij je funkcija Azure OpenAI storitve, ki premaga naslednje omejitve:
 
 ## Prikaz problema skozi scenarij
 
-> Priporočamo uporabo [priloženega zvezka](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), če želite preizkusiti spodnji scenarij. Lahko pa tudi samo berete, saj želimo prikazati problem, kjer lahko funkcije pomagajo rešiti težavo.
+> Priporočamo uporabo [priloženega zvezka](python/aoai-assignment.ipynb), če želite preizkusiti spodnji scenarij. Lahko pa tudi samo berete, saj želimo prikazati problem, kjer lahko funkcije pomagajo rešiti težavo.
 
 Poglejmo primer, ki prikazuje problem formata odgovora:
 

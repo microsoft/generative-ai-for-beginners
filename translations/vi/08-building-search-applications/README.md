@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Giải pháp
 
-Mở [notebook giải pháp](../../../08-building-search-applications/python/aoai-solution.ipynb) trong GitHub Codespaces và làm theo hướng dẫn trong Jupyter Notebook.
+Mở [notebook giải pháp](python/aoai-solution.ipynb) trong GitHub Codespaces và làm theo hướng dẫn trong Jupyter Notebook.
 
 Khi chạy notebook, bạn sẽ được yêu cầu nhập truy vấn. Hộp nhập liệu sẽ trông như sau:
 

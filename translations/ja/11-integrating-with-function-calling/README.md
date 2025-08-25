@@ -54,7 +54,7 @@ Function CallingはAzure OpenAI Serviceの機能で、以下の制約を克服�
 
 ## シナリオで問題を説明する
 
-> 下記のシナリオを実行したい場合は、[付属のノートブック](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)の利用をおすすめします。ここでは関数が問題解決に役立つ例を示すため、読み進めるだけでも構いません。
+> 下記のシナリオを実行したい場合は、[付属のノートブック](python/aoai-assignment.ipynb)の利用をおすすめします。ここでは関数が問題解決に役立つ例を示すため、読み進めるだけでも構いません。
 
 レスポンス形式の問題を示す例を見てみましょう：
 

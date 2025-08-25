@@ -141,7 +141,7 @@ Kľúčové vlastnosti NVIDIA NIM:
 
 NIM je súčasťou NVIDIA AI Enterprise, ktorého cieľom je zjednodušiť nasadenie a prevádzku AI modelov a zabezpečiť ich efektívny beh na NVIDIA GPU.
 
-- Demo: Použitie Nvidia NIM na volanie Phi-3.5-Vision-API [[Kliknite na tento odkaz](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Použitie Nvidia NIM na volanie Phi-3.5-Vision-API [[Kliknite na tento odkaz](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference Phi-3/3.5 v lokálnom prostredí
@@ -164,11 +164,11 @@ Hugging Face Transformers je výkonná knižnica určená na spracovanie prirodz
 Toto je najčastejšie používaná metóda, ale vyžaduje aj GPU akceleráciu. Scény ako Vision a MoE totiž vyžadujú veľa výpočtov, ktoré budú na CPU veľmi obmedzené, ak nie sú kvantizované.
 
 
-- Demo: Použitie Transformer na volanie Phi-3.5-Instuct [Kliknite na tento odkaz](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Použitie Transformer na volanie Phi-3.5-Instuct [Kliknite na tento odkaz](python/phi35-instruct-demo.ipynb)
 
-- Demo: Použitie Transformer na volanie Phi-3.5-Vision [Kliknite na tento odkaz](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Použitie Transformer na volanie Phi-3.5-Vision [Kliknite na tento odkaz](python/phi35-vision-demo.ipynb)
 
-- Demo: Použitie Transformer na volanie Phi-3.5-MoE [Kliknite na tento odkaz](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Použitie Transformer na volanie Phi-3.5-MoE [Kliknite na tento odkaz](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma navrhnutá tak, aby uľahčila spúšťanie veľkých jazykových modelov (LLM) lokálne na vašom zariadení. Podporuje rôzne modely ako Llama 3.1, Phi 3, Mistral a Gemma 2, medzi inými. Platforma zjednodušuje proces tým, že kombinuje váhy modelu, konfiguráciu a dáta do jedného balíka, čo používateľom umožňuje jednoduchšie prispôsobovať a vytvárať vlastné modely. Ollama je dostupná pre macOS, Linux a Windows. Je to skvelý nástroj, ak chcete experimentovať s LLM alebo ich nasadiť bez závislosti na cloudových službách. Ollama je najpriamejšia cesta, stačí spustiť nasledujúci príkaz.

@@ -54,7 +54,7 @@ Function Calling è una funzionalità del servizio Azure OpenAI che supera le se
 
 ## Illustrare il problema attraverso uno scenario
 
-> Ti consigliamo di usare il [notebook incluso](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) se vuoi eseguire lo scenario qui sotto. Puoi anche semplicemente leggere mentre cerchiamo di illustrare un problema che le funzioni possono aiutare a risolvere.
+> Ti consigliamo di usare il [notebook incluso](python/aoai-assignment.ipynb) se vuoi eseguire lo scenario qui sotto. Puoi anche semplicemente leggere mentre cerchiamo di illustrare un problema che le funzioni possono aiutare a risolvere.
 
 Vediamo un esempio che illustra il problema del formato di risposta:
 

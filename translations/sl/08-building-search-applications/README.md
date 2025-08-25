@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Rešitev
 
-Odprite [rešitveni zvezek](../../../08-building-search-applications/python/aoai-solution.ipynb) v GitHub Codespaces in sledite navodilom v Jupyter zvezku.
+Odprite [rešitveni zvezek](python/aoai-solution.ipynb) v GitHub Codespaces in sledite navodilom v Jupyter zvezku.
 
 Ko zaženete zvezek, boste pozvani, da vnesete poizvedbo. Vnosno polje bo izgledalo takole:
 

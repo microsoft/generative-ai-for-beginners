@@ -167,7 +167,7 @@ Dưới đây là một số tính năng chính của NVIDIA NIM:
 
 NIM là một phần của NVIDIA AI Enterprise, nhằm đơn giản hóa việc triển khai và vận hành các mô hình AI, đảm bảo chúng hoạt động hiệu quả trên GPU của NVIDIA.
 
-- Demo: Sử dụng Nividia NIM để gọi Phi-3.5-Vision-API  [[Nhấn vào đây](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Sử dụng Nividia NIM để gọi Phi-3.5-Vision-API  [[Nhấn vào đây](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference Phi-3/3.5 trong môi trường cục bộ
@@ -189,11 +189,11 @@ Hugging Face Transformers là một thư viện mạnh mẽ được thiết k�
 
 Đây là phương pháp phổ biến nhất, nhưng cũng đòi hỏi tăng tốc GPU. Bởi vì các tác vụ như Vision và MoE cần rất nhiều phép tính, nếu không được lượng tử hóa thì CPU sẽ rất hạn chế.
 
-- Demo: Sử dụng Transformer để gọi Phi-3.5-Instuct [Nhấn vào đây](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Sử dụng Transformer để gọi Phi-3.5-Instuct [Nhấn vào đây](python/phi35-instruct-demo.ipynb)
 
-- Demo: Sử dụng Transformer để gọi Phi-3.5-Vision [Nhấn vào đây](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Sử dụng Transformer để gọi Phi-3.5-Vision [Nhấn vào đây](python/phi35-vision-demo.ipynb)
 
-- Demo: Sử dụng Transformer để gọi Phi-3.5-MoE [Nhấn vào đây](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Sử dụng Transformer để gọi Phi-3.5-MoE [Nhấn vào đây](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) là một nền tảng giúp bạn dễ dàng chạy các mô hình ngôn ngữ lớn (LLMs) ngay trên máy của mình. Nó hỗ trợ nhiều mô hình như Llama 3.1, Phi 3, Mistral, Gemma 2, và nhiều hơn nữa. Nền tảng này đơn giản hóa quá trình bằng cách đóng gói trọng số mô hình, cấu hình và dữ liệu thành một gói duy nhất, giúp người dùng dễ dàng tùy chỉnh và tạo mô hình riêng. Ollama có sẵn cho macOS, Linux và Windows. Đây là công cụ tuyệt vời nếu bạn muốn thử nghiệm hoặc triển khai LLM mà không phụ thuộc vào dịch vụ đám mây. Ollama là cách trực tiếp nhất, bạn chỉ cần thực thi câu lệnh sau.

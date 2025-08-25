@@ -69,7 +69,7 @@ Apabila membina aplikasi sembang, langkah pertama yang baik adalah menilai apa y
 - **Penyelenggaraan lebih mudah**: Kemas kini dan penambahbaikan lebih mudah diurus kerana kebanyakan API dan SDK hanya memerlukan kemas kini perpustakaan apabila versi baru dikeluarkan.
 - **Akses kepada teknologi terkini**: Memanfaatkan model yang telah dilaraskan halus dan dilatih pada set data yang luas memberikan aplikasi anda keupayaan bahasa semula jadi.
 
-Mengakses fungsi SDK atau API biasanya melibatkan mendapatkan kebenaran untuk menggunakan perkhidmatan yang disediakan, yang sering melalui penggunaan kunci unik atau token pengesahan. Kita akan menggunakan Perpustakaan Python OpenAI untuk meneroka bagaimana ini dilakukan. Anda juga boleh mencubanya sendiri dalam [notebook untuk OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) atau [notebook untuk Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) untuk pelajaran ini.
+Mengakses fungsi SDK atau API biasanya melibatkan mendapatkan kebenaran untuk menggunakan perkhidmatan yang disediakan, yang sering melalui penggunaan kunci unik atau token pengesahan. Kita akan menggunakan Perpustakaan Python OpenAI untuk meneroka bagaimana ini dilakukan. Anda juga boleh mencubanya sendiri dalam [notebook untuk OpenAI](python/oai-assignment.ipynb) atau [notebook untuk Azure OpenAI Services](python/aoai-assignment.ipynb) untuk pelajaran ini.
 
 ```python
 import os

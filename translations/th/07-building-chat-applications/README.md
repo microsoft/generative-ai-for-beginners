@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **การบำรุงรักษาง่ายขึ้น**: การอัปเดตและปรับปรุงทำได้ง่าย เพราะส่วนใหญ่แค่ต้องอัปเดตไลบรารีเมื่อมีเวอร์ชันใหม่
 - **เข้าถึงเทคโนโลยีล้ำสมัย**: การใช้โมเดลที่ผ่านการปรับแต่งและฝึกฝนด้วยชุดข้อมูลขนาดใหญ่ช่วยให้แอปของคุณมีความสามารถด้านภาษาธรรมชาติ
 
-การเข้าถึงฟังก์ชันของ SDK หรือ API มักต้องได้รับอนุญาตผ่านคีย์เฉพาะหรือโทเค็นยืนยันตัวตน เราจะใช้ OpenAI Python Library เพื่อดูตัวอย่าง คุณยังสามารถทดลองด้วยตัวเองใน [notebook สำหรับ OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) หรือ [notebook สำหรับ Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) สำหรับบทเรียนนี้
+การเข้าถึงฟังก์ชันของ SDK หรือ API มักต้องได้รับอนุญาตผ่านคีย์เฉพาะหรือโทเค็นยืนยันตัวตน เราจะใช้ OpenAI Python Library เพื่อดูตัวอย่าง คุณยังสามารถทดลองด้วยตัวเองใน [notebook สำหรับ OpenAI](python/oai-assignment.ipynb) หรือ [notebook สำหรับ Azure OpenAI Services](python/aoai-assignment.ipynb) สำหรับบทเรียนนี้
 
 ```python
 import os

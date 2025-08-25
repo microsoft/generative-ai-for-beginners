@@ -54,7 +54,7 @@ Volanie funkcií je funkcia Azure OpenAI Service, ktorá pomáha prekonať tieto
 
 ## Ilustrácia problému na príklade
 
-> Odporúčame použiť [priložený notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), ak chcete spustiť nižšie uvedený scenár. Môžete si ho však aj len prečítať, keďže sa snažíme ukázať problém, ktorý volania funkcií pomáhajú riešiť.
+> Odporúčame použiť [priložený notebook](python/aoai-assignment.ipynb), ak chcete spustiť nižšie uvedený scenár. Môžete si ho však aj len prečítať, keďže sa snažíme ukázať problém, ktorý volania funkcií pomáhajú riešiť.
 
 Pozrime sa na príklad, ktorý ilustruje problém s formátom odpovede:
 

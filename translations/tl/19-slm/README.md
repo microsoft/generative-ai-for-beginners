@@ -167,7 +167,7 @@ Narito ang ilang mahahalagang tampok ng NVIDIA NIM:
 
 Ang NIM ay bahagi ng NVIDIA AI Enterprise, na naglalayong gawing mas simple ang deployment at operationalization ng mga AI model, upang matiyak na tumatakbo ito nang mahusay sa NVIDIA GPUs.
 
-- Demo: Paggamit ng Nvidia NIM para tawagan ang Phi-3.5-Vision-API [[I-click ang link na ito](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Paggamit ng Nvidia NIM para tawagan ang Phi-3.5-Vision-API [[I-click ang link na ito](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference ng Phi-3/3.5 sa lokal na kapaligiran
@@ -189,11 +189,11 @@ Ang Hugging Face Transformers ay isang makapangyarihang library na dinisenyo par
 
 Ito ang pinakakaraniwang ginagamit na paraan, ngunit nangangailangan din ito ng GPU acceleration. Sa katunayan, ang mga senaryo tulad ng Vision at MoE ay nangangailangan ng maraming kalkulasyon, na magiging napakabagal sa CPU kung hindi ito na-quantize.
 
-- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-Instruct [I-click ang link na ito](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-Instruct [I-click ang link na ito](python/phi35-instruct-demo.ipynb)
 
-- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-Vision [I-click ang link na ito](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-Vision [I-click ang link na ito](python/phi35-vision-demo.ipynb)
 
-- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-MoE [I-click ang link na ito](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Paggamit ng Transformer para tawagan ang Phi-3.5-MoE [I-click ang link na ito](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ay isang platform na dinisenyo upang gawing mas madali ang pagpapatakbo ng malalaking language model (LLMs) nang lokal sa iyong makina. Sinusuportahan nito ang iba't ibang modelo tulad ng Llama 3.1, Phi 3, Mistral, at Gemma 2, at iba pa. Pinapasimple ng platform ang proseso sa pamamagitan ng pagsasama-sama ng model weights, configuration, at data sa isang package, kaya mas madali para sa mga gumagamit na i-customize at gumawa ng sarili nilang mga modelo. Available ang Ollama para sa macOS, Linux, at Windows. Magandang tool ito kung nais mong mag-eksperimento o mag-deploy ng LLMs nang hindi umaasa sa cloud services. Ang Ollama ang pinaka-direktang paraan, kailangan mo lang patakbuhin ang sumusunod na utos.

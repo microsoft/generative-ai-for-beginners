@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## حل
 
-GitHub Codespaces میں [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) کھولیں اور Jupyter Notebook میں دی گئی ہدایات پر عمل کریں۔
+GitHub Codespaces میں [solution notebook](python/aoai-solution.ipynb) کھولیں اور Jupyter Notebook میں دی گئی ہدایات پر عمل کریں۔
 
 جب آپ نوٹ بک چلائیں گے، تو آپ سے سوال پوچھا جائے گا۔ ان پٹ باکس کچھ اس طرح نظر آئے گا:
 

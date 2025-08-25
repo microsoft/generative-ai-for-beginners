@@ -54,7 +54,7 @@ L’appel de fonction est une fonctionnalité du service Azure OpenAI qui permet
 
 ## Illustration du problème à travers un scénario
 
-> Nous vous recommandons d’utiliser le [notebook inclus](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) si vous souhaitez exécuter le scénario ci-dessous. Vous pouvez aussi simplement lire, car nous essayons d’illustrer un problème que les fonctions peuvent aider à résoudre.
+> Nous vous recommandons d’utiliser le [notebook inclus](python/aoai-assignment.ipynb) si vous souhaitez exécuter le scénario ci-dessous. Vous pouvez aussi simplement lire, car nous essayons d’illustrer un problème que les fonctions peuvent aider à résoudre.
 
 Regardons l’exemple qui illustre le problème du format de réponse :
 

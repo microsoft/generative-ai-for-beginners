@@ -167,7 +167,7 @@ Evo nekoliko ključnih značajki NVIDIA NIM-a:
 
 NIM je dio NVIDIA AI Enterprise, čiji je cilj pojednostaviti implementaciju i operativnost AI modela, osiguravajući njihovo učinkovito izvođenje na NVIDIA GPU-ima.
 
-- Demo: Korištenje Nividia NIM za pozivanje Phi-3.5-Vision-API [[Kliknite na ovaj link](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Korištenje Nividia NIM za pozivanje Phi-3.5-Vision-API [[Kliknite na ovaj link](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference Phi-3/3.5 u lokalnom okruženju  
@@ -190,11 +190,11 @@ Hugging Face Transformers je moćna biblioteka namijenjena obradi prirodnog jezi
 Ovo je najčešće korištena metoda, ali zahtijeva GPU ubrzanje. Na kraju krajeva, zadaci poput Vision i MoE zahtijevaju mnogo izračuna, što će na CPU-u biti vrlo ograničeno ako se ne kvantiziraju.
 
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-Instuct [Kliknite na ovaj link](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-Instuct [Kliknite na ovaj link](python/phi35-instruct-demo.ipynb)
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-Vision [Kliknite na ovaj link](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-Vision [Kliknite na ovaj link](python/phi35-vision-demo.ipynb)
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-MoE [Kliknite na ovaj link](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-MoE [Kliknite na ovaj link](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma dizajnirana da olakša pokretanje velikih jezičnih modela (LLM) lokalno na vašem računalu. Podržava različite modele poput Llama 3.1, Phi 3, Mistral i Gemma 2, među ostalima. Platforma pojednostavljuje proces tako što u jedan paket objedinjuje težine modela, konfiguraciju i podatke, čineći ga pristupačnijim korisnicima za prilagodbu i izradu vlastitih modela. Ollama je dostupna za macOS, Linux i Windows. Odličan je alat ako želite eksperimentirati ili implementirati LLM-ove bez oslanjanja na cloud usluge. Ollama je najizravniji način, samo trebate izvršiti sljedeću naredbu.

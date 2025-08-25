@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 通过场景说明问题
 
-> 我们建议你使用[附带的笔记本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)来运行以下场景。你也可以直接阅读，我们试图说明函数如何帮助解决问题。
+> 我们建议你使用[附带的笔记本](python/aoai-assignment.ipynb)来运行以下场景。你也可以直接阅读，我们试图说明函数如何帮助解决问题。
 
 来看一个说明响应格式问题的例子：
 

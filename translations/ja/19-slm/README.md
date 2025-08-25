@@ -167,7 +167,7 @@ NVIDIA NIMの主な特徴は以下の通りです：
 
 NIMはNVIDIA AI Enterpriseの一部であり、AIモデルの展開と運用を簡素化し、NVIDIA GPU上で効率的に動作させることを目指しています。
 
-- デモ: Nividia NIMを使ってPhi-3.5-Vision-APIを呼び出す [[こちらをクリック](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- デモ: Nividia NIMを使ってPhi-3.5-Vision-APIを呼び出す [[こちらをクリック](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### ローカル環境でのPhi-3/3.5推論
@@ -189,11 +189,11 @@ Hugging Face Transformersは、自然言語処理（NLP）やその他の機械�
 
 これは最も一般的な方法ですが、GPUアクセラレーションが必要です。特にVisionやMoEのようなシーンでは計算量が多く、量子化されていない場合はCPUでの処理が非常に制限されます。
 
-- デモ: Transformerを使ってPhi-3.5-Instuctを呼び出す [こちらをクリック](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- デモ: Transformerを使ってPhi-3.5-Instuctを呼び出す [こちらをクリック](python/phi35-instruct-demo.ipynb)
 
-- デモ: Transformerを使ってPhi-3.5-Visionを呼び出す [こちらをクリック](../../../19-slm/python/phi35-vision-demo.ipynb)
+- デモ: Transformerを使ってPhi-3.5-Visionを呼び出す [こちらをクリック](python/phi35-vision-demo.ipynb)
 
-- デモ: Transformerを使ってPhi-3.5-MoEを呼び出す [こちらをクリック](../../../19-slm/python/phi35_moe_demo.ipynb)
+- デモ: Transformerを使ってPhi-3.5-MoEを呼び出す [こちらをクリック](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)は、大規模言語モデル（LLM）をローカル環境で簡単に実行できるプラットフォームです。Llama 3.1、Phi 3、Mistral、Gemma 2など様々なモデルをサポートしています。モデルの重み、設定、データを一つのパッケージにまとめて提供することで、ユーザーがカスタマイズや独自モデルの作成をしやすくしています。macOS、Linux、Windowsで利用可能で、クラウドサービスに依存せずにLLMを試したり展開したりしたい方に最適なツールです。Ollamaは最も直接的な方法で、以下のコマンドを実行するだけです。

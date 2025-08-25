@@ -166,7 +166,7 @@ Tässä muutamia NVIDIA NIM:n keskeisiä ominaisuuksia:
 
 NIM on osa NVIDIA AI Enterprisea, jonka tavoitteena on yksinkertaistaa tekoälymallien käyttöönottoa ja operatiivista hallintaa, varmistaen niiden tehokkaan toiminnan NVIDIA:n GPU:illa.
 
-- Demo: Nividia NIM:n käyttö Phi-3.5-Vision-API:n kutsumiseen [[Klikkaa tästä](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Nividia NIM:n käyttö Phi-3.5-Vision-API:n kutsumiseen [[Klikkaa tästä](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Phi-3/3.5-päätelmät paikallisessa ympäristössä
@@ -187,11 +187,11 @@ Hugging Face Transformers on tehokas kirjasto, joka on suunniteltu luonnollisen 
 
 Tämä on yleisimmin käytetty menetelmä, mutta se vaatii myös GPU-kiihdytyksen. Esimerkiksi Vision- ja MoE-tehtävät vaativat paljon laskentatehoa, mikä on CPU:lla hyvin rajoitettua, ellei malleja kvantisoida.
 
-- Demo: Transformerilla Phi-3.5-Instuctin kutsuminen [Klikkaa tästä](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Transformerilla Phi-3.5-Instuctin kutsuminen [Klikkaa tästä](python/phi35-instruct-demo.ipynb)
 
-- Demo: Transformerilla Phi-3.5-Visionin kutsuminen [Klikkaa tästä](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Transformerilla Phi-3.5-Visionin kutsuminen [Klikkaa tästä](python/phi35-vision-demo.ipynb)
 
-- Demo: Transformerilla Phi-3.5-MoEn kutsuminen [Klikkaa tästä](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Transformerilla Phi-3.5-MoEn kutsuminen [Klikkaa tästä](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) on alusta, joka helpottaa suurten kielimallien (LLM) ajamista paikallisesti omalla koneellasi. Se tukee useita malleja, kuten Llama 3.1, Phi 3, Mistral ja Gemma 2. Alusta yksinkertaistaa prosessia paketoimalla mallipainot, konfiguraation ja datan yhdeksi kokonaisuudeksi, mikä tekee mallien räätälöinnistä ja luomisesta helpompaa käyttäjille. Ollama toimii macOS-, Linux- ja Windows-käyttöjärjestelmissä. Se on erinomainen työkalu, jos haluat kokeilla tai ottaa käyttöön LLM-malleja ilman pilvipalveluihin tukeutumista. Ollama on suorin tapa, sinun tarvitsee vain suorittaa seuraava lauseke.

@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Solusyon
 
-Buksan ang [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) sa GitHub Codespaces at sundin ang mga tagubilin sa Jupyter Notebook.
+Buksan ang [solution notebook](python/aoai-solution.ipynb) sa GitHub Codespaces at sundin ang mga tagubilin sa Jupyter Notebook.
 
 Kapag pinatakbo mo ang notebook, hihilingin kang maglagay ng query. Ganito ang itsura ng input box:
 

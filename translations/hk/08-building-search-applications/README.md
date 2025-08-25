@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## 解決方案
 
-打開 GitHub Codespaces 中的 [解決方案筆記本](../../../08-building-search-applications/python/aoai-solution.ipynb)，並依照 Jupyter Notebook 中的指示操作。
+打開 GitHub Codespaces 中的 [解決方案筆記本](python/aoai-solution.ipynb)，並依照 Jupyter Notebook 中的指示操作。
 
 執行筆記本時，系統會提示你輸入查詢。輸入框如下圖所示：
 

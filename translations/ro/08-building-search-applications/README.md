@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Soluția
 
-Deschide [notebook-ul soluției](../../../08-building-search-applications/python/aoai-solution.ipynb) în GitHub Codespaces și urmează instrucțiunile din Jupyter Notebook.
+Deschide [notebook-ul soluției](python/aoai-solution.ipynb) în GitHub Codespaces și urmează instrucțiunile din Jupyter Notebook.
 
 Când rulezi notebook-ul, ți se va cere să introduci o interogare. Caseta de input va arăta astfel:
 

@@ -69,7 +69,7 @@ Når man bygger en chatapplikation, er et godt første skridt at vurdere, hvad d
 - **Nemmere vedligeholdelse**: Opdateringer og forbedringer er lettere at håndtere, da de fleste API’er og SDK’er blot kræver en opdatering af et bibliotek, når en nyere version frigives.
 - **Adgang til banebrydende teknologi**: Ved at udnytte modeller, der er finjusteret og trænet på omfattende datasæt, får din applikation naturlige sprogfunktioner.
 
-Adgang til funktionalitet i et SDK eller API involverer typisk at få tilladelse til at bruge de leverede tjenester, hvilket ofte sker via en unik nøgle eller autentifikationstoken. Vi vil bruge OpenAI Python Library til at udforske, hvordan det ser ud. Du kan også prøve det selv i følgende [notebook for OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) eller [notebook for Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) til denne lektion.
+Adgang til funktionalitet i et SDK eller API involverer typisk at få tilladelse til at bruge de leverede tjenester, hvilket ofte sker via en unik nøgle eller autentifikationstoken. Vi vil bruge OpenAI Python Library til at udforske, hvordan det ser ud. Du kan også prøve det selv i følgende [notebook for OpenAI](python/oai-assignment.ipynb) eller [notebook for Azure OpenAI Services](python/aoai-assignment.ipynb) til denne lektion.
 
 ```python
 import os

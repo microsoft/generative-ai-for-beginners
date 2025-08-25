@@ -69,7 +69,7 @@ Podczas tworzenia aplikacji czatu dobrym pierwszym krokiem jest ocena dostępnyc
 - **Łatwiejsze utrzymanie**: Aktualizacje i ulepszenia są prostsze do zarządzania, ponieważ większość API i SDK wymaga jedynie aktualizacji biblioteki po wydaniu nowej wersji.
 - **Dostęp do najnowszych technologii**: Wykorzystanie modeli, które zostały dostrojone i wytrenowane na rozległych zbiorach danych, zapewnia aplikacji zaawansowane możliwości przetwarzania języka naturalnego.
 
-Dostęp do funkcji SDK lub API zwykle wymaga uzyskania uprawnień do korzystania z usług, często poprzez unikalny klucz lub token uwierzytelniający. Użyjemy biblioteki OpenAI dla Pythona, aby zobaczyć, jak to wygląda w praktyce. Możesz też samodzielnie wypróbować to w następujących [notatnikach dla OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) lub [notatnikach dla Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) dla tej lekcji.
+Dostęp do funkcji SDK lub API zwykle wymaga uzyskania uprawnień do korzystania z usług, często poprzez unikalny klucz lub token uwierzytelniający. Użyjemy biblioteki OpenAI dla Pythona, aby zobaczyć, jak to wygląda w praktyce. Możesz też samodzielnie wypróbować to w następujących [notatnikach dla OpenAI](python/oai-assignment.ipynb) lub [notatnikach dla Azure OpenAI Services](python/aoai-assignment.ipynb) dla tej lekcji.
 
 ```python
 import os

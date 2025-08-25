@@ -54,7 +54,7 @@ Kuitisha Function ni kipengele cha Azure OpenAI Service kinachoshinda vikwazo vi
 
 ## Kuelezea tatizo kupitia hali ya mfano
 
-> Tunapendekeza utumie [daftari lililojumuishwa](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) ikiwa unataka kuendesha hali ifuatayo. Unaweza pia kusoma tu tunapojaribu kuonyesha tatizo ambapo functions zinaweza kusaidia kulitatua.
+> Tunapendekeza utumie [daftari lililojumuishwa](python/aoai-assignment.ipynb) ikiwa unataka kuendesha hali ifuatayo. Unaweza pia kusoma tu tunapojaribu kuonyesha tatizo ambapo functions zinaweza kusaidia kulitatua.
 
 Tuchunguze mfano unaoonyesha tatizo la muundo wa jibu:
 

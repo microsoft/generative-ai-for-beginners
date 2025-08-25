@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Suluhisho
 
-Fungua [daftari la suluhisho](../../../08-building-search-applications/python/aoai-solution.ipynb) katika GitHub Codespaces na fuata maelekezo katika Jupyter Notebook.
+Fungua [daftari la suluhisho](python/aoai-solution.ipynb) katika GitHub Codespaces na fuata maelekezo katika Jupyter Notebook.
 
 Unapoendesha daftari, utaombwa kuingiza swali. Kisanduku cha kuingiza kitaonekana kama hiki:
 

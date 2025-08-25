@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **維護更簡單**：大多數 API 和 SDK 只需更新函式庫版本即可輕鬆管理更新與改進。
 - **接觸尖端技術**：利用經過微調並訓練於大量資料集的模型，賦予應用程式自然語言處理能力。
 
-使用 SDK 或 API 功能通常需要取得使用權限，通常透過唯一金鑰或認證令牌。我們將使用 OpenAI Python Library 來示範。你也可以在本課程的[OpenAI 筆記本](../../../07-building-chat-applications/python/oai-assignment.ipynb)或[Azure OpenAI 服務筆記本](../../../07-building-chat-applications/python/aoai-assignment.ipynb)中自行嘗試。
+使用 SDK 或 API 功能通常需要取得使用權限，通常透過唯一金鑰或認證令牌。我們將使用 OpenAI Python Library 來示範。你也可以在本課程的[OpenAI 筆記本](python/oai-assignment.ipynb)或[Azure OpenAI 服務筆記本](python/aoai-assignment.ipynb)中自行嘗試。
 
 ```python
 import os

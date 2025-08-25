@@ -69,7 +69,7 @@ Când construiești o aplicație de chat, un prim pas excelent este să evaluezi
 - **Mentenanță mai ușoară**: Actualizările și îmbunătățirile sunt mai ușor de gestionat, deoarece majoritatea API-urilor și SDK-urilor necesită doar actualizarea unei biblioteci când apare o versiune nouă.
 - **Acces la tehnologie de ultimă oră**: Folosirea modelelor care au fost ajustate fin și antrenate pe seturi extinse de date oferă aplicației tale capabilități avansate de procesare a limbajului natural.
 
-Accesarea funcționalității unui SDK sau API implică de obicei obținerea permisiunii de a folosi serviciile oferite, adesea prin utilizarea unei chei unice sau a unui token de autentificare. Vom folosi OpenAI Python Library pentru a explora cum arată acest proces. Poți încerca și tu în [notebook-ul pentru OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) sau în [notebook-ul pentru Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) pentru această lecție.
+Accesarea funcționalității unui SDK sau API implică de obicei obținerea permisiunii de a folosi serviciile oferite, adesea prin utilizarea unei chei unice sau a unui token de autentificare. Vom folosi OpenAI Python Library pentru a explora cum arată acest proces. Poți încerca și tu în [notebook-ul pentru OpenAI](python/oai-assignment.ipynb) sau în [notebook-ul pentru Azure OpenAI Services](python/aoai-assignment.ipynb) pentru această lecție.
 
 ```python
 import os

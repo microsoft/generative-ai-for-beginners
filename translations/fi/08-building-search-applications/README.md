@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Ratkaisu
 
-Avaa [ratkaisun Jupyter Notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) GitHub Codespacesissa ja seuraa ohjeita.
+Avaa [ratkaisun Jupyter Notebook](python/aoai-solution.ipynb) GitHub Codespacesissa ja seuraa ohjeita.
 
 Kun ajat notebookin, sinulta kysytään hakukyselyä. Syöttökenttä näyttää tältä:
 

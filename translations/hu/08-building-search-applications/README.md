@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Megoldás
 
-Nyisd meg a [megoldás jegyzetfüzetet](../../../08-building-search-applications/python/aoai-solution.ipynb) a GitHub Codespaces-ben, és kövesd a Jupyter Notebook utasításait.
+Nyisd meg a [megoldás jegyzetfüzetet](python/aoai-solution.ipynb) a GitHub Codespaces-ben, és kövesd a Jupyter Notebook utasításait.
 
 A jegyzetfüzet futtatásakor megkérdezi a lekérdezést. A beviteli mező így fog kinézni:
 

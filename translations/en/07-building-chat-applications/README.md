@@ -69,7 +69,7 @@ When building a chat application, a smart first step is to evaluate what’s alr
 - **Easier maintenance**: Updates and improvements are simpler to manage since most APIs and SDKs only require updating a library when a new version is released.
 - **Access to cutting-edge technology**: Using models that have been fine-tuned and trained on large datasets gives your app advanced natural language capabilities.
 
-Accessing SDK or API functionality usually requires permission to use the services, often through a unique key or authentication token. We’ll use the OpenAI Python Library to demonstrate this. You can also try it yourself in the following [OpenAI notebook](../../../07-building-chat-applications/python/oai-assignment.ipynb) or [Azure OpenAI Services notebook](../../../07-building-chat-applications/python/aoai-assignment.ipynb) for this lesson.
+Accessing SDK or API functionality usually requires permission to use the services, often through a unique key or authentication token. We’ll use the OpenAI Python Library to demonstrate this. You can also try it yourself in the following [OpenAI notebook](python/oai-assignment.ipynb) or [Azure OpenAI Services notebook](python/aoai-assignment.ipynb) for this lesson.
 
 ```python
 import os

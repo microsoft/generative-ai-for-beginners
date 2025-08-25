@@ -167,7 +167,7 @@ Nekatere ključne lastnosti NVIDIA NIM:
 
 NIM je del NVIDIA AI Enterprise, katerega cilj je poenostaviti uvajanje in operativno uporabo AI modelov ter zagotoviti njihovo učinkovito delovanje na NVIDIA GPU-jih.
 
-- Demo: Uporaba Nividia NIM za klic Phi-3.5-Vision-API  [[Kliknite na ta povezavo](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Uporaba Nividia NIM za klic Phi-3.5-Vision-API  [[Kliknite na ta povezavo](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferenca Phi-3/3.5 v lokalnem okolju
@@ -189,11 +189,11 @@ Hugging Face Transformers je zmogljiva knjižnica, namenjena obdelavi naravnega 
 
 To je najpogosteje uporabljena metoda, vendar zahteva tudi pospeševanje z GPU. Scenariji, kot so Vision in MoE, namreč zahtevajo veliko izračunov, ki so na CPU-ju brez kvantizacije zelo omejeni.
 
-- Demo: Uporaba Transformerja za klic Phi-3.5-Instuct [Kliknite na ta povezavo](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Uporaba Transformerja za klic Phi-3.5-Instuct [Kliknite na ta povezavo](python/phi35-instruct-demo.ipynb)
 
-- Demo: Uporaba Transformerja za klic Phi-3.5-Vision [Kliknite na ta povezavo](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Uporaba Transformerja za klic Phi-3.5-Vision [Kliknite na ta povezavo](python/phi35-vision-demo.ipynb)
 
-- Demo: Uporaba Transformerja za klic Phi-3.5-MoE [Kliknite na ta povezavo](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Uporaba Transformerja za klic Phi-3.5-MoE [Kliknite na ta povezavo](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma, zasnovana za lažje lokalno izvajanje velikih jezikovnih modelov (LLM) na vašem računalniku. Podpira različne modele, kot so Llama 3.1, Phi 3, Mistral in Gemma 2, med drugim. Platforma poenostavi postopek z združevanjem uteži modela, konfiguracije in podatkov v en paket, kar uporabnikom omogoča lažje prilagajanje in ustvarjanje lastnih modelov. Ollama je na voljo za macOS, Linux in Windows. Odlična je, če želite eksperimentirati z LLM-ji ali jih uvajati brez odvisnosti od oblačnih storitev. Ollama je najhitrejša pot, potrebujete le, da izvedete naslednji ukaz.

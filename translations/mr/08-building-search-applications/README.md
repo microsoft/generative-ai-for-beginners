@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## समाधान
 
-GitHub Codespaces मध्ये [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) उघडा आणि Jupyter Notebook मधील सूचनांचे पालन करा.
+GitHub Codespaces मध्ये [solution notebook](python/aoai-solution.ipynb) उघडा आणि Jupyter Notebook मधील सूचनांचे पालन करा.
 
 जेव्हा तुम्ही नोटबुक चालवाल, तेव्हा तुम्हाला क्वेरी टाकण्यास सांगितले जाईल. इनपुट बॉक्स असे दिसेल:
 

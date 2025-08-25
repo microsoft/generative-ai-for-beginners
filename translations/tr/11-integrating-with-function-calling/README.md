@@ -54,7 +54,7 @@ Fonksiyon Çağrısı, Azure OpenAI Servisi’nin aşağıdaki sınırlamaları 
 
 ## Sorunu bir senaryo ile açıklamak
 
-> Aşağıdaki senaryoyu çalıştırmak isterseniz, [ekli not defterini](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) kullanmanızı öneririz. Ayrıca, fonksiyonların sorunu nasıl çözebileceğini göstermek için sadece okuyabilirsiniz.
+> Aşağıdaki senaryoyu çalıştırmak isterseniz, [ekli not defterini](python/aoai-assignment.ipynb) kullanmanızı öneririz. Ayrıca, fonksiyonların sorunu nasıl çözebileceğini göstermek için sadece okuyabilirsiniz.
 
 Yanıt formatı sorununu gösteren örneğe bakalım:
 

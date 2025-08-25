@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Çözüm
 
-GitHub Codespaces’teki [çözüm not defterini](../../../08-building-search-applications/python/aoai-solution.ipynb) açın ve Jupyter Notebook’taki talimatları izleyin.
+GitHub Codespaces’teki [çözüm not defterini](python/aoai-solution.ipynb) açın ve Jupyter Notebook’taki talimatları izleyin.
 
 Not defterini çalıştırdığınızda, bir sorgu girmeniz istenecek. Girdi kutusu şöyle görünecek:
 
