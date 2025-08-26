@@ -44,3 +44,4 @@ That’s it—our code will pick it up automatically.
 cp .env.copy .env
 code .env         # fill in OPENAI_API_KEY=your_key_here
 ```
+

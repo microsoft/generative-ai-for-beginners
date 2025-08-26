@@ -225,3 +225,4 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 ## Let's Get Started
 
 Now that you have completed the needed steps to complete this course, let's get started by getting an [introduction to Generative AI and LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+

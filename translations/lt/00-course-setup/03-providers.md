@@ -1,26 +1,26 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "59bbcaf317233609a0c19c31f44aac97",
-  "translation_date": "2025-08-25T12:20:47+00:00",
+  "original_hash": "49ededa179004ea998664c780fbeac39",
+  "translation_date": "2025-08-26T20:14:13+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "lt"
 }
 -->
 # LLM tiekėjo pasirinkimas ir konfigūravimas 🔑
 
-Užduotys **gali** būti sukonfigūruotos veikti su vienu ar keliais dideliaisiais kalbos modeliais (LLM), naudojant palaikomą paslaugų tiekėją, pvz., OpenAI, Azure ar Hugging Face. Šie tiekėjai suteikia _pateiktą galinį tašką_ (API), prie kurio galime prisijungti programiškai, turėdami tinkamus prisijungimo duomenis (API raktą ar žetoną). Šiame kurse aptariame šiuos tiekėjus:
+Užduotys **gali** būti sukonfigūruotos veikti su vienu ar keliais didžiųjų kalbos modelių (LLM) diegimais per palaikomą paslaugų tiekėją, pvz., OpenAI, Azure ar Hugging Face. Šie tiekėjai suteikia _pateiktą galinį tašką_ (API), prie kurio galime prisijungti programiškai, turėdami tinkamus prisijungimo duomenis (API raktą ar žetoną). Šiame kurse aptariame šiuos tiekėjus:
 
  - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) su įvairiais modeliais, įskaitant pagrindinę GPT seriją.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) – OpenAI modeliai, orientuoti į verslo poreikius
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) – atvirojo kodo modeliai ir inferencijos serveris
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) – OpenAI modeliams su verslui pritaikytais sprendimais
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) – atvirojo kodo modeliams ir inferencijos serveriui
 
-**Šioms užduotims reikės naudoti savo paskyras**. Užduotys yra neprivalomos, tad galite pasirinkti, kurį tiekėją norite susikonfigūruoti – vieną, visus arba nė vieno, priklausomai nuo savo poreikių. Keletas patarimų registracijai:
+**Šiems pratimams reikės naudoti savo paskyras**. Užduotys yra neprivalomos, tad galite pasirinkti, kurį tiekėją norite susikonfigūruoti – vieną, visus arba nė vieno, priklausomai nuo savo poreikių. Keletas patarimų registracijai:
 
-| Registracija | Kaina | API raktas | Žaidimų aikštelė | Komentarai |
+| Registracija | Kaina | API raktas | „Playground“ | Komentarai |
 |:---|:---|:---|:---|:---|
 | [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Pagal projektą](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Be kodo, žiniatinklyje](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Galima rinktis iš kelių modelių |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK greitas startas](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio greitas startas](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Reikia iš anksto pateikti paraišką](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK greitoji pradžia](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio greitoji pradžia](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Reikia iš anksto pateikti paraišką dėl prieigos](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
 | [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Kainodara](https://huggingface.co/pricing) | [Prieigos žetonai](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat turi ribotą modelių pasirinkimą](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
@@ -63,23 +63,23 @@ Kitas žingsnis – sukonfigūruoti savo **vietinius aplinkos kintamuosius** tai
 
 3. Užpildykite reikšmes (pakeiskite dešinėje pusėje esančius šablonus) kaip aprašyta kitame skyriuje.
 
-4. (Pasirinktinai) Jei naudojate GitHub Codespaces, galite išsaugoti aplinkos kintamuosius kaip _Codespaces secrets_, susietus su šiuo repozitorijumi. Tokiu atveju vietinio .env failo kurti nereikės. **Tačiau atkreipkite dėmesį, kad ši galimybė veikia tik naudojant GitHub Codespaces.** Jei vietoje to naudojate Docker Desktop, .env failą vis tiek reikės susikurti.
+4. (Pasirinktinai) Jei naudojate GitHub Codespaces, galite išsaugoti aplinkos kintamuosius kaip _Codespaces secrets_, susietus su šiuo repozitoriumi. Tokiu atveju vietinio .env failo kurti nereikės. **Tačiau atkreipkite dėmesį, kad ši galimybė veikia tik naudojant GitHub Codespaces.** Jei vietoje to naudojate Docker Desktop, .env failą vis tiek reikės susikurti.
 
 ## Užpildykite `.env` failą
 
-Trumpai apžvelkime kintamųjų pavadinimus ir jų reikšmes:
+Trumpai apžvelkime kintamųjų pavadinimus, kad suprastume, ką jie reiškia:
 
 | Kintamasis  | Aprašymas  |
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | Tai vartotojo prieigos žetonas, kurį susikūrėte savo profilyje |
 | OPENAI_API_KEY | Tai autorizacijos raktas, skirtas naudoti paslaugą ne Azure OpenAI galiniams taškams |
 | AZURE_OPENAI_API_KEY | Tai autorizacijos raktas, skirtas naudoti šią paslaugą |
-| AZURE_OPENAI_ENDPOINT | Tai Azure OpenAI resurso diegtas galinis taškas |
-| AZURE_OPENAI_DEPLOYMENT | Tai _teksto generavimo_ modelio diegimo pavadinimas |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tai _teksto įterpimų_ modelio diegimo pavadinimas |
+| AZURE_OPENAI_ENDPOINT | Tai diegto Azure OpenAI resurso galinis taškas |
+| AZURE_OPENAI_DEPLOYMENT | Tai _teksto generavimo_ modelio diegimo galinis taškas |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tai _teksto įterpinių_ modelio diegimo galinis taškas |
 | | |
 
-Pastaba: Paskutiniai du Azure OpenAI kintamieji nurodo numatytą modelį pokalbių užbaigimui (teksto generavimui) ir vektorių paieškai (įterpimams). Instrukcijos, kaip juos nustatyti, bus pateiktos atitinkamose užduotyse.
+Pastaba: Paskutiniai du Azure OpenAI kintamieji nurodo numatytąjį modelį pokalbių užbaigimui (teksto generavimui) ir vektorių paieškai (įterpiniams). Instrukcijos, kaip juos nustatyti, bus pateiktos atitinkamose užduotyse.
 
 ## Azure konfigūravimas: per Portalą
 
@@ -93,7 +93,7 @@ Azure OpenAI galinio taško ir rakto reikšmes rasite [Azure portale](https://po
 
 Toliau mums reikės konkrečių diegtų modelių galinių taškų.
 
-1. Kairiajame meniu pasirinkite **Model deployments** prie Azure OpenAI resurso.
+1. Kairiajame meniu pasirinkite **Model deployments** savo Azure OpenAI resurse.
 1. Atsidariusiame puslapyje spauskite **Manage Deployments**
 
 Tai nuves jus į Azure OpenAI Studio svetainę, kur rasite kitus reikalingus duomenis, kaip aprašyta žemiau.
@@ -104,16 +104,16 @@ Tai nuves jus į Azure OpenAI Studio svetainę, kur rasite kitus reikalingus duo
 1. Kairiajame meniu pasirinkite **Deployments** ir matysite šiuo metu diegtus modelius.
 1. Jei norimo modelio nėra, naudokite **Create new deployment** ir įdiekite jį.
 1. Reikės _teksto generavimo_ modelio – rekomenduojame: **gpt-35-turbo**
-1. Reikės _teksto įterpimų_ modelio – rekomenduojame **text-embedding-ada-002**
+1. Reikės _teksto įterpinių_ modelio – rekomenduojame **text-embedding-ada-002**
 
-Dabar atnaujinkite aplinkos kintamuosius, kad jie atitiktų _Deployment name_, kurį naudojote. Dažniausiai jis bus toks pat kaip modelio pavadinimas, nebent jį keitėte. Pavyzdžiui, galite turėti:
+Dabar atnaujinkite aplinkos kintamuosius pagal _Deployment name_, kurį naudojote. Dažniausiai jis bus toks pat kaip modelio pavadinimas, nebent jį keitėte. Pavyzdžiui, galite turėti:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Nepamirškite išsaugoti .env failo, kai baigsite**. Dabar galite užverti failą ir grįžti prie užrašų knygelės paleidimo instrukcijų.
+**Nepamirškite išsaugoti .env failo, kai baigsite**. Dabar galite uždaryti failą ir grįžti prie užrašų knygelės paleidimo instrukcijų.
 
 ## OpenAI konfigūravimas: per profilį
 
@@ -121,7 +121,7 @@ Savo OpenAI API raktą rasite savo [OpenAI paskyroje](https://platform.openai.co
 
 ## Hugging Face konfigūravimas: per profilį
 
-Savo Hugging Face žetoną rasite savo profilyje, skiltyje [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Niekada neskelbkite ir nesidalinkite šiais duomenimis viešai. Sukurkite naują žetoną šiam projektui ir nukopijuokite jį į `.env` failą, į `HUGGING_FACE_API_KEY` kintamąjį. _Pastaba:_ Technologiškai tai nėra API raktas, bet naudojamas autentifikacijai, todėl pavadinimas paliekamas dėl nuoseklumo.
+Savo Hugging Face žetoną rasite savo profilyje, skiltyje [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Niekada neskelbkite ir nesidalinkite šiais duomenimis viešai. Sukurkite naują žetoną šiam projektui ir nukopijuokite jį į `.env` failą po `HUGGING_FACE_API_KEY` kintamuoju. _Pastaba:_ Technologiškai tai nėra API raktas, tačiau naudojamas autentifikacijai, todėl pavadinimas paliekamas dėl nuoseklumo.
 
 ---
 

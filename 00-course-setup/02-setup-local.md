@@ -214,3 +214,4 @@ Full provider instructions live in [`providers.md`](03-providers.md).
 | VS Code keeps prompting to reopen         | You may have both Options active; choose one (venv **or** container)|
 | OpenAI 401 / 429 errors                   | Check `OPENAI_API_KEY` value / request rate limits.             |
 | Errors using Conda                        | Install Microsft AI libraries using `conda install -c microsoft azure-ai-ml`|
+
