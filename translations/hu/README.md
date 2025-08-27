@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3371380dfb4e3ac288036c36fff84eeb",
-  "translation_date": "2025-08-25T12:01:48+00:00",
+  "original_hash": "ca2afa136ed9aca0634f39f51239746e",
+  "translation_date": "2025-08-27T08:51:01+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
 -->
-![Generatív MI kezdőknek](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.hu.png)
+![Generatív AI kezdőknek](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.hu.png)
 
-### 21 lecke, amelyek megtanítanak mindenre, amire szükséged van, hogy elkezdj generatív MI alkalmazásokat fejleszteni
+### 21 lecke, amely megtanít mindent, amit tudnod kell a Generatív AI alkalmazások fejlesztésének elkezdéséhez
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -25,116 +25,116 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Többnyelvű támogatás
 
-#### GitHub Action segítségével támogatott (Automatikus & Mindig naprakész)
+#### GitHub Action által támogatott (Automatikus és mindig naprakész)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Lithuanian](../lt/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](../ms/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](./README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Francia](../fr/README.md) | [Spanyol](../es/README.md) | [Német](../de/README.md) | [Orosz](../ru/README.md) | [Arab](../ar/README.md) | [Perzsa (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Kínai (Egyszerűsített)](../zh/README.md) | [Kínai (Hagyományos, Makaó)](../mo/README.md) | [Kínai (Hagyományos, Hongkong)](../hk/README.md) | [Kínai (Hagyományos, Tajvan)](../tw/README.md) | [Japán](../ja/README.md) | [Koreai](../ko/README.md) | [Hindi](../hi/README.md) | [Bengáli](../bn/README.md) | [Maráthi](../mr/README.md) | [Nepáli](../ne/README.md) | [Pandzsábi (Gurmukhi)](../pa/README.md) | [Portugál (Portugália)](../pt/README.md) | [Portugál (Brazília)](../br/README.md) | [Olasz](../it/README.md) | [Litván](../lt/README.md) | [Lengyel](../pl/README.md) | [Török](../tr/README.md) | [Görög](../el/README.md) | [Thai](../th/README.md) | [Svéd](../sv/README.md) | [Dán](../da/README.md) | [Norvég](../no/README.md) | [Finn](../fi/README.md) | [Holland](../nl/README.md) | [Héber](../he/README.md) | [Vietnámi](../vi/README.md) | [Indonéz](../id/README.md) | [Maláj](../ms/README.md) | [Tagalog (Filippínó)](../tl/README.md) | [Szuahéli](../sw/README.md) | [Magyar](./README.md) | [Cseh](../cs/README.md) | [Szlovák](../sk/README.md) | [Román](../ro/README.md) | [Bolgár](../bg/README.md) | [Szerb (Cirill)](../sr/README.md) | [Horvát](../hr/README.md) | [Szlovén](../sl/README.md) | [Ukrán](../uk/README.md) | [Burmai (Mianmar)](../my/README.md)
 
-# Generatív MI kezdőknek (3. verzió) – Tanfolyam
+# Generatív AI kezdőknek (3. verzió) - Egy kurzus
 
-Ismerd meg a generatív MI alkalmazások fejlesztésének alapjait a Microsoft Cloud Advocates 21 leckés, átfogó tanfolyamán.
+Tanuld meg a Generatív AI alkalmazások fejlesztésének alapjait a Microsoft Cloud Advocates 21 leckéből álló átfogó kurzusával.
 
 ## 🌱 Első lépések
 
-Ez a tanfolyam 21 leckéből áll. Minden lecke egy-egy témát dolgoz fel, így ott kezded, ahol szeretnéd!
+Ez a kurzus 21 leckéből áll. Minden lecke egy-egy témát fed le, így kezdhetsz bárhol, ahol szeretnél!
 
-A leckék vagy "Learn" (tanulj) típusúak, amelyek egy generatív MI fogalmat magyaráznak el, vagy "Build" (építs) típusúak, amelyek egy fogalmat és kódpéldákat mutatnak be **Python** és **TypeScript** nyelven, amikor lehetséges.
+A leckék "Tanulj" típusúak, amelyek egy Generatív AI koncepciót magyaráznak, vagy "Építs" típusúak, amelyek egy koncepciót és kódpéldákat magyaráznak **Python** és **TypeScript** nyelven, amikor lehetséges.
 
-.NET fejlesztőknek ajánljuk a [Generatív MI kezdőknek (.NET kiadás)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst) tanfolyamot!
+.NET fejlesztőknek ajánljuk a [Generatív AI kezdőknek (.NET kiadás)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst) kurzust!
 
-Minden lecke tartalmaz egy "Keep Learning" (Tanulj tovább) részt is, ahol további tanulási lehetőségeket találsz.
+Minden lecke tartalmaz egy "Továbbtanulás" szekciót további tanulási eszközökkel.
 
-## Mire van szükséged
-### A tanfolyam kódjának futtatásához használhatod:
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) – **Leckék:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) – **Leckék:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) – **Leckék:** "oai-assignment" 
+## Amire szükséged lesz
+### A kurzus kódjának futtatásához használhatod:
+ - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Leckék:** "aoai-assignment"
+ - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Leckék:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Leckék:** "oai-assignment" 
    
-- Alapvető Python vagy TypeScript ismeret előny – \*Ha teljesen kezdő vagy, nézd meg ezeket a [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) és [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) tanfolyamokat
-- GitHub fiók, hogy [leforkold ezt a teljes repót](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) a saját GitHub fiókodba
+- Alapvető Python vagy TypeScript ismeretek hasznosak lehetnek - \*Teljesen kezdőknek ajánljuk ezeket a [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) és [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) kurzusokat
+- Egy GitHub fiók, hogy [forkold az egész repót](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) a saját GitHub fiókodba
 
-Készítettünk egy **[Tanfolyam beállítása](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** leckét, amely segít a fejlesztői környezeted beállításában.
+Készítettünk egy **[Kurzus beállítása](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** leckét, hogy segítsünk a fejlesztési környezet beállításában.
 
-Ne felejtsd el [csillagozni (🌟) ezt a repót](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), hogy később könnyen megtaláld!
+Ne felejtsd el [csillagozni (🌟) ezt a repót](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), hogy később könnyebben megtaláld.
 
 ## 🧠 Készen állsz a telepítésre?
 
-Ha fejlettebb kódpéldákat keresel, nézd meg a [Generatív MI kódminták gyűjteményét](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) **Python** és **TypeScript** nyelven.
+Ha fejlettebb kódmintákat keresel, nézd meg a [Generatív AI kódminták gyűjteményét](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) **Python** és **TypeScript** nyelven.
 
 ## 🗣️ Találkozz más tanulókkal, kérj segítséget
 
-Csatlakozz az [Azure AI Foundry hivatalos Discord szerveréhez](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), hogy találkozz és kapcsolatot építs más tanulókkal, akik ezt a tanfolyamot végzik, és segítséget kapj.
+Csatlakozz az [Azure AI Foundry hivatalos Discord szerveréhez](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), hogy találkozz és kapcsolatba lépj más tanulókkal, akik ezt a kurzust végzik, és kérj segítséget.
 
-Tedd fel kérdéseidet vagy oszd meg a termékkel kapcsolatos visszajelzésedet az [Azure AI Foundry fejlesztői fórumon](https://aka.ms/azureaifoundry/forum) a Githubon.
+Tegyél fel kérdéseket vagy ossz meg termék visszajelzéseket az [Azure AI Foundry fejlesztői fórumon](https://aka.ms/azureaifoundry/forum) a Githubon.
 
 ## 🚀 Startupot építesz?
 
-Látogass el a [Microsoft for Startups](https://www.microsoft.com/startups) oldalra, hogy megtudd, hogyan kezdhetsz el fejleszteni Azure kreditekkel már ma.
+Látogass el a [Microsoft for Startups](https://www.microsoft.com/startups) oldalra, hogy megtudd, hogyan kezdhetsz el építkezni Azure kreditekkel.
 
-## 🙏 Segítenél?
+## 🙏 Szeretnél segíteni?
 
-Van ötleted, vagy találtál helyesírási vagy kódhibát? [Jelentsd az issue-k között](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) vagy [készíts pull requestet](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Van javaslatod vagy találtál helyesírási vagy kódhibát? [Nyiss egy hibajegyet](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) vagy [Hozz létre egy pull requestet](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 Minden lecke tartalmaz:
 
 - Egy rövid videós bevezetőt a témához
-- Egy írásos leckét a README-ben
-- Python és TypeScript kódmintákat Azure OpenAI és OpenAI API támogatással
-- Linkeket további forrásokhoz, hogy folytathasd a tanulást
+- Egy írott leckét a README-ben
+- Python és TypeScript kódmintákat, amelyek támogatják az Azure OpenAI-t és az OpenAI API-t
+- Linkeket további tanulási forrásokhoz
 
 ## 🗃️ Leckék
 
 | #   | **Lecke linkje**                                                                                                                              | **Leírás**                                                                                 | **Videó**                                                                   | **További tanulás**                                                             |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Tanfolyam beállítása](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                         | **Tanuld meg:** Hogyan állítsd be a fejlesztői környezeted                                 | Videó hamarosan                                                                 | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Bevezetés a generatív MI-be és LLM-ekbe](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                             | **Tanuld meg:** Mi az a generatív MI, és hogyan működnek a nagy nyelvi modellek (LLM-ek).  | [Videó](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Különböző LLM-ek felfedezése és összehasonlítása](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)   | **Tanuld meg:** Hogyan válaszd ki a megfelelő modellt a saját felhasználási esetedhez       | [Videó](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Generatív MI felelős használata](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Tanuld meg:** Hogyan építs felelősen generatív MI alkalmazásokat                          | [Videó](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Prompt engineering alapjai](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                                | **Tanuld meg:** Prompt engineering legjobb gyakorlatok a gyakorlatban                      | [Videó](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Haladó promptok készítése](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Tanuld meg:** Hogyan alkalmazz prompt engineering technikákat, hogy jobb eredményeket érj el | [Videó](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Szöveggeneráló alkalmazások készítése](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Készítsd el:** Egy szöveggeneráló alkalmazás Azure OpenAI / OpenAI API-val                                | [Videó](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Chat alkalmazások készítése](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Készítsd el:** Hatékony technikák chat alkalmazások fejlesztéséhez és integrálásához.               | [Videó](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Keresőalkalmazások készítése vektor-adatbázisokkal](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Készítsd el:** Egy keresőalkalmazás, amely Embeddingeket használ az adatok kereséséhez.                        | [Videó](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Képgeneráló alkalmazások készítése](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Készítsd el:** Egy képgeneráló alkalmazás                                                       | [Videó](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Low Code AI alkalmazások készítése](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Készítsd el:** Generatív AI alkalmazás Low Code eszközökkel                                     | [Videó](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Külső alkalmazások integrálása Function Callinggal](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Készítsd el:** Mi az a function calling és hogyan használható alkalmazásokban                          | [Videó](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [UX tervezése AI alkalmazásokhoz](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Tanuld meg:** Hogyan alkalmazd a UX tervezési alapelveket generatív AI alkalmazások fejlesztésekor         | [Videó](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Generatív AI alkalmazások védelme](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Tanuld meg:** Milyen fenyegetések és kockázatok érhetik az AI rendszereket, és hogyan védheted meg őket.             | [Videó](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [A generatív AI alkalmazások életciklusa](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Tanuld meg:** Az LLM életciklus és LLMOps kezeléséhez szükséges eszközök és mérőszámok                         | [Videó](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) és vektor-adatbázisok](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Készítsd el:** Egy alkalmazás, amely RAG keretrendszert használ embeddingek lekérdezésére vektor-adatbázisból  | [Videó](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Nyílt forráskódú modellek és Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Készítsd el:** Egy alkalmazás, amely a Hugging Face-en elérhető nyílt forráskódú modelleket használja                    | [Videó](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI ügynökök](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Készítsd el:** Egy alkalmazás AI Agent keretrendszerrel                                           | [Videó](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLM-ek finomhangolása](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Tanuld meg:** Mit, miért és hogyan érdemes finomhangolni LLM-eket                                            | [Videó](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Fejlesztés SLM-ekkel](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Tanuld meg:** Milyen előnyei vannak a Small Language Modellek használatának                                            | Videó hamarosan | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Fejlesztés Mistral modellekkel](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Tanuld meg:** A Mistral család modelleinek jellemzőit és különbségeit                                           | Videó hamarosan | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Fejlesztés Meta modellekkel](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Tanuld meg:** A Meta család modelleinek jellemzőit és különbségeit                                           | Videó hamarosan | [Tudj meg többet](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 00  | [Kurzus beállítása](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Tanulj:** Hogyan állítsd be a fejlesztési környezeted                                            | Videó hamarosan                                                                 | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Bevezetés a Generatív AI-ba és LLM-ekbe](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Tanulj:** Megérteni, mi az a Generatív AI és hogyan működnek a Nagy Nyelvi Modellek (LLM-ek).       | [Videó](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Különböző LLM-ek felfedezése és összehasonlítása](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Tanulj:** Hogyan válaszd ki a megfelelő modellt az esetedhez                                      | [Videó](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Generatív AI felelősségteljes használata](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Tanulj:** Hogyan építs felelősségteljes Generatív AI alkalmazásokat                                  | [Videó](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Prompt Engineering alapjainak megértése](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Tanulj:** Gyakorlati Prompt Engineering legjobb gyakorlatok                                           | [Videó](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Haladó promptok létrehozása](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Tanulj:** Hogyan alkalmazz prompt engineering technikákat, amelyek javítják a promptok eredményét. | [Videó](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [További tanulás](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Szöveggeneráló alkalmazások építése](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Építés:** Szöveggeneráló alkalmazás Azure OpenAI / OpenAI API használatával                   | [Videó](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Csevegőalkalmazások építése](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Építés:** Hatékony csevegőalkalmazások fejlesztésének és integrálásának technikái             | [Videó](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Keresőalkalmazások építése vektoralapú adatbázisokkal](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)        | **Építés:** Keresőalkalmazás, amely beágyazásokat használ az adatok kereséséhez                 | [Videó](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Képgeneráló alkalmazások építése](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                              | **Építés:** Képgeneráló alkalmazás                                                              | [Videó](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Low Code AI alkalmazások építése](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Építés:** Generatív AI alkalmazás Low Code eszközök használatával                             | [Videó](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Külső alkalmazások integrálása funkcióhívással](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)         | **Építés:** Mi az a funkcióhívás, és hogyan használható alkalmazásokban                         | [Videó](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [UX tervezése AI alkalmazásokhoz](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Tanulás:** Hogyan alkalmazzuk az UX tervezési elveket generatív AI alkalmazások fejlesztésekor | [Videó](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Generatív AI alkalmazások biztonságossá tétele](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                  | **Tanulás:** Az AI rendszereket fenyegető kockázatok és ezek biztonságossá tételének módszerei  | [Videó](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [A generatív AI alkalmazások életciklusa](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)          | **Tanulás:** Az LLM életciklusának és LLMOps kezeléséhez szükséges eszközök és metrikák         | [Videó](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) és vektoralapú adatbázisok](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) | **Építés:** Alkalmazás RAG keretrendszer használatával, amely beágyazásokat nyer ki vektoralapú adatbázisokból | [Videó](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Nyílt forráskódú modellek és Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                             | **Építés:** Alkalmazás nyílt forráskódú modellek használatával, amelyek elérhetők a Hugging Face-en | [Videó](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI ügynökök](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                    | **Építés:** Alkalmazás AI ügynök keretrendszer használatával                                    | [Videó](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [LLM-ek finomhangolása](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Tanulás:** Miért, hogyan és mikor érdemes finomhangolni az LLM-eket                           | [Videó](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [SLM-ekkel való építés](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **Tanulás:** Az SLM-ekkel való építés előnyei                                                   | Videó hamarosan | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Mistral modellekkel való építés](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                  | **Tanulás:** A Mistral modellcsalád jellemzői és különbségei                                    | Videó hamarosan | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Meta modellekkel való építés](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Tanulás:** A Meta modellcsalád jellemzői és különbségei                                       | Videó hamarosan | [További információ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Külön köszönet
 
-Külön köszönet [**John Aziz**](https://www.linkedin.com/in/john0isaac/) számára, aki elkészítette az összes GitHub Actionst és workflow-t
+Külön köszönet [**John Aziz**](https://www.linkedin.com/in/john0isaac/) számára, aki elkészítette az összes GitHub Actiont és munkafolyamatot.
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) minden leckéhez hozzájárult, hogy javítsa a tanulási és kódolási élményt. 
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) számára, aki minden leckéhez kulcsfontosságú hozzájárulásokat tett, hogy javítsa a tanulási és kódolási élményt.
 
-## 🎒 További tanfolyamaink
+## 🎒 Egyéb kurzusok
 
-Csapatunk további tanfolyamokat is készít! Nézd meg ezeket is:
+Csapatunk más kurzusokat is készít! Nézd meg:
 
-- [**ÚJ** Model Context Protocol kezdőknek](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI ügynökök kezdőknek](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [Generatív AI kezdőknek .NET-tel](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-- [Generatív AI kezdőknek JavaScript-tel](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
-- [Generatív AI kezdőknek Java-val](https://aka.ms/genaijava?WT.mc_id=academic-105485-koreyst)
-- [ML kezdőknek](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-- [Adattudomány kezdőknek](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-- [AI kezdőknek](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-- [Kiberbiztonság kezdőknek](https://github.com/microsoft/Security-101??WT.mc_id=academic-96948-sayoung)
-- [Webfejlesztés kezdőknek](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-- [IoT kezdőknek](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-- [XR fejlesztés kezdőknek](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
-- [GitHub Copilot mesterfokon AI páros programozáshoz](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-- [GitHub Copilot mesterfokon C#/.NET fejlesztőknek](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-- [Válaszd ki a saját Copilot kalandod](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+- [**ÚJ** Model Context Protocol kezdőknek](https://github.com/microsoft/mcp-for-beginners)
+- [AI ügynökök kezdőknek](https://github.com/microsoft/ai-agents-for-beginners)
+- [Generatív AI kezdőknek .NET használatával](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
+- [Generatív AI kezdőknek JavaScript használatával](https://aka.ms/genai-js-course)
+- [Generatív AI kezdőknek Java használatával](https://aka.ms/genaijava)
+- [ML kezdőknek](https://aka.ms/ml-beginners)
+- [Adattudomány kezdőknek](https://aka.ms/datascience-beginners)
+- [AI kezdőknek](https://aka.ms/ai-beginners)
+- [Kiberbiztonság kezdőknek](https://github.com/microsoft/Security-101)
+- [Webfejlesztés kezdőknek](https://aka.ms/webdev-beginners)
+- [IoT kezdőknek](https://aka.ms/iot-beginners)
+- [XR fejlesztés kezdőknek](https://github.com/microsoft/xr-development-for-beginners)
+- [GitHub Copilot mesterfokon AI páros programozáshoz](https://aka.ms/GitHubCopilotAI)
+- [GitHub Copilot mesterfokon C#/.NET fejlesztőknek](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Válaszd ki a saját Copilot kalandodat](https://github.com/microsoft/CopilotAdventures)
 
 ---
 
-**Jogi nyilatkozat**:
-Ez a dokumentum AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasoljuk a professzionális, emberi fordítást. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+**Felelősségkizárás**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
