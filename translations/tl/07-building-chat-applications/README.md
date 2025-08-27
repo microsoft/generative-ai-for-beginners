@@ -69,7 +69,7 @@ Kapag gumagawa ng chat application, magandang simula ang pag-assess kung ano na 
 - **Mas madaling maintenance**: Mas madali ang pag-update at pagpapabuti dahil kadalasan ay kailangan lang i-update ang library kapag may bagong bersyon.
 - **Access sa pinakabagong teknolohiya**: Ang paggamit ng mga modelong na-fine tune at na-train sa malalawak na dataset ay nagbibigay sa iyong app ng natural language capabilities.
 
-Ang pag-access sa functionality ng SDK o API ay karaniwang nangangailangan ng permiso sa paggamit ng mga serbisyong ibinibigay, madalas sa pamamagitan ng isang unique key o authentication token. Gagamitin natin ang OpenAI Python Library para ipakita kung paano ito ginagawa. Maaari mo rin itong subukan sa sarili mo gamit ang [notebook para sa OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) o [notebook para sa Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) para sa araling ito.
+Ang pag-access sa functionality ng SDK o API ay karaniwang nangangailangan ng permiso sa paggamit ng mga serbisyong ibinibigay, madalas sa pamamagitan ng isang unique key o authentication token. Gagamitin natin ang OpenAI Python Library para ipakita kung paano ito ginagawa. Maaari mo rin itong subukan sa sarili mo gamit ang [notebook para sa OpenAI](python/oai-assignment.ipynb) o [notebook para sa Azure OpenAI Services](python/aoai-assignment.ipynb) para sa araling ito.
 
 ```python
 import os

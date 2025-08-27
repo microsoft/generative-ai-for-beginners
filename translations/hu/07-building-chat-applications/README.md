@@ -69,7 +69,7 @@ Csevegőalkalmazás fejlesztésekor jó kiindulópont felmérni, mi áll már re
 - **Könnyebb karbantartás**: A frissítések és fejlesztések egyszerűbbek, mivel a legtöbb API és SDK csak egy könyvtár frissítését igényli az új verzió megjelenésekor.
 - **Hozzáférés a legmodernebb technológiához**: Az olyan modellek használata, amelyeket finomhangoltak és kiterjedt adathalmazokon képeztek, természetes nyelvi képességekkel ruházza fel az alkalmazást.
 
-Az SDK vagy API funkcióinak eléréséhez általában engedélyt kell szerezni a szolgáltatások használatára, ami gyakran egy egyedi kulcs vagy hitelesítő token használatával történik. Az OpenAI Python könyvtár segítségével megvizsgáljuk, hogyan néz ez ki a gyakorlatban. Ezt ki is próbálhatod a következő [OpenAI jegyzetfüzetben](../../../07-building-chat-applications/python/oai-assignment.ipynb) vagy az [Azure OpenAI Services jegyzetfüzetben](../../../07-building-chat-applications/python/aoai-assignment.ipynb) ehhez a leckéhez.
+Az SDK vagy API funkcióinak eléréséhez általában engedélyt kell szerezni a szolgáltatások használatára, ami gyakran egy egyedi kulcs vagy hitelesítő token használatával történik. Az OpenAI Python könyvtár segítségével megvizsgáljuk, hogyan néz ez ki a gyakorlatban. Ezt ki is próbálhatod a következő [OpenAI jegyzetfüzetben](python/oai-assignment.ipynb) vagy az [Azure OpenAI Services jegyzetfüzetben](python/aoai-assignment.ipynb) ehhez a leckéhez.
 
 ```python
 import os

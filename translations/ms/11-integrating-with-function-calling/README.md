@@ -54,7 +54,7 @@ Pemanggilan Fungsi adalah ciri Perkhidmatan Azure OpenAI untuk mengatasi had ber
 
 ## Mengilustrasikan masalah melalui senario
 
-> Kami mengesyorkan anda menggunakan [notebook yang disertakan](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) jika anda ingin menjalankan senario di bawah. Anda juga boleh hanya membaca kerana kami cuba menggambarkan masalah di mana fungsi boleh membantu menyelesaikan masalah tersebut.
+> Kami mengesyorkan anda menggunakan [notebook yang disertakan](python/aoai-assignment.ipynb) jika anda ingin menjalankan senario di bawah. Anda juga boleh hanya membaca kerana kami cuba menggambarkan masalah di mana fungsi boleh membantu menyelesaikan masalah tersebut.
 
 Mari kita lihat contoh yang menggambarkan masalah format respons:
 

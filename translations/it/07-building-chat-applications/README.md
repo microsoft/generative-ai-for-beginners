@@ -69,7 +69,7 @@ Quando si costruisce un’applicazione chat, un ottimo primo passo è valutare c
 - **Manutenzione più semplice**: Aggiornamenti e miglioramenti sono più facili da gestire, poiché la maggior parte delle API e SDK richiede semplicemente l’aggiornamento di una libreria quando viene rilasciata una nuova versione.
 - **Accesso a tecnologie all’avanguardia**: Sfruttare modelli affinati e addestrati su dataset estesi fornisce alla tua applicazione capacità di linguaggio naturale avanzate.
 
-L’accesso alle funzionalità di un SDK o API generalmente richiede il permesso di utilizzare i servizi forniti, spesso tramite una chiave unica o un token di autenticazione. Useremo la OpenAI Python Library per esplorare come funziona. Puoi anche provarla autonomamente nel seguente [notebook per OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) o [notebook per Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) per questa lezione.
+L’accesso alle funzionalità di un SDK o API generalmente richiede il permesso di utilizzare i servizi forniti, spesso tramite una chiave unica o un token di autenticazione. Useremo la OpenAI Python Library per esplorare come funziona. Puoi anche provarla autonomamente nel seguente [notebook per OpenAI](python/oai-assignment.ipynb) o [notebook per Azure OpenAI Services](python/aoai-assignment.ipynb) per questa lezione.
 
 ```python
 import os

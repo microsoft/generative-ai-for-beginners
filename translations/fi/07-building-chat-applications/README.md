@@ -69,7 +69,7 @@ Chat-sovellusta rakentaessa hyvä ensimmäinen askel on kartoittaa, mitä valmii
 - **Helpompi ylläpito**: Päivitykset ja parannukset ovat helpompia hallita, sillä useimmat API:t ja SDK:t vaativat vain kirjaston päivittämisen, kun uudempi versio julkaistaan.
 - **Pääsy huipputeknologiaan**: Mallien hyödyntäminen, jotka on hienosäädetty ja koulutettu laajoilla aineistoilla, antaa sovelluksellesi luonnollisen kielen käsittelykyvyt.
 
-SDK:n tai API:n toiminnallisuuksiin pääsy edellyttää yleensä käyttöoikeuden saamista, joka tapahtuu usein ainutlaatuisen avaimen tai tunnistautumistunnuksen avulla. Käytämme OpenAI Python Librarya havainnollistamaan, miltä tämä näyttää. Voit myös kokeilla itse seuraavissa [OpenAI:n notebookissa](../../../07-building-chat-applications/python/oai-assignment.ipynb) tai [Azure OpenAI Servicesin notebookissa](../../../07-building-chat-applications/python/aoai-assignment.ipynb) tätä oppituntia varten.
+SDK:n tai API:n toiminnallisuuksiin pääsy edellyttää yleensä käyttöoikeuden saamista, joka tapahtuu usein ainutlaatuisen avaimen tai tunnistautumistunnuksen avulla. Käytämme OpenAI Python Librarya havainnollistamaan, miltä tämä näyttää. Voit myös kokeilla itse seuraavissa [OpenAI:n notebookissa](python/oai-assignment.ipynb) tai [Azure OpenAI Servicesin notebookissa](python/aoai-assignment.ipynb) tätä oppituntia varten.
 
 ```python
 import os

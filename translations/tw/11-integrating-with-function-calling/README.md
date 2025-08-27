@@ -54,7 +54,7 @@ Function Calling 是 Azure OpenAI 服務的一項功能，用來克服以下限�
 
 ## 透過情境說明問題
 
-> 建議你使用[附帶的筆記本](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb)來執行以下情境。當然你也可以直接閱讀，我們會示範一個 function 可以幫助解決的問題。
+> 建議你使用[附帶的筆記本](python/aoai-assignment.ipynb)來執行以下情境。當然你也可以直接閱讀，我們會示範一個 function 可以幫助解決的問題。
 
 讓我們看一個說明回應格式問題的範例：
 

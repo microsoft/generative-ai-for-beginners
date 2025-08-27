@@ -54,7 +54,7 @@ Pozivanje funkcija je značajka Azure OpenAI servisa koja rješava sljedeća ogr
 
 ## Ilustracija problema kroz scenarij
 
-> Preporučujemo da koristite [priloženi notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) ako želite pokrenuti donji scenarij. Također možete samo pratiti čitanje dok pokušavamo ilustrirati problem koji funkcije mogu pomoći riješiti.
+> Preporučujemo da koristite [priloženi notebook](python/aoai-assignment.ipynb) ako želite pokrenuti donji scenarij. Također možete samo pratiti čitanje dok pokušavamo ilustrirati problem koji funkcije mogu pomoći riješiti.
 
 Pogledajmo primjer koji ilustrira problem formata odgovora:
 

@@ -54,7 +54,7 @@ Function Calling on Azure OpenAI -palvelun ominaisuus, joka auttaa voittamaan se
 
 ## Ongelman havainnollistaminen esimerkin avulla
 
-> Suosittelemme käyttämään [mukaan sisältyvää muistikirjaa](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), jos haluat kokeilla alla olevaa tilannetta itse. Voit myös vain lukea eteenpäin, kun yritämme havainnollistaa ongelmaa, johon funktiot voivat tarjota ratkaisun.
+> Suosittelemme käyttämään [mukaan sisältyvää muistikirjaa](python/aoai-assignment.ipynb), jos haluat kokeilla alla olevaa tilannetta itse. Voit myös vain lukea eteenpäin, kun yritämme havainnollistaa ongelmaa, johon funktiot voivat tarjota ratkaisun.
 
 Katsotaan esimerkkiä, joka havainnollistaa vastausmuodon ongelmaa:
 

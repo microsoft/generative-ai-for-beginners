@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## 솔루션
 
-GitHub Codespaces에서 [솔루션 노트북](../../../08-building-search-applications/python/aoai-solution.ipynb)을 열고 Jupyter 노트북의 안내를 따라 진행하세요.
+GitHub Codespaces에서 [솔루션 노트북](python/aoai-solution.ipynb)을 열고 Jupyter 노트북의 안내를 따라 진행하세요.
 
 노트북을 실행하면 쿼리를 입력하라는 메시지가 나타납니다. 입력창은 다음과 같이 보입니다:
 

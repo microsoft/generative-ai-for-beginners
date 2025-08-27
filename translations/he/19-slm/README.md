@@ -167,7 +167,7 @@ GitHub Models היא הדרך הישירה ביותר. ניתן לגשת במה�
 
 NIM היא חלק מ-NVIDIA AI Enterprise, שמטרתה לפשט את הפריסה והתפעול של מודלים של AI, ולהבטיח שהם פועלים ביעילות על GPUs של NVIDIA.
 
-- הדגמה: שימוש ב-Nividia NIM לקריאה ל-Phi-3.5-Vision-API  [[לחצו כאן](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- הדגמה: שימוש ב-Nividia NIM לקריאה ל-Phi-3.5-Vision-API  [[לחצו כאן](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### אינפרנס Phi-3/3.5 בסביבה מקומית
@@ -189,11 +189,11 @@ Hugging Face Transformers היא ספרייה עוצמתית המיועדת לע
 
 זו השיטה הנפוצה ביותר, אך היא דורשת גם האצת GPU. אחרי הכל, סצנות כמו Vision ו-MoE דורשות חישובים רבים, שיהיו מוגבלים מאוד ב-CPU אם לא יעברו כימות.
 
-- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-Instuct [לחצו כאן](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-Instuct [לחצו כאן](python/phi35-instruct-demo.ipynb)
 
-- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-Vision [לחצו כאן](../../../19-slm/python/phi35-vision-demo.ipynb)
+- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-Vision [לחצו כאן](python/phi35-vision-demo.ipynb)
 
-- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-MoE [לחצו כאן](../../../19-slm/python/phi35_moe_demo.ipynb)
+- הדגמה: שימוש ב-Transformer לקריאה ל-Phi-3.5-MoE [לחצו כאן](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) היא פלטפורמה שנועדה להקל על הרצת מודלים גדולים של שפה (LLMs) באופן מקומי במחשב שלך. היא תומכת במודלים שונים כמו Llama 3.1, Phi 3, Mistral, ו-Gemma 2, בין היתר. הפלטפורמה מפשטת את התהליך על ידי אריזת משקלי המודל, ההגדרות והנתונים בחבילה אחת, מה שהופך את ההתאמה האישית ויצירת מודלים חדשים לנגישה יותר. Ollama זמינה ל-macOS, Linux ו-Windows. זוהי כלי מצוין אם ברצונך להתנסות או לפרוס LLMs ללא תלות בשירותי ענן. Ollama היא הדרך הישירה ביותר, כל מה שצריך זה להריץ את הפקודה הבאה.

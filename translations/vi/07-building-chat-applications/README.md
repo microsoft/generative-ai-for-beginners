@@ -69,7 +69,7 @@ Khi xây dựng ứng dụng chat, bước đầu tiên tốt là đánh giá nh
 - **Dễ bảo trì hơn**: Việc cập nhật và cải tiến dễ dàng hơn vì hầu hết API và SDK chỉ cần cập nhật thư viện khi có phiên bản mới.
 - **Tiếp cận công nghệ tiên tiến**: Tận dụng các mô hình đã được tinh chỉnh và huấn luyện trên bộ dữ liệu lớn giúp ứng dụng của bạn có khả năng xử lý ngôn ngữ tự nhiên tốt.
 
-Việc truy cập chức năng của SDK hoặc API thường yêu cầu có quyền sử dụng dịch vụ, thường thông qua khóa riêng hoặc token xác thực. Chúng ta sẽ sử dụng Thư viện Python OpenAI để khám phá cách thức hoạt động. Bạn cũng có thể thử tự mình trong [notebook cho OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) hoặc [notebook cho Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) cho bài học này.
+Việc truy cập chức năng của SDK hoặc API thường yêu cầu có quyền sử dụng dịch vụ, thường thông qua khóa riêng hoặc token xác thực. Chúng ta sẽ sử dụng Thư viện Python OpenAI để khám phá cách thức hoạt động. Bạn cũng có thể thử tự mình trong [notebook cho OpenAI](python/oai-assignment.ipynb) hoặc [notebook cho Azure OpenAI Services](python/aoai-assignment.ipynb) cho bài học này.
 
 ```python
 import os

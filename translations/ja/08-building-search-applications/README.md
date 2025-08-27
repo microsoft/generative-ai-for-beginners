@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## ソリューション
 
-GitHub Codespacesで[solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb)を開き、Jupyter Notebookの指示に従ってください。
+GitHub Codespacesで[solution notebook](python/aoai-solution.ipynb)を開き、Jupyter Notebookの指示に従ってください。
 
 ノートブックを実行すると、クエリ入力を求められます。入力ボックスは以下のように表示されます：
 

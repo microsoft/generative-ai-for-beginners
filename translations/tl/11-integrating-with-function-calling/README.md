@@ -54,7 +54,7 @@ Ang Function Calling ay isang tampok ng Azure OpenAI Service upang malampasan an
 
 ## Paglalarawan ng problema sa pamamagitan ng senaryo
 
-> Inirerekomenda naming gamitin ang [kasamang notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) kung nais mong patakbuhin ang senaryong ito. Maaari ka ring magbasa lang habang nilalarawan namin ang isang problema kung saan makakatulong ang mga function.
+> Inirerekomenda naming gamitin ang [kasamang notebook](python/aoai-assignment.ipynb) kung nais mong patakbuhin ang senaryong ito. Maaari ka ring magbasa lang habang nilalarawan namin ang isang problema kung saan makakatulong ang mga function.
 
 Tingnan natin ang halimbawa na nagpapakita ng problema sa format ng sagot:
 

@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **メンテナンスの容易さ**：新バージョンが出た際はライブラリの更新だけで済むことが多く、改善やアップデートが簡単。
 - **最先端技術へのアクセス**：大規模データセットでファインチューニングされたモデルを活用でき、自然言語処理能力をアプリに付与できる。
 
-SDKやAPIの機能を利用するには、通常はユニークなキーや認証トークンを使ってサービス利用の許可を得る必要があります。ここではOpenAI Pythonライブラリを使ってその例を見ていきます。以下の[OpenAI用ノートブック](../../../07-building-chat-applications/python/oai-assignment.ipynb)や[Azure OpenAIサービス用ノートブック](../../../07-building-chat-applications/python/aoai-assignment.ipynb)でも試せます。
+SDKやAPIの機能を利用するには、通常はユニークなキーや認証トークンを使ってサービス利用の許可を得る必要があります。ここではOpenAI Pythonライブラリを使ってその例を見ていきます。以下の[OpenAI用ノートブック](python/oai-assignment.ipynb)や[Azure OpenAIサービス用ノートブック](python/aoai-assignment.ipynb)でも試せます。
 
 ```python
 import os

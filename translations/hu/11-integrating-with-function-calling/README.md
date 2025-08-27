@@ -54,7 +54,7 @@ A Function Calling az Azure OpenAI szolgáltatás egy olyan funkciója, amely a 
 
 ## A probléma szemléltetése egy példán keresztül
 
-> Ajánljuk, hogy a [mellékelt notebookot](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) használd, ha szeretnéd lefuttatni az alábbi forgatókönyvet. De akár csak olvashatod is, mert egy olyan problémát mutatunk be, amelynél a funkciók segíthetnek a megoldásban.
+> Ajánljuk, hogy a [mellékelt notebookot](python/aoai-assignment.ipynb) használd, ha szeretnéd lefuttatni az alábbi forgatókönyvet. De akár csak olvashatod is, mert egy olyan problémát mutatunk be, amelynél a funkciók segíthetnek a megoldásban.
 
 Nézzük meg a példát, amely a válaszformátum problémáját illusztrálja:
 

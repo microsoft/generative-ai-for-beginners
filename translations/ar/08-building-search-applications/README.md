@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## الحل
 
-افتح [دفتر الحل](../../../08-building-search-applications/python/aoai-solution.ipynb) في GitHub Codespaces واتبع التعليمات في دفتر Jupyter.
+افتح [دفتر الحل](python/aoai-solution.ipynb) في GitHub Codespaces واتبع التعليمات في دفتر Jupyter.
 
 عند تشغيل الدفتر، سيُطلب منك إدخال استعلام. ستبدو خانة الإدخال كما يلي:
 

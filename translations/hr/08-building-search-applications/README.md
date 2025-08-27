@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Rješenje
 
-Otvorite [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) u GitHub Codespaces i slijedite upute u Jupyter Notebooku.
+Otvorite [solution notebook](python/aoai-solution.ipynb) u GitHub Codespaces i slijedite upute u Jupyter Notebooku.
 
 Kada pokrenete notebook, bit ćete upitani da unesete upit. Polje za unos izgledat će ovako:
 

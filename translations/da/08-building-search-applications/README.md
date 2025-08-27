@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## Løsning
 
-Åbn [løsningsnotebooken](../../../08-building-search-applications/python/aoai-solution.ipynb) i GitHub Codespaces og følg instruktionerne i Jupyter Notebook.
+Åbn [løsningsnotebooken](python/aoai-solution.ipynb) i GitHub Codespaces og følg instruktionerne i Jupyter Notebook.
 
 Når du kører notebooken, bliver du bedt om at indtaste en forespørgsel. Inputboksen ser sådan ud:
 

@@ -69,7 +69,7 @@ Prilikom izrade chat aplikacije, dobar prvi korak je procijeniti što je već do
 - **Jednostavnije održavanje**: Ažuriranja i poboljšanja lakše je upravljati jer većina API-ja i SDK-ova zahtijeva samo ažuriranje biblioteke kad se objavi novija verzija.
 - **Pristup najnovijoj tehnologiji**: Korištenje modela koji su fino podešeni i trenirani na opsežnim skupovima podataka pruža vašoj aplikaciji mogućnosti prirodnog jezika.
 
-Pristup funkcionalnostima SDK-a ili API-ja obično uključuje dobivanje dozvole za korištenje usluga, što se često ostvaruje putem jedinstvenog ključa ili autentifikacijskog tokena. Koristit ćemo OpenAI Python Library da pokažemo kako to izgleda. Također možete isprobati sami u sljedećem [notebooku za OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) ili [notebooku za Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) za ovu lekciju.
+Pristup funkcionalnostima SDK-a ili API-ja obično uključuje dobivanje dozvole za korištenje usluga, što se često ostvaruje putem jedinstvenog ključa ili autentifikacijskog tokena. Koristit ćemo OpenAI Python Library da pokažemo kako to izgleda. Također možete isprobati sami u sljedećem [notebooku za OpenAI](python/oai-assignment.ipynb) ili [notebooku za Azure OpenAI Services](python/aoai-assignment.ipynb) za ovu lekciju.
 
 ```python
 import os

@@ -167,7 +167,7 @@ Key features of NVIDIA NIM include:
 
 NIM is part of NVIDIA AI Enterprise, which aims to simplify the deployment and operation of AI models, ensuring they run efficiently on NVIDIA GPUs.
 
-- Demo: Using Nvidia NIM to call Phi-3.5-Vision-API  [[Click this link](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Using Nvidia NIM to call Phi-3.5-Vision-API  [[Click this link](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference Phi-3/3.5 in local environment  
@@ -190,11 +190,11 @@ Hugging Face Transformers is a powerful library designed for natural language pr
 This is the most commonly used method, but it also requires GPU acceleration. After all, scenarios like Vision and MoE involve heavy computations, which are very limited on CPU unless quantized.
 
 
-- Demo: Using Transformer to call Phi-3.5-Instruct [Click this link](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Using Transformer to call Phi-3.5-Instruct [Click this link](python/phi35-instruct-demo.ipynb)
 
-- Demo: Using Transformer to call Phi-3.5-Vision [Click this link](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Using Transformer to call Phi-3.5-Vision [Click this link](python/phi35-vision-demo.ipynb)
 
-- Demo: Using Transformer to call Phi-3.5-MoE [Click this link](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Using Transformer to call Phi-3.5-MoE [Click this link](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) is a platform designed to make it easier to run large language models (LLMs) locally on your machine. It supports various models like Llama 3.1, Phi 3, Mistral, and Gemma 2, among others. The platform simplifies the process by bundling model weights, configuration, and data into a single package, making it more accessible for users to customize and create their own models. Ollama is available for macOS, Linux, and Windows. It’s a great tool if you want to experiment with or deploy LLMs without relying on cloud services. Ollama is the most straightforward method—you just need to run the following command.

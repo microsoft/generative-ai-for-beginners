@@ -158,7 +158,7 @@ az cognitiveservices account deployment create \
 
 ## Решение
 
-Откройте [блокнот с решением](../../../08-building-search-applications/python/aoai-solution.ipynb) в GitHub Codespaces и следуйте инструкциям в Jupyter Notebook.
+Откройте [блокнот с решением](python/aoai-solution.ipynb) в GitHub Codespaces и следуйте инструкциям в Jupyter Notebook.
 
 При запуске блокнота вам будет предложено ввести запрос. Поле ввода будет выглядеть так:
 

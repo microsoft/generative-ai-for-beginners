@@ -167,7 +167,7 @@ NVIDIA NIM’in bazı temel özellikleri şunlardır:
 
 NIM, NVIDIA AI Enterprise’ın bir parçasıdır ve AI modellerinin dağıtımını ve işletilmesini basitleştirerek NVIDIA GPU’larda verimli çalışmasını sağlar.
 
-- Demo: Nividia NIM kullanarak Phi-3.5-Vision-API çağırma [[Bu bağlantıya tıklayın](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Nividia NIM kullanarak Phi-3.5-Vision-API çağırma [[Bu bağlantıya tıklayın](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Yerel ortamda Phi-3/3.5 çıkarımı  
@@ -189,11 +189,11 @@ Hugging Face Transformers, doğal dil işleme (NLP) ve diğer makine öğrenimi 
 
 Bu en yaygın kullanılan yöntemdir, ancak GPU hızlandırması gerektirir. Sonuçta, Vision ve MoE gibi sahneler çok fazla hesaplama gerektirir ve kuantize edilmezlerse CPU’da çok sınırlı kalır.
 
-- Demo: Transformer kullanarak Phi-3.5-Instuct çağırma [Bu bağlantıya tıklayın](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Transformer kullanarak Phi-3.5-Instuct çağırma [Bu bağlantıya tıklayın](python/phi35-instruct-demo.ipynb)
 
-- Demo: Transformer kullanarak Phi-3.5-Vision çağırma [Bu bağlantıya tıklayın](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Transformer kullanarak Phi-3.5-Vision çağırma [Bu bağlantıya tıklayın](python/phi35-vision-demo.ipynb)
 
-- Demo: Transformer kullanarak Phi-3.5-MoE çağırma [Bu bağlantıya tıklayın](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Transformer kullanarak Phi-3.5-MoE çağırma [Bu bağlantıya tıklayın](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), büyük dil modellerini (LLM) yerel olarak makinenizde çalıştırmayı kolaylaştırmak için tasarlanmış bir platformdur. Llama 3.1, Phi 3, Mistral ve Gemma 2 gibi çeşitli modelleri destekler. Platform, model ağırlıklarını, yapılandırmasını ve verileri tek bir paket halinde sunarak kullanıcıların kendi modellerini özelleştirmesini ve oluşturmasını kolaylaştırır. Ollama, macOS, Linux ve Windows için mevcuttur. Bulut hizmetlerine bağlı kalmadan LLM’lerle denemeler yapmak veya dağıtım yapmak isteyenler için harika bir araçtır. Ollama en doğrudan yoldur, sadece aşağıdaki ifadeyi çalıştırmanız yeterlidir.

@@ -167,7 +167,7 @@ Hapa kuna baadhi ya sifa kuu za NVIDIA NIM:
 
 NIM ni sehemu ya NVIDIA AI Enterprise, ambayo inalenga kurahisisha usambazaji na uendeshaji wa mifano ya AI, kuhakikisha inafanya kazi kwa ufanisi kwenye GPUs za NVIDIA.
 
-- Demo: Kutumia Nividia NIM kupiga simu Phi-3.5-Vision-API  [[Bonyeza hapa](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Kutumia Nividia NIM kupiga simu Phi-3.5-Vision-API  [[Bonyeza hapa](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Ufafanuzi wa Phi-3/3.5 katika mazingira ya ndani
@@ -188,11 +188,11 @@ Hugging Face Transformers ni maktaba yenye nguvu iliyoundwa kwa ajili ya usindik
 
 Hii ndiyo njia inayotumika zaidi, lakini pia inahitaji kuongezwa kwa kasi kwa GPU. Baada ya yote, mazingira kama Vision na MoE yanahitaji mahesabu mengi, ambayo yatakuwa na vikwazo vikubwa kwenye CPU ikiwa hayatafanyiwa upunguzaji.
 
-- Demo: Kutumia Transformer kupiga simu Phi-3.5-Instuct [Bonyeza hapa](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Kutumia Transformer kupiga simu Phi-3.5-Instuct [Bonyeza hapa](python/phi35-instruct-demo.ipynb)
 
-- Demo: Kutumia Transformer kupiga simu Phi-3.5-Vision [Bonyeza hapa](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Kutumia Transformer kupiga simu Phi-3.5-Vision [Bonyeza hapa](python/phi35-vision-demo.ipynb)
 
-- Demo: Kutumia Transformer kupiga simu Phi-3.5-MoE [Bonyeza hapa](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Kutumia Transformer kupiga simu Phi-3.5-MoE [Bonyeza hapa](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ni jukwaa lililoundwa kurahisisha kuendesha mifano mikubwa ya lugha (LLMs) kwa ndani kwenye kompyuta yako. Inaunga mkono mifano mbalimbali kama Llama 3.1, Phi 3, Mistral, na Gemma 2, miongoni mwa mingine. Jukwaa hili hurahisisha mchakato kwa kuunganisha uzito wa mfano, usanidi, na data katika kifurushi kimoja, na kufanya iwe rahisi kwa watumiaji kubadilisha na kuunda mifano yao wenyewe. Ollama inapatikana kwa macOS, Linux, na Windows. Ni chombo kizuri ikiwa unataka kujaribu au kupeleka LLM bila kutegemea huduma za wingu. Ollama ni njia ya moja kwa moja zaidi, unahitaji tu kutekeleza kauli ifuatayo.

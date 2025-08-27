@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## โซลูชัน
 
-เปิด [solution notebook](../../../08-building-search-applications/python/aoai-solution.ipynb) ใน GitHub Codespaces และทำตามคำแนะนำใน Jupyter Notebook
+เปิด [solution notebook](python/aoai-solution.ipynb) ใน GitHub Codespaces และทำตามคำแนะนำใน Jupyter Notebook
 
 เมื่อคุณรันโน้ตบุ๊ก คุณจะถูกขอให้ป้อนคำค้นหา กล่องป้อนข้อมูลจะมีลักษณะดังนี้:
 

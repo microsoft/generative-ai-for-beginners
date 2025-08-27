@@ -54,7 +54,7 @@ A Chamada de Função é uma funcionalidade do Azure OpenAI Service para ultrapa
 
 ## Ilustrar o problema através de um cenário
 
-> Recomendamos que uses o [notebook incluído](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) se quiseres executar o cenário abaixo. Também podes simplesmente acompanhar a leitura enquanto tentamos ilustrar um problema onde as funções podem ajudar a resolvê-lo.
+> Recomendamos que uses o [notebook incluído](python/aoai-assignment.ipynb) se quiseres executar o cenário abaixo. Também podes simplesmente acompanhar a leitura enquanto tentamos ilustrar um problema onde as funções podem ajudar a resolvê-lo.
 
 Vamos ver um exemplo que ilustra o problema do formato da resposta:
 

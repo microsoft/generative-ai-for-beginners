@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **유지보수 용이**: 대부분의 API와 SDK는 새 버전이 나오면 라이브러리 업데이트만으로 개선 사항을 적용할 수 있어 관리가 쉽습니다.
 - **최신 기술 활용**: 광범위한 데이터셋으로 미세 조정되고 훈련된 모델을 활용해 자연어 처리 능력을 애플리케이션에 제공합니다.
 
-SDK나 API 기능을 사용하려면 보통 고유 키나 인증 토큰을 통해 서비스 사용 권한을 얻어야 합니다. OpenAI Python 라이브러리를 사용해 이를 살펴보겠습니다. 직접 체험해보고 싶다면 이번 강의의 [OpenAI 노트북](../../../07-building-chat-applications/python/oai-assignment.ipynb)이나 [Azure OpenAI 서비스 노트북](../../../07-building-chat-applications/python/aoai-assignment.ipynb)을 참고하세요.
+SDK나 API 기능을 사용하려면 보통 고유 키나 인증 토큰을 통해 서비스 사용 권한을 얻어야 합니다. OpenAI Python 라이브러리를 사용해 이를 살펴보겠습니다. 직접 체험해보고 싶다면 이번 강의의 [OpenAI 노트북](python/oai-assignment.ipynb)이나 [Azure OpenAI 서비스 노트북](python/aoai-assignment.ipynb)을 참고하세요.
 
 ```python
 import os

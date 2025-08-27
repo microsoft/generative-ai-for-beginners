@@ -147,7 +147,7 @@ A GitHub modellek a legközvetlenebb módot jelentik. Gyorsan hozzáférhetsz a 
 
 A NIM az NVIDIA AI Enterprise része, amelynek célja az AI modellek telepítésének és működtetésének egyszerűsítése, biztosítva, hogy hatékonyan fussanak NVIDIA GPU-kon.
 
-- Demó: Nividia NIM használata Phi-3.5-Vision-API hívásához [[Kattints ide](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demó: Nividia NIM használata Phi-3.5-Vision-API hívásához [[Kattints ide](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Phi-3/3.5 következtetés helyi környezetben
@@ -170,11 +170,11 @@ A Hugging Face Transformers egy erőteljes könyvtár, amely természetes nyelvf
 Ez a leggyakrabban használt módszer, de GPU gyorsítást igényel. Végül is a Vision és MoE jelenetek sok számítást igényelnek, amit CPU-n kvantálás nélkül nagyon korlátozottan lehet csak végezni.
 
 
-- Demó: Transformer használata Phi-3.5-Instuct hívásához [Kattints ide](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demó: Transformer használata Phi-3.5-Instuct hívásához [Kattints ide](python/phi35-instruct-demo.ipynb)
 
-- Demó: Transformer használata Phi-3.5-Vision hívásához [Kattints ide](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demó: Transformer használata Phi-3.5-Vision hívásához [Kattints ide](python/phi35-vision-demo.ipynb)
 
-- Demó: Transformer használata Phi-3.5-MoE hívásához [Kattints ide](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demó: Transformer használata Phi-3.5-MoE hívásához [Kattints ide](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 Az [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) egy platform, amely megkönnyíti a nagy nyelvi modellek (LLM-ek) helyi futtatását a gépeden. Támogat több modellt, például Llama 3.1, Phi 3, Mistral és Gemma 2, többek között. A platform leegyszerűsíti a folyamatot azáltal, hogy a modell súlyokat, konfigurációt és adatokat egy csomagba foglalja, így könnyebben testreszabható és létrehozható saját modell. Az Ollama elérhető macOS, Linux és Windows rendszerekre. Kiváló eszköz, ha szeretnél kísérletezni vagy telepíteni LLM-eket anélkül, hogy felhőszolgáltatásokra támaszkodnál. Az Ollama a legközvetlenebb mód, csak futtatnod kell a következő parancsot.

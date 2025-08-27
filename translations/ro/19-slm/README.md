@@ -166,7 +166,7 @@ Iată câteva caracteristici cheie ale NVIDIA NIM:
 
 NIM face parte din NVIDIA AI Enterprise, care are ca scop simplificarea implementării și operaționalizării modelelor AI, asigurând rularea eficientă pe GPU-urile NVIDIA.
 
-- Demo: Utilizarea Nividia NIM pentru a apela Phi-3.5-Vision-API  [[Click aici](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Utilizarea Nividia NIM pentru a apela Phi-3.5-Vision-API  [[Click aici](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferență Phi-3/3.5 în mediu local
@@ -189,11 +189,11 @@ Hugging Face Transformers este o bibliotecă puternică destinată procesării l
 Aceasta este metoda cea mai folosită, dar necesită accelerare GPU. Scene precum Vision și MoE implică multe calcule, care vor fi foarte limitate pe CPU dacă nu sunt cuantificate.
 
 
-- Demo: Utilizarea Transformer pentru a apela Phi-3.5-Instuct [Click aici](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Utilizarea Transformer pentru a apela Phi-3.5-Instuct [Click aici](python/phi35-instruct-demo.ipynb)
 
-- Demo: Utilizarea Transformer pentru a apela Phi-3.5-Vision [Click aici](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Utilizarea Transformer pentru a apela Phi-3.5-Vision [Click aici](python/phi35-vision-demo.ipynb)
 
-- Demo: Utilizarea Transformer pentru a apela Phi-3.5-MoE [Click aici](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Utilizarea Transformer pentru a apela Phi-3.5-MoE [Click aici](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) este o platformă creată pentru a facilita rularea locală a modelelor mari de limbaj (LLM) pe calculatorul tău. Suportă diverse modele precum Llama 3.1, Phi 3, Mistral și Gemma 2, printre altele. Platforma simplifică procesul prin împachetarea greutăților modelului, configurației și datelor într-un singur pachet, făcându-l mai accesibil pentru utilizatori să personalizeze și să creeze propriile modele. Ollama este disponibil pentru macOS, Linux și Windows. Este un instrument excelent dacă dorești să experimentezi sau să implementezi LLM-uri fără a depinde de servicii cloud. Ollama este cea mai directă metodă, trebuie doar să execuți următoarea comandă.

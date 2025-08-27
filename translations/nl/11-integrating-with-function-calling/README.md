@@ -54,7 +54,7 @@ Function Calling is een functie van de Azure OpenAI Service om de volgende beper
 
 ## Het probleem illustreren met een scenario
 
-> We raden aan om de [meegeleverde notebook](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) te gebruiken als je het onderstaande scenario wilt uitvoeren. Je kunt ook gewoon meelezen terwijl we proberen een probleem te illustreren waarbij functies kunnen helpen.
+> We raden aan om de [meegeleverde notebook](python/aoai-assignment.ipynb) te gebruiken als je het onderstaande scenario wilt uitvoeren. Je kunt ook gewoon meelezen terwijl we proberen een probleem te illustreren waarbij functies kunnen helpen.
 
 Laten we kijken naar een voorbeeld dat het probleem met de responsindeling laat zien:
 

@@ -167,7 +167,7 @@ Berikut beberapa fitur utama NVIDIA NIM:
 
 NIM adalah bagian dari NVIDIA AI Enterprise, yang bertujuan untuk menyederhanakan penerapan dan operasionalisasi model AI, memastikan model berjalan efisien pada GPU NVIDIA.
 
-- Demo: Menggunakan Nvidia NIM untuk memanggil Phi-3.5-Vision-API [[Klik tautan ini](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Menggunakan Nvidia NIM untuk memanggil Phi-3.5-Vision-API [[Klik tautan ini](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferensi Phi-3/3.5 di lingkungan lokal  
@@ -190,11 +190,11 @@ Hugging Face Transformers adalah perpustakaan kuat yang dirancang untuk pemroses
 Ini adalah metode yang paling umum digunakan, namun juga membutuhkan akselerasi GPU. Bagaimanapun, skenario seperti Vision dan MoE memerlukan banyak perhitungan, yang akan sangat terbatas jika hanya menggunakan CPU tanpa kuantisasi.
 
 
-- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-Instruct [Klik tautan ini](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-Instruct [Klik tautan ini](python/phi35-instruct-demo.ipynb)
 
-- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-Vision [Klik tautan ini](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-Vision [Klik tautan ini](python/phi35-vision-demo.ipynb)
 
-- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-MoE [Klik tautan ini](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Menggunakan Transformer untuk memanggil Phi-3.5-MoE [Klik tautan ini](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) adalah platform yang dirancang untuk memudahkan menjalankan model bahasa besar (LLM) secara lokal di mesin Anda. Platform ini mendukung berbagai model seperti Llama 3.1, Phi 3, Mistral, dan Gemma 2, serta lainnya. Ollama menyederhanakan proses dengan mengemas bobot model, konfigurasi, dan data dalam satu paket, sehingga lebih mudah bagi pengguna untuk menyesuaikan dan membuat model mereka sendiri. Ollama tersedia untuk macOS, Linux, dan Windows. Ini adalah alat yang sangat baik jika Anda ingin bereksperimen atau menerapkan LLM tanpa bergantung pada layanan cloud. Ollama adalah cara paling langsung, Anda hanya perlu menjalankan perintah berikut.

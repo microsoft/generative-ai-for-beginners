@@ -69,7 +69,7 @@ Lors de la création d’une application de chat, une bonne première étape est
 - **Maintenance facilitée** : Les mises à jour et améliorations sont plus simples à gérer, car la plupart des API et SDK nécessitent simplement une mise à jour de la bibliothèque lors de la sortie d’une nouvelle version.
 - **Accès à la technologie de pointe** : Utiliser des modèles affinés et entraînés sur de vastes ensembles de données offre à votre application des capacités avancées en traitement du langage naturel.
 
-L’accès aux fonctionnalités d’un SDK ou d’une API implique généralement d’obtenir une autorisation via une clé unique ou un jeton d’authentification. Nous utiliserons la bibliothèque Python OpenAI pour illustrer cela. Vous pouvez également l’essayer vous-même dans le [notebook OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) ou le [notebook Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) de cette leçon.
+L’accès aux fonctionnalités d’un SDK ou d’une API implique généralement d’obtenir une autorisation via une clé unique ou un jeton d’authentification. Nous utiliserons la bibliothèque Python OpenAI pour illustrer cela. Vous pouvez également l’essayer vous-même dans le [notebook OpenAI](python/oai-assignment.ipynb) ou le [notebook Azure OpenAI Services](python/aoai-assignment.ipynb) de cette leçon.
 
 ```python
 import os

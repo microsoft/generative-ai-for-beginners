@@ -69,7 +69,7 @@ Generative AI ဖြင့် စကားပြော အက်ပလီကေ�
 - **ပြုပြင်ထိန်းသိမ်းရလွယ်ကူခြင်း**။ အသစ်ထွက်လာသော ဗားရှင်းများအတွက် စာကြည့်တိုက်ကိုသာ အပ်ဒိတ်လုပ်ရုံဖြင့် အဆင်ပြေသည်။
 - **နောက်ဆုံးပေါ် နည်းပညာများကို အသုံးချနိုင်ခြင်း**။ ကြီးမားသော ဒေတာစုစည်းမှုများဖြင့် လေ့ကျင့်ပြီး အတိအကျ ပြင်ဆင်ထားသော မော်ဒယ်များကို အသုံးပြုနိုင်သည်။
 
-SDK သို့မဟုတ် API ၏ လုပ်ဆောင်ချက်များကို အသုံးပြုရန် အများအားဖြင့် ထူးခြားသော key သို့မဟုတ် authentication token တစ်ခု လိုအပ်သည်။ ဤသင်ခန်းစာတွင် OpenAI Python Library ကို အသုံးပြု၍ ဤအရာကို လေ့လာမည်ဖြစ်သည်။ သင်လည်း အောက်ပါ [OpenAI အတွက် notebook](../../../07-building-chat-applications/python/oai-assignment.ipynb) သို့မဟုတ် [Azure OpenAI Services အတွက် notebook](../../../07-building-chat-applications/python/aoai-assignment.ipynb) တွင် ကိုယ်တိုင် စမ်းသပ်နိုင်ပါသည်။
+SDK သို့မဟုတ် API ၏ လုပ်ဆောင်ချက်များကို အသုံးပြုရန် အများအားဖြင့် ထူးခြားသော key သို့မဟုတ် authentication token တစ်ခု လိုအပ်သည်။ ဤသင်ခန်းစာတွင် OpenAI Python Library ကို အသုံးပြု၍ ဤအရာကို လေ့လာမည်ဖြစ်သည်။ သင်လည်း အောက်ပါ [OpenAI အတွက် notebook](python/oai-assignment.ipynb) သို့မဟုတ် [Azure OpenAI Services အတွက် notebook](python/aoai-assignment.ipynb) တွင် ကိုယ်တိုင် စမ်းသပ်နိုင်ပါသည်။
 
 ```python
 import os

@@ -167,7 +167,7 @@ Ecco alcune caratteristiche chiave di NVIDIA NIM:
 
 NIM fa parte di NVIDIA AI Enterprise, che mira a semplificare il deployment e l’operatività dei modelli AI, garantendo un’esecuzione efficiente sulle GPU NVIDIA.
 
-- Demo: Utilizzo di Nividia NIM per chiamare Phi-3.5-Vision-API  [[Clicca qui](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Utilizzo di Nividia NIM per chiamare Phi-3.5-Vision-API  [[Clicca qui](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferenza Phi-3/3.5 in ambiente locale
@@ -190,11 +190,11 @@ Hugging Face Transformers è una libreria potente progettata per il natural lang
 Questo è il metodo più comunemente usato, ma richiede anche accelerazione GPU. Dopotutto, scenari come Vision e MoE richiedono molti calcoli, che saranno molto limitati sulla CPU se non quantizzati.
 
 
-- Demo: Utilizzo di Transformer per chiamare Phi-3.5-Instuct [Clicca qui](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Utilizzo di Transformer per chiamare Phi-3.5-Instuct [Clicca qui](python/phi35-instruct-demo.ipynb)
 
-- Demo: Utilizzo di Transformer per chiamare Phi-3.5-Vision [Clicca qui](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Utilizzo di Transformer per chiamare Phi-3.5-Vision [Clicca qui](python/phi35-vision-demo.ipynb)
 
-- Demo: Utilizzo di Transformer per chiamare Phi-3.5-MoE [Clicca qui](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Utilizzo di Transformer per chiamare Phi-3.5-MoE [Clicca qui](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) è una piattaforma pensata per facilitare l’esecuzione locale di grandi modelli linguistici (LLM) sul proprio computer. Supporta vari modelli come Llama 3.1, Phi 3, Mistral e Gemma 2, tra gli altri. La piattaforma semplifica il processo raggruppando pesi del modello, configurazione e dati in un unico pacchetto, rendendo più accessibile la personalizzazione e la creazione di modelli propri. Ollama è disponibile per macOS, Linux e Windows. È uno strumento ideale se vuoi sperimentare o distribuire LLM senza dipendere da servizi cloud. Ollama è il metodo più diretto, basta eseguire la seguente istruzione.

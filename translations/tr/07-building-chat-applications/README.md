@@ -69,7 +69,7 @@ Bir sohbet uygulaması geliştirirken, mevcut olanları değerlendirmek iyi bir 
 - **Daha kolay bakım**: Güncellemeler ve iyileştirmeler, çoğu API ve SDK’nın yeni sürüm yayınlandığında sadece kütüphane güncellemesi gerektirmesi sayesinde daha kolay yönetilir.
 - **En son teknolojilere erişim**: Geniş veri setleri üzerinde ince ayar yapılmış ve eğitilmiş modelleri kullanmak, uygulamanıza doğal dil yetenekleri kazandırır.
 
-Bir SDK veya API işlevselliğine erişim genellikle sağlanan hizmetleri kullanmak için izin almak anlamına gelir; bu da genellikle benzersiz bir anahtar veya kimlik doğrulama belirteci ile yapılır. Bunu nasıl yapacağımızı görmek için OpenAI Python Kütüphanesi’ni kullanacağız. Ayrıca bu dersi destekleyen [OpenAI için not defterinde](../../../07-building-chat-applications/python/oai-assignment.ipynb) veya [Azure OpenAI Hizmetleri için not defterinde](../../../07-building-chat-applications/python/aoai-assignment.ipynb) kendiniz deneyebilirsiniz.
+Bir SDK veya API işlevselliğine erişim genellikle sağlanan hizmetleri kullanmak için izin almak anlamına gelir; bu da genellikle benzersiz bir anahtar veya kimlik doğrulama belirteci ile yapılır. Bunu nasıl yapacağımızı görmek için OpenAI Python Kütüphanesi’ni kullanacağız. Ayrıca bu dersi destekleyen [OpenAI için not defterinde](python/oai-assignment.ipynb) veya [Azure OpenAI Hizmetleri için not defterinde](python/aoai-assignment.ipynb) kendiniz deneyebilirsiniz.
 
 ```python
 import os

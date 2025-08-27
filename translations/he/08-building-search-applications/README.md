@@ -159,7 +159,7 @@ az cognitiveservices account deployment create \
 
 ## הפתרון
 
-פתחו את [מחברת הפתרון](../../../08-building-search-applications/python/aoai-solution.ipynb) ב-GitHub Codespaces ופעלו לפי ההוראות במחברת Jupyter.
+פתחו את [מחברת הפתרון](python/aoai-solution.ipynb) ב-GitHub Codespaces ופעלו לפי ההוראות במחברת Jupyter.
 
 כשתריצו את המחברת, תתבקשו להזין שאילתה. תיבת הקלט תיראה כך:
 

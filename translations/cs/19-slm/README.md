@@ -167,7 +167,7 @@ Některé klíčové vlastnosti NVIDIA NIM:
 
 NIM je součástí NVIDIA AI Enterprise, jehož cílem je zjednodušit nasazení a provoz AI modelů a zajistit jejich efektivní běh na NVIDIA GPU.
 
-- Demo: Použití Nvidia NIM pro volání Phi-3.5-Vision-API [[Klikněte zde](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Použití Nvidia NIM pro volání Phi-3.5-Vision-API [[Klikněte zde](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inference Phi-3/3.5 v lokálním prostředí
@@ -190,11 +190,11 @@ Hugging Face Transformers je výkonná knihovna určená pro zpracování přiro
 Toto je nejčastěji používaná metoda, ale vyžaduje také GPU akceleraci. Scény jako Vision a MoE totiž vyžadují hodně výpočtů, které by na CPU bez kvantizace byly velmi omezené.
 
 
-- Demo: Použití Transformeru pro volání Phi-3.5-Instuct [Klikněte zde](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Použití Transformeru pro volání Phi-3.5-Instuct [Klikněte zde](python/phi35-instruct-demo.ipynb)
 
-- Demo: Použití Transformeru pro volání Phi-3.5-Vision [Klikněte zde](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Použití Transformeru pro volání Phi-3.5-Vision [Klikněte zde](python/phi35-vision-demo.ipynb)
 
-- Demo: Použití Transformeru pro volání Phi-3.5-MoE [Klikněte zde](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Použití Transformeru pro volání Phi-3.5-MoE [Klikněte zde](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma navržená tak, aby usnadnila spuštění velkých jazykových modelů (LLM) lokálně na vašem počítači. Podporuje různé modely jako Llama 3.1, Phi 3, Mistral a Gemma 2 a další. Platforma zjednodušuje proces tím, že balí modelové váhy, konfiguraci a data do jednoho balíčku, což uživatelům usnadňuje přizpůsobení a tvorbu vlastních modelů. Ollama je dostupná pro macOS, Linux a Windows. Je to skvělý nástroj, pokud chcete experimentovat s LLM nebo je nasadit bez závislosti na cloudových službách. Ollama je nejpřímější cesta, stačí spustit následující příkaz.

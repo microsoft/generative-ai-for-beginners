@@ -167,7 +167,7 @@ Hier einige wichtige Merkmale von NVIDIA NIM:
 
 NIM ist Teil von NVIDIA AI Enterprise, das darauf abzielt, die Bereitstellung und den Betrieb von KI-Modellen zu vereinfachen und sicherzustellen, dass sie effizient auf NVIDIA-GPUs laufen.
 
-- Demo: Verwendung von Nvidia NIM zum Aufrufen der Phi-3.5-Vision-API [[Klicken Sie hier](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Verwendung von Nvidia NIM zum Aufrufen der Phi-3.5-Vision-API [[Klicken Sie hier](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferenz Phi-3/3.5 in der lokalen Umgebung  
@@ -190,11 +190,11 @@ Hugging Face Transformers ist eine leistungsstarke Bibliothek für natürliche S
 Dies ist die am häufigsten genutzte Methode, erfordert jedoch GPU-Beschleunigung. Szenarien wie Vision und MoE benötigen viele Berechnungen, die auf der CPU ohne Quantisierung stark eingeschränkt sind.
 
 
-- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-Instruct [Klicken Sie hier](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-Instruct [Klicken Sie hier](python/phi35-instruct-demo.ipynb)
 
-- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-Vision [Klicken Sie hier](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-Vision [Klicken Sie hier](python/phi35-vision-demo.ipynb)
 
-- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-MoE [Klicken Sie hier](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Verwendung von Transformer zum Aufrufen von Phi-3.5-MoE [Klicken Sie hier](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ist eine Plattform, die es erleichtert, große Sprachmodelle (LLMs) lokal auf dem eigenen Rechner auszuführen. Sie unterstützt verschiedene Modelle wie Llama 3.1, Phi 3, Mistral und Gemma 2, unter anderem. Die Plattform vereinfacht den Prozess, indem sie Modellgewichte, Konfiguration und Daten in einem Paket bündelt, was es Nutzern erleichtert, eigene Modelle anzupassen und zu erstellen. Ollama ist für macOS, Linux und Windows verfügbar. Es ist ein großartiges Tool, wenn Sie mit LLMs experimentieren oder sie bereitstellen möchten, ohne auf Cloud-Dienste angewiesen zu sein. Ollama ist der direkteste Weg, Sie müssen nur die folgende Anweisung ausführen.

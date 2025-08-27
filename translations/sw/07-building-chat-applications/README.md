@@ -69,7 +69,7 @@ Unapojenga programu ya mazungumzo, hatua nzuri ya kwanza ni kutathmini kile kili
 - **Matengenezo rahisi**: Sasisho na maboresho ni rahisi kusimamia kwani API na SDK nyingi zinahitaji tu sasisho la maktaba wakati toleo jipya linapotolewa.
 - **Kupata teknolojia ya kisasa**: Kutumia mifano iliyoboreshwa na kufunzwa kwa seti kubwa za data kunatoa programu yako uwezo wa lugha asilia.
 
-Kupata huduma za SDK au API kawaida huhitaji ruhusa ya kutumia huduma zinazotolewa, mara nyingi kupitia ufunguo wa kipekee au tokeni ya uthibitishaji. Tutatumia Maktaba ya OpenAI Python kuchunguza mfano huu. Unaweza pia kujaribu mwenyewe katika [daftari la OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) au [daftari la Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) kwa somo hili.
+Kupata huduma za SDK au API kawaida huhitaji ruhusa ya kutumia huduma zinazotolewa, mara nyingi kupitia ufunguo wa kipekee au tokeni ya uthibitishaji. Tutatumia Maktaba ya OpenAI Python kuchunguza mfano huu. Unaweza pia kujaribu mwenyewe katika [daftari la OpenAI](python/oai-assignment.ipynb) au [daftari la Azure OpenAI Services](python/aoai-assignment.ipynb) kwa somo hili.
 
 ```python
 import os

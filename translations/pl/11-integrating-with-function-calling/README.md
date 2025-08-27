@@ -54,7 +54,7 @@ Wywoływanie funkcji to funkcja usługi Azure OpenAI, która pozwala pokonać na
 
 ## Ilustracja problemu na przykładzie scenariusza
 
-> Zalecamy użycie [dołączonego notatnika](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb), jeśli chcesz uruchomić poniższy scenariusz. Możesz też po prostu czytać dalej, ponieważ chcemy zilustrować problem, który funkcje mogą pomóc rozwiązać.
+> Zalecamy użycie [dołączonego notatnika](python/aoai-assignment.ipynb), jeśli chcesz uruchomić poniższy scenariusz. Możesz też po prostu czytać dalej, ponieważ chcemy zilustrować problem, który funkcje mogą pomóc rozwiązać.
 
 Spójrzmy na przykład ilustrujący problem z formatem odpowiedzi:
 

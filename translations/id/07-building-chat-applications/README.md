@@ -69,7 +69,7 @@ Saat membangun aplikasi chat, langkah awal yang baik adalah menilai apa yang sud
 - **Pemeliharaan lebih mudah**: Pembaruan dan perbaikan lebih mudah dikelola karena sebagian besar API dan SDK hanya memerlukan pembaruan pustaka saat versi baru dirilis.
 - **Akses ke teknologi terkini**: Memanfaatkan model yang telah disempurnakan dan dilatih dengan dataset besar memberikan kemampuan bahasa alami pada aplikasi Anda.
 
-Mengakses fungsi SDK atau API biasanya melibatkan izin untuk menggunakan layanan yang disediakan, sering melalui penggunaan kunci unik atau token otentikasi. Kita akan menggunakan OpenAI Python Library untuk melihat contohnya. Anda juga bisa mencobanya sendiri di [notebook OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) atau [notebook Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) untuk pelajaran ini.
+Mengakses fungsi SDK atau API biasanya melibatkan izin untuk menggunakan layanan yang disediakan, sering melalui penggunaan kunci unik atau token otentikasi. Kita akan menggunakan OpenAI Python Library untuk melihat contohnya. Anda juga bisa mencobanya sendiri di [notebook OpenAI](python/oai-assignment.ipynb) atau [notebook Azure OpenAI Services](python/aoai-assignment.ipynb) untuk pelajaran ini.
 
 ```python
 import os

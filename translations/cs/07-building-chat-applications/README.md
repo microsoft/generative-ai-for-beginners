@@ -69,7 +69,7 @@ Při tvorbě chatovací aplikace je dobrým prvním krokem zjistit, co už je k 
 - **Snazší údržba**: Aktualizace a vylepšení jsou jednodušší, protože většina API a SDK vyžaduje pouze aktualizaci knihovny při vydání nové verze.
 - **Přístup k nejmodernější technologii**: Využití modelů, které byly doladěny a trénovány na rozsáhlých datech, poskytuje vaší aplikaci schopnosti přirozeného jazyka.
 
-Přístup k funkcím SDK nebo API obvykle vyžaduje získání oprávnění k používání služeb, často prostřednictvím unikátního klíče nebo autentizačního tokenu. Prozkoumáme to pomocí OpenAI Python Library. Můžete si to také vyzkoušet sami v následujícím [notebooku pro OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) nebo [notebooku pro Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) k této lekci.
+Přístup k funkcím SDK nebo API obvykle vyžaduje získání oprávnění k používání služeb, často prostřednictvím unikátního klíče nebo autentizačního tokenu. Prozkoumáme to pomocí OpenAI Python Library. Můžete si to také vyzkoušet sami v následujícím [notebooku pro OpenAI](python/oai-assignment.ipynb) nebo [notebooku pro Azure OpenAI Services](python/aoai-assignment.ipynb) k této lekci.
 
 ```python
 import os

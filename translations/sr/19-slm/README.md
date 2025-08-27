@@ -161,7 +161,7 @@ GitHub Models је најдиректнији начин. Можете брзо 
 
 NIM је део NVIDIA AI Enterprise, који има за циљ да поједностави имплементацију и оперативизацију AI модела, обезбеђујући њихово ефикасно извођење на NVIDIA GPU-овима.
 
-- Demo: Коришћење Nividia NIM за позив Phi-3.5-Vision-API  [[Кликните овде](../../../19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Коришћење Nividia NIM за позив Phi-3.5-Vision-API  [[Кликните овде](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Инференција Phi-3/3.5 у локалном окружењу
@@ -183,11 +183,11 @@ Hugging Face Transformers је моћна библиотека намењена 
 
 Ово је најчешће коришћена метода, али захтева GPU акцелерацију. На крају крајева, сцене као што су Vision и MoE захтевају много рачунања, што ће бити веома ограничено на CPU-у ако нису квантовани.
 
-- Demo: Коришћење Transformer-а за позив Phi-3.5-Instuct [Кликните овде](../../../19-slm/python/phi35-instruct-demo.ipynb)
+- Demo: Коришћење Transformer-а за позив Phi-3.5-Instuct [Кликните овде](python/phi35-instruct-demo.ipynb)
 
-- Demo: Коришћење Transformer-а за позив Phi-3.5-Vision [Кликните овде](../../../19-slm/python/phi35-vision-demo.ipynb)
+- Demo: Коришћење Transformer-а за позив Phi-3.5-Vision [Кликните овде](python/phi35-vision-demo.ipynb)
 
-- Demo: Коришћење Transformer-а за позив Phi-3.5-MoE [Кликните овде](../../../19-slm/python/phi35_moe_demo.ipynb)
+- Demo: Коришћење Transformer-а за позив Phi-3.5-MoE [Кликните овде](python/phi35_moe_demo.ipynb)
 
 **Ollama**  
 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) је платформа дизајнирана да олакша покретање великих језичких модела (LLM) локално на вашем рачунару. Подржава различите моделе као што су Llama 3.1, Phi 3, Mistral и Gemma 2, између осталих. Платформа поједностављује процес тако што пакује тежине модела, конфигурацију и податке у један пакет, чинећи га приступачнијим за кориснике који желе да прилагоде и креирају своје моделе. Ollama је доступна за macOS, Linux и Windows. Одличан је алат ако желите да експериментишете или имплементирате LLM без ослањања на облачне услуге. Ollama је најдиректнији начин, потребно је само да извршите следећу наредбу.
