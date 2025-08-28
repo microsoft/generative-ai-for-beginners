@@ -54,7 +54,19 @@ jobs:
           # =====================================================================
           # Example: Translate to Spanish, French, German. Add -y to auto-confirm.
           translate -l "all" -y  # <--- MODIFY THIS LINE with your desired languages
-          # translate -l "zh tw hk fr ja ko pt es de fa pl hi" -y
+          # Recommendations for large file change spit the translation into batches
+          # translate -l "ar ur tl" -y
+          # translate -l "mr ne pa" -y
+          # translate -l "bn ru mo" -y
+          # translate -l "br it tr" -y
+          # translate -l "el th" -y
+          # translate -l "sv da no" -y 
+          # translate -l "fi nl he" -y
+          # translate -l "vi id ms" -y
+          translate -l "sw hu cs" -y
+          # translate -l "sk ro bg" -y
+          # translate -l "sr hr sl" -y
+          # translate -l "ja uk my" -y
 
       - name: Authenticate GitHub App
         id: generate_token
@@ -86,4 +98,5 @@ jobs:
           delete-branch: true
           add-paths: |
             translations/
+
             translated_images/
