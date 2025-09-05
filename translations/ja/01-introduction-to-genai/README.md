@@ -125,7 +125,7 @@ _(上の画像をクリックすると、このレッスンの動画がご覧い
 
 ## 課題
 
-[generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst)についてさらに調べて、まだ生成AIが使われていない分野を見つけてみてください。従来の方法と比べてどのように影響が変わるでしょうか？以前はできなかったことができるようになるのか、それともより速くできるのか？  
+[生成AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst)についてさらに調べて、まだ生成AIが使われていない分野を見つけてみてください。従来の方法と比べてどのように影響が変わるでしょうか？以前はできなかったことができるようになるのか、それともより速くできるのか？  
 あなたの理想のAIスタートアップについて300字程度でまとめ、「問題点」「AIの活用方法」「影響」、必要に応じてビジネスプランの見出しをつけて書いてみてください。
 
 この課題を終えたら、Microsoftのインキュベーターである[Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst)への応募も検討してみてください。AzureやOpenAIのクレジット、メンタリングなど多くの支援が受けられます。
@@ -146,4 +146,5 @@ _(上の画像をクリックすると、このレッスンの動画がご覧い
 Lesson 2に進み、さまざまなLLMタイプを[探索して比較する方法](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)を見ていきましょう！
 
 **免責事項**：  
+
 本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
