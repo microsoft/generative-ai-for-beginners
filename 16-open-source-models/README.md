@@ -72,7 +72,7 @@ If working on a specific use case, searching for fine-tuned versions that are fo
 
 ## Next Steps
 
-The best part about open models is that you can get started working with them pretty quickly. Check out the [Azure AI Studio Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), which features a specific Hugging Face collection with these models we discussed here.
+The best part about open models is that you can get started working with them pretty quickly. Check out the [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), which features a specific Hugging Face collection with these models we discussed here.
 
 ## Learning does not stop here, continue the Journey
 
