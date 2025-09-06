@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # LLMプロバイダーの選択と設定 🔑
 
-課題は、OpenAI、Azure、Hugging Faceなどのサポートされているサービスプロバイダーを通じて、1つ以上の大規模言語モデル（LLM）デプロイメントで動作するように設定することもできます。これらは、適切な認証情報（APIキーやトークン）を使ってプログラムからアクセスできる_ホスト型エンドポイント_（API）を提供します。本コースでは、以下のプロバイダーについて説明します。
+課題は、OpenAI、Azure、Hugging Faceなどのサポートされているサービスプロバイダーを通じて、1つ以上の大規模言語モデル（LLM）デプロイメントで動作するように設定することもできます。これらは、適切な認証情報（APIキーやトークン）を使ってプログラムからアクセスできる _ホスト型エンドポイント_ （API）を提供します。本コースでは、以下のプロバイダーについて説明します。
 
  - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst)：GPTシリーズをはじめとする多様なモデルを提供
  - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)：エンタープライズ向けに特化したOpenAIモデル
@@ -24,7 +24,7 @@ CO_OP_TRANSLATOR_METADATA:
 | [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [料金表](https://huggingface.co/pricing) | [アクセストークン](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chatは利用できるモデルが限定的](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-以下の手順に従って、このリポジトリを各プロバイダーで使えるように_設定_してください。特定のプロバイダーが必要な課題には、ファイル名に次のいずれかのタグが含まれています。
+以下の手順に従って、このリポジトリを各プロバイダーで使えるように _設定_ してください。特定のプロバイダーが必要な課題には、ファイル名に次のいずれかのタグが含まれています。
 
 - `aoai` - Azure OpenAIのエンドポイントとキーが必要
 - `oai` - OpenAIのエンドポイントとキーが必要
@@ -55,7 +55,7 @@ CO_OP_TRANSLATOR_METADATA:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. 下記のコマンドでそのファイルを`.env`にコピーします。このファイルは_gitignore_されているため、秘密情報が安全に保たれます。
+2. 下記のコマンドでそのファイルを`.env`にコピーします。このファイルは _gitignore_ されているため、秘密情報が安全に保たれます。
 
    ```bash
    cp .env.copy .env
@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 3. 次のセクションの説明に従い、値（`=`の右側のプレースホルダー）を入力してください。
 
-4. （オプション）GitHub Codespacesを使う場合は、環境変数をこのリポジトリに紐づく_Codespaces secrets_として保存することもできます。その場合、ローカルの.envファイルを設定する必要はありません。**ただし、この方法はGitHub Codespacesを使う場合のみ有効です。** Docker Desktopを使う場合は、.envファイルの設定が必要です。
+4. （オプション）GitHub Codespacesを使う場合は、環境変数をこのリポジトリに紐づく _Codespaces secrets_ として保存することもできます。その場合、ローカルの.envファイルを設定する必要はありません。**ただし、この方法はGitHub Codespacesを使う場合のみ有効です。** Docker Desktopを使う場合は、.envファイルの設定が必要です。
 
 ## `.env`ファイルの値を入力
 
@@ -75,8 +75,8 @@ CO_OP_TRANSLATOR_METADATA:
 | OPENAI_API_KEY | 非Azure OpenAIエンドポイント用の認証キー |
 | AZURE_OPENAI_API_KEY | Azure OpenAIサービス用の認証キー |
 | AZURE_OPENAI_ENDPOINT | Azure OpenAIリソースのデプロイ済みエンドポイント |
-| AZURE_OPENAI_DEPLOYMENT | _テキスト生成_モデルのデプロイメント名 |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _テキスト埋め込み_モデルのデプロイメント名 |
+| AZURE_OPENAI_DEPLOYMENT | _テキスト生成_ モデルのデプロイメント名 |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _テキスト埋め込み_ モデルのデプロイメント名 |
 | | |
 
 ※最後の2つのAzure OpenAI変数は、それぞれチャット補完（テキスト生成）とベクトル検索（埋め込み）のデフォルトモデルを表します。設定方法は該当する課題で案内します。
@@ -103,10 +103,10 @@ Azure OpenAIのエンドポイントとキーは[Azureポータル](https://port
 1. 上記の手順で[Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst)に**リソースから**アクセス
 1. サイドバー（左）で**デプロイ**タブをクリックし、現在デプロイされているモデルを確認
 1. 希望するモデルがデプロイされていない場合は、**新しいデプロイの作成**でデプロイ
-1. _テキスト生成_モデルが必要です（推奨：**gpt-35-turbo**）
-1. _テキスト埋め込み_モデルが必要です（推奨：**text-embedding-ada-002**）
+1. _テキスト生成_ モデルが必要です（推奨：**gpt-35-turbo**）
+1. _テキスト埋め込み_ モデルが必要です（推奨：**text-embedding-ada-002**）
 
-環境変数には、_デプロイメント名_を入力してください。特に変更していなければ、モデル名と同じになっているはずです。例として、次のようになります。
+環境変数には、_デプロイメント名_ を入力してください。特に変更していなければ、モデル名と同じになっているはずです。例として、次のようになります。
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
@@ -126,4 +126,5 @@ Hugging Faceのトークンは、プロフィールの[アクセストークン]
 ---
 
 **免責事項**：  
+
 本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な表現が含まれる場合があります。原文（元の言語の文書）が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用によって生じたいかなる誤解や誤認についても、当方は責任を負いかねます。
