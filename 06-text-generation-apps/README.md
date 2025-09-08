@@ -646,7 +646,7 @@ What does the concept temperature do?
 
 ## 🚀 Challenge
 
-When working on the assignment, try to vary the temperature, try set it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
+When working on the assignment, try to vary the temperature, try setting it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most. What value works best for your app?
 
 ## Great Work! Continue Your Learning
 

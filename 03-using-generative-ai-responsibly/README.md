@@ -60,7 +60,7 @@ Harmful content can be defined as:
 
 - Providing instructions or encouraging self-harm or harm to certain groups.
 - Hateful or demeaning content.
-- Guiding planning any type of attack or violent acts.
+- Guiding the planning of any type of attack or violent acts.
 - Providing instructions on how to find illegal content or commit illegal acts.
 - Displaying sexually explicit content.
 
@@ -124,7 +124,7 @@ A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmfu
 
 ## 🚀 Challenge
 
-Read up on [Azure AI Content Saftey](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
+Read up on [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
 
 ## Great Work, Continue Your Learning
 
