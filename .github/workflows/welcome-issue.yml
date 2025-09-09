@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add Label and thanks comment to Issue
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           script: |
             const issueAuthor = context.payload.sender.login
