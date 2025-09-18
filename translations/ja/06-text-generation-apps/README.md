@@ -541,15 +541,16 @@ Shopping List:
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
-1. 新しいリクエストを作成しますが、最初のプロンプトで指定したトークン数も考慮して、今回は `max_tokens` を1200に設定します。
+     
+  1. 新しいリクエストを作成しますが、最初のプロンプトで指定したトークン数も考慮して、今回は `max_tokens` を1200に設定します。
 
-```python
+     ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-このコードを実行すると、次のような出力が得られます：
+     このコードを実行すると、次のような出力が得られます：
 
-```output
+     ```output
      No of recipes (for example, 5): 2
      List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
      Filter (for example, vegetarian, vegan, or gluten-free): sugar
@@ -576,21 +577,21 @@ Shopping List:
      
 > 注意：Azureの場合は、以下の環境変数を設定する必要があります：
 
-     ```bash
+  ```bash
      OPENAI_API_TYPE=azure
      OPENAI_API_VERSION=2023-05-15
      OPENAI_API_BASE=<replace>
-     ```
+  ```
 
      コード内では、環境変数を次のように読み込みます：
 
-     ```python
+  ```python
      from dotenv import load_dotenv
 
      load_dotenv()
 
      openai.api_key = os.environ["OPENAI_API_KEY"]
-     ```
+  ```
 
 - **トークンの長さについて**。生成したいテキストに必要なトークン数を考慮しましょう。トークンはコストがかかるため、可能な限り節約することが望ましいです。例えば、プロンプトの表現を工夫してトークン数を減らせないか検討してみてください。
 
@@ -667,4 +668,5 @@ temperatureの概念は何をするものですか？
 次のレッスン7では、[チャットアプリケーションの作り方](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)を学びます！
 
 **免責事項**：  
+
 本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
