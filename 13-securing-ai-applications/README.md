@@ -1,6 +1,6 @@
 # Securing Your Generative AI Applications
 
-[![Securing Your Generative AI Applications](./images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst)
+[![Securing Your Generative AI Applications](./images/13-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://www.youtube.com/watch?v=m0vXwsx5DNg)
 
 ## Introduction
 
