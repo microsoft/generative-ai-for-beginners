@@ -273,9 +273,9 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
   元の画像はプール付きラウンジだけですが、最終的な画像にはフラミンゴが追加されています。
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="./images/sunlit_lounge.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="./images/mask.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="./images/sunlit_lounge_result.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../09-building-image-applications/images/sunlit_lounge.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../09-building-image-applications/images/mask.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../09-building-image-applications/images/sunlit_lounge_result.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **バリエーションを作成する**：既存の画像をもとにバリエーションを作成することもできます。画像とテキストプロンプトを指定し、以下のようなコードでバリエーションを生成します。
@@ -485,4 +485,5 @@ except openai.BadRequestError as err:
 ---
 
 **免責事項**：  
+
 本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な表現が含まれる場合があります。原文（元の言語の文書）が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用によって生じたいかなる誤解や誤認についても、当方は責任を負いかねます。
