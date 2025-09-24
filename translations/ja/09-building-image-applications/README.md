@@ -234,13 +234,13 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
 
 画像を生成するコードをもう少し詳しく見てみましょう。
 
-    ```python
-      generation_response = client.images.generate(
-                                prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                                size='1024x1024', n=1,
-                                model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                            )
-    ```
+   ```python
+     generation_response = client.images.generate(
+                               prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+                               size='1024x1024', n=1,
+                               model=os.environ['AZURE_OPENAI_DEPLOYMENT']
+                           )
+   ```
 
 - **prompt**は、画像生成に使うテキストプロンプトです。ここでは「馬に乗ったウサギが、霧のかかった水仙の咲く草原でペロペロキャンディを持っている」というプロンプトを使っています。
 - **size**は生成する画像のサイズです。ここでは1024x1024ピクセルの画像を生成しています。
@@ -260,15 +260,15 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
 
 以下はGPT Imageを使った例です。
 
-    ```python
-    response = client.images.edit(
-        model="gpt-image-1",
-        image=open("sunlit_lounge.png", "rb"),
-        mask=open("mask.png", "rb"),
-        prompt="A sunlit indoor lounge area with a pool containing a flamingo"
-    )
-    image_url = response.data[0].url
-    ```
+   ```python
+   response = client.images.edit(
+       model="gpt-image-1",
+       image=open("sunlit_lounge.png", "rb"),
+       mask=open("mask.png", "rb"),
+       prompt="A sunlit indoor lounge area with a pool containing a flamingo"
+   )
+   image_url = response.data[0].url
+   ```
 
   元の画像はプール付きラウンジだけですが、最終的な画像にはフラミンゴが追加されています。
 
@@ -485,4 +485,5 @@ except openai.BadRequestError as err:
 ---
 
 **免責事項**：  
+
 本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な表現が含まれる場合があります。原文（元の言語の文書）が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用によって生じたいかなる誤解や誤認についても、当方は責任を負いかねます。
