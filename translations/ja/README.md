@@ -52,7 +52,7 @@ Microsoft Cloud Advocatesによる21のレッスンで、生成AIアプリケー
 - PythonまたはTypeScriptの基本知識があると便利です - \*初心者の方は以下の[Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst)および[TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)コースをご覧ください
 - GitHubアカウントを作成し、この[リポジトリ全体をフォーク](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst)してください
 
-開発環境のセットアップをサポートするために、**[コースセットアップ](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)**レッスンを作成しました。
+開発環境のセットアップをサポートするために、**[コースセットアップ](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** レッスンを作成しました。
 
 後で簡単に見つけられるように、このリポジトリを[スター (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)してください。
 
