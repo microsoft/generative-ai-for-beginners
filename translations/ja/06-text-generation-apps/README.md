@@ -240,65 +240,65 @@ openaiのセットアップと設定がわかったので、最初のテキス�
 このプロンプトに対して、以下のような回答が得られるかもしれません：
 
 ```output
-1. Roasted Chicken and Vegetables:
-Ingredients:
-- 4 chicken thighs
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 2 tablespoons olive oil
-- 2 cloves garlic, minced
-- 1 teaspoon dried thyme
-- 1 teaspoon dried oregano
-- Salt and pepper, to taste
+1. ローストチキンと野菜：
+材料：
+- 鶏もも肉 4枚
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- オリーブオイル 大さじ2
+- にんにく 2かけ（みじん切り）
+- 乾燥タイム 小さじ1
+- 乾燥オレガノ 小さじ1
+- 塩こしょう 適量
 
-2. Chicken and Potato Stew:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+2. チキンとじゃがいものシチュー：
+材料：
+- オリーブオイル 大さじ2
+- 玉ねぎ 1個（角切り）
+- にんにく 2かけ（みじん切り）
+- 鶏むね肉 2枚（角切り）
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- 乾燥オレガノ 小さじ1
+- 乾燥タイム 小さじ1
+- チキンブロス 1カップ
+- 塩こしょう 適量
 
-3. Chicken and Potato Bake:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+3. チキンとじゃがいものベイク：
+材料：
+-オリーブオイル 大さじ2
+- 鶏むね肉 2枚（角切り）
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- 玉ねぎ 1個（角切り）
+- ニンニク 2かけ（みじん切り）
+- 乾燥オレガノ 小さじ1
+- 乾燥タイム 小さじ1
+- チキンブロス 1カップ
+- 塩こしょう 適量
 
-4. Chicken and Potato Soup:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 4 cups chicken broth
-- Salt and pepper, to taste
+4. チキンとポテトのスープ：
+材料：
+- オリーブオイル 大さじ2
+- 玉ねぎ 1個（角切り）
+- ニンニク 2かけ（みじん切り）
+- 鶏むね肉 2枚（角切り）
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- 乾燥オレガノ 小さじ1
+- 乾燥タイム 小さじ1
+- チキンブロス 4カップ
+- 塩こしょう 適量
 
-5. Chicken and Potato Hash:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 2 cloves garlic, minced
-- 1 teaspoon dried oregano
+5. チキンとポテトのハッシュ：
+材料：
+-オリーブオイル 大さじ2
+- 鶏むね肉 2枚（角切り）
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- 玉ねぎ 1個（さいの目切り）
+- ニンニク 2かけ（みじん切り）
+- 乾燥オレガノ 小さじ1
 ```
 
 この結果は素晴らしいですね。何を作るか決まりました。ここからさらに便利にするには：
