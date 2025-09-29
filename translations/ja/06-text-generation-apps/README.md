@@ -315,68 +315,68 @@ Ingredients:
 すると、以下のような新しい結果が得られます：
 
 ```output
-1. Roasted Chicken and Vegetables:
-Ingredients:
-- 4 chicken thighs
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 2 tablespoons olive oil
-- 1 teaspoon dried thyme
-- 1 teaspoon dried oregano
-- Salt and pepper, to taste
+1. ローストチキンと野菜：
+材料：
+- 鶏もも肉 4枚
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- オリーブオイル 大さじ2
+- 乾燥タイム 小さじ1
+- 乾燥オレガノ 小さじ1
+- 塩こしょう 適量
 
-2. Chicken and Potato Stew:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+2. チキンとポテトのシチュー：
+材料：
+- オリーブオイル 大さじ2
+- 玉ねぎ 1個（角切り）
+- 鶏むね肉 2枚（角切り）
+- じゃがいも 2個（角切り）
+- にんじん 2本（角切り）
+- 乾燥オレガノ 小さじ1
+- 乾燥タイム 小さじ1
+- チキンブロス 1カップ
+- 塩こしょう 適量
 
-3. Chicken and Potato Bake:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 1 cup chicken broth
-- Salt and pepper, to taste
+3. チキンとポテトのベイク：
+材料：
+- オリーブオイル 大さじ2
+- 鶏むね肉 2枚（角切り）
+- 2ジャガイモ（角切り）
+- ニンジン2本（角切り）
+- 玉ねぎ1個（角切り）
+- 乾燥オレガノ小さじ1
+- 乾燥タイム小さじ1
+- チキンブロス1カップ
+- 塩コショウ適量
 
-4. Chicken and Potato Soup:
-Ingredients:
-- 2 tablespoons olive oil
-- 1 onion, diced
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 teaspoon dried oregano
-- 1 teaspoon dried thyme
-- 4 cups chicken broth
-- Salt and pepper, to taste
+4. チキンとポテトのスープ：
+材料：
+- オリーブオイル大さじ2
+- 玉ねぎ1個（角切り）
+- 鶏むね肉2枚（角切り）
+- ジャガイモ2個（角切り）
+- ニンジン2本（角切り）
+- 乾燥オレガノ小さじ1
+- 乾燥タイム小さじ1
+- チキンブロス4カップ
+- 塩コショウ適量
 
-5. Chicken and Potato Hash:
-Ingredients:
-- 2 tablespoons olive oil
-- 2 chicken breasts, cut into cubes
-- 2 potatoes, cut into cubes
-- 2 carrots, cut into cubes
-- 1 onion, diced
-- 1 teaspoon dried oregano
+5. チキンとポテトのハッシュ：
+材料：
+- オリーブオイル大さじ2
+- 鶏むね肉2枚（角切り）
+- ジャガイモ2個（角切り）
+- ニンジン2本（角切り）
+- 1玉ねぎ（さいの目切り）
+- 乾燥オレガノ 小さじ1
 
-Shopping List:
-- Olive oil
-- Onion
-- Thyme
-- Oregano
-- Salt
-- Pepper
+材料：
+- オリーブオイル
+- 玉ねぎ
+- タイム
+- オレガノ
+- 塩
+- コショウ
 ```
 
 にんにくを含まない5つのレシピと、家にある材料を考慮した買い物リストが表示されます。
