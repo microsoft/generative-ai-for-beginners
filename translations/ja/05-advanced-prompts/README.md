@@ -189,7 +189,7 @@ def home():
 
 ご覧の通り、結果は大きく異なっています。
 
-> Note, that there are more parameters you can change to vary the output, like top-k, top-p, repetition penalty, length penalty and diversity penalty but these are outside the scope of this curriculum.
+> 注記、出力を変化させるために変更できるパラメータは他にもあります。たとえば、top-k、top-p、繰り返しペナルティ、長さペナルティ、多様性ペナルティなどですが、これらはこのカリキュラムの範囲外です。
 
 ## 良いプラクティス
 
