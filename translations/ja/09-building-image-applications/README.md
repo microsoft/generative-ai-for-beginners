@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ef74ad58fc01f7ad80788f79505f9816",
-  "translation_date": "2025-08-26T15:12:07+00:00",
+  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
+  "translation_date": "2025-09-29T21:33:19+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "ja"
 }
@@ -11,90 +11,89 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![画像生成アプリケーションの構築](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.ja.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
-LLMはテキスト生成だけではありません。テキストの説明から画像を生成することも可能です。画像というモダリティを活用することで、医療技術、建築、観光、ゲーム開発など、さまざまな分野で非常に役立ちます。この章では、最も人気のある画像生成モデルであるDALL-EとMidjourneyについて見ていきます。
+LLMにはテキスト生成以外にも多くの可能性があります。テキストの説明から画像を生成することも可能です。画像をモダリティとして活用することで、MedTech、建築、観光、ゲーム開発など、さまざまな分野で非常に役立つことがあります。この章では、最も人気のある画像生成モデルであるDALL-EとMidjourneyについて学びます。
 
 ## はじめに
 
-このレッスンでは、以下の内容を扱います。
+このレッスンでは以下を学びます：
 
-- 画像生成とは何か、なぜ役立つのか
-- DALL-EとMidjourneyとは何か、それらがどのように動作するのか
-- 画像生成アプリをどのように作るか
+- 画像生成とその有用性
+- DALL-EとMidjourneyの概要と仕組み
+- 画像生成アプリの構築方法
 
 ## 学習目標
 
-このレッスンを終えた後、あなたは以下のことができるようになります。
+このレッスンを完了すると、以下ができるようになります：
 
-- 画像生成アプリケーションを構築できる
-- メタプロンプトでアプリケーションの境界を定義できる
-- DALL-EとMidjourneyを使いこなせる
+- 画像生成アプリケーションを構築する
+- メタプロンプトを使用してアプリケーションの境界を定義する
+- DALL-EとMidjourneyを活用する
 
-## なぜ画像生成アプリケーションを作るのか？
+## なぜ画像生成アプリケーションを構築するのか？
 
-画像生成アプリケーションは、生成AIの可能性を探る素晴らしい方法です。例えば、以下のような用途があります。
+画像生成アプリケーションは、生成AIの能力を探求する素晴らしい方法です。以下のような用途で活用できます：
 
-- **画像編集や合成**：さまざまな用途のために画像を生成できます。例えば画像編集や画像合成などです。
+- **画像編集と合成**：画像編集や画像合成など、さまざまな用途に画像を生成できます。
 
-- **多様な業界での応用**：医療技術、観光、ゲーム開発など、さまざまな業界向けの画像生成にも活用できます。
+- **多様な業界への応用**：MedTech、観光、ゲーム開発など、さまざまな業界で画像を生成するために使用できます。
 
-## シナリオ：Edu4All
+## シナリオ: Edu4All
 
-このレッスンでは、引き続き私たちのスタートアップ「Edu4All」を題材に進めます。生徒たちは自分たちの課題のために画像を作成します。どんな画像を作るかは生徒次第ですが、自分の童話のイラストを描いたり、新しいキャラクターを作ったり、アイデアやコンセプトを視覚化するのに役立てたりできます。
+このレッスンでは、引き続きスタートアップ「Edu4All」と取り組みます。学生たちは自分たちの評価のために画像を作成します。どのような画像を作成するかは学生次第ですが、自分たちの童話のイラストを作成したり、新しいキャラクターを創造したり、アイデアや概念を視覚化するのに役立てることができます。
 
-例えば、クラスで記念碑について学んでいる場合、Edu4Allの生徒たちは次のような画像を生成できます。
+例えば、学生たちが授業でモニュメントについて学んでいる場合、以下のような画像を生成できます：
 
-![Edu4Allスタートアップ、記念碑の授業、エッフェル塔](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.ja.png)
+![Edu4Allスタートアップ、モニュメントの授業、エッフェル塔](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.ja.png)
 
-このようなプロンプトを使って
+以下のようなプロンプトを使用して：
 
-> 「朝日が差し込むエッフェル塔のそばにいる犬」
+> 「早朝の陽光の中でエッフェル塔の隣にいる犬」
 
 ## DALL-EとMidjourneyとは？
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst)と[Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst)は、最も人気のある画像生成モデルの2つで、プロンプトを使って画像を生成できます。
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst)と[Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst)は、最も人気のある画像生成モデルであり、プロンプトを使用して画像を生成することができます。
 
 ### DALL-E
 
-まずはDALL-Eから見ていきましょう。DALL-Eはテキストの説明から画像を生成する生成AIモデルです。
+まずDALL-Eについて説明します。これはテキストの説明から画像を生成する生成AIモデルです。
 
-> [DALL-Eは、CLIPとdiffused attentionという2つのモデルを組み合わせたものです](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)。
+> [DALL-EはCLIPと拡散注意の2つのモデルの組み合わせです](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)。
 
 - **CLIP**は、画像やテキストから数値表現（埋め込み）を生成するモデルです。
 
-- **Diffused attention**は、埋め込みから画像を生成するモデルです。DALL-Eは画像とテキストのデータセットで学習されており、テキストの説明から画像を生成できます。例えば、帽子をかぶった猫や、モヒカンの犬の画像を生成することができます。
+- **拡散注意**は、埋め込みから画像を生成するモデルです。DALL-Eは画像とテキストのデータセットで訓練されており、テキストの説明から画像を生成することができます。例えば、DALL-Eを使用して帽子をかぶった猫やモヒカンの犬の画像を生成することができます。
 
 ### Midjourney
 
-MidjourneyもDALL-Eと同様に、テキストプロンプトから画像を生成します。Midjourneyでも「帽子をかぶった猫」や「モヒカンの犬」といったプロンプトで画像を作成できます。
+MidjourneyはDALL-Eと似た方法で動作し、テキストプロンプトから画像を生成します。Midjourneyも「帽子をかぶった猫」や「モヒカンの犬」のようなプロンプトを使用して画像を生成することができます。
 
-![Midjourneyで生成された画像、機械仕掛けのハト](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_画像提供: Wikipedia、Midjourneyで生成_
+![Midjourneyによって生成された画像、機械的な鳩](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_画像提供: Wikipedia、Midjourneyによって生成された画像_
 
-## DALL-EとMidjourneyはどう動くのか
+## DALL-EとMidjourneyの仕組み
 
-まず[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst)について。DALL-Eはトランスフォーマーアーキテクチャに基づく生成AIモデルで、_オートレグレッシブトランスフォーマー_ を採用しています。
+まず、[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst)について説明します。DALL-Eはトランスフォーマーアーキテクチャに基づく生成AIモデルで、_自己回帰型トランスフォーマー_を使用しています。
 
-_オートレグレッシブトランスフォーマー_ は、テキストの説明から画像を生成する際に、一度に1ピクセルずつ生成し、生成したピクセルを使って次のピクセルを作り出します。ニューラルネットワークの複数の層を通して、画像が完成するまでこのプロセスを繰り返します。
+_自己回帰型トランスフォーマー_は、モデルがテキストの説明から画像を生成する方法を定義します。1ピクセルずつ生成し、生成されたピクセルを使用して次のピクセルを生成します。このプロセスはニューラルネットワークの複数の層を通過し、画像が完成するまで続きます。
 
-この仕組みにより、DALL-Eは生成する画像の属性やオブジェクト、特徴などをコントロールできます。ただし、DALL-E 2や3では、より細かく画像を制御できるようになっています。
+このプロセスにより、DALL-Eは生成する画像の属性、オブジェクト、特徴などを制御します。ただし、DALL-E 2や3では生成画像の制御がさらに向上しています。
 
-## 初めての画像生成アプリケーションを作る
+## 初めての画像生成アプリケーションの構築
 
-画像生成アプリケーションを作るには何が必要でしょうか？以下のライブラリが必要です。
+画像生成アプリケーションを構築するには、以下のライブラリが必要です：
 
-- **python-dotenv**：このライブラリを使うことで、秘密情報を _.env_ ファイルに保存し、コードから分離できます。
-- **openai**：OpenAI APIとやり取りするためのライブラリです。
-- **pillow**：Pythonで画像を扱うためのライブラリです。
-- **requests**：HTTPリクエストを送るためのライブラリです。
+- **python-dotenv**：秘密情報をコードから離れた_.env_ファイルに保存するために推奨されるライブラリ。
+- **openai**：OpenAI APIとやり取りするために使用するライブラリ。
+- **pillow**：Pythonで画像を操作するためのライブラリ。
+- **requests**：HTTPリクエストを行うためのライブラリ。
 
 ## Azure OpenAIモデルの作成とデプロイ
 
-まだ作成していない場合は、[Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)の手順に従って
-Azure OpenAIリソースとモデルを作成してください。モデルにはDALL-E 3を選択します。
+まだ行っていない場合は、[Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)ページの指示に従ってAzure OpenAIリソースとモデルを作成してください。モデルにはDALL-E 3を選択します。
 
 ## アプリの作成
 
-1. _.env_ ファイルを作成し、以下の内容を記載します。
+1. 以下の内容で_.env_ファイルを作成します：
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
@@ -104,7 +103,7 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
 
    この情報はAzure OpenAI Foundry Portalの「Deployments」セクションで確認できます。
 
-1. 上記のライブラリを _requirements.txt_ ファイルにまとめて記載します。
+1. 上記のライブラリを以下のように_requirements.txt_ファイルにまとめます：
 
    ```text
    python-dotenv
@@ -113,7 +112,7 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
    requests
    ```
 
-1. 次に、仮想環境を作成し、ライブラリをインストールします。
+1. 次に、仮想環境を作成し、ライブラリをインストールします：
 
    ```bash
    python3 -m venv venv
@@ -121,14 +120,14 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
    pip install -r requirements.txt
    ```
 
-   Windowsの場合は、以下のコマンドで仮想環境を作成・有効化します。
+   Windowsの場合、以下のコマンドを使用して仮想環境を作成し、アクティブ化します：
 
    ```bash
    python3 -m venv venv
    venv\Scripts\activate.bat
    ```
 
-1. _app.py_ というファイルに以下のコードを追加します。
+1. _app.py_というファイルに以下のコードを追加します：
 
     ```python
     import openai
@@ -180,9 +179,9 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
         print(err)
    ```
 
-このコードについて説明します。
+このコードを説明します：
 
-- まず、必要なライブラリ（OpenAI、dotenv、requests、Pillow）をインポートします。
+- まず、OpenAIライブラリ、dotenvライブラリ、requestsライブラリ、Pillowライブラリなど必要なライブラリをインポートします。
 
   ```python
   import openai
@@ -192,7 +191,7 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
   import dotenv
   ```
 
-- 次に、_.env_ ファイルから環境変数を読み込みます。
+- 次に、_.env_ファイルから環境変数を読み込みます。
 
   ```python
   # import dotenv
@@ -210,7 +209,7 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
       )
   ```
 
-- 次に、画像を生成します。
+- 次に、画像を生成します：
 
   ```python
   # Create an image by using the image generation API
@@ -221,18 +220,18 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
                       )
   ```
 
-  上記のコードは、生成された画像のURLを含むJSONオブジェクトを返します。このURLを使って画像をダウンロードし、ファイルとして保存できます。
+  上記のコードは生成された画像のURLを含むJSONオブジェクトを返します。このURLを使用して画像をダウンロードし、ファイルに保存できます。
 
-- 最後に、画像を開いて標準の画像ビューアで表示します。
+- 最後に、画像を開き、標準の画像ビューアで表示します：
 
   ```python
   image = Image.open(image_path)
   image.show()
   ```
 
-### 画像生成コードの詳細
+### 画像生成の詳細
 
-画像を生成するコードをもう少し詳しく見てみましょう。
+画像を生成するコードを詳しく見てみましょう：
 
    ```python
      generation_response = client.images.generate(
@@ -242,23 +241,23 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
                            )
    ```
 
-- **prompt**は、画像生成に使うテキストプロンプトです。ここでは「馬に乗ったウサギが、霧のかかった水仙の咲く草原でペロペロキャンディを持っている」というプロンプトを使っています。
-- **size**は生成する画像のサイズです。ここでは1024x1024ピクセルの画像を生成しています。
-- **n**は生成する画像の枚数です。ここでは2枚生成しています。
-- **temperature**は、生成AIモデルの出力のランダム性を制御するパラメータです。0から1の値で、0は決定的、1はランダムな出力になります。デフォルト値は0.7です。
+- **prompt**：画像を生成するために使用されるテキストプロンプト。この場合、「霧の立ち込める牧草地でスイセンが育つ場所で、馬に乗ったウサギがキャンディを持っている」というプロンプトを使用しています。
+- **size**：生成される画像のサイズ。この場合、1024x1024ピクセルの画像を生成しています。
+- **n**：生成される画像の数。この場合、2枚の画像を生成しています。
+- **temperature**：生成AIモデルの出力のランダム性を制御するパラメータ。温度は0から1の値で、0は出力が決定的であることを意味し、1は出力がランダムであることを意味します。デフォルト値は0.7です。
 
-画像に関しては、他にもできることがあり、次のセクションで紹介します。
+画像に関してさらにできることについては、次のセクションで説明します。
 
 ## 画像生成の追加機能
 
-ここまで、Pythonの数行で画像を生成できることを見てきました。しかし、画像に対してできることは他にもあります。
+これまでPythonで数行のコードを使用して画像を生成する方法を見てきました。しかし、画像に関してさらにできることがあります。
 
-例えば、以下のことも可能です。
+以下のことも可能です：
 
-- **編集を行う**：既存の画像、マスク、プロンプトを指定することで画像を変更できます。例えば、画像の一部に何かを追加することができます。ウサギの画像に帽子を追加する場合、画像とマスク（変更したい部分を指定）と、何をするかを記述したテキストプロンプトを用意します。
+- **編集を行う**：既存の画像、マスク、プロンプトを提供することで画像を変更できます。例えば、画像の一部に何かを追加することができます。ウサギの画像を想像してみてください。ウサギに帽子を追加することができます。これを行うには、画像、マスク（変更する部分を特定するもの）、変更内容を指示するテキストプロンプトを提供します。
 > 注意：これはDALL-E 3ではサポートされていません。
 
-以下はGPT Imageを使った例です。
+以下はGPT Imageを使用した例です：
 
    ```python
    response = client.images.edit(
@@ -270,15 +269,15 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
    image_url = response.data[0].url
    ```
 
-  元の画像はプール付きラウンジだけですが、最終的な画像にはフラミンゴが追加されています。
+  基本画像にはプール付きのラウンジのみが含まれますが、最終画像にはフラミンゴが追加されます：
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../09-building-image-applications/images/sunlit_lounge.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../09-building-image-applications/images/mask.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../09-building-image-applications/images/sunlit_lounge_result.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.ja.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.ja.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.ja.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
-- **バリエーションを作成する**：既存の画像をもとにバリエーションを作成することもできます。画像とテキストプロンプトを指定し、以下のようなコードでバリエーションを生成します。
+- **バリエーションを作成する**：既存の画像を使用してバリエーションを作成することができます。バリエーションを作成するには、画像とテキストプロンプトを提供し、以下のようなコードを使用します：
 
   ```python
   response = openai.Image.create_variation(
@@ -289,23 +288,23 @@ Azure OpenAIリソースとモデルを作成してください。モデルに�
   image_url = response['data'][0]['url']
   ```
 
-  > 注意：これはOpenAIのみでサポートされています
+  > 注意：これはOpenAIでのみサポートされています。
 
-## Temperature（温度）について
+## 温度
 
-Temperatureは、生成AIモデルの出力のランダム性を制御するパラメータです。0から1の値で、0は決定的、1はランダムな出力になります。デフォルト値は0.7です。
+温度は生成AIモデルの出力のランダム性を制御するパラメータです。温度は0から1の値で、0は出力が決定的であることを意味し、1は出力がランダムであることを意味します。デフォルト値は0.7です。
 
-Temperatureの働きを例で見てみましょう。同じプロンプトを2回実行します。
+以下のプロンプトを2回実行して温度の動作を確認してみましょう：
 
-> プロンプト：「馬に乗ったウサギが、霧のかかった水仙の咲く草原でペロペロキャンディを持っている」
+> プrompt : 「霧の立ち込める牧草地でスイセンが育つ場所で、馬に乗ったウサギがキャンディを持っている」
 
-![馬に乗ったウサギがペロペロキャンディを持っている画像、バージョン1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.ja.png)
+![馬に乗ったウサギがキャンディを持っている画像、バージョン1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.ja.png)
 
-同じプロンプトをもう一度実行してみると、同じ画像にはなりません。
+同じプロンプトを再度実行してみると、同じ画像が生成されないことがわかります：
 
 ![馬に乗ったウサギが生成された画像](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.ja.png)
 
-ご覧の通り、画像は似ていますが全く同じではありません。今度はtemperatureの値を0.1にしてみましょう。
+ご覧の通り、画像は似ていますが同じではありません。次に温度値を0.1に変更してみましょう：
 
 ```python
  generation_response = client.images.create(
@@ -315,11 +314,11 @@ Temperatureの働きを例で見てみましょう。同じプロンプトを2�
     )
 ```
 
-### temperatureを変更する
+### 温度の変更
 
-より決定的な応答にしたい場合はどうすればよいでしょうか。先ほど生成した2枚の画像を見ると、1枚目はウサギ、2枚目は馬が目立っており、かなり違いがあります。
+応答をより決定的にするために試してみましょう。生成された2つの画像から、最初の画像にはウサギがいて、2番目の画像には馬がいることがわかります。画像は大きく異なります。
 
-そこで、コードを変更してtemperatureを0に設定してみます。
+そこで、コードを変更して温度を0に設定してみます：
 
 ```python
 generation_response = client.images.create(
@@ -330,28 +329,28 @@ generation_response = client.images.create(
     )
 ```
 
-このコードを実行すると、次の2枚の画像が得られます。
+このコードを実行すると、以下の2つの画像が生成されます：
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.ja.png)
-- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.ja.png)
+- ![温度0、バージョン1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.ja.png)
+- ![温度0、バージョン2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.ja.png)
 
-このように、画像同士がより似ていることが分かります。
+これにより、画像がより似ていることが明確にわかります。
 
-## メタプロンプトでアプリケーションの境界を定義する方法
+## メタプロンプトを使用してアプリケーションの境界を定義する方法
 
-このデモでは、すでにクライアント向けに画像を生成できます。しかし、アプリケーションには一定の境界を設ける必要があります。
+デモでは、すでにクライアント向けに画像を生成することができます。しかし、アプリケーションにいくつかの境界を設ける必要があります。
 
-例えば、不適切な画像や子どもにふさわしくない画像は生成したくありません。
+例えば、職場で安全でない画像や子供に適さない画像を生成したくありません。
 
-これには _メタプロンプト_ を使います。メタプロンプトは、生成AIモデルの出力をコントロールするためのテキストプロンプトです。例えば、メタプロンプトを使って、生成される画像が安全であることや、子ども向けであることを保証できます。
+これをメタプロンプトを使用して実現できます。メタプロンプトは生成AIモデルの出力を制御するために使用されるテキストプロンプトです。例えば、メタプロンプトを使用して出力を制御し、生成される画像が職場で安全であることや子供に適していることを保証できます。
 
-### どのように機能するのか？
+### 仕組みは？
 
-では、メタプロンプトはどのように機能するのでしょうか。
+では、メタプロンプトはどのように機能するのでしょうか？
 
-メタプロンプトは、生成AIモデルの出力をコントロールするためのテキストプロンプトで、通常のプロンプトの前に配置されます。アプリケーション内でプロンプト入力とメタプロンプト入力を1つのテキストプロンプトにまとめて使います。
+メタプロンプトは生成AIモデルの出力を制御するために使用されるテキストプロンプトであり、テキストプロンプトの前に配置され、モデルの出力を制御します。アプリケーションに埋め込まれ、モデルの出力を制御します。プロンプト入力とメタプロンプト入力を単一のテキストプロンプトにまとめます。
 
-メタプロンプトの一例は以下の通りです。
+メタプロンプトの例として以下のものがあります：
 
 ```text
 You are an assistant designer that creates images for children.
@@ -370,7 +369,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-では、デモでメタプロンプトをどのように使うか見てみましょう。
+では、デモでメタプロンプトを使用する方法を見てみましょう。
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -395,18 +394,17 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-上記のプロンプトから、すべての生成画像がメタプロンプトを考慮していることが分かります。
+上記のプロンプトから、生成されるすべての画像がメタプロンプトを考慮していることがわかります。
 
-## 課題 - 生徒たちに画像生成を体験させよう
+## 課題 - 学生を支援しよう
 
-このレッスンの冒頭でEdu4Allを紹介しました。今度は、生徒たちが自分の課題のために画像を生成できるようにしましょう。
+このレッスンの冒頭でEdu4Allを紹介しました。今度は学生が評価のために画像を生成できるようにしましょう。
 
-生徒たちは記念碑を含む画像を作成します。どの記念碑にするかは生徒次第です。生徒たちには、これらの記念碑をさまざまな文脈で表現する創造力を発揮してもらいます。
+学生たちはモニュメントを含む評価用の画像を作成します。どのモニュメントを選ぶかは学生次第です。学生たちはこの課題で創造性を発揮し、これらのモニュメントをさまざまな文脈に配置することが求められます。
 
-## 解答例
+## 解決策
 
-一つの解答例を紹介します。
-
+以下は一つの解決策です：
 ```python
 import openai
 import os
@@ -477,13 +475,13 @@ except openai.BadRequestError as err:
     print(err)
 ```
 
-## お疲れさまでした！さらに学びを深めましょう
-このレッスンを終えたら、[ジェネレーティブAI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)で、ジェネレーティブAIの知識をさらに深めましょう！
+## 素晴らしい仕事です！学習を続けましょう
 
-次はレッスン10へ進み、[ローコードでAIアプリケーションを構築する方法](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)を学びます。
+このレッスンを完了した後は、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらに深めてください！
+
+次のレッスン10では、[ローコードでAIアプリケーションを構築する方法](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)について学びます。
 
 ---
 
-**免責事項**：  
-
-本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な表現が含まれる場合があります。原文（元の言語の文書）が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用によって生じたいかなる誤解や誤認についても、当方は責任を負いかねます。
+**免責事項**:  
+この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知ください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。
