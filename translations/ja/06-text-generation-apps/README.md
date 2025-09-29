@@ -541,15 +541,16 @@ openaiのセットアップと設定がわかったので、最初のテキス�
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
-1. 新しいリクエストを作成しますが、最初のプロンプトで指定したトークン数も考慮して、今回は `max_tokens` を1200に設定します。
+     
+  1. 新しいリクエストを作成しますが、最初のプロンプトで指定したトークン数も考慮して、今回は `max_tokens` を1200に設定します。
 
-```python
+     ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-このコードを実行すると、次のような出力が得られます：
+     このコードを実行すると、次のような出力が得られます：
 
-```output
+     ```output
      No of recipes (for example, 5): 2
      List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
      Filter (for example, vegetarian, vegan, or gluten-free): sugar
@@ -576,21 +577,21 @@ openaiのセットアップと設定がわかったので、最初のテキス�
      
 > 注意：Azureの場合は、以下の環境変数を設定する必要があります：
 
-     ```bash
+  ```bash
      OPENAI_API_TYPE=azure
      OPENAI_API_VERSION=2023-05-15
      OPENAI_API_BASE=<replace>
-     ```
+  ```
 
      コード内では、環境変数を次のように読み込みます：
 
-     ```python
+  ```python
      from dotenv import load_dotenv
 
      load_dotenv()
 
      openai.api_key = os.environ["OPENAI_API_KEY"]
-     ```
+  ```
 
 - **トークンの長さについて**。生成したいテキストに必要なトークン数を考慮しましょう。トークンはコストがかかるため、可能な限り節約することが望ましいです。例えば、プロンプトの表現を工夫してトークン数を減らせないか検討してみてください。
 
