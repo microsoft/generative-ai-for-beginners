@@ -1,0 +1,7 @@
+# MCP Architecture Diagram Placeholder
+# This would show:
+# 1. Multiple AI Assistants (Claude, Codex, Gemini, Cursor) at the top
+# 2. MCP Protocol layer in the middle (standardized communication)
+# 3. Unified Tools and Data Sources at the bottom
+# 4. Bidirectional arrows showing communication flow
+# 5. Educational annotations explaining each component
