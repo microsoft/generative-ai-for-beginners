@@ -451,6 +451,24 @@ To continue your learning of Azure OpenAI Function Calling you can build:
 
 Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) page to see how and where this data is available.
 
+## 🚀 Take It Further: Model Context Protocol (MCP)
+
+Ready to explore the next evolution of function calling? Check out our comprehensive guide on **Model Context Protocol (MCP)** and unified AI assistant management:
+
+**[📖 Model Context Protocol Guide](./resources/model-context-protocol-guide.md?WT.mc_id=academic-105485-koreyst)**
+
+Learn how to:
+- Extend function calling concepts to work with multiple AI assistants
+- Set up unified AI tool management for educational projects
+- Use the Roundtable MCP Server to access Claude, Codex, Gemini, and Cursor from one interface
+- Build educational workflows that leverage different AI capabilities
+
+**[💻 Try the Interactive MCP Demo](./python/mcp-roundtable-example.py?WT.mc_id=academic-105485-koreyst)**
+
+This practical example shows how MCP builds on the function calling concepts you just learned to create powerful educational AI workflows.
+
+---
+
 ## Great Work! Continue the Journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
