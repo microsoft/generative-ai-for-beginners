@@ -225,15 +225,6 @@ Let's explain this code:
 
 Let's look at the code that generates the image in more detail:
 
-<<<<<<< HEAD
-   ```python
-     generation_response = client.images.generate(
-                               prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                               size='1024x1024', n=1,
-                               model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                           )
-   ```
-=======
     ```python
       generation_response = client.images.generate(
                                 prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
@@ -241,7 +232,6 @@ Let's look at the code that generates the image in more detail:
                                 model=os.environ['AZURE_OPENAI_DEPLOYMENT']
                             )
     ```
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 
 - **prompt**, is the text prompt that is used to generate the image. In this case, we're using the prompt "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils".
 - **size**, is the size of the image that is generated. In this case, we're generating an image that is 1024x1024 pixels.
@@ -261,17 +251,6 @@ You can also do the following:
  
 Here is an example using GPT Image:
 
-<<<<<<< HEAD
-   ```python
-   response = client.images.edit(
-       model="gpt-image-1",
-       image=open("sunlit_lounge.png", "rb"),
-       mask=open("mask.png", "rb"),
-       prompt="A sunlit indoor lounge area with a pool containing a flamingo"
-   )
-   image_url = response.data[0].url
-   ```
-=======
     ```python
     response = client.images.edit(
         model="gpt-image-1",
@@ -281,7 +260,6 @@ Here is an example using GPT Image:
     )
     image_url = response.data[0].url
     ```
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 
   The base image would only contain the lounge with pool but the final image would have a flamingo:
 

@@ -23,11 +23,7 @@
   },
   "dependencies": {
     "@azure/openai": "^1.0.0-beta.10",
-<<<<<<< HEAD
-    "axios": "^1.12.0",
-=======
     "axios": "^1.8.2",
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
     "dotenv": "^16.3.1",
     "rimraf": "^5.0.5"
   },

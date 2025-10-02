@@ -7,21 +7,12 @@ load_dotenv()
 
 # configure Azure OpenAI service client 
 client = AzureOpenAI(
-<<<<<<< HEAD
-  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
-  api_key=os.environ['AZURE_OPENAI_API_KEY'],  
-  api_version = "2023-10-01-preview"
-  )
-
-deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
-=======
   azure_endpoint = "https://nsf-openai-dev.openai.azure.com/", 
   api_key="",  
   api_version = "2023-10-01-preview"
   )
 
 deployment="nsf-gpt-4"
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 
 no_recipes = input("No of recipes (for example, 5: ")
 

@@ -125,11 +125,7 @@ Phi-3.5-VisionはClaude-3.5 SonnetやGemini 1.5 Flashなどのより大きなモ
 
 ### Phi-3.5-MoE
 
-<<<<<<< HEAD
-***Mixture of Experts（MoE）*** は、より少ない計算量でモデルの事前学習を可能にし、同じ計算予算でモデルやデータセットの規模を大幅に拡大できます。特に、MoEモデルは密なモデルと同等の品質を事前学習の段階でより速く達成できます。
-=======
 ***Mixture of Experts（MoE）***は、より少ない計算量でモデルの事前学習を可能にし、同じ計算予算でモデルやデータセットの規模を大幅に拡大できます。特に、MoEモデルは密なモデルと同等の品質を事前学習の段階でより速く達成できます。
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 
 Phi-3.5-MoEは16個の3.8Bパラメータのエキスパートモジュールで構成されており、6.6Bのアクティブパラメータ数ながら、より大きなモデルと同等の推論力、言語理解力、数学能力を持ちます。
 
@@ -323,9 +319,4 @@ ONNX RuntimeやOllamaの参照方法に加え、各メーカーが提供する�
 Phi-3/3.5ファミリーの基本は理解できましたが、SLMについてさらに学ぶにはより多くの知識が必要です。答えはPhi-3 Cookbookにあります。もっと知りたい方はぜひ[Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)をご覧ください。
 
 **免責事項**：  
-<<<<<<< HEAD
-
 本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切の責任を負いかねます。
-=======
-本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切の責任を負いかねます。
->>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
