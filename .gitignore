@@ -2,7 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
+<<<<<<< HEAD
 
+=======
+*.env
+.env
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 # C extensions
 *.so
 

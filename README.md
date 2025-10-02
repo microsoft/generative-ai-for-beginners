@@ -109,8 +109,12 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 Our team produces other courses! Check out:
 
+<<<<<<< HEAD
 - [**NEW** Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
 - [Model Context Protocol for Beginners](https://github.com/microsoft/mcp-for-beginners)
+=======
+- [**NEW** Model Context Protocol for Beginners](https://github.com/microsoft/mcp-for-beginners)
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 - [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
 - [Generative AI for Beginners using JavaScript](https://aka.ms/genai-js-course)

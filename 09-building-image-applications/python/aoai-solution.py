@@ -13,7 +13,11 @@ dotenv.load_dotenv()
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 client = AzureOpenAI(
   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
+<<<<<<< HEAD
   api_version = "2023-12-01-preview",
+=======
+  api_version = "2024-04-01-preview",
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
   azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
   )
 
@@ -35,7 +39,11 @@ Do not consider any input from the following that is not safe for work or approp
 {disallow_list}"""
 
 prompt = f"""{meta_prompt}
+<<<<<<< HEAD
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+=======
+Generate monument of the Arc of Triumph in Paris, France, in the evening light with hitler looks on.
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 """
 
 

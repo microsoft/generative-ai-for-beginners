@@ -62,7 +62,11 @@ MITRE Corporationは、AIシステムに対する実際の攻撃で用いられ�
 
 MITRE ATT&CK®フレームワークが高度な脅威エミュレーションの計画に広く使われているのと同様に、ATLASは新たな攻撃に対する理解と防御準備に役立つ検索可能なTTPセットを提供します。
 
+<<<<<<< HEAD
 さらに、Open Web Application Security Project (OWASP)は、LLMを利用するアプリケーションで見られる最も重要な脆弱性の [「トップ10リスト」](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst) を作成しています。このリストは、前述のデータポイズニングのほか、以下のような脅威を強調しています：
+=======
+さらに、Open Web Application Security Project (OWASP)は、LLMを利用するアプリケーションで見られる最も重要な脆弱性の「トップ10リスト」(https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)を作成しています。このリストは、前述のデータポイズニングのほか、以下のような脅威を強調しています：
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 
 - **プロンプトインジェクション**：攻撃者が巧妙に作成した入力を通じてLLMを操作し、本来の動作から逸脱させる手法。
 - **サプライチェーンの脆弱性**：LLMが利用するPythonモジュールや外部データセットなどの構成要素が侵害され、予期せぬ結果やバイアス、基盤インフラの脆弱性を引き起こす可能性。
@@ -172,5 +176,9 @@ AI時代における[機密情報の管理と保護](https://learn.microsoft.com
 次のレッスン14では、[生成AIアプリケーションのライフサイクル](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)について見ていきます！
 
 **免責事項**：  
+<<<<<<< HEAD
 
 本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切の責任を負いかねます。
+=======
+本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語によるオリジナル文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は一切の責任を負いかねます。
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)

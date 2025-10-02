@@ -11,7 +11,11 @@ dotenv.load_dotenv()
 # Get endpoint and key from environment variables
 client = AzureOpenAI(
   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
+<<<<<<< HEAD
   api_version = "2023-12-01-preview",
+=======
+  api_version = "2024-04-01-preview",
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
   azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
   )
 

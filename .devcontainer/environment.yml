@@ -3,8 +3,15 @@ channels:
  - defaults
 dependencies:
 - python=3.10.0
+<<<<<<< HEAD
 - openai
 - python-dotenv
 - pip
+=======
+- openai=0.28.0
+- python-dotenv
+- pip
+- pandas=2.3.2
+>>>>>>> 584a21c5 (Please enter the commit message for your changes. Lines starting)
 - pip:
   - azure-ai-inference
