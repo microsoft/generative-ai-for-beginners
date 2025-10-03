@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:22:33+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T09:40:04+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -35,16 +35,16 @@ Lær det grunnleggende om å bygge generative AI-applikasjoner med vårt omfatte
 
 ## 🌱 Kom i gang
 
-Dette kurset består av 21 leksjoner. Hver leksjon dekker et eget tema, så du kan starte hvor du vil!
+Dette kurset har 21 leksjoner. Hver leksjon dekker sitt eget tema, så du kan starte hvor du vil!
 
-Leksjonene er merket enten som "Lær"-leksjoner som forklarer et generativt AI-konsept, eller "Bygg"-leksjoner som både forklarer et konsept og gir kodeeksempler i **Python** og **TypeScript** når det er mulig.
+Leksjonene er merket enten som "Lær"-leksjoner som forklarer et generativt AI-konsept, eller "Bygg"-leksjoner som forklarer et konsept med kodeeksempler i både **Python** og **TypeScript** når det er mulig.
 
 For .NET-utviklere, sjekk ut [Generativ AI for nybegynnere (.NET-utgave)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Hver leksjon inkluderer også en "Fortsett å lære"-seksjon med ekstra læringsressurser.
+Hver leksjon inkluderer også en "Fortsett å lære"-seksjon med ekstra læringsverktøy.
 
 ## Hva du trenger
-### For å kjøre koden i dette kurset, kan du bruke enten:
+### For å kjøre koden i dette kurset kan du bruke enten:
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Leksjoner:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Leksjoner:** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Leksjoner:** "oai-assignment" 
@@ -54,7 +54,7 @@ Hver leksjon inkluderer også en "Fortsett å lære"-seksjon med ekstra lærings
 
 Vi har laget en **[Kursoppsett](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** leksjon for å hjelpe deg med å sette opp ditt utviklingsmiljø.
 
-Ikke glem å [stjernemerke (🌟) dette repoet](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) for å finne det enklere senere.
+Ikke glem å [stjerne (🌟) dette repoet](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) for å finne det enklere senere.
 
 ## 🧠 Klar til å distribuere?
 
@@ -83,28 +83,28 @@ Har du forslag eller funnet skrivefeil eller kodefeil? [Opprett et problem](http
 
 ## 🗃️ Leksjoner
 
-| #   | **Leksjonslenke**                                                                                                                            | **Beskrivelse**                                                                                 | **Video**                                                                   | **Ekstra læring**                                                              |
+| #   | **Leksjonslenke**                                                                                                                            | **Beskrivelse**                                                                                 | **Video**                                                                   | **Ekstra læring**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Kursoppsett](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                  | **Lær:** Hvordan sette opp ditt utviklingsmiljø                                                 | Video kommer snart                                                                 | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 01  | [Introduksjon til generativ AI og LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                               | **Lær:** Forstå hva generativ AI er og hvordan store språkmodeller (LLMs) fungerer.             | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 02  | [Utforske og sammenligne ulike LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                 | **Lær:** Hvordan velge riktig modell for ditt brukstilfelle                                    | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 03  | [Bruke generativ AI ansvarlig](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                              | **Lær:** Hvordan bygge generative AI-applikasjoner ansvarlig                                   | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 04  | [Forstå grunnleggende prinsipper for prompt engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)    | **Lær:** Praktiske beste praksiser for prompt engineering                                      | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 05  | [Lage avanserte prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                   | **Lær:** Hvordan bruke teknikker for prompt engineering som forbedrer resultatene av dine prompts. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)    |
-| 06  | [Bygge applikasjoner for tekstgenerering](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bygg:** En applikasjon for tekstgenerering ved bruk av Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Bygge chatapplikasjoner](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bygg:** Teknikker for effektivt å bygge og integrere chatapplikasjoner.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Kursoppsett](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                  | **Lær:** Hvordan sette opp ditt utviklingsmiljø                                                 | Video kommer snart                                                                 | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Introduksjon til generativ AI og LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                               | **Lær:** Forstå hva generativ AI er og hvordan store språkmodeller (LLMs) fungerer.             | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Utforske og sammenligne ulike LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                 | **Lær:** Hvordan velge riktig modell for ditt brukstilfelle                                    | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Bruke generativ AI ansvarlig](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                              | **Lær:** Hvordan bygge generative AI-applikasjoner ansvarlig                                   | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Forstå grunnleggende prinsipper for prompt engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)    | **Lær:** Praktiske beste praksiser for prompt engineering                                      | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Lage avanserte prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                   | **Lær:** Hvordan bruke teknikker for prompt engineering som forbedrer resultatene av dine prompts. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Bygge tekstgenereringsapplikasjoner](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bygg:** En tekstgenereringsapplikasjon ved bruk av Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Bygge chatteapplikasjoner](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bygg:** Teknikker for effektivt å bygge og integrere chatteapplikasjoner.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 08  | [Bygge søkeapplikasjoner med vektordatabaser](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bygg:** En søkeapplikasjon som bruker embeddings for å søke etter data.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Bygge applikasjoner for bildegenerering](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bygg:** En applikasjon for bildegenerering                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Bygge lavkode-applikasjoner med AI](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Bygg:** En generativ AI-applikasjon ved bruk av lavkode-verktøy                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integrere eksterne applikasjoner med funksjonskall](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Bygg:** Hva funksjonskall er og bruksområder for applikasjoner                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Bygge bildegenereringsapplikasjoner](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bygg:** En applikasjon for bildegenerering                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Bygge lavkode AI-applikasjoner](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Bygg:** En generativ AI-applikasjon ved bruk av lavkodeverktøy                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Integrere eksterne applikasjoner med funksjonskall](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Bygg:** Hva funksjonskall er og bruksområdene for applikasjoner                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 12  | [Designe brukeropplevelse for AI-applikasjoner](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Lær:** Hvordan bruke prinsipper for UX-design når du utvikler generative AI-applikasjoner         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Sikre dine generative AI-applikasjoner](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Lær:** Trusler og risikoer for AI-systemer og metoder for å sikre disse systemene.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Livssyklusen for generative AI-applikasjoner](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Lær:** Verktøy og metrikker for å administrere LLM-livssyklusen og LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) og vektordatabaser](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Bygg:** En applikasjon som bruker et RAG-rammeverk for å hente embeddings fra vektordatabaser  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Åpen kildekode-modeller og Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bygg:** En applikasjon som bruker åpne kildekode-modeller tilgjengelig på Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI-agenter](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bygg:** En applikasjon som bruker et AI-agent-rammeverk                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Finjustering av LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Hva, hvorfor og hvordan finjustere LLMs                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Bygge med SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Fordelene ved å bygge med små språkmodeller                                            | Video kommer snart | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Sikre dine generative AI-applikasjoner](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Lær:** Truslene og risikoene for AI-systemer og metoder for å sikre disse systemene.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Livssyklusen for generative AI-applikasjoner](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Lær:** Verktøyene og målene for å administrere LLM-livssyklusen og LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) og vektordatabaser](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Bygg:** En applikasjon ved bruk av et RAG-rammeverk for å hente embeddings fra vektordatabaser  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Åpen kildekode-modeller og Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bygg:** En applikasjon ved bruk av åpne kildekode-modeller tilgjengelig på Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI-agenter](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bygg:** En applikasjon ved bruk av et AI-agentrammeverk                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Finjustering av LLM-er](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Hva, hvorfor og hvordan finjustere LLM-er                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Bygge med SLM-er](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Fordelene ved å bygge med små språkmodeller                                            | Video kommer snart | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Bygge med Mistral-modeller](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Funksjonene og forskjellene til Mistral-familien av modeller                                           | Video kommer snart | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Bygge med Meta-modeller](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Lær:** Funksjonene og forskjellene til Meta-familien av modeller                                           | Video kommer snart | [Lær mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
@@ -112,7 +112,7 @@ Har du forslag eller funnet skrivefeil eller kodefeil? [Opprett et problem](http
 
 Spesiell takk til [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for å ha laget alle GitHub Actions og arbeidsflyter.
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) for å ha gjort viktige bidrag til hver leksjon for å forbedre lærings- og kodeopplevelsen.
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) for å ha gjort viktige bidrag til hver leksjon for å forbedre lærings- og kodeopplevelsen. 
 
 ## 🎒 Andre kurs
 
@@ -134,6 +134,16 @@ Teamet vårt produserer andre kurs! Sjekk ut:
 - [Mestre GitHub Copilot for AI-parprogrammering](https://aka.ms/GitHubCopilotAI)
 - [Mestre GitHub Copilot for C#/.NET-utviklere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Velg ditt eget Copilot-eventyr](https://github.com/microsoft/CopilotAdventures)
+
+## Få hjelp
+
+Hvis du står fast eller har spørsmål om å bygge AI-applikasjoner, bli med:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Hvis du har produktfeedback eller feil under bygging, besøk:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
 
 ---
 

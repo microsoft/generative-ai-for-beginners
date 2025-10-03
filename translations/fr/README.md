@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T22:55:35+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T08:04:51+00:00",
   "source_file": "README.md",
   "language_code": "fr"
 }
@@ -54,7 +54,7 @@ Chaque leçon inclut également une section "Continuer à apprendre" avec des ou
 
 Nous avons créé une leçon **[Configuration du cours](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** pour vous aider à configurer votre environnement de développement.
 
-N'oubliez pas de [mettre une étoile (🌟) à ce dépôt](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) pour le retrouver facilement plus tard.
+N'oubliez pas de [ajouter une étoile (🌟) à ce dépôt](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) pour le retrouver facilement plus tard.
 
 ## 🧠 Prêt à déployer ?
 
@@ -70,7 +70,7 @@ Posez vos questions ou partagez vos retours sur le produit dans notre [forum des
 
 Visitez [Microsoft for Startups](https://www.microsoft.com/startups) pour découvrir comment commencer à construire avec des crédits Azure dès aujourd'hui.
 
-## 🙏 Vous voulez aider ?
+## 🙏 Vous souhaitez contribuer ?
 
 Vous avez des suggestions ou avez trouvé des erreurs de code ou d'orthographe ? [Soumettez un problème](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ou [créez une pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
@@ -79,7 +79,7 @@ Vous avez des suggestions ou avez trouvé des erreurs de code ou d'orthographe ?
 - Une courte vidéo d'introduction au sujet
 - Une leçon écrite située dans le README
 - Des exemples de code en Python et TypeScript prenant en charge Azure OpenAI et OpenAI API
-- Des liens vers des ressources supplémentaires pour continuer votre apprentissage
+- Des liens vers des ressources supplémentaires pour continuer à apprendre
 
 ## 🗃️ Leçons
 
@@ -104,13 +104,13 @@ Vous avez des suggestions ou avez trouvé des erreurs de code ou d'orthographe ?
 | 16  | [Modèles open source et Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Créer :** Une application utilisant des modèles open source disponibles sur Hugging Face                    | [Vidéo](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [Agents IA](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Créer :** Une application utilisant un cadre d'agent IA                                           | [Vidéo](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 18  | [Affiner les LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Apprendre :** Le quoi, pourquoi et comment de l'affinage des LLMs                                            | [Vidéo](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Créer avec les SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Apprendre :** Les avantages de créer avec des Small Language Models                                            | Vidéo à venir | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Créer avec les SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Apprendre :** Les avantages de créer avec des modèles de langage de petite taille                                            | Vidéo à venir | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Créer avec les modèles Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Apprendre :** Les caractéristiques et différences des modèles de la famille Mistral                                           | Vidéo à venir | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Créer avec les modèles Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Apprendre :** Les caractéristiques et différences des modèles de la famille Meta                                           | Vidéo à venir | [En savoir plus](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Remerciements spéciaux
 
-Un grand merci à [**John Aziz**](https://www.linkedin.com/in/john0isaac/) pour avoir créé toutes les actions GitHub et workflows.
+Un grand merci à [**John Aziz**](https://www.linkedin.com/in/john0isaac/) pour avoir créé toutes les actions GitHub et les workflows.
 
 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) pour ses contributions clés à chaque leçon afin d'améliorer l'expérience des apprenants et du code.
 
@@ -134,6 +134,16 @@ Notre équipe propose d'autres cours ! Découvrez :
 - [Maîtriser GitHub Copilot pour la programmation assistée par IA](https://aka.ms/GitHubCopilotAI)
 - [Maîtriser GitHub Copilot pour les développeurs C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Choisissez votre propre aventure Copilot](https://github.com/microsoft/CopilotAdventures)
+
+## Obtenir de l'aide
+
+Si vous êtes bloqué ou avez des questions sur la création d'applications IA, rejoignez :
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Si vous avez des retours sur le produit ou des erreurs lors de la création, visitez :
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
 
 ---
 
