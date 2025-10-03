@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:27:56+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T09:58:49+00:00",
   "source_file": "README.md",
   "language_code": "ms"
 }
@@ -27,17 +27,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### Disokong melalui GitHub Action (Automatik & Sentiasa Terkini)
 
-[French](../fr/README.md) | [Spanish](../es/README.md) | [German](../de/README.md) | [Russian](../ru/README.md) | [Arabic](../ar/README.md) | [Persian (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Portuguese (Brazil)](../br/README.md) | [Italian](../it/README.md) | [Lithuanian](../lt/README.md) | [Polish](../pl/README.md) | [Turkish](../tr/README.md) | [Greek](../el/README.md) | [Thai](../th/README.md) | [Swedish](../sv/README.md) | [Danish](../da/README.md) | [Norwegian](../no/README.md) | [Finnish](../fi/README.md) | [Dutch](../nl/README.md) | [Hebrew](../he/README.md) | [Vietnamese](../vi/README.md) | [Indonesian](../id/README.md) | [Malay](./README.md) | [Tagalog (Filipino)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungarian](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romanian](../ro/README.md) | [Bulgarian](../bg/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Croatian](../hr/README.md) | [Slovenian](../sl/README.md) | [Ukrainian](../uk/README.md) | [Burmese (Myanmar)](../my/README.md)
+[Perancis](../fr/README.md) | [Sepanyol](../es/README.md) | [Jerman](../de/README.md) | [Rusia](../ru/README.md) | [Arab](../ar/README.md) | [Parsi (Farsi)](../fa/README.md) | [Urdu](../ur/README.md) | [Cina (Ringkas)](../zh/README.md) | [Cina (Tradisional, Macau)](../mo/README.md) | [Cina (Tradisional, Hong Kong)](../hk/README.md) | [Cina (Tradisional, Taiwan)](../tw/README.md) | [Jepun](../ja/README.md) | [Korea](../ko/README.md) | [Hindi](../hi/README.md) | [Bengali](../bn/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Portugis (Portugal)](../pt/README.md) | [Portugis (Brazil)](../br/README.md) | [Itali](../it/README.md) | [Lithuania](../lt/README.md) | [Poland](../pl/README.md) | [Turki](../tr/README.md) | [Yunani](../el/README.md) | [Thai](../th/README.md) | [Sweden](../sv/README.md) | [Denmark](../da/README.md) | [Norway](../no/README.md) | [Finland](../fi/README.md) | [Belanda](../nl/README.md) | [Ibrani](../he/README.md) | [Vietnam](../vi/README.md) | [Indonesia](../id/README.md) | [Melayu](./README.md) | [Tagalog (Filipina)](../tl/README.md) | [Swahili](../sw/README.md) | [Hungary](../hu/README.md) | [Czech](../cs/README.md) | [Slovak](../sk/README.md) | [Romania](../ro/README.md) | [Bulgaria](../bg/README.md) | [Serbia (Cyrillic)](../sr/README.md) | [Croatia](../hr/README.md) | [Slovenia](../sl/README.md) | [Ukraine](../uk/README.md) | [Burma (Myanmar)](../my/README.md)
 
 # Generative AI untuk Pemula (Versi 3) - Kursus
 
-Pelajari asas membina aplikasi Generative AI dengan kursus 21 pelajaran komprehensif oleh Microsoft Cloud Advocates.
+Pelajari asas membina aplikasi Generative AI dengan kursus 21 pelajaran komprehensif kami oleh Microsoft Cloud Advocates.
 
 ## 🌱 Memulakan
 
-Kursus ini mempunyai 21 pelajaran. Setiap pelajaran merangkumi topik tersendiri, jadi anda boleh mula di mana-mana sahaja!
+Kursus ini mempunyai 21 pelajaran. Setiap pelajaran meliputi topik tersendiri, jadi anda boleh mula di mana-mana sahaja!
 
-Pelajaran dilabelkan sama ada pelajaran "Learn" yang menerangkan konsep Generative AI atau pelajaran "Build" yang menerangkan konsep dan contoh kod dalam **Python** dan **TypeScript** apabila boleh.
+Pelajaran dilabelkan sama ada sebagai pelajaran "Learn" yang menerangkan konsep Generative AI atau pelajaran "Build" yang menerangkan konsep dan contoh kod dalam **Python** dan **TypeScript** apabila boleh.
 
 Untuk pembangun .NET, lihat [Generative AI untuk Pemula (Edisi .NET)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
@@ -54,7 +54,7 @@ Setiap pelajaran juga termasuk bahagian "Keep Learning" dengan alat pembelajaran
 
 Kami telah mencipta pelajaran **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** untuk membantu anda menyediakan persekitaran pembangunan anda.
 
-Jangan lupa untuk [star (🌟) repo ini](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) supaya mudah mencarinya kemudian.
+Jangan lupa untuk [beri bintang (🌟) repo ini](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) supaya mudah mencarinya kemudian.
 
 ## 🧠 Sedia untuk Dihoskan?
 
@@ -62,13 +62,13 @@ Jika anda mencari contoh kod yang lebih maju, lihat [koleksi Contoh Kod Generati
 
 ## 🗣️ Bertemu Pelajar Lain, Dapatkan Sokongan
 
-Sertai [server Discord rasmi Azure AI Foundry](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) untuk bertemu dan berhubung dengan pelajar lain yang mengambil kursus ini serta mendapatkan sokongan.
+Sertai [server Discord rasmi Azure AI Foundry](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) kami untuk bertemu dan berhubung dengan pelajar lain yang mengikuti kursus ini serta mendapatkan sokongan.
 
 Ajukan soalan atau kongsi maklum balas produk di [Forum Pembangun Azure AI Foundry](https://aka.ms/azureaifoundry/forum) di Github.
 
 ## 🚀 Membina Startup?
 
-Lawati [Microsoft for Startups](https://www.microsoft.com/startups) untuk mengetahui cara memulakan pembinaan dengan kredit Azure hari ini.
+Lawati [Microsoft untuk Startup](https://www.microsoft.com/startups) untuk mengetahui cara memulakan pembinaan dengan kredit Azure hari ini.
 
 ## 🙏 Mahu membantu?
 
@@ -83,14 +83,14 @@ Adakah anda mempunyai cadangan atau menemui kesalahan ejaan atau kod? [Buat isu]
 
 ## 🗃️ Pelajaran
 
-| #   | **Pautan Pelajaran**                                                                                                                         | **Penerangan**                                                                                  | **Video**                                                                   | **Pembelajaran Tambahan**                                                      |
+| #   | **Pautan Pelajaran**                                                                                                                          | **Penerangan**                                                                                 | **Video**                                                                   | **Pembelajaran Tambahan**                                                      |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** Cara Menyediakan Persekitaran Pembangunan Anda                                       | Video Akan Datang                                                                 | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Pengenalan kepada Generative AI dan LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                            | **Learn:** Memahami apa itu Generative AI dan bagaimana Large Language Models (LLMs) berfungsi. | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Meneroka dan membandingkan LLM yang berbeza](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)         | **Learn:** Cara memilih model yang sesuai untuk kes penggunaan anda                             | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Menggunakan Generative AI Secara Bertanggungjawab](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)          | **Learn:** Cara membina Aplikasi Generative AI secara bertanggungjawab                          | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Memahami Asas Kejuruteraan Prompt](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                         | **Learn:** Amalan Terbaik Kejuruteraan Prompt Secara Praktikal                                  | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Mencipta Prompt Lanjutan](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                 | **Learn:** Cara menerapkan teknik kejuruteraan prompt yang meningkatkan hasil prompt anda.      | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Pengenalan kepada Generative AI dan LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Memahami apa itu Generative AI dan bagaimana Large Language Models (LLMs) berfungsi | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Meneroka dan membandingkan LLM yang berbeza](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)          | **Learn:** Cara memilih model yang sesuai untuk kes penggunaan anda                            | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Menggunakan Generative AI Secara Bertanggungjawab](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)           | **Learn:** Cara membina aplikasi Generative AI secara bertanggungjawab                         | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Memahami Asas Kejuruteraan Prompt](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                           | **Learn:** Amalan Terbaik Kejuruteraan Prompt Secara Praktikal                                 | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Mencipta Prompt Lanjutan](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                  | **Learn:** Cara menerapkan teknik kejuruteraan prompt yang meningkatkan hasil prompt anda       | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [Membina Aplikasi Penjanaan Teks](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bina:** Aplikasi penjanaan teks menggunakan Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Ketahui Lebih Lanjut](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [Membina Aplikasi Chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bina:** Teknik untuk membina dan mengintegrasikan aplikasi chat dengan cekap.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Ketahui Lebih Lanjut](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 08  | [Membina Aplikasi Carian dengan Pangkalan Data Vektor](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bina:** Aplikasi carian yang menggunakan Embeddings untuk mencari data.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Ketahui Lebih Lanjut](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -134,6 +134,16 @@ Pasukan kami menghasilkan kursus lain! Lihat:
 - [Menguasai GitHub Copilot untuk Pengaturcaraan Berpasangan AI](https://aka.ms/GitHubCopilotAI)
 - [Menguasai GitHub Copilot untuk Pembangun C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Pilih Pengembaraan Copilot Anda Sendiri](https://github.com/microsoft/CopilotAdventures)
+
+## Mendapatkan Bantuan
+
+Jika anda menghadapi masalah atau mempunyai soalan tentang membina aplikasi AI, sertai:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Jika anda mempunyai maklum balas produk atau menghadapi ralat semasa membina, lawati:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
 
 ---
 

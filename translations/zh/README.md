@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:02:12+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T08:28:48+00:00",
   "source_file": "README.md",
   "language_code": "zh"
 }
@@ -33,32 +33,32 @@ CO_OP_TRANSLATOR_METADATA:
 
 通过微软云倡导者提供的21节全面课程，学习构建生成式 AI 应用的基础知识。
 
-## 🌱 开始学习
+## 🌱 入门指南
 
-本课程共有21节课。每节课涵盖一个独立主题，您可以从任意一节开始学习！
+本课程共有21节课。每节课涵盖一个独立主题，你可以从任意一节开始学习！
 
 课程分为两类：“学习”课程，解释生成式 AI 的概念；“构建”课程，既解释概念又提供 **Python** 和 **TypeScript** 的代码示例（尽可能提供）。
 
 对于 .NET 开发者，请查看 [初学者的生成式 AI（.NET 版）](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)！
 
-每节课还包括“继续学习”部分，提供额外的学习工具。
+每节课还包括一个“继续学习”部分，提供额外的学习工具。
 
 ## 所需条件
-### 要运行本课程的代码，您可以选择以下之一：
+### 要运行本课程的代码，你可以选择以下之一：
  - [Azure OpenAI 服务](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **课程：** "aoai-assignment"
  - [GitHub Marketplace 模型目录](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **课程：** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **课程：** "oai-assignment" 
-   
+
 - 具备 Python 或 TypeScript 的基础知识会有所帮助 - \*对于完全的初学者，请查看这些 [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) 和 [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) 课程
-- 一个 GitHub 账号，用于 [fork 整个仓库](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) 到您的 GitHub 账号
+- 一个 GitHub 账号，用于 [fork 整个仓库](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) 到你的 GitHub 账号
 
-我们已创建了 **[课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 课程，帮助您设置开发环境。
+我们已创建了一个 **[课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 课程，帮助你设置开发环境。
 
-别忘了 [star (🌟) 这个仓库](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)，方便以后找到。
+别忘了 [收藏（🌟）这个仓库](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)，方便以后查找。
 
 ## 🧠 准备部署？
 
-如果您正在寻找更高级的代码示例，请查看我们提供的 [生成式 AI 代码示例集](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)，包括 **Python** 和 **TypeScript**。
+如果你正在寻找更高级的代码示例，请查看我们提供的 [生成式 AI 代码示例集](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)，包括 **Python** 和 **TypeScript**。
 
 ## 🗣️ 与其他学习者交流，获取支持
 
@@ -68,15 +68,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 🚀 构建初创公司？
 
-访问 [Microsoft for Startups](https://www.microsoft.com/startups)，了解如何使用 Azure 代金券开始构建。
+访问 [Microsoft for Startups](https://www.microsoft.com/startups)，了解如何使用 Azure 额度开始构建。
 
 ## 🙏 想要贡献？
 
-您有建议或发现拼写或代码错误？[提交问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) 或 [创建拉取请求](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)。
+有建议或发现拼写或代码错误？[提交问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) 或 [创建拉取请求](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)。
 
 ## 📂 每节课包括：
 
-- 一个简短的视频介绍主题
+- 一个简短的视频介绍
 - 位于 README 中的书面课程
 - 支持 Azure OpenAI 和 OpenAI API 的 Python 和 TypeScript 代码示例
 - 继续学习的额外资源链接
@@ -85,12 +85,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 | #   | **课程链接**                                                                                                                              | **描述**                                                                                 | **视频**                                                                   | **额外学习**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **学习：** 如何设置您的开发环境                                            | 视频即将上线                                                                 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **学习：** 如何设置开发环境                                            | 视频即将上线                                                                 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 01  | [生成式 AI 和 LLMs 简介](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **学习：** 了解什么是生成式 AI，以及大型语言模型（LLMs）的工作原理       | [视频](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [探索和比较不同的 LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 如何为您的使用场景选择合适的模型                                      | [视频](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [探索和比较不同的 LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 如何为你的使用场景选择合适的模型                                      | [视频](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 03  | [负责任地使用生成式 AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **学习：** 如何负责任地构建生成式 AI 应用                                  | [视频](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 04  | [理解提示工程基础](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 实践提示工程的最佳实践                                           | [视频](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [创建高级提示](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **学习：** 如何应用提示工程技术以优化提示结果。 | [视频](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [创建高级提示](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **学习：** 如何应用提示工程技术以优化提示的结果。 | [视频](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [构建文本生成应用](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **构建：** 使用 Azure OpenAI / OpenAI API 创建文本生成应用                                | [视频](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [构建聊天应用](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **构建：** 高效构建和集成聊天应用的技术                                                   | [视频](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 08  | [构建搜索应用与向量数据库](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **构建：** 使用嵌入技术进行数据搜索的搜索应用                                            | [视频](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 | 15  | [检索增强生成 (RAG) 和向量数据库](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **构建：** 使用 RAG 框架从向量数据库中检索嵌入的应用  | [视频](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  | [开源模型与 Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **构建：** 使用 Hugging Face 上的开源模型创建应用                    | [视频](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [AI 代理](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **构建：** 使用 AI 代理框架创建应用                                           | [视频](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [微调 LLM](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **学习：** 微调 LLM 的意义、原因和方法                                            | [视频](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [微调 LLM](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **学习：** 微调 LLM 的内容、原因和方法                                            | [视频](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 19  | [使用 SLM 构建](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **学习：** 使用小型语言模型构建的优势                                            | 视频即将上线 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [使用 Mistral 模型构建](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **学习：** Mistral 系列模型的特点和差异                                           | 视频即将上线 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [使用 Meta 模型构建](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **学习：** Meta 系列模型的特点和差异                                           | 视频即将上线 | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -133,9 +133,19 @@ CO_OP_TRANSLATOR_METADATA:
 - [XR 开发初学者课程](https://github.com/microsoft/xr-development-for-beginners)
 - [掌握 GitHub Copilot 进行 AI 配对编程](https://aka.ms/GitHubCopilotAI)
 - [掌握 GitHub Copilot 为 C#/.NET 开发者服务](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [选择你的 Copilot 冒险之旅](https://github.com/microsoft/CopilotAdventures)
+- [选择您的 Copilot 冒险之旅](https://github.com/microsoft/CopilotAdventures)
+
+## 获取帮助
+
+如果您遇到困难或对构建 AI 应用有任何疑问，请加入：
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+如果您有产品反馈或在构建过程中遇到错误，请访问：
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
 
 ---
 
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们不对因使用此翻译而产生的任何误解或误读承担责任。
+本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。

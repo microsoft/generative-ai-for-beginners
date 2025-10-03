@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:37:06+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T10:28:53+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -15,10 +15,10 @@ CO_OP_TRANSLATOR_METADATA:
 [![GitHub suradnici](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
 [![GitHub problemi](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
 [![GitHub zahtjevi za povlačenje](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PR-ovi dobrodošli](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![PRs Dobrodošli](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
 [![GitHub promatrači](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![GitHub grane](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
+[![GitHub forkovi](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
 [![GitHub zvjezdice](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
@@ -37,7 +37,7 @@ Naučite osnove izrade aplikacija s generativnom AI uz naš sveobuhvatni tečaj 
 
 Ovaj tečaj sadrži 21 lekciju. Svaka lekcija pokriva vlastitu temu, pa možete započeti gdje god želite!
 
-Lekcije su označene kao "Learn" lekcije koje objašnjavaju koncept generativne AI ili "Build" lekcije koje objašnjavaju koncept i uključuju primjere koda u **Pythonu** i **TypeScriptu** kad god je to moguće.
+Lekcije su označene kao "Learn" lekcije koje objašnjavaju koncept generativne AI ili "Build" lekcije koje objašnjavaju koncept i primjere koda u **Pythonu** i **TypeScriptu** kad god je to moguće.
 
 Za .NET programere pogledajte [Generativna AI za početnike (.NET izdanje)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
@@ -58,9 +58,9 @@ Ne zaboravite [označiti zvjezdicom (🌟) ovaj repozitorij](https://docs.github
 
 ## 🧠 Spremni za implementaciju?
 
-Ako tražite napredne primjere koda, pogledajte našu [kolekciju primjera koda za generativnu AI](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) u **Pythonu** i **TypeScriptu**.
+Ako tražite naprednije primjere koda, pogledajte našu [kolekciju primjera koda za generativnu AI](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) u **Pythonu** i **TypeScriptu**.
 
-## 🗣️ Upoznajte druge polaznike, dobijte podršku
+## 🗣️ Upoznajte druge polaznike, zatražite podršku
 
 Pridružite se našem [službenom Azure AI Foundry Discord serveru](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) kako biste upoznali i povezali se s drugim polaznicima ovog tečaja te dobili podršku.
 
@@ -68,7 +68,7 @@ Postavljajte pitanja ili dijelite povratne informacije o proizvodu na našem [Az
 
 ## 🚀 Gradite startup?
 
-Posjetite [Microsoft za startupe](https://www.microsoft.com/startups) kako biste saznali kako započeti gradnju uz Azure kredite već danas.
+Posjetite [Microsoft za startupe](https://www.microsoft.com/startups) kako biste saznali kako započeti izradu uz Azure kredite već danas.
 
 ## 🙏 Želite pomoći?
 
@@ -104,7 +104,7 @@ Imate prijedloge ili ste pronašli pravopisne ili programske pogreške? [Otvorit
 | 16  | [Open Source modeli i Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Izrada:** Aplikacija koristeći open source modele dostupne na Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [AI agenti](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Izrada:** Aplikacija koristeći AI Agent Framework                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 18  | [Fino podešavanje LLM-ova](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Učenje:** Što, zašto i kako fino podesiti LLM-ove                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Izrada s SLM-ovima](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Učenje:** Prednosti izrade s malim jezičnim modelima                                            | Video uskoro | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Izrada s SLM-ovima](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Učenje:** Prednosti izrade koristeći male jezične modele                                            | Video uskoro | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Izrada s Mistral modelima](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Učenje:** Značajke i razlike modela obitelji Mistral                                           | Video uskoro | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Izrada s Meta modelima](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Učenje:** Značajke i razlike modela obitelji Meta                                           | Video uskoro | [Saznaj više](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
@@ -127,15 +127,25 @@ Naš tim proizvodi i druge tečajeve! Pogledajte:
 - [ML za početnike](https://aka.ms/ml-beginners)
 - [Data Science za početnike](https://aka.ms/datascience-beginners)
 - [AI za početnike](https://aka.ms/ai-beginners)
-- [Kibernetička sigurnost za početnike](https://github.com/microsoft/Security-101)
+- [Cybersecurity za početnike](https://github.com/microsoft/Security-101)
 - [Web razvoj za početnike](https://aka.ms/webdev-beginners)
 - [IoT za početnike](https://aka.ms/iot-beginners)
 - [XR razvoj za početnike](https://github.com/microsoft/xr-development-for-beginners)
-- [Ovladavanje GitHub Copilotom za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
-- [Ovladavanje GitHub Copilotom za C#/.NET developere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
+- [Savladavanje GitHub Copilota za AI programiranje u paru](https://aka.ms/GitHubCopilotAI)
+- [Savladavanje GitHub Copilota za C#/.NET programere](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Odaberi svoju Copilot avanturu](https://github.com/microsoft/CopilotAdventures)
+
+## Dobivanje pomoći
+
+Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Ako imate povratne informacije o proizvodu ili naiđete na greške tijekom izrade, posjetite:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
 
 ---
 
-**Izjava o odricanju odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.
+**Odricanje od odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

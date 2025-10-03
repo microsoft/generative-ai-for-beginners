@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:31:45+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T10:13:26+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -11,15 +11,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 21 lekcí, které vás naučí vše potřebné k vytvoření aplikací s generativní AI
 
-[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
-[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
-[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)  
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)  
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)  
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)  
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)  
 
-[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)  
+[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)  
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)  
 
 [![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
@@ -35,22 +35,22 @@ Naučte se základy tvorby aplikací s generativní AI prostřednictvím našeho
 
 ## 🌱 Začínáme
 
-Tento kurz obsahuje 21 lekcí. Každá lekce se věnuje konkrétnímu tématu, takže můžete začít, kde chcete!
+Tento kurz obsahuje 21 lekcí. Každá lekce se věnuje konkrétnímu tématu, takže můžete začít, kdekoliv chcete!
 
-Lekce jsou označeny buď jako "Learn" (učte se), které vysvětlují koncept generativní AI, nebo jako "Build" (stavte), které zahrnují koncepty a příklady kódu v **Pythonu** a **TypeScriptu**, pokud je to možné.
+Lekce jsou označeny buď jako "Learn" (naučte se), které vysvětlují koncept generativní AI, nebo jako "Build" (vytvořte), které zahrnují koncepty a příklady kódu v **Pythonu** a **TypeScriptu**, pokud je to možné.
 
 Pro vývojáře .NET se podívejte na [Generativní AI pro začátečníky (.NET edice)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Každá lekce obsahuje také sekci "Keep Learning" (pokračujte v učení) s dalšími vzdělávacími nástroji.
+Každá lekce také obsahuje sekci "Keep Learning" s dalšími vzdělávacími nástroji.
 
 ## Co potřebujete
 ### Pro spuštění kódu z tohoto kurzu můžete použít:
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lekce:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lekce:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lekce:** "oai-assignment" 
-   
-- Základní znalost Pythonu nebo TypeScriptu je užitečná - \*Pro úplné začátečníky doporučujeme tyto kurzy [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) a [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- GitHub účet pro [forknutí tohoto repozitáře](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) na váš vlastní GitHub účet
+ - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lekce:** "aoai-assignment"  
+ - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lekce:** "githubmodels"  
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lekce:** "oai-assignment"  
+
+- Základní znalost Pythonu nebo TypeScriptu je užitečná - \*Pro úplné začátečníky doporučujeme tyto kurzy [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) a [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)  
+- GitHub účet pro [forknutí tohoto repozitáře](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) na váš vlastní GitHub účet  
 
 Vytvořili jsme lekci **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)**, která vám pomůže nastavit vaše vývojové prostředí.
 
@@ -60,15 +60,15 @@ Nezapomeňte [označit hvězdičkou (🌟) tento repozitář](https://docs.githu
 
 Pokud hledáte pokročilejší ukázky kódu, podívejte se na naši [sbírku ukázek kódu pro generativní AI](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) v **Pythonu** a **TypeScriptu**.
 
-## 🗣️ Setkejte se s ostatními studenty, získejte podporu
+## 🗣️ Spojte se s ostatními studenty, získejte podporu
 
 Připojte se k našemu [oficiálnímu Discord serveru Azure AI Foundry](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), kde se můžete setkat a navázat kontakt s ostatními studenty tohoto kurzu a získat podporu.
 
-Pokládejte otázky nebo sdílejte zpětnou vazbu k produktu na našem [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) na Githubu.
+Pokládejte otázky nebo sdílejte zpětnou vazbu k produktu na našem [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) na GitHubu.
 
-## 🚀 Budujete startup?
+## 🚀 Zakládáte startup?
 
-Navštivte [Microsoft for Startups](https://www.microsoft.com/startups), kde se dozvíte, jak začít budovat s Azure kredity již dnes.
+Navštivte [Microsoft for Startups](https://www.microsoft.com/startups), kde zjistíte, jak začít budovat s Azure kredity již dnes.
 
 ## 🙏 Chcete pomoci?
 
@@ -76,24 +76,24 @@ Máte návrhy nebo jste našli chyby v textu či kódu? [Vytvořte issue](https:
 
 ## 📂 Každá lekce obsahuje:
 
-- Krátké video úvod do tématu
-- Písemnou lekci umístěnou v README
-- Ukázky kódu v Pythonu a TypeScriptu podporující Azure OpenAI a OpenAI API
-- Odkazy na další zdroje pro pokračování ve studiu
+- Krátké video úvod do tématu  
+- Písemnou lekci umístěnou v README  
+- Ukázky kódu v Pythonu a TypeScriptu podporující Azure OpenAI a OpenAI API  
+- Odkazy na další zdroje pro pokračování ve vzdělávání  
 
 ## 🗃️ Lekce
 
-| #   | **Odkaz na lekci**                                                                                                                              | **Popis**                                                                                 | **Video**                                                                   | **Další učení**                                                             |
+| #   | **Odkaz na lekci**                                                                                                                              | **Popis**                                                                                 | **Video**                                                                   | **Další vzdělávání**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** Jak nastavit vaše vývojové prostředí                                            | Video brzy k dispozici                                                                 | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Úvod do generativní AI a LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Porozumění tomu, co je generativní AI a jak fungují velké jazykové modely (LLMs).       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Zkoumání a porovnávání různých LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** Jak vybrat správný model pro váš případ použití                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Používání generativní AI zodpovědně](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Learn:** Jak vytvářet aplikace s generativní AI zodpovědně                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Porozumění základům prompt engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** Praktické osvědčené postupy pro prompt engineering                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Vytváření pokročilých promptů](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Learn:** Jak aplikovat techniky prompt engineering, které zlepšují výsledky vašich promptů. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Naučte se:** Jak nastavit vaše vývojové prostředí                                            | Video brzy dostupné                                                                 | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Úvod do generativní AI a LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Naučte se:** Co je generativní AI a jak fungují velké jazykové modely (LLMs).       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Zkoumání a porovnávání různých LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Naučte se:** Jak vybrat správný model pro váš případ použití                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Používání generativní AI zodpovědně](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Naučte se:** Jak vytvářet aplikace s generativní AI zodpovědně                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Základy prompt engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Naučte se:** Praktické postupy pro prompt engineering                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Vytváření pokročilých promptů](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Naučte se:** Jak aplikovat techniky prompt engineering, které zlepšují výsledky vašich promptů. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Další informace](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [Vytváření aplikací pro generování textu](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Vytvořte:** Aplikaci pro generování textu pomocí Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [Vytváření chatovacích aplikací](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Vytvořte:** Techniky pro efektivní vytváření a integraci chatovacích aplikací.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Vytváření vyhledávacích aplikací s vektorovými databázemi](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvořte:** Vyhledávací aplikaci, která používá vkládání pro vyhledávání dat.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Vytváření vyhledávacích aplikací s vektorovými databázemi](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvořte:** Vyhledávací aplikaci, která používá vkládání (Embeddings) k vyhledávání dat.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 09  | [Vytváření aplikací pro generování obrázků](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvořte:** Aplikaci pro generování obrázků                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 10  | [Vytváření AI aplikací s nízkým kódem](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Vytvořte:** Generativní AI aplikaci pomocí nástrojů s nízkým kódem                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 11  | [Integrace externích aplikací pomocí volání funkcí](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Vytvořte:** Co je volání funkcí a jeho využití v aplikacích                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -103,8 +103,8 @@ Máte návrhy nebo jste našli chyby v textu či kódu? [Vytvořte issue](https:
 | 15  | [Generování s podporou vyhledávání (RAG) a vektorové databáze](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Vytvořte:** Aplikaci využívající RAG framework pro získávání vkládání z vektorových databází  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  | [Open Source modely a Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Vytvořte:** Aplikaci využívající open source modely dostupné na Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [AI agenti](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Vytvořte:** Aplikaci využívající framework AI agentů                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Doladění LLM](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Co, proč a jak doladit LLM                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Vytváření s SLM](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Výhody vytváření s malými jazykovými modely                                            | Video brzy k dispozici | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Doladění LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Co, proč a jak doladit LLMs                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Vytváření s SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Výhody vytváření s malými jazykovými modely                                            | Video brzy k dispozici | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Vytváření s modely Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Funkce a rozdíly modelů rodiny Mistral                                           | Video brzy k dispozici | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Vytváření s modely Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte se:** Funkce a rozdíly modelů rodiny Meta                                           | Video brzy k dispozici | [Zjistit více](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
@@ -116,7 +116,7 @@ Speciální poděkování [**Johnu Azizovi**](https://www.linkedin.com/in/john0i
 
 ## 🎒 Další kurzy
 
-Náš tým vytváří i další kurzy! Podívejte se na:
+Náš tým vytváří další kurzy! Podívejte se na:
 
 - [**NOVÉ** Edge AI pro začátečníky](https://github.com/microsoft/edgeai-for-beginners)
 - [Model Context Protocol pro začátečníky](https://github.com/microsoft/mcp-for-beginners)
@@ -135,7 +135,17 @@ Náš tým vytváří i další kurzy! Podívejte se na:
 - [Ovládnutí GitHub Copilot pro vývojáře C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Vyberte si vlastní dobrodružství s Copilotem](https://github.com/microsoft/CopilotAdventures)
 
+## Získání pomoci
+
+Pokud se zaseknete nebo máte otázky ohledně vytváření AI aplikací, připojte se:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Pokud máte zpětnou vazbu k produktu nebo narazíte na chyby při vytváření, navštivte:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
+
 ---
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Za autoritativní zdroj by měl být považován původní dokument v jeho původním jazyce. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+**Prohlášení**:  
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

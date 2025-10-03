@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2a9df8fbe03cf309776a6730cfb1d2a7",
-  "translation_date": "2025-09-29T23:13:21+00:00",
+  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
+  "translation_date": "2025-10-03T09:08:56+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 [![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-### 🌐 Suporte Multilingue
+### 🌐 Suporte Multilíngue
 
 #### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
 
@@ -41,7 +41,7 @@ As lições são classificadas como "Aprender", que explicam um conceito de IA G
 
 Para programadores .NET, veja [IA Generativa para Iniciantes (Edição .NET)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Cada lição também inclui uma secção "Continuar a Aprender" com ferramentas adicionais de aprendizagem.
+Cada lição também inclui uma seção "Continuar a Aprender" com ferramentas adicionais de aprendizagem.
 
 ## O que precisa
 ### Para executar o código deste curso, pode usar:
@@ -72,7 +72,7 @@ Visite [Microsoft for Startups](https://www.microsoft.com/startups) para saber c
 
 ## 🙏 Quer ajudar?
 
-Tem sugestões ou encontrou erros de ortografia ou código? [Abra um problema](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ou [Crie um pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Tem sugestões ou encontrou erros de ortografia ou código? [Abra um problema](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ou [Crie um pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst).
 
 ## 📂 Cada lição inclui:
 
@@ -84,13 +84,13 @@ Tem sugestões ou encontrou erros de ortografia ou código? [Abra um problema](h
 ## 🗃️ Lições
 
 | #   | **Link da Lição**                                                                                                                              | **Descrição**                                                                                 | **Vídeo**                                                                   | **Aprendizagem Adicional**                                                     |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Configuração do Curso](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                           | **Aprender:** Como configurar o seu ambiente de desenvolvimento                               | Vídeo em breve                                                              | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introdução à IA Generativa e LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                                      | **Aprender:** Compreender o que é IA Generativa e como funcionam os Modelos de Linguagem Extensa (LLMs). | [Vídeo](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Explorar e comparar diferentes LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                   | **Aprender:** Como selecionar o modelo certo para o seu caso de uso                           | [Vídeo](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Usar IA Generativa de forma responsável](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                      | **Aprender:** Como criar aplicações de IA Generativa de forma responsável                     | [Vídeo](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Compreender os fundamentos da engenharia de prompts](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)          | **Aprender:** Práticas recomendadas de engenharia de prompts com exercícios práticos          | [Vídeo](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Criar prompts avançados](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                     | **Aprender:** Como aplicar técnicas de engenharia de prompts que melhoram os resultados dos seus prompts. | [Vídeo](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 00  | [Configuração do Curso](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                          | **Aprender:** Como configurar o seu ambiente de desenvolvimento                                | Vídeo em breve                                                                 | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Introdução à IA Generativa e LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Aprender:** Compreender o que é IA Generativa e como funcionam os Modelos de Linguagem Extensa (LLMs). | [Vídeo](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Explorar e comparar diferentes LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                  | **Aprender:** Como selecionar o modelo certo para o seu caso de uso                            | [Vídeo](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Usar IA Generativa de forma responsável](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                      | **Aprender:** Como criar aplicações de IA Generativa de forma responsável                      | [Vídeo](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Compreender os fundamentos da engenharia de prompts](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)         | **Aprender:** Práticas recomendadas de engenharia de prompts com exercícios práticos           | [Vídeo](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Criar prompts avançados](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                    | **Aprender:** Como aplicar técnicas de engenharia de prompts que melhoram os resultados dos seus prompts. | [Vídeo](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [Construir Aplicações de Geração de Texto](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Construir:** Uma aplicação de geração de texto usando Azure OpenAI / OpenAI API                                | [Vídeo](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [Construir Aplicações de Chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Construir:** Técnicas para construir e integrar aplicações de chat de forma eficiente.               | [Vídeo](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 08  | [Construir Aplicações de Pesquisa com Bases de Dados Vetoriais](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Construir:** Uma aplicação de pesquisa que utiliza Embeddings para procurar dados.                        | [Vídeo](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -103,7 +103,7 @@ Tem sugestões ou encontrou erros de ortografia ou código? [Abra um problema](h
 | 15  | [Geração Aumentada por Recuperação (RAG) e Bases de Dados Vetoriais](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Construir:** Uma aplicação usando um Framework RAG para recuperar embeddings de Bases de Dados Vetoriais  | [Vídeo](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  | [Modelos Open Source e Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Construir:** Uma aplicação usando modelos open source disponíveis no Hugging Face                    | [Vídeo](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [Agentes de IA](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Construir:** Uma aplicação usando um Framework de Agentes de IA                                           | [Vídeo](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Fine-Tuning de LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Aprender:** O quê, porquê e como fazer fine-tuning de LLMs                                            | [Vídeo](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Ajustar LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Aprender:** O quê, porquê e como ajustar LLMs                                            | [Vídeo](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 19  | [Construir com SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Aprender:** Os benefícios de construir com Small Language Models                                            | Vídeo Brevemente | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Construir com Modelos Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Aprender:** As características e diferenças dos Modelos da Família Mistral                                           | Vídeo Brevemente | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Construir com Modelos Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Aprender:** As características e diferenças dos Modelos da Família Meta                                           | Vídeo Brevemente | [Saiba Mais](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -135,7 +135,17 @@ A nossa equipa produz outros cursos! Veja:
 - [Dominar o GitHub Copilot para Programadores C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Escolha a Sua Própria Aventura com Copilot](https://github.com/microsoft/CopilotAdventures)
 
+## Obter Ajuda
+
+Se tiver dúvidas ou questões sobre como construir aplicações de IA, junte-se:
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+
+Se tiver feedback sobre produtos ou erros ao construir, visite:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
+
 ---
 
 **Aviso**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, tenha em atenção que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
