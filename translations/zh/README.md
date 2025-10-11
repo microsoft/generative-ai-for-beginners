@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "4f1bd9ec95be49b626c88ff9e24c0782",
-  "translation_date": "2025-10-03T08:28:48+00:00",
+  "original_hash": "f71b15f52ad5f493f2d0fca9c2c6832c",
+  "translation_date": "2025-10-11T10:32:40+00:00",
   "source_file": "README.md",
   "language_code": "zh"
 }
 -->
-![初学者的生成式 AI](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.zh.png)
+![生成式 AI 初学者指南](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.zh.png)
 
 ### 21节课程，教你从零开始构建生成式 AI 应用
 
@@ -27,9 +27,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### 通过 GitHub Action 支持（自动更新，始终保持最新）
 
-[法语](../fr/README.md) | [西班牙语](../es/README.md) | [德语](../de/README.md) | [俄语](../ru/README.md) | [阿拉伯语](../ar/README.md) | [波斯语](../fa/README.md) | [乌尔都语](../ur/README.md) | [中文（简体）](./README.md) | [中文（繁体，澳门）](../mo/README.md) | [中文（繁体，香港）](../hk/README.md) | [中文（繁体，台湾）](../tw/README.md) | [日语](../ja/README.md) | [韩语](../ko/README.md) | [印地语](../hi/README.md) | [孟加拉语](../bn/README.md) | [马拉地语](../mr/README.md) | [尼泊尔语](../ne/README.md) | [旁遮普语（古木基文）](../pa/README.md) | [葡萄牙语（葡萄牙）](../pt/README.md) | [葡萄牙语（巴西）](../br/README.md) | [意大利语](../it/README.md) | [立陶宛语](../lt/README.md) | [波兰语](../pl/README.md) | [土耳其语](../tr/README.md) | [希腊语](../el/README.md) | [泰语](../th/README.md) | [瑞典语](../sv/README.md) | [丹麦语](../da/README.md) | [挪威语](../no/README.md) | [芬兰语](../fi/README.md) | [荷兰语](../nl/README.md) | [希伯来语](../he/README.md) | [越南语](../vi/README.md) | [印尼语](../id/README.md) | [马来语](../ms/README.md) | [他加禄语（菲律宾语）](../tl/README.md) | [斯瓦希里语](../sw/README.md) | [匈牙利语](../hu/README.md) | [捷克语](../cs/README.md) | [斯洛伐克语](../sk/README.md) | [罗马尼亚语](../ro/README.md) | [保加利亚语](../bg/README.md) | [塞尔维亚语（西里尔文）](../sr/README.md) | [克罗地亚语](../hr/README.md) | [斯洛文尼亚语](../sl/README.md) | [乌克兰语](../uk/README.md) | [缅甸语（缅甸）](../my/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[阿拉伯语](../ar/README.md) | [孟加拉语](../bn/README.md) | [保加利亚语](../bg/README.md) | [缅甸语](../my/README.md) | [中文（简体）](./README.md) | [中文（繁体，香港）](../hk/README.md) | [中文（繁体，澳门）](../mo/README.md) | [中文（繁体，台湾）](../tw/README.md) | [克罗地亚语](../hr/README.md) | [捷克语](../cs/README.md) | [丹麦语](../da/README.md) | [荷兰语](../nl/README.md) | [爱沙尼亚语](../et/README.md) | [芬兰语](../fi/README.md) | [法语](../fr/README.md) | [德语](../de/README.md) | [希腊语](../el/README.md) | [希伯来语](../he/README.md) | [印地语](../hi/README.md) | [匈牙利语](../hu/README.md) | [印尼语](../id/README.md) | [意大利语](../it/README.md) | [日语](../ja/README.md) | [韩语](../ko/README.md) | [立陶宛语](../lt/README.md) | [马来语](../ms/README.md) | [马拉地语](../mr/README.md) | [尼泊尔语](../ne/README.md) | [挪威语](../no/README.md) | [波斯语](../fa/README.md) | [波兰语](../pl/README.md) | [葡萄牙语（巴西）](../br/README.md) | [葡萄牙语（葡萄牙）](../pt/README.md) | [旁遮普语](../pa/README.md) | [罗马尼亚语](../ro/README.md) | [俄语](../ru/README.md) | [塞尔维亚语（西里尔字母）](../sr/README.md) | [斯洛伐克语](../sk/README.md) | [斯洛文尼亚语](../sl/README.md) | [西班牙语](../es/README.md) | [斯瓦希里语](../sw/README.md) | [瑞典语](../sv/README.md) | [他加禄语（菲律宾语）](../tl/README.md) | [泰米尔语](../ta/README.md) | [泰语](../th/README.md) | [土耳其语](../tr/README.md) | [乌克兰语](../uk/README.md) | [乌尔都语](../ur/README.md) | [越南语](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# 初学者的生成式 AI（版本 3）- 一门课程
+# 生成式 AI 初学者指南（版本3）- 一门课程
 
 通过微软云倡导者提供的21节全面课程，学习构建生成式 AI 应用的基础知识。
 
@@ -37,11 +39,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 本课程共有21节课。每节课涵盖一个独立主题，你可以从任意一节开始学习！
 
-课程分为两类：“学习”课程，解释生成式 AI 的概念；“构建”课程，既解释概念又提供 **Python** 和 **TypeScript** 的代码示例（尽可能提供）。
+课程分为两种类型：“学习”课程，解释生成式 AI 的概念；“构建”课程，既解释概念又提供 **Python** 和 **TypeScript** 的代码示例（尽可能提供）。
 
-对于 .NET 开发者，请查看 [初学者的生成式 AI（.NET 版）](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)！
+对于 .NET 开发者，请查看 [生成式 AI 初学者指南（.NET 版）](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)！
 
-每节课还包括一个“继续学习”部分，提供额外的学习工具。
+每节课还包括“继续学习”部分，提供额外的学习工具。
 
 ## 所需条件
 ### 要运行本课程的代码，你可以选择以下之一：
@@ -49,35 +51,35 @@ CO_OP_TRANSLATOR_METADATA:
  - [GitHub Marketplace 模型目录](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **课程：** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **课程：** "oai-assignment" 
 
-- 具备 Python 或 TypeScript 的基础知识会有所帮助 - \*对于完全的初学者，请查看这些 [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) 和 [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) 课程
+- 具备 Python 或 TypeScript 的基础知识会有所帮助 - \*对于完全初学者，请查看这些 [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) 和 [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) 课程
 - 一个 GitHub 账号，用于 [fork 整个仓库](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) 到你的 GitHub 账号
 
-我们已创建了一个 **[课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 课程，帮助你设置开发环境。
+我们已创建了 **[课程设置](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** 课程，帮助你设置开发环境。
 
-别忘了 [收藏（🌟）这个仓库](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)，方便以后查找。
+别忘了 [star (🌟) 这个仓库](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst)，方便以后找到。
 
-## 🧠 准备部署？
+## 🧠 准备部署了吗？
 
 如果你正在寻找更高级的代码示例，请查看我们提供的 [生成式 AI 代码示例集](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)，包括 **Python** 和 **TypeScript**。
 
-## 🗣️ 与其他学习者交流，获取支持
+## 🗣️ 结识其他学习者，获取支持
 
 加入我们的 [官方 Azure AI Foundry Discord 服务器](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)，与其他学习者交流并获取支持。
 
 在我们的 [Azure AI Foundry 开发者论坛](https://aka.ms/azureaifoundry/forum) 上提问或分享产品反馈。
 
-## 🚀 构建初创公司？
+## 🚀 正在创建初创公司？
 
 访问 [Microsoft for Startups](https://www.microsoft.com/startups)，了解如何使用 Azure 额度开始构建。
 
 ## 🙏 想要贡献？
 
-有建议或发现拼写或代码错误？[提交问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) 或 [创建拉取请求](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)。
+你有建议或发现了拼写或代码错误吗？[提交问题](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) 或 [创建拉取请求](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)。
 
 ## 📂 每节课包括：
 
 - 一个简短的视频介绍
-- 位于 README 中的书面课程
+- README 中的书面课程
 - 支持 Azure OpenAI 和 OpenAI API 的 Python 和 TypeScript 代码示例
 - 继续学习的额外资源链接
 
@@ -89,8 +91,8 @@ CO_OP_TRANSLATOR_METADATA:
 | 01  | [生成式 AI 和 LLMs 简介](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **学习：** 了解什么是生成式 AI，以及大型语言模型（LLMs）的工作原理       | [视频](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 02  | [探索和比较不同的 LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 如何为你的使用场景选择合适的模型                                      | [视频](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 03  | [负责任地使用生成式 AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **学习：** 如何负责任地构建生成式 AI 应用                                  | [视频](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [理解提示工程基础](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 实践提示工程的最佳实践                                           | [视频](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [创建高级提示](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **学习：** 如何应用提示工程技术以优化提示的结果。 | [视频](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [理解提示工程基础](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **学习：** 提示工程最佳实践的动手操作                                           | [视频](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [创建高级提示](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **学习：** 如何应用提示工程技术以优化提示结果。 | [视频](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [构建文本生成应用](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **构建：** 使用 Azure OpenAI / OpenAI API 创建文本生成应用                                | [视频](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [构建聊天应用](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **构建：** 高效构建和集成聊天应用的技术                                                   | [视频](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 08  | [构建搜索应用与向量数据库](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **构建：** 使用嵌入技术进行数据搜索的搜索应用                                            | [视频](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [了解更多](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -112,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 特别感谢 [**John Aziz**](https://www.linkedin.com/in/john0isaac/) 创建了所有 GitHub Actions 和工作流。
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) 为每节课做出了关键贡献，提升了学习者和代码体验。
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) 为每节课程做出了关键贡献，提升了学习者和代码体验。
 
 ## 🎒 其他课程
 
@@ -137,7 +139,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 获取帮助
 
-如果您遇到困难或对构建 AI 应用有任何疑问，请加入：
+如果您遇到困难或对构建 AI 应用有任何问题，请加入：
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
 
@@ -148,4 +150,4 @@ CO_OP_TRANSLATOR_METADATA:
 ---
 
 **免责声明**：  
-本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。
+本文档使用AI翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。应以原文档的原始语言版本为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用本翻译而引起的任何误解或误读不承担责任。
