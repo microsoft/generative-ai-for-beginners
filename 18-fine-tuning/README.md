@@ -1,4 +1,4 @@
-[![Open Source Models](./img/18-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](./img/18-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fine-Tuning Your LLM
 

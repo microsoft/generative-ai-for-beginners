@@ -1,4 +1,4 @@
-[![Integrating with function calling](./images/14-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)
+[![Integrating with function calling](./images/14-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # The Generative AI Application Lifecycle
 
