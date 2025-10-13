@@ -1,6 +1,6 @@
 ipywidgets==8.1.7
-matplotlib==3.9.4
 numpy==2.3.3
+matplotlib==3.10.7
 pandas==2.3.3
 tqdm==4.67.1
 python-dotenv==1.1.1
