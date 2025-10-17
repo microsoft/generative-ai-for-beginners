@@ -1,66 +1,66 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-07-09T14:40:43+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T21:10:31+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "sw"
 }
 -->
-# Kuunganisha na kuitisha function
+# Kujumuisha na Kupiga Kazi
 
-[![Kuunganisha na kuitisha function](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sw.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Kujumuisha na Kupiga Kazi](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sw.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Umejifunza mambo mengi hadi sasa katika masomo yaliyopita. Hata hivyo, tunaweza kuboresha zaidi. Baadhi ya mambo tunayoweza kushughulikia ni jinsi ya kupata muundo wa majibu unaoendelea ili kurahisisha kazi na majibu hayo baadaye. Pia, tunaweza kutaka kuongeza data kutoka vyanzo vingine ili kuimarisha zaidi programu yetu.
+Umejifunza mambo mengi hadi sasa katika masomo yaliyopita. Hata hivyo, tunaweza kuboresha zaidi. Baadhi ya mambo tunayotaka kushughulikia ni jinsi tunavyoweza kupata muundo wa majibu unaoeleweka zaidi ili kurahisisha kufanya kazi na majibu hayo baadaye. Pia, tunaweza kutaka kuongeza data kutoka vyanzo vingine ili kuboresha zaidi programu yetu.
 
-Matatizo yaliyotajwa hapo juu ndiyo sura hii inalenga kuyashughulikia.
+Masuala yaliyotajwa hapo juu ndiyo sura hii inatafuta kushughulikia.
 
 ## Utangulizi
 
-Somu hili litajumuisha:
+Somu hii itashughulikia:
 
-- Kuelezea ni nini kuitisha function na matumizi yake.
-- Kuunda kuitisho la function kwa kutumia Azure OpenAI.
-- Jinsi ya kuunganisha kuitisho la function katika programu.
+- Kuelezea nini maana ya kupiga kazi na matumizi yake.
+- Kuunda kupiga kazi kwa kutumia Azure OpenAI.
+- Jinsi ya kujumuisha kupiga kazi katika programu.
 
 ## Malengo ya Kujifunza
 
 Mwisho wa somo hili, utaweza:
 
-- Kuelezea madhumuni ya kutumia kuitisha function.
-- Kuweka Kituo cha Kuitisha Function kwa kutumia Azure OpenAI Service.
-- Kubuni kuitisho za function zinazofaa kwa matumizi ya programu yako.
+- Kuelezea madhumuni ya kutumia kupiga kazi.
+- Kuweka Kupiga Kazi kwa kutumia Huduma ya Azure OpenAI.
+- Kubuni kupiga kazi kwa ufanisi kwa matumizi ya programu yako.
 
-## Hali ya Mfano: Kuboresha chatbot yetu kwa functions
+## Hali: Kuboresha chatbot yetu kwa kazi
 
-Kwa somo hili, tunataka kujenga kipengele kwa startup yetu ya elimu kinachowezesha watumiaji kutumia chatbot kutafuta kozi za kiufundi. Tutapendekeza kozi zinazofaa kwa kiwango chao cha ujuzi, nafasi yao ya kazi na teknolojia wanayovutiwa nayo.
+Kwa somo hili, tunataka kujenga kipengele kwa ajili ya kampuni yetu ya elimu kinachoruhusu watumiaji kutumia chatbot kutafuta kozi za kiufundi. Tutapendekeza kozi zinazofaa kiwango chao cha ujuzi, nafasi yao ya sasa, na teknolojia wanayopenda.
 
 Ili kukamilisha hali hii, tutatumia mchanganyiko wa:
 
 - `Azure OpenAI` kuunda uzoefu wa mazungumzo kwa mtumiaji.
-- `Microsoft Learn Catalog API` kusaidia watumiaji kupata kozi kulingana na ombi la mtumiaji.
-- `Function Calling` kuchukua swali la mtumiaji na kulituma kwa function ili kufanya ombi la API.
+- `Microsoft Learn Catalog API` kusaidia watumiaji kupata kozi kulingana na ombi lao.
+- `Kupiga Kazi` kuchukua swali la mtumiaji na kulipeleka kwenye kazi ili kufanya ombi la API.
 
-Ili kuanza, tuchunguze kwanini tungetaka kutumia kuitisha function kwa mara ya kwanza:
+Ili kuanza, hebu tuangalie kwa nini tungependa kutumia kupiga kazi kwanza:
 
-## Kwanini Kuitisha Function
+## Kwa Nini Kupiga Kazi
 
-Kabla ya kuitisha function, majibu kutoka LLM yalikuwa yasiyo na muundo na hayakuwa thabiti. Waendelezaji walilazimika kuandika msimbo mgumu wa uthibitishaji ili kuhakikisha wanaweza kushughulikia kila aina ya jibu. Watumiaji hawakuweza kupata majibu kama "Hali ya hewa ya sasa Stockholm ni nini?". Hii ni kwa sababu modeli zilikuwa na kikomo kwa data iliyofundishwa.
+Kabla ya kupiga kazi, majibu kutoka kwa LLM yalikuwa hayana muundo na hayakuwa thabiti. Waendelezaji walihitajika kuandika msimbo mgumu wa uthibitishaji ili kuhakikisha wanaweza kushughulikia kila tofauti ya jibu. Watumiaji hawakuweza kupata majibu kama "Hali ya hewa ya sasa huko Stockholm ni ipi?". Hii ni kwa sababu mifano ilikuwa imefungwa na muda ambao data ilifundishwa.
 
-Kuitisha Function ni kipengele cha Azure OpenAI Service kinachoshinda vikwazo vifuatavyo:
+Kupiga Kazi ni kipengele cha Huduma ya Azure OpenAI kinachoshinda mapungufu yafuatayo:
 
-- **Muundo thabiti wa jibu**. Ikiwa tunaweza kudhibiti muundo wa jibu vizuri, tunaweza kuunganisha majibu kwa urahisi zaidi na mifumo mingine.
-- **Data ya Nje**. Uwezo wa kutumia data kutoka vyanzo vingine vya programu katika muktadha wa mazungumzo.
+- **Muundo wa majibu thabiti**. Ikiwa tunaweza kudhibiti muundo wa majibu vizuri, tunaweza kujumuisha majibu hayo kwa urahisi katika mifumo mingine.
+- **Data ya nje**. Uwezo wa kutumia data kutoka vyanzo vingine vya programu katika muktadha wa mazungumzo.
 
-## Kuelezea tatizo kupitia hali ya mfano
+## Kuonyesha tatizo kupitia hali
 
-> Tunapendekeza utumie [daftari lililojumuishwa](python/aoai-assignment.ipynb) ikiwa unataka kuendesha hali ifuatayo. Unaweza pia kusoma tu tunapojaribu kuonyesha tatizo ambapo functions zinaweza kusaidia kulitatua.
+> Tunapendekeza utumie [notebook iliyojumuishwa](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) ikiwa unataka kuendesha hali iliyo hapa chini. Unaweza pia kusoma tu ili kuelewa tatizo ambalo kazi zinaweza kusaidia kulitatua.
 
-Tuchunguze mfano unaoonyesha tatizo la muundo wa jibu:
+Hebu tuangalie mfano unaoonyesha tatizo la muundo wa majibu:
 
-Tuseme tunataka kuunda hifadhidata ya data za wanafunzi ili tuweze kupendekeza kozi sahihi kwao. Hapa chini tuna maelezo mawili ya wanafunzi ambayo ni karibu sawa katika data wanayoshikilia.
+Tuseme tunataka kuunda hifadhidata ya data ya wanafunzi ili tuweze kupendekeza kozi sahihi kwao. Hapa chini tuna maelezo mawili ya wanafunzi ambayo yanafanana sana katika data wanayobeba.
 
-1. Tengeneza muunganisho na rasilimali yetu ya Azure OpenAI:
+1. Unda muunganisho na rasilimali yetu ya Azure OpenAI:
 
    ```python
    import os
@@ -77,7 +77,7 @@ Tuseme tunataka kuunda hifadhidata ya data za wanafunzi ili tuweze kupendekeza k
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Hapa chini ni msimbo wa Python wa kusanidi muunganisho wetu na Azure OpenAI ambapo tunaweka `api_type`, `api_base`, `api_version` na `api_key`.
+   Hapa chini kuna msimbo wa Python wa kusanidi muunganisho wetu na Azure OpenAI ambapo tunaweka `api_type`, `api_base`, `api_version` na `api_key`.
 
 1. Kuunda maelezo mawili ya wanafunzi kwa kutumia vigezo `student_1_description` na `student_2_description`.
 
@@ -87,9 +87,9 @@ Tuseme tunataka kuunda hifadhidata ya data za wanafunzi ili tuweze kupendekeza k
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Tunataka kutuma maelezo ya wanafunzi hapo juu kwa LLM ili ichambue data. Data hii inaweza kutumika baadaye katika programu yetu na kutumwa kwa API au kuhifadhiwa katika hifadhidata.
+   Tunataka kutuma maelezo ya wanafunzi hapo juu kwa LLM ili kuchambua data. Data hii inaweza kutumika baadaye katika programu yetu na kutumwa kwa API au kuhifadhiwa katika hifadhidata.
 
-1. Tufanye maelekezo mawili sawa ambapo tunaelekeza LLM ni taarifa gani tunazotaka:
+1. Hebu tuunde maelezo mawili sawa ambapo tunamwelekeza LLM kuhusu taarifa tunayoihitaji:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Tuseme tunataka kuunda hifadhidata ya data za wanafunzi ili tuweze kupendekeza k
    '''
    ```
 
-   Maelekezo hapo juu yanaelekeza LLM kutoa taarifa na kurudisha jibu kwa muundo wa JSON.
+   Maelezo hapo juu yanaelekeza LLM kutoa taarifa na kurudisha majibu katika muundo wa JSON.
 
-1. Baada ya kusanidi maelekezo na muunganisho wa Azure OpenAI, sasa tutatuma maelekezo kwa LLM kwa kutumia `openai.ChatCompletion`. Tunahifadhi maelekezo katika `messages` na kuteua nafasi ya `user`. Hii ni kuiga ujumbe kutoka kwa mtumiaji unaoandikwa kwa chatbot.
+1. Baada ya kusanidi maelezo na muunganisho kwa Azure OpenAI, sasa tutatuma maelezo kwa LLM kwa kutumia `openai.ChatCompletion`. Tunahifadhi maelezo katika kigezo cha `messages` na kupeana jukumu la `user`. Hii ni kuiga ujumbe kutoka kwa mtumiaji unaoandikwa kwa chatbot.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ Tuseme tunataka kuunda hifadhidata ya data za wanafunzi ili tuweze kupendekeza k
    openai_response2.choices[0].message.content
    ```
 
-Sasa tunaweza kutuma maombi yote mawili kwa LLM na kuchunguza jibu tunalopokea kwa kulipata hivi `openai_response1['choices'][0]['message']['content']`.
+Sasa tunaweza kutuma maombi yote mawili kwa LLM na kuchunguza majibu tunayopokea kwa kuyapata kama ifuatavyo `openai_response1['choices'][0]['message']['content']`.
 
-1. Mwisho, tunaweza kubadilisha jibu kuwa muundo wa JSON kwa kuitisha `json.loads`:
+1. Mwisho, tunaweza kubadilisha majibu kuwa muundo wa JSON kwa kupiga `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -173,55 +173,55 @@ Sasa tunaweza kutuma maombi yote mawili kwa LLM na kuchunguza jibu tunalopokea k
    }
    ```
 
-   Ingawa maelekezo ni sawa na maelezo ni karibu, tunaona thamani za mali ya `Grades` zikiwa na muundo tofauti, kwa mfano, wakati mwingine tunaweza kupata muundo `3.7` au `3.7 GPA`.
+   Ingawa maelezo ni sawa na maelezo yanafanana, tunaona thamani ya mali ya `Grades` imeundwa tofauti, ambapo tunaweza kupata muundo wa `3.7` au `3.7 GPA` kwa mfano.
 
-   Matokeo haya ni kwa sababu LLM inachukua data isiyo na muundo kwa njia ya maelekezo yaliyoandikwa na kurudisha pia data isiyo na muundo. Tunahitaji kuwa na muundo uliopangwa ili tujue nini tunatarajia tunapohifadhi au kutumia data hii.
+   Matokeo haya ni kwa sababu LLM inachukua data isiyo na muundo katika mfumo wa maelezo yaliyoandikwa na kurudisha pia data isiyo na muundo. Tunahitaji kuwa na muundo thabiti ili tujue tunachotarajia tunapohifadhi au kutumia data hii.
 
-Basi tunatatuaje tatizo la muundo? Kwa kutumia kuitisha function, tunaweza kuhakikisha tunapata data yenye muundo. Tunapoitisha function, LLM haifanyi au kuitisha function yoyote moja kwa moja. Badala yake, tunaunda muundo ambao LLM inafuata kwa majibu yake. Kisha tunatumia majibu hayo yenye muundo kujua ni function gani ya kuitisha katika programu zetu.
+Kwa hivyo tunatatua tatizo la muundo vipi? Kwa kutumia kupiga kazi, tunaweza kuhakikisha tunapokea data iliyoundwa. Tunapotumia kupiga kazi, LLM haifanyi kazi au kuendesha kazi yoyote. Badala yake, tunaunda muundo wa LLM kufuata kwa majibu yake. Kisha tunatumia majibu hayo yaliyoundwa kujua ni kazi gani ya kuendesha katika programu zetu.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sw.png)
+![mchakato wa kazi](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sw.png)
 
-Kisha tunaweza kuchukua kile kinachorejeshwa na function na kurudisha kwa LLM. LLM itajibu kwa lugha ya kawaida kujibu swali la mtumiaji.
+Tunaweza kisha kuchukua kile kinachorudishwa kutoka kwa kazi na kutuma hii tena kwa LLM. LLM kisha itajibu kwa kutumia lugha ya asili kujibu swali la mtumiaji.
 
-## Matumizi ya kuitisha function
+## Matumizi ya Kupiga Kazi
 
-Kuna matumizi mengi tofauti ambapo kuitisha function kunaweza kuboresha programu yako kama:
+Kuna matumizi mengi tofauti ambapo kupiga kazi kunaweza kuboresha programu yako kama:
 
-- **Kuitisha Zana za Nje**. Chatbots ni nzuri kutoa majibu kwa maswali kutoka kwa watumiaji. Kwa kutumia kuitisha function, chatbots zinaweza kutumia ujumbe kutoka kwa watumiaji kutekeleza kazi fulani. Kwa mfano, mwanafunzi anaweza kumuomba chatbot "Tuma barua pepe kwa mwalimu wangu nikisema nahitaji msaada zaidi kwa somo hili". Hii inaweza kuitisha function `send_email(to: string, body: string)`
+- **Kupiga Zana za Nje**. Chatbots ni nzuri katika kutoa majibu ya maswali kutoka kwa watumiaji. Kwa kutumia kupiga kazi, chatbots zinaweza kutumia ujumbe kutoka kwa watumiaji kukamilisha kazi fulani. Kwa mfano, mwanafunzi anaweza kuuliza chatbot "Tuma barua pepe kwa mwalimu wangu kusema nahitaji msaada zaidi na somo hili". Hii inaweza kufanya kupiga kazi kwa `send_email(to: string, body: string)`.
 
-- **Kuunda API au Maswali ya Hifadhidata**. Watumiaji wanaweza kupata taarifa kwa kutumia lugha ya kawaida ambayo hubadilishwa kuwa swali lililopangwa au ombi la API. Mfano ni mwalimu anayeomba "Nani wanafunzi waliomaliza kazi ya mwisho" ambayo inaweza kuitisha function `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Kuunda Maombi ya API au Hifadhidata**. Watumiaji wanaweza kupata taarifa kwa kutumia lugha ya asili ambayo inabadilishwa kuwa ombi lililoundwa au ombi la API. Mfano wa hili linaweza kuwa mwalimu anayeuliza "Ni nani wanafunzi waliokamilisha kazi ya mwisho" ambayo inaweza kupiga kazi iitwayo `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Kuunda Data Yenye Muundo**. Watumiaji wanaweza kuchukua kipande cha maandishi au CSV na kutumia LLM kutoa taarifa muhimu kutoka ndani yake. Kwa mfano, mwanafunzi anaweza kubadilisha makala ya Wikipedia kuhusu makubaliano ya amani kuunda kadi za maswali za AI. Hii inaweza kufanywa kwa kutumia function `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Kuunda Data Iliyounganishwa**. Watumiaji wanaweza kuchukua maandishi au CSV na kutumia LLM kutoa taarifa muhimu kutoka kwayo. Kwa mfano, mwanafunzi anaweza kubadilisha makala ya Wikipedia kuhusu makubaliano ya amani ili kuunda kadi za maswali za AI. Hii inaweza kufanywa kwa kutumia kazi iitwayo `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Kuunda Kuitisho Chako cha Kwanza cha Function
+## Kuunda Kupiga Kazi Kwako kwa Mara ya Kwanza
 
-Mchakato wa kuunda kuitisho la function unajumuisha hatua kuu 3:
+Mchakato wa kuunda kupiga kazi unajumuisha hatua 3 kuu:
 
-1. **Kuitisha** API ya Chat Completions na orodha ya functions zako na ujumbe wa mtumiaji.
-2. **Kusoma** jibu la modeli ili kufanya kitendo, yaani kutekeleza function au API Call.
-3. **Kufanya** kuitisho mwingine kwa Chat Completions API na jibu kutoka kwa function yako kutumia taarifa hiyo kuunda jibu kwa mtumiaji.
+1. **Kupiga** API ya Chat Completions na orodha ya kazi zako na ujumbe wa mtumiaji.
+2. **Kusoma** majibu ya mfano ili kutekeleza hatua yaani kuendesha kazi au ombi la API.
+3. **Kutuma** ombi lingine kwa API ya Chat Completions na majibu kutoka kwa kazi yako ili kutumia taarifa hiyo kuunda jibu kwa mtumiaji.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sw.png)
+![Mchakato wa LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sw.png)
 
-### Hatua 1 - kuunda ujumbe
+### Hatua ya 1 - kuunda ujumbe
 
-Hatua ya kwanza ni kuunda ujumbe wa mtumiaji. Huu unaweza kuwekwa kwa nguvu kwa kuchukua thamani ya ingizo la maandishi au unaweza kuweka thamani hapa. Ikiwa huu ni mara yako ya kwanza kutumia Chat Completions API, tunahitaji kufafanua `role` na `content` ya ujumbe.
+Hatua ya kwanza ni kuunda ujumbe wa mtumiaji. Hii inaweza kupewa thamani kwa njia ya pembejeo ya maandishi au unaweza kupeana thamani hapa. Ikiwa ni mara yako ya kwanza kufanya kazi na API ya Chat Completions, tunahitaji kufafanua `role` na `content` ya ujumbe.
 
-`role` inaweza kuwa `system` (kuunda sheria), `assistant` (modeli) au `user` (mtumiaji wa mwisho). Kwa kuitisha function, tutateua hii kama `user` na swali la mfano.
+`Role` inaweza kuwa `system` (kuunda sheria), `assistant` (mfano) au `user` (mtumiaji wa mwisho). Kwa kupiga kazi, tutapeana hii kama `user` na swali la mfano.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Kwa kuteua nafasi tofauti, inafahamisha LLM kama ni mfumo unaosema kitu au mtumiaji, jambo linalosaidia kujenga historia ya mazungumzo ambayo LLM inaweza kuijenga.
+Kwa kupeana majukumu tofauti, inakuwa wazi kwa LLM ikiwa ni mfumo unaosema kitu au mtumiaji, ambayo husaidia kujenga historia ya mazungumzo ambayo LLM inaweza kujenga juu yake.
 
-### Hatua 2 - kuunda functions
+### Hatua ya 2 - kuunda kazi
 
-Ifuatayo, tutaeleza function na vigezo vya function hiyo. Tutatumia function moja tu hapa iitwayo `search_courses` lakini unaweza kuunda functions nyingi.
+Kisha, tutafafanua kazi na vigezo vya kazi hiyo. Tutatumia kazi moja tu hapa iitwayo `search_courses` lakini unaweza kuunda kazi nyingi.
 
-> **Muhimu** : Functions zinajumuishwa katika ujumbe wa mfumo kwa LLM na zitahesabiwa katika idadi ya tokeni zinazopatikana kwako.
+> **Muhimu** : Kazi zinajumuishwa katika ujumbe wa mfumo kwa LLM na zitajumuishwa katika idadi ya tokeni zinazopatikana ulizonazo.
 
-Hapa chini, tunaunda functions kama orodha ya vitu. Kila kitu ni function na kina mali `name`, `description` na `parameters`:
+Hapa chini, tunaunda kazi kama safu ya vitu. Kila kipengee ni kazi na kina mali `name`, `description` na `parameters`:
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-Tuelezee kila mfano wa function kwa undani hapa chini:
+Hebu tuelezee kila mfano wa kazi kwa undani zaidi hapa chini:
 
-- `name` - Jina la function tunayotaka kuitisha.
-- `description` - Hii ni maelezo ya jinsi function inavyofanya kazi. Hapa ni muhimu kuwa maalum na wazi.
-- `parameters` - Orodha ya thamani na muundo unaotaka modeli itengeneze katika jibu lake. Orodha ya parameters ina vitu ambavyo vina mali zifuatazo:
-  1.  `type` - Aina ya data ambayo mali itahifadhiwa.
-  1.  `properties` - Orodha ya thamani maalum ambazo modeli itatumia kwa jibu lake
-      1. `name` - Funguo ni jina la mali ambayo modeli itatumia katika jibu lake lililopangwa, kwa mfano, `product`.
+- `name` - Jina la kazi tunayotaka kuitwa.
+- `description` - Hii ni maelezo ya jinsi kazi inavyofanya kazi. Hapa ni muhimu kuwa maalum na wazi.
+- `parameters` - Orodha ya thamani na muundo ambao tunataka mfano kutoa katika majibu yake. Safu ya vigezo ina vitu ambapo vitu vina mali zifuatazo:
+  1.  `type` - Aina ya data ambayo mali zitahifadhiwa.
+  1.  `properties` - Orodha ya thamani maalum ambayo mfano utatumia kwa majibu yake
+      1. `name` - Kitufe ni jina la mali ambayo mfano utatumia katika majibu yake yaliyoundwa, kwa mfano, `product`.
       1. `type` - Aina ya data ya mali hii, kwa mfano, `string`.
       1. `description` - Maelezo ya mali maalum.
 
-Kuna pia mali ya hiari `required` - mali inayohitajika ili kuitisha function kufanikisha.
+Kuna pia mali ya hiari `required` - mali inayohitajika kwa kupiga kazi kukamilika.
 
-### Hatua 3 - Kufanya kuitisho la function
+### Hatua ya 3 - Kufanya kupiga kazi
 
-Baada ya kufafanua function, sasa tunahitaji kuijumuisha katika kuitisho kwa Chat Completion API. Tunafanya hivi kwa kuongeza `functions` kwenye ombi. Katika kesi hii `functions=functions`.
+Baada ya kufafanua kazi, sasa tunahitaji kuijumuisha katika ombi kwa API ya Chat Completion. Tunafanya hivi kwa kuongeza `functions` kwenye ombi. Katika kesi hii `functions=functions`.
 
-Pia kuna chaguo la kuweka `function_call` kuwa `auto`. Hii ina maana tunamruhusu LLM kuamua function gani inapaswa kuitwa kulingana na ujumbe wa mtumiaji badala ya kuiteua sisi wenyewe.
+Kuna pia chaguo la kuweka `function_call` kuwa `auto`. Hii inamaanisha tutaruhusu LLM kuamua ni kazi gani inapaswa kuitwa kulingana na ujumbe wa mtumiaji badala ya kupeana sisi wenyewe.
 
-Hapa kuna msimbo hapa chini ambapo tunaita `ChatCompletion.create`, angalia jinsi tunavyoweka `functions=functions` na `function_call="auto"` na hivyo kumpa LLM chaguo la lini kuitisha functions tunazompatia:
+Hapa kuna msimbo hapa chini ambapo tunapiga `ChatCompletion.create`, angalia jinsi tunavyoweka `functions=functions` na `function_call="auto"` na hivyo kutoa LLM chaguo la wakati wa kupiga kazi tunazozitoa:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Jibu linalorejea sasa linaonekana hivi:
+Majibu yanayorudi sasa yanaonekana kama hivi:
 
 ```json
 {
@@ -294,33 +294,33 @@ Jibu linalorejea sasa linaonekana hivi:
 }
 ```
 
-Hapa tunaona jinsi function `search_courses` ilivyotumiwa na kwa hoja gani, kama ilivyoorodheshwa katika mali ya `arguments` katika jibu la JSON.
+Hapa tunaweza kuona jinsi kazi `search_courses` ilivyopigwa na kwa hoja gani, kama ilivyoorodheshwa katika mali ya `arguments` katika majibu ya JSON.
 
-Hitimisho ni kwamba LLM ilifanikiwa kupata data inayolingana na hoja za function kwa kuwa ilikuwa inachukua kutoka kwa thamani iliyotolewa kwa parameter ya `messages` katika kuitisho cha chat completion. Hapa chini ni kumbukumbu ya thamani ya `messages`:
+Hitimisho ni kwamba LLM iliweza kupata data inayofaa hoja za kazi kama ilivyokuwa ikitoa kutoka kwa thamani iliyotolewa kwa kigezo cha `messages` katika kupiga mazungumzo. Hapa chini ni ukumbusho wa thamani ya `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Kama unavyoona, `student`, `Azure` na `beginner` vilichukuliwa kutoka `messages` na kuwekwa kama ingizo kwa function. Kutumia functions kwa njia hii ni njia nzuri ya kutoa taarifa kutoka kwa maelekezo lakini pia kutoa muundo kwa LLM na kuwa na utendaji unaoweza kutumika tena.
+Kama unavyoona, `student`, `Azure` na `beginner` vilitolewa kutoka `messages` na kuwekwa kama pembejeo kwa kazi. Kutumia kazi kwa njia hii ni njia nzuri ya kutoa taarifa kutoka kwa maelezo lakini pia kutoa muundo kwa LLM na kuwa na utendaji unaoweza kutumika tena.
 
 Ifuatayo, tunahitaji kuona jinsi tunavyoweza kutumia hii katika programu yetu.
 
-## Kuunganisha Kuitisho za Function katika Programu
+## Kujumuisha Kupiga Kazi katika Programu
 
-Baada ya kujaribu jibu lililopangwa kutoka kwa LLM, sasa tunaweza kuunganisha hii katika programu.
+Baada ya kujaribu majibu yaliyoundwa kutoka kwa LLM, sasa tunaweza kujumuisha hii katika programu yetu.
 
-### Kusimamia mtiririko
+### Kusimamia mchakato
 
-Ili kuunganisha hii katika programu yetu, tuchukue hatua zifuatazo:
+Ili kujumuisha hii katika programu yetu, hebu tuchukue hatua zifuatazo:
 
-1. Kwanza, tufanye kuitisho kwa huduma za OpenAI na kuhifadhi ujumbe katika variable iitwayo `response_message`.
+1. Kwanza, hebu tupige huduma za OpenAI na kuhifadhi ujumbe katika kigezo kinachoitwa `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. Sasa tutaeleza function itakayoitisha Microsoft Learn API kupata orodha ya kozi:
+1. Sasa tutafafanua kazi ambayo itapiga Microsoft Learn API kupata orodha ya kozi:
 
    ```python
    import requests
@@ -342,11 +342,11 @@ Ili kuunganisha hii katika programu yetu, tuchukue hatua zifuatazo:
      return str(results)
    ```
 
-   Angalia jinsi sasa tunaunda function halisi ya Python inayolingana na majina ya function yaliyotangazwa katika variable ya `functions`. Pia tunafanya miito halisi ya API za nje kupata data tunayohitaji. Katika kesi hii, tunaenda dhidi ya Microsoft Learn API kutafuta moduli za mafunzo.
+   Angalia jinsi tunavyounda kazi halisi ya Python inayolingana na majina ya kazi yaliyoletwa katika kigezo cha `functions`. Pia tunafanya maombi halisi ya API ya nje kupata data tunayoihitaji. Katika kesi hii, tunapiga Microsoft Learn API kutafuta moduli za mafunzo.
 
-Sawa, tumetengeneza variable ya `functions` na function ya Python inayolingana, tunamwambiaje LLM jinsi ya kuoanisha hizi mbili ili function yetu ya Python iitwe?
+Sawa, kwa hivyo tumeunda vigezo vya `functions` na kazi ya Python inayolingana, tunafanyaje LLM kujua jinsi ya kuunganisha hizi mbili pamoja ili kazi yetu ya Python ipigwe?
 
-1. Ili kuona kama tunahitaji kuitisha function ya Python, tunahitaji kuangalia jibu la LLM na kuona kama `function_call` ipo na kuitisha function iliyotajwa. Hapa chini ni jinsi unavyoweza kufanya ukaguzi huo:
+1. Ili kuona ikiwa tunahitaji kupiga kazi ya Python, tunahitaji kuangalia majibu ya LLM na kuona ikiwa `function_call` ni sehemu yake na kupiga kazi iliyotajwa. Hapa kuna jinsi unavyoweza kufanya ukaguzi ulioelezwa hapa chini:
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Sawa, tumetengeneza variable ya `functions` na function ya Python inayolingana, 
     )
    ```
 
-   Mistari hii mitatu, inahakikisha tunachukua jina la function, hoja na kufanya kuitisho:
+   Mistari hii mitatu, inahakikisha tunatoa jina la kazi, hoja na kupiga kazi:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -400,7 +400,7 @@ Sawa, tumetengeneza variable ya `functions` na function ya Python inayolingana, 
    function_response = function_to_call(**function_args)
    ```
 
-   Hapa chini ni matokeo ya kuendesha msimbo wetu:
+   Hapa chini ni matokeo kutoka kwa kuendesha msimbo wetu:
 
    **Matokeo**
 
@@ -421,7 +421,7 @@ Sawa, tumetengeneza variable ya `functions` na function ya Python inayolingana, 
    <class 'str'>
    ```
 
-1. Sasa tutatuma ujumbe uliosasishwa, `messages` kwa LLM ili tupate jibu la lugha ya kawaida badala ya jibu la API lililopangwa kwa JSON.
+1. Sasa tutatuma ujumbe uliosasishwa, `messages` kwa LLM ili tuweze kupokea jibu la lugha ya asili badala ya majibu ya API yaliyoundwa kwa JSON.
 
    ```python
    print("Messages in next request:")
@@ -450,18 +450,23 @@ Sawa, tumetengeneza variable ya `functions` na function ya Python inayolingana, 
 
    ```
 
-## Kazi ya Nyumbani
+## Kazi
 
-Ili kuendelea na kujifunza kwa Azure OpenAI Function Calling unaweza kujenga:
+Ili kuendelea kujifunza kuhusu Azure OpenAI Kupiga Kazi unaweza kujenga:
 
-- Vigezo zaidi vya function ambavyo vinaweza kusaidia wanafunzi kupata kozi zaidi.
-- Kuunda kuitisho kingine cha function kinachochukua taarifa zaidi kutoka kwa mwanafunzi kama lugha yao ya asili
-- Kuunda usimamizi wa makosa wakati kuitisho la function na/au ombi la API halirejeshi kozi zinazofaa yoyote
-## Kazi Nzuri! Endelea Safari
+- Vigezo zaidi vya kazi ambavyo vinaweza kusaidia wanafunzi kupata kozi zaidi.
+- Unda kupiga kazi nyingine inayochukua taarifa zaidi kutoka kwa mwanafunzi kama lugha yao ya asili.
+- Unda utaratibu wa kushughulikia makosa pale ambapo mwito wa kazi au mwito wa API hauleti kozi zinazofaa
 
-Baada ya kumaliza somo hili, angalia mkusanyiko wetu wa [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa Generative AI!
+Kidokezo: Fuata ukurasa wa [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) ili kuona jinsi na wapi data hii inapatikana.
+
+## Kazi Nzuri! Endelea na Safari
+
+Baada ya kukamilisha somo hili, angalia [mkusanyiko wa Kujifunza kuhusu AI Jenereta](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako kuhusu AI Jenereta!
 
 Nenda kwenye Somo la 12, ambapo tutaangalia jinsi ya [kubuni UX kwa programu za AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Kiarifu cha Kutotegemea**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inashauriwa. Hatuna wajibu wowote kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+---
+
+**Kanusho**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

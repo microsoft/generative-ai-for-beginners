@@ -1,25 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-07-09T14:41:47+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T21:37:02+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "cs"
 }
 -->
 # Integrace s voláním funkcí
 
-[![Integrace s voláním funkcí](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.cs.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integrace s voláním funkcí](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.cs.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-V předchozích lekcích jste se už hodně naučili. Přesto se můžeme ještě zlepšit. Některé věci, které můžeme řešit, jsou například, jak získat konzistentnější formát odpovědi, aby bylo snazší s ní dále pracovat. Také bychom mohli chtít přidat data z jiných zdrojů, abychom naši aplikaci ještě více obohatili.
+V předchozích lekcích jste se již naučili poměrně dost. Nicméně stále je prostor pro zlepšení. Některé věci, které můžeme řešit, zahrnují získání konzistentnějšího formátu odpovědí, což usnadní práci s odpověďmi v dalších krocích. Také bychom mohli přidat data z jiných zdrojů, abychom naši aplikaci dále obohatili.
 
-Výše zmíněné problémy jsou tím, čemu se tato kapitola věnuje.
+Tento kapitola se zaměřuje na řešení výše zmíněných problémů.
 
 ## Úvod
 
 Tato lekce pokryje:
 
-- Vysvětlení, co je volání funkcí a k čemu se používá.
+- Vysvětlení, co je volání funkcí a jeho využití.
 - Vytvoření volání funkce pomocí Azure OpenAI.
 - Jak integrovat volání funkce do aplikace.
 
@@ -28,39 +28,39 @@ Tato lekce pokryje:
 Na konci této lekce budete schopni:
 
 - Vysvětlit účel používání volání funkcí.
-- Nastavit volání funkce pomocí Azure OpenAI Service.
-- Navrhnout efektivní volání funkcí pro konkrétní použití vaší aplikace.
+- Nastavit volání funkcí pomocí služby Azure OpenAI.
+- Navrhnout efektivní volání funkcí pro potřeby vaší aplikace.
 
-## Scénář: Vylepšení našeho chatbota pomocí funkcí
+## Scénář: Vylepšení našeho chatbotu pomocí funkcí
 
-Pro tuto lekci chceme vytvořit funkci pro náš vzdělávací startup, která uživatelům umožní pomocí chatbota najít technické kurzy. Doporučíme kurzy, které odpovídají jejich úrovni dovedností, aktuální roli a zájmu o technologii.
+V této lekci chceme vytvořit funkci pro náš startup zaměřený na vzdělávání, která umožní uživatelům používat chatbot k vyhledávání technických kurzů. Budeme doporučovat kurzy, které odpovídají jejich úrovni dovedností, aktuální roli a zájmu o technologie.
 
 K dokončení tohoto scénáře použijeme kombinaci:
 
-- `Azure OpenAI` pro vytvoření chatovacího zážitku pro uživatele.
+- `Azure OpenAI` k vytvoření chatovacího zážitku pro uživatele.
 - `Microsoft Learn Catalog API` k pomoci uživatelům najít kurzy na základě jejich požadavků.
-- `Function Calling` k převzetí dotazu uživatele a jeho odeslání do funkce, která provede API požadavek.
+- `Volání funkcí` k přijetí dotazu uživatele a jeho odeslání do funkce pro provedení požadavku na API.
 
-Pro začátek se podívejme, proč bychom vůbec chtěli používat volání funkcí:
+Než začneme, podívejme se, proč bychom vůbec chtěli používat volání funkcí:
 
 ## Proč volání funkcí
 
-Před voláním funkcí byly odpovědi z LLM nestrukturované a nekonzistentní. Vývojáři museli psát složitý validační kód, aby zvládli všechny možné varianty odpovědí. Uživatelé nemohli získat odpovědi na otázky jako „Jaké je aktuální počasí ve Stockholmu?“. To proto, že modely byly omezené na data, na kterých byly trénovány.
+Před voláním funkcí byly odpovědi od LLM nestrukturované a nekonzistentní. Vývojáři museli psát složitý validační kód, aby zajistili, že budou schopni zpracovat každou variaci odpovědi. Uživatelé nemohli získat odpovědi jako například "Jaké je aktuální počasí ve Stockholmu?". To proto, že modely byly omezeny na data, na kterých byly vyškoleny.
 
-Volání funkcí je funkce Azure OpenAI Service, která pomáhá překonat následující omezení:
+Volání funkcí je funkce služby Azure OpenAI, která překonává následující omezení:
 
-- **Konzistentní formát odpovědi**. Pokud můžeme lépe kontrolovat formát odpovědi, můžeme ji snáze integrovat do dalších systémů.
-- **Externí data**. Možnost využít data z jiných zdrojů aplikace v kontextu chatu.
+- **Konzistentní formát odpovědí**. Pokud můžeme lépe kontrolovat formát odpovědí, můžeme je snadněji integrovat do dalších systémů.
+- **Externí data**. Možnost využívat data z jiných zdrojů aplikace v kontextu chatu.
 
-## Ilustrace problému na scénáři
+## Ilustrace problému prostřednictvím scénáře
 
-> Doporučujeme použít [přiložený notebook](python/aoai-assignment.ipynb), pokud chcete scénář vyzkoušet. Můžete také jen číst dál, protože se snažíme ukázat problém, který funkce mohou pomoci vyřešit.
+> Doporučujeme použít [přiložený notebook](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), pokud chcete spustit níže uvedený scénář. Můžete také jen číst dál, protože se snažíme ilustrovat problém, kde mohou funkce pomoci s jeho řešením.
 
-Podívejme se na příklad, který ilustruje problém s formátem odpovědi:
+Podívejme se na příklad, který ilustruje problém s formátem odpovědí:
 
-Řekněme, že chceme vytvořit databázi studentských dat, abychom jim mohli doporučit správný kurz. Níže máme dva popisy studentů, které jsou si datově velmi podobné.
+Řekněme, že chceme vytvořit databázi údajů o studentech, abychom jim mohli doporučit správný kurz. Níže máme dva popisy studentů, které jsou velmi podobné v datech, která obsahují.
 
-1. Vytvoříme připojení k našemu Azure OpenAI zdroji:
+1. Vytvořte připojení k našemu zdroji Azure OpenAI:
 
    ```python
    import os
@@ -77,9 +77,9 @@ Podívejme se na příklad, který ilustruje problém s formátem odpovědi:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Níže je Python kód pro konfiguraci připojení k Azure OpenAI, kde nastavujeme `api_type`, `api_base`, `api_version` a `api_key`.
+   Níže je uveden kód v Pythonu pro konfiguraci našeho připojení k Azure OpenAI, kde nastavujeme `api_type`, `api_base`, `api_version` a `api_key`.
 
-1. Vytvoříme dva popisy studentů pomocí proměnných `student_1_description` a `student_2_description`.
+1. Vytvoření dvou popisů studentů pomocí proměnných `student_1_description` a `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ Podívejme se na příklad, který ilustruje problém s formátem odpovědi:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Chceme tyto popisy studentů poslat do LLM, aby data rozparsoval. Tato data pak můžeme použít v aplikaci, odeslat do API nebo uložit do databáze.
+   Chceme poslat výše uvedené popisy studentů do LLM, aby data analyzoval. Tato data mohou být později použita v naší aplikaci a odeslána do API nebo uložena do databáze.
 
-1. Vytvoříme dva stejné prompti, ve kterých LLM instruujeme, jaké informace nás zajímají:
+1. Vytvořme dva identické výzvy, ve kterých LLM instruujeme, jaké informace nás zajímají:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Podívejme se na příklad, který ilustruje problém s formátem odpovědi:
    '''
    ```
 
-   Výše uvedené prompty instruují LLM, aby extrahoval informace a vrátil odpověď ve formátu JSON.
+   Výše uvedené výzvy instruují LLM, aby extrahoval informace a vrátil odpověď ve formátu JSON.
 
-1. Po nastavení promptů a připojení k Azure OpenAI nyní pošleme prompty do LLM pomocí `openai.ChatCompletion`. Prompt uložíme do proměnné `messages` a přiřadíme roli `user`. Tím simulujeme zprávu od uživatele psanou do chatbota.
+1. Po nastavení výzev a připojení k Azure OpenAI nyní pošleme výzvy do LLM pomocí `openai.ChatCompletion`. Výzvu uložíme do proměnné `messages` a přiřadíme roli `user`. To simuluje zprávu od uživatele napsanou chatbotu.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ Podívejme se na příklad, který ilustruje problém s formátem odpovědi:
    openai_response2.choices[0].message.content
    ```
 
-Nyní můžeme odeslat oba požadavky do LLM a zkontrolovat odpověď, kterou obdržíme, například takto: `openai_response1['choices'][0]['message']['content']`.
+Nyní můžeme poslat oba požadavky do LLM a zkoumat odpověď, kterou obdržíme, například takto: `openai_response1['choices'][0]['message']['content']`.
 
-1. Nakonec můžeme odpověď převést do JSON formátu zavoláním `json.loads`:
+1. Nakonec můžeme odpověď převést do formátu JSON pomocí volání `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -173,53 +173,53 @@ Nyní můžeme odeslat oba požadavky do LLM a zkontrolovat odpověď, kterou ob
    }
    ```
 
-   I když jsou prompty stejné a popisy podobné, vidíme, že hodnoty vlastnosti `Grades` jsou formátovány různě, například někdy ve formátu `3.7` a jindy `3.7 GPA`.
+   I když jsou výzvy stejné a popisy podobné, vidíme, že hodnoty vlastnosti `Grades` jsou formátovány odlišně, například někdy dostaneme formát `3.7` nebo `3.7 GPA`.
 
-   Tento výsledek je způsoben tím, že LLM přijímá nestrukturovaná data ve formě psaného promptu a také vrací nestrukturovaná data. Potřebujeme mít strukturovaný formát, abychom věděli, co očekávat při ukládání nebo používání těchto dat.
+   Tento výsledek je způsoben tím, že LLM přijímá nestrukturovaná data ve formě psané výzvy a vrací také nestrukturovaná data. Potřebujeme mít strukturovaný formát, abychom věděli, co očekávat při ukládání nebo používání těchto dat.
 
-Jak tedy vyřešit problém s formátováním? Pomocí volání funkcí můžeme zajistit, že dostaneme zpět strukturovaná data. Při volání funkcí LLM ve skutečnosti žádné funkce nespouští. Místo toho vytvoříme strukturu, kterou má LLM při odpovědích dodržovat. Tyto strukturované odpovědi pak použijeme k rozhodnutí, kterou funkci v aplikaci spustíme.
+Jak tedy vyřešíme problém s formátováním? Použitím volání funkcí můžeme zajistit, že dostaneme zpět strukturovaná data. Při použití volání funkcí LLM ve skutečnosti žádné funkce nevolá ani nespouští. Místo toho vytvoříme strukturu, kterou LLM bude následovat při generování odpovědí. Poté použijeme tyto strukturované odpovědi k určení, jakou funkci spustit v našich aplikacích.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.cs.png)
+![průběh funkce](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.cs.png)
 
-Výsledek z funkce pak můžeme poslat zpět do LLM. LLM následně odpoví přirozeným jazykem na dotaz uživatele.
+Poté můžeme vzít to, co je vráceno z funkce, a poslat to zpět do LLM. LLM pak odpoví přirozeným jazykem na dotaz uživatele.
 
 ## Případy použití volání funkcí
 
-Existuje mnoho různých případů, kdy volání funkcí může zlepšit vaši aplikaci, například:
+Existuje mnoho různých případů použití, kde volání funkcí může zlepšit vaši aplikaci, například:
 
-- **Volání externích nástrojů**. Chatboti jsou skvělí v poskytování odpovědí na otázky uživatelů. Pomocí volání funkcí mohou chatboti využít zprávy od uživatelů k dokončení určitých úkolů. Například student může požádat chatbota: „Pošli e-mail mému lektorovi, že potřebuji více pomoci s tímto předmětem.“ To může vyvolat volání funkce `send_email(to: string, body: string)`.
+- **Volání externích nástrojů**. Chatboty jsou skvělé pro poskytování odpovědí na otázky uživatelů. Použitím volání funkcí mohou chatboty použít zprávy od uživatelů k provádění určitých úkolů. Například student může požádat chatbot, aby "Poslal e-mail mému instruktorovi, že potřebuji více pomoci s tímto předmětem". To může provést volání funkce `send_email(to: string, body: string)`.
 
-- **Vytváření API nebo databázových dotazů**. Uživatelé mohou najít informace pomocí přirozeného jazyka, který se převede na formátovaný dotaz nebo API požadavek. Příkladem může být učitel, který se zeptá: „Kteří studenti dokončili poslední úkol?“, což může vyvolat funkci `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Vytváření dotazů na API nebo databázi**. Uživatelé mohou najít informace pomocí přirozeného jazyka, který se převede na formátovaný dotaz nebo požadavek na API. Příkladem může být učitel, který se ptá "Kteří studenti dokončili poslední úkol", což by mohlo vyvolat funkci nazvanou `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Vytváření strukturovaných dat**. Uživatelé mohou vzít blok textu nebo CSV a použít LLM k extrakci důležitých informací. Například student může převést článek z Wikipedie o mírových dohodách na AI flashkarty. To lze provést pomocí funkce `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Vytváření strukturovaných dat**. Uživatelé mohou vzít blok textu nebo CSV a použít LLM k extrakci důležitých informací z něj. Například student může převést článek z Wikipedie o mírových dohodách na vytvoření AI kartiček. To lze provést pomocí funkce nazvané `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
 ## Vytvoření vašeho prvního volání funkce
 
 Proces vytvoření volání funkce zahrnuje 3 hlavní kroky:
 
 1. **Volání** API Chat Completions s seznamem vašich funkcí a zprávou od uživatele.
-2. **Čtení** odpovědi modelu pro provedení akce, tj. spuštění funkce nebo API volání.
-3. **Vytvoření** dalšího volání na Chat Completions API s odpovědí z vaší funkce, abyste použili tyto informace k vytvoření odpovědi uživateli.
+2. **Čtení** odpovědi modelu k provedení akce, tj. spuštění funkce nebo API požadavku.
+3. **Vytvoření** dalšího volání API Chat Completions s odpovědí z vaší funkce, aby se tato informace použila k vytvoření odpovědi pro uživatele.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.cs.png)
+![Průběh LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.cs.png)
 
-### Krok 1 - vytváření zpráv
+### Krok 1 - vytvoření zpráv
 
-Prvním krokem je vytvořit zprávu od uživatele. Ta může být dynamicky přiřazena z hodnoty textového vstupu, nebo ji můžete zde přímo zadat. Pokud pracujete s Chat Completions API poprvé, musíme definovat `role` a `content` zprávy.
+Prvním krokem je vytvoření zprávy od uživatele. To může být dynamicky přiřazeno pomocí hodnoty textového vstupu nebo můžete hodnotu přiřadit zde. Pokud je to vaše první práce s API Chat Completions, musíme definovat `role` a `content` zprávy.
 
-`role` může být `system` (nastavení pravidel), `assistant` (model) nebo `user` (koncový uživatel). Pro volání funkcí přiřadíme roli `user` a uvedeme příklad otázky.
+Role může být buď `system` (vytváření pravidel), `assistant` (model) nebo `user` (koncový uživatel). Pro volání funkcí ji přiřadíme jako `user` a příklad otázky.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Přiřazením různých rolí je pro LLM jasné, zda něco říká systém nebo uživatel, což pomáhá budovat historii konverzace, na kterou se LLM může odkazovat.
+Přiřazením různých rolí je LLM jasné, zda něco říká systém nebo uživatel, což pomáhá budovat historii konverzace, na které může LLM stavět.
 
-### Krok 2 - vytváření funkcí
+### Krok 2 - vytvoření funkcí
 
-Dále definujeme funkci a její parametry. Použijeme zde pouze jednu funkci s názvem `search_courses`, ale můžete vytvořit i více funkcí.
+Dále definujeme funkci a parametry této funkce. Použijeme zde pouze jednu funkci nazvanou `search_courses`, ale můžete vytvořit více funkcí.
 
-> **Důležité** : Funkce jsou zahrnuty do systémové zprávy pro LLM a započítávají se do dostupného počtu tokenů.
+> **Důležité**: Funkce jsou zahrnuty do systémové zprávy pro LLM a budou zahrnuty do dostupného počtu tokenů.
 
 Níže vytvoříme funkce jako pole položek. Každá položka je funkce a má vlastnosti `name`, `description` a `parameters`:
 
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-Popíšeme si jednotlivé vlastnosti funkce podrobněji:
+Pojďme si podrobněji popsat každou instanci funkce níže:
 
 - `name` - Název funkce, kterou chceme volat.
-- `description` - Popis, jak funkce funguje. Je důležité být konkrétní a jasný.
-- `parameters` - Seznam hodnot a formát, který chcete, aby model ve své odpovědi použil. Pole parametrů obsahuje položky s následujícími vlastnostmi:
-  1. `type` - Datový typ, ve kterém budou vlastnosti uloženy.
-  2. `properties` - Seznam konkrétních hodnot, které model použije ve své odpovědi.
-     1. `name` - Klíč je název vlastnosti, kterou model použije ve formátované odpovědi, například `product`.
-     2. `type` - Datový typ této vlastnosti, například `string`.
-     3. `description` - Popis konkrétní vlastnosti.
+- `description` - Popis, jak funkce funguje. Zde je důležité být konkrétní a jasný.
+- `parameters` - Seznam hodnot a formát, který chceme, aby model vytvořil ve své odpovědi. Pole parametrů se skládá z položek, kde položky mají následující vlastnosti:
+  1.  `type` - Datový typ, ve kterém budou vlastnosti uloženy.
+  1.  `properties` - Seznam konkrétních hodnot, které model použije pro svou odpověď.
+      1. `name` - Klíč je název vlastnosti, kterou model použije ve svém formátovaném odpovědi, například `product`.
+      1. `type` - Datový typ této vlastnosti, například `string`.
+      1. `description` - Popis konkrétní vlastnosti.
 
 Existuje také volitelná vlastnost `required` - povinná vlastnost pro dokončení volání funkce.
 
-### Krok 3 - provedení volání funkce
+### Krok 3 - Vytvoření volání funkce
 
-Po definování funkce ji musíme zahrnout do volání Chat Completion API. Uděláme to přidáním `functions` do požadavku, v tomto případě `functions=functions`.
+Po definování funkce ji nyní musíme zahrnout do volání API Chat Completion. To provedeme přidáním `functions` do požadavku. V tomto případě `functions=functions`.
 
-Je také možnost nastavit `function_call` na `auto`. To znamená, že necháme LLM rozhodnout, kterou funkci má zavolat na základě zprávy uživatele, místo abychom to určovali my.
+Existuje také možnost nastavit `function_call` na `auto`. To znamená, že necháme LLM rozhodnout, kterou funkci by měl volat na základě zprávy uživatele, místo abychom ji sami přiřadili.
 
-Níže je kód, kde voláme `ChatCompletion.create`, všimněte si, jak nastavujeme `functions=functions` a `function_call="auto"`, čímž dáváme LLM možnost rozhodnout, kdy volat poskytnuté funkce:
+Níže je uveden kód, kde voláme `ChatCompletion.create`, všimněte si, jak nastavujeme `functions=functions` a `function_call="auto"` a tím dáváme LLM možnost rozhodnout, kdy volat poskytnuté funkce:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Odpověď, kterou nyní dostaneme, vypadá takto:
+Odpověď, která se nyní vrací, vypadá takto:
 
 ```json
 {
@@ -294,33 +294,33 @@ Odpověď, kterou nyní dostaneme, vypadá takto:
 }
 ```
 
-Vidíme, že byla zavolána funkce `search_courses` a s jakými argumenty, které jsou uvedeny ve vlastnosti `arguments` v JSON odpovědi.
+Zde vidíme, jak byla funkce `search_courses` volána a s jakými argumenty, jak je uvedeno ve vlastnosti `arguments` v odpovědi JSON.
 
-Závěr je, že LLM dokázal najít data odpovídající argumentům funkce, protože je extrahoval z hodnoty předané do parametru `messages` v chat completion volání. Níže je připomenutí hodnoty `messages`:
+LLM dokázal najít data, která odpovídají argumentům funkce, protože je extrahoval z hodnoty poskytnuté parametru `messages` ve volání chat completion. Níže je připomenutí hodnoty `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Jak vidíte, `student`, `Azure` a `beginner` byly extrahovány z `messages` a nastaveny jako vstup do funkce. Používání funkcí tímto způsobem je skvělý způsob, jak z promptu extrahovat informace, ale také jak dát LLM strukturu a mít znovupoužitelnou funkcionalitu.
+Jak vidíte, `student`, `Azure` a `beginner` byly extrahovány z `messages` a nastaveny jako vstup do funkce. Používání funkcí tímto způsobem je skvělý způsob, jak extrahovat informace z výzvy, ale také poskytnout strukturu LLM a mít opakovaně použitelné funkce.
 
-Nyní se podíváme, jak to můžeme použít v naší aplikaci.
+Dále musíme zjistit, jak to můžeme použít v naší aplikaci.
 
 ## Integrace volání funkcí do aplikace
 
-Po otestování formátované odpovědi z LLM ji nyní můžeme integrovat do aplikace.
+Poté, co jsme otestovali formátovanou odpověď od LLM, můžeme ji nyní integrovat do aplikace.
 
-### Řízení toku
+### Řízení průběhu
 
-Pro integraci do aplikace postupujme následovně:
+Pro integraci do naší aplikace postupujme podle následujících kroků:
 
-1. Nejprve zavoláme OpenAI služby a uložíme zprávu do proměnné `response_message`.
+1. Nejprve proveďme volání služeb OpenAI a uložme zprávu do proměnné nazvané `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. Nyní definujeme funkci, která zavolá Microsoft Learn API a získá seznam kurzů:
+1. Nyní definujeme funkci, která bude volat Microsoft Learn API k získání seznamu kurzů:
 
    ```python
    import requests
@@ -342,11 +342,11 @@ Pro integraci do aplikace postupujme následovně:
      return str(results)
    ```
 
-   Všimněte si, že nyní vytváříme skutečnou Python funkci, která odpovídá názvům funkcí uvedeným v proměnné `functions`. Také provádíme skutečná externí API volání pro získání potřebných dat. V tomto případě voláme Microsoft Learn API pro vyhledání výukových modulů.
+   Všimněte si, jak nyní vytváříme skutečnou Python funkci, která odpovídá názvům funkcí představeným v proměnné `functions`. Také provádíme skutečné externí API volání k získání dat, která potřebujeme. V tomto případě se obracíme na Microsoft Learn API k vyhledání vzdělávacích modulů.
 
-Dobře, vytvořili jsme proměnnou `functions` a odpovídající Python funkci, jak ale LLM řekneme, jak tyto dvě věci propojit, aby byla naše Python funkce zavolána?
+Dobře, vytvořili jsme proměnnou `functions` a odpovídající Python funkci, jak řekneme LLM, jak tyto dvě propojit, aby byla naše Python funkce volána?
 
-1. Abychom zjistili, zda máme zavolat Python funkci, musíme se podívat do odpovědi LLM a zjistit, zda obsahuje `function_call`, a podle toho zavolat příslušnou funkci. Níže je ukázka, jak tuto kontrolu provést:
+1. Abychom zjistili, zda potřebujeme volat Python funkci, musíme se podívat do odpovědi LLM a zjistit, zda obsahuje `function_call`, a volat určenou funkci. Zde je, jak můžete provést zmíněnou kontrolu níže:
 
    ```python
    # Check if the model wants to call a function
@@ -391,7 +391,7 @@ Dobře, vytvořili jsme proměnnou `functions` a odpovídající Python funkci, 
     )
    ```
 
-   Tyto tři řádky zajistí, že extrahujeme název funkce, argumenty a provedeme volání:
+   Tyto tři řádky zajišťují, že extrahujeme název funkce, argumenty a provedeme volání:
 
    ```python
    function_to_call = available_functions[function_name]
@@ -421,7 +421,7 @@ Dobře, vytvořili jsme proměnnou `functions` a odpovídající Python funkci, 
    <class 'str'>
    ```
 
-1. Nyní pošleme aktualizovanou zprávu `messages` zpět do LLM, abychom mohli získat odpověď v přirozeném jazyce místo JSON formátu z API.
+1. Nyní pošleme aktualizovanou zprávu, `messages`, do LLM, abychom mohli obdržet odpověď v přirozeném jazyce místo odpovědi ve formátu JSON API.
 
    ```python
    print("Messages in next request:")
@@ -450,18 +450,23 @@ Dobře, vytvořili jsme proměnnou `functions` a odpovídající Python funkci, 
 
    ```
 
-## Zadání
+## Úkol
 
-Pro pokračování ve studiu Azure OpenAI Function Calling můžete vytvořit:
+Pro pokračování ve vašem učení o Azure OpenAI Function Calling můžete vytvořit:
 
 - Více parametrů funkce, které by mohly pomoci studentům najít více kurzů.
-- Další volání funkce, které vezme více informací od studenta, například jeho rodný jazyk.
-- Ošetření chyb v případě, že volání funkce a/nebo API nevrátí žádné vhodné kurzy.
-## Skvělá práce! Pokračujte na další cestě
+- Vytvořit další volání funkce, které by bralo více informací od studenta, například jeho rodný jazyk.
+- Vytvořte zpracování chyb pro případ, kdy volání funkce a/nebo API nevrátí žádné vhodné kurzy.
 
-Po dokončení této lekce si prohlédněte naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kde můžete dále rozvíjet své znalosti o Generative AI!
+Tip: Podívejte se na stránku [Learn API referenční dokumentace](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), kde zjistíte, jak a kde jsou tato data dostupná.
 
-Přejděte k Lekci 12, kde se podíváme na to, jak [navrhovat UX pro AI aplikace](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+## Skvělá práce! Pokračujte v cestě
 
-**Prohlášení o vyloučení odpovědnosti**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Po dokončení této lekce se podívejte na naši [kolekci učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste dále rozvíjeli své znalosti o generativní AI!
+
+Přejděte na lekci 12, kde se podíváme na to, jak [navrhnout UX pro AI aplikace](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
+
+**Prohlášení**:  
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

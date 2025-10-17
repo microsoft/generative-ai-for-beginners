@@ -1,143 +1,132 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-07-09T08:00:10+00:00",
+  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
+  "translation_date": "2025-10-17T21:31:30+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "hu"
 }
 -->
-# Bevezetés a generatív MI-be és a nagy nyelvi modellekbe
+# Bevezetés a generatív mesterséges intelligenciába és a nagy nyelvi modellekbe
 
-[![Bevezetés a generatív MI-be és a nagy nyelvi modellekbe](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.hu.png)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
+[![Bevezetés a generatív mesterséges intelligenciába és a nagy nyelvi modellekbe](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.hu.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
-_(Kattints a fenti képre a lecke videójának megtekintéséhez)_
+_(Kattints a fenti képre, hogy megnézd az óra videóját)_
 
-A generatív MI olyan mesterséges intelligencia, amely képes szöveget, képeket és más tartalomtípusokat létrehozni. Azért fantasztikus technológia, mert demokratizálja az MI-t: bárki használhatja egy egyszerű szöveges utasítással, egy természetes nyelven írt mondattal. Nem kell megtanulnod olyan nyelveket, mint a Java vagy az SQL, hogy értékes dolgot hozz létre, elég, ha a saját nyelveden megfogalmazod, mit szeretnél, és az MI modell javaslatot ad. Ennek alkalmazási területei és hatásai hatalmasak: percek alatt írhatunk vagy érthetünk meg jelentéseket, készíthetünk alkalmazásokat és még sok mást.
+A generatív mesterséges intelligencia olyan mesterséges intelligencia, amely képes szövegeket, képeket és más típusú tartalmakat létrehozni. Ami igazán lenyűgözővé teszi ezt a technológiát, az az, hogy demokratizálja az AI-t: bárki használhatja, akár egy egyszerű szöveges utasítással, egy természetes nyelven írt mondattal. Nem kell megtanulnod olyan programozási nyelveket, mint a Java vagy az SQL, hogy valami értékeset hozz létre; elég, ha a saját nyelveden megfogalmazod, mit szeretnél, és az AI modell máris javaslatot tesz. Ennek az alkalmazási lehetőségei és hatásai óriásiak: jelentéseket írhatsz vagy érthetsz meg, alkalmazásokat készíthetsz, és még sok minden mást, mindezt másodpercek alatt.
 
-Ebben a tananyagban megvizsgáljuk, hogyan használja startupunk a generatív MI-t új lehetőségek megnyitására az oktatás világában, és hogyan kezeljük az ezzel járó társadalmi hatásokból és technológiai korlátokból fakadó kihívásokat.
+Ebben a tananyagban megvizsgáljuk, hogyan használja startupunk a generatív mesterséges intelligenciát új oktatási forgatókönyvek megvalósítására, valamint hogyan kezeljük az alkalmazás társadalmi vonatkozásaival és a technológiai korlátokkal kapcsolatos elkerülhetetlen kihívásokat.
 
 ## Bevezetés
 
-Ez a lecke a következőket fogja lefedni:
+Ez az óra az alábbiakat fogja tárgyalni:
 
-- Üzleti helyzet bemutatása: startup ötletünk és küldetésünk.
-- Generatív MI és a jelenlegi technológiai környezet áttekintése.
-- Egy nagy nyelvi modell belső működése.
-- A nagy nyelvi modellek fő képességei és gyakorlati alkalmazásai.
+- Üzleti forgatókönyv bemutatása: startup ötletünk és küldetésünk.
+- Generatív mesterséges intelligencia és a jelenlegi technológiai környezet kialakulása.
+- Nagy nyelvi modellek működése.
+- Nagy nyelvi modellek fő képességei és gyakorlati felhasználási esetei.
 
 ## Tanulási célok
 
-A lecke elvégzése után meg fogod érteni:
+Az óra elvégzése után megérted:
 
-- Mi az a generatív MI és hogyan működnek a nagy nyelvi modellek.
-- Hogyan használhatod a nagy nyelvi modelleket különböző feladatokra, különös tekintettel az oktatási helyzetekre.
+- Mi a generatív mesterséges intelligencia, és hogyan működnek a nagy nyelvi modellek.
+- Hogyan használhatod a nagy nyelvi modelleket különböző felhasználási esetekben, különös tekintettel az oktatási forgatókönyvekre.
 
-## Helyzet: oktatási startupunk
+## Forgatókönyv: oktatási startupunk
 
-A generatív mesterséges intelligencia az MI technológia csúcsa, amely átlépi a korábban elképzelhetetlen határokat. A generatív MI modellek számos képességgel és alkalmazással rendelkeznek, de ebben a tananyagban azt vizsgáljuk meg, hogyan forradalmasítja az oktatást egy fiktív startup segítségével. Ezt a startupot _startupunknak_ nevezzük. Startupunk az oktatás területén tevékenykedik, ambiciózus küldetésünk:
+A generatív mesterséges intelligencia (AI) az AI technológia csúcspontját képviseli, és kitolja a határokat, amelyeket korábban lehetetlennek tartottunk. A generatív AI modellek számos képességgel és alkalmazási lehetőséggel rendelkeznek, de ebben a tananyagban azt vizsgáljuk meg, hogyan forradalmasítja az oktatást egy fiktív startup révén. Ezt a startupot _saját startupunknak_ fogjuk nevezni. Startupunk az oktatás területén tevékenykedik, ambiciózus küldetésnyilatkozattal:
 
-> _a tanuláshoz való hozzáférés javítása globális szinten, az oktatáshoz való egyenlő esélyek biztosítása, valamint személyre szabott tanulási élmények nyújtása minden tanulónak az igényeik szerint_.
+> _a tanulás hozzáférhetőségének javítása globális szinten, az oktatáshoz való egyenlő hozzáférés biztosítása és személyre szabott tanulási élmények nyújtása minden tanulónak, az igényeiknek megfelelően_.
 
-Csapatunk tisztában van vele, hogy ezt a célt nem érhetjük el a modern idők egyik legerősebb eszköze, a nagy nyelvi modellek (LLM-ek) használata nélkül.
+Startupunk csapata tisztában van azzal, hogy ezt a célt nem tudjuk elérni anélkül, hogy ne használnánk a modern kor egyik leghatékonyabb eszközét – a nagy nyelvi modelleket (LLM-eket).
 
-A generatív MI várhatóan forradalmasítja a tanulás és tanítás módját, hiszen a diákoknak 24 órában elérhető virtuális tanáraik lesznek, akik hatalmas mennyiségű információt és példát szolgáltatnak, a tanárok pedig innovatív eszközöket használhatnak a diákok értékelésére és visszajelzés adására.
+A generatív mesterséges intelligencia várhatóan forradalmasítja a mai tanulás és tanítás módját, lehetővé téve a diákok számára, hogy 24 órás virtuális tanárok álljanak rendelkezésükre, akik hatalmas mennyiségű információt és példát nyújtanak, míg a tanárok innovatív eszközöket használhatnak diákjaik értékelésére és visszajelzés adására.
 
-![Öt fiatal diák néz egy monitort - kép: DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.hu.png)
+![Öt fiatal diák egy monitort néz - kép a DALLE2-től](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.hu.png)
 
-Kezdésként definiáljunk néhány alapfogalmat és terminológiát, amelyeket a tananyag során használni fogunk.
+Kezdjük azzal, hogy meghatározunk néhány alapfogalmat és terminológiát, amelyeket a tananyag során használni fogunk.
 
-## Hogyan jutottunk el a generatív MI-hez?
+## Hogyan jött létre a generatív mesterséges intelligencia?
 
-Annak ellenére, hogy a generatív MI modellek bejelentése óriási _hype_-ot váltott ki, ez a technológia évtizedek óta fejlődik, az első kutatások az 1960-as évekre nyúlnak vissza. Ma már olyan MI-vel rendelkezünk, amely emberi kognitív képességekkel bír, például beszélgetésre, ahogy azt például az [OpenAI ChatGPT](https://openai.com/chatgpt) vagy a [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) is mutatja, amely szintén GPT modellt használ a Bing keresőbeszélgetéseihez.
+Annak ellenére, hogy a generatív AI modellek bejelentése körüli rendkívüli _hype_ az utóbbi időben nagy figyelmet kapott, ez a technológia évtizedek óta fejlődik, az első kutatási erőfeszítések az 1960-as évekre nyúlnak vissza. Mostanra eljutottunk oda, hogy az AI emberi kognitív képességekkel rendelkezik, például képes beszélgetni, ahogy azt például az [OpenAI ChatGPT](https://openai.com/chatgpt) vagy a [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) mutatja, amely szintén GPT modellt használ a Bing kereső beszélgetéseihez.
 
-Egy kis visszatekintés: az MI első prototípusai gépelt chatbotok voltak, amelyek egy szakértői csoport tudásbázisára épültek, és a válaszokat kulcsszavak alapján adták. Ez a megközelítés azonban hamar kiderült, hogy nem skálázható.
+Ha visszatekintünk, az AI legelső prototípusai gépírással működő chatbotok voltak, amelyek egy szakértői csoport által kinyert tudásbázisra támaszkodtak, és ezt számítógépen reprezentálták. A tudásbázis válaszait az input szövegben megjelenő kulcsszavak váltották ki. Azonban hamar világossá vált, hogy az ilyen megközelítés, amely gépírással működő chatbotokat használ, nem skálázható jól.
 
-### Statisztikai megközelítés az MI-ben: gépi tanulás
+### Statisztikai megközelítés az AI-hoz: gépi tanulás
 
-Az 1990-es években fordulópontot jelentett a statisztikai szövegelemzés alkalmazása. Ez vezetett új algoritmusok – a gépi tanulás – kifejlesztéséhez, amelyek képesek voltak adatmintákból tanulni anélkül, hogy explicit módon programozták volna őket. Ez lehetővé tette, hogy a gépek szimulálják az emberi nyelv megértését: egy statisztikai modellt szöveg-címke párokon tanítottak, így az ismeretlen szövegeket előre definiált címkékkel tudta osztályozni, amelyek a mondanivaló szándékát jelzik.
+Fordulópontot jelentett az 1990-es években a szövegelemzés statisztikai megközelítésének alkalmazása. Ez új algoritmusok – gépi tanulás néven ismert – kifejlesztéséhez vezetett, amelyek képesek mintákat tanulni az adatokból anélkül, hogy kifejezetten programozva lennének. Ez a megközelítés lehetővé tette a gépek számára, hogy szimulálják az emberi nyelv megértését: egy statisztikai modellt szöveg-címke párokon képeznek ki, lehetővé téve a modell számára, hogy az ismeretlen bemeneti szöveget egy előre meghatározott címkével osztályozza, amely a szöveg szándékát képviseli.
 
-### Neurális hálózatok és a modern virtuális asszisztensek
+### Neurális hálózatok és modern virtuális asszisztensek
 
-Az utóbbi években a hardverek fejlődése, amelyek nagyobb adatmennyiségek és összetettebb számítások kezelésére képesek, ösztönözte az MI-kutatást, ami fejlett gépi tanulási algoritmusok – neurális hálózatok vagy mélytanulási algoritmusok – kifejlesztéséhez vezetett.
+Az utóbbi években a hardver technológiai fejlődése, amely nagyobb mennyiségű adat és összetettebb számítások kezelésére képes, ösztönözte az AI kutatását, ami fejlett gépi tanulási algoritmusok, például neurális hálózatok vagy mélytanulási algoritmusok kifejlesztéséhez vezetett.
 
-A neurális hálózatok (különösen a visszatérő neurális hálózatok – RNN-ek) jelentősen javították a természetes nyelvfeldolgozást, lehetővé téve a szöveg jelentésének mélyebb megértését, figyelembe véve a szavak kontextusát a mondatban.
+A neurális hálózatok (különösen az ismétlődő neurális hálózatok – RNN-ek) jelentősen javították a természetes nyelvfeldolgozást, lehetővé téve a szöveg jelentésének értelmezését egy sokkal jelentőségteljesebb módon, figyelembe véve egy szó kontextusát egy mondatban.
 
-Ez a technológia hajtotta az első évtizedben született virtuális asszisztenseket, amelyek kiválóan értették az emberi nyelvet, felismertek egy igényt, és végrehajtottak egy műveletet annak kielégítésére – például előre megírt válaszokat adtak vagy harmadik fél szolgáltatását használták.
+Ez a technológia táplálta az első évtizedben született virtuális asszisztenseket, amelyek nagyon ügyesen értelmezték az emberi nyelvet, azonosították az igényeket, és végrehajtották azokat – például előre meghatározott szkripttel válaszolva vagy egy harmadik fél szolgáltatását használva.
 
-### Napjaink, generatív MI
+### Napjaink, generatív mesterséges intelligencia
 
-Így jutottunk el a mai generatív MI-hez, amely a mélytanulás egyik ága.
+Így jutottunk el a mai generatív mesterséges intelligenciához, amely a mélytanulás egyik részhalmazának tekinthető.
 
-![MI, gépi tanulás, mélytanulás és generatív MI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.hu.png)
+![AI, ML, DL és generatív mesterséges intelligencia](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.hu.png)
 
-Évtizedes kutatás után az MI területén egy új modellarchitektúra – az _Transformer_ – leküzdötte az RNN-ek korlátait, képes hosszabb szövegsorozatokat fogadni bemenetként. A Transformer az attention mechanizmusra épül, amely lehetővé teszi, hogy a modell különböző súlyokat adjon a bemeneteknek, „több figyelmet szentelve” a legfontosabb információknak, függetlenül azok sorrendjétől a szövegben.
+Évtizedek AI kutatásai után egy új modellarchitektúra – _Transformer_ néven – leküzdötte az RNN-ek korlátait, és képes lett sokkal hosszabb szöveges sorozatokat fogadni bemenetként. A Transformerek az úgynevezett figyelemmechanizmuson alapulnak, amely lehetővé teszi a modell számára, hogy különböző súlyokat rendeljen a kapott bemenetekhez, „nagyobb figyelmet szentelve” azoknak a részeknek, ahol a legfontosabb információk koncentrálódnak, függetlenül azok sorrendjétől a szöveges sorozatban.
 
-A legtöbb mai generatív MI modell – más néven nagy nyelvi modellek (LLM-ek), mivel szöveges bemenetekkel és kimenetekkel dolgoznak – ezen az architektúrán alapul. Ezek a modellek hatalmas mennyiségű címkézetlen adatból – könyvekből, cikkekből, weboldalakból – tanulnak, és képesek sokféle feladatra alkalmazkodni, valamint nyelvtanilag helyes, kreativitásra emlékeztető szöveget generálni. Így nemcsak jelentősen javították a gép „megértő” képességét, hanem lehetővé tették, hogy eredeti, emberi nyelvű válaszokat hozzanak létre.
+A legtöbb új generatív AI modell – más néven nagy nyelvi modellek (LLM-ek), mivel szöveges bemenetekkel és kimenetekkel dolgoznak – valójában ezen az architektúrán alapul. Ami érdekes ezekben a modellekben – amelyeket hatalmas mennyiségű címkézetlen adaton képeztek ki, különböző forrásokból, például könyvekből, cikkekből és weboldalakról – az az, hogy sokféle feladatra adaptálhatók, és grammatikailag helyes szöveget tudnak generálni, amelyben némi kreativitás is megjelenik. Tehát nemcsak hogy hihetetlenül javították a gépek képességét arra, hogy „megértsék” a bemeneti szöveget, hanem lehetővé tették számukra, hogy eredeti választ generáljanak emberi nyelven.
 
 ## Hogyan működnek a nagy nyelvi modellek?
 
-A következő fejezetben különböző generatív MI modelleket fogunk megvizsgálni, de most nézzük meg, hogyan működnek a nagy nyelvi modellek, különös tekintettel az OpenAI GPT (Generative Pre-trained Transformer) modellekre.
+A következő fejezetben különböző generatív AI modelleket fogunk megvizsgálni, de most nézzük meg, hogyan működnek a nagy nyelvi modellek, különös tekintettel az OpenAI GPT (Generative Pre-trained Transformer) modellekre.
 
-- **Tokenizáló, szövegből számok**: A nagy nyelvi modellek szöveget kapnak bemenetként és szöveget adnak ki. Mivel statisztikai modellek, jobban működnek számokkal, mint szövegsorozatokkal. Ezért minden bemenetet egy tokenizáló dolgoz fel, mielőtt a magmodellhez kerülne. Egy token egy szövegrészlet – változó hosszúságú karakterekből áll –, így a tokenizáló fő feladata a bemenet feldarabolása tokenek tömbjére. Ezután minden tokenhez hozzárendel egy tokenindexet, ami az eredeti szövegrészlet egész számú kódolása.
+- **Tokenizáló, szöveg számokká alakítása**: A nagy nyelvi modellek szöveget kapnak bemenetként, és szöveget generálnak kimenetként. Azonban, mivel statisztikai modellek, sokkal jobban működnek számokkal, mint szöveges sorozatokkal. Ezért minden bemenetet egy tokenizáló dolgoz fel, mielőtt a magmodell használná. Egy token egy szövegrészlet – amely változó számú karakterből áll, így a tokenizáló fő feladata a bemenet tokenek tömbjére való felosztása. Ezután minden tokenhez hozzárendelnek egy token indexet, amely az eredeti szövegrészlet egész számú kódolása.
 
 ![Tokenizálás példája](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.hu.png)
 
-- **Kimeneti tokenek előrejelzése**: Adott n token bemenetként (amelynek maximális hossza modelltől függően változik), a modell képes egy token kimenetet előrejelezni. Ez a token bekerül a következő iteráció bemenetébe, egy bővülő ablak mintázatban, ami jobb felhasználói élményt nyújt, hiszen egy vagy több mondatot kapunk válaszként. Ez magyarázza, hogy ha valaha játszottál a ChatGPT-vel, néha úgy tűnhet, mintha félbeszakadna egy mondat közepén.
+- **Kimeneti tokenek előrejelzése**: Adott n token bemenetként (a max n modellről modellre változik), a modell képes egy token előrejelzésére kimenetként. Ez a token bekerül a következő iteráció bemenetébe, egy bővülő ablak mintázatban, lehetővé téve a felhasználói élményt, hogy egy (vagy több) mondatot kapjunk válaszként. Ez megmagyarázza, hogy ha valaha játszottál a ChatGPT-vel, észrevehetted, hogy néha úgy tűnik, mintha megállna egy mondat közepén.
 
-- **Kiválasztási folyamat, valószínűségi eloszlás**: A kimeneti tokent a modell a valószínűsége alapján választja ki, hogy az adott szövegsorozat után milyen eséllyel következik. A modell egy valószínűségi eloszlást jósol az összes lehetséges „következő tokenre”, amelyet a tanítás alapján számít ki. Azonban nem mindig a legmagasabb valószínűségű token kerül kiválasztásra. Egyfajta véletlenszerűség is beépül a választásba, így a modell nem determinisztikus – ugyanarra a bemenetre nem mindig ugyanazt a választ kapjuk. Ezt a véletlenszerűséget a kreatív gondolkodás szimulálására használják, és egy hőmérséklet nevű paraméterrel szabályozható.
+- **Kiválasztási folyamat, valószínűségi eloszlás**: A kimeneti tokent a modell a jelenlegi szövegsorozat után való előfordulásának valószínűsége alapján választja ki. Ez azért van, mert a modell valószínűségi eloszlást jósol az összes lehetséges „következő token” felett, amelyet a képzése alapján számít ki. Azonban nem mindig választják ki a legmagasabb valószínűségű tokent az eredményül kapott eloszlásból. Egy bizonyos fokú véletlenszerűség kerül hozzáadásra ehhez a választáshoz, oly módon, hogy a modell nem-determinisztikus módon működik – nem kapjuk meg pontosan ugyanazt a kimenetet ugyanarra a bemenetre. Ez a véletlenszerűség mértéke a kreatív gondolkodás folyamatának szimulálására szolgál, és egy hőmérséklet nevű modellparaméterrel hangolható.
 
 ## Hogyan használhatja startupunk a nagy nyelvi modelleket?
 
-Most, hogy jobban értjük egy nagy nyelvi modell belső működését, nézzünk néhány gyakorlati példát a leggyakoribb feladatokra, amelyeket jól el tudnak végezni, startupunk üzleti helyzetére fókuszálva.
+Most, hogy jobban megértjük egy nagy nyelvi modell működését, nézzünk néhány gyakorlati példát a leggyakoribb feladatokra, amelyeket ezek a modellek nagyon jól el tudnak végezni, különös tekintettel üzleti forgatókönyvünkre.
+Azt mondtuk, hogy egy nagy nyelvi modell fő képessége _szöveg létrehozása a semmiből, természetes nyelven írt szöveges bemenet alapján_.
 
-Azt mondtuk, hogy egy nagy nyelvi modell fő képessége _szöveg generálása a semmiből, egy természetes nyelven írt szöveges bemenet alapján_.
+De milyen típusú szöveges bemenet és kimenet?
+A nagy nyelvi modell bemenetét promptnak nevezik, míg a kimenetet completionnek, amely a modell mechanizmusára utal, amely a következő token generálásával egészíti ki a jelenlegi bemenetet. Mélyebben fogunk belemenni abba, hogy mi az a prompt, és hogyan lehet úgy megtervezni, hogy a legtöbbet hozzuk ki a modellből. De most csak annyit mondjunk, hogy egy prompt tartalmazhat:
 
-De milyen szöveges bemenet és kimenet lehet ez?
-A nagy nyelvi modell bemenetét promptnak, a kimenetét pedig completionnek nevezzük, ami arra utal, hogy a modell a következő tokent generálja a jelenlegi bemenet kiegészítésére. Mélyebben belemegyünk majd, mi az a prompt és hogyan tervezzük meg úgy, hogy a legtöbbet hozzuk ki a modellből. Egyelőre annyit mondhatunk, hogy egy prompt tartalmazhat:
+- Egy **utasítást**, amely meghatározza, milyen típusú kimenetet várunk a modelltől. Ez az utasítás néha tartalmazhat példákat vagy további adatokat.
 
-- Egy **utasítást**, amely meghatározza, milyen típusú kimenetet várunk a modelltől. Ez az utasítás néha példákat vagy további adatokat is tartalmazhat.
-
-  1. Cikk, könyv, termékértékelések összefoglalása, valamint betekintések kinyerése strukturálatlan adatokból.
+  1. Cikk, könyv, termékértékelések összefoglalása és betekintések kinyerése strukturálatlan adatokból.
     
     ![Összefoglalás példája](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.hu.png)
   
-  2. Kreatív ötletelés és cikk, esszé, beadandó vagy más írás megtervezése.
+  2. Kreatív ötletelés és tervezés cikkhez, esszéhez, feladathoz vagy más tartalomhoz.
       
      ![Kreatív írás példája](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.hu.png)
 
-- Egy **kérdést**, amelyet egy ügynökkel folytatott beszélgetés formájában tesznek fel.
+- Egy **kérdést**, amelyet egy ügynökkel folytatott beszélgetés formájában teszünk fel.
   
   ![Beszélgetés példája](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.hu.png)
 
-- Egy **kiegészítendő szövegrészt**, ami implicit módon írásbeli segítségkérés.
+- Egy **szövegrészletet, amelyet ki kell egészíteni**, ami implicit módon írási segítséget kér.
   
   ![Szövegkiegészítés példája](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.hu.png)
 
-- Egy **kódrészletet**, amelyhez magyarázatot és dokumentációt kérnek, vagy egy kommentet, amely egy adott feladatot ellátó kód generálását kéri.
+- Egy **kódrészletet**, amelyhez magyarázatot és dokumentációt kérünk, vagy egy megjegyzést, amely egy adott feladatot végrehajtó kódrészlet generálását kéri.
   
-  ![Kódolás példája](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.hu.png)
+  ![Kódolási példa](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.hu.png)
 
-A fenti példák egyszerűek, és nem teljes körű bemutatói a nagy nyelvi modellek képességeinek. Inkább azt mutatják be, milyen potenciál rejlik a generatív MI használatában, különösen, de nem kizárólag oktatási környezetben.
+A fenti példák meglehetősen egyszerűek, és nem céljuk, hogy kimerítően bemutassák a nagy nyelvi modellek képességeit. Céljuk, hogy megmutassák a generatív mesterséges intelligencia használatának lehetőségeit, különösen, de nem kizárólag oktatási kontextusban.
 
-Fontos megjegyezni, hogy egy generatív MI modell kimenete nem tökéletes, és néha a modell kreativitása hátrányára válhat, olyan kimenetet eredményezve, amelyet az emberi felhasználó valóságmágusításnak vagy sértőnek értelmezhet. A generatív MI nem intelligens – legalábbis nem a szélesebb értelemben vett intelligencia, amely magában foglalja a kritikus és kreatív gondolkodást vagy az érzelmi intelligenciát; nem determinisztikus, és nem megbízható, mivel téves hivatkozások, tartalmak és állítások keveredhetnek helyes információkkal, és meggyőző, magabiztos módon jelenhetnek meg. A következő leckékben ezekkel a korlátokkal foglalkozunk, és megnézzük, mit tehetünk a mérséklésük érdekében.
+Ezenkívül a generatív AI modell kimenete nem tökéletes, és néha a modell kreativitása ellene dolgozhat, olyan kimenetet eredményezve, amely szavak kombinációja, amelyet az emberi felhasználó a valóság eltorzításaként értelmezhet, vagy sértő lehet. A generatív mesterséges intelligencia nem intelligens – legalábbis az intelligencia átfogóbb definíciója szerint, amely magában foglalja a kritikai és kreatív érvelést vagy az érzelmi intelligenciát; nem determinisztikus, és nem megbízható, mivel a helytelen hivatkozások, tartalmak és állítások kombinálódhatnak a helyes információkkal, és meggyőző és magabiztos módon kerülhetnek bemutatásra. A következő órákban foglalkozni fogunk ezekkel a korlátokkal, és megnézzük, mit tehetünk azok enyhítésére.
 
 ## Feladat
 
-A feladatod, hogy olvass utána többet a [generatív MI-nek](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst), és próbálj meg azonosítani egy olyan területet, ahol ma még nincs generatív MI, de bevezetnéd. Hogyan változna meg a hatás a „régi módszerhez” képest? Tudnál olyat csinálni, amit korábban nem, vagy gyorsabb lennél? Írj egy 300 szavas összefoglalót arról, milyen lenne az álom MI startupod, és használj címsorokat, mint „Probléma”, „Hogyan használnám az MI-t”, „Hatás”, és opcionálisan egy üzleti tervet.
+Olvass utána többet a [generatív mesterséges intelligenciának](https://en.wikipedia.org/wiki/Gener
+Lépj tovább a 2. leckére, ahol megvizsgáljuk, hogyan lehet [felfedezni és összehasonlítani a különböző LLM típusokat](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
-Ha elvégzed ezt a feladatot, akár készen állhatsz arra is, hogy jelentkezz a Microsoft inkubátorába, a [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) programba, ahol krediteket kínálunk Azure-ra, OpenAI-ra, mentorálásra és még sok másra, nézd meg!
+---
 
-## Tudásellenőrzés
-
-Mi igaz a nagy nyelvi modellekről?
-
-1. Minden alkalommal pontosan ugyanazt a választ kapod.
-1. Tökéletesen végzi a feladatokat, jól számol, működő kódot generál stb.
-1. A válasz változhat ugyanazzal a prompttal is. Nagyon jó első vázlatot ad szöveg vagy kód formájában, de a végeredményt fejleszteni kell.
-
-Válasz: 3, egy LLM nem determinisztikus, a válasz változik, de a változékonyság szabályozható a hőmérséklet paraméterrel. Nem szabad elvárni, hogy tökéletes legyen, inkább a nehéz munk
-Lépj tovább a 2. leckébe, ahol megnézzük, hogyan lehet [felfedezni és összehasonlítani különböző LLM típusokat](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
-
-**Jogi nyilatkozat**:  
-Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelven tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
