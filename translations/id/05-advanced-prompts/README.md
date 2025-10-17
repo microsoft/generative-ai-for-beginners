@@ -1,218 +1,115 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2b4c36be7d66b32e4fac47761718b4a9",
-  "translation_date": "2025-07-09T11:36:32+00:00",
+  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+  "translation_date": "2025-10-17T20:41:35+00:00",
   "source_file": "05-advanced-prompts/README.md",
   "language_code": "id"
 }
 -->
+# Membuat Prompt Lanjutan
 
-# Menghasilkan kode untuk Python Web API
+[![Membuat Prompt Lanjutan](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.id.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
-Dalam panduan ini, kita akan membahas cara membuat kode untuk sebuah Web API menggunakan Python. Web API memungkinkan aplikasi Anda berkomunikasi dengan aplikasi lain melalui protokol HTTP.
+Mari kita ulas kembali beberapa pembelajaran dari bab sebelumnya:
 
-## Langkah 1: Pilih framework
+> _Prompt engineering_ adalah proses di mana kita **mengarahkan model untuk memberikan respons yang lebih relevan** dengan menyediakan instruksi atau konteks yang lebih berguna.
 
-Python memiliki beberapa framework populer untuk membangun Web API, seperti Flask, FastAPI, dan Django REST Framework. Pilih framework yang sesuai dengan kebutuhan proyek Anda.
+Ada dua langkah dalam menulis prompt: membangun prompt dengan memberikan konteks yang relevan, dan _optimasi_, yaitu bagaimana secara bertahap meningkatkan kualitas prompt.
 
-## Langkah 2: Instalasi
+Pada titik ini, kita sudah memiliki pemahaman dasar tentang cara menulis prompt, tetapi kita perlu mendalaminya lebih jauh. Dalam bab ini, Anda akan belajar dari mencoba berbagai prompt hingga memahami mengapa satu prompt lebih baik daripada yang lain. Anda akan mempelajari cara membangun prompt dengan mengikuti beberapa teknik dasar yang dapat diterapkan pada LLM apa pun.
 
-Instal framework yang dipilih menggunakan pip. Contoh untuk FastAPI:
+## Pendahuluan
 
-```bash
-pip install fastapi uvicorn
-```
+Dalam bab ini, kita akan membahas topik-topik berikut:
 
-## Langkah 3: Buat endpoint dasar
+- Memperluas pengetahuan Anda tentang _prompt engineering_ dengan menerapkan berbagai teknik pada prompt Anda.
+- Mengonfigurasi prompt Anda untuk menghasilkan output yang bervariasi.
 
-Buat file Python baru dan tulis kode berikut untuk membuat endpoint dasar:
+## Tujuan Pembelajaran
 
-```python
-from fastapi import FastAPI
+Setelah menyelesaikan pelajaran ini, Anda akan dapat:
 
-app = FastAPI()
+- Menerapkan teknik _prompt engineering_ yang meningkatkan hasil dari prompt Anda.
+- Melakukan _prompting_ yang bervariasi atau deterministik.
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
-```
+## Prompt Engineering
 
-## Langkah 4: Jalankan server
+_Prompt engineering_ adalah proses menciptakan prompt yang akan menghasilkan hasil yang diinginkan. _Prompt engineering_ lebih dari sekadar menulis teks prompt. Ini bukan disiplin teknik, melainkan serangkaian teknik yang dapat Anda terapkan untuk mendapatkan hasil yang diinginkan.
 
-Jalankan server menggunakan uvicorn:
+### Contoh Prompt
 
-```bash
-uvicorn main:app --reload
-```
+Mari kita ambil contoh prompt dasar seperti ini:
 
-Server akan berjalan di `http://127.0.0.1:8000`. Anda dapat mengakses endpoint root dan melihat respons JSON.
+> Buat 10 pertanyaan tentang geografi.
 
-## Langkah 5: Tambahkan endpoint lain
+Dalam prompt ini, Anda sebenarnya menerapkan serangkaian teknik _prompt_ yang berbeda.
 
-Tambahkan endpoint lain sesuai kebutuhan API Anda, misalnya endpoint untuk mengambil data, menambah data, memperbarui, atau menghapus data.
+Mari kita uraikan.
 
-## Tips
+- **Konteks**, Anda menentukan bahwa itu harus tentang "geografi".
+- **Membatasi output**, Anda menginginkan tidak lebih dari 10 pertanyaan.
 
-[!TIP]  
-Gunakan dokumentasi otomatis yang disediakan FastAPI dengan membuka `http://127.0.0.1:8000/docs` untuk melihat dan menguji API Anda secara interaktif.
+### Keterbatasan Prompt Sederhana
 
-## Kesimpulan
+Anda mungkin mendapatkan atau tidak mendapatkan hasil yang diinginkan. Anda akan mendapatkan pertanyaan yang dihasilkan, tetapi geografi adalah topik yang luas dan Anda mungkin tidak mendapatkan apa yang Anda inginkan karena alasan berikut:
 
-Membangun Web API dengan Python cukup mudah dengan bantuan framework yang tepat. Mulailah dengan membuat endpoint sederhana dan kembangkan sesuai kebutuhan aplikasi Anda.
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
+- **Topik yang luas**, Anda tidak tahu apakah itu akan tentang negara, ibu kota, sungai, dan sebagainya.
+- **Format**, bagaimana jika Anda ingin pertanyaan-pertanyaan tersebut diformat dengan cara tertentu?
 
-#create an instance of the Flask class
-app = flask.Flask(__name__)
+Seperti yang Anda lihat, ada banyak hal yang perlu dipertimbangkan saat membuat prompt.
 
-#create an endpoint for the API
-@app.route('/api/v1/endpoint', methods=['GET'])
-def api_endpoint():
-    #get the request data
-    data = request.get_json()
+Sejauh ini, kita telah melihat contoh prompt sederhana, tetapi AI generatif mampu melakukan lebih banyak hal untuk membantu orang dalam berbagai peran dan industri. Mari kita jelajahi beberapa teknik dasar berikutnya.
 
-    #process the data
-    result = process_data(data)
+### Teknik-Teknik untuk Prompting
 
-    #return the result
-    return jsonify(result)
+Pertama, kita perlu memahami bahwa _prompting_ adalah sifat _emergent_ dari LLM, yang berarti ini bukan fitur yang dibangun ke dalam model, melainkan sesuatu yang kita temukan saat menggunakan model.
 
-#function to process the data
-def process_data(data):
-    #process the data
-    result = {'result': 'success'}
+Ada beberapa teknik dasar yang dapat kita gunakan untuk mem-_prompt_ LLM. Mari kita jelajahi.
 
-    #return the result
-    return result
+- **Zero-shot prompting**, ini adalah bentuk _prompting_ yang paling dasar. Ini adalah satu _prompt_ yang meminta respons dari LLM hanya berdasarkan data pelatihannya.
+- **Few-shot prompting**, jenis _prompting_ ini membimbing LLM dengan memberikan 1 atau lebih contoh yang dapat diandalkan untuk menghasilkan responsnya.
+- **Chain-of-thought**, jenis _prompting_ ini memberi tahu LLM cara memecah masalah menjadi langkah-langkah.
+- **Generated knowledge**, untuk meningkatkan respons _prompt_, Anda dapat memberikan fakta atau pengetahuan tambahan pada _prompt_ Anda.
+- **Least to most**, seperti _chain-of-thought_, teknik ini adalah tentang memecah masalah menjadi serangkaian langkah dan kemudian meminta langkah-langkah tersebut dilakukan secara berurutan.
+- **Self-refine**, teknik ini adalah tentang mengkritik output LLM dan kemudian memintanya untuk memperbaiki.
+- **Maieutic prompting**, di sini Anda ingin memastikan jawaban LLM benar dan Anda memintanya untuk menjelaskan berbagai bagian dari jawaban tersebut. Ini adalah bentuk dari _self-refine_.
 
-#run the Flask app
-if __name__ == '__main__':
-    app.run()
+### Zero-shot Prompting
 
-```
+Gaya _prompting_ ini sangat sederhana, hanya terdiri dari satu _prompt_. Teknik ini mungkin adalah yang paling sering Anda gunakan saat mulai belajar tentang LLM. Berikut contohnya:
 
-Menjalankan prompt lagi memberikan hasil berikut:
+- Prompt: "Apa itu Aljabar?"
+- Jawaban: "Aljabar adalah cabang matematika yang mempelajari simbol-simbol matematika dan aturan untuk memanipulasi simbol-simbol tersebut."
 
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
+### Few-shot Prompting
 
-#create a Flask app
-app = flask.Flask(__name__)
+Gaya _prompting_ ini membantu model dengan memberikan beberapa contoh bersama dengan permintaan. Ini terdiri dari satu _prompt_ dengan data spesifik tambahan. Berikut contohnya:
 
-#create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    #get the data from the request
-    data = request.get_json()
+- Prompt: "Tulis sebuah puisi dengan gaya Shakespeare. Berikut beberapa contoh soneta Shakespeare:
+  Soneta 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
+ 
+Seperti yang Anda lihat, hasilnya sangat beragam.
 
-    #process the data
-    result = process_data(data)
+> Perhatikan, ada lebih banyak parameter yang dapat Anda ubah untuk memvariasikan output, seperti top-k, top-p, repetition penalty, length penalty, dan diversity penalty, tetapi ini berada di luar cakupan kurikulum ini.
 
-    #return the result
-    return jsonify(result)
+## Praktik yang Baik
 
-#define the process_data function
-def process_data(data):
-    #do something with the data
-    result = data + 1
+Ada banyak praktik yang dapat Anda terapkan untuk mencoba mendapatkan hasil yang Anda inginkan. Anda akan menemukan gaya Anda sendiri seiring dengan semakin seringnya Anda menggunakan teknik prompting.
 
-    #return the result
-    return result
+Selain teknik-teknik yang telah kita bahas, ada beberapa praktik baik yang perlu dipertimbangkan saat memberikan prompt kepada LLM.
 
-#run the app
-if __name__ == '__main__':
-    app.run()
+Berikut adalah beberapa praktik baik yang perlu dipertimbangkan:
 
-```
-
-Hanya ada perbedaan kecil antara kedua output ini. Kali ini, mari kita lakukan sebaliknya, atur temperature ke 0.9:
-
-```python
-# Import necessary libraries
-import flask
-from flask import request, jsonify
-
-# Create a Flask app
-app = flask.Flask(__name__)
-
-# Create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    # Get the data from the request
-    data = request.args
-
-    # Process the data
-    result = process_data(data)
-
-    # Return the result
-    return jsonify(result)
-
-# Function to process the data
-def process_data(data):
-    # Do something with the data
-    result = data + 1
-
-    # Return the result
-    return result
-
-# Run the app
-if __name__ == '__main__':
-    app.run()
-
-```
-
-dan percobaan kedua dengan nilai temperature 0.9:
-
-```python
-import flask
-from flask import request, jsonify
-
-# create the Flask app
-app = flask.Flask(__name__)
-app.config['DEBUG'] = True
-
-# create some test data
-books = [
-    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
-    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
-    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
-]
-
-# create an endpoint
-@app.route('/', methods=['GET'])
-def home():
-    return '''<h1>Welcome to our book API!</h1>'''
-
-@app.route('/api/v1/resources/books
-
-```
-
-Seperti yang Anda lihat, hasilnya sangat bervariasi.
-
-> Note, ada lebih banyak parameter yang bisa Anda ubah untuk memvariasikan output, seperti top-k, top-p, repetition penalty, length penalty, dan diversity penalty, tapi ini di luar cakupan kurikulum ini.
-
-## Praktik Baik
-
-Ada banyak praktik yang bisa Anda terapkan untuk mencoba mendapatkan hasil yang diinginkan. Anda akan menemukan gaya Anda sendiri seiring semakin sering menggunakan prompting.
-
-Selain teknik yang sudah kita bahas, ada beberapa praktik baik yang perlu dipertimbangkan saat melakukan prompting pada LLM.
-
-Berikut beberapa praktik baik yang perlu diperhatikan:
-
-- **Tentukan konteks**. Konteks itu penting, semakin spesifik seperti domain, topik, dan lain-lain, hasilnya akan semakin baik.
-- Batasi output. Jika Anda menginginkan jumlah item tertentu atau panjang tertentu, sebutkan secara spesifik.
-- **Tentukan apa dan bagaimana**. Ingat untuk menyebutkan apa yang Anda inginkan dan bagaimana Anda menginginkannya, misalnya "Buat Python Web API dengan route products dan customers, bagi menjadi 3 file".
-- **Gunakan template**. Seringkali, Anda ingin memperkaya prompt dengan data dari perusahaan Anda. Gunakan template untuk ini. Template bisa memiliki variabel yang Anda ganti dengan data sebenarnya.
-- **Eja dengan benar**. LLM mungkin memberikan jawaban yang benar, tapi jika Anda mengeja dengan benar, Anda akan mendapatkan respons yang lebih baik.
+- **Tentukan konteks**. Konteks sangat penting, semakin banyak Anda dapat menentukan seperti domain, topik, dll., semakin baik.
+- Batasi output. Jika Anda menginginkan jumlah item tertentu atau panjang tertentu, tentukan itu.
+- **Tentukan apa dan bagaimana**. Ingatlah untuk menyebutkan apa yang Anda inginkan dan bagaimana Anda menginginkannya, misalnya "Buat Python Web API dengan rute produk dan pelanggan, bagi menjadi 3 file".
+- **Gunakan template**. Sering kali, Anda ingin memperkaya prompt Anda dengan data dari perusahaan Anda. Gunakan template untuk melakukan ini. Template dapat memiliki variabel yang Anda ganti dengan data aktual.
+- **Eja dengan benar**. LLM mungkin memberikan respons yang benar, tetapi jika Anda mengeja dengan benar, Anda akan mendapatkan respons yang lebih baik.
 
 ## Tugas
 
-Berikut kode Python yang menunjukkan cara membuat API sederhana menggunakan Flask:
+Berikut adalah kode dalam Python yang menunjukkan cara membangun API sederhana menggunakan Flask:
 
 ```python
 from flask import Flask, request
@@ -228,36 +125,38 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Gunakan asisten AI seperti GitHub Copilot atau ChatGPT dan terapkan teknik "self-refine" untuk memperbaiki kode tersebut.
+Gunakan asisten AI seperti GitHub Copilot atau ChatGPT dan terapkan teknik "self-refine" untuk meningkatkan kode tersebut.
 
 ## Solusi
 
-Silakan coba selesaikan tugas dengan menambahkan prompt yang sesuai pada kode.
+Silakan coba menyelesaikan tugas dengan menambahkan prompt yang sesuai ke dalam kode.
 
 > [!TIP]
-> Buatlah prompt yang meminta perbaikan, ada baiknya membatasi berapa banyak perbaikan yang diinginkan. Anda juga bisa meminta perbaikan dalam aspek tertentu, misalnya arsitektur, performa, keamanan, dll.
+> Susun prompt untuk meminta peningkatan, sebaiknya batasi jumlah peningkatan. Anda juga dapat meminta peningkatan dalam cara tertentu, misalnya arsitektur, performa, keamanan, dll.
 
-[Solution](../../../05-advanced-prompts/python/aoai-solution.py)
+[Solusi](../../../05-advanced-prompts/python/aoai-solution.py)
 
-## Pemeriksaan Pengetahuan
+## Uji Pengetahuan
 
 Mengapa saya menggunakan chain-of-thought prompting? Tunjukkan 1 jawaban yang benar dan 2 jawaban yang salah.
 
 1. Untuk mengajarkan LLM cara menyelesaikan masalah.
 1. B, Untuk mengajarkan LLM menemukan kesalahan dalam kode.
-1. C, Untuk menginstruksikan LLM menghasilkan solusi yang berbeda.
+1. C, Untuk menginstruksikan LLM menghasilkan berbagai solusi.
 
-A: 1, karena chain-of-thought adalah tentang menunjukkan kepada LLM bagaimana menyelesaikan masalah dengan memberikan serangkaian langkah, serta masalah serupa dan bagaimana cara menyelesaikannya.
+A: 1, karena chain-of-thought adalah tentang menunjukkan kepada LLM cara menyelesaikan masalah dengan memberikan serangkaian langkah, dan masalah serupa serta bagaimana mereka diselesaikan.
 
 ## 🚀 Tantangan
 
-Anda baru saja menggunakan teknik self-refine dalam tugas. Ambil program apa pun yang sudah Anda buat dan pikirkan perbaikan apa yang ingin Anda terapkan. Sekarang gunakan teknik self-refine untuk menerapkan perubahan yang diusulkan. Bagaimana menurut Anda hasilnya, lebih baik atau lebih buruk?
+Anda baru saja menggunakan teknik self-refine dalam tugas. Ambil program apa pun yang telah Anda buat dan pertimbangkan perbaikan apa yang ingin Anda terapkan padanya. Sekarang gunakan teknik self-refine untuk menerapkan perubahan yang diusulkan. Menurut Anda, apakah hasilnya lebih baik atau lebih buruk?
 
-## Kerja Bagus! Lanjutkan Pembelajaran Anda
+## Kerja Hebat! Lanjutkan Pembelajaran Anda
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
+Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan Anda tentang AI Generatif!
 
-Lanjut ke Lesson 6 di mana kita akan menerapkan pengetahuan Prompt Engineering dengan [membangun aplikasi text generation](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Lanjutkan ke Pelajaran 6 di mana kita akan menerapkan pengetahuan kita tentang Prompt Engineering dengan [membangun aplikasi generasi teks](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+
+---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.

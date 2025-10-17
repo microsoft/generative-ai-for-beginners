@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ce8224073b86b728ed52b19bed7932fd",
-  "translation_date": "2025-07-09T12:03:12+00:00",
+  "original_hash": "df027997f1448323d6159b78a1b669bf",
+  "translation_date": "2025-10-17T20:30:51+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "vi"
 }
 -->
-# Xây dựng Ứng dụng Tạo Văn bản
+# Xây dựng ứng dụng tạo văn bản
 
-[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.vi.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Xây dựng ứng dụng tạo văn bản](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.vi.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Nhấn vào hình trên để xem video bài học này)_
+> _(Nhấp vào hình ảnh trên để xem video bài học này)_
 
-Bạn đã thấy trong chương trình học này có những khái niệm cốt lõi như prompt và thậm chí một lĩnh vực riêng gọi là "prompt engineering". Nhiều công cụ bạn có thể tương tác như ChatGPT, Office 365, Microsoft Power Platform và nhiều hơn nữa, đều hỗ trợ bạn sử dụng prompt để hoàn thành một việc gì đó.
+Cho đến nay, bạn đã thấy trong chương trình học này rằng có những khái niệm cốt lõi như lời nhắc (prompts) và thậm chí là một lĩnh vực hoàn toàn mới gọi là "kỹ thuật lời nhắc". Nhiều công cụ mà bạn có thể tương tác như ChatGPT, Office 365, Microsoft Power Platform và nhiều công cụ khác hỗ trợ bạn sử dụng lời nhắc để thực hiện một điều gì đó.
 
-Để bạn có thể thêm trải nghiệm như vậy vào một ứng dụng, bạn cần hiểu các khái niệm như prompt, completion và chọn một thư viện để làm việc. Đó chính là những gì bạn sẽ học trong chương này.
+Để bạn có thể thêm trải nghiệm như vậy vào ứng dụng, bạn cần hiểu các khái niệm như lời nhắc, kết quả hoàn thành và chọn một thư viện để làm việc. Đó chính xác là những gì bạn sẽ học trong chương này.
 
 ## Giới thiệu
 
@@ -23,69 +23,69 @@ Trong chương này, bạn sẽ:
 
 - Tìm hiểu về thư viện openai và các khái niệm cốt lõi của nó.
 - Xây dựng một ứng dụng tạo văn bản sử dụng openai.
-- Hiểu cách sử dụng các khái niệm như prompt, temperature và tokens để xây dựng ứng dụng tạo văn bản.
+- Hiểu cách sử dụng các khái niệm như lời nhắc, nhiệt độ và tokens để xây dựng một ứng dụng tạo văn bản.
 
 ## Mục tiêu học tập
 
 Kết thúc bài học này, bạn sẽ có thể:
 
 - Giải thích ứng dụng tạo văn bản là gì.
-- Xây dựng ứng dụng tạo văn bản sử dụng openai.
-- Cấu hình ứng dụng để sử dụng nhiều hoặc ít tokens hơn và thay đổi temperature để có kết quả đa dạng.
+- Xây dựng một ứng dụng tạo văn bản sử dụng openai.
+- Cấu hình ứng dụng của bạn để sử dụng nhiều hoặc ít tokens và thay đổi nhiệt độ để có kết quả đa dạng.
 
 ## Ứng dụng tạo văn bản là gì?
 
-Thông thường khi bạn xây dựng một ứng dụng, nó sẽ có một giao diện nào đó như sau:
+Thông thường khi bạn xây dựng một ứng dụng, nó có một loại giao diện nào đó như sau:
 
-- Dựa trên lệnh. Ứng dụng console là những ứng dụng điển hình, nơi bạn nhập lệnh và nó thực hiện một tác vụ. Ví dụ, `git` là một ứng dụng dựa trên lệnh.
-- Giao diện người dùng (UI). Một số ứng dụng có giao diện đồ họa (GUI) nơi bạn nhấn nút, nhập văn bản, chọn tùy chọn và nhiều hơn nữa.
+- Dựa trên lệnh. Các ứng dụng console là những ứng dụng điển hình nơi bạn nhập một lệnh và nó thực hiện một nhiệm vụ. Ví dụ, `git` là một ứng dụng dựa trên lệnh.
+- Giao diện người dùng (UI). Một số ứng dụng có giao diện người dùng đồ họa (GUI) nơi bạn nhấp vào nút, nhập văn bản, chọn tùy chọn và nhiều hơn nữa.
 
-### Ứng dụng console và UI có giới hạn
+### Ứng dụng console và UI bị giới hạn
 
-So sánh với ứng dụng dựa trên lệnh, nơi bạn nhập một lệnh:
+So sánh với một ứng dụng dựa trên lệnh nơi bạn nhập một lệnh:
 
-- **Có giới hạn**. Bạn không thể nhập bất kỳ lệnh nào, chỉ những lệnh mà ứng dụng hỗ trợ.
-- **Ngôn ngữ cụ thể**. Một số ứng dụng hỗ trợ nhiều ngôn ngữ, nhưng mặc định ứng dụng được xây dựng cho một ngôn ngữ cụ thể, dù bạn có thể thêm hỗ trợ ngôn ngữ khác.
+- **Bị giới hạn**. Bạn không thể chỉ nhập bất kỳ lệnh nào, chỉ những lệnh mà ứng dụng hỗ trợ.
+- **Cụ thể ngôn ngữ**. Một số ứng dụng hỗ trợ nhiều ngôn ngữ, nhưng mặc định ứng dụng được xây dựng cho một ngôn ngữ cụ thể, ngay cả khi bạn có thể thêm hỗ trợ ngôn ngữ khác.
 
 ### Lợi ích của ứng dụng tạo văn bản
 
 Vậy ứng dụng tạo văn bản khác biệt như thế nào?
 
-Trong ứng dụng tạo văn bản, bạn có nhiều sự linh hoạt hơn, không bị giới hạn bởi một tập lệnh hay một ngôn ngữ đầu vào cụ thể. Thay vào đó, bạn có thể sử dụng ngôn ngữ tự nhiên để tương tác với ứng dụng. Một lợi ích khác là bạn đang tương tác với một nguồn dữ liệu đã được huấn luyện trên một kho tàng thông tin rộng lớn, trong khi ứng dụng truyền thống có thể bị giới hạn bởi dữ liệu trong cơ sở dữ liệu.
+Trong một ứng dụng tạo văn bản, bạn có nhiều sự linh hoạt hơn, bạn không bị giới hạn bởi một tập hợp lệnh hoặc một ngôn ngữ nhập cụ thể. Thay vào đó, bạn có thể sử dụng ngôn ngữ tự nhiên để tương tác với ứng dụng. Một lợi ích khác là bạn đang tương tác với một nguồn dữ liệu đã được huấn luyện trên một tập hợp thông tin rộng lớn, trong khi một ứng dụng truyền thống có thể bị giới hạn bởi những gì có trong cơ sở dữ liệu.
 
 ### Tôi có thể xây dựng gì với ứng dụng tạo văn bản?
 
 Có rất nhiều thứ bạn có thể xây dựng. Ví dụ:
 
-- **Chatbot**. Một chatbot trả lời các câu hỏi về các chủ đề như công ty bạn và sản phẩm của nó có thể là một lựa chọn phù hợp.
-- **Trợ lý**. Các mô hình ngôn ngữ lớn (LLM) rất giỏi trong việc tóm tắt văn bản, lấy thông tin từ văn bản, tạo ra các văn bản như sơ yếu lý lịch và nhiều hơn nữa.
-- **Trợ lý lập trình**. Tùy thuộc vào mô hình ngôn ngữ bạn sử dụng, bạn có thể xây dựng trợ lý lập trình giúp bạn viết code. Ví dụ, bạn có thể dùng sản phẩm như GitHub Copilot cũng như ChatGPT để hỗ trợ viết code.
+- **Chatbot**. Một chatbot trả lời các câu hỏi về các chủ đề, như công ty của bạn và sản phẩm của nó, có thể là một lựa chọn tốt.
+- **Trợ lý**. Các mô hình ngôn ngữ lớn (LLM) rất tốt trong việc tóm tắt văn bản, tìm hiểu thông tin từ văn bản, tạo ra văn bản như sơ yếu lý lịch và nhiều hơn nữa.
+- **Trợ lý mã hóa**. Tùy thuộc vào mô hình ngôn ngữ bạn sử dụng, bạn có thể xây dựng một trợ lý mã hóa giúp bạn viết mã. Ví dụ, bạn có thể sử dụng sản phẩm như GitHub Copilot cũng như ChatGPT để giúp bạn viết mã.
 
 ## Làm thế nào để bắt đầu?
 
-Bạn cần tìm cách tích hợp với một LLM, thường có hai cách tiếp cận sau:
+Bạn cần tìm cách tích hợp với một LLM, thường bao gồm hai cách tiếp cận sau:
 
-- Sử dụng API. Ở đây bạn xây dựng các yêu cầu web với prompt và nhận lại văn bản được tạo.
-- Sử dụng thư viện. Thư viện giúp đóng gói các cuộc gọi API và làm cho việc sử dụng dễ dàng hơn.
+- Sử dụng API. Ở đây bạn tạo các yêu cầu web với lời nhắc của mình và nhận lại văn bản được tạo.
+- Sử dụng thư viện. Các thư viện giúp đóng gói các cuộc gọi API và làm cho chúng dễ sử dụng hơn.
 
 ## Thư viện/SDK
 
-Có một vài thư viện nổi tiếng để làm việc với LLM như:
+Có một số thư viện nổi tiếng để làm việc với LLM như:
 
-- **openai**, thư viện này giúp bạn dễ dàng kết nối với mô hình và gửi prompt.
+- **openai**, thư viện này giúp dễ dàng kết nối với mô hình của bạn và gửi lời nhắc.
 
-Ngoài ra còn có các thư viện hoạt động ở cấp cao hơn như:
+Sau đó, có các thư viện hoạt động ở mức cao hơn như:
 
 - **Langchain**. Langchain rất nổi tiếng và hỗ trợ Python.
-- **Semantic Kernel**. Semantic Kernel là thư viện của Microsoft hỗ trợ các ngôn ngữ C#, Python và Java.
+- **Semantic Kernel**. Semantic Kernel là một thư viện của Microsoft hỗ trợ các ngôn ngữ C#, Python và Java.
 
 ## Ứng dụng đầu tiên sử dụng openai
 
-Hãy xem cách chúng ta có thể xây dựng ứng dụng đầu tiên, cần những thư viện gì, yêu cầu ra sao, v.v.
+Hãy xem cách chúng ta có thể xây dựng ứng dụng đầu tiên, cần những thư viện nào, yêu cầu bao nhiêu và v.v.
 
 ### Cài đặt openai
 
-Có nhiều thư viện để tương tác với OpenAI hoặc Azure OpenAI. Bạn có thể dùng nhiều ngôn ngữ lập trình như C#, Python, JavaScript, Java và nhiều hơn nữa. Ở đây chúng ta chọn dùng thư viện `openai` cho Python, nên sẽ dùng `pip` để cài đặt.
+Có rất nhiều thư viện ngoài kia để tương tác với OpenAI hoặc Azure OpenAI. Có thể sử dụng nhiều ngôn ngữ lập trình như C#, Python, JavaScript, Java và nhiều hơn nữa. Chúng tôi đã chọn sử dụng thư viện Python `openai`, vì vậy chúng tôi sẽ sử dụng `pip` để cài đặt nó.
 
 ```bash
 pip install openai
@@ -96,31 +96,31 @@ pip install openai
 Bạn cần thực hiện các bước sau:
 
 - Tạo tài khoản trên Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Đăng ký truy cập Azure OpenAI. Truy cập [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) và yêu cầu truy cập.
+- Truy cập vào Azure OpenAI. Truy cập [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) và yêu cầu quyền truy cập.
 
   > [!NOTE]
-  > Tại thời điểm viết bài, bạn cần đăng ký để được truy cập Azure OpenAI.
+  > Tại thời điểm viết bài, bạn cần đăng ký để truy cập vào Azure OpenAI.
 
 - Cài đặt Python <https://www.python.org/>
-- Tạo một tài nguyên Azure OpenAI Service. Xem hướng dẫn cách [tạo tài nguyên](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Đã tạo một tài nguyên Azure OpenAI Service. Xem hướng dẫn này để [tạo tài nguyên](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Tìm khóa API và endpoint
+### Xác định khóa API và điểm cuối
 
-Lúc này, bạn cần cho thư viện `openai` biết khóa API nào sẽ dùng. Để tìm khóa API, vào phần "Keys and Endpoint" trong tài nguyên Azure OpenAI của bạn và sao chép giá trị "Key 1".
+Tại thời điểm này, bạn cần cho thư viện `openai` biết khóa API nào để sử dụng. Để tìm khóa API của bạn, hãy vào phần "Keys and Endpoint" của tài nguyên Azure OpenAI và sao chép giá trị "Key 1".
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Khi đã sao chép thông tin này, hãy hướng dẫn thư viện sử dụng nó.
+Bây giờ bạn đã sao chép thông tin này, hãy hướng dẫn các thư viện sử dụng nó.
 
 > [!NOTE]
-> Nên tách khóa API ra khỏi mã nguồn. Bạn có thể làm điều này bằng cách dùng biến môi trường.
+> Đáng để tách biệt khóa API của bạn khỏi mã. Bạn có thể làm điều này bằng cách sử dụng các biến môi trường.
 >
 > - Đặt biến môi trường `OPENAI_API_KEY` thành khóa API của bạn.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Cấu hình Azure
 
-Nếu bạn dùng Azure OpenAI, đây là cách cấu hình:
+Nếu bạn đang sử dụng Azure OpenAI, đây là cách bạn cấu hình:
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Ở trên, chúng ta thiết lập:
+Ở trên, chúng ta đang thiết lập các thông số sau:
 
-- `api_type` thành `azure`. Điều này báo cho thư viện biết dùng Azure OpenAI chứ không phải OpenAI.
-- `api_key`, đây là khóa API bạn lấy từ Azure Portal.
-- `api_version`, phiên bản API bạn muốn dùng. Tại thời điểm viết, phiên bản mới nhất là `2023-05-15`.
-- `api_base`, đây là endpoint của API. Bạn có thể tìm thấy nó trong Azure Portal bên cạnh khóa API.
+- `api_type` là `azure`. Điều này cho thư viện biết rằng sử dụng Azure OpenAI thay vì OpenAI.
+- `api_key`, đây là khóa API của bạn được tìm thấy trong Azure Portal.
+- `api_version`, đây là phiên bản API bạn muốn sử dụng. Tại thời điểm viết bài, phiên bản mới nhất là `2023-05-15`.
+- `api_base`, đây là điểm cuối của API. Bạn có thể tìm thấy nó trong Azure Portal bên cạnh khóa API của bạn.
 
-> [!NOTE] > `os.getenv` là hàm đọc biến môi trường. Bạn có thể dùng nó để đọc các biến như `OPENAI_API_KEY` và `API_BASE`. Đặt các biến môi trường này trong terminal hoặc dùng thư viện như `dotenv`.
+> [!NOTE] > `os.getenv` là một hàm đọc các biến môi trường. Bạn có thể sử dụng nó để đọc các biến môi trường như `OPENAI_API_KEY` và `API_BASE`. Đặt các biến môi trường này trong terminal của bạn hoặc bằng cách sử dụng một thư viện như `dotenv`.
 
 ## Tạo văn bản
 
-Cách tạo văn bản là sử dụng lớp `Completion`. Ví dụ:
+Cách để tạo văn bản là sử dụng lớp `Completion`. Đây là một ví dụ:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-Trong đoạn mã trên, chúng ta tạo một đối tượng completion và truyền vào mô hình muốn dùng cùng prompt. Sau đó in ra văn bản được tạo.
+Trong đoạn mã trên, chúng ta tạo một đối tượng completion và truyền vào mô hình chúng ta muốn sử dụng và lời nhắc. Sau đó, chúng ta in ra văn bản được tạo.
 
-### Chat completions
+### Hoàn thành chat
 
-Cho đến nay, bạn đã thấy cách dùng `Completion` để tạo văn bản. Nhưng còn có một lớp khác gọi là `ChatCompletion` phù hợp hơn cho chatbot. Ví dụ sử dụng:
+Cho đến nay, bạn đã thấy cách chúng ta sử dụng `Completion` để tạo văn bản. Nhưng có một lớp khác gọi là `ChatCompletion` phù hợp hơn cho chatbot. Đây là một ví dụ sử dụng nó:
 
 ```python
 import openai
@@ -164,13 +164,13 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-Sẽ có thêm thông tin về chức năng này trong chương tới.
+Chức năng này sẽ được trình bày chi tiết hơn trong chương tiếp theo.
 
 ## Bài tập - ứng dụng tạo văn bản đầu tiên của bạn
 
-Bây giờ bạn đã biết cách thiết lập và cấu hình openai, đã đến lúc xây dựng ứng dụng tạo văn bản đầu tiên. Để xây dựng ứng dụng, làm theo các bước sau:
+Bây giờ chúng ta đã học cách thiết lập và cấu hình openai, đã đến lúc xây dựng ứng dụng tạo văn bản đầu tiên của bạn. Để xây dựng ứng dụng của bạn, hãy làm theo các bước sau:
 
-1. Tạo môi trường ảo và cài đặt openai:
+1. Tạo một môi trường ảo và cài đặt openai:
 
    ```bash
    python -m venv venv
@@ -179,12 +179,12 @@ Bây giờ bạn đã biết cách thiết lập và cấu hình openai, đã đ
    ```
 
    > [!NOTE]
-   > Nếu bạn dùng Windows, gõ `venv\Scripts\activate` thay vì `source venv/bin/activate`.
+   > Nếu bạn sử dụng Windows, hãy gõ `venv\Scripts\activate` thay vì `source venv/bin/activate`.
 
    > [!NOTE]
-   > Tìm khóa Azure OpenAI bằng cách vào [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), tìm `Open AI`, chọn `Open AI resource`, rồi vào `Keys and Endpoint` và sao chép giá trị `Key 1`.
+   > Xác định khóa Azure OpenAI của bạn bằng cách truy cập [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) và tìm kiếm `Open AI`, chọn `Open AI resource`, sau đó chọn `Keys and Endpoint` và sao chép giá trị `Key 1`.
 
-1. Tạo file _app.py_ và thêm đoạn mã sau:
+1. Tạo một tệp _app.py_ và thêm đoạn mã sau:
 
    ```python
    import openai
@@ -208,9 +208,9 @@ Bây giờ bạn đã biết cách thiết lập và cấu hình openai, đã đ
    ```
 
    > [!NOTE]
-   > Nếu bạn dùng Azure OpenAI, cần đặt `api_type` thành `azure` và `api_key` thành khóa Azure OpenAI của bạn.
+   > Nếu bạn sử dụng Azure OpenAI, bạn cần đặt `api_type` thành `azure` và đặt `api_key` thành khóa Azure OpenAI của bạn.
 
-   Bạn sẽ thấy kết quả như sau:
+   Bạn sẽ thấy một kết quả đầu ra như sau:
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ Bây giờ bạn đã biết cách thiết lập và cấu hình openai, đã đ
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Các loại prompt khác nhau, cho các mục đích khác nhau
+## Các loại lời nhắc khác nhau cho các mục đích khác nhau
 
-Bây giờ bạn đã biết cách tạo văn bản bằng prompt. Bạn thậm chí đã có chương trình chạy được và có thể chỉnh sửa để tạo ra các loại văn bản khác nhau.
+Bây giờ bạn đã thấy cách tạo văn bản bằng một lời nhắc. Bạn thậm chí đã có một chương trình hoạt động mà bạn có thể sửa đổi và thay đổi để tạo các loại văn bản khác nhau.
 
-Prompt có thể dùng cho nhiều loại tác vụ. Ví dụ:
+Lời nhắc có thể được sử dụng cho nhiều nhiệm vụ khác nhau. Ví dụ:
 
-- **Tạo một loại văn bản**. Ví dụ, bạn có thể tạo thơ, câu hỏi cho một bài kiểm tra, v.v.
-- **Tìm kiếm thông tin**. Bạn có thể dùng prompt để tìm thông tin như ví dụ sau: 'CORS có nghĩa là gì trong phát triển web?'.
-- **Tạo code**. Bạn có thể dùng prompt để tạo code, ví dụ phát triển biểu thức chính quy để kiểm tra email hoặc thậm chí tạo một chương trình hoàn chỉnh, như một ứng dụng web.
+- **Tạo một loại văn bản**. Ví dụ, bạn có thể tạo một bài thơ, câu hỏi cho một bài kiểm tra, v.v.
+- **Tra cứu thông tin**. Bạn có thể sử dụng lời nhắc để tìm kiếm thông tin như ví dụ sau 'CORS có nghĩa là gì trong phát triển web?'.
+- **Tạo mã**. Bạn có thể sử dụng lời nhắc để tạo mã, ví dụ phát triển một biểu thức chính quy để xác thực email hoặc thậm chí tạo một chương trình hoàn chỉnh, như một ứng dụng web.
 
-## Trường hợp sử dụng thực tế hơn: trình tạo công thức nấu ăn
+## Một trường hợp sử dụng thực tế hơn: trình tạo công thức nấu ăn
 
-Hãy tưởng tượng bạn có nguyên liệu ở nhà và muốn nấu món gì đó. Để làm điều đó, bạn cần một công thức. Một cách để tìm công thức là dùng công cụ tìm kiếm hoặc bạn có thể dùng LLM.
+Hãy tưởng tượng bạn có nguyên liệu ở nhà và muốn nấu một món gì đó. Để làm điều đó, bạn cần một công thức. Một cách để tìm công thức là sử dụng công cụ tìm kiếm hoặc bạn có thể sử dụng một LLM.
 
-Bạn có thể viết prompt như sau:
+Bạn có thể viết một lời nhắc như sau:
 
-> "Cho tôi 5 công thức món ăn với các nguyên liệu sau: gà, khoai tây và cà rốt. Với mỗi công thức, liệt kê tất cả nguyên liệu sử dụng"
+> "Hiển thị cho tôi 5 công thức nấu ăn cho một món ăn với các nguyên liệu sau: gà, khoai tây và cà rốt. Với mỗi công thức, liệt kê tất cả các nguyên liệu được sử dụng."
 
-Với prompt trên, bạn có thể nhận được phản hồi tương tự:
+Với lời nhắc trên, bạn có thể nhận được một phản hồi tương tự như:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,16 +300,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Kết quả này rất tốt, tôi biết sẽ nấu gì. Lúc này, những cải tiến hữu ích có thể là:
+Kết quả này rất tuyệt, tôi biết mình sẽ nấu gì. Tại thời điểm này, những cải tiến hữu ích có thể là:
 
-- Lọc ra những nguyên liệu tôi không thích hoặc bị dị ứng.
-- Tạo danh sách mua sắm, trong trường hợp tôi chưa có đủ nguyên liệu ở nhà.
+- Loại bỏ các nguyên liệu tôi không thích hoặc bị dị ứng.
+- Tạo danh sách mua sắm, trong trường hợp tôi không có tất cả các nguyên liệu ở nhà.
 
-Với các trường hợp trên, hãy thêm một prompt bổ sung:
+Đối với các trường hợp trên, hãy thêm một lời nhắc bổ sung:
 
-> "Vui lòng loại bỏ các công thức có tỏi vì tôi bị dị ứng và thay thế bằng nguyên liệu khác. Ngoài ra, vui lòng tạo danh sách mua sắm cho các công thức, tính đến việc tôi đã có gà, khoai tây và cà rốt ở nhà."
+> "Vui lòng loại bỏ các công thức có tỏi vì tôi bị dị ứng và thay thế bằng một thứ khác. Ngoài ra, hãy tạo danh sách mua sắm cho các công thức, xem xét tôi đã có gà, khoai tây và cà rốt ở nhà."
 
-Bây giờ bạn có kết quả mới, cụ thể là:
+Bây giờ bạn có một kết quả mới, cụ thể là:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-Đó là 5 công thức không có tỏi và bạn cũng có danh sách mua sắm dựa trên những gì đã có ở nhà.
+Đó là năm công thức của bạn, không có tỏi được đề cập và bạn cũng có một danh sách mua sắm xem xét những gì bạn đã có ở nhà.
 
 ## Bài tập - xây dựng trình tạo công thức nấu ăn
 
-Bây giờ chúng ta đã mô phỏng một kịch bản, hãy viết mã để phù hợp với kịch bản đó. Để làm vậy, làm theo các bước:
+Bây giờ chúng ta đã thực hiện một kịch bản, hãy viết mã để phù hợp với kịch bản đã trình bày. Để làm điều đó, hãy làm theo các bước sau:
 
-1. Dùng file _app.py_ hiện có làm điểm bắt đầu
-1. Tìm biến `prompt` và thay đổi mã của nó thành:
+1. Sử dụng tệp _app.py_ hiện có làm điểm bắt đầu
+1. Xác định biến `prompt` và thay đổi mã của nó thành:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Nếu chạy mã bây giờ, bạn sẽ thấy kết quả tương tự:
+   Nếu bạn chạy mã bây giờ, bạn sẽ thấy một kết quả đầu ra tương tự như:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Bây giờ chúng ta đã mô phỏng một kịch bản, hãy viết mã để 
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > LƯU Ý, LLM của bạn không phải lúc nào cũng cho kết quả giống nhau, nên bạn có thể nhận được kết quả khác nhau mỗi lần chạy.
+   > LƯU Ý, LLM của bạn là không xác định, vì vậy bạn có thể nhận được kết quả khác nhau mỗi lần chạy chương trình.
 
-   Tuyệt vời, giờ hãy xem cách cải thiện. Để cải thiện, chúng ta muốn mã linh hoạt hơn, để số lượng công thức và nguyên liệu có thể thay đổi.
+   Tuyệt vời, hãy xem cách chúng ta có thể cải thiện mọi thứ. Để cải thiện mọi thứ, chúng ta muốn đảm bảo mã linh hoạt, để các nguyên liệu và số lượng công thức có thể được cải thiện và thay đổi.
 
-1. Hãy thay đổi mã như sau:
+1. Hãy thay đổi mã theo cách sau:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Bây giờ chúng ta đã mô phỏng một kịch bản, hãy viết mã để 
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Ví dụ chạy thử có thể như sau:
+   Chạy thử nghiệm mã, có thể trông như thế này:
 
    ```output
    No of recipes (for example, 5): 3
@@ -429,11 +429,11 @@ Bây giờ chúng ta đã mô phỏng một kịch bản, hãy viết mã để 
 
 ### Cải thiện bằng cách thêm bộ lọc và danh sách mua sắm
 
-Chúng ta đã có ứng dụng hoạt động, có thể tạo công thức và linh hoạt vì dựa trên đầu vào của người dùng, cả số lượng công thức và nguyên liệu.
+Bây giờ chúng ta đã có một ứng dụng hoạt động có khả năng tạo ra các công thức và nó linh hoạt vì nó dựa vào đầu vào từ người dùng, cả về số lượng công thức và các nguyên liệu được sử dụng.
 
-Để cải thiện hơn nữa, ta muốn thêm:
+Để cải thiện thêm, chúng ta muốn thêm các điều sau:
 
-- **Lọc nguyên liệu**. Muốn lọc ra nguyên liệu không thích hoặc dị ứng. Để làm điều này, ta chỉnh sửa prompt hiện tại và thêm điều kiện lọc vào cuối prompt như sau:
+- **Loại bỏ nguyên liệu**. Chúng ta muốn có thể loại bỏ các nguyên liệu mà chúng ta không thích hoặc bị dị ứng. Để thực hiện thay đổi này, chúng ta có thể chỉnh sửa lời nhắc hiện có và thêm điều kiện lọc vào cuối như sau:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Chúng ta đã có ứng dụng hoạt động, có thể tạo công thức và
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Ở trên, ta thêm `{filter}` vào cuối prompt và cũng lấy giá trị filter từ người dùng.
+  Ở trên, chúng ta thêm `{filter}` vào cuối lời nhắc và cũng lấy giá trị bộ lọc từ người dùng.
 
-  Ví dụ đầu vào khi chạy chương trình giờ có thể như sau:
+  Một ví dụ đầu vào khi chạy chương trình bây giờ có thể trông như sau:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,14 +510,13 @@ Chúng ta đã có ứng dụng hoạt động, có thể tạo công thức và
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Như bạn thấy, các công thức có sữa đã bị lọc ra. Nhưng nếu bạn không dung nạp lactose, có thể muốn lọc cả công thức có phô mai, nên cần rõ ràng hơn.
+  Như bạn thấy, bất kỳ công thức nào có sữa đã bị loại bỏ. Nhưng, nếu bạn không dung nạp lactose, bạn có thể muốn loại bỏ các công thức có phô mai trong đó, vì vậy cần phải rõ ràng.
 
-- **Tạo danh sách mua sắm**. Muốn tạo danh sách mua sắm dựa trên những gì đã có ở nhà.
+- **Tạo danh sách mua sắm**. Chúng ta muốn tạo danh sách mua sắm, xem xét những gì chúng ta đã có ở nhà.
 
-  Với chức năng này, ta có thể thử giải quyết trong một prompt hoặc chia thành hai prompt. Hãy thử cách thứ hai. Ở đây ta đề xuất thêm một prompt nữa, nhưng để làm được điều đó, ta cần thêm kết quả của prompt trước làm ngữ cảnh cho prompt sau.
+  Đối với chức năng này, chúng ta có thể cố gắng giải quyết mọi thứ trong một lời nhắc hoặc chúng ta có thể chia nó thành hai lời nhắc. Hãy thử cách tiếp cận thứ hai. Ở đây chúng ta đề xuất thêm một lời nhắc bổ sung, nhưng để điều đó hoạt động, chúng ta cần thêm kết quả của lời nhắc trước đó làm ngữ cảnh cho lời nhắc sau.
 
-  Tìm phần mã in kết quả của prompt đầu tiên và thêm đoạn mã sau bên dưới:
-
+  Xác định phần trong mã in ra kết quả từ lời nhắc đầu tiên và thêm đoạn mã sau bên dưới:
   ```python
   old_prompt_result = completion.choices[0].message.content
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
@@ -531,22 +530,23 @@ Chúng ta đã có ứng dụng hoạt động, có thể tạo công thức và
   print(completion.choices[0].message.content)
   ```
 
-  Lưu ý:
+  Lưu ý những điều sau:
 
-  1. Ta tạo prompt mới bằng cách thêm kết quả từ prompt đầu tiên vào prompt mới:
+  1. Chúng ta đang tạo một prompt mới bằng cách thêm kết quả từ prompt đầu tiên vào prompt mới:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
-1. Chúng ta tạo một yêu cầu mới, nhưng cũng xem xét số lượng token đã yêu cầu trong lời nhắc đầu tiên, vì vậy lần này chúng ta đặt `max_tokens` là 1200.
 
-```python
+  1. Chúng ta thực hiện một yêu cầu mới, nhưng cũng xem xét số lượng token mà chúng ta đã yêu cầu trong prompt đầu tiên, vì vậy lần này chúng ta đặt `max_tokens` là 1200.
+
+     ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-Chạy đoạn mã này, ta nhận được kết quả sau:
+     Khi chạy đoạn mã này, chúng ta sẽ nhận được kết quả sau:
 
-```output
+     ```output
      No of recipes (for example, 5): 2
      List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
      Filter (for example, vegetarian, vegan, or gluten-free): sugar
@@ -560,18 +560,17 @@ Chạy đoạn mã này, ta nhận được kết quả sau:
 
 ## Cải thiện thiết lập của bạn
 
-Những gì chúng ta có cho đến giờ là mã hoạt động, nhưng vẫn còn một số điều chỉnh nên làm để cải thiện hơn nữa. Một số việc nên làm là:
+Những gì chúng ta có cho đến nay là mã hoạt động, nhưng có một số điều chỉnh chúng ta nên thực hiện để cải thiện hơn nữa. Một số điều chúng ta nên làm là:
 
-- **Tách biệt thông tin bí mật khỏi mã nguồn**, như khóa API. Thông tin bí mật không nên nằm trong mã và cần được lưu trữ ở nơi an toàn. Để tách biệt thông tin bí mật khỏi mã, chúng ta có thể dùng biến môi trường và các thư viện như `python-dotenv` để tải chúng từ file. Dưới đây là cách làm trong mã:
+- **Tách biệt thông tin bí mật khỏi mã**, như khóa API. Thông tin bí mật không nên nằm trong mã và cần được lưu trữ ở một nơi an toàn. Để tách biệt thông tin bí mật khỏi mã, chúng ta có thể sử dụng biến môi trường và các thư viện như `python-dotenv` để tải chúng từ một tệp. Đây là cách thực hiện trong mã:
 
-  1. Tạo file `.env` với nội dung sau:
+  1. Tạo một tệp `.env` với nội dung sau:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     
-> Lưu ý, với Azure, bạn cần thiết lập các biến môi trường sau:
+     > Lưu ý, đối với Azure, bạn cần thiết lập các biến môi trường sau:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -589,39 +588,39 @@ Những gì chúng ta có cho đến giờ là mã hoạt động, nhưng vẫn 
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Một lưu ý về độ dài token**. Chúng ta nên cân nhắc số lượng token cần thiết để tạo ra văn bản mong muốn. Token tốn tiền, nên nếu có thể, hãy cố gắng tiết kiệm số token sử dụng. Ví dụ, liệu chúng ta có thể diễn đạt lời nhắc sao cho dùng ít token hơn không?
+- **Một lời về độ dài token**. Chúng ta nên xem xét số lượng token cần thiết để tạo ra văn bản mong muốn. Token tốn tiền, vì vậy nếu có thể, chúng ta nên cố gắng tiết kiệm số lượng token sử dụng. Ví dụ, liệu chúng ta có thể diễn đạt prompt sao cho sử dụng ít token hơn không?
 
-  Để thay đổi số token sử dụng, bạn có thể dùng tham số `max_tokens`. Ví dụ, nếu bạn muốn dùng 100 token, bạn sẽ làm như sau:
+  Để thay đổi số lượng token sử dụng, bạn có thể sử dụng tham số `max_tokens`. Ví dụ, nếu bạn muốn sử dụng 100 token, bạn sẽ làm như sau:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Thử nghiệm với temperature**. Temperature là một yếu tố chúng ta chưa đề cập đến nhưng rất quan trọng cho cách chương trình hoạt động. Giá trị temperature càng cao thì kết quả càng ngẫu nhiên. Ngược lại, giá trị temperature càng thấp thì kết quả càng dễ đoán. Hãy cân nhắc xem bạn có muốn kết quả đa dạng hay không.
+- **Thử nghiệm với nhiệt độ**. Nhiệt độ là một yếu tố mà chúng ta chưa đề cập đến nhưng rất quan trọng đối với cách chương trình hoạt động. Giá trị nhiệt độ càng cao thì kết quả càng ngẫu nhiên. Ngược lại, giá trị nhiệt độ càng thấp thì kết quả càng dễ đoán. Hãy xem xét liệu bạn có muốn sự đa dạng trong kết quả hay không.
 
-  Để thay đổi temperature, bạn có thể dùng tham số `temperature`. Ví dụ, nếu bạn muốn dùng temperature là 0.5, bạn sẽ làm như sau:
+  Để thay đổi nhiệt độ, bạn có thể sử dụng tham số `temperature`. Ví dụ, nếu bạn muốn sử dụng nhiệt độ là 0.5, bạn sẽ làm như sau:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Lưu ý, càng gần 1.0 thì kết quả càng đa dạng.
+  > Lưu ý, giá trị càng gần 1.0 thì kết quả càng đa dạng.
 
 ## Bài tập
 
-Với bài tập này, bạn có thể tự chọn dự án để xây dựng.
+Đối với bài tập này, bạn có thể chọn những gì muốn xây dựng.
 
 Dưới đây là một số gợi ý:
 
-- Điều chỉnh ứng dụng tạo công thức nấu ăn để cải thiện hơn nữa. Thử thay đổi giá trị temperature và lời nhắc để xem bạn có thể tạo ra gì.
-- Xây dựng một "bạn học". Ứng dụng này có thể trả lời các câu hỏi về một chủ đề, ví dụ Python, bạn có thể có các lời nhắc như "Chủ đề X trong Python là gì?", hoặc lời nhắc yêu cầu hiển thị mã cho một chủ đề cụ thể.
-- Bot lịch sử, làm cho lịch sử trở nên sống động, hướng dẫn bot nhập vai một nhân vật lịch sử nào đó và hỏi về cuộc đời và thời đại của nhân vật đó.
+- Điều chỉnh ứng dụng tạo công thức nấu ăn để cải thiện hơn nữa. Thử nghiệm với các giá trị nhiệt độ và các prompt để xem bạn có thể tạo ra điều gì.
+- Xây dựng một "người bạn học". Ứng dụng này nên có khả năng trả lời các câu hỏi về một chủ đề, ví dụ như Python. Bạn có thể có các prompt như "Chủ đề này trong Python là gì?", hoặc bạn có thể có một prompt yêu cầu hiển thị mã cho một chủ đề cụ thể, v.v.
+- Bot lịch sử, làm cho lịch sử trở nên sống động, hướng dẫn bot đóng vai một nhân vật lịch sử cụ thể và đặt câu hỏi về cuộc sống và thời đại của họ.
 
 ## Giải pháp
 
-### Bạn học
+### Người bạn học
 
-Dưới đây là lời nhắc khởi đầu, xem cách bạn có thể sử dụng và điều chỉnh theo ý thích.
+Dưới đây là một prompt khởi đầu, xem cách bạn có thể sử dụng và điều chỉnh nó theo ý thích.
 
 ```text
 - "You're an expert on the Python language
@@ -636,7 +635,7 @@ Dưới đây là lời nhắc khởi đầu, xem cách bạn có thể sử d�
 
 ### Bot lịch sử
 
-Dưới đây là một số lời nhắc bạn có thể sử dụng:
+Dưới đây là một số prompt bạn có thể sử dụng:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -647,21 +646,23 @@ Dưới đây là một số lời nhắc bạn có thể sử dụng:
 
 ## Kiểm tra kiến thức
 
-Temperature có tác dụng gì?
+Khái niệm nhiệt độ làm gì?
 
-1. Nó điều khiển mức độ ngẫu nhiên của kết quả.
-1. Nó điều khiển kích thước phản hồi.
-1. Nó điều khiển số lượng token được sử dụng.
+1. Nó kiểm soát mức độ ngẫu nhiên của kết quả.
+1. Nó kiểm soát kích thước của phản hồi.
+1. Nó kiểm soát số lượng token được sử dụng.
 
 ## 🚀 Thử thách
 
-Khi làm bài tập, hãy thử thay đổi temperature, đặt lần lượt là 0, 0.5 và 1. Hãy nhớ rằng 0 là ít biến đổi nhất và 1 là nhiều biến đổi nhất. Giá trị nào phù hợp nhất với ứng dụng của bạn?
+Khi làm bài tập, hãy thử thay đổi nhiệt độ, thử đặt nó ở mức 0, 0.5 và 1. Hãy nhớ rằng 0 là ít đa dạng nhất và 1 là đa dạng nhất. Giá trị nào hoạt động tốt nhất cho ứng dụng của bạn?
 
-## Làm tốt lắm! Tiếp tục học hỏi
+## Làm tốt lắm! Tiếp tục học tập
 
-Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) để tiếp tục nâng cao kiến thức về Generative AI!
+Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Học về AI tạo sinh](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) để tiếp tục nâng cao kiến thức về AI tạo sinh của bạn!
 
-Hãy đến bài học 7, nơi chúng ta sẽ tìm hiểu cách [xây dựng ứng dụng chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Hãy chuyển sang Bài học 7, nơi chúng ta sẽ tìm hiểu cách [xây dựng ứng dụng trò chuyện](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn chính xác và đáng tin cậy. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+---
+
+**Tuyên bố miễn trừ trách nhiệm**:  
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, chúng tôi khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

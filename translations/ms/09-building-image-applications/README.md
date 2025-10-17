@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
-  "translation_date": "2025-09-29T21:50:51+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T20:56:36+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "ms"
 }
 -->
 # Membina Aplikasi Penjanaan Imej
 
-[![Membina Aplikasi Penjanaan Imej](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.ms.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Membina Aplikasi Penjanaan Imej](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.ms.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-LLM bukan hanya untuk penjanaan teks. Ia juga boleh digunakan untuk menjana imej daripada deskripsi teks. Mempunyai imej sebagai satu modaliti boleh menjadi sangat berguna dalam pelbagai bidang seperti MedTech, seni bina, pelancongan, pembangunan permainan, dan banyak lagi. Dalam bab ini, kita akan melihat dua model penjanaan imej yang paling popular, DALL-E dan Midjourney.
+LLM bukan hanya untuk penjanaan teks. Ia juga boleh digunakan untuk menjana imej daripada deskripsi teks. Mempunyai imej sebagai satu modaliti boleh sangat berguna dalam pelbagai bidang seperti MedTech, seni bina, pelancongan, pembangunan permainan dan banyak lagi. Dalam bab ini, kita akan melihat dua model penjanaan imej yang paling popular, DALL-E dan Midjourney.
 
 ## Pengenalan
 
@@ -19,7 +19,7 @@ Dalam pelajaran ini, kita akan membincangkan:
 
 - Penjanaan imej dan mengapa ia berguna.
 - DALL-E dan Midjourney, apa itu dan bagaimana ia berfungsi.
-- Cara membina aplikasi penjanaan imej.
+- Bagaimana anda boleh membina aplikasi penjanaan imej.
 
 ## Matlamat Pembelajaran
 
@@ -35,13 +35,13 @@ Aplikasi penjanaan imej adalah cara yang hebat untuk meneroka keupayaan AI Gener
 
 - **Penyuntingan dan sintesis imej**. Anda boleh menjana imej untuk pelbagai kegunaan seperti penyuntingan imej dan sintesis imej.
 
-- **Digunakan dalam pelbagai industri**. Ia juga boleh digunakan untuk menjana imej untuk pelbagai industri seperti MedTech, Pelancongan, Pembangunan Permainan, dan banyak lagi.
+- **Digunakan dalam pelbagai industri**. Ia juga boleh digunakan untuk menjana imej untuk pelbagai industri seperti MedTech, Pelancongan, Pembangunan Permainan dan banyak lagi.
 
 ## Senario: Edu4All
 
-Sebagai sebahagian daripada pelajaran ini, kita akan terus bekerja dengan startup kita, Edu4All. Pelajar akan mencipta imej untuk penilaian mereka, jenis imej yang akan dihasilkan bergantung kepada pelajar, tetapi mereka boleh membuat ilustrasi untuk dongeng mereka sendiri, mencipta watak baru untuk cerita mereka, atau membantu mereka menggambarkan idea dan konsep mereka.
+Sebagai sebahagian daripada pelajaran ini, kita akan terus bekerja dengan startup kita, Edu4All. Pelajar akan mencipta imej untuk penilaian mereka, jenis imej yang dihasilkan bergantung kepada pelajar, tetapi mereka boleh membuat ilustrasi untuk cerita dongeng mereka sendiri atau mencipta watak baru untuk cerita mereka atau membantu mereka menggambarkan idea dan konsep mereka.
 
-Berikut adalah contoh imej yang boleh dihasilkan oleh pelajar Edu4All jika mereka sedang belajar tentang monumen di kelas:
+Berikut adalah contoh apa yang pelajar Edu4All boleh hasilkan jika mereka sedang belajar tentang monumen:
 
 ![Startup Edu4All, kelas tentang monumen, Menara Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.ms.png)
 
@@ -51,15 +51,15 @@ menggunakan prompt seperti
 
 ## Apa itu DALL-E dan Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) dan [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) adalah dua model penjanaan imej yang paling popular, yang membolehkan anda menggunakan prompt untuk menjana imej.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) dan [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) adalah dua model penjanaan imej yang paling popular, mereka membolehkan anda menggunakan prompt untuk menjana imej.
 
 ### DALL-E
 
-Mari kita mulakan dengan DALL-E, iaitu model AI Generatif yang menjana imej daripada deskripsi teks.
+Mari kita mulakan dengan DALL-E, yang merupakan model AI Generatif yang menjana imej daripada deskripsi teks.
 
 > [DALL-E adalah gabungan dua model, CLIP dan perhatian tersebar](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, adalah model yang menjana embedding, iaitu representasi numerik data, daripada imej dan teks.
+- **CLIP**, adalah model yang menjana embedding, iaitu representasi data secara numerik, daripada imej dan teks.
 
 - **Perhatian tersebar**, adalah model yang menjana imej daripada embedding. DALL-E dilatih menggunakan dataset imej dan teks dan boleh digunakan untuk menjana imej daripada deskripsi teks. Sebagai contoh, DALL-E boleh digunakan untuk menjana imej kucing memakai topi, atau anjing dengan gaya rambut mohawk.
 
@@ -74,22 +74,23 @@ _Kredit imej Wikipedia, imej dijana oleh Midjourney_
 
 Pertama, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E adalah model AI Generatif berdasarkan seni bina transformer dengan _transformer autoregresif_.
 
-_Transformer autoregresif_ menentukan bagaimana model menjana imej daripada deskripsi teks, ia menjana satu piksel pada satu masa, dan kemudian menggunakan piksel yang dijana untuk menjana piksel seterusnya. Proses ini melalui beberapa lapisan dalam rangkaian neural sehingga imej selesai.
+_Transformer autoregresif_ menentukan bagaimana model menjana imej daripada deskripsi teks, ia menjana satu piksel pada satu masa, dan kemudian menggunakan piksel yang dijana untuk menjana piksel seterusnya. Melalui beberapa lapisan dalam rangkaian neural, sehingga imej selesai.
 
-Dengan proses ini, DALL-E mengawal atribut, objek, ciri, dan banyak lagi dalam imej yang dijana. Walau bagaimanapun, DALL-E 2 dan 3 mempunyai kawalan yang lebih besar terhadap imej yang dijana.
+Dengan proses ini, DALL-E mengawal atribut, objek, ciri, dan banyak lagi dalam imej yang dijana. Walau bagaimanapun, DALL-E 2 dan 3 mempunyai lebih banyak kawalan ke atas imej yang dijana.
 
 ## Membina aplikasi penjanaan imej pertama anda
 
 Jadi, apa yang diperlukan untuk membina aplikasi penjanaan imej? Anda memerlukan perpustakaan berikut:
 
 - **python-dotenv**, sangat disarankan untuk menggunakan perpustakaan ini untuk menyimpan rahsia anda dalam fail _.env_ jauh daripada kod.
-- **openai**, perpustakaan ini digunakan untuk berinteraksi dengan API OpenAI.
+- **openai**, perpustakaan ini adalah apa yang anda akan gunakan untuk berinteraksi dengan API OpenAI.
 - **pillow**, untuk bekerja dengan imej dalam Python.
 - **requests**, untuk membantu anda membuat permintaan HTTP.
 
 ## Cipta dan terapkan model Azure OpenAI
 
-Jika belum dilakukan, ikuti arahan di halaman [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) untuk mencipta sumber dan model Azure OpenAI. Pilih DALL-E 3 sebagai model.  
+Jika belum dilakukan, ikuti arahan di halaman [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) 
+untuk mencipta sumber dan model Azure OpenAI. Pilih DALL-E 3 sebagai model.  
 
 ## Cipta aplikasi
 
@@ -101,7 +102,7 @@ Jika belum dilakukan, ikuti arahan di halaman [Microsoft Learn](https://learn.mi
    AZURE_OPENAI_DEPLOYMENT="dall-e-3"
    ```
 
-   Cari maklumat ini di Portal Azure OpenAI Foundry untuk sumber anda dalam bahagian "Deployments".
+   Cari maklumat ini di Portal Azure OpenAI Foundry untuk sumber anda di bahagian "Deployments".
 
 1. Kumpulkan perpustakaan di atas dalam fail bernama _requirements.txt_ seperti berikut:
 
@@ -179,9 +180,9 @@ Jika belum dilakukan, ikuti arahan di halaman [Microsoft Learn](https://learn.mi
         print(err)
    ```
 
-Mari kita terangkan kod ini:
+Mari kita jelaskan kod ini:
 
-- Pertama, kita import perpustakaan yang diperlukan, termasuk perpustakaan OpenAI, dotenv, requests, dan Pillow.
+- Pertama, kita import perpustakaan yang kita perlukan, termasuk perpustakaan OpenAI, perpustakaan dotenv, perpustakaan requests, dan perpustakaan Pillow.
 
   ```python
   import openai
@@ -191,14 +192,14 @@ Mari kita terangkan kod ini:
   import dotenv
   ```
 
-- Seterusnya, kita memuatkan pembolehubah persekitaran daripada fail _.env_.
+- Seterusnya, kita muatkan pembolehubah persekitaran daripada fail _.env_.
 
   ```python
   # import dotenv
   dotenv.load_dotenv()
   ```
 
-- Selepas itu, kita mengkonfigurasi klien perkhidmatan Azure OpenAI.
+- Selepas itu, kita konfigurasikan klien perkhidmatan Azure OpenAI 
 
   ```python
   # Get endpoint and key from environment variables
@@ -220,9 +221,9 @@ Mari kita terangkan kod ini:
                       )
   ```
 
-  Kod di atas memberikan respons dalam bentuk objek JSON yang mengandungi URL imej yang dijana. Kita boleh menggunakan URL tersebut untuk memuat turun imej dan menyimpannya ke fail.
+  Kod di atas memberikan respons dengan objek JSON yang mengandungi URL imej yang dijana. Kita boleh menggunakan URL untuk memuat turun imej dan menyimpannya ke fail.
 
-- Akhir sekali, kita membuka imej dan menggunakan penonton imej standard untuk memaparkannya:
+- Akhir sekali, kita buka imej dan gunakan penonton imej standard untuk memaparkannya:
 
   ```python
   image = Image.open(image_path)
@@ -246,15 +247,15 @@ Mari kita lihat kod yang menjana imej dengan lebih terperinci:
 - **n**, adalah bilangan imej yang dijana. Dalam kes ini, kita menjana dua imej.
 - **temperature**, adalah parameter yang mengawal kebarangkalian output model AI Generatif. Nilai temperature adalah antara 0 dan 1 di mana 0 bermaksud output adalah deterministik dan 1 bermaksud output adalah rawak. Nilai lalai adalah 0.7.
 
-Terdapat lebih banyak perkara yang boleh dilakukan dengan imej yang akan kita bincangkan dalam bahagian seterusnya.
+Terdapat lebih banyak perkara yang boleh anda lakukan dengan imej yang akan kita bincangkan dalam bahagian seterusnya.
 
 ## Keupayaan tambahan penjanaan imej
 
-Anda telah melihat bagaimana kita dapat menjana imej menggunakan beberapa baris kod dalam Python. Walau bagaimanapun, terdapat lebih banyak perkara yang boleh dilakukan dengan imej.
+Anda telah melihat bagaimana kita dapat menjana imej menggunakan beberapa baris kod dalam Python. Walau bagaimanapun, terdapat lebih banyak perkara yang boleh anda lakukan dengan imej.
 
 Anda juga boleh melakukan perkara berikut:
 
-- **Melakukan penyuntingan**. Dengan memberikan imej sedia ada, topeng, dan prompt, anda boleh mengubah imej. Sebagai contoh, anda boleh menambah sesuatu pada bahagian imej. Bayangkan imej arnab kita, anda boleh menambah topi pada arnab. Cara melakukannya adalah dengan memberikan imej, topeng (mengenal pasti bahagian kawasan untuk perubahan) dan prompt teks untuk mengatakan apa yang perlu dilakukan. 
+- **Melakukan penyuntingan**. Dengan memberikan imej sedia ada, topeng dan prompt, anda boleh mengubah imej. Sebagai contoh, anda boleh menambah sesuatu pada bahagian imej. Bayangkan imej arnab kita, anda boleh menambah topi pada arnab. Cara anda melakukannya adalah dengan memberikan imej, topeng (mengenal pasti bahagian kawasan untuk perubahan) dan prompt teks untuk mengatakan apa yang perlu dilakukan. 
 > Nota: ini tidak disokong dalam DALL-E 3. 
  
 Berikut adalah contoh menggunakan GPT Image:
@@ -278,7 +279,7 @@ Berikut adalah contoh menggunakan GPT Image:
 </div>
 
 
-- **Mencipta variasi**. Ideanya adalah anda mengambil imej sedia ada dan meminta variasi dicipta. Untuk mencipta variasi, anda memberikan imej dan prompt teks serta kod seperti berikut:
+- **Cipta variasi**. Ideanya adalah anda mengambil imej sedia ada dan meminta variasi dicipta. Untuk mencipta variasi, anda memberikan imej dan prompt teks serta kod seperti berikut:
 
   ```python
   response = openai.Image.create_variation(
@@ -303,9 +304,9 @@ Mari kita lihat contoh bagaimana temperature berfungsi, dengan menjalankan promp
 
 Sekarang mari kita jalankan prompt yang sama untuk melihat bahawa kita tidak akan mendapat imej yang sama dua kali:
 
-![Imej yang dijana arnab di atas kuda](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.ms.png)
+![Imej dijana arnab di atas kuda](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.ms.png)
 
-Seperti yang anda lihat, imej-imej tersebut serupa, tetapi tidak sama. Mari kita cuba ubah nilai temperature kepada 0.1 dan lihat apa yang berlaku:
+Seperti yang anda lihat, imej-imej itu serupa, tetapi tidak sama. Mari cuba ubah nilai temperature kepada 0.1 dan lihat apa yang berlaku:
 
 ```python
  generation_response = client.images.create(
@@ -317,7 +318,7 @@ Seperti yang anda lihat, imej-imej tersebut serupa, tetapi tidak sama. Mari kita
 
 ### Mengubah temperature
 
-Jadi mari kita cuba membuat respons lebih deterministik. Kita dapat melihat daripada dua imej yang dijana bahawa dalam imej pertama, terdapat arnab dan dalam imej kedua, terdapat kuda, jadi imej-imej tersebut berbeza dengan ketara.
+Jadi mari kita cuba membuat respons lebih deterministik. Kita dapat melihat daripada dua imej yang kita hasilkan bahawa dalam imej pertama, terdapat arnab dan dalam imej kedua, terdapat kuda, jadi imej-imej itu sangat berbeza.
 
 Oleh itu, mari kita ubah kod kita dan tetapkan temperature kepada 0, seperti berikut:
 
@@ -330,20 +331,20 @@ generation_response = client.images.create(
     )
 ```
 
-Sekarang apabila anda menjalankan kod ini, anda akan mendapat dua imej berikut:
+Sekarang apabila anda menjalankan kod ini, anda akan mendapat dua imej ini:
 
 - ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.ms.png)
 - ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.ms.png)
 
-Di sini anda dapat melihat dengan jelas bagaimana imej-imej tersebut lebih menyerupai satu sama lain.
+Di sini anda dapat melihat dengan jelas bagaimana imej-imej itu lebih menyerupai satu sama lain.
 
-## Cara menentukan sempadan untuk aplikasi anda dengan metaprompt
+## Bagaimana untuk menentukan sempadan untuk aplikasi anda dengan metaprompt
 
 Dengan demo kita, kita sudah boleh menjana imej untuk pelanggan kita. Walau bagaimanapun, kita perlu mencipta beberapa sempadan untuk aplikasi kita.
 
-Sebagai contoh, kita tidak mahu menjana imej yang tidak sesuai untuk tempat kerja, atau yang tidak sesuai untuk kanak-kanak.
+Sebagai contoh, kita tidak mahu menjana imej yang tidak sesuai untuk kerja, atau yang tidak sesuai untuk kanak-kanak.
 
-Kita boleh melakukan ini dengan _metaprompt_. Metaprompt adalah teks prompt yang digunakan untuk mengawal output model AI Generatif. Sebagai contoh, kita boleh menggunakan metaprompt untuk mengawal output, dan memastikan imej yang dijana sesuai untuk tempat kerja, atau sesuai untuk kanak-kanak.
+Kita boleh melakukan ini dengan _metaprompt_. Metaprompt adalah teks prompt yang digunakan untuk mengawal output model AI Generatif. Sebagai contoh, kita boleh menggunakan metaprompt untuk mengawal output, dan memastikan imej yang dijana sesuai untuk kerja, atau sesuai untuk kanak-kanak.
 
 ### Bagaimana ia berfungsi?
 
@@ -397,11 +398,11 @@ Create an image of a bunny on a horse, holding a lollipop"
 
 Daripada prompt di atas, anda dapat melihat bagaimana semua imej yang dihasilkan mengambil kira metaprompt.
 
-## Tugasan - mari kita bantu pelajar
+## Tugasan - mari bantu pelajar
 
-Kami memperkenalkan Edu4All pada permulaan pelajaran ini. Sekarang tiba masanya untuk membolehkan pelajar menjana imej untuk penilaian mereka.
+Kami memperkenalkan Edu4All pada permulaan pelajaran ini. Sekarang tiba masanya untuk membantu pelajar menjana imej untuk penilaian mereka.
 
-Pelajar akan mencipta imej untuk penilaian mereka yang mengandungi monumen, jenis monumen yang akan dihasilkan bergantung kepada pelajar. Pelajar diminta menggunakan kreativiti mereka dalam tugasan ini untuk meletakkan monumen ini dalam konteks yang berbeza.
+Pelajar akan mencipta imej untuk penilaian mereka yang mengandungi monumen, jenis monumen yang dihasilkan bergantung kepada pelajar. Pelajar diminta menggunakan kreativiti mereka dalam tugasan ini untuk meletakkan monumen ini dalam konteks yang berbeza.
 
 ## Penyelesaian
 
@@ -485,4 +486,4 @@ Pergi ke Pelajaran 10 di mana kita akan melihat cara [membina aplikasi AI dengan
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
