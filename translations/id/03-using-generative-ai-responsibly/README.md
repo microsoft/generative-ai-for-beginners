@@ -1,145 +1,147 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7f8f4c11f8c1cb6e1794442dead414ea",
-  "translation_date": "2025-07-09T09:00:02+00:00",
+  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+  "translation_date": "2025-10-17T20:44:12+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "id"
 }
 -->
-# Menggunakan Generative AI dengan Bertanggung Jawab
+# Menggunakan AI Generatif Secara Bertanggung Jawab
 
-[![Using Generative AI Responsibly](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.id.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
+[![Menggunakan AI Generatif Secara Bertanggung Jawab](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.id.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klik gambar di atas untuk menonton video pelajaran ini_
 
-Mudah untuk terpesona dengan AI, terutama Generative AI, tapi kamu perlu mempertimbangkan bagaimana menggunakannya secara bertanggung jawab. Kamu harus memikirkan hal-hal seperti bagaimana memastikan hasilnya adil, tidak merugikan, dan lainnya. Bab ini bertujuan memberikan konteks tersebut, apa yang perlu dipertimbangkan, dan bagaimana mengambil langkah aktif untuk meningkatkan penggunaan AI-mu.
+AI, khususnya AI generatif, memang sangat menarik, tetapi Anda perlu mempertimbangkan bagaimana menggunakannya secara bertanggung jawab. Anda harus memikirkan cara memastikan outputnya adil, tidak berbahaya, dan lainnya. Bab ini bertujuan untuk memberikan konteks yang disebutkan, hal-hal yang perlu dipertimbangkan, dan langkah-langkah aktif yang dapat diambil untuk meningkatkan penggunaan AI Anda.
 
 ## Pendahuluan
 
 Pelajaran ini akan membahas:
 
-- Mengapa kamu harus memprioritaskan Responsible AI saat membangun aplikasi Generative AI.
-- Prinsip inti Responsible AI dan bagaimana kaitannya dengan Generative AI.
-- Cara menerapkan prinsip Responsible AI ini melalui strategi dan alat.
+- Mengapa Anda harus memprioritaskan AI yang Bertanggung Jawab saat membangun aplikasi AI Generatif.
+- Prinsip-prinsip inti AI yang Bertanggung Jawab dan bagaimana kaitannya dengan AI Generatif.
+- Cara menerapkan prinsip-prinsip AI yang Bertanggung Jawab melalui strategi dan alat.
 
 ## Tujuan Pembelajaran
 
-Setelah menyelesaikan pelajaran ini, kamu akan mengetahui:
+Setelah menyelesaikan pelajaran ini, Anda akan mengetahui:
 
-- Pentingnya Responsible AI saat membangun aplikasi Generative AI.
-- Kapan harus memikirkan dan menerapkan prinsip inti Responsible AI saat membangun aplikasi Generative AI.
-- Alat dan strategi apa saja yang tersedia untuk menerapkan konsep Responsible AI.
+- Pentingnya AI yang Bertanggung Jawab saat membangun aplikasi AI Generatif.
+- Kapan harus memikirkan dan menerapkan prinsip-prinsip inti AI yang Bertanggung Jawab saat membangun aplikasi AI Generatif.
+- Alat dan strategi apa saja yang tersedia untuk menerapkan konsep AI yang Bertanggung Jawab.
 
-## Prinsip Responsible AI
+## Prinsip AI yang Bertanggung Jawab
 
-Antusiasme terhadap Generative AI belum pernah sebesar ini. Antusiasme ini membawa banyak pengembang baru, perhatian, dan pendanaan ke bidang ini. Meskipun ini sangat positif bagi siapa saja yang ingin membangun produk dan perusahaan menggunakan Generative AI, penting juga untuk melangkah dengan penuh tanggung jawab.
+Antusiasme terhadap AI Generatif tidak pernah setinggi ini. Antusiasme ini telah menarik banyak pengembang baru, perhatian, dan pendanaan ke bidang ini. Meskipun ini sangat positif bagi siapa saja yang ingin membangun produk dan perusahaan menggunakan AI Generatif, penting juga untuk melangkah dengan penuh tanggung jawab.
 
-Sepanjang kursus ini, kita fokus membangun startup dan produk edukasi AI kita. Kita akan menggunakan prinsip Responsible AI: Fairness, Inclusiveness, Reliability/Safety, Security & Privacy, Transparency, dan Accountability. Dengan prinsip-prinsip ini, kita akan mengeksplorasi bagaimana kaitannya dengan penggunaan Generative AI dalam produk kita.
+Sepanjang kursus ini, kita akan fokus pada pembangunan startup dan produk pendidikan AI kita. Kita akan menggunakan prinsip-prinsip AI yang Bertanggung Jawab: Keadilan, Inklusivitas, Keandalan/Keamanan, Keamanan & Privasi, Transparansi, dan Akuntabilitas. Dengan prinsip-prinsip ini, kita akan mengeksplorasi bagaimana kaitannya dengan penggunaan AI Generatif dalam produk kita.
 
-## Mengapa Kamu Harus Memprioritaskan Responsible AI
+## Mengapa Anda Harus Memprioritaskan AI yang Bertanggung Jawab
 
-Saat membangun produk, mengambil pendekatan yang berpusat pada manusia dengan mengutamakan kepentingan terbaik pengguna akan menghasilkan hasil terbaik.
+Saat membangun produk, pendekatan yang berpusat pada manusia dengan mengutamakan kepentingan terbaik pengguna Anda akan menghasilkan hasil terbaik.
 
-Keunikan Generative AI adalah kemampuannya menciptakan jawaban, informasi, panduan, dan konten yang bermanfaat bagi pengguna. Ini bisa dilakukan tanpa banyak langkah manual yang biasanya menghasilkan hasil yang mengesankan. Namun tanpa perencanaan dan strategi yang tepat, hal ini juga bisa berujung pada hasil yang merugikan pengguna, produk, dan masyarakat secara keseluruhan.
+Keunikan AI Generatif adalah kemampuannya untuk menciptakan jawaban, informasi, panduan, dan konten yang bermanfaat bagi pengguna. Hal ini dapat dilakukan tanpa banyak langkah manual yang dapat menghasilkan hasil yang sangat mengesankan. Namun, tanpa perencanaan dan strategi yang tepat, hal ini juga dapat menyebabkan hasil yang merugikan bagi pengguna Anda, produk Anda, dan masyarakat secara keseluruhan.
 
-Mari kita lihat beberapa (namun bukan semua) potensi hasil yang merugikan ini:
+Mari kita lihat beberapa (tetapi tidak semua) potensi hasil yang merugikan ini:
 
 ### Halusinasi
 
-Halusinasi adalah istilah yang digunakan untuk menggambarkan ketika sebuah LLM menghasilkan konten yang sama sekali tidak masuk akal atau sesuatu yang kita tahu salah secara faktual berdasarkan sumber informasi lain.
+Halusinasi adalah istilah yang digunakan untuk menggambarkan ketika LLM menghasilkan konten yang sepenuhnya tidak masuk akal atau sesuatu yang kita tahu salah secara faktual berdasarkan sumber informasi lainnya.
 
-Misalnya kita membangun fitur untuk startup kita yang memungkinkan siswa bertanya tentang sejarah ke model. Seorang siswa bertanya, `Siapa satu-satunya penyintas Titanic?`
+Sebagai contoh, kita membangun fitur untuk startup kita yang memungkinkan siswa mengajukan pertanyaan sejarah kepada model. Seorang siswa bertanya, `Siapa satu-satunya yang selamat dari Titanic?`
 
-Model menghasilkan jawaban seperti berikut:
+Model menghasilkan jawaban seperti di bawah ini:
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
+![Prompt mengatakan "Siapa satu-satunya yang selamat dari Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
 > _(Sumber: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
-Ini adalah jawaban yang sangat percaya diri dan lengkap. Sayangnya, jawaban ini salah. Dengan sedikit riset saja, kita akan menemukan bahwa ada lebih dari satu penyintas dari bencana Titanic. Bagi siswa yang baru mulai meneliti topik ini, jawaban ini bisa cukup meyakinkan untuk tidak dipertanyakan dan dianggap fakta. Konsekuensinya, sistem AI bisa menjadi tidak dapat diandalkan dan berdampak negatif pada reputasi startup kita.
+Ini adalah jawaban yang sangat percaya diri dan mendetail. Sayangnya, jawaban ini salah. Bahkan dengan sedikit penelitian, seseorang akan menemukan bahwa ada lebih dari satu orang yang selamat dari bencana Titanic. Bagi seorang siswa yang baru mulai meneliti topik ini, jawaban ini bisa cukup meyakinkan untuk tidak dipertanyakan dan dianggap sebagai fakta. Konsekuensi dari hal ini dapat menyebabkan sistem AI menjadi tidak dapat diandalkan dan berdampak negatif pada reputasi startup kita.
 
-Dengan setiap iterasi LLM, kita telah melihat peningkatan performa dalam meminimalkan halusinasi. Namun meskipun ada peningkatan ini, kita sebagai pembangun aplikasi dan pengguna tetap harus sadar akan keterbatasan ini.
+Dengan setiap iterasi dari LLM tertentu, kita telah melihat peningkatan kinerja dalam meminimalkan halusinasi. Meskipun ada peningkatan ini, kita sebagai pembangun aplikasi dan pengguna tetap perlu menyadari keterbatasan ini.
 
-### Konten Merugikan
+### Konten Berbahaya
 
-Kita sudah membahas sebelumnya ketika LLM menghasilkan jawaban yang salah atau tidak masuk akal. Risiko lain yang harus kita waspadai adalah ketika model merespons dengan konten yang merugikan.
+Kita telah membahas di bagian sebelumnya ketika LLM menghasilkan respons yang salah atau tidak masuk akal. Risiko lain yang perlu kita sadari adalah ketika model merespons dengan konten yang berbahaya.
 
-Konten merugikan dapat didefinisikan sebagai:
+Konten berbahaya dapat didefinisikan sebagai:
 
 - Memberikan instruksi atau mendorong tindakan menyakiti diri sendiri atau kelompok tertentu.
 - Konten yang penuh kebencian atau merendahkan.
-- Membimbing perencanaan serangan atau tindakan kekerasan.
-- Memberikan instruksi cara menemukan konten ilegal atau melakukan tindakan ilegal.
-- Menampilkan konten seksual eksplisit.
+- Membimbing perencanaan serangan atau tindakan kekerasan apa pun.
+- Memberikan instruksi tentang cara menemukan konten ilegal atau melakukan tindakan ilegal.
+- Menampilkan konten yang eksplisit secara seksual.
 
-Untuk startup kita, kita ingin memastikan memiliki alat dan strategi yang tepat untuk mencegah jenis konten ini terlihat oleh siswa.
+Untuk startup kita, kita ingin memastikan bahwa kita memiliki alat dan strategi yang tepat untuk mencegah jenis konten ini dilihat oleh siswa.
 
 ### Kurangnya Keadilan
 
-Keadilan didefinisikan sebagai “memastikan bahwa sistem AI bebas dari bias dan diskriminasi serta memperlakukan semua orang secara adil dan setara.” Dalam dunia Generative AI, kita ingin memastikan bahwa pandangan dunia yang mengecualikan kelompok marjinal tidak diperkuat oleh output model.
+Keadilan didefinisikan sebagai “memastikan bahwa sistem AI bebas dari bias dan diskriminasi serta memperlakukan semua orang secara adil dan setara.” Dalam dunia AI Generatif, kita ingin memastikan bahwa pandangan dunia yang eksklusif terhadap kelompok yang terpinggirkan tidak diperkuat oleh output model.
 
-Jenis output seperti ini tidak hanya merusak pengalaman produk yang positif bagi pengguna, tapi juga menyebabkan kerugian sosial lebih lanjut. Sebagai pembangun aplikasi, kita harus selalu mengingat basis pengguna yang luas dan beragam saat membangun solusi dengan Generative AI.
+Jenis output ini tidak hanya merusak pengalaman produk yang positif bagi pengguna kita, tetapi juga menyebabkan kerugian sosial lebih lanjut. Sebagai pembangun aplikasi, kita harus selalu mempertimbangkan basis pengguna yang luas dan beragam saat membangun solusi dengan AI Generatif.
 
-## Cara Menggunakan Generative AI dengan Bertanggung Jawab
+## Cara Menggunakan AI Generatif Secara Bertanggung Jawab
 
-Setelah kita mengidentifikasi pentingnya Responsible Generative AI, mari kita lihat 4 langkah yang bisa kita ambil untuk membangun solusi AI secara bertanggung jawab:
+Sekarang kita telah mengidentifikasi pentingnya AI Generatif yang Bertanggung Jawab, mari kita lihat 4 langkah yang dapat kita ambil untuk membangun solusi AI kita secara bertanggung jawab:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.id.png)
+![Siklus Mitigasi](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.id.png)
 
-### Mengukur Potensi Bahaya
+### Mengukur Potensi Kerugian
 
-Dalam pengujian perangkat lunak, kita menguji tindakan yang diharapkan dari pengguna pada aplikasi. Demikian juga, menguji berbagai prompt yang kemungkinan besar akan digunakan pengguna adalah cara yang baik untuk mengukur potensi bahaya.
+Dalam pengujian perangkat lunak, kita menguji tindakan yang diharapkan dari pengguna pada aplikasi. Demikian pula, menguji serangkaian prompt yang beragam yang kemungkinan besar akan digunakan oleh pengguna adalah cara yang baik untuk mengukur potensi kerugian.
 
-Karena startup kita membangun produk edukasi, akan baik untuk menyiapkan daftar prompt terkait pendidikan. Ini bisa mencakup subjek tertentu, fakta sejarah, dan prompt tentang kehidupan siswa.
+Karena startup kita sedang membangun produk pendidikan, akan baik untuk menyiapkan daftar prompt terkait pendidikan. Ini bisa mencakup subjek tertentu, fakta sejarah, dan prompt tentang kehidupan siswa.
 
-### Mengurangi Potensi Bahaya
+### Mengurangi Potensi Kerugian
 
-Saatnya mencari cara untuk mencegah atau membatasi potensi bahaya yang disebabkan oleh model dan responsnya. Kita bisa melihat ini dalam 4 lapisan berbeda:
+Sekarang saatnya menemukan cara di mana kita dapat mencegah atau membatasi potensi kerugian yang disebabkan oleh model dan responsnya. Kita dapat melihat ini dalam 4 lapisan berbeda:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.id.png)
+![Lapisan Mitigasi](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.id.png)
 
-- **Model**. Memilih model yang tepat untuk kasus penggunaan yang tepat. Model yang lebih besar dan kompleks seperti GPT-4 bisa menimbulkan risiko konten merugikan lebih besar jika diterapkan pada kasus penggunaan yang lebih kecil dan spesifik. Menggunakan data pelatihan untuk fine-tune juga mengurangi risiko konten merugikan.
+- **Model**. Memilih model yang tepat untuk kasus penggunaan yang tepat. Model yang lebih besar dan lebih kompleks seperti GPT-4 dapat menimbulkan risiko konten berbahaya yang lebih besar ketika diterapkan pada kasus penggunaan yang lebih kecil dan lebih spesifik. Menggunakan data pelatihan Anda untuk fine-tuning juga mengurangi risiko konten berbahaya.
 
-- **Sistem Keamanan**. Sistem keamanan adalah kumpulan alat dan konfigurasi pada platform yang melayani model untuk membantu mengurangi bahaya. Contohnya adalah sistem penyaringan konten pada layanan Azure OpenAI. Sistem juga harus mendeteksi serangan jailbreak dan aktivitas tidak diinginkan seperti permintaan dari bot.
+- **Sistem Keamanan**. Sistem keamanan adalah seperangkat alat dan konfigurasi pada platform yang melayani model yang membantu mengurangi kerugian. Contohnya adalah sistem penyaringan konten pada layanan Azure OpenAI. Sistem juga harus mendeteksi serangan jailbreak dan aktivitas yang tidak diinginkan seperti permintaan dari bot.
 
-- **Metaprompt**. Metaprompt dan grounding adalah cara kita mengarahkan atau membatasi model berdasarkan perilaku dan informasi tertentu. Ini bisa berupa penggunaan input sistem untuk menetapkan batasan tertentu pada model. Selain itu, memberikan output yang lebih relevan dengan ruang lingkup atau domain sistem.
+- **Metaprompt**. Metaprompt dan grounding adalah cara kita dapat mengarahkan atau membatasi model berdasarkan perilaku dan informasi tertentu. Ini bisa berupa penggunaan input sistem untuk mendefinisikan batasan tertentu dari model. Selain itu, memberikan output yang lebih relevan dengan cakupan atau domain sistem.
 
-Ini juga bisa menggunakan teknik seperti Retrieval Augmented Generation (RAG) agar model hanya mengambil informasi dari sumber terpercaya yang dipilih. Ada pelajaran di kursus ini tentang [membangun aplikasi pencarian](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Ini juga bisa berupa penggunaan teknik seperti Retrieval Augmented Generation (RAG) untuk membuat model hanya mengambil informasi dari pilihan sumber yang terpercaya. Ada pelajaran nanti dalam kursus ini tentang [membangun aplikasi pencarian](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Pengalaman Pengguna**. Lapisan terakhir adalah di mana pengguna berinteraksi langsung dengan model melalui antarmuka aplikasi kita. Dengan cara ini kita bisa merancang UI/UX untuk membatasi jenis input yang bisa dikirim pengguna ke model serta teks atau gambar yang ditampilkan. Saat meluncurkan aplikasi AI, kita juga harus transparan tentang apa yang bisa dan tidak bisa dilakukan aplikasi Generative AI kita.
+- **Pengalaman Pengguna**. Lapisan terakhir adalah tempat pengguna berinteraksi langsung dengan model melalui antarmuka aplikasi kita dengan cara tertentu. Dengan cara ini kita dapat merancang UI/UX untuk membatasi pengguna pada jenis input yang dapat mereka kirim ke model serta teks atau gambar yang ditampilkan kepada pengguna. Saat meluncurkan aplikasi AI, kita juga harus transparan tentang apa yang dapat dan tidak dapat dilakukan oleh aplikasi AI Generatif kita.
 
-Kita memiliki pelajaran khusus tentang [Merancang UX untuk Aplikasi AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Kami memiliki pelajaran khusus tentang [Merancang UX untuk Aplikasi AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Evaluasi model**. Bekerja dengan LLM bisa menantang karena kita tidak selalu mengontrol data yang digunakan untuk melatih model. Namun, kita harus selalu mengevaluasi performa dan output model. Penting untuk mengukur akurasi, kesamaan, keterhubungan, dan relevansi output model. Ini membantu memberikan transparansi dan kepercayaan kepada pemangku kepentingan dan pengguna.
+- **Evaluasi model**. Bekerja dengan LLM bisa menjadi tantangan karena kita tidak selalu memiliki kendali atas data yang digunakan untuk melatih model. Meskipun demikian, kita harus selalu mengevaluasi kinerja dan output model. Penting untuk mengukur akurasi, kesamaan, keterkaitan, dan relevansi output model. Hal ini membantu memberikan transparansi dan kepercayaan kepada pemangku kepentingan dan pengguna.
 
-### Mengoperasikan Solusi Generative AI yang Bertanggung Jawab
+### Mengoperasikan solusi AI Generatif yang Bertanggung Jawab
 
-Membangun praktik operasional di sekitar aplikasi AI-mu adalah tahap akhir. Ini termasuk bekerja sama dengan bagian lain dari startup seperti Legal dan Security untuk memastikan kepatuhan terhadap semua kebijakan regulasi. Sebelum peluncuran, kita juga ingin membuat rencana terkait pengiriman, penanganan insiden, dan rollback untuk mencegah kerugian yang berkembang pada pengguna.
+Membangun praktik operasional di sekitar aplikasi AI Anda adalah tahap akhir. Ini mencakup bekerja sama dengan bagian lain dari startup kita seperti Legal dan Keamanan untuk memastikan kita mematuhi semua kebijakan regulasi. Sebelum meluncurkan, kita juga ingin membangun rencana seputar pengiriman, penanganan insiden, dan rollback untuk mencegah kerugian kepada pengguna kita.
 
 ## Alat
 
-Meskipun pekerjaan mengembangkan solusi Responsible AI mungkin terasa berat, ini adalah usaha yang sangat berharga. Seiring berkembangnya bidang Generative AI, semakin banyak alat yang membantu pengembang mengintegrasikan tanggung jawab secara efisien ke dalam alur kerja mereka. Misalnya, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) dapat membantu mendeteksi konten dan gambar berbahaya melalui permintaan API.
+Meskipun pekerjaan mengembangkan solusi AI yang Bertanggung Jawab tampaknya banyak, ini adalah pekerjaan yang sangat berharga. Seiring berkembangnya area AI Generatif, semakin banyak alat untuk membantu pengembang mengintegrasikan tanggung jawab ke dalam alur kerja mereka secara efisien akan berkembang. Misalnya, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) dapat membantu mendeteksi konten dan gambar berbahaya melalui permintaan API.
 
-## Pemeriksaan Pengetahuan
+## Uji Pengetahuan
 
-Apa saja hal yang perlu kamu perhatikan untuk memastikan penggunaan AI yang bertanggung jawab?
+Apa saja hal yang perlu Anda perhatikan untuk memastikan penggunaan AI yang bertanggung jawab?
 
-1. Jawaban yang diberikan benar.
-1. Penggunaan yang merugikan, bahwa AI tidak digunakan untuk tujuan kriminal.
+1. Bahwa jawabannya benar.
+1. Penggunaan yang berbahaya, bahwa AI tidak digunakan untuk tujuan kriminal.
 1. Memastikan AI bebas dari bias dan diskriminasi.
 
-A: 2 dan 3 benar. Responsible AI membantu kamu mempertimbangkan cara mengurangi efek merugikan dan bias, serta lainnya.
+A: 2 dan 3 benar. AI yang Bertanggung Jawab membantu Anda mempertimbangkan cara mengurangi efek berbahaya dan bias serta lainnya.
 
 ## 🚀 Tantangan
 
-Baca tentang [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) dan lihat apa yang bisa kamu terapkan untuk penggunaanmu.
+Pelajari lebih lanjut tentang [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) dan lihat apa yang dapat Anda adopsi untuk penggunaan Anda.
 
-## Kerja Bagus, Lanjutkan Pembelajaranmu
+## Kerja Hebat, Lanjutkan Pembelajaran Anda
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuanmu tentang Generative AI!
+Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Anda tentang AI Generatif!
 
-Lanjut ke Pelajaran 4 di mana kita akan membahas [Dasar-dasar Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Lanjutkan ke Pelajaran 4 di mana kita akan membahas [Dasar-dasar Teknik Prompt](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.

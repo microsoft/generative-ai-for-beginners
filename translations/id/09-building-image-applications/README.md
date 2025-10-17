@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
-  "translation_date": "2025-09-29T21:50:05+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T20:46:28+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Aplikasi Generasi Gambar
 
-[![Membangun Aplikasi Generasi Gambar](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.id.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Membangun Aplikasi Generasi Gambar](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.id.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-Generasi AI tidak hanya terbatas pada teks. Kita juga dapat menghasilkan gambar dari deskripsi teks. Memiliki gambar sebagai modalitas dapat sangat berguna di berbagai bidang seperti MedTech, arsitektur, pariwisata, pengembangan game, dan lainnya. Dalam bab ini, kita akan membahas dua model generasi gambar yang paling populer, DALL-E dan Midjourney.
+LLM tidak hanya untuk menghasilkan teks. Anda juga dapat menghasilkan gambar dari deskripsi teks. Memiliki gambar sebagai modalitas bisa sangat berguna di berbagai bidang seperti MedTech, arsitektur, pariwisata, pengembangan game, dan lainnya. Dalam bab ini, kita akan membahas dua model generasi gambar yang paling populer, DALL-E dan Midjourney.
 
 ## Pendahuluan
 
@@ -31,15 +31,15 @@ Setelah menyelesaikan pelajaran ini, Anda akan dapat:
 
 ## Mengapa membangun aplikasi generasi gambar?
 
-Aplikasi generasi gambar adalah cara yang bagus untuk mengeksplorasi kemampuan Generative AI. Aplikasi ini dapat digunakan untuk, misalnya:
+Aplikasi generasi gambar adalah cara yang bagus untuk mengeksplorasi kemampuan AI Generatif. Mereka dapat digunakan untuk, misalnya:
 
 - **Pengeditan dan sintesis gambar**. Anda dapat menghasilkan gambar untuk berbagai kasus penggunaan, seperti pengeditan gambar dan sintesis gambar.
 
-- **Diterapkan pada berbagai industri**. Aplikasi ini juga dapat digunakan untuk menghasilkan gambar untuk berbagai industri seperti MedTech, Pariwisata, Pengembangan Game, dan lainnya.
+- **Diterapkan pada berbagai industri**. Mereka juga dapat digunakan untuk menghasilkan gambar untuk berbagai industri seperti MedTech, Pariwisata, Pengembangan Game, dan lainnya.
 
 ## Skenario: Edu4All
 
-Sebagai bagian dari pelajaran ini, kita akan melanjutkan bekerja dengan startup kita, Edu4All. Para siswa akan membuat gambar untuk penilaian mereka, jenis gambar yang dibuat terserah kepada siswa, tetapi mereka dapat membuat ilustrasi untuk dongeng mereka sendiri, menciptakan karakter baru untuk cerita mereka, atau membantu mereka memvisualisasikan ide dan konsep mereka.
+Sebagai bagian dari pelajaran ini, kita akan melanjutkan bekerja dengan startup kita, Edu4All. Para siswa akan membuat gambar untuk penilaian mereka, gambar apa yang akan dibuat terserah siswa, tetapi mereka bisa membuat ilustrasi untuk dongeng mereka sendiri atau menciptakan karakter baru untuk cerita mereka atau membantu mereka memvisualisasikan ide dan konsep mereka.
 
 Berikut adalah contoh gambar yang dapat dihasilkan oleh siswa Edu4All jika mereka sedang belajar tentang monumen di kelas:
 
@@ -47,15 +47,15 @@ Berikut adalah contoh gambar yang dapat dihasilkan oleh siswa Edu4All jika merek
 
 menggunakan prompt seperti
 
-> "Anjing di samping Menara Eiffel saat matahari pagi"
+> "Anjing di sebelah Menara Eiffel di bawah sinar matahari pagi"
 
 ## Apa itu DALL-E dan Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) dan [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) adalah dua model generasi gambar yang paling populer, yang memungkinkan Anda menggunakan prompt untuk menghasilkan gambar.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) dan [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) adalah dua model generasi gambar yang paling populer, mereka memungkinkan Anda menggunakan prompt untuk menghasilkan gambar.
 
 ### DALL-E
 
-Mari kita mulai dengan DALL-E, yang merupakan model Generative AI yang menghasilkan gambar dari deskripsi teks.
+Mari kita mulai dengan DALL-E, yang merupakan model AI Generatif yang menghasilkan gambar dari deskripsi teks.
 
 > [DALL-E adalah kombinasi dari dua model, CLIP dan diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
@@ -65,25 +65,25 @@ Mari kita mulai dengan DALL-E, yang merupakan model Generative AI yang menghasil
 
 ### Midjourney
 
-Midjourney bekerja dengan cara yang mirip dengan DALL-E, yaitu menghasilkan gambar dari prompt teks. Midjourney juga dapat digunakan untuk menghasilkan gambar menggunakan prompt seperti "kucing dengan topi", atau "anjing dengan mohawk".
+Midjourney bekerja dengan cara yang mirip dengan DALL-E, ia menghasilkan gambar dari prompt teks. Midjourney juga dapat digunakan untuk menghasilkan gambar menggunakan prompt seperti "kucing dengan topi", atau "anjing dengan mohawk".
 
 ![Gambar yang dihasilkan oleh Midjourney, merpati mekanik](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 _Kredit gambar Wikipedia, gambar dihasilkan oleh Midjourney_
 
-## Bagaimana cara kerja DALL-E dan Midjourney
+## Bagaimana DALL-E dan Midjourney Bekerja
 
-Pertama, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E adalah model Generative AI yang berbasis pada arsitektur transformer dengan _autoregressive transformer_.
+Pertama, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E adalah model AI Generatif berbasis arsitektur transformer dengan _autoregressive transformer_.
 
-_Autoregressive transformer_ mendefinisikan bagaimana model menghasilkan gambar dari deskripsi teks, yaitu dengan menghasilkan satu piksel pada satu waktu, dan kemudian menggunakan piksel yang dihasilkan untuk menghasilkan piksel berikutnya. Proses ini melewati beberapa lapisan dalam jaringan neural hingga gambar selesai.
+_Autoregressive transformer_ mendefinisikan bagaimana model menghasilkan gambar dari deskripsi teks, ia menghasilkan satu piksel pada satu waktu, dan kemudian menggunakan piksel yang dihasilkan untuk menghasilkan piksel berikutnya. Melewati beberapa lapisan dalam jaringan neural, hingga gambar selesai.
 
-Dengan proses ini, DALL-E dapat mengontrol atribut, objek, karakteristik, dan lainnya dalam gambar yang dihasilkan. Namun, DALL-E 2 dan 3 memiliki kontrol lebih besar terhadap gambar yang dihasilkan.
+Dengan proses ini, DALL-E mengontrol atribut, objek, karakteristik, dan lainnya dalam gambar yang dihasilkan. Namun, DALL-E 2 dan 3 memiliki kontrol lebih besar atas gambar yang dihasilkan.
 
 ## Membangun aplikasi generasi gambar pertama Anda
 
 Jadi, apa yang diperlukan untuk membangun aplikasi generasi gambar? Anda memerlukan pustaka berikut:
 
 - **python-dotenv**, sangat disarankan untuk menggunakan pustaka ini untuk menyimpan rahasia Anda dalam file _.env_ yang terpisah dari kode.
-- **openai**, pustaka ini digunakan untuk berinteraksi dengan API OpenAI.
+- **openai**, pustaka ini yang akan Anda gunakan untuk berinteraksi dengan API OpenAI.
 - **pillow**, untuk bekerja dengan gambar di Python.
 - **requests**, untuk membantu Anda membuat permintaan HTTP.
 
@@ -241,20 +241,20 @@ Mari kita lihat kode yang menghasilkan gambar secara lebih rinci:
                            )
    ```
 
-- **prompt**, adalah teks prompt yang digunakan untuk menghasilkan gambar. Dalam kasus ini, kita menggunakan prompt "Kelinci di atas kuda, memegang lolipop, di padang rumput berkabut tempat tumbuh bunga daffodil".
+- **prompt**, adalah prompt teks yang digunakan untuk menghasilkan gambar. Dalam kasus ini, kita menggunakan prompt "Kelinci di atas kuda, memegang lolipop, di padang rumput berkabut tempat tumbuh bunga daffodil".
 - **size**, adalah ukuran gambar yang dihasilkan. Dalam kasus ini, kita menghasilkan gambar berukuran 1024x1024 piksel.
 - **n**, adalah jumlah gambar yang dihasilkan. Dalam kasus ini, kita menghasilkan dua gambar.
-- **temperature**, adalah parameter yang mengontrol tingkat keacakan output model Generative AI. Nilai temperature adalah antara 0 dan 1, di mana 0 berarti output deterministik dan 1 berarti output acak. Nilai default adalah 0.7.
+- **temperature**, adalah parameter yang mengontrol tingkat keacakan output model AI Generatif. Nilai temperature adalah antara 0 dan 1 di mana 0 berarti output deterministik dan 1 berarti output acak. Nilai default adalah 0.7.
 
 Ada lebih banyak hal yang dapat Anda lakukan dengan gambar yang akan kita bahas di bagian berikutnya.
 
 ## Kemampuan tambahan generasi gambar
 
-Sejauh ini Anda telah melihat bagaimana kita dapat menghasilkan gambar menggunakan beberapa baris kode Python. Namun, ada lebih banyak hal yang dapat Anda lakukan dengan gambar.
+Sejauh ini Anda telah melihat bagaimana kita dapat menghasilkan gambar menggunakan beberapa baris kode di Python. Namun, ada lebih banyak hal yang dapat Anda lakukan dengan gambar.
 
 Anda juga dapat melakukan hal berikut:
 
-- **Melakukan pengeditan**. Dengan memberikan gambar yang ada, sebuah mask, dan prompt, Anda dapat mengubah gambar. Misalnya, Anda dapat menambahkan sesuatu ke bagian tertentu dari gambar. Bayangkan gambar kelinci kita, Anda dapat menambahkan topi ke kelinci. Cara melakukannya adalah dengan memberikan gambar, mask (mengidentifikasi bagian area untuk perubahan), dan prompt teks untuk mengatakan apa yang harus dilakukan. 
+- **Melakukan pengeditan**. Dengan memberikan gambar yang ada, sebuah mask, dan prompt, Anda dapat mengubah gambar. Misalnya, Anda dapat menambahkan sesuatu ke bagian tertentu dari gambar. Bayangkan gambar kelinci kita, Anda dapat menambahkan topi ke kelinci. Cara melakukannya adalah dengan memberikan gambar, mask (mengidentifikasi bagian area untuk perubahan) dan prompt teks untuk mengatakan apa yang harus dilakukan. 
 > Catatan: ini tidak didukung di DALL-E 3.
 
 Berikut adalah contoh menggunakan GPT Image:
@@ -269,7 +269,7 @@ Berikut adalah contoh menggunakan GPT Image:
    image_url = response.data[0].url
    ```
 
-  Gambar dasar hanya akan berisi lounge dengan kolam renang, tetapi gambar akhir akan memiliki flamingo:
+  Gambar dasar hanya akan berisi lounge dengan kolam renang tetapi gambar akhir akan memiliki flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.id.png" style="width: 30%; max-width: 200px; height: auto;">
@@ -292,7 +292,7 @@ Berikut adalah contoh menggunakan GPT Image:
 
 ## Temperature
 
-Temperature adalah parameter yang mengontrol tingkat keacakan output model Generative AI. Nilai temperature adalah antara 0 dan 1, di mana 0 berarti output deterministik dan 1 berarti output acak. Nilai default adalah 0.7.
+Temperature adalah parameter yang mengontrol tingkat keacakan output model AI Generatif. Nilai temperature adalah antara 0 dan 1 di mana 0 berarti output deterministik dan 1 berarti output acak. Nilai default adalah 0.7.
 
 Mari kita lihat contoh bagaimana temperature bekerja, dengan menjalankan prompt ini dua kali:
 
@@ -316,7 +316,7 @@ Seperti yang Anda lihat, gambar-gambar tersebut serupa, tetapi tidak sama. Mari 
 
 ### Mengubah temperature
 
-Jadi mari kita coba membuat respons lebih deterministik. Kita dapat mengamati dari dua gambar yang dihasilkan bahwa pada gambar pertama, ada kelinci, dan pada gambar kedua, ada kuda, sehingga gambar-gambar tersebut sangat bervariasi.
+Jadi mari kita coba membuat respons lebih deterministik. Kita dapat mengamati dari dua gambar yang kita hasilkan bahwa pada gambar pertama, ada kelinci dan pada gambar kedua, ada kuda, sehingga gambar-gambar tersebut sangat bervariasi.
 
 Oleh karena itu, mari kita ubah kode kita dan atur temperature menjadi 0, seperti ini:
 
@@ -329,7 +329,7 @@ generation_response = client.images.create(
     )
 ```
 
-Sekarang ketika Anda menjalankan kode ini, Anda mendapatkan dua gambar berikut:
+Sekarang ketika Anda menjalankan kode ini, Anda mendapatkan dua gambar ini:
 
 - ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.id.png)
 - ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.id.png)
@@ -340,15 +340,15 @@ Di sini Anda dapat dengan jelas melihat bagaimana gambar-gambar tersebut lebih m
 
 Dengan demo kita, kita sudah dapat menghasilkan gambar untuk klien kita. Namun, kita perlu membuat beberapa batasan untuk aplikasi kita.
 
-Misalnya, kita tidak ingin menghasilkan gambar yang tidak aman untuk pekerjaan, atau yang tidak sesuai untuk anak-anak.
+Misalnya, kita tidak ingin menghasilkan gambar yang tidak aman untuk dilihat, atau yang tidak sesuai untuk anak-anak.
 
-Kita dapat melakukan ini dengan _metaprompt_. Metaprompt adalah teks prompt yang digunakan untuk mengontrol output model Generative AI. Misalnya, kita dapat menggunakan metaprompt untuk mengontrol output, dan memastikan bahwa gambar yang dihasilkan aman untuk pekerjaan, atau sesuai untuk anak-anak.
+Kita dapat melakukan ini dengan _metaprompt_. Metaprompt adalah prompt teks yang digunakan untuk mengontrol output model AI Generatif. Misalnya, kita dapat menggunakan metaprompt untuk mengontrol output, dan memastikan bahwa gambar yang dihasilkan aman untuk dilihat, atau sesuai untuk anak-anak.
 
 ### Bagaimana cara kerjanya?
 
 Sekarang, bagaimana metaprompt bekerja?
 
-Metaprompt adalah teks prompt yang digunakan untuk mengontrol output model Generative AI, mereka ditempatkan sebelum teks prompt, dan digunakan untuk mengontrol output model serta diintegrasikan dalam aplikasi untuk mengontrol output model. Metaprompt menggabungkan input prompt dan input metaprompt dalam satu teks prompt.
+Metaprompt adalah prompt teks yang digunakan untuk mengontrol output model AI Generatif, mereka ditempatkan sebelum prompt teks, dan digunakan untuk mengontrol output model serta diintegrasikan dalam aplikasi untuk mengontrol output model. Menggabungkan input prompt dan input metaprompt dalam satu prompt teks.
 
 Salah satu contoh metaprompt adalah sebagai berikut:
 
@@ -400,7 +400,7 @@ Dari prompt di atas, Anda dapat melihat bagaimana semua gambar yang dibuat mempe
 
 Kami memperkenalkan Edu4All di awal pelajaran ini. Sekarang saatnya untuk membantu siswa menghasilkan gambar untuk penilaian mereka.
 
-Para siswa akan membuat gambar untuk penilaian mereka yang berisi monumen, jenis monumen yang dibuat terserah kepada siswa. Para siswa diminta menggunakan kreativitas mereka dalam tugas ini untuk menempatkan monumen-monumen tersebut dalam berbagai konteks.
+Para siswa akan membuat gambar untuk penilaian mereka yang berisi monumen, monumen apa yang akan dibuat terserah siswa. Para siswa diminta menggunakan kreativitas mereka dalam tugas ini untuk menempatkan monumen tersebut dalam berbagai konteks.
 
 ## Solusi
 
@@ -475,13 +475,13 @@ except openai.BadRequestError as err:
     print(err)
 ```
 
-## Kerja Hebat! Lanjutkan Pembelajaran Anda
+## Kerja Bagus! Lanjutkan Pembelajaran Anda
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Anda tentang AI Generatif!
+Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Anda tentang AI Generatif!
 
 Lanjutkan ke Pelajaran 10 di mana kita akan melihat cara [membangun aplikasi AI dengan kode rendah](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
