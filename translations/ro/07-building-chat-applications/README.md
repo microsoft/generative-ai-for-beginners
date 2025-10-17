@@ -1,75 +1,75 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-07-09T12:39:45+00:00",
+  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
+  "translation_date": "2025-10-17T22:10:02+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "ro"
 }
 -->
-# Construirea aplicațiilor de chat alimentate de AI generativ
+# Construirea aplicațiilor de chat bazate pe AI generativ
 
-[![Construirea aplicațiilor de chat alimentate de AI generativ](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ro.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Construirea aplicațiilor de chat bazate pe AI generativ](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ro.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-> _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
+> _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul lecției)_
 
-Acum că am văzut cum putem construi aplicații de generare de text, să ne uităm la aplicațiile de chat.
+Acum că am văzut cum putem construi aplicații de generare de text, să analizăm aplicațiile de chat.
 
-Aplicațiile de chat au devenit parte integrantă a vieții noastre cotidiene, oferind mai mult decât un simplu mijloc de conversație casuală. Ele sunt componente esențiale în serviciul clienți, suportul tehnic și chiar în sisteme sofisticate de consiliere. Probabil că ai primit ajutor de la o aplicație de chat nu cu mult timp în urmă. Pe măsură ce integrăm tehnologii mai avansate, precum AI generativ, în aceste platforme, complexitatea crește, la fel și provocările.
+Aplicațiile de chat au devenit parte integrantă a vieții noastre de zi cu zi, oferind mai mult decât un mijloc de conversație casuală. Ele sunt componente esențiale ale serviciului pentru clienți, suportului tehnic și chiar ale sistemelor sofisticate de consultanță. Probabil că ați primit ajutor de la o aplicație de chat nu cu mult timp în urmă. Pe măsură ce integrăm tehnologii mai avansate, cum ar fi AI generativ, în aceste platforme, complexitatea crește, la fel și provocările.
 
 Câteva întrebări la care trebuie să răspundem sunt:
 
-- **Construirea aplicației**. Cum construim eficient și integrăm fără probleme aceste aplicații alimentate de AI pentru cazuri de utilizare specifice?
-- **Monitorizarea**. Odată implementate, cum putem monitoriza și asigura că aplicațiile funcționează la cel mai înalt nivel de calitate, atât din punct de vedere al funcționalității, cât și al respectării [celor șase principii ale AI responsabile](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+- **Construirea aplicației**. Cum construim eficient și integrăm fără probleme aceste aplicații bazate pe AI pentru cazuri de utilizare specifice?
+- **Monitorizare**. Odată implementate, cum putem monitoriza și asigura că aplicațiile funcționează la cel mai înalt nivel de calitate, atât în ceea ce privește funcționalitatea, cât și respectarea [celor șase principii ale AI responsabil](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Pe măsură ce pășim într-o eră definită de automatizare și interacțiuni fluide om-mașină, înțelegerea modului în care AI generativ transformă amploarea, profunzimea și adaptabilitatea aplicațiilor de chat devine esențială. Această lecție va investiga aspectele arhitecturale care susțin aceste sisteme complexe, va explora metodologiile de ajustare fină pentru sarcini specifice domeniului și va evalua metricile și considerațiile relevante pentru asigurarea unei implementări responsabile a AI.
+Pe măsură ce avansăm într-o eră definită de automatizare și interacțiuni om-mașină fără întreruperi, înțelegerea modului în care AI generativ transformă domeniul, profunzimea și adaptabilitatea aplicațiilor de chat devine esențială. Această lecție va investiga aspectele arhitecturale care susțin aceste sisteme complexe, va analiza metodologiile de ajustare pentru sarcini specifice domeniului și va evalua metricile și considerațiile relevante pentru asigurarea implementării responsabile a AI.
 
 ## Introducere
 
 Această lecție acoperă:
 
 - Tehnici pentru construirea și integrarea eficientă a aplicațiilor de chat.
-- Cum să aplici personalizarea și ajustarea fină a aplicațiilor.
+- Cum să aplicați personalizarea și ajustarea aplicațiilor.
 - Strategii și considerații pentru monitorizarea eficientă a aplicațiilor de chat.
 
 ## Obiective de învățare
 
-La finalul acestei lecții, vei putea:
+Până la sfârșitul acestei lecții, veți putea:
 
-- Descrie considerațiile pentru construirea și integrarea aplicațiilor de chat în sistemele existente.
-- Personaliza aplicațiile de chat pentru cazuri de utilizare specifice.
-- Identifica metricile cheie și considerațiile pentru monitorizarea și menținerea calității aplicațiilor de chat alimentate de AI.
-- Asigura utilizarea responsabilă a AI în aplicațiile de chat.
+- Să descrieți considerațiile pentru construirea și integrarea aplicațiilor de chat în sistemele existente.
+- Să personalizați aplicațiile de chat pentru cazuri de utilizare specifice.
+- Să identificați metrici cheie și considerații pentru monitorizarea și menținerea calității aplicațiilor de chat bazate pe AI.
+- Să asigurați că aplicațiile de chat utilizează AI în mod responsabil.
 
 ## Integrarea AI generativ în aplicațiile de chat
 
-Îmbunătățirea aplicațiilor de chat prin AI generativ nu se rezumă doar la a le face mai inteligente; este vorba despre optimizarea arhitecturii, performanței și interfeței utilizator pentru a oferi o experiență de calitate. Aceasta implică investigarea fundațiilor arhitecturale, integrarea API-urilor și considerațiile legate de interfața utilizatorului. Această secțiune își propune să-ți ofere o hartă completă pentru a naviga aceste peisaje complexe, fie că le conectezi la sisteme existente, fie că le construiești ca platforme independente.
+Îmbunătățirea aplicațiilor de chat prin AI generativ nu se concentrează doar pe a le face mai inteligente; este vorba despre optimizarea arhitecturii, performanței și interfeței utilizatorului pentru a oferi o experiență de utilizare de calitate. Acest lucru implică investigarea fundațiilor arhitecturale, integrările API și considerațiile privind interfața utilizatorului. Această secțiune își propune să vă ofere o foaie de parcurs cuprinzătoare pentru navigarea acestor peisaje complexe, fie că le integrați în sisteme existente, fie că le construiți ca platforme independente.
 
-La finalul acestei secțiuni, vei avea expertiza necesară pentru a construi și integra eficient aplicații de chat.
+Până la sfârșitul acestei secțiuni, veți fi echipat cu expertiza necesară pentru a construi și a încorpora eficient aplicații de chat.
 
 ### Chatbot sau aplicație de chat?
 
-Înainte să începem construirea aplicațiilor de chat, să comparăm „chatbot”-urile cu „aplicațiile de chat alimentate de AI”, care au roluri și funcționalități distincte. Scopul principal al unui chatbot este să automatizeze sarcini conversaționale specifice, cum ar fi răspunsul la întrebări frecvente sau urmărirea unui colet. De obicei, este guvernat de logică bazată pe reguli sau algoritmi AI complecși. În schimb, o aplicație de chat alimentată de AI este un mediu mult mai amplu, conceput pentru a facilita diverse forme de comunicare digitală, cum ar fi chat-uri text, vocale și video între utilizatori umani. Caracteristica sa definitorie este integrarea unui model AI generativ care simulează conversații nuanțate, asemănătoare celor umane, generând răspunsuri bazate pe o varietate largă de intrări și indicii contextuale. O aplicație de chat alimentată de AI generativ poate purta discuții deschise, se poate adapta la contexte conversaționale în evoluție și poate chiar produce dialoguri creative sau complexe.
+Înainte de a ne aprofunda în construirea aplicațiilor de chat, să comparăm „chatboturile” cu „aplicațiile de chat bazate pe AI”, care au roluri și funcționalități distincte. Scopul principal al unui chatbot este de a automatiza sarcini conversaționale specifice, cum ar fi răspunsul la întrebări frecvente sau urmărirea unui pachet. Este de obicei guvernat de logica bazată pe reguli sau algoritmi AI complexi. În contrast, o aplicație de chat bazată pe AI este un mediu mult mai extins, conceput pentru a facilita diverse forme de comunicare digitală, cum ar fi chatul text, vocal și video între utilizatori umani. Caracteristica sa definitorie este integrarea unui model AI generativ care simulează conversații nuanțate, asemănătoare celor umane, generând răspunsuri bazate pe o varietate de intrări și indicii contextuale. O aplicație de chat bazată pe AI generativ poate angaja discuții deschise, se poate adapta la contexte conversaționale în evoluție și poate produce chiar dialoguri creative sau complexe.
 
-Tabelul de mai jos evidențiază diferențele și asemănările cheie pentru a înțelege rolurile lor unice în comunicarea digitală.
+Tabelul de mai jos evidențiază diferențele și asemănările cheie pentru a ne ajuta să înțelegem rolurile lor unice în comunicarea digitală.
 
-| Chatbot                               | Aplicație de chat alimentată de AI generativ |
-| ------------------------------------- | -------------------------------------------- |
-| Orientat pe sarcini și bazat pe reguli | Conștient de context                         |
-| Adesea integrat în sisteme mai mari    | Poate găzdui unul sau mai mulți chatbots     |
-| Limitat la funcții programate          | Încorporează modele AI generative             |
-| Interacțiuni specializate și structurate | Capabil de discuții deschise pe diverse domenii |
+| Chatbot                               | Aplicație de chat bazată pe AI generativ |
+| ------------------------------------- | ---------------------------------------- |
+| Focalizat pe sarcini și bazat pe reguli | Conștient de context                     |
+| Adesea integrat în sisteme mai mari   | Poate găzdui unul sau mai mulți chatboți |
+| Limitat la funcții programate         | Încorporează modele AI generative        |
+| Interacțiuni specializate și structurate | Capabil de discuții deschise            |
 
-### Folosirea funcționalităților predefinite cu SDK-uri și API-uri
+### Utilizarea funcționalităților predefinite cu SDK-uri și API-uri
 
-Când construiești o aplicație de chat, un prim pas excelent este să evaluezi ce există deja. Utilizarea SDK-urilor și API-urilor pentru a construi aplicații de chat este o strategie avantajoasă din mai multe motive. Prin integrarea SDK-urilor și API-urilor bine documentate, poziționezi strategic aplicația pentru succes pe termen lung, abordând problemele de scalabilitate și mentenanță.
+Când construiți o aplicație de chat, un prim pas excelent este să evaluați ce există deja. Utilizarea SDK-urilor și API-urilor pentru construirea aplicațiilor de chat este o strategie avantajoasă din mai multe motive. Prin integrarea SDK-urilor și API-urilor bine documentate, poziționați strategic aplicația dvs. pentru succes pe termen lung, abordând preocupările legate de scalabilitate și întreținere.
 
-- **Accelerează procesul de dezvoltare și reduce efortul**: Folosind funcționalități predefinite în loc să le construiești de la zero, te poți concentra pe alte aspecte ale aplicației care ți se par mai importante, cum ar fi logica de business.
-- **Performanță mai bună**: Construind funcționalități de la zero, te vei întreba în cele din urmă „Cum se scalează? Este această aplicație capabilă să gestioneze un aflux brusc de utilizatori?” SDK-urile și API-urile bine întreținute au adesea soluții integrate pentru aceste probleme.
-- **Mentenanță mai ușoară**: Actualizările și îmbunătățirile sunt mai ușor de gestionat, deoarece majoritatea API-urilor și SDK-urilor necesită doar actualizarea unei biblioteci când apare o versiune nouă.
-- **Acces la tehnologie de ultimă oră**: Folosirea modelelor care au fost ajustate fin și antrenate pe seturi extinse de date oferă aplicației tale capabilități avansate de procesare a limbajului natural.
+- **Accelerează procesul de dezvoltare și reduce costurile**: Bazându-vă pe funcționalități predefinite în loc să le construiți singur, vă permite să vă concentrați pe alte aspecte ale aplicației, cum ar fi logica de afaceri.
+- **Performanță mai bună**: Când construiți funcționalități de la zero, vă veți întreba în cele din urmă „Cum se scalează? Este această aplicație capabilă să gestioneze un aflux brusc de utilizatori?” SDK-urile și API-urile bine întreținute au adesea soluții integrate pentru aceste preocupări.
+- **Întreținere mai ușoară**: Actualizările și îmbunătățirile sunt mai ușor de gestionat, deoarece majoritatea API-urilor și SDK-urilor necesită doar o actualizare a unei biblioteci atunci când este lansată o versiune mai nouă.
+- **Acces la tehnologie de vârf**: Utilizarea modelelor care au fost ajustate și antrenate pe seturi de date extinse oferă aplicației dvs. capacități naturale de procesare a limbajului.
 
-Accesarea funcționalității unui SDK sau API implică de obicei obținerea permisiunii de a folosi serviciile oferite, adesea prin utilizarea unei chei unice sau a unui token de autentificare. Vom folosi OpenAI Python Library pentru a explora cum arată acest proces. Poți încerca și tu în [notebook-ul pentru OpenAI](python/oai-assignment.ipynb) sau în [notebook-ul pentru Azure OpenAI Services](python/aoai-assignment.ipynb) pentru această lecție.
+Accesarea funcționalității unui SDK sau API implică de obicei obținerea permisiunii de a utiliza serviciile furnizate, ceea ce se face adesea prin utilizarea unei chei unice sau a unui token de autentificare. Vom folosi biblioteca Python OpenAI pentru a explora cum arată acest lucru. Puteți încerca și dvs. în următorul [notebook pentru OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) sau [notebook pentru Azure OpenAI Services](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) pentru această lecție.
 
 ```python
 import os
@@ -84,112 +84,112 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Exemplul de mai sus folosește modelul GPT-3.5 Turbo pentru a completa promptul, dar observă că cheia API este setată înainte de aceasta. Vei primi o eroare dacă nu setezi cheia.
+Exemplul de mai sus folosește modelul GPT-3.5 Turbo pentru a completa promptul, dar observați că cheia API este setată înainte de a face acest lucru. Veți primi o eroare dacă nu setați cheia.
 
 ## Experiența utilizatorului (UX)
 
-Principiile generale de UX se aplică și aplicațiilor de chat, dar iată câteva considerații suplimentare care devin deosebit de importante din cauza componentelor de machine learning implicate.
+Principiile generale ale UX se aplică aplicațiilor de chat, dar iată câteva considerații suplimentare care devin deosebit de importante datorită componentelor de învățare automată implicate.
 
-- **Mecanism pentru gestionarea ambiguității**: Modelele AI generative pot genera uneori răspunsuri ambigue. O funcție care permite utilizatorilor să ceară clarificări poate fi utilă în astfel de situații.
-- **Păstrarea contextului**: Modelele avansate AI generative au capacitatea de a reține contextul în cadrul unei conversații, ceea ce poate fi un avantaj necesar pentru experiența utilizatorului. Oferirea utilizatorilor posibilitatea de a controla și gestiona contextul îmbunătățește experiența, dar introduce riscul păstrării informațiilor sensibile. Considerații privind durata stocării acestor informații, cum ar fi introducerea unei politici de retenție, pot echilibra nevoia de context cu protecția vieții private.
-- **Personalizare**: Cu abilitatea de a învăța și adapta, modelele AI oferă o experiență individualizată utilizatorului. Personalizarea experienței prin funcții precum profilurile utilizatorilor nu doar că face utilizatorul să se simtă înțeles, dar îl ajută și să găsească răspunsuri specifice, creând o interacțiune mai eficientă și satisfăcătoare.
+- **Mecanism pentru abordarea ambiguității**: Modelele AI generative generează ocazional răspunsuri ambigue. O funcție care permite utilizatorilor să ceară clarificări poate fi utilă în cazul în care se confruntă cu această problemă.
+- **Păstrarea contextului**: Modelele AI generative avansate au capacitatea de a reține contextul într-o conversație, ceea ce poate fi un atu necesar pentru experiența utilizatorului. Oferirea utilizatorilor posibilitatea de a controla și gestiona contextul îmbunătățește experiența utilizatorului, dar introduce riscul de a păstra informații sensibile ale utilizatorului. Considerațiile privind durata de stocare a acestor informații, cum ar fi introducerea unei politici de păstrare, pot echilibra nevoia de context cu confidențialitatea.
+- **Personalizare**: Cu capacitatea de a învăța și de a se adapta, modelele AI oferă o experiență individualizată pentru utilizator. Personalizarea experienței utilizatorului prin funcții precum profilurile utilizatorilor nu doar că face utilizatorul să se simtă înțeles, dar îl ajută și în căutarea de răspunsuri specifice, creând o interacțiune mai eficientă și satisfăcătoare.
 
-Un exemplu de personalizare este setarea „Custom instructions” din ChatGPT de la OpenAI. Aceasta îți permite să oferi informații despre tine care pot fi un context important pentru prompturile tale. Iată un exemplu de instrucțiune personalizată.
+Un astfel de exemplu de personalizare este setarea „Instrucțiuni personalizate” în ChatGPT de la OpenAI. Aceasta vă permite să furnizați informații despre dvs. care pot fi un context important pentru prompturile dvs. Iată un exemplu de instrucțiune personalizată.
 
-![Setări Custom Instructions în ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ro.png)
+![Setări pentru Instrucțiuni Personalizate în ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ro.png)
 
-Acest „profil” îl determină pe ChatGPT să creeze un plan de lecție despre liste înlănțuite. Observă că ChatGPT ia în considerare faptul că utilizatorul dorește un plan de lecție mai detaliat, bazat pe experiența sa.
+Acest „profil” determină ChatGPT să creeze un plan de lecție despre listele înlănțuite. Observați că ChatGPT ia în considerare faptul că utilizatorul ar putea dori un plan de lecție mai detaliat, bazat pe experiența sa.
 
-![Un prompt în ChatGPT pentru un plan de lecție despre liste înlănțuite](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ro.png)
+![Un prompt în ChatGPT pentru un plan de lecție despre listele înlănțuite](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ro.png)
 
-### Framework-ul Microsoft pentru mesaje de sistem în modelele de limbaj mari
+### Cadrul de mesaje de sistem al Microsoft pentru modelele de limbaj extins
 
-[Microsoft a oferit îndrumări](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) pentru scrierea mesajelor de sistem eficiente când se generează răspunsuri din LLM-uri, împărțite în 4 domenii:
+[Microsoft a oferit îndrumări](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) pentru redactarea mesajelor de sistem eficiente atunci când se generează răspunsuri din modele de limbaj extins, împărțite în 4 domenii:
 
-1. Definirea cui se adresează modelul, precum și a capacităților și limitărilor sale.
+1. Definirea pentru cine este modelul, precum și a capacităților și limitărilor acestuia.
 2. Definirea formatului de ieșire al modelului.
 3. Furnizarea de exemple specifice care demonstrează comportamentul dorit al modelului.
-4. Oferirea de reguli suplimentare de comportament.
+4. Furnizarea de măsuri suplimentare de protecție comportamentală.
 
 ### Accesibilitate
 
-Indiferent dacă un utilizator are deficiențe vizuale, auditive, motorii sau cognitive, o aplicație de chat bine proiectată ar trebui să fie utilizabilă de toți. Lista de mai jos detaliază funcții specifice menite să îmbunătățească accesibilitatea pentru diverse tipuri de deficiențe.
+Indiferent dacă un utilizator are deficiențe vizuale, auditive, motorii sau cognitive, o aplicație de chat bine concepută ar trebui să fie utilizabilă de toți. Lista de mai jos detaliază caracteristici specifice menite să îmbunătățească accesibilitatea pentru diverse deficiențe ale utilizatorilor.
 
-- **Funcții pentru deficiențe vizuale**: teme cu contrast ridicat și text redimensionabil, compatibilitate cu cititoarele de ecran.
-- **Funcții pentru deficiențe auditive**: funcții text-în-vorbire și vorbire-în-text, indicatoare vizuale pentru notificările audio.
-- **Funcții pentru deficiențe motorii**: suport pentru navigare cu tastatura, comenzi vocale.
-- **Funcții pentru deficiențe cognitive**: opțiuni de limbaj simplificat.
+- **Caracteristici pentru deficiențe vizuale**: Teme cu contrast ridicat și text redimensionabil, compatibilitate cu cititoarele de ecran.
+- **Caracteristici pentru deficiențe auditive**: Funcții de text-to-speech și speech-to-text, indicii vizuale pentru notificările audio.
+- **Caracteristici pentru deficiențe motorii**: Suport pentru navigare cu tastatura, comenzi vocale.
+- **Caracteristici pentru deficiențe cognitive**: Opțiuni de limbaj simplificat.
 
-## Personalizare și ajustare fină pentru modelele de limbaj specifice domeniului
+## Personalizare și ajustare pentru modele de limbaj specifice domeniului
 
-Imaginează-ți o aplicație de chat care înțelege jargonul companiei tale și anticipează întrebările specifice pe care utilizatorii le au frecvent. Există câteva abordări demne de menționat:
+Imaginați-vă o aplicație de chat care înțelege jargonul companiei dvs. și anticipează întrebările specifice pe care utilizatorii săi le au frecvent. Există câteva abordări care merită menționate:
 
-- **Folosirea modelelor DSL**. DSL înseamnă domain specific language (limbaj specific domeniului). Poți folosi un model DSL antrenat pe un domeniu specific pentru a înțelege conceptele și scenariile acestuia.
-- **Aplicarea ajustării fine**. Ajustarea fină este procesul de antrenare suplimentară a modelului tău cu date specifice.
+- **Utilizarea modelelor DSL**. DSL înseamnă limbaj specific domeniului. Puteți utiliza un așa-numit model DSL antrenat pe un domeniu specific pentru a înțelege conceptele și scenariile acestuia.
+- **Aplicarea ajustării**. Ajustarea este procesul de antrenare suplimentară a modelului cu date specifice.
 
-## Personalizare: Folosirea unui DSL
+## Personalizare: Utilizarea unui DSL
 
-Folosirea modelelor de limbaj specifice domeniului (DSL Models) poate crește implicarea utilizatorilor prin oferirea unor interacțiuni specializate și relevante contextual. Este un model antrenat sau ajustat fin pentru a înțelege și genera text legat de un anumit domeniu, industrie sau subiect. Opțiunile pentru utilizarea unui model DSL pot varia de la antrenarea unuia de la zero, până la folosirea celor preexistente prin SDK-uri și API-uri. O altă opțiune este ajustarea fină, care implică luarea unui model pre-antrenat existent și adaptarea lui pentru un domeniu specific.
+Utilizarea modelelor de limbaj specific domeniului (DSL Models) poate îmbunătăți implicarea utilizatorilor prin furnizarea de interacțiuni specializate și relevante contextual. Este un model care este antrenat sau ajustat pentru a înțelege și genera text legat de un anumit domeniu, industrie sau subiect. Opțiunile pentru utilizarea unui model DSL pot varia de la antrenarea unuia de la zero, la utilizarea celor preexistente prin SDK-uri și API-uri. O altă opțiune este ajustarea, care implică adaptarea unui model pre-antrenat pentru un domeniu specific.
 
-## Personalizare: Aplicarea ajustării fine
+## Personalizare: Aplicarea ajustării
 
-Ajustarea fină este adesea luată în considerare când un model pre-antrenat nu este suficient pentru un domeniu specializat sau o sarcină specifică.
+Ajustarea este adesea considerată atunci când un model pre-antrenat nu este suficient într-un domeniu specializat sau o sarcină specifică.
 
-De exemplu, întrebările medicale sunt complexe și necesită mult context. Când un profesionist medical pune un diagnostic, se bazează pe o varietate de factori, cum ar fi stilul de viață sau condițiile preexistente, și poate chiar consultă jurnale medicale recente pentru a valida diagnosticul. În astfel de scenarii nuanțate, o aplicație AI generală de chat nu poate fi o sursă de încredere.
+De exemplu, întrebările medicale sunt complexe și necesită mult context. Când un profesionist medical diagnostichează un pacient, se bazează pe o varietate de factori, cum ar fi stilul de viață sau condițiile preexistente, și poate chiar să se bazeze pe jurnale medicale recente pentru a valida diagnosticul. În astfel de scenarii nuanțate, o aplicație de chat AI generală nu poate fi o sursă de încredere.
 
 ### Scenariu: o aplicație medicală
 
-Gândește-te la o aplicație de chat concepută să asiste profesioniștii medicali oferind referințe rapide la ghiduri de tratament, interacțiuni medicamentoase sau descoperiri recente din cercetare.
+Luați în considerare o aplicație de chat concepută pentru a ajuta practicienii medicali prin furnizarea de referințe rapide la ghiduri de tratament, interacțiuni medicamentoase sau descoperiri recente de cercetare.
 
-Un model generalist ar putea fi adecvat pentru a răspunde la întrebări medicale de bază sau pentru a oferi sfaturi generale, dar s-ar putea confrunta cu dificultăți în următoarele cazuri:
+Un model general ar putea fi adecvat pentru a răspunde la întrebări medicale de bază sau pentru a oferi sfaturi generale, dar ar putea avea dificultăți cu următoarele:
 
 - **Cazuri foarte specifice sau complexe**. De exemplu, un neurolog ar putea întreba aplicația: „Care sunt cele mai bune practici actuale pentru gestionarea epilepsiei rezistente la medicamente la pacienții pediatrici?”
-- **Lipsa celor mai recente progrese**. Un model generalist ar putea avea dificultăți să ofere un răspuns actualizat care să includă cele mai recente progrese în neurologie și farmacologie.
+- **Lipsa avansurilor recente**. Un model general ar putea avea dificultăți în a oferi un răspuns actualizat care să încorporeze cele mai recente avansuri în neurologie și farmacologie.
 
-În astfel de situații, ajustarea fină a modelului cu un set de date medical specializat poate îmbunătăți semnificativ capacitatea acestuia de a gestiona aceste întrebări medicale complexe cu mai multă acuratețe și fiabilitate. Aceasta necesită acces la un set de date mare și relevant care să reprezinte provocările și întrebările specifice domeniului.
+În astfel de cazuri, ajustarea modelului cu un set de date medicale specializat poate îmbunătăți semnificativ capacitatea acestuia de a gestiona aceste întrebări medicale complexe mai precis și mai fiabil. Acest lucru necesită acces la un set de date mare și relevant care reprezintă provocările și întrebările specifice domeniului care trebuie abordate.
 
-## Considerații pentru o experiență de chat AI de înaltă calitate
+## Considerații pentru o experiență de chat bazată pe AI de înaltă calitate
 
-Această secțiune descrie criteriile pentru aplicațiile de chat „de înaltă calitate”, care includ capturarea metricilor acționabile și respectarea unui cadru care folosește responsabil tehnologia AI.
+Această secțiune conturează criteriile pentru aplicații de chat „de înaltă calitate”, care includ captarea metricilor acționabile și respectarea unui cadru care utilizează tehnologia AI în mod responsabil.
 
 ### Metrici cheie
 
-Pentru a menține performanța de înaltă calitate a unei aplicații, este esențial să monitorizăm metrici și considerații cheie. Aceste măsurători nu doar asigură funcționalitatea aplicației, ci și evaluează calitatea modelului AI și experiența utilizatorului. Mai jos este o listă care acoperă metrici de bază, AI și experiența utilizatorului de luat în considerare.
+Pentru a menține performanța de înaltă calitate a unei aplicații, este esențial să urmăriți metrici cheie și considerații. Aceste măsurători nu doar că asigură funcționalitatea aplicației, dar evaluează și calitatea modelului AI și experiența utilizatorului. Mai jos este o listă care acoperă metrici de bază, AI și experiența utilizatorului de luat în considerare.
 
-| Metric                        | Definiție                                                                                                             | Considerații pentru dezvoltatorul de chat                                  |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Uptime**                    | Măsoară timpul în care aplicația este operațională și accesibilă utilizatorilor.                                        | Cum vei minimiza perioadele de nefuncționare?                             |
-| **Timp de răspuns**           | Timpul necesar aplicației pentru a răspunde la o interogare a utilizatorului.                                           | Cum poți optimiza procesarea interogărilor pentru a îmbunătăți timpul de răspuns? |
-| **Precizie**                  | Raportul dintre predicțiile adevărate pozitive și totalul predicțiilor pozitive.                                        | Cum vei valida precizia modelului tău?                                    |
-| **Recall (Sensibilitate)**    | Raportul dintre predicțiile adevărate pozitive și numărul real de pozitive.                                             | Cum vei măsura și îmbunătăți recall-ul?                                  |
-| **Scor F1**                   | Media armonică a preciziei și recall-ului, care echilibrează compromisurile dintre cele două.                            | Care este scorul F1 țintă? Cum vei echilibra precizia și recall-ul?       |
-| **Perplexitate**              | Măsoară cât de bine se aliniază distribuția probabilității prezisă de model cu distribuția reală a datelor.             | Cum vei minimiza perplexitatea?                                           |
-| **Metrici de satisfacție a utilizatorului** | Măsoară percepția utilizatorului asupra aplicației. Adesea capturate prin sondaje.                                  | Cât de des vei colecta feedback-ul utilizatorilor? Cum te vei adapta în funcție de acesta? |
-| **Rata de
-| **Detectarea Anomaliilor**   | Instrumente și tehnici pentru identificarea tiparelor neobișnuite care nu respectă comportamentul așteptat.               | Cum vei răspunde la anomalii?                                              |
+| Metrică                        | Definiție                                                                                                             | Considerații pentru dezvoltatorul de chat                                 |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Timp de funcționare**        | Măsoară timpul în care aplicația este operațională și accesibilă utilizatorilor.                                       | Cum veți minimiza perioadele de nefuncționare?                            |
+| **Timp de răspuns**            | Timpul necesar aplicației pentru a răspunde la o interogare a utilizatorului.                                          | Cum puteți optimiza procesarea interogărilor pentru a îmbunătăți timpul de răspuns? |
+| **Precizie**                   | Raportul dintre predicțiile pozitive adevărate și numărul total de predicții pozitive.                                 | Cum veți valida precizia modelului dvs.?                                  |
+| **Recall (Sensibilitate)**     | Raportul dintre predicțiile pozitive adevărate și numărul real de pozitive.                                            | Cum veți măsura și îmbunătăți recall-ul?                                  |
+| **Scor F1**                    | Media armonică a preciziei și recall-ului, care echilibrează compromisurile dintre cele două.                          | Care este scorul F1 țintă? Cum veți echilibra precizia și recall-ul?      |
+| **Perplexitate**               | Măsoară cât
+| **Detectarea Anomaliilor**    | Instrumente și tehnici pentru identificarea tiparelor neobișnuite care nu se conformează comportamentului așteptat. | Cum vei răspunde la anomalii?                                             |
 
-### Implementarea practicilor de AI responsabil în aplicațiile de chat
+### Implementarea Practicilor Responsabile de AI în Aplicațiile de Chat
 
-Abordarea Microsoft privind AI responsabil a identificat șase principii care ar trebui să ghideze dezvoltarea și utilizarea AI. Mai jos sunt principiile, definiția lor și aspectele pe care un dezvoltator de chat ar trebui să le ia în considerare și de ce este important să le trateze cu seriozitate.
+Abordarea Microsoft privind AI Responsabilă a identificat șase principii care ar trebui să ghideze dezvoltarea și utilizarea AI. Mai jos sunt principiile, definiția lor și lucruri pe care un dezvoltator de chat ar trebui să le ia în considerare și de ce ar trebui să le trateze cu seriozitate.
 
-| Principii              | Definiția Microsoft                                  | Considerații pentru dezvoltatorul de chat                              | De ce este important                                                                |
-| ---------------------- | --------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Fairness               | Sistemele AI ar trebui să trateze toți oamenii corect. | Asigură-te că aplicația de chat nu discriminează pe baza datelor utilizatorului. | Pentru a construi încredere și incluziune în rândul utilizatorilor; evită consecințe legale. |
-| Reliability and Safety | Sistemele AI ar trebui să funcționeze fiabil și în siguranță. | Implementează teste și mecanisme de siguranță pentru a minimiza erorile și riscurile. | Asigură satisfacția utilizatorilor și previne potențiale daune.                     |
-| Privacy and Security   | Sistemele AI ar trebui să fie sigure și să respecte confidențialitatea. | Aplică criptare puternică și măsuri de protecție a datelor.           | Pentru a proteja datele sensibile ale utilizatorilor și a respecta legile privind confidențialitatea. |
-| Inclusiveness          | Sistemele AI ar trebui să ofere putere tuturor și să implice oamenii. | Proiectează UI/UX accesibil și ușor de utilizat pentru audiențe diverse. | Asigură că un număr mai mare de persoane poate folosi eficient aplicația.          |
-| Transparency           | Sistemele AI ar trebui să fie ușor de înțeles.      | Oferă documentație clară și explicații pentru răspunsurile AI.        | Utilizatorii au mai multă încredere într-un sistem dacă înțeleg cum sunt luate deciziile. |
-| Accountability         | Oamenii ar trebui să fie responsabili pentru sistemele AI. | Stabilește un proces clar pentru auditarea și îmbunătățirea deciziilor AI. | Permite îmbunătățiri continue și măsuri corective în caz de erori.                 |
+| Principii              | Definiția Microsoft                                   | Considerații pentru Dezvoltatorul de Chat                               | De ce Este Important                                                                     |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Echitate               | Sistemele AI ar trebui să trateze toți oamenii în mod echitabil. | Asigură-te că aplicația de chat nu discriminează pe baza datelor utilizatorului. | Pentru a construi încredere și incluziune între utilizatori; evită consecințele legale.   |
+| Fiabilitate și Siguranță | Sistemele AI ar trebui să funcționeze fiabil și în siguranță. | Implementarea testelor și a măsurilor de siguranță pentru a minimiza erorile și riscurile. | Asigură satisfacția utilizatorilor și previne potențialele daune.                        |
+| Confidențialitate și Securitate | Sistemele AI ar trebui să fie sigure și să respecte confidențialitatea. | Implementarea unor măsuri puternice de criptare și protecție a datelor. | Pentru a proteja datele sensibile ale utilizatorilor și a respecta legile privind confidențialitatea. |
+| Incluziune             | Sistemele AI ar trebui să împuternicească pe toată lumea și să implice oamenii. | Proiectarea unei interfețe UI/UX accesibile și ușor de utilizat pentru diverse audiențe. | Asigură că o gamă mai largă de persoane poate utiliza aplicația în mod eficient.         |
+| Transparență           | Sistemele AI ar trebui să fie ușor de înțeles.        | Oferirea de documentație clară și explicații pentru răspunsurile AI.   | Utilizatorii sunt mai predispuși să aibă încredere într-un sistem dacă pot înțelege cum sunt luate deciziile. |
+| Responsabilitate       | Oamenii ar trebui să fie responsabili pentru sistemele AI. | Stabilirea unui proces clar pentru auditarea și îmbunătățirea deciziilor AI. | Permite îmbunătățirea continuă și măsuri corective în cazul greșelilor.                  |
 
 ## Temă
 
-Vezi [assignment](../../../07-building-chat-applications/python) care te va ghida printr-o serie de exerciții, de la rularea primelor tale prompturi de chat, până la clasificarea și rezumarea textului și altele. Observă că temele sunt disponibile în diferite limbaje de programare!
+Vezi [tema](../../../07-building-chat-applications/python). Te va ghida printr-o serie de exerciții, de la rularea primelor solicitări de chat, la clasificarea și rezumarea textului și multe altele. Observă că temele sunt disponibile în diferite limbaje de programare!
 
-## Bravo! Continuă călătoria
+## Felicitări! Continuă Călătoria
 
-După ce termini această lecție, consultă colecția noastră [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a-ți continua dezvoltarea cunoștințelor despre Generative AI!
+După ce ai finalizat această lecție, consultă [colecția de învățare AI Generativă](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să îți dezvolți cunoștințele despre AI Generativă!
 
-Mergi la Lecția 8 pentru a vedea cum poți începe să [construiești aplicații de căutare](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Accesează Lecția 8 pentru a vedea cum poți începe [să construiești aplicații de căutare](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
