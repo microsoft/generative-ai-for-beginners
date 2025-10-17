@@ -1,66 +1,66 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-07-09T14:41:14+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T21:24:40+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "hu"
 }
 -->
-# Integráció a function calling-gel
+# Funkcióhívás integrálása
 
-[![Integráció a function calling-gel](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.hu.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Funkcióhívás integrálása](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.hu.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Eddig már sok mindent megtanultál az előző leckék során. Azonban tovább javíthatunk. Néhány dolog, amivel foglalkozhatunk, az a válaszformátum egységesítése, hogy könnyebben lehessen dolgozni a válasszal később. Emellett szeretnénk más forrásokból származó adatokat is hozzáadni, hogy még gazdagabbá tegyük az alkalmazásunkat.
+Az előző leckék során már sok mindent megtanultál. Azonban még tovább fejleszthetjük a tudásunkat. Néhány dolog, amit érdemes megvizsgálni, hogy hogyan érhetünk el egységesebb válaszformátumot, amely megkönnyíti a válaszok további feldolgozását. Emellett érdemes lehet más forrásokból származó adatokat is hozzáadni, hogy gazdagítsuk az alkalmazásunkat.
 
-A fent említett problémák azok, amelyeket ez a fejezet kíván megoldani.
+Ez a fejezet a fent említett problémák megoldására összpontosít.
 
 ## Bevezetés
 
-Ebben a leckében a következőkről lesz szó:
+Ebben a leckében szó lesz:
 
-- Mi az a function calling és milyen esetekben használjuk.
-- Hogyan hozzunk létre function call-t az Azure OpenAI segítségével.
-- Hogyan integráljuk a function call-t egy alkalmazásba.
+- A funkcióhívás fogalmáról és felhasználási területeiről.
+- Funkcióhívás létrehozásáról az Azure OpenAI segítségével.
+- A funkcióhívás integrálásáról egy alkalmazásba.
 
 ## Tanulási célok
 
 A lecke végére képes leszel:
 
-- Elmagyarázni a function calling használatának célját.
-- Beállítani a Function Call-t az Azure OpenAI szolgáltatásban.
-- Hatékony function call-okat tervezni az alkalmazásod igényeihez.
+- Megmagyarázni, miért érdemes funkcióhívást használni.
+- Beállítani a funkcióhívást az Azure OpenAI szolgáltatásban.
+- Hatékony funkcióhívásokat tervezni az alkalmazásod céljainak megfelelően.
 
-## Forgatókönyv: Chatbotunk fejlesztése funkciókkal
+## Szenárió: Chatbotunk fejlesztése funkciókkal
 
-Ebben a leckében egy olyan funkciót szeretnénk létrehozni az oktatási startupunk számára, amely lehetővé teszi a felhasználók számára, hogy chatbot segítségével technikai kurzusokat találjanak. Ajánlani fogunk olyan kurzusokat, amelyek megfelelnek a felhasználó képzettségi szintjének, jelenlegi szerepének és érdeklődési technológiájának.
+Ebben a leckében egy olyan funkciót szeretnénk létrehozni oktatási startupunk számára, amely lehetővé teszi a felhasználók számára, hogy egy chatbot segítségével technikai kurzusokat találjanak. Olyan kurzusokat fogunk ajánlani, amelyek megfelelnek a felhasználók képességeinek, jelenlegi szerepkörüknek és érdeklődési technológiájuknak.
 
-A forgatókönyv megvalósításához a következőket használjuk:
+A szenárió megvalósításához az alábbiakat fogjuk kombinálni:
 
-- `Azure OpenAI` a felhasználói chat élmény létrehozásához.
-- `Microsoft Learn Catalog API` a kurzusok kereséséhez a felhasználó kérésének megfelelően.
-- `Function Calling` a felhasználói lekérdezés feldolgozásához és az API kérés elküldéséhez.
+- `Azure OpenAI`, hogy chatélményt hozzunk létre a felhasználók számára.
+- `Microsoft Learn Catalog API`, hogy segítsünk a felhasználóknak megtalálni a számukra megfelelő kurzusokat.
+- `Funkcióhívás`, amely a felhasználó kérését egy funkcióhoz továbbítja, hogy API-kérést generáljon.
 
-Kezdésként nézzük meg, miért is szeretnénk egyáltalán function calling-et használni:
+Kezdjük azzal, hogy megvizsgáljuk, miért érdemes egyáltalán funkcióhívást használni:
 
-## Miért Function Calling?
+## Miért érdemes funkcióhívást használni?
 
-A function calling előtt az LLM válaszai rendezetlenek és következetlenek voltak. A fejlesztőknek bonyolult érvényesítő kódot kellett írniuk, hogy kezelni tudják a válaszok különböző változatait. A felhasználók nem kaphattak olyan válaszokat, mint például: „Milyen az aktuális időjárás Stockholmban?”. Ez azért volt, mert a modellek csak a tanítási adatok idejéig voltak korlátozva.
+A funkcióhívás előtt az LLM-ek válaszai strukturálatlanok és következetlenek voltak. A fejlesztőknek bonyolult validációs kódokat kellett írniuk, hogy kezelni tudják a válaszok különböző variációit. A felhasználók nem kaphattak olyan válaszokat, mint például "Mi az aktuális időjárás Stockholmban?". Ennek oka, hogy a modellek korlátozottak voltak az adatok tanítási idejére.
 
-A Function Calling az Azure OpenAI szolgáltatás egy olyan funkciója, amely a következő korlátokat segít leküzdeni:
+A funkcióhívás az Azure OpenAI szolgáltatás egyik funkciója, amely a következő korlátokat hivatott leküzdeni:
 
-- **Következetes válaszformátum**. Ha jobban tudjuk szabályozni a válasz formátumát, könnyebben integrálhatjuk azt más rendszerekbe.
-- **Külső adatok**. Lehetőség arra, hogy az alkalmazás más forrásaiból származó adatokat is használjunk a chat kontextusában.
+- **Következetes válaszformátum**. Ha jobban tudjuk kontrollálni a válaszformátumot, könnyebben integrálhatjuk a választ más rendszerekbe.
+- **Külső adatok**. Lehetőség arra, hogy egy alkalmazás más forrásból származó adatait használjuk egy chatkörnyezetben.
 
 ## A probléma szemléltetése egy példán keresztül
 
-> Ajánljuk, hogy a [mellékelt notebookot](python/aoai-assignment.ipynb) használd, ha szeretnéd lefuttatni az alábbi forgatókönyvet. De akár csak olvashatod is, mert egy olyan problémát mutatunk be, amelynél a funkciók segíthetnek a megoldásban.
+> Javasoljuk, hogy használd a [mellékelt notebookot](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), ha futtatni szeretnéd az alábbi példát. Azonban olvashatod is, mivel a célunk az, hogy bemutassuk, hogyan segíthetnek a funkciók a probléma megoldásában.
 
-Nézzük meg a példát, amely a válaszformátum problémáját illusztrálja:
+Nézzük meg egy példát, amely bemutatja a válaszformátum problémáját:
 
-Tegyük fel, hogy létre akarunk hozni egy adatbázist diákadatokkal, hogy a megfelelő kurzust tudjuk ajánlani nekik. Lent két diák leírását látjuk, amelyek nagyon hasonló adatokat tartalmaznak.
+Tegyük fel, hogy szeretnénk létrehozni egy adatbázist a diákok adataival, hogy megfelelő kurzusokat ajánlhassunk nekik. Az alábbiakban két diák leírását látjuk, amelyek nagyon hasonló adatokat tartalmaznak.
 
-1. Hozzunk létre kapcsolatot az Azure OpenAI erőforrásunkhoz:
+1. Kapcsolat létrehozása az Azure OpenAI erőforrásunkkal:
 
    ```python
    import os
@@ -77,9 +77,9 @@ Tegyük fel, hogy létre akarunk hozni egy adatbázist diákadatokkal, hogy a me
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Lent egy Python kódot látsz az Azure OpenAI kapcsolat beállításához, ahol megadjuk az `api_type`, `api_base`, `api_version` és `api_key` értékeket.
+   Az alábbi Python kód konfigurálja az Azure OpenAI-hoz való kapcsolatot, ahol beállítjuk az `api_type`, `api_base`, `api_version` és `api_key` értékeket.
 
-1. Két diák leírásának létrehozása a `student_1_description` és `student_2_description` változókkal.
+1. Két diák leírásának létrehozása a `student_1_description` és `student_2_description` változók használatával.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ Tegyük fel, hogy létre akarunk hozni egy adatbázist diákadatokkal, hogy a me
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Ezeket a diák leírásokat szeretnénk elküldeni az LLM-nek, hogy feldolgozza az adatokat. Ezek az adatok később felhasználhatók lesznek az alkalmazásban, API-nak küldhetők vagy adatbázisban tárolhatók.
+   Az előző diákleírásokat elküldjük egy LLM-nek, hogy elemezze az adatokat. Ezeket az adatokat később felhasználhatjuk az alkalmazásunkban, API-n keresztül továbbíthatjuk vagy adatbázisban tárolhatjuk.
 
-1. Készítsünk két azonos promptot, amelyekben megmondjuk az LLM-nek, milyen információkat szeretnénk kinyerni:
+1. Hozzunk létre két azonos promptot, amelyekben utasítjuk az LLM-et, hogy milyen információt szeretnénk kinyerni:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Tegyük fel, hogy létre akarunk hozni egy adatbázist diákadatokkal, hogy a me
    '''
    ```
 
-   A fenti promptok arra utasítják az LLM-et, hogy vonja ki az információkat és JSON formátumban adja vissza a választ.
+   Az előző promptok utasítják az LLM-et, hogy információt nyerjen ki, és JSON formátumban adja vissza a választ.
 
-1. Miután beállítottuk a promptokat és a kapcsolatot az Azure OpenAI-hoz, elküldjük a promptokat az LLM-nek az `openai.ChatCompletion` segítségével. A promptot a `messages` változóban tároljuk, és a szerepet `user`-re állítjuk. Ez azt szimulálja, mintha egy felhasználó írna egy üzenetet a chatbotnak.
+1. Miután beállítottuk a promptokat és az Azure OpenAI-hoz való kapcsolatot, elküldjük a promptokat az LLM-nek az `openai.ChatCompletion` használatával. A promptot a `messages` változóban tároljuk, és a szerepet `user`-ként adjuk meg. Ez azt szimulálja, mintha egy felhasználó írna üzenetet egy chatbotnak.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ Tegyük fel, hogy létre akarunk hozni egy adatbázist diákadatokkal, hogy a me
    openai_response2.choices[0].message.content
    ```
 
-Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a választ úgy, hogy lekérjük `openai_response1['choices'][0]['message']['content']`.
+Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a kapott választ, például így: `openai_response1['choices'][0]['message']['content']`.
 
-1. Végül a választ JSON formátumra alakíthatjuk a `json.loads` hívásával:
+1. Végül a választ JSON formátumba konvertálhatjuk a `json.loads` hívásával:
 
    ```python
    # Loading the response as a JSON object
@@ -149,7 +149,7 @@ Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a válas
    json_response1
    ```
 
-   Válasz 1:
+   1. válasz:
 
    ```json
    {
@@ -161,7 +161,7 @@ Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a válas
    }
    ```
 
-   Válasz 2:
+   2. válasz:
 
    ```json
    {
@@ -173,55 +173,55 @@ Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a válas
    }
    ```
 
-   Bár a promptok ugyanazok és a leírások hasonlóak, a `Grades` tulajdonság értékei eltérő formátumban jelennek meg, például néha `3.7`, máskor `3.7 GPA`.
+   Annak ellenére, hogy a promptok azonosak és a leírások hasonlóak, a `Grades` tulajdonság értékei eltérő formátumban jelennek meg, például `3.7` vagy `3.7 GPA`.
 
-   Ez azért van, mert az LLM a promptban lévő rendezetlen adatokat is rendezetlen formában adja vissza. Szükségünk van egy strukturált formátumra, hogy tudjuk, mire számíthatunk az adatok tárolásakor vagy használatakor.
+   Ez az eredmény azért van, mert az LLM strukturálatlan adatokat kap a megírt prompt formájában, és szintén strukturálatlan adatokat ad vissza. Szükségünk van egy strukturált formátumra, hogy tudjuk, mire számíthatunk az adatok tárolásakor vagy felhasználásakor.
 
-Tehát hogyan oldjuk meg a formázási problémát? A function calling segítségével biztosíthatjuk, hogy strukturált adatot kapjunk vissza. A function calling használatakor az LLM valójában nem hív meg vagy futtat funkciókat. Ehelyett létrehozunk egy struktúrát, amelyet az LLM követ a válaszai során. Ezeket a strukturált válaszokat használjuk arra, hogy tudjuk, melyik funkciót kell meghívni az alkalmazásunkban.
+Hogyan oldhatjuk meg tehát a formázási problémát? A funkcióhívás használatával biztosíthatjuk, hogy strukturált adatokat kapjunk vissza. A funkcióhívás során az LLM valójában nem hív meg vagy futtat semmilyen funkciót. Ehelyett létrehozunk egy struktúrát, amelyet az LLM követ a válaszai során. Ezután ezeket a strukturált válaszokat használjuk fel annak eldöntésére, hogy milyen funkciót futtassunk az alkalmazásainkban.
 
 ![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.hu.png)
 
-A funkcióból visszakapott adatokat visszaküldhetjük az LLM-nek, amely természetes nyelven válaszol a felhasználó kérdésére.
+Ezután a funkcióból visszakapott adatokat elküldhetjük az LLM-nek, amely természetes nyelven válaszol a felhasználó kérdésére.
 
-## A function call használatának esetei
+## Funkcióhívások felhasználási területei
 
-Számos olyan eset van, amikor a function call javíthatja az alkalmazásodat, például:
+Számos különböző felhasználási terület létezik, ahol a funkcióhívások javíthatják az alkalmazásodat, például:
 
-- **Külső eszközök hívása**. A chatbotok remekül válaszolnak a felhasználók kérdéseire. A function calling segítségével a chatbotok képesek bizonyos feladatokat elvégezni a felhasználói üzenetek alapján. Például egy diák megkérheti a chatbotot, hogy „Küldj egy e-mailt az oktatómnak, hogy több segítségre van szükségem ebben a témában”. Ez egy `send_email(to: string, body: string)` nevű funkcióhívást eredményezhet.
+- **Külső eszközök hívása**. A chatbotok kiválóan alkalmasak arra, hogy válaszokat adjanak a felhasználók kérdéseire. A funkcióhívások használatával a chatbotok a felhasználók üzeneteit felhasználva bizonyos feladatokat is elvégezhetnek. Például egy diák kérheti a chatbotot, hogy "Küldjön egy e-mailt az oktatómnak, hogy több segítségre van szükségem ebben a témában". Ez egy `send_email(to: string, body: string)` nevű funkcióhívást generálhat.
 
-- **API vagy adatbázis lekérdezések létrehozása**. A felhasználók természetes nyelven kereshetnek információkat, amelyeket lekérdezéssé vagy API kérésé alakítunk. Például egy tanár megkérdezheti: „Kik azok a diákok, akik befejezték az utolsó feladatot?”, ami meghívhat egy `get_completed(student_name: string, assignment: int, current_status: string)` nevű funkciót.
+- **API vagy adatbázis lekérdezések létrehozása**. A felhasználók természetes nyelven kereshetnek információkat, amelyeket formázott lekérdezéssé vagy API-kéréssé alakítunk. Például egy tanár kérheti, hogy "Kik azok a diákok, akik befejezték az utolsó feladatot", amely egy `get_completed(student_name: string, assignment: int, current_status: string)` nevű funkciót hívhat meg.
 
-- **Strukturált adatok létrehozása**. A felhasználók egy szövegrészt vagy CSV-t használhatnak arra, hogy az LLM segítségével fontos információkat vonjanak ki. Például egy diák egy Wikipedia cikket alakíthat át AI flashcardokká a békeegyezményekről. Ehhez használható egy `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` nevű funkció.
+- **Strukturált adatok létrehozása**. A felhasználók egy szöveges blokkot vagy CSV-t használhatnak, és az LLM segítségével kinyerhetik belőle a fontos információkat. Például egy diák egy békeszerződésekről szóló Wikipédia-cikket átalakíthat AI flashcardokká. Ez egy `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` nevű funkcióval valósítható meg.
 
-## Az első function call létrehozása
+## Az első funkcióhívás létrehozása
 
-A function call létrehozásának folyamata három fő lépésből áll:
+A funkcióhívás létrehozásának folyamata három fő lépésből áll:
 
-1. Meghívjuk a Chat Completions API-t a funkciók listájával és egy felhasználói üzenettel.
-2. Kiolvassuk a modell válaszát, hogy végrehajtsunk egy műveletet, például egy funkció vagy API hívást.
-3. Egy újabb hívást teszünk a Chat Completions API-hoz a funkció válaszával, hogy ezt az információt felhasználva válaszoljunk a felhasználónak.
+1. **Hívás** a Chat Completions API-hoz a funkciók listájával és egy felhasználói üzenettel.
+2. **Olvasás** a modell válaszából, hogy végrehajtsunk egy műveletet, például egy funkciót vagy API-hívást.
+3. **Újabb hívás** a Chat Completions API-hoz a funkció válaszával, hogy ezt az információt felhasználva válaszoljunk a felhasználónak.
 
 ![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.hu.png)
 
-### 1. lépés – üzenetek létrehozása
+### 1. lépés - üzenetek létrehozása
 
-Az első lépés egy felhasználói üzenet létrehozása. Ezt dinamikusan is megadhatjuk egy szövegbeviteli mező értékéből, vagy itt is beállíthatunk egy értéket. Ha először dolgozol a Chat Completions API-val, meg kell határoznunk az üzenet `role` és `content` értékét.
+Az első lépés egy felhasználói üzenet létrehozása. Ez dinamikusan hozzárendelhető egy szövegbeviteli értékhez, vagy itt is megadható. Ha először dolgozol a Chat Completions API-val, meg kell határoznunk az üzenet `role` és `content` értékét.
 
-A `role` lehet `system` (szabályok létrehozása), `assistant` (a modell) vagy `user` (a végfelhasználó). A function calling esetén ezt `user`-re állítjuk, és megadunk egy példakérdést.
+A `role` lehet `system` (szabályok létrehozása), `assistant` (a modell) vagy `user` (a végfelhasználó). A funkcióhívás esetében ezt `user`-ként fogjuk megadni, és egy példa kérdést.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-A különböző szerepek hozzárendelésével az LLM számára egyértelművé válik, hogy a rendszer vagy a felhasználó mond valamit, ami segít a beszélgetés előzményeinek felépítésében.
+A különböző szerepek hozzárendelésével egyértelművé válik az LLM számára, hogy a rendszer vagy a felhasználó mond valamit, ami segít egy beszélgetési előzményt létrehozni, amelyre az LLM építhet.
 
-### 2. lépés – funkciók létrehozása
+### 2. lépés - funkciók létrehozása
 
-Ezután definiálunk egy funkciót és annak paramétereit. Itt csak egy `search_courses` nevű funkciót használunk, de több funkciót is létrehozhatsz.
+Ezután definiálunk egy funkciót és annak paramétereit. Itt csak egy funkciót fogunk használni, amelynek neve `search_courses`, de több funkciót is létrehozhatsz.
 
-> **Fontos**: A funkciók a rendszerüzenet részeként kerülnek az LLM-hez, és beleszámítanak a rendelkezésre álló tokenek számába.
+> **Fontos**: A funkciók az LLM rendszerüzenetébe kerülnek, és beleszámítanak az elérhető tokenek számába.
 
-Lent a funkciókat egy tömbként hozzuk létre. Minden elem egy funkció, amelynek vannak `name`, `description` és `parameters` tulajdonságai:
+Az alábbiakban létrehozzuk a funkciókat elemek tömbjeként. Minden elem egy funkció, amelynek tulajdonságai: `name`, `description` és `parameters`:
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-Nézzük meg részletesebben a funkcióelemeket:
+Nézzük meg részletesebben az egyes funkciókat:
 
-- `name` – A funkció neve, amelyet hívni szeretnénk.
-- `description` – A funkció működésének leírása. Fontos, hogy itt pontos és világos legyen.
-- `parameters` – Az értékek és formátumok listája, amelyeket a modellnek a válaszában elő kell állítania. A paraméterek tömbje elemekből áll, amelyek a következő tulajdonságokkal rendelkeznek:
-  1. `type` – Az adattípus, amelyben az értékek tárolódnak.
-  2. `properties` – A konkrét értékek listája, amelyeket a modell a válaszában használ.
-      1. `name` – A kulcs, amely a válaszban szereplő tulajdonság neve, például `product`.
-      2. `type` – A tulajdonság adattípusa, például `string`.
-      3. `description` – A tulajdonság leírása.
+- `name` - A funkció neve, amelyet meg szeretnénk hívni.
+- `description` - A funkció működésének leírása. Fontos, hogy specifikus és egyértelmű legyen.
+- `parameters` - Az értékek és formátumok listája, amelyeket a modell a válaszában használni fog. A paraméterek tömbje elemekből áll, amelyek a következő tulajdonságokkal rendelkeznek:
+  1.  `type` - Az adatok típusa, amelyben a tulajdonságok tárolva lesznek.
+  1.  `properties` - Az értékek listája, amelyeket a modell a válaszában használni fog.
+      1. `name` - A kulcs neve, amelyet a modell a válaszában használ, például `product`.
+      1. `type` - A tulajdonság adattípusa, például `string`.
+      1. `description` - A konkrét tulajdonság leírása.
 
-Van egy opcionális `required` tulajdonság is, amely megadja, hogy mely paraméterek kötelezőek a funkcióhívás sikeréhez.
+Van egy opcionális `required` tulajdonság is - a funkcióhívás befejezéséhez szükséges tulajdonság.
 
-### 3. lépés – a funkcióhívás végrehajtása
+### 3. lépés - A funkcióhívás végrehajtása
 
-A funkció definiálása után be kell illesztenünk azt a Chat Completion API hívásába. Ezt úgy tesszük, hogy a kéréshez hozzáadjuk a `functions` paramétert. Ebben az esetben `functions=functions`.
+Miután definiáltuk a funkciót, most hozzá kell adnunk a Chat Completion API hívásához. Ezt úgy tesszük meg, hogy hozzáadjuk a `functions` értéket a kéréshez. Ebben az esetben `functions=functions`.
 
-Van lehetőség a `function_call` paramétert `auto` értékre állítani, ami azt jelenti, hogy az LLM döntheti el, melyik funkciót hívja meg a felhasználói üzenet alapján, nem nekünk kell ezt megadni.
+Van egy lehetőség arra is, hogy a `function_call` értékét `auto`-ra állítsuk. Ez azt jelenti, hogy az LLM dönti el, melyik funkciót kell meghívni a felhasználói üzenet alapján, ahelyett hogy mi rendelnénk hozzá.
 
-Lent egy kódot látsz, ahol meghívjuk a `ChatCompletion.create`-t, és beállítjuk `functions=functions` és `function_call="auto"` értékeket, így az LLM választhat, mikor hívja meg a megadott funkciókat:
+Az alábbi kódban látható, hogyan hívjuk meg a `ChatCompletion.create`-t, megjegyezve, hogy beállítjuk a `functions=functions` és `function_call="auto"` értékeket, ezzel lehetőséget adva az LLM-nek, hogy eldöntse, mikor hívja meg az általunk biztosított funkciókat:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-A visszakapott válasz így néz ki:
+A visszaérkező válasz így néz ki:
 
 ```json
 {
@@ -294,33 +294,33 @@ A visszakapott válasz így néz ki:
 }
 ```
 
-Itt látható, hogy a `search_courses` funkciót hívtuk meg, és milyen argumentumokkal, amelyek az `arguments` tulajdonságban szerepelnek a JSON válaszban.
+Itt láthatjuk, hogy a `search_courses` funkciót hívták meg, és milyen argumentumokkal, amelyeket az `arguments` tulajdonságban találunk a JSON válaszban.
 
-Az LLM képes volt kinyerni az adatokat a `messages` paraméterben megadott értékből, és ezek alapján illeszteni az argumentumokat a funkcióhoz. Lent emlékeztetőül a `messages` értéke:
+Az LLM képes volt megtalálni az adatokat, amelyek megfelelnek a funkció argumentumainak, mivel azokat a `messages` paraméter értékéből nyerte ki a chat completion hívás során. Az alábbiakban emlékeztetőül a `messages` értéke:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Ahogy láthatod, a `student`, `Azure` és `beginner` értékeket kinyerte a `messages`-ből, és bemenetként adta át a funkciónak. A funkciók ilyen használata nagyszerű módja az információk kinyerésének egy promptból, ugyanakkor struktúrát ad az LLM-nek és újrahasznosítható funkciókat biztosít.
+Amint látható, a `student`, `Azure` és `beginner` értékeket a `messages`-ből nyerte ki, és bemeneti adatként állította be a funkcióhoz. A funkciók ilyen módon történő használata nagyszerű módja annak, hogy információt nyerjünk ki egy promptból, valamint hogy strukturált formát biztosítsunk az LLM-nek és újrahasznosítható funkciókat hozzunk létre.
 
-Most nézzük meg, hogyan használhatjuk ezt az alkalmazásunkban.
+Most nézzük meg, hogyan integrálhatjuk ezt az alkalmazásunkba.
 
-## Function call integrálása alkalmazásba
+## Funkcióhívások integrálása egy alkalmazásba
 
-Miután teszteltük az LLM által visszaadott formázott választ, most integrálhatjuk azt egy alkalmazásba.
+Miután teszteltük az LLM formázott válaszát, most integrálhatjuk ezt az alkalmazásunkba.
 
 ### A folyamat kezelése
 
-Az alkalmazásba való integráláshoz tegyük meg a következő lépéseket:
+Az alkalmazásba való integráláshoz kövessük az alábbi lépéseket:
 
-1. Először hívjuk meg az OpenAI szolgáltatást, és tároljuk el a választ egy `response_message` nevű változóban.
+1. Először hívjuk meg az OpenAI szolgáltatásokat, és tároljuk az üzenetet egy `response_message` nevű változóban.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. Most definiáljuk azt a funkciót, amely meghívja a Microsoft Learn API-t, hogy lekérje a kurzusok listáját:
+1. Most definiáljuk azt a funkciót, amely a Microsoft Learn API-t hívja meg, hogy kurzusokat keressen:
 
    ```python
    import requests
@@ -342,11 +342,11 @@ Az alkalmazásba való integráláshoz tegyük meg a következő lépéseket:
      return str(results)
    ```
 
-   Figyeld meg, hogy most egy valódi Python függvényt hozunk létre, amely megfelel a `functions` változóban megadott funkcióneveknek. Valódi külső API hívásokat végzünk, hogy lekérjük a szükséges adatokat. Ebben az esetben a Microsoft Learn API-t használjuk képzési modulok keresésére.
+   Figyeld meg, hogy most egy valódi Python funkciót hozunk létre, amely megfelel a `functions` változóban bevezetett funkcióneveknek. Valódi külső API-hívásokat is végrehajtunk, hogy megszerezzük a szükséges adatokat. Ebben az esetben a Microsoft Learn API-t használjuk, hogy képzési modulokat keressünk.
 
-Rendben, létrehoztuk a `functions` változót és a hozzá tartozó Python függvényt, hogyan mondjuk meg az LLM-nek, hogy hogyan kapcsolja össze ezt a kettőt, hogy a Python függvényünk hívódjon meg?
+Oké, létrehoztuk a `functions` változókat és a megfelelő Python funkciót, hogyan mondjuk meg az LLM-nek, hogy hogyan kapcsolja össze ezeket, hogy a Python funkciónk meghívásra kerüljön?
 
-1. Ahhoz, hogy megtudjuk, szükséges-e Python függvényt hívni, meg kell néznünk az LLM válaszát, és ellenőrizni, hogy tartalmazza-e a `function_call` részt, majd meghívni a megjelölt funkciót. Íme, hogyan végezheted el ezt az ellenőrzést:
+1. Annak megállapításához, hogy szükséges-e Python funkciót hívni, meg kell vizsgálnunk az LLM válaszát, és ellenőriznünk kell, hogy tartalmazza-e a `function_call` értéket, majd meghívni a megadott funkciót. Az alábbiakban látható, hogyan végezhetjük el az említett ellenőrzést:
 
    ```python
    # Check if the model wants to call a function
@@ -391,77 +391,18 @@ Rendben, létrehoztuk a `functions` változót és a hozzá tartozó Python füg
     )
    ```
 
-   Ezek a három sor biztosítja, hogy kinyerjük a funkció nevét, az argumentumokat, és meghívjuk a funkciót:
+   Ez a három sor biztosítja, hogy kinyerjük a funkció nevét, az argumentumokat
+- Hozz létre hibakezelést arra az esetre, ha a függvényhívás és/vagy az API-hívás nem ad vissza megfelelő kurzusokat.
 
-   ```python
-   function_to_call = available_functions[function_name]
+Tipp: Nézd meg a [Learn API referencia dokumentáció](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) oldalát, hogy lásd, hogyan és hol érhető el ez az adat.
 
-   function_args = json.loads(response_message.function_call.arguments)
-   function_response = function_to_call(**function_args)
-   ```
+## Szép munka! Folytasd az utazást
 
-   Lent látható a kód futtatásának eredménye:
+A lecke befejezése után nézd meg a [Generatív AI tanulási gyűjteményt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a Generatív AI tudásodat!
 
-   **Kimenet**
+Lépj tovább a 12. leckére, ahol azt fogjuk megvizsgálni, hogyan lehet [UX-et tervezni AI alkalmazásokhoz](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-   ```Recommended Function call:
-   {
-     "name": "search_courses",
-     "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-   }
+---
 
-   Output of function call:
-   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en-
-   us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL
-   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url':
-   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the
-   Rust development environment', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
-   <class 'str'>
-   ```
-
-1. Most elküldjük az frissített `messages` változót az LLM-nek, hogy természetes nyelvű választ kapjunk az API JSON formátumú válasza helyett.
-
-   ```python
-   print("Messages in next request:")
-   print(messages)
-   print()
-
-   second_response = client.chat.completions.create(
-      messages=messages,
-      model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
-
-
-   print(second_response.choices[0].message)
-   ```
-
-   **Kimenet**
-
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
-
-   ```
-
-## Feladat
-
-Az Azure OpenAI Function Calling további tanulásához építhetsz:
-
-- Több paramétert a funkcióhoz, amelyek segíthetnek a tanulóknak több kurzus megtalálásában.
-- Egy másik function call-t, amely több információt kér a tanulótól, például az anyanyelvét.
--
-## Nagyszerű munka! Folytasd az utat
-
-A lecke befejezése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszthesd generatív AI ismereteidet!
-
-Lépj tovább a 12. leckébe, ahol megnézzük, hogyan lehet [AI alkalmazások UX-ét tervezni](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
-
-**Jogi nyilatkozat**:  
-Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
