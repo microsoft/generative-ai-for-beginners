@@ -53,10 +53,10 @@ jobs:
           # IMPORTANT: Set your target languages here (REQUIRED CONFIGURATION)
           # =====================================================================
           # Example: Translate to Spanish, French, German. Add -y to auto-confirm.
-          translate -l "all" -y  # <--- MODIFY THIS LINE with your desired languages
+          # translate -l "all" -y  # <--- MODIFY THIS LINE with your desired languages
           # Recommendations for large file change spit the translation into batches
-          translate -l "ar" -y
-          # translate -l "ar ur tl" -y
+          # translate -l "ar" -y
+          translate -l "ar ur tl" -y
           # translate -l "mr ne pa" -y
           # translate -l "bn ru mo" -y
           # translate -l "br it tr" -y
@@ -101,6 +101,7 @@ jobs:
             translations/
 
             translated_images/
+
 
 
 
