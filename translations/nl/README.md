@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f71b15f52ad5f493f2d0fca9c2c6832c",
-  "translation_date": "2025-10-11T10:53:43+00:00",
+  "original_hash": "f7e9011b478e180177185b73939b774c",
+  "translation_date": "2025-10-17T19:49:05+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -39,13 +39,13 @@ Leer de basisprincipes van het bouwen van Generatieve AI-toepassingen met onze u
 
 Deze cursus bestaat uit 21 lessen. Elke les behandelt een eigen onderwerp, dus begin waar je wilt!
 
-Lessen zijn gelabeld als "Leer"-lessen die een concept van Generatieve AI uitleggen, of "Bouw"-lessen die een concept en codevoorbeelden uitleggen in zowel **Python** als **TypeScript**, waar mogelijk.
+Lessen zijn gelabeld als "Learn"-lessen die een concept van Generatieve AI uitleggen, of "Build"-lessen die een concept uitleggen met codevoorbeelden in zowel **Python** als **TypeScript**, waar mogelijk.
 
-Voor .NET-ontwikkelaars, bekijk [Generative AI voor Beginners (.NET Editie)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+Voor .NET-ontwikkelaars, bekijk [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Elke les bevat ook een "Blijf Leren"-sectie met extra leermiddelen.
+Elke les bevat ook een "Keep Learning"-sectie met extra leermiddelen.
 
-## Wat je nodig hebt
+## Wat heb je nodig
 ### Om de code van deze cursus uit te voeren, kun je gebruik maken van:
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessen:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessen:** "githubmodels"
@@ -56,7 +56,7 @@ Elke les bevat ook een "Blijf Leren"-sectie met extra leermiddelen.
 
 We hebben een **[Cursus Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** les gemaakt om je te helpen bij het instellen van je ontwikkelomgeving.
 
-Vergeet niet om [deze repo te sterren (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) zodat je hem later gemakkelijk kunt vinden.
+Vergeet niet om [deze repo te sterren (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) zodat je hem later makkelijker kunt vinden.
 
 ## 🧠 Klaar om te implementeren?
 
@@ -64,7 +64,7 @@ Als je op zoek bent naar meer geavanceerde codevoorbeelden, bekijk dan onze [col
 
 ## 🗣️ Ontmoet andere leerlingen, krijg ondersteuning
 
-Word lid van onze [officiële Azure AI Foundry Discord-server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) om andere leerlingen te ontmoeten en te netwerken die deze cursus volgen, en om ondersteuning te krijgen.
+Word lid van onze [officiële Azure AI Foundry Discord-server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) om andere leerlingen te ontmoeten die deze cursus volgen en om ondersteuning te krijgen.
 
 Stel vragen of deel productfeedback in ons [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) op Github.
 
@@ -78,43 +78,43 @@ Heb je suggesties of fouten in spelling of code gevonden? [Maak een issue aan](h
 
 ## 📂 Elke les bevat:
 
-- Een korte video-introductie van het onderwerp
+- Een korte video-introductie over het onderwerp
 - Een geschreven les in de README
 - Python- en TypeScript-codevoorbeelden die Azure OpenAI en OpenAI API ondersteunen
-- Links naar extra bronnen om je leerproces voort te zetten
+- Links naar extra bronnen om verder te leren
 
 ## 🗃️ Lessen
 
 | #   | **Les Link**                                                                                                                              | **Beschrijving**                                                                                 | **Video**                                                                   | **Extra Leren**                                                                |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Cursus Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Leer:** Hoe je je ontwikkelomgeving instelt                                                   | Video Komt Binnenkort                                                       | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introductie tot Generatieve AI en LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Leer:** Begrijpen wat Generatieve AI is en hoe Large Language Models (LLMs) werken            | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Verkennen en vergelijken van verschillende LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)   | **Leer:** Hoe je het juiste model kiest voor jouw gebruikssituatie                              | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Cursus Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Leer:** Hoe je je ontwikkelomgeving instelt                                                    | Video Komt Binnenkort                                                       | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Introductie tot Generatieve AI en LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Leer:** Begrijpen wat Generatieve AI is en hoe Large Language Models (LLMs) werken.           | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Verkennen en vergelijken van verschillende LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)   | **Leer:** Hoe je het juiste model kiest voor jouw toepassing                                    | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 03  | [Generatieve AI Verantwoord Gebruiken](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                     | **Leer:** Hoe je Generatieve AI-toepassingen verantwoord bouwt                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Begrijpen van Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)            | **Leer:** Praktische Best Practices voor Prompt Engineering                                     | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Geavanceerde Prompts Maken](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                              | **Leer:** Hoe je technieken toepast die de uitkomst van je prompts verbeteren                   | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Toepassingen voor tekstgeneratie bouwen](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bouw:** Een tekstgeneratie-app met Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Chattoepassingen bouwen](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bouw:** Technieken voor het efficiënt bouwen en integreren van chattoepassingen.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Zoektoepassingen bouwen met vector databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bouw:** Een zoektoepassing die Embeddings gebruikt om gegevens te doorzoeken.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Toepassingen voor beeldgeneratie bouwen](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bouw:** Een beeldgeneratie-toepassing                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Low-code AI-toepassingen bouwen](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Bouw:** Een Generatieve AI-toepassing met low-code tools                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Externe toepassingen integreren met functieaanroepen](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Bouw:** Wat functieaanroepen zijn en hun toepassingen voor toepassingen                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [UX ontwerpen voor AI-toepassingen](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Leer:** Hoe UX-ontwerpprincipes toe te passen bij het ontwikkelen van Generatieve AI-toepassingen         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Je Generatieve AI-toepassingen beveiligen](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Leer:** De bedreigingen en risico's voor AI-systemen en methoden om deze systemen te beveiligen.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [De levenscyclus van een Generatieve AI-toepassing](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Leer:** De tools en meetmethoden om de levenscyclus van LLM en LLMOps te beheren                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) en vector databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Bouw:** Een toepassing met een RAG-framework om embeddings op te halen uit een vector database  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Open source modellen en Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bouw:** Een toepassing met open source modellen beschikbaar op Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI-agenten](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bouw:** Een toepassing met een AI-agent framework                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Fijn afstemmen van LLM's](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Leer:** Wat, waarom en hoe van het fijn afstemmen van LLM's                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Bouwen met SLM's](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Leer:** De voordelen van bouwen met Small Language Models                                            | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Bouwen met Mistral-modellen](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Leer:** De kenmerken en verschillen van de Mistral Family Models                                           | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Bouwen met Meta-modellen](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Leer:** De kenmerken en verschillen van de Meta Family Models                                           | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Begrijpen van Prompt Engineering Basisprincipes](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)          | **Leer:** Praktische Prompt Engineering Best Practices                                          | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Geavanceerde Prompts Maken](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                              | **Leer:** Hoe je technieken toepast voor prompt engineering die de resultaten van je prompts verbeteren. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Meer Leren](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Toepassingen voor tekstgeneratie bouwen](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bouwen:** Een tekstgeneratie-app met Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Chattoepassingen bouwen](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                         | **Bouwen:** Technieken voor het efficiënt bouwen en integreren van chattoepassingen             | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Zoektoepassingen bouwen met vector databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                  | **Bouwen:** Een zoektoepassing die Embeddings gebruikt om data te doorzoeken                    | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Toepassingen voor beeldgeneratie bouwen](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bouwen:** Een beeldgeneratie-toepassing                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [AI-toepassingen bouwen met low-code tools](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                | **Bouwen:** Een Generatieve AI-toepassing met low-code tools                                    | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Externe toepassingen integreren met function calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)     | **Bouwen:** Wat is function calling en hoe kan het worden gebruikt in toepassingen              | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [UX ontwerpen voor AI-toepassingen](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Leren:** Hoe UX-ontwerpprincipes toe te passen bij het ontwikkelen van Generatieve AI-toepassingen | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Je Generatieve AI-toepassingen beveiligen](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Leren:** De bedreigingen en risico's voor AI-systemen en methoden om deze systemen te beveiligen | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [De levenscyclus van Generatieve AI-toepassingen](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)    | **Leren:** De tools en metrics om de levenscyclus van LLM en LLMOps te beheren                  | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) en vector databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)          | **Bouwen:** Een toepassing met een RAG-framework om embeddings op te halen uit een vector database | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Open source modellen en Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bouwen:** Een toepassing met open source modellen beschikbaar op Hugging Face                 | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI-agenten](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bouwen:** Een toepassing met een AI-agent framework                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Fine-tuning van LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                           | **Leren:** Wat, waarom en hoe van fine-tuning van LLMs                                          | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Bouwen met SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                        | **Leren:** De voordelen van bouwen met Small Language Models                                    | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Bouwen met Mistral-modellen](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Leren:** De kenmerken en verschillen van de Mistral Family Models                             | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Bouwen met Meta-modellen](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Leren:** De kenmerken en verschillen van de Meta Family Models                                | Video binnenkort beschikbaar | [Meer informatie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Speciale dank
 
 Speciale dank aan [**John Aziz**](https://www.linkedin.com/in/john0isaac/) voor het creëren van alle GitHub Actions en workflows.
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) voor zijn belangrijke bijdragen aan elke les om de leer- en code-ervaring te verbeteren.
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) voor het leveren van belangrijke bijdragen aan elke les om de leerervaring en code-ervaring te verbeteren.
 
 ## 🎒 Andere cursussen
 
@@ -133,7 +133,7 @@ Ons team produceert ook andere cursussen! Bekijk:
 - [Webontwikkeling voor beginners](https://aka.ms/webdev-beginners)
 - [IoT voor beginners](https://aka.ms/iot-beginners)
 - [XR-ontwikkeling voor beginners](https://github.com/microsoft/xr-development-for-beginners)
-- [Mastering GitHub Copilot voor AI Pair Programming](https://aka.ms/GitHubCopilotAI)
+- [Mastering GitHub Copilot voor AI-paired programming](https://aka.ms/GitHubCopilotAI)
 - [Mastering GitHub Copilot voor C#/.NET-ontwikkelaars](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
 - [Kies je eigen Copilot-avontuur](https://github.com/microsoft/CopilotAdventures)
 
@@ -150,4 +150,4 @@ Als je productfeedback hebt of fouten tegenkomt tijdens het bouwen, bezoek dan:
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
