@@ -175,7 +175,7 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 ## Assignment
 
-See [assignment](./python?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
+See [assignment](./python?WT.mc_id=academic-105485-koreyst). It will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
 
 ## Great Work! Continue the Journey
 
