@@ -63,8 +63,8 @@ jobs:
           # translate -l "el th" -y
           # translate -l "sv da no" -y 
           # translate -l "fi nl he" -y
-          translate -l "vi id ms" -y
-          # translate -l "sw hu cs" -y
+          # translate -l "vi id ms" -y
+          translate -l "sw hu cs" -y
           # translate -l "sk ro bg" -y
           # translate -l "sr hr sl" -y
           # translate -l "ja uk my" -y
@@ -101,6 +101,7 @@ jobs:
             translations/
 
             translated_images/
+
 
 
 
