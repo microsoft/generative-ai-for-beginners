@@ -1,91 +1,91 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ce8224073b86b728ed52b19bed7932fd",
-  "translation_date": "2025-07-09T11:55:13+00:00",
+  "original_hash": "00e33cd3ff945511446ecda4a9f8a828",
+  "translation_date": "2025-10-17T15:56:29+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "br"
 }
 -->
-# Construindo Aplicações de Geração de Texto
+# Construindo Aplicativos de Geração de Texto
 
-[![Construindo Aplicações de Geração de Texto](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.br.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Construindo Aplicativos de Geração de Texto](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.br.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
-Até agora, você viu neste currículo que existem conceitos fundamentais como prompts e até uma disciplina inteira chamada "engenharia de prompts". Muitas ferramentas com as quais você pode interagir, como ChatGPT, Office 365, Microsoft Power Platform e outras, te ajudam usando prompts para realizar algo.
+Até agora, você viu neste currículo que existem conceitos fundamentais como prompts e até mesmo uma disciplina inteira chamada "engenharia de prompts". Muitas ferramentas com as quais você pode interagir, como ChatGPT, Office 365, Microsoft Power Platform e outras, permitem que você use prompts para realizar algo.
 
-Para você adicionar essa experiência a um app, é preciso entender conceitos como prompts, completions e escolher uma biblioteca para trabalhar. É exatamente isso que você vai aprender neste capítulo.
+Para adicionar essa experiência a um aplicativo, você precisa entender conceitos como prompts, completions e escolher uma biblioteca para trabalhar. É exatamente isso que você aprenderá neste capítulo.
 
 ## Introdução
 
-Neste capítulo, você vai:
+Neste capítulo, você irá:
 
-- Conhecer a biblioteca openai e seus conceitos principais.
-- Construir um app de geração de texto usando openai.
-- Entender como usar conceitos como prompt, temperatura e tokens para criar um app de geração de texto.
+- Aprender sobre a biblioteca openai e seus conceitos principais.
+- Construir um aplicativo de geração de texto usando openai.
+- Entender como usar conceitos como prompt, temperatura e tokens para construir um aplicativo de geração de texto.
 
 ## Objetivos de aprendizado
 
 Ao final desta lição, você será capaz de:
 
-- Explicar o que é um app de geração de texto.
-- Construir um app de geração de texto usando openai.
-- Configurar seu app para usar mais ou menos tokens e também alterar a temperatura, para obter resultados variados.
+- Explicar o que é um aplicativo de geração de texto.
+- Construir um aplicativo de geração de texto usando openai.
+- Configurar seu aplicativo para usar mais ou menos tokens e também alterar a temperatura, para obter resultados variados.
 
-## O que é um app de geração de texto?
+## O que é um aplicativo de geração de texto?
 
-Normalmente, quando você constrói um app, ele tem algum tipo de interface como as seguintes:
+Normalmente, quando você constrói um aplicativo, ele possui algum tipo de interface, como as seguintes:
 
-- Baseado em comandos. Apps de console são típicos apps onde você digita um comando e ele executa uma tarefa. Por exemplo, `git` é um app baseado em comandos.
-- Interface de usuário (UI). Alguns apps têm interfaces gráficas (GUIs) onde você clica em botões, digita texto, seleciona opções e mais.
+- Baseado em comandos. Aplicativos de console são típicos, onde você digita um comando e ele executa uma tarefa. Por exemplo, `git` é um aplicativo baseado em comandos.
+- Interface de usuário (UI). Alguns aplicativos possuem interfaces gráficas de usuário (GUIs), onde você clica em botões, insere texto, seleciona opções e mais.
 
-### Apps de console e UI são limitados
+### Aplicativos de console e UI são limitados
 
-Compare com um app baseado em comandos onde você digita um comando:
+Compare com um aplicativo baseado em comandos onde você digita um comando:
 
-- **É limitado**. Você não pode digitar qualquer comando, apenas os que o app suporta.
-- **Idioma específico**. Alguns apps suportam vários idiomas, mas por padrão o app é construído para um idioma específico, mesmo que você possa adicionar suporte para mais idiomas.
+- **É limitado**. Você não pode simplesmente digitar qualquer comando, apenas os que o aplicativo suporta.
+- **Específico de idioma**. Alguns aplicativos suportam muitos idiomas, mas por padrão o aplicativo é construído para um idioma específico, mesmo que você possa adicionar suporte a mais idiomas.
 
-### Benefícios dos apps de geração de texto
+### Benefícios dos aplicativos de geração de texto
 
-Então, como um app de geração de texto é diferente?
+Então, como um aplicativo de geração de texto é diferente?
 
-Em um app de geração de texto, você tem mais flexibilidade, não está limitado a um conjunto de comandos ou a um idioma específico de entrada. Em vez disso, você pode usar linguagem natural para interagir com o app. Outro benefício é que, como você já está interagindo com uma fonte de dados treinada em um vasto corpus de informações, enquanto um app tradicional pode ser limitado ao que está em um banco de dados.
+Em um aplicativo de geração de texto, você tem mais flexibilidade, não está limitado a um conjunto de comandos ou a um idioma de entrada específico. Em vez disso, você pode usar linguagem natural para interagir com o aplicativo. Outro benefício é que você já está interagindo com uma fonte de dados que foi treinada em um vasto corpus de informações, enquanto um aplicativo tradicional pode ser limitado ao que está em um banco de dados.
 
-### O que posso construir com um app de geração de texto?
+### O que posso construir com um aplicativo de geração de texto?
 
 Há muitas coisas que você pode construir. Por exemplo:
 
-- **Um chatbot**. Um chatbot que responde perguntas sobre temas, como sua empresa e seus produtos, pode ser uma boa opção.
-- **Assistente**. LLMs são ótimos para coisas como resumir textos, extrair insights de textos, produzir textos como currículos e mais.
-- **Assistente de código**. Dependendo do modelo de linguagem que você usar, pode construir um assistente de código que te ajuda a escrever código. Por exemplo, você pode usar um produto como GitHub Copilot, assim como o ChatGPT, para ajudar a escrever código.
+- **Um chatbot**. Um chatbot que responde perguntas sobre tópicos, como sua empresa e seus produtos, pode ser uma boa opção.
+- **Assistente**. LLMs são ótimos para coisas como resumir texto, obter insights de texto, produzir textos como currículos e mais.
+- **Assistente de código**. Dependendo do modelo de linguagem que você usa, você pode construir um assistente de código que ajuda a escrever código. Por exemplo, você pode usar um produto como GitHub Copilot, bem como o ChatGPT, para ajudar a escrever código.
 
 ## Como posso começar?
 
-Bem, você precisa encontrar uma forma de integrar com um LLM, o que geralmente envolve as duas abordagens a seguir:
+Bem, você precisa encontrar uma maneira de integrar com um LLM, o que geralmente envolve as seguintes duas abordagens:
 
 - Usar uma API. Aqui você constrói requisições web com seu prompt e recebe o texto gerado de volta.
-- Usar uma biblioteca. Bibliotecas ajudam a encapsular as chamadas da API e tornam o uso mais fácil.
+- Usar uma biblioteca. Bibliotecas ajudam a encapsular as chamadas de API e tornam seu uso mais fácil.
 
 ## Bibliotecas/SDKs
 
 Existem algumas bibliotecas bem conhecidas para trabalhar com LLMs, como:
 
-- **openai**, essa biblioteca facilita a conexão com seu modelo e o envio de prompts.
+- **openai**, esta biblioteca facilita a conexão com seu modelo e o envio de prompts.
 
-Depois, há bibliotecas que operam em um nível mais alto, como:
+Além disso, há bibliotecas que operam em um nível mais alto, como:
 
 - **Langchain**. Langchain é bem conhecida e suporta Python.
 - **Semantic Kernel**. Semantic Kernel é uma biblioteca da Microsoft que suporta as linguagens C#, Python e Java.
 
-## Primeiro app usando openai
+## Primeiro aplicativo usando openai
 
-Vamos ver como construir nosso primeiro app, quais bibliotecas precisamos, o que é necessário e assim por diante.
+Vamos ver como podemos construir nosso primeiro aplicativo, quais bibliotecas precisamos, o que é necessário e assim por diante.
 
 ### Instalar openai
 
-Existem muitas bibliotecas para interagir com OpenAI ou Azure OpenAI. É possível usar várias linguagens de programação também, como C#, Python, JavaScript, Java e outras. Escolhemos usar a biblioteca Python `openai`, então usaremos o `pip` para instalá-la.
+Existem muitas bibliotecas disponíveis para interagir com OpenAI ou Azure OpenAI. É possível usar várias linguagens de programação, como C#, Python, JavaScript, Java e mais. Escolhemos usar a biblioteca `openai` em Python, então usaremos `pip` para instalá-la.
 
 ```bash
 pip install openai
@@ -93,32 +93,32 @@ pip install openai
 
 ### Criar um recurso
 
-Você precisa seguir os seguintes passos:
+Você precisa realizar os seguintes passos:
 
-- Crie uma conta no Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Obtenha acesso ao Azure OpenAI. Vá para [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) e solicite acesso.
+- Criar uma conta no Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Obter acesso ao Azure OpenAI. Acesse [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) e solicite acesso.
 
   > [!NOTE]
-  > No momento da escrita, é necessário solicitar acesso ao Azure OpenAI.
+  > No momento da escrita, você precisa solicitar acesso ao Azure OpenAI.
 
-- Instale o Python <https://www.python.org/>
-- Crie um recurso do Azure OpenAI Service. Veja este guia para saber como [criar um recurso](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Instalar Python <https://www.python.org/>
+- Ter criado um recurso de Serviço Azure OpenAI. Veja este guia sobre como [criar um recurso](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Localizar chave da API e endpoint
+### Localizar chave de API e endpoint
 
-Neste ponto, você precisa informar à sua biblioteca `openai` qual chave da API usar. Para encontrar sua chave da API, vá para a seção "Keys and Endpoint" do seu recurso Azure OpenAI e copie o valor de "Key 1".
+Neste ponto, você precisa informar à biblioteca `openai` qual chave de API usar. Para encontrar sua chave de API, vá para a seção "Keys and Endpoint" do recurso Azure OpenAI e copie o valor de "Key 1".
 
-![Chaves e Endpoint no portal Azure](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Painel de recurso Keys and Endpoint no Portal Azure](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Agora que você copiou essa informação, vamos instruir as bibliotecas a usá-la.
+Agora que você copiou essas informações, vamos instruir as bibliotecas a usá-las.
 
 > [!NOTE]
-> Vale a pena separar sua chave da API do seu código. Você pode fazer isso usando variáveis de ambiente.
+> Vale a pena separar sua chave de API do seu código. Você pode fazer isso usando variáveis de ambiente.
 >
-> - Defina a variável de ambiente `OPENAI_API_KEY` com sua chave da API.
+> - Defina a variável de ambiente `OPENAI_API_KEY` como sua chave de API.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Configuração para Azure
+### Configuração do Azure
 
 Se você estiver usando Azure OpenAI, veja como configurar:
 
@@ -129,31 +129,31 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Acima estamos definindo o seguinte:
+Acima, estamos configurando o seguinte:
 
-- `api_type` para `azure`. Isso indica à biblioteca para usar Azure OpenAI e não OpenAI.
-- `api_key`, essa é sua chave da API encontrada no portal Azure.
-- `api_version`, essa é a versão da API que você quer usar. No momento da escrita, a versão mais recente é `2023-05-15`.
-- `api_base`, esse é o endpoint da API. Você pode encontrá-lo no portal Azure ao lado da sua chave da API.
+- `api_type` como `azure`. Isso informa à biblioteca para usar Azure OpenAI e não OpenAI.
+- `api_key`, esta é sua chave de API encontrada no Portal Azure.
+- `api_version`, esta é a versão da API que você deseja usar. No momento da escrita, a versão mais recente é `2023-05-15`.
+- `api_base`, este é o endpoint da API. Você pode encontrá-lo no Portal Azure ao lado da sua chave de API.
 
-> [!NOTE] > `os.getenv` é uma função que lê variáveis de ambiente. Você pode usá-la para ler variáveis como `OPENAI_API_KEY` e `API_BASE`. Defina essas variáveis no seu terminal ou usando uma biblioteca como `dotenv`.
+> [!NOTE] > `os.getenv` é uma função que lê variáveis de ambiente. Você pode usá-la para ler variáveis de ambiente como `OPENAI_API_KEY` e `API_BASE`. Defina essas variáveis de ambiente no seu terminal ou usando uma biblioteca como `dotenv`.
 
 ## Gerar texto
 
-A forma de gerar texto é usar a classe `Completion`. Veja um exemplo:
+A maneira de gerar texto é usar a classe `Completion`. Aqui está um exemplo:
 
 ```python
-prompt = "Complete o seguinte: Era uma vez um"
+prompt = "Complete the following: Once upon a time there was a"
 
 completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-No código acima, criamos um objeto completion e passamos o modelo que queremos usar e o prompt. Depois imprimimos o texto gerado.
+No código acima, criamos um objeto de completion e passamos o modelo que queremos usar e o prompt. Em seguida, imprimimos o texto gerado.
 
-### Completions de chat
+### Chat completions
 
-Até agora, você viu como usamos `Completion` para gerar texto. Mas existe outra classe chamada `ChatCompletion` que é mais adequada para chatbots. Veja um exemplo de uso:
+Até agora, você viu como usamos `Completion` para gerar texto. Mas há outra classe chamada `ChatCompletion` que é mais adequada para chatbots. Aqui está um exemplo de uso:
 
 ```python
 import openai
@@ -166,9 +166,9 @@ print(completion.choices[0].message.content)
 
 Mais sobre essa funcionalidade em um capítulo futuro.
 
-## Exercício - seu primeiro app de geração de texto
+## Exercício - seu primeiro aplicativo de geração de texto
 
-Agora que aprendemos como configurar e usar openai, é hora de construir seu primeiro app de geração de texto. Para construir seu app, siga estes passos:
+Agora que aprendemos como configurar e configurar openai, é hora de construir seu primeiro aplicativo de geração de texto. Para construir seu aplicativo, siga estes passos:
 
 1. Crie um ambiente virtual e instale openai:
 
@@ -179,12 +179,12 @@ Agora que aprendemos como configurar e usar openai, é hora de construir seu pri
    ```
 
    > [!NOTE]
-   > Se estiver usando Windows, digite `venv\Scripts\activate` em vez de `source venv/bin/activate`.
+   > Se você estiver usando Windows, digite `venv\Scripts\activate` em vez de `source venv/bin/activate`.
 
    > [!NOTE]
-   > Localize sua chave Azure OpenAI acessando [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), pesquise por `Open AI`, selecione o recurso `Open AI` e depois `Keys and Endpoint` e copie o valor de `Key 1`.
+   > Localize sua chave do Azure OpenAI acessando [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), procure por `Open AI`, selecione o recurso `Open AI` e, em seguida, selecione `Keys and Endpoint` e copie o valor de `Key 1`.
 
-1. Crie um arquivo _app.py_ e coloque o seguinte código:
+1. Crie um arquivo _app.py_ e insira o seguinte código:
 
    ```python
    import openai
@@ -196,8 +196,8 @@ Agora que aprendemos como configurar e usar openai, é hora de construir seu pri
    openai.api_base = "<endpoint found in Azure Portal where your API key is>"
    deployment_name = "<deployment name>"
 
-   # adicione seu código de conclusão
-   prompt = "Complete o seguinte: Era uma vez um"
+   # add your completion code
+   prompt = "Complete the following: Once upon a time there was a"
    messages = [{"role": "user", "content": prompt}]
 
    # make completion
@@ -208,361 +208,361 @@ Agora que aprendemos como configurar e usar openai, é hora de construir seu pri
    ```
 
    > [!NOTE]
-   > Se estiver usando Azure OpenAI, você precisa definir `api_type` como `azure` e configurar `api_key` com sua chave Azure OpenAI.
+   > Se você estiver usando Azure OpenAI, precisa definir o `api_type` como `azure` e configurar o `api_key` com sua chave do Azure OpenAI.
 
-   Você deve ver uma saída parecida com esta:
+   Você deve ver uma saída semelhante à seguinte:
 
    ```output
-    muito infeliz _____.
+    very unhappy _____.
 
-    Era uma vez uma sereia muito infeliz.
+   Once upon a time there was a very unhappy mermaid.
    ```
 
-## Diferentes tipos de prompts, para diferentes propósitos
+## Diferentes tipos de prompts para diferentes coisas
 
-Agora você viu como gerar texto usando um prompt. Você até tem um programa funcionando que pode modificar para gerar diferentes tipos de texto.
+Agora você viu como gerar texto usando um prompt. Você até tem um programa em execução que pode modificar e alterar para gerar diferentes tipos de texto.
 
-Prompts podem ser usados para todo tipo de tarefa. Por exemplo:
+Prompts podem ser usados para várias tarefas. Por exemplo:
 
-- **Gerar um tipo de texto**. Por exemplo, você pode gerar um poema, perguntas para um quiz etc.
-- **Buscar informações**. Você pode usar prompts para buscar informações, como no exemplo: 'O que significa CORS no desenvolvimento web?'.
-- **Gerar código**. Você pode usar prompts para gerar código, por exemplo, desenvolver uma expressão regular para validar emails ou até gerar um programa inteiro, como um app web.
+- **Gerar um tipo de texto**. Por exemplo, você pode gerar um poema, perguntas para um quiz, etc.
+- **Buscar informações**. Você pode usar prompts para buscar informações, como no exemplo: "O que significa CORS no desenvolvimento web?".
+- **Gerar código**. Você pode usar prompts para gerar código, por exemplo, desenvolver uma expressão regular usada para validar e-mails ou até mesmo gerar um programa inteiro, como um aplicativo web.
 
 ## Um caso de uso mais prático: um gerador de receitas
 
-Imagine que você tem ingredientes em casa e quer cozinhar algo. Para isso, precisa de uma receita. Uma forma de encontrar receitas é usar um motor de busca ou você pode usar um LLM para isso.
+Imagine que você tem ingredientes em casa e quer cozinhar algo. Para isso, você precisa de uma receita. Uma maneira de encontrar receitas é usar um mecanismo de busca ou você pode usar um LLM para isso.
 
 Você poderia escrever um prompt assim:
 
-> "Mostre 5 receitas para um prato com os seguintes ingredientes: frango, batatas e cenouras. Para cada receita, liste todos os ingredientes usados"
+> "Mostre-me 5 receitas para um prato com os seguintes ingredientes: frango, batatas e cenouras. Para cada receita, liste todos os ingredientes usados."
 
-Dado o prompt acima, você pode receber uma resposta parecida com:
+Dado o prompt acima, você pode obter uma resposta semelhante a:
 
 ```output
-1. Frango Assado com Legumes:
-Ingredientes:
-- 4 coxas de frango
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 2 colheres de sopa de azeite
-- 2 dentes de alho picados
-- 1 colher de chá de tomilho seco
-- 1 colher de chá de orégano seco
-- Sal e pimenta a gosto
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 2 cloves garlic, minced
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
 
-2. Ensopado de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 1 cebola picada
-- 2 dentes de alho picados
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 1 xícara de caldo de galinha
-- Sal e pimenta a gosto
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
 
-3. Frango e Batata Assados:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 cebola picada
-- 2 dentes de alho picados
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 1 xícara de caldo de galinha
-- Sal e pimenta a gosto
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
 
-4. Sopa de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 1 cebola picada
-- 2 dentes de alho picados
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 4 xícaras de caldo de galinha
-- Sal e pimenta a gosto
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
 
-5. Picadinho de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 cebola picada
-- 2 dentes de alho picado
-- 1 colher de chá de orégano seco
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
 ```
 
-Esse resultado é ótimo, já sei o que cozinhar. Neste ponto, melhorias úteis poderiam ser:
+Este resultado é ótimo, agora sei o que cozinhar. Neste ponto, melhorias úteis poderiam ser:
 
-- Filtrar ingredientes que não gosto ou sou alérgico.
+- Filtrar ingredientes que não gosto ou aos quais sou alérgico.
 - Produzir uma lista de compras, caso eu não tenha todos os ingredientes em casa.
 
-Para esses casos, vamos adicionar um prompt adicional:
+Para os casos acima, vamos adicionar um prompt adicional:
 
-> "Por favor, remova receitas com alho pois sou alérgico e substitua por outro ingrediente. Além disso, por favor, produza uma lista de compras para as receitas, considerando que já tenho frango, batatas e cenouras em casa."
+> "Por favor, remova receitas com alho, pois sou alérgico, e substitua por outra coisa. Além disso, produza uma lista de compras para as receitas, considerando que já tenho frango, batatas e cenouras em casa."
 
 Agora você tem um novo resultado, a saber:
 
 ```output
-1. Frango Assado com Legumes:
-Ingredientes:
-- 4 coxas de frango
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 2 colheres de sopa de azeite
-- 1 colher de chá de tomilho seco
-- 1 colher de chá de orégano seco
-- Sal e pimenta a gosto
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
 
-2. Ensopado de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 1 cebola picada
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 1 xícara de caldo de galinha
-- Sal e pimenta a gosto
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
 
-3. Frango e Batata Assados:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 cebola picada
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 1 xícara de caldo de galinha
-- Sal e pimenta a gosto
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
 
-4. Sopa de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 1 cebola picada
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 colher de chá de orégano seco
-- 1 colher de chá de tomilho seco
-- 4 xícaras de caldo de galinha
-- Sal e pimenta a gosto
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
 
-5. Picadinho de Frango com Batata:
-Ingredientes:
-- 2 colheres de sopa de azeite
-- 2 peitos de frango cortados em cubos
-- 2 batatas cortadas em cubos
-- 2 cenouras cortadas em cubos
-- 1 cebola picada
-- 1 colher de chá de orégano seco
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
 
-Lista de Compras:
-- Azeite
-- Cebola
-- Tomilho
-- Orégano
-- Sal
-- Pimenta
+Shopping List:
+- Olive oil
+- Onion
+- Thyme
+- Oregano
+- Salt
+- Pepper
 ```
 
 Essas são suas cinco receitas, sem alho mencionado, e você também tem uma lista de compras considerando o que já tem em casa.
 
-## Exercício - construa um gerador de receitas
+## Exercício - construir um gerador de receitas
 
-Agora que encenamos um cenário, vamos escrever código para corresponder ao cenário demonstrado. Para isso, siga estes passos:
+Agora que simulamos um cenário, vamos escrever código para corresponder ao cenário demonstrado. Para fazer isso, siga estes passos:
 
-1. Use o arquivo _app.py_ existente como ponto de partida
+1. Use o arquivo _app.py_ existente como ponto de partida.
 1. Localize a variável `prompt` e altere seu código para o seguinte:
 
-```python
-   prompt = "Mostre-me 5 receitas de um prato com os seguintes ingredientes: frango, batata e cenoura. Liste todos os ingredientes usados para cada receita."
-```
+   ```python
+   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+   ```
 
-   Se você executar o código agora, deve ver uma saída parecida com:
+   Se você executar o código agora, deverá ver uma saída semelhante a:
 
-```output
-   - Ensopado de Frango com Batatas e Cenouras: 3 colheres de sopa de azeite, 1 cebola picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 ramo de tomilho, 1/2 colher de chá de sal, 1/4 de colher de chá de pimenta-do-reino, 1 1/2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 2 colheres de sopa de salsa fresca picada, 2 colheres de sopa de manteiga sem sal, 1 1/2 libra de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm.
-    - Frango Assado no Forno com Batatas e Cenouras: 3 colheres de sopa de azeite extravirgem, 1 colher de sopa de mostarda Dijon, 1 colher de sopa de alecrim fresco picado, 1 colher de sopa de tomilho fresco picado, 4 dentes de alho picados, 1 1/2 libra de batatas vermelhas pequenas cortadas em quatro, 1 1/2 libra de cenouras cortadas em quatro no sentido do comprimento, 1/2 colher de chá de sal. 1/4 colher de chá de pimenta-do-reino, 1 frango inteiro (1,8 kg)
-    - Caçarola de Frango, Batata e Cenoura: spray de cozinha, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e ralada, 1 batata descascada e ralada, 1/2 colher de chá de folhas de tomilho secas, 1/4 colher de chá de sal, 1/4 colher de chá de pimenta-do-reino, 2 xícaras de caldo de galinha desnatado com baixo teor de sódio, 1 xícara de ervilhas congeladas, 1/4 xícara de farinha de trigo, 1 xícara de leite com 2% de gordura reduzida, 1/4 xícara de queijo parmesão ralado
+   ```output
+   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
+   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
+   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
 
-    - Jantar de Frango e Batata em Uma Panela: 2 colheres de sopa de azeite, 450 g de coxas de frango desossadas e sem pele, cortadas em pedaços de 2,5 cm, 1 cebola grande picada, 3 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 folha de louro, 1 ramo de tomilho, 1/2 colher de chá Sal, 1/4 colher de chá de pimenta-do-reino, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco
+   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
 
-    - Curry de Frango, Batata e Cenoura: 1 colher de sopa de óleo vegetal, 1 cebola grande picada, 2 dentes de alho picados, 1 cenoura descascada e picada, 1 batata descascada e picada, 1 colher de chá de coentro em pó, 1 colher de chá de cominho em pó, 1/2 colher de chá de cúrcuma em pó, 1/2 colher de chá de gengibre em pó, 1/4 colher de chá de pimenta caiena, 2 xícaras de caldo de galinha, 1/2 xícara de vinho branco seco, 1 lata (425 g) de grão-de-bico escorrido e lavado, 1/2 xícara de passas, 1/2 xícara de coentro fresco picado
-```
+   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
+   ```
 
-   > NOTE, seu LLM é não determinístico, então você pode obter resultados diferentes a cada execução.
+   > NOTE, seu LLM é não determinístico, então você pode obter resultados diferentes toda vez que executar o programa.
 
-   Ótimo, vamos ver como podemos melhorar as coisas. Para melhorar, queremos garantir que o código seja flexível, para que ingredientes e número de receitas possam ser alterados facilmente.
+   Ótimo, vamos ver como podemos melhorar as coisas. Para melhorar, queremos garantir que o código seja flexível, para que os ingredientes e o número de receitas possam ser ajustados e alterados.
 
 1. Vamos alterar o código da seguinte forma:
 
-```python
-   no_recipes = input("Número de receitas (por exemplo, 5):")
+   ```python
+   no_recipes = input("No of recipes (for example, 5): ")
 
-   ingredients = input("Lista de ingredientes (por exemplo, frango, batatas e cenouras):")
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolar o número de receitas no prompt e ingredientes
-   prompt = f"Mostre-me {no_recipes} receitas para um prato com os seguintes ingredientes: {ingredients}. Por receita, liste todos os ingredientes usadosd"
-```
+   # interpolate the number of recipes into the prompt an ingredients
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
 
-   Um teste rápido com o código poderia ser assim:
+   Executar o código para um teste pode parecer assim:
 
-```output
-    Número de receitas (por exemplo, 5): 3
-    Lista de ingredientes (por exemplo, frango, batatas e cenouras): leite, morangos
+   ```output
+   No of recipes (for example, 5): 3
+   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
 
-    - Milkshake de morango: leite, morangos, açúcar, extrato de baunilha, cubos de gelo
-    - Torta de morango: leite, farinha, fermento em pó, açúcar, sal, manteiga sem sal, morangos, chantilly
-    - Leite de morango: leite, morangos, açúcar, extrato de baunilha
-  ```
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
 
 ### Melhorar adicionando filtro e lista de compras
 
-Agora temos um app funcional capaz de produzir receitas e é flexível, pois depende de entradas do usuário, tanto no número de receitas quanto nos ingredientes usados.
+Agora temos um aplicativo funcional capaz de produzir receitas e é flexível, pois depende de entradas do usuário, tanto no número de receitas quanto nos ingredientes usados.
 
 Para melhorar ainda mais, queremos adicionar o seguinte:
 
-- **Filtrar ingredientes**. Queremos poder filtrar ingredientes que não gostamos ou somos alérgicos. Para isso, podemos editar nosso prompt existente e adicionar uma condição de filtro no final, assim:
+- **Filtrar ingredientes**. Queremos ser capazes de filtrar ingredientes que não gostamos ou aos quais somos alérgicos. Para realizar essa alteração, podemos editar nosso prompt existente e adicionar uma condição de filtro ao final, como:
 
-```python
-  filter = input("Filtro (por exemplo, vegetariano, vegano ou sem glúten): ")
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
 
-  prompt = f"Mostre-me {no_recipes} receitas para um prato com os seguintes ingredientes: {ingredients}. Por receita, liste todos os ingredientes usados, sem {filter}"
-```
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
 
   Acima, adicionamos `{filter}` ao final do prompt e também capturamos o valor do filtro do usuário.
 
-  Um exemplo de entrada ao rodar o programa pode ser assim:
+  Um exemplo de entrada ao executar o programa pode agora parecer assim:
 
-```output
-  Número de receitas (por exemplo, 5): 3
-  Lista de ingredientes (por exemplo, frango, batata e cenoura): cebola, leite
-  Filtro (por exemplo, vegetariano, vegano ou sem glúten): sem leite
-  
-  1. Sopa de Cebola Francesa
-  
-  Ingredientes:
-  
-  -1 cebola grande fatiada
-  -3 xícaras de caldo de carne
-  -1 xícara de leite
-  -6 fatias de pão francês
-  -1/4 de xícara de queijo parmesão ralado
-  -1 colher de sopa de manteiga
-  -1 colher de chá de tomilho seco
-  -1/4 de colher de chá de sal
-  -1/4 de colher de chá de pimenta-do-reino
-  
-  Instruções:
-  
-  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
-  2. Adicione o caldo de carne, o leite, o tomilho, o sal e a pimenta. Deixe ferver.
-  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
-  4. Coloque as fatias de pão francês em tigelas de sopa.
-  5. Coloque a sopa sobre o pão.
-  6. Polvilhe com queijo parmesão.
-  
-  2. Sopa de Cebola e Batata
-  
-  Ingredientes:
-  
-  - 1 cebola grande picada
-  - 2 xícaras de batatas em cubos
-  - 3 xícaras de caldo de legumes
-  - 1 xícara de leite
-  - 1/4 colher de chá de pimenta-do-reino
-  
-  Modo de Preparo:
-  
-  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
-  2. Adicione as batatas, o caldo de legumes, o leite e a pimenta. Deixe ferver.
-  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
-  4. Sirva quente.
-  
-  3. Sopa Cremosa de Cebola
-  
-  Ingredientes:
-  
-  - 1 cebola grande picada
-  - 3 xícaras de caldo de legumes
-  - 1 xícara de leite
-  - 1/4 colher de chá de pimenta-do-reino
-  - 1/4 xícara de farinha de trigo
-  - 1/2 xícara de queijo parmesão ralado
-  
-  Modo de Preparo:
-  
-  1. Em uma panela grande, refogue a cebola na manteiga até dourar.
-  2. Adicione o caldo de legumes, o leite e a pimenta. Deixe ferver.
-  
-  3. Reduza o fogo e cozinhe em fogo baixo por 10 minutos.
-  4. Em uma tigela pequena, misture a farinha e o queijo parmesão até obter uma mistura homogênea.
-  5. Adicione à sopa e cozinhe em fogo baixo por mais 5 minutos ou até engrossar.
-```
+  ```output
+  No of recipes (for example, 5): 3
+  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free): no milk
 
-  Como você pode ver, qualquer receita com leite foi filtrada. Mas, se você for intolerante à lactose, pode querer filtrar receitas com queijo também, então é importante ser claro.
+  1. French Onion Soup
 
-- **Produzir uma lista de compras**. Queremos gerar uma lista de compras, considerando o que já temos em casa.
+  Ingredients:
 
-  Para essa funcionalidade, poderíamos tentar resolver tudo em um único prompt ou dividir em dois prompts. Vamos tentar a segunda abordagem. Aqui sugerimos adicionar um prompt adicional, mas para isso funcionar, precisamos adicionar o resultado do primeiro prompt como contexto para o segundo prompt.
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
 
-  Localize a parte do código que imprime o resultado do primeiro prompt e adicione o seguinte código logo abaixo:
+  Instructions:
 
-```python
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  Como você pode ver, qualquer receita com leite foi filtrada. Mas, se você for intolerante à lactose, pode querer filtrar receitas com queijo também, então é necessário ser claro.
+
+- **Produzir uma lista de compras**. Queremos produzir uma lista de compras, considerando o que já temos em casa.
+
+  Para essa funcionalidade, poderíamos tentar resolver tudo em um único prompt ou dividi-lo em dois prompts. Vamos tentar a segunda abordagem. Aqui estamos sugerindo adicionar um prompt adicional, mas para que funcione, precisamos adicionar o resultado do primeiro prompt como contexto ao segundo prompt.
+Localize a parte do código que imprime o resultado do primeiro prompt e adicione o seguinte código abaixo:
+
+  ```python
   old_prompt_result = completion.choices[0].message.content
-  prompt = "Elabore uma lista de compras para as receitas geradas e, por favor, não inclua ingredientes que eu já tenha."
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
   new_prompt = f"{old_prompt_result} {prompt}"
   messages = [{"role": "user", "content": new_prompt}]
   completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
 
   # print response
-  print("Lista de compras:")
+  print("Shopping list:")
   print(completion.choices[0].message.content)
-```
+  ```
 
-  Note o seguinte:
+Observe o seguinte:
 
-  1. Estamos construindo um novo prompt adicionando o resultado do primeiro prompt ao novo prompt:
+1. Estamos construindo um novo prompt adicionando o resultado do primeiro prompt ao novo prompt:
 
-```python
-  new_prompt = f"{old_prompt_result} {prompt}"
-```
-1. Fazemos uma nova requisição, mas também considerando o número de tokens que pedimos no primeiro prompt, então desta vez definimos `max_tokens` como 1200.
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
 
-```python
-  completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
-```
+1. Fazemos uma nova solicitação, mas também considerando o número de tokens que pedimos no primeiro prompt, então desta vez dizemos que `max_tokens` é 1200.
 
-Testando esse código, chegamos agora à seguinte saída:
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
 
-```output
-  Número de receitas (por exemplo, 5): 2
-  Lista de ingredientes (por exemplo, frango, batata e cenoura): maçã, farinha
-  Filtro (por exemplo, vegetariano, vegano ou sem glúten): açúcar
-  
-  - Panquecas de maçã e farinha: 1 xícara de farinha, 1/2 colher de chá de fermento em pó, 1/2 colher de chá de bicarbonato de sódio, 1/4 colher de chá de sal, 1 colher de sopa de açúcar, 1 ovo, 1 xícara de leitelho ou leite azedo, 1/4 xícara de manteiga derretida, 1 maçã Granny Smith descascada e ralada
-  - Bolinhos de maçã: 1 1/2 xícaras de farinha, 1 colher de chá de fermento em pó, 1/4 colher de chá de sal, 1/4 colher de chá de bicarbonato de sódio, 1/4 colher de chá de noz-moscada, 1/4 colher de chá de canela, 1/4 colher de chá de pimenta da Jamaica, 1/4 xícara de açúcar, 1/4 xícara de gordura vegetal, 1/4 xícara de leite, 1 ovo, 2 xícaras Maçãs raladas e descascadas
-  Lista de compras:
-  - Farinha, fermento em pó, bicarbonato de sódio, sal, açúcar, ovo, leitelho, manteiga, maçã, noz-moscada, canela, pimenta-da-jamaica
-```
+Ao testar este código, chegamos ao seguinte resultado:
+
+     ```output
+     No of recipes (for example, 5): 2
+     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free): sugar
+
+
+     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     Shopping list:
+     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
 
 ## Melhore sua configuração
 
 O que temos até agora é um código que funciona, mas há alguns ajustes que devemos fazer para melhorar ainda mais. Algumas coisas que devemos fazer são:
 
-- **Separar segredos do código**, como a chave da API. Segredos não pertencem ao código e devem ser armazenados em um local seguro. Para separar segredos do código, podemos usar variáveis de ambiente e bibliotecas como `python-dotenv` para carregá-las a partir de um arquivo. Veja como isso ficaria no código:
+- **Separe segredos do código**, como a chave da API. Segredos não pertencem ao código e devem ser armazenados em um local seguro. Para separar segredos do código, podemos usar variáveis de ambiente e bibliotecas como `python-dotenv` para carregá-los de um arquivo. Veja como isso ficaria no código:
 
   1. Crie um arquivo `.env` com o seguinte conteúdo:
 
@@ -570,34 +570,33 @@ O que temos até agora é um código que funciona, mas há alguns ajustes que de
      OPENAI_API_KEY=sk-...
      ```
 
-     
-> Note que, para Azure, você precisa definir as seguintes variáveis de ambiente:
+     > Nota: para Azure, você precisa definir as seguintes variáveis de ambiente:
 
-```bash
+     ```bash
      OPENAI_API_TYPE=azure
      OPENAI_API_VERSION=2023-05-15
      OPENAI_API_BASE=<replace>
-```
+     ```
 
-No código, você carregaria as variáveis de ambiente assim:
+     No código, você carregaria as variáveis de ambiente assim:
 
-```python
+     ```python
      from dotenv import load_dotenv
 
      load_dotenv()
 
      openai.api_key = os.environ["OPENAI_API_KEY"]
-```
+     ```
 
-- **Uma palavra sobre o comprimento dos tokens**. Devemos considerar quantos tokens precisamos para gerar o texto desejado. Tokens custam dinheiro, então, sempre que possível, devemos tentar ser econômicos com a quantidade de tokens usados. Por exemplo, podemos reformular o prompt para usar menos tokens?
+- **Uma observação sobre o comprimento dos tokens**. Devemos considerar quantos tokens precisamos para gerar o texto desejado. Tokens custam dinheiro, então, sempre que possível, devemos tentar ser econômicos com o número de tokens que usamos. Por exemplo, podemos formular o prompt de forma que use menos tokens?
 
-  Para alterar a quantidade de tokens usados, você pode usar o parâmetro `max_tokens`. Por exemplo, se quiser usar 100 tokens, você faria:
+  Para alterar os tokens usados, você pode usar o parâmetro `max_tokens`. Por exemplo, se quiser usar 100 tokens, você faria:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Experimentando com a temperatura**. Temperatura é algo que ainda não mencionamos, mas é um contexto importante para o desempenho do nosso programa. Quanto maior o valor da temperatura, mais aleatória será a saída. Por outro lado, quanto menor o valor da temperatura, mais previsível será a saída. Considere se você quer variação na sua saída ou não.
+- **Experimentando com a temperatura**. Temperatura é algo que ainda não mencionamos, mas é um contexto importante para o desempenho do nosso programa. Quanto maior o valor da temperatura, mais aleatório será o resultado. Por outro lado, quanto menor o valor da temperatura, mais previsível será o resultado. Considere se você deseja variação no seu resultado ou não.
 
   Para alterar a temperatura, você pode usar o parâmetro `temperature`. Por exemplo, se quiser usar uma temperatura de 0.5, você faria:
 
@@ -605,7 +604,7 @@ No código, você carregaria as variáveis de ambiente assim:
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Note que, quanto mais próximo de 1.0, mais variada será a saída.
+  > Nota: quanto mais próximo de 1.0, mais variado será o resultado.
 
 ## Tarefa
 
@@ -613,9 +612,9 @@ Para esta tarefa, você pode escolher o que construir.
 
 Aqui estão algumas sugestões:
 
-- Ajuste o app gerador de receitas para melhorá-lo ainda mais. Brinque com os valores de temperatura e os prompts para ver o que consegue criar.
-- Crie um "companheiro de estudos". Este app deve ser capaz de responder perguntas sobre um tema, por exemplo Python, você poderia ter prompts como "O que é determinado tópico em Python?", ou um prompt que diga, mostre-me código para determinado tópico, etc.
-- Bot de história, faça a história ganhar vida, instrua o bot a interpretar um personagem histórico e faça perguntas sobre sua vida e época.
+- Ajuste o aplicativo gerador de receitas para melhorá-lo ainda mais. Experimente valores de temperatura e os prompts para ver o que você consegue criar.
+- Construa um "companheiro de estudos". Este aplicativo deve ser capaz de responder perguntas sobre um tópico, por exemplo, Python. Você poderia ter prompts como "O que é um determinado tópico em Python?", ou um prompt que diga "mostre-me o código para um determinado tópico", etc.
+- Bot de história, faça a história ganhar vida, instrua o bot a interpretar um determinado personagem histórico e faça perguntas sobre sua vida e época.
 
 ## Solução
 
@@ -624,14 +623,14 @@ Aqui estão algumas sugestões:
 Abaixo está um prompt inicial, veja como você pode usá-lo e ajustá-lo ao seu gosto.
 
 ```text
-- "Você é um especialista na linguagem Python
+- "You're an expert on the Python language
 
-Sugira uma aula para iniciantes em Python no seguinte formato:
+    Suggest a beginner lesson for Python in the following format:
 
-Formato:
-- conceitos:
-- breve explicação da aula:
-- exercício de código com soluções"
+    Format:
+    - concepts:
+    - brief explanation of the lesson:
+    - exercise in code with solutions"
 ```
 
 ### Bot de história
@@ -639,29 +638,31 @@ Formato:
 Aqui estão alguns prompts que você poderia usar:
 
 ```text
-- "Você é Abe Lincoln, conte-me sobre você em 3 frases e responda usando gramática e palavras que Abe teria usado"
-- "Você é Abe Lincoln, responda usando gramática e palavras que Abe teria usado:
+- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
+- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
 
-Conte-me sobre suas maiores realizações, em 300 palavras"
+   Tell me about your greatest accomplishments, in 300 words"
 ```
 
 ## Verificação de conhecimento
 
 O que o conceito de temperatura faz?
 
-1. Controla o quão aleatória é a saída.
-1. Controla o tamanho da resposta.
-1. Controla quantos tokens são usados.
+1. Ele controla o quão aleatório é o resultado.
+1. Ele controla o tamanho da resposta.
+1. Ele controla quantos tokens são usados.
 
 ## 🚀 Desafio
 
-Ao trabalhar na tarefa, tente variar a temperatura, definindo-a como 0, 0.5 e 1. Lembre-se que 0 é o menos variado e 1 é o mais. Qual valor funciona melhor para seu app?
+Ao trabalhar na tarefa, tente variar a temperatura, experimente configurá-la para 0, 0.5 e 1. Lembre-se de que 0 é o menos variado e 1 é o mais. Qual valor funciona melhor para o seu aplicativo?
 
-## Ótimo trabalho! Continue seu aprendizado
+## Ótimo trabalho! Continue aprendendo
 
-Após completar esta lição, confira nossa [coleção de Aprendizado em IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar aprimorando seu conhecimento em IA Generativa!
+Depois de concluir esta lição, confira nossa [coleção de aprendizado sobre IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar aprimorando seu conhecimento sobre IA generativa!
 
-Siga para a Lição 7, onde veremos como [construir aplicações de chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Vá para a Lição 7, onde veremos como [construir aplicativos de chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

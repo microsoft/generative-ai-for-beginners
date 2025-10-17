@@ -1,24 +1,24 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
-  "translation_date": "2025-09-29T21:41:21+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T16:10:11+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "it"
 }
 -->
 # Creare Applicazioni per la Generazione di Immagini
 
-[![Creare Applicazioni per la Generazione di Immagini](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.it.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Creare Applicazioni per la Generazione di Immagini](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.it.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-Gli LLM non si limitano alla generazione di testo. È anche possibile generare immagini a partire da descrizioni testuali. Avere immagini come modalità può essere estremamente utile in numerosi settori, come MedTech, architettura, turismo, sviluppo di videogiochi e altro ancora. In questo capitolo, esamineremo i due modelli di generazione di immagini più popolari: DALL-E e Midjourney.
+Gli LLM non si limitano alla generazione di testo. È anche possibile generare immagini a partire da descrizioni testuali. Avere immagini come modalità può essere estremamente utile in numerosi settori, dalla tecnologia medica, all'architettura, al turismo, allo sviluppo di giochi e molto altro. In questo capitolo, esamineremo i due modelli di generazione di immagini più popolari, DALL-E e Midjourney.
 
 ## Introduzione
 
 In questa lezione, tratteremo:
 
 - La generazione di immagini e perché è utile.
-- DALL-E e Midjourney: cosa sono e come funzionano.
+- DALL-E e Midjourney, cosa sono e come funzionano.
 - Come costruire un'applicazione per la generazione di immagini.
 
 ## Obiettivi di Apprendimento
@@ -35,61 +35,61 @@ Le applicazioni per la generazione di immagini sono un ottimo modo per esplorare
 
 - **Modifica e sintesi di immagini**. Puoi generare immagini per una varietà di casi d'uso, come la modifica e la sintesi di immagini.
 
-- **Applicazioni in diversi settori**. Possono anche essere utilizzate per generare immagini per diversi settori come MedTech, Turismo, Sviluppo di videogiochi e altro.
+- **Applicazioni in diversi settori**. Possono anche essere utilizzate per generare immagini per una varietà di settori come MedTech, Turismo, Sviluppo di giochi e altro.
 
 ## Scenario: Edu4All
 
-Come parte di questa lezione, continueremo a lavorare con la nostra startup, Edu4All. Gli studenti creeranno immagini per le loro valutazioni; esattamente quali immagini dipenderà dagli studenti, ma potrebbero essere illustrazioni per la loro fiaba, la creazione di un nuovo personaggio per la loro storia o aiutarli a visualizzare le loro idee e concetti.
+Come parte di questa lezione, continueremo a lavorare con la nostra startup, Edu4All. Gli studenti creeranno immagini per le loro valutazioni; esattamente quali immagini dipenderà da loro, ma potrebbero essere illustrazioni per la loro fiaba, la creazione di un nuovo personaggio per la loro storia o aiutarli a visualizzare le loro idee e concetti.
 
 Ecco cosa potrebbero generare gli studenti di Edu4All, ad esempio, se stanno lavorando in classe sui monumenti:
 
 ![Startup Edu4All, classe sui monumenti, Torre Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.it.png)
 
-usando un prompt come:
+usando un prompt come
 
-> "Cane accanto alla Torre Eiffel al sole del primo mattino"
+> "Cane accanto alla Torre Eiffel al sole del mattino presto"
 
 ## Cosa sono DALL-E e Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) e [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sono due dei modelli di generazione di immagini più popolari, che permettono di utilizzare prompt per generare immagini.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) e [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) sono due dei modelli di generazione di immagini più popolari, che ti permettono di utilizzare prompt per generare immagini.
 
 ### DALL-E
 
-Iniziamo con DALL-E, un modello di AI Generativa che genera immagini a partire da descrizioni testuali.
+Iniziamo con DALL-E, che è un modello di AI Generativa che genera immagini a partire da descrizioni testuali.
 
 > [DALL-E è una combinazione di due modelli, CLIP e attenzione diffusa](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, è un modello che genera embeddings, rappresentazioni numeriche dei dati, da immagini e testo.
+- **CLIP**, è un modello che genera embeddings, che sono rappresentazioni numeriche di dati, da immagini e testo.
 
-- **Attenzione diffusa**, è un modello che genera immagini dagli embeddings. DALL-E è addestrato su un dataset di immagini e testo e può essere utilizzato per generare immagini a partire da descrizioni testuali. Ad esempio, DALL-E può essere utilizzato per generare immagini di un gatto con un cappello o di un cane con una cresta.
+- **Attenzione diffusa**, è un modello che genera immagini dagli embeddings. DALL-E è addestrato su un dataset di immagini e testo e può essere utilizzato per generare immagini a partire da descrizioni testuali. Ad esempio, DALL-E può essere utilizzato per generare immagini di un gatto con un cappello, o di un cane con una cresta.
 
 ### Midjourney
 
-Midjourney funziona in modo simile a DALL-E, generando immagini a partire da prompt testuali. Midjourney può anche essere utilizzato per generare immagini con prompt come "un gatto con un cappello" o "un cane con una cresta".
+Midjourney funziona in modo simile a DALL-E, generando immagini da prompt testuali. Midjourney può anche essere utilizzato per generare immagini usando prompt come "un gatto con un cappello" o "un cane con una cresta".
 
 ![Immagine generata da Midjourney, piccione meccanico](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 _Crediti immagine Wikipedia, immagine generata da Midjourney_
 
 ## Come funzionano DALL-E e Midjourney
 
-Prima di tutto, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E è un modello di AI Generativa basato sull'architettura transformer con un _transformer autoregressivo_.
+Prima di tutto, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E è un modello di AI Generativa basato sull'architettura transformer con un _trasformatore autoregressivo_.
 
-Un _transformer autoregressivo_ definisce come un modello genera immagini a partire da descrizioni testuali, generando un pixel alla volta e utilizzando i pixel generati per generare il pixel successivo. Passa attraverso più livelli in una rete neurale, fino a completare l'immagine.
+Un _trasformatore autoregressivo_ definisce come un modello genera immagini a partire da descrizioni testuali, generando un pixel alla volta e poi utilizzando i pixel generati per generare il pixel successivo. Passa attraverso più livelli in una rete neurale, fino a completare l'immagine.
 
-Con questo processo, DALL-E controlla attributi, oggetti, caratteristiche e altro nell'immagine che genera. Tuttavia, DALL-E 2 e 3 offrono un maggiore controllo sull'immagine generata.
+Con questo processo, DALL-E controlla attributi, oggetti, caratteristiche e altro nell'immagine che genera. Tuttavia, DALL-E 2 e 3 hanno un controllo maggiore sull'immagine generata.
 
 ## Creare la tua prima applicazione per la generazione di immagini
 
 Cosa serve per creare un'applicazione per la generazione di immagini? Hai bisogno delle seguenti librerie:
 
 - **python-dotenv**, è altamente consigliato utilizzare questa libreria per mantenere i tuoi segreti in un file _.env_ separato dal codice.
-- **openai**, questa libreria ti permette di interagire con l'API di OpenAI.
+- **openai**, questa libreria è ciò che utilizzerai per interagire con l'API di OpenAI.
 - **pillow**, per lavorare con immagini in Python.
-- **requests**, per aiutarti a effettuare richieste HTTP.
+- **requests**, per aiutarti a fare richieste HTTP.
 
 ## Creare e distribuire un modello Azure OpenAI
 
-Se non lo hai già fatto, segui le istruzioni sulla pagina [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) per creare una risorsa e un modello Azure OpenAI. Seleziona DALL-E 3 come modello.
+Se non lo hai già fatto, segui le istruzioni sulla pagina [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) per creare una risorsa e un modello Azure OpenAI. Seleziona DALL-E 3 come modello.  
 
 ## Creare l'app
 
@@ -222,7 +222,7 @@ Spieghiamo questo codice:
 
   Il codice sopra risponde con un oggetto JSON che contiene l'URL dell'immagine generata. Possiamo utilizzare l'URL per scaricare l'immagine e salvarla in un file.
 
-- Infine, apriamo l'immagine e utilizziamo il visualizzatore di immagini standard per mostrarla:
+- Infine, apriamo l'immagine e utilizziamo il visualizzatore di immagini standard per visualizzarla:
 
   ```python
   image = Image.open(image_path)
@@ -231,7 +231,7 @@ Spieghiamo questo codice:
 
 ### Maggiori dettagli sulla generazione dell'immagine
 
-Esaminiamo il codice che genera l'immagine in dettaglio:
+Esaminiamo il codice che genera l'immagine più nel dettaglio:
 
    ```python
      generation_response = client.images.generate(
@@ -241,23 +241,23 @@ Esaminiamo il codice che genera l'immagine in dettaglio:
                            )
    ```
 
-- **prompt**, è il prompt testuale utilizzato per generare l'immagine. In questo caso, stiamo utilizzando il prompt "Coniglio su cavallo, che tiene un lecca-lecca, in un prato nebbioso dove crescono narcisi".
+- **prompt**, è il prompt testuale utilizzato per generare l'immagine. In questo caso, stiamo usando il prompt "Coniglio su un cavallo, con un lecca-lecca, in un prato nebbioso dove crescono narcisi".
 - **size**, è la dimensione dell'immagine generata. In questo caso, stiamo generando un'immagine di 1024x1024 pixel.
 - **n**, è il numero di immagini generate. In questo caso, stiamo generando due immagini.
 - **temperature**, è un parametro che controlla la casualità dell'output di un modello di AI Generativa. La temperatura è un valore compreso tra 0 e 1, dove 0 significa che l'output è deterministico e 1 significa che l'output è casuale. Il valore predefinito è 0.7.
 
-Ci sono altre cose che puoi fare con le immagini che tratteremo nella sezione successiva.
+Ci sono altre cose che puoi fare con le immagini che tratteremo nella prossima sezione.
 
 ## Capacità aggiuntive della generazione di immagini
 
-Finora hai visto come siamo stati in grado di generare un'immagine con poche righe di codice in Python. Tuttavia, ci sono altre cose che puoi fare con le immagini.
+Finora hai visto come siamo stati in grado di generare un'immagine usando poche righe di codice in Python. Tuttavia, ci sono altre cose che puoi fare con le immagini.
 
 Puoi anche fare quanto segue:
 
-- **Effettuare modifiche**. Fornendo un'immagine esistente, una maschera e un prompt, puoi modificare un'immagine. Ad esempio, puoi aggiungere qualcosa a una parte di un'immagine. Immagina la nostra immagine del coniglio: puoi aggiungere un cappello al coniglio. Come fare ciò è fornendo l'immagine, una maschera (che identifica la parte dell'area per il cambiamento) e un prompt testuale per indicare cosa dovrebbe essere fatto. 
-> Nota: questo non è supportato in DALL-E 3.
-
-Ecco un esempio utilizzando GPT Image:
+- **Effettuare modifiche**. Fornendo un'immagine esistente, una maschera e un prompt, puoi modificare un'immagine. Ad esempio, puoi aggiungere qualcosa a una parte di un'immagine. Immagina la nostra immagine del coniglio, puoi aggiungere un cappello al coniglio. Come fare ciò è fornendo l'immagine, una maschera (identificando la parte dell'area per la modifica) e un prompt testuale per indicare cosa dovrebbe essere fatto. 
+> Nota: questo non è supportato in DALL-E 3. 
+ 
+Ecco un esempio usando GPT Image:
 
    ```python
    response = client.images.edit(
@@ -277,7 +277,8 @@ Ecco un esempio utilizzando GPT Image:
   <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.it.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
-- **Creare variazioni**. L'idea è che prendi un'immagine esistente e chiedi che vengano create variazioni. Per creare una variazione, fornisci un'immagine e un prompt testuale e un codice come segue:
+
+- **Creare variazioni**. L'idea è che prendi un'immagine esistente e chiedi che vengano create delle variazioni. Per creare una variazione, fornisci un'immagine e un prompt testuale e un codice come segue:
 
   ```python
   response = openai.Image.create_variation(
@@ -296,11 +297,11 @@ La temperatura è un parametro che controlla la casualità dell'output di un mod
 
 Esaminiamo un esempio di come funziona la temperatura, eseguendo questo prompt due volte:
 
-> Prompt: "Coniglio su cavallo, che tiene un lecca-lecca, in un prato nebbioso dove crescono narcisi"
+> Prompt : "Coniglio su un cavallo, con un lecca-lecca, in un prato nebbioso dove crescono narcisi"
 
-![Coniglio su cavallo che tiene un lecca-lecca, versione 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.it.png)
+![Coniglio su un cavallo con un lecca-lecca, versione 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.it.png)
 
-Ora eseguiamo lo stesso prompt per vedere che non otterremo la stessa immagine due volte:
+Ora eseguiamo lo stesso prompt solo per vedere che non otterremo la stessa immagine due volte:
 
 ![Immagine generata di coniglio su cavallo](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.it.png)
 
@@ -332,7 +333,7 @@ generation_response = client.images.create(
 Ora, quando esegui questo codice, ottieni queste due immagini:
 
 - ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.it.png)
-- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.it.png)
+- ![Temperatura 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.it.png)
 
 Qui puoi chiaramente vedere come le immagini si somigliano di più.
 
@@ -342,7 +343,7 @@ Con la nostra demo, possiamo già generare immagini per i nostri clienti. Tuttav
 
 Ad esempio, non vogliamo generare immagini che non siano adatte al lavoro o che non siano appropriate per i bambini.
 
-Possiamo farlo con _metaprompt_. I metaprompt sono prompt testuali utilizzati per controllare l'output di un modello di AI Generativa. Ad esempio, possiamo utilizzare metaprompt per controllare l'output e garantire che le immagini generate siano adatte al lavoro o appropriate per i bambini.
+Possiamo farlo con i _metaprompt_. I metaprompt sono prompt testuali utilizzati per controllare l'output di un modello di AI Generativa. Ad esempio, possiamo utilizzare i metaprompt per controllare l'output e garantire che le immagini generate siano adatte al lavoro o appropriate per i bambini.
 
 ### Come funziona?
 
@@ -484,4 +485,4 @@ Vai alla Lezione 10, dove vedremo come [creare applicazioni AI con low-code](../
 ---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
