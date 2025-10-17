@@ -1,121 +1,121 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-07-09T12:56:11+00:00",
+  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
+  "translation_date": "2025-10-17T18:58:56+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "sv"
 }
 -->
 # Bygga sökapplikationer
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sv.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduktion till Generativ AI och Stora Språkmodeller](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sv.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-> > _Klicka på bilden ovan för att se videon till denna lektion_
+> > _Klicka på bilden ovan för att se videon för denna lektion_
 
-LLM:er handlar om mer än bara chattbotar och textgenerering. Det går också att bygga sökapplikationer med hjälp av Embeddings. Embeddings är numeriska representationer av data, även kallade vektorer, och kan användas för semantisk sökning i data.
+Det finns mer att utforska med LLMs än bara chatbotar och textgenerering. Det är också möjligt att bygga sökapplikationer med hjälp av Embeddings. Embeddings är numeriska representationer av data, även kända som vektorer, och kan användas för semantisk sökning av data.
 
-I denna lektion ska du bygga en sökapplikation för vårt utbildningsstartup. Vårt startup är en ideell organisation som erbjuder gratis utbildning till studenter i utvecklingsländer. Vi har ett stort antal YouTube-videor som studenter kan använda för att lära sig om AI. Vårt startup vill bygga en sökapplikation som låter studenter söka efter en YouTube-video genom att skriva en fråga.
+I denna lektion ska du bygga en sökapplikation för vår utbildningsstartup. Vår startup är en ideell organisation som erbjuder gratis utbildning till studenter i utvecklingsländer. Startupen har ett stort antal YouTube-videor som studenter kan använda för att lära sig om AI. Startupen vill bygga en sökapplikation som gör det möjligt för studenter att söka efter en YouTube-video genom att skriva en fråga.
 
-Till exempel kan en student skriva "Vad är Jupyter Notebooks?" eller "Vad är Azure ML" och sökapplikationen kommer att returnera en lista med YouTube-videor som är relevanta för frågan, och ännu bättre, sökapplikationen kommer att ge en länk till den plats i videon där svaret på frågan finns.
+Till exempel kan en student skriva in 'Vad är Jupyter Notebooks?' eller 'Vad är Azure ML' och sökapplikationen kommer att returnera en lista med YouTube-videor som är relevanta för frågan, och ännu bättre, sökapplikationen kommer att returnera en länk till den plats i videon där svaret på frågan finns.
 
 ## Introduktion
 
-I denna lektion kommer vi att gå igenom:
+I denna lektion kommer vi att täcka:
 
-- Semantisk sökning vs nyckelordssökning.
-- Vad Text Embeddings är.
-- Skapa ett Text Embeddings-index.
-- Söka i ett Text Embeddings-index.
+- Semantisk vs nyckelordssökning.
+- Vad är Text Embeddings.
+- Skapa ett Text Embeddings Index.
+- Söka i ett Text Embeddings Index.
 
 ## Lärandemål
 
-Efter att ha genomfört denna lektion kommer du att kunna:
+Efter att ha avslutat denna lektion kommer du att kunna:
 
-- Förklara skillnaden mellan semantisk och nyckelordssökning.
+- Förstå skillnaden mellan semantisk och nyckelordssökning.
 - Förklara vad Text Embeddings är.
-- Skapa en applikation som använder Embeddings för att söka i data.
+- Skapa en applikation med Embeddings för att söka efter data.
 
 ## Varför bygga en sökapplikation?
 
-Att skapa en sökapplikation hjälper dig att förstå hur man använder Embeddings för att söka i data. Du lär dig också hur man bygger en sökapplikation som studenter kan använda för att snabbt hitta information.
+Att skapa en sökapplikation hjälper dig att förstå hur man använder Embeddings för att söka efter data. Du kommer också att lära dig hur man bygger en sökapplikation som kan användas av studenter för att snabbt hitta information.
 
-Lektionens Embedding-index innehåller YouTube-transkriptionerna för Microsofts [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-kanal. AI Show är en kanal som lär ut AI och maskininlärning. Embedding-indexet innehåller Embeddings för varje YouTube-transkription fram till oktober 2023. Du kommer att använda Embedding-indexet för att bygga en sökapplikation för vårt startup. Sökapplikationen returnerar en länk till den plats i videon där svaret på frågan finns. Detta är ett utmärkt sätt för studenter att snabbt hitta den information de behöver.
+Lektionens Embedding Index innehåller transkriptioner från YouTube-videor på Microsofts [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-kanal. AI Show är en YouTube-kanal som lär dig om AI och maskininlärning. Embedding Index innehåller Embeddings för varje YouTube-transkription fram till oktober 2023. Du kommer att använda Embedding Index för att bygga en sökapplikation för vår startup. Sökapplikationen returnerar en länk till den plats i videon där svaret på frågan finns. Detta är ett utmärkt sätt för studenter att snabbt hitta den information de behöver.
 
-Nedan är ett exempel på en semantisk sökfråga för frågan "kan du använda rstudio med azure ml?". Kolla in YouTube-URL:en, du ser att URL:en innehåller en tidsstämpel som tar dig till den plats i videon där svaret finns.
+Följande är ett exempel på en semantisk fråga för frågan 'kan du använda rstudio med azure ml?'. Kolla in YouTube-URL:en, du kommer att se att URL:en innehåller en tidsstämpel som tar dig till den plats i videon där svaret på frågan finns.
 
-![Semantisk sökfråga för frågan "kan du använda rstudio med Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sv.png)
+![Semantisk fråga för frågan "kan du använda rstudio med Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sv.png)
 
 ## Vad är semantisk sökning?
 
-Du kanske undrar, vad är semantisk sökning? Semantisk sökning är en sökteknik som använder ordenas betydelse i en fråga för att returnera relevanta resultat.
+Nu kanske du undrar, vad är semantisk sökning? Semantisk sökning är en sökteknik som använder semantiken, eller betydelsen, av orden i en fråga för att returnera relevanta resultat.
 
-Här är ett exempel på semantisk sökning. Säg att du vill köpa en bil och söker på "min drömbil". Semantisk sökning förstår att du inte drömmer om en bil, utan att du letar efter din ideala bil. Semantisk sökning förstår din avsikt och ger relevanta resultat. Alternativet är nyckelordssökning som bokstavligen skulle söka efter drömmar om bilar och ofta ger irrelevanta resultat.
+Här är ett exempel på semantisk sökning. Låt oss säga att du letar efter att köpa en bil, du kanske söker efter 'min drömbil', semantisk sökning förstår att du inte `drömmer` om en bil, utan snarare letar efter att köpa din `ideala` bil. Semantisk sökning förstår din avsikt och returnerar relevanta resultat. Alternativet är `nyckelordssökning` som bokstavligen skulle söka efter drömmar om bilar och ofta returnera irrelevanta resultat.
 
 ## Vad är Text Embeddings?
 
-[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) är en teknik för textrepresentation som används inom [naturlig språkbehandling](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Text embeddings är semantiska numeriska representationer av text. Embeddings används för att representera data på ett sätt som är lätt för en maskin att förstå. Det finns många modeller för att skapa text embeddings, i denna lektion fokuserar vi på att generera embeddings med OpenAI Embedding Model.
+[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) är en teknik för textrepresentation som används inom [naturlig språkbehandling](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Text embeddings är semantiska numeriska representationer av text. Embeddings används för att representera data på ett sätt som är lätt för en maskin att förstå. Det finns många modeller för att skapa text embeddings, och i denna lektion kommer vi att fokusera på att generera embeddings med OpenAI Embedding Model.
 
-Här är ett exempel, tänk dig att följande text är från en transkription av ett av avsnitten på AI Show YouTube-kanal:
+Här är ett exempel, föreställ dig att följande text finns i en transkription från ett avsnitt på AI Show YouTube-kanalen:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Vi skickar texten till OpenAI Embedding API och får tillbaka följande embedding bestående av 1536 siffror, alltså en vektor. Varje siffra i vektorn representerar en annan aspekt av texten. För att göra det kort visar vi här de första 10 siffrorna i vektorn.
+Vi skickar texten till OpenAI Embedding API och det skulle returnera följande embedding bestående av 1536 siffror, även kallad en vektor. Varje siffra i vektorn representerar en annan aspekt av texten. För korthetens skull är här de första 10 siffrorna i vektorn.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## Hur skapas Embedding-indexet?
+## Hur skapas Embedding Index?
 
-Embedding-indexet för denna lektion skapades med en serie Python-skript. Du hittar skripten tillsammans med instruktioner i [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) i mappen 'scripts' för denna lektion. Du behöver inte köra dessa skript för att slutföra lektionen eftersom Embedding-indexet redan finns tillgängligt.
+Embedding Index för denna lektion skapades med en serie Python-skript. Du hittar skripten tillsammans med instruktioner i [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) i mappen 'scripts' för denna lektion. Du behöver inte köra dessa skript för att slutföra denna lektion eftersom Embedding Index tillhandahålls för dig.
 
-Skripten utför följande steg:
+Skripten utför följande operationer:
 
 1. Transkriptionen för varje YouTube-video i [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) spellistan laddas ner.
-2. Med hjälp av [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) försöker man extrahera talarens namn från de första 3 minuterna av YouTube-transkriptionen. Talarnamnet för varje video sparas i Embedding-indexet `embedding_index_3m.json`.
-3. Transkriptionstexten delas sedan upp i **3-minuters textsegment**. Segmentet inkluderar cirka 20 ord som överlappar med nästa segment för att säkerställa att Embedding för segmentet inte kapas och för att ge bättre sökkontext.
-4. Varje textsegment skickas sedan till OpenAI Chat API för att sammanfatta texten till 60 ord. Sammanfattningen sparas också i Embedding-indexet `embedding_index_3m.json`.
-5. Slutligen skickas segmenttexten till OpenAI Embedding API. Embedding API returnerar en vektor med 1536 siffror som representerar segmentets semantiska betydelse. Segmentet tillsammans med OpenAI Embedding-vektorn sparas i Embedding-indexet `embedding_index_3m.json`.
+2. Med hjälp av [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) görs ett försök att extrahera talarens namn från de första 3 minuterna av YouTube-transkriptionen. Talarens namn för varje video lagras i Embedding Index som heter `embedding_index_3m.json`.
+3. Transkriptionstexten delas sedan upp i **3-minuters textsegment**. Segmentet inkluderar cirka 20 ord som överlappar från nästa segment för att säkerställa att Embedding för segmentet inte avbryts och för att ge bättre sökkontext.
+4. Varje textsegment skickas sedan till OpenAI Chat API för att sammanfatta texten till 60 ord. Sammanfattningen lagras också i Embedding Index `embedding_index_3m.json`.
+5. Slutligen skickas segmenttexten till OpenAI Embedding API. Embedding API returnerar en vektor med 1536 siffror som representerar den semantiska betydelsen av segmentet. Segmentet tillsammans med OpenAI Embedding-vektorn lagras i Embedding Index `embedding_index_3m.json`.
 
 ### Vektordatabaser
 
-För enkelhetens skull lagras Embedding-indexet i en JSON-fil som heter `embedding_index_3m.json` och laddas in i en Pandas DataFrame. Men i produktion skulle Embedding-indexet lagras i en vektordatabas som till exempel [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), för att nämna några.
+För enkelhetens skull i lektionen lagras Embedding Index i en JSON-fil som heter `embedding_index_3m.json` och laddas in i en Pandas DataFrame. Men i produktion skulle Embedding Index lagras i en vektordatabas som [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), för att nämna några.
 
-## Förstå cosine similarity
+## Förstå kosinuslikhet
 
-Vi har lärt oss om text embeddings, nästa steg är att lära sig hur man använder text embeddings för att söka i data och särskilt hitta de mest liknande embeddings till en given fråga med hjälp av cosine similarity.
+Vi har lärt oss om text embeddings, nästa steg är att lära oss hur man använder text embeddings för att söka efter data och särskilt hitta de mest liknande embeddings till en given fråga med hjälp av kosinuslikhet.
 
-### Vad är cosine similarity?
+### Vad är kosinuslikhet?
 
-Cosine similarity är ett mått på likhet mellan två vektorer, det kallas också ibland för `nearest neighbor search`. För att göra en cosine similarity-sökning behöver du _vektorisera_ _frågetexten_ med OpenAI Embedding API. Sedan beräknar du _cosine similarity_ mellan frågevektorn och varje vektor i Embedding-indexet. Kom ihåg att Embedding-indexet har en vektor för varje textsegment i YouTube-transkriptionen. Slutligen sorterar du resultaten efter cosine similarity och de textsegment med högst cosine similarity är mest lika frågan.
+Kosinuslikhet är ett mått på likhet mellan två vektorer, du kommer också att höra detta refereras till som `närmaste grann-sökning`. För att utföra en kosinuslikhetssökning behöver du _vektorisera_ för _fråge_text med hjälp av OpenAI Embedding API. Sedan beräknar du _kosinuslikheten_ mellan frågevektorn och varje vektor i Embedding Index. Kom ihåg att Embedding Index har en vektor för varje YouTube-transkriptionstextsegment. Slutligen sorterar du resultaten efter kosinuslikhet och textsegmenten med högst kosinuslikhet är de mest liknande frågan.
 
-Ur ett matematiskt perspektiv mäter cosine similarity cosinus för vinkeln mellan två vektorer projicerade i ett flerdimensionellt rum. Detta mått är användbart eftersom om två dokument är långt ifrån varandra enligt Euklidiskt avstånd på grund av storlek, kan de ändå ha en mindre vinkel mellan sig och därmed högre cosine similarity. För mer information om cosine similarity-formler, se [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Ur ett matematiskt perspektiv mäter kosinuslikhet kosinus för vinkeln mellan två vektorer projicerade i ett multidimensionellt utrymme. Denna mätning är fördelaktig, eftersom om två dokument är långt ifrån varandra enligt euklidiskt avstånd på grund av storlek, kan de fortfarande ha en mindre vinkel mellan sig och därmed högre kosinuslikhet. För mer information om kosinuslikhetsekvationer, se [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Bygg din första sökapplikation
+## Bygga din första sökapplikation
 
-Nu ska vi lära oss hur man bygger en sökapplikation med Embeddings. Sökapplikationen låter studenter söka efter en video genom att skriva en fråga. Applikationen returnerar en lista med videor som är relevanta för frågan. Den ger också en länk till den plats i videon där svaret finns.
+Nästa steg är att lära oss hur man bygger en sökapplikation med Embeddings. Sökapplikationen gör det möjligt för studenter att söka efter en video genom att skriva en fråga. Sökapplikationen returnerar en lista med videor som är relevanta för frågan. Sökapplikationen returnerar också en länk till den plats i videon där svaret på frågan finns.
 
-Denna lösning har byggts och testats på Windows 11, macOS och Ubuntu 22.04 med Python 3.10 eller senare. Du kan ladda ner Python från [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Denna lösning byggdes och testades på Windows 11, macOS och Ubuntu 22.04 med Python 3.10 eller senare. Du kan ladda ner Python från [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-## Uppgift – bygga en sökapplikation för att hjälpa studenter
+## Uppgift - bygga en sökapplikation för att möjliggöra för studenter
 
-Vi presenterade vårt startup i början av lektionen. Nu är det dags att låta studenterna bygga en sökapplikation för sina uppgifter.
+Vi introducerade vår startup i början av denna lektion. Nu är det dags att möjliggöra för studenterna att bygga en sökapplikation för sina bedömningar.
 
-I denna uppgift ska du skapa Azure OpenAI-tjänster som används för att bygga sökapplikationen. Du kommer att skapa följande Azure OpenAI-tjänster. Du behöver en Azure-prenumeration för att slutföra uppgiften.
+I denna uppgift kommer du att skapa Azure OpenAI Services som kommer att användas för att bygga sökapplikationen. Du kommer att skapa följande Azure OpenAI Services. Du behöver ett Azure-abonnemang för att slutföra denna uppgift.
 
 ### Starta Azure Cloud Shell
 
 1. Logga in på [Azure-portalen](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
-2. Välj Cloud Shell-ikonen uppe till höger i Azure-portalen.
+2. Välj Cloud Shell-ikonen i det övre högra hörnet av Azure-portalen.
 3. Välj **Bash** som miljötyp.
 
 #### Skapa en resursgrupp
 
 > För dessa instruktioner använder vi resursgruppen med namnet "semantic-video-search" i East US.
-> Du kan ändra namnet på resursgruppen, men om du ändrar platsen för resurserna,
+> Du kan ändra namnet på resursgruppen, men när du ändrar platsen för resurserna,
 > kontrollera [modellens tillgänglighetstabell](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
@@ -159,17 +159,19 @@ az cognitiveservices account deployment create \
 
 ## Lösning
 
-Öppna [lösningsnotebooken](python/aoai-solution.ipynb) i GitHub Codespaces och följ instruktionerna i Jupyter Notebook.
+Öppna [lösningsnotebooken](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) i GitHub Codespaces och följ instruktionerna i Jupyter Notebook.
 
-När du kör notebooken kommer du att uppmanas att skriva in en fråga. Inmatningsrutan ser ut så här:
+När du kör notebooken kommer du att bli ombedd att ange en fråga. Inmatningsrutan kommer att se ut så här:
 
-![Inmatningsruta för användaren att skriva in en fråga](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sv.png)
+![Inmatningsruta för användaren att ange en fråga](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sv.png)
 
-## Bra jobbat! Fortsätt lära dig
+## Bra jobbat! Fortsätt din inlärning
 
-Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla dina kunskaper inom Generative AI!
+Efter att ha avslutat denna lektion, kolla in vår [Generativ AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om Generativ AI!
 
-Gå vidare till Lektion 9 där vi tittar på hur man [bygger applikationer för bildgenerering](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Gå vidare till Lektion 9 där vi kommer att titta på hur man [bygger applikationer för bildgenerering](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

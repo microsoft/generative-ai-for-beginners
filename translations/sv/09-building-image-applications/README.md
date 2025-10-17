@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
-  "translation_date": "2025-09-29T21:45:34+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T19:02:50+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "sv"
 }
 -->
 # Bygga applikationer för bildgenerering
 
-[![Bygga applikationer för bildgenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sv.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![Bygga applikationer för bildgenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sv.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-Det finns mer att utforska med LLMs än bara textgenerering. Det är också möjligt att generera bilder från textbeskrivningar. Att ha bilder som en modalitet kan vara mycket användbart inom flera områden, såsom MedTech, arkitektur, turism, spelutveckling och mer. I detta kapitel kommer vi att titta på de två mest populära modellerna för bildgenerering, DALL-E och Midjourney.
+Det finns mer att utforska med LLM än bara textgenerering. Det är också möjligt att generera bilder från textbeskrivningar. Att ha bilder som en modalitet kan vara mycket användbart inom flera områden som MedTech, arkitektur, turism, spelutveckling och mer. I detta kapitel kommer vi att titta på de två mest populära modellerna för bildgenerering, DALL-E och Midjourney.
 
 ## Introduktion
 
@@ -41,17 +41,17 @@ Applikationer för bildgenerering är ett utmärkt sätt att utforska kapacitete
 
 Som en del av denna lektion kommer vi att fortsätta arbeta med vår startup, Edu4All. Studenterna kommer att skapa bilder för sina uppgifter, exakt vilka bilder är upp till studenterna, men de kan vara illustrationer för deras egen saga, skapa en ny karaktär för sin berättelse eller hjälpa dem att visualisera sina idéer och koncept.
 
-Här är ett exempel på vad Edu4All:s studenter kan generera om de arbetar i klassrummet med monument:
+Här är vad Edu4Alls studenter kan generera, till exempel om de arbetar i klassrummet med monument:
 
 ![Edu4All startup, klass om monument, Eiffeltornet](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sv.png)
 
 med en prompt som
 
-> "Hund bredvid Eiffeltornet i tidigt morgonljus"
+> "Hund bredvid Eiffeltornet i morgonsolens ljus"
 
 ## Vad är DALL-E och Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) och [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) är två av de mest populära modellerna för bildgenerering, som låter dig använda prompts för att generera bilder.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) och [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) är två av de mest populära modellerna för bildgenerering, de låter dig använda prompts för att generera bilder.
 
 ### DALL-E
 
@@ -76,7 +76,7 @@ Först, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-k
 
 En _autoregressiv transformer_ definierar hur en modell genererar bilder från textbeskrivningar, den genererar en pixel i taget och använder sedan de genererade pixlarna för att generera nästa pixel. Den passerar genom flera lager i ett neuralt nätverk tills bilden är komplett.
 
-Med denna process kan DALL-E kontrollera attribut, objekt, egenskaper och mer i den bild den genererar. Dock har DALL-E 2 och 3 mer kontroll över den genererade bilden.
+Med denna process kontrollerar DALL-E attribut, objekt, egenskaper och mer i den bild den genererar. Dock har DALL-E 2 och 3 mer kontroll över den genererade bilden.
 
 ## Bygga din första applikation för bildgenerering
 
@@ -221,7 +221,7 @@ Låt oss förklara denna kod:
                       )
   ```
 
-  Koden ovan svarar med ett JSON-objekt som innehåller URL:en till den genererade bilden. Vi kan använda URL:en för att ladda ner bilden och spara den till en fil.
+  Koden ovan svarar med ett JSON-objekt som innehåller URL:en till den genererade bilden. Vi kan använda URL:en för att ladda ner bilden och spara den i en fil.
 
 - Slutligen öppnar vi bilden och använder standardbildvisaren för att visa den:
 
@@ -255,7 +255,7 @@ Du har hittills sett hur vi kunde generera en bild med några få rader i Python
 
 Du kan också göra följande:
 
-- **Utföra redigeringar**. Genom att tillhandahålla en befintlig bild, en mask och en prompt kan du ändra en bild. Till exempel kan du lägga till något till en del av en bild. Föreställ dig vår kaninbild, du kan lägga till en hatt på kaninen. Hur du skulle göra det är genom att tillhandahålla bilden, en mask (som identifierar den del av området för ändringen) och en textprompt som säger vad som ska göras. 
+- **Utföra redigeringar**. Genom att tillhandahålla en befintlig bild, en mask och en prompt kan du ändra en bild. Till exempel kan du lägga till något på en del av en bild. Föreställ dig vår kaninbild, du kan lägga till en hatt på kaninen. Hur du skulle göra det är genom att tillhandahålla bilden, en mask (som identifierar området för ändringen) och en textprompt som säger vad som ska göras. 
 > Obs: detta stöds inte i DALL-E 3. 
  
 Här är ett exempel med GPT Image:
@@ -270,7 +270,7 @@ Här är ett exempel med GPT Image:
    image_url = response.data[0].url
    ```
 
-  Basbilden skulle bara innehålla loungen med poolen, men slutbilden skulle ha en flamingo:
+  Basbilden skulle bara innehålla loungen med poolen men slutbilden skulle ha en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.sv.png" style="width: 30%; max-width: 200px; height: auto;">
@@ -279,7 +279,7 @@ Här är ett exempel med GPT Image:
 </div>
 
 
-- **Skapa variationer**. Idén är att du tar en befintlig bild och ber att variationer skapas. För att skapa en variation tillhandahåller du en bild och en textprompt och kodar så här:
+- **Skapa variationer**. Idén är att du tar en befintlig bild och ber att variationer skapas. För att skapa en variation tillhandahåller du en bild och en textprompt och kod som så här:
 
   ```python
   response = openai.Image.create_variation(
@@ -300,13 +300,13 @@ Låt oss titta på ett exempel på hur temperatur fungerar genom att köra denna
 
 > Prompt: "Kanin på häst, håller en klubba, på en dimmig äng där det växer påskliljor"
 
-![Kanin på en häst som håller en klubba, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sv.png)
+![Kanin på häst som håller en klubba, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sv.png)
 
 Nu låt oss köra samma prompt igen för att se att vi inte får samma bild två gånger:
 
 ![Genererad bild av kanin på häst](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sv.png)
 
-Som du kan se är bilderna liknande, men inte identiska. Låt oss prova att ändra temperaturvärdet till 0.1 och se vad som händer:
+Som du kan se är bilderna liknande, men inte identiska. Låt oss försöka ändra temperaturvärdet till 0.1 och se vad som händer:
 
 ```python
  generation_response = client.images.create(
@@ -396,11 +396,11 @@ Create an image of a bunny on a horse, holding a lollipop"
 # TODO add request to generate image
 ```
 
-Från prompten ovan kan du se hur alla bilder som skapas tar hänsyn till metaprompten.
+Från ovanstående prompt kan du se hur alla bilder som skapas tar hänsyn till metaprompten.
 
-## Uppgift - låt oss ge studenterna möjlighet
+## Uppgift - låt oss möjliggöra för studenter
 
-Vi introducerade Edu4All i början av denna lektion. Nu är det dags att ge studenterna möjlighet att generera bilder för sina uppgifter.
+Vi introducerade Edu4All i början av denna lektion. Nu är det dags att möjliggöra för studenterna att generera bilder för sina uppgifter.
 
 Studenterna kommer att skapa bilder för sina uppgifter som innehåller monument, exakt vilka monument är upp till studenterna. Studenterna uppmanas att använda sin kreativitet i denna uppgift för att placera dessa monument i olika sammanhang.
 
@@ -481,9 +481,9 @@ except openai.BadRequestError as err:
 
 Efter att ha avslutat denna lektion, kolla in vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om Generativ AI!
 
-Gå vidare till Lektion 10 där vi kommer att titta på hur man [bygger AI-applikationer med låg kod](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+Gå vidare till Lektion 10 där vi kommer att titta på hur man [bygger AI-applikationer med lågkod](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
