@@ -1,91 +1,91 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ce8224073b86b728ed52b19bed7932fd",
-  "translation_date": "2025-07-09T12:07:24+00:00",
+  "original_hash": "df027997f1448323d6159b78a1b669bf",
+  "translation_date": "2025-10-17T21:52:48+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "sk"
 }
 -->
-# Tvorba aplikácií na generovanie textu
+# Vytváranie aplikácií na generovanie textu
 
-[![Tvorba aplikácií na generovanie textu](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.sk.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Vytváranie aplikácií na generovanie textu](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.sk.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Kliknite na obrázok vyššie pre zobrazenie videa k tejto lekcii)_
+> _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 
-Doteraz ste v tomto kurze videli základné pojmy ako prompt a dokonca celú disciplínu nazývanú „prompt engineering“. Mnohé nástroje, s ktorými môžete komunikovať, ako ChatGPT, Office 365, Microsoft Power Platform a ďalšie, vás podporujú v používaní promptov na dosiahnutie cieľa.
+Doteraz ste v tomto kurze videli, že existujú základné koncepty ako prompty a dokonca celá disciplína nazývaná "prompt engineering". Mnohé nástroje, s ktorými môžete interagovať, ako ChatGPT, Office 365, Microsoft Power Platform a ďalšie, vám umožňujú používať prompty na dosiahnutie určitých cieľov.
 
-Ak chcete takúto funkcionalitu pridať do aplikácie, musíte pochopiť pojmy ako prompt, completion a vybrať si knižnicu, s ktorou budete pracovať. Presne to sa naučíte v tejto kapitole.
+Ak chcete pridať takúto skúsenosť do aplikácie, musíte pochopiť koncepty ako prompty, dokončenia a vybrať knižnicu, s ktorou budete pracovať. Presne to sa naučíte v tejto kapitole.
 
 ## Úvod
 
 V tejto kapitole sa naučíte:
 
-- Zoznámiť sa s knižnicou openai a jej základnými konceptmi.
-- Vytvoriť aplikáciu na generovanie textu pomocou openai.
-- Pochopiť, ako používať pojmy ako prompt, temperature a tokens na tvorbu aplikácie na generovanie textu.
+- O knižnici openai a jej základných konceptoch.
+- Ako vytvoriť aplikáciu na generovanie textu pomocou openai.
+- Ako používať koncepty ako prompt, teplota a tokeny na vytvorenie aplikácie na generovanie textu.
 
 ## Ciele učenia
 
-Na konci tejto lekcie budete vedieť:
+Na konci tejto lekcie budete schopní:
 
 - Vysvetliť, čo je aplikácia na generovanie textu.
 - Vytvoriť aplikáciu na generovanie textu pomocou openai.
-- Nakonfigurovať aplikáciu tak, aby používala viac alebo menej tokenov a tiež meniť hodnotu temperature pre rôznorodý výstup.
+- Konfigurovať svoju aplikáciu na použitie viac alebo menej tokenov a tiež zmeniť teplotu pre rôznorodý výstup.
 
 ## Čo je aplikácia na generovanie textu?
 
-Bežne, keď vytvárate aplikáciu, má nejaké rozhranie, napríklad:
+Bežne, keď vytvárate aplikáciu, má nejaký druh rozhrania, ako napríklad:
 
-- Príkazové rozhranie. Konzolové aplikácie sú typické aplikácie, kde zadávate príkaz a aplikácia vykoná úlohu. Napríklad `git` je aplikácia založená na príkazoch.
-- Užívateľské rozhranie (UI). Niektoré aplikácie majú grafické užívateľské rozhranie (GUI), kde klikáte na tlačidlá, zadávate text, vyberáte možnosti a podobne.
+- Na základe príkazov. Konzolové aplikácie sú typické aplikácie, kde zadáte príkaz a vykoná sa úloha. Napríklad `git` je aplikácia na základe príkazov.
+- Užívateľské rozhranie (UI). Niektoré aplikácie majú grafické užívateľské rozhrania (GUI), kde klikáte na tlačidlá, zadávate text, vyberáte možnosti a podobne.
 
-### Konzolové a UI aplikácie majú obmedzenia
+### Konzolové a UI aplikácie sú obmedzené
 
-Porovnajte to s aplikáciou založenou na príkazoch, kde zadávate príkaz:
+Porovnajte to s aplikáciou na základe príkazov, kde zadávate príkaz:
 
-- **Je obmedzená**. Nemôžete zadať ľubovoľný príkaz, len tie, ktoré aplikácia podporuje.
-- **Jazykovo špecifická**. Niektoré aplikácie podporujú viacero jazykov, ale štandardne sú vytvorené pre konkrétny jazyk, aj keď môžete pridať podporu ďalších jazykov.
+- **Je to obmedzené**. Nemôžete zadať akýkoľvek príkaz, iba tie, ktoré aplikácia podporuje.
+- **Špecifické pre jazyk**. Niektoré aplikácie podporujú mnoho jazykov, ale predvolene je aplikácia vytvorená pre konkrétny jazyk, aj keď môžete pridať podporu ďalších jazykov.
 
 ### Výhody aplikácií na generovanie textu
 
-Čím sa teda aplikácia na generovanie textu líši?
+Ako sa teda aplikácia na generovanie textu líši?
 
-V takejto aplikácii máte väčšiu flexibilitu, nie ste obmedzení na súbor príkazov alebo konkrétny vstupný jazyk. Namiesto toho môžete používať prirodzený jazyk na interakciu s aplikáciou. Ďalšou výhodou je, že už pracujete so zdrojom dát, ktorý bol trénovaný na obrovskom množstve informácií, zatiaľ čo tradičná aplikácia môže byť limitovaná tým, čo je v databáze.
+V aplikácii na generovanie textu máte väčšiu flexibilitu, nie ste obmedzení na sadu príkazov alebo konkrétny vstupný jazyk. Namiesto toho môžete používať prirodzený jazyk na interakciu s aplikáciou. Ďalšou výhodou je, že už interagujete s dátovým zdrojom, ktorý bol trénovaný na obrovskom korpuse informácií, zatiaľ čo tradičná aplikácia môže byť obmedzená na to, čo je v databáze.
 
 ### Čo môžem vytvoriť s aplikáciou na generovanie textu?
 
-Môžete vytvoriť mnoho vecí, napríklad:
+Existuje mnoho vecí, ktoré môžete vytvoriť. Napríklad:
 
-- **Chatbot**. Chatbot odpovedajúci na otázky o témach, ako je vaša firma a jej produkty, môže byť veľmi užitočný.
-- **Pomocník**. LLM sú skvelé na veci ako zhrnutie textu, získavanie poznatkov z textu, tvorbu textov ako životopisy a podobne.
-- **Asistent pre kódovanie**. Podľa použitého jazykového modelu môžete vytvoriť asistenta, ktorý pomáha písať kód. Napríklad môžete použiť produkty ako GitHub Copilot alebo ChatGPT na pomoc s písaním kódu.
+- **Chatbot**. Chatbot odpovedajúci na otázky o témach, ako je vaša spoločnosť a jej produkty, by mohol byť dobrým riešením.
+- **Pomocník**. LLM sú skvelé na veci ako sumarizovanie textu, získavanie poznatkov z textu, produkovanie textu ako životopisov a podobne.
+- **Asistent kódu**. V závislosti od jazykového modelu, ktorý používate, môžete vytvoriť asistenta kódu, ktorý vám pomôže písať kód. Napríklad môžete použiť produkt ako GitHub Copilot, ako aj ChatGPT na pomoc pri písaní kódu.
 
-## Ako začať?
+## Ako môžem začať?
 
-Potrebujete nájsť spôsob, ako sa integrovať s LLM, čo zvyčajne znamená tieto dve možnosti:
+Musíte nájsť spôsob, ako integrovať LLM, čo zvyčajne zahŕňa nasledujúce dva prístupy:
 
-- Použiť API. Tu vytvárate webové požiadavky s vaším promptom a dostávate späť generovaný text.
-- Použiť knižnicu. Knižnice zjednodušujú volania API a uľahčujú ich používanie.
+- Použiť API. Tu konštruujete webové požiadavky s vaším promptom a dostanete generovaný text späť.
+- Použiť knižnicu. Knižnice pomáhajú zapúzdriť volania API a uľahčujú ich používanie.
 
 ## Knižnice/SDK
 
-Existuje niekoľko známych knižníc na prácu s LLM, napríklad:
+Existuje niekoľko známych knižníc na prácu s LLM, ako napríklad:
 
 - **openai**, táto knižnica uľahčuje pripojenie k vášmu modelu a odosielanie promptov.
 
-Potom sú tu knižnice, ktoré pracujú na vyššej úrovni, napríklad:
+Potom existujú knižnice, ktoré fungujú na vyššej úrovni, ako napríklad:
 
-- **Langchain**. Langchain je známy a podporuje Python.
+- **Langchain**. Langchain je dobre známy a podporuje Python.
 - **Semantic Kernel**. Semantic Kernel je knižnica od Microsoftu podporujúca jazyky C#, Python a Java.
 
-## Prvá aplikácia s openai
+## Prvá aplikácia pomocou openai
 
 Pozrime sa, ako môžeme vytvoriť našu prvú aplikáciu, aké knižnice potrebujeme, koľko je potrebné a podobne.
 
 ### Inštalácia openai
 
-Existuje mnoho knižníc na interakciu s OpenAI alebo Azure OpenAI. Môžete použiť rôzne programovacie jazyky ako C#, Python, JavaScript, Java a ďalšie. My sme si vybrali knižnicu `openai` pre Python, takže použijeme `pip` na jej inštaláciu.
+Existuje mnoho knižníc na interakciu s OpenAI alebo Azure OpenAI. Je možné použiť rôzne programovacie jazyky, ako C#, Python, JavaScript, Java a ďalšie. Vybrali sme si knižnicu `openai` pre Python, takže ju nainštalujeme pomocou `pip`.
 
 ```bash
 pip install openai
@@ -102,25 +102,25 @@ Musíte vykonať nasledujúce kroky:
   > V čase písania je potrebné požiadať o prístup k Azure OpenAI.
 
 - Nainštalujte Python <https://www.python.org/>
-- Vytvorte Azure OpenAI Service zdroj. Pozrite si tento návod, ako [vytvoriť zdroj](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Vytvorte zdroj služby Azure OpenAI. Pozrite si tento návod, ako [vytvoriť zdroj](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Nájdenie API kľúča a endpointu
+### Nájdite API kľúč a endpoint
 
-Teraz musíte knižnici `openai` povedať, aký API kľúč má použiť. Na nájdenie API kľúča prejdite do sekcie „Keys and Endpoint“ vášho Azure OpenAI zdroja a skopírujte hodnotu „Key 1“.
+V tomto bode musíte povedať knižnici `openai`, aký API kľúč má používať. Ak chcete nájsť svoj API kľúč, prejdite do sekcie "Keys and Endpoint" vášho zdroja Azure OpenAI a skopírujte hodnotu "Key 1".
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Keď máte tieto informácie skopírované, nastavme knižnice, aby ich používali.
+Teraz, keď máte tieto informácie skopírované, poďme inštruovať knižnice, aby ich použili.
 
 > [!NOTE]
-> Odporúča sa oddeliť API kľúč od kódu. Môžete to urobiť pomocou premenných prostredia.
+> Stojí za to oddeliť váš API kľúč od vášho kódu. Môžete to urobiť pomocou environmentálnych premenných.
 >
-> - Nastavte premennú prostredia `OPENAI_API_KEY` na váš API kľúč.
+> - Nastavte environmentálnu premennú `OPENAI_API_KEY` na váš API kľúč.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Nastavenie konfigurácie pre Azure
+### Nastavenie konfigurácie Azure
 
-Ak používate Azure OpenAI, takto nastavíte konfiguráciu:
+Ak používate Azure OpenAI, tu je postup, ako nastaviť konfiguráciu:
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Vyššie nastavujeme:
+Vyššie nastavujeme nasledujúce:
 
 - `api_type` na `azure`. To hovorí knižnici, aby používala Azure OpenAI a nie OpenAI.
-- `api_key`, čo je váš API kľúč nájdený v Azure Portáli.
-- `api_version`, verzia API, ktorú chcete použiť. V čase písania je najnovšia verzia `2023-05-15`.
-- `api_base`, endpoint API. Nájdete ho v Azure Portáli vedľa vášho API kľúča.
+- `api_key`, to je váš API kľúč nájdený v Azure Portáli.
+- `api_version`, to je verzia API, ktorú chcete použiť. V čase písania je najnovšia verzia `2023-05-15`.
+- `api_base`, to je endpoint API. Nájdete ho v Azure Portáli vedľa vášho API kľúča.
 
-> [!NOTE] > `os.getenv` je funkcia, ktorá číta premenné prostredia. Môžete ju použiť na čítanie premenných ako `OPENAI_API_KEY` a `API_BASE`. Nastavte tieto premenné vo vašom termináli alebo pomocou knižnice ako `dotenv`.
+> [!NOTE] > `os.getenv` je funkcia, ktorá číta environmentálne premenné. Môžete ju použiť na čítanie environmentálnych premenných, ako sú `OPENAI_API_KEY` a `API_BASE`. Nastavte tieto environmentálne premenné vo vašom termináli alebo pomocou knižnice ako `dotenv`.
 
 ## Generovanie textu
 
-Na generovanie textu použijeme triedu `Completion`. Tu je príklad:
+Spôsob, ako generovať text, je použiť triedu `Completion`. Tu je príklad:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-V uvedenom kóde vytvoríme objekt completion, zadáme model, ktorý chceme použiť, a prompt. Potom vypíšeme vygenerovaný text.
+V uvedenom kóde vytvárame objekt completion a zadávame model, ktorý chceme použiť, a prompt. Potom vytlačíme generovaný text.
 
 ### Chat completions
 
-Doteraz ste videli, ako používame `Completion` na generovanie textu. Existuje však aj trieda `ChatCompletion`, ktorá je vhodnejšia pre chatboty. Tu je príklad jej použitia:
+Doteraz ste videli, ako sme používali `Completion` na generovanie textu. Ale existuje ďalšia trieda nazývaná `ChatCompletion`, ktorá je vhodnejšia pre chatboty. Tu je príklad jej použitia:
 
 ```python
 import openai
@@ -164,11 +164,11 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-Viac o tejto funkcionalite v nasledujúcej kapitole.
+Viac o tejto funkcii v nadchádzajúcej kapitole.
 
-## Cvičenie – vaša prvá aplikácia na generovanie textu
+## Cvičenie - vaša prvá aplikácia na generovanie textu
 
-Teraz, keď sme sa naučili nastaviť a nakonfigurovať openai, je čas vytvoriť vašu prvú aplikáciu na generovanie textu. Postupujte podľa týchto krokov:
+Teraz, keď sme sa naučili, ako nastaviť a konfigurovať openai, je čas vytvoriť vašu prvú aplikáciu na generovanie textu. Ak chcete vytvoriť svoju aplikáciu, postupujte podľa týchto krokov:
 
 1. Vytvorte virtuálne prostredie a nainštalujte openai:
 
@@ -182,7 +182,7 @@ Teraz, keď sme sa naučili nastaviť a nakonfigurovať openai, je čas vytvori�
    > Ak používate Windows, zadajte `venv\Scripts\activate` namiesto `source venv/bin/activate`.
 
    > [!NOTE]
-   > Nájdenie vášho Azure OpenAI kľúča: Prejdite na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), vyhľadajte `Open AI`, vyberte `Open AI resource`, potom `Keys and Endpoint` a skopírujte hodnotu `Key 1`.
+   > Nájdite svoj Azure OpenAI kľúč tak, že prejdete na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), vyhľadáte `Open AI` a vyberiete `Open AI resource`, potom vyberiete `Keys and Endpoint` a skopírujete hodnotu `Key 1`.
 
 1. Vytvorte súbor _app.py_ a vložte do neho nasledujúci kód:
 
@@ -208,9 +208,9 @@ Teraz, keď sme sa naučili nastaviť a nakonfigurovať openai, je čas vytvori�
    ```
 
    > [!NOTE]
-   > Ak používate Azure OpenAI, musíte nastaviť `api_type` na `azure` a `api_key` na váš Azure OpenAI kľúč.
+   > Ak používate Azure OpenAI, musíte nastaviť `api_type` na `azure` a nastaviť `api_key` na váš Azure OpenAI kľúč.
 
-   Mali by ste vidieť výstup podobný tomuto:
+   Mali by ste vidieť výstup podobný nasledujúcemu:
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ Teraz, keď sme sa naučili nastaviť a nakonfigurovať openai, je čas vytvori�
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Rôzne typy promptov pre rôzne účely
+## Rôzne typy promptov pre rôzne veci
 
-Teraz ste videli, ako generovať text pomocou promptu. Dokonca máte program, ktorý beží a môžete ho upravovať na generovanie rôznych typov textu.
+Teraz ste videli, ako generovať text pomocou promptu. Dokonca máte program, ktorý môžete upraviť a zmeniť na generovanie rôznych typov textu.
 
-Prompt môžete použiť na rôzne úlohy, napríklad:
+Prompty môžu byť použité na rôzne úlohy. Napríklad:
 
-- **Generovanie typu textu**. Napríklad môžete generovať báseň, otázky do kvízu a podobne.
-- **Vyhľadávanie informácií**. Môžete použiť prompt na vyhľadanie informácií, napríklad „Čo znamená CORS vo webovom vývoji?“.
-- **Generovanie kódu**. Môžete generovať kód, napríklad regulárny výraz na validáciu emailov alebo rovno celú aplikáciu, napríklad webovú aplikáciu.
+- **Generovanie typu textu**. Napríklad môžete generovať báseň, otázky na kvíz a podobne.
+- **Vyhľadávanie informácií**. Môžete použiť prompty na vyhľadávanie informácií, ako napríklad 'Čo znamená CORS vo webovom vývoji?'.
+- **Generovanie kódu**. Môžete použiť prompty na generovanie kódu, napríklad na vývoj regulárneho výrazu na validáciu e-mailov alebo prečo nie na generovanie celého programu, ako je webová aplikácia?
 
-## Praktickejší príklad: generátor receptov
+## Praktickejší prípad použitia: generátor receptov
 
-Predstavte si, že máte doma suroviny a chcete niečo uvariť. Na to potrebujete recept. Recepty môžete hľadať cez vyhľadávač alebo použiť LLM.
+Predstavte si, že máte doma ingrediencie a chcete niečo uvariť. Na to potrebujete recept. Spôsob, ako nájsť recepty, je použiť vyhľadávač alebo môžete použiť LLM.
 
-Môžete napísať prompt takto:
+Môžete napísať prompt, ako napríklad:
 
-> „Ukáž mi 5 receptov na jedlo s nasledujúcimi ingredienciami: kuracie mäso, zemiaky a mrkva. Pre každý recept uveď všetky použité ingrediencie.“
+> "Ukáž mi 5 receptov na jedlo s nasledujúcimi ingredienciami: kuracie mäso, zemiaky a mrkva. Pre každý recept uveďte všetky použité ingrediencie."
 
-Na základe tohto promptu môžete dostať odpoveď podobnú:
+Na základe vyššie uvedeného promptu môžete dostať odpoveď podobnú:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,14 +300,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Tento výsledok je skvelý, viem, čo variť. V tomto bode by mohli byť užitočné tieto vylepšenia:
+Tento výsledok je skvelý, viem, čo variť. V tomto bode by mohli byť užitočné vylepšenia, ako napríklad:
 
-- Filtrovať ingrediencie, ktoré nemám rád alebo na ktoré som alergický.
-- Vytvoriť nákupný zoznam, ak doma nemám všetky ingrediencie.
+- Odstránenie ingrediencií, ktoré nemám rád alebo na ktoré som alergický.
+- Vytvorenie nákupného zoznamu, ak nemám všetky ingrediencie doma.
 
-Pre tieto prípady pridajme ďalší prompt:
+Pre vyššie uvedené prípady pridajme ďalší prompt:
 
-> „Prosím, odstráň recepty s cesnakom, pretože som naň alergický, a nahraď ho niečím iným. Tiež prosím vytvor nákupný zoznam pre recepty, berúc do úvahy, že doma už mám kuracie mäso, zemiaky a mrkvu.“
+> "Prosím, odstráň recepty s cesnakom, pretože som naň alergický, a nahraď ho niečím iným. Tiež prosím vytvor nákupný zoznam pre recepty, berúc do úvahy, že už mám doma kuracie mäso, zemiaky a mrkvu."
 
 Teraz máte nový výsledok, konkrétne:
 
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-To sú vaše päť receptov bez cesnaku a zároveň máte nákupný zoznam s ohľadom na to, čo už doma máte.
+To sú vaše päť receptov, bez zmienky o cesnaku, a tiež máte nákupný zoznam berúc do úvahy, čo už máte doma.
 
-## Cvičenie – vytvorte generátor receptov
+## Cvičenie - vytvorte generátor receptov
 
-Keď sme si prešli scenár, napíšme kód, ktorý zodpovedá tomuto scenáru. Postupujte podľa týchto krokov:
+Teraz, keď sme si prešli scenár, napíšme kód, ktorý zodpovedá demonštrovanému scenáru. Ak to chcete urobiť, postupujte podľa týchto krokov:
 
 1. Použite existujúci súbor _app.py_ ako východiskový bod.
-1. Nájdite premennú `prompt` a zmeňte jej obsah na nasledujúci:
+1. Nájdite premennú `prompt` a zmeňte jej kód na nasledujúci:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Ak teraz spustíte kód, mali by ste vidieť výstup podobný tomuto:
+   Ak teraz spustíte kód, mali by ste vidieť výstup podobný:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Keď sme si prešli scenár, napíšme kód, ktorý zodpovedá tomuto scenáru. 
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE, váš LLM nie je deterministický, takže výsledky sa môžu pri každom spustení líšiť.
+   > POZNÁMKA, váš LLM je nedeterministický, takže môžete dostať rôzne výsledky zakaždým, keď spustíte program.
 
-   Skvelé, pozrime sa, ako môžeme veci vylepšiť. Chceme, aby bol kód flexibilný, aby sa dali meniť ingrediencie aj počet receptov.
+   Skvelé, pozrime sa, ako môžeme veci vylepšiť. Aby sme veci vylepšili, chceme sa uistiť, že kód je flexibilný, takže ingrediencie a počet receptov môžu byť vylepšené a zmenené.
 
-1. Zmeňme kód nasledovne:
+1. Zmeňme kód nasledujúcim spôsobom:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Keď sme si prešli scenár, napíšme kód, ktorý zodpovedá tomuto scenáru. 
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Testovacie spustenie kódu môže vyzerať takto:
+   Testovanie kódu môže vyzerať takto:
 
    ```output
    No of recipes (for example, 5): 3
@@ -429,11 +429,11 @@ Keď sme si prešli scenár, napíšme kód, ktorý zodpovedá tomuto scenáru. 
 
 ### Vylepšenie pridaním filtra a nákupného zoznamu
 
-Teraz máme funkčnú aplikáciu, ktorá dokáže vytvárať recepty a je flexibilná, pretože závisí od vstupov používateľa, ako je počet receptov a použité ingrediencie.
+Teraz máme funkčnú aplikáciu schopnú produkovať recepty a je flexibilná, pretože sa spolieha na vstupy od používateľa, ako na počet receptov, tak aj na použité ingrediencie.
 
-Na ďalšie vylepšenie pridáme:
+Aby sme to ďalej vylepšili, chceme pridať nasledujúce:
 
-- **Filtrovanie ingrediencií**. Chceme vedieť filtrovať ingrediencie, ktoré nemáme radi alebo na ktoré sme alergickí. Na to môžeme upraviť existujúci prompt a pridať na jeho koniec filter, napríklad takto:
+- **Odstránenie ingrediencií**. Chceme byť schopní odstrániť ingrediencie, ktoré nemáme radi alebo na ktoré sme alergickí. Na dosiahnutie tejto zmeny môžeme upraviť náš existujúci prompt a pridať podmienku filtra na jeho koniec, ako napríklad:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Na ďalšie vylepšenie pridáme:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Tu sme pridali `{filter}` na koniec promptu a zároveň zachytávame hodnotu filtra od používateľa.
+  Vyššie pridávame `{filter}` na koniec promptu a tiež zachytávame hodnotu filtra od používateľa.
 
-  Príklad vstupu pri spustení programu môže vyzerať takto:
+  Príklad vstupu pri spustení programu teraz môže vyzerať takto:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,14 +510,13 @@ Na ďalšie vylepšenie pridáme:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Ako vidíte, recepty obsahujúce mlieko boli odstránené. Ak ste napríklad laktózovo intolerantní, možno budete chcieť filtrovať aj recepty so syrom, takže je potrebné byť presný.
+  Ako vidíte, akékoľvek recepty s mliekom boli odfiltrované. Ale ak ste intolerantní na laktózu, možno budete chcieť odfiltrovať aj recepty so syrom, takže je potrebné byť jasný.
 
-- **Vytvorenie nákupného zoznamu**. Chceme vytvoriť nákupný zoznam s ohľadom na to, čo už doma máme.
+- **Vytvorenie nákupného zoznamu**. Chceme vytvoriť nákupný zoznam, berúc do úvahy, čo už máme doma.
 
-  Túto funkcionalitu môžeme vyriešiť buď jedným promptom, alebo rozdeliť do dvoch promptov. Skúsme druhý prístup. Navrhujeme pridať ďalší prompt, ale aby to fungovalo, musíme výsledok prvého promptu použiť ako kontext pre druhý prompt.
+  Pre túto funkciu by sme mohli buď skúsiť vyriešiť všetko v jednom prompte, alebo by sme to mohli rozdeliť na dva prompty. Skúsme druhý prístup. Tu navrhujeme pridať ďalší prompt, ale aby to fungovalo, musíme pridať výsledok prvého promptu ako kontext k druhému promptu.
 
-  Nájdite časť kódu, ktorá vypisuje výsledok z prvého promptu, a pridajte pod ňu nasledujúci kód:
-
+  Nájdite časť v kóde, ktorá vypisuje výsledok z prvého promptu, a pridajte nasledujúci kód nižšie:
   ```python
   old_prompt_result = completion.choices[0].message.content
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
@@ -531,20 +530,21 @@ Na ďalšie vylepšenie pridáme:
   print(completion.choices[0].message.content)
   ```
 
-  Všimnite si nasledovné:
+  Všimnite si nasledujúce:
 
-  1. Vytvárame nový prompt tak, že k nemu pridávame výsledok z prvého promptu:
+  1. Konštruujeme nový prompt pridaním výsledku z prvého promptu k novému promptu:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
-  1. Vytvoríme nový request, pričom zohľadníme aj počet tokenov, o ktoré sme žiadali v prvom promptu, takže tentokrát nastavíme `max_tokens` na 1200.
+
+  1. Vytvárame novú požiadavku, ale zároveň berieme do úvahy počet tokenov, ktoré sme požadovali v prvom prompte, takže tentokrát nastavíme `max_tokens` na 1200.
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     Keď tento kód spustíme, dostaneme nasledujúci výstup:
+     Po vyskúšaní tohto kódu sme dospeli k nasledujúcemu výstupu:
 
      ```output
      No of recipes (for example, 5): 2
@@ -558,11 +558,11 @@ Na ďalšie vylepšenie pridáme:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Vylepšite svoje nastavenie
+## Zlepšite svoje nastavenie
 
-To, čo máme zatiaľ, je funkčný kód, ale existujú niektoré úpravy, ktoré by sme mali urobiť, aby sme veci ešte zlepšili. Niektoré z nich sú:
+To, čo máme doteraz, je kód, ktorý funguje, ale existujú určité úpravy, ktoré by sme mali vykonať, aby sme veci ešte viac zlepšili. Niektoré veci, ktoré by sme mali urobiť, sú:
 
-- **Oddeliť tajné údaje od kódu**, napríklad API kľúč. Tajné údaje nepatria priamo do kódu a mali by byť uložené na bezpečnom mieste. Na oddelenie tajných údajov od kódu môžeme použiť environmentálne premenné a knižnice ako `python-dotenv`, ktoré ich načítajú zo súboru. Takto by to vyzeralo v kóde:
+- **Oddelenie tajomstiev od kódu**, ako napríklad API kľúč. Tajomstvá nepatria do kódu a mali by byť uložené na bezpečnom mieste. Na oddelenie tajomstiev od kódu môžeme použiť environmentálne premenné a knižnice ako `python-dotenv`, ktoré ich načítajú zo súboru. Takto by to vyzeralo v kóde:
 
   1. Vytvorte súbor `.env` s nasledujúcim obsahom:
 
@@ -570,8 +570,7 @@ To, čo máme zatiaľ, je funkčný kód, ale existujú niektoré úpravy, ktor�
      OPENAI_API_KEY=sk-...
      ```
 
-     
-> Poznámka, pre Azure je potrebné nastaviť nasledujúce environmentálne premenné:
+     > Poznámka: Pre Azure je potrebné nastaviť nasledujúce environmentálne premenné:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -589,39 +588,39 @@ To, čo máme zatiaľ, je funkčný kód, ale existujú niektoré úpravy, ktor�
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Slovo o dĺžke tokenov**. Mali by sme zvážiť, koľko tokenov potrebujeme na vygenerovanie požadovaného textu. Tokeny stoja peniaze, preto by sme mali byť tam, kde sa dá, šetrní s ich počtom. Napríklad, môžeme prompt formulovať tak, aby sme použili menej tokenov?
+- **Poznámka k dĺžke tokenov**. Mali by sme zvážiť, koľko tokenov potrebujeme na generovanie textu, ktorý chceme. Tokeny stoja peniaze, takže kde je to možné, mali by sme sa snažiť byť ekonomickí s počtom použitých tokenov. Napríklad, môžeme formulovať prompt tak, aby sme použili menej tokenov?
 
-  Na zmenu počtu použitých tokenov môžete použiť parameter `max_tokens`. Ak chcete použiť napríklad 100 tokenov, urobíte to takto:
+  Na zmenu počtu použitých tokenov môžete použiť parameter `max_tokens`. Napríklad, ak chcete použiť 100 tokenov, urobili by ste:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Experimentovanie s teplotou**. Teplota je parameter, o ktorom sme zatiaľ nehovorili, no je dôležitý pre to, ako náš program funguje. Čím vyššia je hodnota teploty, tým náhodnejší bude výstup. Naopak, čím nižšia teplota, tým predvídateľnejší výstup. Rozmýšľajte, či chcete mať vo výstupe variabilitu alebo nie.
+- **Experimentovanie s teplotou**. Teplota je niečo, čo sme doteraz nespomenuli, ale je dôležitým kontextom pre to, ako náš program funguje. Čím vyššia je hodnota teploty, tým náhodnejší bude výstup. Naopak, čím nižšia je hodnota teploty, tým predvídateľnejší bude výstup. Zvážte, či chcete variáciu vo výstupe alebo nie.
 
-  Na zmenu teploty použite parameter `temperature`. Ak chcete použiť teplotu 0.5, urobíte to takto:
+  Na zmenu teploty môžete použiť parameter `temperature`. Napríklad, ak chcete použiť teplotu 0.5, urobili by ste:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Poznámka, čím bližšie k 1.0, tým rozmanitejší výstup.
+  > Poznámka: Čím bližšie k 1.0, tým rozmanitejší bude výstup.
 
 ## Zadanie
 
 Pre toto zadanie si môžete vybrať, čo chcete vytvoriť.
 
-Tu je niekoľko návrhov:
+Tu sú niektoré návrhy:
 
-- Vylepšite aplikáciu na generovanie receptov. Hrajte sa s hodnotami teploty a promptami a zistite, čo všetko dokážete vytvoriť.
-- Vytvorte „študijného kamaráta“. Táto aplikácia by mala vedieť odpovedať na otázky o nejakej téme, napríklad Python. Môžete mať prompty ako „Čo je určitá téma v Pythone?“ alebo prompt, ktorý povie „ukáž mi kód pre určitú tému“ a podobne.
-- História bot, oživte históriu, nechajte bota hrať určitú historickú postavu a pýtajte sa ho otázky o jeho živote a dobe.
+- Vylepšite aplikáciu na generovanie receptov. Experimentujte s hodnotami teploty a promptmi, aby ste zistili, čo dokážete vytvoriť.
+- Vytvorte "študijného partnera". Táto aplikácia by mala byť schopná odpovedať na otázky o téme, napríklad Python. Mohli by ste mať prompty ako "Čo je určitá téma v Pythone?" alebo prompt, ktorý hovorí "Ukáž mi kód pre určitú tému" atď.
+- Historický bot, oživte históriu, inštruujte bota, aby hral určitú historickú postavu a pýtajte sa ho otázky o jeho živote a dobe.
 
 ## Riešenie
 
-### Študijný kamarát
+### Študijný partner
 
-Nižšie je základný prompt, pozrite sa, ako ho môžete použiť a upraviť podľa seba.
+Nižšie je úvodný prompt, pozrite sa, ako ho môžete použiť a prispôsobiť podľa svojich predstáv.
 
 ```text
 - "You're an expert on the Python language
@@ -634,9 +633,9 @@ Nižšie je základný prompt, pozrite sa, ako ho môžete použiť a upraviť p
     - exercise in code with solutions"
 ```
 
-### História bot
+### Historický bot
 
-Tu je niekoľko promptov, ktoré môžete použiť:
+Tu sú niektoré prompty, ktoré by ste mohli použiť:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -645,23 +644,25 @@ Tu je niekoľko promptov, ktoré môžete použiť:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## Overenie vedomostí
+## Kontrola vedomostí
 
-Čo robí parameter teplota?
+Čo robí koncept teploty?
 
-1. Riadi, ako náhodný bude výstup.
-1. Riadi, aká veľká bude odpoveď.
-1. Riadi, koľko tokenov sa použije.
+1. Ovláda, ako náhodný je výstup.
+1. Ovláda, aký veľký je výstup.
+1. Ovláda, koľko tokenov sa použije.
 
 ## 🚀 Výzva
 
-Pri práci na zadaní skúste meniť teplotu, nastavte ju na 0, 0.5 a 1. Pamätajte, že 0 znamená najmenej variabilný výstup a 1 najviac. Ktorá hodnota najlepšie funguje pre vašu aplikáciu?
+Pri práci na zadaní skúste meniť teplotu, nastavte ju na 0, 0.5 a 1. Pamätajte, že 0 je najmenej rozmanitá a 1 je najrozmanitejšia. Aká hodnota najlepšie funguje pre vašu aplikáciu?
 
-## Skvelá práca! Pokračujte v učení
+## Skvelá práca! Pokračujte vo svojom učení
 
-Po dokončení tejto lekcie si pozrite našu [kolekciu Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kde môžete ďalej rozvíjať svoje znalosti o Generatívnej AI!
+Po dokončení tejto lekcie si pozrite našu [zbierku učenia o generatívnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste pokračovali v rozvíjaní svojich znalostí o generatívnej AI!
 
 Prejdite na Lekciu 7, kde sa pozrieme na to, ako [vytvárať chatovacie aplikácie](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Vyhlásenie o zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+---
+
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
