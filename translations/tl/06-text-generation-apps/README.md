@@ -1,91 +1,91 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ce8224073b86b728ed52b19bed7932fd",
-  "translation_date": "2025-07-09T12:04:49+00:00",
+  "original_hash": "00e33cd3ff945511446ecda4a9f8a828",
+  "translation_date": "2025-10-17T13:20:36+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "tl"
 }
 -->
-# Pagbuo ng Mga Aplikasyon para sa Text Generation
+# Paggawa ng Mga Aplikasyon sa Pagbuo ng Teksto
 
-[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.tl.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Paggawa ng Mga Aplikasyon sa Pagbuo ng Teksto](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.tl.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(I-click ang larawan sa itaas para mapanood ang video ng araling ito)_
+> _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
 
-Sa mga nakaraang bahagi ng kurikulum na ito, nakita mo na may mga pangunahing konsepto tulad ng prompts at pati na rin ang isang buong disiplina na tinatawag na "prompt engineering". Maraming mga tool na maaari mong gamitin tulad ng ChatGPT, Office 365, Microsoft Power Platform at iba pa, na sumusuporta sa paggamit ng prompts upang makamit ang isang layunin.
+Sa kurikulum na ito, nakita mo na may mga pangunahing konsepto tulad ng mga prompt at isang buong disiplina na tinatawag na "prompt engineering". Maraming mga tool na maaari mong gamitin tulad ng ChatGPT, Office 365, Microsoft Power Platform, at iba pa, na sumusuporta sa paggamit ng mga prompt upang makamit ang isang bagay.
 
-Para maidagdag mo ang ganitong karanasan sa isang app, kailangan mong maunawaan ang mga konsepto tulad ng prompts, completions at pumili ng library na gagamitin. Iyan mismo ang matututunan mo sa kabanatang ito.
+Para maidagdag ang ganitong karanasan sa isang app, kailangan mong maunawaan ang mga konsepto tulad ng mga prompt, completions, at pumili ng library na gagamitin. Iyan mismo ang matututunan mo sa kabanatang ito.
 
 ## Panimula
 
-Sa kabanatang ito, matututuhan mo ang mga sumusunod:
+Sa kabanatang ito, ikaw ay:
 
-- Alamin ang tungkol sa openai library at ang mga pangunahing konsepto nito.
-- Gumawa ng isang text generation app gamit ang openai.
-- Unawain kung paano gamitin ang mga konsepto tulad ng prompt, temperature, at tokens para makabuo ng isang text generation app.
+- Matututo tungkol sa openai library at ang mga pangunahing konsepto nito.
+- Bubuo ng isang app para sa pagbuo ng teksto gamit ang openai.
+- Mauunawaan kung paano gamitin ang mga konsepto tulad ng prompt, temperature, at tokens upang makabuo ng isang app para sa pagbuo ng teksto.
 
-## Mga Layunin sa Pagkatuto
+## Mga Layunin sa Pag-aaral
 
 Sa pagtatapos ng araling ito, magagawa mong:
 
-- Ipaliwanag kung ano ang isang text generation app.
-- Gumawa ng isang text generation app gamit ang openai.
-- I-configure ang iyong app upang gumamit ng mas marami o mas kaunting tokens at baguhin ang temperature para sa iba't ibang resulta.
+- Ipaliwanag kung ano ang isang app para sa pagbuo ng teksto.
+- Bumuo ng isang app para sa pagbuo ng teksto gamit ang openai.
+- I-configure ang iyong app upang gumamit ng mas kaunti o mas maraming tokens at baguhin ang temperature para sa iba't ibang output.
 
-## Ano ang text generation app?
+## Ano ang isang app para sa pagbuo ng teksto?
 
-Karaniwan kapag gumagawa ka ng app, mayroong isang uri ng interface tulad ng mga sumusunod:
+Karaniwan, kapag gumagawa ka ng isang app, mayroon itong uri ng interface tulad ng mga sumusunod:
 
-- Command-based. Ang mga console apps ay mga tipikal na app kung saan nagta-type ka ng command at ito ay nagsasagawa ng isang gawain. Halimbawa, ang `git` ay isang command-based app.
-- User interface (UI). Ang ilang mga app ay may graphical user interfaces (GUIs) kung saan nagki-click ka ng mga button, naglalagay ng teksto, pumipili ng mga opsyon at iba pa.
+- Batay sa command. Ang mga console app ay karaniwang mga app kung saan nagta-type ka ng command at ito ay gumagawa ng isang gawain. Halimbawa, ang `git` ay isang app na batay sa command.
+- User interface (UI). Ang ilang mga app ay may graphical user interfaces (GUIs) kung saan nagki-click ka ng mga button, naglalagay ng teksto, pumipili ng mga opsyon, at iba pa.
 
-### Limitado ang Console at UI apps
+### Limitado ang mga Console at UI app
 
-Ihambing ito sa isang command-based app kung saan nagta-type ka ng command:
+Ihambing ito sa isang app na batay sa command kung saan nagta-type ka ng command:
 
-- **Limitado ito**. Hindi ka basta-basta makakapag-type ng kahit anong command, kundi yung mga sinusuportahan lang ng app.
-- **Naka-sentro sa isang wika**. May ilang app na sumusuporta sa maraming wika, pero sa default, ang app ay ginawa para sa isang partikular na wika, kahit na maaari kang magdagdag ng suporta para sa iba pang wika.
+- **Limitado ito**. Hindi ka maaaring mag-type ng kahit anong command, kundi ang mga sinusuportahan lamang ng app.
+- **Tiyak sa wika**. Ang ilang mga app ay sumusuporta sa maraming wika, ngunit sa default, ang app ay ginawa para sa isang tiyak na wika, kahit na maaari kang magdagdag ng suporta sa iba pang wika.
 
-### Mga Benepisyo ng text generation apps
+### Mga Benepisyo ng Mga App para sa Pagbuo ng Teksto
 
-Paano naman naiiba ang isang text generation app?
+Paano naiiba ang isang app para sa pagbuo ng teksto?
 
-Sa isang text generation app, mas malawak ang iyong kalayaan, hindi ka limitado sa isang set ng mga command o isang partikular na input na wika. Sa halip, maaari kang gumamit ng natural na wika para makipag-ugnayan sa app. Isa pang benepisyo ay dahil nakikipag-ugnayan ka na sa isang data source na na-train sa napakalawak na koleksyon ng impormasyon, samantalang ang tradisyunal na app ay maaaring limitado lamang sa laman ng isang database.
+Sa isang app para sa pagbuo ng teksto, mas may kalayaan ka, hindi ka limitado sa isang set ng mga command o isang tiyak na input na wika. Sa halip, maaari mong gamitin ang natural na wika upang makipag-ugnayan sa app. Isa pang benepisyo ay dahil nakikipag-ugnayan ka na sa isang data source na sinanay sa isang malawak na corpus ng impormasyon, samantalang ang isang tradisyunal na app ay maaaring limitado sa kung ano ang nasa database.
 
-### Ano ang maaari kong gawin gamit ang isang text generation app?
+### Ano ang maaari kong gawin gamit ang isang app para sa pagbuo ng teksto?
 
 Maraming bagay ang maaari mong gawin. Halimbawa:
 
-- **Chatbot**. Isang chatbot na sumasagot sa mga tanong tungkol sa mga paksa, tulad ng iyong kumpanya at mga produkto nito, ay maaaring maging angkop.
-- **Tulong**. Magaling ang LLMs sa mga bagay tulad ng pagsasummarize ng teksto, pagkuha ng mga insight mula sa teksto, paggawa ng mga teksto tulad ng resume at iba pa.
-- **Code assistant**. Depende sa language model na gagamitin mo, maaari kang gumawa ng code assistant na tutulong sa iyo sa pagsusulat ng code. Halimbawa, maaari mong gamitin ang mga produkto tulad ng GitHub Copilot pati na rin ang ChatGPT para tulungan kang magsulat ng code.
+- **Isang chatbot**. Ang isang chatbot na sumasagot sa mga tanong tungkol sa mga paksa, tulad ng iyong kumpanya at mga produkto nito, ay maaaring maging angkop.
+- **Helper**. Ang mga LLM ay mahusay sa mga bagay tulad ng pagbuo ng buod ng teksto, pagkuha ng mga insight mula sa teksto, paggawa ng teksto tulad ng mga resume, at iba pa.
+- **Code assistant**. Depende sa modelong pangwika na ginagamit mo, maaari kang gumawa ng isang code assistant na tumutulong sa iyo na magsulat ng code. Halimbawa, maaari mong gamitin ang isang produkto tulad ng GitHub Copilot pati na rin ang ChatGPT upang tumulong sa pagsusulat ng code.
 
-## Paano ako makakapagsimula?
+## Paano ako magsisimula?
 
-Kailangan mong humanap ng paraan para makipag-integrate sa isang LLM na karaniwang may dalawang paraan:
+Kailangan mong maghanap ng paraan upang makipag-ugnayan sa isang LLM na karaniwang nangangailangan ng dalawang diskarte:
 
-- Gumamit ng API. Dito, bumubuo ka ng mga web request gamit ang iyong prompt at bumabalik ang generated na teksto.
-- Gumamit ng library. Ang mga library ay tumutulong na i-encapsulate ang mga API call at gawing mas madali ang paggamit nito.
+- Gumamit ng API. Dito, gumagawa ka ng mga web request gamit ang iyong prompt at nakakakuha ng generated na teksto pabalik.
+- Gumamit ng library. Ang mga library ay tumutulong sa encapsulate ng mga tawag sa API at ginagawang mas madali ang paggamit.
 
-## Mga Libraries/SDKs
+## Mga Library/SDK
 
-May ilang kilalang libraries para sa pakikipagtrabaho sa LLMs tulad ng:
+May ilang kilalang library para sa pakikipag-ugnayan sa mga LLM tulad ng:
 
-- **openai**, ang library na ito ay nagpapadali para kumonekta sa iyong model at magpadala ng mga prompt.
+- **openai**, ang library na ito ay nagpapadali sa pagkonekta sa iyong model at pagpapadala ng mga prompt.
 
 Mayroon ding mga library na gumagana sa mas mataas na antas tulad ng:
 
-- **Langchain**. Kilala ang Langchain at sumusuporta sa Python.
-- **Semantic Kernel**. Ang Semantic Kernel ay isang library mula sa Microsoft na sumusuporta sa mga wika tulad ng C#, Python, at Java.
+- **Langchain**. Ang Langchain ay kilala at sumusuporta sa Python.
+- **Semantic Kernel**. Ang Semantic Kernel ay isang library ng Microsoft na sumusuporta sa mga wikang C#, Python, at Java.
 
-## Unang app gamit ang openai
+## Unang App gamit ang openai
 
-Tingnan natin kung paano tayo makakagawa ng unang app, anong mga library ang kailangan, gaano kalaki ang kailangan at iba pa.
+Tingnan natin kung paano tayo makakagawa ng unang app, kung anong mga library ang kailangan natin, kung gaano karami ang kinakailangan, at iba pa.
 
 ### I-install ang openai
 
-Maraming mga library para makipag-ugnayan sa OpenAI o Azure OpenAI. Posible ring gumamit ng iba't ibang programming languages tulad ng C#, Python, JavaScript, Java at iba pa. Pinili naming gamitin ang `openai` Python library, kaya gagamit tayo ng `pip` para i-install ito.
+Maraming library ang magagamit para sa pakikipag-ugnayan sa OpenAI o Azure OpenAI. Posibleng gumamit ng iba't ibang programming languages tulad ng C#, Python, JavaScript, Java, at iba pa. Pinili naming gamitin ang `openai` Python library, kaya gagamit kami ng `pip` upang i-install ito.
 
 ```bash
 pip install openai
@@ -96,31 +96,31 @@ pip install openai
 Kailangan mong gawin ang mga sumusunod na hakbang:
 
 - Gumawa ng account sa Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Kumuha ng access sa Azure OpenAI. Pumunta sa [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) at mag-request ng access.
+- Magkaroon ng access sa Azure OpenAI. Pumunta sa [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) at mag-request ng access.
 
   > [!NOTE]
   > Sa oras ng pagsulat, kailangan mong mag-apply para sa access sa Azure OpenAI.
 
-- Mag-install ng Python <https://www.python.org/>
-- Nakagawa ng Azure OpenAI Service resource. Tingnan ang gabay kung paano [gumawa ng resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- I-install ang Python <https://www.python.org/>
+- Gumawa ng Azure OpenAI Service resource. Tingnan ang gabay na ito kung paano [gumawa ng resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Hanapin ang API key at endpoint
 
-Sa puntong ito, kailangan mong sabihin sa `openai` library kung anong API key ang gagamitin. Para makita ang iyong API key, pumunta sa seksyong "Keys and Endpoint" ng iyong Azure OpenAI resource at kopyahin ang "Key 1" na halaga.
+Sa puntong ito, kailangan mong sabihin sa iyong `openai` library kung anong API key ang gagamitin. Upang hanapin ang iyong API key, pumunta sa seksyong "Keys and Endpoint" ng iyong Azure OpenAI resource at kopyahin ang "Key 1" value.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Keys and Endpoint resource blade sa Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Ngayon na nakopya mo na ang impormasyong ito, ituro natin sa mga library na gamitin ito.
+Ngayon na mayroon ka nang impormasyong ito, magbigay tayo ng instruksyon sa mga library na gamitin ito.
 
 > [!NOTE]
-> Maganda kung hiwalay ang iyong API key sa iyong code. Maaari mong gawin ito gamit ang environment variables.
+> Mahalaga na ihiwalay ang iyong API key mula sa iyong code. Maaari mo itong gawin sa pamamagitan ng paggamit ng environment variables.
 >
-> - I-set ang environment variable na `OPENAI_API_KEY` sa iyong API key.
+> - Itakda ang environment variable `OPENAI_API_KEY` sa iyong API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### I-setup ang configuration para sa Azure
+### I-setup ang configuration ng Azure
 
-Kung gumagamit ka ng Azure OpenAI, ganito ang pag-setup ng configuration:
+Kung gumagamit ka ng Azure OpenAI, narito kung paano i-setup ang configuration:
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-Dito, sineset natin ang mga sumusunod:
+Sa itaas, itinatakda natin ang mga sumusunod:
 
-- `api_type` sa `azure`. Ipinapaalam nito sa library na gagamitin ang Azure OpenAI at hindi ang OpenAI.
-- `api_key`, ito ang iyong API key na makikita sa Azure Portal.
-- `api_version`, ito ang bersyon ng API na gusto mong gamitin. Sa oras ng pagsulat, ang pinakabagong bersyon ay `2023-05-15`.
-- `api_base`, ito ang endpoint ng API. Makikita mo ito sa Azure Portal katabi ng iyong API key.
+- `api_type` sa `azure`. Sinasabi nito sa library na gamitin ang Azure OpenAI at hindi ang OpenAI.
+- `api_key`, ito ang iyong API key na matatagpuan sa Azure Portal.
+- `api_version`, ito ang bersyon ng API na nais mong gamitin. Sa oras ng pagsulat, ang pinakabagong bersyon ay `2023-05-15`.
+- `api_base`, ito ang endpoint ng API. Maaari mo itong makita sa Azure Portal katabi ng iyong API key.
 
-> [!NOTE] > Ang `os.getenv` ay isang function na nagbabasa ng environment variables. Maaari mo itong gamitin para basahin ang mga environment variables tulad ng `OPENAI_API_KEY` at `API_BASE`. I-set ang mga environment variables na ito sa iyong terminal o gamit ang library tulad ng `dotenv`.
+> [!NOTE] > Ang `os.getenv` ay isang function na nagbabasa ng environment variables. Maaari mo itong gamitin upang basahin ang environment variables tulad ng `OPENAI_API_KEY` at `API_BASE`. Itakda ang mga environment variables na ito sa iyong terminal o sa pamamagitan ng paggamit ng library tulad ng `dotenv`.
 
-## Pag-generate ng teksto
+## Bumuo ng Teksto
 
-Ang paraan para makabuo ng teksto ay gamit ang `Completion` class. Heto ang isang halimbawa:
+Ang paraan upang bumuo ng teksto ay ang paggamit ng `Completion` class. Narito ang isang halimbawa:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-Sa code sa itaas, gumawa tayo ng completion object at ipinasa ang model na gusto nating gamitin at ang prompt. Pagkatapos, prinint natin ang generated na teksto.
+Sa code sa itaas, gumagawa tayo ng completion object at ipinapasa ang model na nais nating gamitin at ang prompt. Pagkatapos, ipiniprint natin ang generated na teksto.
 
 ### Chat completions
 
-Hanggang ngayon, nakita mo kung paano natin ginagamit ang `Completion` para gumawa ng teksto. Pero may isa pang klase na tinatawag na `ChatCompletion` na mas angkop para sa mga chatbot. Heto ang halimbawa ng paggamit nito:
+Sa ngayon, nakita mo kung paano natin ginagamit ang `Completion` upang bumuo ng teksto. Ngunit may isa pang class na tinatawag na `ChatCompletion` na mas angkop para sa mga chatbot. Narito ang isang halimbawa ng paggamit nito:
 
 ```python
 import openai
@@ -164,11 +164,11 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-Mas marami pang tungkol sa functionality na ito sa mga susunod na kabanata.
+Mas marami pang impormasyon tungkol sa functionality na ito sa susunod na kabanata.
 
-## Ehersisyo - ang iyong unang text generation app
+## Ehersisyo - ang iyong unang app para sa pagbuo ng teksto
 
-Ngayon na natutunan mo kung paano i-setup at i-configure ang openai, panahon na para gumawa ng iyong unang text generation app. Sundin ang mga hakbang na ito para mabuo ang iyong app:
+Ngayon na natutunan natin kung paano i-setup at i-configure ang openai, oras na upang bumuo ng iyong unang app para sa pagbuo ng teksto. Upang bumuo ng iyong app, sundin ang mga hakbang na ito:
 
 1. Gumawa ng virtual environment at i-install ang openai:
 
@@ -182,9 +182,9 @@ Ngayon na natutunan mo kung paano i-setup at i-configure ang openai, panahon na 
    > Kung gumagamit ka ng Windows, i-type ang `venv\Scripts\activate` sa halip na `source venv/bin/activate`.
 
    > [!NOTE]
-   > Hanapin ang iyong Azure OpenAI key sa pamamagitan ng pagpunta sa [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), hanapin ang `Open AI`, piliin ang `Open AI resource`, pagkatapos ay piliin ang `Keys and Endpoint` at kopyahin ang `Key 1` na halaga.
+   > Hanapin ang iyong Azure OpenAI key sa pamamagitan ng pagpunta sa [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) at hanapin ang `Open AI` at piliin ang `Open AI resource` at pagkatapos ay piliin ang `Keys and Endpoint` at kopyahin ang `Key 1` value.
 
-1. Gumawa ng _app.py_ file at ilagay ang sumusunod na code:
+1. Gumawa ng _app.py_ file at bigyan ito ng sumusunod na code:
 
    ```python
    import openai
@@ -208,9 +208,9 @@ Ngayon na natutunan mo kung paano i-setup at i-configure ang openai, panahon na 
    ```
 
    > [!NOTE]
-   > Kung gumagamit ka ng Azure OpenAI, kailangan mong i-set ang `api_type` sa `azure` at i-set ang `api_key` sa iyong Azure OpenAI key.
+   > Kung gumagamit ka ng Azure OpenAI, kailangan mong itakda ang `api_type` sa `azure` at itakda ang `api_key` sa iyong Azure OpenAI key.
 
-   Makikita mo ang output na ganito:
+   Makikita mo ang output na tulad ng sumusunod:
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ Ngayon na natutunan mo kung paano i-setup at i-configure ang openai, panahon na 
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Iba't ibang uri ng prompts, para sa iba't ibang gamit
+## Iba't ibang uri ng mga prompt, para sa iba't ibang bagay
 
-Ngayon ay nakita mo na kung paano gumawa ng teksto gamit ang prompt. Mayroon ka nang program na tumatakbo na maaari mong baguhin para makagawa ng iba't ibang uri ng teksto.
+Ngayon nakita mo kung paano bumuo ng teksto gamit ang isang prompt. Mayroon ka nang program na tumatakbo na maaari mong baguhin at palitan upang bumuo ng iba't ibang uri ng teksto.
 
-Maaaring gamitin ang prompts para sa iba't ibang gawain. Halimbawa:
+Ang mga prompt ay maaaring gamitin para sa iba't ibang gawain. Halimbawa:
 
-- **Gumawa ng isang uri ng teksto**. Halimbawa, maaari kang gumawa ng tula, mga tanong para sa isang quiz, atbp.
-- **Maghanap ng impormasyon**. Maaari mong gamitin ang prompts para maghanap ng impormasyon tulad ng halimbawa: 'Ano ang ibig sabihin ng CORS sa web development?'.
-- **Gumawa ng code**. Maaari kang gumamit ng prompts para gumawa ng code, halimbawa, pagbuo ng regular expression para i-validate ang mga email o bakit hindi gumawa ng buong programa, tulad ng isang web app?
+- **Bumuo ng uri ng teksto**. Halimbawa, maaari kang bumuo ng isang tula, mga tanong para sa isang quiz, at iba pa.
+- **Maghanap ng impormasyon**. Maaari mong gamitin ang mga prompt upang maghanap ng impormasyon tulad ng halimbawa 'Ano ang ibig sabihin ng CORS sa web development?'.
+- **Bumuo ng code**. Maaari mong gamitin ang mga prompt upang bumuo ng code, halimbawa paggawa ng regular expression na ginagamit upang i-validate ang mga email o bakit hindi bumuo ng isang buong programa, tulad ng isang web app?
 
-## Isang mas praktikal na halimbawa: recipe generator
+## Isang mas praktikal na paggamit: isang recipe generator
 
-Isipin mo na may mga sangkap ka sa bahay at gusto mong magluto ng isang bagay. Para dito, kailangan mo ng recipe. Isang paraan para makahanap ng mga recipe ay ang paggamit ng search engine o maaari kang gumamit ng LLM para dito.
+Isipin mo na mayroon kang mga sangkap sa bahay at gusto mong magluto ng isang bagay. Para dito, kailangan mo ng recipe. Isang paraan upang makahanap ng mga recipe ay ang paggamit ng search engine o maaari kang gumamit ng isang LLM para dito.
 
-Maaari kang magsulat ng prompt tulad nito:
+Maaari kang magsulat ng prompt tulad ng:
 
-> "Ipakita sa akin ang 5 recipe para sa isang ulam na may mga sumusunod na sangkap: manok, patatas, at karot. Sa bawat recipe, ilista ang lahat ng sangkap na ginamit"
+> "Ipakita sa akin ang 5 recipe para sa isang ulam na may mga sumusunod na sangkap: manok, patatas, at karot. Per recipe, ilista ang lahat ng mga sangkap na ginamit"
 
-Batay sa prompt na ito, maaaring makakuha ka ng sagot na katulad ng:
+Batay sa prompt sa itaas, maaaring makakuha ka ng sagot na katulad ng:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -302,14 +302,14 @@ Ingredients:
 
 Maganda ang resulta na ito, alam ko na kung ano ang lulutuin. Sa puntong ito, ang mga maaaring maging kapaki-pakinabang na pagpapabuti ay:
 
-- Pag-filter ng mga sangkap na ayaw ko o may allergy ako.
-- Gumawa ng shopping list, kung sakaling wala ako ng ilan sa mga sangkap sa bahay.
+- Pag-filter ng mga sangkap na hindi ko gusto o allergic ako.
+- Gumawa ng shopping list, kung sakaling wala ako ng lahat ng mga sangkap sa bahay.
 
-Para sa mga nabanggit na kaso, magdagdag tayo ng karagdagang prompt:
+Para sa mga kaso sa itaas, magdagdag tayo ng karagdagang prompt:
 
-> "Pakibura ang mga recipe na may bawang dahil allergic ako at palitan ito ng ibang sangkap. Pati na rin, gumawa ng shopping list para sa mga recipe, isaalang-alang na mayroon na akong manok, patatas, at karot sa bahay."
+> "Pakitanggal ang mga recipe na may bawang dahil allergic ako at palitan ito ng ibang bagay. Gayundin, pakigawa ng shopping list para sa mga recipe, isinasaalang-alang na mayroon na akong manok, patatas, at karot sa bahay."
 
-Ngayon ay mayroon kang bagong resulta, ito ay:
+Ngayon mayroon kang bagong resulta, na:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-Iyan ang limang recipe mo, walang binanggit na bawang at mayroon ka ring shopping list na isinasaalang-alang ang mga sangkap na mayroon ka na sa bahay.
+Narito ang iyong limang recipe, walang bawang na binanggit at mayroon ka ring shopping list na isinasaalang-alang kung ano ang mayroon ka na sa bahay.
 
 ## Ehersisyo - gumawa ng recipe generator
 
-Ngayon na naipakita na natin ang isang senaryo, sumulat tayo ng code na tumutugma sa ipinakitang senaryo. Para gawin ito, sundin ang mga hakbang na ito:
+Ngayon na naglaro tayo ng isang senaryo, magsulat tayo ng code upang tumugma sa ipinakitang senaryo. Upang gawin ito, sundin ang mga hakbang na ito:
 
 1. Gamitin ang umiiral na _app.py_ file bilang panimulang punto
-1. Hanapin ang variable na `prompt` at palitan ang code nito ng sumusunod:
+1. Hanapin ang `prompt` variable at palitan ang code nito ng sumusunod:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Kapag pinatakbo mo na ang code, makikita mo ang output na katulad nito:
+   Kung ngayon ay patakbuhin mo ang code, makikita mo ang output na katulad ng:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Ngayon na naipakita na natin ang isang senaryo, sumulat tayo ng code na tumutugm
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE, ang iyong LLM ay nondeterministic, kaya maaaring iba-iba ang resulta sa bawat pagtakbo ng programa.
+   > NOTE, ang iyong LLM ay hindi deterministic, kaya maaaring makakuha ka ng iba't ibang resulta sa tuwing patatakbuhin mo ang programa.
 
-   Maganda, tingnan natin kung paano pa ito mapapabuti. Para mapabuti, gusto nating gawing flexible ang code, kaya ang mga sangkap at bilang ng mga recipe ay maaaring baguhin.
+   Magaling, tingnan natin kung paano natin mapapabuti ang mga bagay. Upang mapabuti ang mga bagay, nais nating tiyakin na ang code ay flexible, kaya ang mga sangkap at bilang ng mga recipe ay maaaring mapabuti at mabago.
 
-1. Palitan natin ang code sa ganitong paraan:
+1. Palitan ang code sa sumusunod na paraan:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Ngayon na naipakita na natin ang isang senaryo, sumulat tayo ng code na tumutugm
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Ang pag-test ng code ay maaaring ganito:
+   Ang pag-test run ng code ay maaaring magmukhang ganito:
 
    ```output
    No of recipes (for example, 5): 3
@@ -427,13 +427,13 @@ Ngayon na naipakita na natin ang isang senaryo, sumulat tayo ng code na tumutugm
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Pagbutihin sa pamamagitan ng pagdagdag ng filter at shopping list
+### Pagbutihin sa pamamagitan ng pagdaragdag ng filter at shopping list
 
-Ngayon ay mayroon na tayong gumaganang app na kayang gumawa ng mga recipe at flexible ito dahil umaasa ito sa input ng user, pareho sa bilang ng mga recipe at pati na rin sa mga sangkap na gagamitin.
+Ngayon mayroon na tayong gumaganang app na may kakayahang gumawa ng mga recipe at ito ay flexible dahil umaasa ito sa mga input mula sa user, parehong sa bilang ng mga recipe pati na rin sa mga sangkap na ginamit.
 
-Para lalo pang mapabuti, gusto nating idagdag ang mga sumusunod:
+Upang higit pang mapabuti ito, nais nating idagdag ang mga sumusunod:
 
-- **I-filter ang mga sangkap**. Gusto nating ma-filter ang mga sangkap na ayaw natin o may allergy tayo. Para magawa ito, maaari nating baguhin ang umiiral na prompt at magdagdag ng filter condition sa dulo nito tulad nito:
+- **Pag-filter ng mga sangkap**. Nais nating magawang i-filter ang mga sangkap na hindi natin gusto o allergic tayo. Upang maisakatuparan ang pagbabagong ito, maaari nating i-edit ang umiiral na prompt at magdagdag ng kondisyon ng filter sa dulo nito tulad ng:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Para lalo pang mapabuti, gusto nating idagdag ang mga sumusunod:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Dito, idinagdag natin ang `{filter}` sa dulo ng prompt at kinukuha rin natin ang filter value mula sa user.
+  Sa itaas, idinagdag natin ang `{filter}` sa dulo ng prompt at kinukuha rin natin ang filter value mula sa user.
 
-  Halimbawa ng input kapag pinatakbo ang programa ay maaaring ganito:
+  Ang isang halimbawa ng input ng pagpapatakbo ng programa ay maaaring magmukhang ganito:
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,13 +510,12 @@ Para lalo pang mapabuti, gusto nating idagdag ang mga sumusunod:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Makikita mo na ang mga recipe na may gatas ay na-filter na. Pero kung lactose intolerant ka, baka gusto mo ring i-filter ang mga recipe na may keso, kaya kailangan maging malinaw.
+  Tulad ng nakikita mo, ang anumang recipe na may gatas ay na-filter. Ngunit, kung ikaw ay lactose intolerant, maaaring nais mong i-filter ang mga recipe na may keso rin, kaya't may pangangailangan na maging malinaw.
 
-- **Gumawa ng shopping list**. Gusto nating gumawa ng shopping list, isinasaalang-alang kung ano na ang mayroon tayo sa bahay.
+- **Gumawa ng shopping list**. Nais nating gumawa ng shopping list, isinasaalang-alang kung ano ang mayroon na tayo sa bahay.
 
-  Para sa functionality na ito, maaari nating subukang gawin lahat sa isang prompt o hatiin ito sa dalawang prompt. Subukan natin ang pangalawang paraan. Dito, iminumungkahi nating magdagdag ng karagdagang prompt, pero para gumana ito, kailangan nating idagdag ang resulta ng unang prompt bilang konteksto sa pangalawang prompt.
-
-  Hanapin ang bahagi ng code na nagpi-print ng resulta mula sa unang prompt at idagdag ang sumusunod na code sa ibaba nito:
+  Para sa functionality na ito, maaari nating subukang lutasin ang lahat sa isang prompt o hatiin ito sa dalawang prompt. Subukan natin ang huling diskarte. Dito, iminumungkahi ang pagdaragdag ng karagdagang prompt, ngunit para gumana ito, kailangan nating idagdag ang resulta ng naunang prompt bilang konteksto sa susunod na prompt.
+Hanapin ang bahagi ng code na nagpi-print ng resulta mula sa unang prompt at idagdag ang sumusunod na code sa ibaba:
 
   ```python
   old_prompt_result = completion.choices[0].message.content
@@ -531,22 +530,23 @@ Para lalo pang mapabuti, gusto nating idagdag ang mga sumusunod:
   print(completion.choices[0].message.content)
   ```
 
-  Tandaan ang mga sumusunod:
+Tandaan ang mga sumusunod:
 
-  1. Gumagawa tayo ng bagong prompt sa pamamagitan ng pagdagdag ng resulta mula sa unang prompt sa bagong prompt:
+1. Gumagawa tayo ng bagong prompt sa pamamagitan ng pagdaragdag ng resulta mula sa unang prompt sa bagong prompt:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
-1. Gumawa tayo ng bagong request, pero isinasaalang-alang din ang bilang ng tokens na hiniling natin sa unang prompt, kaya sa pagkakataong ito sinasabi natin na ang `max_tokens` ay 1200.
 
-```python
+1. Gumagawa tayo ng bagong request, ngunit isinasaalang-alang din ang bilang ng mga token na ginamit sa unang prompt, kaya sa pagkakataong ito sinasabi natin na `max_tokens` ay 1200.
+
+     ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-Sa pagsubok ng code na ito, narito ang lumabas na output:
+   Kapag sinubukan ang code na ito, makakakuha tayo ng sumusunod na output:
 
-```output
+     ```output
      No of recipes (for example, 5): 2
      List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
      Filter (for example, vegetarian, vegan, or gluten-free): sugar
@@ -560,18 +560,17 @@ Sa pagsubok ng code na ito, narito ang lumabas na output:
 
 ## Pagbutihin ang iyong setup
 
-Ang meron tayo ngayon ay code na gumagana, pero may ilang mga pagbabago na dapat gawin para mas mapabuti pa ito. Ilan sa mga dapat gawin ay:
+Ang meron tayo sa ngayon ay code na gumagana, ngunit may ilang mga pag-aayos na dapat gawin upang higit pang mapabuti ito. Ilan sa mga bagay na dapat gawin ay:
 
-- **Ihiwalay ang mga sikreto mula sa code**, tulad ng API key. Hindi dapat kasama sa code ang mga sikreto at dapat itong itago sa isang ligtas na lugar. Para mahiwalay ang mga sikreto mula sa code, maaari tayong gumamit ng environment variables at mga library tulad ng `python-dotenv` para i-load ang mga ito mula sa isang file. Ganito ang magiging hitsura nito sa code:
+- **Paghiwalayin ang mga lihim mula sa code**, tulad ng API key. Ang mga lihim ay hindi dapat nasa code at dapat itago sa isang ligtas na lokasyon. Upang paghiwalayin ang mga lihim mula sa code, maaari nating gamitin ang environment variables at mga library tulad ng `python-dotenv` upang i-load ang mga ito mula sa isang file. Ganito ang magiging hitsura nito sa code:
 
-  1. Gumawa ng `.env` file na may ganitong nilalaman:
+  1. Gumawa ng `.env` file na may sumusunod na nilalaman:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     
-> Tandaan, para sa Azure, kailangan mong itakda ang mga sumusunod na environment variables:
+   > Tandaan, para sa Azure, kailangan mong itakda ang mga sumusunod na environment variables:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -579,7 +578,7 @@ Ang meron tayo ngayon ay code na gumagana, pero may ilang mga pagbabago na dapat
      OPENAI_API_BASE=<replace>
      ```
 
-     Sa code, ganito mo i-lo-load ang mga environment variables:
+   Sa code, maaari mong i-load ang environment variables tulad nito:
 
      ```python
      from dotenv import load_dotenv
@@ -589,39 +588,39 @@ Ang meron tayo ngayon ay code na gumagana, pero may ilang mga pagbabago na dapat
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **Tungkol sa haba ng token**. Dapat nating isaalang-alang kung ilang tokens ang kailangan para mabuo ang nais nating teksto. May bayad ang tokens, kaya kung maaari, dapat tayong maging matipid sa paggamit ng tokens. Halimbawa, maaari ba nating ayusin ang prompt para gumamit ng mas kaunting tokens?
+- **Isang salita tungkol sa haba ng token**. Dapat nating isaalang-alang kung gaano karaming mga token ang kailangan upang makabuo ng text na gusto natin. Ang mga token ay may halaga, kaya kung maaari, dapat tayong maging matipid sa bilang ng mga token na ginagamit. Halimbawa, maaari ba nating baguhin ang prompt upang mas kaunti ang magamit na mga token?
 
-  Para baguhin ang bilang ng tokens na gagamitin, maaari mong gamitin ang parameter na `max_tokens`. Halimbawa, kung gusto mong gumamit ng 100 tokens, ganito ang gagawin mo:
+  Upang baguhin ang mga token na ginagamit, maaari mong gamitin ang `max_tokens` parameter. Halimbawa, kung gusto mong gumamit ng 100 token, gagawin mo ito:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **Pagsubok sa temperature**. Ang temperature ay isang bagay na hindi pa natin nabanggit pero mahalaga sa kung paano gumagana ang ating programa. Kapag mas mataas ang value ng temperature, mas random ang magiging output. Sa kabilang banda, kapag mas mababa ang temperature, mas predictable ang output. Isipin kung gusto mo ba ng variation sa iyong output o hindi.
+- **Pag-eksperimento sa temperature**. Ang temperature ay isang bagay na hindi pa natin nababanggit ngunit mahalaga sa konteksto ng kung paano gumagana ang ating programa. Kapag mas mataas ang temperature value, mas random ang magiging output. Sa kabaligtaran, kapag mas mababa ang temperature value, mas predictable ang output. Isaalang-alang kung gusto mo ng variation sa iyong output o hindi.
 
-  Para baguhin ang temperature, maaari mong gamitin ang parameter na `temperature`. Halimbawa, kung gusto mong gumamit ng temperature na 0.5, ganito ang gagawin mo:
+  Upang baguhin ang temperature, maaari mong gamitin ang `temperature` parameter. Halimbawa, kung gusto mong gumamit ng temperature na 0.5, gagawin mo ito:
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > Tandaan, kapag mas malapit sa 1.0, mas magkakaiba-iba ang output.
+  > Tandaan, mas malapit sa 1.0, mas iba-iba ang output.
 
-## Takdang Aralin
+## Gawain
 
-Para sa takdang aralin na ito, maaari kang pumili kung ano ang gagawin.
+Para sa gawain na ito, maaari kang pumili kung ano ang gagawin.
 
-Narito ang ilang mga suhestiyon:
+Narito ang ilang mga mungkahi:
 
-- Ayusin pa ang recipe generator app para mas mapabuti ito. Subukan ang iba't ibang temperature values at mga prompt para makita kung ano ang magagawa mo.
-- Gumawa ng "study buddy". Ang app na ito ay dapat kayang sumagot ng mga tanong tungkol sa isang paksa, halimbawa Python. Maaari kang gumawa ng mga prompt tulad ng "Ano ang isang partikular na paksa sa Python?", o prompt na nagsasabing, ipakita ang code para sa isang partikular na paksa, atbp.
-- History bot, buhayin ang kasaysayan, utusan ang bot na gumanap bilang isang tiyak na makasaysayang tao at tanungin ito tungkol sa kanyang buhay at panahon.
+- Ayusin ang recipe generator app upang higit pang mapabuti ito. Subukan ang iba't ibang temperature values, at ang mga prompt upang makita kung ano ang magagawa mo.
+- Gumawa ng "study buddy". Ang app na ito ay dapat kayang sumagot ng mga tanong tungkol sa isang paksa, halimbawa Python, maaari kang magkaroon ng mga prompt tulad ng "Ano ang isang tiyak na paksa sa Python?", o maaari kang magkaroon ng prompt na nagsasabing, ipakita sa akin ang code para sa isang tiyak na paksa, atbp.
+- History bot, gawing buhay ang kasaysayan, utusan ang bot na maglaro bilang isang tiyak na karakter sa kasaysayan at tanungin ito tungkol sa kanyang buhay at panahon.
 
 ## Solusyon
 
 ### Study buddy
 
-Narito ang panimulang prompt, tingnan kung paano mo ito magagamit at mababago ayon sa gusto mo.
+Narito ang isang panimulang prompt, tingnan kung paano mo ito magagamit at baguhin ayon sa gusto mo.
 
 ```text
 - "You're an expert on the Python language
@@ -645,23 +644,25 @@ Narito ang ilang mga prompt na maaari mong gamitin:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## Pagsusulit sa Kaalaman
+## Pagsusuri ng Kaalaman
 
 Ano ang ginagawa ng konsepto ng temperature?
 
 1. Kinokontrol nito kung gaano ka-random ang output.
-1. Kinokontrol nito kung gaano kalaki ang sagot.
-1. Kinokontrol nito kung ilang tokens ang nagagamit.
+1. Kinokontrol nito kung gaano kalaki ang response.
+1. Kinokontrol nito kung gaano karaming mga token ang ginagamit.
 
 ## 🚀 Hamon
 
-Habang ginagawa ang takdang aralin, subukan mong baguhin ang temperature, itakda ito sa 0, 0.5, at 1. Tandaan na ang 0 ang pinaka-kakaunti ang variation at ang 1 ang pinaka-maraming variation. Alin sa mga value ang pinakamainam para sa iyong app?
+Kapag gumagawa ng gawain, subukang baguhin ang temperature, subukang itakda ito sa 0, 0.5, at 1. Tandaan na ang 0 ang pinaka hindi iba-iba at ang 1 ang pinaka iba-iba. Anong value ang pinakamahusay para sa iyong app?
 
-## Mahusay na Gawain! Ipagpatuloy ang Iyong Pag-aaral
+## Magaling! Ipagpatuloy ang Iyong Pag-aaral
 
-Pagkatapos matapos ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
+Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang patuloy na paunlarin ang iyong kaalaman sa Generative AI!
 
 Pumunta sa Lesson 7 kung saan tatalakayin natin kung paano [gumawa ng chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Paalala**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+---
+
+**Paunawa**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
