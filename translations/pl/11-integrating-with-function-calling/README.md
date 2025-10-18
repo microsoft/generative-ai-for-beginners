@@ -1,66 +1,66 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-07-09T14:32:28+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-18T00:51:32+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "pl"
 }
 -->
 # Integracja z wywoływaniem funkcji
 
-[![Integracja z wywoływaniem funkcji](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.pl.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integracja z wywoływaniem funkcji](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.pl.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Do tej pory nauczyłeś się całkiem sporo w poprzednich lekcjach. Jednak możemy pójść dalej. Niektóre kwestie, które możemy poprawić, to uzyskanie bardziej spójnego formatu odpowiedzi, co ułatwi dalszą pracę z odpowiedzią. Możemy też chcieć dodać dane z innych źródeł, aby jeszcze bardziej wzbogacić naszą aplikację.
+W poprzednich lekcjach nauczyłeś się już całkiem sporo. Jednak zawsze można coś poprawić. Możemy na przykład zadbać o bardziej spójny format odpowiedzi, aby ułatwić pracę z odpowiedzią w dalszych etapach. Możemy również dodać dane z innych źródeł, aby wzbogacić naszą aplikację.
 
-Wymienione powyżej problemy są tym, czym zajmie się ten rozdział.
+Właśnie te problemy są tematem tego rozdziału.
 
 ## Wprowadzenie
 
 W tej lekcji omówimy:
 
-- Co to jest wywoływanie funkcji i do czego służy.
+- Wyjaśnienie, czym jest wywoływanie funkcji i jakie ma zastosowania.
 - Tworzenie wywołania funkcji za pomocą Azure OpenAI.
 - Jak zintegrować wywołanie funkcji z aplikacją.
 
 ## Cele nauki
 
-Po ukończeniu tej lekcji będziesz potrafił:
+Po ukończeniu tej lekcji będziesz w stanie:
 
-- Wyjaśnić cel stosowania wywoływania funkcji.
+- Wyjaśnić cel korzystania z wywoływania funkcji.
 - Skonfigurować wywołanie funkcji za pomocą usługi Azure OpenAI.
-- Projektować efektywne wywołania funkcji dopasowane do potrzeb Twojej aplikacji.
+- Zaprojektować efektywne wywołania funkcji dla potrzeb swojej aplikacji.
 
 ## Scenariusz: Ulepszanie naszego chatbota za pomocą funkcji
 
-W tej lekcji chcemy stworzyć funkcję dla naszego startupu edukacyjnego, która pozwoli użytkownikom korzystać z chatbota do wyszukiwania kursów technicznych. Będziemy polecać kursy dopasowane do ich poziomu umiejętności, obecnej roli oraz interesującej technologii.
+W tej lekcji chcemy stworzyć funkcję dla naszego startupu edukacyjnego, która pozwoli użytkownikom korzystać z chatbota do wyszukiwania kursów technicznych. Będziemy rekomendować kursy, które pasują do ich poziomu umiejętności, obecnej roli i zainteresowań technologicznych.
 
-Aby zrealizować ten scenariusz, użyjemy połączenia:
+Aby zrealizować ten scenariusz, użyjemy kombinacji:
 
-- `Azure OpenAI` do stworzenia doświadczenia czatu dla użytkownika.
-- `Microsoft Learn Catalog API` do pomocy użytkownikom w znajdowaniu kursów na podstawie ich zapytań.
-- `Function Calling` do przejęcia zapytania użytkownika i przesłania go do funkcji wykonującej zapytanie do API.
+- `Azure OpenAI`, aby stworzyć doświadczenie czatu dla użytkownika.
+- `Microsoft Learn Catalog API`, aby pomóc użytkownikom znaleźć kursy na podstawie ich zapytań.
+- `Wywoływanie funkcji`, aby przekształcić zapytanie użytkownika w wywołanie funkcji, które wykona żądanie do API.
 
-Na początek przyjrzyjmy się, dlaczego w ogóle chcemy używać wywoływania funkcji:
+Na początek przyjrzyjmy się, dlaczego w ogóle warto korzystać z wywoływania funkcji:
 
 ## Dlaczego wywoływanie funkcji
 
-Przed wprowadzeniem wywoływania funkcji odpowiedzi z LLM były nieustrukturyzowane i niespójne. Programiści musieli pisać skomplikowany kod walidacyjny, aby poradzić sobie z różnymi wariantami odpowiedzi. Użytkownicy nie mogli uzyskać odpowiedzi na pytania typu „Jaka jest aktualna pogoda w Sztokholmie?”. Dzieje się tak, ponieważ modele były ograniczone do danych, na których zostały wytrenowane.
+Przed wprowadzeniem wywoływania funkcji odpowiedzi z LLM były nieustrukturyzowane i niespójne. Programiści musieli pisać skomplikowany kod walidacyjny, aby obsłużyć różne warianty odpowiedzi. Użytkownicy nie mogli uzyskać odpowiedzi na pytania typu „Jaka jest obecnie pogoda w Sztokholmie?”. Wynikało to z ograniczeń modeli, które bazowały na danych, na których były trenowane.
 
-Wywoływanie funkcji to funkcja usługi Azure OpenAI, która pozwala pokonać następujące ograniczenia:
+Wywoływanie funkcji to funkcja usługi Azure OpenAI, która pozwala przezwyciężyć następujące ograniczenia:
 
-- **Spójny format odpowiedzi**. Jeśli możemy lepiej kontrolować format odpowiedzi, łatwiej jest zintegrować ją z innymi systemami.
-- **Dane zewnętrzne**. Możliwość korzystania z danych pochodzących z innych źródeł aplikacji w kontekście czatu.
+- **Spójny format odpowiedzi**. Jeśli możemy lepiej kontrolować format odpowiedzi, łatwiej będzie nam zintegrować ją z innymi systemami.
+- **Dane zewnętrzne**. Możliwość korzystania z danych z innych źródeł aplikacji w kontekście czatu.
 
 ## Ilustracja problemu na przykładzie scenariusza
 
-> Zalecamy użycie [dołączonego notatnika](python/aoai-assignment.ipynb), jeśli chcesz uruchomić poniższy scenariusz. Możesz też po prostu czytać dalej, ponieważ chcemy zilustrować problem, który funkcje mogą pomóc rozwiązać.
+> Zalecamy skorzystanie z [dołączonego notebooka](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), jeśli chcesz uruchomić poniższy scenariusz. Możesz również po prostu przeczytać, ponieważ staramy się zilustrować problem, w którym funkcje mogą pomóc w jego rozwiązaniu.
 
-Spójrzmy na przykład ilustrujący problem z formatem odpowiedzi:
+Przyjrzyjmy się przykładowi, który ilustruje problem z formatem odpowiedzi:
 
-Załóżmy, że chcemy stworzyć bazę danych z danymi studentów, aby móc im sugerować odpowiednie kursy. Poniżej mamy dwa opisy studentów, które są bardzo podobne pod względem zawartych danych.
+Załóżmy, że chcemy stworzyć bazę danych danych studentów, aby móc sugerować im odpowiednie kursy. Poniżej mamy dwa opisy studentów, które są bardzo podobne pod względem zawartych danych.
 
-1. Utwórz połączenie z zasobem Azure OpenAI:
+1. Utwórz połączenie z naszym zasobem Azure OpenAI:
 
    ```python
    import os
@@ -77,9 +77,9 @@ Załóżmy, że chcemy stworzyć bazę danych z danymi studentów, aby móc im s
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Poniżej znajduje się kod w Pythonie konfigurujący połączenie z Azure OpenAI, gdzie ustawiamy `api_type`, `api_base`, `api_version` oraz `api_key`.
+   Poniżej znajduje się kod w Pythonie do skonfigurowania naszego połączenia z Azure OpenAI, gdzie ustawiamy `api_type`, `api_base`, `api_version` i `api_key`.
 
-1. Tworzymy dwa opisy studentów za pomocą zmiennych `student_1_description` i `student_2_description`.
+1. Utwórz dwa opisy studentów, korzystając z zmiennych `student_1_description` i `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -87,9 +87,9 @@ Załóżmy, że chcemy stworzyć bazę danych z danymi studentów, aby móc im s
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Chcemy przesłać powyższe opisy studentów do LLM, aby przetworzyć dane. Dane te mogą być później użyte w naszej aplikacji, przesłane do API lub zapisane w bazie danych.
+   Chcemy wysłać powyższe opisy studentów do LLM, aby przeanalizować dane. Te dane mogą być później użyte w naszej aplikacji, wysłane do API lub zapisane w bazie danych.
 
-1. Stwórzmy dwa identyczne prompt’y, w których instruujemy LLM, jakie informacje nas interesują:
+1. Utwórz dwa identyczne polecenia, w których instruujemy LLM, jakie informacje nas interesują:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ Załóżmy, że chcemy stworzyć bazę danych z danymi studentów, aby móc im s
    '''
    ```
 
-   Powyższe prompt’y instruują LLM, aby wyodrębnił informacje i zwrócił odpowiedź w formacie JSON.
+   Powyższe polecenia instruują LLM, aby wyodrębnił informacje i zwrócił odpowiedź w formacie JSON.
 
-1. Po skonfigurowaniu promptów i połączenia z Azure OpenAI, wyślemy teraz prompt’y do LLM za pomocą `openai.ChatCompletion`. Przechowujemy prompt w zmiennej `messages` i przypisujemy rolę `user`. Ma to na celu symulację wiadomości od użytkownika wysyłanej do chatbota.
+1. Po skonfigurowaniu poleceń i połączenia z Azure OpenAI, wyślemy teraz polecenia do LLM, używając `openai.ChatCompletion`. Przechowujemy polecenie w zmiennej `messages` i przypisujemy rolę `user`. Ma to na celu symulację wiadomości od użytkownika napisanej do chatbota.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ Załóżmy, że chcemy stworzyć bazę danych z danymi studentów, aby móc im s
    openai_response2.choices[0].message.content
    ```
 
-Teraz możemy wysłać oba zapytania do LLM i sprawdzić otrzymaną odpowiedź, odczytując ją tak: `openai_response1['choices'][0]['message']['content']`.
+Teraz możemy wysłać oba żądania do LLM i zbadać otrzymaną odpowiedź, znajdując ją w `openai_response1['choices'][0]['message']['content']`.
 
-1. Na koniec możemy przekonwertować odpowiedź do formatu JSON, wywołując `json.loads`:
+1. Na koniec możemy przekonwertować odpowiedź na format JSON, wywołując `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -173,55 +173,55 @@ Teraz możemy wysłać oba zapytania do LLM i sprawdzić otrzymaną odpowiedź, 
    }
    ```
 
-   Mimo że prompt’y są takie same, a opisy podobne, widzimy, że wartości właściwości `Grades` są formatowane różnie, np. czasem otrzymujemy `3.7`, a czasem `3.7 GPA`.
+   Mimo że polecenia są takie same, a opisy podobne, widzimy, że wartości właściwości `Grades` są sformatowane inaczej, np. w formacie `3.7` lub `3.7 GPA`.
 
-   Ten efekt wynika z faktu, że LLM przyjmuje nieustrukturyzowane dane w formie napisanego promptu i zwraca również nieustrukturyzowane dane. Potrzebujemy mieć ustrukturyzowany format, aby wiedzieć, czego się spodziewać podczas przechowywania lub używania tych danych.
+   Wynik ten wynika z faktu, że LLM przyjmuje nieustrukturyzowane dane w formie napisanego polecenia i zwraca również dane nieustrukturyzowane. Potrzebujemy mieć ustrukturyzowany format, aby wiedzieć, czego się spodziewać podczas przechowywania lub używania tych danych.
 
-Jak więc rozwiązać problem formatowania? Dzięki wywoływaniu funkcji możemy mieć pewność, że otrzymamy dane w ustrukturyzowanym formacie. Podczas korzystania z wywoływania funkcji LLM tak naprawdę nie wywołuje ani nie uruchamia żadnych funkcji. Zamiast tego tworzymy strukturę, której LLM ma się trzymać w swoich odpowiedziach. Następnie korzystamy z tych ustrukturyzowanych odpowiedzi, aby wiedzieć, jaką funkcję wywołać w naszej aplikacji.
+Jak więc rozwiązać problem formatowania? Korzystając z wywoływania funkcji, możemy upewnić się, że otrzymujemy dane ustrukturyzowane. Podczas korzystania z wywoływania funkcji LLM faktycznie nie wywołuje ani nie uruchamia żadnych funkcji. Zamiast tego tworzymy strukturę, której LLM ma przestrzegać w swoich odpowiedziach. Następnie używamy tych ustrukturyzowanych odpowiedzi, aby wiedzieć, jaką funkcję uruchomić w naszych aplikacjach.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.pl.png)
+![przepływ funkcji](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.pl.png)
 
-Możemy wtedy wziąć to, co zwróci funkcja, i przesłać to z powrotem do LLM. LLM odpowie wtedy w języku naturalnym, odpowiadając na zapytanie użytkownika.
+Możemy następnie wziąć to, co zwróci funkcja, i przesłać to z powrotem do LLM. LLM odpowie wtedy w języku naturalnym, aby odpowiedzieć na zapytanie użytkownika.
 
-## Przypadki użycia wywoływania funkcji
+## Przykłady zastosowań wywoływania funkcji
 
-Istnieje wiele różnych zastosowań, gdzie wywoływanie funkcji może usprawnić Twoją aplikację, na przykład:
+Istnieje wiele różnych zastosowań, w których wywoływanie funkcji może poprawić działanie Twojej aplikacji, takich jak:
 
-- **Wywoływanie narzędzi zewnętrznych**. Chatboty świetnie odpowiadają na pytania użytkowników. Dzięki wywoływaniu funkcji chatboty mogą wykonać określone zadania na podstawie wiadomości od użytkowników. Na przykład student może poprosić chatbota: „Wyślij e-mail do mojego wykładowcy z prośbą o dodatkową pomoc w tym temacie”. Chatbot może wtedy wywołać funkcję `send_email(to: string, body: string)`.
+- **Wywoływanie narzędzi zewnętrznych**. Chatboty świetnie nadają się do udzielania odpowiedzi na pytania użytkowników. Korzystając z wywoływania funkcji, chatboty mogą używać wiadomości od użytkowników do wykonywania określonych zadań. Na przykład student może poprosić chatbota: „Wyślij e-mail do mojego wykładowcy z informacją, że potrzebuję więcej pomocy w tym temacie”. Może to wywołać funkcję `send_email(to: string, body: string)`.
 
-- **Tworzenie zapytań do API lub bazy danych**. Użytkownicy mogą wyszukiwać informacje w języku naturalnym, które są konwertowane na sformatowane zapytania lub wywołania API. Przykładem może być nauczyciel, który pyta: „Którzy studenci ukończyli ostatnie zadanie?”, co może wywołać funkcję `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Tworzenie zapytań do API lub bazy danych**. Użytkownicy mogą znaleźć informacje, korzystając z języka naturalnego, który zostanie przekształcony w sformatowane zapytanie lub żądanie API. Przykładem może być nauczyciel, który pyta: „Którzy studenci ukończyli ostatnie zadanie?”, co może wywołać funkcję `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Tworzenie ustrukturyzowanych danych**. Użytkownicy mogą wziąć blok tekstu lub plik CSV i użyć LLM do wyodrębnienia z niego ważnych informacji. Na przykład student może przekształcić artykuł z Wikipedii o porozumieniach pokojowych, aby stworzyć fiszki AI. Można to zrobić za pomocą funkcji `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Tworzenie danych ustrukturyzowanych**. Użytkownicy mogą wziąć blok tekstu lub plik CSV i użyć LLM do wyodrębnienia z niego ważnych informacji. Na przykład student może przekształcić artykuł z Wikipedii o porozumieniach pokojowych w AI fiszki. Można to zrobić za pomocą funkcji `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
 ## Tworzenie pierwszego wywołania funkcji
 
 Proces tworzenia wywołania funkcji obejmuje 3 główne kroki:
 
-1. **Wywołanie** API Chat Completions z listą Twoich funkcji i wiadomością od użytkownika.
-2. **Odczytanie** odpowiedzi modelu, aby wykonać akcję, np. wywołać funkcję lub zapytanie do API.
-3. **Wykonanie** kolejnego wywołania API Chat Completions z odpowiedzią z funkcji, aby wykorzystać tę informację do stworzenia odpowiedzi dla użytkownika.
+1. **Wywołanie** API Chat Completions z listą funkcji i wiadomością użytkownika.
+2. **Odczytanie** odpowiedzi modelu w celu wykonania akcji, np. wywołania funkcji lub żądania API.
+3. **Wykonanie** kolejnego wywołania API Chat Completions z odpowiedzią z funkcji, aby wykorzystać te informacje do stworzenia odpowiedzi dla użytkownika.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.pl.png)
+![Przepływ LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.pl.png)
 
-### Krok 1 – tworzenie wiadomości
+### Krok 1 - tworzenie wiadomości
 
-Pierwszym krokiem jest stworzenie wiadomości od użytkownika. Może być ona dynamicznie przypisana na podstawie wartości z pola tekstowego lub możesz przypisać ją tutaj ręcznie. Jeśli to Twoje pierwsze użycie API Chat Completions, musimy zdefiniować `role` oraz `content` wiadomości.
+Pierwszym krokiem jest stworzenie wiadomości użytkownika. Może być ona dynamicznie przypisana na podstawie wartości z pola tekstowego lub przypisana tutaj. Jeśli po raz pierwszy pracujesz z API Chat Completions, musimy zdefiniować `role` i `content` wiadomości.
 
-`role` może mieć wartość `system` (tworzenie reguł), `assistant` (model) lub `user` (użytkownik końcowy). Dla wywoływania funkcji przypiszemy `user` oraz przykładowe pytanie.
+`Role` może być `system` (tworzenie reguł), `assistant` (model) lub `user` (użytkownik końcowy). W przypadku wywoływania funkcji przypiszemy rolę jako `user` i podamy przykładowe pytanie.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Przypisując różne role, jasno określamy LLM, czy to system coś mówi, czy użytkownik, co pomaga budować historię rozmowy, na której LLM może się opierać.
+Przypisując różne role, LLM może rozróżnić, czy coś mówi system, czy użytkownik, co pomaga budować historię rozmowy, na której LLM może się opierać.
 
-### Krok 2 – tworzenie funkcji
+### Krok 2 - tworzenie funkcji
 
-Następnie zdefiniujemy funkcję i jej parametry. Użyjemy tutaj jednej funkcji o nazwie `search_courses`, ale możesz stworzyć wiele funkcji.
+Następnie zdefiniujemy funkcję i jej parametry. Użyjemy tutaj tylko jednej funkcji o nazwie `search_courses`, ale możesz stworzyć wiele funkcji.
 
-> **Ważne**: Funkcje są dołączane do wiadomości systemowej wysyłanej do LLM i wliczają się w limit dostępnych tokenów.
+> **Ważne**: Funkcje są uwzględniane w wiadomości systemowej dla LLM i będą wliczane w dostępne tokeny.
 
-Poniżej tworzymy funkcje jako tablicę elementów. Każdy element to funkcja z właściwościami `name`, `description` i `parameters`:
+Poniżej tworzymy funkcje jako tablicę elementów. Każdy element to funkcja i ma właściwości `name`, `description` i `parameters`:
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-Opiszmy szczegółowo każdą właściwość funkcji:
+Omówmy bardziej szczegółowo każdą instancję funkcji:
 
-- `name` – nazwa funkcji, którą chcemy wywołać.
-- `description` – opis działania funkcji. Ważne, aby był precyzyjny i jasny.
-- `parameters` – lista wartości i formatów, które model ma wygenerować w odpowiedzi. Tablica parametrów składa się z elementów, które mają następujące właściwości:
-  1. `type` – typ danych, w jakim będą przechowywane właściwości.
-  2. `properties` – lista konkretnych wartości, które model ma uwzględnić w odpowiedzi
-      1. `name` – klucz to nazwa właściwości, którą model użyje w sformatowanej odpowiedzi, np. `product`.
-      2. `type` – typ danych tej właściwości, np. `string`.
-      3. `description` – opis konkretnej właściwości.
+- `name` - Nazwa funkcji, którą chcemy wywołać.
+- `description` - Opis działania funkcji. Ważne jest, aby był konkretny i jasny.
+- `parameters` - Lista wartości i format, który model ma wygenerować w swojej odpowiedzi. Tablica parametrów składa się z elementów, gdzie elementy mają następujące właściwości:
+  1.  `type` - Typ danych, w którym będą przechowywane właściwości.
+  1.  `properties` - Lista konkretnych wartości, które model wykorzysta w swojej odpowiedzi.
+      1. `name` - Klucz to nazwa właściwości, którą model wykorzysta w swojej sformatowanej odpowiedzi, np. `product`.
+      1. `type` - Typ danych tej właściwości, np. `string`.
+      1. `description` - Opis konkretnej właściwości.
 
-Istnieje też opcjonalna właściwość `required` – lista właściwości wymaganych do poprawnego wywołania funkcji.
+Istnieje również opcjonalna właściwość `required` - wymagana właściwość, aby wywołanie funkcji zostało zakończone.
 
-### Krok 3 – wywołanie funkcji
+### Krok 3 - Wywołanie funkcji
 
-Po zdefiniowaniu funkcji musimy ją uwzględnić w wywołaniu API Chat Completion. Robimy to, dodając `functions` do zapytania. W tym przypadku `functions=functions`.
+Po zdefiniowaniu funkcji musimy teraz uwzględnić ją w wywołaniu API Chat Completion. Robimy to, dodając `functions` do żądania. W tym przypadku `functions=functions`.
 
-Jest też opcja ustawienia `function_call` na `auto`. Oznacza to, że pozwalamy LLM zdecydować, którą funkcję wywołać na podstawie wiadomości użytkownika, zamiast przypisywać to ręcznie.
+Istnieje również opcja ustawienia `function_call` na `auto`. Oznacza to, że pozwolimy LLM zdecydować, która funkcja powinna zostać wywołana na podstawie wiadomości użytkownika, zamiast przypisywać ją samodzielnie.
 
-Poniżej kod, w którym wywołujemy `ChatCompletion.create`, zwróć uwagę, jak ustawiamy `functions=functions` i `function_call="auto"`, dając LLM wybór, kiedy wywołać dostępne funkcje:
+Poniżej znajduje się kod, w którym wywołujemy `ChatCompletion.create`, zwróć uwagę, jak ustawiamy `functions=functions` i `function_call="auto"`, dając tym samym LLM możliwość wyboru, kiedy wywołać dostarczone funkcje:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -282,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Odpowiedź, którą otrzymujemy, wygląda tak:
+Odpowiedź zwrotna wygląda teraz tak:
 
 ```json
 {
@@ -294,17 +294,17 @@ Odpowiedź, którą otrzymujemy, wygląda tak:
 }
 ```
 
-Widzimy, że funkcja `search_courses` została wywołana wraz z argumentami, które są wymienione w właściwości `arguments` w odpowiedzi JSON.
+Tutaj widzimy, jak funkcja `search_courses` została wywołana i z jakimi argumentami, jak pokazano w właściwości `arguments` w odpowiedzi JSON.
 
-Wniosek jest taki, że LLM potrafił znaleźć dane pasujące do argumentów funkcji, ponieważ wyodrębnił je z wartości przekazanej w parametrze `messages` w wywołaniu chat completion. Poniżej przypomnienie wartości `messages`:
+Wniosek: LLM był w stanie znaleźć dane pasujące do argumentów funkcji, wyodrębniając je z wartości podanej do parametru `messages` w wywołaniu chat completion. Poniżej przypomnienie wartości `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Jak widać, `student`, `Azure` i `beginner` zostały wyodrębnione z `messages` i ustawione jako dane wejściowe do funkcji. Korzystanie z funkcji w ten sposób to świetny sposób na wyciąganie informacji z promptu, ale też na nadanie strukturze LLM i posiadanie wielokrotnego użytku funkcjonalności.
+Jak widać, `student`, `Azure` i `beginner` zostały wyodrębnione z `messages` i ustawione jako dane wejściowe dla funkcji. Korzystanie z funkcji w ten sposób to świetny sposób na wyodrębnianie informacji z polecenia, a także na dostarczanie struktury LLM i posiadanie funkcjonalności wielokrotnego użytku.
 
-Teraz zobaczmy, jak możemy to wykorzystać w naszej aplikacji.
+Teraz musimy zobaczyć, jak możemy to wykorzystać w naszej aplikacji.
 
 ## Integracja wywołań funkcji z aplikacją
 
@@ -312,7 +312,7 @@ Po przetestowaniu sformatowanej odpowiedzi z LLM możemy teraz zintegrować ją 
 
 ### Zarządzanie przepływem
 
-Aby zintegrować to z aplikacją, wykonajmy następujące kroki:
+Aby zintegrować to z naszą aplikacją, wykonajmy następujące kroki:
 
 1. Najpierw wykonajmy wywołanie do usług OpenAI i zapiszmy wiadomość w zmiennej `response_message`.
 
@@ -320,7 +320,7 @@ Aby zintegrować to z aplikacją, wykonajmy następujące kroki:
    response_message = response.choices[0].message
    ```
 
-1. Teraz zdefiniujemy funkcję, która wywoła Microsoft Learn API, aby pobrać listę kursów:
+1. Teraz zdefiniujemy funkcję, która wywoła Microsoft Learn API, aby uzyskać listę kursów:
 
    ```python
    import requests
@@ -342,11 +342,11 @@ Aby zintegrować to z aplikacją, wykonajmy następujące kroki:
      return str(results)
    ```
 
-   Zwróć uwagę, że teraz tworzymy faktyczną funkcję w Pythonie, która odpowiada nazwom funkcji zdefiniowanym w zmiennej `functions`. Równocześnie wykonujemy rzeczywiste wywołania zewnętrznego API, aby pobrać potrzebne dane. W tym przypadku korzystamy z Microsoft Learn API, aby wyszukać moduły szkoleniowe.
+   Zwróć uwagę, jak teraz tworzymy rzeczywistą funkcję w Pythonie, która odpowiada nazwom funkcji wprowadzonym w zmiennej `functions`. Tworzymy również rzeczywiste zewnętrzne wywołania API, aby pobrać potrzebne dane. W tym przypadku korzystamy z Microsoft Learn API, aby wyszukać moduły szkoleniowe.
 
-Dobrze, stworzyliśmy zmienną `functions` i odpowiadającą jej funkcję w Pythonie, jak więc powiadomić LLM, jak powiązać te dwie rzeczy, aby nasza funkcja Python została wywołana?
+Ok, stworzyliśmy zmienne `functions` i odpowiadającą funkcję w Pythonie, jak powiedzieć LLM, jak je ze sobą powiązać, aby nasza funkcja w Pythonie została wywołana?
 
-1. Aby sprawdzić, czy musimy wywołać funkcję Python, musimy przejrzeć odpowiedź LLM i sprawdzić, czy zawiera `function_call`, a jeśli tak, wywołać wskazaną funkcję. Poniżej przykład, jak to zrobić:
+1. Aby sprawdzić, czy musimy wywołać funkcję w Pythonie, musimy zajrzeć do odpowiedzi LLM i sprawdzić, czy zawiera `function_call`, a następnie wywołać wskazaną funkcję. Oto jak można wykonać wspomnianą kontrolę poniżej:
 
    ```python
    # Check if the model wants to call a function
@@ -400,7 +400,7 @@ Dobrze, stworzyliśmy zmienną `functions` i odpowiadającą jej funkcję w Pyth
    function_response = function_to_call(**function_args)
    ```
 
-   Poniżej wynik działania naszego kodu:
+   Poniżej znajduje się wynik uruchomienia naszego kodu:
 
    **Wynik**
 
@@ -421,7 +421,7 @@ Dobrze, stworzyliśmy zmienną `functions` i odpowiadającą jej funkcję w Pyth
    <class 'str'>
    ```
 
-1. Teraz wyślemy zaktualizowaną wiadomość `messages` do LLM, aby otrzymać odpowiedź w języku naturalnym zamiast odpowiedzi w formacie JSON z API.
+1. Teraz wyślemy zaktualizowaną wiadomość, `messages`, do LLM, aby otrzymać odpowiedź w języku naturalnym zamiast odpowiedzi w formacie JSON API.
 
    ```python
    print("Messages in next request:")
@@ -452,16 +452,21 @@ Dobrze, stworzyliśmy zmienną `functions` i odpowiadającą jej funkcję w Pyth
 
 ## Zadanie
 
-Aby kontynuować naukę wywoływania funkcji w Azure OpenAI, możesz:
+Aby kontynuować naukę Azure OpenAI Function Calling, możesz stworzyć:
 
-- Dodać więcej parametrów do funkcji, które pomogą użytkownikom znaleźć więcej kursów.
-- Stworzyć kolejne wywołanie funkcji, które pobierze więcej informacji od użytkownika, np. jego język ojczysty.
-- Dodać obsługę błędów na wypadek, gdy wywołanie funkcji i/lub API nie zwróci odpowiednich kursów.
+- Więcej parametrów funkcji, które mogą pomóc uczniom w znalezieniu odpowiednich kursów.
+- Stworzyć kolejne wywołanie funkcji, które uwzględni więcej informacji o uczniu, takich jak jego język ojczysty.
+- Utwórz obsługę błędów na wypadek, gdyby wywołanie funkcji i/lub API nie zwróciło żadnych odpowiednich kursów.
+
+Wskazówka: Skorzystaj ze strony [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), aby zobaczyć, jak i gdzie dostępne są te dane.
+
 ## Świetna robota! Kontynuuj podróż
 
-Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki o Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę na temat Generative AI!
+Po ukończeniu tej lekcji, sprawdź naszą [kolekcję nauki o generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę na temat generatywnej AI!
 
 Przejdź do Lekcji 12, gdzie przyjrzymy się, jak [projektować UX dla aplikacji AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
+---
+
 **Zastrzeżenie**:  
-Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dążymy do dokładności, prosimy mieć na uwadze, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.

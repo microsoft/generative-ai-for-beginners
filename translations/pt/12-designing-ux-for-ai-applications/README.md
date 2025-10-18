@@ -1,134 +1,132 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "747668e4c53d067369f06e9ec2e6313e",
-  "translation_date": "2025-08-26T16:21:43+00:00",
+  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
+  "translation_date": "2025-10-18T00:37:43+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "pt"
 }
 -->
-# Conceber Experiências de Utilizador para Aplicações de IA
+# Design de UX para Aplicações de IA
 
-[![Conceber Experiências de Utilizador para Aplicações de IA](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.pt.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
+[![Design de UX para Aplicações de IA](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.pt.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Clique na imagem acima para ver o vídeo desta lição)_
+> _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
-A experiência de utilizador é um aspeto fundamental na criação de aplicações. Os utilizadores precisam de conseguir usar a tua aplicação de forma eficiente para realizar tarefas. Ser eficiente é importante, mas também é essencial conceber aplicações para que possam ser usadas por todos, tornando-as _acessíveis_. Este capítulo foca-se nesta área para que possas criar uma aplicação que as pessoas consigam e queiram usar.
+A experiência do utilizador é um aspeto muito importante na criação de aplicações. Os utilizadores precisam de conseguir usar a sua aplicação de forma eficiente para realizar tarefas. Ser eficiente é uma coisa, mas também é necessário projetar aplicações para que possam ser usadas por todos, tornando-as _acessíveis_. Este capítulo irá focar-se nesta área para que, idealmente, consiga projetar uma aplicação que as pessoas possam e queiram usar.
 
 ## Introdução
 
-A experiência de utilizador refere-se à forma como um utilizador interage e utiliza um produto ou serviço específico, seja um sistema, uma ferramenta ou um design. Ao desenvolver aplicações de IA, os programadores não se preocupam apenas em garantir que a experiência de utilizador é eficaz, mas também ética. Nesta lição, abordamos como criar aplicações de Inteligência Artificial (IA) que respondam às necessidades dos utilizadores.
+A experiência do utilizador refere-se à forma como um utilizador interage e utiliza um produto ou serviço específico, seja um sistema, ferramenta ou design. Ao desenvolver aplicações de IA, os programadores não se concentram apenas em garantir que a experiência do utilizador seja eficaz, mas também ética. Nesta lição, abordamos como construir aplicações de Inteligência Artificial (IA) que atendam às necessidades dos utilizadores.
 
-A lição aborda os seguintes tópicos:
+A lição abordará as seguintes áreas:
 
-- Introdução à Experiência de Utilizador e Compreensão das Necessidades dos Utilizadores
-- Conceber Aplicações de IA para Confiança e Transparência
-- Conceber Aplicações de IA para Colaboração e Feedback
+- Introdução à Experiência do Utilizador e Compreensão das Necessidades dos Utilizadores
+- Projetar Aplicações de IA para Confiança e Transparência
+- Projetar Aplicações de IA para Colaboração e Feedback
 
 ## Objetivos de aprendizagem
 
-Depois de concluíres esta lição, vais conseguir:
+Após concluir esta lição, será capaz de:
 
-- Perceber como criar aplicações de IA que respondam às necessidades dos utilizadores.
-- Conceber aplicações de IA que promovam a confiança e a colaboração.
+- Compreender como construir aplicações de IA que atendam às necessidades dos utilizadores.
+- Projetar aplicações de IA que promovam confiança e colaboração.
 
 ### Pré-requisito
 
-Dedica algum tempo a ler mais sobre [experiência de utilizador e design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Reserve algum tempo para ler mais sobre [experiência do utilizador e design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Introdução à Experiência de Utilizador e Compreensão das Necessidades dos Utilizadores
+## Introdução à Experiência do Utilizador e Compreensão das Necessidades dos Utilizadores
 
-Na nossa startup fictícia de educação, temos dois utilizadores principais: professores e alunos. Cada um tem necessidades específicas. Um design centrado no utilizador dá prioridade ao utilizador, garantindo que os produtos são relevantes e úteis para quem se destinam.
+Na nossa startup fictícia de educação, temos dois utilizadores principais: professores e alunos. Cada um dos dois utilizadores tem necessidades únicas. Um design centrado no utilizador prioriza o utilizador, garantindo que os produtos sejam relevantes e benéficos para aqueles a quem se destinam.
 
-A aplicação deve ser **útil, fiável, acessível e agradável** para proporcionar uma boa experiência de utilizador.
+A aplicação deve ser **útil, confiável, acessível e agradável** para proporcionar uma boa experiência ao utilizador.
 
 ### Usabilidade
 
-Ser útil significa que a aplicação tem funcionalidades que correspondem ao seu propósito, como automatizar o processo de avaliação ou gerar cartões de estudo para revisão. Uma aplicação que automatiza a avaliação deve conseguir atribuir notas de forma precisa e eficiente com base em critérios definidos. Da mesma forma, uma aplicação que gera cartões de estudo deve conseguir criar perguntas relevantes e variadas com base nos seus dados.
+Ser útil significa que a aplicação tem funcionalidades que correspondem ao seu propósito pretendido, como automatizar o processo de avaliação ou gerar cartões de estudo para revisão. Uma aplicação que automatiza o processo de avaliação deve ser capaz de atribuir pontuações de forma precisa e eficiente ao trabalho dos alunos com base em critérios predefinidos. Da mesma forma, uma aplicação que gera cartões de estudo deve ser capaz de criar perguntas relevantes e diversificadas com base nos seus dados.
 
-### Fiabilidade
+### Confiabilidade
 
-Ser fiável significa que a aplicação consegue desempenhar a sua função de forma consistente e sem erros. No entanto, tal como os humanos, a IA não é perfeita e pode cometer erros. As aplicações podem encontrar erros ou situações inesperadas que exigem intervenção ou correção humana. Como lidas com erros? Na última secção desta lição, vamos abordar como os sistemas e aplicações de IA são concebidos para colaboração e feedback.
+Ser confiável significa que a aplicação pode realizar a sua tarefa de forma consistente e sem erros. No entanto, a IA, assim como os humanos, não é perfeita e pode estar sujeita a erros. As aplicações podem encontrar erros ou situações inesperadas que exigem intervenção ou correção humana. Como lidar com erros? Na última seção desta lição, abordaremos como os sistemas e aplicações de IA são projetados para colaboração e feedback.
 
 ### Acessibilidade
 
-Ser acessível significa alargar a experiência de utilizador a pessoas com diferentes capacidades, incluindo pessoas com deficiência, garantindo que ninguém fica de fora. Ao seguir as diretrizes e princípios de acessibilidade, as soluções de IA tornam-se mais inclusivas, utilizáveis e benéficas para todos.
+Ser acessível significa estender a experiência do utilizador a utilizadores com várias capacidades, incluindo aqueles com deficiências, garantindo que ninguém seja excluído. Ao seguir diretrizes e princípios de acessibilidade, as soluções de IA tornam-se mais inclusivas, utilizáveis e benéficas para todos os utilizadores.
 
-### Agrado
+### Agradável
 
-Ser agradável significa que a aplicação é prazerosa de usar. Uma experiência de utilizador apelativa pode ter um impacto positivo, incentivando o utilizador a voltar à aplicação e aumentando a receita do negócio.
+Ser agradável significa que a aplicação é prazerosa de usar. Uma experiência do utilizador atraente pode ter um impacto positivo no utilizador, incentivando-o a voltar à aplicação e aumentando a receita do negócio.
 
-![imagem a ilustrar considerações de UX em IA](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.pt.png)
+![imagem ilustrando considerações de UX em IA](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.pt.png)
 
-Nem todos os desafios podem ser resolvidos com IA. A IA serve para melhorar a experiência de utilizador, seja automatizando tarefas manuais ou personalizando experiências.
+Nem todos os desafios podem ser resolvidos com IA. A IA entra em cena para complementar a experiência do utilizador, seja automatizando tarefas manuais ou personalizando experiências.
 
-## Conceber Aplicações de IA para Confiança e Transparência
+## Projetar Aplicações de IA para Confiança e Transparência
 
-Construir confiança é essencial ao conceber aplicações de IA. A confiança garante que o utilizador acredita que a aplicação vai cumprir o seu objetivo, entregar resultados de forma consistente e que os resultados são os que o utilizador precisa. Um risco nesta área é a falta de confiança ou o excesso de confiança. A falta de confiança acontece quando o utilizador não confia na IA, levando-o a rejeitar a aplicação. O excesso de confiança ocorre quando o utilizador sobrestima as capacidades da IA, confiando demasiado nela. Por exemplo, um sistema automático de avaliação pode levar o professor, por excesso de confiança, a não rever alguns testes para garantir que o sistema está a funcionar corretamente. Isto pode resultar em notas injustas ou incorretas para os alunos, ou em oportunidades perdidas de feedback e melhoria.
+Construir confiança é fundamental ao projetar aplicações de IA. A confiança garante que o utilizador tenha confiança de que a aplicação realizará o trabalho, entregará resultados consistentemente e que os resultados são o que o utilizador precisa. Um risco nesta área é a desconfiança e a confiança excessiva. A desconfiança ocorre quando um utilizador tem pouca ou nenhuma confiança num sistema de IA, levando-o a rejeitar a sua aplicação. A confiança excessiva ocorre quando um utilizador superestima a capacidade de um sistema de IA, levando os utilizadores a confiarem demasiado no sistema de IA. Por exemplo, um sistema automatizado de avaliação, no caso de confiança excessiva, pode levar o professor a não verificar alguns dos trabalhos para garantir que o sistema de avaliação funciona bem. Isso pode resultar em notas injustas ou imprecisas para os alunos, ou oportunidades perdidas de feedback e melhoria.
 
 Duas formas de garantir que a confiança está no centro do design são a explicabilidade e o controlo.
 
 ### Explicabilidade
 
-Quando a IA ajuda a tomar decisões, como transmitir conhecimento às gerações futuras, é fundamental que professores e pais percebam como as decisões da IA são tomadas. Isto é a explicabilidade – perceber como as aplicações de IA tomam decisões. Conceber para a explicabilidade inclui adicionar detalhes que mostram como a IA chegou ao resultado. O público deve saber que o resultado foi gerado por IA e não por um humano. Por exemplo, em vez de dizer "Começa já a conversar com o teu tutor", diz "Usa o tutor de IA que se adapta às tuas necessidades e te ajuda a aprender ao teu ritmo."
+Quando a IA ajuda a informar decisões, como transmitir conhecimento às gerações futuras, é fundamental que professores e pais compreendam como as decisões da IA são tomadas. Isso é explicabilidade - entender como as aplicações de IA tomam decisões. Projetar para a explicabilidade inclui adicionar detalhes que destacam como a IA chegou ao resultado. O público deve estar ciente de que o resultado é gerado pela IA e não por um humano. Por exemplo, em vez de dizer "Comece a conversar com o seu tutor agora", diga "Use o tutor de IA que se adapta às suas necessidades e ajuda-o a aprender ao seu ritmo."
 
-![uma página inicial de app com ilustração clara de explicabilidade em aplicações de IA](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.pt.png)
+![uma página inicial de aplicação com ilustração clara de explicabilidade em aplicações de IA](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.pt.png)
 
-Outro exemplo é como a IA utiliza dados pessoais e do utilizador. Por exemplo, um utilizador com o perfil de aluno pode ter limitações consoante o seu perfil. A IA pode não conseguir revelar respostas, mas pode ajudar a orientar o utilizador a pensar em como resolver um problema.
+Outro exemplo é como a IA utiliza dados do utilizador e dados pessoais. Por exemplo, um utilizador com a persona de estudante pode ter limitações com base na sua persona. A IA pode não ser capaz de revelar respostas às perguntas, mas pode ajudar a orientar o utilizador a pensar em como pode resolver um problema.
 
-![IA a responder a perguntas com base no perfil](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.pt.png)
+![IA respondendo a perguntas com base na persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.pt.png)
 
-Outro ponto importante da explicabilidade é simplificar as explicações. Alunos e professores podem não ser especialistas em IA, por isso as explicações sobre o que a aplicação pode ou não pode fazer devem ser simples e fáceis de entender.
+Uma última parte importante da explicabilidade é a simplificação das explicações. Estudantes e professores podem não ser especialistas em IA, portanto, as explicações sobre o que a aplicação pode ou não fazer devem ser simplificadas e fáceis de entender.
 
-![explicações simplificadas sobre capacidades da IA](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.pt.png)
+![explicações simplificadas sobre as capacidades da IA](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.pt.png)
 
 ### Controlo
 
-A IA generativa cria uma colaboração entre a IA e o utilizador, onde, por exemplo, o utilizador pode modificar os prompts para obter resultados diferentes. Além disso, depois de gerar um resultado, o utilizador deve poder modificar esse resultado, dando-lhe uma sensação de controlo. Por exemplo, ao usar o Bing, podes ajustar o teu prompt consoante o formato, tom e comprimento. Também podes alterar o resultado e modificá-lo, como mostrado abaixo:
+A IA generativa cria uma colaboração entre a IA e o utilizador, onde, por exemplo, um utilizador pode modificar os prompts para obter resultados diferentes. Além disso, uma vez que um resultado é gerado, os utilizadores devem ser capazes de modificar os resultados, dando-lhes uma sensação de controlo. Por exemplo, ao usar o Bing, pode ajustar o seu prompt com base no formato, tom e comprimento. Além disso, pode fazer alterações ao seu resultado e modificá-lo conforme mostrado abaixo:
 
-![Resultados de pesquisa Bing com opções para modificar o prompt e o resultado](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.pt.png)
+![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.pt.png)
 
-Outra funcionalidade do Bing que permite ao utilizador controlar a aplicação é a possibilidade de escolher se quer ou não que a IA utilize os seus dados. Numa aplicação escolar, um aluno pode querer usar os seus apontamentos e os recursos do professor como material de revisão.
+Outra funcionalidade no Bing que permite ao utilizador ter controlo sobre a aplicação é a capacidade de optar por participar ou não nos dados que a IA utiliza. Para uma aplicação escolar, um aluno pode querer usar as suas notas, bem como os recursos do professor como material de revisão.
 
-![Resultados de pesquisa Bing com opções para modificar o prompt e o resultado](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.pt.png)
+![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.pt.png)
 
-> Ao conceber aplicações de IA, é importante garantir que os utilizadores não confiem demasiado, criando expectativas irrealistas sobre as capacidades da IA. Uma forma de fazer isto é criar alguma fricção entre os prompts e os resultados. Lembra o utilizador de que está a interagir com IA e não com outro ser humano.
+> Ao projetar aplicações de IA, a intencionalidade é fundamental para garantir que os utilizadores não confiem excessivamente, criando expectativas irrealistas sobre as suas capacidades. Uma forma de fazer isso é criar fricção entre os prompts e os resultados. Lembrando o utilizador de que esta é uma IA e não um ser humano.
 
-## Conceber Aplicações de IA para Colaboração e Feedback
+## Projetar Aplicações de IA para Colaboração e Feedback
 
-Como referido anteriormente, a IA generativa cria uma colaboração entre o utilizador e a IA. Na maioria das interações, o utilizador introduz um prompt e a IA gera um resultado. E se o resultado estiver errado? Como é que a aplicação lida com erros? A IA culpa o utilizador ou explica o erro?
+Como mencionado anteriormente, a IA generativa cria uma colaboração entre o utilizador e a IA. A maioria das interações ocorre com um utilizador inserindo um prompt e a IA gerando um resultado. E se o resultado estiver incorreto? Como a aplicação lida com erros, caso ocorram? A IA culpa o utilizador ou explica o erro?
 
-As aplicações de IA devem ser concebidas para receber e dar feedback. Isto não só ajuda a IA a melhorar, como também aumenta a confiança dos utilizadores. Deve existir um ciclo de feedback no design, por exemplo, um simples polegar para cima ou para baixo no resultado.
+As aplicações de IA devem ser projetadas para receber e fornecer feedback. Isso não apenas ajuda o sistema de IA a melhorar, mas também constrói confiança com os utilizadores. Um ciclo de feedback deve ser incluído no design, um exemplo pode ser um simples polegar para cima ou para baixo no resultado.
 
-Outra forma de lidar com isto é comunicar claramente as capacidades e limitações do sistema. Quando um utilizador comete um erro ao pedir algo que está fora das capacidades da IA, deve haver uma forma de lidar com isso, como mostrado abaixo.
+Outra forma de lidar com isso é comunicar claramente as capacidades e limitações do sistema. Quando um utilizador comete um erro ao solicitar algo além das capacidades da IA, também deve haver uma forma de lidar com isso, como mostrado abaixo.
 
 ![Dar feedback e lidar com erros](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.pt.png)
 
-Erros de sistema são comuns em aplicações onde o utilizador pode precisar de ajuda com informação fora do âmbito da IA ou a aplicação pode ter um limite de perguntas/temas para os quais pode gerar resumos. Por exemplo, uma aplicação de IA treinada apenas com dados de História e Matemática pode não conseguir responder a perguntas de Geografia. Para resolver isto, o sistema de IA pode responder: "Desculpa, o nosso produto foi treinado com dados nos seguintes temas....., não consigo responder à pergunta que colocaste."
+Erros de sistema são comuns em aplicações onde o utilizador pode precisar de assistência com informações fora do alcance da IA ou a aplicação pode ter um limite de quantas perguntas/assuntos um utilizador pode gerar resumos. Por exemplo, uma aplicação de IA treinada com dados sobre assuntos limitados, como História e Matemática, pode não ser capaz de lidar com perguntas sobre Geografia. Para mitigar isso, o sistema de IA pode dar uma resposta como: "Desculpe, o nosso produto foi treinado com dados nos seguintes assuntos....., não consigo responder à pergunta que fez."
 
-As aplicações de IA não são perfeitas, por isso é natural que cometam erros. Ao conceberes as tuas aplicações, garante que existe espaço para feedback dos utilizadores e para lidar com erros de forma simples e fácil de explicar.
+As aplicações de IA não são perfeitas, portanto, estão sujeitas a cometer erros. Ao projetar as suas aplicações, deve garantir que cria espaço para feedback dos utilizadores e para lidar com erros de forma simples e facilmente compreensível.
 
-## Exercício
+## Tarefa
 
-Pega em qualquer aplicação de IA que já tenhas criado e considera implementar os seguintes passos:
+Pegue em qualquer aplicação de IA que tenha desenvolvido até agora e considere implementar os passos abaixo na sua aplicação:
 
-- **Agrado:** Pensa em como podes tornar a tua aplicação mais agradável. Estás a adicionar explicações em todo o lado? Estás a incentivar o utilizador a explorar? Como estás a escrever as mensagens de erro?
+- **Agradável:** Considere como pode tornar a sua aplicação mais agradável. Está a adicionar explicações em todos os lugares? Está a incentivar o utilizador a explorar? Como está a formular as suas mensagens de erro?
 
-- **Usabilidade:** Se estás a criar uma aplicação web, certifica-te de que pode ser navegada tanto com rato como com teclado.
+- **Usabilidade:** Ao construir uma aplicação web, certifique-se de que a sua aplicação é navegável tanto por rato como por teclado.
 
-- **Confiança e transparência:** Não confies totalmente na IA e nos seus resultados, pensa em como podes incluir um humano no processo para verificar os resultados. Considera e implementa outras formas de garantir confiança e transparência.
+- **Confiança e transparência:** Não confie completamente na IA e nos seus resultados, considere como adicionaria um humano ao processo para verificar os resultados. Além disso, considere e implemente outras formas de alcançar confiança e transparência.
 
-- **Controlo:** Dá ao utilizador controlo sobre os dados que fornece à aplicação. Implementa uma forma de o utilizador poder escolher participar ou não na recolha de dados pela aplicação de IA.
+- **Controlo:** Dê ao utilizador controlo sobre os dados que fornece à aplicação. Implemente uma forma de o utilizador optar por participar ou não na recolha de dados pela aplicação de IA.
 
+## Continue a sua aprendizagem!
 
+Depois de concluir esta lição, consulte a nossa [coleção de aprendizagem sobre IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprofundar os seus conhecimentos sobre IA generativa!
 
-## Continua a Aprender!
-
-Depois de terminares esta lição, explora a nossa [coleção de aprendizagem sobre IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuares a aprofundar os teus conhecimentos!
-
-Segue para a Lição 13, onde vamos ver como [proteger aplicações de IA](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Avance para a Lição 13, onde exploraremos como [proteger aplicações de IA](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional por um humano. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes da utilização desta tradução.
+**Aviso Legal**:  
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

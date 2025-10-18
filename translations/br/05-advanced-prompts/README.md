@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ffb706de93ef518f31e0a675c66dfce1",
-  "translation_date": "2025-10-17T15:55:59+00:00",
+  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+  "translation_date": "2025-10-18T00:45:01+00:00",
   "source_file": "05-advanced-prompts/README.md",
   "language_code": "br"
 }
@@ -13,11 +13,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Vamos recapitular alguns aprendizados do capítulo anterior:
 
-> A _engenharia_ de prompts é o processo pelo qual **guiamos o modelo para respostas mais relevantes** fornecendo instruções ou contexto mais úteis.
+> Engenharia de _prompts_ é o processo pelo qual **guiamos o modelo para respostas mais relevantes** fornecendo instruções ou contexto mais úteis.
 
-Existem também dois passos para escrever prompts: construir o prompt, fornecendo contexto relevante, e a segunda parte é a _otimização_, ou seja, como melhorar gradualmente o prompt.
+Existem também dois passos para escrever prompts: construir o prompt, fornecendo o contexto relevante, e _otimização_, que é como melhorar gradualmente o prompt.
 
-Neste ponto, temos uma compreensão básica de como escrever prompts, mas precisamos ir mais fundo. Neste capítulo, você passará de experimentar vários prompts para entender por que um prompt é melhor que outro. Você aprenderá a construir prompts seguindo algumas técnicas básicas que podem ser aplicadas a qualquer LLM.
+Neste ponto, temos uma compreensão básica de como escrever prompts, mas precisamos ir mais fundo. Neste capítulo, você passará de experimentar vários prompts para entender por que um prompt é melhor que outro. Você aprenderá como construir prompts seguindo algumas técnicas básicas que podem ser aplicadas a qualquer LLM.
 
 ## Introdução
 
@@ -43,7 +43,7 @@ Vamos pegar um prompt básico como este:
 
 > Gere 10 perguntas sobre geografia.
 
-Neste prompt, você está aplicando um conjunto de diferentes técnicas de prompt.
+Neste prompt, você está, na verdade, aplicando um conjunto de diferentes técnicas de prompt.
 
 Vamos analisar isso.
 
@@ -52,7 +52,7 @@ Vamos analisar isso.
 
 ### Limitações de prompts simples
 
-Você pode ou não obter o resultado desejado. As perguntas serão geradas, mas geografia é um tópico amplo e você pode não obter o que deseja devido aos seguintes motivos:
+Você pode ou não obter o resultado desejado. Suas perguntas serão geradas, mas geografia é um tópico amplo e você pode não obter o que deseja devido aos seguintes motivos:
 
 - **Tópico amplo**, você não sabe se será sobre países, capitais, rios e assim por diante.
 - **Formato**, e se você quisesse que as perguntas fossem formatadas de uma certa maneira?
@@ -61,43 +61,43 @@ Como você pode ver, há muito a considerar ao criar prompts.
 
 Até agora, vimos um exemplo de prompt simples, mas a IA generativa é capaz de muito mais para ajudar pessoas em uma variedade de funções e indústrias. Vamos explorar algumas técnicas básicas a seguir.
 
-### Técnicas para prompts
+### Técnicas para criar prompts
 
-Primeiro, precisamos entender que o prompting é uma propriedade _emergente_ de um LLM, o que significa que isso não é uma funcionalidade embutida no modelo, mas algo que descobrimos ao usar o modelo.
+Primeiro, precisamos entender que a criação de prompts é uma propriedade _emergente_ de um LLM, o que significa que isso não é uma funcionalidade embutida no modelo, mas algo que descobrimos ao utilizá-lo.
 
 Existem algumas técnicas básicas que podemos usar para criar prompts em um LLM. Vamos explorá-las.
 
-- **Prompting zero-shot**, esta é a forma mais básica de prompting. É um único prompt solicitando uma resposta do LLM com base apenas em seus dados de treinamento.
-- **Prompting few-shot**, este tipo de prompting orienta o LLM fornecendo 1 ou mais exemplos que ele pode usar como referência para gerar sua resposta.
-- **Cadeia de raciocínio (Chain-of-thought)**, este tipo de prompting instrui o LLM sobre como dividir um problema em etapas.
+- **Prompt de zero exemplos**, esta é a forma mais básica de criar prompts. É um único prompt solicitando uma resposta do LLM com base apenas em seus dados de treinamento.
+- **Prompt de poucos exemplos**, este tipo de prompt orienta o LLM fornecendo 1 ou mais exemplos nos quais ele pode se basear para gerar sua resposta.
+- **Cadeia de raciocínio**, este tipo de prompt instrui o LLM sobre como dividir um problema em etapas.
 - **Conhecimento gerado**, para melhorar a resposta de um prompt, você pode fornecer fatos ou conhecimentos gerados adicionalmente ao seu prompt.
-- **Do menor para o maior (Least to most)**, como a cadeia de raciocínio, esta técnica consiste em dividir um problema em uma série de etapas e pedir que essas etapas sejam realizadas em ordem.
-- **Auto-refinamento (Self-refine)**, esta técnica consiste em criticar a saída do LLM e pedir que ele melhore.
-- **Prompting maieutic**, aqui você quer garantir que a resposta do LLM esteja correta e pede que ele explique várias partes da resposta. Esta é uma forma de auto-refinamento.
+- **Do mais simples ao mais complexo**, como a cadeia de raciocínio, esta técnica trata de dividir um problema em uma série de etapas e, em seguida, pedir que essas etapas sejam realizadas em ordem.
+- **Auto-refinamento**, esta técnica trata de criticar a saída do LLM e, em seguida, pedir que ele melhore.
+- **Prompt maiêutico**, aqui você quer garantir que a resposta do LLM esteja correta e pede que ele explique várias partes da resposta. Esta é uma forma de auto-refinamento.
 
-### Prompting zero-shot
+### Prompt de zero exemplos
 
-Este estilo de prompting é muito simples, consiste em um único prompt. Esta técnica provavelmente é o que você está usando ao começar a aprender sobre LLMs. Aqui está um exemplo:
+Este estilo de prompt é muito simples, consiste em um único prompt. Esta técnica é provavelmente o que você está usando ao começar a aprender sobre LLMs. Aqui está um exemplo:
 
 - Prompt: "O que é Álgebra?"
 - Resposta: "Álgebra é um ramo da matemática que estuda símbolos matemáticos e as regras para manipulá-los."
 
-### Prompting few-shot
+### Prompt de poucos exemplos
 
-Este estilo de prompting ajuda o modelo fornecendo alguns exemplos junto com a solicitação. Consiste em um único prompt com dados específicos da tarefa. Aqui está um exemplo:
+Este estilo de prompt ajuda o modelo fornecendo alguns exemplos junto com a solicitação. Consiste em um único prompt com dados adicionais específicos da tarefa. Aqui está um exemplo:
 
 - Prompt: "Escreva um poema no estilo de Shakespeare. Aqui estão alguns exemplos de sonetos de Shakespeare:
-  Soneto 18: 'Devo comparar-te a um dia de verão? És mais belo e mais ameno...'
-  Soneto 116: 'Não permito ao casamento de mentes verdadeiras Impedimentos. O amor não é amor Que muda quando encontra mudanças...'
+  Soneto 18: 'Devo comparar-te a um dia de verão? És mais belo e mais temperado...'
+  Soneto 116: 'Não permito que o casamento de mentes verdadeiras Admita impedimentos. O amor não é amor Que muda quando encontra mudança...'
   Soneto 132: 'Teus olhos eu amo, e eles, como se tivessem pena de mim, Sabendo que teu coração me atormenta com desdém,...'
   Agora, escreva um soneto sobre a beleza da lua."
 - Resposta: "No céu, a lua suavemente brilha, Em luz prateada que lança sua graça gentil,..."
 
-Os exemplos fornecem ao LLM o contexto, formato ou estilo do resultado desejado. Eles ajudam o modelo a entender a tarefa específica e a gerar respostas mais precisas e relevantes.
+Os exemplos fornecem ao LLM o contexto, formato ou estilo do resultado desejado. Eles ajudam o modelo a entender a tarefa específica e gerar respostas mais precisas e relevantes.
 
-### Cadeia de raciocínio (Chain-of-thought)
+### Cadeia de raciocínio
 
-A cadeia de raciocínio é uma técnica muito interessante, pois trata de levar o LLM por uma série de etapas. A ideia é instruir o LLM de forma que ele entenda como fazer algo. Considere o seguinte exemplo, com e sem cadeia de raciocínio:
+Cadeia de raciocínio é uma técnica muito interessante, pois trata de levar o LLM por uma série de etapas. A ideia é instruir o LLM de tal forma que ele entenda como fazer algo. Considere o seguinte exemplo, com e sem cadeia de raciocínio:
 
     - Prompt: "Alice tem 5 maçãs, joga 3 maçãs fora, dá 2 para Bob e Bob devolve uma, quantas maçãs Alice tem?"
     - Resposta: 5
@@ -112,7 +112,7 @@ Vamos tentar a cadeia de raciocínio. Aplicar a cadeia de raciocínio significa:
 1. Mostrar o cálculo e como calculá-lo corretamente.
 1. Fornecer o prompt original.
 
-Aqui está como:
+Aqui está como fazer:
 
 - Prompt: "Lisa tem 7 maçãs, joga 1 maçã fora, dá 4 maçãs para Bart e Bart devolve uma:
   7 - 1 = 6
@@ -121,7 +121,7 @@ Aqui está como:
   Alice tem 5 maçãs, joga 3 maçãs fora, dá 2 para Bob e Bob devolve uma, quantas maçãs Alice tem?"
   Resposta: 1
 
-Note como escrevemos prompts substancialmente mais longos com outro exemplo, um cálculo e então o prompt original, e chegamos à resposta correta, 1.
+Note como escrevemos prompts substancialmente mais longos com outro exemplo, um cálculo e, em seguida, o prompt original, e chegamos à resposta correta: 1.
 
 Como você pode ver, a cadeia de raciocínio é uma técnica muito poderosa.
 
@@ -140,9 +140,9 @@ Budget: {{budget}}
 Requirements: {{requirements}}
 ```
 
-Acima, você vê como o prompt é construído usando um template. No template há várias variáveis, denotadas por `{{variable}}`, que serão substituídas por valores reais de uma API da empresa.
+Acima, você vê como o prompt é construído usando um modelo. No modelo, há várias variáveis, denotadas por `{{variável}}`, que serão substituídas por valores reais de uma API da empresa.
 
-Aqui está um exemplo de como o prompt pode parecer uma vez que as variáveis foram substituídas por conteúdo da sua empresa:
+Aqui está um exemplo de como o prompt pode parecer uma vez que as variáveis tenham sido substituídas por conteúdo da sua empresa:
 
 ```text
 Insurance company: ACME Insurance
@@ -168,7 +168,7 @@ Given the budget and requirements, we suggest the following insurance package fr
 Total cost: $1,200 USD
 ```
 
-Como você pode ver, ele também sugere o seguro de vida, o que não deveria. Este resultado é uma indicação de que precisamos otimizar o prompt, tornando-o mais claro sobre o que ele pode permitir. Após alguns _testes e ajustes_, chegamos ao seguinte prompt:
+Como você pode ver, ele também sugere o seguro de vida, o que não deveria. Este resultado é uma indicação de que precisamos otimizar o prompt, tornando-o mais claro sobre o que pode permitir. Após alguns _testes e ajustes_, chegamos ao seguinte prompt:
 
 ```text
 Insurance company: ACME Insurance
@@ -191,15 +191,15 @@ Agora obtemos a seguinte resposta:
 Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
 ```
 
-O objetivo deste exemplo foi mostrar que, mesmo usando uma técnica básica como _conhecimento gerado_, ainda precisamos otimizar o prompt na maioria dos casos para obter o resultado desejado.
+O objetivo deste exemplo foi mostrar que, mesmo quando estamos usando uma técnica básica como _conhecimento gerado_, ainda precisamos otimizar o prompt na maioria dos casos para obter o resultado desejado.
 
-### Do menor para o maior (Least-to-most)
+### Do mais simples ao mais complexo
 
-A ideia do prompting do menor para o maior é dividir um problema maior em subproblemas. Dessa forma, você ajuda a guiar o LLM sobre como "conquistar" o problema maior. Um bom exemplo pode ser na ciência de dados, onde você pode pedir ao LLM para dividir um problema assim:
+A ideia do prompt do mais simples ao mais complexo é dividir um problema maior em subproblemas. Dessa forma, você ajuda a guiar o LLM sobre como "conquistar" o problema maior. Um bom exemplo pode ser na ciência de dados, onde você pode pedir ao LLM para dividir um problema assim:
 
 > Prompt: Como realizar ciência de dados em 5 etapas?
 
-Com seu assistente de IA respondendo:
+Com seu assistente de IA respondendo com:
 
 1. Coletar dados
 1. Limpar dados
@@ -207,22 +207,22 @@ Com seu assistente de IA respondendo:
 1. Plotar dados
 1. Apresentar dados
 
-### Auto-refinamento, criticar os resultados
+### Auto-refinamento, critique os resultados
 
-Com IAs generativas e LLMs, você não pode confiar cegamente no resultado. É necessário verificar. Afinal, o LLM está apenas apresentando o que é mais provável dizer em seguida, não o que é correto. Portanto, uma boa ideia é pedir ao LLM para criticar a si mesmo, o que nos leva à técnica de auto-refinamento.
+Com IAs generativas e LLMs, você não pode confiar cegamente no resultado. É necessário verificar. Afinal, o LLM está apenas apresentando o que é mais provável de ser dito em seguida, não o que é correto. Portanto, uma boa ideia é pedir ao LLM que critique a si mesmo, o que nos leva à técnica de auto-refinamento.
 
-Como funciona é que você segue os seguintes passos:
+Como funciona:
 
-1. Prompt inicial pedindo ao LLM para resolver um problema
-1. O LLM responde
-1. Você critica a resposta e pede à IA para melhorar
-1. O LLM responde novamente, desta vez considerando a crítica e sugerindo soluções que ele encontrou
+1. Prompt inicial pedindo ao LLM para resolver um problema.
+1. O LLM responde.
+1. Você critica a resposta e pede à IA para melhorar.
+1. O LLM responde novamente, desta vez considerando a crítica e sugerindo soluções que ele elaborou.
 
 Você pode repetir esse processo quantas vezes quiser.
 
 Aqui está um exemplo usando essa técnica:
 
-> Prompt: "Crie uma API Web em Python com rotas de produtos e clientes"
+> Prompt: "Crie uma API Web em Python com rotas para produtos e clientes."
 
 Resposta da IA:
 
@@ -239,7 +239,7 @@ def customers():
     return 'Customers'
 ```
 
-> Prompt: sugira 3 melhorias para o código acima
+> Prompt: sugira 3 melhorias para o código acima.
 
 Resposta da IA:
 
@@ -272,13 +272,13 @@ if __name__ == '__main__':
 
 Como você pode ver, a resposta acima da IA está melhorando o código sugerido inicialmente graças à crítica feita à primeira resposta.
 
-### Prompting maieutic
+### Prompt maiêutico
 
-O prompting maieutic é uma técnica semelhante ao auto-refinamento, mas trata mais de pedir ao LLM para se explicar. O objetivo é reduzir inconsistências na saída do LLM para garantir que ele chegue à resposta correta. O fluxo de trabalho a seguir é:
+O prompt maiêutico é uma técnica semelhante ao auto-refinamento, mas trata mais de pedir ao LLM para se explicar. O objetivo é reduzir inconsistências na saída do LLM para garantir que ele chegue à resposta correta. O fluxo de trabalho a seguir é:
 
-1. Pedir ao LLM para responder a uma pergunta
-1. Para cada parte da resposta, pedir ao LLM para explicar mais detalhadamente.
-1. Se houver inconsistências, descartar as partes inconsistentes.
+1. Peça ao LLM para responder a uma pergunta.
+1. Para cada parte da resposta, peça ao LLM para explicá-la mais detalhadamente.
+1. Se houver inconsistências, descarte as partes inconsistentes.
 
 Repita os passos 2 e 3 até que você tenha analisado todas as partes e esteja satisfeito com a resposta.
 
@@ -295,7 +295,7 @@ Aqui está um exemplo de prompt:
 1. Identify the communication channels
 ```
 
-Foram identificadas 5 etapas, mas podemos determinar se isso está correto? Vamos pedir ao LLM para explicar cada etapa:
+Ele identificou 5 etapas, mas podemos determinar se isso está correto? Vamos pedir ao LLM para explicar cada etapa:
 
 > Prompt: Explique a primeira etapa em mais detalhes, quais são os riscos detalhados de uma pandemia?
 
@@ -323,11 +323,11 @@ The biggest risk is loss of life because it's the most important thing to protec
 The two biggest risks are loss of life and loss of business.
 ```
 
-Neste ponto, o LLM é consistente e menciona "vida" e "negócios" como os dois maiores riscos. Agora podemos continuar para a próxima etapa e nos sentir razoavelmente confiantes. No entanto, não devemos confiar cegamente no LLM, sempre devemos verificar o resultado.
+Neste ponto, o LLM é consistente e menciona "vida" e "negócios" como os dois maiores riscos. Agora podemos continuar para a próxima etapa e nos sentir razoavelmente confiantes. No entanto, não devemos confiar cegamente no LLM, sempre devemos verificar a saída.
 
-## Variar seu resultado
+## Varie seu resultado
 
-LLMs são por natureza não determinísticos, o que significa que você obterá resultados diferentes cada vez que executar o mesmo prompt. Experimente o seguinte prompt, por exemplo:
+LLMs são, por natureza, não determinísticos, o que significa que você obterá resultados diferentes cada vez que executar o mesmo prompt. Experimente o seguinte prompt, por exemplo:
 
 > "Gere código para uma API Web em Python"
 
@@ -435,13 +435,13 @@ app.run()
 
 > Então, o resultado variado é um problema?
 
-Depende do que você está tentando fazer. Se você quer uma resposta específica, então é um problema. Se você está bem com um resultado variado, como "Gere 3 perguntas sobre geografia", então não é um problema.
+Depende do que você está tentando fazer. Se você quer uma resposta específica, então é um problema. Se você está ok com um resultado variado, como "Gere 3 perguntas sobre geografia", então não é um problema.
 
 ### Usando temperatura para variar seu resultado
 
-Ok, então decidimos que queremos limitar o resultado para ser mais previsível, ou seja, mais determinístico. Como fazemos isso?
+Ok, então decidimos que queremos limitar o resultado para que seja mais previsível, ou seja, mais determinístico. Como fazemos isso?
 
-Temperatura é um valor entre 0 e 1, onde 0 é o mais determinístico e 1 é o mais variado. O valor padrão é 0.7. Vamos ver o que acontece com duas execuções do mesmo prompt com a temperatura definida para 0.1:
+Temperatura é um valor entre 0 e 1, onde 0 é o mais determinístico e 1 é o mais variado. O valor padrão é 0.7. Vamos ver o que acontece com duas execuções do mesmo prompt com a temperatura definida como 0.1:
 
 > "Gere código para uma API Web em Python"
 
@@ -551,7 +551,7 @@ if __name__ == '__main__':
 
 ```
 
-e a segunda tentativa com o valor de temperatura em 0.9:
+e a segunda tentativa com o valor de temperatura definido como 0.9:
 
 ```python
 import flask
@@ -579,7 +579,7 @@ def home():
 
 Como você pode ver, os resultados não poderiam ser mais variados.
 
-> Observe que há mais parâmetros que você pode alterar para variar o resultado, como top-k, top-p, penalidade de repetição, penalidade de comprimento e penalidade de diversidade, mas estes estão fora do escopo deste currículo.
+> Note que há mais parâmetros que você pode alterar para variar o resultado, como top-k, top-p, penalidade de repetição, penalidade de comprimento e penalidade de diversidade, mas estes estão fora do escopo deste currículo.
 
 ## Boas práticas
 
@@ -591,9 +591,9 @@ Aqui estão algumas boas práticas para considerar:
 
 - **Especifique o contexto**. O contexto é importante; quanto mais você puder especificar, como domínio, tópico, etc., melhor.
 - Limite o resultado. Se você deseja um número específico de itens ou um comprimento específico, especifique isso.
-- **Especifique o que e como**. Lembre-se de mencionar tanto o que você quer quanto como você quer, por exemplo: "Crie uma API Web em Python com rotas de produtos e clientes, divida em 3 arquivos".
+- **Especifique o que e como**. Lembre-se de mencionar tanto o que você quer quanto como você quer, por exemplo: "Crie uma API Web em Python com rotas para produtos e clientes, dividida em 3 arquivos".
 - **Use templates**. Muitas vezes, você desejará enriquecer seus prompts com dados da sua empresa. Use templates para fazer isso. Templates podem ter variáveis que você substitui por dados reais.
-- **Escreva corretamente**. LLMs podem fornecer uma resposta correta, mas se você escrever corretamente, obterá uma resposta ainda melhor.
+- **Escreva corretamente**. Os LLMs podem fornecer uma resposta correta, mas se você escrever corretamente, obterá uma resposta ainda melhor.
 
 ## Tarefa
 
@@ -620,13 +620,13 @@ Use um assistente de IA como GitHub Copilot ou ChatGPT e aplique a técnica de "
 Por favor, tente resolver a tarefa adicionando prompts adequados ao código.
 
 > [!TIP]
-> Formule um prompt para pedir melhorias; é uma boa ideia limitar quantas melhorias. Você também pode pedir para melhorar de uma certa maneira, por exemplo, arquitetura, desempenho, segurança, etc.
+> Formule um prompt para pedir melhorias; é uma boa ideia limitar quantas melhorias. Você também pode pedir para melhorar de uma maneira específica, por exemplo, arquitetura, desempenho, segurança, etc.
 
 [Solução](../../../05-advanced-prompts/python/aoai-solution.py)
 
 ## Verificação de conhecimento
 
-Por que eu usaria o prompting de cadeia de raciocínio? Mostre-me 1 resposta correta e 2 incorretas.
+Por que eu usaria o prompting de cadeia de raciocínio? Mostre 1 resposta correta e 2 respostas incorretas.
 
 1. Para ensinar o LLM como resolver um problema.
 1. B, Para ensinar o LLM a encontrar erros no código.
@@ -636,15 +636,15 @@ A: 1, porque a cadeia de raciocínio trata de mostrar ao LLM como resolver um pr
 
 ## 🚀 Desafio
 
-Você acabou de usar a técnica de auto-refinamento na tarefa. Pegue qualquer programa que você tenha criado e considere quais melhorias você gostaria de aplicar a ele. Agora use a técnica de auto-refinamento para aplicar as mudanças propostas. O que você achou do resultado, melhor ou pior?
+Você acabou de usar a técnica de auto-refinamento na tarefa. Pegue qualquer programa que você tenha criado e considere quais melhorias gostaria de aplicar a ele. Agora use a técnica de auto-refinamento para aplicar as mudanças propostas. O que você achou do resultado, melhor ou pior?
 
 ## Ótimo trabalho! Continue aprendendo
 
-Depois de concluir esta lição, confira nossa [coleção de aprendizado de IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar aprimorando seu conhecimento em IA generativa!
+Depois de concluir esta lição, confira nossa [coleção de aprendizado sobre IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar aprimorando seu conhecimento sobre IA generativa!
 
-Vá para a Lição 6, onde aplicaremos nosso conhecimento de Engenharia de Prompt [construindo aplicativos de geração de texto](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Vá para a Lição 6, onde aplicaremos nosso conhecimento de Engenharia de Prompt [criando aplicativos de geração de texto](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

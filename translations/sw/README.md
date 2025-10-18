@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f7e9011b478e180177185b73939b774c",
-  "translation_date": "2025-10-17T21:07:35+00:00",
+  "original_hash": "f71b15f52ad5f493f2d0fca9c2c6832c",
+  "translation_date": "2025-10-18T01:11:23+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
 -->
-![Generative AI Kwa Anayeanza](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.sw.png)
+![Generative AI Kwa Anzishaji](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.sw.png)
 
 ### Masomo 21 yanayofundisha kila kitu unachohitaji kujua kuanza kujenga programu za Generative AI
 
@@ -25,36 +25,34 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Msaada wa Lugha Nyingi
 
-#### Inasaidiwa kupitia GitHub Action (Imefanywa kiotomatiki na Inasasishwa Kila Wakati)
+#### Inasaidiwa kupitia GitHub Action (Imefanywa Kiotomatiki & Inasasishwa Kila Wakati)
 
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Kiaraabu](../ar/README.md) | [Kibengali](../bn/README.md) | [Kibulgaria](../bg/README.md) | [Kiburma (Myanmar)](../my/README.md) | [Kichina (Rahisi)](../zh/README.md) | [Kichina (Kienyeji, Hong Kong)](../hk/README.md) | [Kichina (Kienyeji, Macau)](../mo/README.md) | [Kichina (Kienyeji, Taiwan)](../tw/README.md) | [Kikroeshia](../hr/README.md) | [Kicheki](../cs/README.md) | [Kideni](../da/README.md) | [Kiholanzi](../nl/README.md) | [Kiestonia](../et/README.md) | [Kifini](../fi/README.md) | [Kifaransa](../fr/README.md) | [Kijerumani](../de/README.md) | [Kigiriki](../el/README.md) | [Kiebrania](../he/README.md) | [Kihindi](../hi/README.md) | [Kihungaria](../hu/README.md) | [Kiindonesia](../id/README.md) | [Kiitaliano](../it/README.md) | [Kijapani](../ja/README.md) | [Kikorea](../ko/README.md) | [Kilithuania](../lt/README.md) | [Kimalei](../ms/README.md) | [Kimarathi](../mr/README.md) | [Kinepali](../ne/README.md) | [Kinorwe](../no/README.md) | [Kifarsi](../fa/README.md) | [Kipolandi](../pl/README.md) | [Kireno (Brazil)](../br/README.md) | [Kireno (Ureno)](../pt/README.md) | [Kipunjabi (Gurmukhi)](../pa/README.md) | [Kiromania](../ro/README.md) | [Kirusi](../ru/README.md) | [Kiserbia (Kisiriliki)](../sr/README.md) | [Kislovakia](../sk/README.md) | [Kislovenia](../sl/README.md) | [Kihispania](../es/README.md) | [Kiswahili](./README.md) | [Kiswidi](../sv/README.md) | [Kitagalogi (Kifilipino)](../tl/README.md) | [Kitamil](../ta/README.md) | [Kithai](../th/README.md) | [Kituruki](../tr/README.md) | [Kiukraini](../uk/README.md) | [Kiurdu](../ur/README.md) | [Kivietinamu](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](./README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-# Generative AI kwa Anayeanza (Toleo la 3) - Kozi
+# Generative AI kwa Anzishaji (Toleo la 3) - Kozi
 
 Jifunze misingi ya kujenga programu za Generative AI kupitia kozi yetu ya masomo 21 ya kina kutoka kwa Microsoft Cloud Advocates.
 
 ## 🌱 Kuanza
 
-Kozi hii ina masomo 21. Kila somo lina mada yake, hivyo unaweza kuanza popote unapopenda!
+Kozi hii ina masomo 21. Kila somo lina mada yake, kwa hivyo unaweza kuanza popote unapopenda!
 
 Masomo yamewekwa alama kama masomo ya "Jifunze" yanayofafanua dhana ya Generative AI au masomo ya "Jenga" yanayofafanua dhana na mifano ya msimbo katika **Python** na **TypeScript** inapowezekana.
 
-Kwa Wanaotengeneza programu za .NET angalia [Generative AI kwa Anayeanza (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+Kwa watengenezaji wa .NET angalia [Generative AI kwa Anzishaji (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
 Kila somo pia linajumuisha sehemu ya "Endelea Kujifunza" yenye zana za ziada za kujifunza.
 
 ## Unachohitaji
 ### Ili kuendesha msimbo wa kozi hii, unaweza kutumia:
  - [Huduma ya Azure OpenAI](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Masomo:** "aoai-assignment"
- - [Katalogi ya Modeli ya Soko la GitHub](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Masomo:** "githubmodels"
+ - [Katalogi ya Mfano wa Soko la GitHub](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Masomo:** "githubmodels"
  - [API ya OpenAI](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Masomo:** "oai-assignment" 
    
-- Maarifa ya msingi ya Python au TypeScript ni muhimu - \*Kwa wanaoanza kabisa angalia kozi hizi za [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) na [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- Akaunti ya GitHub ili [kufork repo hii nzima](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) kwenye akaunti yako ya GitHub
+- Ujuzi wa msingi wa Python au TypeScript ni muhimu - \*Kwa wanaoanza kabisa angalia kozi hizi za [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) na [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
+- Akaunti ya GitHub ili [kuiga repo hii yote](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) kwenye akaunti yako ya GitHub
 
-Tumeunda somo la **[Usanidi wa Kozi](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** ili kukusaidia kuandaa mazingira yako ya maendeleo.
+Tumeunda somo la **[Usanidi wa Kozi](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** kukusaidia kuandaa mazingira yako ya maendeleo.
 
 Usisahau [kuweka nyota (🌟) kwenye repo hii](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) ili kuipata kwa urahisi baadaye.
 
@@ -66,22 +64,22 @@ Ikiwa unatafuta mifano ya msimbo wa hali ya juu, angalia [mkusanyiko wa Mifano y
 
 Jiunge na [seva rasmi ya Discord ya Azure AI Foundry](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) ili kukutana na kuungana na wanafunzi wengine wanaochukua kozi hii na kupata msaada.
 
-Uliza maswali au shiriki maoni ya bidhaa katika [Jukwaa la Wanaotengeneza programu la Azure AI Foundry](https://aka.ms/azureaifoundry/forum) kwenye Github.
+Uliza maswali au shiriki maoni ya bidhaa katika [Jukwaa la Wasanidi wa Azure AI Foundry](https://aka.ms/azureaifoundry/forum) kwenye Github.
 
 ## 🚀 Unajenga Biashara?
 
-Tembelea [Microsoft kwa Biashara Ndogo](https://www.microsoft.com/startups) ili kujua jinsi ya kuanza kujenga kwa kutumia mikopo ya Azure leo.
+Tembelea [Microsoft kwa Biashara Ndogo](https://www.microsoft.com/startups) ili kujua jinsi ya kuanza kujenga kwa mikopo ya Azure leo.
 
 ## 🙏 Unataka kusaidia?
 
-Una mapendekezo au umepata makosa ya tahajia au msimbo? [Fungua suala](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) au [Unda maombi ya kuvuta](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Una mapendekezo au umepata makosa ya tahajia au msimbo? [Fungua suala](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) au [Tengeneza ombi la kuvuta](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 Kila somo linajumuisha:
 
 - Utangulizi mfupi wa video kuhusu mada
 - Somo lililoandikwa lililoko kwenye README
-- Mifano ya msimbo wa Python na TypeScript inayosaidia Azure OpenAI na OpenAI API
-- Viungo vya rasilimali za ziada kuendelea kujifunza
+- Mifano ya msimbo wa Python na TypeScript inayounga mkono Azure OpenAI na OpenAI API
+- Viungo vya rasilimali za ziada za kuendelea kujifunza
 
 ## 🗃️ Masomo
 
@@ -103,18 +101,18 @@ Una mapendekezo au umepata makosa ya tahajia au msimbo? [Fungua suala](https://g
 | 13  | [Kulinda Programu Zako za Generative AI](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Jifunze:** Vitisho na hatari kwa mifumo ya AI na mbinu za kulinda mifumo hii.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 14  | [Mzunguko wa Maisha wa Programu za Generative AI](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Jifunze:** Zana na vipimo vya kusimamia Mzunguko wa Maisha wa LLM na LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 15  | [Retrieval Augmented Generation (RAG) na Maktaba za Vector](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Jenga:** Programu inayotumia Mfumo wa RAG kupata embeddings kutoka Maktaba za Vector  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Mifano ya Open Source na Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Jenga:** Programu inayotumia mifano ya open source inayopatikana kwenye Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Mifano ya Chanzo Huria na Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Jenga:** Programu inayotumia mifano ya chanzo huria inayopatikana kwenye Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [Wakala wa AI](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Jenga:** Programu inayotumia Mfumo wa Wakala wa AI                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 18  | [Kurekebisha LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Jifunze:** Nini, kwa nini na jinsi ya kurekebisha LLMs                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Kujenga kwa SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Jifunze:** Faida za kujenga kwa kutumia Small Language Models                                            | Video Inakuja Hivi Karibuni | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Kujenga kwa SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Jifunze:** Faida za kujenga kwa Small Language Models                                            | Video Inakuja Hivi Karibuni | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Kujenga kwa Mifano ya Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Jifunze:** Vipengele na tofauti za Mifano ya Familia ya Mistral                                           | Video Inakuja Hivi Karibuni | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Kujenga kwa Mifano ya Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Jifunze:** Vipengele na tofauti za Mifano ya Familia ya Meta                                           | Video Inakuja Hivi Karibuni | [Jifunze Zaidi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Shukrani za Pekee
 
-Shukrani za pekee kwa [**John Aziz**](https://www.linkedin.com/in/john0isaac/) kwa kuunda GitHub Actions na workflows zote.
+Shukrani za pekee kwa [**John Aziz**](https://www.linkedin.com/in/john0isaac/) kwa kuunda GitHub Actions na workflows zote
 
-[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) kwa kutoa mchango muhimu kwa kila somo ili kuboresha uzoefu wa wanafunzi na wa programu. 
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) kwa kutoa mchango muhimu kwa kila somo ili kuboresha uzoefu wa mwanafunzi na wa programu. 
 
 ## 🎒 Kozi Nyingine
 
@@ -150,4 +148,4 @@ Ikiwa una maoni ya bidhaa au makosa wakati wa kujenga tembelea:
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

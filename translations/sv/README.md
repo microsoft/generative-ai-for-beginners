@@ -1,52 +1,52 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f7e9011b478e180177185b73939b774c",
-  "translation_date": "2025-10-17T18:56:55+00:00",
+  "original_hash": "f71b15f52ad5f493f2d0fca9c2c6832c",
+  "translation_date": "2025-10-18T01:03:29+00:00",
   "source_file": "README.md",
   "language_code": "sv"
 }
 -->
-![Generativ AI för Nybörjare](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.sv.png)
+![Generativ AI för nybörjare](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.sv.png)
 
-### 21 Lektioner som lär dig allt du behöver veta för att börja bygga generativa AI-applikationer
+### 21 lektioner som lär dig allt du behöver veta för att börja bygga generativa AI-applikationer
 
-[![GitHub licens](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
-[![GitHub bidragsgivare](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
-[![GitHub ärenden](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
+[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PRs Välkomna](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-[![GitHub bevakare](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![GitHub stjärnor](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
 ### 🌐 Stöd för flera språk
 
-#### Stöds via GitHub Action (Automatiserat & Alltid Uppdaterat)
+#### Stöds via GitHub Action (Automatiserat och alltid uppdaterat)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabiska](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgariska](../bg/README.md) | [Burmesiska (Myanmar)](../my/README.md) | [Kinesiska (Förenklad)](../zh/README.md) | [Kinesiska (Traditionell, Hongkong)](../hk/README.md) | [Kinesiska (Traditionell, Macau)](../mo/README.md) | [Kinesiska (Traditionell, Taiwan)](../tw/README.md) | [Kroatiska](../hr/README.md) | [Tjeckiska](../cs/README.md) | [Danska](../da/README.md) | [Holländska](../nl/README.md) | [Estniska](../et/README.md) | [Finska](../fi/README.md) | [Franska](../fr/README.md) | [Tyska](../de/README.md) | [Grekiska](../el/README.md) | [Hebreiska](../he/README.md) | [Hindi](../hi/README.md) | [Ungerska](../hu/README.md) | [Indonesiska](../id/README.md) | [Italienska](../it/README.md) | [Japanska](../ja/README.md) | [Koreanska](../ko/README.md) | [Litauiska](../lt/README.md) | [Malajiska](../ms/README.md) | [Marathi](../mr/README.md) | [Nepalesiska](../ne/README.md) | [Norska](../no/README.md) | [Persiska (Farsi)](../fa/README.md) | [Polska](../pl/README.md) | [Portugisiska (Brasilien)](../br/README.md) | [Portugisiska (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumänska](../ro/README.md) | [Ryska](../ru/README.md) | [Serbiska (Kyrilliska)](../sr/README.md) | [Slovakiska](../sk/README.md) | [Slovenska](../sl/README.md) | [Spanska](../es/README.md) | [Swahili](../sw/README.md) | [Svenska](./README.md) | [Tagalog (Filippinska)](../tl/README.md) | [Tamil](../ta/README.md) | [Thailändska](../th/README.md) | [Turkiska](../tr/README.md) | [Ukrainska](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamesiska](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# Generativ AI för Nybörjare (Version 3) - En Kurs
+# Generativ AI för nybörjare (Version 3) - En kurs
 
 Lär dig grunderna i att bygga generativa AI-applikationer med vår omfattande kurs på 21 lektioner från Microsoft Cloud Advocates.
 
 ## 🌱 Kom igång
 
-Denna kurs har 21 lektioner. Varje lektion täcker ett eget ämne, så börja där du vill!
+Den här kursen består av 21 lektioner. Varje lektion täcker ett eget ämne, så du kan börja var du vill!
 
-Lektionerna är märkta antingen som "Learn"-lektioner som förklarar ett koncept inom generativ AI eller "Build"-lektioner som förklarar ett koncept och inkluderar kodexempel i både **Python** och **TypeScript** när det är möjligt.
+Lektionerna är märkta som antingen "Lär dig"-lektioner som förklarar ett koncept inom generativ AI eller "Bygg"-lektioner som både förklarar ett koncept och ger kodexempel i **Python** och **TypeScript** när det är möjligt.
 
 För .NET-utvecklare, kolla in [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Varje lektion innehåller också en "Keep Learning"-sektion med ytterligare lärverktyg.
+Varje lektion innehåller också en sektion "Fortsätt lära dig" med ytterligare lärverktyg.
 
 ## Vad du behöver
-### För att köra koden i denna kurs kan du använda:
+### För att köra koden i den här kursen kan du använda antingen:
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lektioner:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lektioner:** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lektioner:** "oai-assignment" 
@@ -64,7 +64,7 @@ Om du letar efter mer avancerade kodexempel, kolla in vår [samling av generativ
 
 ## 🗣️ Träffa andra elever, få stöd
 
-Gå med i vår [officiella Azure AI Foundry Discord-server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) för att träffa och nätverka med andra elever som tar denna kurs och få stöd.
+Gå med i vår [officiella Azure AI Foundry Discord-server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) för att träffa och nätverka med andra elever som går denna kurs och få stöd.
 
 Ställ frågor eller dela produktfeedback i vårt [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) på Github.
 
@@ -81,34 +81,34 @@ Har du förslag eller hittat stavfel eller kodfel? [Skapa ett ärende](https://g
 - En kort videointroduktion till ämnet
 - En skriftlig lektion som finns i README
 - Python- och TypeScript-kodexempel som stöder Azure OpenAI och OpenAI API
-- Länkar till extra resurser för att fortsätta ditt lärande
+- Länkar till extra resurser för att fortsätta din inlärning
 
 ## 🗃️ Lektioner
 
-| #   | **Länkar till lektioner**                                                                                                                    | **Beskrivning**                                                                                 | **Video**                                                                   | **Extra lärande**                                                              |
+| #   | **Lektionslänk**                                                                                                                              | **Beskrivning**                                                                                 | **Video**                                                                   | **Extra lärande**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Kursinställning](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** Hur du ställer in din utvecklingsmiljö                                               | Video Kommer Snart                                                                 | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introduktion till Generativ AI och LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                             | **Learn:** Förstå vad generativ AI är och hur stora språkmodeller (LLMs) fungerar.              | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Utforska och jämföra olika LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                    | **Learn:** Hur du väljer rätt modell för ditt användningsområde                                 | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Använda Generativ AI Ansvarsfullt](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                         | **Learn:** Hur du bygger generativa AI-applikationer ansvarsfullt                               | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Förstå Grunderna i Prompt Engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                     | **Learn:** Praktiska bästa metoder för prompt engineering                                       | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Skapa Avancerade Prompter](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Learn:** Hur du tillämpar tekniker för prompt engineering som förbättrar resultatet av dina prompter. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Lär dig mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Kursinställning](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Lär dig:** Hur du ställer in din utvecklingsmiljö                                            | Video kommer snart                                                                 | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Introduktion till Generativ AI och LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Lär dig:** Förstå vad Generativ AI är och hur stora språkmodeller (LLMs) fungerar.       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Utforska och jämföra olika LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Lär dig:** Hur du väljer rätt modell för ditt användningsområde                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Använda Generativ AI Ansvarsfullt](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Lär dig:** Hur du bygger generativa AI-applikationer ansvarsfullt                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Förstå grunderna i Prompt Engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Lär dig:** Praktiska bästa metoder för Prompt Engineering                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Skapa avancerade prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Lär dig:** Hur du tillämpar tekniker för prompt engineering som förbättrar resultatet av dina prompts. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [Bygga textgenereringsapplikationer](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bygg:** En textgenereringsapplikation med Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 07  | [Bygga chattapplikationer](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bygg:** Tekniker för att effektivt bygga och integrera chattapplikationer.                      | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Bygga sökapplikationer med vektordatabaser](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                 | **Bygg:** En sökapplikation som använder embeddings för att söka efter data.                      | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Bygga bildgenereringsapplikationer](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Bygg:** En bildgenereringsapplikation                                                           | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Bygga AI-applikationer med låg kod](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                   | **Bygg:** En generativ AI-applikation med verktyg för låg kod                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integrera externa applikationer med funktionsanrop](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)   | **Bygg:** Vad funktionsanrop är och dess användningsområden för applikationer                     | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Designa UX för AI-applikationer](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Lär dig:** Hur man tillämpar UX-designprinciper vid utveckling av generativa AI-applikationer   | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Säkra dina generativa AI-applikationer](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Lär dig:** Hot och risker för AI-system och metoder för att säkra dessa system.                 | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Livscykeln för generativa AI-applikationer](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)     | **Lär dig:** Verktyg och mätvärden för att hantera LLM-livscykeln och LLMOps                      | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) och vektordatabaser](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)      | **Bygg:** En applikation som använder ett RAG-ramverk för att hämta embeddings från vektordatabaser | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Öppna källkodmodeller och Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                              | **Bygg:** En applikation som använder öppna källkodmodeller tillgängliga på Hugging Face          | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI-agenter](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                  | **Bygg:** En applikation som använder ett AI-agentramverk                                         | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Finjustering av LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                      | **Lär dig:** Vad, varför och hur man finjusterar LLMs                                             | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Bygga med SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                    | **Lär dig:** Fördelarna med att bygga med Small Language Models                                   | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Bygga med Mistral-modeller](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                    | **Lär dig:** Funktioner och skillnader hos Mistral-familjens modeller                             | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Bygga med Meta-modeller](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                          | **Lär dig:** Funktioner och skillnader hos Meta-familjens modeller                                | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Bygga sökapplikationer med vektordatabaser](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                  | **Bygg:** En sökapplikation som använder embeddings för att söka efter data.                      | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Bygga bildgenereringsapplikationer](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                          | **Bygg:** En bildgenereringsapplikation                                                           | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Bygga AI-applikationer med låg kod](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                    | **Bygg:** En generativ AI-applikation med verktyg för låg kod                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Integrera externa applikationer med funktionsanrop](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)    | **Bygg:** Vad funktionsanrop är och dess användningsområden för applikationer                    | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [Designa UX för AI-applikationer](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Lär dig:** Hur man tillämpar UX-designprinciper vid utveckling av generativa AI-applikationer  | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Säkra dina generativa AI-applikationer](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Lär dig:** Hot och risker för AI-system och metoder för att säkra dessa system.                 | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Livscykeln för generativa AI-applikationer](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)      | **Lär dig:** Verktyg och mätvärden för att hantera LLM-livscykeln och LLMOps                      | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) och vektordatabaser](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)       | **Bygg:** En applikation som använder ett RAG-ramverk för att hämta embeddings från vektordatabaser | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Öppna källkodmodeller och Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                               | **Bygg:** En applikation som använder öppna källkodmodeller tillgängliga på Hugging Face          | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI-agenter](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                    | **Bygg:** En applikation som använder ett AI-agentramverk                                         | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Finjustering av LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Lär dig:** Vad, varför och hur man finjusterar LLMs                                             | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Bygga med SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                      | **Lär dig:** Fördelarna med att bygga med Small Language Models                                   | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Bygga med Mistral-modeller](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                      | **Lär dig:** Funktionerna och skillnaderna hos Mistral Family Models                              | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Bygga med Meta-modeller](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                            | **Lär dig:** Funktionerna och skillnaderna hos Meta Family Models                                 | Video kommer snart | [Läs mer](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Speciellt tack
 
@@ -139,7 +139,7 @@ Vårt team producerar andra kurser! Kolla in:
 
 ## Få hjälp
 
-Om du fastnar eller har frågor om att bygga AI-applikationer, gå med i:
+Om du kör fast eller har frågor om att bygga AI-applikationer, gå med i:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
 
@@ -150,4 +150,4 @@ Om du har produktfeedback eller stöter på fel under byggandet, besök:
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

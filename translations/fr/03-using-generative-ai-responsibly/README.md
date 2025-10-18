@@ -1,145 +1,147 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7f8f4c11f8c1cb6e1794442dead414ea",
-  "translation_date": "2025-07-09T08:45:59+00:00",
+  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+  "translation_date": "2025-10-17T22:38:54+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "fr"
 }
 -->
-# Utiliser l’IA Générative de manière responsable
+# Utiliser l'IA générative de manière responsable
 
-[![Using Generative AI Responsibly](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.fr.png)](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)
+[![Utiliser l'IA générative de manière responsable](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.fr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
-> _Cliquez sur l’image ci-dessus pour voir la vidéo de cette leçon_
+> _Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon_
 
-Il est facile d’être fasciné par l’IA, et plus particulièrement par l’IA générative, mais il est essentiel de réfléchir à la manière de l’utiliser de façon responsable. Il faut prendre en compte des aspects comme garantir que les résultats soient justes, non nuisibles, et bien plus encore. Ce chapitre a pour but de vous fournir ce contexte, ce qu’il faut considérer, et comment agir concrètement pour améliorer votre usage de l’IA.
+Il est facile d'être fasciné par l'IA, et en particulier par l'IA générative, mais il est essentiel de réfléchir à la manière de l'utiliser de manière responsable. Vous devez prendre en compte des aspects tels que la garantie que les résultats soient équitables, non nuisibles, et bien plus encore. Ce chapitre vise à vous fournir le contexte mentionné, les éléments à considérer et les étapes à suivre pour améliorer votre utilisation de l'IA.
 
 ## Introduction
 
-Cette leçon abordera :
+Cette leçon couvrira :
 
-- Pourquoi il est important de privilégier une IA responsable lors de la création d’applications d’IA générative.
-- Les principes fondamentaux de l’IA responsable et leur lien avec l’IA générative.
-- Comment appliquer ces principes d’IA responsable à travers des stratégies et des outils.
+- Pourquoi vous devriez donner la priorité à l'IA responsable lors de la création d'applications d'IA générative.
+- Les principes fondamentaux de l'IA responsable et leur lien avec l'IA générative.
+- Comment mettre en pratique ces principes d'IA responsable grâce à des stratégies et des outils.
 
-## Objectifs d’apprentissage
+## Objectifs d'apprentissage
 
-À l’issue de cette leçon, vous saurez :
+Après avoir terminé cette leçon, vous saurez :
 
-- L’importance de l’IA responsable dans la création d’applications d’IA générative.
-- Quand réfléchir à et appliquer les principes fondamentaux de l’IA responsable dans ce contexte.
-- Quels outils et stratégies sont à votre disposition pour mettre en pratique le concept d’IA responsable.
+- L'importance de l'IA responsable lors de la création d'applications d'IA générative.
+- Quand réfléchir et appliquer les principes fondamentaux de l'IA responsable lors de la création d'applications d'IA générative.
+- Quels outils et stratégies sont à votre disposition pour mettre en pratique le concept d'IA responsable.
 
-## Principes de l’IA responsable
+## Principes de l'IA responsable
 
-L’engouement pour l’IA générative n’a jamais été aussi fort. Cet engouement a attiré de nombreux nouveaux développeurs, de l’attention et des financements dans ce domaine. Bien que cela soit très positif pour quiconque souhaite créer des produits et des entreprises utilisant l’IA générative, il est aussi crucial d’avancer de manière responsable.
+L'enthousiasme autour de l'IA générative n'a jamais été aussi grand. Cet engouement a attiré de nombreux nouveaux développeurs, une attention accrue et des financements dans ce domaine. Bien que cela soit très positif pour quiconque souhaite créer des produits et des entreprises utilisant l'IA générative, il est également important de procéder de manière responsable.
 
-Tout au long de ce cours, nous nous concentrons sur la construction de notre startup et de notre produit éducatif en IA. Nous utiliserons les principes de l’IA responsable : Équité, Inclusion, Fiabilité/Sécurité, Sécurité & Confidentialité, Transparence et Responsabilité. Avec ces principes, nous explorerons leur lien avec notre utilisation de l’IA générative dans nos produits.
+Tout au long de ce cours, nous nous concentrons sur la création de notre startup et de notre produit éducatif basé sur l'IA. Nous utiliserons les principes de l'IA responsable : Équité, Inclusion, Fiabilité/Sécurité, Sécurité et Confidentialité, Transparence et Responsabilité. Avec ces principes, nous explorerons leur relation avec notre utilisation de l'IA générative dans nos produits.
 
-## Pourquoi prioriser l’IA responsable
+## Pourquoi donner la priorité à l'IA responsable
 
-Lors de la création d’un produit, adopter une approche centrée sur l’humain en gardant à l’esprit l’intérêt de l’utilisateur conduit aux meilleurs résultats.
+Lors de la création d'un produit, adopter une approche centrée sur l'humain en gardant à l'esprit les intérêts de vos utilisateurs conduit aux meilleurs résultats.
 
-La particularité de l’IA générative réside dans sa capacité à créer des réponses utiles, des informations, des conseils et du contenu pour les utilisateurs. Cela peut se faire sans de nombreuses étapes manuelles, ce qui peut donner des résultats très impressionnants. Sans une planification et des stratégies appropriées, cela peut malheureusement aussi entraîner des résultats nuisibles pour vos utilisateurs, votre produit et la société dans son ensemble.
+La particularité de l'IA générative réside dans sa capacité à fournir des réponses utiles, des informations, des conseils et du contenu aux utilisateurs. Cela peut être fait sans de nombreuses étapes manuelles, ce qui peut conduire à des résultats très impressionnants. Cependant, sans planification et stratégies appropriées, cela peut malheureusement entraîner des résultats nuisibles pour vos utilisateurs, votre produit et la société dans son ensemble.
 
-Examinons quelques-uns (mais pas tous) de ces résultats potentiellement nuisibles :
+Examinons certains (mais pas tous) de ces résultats potentiellement nuisibles :
 
 ### Hallucinations
 
-Les hallucinations désignent le phénomène où un LLM produit un contenu soit complètement absurde, soit factuellement incorrect selon d’autres sources d’information.
+Les hallucinations désignent les cas où un modèle de langage produit un contenu qui est soit complètement absurde, soit manifestement incorrect selon d'autres sources d'information.
 
-Par exemple, imaginons que nous développions une fonctionnalité pour notre startup permettant aux étudiants de poser des questions historiques à un modèle. Un étudiant demande : `Qui était le seul survivant du Titanic ?`
+Prenons l'exemple où nous créons une fonctionnalité pour notre startup permettant aux étudiants de poser des questions historiques à un modèle. Un étudiant pose la question : `Qui était le seul survivant du Titanic ?`
 
-Le modèle produit une réponse comme celle-ci :
+Le modèle produit une réponse telle que celle-ci :
 
-![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
+![Invite disant "Qui était le seul survivant du Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
 > _(Source : [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
 
-C’est une réponse très confiante et détaillée. Malheureusement, elle est incorrecte. Avec un minimum de recherche, on découvre qu’il y a eu plusieurs survivants du naufrage du Titanic. Pour un étudiant qui commence à s’informer sur ce sujet, cette réponse peut sembler suffisamment convaincante pour ne pas être remise en question et être prise pour un fait. Les conséquences peuvent rendre le système d’IA peu fiable et nuire à la réputation de notre startup.
+C'est une réponse très confiante et détaillée. Malheureusement, elle est incorrecte. Même avec un minimum de recherche, on découvrirait qu'il y avait plus d'un survivant de la catastrophe du Titanic. Pour un étudiant qui commence tout juste à rechercher ce sujet, cette réponse peut être suffisamment convaincante pour ne pas être remise en question et être considérée comme un fait. Les conséquences de cela peuvent rendre le système d'IA peu fiable et nuire à la réputation de notre startup.
 
-À chaque nouvelle version d’un LLM, nous constatons des améliorations pour réduire les hallucinations. Malgré ces progrès, en tant que développeurs et utilisateurs, nous devons rester conscients de ces limites.
+Avec chaque itération d'un modèle de langage donné, nous avons constaté des améliorations de performance pour minimiser les hallucinations. Même avec ces améliorations, nous, en tant que créateurs d'applications et utilisateurs, devons rester conscients de ces limitations.
 
 ### Contenu nuisible
 
-Nous avons vu précédemment quand un LLM produit des réponses incorrectes ou absurdes. Un autre risque à connaître est celui d’un modèle qui génère du contenu nuisible.
+Nous avons abordé dans la section précédente les cas où un modèle de langage produit des réponses incorrectes ou absurdes. Un autre risque à prendre en compte est lorsque le modèle répond avec un contenu nuisible.
 
 Le contenu nuisible peut être défini comme :
 
-- Fournir des instructions ou encourager l’automutilation ou la violence envers certains groupes.
+- Fournir des instructions ou encourager l'automutilation ou le préjudice envers certains groupes.
 - Contenu haineux ou dégradant.
-- Aider à planifier des attaques ou des actes violents.
-- Fournir des instructions pour trouver du contenu illégal ou commettre des actes illégaux.
+- Aider à planifier tout type d'attaque ou d'actes violents.
+- Fournir des instructions sur la manière de trouver du contenu illégal ou de commettre des actes illégaux.
 - Afficher du contenu sexuellement explicite.
 
-Pour notre startup, nous voulons nous assurer de disposer des bons outils et stratégies pour empêcher que ce type de contenu soit visible par les étudiants.
+Pour notre startup, nous voulons nous assurer d'avoir les bons outils et stratégies en place pour empêcher ce type de contenu d'être vu par les étudiants.
 
-### Manque d’équité
+### Manque d'équité
 
-L’équité signifie « s’assurer qu’un système d’IA est exempt de biais et de discrimination et qu’il traite tout le monde de manière juste et égale ». Dans le domaine de l’IA générative, nous voulons éviter que des visions du monde excluantes envers des groupes marginalisés soient renforcées par les résultats du modèle.
+L'équité est définie comme « garantir qu'un système d'IA est exempt de biais et de discrimination et qu'il traite tout le monde de manière équitable et égale ». Dans le domaine de l'IA générative, nous voulons nous assurer que les visions du monde excluantes envers les groupes marginalisés ne sont pas renforcées par les résultats du modèle.
 
-Ce type de résultats nuit non seulement à la création d’expériences produit positives pour nos utilisateurs, mais cause aussi des dommages sociaux plus larges. En tant que développeurs, nous devons toujours garder à l’esprit une base d’utilisateurs large et diversifiée lors de la conception de solutions avec l’IA générative.
+Ces types de résultats ne sont pas seulement destructeurs pour créer des expériences positives pour nos utilisateurs, mais ils causent également des dommages supplémentaires à la société. En tant que créateurs d'applications, nous devrions toujours garder à l'esprit une base d'utilisateurs large et diversifiée lors de la création de solutions avec l'IA générative.
 
-## Comment utiliser l’IA générative de manière responsable
+## Comment utiliser l'IA générative de manière responsable
 
-Maintenant que nous avons identifié l’importance de l’IA générative responsable, voyons 4 étapes pour construire nos solutions IA de façon responsable :
+Maintenant que nous avons identifié l'importance de l'IA générative responsable, examinons 4 étapes que nous pouvons suivre pour créer nos solutions d'IA de manière responsable :
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.fr.png)
+![Cycle d'atténuation](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.fr.png)
 
-### Mesurer les risques potentiels
+### Mesurer les dommages potentiels
 
-Dans les tests logiciels, on teste les actions attendues d’un utilisateur sur une application. De la même manière, tester un ensemble diversifié de requêtes que les utilisateurs sont susceptibles d’utiliser est un bon moyen d’évaluer les risques potentiels.
+Dans les tests logiciels, nous testons les actions attendues d'un utilisateur sur une application. De même, tester un ensemble diversifié de requêtes que les utilisateurs sont le plus susceptibles d'utiliser est une bonne façon de mesurer les dommages potentiels.
 
-Puisque notre startup développe un produit éducatif, il serait pertinent de préparer une liste de requêtes liées à l’éducation. Cela pourrait couvrir un certain sujet, des faits historiques, ou des questions sur la vie étudiante.
+Étant donné que notre startup développe un produit éducatif, il serait judicieux de préparer une liste de requêtes liées à l'éducation. Cela pourrait couvrir un certain sujet, des faits historiques et des requêtes sur la vie étudiante.
 
-### Atténuer les risques potentiels
+### Atténuer les dommages potentiels
 
-Il est temps de trouver des moyens pour prévenir ou limiter les risques causés par le modèle et ses réponses. Nous pouvons envisager cela à 4 niveaux différents :
+Il est maintenant temps de trouver des moyens de prévenir ou de limiter les dommages potentiels causés par le modèle et ses réponses. Nous pouvons examiner cela sous 4 couches différentes :
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.fr.png)
+![Couches d'atténuation](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.fr.png)
 
-- **Modèle**. Choisir le bon modèle pour le bon cas d’usage. Les modèles plus grands et complexes comme GPT-4 peuvent présenter un risque plus élevé de contenu nuisible lorsqu’ils sont appliqués à des cas d’usage plus petits et spécifiques. Utiliser vos données d’entraînement pour affiner le modèle réduit aussi ce risque.
+- **Modèle**. Choisir le bon modèle pour le bon cas d'utilisation. Les modèles plus grands et plus complexes comme GPT-4 peuvent présenter un risque accru de contenu nuisible lorsqu'ils sont appliqués à des cas d'utilisation plus petits et spécifiques. Utiliser vos données d'entraînement pour un ajustement fin réduit également le risque de contenu nuisible.
 
-- **Système de sécurité**. Un système de sécurité est un ensemble d’outils et de configurations sur la plateforme qui héberge le modèle et qui aide à limiter les risques. Par exemple, le système de filtrage de contenu du service Azure OpenAI. Ces systèmes doivent aussi détecter les attaques de type jailbreak et les activités indésirables comme les requêtes provenant de bots.
+- **Système de sécurité**. Un système de sécurité est un ensemble d'outils et de configurations sur la plateforme qui héberge le modèle et qui aide à atténuer les dommages. Un exemple de cela est le système de filtrage de contenu sur le service Azure OpenAI. Les systèmes doivent également détecter les attaques de contournement et les activités indésirables comme les requêtes provenant de bots.
 
-- **Metaprompt**. Les metaprompts et le grounding sont des moyens de diriger ou de limiter le modèle selon certains comportements et informations. Cela peut passer par des entrées système définissant certaines limites du modèle. De plus, fournir des réponses plus pertinentes par rapport au domaine ou au contexte du système.
+- **Métaprompt**. Les métaprompts et l'ancrage sont des moyens de diriger ou de limiter le modèle en fonction de certains comportements et informations. Cela pourrait être l'utilisation d'entrées système pour définir certaines limites du modèle. En outre, fournir des résultats plus pertinents au champ ou au domaine du système.
 
-Cela peut aussi inclure des techniques comme Retrieval Augmented Generation (RAG) pour que le modèle ne puise l’information que dans une sélection de sources fiables. Une leçon plus loin dans ce cours porte sur [la création d’applications de recherche](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Cela peut également inclure l'utilisation de techniques comme la génération augmentée par récupération (RAG) pour que le modèle ne puise des informations que dans une sélection de sources fiables. Il y a une leçon plus tard dans ce cours sur [la création d'applications de recherche](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Expérience utilisateur**. Le dernier niveau est celui où l’utilisateur interagit directement avec le modèle via l’interface de notre application. Nous pouvons ainsi concevoir l’UI/UX pour limiter les types d’entrées que l’utilisateur peut envoyer au modèle ainsi que les textes ou images affichés. Lors du déploiement de l’application IA, il est aussi important d’être transparent sur ce que notre application d’IA générative peut ou ne peut pas faire.
+- **Expérience utilisateur**. La dernière couche est celle où l'utilisateur interagit directement avec le modèle via l'interface de notre application d'une manière ou d'une autre. De cette manière, nous pouvons concevoir l'interface utilisateur/expérience utilisateur pour limiter l'utilisateur sur les types d'entrées qu'il peut envoyer au modèle ainsi que sur le texte ou les images affichés à l'utilisateur. Lors du déploiement de l'application d'IA, nous devons également être transparents sur ce que notre application d'IA générative peut et ne peut pas faire.
 
-Nous avons une leçon entière dédiée à [la conception UX pour les applications IA](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
+Nous avons une leçon entière dédiée à [Concevoir l'UX pour les applications d'IA](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
-- **Évaluer le modèle**. Travailler avec des LLM peut être complexe car nous n’avons pas toujours le contrôle sur les données d’entraînement du modèle. Quoi qu’il en soit, il faut toujours évaluer la performance et les résultats du modèle. Il est important de mesurer la précision, la similarité, la pertinence et la fiabilité des réponses. Cela aide à instaurer transparence et confiance auprès des parties prenantes et des utilisateurs.
+- **Évaluer le modèle**. Travailler avec des modèles de langage peut être difficile car nous n'avons pas toujours le contrôle sur les données sur lesquelles le modèle a été entraîné. Néanmoins, nous devrions toujours évaluer les performances et les résultats du modèle. Il est toujours important de mesurer la précision, la similarité, l'ancrage et la pertinence des résultats du modèle. Cela aide à fournir transparence et confiance aux parties prenantes et aux utilisateurs.
 
-### Exploiter une solution d’IA générative responsable
+### Exploiter une solution d'IA générative responsable
 
-Mettre en place une pratique opérationnelle autour de vos applications IA est la dernière étape. Cela inclut de collaborer avec d’autres départements de notre startup comme le service juridique et la sécurité pour garantir la conformité aux réglementations. Avant le lancement, il faut aussi élaborer des plans pour la livraison, la gestion des incidents et le retour en arrière afin d’éviter tout préjudice croissant pour nos utilisateurs.
+Construire une pratique opérationnelle autour de vos applications d'IA est la dernière étape. Cela inclut de collaborer avec d'autres parties de notre startup comme le service juridique et la sécurité pour garantir que nous respectons toutes les politiques réglementaires. Avant de lancer, nous voulons également élaborer des plans autour de la livraison, de la gestion des incidents et du retour en arrière pour éviter tout préjudice à nos utilisateurs.
 
 ## Outils
 
-Même si le travail de développement de solutions d’IA responsable peut sembler important, il en vaut largement la peine. À mesure que le domaine de l’IA générative se développe, davantage d’outils permettant aux développeurs d’intégrer efficacement la responsabilité dans leurs processus vont mûrir. Par exemple, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) peut aider à détecter le contenu et les images nuisibles via une requête API.
+Bien que le travail de développement de solutions d'IA responsable puisse sembler important, il s'agit d'un effort qui en vaut la peine. À mesure que le domaine de l'IA générative se développe, davantage d'outils pour aider les développeurs à intégrer efficacement la responsabilité dans leurs flux de travail vont se perfectionner. Par exemple, le [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) peut aider à détecter les contenus et images nuisibles via une requête API.
 
 ## Vérification des connaissances
 
-Quelles sont les choses auxquelles vous devez faire attention pour garantir un usage responsable de l’IA ?
+Quels sont les éléments à prendre en compte pour garantir une utilisation responsable de l'IA ?
 
-1. Que la réponse soit correcte.  
-1. L’usage nuisible, que l’IA ne soit pas utilisée à des fins criminelles.  
-1. S’assurer que l’IA soit exempte de biais et de discrimination.
+1. Que la réponse soit correcte.
+1. Une utilisation nuisible, que l'IA ne soit pas utilisée à des fins criminelles.
+1. Garantir que l'IA soit exempte de biais et de discrimination.
 
-R : Les points 2 et 3 sont corrects. L’IA responsable vous aide à envisager comment atténuer les effets nuisibles, les biais, et plus encore.
+R : Les réponses 2 et 3 sont correctes. L'IA responsable vous aide à réfléchir à la manière de limiter les effets nuisibles et les biais, entre autres.
 
 ## 🚀 Défi
 
-Lisez la documentation sur [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) et voyez ce que vous pouvez adopter pour votre usage.
+Renseignez-vous sur [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) et voyez ce que vous pouvez adopter pour votre utilisation.
 
 ## Excellent travail, continuez votre apprentissage
 
-Après avoir terminé cette leçon, consultez notre [collection d’apprentissage sur l’IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à approfondir vos connaissances sur l’IA générative !
+Après avoir terminé cette leçon, consultez notre [collection d'apprentissage sur l'IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à approfondir vos connaissances sur l'IA générative !
 
-Rendez-vous à la leçon 4 où nous aborderons les [fondamentaux de la conception de prompts](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) !
+Passez à la leçon 4 où nous examinerons les [Fondamentaux de l'ingénierie des invites](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) !
+
+---
 
 **Avertissement** :  
-Ce document a été traduit à l’aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d’assurer l’exactitude, veuillez noter que les traductions automatiques peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d’origine doit être considéré comme la source faisant foi. Pour les informations critiques, une traduction professionnelle réalisée par un humain est recommandée. Nous déclinons toute responsabilité en cas de malentendus ou de mauvaises interprétations résultant de l’utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.
