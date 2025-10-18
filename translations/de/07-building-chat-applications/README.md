@@ -1,75 +1,75 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-07-09T12:15:06+00:00",
+  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
+  "translation_date": "2025-10-17T22:58:38+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "de"
 }
 -->
-# Entwicklung von Chat-Anwendungen mit generativer KI
+# Aufbau von Chat-Anwendungen mit generativer KI
 
-[![Entwicklung von Chat-Anwendungen mit generativer KI](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.de.png)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Aufbau von Chat-Anwendungen mit generativer KI](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.de.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-> _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
+> _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
 
-Nachdem wir gesehen haben, wie man Textgenerierungs-Apps erstellt, werfen wir nun einen Blick auf Chat-Anwendungen.
+Nachdem wir nun gesehen haben, wie wir Textgenerierungsanwendungen erstellen können, werfen wir einen Blick auf Chat-Anwendungen.
 
-Chat-Anwendungen sind in unserem Alltag fest verankert und bieten weit mehr als nur eine Möglichkeit für zwanglose Gespräche. Sie sind integraler Bestandteil von Kundenservice, technischem Support und sogar komplexen Beratungssystemen. Wahrscheinlich haben Sie erst vor Kurzem Hilfe von einer Chat-Anwendung erhalten. Mit der Integration fortschrittlicher Technologien wie generativer KI in diese Plattformen steigen sowohl die Komplexität als auch die Herausforderungen.
+Chat-Anwendungen sind ein fester Bestandteil unseres täglichen Lebens geworden und bieten weit mehr als nur eine Möglichkeit zur lockeren Kommunikation. Sie sind integraler Bestandteil von Kundenservice, technischem Support und sogar von hochentwickelten Beratungssystemen. Wahrscheinlich haben Sie vor nicht allzu langer Zeit Hilfe von einer Chat-Anwendung erhalten. Mit der Integration fortschrittlicher Technologien wie generativer KI in diese Plattformen steigt jedoch nicht nur die Komplexität, sondern auch die Herausforderungen.
 
-Einige Fragen, die wir beantworten müssen, sind:
+Einige Fragen, die beantwortet werden müssen, sind:
 
-- **Entwicklung der App**. Wie bauen wir diese KI-gestützten Anwendungen effizient und nahtlos für spezifische Anwendungsfälle ein?
-- **Überwachung**. Nach der Bereitstellung: Wie können wir sicherstellen, dass die Anwendungen sowohl funktional als auch im Einklang mit den [sechs Prinzipien verantwortungsvoller KI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) auf höchstem Qualitätsniveau arbeiten?
+- **Erstellung der Anwendung**. Wie können wir diese KI-gestützten Anwendungen effizient erstellen und nahtlos für spezifische Anwendungsfälle integrieren?
+- **Überwachung**. Wie können wir nach der Bereitstellung sicherstellen, dass die Anwendungen auf höchstem Qualitätsniveau arbeiten, sowohl in Bezug auf die Funktionalität als auch auf die Einhaltung der [sechs Prinzipien verantwortungsvoller KI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-In einer Zeit, die von Automatisierung und nahtloser Mensch-Maschine-Interaktion geprägt ist, wird es immer wichtiger zu verstehen, wie generative KI den Umfang, die Tiefe und die Anpassungsfähigkeit von Chat-Anwendungen verändert. Diese Lektion untersucht die Architektur, die solche komplexen Systeme unterstützt, beleuchtet Methoden zur Feinabstimmung für domänenspezifische Aufgaben und bewertet Metriken sowie Überlegungen für eine verantwortungsvolle KI-Nutzung.
+Da wir uns immer weiter in ein Zeitalter bewegen, das von Automatisierung und nahtlosen Mensch-Maschine-Interaktionen geprägt ist, wird es essenziell, zu verstehen, wie generative KI den Umfang, die Tiefe und die Anpassungsfähigkeit von Chat-Anwendungen transformiert. Diese Lektion untersucht die architektonischen Aspekte, die diese komplexen Systeme unterstützen, beleuchtet die Methoden zur Feinabstimmung für domänenspezifische Aufgaben und bewertet die Metriken und Überlegungen, die für eine verantwortungsvolle KI-Bereitstellung relevant sind.
 
 ## Einführung
 
 Diese Lektion behandelt:
 
-- Techniken zum effizienten Aufbau und zur Integration von Chat-Anwendungen.
+- Techniken für den effizienten Aufbau und die Integration von Chat-Anwendungen.
 - Wie man Anwendungen anpasst und feinabstimmt.
 - Strategien und Überlegungen zur effektiven Überwachung von Chat-Anwendungen.
 
 ## Lernziele
 
-Am Ende dieser Lektion können Sie:
+Am Ende dieser Lektion werden Sie in der Lage sein:
 
-- Überlegungen zum Aufbau und zur Integration von Chat-Anwendungen in bestehende Systeme beschreiben.
-- Chat-Anwendungen für spezifische Anwendungsfälle anpassen.
-- Wichtige Metriken und Aspekte identifizieren, um die Qualität von KI-gestützten Chat-Anwendungen effektiv zu überwachen und zu erhalten.
-- Sicherstellen, dass Chat-Anwendungen KI verantwortungsvoll nutzen.
+- Überlegungen zum Aufbau und zur Integration von Chat-Anwendungen in bestehende Systeme zu beschreiben.
+- Chat-Anwendungen für spezifische Anwendungsfälle anzupassen.
+- Wichtige Metriken und Überlegungen zu identifizieren, um die Qualität von KI-gestützten Chat-Anwendungen effektiv zu überwachen und aufrechtzuerhalten.
+- Sicherzustellen, dass Chat-Anwendungen KI verantwortungsvoll nutzen.
 
 ## Integration von generativer KI in Chat-Anwendungen
 
-Die Verbesserung von Chat-Anwendungen durch generative KI bedeutet nicht nur, sie „intelligenter“ zu machen, sondern auch ihre Architektur, Leistung und Benutzeroberfläche zu optimieren, um eine hochwertige Nutzererfahrung zu bieten. Das umfasst die Untersuchung der architektonischen Grundlagen, API-Integrationen und UI-Aspekte. Dieser Abschnitt bietet Ihnen eine umfassende Orientierungshilfe, um sich in diesen komplexen Bereichen zurechtzufinden – egal, ob Sie bestehende Systeme erweitern oder eigenständige Plattformen entwickeln.
+Die Weiterentwicklung von Chat-Anwendungen durch generative KI dreht sich nicht nur darum, sie intelligenter zu machen; es geht auch darum, ihre Architektur, Leistung und Benutzeroberfläche zu optimieren, um ein qualitativ hochwertiges Benutzererlebnis zu bieten. Dies erfordert eine Untersuchung der architektonischen Grundlagen, der API-Integrationen und der Überlegungen zur Benutzeroberfläche. Dieser Abschnitt soll Ihnen eine umfassende Roadmap bieten, um sich in diesen komplexen Landschaften zurechtzufinden, unabhängig davon, ob Sie sie in bestehende Systeme integrieren oder als eigenständige Plattformen aufbauen.
 
-Am Ende dieses Abschnitts verfügen Sie über das nötige Wissen, um Chat-Anwendungen effizient zu erstellen und zu integrieren.
+Am Ende dieses Abschnitts werden Sie über das Wissen verfügen, das erforderlich ist, um Chat-Anwendungen effizient zu erstellen und zu integrieren.
 
 ### Chatbot oder Chat-Anwendung?
 
-Bevor wir mit dem Bau von Chat-Anwendungen beginnen, vergleichen wir „Chatbots“ mit „KI-gestützten Chat-Anwendungen“, die unterschiedliche Rollen und Funktionen erfüllen. Ein Chatbot automatisiert in der Regel spezifische Gesprächsaufgaben, wie das Beantworten häufig gestellter Fragen oder das Verfolgen von Paketen. Er arbeitet meist regelbasiert oder mit komplexen KI-Algorithmen. Im Gegensatz dazu ist eine KI-gestützte Chat-Anwendung eine deutlich umfassendere Umgebung, die verschiedene Formen digitaler Kommunikation ermöglicht, etwa Text-, Sprach- und Videochats zwischen Menschen. Ihr zentrales Merkmal ist die Integration eines generativen KI-Modells, das nuancierte, menschenähnliche Gespräche simuliert und Antworten auf Basis vielfältiger Eingaben und Kontextinformationen generiert. Eine solche Anwendung kann offene Diskussionen führen, sich an wechselnde Gesprächskontexte anpassen und sogar kreative oder komplexe Dialoge erzeugen.
+Bevor wir uns mit dem Aufbau von Chat-Anwendungen befassen, vergleichen wir 'Chatbots' mit 'KI-gestützten Chat-Anwendungen', die unterschiedliche Rollen und Funktionen erfüllen. Der Hauptzweck eines Chatbots besteht darin, spezifische Konversationsaufgaben zu automatisieren, wie z. B. das Beantworten häufig gestellter Fragen oder das Verfolgen eines Pakets. Er wird typischerweise durch regelbasierte Logik oder komplexe KI-Algorithmen gesteuert. Im Gegensatz dazu ist eine KI-gestützte Chat-Anwendung eine weitaus umfassendere Umgebung, die verschiedene Formen der digitalen Kommunikation wie Text-, Sprach- und Videochats zwischen menschlichen Nutzern ermöglicht. Ihr Hauptmerkmal ist die Integration eines generativen KI-Modells, das nuancierte, menschenähnliche Gespräche simuliert und Antworten auf der Grundlage einer Vielzahl von Eingaben und Kontexten generiert. Eine generative KI-gestützte Chat-Anwendung kann offene Diskussionen führen, sich an sich entwickelnde Gesprächskontexte anpassen und sogar kreative oder komplexe Dialoge erzeugen.
 
-Die folgende Tabelle zeigt die wichtigsten Unterschiede und Gemeinsamkeiten, um ihre jeweiligen Rollen in der digitalen Kommunikation besser zu verstehen.
+Die folgende Tabelle zeigt die wichtigsten Unterschiede und Gemeinsamkeiten, um uns zu helfen, ihre einzigartigen Rollen in der digitalen Kommunikation zu verstehen.
 
 | Chatbot                               | Generative KI-gestützte Chat-Anwendung |
 | ------------------------------------- | -------------------------------------- |
 | Aufgabenorientiert und regelbasiert   | Kontextbewusst                         |
-| Oft in größere Systeme integriert     | Kann einen oder mehrere Chatbots beherbergen |
-| Auf programmierte Funktionen beschränkt | Nutzt generative KI-Modelle           |
-| Spezialisierte & strukturierte Interaktionen | Ermöglicht offene Diskussionen        |
+| Oft in größere Systeme integriert     | Kann einen oder mehrere Chatbots hosten |
+| Auf programmierte Funktionen beschränkt | Integriert generative KI-Modelle       |
+| Spezialisierte & strukturierte Interaktionen | Fähig zu offenen Diskussionen         |
 
 ### Nutzung vorgefertigter Funktionen mit SDKs und APIs
 
-Beim Aufbau einer Chat-Anwendung ist es sinnvoll, zunächst zu prüfen, was bereits verfügbar ist. Die Verwendung von SDKs und APIs ist aus verschiedenen Gründen eine vorteilhafte Strategie. Durch die Integration gut dokumentierter SDKs und APIs positionieren Sie Ihre Anwendung strategisch für langfristigen Erfolg und adressieren Skalierbarkeits- sowie Wartungsfragen.
+Beim Aufbau einer Chat-Anwendung ist ein guter erster Schritt, zu bewerten, was bereits verfügbar ist. Die Verwendung von SDKs und APIs zum Erstellen von Chat-Anwendungen ist aus verschiedenen Gründen eine vorteilhafte Strategie. Durch die Integration gut dokumentierter SDKs und APIs positionieren Sie Ihre Anwendung strategisch für langfristigen Erfolg und adressieren Skalierbarkeits- und Wartungsprobleme.
 
-- **Beschleunigt die Entwicklung und reduziert Aufwand**: Die Nutzung vorgefertigter Funktionen erspart den aufwändigen Eigenbau und ermöglicht es Ihnen, sich auf andere wichtige Aspekte wie die Geschäftslogik zu konzentrieren.
-- **Bessere Leistung**: Wenn Sie Funktionen selbst entwickeln, stellen Sie sich irgendwann die Frage: „Wie skaliert das? Kann die Anwendung plötzliche Nutzeranstiege bewältigen?“ Gut gepflegte SDKs und APIs bieten oft integrierte Lösungen für solche Herausforderungen.
-- **Einfachere Wartung**: Updates und Verbesserungen sind leichter zu handhaben, da meist nur eine Bibliothek aktualisiert werden muss, wenn eine neue Version erscheint.
-- **Zugang zu modernster Technologie**: Durch die Nutzung feinabgestimmter und auf umfangreichen Datensätzen trainierter Modelle erhält Ihre Anwendung natürliche Sprachfähigkeiten.
+- **Beschleunigt den Entwicklungsprozess und reduziert den Aufwand**: Sich auf vorgefertigte Funktionen zu verlassen, anstatt den teuren Prozess des Eigenbaus zu durchlaufen, ermöglicht es Ihnen, sich auf andere Aspekte Ihrer Anwendung zu konzentrieren, die Sie möglicherweise für wichtiger halten, wie z. B. die Geschäftslogik.
+- **Bessere Leistung**: Wenn Sie Funktionen von Grund auf neu erstellen, werden Sie sich irgendwann fragen: "Wie skaliert das? Kann diese Anwendung einen plötzlichen Benutzeranstieg bewältigen?" Gut gepflegte SDKs und APIs haben oft bereits Lösungen für diese Bedenken integriert.
+- **Einfachere Wartung**: Updates und Verbesserungen sind einfacher zu verwalten, da die meisten APIs und SDKs lediglich ein Update einer Bibliothek erfordern, wenn eine neuere Version veröffentlicht wird.
+- **Zugang zu modernster Technologie**: Die Nutzung von Modellen, die auf umfangreichen Datensätzen trainiert und feinabgestimmt wurden, bietet Ihrer Anwendung natürliche Sprachfähigkeiten.
 
-Der Zugriff auf SDK- oder API-Funktionen erfolgt in der Regel durch eine Berechtigung, meist über einen eindeutigen Schlüssel oder Authentifizierungstoken. Wir verwenden die OpenAI Python Library, um zu zeigen, wie das funktioniert. Sie können es auch selbst ausprobieren in den folgenden [Notebooks für OpenAI](python/oai-assignment.ipynb) oder [Azure OpenAI Services](python/aoai-assignment.ipynb) für diese Lektion.
+Der Zugriff auf die Funktionalität eines SDKs oder einer API erfordert in der Regel die Erlaubnis zur Nutzung der bereitgestellten Dienste, was oft durch die Verwendung eines eindeutigen Schlüssels oder Authentifizierungstokens erfolgt. Wir werden die OpenAI Python-Bibliothek verwenden, um zu untersuchen, wie dies aussieht. Sie können dies auch selbst in dem folgenden [Notebook für OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) oder [Notebook für Azure OpenAI Services](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) für diese Lektion ausprobieren.
 
 ```python
 import os
@@ -84,113 +84,115 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-Das obige Beispiel nutzt das GPT-3.5 Turbo Modell, um die Eingabe zu vervollständigen. Beachten Sie, dass der API-Schlüssel vorher gesetzt wird. Ohne Schlüssel erhalten Sie eine Fehlermeldung.
+Das obige Beispiel verwendet das GPT-3.5 Turbo-Modell, um die Eingabeaufforderung zu vervollständigen. Beachten Sie jedoch, dass der API-Schlüssel vorab festgelegt wird. Sie würden einen Fehler erhalten, wenn Sie den Schlüssel nicht setzen.
 
 ## Benutzererfahrung (UX)
 
-Allgemeine UX-Prinzipien gelten auch für Chat-Anwendungen, aber hier sind einige zusätzliche Aspekte, die aufgrund der eingesetzten maschinellen Lernkomponenten besonders wichtig sind.
+Allgemeine UX-Prinzipien gelten auch für Chat-Anwendungen, aber hier sind einige zusätzliche Überlegungen, die aufgrund der maschinellen Lernkomponenten besonders wichtig werden.
 
-- **Mechanismus zur Klärung von Mehrdeutigkeiten**: Generative KI-Modelle erzeugen gelegentlich mehrdeutige Antworten. Eine Funktion, mit der Nutzer um Klarstellung bitten können, ist hilfreich, wenn sie auf dieses Problem stoßen.
-- **Kontextbeibehaltung**: Fortgeschrittene generative KI-Modelle können den Gesprächskontext speichern, was für die Nutzererfahrung sehr wertvoll sein kann. Nutzern die Kontrolle über die Verwaltung des Kontexts zu geben, verbessert die Erfahrung, birgt aber auch das Risiko, sensible Daten zu speichern. Überlegungen zur Speicherdauer, etwa durch eine Aufbewahrungsrichtlinie, helfen, den Bedarf an Kontext mit Datenschutz zu vereinbaren.
-- **Personalisierung**: KI-Modelle, die lernen und sich anpassen können, bieten eine individuelle Nutzererfahrung. Die Anpassung durch Funktionen wie Nutzerprofile lässt den Nutzer sich verstanden fühlen und unterstützt ihn dabei, gezielt Antworten zu finden – für eine effizientere und zufriedenstellendere Interaktion.
+- **Mechanismus zur Klärung von Mehrdeutigkeiten**: Generative KI-Modelle erzeugen gelegentlich mehrdeutige Antworten. Eine Funktion, die es Benutzern ermöglicht, um Klarstellung zu bitten, kann hilfreich sein, falls sie auf dieses Problem stoßen.
+- **Kontextbeibehaltung**: Fortschrittliche generative KI-Modelle können sich den Kontext innerhalb eines Gesprächs merken, was ein notwendiger Vorteil für die Benutzererfahrung sein kann. Den Benutzern die Möglichkeit zu geben, den Kontext zu steuern und zu verwalten, verbessert die Benutzererfahrung, birgt jedoch das Risiko, sensible Benutzerinformationen zu speichern. Überlegungen dazu, wie lange diese Informationen gespeichert werden, wie z. B. die Einführung einer Aufbewahrungsrichtlinie, können das Bedürfnis nach Kontext mit dem Datenschutz in Einklang bringen.
+- **Personalisierung**: Mit der Fähigkeit zu lernen und sich anzupassen, bieten KI-Modelle eine individualisierte Erfahrung für den Benutzer. Die Anpassung der Benutzererfahrung durch Funktionen wie Benutzerprofile lässt den Benutzer nicht nur verstanden fühlen, sondern hilft ihm auch, spezifische Antworten zu finden, was eine effizientere und zufriedenstellendere Interaktion schafft.
 
-Ein Beispiel für Personalisierung sind die „Custom instructions“ in OpenAIs ChatGPT. Dort können Sie Informationen über sich selbst angeben, die für Ihre Eingaben wichtig sein könnten. Hier ein Beispiel für eine solche individuelle Anweisung.
+Ein Beispiel für Personalisierung ist die Einstellung "Benutzerdefinierte Anweisungen" in OpenAI's ChatGPT. Sie ermöglicht es Ihnen, Informationen über sich selbst bereitzustellen, die für Ihre Eingabeaufforderungen wichtig sein könnten. Hier ist ein Beispiel für eine benutzerdefinierte Anweisung.
 
-![Custom Instructions Einstellungen in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.de.png)
+![Benutzerdefinierte Anweisungen in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.de.png)
 
-Dieses „Profil“ veranlasst ChatGPT, einen Unterrichtsplan zu verketteten Listen zu erstellen. Beachten Sie, dass ChatGPT berücksichtigt, dass die Nutzerin aufgrund ihrer Erfahrung einen detaillierteren Plan wünscht.
+Dieses "Profil" fordert ChatGPT auf, einen Lehrplan zu verketteten Listen zu erstellen. Beachten Sie, dass ChatGPT berücksichtigt, dass der Benutzer möglicherweise einen detaillierteren Lehrplan basierend auf ihrer Erfahrung wünscht.
 
-![Eine Eingabe in ChatGPT für einen Unterrichtsplan zu verketteten Listen](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.de.png)
+![Eine Eingabeaufforderung in ChatGPT für einen Lehrplan über verkettete Listen](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.de.png)
 
-### Microsofts System Message Framework für Large Language Models
+### Microsofts Systemnachrichten-Framework für große Sprachmodelle
 
-[Microsoft gibt Empfehlungen](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) zum Verfassen effektiver Systemnachrichten für LLMs, unterteilt in 4 Bereiche:
+[Microsoft hat Leitlinien bereitgestellt](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) für das Schreiben effektiver Systemnachrichten bei der Generierung von Antworten aus großen Sprachmodellen, unterteilt in vier Bereiche:
 
-1. Definition, für wen das Modell gedacht ist, sowie seiner Fähigkeiten und Grenzen.
-2. Festlegung des Ausgabeformats des Modells.
-3. Bereitstellung konkreter Beispiele, die das gewünschte Verhalten demonstrieren.
-4. Zusätzliche Verhaltensrichtlinien.
+1. Definition, für wen das Modell gedacht ist, sowie seiner Fähigkeiten und Einschränkungen.
+2. Definition des Ausgabeformats des Modells.
+3. Bereitstellung spezifischer Beispiele, die das beabsichtigte Verhalten des Modells demonstrieren.
+4. Bereitstellung zusätzlicher Verhaltensrichtlinien.
 
 ### Barrierefreiheit
 
-Unabhängig davon, ob Nutzer visuelle, auditive, motorische oder kognitive Einschränkungen haben, sollte eine gut gestaltete Chat-Anwendung für alle nutzbar sein. Die folgende Liste zeigt spezifische Funktionen zur Verbesserung der Barrierefreiheit für verschiedene Beeinträchtigungen.
+Egal, ob ein Benutzer eine Seh-, Hör-, Bewegungs- oder kognitive Beeinträchtigung hat, eine gut gestaltete Chat-Anwendung sollte für alle nutzbar sein. Die folgende Liste beschreibt spezifische Funktionen, die darauf abzielen, die Barrierefreiheit für verschiedene Benutzerbeeinträchtigungen zu verbessern.
 
-- **Funktionen für Sehbehinderte**: Hochkontrast-Themen, skalierbarer Text, Kompatibilität mit Screenreadern.
-- **Funktionen für Hörbehinderte**: Text-zu-Sprache und Sprache-zu-Text, visuelle Hinweise bei Audio-Benachrichtigungen.
-- **Funktionen für motorische Einschränkungen**: Unterstützung der Tastaturnavigation, Sprachbefehle.
-- **Funktionen für kognitive Einschränkungen**: Vereinfachte Sprachoptionen.
+- **Funktionen für Sehbehinderte**: Hoher Kontrast und anpassbare Textgrößen, Kompatibilität mit Bildschirmlesegeräten.
+- **Funktionen für Hörgeschädigte**: Text-zu-Sprache- und Sprache-zu-Text-Funktionen, visuelle Hinweise für Audio-Benachrichtigungen.
+- **Funktionen für motorische Beeinträchtigungen**: Unterstützung der Tastaturnavigation, Sprachbefehle.
+- **Funktionen für kognitive Beeinträchtigungen**: Optionen für vereinfachte Sprache.
 
 ## Anpassung und Feinabstimmung für domänenspezifische Sprachmodelle
 
-Stellen Sie sich eine Chat-Anwendung vor, die die Fachsprache Ihres Unternehmens versteht und die häufigsten Fragen der Nutzer antizipiert. Es gibt zwei wichtige Ansätze:
+Stellen Sie sich eine Chat-Anwendung vor, die den Jargon Ihres Unternehmens versteht und die spezifischen Anfragen seiner Benutzerbasis antizipiert. Es gibt einige erwähnenswerte Ansätze:
 
-- **Nutzung von DSL-Modellen**. DSL steht für domain specific language (domänenspezifische Sprache). Sie können ein DSL-Modell verwenden, das auf eine bestimmte Domäne trainiert wurde, um deren Konzepte und Szenarien zu verstehen.
-- **Feinabstimmung anwenden**. Feinabstimmung bedeutet, Ihr Modell mit spezifischen Daten weiter zu trainieren.
+- **Nutzung von DSL-Modellen**. DSL steht für domänenspezifische Sprache. Sie können ein sogenanntes DSL-Modell verwenden, das auf einem bestimmten Bereich trainiert wurde, um dessen Konzepte und Szenarien zu verstehen.
+- **Anwendung von Feinabstimmung**. Feinabstimmung ist der Prozess des weiteren Trainings Ihres Modells mit spezifischen Daten.
 
-## Anpassung: Einsatz eines DSL-Modells
+## Anpassung: Verwendung eines DSL
 
-Der Einsatz domänenspezifischer Sprachmodelle (DSL-Modelle) kann die Nutzerbindung verbessern, indem spezialisierte, kontextbezogene Interaktionen ermöglicht werden. Ein solches Modell ist darauf trainiert oder feinabgestimmt, Texte zu einem bestimmten Fachgebiet, einer Branche oder einem Thema zu verstehen und zu generieren. Optionen reichen vom Training eines eigenen Modells bis zur Nutzung vorgefertigter Modelle über SDKs und APIs. Eine weitere Möglichkeit ist die Feinabstimmung, bei der ein bereits vortrainiertes Modell für eine spezifische Domäne angepasst wird.
+Die Nutzung von domänenspezifischen Sprachmodellen (DSL-Modelle) kann die Benutzerbindung verbessern, indem spezialisierte, kontextuell relevante Interaktionen bereitgestellt werden. Es handelt sich um ein Modell, das trainiert oder feinabgestimmt wurde, um Text zu einem bestimmten Bereich, einer Branche oder einem Thema zu verstehen und zu generieren. Optionen für die Verwendung eines DSL-Modells reichen vom Training eines Modells von Grund auf bis zur Nutzung bereits vorhandener Modelle über SDKs und APIs. Eine weitere Option ist die Feinabstimmung, bei der ein bestehendes vortrainiertes Modell an eine spezifische Domäne angepasst wird.
 
-## Anpassung: Feinabstimmung anwenden
+## Anpassung: Anwendung von Feinabstimmung
 
-Feinabstimmung wird oft dann in Betracht gezogen, wenn ein vortrainiertes Modell in einem spezialisierten Bereich oder für eine bestimmte Aufgabe nicht ausreicht.
+Feinabstimmung wird oft in Betracht gezogen, wenn ein vortrainiertes Modell in einem spezialisierten Bereich oder bei einer spezifischen Aufgabe nicht ausreicht.
 
-Beispielsweise sind medizinische Anfragen komplex und erfordern viel Kontext. Wenn ein Arzt einen Patienten diagnostiziert, berücksichtigt er viele Faktoren wie Lebensstil oder Vorerkrankungen und stützt sich möglicherweise auf aktuelle medizinische Fachliteratur. In solchen differenzierten Fällen kann eine allgemeine KI-Chat-Anwendung keine verlässliche Quelle sein.
+Zum Beispiel sind medizinische Anfragen komplex und erfordern viel Kontext. Wenn ein Mediziner einen Patienten diagnostiziert, basiert dies auf einer Vielzahl von Faktoren wie Lebensstil oder Vorerkrankungen und kann sogar auf aktuellen medizinischen Fachzeitschriften beruhen, um die Diagnose zu untermauern. In solchen nuancierten Szenarien kann eine allgemeine KI-Chat-Anwendung keine zuverlässige Quelle sein.
 
-### Szenario: eine medizinische Anwendung
+### Szenario: Eine medizinische Anwendung
 
-Denken Sie an eine Chat-Anwendung, die medizinisches Fachpersonal unterstützt, indem sie schnelle Verweise auf Behandlungsrichtlinien, Wechselwirkungen von Medikamenten oder aktuelle Forschungsergebnisse bietet.
+Betrachten wir eine Chat-Anwendung, die medizinischen Fachkräften hilft, schnell auf Behandlungsrichtlinien, Wechselwirkungen von Medikamenten oder aktuelle Forschungsergebnisse zuzugreifen.
 
-Ein allgemeines Modell mag für einfache medizinische Fragen oder allgemeine Ratschläge ausreichen, hat aber Schwierigkeiten bei:
+Ein allgemeines Modell könnte ausreichen, um grundlegende medizinische Fragen zu beantworten oder allgemeine Ratschläge zu geben, aber es könnte bei Folgendem Schwierigkeiten haben:
 
-- **Sehr spezifischen oder komplexen Fällen**. Zum Beispiel könnte ein Neurologe fragen: „Was sind die aktuellen Best Practices zur Behandlung von medikamentenresistenter Epilepsie bei Kindern?“
-- **Fehlenden aktuellen Erkenntnissen**. Ein allgemeines Modell könnte Schwierigkeiten haben, eine Antwort zu geben, die die neuesten Fortschritte in Neurologie und Pharmakologie berücksichtigt.
+- **Hochspezifische oder komplexe Fälle**. Zum Beispiel könnte ein Neurologe die Anwendung fragen: "Was sind die aktuellen Best Practices für das Management von medikamentenresistenter Epilepsie bei pädiatrischen Patienten?"
+- **Fehlende aktuelle Fortschritte**. Ein allgemeines Modell könnte Schwierigkeiten haben, eine aktuelle Antwort zu geben, die die neuesten Fortschritte in der Neurologie und Pharmakologie berücksichtigt.
 
-In solchen Fällen kann die Feinabstimmung mit einem spezialisierten medizinischen Datensatz die Fähigkeit des Modells, komplexe medizinische Anfragen präzise und zuverlässig zu beantworten, deutlich verbessern. Dafür ist der Zugang zu einem großen und relevanten Datensatz erforderlich, der die domänenspezifischen Herausforderungen und Fragestellungen abbildet.
+In solchen Fällen kann die Feinabstimmung des Modells mit einem spezialisierten medizinischen Datensatz seine Fähigkeit, diese komplexen medizinischen Anfragen genau und zuverlässig zu bearbeiten, erheblich verbessern. Dies erfordert den Zugang zu einem großen und relevanten Datensatz, der die domänenspezifischen Herausforderungen und Fragen repräsentiert, die adressiert werden müssen.
 
-## Überlegungen für eine hochwertige KI-gestützte Chat-Erfahrung
+## Überlegungen für ein qualitativ hochwertiges KI-gestütztes Chat-Erlebnis
 
-Dieser Abschnitt beschreibt Kriterien für „hochwertige“ Chat-Anwendungen, darunter die Erfassung aussagekräftiger Metriken und die Einhaltung eines Rahmens für den verantwortungsvollen Einsatz von KI-Technologie.
+Dieser Abschnitt skizziert die Kriterien für "hochwertige" Chat-Anwendungen, einschließlich der Erfassung von umsetzbaren Metriken und der Einhaltung eines Rahmens, der die verantwortungsvolle Nutzung von KI-Technologie sicherstellt.
 
 ### Wichtige Metriken
 
-Um die hohe Leistungsqualität einer Anwendung zu gewährleisten, ist es wichtig, zentrale Metriken und Aspekte zu verfolgen. Diese Messgrößen sichern nicht nur die Funktionalität, sondern bewerten auch die Qualität des KI-Modells und der Nutzererfahrung. Nachfolgend eine Liste mit grundlegenden, KI- und UX-bezogenen Metriken, die berücksichtigt werden sollten.
+Um die hohe Leistungsqualität einer Anwendung aufrechtzuerhalten, ist es essenziell, wichtige Metriken und Überlegungen im Auge zu behalten. Diese Messungen gewährleisten nicht nur die Funktionalität der Anwendung, sondern bewerten auch die Qualität des KI-Modells und der Benutzererfahrung. Nachfolgend finden Sie eine Liste, die grundlegende, KI- und Benutzererfahrungsmetriken umfasst, die berücksichtigt werden sollten.
 
-| Metrik                        | Definition                                                                                                             | Überlegungen für den Chat-Entwickler                                  |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Verfügbarkeit (Uptime)**    | Misst die Zeit, in der die Anwendung betriebsbereit und für Nutzer zugänglich ist.                                    | Wie minimieren Sie Ausfallzeiten?                                     |
-| **Antwortzeit**               | Die Zeit, die die Anwendung benötigt, um auf eine Nutzeranfrage zu reagieren.                                         | Wie optimieren Sie die Verarbeitung, um die Antwortzeit zu verkürzen?|
-| **Präzision**                 | Verhältnis der korrekt positiven Vorhersagen zur Gesamtzahl positiver Vorhersagen.                                    | Wie validieren Sie die Präzision Ihres Modells?                      |
-| **Recall (Sensitivität)**     | Verhältnis der korrekt positiven Vorhersagen zur tatsächlichen Anzahl positiver Fälle.                                | Wie messen und verbessern Sie den Recall?                            |
-| **F1-Score**                 | Harmonisches Mittel von Präzision und Recall, das den Kompromiss zwischen beiden ausgleicht.                           | Welchen F1-Score streben Sie an? Wie balancieren Sie Präzision und Recall? |
-| **Perplexity**                | Misst, wie gut die vom Modell vorhergesagte Wahrscheinlichkeitsverteilung mit der tatsächlichen Datenverteilung übereinstimmt. | Wie minimieren Sie die Perplexity?                                   |
-| **Nutzerzufriedenheitsmetriken** | Erfasst die Wahrnehmung der Anwendung durch die Nutzer, oft über Umfragen.                                         | Wie häufig sammeln Sie Nutzerfeedback? Wie passen Sie sich daran an? |
-| **Fehlerrate**                | Rate, mit der das Modell Fehler bei Verständnis oder Ausgabe macht.                                                   | Welche Strategien haben Sie zur Reduzierung der Fehlerrate?          |
-| **Retrainingszyklen**         | Häufigkeit, mit der das Modell aktualisiert wird, um neue Daten und Erkenntnisse einzubeziehen.                      | Wie oft trainieren Sie das Modell neu? Was löst einen Retraining-Zyklus aus? |
-| **Anomalieerkennung**         | Werkzeuge und Techniken zur Identifizierung ungewöhnlicher Muster, die nicht dem erwarteten Verhalten entsprechen.                        | Wie wirst du auf Anomalien reagieren?                                        |
+| Metrik                        | Definition                                                                                                             | Überlegungen für den Chat-Entwickler                                      |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Verfügbarkeit**             | Misst die Zeit, in der die Anwendung betriebsbereit und für Benutzer zugänglich ist.                                   | Wie minimieren Sie Ausfallzeiten?                                         |
+| **Antwortzeit**               | Die Zeit, die die Anwendung benötigt, um auf eine Benutzeranfrage zu antworten.                                        | Wie können Sie die Abfrageverarbeitung optimieren, um die Antwortzeit zu verbessern? |
+| **Präzision**                 | Das Verhältnis von echten positiven Vorhersagen zur Gesamtzahl der positiven Vorhersagen.                              | Wie validieren Sie die Präzision Ihres Modells?                           |
+| **Recall (Sensitivität)**     | Das Verhältnis von echten positiven Vorhersagen zur tatsächlichen Anzahl der Positiven.                                | Wie messen und verbessern Sie den Recall?                                |
+| **F1-Score**                  | Der harmonische Mittelwert von Präzision und Recall, der den Kompromiss zwischen beiden ausgleicht.                    | Was ist Ihr Ziel-F1-Score? Wie balancieren Sie Präzision und Recall?      |
+| **Perplexität**               | Misst, wie gut die vom Modell vorhergesagte Wahrscheinlichkeitsverteilung mit der tatsächlichen Verteilung der Daten übereinstimmt. | Wie minimieren Sie die Perplexität?                                       |
+| **Benutzerzufriedenheitsmetriken** | Misst die Wahrnehmung der Anwendung durch den Benutzer. Oft durch Umfragen erfasst.                                  | Wie oft sammeln Sie Benutzerfeedback? Wie passen Sie sich basierend darauf an? |
+| **Fehlerrate**                | Die Rate, mit der das Modell Fehler beim Verstehen oder Ausgeben macht.                                                | Welche Strategien haben Sie, um Fehlerraten zu reduzieren?                |
+| **Retraining-Zyklen**         | Die Häufigkeit, mit der das Modell aktualisiert wird, um neue Daten und Erkenntnisse zu integrieren.                   | Wie oft werden Sie das Modell neu trainieren? Was löst einen Retraining-Zyklus aus? |
+| **Anomalieerkennung**         | Werkzeuge und Techniken zur Identifizierung ungewöhnlicher Muster, die nicht dem erwarteten Verhalten entsprechen.       | Wie werden Sie auf Anomalien reagieren?                                               |
 
 ### Umsetzung verantwortungsvoller KI-Praktiken in Chat-Anwendungen
 
-Der Ansatz von Microsoft zu Responsible AI hat sechs Prinzipien definiert, die die Entwicklung und Nutzung von KI leiten sollten. Nachfolgend sind die Prinzipien, ihre Definition sowie Überlegungen für Chat-Entwickler aufgeführt und warum diese ernst genommen werden sollten.
+Microsofts Ansatz für verantwortungsvolle KI hat sechs Prinzipien identifiziert, die die Entwicklung und Nutzung von KI leiten sollten. Nachfolgend sind die Prinzipien, ihre Definition und Überlegungen für Chat-Entwickler sowie die Gründe, warum sie ernst genommen werden sollten.
 
-| Prinzipien             | Definition von Microsoft                              | Überlegungen für Chat-Entwickler                                        | Warum es wichtig ist                                                                    |
-| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Fairness               | KI-Systeme sollten alle Menschen fair behandeln.      | Sicherstellen, dass die Chat-Anwendung keine Diskriminierung aufgrund von Nutzerdaten vornimmt.  | Um Vertrauen und Inklusivität unter den Nutzern zu schaffen; vermeidet rechtliche Folgen.                |
-| Zuverlässigkeit und Sicherheit | KI-Systeme sollten zuverlässig und sicher arbeiten. | Tests und Sicherheitsmechanismen implementieren, um Fehler und Risiken zu minimieren.         | Gewährleistet Nutzerzufriedenheit und verhindert potenzielle Schäden.                                 |
-| Datenschutz und Sicherheit   | KI-Systeme sollten sicher sein und die Privatsphäre respektieren.      | Starke Verschlüsselung und Datenschutzmaßnahmen umsetzen.              | Zum Schutz sensibler Nutzerdaten und zur Einhaltung von Datenschutzgesetzen.                         |
-| Inklusivität          | KI-Systeme sollten alle Menschen befähigen und einbeziehen. | UI/UX so gestalten, dass sie für unterschiedliche Zielgruppen zugänglich und benutzerfreundlich ist. | Stellt sicher, dass eine breitere Nutzergruppe die Anwendung effektiv nutzen kann.                   |
-| Transparenz           | KI-Systeme sollten nachvollziehbar sein.                  | Klare Dokumentation und Begründungen für KI-Antworten bereitstellen.            | Nutzer vertrauen einem System eher, wenn sie verstehen, wie Entscheidungen getroffen werden. |
-| Verantwortlichkeit         | Menschen sollten für KI-Systeme verantwortlich sein.          | Einen klaren Prozess für Audits und Verbesserungen von KI-Entscheidungen etablieren.     | Ermöglicht kontinuierliche Verbesserungen und Korrekturmaßnahmen bei Fehlern.               |
+| Prinzipien             | Microsofts Definition                                 | Überlegungen für Chat-Entwickler                                       | Warum es wichtig ist                                                                  |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Fairness               | KI-Systeme sollten alle Menschen fair behandeln.      | Sicherstellen, dass die Chat-Anwendung nicht auf Grundlage von Benutzerdaten diskriminiert. | Um Vertrauen und Inklusivität unter den Nutzern aufzubauen; vermeidet rechtliche Konsequenzen. |
+| Zuverlässigkeit und Sicherheit | KI-Systeme sollten zuverlässig und sicher funktionieren. | Tests und Sicherheitsvorkehrungen implementieren, um Fehler und Risiken zu minimieren. | Sorgt für Zufriedenheit der Nutzer und verhindert potenziellen Schaden.              |
+| Datenschutz und Sicherheit | KI-Systeme sollten sicher sein und die Privatsphäre respektieren. | Starke Verschlüsselungs- und Datenschutzmaßnahmen implementieren.      | Zum Schutz sensibler Nutzerdaten und zur Einhaltung von Datenschutzgesetzen.          |
+| Inklusivität           | KI-Systeme sollten alle Menschen einbeziehen und befähigen. | UI/UX so gestalten, dass sie für unterschiedliche Zielgruppen zugänglich und benutzerfreundlich ist. | Stellt sicher, dass eine breite Palette von Menschen die Anwendung effektiv nutzen kann. |
+| Transparenz            | KI-Systeme sollten verständlich sein.                 | Klare Dokumentation und Begründung für KI-Antworten bereitstellen.     | Nutzer vertrauen einem System eher, wenn sie verstehen, wie Entscheidungen getroffen werden. |
+| Verantwortlichkeit     | Menschen sollten für KI-Systeme verantwortlich sein.  | Einen klaren Prozess für die Überprüfung und Verbesserung von KI-Entscheidungen etablieren. | Ermöglicht kontinuierliche Verbesserungen und Korrekturmaßnahmen im Falle von Fehlern. |
 
 ## Aufgabe
 
-Siehe [assignment](../../../07-building-chat-applications/python) – dort wirst du durch eine Reihe von Übungen geführt, von den ersten Chat-Prompts über das Klassifizieren und Zusammenfassen von Texten bis hin zu weiteren Aufgaben. Beachte, dass die Aufgaben in verschiedenen Programmiersprachen verfügbar sind!
+Siehe [Aufgabe](../../../07-building-chat-applications/python). Sie führt Sie durch eine Reihe von Übungen, von der Ausführung Ihrer ersten Chat-Eingaben bis hin zur Klassifizierung und Zusammenfassung von Text und mehr. Beachten Sie, dass die Aufgaben in verschiedenen Programmiersprachen verfügbar sind!
 
-## Großartige Arbeit! Setze die Reise fort
+## Großartige Arbeit! Setzen Sie Ihre Reise fort
 
-Nach Abschluss dieser Lektion schau dir unsere [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um dein Wissen über Generative KI weiter auszubauen!
+Nach Abschluss dieser Lektion schauen Sie sich unsere [Generative AI Learning Collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über generative KI weiter zu vertiefen!
 
-Gehe zu Lektion 8, um zu sehen, wie du mit dem [Erstellen von Suchanwendungen](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) beginnen kannst!
+Gehen Sie zu Lektion 8, um zu erfahren, wie Sie [Suchanwendungen erstellen](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst) können!
+
+---
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

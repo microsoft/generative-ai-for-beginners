@@ -1,109 +1,111 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "68664f7e754a892ae1d8d5e2b7bd2081",
-  "translation_date": "2025-07-09T17:34:55+00:00",
+  "original_hash": "807f0d9fc1747e796433534e1be6a98a",
+  "translation_date": "2025-10-17T22:58:18+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "de"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.de.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Modelle](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.de.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Feinabstimmung Ihres LLM
 
-Die Nutzung großer Sprachmodelle zum Erstellen generativer KI-Anwendungen bringt neue Herausforderungen mit sich. Ein zentrales Thema ist die Sicherstellung der Antwortqualität (Genauigkeit und Relevanz) bei den vom Modell generierten Inhalten für eine bestimmte Nutzeranfrage. In vorherigen Lektionen haben wir Techniken wie Prompt Engineering und Retrieval-Augmented Generation besprochen, die versuchen, das Problem durch _Anpassung der Eingabeaufforderung_ an das bestehende Modell zu lösen.
+Die Nutzung großer Sprachmodelle zur Entwicklung generativer KI-Anwendungen bringt neue Herausforderungen mit sich. Ein zentrales Problem ist die Sicherstellung der Qualität der Antworten (Genauigkeit und Relevanz) in den vom Modell generierten Inhalten für eine bestimmte Benutzeranfrage. In den vorherigen Lektionen haben wir Techniken wie Prompt Engineering und Retrieval-augmented Generation besprochen, die versuchen, das Problem durch _Modifikation der Eingabeaufforderung_ des bestehenden Modells zu lösen.
 
-In der heutigen Lektion behandeln wir eine dritte Methode, die **Feinabstimmung**, bei der die Herausforderung durch _das erneute Training des Modells selbst_ mit zusätzlichen Daten angegangen wird. Tauchen wir in die Details ein.
+In der heutigen Lektion besprechen wir eine dritte Technik, **Feinabstimmung**, die versucht, die Herausforderung durch _Neutrainieren des Modells selbst_ mit zusätzlichen Daten zu bewältigen. Tauchen wir in die Details ein.
 
 ## Lernziele
 
-Diese Lektion führt in das Konzept der Feinabstimmung vortrainierter Sprachmodelle ein, beleuchtet die Vorteile und Herausforderungen dieses Ansatzes und gibt Hinweise, wann und wie Feinabstimmung eingesetzt werden kann, um die Leistung Ihrer generativen KI-Modelle zu verbessern.
+Diese Lektion führt in das Konzept der Feinabstimmung vortrainierter Sprachmodelle ein, untersucht die Vorteile und Herausforderungen dieses Ansatzes und gibt Hinweise, wann und wie Feinabstimmung eingesetzt werden kann, um die Leistung Ihrer generativen KI-Modelle zu verbessern.
 
 Am Ende dieser Lektion sollten Sie folgende Fragen beantworten können:
 
-- Was ist Feinabstimmung bei Sprachmodellen?
-- Wann und warum ist Feinabstimmung sinnvoll?
+- Was ist Feinabstimmung für Sprachmodelle?
+- Wann und warum ist Feinabstimmung nützlich?
 - Wie kann ich ein vortrainiertes Modell feinabstimmen?
 - Welche Einschränkungen hat die Feinabstimmung?
 
-Bereit? Dann legen wir los.
+Bereit? Los geht's.
 
-## Illustrierter Leitfaden
+## Illustrierte Anleitung
 
-Möchten Sie einen Überblick darüber bekommen, was wir behandeln, bevor wir tiefer einsteigen? Schauen Sie sich diesen illustrierten Leitfaden an, der die Lernreise dieser Lektion beschreibt – vom Verständnis der Kernkonzepte und Motivation für Feinabstimmung bis hin zum Prozess und den Best Practices für die Durchführung der Feinabstimmung. Das ist ein spannendes Thema, also vergessen Sie nicht, auch die [Ressourcen](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) Seite für weitere Links zu Ihrer selbstgesteuerten Lernreise zu besuchen!
+Möchten Sie sich einen Überblick über die Inhalte verschaffen, bevor wir ins Detail gehen? Sehen Sie sich diese illustrierte Anleitung an, die die Lernreise für diese Lektion beschreibt – von den Kernkonzepten und der Motivation für die Feinabstimmung bis hin zum Verständnis des Prozesses und der besten Praktiken für die Durchführung der Feinabstimmung. Dies ist ein faszinierendes Thema, das es zu erkunden gilt. Vergessen Sie nicht, die Seite [Ressourcen](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) für zusätzliche Links zu besuchen, die Ihre selbstgesteuerte Lernreise unterstützen!
 
-![Illustrierter Leitfaden zur Feinabstimmung von Sprachmodellen](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.de.png)
+![Illustrierte Anleitung zur Feinabstimmung von Sprachmodellen](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.de.png)
 
-## Was ist Feinabstimmung bei Sprachmodellen?
+## Was ist Feinabstimmung für Sprachmodelle?
 
-Große Sprachmodelle sind per Definition _vortrainiert_ auf großen Mengen von Texten aus verschiedenen Quellen, darunter das Internet. Wie wir in vorherigen Lektionen gelernt haben, benötigen wir Techniken wie _Prompt Engineering_ und _Retrieval-Augmented Generation_, um die Qualität der Antworten des Modells auf Nutzeranfragen („Prompts“) zu verbessern.
+Per Definition sind große Sprachmodelle _vortrainiert_ auf großen Mengen von Texten, die aus verschiedenen Quellen, einschließlich des Internets, stammen. Wie wir in den vorherigen Lektionen gelernt haben, benötigen wir Techniken wie _Prompt Engineering_ und _Retrieval-augmented Generation_, um die Qualität der Antworten des Modells auf die Fragen des Benutzers („Prompts“) zu verbessern.
 
-Eine beliebte Technik im Prompt Engineering besteht darin, dem Modell mehr Hinweise zu geben, was in der Antwort erwartet wird, entweder durch _Anweisungen_ (explizite Anleitung) oder _einige Beispiele_ (implizite Anleitung). Dies wird als _Few-Shot-Lernen_ bezeichnet, hat aber zwei Einschränkungen:
+Eine beliebte Technik des Prompt Engineering besteht darin, dem Modell mehr Anleitung zu geben, was in der Antwort erwartet wird, entweder durch _Anweisungen_ (explizite Anleitung) oder _einige Beispiele_ (implizite Anleitung). Dies wird als _Few-Shot-Lernen_ bezeichnet, hat jedoch zwei Einschränkungen:
 
-- Die Token-Limits des Modells begrenzen die Anzahl der Beispiele, die Sie geben können, und schränken die Wirksamkeit ein.
-- Die Token-Kosten können es teuer machen, Beispiele zu jeder Eingabeaufforderung hinzuzufügen, und schränken die Flexibilität ein.
+- Die Token-Limits des Modells können die Anzahl der Beispiele, die Sie geben können, einschränken und die Effektivität begrenzen.
+- Die Token-Kosten des Modells können es teuer machen, Beispiele zu jeder Eingabeaufforderung hinzuzufügen, und die Flexibilität einschränken.
 
-Feinabstimmung ist eine gängige Praxis in maschinellen Lernsystemen, bei der ein vortrainiertes Modell mit neuen Daten erneut trainiert wird, um seine Leistung für eine bestimmte Aufgabe zu verbessern. Im Kontext von Sprachmodellen können wir das vortrainierte Modell _mit einer kuratierten Menge von Beispielen für eine bestimmte Aufgabe oder Anwendungsdomäne_ feinabstimmen, um ein **kundenspezifisches Modell** zu erstellen, das für diese spezielle Aufgabe oder Domäne genauer und relevanter ist. Ein Nebeneffekt der Feinabstimmung ist, dass sie auch die Anzahl der für Few-Shot-Lernen benötigten Beispiele reduzieren kann – was den Token-Verbrauch und die damit verbundenen Kosten senkt.
+Feinabstimmung ist eine gängige Praxis in maschinellen Lernsystemen, bei der wir ein vortrainiertes Modell nehmen und es mit neuen Daten neu trainieren, um seine Leistung für eine bestimmte Aufgabe zu verbessern. Im Kontext von Sprachmodellen können wir das vortrainierte Modell _mit einer kuratierten Sammlung von Beispielen für eine bestimmte Aufgabe oder einen bestimmten Anwendungsbereich_ feinabstimmen, um ein **benutzerdefiniertes Modell** zu erstellen, das für diese spezifische Aufgabe oder diesen Bereich möglicherweise genauer und relevanter ist. Ein Nebeneffekt der Feinabstimmung ist, dass sie auch die Anzahl der für das Few-Shot-Lernen benötigten Beispiele reduzieren kann – was den Tokenverbrauch und die damit verbundenen Kosten senkt.
 
 ## Wann und warum sollten wir Modelle feinabstimmen?
 
-In _diesem_ Kontext sprechen wir bei Feinabstimmung von **überwachter** Feinabstimmung, bei der das erneute Training durch **Hinzufügen neuer Daten** erfolgt, die nicht Teil des ursprünglichen Trainingsdatensatzes waren. Dies unterscheidet sich von einem unüberwachten Feinabstimmungsansatz, bei dem das Modell mit den ursprünglichen Daten, aber mit anderen Hyperparametern erneut trainiert wird.
+In _diesem_ Kontext sprechen wir von **überwachter** Feinabstimmung, bei der das Neutrainieren durch **Hinzufügen neuer Daten** erfolgt, die nicht Teil des ursprünglichen Trainingsdatensatzes waren. Dies unterscheidet sich von einem unüberwachten Feinabstimmungsansatz, bei dem das Modell mit den ursprünglichen Daten, aber mit anderen Hyperparametern neu trainiert wird.
 
-Wichtig ist, dass Feinabstimmung eine fortgeschrittene Technik ist, die ein gewisses Maß an Fachwissen erfordert, um die gewünschten Ergebnisse zu erzielen. Wird sie falsch durchgeführt, kann sie die erwarteten Verbesserungen ausbleiben lassen oder sogar die Leistung des Modells für Ihre Ziel-Domäne verschlechtern.
+Das Wichtigste, das Sie sich merken sollten, ist, dass Feinabstimmung eine fortgeschrittene Technik ist, die ein gewisses Maß an Fachwissen erfordert, um die gewünschten Ergebnisse zu erzielen. Wenn sie falsch durchgeführt wird, kann sie die erwarteten Verbesserungen nicht liefern und sogar die Leistung des Modells für Ihren Zielbereich verschlechtern.
 
-Bevor Sie also lernen, „wie“ man Sprachmodelle feinabstimmt, sollten Sie wissen, „warum“ Sie diesen Weg gehen sollten und „wann“ Sie mit dem Feinabstimmungsprozess beginnen sollten. Stellen Sie sich dazu folgende Fragen:
+Bevor Sie also lernen, „wie“ Sie Sprachmodelle feinabstimmen, müssen Sie wissen, „warum“ Sie diesen Weg einschlagen sollten und „wann“ Sie mit dem Prozess der Feinabstimmung beginnen sollten. Stellen Sie sich zunächst folgende Fragen:
 
 - **Anwendungsfall**: Was ist Ihr _Anwendungsfall_ für die Feinabstimmung? Welchen Aspekt des aktuellen vortrainierten Modells möchten Sie verbessern?
-- **Alternativen**: Haben Sie _andere Techniken_ ausprobiert, um die gewünschten Ergebnisse zu erzielen? Nutzen Sie diese als Vergleichsbasis.
-  - Prompt Engineering: Probieren Sie Techniken wie Few-Shot-Prompting mit Beispielen relevanter Antworten. Bewerten Sie die Qualität der Antworten.
-  - Retrieval Augmented Generation: Versuchen Sie, Prompts mit Suchergebnissen aus Ihren Daten zu ergänzen. Bewerten Sie die Qualität der Antworten.
-- **Kosten**: Haben Sie die Kosten für die Feinabstimmung ermittelt?
-  - Feinabstimmfähigkeit – ist das vortrainierte Modell für Feinabstimmung verfügbar?
-  - Aufwand – für die Vorbereitung der Trainingsdaten, Bewertung und Verfeinerung des Modells.
-  - Rechenleistung – für das Ausführen der Feinabstimmungsjobs und das Bereitstellen des feinabgestimmten Modells.
-  - Daten – Zugang zu ausreichend hochwertigen Beispielen für eine wirkungsvolle Feinabstimmung.
-- **Nutzen**: Haben Sie den Nutzen der Feinabstimmung bestätigt?
-  - Qualität – hat das feinabgestimmte Modell die Basislinie übertroffen?
-  - Kosten – reduziert es den Token-Verbrauch durch vereinfachte Prompts?
-  - Erweiterbarkeit – können Sie das Basismodell für neue Domänen wiederverwenden?
+- **Alternativen**: Haben Sie _andere Techniken_ ausprobiert, um die gewünschten Ergebnisse zu erzielen? Verwenden Sie diese, um eine Vergleichsgrundlage zu schaffen.
+  - Prompt Engineering: Probieren Sie Techniken wie Few-Shot-Prompting mit Beispielen relevanter Eingabeaufforderungsantworten aus. Bewerten Sie die Qualität der Antworten.
+  - Retrieval-augmented Generation: Versuchen Sie, Eingabeaufforderungen mit Abfrageergebnissen zu ergänzen, die durch die Suche in Ihren Daten abgerufen wurden. Bewerten Sie die Qualität der Antworten.
+- **Kosten**: Haben Sie die Kosten für die Feinabstimmung identifiziert?
+  - Abstimmungsfähigkeit – Ist das vortrainierte Modell für die Feinabstimmung verfügbar?
+  - Aufwand – für die Vorbereitung von Trainingsdaten, die Bewertung und Verfeinerung des Modells.
+  - Rechenleistung – für die Durchführung von Feinabstimmungsjobs und die Bereitstellung des feinabgestimmten Modells.
+  - Daten – Zugang zu ausreichend qualitativ hochwertigen Beispielen für den Einfluss der Feinabstimmung.
+- **Vorteile**: Haben Sie die Vorteile der Feinabstimmung bestätigt?
+  - Qualität – hat das feinabgestimmte Modell die Vergleichsgrundlage übertroffen?
+  - Kosten – reduziert es den Tokenverbrauch durch vereinfachte Eingabeaufforderungen?
+  - Erweiterbarkeit – können Sie das Basismodell für neue Bereiche wiederverwenden?
 
-Wenn Sie diese Fragen beantworten, können Sie entscheiden, ob Feinabstimmung der richtige Ansatz für Ihren Anwendungsfall ist. Idealerweise ist der Ansatz nur dann sinnvoll, wenn der Nutzen die Kosten überwiegt. Sobald Sie sich entschieden haben, ist es Zeit, darüber nachzudenken, _wie_ Sie das vortrainierte Modell feinabstimmen können.
+Indem Sie diese Fragen beantworten, sollten Sie entscheiden können, ob die Feinabstimmung der richtige Ansatz für Ihren Anwendungsfall ist. Idealerweise ist der Ansatz nur dann gültig, wenn die Vorteile die Kosten überwiegen. Sobald Sie sich entschieden haben, weiterzumachen, ist es an der Zeit, darüber nachzudenken, _wie_ Sie das vortrainierte Modell feinabstimmen können.
 
-Möchten Sie mehr Einblicke in den Entscheidungsprozess? Sehen Sie sich [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs) an.
+Möchten Sie weitere Einblicke in den Entscheidungsprozess erhalten? Sehen Sie sich [Feinabstimmen oder nicht feinabstimmen](https://www.youtube.com/watch?v=0Jo-z-MFxJs) an.
 
 ## Wie können wir ein vortrainiertes Modell feinabstimmen?
 
 Um ein vortrainiertes Modell feinabzustimmen, benötigen Sie:
 
 - ein vortrainiertes Modell zur Feinabstimmung
-- einen Datensatz für die Feinabstimmung
+- einen Datensatz zur Feinabstimmung
 - eine Trainingsumgebung, um den Feinabstimmungsjob auszuführen
 - eine Hosting-Umgebung, um das feinabgestimmte Modell bereitzustellen
 
 ## Feinabstimmung in der Praxis
 
-Die folgenden Ressourcen bieten Schritt-für-Schritt-Anleitungen, die Sie durch ein praktisches Beispiel mit einem ausgewählten Modell und einem kuratierten Datensatz führen. Um diese Tutorials durchzuarbeiten, benötigen Sie ein Konto beim jeweiligen Anbieter sowie Zugriff auf das relevante Modell und die Datensätze.
+Die folgenden Ressourcen bieten Schritt-für-Schritt-Tutorials, die Sie durch ein echtes Beispiel mit einem ausgewählten Modell und einem kuratierten Datensatz führen. Um diese Tutorials durchzuarbeiten, benötigen Sie ein Konto beim jeweiligen Anbieter sowie Zugriff auf das entsprechende Modell und die Datensätze.
 
-| Anbieter    | Tutorial                                                                                                                                                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI      | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Lernen Sie, wie Sie ein `gpt-35-turbo` für eine bestimmte Domäne („Rezeptassistent“) feinabstimmen, indem Sie Trainingsdaten vorbereiten, den Feinabstimmungsjob ausführen und das feinabgestimmte Modell für Inferenz verwenden.                                                                                                                                                                                                 |
-| Azure OpenAI| [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Lernen Sie, wie Sie ein `gpt-35-turbo-0613` Modell **auf Azure** feinabstimmen, indem Sie Trainingsdaten erstellen und hochladen, den Feinabstimmungsjob ausführen sowie das neue Modell bereitstellen und verwenden.                                                                                                                                                                                                                 |
-| Hugging Face| [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Dieser Blogbeitrag zeigt, wie man ein _offenes LLM_ (z. B. `CodeLlama 7B`) mit der [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) Bibliothek und [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) sowie offenen [Datensätzen](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) auf Hugging Face feinabstimmt. |
-|             |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain| [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (oder AutoTrain Advanced) ist eine von Hugging Face entwickelte Python-Bibliothek, die Feinabstimmung für viele verschiedene Aufgaben, einschließlich LLM-Feinabstimmung, ermöglicht. AutoTrain ist eine No-Code-Lösung und die Feinabstimmung kann in Ihrer eigenen Cloud, auf Hugging Face Spaces oder lokal durchgeführt werden. Es unterstützt eine webbasierte GUI, CLI und Training über YAML-Konfigurationsdateien.                          |
-|             |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Anbieter      | Tutorial                                                                                                                                                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI        | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Lernen Sie, wie Sie ein `gpt-35-turbo` für einen bestimmten Bereich („Rezeptassistent“) feinabstimmen, indem Sie Trainingsdaten vorbereiten, den Feinabstimmungsjob ausführen und das feinabgestimmte Modell für Inferenz verwenden.                                                                                                                                                                                                 |
+| Azure OpenAI  | [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Lernen Sie, wie Sie ein `gpt-35-turbo-0613` Modell **auf Azure** feinabstimmen, indem Sie Schritte unternehmen, um Trainingsdaten zu erstellen und hochzuladen, den Feinabstimmungsjob auszuführen. Stellen Sie das neue Modell bereit und verwenden Sie es.                                                                                                                                                                                                                 |
+| Hugging Face  | [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Dieser Blogbeitrag führt Sie durch die Feinabstimmung eines _offenen LLM_ (z. B. `CodeLlama 7B`) mit der [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) Bibliothek & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) mit offenen [Datensätzen](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) auf Hugging Face. |
+|               |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🤗 AutoTrain  | [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (oder AutoTrain Advanced) ist eine von Hugging Face entwickelte Python-Bibliothek, die Feinabstimmung für viele verschiedene Aufgaben einschließlich LLM-Feinabstimmung ermöglicht. AutoTrain ist eine No-Code-Lösung, und die Feinabstimmung kann in Ihrer eigenen Cloud, auf Hugging Face Spaces oder lokal durchgeführt werden. Es unterstützt sowohl eine webbasierte GUI, CLI als auch Training über YAML-Konfigurationsdateien.                     |
+|               |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Aufgabe
 
-Wählen Sie eines der oben genannten Tutorials aus und arbeiten Sie es durch. _Wir könnten eine Version dieser Tutorials in Jupyter Notebooks in diesem Repository zur Referenz bereitstellen. Bitte nutzen Sie die Originalquellen direkt, um die aktuellsten Versionen zu erhalten_.
+Wählen Sie eines der oben genannten Tutorials aus und arbeiten Sie es durch. _Wir können eine Version dieser Tutorials in Jupyter Notebooks in diesem Repository nur zu Referenzzwecken replizieren. Bitte verwenden Sie die Originalquellen direkt, um die neuesten Versionen zu erhalten_.
 
 ## Gute Arbeit! Setzen Sie Ihr Lernen fort.
 
-Nach Abschluss dieser Lektion schauen Sie sich unsere [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über generative KI weiter zu vertiefen!
+Nachdem Sie diese Lektion abgeschlossen haben, sehen Sie sich unsere [Generative AI Learning Collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über generative KI weiter zu vertiefen!
 
-Herzlichen Glückwunsch!! Sie haben die letzte Lektion der v2-Serie dieses Kurses abgeschlossen! Hören Sie nicht auf zu lernen und zu bauen. \*\*Besuchen Sie die [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) Seite für eine Liste zusätzlicher Empfehlungen speziell zu diesem Thema.
+Herzlichen Glückwunsch!! Sie haben die letzte Lektion der v2-Serie dieses Kurses abgeschlossen! Hören Sie nicht auf zu lernen und zu bauen. \*\*Sehen Sie sich die Seite [RESSOURCEN](RESOURCES.md?WT.mc_id=academic-105485-koreyst) für eine Liste zusätzlicher Vorschläge zu diesem Thema an.
 
-Unsere v1-Lektionsreihe wurde ebenfalls mit weiteren Aufgaben und Konzepten aktualisiert. Nehmen Sie sich also eine Minute Zeit, um Ihr Wissen aufzufrischen – und bitte [teilen Sie Ihre Fragen und Ihr Feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), um uns zu helfen, diese Lektionen für die Community zu verbessern.
+Unsere v1-Serie von Lektionen wurde ebenfalls mit weiteren Aufgaben und Konzepten aktualisiert. Nehmen Sie sich also einen Moment Zeit, um Ihr Wissen aufzufrischen – und bitte [teilen Sie uns Ihre Fragen und Ihr Feedback mit](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), um uns zu helfen, diese Lektionen für die Community zu verbessern.
+
+---
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.

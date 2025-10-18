@@ -1,147 +1,147 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f53ba0fa49164f9323043f1c6b11f2b1",
-  "translation_date": "2025-07-09T07:40:20+00:00",
+  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
+  "translation_date": "2025-10-17T22:42:53+00:00",
   "source_file": "01-introduction-to-genai/README.md",
   "language_code": "fr"
 }
 -->
-# Introduction à l’IA générative et aux grands modèles de langage
+# Introduction à l'IA générative et aux modèles de langage étendus
 
-[![Introduction à l’IA générative et aux grands modèles de langage](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.fr.png)](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction à l'IA générative et aux modèles de langage étendus](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.fr.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
-_(Cliquez sur l’image ci-dessus pour voir la vidéo de cette leçon)_
+_(Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon)_
 
-L’IA générative est une intelligence artificielle capable de créer du texte, des images et d’autres types de contenus. Ce qui en fait une technologie fantastique, c’est qu’elle démocratise l’IA : n’importe qui peut l’utiliser avec simplement une invite textuelle, une phrase écrite en langage naturel. Il n’est pas nécessaire d’apprendre un langage comme Java ou SQL pour accomplir quelque chose d’utile, il suffit d’utiliser votre langue, d’exprimer ce que vous voulez, et une suggestion vous est proposée par un modèle d’IA. Les applications et l’impact sont énormes : vous pouvez rédiger ou comprendre des rapports, écrire des applications et bien plus encore, le tout en quelques secondes.
+L'IA générative est une intelligence artificielle capable de générer du texte, des images et d'autres types de contenu. Ce qui rend cette technologie fantastique, c'est qu'elle démocratise l'IA : tout le monde peut l'utiliser avec aussi peu qu'une simple invite textuelle, une phrase écrite en langage naturel. Il n'est pas nécessaire d'apprendre un langage comme Java ou SQL pour accomplir quelque chose de significatif, il suffit d'utiliser votre propre langage, de formuler ce que vous voulez, et un modèle d'IA vous propose une suggestion. Les applications et l'impact de cette technologie sont énormes : rédiger ou comprendre des rapports, écrire des applications et bien plus encore, le tout en quelques secondes.
 
-Dans ce programme, nous allons explorer comment notre startup utilise l’IA générative pour ouvrir de nouveaux scénarios dans le monde de l’éducation, et comment nous abordons les défis inévitables liés aux implications sociales de son application ainsi qu’aux limites technologiques.
+Dans ce programme, nous explorerons comment notre startup utilise l'IA générative pour débloquer de nouveaux scénarios dans le domaine de l'éducation et comment nous abordons les défis inévitables liés aux implications sociales de son application et aux limites technologiques.
 
 ## Introduction
 
 Cette leçon couvrira :
 
-- Introduction au scénario business : notre idée de startup et notre mission.
-- L’IA générative et comment nous en sommes arrivés à la technologie actuelle.
-- Le fonctionnement interne d’un grand modèle de langage.
-- Les principales capacités et cas d’usage pratiques des grands modèles de langage.
+- Introduction au scénario commercial : notre idée de startup et notre mission.
+- L'IA générative et comment nous avons atteint le paysage technologique actuel.
+- Fonctionnement interne d'un modèle de langage étendu.
+- Principales capacités et cas d'utilisation pratiques des modèles de langage étendus.
 
-## Objectifs d’apprentissage
+## Objectifs d'apprentissage
 
-À l’issue de cette leçon, vous comprendrez :
+Après avoir terminé cette leçon, vous comprendrez :
 
-- Ce qu’est l’IA générative et comment fonctionnent les grands modèles de langage.
-- Comment vous pouvez exploiter les grands modèles de langage pour différents cas d’usage, avec un focus sur les scénarios éducatifs.
+- Ce qu'est l'IA générative et comment fonctionnent les modèles de langage étendus.
+- Comment vous pouvez utiliser les modèles de langage étendus pour différents cas d'utilisation, en mettant l'accent sur les scénarios éducatifs.
 
 ## Scénario : notre startup éducative
 
-L’intelligence artificielle générative représente le summum de la technologie IA, repoussant les limites de ce qui était autrefois considéré comme impossible. Les modèles d’IA générative ont plusieurs capacités et applications, mais dans ce programme, nous allons explorer comment elle révolutionne l’éducation à travers une startup fictive. Nous appellerons cette startup _notre startup_. Notre startup évolue dans le domaine de l’éducation avec la mission ambitieuse suivante :
+L'intelligence artificielle générative (IA) représente le sommet de la technologie IA, repoussant les limites de ce qui était autrefois considéré comme impossible. Les modèles d'IA générative ont plusieurs capacités et applications, mais dans ce programme, nous explorerons comment elle révolutionne l'éducation à travers une startup fictive. Nous nous référerons à cette startup comme _notre startup_. Notre startup travaille dans le domaine de l'éducation avec une mission ambitieuse :
 
-> _améliorer l’accessibilité à l’apprentissage à l’échelle mondiale, garantir un accès équitable à l’éducation et offrir des expériences d’apprentissage personnalisées à chaque apprenant, selon ses besoins_.
+> _améliorer l'accessibilité à l'apprentissage à l'échelle mondiale, garantir un accès équitable à l'éducation et offrir des expériences d'apprentissage personnalisées à chaque apprenant, selon ses besoins_.
 
-Notre équipe est consciente que nous ne pourrons pas atteindre cet objectif sans exploiter l’un des outils les plus puissants de notre époque – les grands modèles de langage (LLMs).
+L'équipe de notre startup est consciente qu'elle ne pourra pas atteindre cet objectif sans exploiter l'un des outils les plus puissants de notre époque – les modèles de langage étendus (LLMs).
 
-L’IA générative devrait révolutionner la manière dont nous apprenons et enseignons aujourd’hui, avec des étudiants disposant de professeurs virtuels disponibles 24h/24 fournissant une grande quantité d’informations et d’exemples, et des enseignants pouvant utiliser des outils innovants pour évaluer leurs élèves et leur donner des retours.
+L'IA générative devrait révolutionner la façon dont nous apprenons et enseignons aujourd'hui, avec des étudiants disposant de professeurs virtuels 24 heures sur 24 qui fournissent une quantité énorme d'informations et d'exemples, et des enseignants capables d'utiliser des outils innovants pour évaluer leurs élèves et leur donner des retours.
 
 ![Cinq jeunes étudiants regardant un écran - image par DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.fr.png)
 
 Pour commencer, définissons quelques concepts et terminologies de base que nous utiliserons tout au long du programme.
 
-## Comment sommes-nous arrivés à l’IA générative ?
+## Comment avons-nous obtenu l'IA générative ?
 
-Malgré l’énorme _buzz_ créé récemment par l’annonce des modèles d’IA générative, cette technologie se construit depuis des décennies, avec les premiers travaux de recherche remontant aux années 60. Nous en sommes aujourd’hui à un stade où l’IA possède des capacités cognitives humaines, comme la conversation, illustrée par exemple par [OpenAI ChatGPT](https://openai.com/chatgpt) ou [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), qui utilise également un modèle GPT pour les conversations de recherche web Bing.
+Malgré l'extraordinaire _engouement_ créé récemment par l'annonce des modèles d'IA générative, cette technologie est en développement depuis des décennies, les premiers efforts de recherche remontant aux années 60. Nous sommes maintenant à un point où l'IA possède des capacités cognitives humaines, comme la conversation, illustrée par exemple par [OpenAI ChatGPT](https://openai.com/chatgpt) ou [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), qui utilise également un modèle GPT pour les conversations de recherche sur le web.
 
-Pour revenir un peu en arrière, les tout premiers prototypes d’IA consistaient en des chatbots à base de règles, s’appuyant sur une base de connaissances extraite d’un groupe d’experts et représentée dans un ordinateur. Les réponses dans cette base étaient déclenchées par des mots-clés présents dans le texte d’entrée.  
-Cependant, il est vite apparu que cette approche, basée sur des chatbots à règles, ne pouvait pas être étendue à grande échelle.
+En revenant un peu en arrière, les tout premiers prototypes d'IA consistaient en des chatbots écrits, reposant sur une base de connaissances extraite d'un groupe d'experts et représentée dans un ordinateur. Les réponses dans la base de connaissances étaient déclenchées par des mots-clés apparaissant dans le texte d'entrée. Cependant, il est vite devenu évident qu'une telle approche, utilisant des chatbots écrits, ne se généralisait pas bien.
 
-### Une approche statistique de l’IA : le Machine Learning
+### Une approche statistique de l'IA : l'apprentissage automatique
 
-Un tournant est survenu dans les années 90, avec l’application d’une approche statistique à l’analyse de texte. Cela a conduit au développement de nouveaux algorithmes – appelés apprentissage automatique (machine learning) – capables d’apprendre des motifs à partir des données sans être explicitement programmés. Cette approche permet aux machines de simuler la compréhension du langage humain : un modèle statistique est entraîné sur des paires texte-étiquette, ce qui lui permet de classer un texte inconnu avec une étiquette prédéfinie représentant l’intention du message.
+Un tournant est arrivé dans les années 90, avec l'application d'une approche statistique à l'analyse de texte. Cela a conduit au développement de nouveaux algorithmes – connus sous le nom d'apprentissage automatique – capables d'apprendre des modèles à partir de données sans être explicitement programmés. Cette approche permet aux machines de simuler la compréhension du langage humain : un modèle statistique est entraîné sur des paires texte-étiquette, permettant au modèle de classer un texte d'entrée inconnu avec une étiquette prédéfinie représentant l'intention du message.
 
-### Réseaux de neurones et assistants virtuels modernes
+### Réseaux neuronaux et assistants virtuels modernes
 
-Ces dernières années, l’évolution technologique du matériel, capable de gérer des volumes de données plus importants et des calculs plus complexes, a encouragé la recherche en IA, menant au développement d’algorithmes avancés d’apprentissage automatique appelés réseaux de neurones ou apprentissage profond (deep learning).
+Ces dernières années, l'évolution technologique du matériel, capable de traiter de plus grandes quantités de données et des calculs plus complexes, a encouragé la recherche en IA, conduisant au développement d'algorithmes avancés d'apprentissage automatique connus sous le nom de réseaux neuronaux ou d'algorithmes d'apprentissage profond.
 
-Les réseaux de neurones (et en particulier les réseaux de neurones récurrents – RNN) ont considérablement amélioré le traitement du langage naturel, permettant de représenter le sens d’un texte de manière plus pertinente, en tenant compte du contexte d’un mot dans une phrase.
+Les réseaux neuronaux (et en particulier les réseaux neuronaux récurrents – RNNs) ont considérablement amélioré le traitement du langage naturel, permettant de représenter le sens du texte de manière plus significative, en valorisant le contexte d'un mot dans une phrase.
 
-C’est cette technologie qui a alimenté les assistants virtuels nés dans la première décennie du nouveau siècle, très compétents pour interpréter le langage humain, identifier un besoin et effectuer une action pour y répondre – comme répondre avec un script prédéfini ou utiliser un service tiers.
+C'est cette technologie qui a alimenté les assistants virtuels nés dans la première décennie du nouveau siècle, très compétents pour interpréter le langage humain, identifier un besoin et effectuer une action pour le satisfaire – comme répondre avec un script prédéfini ou consommer un service tiers.
 
-### Aujourd’hui, l’IA générative
+### Aujourd'hui, l'IA générative
 
-C’est ainsi que nous en sommes arrivés à l’IA générative actuelle, qui peut être vue comme un sous-ensemble de l’apprentissage profond.
+C'est ainsi que nous sommes arrivés à l'IA générative aujourd'hui, qui peut être considérée comme un sous-ensemble de l'apprentissage profond.
 
 ![IA, ML, DL et IA générative](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.fr.png)
 
-Après des décennies de recherche en IA, une nouvelle architecture de modèle – appelée _Transformer_ – a dépassé les limites des RNN, étant capable de traiter des séquences de texte beaucoup plus longues en entrée. Les Transformers reposent sur le mécanisme d’attention, qui permet au modèle d’attribuer des poids différents aux entrées qu’il reçoit, « prêtant plus d’attention » là où se concentre l’information la plus pertinente, indépendamment de leur ordre dans la séquence de texte.
+Après des décennies de recherche dans le domaine de l'IA, une nouvelle architecture de modèle – appelée _Transformer_ – a surmonté les limites des RNNs, étant capable de recevoir des séquences de texte beaucoup plus longues en entrée. Les Transformers sont basés sur le mécanisme d'attention, permettant au modèle de donner des poids différents aux entrées qu'il reçoit, en « prêtant plus d'attention » là où se concentre l'information la plus pertinente, indépendamment de leur ordre dans la séquence de texte.
 
-La plupart des modèles récents d’IA générative – également appelés grands modèles de langage (LLMs), car ils travaillent avec des entrées et sorties textuelles – sont basés sur cette architecture. Ce qui est intéressant avec ces modèles – entraînés sur une énorme quantité de données non étiquetées provenant de sources diverses comme des livres, articles et sites web – c’est qu’ils peuvent être adaptés à une grande variété de tâches et générer un texte grammaticalement correct avec une certaine créativité. Ainsi, non seulement ils ont considérablement amélioré la capacité d’une machine à « comprendre » un texte d’entrée, mais ils ont aussi permis de générer une réponse originale en langage humain.
+La plupart des modèles récents d'IA générative – également connus sous le nom de modèles de langage étendus (LLMs), car ils fonctionnent avec des entrées et sorties textuelles – sont en effet basés sur cette architecture. Ce qui est intéressant à propos de ces modèles – entraînés sur une énorme quantité de données non étiquetées provenant de diverses sources comme des livres, des articles et des sites web – c'est qu'ils peuvent être adaptés à une grande variété de tâches et générer un texte grammaticalement correct avec une apparence de créativité. Ainsi, non seulement ils ont incroyablement amélioré la capacité d'une machine à « comprendre » un texte d'entrée, mais ils ont également permis sa capacité à générer une réponse originale en langage humain.
 
-## Comment fonctionnent les grands modèles de langage ?
+## Comment fonctionnent les modèles de langage étendus ?
 
-Dans le chapitre suivant, nous explorerons différents types de modèles d’IA générative, mais pour l’instant, voyons comment fonctionnent les grands modèles de langage, en nous concentrant sur les modèles OpenAI GPT (Generative Pre-trained Transformer).
+Dans le prochain chapitre, nous allons explorer différents types de modèles d'IA générative, mais pour l'instant, examinons comment fonctionnent les modèles de langage étendus, en nous concentrant sur les modèles OpenAI GPT (Generative Pre-trained Transformer).
 
-- **Tokenizer, du texte aux nombres** : Les grands modèles de langage reçoivent un texte en entrée et génèrent un texte en sortie. Cependant, étant des modèles statistiques, ils fonctionnent bien mieux avec des nombres qu’avec des séquences de texte. C’est pourquoi chaque entrée est traitée par un tokenizer avant d’être utilisée par le modèle principal. Un token est un fragment de texte – composé d’un nombre variable de caractères, donc la tâche principale du tokenizer est de découper l’entrée en un tableau de tokens. Ensuite, chaque token est associé à un index de token, qui est l’encodage entier du fragment de texte original.
+- **Tokenisation, texte en chiffres** : Les modèles de langage étendus reçoivent un texte en entrée et génèrent un texte en sortie. Cependant, étant des modèles statistiques, ils fonctionnent beaucoup mieux avec des chiffres qu'avec des séquences de texte. C'est pourquoi chaque entrée au modèle est traitée par un tokenizer avant d'être utilisée par le modèle principal. Un token est un fragment de texte – composé d'un nombre variable de caractères, donc la tâche principale du tokenizer est de diviser l'entrée en un tableau de tokens. Ensuite, chaque token est associé à un index de token, qui est le codage entier du fragment de texte original.
 
 ![Exemple de tokenisation](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.fr.png)
 
-- **Prédiction des tokens de sortie** : Donnés n tokens en entrée (avec un maximum n qui varie selon le modèle), le modèle est capable de prédire un token en sortie. Ce token est ensuite incorporé dans l’entrée de l’itération suivante, selon un schéma de fenêtre glissante, permettant une meilleure expérience utilisateur en obtenant une ou plusieurs phrases en réponse. Cela explique pourquoi, si vous avez déjà utilisé ChatGPT, vous avez peut-être remarqué qu’il s’arrête parfois au milieu d’une phrase.
+- **Prédiction des tokens de sortie** : Étant donné n tokens en entrée (avec un maximum n variant d'un modèle à l'autre), le modèle est capable de prédire un token en sortie. Ce token est ensuite incorporé dans l'entrée de l'itération suivante, dans un modèle de fenêtre extensible, permettant une meilleure expérience utilisateur en obtenant une (ou plusieurs) phrase(s) comme réponse. Cela explique pourquoi, si vous avez déjà utilisé ChatGPT, vous avez peut-être remarqué qu'il semble parfois s'arrêter au milieu d'une phrase.
 
-- **Processus de sélection, distribution de probabilité** : Le token de sortie est choisi par le modèle selon sa probabilité d’apparaître après la séquence de texte actuelle. En effet, le modèle prédit une distribution de probabilité sur tous les « tokens suivants » possibles, calculée à partir de son entraînement. Cependant, ce n’est pas toujours le token avec la probabilité la plus élevée qui est choisi. Un certain degré d’aléa est ajouté à ce choix, de sorte que le modèle agit de manière non déterministe – on n’obtient pas exactement la même sortie pour la même entrée. Ce degré d’aléa est ajouté pour simuler le processus de pensée créative et peut être ajusté via un paramètre du modèle appelé température.
+- **Processus de sélection, distribution de probabilité** : Le token de sortie est choisi par le modèle en fonction de sa probabilité de se produire après la séquence de texte actuelle. Cela est dû au fait que le modèle prédit une distribution de probabilité sur tous les « prochains tokens » possibles, calculée en fonction de son entraînement. Cependant, le token ayant la probabilité la plus élevée n'est pas toujours choisi dans la distribution résultante. Un degré de hasard est ajouté à ce choix, de manière à ce que le modèle agisse de manière non déterministe – nous n'obtenons pas exactement le même résultat pour la même entrée. Ce degré de hasard est ajouté pour simuler le processus de pensée créative et peut être ajusté à l'aide d'un paramètre du modèle appelé température.
 
-## Comment notre startup peut-elle exploiter les grands modèles de langage ?
+## Comment notre startup peut-elle utiliser les modèles de langage étendus ?
 
-Maintenant que nous comprenons mieux le fonctionnement interne d’un grand modèle de langage, voyons quelques exemples pratiques des tâches les plus courantes qu’ils peuvent accomplir efficacement, en gardant à l’esprit notre scénario business.  
-Nous avons dit que la principale capacité d’un grand modèle de langage est _de générer un texte à partir de zéro, en partant d’une entrée textuelle écrite en langage naturel_.
+Maintenant que nous comprenons mieux le fonctionnement interne d'un modèle de langage étendu, voyons quelques exemples pratiques des tâches les plus courantes qu'ils peuvent accomplir avec succès, en gardant à l'esprit notre scénario commercial. Nous avons dit que la principale capacité d'un modèle de langage étendu est _de générer un texte à partir de zéro, en commençant par une entrée textuelle, écrite en langage naturel_.
 
-Mais quel type d’entrée et de sortie textuelle ?  
-L’entrée d’un grand modèle de langage est appelée prompt, tandis que la sortie est appelée completion, terme qui fait référence au mécanisme du modèle pour générer le token suivant afin de compléter l’entrée actuelle. Nous allons approfondir ce qu’est un prompt et comment le concevoir pour tirer le meilleur parti de notre modèle. Mais pour l’instant, disons simplement qu’un prompt peut inclure :
+Mais quel type d'entrée et de sortie textuelles ?
+L'entrée d'un modèle de langage étendu est connue sous le nom de prompt, tandis que la sortie est connue sous le nom de completion, terme qui fait référence au mécanisme du modèle de génération du prochain token pour compléter l'entrée actuelle. Nous allons approfondir ce qu'est un prompt et comment le concevoir de manière à tirer le meilleur parti de notre modèle. Mais pour l'instant, disons simplement qu'un prompt peut inclure :
 
-- Une **instruction** précisant le type de sortie attendu du modèle. Cette instruction peut parfois inclure des exemples ou des données supplémentaires.
+- Une **instruction** spécifiant le type de sortie que nous attendons du modèle. Cette instruction peut parfois inclure des exemples ou des données supplémentaires.
 
-  1. Résumé d’un article, livre, avis produit et plus, ainsi que l’extraction d’informations à partir de données non structurées.
+  1. Résumé d'un article, livre, avis sur un produit, etc., accompagné de l'extraction d'informations à partir de données non structurées.
     
     ![Exemple de résumé](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.fr.png)
   
-  2. Idéation créative et rédaction d’un article, d’un essai, d’un devoir ou plus.
+  2. Idéation créative et conception d'un article, d'un essai, d'un devoir ou autre.
       
-     ![Exemple d’écriture créative](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.fr.png)
+     ![Exemple de rédaction créative](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.fr.png)
 
 - Une **question**, posée sous forme de conversation avec un agent.
   
   ![Exemple de conversation](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.fr.png)
 
-- Un fragment de **texte à compléter**, ce qui est implicitement une demande d’aide à la rédaction.
+- Un fragment de **texte à compléter**, qui est implicitement une demande d'assistance à la rédaction.
   
   ![Exemple de complétion de texte](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.fr.png)
 
-- Un fragment de **code** accompagné d’une demande d’explication et de documentation, ou un commentaire demandant de générer un morceau de code réalisant une tâche spécifique.
+- Un fragment de **code** accompagné d'une demande d'explication et de documentation, ou un commentaire demandant de générer un morceau de code réalisant une tâche spécifique.
   
   ![Exemple de codage](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.fr.png)
 
-Les exemples ci-dessus sont assez simples et ne prétendent pas être une démonstration exhaustive des capacités des grands modèles de langage. Ils ont pour but de montrer le potentiel de l’IA générative, en particulier mais pas uniquement dans des contextes éducatifs.
+Les exemples ci-dessus sont assez simples et ne sont pas destinés à être une démonstration exhaustive des capacités des modèles de langage étendus. Ils visent à montrer le potentiel de l'utilisation de l'IA générative, en particulier mais pas exclusivement dans des contextes éducatifs.
 
-Par ailleurs, la sortie d’un modèle d’IA générative n’est pas parfaite et parfois la créativité du modèle peut jouer contre lui, produisant un résultat qui est une combinaison de mots que l’utilisateur humain peut interpréter comme une mystification de la réalité, voire offensante. L’IA générative n’est pas intelligente – du moins pas dans la définition la plus large de l’intelligence, incluant le raisonnement critique et créatif ou l’intelligence émotionnelle ; elle n’est pas déterministe, et elle n’est pas fiable, car des fabrications, telles que des références erronées, des contenus et affirmations incorrects, peuvent être mêlées à des informations justes, et présentées de manière persuasive et confiante. Dans les leçons suivantes, nous aborderons toutes ces limites et verrons comment les atténuer.
+De plus, la sortie d'un modèle d'IA générative n'est pas parfaite et parfois la créativité du modèle peut jouer contre lui, produisant une sortie qui est une combinaison de mots que l'utilisateur humain peut interpréter comme une déformation de la réalité, ou qui peut être offensante. L'IA générative n'est pas intelligente – du moins pas dans la définition plus complète de l'intelligence, incluant le raisonnement critique et créatif ou l'intelligence émotionnelle ; elle n'est pas déterministe, et elle n'est pas fiable, car des fabrications, telles que des références erronées, du contenu et des déclarations, peuvent être combinées avec des informations correctes et présentées de manière persuasive et confiante. Dans les leçons suivantes, nous aborderons toutes ces limites et verrons ce que nous pouvons faire pour les atténuer.
 
-## Exercice
+## Devoir
 
-Votre exercice est de vous documenter davantage sur [l’IA générative](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) et d’essayer d’identifier un domaine où vous ajouteriez aujourd’hui de l’IA générative alors qu’elle n’y est pas encore. En quoi l’impact serait-il différent par rapport à la méthode « classique » ? Pouvez-vous faire quelque chose que vous ne pouviez pas faire avant, ou êtes-vous plus rapide ? Rédigez un résumé de 300 mots décrivant à quoi ressemblerait votre startup IA de rêve, en incluant des titres comme « Problème », « Comment j’utiliserais l’IA », « Impact » et éventuellement un plan d’affaires.
+Votre devoir est de vous renseigner davantage sur [l'IA générative](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) et d'essayer d'identifier un domaine où vous ajouteriez l'IA générative aujourd'hui et qui n'en dispose pas encore. En quoi l'impact serait-il différent par rapport à la méthode "traditionnelle", pourriez-vous faire quelque chose que vous ne pouviez pas faire auparavant, ou seriez-vous plus rapide ? Rédigez un résumé de 300 mots sur ce à quoi ressemblerait votre startup IA de rêve et incluez des rubriques telles que "Problème", "Comment j'utiliserais l'IA", "Impact" et éventuellement un plan d'affaires.
 
-Si vous réalisez cette tâche, vous pourriez même être prêt à postuler à l’incubateur de Microsoft, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) : nous offrons des crédits pour Azure, OpenAI, du mentorat et bien plus, n’hésitez pas à jeter un œil !
+Si vous réalisez cette tâche, vous pourriez même être prêt à postuler à l'incubateur de Microsoft, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) où nous offrons des crédits pour Azure, OpenAI, du mentorat et bien plus encore, allez voir !
 
 ## Vérification des connaissances
 
-Qu’est-ce qui est vrai à propos des grands modèles de langage ?
+Qu'est-ce qui est vrai à propos des modèles de langage étendus ?
 
-1. Vous obtenez la même réponse exacte à chaque fois.  
-1. Ils font tout parfaitement, excellent pour additionner des nombres, produire du code fonctionnel, etc.  
-1. La réponse peut varier même en utilisant la même invite. Ils sont aussi très bons pour fournir un premier brouillon, que ce soit du texte ou du code. Mais vous devez améliorer les résultats.
+1. Vous obtenez exactement la même réponse à chaque fois.
+1. Ils font tout parfaitement, excellents pour additionner des chiffres, produire du code fonctionnel, etc.
+1. La réponse peut varier malgré l'utilisation du même prompt. Ils sont également excellents pour vous fournir une première ébauche de quelque chose, que ce soit du texte ou du code. Mais vous devez améliorer les résultats.
 
-Réponse : 3, un LLM est non déterministe, la réponse varie, cependant vous pouvez contrôler cette variance via un paramètre de température. Vous ne devez pas non plus vous attendre à ce qu’il fasse tout parfaitement, il est là pour faire le travail lourd pour vous, ce qui signifie souvent que vous obtenez une bonne première version à améliorer progressivement.
+R : 3, un LLM est non déterministe, la réponse varie, cependant, vous pouvez contrôler cette variance via un paramètre de température. Vous ne devriez pas non plus vous attendre à ce qu'il fasse tout parfaitement, il est là pour faire le gros du travail pour vous, ce qui signifie souvent que vous obtenez une bonne première tentative de quelque chose que vous devez améliorer progressivement.
 
-## Excellent travail ! Continuez l’aventure
+## Excellent travail ! Continuez votre parcours
 
-Après avoir terminé cette leçon, consultez notre [collection d’apprentissage sur l’IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à approfondir vos connaissances sur l’IA générative !
-Rendez-vous à la Leçon 2 où nous verrons comment [explorer et comparer différents types de LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) !
+Après avoir terminé cette leçon, consultez notre [collection d'apprentissage sur l'IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à approfondir vos connaissances sur l'IA générative !
+Rendez-vous à la Leçon 2 où nous examinerons comment [explorer et comparer différents types de LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) !
+
+---
 
 **Avertissement** :  
-Ce document a été traduit à l’aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d’assurer l’exactitude, veuillez noter que les traductions automatiques peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d’origine doit être considéré comme la source faisant foi. Pour les informations critiques, une traduction professionnelle réalisée par un humain est recommandée. Nous déclinons toute responsabilité en cas de malentendus ou de mauvaises interprétations résultant de l’utilisation de cette traduction.
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.

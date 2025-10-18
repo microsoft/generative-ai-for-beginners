@@ -1,231 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2b4c36be7d66b32e4fac47761718b4a9",
-  "translation_date": "2025-07-09T11:22:22+00:00",
+  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+  "translation_date": "2025-10-17T22:28:53+00:00",
   "source_file": "05-advanced-prompts/README.md",
   "language_code": "en"
 }
 -->
+# Creating Advanced Prompts
 
-# Generate code for a Python Web API
+[![Creating Advanced Prompts](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.en.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
-This guide will help you create a simple Python Web API using the FastAPI framework.
+Let's revisit some key points from the previous chapter:
 
-## Prerequisites
+> Prompt _engineering_ is the process of **guiding the model to produce more relevant responses** by providing better instructions or context.
 
-- Python 3.7 or higher installed
-- Basic knowledge of Python programming
-- Familiarity with RESTful APIs
+Writing prompts involves two main steps: constructing the prompt by providing relevant context, and _optimization_, which is the process of refining the prompt for better results.
 
-## Installation
+At this stage, we have a basic understanding of how to write prompts, but it's time to delve deeper. In this chapter, you'll move from experimenting with different prompts to understanding why one prompt works better than another. You'll learn how to create prompts using fundamental techniques that can be applied to any LLM.
 
-First, install FastAPI and Uvicorn (an ASGI server) using pip:
+## Introduction
 
-```bash
-pip install fastapi uvicorn
-```
+In this chapter, we will explore the following topics:
 
-## Creating the API
+- Expanding your knowledge of prompt engineering by applying various techniques to your prompts.
+- Configuring your prompts to produce different types of outputs.
 
-Create a new Python file named `main.py` and add the following code:
+## Learning Goals
 
-```python
-from fastapi import FastAPI
+By the end of this lesson, you will be able to:
 
-app = FastAPI()
+- Use prompt engineering techniques to improve the quality of your prompts.
+- Create prompts that produce either varied or deterministic outputs.
 
-@app.get("/")
-async def read_root():
-    return {"message": "Hello World"}
-```
+## Prompt Engineering
 
-This code initializes a FastAPI app and defines a root endpoint that returns a simple JSON message.
+Prompt engineering involves crafting prompts that yield the desired results. It's not just about writing a text prompt; it's about applying specific techniques to achieve the intended outcome.
 
-## Running the API
+### An Example of a Prompt
 
-Run the API server using Uvicorn with the following command:
+Consider this simple prompt:
 
-```bash
-uvicorn main:app --reload
-```
+> Generate 10 questions on geography.
 
-The `--reload` flag enables auto-reload on code changes, which is useful during development.
+This prompt already incorporates several prompt techniques.
 
-## Testing the API
+Let's break it down:
 
-Open your browser and navigate to `http://127.0.0.1:8000/`. You should see the JSON response:
+- **Context**: You specify that the questions should be about "geography."
+- **Limiting the output**: You request no more than 10 questions.
 
-```json
-{"message": "Hello World"}
-```
+### Limitations of Simple Prompting
 
-## Interactive API Docs
+You might not always get the exact outcome you want. While the model will generate questions, geography is a broad subject, and the results might not align with your expectations due to the following reasons:
 
-FastAPI automatically generates interactive API documentation. You can access it at:
+- **Broad topic**: The questions could be about countries, capitals, rivers, etc., without focusing on a specific area.
+- **Format**: The questions might not be presented in the format you desire.
 
-- Swagger UI: `http://127.0.0.1:8000/docs`
-- ReDoc: `http://127.0.0.1:8000/redoc`
+As you can see, there are many factors to consider when creating prompts.
 
-## Next Steps
+So far, we've looked at a simple example, but generative AI can do much more to assist people across various roles and industries. Let's explore some fundamental techniques next.
 
-- Add more endpoints with different HTTP methods (POST, PUT, DELETE)
-- Implement request validation using Pydantic models
-- Connect your API to a database for persistent storage
+### Techniques for Prompting
 
-[!TIP]  
-Explore the FastAPI official documentation for more advanced features and best practices.
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
+First, it's important to understand that prompting is an _emergent_ property of an LLM. This means it's not a built-in feature of the model but something we discover through usage.
 
-#create an instance of the Flask class
-app = flask.Flask(__name__)
+Here are some basic techniques for prompting an LLM:
 
-#create an endpoint for the API
-@app.route('/api/v1/endpoint', methods=['GET'])
-def api_endpoint():
-    #get the request data
-    data = request.get_json()
+- **Zero-shot prompting**: The simplest form of prompting, where a single prompt requests a response based solely on the model's training data.
+- **Few-shot prompting**: This technique provides one or more examples to guide the LLM in generating its response.
+- **Chain-of-thought**: This technique instructs the LLM to break down a problem into steps.
+- **Generated knowledge**: To enhance the response, you can include additional facts or knowledge in your prompt.
+- **Least-to-most**: Similar to chain-of-thought, this technique involves breaking down a problem into smaller steps and asking the LLM to address them sequentially.
+- **Self-refine**: This technique involves critiquing the LLM's output and asking it to improve.
+- **Maieutic prompting**: This technique ensures the LLM's answer is correct by asking it to explain various parts of its response. It's a form of self-refinement.
 
-    #process the data
-    result = process_data(data)
+### Zero-shot Prompting
 
-    #return the result
-    return jsonify(result)
+This is the most straightforward style of prompting, consisting of a single prompt. It's likely the technique you're using as you begin exploring LLMs. Here's an example:
 
-#function to process the data
-def process_data(data):
-    #process the data
-    result = {'result': 'success'}
+- Prompt: "What is Algebra?"
+- Answer: "Algebra is a branch of mathematics that studies mathematical symbols and the rules for manipulating these symbols."
 
-    #return the result
-    return result
+### Few-shot Prompting
 
-#run the Flask app
-if __name__ == '__main__':
-    app.run()
+Few-shot prompting helps the model by providing a few examples along with the request. It consists of a single prompt with additional task-specific examples. Here's an example:
 
-```
+- Prompt: "Write a poem in the style of Shakespeare. Here are a few examples of Shakespearean sonnets:
+  Sonnet 18: 'Shall I compare thee to a summer's day? Thou art more lovely and more temperate...'
+  Sonnet 116: 'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds...'
+  Sonnet 132: 'Thine eyes I love, and they, as pitying me, Knowing thy heart torment me with disdain,...'
+  Now, write a sonnet about the beauty of the moon."
+- Answer: "U
+As you can see, the results couldn't be more varied.
 
-Running the prompt again gives us this result:
-
-```python
-#import necessary libraries
-import flask
-from flask import request, jsonify
-
-#create a Flask app
-app = flask.Flask(__name__)
-
-#create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    #get the data from the request
-    data = request.get_json()
-
-    #process the data
-    result = process_data(data)
-
-    #return the result
-    return jsonify(result)
-
-#define the process_data function
-def process_data(data):
-    #do something with the data
-    result = data + 1
-
-    #return the result
-    return result
-
-#run the app
-if __name__ == '__main__':
-    app.run()
-
-```
-
-There’s only a slight difference between these two outputs. Let’s try the opposite this time and set the temperature to 0.9:
-
-```python
-# Import necessary libraries
-import flask
-from flask import request, jsonify
-
-# Create a Flask app
-app = flask.Flask(__name__)
-
-# Create a route for the API
-@app.route('/api', methods=['GET'])
-def api_call():
-    # Get the data from the request
-    data = request.args
-
-    # Process the data
-    result = process_data(data)
-
-    # Return the result
-    return jsonify(result)
-
-# Function to process the data
-def process_data(data):
-    # Do something with the data
-    result = data + 1
-
-    # Return the result
-    return result
-
-# Run the app
-if __name__ == '__main__':
-    app.run()
-
-```
-
-and here’s the second attempt with the temperature set to 0.9:
-
-```python
-import flask
-from flask import request, jsonify
-
-# create the Flask app
-app = flask.Flask(__name__)
-app.config['DEBUG'] = True
-
-# create some test data
-books = [
-    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
-    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
-    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
-]
-
-# create an endpoint
-@app.route('/', methods=['GET'])
-def home():
-    return '''<h1>Welcome to our book API!</h1>'''
-
-@app.route('/api/v1/resources/books
-
-```
-
-As you can see, the results vary significantly.
-
-> Note that there are additional parameters you can adjust to change the output, such as top-k, top-p, repetition penalty, length penalty, and diversity penalty, but these are beyond the scope of this curriculum.
+> Note, there are additional parameters you can adjust to vary the output, such as top-k, top-p, repetition penalty, length penalty, and diversity penalty, but these are beyond the scope of this curriculum.
 
 ## Good practices
 
-There are many techniques you can use to try to get the results you want. You’ll develop your own style as you gain more experience with prompting.
+There are many strategies you can use to achieve the desired results. As you continue to use prompting, you'll develop your own style.
 
-In addition to the techniques we’ve covered, here are some good practices to keep in mind when prompting an LLM:
+In addition to the techniques we've covered, there are some best practices to keep in mind when prompting an LLM.
 
-- **Specify context.** Context matters—the more you can specify, like domain, topic, etc., the better.
-- Limit the output. If you want a specific number of items or a certain length, make sure to specify it.
-- **Specify both what and how.** Remember to mention both what you want and how you want it, for example, “Create a Python Web API with routes for products and customers, divided into 3 files.”
-- **Use templates.** Often, you’ll want to enrich your prompts with data from your company. Use templates for this. Templates can include variables that you replace with actual data.
-- **Spell correctly.** LLMs might still provide a correct response, but spelling correctly will help you get a better response.
+Here are some good practices to consider:
+
+- **Specify context**. Context is important; the more details you can provide, such as domain, topic, etc., the better.
+- Limit the output. If you need a specific number of items or a particular length, make sure to specify it.
+- **Specify both what and how**. Clearly state both what you want and how you want it, for example, "Create a Python Web API with routes for products and customers, divide it into 3 files."
+- **Use templates**. Often, you'll want to enhance your prompts with data specific to your company. Use templates to achieve this. Templates can include variables that you replace with actual data.
+- **Spell correctly**. While LLMs may still provide a correct response, accurate spelling will yield better results.
 
 ## Assignment
 
-Here’s some Python code showing how to build a simple API using Flask:
+Below is Python code demonstrating how to create a simple API using Flask:
 
 ```python
 from flask import Flask, request
@@ -241,36 +128,38 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Use an AI assistant like GitHub Copilot or ChatGPT and apply the “self-refine” technique to improve the code.
+Use an AI assistant like GitHub Copilot or ChatGPT and apply the "self-refine" technique to improve the code.
 
 ## Solution
 
-Try to solve the assignment by adding appropriate prompts to the code.
+Please try to solve the assignment by adding appropriate prompts to the code.
 
 > [!TIP]
-> Phrase a prompt asking for improvements, and it’s a good idea to limit how many improvements you want. You can also ask for improvements in a specific area, such as architecture, performance, security, etc.
+> When asking for improvements, it's a good idea to limit the number of changes. You can also specify the type of improvement you want, such as architecture, performance, security, etc.
 
 [Solution](../../../05-advanced-prompts/python/aoai-solution.py)
 
 ## Knowledge check
 
-Why would I use chain-of-thought prompting? Show me 1 correct response and 2 incorrect responses.
+Why would I use chain-of-thought prompting? Provide 1 correct response and 2 incorrect responses.
 
-1. To teach the LLM how to solve a problem.  
-1. B, To teach the LLM to find errors in code.  
+1. To teach the LLM how to solve a problem.
+1. B, To teach the LLM to find errors in code.
 1. C, To instruct the LLM to come up with different solutions.
 
-A: 1, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, along with similar problems and how they were solved.
+A: 1, because chain-of-thought is about showing the LLM how to solve a problem by providing it with a series of steps, along with similar problems and their solutions.
 
 ## 🚀 Challenge
 
-You just used the self-refine technique in the assignment. Take any program you built and think about what improvements you would want to make. Now use the self-refine technique to apply those changes. What did you think of the result—better or worse?
+You just applied the self-refine technique in the assignment. Take any program you've created and think about the improvements you'd like to make. Now use the self-refine technique to implement the proposed changes. What do you think of the result—was it better or worse?
 
 ## Great Work! Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to keep advancing your Generative AI skills!
+After completing this lesson, explore our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to further enhance your knowledge of Generative AI!
 
-Head over to Lesson 6 where we will apply our knowledge of Prompt Engineering by [building text generation apps](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Proceed to Lesson 6, where we'll apply our Prompt Engineering skills to [build text generation apps](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst).
+
+---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ffb706de93ef518f31e0a675c66dfce1",
-  "translation_date": "2025-10-17T16:05:07+00:00",
+  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+  "translation_date": "2025-10-18T00:47:45+00:00",
   "source_file": "05-advanced-prompts/README.md",
   "language_code": "it"
 }
@@ -13,9 +13,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ripassiamo alcune nozioni apprese nel capitolo precedente:
 
-> La _progettazione_ dei prompt è il processo attraverso il quale **guidiamo il modello verso risposte più pertinenti** fornendo istruzioni o contesti più utili.
+> La _progettazione dei prompt_ è il processo attraverso il quale **guidiamo il modello verso risposte più pertinenti** fornendo istruzioni o contesti più utili.
 
-Ci sono anche due passaggi per scrivere i prompt: costruire il prompt fornendo un contesto rilevante e la seconda parte è l'_ottimizzazione_, ovvero come migliorare gradualmente il prompt.
+Ci sono anche due passaggi per scrivere i prompt: costruire il prompt, fornendo un contesto rilevante, e _ottimizzarlo_, ovvero migliorarlo gradualmente.
 
 A questo punto, abbiamo una comprensione di base su come scrivere i prompt, ma dobbiamo approfondire. In questo capitolo, passerai dal provare vari prompt a capire perché un prompt è migliore di un altro. Imparerai a costruire prompt seguendo alcune tecniche di base che possono essere applicate a qualsiasi LLM.
 
@@ -39,7 +39,7 @@ La progettazione dei prompt è il processo di creazione di prompt che producano 
 
 ### Un esempio di prompt
 
-Prendiamo un prompt di base come questo:
+Prendiamo un esempio di prompt di base come questo:
 
 > Genera 10 domande sulla geografia.
 
@@ -48,46 +48,45 @@ In questo prompt, stai effettivamente applicando un insieme di diverse tecniche 
 Analizziamolo.
 
 - **Contesto**, specifichi che dovrebbe riguardare la "geografia".
-- **Limitare l'output**, vuoi non più di 10 domande.
+- **Limitazione dell'output**, vuoi non più di 10 domande.
 
 ### Limitazioni dei prompt semplici
 
-Potresti ottenere o meno il risultato desiderato. Otterrai le tue domande generate, ma la geografia è un argomento vasto e potresti non ottenere ciò che desideri per i seguenti motivi:
+Potresti ottenere o meno il risultato desiderato. Le domande verranno generate, ma la geografia è un argomento vasto e potresti non ottenere ciò che desideri per i seguenti motivi:
 
-- **Argomento vasto**, non sai se riguarderà paesi, capitali, fiumi e così via.
-- **Formato**, e se volessi che le domande fossero formattate in un certo modo?
+- **Argomento ampio**, non sai se riguarderà paesi, capitali, fiumi e così via.
+- **Formato**, cosa succede se desideri che le domande siano formattate in un certo modo?
 
 Come puoi vedere, c'è molto da considerare quando si creano i prompt.
 
 Finora, abbiamo visto un esempio di prompt semplice, ma l'IA generativa è capace di molto di più per aiutare le persone in una varietà di ruoli e settori. Esploriamo alcune tecniche di base.
 
-### Tecniche per i prompt
+### Tecniche per creare prompt
 
-Innanzitutto, dobbiamo capire che il prompting è una proprietà _emergente_ di un LLM, il che significa che non è una funzionalità integrata nel modello, ma piuttosto qualcosa che scopriamo mentre utilizziamo il modello.
+Per prima cosa, dobbiamo capire che la creazione di prompt è una proprietà _emergente_ di un LLM, il che significa che non è una funzione integrata nel modello, ma piuttosto qualcosa che scopriamo mentre utilizziamo il modello.
 
 Ci sono alcune tecniche di base che possiamo utilizzare per creare prompt per un LLM. Esploriamole.
 
-- **Prompt zero-shot**, questa è la forma più basilare di prompting. È un singolo prompt che richiede una risposta dall'LLM basandosi esclusivamente sui suoi dati di addestramento.
-- **Prompt few-shot**, questo tipo di prompting guida l'LLM fornendo 1 o più esempi su cui può basarsi per generare la sua risposta.
-- **Chain-of-thought**, questo tipo di prompting indica all'LLM come suddividere un problema in passaggi.
-- **Conoscenza generata**, per migliorare la risposta di un prompt, puoi fornire fatti o conoscenze generate in aggiunta al tuo prompt.
+- **Zero-shot prompting**, questa è la forma più basilare di creazione di prompt. È un singolo prompt che richiede una risposta dal LLM basandosi esclusivamente sui suoi dati di addestramento.
+- **Few-shot prompting**, questo tipo di creazione di prompt guida il LLM fornendo 1 o più esempi su cui può basarsi per generare la sua risposta.
+- **Chain-of-thought**, questo tipo di creazione di prompt indica al LLM come suddividere un problema in passaggi.
+- **Generated knowledge**, per migliorare la risposta di un prompt, puoi fornire fatti o conoscenze generate in aggiunta al tuo prompt.
 - **Least to most**, come il chain-of-thought, questa tecnica consiste nel suddividere un problema in una serie di passaggi e poi chiedere che questi passaggi vengano eseguiti in ordine.
-- **Self-refine**, questa tecnica consiste nel criticare l'output dell'LLM e poi chiedergli di migliorarlo.
-- **Prompt maieutico**, qui si vuole garantire che la risposta dell'LLM sia corretta e si chiede di spiegare varie parti della risposta. Questa è una forma di self-refine.
+- **Self-refine**, questa tecnica consiste nel criticare l'output del LLM e poi chiedergli di migliorarlo.
+- **Maieutic prompting**, qui si vuole garantire che la risposta del LLM sia corretta e si chiede di spiegare varie parti della risposta. Questa è una forma di self-refine.
 
-### Prompt zero-shot
+### Zero-shot prompting
 
-Questo stile di prompting è molto semplice, consiste in un singolo prompt. Questa tecnica è probabilmente quella che stai utilizzando mentre inizi a imparare sugli LLM. Ecco un esempio:
+Questo stile di creazione di prompt è molto semplice, consiste in un singolo prompt. Questa tecnica è probabilmente quella che stai utilizzando mentre inizi a imparare sugli LLM. Ecco un esempio:
 
 - Prompt: "Cos'è l'Algebra?"
 - Risposta: "L'Algebra è un ramo della matematica che studia i simboli matematici e le regole per manipolare questi simboli."
 
-### Prompt few-shot
+### Few-shot prompting
 
-Questo stile di prompting aiuta il modello fornendo alcuni esempi insieme alla richiesta. Consiste in un singolo prompt con dati specifici per il compito. Ecco un esempio:
+Questo stile di creazione di prompt aiuta il modello fornendo alcuni esempi insieme alla richiesta. Consiste in un singolo prompt con dati aggiuntivi specifici per il compito. Ecco un esempio:
 
-- Prompt: "Scrivi una poesia nello stile di Shakespeare. Ecco alcuni esempi di sonetti shakespeariani:
-  Sonetto 18: 'Shall I compare thee 
+- Prompt: "Scrivi una poesia nello stile di Shakespeare. Ecco alcu
 Come puoi vedere, i risultati non potrebbero essere più vari.
 
 > Nota che ci sono altri parametri che puoi modificare per variare l'output, come top-k, top-p, repetition penalty, length penalty e diversity penalty, ma questi sono al di fuori dell'ambito di questo curriculum.
@@ -102,7 +101,7 @@ Ecco alcune buone pratiche da considerare:
 
 - **Specifica il contesto**. Il contesto è importante, più puoi specificare come dominio, argomento, ecc., meglio è.
 - Limita l'output. Se desideri un numero specifico di elementi o una lunghezza specifica, specificalo.
-- **Specifica sia cosa che come**. Ricorda di menzionare sia cosa vuoi che come lo vuoi, ad esempio "Crea un Web API in Python con rotte per prodotti e clienti, dividilo in 3 file".
+- **Specifica sia cosa che come**. Ricorda di menzionare sia cosa vuoi sia come lo vuoi, ad esempio "Crea un Web API in Python con rotte per prodotti e clienti, dividilo in 3 file".
 - **Usa template**. Spesso vorrai arricchire i tuoi prompt con dati della tua azienda. Usa template per farlo. I template possono avere variabili che sostituisci con dati reali.
 - **Scrivi correttamente**. Gli LLM potrebbero fornirti una risposta corretta, ma se scrivi correttamente otterrai una risposta migliore.
 
@@ -147,7 +146,7 @@ A: 1, perché il chain-of-thought riguarda il mostrare all'LLM come risolvere un
 
 ## 🚀 Sfida
 
-Hai appena utilizzato la tecnica self-refine nel compito. Prendi qualsiasi programma che hai costruito e considera quali miglioramenti vorresti applicare. Ora usa la tecnica self-refine per applicare i cambiamenti proposti. Cosa pensi del risultato, migliore o peggiore?
+Hai appena utilizzato la tecnica self-refine nel compito. Prendi qualsiasi programma che hai creato e considera quali miglioramenti vorresti applicare. Ora usa la tecnica self-refine per applicare le modifiche proposte. Cosa ne pensi del risultato, migliore o peggiore?
 
 ## Ottimo lavoro! Continua a imparare
 
@@ -158,4 +157,4 @@ Vai alla Lezione 6 dove applicheremo le nostre conoscenze di Prompt Engineering 
 ---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

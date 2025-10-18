@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "063a2ac57d6b71bea0eaa880c68770d2",
-  "translation_date": "2025-09-29T21:32:42+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T23:44:50+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "tw"
 }
 -->
 # 建立影像生成應用程式
 
-[![建立影像生成應用程式](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.tw.png)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
+[![建立影像生成應用程式](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.tw.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-大型語言模型（LLM）的應用不僅限於文字生成，還可以根據文字描述生成影像。影像作為一種模態在許多領域中非常有用，例如醫療科技、建築、旅遊、遊戲開發等。在本章中，我們將探討兩個最受歡迎的影像生成模型：DALL-E 和 Midjourney。
+大型語言模型（LLM）不僅僅能生成文字，還可以根據文字描述生成影像。影像作為一種模態在許多領域中都非常有用，例如醫療科技、建築、旅遊、遊戲開發等。在本章中，我們將探討兩個最受歡迎的影像生成模型：DALL-E 和 Midjourney。
 
 ## 簡介
 
@@ -26,20 +26,20 @@ CO_OP_TRANSLATOR_METADATA:
 完成本課程後，您將能夠：
 
 - 建立影像生成應用程式。
-- 使用元提示（meta prompts）為您的應用程式定義界限。
+- 使用元提示（meta prompts）為您的應用程式定義邊界。
 - 使用 DALL-E 和 Midjourney。
 
 ## 為什麼要建立影像生成應用程式？
 
-影像生成應用程式是一種探索生成式 AI 能力的絕佳方式。它們可以用於以下用途，例如：
+影像生成應用程式是一種探索生成式人工智慧能力的絕佳方式。它們可以用於以下用途，例如：
 
-- **影像編輯與合成**。您可以生成各種用途的影像，例如影像編輯和影像合成。
+- **影像編輯和合成**。您可以生成適用於多種用途的影像，例如影像編輯和影像合成。
 
-- **應用於多種行業**。它們還可以用於生成適用於多種行業的影像，例如醫療科技、旅遊、遊戲開發等。
+- **應用於多種行業**。它們也可以用於生成適用於多種行業的影像，例如醫療科技、旅遊、遊戲開發等。
 
 ## 情境：Edu4All
 
-在本課程中，我們將繼續與我們的初創公司 Edu4All 合作。學生將為他們的評估創建影像，具體創建什麼影像由學生決定，例如可以是他們自己童話故事的插圖，或者創建故事中的新角色，幫助他們將想法和概念可視化。
+在本課程中，我們將繼續與我們的初創公司 Edu4All 合作。學生們將為他們的評估創建影像，具體創建什麼樣的影像由學生自行決定，例如可以是他們自己童話故事的插圖，或者為他們的故事創造一個新角色，幫助他們將自己的想法和概念可視化。
 
 以下是 Edu4All 的學生在課堂上學習紀念碑時可能生成的影像示例：
 
@@ -47,7 +47,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 使用以下提示：
 
-> 「清晨陽光下，狗站在艾菲爾鐵塔旁」
+> "清晨陽光下，狗站在艾菲爾鐵塔旁邊"
 
 ## DALL-E 和 Midjourney 是什麼？
 
@@ -55,41 +55,41 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### DALL-E
 
-首先介紹 DALL-E，它是一種生成式 AI 模型，可以根據文字描述生成影像。
+首先介紹 DALL-E，它是一種生成式人工智慧模型，可以根據文字描述生成影像。
 
-> [DALL-E 是兩個模型的結合：CLIP 和擴散注意力](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)。
+> [DALL-E 是兩個模型的結合，CLIP 和擴散注意力](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)。
 
-- **CLIP** 是一個模型，可以從影像和文字生成嵌入（數據的數值表示）。
+- **CLIP** 是一種模型，可以從影像和文字中生成嵌入，即數據的數值表示。
 
-- **擴散注意力** 是一個模型，可以根據嵌入生成影像。DALL-E 是在影像和文字數據集上訓練的，可以用於根據文字描述生成影像。例如，DALL-E 可以生成戴著帽子的貓或有莫霍克髮型的狗的影像。
+- **擴散注意力** 是一種模型，可以從嵌入中生成影像。DALL-E 是基於影像和文字數據集進行訓練的，可以用於根據文字描述生成影像。例如，DALL-E 可以用於生成戴帽子的貓或有莫霍克髮型的狗的影像。
 
 ### Midjourney
 
-Midjourney 的工作方式與 DALL-E 類似，它根據文字提示生成影像。Midjourney 也可以使用像「戴著帽子的貓」或「有莫霍克髮型的狗」這樣的提示生成影像。
+Midjourney 的工作方式與 DALL-E 類似，它根據文字提示生成影像。Midjourney 也可以使用像“戴帽子的貓”或“有莫霍克髮型的狗”這樣的提示生成影像。
 
 ![由 Midjourney 生成的影像，機械鴿子](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 _圖片來源：維基百科，由 Midjourney 生成的影像_
 
 ## DALL-E 和 Midjourney 的運作方式
 
-首先，[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst)。DALL-E 是基於 Transformer 架構的生成式 AI 模型，使用 _自回歸 Transformer_。
+首先，[DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst)。DALL-E 是基於 Transformer 架構的生成式人工智慧模型，具有自回歸 Transformer。
 
 自回歸 Transformer 定義了模型如何根據文字描述生成影像，它一次生成一個像素，然後使用生成的像素生成下一個像素。通過神經網絡的多層處理，直到影像完成。
 
-通過這個過程，DALL-E 可以控制生成影像中的屬性、物件、特徵等。然而，DALL-E 2 和 3 對生成影像的控制能力更強。
+通過這個過程，DALL-E 可以控制生成影像中的屬性、物件、特徵等。然而，DALL-E 2 和 3 對生成影像的控制力更強。
 
 ## 建立您的第一個影像生成應用程式
 
 那麼建立影像生成應用程式需要什麼呢？您需要以下庫：
 
-- **python-dotenv**，強烈建議使用此庫將您的機密保存在 _.env_ 文件中，遠離代碼。
+- **python-dotenv**，強烈建議使用此庫將您的機密信息保存在 _.env_ 文件中，遠離代碼。
 - **openai**，此庫用於與 OpenAI API 交互。
 - **pillow**，用於在 Python 中處理影像。
 - **requests**，幫助您發送 HTTP 請求。
 
 ## 建立並部署 Azure OpenAI 模型
 
-如果尚未完成，請按照 [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) 頁面的指示建立 Azure OpenAI 資源和模型。選擇 DALL-E 3 作為模型。
+如果尚未完成，請按照 [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) 頁面的指示，建立 Azure OpenAI 資源和模型。選擇 DALL-E 3 作為模型。
 
 ## 建立應用程式
 
@@ -101,9 +101,9 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
    AZURE_OPENAI_DEPLOYMENT="dall-e-3"
    ```
 
-   在 Azure OpenAI Foundry Portal 的「部署」部分找到此信息。
+   在 Azure OpenAI Foundry Portal 的“部署”部分中找到此信息。
 
-1. 將上述庫收集到名為 _requirements.txt_ 的文件中，如下所示：
+1. 在名為 _requirements.txt_ 的文件中收集上述庫，如下所示：
 
    ```text
    python-dotenv
@@ -179,7 +179,7 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
         print(err)
    ```
 
-以下是代碼的解釋：
+以下是對此代碼的解釋：
 
 - 首先，我們導入所需的庫，包括 OpenAI 庫、dotenv 庫、requests 庫和 Pillow 庫。
 
@@ -191,7 +191,7 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
   import dotenv
   ```
 
-- 接下來，我們從 _.env_ 文件中加載環境變數。
+- 接著，我們從 _.env_ 文件中載入環境變數。
 
   ```python
   # import dotenv
@@ -229,7 +229,7 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
   image.show()
   ```
 
-### 更詳細的影像生成
+### 更詳細的影像生成過程
 
 讓我們更詳細地看看生成影像的代碼：
 
@@ -241,16 +241,16 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
                            )
    ```
 
-- **prompt** 是用於生成影像的文字提示。在此例中，我們使用的提示是「兔子騎在馬上，手拿棒棒糖，站在霧氣瀰漫的長滿水仙花的草地上」。
-- **size** 是生成影像的大小。在此例中，我們生成的影像大小為 1024x1024 像素。
-- **n** 是生成影像的數量。在此例中，我們生成了兩張影像。
-- **temperature** 是控制生成式 AI 模型輸出隨機性的參數。溫度值介於 0 到 1 之間，其中 0 表示輸出是確定性的，1 表示輸出是隨機的。默認值為 0.7。
+- **prompt** 是用於生成影像的文字提示。在這個例子中，我們使用的提示是“兔子騎在馬上，手拿棒棒糖，站在長滿水仙花的霧霾草地上”。
+- **size** 是生成影像的大小。在這個例子中，我們生成的影像大小為 1024x1024 像素。
+- **n** 是生成的影像數量。在這個例子中，我們生成了兩張影像。
+- **temperature** 是一個控制生成式人工智慧模型輸出隨機性的參數。溫度值介於 0 和 1 之間，其中 0 表示輸出是確定性的，1 表示輸出是隨機的。默認值為 0.7。
 
-還有更多可以對影像進行的操作，我們將在下一部分中介紹。
+還有更多可以對影像進行的操作，我們將在下一部分中進一步探討。
 
-## 影像生成的其他功能
+## 影像生成的額外功能
 
-到目前為止，您已看到如何使用幾行 Python 代碼生成影像。然而，影像生成還有更多功能。
+到目前為止，您已經看到我們如何使用幾行 Python 代碼生成影像。然而，影像生成還有更多功能。
 
 您還可以執行以下操作：
 
@@ -269,7 +269,7 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
    image_url = response.data[0].url
    ```
 
-  基礎影像僅包含帶泳池的休息室，但最終影像會有一隻火烈鳥：
+  基礎影像僅包含帶游泳池的休息室，但最終影像會有一隻火烈鳥：
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.tw.png" style="width: 30%; max-width: 200px; height: auto;">
@@ -277,7 +277,7 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
   <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.tw.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
-- **創建變化**。這個想法是您可以使用現有影像並要求生成變化。要創建變化，您需要提供影像和文字提示，並使用如下代碼：
+- **創建變體**。這個想法是，您可以選擇一個現有影像並要求生成其變體。要創建變體，您需要提供影像和文字提示，並使用如下代碼：
 
   ```python
   response = openai.Image.create_variation(
@@ -288,23 +288,23 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
   image_url = response['data'][0]['url']
   ```
 
-  > 注意：這僅在 OpenAI 上支持。
+  > 注意，這僅在 OpenAI 上支持。
 
 ## 溫度
 
-溫度是控制生成式 AI 模型輸出隨機性的參數。溫度值介於 0 到 1 之間，其中 0 表示輸出是確定性的，1 表示輸出是隨機的。默認值為 0.7。
+溫度是一個控制生成式人工智慧模型輸出隨機性的參數。溫度值介於 0 和 1 之間，其中 0 表示輸出是確定性的，1 表示輸出是隨機的。默認值為 0.7。
 
-讓我們通過兩次運行以下提示來看看溫度的作用：
+讓我們通過兩次運行以下提示來看看溫度如何運作：
 
-> 提示：「兔子騎在馬上，手拿棒棒糖，站在霧氣瀰漫的長滿水仙花的草地上」
+> 提示： "兔子騎在馬上，手拿棒棒糖，站在長滿水仙花的霧霾草地上"
 
 ![兔子騎在馬上，手拿棒棒糖，版本 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.tw.png)
 
-現在再次運行相同的提示，看看是否會生成不同的影像：
+現在讓我們再次運行相同的提示，看看是否會生成不同的影像：
 
-![生成的兔子騎在馬上的影像](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.tw.png)
+![兔子騎在馬上的生成影像](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.tw.png)
 
-如您所見，影像相似但不完全相同。讓我們嘗試將溫度值更改為 0.1，看看會發生什麼：
+如您所見，影像相似但不完全相同。現在讓我們嘗試將溫度值更改為 0.1，看看會發生什麼：
 
 ```python
  generation_response = client.images.create(
@@ -316,9 +316,9 @@ _圖片來源：維基百科，由 Midjourney 生成的影像_
 
 ### 更改溫度
 
-讓我們嘗試使輸出更具確定性。我們可以從生成的兩張影像中觀察到，第一張影像中有兔子，第二張影像中有馬，因此影像差異很大。
+讓我們嘗試使輸出更具確定性。我們可以從生成的兩張影像中觀察到，第一張影像中有一隻兔子，而第二張影像中有一匹馬，因此影像差異很大。
 
-因此，讓我們更改代碼並將溫度設置為 0，如下所示：
+因此，我們可以更改代碼並將溫度設置為 0，如下所示：
 
 ```python
 generation_response = client.images.create(
@@ -329,26 +329,26 @@ generation_response = client.images.create(
     )
 ```
 
-現在運行此代碼，您將得到以下兩張影像：
+現在運行此代碼，您將獲得以下兩張影像：
 
 - ![溫度 0，版本 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.tw.png)
 - ![溫度 0，版本 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.tw.png)
 
-在這裡，您可以清楚地看到影像更相似。
+在這裡，您可以清楚地看到影像更加相似。
 
-## 如何使用元提示為您的應用程式定義界限
+## 如何使用元提示為您的應用程式定義邊界
 
-通過我們的演示，我們已經可以為客戶生成影像。然而，我們需要為應用程式創建一些界限。
+通過我們的演示，我們已經可以為客戶生成影像。然而，我們需要為應用程式設置一些邊界。
 
 例如，我們不希望生成不適合工作環境或不適合兒童的影像。
 
-我們可以使用 _元提示_ 來實現這一點。元提示是用於控制生成式 AI 模型輸出的文字提示。例如，我們可以使用元提示來控制輸出，確保生成的影像適合工作環境或適合兒童。
+我們可以使用 _元提示_ 來實現這一點。元提示是用於控制生成式人工智慧模型輸出的文字提示。例如，我們可以使用元提示來控制輸出，確保生成的影像適合工作環境或適合兒童。
 
 ### 它如何運作？
 
 那麼，元提示如何運作？
 
-元提示是用於控制生成式 AI 模型輸出的文字提示，它們位於文字提示之前，用於控制模型的輸出，並嵌入到應用程式中以控制模型的輸出。將提示輸入和元提示輸入封裝在單一文字提示中。
+元提示是用於控制生成式人工智慧模型輸出的文字提示，它們位於文字提示之前，用於控制模型的輸出並嵌入到應用程式中以控制模型的輸出。將提示輸入和元提示輸入封裝在一個文字提示中。
 
 元提示的一個示例如下：
 
@@ -400,7 +400,7 @@ Create an image of a bunny on a horse, holding a lollipop"
 
 我們在本課程開始時介紹了 Edu4All。現在是時候讓學生為他們的評估生成影像了。
 
-學生將為他們的評估創建包含紀念碑的影像，具體選擇哪些紀念碑由學生決定。學生被要求在此任務中發揮創意，將這些紀念碑置於不同的背景中。
+學生們將為他們的評估創建包含紀念碑的影像，具體紀念碑由學生自行決定。學生們被要求在這項任務中發揮創造力，將這些紀念碑置於不同的背景中。
 
 ## 解決方案
 
@@ -484,4 +484,4 @@ except openai.BadRequestError as err:
 ---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不精確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

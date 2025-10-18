@@ -1,105 +1,105 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2b4c36be7d66b32e4fac47761718b4a9",
-  "translation_date": "2025-10-11T11:37:17+00:00",
+  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+  "translation_date": "2025-10-18T02:47:55+00:00",
   "source_file": "05-advanced-prompts/README.md",
   "language_code": "et"
 }
 -->
-# Täiustatud käskude loomine
+# Täiustatud juhiste loomine
 
-[![Täiustatud käskude loomine](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.et.png)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst?WT.mc_id=academic-105485-koreyst)
+[![Täiustatud juhiste loomine](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.et.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Tuletame meelde eelmises peatükis õpitut:
 
-> Käskude _kujundamine_ on protsess, mille käigus me **suuname mudeli asjakohasemate vastuste poole**, pakkudes kasulikumaid juhiseid või konteksti.
+> Juhiste _kujundamine_ on protsess, mille käigus me **suuname mudelit andma asjakohasemaid vastuseid**, pakkudes kasulikumaid juhiseid või konteksti.
 
-Käskude kirjutamiseks on kaks sammu: esmalt käskude koostamine, pakkudes asjakohast konteksti, ja teiseks _optimeerimine_, kuidas käsku järk-järgult paremaks muuta.
+Juhiste kirjutamisel on kaks sammu: juhise koostamine, pakkudes asjakohast konteksti, ja _optimeerimine_, kuidas juhist järk-järgult paremaks muuta.
 
-Praeguseks oleme saanud põhilise arusaama käskude kirjutamisest, kuid peame minema sügavamale. Selles peatükis liigume erinevate käskude katsetamisest arusaamiseni, miks üks käsk on parem kui teine. Õpid, kuidas koostada käske, järgides mõningaid põhilisi tehnikaid, mida saab rakendada igale LLM-ile.
+Praeguseks on meil juba põhiline arusaam juhiste kirjutamisest, kuid peame minema sügavamale. Selles peatükis liigume erinevate juhiste katsetamisest arusaamiseni, miks üks juhis on parem kui teine. Õpid, kuidas koostada juhiseid, järgides mõningaid põhilisi tehnikaid, mida saab rakendada mis tahes LLM-i puhul.
 
 ## Sissejuhatus
 
 Selles peatükis käsitleme järgmisi teemasid:
 
-- Laienda oma teadmisi käskude kujundamisest, rakendades erinevaid tehnikaid.
-- Kohanda oma käske, et muuta väljundit.
+- Laienda oma teadmisi juhiste kujundamisest, rakendades erinevaid tehnikaid.
+- Kohanda oma juhiseid, et saada erinevaid väljundeid.
 
 ## Õpieesmärgid
 
-Pärast selle peatüki läbimist suudad:
+Pärast selle õppetunni läbimist oskad:
 
-- Rakendada käskude kujundamise tehnikaid, mis parandavad käskude tulemusi.
-- Teostada käskude loomist, mis on kas varieeruv või deterministlik.
+- Rakendada juhiste kujundamise tehnikaid, mis parandavad juhiste tulemusi.
+- Teostada juhendamist, mis on kas varieeruv või deterministlik.
 
-## Käskude kujundamine
+## Juhiste kujundamine
 
-Käskude kujundamine on protsess, mille käigus luuakse käske, mis annavad soovitud tulemuse. Käskude kujundamine ei tähenda ainult tekstilise käsu kirjutamist. Tegemist on pigem tehnikate kogumiga, mida saab rakendada soovitud tulemuse saavutamiseks.
+Juhiste kujundamine on protsess, mille käigus luuakse juhiseid, mis annavad soovitud tulemuse. Juhiste kujundamine ei tähenda ainult tekstilise juhise kirjutamist. See ei ole inseneriteadus, vaid pigem tehnikate kogum, mida saab rakendada soovitud tulemuse saavutamiseks.
 
-### Käskude näide
+### Näide juhisest
 
-Vaatame ühte lihtsat käsku:
+Vaatame ühte lihtsat juhist:
 
 > Loo 10 küsimust geograafia kohta.
 
-Selles käsus rakendad tegelikult mitmeid erinevaid käskude kujundamise tehnikaid.
+Selles juhises rakendad tegelikult mitmeid erinevaid juhendamise tehnikaid.
 
-Lahkame seda.
+Lahkame selle lahti.
 
 - **Kontekst**, sa täpsustad, et see peaks olema "geograafia" kohta.
 - **Väljundi piiramine**, sa soovid mitte rohkem kui 10 küsimust.
 
-### Lihtsate käskude piirangud
+### Lihtsate juhiste piirangud
 
-Sa võid saada soovitud tulemuse, aga võib juhtuda, et saadud küsimused ei vasta ootustele, kuna:
+Sa võid saada soovitud tulemuse või mitte. Küsimused küll genereeritakse, kuid geograafia on suur teema ja sa ei pruugi saada seda, mida soovid, järgmistel põhjustel:
 
-- **Suur teema**, sa ei tea, kas küsimused puudutavad riike, pealinnu, jõgesid jne.
+- **Suur teema**, sa ei tea, kas see puudutab riike, pealinnu, jõgesid jne.
 - **Formaat**, mis siis, kui sa soovid, et küsimused oleksid teatud viisil vormistatud?
 
-Nagu näha, on käskude loomisel palju asju, mida arvestada.
+Nagu näha, on juhiste loomisel palju asju, mida arvestada.
 
-Siiani oleme näinud lihtsa käsu näidet, kuid generatiivne tehisintellekt suudab palju rohkem aidata erinevates rollides ja tööstusharudes. Uurime järgmisi põhilisi tehnikaid.
+Siiani oleme näinud lihtsat juhise näidet, kuid generatiivne tehisintellekt on võimeline palju enamaks, et aidata inimesi erinevates rollides ja tööstusharudes. Uurime edasi mõningaid põhilisi tehnikaid.
 
-### Käskude loomise tehnikad
+### Juhendamise tehnikad
 
-Esmalt peame mõistma, et käskude loomine on LLM-i _emergentne_ omadus, mis tähendab, et see pole mudelisse sisse ehitatud funktsioon, vaid midagi, mida avastame mudelit kasutades.
+Kõigepealt peame mõistma, et juhendamine on LLM-i _esilekerkiv_ omadus, mis tähendab, et see ei ole mudelisse sisse ehitatud funktsioon, vaid midagi, mida avastame mudelit kasutades.
 
-LLM-i käskude loomiseks on mõned põhilised tehnikad. Uurime neid.
+On mõned põhilised tehnikad, mida saame LLM-i juhendamiseks kasutada. Uurime neid.
 
-- **Nullnäidisega käskude loomine**, see on kõige lihtsam käskude loomise vorm. See on üksik käsk, mis palub LLM-il vastata ainult oma treeningandmete põhjal.
-- **Mõnenäidisega käskude loomine**, see käskude loomise tüüp juhendab LLM-i, pakkudes 1 või rohkem näiteid, millele tuginedes mudel vastuse genereerib.
-- **Mõttekäigu ahel**, see käskude loomise tüüp õpetab LLM-i, kuidas probleemi sammudeks jagada.
-- **Genereeritud teadmised**, käskude vastuse parandamiseks saab lisaks käsule pakkuda genereeritud fakte või teadmisi.
-- **Vähemast rohkemani**, nagu mõttekäigu ahel, on see tehnika seotud probleemi jagamisega sammudeks ja nende sammude järjestikuse täitmisega.
-- **Iseparandus**, see tehnika seisneb LLM-i väljundi kriitilises hindamises ja selle parandamise palumises.
-- **Maieutiline käskude loomine**, siin soovid tagada, et LLM-i vastus oleks korrektne, ja palud mudelil selgitada vastuse erinevaid osi. See on iseparanduse vorm.
+- **Nullnäidisega juhendamine**, see on kõige lihtsam juhendamise vorm. See on üksik juhis, mis palub LLM-il vastata ainult oma treeningandmete põhjal.
+- **Mõnenäidisega juhendamine**, see juhendamise tüüp suunab LLM-i, pakkudes 1 või rohkem näiteid, millele tuginedes see oma vastuse genereerib.
+- **Mõttekäigu ahel**, see juhendamise tüüp õpetab LLM-i probleemi sammudeks jagama.
+- **Genereeritud teadmised**, juhise vastuse parandamiseks võid lisada juhisele genereeritud fakte või teadmisi.
+- **Lihtsamast keerulisemani**, nagu mõttekäigu ahel, seisneb see tehnika probleemi jagamises sammudeks ja nende sammude järjekorras täitmise juhendamises.
+- **Iseparandus**, see tehnika seisneb LLM-i väljundi kriitilises hindamises ja seejärel selle parandamises.
+- **Maieutiline juhendamine**, siin on eesmärk tagada, et LLM-i vastus oleks õige, ja paluda tal selgitada vastuse erinevaid osi. See on isekorrektsiooni vorm.
 
-### Nullnäidisega käskude loomine
+### Nullnäidisega juhendamine
 
-See käskude loomise stiil on väga lihtne, see koosneb ühest käsust. Tõenäoliselt kasutad seda tehnikat, kui alles õpid LLM-e tundma. Näide:
+See juhendamise stiil on väga lihtne, see koosneb ühest juhisest. See tehnika on tõenäoliselt see, mida sa kasutad, kui hakkad LLM-idega tutvuma. Siin on näide:
 
-- Käsk: "Mis on algebra?"
-- Vastus: "Algebra on matemaatika haru, mis uurib matemaatilisi sümboleid ja nende manipuleerimise reegleid."
+- Juhis: "Mis on algebra?"
+- Vastus: "Algebra on matemaatika haru, mis uurib matemaatilisi sümboleid ja nende sümbolitega manipuleerimise reegleid."
 
-### Mõnenäidisega käskude loomine
+### Mõnenäidisega juhendamine
 
-See käskude loomise stiil aitab mudelit, pakkudes mõningaid näiteid koos päringuga. See koosneb ühest käsust koos täiendavate ülesandespetsiifiliste andmetega. Näide:
+See juhendamise stiil aitab mudelit, pakkudes mõningaid näiteid koos ülesandega. See koosneb ühest juhisest koos täiendavate ülesandespetsiifiliste andmetega. Siin on näide:
 
-- Käsk: "Kirjuta luuletus Shakespeare'i stiilis. Siin on mõned näited Shakespeare'i sonettidest:
+- Juhis: "Kirjuta luuletus Shakespeare'i stiilis. Siin on mõned näited Shakespeare'i sonettidest:
   Sonett 18: 'Kas ma võrdlen sind suvepäevaga? Sa oled armsam ja mõõdukam...'
-  Sonett 116: 'Ärgu olgu tõeliste mõtete abielus takistusi. Armastus pole armastus, mis muutub, kui muutus leiab...'
-  Sonett 132: 'Sinu silmi ma armastan, ja need, nagu halastades mind, Teades su südame piina, piinavad mind põlgusega,...'
+  Sonett 116: 'Ärgu olgu tõeliste mõistuste abielus takistusi. Armastus ei ole armastus, mis muutub, kui muutus leiab aset...'
+  Sonett 132: 'Sinu silmi ma armastan, ja nemad, nagu halastades mulle, Teades, et su süda piinab mind põlgusega,...'
   Nüüd kirjuta sonett kuu ilust."
-- Vastus: "Taevasse kuu pehmelt särab, Hõbedases valguses, mis heidab oma õrna armu,..."
+- Vastus: "Taevasse kuu pehme valgus heidab, Hõbedases säras, mis õrnalt armu jagab,..."
 
-Näited annavad LLM-ile konteksti, formaadi või stiili soovitud väljundi jaoks. Need aitavad mudelil mõista konkreetset ülesannet ja genereerida täpsemaid ja asjakohasemaid vastuseid.
+Näited annavad LLM-ile konteksti, formaadi või soovitud väljundi stiili. Need aitavad mudelil mõista konkreetset ülesannet ja genereerida täpsemaid ja asjakohasemaid vastuseid.
 
 ### Mõttekäigu ahel
 
-Mõttekäigu ahel on väga huvitav tehnika, kuna see seisneb LLM-i juhendamises läbi sammude seeria. Idee on õpetada LLM-i, kuidas midagi teha. Vaatame järgmist näidet, ilma ja koos mõttekäigu ahelaga:
+Mõttekäigu ahel on väga huvitav tehnika, kuna see seisneb LLM-i juhendamises läbi mitme sammu. Idee on juhendada LLM-i nii, et see mõistaks, kuidas midagi teha. Vaatame järgmist näidet, nii mõttekäigu ahelaga kui ka ilma:
 
-    - Käsk: "Alice'il on 5 õuna, ta viskab 3 õuna, annab 2 Bobile ja Bob annab ühe tagasi, mitu õuna on Alice'il?"
+    - Juhis: "Alice'il on 5 õuna, ta viskab 3 õuna ära, annab 2 Bobile ja Bob annab ühe tagasi, mitu õuna on Alice'il?"
     - Vastus: 5
 
 LLM vastab 5, mis on vale. Õige vastus on 1 õun, arvestades arvutust (5 -3 -2 + 1 = 1).
@@ -110,26 +110,26 @@ Proovime mõttekäigu ahelat. Mõttekäigu ahela rakendamine tähendab:
 
 1. Anna LLM-ile sarnane näide.
 1. Näita arvutust ja kuidas seda õigesti arvutada.
-1. Esita algne käsk.
+1. Esita algne juhis.
 
 Näide:
 
-- Käsk: "Lisal on 7 õuna, ta viskab 1 õuna, annab 4 õuna Bartile ja Bart annab ühe tagasi:
+- Juhis: "Lisal on 7 õuna, ta viskab 1 õuna ära, annab 4 õuna Bartile ja Bart annab ühe tagasi:
   7 -1 = 6
   6 -4 = 2
   2 +1 = 3  
-  Alice'il on 5 õuna, ta viskab 3 õuna, annab 2 Bobile ja Bob annab ühe tagasi, mitu õuna on Alice'il?"
+  Alice'il on 5 õuna, ta viskab 3 õuna ära, annab 2 Bobile ja Bob annab ühe tagasi, mitu õuna on Alice'il?"
   Vastus: 1
 
-Pane tähele, kuidas kirjutame oluliselt pikema käsu, lisame teise näite, arvutuse ja seejärel algse käsu ning jõuame õige vastuseni 1.
+Nagu näha, kirjutame oluliselt pikema juhise, lisades teise näite, arvutuse ja seejärel algse juhise, ning jõuame õige vastuseni 1.
 
 Nagu näha, on mõttekäigu ahel väga võimas tehnika.
 
 ### Genereeritud teadmised
 
-Sageli, kui soovid koostada käsku, tahad seda teha, kasutades oma ettevõtte andmeid. Osa käsust peaks tulema ettevõttest ja teine osa peaks olema tegelik käsk, mis sind huvitab.
+Sageli, kui soovid juhist koostada, tahad seda teha, kasutades oma ettevõtte andmeid. Osa juhisest peaks tulema ettevõttest ja teine osa peaks olema tegelik juhis, mis sind huvitab.
 
-Näiteks, kui oled kindlustusäris, võib sinu käsk välja näha selline:
+Näiteks, kui oled kindlustusäris, võib sinu juhis välja näha selline:
 
 ```text
 {{company}}: {{company_name}}
@@ -140,9 +140,9 @@ Budget: {{budget}}
 Requirements: {{requirements}}
 ```
 
-Ülal näed, kuidas käsk on koostatud, kasutades malli. Mallis on mitmeid muutujaid, tähistatud `{{variable}}`, mis asendatakse tegelike väärtustega ettevõtte API-st.
+Ülal näed, kuidas juhis on koostatud malli abil. Mallis on mitmeid muutujaid, mida tähistatakse `{{muutuja}}`, ja need asendatakse tegelike väärtustega ettevõtte API-st.
 
-Näide, kuidas käsk võib välja näha, kui muutujad on asendatud ettevõtte sisuga:
+Näide, kuidas juhis võib välja näha pärast muutujate asendamist ettevõtte sisuga:
 
 ```text
 Insurance company: ACME Insurance
@@ -158,7 +158,7 @@ Budget: $1000
 Requirements: Car, Home, and Life insurance
 ```
 
-Selle käsu LLM-i kaudu käivitamine annab vastuse nagu:
+Kui see juhis LLM-i kaudu läbi lasta, saadakse selline vastus:
 
 ```output
 Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
@@ -168,7 +168,7 @@ Given the budget and requirements, we suggest the following insurance package fr
 Total cost: $1,200 USD
 ```
 
-Nagu näha, soovitab see ka elukindlustust, mida see ei peaks. See tulemus viitab sellele, et peame käsku optimeerima, muutes selle selgemaks, mida see lubada võib. Pärast mõningast _katsetamist ja eksimist_ jõuame järgmise käsuni:
+Nagu näha, soovitab see ka elukindlustust, mida see ei peaks tegema. See tulemus viitab sellele, et peame juhist optimeerima, muutes selle selgemaks, mida see lubab. Pärast mõningast _katsetamist ja eksimist_ jõuame järgmise juhiseni:
 
 ```text
 Insurance company: ACME Insurance
@@ -183,7 +183,7 @@ Please suggest an insurance given the following budget and requirements:
 Budget: $1000 restrict choice to types: Car, Home
 ```
 
-Pane tähele, kuidas _tüüp_ ja _maksumus_ lisamine ning märksõna _piiramine_ kasutamine aitavad LLM-il mõista, mida me tahame.
+Pange tähele, kuidas _tüübi_ ja _kulu_ lisamine ning märksõna _piirata_ kasutamine aitab LLM-il mõista, mida me tahame.
 
 Nüüd saame järgmise vastuse:
 
@@ -191,38 +191,38 @@ Nüüd saame järgmise vastuse:
 Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
 ```
 
-Selle näite eesmärk oli näidata, et isegi kui kasutame põhilist tehnikat nagu _genereeritud teadmised_, peame enamikul juhtudel käsku optimeerima, et saada soovitud tulemus.
+Selle näite eesmärk oli näidata, et isegi kui kasutame põhilist tehnikat nagu _genereeritud teadmised_, peame enamasti juhist optimeerima, et saada soovitud tulemus.
 
-### Vähemast rohkemani
+### Lihtsamast keerulisemani
 
-Vähemast rohkemani käskude loomise idee seisneb suurema probleemi jagamises alamprobleemideks. Nii aitad LLM-il "vallutada" suurema probleemi. Hea näide võiks olla andmeteadus, kus saad paluda LLM-il probleemi jagada järgmiselt:
+Lihtsamast keerulisemani juhendamise idee on jagada suurem probleem alamprobleemideks. Nii aitad LLM-il "vallutada" suurema probleemi. Hea näide võiks olla andmeteadus, kus saad paluda LLM-il jagada probleem järgmiselt:
 
-> Käsk: Kuidas teostada andmeteadust 5 sammuga?
+> Juhis: Kuidas teha andmeteadust 5 sammuga?
 
-Sinu AI assistent vastab:
+Sinu AI-assistent vastab:
 
-1. Kogu andmed
-1. Puhasta andmed
-1. Analüüsi andmeid
-1. Kujuta andmeid
-1. Esita andmed
+1. Andmete kogumine
+1. Andmete puhastamine
+1. Andmete analüüsimine
+1. Andmete visualiseerimine
+1. Andmete esitamine
 
 ### Iseparandus, tulemuste kriitika
 
-Generatiivsete tehisintellektide ja LLM-ide puhul ei saa väljundit usaldada. Sa pead seda kontrollima. Lõppude lõpuks esitab LLM sulle lihtsalt seda, mis on kõige tõenäolisem järgmisena öelda, mitte seda, mis on õige. Seetõttu on hea mõte paluda LLM-il ennast kritiseerida, mis viib meid iseparanduse tehnikani.
+Generatiivsete tehisintellektide ja LLM-ide puhul ei saa sa väljundit pimesi usaldada. Sa pead seda kontrollima. Lõppude lõpuks esitab LLM lihtsalt seda, mis on tõenäoliselt järgmine asi, mida öelda, mitte tingimata õiget vastust. Seetõttu on hea mõte paluda LLM-il ennast kritiseerida, mis viib meid iseparanduse tehnikani.
 
 Kuidas see töötab:
 
-1. Esmane käsk, mis palub LLM-il probleemi lahendada
+1. Esmane juhis, milles palutakse LLM-il probleem lahendada
 1. LLM vastab
 1. Sa kritiseerid vastust ja palud AI-l seda parandada
-1. LLM vastab uuesti, seekord arvestades kriitikat ja pakkudes lahendusi, millele ta jõudis
+1. LLM vastab uuesti, seekord arvestades kriitikat ja pakkudes välja lahendusi
 
 Seda protsessi saab korrata nii palju kordi, kui soovid.
 
 Näide selle tehnika kasutamisest:
 
-> Käsk: "Loo Python Web API marsruutidega tooted ja kliendid"
+> Juhis: "Loo Python Web API, millel on marsruudid toodete ja klientide jaoks"
 
 AI vastus:
 
@@ -239,7 +239,7 @@ def customers():
     return 'Customers'
 ```
 
-> Käsk: soovita 3 parandust ülaltoodud koodile
+> Juhis: paku ülaltoodud koodile 3 täiustust
 
 AI vastus:
 
@@ -270,21 +270,21 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Nagu näha, parandab ülaltoodud AI vastus esimest soovitatud koodi tänu esimese vastuse kriitikale.
+Nagu näha, parandab ülaltoodud AI vastus esialgset koodi tänu sellele, et esimesele vastusele anti kriitikat.
 
-### Maieutiline käskude loomine
+### Maieutiline juhendamine
 
-Maieutiline käskude loomine on tehnika, mis sarnaneb iseparandusega, kuid keskendub rohkem LLM-i vastuse selgitamisele. Eesmärk on vähendada LLM-i väljundi vastuolusid, et tagada õige vastus. Töövoog, mida järgida:
+Maieutiline juhendamine on tehnika, mis sarnaneb iseparandusega, kuid see seisneb rohkem LLM-ilt selgituste küsimises. Eesmärk on vähendada LLM-i väljundis esinevaid vastuolusid, et tagada õige vastus. Järgida tuleks järgmist töövoogu:
 
-1. Palu LLM-il vastata küsimusele
-1. Iga vastuse osa kohta palu LLM-il seda põhjalikumalt selgitada.
-1. Kui esineb vastuolusid, hülga osad, mis on vastuolulised.
+1. Palu LLM-il küsimusele vastata.
+1. Küsi iga vastuse osa kohta LLM-ilt täpsemat selgitust.
+1. Kui esineb vastuolusid, jäta vastuolulised osad kõrvale.
 
-Korda samme 2 ja 3, kuni oled vastusega rahul.
+Korda samme 2 ja 3, kuni oled kõigi osadega rahul.
 
-Näide käsust:
+Näide juhisest:
 
-> Käsk: Kuidas luua kriisiplaan pandeemia leevendamiseks 5 sammuga?
+> Juhis: Kuidas luua kriisiplaan pandeemia leevendamiseks 5 sammuga?
 > LLM vastus:
 
 ```text
@@ -295,9 +295,9 @@ Näide käsust:
 1. Identify the communication channels
 ```
 
-See tuvastab 5 sammu, kuid kas saame kindlaks teha, kas see on õige? Palume LLM-il iga sammu selgitada:
+See tuvastas 5 sammu, kuid kas saame kindlaks teha, kas see on õige? Küsime LLM-ilt iga sammu kohta täpsemat selgitust:
 
-> Käsk: Selgita esimest sammu põhjalikumalt, millised on pandeemia riskid üksikasjalikult?
+> Juhis: Selgita esimest sammu täpsemalt, millised on pandeemiaga seotud riskid?
 
 ```text
 The risks are the following:
@@ -309,9 +309,9 @@ The risks are the following:
 - Loss of employees
 ```
 
-Sel hetkel tahame veenduda, et LLM on õige, seega palume tal selgitada esimest riski üksikasjalikumalt ja loodame, et see on ülaltoodud vastusega kooskõlas:
+Selles punktis tahame veenduda, et LLM on õige, seega küsime, et see selgitaks esimest riski täpsemalt ja loodame, et see on vastusega kooskõlas:
 
-> Käsk: Pandeemia korral, mis on suurim risk ja miks?
+> Juhis: Pandeemia korral, mis on suurim risk ja miks?
 
 ```text
 The biggest risk is loss of life because it's the most important thing to protect.
@@ -323,11 +323,11 @@ The biggest risk is loss of life because it's the most important thing to protec
 The two biggest risks are loss of life and loss of business.
 ```
 
-Sel hetkel on LLM järjekindel ja mainib "elu" ja "äri" kui kahte suurimat riski. Nüüd saame liikuda järgmise sammu juurde ja olla üsna kindlad. Kuid me ei tohiks LLM-i pimesi usaldada, alati tuleks väljundit kontrollida.
+Selles punktis on LLM järjepidev ja mainib "elu" ja "äri" kui kahte suurimat riski. Nüüd saame liikuda järgmise sammu juurde ja olla üsna kindlad. Siiski ei tohiks LLM-i pimesi usaldada, alati tuleks väljundit kontrollida.
 
 ## Muuda oma väljundit
 
-LLM-id on oma olemuselt mitte-deterministlikud, mis tähendab, et saad iga kord sama käsku käivitades erinevaid tulemusi. Proovi näiteks järgmist käsku:
+LLM-id on oma olemuselt mitte-deterministlikud, mis tähendab, et saad iga kord sama juhise käivitamisel erinevaid tulemusi. Proovi näiteks järgmist juhist:
 
 > "Genereeri kood Python Web API jaoks"
 
@@ -365,7 +365,7 @@ if __name__ == '__main__':
 
 ```
 
-Sama käsku uuesti käivitades genereeritakse veidi erinev vastus:
+Sama juhise uuesti käivitamine annab veidi teistsuguse vastuse:
 
 ```python
 #import necessary packages
@@ -435,13 +435,13 @@ app.run()
 
 > Kas varieeruv väljund on probleem?
 
-Sõltub sellest, mida sa üritad teha. Kui soovid konkreetset vastust, siis on see probleem. Kui oled rahul varieeruva väljundiga, nagu "Genereeri 3 küsimust geograafia kohta", siis pole see probleem.
+See sõltub sellest, mida sa üritad teha. Kui soovid konkreetset vastust, siis on see probleem. Kui oled rahul varieeruva väljundiga, näiteks "Genereeri 3 küsimust geograafia kohta", siis ei ole see probleem.
 
 ### Temperatuuri kasutamine väljundi varieerimiseks
 
-Oleme otsustanud, et soovime piirata väljundit, et see oleks ennustatavam, st deterministlikum. Kuidas seda teha?
+Okei, oleme otsustanud, et soovime väljundit piirata, et see oleks ennustatavam, st deterministlikum. Kuidas seda teha?
 
-Temperatuur on väärtus vahemikus 0 kuni 1, kus 0 on kõige deterministlikum ja 1 kõige varieeruvam. Vaikeväärtus on 0.7. Vaatame, mis juhtub, kui käivitame sama käsu kaks korda temperatuuriga 0.1:
+Temperatuur on väärtus vahemikus 0 kuni 1, kus 0 on kõige deterministlikum ja 1 kõige varieeruvam. Vaikeväärtus on 0,7. Vaatame, mis juhtub, kui käivitame sama juhise kaks korda, määrates temperatuuri väärtuseks 0,1:
 
 > "Genereeri kood Python Web API jaoks"
 
@@ -479,7 +479,7 @@ if __name__ == '__main__':
 
 ```
 
-Käsku uuesti käivitades saame järgmise tulemuse:
+Juhise uuesti käivitamine annab järgmise tulemuse:
 
 ```python
 #import necessary libraries
@@ -515,7 +515,7 @@ if __name__ == '__main__':
 
 ```
 
-Nende kahe väljundi vahel on ainult väike erinevus. Proovime seekord vastupidist, määrame temperatuuri väärtuseks 0.9:
+Nende kahe väljundi vahel on ainult väike erinevus. Teeme seekord vastupidist, määrame temperatuuri väärtuseks 0,9:
 
 ```python
 # Import necessary libraries
@@ -551,7 +551,8 @@ if __name__ == '__main__':
 
 ```
 
-ja teine katse temperatuuriga 0.9:
+ja teine katse temperatuuriväärtusega 0,9:
+
 ```python
 import flask
 from flask import request, jsonify
@@ -578,7 +579,7 @@ def home():
 
 Nagu näha, võivad tulemused olla väga erinevad.
 
-> Pange tähele, et on veel parameetreid, mida saate muuta, et väljundit varieerida, nagu top-k, top-p, korduse karistus, pikkuse karistus ja mitmekesisuse karistus, kuid need jäävad selle õppekava ulatusest välja.
+> Pange tähele, et on veel mitmeid parameetreid, mida saate muuta, et väljundit varieerida, nagu top-k, top-p, korduse karistus, pikkuse karistus ja mitmekesisuse karistus, kuid need jäävad selle õppekava ulatusest välja.
 
 ## Head tavad
 
@@ -588,15 +589,15 @@ Lisaks tehnikatele, mida oleme käsitlenud, on mõned head tavad, mida tasub LLM
 
 Siin on mõned head tavad, mida kaaluda:
 
-- **Määratlege kontekst**. Kontekst on oluline – mida rohkem saate määratleda, näiteks valdkond, teema jne, seda parem.
-- Piirake väljundit. Kui soovite kindlat arvu üksusi või kindlat pikkust, täpsustage see.
-- **Määratlege nii mida kui ka kuidas**. Ärge unustage mainida nii seda, mida soovite, kui ka seda, kuidas soovite, näiteks "Loo Python Web API marsruutidega products ja customers, jaga see 3 failiks".
-- **Kasutage malle**. Sageli soovite rikastada oma suunamisi ettevõtte andmetega. Kasutage selleks malle. Mallides võivad olla muutujad, mida asendate tegelike andmetega.
+- **Määratlege kontekst**. Kontekst on oluline – mida täpsemalt saate määratleda, näiteks valdkond, teema jne, seda parem.
+- Piirake väljundit. Kui soovite kindlat arvu punkte või kindlat pikkust, siis määratlege see.
+- **Määratlege nii mida kui ka kuidas**. Ärge unustage mainida nii seda, mida soovite, kui ka seda, kuidas te seda soovite, näiteks "Loo Python Web API marsruutidega products ja customers, jaga see 3 failiks".
+- **Kasutage malle**. Sageli soovite rikastada oma suuniseid oma ettevõtte andmetega. Kasutage selleks malle. Mallid võivad sisaldada muutujaid, mida asendate tegelike andmetega.
 - **Kirjutage õigesti**. LLM-id võivad anda teile õige vastuse, kuid kui kirjutate õigesti, saate parema vastuse.
 
 ## Ülesanne
 
-Siin on Pythonis kirjutatud kood, mis näitab, kuidas luua lihtsat API-d Flaski abil:
+Siin on Pythonis kood, mis näitab, kuidas luua lihtsat API-d kasutades Flaski:
 
 ```python
 from flask import Flask, request
@@ -611,39 +612,39 @@ def hello():
 if __name__ == '__main__':
     app.run()
 ```
-
-Kasutage AI assistenti, nagu GitHub Copilot või ChatGPT, ja rakendage "self-refine" tehnikat koodi täiustamiseks.
+  
+Kasutage AI assistenti nagu GitHub Copilot või ChatGPT ja rakendage "self-refine" tehnikat, et koodi täiustada.
 
 ## Lahendus
 
-Proovige ülesannet lahendada, lisades koodile sobivaid suunamisi.
+Proovige ülesannet lahendada, lisades koodile sobivaid suuniseid.
 
-> [!TIP]
-> Sõnastage suunamine, et paluda koodi täiustada; hea mõte on piirata, kui palju täiustusi tehakse. Samuti võite paluda täiustada seda teatud viisil, näiteks arhitektuuri, jõudluse, turvalisuse jne osas.
+> [!TIP]  
+> Sõnastage suunis, et paluda koodi täiustada; hea mõte on piirata, kui palju täiustusi tehakse. Samuti võite paluda täiustada seda teatud viisil, näiteks arhitektuuri, jõudluse, turvalisuse jne osas.
 
 [Lahendus](../../../05-advanced-prompts/python/aoai-solution.py)
 
 ## Teadmiste kontroll
 
-Miks ma kasutaksin chain-of-thought suunamist? Näidake mulle 1 õiget vastust ja 2 valet vastust.
+Miks ma peaksin kasutama chain-of-thought suunamist? Näidake mulle 1 õiget vastust ja 2 vale vastust.
 
-1. Õpetada LLM-ile, kuidas probleemi lahendada.
-1. B, Õpetada LLM-ile, kuidas leida vigu koodis.
-1. C, Juhendada LLM-i leidma erinevaid lahendusi.
+1. Õpetada LLM-ile, kuidas probleemi lahendada.  
+1. B, Õpetada LLM-ile, kuidas koodis vigu leida.  
+1. C, Juhendada LLM-i leidma erinevaid lahendusi.  
 
 A: 1, sest chain-of-thought seisneb selles, et näidata LLM-ile, kuidas probleemi lahendada, pakkudes sellele sammude jada, sarnaseid probleeme ja nende lahendusi.
 
 ## 🚀 Väljakutse
 
-Te just kasutasite ülesandes self-refine tehnikat. Võtke mõni programm, mille olete loonud, ja mõelge, milliseid täiustusi sooviksite sellele rakendada. Kasutage nüüd self-refine tehnikat, et kavandatud muudatused rakendada. Mis te arvate, kas tulemus oli parem või halvem?
+Te just kasutasite self-refine tehnikat ülesandes. Võtke mõni programm, mille olete loonud, ja mõelge, milliseid täiustusi sooviksite sellele rakendada. Nüüd kasutage self-refine tehnikat, et rakendada kavandatud muudatusi. Mis te arvate, kas tulemus oli parem või halvem?
 
 ## Suurepärane töö! Jätkake õppimist
 
 Pärast selle õppetunni lõpetamist vaadake meie [Generatiivse AI õppekollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse AI teadmiste arendamist!
 
-Liikuge edasi 6. õppetundi, kus rakendame oma teadmisi suunamise inseneeriast, [luues tekstigeneratsiooni rakendusi](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst).
+Liikuge edasi 6. õppetundi, kus rakendame oma teadmisi suunamistehnikatest, [luues tekstigeneratsiooni rakendusi](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 **Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta arusaamatuste või valede tõlgenduste eest, mis võivad tekkida selle tõlke kasutamise tõttu.
