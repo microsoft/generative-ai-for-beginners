@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f71b15f52ad5f493f2d0fca9c2c6832c",
-  "translation_date": "2025-10-11T11:12:45+00:00",
+  "original_hash": "5b8a98d103818ddf6f3a41f119738b24",
+  "translation_date": "2025-10-24T10:25:35+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
 -->
-![Generatiivne tehisintellekt algajatele](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.et.png)
+![Generatiivne AI algajatele](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.et.png)
 
-### 21 õppetundi, mis õpetavad kõike, mida on vaja teada generatiivse tehisintellekti rakenduste loomiseks
+### 21 õppetundi, mis õpetavad kõike, mida on vaja teada generatiivse AI rakenduste loomiseks
 
 [![GitHub litsents](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub kaastöölised](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -25,23 +25,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Mitmekeelne tugi
 
-#### Toetatud GitHub Actioni kaudu (automaatne ja alati ajakohane)
+#### Toetatud GitHub Actioni kaudu (automaatselt ja alati ajakohane)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# Generatiivne tehisintellekt algajatele (Versioon 3) - Kursus
+# Generatiivne AI algajatele (Versioon 3) - Kursus
 
-Õpi generatiivse tehisintellekti rakenduste loomise põhitõdesid meie 21-õppetunniga Microsofti Cloud Advocates'i kursusel.
+Õpi generatiivse AI rakenduste loomise põhitõdesid meie 21-õppetunniga Microsoft Cloud Advocates'i kursusel.
 
 ## 🌱 Alustamine
 
-Kursus sisaldab 21 õppetundi. Iga õppetund käsitleb oma teemat, seega alusta sealt, kus soovid!
+Kursus sisaldab 21 õppetundi. Iga õppetund käsitleb oma teemat, seega võid alustada endale sobivast kohast!
 
-Õppetunnid on märgistatud kas "Õpi" õppetundidena, mis selgitavad generatiivse tehisintellekti kontseptsiooni, või "Loo" õppetundidena, mis sisaldavad kontseptsiooni ja koodinäiteid nii **Pythonis** kui **TypeScriptis**, kui võimalik.
+Õppetunnid on märgistatud kas "Õpi" õppetundidena, mis selgitavad generatiivse AI kontseptsiooni, või "Loo" õppetundidena, mis selgitavad kontseptsiooni ja sisaldavad koodinäiteid nii **Pythonis** kui ka **TypeScriptis**, kui võimalik.
 
-.NET arendajatele: vaata [Generatiivne tehisintellekt algajatele (.NET versioon)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+.NET arendajatele: vaata [Generatiivne AI algajatele (.NET versioon)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
 Iga õppetund sisaldab ka "Jätka õppimist" sektsiooni täiendavate õppematerjalidega.
 
@@ -50,8 +50,8 @@ Iga õppetund sisaldab ka "Jätka õppimist" sektsiooni täiendavate õppematerj
  - [Azure OpenAI teenust](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Õppetunnid:** "aoai-assignment"
  - [GitHub Marketplace mudelikataloogi](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Õppetunnid:** "githubmodels"
  - [OpenAI API-d](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Õppetunnid:** "oai-assignment" 
-
-- Põhiteadmised Pythonist või TypeScriptist on kasulikud - \*Algajatele soovitame neid [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ja [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) kursusi
+   
+- Põhiteadmised Pythonist või TypeScriptist on kasulikud - \*Täiesti algajatele soovitame neid [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ja [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) kursusi
 - GitHubi konto, et [forkida kogu see repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) oma GitHubi kontole
 
 Oleme loonud **[Kursuse seadistamise](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** õppetunni, mis aitab sul arenduskeskkonda seadistada.
@@ -60,11 +60,11 @@ Oleme loonud **[Kursuse seadistamise](./00-course-setup/README.md?WT.mc_id=acade
 
 ## 🧠 Valmis juurutamiseks?
 
-Kui otsid keerukamaid koodinäiteid, vaata meie [Generatiivse tehisintellekti koodinäidete kogumikku](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) nii **Pythonis** kui **TypeScriptis**.
+Kui otsid keerukamaid koodinäiteid, vaata meie [Generatiivse AI koodinäidete kogumikku](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) nii **Pythonis** kui ka **TypeScriptis**.
 
 ## 🗣️ Kohtu teiste õppijatega, saa tuge
 
-Liitu meie [ametliku Azure AI Foundry Discord serveriga](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), et kohtuda ja suhelda teiste õppijatega, kes seda kursust läbivad, ning saada tuge.
+Liitu meie [ametliku Azure AI Foundry Discord serveriga](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), et kohtuda ja suhelda teiste õppijatega, kes võtavad osa sellest kursusest, ning saada tuge.
 
 Esita küsimusi või jaga tagasisidet meie [Azure AI Foundry arendajate foorumis](https://aka.ms/azureaifoundry/forum) GitHubis.
 
@@ -72,9 +72,9 @@ Esita küsimusi või jaga tagasisidet meie [Azure AI Foundry arendajate foorumis
 
 Külasta [Microsoft for Startups](https://www.microsoft.com/startups), et saada teada, kuidas alustada Azure'i krediitidega juba täna.
 
-## 🙏 Soovid aidata?
+## 🙏 Tahad aidata?
 
-Kas sul on ettepanekuid või leidsid kirjavigu või koodivigu? [Esita probleem](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) või [Loo tõmbepäring](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Kas sul on ettepanekuid või leidsid kirjavigu või koodivigu? [Tõsta probleem](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) või [Loo tõmbepäring](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 Iga õppetund sisaldab:
 
@@ -88,64 +88,81 @@ Kas sul on ettepanekuid või leidsid kirjavigu või koodivigu? [Esita probleem](
 | #   | **Õppetunni link**                                                                                                                              | **Kirjeldus**                                                                                 | **Video**                                                                   | **Lisamaterjalid**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 00  | [Kursuse seadistamine](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Õpi:** Kuidas seadistada oma arenduskeskkonda                                            | Video tulekul                                                                 | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Sissejuhatus generatiivsesse tehisintellekti ja LLM-idesse](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Õpi:** Mis on generatiivne tehisintellekt ja kuidas töötavad suured keelemudelid (LLM-id).       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Sissejuhatus generatiivsesse AI-sse ja LLM-idesse](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Õpi:** Mis on generatiivne AI ja kuidas töötavad suured keelemudelid (LLM-id).       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 02  | [Erinevate LLM-ide uurimine ja võrdlemine](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Õpi:** Kuidas valida oma kasutusjuhtumi jaoks sobiv mudel                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Generatiivse tehisintellekti vastutustundlik kasutamine](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Õpi:** Kuidas luua generatiivse tehisintellekti rakendusi vastutustundlikult                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Prompt Engineering'i põhialuste mõistmine](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Õpi:** Praktilised parimad tavad Prompt Engineering'is                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Täiustatud promptide loomine](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Õpi:** Kuidas rakendada promptide inseneritehnikaid, mis parandavad promptide tulemusi. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Tekstiloome rakenduste loomine](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Loo:** Tekstiloome rakendus, kasutades Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Vestlusrakenduste loomine](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Loo:** Tehnikad vestlusrakenduste tõhusaks loomiseks ja integreerimiseks.                       | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Otsingurakenduste loomine vektorpõhiste andmebaasidega](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)      | **Loo:** Otsingurakendus, mis kasutab andmete otsimiseks vektorpõhiseid sisendeid.                | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Pildiloome rakenduste loomine](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                              | **Loo:** Pildiloome rakendus                                                                     | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Madalakoodiliste tehisintellekti rakenduste loomine](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)   | **Loo:** Generatiivse tehisintellekti rakendus, kasutades madalakoodilisi tööriistu              | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Väliste rakenduste integreerimine funktsioonikutsumisega](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Loo:** Mis on funktsioonikutsumine ja selle kasutusvõimalused rakendustes                     | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Kasutajakogemuse kujundamine tehisintellekti rakendustele](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) | **Õpi:** Kuidas rakendada kasutajakogemuse disaini põhimõtteid generatiivse tehisintellekti rakenduste arendamisel | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Generatiivse tehisintellekti rakenduste turvamine](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)              | **Õpi:** Tehisintellekti süsteemide ohud ja riskid ning meetodid nende turvamiseks.              | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Generatiivse tehisintellekti rakenduste elutsükkel](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst) | **Õpi:** Tööriistad ja mõõdikud LLM-i elutsükli ja LLMOpsi haldamiseks                           | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) ja vektorpõhised andmebaasid](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) | **Loo:** Rakendus, mis kasutab RAG-raamistikku vektorpõhistest andmebaasidest sisendite hankimiseks | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Avatud lähtekoodiga mudelid ja Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                         | **Loo:** Rakendus, mis kasutab Hugging Face'i avatud lähtekoodiga mudeleid                       | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [Tehisintellekti agendid](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                      | **Loo:** Rakendus, mis kasutab tehisintellekti agentide raamistikku                              | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLM-ide peenhäälestamine](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                   | **Õpi:** Mis on LLM-ide peenhäälestamine, miks ja kuidas seda teha                              | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [SLM-idega ehitamine](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **Õpi:** Väikeste keelemudelitega ehitamise eelised                                              | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Mistrali mudelitega ehitamine](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                  | **Õpi:** Mistrali mudeliperekonna omadused ja erinevused                                         | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Meta mudelitega ehitamine](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                         | **Õpi:** Meta mudeliperekonna omadused ja erinevused                                             | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Generatiivse AI vastutustundlik kasutamine](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Õpi:** Kuidas ehitada generatiivse AI rakendusi vastutustundlikult                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Prompt Engineering põhialuste mõistmine](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Õpi:** Praktilised parimad tavad prompt engineering'is                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Täiustatud promptide loomine](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Õpi:** Kuidas rakendada prompt engineering'i tehnikaid, mis parandavad promptide tulemusi. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Loe rohkem](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Tekstigeneratsiooni rakenduste loomine](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Loo:** Tekstigeneratsiooni rakendus, kasutades Azure OpenAI / OpenAI API-d                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Vestlusrakenduste loomine](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Loo:** Tõhusad tehnikad vestlusrakenduste loomiseks ja integreerimiseks.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Otsingurakenduste loomine ja vektordatabased](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Loo:** Otsingurakendus, mis kasutab andmete otsimiseks Embeddingsi.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Pildigeneratsiooni rakenduste loomine](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Loo:** Pildigeneratsiooni rakendus                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Madala koodiga tehisintellekti rakenduste loomine](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Loo:** Generatiivse tehisintellekti rakendus, kasutades madala koodiga tööriistu                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Väliste rakenduste integreerimine funktsioonikutsumisega](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Loo:** Mis on funktsioonikutsumine ja selle kasutusvõimalused rakendustes                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [UX disain tehisintellekti rakenduste jaoks](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Õpi:** Kuidas rakendada UX disaini põhimõtteid generatiivse tehisintellekti rakenduste arendamisel         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Generatiivse tehisintellekti rakenduste turvalisus](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Õpi:** Tehisintellekti süsteemide ohud ja riskid ning meetodid nende süsteemide turvamiseks.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Generatiivse tehisintellekti rakenduste elutsükkel](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Õpi:** Tööriistad ja mõõdikud LLM-i elutsükli ja LLMOpsi haldamiseks                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Tagasitoomisega täiustatud generatsioon (RAG) ja vektordatabased](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Loo:** Rakendus, mis kasutab RAG raamistikku, et tuua vektordatabasedest välja embeddingsid  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Avatud lähtekoodiga mudelid ja Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Loo:** Rakendus, kasutades Hugging Face'i avatud lähtekoodiga mudeleid                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [Tehisintellekti agendid](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Loo:** Rakendus, kasutades tehisintellekti agentide raamistikku                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [LLM-ide peenhäälestamine](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Õpi:** Mis on LLM-ide peenhäälestamine, miks seda teha ja kuidas seda teha                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [SLM-idega töötamine](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Õpi:** Väikeste keelemudelitega töötamise eelised                                            | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Mistrali mudelitega töötamine](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Õpi:** Mistrali mudelite perekonna omadused ja erinevused                                           | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Meta mudelitega töötamine](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Õpi:** Meta mudelite perekonna omadused ja erinevused                                           | Video tulekul | [Loe lähemalt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-### 🌟 Erilised tänud
+### 🌟 Eriline tänu
 
-Erilised tänud [**John Aziz**](https://www.linkedin.com/in/john0isaac/) kõigi GitHub Actions'i ja töövoogude loomise eest.
+Eriline tänu [**John Aziz**](https://www.linkedin.com/in/john0isaac/) kõigi GitHub Actionsi ja töövoogude loomise eest.
 
 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) oluliste panuste eest igasse õppetundi, et parandada õppija ja koodi kogemust.
 
-## 🎒 Teised kursused
+## 🎒 Muud kursused
 
-Meie meeskond loob ka teisi kursusi! Vaata:
+Meie tiim loob ka teisi kursusi! Vaata:
 
-- [**UUS** Edge AI algajatele](https://github.com/microsoft/edgeai-for-beginners)
-- [Mudeli konteksti protokoll algajatele](https://github.com/microsoft/mcp-for-beginners)
-- [Tehisintellekti agendid algajatele](https://github.com/microsoft/ai-agents-for-beginners)
-- [Generatiivne tehisintellekt algajatele, kasutades .NET-i](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)
-- [Generatiivne tehisintellekt algajatele, kasutades JavaScripti](https://aka.ms/genai-js-course)
-- [Generatiivne tehisintellekt algajatele, kasutades Java-t](https://aka.ms/genaijava)
-- [Masinõpe algajatele](https://aka.ms/ml-beginners)
-- [Andmeteadus algajatele](https://aka.ms/datascience-beginners)
-- [Tehisintellekt algajatele](https://aka.ms/ai-beginners)
-- [Küberjulgeolek algajatele](https://github.com/microsoft/Security-101)
-- [Veebiarendus algajatele](https://aka.ms/webdev-beginners)
-- [IoT algajatele](https://aka.ms/iot-beginners)
-- [XR-arendus algajatele](https://github.com/microsoft/xr-development-for-beginners)
-- [GitHub Copiloti meistriklass AI paarisprogrammeerimiseks](https://aka.ms/GitHubCopilotAI)
-- [GitHub Copiloti meistriklass C#/.NET arendajatele](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)
-- [Vali oma Copiloti seiklus](https://github.com/microsoft/CopilotAdventures)
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### Azure / Edge / MCP / Agendid
+[![AZD algajatele](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI algajatele](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP algajatele](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Tehisintellekti agendid algajatele](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
-## Abi saamine
+---
+ 
+### Generatiivse tehisintellekti sari
+[![Generatiivne tehisintellekt algajatele](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne tehisintellekt (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne tehisintellekt (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generatiivne tehisintellekt (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
-Kui jääd hätta või sul on küsimusi tehisintellekti rakenduste loomise kohta, liitu:
+---
+ 
+### Põhikursused
+[![Masinõpe algajatele](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Andmeteadus algajatele](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Tehisintellekt algajatele](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Küberturvalisus algajatele](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Veebiarendus algajatele](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT algajatele](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)  
+[![XR arendus algajatele](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)
+---
 
-Kui sul on tootetagasisidet või esineb vigu ehitamise ajal, külasta:
+### Copiloti sari  
+[![Copilot AI-põhiseks paarisprogrammeerimiseks](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)  
+[![Copilot C#/.NET jaoks](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Copiloti seiklus](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)
+## Abi saamine  
+
+Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu:  
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)  
+
+Kui sul on tagasisidet toodete kohta või esineb vigu, külastage:  
+
+[![Azure AI Foundry arendajate foorum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)  
 
 ---
 
