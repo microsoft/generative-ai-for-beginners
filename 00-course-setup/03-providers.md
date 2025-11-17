@@ -97,7 +97,7 @@ This will take you to the Azure OpenAI Studio website, where we'll find the othe
 1. You will need a _text-generation_ model - we recommend: **gpt-35-turbo**
 1. You will need a _text-embedding_ model - we recommend **text-embedding-ada-002**
 
-Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explcitly. So, as an example, you might have:
+Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explicitly. So, as an example, you might have:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
