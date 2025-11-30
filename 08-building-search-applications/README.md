@@ -1,6 +1,6 @@
 # Building a Search Applications
 
-[![Introduction to Generative AI and Large Language Models](./images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Introduction to Generative AI and Large Language Models](./images/08-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Click the image above to view video of this lesson_
 

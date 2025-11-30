@@ -1,12 +1,12 @@
 # Creating Advanced prompts
 
-[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst?WT.mc_id=academic-105485-koreyst)
+[![Creating Advanced Prompts](./images/05-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Let's recap some learnings from the previous chapter:
 
 > Prompt _engineering_ is the process by which we **guide the model towards more relevant responses** by providing more useful instructions or context.
 
-There are also two steps to writing prompts, constructing the prompt, by providing relevant context and the second part is _optimization_, how to gradually improve the prompt.
+There are also two steps to writing prompts: constructing the prompt, by providing relevant context, and _optimization_, how to gradually improve the prompt.
 
 At this point, we have some basic understanding of how to write prompts, but we need to go deeper. In this chapter, you will go from trying out various prompts to understanding why one prompt is better than another. You will learn how to construct prompts following some basic techniques that can be applied to any LLM.
 

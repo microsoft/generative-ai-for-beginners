@@ -1,6 +1,6 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Text Generation Applications](./images/06-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -42,7 +42,7 @@ Compare it to a command-based app where you type a command:
 
 So how is a text generation app different?
 
-In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that because you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited on what's in a database.
+In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited on what's in a database.
 
 ### What can I build with a text generation app?
 
@@ -646,7 +646,7 @@ What does the concept temperature do?
 
 ## 🚀 Challenge
 
-When working on the assignment, try to vary the temperature, try set it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most, what value works best for your app?
+When working on the assignment, try to vary the temperature, try setting it to 0, 0.5, and 1. Remember that 0 is the least varied and 1 is the most. What value works best for your app?
 
 ## Great Work! Continue Your Learning
 

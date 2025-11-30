@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T10:59:10+00:00",
+  "translation_date": "2025-07-09T19:01:13+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "fi"
 }
@@ -11,38 +11,38 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Johdanto
 
-Tässä oppitunnissa käsitellään:
-- Eri Mistral-mallien tutkimista
-- Kunkin mallin käyttötapauksien ja skenaarioiden ymmärtämistä
-- Koodiesimerkkejä, jotka näyttävät kunkin mallin ainutlaatuiset ominaisuudet.
+Tässä oppitunnissa käsitellään:  
+- Eri Mistral-mallien tutkimista  
+- Mallien käyttötarkoitusten ja tilanteiden ymmärtämistä  
+- Koodiesimerkit näyttävät kunkin mallin ainutlaatuiset ominaisuudet.
 
 ## Mistral-mallit
 
-Tässä oppitunnissa tutkimme kolmea eri Mistral-mallia: **Mistral Large**, **Mistral Small** ja **Mistral Nemo**.
+Tässä oppitunnissa tutustumme kolmeen eri Mistral-malliin:  
+**Mistral Large**, **Mistral Small** ja **Mistral Nemo**.
 
-Kaikki nämä mallit ovat ilmaiseksi saatavilla Github Model -markkinapaikalla. Tämän muistikirjan koodi käyttää näitä malleja koodin suorittamiseen. Tässä on lisätietoja Github Models -mallien käytöstä [AI-mallien prototyyppauksessa](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Jokainen näistä malleista on saatavilla ilmaiseksi Github Model -markkinapaikalla. Tässä muistikirjassa käytetään näitä malleja koodin suorittamiseen. Lisätietoja Github-mallien käytöstä [prototyyppien tekemiseen AI-malleilla](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) löytyy linkistä.
 
-## Mistral Large 2 (2407)
+## Mistral Large 2 (2407)  
+Mistral Large 2 on tällä hetkellä Mistralin lippulaivamalli ja suunniteltu yrityskäyttöön.
 
-Mistral Large 2 on tällä hetkellä Mistralin lippulaivamalli ja se on suunniteltu yrityskäyttöön.
+Malli on päivitys alkuperäiseen Mistral Largeen, ja se tarjoaa  
+- Suuremman kontekstin ikkunan – 128k vs 32k  
+- Paremmat suoritustulokset matematiikan ja koodauksen tehtävissä – 76,9 % keskimääräinen tarkkuus vs 60,4 %  
+- Parannetun monikielisen suorituskyvyn – kielet sisältävät: englanti, ranska, saksa, espanja, italia, portugali, hollanti, venäjä, kiina, japani, korea, arabia ja hindi.
 
-Malli on parannus alkuperäiseen Mistral Large -malliin tarjoamalla
-- Suurempi konteksti-ikkuna - 128k vs 32k
-- Parempi suorituskyky matematiikan ja koodauksen tehtävissä - 76,9 % keskimääräinen tarkkuus vs 60,4 %
-- Parempi monikielinen suorituskyky - kieliin kuuluvat: englanti, ranska, saksa, espanja, italia, portugali, hollanti, venäjä, kiina, japani, korea, arabia ja hindi.
+Näiden ominaisuuksien ansiosta Mistral Large on erinomainen  
+- *Retrieval Augmented Generation (RAG)* -suorituksissa suuren kontekstin ikkunan ansiosta  
+- *Function Calling* -mallissa on natiivi funktiokutsu, joka mahdollistaa integraation ulkoisten työkalujen ja API:en kanssa. Näitä kutsuja voidaan tehdä sekä rinnakkain että peräkkäin.  
+- *Koodin generoinnissa* - malli on erityisen hyvä Pythonin, Javan, TypeScriptin ja C++:n generoinnissa.
 
-Näillä ominaisuuksilla Mistral Large loistaa
-- *Hakuperustainen sukupolvi (RAG)* - suuremman konteksti-ikkunan ansiosta
-- *Funktiokutsut* - tämä malli tukee natiivisti funktiokutsuja, jotka mahdollistavat integraation ulkoisten työkalujen ja API:iden kanssa. Näitä kutsuja voidaan tehdä sekä rinnakkain että peräkkäin.
-- *Koodin generointi* - tämä malli on erinomainen Python-, Java-, TypeScript- ja C++-koodin generoinnissa.
+### RAG-esimerkki käyttäen Mistral Large 2:ta
 
-### RAG-esimerkki Mistral Large 2:lla
+Tässä esimerkissä käytämme Mistral Large 2:ta suorittamaan RAG-kuvion tekstidokumentille. Kysymys on kirjoitettu koreaksi ja koskee kirjoittajan toimia ennen yliopistoa.
 
-Tässä esimerkissä käytämme Mistral Large 2:ta suorittamaan RAG-kuvion tekstidokumentin yli. Kysymys on kirjoitettu koreaksi ja kysyy kirjoittajan toimista ennen yliopistoa.
+Se käyttää Cohere Embeddings -mallia luodakseen upotuksia tekstidokumentista sekä kysymyksestä. Tässä esimerkissä käytetään faiss Python -pakettia vektorivarastona.
 
-Se käyttää Cohere Embeddings Modelia luomaan tekstidokumentin ja kysymyksen upotukset. Tässä esimerkissä käytetään faiss Python -pakettia vektorivarastona.
-
-Mistral-mallille lähetetty kehotus sisältää sekä kysymykset että haetut kysymykseen liittyvät osat. Malli tarjoaa sitten luonnollisen kielen vastauksen.
+Mistral-mallille lähetetty kehotus sisältää sekä kysymykset että haetut tekstin osat, jotka ovat samankaltaisia kuin kysymys. Malli antaa sitten luonnollisen kielen vastauksen.
 
 ```python 
 pip install faiss-cpu
@@ -138,23 +138,22 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
+## Mistral Small  
+Mistral Small on toinen Mistral-perheen malli, joka kuuluu premier/enterprise-kategoriaan. Nimensä mukaisesti tämä on pieni kielimalli (SLM). Mistral Smallin käytön etuja ovat:  
+- Kustannussäästöt verrattuna Mistralin suuriin LLM-malleihin kuten Mistral Large ja NeMo – 80 % hinnanalennus  
+- Alhainen viive – nopeampi vastausaika verrattuna Mistralin LLM-malleihin  
+- Joustavuus – voidaan ottaa käyttöön eri ympäristöissä vähemmillä resurssivaatimuksilla.
 
-Mistral Small on toinen malli Mistral-malliperheessä premier/enterprise-kategoriassa. Kuten nimi viittaa, tämä malli on pieni kielimalli (SLM). Mistral Smallin käytön edut ovat, että se on:
-- Kustannustehokas verrattuna Mistral LLM:iin kuten Mistral Large ja NeMo - 80 % hinnan alennus
-- Alhainen viive - nopeampi vastaus verrattuna Mistralin LLM:iin
-- Joustava - voidaan ottaa käyttöön eri ympäristöissä vähemmillä resurssivaatimuksilla.
-
-Mistral Small on erinomainen:
-- Tekstipohjaisissa tehtävissä, kuten tiivistämisessä, sentimenttianalyysissä ja käännöksissä.
-- Sovelluksissa, joissa tehdään usein pyyntöjä sen kustannustehokkuuden vuoksi
-- Alhaisen viiveen kooditehtävissä, kuten tarkastelu ja koodiehdotukset
+Mistral Small sopii erinomaisesti:  
+- Tekstipohjaisiin tehtäviin, kuten tiivistämiseen, tunteiden analysointiin ja kääntämiseen  
+- Sovelluksiin, joissa tehdään usein pyyntöjä kustannustehokkuuden vuoksi  
+- Pieniviiveisiin kooditehtäviin, kuten koodin tarkasteluun ja ehdotuksiin
 
 ## Mistral Smallin ja Mistral Largen vertailu
 
-Näyttääksesi eroja viiveessä Mistral Smallin ja Largen välillä, suorita alla olevat solut.
+Näyttääksesi viive-erot Mistral Smallin ja Largen välillä, suorita alla olevat solut.
 
-Sinun pitäisi nähdä ero vasteajoissa 3-5 sekuntia. Huomioi myös vastausten pituudet ja tyyli samassa kehotuksessa.
+Vastausajoissa pitäisi näkyä 3–5 sekunnin ero. Huomioi myös vastausten pituudet ja tyyli samassa kehotteessa.
 
 ```python 
 
@@ -218,21 +217,21 @@ print(response.choices[0].message.content)
 
 Verrattuna muihin tässä oppitunnissa käsiteltyihin malleihin, Mistral NeMo on ainoa ilmainen malli, jolla on Apache2-lisenssi.
 
-Sitä pidetään parannuksena aiempaan avoimen lähdekoodin LLM:ään Mistralilta, Mistral 7B:hen.
+Sitä pidetään päivityksenä aiempaan Mistralin avoimen lähdekoodin LLM-malliin, Mistral 7B:hen.
 
-Muita NeMo-mallin ominaisuuksia ovat:
+Joitan muita NeMo-mallin ominaisuuksia ovat:
 
-- *Tehokkaampi tokenisointi:* Tämä malli käyttää Tekken-tokenisoijaa yleisemmin käytetyn tiktokenin sijaan. Tämä mahdollistaa paremman suorituskyvyn useammissa kielissä ja koodissa.
+- *Tehokkaampi tokenisointi:* Tämä malli käyttää Tekken-tokenisaattoria yleisemmin käytetyn tiktokenin sijaan. Tämä mahdollistaa paremman suorituskyvyn useammilla kielillä ja koodissa.
 
-- *Hienosäätö:* Perusmalli on saatavilla hienosäätöä varten. Tämä tarjoaa enemmän joustavuutta käyttötapauksissa, joissa hienosäätöä saatetaan tarvita.
+- *Hienosäätö:* Perusmalli on saatavilla hienosäätöä varten. Tämä antaa enemmän joustavuutta käyttötapauksiin, joissa hienosäätö voi olla tarpeen.
 
-- *Natiivi funktiokutsu* - Kuten Mistral Large, tämä malli on koulutettu funktiokutsuihin. Tämä tekee siitä ainutlaatuisen yhtenä ensimmäisistä avoimen lähdekoodin malleista, joka tekee niin.
+- *Natiivifunktiokutsu* – kuten Mistral Large, tämä malli on koulutettu funktiokutsuihin. Tämä tekee siitä ainutlaatuisen yhtenä ensimmäisistä avoimen lähdekoodin malleista, jolla tämä ominaisuus on.
 
-### Tokenisoijien vertailu
+### Tokenisaattoreiden vertailu
 
-Tässä esimerkissä tarkastelemme, kuinka Mistral NeMo käsittelee tokenisointia verrattuna Mistral Largeen.
+Tässä esimerkissä tarkastelemme, miten Mistral NeMo käsittelee tokenisointia verrattuna Mistral Largeen.
 
-Molemmat esimerkit käyttävät samaa kehotusta, mutta sinun pitäisi nähdä, että NeMo palauttaa vähemmän tokenia kuin Mistral Large.
+Molemmat esimerkit käyttävät samaa kehotetta, mutta NeMo palauttaa vähemmän tokeneita verrattuna Mistral Largeen.
 
 ```bash
 pip install mistral-common
@@ -352,7 +351,7 @@ print(len(tokens))
 
 ## Oppiminen ei lopu tähän, jatka matkaa
 
-Tämän oppitunnin jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generative AI -tietämyksesi kehittämistä!
+Oppitunnin suorittamisen jälkeen tutustu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) -kokoelmaamme ja jatka Generative AI -osaamisesi kehittämistä!
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta ole tietoinen siitä, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoriteettina. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa mahdollisista väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.

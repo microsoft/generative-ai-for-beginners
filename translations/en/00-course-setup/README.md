@@ -1,52 +1,66 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9f4785899ee92500f524b4acb26e3bb3",
-  "translation_date": "2025-05-19T12:16:21+00:00",
+  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
+  "translation_date": "2025-10-17T22:31:13+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "en"
 }
 -->
 # Getting Started with this course
 
-We are very excited for you to start this course and see what you get inspired to build with Generative AI!
+We are thrilled for you to begin this course and discover what you can create with Generative AI!
 
-To ensure your success, this page outlines setup steps, technical requirements, and where to get help if needed.
+To help you succeed, this page provides setup instructions, technical requirements, and guidance on where to find support if needed.
 
 ## Setup Steps
 
-To start taking this course, you will need to complete the following steps.
+To start this course, please follow these steps:
 
-### 1. Fork this Repo
+### 1. Fork this Repository
 
-[Fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos easier.
+[Fork this entire repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account so you can modify the code and complete the challenges. You can also [star (🌟) this repository](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to easily locate it and related repositories.
 
-### 2. Create a codespace
+### 2. Create a Codespace
 
-To avoid any dependency issues when running the code, we recommend running this course in a [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
+To avoid dependency issues when running the code, we recommend using [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) for this course.
 
-This can be created by selecting the `Code` option on your forked version of this repo and selecting the **Codespaces** option.
+In your fork: **Code -> Codespaces -> New on main**
 
 ![Dialog showing buttons to create a codespace](../../../00-course-setup/images/who-will-pay.webp)
 
-### 3. Storing Your API Keys
+#### 2.1 Add a Secret
 
-Keeping your API keys safe and secure is important when building any type of application. We recommend not to store any API keys directly in your code. Committing those details to a public repository could result in security issues and even unwanted costs if used by a bad actor. Here's a step-by-step guide on how to create a `.env` file for Python and add the `GITHUB_TOKEN`:
+1. ⚙️ Gear icon -> Command Palette -> Codespaces: Manage user secret -> Add a new secret.
+2. Name it OPENAI_API_KEY, paste your key, and save.
 
-1. **Navigate to Your Project Directory**: Open your terminal or command prompt and navigate to your project's root directory where you want to create the `.env` file.
+### 3. What’s next?
 
-   ```bash
-   cd path/to/your/project
-   ```
+| I want to…          | Go to…                                                                  |
+|---------------------|-------------------------------------------------------------------------|
+| Start Lesson 1      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Work offline        | [`setup-local.md`](02-setup-local.md)                                   |
+| Setup an LLM Provider | [`providers.md`](03-providers.md)                                        |
+| Meet other learners | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-2. **Create the `.env` File**: Use your preferred text editor to create a new file named `.env`. If you're using the command line, you can use `touch` (on Unix-based systems) or `echo` (on Windows):
+## Troubleshooting
+
+| Symptom                                   | Fix                                                             |
+|-------------------------------------------|-----------------------------------------------------------------|
+| Container build stuck > 10 min            | **Codespaces ➜ “Rebuild Container”**                            |
+| `python: command not found`               | Terminal didn’t attach; click **+** ➜ *bash*                    |
+| `401 Unauthorized` from OpenAI            | Incorrect or expired `OPENAI_API_KEY`                           |
+| VS Code shows “Dev container mounting…”   | Refresh the browser tab—Codespaces sometimes loses connection   |
+| Notebook kernel missing                   | Notebook menu ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
 
    Unix-based systems:
+
    ```bash
    touch .env
    ```
 
    Windows:
+
    ```cmd
    echo . > .env
    ```
@@ -82,80 +96,79 @@ Keeping your API keys safe and secure is important when building any type of app
 
 That's it! You've successfully created a `.env` file, added your GitHub token, and loaded it into your Python application.
 
-## How to Run locally on your computer
+## How to Run Locally on Your Computer
 
-To run the code locally on your computer, you would need to have some version of [Python installed](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+To run the code locally on your computer, you need to have a version of [Python installed](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-To then use the repository, you need to clone it:
+To use the repository, clone it:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Once you have everything checked out, you can get started!
+Once everything is set up, you can start working!
 
 ## Optional Steps
 
 ### Installing Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, as well as a few packages. Conda itself is a package manager, that makes it easy to setup and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It also comes in handy for installing packages that are not available via `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is a lightweight installer for [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, and some packages. Conda is a package manager that simplifies setting up and switching between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. It’s also useful for installing packages not available via `pip`.
 
-You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
+Follow the [Miniconda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
 
-With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
+Once Miniconda is installed, clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven’t already).
 
-Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
+Next, create a virtual environment. Using Conda, create a new environment file (_environment.yml_). If you’re using Codespaces, create this file within the `.devcontainer` directory, so it becomes `.devcontainer/environment.yml`.
 
-Go ahead and populate your environment file with the snippet below:
+Add the following snippet to your environment file:
 
 ```yml
 name: <environment-name>
 channels:
- - defaults
- - microsoft
+  - defaults
+  - microsoft
 dependencies:
-- python=<python-version>
-- openai
-- python-dotenv
-- pip
-- pip:
-    - azure-ai-ml
-
+  - python=<python-version>
+  - openai
+  - python-dotenv
+  - pip
+  - pip:
+      - azure-ai-ml
 ```
 
-If you find you getting errors using conda you can manually install the Microsoft AI Libraries using the following command in a terminal.
+If you encounter errors with Conda, you can manually install the Microsoft AI Libraries using the following command in a terminal:
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-The environment file specifies the dependencies we need. `<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` is the latest major version of Python.
+The environment file specifies the required dependencies. `<environment-name>` is the name you want for your Conda environment, and `<python-version>` is the Python version you want to use, e.g., `3` for the latest major version.
 
-With that done, you can go ahead and create your Conda environment by running the commands below in your command line/terminal
+Once done, create your Conda environment by running the following commands in your terminal:
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
 conda activate ai4beg
 ```
 
-Refer to the [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) if you run into any issues.
+Refer to the [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) if you encounter any issues.
 
-### Using Visual Studio Code with the Python support extension
+### Using Visual Studio Code with the Python Support Extension
 
-We recommend using the [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) editor with the [Python support extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) installed for this course. This is, however, more of a recommendation and not a definite requirement
+We recommend using [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) with the [Python support extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) installed for this course. However, this is just a recommendation, not a strict requirement.
 
-> **Note**: By opening the course repository in VS Code, you have the option to set the project up within a container. This is because of the [special `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) directory found within the course repository. More on this later.
+> **Note**: Opening the course repository in VS Code allows you to set up the project within a container, thanks to the [special `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) directory in the repository. More details on this later.
 
-> **Note**: Once you clone and open the directory in VS Code, it will automatically suggest you install a Python support extension.
+> **Note**: Once you clone and open the directory in VS Code, it will suggest installing the Python support extension.
 
-> **Note**: If VS Code suggests you re-open the repository in a container, decline this request in order to use the locally installed version of Python.
+> **Note**: If VS Code suggests reopening the repository in a container, decline this request to use the locally installed version of Python.
 
 ### Using Jupyter in the Browser
 
-You can also work on the project using the [Jupyter environment](https://jupyter.org?WT.mc_id=academic-105485-koreyst) right within your browser. Both classic Jupyter and [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) provide quite a pleasant development environment with features such as auto-completion, code highlighting, etc.
+You can also work on the project using the [Jupyter environment](https://jupyter.org?WT.mc_id=academic-105485-koreyst) directly in your browser. Both classic Jupyter and [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) offer a great development experience with features like auto-completion and code highlighting.
 
-To start Jupyter locally, head over to the terminal/command line, navigate to the course directory, and execute:
+To start Jupyter locally, open your terminal, navigate to the course directory, and run:
 
 ```bash
 jupyter notebook
@@ -167,57 +180,56 @@ or
 jupyterhub
 ```
 
-This will start a Jupyter instance and the URL to access it will be shown within the command line window.
+This will start a Jupyter instance, and the URL to access it will be displayed in the terminal.
 
-Once you access the URL, you should see the course outline and be able to navigate to any `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
+Once you access the URL, you’ll see the course outline and can navigate to any `*.ipynb` file, such as `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Running in a container
+### Running in a Container
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+Another option for setting up the project is using a [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). The `.devcontainer` folder in the course repository allows VS Code to set up the project in a container. Outside of Codespaces, this requires installing Docker, which can be more complex, so we recommend this option for those experienced with containers.
 
-One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
+One of the best ways to keep your API keys secure when using GitHub Codespaces is by utilizing Codespace Secrets. Check out the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide for more information.
 
 ## Lessons and Technical Requirements
 
-The course has 6 concept lessons and 6 coding lessons.
+The course includes 6 concept lessons and 6 coding lessons.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+For the coding lessons, we use the Azure OpenAI Service. You’ll need access to the Azure OpenAI service and an API key to run the code. You can apply for access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` file where you can view the code and outputs.
+While waiting for your application to be processed, each coding lesson includes a `README.md` file where you can review the code and outputs.
 
-## Using the Azure OpenAI Service for the first time
+## Using the Azure OpenAI Service for the First Time
 
-If this is your first time working with the Azure OpenAI service, please follow this guide on how to [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+If you’re new to the Azure OpenAI service, follow this guide to [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## Using the OpenAI API for the first time
+## Using the OpenAI API for the First Time
 
-If this is your first time working with the OpenAI API, please follow the guide on how to [create and use the Interface.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+If you’re new to the OpenAI API, follow this guide to [create and use the Interface.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
 ## Meet Other Learners
 
-We have created channels in our official [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) for meeting other learners. This is a great way to network with other like-minded entrepreneurs, builders, students, and anyone looking to level up in Generative AI.
+We’ve set up channels in our official [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) for connecting with other learners. It’s a great way to network with entrepreneurs, developers, students, and others interested in advancing their skills in Generative AI.
 
 [![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-The project team will also be on this Discord server to help any learners.
+The project team will also be available on this Discord server to assist learners.
 
 ## Contribute
 
-This course is an open-source initiative. If you see areas of improvement or issues, please create a [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) or log a [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+This course is an open-source project. If you notice areas for improvement or issues, feel free to submit a [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) or report a [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-The project team will be tracking all contributions. Contributing to open source is an amazing way to build your career in Generative AI.
+The project team will track all contributions. Contributing to open source is a fantastic way to advance your career in Generative AI.
 
-Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to and actually do, grant us the rights to use your contribution. For details, visit [CLA, Contributor License Agreement website](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+Most contributions require you to agree to a Contributor License Agreement (CLA), which confirms that you have the rights to grant us permission to use your contribution. For more details, visit the [CLA, Contributor License Agreement website](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
+When you submit a pull request, a CLA-bot will automatically check if you need to provide a CLA and will label the PR accordingly. Follow the bot’s instructions. You only need to do this once across all repositories using our CLA.
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). For more information read the Code of Conduct FAQ or contact [Email opencode](opencode@microsoft.com) with any additional questions or comments.
+This project adheres to the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). For more information, read the Code of Conduct FAQ or contact [Email opencode](opencode@microsoft.com) with any questions or comments.
 
 ## Let's Get Started
+Now that you have finished the necessary steps to complete this course, let's begin with an [introduction to Generative AI and LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
-Now that you have completed the needed steps to complete this course, let's get started by getting an [introduction to Generative AI and LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+---
 
 **Disclaimer**:  
-This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

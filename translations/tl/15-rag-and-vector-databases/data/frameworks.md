@@ -2,122 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:04:29+00:00",
+  "translation_date": "2025-07-09T16:35:21+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "tl"
 }
 -->
-# Mga Framework ng Neural Network
+# Neural Network Frameworks
 
-Tulad ng ating natutunan, para makapagsanay ng neural networks nang epektibo, kailangan nating gawin ang dalawang bagay:
+Tulad ng natutunan na natin, para maging epektibo ang pagsasanay ng neural networks, kailangan nating gawin ang dalawang bagay:
 
-* Mag-operate sa tensors, halimbawa, mag-multiply, mag-add, at mag-compute ng ilang mga function tulad ng sigmoid o softmax
-* Mag-compute ng gradients ng lahat ng expressions, upang maisagawa ang gradient descent optimization
+* Mag-operate sa tensors, halimbawa, mag-multiply, mag-add, at mag-compute ng ilang functions tulad ng sigmoid o softmax
+* Mag-compute ng gradients ng lahat ng expressions, para magawa ang gradient descent optimization
 
-Habang ang `numpy` na library ay maaaring gawin ang unang bahagi, kailangan natin ng mekanismo para mag-compute ng gradients. Sa ating framework na ating dinevelop sa nakaraang seksyon, kailangan nating i-programa nang mano-mano ang lahat ng derivative functions sa loob ng `backward` na method, na gumagawa ng backpropagation. Ideal na ang isang framework ay dapat magbigay sa atin ng kakayahang mag-compute ng gradients ng *anumang expression* na maari nating idefine.
+Habang kaya ng `numpy` library ang unang bahagi, kailangan natin ng mekanismo para mag-compute ng gradients. Sa framework na ginawa natin sa nakaraang bahagi, kailangang mano-manong i-program ang lahat ng derivative functions sa loob ng `backward` method, na siyang gumagawa ng backpropagation. Sa ideal, dapat bigyan tayo ng framework ng pagkakataon na makapag-compute ng gradients ng *anumang expression* na kaya nating idefine.
 
-Isa pang mahalagang bagay ay ang kakayahang magpatupad ng computations sa GPU, o anumang iba pang espesyal na compute units, tulad ng TPU. Ang deep neural network training ay nangangailangan ng *napakaraming* computations, at ang kakayahang i-parallelize ang mga computations na ito sa GPUs ay napakahalaga.
+Isa pang mahalagang bagay ay ang kakayahang magpatakbo ng computations sa GPU, o sa iba pang specialized compute units tulad ng TPU. Ang pagsasanay ng malalalim na neural networks ay nangangailangan ng *maraming* computations, kaya napakahalaga na maiparallelize ang mga computations na ito sa GPUs.
 
-> ✅ Ang terminong 'parallelize' ay nangangahulugang ipamahagi ang computations sa maraming devices.
+> ✅ Ang ibig sabihin ng 'parallelize' ay ang paghati-hati ng computations sa maraming devices.
 
-Sa kasalukuyan, ang dalawang pinakasikat na neural frameworks ay: TensorFlow at PyTorch. Pareho silang nagbibigay ng low-level API upang mag-operate gamit ang tensors sa parehong CPU at GPU. Sa ibabaw ng low-level API, mayroon ding higher-level API, na tinatawag na Keras at PyTorch Lightning ayon sa pagkakabanggit.
+Sa kasalukuyan, ang dalawang pinakasikat na neural frameworks ay: TensorFlow at PyTorch. Pareho silang nagbibigay ng low-level API para mag-operate sa tensors sa parehong CPU at GPU. Bukod sa low-level API, mayroon ding high-level API, na tinatawag na Keras at PyTorch Lightning, ayon sa pagkakasunod.
 
-Low-Level API | TensorFlow| PyTorch
---------------|-------------------------------------|--------------------------------
-High-level API| Keras| Pytorch
+Low-Level API | TensorFlow | PyTorch  
+--------------|-------------|---------  
+High-level API| Keras       | PyTorch
 
-**Low-level APIs** sa parehong frameworks ay nagpapahintulot sa iyo na bumuo ng tinatawag na **computational graphs**. Ang graph na ito ay nagde-define kung paano i-compute ang output (karaniwan ay ang loss function) gamit ang mga input parameters, at maaaring i-push para sa computation sa GPU, kung ito ay available. May mga function para i-differentiate ang computational graph na ito at mag-compute ng gradients, na maaaring gamitin para i-optimize ang mga model parameters.
+**Ang Low-level APIs** sa parehong frameworks ay nagpapahintulot sa iyo na bumuo ng tinatawag na **computational graphs**. Ang graph na ito ang nagdedetalye kung paano makukuha ang output (karaniwan ay loss function) gamit ang mga input parameters, at maaaring ipasa para sa computation sa GPU kung available ito. May mga functions para i-differentiate ang computational graph na ito at mag-compute ng gradients, na magagamit para i-optimize ang mga model parameters.
 
-**High-level APIs** ay halos itinuturing ang neural networks bilang isang **sequence ng layers**, at ginagawa nitong mas madali ang pagbuo ng karamihan sa mga neural networks. Ang pagsasanay sa model ay karaniwang nangangailangan ng paghahanda ng data at pagkatapos ay pagtawag sa isang `fit` na function upang gawin ang trabaho.
+**Ang High-level APIs** ay tinitingnan ang neural networks bilang isang **sunod-sunod na mga layers**, at pinapadali ang pagbuo ng karamihan sa mga neural networks. Karaniwan, ang pagsasanay ng modelo ay nangangailangan ng paghahanda ng data at pagkatapos ay pagtawag sa `fit` function para gawin ang trabaho.
 
-Ang high-level API ay nagpapahintulot sa iyo na bumuo ng karaniwang neural networks nang mabilis nang hindi kinakailangang mag-alala sa maraming detalye. Kasabay nito, ang low-level API ay nag-aalok ng mas maraming kontrol sa proseso ng pagsasanay, at sa gayon ay madalas na ginagamit sa pananaliksik, kapag nakikitungo ka sa mga bagong neural network architectures.
+Pinapahintulutan ka ng high-level API na mabilis makabuo ng mga karaniwang neural networks nang hindi iniintindi ang maraming detalye. Sa kabilang banda, ang low-level API ay nagbibigay ng mas malawak na kontrol sa proseso ng pagsasanay, kaya madalas itong ginagamit sa pananaliksik, lalo na kapag gumagawa ng mga bagong neural network architectures.
 
-Mahalaga ring maunawaan na maaari mong gamitin ang parehong APIs nang magkasama, halimbawa, maaari kang bumuo ng sarili mong network layer architecture gamit ang low-level API, at pagkatapos ay gamitin ito sa loob ng mas malaking network na binuo at sinanay gamit ang high-level API. O maaari kang magdeklara ng network gamit ang high-level API bilang isang sequence ng layers, at pagkatapos ay gamitin ang sarili mong low-level training loop upang magsagawa ng optimization. Parehong APIs ay gumagamit ng parehong pangunahing mga konsepto, at sila ay dinisenyo upang magtrabaho nang maayos na magkasama.
+Mahalaga ring maintindihan na maaari mong gamitin ang parehong APIs nang sabay, halimbawa, maaari kang gumawa ng sarili mong network layer architecture gamit ang low-level API, at gamitin ito sa loob ng mas malaking network na binuo at sinanay gamit ang high-level API. O kaya naman, maaari kang mag-define ng network gamit ang high-level API bilang sunod-sunod na layers, at gamitin ang sarili mong low-level training loop para sa optimization. Parehong gumagamit ang dalawang API ng parehong mga pangunahing konsepto, at dinisenyo silang magtrabaho nang maayos nang magkasama.
 
-## Pag-aaral
+## Learning
 
-Sa kursong ito, nag-aalok kami ng karamihan ng nilalaman para sa parehong PyTorch at TensorFlow. Maaari mong piliin ang iyong nais na framework at dumaan lamang sa mga kaukulang notebooks. Kung hindi ka sigurado kung aling framework ang pipiliin, basahin ang ilang mga talakayan sa internet tungkol sa **PyTorch vs. TensorFlow**. Maaari mo ring tingnan ang parehong frameworks upang makakuha ng mas mahusay na pag-unawa.
+Sa kursong ito, inaalok namin ang karamihan ng nilalaman para sa parehong PyTorch at TensorFlow. Maaari mong piliin ang framework na gusto mo at sundan lamang ang mga kaukulang notebooks. Kung hindi ka sigurado kung alin ang pipiliin, basahin ang ilang mga diskusyon sa internet tungkol sa **PyTorch vs. TensorFlow**. Maaari mo ring tingnan ang parehong frameworks para mas maintindihan.
 
-Kung maaari, gagamitin namin ang High-Level APIs para sa kasimplihan. Gayunpaman, naniniwala kami na mahalaga ang maunawaan kung paano gumagana ang neural networks mula sa simula, kaya't sa simula ay magsisimula kami sa pagtatrabaho gamit ang low-level API at tensors. Gayunpaman, kung nais mong magsimula agad at ayaw mong maglaan ng maraming oras sa pag-aaral ng mga detalyeng ito, maaari mong laktawan ang mga iyon at dumiretso sa high-level API notebooks.
+Kung maaari, gagamitin namin ang High-Level APIs para sa pagiging simple. Gayunpaman, naniniwala kami na mahalagang maintindihan kung paano gumagana ang neural networks mula sa pinaka-ugat, kaya sa simula ay magsisimula tayo sa low-level API at tensors. Ngunit kung gusto mong mabilis makapagsimula at ayaw mong maglaan ng maraming oras sa pag-aaral ng mga detalye, maaari mong laktawan ito at pumunta diretso sa high-level API notebooks.
 
-## ✍️ Mga Pagsasanay: Mga Framework
+## ✍️ Exercises: Frameworks
 
 Ipagpatuloy ang iyong pag-aaral sa mga sumusunod na notebooks:
 
-Low-Level API | TensorFlow+Keras Notebook | PyTorch
---------------|-------------------------------------|--------------------------------
-High-level API| Keras | *PyTorch Lightning*
+Low-Level API | TensorFlow+Keras Notebook | PyTorch  
+--------------|----------------------------|---------  
+High-level API| Keras                      | *PyTorch Lightning*
 
-Matapos masanay ang mga frameworks, balikan natin ang konsepto ng overfitting.
+Pagkatapos mong ma-master ang frameworks, balikan natin ang konsepto ng overfitting.
 
 # Overfitting
 
-Ang overfitting ay isang napakahalagang konsepto sa machine learning, at napakahalaga na ito ay tama!
+Ang overfitting ay isang napakahalagang konsepto sa machine learning, at napakahalaga na maintindihan ito nang tama!
 
-Isaalang-alang ang sumusunod na problema ng pag-aapproximate ng 5 dots (kinakatawan ng `x` sa mga graph sa ibaba):
+Isaalang-alang ang sumusunod na problema ng pag-approximate ng 5 puntos (na kinakatawan ng `x` sa mga graph sa ibaba):
 
-!linear | overfit
--------------------------|--------------------------
-**Linear model, 2 parameters** | **Non-linear model, 7 parameters**
-Training error = 5.3 | Training error = 0
+!linear | overfit  
+-------------------------|--------------------------  
+**Linear model, 2 parameters** | **Non-linear model, 7 parameters**  
+Training error = 5.3 | Training error = 0  
 Validation error = 5.1 | Validation error = 20
 
-* Sa kaliwa, makikita natin ang isang magandang tuwid na linya ng approximation. Dahil ang bilang ng mga parameters ay sapat, nakuha ng model ang ideya sa likod ng point distribution nang tama.
-* Sa kanan, ang model ay masyadong makapangyarihan. Dahil mayroon lamang tayong 5 puntos at ang model ay may 7 parameters, maaari itong mag-adjust sa paraang dumaan sa lahat ng puntos, na nagiging sanhi ng training error na maging 0. Gayunpaman, pinipigilan nito ang model na maunawaan ang tamang pattern sa likod ng data, kaya't ang validation error ay napakataas.
+* Sa kaliwa, makikita natin ang magandang tuwid na linya ng approximation. Dahil ang bilang ng parameters ay sapat, naintindihan ng modelo ang pattern ng distribusyon ng mga puntos nang tama.
+* Sa kanan, masyadong malakas ang modelo. Dahil mayroon lamang tayong 5 puntos at may 7 parameters ang modelo, kaya nitong i-adjust ang sarili para dumaan sa lahat ng puntos, kaya ang training error ay naging 0. Ngunit, pinipigilan nito ang modelo na maintindihan ang tamang pattern sa likod ng data, kaya mataas ang validation error.
 
-Napakahalaga na makuha ang tamang balanse sa pagitan ng richness ng model (bilang ng parameters) at bilang ng mga training samples.
+Napakahalaga na magkaroon ng tamang balanse sa pagitan ng pagiging kumplikado ng modelo (bilang ng parameters) at dami ng training samples.
 
-## Bakit nagaganap ang overfitting
+## Bakit nangyayari ang overfitting
 
-  * Hindi sapat ang training data
-  * Masyadong makapangyarihang model
+  * Kulang sa training data
+  * Masyadong malakas na modelo
   * Masyadong maraming ingay sa input data
 
 ## Paano matukoy ang overfitting
 
-Tulad ng makikita mo mula sa graph sa itaas, ang overfitting ay maaaring matukoy sa pamamagitan ng napakababang training error, at mataas na validation error. Karaniwan sa panahon ng pagsasanay makikita natin ang parehong training at validation errors na nagsisimulang bumaba, at pagkatapos sa isang punto ang validation error ay maaaring huminto sa pagbaba at magsimulang tumaas. Ito ay magiging isang senyales ng overfitting, at ang indikasyon na dapat nating itigil ang pagsasanay sa puntong ito (o kahit man lang gumawa ng snapshot ng model).
+Tulad ng makikita sa graph sa itaas, ang overfitting ay matutukoy sa pamamagitan ng napakababang training error, at mataas na validation error. Karaniwan sa pagsasanay, makikita natin na parehong bumababa ang training at validation errors, ngunit sa isang punto, maaaring huminto ang pagbaba ng validation error at magsimulang tumaas. Ito ay senyales ng overfitting, at palatandaan na marahil ay dapat nang itigil ang pagsasanay sa puntong iyon (o kahit gumawa ng snapshot ng modelo).
+
+overfitting
 
 ## Paano maiwasan ang overfitting
 
-Kung nakikita mo na nagaganap ang overfitting, maaari mong gawin ang isa sa mga sumusunod:
+Kung mapapansin mong nangyayari ang overfitting, maaari mong gawin ang isa sa mga sumusunod:
 
  * Dagdagan ang dami ng training data
- * Bawasan ang pagiging kumplikado ng model
- * Gumamit ng ilang regularization technique, tulad ng Dropout, na ating tatalakayin sa susunod.
+ * Bawasan ang pagiging kumplikado ng modelo
+ * Gumamit ng regularization technique, tulad ng Dropout, na tatalakayin natin sa susunod.
 
 ## Overfitting at Bias-Variance Tradeoff
 
-Ang overfitting ay talagang isang kaso ng mas generic na problema sa statistics na tinatawag na Bias-Variance Tradeoff. Kung isasaalang-alang natin ang mga posibleng pinagmumulan ng error sa ating model, makikita natin ang dalawang uri ng errors:
+Ang overfitting ay isang kaso ng mas pangkalahatang problema sa statistics na tinatawag na Bias-Variance Tradeoff. Kung titingnan natin ang mga posibleng pinagmumulan ng error sa ating modelo, makikita natin ang dalawang uri ng error:
 
-* **Bias errors** ay sanhi ng ating algorithm na hindi makuha ang relasyon sa pagitan ng training data nang tama. Maaari itong magresulta mula sa katotohanang ang ating model ay hindi sapat na makapangyarihan (**underfitting**).
-* **Variance errors**, na sanhi ng model na nag-aapproximate ng ingay sa input data sa halip na makabuluhang relasyon (**overfitting**).
+* **Bias errors** ay sanhi ng algorithm na hindi kayang maayos na hulihin ang relasyon sa pagitan ng training data. Maaaring ito ay dahil hindi sapat ang lakas ng modelo (**underfitting**).
+* **Variance errors** ay sanhi ng modelo na ina-approximate ang ingay sa input data sa halip na ang makabuluhang relasyon (**overfitting**).
 
-Sa panahon ng pagsasanay, ang bias error ay bumababa (habang natututo ang ating model na iapproximate ang data), at ang variance error ay tumataas. Mahalaga na itigil ang pagsasanay - alinman sa mano-mano (kapag natukoy natin ang overfitting) o awtomatiko (sa pamamagitan ng pagpapakilala ng regularization) - upang maiwasan ang overfitting.
+Sa pagsasanay, bumababa ang bias error (habang natututo ang modelo na i-approximate ang data), at tumataas ang variance error. Mahalaga na itigil ang pagsasanay - mano-mano (kapag na-detect ang overfitting) o awtomatiko (sa pamamagitan ng regularization) - upang maiwasan ang overfitting.
 
 ## Konklusyon
 
-Sa araling ito, natutunan mo ang mga pagkakaiba sa pagitan ng iba't ibang APIs para sa dalawang pinakasikat na AI frameworks, TensorFlow at PyTorch. Bukod dito, natutunan mo ang tungkol sa isang napakahalagang paksa, ang overfitting.
+Sa araling ito, natutunan mo ang pagkakaiba ng iba't ibang APIs para sa dalawang pinakasikat na AI frameworks, TensorFlow at PyTorch. Bukod dito, natutunan mo rin ang isang napakahalagang paksa, ang overfitting.
 
-## 🚀 Hamon
+## 🚀 Challenge
 
-Sa mga kalakip na notebooks, makikita mo ang mga 'tasks' sa ibaba; dumaan sa mga notebooks at kumpletuhin ang mga tasks.
+Sa mga kasamang notebooks, makikita mo ang mga 'tasks' sa ibaba; pag-aralan ang mga notebooks at tapusin ang mga tasks.
 
-## Pagsusuri at Pag-aaral sa Sarili
+## Review & Self Study
 
-Gumawa ng ilang pananaliksik sa mga sumusunod na paksa:
+Magsaliksik tungkol sa mga sumusunod na paksa:
 
-- TensorFlow
-- PyTorch
+- TensorFlow  
+- PyTorch  
 - Overfitting
 
-Tanungin ang iyong sarili ng mga sumusunod na katanungan:
+Tanungin ang sarili ng mga sumusunod na tanong:
 
-- Ano ang pagkakaiba ng TensorFlow at PyTorch?
+- Ano ang pagkakaiba ng TensorFlow at PyTorch?  
 - Ano ang pagkakaiba ng overfitting at underfitting?
 
-## Takdang-Aralin
+## Assignment
 
-Sa laboratoryong ito, hinihiling kang lutasin ang dalawang problema sa pag-uuri gamit ang single- at multi-layered fully-connected networks gamit ang PyTorch o TensorFlow.
+Sa lab na ito, hihilingin kang lutasin ang dalawang classification problems gamit ang single- at multi-layered fully-connected networks gamit ang PyTorch o TensorFlow.
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat pinagsisikapan naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagiging tumpak. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang mapagkukunan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Kami ay hindi mananagot para sa anumang hindi pagkakaintindihan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+**Paalala**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.

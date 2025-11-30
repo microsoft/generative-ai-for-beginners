@@ -1,66 +1,79 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9f4785899ee92500f524b4acb26e3bb3",
-  "translation_date": "2025-05-19T12:31:45+00:00",
+  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
+  "translation_date": "2025-10-17T20:33:48+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "vi"
 }
 -->
 # Bắt đầu với khóa học này
 
-Chúng tôi rất hào hứng khi bạn bắt đầu khóa học này và xem bạn sẽ được truyền cảm hứng để xây dựng gì với AI sinh tạo!
+Chúng tôi rất hào hứng khi bạn bắt đầu khóa học này và khám phá những điều bạn có thể tạo ra với AI Tạo sinh!
 
-Để đảm bảo thành công của bạn, trang này hướng dẫn các bước cài đặt, yêu cầu kỹ thuật và nơi bạn có thể tìm kiếm sự trợ giúp nếu cần.
+Để đảm bảo bạn thành công, trang này sẽ hướng dẫn các bước thiết lập, yêu cầu kỹ thuật và nơi bạn có thể nhận được sự hỗ trợ nếu cần.
 
-## Các bước cài đặt
+## Các bước thiết lập
 
-Để bắt đầu khóa học này, bạn cần hoàn thành các bước sau.
+Để bắt đầu tham gia khóa học này, bạn cần hoàn thành các bước sau.
 
-### 1. Fork Repo này
+### 1. Fork kho lưu trữ này
 
-[Fork toàn bộ repo này](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) vào tài khoản GitHub của bạn để có thể thay đổi bất kỳ mã nào và hoàn thành các thử thách. Bạn cũng có thể [gắn sao (🌟) repo này](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) để dễ dàng tìm thấy nó và các repo liên quan.
+[Fork toàn bộ kho lưu trữ này](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) vào tài khoản GitHub của bạn để có thể thay đổi bất kỳ mã nào và hoàn thành các thử thách. Bạn cũng có thể [gắn sao (🌟) cho kho lưu trữ này](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) để dễ dàng tìm thấy nó và các kho lưu trữ liên quan.
 
-### 2. Tạo một codespace
+### 2. Tạo một Codespace
 
-Để tránh các vấn đề phụ thuộc khi chạy mã, chúng tôi khuyến nghị chạy khóa học này trong một [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
+Để tránh bất kỳ vấn đề phụ thuộc nào khi chạy mã, chúng tôi khuyến nghị bạn chạy khóa học này trong [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
 
-Bạn có thể tạo bằng cách chọn tùy chọn `Code` trên phiên bản fork của repo này và chọn tùy chọn **Codespaces**.
+Trong kho lưu trữ của bạn: **Code -> Codespaces -> New on main**
 
-![Hộp thoại hiển thị các nút để tạo codespace](../../../00-course-setup/images/who-will-pay.webp)
+![Hộp thoại hiển thị các nút để tạo một codespace](../../../00-course-setup/images/who-will-pay.webp)
 
-### 3. Lưu trữ khóa API của bạn
+#### 2.1 Thêm một secret
 
-Giữ khóa API của bạn an toàn và bảo mật là rất quan trọng khi xây dựng bất kỳ loại ứng dụng nào. Chúng tôi khuyến nghị không lưu trữ bất kỳ khóa API nào trực tiếp trong mã của bạn. Cam kết những thông tin này vào một kho lưu trữ công khai có thể dẫn đến các vấn đề bảo mật và thậm chí chi phí không mong muốn nếu bị kẻ xấu sử dụng.
-Dưới đây là hướng dẫn từng bước về cách tạo tệp `.env` cho Python và thêm `GITHUB_TOKEN`:
+1. ⚙️ Biểu tượng bánh răng -> Command Pallete -> Codespaces : Manage user secret -> Add a new secret.
+2. Đặt tên là OPENAI_API_KEY, dán khóa của bạn, Lưu.
 
-1. **Đi tới thư mục dự án của bạn**: Mở terminal hoặc command prompt và đi tới thư mục gốc của dự án nơi bạn muốn tạo tệp `.env`.
+### 3. Tiếp theo là gì?
 
-   ```bash
-   cd path/to/your/project
-   ```
+| Tôi muốn…           | Đi tới…                                                                 |
+|---------------------|-------------------------------------------------------------------------|
+| Bắt đầu Bài học 1   | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Làm việc offline    | [`setup-local.md`](02-setup-local.md)                                   |
+| Thiết lập nhà cung cấp LLM | [`providers.md`](03-providers.md)                                        |
+| Gặp gỡ các học viên khác | [Tham gia Discord của chúng tôi](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-2. **Tạo tệp `.env`**: Sử dụng trình soạn thảo văn bản yêu thích của bạn để tạo một tệp mới có tên `.env`. Nếu bạn đang sử dụng dòng lệnh, bạn có thể dùng `touch` (on Unix-based systems) or `echo` (trên Windows):
+## Xử lý sự cố
+
+| Triệu chứng                                | Cách khắc phục                                                  |
+|-------------------------------------------|-----------------------------------------------------------------|
+| Xây dựng container bị kẹt > 10 phút       | **Codespaces ➜ “Rebuild Container”**                            |
+| `python: command not found`               | Terminal không được đính kèm; nhấp **+** ➜ *bash*               |
+| `401 Unauthorized` từ OpenAI              | Sai / hết hạn `OPENAI_API_KEY`                                  |
+| VS Code hiển thị “Dev container mounting…”| Làm mới tab trình duyệt—Codespaces đôi khi mất kết nối          |
+| Kernel của Notebook bị thiếu              | Menu Notebook ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
 
    Hệ thống dựa trên Unix:
+
    ```bash
    touch .env
    ```
 
    Windows:
+
    ```cmd
    echo . > .env
    ```
 
-3. **Chỉnh sửa tệp `.env`**: Mở tệp `.env` trong một trình soạn thảo văn bản (ví dụ: VS Code, Notepad++, hoặc bất kỳ trình soạn thảo nào khác). Thêm dòng sau vào tệp, thay thế `your_github_token_here` bằng mã thông báo GitHub thực của bạn:
+3. **Chỉnh sửa tệp `.env`**: Mở tệp `.env` trong trình chỉnh sửa văn bản (ví dụ: VS Code, Notepad++, hoặc bất kỳ trình chỉnh sửa nào khác). Thêm dòng sau vào tệp, thay thế `your_github_token_here` bằng token GitHub thực của bạn:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **Lưu tệp**: Lưu các thay đổi và đóng trình soạn thảo văn bản.
+4. **Lưu tệp**: Lưu các thay đổi và đóng trình chỉnh sửa văn bản.
 
-5. **Cài đặt gói `python-dotenv`**: If you haven't already, you'll need to install the `python-dotenv` để tải các biến môi trường từ tệp `.env` vào ứng dụng Python của bạn. Bạn có thể cài đặt nó bằng cách sử dụng `pip`:
+5. **Cài đặt `python-dotenv`**: Nếu bạn chưa cài đặt, bạn cần cài đặt gói `python-dotenv` để tải các biến môi trường từ tệp `.env` vào ứng dụng Python của bạn. Bạn có thể cài đặt nó bằng `pip`:
 
    ```bash
    pip install python-dotenv
@@ -81,11 +94,11 @@ Dưới đây là hướng dẫn từng bước về cách tạo tệp `.env` ch
    print(github_token)
    ```
 
-Vậy là xong! Bạn đã tạo thành công tệp `.env`, thêm mã thông báo GitHub của bạn, và tải nó vào ứng dụng Python của bạn.
+Vậy là xong! Bạn đã tạo thành công tệp `.env`, thêm token GitHub của bạn và tải nó vào ứng dụng Python của bạn.
 
-## Cách chạy cục bộ trên máy tính của bạn
+## Cách chạy trên máy tính của bạn
 
-Để chạy mã cục bộ trên máy tính của bạn, bạn cần có một phiên bản nào đó của [Python đã được cài đặt](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Để chạy mã trên máy tính của bạn, bạn cần cài đặt một phiên bản [Python](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
 Sau đó, để sử dụng kho lưu trữ, bạn cần clone nó:
 
@@ -96,68 +109,67 @@ cd generative-ai-for-beginners
 
 Khi bạn đã kiểm tra mọi thứ, bạn có thể bắt đầu!
 
-## Các bước tùy chọn 
+## Các bước tùy chọn
 
-### Cài đặt Miniconda 
+### Cài đặt Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) là một trình cài đặt nhẹ để cài đặt [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, cũng như một vài gói.
-Conda bản thân là một trình quản lý gói, giúp dễ dàng thiết lập và chuyển đổi giữa các [**môi trường ảo**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) và gói Python khác nhau. Nó cũng hữu ích để cài đặt các gói không có sẵn qua `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) là một trình cài đặt nhẹ để cài đặt [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, cũng như một số gói.
+Conda là một trình quản lý gói, giúp dễ dàng thiết lập và chuyển đổi giữa các [**môi trường ảo**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) Python khác nhau và các gói. Nó cũng rất hữu ích để cài đặt các gói không có sẵn qua `pip`.
 
-You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
+Bạn có thể làm theo [hướng dẫn cài đặt MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) để thiết lập.
 
-With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
+Khi đã cài đặt Miniconda, bạn cần clone [kho lưu trữ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (nếu bạn chưa làm).
 
-Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
+Tiếp theo, bạn cần tạo một môi trường ảo. Để làm điều này với Conda, hãy tạo một tệp môi trường mới (_environment.yml_). Nếu bạn đang làm theo hướng dẫn sử dụng Codespaces, hãy tạo tệp này trong thư mục `.devcontainer`, tức là `.devcontainer/environment.yml`.
 
-Tiến hành điền vào tệp môi trường của bạn với đoạn mã dưới đây:
+Hãy điền vào tệp môi trường của bạn với đoạn mã dưới đây:
 
 ```yml
 name: <environment-name>
 channels:
- - defaults
- - microsoft
+  - defaults
+  - microsoft
 dependencies:
-- python=<python-version>
-- openai
-- python-dotenv
-- pip
-- pip:
-    - azure-ai-ml
-
+  - python=<python-version>
+  - openai
+  - python-dotenv
+  - pip
+  - pip:
+      - azure-ai-ml
 ```
 
-Nếu bạn gặp lỗi khi sử dụng conda, bạn có thể cài đặt thủ công các thư viện AI của Microsoft bằng cách sử dụng lệnh sau trong terminal.
+Nếu bạn gặp lỗi khi sử dụng conda, bạn có thể cài đặt thủ công các Thư viện AI của Microsoft bằng lệnh sau trong terminal.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-Tệp môi trường chỉ định các phụ thuộc chúng ta cần. `<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` là phiên bản chính mới nhất của Python.
+Tệp môi trường chỉ định các phụ thuộc mà chúng ta cần. `<environment-name>` là tên bạn muốn sử dụng cho môi trường Conda của mình, và `<python-version>` là phiên bản Python bạn muốn sử dụng, ví dụ, `3` là phiên bản chính mới nhất của Python.
 
-Với điều đó đã xong, bạn có thể tiến hành tạo môi trường Conda của mình bằng cách chạy các lệnh dưới đây trong dòng lệnh/terminal của bạn
+Khi hoàn tất, bạn có thể tạo môi trường Conda của mình bằng cách chạy các lệnh dưới đây trong dòng lệnh/terminal
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
 conda activate ai4beg
 ```
 
-Tham khảo hướng dẫn [môi trường Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) nếu bạn gặp bất kỳ vấn đề nào.
+Tham khảo [hướng dẫn về môi trường Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) nếu bạn gặp bất kỳ vấn đề nào.
 
-### Sử dụng Visual Studio Code với phần mở rộng hỗ trợ Python
+### Sử dụng Visual Studio Code với tiện ích mở rộng hỗ trợ Python
 
-Chúng tôi khuyến nghị sử dụng trình soạn thảo [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) với phần mở rộng [hỗ trợ Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) được cài đặt cho khóa học này. Tuy nhiên, đây chỉ là khuyến nghị chứ không phải yêu cầu bắt buộc.
+Chúng tôi khuyến nghị sử dụng trình chỉnh sửa [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) với tiện ích mở rộng [hỗ trợ Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) được cài đặt cho khóa học này. Tuy nhiên, đây chỉ là một khuyến nghị và không phải là yêu cầu bắt buộc.
 
-> **Lưu ý**: Bằng cách mở kho lưu trữ khóa học trong VS Code, bạn có tùy chọn để thiết lập dự án trong một container. Điều này là do thư mục [đặc biệt `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) được tìm thấy trong kho lưu trữ khóa học. Sẽ có thêm thông tin về điều này sau.
+> **Lưu ý**: Bằng cách mở kho lưu trữ khóa học trong VS Code, bạn có tùy chọn thiết lập dự án trong một container. Điều này là nhờ vào thư mục [đặc biệt `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) có trong kho lưu trữ khóa học. Thông tin chi tiết sẽ được cung cấp sau.
 
-> **Lưu ý**: Một khi bạn clone và mở thư mục trong VS Code, nó sẽ tự động đề xuất bạn cài đặt phần mở rộng hỗ trợ Python.
+> **Lưu ý**: Khi bạn clone và mở thư mục trong VS Code, nó sẽ tự động gợi ý bạn cài đặt tiện ích mở rộng hỗ trợ Python.
 
-> **Lưu ý**: Nếu VS Code đề xuất bạn mở lại kho lưu trữ trong một container, hãy từ chối yêu cầu này để sử dụng phiên bản Python được cài đặt cục bộ.
+> **Lưu ý**: Nếu VS Code gợi ý bạn mở lại kho lưu trữ trong một container, hãy từ chối yêu cầu này để sử dụng phiên bản Python đã cài đặt trên máy tính của bạn.
 
 ### Sử dụng Jupyter trong trình duyệt
 
-Bạn cũng có thể làm việc trên dự án bằng cách sử dụng môi trường [Jupyter](https://jupyter.org?WT.mc_id=academic-105485-koreyst) ngay trong trình duyệt của mình. Cả Jupyter cổ điển và [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) đều cung cấp một môi trường phát triển khá thú vị với các tính năng như tự động hoàn thành, đánh dấu mã, v.v.
+Bạn cũng có thể làm việc trên dự án bằng môi trường [Jupyter](https://jupyter.org?WT.mc_id=academic-105485-koreyst) ngay trong trình duyệt của mình. Cả Jupyter cổ điển và [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) đều cung cấp môi trường phát triển rất tiện lợi với các tính năng như tự động hoàn thành, làm nổi bật mã, v.v.
 
-Để bắt đầu Jupyter cục bộ, hãy vào terminal/dòng lệnh, điều hướng đến thư mục khóa học, và thực hiện:
+Để bắt đầu Jupyter trên máy tính, hãy mở terminal/dòng lệnh, điều hướng đến thư mục khóa học và thực hiện:
 
 ```bash
 jupyter notebook
@@ -171,55 +183,56 @@ jupyterhub
 
 Điều này sẽ khởi động một phiên bản Jupyter và URL để truy cập sẽ được hiển thị trong cửa sổ dòng lệnh.
 
-Khi bạn truy cập URL, bạn sẽ thấy đề cương khóa học và có thể điều hướng đến bất kỳ tệp `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
+Khi bạn truy cập URL, bạn sẽ thấy nội dung khóa học và có thể điều hướng đến bất kỳ tệp `*.ipynb` nào. Ví dụ, `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Running in a container
+### Chạy trong container
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+Một lựa chọn khác để thiết lập mọi thứ trên máy tính hoặc Codespace của bạn là sử dụng một [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Thư mục `.devcontainer` đặc biệt trong kho lưu trữ khóa học cho phép VS Code thiết lập dự án trong một container. Ngoài Codespaces, điều này sẽ yêu cầu cài đặt Docker, và thực sự, nó đòi hỏi một chút công việc, vì vậy chúng tôi chỉ khuyến nghị điều này cho những người có kinh nghiệm làm việc với container.
 
-One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
+Một trong những cách tốt nhất để bảo mật các khóa API của bạn khi sử dụng GitHub Codespaces là sử dụng Codespace Secrets. Vui lòng làm theo hướng dẫn [quản lý secret của Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) để tìm hiểu thêm.
 
-## Lessons and Technical Requirements
+## Các bài học và yêu cầu kỹ thuật
 
-The course has 6 concept lessons and 6 coding lessons.
+Khóa học bao gồm 6 bài học lý thuyết và 6 bài học thực hành.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Đối với các bài học thực hành, chúng tôi sử dụng Azure OpenAI Service. Bạn sẽ cần quyền truy cập vào dịch vụ Azure OpenAI và một khóa API để chạy mã này. Bạn có thể đăng ký quyền truy cập bằng cách [hoàn thành đơn đăng ký này](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` nào nơi bạn có thể xem mã và kết quả đầu ra.
+Trong khi chờ đơn đăng ký của bạn được xử lý, mỗi bài học thực hành cũng bao gồm một tệp `README.md` nơi bạn có thể xem mã và kết quả.
 
-## Sử dụng dịch vụ Azure OpenAI lần đầu tiên
+## Sử dụng Azure OpenAI Service lần đầu tiên
 
-Nếu đây là lần đầu tiên bạn làm việc với dịch vụ Azure OpenAI, hãy làm theo hướng dẫn này về cách [tạo và triển khai tài nguyên Dịch vụ Azure OpenAI.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Nếu đây là lần đầu tiên bạn làm việc với dịch vụ Azure OpenAI, vui lòng làm theo hướng dẫn về cách [tạo và triển khai tài nguyên dịch vụ Azure OpenAI.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## Sử dụng API OpenAI lần đầu tiên
+## Sử dụng OpenAI API lần đầu tiên
 
-Nếu đây là lần đầu tiên bạn làm việc với API OpenAI, hãy làm theo hướng dẫn về cách [tạo và sử dụng Giao diện.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+Nếu đây là lần đầu tiên bạn làm việc với OpenAI API, vui lòng làm theo hướng dẫn về cách [tạo và sử dụng giao diện.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
-## Gặp gỡ những người học khác
+## Gặp gỡ các học viên khác
 
-Chúng tôi đã tạo các kênh trong máy chủ Discord Cộng đồng AI chính thức của chúng tôi để gặp gỡ những người học khác. Đây là cách tuyệt vời để kết nối với các doanh nhân, nhà xây dựng, sinh viên có cùng chí hướng, và bất kỳ ai đang tìm cách nâng cao trình độ trong AI sinh tạo.
+Chúng tôi đã tạo các kênh trong [máy chủ Discord cộng đồng AI chính thức](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) để bạn gặp gỡ các học viên khác. Đây là một cách tuyệt vời để kết nối với các doanh nhân, nhà sáng tạo, sinh viên và bất kỳ ai muốn nâng cao kỹ năng về AI Tạo sinh.
 
 [![Tham gia kênh discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-Đội ngũ dự án cũng sẽ có mặt trên máy chủ Discord này để giúp đỡ bất kỳ người học nào.
+Đội ngũ dự án cũng sẽ có mặt trên máy chủ Discord này để hỗ trợ các học viên.
 
 ## Đóng góp
 
-Khóa học này là một sáng kiến mã nguồn mở. Nếu bạn thấy các khu vực cần cải thiện hoặc vấn đề, vui lòng tạo một [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) hoặc ghi lại một [vấn đề trên GitHub](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+Khóa học này là một sáng kiến mã nguồn mở. Nếu bạn thấy có những điểm cần cải thiện hoặc vấn đề, vui lòng tạo một [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) hoặc ghi lại một [vấn đề trên GitHub](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-Đội ngũ dự án sẽ theo dõi tất cả các đóng góp. Đóng góp cho mã nguồn mở là một cách tuyệt vời để xây dựng sự nghiệp của bạn trong AI sinh tạo.
+Đội ngũ dự án sẽ theo dõi tất cả các đóng góp. Đóng góp cho mã nguồn mở là một cách tuyệt vời để xây dựng sự nghiệp của bạn trong lĩnh vực AI Tạo sinh.
 
-Hầu hết các đóng góp yêu cầu bạn đồng ý với Thỏa thuận Giấy phép Người đóng góp (CLA) tuyên bố rằng bạn có quyền và thực sự trao cho chúng tôi quyền sử dụng đóng góp của bạn. Để biết chi tiết, hãy truy cập [trang web Thỏa thuận Giấy phép Người đóng góp, CLA](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+Hầu hết các đóng góp yêu cầu bạn đồng ý với Thỏa thuận Cấp phép Người đóng góp (CLA) tuyên bố rằng bạn có quyền và thực sự cấp cho chúng tôi quyền sử dụng đóng góp của bạn. Để biết thêm chi tiết, hãy truy cập [trang web Thỏa thuận Cấp phép Người đóng góp CLA](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Quan trọng: khi dịch văn bản trong repo này, vui lòng đảm bảo rằng bạn không sử dụng dịch máy. Chúng tôi sẽ xác minh các bản dịch thông qua cộng đồng, vì vậy vui lòng chỉ tình nguyện cho các bản dịch bằng ngôn ngữ mà bạn thành thạo.
+Quan trọng: khi dịch văn bản trong kho lưu trữ này, vui lòng đảm bảo rằng bạn không sử dụng công cụ dịch tự động. Chúng tôi sẽ xác minh các bản dịch thông qua cộng đồng, vì vậy chỉ nên tham gia dịch trong các ngôn ngữ mà bạn thông thạo.
 
-Khi bạn gửi một pull request, CLA-bot sẽ tự động xác định xem bạn có cần cung cấp CLA hay không và trang trí PR một cách thích hợp (ví dụ: nhãn, bình luận). Chỉ cần làm theo hướng dẫn được cung cấp bởi bot. Bạn chỉ cần làm điều này một lần trên tất cả các kho lưu trữ sử dụng CLA của chúng tôi.
+Khi bạn gửi một pull request, CLA-bot sẽ tự động xác định liệu bạn có cần cung cấp CLA hay không và sẽ gắn nhãn PR phù hợp (ví dụ: nhãn, bình luận). Chỉ cần làm theo hướng dẫn được cung cấp bởi bot. Bạn chỉ cần làm điều này một lần cho tất cả các kho lưu trữ sử dụng CLA của chúng tôi.
 
 Dự án này đã áp dụng [Quy tắc ứng xử mã nguồn mở của Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Để biết thêm thông tin, hãy đọc FAQ về Quy tắc ứng xử hoặc liên hệ [Email opencode](opencode@microsoft.com) với bất kỳ câu hỏi hoặc ý kiến bổ sung nào.
 
-## Hãy bắt đầu
+## Hãy bắt đầu nào!
+Bây giờ bạn đã hoàn thành các bước cần thiết để hoàn thành khóa học này, hãy bắt đầu bằng cách tìm hiểu [giới thiệu về AI tạo sinh và LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
-Bây giờ bạn đã hoàn thành các bước cần thiết để hoàn thành khóa học này, hãy bắt đầu bằng cách nhận [giới thiệu về AI sinh tạo và LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc sự không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp của con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, chúng tôi khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

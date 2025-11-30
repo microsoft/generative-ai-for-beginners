@@ -2,26 +2,26 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:15:16+00:00",
+  "translation_date": "2025-07-09T19:12:34+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "hu"
 }
 -->
-# Építés a Meta család modelleivel
+# Építés a Meta család modelljeivel
 
 ## Bevezetés
 
-Ez a lecke az alábbiakat fogja tárgyalni:
+Ebben a leckében a következőkről lesz szó:
 
-- A Meta család két fő modelljének - Llama 3.1 és Llama 3.2 - felfedezése
-- Az egyes modellek használati eseteinek és forgatókönyveinek megértése
-- Kódminta, amely bemutatja az egyes modellek egyedi jellemzőit
+- A két fő Meta család modell felfedezése - Llama 3.1 és Llama 3.2
+- Az egyes modellek használati eseteinek és helyzeteinek megértése
+- Kódpélda, amely bemutatja az egyedi jellemzőket
 
 ## A Meta család modelljei
 
-Ebben a leckében a Meta család vagy "Llama Nyáj" 2 modelljét fogjuk megvizsgálni - Llama 3.1 és Llama 3.2
+Ebben a leckében két modellt vizsgálunk meg a Meta családból, vagyis a "Llama Herd"-ből - Llama 3.1 és Llama 3.2
 
-Ezek a modellek különböző változatokban érhetők el, és elérhetők a GitHub Model piactéren. További részletek a GitHub Modellek használatáról a [prototípus készítése AI modellekkel](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) oldalon találhatók.
+Ezek a modellek különböző változatokban érhetők el, és megtalálhatók a GitHub Model piacterén. További részletek a GitHub Modellek használatáról az [AI modellekkel való prototípus készítéshez](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Modellváltozatok:
 - Llama 3.1 - 70B Instruct
@@ -29,39 +29,39 @@ Modellváltozatok:
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Megjegyzés: A Llama 3 is elérhető a GitHub Modellek között, de ebben a leckében nem foglalkozunk vele*
+*Megjegyzés: Llama 3 is elérhető a GitHub Modelleken, de ezt a leckét nem tárgyaljuk*
 
 ## Llama 3.1
 
-A 405 milliárd paraméterrel a Llama 3.1 az open source LLM kategóriába tartozik.
+A 405 milliárd paraméterével a Llama 3.1 az open source LLM kategóriába tartozik.
 
-A modell a korábbi Llama 3 kiadás továbbfejlesztése az alábbiakkal:
+Ez a modell az előző, Llama 3-as verzió továbbfejlesztése, amely a következőket kínálja:
 
-- Nagyobb kontextusablak - 128k token vs 8k token
-- Nagyobb maximális kimeneti tokenek - 4096 vs 2048
-- Jobb többnyelvű támogatás - a képzési tokenek növekedése miatt
+- Nagyobb kontextusablak - 128k token az 8k token helyett
+- Nagyobb maximális kimeneti tokenek száma - 4096 az 2048 helyett
+- Jobb többnyelvű támogatás - a megnövelt tanító tokenek miatt
 
-Ezek lehetővé teszik a Llama 3.1 számára, hogy összetettebb használati eseteket kezeljen a GenAI alkalmazások építése során, beleértve:
-- Natív funkcióhívás - a képesség, hogy külső eszközöket és funkciókat hívjon meg az LLM munkafolyamaton kívül
+Ezek lehetővé teszik, hogy a Llama 3.1 összetettebb feladatokat is kezeljen GenAI alkalmazások fejlesztésekor, például:
+- Natív függvényhívás - külső eszközök és funkciók meghívásának képessége az LLM munkafolyamatán kívül
 - Jobb RAG teljesítmény - a nagyobb kontextusablak miatt
-- Szintetikus adatok generálása - a hatékony adatok létrehozásának képessége finomhangolási feladatokhoz
+- Szintetikus adatgenerálás - hatékony adatok létrehozása például finomhangoláshoz
 
-### Natív funkcióhívás
+### Natív függvényhívás
 
-A Llama 3.1 finomhangolva lett, hogy hatékonyabb legyen a funkciók vagy eszközök hívásában. Két beépített eszközzel is rendelkezik, amelyeket a modell azonosíthat, hogy szükséges használni a felhasználó kérésének megfelelően. Ezek az eszközök:
+A Llama 3.1 finomhangolt, hogy hatékonyabban tudjon függvényeket vagy eszközöket hívni. Két beépített eszközt is tartalmaz, amelyeket a modell a felhasználói prompt alapján azonosítani tud, hogy használni kell őket. Ezek az eszközök:
 
-- **Brave Search** - Használható aktuális információk, például az időjárás megszerzésére webes kereséssel
-- **Wolfram Alpha** - Használható összetettebb matematikai számításokhoz, így nem szükséges saját funkciók írása.
+- **Brave Search** - friss információk, például időjárás lekérdezésére alkalmas webes keresés segítségével
+- **Wolfram Alpha** - összetettebb matematikai számításokhoz, így nem szükséges saját függvényeket írni
 
-Saját egyéni eszközöket is létrehozhat, amelyeket az LLM meghívhat.
+Saját egyedi eszközöket is létrehozhatsz, amelyeket az LLM hívhat.
 
 Az alábbi kódpéldában:
 
-- Meghatározzuk az elérhető eszközöket (brave_search, wolfram_alpha) a rendszer kérésben.
-- Küldünk egy felhasználói kérést, amely egy bizonyos város időjárásáról kérdez.
-- Az LLM válaszolni fog egy eszközhívással a Brave Search eszközre, amely így fog kinézni `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Meghatározzuk a rendelkezésre álló eszközöket (brave_search, wolfram_alpha) a rendszer promptban.
+- Küldünk egy felhasználói promptot, amely egy adott város időjárására kérdez rá.
+- Az LLM válasza egy eszközhívás lesz a Brave Search eszközhöz, ami így néz ki: `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Megjegyzés: Ez a példa csak az eszközhívást végzi el, ha szeretné megkapni az eredményeket, létre kell hoznia egy ingyenes fiókot a Brave API oldalon és meghatározni a funkciót magát*
+*Megjegyzés: Ez a példa csak az eszközhívást mutatja be, ha az eredményeket is szeretnéd megkapni, ingyenes fiókot kell létrehoznod a Brave API oldalán, és definiálnod kell magát a függvényt*
 
 ```python 
 import os
@@ -103,13 +103,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Bár a Llama 3.1 egy LLM, van egy korlátja a multimodalitásnak. Vagyis képes különböző típusú bemenetek, például képek használatára kérésként és válaszok biztosítására. Ez a képesség az egyik fő jellemzője a Llama 3.2-nek. Ezek a jellemzők a következőket is tartalmazzák:
+Bár LLM-ről van szó, a Llama 3.1 egyik korlátja a multimodalitás hiánya. Ez azt jelenti, hogy nem képes különböző típusú bemeneteket, például képeket promptként használni és válaszokat adni rájuk. Ez a képesség a Llama 3.2 egyik fő jellemzője. További jellemzői:
 
-- Multimodalitás - képes mind szöveg, mind kép kérdések értékelésére
-- Kis és közepes méretű változatok (11B és 90B) - ez rugalmas telepítési lehetőségeket biztosít
-- Csak szöveg változatok (1B és 3B) - ez lehetővé teszi a modell telepítését élvonalbeli / mobil eszközökre, és alacsony késleltetést biztosít
+- Multimodalitás - képes szöveges és képi promptokat is értékelni
+- Kis- és közepes méretű változatok (11B és 90B) - rugalmas telepítési lehetőségeket kínál
+- Csak szöveges változatok (1B és 3B) - lehetővé teszi a modell telepítését élőhelyi / mobil eszközökön, alacsony késleltetéssel
 
-A multimodális támogatás nagy lépést jelent az open source modellek világában. Az alábbi kódpélda mind képet, mind szöveg kérdést használ, hogy elemzést kapjon a képről a Llama 3.2 90B-től.
+A multimodális támogatás nagy előrelépést jelent az open source modellek világában. Az alábbi kódpélda egy képet és egy szöveges promptot is használ, hogy a Llama 3.2 90B elemezze a képet.
 
 ### Multimodális támogatás a Llama 3.2-vel
 
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## A tanulás itt nem áll meg, folytassa az utazást
+## A tanulás itt nem ér véget, folytasd az utat
 
-A lecke befejezése után nézze meg a [Generatív AI Tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejlessze Generatív AI ismereteit!
+A lecke elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív AI ismereteidet!
 
-**Felelősségkizárás**:  
-Ezt a dokumentumot az [Co-op Translator](https://github.com/Azure/co-op-translator) mesterséges intelligencia fordítási szolgáltatás segítségével fordítottuk le. Bár igyekszünk a pontosságra törekedni, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Jogi nyilatkozat**:  
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

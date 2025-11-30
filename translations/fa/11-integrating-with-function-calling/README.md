@@ -1,17 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:20:21+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T23:08:12+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "fa"
 }
 -->
 # ادغام با فراخوانی تابع
 
-شما تا کنون چیزهای زیادی در درس‌های قبلی یاد گرفته‌اید. با این حال، می‌توانیم بیشتر پیشرفت کنیم. برخی از مواردی که می‌توانیم به آنها بپردازیم این است که چگونه می‌توانیم یک قالب پاسخ ثابت‌تر دریافت کنیم تا کار با پاسخ در پایین دست آسان‌تر شود. همچنین، ممکن است بخواهیم داده‌هایی از منابع دیگر اضافه کنیم تا برنامه خود را بیشتر غنی کنیم.
+[![ادغام با فراخوانی تابع](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.fa.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-مشکلات ذکر شده در بالا چیزی است که این فصل به دنبال حل آن است.
+تا اینجا در درس‌های قبلی چیزهای زیادی یاد گرفته‌اید. با این حال، می‌توانیم بیشتر پیشرفت کنیم. برخی از مواردی که می‌توانیم به آن‌ها بپردازیم این است که چگونه می‌توانیم یک قالب پاسخ سازگارتر ایجاد کنیم تا کار با پاسخ در مراحل بعدی آسان‌تر شود. همچنین ممکن است بخواهیم داده‌هایی از منابع دیگر اضافه کنیم تا برنامه خود را بیشتر غنی کنیم.
+
+مشکلات ذکر شده در بالا مواردی هستند که این فصل به دنبال حل آن‌ها است.
 
 ## مقدمه
 
@@ -19,46 +21,46 @@ CO_OP_TRANSLATOR_METADATA:
 
 - توضیح اینکه فراخوانی تابع چیست و موارد استفاده آن چیست.
 - ایجاد یک فراخوانی تابع با استفاده از Azure OpenAI.
-- چگونه یک فراخوانی تابع را در یک برنامه ادغام کنیم.
+- نحوه ادغام یک فراخوانی تابع در یک برنامه.
 
 ## اهداف یادگیری
 
-تا پایان این درس، شما قادر خواهید بود:
+در پایان این درس، شما قادر خواهید بود:
 
 - هدف استفاده از فراخوانی تابع را توضیح دهید.
 - تنظیم فراخوانی تابع با استفاده از سرویس Azure OpenAI.
 - طراحی فراخوانی‌های تابع مؤثر برای موارد استفاده برنامه خود.
 
-## سناریو: بهبود چت‌بات ما با توابع
+## سناریو: بهبود چت‌بات ما با استفاده از توابع
 
-برای این درس، می‌خواهیم یک ویژگی برای استارتاپ آموزشی خود ایجاد کنیم که به کاربران اجازه می‌دهد از یک چت‌بات برای یافتن دوره‌های فنی استفاده کنند. ما دوره‌هایی را توصیه خواهیم کرد که با سطح مهارت، نقش فعلی و فناوری مورد علاقه آنها مطابقت داشته باشد.
+برای این درس، می‌خواهیم یک ویژگی برای استارتاپ آموزشی خود ایجاد کنیم که به کاربران اجازه دهد از یک چت‌بات برای یافتن دوره‌های فنی استفاده کنند. ما دوره‌هایی را پیشنهاد می‌دهیم که با سطح مهارت، نقش فعلی و فناوری مورد علاقه آن‌ها مطابقت داشته باشد.
 
 برای تکمیل این سناریو، از ترکیبی از موارد زیر استفاده خواهیم کرد:
 
 - `Azure OpenAI` برای ایجاد یک تجربه چت برای کاربر.
-- `Microsoft Learn Catalog API` برای کمک به کاربران در یافتن دوره‌ها بر اساس درخواست کاربر.
+- `Microsoft Learn Catalog API` برای کمک به کاربران در یافتن دوره‌ها بر اساس درخواست آن‌ها.
 - `Function Calling` برای گرفتن پرسش کاربر و ارسال آن به یک تابع برای انجام درخواست API.
 
-برای شروع، بیایید ببینیم چرا در وهله اول می‌خواهیم از فراخوانی تابع استفاده کنیم:
+برای شروع، بیایید ببینیم چرا اصلاً می‌خواهیم از فراخوانی تابع استفاده کنیم:
 
 ## چرا فراخوانی تابع
 
-قبل از فراخوانی تابع، پاسخ‌ها از یک LLM بدون ساختار و ناسازگار بودند. توسعه‌دهندگان مجبور بودند کد اعتبارسنجی پیچیده‌ای بنویسند تا مطمئن شوند که قادر به مدیریت هر نوع پاسخ هستند. کاربران نمی‌توانستند پاسخ‌هایی مانند "آب و هوای فعلی استکهلم چیست؟" دریافت کنند. این به این دلیل است که مدل‌ها به زمان آموزش داده‌ها محدود بودند.
+قبل از فراخوانی تابع، پاسخ‌های یک مدل زبان بزرگ (LLM) غیرساختاریافته و ناسازگار بودند. توسعه‌دهندگان مجبور بودند کدهای اعتبارسنجی پیچیده‌ای بنویسند تا مطمئن شوند که می‌توانند هر نوع پاسخ را مدیریت کنند. کاربران نمی‌توانستند پاسخ‌هایی مانند "وضعیت فعلی آب و هوا در استکهلم چیست؟" دریافت کنند. این به این دلیل است که مدل‌ها محدود به زمانی بودند که داده‌ها آموزش داده شده بودند.
 
 فراخوانی تابع یک ویژگی از سرویس Azure OpenAI است که برای غلبه بر محدودیت‌های زیر طراحی شده است:
 
-- **قالب پاسخ ثابت**. اگر بتوانیم قالب پاسخ را بهتر کنترل کنیم، می‌توانیم پاسخ را به راحتی در پایین دست به سیستم‌های دیگر ادغام کنیم.
-- **داده‌های خارجی**. توانایی استفاده از داده‌های منابع دیگر یک برنامه در زمینه چت.
+- **قالب پاسخ سازگار**. اگر بتوانیم قالب پاسخ را بهتر کنترل کنیم، می‌توانیم پاسخ را به راحتی در مراحل بعدی با سیستم‌های دیگر ادغام کنیم.
+- **داده‌های خارجی**. امکان استفاده از داده‌های منابع دیگر یک برنامه در زمینه چت.
 
-## نمایش مشکل از طریق یک سناریو
+## توضیح مشکل از طریق یک سناریو
 
-> توصیه می‌کنیم اگر می‌خواهید سناریوی زیر را اجرا کنید از [دفترچه یادداشت موجود](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) استفاده کنید. همچنین می‌توانید فقط مطالعه کنید زیرا ما سعی می‌کنیم مشکلی را که توابع می‌توانند به حل آن کمک کنند، نشان دهیم.
+> توصیه می‌کنیم از [دفترچه یادداشت موجود](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) استفاده کنید اگر می‌خواهید سناریوی زیر را اجرا کنید. همچنین می‌توانید فقط بخوانید، زیرا ما سعی داریم مشکلی را که توابع می‌توانند به حل آن کمک کنند، توضیح دهیم.
 
-بیایید به مثالی نگاه کنیم که مشکل قالب پاسخ را نشان می‌دهد:
+بیایید به مثالی نگاه کنیم که مشکل قالب‌بندی پاسخ را نشان می‌دهد:
 
-فرض کنید می‌خواهیم یک پایگاه داده از داده‌های دانش‌آموزان ایجاد کنیم تا بتوانیم دوره مناسب را به آنها پیشنهاد دهیم. در زیر دو توصیف از دانش‌آموزان داریم که در داده‌هایی که شامل می‌شوند بسیار مشابه هستند.
+فرض کنید می‌خواهیم یک پایگاه داده از داده‌های دانش‌آموزان ایجاد کنیم تا بتوانیم دوره مناسب را به آن‌ها پیشنهاد دهیم. در زیر دو توضیح از دانش‌آموزان داریم که در داده‌هایی که شامل می‌شوند بسیار مشابه هستند.
 
-1. ایجاد اتصال به منبع Azure OpenAI خود:
+1. اتصال به منبع Azure OpenAI خود را ایجاد کنید:
 
    ```python
    import os
@@ -75,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   در زیر برخی کدهای پایتون برای تنظیم اتصال ما به Azure OpenAI وجود دارد که در آن `api_type`, `api_base`, `api_version` and `api_key`.
+   در زیر کدی از پایتون برای پیکربندی اتصال ما به Azure OpenAI وجود دارد که در آن `api_type`، `api_base`، `api_version` و `api_key` را تنظیم می‌کنیم.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description` را تنظیم می‌کنیم.
+1. ایجاد دو توضیح دانش‌آموز با استفاده از متغیرهای `student_1_description` و `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -85,9 +87,9 @@ CO_OP_TRANSLATOR_METADATA:
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   ما می‌خواهیم توصیفات دانش‌آموزان فوق را به یک LLM ارسال کنیم تا داده‌ها را تجزیه کند. این داده‌ها می‌توانند بعداً در برنامه ما استفاده شوند و به یک API ارسال یا در یک پایگاه داده ذخیره شوند.
+   می‌خواهیم توضیحات دانش‌آموزان بالا را به یک مدل زبان بزرگ (LLM) ارسال کنیم تا داده‌ها را تجزیه و تحلیل کند. این داده‌ها بعداً می‌توانند در برنامه ما استفاده شوند و به یک API ارسال شوند یا در یک پایگاه داده ذخیره شوند.
 
-1. بیایید دو پیام یکسان ایجاد کنیم که در آن به LLM بگوییم چه اطلاعاتی مورد علاقه ماست:
+1. بیایید دو درخواست مشابه ایجاد کنیم که در آن‌ها به مدل زبان بزرگ دستور می‌دهیم چه اطلاعاتی مورد نظر ما است:
 
    ```python
    prompt1 = f'''
@@ -117,9 +119,9 @@ CO_OP_TRANSLATOR_METADATA:
    '''
    ```
 
-   پیام‌های فوق به LLM دستور می‌دهند تا اطلاعات را استخراج کند و پاسخ را به صورت JSON برگرداند.
+   درخواست‌های بالا به مدل زبان بزرگ دستور می‌دهند که اطلاعات را استخراج کند و پاسخ را در قالب JSON بازگرداند.
 
-1. پس از تنظیم پیام‌ها و اتصال به Azure OpenAI، اکنون پیام‌ها را با استفاده از `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user` به LLM ارسال خواهیم کرد. این برای تقلید از یک پیام از یک کاربر است که به یک چت‌بات نوشته شده است.
+1. پس از تنظیم درخواست‌ها و اتصال به Azure OpenAI، اکنون درخواست‌ها را به مدل زبان بزرگ ارسال می‌کنیم با استفاده از `openai.ChatCompletion`. ما درخواست را در متغیر `messages` ذخیره می‌کنیم و نقش را به `user` اختصاص می‌دهیم. این برای شبیه‌سازی یک پیام از کاربر است که به یک چت‌بات نوشته شده است.
 
    ```python
    # response from prompt one
@@ -137,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-اکنون می‌توانیم هر دو درخواست را به LLM ارسال کنیم و پاسخی را که دریافت می‌کنیم بررسی کنیم تا آن را به صورت زیر پیدا کنیم `openai_response1['choices'][0]['message']['content']`.
+اکنون می‌توانیم هر دو درخواست را به مدل زبان بزرگ ارسال کنیم و پاسخ دریافتی را بررسی کنیم با یافتن آن به این صورت `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. در نهایت، می‌توانیم پاسخ را به قالب JSON تبدیل کنیم با فراخوانی `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -171,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   حتی اگر پیام‌ها یکسان هستند و توصیفات مشابه‌اند، می‌بینیم که مقادیر `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   حتی با وجود اینکه درخواست‌ها مشابه هستند و توضیحات مشابهی دارند، می‌بینیم که مقادیر خاصیت `Grades` به صورت متفاوتی قالب‌بندی شده‌اند، به طوری که گاهی قالب `3.7` یا `3.7 GPA` را دریافت می‌کنیم.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   این نتیجه به این دلیل است که مدل زبان بزرگ داده‌های غیرساختاریافته را به صورت درخواست نوشته شده دریافت می‌کند و همچنین داده‌های غیرساختاریافته را بازمی‌گرداند. ما نیاز به یک قالب ساختاریافته داریم تا بدانیم هنگام ذخیره یا استفاده از این داده‌ها چه انتظاری داریم.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+پس چگونه مشکل قالب‌بندی را حل کنیم؟ با استفاده از فراخوانی تابع، می‌توانیم مطمئن شویم که داده‌های ساختاریافته دریافت می‌کنیم. هنگام استفاده از فراخوانی تابع، مدل زبان بزرگ در واقع هیچ تابعی را فراخوانی یا اجرا نمی‌کند. در عوض، ما یک ساختار برای مدل زبان بزرگ ایجاد می‌کنیم تا برای پاسخ‌های خود از آن پیروی کند. سپس از آن پاسخ‌های ساختاریافته استفاده می‌کنیم تا بدانیم چه تابعی را در برنامه‌های خود اجرا کنیم.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.fa.png)
+![جریان تابع](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.fa.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+سپس می‌توانیم آنچه از تابع بازگردانده شده است را گرفته و آن را به مدل زبان بزرگ ارسال کنیم. مدل زبان بزرگ سپس با استفاده از زبان طبیعی به پرسش کاربر پاسخ خواهد داد.
 
-## Use Cases for using function calls
+## موارد استفاده از فراخوانی توابع
 
-There are many different use cases where function calls can improve your app like:
+موارد استفاده مختلفی وجود دارد که در آن‌ها فراخوانی توابع می‌تواند برنامه شما را بهبود بخشد، مانند:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **فراخوانی ابزارهای خارجی**. چت‌بات‌ها در ارائه پاسخ به پرسش‌های کاربران عالی هستند. با استفاده از فراخوانی توابع، چت‌بات‌ها می‌توانند از پیام‌های کاربران برای انجام وظایف خاص استفاده کنند. به عنوان مثال، یک دانش‌آموز می‌تواند از چت‌بات بخواهد "یک ایمیل به استاد من ارسال کن و بگو که من نیاز به کمک بیشتری در این موضوع دارم". این می‌تواند یک فراخوانی تابع به `send_email(to: string, body: string)` انجام دهد.
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **ایجاد درخواست‌های API یا پایگاه داده**. کاربران می‌توانند اطلاعات را با استفاده از زبان طبیعی پیدا کنند که به یک درخواست قالب‌بندی شده یا درخواست API تبدیل می‌شود. به عنوان مثال، یک معلم می‌تواند درخواست کند "چه کسانی از دانش‌آموزان آخرین تکلیف را انجام داده‌اند" که می‌تواند یک تابع به نام `get_completed(student_name: string, assignment: int, current_status: string)` را فراخوانی کند.
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **ایجاد داده‌های ساختاریافته**. کاربران می‌توانند یک بلوک متن یا فایل CSV را بگیرند و از مدل زبان بزرگ برای استخراج اطلاعات مهم از آن استفاده کنند. به عنوان مثال، یک دانش‌آموز می‌تواند یک مقاله ویکی‌پدیا درباره توافق‌نامه‌های صلح را تبدیل کند تا کارت‌های فلش هوش مصنوعی ایجاد کند. این می‌تواند با استفاده از یک تابع به نام `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` انجام شود.
 
-## Creating Your First Function Call
+## ایجاد اولین فراخوانی تابع خود
 
-The process of creating a function call includes 3 main steps:
+فرآیند ایجاد یک فراخوانی تابع شامل 3 مرحله اصلی است:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **فراخوانی** API تکمیل چت با لیستی از توابع شما و یک پیام کاربر.
+2. **خواندن** پاسخ مدل برای انجام یک عمل، یعنی اجرای یک تابع یا درخواست API.
+3. **ایجاد** یک فراخوانی دیگر به API تکمیل چت با پاسخ از تابع شما برای استفاده از آن اطلاعات برای ایجاد یک پاسخ به کاربر.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.fa.png)
+![جریان مدل زبان بزرگ](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.fa.png)
 
-### Step 1 - creating messages
+### مرحله 1 - ایجاد پیام‌ها
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+اولین مرحله ایجاد یک پیام کاربر است. این می‌تواند به صورت پویا با گرفتن مقدار یک ورودی متنی اختصاص داده شود یا می‌توانید در اینجا یک مقدار اختصاص دهید. اگر این اولین بار است که با API تکمیل چت کار می‌کنید، باید `role` و `content` پیام را تعریف کنید.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` و یک مثال سوال.
+`role` می‌تواند `system` (ایجاد قوانین)، `assistant` (مدل) یا `user` (کاربر نهایی) باشد. برای فراخوانی تابع، ما آن را به عنوان `user` اختصاص می‌دهیم و یک مثال از پرسش را ارائه می‌دهیم.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-با اختصاص نقش‌های مختلف، به LLM مشخص می‌شود که آیا سیستم چیزی می‌گوید یا کاربر، که به ساخت یک تاریخچه مکالمه که LLM می‌تواند بر اساس آن بنا کند، کمک می‌کند.
+با اختصاص نقش‌های مختلف، برای مدل زبان بزرگ مشخص می‌شود که آیا سیستم چیزی می‌گوید یا کاربر، که به ساخت تاریخچه مکالمه کمک می‌کند تا مدل زبان بزرگ بتواند بر اساس آن پاسخ دهد.
 
 ### مرحله 2 - ایجاد توابع
 
-در مرحله بعد، یک تابع و پارامترهای آن تابع را تعریف خواهیم کرد. ما فقط از یک تابع به نام `search_courses` but you can create multiple functions.
+بعد، ما یک تابع و پارامترهای آن را تعریف می‌کنیم. در اینجا فقط یک تابع به نام `search_courses` ایجاد می‌کنیم، اما می‌توانید چندین تابع ایجاد کنید.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **مهم**: توابع در پیام سیستم به مدل زبان بزرگ گنجانده شده‌اند و در تعداد توکن‌های موجود شما لحاظ می‌شوند.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters` استفاده خواهیم کرد:
+در زیر، توابع را به صورت یک آرایه از آیتم‌ها ایجاد می‌کنیم. هر آیتم یک تابع است و دارای ویژگی‌های `name`، `description` و `parameters` است:
 
 ```python
 functions = [
@@ -250,26 +252,26 @@ functions = [
 ]
 ```
 
-بیایید هر نمونه تابع را در زیر به تفصیل شرح دهیم:
+بیایید هر نمونه تابع را بیشتر توضیح دهیم:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - نام تابعی که می‌خواهیم فراخوانی شود.
+- `description` - این توضیحی است که نشان می‌دهد تابع چگونه کار می‌کند. در اینجا مهم است که دقیق و واضح باشید.
+- `parameters` - لیستی از مقادیر و قالبی که می‌خواهید مدل زبان بزرگ برای پاسخ خود تولید کند. آرایه پارامترها شامل آیتم‌هایی است که این آیتم‌ها دارای ویژگی‌های زیر هستند:
+  1.  `type` - نوع داده‌ای که ویژگی‌ها در آن ذخیره می‌شوند.
+  1.  `properties` - لیستی از مقادیر خاصی که مدل زبان بزرگ برای پاسخ خود استفاده خواهد کرد.
+      1. `name` - کلید نام ویژگی که مدل زبان بزرگ برای پاسخ قالب‌بندی شده خود استفاده خواهد کرد، به عنوان مثال، `product`.
+      1. `type` - نوع داده این ویژگی، به عنوان مثال، `string`.
+      1. `description` - توضیح ویژگی خاص.
 
-There's also an optional property `required` - required property for the function call to be completed.
+همچنین یک ویژگی اختیاری `required` وجود دارد - ویژگی مورد نیاز برای تکمیل فراخوانی تابع.
 
-### Step 3 - Making the function call
+### مرحله 3 - انجام فراخوانی تابع
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+پس از تعریف یک تابع، اکنون باید آن را در فراخوانی به API تکمیل چت گنجانده شود. این کار را با افزودن `functions` به درخواست انجام می‌دهیم. در این حالت `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+همچنین گزینه‌ای برای تنظیم `function_call` به `auto` وجود دارد. این بدان معناست که ما به مدل زبان بزرگ اجازه می‌دهیم تصمیم بگیرد که کدام تابع باید بر اساس پیام کاربر فراخوانی شود، به جای اینکه خودمان آن را اختصاص دهیم.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` و در نتیجه به LLM اختیار می‌دهیم که چه زمانی توابعی را که به آن ارائه می‌دهیم فراخوانی کند:
+در اینجا کدی وجود دارد که در آن `ChatCompletion.create` را فراخوانی می‌کنیم، توجه کنید که چگونه `functions=functions` و `function_call="auto"` را تنظیم می‌کنیم و به مدل زبان بزرگ اجازه می‌دهیم تصمیم بگیرد که چه زمانی توابعی که به آن ارائه می‌دهیم را فراخوانی کند:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-پاسخی که اکنون برمی‌گردد به صورت زیر است:
+پاسخ بازگشتی اکنون به این صورت است:
 
 ```json
 {
@@ -292,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-در اینجا می‌توانیم ببینیم که چگونه تابع `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+در اینجا می‌توانیم ببینیم که تابع `search_courses` فراخوانی شده است و با چه آرگومان‌هایی، همانطور که در ویژگی `arguments` در پاسخ JSON ذکر شده است.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` مقدار:
+نتیجه این است که مدل زبان بزرگ توانست داده‌ها را برای مطابقت با آرگومان‌های تابع پیدا کند، زیرا آن را از مقدار ارائه شده به پارامتر `messages` در فراخوانی تکمیل چت استخراج کرده است. در زیر یادآوری مقدار `messages` آمده است:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-همانطور که می‌بینید، `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+همانطور که می‌بینید، `student`، `Azure` و `beginner` از `messages` استخراج شده و به عنوان ورودی به تابع تنظیم شده‌اند. استفاده از توابع به این روش یک راه عالی برای استخراج اطلاعات از یک درخواست است، اما همچنین برای ارائه ساختار به مدل زبان بزرگ و داشتن قابلیت‌های قابل استفاده مجدد.
 
-Next, we need to see how we can use this in our app.
+بعد، باید ببینیم چگونه می‌توانیم این را در برنامه خود استفاده کنیم.
 
-## Integrating Function Calls into an Application
+## ادغام فراخوانی توابع در یک برنامه
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+پس از آزمایش پاسخ قالب‌بندی شده از مدل زبان بزرگ، اکنون می‌توانیم این را در یک برنامه ادغام کنیم.
 
-### Managing the flow
+### مدیریت جریان
 
-To integrate this into our application, let's take the following steps:
+برای ادغام این در برنامه خود، مراحل زیر را انجام دهید:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. ابتدا، فراخوانی به سرویس‌های OpenAI انجام دهید و پیام را در یک متغیر به نام `response_message` ذخیره کنید.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. اکنون تابعی را تعریف خواهیم کرد که API Microsoft Learn را فراخوانی کند تا لیستی از دوره‌ها دریافت کند:
+1. اکنون تابعی را تعریف می‌کنیم که API Microsoft Learn را فراخوانی کند تا لیستی از دوره‌ها را دریافت کند:
 
    ```python
    import requests
@@ -340,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   توجه داشته باشید که اکنون یک تابع واقعی پایتون ایجاد می‌کنیم که با نام‌های تابع معرفی شده در `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   توجه کنید که اکنون یک تابع واقعی پایتون ایجاد می‌کنیم که با نام‌های توابع معرفی شده در متغیر `functions` مطابقت دارد. همچنین فراخوانی‌های واقعی API خارجی انجام می‌دهیم تا داده‌هایی را که نیاز داریم دریافت کنیم. در این حالت، ما به API Microsoft Learn مراجعه می‌کنیم تا ماژول‌های آموزشی را جستجو کنیم.
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+خب، ما متغیرهای `functions` و یک تابع پایتون مربوطه ایجاد کردیم، چگونه به مدل زبان بزرگ بگوییم که این دو را به هم مرتبط کند تا تابع پایتون ما فراخوانی شود؟
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` مطابقت دارد و تابع اشاره شده را فراخوانی می‌کند. در اینجا نحوه انجام بررسی ذکر شده در زیر آمده است:
+1. برای دیدن اینکه آیا نیاز به فراخوانی یک تابع پایتون داریم، باید به پاسخ مدل زبان بزرگ نگاه کنیم و ببینیم آیا `function_call` بخشی از آن است و تابع مشخص شده را فراخوانی کنیم. در اینجا نحوه انجام بررسی ذکر شده آمده است:
 
    ```python
    # Check if the model wants to call a function
@@ -419,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. اکنون پیام به‌روز شده، `messages` را به LLM ارسال خواهیم کرد تا بتوانیم به جای پاسخ API به صورت JSON، یک پاسخ به زبان طبیعی دریافت کنیم.
+1. اکنون پیام به‌روزرسانی شده، `messages` را به مدل زبان بزرگ ارسال می‌کنیم تا بتوانیم یک پاسخ به زبان طبیعی دریافت کنیم به جای یک پاسخ قالب‌بندی شده JSON API.
 
    ```python
    print("Messages in next request:")
@@ -450,19 +452,21 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## تکلیف
 
-برای ادامه یادگیری فراخوانی تابع Azure OpenAI می‌توانید بسازید:
+برای ادامه یادگیری فراخوانی توابع Azure OpenAI می‌توانید:
 
-- پارامترهای بیشتری از تابع که ممکن است به یادگیرندگان کمک کند تا دوره‌های بیشتری پیدا کنند.
-- ایجاد یک فراخوانی تابع دیگر که اطلاعات بیشتری از یادگیرنده مانند زبان مادری آنها بگیرد
-- ایجاد مدیریت خطا زمانی که فراخوانی تابع و/یا فراخوانی API هیچ دوره مناسبی را بر نمی‌گرداند
+- پارامترهای بیشتری برای تابع ایجاد کنید که ممکن است به یادگیرندگان کمک کند دوره‌های بیشتری پیدا کنند.
+- یک فراخوانی تابع دیگر ایجاد کنید که اطلاعات بیشتری از یادگیرنده مانند زبان مادری آن‌ها بگیرد.
+- ایجاد مدیریت خطا زمانی که فراخوانی تابع و/یا فراخوانی API هیچ دوره مناسبی را برنگرداند
 
-نکته: صفحه [مستندات مرجع API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) را دنبال کنید تا ببینید این داده‌ها چگونه و کجا در دسترس هستند.
+نکته: صفحه [مستندات مرجع API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) را بررسی کنید تا ببینید این داده‌ها چگونه و کجا در دسترس هستند.
 
-## کار عالی! ادامه سفر
+## کار عالی! سفر را ادامه دهید
 
-پس از تکمیل این درس، مجموعه [یادگیری هوش مصنوعی مولد](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ما را بررسی کنید تا به یادگیری دانش هوش مصنوعی مولد خود ادامه دهید!
+پس از اتمام این درس، مجموعه [آموزش هوش مصنوعی مولد](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ما را بررسی کنید تا دانش خود را در زمینه هوش مصنوعی مولد ارتقا دهید!
 
-به درس 12 بروید، جایی که به نحوه [طراحی UX برای برنامه‌های AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) نگاه خواهیم کرد!
+به درس ۱۲ بروید، جایی که به بررسی نحوه [طراحی تجربه کاربری برای برنامه‌های هوش مصنوعی](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) خواهیم پرداخت!
+
+---
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما برای دقت تلاش می‌کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه انسانی حرفه‌ای توصیه می‌شود. ما مسئولیت هیچ گونه سوء تفاهم یا سوء تعبیر ناشی از استفاده از این ترجمه را نمی‌پذیریم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.

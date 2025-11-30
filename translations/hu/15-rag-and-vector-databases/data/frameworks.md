@@ -2,109 +2,111 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T02:05:38+00:00",
+  "translation_date": "2025-07-09T16:36:07+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "hu"
 }
 -->
 # Neurális Hálózat Keretrendszerek
 
-Ahogy már megtanultuk, a neurális hálók hatékony tanításához két dolgot kell tennünk:
+Ahogy már megtanultuk, a neurális hálózatok hatékony tanításához két dolgot kell tudnunk:
 
-* Műveleteket végezni tenzorokon, például szorzás, összeadás, és néhány függvény, mint a szigmoid vagy softmax kiszámítása
-* Az összes kifejezés deriváltját kiszámítani, hogy gradient descent optimalizálást végezhessünk
+* Műveleteket végezni tenzorokon, például szorzás, összeadás, illetve olyan függvények kiszámítása, mint a sigmoid vagy softmax
+* Kiszámítani az összes kifejezés gradiensét, hogy elvégezhessük a gradiens csökkenéses optimalizációt
 
-Míg a `numpy` könyvtár elvégezheti az első részt, szükségünk van valamilyen mechanizmusra a deriváltak kiszámításához. Az általunk az előző szakaszban kifejlesztett keretrendszerben manuálisan kellett programoznunk az összes derivált függvényt a `backward` metódusban, amely a backpropagation-t végzi. Ideális esetben egy keretrendszernek lehetőséget kellene biztosítania számunkra, hogy *bármely kifejezés* deriváltját kiszámítsuk, amit meg tudunk határozni.
+Míg a `numpy` könyvtár az első részhez elegendő, szükségünk van egy mechanizmusra a gradiensszámításhoz. A korábbi szakaszban fejlesztett keretrendszerünkben manuálisan kellett megírnunk az összes derivált függvényt a `backward` metódusban, amely a visszaterjesztést végzi. Ideális esetben egy keretrendszer lehetőséget kell adjon bármilyen általunk definiált kifejezés gradiensének kiszámítására.
 
-Egy másik fontos dolog, hogy képesek legyünk számításokat végezni GPU-n vagy bármilyen más speciális számítási egységen, mint például a TPU. A mély neurális háló tanítása *sok* számítást igényel, és nagyon fontos, hogy ezeket a számításokat párhuzamosíthassuk GPU-kon.
+Egy másik fontos szempont, hogy képesek legyünk számításokat végezni GPU-n vagy más speciális számítóegységeken, például TPU-n. A mély neurális hálózatok tanítása *rengeteg* számítást igényel, és nagyon fontos, hogy ezeket a számításokat párhuzamosítani tudjuk GPU-kon.
 
-> ✅ A 'párhuzamosítás' kifejezés azt jelenti, hogy a számításokat több eszközre osztjuk szét.
+> ✅ A 'párhuzamosítás' azt jelenti, hogy a számításokat több eszköz között osztjuk meg.
 
-Jelenleg a két legnépszerűbb neurális keretrendszer: TensorFlow és PyTorch. Mindkettő alacsony szintű API-t biztosít a tenzorokkal való műveletekhez mind CPU-n, mind GPU-n. Az alacsony szintű API fölött létezik egy magasabb szintű API is, amelyet Kerasnak és PyTorch Lightningnak hívnak.
+Jelenleg a két legnépszerűbb neurális keretrendszer a TensorFlow és a PyTorch. Mindkettő alacsony szintű API-t biztosít tenzorok kezelésére CPU-n és GPU-n egyaránt. Az alacsony szintű API fölött magasabb szintű API is elérhető, ezek a Keras és a PyTorch Lightning.
 
 Alacsony szintű API | TensorFlow | PyTorch
---------------|-------------------------------------|--------------------------------
-Magas szintű API | Keras | Pytorch
+-------------------|------------|---------
+Magas szintű API   | Keras      | PyTorch
 
-**Az alacsony szintű API-k** mindkét keretrendszerben lehetővé teszik az úgynevezett **számítási gráfok** felépítését. Ez a gráf határozza meg, hogyan kell kiszámítani a kimenetet (általában a veszteségfüggvényt) a megadott bemeneti paraméterekkel, és ha elérhető, átadható a GPU-n való számításra. Vannak funkciók, amelyekkel megkülönböztethetjük ezt a számítási gráfot és kiszámíthatjuk a deriváltakat, amelyeket aztán a modell paramétereinek optimalizálására használhatunk.
+**Az alacsony szintű API-k** mindkét keretrendszerben lehetővé teszik úgynevezett **számítási gráfok** építését. Ez a gráf meghatározza, hogyan számoljuk ki a kimenetet (általában a veszteségfüggvényt) adott bemeneti paraméterekkel, és ha elérhető, GPU-n is futtatható. Vannak függvények, amelyek képesek differenciálni ezt a számítási gráfot és kiszámítani a gradienseket, amelyeket aztán a modellparaméterek optimalizálására használhatunk.
 
-**A magas szintű API-k** nagyrészt a neurális hálókat **rétegek sorozataként** kezelik, és megkönnyítik a legtöbb neurális háló felépítését. A modell tanítása általában az adatok előkészítését igényli, majd egy `fit` függvény hívását a feladat elvégzéséhez.
+**A magas szintű API-k** a neurális hálózatokat jellemzően **rétegek sorozataként** kezelik, és megkönnyítik a legtöbb hálózat felépítését. A modell tanítása általában az adatok előkészítését, majd a `fit` függvény meghívását jelenti.
 
-A magas szintű API lehetővé teszi, hogy tipikus neurális hálókat nagyon gyorsan építsünk fel anélkül, hogy sok részlet miatt aggódnánk. Ugyanakkor az alacsony szintű API sokkal nagyobb kontrollt biztosít a tanítási folyamat felett, ezért sokat használják a kutatásban, amikor új neurális háló architektúrákkal foglalkozunk.
+A magas szintű API lehetővé teszi, hogy tipikus neurális hálózatokat nagyon gyorsan építsünk anélkül, hogy sok részlettel kellene foglalkoznunk. Ugyanakkor az alacsony szintű API sokkal nagyobb kontrollt ad a tanítási folyamat felett, ezért kutatásokban gyakran használják, amikor új neurális hálózati architektúrákkal dolgozunk.
 
-Fontos megérteni, hogy mindkét API-t együtt is használhatjuk, például fejleszthetjük saját hálózati réteg architektúránkat alacsony szintű API-val, majd használhatjuk azt a magas szintű API-val konstruált és tanított nagyobb hálózatban. Vagy meghatározhatunk egy hálózatot a magas szintű API-val rétegek sorozataként, majd használhatjuk saját alacsony szintű tanítási ciklusunkat az optimalizálás végrehajtásához. Mindkét API ugyanazokat az alapvető fogalmakat használja, és úgy tervezték őket, hogy jól működjenek együtt.
+Fontos megérteni, hogy mindkét API-t együtt is használhatjuk, például saját hálózati rétegarchitektúrát fejleszthetünk alacsony szintű API-val, majd ezt beilleszthetjük egy nagyobb, magas szintű API-val épített és tanított hálózatba. Vagy definiálhatunk egy hálózatot magas szintű API-val rétegek sorozataként, majd saját alacsony szintű tanítási ciklust használhatunk az optimalizációhoz. Mindkét API ugyanazokon az alapelveken nyugszik, és úgy tervezték, hogy jól működjenek együtt.
 
 ## Tanulás
 
-Ebben a kurzusban a legtöbb tartalmat mind PyTorch, mind TensorFlow számára kínáljuk. Választhatod a kedvenc keretrendszered, és csak a megfelelő jegyzetfüzeteket olvashatod el. Ha nem vagy biztos benne, melyik keretrendszert válaszd, olvass el néhány internetes vitát a **PyTorch vs. TensorFlow** témában. Megnézheted mindkét keretrendszert is, hogy jobban megértsd őket.
+Ebben a tanfolyamban a tartalom nagy részét mind PyTorch, mind TensorFlow esetén kínáljuk. Választhatod a neked tetsző keretrendszert, és csak a hozzá tartozó jegyzeteket nézheted át. Ha nem vagy biztos, melyik keretrendszert válaszd, olvass el néhány internetes vitát a **PyTorch vs. TensorFlow** témában. Érdemes mindkettőt megnézni, hogy jobban megértsd őket.
 
-Ahol lehetséges, a magas szintű API-kat fogjuk használni az egyszerűség kedvéért. Ugyanakkor úgy gondoljuk, fontos megérteni, hogyan működnek a neurális hálók az alapoktól kezdve, ezért kezdetben az alacsony szintű API-val és tenzorokkal dolgozunk. Azonban ha gyorsan szeretnél haladni, és nem akarsz sok időt tölteni ezeknek a részleteknek a megtanulásával, átugorhatod ezeket, és közvetlenül a magas szintű API jegyzetfüzetekbe kezdhetsz.
+Ahol csak lehet, egyszerűség miatt magas szintű API-kat használunk. Ugyanakkor fontosnak tartjuk, hogy az alapoktól értsd meg a neurális hálózatok működését, ezért az elején alacsony szintű API-val és tenzorokkal dolgozunk. Ha viszont gyorsan szeretnél haladni, és nem akarsz sok időt tölteni ezeknek a részleteknek a tanulásával, átugorhatod ezt, és egyből a magas szintű API-s jegyzetekhez mehetsz.
 
 ## ✍️ Gyakorlatok: Keretrendszerek
 
-Folytasd a tanulást a következő jegyzetfüzetekben:
+Folytasd a tanulást a következő jegyzetekben:
 
-Alacsony szintű API | TensorFlow+Keras Jegyzetfüzet | PyTorch
---------------|-------------------------------------|--------------------------------
-Magas szintű API | Keras | *PyTorch Lightning*
+Alacsony szintű API | TensorFlow+Keras jegyzet | PyTorch
+--------------------|----------------------------|---------
+Magas szintű API    | Keras                      | *PyTorch Lightning*
 
-Miután elsajátítottad a keretrendszereket, foglaljuk össze az overfitting fogalmát.
+Miután elsajátítottad a keretrendszereket, tekintsük át az overfitting fogalmát.
 
-# Overfitting
+# Overfitting (Túltanulás)
 
-Az overfitting rendkívül fontos fogalom a gépi tanulásban, és nagyon fontos, hogy helyesen kezeljük!
+Az overfitting rendkívül fontos fogalom a gépi tanulásban, és nagyon lényeges, hogy helyesen értsük meg!
 
-Tekintsük a következő problémát, amely 5 pontot közelít (amit a `x` jelöl az alábbi gráfokon):
+Vegyük az alábbi problémát, ahol 5 pontot kell közelítenünk (a grafikonokon `x` jelöli őket):
 
 !linear | overfit
 -------------------------|--------------------------
-**Lineáris modell, 2 paraméter** | **Nem-lineáris modell, 7 paraméter**
-Tanítási hiba = 5.3 | Tanítási hiba = 0
+**Lineáris modell, 2 paraméter** | **Nemlineáris modell, 7 paraméter**
+Tanulási hiba = 5.3 | Tanulási hiba = 0
 Validációs hiba = 5.1 | Validációs hiba = 20
 
-* Balra egy jó egyenes vonal közelítést látunk. Mivel a paraméterek száma megfelelő, a modell helyesen érti a pontok eloszlását.
-* Jobbra a modell túl erős. Mivel csak 5 pontunk van, és a modellnek 7 paramétere, úgy tudja beállítani magát, hogy mindegyik ponton áthaladjon, így a tanítási hiba 0 lesz. Ez azonban megakadályozza, hogy a modell megértse az adatok mögötti helyes mintázatot, így a validációs hiba nagyon magas.
+* Bal oldalon egy jó egyenes vonal közelítést látunk. Mivel a paraméterek száma megfelelő, a modell jól megragadja a pontok eloszlásának lényegét.
+* Jobb oldalon a modell túl erős. Mivel csak 5 pont van, de a modellnek 7 paramétere, képes úgy igazodni, hogy átmenjen az összes ponton, így a tanulási hiba 0 lesz. Ez azonban megakadályozza, hogy a modell megértse az adatok mögötti helyes mintázatot, ezért a validációs hiba nagyon magas.
 
-Nagyon fontos megtalálni a megfelelő egyensúlyt a modell gazdagsága (paraméterek száma) és a tanító minták száma között.
+Nagyon fontos megtalálni a megfelelő egyensúlyt a modell komplexitása (paraméterek száma) és a tanító minták száma között.
 
-## Miért fordul elő overfitting
+## Miért alakul ki az overfitting?
 
-  * Nem elég tanító adat
+  * Nem elég tanító adat áll rendelkezésre
   * Túl erős modell
-  * Túl sok zaj a bemeneti adatokban
+  * Túl sok zaj van a bemeneti adatokban
 
-## Hogyan lehet felismerni az overfittinget
+## Hogyan ismerhető fel az overfitting?
 
-Ahogy a fenti gráfról is látható, az overfittinget nagyon alacsony tanítási hibával és magas validációs hibával lehet felismerni. Általában a tanítás során azt látjuk, hogy mind a tanítási, mind a validációs hibák csökkenni kezdenek, majd egy ponton a validációs hiba megállhat a csökkenésben és emelkedni kezdhet. Ez az overfitting jele lesz, és annak az indikátora, hogy valószínűleg abba kellene hagynunk a tanítást (vagy legalábbis készíteni egy pillanatképet a modellről).
+Ahogy a fenti grafikonon is látható, az overfittinget nagyon alacsony tanulási hiba és magas validációs hiba jellemzi. Általában a tanítás során mind a tanulási, mind a validációs hiba csökken, majd egy ponton a validációs hiba megáll a csökkenésben, és elkezd nőni. Ez az overfitting jele, és arra utal, hogy valószínűleg itt kellene leállítani a tanítást (vagy legalább készíteni egy pillanatképet a modellről).
 
-## Hogyan lehet megelőzni az overfittinget
+overfitting
 
-Ha látod, hogy overfitting történik, az alábbiakat teheted:
+## Hogyan előzhető meg az overfitting?
+
+Ha észleled az overfittinget, a következők egyikét teheted:
 
  * Növeld a tanító adatok mennyiségét
- * Csökkentsd a modell bonyolultságát
- * Használj valamilyen regularizációs technikát, mint például a Dropout, amit később megvizsgálunk.
+ * Csökkentsd a modell komplexitását
+ * Használj valamilyen regularizációs technikát, például Dropout-ot, amit később tárgyalunk
 
-## Overfitting és Bias-Variance Tradeoff
+## Overfitting és a Bias-Variance kompromisszum
 
-Az overfitting valójában egy általánosabb probléma esete a statisztikában, amit Bias-Variance Tradeoff-nak hívnak. Ha megvizsgáljuk a modellünk lehetséges hibaforrásait, kétféle hibát láthatunk:
+Az overfitting valójában egy általánosabb statisztikai probléma, az úgynevezett Bias-Variance kompromisszum esete. Ha megnézzük a modell hibáinak lehetséges forrásait, két típust különböztethetünk meg:
 
-* **Bias hibák** abból adódnak, hogy algoritmusunk nem képes helyesen megragadni a kapcsolatot a tanító adatok között. Ez abból fakadhat, hogy a modellünk nem elég erős (**underfitting**).
-* **Variance hibák**, amelyek abból adódnak, hogy a modell a bemeneti adatok zaját közelíti ahelyett, hogy értelmes kapcsolatot találna (**overfitting**).
+* **Bias hibák** abból adódnak, hogy az algoritmus nem képes helyesen megragadni a tanító adatok közötti összefüggést. Ez abból fakadhat, hogy a modell nem elég erős (**alultanulás**).
+* **Variance hibák** abból erednek, hogy a modell a bemeneti adatok zaját közelíti, nem pedig a valódi összefüggést (**túltanulás**).
 
-A tanítás során a bias hiba csökken (ahogy a modell megtanulja közelíteni az adatokat), és a variance hiba nő. Fontos abbahagyni a tanítást - akár manuálisan (amikor overfittinget észlelünk), akár automatikusan (regularizáció bevezetésével) -, hogy megelőzzük az overfittinget.
+A tanítás során a bias hiba csökken (ahogy a modell megtanulja az adatokat), míg a variance hiba nő. Fontos, hogy a tanítást időben leállítsuk – akár manuálisan (amikor észleljük az overfittinget), akár automatikusan (regularizáció bevezetésével) –, hogy megelőzzük a túlillesztést.
 
-## Következtetés
+## Összefoglalás
 
-Ebben a leckében megismerkedtél a két legnépszerűbb AI keretrendszer, a TensorFlow és a PyTorch különböző API-jainak különbségeivel. Ezen kívül megismerkedtél egy nagyon fontos témával, az overfittinggel.
+Ebben a leckében megismerted a két legnépszerűbb AI keretrendszer, a TensorFlow és a PyTorch különböző API-jainak különbségeit. Emellett egy nagyon fontos témáról, az overfittingről is tanultál.
 
-## 🚀 Kihívás
+## 🚀 Feladat
 
-A mellékelt jegyzetfüzetekben 'feladatokat' találsz az alján; dolgozd végig a jegyzetfüzeteket és végezd el a feladatokat.
+A mellékelt jegyzetek alján találsz 'feladatokat'; dolgozd végig a jegyzeteket, és oldd meg a feladatokat.
 
-## Áttekintés és Önálló Tanulás
+## Áttekintés és önálló tanulás
 
-Végezz kutatást a következő témákban:
+Kutatásokat végezhetsz a következő témákban:
 
 - TensorFlow
 - PyTorch
@@ -115,9 +117,9 @@ Tedd fel magadnak a következő kérdéseket:
 - Mi a különbség a TensorFlow és a PyTorch között?
 - Mi a különbség az overfitting és az underfitting között?
 
-## Feladat
+## Házi feladat
 
-Ebben a laborban két osztályozási problémát kell megoldanod egy- és többrétegű, teljesen összekapcsolt hálózatok használatával PyTorch vagy TensorFlow segítségével.
+Ebben a laborban két osztályozási problémát kell megoldanod egy- és többrétegű, teljesen összekapcsolt hálózatokkal PyTorch vagy TensorFlow használatával.
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás használatával készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum saját nyelvén tekintendő a hiteles forrásnak. Kritikus információk esetén javasolt a professzionális emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+**Jogi nyilatkozat**:  
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.

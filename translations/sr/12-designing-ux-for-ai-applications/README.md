@@ -1,112 +1,134 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ec385b41ee50579025d50cc03bfb3a25",
-  "translation_date": "2025-05-19T22:07:04+00:00",
+  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
+  "translation_date": "2025-10-18T01:16:51+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "sr"
 }
 -->
-# Dizajniranje UX za AI aplikacije
+# Дизајнирање корисничког искуства за AI апликације
 
-Korisničko iskustvo je veoma važan aspekt izgradnje aplikacija. Korisnici moraju biti u stanju da koriste vašu aplikaciju na efikasan način kako bi obavili zadatke. Efikasnost je jedna stvar, ali takođe morate dizajnirati aplikacije tako da ih svi mogu koristiti, da budu _pristupačne_. Ovaj deo će se fokusirati na to područje kako biste na kraju dizajnirali aplikaciju koju ljudi mogu i žele da koriste.
+[![Дизајнирање корисничког искуства за AI апликације](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.sr.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-## Uvod
+> _(Кликните на слику изнад да бисте погледали видео лекцију)_
 
-Korisničko iskustvo je način na koji korisnik interaguje sa i koristi određeni proizvod ili uslugu, bilo da je to sistem, alat ili dizajn. Kada razvijaju AI aplikacije, programeri ne samo da se fokusiraju na to da korisničko iskustvo bude efektivno, već i etično. U ovoj lekciji pokrivamo kako izgraditi aplikacije veštačke inteligencije (AI) koje zadovoljavaju potrebe korisnika.
+Корисничко искуство је веома важан аспект изградње апликација. Корисници треба да могу ефикасно да користе вашу апликацију за обављање задатака. Бити ефикасан је једна ствар, али такође треба да дизајнирате апликације тако да их сви могу користити, чинећи их _приступачним_. Ово поглавље ће се фокусирати на ову област како бисте на крају дизајнирали апликацију коју људи могу и желе да користе.
 
-Lekcija će pokriti sledeće oblasti:
+## Увод
 
-- Uvod u korisničko iskustvo i razumevanje potreba korisnika
-- Dizajniranje AI aplikacija za poverenje i transparentnost
-- Dizajniranje AI aplikacija za saradnju i povratne informacije
+Корисничко искуство је начин на који корисник интерагује са и користи одређени производ или услугу, било да је у питању систем, алат или дизајн. Приликом развоја AI апликација, програмери се не фокусирају само на то да корисничко искуство буде ефикасно, већ и етичко. У овој лекцији покривамо како изградити апликације засноване на вештачкој интелигенцији (AI) које одговарају потребама корисника.
 
-## Ciljevi učenja
+Лекција ће покрити следеће области:
 
-Nakon ove lekcije, moći ćete:
+- Увод у корисничко искуство и разумевање потреба корисника
+- Дизајнирање AI апликација за поверење и транспарентност
+- Дизајнирање AI апликација за сарадњу и повратне информације
 
-- Razumeti kako izgraditi AI aplikacije koje zadovoljavaju potrebe korisnika.
-- Dizajnirati AI aplikacije koje promovišu poverenje i saradnju.
+## Циљеви учења
 
-### Preduslov
+Након ове лекције, моћи ћете:
 
-Odvojite vreme i pročitajte više o [korisničkom iskustvu i dizajnerskom razmišljanju.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+- Разумети како изградити AI апликације које задовољавају потребе корисника.
+- Дизајнирати AI апликације које промовишу поверење и сарадњу.
 
-## Uvod u korisničko iskustvo i razumevanje potreba korisnika
+### Предуслов
 
-U našem fiktivnom obrazovnom startapu imamo dva primarna korisnika, nastavnike i učenike. Svaki od dva korisnika ima jedinstvene potrebe. Dizajn orijentisan na korisnika prioritizuje korisnika, osiguravajući da su proizvodi relevantni i korisni za one kojima su namenjeni.
+Одвојите време и прочитајте више о [корисничком искуству и дизајнерском размишљању.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-Aplikacija treba da bude **korisna, pouzdana, pristupačna i prijatna** da bi pružila dobro korisničko iskustvo.
+## Увод у корисничко искуство и разумевање потреба корисника
 
-### Upotrebljivost
+У нашем измишљеном стартапу за образовање, имамо два примарна корисника, наставнике и ученике. Сваки од ова два корисника има јединствене потребе. Дизајн усмерен на корисника приоритетно ставља корисника, осигуравајући да су производи релевантни и корисни за оне за које су намењени.
 
-Biti koristan znači da aplikacija ima funkcionalnost koja odgovara njenoj nameni, kao što je automatizacija procesa ocenjivanja ili generisanje kartica za ponavljanje gradiva. Aplikacija koja automatizuje proces ocenjivanja treba da može tačno i efikasno da dodeli ocene učenicima na osnovu unapred definisanih kriterijuma. Slično tome, aplikacija koja generiše kartice za ponavljanje treba da može da kreira relevantna i raznolika pitanja na osnovu svojih podataka.
+Апликација треба да буде **корисна, поуздана, приступачна и пријатна** како би пружила добро корисничко искуство.
 
-### Pouzdanost
+### Употребљивост
 
-Biti pouzdan znači da aplikacija može dosledno i bez grešaka obavljati svoj zadatak. Međutim, AI kao i ljudi nije savršen i može biti sklon greškama. Aplikacije mogu naići na greške ili neočekivane situacije koje zahtevaju ljudsku intervenciju ili korekciju. Kako se nositi sa greškama? U poslednjem delu ove lekcije, pokrićemo kako su AI sistemi i aplikacije dizajnirani za saradnju i povratne informacije.
+Бити користан значи да апликација има функционалност која одговара њеној намени, као што је аутоматизација процеса оцењивања или генерисање картица за учење. Апликација која аутоматизује процес оцењивања треба да буде у стању да тачно и ефикасно додели оцене радовима ученика на основу унапред дефинисаних критеријума. Слично томе, апликација која генерише картице за учење треба да буде у стању да креира релевантна и разноврсна питања на основу својих података.
 
-### Pristupačnost
+### Поузданост
 
-Biti pristupačan znači proširiti korisničko iskustvo na korisnike sa različitim sposobnostima, uključujući one sa invaliditetom, osiguravajući da niko nije izostavljen. Prateći smernice i principe pristupačnosti, AI rešenja postaju inkluzivnija, upotrebljivija i korisnija za sve korisnike.
+Бити поуздан значи да апликација може доследно и без грешака обављати свој задатак. Међутим, AI, као и људи, није савршен и може бити склон грешкама. Апликације могу наићи на грешке или неочекиване ситуације које захтевају људску интервенцију или корекцију. Како се носите са грешкама? У последњем делу ове лекције, покрићемо како се AI системи и апликације дизајнирају за сарадњу и повратне информације.
 
-### Prijatnost
+### Приступачност
 
-Biti prijatan znači da je aplikacija užitak za korišćenje. Privlačno korisničko iskustvo može imati pozitivan uticaj na korisnika, podstičući ga da se vrati aplikaciji i povećavajući poslovne prihode.
+Бити приступачан значи проширити корисничко искуство на кориснике са различитим способностима, укључујући оне са инвалидитетом, осигуравајући да нико није изостављен. Пратећи смернице и принципе приступачности, AI решења постају инклузивнија, употребљивија и кориснија за све кориснике.
 
-Nije svaki izazov moguće rešiti sa AI. AI dolazi da unapredi vaše korisničko iskustvo, bilo da se radi o automatizaciji manuelnih zadataka ili personalizaciji korisničkih iskustava.
+### Пријатност
 
-## Dizajniranje AI aplikacija za poverenje i transparentnost
+Бити пријатан значи да је апликација уживање за коришћење. Привлачно корисничко искуство може имати позитиван утицај на корисника, подстичући га да се врати апликацији и повећа пословни приход.
 
-Izgradnja poverenja je ključna kada se dizajniraju AI aplikacije. Poverenje osigurava da korisnik bude siguran da će aplikacija obaviti posao, dosledno isporučiti rezultate i da su rezultati ono što korisnik treba. Rizik u ovoj oblasti je nepoverenje i preterano poverenje. Nepoverenje se javlja kada korisnik ima malo ili nimalo poverenja u AI sistem, što dovodi do odbacivanja vaše aplikacije. Preterano poverenje se javlja kada korisnik preceni sposobnosti AI sistema, što dovodi do toga da korisnici previše veruju AI sistemu. Na primer, automatizovani sistem ocenjivanja u slučaju preteranog poverenja može dovesti do toga da nastavnik ne pregleda neke radove kako bi se osiguralo da sistem ocenjivanja dobro funkcioniše. To bi moglo rezultirati nefer ili netačnim ocenama za učenike, ili propuštenim prilikama za povratne informacije i poboljšanje.
+![слика која илуструје UX разматрања у AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.sr.png)
 
-Dva načina da se osigura da poverenje bude u centru dizajna su objašnjivost i kontrola.
+Не може се сваки изазов решити AI-јем. AI долази да допуни ваше корисничко искуство, било да је у питању аутоматизација ручних задатака или персонализација корисничког искуства.
 
-### Objašnjivost
+## Дизајнирање AI апликација за поверење и транспарентност
 
-Kada AI pomaže u donošenju odluka kao što je prenošenje znanja budućim generacijama, važno je da nastavnici i roditelji razumeju kako AI donosi odluke. To je objašnjivost - razumevanje kako AI aplikacije donose odluke. Dizajniranje za objašnjivost uključuje dodavanje detalja o primerima šta AI aplikacija može da uradi. Na primer, umesto "Započnite sa AI nastavnikom", sistem može koristiti: "Sumirajte svoje beleške za lakše ponavljanje koristeći AI."
+Изградња поверења је кључна приликом дизајнирања AI апликација. Поверење осигурава да је корисник уверен да ће апликација обавити посао, доследно испоручити резултате и да су резултати оно што кориснику треба. Ризик у овој области је неповерење и претерано поверење. Неповерење се јавља када корисник има мало или нимало поверења у AI систем, што доводи до тога да корисник одбије вашу апликацију. Претерано поверење се јавља када корисник прецени способност AI система, што доводи до тога да корисници превише верују AI систему. На пример, аутоматизовани систем оцењивања у случају претераног поверења може довести до тога да наставник не провери неке радове како би се уверио да систем оцењивања добро функционише. То би могло резултирати неправедним или нетачним оценама за ученике или пропуштеним приликама за повратне информације и побољшање.
 
-Još jedan primer je kako AI koristi korisničke i lične podatke. Na primer, korisnik sa personom učenika može imati ograničenja na osnovu svoje persone. AI možda neće moći da otkrije odgovore na pitanja, ali može pomoći korisniku da razmisli o tome kako može rešiti problem.
+Два начина да се осигура да је поверење у центру дизајна су објашњивост и контрола.
 
-Jedan poslednji ključni deo objašnjivosti je pojednostavljivanje objašnjenja. Učenici i nastavnici možda nisu stručnjaci za AI, stoga objašnjenja o tome šta aplikacija može ili ne može da uradi treba da budu pojednostavljena i laka za razumevanje.
+### Објашњивост
 
-### Kontrola
+Када AI помаже у доношењу одлука, као што је преношење знања будућим генерацијама, кључно је да наставници и родитељи разумеју како се доносе одлуке AI-ја. То је објашњивост - разумевање како AI апликације доносе одлуке. Дизајнирање за објашњивост укључује додавање детаља који истичу како је AI дошао до одређеног резултата. Публика мора бити свесна да је резултат генерисан од стране AI, а не човека. На пример, уместо да кажете "Почните да разговарате са својим тутором сада", реците "Користите AI тутор који се прилагођава вашим потребама и помаже вам да учите својим темпом."
 
-Generativna AI stvara saradnju između AI i korisnika, gde na primer korisnik može modifikovati upite za različite rezultate. Dodatno, kada se generiše izlaz, korisnici treba da mogu da modifikuju rezultate dajući im osećaj kontrole. Na primer, kada koristite Bing, možete prilagoditi svoj upit na osnovu formata, tona i dužine. Dodatno, možete dodati promene svom izlazu i modifikovati izlaz kao što je prikazano ispod:
+![страница апликације са јасном илустрацијом објашњивости у AI апликацијама](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.sr.png)
 
-Još jedna karakteristika u Bing-u koja omogućava korisniku da ima kontrolu nad aplikacijom je sposobnost da se uključi ili isključi iz podataka koje AI koristi. Za školsku aplikaciju, učenik možda želi da koristi svoje beleške kao i resurse nastavnika kao materijal za ponavljanje.
+Још један пример је како AI користи корисничке и личне податке. На пример, корисник са персоном ученика може имати ограничења заснована на његовој персони. AI можда неће моћи да открије одговоре на питања, али може помоћи кориснику да размисли о томе како може да реши проблем.
 
-> Kada dizajnirate AI aplikacije, namera je ključna u osiguravanju da korisnici ne preterano veruju postavljajući nerealna očekivanja o njenim sposobnostima. Jedan način da se to postigne je stvaranje trenja između upita i rezultata. Podsećajući korisnika da je ovo AI, a ne drugi čovek.
+![AI одговара на питања на основу персоне](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.sr.png)
 
-## Dizajniranje AI aplikacija za saradnju i povratne informacije
+Још један кључни део објашњивости је поједностављење објашњења. Ученици и наставници можда нису AI стручњаци, стога објашњења о томе шта апликација може или не може да уради треба да буду поједностављена и лако разумљива.
 
-Kao što je ranije pomenuto, generativna AI stvara saradnju između korisnika i AI. Većina interakcija je sa korisnikom koji unosi upit, a AI generiše izlaz. Šta ako je izlaz netačan? Kako aplikacija postupa sa greškama ako se pojave? Da li AI krivi korisnika ili uzima vreme da objasni grešku?
+![поједностављена објашњења о могућностима AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.sr.png)
 
-AI aplikacije treba da budu izgrađene da primaju i daju povratne informacije. To ne samo da pomaže AI sistemu da se poboljša, već i gradi poverenje sa korisnicima. Povratna petlja treba da bude uključena u dizajn, primer može biti jednostavan palac gore ili dole na izlazu.
+### Контрола
 
-Još jedan način da se to postigne je jasno komuniciranje sposobnosti i ograničenja sistema. Kada korisnik napravi grešku tražeći nešto van AI sposobnosti, treba da postoji način da se to reši, kao što je prikazano ispod.
+Генеративни AI ствара сарадњу између AI и корисника, где, на пример, корисник може модификовати упите за различите резултате. Поред тога, када се генерише резултат, корисници треба да могу да модификују резултате, дајући им осећај контроле. На пример, када користите Bing, можете прилагодити свој упит на основу формата, тона и дужине. Поред тога, можете додати измене свом резултату и модификовати га, као што је приказано испод:
 
-Sistemske greške su česte kod aplikacija gde korisnik možda treba pomoć sa informacijama van opsega AI ili aplikacija može imati ograničenje koliko pitanja/predmeta korisnik može generisati sažetke. Na primer, AI aplikacija obučena sa podacima o ograničenim predmetima kao što su Istorija i Matematika možda neće moći da se nosi sa pitanjima o Geografiji. Da bi se to ublažilo, AI sistem može dati odgovor kao: "Žao nam je, naš proizvod je obučavan sa podacima u sledećim predmetima....., ne mogu da odgovorim na pitanje koje ste postavili."
+![Резултати претраге Bing-а са опцијама за модификацију упита и резултата](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.sr.png)
 
-AI aplikacije nisu savršene, stoga su sklone greškama. Kada dizajnirate svoje aplikacije, treba da osigurate da stvorite prostor za povratne informacije od korisnika i rukovanje greškama na način koji je jednostavan i lako objašnjiv.
+Још једна функција у Bing-у која омогућава кориснику да има контролу над апликацијом је могућност да се укључи или искључи из података које AI користи. За школску апликацију, ученик можда жели да користи своје белешке као и наставникове ресурсе као материјал за учење.
 
-## Zadatak
+![Резултати претраге Bing-а са опцијама за модификацију упита и резултата](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.sr.png)
 
-Uzmite bilo koju AI aplikaciju koju ste do sada izgradili, razmislite o implementaciji sledećih koraka u svojoj aplikaciji:
+> Приликом дизајнирања AI апликација, намерност је кључна у осигуравању да корисници не претерано верују, постављајући нереална очекивања о њеним способностима. Један од начина да се то постигне је стварање трења између упита и резултата. Подсећање корисника да је ово AI, а не други човек.
 
-- **Prijatnost:** Razmislite kako možete učiniti svoju aplikaciju prijatnijom. Da li dodajete objašnjenja svuda? Da li podstičete korisnika da istražuje? Kako formulirate svoje poruke o greškama?
+## Дизајнирање AI апликација за сарадњу и повратне информације
 
-- **Upotrebljivost:** Izgradnja web aplikacije. Uverite se da je vaša aplikacija navigabilna i mišem i tastaturom.
+Као што је раније поменуто, генеративни AI ствара сарадњу између корисника и AI. Већина интеракција се одвија тако што корисник уноси упит, а AI генерише резултат. Шта ако је резултат нетачан? Како апликација решава грешке ако се догоде? Да ли AI криви корисника или одваја време да објасни грешку?
 
-- **Poverenje i transparentnost:** Nemojte potpuno verovati AI i njenom izlazu, razmislite kako biste dodali čoveka u proces da verifikuje izlaz. Takođe, razmislite i implementirajte druge načine za postizanje poverenja i transparentnosti.
+AI апликације треба да буду изграђене тако да примају и дају повратне информације. Ово не само да помаже AI систему да се побољша, већ и гради поверење са корисницима. Петља повратних информација треба да буде укључена у дизајн, пример може бити једноставан палчеви горе или доле на резултату.
 
-- **Kontrola:** Dajte korisniku kontrolu nad podacima koje pruža aplikaciji. Implementirajte način da korisnik može da se uključi ili isključi iz prikupljanja podataka u AI aplikaciji.
+Још један начин да се ово реши је јасно комуницирање могућности и ограничења система. Када корисник направи грешку тражећи нешто изван могућности AI, треба да постоји начин да се то реши, као што је приказано испод.
 
-## Nastavite sa učenjem!
+![Давање повратних информација и решавање грешака](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.sr.png)
 
-Nakon završetka ove lekcije, pogledajte našu [kolekciju za učenje generativne AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili da unapređujete svoje znanje o generativnoj AI!
+Системске грешке су уобичајене код апликација где корисник можда треба помоћ са информацијама ван домета AI или апликација може имати ограничење у броју питања/предмета за које корисник може генерисати резимее. На пример, AI апликација обучена са подацима о ограниченим предметима, на пример, историји и математици, можда неће моћи да обради питања о географији. Да би се ово ублажило, AI систем може дати одговор као: "Жао нам је, наш производ је обучен са подацима о следећим предметима....., не могу да одговорим на питање које сте поставили."
 
-Pređite na Lekciju 13, gde ćemo pogledati kako [osigurati AI aplikacije](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+AI апликације нису савршене, стога су склоне грешкама. Када дизајнирате своје апликације, треба да осигурате да направите простор за повратне информације од корисника и решавање грешака на начин који је једноставан и лако разумљив.
 
-**Ограничење одговорности**:  
-Овај документ је преведен коришћењем AI услуге превођења [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да будете свесни да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на свом изворном језику треба сматрати меродавним извором. За критичне информације, препоручује се професионални превод од стране људи. Не сносимо одговорност за било каква неразумевања или погрешна тумачења која произилазе из коришћења овог превода.
+## Задатак
+
+Узмите било коју AI апликацију коју сте до сада направили и размислите о имплементацији следећих корака у вашој апликацији:
+
+- **Пријатност:** Размислите како можете учинити вашу апликацију пријатнијом. Да ли додајете објашњења свуда? Да ли подстичете корисника да истражује? Како формулишете поруке о грешкама?
+
+- **Употребљивост:** Изградња веб апликације. Уверите се да је ваша апликација навигабилна и мишем и тастатуром.
+
+- **Поверење и транспарентност:** Немојте потпуно веровати AI-ју и његовим резултатима, размислите како бисте додали човека у процес да провери резултате. Такође, размислите и имплементирајте друге начине за постизање поверења и транспарентности.
+
+- **Контрола:** Дајте кориснику контролу над подацима које пружа апликацији. Имплементирајте начин на који корисник може да се укључи или искључи из прикупљања података у AI апликацији.
+
+<!-- ## [Квиз након предавања](../../../12-designing-ux-for-ai-applications/quiz-url) -->
+
+## Наставите са учењем!
+
+Након завршетка ове лекције, погледајте нашу [колекцију за учење о генеративном AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да наставите са унапређењем знања о генеративном AI!
+
+Прелазите на лекцију 13, где ћемо погледати како [обезбедити AI апликације](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
+
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људског преводиоца. Не преузимамо одговорност за било каква погрешна тумачења или неспоразуме који могу настати услед коришћења овог превода.

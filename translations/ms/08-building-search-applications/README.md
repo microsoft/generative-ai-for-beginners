@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:38:21+00:00",
+  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
+  "translation_date": "2025-10-17T20:52:32+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "ms"
 }
 -->
-# Membangun Aplikasi Carian
+# Membina Aplikasi Carian
 
-[![Pengenalan kepada AI Generatif dan Model Bahasa Besar](../../../translated_images/08-lesson-banner.358a98d5a1d7df54f5eaf5fd69392931ea660c923effa48ffb8384f5fa4ab172.ms.png)](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)
+[![Pengenalan kepada AI Generatif dan Model Bahasa Besar](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.ms.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-> > _Klik gambar di atas untuk menonton video pelajaran ini_
+> > _Klik imej di atas untuk menonton video pelajaran ini_
 
-LLM bukan sekadar chatbot dan penjanaan teks. Kita juga boleh membina aplikasi carian menggunakan Embeddings. Embeddings adalah representasi numerik data yang juga dikenali sebagai vektor, dan boleh digunakan untuk carian semantik data.
+LLM bukan hanya untuk chatbot dan penjanaan teks. Ia juga boleh digunakan untuk membina aplikasi carian menggunakan Embeddings. Embeddings adalah representasi data secara numerik yang juga dikenali sebagai vektor, dan boleh digunakan untuk carian semantik bagi data.
 
-Dalam pelajaran ini, anda akan membina aplikasi carian untuk syarikat permulaan pendidikan kami. Syarikat permulaan kami adalah organisasi bukan untung yang menyediakan pendidikan percuma kepada pelajar di negara membangun. Syarikat permulaan kami mempunyai sejumlah besar video YouTube yang boleh digunakan oleh pelajar untuk belajar tentang AI. Syarikat permulaan kami mahu membina aplikasi carian yang membolehkan pelajar mencari video YouTube dengan menaip soalan.
+Dalam pelajaran ini, anda akan membina aplikasi carian untuk startup pendidikan kami. Startup kami adalah organisasi bukan keuntungan yang menyediakan pendidikan percuma kepada pelajar di negara membangun. Startup kami mempunyai sejumlah besar video YouTube yang boleh digunakan oleh pelajar untuk belajar tentang AI. Startup kami ingin membina aplikasi carian yang membolehkan pelajar mencari video YouTube dengan menaip soalan.
 
-Sebagai contoh, seorang pelajar mungkin menaip 'Apakah Jupyter Notebooks?' atau 'Apakah Azure ML' dan aplikasi carian akan memulangkan senarai video YouTube yang berkaitan dengan soalan tersebut, dan lebih baik lagi, aplikasi carian akan memulangkan pautan ke tempat dalam video di mana jawapan kepada soalan itu terletak.
+Sebagai contoh, seorang pelajar mungkin menaip 'Apa itu Jupyter Notebooks?' atau 'Apa itu Azure ML' dan aplikasi carian akan mengembalikan senarai video YouTube yang relevan dengan soalan tersebut, dan lebih baik lagi, aplikasi carian akan mengembalikan pautan ke tempat dalam video di mana jawapan kepada soalan tersebut berada.
 
 ## Pengenalan
 
-Dalam pelajaran ini, kita akan meliputi:
+Dalam pelajaran ini, kita akan membincangkan:
 
 - Carian Semantik vs Carian Kata Kunci.
-- Apakah itu Text Embeddings.
-- Mencipta Indeks Text Embeddings.
+- Apa itu Text Embeddings.
+- Membina Indeks Text Embeddings.
 - Mencari dalam Indeks Text Embeddings.
 
 ## Matlamat Pembelajaran
@@ -34,35 +34,35 @@ Selepas menyelesaikan pelajaran ini, anda akan dapat:
 
 - Membezakan antara carian semantik dan carian kata kunci.
 - Menerangkan apa itu Text Embeddings.
-- Mencipta aplikasi menggunakan Embeddings untuk mencari data.
+- Membina aplikasi menggunakan Embeddings untuk mencari data.
 
 ## Mengapa membina aplikasi carian?
 
-Mencipta aplikasi carian akan membantu anda memahami cara menggunakan Embeddings untuk mencari data. Anda juga akan belajar cara membina aplikasi carian yang boleh digunakan oleh pelajar untuk mencari maklumat dengan cepat.
+Membina aplikasi carian akan membantu anda memahami cara menggunakan Embeddings untuk mencari data. Anda juga akan belajar cara membina aplikasi carian yang boleh digunakan oleh pelajar untuk mencari maklumat dengan cepat.
 
-Pelajaran ini termasuk Indeks Embedding transkrip YouTube untuk saluran YouTube Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1). AI Show adalah saluran YouTube yang mengajar anda tentang AI dan pembelajaran mesin. Indeks Embedding mengandungi Embeddings untuk setiap transkrip YouTube sehingga Oktober 2023. Anda akan menggunakan Indeks Embedding untuk membina aplikasi carian untuk syarikat permulaan kami. Aplikasi carian memulangkan pautan ke tempat dalam video di mana jawapan kepada soalan itu terletak. Ini adalah cara yang baik untuk pelajar mencari maklumat yang mereka perlukan dengan cepat.
+Pelajaran ini termasuk Indeks Embedding daripada transkrip YouTube untuk saluran YouTube Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1). AI Show adalah saluran YouTube yang mengajar anda tentang AI dan pembelajaran mesin. Indeks Embedding mengandungi Embeddings untuk setiap transkrip YouTube sehingga Oktober 2023. Anda akan menggunakan Indeks Embedding untuk membina aplikasi carian untuk startup kami. Aplikasi carian mengembalikan pautan ke tempat dalam video di mana jawapan kepada soalan tersebut berada. Ini adalah cara yang hebat untuk pelajar mencari maklumat yang mereka perlukan dengan cepat.
 
-Berikut adalah contoh pertanyaan semantik untuk soalan 'bolehkah anda menggunakan rstudio dengan azure ml?'. Lihatlah URL YouTube, anda akan melihat URL tersebut mengandungi cap masa yang membawa anda ke tempat dalam video di mana jawapan kepada soalan itu terletak.
+Berikut adalah contoh pertanyaan semantik untuk soalan 'bolehkah anda menggunakan rstudio dengan azure ml?'. Lihat url YouTube, anda akan melihat url tersebut mengandungi cap masa yang membawa anda ke tempat dalam video di mana jawapan kepada soalan tersebut berada.
 
-![Pertanyaan semantik untuk soalan "bolehkah anda menggunakan rstudio dengan Azure ML"](../../../translated_images/query-results.506ee9aac38278ee496377ca3d0bf751a9bffda30c3cbd56d5024dcb9c8f8e9e.ms.png)
+![Pertanyaan semantik untuk soalan "bolehkah anda menggunakan rstudio dengan Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.ms.png)
 
-## Apakah itu carian semantik?
+## Apa itu carian semantik?
 
-Sekarang anda mungkin tertanya-tanya, apakah itu carian semantik? Carian semantik adalah teknik carian yang menggunakan semantik, atau makna, kata-kata dalam pertanyaan untuk memulangkan hasil yang relevan.
+Anda mungkin tertanya-tanya, apa itu carian semantik? Carian semantik adalah teknik carian yang menggunakan semantik, atau makna, perkataan dalam pertanyaan untuk mengembalikan hasil yang relevan.
 
-Berikut adalah contoh carian semantik. Katakan anda sedang mencari untuk membeli kereta, anda mungkin mencari 'kereta impian saya', carian semantik memahami bahawa anda tidak `dreaming` tentang kereta, tetapi sebaliknya anda sedang mencari untuk membeli kereta `ideal` anda. Carian semantik memahami niat anda dan memulangkan hasil yang relevan. Alternatifnya ialah `keyword search` yang secara literal akan mencari impian tentang kereta dan sering memulangkan hasil yang tidak relevan.
+Berikut adalah contoh carian semantik. Katakan anda ingin membeli kereta, anda mungkin mencari 'kereta impian saya', carian semantik memahami bahawa anda bukan `bermimpi` tentang kereta, tetapi anda sedang mencari kereta `ideal` anda. Carian semantik memahami niat anda dan mengembalikan hasil yang relevan. Alternatifnya adalah `carian kata kunci` yang secara literal akan mencari mimpi tentang kereta dan sering mengembalikan hasil yang tidak relevan.
 
-## Apakah itu Text Embeddings?
+## Apa itu Text Embeddings?
 
-[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) adalah teknik representasi teks yang digunakan dalam [pemprosesan bahasa semulajadi](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Text embeddings adalah representasi numerik semantik teks. Embeddings digunakan untuk mewakili data dengan cara yang mudah difahami oleh mesin. Terdapat banyak model untuk membina text embeddings, dalam pelajaran ini, kita akan memberi tumpuan kepada menjana embeddings menggunakan Model Embedding OpenAI.
+[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) adalah teknik representasi teks yang digunakan dalam [pemprosesan bahasa semula jadi](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Text embeddings adalah representasi numerik semantik teks. Embeddings digunakan untuk mewakili data dengan cara yang mudah difahami oleh mesin. Terdapat banyak model untuk membina text embeddings, dalam pelajaran ini, kita akan fokus pada penjanaan embeddings menggunakan Model Embedding OpenAI.
 
-Berikut adalah contoh, bayangkan teks berikut adalah dalam transkrip dari salah satu episod di saluran YouTube AI Show:
+Berikut adalah contoh, bayangkan teks berikut adalah dalam transkrip daripada salah satu episod di saluran YouTube AI Show:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Kami akan menghantar teks kepada OpenAI Embedding API dan ia akan memulangkan embedding yang terdiri daripada 1536 nombor aka vektor. Setiap nombor dalam vektor mewakili aspek yang berbeza daripada teks. Untuk ringkasan, berikut adalah 10 nombor pertama dalam vektor.
+Kami akan menghantar teks tersebut ke API Embedding OpenAI dan ia akan mengembalikan embedding berikut yang terdiri daripada 1536 nombor aka vektor. Setiap nombor dalam vektor mewakili aspek yang berbeza daripada teks tersebut. Untuk ringkasan, berikut adalah 10 nombor pertama dalam vektor tersebut.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
@@ -70,39 +70,39 @@ Kami akan menghantar teks kepada OpenAI Embedding API dan ia akan memulangkan em
 
 ## Bagaimana Indeks Embedding dicipta?
 
-Indeks Embedding untuk pelajaran ini dicipta dengan siri skrip Python. Anda akan menemui skrip bersama arahan dalam [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) dalam folder 'scripts' untuk pelajaran ini. Anda tidak perlu menjalankan skrip ini untuk menyelesaikan pelajaran ini kerana Indeks Embedding disediakan untuk anda.
+Indeks Embedding untuk pelajaran ini dicipta dengan beberapa skrip Python. Anda akan menemui skrip tersebut bersama arahan dalam [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) dalam folder 'scripts' untuk pelajaran ini. Anda tidak perlu menjalankan skrip ini untuk menyelesaikan pelajaran ini kerana Indeks Embedding telah disediakan untuk anda.
 
-Skrip melakukan operasi berikut:
+Skrip tersebut melakukan operasi berikut:
 
 1. Transkrip untuk setiap video YouTube dalam senarai main [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) dimuat turun.
-2. Menggunakan [Fungsi OpenAI](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), percubaan dibuat untuk mengekstrak nama penceramah dari 3 minit pertama transkrip YouTube. Nama penceramah untuk setiap video disimpan dalam Indeks Embedding yang dinamakan `embedding_index_3m.json`.
-3. Teks transkrip kemudian dipecahkan kepada **segmen teks 3 minit**. Segmen termasuk kira-kira 20 perkataan bertindih dari segmen seterusnya untuk memastikan Embedding untuk segmen tidak terputus dan memberikan konteks carian yang lebih baik.
-4. Setiap segmen teks kemudian dihantar kepada OpenAI Chat API untuk meringkaskan teks kepada 60 perkataan. Ringkasan juga disimpan dalam Indeks Embedding `embedding_index_3m.json`.
-5. Akhirnya, teks segmen dihantar kepada OpenAI Embedding API. Embedding API memulangkan vektor 1536 nombor yang mewakili makna semantik segmen. Segmen bersama vektor Embedding OpenAI disimpan dalam Indeks Embedding `embedding_index_3m.json`.
+2. Menggunakan [Fungsi OpenAI](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), percubaan dilakukan untuk mengekstrak nama penceramah daripada 3 minit pertama transkrip YouTube. Nama penceramah untuk setiap video disimpan dalam Indeks Embedding bernama `embedding_index_3m.json`.
+3. Teks transkrip kemudian dipecahkan kepada **segmen teks 3 minit**. Segmen tersebut termasuk kira-kira 20 perkataan yang bertindih daripada segmen seterusnya untuk memastikan Embedding bagi segmen tersebut tidak terputus dan memberikan konteks carian yang lebih baik.
+4. Setiap segmen teks kemudian dihantar ke API Chat OpenAI untuk meringkaskan teks kepada 60 perkataan. Ringkasan tersebut juga disimpan dalam Indeks Embedding `embedding_index_3m.json`.
+5. Akhirnya, teks segmen dihantar ke API Embedding OpenAI. API Embedding mengembalikan vektor 1536 nombor yang mewakili makna semantik segmen tersebut. Segmen tersebut bersama vektor Embedding OpenAI disimpan dalam Indeks Embedding `embedding_index_3m.json`.
 
 ### Pangkalan Data Vektor
 
-Untuk kesederhanaan pelajaran, Indeks Embedding disimpan dalam fail JSON yang dinamakan `embedding_index_3m.json` dan dimuatkan ke dalam Pandas DataFrame. Walau bagaimanapun, dalam pengeluaran, Indeks Embedding akan disimpan dalam pangkalan data vektor seperti [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), dan lain-lain.
+Untuk kesederhanaan pelajaran, Indeks Embedding disimpan dalam fail JSON bernama `embedding_index_3m.json` dan dimuatkan ke dalam Pandas DataFrame. Walau bagaimanapun, dalam pengeluaran, Indeks Embedding akan disimpan dalam pangkalan data vektor seperti [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), dan lain-lain.
 
 ## Memahami kesamaan kosinus
 
-Kita telah belajar tentang text embeddings, langkah seterusnya adalah belajar cara menggunakan text embeddings untuk mencari data dan khususnya mencari embeddings yang paling serupa dengan pertanyaan yang diberikan menggunakan kesamaan kosinus.
+Kita telah belajar tentang text embeddings, langkah seterusnya adalah belajar cara menggunakan text embeddings untuk mencari data dan khususnya mencari embeddings yang paling serupa dengan pertanyaan menggunakan kesamaan kosinus.
 
-### Apakah itu kesamaan kosinus?
+### Apa itu kesamaan kosinus?
 
-Kesamaan kosinus adalah ukuran kesamaan antara dua vektor, anda juga akan mendengar ini dirujuk sebagai `nearest neighbor search`. Untuk melakukan carian kesamaan kosinus, anda perlu _memvektor_ untuk teks _pertanyaan_ menggunakan OpenAI Embedding API. Kemudian hitung _kesamaan kosinus_ antara vektor pertanyaan dan setiap vektor dalam Indeks Embedding. Ingat, Indeks Embedding mempunyai vektor untuk setiap segmen teks transkrip YouTube. Akhirnya, urutkan hasil mengikut kesamaan kosinus dan segmen teks dengan kesamaan kosinus tertinggi adalah yang paling serupa dengan pertanyaan.
+Kesamaan kosinus adalah ukuran kesamaan antara dua vektor, anda juga akan mendengar ini dirujuk sebagai `carian jiran terdekat`. Untuk melakukan carian kesamaan kosinus, anda perlu _memvektor_ teks _pertanyaan_ menggunakan API Embedding OpenAI. Kemudian hitung _kesamaan kosinus_ antara vektor pertanyaan dan setiap vektor dalam Indeks Embedding. Ingat, Indeks Embedding mempunyai vektor untuk setiap segmen teks transkrip YouTube. Akhirnya, susun hasil mengikut kesamaan kosinus dan segmen teks dengan kesamaan kosinus tertinggi adalah yang paling serupa dengan pertanyaan.
 
-Dari perspektif matematik, kesamaan kosinus mengukur kosinus sudut antara dua vektor yang diproyeksikan dalam ruang multidimensi. Ukuran ini bermanfaat, kerana jika dua dokumen berjauhan dengan jarak Euclidean kerana saiz, mereka masih boleh mempunyai sudut yang lebih kecil antara mereka dan oleh itu kesamaan kosinus yang lebih tinggi. Untuk maklumat lanjut tentang persamaan kesamaan kosinus, lihat [Kesamaan kosinus](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Dari perspektif matematik, kesamaan kosinus mengukur kosinus sudut antara dua vektor yang diproyeksikan dalam ruang multidimensi. Ukuran ini bermanfaat, kerana jika dua dokumen berjauhan dengan jarak Euclidean kerana saiz, mereka masih boleh mempunyai sudut yang lebih kecil di antara mereka dan oleh itu kesamaan kosinus yang lebih tinggi. Untuk maklumat lanjut tentang persamaan kesamaan kosinus, lihat [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Membangun aplikasi carian pertama anda
+## Membina aplikasi carian pertama anda
 
-Seterusnya, kita akan belajar cara membina aplikasi carian menggunakan Embeddings. Aplikasi carian akan membolehkan pelajar mencari video dengan menaip soalan. Aplikasi carian akan memulangkan senarai video yang berkaitan dengan soalan tersebut. Aplikasi carian juga akan memulangkan pautan ke tempat dalam video di mana jawapan kepada soalan itu terletak.
+Seterusnya, kita akan belajar cara membina aplikasi carian menggunakan Embeddings. Aplikasi carian akan membolehkan pelajar mencari video dengan menaip soalan. Aplikasi carian akan mengembalikan senarai video yang relevan dengan soalan tersebut. Aplikasi carian juga akan mengembalikan pautan ke tempat dalam video di mana jawapan kepada soalan tersebut berada.
 
 Penyelesaian ini dibina dan diuji pada Windows 11, macOS, dan Ubuntu 22.04 menggunakan Python 3.10 atau lebih baru. Anda boleh memuat turun Python dari [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
 ## Tugasan - membina aplikasi carian, untuk membolehkan pelajar
 
-Kami memperkenalkan syarikat permulaan kami pada permulaan pelajaran ini. Kini tiba masanya untuk membolehkan pelajar membina aplikasi carian untuk penilaian mereka.
+Kami memperkenalkan startup kami pada permulaan pelajaran ini. Kini tiba masanya untuk membolehkan pelajar membina aplikasi carian untuk penilaian mereka.
 
 Dalam tugasan ini, anda akan mencipta Perkhidmatan Azure OpenAI yang akan digunakan untuk membina aplikasi carian. Anda akan mencipta Perkhidmatan Azure OpenAI berikut. Anda memerlukan langganan Azure untuk menyelesaikan tugasan ini.
 
@@ -124,7 +124,7 @@ az group create --name semantic-video-search --location eastus
 
 #### Cipta sumber Perkhidmatan Azure OpenAI
 
-Dari Azure Cloud Shell, jalankan perintah berikut untuk mencipta sumber Perkhidmatan Azure OpenAI.
+Daripada Azure Cloud Shell, jalankan arahan berikut untuk mencipta sumber Perkhidmatan Azure OpenAI.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
@@ -133,7 +133,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
 
 #### Dapatkan titik akhir dan kunci untuk digunakan dalam aplikasi ini
 
-Dari Azure Cloud Shell, jalankan perintah berikut untuk mendapatkan titik akhir dan kunci untuk sumber Perkhidmatan Azure OpenAI.
+Daripada Azure Cloud Shell, jalankan arahan berikut untuk mendapatkan titik akhir dan kunci untuk sumber Perkhidmatan Azure OpenAI.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -142,9 +142,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### Terapkan model OpenAI Embedding
+#### Lakukan penyebaran model Embedding OpenAI
 
-Dari Azure Cloud Shell, jalankan perintah berikut untuk menerapkan model OpenAI Embedding.
+Daripada Azure Cloud Shell, jalankan arahan berikut untuk menyebarkan model Embedding OpenAI.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -159,17 +159,19 @@ az cognitiveservices account deployment create \
 
 ## Penyelesaian
 
-Buka [notebook penyelesaian](../../../08-building-search-applications/python/aoai-solution.ipynb) di GitHub Codespaces dan ikuti arahan dalam Jupyter Notebook.
+Buka [notebook penyelesaian](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) dalam GitHub Codespaces dan ikuti arahan dalam Jupyter Notebook.
 
 Apabila anda menjalankan notebook, anda akan diminta untuk memasukkan pertanyaan. Kotak input akan kelihatan seperti ini:
 
-![Kotak input untuk pengguna memasukkan pertanyaan](../../../translated_images/notebook-search.31eabddd06254ea17ca4fe27dec0373d294da1abe4c1e8b7edc0dd31a18aeb9a.ms.png)
+![Kotak input untuk pengguna memasukkan pertanyaan](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.ms.png)
 
-## Kerja Bagus! Teruskan Pembelajaran Anda
+## Kerja Hebat! Teruskan Pembelajaran Anda
 
-Selepas menyelesaikan pelajaran ini, lihat koleksi Pembelajaran AI Generatif kami [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif anda!
+Selepas menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif anda!
 
-Pergi ke Pelajaran 9 di mana kita akan melihat bagaimana untuk [membina aplikasi penjanaan imej](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pergi ke Pelajaran 9 di mana kita akan melihat cara [membina aplikasi penjanaan imej](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber berwibawa. Untuk maklumat penting, terjemahan manusia profesional disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

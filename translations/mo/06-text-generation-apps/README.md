@@ -1,126 +1,126 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T16:43:59+00:00",
+  "original_hash": "df027997f1448323d6159b78a1b669bf",
+  "translation_date": "2025-10-17T23:28:32+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "mo"
 }
 -->
-# بناء تطبيقات توليد النصوص
+# 建立文字生成應用程式
 
-[![بناء تطبيقات توليد النصوص](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.mo.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![建立文字生成應用程式](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.mo.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(انقر على الصورة أعلاه لمشاهدة فيديو هذا الدرس)_
+> _(點擊上方圖片觀看本課程影片)_
 
-لقد رأيت حتى الآن من خلال هذه المناهج أن هناك مفاهيم أساسية مثل الإرشادات وحتى تخصص كامل يسمى "هندسة الإرشادات". العديد من الأدوات التي يمكنك التفاعل معها مثل ChatGPT وOffice 365 وMicrosoft Power Platform وغيرها، تدعمك في استخدام الإرشادات لتحقيق شيء ما.
+在這份課程中，你已經看到一些核心概念，例如提示（prompts），甚至還有一整個學科叫做「提示工程」（prompt engineering）。許多工具，例如 ChatGPT、Office 365、Microsoft Power Platform 等，都支持你使用提示來完成某些任務。
 
-لكي تضيف مثل هذه التجربة إلى تطبيق، تحتاج إلى فهم مفاهيم مثل الإرشادات، الإكمالات واختيار مكتبة للعمل بها. هذا بالضبط ما ستتعلمه في هذا الفصل.
+如果你想在應用程式中加入這樣的體驗，你需要了解提示、完成（completions）等概念，並選擇一個合適的程式庫來使用。本章節將教你如何做到這些。
 
-## المقدمة
+## 簡介
 
-في هذا الفصل، سوف:
+在本章節中，你將學到：
 
-- تتعلم عن مكتبة openai ومفاهيمها الأساسية.
-- تبني تطبيق لتوليد النصوص باستخدام openai.
-- تفهم كيفية استخدام مفاهيم مثل الإرشادات، درجة الحرارة، والرموز لبناء تطبيق لتوليد النصوص.
+- openai 程式庫及其核心概念。
+- 使用 openai 建立文字生成應用程式。
+- 理解如何使用提示、溫度（temperature）和代幣（tokens）等概念來建立文字生成應用程式。
 
-## أهداف التعلم
+## 學習目標
 
-في نهاية هذا الدرس، ستتمكن من:
+在本課程結束時，你將能夠：
 
-- شرح ما هو تطبيق توليد النصوص.
-- بناء تطبيق لتوليد النصوص باستخدام openai.
-- تكوين تطبيقك لاستخدام المزيد أو الأقل من الرموز وأيضًا تغيير درجة الحرارة للحصول على نتائج متنوعة.
+- 解釋什麼是文字生成應用程式。
+- 使用 openai 建立文字生成應用程式。
+- 配置你的應用程式以使用更多或更少的代幣，並調整溫度以獲得多樣化的輸出。
 
-## ما هو تطبيق توليد النصوص؟
+## 什麼是文字生成應用程式？
 
-عادةً عندما تبني تطبيقًا يكون له نوع من الواجهة مثل ما يلي:
+通常在建立應用程式時，它會有某種介面，例如以下幾種：
 
-- يعتمد على الأوامر. التطبيقات القائمة على وحدة التحكم هي تطبيقات نموذجية حيث تقوم بكتابة أمر وتقوم بتنفيذ مهمة. على سبيل المثال، `git` هو تطبيق يعتمد على الأوامر.
-- واجهة المستخدم (UI). بعض التطبيقات لديها واجهات مستخدم رسومية (GUIs) حيث يمكنك النقر على الأزرار، إدخال النص، اختيار الخيارات والمزيد.
+- 基於命令的介面。控制台應用程式是典型的應用程式，你可以輸入命令來執行任務。例如，`git` 是一個基於命令的應用程式。
+- 使用者介面（UI）。一些應用程式有圖形使用者介面（GUI），你可以點擊按鈕、輸入文字、選擇選項等。
 
-### التطبيقات القائمة على وحدة التحكم وواجهة المستخدم محدودة
+### 控制台和 UI 應用程式的限制
 
-قارنها بتطبيق يعتمد على الأوامر حيث تقوم بكتابة أمر:
+與基於命令的應用程式相比，控制台應用程式有以下限制：
 
-- **إنها محدودة**. لا يمكنك كتابة أي أمر، فقط الأوامر التي يدعمها التطبيق.
-- **لغة محددة**. بعض التطبيقات تدعم العديد من اللغات، ولكن بشكل افتراضي يتم بناء التطبيق للغة معينة، حتى لو كان بإمكانك إضافة دعم للغات أخرى.
+- **有限性**。你不能隨意輸入任何命令，只能使用應用程式支持的命令。
+- **語言特定性**。有些應用程式支持多種語言，但通常應用程式是為特定語言設計的，即使可以添加更多語言支持。
 
-### فوائد تطبيقات توليد النصوص
+### 文字生成應用程式的優勢
 
-كيف يختلف تطبيق توليد النصوص؟
+那麼文字生成應用程式有什麼不同呢？
 
-في تطبيق توليد النصوص، لديك المزيد من المرونة، لا تكون مقيدًا بمجموعة من الأوامر أو لغة إدخال معينة. بدلاً من ذلك، يمكنك استخدام اللغة الطبيعية للتفاعل مع التطبيق. فائدة أخرى هي أنك تتفاعل بالفعل مع مصدر بيانات تم تدريبه على مجموعة واسعة من المعلومات، في حين أن التطبيق التقليدي قد يكون محدودًا بما هو موجود في قاعدة البيانات.
+在文字生成應用程式中，你擁有更多的靈活性，不再局限於一組命令或特定的輸入語言。相反，你可以使用自然語言與應用程式互動。另一個好處是，你已經在與一個基於大量資訊訓練的數據源互動，而傳統應用程式可能僅限於資料庫中的內容。
 
-### ماذا يمكنني بناءه باستخدام تطبيق توليد النصوص؟
+### 我可以用文字生成應用程式建立什麼？
 
-هناك العديد من الأشياء التي يمكنك بناءها. على سبيل المثال:
+你可以建立許多東西，例如：
 
-- **روبوت دردشة**. روبوت دردشة يجيب على الأسئلة حول موضوعات، مثل شركتك ومنتجاتها يمكن أن يكون مناسبًا جيدًا.
-- **مساعد**. النماذج اللغوية الكبيرة (LLMs) ممتازة في أشياء مثل تلخيص النص، الحصول على رؤى من النص، إنتاج نص مثل السير الذاتية والمزيد.
-- **مساعد كود**. اعتمادًا على نموذج اللغة الذي تستخدمه، يمكنك بناء مساعد كود يساعدك في كتابة الكود. على سبيل المثال، يمكنك استخدام منتج مثل GitHub Copilot وكذلك ChatGPT لمساعدتك في كتابة الكود.
+- **聊天機器人**。一個回答有關公司及其產品問題的聊天機器人可能是一個不錯的選擇。
+- **助手**。大型語言模型（LLM）在摘要文字、從文字中獲取洞察、生成簡歷等方面非常出色。
+- **程式碼助手**。根據你使用的語言模型，你可以建立一個幫助你編寫程式碼的助手。例如，你可以使用 GitHub Copilot 或 ChatGPT 來幫助你編寫程式碼。
 
-## كيف يمكنني البدء؟
+## 我該如何開始？
 
-حسنًا، تحتاج إلى إيجاد طريقة للاندماج مع نموذج اللغة الكبير (LLM) والذي عادةً ما يتضمن النهجين التاليين:
+你需要找到與 LLM 整合的方法，通常有以下兩種方式：
 
-- استخدام واجهة برمجة التطبيقات (API). هنا تقوم ببناء طلبات ويب مع الإرشادات الخاصة بك وتحصل على نص مولد.
-- استخدام مكتبة. المكتبات تساعد في تغليف طلبات واجهة برمجة التطبيقات وتجعلها أسهل في الاستخدام.
+- 使用 API。你可以構建網路請求，傳入提示並獲得生成的文字。
+- 使用程式庫。程式庫幫助封裝 API 呼叫，使其更易於使用。
 
-## المكتبات/SDKs
+## 程式庫/SDK
 
-هناك بعض المكتبات المعروفة للعمل مع نماذج اللغة الكبيرة مثل:
+有一些知名的程式庫可以用來與 LLM 互動，例如：
 
-- **openai**، هذه المكتبة تجعل من السهل الاتصال بنموذجك وإرسال الإرشادات.
+- **openai**，這個程式庫使得連接到模型並傳入提示變得非常簡單。
 
-ثم هناك مكتبات تعمل على مستوى أعلى مثل:
+此外，還有一些操作層級更高的程式庫，例如：
 
-- **Langchain**. Langchain معروف ويدعم Python.
-- **Semantic Kernel**. Semantic Kernel هو مكتبة من Microsoft تدعم لغات C#، Python، وJava.
+- **Langchain**。Langchain 是一個知名的程式庫，支持 Python。
+- **Semantic Kernel**。Semantic Kernel 是 Microsoft 的一個程式庫，支持 C#、Python 和 Java。
 
-## التطبيق الأول باستخدام openai
+## 使用 openai 建立第一個應用程式
 
-لنرى كيف يمكننا بناء تطبيقنا الأول، ما المكتبات التي نحتاجها، كم هو مطلوب وما إلى ذلك.
+讓我們看看如何建立第一個應用程式，所需的程式庫以及所需的步驟。
 
-### تثبيت openai
+### 安裝 openai
 
-هناك العديد من المكتبات هناك للتفاعل مع OpenAI أو Azure OpenAI. من الممكن استخدام العديد من لغات البرمجة مثل C#، Python، JavaScript، Java والمزيد. لقد اخترنا استخدام مكتبة `openai` Python، لذلك سنستخدم `pip` لتثبيتها.
+有許多程式庫可以用來與 OpenAI 或 Azure OpenAI 互動。你可以使用多種程式語言，例如 C#、Python、JavaScript、Java 等。我們選擇使用 `openai` 的 Python 程式庫，因此我們將使用 `pip` 來安裝它。
 
 ```bash
 pip install openai
 ```
 
-### إنشاء مورد
+### 建立資源
 
-تحتاج إلى تنفيذ الخطوات التالية:
+你需要完成以下步驟：
 
-- إنشاء حساب على Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- الحصول على الوصول إلى Azure OpenAI. انتقل إلى [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) واطلب الوصول.
+- 在 Azure 上建立帳戶 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
+- 獲得 Azure OpenAI 的訪問權限。前往 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 並申請訪問權限。
 
   > [!NOTE]
-  > في وقت الكتابة، تحتاج إلى التقديم للحصول على الوصول إلى Azure OpenAI.
+  > 在撰寫本文時，你需要申請訪問 Azure OpenAI。
 
-- تثبيت Python <https://www.python.org/>
-- قم بإنشاء مورد خدمة Azure OpenAI. انظر هذا الدليل لكيفية [إنشاء مورد](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- 安裝 Python <https://www.python.org/>
+- 建立 Azure OpenAI Service 資源。請參閱此指南了解如何 [建立資源](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
 
-### تحديد مفتاح واجهة برمجة التطبيقات والنقطة النهائية
+### 找到 API 金鑰和端點
 
-في هذه المرحلة، تحتاج إلى إخبار مكتبة `openai` الخاصة بك أي مفتاح واجهة برمجة التطبيقات يجب استخدامه. للعثور على مفتاح واجهة برمجة التطبيقات الخاص بك، انتقل إلى قسم "المفاتيح والنقطة النهائية" في مورد Azure OpenAI الخاص بك ونسخ قيمة "المفتاح 1".
+此時，你需要告訴 `openai` 程式庫使用哪個 API 金鑰。要找到你的 API 金鑰，請前往 Azure OpenAI 資源的「金鑰和端點」部分，並複製「Key 1」的值。
 
-![شاشة موارد المفاتيح والنقطة النهائية في بوابة Azure](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Azure Portal 中的金鑰和端點資源頁面](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-الآن بعد أن حصلت على هذه المعلومات، دعنا نوجه المكتبات لاستخدامها.
+現在你已經複製了這些資訊，讓我們指示程式庫使用它。
 
 > [!NOTE]
-> من المفيد فصل مفتاح واجهة برمجة التطبيقات الخاص بك عن الكود. يمكنك القيام بذلك باستخدام متغيرات البيئة.
+> 建議將 API 金鑰與程式碼分開。你可以使用環境變數來做到這一點。
 >
-> - قم بتعيين متغير البيئة `OPENAI_API_KEY` to your API key.
+> - 設置環境變數 `OPENAI_API_KEY` 為你的 API 金鑰。
 >   `export OPENAI_API_KEY='sk-...'`
 
-### إعداد تكوين Azure
+### 配置 Azure
 
-إذا كنت تستخدم Azure OpenAI، إليك كيفية إعداد التكوين:
+如果你使用的是 Azure OpenAI，以下是配置方法：
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-أعلاه نحن نحدد ما يلي:
+上述配置中，我們設置了以下內容：
 
-- `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
-- `api_key`, this is your API key found in the Azure Portal.
-- `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
-- `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key.
+- `api_type` 為 `azure`。這告訴程式庫使用 Azure OpenAI 而不是 OpenAI。
+- `api_key`，這是你在 Azure Portal 中找到的 API 金鑰。
+- `api_version`，這是你想使用的 API 版本。在撰寫本文時，最新版本是 `2023-05-15`。
+- `api_base`，這是 API 的端點。你可以在 Azure Portal 中的 API 金鑰旁邊找到它。
 
-> [!NOTE] > `os.getenv` is a function that reads environment variables. You can use it to read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set these environment variables in your terminal or by using a library like `dotenv`.
+> [!NOTE] > `os.getenv` 是一個用來讀取環境變數的函數。你可以使用它來讀取像 `OPENAI_API_KEY` 和 `API_BASE` 這樣的環境變數。在終端中設置這些環境變數，或者使用像 `dotenv` 這樣的程式庫。
 
-## Generate text
+## 生成文字
 
-The way to generate text is to use the `Completion` class. إليك مثال:
+生成文字的方法是使用 `Completion` 類別。以下是一個範例：
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-في الكود أعلاه، نقوم بإنشاء كائن إكمال ونمرر النموذج الذي نريد استخدامه والإرشادات. ثم نقوم بطباعة النص المولد.
+在上述程式碼中，我們建立了一個完成物件，並傳入我們想使用的模型和提示。然後我們打印出生成的文字。
 
-### إكمالات الدردشة
+### 聊天完成
 
-حتى الآن، رأيت كيف كنا نستخدم `Completion` to generate text. But there's another class called `ChatCompletion` الذي يناسب أكثر روبوتات الدردشة. إليك مثال لاستخدامه:
+到目前為止，你已經看到我們如何使用 `Completion` 來生成文字。但還有另一個更適合聊天機器人的類別，叫做 `ChatCompletion`。以下是一個使用範例：
 
 ```python
 import openai
@@ -164,13 +164,13 @@ completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"rol
 print(completion.choices[0].message.content)
 ```
 
-المزيد حول هذه الوظيفة في فصل قادم.
+更多相關功能將在後續章節中介紹。
 
-## تمرين - تطبيق توليد النصوص الأول الخاص بك
+## 練習 - 建立你的第一個文字生成應用程式
 
-الآن بعد أن تعلمنا كيفية إعداد وتكوين openai، حان الوقت لبناء تطبيق توليد النصوص الأول الخاص بك. لبناء تطبيقك، اتبع هذه الخطوات:
+現在我們已經學會了如何設置和配置 openai，是時候建立你的第一個文字生成應用程式了。按照以下步驟來建立你的應用程式：
 
-1. قم بإنشاء بيئة افتراضية وتثبيت openai:
+1. 建立虛擬環境並安裝 openai：
 
    ```bash
    python -m venv venv
@@ -179,12 +179,12 @@ print(completion.choices[0].message.content)
    ```
 
    > [!NOTE]
-   > إذا كنت تستخدم Windows، اكتب `venv\Scripts\activate` instead of `source venv/bin/activate`.
+   > 如果你使用的是 Windows，請輸入 `venv\Scripts\activate` 而不是 `source venv/bin/activate`。
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+   > 前往 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)，搜尋 `Open AI`，選擇 `Open AI 資源`，然後選擇 `Keys and Endpoint` 並複製 `Key 1` 的值。
 
-1. قم بإنشاء ملف _app.py_ وأعطه الكود التالي:
+1. 建立一個 _app.py_ 檔案，並輸入以下程式碼：
 
    ```python
    import openai
@@ -208,9 +208,9 @@ print(completion.choices[0].message.content)
    ```
 
    > [!NOTE]
-   > إذا كنت تستخدم Azure OpenAI، تحتاج إلى تعيين `api_type` to `azure` and set the `api_key` لمفتاح Azure OpenAI الخاص بك.
+   > 如果你使用的是 Azure OpenAI，你需要將 `api_type` 設置為 `azure`，並將 `api_key` 設置為你的 Azure OpenAI 金鑰。
 
-   يجب أن ترى إخراجًا مثل ما يلي:
+   你應該會看到類似以下的輸出：
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ print(completion.choices[0].message.content)
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## أنواع مختلفة من الإرشادات لأشياء مختلفة
+## 不同類型的提示，用於不同的用途
 
-الآن رأيت كيفية توليد النص باستخدام إرشادات. لديك حتى برنامج يعمل يمكنك تعديله وتغييره لتوليد أنواع مختلفة من النصوص.
+現在你已經看到如何使用提示生成文字。你甚至已經有一個可以運行的程式，並可以修改和更改以生成不同類型的文字。
 
-يمكن استخدام الإرشادات لمهام مختلفة. على سبيل المثال:
+提示可以用於各種任務。例如：
 
-- **توليد نوع من النص**. على سبيل المثال، يمكنك توليد قصيدة، أسئلة لاختبار وما إلى ذلك.
-- **البحث عن معلومات**. يمكنك استخدام الإرشادات للبحث عن معلومات مثل المثال التالي "ماذا يعني CORS في تطوير الويب؟".
-- **توليد الكود**. يمكنك استخدام الإرشادات لتوليد الكود، على سبيل المثال تطوير تعبير منتظم يستخدم للتحقق من صحة البريد الإلكتروني أو لماذا لا تولد برنامجًا كاملاً، مثل تطبيق ويب؟
+- **生成特定類型的文字**。例如，你可以生成詩歌、測驗問題等。
+- **查詢資訊**。你可以使用提示來查詢資訊，例如「在網頁開發中，CORS 是什麼意思？」。
+- **生成程式碼**。你可以使用提示來生成程式碼，例如開發用於驗證電子郵件的正則表達式，或者甚至生成整個程式，例如網頁應用程式。
 
-## حالة استخدام أكثر عملية: مولد وصفات
+## 更實用的案例：食譜生成器
 
-تخيل أنك لديك مكونات في المنزل وتريد طهي شيء ما. لذلك، تحتاج إلى وصفة. إحدى الطرق للعثور على الوصفات هي استخدام محرك بحث أو يمكنك استخدام نموذج اللغة الكبير للقيام بذلك.
+想像一下你家裡有一些食材，想要做些料理。為此，你需要一份食譜。一種找到食譜的方法是使用搜尋引擎，或者你可以使用 LLM。
 
-يمكنك كتابة إرشادات مثل:
+你可以寫出如下提示：
 
-> "أظهر لي 5 وصفات لطبق يحتوي على المكونات التالية: دجاج، بطاطس، وجزر. لكل وصفة، قم بإدراج جميع المكونات المستخدمة"
+> 「列出使用以下食材的五道菜的食譜：雞肉、馬鈴薯和胡蘿蔔。每道食譜列出所有使用的食材。」
 
-بالنظر إلى الإرشادات أعلاه، قد تحصل على استجابة مشابهة لـ:
+根據上述提示，你可能會得到如下回應：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,16 +300,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-هذه النتيجة رائعة، أعلم ماذا أطبخ. في هذه المرحلة، ما يمكن أن يكون تحسينات مفيدة هي:
+這個結果很棒，我知道要做什麼菜了。此時，有一些可能的改進：
 
-- تصفية المكونات التي لا أحبها أو التي أعاني من حساسية تجاهها.
-- إنتاج قائمة تسوق، في حالة عدم وجود جميع المكونات في المنزل.
+- 過濾掉我不喜歡或過敏的食材。
+- 生成購物清單，以防我家裡沒有所有的食材。
 
-للحالات المذكورة أعلاه، دعنا نضيف إرشادات إضافية:
+針對上述情況，我們可以添加一個額外的提示：
 
-> "يرجى إزالة الوصفات التي تحتوي على الثوم لأنني أعاني من حساسية واستبدالها بشيء آخر. أيضًا، يرجى إنتاج قائمة تسوق للوصفات، مع مراعاة أنني لدي بالفعل دجاج، بطاطس وجزر في المنزل."
+> 「請移除含有大蒜的食譜，因為我對大蒜過敏，並用其他東西替代。此外，請根據我已經有的雞肉、馬鈴薯和胡蘿蔔，生成一份購物清單。」
 
-الآن لديك نتيجة جديدة، وهي:
+現在你會得到一個新的結果，即：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-هذه هي الوصفات الخمسة الخاصة بك، بدون ذكر الثوم ولديك أيضًا قائمة تسوق مع مراعاة ما لديك بالفعل في المنزل.
+這是你的五道食譜，沒有提到大蒜，並且你還有一份考慮到家裡已有食材的購物清單。
 
-## تمرين - بناء مولد وصفات
+## 練習 - 建立食譜生成器
 
-الآن بعد أن لعبنا سيناريو، دعنا نكتب كودًا لمطابقة السيناريو الموضح. للقيام بذلك، اتبع هذه الخطوات:
+現在我們已經模擬了一個場景，讓我們編寫程式碼來匹配所展示的場景。按照以下步驟操作：
 
-1. استخدم الملف الحالي _app.py_ كنقطة بداية
-1. حدد موقع متغير `prompt` وقم بتغيير الكود الخاص به إلى ما يلي:
+1. 使用現有的 _app.py_ 檔案作為起點
+1. 找到 `prompt` 變數並將其程式碼更改為以下內容：
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   إذا قمت الآن بتشغيل الكود، يجب أن ترى إخراجًا مشابهًا لـ:
+   如果你現在運行程式碼，你應該會看到類似以下的輸出：
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Shopping List:
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > ملاحظة، النموذج اللغوي الكبير غير محدد، لذا قد تحصل على نتائج مختلفة في كل مرة تقوم بتشغيل البرنامج.
+   > 注意，LLM 是非確定性的，因此每次運行程式時可能會得到不同的結果。
 
-   رائع، دعنا نرى كيف يمكننا تحسين الأمور. لتحسين الأمور، نريد التأكد من أن الكود مرن، لذلك يمكن تحسين وتغيير المكونات وعدد الوصفات.
+   很棒，讓我們看看如何改進。為了改進，我們希望確保程式碼是靈活的，因此食材和食譜數量可以改進和更改。
 
-1. دعنا نغير الكود بالطريقة التالية:
+1. 讓我們以以下方式更改程式碼：
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Shopping List:
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   يمكن أن يبدو اختبار الكود كما يلي:
+   測試程式碼的運行，可能會顯示如下：
 
    ```output
    No of recipes (for example, 5): 3
@@ -427,13 +427,13 @@ Shopping List:
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### تحسين بإضافة فلتر وقائمة تسوق
+### 添加過濾器和購物清單以進一步改進
 
-لدينا الآن تطبيق يعمل قادر على إنتاج وصفات وهو مرن حيث يعتمد على مدخلات من المستخدم، سواء في عدد الوصفات ولكن أيضًا المكونات المستخدمة.
+我們現在有一個能夠生成食譜的應用程式，並且它是靈活的，因為它依賴於使用者的輸入，包括食譜數量以及使用的食材。
 
-لتحسينه أكثر، نريد إضافة ما يلي:
+為了進一步改進，我們希望添加以下功能：
 
-- **تصفية المكونات**. نريد أن نكون قادرين على تصفية المكونات التي لا نحبها أو التي نعاني من حساسية تجاهها. لتحقيق هذا التغيير، يمكننا تعديل الإرشادات الحالية وإضافة شرط فلتر إلى نهايتها مثل:
+- **過濾掉食材**。我們希望能夠過濾掉我們不喜歡或過敏的食材。為了實現這一改變，我們可以編輯現有的提示，並在其末尾添加一個過濾條件，如下所示：
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Shopping List:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  أعلاه، نضيف `{filter}` إلى نهاية الإرشادات ونلتقط أيضًا قيمة الفلتر من المستخدم.
+  上述程式碼中，我們在提示末尾添加了 `{filter}`，並且還從使用者那裡捕獲了過濾值。
 
-  يمكن أن يبدو إدخال مثال لتشغيل البرنامج الآن كما يلي:
+  運行程式的示例輸入現在可能如下所示：
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,14 +510,13 @@ Shopping List:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  كما ترى، تم تصفية أي وصفات تحتوي على الحليب. ولكن، إذا كنت تعاني من عدم تحمل اللاكتوز، فقد ترغب في تصفية الوصفات التي تحتوي على الجبن أيضًا، لذلك هناك حاجة إلى الوضوح.
+  如你所見，任何含有牛奶的食譜都被過濾掉了。但是，如果你對乳糖不耐受，你可能還希望過濾掉含有奶酪的食譜，因此需要明確說明。
 
-- **إنتاج قائمة تسوق**. نريد إنتاج قائمة تسوق، مع مراعاة ما لدينا بالفعل في المنزل.
+- **生成購物清單**。我們希望生成一份購物清單，考慮到家裡已經有的食材。
 
-  لهذه الوظيفة، يمكننا إما محاولة حل كل شيء في إرشادات واحدة أو يمكننا تقسيمها إلى إرشاداتين. دعنا نحاول النهج الأخير. هنا نقترح إضافة إرشادات إضافية، ولكن لكي تعمل، نحتاج إلى إضافة نتيجة الإرشادات الأولى كالسياق للإرشادات الثانية.
+  對於此功能，我們可以嘗試在一個提示中解決所有問題，也可以將其分成兩個提示。我們嘗試後者方法。這裡建議添加一個額外的提示，但為了使其工作，我們需要將前一個提示的結果作為上下文添加到後一個提示中。
 
-  حدد الجزء في الكود الذي يطبع النتيجة من الإرشادات الأولى وأضف الكود التالي أدناه:
-
+  找到程式碼中打印出第一個提示結果的部分，並在其下方添加以下程式碼：
   ```python
   old_prompt_result = completion.choices[0].message.content
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
@@ -531,21 +530,21 @@ Shopping List:
   print(completion.choices[0].message.content)
   ```
 
-  لاحظ ما يلي:
+  請注意以下事項：
 
-  1. نحن نقوم ببناء إرشادات جديدة بإضافة النتيجة من الإرشادات الأولى إلى الإرشادات الجديدة:
+  1. 我們正在構建一個新的提示，方法是將第一個提示的結果添加到新的提示中：
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. نقوم بعمل طلب جديد، ولكن أيضًا مع مراعاة عدد الرموز التي طلبناها في الإرشادات الأولى، لذلك هذه المرة نقول `max_tokens` هو 1200.
+  1. 我們發出一個新的請求，但同時考慮到我們在第一個提示中要求的 token 數量，因此這次我們將 `max_tokens` 設為 1200。
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     أخذ هذا الكود لتجربة، الآن نصل إلى الإخراج التالي:
+     使用這段程式碼，我們現在得到了以下輸出：
 
      ```output
      No of recipes (for example, 5): 2
@@ -559,19 +558,19 @@ Shopping List:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## تحسين الإعداد الخاص بك
+## 改善您的設置
 
-ما لدينا حتى الآن هو كود يعمل، ولكن هناك بعض التعديلات التي يجب علينا القيام بها لتحسين الأمور أكثر. بعض الأشياء التي يجب علينا القيام بها هي:
+目前我們的程式碼是可行的，但仍有一些可以進一步改進的地方。我們應該做的一些事情包括：
 
-- **فصل الأسرار عن الكود**، مثل مفتاح واجهة برمجة التطبيقات. الأسرار لا تنتمي إلى الكود ويجب تخزينها في مكان آمن. لفصل الأسرار عن الكود، يمكننا استخدام متغيرات البيئة والمكتبات مثل `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **將機密資訊與程式碼分開**，例如 API 金鑰。機密資訊不應該直接寫在程式碼中，而應存儲在安全的位置。為了將機密資訊與程式碼分開，我們可以使用環境變數以及像 `python-dotenv` 這樣的庫來從文件中載入它們。以下是程式碼的示例：
 
-  1. Create a `.env` file with the following content:
+  1. 建立一個 `.env` 文件，內容如下：
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > ملاحظة، بالنسبة لـ Azure، تحتاج إلى تعيين متغيرات البيئة التالية:
+     > 注意，對於 Azure，您需要設置以下環境變數：
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -579,7 +578,7 @@ Shopping List:
      OPENAI_API_BASE=<replace>
      ```
 
-     في الكود، يمكنك تحميل متغيرات البيئة كما يلي:
+     在程式碼中，您可以像這樣載入環境變數：
 
      ```python
      from dotenv import load_dotenv
@@ -589,39 +588,39 @@ Shopping List:
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **كلمة حول طول الرموز**. يجب علينا مراعاة عدد الرموز التي نحتاجها لتوليد النص الذي نريده. الرموز تكلف مالاً، لذا حيثما أمكن، يجب علينا محاولة أن نكون اقتصاديين في عدد الرموز التي نستخدمها. على سبيل المثال، هل يمكننا صياغة الإرشادات بحيث يمكننا استخدام رموز أقل؟
+- **關於 token 長度的一些建議**。我們應該考慮需要多少 token 來生成我們想要的文本。token 是有成本的，因此在可能的情況下，我們應該嘗試減少使用的 token 數量。例如，我們是否可以重新措辭提示以使用更少的 token？
 
-  لتغيير الرموز المستخدمة، يمكنك استخدام معلمة `max_tokens`. على سبيل المثال، إذا كنت تريد استخدام 100 رمز، يمكنك القيام بـ:
+  要更改使用的 token 數量，您可以使用 `max_tokens` 參數。例如，如果您想使用 100 個 token，您可以這樣設置：
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
   ```
 
-- **التجربة مع درجة الحرارة**. درجة الحرارة هي شيء لم نذكره حتى الآن ولكنها سياق مهم لأداء البرنامج الخاص بنا. كلما زادت قيمة درجة الحرارة، زادت عشوائية الإخراج. وعلى العكس، كلما قلت قيمة درجة الحرارة، كان الإخراج أكثر توقعًا. يجب مراعاة ما إذا كنت تريد تنوعًا في الإخراج أم لا.
+- **嘗試調整溫度**。溫度是我們尚未提到但對程式表現非常重要的一個參數。溫度值越高，輸出越隨機；相反，溫度值越低，輸出越可預測。考慮您是否希望輸出具有變化性。
 
-  لتغيير درجة الحرارة، يمكنك استخدام معلمة `temperature`. على سبيل المثال، إذا كنت تريد استخدام درجة حرارة 0.5، يمكنك القيام بـ:
+  要調整溫度，您可以使用 `temperature` 參數。例如，如果您想使用 0.5 的溫度值，您可以這樣設置：
 
   ```python
   completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
   ```
 
-  > ملاحظة، كلما اقتربت من 1.0، زاد تنوع الإخراج.
+  > 注意，溫度值越接近 1.0，輸出越多樣化。
 
-## الواجب
+## 作業
 
-لهذا الواجب، يمكنك اختيار ما تريد بناءه.
+在這次作業中，您可以選擇要構建的內容。
 
-إليك بعض الاقتراحات:
+以下是一些建議：
 
-- قم بتعديل تطبيق مولد الوصفات لتحسينه أكثر. جرب اللعب بقيم درجة الحرارة، والإرشادات لترى ما يمكنك الخروج به.
-- بناء "رفيق الدراسة". يجب أن يكون هذا التطبيق قادرًا على الإجابة عن الأسئلة حول موضوع مثل Python، يمكنك أن يكون لديك إرشادات مثل "ما هو موضوع معين في Python؟"، أو يمكنك أن يكون لديك إرشادات تقول، أرني كودًا لموضوع معين وما إلى ذلك.
-- بوت التاريخ، اجعل التاريخ ينبض بالحياة، وجه البوت لتقمص شخصية تاريخية معينة واطرح عليه أسئلة حول حياته وأوقاته.
+- 調整食譜生成器應用以進一步改進。嘗試不同的溫度值和提示，看看能得到什麼結果。
+- 建立一個 "學習夥伴"。這個應用應該能回答關於某個主題的問題，例如 Python，您可以設置提示如 "Python 中某個主題是什麼？"，或者設置提示要求顯示某個主題的程式碼等。
+- 歷史機器人，讓歷史活起來，指示機器人扮演某個歷史人物並向它提問關於其生活和時代的問題。
 
-## الحل
+## 解決方案
 
-### رفيق الدراسة
+### 學習夥伴
 
-فيما يلي إرشادات البداية، انظر كيف يمكنك استخدامها وتعديلها حسب رغبتك.
+以下是一個初始提示，看看您如何使用它並根據需要進行調整。
 
 ```text
 - "You're an expert on the Python language
@@ -634,9 +633,9 @@ Shopping List:
     - exercise in code with solutions"
 ```
 
-### بوت التاريخ
+### 歷史機器人
 
-إليك بعض الإرشادات التي يمكنك استخدامها:
+以下是一些您可以使用的提示：
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -645,22 +644,25 @@ Shopping List:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## اختبار المعرفة
+## 知識檢查
 
-ماذا يفعل مفهوم درجة الحرارة؟
+溫度這個概念的作用是什麼？
 
-1. يتحكم في مدى عشوائية الإخراج.
-1. يتحكم في مدى كبر الاستجابة.
-1. يتحكم في عدد الرموز المستخدمة.
+1. 它控制輸出的隨機性。
+1. 它控制回應的大小。
+1. 它控制使用的 token 數量。
 
-## 🚀 التحدي
+## 🚀 挑戰
 
-عند العمل على الواجب، حاول تنويع درجة الحرارة، حاول ضبطها على 0، 0.5، و1. تذكر أن 0 هو الأقل تنوعًا و1 هو الأكثر، ما هي القيمة التي تعمل بشكل أفضل لتطبيقك؟
+在完成作業時，嘗試調整溫度，嘗試設置為 0、0.5 和 1。記住，0 是最不多樣化的，1 是最多樣化的。哪個值最適合您的應用？
 
-## عمل رائع! تابع تعلمك
+## 幹得好！繼續學習
 
-بعد إكمال هذا الدرس، تحقق من [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تحسين معرفتك بالذكاء الاصطناعي التوليدي!
+完成本課程後，請查看我們的 [生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
 
-انتقل إلى الدرس 7 حيث سننظر في كيفية [بناء تطبيقات الدردشة](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+前往第 7 課，我們將探討如何 [構建聊天應用](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
-I'm sorry, but I'm not familiar with a language identified as "mo." Could you please specify the language you're referring to, or provide more context?
+---
+
+**免責聲明**：  
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤釋不承擔責任。

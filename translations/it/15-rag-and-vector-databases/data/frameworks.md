@@ -2,7 +2,7 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T01:57:19+00:00",
+  "translation_date": "2025-07-09T16:30:58+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "it"
 }
@@ -11,102 +11,102 @@ CO_OP_TRANSLATOR_METADATA:
 
 Come abbiamo già imparato, per poter addestrare reti neurali in modo efficiente dobbiamo fare due cose:
 
-* Operare sui tensori, ad esempio moltiplicare, sommare e calcolare alcune funzioni come sigmoide o softmax
-* Calcolare i gradienti di tutte le espressioni, per eseguire l'ottimizzazione tramite discesa del gradiente
+* Operare su tensori, ad esempio moltiplicare, sommare e calcolare alcune funzioni come sigmoid o softmax
+* Calcolare i gradienti di tutte le espressioni, per poter eseguire l’ottimizzazione tramite discesa del gradiente
 
-Mentre la libreria `numpy` può fare la prima parte, abbiamo bisogno di un meccanismo per calcolare i gradienti. Nel nostro framework che abbiamo sviluppato nella sezione precedente, abbiamo dovuto programmare manualmente tutte le funzioni derivate all'interno del metodo `backward`, che esegue la retropropagazione. Idealmente, un framework dovrebbe darci la possibilità di calcolare i gradienti di *qualsiasi espressione* che possiamo definire.
+Mentre la libreria `numpy` può gestire la prima parte, abbiamo bisogno di un meccanismo per calcolare i gradienti. Nel nostro framework sviluppato nella sezione precedente abbiamo dovuto programmare manualmente tutte le funzioni derivate all’interno del metodo `backward`, che esegue la backpropagation. Idealmente, un framework dovrebbe darci la possibilità di calcolare i gradienti di *qualsiasi espressione* che possiamo definire.
 
-Un'altra cosa importante è essere in grado di eseguire calcoli su GPU, o altre unità di calcolo specializzate, come TPU. L'addestramento di reti neurali profonde richiede *molti* calcoli, e poter parallelizzare questi calcoli su GPU è molto importante.
+Un altro aspetto importante è poter eseguire i calcoli su GPU, o su altre unità di calcolo specializzate, come TPU. L’addestramento di reti neurali profonde richiede *molti* calcoli, e poter parallelizzare questi calcoli su GPU è fondamentale.
 
 > ✅ Il termine 'parallelizzare' significa distribuire i calcoli su più dispositivi.
 
-Attualmente, i due framework neurali più popolari sono: TensorFlow e PyTorch. Entrambi forniscono un'API di basso livello per operare con i tensori sia su CPU che su GPU. Oltre all'API di basso livello, c'è anche un'API di alto livello, chiamata rispettivamente Keras e PyTorch Lightning.
+Attualmente, i due framework neurali più popolari sono: TensorFlow e PyTorch. Entrambi offrono un’API a basso livello per operare con tensori sia su CPU che su GPU. Sopra l’API a basso livello, esiste anche un’API di livello più alto, chiamata rispettivamente Keras e PyTorch Lightning.
 
-API di Basso Livello | TensorFlow | PyTorch
----------------------|-------------------------------------|--------------------------------
-API di Alto Livello | Keras | PyTorch Lightning
+Low-Level API | TensorFlow| PyTorch
+--------------|-------------------------------------|--------------------------------
+High-level API| Keras| PyTorch
 
-Le **API di basso livello** in entrambi i framework ti permettono di costruire i cosiddetti **grafici computazionali**. Questo grafico definisce come calcolare l'output (di solito la funzione di perdita) con i parametri di input dati, e può essere inviato per il calcolo su GPU, se disponibile. Ci sono funzioni per differenziare questo grafico computazionale e calcolare i gradienti, che possono poi essere utilizzati per ottimizzare i parametri del modello.
+Le **API a basso livello** in entrambi i framework permettono di costruire i cosiddetti **grafi computazionali**. Questo grafo definisce come calcolare l’output (di solito la funzione di perdita) dati i parametri di input, e può essere eseguito su GPU, se disponibile. Ci sono funzioni per differenziare questo grafo computazionale e calcolare i gradienti, che possono poi essere usati per ottimizzare i parametri del modello.
 
-Le **API di alto livello** considerano le reti neurali come una **sequenza di livelli**, e rendono la costruzione della maggior parte delle reti neurali molto più semplice. L'addestramento del modello di solito richiede la preparazione dei dati e poi la chiamata di una funzione `fit` per svolgere il lavoro.
+Le **API di alto livello** considerano le reti neurali come una **sequenza di layer**, e rendono molto più semplice costruire la maggior parte delle reti neurali. L’addestramento del modello di solito richiede di preparare i dati e poi chiamare una funzione `fit` per eseguire il training.
 
-L'API di alto livello ti consente di costruire reti neurali tipiche molto rapidamente senza preoccuparti di molti dettagli. Allo stesso tempo, l'API di basso livello offre molto più controllo sul processo di addestramento, e quindi viene utilizzata molto nella ricerca, quando si ha a che fare con nuove architetture di reti neurali.
+L’API di alto livello permette di costruire reti neurali tipiche molto rapidamente senza preoccuparsi di molti dettagli. Allo stesso tempo, l’API a basso livello offre molto più controllo sul processo di addestramento, ed è quindi molto usata nella ricerca, quando si lavora con nuove architetture di reti neurali.
 
-È anche importante capire che puoi usare entrambe le API insieme, ad esempio puoi sviluppare la tua architettura di livello di rete usando l'API di basso livello, e poi usarla all'interno della rete più grande costruita e addestrata con l'API di alto livello. Oppure puoi definire una rete usando l'API di alto livello come una sequenza di livelli, e poi usare il tuo ciclo di addestramento di basso livello per eseguire l'ottimizzazione. Entrambe le API utilizzano gli stessi concetti di base sottostanti, e sono progettate per funzionare bene insieme.
+È anche importante capire che si possono usare entrambe le API insieme, ad esempio si può sviluppare la propria architettura di layer usando l’API a basso livello, e poi usarla all’interno di una rete più grande costruita e addestrata con l’API di alto livello. Oppure si può definire una rete con l’API di alto livello come sequenza di layer, e poi usare un proprio ciclo di addestramento a basso livello per eseguire l’ottimizzazione. Entrambe le API condividono gli stessi concetti di base e sono progettate per funzionare bene insieme.
 
 ## Apprendimento
 
-In questo corso, offriamo la maggior parte del contenuto sia per PyTorch che per TensorFlow. Puoi scegliere il tuo framework preferito e seguire solo i notebook corrispondenti. Se non sei sicuro di quale framework scegliere, leggi alcune discussioni su internet riguardo **PyTorch vs. TensorFlow**. Puoi anche dare un'occhiata a entrambi i framework per ottenere una migliore comprensione.
+In questo corso offriamo la maggior parte dei contenuti sia per PyTorch che per TensorFlow. Puoi scegliere il framework che preferisci e seguire solo i notebook corrispondenti. Se non sei sicuro su quale framework scegliere, leggi alcune discussioni online riguardo **PyTorch vs. TensorFlow**. Puoi anche dare un’occhiata a entrambi i framework per capire meglio.
 
-Dove possibile, useremo le API di Alto Livello per semplicità. Tuttavia, crediamo che sia importante capire come funzionano le reti neurali dalle basi, quindi all'inizio iniziamo lavorando con l'API di basso livello e i tensori. Tuttavia, se vuoi procedere velocemente e non vuoi spendere molto tempo ad apprendere questi dettagli, puoi saltarli e andare direttamente ai notebook delle API di alto livello.
+Quando possibile, useremo le API di alto livello per semplicità. Tuttavia, riteniamo importante capire come funzionano le reti neurali dalle basi, quindi all’inizio lavoreremo con l’API a basso livello e i tensori. Se però vuoi partire velocemente e non vuoi perdere tempo con questi dettagli, puoi saltare direttamente ai notebook con l’API di alto livello.
 
 ## ✍️ Esercizi: Framework
 
 Continua il tuo apprendimento nei seguenti notebook:
 
-API di Basso Livello | Notebook TensorFlow+Keras | PyTorch
----------------------|-------------------------------------|--------------------------------
-API di Alto Livello | Keras | *PyTorch Lightning*
+Low-Level API | TensorFlow+Keras Notebook | PyTorch
+--------------|-------------------------------------|--------------------------------
+High-level API| Keras | *PyTorch Lightning*
 
 Dopo aver padroneggiato i framework, riepiloghiamo il concetto di overfitting.
 
 # Overfitting
 
-L'overfitting è un concetto estremamente importante nell'apprendimento automatico, ed è molto importante capirlo bene!
+L’overfitting è un concetto estremamente importante nel machine learning, ed è fondamentale comprenderlo bene!
 
-Considera il seguente problema di approssimazione di 5 punti (rappresentati da `x` nei grafici sottostanti):
+Considera il seguente problema di approssimare 5 punti (rappresentati da `x` nei grafici sottostanti):
 
-!lineare | overfit
+!linear | overfit
 -------------------------|--------------------------
 **Modello lineare, 2 parametri** | **Modello non lineare, 7 parametri**
-Errore di addestramento = 5.3 | Errore di addestramento = 0
+Errore di training = 5.3 | Errore di training = 0
 Errore di validazione = 5.1 | Errore di validazione = 20
 
-* A sinistra, vediamo una buona approssimazione con una linea retta. Poiché il numero di parametri è adeguato, il modello coglie bene l'idea della distribuzione dei punti.
-* A destra, il modello è troppo potente. Poiché abbiamo solo 5 punti e il modello ha 7 parametri, può adattarsi in modo tale da passare attraverso tutti i punti, facendo sì che l'errore di addestramento sia 0. Tuttavia, questo impedisce al modello di comprendere il corretto schema dietro i dati, quindi l'errore di validazione è molto alto.
+* A sinistra vediamo una buona approssimazione con una retta. Poiché il numero di parametri è adeguato, il modello coglie correttamente la distribuzione dei punti.
+* A destra, il modello è troppo potente. Poiché abbiamo solo 5 punti e il modello ha 7 parametri, può adattarsi in modo da passare esattamente per tutti i punti, azzerando l’errore di training. Tuttavia, questo impedisce al modello di capire il pattern corretto dietro i dati, quindi l’errore di validazione è molto alto.
 
-È molto importante trovare un giusto equilibrio tra la complessità del modello (numero di parametri) e il numero di campioni di addestramento.
+È molto importante trovare un giusto equilibrio tra la complessità del modello (numero di parametri) e il numero di campioni di training.
 
-## Perché si verifica l'overfitting
+## Perché si verifica l’overfitting
 
-  * Non abbastanza dati di addestramento
-  * Modello troppo potente
+  * Dati di training insufficienti
+  * Modello troppo complesso
   * Troppo rumore nei dati di input
 
-## Come rilevare l'overfitting
+## Come rilevare l’overfitting
 
-Come puoi vedere dal grafico sopra, l'overfitting può essere rilevato da un errore di addestramento molto basso e un errore di validazione alto. Normalmente durante l'addestramento vedremo sia l'errore di addestramento che di validazione iniziare a diminuire, e poi a un certo punto l'errore di validazione potrebbe smettere di diminuire e iniziare a crescere. Questo sarà un segnale di overfitting, e l'indicatore che probabilmente dovremmo fermare l'addestramento a questo punto (o almeno fare uno snapshot del modello).
+Come si vede dal grafico sopra, l’overfitting si può riconoscere da un errore di training molto basso e un errore di validazione alto. Normalmente durante l’addestramento vedremo sia l’errore di training che quello di validazione diminuire, poi a un certo punto l’errore di validazione potrebbe smettere di diminuire e iniziare a salire. Questo è un segnale di overfitting, e indica che probabilmente dovremmo fermare l’addestramento a questo punto (o almeno salvare uno snapshot del modello).
 
 overfitting
 
-## Come prevenire l'overfitting
+## Come prevenire l’overfitting
 
-Se vedi che si verifica l'overfitting, puoi fare una delle seguenti cose:
+Se noti che si verifica l’overfitting, puoi fare una delle seguenti cose:
 
- * Aumentare la quantità di dati di addestramento
+ * Aumentare la quantità di dati di training
  * Ridurre la complessità del modello
- * Usare qualche tecnica di regolarizzazione, come il Dropout, che considereremo più avanti.
+ * Usare qualche tecnica di regolarizzazione, come Dropout, che vedremo più avanti.
 
-## Overfitting e Compromesso Bias-Varianza
+## Overfitting e compromesso Bias-Varianza
 
-L'overfitting è in realtà un caso di un problema più generico in statistica chiamato Compromesso Bias-Varianza. Se consideriamo le possibili fonti di errore nel nostro modello, possiamo vedere due tipi di errori:
+L’overfitting è in realtà un caso di un problema più generale in statistica chiamato compromesso Bias-Varianza. Se consideriamo le possibili fonti di errore nel nostro modello, possiamo distinguere due tipi di errori:
 
-* **Errori di bias** sono causati dal fatto che il nostro algoritmo non è in grado di catturare correttamente la relazione tra i dati di addestramento. Può risultare dal fatto che il nostro modello non è abbastanza potente (**underfitting**).
-* **Errori di varianza**, che sono causati dal modello che approssima il rumore nei dati di input invece di una relazione significativa (**overfitting**).
+* Gli **errori di bias** sono causati dal fatto che il nostro algoritmo non riesce a catturare correttamente la relazione tra i dati di training. Questo può succedere se il modello non è abbastanza potente (**underfitting**).
+* Gli **errori di varianza** sono causati dal fatto che il modello approssima il rumore nei dati di input invece di una relazione significativa (**overfitting**).
 
-Durante l'addestramento, l'errore di bias diminuisce (poiché il nostro modello impara ad approssimare i dati), e l'errore di varianza aumenta. È importante fermare l'addestramento - sia manualmente (quando rileviamo l'overfitting) che automaticamente (introducendo la regolarizzazione) - per prevenire l'overfitting.
+Durante l’addestramento, l’errore di bias diminuisce (man mano che il modello impara ad approssimare i dati), mentre l’errore di varianza aumenta. È importante fermare l’addestramento - manualmente (quando si rileva l’overfitting) o automaticamente (introducendo regolarizzazione) - per evitare l’overfitting.
 
 ## Conclusione
 
-In questa lezione, hai imparato le differenze tra le varie API per i due framework di AI più popolari, TensorFlow e PyTorch. Inoltre, hai imparato un argomento molto importante, l'overfitting.
+In questa lezione hai imparato le differenze tra le varie API dei due framework AI più popolari, TensorFlow e PyTorch. Inoltre, hai appreso un argomento molto importante: l’overfitting.
 
 ## 🚀 Sfida
 
-Nei notebook allegati, troverai 'compiti' in fondo; lavora attraverso i notebook e completa i compiti.
+Nei notebook allegati troverai delle ‘task’ in fondo; lavora sui notebook e completa le attività.
 
-## Revisione & Studio Autonomo
+## Revisione e Studio Autonomo
 
-Fai alcune ricerche sui seguenti argomenti:
+Fai qualche ricerca sui seguenti argomenti:
 
 - TensorFlow
 - PyTorch
@@ -119,7 +119,7 @@ Poniti le seguenti domande:
 
 ## Compito
 
-In questo laboratorio, ti viene chiesto di risolvere due problemi di classificazione usando reti completamente connesse a singolo e multi-strato utilizzando PyTorch o TensorFlow.
+In questo laboratorio ti viene chiesto di risolvere due problemi di classificazione usando reti completamente connesse a singolo e multi-strato, utilizzando PyTorch o TensorFlow.
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per l'accuratezza, si prega di essere consapevoli che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda la traduzione professionale umana. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un umano. Non ci assumiamo alcuna responsabilità per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.

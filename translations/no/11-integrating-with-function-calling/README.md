@@ -1,64 +1,64 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:31:32+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T19:18:53+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "no"
 }
 -->
 # Integrering med funksjonskall
 
-[![Integrering med funksjonskall](../../../translated_images/11-lesson-banner.5da178a9bf0c61125724b82872e87e5530d352453ec40cb59a13e27f9346c41e.no.png)](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst)
+[![Integrering med funksjonskall](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.no.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Du har lært en del så langt i de tidligere leksjonene. Men vi kan forbedre oss ytterligere. Noen ting vi kan ta tak i er hvordan vi kan få et mer konsistent responsformat for å gjøre det enklere å jobbe med responsen nedstrøms. I tillegg kan vi ønske å legge til data fra andre kilder for å berike applikasjonen vår ytterligere.
+Du har lært en god del så langt i de tidligere leksjonene. Men vi kan fortsatt forbedre oss. Noen ting vi kan ta tak i er hvordan vi kan få et mer konsistent responsformat for å gjøre det enklere å jobbe med responsen videre. I tillegg kan vi ønske å legge til data fra andre kilder for å berike applikasjonen vår ytterligere.
 
-De ovennevnte problemene er det denne kapitlet ønsker å ta tak i.
+Problemene nevnt ovenfor er det denne leksjonen tar sikte på å løse.
 
 ## Introduksjon
 
 Denne leksjonen vil dekke:
 
-- Forklare hva funksjonskall er og dets bruksområder.
+- Forklare hva funksjonskall er og bruksområdene.
 - Opprette et funksjonskall ved hjelp av Azure OpenAI.
 - Hvordan integrere et funksjonskall i en applikasjon.
 
 ## Læringsmål
 
-Ved slutten av denne leksjonen vil du være i stand til å:
+Ved slutten av denne leksjonen vil du kunne:
 
 - Forklare hensikten med å bruke funksjonskall.
 - Sette opp funksjonskall ved hjelp av Azure OpenAI Service.
 - Designe effektive funksjonskall for din applikasjons bruksområde.
 
-## Scenario: Forbedre vår chatbot med funksjoner
+## Scenario: Forbedre chatboten vår med funksjoner
 
-For denne leksjonen ønsker vi å bygge en funksjon for vår oppstartsbedrift innen utdanning som lar brukere bruke en chatbot for å finne tekniske kurs. Vi vil anbefale kurs som passer deres ferdighetsnivå, nåværende rolle og teknologi av interesse.
+I denne leksjonen ønsker vi å bygge en funksjon for vår utdanningsstartup som lar brukere bruke en chatbot for å finne tekniske kurs. Vi vil anbefale kurs som passer deres ferdighetsnivå, nåværende rolle og teknologi de er interessert i.
 
 For å fullføre dette scenariet vil vi bruke en kombinasjon av:
 
-- `Azure OpenAI` for å lage en chatteopplevelse for brukeren.
-- `Microsoft Learn Catalog API` for å hjelpe brukere med å finne kurs basert på brukerens forespørsel.
-- `Function Calling` for å ta brukerens spørsmål og sende det til en funksjon for å gjøre API-forespørselen.
+- `Azure OpenAI` for å skape en chatteopplevelse for brukeren.
+- `Microsoft Learn Catalog API` for å hjelpe brukere med å finne kurs basert på deres forespørsel.
+- `Funksjonskall` for å ta brukerens forespørsel og sende den til en funksjon for å gjøre API-forespørselen.
 
-For å komme i gang, la oss se på hvorfor vi i utgangspunktet vil bruke funksjonskall:
+For å komme i gang, la oss se på hvorfor vi i det hele tatt vil bruke funksjonskall:
 
 ## Hvorfor funksjonskall
 
-Før funksjonskall var svar fra en LLM ustrukturerte og inkonsistente. Utviklere måtte skrive kompleks valideringskode for å sikre at de kunne håndtere hver variasjon av et svar. Brukere kunne ikke få svar som "Hva er det nåværende været i Stockholm?". Dette er fordi modeller var begrenset til tiden dataene ble trent på.
+Før funksjonskall var svar fra en LLM ustrukturerte og inkonsistente. Utviklere måtte skrive kompleks valideringskode for å sikre at de kunne håndtere hver variasjon av et svar. Brukere kunne ikke få svar som "Hva er været i Stockholm akkurat nå?". Dette er fordi modeller var begrenset til tiden dataene ble trent på.
 
-Funksjonskall er en funksjon i Azure OpenAI Service for å overvinne følgende begrensninger:
+Funksjonskall er en funksjon i Azure OpenAI Service som overkommer følgende begrensninger:
 
-- **Konsistent responsformat**. Hvis vi kan kontrollere responsformatet bedre, kan vi lettere integrere responsen nedstrøms til andre systemer.
-- **Eksterne data**. Mulighet til å bruke data fra andre kilder av en applikasjon i en chat-kontekst.
+- **Konsistent responsformat**. Hvis vi kan kontrollere responsformatet bedre, kan vi enklere integrere responsen videre til andre systemer.
+- **Eksterne data**. Mulighet til å bruke data fra andre kilder i en applikasjon i en chatte-kontekst.
 
 ## Illustrere problemet gjennom et scenario
 
-> Vi anbefaler deg å bruke den [inkluderte notatboken](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) hvis du vil kjøre scenariet nedenfor. Du kan også bare lese videre mens vi prøver å illustrere et problem der funksjoner kan hjelpe til med å løse problemet.
+> Vi anbefaler deg å bruke [den inkluderte notatboken](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) hvis du ønsker å kjøre scenariet nedenfor. Du kan også bare lese videre, da vi prøver å illustrere et problem hvor funksjoner kan hjelpe med å løse det.
 
-La oss se på eksemplet som illustrerer problemet med responsformat:
+La oss se på et eksempel som illustrerer problemet med responsformat:
 
-La oss si at vi ønsker å lage en database med studentdata slik at vi kan foreslå riktig kurs til dem. Nedenfor har vi to beskrivelser av studenter som er veldig like i dataene de inneholder.
+La oss si at vi ønsker å opprette en database med studentdata slik at vi kan foreslå riktig kurs til dem. Nedenfor har vi to beskrivelser av studenter som er veldig like i dataene de inneholder.
 
 1. Opprett en tilkobling til vår Azure OpenAI-ressurs:
 
@@ -77,9 +77,9 @@ La oss si at vi ønsker å lage en database med studentdata slik at vi kan fores
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Nedenfor er litt Python-kode for å konfigurere vår tilkobling til Azure OpenAI hvor vi setter `api_type`, `api_base`, `api_version` and `api_key`.
+   Nedenfor er litt Python-kode for å konfigurere vår tilkobling til Azure OpenAI hvor vi setter `api_type`, `api_base`, `api_version` og `api_key`.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
+1. Opprett to studentbeskrivelser ved hjelp av variablene `student_1_description` og `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -89,7 +89,7 @@ La oss si at vi ønsker å lage en database med studentdata slik at vi kan fores
 
    Vi ønsker å sende de ovennevnte studentbeskrivelsene til en LLM for å analysere dataene. Disse dataene kan senere brukes i vår applikasjon og sendes til et API eller lagres i en database.
 
-1. La oss lage to identiske spørsmål der vi instruerer LLM om hvilken informasjon vi er interessert i:
+1. La oss opprette to identiske oppfordringer der vi instruerer LLM om hvilken informasjon vi er interessert i:
 
    ```python
    prompt1 = f'''
@@ -119,9 +119,9 @@ La oss si at vi ønsker å lage en database med studentdata slik at vi kan fores
    '''
    ```
 
-   De ovennevnte spørsmålene instruerer LLM om å trekke ut informasjon og returnere responsen i JSON-format.
+   De ovennevnte oppfordringene instruerer LLM om å trekke ut informasjon og returnere responsen i JSON-format.
 
-1. Etter å ha satt opp spørsmålene og tilkoblingen til Azure OpenAI, vil vi nå sende spørsmålene til LLM ved å bruke `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Dette er for å etterligne en melding fra en bruker som skrives til en chatbot.
+1. Etter å ha satt opp oppfordringene og tilkoblingen til Azure OpenAI, vil vi nå sende oppfordringene til LLM ved å bruke `openai.ChatCompletion`. Vi lagrer oppfordringen i variabelen `messages` og tildeler rollen `user`. Dette er for å etterligne en melding fra en bruker som skrives til en chatbot.
 
    ```python
    # response from prompt one
@@ -139,9 +139,9 @@ La oss si at vi ønsker å lage en database med studentdata slik at vi kan fores
    openai_response2.choices[0].message.content
    ```
 
-Nå kan vi sende begge forespørslene til LLM og undersøke responsen vi mottar ved å finne den slik `openai_response1['choices'][0]['message']['content']`.
+Nå kan vi sende begge forespørslene til LLM og undersøke responsen vi mottar ved å finne den slik: `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. Til slutt kan vi konvertere responsen til JSON-format ved å kalle `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -173,55 +173,55 @@ Nå kan vi sende begge forespørslene til LLM og undersøke responsen vi mottar 
    }
    ```
 
-   Selv om spørsmålene er de samme og beskrivelsene er like, ser vi verdiene av `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Selv om oppfordringene er de samme og beskrivelsene er like, ser vi verdier for `Grades`-egenskapen formatert forskjellig, da vi noen ganger kan få formatet `3.7` eller `3.7 GPA` for eksempel.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   Dette resultatet skyldes at LLM tar ustrukturert data i form av den skrevne oppfordringen og returnerer også ustrukturert data. Vi trenger å ha et strukturert format slik at vi vet hva vi kan forvente når vi lagrer eller bruker disse dataene.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+Så hvordan løser vi formateringsproblemet da? Ved å bruke funksjonskall kan vi sørge for at vi får strukturert data tilbake. Når vi bruker funksjonskall, kaller eller kjører LLM faktisk ikke noen funksjoner. I stedet oppretter vi en struktur for LLM å følge for sine svar. Vi bruker deretter disse strukturerte svarene for å vite hvilken funksjon vi skal kjøre i våre applikasjoner.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.no.png)
+![funksjonsflyt](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.no.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+Vi kan deretter ta det som returneres fra funksjonen og sende dette tilbake til LLM. LLM vil deretter svare ved å bruke naturlig språk for å besvare brukerens forespørsel.
 
-## Use Cases for using function calls
+## Bruksområder for funksjonskall
 
-There are many different use cases where function calls can improve your app like:
+Det finnes mange forskjellige bruksområder hvor funksjonskall kan forbedre appen din, som:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **Kalle eksterne verktøy**. Chatbots er gode til å gi svar på spørsmål fra brukere. Ved å bruke funksjonskall kan chatbotene bruke meldinger fra brukere til å utføre visse oppgaver. For eksempel kan en student be chatboten om å "Send en e-post til min instruktør og si at jeg trenger mer hjelp med dette emnet". Dette kan gjøre et funksjonskall til `send_email(to: string, body: string)`.
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Opprette API- eller databaseforespørsler**. Brukere kan finne informasjon ved hjelp av naturlig språk som blir konvertert til en formatert forespørsel eller API-forespørsel. Et eksempel på dette kan være en lærer som spør "Hvem er studentene som fullførte den siste oppgaven" som kan kalle en funksjon kalt `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Opprette strukturert data**. Brukere kan ta en tekstblokk eller CSV og bruke LLM til å trekke ut viktig informasjon fra den. For eksempel kan en student konvertere en Wikipedia-artikkel om fredsavtaler til å lage AI-flashkort. Dette kan gjøres ved å bruke en funksjon kalt `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Creating Your First Function Call
+## Opprette ditt første funksjonskall
 
-The process of creating a function call includes 3 main steps:
+Prosessen med å opprette et funksjonskall inkluderer 3 hovedtrinn:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **Kalle** Chat Completions API med en liste over dine funksjoner og en brukermelding.
+2. **Lese** modellens respons for å utføre en handling, dvs. kjøre en funksjon eller API-forespørsel.
+3. **Gjøre** en ny samtale til Chat Completions API med responsen fra funksjonen din for å bruke den informasjonen til å lage et svar til brukeren.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.no.png)
+![LLM-flyt](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.no.png)
 
-### Step 1 - creating messages
+### Trinn 1 - opprette meldinger
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+Det første trinnet er å opprette en brukermelding. Dette kan dynamisk tildeles ved å ta verdien av et tekstfelt, eller du kan tildele en verdi her. Hvis dette er første gang du jobber med Chat Completions API, må vi definere `role` og `content` for meldingen.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` og et eksempelspørsmål.
+`Role` kan enten være `system` (opprette regler), `assistant` (modellen) eller `user` (sluttbrukeren). For funksjonskall vil vi tildele dette som `user` og et eksempelspørsmål.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Ved å tildele forskjellige roller, blir det tydelig for LLM om det er systemet som sier noe eller brukeren, noe som hjelper med å bygge en samtalehistorikk som LLM kan bygge videre på.
+Ved å tildele forskjellige roller blir det tydelig for LLM om det er systemet som sier noe eller brukeren, noe som hjelper med å bygge en samtalehistorikk som LLM kan bygge videre på.
 
-### Steg 2 - lage funksjoner
+### Trinn 2 - opprette funksjoner
 
-Deretter vil vi definere en funksjon og parameterne til den funksjonen. Vi vil bruke bare én funksjon her kalt `search_courses` but you can create multiple functions.
+Deretter vil vi definere en funksjon og parameterne til den funksjonen. Vi vil bruke bare én funksjon her kalt `search_courses`, men du kan opprette flere funksjoner.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **Viktig**: Funksjoner er inkludert i systemmeldingen til LLM og vil bli inkludert i antall tilgjengelige tokens du har tilgjengelig.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+Nedenfor oppretter vi funksjonene som en liste med elementer. Hvert element er en funksjon og har egenskapene `name`, `description` og `parameters`:
 
 ```python
 functions = [
@@ -252,26 +252,26 @@ functions = [
 ]
 ```
 
-La oss beskrive hver funksjonsforekomst mer detaljert nedenfor:
+La oss beskrive hver funksjonsinstans mer detaljert nedenfor:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - Navnet på funksjonen vi ønsker å kalle.
+- `description` - Dette er beskrivelsen av hvordan funksjonen fungerer. Her er det viktig å være spesifikk og tydelig.
+- `parameters` - En liste over verdier og format som du ønsker at modellen skal produsere i sitt svar. Parameters-listen består av elementer der elementene har følgende egenskaper:
+  1.  `type` - Datatypen egenskapene vil bli lagret i.
+  1.  `properties` - Liste over de spesifikke verdiene som modellen vil bruke for sitt svar.
+      1. `name` - Nøkkelen er navnet på egenskapen som modellen vil bruke i sitt formaterte svar, for eksempel `product`.
+      1. `type` - Datatypen til denne egenskapen, for eksempel `string`.
+      1. `description` - Beskrivelse av den spesifikke egenskapen.
 
-There's also an optional property `required` - required property for the function call to be completed.
+Det finnes også en valgfri egenskap `required` - nødvendig egenskap for at funksjonskallet skal fullføres.
 
-### Step 3 - Making the function call
+### Trinn 3 - Gjøre funksjonskallet
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+Etter å ha definert en funksjon, må vi nå inkludere den i samtalen til Chat Completion API. Vi gjør dette ved å legge til `functions` i forespørselen. I dette tilfellet `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+Det er også et alternativ å sette `function_call` til `auto`. Dette betyr at vi lar LLM bestemme hvilken funksjon som skal kalles basert på brukermeldingen i stedet for å tildele det selv.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` og dermed gi LLM valget om når den skal kalle funksjonene vi gir den:
+Her er litt kode nedenfor hvor vi kaller `ChatCompletion.create`, merk hvordan vi setter `functions=functions` og `function_call="auto"` og dermed gir LLM valget om når funksjonene vi gir skal kalles:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -294,27 +294,27 @@ Responsen som kommer tilbake ser nå slik ut:
 }
 ```
 
-Her kan vi se hvordan funksjonen `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+Her kan vi se hvordan funksjonen `search_courses` ble kalt og med hvilke argumenter, som oppført i `arguments`-egenskapen i JSON-responsen.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` verdi:
+Konklusjonen er at LLM var i stand til å finne dataene som passet til argumentene til funksjonen ved å trekke dem ut fra verdien gitt til `messages`-parameteren i samtalekallet. Nedenfor er en påminnelse om verdien til `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Som du kan se, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+Som du kan se, ble `student`, `Azure` og `beginner` trukket ut fra `messages` og satt som input til funksjonen. Å bruke funksjoner på denne måten er en flott måte å trekke ut informasjon fra en oppfordring, men også å gi struktur til LLM og ha gjenbrukbar funksjonalitet.
 
-Next, we need to see how we can use this in our app.
+Neste steg er å se hvordan vi kan bruke dette i vår app.
 
-## Integrating Function Calls into an Application
+## Integrere funksjonskall i en applikasjon
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+Etter at vi har testet det formaterte svaret fra LLM, kan vi nå integrere dette i en applikasjon.
 
-### Managing the flow
+### Administrere flyten
 
-To integrate this into our application, let's take the following steps:
+For å integrere dette i vår applikasjon, la oss ta følgende steg:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. Først, la oss gjøre samtalen til OpenAI-tjenestene og lagre meldingen i en variabel kalt `response_message`.
 
    ```python
    response_message = response.choices[0].message
@@ -342,11 +342,11 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Legg merke til hvordan vi nå lager en faktisk Python-funksjon som samsvarer med funksjonsnavnene introdusert i `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
+   Merk hvordan vi nå oppretter en faktisk Python-funksjon som samsvarer med funksjonsnavnene introdusert i `functions`-variabelen. Vi gjør også reelle eksterne API-kall for å hente dataene vi trenger. I dette tilfellet går vi mot Microsoft Learn API for å søke etter opplæringsmoduler.
 
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
+Ok, så vi opprettet `functions`-variabler og en tilsvarende Python-funksjon, hvordan forteller vi LLM hvordan disse to skal kobles sammen slik at vår Python-funksjon blir kalt?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` er en del av det og kaller den utpekte funksjonen. Her er hvordan du kan gjøre den nevnte sjekken nedenfor:
+1. For å se om vi trenger å kalle en Python-funksjon, må vi se inn i LLM-responsen og se om `function_call` er en del av den og kalle den angitte funksjonen. Her er hvordan du kan gjøre den nevnte sjekken nedenfor:
 
    ```python
    # Check if the model wants to call a function
@@ -400,9 +400,9 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    function_response = function_to_call(**function_args)
    ```
 
-   Nedenfor er utdataene fra å kjøre koden vår:
+   Nedenfor er output fra å kjøre koden vår:
 
-   **Utdata**
+   **Output**
 
    ```Recommended Function call:
    {
@@ -421,7 +421,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    <class 'str'>
    ```
 
-1. Nå vil vi sende den oppdaterte meldingen, `messages` til LLM slik at vi kan motta en naturlig språkrespons i stedet for en API JSON-formatert respons.
+1. Nå vil vi sende den oppdaterte meldingen, `messages`, til LLM slik at vi kan motta et naturlig språk-svar i stedet for en API JSON-formatert respons.
 
    ```python
    print("Messages in next request:")
@@ -440,7 +440,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    print(second_response.choices[0].message)
    ```
 
-   **Utdata**
+   **Output**
 
    ```python
    {
@@ -452,19 +452,21 @@ Ok, so we created `functions` variables and a corresponding Python function, how
 
 ## Oppgave
 
-For å fortsette læringen din av Azure OpenAI Function Calling kan du bygge:
+For å fortsette læringen din om Azure OpenAI Funksjonskall kan du bygge:
 
-- Flere parametere av funksjonen som kan hjelpe elever med å finne flere kurs.
-- Opprette et annet funksjonskall som tar mer informasjon fra eleven, som deres morsmål.
-- Opprette feilhåndtering når funksjonskallet og/eller API-kallet ikke returnerer noen passende kurs.
+- Flere parametere for funksjonen som kan hjelpe lærere med å finne flere kurs.
+- Opprette et annet funksjonskall som tar mer informasjon fra læreren, som deres morsmål.
+- Opprett feilhåndtering når funksjonskallet og/eller API-kallet ikke returnerer noen passende kurs
 
-Tips: Følg [Learn API referansedokumentasjonen](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) siden for å se hvordan og hvor disse dataene er tilgjengelige.
+Hint: Følg siden [Learn API referansedokumentasjon](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) for å se hvordan og hvor disse dataene er tilgjengelige.
 
 ## Flott arbeid! Fortsett reisen
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å øke kunnskapen din om Generative AI!
+Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å utvikle din kunnskap om Generativ AI!
 
-Gå videre til leksjon 12, hvor vi vil se på hvordan vi kan [designe UX for AI-applikasjoner](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Gå videre til Leksjon 12, hvor vi skal se på hvordan man [designer UX for AI-applikasjoner](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet har blitt oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi etterstreber nøyaktighet, vennligst vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår fra bruken av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

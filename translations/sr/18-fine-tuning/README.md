@@ -1,109 +1,111 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "68664f7e754a892ae1d8d5e2b7bd2081",
-  "translation_date": "2025-05-20T08:22:12+00:00",
+  "original_hash": "807f0d9fc1747e796433534e1be6a98a",
+  "translation_date": "2025-10-18T01:22:44+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "sr"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.8487555c3e3225eefc1dc84e72c8e00bce1ee76db867a080628fb0fbb04aa0d2.sr.png)](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst)
+[![Модели отвореног кода](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.sr.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# Fino podešavanje vašeg LLM-a
+# Фино подешавање вашег LLM-а
 
-Korišćenje velikih jezičkih modela za izgradnju generativnih AI aplikacija dolazi sa novim izazovima. Ključno pitanje je osiguranje kvaliteta odgovora (tačnost i relevantnost) u sadržaju koji model generiše za dati korisnički zahtev. U prethodnim lekcijama smo diskutovali o tehnikama kao što su inženjering upita i generacija uz obogaćivanje podacima, koje pokušavaju da reše problem _modifikovanjem ulaznog upita_ postojećem modelu.
+Коришћење великих језичких модела за изградњу апликација заснованих на генеративној вештачкој интелигенцији доноси нове изазове. Кључни проблем је осигурање квалитета одговора (тачност и релевантност) у садржају који модел генерише за одређени захтев корисника. У претходним лекцијама, разговарали смо о техникама као што су инжењеринг упита и генерисање уз помоћ претраживања, које покушавају да реше проблем _модификовањем улазног упита_ постојећем моделу.
 
-U današnjoj lekciji, diskutujemo o trećoj tehnici, **fino podešavanje**, koja pokušava da reši izazov _preobučavanjem samog modela_ dodatnim podacima. Hajde da se udubimo u detalje.
+У данашњој лекцији, говоримо о трећој техници, **фино подешавање**, која покушава да реши изазов _поновним тренирањем самог модела_ уз додатне податке. Хајде да се удубимо у детаље.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Ova lekcija uvodi koncept finog podešavanja za unapred obučene jezičke modele, istražuje prednosti i izazove ovog pristupa i pruža smernice o tome kada i kako koristiti fino podešavanje da poboljšate performanse vaših generativnih AI modela.
+Ова лекција уводи концепт финог подешавања за претходно обучене језичке моделе, истражује предности и изазове овог приступа и пружа смернице о томе када и како користити фино подешавање за побољшање перформанси ваших генеративних AI модела.
 
-Na kraju ove lekcije, trebalo bi da možete odgovoriti na sledeća pitanja:
+На крају ове лекције, требало би да можете да одговорите на следећа питања:
 
-- Šta je fino podešavanje za jezičke modele?
-- Kada i zašto je fino podešavanje korisno?
-- Kako mogu fino podesiti unapred obučeni model?
-- Koja su ograničenja finog podešavanja?
+- Шта је фино подешавање за језичке моделе?
+- Када и зашто је фино подешавање корисно?
+- Како могу фино подесити претходно обучен модел?
+- Која су ограничења финог подешавања?
 
-Spremni? Hajde da počnemo.
+Спремни? Хајде да почнемо.
 
-## Ilustrovani vodič
+## Илустровани водич
 
-Želite da dobijete celokupnu sliku onoga što ćemo pokriti pre nego što se udubimo? Pogledajte ovaj ilustrovani vodič koji opisuje put učenja za ovu lekciju - od učenja osnovnih koncepata i motivacije za fino podešavanje, do razumevanja procesa i najboljih praksi za izvršenje zadatka finog podešavanja. Ovo je fascinantna tema za istraživanje, pa ne zaboravite da pogledate stranicu [Resursi](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne linkove koji će podržati vaše samostalno učenje!
+Желите да добијете ширу слику онога што ћемо покрити пре него што се удубимо? Погледајте овај илустровани водич који описује пут учења за ову лекцију - од учења основних концепата и мотивације за фино подешавање, до разумевања процеса и најбољих пракси за извршавање задатка финог подешавања. Ово је фасцинантна тема за истраживање, па не заборавите да проверите [Ресурсе](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) за додатне линкове који ће подржати ваше самостално учење!
 
-![Ilustrovani vodič za fino podešavanje jezičkih modela](../../../translated_images/18-fine-tuning-sketchnote.92733966235199dd260184b1aae3a84b877c7496bc872d8e63ad6fa2dd96bafc.sr.png)
+![Илустровани водич за фино подешавање језичких модела](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.sr.png)
 
-## Šta je fino podešavanje za jezičke modele?
+## Шта је фино подешавање за језичке моделе?
 
-Po definiciji, veliki jezički modeli su _unapred obučeni_ na velikim količinama teksta prikupljenog iz raznih izvora, uključujući internet. Kao što smo naučili u prethodnim lekcijama, potrebne su nam tehnike kao što su _inženjering upita_ i _generacija uz obogaćivanje podacima_ da bismo poboljšali kvalitet odgovora modela na korisnička pitanja ("upite").
+По дефиницији, велики језички модели су _претходно обучени_ на великим количинама текста из различитих извора, укључујући интернет. Као што смо научили у претходним лекцијама, потребне су нам технике као што су _инжењеринг упита_ и _генерисање уз помоћ претраживања_ да бисмо побољшали квалитет одговора модела на корисничка питања ("упите").
 
-Popularna tehnika inženjeringa upita uključuje davanje modelu više smernica o tome šta se očekuje u odgovoru bilo pružanjem _instrukcija_ (eksplicitne smernice) ili _davanjem nekoliko primera_ (implicitne smernice). Ovo se naziva _učenje sa nekoliko primera_, ali ima dva ograničenja:
+Популарна техника инжењеринга упита укључује давање модела више смерница о томе шта се очекује у одговору, било пружањем _упутстава_ (експлицитне смернице) или _давањем неколико примера_ (имплицитне смернице). Ово се назива _учење са неколико примера_, али има два ограничења:
 
-- Ograničenja tokena modela mogu ograničiti broj primera koje možete dati i smanjiti efikasnost.
-- Troškovi tokena modela mogu učiniti skupo dodavanje primera svakom upitu i ograničiti fleksibilnost.
+- Ограничења броја токена у моделу могу ограничити број примера које можете дати и утицати на ефикасност.
+- Трошкови токена у моделу могу учинити додавање примера сваком упиту скупим и ограничити флексибилност.
 
-Fino podešavanje je uobičajena praksa u sistemima mašinskog učenja gde uzimamo unapred obučeni model i ponovo ga obučavamo sa novim podacima kako bismo poboljšali njegovu performansu na određenom zadatku. U kontekstu jezičkih modela, možemo fino podesiti unapred obučeni model _sa pažljivo odabranim skupom primera za dati zadatak ili aplikacionu oblast_ kako bismo kreirali **prilagođeni model** koji može biti precizniji i relevantniji za taj specifični zadatak ili oblast. Sporedna korist finog podešavanja je da može smanjiti broj primera potrebnih za učenje sa nekoliko primera - smanjujući upotrebu tokena i povezane troškove.
+Фино подешавање је уобичајена пракса у системима машинског учења где узимамо претходно обучен модел и поново га тренирамо са новим подацима како бисмо побољшали његове перформансе за одређени задатак. У контексту језичких модела, можемо фино подесити претходно обучен модел _са пажљиво одабраним примерима за одређени задатак или домен апликације_ како бисмо створили **прилагођени модел** који може бити тачнији и релевантнији за тај специфичан задатак или домен. Споредна предност финог подешавања је да може смањити број потребних примера за учење са неколико примера - смањујући употребу токена и повезане трошкове.
 
-## Kada i zašto treba fino podešavati modele?
+## Када и зашто треба фино подесити моделе?
 
-U _ovom_ kontekstu, kada govorimo o finom podešavanju, mislimo na **supervizirano** fino podešavanje gde se preobuka vrši dodavanjem **novih podataka** koji nisu bili deo originalnog skupa podataka za obuku. Ovo je drugačije od pristupa nesupervizovanog finog podešavanja gde se model ponovo obučava na originalnim podacima, ali sa različitim hiperparametrima.
+У _овом_ контексту, када говоримо о фином подешавању, мислимо на **супервизирано** фино подешавање где се поновно тренирање врши **додавањем нових података** који нису били део оригиналног скупа података за тренирање. Ово се разликује од приступа несупервизираног финог подешавања где се модел поново тренира на оригиналним подацима, али са различитим хиперпараметрима.
 
-Ključna stvar koju treba zapamtiti je da je fino podešavanje napredna tehnika koja zahteva određeni nivo stručnosti da bi se postigli željeni rezultati. Ako se ne uradi pravilno, možda neće pružiti očekivana poboljšanja, pa čak može i degradirati performanse modela za vašu ciljanu oblast.
+Кључна ствар коју треба запамтити је да је фино подешавање напредна техника која захтева одређени ниво експертизе за постизање жељених резултата. Ако се уради неправилно, можда неће пружити очекивана побољшања, па чак може и погоршати перформансе модела за ваш циљани домен.
 
-Dakle, pre nego što naučite "kako" fino podešavati jezičke modele, morate znati "zašto" biste krenuli tim putem i "kada" započeti proces finog podešavanja. Počnite tako što ćete sebi postaviti ova pitanja:
+Дакле, пре него што научите "како" да фино подесите језичке моделе, потребно је да знате "зашто" би требало да кренете тим путем и "када" да започнете процес финог подешавања. Почните тако што ћете себи поставити ова питања:
 
-- **Upotreba**: Koji je vaš _slučaj upotrebe_ za fino podešavanje? Koji aspekt trenutnog unapred obučenog modela želite da poboljšate?
-- **Alternative**: Da li ste probali _druge tehnike_ da postignete željene rezultate? Koristite ih da kreirate osnovu za poređenje.
-  - Inženjering upita: Pokušajte tehnike kao što su učenje sa nekoliko primera sa primerima relevantnih odgovora na upite. Procijenite kvalitet odgovora.
-  - Generacija uz obogaćivanje podacima: Pokušajte obogatiti upite rezultatima pretrage vaših podataka. Procijenite kvalitet odgovora.
-- **Troškovi**: Da li ste identifikovali troškove za fino podešavanje?
-  - Prilagodljivost - da li je unapred obučeni model dostupan za fino podešavanje?
-  - Napor - za pripremu podataka za obuku, evaluaciju i poboljšanje modela.
-  - Računanje - za izvođenje poslova finog podešavanja i implementaciju fino podešenog modela.
-  - Podaci - pristup dovoljnim kvalitetnim primerima za uticaj finog podešavanja.
-- **Prednosti**: Da li ste potvrdili prednosti finog podešavanja?
-  - Kvalitet - da li je fino podešeni model nadmašio osnovni model?
-  - Trošak - da li smanjuje upotrebu tokena pojednostavljivanjem upita?
-  - Proširivost - možete li prilagoditi osnovni model za nove oblasti?
+- **Случај употребе**: Шта је ваш _случај употребе_ за фино подешавање? Који аспект тренутног претходно обученог модела желите да побољшате?
+- **Алтернативе**: Да ли сте пробали _друге технике_ за постизање жељених резултата? Користите их за креирање основне линије за поређење.
+  - Инжењеринг упита: Пробајте технике као што је учење са неколико примера уз примере релевантних одговора на упите. Оцените квалитет одговора.
+  - Генерисање уз помоћ претраживања: Пробајте да побољшате упите резултатима претраге ваших података. Оцените квалитет одговора.
+- **Трошкови**: Да ли сте идентификовали трошкове за фино подешавање?
+  - Могућност подешавања - да ли је претходно обучен модел доступан за фино подешавање?
+  - Напор - за припрему података за тренирање, евалуацију и усавршавање модела.
+  - Рачунарски ресурси - за покретање послова финог подешавања и примену фино подешеног модела.
+  - Подаци - приступ довољно квалитетним примерима за утицај финог подешавања.
+- **Предности**: Да ли сте потврдили предности финог подешавања?
+  - Квалитет - да ли је фино подешен модел надмашио основну линију?
+  - Трошкови - да ли смањује употребу токена поједностављивањем упита?
+  - Проширивост - можете ли поново користити основни модел за нове домене?
 
-Odgovarajući na ova pitanja, trebalo bi da budete u mogućnosti da odlučite da li je fino podešavanje pravi pristup za vaš slučaj upotrebe. Idealno, pristup je validan samo ako prednosti nadmašuju troškove. Kada odlučite da nastavite, vreme je da razmislite o tome _kako_ možete fino podesiti unapred obučeni model.
+Одговарајући на ова питања, требало би да будете у могућности да одлучите да ли је фино подешавање прави приступ за ваш случај употребе. Идеално, приступ је валидан само ако предности надмашују трошкове. Када одлучите да наставите, време је да размислите о томе _како_ можете фино подесити претходно обучен модел.
 
-Želite više uvida u proces donošenja odluka? Pogledajte [Da li fino podešavati ili ne fino podešavati](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Желите више увида у процес доношења одлука? Погледајте [Да ли фино подесити или не](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Kako možemo fino podesiti unapred obučeni model?
+## Како можемо фино подесити претходно обучен модел?
 
-Da biste fino podesili unapred obučeni model, potrebno je da imate:
+Да бисте фино подесили претходно обучен модел, потребно је да имате:
 
-- unapred obučeni model za fino podešavanje
-- skup podataka za korišćenje u finom podešavanju
-- okruženje za obuku za pokretanje posla finog podešavanja
-- okruženje za hosting za implementaciju fino podešenog modela
+- претходно обучен модел за фино подешавање
+- скуп података за фино подешавање
+- окружење за тренирање за покретање посла финог подешавања
+- окружење за хостовање за примену фино подешеног модела
 
-## Fino podešavanje u praksi
+## Фино подешавање у пракси
 
-Sledeći resursi pružaju uputstva korak po korak koja vas vode kroz stvarni primer korišćenja odabranog modela sa pažljivo odabranim skupom podataka. Da biste prošli kroz ova uputstva, potrebno vam je nalog kod određenog provajdera, zajedno sa pristupom relevantnom modelu i skupovima podataka.
+Следећи ресурси пружају корак-по-корак туторијале који вас воде кроз прави пример коришћења одабраног модела са пажљиво одабраним скупом података. Да бисте прошли кроз ове туторијале, потребан вам је налог код одређеног провајдера, као и приступ релевантном моделу и скуповима података.
 
-| Provajder    | Uputstvo                                                                                                                                                                       | Opis                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Kako fino podesiti modele za ćaskanje](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)       | Naučite kako fino podesiti `gpt-35-turbo` za specifičnu oblast ("asistent za recepte") pripremom podataka za obuku, pokretanjem posla finog podešavanja i korišćenjem fino podešenog modela za izvođenje.                                                                                                                                                                                                                          |
-| Azure OpenAI | [GPT 3.5 Turbo uputstvo za fino podešavanje](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Naučite kako fino podesiti `gpt-35-turbo-0613` model **na Azure** preduzimanjem koraka za kreiranje i otpremanje podataka za obuku, pokretanje posla finog podešavanja. Implementirajte i koristite novi model.                                                                                                                                                                                                                       |
-| Hugging Face | [Fino podešavanje LLM-ova sa Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                         | Ovaj blog post vas vodi kroz fino podešavanje _otvorenog LLM-a_ (npr. `CodeLlama 7B`) koristeći biblioteku [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) i [Reinforcement Learning za transformere (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) sa otvorenim [skupovima podataka](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) na Hugging Face. |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Fino podešavanje LLM-ova sa AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                   | AutoTrain (ili AutoTrain Advanced) je python biblioteka koju je razvio Hugging Face i omogućava fino podešavanje za mnoge različite zadatke, uključujući fino podešavanje LLM-ova. AutoTrain je rešenje bez koda i fino podešavanje se može obaviti u vašem oblaku, na Hugging Face Spaces ili lokalno. Podržava i web-bazirani GUI, CLI i obuku putem yaml konfiguracionih datoteka.                                                   |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Провајдер     | Туторијал                                                                                                                                                                       | Опис                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI        | [Како фино подесити моделе за ћаскање](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)         | Научите како да фино подесите `gpt-35-turbo` за одређени домен ("асистент за рецепте") припремањем података за тренирање, покретањем посла финог подешавања и коришћењем фино подешеног модела за закључивање.                                                                                                                                                                                                                     |
+| Azure OpenAI  | [GPT 3.5 Turbo туторијал за фино подешавање](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Научите како да фино подесите `gpt-35-turbo-0613` модел **на Azure-у** предузимањем корака за креирање и отпремање података за тренирање, покретање посла финог подешавања. Примените и користите нови модел.                                                                                                                                                                                                                     |
+| Hugging Face  | [Фино подешавање LLM-ова са Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                           | Овај блог пост вас води кроз фино подешавање _отвореног LLM-а_ (нпр. `CodeLlama 7B`) користећи [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) библиотеку и [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) са отвореним [скуповима података](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) на Hugging Face. |
+|               |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🤗 AutoTrain  | [Фино подешавање LLM-ова са AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                     | AutoTrain (или AutoTrain Advanced) је Python библиотека коју је развио Hugging Face и која омогућава фино подешавање за многе различите задатке, укључујући фино подешавање LLM-а. AutoTrain је решење без потребе за кодирањем, а фино подешавање се може обавити у вашем облаку, на Hugging Face Spaces или локално. Подржава и веб-базирани GUI, CLI и тренирање преко yaml конфигурационих датотека.                                                                               |
+|               |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-## Zadatak
+## Задатак
 
-Izaberite jedno od gore navedenih uputstava i prođite kroz njega. _Možda ćemo replicirati verziju ovih uputstava u Jupyter beležnicama u ovom repo-u samo za referencu. Molimo koristite originalne izvore direktno da biste dobili najnovije verzije_.
+Изаберите један од горе наведених туторијала и прођите кроз њега. _Можемо реплицирати верзију ових туторијала у Jupyter Notebook-овима у овом репозиторијуму само за референцу. Молимо вас да директно користите оригиналне изворе како бисте добили најновије верзије_.
 
-## Odličan posao! Nastavite sa učenjem.
+## Одличан посао! Наставите са учењем.
 
-Nakon što završite ovu lekciju, pogledajte našu [Kolekciju učenja o generativnoj AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite sa unapređivanjem vašeg znanja o generativnoj AI!
+Након завршетка ове лекције, погледајте нашу [колекцију за учење о генеративној AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) како бисте наставили да унапређујете своје знање о генеративној AI!
 
-Čestitamo!! Završili ste poslednju lekciju iz v2 serije za ovaj kurs! Nemojte prestati sa učenjem i izgradnjom. **Pogledajte [RESURSI](RESOURCES.md?WT.mc_id=academic-105485-koreyst) stranicu za listu dodatnih predloga samo za ovu temu.
+Честитамо!! Завршили сте последњу лекцију из серије v2 за овај курс! Не престајте да учите и стварате. \*\*Погледајте [РЕСУРСЕ](RESOURCES.md?WT.mc_id=academic-105485-koreyst) за листу додатних предлога само за ову тему.
 
-Naša v1 serija lekcija je takođe ažurirana sa više zadataka i koncepata. Zato odvojite minut da osvežite svoje znanje - i molimo vas da [podelite svoja pitanja i povratne informacije](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) kako bismo poboljšali ove lekcije za zajednicu.
+Наша серија лекција v1 је такође ажурирана са више задатака и концепата. Зато одвојите минут да освежите своје знање - и молимо вас [поделите своја питања и повратне информације](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) како бисте нам помогли да побољшамо ове лекције за заједницу.
 
-**Одричење од одговорности**:  
-Овај документ је преведен коришћењем AI услуге за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да постигнемо тачност, молимо вас да будете свесни да аутоматизовани преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације, препоручује се професионални људски превод. Не сносимо одговорност за било какве неспоразуме или погрешна тумачења која произилазе из употребе овог превода.
+---
+
+**Одрицање од одговорности**:  
+Овај документ је преведен коришћењем услуге за превођење помоћу вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати меродавним извором. За критичне информације препоручује се професионални превод од стране људи. Не преузимамо одговорност за било каква погрешна тумачења или неспоразуме који могу настати услед коришћења овог превода.

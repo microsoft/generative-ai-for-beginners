@@ -1,45 +1,49 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7a655f30d1dcbdfe6eff2558eff249af",
-  "translation_date": "2025-05-19T19:14:50+00:00",
+  "original_hash": "238cde5c90363d70ecc939569378da51",
+  "translation_date": "2025-10-17T19:22:38+00:00",
   "source_file": "09-building-image-applications/README.md",
   "language_code": "no"
 }
 -->
 # Bygge applikasjoner for bildegenerering
 
-Det er mer til LLMs enn tekstgenerering. Det er også mulig å generere bilder fra tekstbeskrivelser. Å ha bilder som en modalitet kan være svært nyttig på flere områder som MedTech, arkitektur, turisme, spillutvikling og mer. I dette kapittelet skal vi se nærmere på de to mest populære bildegenereringsmodellene, DALL-E og Midjourney.
+[![Bygge applikasjoner for bildegenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.no.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+
+LLM-er handler om mer enn tekstgenerering. Det er også mulig å generere bilder fra tekstbeskrivelser. Å ha bilder som en modalitet kan være svært nyttig innen en rekke områder som MedTech, arkitektur, turisme, spillutvikling og mer. I dette kapittelet skal vi se nærmere på de to mest populære modellene for bildegenerering, DALL-E og Midjourney.
 
 ## Introduksjon
 
-I denne leksjonen vil vi dekke:
+I denne leksjonen skal vi dekke:
 
 - Bildegenerering og hvorfor det er nyttig.
 - DALL-E og Midjourney, hva de er og hvordan de fungerer.
-- Hvordan du kan bygge en bildegenereringsapp.
+- Hvordan du kan bygge en applikasjon for bildegenerering.
 
 ## Læringsmål
 
-Etter å ha fullført denne leksjonen vil du kunne:
+Etter å ha fullført denne leksjonen, vil du kunne:
 
 - Bygge en applikasjon for bildegenerering.
-- Definere grenser for applikasjonen din med metaprompts.
+- Definere grenser for applikasjonen din med metaprompter.
 - Arbeide med DALL-E og Midjourney.
 
 ## Hvorfor bygge en applikasjon for bildegenerering?
 
-Applikasjoner for bildegenerering er en flott måte å utforske mulighetene til Generativ AI. De kan brukes til, for eksempel:
+Applikasjoner for bildegenerering er en flott måte å utforske mulighetene med Generativ AI. De kan brukes til for eksempel:
 
-- **Bildebehandling og syntese**. Du kan generere bilder for en rekke bruksområder, som bildebehandling og bildesyntese.
+- **Bilderedigering og syntese**. Du kan generere bilder for en rekke bruksområder, som bilderedigering og bildesyntese.
 
-- **Anvendt på en rekke industrier**. De kan også brukes til å generere bilder for en rekke industrier som MedTech, turisme, spillutvikling og mer.
+- **Anvendelse i ulike bransjer**. De kan også brukes til å generere bilder for en rekke bransjer som MedTech, turisme, spillutvikling og mer.
 
 ## Scenario: Edu4All
 
-Som en del av denne leksjonen vil vi fortsette å jobbe med vår oppstart, Edu4All, i denne leksjonen. Studentene vil lage bilder for sine vurderinger, nøyaktig hvilke bilder er opp til studentene, men de kan være illustrasjoner for sitt eget eventyr eller lage en ny karakter for sin historie eller hjelpe dem med å visualisere sine ideer og konsepter.
+Som en del av denne leksjonen skal vi fortsette å jobbe med vår oppstart, Edu4All. Studentene skal lage bilder til sine oppgaver, hva slags bilder er opp til studentene, men de kan for eksempel lage illustrasjoner til sitt eget eventyr, skape en ny karakter til sin historie eller hjelpe dem med å visualisere sine ideer og konsepter.
 
-Her er hva Edu4Alls studenter kunne generere for eksempel hvis de jobber i klassen med monumenter:
+Her er et eksempel på hva Edu4Alls studenter kan generere hvis de jobber i klassen med monumenter:
+
+![Edu4All oppstart, klasse om monumenter, Eiffeltårnet](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.no.png)
 
 ved å bruke en prompt som
 
@@ -47,11 +51,13 @@ ved å bruke en prompt som
 
 ## Hva er DALL-E og Midjourney?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) og [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) er to av de mest populære bildegenereringsmodellene, de lar deg bruke prompts til å generere bilder.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) og [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) er to av de mest populære modellene for bildegenerering, som lar deg bruke prompter til å generere bilder.
 
 ### DALL-E
 
 La oss starte med DALL-E, som er en Generativ AI-modell som genererer bilder fra tekstbeskrivelser.
+
+> [DALL-E er en kombinasjon av to modeller, CLIP og diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
 - **CLIP**, er en modell som genererer embeddings, som er numeriske representasjoner av data, fra bilder og tekst.
 
@@ -59,135 +65,425 @@ La oss starte med DALL-E, som er en Generativ AI-modell som genererer bilder fra
 
 ### Midjourney
 
-Midjourney fungerer på en lignende måte som DALL-E, den genererer bilder fra tekstprompts. Midjourney kan også brukes til å generere bilder ved hjelp av prompts som “en katt med hatt”, eller en “hund med mohawk”.
+Midjourney fungerer på en lignende måte som DALL-E, den genererer bilder fra tekstprompter. Midjourney kan også brukes til å generere bilder ved hjelp av promter som "en katt med hatt" eller "en hund med mohawk".
 
-## Hvordan fungerer DALL-E og Midjourney
+![Bilde generert av Midjourney, mekanisk due](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
+_Bildekreditt Wikipedia, bilde generert av Midjourney_
 
-Først, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E er en Generativ AI-modell basert på transformer-arkitektur med en _autoregressiv transformer_.
+## Hvordan fungerer DALL-E og Midjourney?
 
-En _autoregressiv transformer_ definerer hvordan en modell genererer bilder fra tekstbeskrivelser, den genererer én piksel om gangen, og bruker deretter de genererte pikslene til å generere neste piksel. Passerer gjennom flere lag i et nevralt nettverk, til bildet er komplett.
+Først, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E er en Generativ AI-modell basert på transformer-arkitekturen med en _autoregressiv transformer_.
 
-Med denne prosessen kontrollerer DALL-E attributter, objekter, egenskaper og mer i bildet den genererer. Imidlertid har DALL-E 2 og 3 mer kontroll over det genererte bildet.
+En _autoregressiv transformer_ definerer hvordan en modell genererer bilder fra tekstbeskrivelser, den genererer én piksel om gangen, og bruker deretter de genererte pikslene til å generere neste piksel. Den passerer gjennom flere lag i et nevralt nettverk, til bildet er komplett.
+
+Med denne prosessen kontrollerer DALL-E attributter, objekter, egenskaper og mer i bildet det genererer. Imidlertid har DALL-E 2 og 3 mer kontroll over det genererte bildet.
 
 ## Bygge din første applikasjon for bildegenerering
 
-Så hva kreves det for å bygge en applikasjon for bildegenerering? Du trenger følgende biblioteker:
+Så hva trengs for å bygge en applikasjon for bildegenerering? Du trenger følgende biblioteker:
 
-- **python-dotenv**, du anbefales sterkt å bruke dette biblioteket for å holde hemmelighetene dine i en _.env_ fil borte fra koden.
-- **openai**, dette biblioteket er det du vil bruke for å samhandle med OpenAI API.
+- **python-dotenv**, det anbefales sterkt å bruke dette biblioteket for å holde hemmeligheter i en _.env_-fil borte fra koden.
+- **openai**, dette biblioteket brukes til å interagere med OpenAI API.
 - **pillow**, for å arbeide med bilder i Python.
 - **requests**, for å hjelpe deg med å gjøre HTTP-forespørsler.
 
+## Opprett og distribuer en Azure OpenAI-modell
+
+Hvis du ikke allerede har gjort det, følg instruksjonene på [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal)-siden
+for å opprette en Azure OpenAI-ressurs og modell. Velg DALL-E 3 som modell.  
+
+## Opprett applikasjonen
+
 1. Opprett en fil _.env_ med følgende innhold:
 
-   Finn denne informasjonen i Azure Portal for ressursen din i "Keys and Endpoint" seksjonen.
+   ```text
+   AZURE_OPENAI_ENDPOINT=<your endpoint>
+   AZURE_OPENAI_API_KEY=<your key>
+   AZURE_OPENAI_DEPLOYMENT="dall-e-3"
+   ```
+
+   Finn denne informasjonen i Azure OpenAI Foundry Portal for ressursen din i "Deployments"-seksjonen.
 
 1. Samle de ovennevnte bibliotekene i en fil kalt _requirements.txt_ slik:
 
-1. Deretter, opprett et virtuelt miljø og installer bibliotekene:
+   ```text
+   python-dotenv
+   openai
+   pillow
+   requests
+   ```
+
+1. Deretter oppretter du et virtuelt miljø og installerer bibliotekene:
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
    For Windows, bruk følgende kommandoer for å opprette og aktivere ditt virtuelle miljø:
 
+   ```bash
+   python3 -m venv venv
+   venv\Scripts\activate.bat
+   ```
+
 1. Legg til følgende kode i en fil kalt _app.py_:
+
+    ```python
+    import openai
+    import os
+    import requests
+    from PIL import Image
+    import dotenv
+    from openai import OpenAI, AzureOpenAI
+    
+    # import dotenv
+    dotenv.load_dotenv()
+    
+    # configure Azure OpenAI service client 
+    client = AzureOpenAI(
+      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
+      api_key=os.environ['AZURE_OPENAI_API_KEY'],
+      api_version = "2024-02-01"
+      )
+    try:
+        # Create an image by using the image generation API
+        generation_response = client.images.generate(
+                                prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+                                size='1024x1024', n=1,
+                                model=os.environ['AZURE_OPENAI_DEPLOYMENT']
+                              )
+
+        # Set the directory for the stored image
+        image_dir = os.path.join(os.curdir, 'images')
+
+        # If the directory doesn't exist, create it
+        if not os.path.isdir(image_dir):
+            os.mkdir(image_dir)
+
+        # Initialize the image path (note the filetype should be png)
+        image_path = os.path.join(image_dir, 'generated-image.png')
+
+        # Retrieve the generated image
+        image_url = generation_response.data[0].url  # extract image URL from response
+        generated_image = requests.get(image_url).content  # download the image
+        with open(image_path, "wb") as image_file:
+            image_file.write(generated_image)
+
+        # Display the image in the default image viewer
+        image = Image.open(image_path)
+        image.show()
+
+    # catch exceptions
+    except openai.InvalidRequestError as err:
+        print(err)
+   ```
 
 La oss forklare denne koden:
 
-- Først importerer vi de nødvendige bibliotekene, inkludert OpenAI-biblioteket, dotenv-biblioteket, requests-biblioteket og Pillow-biblioteket.
+- Først importerer vi bibliotekene vi trenger, inkludert OpenAI-biblioteket, dotenv-biblioteket, requests-biblioteket og Pillow-biblioteket.
 
-- Deretter laster vi inn miljøvariablene fra _.env_ filen.
+  ```python
+  import openai
+  import os
+  import requests
+  from PIL import Image
+  import dotenv
+  ```
 
-- Etter det setter vi endepunktet, nøkkelen for OpenAI API, versjon og type.
+- Deretter laster vi miljøvariablene fra _.env_-filen.
+
+  ```python
+  # import dotenv
+  dotenv.load_dotenv()
+  ```
+
+- Etter det konfigurerer vi Azure OpenAI serviceklienten 
+
+  ```python
+  # Get endpoint and key from environment variables
+  client = AzureOpenAI(
+      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
+      api_key=os.environ['AZURE_OPENAI_API_KEY'],
+      api_version = "2024-02-01"
+      )
+  ```
 
 - Deretter genererer vi bildet:
 
-  Koden over svarer med et JSON-objekt som inneholder URL-en til det genererte bildet. Vi kan bruke URL-en til å laste ned bildet og lagre det til en fil.
+  ```python
+  # Create an image by using the image generation API
+  generation_response = client.images.generate(
+                        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+                        size='1024x1024', n=1,
+                        model=os.environ['AZURE_OPENAI_DEPLOYMENT']
+                      )
+  ```
 
-- Til slutt åpner vi bildet og bruker den standard bildefremviseren for å vise det:
+  Koden ovenfor svarer med et JSON-objekt som inneholder URL-en til det genererte bildet. Vi kan bruke URL-en til å laste ned bildet og lagre det i en fil.
 
-### Mer detaljer om generering av bildet
+- Til slutt åpner vi bildet og bruker standard bildeviser til å vise det:
+
+  ```python
+  image = Image.open(image_path)
+  image.show()
+  ```
+
+### Flere detaljer om bildegenerering
 
 La oss se nærmere på koden som genererer bildet:
 
-- **prompt**, er tekstprompten som brukes til å generere bildet. I dette tilfellet bruker vi prompten "Kaninen på hest, holder en kjærlighet, på en tåket eng hvor det vokser påskeliljer".
+   ```python
+     generation_response = client.images.generate(
+                               prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+                               size='1024x1024', n=1,
+                               model=os.environ['AZURE_OPENAI_DEPLOYMENT']
+                           )
+   ```
+
+- **prompt**, er tekstprompten som brukes til å generere bildet. I dette tilfellet bruker vi prompten "Kanin på hest, holder en kjærlighet på pinne, på en tåkete eng hvor det vokser påskeliljer".
 - **size**, er størrelsen på bildet som genereres. I dette tilfellet genererer vi et bilde som er 1024x1024 piksler.
 - **n**, er antallet bilder som genereres. I dette tilfellet genererer vi to bilder.
-- **temperature**, er en parameter som kontrollerer tilfeldigheten i outputen til en Generativ AI-modell. Temperaturen er en verdi mellom 0 og 1 hvor 0 betyr at outputen er deterministisk og 1 betyr at outputen er tilfeldig. Standardverdien er 0.7.
+- **temperature**, er en parameter som kontrollerer tilfeldigheten i resultatet fra en Generativ AI-modell. Temperaturen er en verdi mellom 0 og 1 hvor 0 betyr at resultatet er deterministisk og 1 betyr at resultatet er tilfeldig. Standardverdien er 0,7.
 
 Det er flere ting du kan gjøre med bilder som vi vil dekke i neste seksjon.
 
-## Tilleggsfunksjoner for bildegenerering
+## Ytterligere funksjoner for bildegenerering
 
-Du har så langt sett hvordan vi kunne generere et bilde ved hjelp av noen få linjer i Python. Imidlertid er det flere ting du kan gjøre med bilder.
+Du har sett så langt hvordan vi kunne generere et bilde med noen få linjer i Python. Imidlertid er det flere ting du kan gjøre med bilder.
 
 Du kan også gjøre følgende:
 
-- **Utføre redigeringer**. Ved å gi et eksisterende bilde en maske og en prompt, kan du endre et bilde. For eksempel kan du legge til noe i en del av et bilde. Forestill deg vårt kaninbilde, du kan legge til en hatt på kaninen. Hvordan du ville gjort det er ved å gi bildet, en maske (identifisere delen av området for endringen) og en tekstprompt for å si hva som skal gjøres.
+- **Utføre redigeringer**. Ved å gi et eksisterende bilde en maske og en prompt, kan du endre et bilde. For eksempel kan du legge til noe på en del av et bilde. Tenk deg vårt kaninbilde, du kan legge til en hatt på kaninen. Hvordan du ville gjort det er ved å gi bildet, en maske (identifisere delen av området for endringen) og en tekstprompt for å si hva som skal gjøres. 
+> Merk: dette støttes ikke i DALL-E 3. 
+ 
+Her er et eksempel ved bruk av GPT Image:
 
-  Basebildet ville bare inneholde kaninen, men det endelige bildet ville ha hatten på kaninen.
+   ```python
+   response = client.images.edit(
+       model="gpt-image-1",
+       image=open("sunlit_lounge.png", "rb"),
+       mask=open("mask.png", "rb"),
+       prompt="A sunlit indoor lounge area with a pool containing a flamingo"
+   )
+   image_url = response.data[0].url
+   ```
 
-- **Lage variasjoner**. Ideen er at du tar et eksisterende bilde og ber om at variasjoner blir laget. For å lage en variasjon, gir du et bilde og en tekstprompt og kode som så:
+  Grunnbildet vil bare inneholde loungen med bassenget, men det endelige bildet vil ha en flamingo:
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.no.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.no.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.no.png" style="width: 30%; max-width: 200px; height: auto;">
+</div>
+
+
+- **Skape variasjoner**. Ideen er at du tar et eksisterende bilde og ber om at variasjoner opprettes. For å lage en variasjon, gir du et bilde og en tekstprompt og kode som dette:
+
+  ```python
+  response = openai.Image.create_variation(
+    image=open("bunny-lollipop.png", "rb"),
+    n=1,
+    size="1024x1024"
+  )
+  image_url = response['data'][0]['url']
+  ```
 
   > Merk, dette støttes kun på OpenAI
 
 ## Temperatur
 
-Temperatur er en parameter som kontrollerer tilfeldigheten i outputen til en Generativ AI-modell. Temperaturen er en verdi mellom 0 og 1 hvor 0 betyr at outputen er deterministisk og 1 betyr at outputen er tilfeldig. Standardverdien er 0.7.
+Temperatur er en parameter som kontrollerer tilfeldigheten i resultatet fra en Generativ AI-modell. Temperaturen er en verdi mellom 0 og 1 hvor 0 betyr at resultatet er deterministisk og 1 betyr at resultatet er tilfeldig. Standardverdien er 0,7.
 
 La oss se på et eksempel på hvordan temperatur fungerer, ved å kjøre denne prompten to ganger:
 
-> Prompt : "Kaninen på hest, holder en kjærlighet, på en tåket eng hvor det vokser påskeliljer"
+> Prompt : "Kanin på hest, holder en kjærlighet på pinne, på en tåkete eng hvor det vokser påskeliljer"
 
-Nå la oss kjøre den samme prompten bare for å se at vi ikke vil få det samme bildet to ganger:
+![Kanin på en hest som holder en kjærlighet på pinne, versjon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.no.png)
 
-Som du kan se, er bildene like, men ikke de samme. La oss prøve å endre temperaturverdien til 0.1 og se hva som skjer:
+La oss nå kjøre den samme prompten bare for å se at vi ikke får det samme bildet to ganger:
+
+![Generert bilde av kanin på hest](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.no.png)
+
+Som du kan se, er bildene like, men ikke identiske. La oss prøve å endre temperaturverdien til 0,1 og se hva som skjer:
+
+```python
+ generation_response = client.images.create(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        size='1024x1024',
+        n=2
+    )
+```
 
 ### Endre temperaturen
 
-Så la oss prøve å gjøre responsen mer deterministisk. Vi kunne observere fra de to bildene vi genererte at i det første bildet er det en kanin, og i det andre bildet er det en hest, så bildene varierer sterkt.
+Så la oss prøve å gjøre responsen mer deterministisk. Vi kunne observere fra de to bildene vi genererte at i det første bildet er det en kanin og i det andre bildet er det en hest, så bildene varierer mye.
 
 La oss derfor endre koden vår og sette temperaturen til 0, slik:
 
-Nå når du kjører denne koden, får du disse to bildene:
+```python
+generation_response = client.images.create(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+        size='1024x1024',
+        n=2,
+        temperature=0
+    )
+```
+
+Nå, når du kjører denne koden, får du disse to bildene:
+
+- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.no.png)
+- ![Temperatur 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.no.png)
 
 Her kan du tydelig se hvordan bildene ligner hverandre mer.
 
-## Hvordan definere grenser for applikasjonen din med metaprompts
+## Hvordan definere grenser for applikasjonen din med metaprompter
 
-Med vår demo kan vi allerede generere bilder for våre klienter. Imidlertid må vi lage noen grenser for applikasjonen vår.
+Med vår demo kan vi allerede generere bilder for våre kunder. Imidlertid må vi lage noen grenser for applikasjonen vår.
 
-For eksempel ønsker vi ikke å generere bilder som ikke er trygge for arbeid, eller som ikke er passende for barn.
+For eksempel ønsker vi ikke å generere bilder som ikke er egnet for arbeid, eller som ikke er passende for barn.
 
-Vi kan gjøre dette med _metaprompts_. Metaprompts er tekstprompts som brukes til å kontrollere outputen til en Generativ AI-modell. For eksempel kan vi bruke metaprompts til å kontrollere outputen, og sikre at de genererte bildene er trygge for arbeid, eller passende for barn.
+Vi kan gjøre dette med _metaprompter_. Metaprompter er tekstprompter som brukes til å kontrollere resultatet fra en Generativ AI-modell. For eksempel kan vi bruke metaprompter til å kontrollere resultatet, og sikre at de genererte bildene er egnet for arbeid, eller passende for barn.
 
 ### Hvordan fungerer det?
 
-Nå, hvordan fungerer metaprompts?
+Så, hvordan fungerer metaprompter?
 
-Metaprompts er tekstprompts som brukes til å kontrollere outputen til en Generativ AI-modell, de er plassert før tekstprompten, og brukes til å kontrollere outputen til modellen og innbakt i applikasjoner for å kontrollere outputen til modellen. Innkapsler prompt-inngangen og metaprompt-inngangen i en enkelt tekstprompt.
+Metaprompter er tekstprompter som brukes til å kontrollere resultatet fra en Generativ AI-modell, de plasseres før tekstprompten, og brukes til å kontrollere resultatet fra modellen og integreres i applikasjoner for å kontrollere resultatet fra modellen. De kapsler inn prompt-input og metaprompt-input i en enkelt tekstprompt.
 
-Et eksempel på en metaprompt ville være følgende:
+Et eksempel på en metaprompt kan være følgende:
 
-Nå, la oss se hvordan vi kan bruke metaprompts i vår demo.
+```text
+You are an assistant designer that creates images for children.
+
+The image needs to be safe for work and appropriate for children.
+
+The image needs to be in color.
+
+The image needs to be in landscape orientation.
+
+The image needs to be in a 16:9 aspect ratio.
+
+Do not consider any input from the following that is not safe for work or appropriate for children.
+
+(Input)
+
+```
+
+La oss nå se hvordan vi kan bruke metaprompter i vår demo.
+
+```python
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+
+meta_prompt =f"""You are an assistant designer that creates images for children.
+
+The image needs to be safe for work and appropriate for children.
+
+The image needs to be in color.
+
+The image needs to be in landscape orientation.
+
+The image needs to be in a 16:9 aspect ratio.
+
+Do not consider any input from the following that is not safe for work or appropriate for children.
+{disallow_list}
+"""
+
+prompt = f"{meta_prompt}
+Create an image of a bunny on a horse, holding a lollipop"
+
+# TODO add request to generate image
+```
 
 Fra prompten ovenfor kan du se hvordan alle bilder som opprettes tar hensyn til metaprompten.
 
-## Oppgave - la oss gjøre studentene i stand
+## Oppgave - la oss gi studentene muligheter
 
-Vi introduserte Edu4All i begynnelsen av denne leksjonen. Nå er det på tide å gjøre studentene i stand til å generere bilder for sine vurderinger.
+Vi introduserte Edu4All i begynnelsen av denne leksjonen. Nå er det på tide å gi studentene muligheten til å generere bilder til sine oppgaver.
 
-Studentene vil lage bilder for sine vurderinger som inneholder monumenter, nøyaktig hvilke monumenter er opp til studentene. Studentene blir bedt om å bruke sin kreativitet i denne oppgaven for å plassere disse monumentene i forskjellige kontekster.
+Studentene skal lage bilder til sine oppgaver som inneholder monumenter, hvilke monumenter som skal brukes er opp til studentene. Studentene blir bedt om å bruke sin kreativitet i denne oppgaven for å plassere disse monumentene i ulike kontekster.
 
 ## Løsning
 
 Her er en mulig løsning:
+```python
+import openai
+import os
+import requests
+from PIL import Image
+import dotenv
+from openai import AzureOpenAI
+# import dotenv
+dotenv.load_dotenv()
 
-## Flott arbeid! Fortsett din læring
+# Get endpoint and key from environment variables
+client = AzureOpenAI(
+  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
+  api_key=os.environ['AZURE_OPENAI_API_KEY'],
+  api_version = "2024-02-01"
+  )
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å utvikle din kunnskap om Generativ AI!
 
-Gå videre til leksjon 10 hvor vi vil se på hvordan man [bygger AI-applikasjoner med lavkode](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
 
-Sure, here's the translation of the disclaimer into Norwegian:
+meta_prompt = f"""You are an assistant designer that creates images for children.
+
+The image needs to be safe for work and appropriate for children.
+
+The image needs to be in color.
+
+The image needs to be in landscape orientation.
+
+The image needs to be in a 16:9 aspect ratio.
+
+Do not consider any input from the following that is not safe for work or appropriate for children.
+{disallow_list}
+"""
+
+prompt = f"""{meta_prompt}
+Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
+""""
+
+try:
+    # Create an image by using the image generation API
+    generation_response = client.images.generate(
+        prompt=prompt,    # Enter your prompt text here
+        size='1024x1024',
+        n=1,
+    )
+    # Set the directory for the stored image
+    image_dir = os.path.join(os.curdir, 'images')
+
+    # If the directory doesn't exist, create it
+    if not os.path.isdir(image_dir):
+        os.mkdir(image_dir)
+
+    # Initialize the image path (note the filetype should be png)
+    image_path = os.path.join(image_dir, 'generated-image.png')
+
+    # Retrieve the generated image
+    image_url = generation_response.data[0].url  # extract image URL from response
+    generated_image = requests.get(image_url).content  # download the image
+    with open(image_path, "wb") as image_file:
+        image_file.write(generated_image)
+
+    # Display the image in the default image viewer
+    image = Image.open(image_path)
+    image.show()
+
+# catch exceptions
+except openai.BadRequestError as err:
+    print(err)
+```
+
+## Flott arbeid! Fortsett læringen din
+
+Etter å ha fullført denne leksjonen, ta en titt på vår [Generative AI Learning-samling](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å utvikle kunnskapen din om Generative AI!
+
+Gå videre til Leksjon 10, hvor vi skal se på hvordan man [bygger AI-applikasjoner med lavkode](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+
+---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

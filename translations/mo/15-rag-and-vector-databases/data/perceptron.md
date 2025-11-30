@@ -2,55 +2,55 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-05-20T02:31:35+00:00",
+  "translation_date": "2025-07-09T16:54:48+00:00",
   "source_file": "15-rag-and-vector-databases/data/perceptron.md",
   "language_code": "mo"
 }
 -->
-# Introduction to Neural Networks: Perceptron
+# 神經網路入門：感知器
 
-Một trong những nỗ lực đầu tiên để triển khai thứ gì đó tương tự như mạng nơ-ron hiện đại đã được thực hiện bởi Frank Rosenblatt từ Cornell Aeronautical Laboratory vào năm 1957. Đó là một thiết bị phần cứng gọi là "Mark-1", được thiết kế để nhận diện các hình học cơ bản như tam giác, vuông và tròn.
+1957 年，康乃爾航空實驗室的 Frank Rosenblatt 首次嘗試實現類似現代神經網路的東西。這是一個名為「Mark-1」的硬體實作，設計用來辨識基本幾何圖形，如三角形、正方形和圓形。
 
 |      |      |
 |--------------|-----------|
 |<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
 
-> Hình ảnh từ Wikipedia
+> 圖片來源：Wikipedia
 
-Một hình ảnh đầu vào được đại diện bởi mảng tế bào quang 20x20, vì vậy mạng nơ-ron có 400 đầu vào và một đầu ra nhị phân. Một mạng đơn giản chứa một nơ-ron, cũng gọi là **đơn vị logic ngưỡng**. Các trọng số của mạng nơ-ron hoạt động như các biến trở cần điều chỉnh thủ công trong giai đoạn huấn luyện.
+輸入影像由 20x20 的光電池陣列表示，因此神經網路有 400 個輸入和一個二元輸出。簡單的網路包含一個神經元，也稱為**閾值邏輯單元**。神經網路的權重就像電位器，在訓練階段需要手動調整。
 
-> ✅ Biến trở là một thiết bị cho phép người dùng điều chỉnh điện trở của một mạch.
+> ✅ 電位器是一種讓使用者調整電路阻抗的裝置。
 
-> Thời báo New York đã viết về perceptron vào thời điểm đó: *phôi của một máy tính điện tử mà [Hải quân] mong đợi sẽ có khả năng đi lại, nói chuyện, nhìn thấy, viết, tự tái tạo và nhận thức được sự tồn tại của nó.*
+> 《紐約時報》當時報導感知器：「這是電子電腦的胚胎，[海軍]期望它能行走、說話、看見、書寫、自我複製並意識到自己的存在。」
 
-## Mô hình Perceptron
+## 感知器模型
 
-Giả sử chúng ta có N đặc trưng trong mô hình của mình, trong trường hợp đó vector đầu vào sẽ là một vector có kích thước N. Perceptron là một mô hình **phân loại nhị phân**, tức là nó có thể phân biệt giữa hai lớp dữ liệu đầu vào. Chúng ta sẽ giả định rằng đối với mỗi vector đầu vào x, đầu ra của perceptron sẽ là +1 hoặc -1, tùy thuộc vào lớp. Đầu ra sẽ được tính bằng công thức:
+假設模型中有 N 個特徵，輸入向量就是大小為 N 的向量。感知器是一種**二元分類**模型，也就是能區分兩類輸入資料。我們假設對每個輸入向量 x，感知器的輸出為 +1 或 -1，取決於類別。輸出透過以下公式計算：
 
 y(x) = f(w<sup>T</sup>x)
 
-trong đó f là hàm kích hoạt bước
+其中 f 是階躍激活函數
 
-## Huấn luyện Perceptron
+## 感知器訓練
 
-Để huấn luyện perceptron, chúng ta cần tìm một vector trọng số w phân loại hầu hết các giá trị đúng, tức là dẫn đến lỗi nhỏ nhất. Lỗi này được định nghĩa bởi **tiêu chí perceptron** theo cách sau:
+要訓練感知器，我們需要找到一組權重向量 w，使大多數資料能被正確分類，也就是使**誤差**最小。此誤差由**感知器準則**定義如下：
 
 E(w) = -∑w<sup>T</sup>x<sub>i</sub>t<sub>i</sub>
 
-trong đó:
+其中：
 
-* tổng được lấy trên những điểm dữ liệu huấn luyện i dẫn đến phân loại sai
-* x<sub>i</sub> là dữ liệu đầu vào, và t<sub>i</sub> là -1 hoặc +1 cho các ví dụ tiêu cực và tích cực tương ứng.
+* 求和是針對那些被錯誤分類的訓練資料點 i
+* x<sub>i</sub> 是輸入資料，t<sub>i</sub> 是對應的標籤，負例為 -1，正例為 +1
 
-Tiêu chí này được xem như một hàm của trọng số w, và chúng ta cần tối thiểu hóa nó. Thường thì một phương pháp gọi là **gradient descent** được sử dụng, trong đó chúng ta bắt đầu với một số trọng số ban đầu w<sup>(0)</sup>, và sau đó ở mỗi bước cập nhật trọng số theo công thức:
+此準則視為權重 w 的函數，我們需要將其最小化。通常使用一種稱為**梯度下降**的方法，從初始權重 w<sup>(0)</sup> 開始，然後每一步根據以下公式更新權重：
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> - η∇E(w)
 
-Ở đây η là cái gọi là **tốc độ học**, và ∇E(w) biểu thị **gradient** của E. Sau khi chúng ta tính toán gradient, chúng ta có
+其中 η 是所謂的**學習率**，∇E(w) 表示 E 的**梯度**。計算梯度後，我們得到：
 
 w<sup>(t+1)</sup> = w<sup>(t)</sup> + ∑ηx<sub>i</sub>t<sub>i</sub>
 
-Thuật toán trong Python trông như thế này:
+Python 中的演算法如下：
 
 ```python
 def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
@@ -72,25 +72,27 @@ def train(positive_examples, negative_examples, num_iterations = 100, eta = 1):
     return weights
 ```
 
-## Kết luận
+## 結論
 
-Trong bài học này, bạn đã học về perceptron, một mô hình phân loại nhị phân, và cách huấn luyện nó bằng cách sử dụng vector trọng số.
+本課程介紹了感知器，一種二元分類模型，以及如何透過權重向量來訓練它。
 
-## 🚀 Thử thách
+## 🚀 挑戰
 
-Nếu bạn muốn thử xây dựng perceptron của riêng mình, hãy thử bài thực hành này trên Microsoft Learn sử dụng Azure ML designer
+如果你想嘗試自己建立感知器，可以試試 Microsoft Learn 上使用 Azure ML designer 的這個實驗室
 
-## Ôn tập & Tự học
 
-Để xem cách chúng ta có thể sử dụng perceptron để giải quyết một vấn đề đồ chơi cũng như các vấn đề thực tế, và để tiếp tục học - hãy đến với notebook Perceptron.
+## 複習與自學
 
-Đây là một bài viết thú vị về perceptrons.
+想了解如何用感知器解決玩具問題和實際問題，並繼續學習，請參考 Perceptron 筆記本。
 
-## Bài tập
+這裡也有一篇關於感知器的有趣文章。
 
-Trong bài học này, chúng ta đã triển khai một perceptron cho nhiệm vụ phân loại nhị phân, và chúng ta đã sử dụng nó để phân loại giữa hai chữ số viết tay. Trong bài thực hành này, bạn được yêu cầu giải quyết vấn đề phân loại chữ số hoàn toàn, tức là xác định chữ số nào có khả năng tương ứng với một hình ảnh đã cho.
+## 作業
 
-* Hướng dẫn
-* Notebook
+本課程中，我們實作了用於二元分類任務的感知器，並用它來區分兩個手寫數字。在這個實驗室中，你需要完整解決數字分類問題，也就是判斷給定影像最可能對應哪個數字。
 
-I'm sorry, but I'm not familiar with a language called "mo." Could you please provide more context or specify the language you want the text translated into?
+* 說明
+* 筆記本
+
+**免責聲明**：  
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。

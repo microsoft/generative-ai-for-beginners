@@ -2,122 +2,124 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-05-20T01:48:42+00:00",
+  "translation_date": "2025-07-09T16:25:02+00:00",
   "source_file": "15-rag-and-vector-databases/data/frameworks.md",
   "language_code": "de"
 }
 -->
-# Frameworks für Neuronale Netzwerke
+# Neural Network Frameworks
 
 Wie wir bereits gelernt haben, müssen wir zwei Dinge tun, um neuronale Netzwerke effizient trainieren zu können:
 
-* Mit Tensoren arbeiten, z. B. multiplizieren, addieren und einige Funktionen wie Sigmoid oder Softmax berechnen
-* Gradienten aller Ausdrücke berechnen, um die Gradientenabstiegsoptimierung durchzuführen
+* Mit Tensoren arbeiten, z. B. multiplizieren, addieren und Funktionen wie Sigmoid oder Softmax berechnen
+* Die Gradienten aller Ausdrücke berechnen, um eine Gradientenabstiegsoptimierung durchzuführen
 
-Während die `numpy`-Bibliothek den ersten Teil erledigen kann, benötigen wir einen Mechanismus, um Gradienten zu berechnen. In unserem Framework, das wir im vorherigen Abschnitt entwickelt haben, mussten wir alle Ableitungsfunktionen manuell im `backward`-Methoden programmieren, die die Rückpropagation durchführt. Idealerweise sollte ein Framework uns die Möglichkeit bieten, Gradienten von *beliebigen Ausdrücken* zu berechnen, die wir definieren können.
+Während die `numpy`-Bibliothek den ersten Teil erledigen kann, benötigen wir einen Mechanismus zur Berechnung der Gradienten. In unserem Framework, das wir im vorherigen Abschnitt entwickelt haben, mussten wir alle Ableitungsfunktionen manuell in der `backward`-Methode programmieren, die das Backpropagation durchführt. Idealerweise sollte ein Framework uns die Möglichkeit geben, die Gradienten *beliebiger Ausdrücke* zu berechnen, die wir definieren können.
 
-Ein weiterer wichtiger Punkt ist, Berechnungen auf der GPU oder anderen spezialisierten Recheneinheiten wie TPU durchführen zu können. Das Training von tiefen neuronalen Netzwerken erfordert *eine Menge* Berechnungen, und die Möglichkeit, diese Berechnungen auf GPUs zu parallelisieren, ist sehr wichtig.
+Ein weiterer wichtiger Punkt ist die Möglichkeit, Berechnungen auf der GPU oder anderen spezialisierten Recheneinheiten wie TPU durchzuführen. Das Training tiefer neuronaler Netzwerke erfordert *sehr viele* Berechnungen, und die Parallelisierung dieser Berechnungen auf GPUs ist daher sehr wichtig.
 
-> ✅ Der Begriff 'parallelisieren' bedeutet, die Berechnungen über mehrere Geräte zu verteilen.
+> ✅ Der Begriff 'parallelisieren' bedeutet, die Berechnungen auf mehrere Geräte zu verteilen.
 
-Derzeit sind die beiden beliebtesten neuronalen Frameworks: TensorFlow und PyTorch. Beide bieten eine Low-Level-API, um mit Tensoren sowohl auf der CPU als auch auf der GPU zu arbeiten. Auf der Low-Level-API gibt es auch eine High-Level-API, die entsprechend Keras und PyTorch Lightning genannt wird.
+Derzeit sind die beiden beliebtesten neuronalen Frameworks TensorFlow und PyTorch. Beide bieten eine Low-Level-API, um mit Tensoren sowohl auf CPU als auch GPU zu arbeiten. Auf der Low-Level-API aufbauend gibt es auch eine High-Level-API, die entsprechend Keras und PyTorch Lightning heißt.
 
-Low-Level-API | TensorFlow| PyTorch
---------------|-------------------------------------|--------------------------------
-High-Level-API| Keras| Pytorch
+Low-Level API | TensorFlow | PyTorch  
+--------------|-------------------------------|------------------------------  
+High-Level API| Keras                         | PyTorch
 
-**Low-Level-APIs** in beiden Frameworks ermöglichen es Ihnen, sogenannte **Berechnungsgraphen** zu erstellen. Dieser Graph definiert, wie der Output (normalerweise die Verlustfunktion) mit gegebenen Eingabeparametern berechnet wird und kann zur Berechnung auf die GPU geschoben werden, wenn sie verfügbar ist. Es gibt Funktionen, um diesen Berechnungsgraphen zu differenzieren und Gradienten zu berechnen, die dann zur Optimierung der Modellparameter verwendet werden können.
+**Low-Level-APIs** in beiden Frameworks ermöglichen es, sogenannte **Rechen-Graphen** zu erstellen. Dieser Graph definiert, wie die Ausgabe (meist die Verlustfunktion) mit gegebenen Eingabeparametern berechnet wird und kann zur Berechnung auf die GPU ausgelagert werden, falls verfügbar. Es gibt Funktionen, um diesen Rechen-Graphen zu differenzieren und Gradienten zu berechnen, die dann zur Optimierung der Modellparameter verwendet werden können.
 
-**High-Level-APIs** betrachten neuronale Netzwerke weitgehend als eine **Sequenz von Schichten** und erleichtern das Erstellen der meisten neuronalen Netzwerke erheblich. Das Training des Modells erfordert normalerweise die Vorbereitung der Daten und dann das Aufrufen einer `fit`-Funktion, um die Aufgabe zu erledigen.
+**High-Level-APIs** betrachten neuronale Netzwerke im Wesentlichen als **Sequenz von Schichten** und erleichtern den Aufbau der meisten neuronalen Netzwerke erheblich. Das Training des Modells erfordert normalerweise die Vorbereitung der Daten und dann den Aufruf einer `fit`-Funktion, die den Trainingsprozess übernimmt.
 
-Die High-Level-API ermöglicht es Ihnen, typische neuronale Netzwerke sehr schnell zu konstruieren, ohne sich um viele Details kümmern zu müssen. Gleichzeitig bieten Low-Level-APIs viel mehr Kontrolle über den Trainingsprozess, und deshalb werden sie in der Forschung häufig verwendet, wenn Sie mit neuen neuronalen Netzwerkarchitekturen arbeiten.
+Die High-Level-API ermöglicht es, typische neuronale Netzwerke sehr schnell zu erstellen, ohne sich um viele Details kümmern zu müssen. Gleichzeitig bieten Low-Level-APIs viel mehr Kontrolle über den Trainingsprozess und werden daher häufig in der Forschung eingesetzt, wenn man mit neuen neuronalen Netzwerkarchitekturen arbeitet.
 
-Es ist auch wichtig zu verstehen, dass Sie beide APIs zusammen verwenden können, z. B. können Sie Ihre eigene Netzwerkarchitektur mit der Low-Level-API entwickeln und dann innerhalb des größeren Netzwerks verwenden, das mit der High-Level-API konstruiert und trainiert wird. Oder Sie können ein Netzwerk mit der High-Level-API als Sequenz von Schichten definieren und dann Ihre eigene Low-Level-Trainingsschleife zur Optimierung verwenden. Beide APIs verwenden die gleichen grundlegenden Konzepte und sind darauf ausgelegt, gut zusammenzuarbeiten.
+Es ist auch wichtig zu verstehen, dass man beide APIs zusammen verwenden kann, z. B. kann man seine eigene Netzwerkschicht-Architektur mit der Low-Level-API entwickeln und diese dann in einem größeren Netzwerk verwenden, das mit der High-Level-API erstellt und trainiert wird. Oder man definiert ein Netzwerk mit der High-Level-API als Sequenz von Schichten und verwendet dann eine eigene Low-Level-Trainingsschleife zur Optimierung. Beide APIs basieren auf denselben grundlegenden Konzepten und sind so konzipiert, dass sie gut zusammenarbeiten.
 
 ## Lernen
 
-In diesem Kurs bieten wir die meisten Inhalte sowohl für PyTorch als auch für TensorFlow an. Sie können Ihr bevorzugtes Framework auswählen und nur die entsprechenden Notebooks durchgehen. Wenn Sie nicht sicher sind, welches Framework Sie wählen sollen, lesen Sie einige Diskussionen im Internet über **PyTorch vs. TensorFlow**. Sie können auch einen Blick auf beide Frameworks werfen, um ein besseres Verständnis zu bekommen.
+In diesem Kurs bieten wir den Großteil des Inhalts sowohl für PyTorch als auch für TensorFlow an. Du kannst dein bevorzugtes Framework wählen und nur die entsprechenden Notebooks durcharbeiten. Wenn du unsicher bist, welches Framework du wählen sollst, lies einige Diskussionen im Internet zum Thema **PyTorch vs. TensorFlow**. Du kannst auch beide Frameworks ausprobieren, um ein besseres Verständnis zu bekommen.
 
-Wo möglich, werden wir High-Level-APIs der Einfachheit halber verwenden. Wir glauben jedoch, dass es wichtig ist, zu verstehen, wie neuronale Netzwerke von Grund auf funktionieren, daher beginnen wir zunächst mit der Arbeit mit der Low-Level-API und Tensoren. Wenn Sie jedoch schnell starten möchten und nicht viel Zeit mit dem Lernen dieser Details verbringen möchten, können Sie diese überspringen und direkt in die High-Level-API-Notebooks gehen.
+Wo immer möglich, verwenden wir aus Gründen der Einfachheit High-Level-APIs. Wir halten es jedoch für wichtig, zu verstehen, wie neuronale Netzwerke von Grund auf funktionieren, weshalb wir am Anfang mit der Low-Level-API und Tensoren arbeiten. Wenn du jedoch schnell starten möchtest und nicht viel Zeit mit diesen Details verbringen willst, kannst du diesen Teil überspringen und direkt mit den High-Level-API-Notebooks beginnen.
 
 ## ✍️ Übungen: Frameworks
 
-Setzen Sie Ihr Lernen in den folgenden Notebooks fort:
+Setze dein Lernen in den folgenden Notebooks fort:
 
-Low-Level-API | TensorFlow+Keras Notebook | PyTorch
---------------|-------------------------------------|--------------------------------
-High-Level-API| Keras | *PyTorch Lightning*
+Low-Level API | TensorFlow+Keras Notebook | PyTorch  
+--------------|----------------------------|------------------------------  
+High-Level API| Keras                      | *PyTorch Lightning*
 
-Nachdem Sie die Frameworks gemeistert haben, lassen Sie uns das Konzept des Overfitting rekapitulieren.
+Nachdem du die Frameworks gemeistert hast, fassen wir den Begriff Overfitting zusammen.
 
 # Overfitting
 
 Overfitting ist ein äußerst wichtiges Konzept im maschinellen Lernen, und es ist sehr wichtig, es richtig zu verstehen!
 
-Betrachten Sie das folgende Problem der Annäherung von 5 Punkten (dargestellt durch `x` in den unten stehenden Grafiken):
+Betrachte folgendes Problem, bei dem 5 Punkte (im Diagramm unten durch `x` dargestellt) approximiert werden sollen:
 
-!linear | überanpasst
--------------------------|--------------------------
-**Lineares Modell, 2 Parameter** | **Nicht-lineares Modell, 7 Parameter**
-Trainingsfehler = 5.3 | Trainingsfehler = 0
-Validierungsfehler = 5.1 | Validierungsfehler = 20
+!linear | overfit  
+-------------------------|--------------------------  
+**Lineares Modell, 2 Parameter** | **Nicht-lineares Modell, 7 Parameter**  
+Trainingsfehler = 5,3 | Trainingsfehler = 0  
+Validierungsfehler = 5,1 | Validierungsfehler = 20
 
-* Links sehen wir eine gute Gerade, die die Punkte annähert. Da die Anzahl der Parameter angemessen ist, erfasst das Modell die Idee hinter der Punktverteilung richtig.
-* Rechts ist das Modell zu mächtig. Da wir nur 5 Punkte haben und das Modell 7 Parameter hat, kann es sich so anpassen, dass es durch alle Punkte geht, was den Trainingsfehler auf 0 bringt. Dies verhindert jedoch, dass das Modell das richtige Muster hinter den Daten versteht, sodass der Validierungsfehler sehr hoch ist.
+* Links sehen wir eine gute Gerade als Approximation. Da die Anzahl der Parameter angemessen ist, erfasst das Modell die Verteilung der Punkte richtig.
+* Rechts ist das Modell zu mächtig. Da wir nur 5 Punkte haben und das Modell 7 Parameter besitzt, kann es so angepasst werden, dass es durch alle Punkte verläuft, wodurch der Trainingsfehler 0 wird. Dies verhindert jedoch, dass das Modell das zugrundeliegende Muster der Daten versteht, weshalb der Validierungsfehler sehr hoch ist.
 
-Es ist sehr wichtig, ein korrektes Gleichgewicht zwischen der Komplexität des Modells (Anzahl der Parameter) und der Anzahl der Trainingsbeispiele zu finden.
+Es ist sehr wichtig, ein ausgewogenes Verhältnis zwischen der Komplexität des Modells (Anzahl der Parameter) und der Anzahl der Trainingsbeispiele zu finden.
 
 ## Warum Overfitting auftritt
 
-  * Nicht genug Trainingsdaten
+  * Zu wenig Trainingsdaten
   * Zu mächtiges Modell
   * Zu viel Rauschen in den Eingabedaten
 
 ## Wie man Overfitting erkennt
 
-Wie Sie in der obigen Grafik sehen können, kann Overfitting durch einen sehr niedrigen Trainingsfehler und einen hohen Validierungsfehler erkannt werden. Normalerweise werden wir während des Trainings sowohl den Trainings- als auch den Validierungsfehler sehen, die beginnen zu sinken, und dann könnte der Validierungsfehler zu einem bestimmten Punkt aufhören zu sinken und anfangen zu steigen. Dies wird ein Zeichen für Overfitting sein und der Indikator, dass wir das Training wahrscheinlich an diesem Punkt stoppen sollten (oder zumindest einen Schnappschuss des Modells machen).
+Wie im obigen Diagramm zu sehen ist, erkennt man Overfitting an einem sehr niedrigen Trainingsfehler und einem hohen Validierungsfehler. Normalerweise sinken während des Trainings sowohl Trainings- als auch Validierungsfehler, aber irgendwann kann der Validierungsfehler aufhören zu sinken und stattdessen steigen. Dies ist ein Zeichen für Overfitting und ein Hinweis darauf, dass man das Training an dieser Stelle stoppen sollte (oder zumindest einen Snapshot des Modells machen sollte).
+
+overfitting
 
 ## Wie man Overfitting verhindert
 
-Wenn Sie sehen, dass Overfitting auftritt, können Sie eines der folgenden tun:
+Wenn du erkennst, dass Overfitting auftritt, kannst du Folgendes tun:
 
  * Die Menge der Trainingsdaten erhöhen
  * Die Komplexität des Modells verringern
- * Eine Regularisierungstechnik wie Dropout verwenden, die wir später betrachten werden.
+ * Eine Regularisierungstechnik verwenden, wie z. B. Dropout, die wir später behandeln werden.
 
 ## Overfitting und Bias-Variance Tradeoff
 
-Overfitting ist tatsächlich ein Fall eines allgemeineren Problems in der Statistik, das als Bias-Variance Tradeoff bezeichnet wird. Wenn wir die möglichen Fehlerquellen in unserem Modell betrachten, können wir zwei Arten von Fehlern sehen:
+Overfitting ist eigentlich ein Fall eines allgemeineren Problems in der Statistik, das als Bias-Variance Tradeoff bezeichnet wird. Betrachtet man die möglichen Fehlerquellen in unserem Modell, so gibt es zwei Arten von Fehlern:
 
-* **Bias-Fehler** entstehen dadurch, dass unser Algorithmus nicht in der Lage ist, die Beziehung zwischen den Trainingsdaten korrekt zu erfassen. Dies kann darauf zurückzuführen sein, dass unser Modell nicht mächtig genug ist (**unteranpasst**).
-* **Varianzfehler**, die dadurch entstehen, dass das Modell Rauschen in den Eingabedaten anstatt einer sinnvollen Beziehung approximiert (**überanpasst**).
+* **Bias-Fehler** entstehen, wenn unser Algorithmus die Beziehung in den Trainingsdaten nicht korrekt erfassen kann. Dies kann daran liegen, dass unser Modell nicht mächtig genug ist (**Underfitting**).
+* **Varianz-Fehler** entstehen, wenn das Modell Rauschen in den Eingabedaten anstelle von sinnvollen Zusammenhängen approximiert (**Overfitting**).
 
-Während des Trainings verringert sich der Bias-Fehler (da unser Modell lernt, die Daten zu approximieren) und der Varianzfehler nimmt zu. Es ist wichtig, das Training zu stoppen - entweder manuell (wenn wir Overfitting erkennen) oder automatisch (durch Einführung von Regularisierung) - um Overfitting zu verhindern.
+Während des Trainings nimmt der Bias-Fehler ab (da unser Modell lernt, die Daten zu approximieren), während der Varianz-Fehler zunimmt. Es ist wichtig, das Training zu stoppen – entweder manuell (wenn Overfitting erkannt wird) oder automatisch (durch Einführung von Regularisierung) – um Overfitting zu verhindern.
 
 ## Fazit
 
-In dieser Lektion haben Sie die Unterschiede zwischen den verschiedenen APIs für die beiden beliebtesten KI-Frameworks, TensorFlow und PyTorch, kennengelernt. Außerdem haben Sie ein sehr wichtiges Thema, das Overfitting, kennengelernt.
+In dieser Lektion hast du die Unterschiede zwischen den verschiedenen APIs der beiden beliebtesten KI-Frameworks TensorFlow und PyTorch kennengelernt. Außerdem hast du ein sehr wichtiges Thema behandelt: Overfitting.
 
 ## 🚀 Herausforderung
 
-In den begleitenden Notebooks finden Sie 'Aufgaben' am Ende; arbeiten Sie sich durch die Notebooks und erledigen Sie die Aufgaben.
+In den begleitenden Notebooks findest du unten 'Aufgaben'; arbeite die Notebooks durch und erledige die Aufgaben.
 
-## Überprüfung & Selbststudium
+## Wiederholung & Selbststudium
 
-Recherchieren Sie zu den folgenden Themen:
+Recherchiere zu folgenden Themen:
 
-- TensorFlow
-- PyTorch
+- TensorFlow  
+- PyTorch  
 - Overfitting
 
-Stellen Sie sich die folgenden Fragen:
+Stelle dir selbst folgende Fragen:
 
-- Was ist der Unterschied zwischen TensorFlow und PyTorch?
+- Was ist der Unterschied zwischen TensorFlow und PyTorch?  
 - Was ist der Unterschied zwischen Overfitting und Underfitting?
 
 ## Aufgabe
 
-In diesem Labor werden Sie aufgefordert, zwei Klassifikationsprobleme mit ein- und mehrschichtigen voll verbundenen Netzwerken unter Verwendung von PyTorch oder TensorFlow zu lösen.
+In diesem Labor sollst du zwei Klassifikationsprobleme mit ein- und mehrschichtigen vollständig verbundenen Netzwerken mit PyTorch oder TensorFlow lösen.
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir haften nicht für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

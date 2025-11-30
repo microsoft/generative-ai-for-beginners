@@ -1,71 +1,75 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ea4bbe640847aafbbba14dae4625e9af",
-  "translation_date": "2025-05-19T17:37:44+00:00",
+  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
+  "translation_date": "2025-10-17T23:29:30+00:00",
   "source_file": "07-building-chat-applications/README.md",
   "language_code": "mo"
 }
 -->
-# Building Generative AI-Powered Chat Applications
+# 建立生成式 AI 驅動的聊天應用程式
 
-Now that we've seen how we can build text-generation apps, let's look into chat applications.
+[![建立生成式 AI 驅動的聊天應用程式](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.mo.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so do the challenges.
+> _(點擊上方圖片觀看本課程的影片)_
 
-Some questions we need to be answered are:
+在我們了解如何建立文字生成應用程式之後，現在來探討聊天應用程式。
 
-- **Building the app**. How do we efficiently build and seamlessly integrate these AI-powered applications for specific use cases?
-- **Monitoring**. Once deployed, how can we monitor and ensure that the applications are operating at the highest level of quality, both in terms of functionality and adhering to the [six principles of responsible AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
+聊天應用程式已融入我們的日常生活，不僅僅是提供休閒交流的工具。它們已成為客戶服務、技術支援，甚至是高級諮詢系統的重要部分。您可能不久前就曾經使用過聊天應用程式獲得幫助。隨著我們將生成式 AI 等更先進的技術整合到這些平台中，其複雜性和挑戰也隨之增加。
 
-As we move further into an age defined by automation and seamless human-machine interactions, understanding how generative AI transforms the scope, depth, and adaptability of chat applications becomes essential. This lesson will investigate the aspects of architecture that support these intricate systems, delve into the methodologies for fine-tuning them for domain-specific tasks, and evaluate the metrics and considerations pertinent to ensuring responsible AI deployment.
+我們需要回答的一些問題包括：
 
-## Introduction
+- **建立應用程式**。如何有效地建立並無縫整合這些 AI 驅動的應用程式以滿足特定需求？
+- **監控**。應用程式部署後，如何監控並確保其在功能和遵守[負責任 AI 的六大原則](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)方面都能保持最高品質？
 
-This lesson covers:
+隨著我們進入由自動化和無縫人機互動定義的時代，了解生成式 AI如何改變聊天應用程式的範疇、深度和適應性變得至關重要。本課程將探討支持這些複雜系統的架構方面，深入研究針對特定領域任務進行微調的方法，並評估確保負責任 AI 部署的相關指標和考量。
 
-- Techniques for efficiently building and integrating chat applications.
-- How to apply customization and fine-tuning to applications.
-- Strategies and considerations to effectively monitor chat applications.
+## 課程介紹
 
-## Learning Goals
+本課程涵蓋：
 
-By the end of this lesson, you'll be able to:
+- 有效建立和整合聊天應用程式的技術。
+- 如何對應用程式進行定制化和微調。
+- 有效監控聊天應用程式的策略和考量。
 
-- Describe considerations for building and integrating chat applications into existing systems.
-- Customize chat applications for specific use-cases.
-- Identify key metrics and considerations to effectively monitor and maintain the quality of AI-powered chat applications.
-- Ensure chat applications leverage AI responsibly.
+## 學習目標
 
-## Integrating Generative AI into Chat Applications
+完成本課程後，您將能夠：
 
-Elevating chat applications through generative AI isn't only centered around making them smarter; it's about optimizing their architecture, performance, and user interface to deliver a quality user experience. This involves investigating the architectural foundations, API integrations, and user interface considerations. This section aims to offer you a comprehensive roadmap for navigating these complex landscapes, whether you're plugging them into existing systems or building them as stand-alone platforms.
+- 描述將聊天應用程式整合到現有系統中的考量。
+- 為特定使用案例定制聊天應用程式。
+- 確定關鍵指標和考量，以有效監控和維持 AI 驅動聊天應用程式的品質。
+- 確保聊天應用程式負責任地利用 AI。
 
-By the end of this section, you'll be equipped with the expertise needed to efficiently construct and incorporate chat applications.
+## 將生成式 AI 整合到聊天應用程式中
 
-### Chatbot or Chat application?
+透過生成式 AI 提升聊天應用程式的價值不僅僅是讓它們變得更智能；更重要的是優化其架構、性能和用戶界面，以提供高品質的用戶體驗。這需要深入研究架構基礎、API 整合以及用戶界面考量。本節旨在為您提供一個全面的路線圖，幫助您在這些複雜的領域中導航，無論是將它們整合到現有系統中，還是作為獨立平台構建。
 
-Before we dive into building chat applications, let's compare 'chatbots' against 'AI-powered chat applications,' which serve distinct roles and functionalities. A chatbot's main purpose is to automate specific conversational tasks, such as answering frequently asked questions or tracking a package. It's typically governed by rule-based logic or complex AI algorithms. In contrast, an AI-powered chat application is a far more expansive environment designed to facilitate various forms of digital communication, such as text, voice, and video chats among human users. Its defining feature is the integration of a generative AI model that simulates nuanced, human-like conversations, generating responses based on a wide variety of input and contextual cues. A generative AI powered chat application can engage in open-domain discussions, adapt to evolving conversational contexts, and even produce creative or complex dialogue.
+完成本節後，您將具備有效構建和整合聊天應用程式的專業知識。
 
-The table below outlines the key differences and similarities to help us understand their unique roles in digital communication.
+### 聊天機器人還是聊天應用程式？
 
-| Chatbot                               | Generative AI-Powered Chat Application |
-| ------------------------------------- | -------------------------------------- |
-| Task-Focused and rule based           | Context-aware                          |
-| Often integrated into larger systems  | May host one or multiple chatbots      |
-| Limited to programmed functions       | Incorporates generative AI models      |
-| Specialized & structured interactions | Capable of open-domain discussions     |
+在深入探討建立聊天應用程式之前，讓我們比較一下「聊天機器人」和「AI 驅動的聊天應用程式」，它們在角色和功能上有著明顯的區別。聊天機器人的主要目的是自動化特定的對話任務，例如回答常見問題或追蹤包裹。它通常由基於規則的邏輯或複雜的 AI 演算法控制。相比之下，AI 驅動的聊天應用程式是一個更廣泛的環境，旨在促進人類用戶之間的各種形式的數字通信，例如文字、語音和視頻聊天。其核心特徵是整合了一個生成式 AI 模型，能夠模擬細緻入微的類人對話，根據多種輸入和上下文提示生成回應。生成式 AI 驅動的聊天應用程式可以進行開放領域的討論，適應不斷變化的對話上下文，甚至生成創意或複雜的對話。
 
-### Leveraging pre-built functionalities with SDKs and APIs
+下表概述了它們在數字通信中的獨特角色的主要差異和相似之處。
 
-When building a chat application, a great first step is to assess what is already out there. Using SDKs and APIs to build chat applications is an advantageous strategy for a variety of reasons. By integrating well-documented SDKs and APIs, you're strategically positioning your application for long-term success, addressing scalability and maintenance concerns.
+| 聊天機器人                           | 生成式 AI 驅動的聊天應用程式          |
+| ------------------------------------- | ------------------------------------- |
+| 以任務為中心且基於規則                | 具備上下文感知能力                   |
+| 通常整合到更大的系統中                | 可容納一個或多個聊天機器人           |
+| 限於程式化功能                        | 整合生成式 AI 模型                   |
+| 專業化且結構化的互動                  | 能進行開放領域的討論                 |
 
-- **Expedites the development process and reduces overhead**: Relying on pre-built functionalities instead of the expensive process of building them yourself allows you to focus on other aspects of your application that you may find more important, such as business logic.
-- **Better performance**: When building functionality from scratch, you'll eventually ask yourself "How does it scale? Is this application capable of handling a sudden influx of users?" Well maintained SDK and APIs often have built-in solutions for these concerns.
-- **Easier maintenance**: Updates and improvements are easier to manage as most APIs and SDKs simply require an update to a library when a newer version is released.
-- **Access to cutting edge technology**: Leveraging models that have been fined tuned and trained on extensive datasets provides your application with natural language capabilities.
+### 利用 SDK 和 API 的預建功能
 
-Accessing functionality of an SDK or API typically involves obtaining permission to use the provided services, which is often through the use of a unique key or authentication token. We'll use the OpenAI Python Library to explore what this looks like. You can also try it out on your own in the following [notebook for OpenAI](../../../07-building-chat-applications/python/oai-assignment.ipynb) or [notebook for Azure OpenAI Services](../../../07-building-chat-applications/python/aoai-assignment.ipynb) for this lesson.
+在建立聊天應用程式時，第一步是評估現有的資源。使用 SDK 和 API 來建立聊天應用程式是一種具有多種優勢的策略。透過整合文件完善的 SDK 和 API，您可以策略性地為應用程式的長期成功奠定基礎，解決可擴展性和維護方面的問題。
+
+- **加速開發過程並減少開銷**：依賴預建功能而非自行開發昂貴的功能，讓您能專注於應用程式的其他重要方面，例如業務邏輯。
+- **更好的性能**：當從零開始建立功能時，您最終會問自己「如何擴展？這個應用程式是否能處理突然增加的用戶數量？」維護良好的 SDK 和 API 通常已內建解決這些問題的方案。
+- **更容易維護**：更新和改進更容易管理，因為大多數 API 和 SDK 只需在新版本發布時更新庫。
+- **獲取尖端技術**：利用已經過微調並基於大量數據集訓練的模型，為您的應用程式提供自然語言能力。
+
+訪問 SDK 或 API 的功能通常需要獲得使用提供服務的許可，這通常是通過使用唯一密鑰或身份驗證令牌來實現的。我們將使用 OpenAI Python Library 來探索這一過程的樣貌。您也可以在以下的 [OpenAI 筆記本](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) 或 [Azure OpenAI Services 筆記本](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) 中自行嘗試。
 
 ```python
 import os
@@ -80,108 +84,115 @@ client = OpenAI(
 chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Suggest two titles for an instructional lesson on chat applications for generative AI."}])
 ```
 
-The above example uses the GPT-3.5 Turbo model to complete the prompt, but notice that the API key is set prior to doing so. You'd receive an error if you didn't set the key.
+上述範例使用 GPT-3.5 Turbo 模型來完成提示，但請注意在執行之前需要設置 API 密鑰。如果未設置密鑰，您將收到錯誤。
 
-## User Experience (UX)
+## 用戶體驗 (UX)
 
-General UX principles apply to chat applications, but here are some additional considerations that become particularly important due to the machine learning components involved.
+一般的 UX 原則適用於聊天應用程式，但由於涉及機器學習元件，以下是一些特別重要的額外考量。
 
-- **Mechanism for addressing ambiguity**: Generative AI models occasionally generate ambiguous answers. A feature that allows users to ask for clarification can be helpful should they come across this problem.
-- **Context retention**: Advanced generative AI models have the ability to remember context within a conversation, which can be a necessary asset to the user experience. Giving users the ability to control and manage context improves the user experience, but introduces the risk of retaining sensitive user information. Considerations for how long this information is stored, such as introducing a retention policy, can balance the need for context against privacy.
-- **Personalization**: With the ability to learn and adapt, AI models offer an individualized experience for a user. Tailoring the user experience through features like user profiles not only makes the user feel understood, but it also helps their pursuit of finding specific answers, creating a more efficient and satisfying interaction.
+- **解決模糊性的機制**：生成式 AI 模型有時會生成模糊的答案。提供一個功能讓用戶能要求澄清，當他們遇到這個問題時會非常有幫助。
+- **上下文保留**：高級生成式 AI 模型能夠記住對話中的上下文，這可能是用戶體驗的重要資產。讓用戶能夠控制和管理上下文可以改善用戶體驗，但也引入了保留敏感用戶信息的風險。對於信息存儲時間的考量，例如引入保留政策，可以在上下文需求和隱私之間取得平衡。
+- **個性化**：AI 模型具有學習和適應的能力，能為用戶提供個性化的體驗。透過用戶檔案等功能定制用戶體驗，不僅能讓用戶感到被理解，還能幫助他們更高效地找到特定答案，從而創造更滿意的互動。
 
-One such example of personalization is the "Custom instructions" settings in OpenAI's ChatGPT. It allows you to provide information about yourself that may be important context for your prompts. Here's an example of a custom instruction.
+OpenAI 的 ChatGPT 中的「自定義指令」設置就是個性化的一個例子。它允許您提供關於自己的信息，這些信息可能是提示的重要上下文。以下是一個自定義指令的例子。
 
-This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice that ChatGPT takes into account that the user may want a more in-depth lesson plan based on her experience.
+![ChatGPT 中的自定義指令設置](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.mo.png)
 
-### Microsoft's System Message Framework for Large Language Models
+此「檔案」提示 ChatGPT 創建一個關於鏈表的課程計劃。注意 ChatGPT 根據用戶的經驗，提供了一個更深入的課程計劃。
 
-[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
+![ChatGPT 中關於鏈表課程計劃的提示](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.mo.png)
 
-1. Defining who the model is for, as well as its capabilities and limitations.
-2. Defining the model's output format.
-3. Providing specific examples that demonstrate intended behavior of the model.
-4. Providing additional behavioral guardrails.
+### 微軟的大型語言模型系統消息框架
 
-### Accessibility
+[微軟提供了指導](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst)，幫助撰寫有效的系統消息以生成 LLM 的回應，分為以下四個方面：
 
-Whether a user has visual, auditory, motor, or cognitive impairments, a well-designed chat application should be usable by all. The following list breaks down specific features aimed at enhancing accessibility for various user impairments.
+1. 定義模型的目標用戶以及其能力和限制。
+2. 定義模型的輸出格式。
+3. 提供展示模型預期行為的具體示例。
+4. 提供額外的行為防範措施。
 
-- **Features for Visual Impairment**: High contrast themes and resizable text, screen reader compatibility.
-- **Features for Auditory Impairment**: Text-to-speech and speech-to-text functions, visual cues for audio notifications.
-- **Features for Motor Impairment**: Keyboard navigation support, voice commands.
-- **Features for Cognitive Impairment**: Simplified language options.
+### 無障礙設計
 
-## Customization and Fine-tuning for Domain-Specific Language Models
+無論用戶是視覺、聽覺、運動或認知障礙者，一個設計良好的聊天應用程式應該能被所有人使用。以下列出了一些旨在增強各種用戶障礙的無障礙功能。
 
-Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
+- **針對視覺障礙的功能**：高對比度主題和可調整大小的文字，支援螢幕閱讀器。
+- **針對聽覺障礙的功能**：文字轉語音和語音轉文字功能，音頻通知的視覺提示。
+- **針對運動障礙的功能**：支援鍵盤導航，語音命令。
+- **針對認知障礙的功能**：簡化語言選項。
 
-- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so-called DSL model trained on a specific domain to understand its concepts and scenarios.
-- **Apply fine-tuning**. Fine-tuning is the process of further training your model with specific data.
+## 為特定領域語言模型進行定制和微調
 
-## Customization: Using a DSL
+想像一個聊天應用程式能理解您公司的術語，並預測其用戶群常見的特定問題。有幾種方法值得一提：
 
-Leveraging a domain-specific language models (DSL Models) can enhance user engagement and by providing specialized, contextually relevant interactions. It's a model that is trained or fine-tuned to understand and generate text related to a specific field, industry, or subject. Options for using a DSL model can vary from training one from scratch, to using pre-existing ones through SDKs and APIs. Another option is fine-tuning, which involves taking an existing pre-trained model and adapting it for a specific domain.
+- **利用 DSL 模型**。DSL 代表特定領域語言。您可以利用所謂的 DSL 模型，該模型已針對特定領域進行訓練，能理解其概念和場景。
+- **進行微調**。微調是指使用特定數據進一步訓練模型的過程。
 
-## Customization: Apply fine-tuning
+## 定制化：使用 DSL
 
-Fine-tuning is often considered when a pre-trained model falls short in a specialized domain or specific task.
+利用特定領域語言模型（DSL 模型）可以通過提供專業、上下文相關的互動來提升用戶參與度。這是一種專門針對特定領域、行業或主題進行訓練或微調的模型。使用 DSL 模型的選項可以從從零開始訓練，到通過 SDK 和 API 使用現有模型。另一個選項是微調，這涉及到採用現有的預訓練模型並使其適應特定領域。
 
-For instance, medical queries are complex and require a lot of context. When a medical professional diagnoses a patient it's based on a variety of factors such as lifestyle or pre-existing conditions, and may even rely on recent medical journals to validate their diagnosis. In such nuanced scenarios, a general-purpose AI chat application cannot be a reliable source.
+## 定制化：進行微調
 
-### Scenario: a medical application
+當預訓練模型在專業領域或特定任務中表現不足時，通常會考慮進行微調。
 
-Consider a chat application designed to assist medical practitioners by providing quick references to treatment guidelines, drug interactions, or recent research findings.
+例如，醫學問題非常複雜，需要大量的上下文。在醫療專業人員診斷患者時，會基於多種因素，例如生活方式或既往病史，甚至可能依賴最新的醫學期刊來驗證診斷。在這些細緻的場景中，通用型 AI 聊天應用程式可能無法成為可靠的資源。
 
-A general-purpose model might be adequate for answering basic medical questions or providing general advice, but it may struggle with the following:
+### 場景：醫療應用程式
 
-- **Highly specific or complex cases**. For example, a neurologist might ask the application, "What are the current best practices for managing drug-resistant epilepsy in pediatric patients?"
-- **Lacking recent advancements**. A general-purpose model could struggle to provide a current answer that incorporates the most recent advancements in neurology and pharmacology.
+考慮一個設計用於協助醫療從業者的聊天應用程式，提供快速參考治療指南、藥物相互作用或最新研究成果。
 
-In instances such as these, fine-tuning the model with a specialized medical dataset can significantly improve its ability to handle these intricate medical inquiries more accurately and reliably. This requires access to a large and relevant dataset that represents the domain-specific challenges and questions that need to be addressed.
+通用型模型可能足以回答基本的醫學問題或提供一般建議，但可能在以下方面表現不足：
 
-## Considerations for a High Quality AI-Driven Chat Experience
+- **高度專業或複雜的案例**。例如，神經科醫生可能會問應用程式：「目前管理兒科患者藥物難治性癲癇的最佳實踐是什麼？」
+- **缺乏最新進展**。通用型模型可能難以提供包含神經學和藥理學最新進展的答案。
 
-This section outlines the criteria for "high-quality" chat applications, which include the capture of actionable metrics and adherence to a framework that responsibly leverages AI technology.
+在這些情況下，使用專業醫學數據集進行微調可以顯著提高模型處理這些複雜醫學問題的準確性和可靠性。這需要訪問大量且相關的數據集，代表需要解決的特定領域挑戰和問題。
 
-### Key Metrics
+## 高品質 AI 驅動聊天體驗的考量
 
-To maintain the high-quality performance of an application, it's essential to keep track of key metrics and considerations. These measurements not only ensure the functionality of the application but also assess the quality of the AI model and user experience. Below is a list that covers basic, AI, and user experience metrics to consider.
+本節概述了「高品質」聊天應用程式的標準，包括可操作指標的捕捉以及遵守負責任利用 AI 技術的框架。
 
-| Metric                        | Definition                                                                                                             | Considerations for Chat Developer                                         |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Uptime**                    | Measures the time the application is operational and accessible by users.                                              | How will you minimize downtime?                                           |
-| **Response Time**             | The time taken by the application to reply to a user's query.                                                          | How can you optimize query processing to improve response time?           |
-| **Precision**                 | The ratio of true positive predictions to the total number of positive predictions                                     | How will you validate the precision of your model?                        |
-| **Recall (Sensitivity)**      | The ratio of true positive predictions to the actual number of positives                                               | How will you measure and improve recall?                                  |
-| **F1 Score**                  | The harmonic mean of precision and recall, that balances the trade-off between both.                                   | What is your target F1 Score? How will you balance precision and recall?  |
-| **Perplexity**                | Measures how well the probability distribution predicted by the model aligns with the actual distribution of the data. | How will you minimize perplexity?                                         |
-| **User Satisfaction Metrics** | Measures the user's perception of the application. Often captured through surveys.                                     | How often will you collect user feedback? How will you adapt based on it? |
-| **Error Rate**                | The rate at which the model makes mistakes in understanding or output.                                                 | What strategies do you have in place to reduce error rates?               |
-| **Retraining Cycles**         | The frequency with which the model is updated to incorporate new data and insights.                                    | How often will you retrain the model? What triggers a retraining cycle?   |
-| **Anomaly Detection**         | Tools and techniques for identifying unusual patterns that do not conform to expected behavior.                        | How will you respond to anomalies?                                        |
+### 關鍵指標
 
-### Implementing Responsible AI Practices in Chat Applications
+為了維持應用程式的高品質性能，跟蹤關鍵指標和考量至關重要。這些測量不僅確保應用程式的功能性，還評估 AI 模型和用戶體驗的品質。以下是涵蓋基本、AI 和用戶體驗指標的列表。
 
-Microsoft's approach to Responsible AI has identified six principles that should guide AI development and use. Below are the principles, their definition, and things a chat developer should consider and why they should take them seriously.
+| 指標                          | 定義                                                                                                                 | 聊天開發者的考量                                                         |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **正常運行時間**              | 測量應用程式可操作並可供用戶訪問的時間。                                                                             | 您將如何最大限度地減少停機時間？                                         |
+| **回應時間**                  | 應用程式回應用戶查詢所需的時間。                                                                                     | 您如何優化查詢處理以改善回應時間？                                       |
+| **精確度**                    | 真正的正確預測與正確預測總數的比率。                                                                                 | 您將如何驗證模型的精確度？                                               |
+| **召回率（敏感性）**          | 真正的正確預測與實際正確數量的比率。                                                                                 | 您將如何測量和改善召回率？                                               |
+| **F1 分數**                   | 精確度和召回率的調和平均值，平衡兩者之間的權衡。                                                                     | 您的目標 F1 分數是多少？您將如何平衡精確度和召回率？                     |
+| **困惑度**                    | 測量模型預測的概率分佈與實際數據分佈的對齊程度。                                                                     | 您將如何最大限度地減少困惑度？                                           |
+| **用戶滿意度指標**            | 測量用戶對應用程式的感知，通常通過調查收集。                                                                         | 您將多頻繁收集用戶反饋？您將如何根據反饋進行調整？                       |
+| **錯誤率**                    | 模型在理解或輸出中犯錯的比率。                                                                                       | 您有哪些策略來降低錯誤率？                                               |
+| **重新訓練週期**              | 更新模型以整合新數據和洞察的頻率。                                                                                   | 您將多頻繁重新訓練模型？什麼情況會觸發重新訓練週期？                     |
+| **異常檢測**         | 用於識別不符合預期行為的異常模式的工具和技術。                        | 你將如何應對異常？                                        |
 
-| Principles             | Microsoft's Definition                                | Considerations for Chat Developer                                      | Why It's Important                                                                     |
-| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Fairness               | AI systems should treat all people fairly.            | Ensure the chat application does not discriminate based on user data.  | To build trust and inclusivity among users; avoids legal ramifications.                |
-| Reliability and Safety | AI systems should perform reliably and safely.        | Implement testing and fail-safes to minimize errors and risks.         | Ensures user satisfaction and prevents potential harm.                                 |
-| Privacy and Security   | AI systems should be secure and respect privacy.      | Implement strong encryption and data protection measures.              | To safeguard sensitive user data and comply with privacy laws.                         |
-| Inclusiveness          | AI systems should empower everyone and engage people. | Design UI/UX that is accessible and easy-to-use for diverse audiences. | Ensures a wider range of people can use the application effectively.                   |
-| Transparency           | AI systems should be understandable.                  | Provide clear documentation and reasoning for AI responses.            | Users are more likely to trust a system if they can understand how decisions are made. |
-| Accountability         | People should be accountable for AI systems.          | Establish a clear process for auditing and improving AI decisions.     | Enables ongoing improvement and corrective measures in case of mistakes.               |
+### 在聊天應用中實施負責任的人工智能實踐
 
-## Assignment
+微軟的負責任人工智能方法確定了六項應該指導人工智能開發和使用的原則。以下是這些原則的定義，以及聊天應用開發者需要考慮的事項及其重要性。
 
-See [assignment](../../../07-building-chat-applications/python) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
+| 原則                 | 微軟的定義                                           | 聊天應用開發者的考量                                      | 為什麼重要                                                                          |
+| -------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 公平性               | 人工智能系統應公平對待所有人。                        | 確保聊天應用不基於用戶數據進行歧視。                                  | 建立用戶信任和包容性；避免法律後果。                                                  |
+| 可靠性與安全性       | 人工智能系統應可靠且安全地運行。                      | 實施測試和故障保護以減少錯誤和風險。                                  | 確保用戶滿意度並防止潛在危害。                                                        |
+| 隱私與安全           | 人工智能系統應安全並尊重隱私。                        | 實施強大的加密和數據保護措施。                                        | 保護敏感用戶數據並遵守隱私法規。                                                      |
+| 包容性               | 人工智能系統應賦能每個人並吸引所有人。                | 設計對多元化用戶群體友好且易於使用的UI/UX。                           | 確保更多人能有效使用該應用。                                                          |
+| 透明性               | 人工智能系統應該是可理解的。                          | 提供清晰的文檔和人工智能回應的理由。                                  | 如果用戶能理解決策的生成方式，他們更可能信任系統。                                    |
+| 責任性               | 人們應對人工智能系統負責。                            | 建立清晰的審核和改進人工智能決策的流程。                              | 在出現錯誤時能進行持續改進和糾正措施。                                                |
 
-## Great Work! Continue the Journey
+## 作業
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+查看[作業](../../../07-building-chat-applications/python)。它將帶你完成一系列練習，從運行你的第一個聊天提示到分類和摘要文本等。注意，這些作業提供了不同的編程語言版本！
 
-Head over to Lesson 8 to see how you can start [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+## 幹得好！繼續學習之旅
 
-I'm sorry, but I need clarification on what you mean by translating the text to "mo." Could you please provide more context or specify the language or dialect you are referring to?
+完成本課程後，查看我們的[生成式人工智能學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升你的生成式人工智能知識！
+
+前往第8課，看看如何開始[構建搜索應用](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+
+---
+
+**免責聲明**：  
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

@@ -1,195 +1,216 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2f686f2eb794941761252ac5e8e090b",
-  "translation_date": "2025-05-19T13:47:28+00:00",
+  "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
+  "translation_date": "2025-10-17T15:15:07+00:00",
   "source_file": "02-exploring-and-comparing-different-llms/README.md",
   "language_code": "mo"
 }
 -->
-# Istera LLM dibe daftara xwe bidin
+# 探索與比較不同的大型語言模型 (LLM)
 
-[![Istera LLM dibe daftara xwe bidin](../../../translated_images/02-lesson-banner.722fb0fdf701564d4479112ef4c4fa964c98dce0c241decbe12aae32e9fb4659.mo.png)](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)
+[![探索與比較不同的大型語言模型](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.mo.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Ji bo tema vê derse wêneya jor click bikin_
+> _點擊上方圖片觀看本課程影片_
 
-Di dersa berê de, me dît ku AI Generative çawa dîmenê teknolîjiyê diguherîne, çawa Modelên Zimanê Mezin (LLM) dixebitin û çawa karîbar - wekî startup me - dikare wan li ser kesayêt xwe bikar bîne û mezin bibe! Di vê babetê de, em têne rastîn û di cîh de lêkera cûre-cûrên modelên zimanê mezin (LLM) da ku têgihiştinê li ser serhildanên wan û zayendên wan bibînin.
+在上一課中，我們了解了生成式人工智慧如何改變科技格局、大型語言模型 (LLM) 的運作方式，以及企業（例如我們的初創公司）如何將其應用於業務案例並實現成長！在本章中，我們將比較和對比不同類型的大型語言模型 (LLM)，以了解它們的優缺點。
 
-Gava dîrokê ya startup me ye ku modelên LLM yên heyî bibîne û têgihiştin ku kîjan ji bo kesayêt me têkildar in.
+我們初創公司的下一步是探索目前的 LLM 版圖，並了解哪些模型適合我們的業務需求。
 
-## Pêşkeftin
+## 簡介
 
-Ev ders têne bistînin:
+本課程將涵蓋：
 
-- Cûre-cûrên LLM yên li dîmenê heyî.
-- Biceribîn, iterate kirin û modelên cûre-cûr ji bo kesayêt xwe di Azure de bi hev re anîn.
-- Çawa LLMek veguheztin.
+- 當前 LLM 的不同類型。
+- 在 Azure 上測試、迭代和比較不同模型以符合您的業務需求。
+- 如何部署 LLM。
 
-## Hedefên Fêrbûnê
+## 學習目標
 
-Piştî ku vê dersê qedandin, hûn dikarin:
+完成本課程後，您將能夠：
 
-- Modela rast ji bo kesayêt xwe hilbijêrin.
-- Têgihiştin çawa modela xwe biceribînin, iterate bikin, û şanoya wan baş bikin.
-- Zanîn çawa karîbar modelên veguhezin.
+- 選擇適合您業務需求的模型。
+- 了解如何測試、迭代並提升模型的性能。
+- 知道企業如何部署模型。
 
-## Têgihiştin cûre-cûrên LLM
+## 了解不同類型的 LLM
 
-LLM dikarin bi piranî kategorîyan li ser binyadê xwe, daneyên fêrkirinê, û kesayêt xwe ve bibe. Têgihiştin vê cûreyê dê startup meyê alîkar bibe ku modela rast ji bo senaryo hilbijêre, û çawa têgihiştin, iterate bikin, û şanoya wan baş bikin.
+LLM 可根據其架構、訓練數據和用途進行多種分類。了解這些差異將幫助我們的初創公司選擇適合的模型，並了解如何測試、迭代和提升性能。
 
-Modelên LLM pir hene, hilbijartina modelê têgihiştin li ser kîjan karîbar hûn dixwazin wan bikar bînin, daneyên hûn, çi qas hûn amade ne ku têvî dayîn û zêdetir.
+LLM 有許多不同的類型，選擇模型取決於您的用途、數據、預算等因素。
 
-Li gorî ku hûn dixwazin modelên ji bo nivîsînê, dengê, vîdyo, çêkirina wêneyê û hwd., hûn dikarin modelê cûrê cuda hilbijêrin.
+根據您是否希望使用模型進行文本、音頻、視頻、圖像生成等，您可能會選擇不同類型的模型。
 
-- **Deng û nasnameya axaftinê**. Ji bo vê armancê, modelên wîsper ne bijareke baş in ji ber ku ew modelên berfireh ne û li ser nasnameya axaftinê diçin. Ew di axaftinên pirane de fêr dikin û dikarin nasnameya axaftinê li zimanên cûrê cuda bikar bînin. Zêdetir fêr bibin li ser [modelên wîsper li vir](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **音頻和語音識別**。針對此用途，Whisper 類型的模型是一個很好的選擇，因為它們是通用型並專注於語音識別。它訓練於多樣化的音頻數據，能夠進行多語言語音識別。了解更多 [Whisper 類型模型](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst)。
 
-- **Çêkirina wêneyê**. Ji bo çêkirina wêneyê, DALL-E û Midjourney du bijareya pir nasname ne. DALL-E ji aliyê Azure OpenAI ve pêşkêş dibe. [Zêdetir fêr bibin li ser DALL-E li vir](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) û hwd. di Babeta 9ê ya vê dersê de.
+- **圖像生成**。在圖像生成方面，DALL-E 和 Midjourney 是兩個非常知名的選擇。DALL-E 由 Azure OpenAI 提供。[閱讀更多關於 DALL-E 的資訊](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst)，以及本課程第 9 章。
 
-- **Çêkirina nivîsê**. Pir modelên li ser çêkirina nivîsê fêr dikin û hûn pêşniyarên pirane hene ji bo GPT-3.5 heta GPT-4. Ew bi pîvanên cuda têvî dayînê têne pêşkêş kirin û GPT-4 herî guherbar e. Şayeste ye ku li ser [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) binirxînin kîjan modelên herî baş li ser pêşniyara we têne pêşkêş kirin.
+- **文本生成**。大多數模型都訓練於文本生成，您可以選擇從 GPT-3.5 到 GPT-4 的多種選擇。它們的成本各不相同，其中 GPT-4 是最昂貴的。值得探索 [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst)，以評估哪些模型在能力和成本方面最符合您的需求。
 
-- **Cudayîya modalan**. Heke hûn dixwazin pirane modalan bi pêşniyarên cuda bikar bînin, hûn dikarin modelên cûrê cuda hilbijêrin wekî [gpt-4 turbo with vision or gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - modelên OpenAI ya herî dawî - ku dikarin zimanê nûçeyê bi têgihiştina wêneyê ve girêdan bikin, di navbera modalan bi pêşniyarên cuda de pêşnîyarkirin.
+- **多模態**。如果您希望處理多種類型的輸入和輸出數據，您可能需要研究像 [gpt-4 turbo with vision 或 gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) 這樣的模型——OpenAI 最新版本的模型——它們能夠結合自然語言處理與視覺理解，實現多模態界面的互動。
 
-Hilbijartina modelê wate ye ku hûn hûn bûyînên bingehîn têgihiştin, lê di heman demê de ne yeter e. Pir caran hûn daneyên taybetî yên kompanya hûn hene ku hûn hewce ne modela LLMê li ser wan fêr bikin. Hene çand jî modelên cuda çê dikin, zêdetir li ser vê di babetên pêşîn de.
+選擇模型意味著您獲得了一些基本功能，但這可能還不夠。通常您有公司特定的數據需要告訴 LLM。對此有幾種不同的方式，更多內容將在接下來的部分中介紹。
 
-### Modelên Bingehîn ji ber modelên LLM
+### 基礎模型與 LLM 的區別
 
-Termê Modela Bingehîn ji aliyê [lêkolînerên Stanford ve hatî afirandin](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) û wekî modelê AI têne diyar kirin ku li gorî bûyerên taybetî, wekî:
+基礎模型的術語由 [斯坦福研究人員提出](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst)，並定義為符合某些標準的人工智慧模型，例如：
 
-- **Ew bi fêrkirina bêyî sarkêşî an fêrkirina bi sarkêşî fêr dikin**, wate ew di ser daneyên bê nişan an multi-modalan di fêr dikin, û ew ji nişanê an têgihiştina mirovê hewce ne.
-- **Ew modelên pir mezin in**, ku li ser torên nervên pirenehînên pirane di fêr dikin.
-- **Ew bûyerên bingehîn ji modelên din in**, wate ew dikarin wekî bingehîn ji modelên din têne bikar anîn, ku dikarin bi tune kirinê.
+- **使用無監督學習或自監督學習進行訓練**，意味著它們訓練於未標記的多模態數據，且不需要人工註解或標記數據。
+- **它們是非常大的模型**，基於非常深的神經網絡，訓練於數十億個參數。
+- **通常旨在作為其他模型的“基礎”**，意味著它們可以作為其他模型的起點，通過微調進一步構建。
 
-![Modelên Bingehîn ji ber modelên LLM](../../../translated_images/FoundationModel.1b89e9d94c6a60a9af557b1c0a10faa3a55c0cbc6bb357eb144512ab833d162c.mo.png)
+![基礎模型與 LLM 的區別](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.mo.png)
 
-Çavkanî: [Rehberê Bingehîn ji bo Modelên Bingehîn û Modelên Zimanê Mezin | Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
+圖片來源：[基礎模型與大型語言模型的基本指南 | 作者 Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Ji bo zêdetir piştrastina vê cudayiyê, bibînin ChatGPT wekî mînakê. Ji bo çêkirina berê ya ChatGPT, modelê ku GPT-3.5 wekî modelê bingehîn bikar têne anîn. Ev wate ye ku OpenAI daneyên taybetî ya sohbetê bikar anîn ku versiyona GPT-3.5 çêbikin ku di senaryoyên peyivînê de taybetî bû.
+為了進一步澄清這一區別，讓我們以 ChatGPT 為例。要構建 ChatGPT 的第一版，使用了一個名為 GPT-3.5 的模型作為基礎模型。這意味著 OpenAI 使用了一些特定於聊天的數據，創建了一個專門針對對話場景（如聊天機器人）表現良好的 GPT-3.5 微調版本。
 
-![Modela Bingehîn](../../../translated_images/Multimodal.41df52bb0de979b80e9643ba34f8f1b53d7791cebd88bceedda6497241495f27.mo.png)
+![基礎模型](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.mo.png)
 
-Çavkanî: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+圖片來源：[2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Modelên Open Source ji ber Modelên Taybetî
+### 開源模型與專有模型
 
-Şopandinên din yên ji bo kategorîkirina LLM jî têne bikar anîn.
+另一種分類 LLM 的方式是看它們是開源還是專有。
 
-Modelên open-source modelên ne ku ji aliyê giştî têne pêşkêş kirin û dikarin ji aliyê kîjan karîbar bikar bînin. Ew pir caran ji aliyê kompanya ku ew afirandin, an ji aliyê civata lêkolîneran têne pêşkêş kirin. Ew modelên têne bibînin, guherandin, û ji bo kesayêtên cûre-cûr têne taybetandin. Lê ew pir caran ji bo bikar anînê di pêşnîyarkirinê de ne mezin in, û dikarin wekî modelên taybetî ne performant in. Pêşniyarkirin ji bo modelên open-source dikare kêm bibe, û ew dikarin ne di meya dirêj de ne taybetî bûnin an ne di binyadê lêkolînên herî dawî de bûnin. Mînakên modelên open-source yên nasnamekê [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) û [LLaMA](https://llama.meta.com) ne.
+開源模型是公開提供給所有人的模型，任何人都可以使用。它們通常由創建它們的公司或研究社群提供。這些模型可以被檢查、修改和定制以適應 LLM 的各種用途。然而，它們並不總是針對生產使用進行優化，性能可能不如專有模型。此外，開源模型的資金可能有限，可能無法長期維護或更新最新研究。流行的開源模型包括 [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst)、[Bloom](https://huggingface.co/bigscience/bloom) 和 [LLaMA](https://llama.meta.com)。
 
-Modelên taybetî modelên ne ku ji aliyê kompanya ku ew ne têne pêşkêş kirin. Ew modelên pir caran ji bo bikar anînê di pêşnîyarkirinê de têne taybetandin. Lê ew ne têne bibînin, guherandin, an taybetandin ji bo kesayêtên cûre-cûr. Hwd., ew pir caran ne bi belaş têne pêşkêş kirin, û dikarin xwerûya an têvî dayînê hewce bûn. Jî, bikarhêner ne kontrolê li ser daneyên ku ji bo fêrkirina modelê têne bikar anîn, ku wate ew hewce ne ku xwediyê modelê bişopîne ku ew ji bo taybetîya daneyên bişopîne û bişopîne. Mînakên modelên taybetî yên nasnamekê [modelên OpenAI](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) an [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst) ne.
+專有模型是由公司擁有且未公開提供的模型。這些模型通常針對生產使用進行優化。然而，它們不能被檢查、修改或定制以適應不同用途。此外，它們並不總是免費提供，可能需要訂閱或付費使用。此外，使用者無法控制用於訓練模型的數據，這意味著他們需要信任模型擁有者，確保對數據隱私和負責任使用人工智慧的承諾。流行的專有模型包括 [OpenAI 模型](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst)、[Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) 或 [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst)。
 
-### Embedding versus Çêkirina Wêneyê versus Çêkirina Nivîsê û Koda
+### 嵌入式生成 vs 圖像生成 vs 文本與程式碼生成
 
-LLM dikarin wekî kategorî li ser derketina wan têne kategorî kirin.
+LLM 也可以根據其生成的輸出進行分類。
 
-Embeddings modelên ne ku dikarin nivîsa teqîna nûmerîk bikar anîn, ku embedding têne gotin, ku wate nivîsa teqîna nûmerîk ya nivîsê têne nivîsandin. Embeddings dikarin bişopînin ku makinên têgihiştin li ser peywendiyên di navbera peyvên an cümleyên de bikin û dikarin wekî derketina modelên din, wekî modelên kategorî, an modelên ku ji bo dîmenên nûmerîk şanoyên baş hene, têne bikar anîn. Modelên embedding pir caran ji bo fêrkirina vegerînê têne bikar anîn, ku modelê wekî armancê taybetî ya modelê ku ji bo ew modelên ku fêrbûnên teqîna teqîna teqîna têne bikar anîn, û paşê giranên modelê (embeddings) ji bo karîbarên din têne bikar anîn. Mînak ji vê kategorîye [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst) ne.
+嵌入式模型是一組可以將文本轉換為數值形式（稱為嵌入）的模型，這是一種輸入文本的數值表示。嵌入使機器更容易理解單詞或句子之間的關係，並且可以作為其他模型的輸入，例如分類模型或在數值數據上性能更好的聚類模型。嵌入模型通常用於遷移學習，模型為一個有大量數據的替代任務構建，然後模型權重（嵌入）被重新用於其他下游任務。此類模型的例子包括 [OpenAI 嵌入](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)。
 
-![Embedding](../../../translated_images/Embedding.fbf261f314681a51994056854fd928b69b253616bb313e68a9ce19a2b15c8768.mo.png)
+![嵌入](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.mo.png)
 
-Modelên çêkirina wêneyê modelên ne ku wêneyan çêdikin. Ew modelên pir caran ji bo guherandina wêneyê, çêkirina wêneyê, û vegerîna wêneyê têne bikar anîn. Modelên çêkirina wêneyê pir caran ji bo dîmenên mezin yên wêneyê, wekî [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), têne fêr kirin, û dikarin wêneyên nû çêbikin an wêneyên heyî biguherînin bi teknîkên inpainting, super-resolution, û colorization. Mînakên hwd. [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) û [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) ne.
+圖像生成模型是生成圖像的模型。這些模型通常用於圖像編輯、圖像合成和圖像翻譯。圖像生成模型通常訓練於大型圖像數據集，例如 [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)，可以用於生成新圖像或使用修補、超解析度和著色技術編輯現有圖像。例子包括 [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) 和 [Stable Diffusion 模型](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)。
 
-![Çêkirina Wêneyê](../../../translated_images/Image.fffee8e361cc35ed409975f6fc85502ae3d20b8eb01273cd327294e26318a049.mo.png)
+![圖像生成](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.mo.png)
 
-Modelên çêkirina nivîsê û koda modelên ne ku nivîs an koda çêdikin. Ew modelên pir caran ji bo têgihiştina nivîsê, vegerîn, û bersivdan têne bikar anîn. Modelên çêkirina nivîsê pir caran ji bo dîmenên mezin yên nivîsê, wekî [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), têne fêr kirin, û dikarin nivîsa nû çêbikin, an bersivan bidin. Modelên çêkirina koda, wekî [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), pir caran ji bo dîmenên mezin yên koda, wekî GitHub, têne fêr kirin, û dikarin koda nû çêbikin, an çewtîyan di koda heyî de çêbikin.
+文本與程式碼生成模型是生成文本或程式碼的模型。這些模型通常用於文本摘要、翻譯和問答。文本生成模型通常訓練於大型文本數據集，例如 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)，可以用於生成新文本或回答問題。程式碼生成模型，如 [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)，通常訓練於大型程式碼數據集，例如 GitHub，可以用於生成新程式碼或修復現有程式碼中的錯誤。
 
-![Çêkirina Nivîsê û Koda](../../../translated_images/Text.35cfbe12e08d5b5615cf7db5174fe477bf96f45c5b82d53c29523bd8b94bdc17.mo.png)
+![文本與程式碼生成](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.mo.png)
 
-### Encoder-Decoder versus Encoder-only
+### 編碼器-解碼器 vs 僅解碼器
 
-Ji bo bîranîna cûrên cuda yên bingehînên LLM, em analogiyek bikar tînin.
+要討論 LLM 的不同架構類型，我們可以用一個比喻來說明。
 
-Imkanê ku serokê hûnê we taskek ji bo nivîsarên xwendekarên binivîse. Hûn du hevkar hene; yek li ser çêkirina peyvên li hemberî wêne ye û yê din li ser vegerandinê ye.
+假設您的經理給您一個任務，要求您為學生編寫一份測驗。您有兩位同事，一位負責創建內容，另一位負責審核。
 
-Çêkerê peyvên di xebitandinê de wekî modelê Encoder-only ye, ew dikarin tema bibînin û bibînin çi hûn pêşnîyar kirin û paşê ew dikarin kursê li ser wêne çêbikin. Ew di çêkirina peyvên girêdayî û agahdar pir baş in, lê ew di têgihiştina tema û armancên fêrkirinê de ne baş in. Hene mînakên modelên Encoder ne modelên GPT family, wekî GPT-3.
+內容創建者就像僅解碼器模型，他可以查看主題並根據您已經寫的內容編寫課程。他們非常擅長撰寫引人入勝且信息豐富的內容，但不太擅長理解主題和學習目標。僅解碼器模型的例子包括 GPT 系列模型，例如 GPT-3。
 
-Rehberê di çêkirina vegerandinê de wekî modelê Encoder-only ye, ew tema û bersivên li ser kursê têne vegerandin, li peyvên di navbera wan de têgihiştin û agahdar têne kirin, lê ew di çêkirina peyvên de ne baş in. Mînak ji modelê Encoder-only bernameyê BERT ye.
+審核者就像僅編碼器模型，他查看已編寫的課程和答案，注意它們之間的關係並理解上下文，但不擅長生成內容。僅編碼器模型的例子包括 BERT。
 
-Imkanê ku hûn kesek jî hene ku dikare peyvên çêbikin û vegerandin, ev modelê Encoder-Decoder ye. Hene mînakên hwd. BART û T5 ne.
+想像一下，我們也可以有一個既能創建又能審核測驗的人，這就是編碼器-解碼器模型。例子包括 BART 和 T5。
 
-### Xizmet versus Model
+### 服務 vs 模型
 
-Niha, em bi tenê di navbera xizmet û modelê de peyivîn bikar anîn. Xizmetê pêşnîyarek e ku ji aliyê Pêşkêşkarê Xizmeta Cloud têne pêşkêş kirin, û pir caran li ser modelên, daneyên, û hwd. têne pêşkêş kirin. Modelê bingehê xizmetê ye, û pir caran modelê bingehîn e, wekî LLM.
+現在，我們來談談服務與模型的區別。服務是由雲服務提供商提供的產品，通常是模型、數據和其他組件的組合。模型是服務的核心組件，通常是基礎模型，例如 LLM。
 
-Xizmetên pir caran ji bo bikar anînê di pêşnîyarkirinê de têne taybetandin û pir caran hêsan in ku têne bikar anîn, bi şopandina GUI. Lê xizmetên pir caran ne bi belaş têne pêşkêş kirin, û dikarin xwerûya an têvî dayînê hewce bûn, di pêşnîyarkirinê de bişopîne. Mînak ji xizmetê pê
-- Bandingkan tolok ukur di seluruh model dan dataset yang tersedia di industri untuk menilai mana yang memenuhi skenario bisnis, melalui panel [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
+服務通常針對生產使用進行優化，並且通常比模型更容易使用，通過圖形用戶界面。然而，服務並不總是免費提供，可能需要訂閱或付費使用，以利用服務擁有者的設備和資源，優化成本並輕鬆擴展。服務的例子包括 [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst)，它提供按使用量付費的計費方式，意味著使用者根據使用服務的多少按比例收費。此外，Azure OpenAI Service 在模型功能之上提供企業級安全性和負責任的人工智慧框架。
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.b3b4182f762db04b59267af64ce77cc936d38adf40fb032f12acec9063578008.mo.png)
+模型僅僅是神經網絡，包括參數、權重等。允許公司在本地運行，但需要購買設備、構建可擴展的結構並購買許可證或使用開源模型。像 LLaMA 這樣的模型可以使用，但需要計算能力來運行模型。
 
-- Sesuaikan model dengan data pelatihan khusus untuk meningkatkan kinerja model dalam beban kerja tertentu, dengan memanfaatkan kemampuan eksperimen dan pelacakan dari Azure AI Studio.
+## 如何在 Azure 上測試和迭代不同模型以了解性能
 
-![Model fine-tuning](../../../translated_images/FineTuning.f93db4ecbdc85b4a20ff1198fb82f5e2daa3a1ee328733b17d603727db20f5c0.mo.png)
+當我們的團隊探索了當前 LLM 的版圖並確定了一些適合其場景的候選模型後，下一步就是在其數據和工作負載上測試它們。這是一個通過實驗和測量進行的迭代過程。
+我們在前面段落中提到的大多數模型（例如 OpenAI 模型、開源模型如 Llama2，以及 Hugging Face transformers）都可以在 [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) 的 [模型目錄](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) 中找到。
 
-- Sebarkan model pra-terlatih asli atau versi yang telah disesuaikan ke inferensi waktu nyata yang dikelola secara remote - komputasi terkelola - atau endpoint api tanpa server - [bayar sesuai penggunaan](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - untuk memungkinkan aplikasi menggunakannya.
+[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) 是一個雲端平台，專為開發者設計，用於構建生成式 AI 應用並管理整個開發生命周期——從實驗到評估——將所有 Azure AI 服務整合到一個便捷的圖形化界面中。Azure AI Studio 的模型目錄使使用者能夠：
 
-![Model deployment](../../../translated_images/ModelDeploy.7c78c2c5841567abf820d5da8354be454d3f20b62168905645aeac99e50c2562.mo.png)
+- 在目錄中找到感興趣的基礎模型——無論是專有模型還是開源模型，並根據任務、許可證或名稱進行篩選。為了提高搜索效率，這些模型被組織成不同的集合，例如 Azure OpenAI 集合、Hugging Face 集合等。
+
+![模型目錄](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.mo.png)
+
+- 查看模型卡，包括詳細的用途描述和訓練數據、代碼範例以及內部評估庫中的評估結果。
+
+![模型卡](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.mo.png)
+
+- 通過 [模型基準](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) 面板比較行業內可用的模型和數據集基準，以評估哪個模型最符合業務場景。
+
+![模型基準](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.mo.png)
+
+- 利用 Azure AI Studio 的實驗和追蹤功能，使用自定義訓練數據微調模型，以提高模型在特定工作負載中的性能。
+
+![模型微調](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.mo.png)
+
+- 部署原始的預訓練模型或微調版本到遠程實時推理——管理計算資源——或無伺服器 API 端點——[按需付費](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst)——以便應用程序能夠使用它。
+
+![模型部署](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.mo.png)
 
 > [!NOTE]
-> Tidak semua model dalam katalog saat ini tersedia untuk penyesuaian dan/atau penyebaran bayar sesuai penggunaan. Periksa kartu model untuk detail tentang kemampuan dan keterbatasan model.
+> 目錄中的所有模型目前並不都支持微調和/或按需付費部署。請查看模型卡以了解模型的功能和限制。
 
-## Meningkatkan Hasil LLM
+## 提升 LLM 結果
 
-Kami telah menjelajahi dengan tim startup kami berbagai jenis LLM dan Platform Cloud (Azure Machine Learning) yang memungkinkan kami membandingkan model yang berbeda, mengevaluasi mereka pada data uji, meningkatkan kinerja dan menyebarkannya pada endpoint inferensi.
+我們的初創團隊探索了不同類型的 LLM 和一個雲端平台（Azure Machine Learning），使我們能夠比較不同模型、在測試數據上進行評估、提升性能並將其部署到推理端點。
 
-Tetapi kapan mereka harus mempertimbangkan untuk menyempurnakan model daripada menggunakan yang pra-terlatih? Apakah ada pendekatan lain untuk meningkatkan kinerja model dalam beban kerja tertentu?
+那麼，什麼時候應該考慮微調模型而不是使用預訓練模型？是否有其他方法可以提升模型在特定工作負載上的性能？
 
-Ada beberapa pendekatan yang dapat digunakan bisnis untuk mendapatkan hasil yang mereka butuhkan dari LLM. Anda dapat memilih berbagai jenis model dengan tingkat pelatihan yang berbeda saat menyebarkan LLM dalam produksi, dengan tingkat kompleksitas, biaya, dan kualitas yang berbeda. Berikut adalah beberapa pendekatan berbeda:
+企業可以採用多種方法來從 LLM 中獲得所需的結果。在生產環境中部署 LLM 時，可以選擇不同程度訓練的模型，這些模型具有不同的複雜性、成本和質量。以下是一些不同的方法：
 
-- **Rekayasa prompt dengan konteks**. Idenya adalah memberikan konteks yang cukup saat Anda memberikan prompt untuk memastikan Anda mendapatkan respons yang Anda butuhkan.
+- **帶上下文的提示工程**。這個方法的核心是提供足夠的上下文，以確保獲得所需的回應。
 
-- **Retrieval Augmented Generation, RAG**. Data Anda mungkin ada dalam database atau endpoint web misalnya, untuk memastikan data ini, atau subset darinya, disertakan pada saat memberikan prompt, Anda dapat mengambil data yang relevan dan menjadikannya bagian dari prompt pengguna.
+- **檢索增強生成（RAG）**。例如，您的數據可能存在於數據庫或網絡端點中，為了確保這些數據或其子集在提示時被包含，可以提取相關數據並將其作為使用者提示的一部分。
 
-- **Model yang disesuaikan**. Di sini, Anda melatih model lebih lanjut dengan data Anda sendiri yang membuat model lebih tepat dan responsif terhadap kebutuhan Anda tetapi mungkin mahal.
+- **微調模型**。這種方法是基於您的數據進一步訓練模型，使模型更精確並更符合您的需求，但可能成本較高。
 
-![LLMs deployment](../../../translated_images/Deploy.09224ecfe6a5ef47996fd0a44288772990139305451440c430662d43ac323ecd.mo.png)
+![LLM 部署](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.mo.png)
 
-Sumber gambar: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+圖片來源：[企業部署 LLM 的四種方式 | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Rekayasa Prompt dengan Konteks
+### 帶上下文的提示工程
 
-LLM yang pra-terlatih bekerja sangat baik pada tugas bahasa alami yang umum, bahkan dengan memanggil mereka dengan prompt pendek, seperti kalimat untuk diselesaikan atau pertanyaan – yang disebut pembelajaran “zero-shot”.
+預訓練的 LLM 在通用自然語言任務上表現非常出色，即使只用簡短的提示（例如完成句子或回答問題）——這被稱為“零樣本”學習。
 
-Namun, semakin banyak pengguna dapat membingkai pertanyaan mereka, dengan permintaan dan contoh yang terperinci – Konteks – semakin akurat dan sesuai dengan harapan pengguna jawaban akan menjadi. Dalam kasus ini, kita berbicara tentang pembelajaran “one-shot” jika prompt hanya mencakup satu contoh dan “few-shot learning” jika mencakup beberapa contoh.
-Rekayasa prompt dengan konteks adalah pendekatan paling hemat biaya untuk memulai.
+然而，使用者越能框定自己的查詢，提供詳細的請求和示例——即上下文——回應就越準確且越符合使用者的期望。在這種情況下，如果提示中僅包含一個示例，我們稱之為“一樣本”學習；如果包含多個示例，則稱為“少樣本”學習。
+帶上下文的提示工程是啟動的最具成本效益的方法。
 
-### Retrieval Augmented Generation (RAG)
+### 檢索增強生成（RAG）
 
-LLM memiliki batasan bahwa mereka hanya dapat menggunakan data yang telah digunakan selama pelatihan mereka untuk menghasilkan jawaban. Ini berarti bahwa mereka tidak tahu apa pun tentang fakta yang terjadi setelah proses pelatihan mereka, dan mereka tidak dapat mengakses informasi non-publik (seperti data perusahaan).
-Ini dapat diatasi melalui RAG, sebuah teknik yang memperkuat prompt dengan data eksternal dalam bentuk potongan dokumen, mempertimbangkan batas panjang prompt. Ini didukung oleh alat basis data Vector (seperti [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) yang mengambil potongan yang berguna dari berbagai sumber data yang telah ditentukan dan menambahkannya ke Konteks prompt.
+LLM 的局限性在於它只能使用訓練過程中使用的數據來生成答案。這意味著它對訓練過程後發生的事實一無所知，也無法訪問非公開信息（例如公司數據）。
+這可以通過 RAG 技術來克服，該技術通過文檔片段的形式增強提示，考慮到提示長度的限制。這得益於向量數據庫工具（例如 [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)），它能從預定義的數據源中檢索有用的片段並將其添加到提示上下文中。
 
-Teknik ini sangat membantu ketika bisnis tidak memiliki cukup data, cukup waktu, atau sumber daya untuk menyempurnakan LLM, tetapi masih ingin meningkatkan kinerja pada beban kerja tertentu dan mengurangi risiko fabrikasi, yaitu, mistifikasi realitas atau konten berbahaya.
+當企業沒有足夠的數據、時間或資源來微調 LLM，但仍希望提升特定工作負載的性能並降低虛構風險（即對現實的扭曲或有害內容）時，這種技術非常有幫助。
 
-### Model yang Disesuaikan
+### 微調模型
 
-Penyesuaian adalah proses yang memanfaatkan pembelajaran transfer untuk ‘mengadaptasi’ model ke tugas hilir atau untuk menyelesaikan masalah tertentu. Berbeda dari pembelajaran few-shot dan RAG, ini menghasilkan model baru yang dihasilkan, dengan bobot dan bias yang diperbarui. Ini membutuhkan serangkaian contoh pelatihan yang terdiri dari satu input (prompt) dan output terkaitnya (penyelesaian).
-Ini akan menjadi pendekatan yang disukai jika:
+微調是一個利用遷移學習的過程，用於“適應”模型以完成下游任務或解決特定問題。與少樣本學習和 RAG 不同，它會生成一個新模型，並更新權重和偏差。它需要一組訓練示例，包括單一輸入（提示）及其相關輸出（完成）。
+以下情況下，微調是首選方法：
 
-- **Menggunakan model yang disesuaikan**. Bisnis ingin menggunakan model yang disesuaikan yang kurang mampu (seperti model embedding) daripada model berkinerja tinggi, menghasilkan solusi yang lebih hemat biaya dan cepat.
+- **使用微調模型**。企業希望使用微調的能力較低的模型（例如嵌入模型）而不是高性能模型，從而實現更具成本效益且快速的解決方案。
 
-- **Mempertimbangkan latensi**. Latensi penting untuk kasus penggunaan tertentu, jadi tidak mungkin menggunakan prompt yang sangat panjang atau jumlah contoh yang harus dipelajari dari model tidak sesuai dengan batas panjang prompt.
+- **考慮延遲**。延遲對特定用例非常重要，因此無法使用非常長的提示或示例數量超出提示長度限制。
 
-- **Tetap up to date**. Bisnis memiliki banyak data berkualitas tinggi dan label kebenaran dasar serta sumber daya yang diperlukan untuk mempertahankan data ini tetap up to date dari waktu ke waktu.
+- **保持更新**。企業擁有大量高質量數據和真實標籤，以及維護這些數據隨時間更新的資源。
 
-### Model Terlatih
+### 訓練模型
 
-Melatih LLM dari awal adalah tanpa ragu pendekatan yang paling sulit dan paling kompleks untuk diadopsi, membutuhkan jumlah data yang sangat besar, sumber daya yang terampil, dan kekuatan komputasi yang tepat. Opsi ini harus dipertimbangkan hanya dalam skenario di mana bisnis memiliki kasus penggunaan khusus domain dan sejumlah besar data yang berpusat pada domain.
+從零開始訓練 LLM 無疑是最困難且最複雜的方法，需要大量數據、專業資源和適當的計算能力。只有在企業擁有領域特定的用例和大量領域中心數據的情況下，才應考慮此選項。
 
-## Pemeriksaan Pengetahuan
+## 知識檢查
 
-Apa yang bisa menjadi pendekatan yang baik untuk meningkatkan hasil penyelesaian LLM?
+什麼是提升 LLM 完成結果的好方法？
 
-1. Rekayasa prompt dengan konteks
+1. 帶上下文的提示工程
 1. RAG
-1. Model yang disesuaikan
+1. 微調模型
 
-A:3, jika Anda memiliki waktu dan sumber daya serta data berkualitas tinggi, penyesuaian adalah opsi yang lebih baik untuk tetap up to date. Namun, jika Anda ingin meningkatkan hal-hal dan Anda kekurangan waktu, ada baiknya mempertimbangkan RAG terlebih dahulu.
+A:3，如果您有時間、資源和高質量數據，微調是保持更新的更好選擇。然而，如果您希望提升性能但缺乏時間，值得首先考慮 RAG。
 
-## 🚀 Tantangan
+## 🚀 挑戰
 
-Baca lebih lanjut tentang bagaimana Anda dapat [menggunakan RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) untuk bisnis Anda.
+深入了解如何為您的業務 [使用 RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst)。
 
-## Kerja Hebat, Lanjutkan Pembelajaran Anda
+## 出色的工作，繼續學習
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif Anda!
+完成本課程後，請查看我們的 [生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
 
-Lanjutkan ke Pelajaran 3 di mana kita akan melihat bagaimana [membangun dengan AI Generatif secara Bertanggung Jawab](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+前往第 3 課，我們將探討如何 [負責任地使用生成式 AI](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)！
 
-I'm sorry, but I'm not familiar with a language called "mo." If you meant a specific language, could you please clarify or provide more details?
+---
+
+**免責聲明**：  
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

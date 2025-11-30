@@ -1,71 +1,71 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:28:17+00:00",
+  "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
+  "translation_date": "2025-10-17T20:49:26+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "id"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.id.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Model Open Source](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.id.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Pendahuluan
 
-Agen AI mewakili perkembangan menarik dalam Generative AI, memungkinkan Large Language Models (LLMs) untuk berkembang dari asisten menjadi agen yang mampu melakukan tindakan. Kerangka kerja Agen AI memungkinkan pengembang membuat aplikasi yang memberi LLM akses ke alat dan manajemen status. Kerangka kerja ini juga meningkatkan visibilitas, memungkinkan pengguna dan pengembang memantau tindakan yang direncanakan oleh LLM, sehingga meningkatkan manajemen pengalaman.
+AI Agents merupakan perkembangan menarik dalam Generative AI, memungkinkan Large Language Models (LLMs) berkembang dari sekadar asisten menjadi agen yang mampu mengambil tindakan. Kerangka kerja AI Agent memungkinkan pengembang membuat aplikasi yang memberikan LLM akses ke alat dan manajemen status. Kerangka kerja ini juga meningkatkan visibilitas, memungkinkan pengguna dan pengembang memantau tindakan yang direncanakan oleh LLM, sehingga meningkatkan pengelolaan pengalaman.
 
 Pelajaran ini akan mencakup area berikut:
 
-- Memahami apa itu Agen AI - Apa sebenarnya Agen AI?
-- Menjelajahi empat kerangka kerja Agen AI yang berbeda - Apa yang membuatnya unik?
-- Menerapkan Agen AI ini ke berbagai kasus penggunaan - Kapan kita harus menggunakan Agen AI?
+- Memahami apa itu AI Agent - Apa sebenarnya AI Agent itu?
+- Mengeksplorasi empat kerangka kerja AI Agent yang berbeda - Apa yang membuat mereka unik?
+- Menerapkan AI Agents ini ke berbagai kasus penggunaan - Kapan kita harus menggunakan AI Agents?
 
 ## Tujuan Pembelajaran
 
 Setelah mengikuti pelajaran ini, Anda akan dapat:
 
-- Menjelaskan apa itu Agen AI dan bagaimana mereka dapat digunakan.
-- Memahami perbedaan antara beberapa Kerangka Kerja Agen AI yang populer, dan bagaimana mereka berbeda.
-- Memahami bagaimana Agen AI berfungsi untuk membangun aplikasi dengan mereka.
+- Menjelaskan apa itu AI Agents dan bagaimana mereka dapat digunakan.
+- Memahami perbedaan antara beberapa kerangka kerja AI Agent populer, dan bagaimana mereka berbeda.
+- Memahami cara kerja AI Agents untuk membangun aplikasi dengan mereka.
 
-## Apa Itu Agen AI?
+## Apa Itu AI Agents?
 
-Agen AI adalah bidang yang sangat menarik dalam dunia Generative AI. Dengan kegembiraan ini terkadang muncul kebingungan istilah dan penerapannya. Untuk menjaga kesederhanaan dan inklusif dari sebagian besar alat yang merujuk pada Agen AI, kami akan menggunakan definisi ini:
+AI Agents adalah bidang yang sangat menarik dalam dunia Generative AI. Dengan antusiasme ini, terkadang muncul kebingungan tentang istilah dan penerapannya. Untuk menjaga kesederhanaan dan mencakup sebagian besar alat yang merujuk pada AI Agents, kita akan menggunakan definisi ini:
 
-Agen AI memungkinkan Large Language Models (LLMs) untuk melakukan tugas dengan memberi mereka akses ke **status** dan **alat**.
+AI Agents memungkinkan Large Language Models (LLMs) melakukan tugas dengan memberikan mereka akses ke **state** dan **tools**.
 
-![Model Agen](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.id.png)
+![Model Agen](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.id.png)
 
 Mari kita definisikan istilah-istilah ini:
 
 **Large Language Models** - Ini adalah model yang dirujuk sepanjang kursus ini seperti GPT-3.5, GPT-4, Llama-2, dll.
 
-**Status** - Ini merujuk pada konteks di mana LLM bekerja. LLM menggunakan konteks dari tindakan masa lalunya dan konteks saat ini, membimbing pengambilan keputusannya untuk tindakan selanjutnya. Kerangka Kerja Agen AI memungkinkan pengembang untuk memelihara konteks ini lebih mudah.
+**State** - Ini mengacu pada konteks yang sedang digunakan oleh LLM. LLM menggunakan konteks dari tindakan sebelumnya dan konteks saat ini, membimbing pengambilan keputusan untuk tindakan berikutnya. Kerangka kerja AI Agent memungkinkan pengembang untuk lebih mudah mempertahankan konteks ini.
 
-**Alat** - Untuk menyelesaikan tugas yang diminta pengguna dan yang direncanakan oleh LLM, LLM memerlukan akses ke alat. Beberapa contoh alat bisa berupa database, API, aplikasi eksternal, atau bahkan LLM lainnya!
+**Tools** - Untuk menyelesaikan tugas yang diminta pengguna dan direncanakan oleh LLM, LLM membutuhkan akses ke alat. Beberapa contoh alat bisa berupa database, API, aplikasi eksternal, atau bahkan LLM lainnya!
 
-Definisi ini semoga memberikan Anda dasar yang baik ke depan saat kita melihat bagaimana mereka diterapkan. Mari kita jelajahi beberapa kerangka kerja Agen AI yang berbeda:
+Definisi ini diharapkan memberikan dasar yang baik saat kita melihat bagaimana mereka diterapkan. Mari kita eksplorasi beberapa kerangka kerja AI Agent yang berbeda:
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) adalah implementasi dari definisi yang kami berikan di atas.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) adalah implementasi dari definisi yang telah kita berikan di atas.
 
-Untuk mengelola **status**, ia menggunakan fungsi bawaan yang disebut `AgentExecutor`. Ini menerima `agent` yang didefinisikan dan `tools` yang tersedia untuknya.
+Untuk mengelola **state**, LangChain menggunakan fungsi bawaan yang disebut `AgentExecutor`. Fungsi ini menerima `agent` yang telah didefinisikan dan `tools` yang tersedia untuknya.
 
-`Agent Executor` juga menyimpan riwayat obrolan untuk memberikan konteks obrolan.
+`AgentExecutor` juga menyimpan riwayat percakapan untuk memberikan konteks percakapan.
 
-![Langchain Agents](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.id.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.id.png)
 
-LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang dapat diimpor ke dalam aplikasi Anda di mana LLM dapat mendapatkan akses. Ini dibuat oleh komunitas dan tim LangChain.
+LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang dapat diimpor ke aplikasi Anda sehingga LLM dapat mengaksesnya. Alat-alat ini dibuat oleh komunitas dan tim LangChain.
 
-Anda kemudian dapat mendefinisikan alat ini dan memberikannya kepada `Agent Executor`.
+Anda kemudian dapat mendefinisikan alat-alat ini dan meneruskannya ke `AgentExecutor`.
 
-Visibilitas adalah aspek penting lainnya ketika berbicara tentang Agen AI. Penting bagi pengembang aplikasi untuk memahami alat mana yang digunakan LLM dan mengapa. Untuk itu, tim di LangChain telah mengembangkan LangSmith.
+Visibilitas adalah aspek penting lainnya saat berbicara tentang AI Agents. Penting bagi pengembang aplikasi untuk memahami alat mana yang digunakan oleh LLM dan mengapa. Untuk itu, tim di LangChain telah mengembangkan LangSmith.
 
 ## AutoGen
 
-Kerangka kerja Agen AI berikutnya yang akan kita bahas adalah [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Fokus utama AutoGen adalah percakapan. Agen bersifat **dapat berbicara** dan **dapat disesuaikan**.
+Kerangka kerja AI Agent berikutnya yang akan kita bahas adalah [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Fokus utama AutoGen adalah percakapan. Agen bersifat **conversable** dan **customizable**.
 
-**Dapat berbicara -** LLM dapat memulai dan melanjutkan percakapan dengan LLM lain untuk menyelesaikan tugas. Ini dilakukan dengan membuat `AssistantAgents` dan memberikan pesan sistem khusus kepada mereka.
+**Conversable -** LLM dapat memulai dan melanjutkan percakapan dengan LLM lain untuk menyelesaikan tugas. Hal ini dilakukan dengan membuat `AssistantAgents` dan memberikan mereka pesan sistem tertentu.
 
 ```python
 
@@ -73,19 +73,19 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Dapat disesuaikan** - Agen dapat didefinisikan tidak hanya sebagai LLM tetapi juga sebagai pengguna atau alat. Sebagai pengembang, Anda dapat mendefinisikan `UserProxyAgent` yang bertanggung jawab untuk berinteraksi dengan pengguna untuk umpan balik dalam menyelesaikan tugas. Umpan balik ini dapat melanjutkan eksekusi tugas atau menghentikannya.
+**Customizable** - Agen dapat didefinisikan tidak hanya sebagai LLM tetapi juga sebagai pengguna atau alat. Sebagai pengembang, Anda dapat mendefinisikan `UserProxyAgent` yang bertanggung jawab untuk berinteraksi dengan pengguna untuk memberikan umpan balik dalam menyelesaikan tugas. Umpan balik ini dapat melanjutkan eksekusi tugas atau menghentikannya.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
 ```
 
-### Status dan Alat
+### State dan Tools
 
-Untuk mengubah dan mengelola status, Agen asisten menghasilkan kode Python untuk menyelesaikan tugas.
+Untuk mengubah dan mengelola state, Assistant Agent menghasilkan kode Python untuk menyelesaikan tugas.
 
 Berikut adalah contoh prosesnya:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.id.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.id.png)
 
 #### LLM Didefinisikan dengan Pesan Sistem
 
@@ -93,16 +93,16 @@ Berikut adalah contoh prosesnya:
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Pesan sistem ini mengarahkan LLM khusus ini ke fungsi mana yang relevan untuk tugasnya. Ingat, dengan AutoGen Anda dapat memiliki beberapa AssistantAgents yang didefinisikan dengan pesan sistem yang berbeda.
+Pesan sistem ini mengarahkan LLM tertentu ke fungsi mana yang relevan untuk tugasnya. Ingat, dengan AutoGen Anda dapat memiliki beberapa AssistantAgents yang didefinisikan dengan pesan sistem yang berbeda.
 
-#### Obrolan Dimulai oleh Pengguna
+#### Percakapan Dimulai oleh Pengguna
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Pesan dari user_proxy (Manusia) inilah yang akan memulai proses Agen untuk mengeksplorasi fungsi yang mungkin harus dijalankan.
+Pesan dari user_proxy (Manusia) inilah yang akan memulai proses Agent untuk mengeksplorasi fungsi yang seharusnya dijalankan.
 
 #### Fungsi Dieksekusi
 
@@ -115,21 +115,21 @@ chatbot (to user_proxy):
 
 ```
 
-Setelah obrolan awal diproses, Agen akan mengirimkan alat yang disarankan untuk dipanggil. Dalam hal ini, ini adalah fungsi yang disebut `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+Setelah percakapan awal diproses, Agent akan mengirimkan alat yang disarankan untuk dipanggil. Dalam kasus ini, alat tersebut adalah fungsi bernama `get_weather`. Bergantung pada konfigurasi Anda, fungsi ini dapat dieksekusi secara otomatis dan dibaca oleh Agent atau dapat dieksekusi berdasarkan input pengguna.
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+Anda dapat menemukan daftar [contoh kode AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) untuk lebih mengeksplorasi cara memulai pembangunan.
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+Kerangka kerja agent berikutnya yang akan kita eksplorasi adalah [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Kerangka ini dikenal sebagai agen "code-first" karena alih-alih bekerja secara ketat dengan `strings`, ia dapat bekerja dengan DataFrames di Python. Hal ini menjadi sangat berguna untuk tugas analisis dan generasi data. Contohnya seperti membuat grafik dan diagram atau menghasilkan angka acak.
 
-### State and Tools
+### State dan Tools
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+Untuk mengelola state percakapan, TaskWeaver menggunakan konsep `Planner`. `Planner` adalah LLM yang menerima permintaan dari pengguna dan memetakan tugas-tugas yang perlu diselesaikan untuk memenuhi permintaan tersebut.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. Ini bisa berupa kelas Python atau interpreter kode umum. Plugin ini disimpan sebagai embeddings sehingga LLM dapat mencari plugin yang tepat dengan lebih baik.
+Untuk menyelesaikan tugas-tugas tersebut, `Planner` memiliki akses ke koleksi alat yang disebut `Plugins`. Plugins ini bisa berupa kelas Python atau interpreter kode umum. Plugins ini disimpan sebagai embeddings sehingga LLM dapat lebih baik mencari plugin yang tepat.
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.id.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.id.png)
 
 Berikut adalah contoh plugin untuk menangani deteksi anomali:
 
@@ -137,37 +137,39 @@ Berikut adalah contoh plugin untuk menangani deteksi anomali:
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Kode diverifikasi sebelum dieksekusi. Fitur lain untuk mengelola konteks dalam Taskweaver adalah `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+Kode ini diverifikasi sebelum dieksekusi. Fitur lain untuk mengelola konteks di Taskweaver adalah `experience`. Experience memungkinkan konteks percakapan disimpan dalam jangka panjang dalam file YAML. Hal ini dapat dikonfigurasi sehingga LLM dapat meningkatkan kinerjanya dari waktu ke waktu pada tugas-tugas tertentu karena terpapar pada percakapan sebelumnya.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` dari percakapan dan `tools` adalah model AI lainnya. Setiap model AI adalah model khusus yang melakukan tugas tertentu seperti deteksi objek, transkripsi, atau penjelasan gambar.
+Kerangka kerja agent terakhir yang akan kita eksplorasi adalah [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Yang membuat JARVIS unik adalah ia menggunakan LLM untuk mengelola `state` percakapan dan `tools` adalah model AI lainnya. Setiap model AI adalah model khusus yang melakukan tugas tertentu seperti deteksi objek, transkripsi, atau penjelasan gambar.
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.id.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.id.png)
 
-LLM, sebagai model tujuan umum, menerima permintaan dari pengguna dan mengidentifikasi tugas spesifik dan argumen/data apa yang dibutuhkan untuk menyelesaikan tugas.
+LLM, sebagai model tujuan umum, menerima permintaan dari pengguna dan mengidentifikasi tugas spesifik serta argumen/data yang diperlukan untuk menyelesaikan tugas tersebut.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM kemudian memformat permintaan dengan cara yang dapat diinterpretasikan oleh model AI khusus, seperti JSON. Setelah model AI mengembalikan prediksinya berdasarkan tugas, LLM menerima tanggapannya.
+LLM kemudian memformat permintaan dalam cara yang dapat diinterpretasikan oleh model AI khusus, seperti JSON. Setelah model AI mengembalikan prediksi berdasarkan tugas, LLM menerima responsnya.
 
-Jika beberapa model diperlukan untuk menyelesaikan tugas, itu juga akan menginterpretasikan tanggapan dari model tersebut sebelum menggabungkannya untuk menghasilkan tanggapan kepada pengguna.
+Jika beberapa model diperlukan untuk menyelesaikan tugas, LLM juga akan menginterpretasikan respons dari model-model tersebut sebelum menggabungkannya untuk menghasilkan respons kepada pengguna.
 
-Contoh di bawah ini menunjukkan bagaimana ini akan bekerja ketika seorang pengguna meminta deskripsi dan jumlah objek dalam gambar:
+Contoh di bawah ini menunjukkan bagaimana ini akan bekerja ketika pengguna meminta deskripsi dan jumlah objek dalam sebuah gambar:
 
 ## Tugas
 
-Untuk melanjutkan pembelajaran Anda tentang Agen AI, Anda dapat membangun dengan AutoGen:
+Untuk melanjutkan pembelajaran Anda tentang AI Agents, Anda dapat membangun dengan AutoGen:
 
-- Sebuah aplikasi yang mensimulasikan pertemuan bisnis dengan departemen berbeda dari startup pendidikan.
-- Buat pesan sistem yang membimbing LLM dalam memahami berbagai persona dan prioritas, dan memungkinkan pengguna untuk mempresentasikan ide produk baru.
-- LLM kemudian harus menghasilkan pertanyaan lanjutan dari setiap departemen untuk menyempurnakan dan meningkatkan presentasi dan ide produk
+- Sebuah aplikasi yang mensimulasikan rapat bisnis dengan berbagai departemen dari startup pendidikan.
+- Buat pesan sistem yang membimbing LLM dalam memahami berbagai persona dan prioritas, serta memungkinkan pengguna untuk mempresentasikan ide produk baru.
+- LLM kemudian harus menghasilkan pertanyaan lanjutan dari setiap departemen untuk menyempurnakan dan meningkatkan presentasi serta ide produk.
 
-## Pembelajaran tidak berhenti di sini, lanjutkan Perjalanan
+## Pembelajaran Tidak Berhenti di Sini, Lanjutkan Perjalanan Anda
 
-Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
+Setelah menyelesaikan pelajaran ini, lihat [koleksi pembelajaran Generative AI kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan Anda tentang Generative AI!
+
+---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk mencapai akurasi, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi penting, disarankan untuk menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang salah yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.

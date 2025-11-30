@@ -2,47 +2,48 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-05-20T11:02:33+00:00",
+  "translation_date": "2025-07-09T19:03:26+00:00",
   "source_file": "20-mistral/README.md",
   "language_code": "sk"
 }
 -->
-# Budovanie s modelmi Mistral
+# Práca s modelmi Mistral
 
 ## Úvod
 
-Táto lekcia pokrýva:
-- Preskúmanie rôznych modelov Mistral
-- Pochopenie prípadov použitia a scenárov pre každý model
-- Ukážky kódu ukazujúce jedinečné vlastnosti každého modelu
+Táto lekcia pokrýva:  
+- Preskúmanie rôznych modelov Mistral  
+- Pochopenie prípadov použitia a scenárov pre každý model  
+- Ukážky kódu, ktoré demonštrujú jedinečné vlastnosti jednotlivých modelov.
 
 ## Modely Mistral
 
-V tejto lekcii preskúmame 3 rôzne modely Mistral:
+V tejto lekcii preskúmame 3 rôzne modely Mistral:  
 **Mistral Large**, **Mistral Small** a **Mistral Nemo**.
 
-Každý z týchto modelov je dostupný zadarmo na trhu modelov Github. Kód v tomto zápisníku bude používať tieto modely na spustenie kódu. Tu sú ďalšie podrobnosti o používaní modelov Github na [prototypovanie s AI modelmi](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Každý z týchto modelov je dostupný zadarmo na Github Model marketplace. Kód v tomto notebooku bude používať tieto modely na spustenie kódu. Tu sú podrobnejšie informácie o používaní Github Models na [prototypovanie s AI modelmi](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 je v súčasnosti vlajkovým modelom od Mistral a je navrhnutý pre podnikové použitie.
 
-Model je vylepšením pôvodného Mistral Large tým, že ponúka:
-- Väčšie kontextové okno - 128k vs 32k
-- Lepší výkon pri matematických a kódovacích úlohách - priemerná presnosť 76,9% vs 60,4%
-- Zvýšený viacjazyčný výkon - jazyky zahŕňajú: angličtinu, francúzštinu, nemčinu, španielčinu, taliančinu, portugalčinu, holandčinu, ruštinu, čínštinu, japončinu, kórejčinu, arabčinu a hindčinu.
+Mistral Large 2 je momentálne vlajkový model od Mistral a je navrhnutý pre podnikové použitie.
 
-S týmito vlastnosťami vyniká Mistral Large v:
-- *Retrieval Augmented Generation (RAG)* - vďaka väčšiemu kontextovému oknu
-- *Volanie funkcií* - tento model má natívne volanie funkcií, ktoré umožňuje integráciu s externými nástrojmi a API. Tieto volania môžu byť uskutočnené paralelne alebo jedno za druhým v sekvenčnom poradí.
-- *Generovanie kódu* - tento model vyniká pri generovaní v Pythone, Jave, TypeScripte a C++.
+Model je vylepšením pôvodného Mistral Large a ponúka:  
+- Väčšie kontextové okno – 128k oproti 32k  
+- Lepší výkon v matematických a programovacích úlohách – priemerná presnosť 76,9 % oproti 60,4 %  
+- Zvýšený výkon v mnohých jazykoch – vrátane angličtiny, francúzštiny, nemčiny, španielčiny, taliančiny, portugalčiny, holandčiny, ruštiny, čínštiny, japončiny, kórejčiny, arabčiny a hindčiny.
 
-### Príklad RAG s Mistral Large 2
+Vďaka týmto vlastnostiam Mistral Large vyniká v:  
+- *Retrieval Augmented Generation (RAG)* – vďaka väčšiemu kontextovému oknu  
+- *Volanie funkcií* – tento model má natívnu podporu volania funkcií, čo umožňuje integráciu s externými nástrojmi a API. Volania môžu prebiehať paralelne alebo sekvenčne jedno za druhým.  
+- *Generovanie kódu* – model exceluje v generovaní kódu v Pythone, Jave, TypeScripte a C++.
 
-V tomto príklade používame Mistral Large 2 na spustenie RAG vzoru nad textovým dokumentom. Otázka je napísaná v kórejčine a pýta sa na aktivity autora pred vysokou školou.
+### Príklad RAG s použitím Mistral Large 2
 
-Používa Cohere Embeddings Model na vytvorenie embeddingov textového dokumentu, ako aj otázky. Pre tento príklad používa balík faiss v Pythone ako úložisko vektorov.
+V tomto príklade používame Mistral Large 2 na spustenie RAG vzoru nad textovým dokumentom. Otázka je napísaná v kórejčine a pýta sa na aktivity autora pred nástupom na vysokú školu.
 
-Výzva zaslaná modelu Mistral obsahuje otázky aj získané časti, ktoré sú podobné otázke. Model potom poskytne odpoveď v prirodzenom jazyku.
+Používa Cohere Embeddings Model na vytvorenie embeddingov textového dokumentu aj otázky. Pre tento príklad sa používa Python balík faiss ako vektorové úložisko.
+
+Prompt zaslaný modelu Mistral obsahuje otázky aj získané časti textu, ktoré sú podobné otázke. Model potom poskytne odpoveď v prirodzenom jazyku.
 
 ```python 
 pip install faiss-cpu
@@ -139,21 +140,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small je ďalší model v rodine modelov Mistral v kategórii premier/podnik. Ako názov napovedá, tento model je malý jazykový model (SLM). Výhody používania Mistral Small sú:
-- Úspora nákladov v porovnaní s Mistral LLM ako Mistral Large a NeMo - 80% pokles ceny
-- Nízka latencia - rýchlejšia odozva v porovnaní s LLM Mistral
-- Flexibilita - môže byť nasadený v rôznych prostrediach s menšími obmedzeniami na potrebné zdroje.
 
-Mistral Small je skvelý pre:
-- Úlohy založené na texte, ako je sumarizácia, analýza sentimentu a preklad.
-- Aplikácie, kde sa často robia požiadavky kvôli jeho nákladovej efektívnosti
-- Úlohy s nízkou latenciou kódu, ako je kontrola a návrhy kódu
+Mistral Small je ďalší model v rodine Mistral, patriaci do kategórie premier/enterprise. Ako názov napovedá, ide o malý jazykový model (SLM). Výhody použitia Mistral Small sú:  
+- Úspora nákladov v porovnaní s veľkými modelmi Mistral, ako sú Mistral Large a NeMo – zníženie ceny o 80 %  
+- Nízka latencia – rýchlejšia odozva v porovnaní s veľkými modelmi Mistral  
+- Flexibilita – môže byť nasadený v rôznych prostrediach s menšími požiadavkami na zdroje.
+
+Mistral Small je ideálny pre:  
+- Textové úlohy ako sumarizácia, analýza sentimentu a preklad  
+- Aplikácie s častými požiadavkami vďaka svojej cenovej efektívnosti  
+- Úlohy s nízkou latenciou, ako je kontrola kódu a návrhy kódu
 
 ## Porovnanie Mistral Small a Mistral Large
 
-Na zobrazenie rozdielov v latencii medzi Mistral Small a Large, spustite nižšie uvedené bunky.
+Pre zobrazenie rozdielov v latencii medzi Mistral Small a Large spustite nasledujúce bunky.
 
-Mali by ste vidieť rozdiel v čase odozvy medzi 3-5 sekundami. Všimnite si tiež dĺžku a štýl odpovede na rovnakú výzvu.
+Mali by ste vidieť rozdiel v čase odozvy približne 3-5 sekúnd. Tiež si všimnite dĺžku a štýl odpovedí na rovnaký prompt.
 
 ```python 
 
@@ -215,23 +217,23 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-V porovnaní s ostatnými dvoma modelmi diskutovanými v tejto lekcii je Mistral NeMo jediným voľne dostupným modelom s licenciou Apache2.
+V porovnaní s dvoma predchádzajúcimi modelmi je Mistral NeMo jediný bezplatný model s licenciou Apache2.
 
-Je považovaný za vylepšenie skoršieho open source LLM od Mistral, Mistral 7B.
+Je považovaný za vylepšenie predchádzajúceho open source LLM od Mistral, Mistral 7B.
 
-Niektoré ďalšie vlastnosti modelu NeMo sú:
+Medzi ďalšie vlastnosti modelu NeMo patria:
 
-- *Efektívnejšia tokenizácia:* Tento model používa tokenizátor Tekken namiesto bežnejšie používaného tiktoken. To umožňuje lepší výkon vo viacerých jazykoch a kódoch.
+- *Efektívnejšia tokenizácia:* Tento model používa tokenizer Tekken namiesto bežnejšieho tiktoken. To umožňuje lepší výkon v rôznych jazykoch a kóde.
 
-- *Doladenie:* Základný model je dostupný na doladenie. To umožňuje väčšiu flexibilitu pre prípady použitia, kde môže byť potrebné doladenie.
+- *Doladenie (finetuning):* Základný model je dostupný na doladenie, čo prináša väčšiu flexibilitu pre prípady použitia, kde je doladenie potrebné.
 
-- *Natívne volanie funkcií* - Rovnako ako Mistral Large, tento model bol trénovaný na volanie funkcií. To ho robí jedinečným ako jeden z prvých open source modelov, ktorý to robí.
+- *Natívne volanie funkcií* – Rovnako ako Mistral Large, aj tento model bol trénovaný na volanie funkcií. To ho robí jedinečným ako jeden z prvých open source modelov s touto schopnosťou.
 
-### Porovnanie tokenizátorov
+### Porovnanie tokenizérov
 
-V tomto príklade sa pozrieme na to, ako Mistral NeMo spracováva tokenizáciu v porovnaní s Mistral Large.
+V tomto príklade sa pozrieme, ako Mistral NeMo spracováva tokenizáciu v porovnaní s Mistral Large.
 
-Oba príklady používajú rovnakú výzvu, ale mali by ste vidieť, že NeMo vráti menej tokenov v porovnaní s Mistral Large.
+Oba príklady používajú rovnaký prompt, no mali by ste vidieť, že NeMo vracia menej tokenov ako Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -349,9 +351,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Učenie nekončí tu, pokračujte v ceste
+## Učenie tu nekončí, pokračujte v ceste
 
-Po dokončení tejto lekcie si pozrite našu [kolekciu učenia Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste pokračovali v zvyšovaní svojich znalostí o Generative AI!
+Po dokončení tejto lekcie si pozrite našu [kolekciu Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte v rozširovaní svojich znalostí o generatívnej AI!
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby pre automatizovaný preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Vyhlásenie o zodpovednosti**:  
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

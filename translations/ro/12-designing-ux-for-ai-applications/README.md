@@ -1,130 +1,134 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ec385b41ee50579025d50cc03bfb3a25",
-  "translation_date": "2025-05-19T22:05:41+00:00",
+  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
+  "translation_date": "2025-10-17T22:04:20+00:00",
   "source_file": "12-designing-ux-for-ai-applications/README.md",
   "language_code": "ro"
 }
 -->
 # Proiectarea UX pentru aplicații AI
 
-[![Proiectarea UX pentru aplicații AI](../../../translated_images/12-lesson-banner.f98188f63dee5f2a9016055c93c766061b9cb95b320bf29d4d2d67ada792572e.ro.png)](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst)
+[![Proiectarea UX pentru aplicații AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.ro.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Apasă pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
+> _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
-Experiența utilizatorului este un aspect foarte important în construirea aplicațiilor. Utilizatorii trebuie să poată folosi aplicația ta într-un mod eficient pentru a îndeplini sarcini. A fi eficient este un lucru, dar trebuie să proiectezi aplicații astfel încât să poată fi folosite de toată lumea, pentru a le face _accesibile_. Acest capitol se va concentra pe această zonă, astfel încât să ajungi să proiectezi o aplicație pe care oamenii pot și vor să o folosească.
+Experiența utilizatorului este un aspect foarte important în construirea aplicațiilor. Utilizatorii trebuie să poată folosi aplicația într-un mod eficient pentru a îndeplini sarcini. Eficiența este un lucru, dar trebuie să proiectați aplicații astfel încât să poată fi utilizate de toată lumea, făcându-le _accesibile_. Acest capitol se va concentra pe acest domeniu, astfel încât să ajungeți să proiectați o aplicație pe care oamenii pot și doresc să o folosească.
 
 ## Introducere
 
-Experiența utilizatorului se referă la modul în care un utilizator interacționează și utilizează un produs sau serviciu specific, fie că este un sistem, un instrument sau un design. Când dezvoltăm aplicații AI, dezvoltatorii nu se concentrează doar pe asigurarea unei experiențe eficiente, ci și etice. În această lecție, discutăm cum să construim aplicații de Inteligență Artificială (AI) care să răspundă nevoilor utilizatorilor.
+Experiența utilizatorului reprezintă modul în care un utilizator interacționează cu și utilizează un produs sau serviciu specific, fie că este un sistem, un instrument sau un design. Când dezvoltați aplicații AI, dezvoltatorii nu se concentrează doar pe asigurarea unei experiențe eficiente, ci și etice. În această lecție, vom aborda modul de construire a aplicațiilor de Inteligență Artificială (AI) care răspund nevoilor utilizatorilor.
 
 Lecția va acoperi următoarele domenii:
 
-- Introducere în Experiența Utilizatorului și Înțelegerea Nevoilor Utilizatorului
-- Proiectarea Aplicațiilor AI pentru Încredere și Transparență
-- Proiectarea Aplicațiilor AI pentru Colaborare și Feedback
+- Introducere în experiența utilizatorului și înțelegerea nevoilor utilizatorilor
+- Proiectarea aplicațiilor AI pentru încredere și transparență
+- Proiectarea aplicațiilor AI pentru colaborare și feedback
 
 ## Obiective de învățare
 
-După parcurgerea acestei lecții, vei putea:
+După parcurgerea acestei lecții, veți putea:
 
-- Înțelege cum să construiești aplicații AI care să răspundă nevoilor utilizatorilor.
-- Proiecta aplicații AI care să promoveze încrederea și colaborarea.
+- Înțelege cum să construiți aplicații AI care să răspundă nevoilor utilizatorilor.
+- Proiecta aplicații AI care promovează încrederea și colaborarea.
 
 ### Cerințe preliminare
 
-Alocă timp pentru a citi mai multe despre [experiența utilizatorului și design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Alocați timp pentru a citi mai multe despre [experiența utilizatorului și gândirea de design.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Introducere în Experiența Utilizatorului și Înțelegerea Nevoilor Utilizatorului
+## Introducere în experiența utilizatorului și înțelegerea nevoilor utilizatorilor
 
-În startup-ul nostru fictiv de educație, avem doi utilizatori principali, profesori și elevi. Fiecare dintre cei doi utilizatori are nevoi unice. Un design centrat pe utilizator prioritizează utilizatorul, asigurându-se că produsele sunt relevante și benefice pentru cei cărora le sunt destinate.
+În startup-ul nostru fictiv din domeniul educației, avem doi utilizatori principali, profesori și elevi. Fiecare dintre cei doi utilizatori are nevoi unice. Un design centrat pe utilizator prioritizează utilizatorul, asigurându-se că produsele sunt relevante și benefice pentru cei cărora le sunt destinate.
 
-Aplicația ar trebui să fie **utilă, fiabilă, accesibilă și plăcută** pentru a oferi o bună experiență utilizatorului.
+Aplicația ar trebui să fie **utilă, fiabilă, accesibilă și plăcută** pentru a oferi o experiență bună utilizatorului.
 
 ### Utilitate
 
-A fi util înseamnă că aplicația are funcționalități care corespund scopului său, cum ar fi automatizarea procesului de notare sau generarea de fișe de studiu pentru revizuire. O aplicație care automatizează procesul de notare ar trebui să poată atribui corect și eficient note lucrărilor elevilor pe baza unor criterii predefinite. În mod similar, o aplicație care generează fișe de revizuire ar trebui să poată crea întrebări relevante și diverse pe baza datelor sale.
+A fi util înseamnă că aplicația are funcționalități care se potrivesc scopului său, cum ar fi automatizarea procesului de notare sau generarea de fișe de revizuire. O aplicație care automatizează procesul de notare ar trebui să poată atribui cu acuratețe și eficiență punctaje lucrărilor elevilor pe baza unor criterii predefinite. În mod similar, o aplicație care generează fișe de revizuire ar trebui să poată crea întrebări relevante și diverse pe baza datelor sale.
 
 ### Fiabilitate
 
-A fi fiabil înseamnă că aplicația poate îndeplini sarcinile sale în mod constant și fără erori. Cu toate acestea, AI, la fel ca oamenii, nu este perfectă și poate fi predispusă la erori. Aplicațiile pot întâmpina erori sau situații neașteptate care necesită intervenție sau corecție umană. Cum gestionezi erorile? În ultima secțiune a acestei lecții, vom acoperi cum sunt proiectate sistemele și aplicațiile AI pentru colaborare și feedback.
+A fi fiabil înseamnă că aplicația poate îndeplini sarcinile în mod constant și fără erori. Totuși, AI, la fel ca oamenii, nu este perfectă și poate fi predispusă la erori. Aplicațiile pot întâmpina erori sau situații neașteptate care necesită intervenția sau corectarea umană. Cum gestionați erorile? În ultima secțiune a acestei lecții, vom aborda modul în care sistemele și aplicațiile AI sunt proiectate pentru colaborare și feedback.
 
 ### Accesibilitate
 
-A fi accesibil înseamnă extinderea experienței utilizatorului la utilizatori cu diverse abilități, inclusiv cei cu dizabilități, asigurându-se că nimeni nu este lăsat pe dinafară. Urmând ghidurile și principiile de accesibilitate, soluțiile AI devin mai incluzive, utilizabile și benefice pentru toți utilizatorii.
+A fi accesibil înseamnă extinderea experienței utilizatorului la utilizatori cu diverse abilități, inclusiv cei cu dizabilități, asigurându-se că nimeni nu este exclus. Urmând ghidurile și principiile de accesibilitate, soluțiile AI devin mai incluzive, utilizabile și benefice pentru toți utilizatorii.
 
 ### Plăcut
 
-A fi plăcut înseamnă că aplicația este plăcută de utilizat. O experiență utilizator plăcută poate avea un impact pozitiv asupra utilizatorului, încurajându-l să revină la aplicație și crescând veniturile afacerii.
+A fi plăcut înseamnă că aplicația este agreabilă de utilizat. O experiență atractivă pentru utilizator poate avea un impact pozitiv asupra acestuia, încurajându-l să revină la aplicație și crescând veniturile afacerii.
 
-![imagine care ilustrează considerațiile UX în AI](../../../translated_images/uxinai.26a003eb0524d011d3e36d15f6837df5be66ee0d965ee0df6d004edd5097a87d.ro.png)
+![imagine ilustrând considerațiile UX în AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.ro.png)
 
 Nu fiecare provocare poate fi rezolvată cu AI. AI vine să îmbunătățească experiența utilizatorului, fie că este vorba de automatizarea sarcinilor manuale sau personalizarea experiențelor utilizatorului.
 
-## Proiectarea Aplicațiilor AI pentru Încredere și Transparență
+## Proiectarea aplicațiilor AI pentru încredere și transparență
 
-Construirea încrederii este esențială atunci când proiectăm aplicații AI. Încrederea asigură utilizatorul că aplicația va îndeplini sarcinile, va livra rezultate constant și că rezultatele sunt ceea ce utilizatorul are nevoie. Un risc în această zonă este neîncrederea și supraincrederea. Neîncrederea apare atunci când un utilizator are puțină sau deloc încredere într-un sistem AI, ceea ce duce la respingerea aplicației tale. Supraincrederea apare atunci când un utilizator supraestimează capacitatea unui sistem AI, determinând utilizatorii să aibă prea multă încredere în sistemul AI. De exemplu, un sistem automatizat de notare, în cazul supraincrederii, ar putea determina profesorul să nu mai verifice unele lucrări pentru a se asigura că sistemul de notare funcționează corect. Acest lucru ar putea duce la note nedrepte sau inexacte pentru elevi sau la pierderea oportunităților de feedback și îmbunătățire.
+Construirea încrederii este esențială atunci când proiectăm aplicații AI. Încrederea asigură că un utilizator este convins că aplicația va îndeplini sarcinile, va oferi rezultate constant și că rezultatele sunt cele de care utilizatorul are nevoie. Un risc în acest domeniu este neîncrederea și supraîncrederea. Neîncrederea apare atunci când un utilizator are puțină sau deloc încredere într-un sistem AI, ceea ce duce la respingerea aplicației. Supraîncrederea apare atunci când un utilizator supraestimează capacitatea unui sistem AI, ducând la o încredere excesivă în sistemul AI. De exemplu, un sistem automatizat de notare, în cazul supraîncrederii, ar putea determina profesorul să nu mai verifice unele lucrări pentru a se asigura că sistemul de notare funcționează bine. Acest lucru ar putea duce la note incorecte sau nedrepte pentru elevi sau la pierderea oportunităților de feedback și îmbunătățire.
 
-Două modalități de a te asigura că încrederea este plasată chiar în centrul designului sunt explicabilitatea și controlul.
+Două moduri de a asigura că încrederea este plasată în centrul designului sunt explicabilitatea și controlul.
 
 ### Explicabilitate
 
-Când AI ajută la informarea deciziilor, cum ar fi transmiterea cunoștințelor către generațiile viitoare, este esențial ca profesorii și părinții să înțeleagă cum sunt luate deciziile AI. Aceasta este explicabilitatea - înțelegerea modului în care aplicațiile AI iau decizii. Proiectarea pentru explicabilitate include adăugarea detaliilor despre ce poate face o aplicație AI. De exemplu, în loc de "Începe cu profesorul AI", sistemul poate folosi: "Rezumați notițele pentru o revizuire mai ușoară folosind AI."
+Când AI ajută la luarea deciziilor, cum ar fi transmiterea cunoștințelor generațiilor viitoare, este esențial ca profesorii și părinții să înțeleagă cum sunt luate deciziile de către AI. Aceasta este explicabilitatea - înțelegerea modului în care aplicațiile AI iau decizii. Proiectarea pentru explicabilitate include adăugarea de detalii care evidențiază modul în care AI a ajuns la un anumit rezultat. Publicul trebuie să fie conștient că rezultatul este generat de AI și nu de un om. De exemplu, în loc să spuneți "Începeți să discutați acum cu tutorul dvs." spuneți "Folosiți tutorul AI care se adaptează nevoilor dvs. și vă ajută să învățați în ritmul propriu."
 
-![o pagină de start a unei aplicații cu ilustrare clară a explicabilității în aplicațiile AI](../../../translated_images/explanability-in-ai.19a61ee8eec9aec2d55d420c49cc3bb167db208c05bddb8d4e1e9e10ea8746b8.ro.png)
+![pagina de start a unei aplicații cu ilustrație clară a explicabilității în aplicațiile AI](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.ro.png)
 
-Un alt exemplu este modul în care AI utilizează datele utilizatorului și datele personale. De exemplu, un utilizator cu persona de elev poate avea limitări bazate pe persona sa. AI-ul poate să nu fie capabil să dezvăluie răspunsuri la întrebări, dar poate ajuta să ghideze utilizatorul să gândească cum poate rezolva o problemă.
+Un alt exemplu este modul în care AI utilizează datele utilizatorului și datele personale. De exemplu, un utilizator cu persona elev poate avea limitări bazate pe persona sa. AI poate să nu fie capabil să dezvăluie răspunsuri la întrebări, dar poate ajuta utilizatorul să gândească cum să rezolve o problemă.
 
-![AI răspunzând la întrebări bazate pe persona](../../../translated_images/solving-questions.9158f66fb9fd71ed57fd00978358d14dbccc72bd2b1e4db5140fcb1579aef295.ro.png)
+![AI răspunzând la întrebări pe baza personajului](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.ro.png)
 
-O ultimă parte cheie a explicabilității este simplificarea explicațiilor. Elevii și profesorii s-ar putea să nu fie experți în AI, prin urmare explicațiile despre ce poate sau nu poate face aplicația ar trebui să fie simplificate și ușor de înțeles.
+Un ultim aspect important al explicabilității este simplificarea explicațiilor. Elevii și profesorii pot să nu fie experți în AI, prin urmare explicațiile despre ceea ce aplicația poate sau nu poate face ar trebui să fie simplificate și ușor de înțeles.
 
-![explicații simplificate asupra capacităților AI](../../../translated_images/simplified-explanations.4a23e7b2260406a771a2cd853970a0661388a63f1900737935c0a788daf16dc8.ro.png)
+![explicații simplificate despre capacitățile AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.ro.png)
 
 ### Control
 
-AI generativă creează o colaborare între AI și utilizator, unde, de exemplu, un utilizator poate modifica prompturile pentru a obține rezultate diferite. În plus, odată ce un rezultat este generat, utilizatorii ar trebui să poată modifica rezultatele, oferindu-le un sentiment de control. De exemplu, când folosești Bing, poți adapta promptul în funcție de format, ton și lungime. În plus, poți adăuga modificări la rezultat și modifica rezultatul așa cum se arată mai jos:
+AI generativ creează o colaborare între AI și utilizator, unde, de exemplu, un utilizator poate modifica solicitările pentru a obține rezultate diferite. În plus, odată ce un rezultat este generat, utilizatorii ar trebui să poată modifica rezultatele, oferindu-le un sentiment de control. De exemplu, atunci când utilizați Bing, puteți ajusta solicitarea în funcție de format, ton și lungime. În plus, puteți adăuga modificări la rezultatul obținut și să-l ajustați, așa cum se arată mai jos:
 
-![Rezultatele căutării Bing cu opțiuni de modificare a promptului și a rezultatului](../../../translated_images/bing1.6024fe7d103ff4b54c58b873654403a1e56f81010da05a1f0a210c5ac7a1b8b5.ro.png)
+![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.ro.png)
 
-O altă caracteristică în Bing care permite unui utilizator să aibă control asupra aplicației este abilitatea de a opta pentru sau împotriva datelor pe care AI le folosește. Pentru o aplicație școlară, un elev ar putea dori să folosească notițele sale, precum și resursele profesorilor ca material de revizuire.
+O altă funcție în Bing care permite utilizatorului să aibă control asupra aplicației este abilitatea de a opta pentru utilizarea sau nu a datelor de către AI. Pentru o aplicație școlară, un elev ar putea dori să folosească notițele sale, precum și resursele profesorului ca material de revizuire.
 
-![Rezultatele căutării Bing cu opțiuni de modificare a promptului și a rezultatului](../../../translated_images/bing2.a01fd420e9d52912126965a59c1766e5865f4dd9aaa45408d525e717d0ef3cce.ro.png)
+![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.ro.png)
 
-> Când proiectezi aplicații AI, intenționalitatea este esențială pentru a te asigura că utilizatorii nu au așteptări nerealiste față de capabilitățile acesteia. O modalitate de a face acest lucru este prin crearea de fricțiune între prompturi și rezultate. Reamintește utilizatorului că aceasta este AI și nu un alt om.
+> Când proiectați aplicații AI, intenționalitatea este esențială pentru a vă asigura că utilizatorii nu supraîncred în AI, stabilind așteptări nerealiste cu privire la capacitățile sale. Un mod de a face acest lucru este prin crearea de fricțiuni între solicitări și rezultate. Reamintind utilizatorului că aceasta este AI și nu un alt om.
 
-## Proiectarea Aplicațiilor AI pentru Colaborare și Feedback
+## Proiectarea aplicațiilor AI pentru colaborare și feedback
 
-Așa cum am menționat anterior, AI generativă creează o colaborare între utilizator și AI. Majoritatea interacțiunilor sunt cu un utilizator care introduce un prompt și AI-ul generează un rezultat. Ce se întâmplă dacă rezultatul este incorect? Cum gestionează aplicația erorile dacă apar? AI-ul învinovățește utilizatorul sau își face timp să explice eroarea?
+Așa cum am menționat anterior, AI generativ creează o colaborare între utilizator și AI. Majoritatea interacțiunilor implică un utilizator care introduce o solicitare și AI care generează un rezultat. Ce se întâmplă dacă rezultatul este incorect? Cum gestionează aplicația erorile dacă apar? AI învinovățește utilizatorul sau își ia timp să explice eroarea?
 
-Aplicațiile AI ar trebui să fie construite pentru a primi și oferi feedback. Acest lucru nu doar că ajută sistemul AI să se îmbunătățească, dar și construiește încrederea cu utilizatorii. Un circuit de feedback ar trebui să fie inclus în design, un exemplu putând fi un simplu thumbs up sau down pe rezultat.
+Aplicațiile AI ar trebui să fie construite pentru a primi și oferi feedback. Acest lucru nu doar ajută sistemul AI să se îmbunătățească, ci și construiește încredere cu utilizatorii. Un circuit de feedback ar trebui inclus în design, un exemplu poate fi un simplu thumbs up sau thumbs down pe rezultat.
 
-O altă modalitate de a gestiona acest lucru este să comunici clar capacitățile și limitările sistemului. Când un utilizator face o eroare cerând ceva dincolo de capacitățile AI, ar trebui să existe și o modalitate de a gestiona acest lucru, așa cum se arată mai jos.
+Un alt mod de a gestiona acest lucru este comunicarea clară a capacităților și limitărilor sistemului. Când un utilizator face o eroare solicitând ceva dincolo de capacitățile AI, ar trebui să existe și o modalitate de a gestiona acest lucru, așa cum se arată mai jos.
 
-![Oferirea de feedback și gestionarea erorilor](../../../translated_images/feedback-loops.2abf91e576a435333eb1b37c823a69497337abc5b50ff80c4b9ddbd52bfdbf84.ro.png)
+![Oferirea de feedback și gestionarea erorilor](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.ro.png)
 
-Erorile sistemului sunt comune în aplicațiile unde utilizatorul ar putea avea nevoie de asistență cu informații în afara domeniului de aplicare al AI-ului sau aplicația ar putea avea o limită asupra câtor întrebări/subiecte un utilizator poate genera rezumate. De exemplu, o aplicație AI antrenată cu date pe subiecte limitate, de exemplu, Istorie și Matematică, s-ar putea să nu poată gestiona întrebări legate de Geografie. Pentru a atenua acest lucru, sistemul AI poate oferi un răspuns precum: "Ne pare rău, produsul nostru a fost antrenat cu date în următoarele subiecte....., nu pot răspunde la întrebarea pe care ai pus-o."
+Erorile de sistem sunt frecvente în aplicații, unde utilizatorul ar putea avea nevoie de asistență cu informații în afara domeniului de aplicare al AI sau aplicația poate avea o limită privind numărul de întrebări/subiecte pentru care utilizatorul poate genera rezumate. De exemplu, o aplicație AI antrenată cu date despre subiecte limitate, cum ar fi Istoria și Matematica, poate să nu fie capabilă să gestioneze întrebări despre Geografie. Pentru a atenua acest lucru, sistemul AI poate oferi un răspuns de genul: "Ne pare rău, produsul nostru a fost antrenat cu date în următoarele subiecte....., nu pot răspunde la întrebarea pe care ați adresat-o."
 
-Aplicațiile AI nu sunt perfecte, prin urmare, sunt predispuse să facă greșeli. Când îți proiectezi aplicațiile, ar trebui să te asiguri că creezi spațiu pentru feedback de la utilizatori și gestionarea erorilor într-un mod simplu și ușor de explicat.
+Aplicațiile AI nu sunt perfecte, prin urmare, sunt susceptibile să facă greșeli. Când proiectați aplicațiile dvs., ar trebui să vă asigurați că creați spațiu pentru feedback de la utilizatori și gestionarea erorilor într-un mod simplu și ușor de explicat.
 
 ## Temă
 
-Ia în considerare orice aplicații AI pe care le-ai construit până acum și implementează următorii pași în aplicația ta:
+Luați orice aplicații AI pe care le-ați construit până acum și luați în considerare implementarea pașilor de mai jos în aplicația dvs.:
 
-- **Plăcut:** Gândește-te cum poți face aplicația ta mai plăcută. Adaugi explicații peste tot? Încurajezi utilizatorul să exploreze? Cum formulezi mesajele de eroare?
+- **Plăcut:** Gândiți-vă cum puteți face aplicația dvs. mai plăcută. Adăugați explicații peste tot? Încurajați utilizatorul să exploreze? Cum formulați mesajele de eroare?
 
-- **Utilitate:** Construiește o aplicație web. Asigură-te că aplicația ta este navigabilă atât cu mouse-ul, cât și cu tastatura.
+- **Utilitate:** Construirea unei aplicații web. Asigurați-vă că aplicația dvs. este navigabilă atât cu mouse-ul, cât și cu tastatura.
 
-- **Încredere și transparență:** Nu te încrede complet în AI și în rezultatele sale, gândește-te cum ai adăuga un om în proces pentru a verifica rezultatele. De asemenea, ia în considerare și implementează alte modalități de a obține încredere și transparență.
+- **Încredere și transparență:** Nu aveți încredere completă în AI și în rezultatele sale, gândiți-vă cum ați putea adăuga un om în proces pentru a verifica rezultatele. De asemenea, luați în considerare și implementați alte modalități de a obține încredere și transparență.
 
-- **Control:** Oferă utilizatorului controlul asupra datelor pe care le oferă aplicației. Implementează o modalitate prin care un utilizator poate opta pentru sau împotriva colectării datelor în aplicația AI.
+- **Control:** Oferiți utilizatorului control asupra datelor pe care le furnizează aplicației. Implementați o modalitate prin care utilizatorul poate opta pentru colectarea sau necolectarea datelor în aplicația AI.
 
-## Continuă-ți învățarea!
+<!-- ## [Chestionar post-lectură](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
-După ce ai finalizat această lecție, verifică [colecția noastră de Învățare AI Generativă](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să îți îmbunătățești cunoștințele despre AI Generativă!
+## Continuați să învățați!
 
-Treci la Lecția 13, unde vom analiza cum să [securizăm aplicațiile AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+După ce ați finalizat această lecție, consultați [colecția noastră de învățare despre AI generativ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să vă dezvoltați cunoștințele despre AI generativ!
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu suntem responsabili pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Accesați Lecția 13, unde vom analiza cum să [securizăm aplicațiile AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
+
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

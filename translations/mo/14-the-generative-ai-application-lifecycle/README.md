@@ -1,98 +1,100 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "27a5347a5022d5ef0a72ab029b03526a",
-  "translation_date": "2025-05-19T23:21:09+00:00",
+  "original_hash": "b9d32511b27373a1b21b5789d4fda057",
+  "translation_date": "2025-10-17T15:16:56+00:00",
   "source_file": "14-the-generative-ai-application-lifecycle/README.md",
   "language_code": "mo"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.0b85d0b37979269e80a18bb1e758e1ccca0a2195b426a0af666c8ad14aee60b0.mo.png)](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst)
+[![整合函數呼叫](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.mo.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
-# The Generative AI Application Lifecycle
+# 生成式 AI 應用生命周期
 
-Satu pertanyaan penting untuk semua aplikasi AI adalah relevansi fitur AI, karena AI adalah bidang yang berkembang pesat, untuk memastikan bahwa aplikasi Anda tetap relevan, andal, dan kuat, Anda perlu memantau, mengevaluasi, dan meningkatkannya secara terus-menerus. Di sinilah siklus hidup AI generatif berperan.
+對所有 AI 應用來說，一個重要的問題是 AI 功能的相關性。由於 AI 是一個快速演進的領域，為了確保您的應用保持相關性、可靠性和穩健性，您需要持續監控、評估並改進它。這就是生成式 AI 生命周期的作用所在。
 
-Siklus hidup AI generatif adalah kerangka kerja yang memandu Anda melalui tahapan pengembangan, penerapan, dan pemeliharaan aplikasi AI generatif. Ini membantu Anda mendefinisikan tujuan, mengukur kinerja, mengidentifikasi tantangan, dan menerapkan solusi. Ini juga membantu Anda menyelaraskan aplikasi Anda dengan standar etika dan hukum dari domain Anda dan pemangku kepentingan Anda. Dengan mengikuti siklus hidup AI generatif, Anda dapat memastikan bahwa aplikasi Anda selalu memberikan nilai dan memuaskan pengguna Anda.
+生成式 AI 生命周期是一個框架，指導您完成開發、部署和維護生成式 AI 應用的各個階段。它幫助您定義目標、衡量性能、識別挑戰並實施解決方案。它還幫助您使應用符合您領域和利益相關者的倫理和法律標準。通過遵循生成式 AI 生命周期，您可以確保您的應用始終提供價值並滿足使用者需求。
 
-## Pendahuluan
+## 介紹
 
-Dalam bab ini, Anda akan:
+在本章中，您將學習：
 
-- Memahami Perubahan Paradigma dari MLOps ke LLMOps
-- Siklus Hidup LLM
-- Alat Siklus Hidup
-- Metrifikasi dan Evaluasi Siklus Hidup
+- 理解從 MLOps 到 LLMOps 的範式轉變
+- LLM 生命周期
+- 生命周期工具
+- 生命周期的指標化與評估
 
-## Memahami Perubahan Paradigma dari MLOps ke LLMOps
+## 理解從 MLOps 到 LLMOps 的範式轉變
 
-LLM adalah alat baru dalam gudang senjata Kecerdasan Buatan, mereka sangat kuat dalam tugas analisis dan generasi untuk aplikasi, namun kekuatan ini memiliki beberapa konsekuensi dalam bagaimana kita menyederhanakan tugas AI dan Pembelajaran Mesin Klasik.
+LLM 是人工智慧工具庫中的新工具，它在應用的分析和生成任務中非常強大。然而，這種強大也對我們如何簡化 AI 和傳統機器學習任務產生了一些影響。
 
-Dengan ini, kita memerlukan Paradigma baru untuk mengadaptasi alat ini secara dinamis, dengan insentif yang tepat. Kita dapat mengkategorikan aplikasi AI lama sebagai "Aplikasi ML" dan Aplikasi AI baru sebagai "Aplikasi GenAI" atau hanya "Aplikasi AI", mencerminkan teknologi dan teknik utama yang digunakan pada saat itu. Ini menggeser narasi kita dalam berbagai cara, lihat perbandingan berikut.
+因此，我們需要一個新的範式來動態適應這個工具，並設置正確的激勵機制。我們可以將舊的 AI 應用分類為「ML 應用」，而新的 AI 應用則分類為「生成式 AI 應用」或簡稱「AI 應用」，以反映當時主流的技術和方法。這在多方面改變了我們的敘述方式，請看以下比較。
 
-![Perbandingan LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.82d7bf6eb2d98a01e35f234df654e9aa4ebec89792f274695a5da8dc3f388084.mo.png)
+![LLMOps vs. MLOps 比較](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.mo.png)
 
-Perhatikan bahwa dalam LLMOps, kita lebih fokus pada Pengembang Aplikasi, menggunakan integrasi sebagai poin kunci, menggunakan "Model-sebagai-Layanan" dan memikirkan poin-poin berikut untuk metrik.
+注意，在 LLMOps 中，我們更關注應用開發者，將整合作為關鍵點，使用「模型即服務」，並考慮以下指標：
 
-- Kualitas: Kualitas respons
-- Kerugian: AI yang Bertanggung Jawab
-- Kejujuran: Dasar respons (Masuk akal? Apakah itu benar?)
-- Biaya: Anggaran Solusi
-- Latensi: Waktu rata-rata untuk respons token
+- 質量：回應質量
+- 傷害：負責任的 AI
+- 誠實：回應的基礎性（是否合理？是否正確？）
+- 成本：解決方案預算
+- 延遲：每個 token 回應的平均時間
 
-## Siklus Hidup LLM
+## LLM 生命周期
 
-Pertama, untuk memahami siklus hidup dan modifikasinya, mari kita perhatikan infografik berikut.
+首先，為了理解生命周期及其修改，請注意以下資訊圖表。
 
-![Infografik LLMOps](../../../translated_images/02-llmops.287de964b5ce9577678b7f053efb3a3c92adf0852c882c5bae94c11b7563e4db.mo.png)
+![LLMOps 資訊圖表](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.mo.png)
 
-Seperti yang Anda lihat, ini berbeda dari Siklus Hidup biasanya dari MLOps. LLM memiliki banyak persyaratan baru, seperti Prompting, teknik berbeda untuk meningkatkan kualitas (Penyetelan Halus, RAG, Meta-Prompts), penilaian dan tanggung jawab yang berbeda dengan AI yang bertanggung jawab, terakhir, metrik evaluasi baru (Kualitas, Kerugian, Kejujuran, Biaya, dan Latensi).
+如您所見，這與 MLOps 的常規生命周期不同。LLM 有許多新的需求，例如提示設計、改進質量的不同技術（微調、RAG、Meta-Prompts）、負責任 AI 的不同評估和責任，以及新的評估指標（質量、傷害、誠實、成本和延遲）。
 
-Sebagai contoh, lihat bagaimana kita beride. Menggunakan rekayasa prompt untuk bereksperimen dengan berbagai LLM untuk mengeksplorasi kemungkinan untuk menguji apakah Hipotesis mereka bisa benar.
+例如，看看我們如何構思。使用提示工程來試驗各種 LLM，探索可能性並測試其假設是否正確。
 
-Perhatikan bahwa ini tidak linier, tetapi terintegrasi dalam loop, iteratif, dan dengan siklus yang menyeluruh.
+請注意，這不是線性的，而是整合的迴圈，迭代且具有一個總體循環。
 
-Bagaimana kita bisa mengeksplorasi langkah-langkah tersebut? Mari kita masuk ke detail bagaimana kita bisa membangun siklus hidup.
+我們如何探索這些步驟？讓我們詳細了解如何構建生命周期。
 
-![Alur Kerja LLMOps](../../../translated_images/03-llm-stage-flows.f3b87c210c1fe37084a7b7408877ff1688e2dc565694789820ec259e76d4ed05.mo.png)
+![LLMOps 工作流程](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.mo.png)
 
-Ini mungkin terlihat sedikit rumit, mari kita fokus pada tiga langkah besar terlebih dahulu.
+這可能看起來有點複雜，先專注於三個主要步驟。
 
-1. Beride/Mengeksplorasi: Eksplorasi, di sini kita dapat mengeksplorasi sesuai dengan kebutuhan bisnis kita. Membuat prototipe, membuat [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) dan menguji apakah cukup efisien untuk Hipotesis kita.
-2. Membangun/Meningkatkan: Implementasi, sekarang, kita mulai mengevaluasi untuk dataset yang lebih besar, menerapkan teknik, seperti Penyetelan Halus dan RAG, untuk memeriksa kekokohan solusi kita. Jika tidak, menerapkannya kembali, menambahkan langkah baru dalam alur kita atau merestrukturisasi data, mungkin membantu. Setelah menguji alur dan skala kita, jika berhasil dan memeriksa Metrik kita, siap untuk langkah berikutnya.
-3. Mengoperasionalkan: Integrasi, sekarang menambahkan Sistem Pemantauan dan Peringatan ke sistem kita, penerapan dan integrasi aplikasi ke Aplikasi kita.
+1. 構思/探索：探索階段，根據業務需求進行探索。原型設計，創建 [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst)，並測試其是否足夠高效以支持假設。
+2. 建構/增強：實施階段，開始評估更大的數據集，實施技術，例如微調和 RAG，檢查解決方案的穩健性。如果不夠穩健，重新實施，添加新步驟到流程或重構數據可能會有所幫助。測試流程和規模後，如果有效並檢查指標，則準備進入下一步。
+3. 操作化：整合階段，現在添加監控和警報系統到系統，部署並將應用整合到您的應用中。
 
-Kemudian, kita memiliki siklus manajemen yang menyeluruh, berfokus pada keamanan, kepatuhan, dan tata kelola.
+接著，我們有管理的總體循環，專注於安全性、合規性和治理。
 
-Selamat, sekarang Anda memiliki Aplikasi AI yang siap digunakan dan beroperasi. Untuk pengalaman langsung, lihat [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
+恭喜您，現在您的 AI 應用已準備好運行並操作。想要實際操作體驗，請查看 [Contoso Chat Demo](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)。
 
-Sekarang, alat apa yang bisa kita gunakan?
+那麼，我們可以使用哪些工具呢？
 
-## Alat Siklus Hidup
+## 生命周期工具
 
-Untuk Alat, Microsoft menyediakan [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) dan [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) memudahkan dan membuat siklus Anda mudah diimplementasikan dan siap digunakan.
+在工具方面，Microsoft 提供了 [Azure AI 平台](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) 和 [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst)，使您的生命周期更容易實施並準備好使用。
 
-[Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), memungkinkan Anda menggunakan [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio adalah portal web yang memungkinkan Anda untuk Mengeksplorasi model, sampel, dan alat. Mengelola sumber daya Anda, alur pengembangan UI, dan opsi SDK/CLI untuk pengembangan berbasis kode.
+[Azure AI 平台](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) 允許您使用 [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)。AI Studio 是一個網頁入口，讓您探索模型、範例和工具。管理您的資源、UI 開發流程以及 Code-First 開發的 SDK/CLI 選項。
 
-![Kemungkinan Azure AI](../../../translated_images/04-azure-ai-platform.bf903e8cdf00f73896d804bd8e6bea62f5280498c998271bd5629c1efa8b466f.mo.png)
+![Azure AI 的可能性](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.mo.png)
 
-Azure AI, memungkinkan Anda menggunakan berbagai sumber daya, untuk mengelola operasi, layanan, proyek, pencarian vektor, dan kebutuhan basis data Anda.
+Azure AI 允許您使用多種資源來管理您的操作、服務、項目、向量搜索和數據庫需求。
 
-![LLMOps dengan Azure AI](../../../translated_images/05-llm-azure-ai-prompt.dc29c0d74b1dd939f7c6cbf28b1fee54b9a846ba04d4068c40134e2627cb7232.mo.png)
+![使用 Azure AI 的 LLMOps](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.mo.png)
 
-Membangun, dari Bukti Konsep (POC) hingga aplikasi skala besar dengan PromptFlow:
+從概念驗證（POC）到大規模應用，使用 PromptFlow 構建：
 
-- Merancang dan Membangun aplikasi dari VS Code, dengan alat visual dan fungsional
-- Menguji dan menyetel aplikasi Anda untuk kualitas AI, dengan mudah.
-- Menggunakan Azure AI Studio untuk Mengintegrasikan dan Mengiterasikan dengan cloud, Mendorong dan Menerapkan untuk integrasi cepat.
+- 從 VS Code 設計和構建應用，使用視覺化和功能性工具
+- 測試並微調您的應用，以便輕鬆實現高質量 AI
+- 使用 Azure AI Studio 與雲端整合和迭代，快速推送和部署進行整合
 
-![LLMOps dengan PromptFlow](../../../translated_images/06-llm-promptflow.8f0a6fcbea793a042a3db89ca1db1aa8fd540526958c97b5e894748fb4a87edd.mo.png)
+![使用 PromptFlow 的 LLMOps](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.mo.png)
 
-## Bagus! Lanjutkan Pembelajaran Anda!
+## 太棒了！繼續學習！
 
-Luar biasa, sekarang pelajari lebih lanjut tentang bagaimana kita menyusun aplikasi untuk menggunakan konsep dengan [Aplikasi Obrolan Contoso](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), untuk memeriksa bagaimana Cloud Advocacy menambahkan konsep tersebut dalam demonstrasi. Untuk lebih banyak konten, periksa [sesi breakout Ignite kami!
-](https://www.youtube.com/watch?v=DdOylyrTOWg)
+太棒了，現在學習更多關於如何結構化應用以使用這些概念，請查看 [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)，了解雲端倡導如何在演示中加入這些概念。更多內容請查看我們的 [Ignite 分組會議！](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Sekarang, periksa Pelajaran 15, untuk memahami bagaimana [Retrieval Augmented Generation dan Basis Data Vektor](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) berdampak pada AI Generatif dan membuat Aplikasi yang lebih menarik!
+接下來，查看第 15 課，了解 [檢索增強生成和向量數據庫](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) 如何影響生成式 AI，並創建更具吸引力的應用！
 
-I'm sorry, but I am unable to fulfill your request to translate the text into "mo" as it is not clear what language "mo" refers to. Could you please specify the language you want the text to be translated into?
+---
+
+**免責聲明**：  
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

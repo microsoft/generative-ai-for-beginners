@@ -1,182 +1,193 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2f686f2eb794941761252ac5e8e090b",
-  "translation_date": "2025-05-19T14:18:24+00:00",
+  "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
+  "translation_date": "2025-10-17T21:27:32+00:00",
   "source_file": "02-exploring-and-comparing-different-llms/README.md",
   "language_code": "hu"
 }
 -->
-# Felfedezés és összehasonlítás különböző LLM-ekkel
+# Különböző LLM-ek felfedezése és összehasonlítása
 
-[![Felfedezés és összehasonlítás különböző LLM-ekkel](../../../translated_images/02-lesson-banner.722fb0fdf701564d4479112ef4c4fa964c98dce0c241decbe12aae32e9fb4659.hu.png)](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)
+[![Különböző LLM-ek felfedezése és összehasonlítása](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.hu.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Kattintson a fenti képre, hogy megnézze a leckéről készült videót_
+> _Kattints a fenti képre, hogy megnézd a leckéről szóló videót_
 
-Az előző leckében láttuk, hogyan változtatja meg a generatív AI a technológiai környezetet, hogyan működnek a nagy nyelvi modellek (LLM-ek), és hogyan alkalmazhatja egy vállalkozás - például a startupunk - azokat a saját eseteikben és növekedhet! Ebben a fejezetben különböző típusú nagy nyelvi modelleket (LLM-eket) hasonlítunk össze, hogy megértsük azok előnyeit és hátrányait.
+Az előző leckében láthattuk, hogyan változtatja meg a generatív mesterséges intelligencia a technológiai környezetet, hogyan működnek a nagy nyelvi modellek (LLM-ek), és hogyan alkalmazhatja egy vállalkozás - például a mi startupunk - ezeket a saját eseteiben, hogy növekedjen! Ebben a fejezetben különböző típusú nagy nyelvi modelleket (LLM-eket) fogunk összehasonlítani, hogy megértsük azok előnyeit és hátrányait.
 
 Startupunk következő lépése az LLM-ek jelenlegi környezetének feltérképezése és annak megértése, hogy melyek alkalmasak a mi felhasználási esetünkre.
 
 ## Bevezetés
 
-Ez a lecke kiterjed:
+Ez a lecke az alábbiakat fogja tárgyalni:
 
-- Különböző típusú LLM-ekre a jelenlegi környezetben.
-- Modellek tesztelésére, iterálására és összehasonlítására az Azure-ban.
+- Az LLM-ek különböző típusai a jelenlegi környezetben.
+- Különböző modellek tesztelése, iterálása és összehasonlítása az Azure-ban történő felhasználásra.
 - Hogyan telepítsünk egy LLM-et.
 
 ## Tanulási célok
 
-A lecke befejezése után képes leszel:
+A lecke elvégzése után képes leszel:
 
-- Kiválasztani a megfelelő modellt a felhasználási esetedhez.
-- Megérteni, hogyan tesztelheted, iterálhatod és javíthatod a modelled teljesítményét.
-- Tudni, hogyan telepítenek modelleket a vállalkozások.
+- Kiválasztani a megfelelő modellt a saját felhasználási esethez.
+- Megérteni, hogyan kell tesztelni, iterálni és javítani a modell teljesítményét.
+- Tudni, hogyan telepítik a vállalkozások a modelleket.
 
 ## Különböző típusú LLM-ek megértése
 
-Az LLM-eket többféleképpen kategorizálhatjuk az architektúrájuk, a képzési adataik és a felhasználási esetük alapján. Ezeknek a különbségeknek a megértése segít startupunknak kiválasztani a megfelelő modellt az adott helyzethez, és megérteni, hogyan tesztelhetjük, iterálhatjuk és javíthatjuk a teljesítményt.
+Az LLM-eket többféleképpen lehet kategorizálni az architektúrájuk, a tanítási adataik és a felhasználási esetük alapján. Ezeknek a különbségeknek a megértése segít a startupunknak kiválasztani a megfelelő modellt az adott helyzethez, valamint megérteni, hogyan kell tesztelni, iterálni és javítani a teljesítményt.
 
-Sokféle LLM modell létezik, a modell kiválasztása attól függ, hogy mire szeretnéd használni őket, milyen adatokat használsz, mennyit vagy hajlandó fizetni és még sok más tényezőtől.
+Számos különböző típusú LLM-modell létezik, és a választásod attól függ, hogy mire szeretnéd használni őket, milyen adataid vannak, mennyit vagy hajlandó fizetni, és még sok más tényezőtől.
 
-Attól függően, hogy a modelleket szöveg, hang, videó, kép generálására és így tovább szeretnéd használni, választhatsz különböző típusú modellt.
+Attól függően, hogy a modelleket szöveg-, hang-, videó-, képgenerálásra stb. szeretnéd használni, eltérő típusú modellt választhatsz.
 
-- **Hang- és beszédfelismerés**. Erre a célra a Whisper típusú modellek kiváló választás, mivel általános célúak és a beszédfelismerésre irányulnak. Különböző hangokon képzett és képes többnyelvű beszédfelismerésre. Tudj meg többet a [Whisper típusú modellekről itt](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Hang- és beszédfelismerés**. Erre a célra a Whisper típusú modellek kiváló választásnak bizonyulnak, mivel általános célúak és beszédfelismerésre irányulnak. Sokféle hanganyagon tanították őket, és képesek többnyelvű beszédfelismerésre. További információ a [Whisper típusú modellekről itt](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
 
-- **Kép generálás**. Kép generálásra a DALL-E és a Midjourney két nagyon ismert választás. A DALL-E az Azure OpenAI által kínált. [Olvass többet a DALL-E-ről itt](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) és a tananyag 9. fejezetében.
+- **Képgenerálás**. A képgeneráláshoz a DALL-E és a Midjourney két nagyon ismert választás. A DALL-E-t az Azure OpenAI kínálja. [További információ a DALL-E-ről itt](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst), valamint a tananyag 9. fejezetében.
 
-- **Szöveg generálás**. A legtöbb modell szöveg generálásra van kiképezve, és nagy választékot kínál a GPT-3.5-től a GPT-4-ig. Különböző költségekkel járnak, a GPT-4 a legdrágább. Érdemes megnézni az [Azure OpenAI játszóteret](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst), hogy kiértékeld, mely modellek illeszkednek legjobban a szükségleteidhez képesség és költség szempontjából.
+- **Szöveggenerálás**. A legtöbb modellt szöveggenerálásra tanították, és számos választási lehetőség áll rendelkezésre, például GPT-3.5-től GPT-4-ig. Ezek különböző költségekkel járnak, a GPT-4 a legdrágább. Érdemes megnézni az [Azure OpenAI játszóteret](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst), hogy értékelni tudjuk, mely modellek felelnek meg legjobban az igényeinknek képességek és költségek szempontjából.
 
-- **Multi-modalitás**. Ha többféle adatot szeretnél kezelni bemenetként és kimenetként, érdemes megfontolni modelleket, mint például [gpt-4 turbo with vision vagy gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - az OpenAI modellek legújabb kiadásai - amelyek képesek kombinálni a természetes nyelv feldolgozást a vizuális megértéssel, lehetővé téve a multi-modális interfészekkel való interakciókat.
+- **Multimodalitás**. Ha többféle adatot szeretnél kezelni bemenetként és kimenetként, érdemes lehet olyan modelleket megvizsgálni, mint például a [gpt-4 turbo vizuális funkcióval vagy gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - az OpenAI modellek legújabb kiadásai -, amelyek képesek kombinálni a természetes nyelvi feldolgozást a vizuális megértéssel, lehetővé téve a multimodális interfészeken keresztüli interakciókat.
 
-A modell kiválasztása azt jelenti, hogy kapsz néhány alapvető képességet, amelyek azonban lehet, hogy nem elegendőek. Gyakran van cégspecifikus adat, amelyet valahogy el kell mondanod az LLM-nek. Számos különböző lehetőség van arra, hogyan közelítsd meg ezt, erről többet az elkövetkező szakaszokban.
+Egy modell kiválasztása alapvető képességeket biztosít, amelyek azonban nem mindig elegendőek. Gyakran előfordul, hogy a vállalatnak specifikus adatai vannak, amelyeket valahogyan közölni kell az LLM-mel. Erre többféle megközelítés létezik, amelyeket a következő szakaszokban tárgyalunk.
 
-### Alapmodellek versus LLM-ek
+### Alapmodellek és LLM-ek
 
-Az Alapmodell kifejezést [a Stanford kutatói alkották](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst), és úgy definiálták, mint egy AI modellt, amely bizonyos kritériumokat követ, mint például:
+Az Alapmodell kifejezést [Stanford kutatók alkották meg](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst), és olyan AI modellként definiálták, amely megfelel bizonyos kritériumoknak, például:
 
-- **Nem felügyelt tanulással vagy önfelügyelt tanulással vannak kiképezve**, ami azt jelenti, hogy címkézetlen multi-modális adatokon vannak kiképezve, és nem igényelnek emberi annotációt vagy adatcímkézést a képzési folyamatukhoz.
-- **Nagyon nagy modellek**, amelyek nagyon mély neurális hálózatokon alapulnak, milliárd paraméterekkel képzett.
-- **Általában más modellek 'alapjaként' szolgálnak**, ami azt jelenti, hogy kiindulópontként használhatók más modellek építésére, amit finomhangolással lehet elérni.
+- **Nem felügyelt tanulással vagy önfelügyelt tanulással tanítják őket**, ami azt jelenti, hogy címkézetlen multimodális adatokon tanítják őket, és nem igényelnek emberi annotációt vagy adatcímkézést a tanítási folyamathoz.
+- **Nagyon nagy modellek**, amelyek nagyon mély neurális hálózatokon alapulnak, és milliárdnyi paraméterrel vannak tanítva.
+- **Általában más modellek „alapjaként” szolgálnak**, ami azt jelenti, hogy kiindulópontként használhatók más modellek építéséhez, amit finomhangolással lehet elérni.
 
-![Alapmodellek versus LLM-ek](../../../translated_images/FoundationModel.1b89e9d94c6a60a9af557b1c0a10faa3a55c0cbc6bb357eb144512ab833d162c.hu.png)
+![Alapmodellek és LLM-ek](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.hu.png)
 
-Kép forrása: [Alapvető útmutató az Alapmodellekhez és Nagy Nyelvi Modellekhez | Babar M Bhatti | Medium
+Kép forrása: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-A megkülönböztetés további tisztázása érdekében vegyük példának a ChatGPT-t. Az első verziójának felépítéséhez egy GPT-3.5 nevű modell szolgált alapmodellként. Ez azt jelenti, hogy az OpenAI használt néhány chat-specifikus adatot, hogy létrehozzon egy hangolt verziót a GPT-3.5-ből, amely specializálódott a beszélgetési helyzetekben, mint például a chatbotok, való jó teljesítményre.
+A különbség további tisztázása érdekében vegyük példának a ChatGPT-t. A ChatGPT első verziójának létrehozásához egy GPT-3.5 nevű modell szolgált alapmodellként. Ez azt jelenti, hogy az OpenAI néhány chat-specifikus adatot használt fel egy finomhangolt GPT-3.5 verzió létrehozásához, amelyet kifejezetten arra specializáltak, hogy jól teljesítsen beszélgetési helyzetekben, például chatbotok esetében.
 
-![Alapmodell](../../../translated_images/Multimodal.41df52bb0de979b80e9643ba34f8f1b53d7791cebd88bceedda6497241495f27.hu.png)
+![Alapmodell](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.hu.png)
 
 Kép forrása: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Nyílt forráskódú versus Tulajdonosi modellek
+### Nyílt forráskódú és zárt modellek
 
-Az LLM-ek másik módja, hogy nyílt forráskódúak vagy tulajdonosiak.
+Az LLM-eket aszerint is lehet kategorizálni, hogy nyílt forráskódúak vagy zártak.
 
-A nyílt forráskódú modellek olyan modellek, amelyeket nyilvánosságra hoznak, és bárki használhatja őket. Gyakran a létrehozó vállalat vagy a kutatói közösség teszi őket elérhetővé. Ezek a modellek lehetővé teszik az ellenőrzést, módosítást és testreszabást a különböző LLM felhasználási esetekhez. Azonban nem mindig optimalizáltak termelési használatra, és lehet, hogy nem olyan teljesítményesek, mint a tulajdonosi modellek. Továbbá, a nyílt forráskódú modellek finanszírozása korlátozott lehet, és lehet, hogy nem tartják fenn hosszú távon, vagy nem frissítik a legújabb kutatásokkal. Népszerű nyílt forráskódú modellek példái közé tartozik [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) és [LLaMA](https://llama.meta.com).
+A nyílt forráskódú modellek olyan modellek, amelyeket a nyilvánosság számára elérhetővé tesznek, és bárki használhatja őket. Gyakran az őket létrehozó vállalat vagy a kutatói közösség teszi elérhetővé őket. Ezeket a modelleket lehet ellenőrizni, módosítani és testre szabni az LLM-ek különböző felhasználási eseteihez. Azonban nem mindig optimalizáltak a termelési használatra, és nem biztos, hogy olyan teljesítményesek, mint a zárt modellek. Ráadásul a nyílt forráskódú modellek finanszírozása korlátozott lehet, és nem biztos, hogy hosszú távon karbantartják őket, vagy frissítik a legújabb kutatásokkal. Népszerű nyílt forráskódú modellek például [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) és [LLaMA](https://llama.meta.com).
 
-A tulajdonosi modellek olyan modellek, amelyeket egy vállalat birtokol, és nem teszik őket elérhetővé a nyilvánosság számára. Ezek a modellek gyakran optimalizáltak termelési használatra. Azonban nem engedélyezett az ellenőrzés, módosítás vagy testreszabás különböző felhasználási esetekhez. Továbbá, nem mindig elérhetők ingyen, és előfizetést vagy fizetést igényelhetnek a használatukhoz. Továbbá, a felhasználók nem rendelkeznek az adatok felett, amelyeket a modell képzéséhez használnak, ami azt jelenti, hogy a modell tulajdonosának kell bízniuk az adatok adatvédelmének és az AI felelős használatának biztosításában. Népszerű tulajdonosi modellek példái közé tartozik [OpenAI modellek](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) vagy [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+A zárt modellek olyan modellek, amelyeket egy vállalat birtokol, és nem tesznek nyilvánosan elérhetővé. Ezeket a modelleket gyakran optimalizálják termelési használatra. Azonban nem lehet őket ellenőrizni, módosítani vagy testre szabni különböző felhasználási esetekhez. Ráadásul nem mindig ingyenesek, és előfizetést vagy fizetést igényelhetnek a használathoz. Továbbá a felhasználók nem rendelkeznek kontrollal a modell tanításához használt adatok felett, ami azt jelenti, hogy a modell tulajdonosának kell megbízhatóan biztosítania az adatvédelem és az AI felelős használatának betartását. Népszerű zárt modellek például [OpenAI modellek](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) vagy [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
 
-### Beágyazás versus Kép generálás versus Szöveg és Kód generálás
+### Beágyazás, képgenerálás, szöveg- és kódgenerálás
 
 Az LLM-eket az általuk generált kimenet alapján is kategorizálhatjuk.
 
-A beágyazások olyan modellek, amelyek képesek szöveget numerikus formába, úgynevezett beágyazásba konvertálni, amely a bemeneti szöveg numerikus reprezentációja. A beágyazások megkönnyítik a gépek számára a szavak vagy mondatok közötti kapcsolatok megértését, és más modellek, mint például osztályozási modellek vagy csoportosítási modellek, amelyek jobban teljesítenek numerikus adatokon, bemenetként fogyaszthatók. A beágyazási modelleket gyakran használják átvitel tanulásra, ahol egy modellt egy helyettesítő feladatra építenek, amelyhez bőséges adat áll rendelkezésre, majd a modell súlyait (beágyazásokat) újra felhasználják más lefelé irányuló feladatokra. Ennek a kategóriának egy példája az [OpenAI beágyazások](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+A beágyazások olyan modellek, amelyek képesek a szöveget numerikus formává, úgynevezett beágyazássá alakítani, amely az input szöveg numerikus reprezentációja. A beágyazások megkönnyítik a gépek számára a szavak vagy mondatok közötti kapcsolatok megértését, és más modellek, például osztályozási vagy klaszterezési modellek bemeneteként is felhasználhatók, amelyek jobban teljesítenek numerikus adatokkal. A beágyazási modelleket gyakran használják transzfer tanulásra, ahol egy modellt egy helyettesítő feladatra építenek, amelyhez bőséges adat áll rendelkezésre, majd a modell súlyait (beágyazásokat) újra felhasználják más downstream feladatokhoz. Példa erre a kategóriára: [OpenAI beágyazások](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Beágyazás](../../../translated_images/Embedding.fbf261f314681a51994056854fd928b69b253616bb313e68a9ce19a2b15c8768.hu.png)
+![Beágyazás](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.hu.png)
 
-A kép generálási modellek olyan modellek, amelyek képeket generálnak. Ezeket a modelleket gyakran használják kép szerkesztésre, kép szintézisre és kép fordításra. A kép generálási modellek gyakran nagy képadatkészleteken, például [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst) képzett, és új képek generálására vagy meglévő képek szerkesztésére használhatók festés, szuperfelbontás és színezési technikák segítségével. Példák közé tartozik a [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) és a [Stable Diffusion modellek](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+A képgenerálási modellek olyan modellek, amelyek képeket generálnak. Ezeket a modelleket gyakran használják kép szerkesztésére, kép szintézisére és kép átalakítására. A képgenerálási modelleket gyakran nagy képadatbázisokon tanítják, például [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), és új képek generálására vagy meglévő képek szerkesztésére használhatók, például inpainting, szuperfelbontás és színezési technikák segítségével. Példák: [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) és [Stable Diffusion modellek](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Kép generálás](../../../translated_images/Image.fffee8e361cc35ed409975f6fc85502ae3d20b8eb01273cd327294e26318a049.hu.png)
+![Képgenerálás](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.hu.png)
 
-A szöveg és kód generálási modellek olyan modellek, amelyek szöveget vagy kódot generálnak. Ezeket a modelleket gyakran használják szöveg összefoglalásra, fordításra és kérdés megválaszolásra. A szöveg generálási modellek gyakran nagy szövegadatkészleteken, például [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst) képzett, és új szöveg generálására vagy kérdések megválaszolására használhatók. A kód generálási modellek, mint például [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), gyakran nagy kódadatkészleteken, például GitHub képzett, és új kód generálására vagy meglévő kód hibáinak javítására használhatók.
+A szöveg- és kódgenerálási modellek olyan modellek, amelyek szöveget vagy kódot generálnak. Ezeket a modelleket gyakran használják szövegösszefoglalásra, fordításra és kérdések megválaszolására. A szöveggenerálási modelleket gyakran nagy szövegadatbázisokon tanítják, például [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), és új szövegek generálására vagy kérdések megválaszolására használhatók. A kódgenerálási modelleket, mint például [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), gyakran nagy kódadatbázisokon tanítják, például GitHubon, és új kód generálására vagy meglévő kód hibáinak javítására használhatók.
 
-![Szöveg és kód generálás](../../../translated_images/Text.35cfbe12e08d5b5615cf7db5174fe477bf96f45c5b82d53c29523bd8b94bdc17.hu.png)
+![Szöveg- és kódgenerálás](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.hu.png)
 
-### Kódoló-Dekódoló versus Csak dekódoló
+### Kódoló-dekódoló vs. Csak dekódoló
 
-Az LLM-ek különböző architektúráinak megvitatásához használjunk egy analógiát.
+Az LLM-ek különböző architektúráinak megértéséhez használjunk egy hasonlatot.
 
-Képzeld el, hogy a vezetőd adott neked egy feladatot, hogy írj egy kvízt a diákok számára. Két kollégád van; az egyik a tartalom létrehozásáért felelős, a másik a felülvizsgálatért.
+Képzeld el, hogy a vezetőd adott neked egy feladatot, hogy írj egy kvízt a diákok számára. Két kollégád van; az egyik a tartalom létrehozásáért, a másik pedig annak ellenőrzéséért felel.
 
-A tartalom létrehozó olyan, mint egy Csak dekódoló modell, megnézheti a témát és azt, amit már írtál, majd az alapján írhat egy kurzust. Nagyon jók az érdekes és informatív tartalom írásában, de nem nagyon jók a téma és a tanulási célok megértésében. A dekódoló modellek példái a GPT család modellek, például a GPT-3.
+A tartalomkészítő olyan, mint egy csak dekódoló modell, amely képes megnézni a témát és azt, amit már leírtál, majd ennek alapján megírni egy tananyagot. Nagyon jó az érdekes és informatív tartalom írásában, de nem túl jó a téma és a tanulási célok megértésében. Néhány példa a dekódoló modellekre: a GPT család modelljei, például a GPT-3.
 
-A felülvizsgáló olyan, mint egy Csak kódoló modell, megnézi az írt kurzust és a válaszokat, észreveszi a kapcsolatot közöttük és megérti a kontextust, de nem jó a tartalom generálásában. A kódoló modellek példája a BERT.
+Az ellenőrző olyan, mint egy csak kódoló modell, amely megnézi az elkészült tananyagot és a válaszokat, észreveszi a kapcsolatokat és megérti a kontextust, de nem jó a tartalom generálásában. Példa a csak kódoló modellre: BERT.
 
-Képzeld el, hogy lehetne valaki, aki létrehozhatja és felülvizsgálhatja a kvízt, ez egy Kódoló-Dekódoló modell. Néhány példa lenne a BART és a T5.
+Képzeld el, hogy lehetne valaki, aki egyszerre tudna kvízt készíteni és ellenőrizni, ez egy kódoló-dekódoló modell. Néhány példa: BART és T5.
 
-### Szolgáltatás versus Modell
+### Szolgáltatás vs. Modell
 
-Most beszéljünk a szolgáltatás és a modell közötti különbségről. A szolgáltatás egy termék, amelyet egy Felhő Szolgáltató kínál, és gyakran modellek, adatok és más összetevők kombinációja. A modell a szolgáltatás központi eleme, és gyakran alapmodell, mint például egy LLM.
+Most beszéljünk a különbségről egy szolgáltatás és egy modell között. A szolgáltatás egy termék, amelyet egy felhőszolgáltató kínál, és gyakran modellek, adatok és más összetevők kombinációja. A modell egy szolgáltatás alapvető összetevője, és gyakran egy alapmodell, például egy LLM.
 
-A szolgáltatások gyakran optimalizáltak termelési használatra, és gyakran könnyebben használhatók, mint a modellek, grafikus felhasználói felületen keresztül. Azonban a szolgáltatások nem mindig elérhetők ingyen, és előfizetést vagy fizetést igényelhetnek a használatukért, cserébe a szolgáltatás tulajdonosának felszerelése és erőforrásai, költségek optimalizálása és könnyű skálázás. Példa egy szolgáltatásra az [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), amely pay-as-you-go díjtervet kínál, ami azt jelenti, hogy a felhasználókat arányosan terhelik azzal, hogy mennyit használják a szolgáltatást. Továbbá, az Azure OpenAI Service vállalati szintű biztonságot és felelős AI keretrendszert kínál a modellek képességein felül.
+A szolgáltatások gyakran optimalizáltak termelési használatra, és gyakran könnyebben használhatók, például grafikus felhasználói felületen keresztül. Azonban a szolgáltatások nem mindig ingyenesek, és előfizetést vagy fizetést igényelhetnek a használathoz, cserébe a szolgáltatás tulajdonosának berendezései és erőforrásai használatáért, a költségek optimalizálásáért és az egyszerű skálázásért. Példa egy szolgáltatásra: [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), amely pay-as-you-go díjcsomagot kínál, ami azt jelenti, hogy a felhasználókat arányosan terhelik a szolgáltatás használatának mértékével. Az Azure OpenAI Service emellett vállalati szintű biztonságot és felelős AI keretrendszert kínál a modellek képességei mellett.
 
-A modellek csak a Neurális Hálózat, a paraméterekkel, súlyokkal és másokkal. Lehetővé teszi a vállalatoknak, hogy helyileg futtassák, azonban szükség lenne felszerelés vásárlására, struktúra építésére a skálázáshoz és licenc vásárlására vagy nyílt forráskódú modell használatára. Egy modell, mint a LLaMA, elérhető a használatra, számítási teljesítményt igényelve a modell futtatásához.
+A modellek csak a neurális hálózatot jelentik, a paraméterekkel, súlyokkal és másokkal. Lehetővé teszik a vállalatok számára, hogy helyben futtassák őket, azonban ehhez berendezéseket kell vásárolni, struktúrát kell építeni a skálázáshoz, és licencet kell vásárolni vagy nyílt forráskódú modellt kell használni. Egy modell, mint például LLaMA, elérhető a használatra, de számítási kapacitás szükséges a
+A legtöbb modell, amelyet az előző bekezdésekben említettünk (OpenAI modellek, nyílt forráskódú modellek, mint például a Llama2, és Hugging Face transformerek), elérhető a [Modellek katalógusában](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) az [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) platformon.
 
-## Hogyan teszteljük és iteráljuk különböző modellekkel a teljesítmény megértés
-- Hasonlítsa össze az iparágban elérhető modellek és adathalmazok benchmarkjait, hogy felmérje, melyik felel meg az üzleti forgatókönyvnek, a [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) panelen keresztül.
+Az [Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) egy felhőalapú platform, amelyet fejlesztők számára terveztek generatív AI alkalmazások létrehozására és a teljes fejlesztési életciklus kezelésére - a kísérletezéstől az értékelésig -, azáltal, hogy az összes Azure AI szolgáltatást egyetlen központba integrálja, egy praktikus grafikus felülettel. Az Azure AI Studio Modellek katalógusa lehetővé teszi a felhasználók számára, hogy:
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.b3b4182f762db04b59267af64ce77cc936d38adf40fb032f12acec9063578008.hu.png)
+- Megtalálják az érdeklődésüknek megfelelő alapmodellt a katalógusban - akár saját fejlesztésű, akár nyílt forráskódú -, feladat, licenc vagy név alapján szűrve. A kereshetőség javítása érdekében a modellek gyűjteményekbe vannak rendezve, mint például az Azure OpenAI gyűjtemény, Hugging Face gyűjtemény és mások.
 
-- Finomhangolja a modellt egyedi képzési adatokon, hogy javítsa a modell teljesítményét egy adott munkaterhelésben, az Azure AI Studio kísérletezési és nyomon követési képességeit kihasználva.
+![Modellek katalógusa](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.hu.png)
 
-![Model fine-tuning](../../../translated_images/FineTuning.f93db4ecbdc85b4a20ff1198fb82f5e2daa3a1ee328733b17d603727db20f5c0.hu.png)
+- Áttekintsék a modellkártyát, amely részletes leírást tartalmaz a tervezett felhasználásról és a képzési adatokkal kapcsolatos információkról, kódpéldákat és értékelési eredményeket az Azure belső értékelési könyvtárában.
 
-- Telepítse az eredeti előre betanított modellt vagy a finomhangolt verziót távoli valós idejű következtetéshez - kezelt számítási kapacitás - vagy szerver nélküli API végpontra - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - hogy az alkalmazások felhasználhassák azt.
+![Modellkártya](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.hu.png)
 
-![Model deployment](../../../translated_images/ModelDeploy.7c78c2c5841567abf820d5da8354be454d3f20b62168905645aeac99e50c2562.hu.png)
+- Összehasonlítsák az iparágban elérhető modellek és adathalmazok benchmarkjait, hogy felmérjék, melyik felel meg legjobban az üzleti igényeknek, a [Modellek benchmarkjai](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) panelen keresztül.
+
+![Modellek benchmarkjai](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.hu.png)
+
+- Finomhangolják a modellt egyedi képzési adatokkal, hogy javítsák a modell teljesítményét egy adott munkaterhelésben, kihasználva az Azure AI Studio kísérletezési és nyomonkövetési képességeit.
+
+![Modell finomhangolása](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.hu.png)
+
+- Telepítsék az eredeti előre betanított modellt vagy a finomhangolt verziót távoli valós idejű következtetésre - kezelt számítási környezetre - vagy szerver nélküli API végpontra - [fizetés használat alapján](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) -, hogy lehetővé tegyék az alkalmazások számára a modell használatát.
+
+![Modell telepítése](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.hu.png)
 
 > [!NOTE]
-> Nem minden modell elérhető jelenleg a katalógusban finomhangolásra és/vagy pay-as-you-go telepítésre. Ellenőrizze a modell kártyáját a modell képességeiről és korlátairól.
+> Nem minden modell érhető el jelenleg finomhangolásra és/vagy fizetés használat alapján történő telepítésre a katalógusban. Ellenőrizze a modellkártyát a modell képességeiről és korlátairól szóló részletekért.
 
 ## LLM eredmények javítása
 
-Startup csapatunkkal különböző típusú LLM-eket és egy felhőplatformot (Azure Machine Learning) vizsgáltunk, amely lehetővé teszi számunkra, hogy összehasonlítsunk különböző modelleket, tesztadatokon értékeljük őket, javítsuk a teljesítményt és telepítsük őket következtetési végpontokra.
+Startup csapatunkkal különböző típusú LLM-eket és egy felhőalapú platformot (Azure Machine Learning) vizsgáltunk meg, amely lehetővé teszi számunkra, hogy összehasonlítsuk a különböző modelleket, tesztadatokon értékeljük őket, javítsuk a teljesítményt és telepítsük őket következtetési végpontokra.
 
-De mikor érdemes inkább finomhangolni egy modellt, mint egy előre betanítottat használni? Vannak más megközelítések is a modell teljesítményének javítására konkrét munkaterhelések esetén?
+De mikor érdemes finomhangolni egy modellt az előre betanított helyett? Vannak más megközelítések is, amelyek javíthatják a modell teljesítményét egy adott munkaterhelésben?
 
-Számos megközelítést alkalmazhat egy vállalkozás, hogy elérje a kívánt eredményeket egy LLM segítségével. Különböző típusú modelleket választhat, különböző képzési fokozatokkal, amikor egy LLM-et telepít a termelésbe, különböző komplexitási, költség- és minőségi szintekkel. Íme néhány különböző megközelítés:
+Számos megközelítés létezik, amelyet egy vállalkozás alkalmazhat, hogy elérje a kívánt eredményeket egy LLM-től. Különböző típusú modelleket választhat, amelyek eltérő mértékű képzést kaptak, amikor egy LLM-et telepít a gyártásba, különböző szintű komplexitással, költséggel és minőséggel. Íme néhány megközelítés:
 
-- **Prompt tervezés kontextussal**. Az ötlet az, hogy elegendő kontextust biztosítunk a promptnál, hogy biztosítsuk a szükséges válaszok elérését.
+- **Prompt tervezés kontextussal**. Az ötlet az, hogy elegendő kontextust biztosítsunk a promptban, hogy biztosítsuk a szükséges válaszokat.
 
-- **Retrieval Augmented Generation, RAG**. Az adatai például egy adatbázisban vagy webes végponton létezhetnek, hogy biztosítsák ezen adatok vagy azok részhalmazának bevonását a prompt időpontjában, lekérheti a releváns adatokat, és a felhasználói prompt részévé teheti.
+- **Retrieval Augmented Generation, RAG**. Az adatok például egy adatbázisban vagy webes végponton létezhetnek, és annak érdekében, hogy ezek az adatok vagy azok egy része bekerüljön a promptba, a releváns adatokat lekérhetjük, és a felhasználó promptjának részévé tehetjük.
 
-- **Finomhangolt modell**. Itt tovább képezte a modellt saját adataival, ami pontosabbá és reagálóbbá tette a modell az igényeire, de költséges lehet.
+- **Finomhangolt modell**. Itt a modellt tovább képezték saját adatokon, ami pontosabbá és az igényekre érzékenyebbé tette, bár költséges lehet.
 
-![LLMs deployment](../../../translated_images/Deploy.09224ecfe6a5ef47996fd0a44288772990139305451440c430662d43ac323ecd.hu.png)
+![LLM-ek telepítése](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.hu.png)
 
-Kép forrása: [Négy mód, ahogyan a vállalatok telepítik az LLM-eket | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Kép forrása: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
 ### Prompt tervezés kontextussal
 
-Az előre betanított LLM-ek nagyon jól működnek általánosított természetes nyelvi feladatokban, még akkor is, ha rövid prompttal hívják meg őket, mint például egy befejezendő mondat vagy kérdés – az úgynevezett „zero-shot” tanulás.
+Az előre betanított LLM-ek nagyon jól működnek általános természetes nyelvi feladatokban, még akkor is, ha csak egy rövid promptot kapnak, például egy befejezendő mondatot vagy egy kérdést – az úgynevezett „zero-shot” tanulás.
 
-Azonban minél inkább képes a felhasználó megfogalmazni kérdését, részletes kéréssel és példákkal – a kontextussal –, annál pontosabb és a felhasználó elvárásaihoz legközelebb álló lesz a válasz. Ebben az esetben „one-shot” tanulásról beszélünk, ha a prompt csak egy példát tartalmaz, és „few-shot” tanulásról, ha több példát tartalmaz. A prompt tervezés kontextussal a legköltséghatékonyabb megközelítés a kezdéshez.
+Azonban minél részletesebben tudja a felhasználó megfogalmazni a kérdését, egy részletes kéréssel és példákkal – a kontextussal –, annál pontosabb és közelebb áll a válasz a felhasználó elvárásaihoz. Ebben az esetben „one-shot” tanulásról beszélünk, ha a prompt csak egy példát tartalmaz, és „few-shot” tanulásról, ha több példát tartalmaz.
+A prompt tervezés kontextussal a legköltséghatékonyabb megközelítés a kezdéshez.
 
 ### Retrieval Augmented Generation (RAG)
 
-Az LLM-eknek az a korlátja, hogy csak azokat az adatokat tudják felhasználni, amelyek a képzésük során rendelkezésre álltak a válasz generálásához. Ez azt jelenti, hogy nem tudnak semmit azokról a tényekről, amelyek a képzési folyamatuk után történtek, és nem férnek hozzá nem nyilvános információkhoz (például vállalati adatok).
-Ezt a RAG segítségével lehet áthidalni, egy olyan technikával, amely külső adatokkal egészíti ki a promptot dokumentumok darabjaival, figyelembe véve a prompt hosszúsági korlátait. Ezt a vektor adatbázis eszközök támogatják (mint például [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), amelyek hasznos darabokat keresnek vissza különböző előre meghatározott adatforrásokból, és hozzáadják őket a prompt kontextusához.
+Az LLM-ek korlátozása, hogy csak azokat az adatokat tudják használni, amelyeket a képzésük során használtak fel válasz generálásához. Ez azt jelenti, hogy nem tudnak semmit a képzési folyamatuk után történt eseményekről, és nem férnek hozzá nem nyilvános információkhoz (például vállalati adatokhoz).
+Ez leküzdhető a RAG segítségével, egy olyan technikával, amely külső adatokat ad hozzá a prompthoz dokumentumdarabok formájában, figyelembe véve a prompt hosszának korlátait. Ezt támogatják a vektoralapú adatbázis eszközök (például [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), amelyek hasznos darabokat keresnek előre meghatározott adatforrásokból, és hozzáadják őket a prompt kontextusához.
 
-Ez a technika nagyon hasznos, amikor egy vállalkozásnak nincs elegendő adata, elegendő ideje vagy erőforrása egy LLM finomhangolására, de még mindig szeretné javítani a teljesítményt egy adott munkaterhelésben, és csökkenteni a kitalálások, azaz a valóság elferdítésének vagy káros tartalom kockázatát.
+Ez a technika nagyon hasznos, ha egy vállalkozásnak nincs elegendő adata, ideje vagy erőforrása egy LLM finomhangolásához, de mégis szeretné javítani a teljesítményt egy adott munkaterhelésben, és csökkenteni a téves információk, azaz a valóság elferdítésének vagy káros tartalom kockázatát.
 
 ### Finomhangolt modell
 
-A finomhangolás egy olyan folyamat, amely a transzfer tanulást kihasználva „alkalmazza” a modellt egy lefelé irányuló feladatra vagy egy adott probléma megoldására. Ellentétben a few-shot tanulással és a RAG-gal, új modell jön létre, frissített súlyokkal és torzításokkal. Szüksége van egy képzési példák halmazára, amely egyetlen bemenetből (a promptból) és a hozzá kapcsolódó kimenetből (a befejezésből) áll.
-Ez lenne a preferált megközelítés, ha:
+A finomhangolás egy olyan folyamat, amely a transzfer tanulást használja fel arra, hogy a modellt egy adott feladathoz vagy problémához „adaptálja”. A few-shot tanulástól és a RAG-tól eltérően ez egy új modell létrehozását eredményezi, frissített súlyokkal és torzításokkal. Ehhez egy képzési példákból álló készlet szükséges, amely egyetlen bemenetet (a promptot) és a hozzá tartozó kimenetet (a befejezést) tartalmazza.
+Ez lenne az előnyben részesített megközelítés, ha:
 
-- **Finomhangolt modellek használata**. Egy vállalkozás inkább kevésbé képes finomhangolt modelleket (mint például beágyazási modellek) szeretne használni, mint magas teljesítményű modelleket, ami költséghatékonyabb és gyorsabb megoldást eredményez.
+- **Finomhangolt modellek használata**. Egy vállalkozás inkább kevésbé teljesítményorientált finomhangolt modelleket (például beágyazási modelleket) használna, mint nagy teljesítményű modelleket, ami költséghatékonyabb és gyorsabb megoldást eredményez.
 
-- **Késleltetés figyelembevétele**. A késleltetés fontos egy adott felhasználási esetben, ezért nem lehetséges nagyon hosszú promptokat használni, vagy a példák száma, amelyeket a modellnek meg kell tanulnia, nem illeszkedik a prompt hosszúsági korlátjához.
+- **Késleltetés figyelembevétele**. A késleltetés fontos egy adott felhasználási esetben, így nem lehetséges nagyon hosszú promptokat használni, vagy a példák száma, amelyeket a modellnek meg kell tanulnia, nem fér bele a prompt hosszának korlátjába.
 
-- **Naprakész maradás**. Egy vállalkozásnak sok kiváló minőségű adata és valóságbeli címkéje van, valamint az erőforrások, amelyek szükségesek ezeknek az adatoknak a folyamatos naprakészen tartásához.
+- **Naprakészség fenntartása**. Egy vállalkozásnak sok kiváló minőségű adata és valós címkéje van, valamint megvannak az erőforrásai, hogy ezeket az adatokat idővel naprakészen tartsa.
 
-### Betanított modell
+### Képzett modell
 
-Egy LLM-et a semmiből betanítani kétségtelenül a legnehezebb és legösszetettebb megközelítés, amely hatalmas mennyiségű adatot, képzett erőforrásokat és megfelelő számítási kapacitást igényel. Ezt az opciót csak akkor érdemes fontolóra venni, ha egy vállalkozásnak van egy terület-specifikus felhasználási esete és nagy mennyiségű területközpontú adata.
+Egy LLM nulláról történő képzése kétségtelenül a legnehezebb és legösszetettebb megközelítés, amely hatalmas mennyiségű adatot, képzett erőforrásokat és megfelelő számítási kapacitást igényel. Ezt az opciót csak akkor érdemes fontolóra venni, ha egy vállalkozásnak van egy speciális területre vonatkozó felhasználási esete és nagy mennyiségű, terület-specifikus adata.
 
-## Tudás ellenőrzése
+## Tudásellenőrzés
 
 Mi lehet egy jó megközelítés az LLM befejezési eredmények javítására?
 
@@ -184,17 +195,19 @@ Mi lehet egy jó megközelítés az LLM befejezési eredmények javítására?
 1. RAG
 1. Finomhangolt modell
 
-A:3, ha van ideje és erőforrásai, valamint kiváló minőségű adatai, a finomhangolás a jobb opció, hogy naprakész maradjon. Azonban, ha a dolgok javítására törekszik, és nincs elég ideje, érdemes először a RAG-ot fontolóra venni.
+A: 3, ha van elég idő, erőforrás és kiváló minőségű adatok, a finomhangolás a jobb opció a naprakészség fenntartásához. Azonban, ha az idő szűkös, érdemes először a RAG-ot fontolóra venni.
 
 ## 🚀 Kihívás
 
-Olvasson többet arról, hogyan tudja [használni a RAG-ot](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) vállalkozásában.
+Olvasson többet arról, hogyan használhatja a [RAG-ot](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) vállalkozása számára.
 
-## Remek munka, folytassa a tanulást
+## Nagyszerű munka, folytassa a tanulást
 
-A lecke befejezése után tekintse meg [Generative AI Learning gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább növelje a Generative AI tudását!
+A lecke befejezése után tekintse meg [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejlessze generatív AI ismereteit!
 
-Lépjen tovább a 3. leckére, ahol megnézzük, hogyan lehet [felelősségteljesen építeni Generative AI-vel](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Lépjen tovább a 3. leckére, ahol megvizsgáljuk, hogyan lehet [felelősségteljesen építeni generatív AI-val](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Jogi nyilatkozat**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) használatával készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum a saját nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt a professzionális emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félremagyarázásokért.
+---
+
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

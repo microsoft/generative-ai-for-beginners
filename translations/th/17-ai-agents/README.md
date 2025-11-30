@@ -1,71 +1,71 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:24:13+00:00",
+  "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
+  "translation_date": "2025-10-17T18:43:31+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "th"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.th.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.th.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## บทนำ
 
-AI Agents เป็นการพัฒนาใหม่ที่น่าตื่นเต้นใน Generative AI ซึ่งทำให้ Large Language Models (LLMs) พัฒนาไปจากผู้ช่วยกลายเป็นตัวแทนที่สามารถดำเนินการได้ เฟรมเวิร์กของ AI Agent ช่วยให้นักพัฒนาสามารถสร้างแอปพลิเคชันที่ให้ LLMs เข้าถึงเครื่องมือและการจัดการสถานะ เฟรมเวิร์กเหล่านี้ยังช่วยเพิ่มการมองเห็น ทำให้ผู้ใช้และนักพัฒนาสามารถติดตามการกระทำที่ LLMs วางแผนไว้ได้ ซึ่งช่วยปรับปรุงการจัดการประสบการณ์
+AI Agents เป็นการพัฒนาที่น่าตื่นเต้นใน Generative AI ซึ่งช่วยให้ Large Language Models (LLMs) พัฒนาไปสู่การเป็นตัวแทนที่สามารถดำเนินการได้ Frameworks ของ AI Agent ช่วยให้นักพัฒนาสามารถสร้างแอปพลิเคชันที่ให้ LLMs เข้าถึงเครื่องมือและการจัดการสถานะได้ Frameworks เหล่านี้ยังช่วยเพิ่มการมองเห็น ทำให้ผู้ใช้และนักพัฒนาสามารถติดตามการดำเนินการที่ LLMs วางแผนไว้ได้ ซึ่งช่วยปรับปรุงการจัดการประสบการณ์
 
 บทเรียนนี้จะครอบคลุมหัวข้อต่อไปนี้:
 
-- ทำความเข้าใจว่า AI Agent คืออะไร - AI Agent คืออะไรกันแน่?
-- สำรวจเฟรมเวิร์ก AI Agent สี่ประเภท - อะไรทำให้พวกเขามีเอกลักษณ์เฉพาะตัว?
-- การนำ AI Agents ไปใช้ในกรณีการใช้งานต่าง ๆ - เมื่อไหร่เราควรใช้ AI Agents?
+- ทำความเข้าใจว่า AI Agent คืออะไร - AI Agent คืออะไร?
+- สำรวจ Frameworks ของ AI Agent สี่แบบ - อะไรที่ทำให้แต่ละแบบมีเอกลักษณ์?
+- การนำ AI Agents ไปใช้ในกรณีการใช้งานต่าง ๆ - เมื่อไหร่ที่เราควรใช้ AI Agents?
 
 ## เป้าหมายการเรียนรู้
 
 หลังจากเรียนบทเรียนนี้ คุณจะสามารถ:
 
-- อธิบายว่า AI Agents คืออะไรและสามารถนำไปใช้ได้อย่างไร
-- มีความเข้าใจในความแตกต่างระหว่างเฟรมเวิร์ก AI Agent ยอดนิยมบางตัว และความแตกต่างระหว่างพวกเขา
-- เข้าใจวิธีการทำงานของ AI Agents เพื่อสร้างแอปพลิเคชันด้วยพวกเขา
+- อธิบายว่า AI Agents คืออะไรและสามารถใช้งานได้อย่างไร
+- เข้าใจความแตกต่างระหว่าง Frameworks ของ AI Agent ที่ได้รับความนิยม และความแตกต่างระหว่างพวกมัน
+- เข้าใจการทำงานของ AI Agents เพื่อสร้างแอปพลิเคชันด้วยพวกมัน
 
 ## AI Agents คืออะไร?
 
-AI Agents เป็นสนามที่น่าตื่นเต้นมากในโลกของ Generative AI ด้วยความตื่นเต้นนี้บางครั้งทำให้เกิดความสับสนในเรื่องคำศัพท์และการใช้งาน เพื่อให้เรื่องง่ายและครอบคลุมเครื่องมือส่วนใหญ่ที่เรียกว่า AI Agents เราจะใช้คำจำกัดความนี้:
+AI Agents เป็นสาขาที่น่าตื่นเต้นมากในโลกของ Generative AI ด้วยความตื่นเต้นนี้ บางครั้งอาจเกิดความสับสนเกี่ยวกับคำศัพท์และการใช้งาน เพื่อให้เข้าใจง่ายและครอบคลุมเครื่องมือส่วนใหญ่ที่เกี่ยวข้องกับ AI Agents เราจะใช้คำจำกัดความนี้:
 
-AI Agents ช่วยให้ Large Language Models (LLMs) สามารถทำงานได้โดยให้พวกเขาเข้าถึง **สถานะ** และ **เครื่องมือ**
+AI Agents ช่วยให้ Large Language Models (LLMs) สามารถทำงานได้โดยให้พวกมันเข้าถึง **สถานะ** และ **เครื่องมือ**
 
-![Agent Model](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.th.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.th.png)
 
-มาทำความเข้าใจคำเหล่านี้:
+มาทำความเข้าใจคำศัพท์เหล่านี้:
 
-**Large Language Models** - นี่คือโมเดลที่ถูกกล่าวถึงตลอดหลักสูตรนี้ เช่น GPT-3.5, GPT-4, Llama-2 เป็นต้น
+**Large Language Models** - โมเดลเหล่านี้คือโมเดลที่กล่าวถึงในคอร์สนี้ เช่น GPT-3.5, GPT-4, Llama-2 เป็นต้น
 
-**สถานะ** - นี่หมายถึงบริบทที่ LLM กำลังทำงานอยู่ LLM ใช้บริบทของการกระทำที่ผ่านมาและบริบทปัจจุบันในการตัดสินใจสำหรับการกระทำถัดไป เฟรมเวิร์ก AI Agent ช่วยให้นักพัฒนาสามารถรักษาบริบทนี้ได้ง่ายขึ้น
+**สถานะ** - หมายถึงบริบทที่ LLM กำลังทำงานอยู่ LLM ใช้บริบทของการกระทำที่ผ่านมาและบริบทปัจจุบันเพื่อเป็นแนวทางในการตัดสินใจสำหรับการกระทำต่อไป Frameworks ของ AI Agent ช่วยให้นักพัฒนาสามารถจัดการบริบทนี้ได้ง่ายขึ้น
 
-**เครื่องมือ** - เพื่อทำงานที่ผู้ใช้ร้องขอและที่ LLM วางแผนไว้ LLM จำเป็นต้องเข้าถึงเครื่องมือ ตัวอย่างของเครื่องมืออาจเป็นฐานข้อมูล, API, แอปพลิเคชันภายนอก หรือแม้กระทั่ง LLM อื่น!
+**เครื่องมือ** - เพื่อทำงานที่ผู้ใช้ร้องขอและที่ LLM วางแผนไว้ LLM จำเป็นต้องเข้าถึงเครื่องมือ ตัวอย่างของเครื่องมือได้แก่ ฐานข้อมูล, API, แอปพลิเคชันภายนอก หรือแม้กระทั่ง LLM อื่น!
 
-คำจำกัดความเหล่านี้หวังว่าจะให้พื้นฐานที่ดีในการก้าวไปข้างหน้าเมื่อเราดูวิธีการที่พวกเขาถูกนำไปใช้ มาสำรวจเฟรมเวิร์ก AI Agent ที่แตกต่างกัน:
+คำจำกัดความเหล่านี้หวังว่าจะช่วยให้คุณมีพื้นฐานที่ดีในการดำเนินการต่อไปเมื่อเราดูวิธีการนำไปใช้ มาสำรวจ Frameworks ของ AI Agent ที่แตกต่างกัน:
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) เป็นการนำคำจำกัดความที่เรากล่าวถึงมาใช้
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) เป็นการนำคำจำกัดความที่เราให้ไว้ข้างต้นไปใช้
 
-เพื่อจัดการ **สถานะ** จะใช้ฟังก์ชันในตัวที่เรียกว่า `AgentExecutor` ซึ่งยอมรับ `agent` ที่กำหนดและ `tools` ที่มีอยู่
+เพื่อจัดการ **สถานะ** จะใช้ฟังก์ชันในตัวที่เรียกว่า `AgentExecutor` ซึ่งรับ `agent` ที่กำหนดไว้และ `tools` ที่มีให้ใช้งาน
 
-`Agent Executor` ยังจัดเก็บประวัติการสนทนาเพื่อให้บริบทของการสนทนา
+`Agent Executor` ยังเก็บประวัติการสนทนาเพื่อให้บริบทของการสนทนา
 
-![Langchain Agents](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.th.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.th.png)
 
-LangChain มี [แคตตาล็อกเครื่องมือ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ที่สามารถนำเข้าไปในแอปพลิเคชันของคุณที่ LLM สามารถเข้าถึงได้ สิ่งเหล่านี้ถูกสร้างขึ้นโดยชุมชนและทีม LangChain
+LangChain มี [แคตตาล็อกของเครื่องมือ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ที่สามารถนำเข้าไปในแอปพลิเคชันของคุณเพื่อให้ LLM เข้าถึงได้ เครื่องมือเหล่านี้สร้างโดยชุมชนและทีม LangChain
 
-คุณสามารถกำหนดเครื่องมือเหล่านี้และส่งต่อไปยัง `Agent Executor`
+คุณสามารถกำหนดเครื่องมือเหล่านี้และส่งต่อไปยัง `AgentExecutor`
 
-การมองเห็นเป็นอีกหนึ่งด้านสำคัญเมื่อพูดถึง AI Agents เป็นสิ่งสำคัญสำหรับนักพัฒนาแอปพลิเคชันที่จะเข้าใจว่าเครื่องมือใดที่ LLM กำลังใช้อยู่และทำไม สำหรับสิ่งนั้น ทีมที่ LangChain ได้พัฒนา LangSmith
+การมองเห็นเป็นอีกแง่มุมที่สำคัญเมื่อพูดถึง AI Agents การที่นักพัฒนาแอปพลิเคชันเข้าใจว่า LLM กำลังใช้เครื่องมือใดและทำไมจึงสำคัญ สำหรับเรื่องนี้ ทีมที่ LangChain ได้พัฒนา LangSmith
 
 ## AutoGen
 
-เฟรมเวิร์ก AI Agent ถัดไปที่เราจะพูดถึงคือ [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst) จุดเน้นหลักของ AutoGen คือการสนทนา Agents สามารถ **สนทนาได้** และ **ปรับแต่งได้**
+Frameworks ของ AI Agent ถัดไปที่เราจะพูดถึงคือ [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst) จุดเน้นหลักของ AutoGen คือการสนทนา Agents มีทั้ง **สามารถสนทนาได้** และ **ปรับแต่งได้**
 
-**สนทนาได้ -** LLMs สามารถเริ่มและดำเนินการสนทนากับ LLM อื่นเพื่อทำงานให้เสร็จสิ้น สิ่งนี้ทำได้โดยการสร้าง `AssistantAgents` และให้ข้อความระบบเฉพาะ
+**สามารถสนทนาได้ -** LLMs สามารถเริ่มต้นและดำเนินการสนทนากับ LLM อื่นเพื่อทำงานให้เสร็จสิ้น โดยการสร้าง `AssistantAgents` และให้ข้อความระบบเฉพาะ
 
 ```python
 
@@ -73,7 +73,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**ปรับแต่งได้** - Agents สามารถถูกกำหนดไม่เพียงแค่เป็น LLMs แต่เป็นผู้ใช้หรือเครื่องมือ ในฐานะนักพัฒนา คุณสามารถกำหนด `UserProxyAgent` ซึ่งรับผิดชอบในการโต้ตอบกับผู้ใช้เพื่อรับข้อเสนอแนะในการทำงานให้เสร็จ ข้อเสนอแนะนี้สามารถดำเนินการต่อหรือหยุดการดำเนินการของงานได้
+**ปรับแต่งได้** - Agents สามารถกำหนดได้ไม่เพียงแค่เป็น LLMs แต่ยังเป็นผู้ใช้หรือเครื่องมือ ในฐานะนักพัฒนา คุณสามารถกำหนด `UserProxyAgent` ซึ่งรับผิดชอบในการโต้ตอบกับผู้ใช้เพื่อให้ข้อเสนอแนะในการทำงานให้เสร็จสมบูรณ์ ข้อเสนอแนะนี้สามารถดำเนินการต่อหรือหยุดการดำเนินการของงานได้
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -81,19 +81,19 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### สถานะและเครื่องมือ
 
-เพื่อเปลี่ยนและจัดการสถานะ ตัวแทนผู้ช่วยจะสร้างโค้ด Python เพื่อทำงานให้เสร็จสิ้น
+เพื่อเปลี่ยนแปลงและจัดการสถานะ Assistant Agent สร้างโค้ด Python เพื่อทำงานให้เสร็จสมบูรณ์
 
 นี่คือตัวอย่างของกระบวนการ:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.th.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.th.png)
 
-#### LLM ถูกกำหนดด้วยข้อความระบบ
+#### LLM กำหนดด้วยข้อความระบบ
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-ข้อความระบบนี้บอก LLM เฉพาะว่าฟังก์ชันใดที่เกี่ยวข้องกับงานของมัน จำไว้ว่า ด้วย AutoGen คุณสามารถมี AssistantAgents ที่กำหนดหลายตัวพร้อมข้อความระบบที่แตกต่างกัน
+ข้อความระบบนี้กำหนด LLM เฉพาะนี้ให้รู้ว่าฟังก์ชันใดเกี่ยวข้องกับงานของมัน จำไว้ว่า ด้วย AutoGen คุณสามารถมี AssistantAgents ที่กำหนดไว้หลายตัวพร้อมข้อความระบบที่แตกต่างกัน
 
 #### การสนทนาเริ่มต้นโดยผู้ใช้
 
@@ -102,7 +102,7 @@ user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next wee
 
 ```
 
-ข้อความนี้จาก user_proxy (มนุษย์) เป็นสิ่งที่จะเริ่มกระบวนการของ Agent เพื่อสำรวจฟังก์ชันที่ควรดำเนินการ
+ข้อความนี้จาก user_proxy (Human) เป็นสิ่งที่เริ่มกระบวนการของ Agent ในการสำรวจฟังก์ชันที่ควรดำเนินการ
 
 #### ฟังก์ชันถูกดำเนินการ
 
@@ -115,59 +115,61 @@ chatbot (to user_proxy):
 
 ```
 
-เมื่อการสนทนาเริ่มต้นถูกประมวลผล Agent จะส่งเครื่องมือที่แนะนำให้เรียกใช้ ในกรณีนี้คือฟังก์ชันที่เรียกว่า `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+เมื่อการสนทนาเริ่มต้นถูกประมวลผล Agent จะส่งเครื่องมือที่แนะนำให้เรียกใช้ ในกรณีนี้คือฟังก์ชันที่เรียกว่า `get_weather` ขึ้นอยู่กับการตั้งค่าของคุณ ฟังก์ชันนี้สามารถดำเนินการโดยอัตโนมัติและอ่านโดย Agent หรือสามารถดำเนินการตามการป้อนข้อมูลของผู้ใช้
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+คุณสามารถค้นหารายการ [ตัวอย่างโค้ด AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) เพื่อสำรวจเพิ่มเติมเกี่ยวกับการเริ่มต้นสร้าง
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+Frameworks ของ Agent ถัดไปที่เราจะสำรวจคือ [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst) ซึ่งเป็นที่รู้จักในฐานะ "agent ที่เน้นโค้ด" เพราะแทนที่จะทำงานกับ `strings` อย่างเดียว มันสามารถทำงานกับ DataFrames ใน Python ได้ สิ่งนี้มีประโยชน์อย่างมากสำหรับงานวิเคราะห์และสร้างข้อมูล เช่น การสร้างกราฟและแผนภูมิ หรือการสร้างตัวเลขสุ่ม
 
-### State and Tools
+### สถานะและเครื่องมือ
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+เพื่อจัดการสถานะของการสนทนา TaskWeaver ใช้แนวคิดของ `Planner` `Planner` เป็น LLM ที่รับคำขอจากผู้ใช้และวางแผนงานที่ต้องทำเพื่อให้คำขอนั้นสำเร็จ
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins` สิ่งนี้สามารถเป็นคลาส Python หรืออินเตอร์พรีเตอร์โค้ดทั่วไปได้ Plugins เหล่านี้ถูกเก็บเป็น embeddings เพื่อให้ LLM สามารถค้นหา plugin ที่ถูกต้องได้ดีขึ้น
+เพื่อทำงานให้เสร็จ `Planner` จะเข้าถึงชุดเครื่องมือที่เรียกว่า `Plugins` ซึ่งสามารถเป็นคลาส Python หรือ interpreter โค้ดทั่วไป Plugins เหล่านี้ถูกเก็บเป็น embeddings เพื่อให้ LLM สามารถค้นหา plugin ที่เหมาะสมได้ดียิ่งขึ้น
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.th.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.th.png)
 
-นี่คือตัวอย่างของ plugin ที่จัดการการตรวจจับความผิดปกติ:
+นี่คือตัวอย่างของ plugin สำหรับจัดการการตรวจจับความผิดปกติ:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-โค้ดถูกตรวจสอบก่อนดำเนินการ อีกคุณสมบัติหนึ่งในการจัดการบริบทใน Taskweaver คือ `experience`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+โค้ดจะถูกตรวจสอบก่อนดำเนินการ อีกคุณสมบัติหนึ่งในการจัดการบริบทใน Taskweaver คือ `experience` Experience ช่วยให้บริบทของการสนทนาเก็บไว้ในระยะยาวในไฟล์ YAML สิ่งนี้สามารถกำหนดค่าได้เพื่อให้ LLM ปรับปรุงงานบางอย่างเมื่อได้รับการเปิดเผยต่อการสนทนาก่อนหน้า
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` ของการสนทนาและ `tools` คือโมเดล AI อื่น ๆ แต่ละโมเดล AI เป็นโมเดลเฉพาะที่ทำงานบางอย่างเช่นการตรวจจับวัตถุ การถอดเสียง หรือการบรรยายภาพ
+Frameworks ของ Agent สุดท้ายที่เราจะสำรวจคือ [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst) สิ่งที่ทำให้ JARVIS มีเอกลักษณ์คือการใช้ LLM ในการจัดการ `สถานะ` ของการสนทนา และ `เครื่องมือ` คือโมเดล AI อื่น ๆ แต่ละโมเดล AI เป็นโมเดลเฉพาะที่ทำงานบางอย่าง เช่น การตรวจจับวัตถุ การถอดเสียง หรือการสร้างคำบรรยายภาพ
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.th.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.th.png)
 
-LLM ซึ่งเป็นโมเดลทั่วไป รับคำขอจากผู้ใช้และระบุงานเฉพาะและอาร์กิวเมนต์/ข้อมูลที่จำเป็นในการทำงานให้เสร็จ
+LLM ซึ่งเป็นโมเดลทั่วไป จะรับคำขอจากผู้ใช้และระบุงานเฉพาะและอาร์กิวเมนต์/ข้อมูลที่จำเป็นในการทำงานให้เสร็จ
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-จากนั้น LLM จะจัดรูปแบบคำขอในลักษณะที่โมเดล AI เฉพาะสามารถตีความได้ เช่น JSON เมื่อโมเดล AI ได้ส่งคืนการทำนายตามงาน LLM จะได้รับการตอบกลับ
+จากนั้น LLM จะจัดรูปแบบคำขอในลักษณะที่โมเดล AI เฉพาะสามารถตีความได้ เช่น JSON เมื่อโมเดล AI ส่งผลลัพธ์กลับมาจากงานที่ทำ LLM จะรับคำตอบนั้น
 
-หากจำเป็นต้องใช้โมเดลหลายตัวเพื่อทำงานให้เสร็จสิ้น มันจะตีความการตอบกลับจากโมเดลเหล่านั้นก่อนที่จะนำมารวมกันเพื่อสร้างการตอบกลับให้ผู้ใช้
+หากต้องใช้โมเดลหลายตัวในการทำงานให้เสร็จ LLM จะตีความคำตอบจากโมเดลเหล่านั้นก่อนที่จะรวมเข้าด้วยกันเพื่อสร้างคำตอบให้กับผู้ใช้
 
-ตัวอย่างด้านล่างแสดงให้เห็นว่าสิ่งนี้จะทำงานอย่างไรเมื่อผู้ใช้ขอคำอธิบายและการนับวัตถุในภาพ:
+ตัวอย่างด้านล่างแสดงให้เห็นว่ากระบวนการนี้ทำงานอย่างไรเมื่อผู้ใช้ร้องขอคำอธิบายและจำนวนวัตถุในภาพ:
 
 ## งานที่มอบหมาย
 
-เพื่อดำเนินการเรียนรู้ของคุณเกี่ยวกับ AI Agents คุณสามารถสร้างด้วย AutoGen:
+เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับ AI Agents คุณสามารถสร้างด้วย AutoGen:
 
 - แอปพลิเคชันที่จำลองการประชุมธุรกิจกับแผนกต่าง ๆ ของสตาร์ทอัพด้านการศึกษา
-- สร้างข้อความระบบที่แนะนำ LLMs ในการทำความเข้าใจบุคคลและลำดับความสำคัญต่าง ๆ และให้ผู้ใช้เสนอไอเดียผลิตภัณฑ์ใหม่
+- สร้างข้อความระบบที่ช่วยให้ LLMs เข้าใจบุคลิกและลำดับความสำคัญที่แตกต่างกัน และช่วยให้ผู้ใช้เสนอไอเดียผลิตภัณฑ์ใหม่
 - จากนั้น LLM ควรสร้างคำถามติดตามผลจากแต่ละแผนกเพื่อปรับปรุงและพัฒนาไอเดียผลิตภัณฑ์
 
-## การเรียนรู้ไม่หยุดเพียงแค่นี้ ดำเนินการต่อไป
+## การเรียนรู้ไม่ได้หยุดอยู่แค่นี้ เดินทางต่อไป
 
-หลังจากเรียนจบบทเรียนนี้ ตรวจสอบ [คอลเลกชันการเรียนรู้ Generative AI ของเรา](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) เพื่อเพิ่มพูนความรู้ของคุณใน Generative AI!
+หลังจากจบบทเรียนนี้ ลองดู [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ของเราเพื่อเพิ่มพูนความรู้เกี่ยวกับ Generative AI ของคุณ!
+
+---
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้มีความถูกต้อง แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาที่เป็นต้นฉบับควรถูกพิจารณาว่าเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้บริการแปลภาษามนุษย์มืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดซึ่งเกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้

@@ -1,131 +1,177 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d46aad0917a1a342d613e2c13d457da5",
-  "translation_date": "2025-05-19T18:21:32+00:00",
+  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
+  "translation_date": "2025-10-17T15:12:20+00:00",
   "source_file": "08-building-search-applications/README.md",
   "language_code": "mo"
 }
 -->
-# بناء تطبيقات البحث
+# 建立搜尋應用程式
 
-هناك أكثر من مجرد روبوتات الدردشة وتوليد النصوص في LLMs. من الممكن أيضًا بناء تطبيقات بحث باستخدام التضمينات. التضمينات هي تمثيلات رقمية للبيانات تُعرف أيضًا بالنواقل، ويمكن استخدامها للبحث الدلالي عن البيانات.
+[![生成式 AI 和大型語言模型介紹](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.mo.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-في هذا الدرس، سوف تبني تطبيق بحث لشركتنا الناشئة في مجال التعليم. شركتنا هي منظمة غير ربحية تقدم تعليمًا مجانيًا للطلاب في البلدان النامية. تمتلك شركتنا عددًا كبيرًا من مقاطع الفيديو على يوتيوب التي يمكن للطلاب استخدامها لتعلم الذكاء الاصطناعي. ترغب شركتنا في بناء تطبيق بحث يسمح للطلاب بالبحث عن مقطع فيديو على يوتيوب عن طريق كتابة سؤال.
+> > _點擊上方圖片觀看本課程的影片_
 
-على سبيل المثال، قد يكتب الطالب "ما هي دفاتر Jupyter؟" أو "ما هو Azure ML" وسيقوم تطبيق البحث بإرجاع قائمة بمقاطع الفيديو على يوتيوب التي تتعلق بالسؤال، والأفضل من ذلك، سيقوم تطبيق البحث بإرجاع رابط إلى المكان في الفيديو حيث يوجد الجواب على السؤال.
+大型語言模型（LLMs）不僅僅用於聊天機器人和文字生成，還可以利用嵌入技術來建立搜尋應用程式。嵌入是數據的數值表示，也稱為向量，可用於進行語義搜尋。
 
-## مقدمة
+在本課程中，您將為我們的教育初創公司建立一個搜尋應用程式。我們的初創公司是一家非營利組織，致力於為發展中國家的學生提供免費教育。我們擁有大量的 YouTube 教育影片，學生可以用來學習 AI。我們希望建立一個搜尋應用程式，讓學生可以透過輸入問題來搜尋相關的 YouTube 影片。
 
-في هذا الدرس، سنغطي:
+例如，學生可能會輸入「什麼是 Jupyter Notebooks？」或「什麼是 Azure ML」，搜尋應用程式將返回與問題相關的 YouTube 影片列表，更棒的是，搜尋應用程式還會提供影片中回答問題的具體時間點的連結。
 
-- البحث الدلالي مقابل البحث بالكلمات الرئيسية.
-- ما هي تضمينات النصوص.
-- إنشاء فهرس تضمينات النصوص.
-- البحث في فهرس تضمينات النصوص.
+## 課程介紹
 
-## أهداف التعلم
+在本課程中，我們將涵蓋以下內容：
 
-بعد إكمال هذا الدرس، ستكون قادرًا على:
+- 語義搜尋與關鍵字搜尋的區別。
+- 什麼是文字嵌入。
+- 建立文字嵌入索引。
+- 搜尋文字嵌入索引。
 
-- التفريق بين البحث الدلالي والبحث بالكلمات الرئيسية.
-- شرح ما هي تضمينات النصوص.
-- إنشاء تطبيق باستخدام التضمينات للبحث عن البيانات.
+## 學習目標
 
-## لماذا نبني تطبيق بحث؟
+完成本課程後，您將能夠：
 
-إنشاء تطبيق بحث سيساعدك على فهم كيفية استخدام التضمينات للبحث عن البيانات. ستتعلم أيضًا كيفية بناء تطبيق بحث يمكن للطلاب استخدامه للعثور على المعلومات بسرعة.
+- 區分語義搜尋和關鍵字搜尋。
+- 解釋什麼是文字嵌入。
+- 使用嵌入技術建立一個搜尋應用程式。
 
-يتضمن الدرس فهرس تضمينات لنسخ مقاطع الفيديو على قناة YouTube الخاصة بـ [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1). AI Show هي قناة على يوتيوب تعلمك عن الذكاء الاصطناعي وتعلم الآلة. يحتوي فهرس التضمينات على التضمينات لكل من نسخ مقاطع الفيديو حتى أكتوبر 2023. ستستخدم فهرس التضمينات لبناء تطبيق بحث لشركتنا الناشئة. يقوم تطبيق البحث بإرجاع رابط إلى المكان في الفيديو حيث يوجد الجواب على السؤال. هذه طريقة رائعة للطلاب للعثور على المعلومات التي يحتاجونها بسرعة.
+## 為什麼要建立搜尋應用程式？
 
-فيما يلي مثال على استعلام دلالي للسؤال "هل يمكنك استخدام rstudio مع azure ml؟". تحقق من رابط YouTube، سترى أن الرابط يحتوي على طابع زمني يأخذك إلى المكان في الفيديو حيث يوجد الجواب على السؤال.
+建立搜尋應用程式將幫助您了解如何使用嵌入技術來搜尋數據。您還將學習如何建立一個搜尋應用程式，幫助學生快速找到所需資訊。
 
-## ما هو البحث الدلالي؟
+本課程包含 Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube 頻道的影片文字記錄嵌入索引。AI Show 是一個教授 AI 和機器學習的 YouTube 頻道。嵌入索引包含截至 2023 年 10 月的所有影片文字記錄的嵌入。您將使用嵌入索引為我們的初創公司建立一個搜尋應用程式。搜尋應用程式會返回影片中回答問題的具體時間點的連結。這是一種幫助學生快速找到所需資訊的好方法。
 
-قد تتساءل الآن، ما هو البحث الدلالي؟ البحث الدلالي هو تقنية بحث تستخدم الدلالات، أو المعنى، للكلمات في الاستعلام لإرجاع نتائج ذات صلة.
+以下是一個語義搜尋的範例，問題是「可以使用 rstudio 與 azure ml 嗎？」。查看 YouTube 的 URL，您會看到 URL 包含一個時間戳，指向影片中回答問題的具體位置。
 
-إليك مثال على بحث دلالي. لنفترض أنك كنت تبحث عن شراء سيارة، قد تبحث عن "سيارتي الحلم"، البحث الدلالي يفهم أنك لا تتحدث عن سيارة، بل أنك تبحث عن شراء سيارتك الحلم. البحث الدلالي يفهم نيتك ويعيد نتائج ذات صلة. البديل هو البحث بالكلمات الرئيسية الذي سيبحث حرفيًا عن الأحلام حول السيارات وغالبًا ما يعيد نتائج غير ذات صلة.
+![問題「可以使用 rstudio 與 Azure ML 嗎？」的語義搜尋範例](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.mo.png)
 
-## ما هي تضمينات النصوص؟
+## 什麼是語義搜尋？
 
-[تضمينات النصوص](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) هي تقنية تمثيل نصوص تُستخدم في [معالجة اللغة الطبيعية](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). تضمينات النصوص هي تمثيلات رقمية دلالية للنصوص. تُستخدم التضمينات لتمثيل البيانات بطريقة يسهل على الآلة فهمها. هناك العديد من النماذج لبناء تضمينات النصوص، في هذا الدرس، سنركز على توليد التضمينات باستخدام نموذج OpenAI Embedding.
+您可能會好奇，什麼是語義搜尋？語義搜尋是一種利用查詢中詞語的語義或含義來返回相關結果的搜尋技術。
 
-إليك مثال، تخيل أن النص التالي موجود في نسخة من إحدى الحلقات على قناة AI Show على يوتيوب:
+以下是一個語義搜尋的例子。假設您想買一輛車，可能會搜尋「我的夢想車」，語義搜尋能理解您不是在「夢想」一輛車，而是想尋找您的「理想」車。語義搜尋能理解您的意圖並返回相關結果。相反，關鍵字搜尋會字面上搜尋與車有關的夢想，通常返回不相關的結果。
 
-سنمرر النص إلى واجهة برمجة تطبيقات OpenAI Embedding وستعيد التضمين التالي الذي يتكون من 1536 رقمًا المعروف أيضًا بالنواقل. كل رقم في الناقل يمثل جانبًا مختلفًا من النص. للاختصار، إليك أول 10 أرقام في الناقل.
+## 什麼是文字嵌入？
 
-## كيف يتم إنشاء فهرس التضمينات؟
+[文字嵌入](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst)是一種用於[自然語言處理](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst)的文字表示技術。文字嵌入是文字的語義數值表示，用於以機器易於理解的方式表示數據。有許多建立文字嵌入的模型，在本課程中，我們將專注於使用 OpenAI 嵌入模型生成嵌入。
 
-تم إنشاء فهرس التضمينات لهذا الدرس بسلسلة من سكربتات بايثون. ستجد السكربتات مع التعليمات في [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) في مجلد 'scripts' لهذا الدرس. لا تحتاج إلى تشغيل هذه السكربتات لإكمال هذا الدرس حيث تم توفير فهرس التضمينات لك.
+以下是一個例子，假設以下文字是 AI Show YouTube 頻道某一集的文字記錄：
 
-تقوم السكربتات بالعمليات التالية:
+```text
+Today we are going to learn about Azure Machine Learning.
+```
 
-1. يتم تنزيل النسخة لكل فيديو يوتيوب في قائمة التشغيل [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1).
-2. باستخدام [وظائف OpenAI](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)، يتم محاولة استخراج اسم المتحدث من أول 3 دقائق من نسخة يوتيوب. يتم تخزين اسم المتحدث لكل فيديو في فهرس التضمينات المسمى `embedding_index_3m.json`.
-3. يتم تقسيم نص النسخة إلى **مقاطع نصية مدتها 3 دقائق**. يتضمن المقطع حوالي 20 كلمة متداخلة من المقطع التالي لضمان عدم قطع التضمين للمقطع ولتوفير سياق بحث أفضل.
-4. يتم تمرير كل مقطع نصي إلى واجهة برمجة تطبيقات OpenAI Chat لتلخيص النص في 60 كلمة. يتم أيضًا تخزين الملخص في فهرس التضمينات `embedding_index_3m.json`.
-5. أخيرًا، يتم تمرير نص المقطع إلى واجهة برمجة تطبيقات OpenAI Embedding. تعيد واجهة برمجة التطبيقات التضمين ناقلًا من 1536 رقمًا يمثل المعنى الدلالي للمقطع. يتم تخزين المقطع مع ناقل OpenAI Embedding في فهرس التضمينات `embedding_index_3m.json`.
+我們將文字傳遞給 OpenAI 嵌入 API，它會返回由 1536 個數字組成的嵌入，也就是向量。向量中的每個數字代表文字的不同方面。為簡潔起見，以下是向量中的前 10 個數字。
 
-### قواعد البيانات النقطية
+```python
+[-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
+```
 
-للتبسيط في الدرس، يتم تخزين فهرس التضمينات في ملف JSON يسمى `embedding_index_3m.json` ويتم تحميله في DataFrame من Pandas. ومع ذلك، في الإنتاج، سيتم تخزين فهرس التضمينات في قاعدة بيانات نقطية مثل [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)، [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst)، [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst)، [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst)، على سبيل المثال لا الحصر.
+## 嵌入索引是如何建立的？
 
-## فهم التشابه الكوني
+本課程的嵌入索引是通過一系列 Python 腳本建立的。您可以在本課程的「scripts」文件夾中的 [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) 中找到腳本和指導說明。您不需要運行這些腳本即可完成本課程，因為嵌入索引已提供。
 
-لقد تعلمنا عن تضمينات النصوص، والخطوة التالية هي تعلم كيفية استخدام تضمينات النصوص للبحث عن البيانات وبالأخص العثور على التضمينات الأكثر تشابهًا لاستعلام معين باستخدام التشابه الكوني.
+這些腳本執行以下操作：
 
-### ما هو التشابه الكوني؟
+1. 下載 [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) 播放列表中每個 YouTube 影片的文字記錄。
+2. 使用 [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst)，嘗試從文字記錄的前三分鐘中提取講者姓名。每個影片的講者姓名存儲在嵌入索引 `embedding_index_3m.json` 中。
+3. 將文字記錄分塊為**三分鐘的文字片段**。片段包括約 20 個與下一片段重疊的詞語，以確保片段嵌入不被截斷並提供更好的搜尋上下文。
+4. 將每個文字片段傳遞給 OpenAI Chat API，將文字摘要為 60 個詞語。摘要也存儲在嵌入索引 `embedding_index_3m.json` 中。
+5. 最後，將片段文字傳遞給 OpenAI 嵌入 API。嵌入 API 返回一個由 1536 個數字組成的向量，表示片段的語義含義。片段及其 OpenAI 嵌入向量存儲在嵌入索引 `embedding_index_3m.json` 中。
 
-التشابه الكوني هو مقياس للتشابه بين ناقلين، ستسمع أيضًا أنه يُشار إليه بـ `nearest neighbor search`. لإجراء بحث بالتشابه الكوني تحتاج إلى _تحويل إلى ناقل_ لنص _الاستعلام_ باستخدام واجهة برمجة تطبيقات OpenAI Embedding. ثم حساب _التشابه الكوني_ بين ناقل الاستعلام وكل ناقل في فهرس التضمينات. تذكر، يحتوي فهرس التضمينات على ناقل لكل مقطع نصي من نسخ يوتيوب. أخيرًا، قم بفرز النتائج حسب التشابه الكوني والمقاطع النصية ذات التشابه الكوني الأعلى هي الأكثر تشابهًا مع الاستعلام.
+### 向量資料庫
 
-من منظور رياضي، يقيس التشابه الكوني جيب الزاوية بين ناقلين تم إسقاطهما في فضاء متعدد الأبعاد. هذا القياس مفيد، لأنه إذا كانت وثيقتان متباعدتان بمسافة إقليدية بسبب الحجم، فقد يكون لديهما زاوية أصغر بينهما وبالتالي تشابه كوني أعلى. لمزيد من المعلومات حول معادلات التشابه الكوني، راجع [التشابه الكوني](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+為了簡化課程，嵌入索引存儲在名為 `embedding_index_3m.json` 的 JSON 文件中，並加載到 Pandas DataFrame 中。然而，在生產環境中，嵌入索引通常存儲在向量資料庫中，例如 [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst)、[Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst)、[Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst)、[Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) 等。
 
-## بناء تطبيق البحث الأول
+## 理解餘弦相似度
 
-بعد ذلك، سنتعلم كيفية بناء تطبيق بحث باستخدام التضمينات. سيسمح تطبيق البحث للطلاب بالبحث عن فيديو عن طريق كتابة سؤال. سيقوم تطبيق البحث بإرجاع قائمة بالفيديوهات ذات الصلة بالسؤال. سيقوم تطبيق البحث أيضًا بإرجاع رابط إلى المكان في الفيديو حيث يوجد الجواب على السؤال.
+我們已經了解了文字嵌入，接下來需要學習如何使用文字嵌入來搜尋數據，特別是使用餘弦相似度找到與給定查詢最相似的嵌入。
 
-تم بناء هذا الحل واختباره على Windows 11 وmacOS وUbuntu 22.04 باستخدام Python 3.10 أو أحدث. يمكنك تنزيل Python من [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+### 什麼是餘弦相似度？
 
-## المهمة - بناء تطبيق بحث، لتمكين الطلاب
+餘弦相似度是衡量兩個向量相似度的一種方法，您也會聽到它被稱為「最近鄰搜尋」。要執行餘弦相似度搜尋，您需要使用 OpenAI 嵌入 API 將查詢文字向量化。然後計算查詢向量與嵌入索引中每個向量的餘弦相似度。記住，嵌入索引對每個 YouTube 文字記錄片段都有一個向量。最後，按餘弦相似度排序結果，餘弦相似度最高的文字片段與查詢最相似。
 
-قدمنا شركتنا الناشئة في بداية هذا الدرس. الآن حان الوقت لتمكين الطلاب من بناء تطبيق بحث لتقييماتهم.
+從數學角度來看，餘弦相似度測量兩個向量在多維空間中投影的角度的餘弦值。這種測量很有用，因為即使兩個文檔因大小而在歐幾里得距離上相距甚遠，它們之間的角度可能較小，因此餘弦相似度較高。關於餘弦相似度公式的更多信息，請參閱 [餘弦相似度](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst)。
 
-في هذه المهمة، ستقوم بإنشاء خدمات Azure OpenAI التي ستستخدم لبناء تطبيق البحث. ستحتاج إلى اشتراك Azure لإكمال هذه المهمة.
+## 建立您的第一個搜尋應用程式
 
-### بدء Azure Cloud Shell
+接下來，我們將學習如何使用嵌入技術建立搜尋應用程式。該搜尋應用程式將允許學生透過輸入問題來搜尋影片。搜尋應用程式將返回與問題相關的影片列表，並提供影片中回答問題的具體時間點的連結。
 
-1. قم بتسجيل الدخول إلى [بوابة Azure](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
-2. اختر أيقونة Cloud Shell في الزاوية العلوية اليمنى من بوابة Azure.
-3. اختر **Bash** لنوع البيئة.
+此解決方案已在 Windows 11、macOS 和 Ubuntu 22.04 上使用 Python 3.10 或更高版本進行構建和測試。您可以從 [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 下載 Python。
 
-#### إنشاء مجموعة موارد
+## 作業 - 建立搜尋應用程式，幫助學生
 
-> لهذه التعليمات، نستخدم مجموعة الموارد المسماة "semantic-video-search" في شرق الولايات المتحدة.
-> يمكنك تغيير اسم مجموعة الموارد، ولكن عند تغيير الموقع للموارد،
-> تحقق من [جدول توافر النموذج](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+我們在本課程開始時介紹了我們的初創公司。現在是時候幫助學生建立一個搜尋應用程式來完成他們的評估。
 
-#### إنشاء مورد خدمة Azure OpenAI
+在本次作業中，您將建立用於構建搜尋應用程式的 Azure OpenAI Services。您需要建立以下 Azure OpenAI Services。完成此作業需要一個 Azure 訂閱。
 
-من Azure Cloud Shell، قم بتشغيل الأمر التالي لإنشاء مورد خدمة Azure OpenAI.
+### 啟動 Azure Cloud Shell
 
-#### الحصول على نقطة النهاية والمفاتيح لاستخدامها في هذا التطبيق
+1. 登錄 [Azure 入口網站](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)。
+2. 選擇 Azure 入口網站右上角的 Cloud Shell 圖標。
+3. 選擇 **Bash** 作為環境類型。
 
-من Azure Cloud Shell، قم بتشغيل الأوامر التالية للحصول على نقطة النهاية والمفاتيح لمورد خدمة Azure OpenAI.
+#### 建立資源群組
 
-#### نشر نموذج OpenAI Embedding
+> 在這些指導中，我們使用名為「semantic-video-search」的資源群組，位於美國東部。
+> 您可以更改資源群組的名稱，但在更改資源位置時，
+> 請檢查 [模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
 
-من Azure Cloud Shell، قم بتشغيل الأمر التالي لنشر نموذج OpenAI Embedding.
+```shell
+az group create --name semantic-video-search --location eastus
+```
 
-## الحل
+#### 建立 Azure OpenAI Service 資源
 
-افتح [دفتر الحل](../../../08-building-search-applications/python/aoai-solution.ipynb) في GitHub Codespaces واتبع التعليمات في دفتر Jupyter.
+在 Azure Cloud Shell 中運行以下命令以建立 Azure OpenAI Service 資源。
 
-عند تشغيل الدفتر، ستتم مطالبتك بإدخال استعلام. سيبدو مربع الإدخال كالتالي:
+```shell
+az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
+    --location eastus --kind OpenAI --sku s0
+```
 
-## عمل رائع! تابع تعلمك
+#### 獲取端點和密鑰以在此應用程式中使用
 
-بعد إكمال هذا الدرس، تحقق من [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تعزيز معرفتك بالذكاء الاصطناعي التوليدي!
+在 Azure Cloud Shell 中運行以下命令以獲取 Azure OpenAI Service 資源的端點和密鑰。
 
-توجه إلى الدرس 9 حيث سنلقي نظرة على كيفية [بناء تطبيقات توليد الصور](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+```shell
+az cognitiveservices account show --name semantic-video-openai \
+   --resource-group  semantic-video-search | jq -r .properties.endpoint
+az cognitiveservices account keys list --name semantic-video-openai \
+   --resource-group semantic-video-search | jq -r .key1
+```
 
-Certainly! However, could you please clarify what you mean by "mo"? Are you referring to a specific language or dialect?
+#### 部署 OpenAI 嵌入模型
+
+在 Azure Cloud Shell 中運行以下命令以部署 OpenAI 嵌入模型。
+
+```shell
+az cognitiveservices account deployment create \
+    --name semantic-video-openai \
+    --resource-group  semantic-video-search \
+    --deployment-name text-embedding-ada-002 \
+    --model-name text-embedding-ada-002 \
+    --model-version "2"  \
+    --model-format OpenAI \
+    --sku-capacity 100 --sku-name "Standard"
+```
+
+## 解決方案
+
+在 GitHub Codespaces 中打開 [解決方案筆記本](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst)，並按照 Jupyter Notebook 中的指導進行操作。
+
+當您運行筆記本時，系統會提示您輸入查詢。輸入框看起來像這樣：
+
+![用戶輸入查詢的輸入框](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.mo.png)
+
+## 做得好！繼續學習
+
+完成本課程後，請查看我們的 [生成式 AI 學習系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
+
+前往第 9 課，我們將探討如何[建立影像生成應用程式](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+
+---
+
+**免責聲明**：  
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或誤釋不承擔責任。

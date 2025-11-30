@@ -1,91 +1,91 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T10:03:54+00:00",
+  "original_hash": "df027997f1448323d6159b78a1b669bf",
+  "translation_date": "2025-10-17T23:49:03+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "ja"
 }
 -->
 # テキスト生成アプリケーションの構築
 
-[![テキスト生成アプリケーションの構築](../../../translated_images/06-lesson-banner.90d8a665630e46b2990412d7c7d3d43c30f2441c95c0ee93e0763fb252734e83.ja.png)](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)
+[![テキスト生成アプリケーションの構築](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.ja.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(上の画像をクリックして、このレッスンのビデオを視聴してください)_
+> _(上の画像をクリックして、このレッスンの動画をご覧ください)_
 
-これまでのカリキュラムで、プロンプトなどの基本概念や「プロンプトエンジニアリング」という分野があることを学びました。ChatGPT、Office 365、Microsoft Power Platform など、プロンプトを使用して何かを達成することをサポートするツールと対話できます。
+これまでのカリキュラムで、プロンプトや「プロンプトエンジニアリング」と呼ばれる専門分野などの基本的な概念について学びました。ChatGPT、Office 365、Microsoft Power Platformなどのツールを使用して、プロンプトを活用して何かを達成することができます。
 
-アプリにそのような体験を追加するには、プロンプト、完了、そして使用するライブラリを選択するなどの概念を理解する必要があります。この章ではまさにそれを学びます。
+アプリにそのような体験を追加するには、プロンプトや補完の概念を理解し、使用するライブラリを選択する必要があります。この章では、まさにその内容を学びます。
 
 ## はじめに
 
-この章では次のことを学びます:
+この章では以下を学びます：
 
-- openai ライブラリとその基本概念について学ぶ。
-- openai を使用してテキスト生成アプリを構築する。
-- プロンプト、温度、トークンなどの概念を使用してテキスト生成アプリを構築する方法を理解する。
+- openaiライブラリとその基本概念について学ぶ
+- openaiを使用してテキスト生成アプリを構築する
+- プロンプト、温度、トークンなどの概念を使用してテキスト生成アプリを構築する方法を理解する
 
 ## 学習目標
 
-このレッスンの終わりには、次のことができるようになります:
+このレッスンの終わりには以下ができるようになります：
 
-- テキスト生成アプリとは何かを説明する。
-- openai を使用してテキスト生成アプリを構築する。
-- トークンの使用量を調整したり、温度を変更して多様な出力を得るためにアプリを設定する。
+- テキスト生成アプリとは何かを説明する
+- openaiを使用してテキスト生成アプリを構築する
+- トークンの使用量を調整したり、温度を変更して出力を多様化する方法を設定する
 
 ## テキスト生成アプリとは？
 
-通常、アプリを構築すると、次のようなインターフェースが備わっています:
+通常、アプリを構築する際には以下のようなインターフェースがあります：
 
-- コマンドベース。コンソールアプリは典型的なもので、コマンドを入力してタスクを実行します。例えば、`git` はコマンドベースのアプリです。
-- ユーザーインターフェース (UI)。いくつかのアプリはグラフィカルユーザーインターフェース (GUI) を持ち、ボタンをクリックしたり、テキストを入力したり、オプションを選択したりします。
+- コマンドベース。コンソールアプリは典型的な例で、コマンドを入力するとタスクを実行します。例えば、`git`はコマンドベースのアプリです。
+- ユーザーインターフェース（UI）。一部のアプリにはグラフィカルユーザーインターフェース（GUI）があり、ボタンをクリックしたり、テキストを入力したり、オプションを選択したりします。
 
-### コンソールと UI アプリの制限
+### コンソールアプリとUIアプリの制限
 
-コマンドベースのアプリと比較して:
+コマンドベースのアプリと比較すると以下のような制限があります：
 
-- **制限がある**。任意のコマンドを入力できるわけではなく、アプリがサポートするコマンドだけです。
-- **言語特有**。一部のアプリは多くの言語をサポートしていますが、デフォルトでは特定の言語向けに構築されています。
+- **制限がある**。入力できるコマンドはアプリがサポートしているものだけです。
+- **言語特化**。一部のアプリは多言語をサポートしていますが、デフォルトでは特定の言語向けに構築されています。追加の言語サポートを追加することは可能です。
 
 ### テキスト生成アプリの利点
 
-では、テキスト生成アプリはどのように異なるのでしょうか？
+では、テキスト生成アプリはどう違うのでしょうか？
 
-テキスト生成アプリでは、より柔軟で、特定のコマンドや入力言語に限定されません。代わりに、自然言語を使ってアプリと対話できます。さらに、既に膨大な情報を持つデータソースと対話しているため、従来のアプリがデータベース内の情報に制限されているのに対し、より多くの情報にアクセスできます。
+テキスト生成アプリでは、より柔軟性があり、特定のコマンドや入力言語に限定されません。代わりに自然言語を使用してアプリと対話することができます。また、従来のアプリがデータベースにある情報に限定されるのに対し、テキスト生成アプリは膨大な情報を学習したデータソースと直接やり取りすることができます。
 
-### テキスト生成アプリで何が作れる？
+### テキスト生成アプリで何ができるのか？
 
-作れるものはたくさんあります。例えば:
+以下のようなものを構築することができます：
 
-- **チャットボット**。会社や製品についての質問に答えるチャットボットは良い選択肢かもしれません。
-- **ヘルパー**。LLM はテキストの要約や洞察を得ること、履歴書のようなテキストを生成することなどに優れています。
-- **コードアシスタント**。使用する言語モデルに応じて、コード作成を支援するコードアシスタントを構築できます。例えば、GitHub Copilot や ChatGPT を使用してコードを書く手助けをすることができます。
+- **チャットボット**。会社や製品に関する質問に答えるチャットボットは良い選択肢です。
+- **ヘルパー**。LLMはテキストの要約、洞察の取得、履歴書の作成などに優れています。
+- **コードアシスタント**。使用する言語モデルによっては、コード作成を支援するコードアシスタントを構築できます。例えば、GitHub CopilotやChatGPTを使用してコード作成を支援することができます。
 
-## どのように始める？
+## どうやって始めるのか？
 
-LLM と統合する方法を見つける必要があります。通常、次の2つのアプローチがあります:
+LLMと統合する方法を見つける必要があります。通常、以下の2つのアプローチがあります：
 
-- API を使用する。ここでは、プロンプトを含むウェブリクエストを構築し、生成されたテキストを取得します。
-- ライブラリを使用する。ライブラリは API コールをカプセル化し、使用を容易にします。
+- APIを使用する。プロンプトを含むウェブリクエストを構築し、生成されたテキストを取得します。
+- ライブラリを使用する。ライブラリはAPI呼び出しをカプセル化し、使いやすくします。
 
 ## ライブラリ/SDK
 
-LLM を操作するためのよく知られたライブラリがいくつかあります:
+LLMを操作するための有名なライブラリには以下があります：
 
-- **openai**。このライブラリは、モデルに接続してプロンプトを送信するのを容易にします。
+- **openai**。このライブラリはモデルに接続し、プロンプトを送信するのを簡単にします。
 
-さらに、より高レベルで操作するライブラリもあります:
+さらに高レベルで動作するライブラリもあります：
 
-- **Langchain**。Langchain はよく知られており、Python をサポートしています。
-- **Semantic Kernel**。Semantic Kernel は、C#、Python、Java をサポートする Microsoft のライブラリです。
+- **Langchain**。LangchainはPythonをサポートしており、広く知られています。
+- **Semantic Kernel**。Semantic KernelはMicrosoftが提供するライブラリで、C#、Python、Javaをサポートしています。
 
-## openai を使用した最初のアプリ
+## openaiを使用した最初のアプリ
 
-最初のアプリをどのように構築するか、必要なライブラリ、必要なものなどを見てみましょう。
+最初のアプリを構築する方法、必要なライブラリ、必要な作業量などを見てみましょう。
 
-### openai のインストール
+### openaiのインストール
 
-OpenAI や Azure OpenAI と対話するための多くのライブラリがあります。C#、Python、JavaScript、Java などのプログラミング言語を使用することが可能です。今回は `openai` Python ライブラリを選択し、`pip` を使用してインストールします。
+OpenAIやAzure OpenAIとやり取りするためのライブラリは多数存在します。C#、Python、JavaScript、Javaなどのプログラミング言語を使用することも可能です。ここではPythonの`openai`ライブラリを選択し、`pip`を使用してインストールします。
 
 ```bash
 pip install openai
@@ -93,34 +93,34 @@ pip install openai
 
 ### リソースの作成
 
-次のステップを実行する必要があります:
+以下の手順を実行してください：
 
-- Azure でアカウントを作成します [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
-- Azure OpenAI へのアクセスを取得します。 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) にアクセスし、アクセスをリクエストします。
+- Azureでアカウントを作成する [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)
+- Azure OpenAIへのアクセスを取得する。以下のリンクでアクセスを申請してください [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst)
 
   > [!NOTE]
-  > 記述時点では、Azure OpenAI へのアクセスを申請する必要があります。
+  > 執筆時点では、Azure OpenAIへのアクセスを申請する必要があります。
 
-- Python をインストールします <https://www.python.org/>
-- Azure OpenAI サービスリソースを作成します。リソースの作成方法については、このガイドを参照してください [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
+- Pythonをインストールする <https://www.python.org/>
+- Azure OpenAI Serviceリソースを作成する。リソース作成方法については以下のガイドを参照してください [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)
 
-### API キーとエンドポイントの場所
+### APIキーとエンドポイントの確認
 
-この時点で、`openai` ライブラリに使用する API キーを指定する必要があります。API キーを見つけるには、Azure OpenAI リソースの「キーとエンドポイント」セクションに移動し、「キー 1」の値をコピーします。
+この時点で、`openai`ライブラリに使用するAPIキーを指定する必要があります。APIキーを見つけるには、Azure OpenAIリソースの「Keys and Endpoint」セクションに移動し、「Key 1」の値をコピーしてください。
 
-![Azure ポータルのキーとエンドポイントリソースブレード](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![AzureポータルのKeys and Endpointリソースブレード](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-この情報をコピーしたら、ライブラリに使用するように指示します。
+この情報をコピーしたら、ライブラリに指示を与えましょう。
 
 > [!NOTE]
-> API キーをコードから分離する価値があります。環境変数を使用することでこれを行うことができます。
+> APIキーをコードから分離する価値があります。環境変数を使用してこれを行うことができます。
 >
-> - 環境変数 `OPENAI_API_KEY` to your API key.
->   `export OPENAI_API_KEY='sk-...'` を設定します。
+> - 環境変数`OPENAI_API_KEY`をAPIキーに設定します。
+>   `export OPENAI_API_KEY='sk-...'`
 
-### Azure の設定
+### Azureの設定
 
-Azure OpenAI を使用している場合、設定方法は次の通りです:
+Azure OpenAIを使用している場合、以下のように設定を行います：
 
 ```python
 openai.api_type = 'azure'
@@ -129,18 +129,18 @@ openai.api_version = '2023-05-15'
 openai.api_base = os.getenv("API_BASE")
 ```
 
-上記では次のことを設定しています:
+上記では以下を設定しています：
 
-- `api_type` to `azure`. This tells the library to use Azure OpenAI and not OpenAI.
-- `api_key`, this is your API key found in the Azure Portal.
-- `api_version`, this is the version of the API you want to use. At the time of writing, the latest version is `2023-05-15`.
-- `api_base`, this is the endpoint of the API. You can find it in the Azure Portal next to your API key.
+- `api_type`を`azure`に設定。これにより、ライブラリがOpenAIではなくAzure OpenAIを使用することを指示します。
+- `api_key`はAzureポータルで見つけたAPIキーです。
+- `api_version`は使用するAPIのバージョンです。執筆時点では最新バージョンは`2023-05-15`です。
+- `api_base`はAPIのエンドポイントです。AzureポータルでAPIキーの隣に表示されています。
 
-> [!NOTE] > `os.getenv` is a function that reads environment variables. You can use it to read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set these environment variables in your terminal or by using a library like `dotenv`.
+> [!NOTE] > `os.getenv`は環境変数を読み取る関数です。`OPENAI_API_KEY`や`API_BASE`などの環境変数を読み取るために使用できます。これらの環境変数はターミナルで設定するか、`dotenv`のようなライブラリを使用して設定します。
 
-## Generate text
+## テキスト生成
 
-The way to generate text is to use the `Completion` クラス。例を示します:
+テキストを生成する方法は`Completion`クラスを使用することです。以下はその例です：
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
@@ -149,11 +149,11 @@ completion = openai.Completion.create(model="davinci-002", prompt=prompt)
 print(completion.choices[0].text)
 ```
 
-上記のコードでは、使用するモデルとプロンプトを渡して完了オブジェクトを作成し、生成されたテキストを出力します。
+上記のコードでは、補完オブジェクトを作成し、使用するモデルとプロンプトを渡します。その後、生成されたテキストを出力します。
 
-### チャット完了
+### チャット補完
 
-これまで、`Completion` to generate text. But there's another class called `ChatCompletion` を使用してきたことがわかりますが、これはチャットボットにより適しています。以下にその使用例を示します:
+これまで`Completion`を使用してテキストを生成してきましたが、チャットボットにより適した`ChatCompletion`というクラスもあります。以下はその使用例です：
 
 ```python
 import openai
@@ -166,11 +166,11 @@ print(completion.choices[0].message.content)
 
 この機能については次の章で詳しく説明します。
 
-## 演習 - 最初のテキスト生成アプリ
+## 演習 - 初めてのテキスト生成アプリ
 
-openai のセットアップと構成方法を学んだので、最初のテキスト生成アプリを構築する時が来ました。アプリを構築するには、次の手順に従います:
+openaiの設定と構成方法を学んだので、最初のテキスト生成アプリを構築する時が来ました。アプリを構築するには以下の手順を実行してください：
 
-1. 仮想環境を作成し、openai をインストールします:
+1. 仮想環境を作成し、openaiをインストールします：
 
    ```bash
    python -m venv venv
@@ -179,12 +179,12 @@ openai のセットアップと構成方法を学んだので、最初のテキ�
    ```
 
    > [!NOTE]
-   > Windows を使用している場合は、`venv\Scripts\activate` instead of `source venv/bin/activate`.
+   > Windowsを使用している場合は`source venv/bin/activate`の代わりに`venv\Scripts\activate`を入力してください。
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` の値を入力します。
+   > Azure OpenAIキーを以下のリンクで確認してください [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst)。`Open AI`を検索し、`Open AI resource`を選択して`Keys and Endpoint`を選択し、`Key 1`の値をコピーしてください。
 
-1. _app.py_ ファイルを作成し、次のコードを入力します:
+1. _app.py_ファイルを作成し、以下のコードを記述します：
 
    ```python
    import openai
@@ -208,9 +208,9 @@ openai のセットアップと構成方法を学んだので、最初のテキ�
    ```
 
    > [!NOTE]
-   > Azure OpenAI を使用している場合は、`api_type` to `azure` and set the `api_key` を Azure OpenAI キーに設定する必要があります。
+   > Azure OpenAIを使用している場合は、`api_type`を`azure`に設定し、`api_key`をAzure OpenAIキーに設定する必要があります。
 
-   次のような出力が表示されます:
+   以下のような出力が表示されるはずです：
 
    ```output
     very unhappy _____.
@@ -218,25 +218,25 @@ openai のセットアップと構成方法を学んだので、最初のテキ�
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## さまざまな目的に応じた異なるタイプのプロンプト
+## 様々なプロンプトの種類と用途
 
-プロンプトを使用してテキストを生成する方法を見てきました。異なる種類のテキストを生成するために変更できるプログラムも動作しています。
+プロンプトを使用してテキストを生成する方法を学びました。さらに、異なる種類のテキストを生成するために変更可能なプログラムも動作しています。
 
-プロンプトはさまざまなタスクに使用できます。例えば:
+プロンプトは様々なタスクに使用できます。例えば：
 
-- **特定の種類のテキストを生成する**。例えば、詩やクイズの質問を生成することができます。
-- **情報を検索する**。プロンプトを使用して情報を検索することができます。例えば、「Web 開発における CORS とは何か？」のような例です。
-- **コードを生成する**。プロンプトを使用してコードを生成することができます。例えば、メールを検証するための正規表現を開発したり、Web アプリのようなプログラム全体を生成したりすることができます。
+- **特定の種類のテキストを生成する**。例えば、詩やクイズの質問などを生成できます。
+- **情報を検索する**。プロンプトを使用して情報を検索できます。例：'Web開発におけるCORSとは何ですか？'
+- **コードを生成する**。プロンプトを使用してコードを生成できます。例えば、メールを検証する正規表現を作成したり、ウェブアプリのようなプログラム全体を生成したりできます。
 
-## より実用的なユースケース: レシピジェネレーター
+## 実用的なユースケース：レシピジェネレーター
 
-自宅にある材料を使って何かを料理したいと考えたとします。そのためにはレシピが必要です。レシピを見つける方法としては、検索エンジンを使うか、LLM を使うことができます。
+家にある材料を使って料理をしたいとします。そのためにはレシピが必要です。レシピを見つける方法として検索エンジンを使用することもできますが、LLMを使用することもできます。
 
-次のようなプロンプトを書くことができます:
+以下のようなプロンプトを記述できます：
 
-> 「鶏肉、ジャガイモ、ニンジンを使った料理のレシピを5つ見せてください。各レシピで使用するすべての材料をリストアップしてください」
+> "以下の材料を使った料理のレシピを5つ教えてください：鶏肉、ジャガイモ、ニンジン。各レシピで使用するすべての材料をリストしてください"
 
-上記のプロンプトに対して、次のような応答が得られるかもしれません:
+上記のプロンプトを使用すると、次のような応答が得られるかもしれません：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -300,16 +300,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-この結果は素晴らしいです。何を料理するかがわかります。この時点で役立つ改善点は次の通りです:
+この結果は素晴らしいですね。これで何を料理するかが分かります。この時点で役立つ改善点としては：
 
-- 嫌いな材料やアレルギーのある材料を除外する。
-- 家にない材料のための買い物リストを作成する。
+- 嫌いな材料やアレルギーのある材料を除外する
+- 家にない材料を考慮した買い物リストを作成する
 
-上記のケースでは、追加のプロンプトを追加します:
+上記のケースでは、以下の追加プロンプトを使用します：
 
-> 「ニンニクがアレルギーなので、ニンニクを使ったレシピを削除し、代わりに他のものを使ってください。また、家にすでに鶏肉、ジャガイモ、ニンジンがあることを考慮して、レシピのための買い物リストを作成してください。」
+> "ニンニクがアレルギーなのでレシピから除外し、代わりに何か別のものを使ってください。また、家に鶏肉、ジャガイモ、ニンジンがあることを考慮して、レシピの買い物リストを作成してください。"
 
-新しい結果が得られます:
+これで新しい結果が得られます。具体的には：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -376,20 +376,20 @@ Shopping List:
 - Pepper
 ```
 
-これで5つのレシピがニンニクを含まず、家にあるものを考慮した買い物リストもあります。
+これでニンニクが含まれていない5つのレシピが得られ、家にある材料を考慮した買い物リストも作成されました。
 
 ## 演習 - レシピジェネレーターを構築する
 
-シナリオを実行したので、デモンストレーションされたシナリオに一致するコードを書いてみましょう。次の手順に従います:
+シナリオを試したので、示されたシナリオに合ったコードを書いてみましょう。以下の手順に従ってください：
 
-1. 既存の _app.py_ ファイルを開始点として使用します
-1. `prompt` 変数を見つけて、そのコードを次のように変更します:
+1. 既存の_app.py_ファイルを出発点として使用します。
+1. `prompt`変数を見つけて、以下のコードに変更します：
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   コードを実行すると、次のような出力が表示されるはずです:
+   コードを実行すると、以下のような出力が表示されるはずです：
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -401,11 +401,11 @@ Shopping List:
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE、あなたの LLM は非決定的であるため、プログラムを実行するたびに異なる結果が得られるかもしれません。
+   > NOTE、LLMは非決定論的なので、プログラムを実行するたびに異なる結果が得られる可能性があります。
 
-   素晴らしい、改善方法を見てみましょう。改善するためには、コードが柔軟であることを確認し、材料やレシピの数を改善および変更できるようにしたいです。
+   素晴らしいですね。次に改善方法を見てみましょう。コードを柔軟にするために、材料やレシピの数を変更できるようにします。
 
-1. コードを次のように変更します:
+1. 以下のようにコードを変更します：
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
@@ -416,7 +416,7 @@ Shopping List:
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   コードをテスト実行すると、次のような結果になります:
+   コードをテスト実行すると、以下のような結果が得られるかもしれません：
 
    ```output
    No of recipes (for example, 5): 3
@@ -427,13 +427,13 @@ Shopping List:
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### フィルタと買い物リストを追加して改善する
+### フィルターと買い物リストの追加による改善
 
-現在、レシピを生成できる動作するアプリがありますが、ユーザーからの入力に依存しているため、レシピの数や使用する材料も柔軟です。
+現在、レシピを生成する機能を持つアプリが動作しており、ユーザーからの入力に基づいて柔軟に動作します。レシピの数や使用する材料を変更することができます。
 
-さらに改善するために、次のことを追加したいです:
+さらに改善するために以下を追加したいと思います：
 
-- **材料をフィルタリングする**。好きでない材料やアレルギーのある材料をフィルタリングできるようにしたいです。この変更を行うために、既存のプロンプトを編集し、次のようにフィルタ条件を追加します:
+- **材料のフィルター**。嫌いな材料やアレルギーのある材料を除外できるようにしたいです。この変更を実現するために、既存のプロンプトを編集し、以下のようにフィルター条件を追加します：
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -441,9 +441,9 @@ Shopping List:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  上記では、プロンプトの最後に `{filter}` を追加し、ユーザーからフィルタ値を取得しています。
+  上記ではプロンプトの最後に`{filter}`を追加し、ユーザーからフィルター値を取得しています。
 
-  プログラムを実行したときの入力例は次のようになります:
+  プログラムを実行した際の入力例は以下のようになります：
 
   ```output
   No of recipes (for example, 5): 3
@@ -510,14 +510,13 @@ Shopping List:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  ご覧の通り、ミルクを含むレシピはフィルタリングされています。しかし、乳糖不耐症の方は、チーズを含むレシピもフィルタリングしたいかもしれませんので、明確にする必要があります。
+  ご覧の通り、牛乳を含むレシピが除外されています。ただし、乳糖不耐症の場合はチーズを含むレシピも除外したいかもしれませんので、明確にする必要があります。
 
-- **買い物リストを作成する**。すでに家にあるものを考慮して買い物リストを作成したいです。
+- **買い物リストの作成**。家にある材料を考慮して買い物リストを作成したいです。
 
-  この機能のために、すべてを1つのプロンプトで解決しようとすることもできますが、2つのプロンプトに分けることもできます。後者のアプローチを試してみましょう。ここでは、追加のプロンプトを提案していますが、それが機能するためには、最初のプロンプトの結果を後者のプロンプトにコンテキストとして追加する必要があります。
+  この機能を実現するには、1つのプロンプトで全てを解決するか、2つのプロンプトに分けることができます。後者のアプローチを試してみましょう。ここでは追加のプロンプトを提案しますが、それを機能させるためには、前のプロンプトの結果を後のプロンプトのコンテキストとして追加する必要があります。
 
-  最初のプロンプトの結果を出力するコード部分を見つけ、その下に次のコードを追加します:
-
+  最初のプロンプトの結果を出力するコード部分を見つけ、その下に以下のコードを追加してください：
   ```python
   old_prompt_result = completion.choices[0].message.content
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
@@ -531,21 +530,21 @@ Shopping List:
   print(completion.choices[0].message.content)
   ```
 
-  次の点に注意してください:
+  以下の点に注意してください:
 
-  1. 新しいプロンプトを作成し、最初のプロンプトの結果を新しいプロンプトに追加しています:
+  1. 最初のプロンプトの結果を新しいプロンプトに追加して、新しいプロンプトを構築しています:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. 新しいリクエストを行いますが、最初のプロンプトで要求したトークン数を考慮し、この時点で `max_tokens` を 1200 に設定します。
+  1. 新しいリクエストを作成しますが、最初のプロンプトで要求したトークン数も考慮します。このため、今回は `max_tokens` を1200に設定します。
 
      ```python
      completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
      ```
 
-     このコードを実行すると、次のような出力が得られます:
+     このコードを試してみると、次のような出力が得られます:
 
      ```output
      No of recipes (for example, 5): 2
@@ -561,17 +560,17 @@ Shopping List:
 
 ## セットアップを改善する
 
-これまでのところ、動作するコードがありますが、さらに改善するためにいくつかの調整を行うべきです。改善するべきことのいくつかは次の通りです:
+これまでのコードは動作しますが、さらに改善するためにいくつか調整すべき点があります。以下のようなことを行うべきです:
 
-- **コードから秘密情報を分離する**。API キーのような秘密情報はコードに含めるべきではなく、安全な場所に保存するべきです。コードから秘密情報を分離するために、環境変数や `python-dotenv` to load them from a file. Here's how that would look like in code:
+- **秘密情報をコードから分離する**。例えばAPIキーなどの秘密情報はコードに含めるべきではなく、安全な場所に保存する必要があります。秘密情報をコードから分離するには、環境変数を使用し、`python-dotenv`のようなライブラリを使ってファイルから読み込むことができます。コードでは以下のように実装します:
 
-  1. Create a `.env` ファイルを使用できます。次の内容を含めます:
+  1. `.env` ファイルを作成し、以下の内容を記述します:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > 注意、Azure の場合、次の環境変数を設定する必要があります:
+     > 注意: Azureを使用する場合、以下の環境変数を設定する必要があります:
 
      ```bash
      OPENAI_API_TYPE=azure
@@ -579,7 +578,7 @@ Shopping List:
      OPENAI_API_BASE=<replace>
      ```
 
-     コードでは、次のように環境変数をロードします:
+     コード内では、環境変数を以下のように読み込みます:
 
      ```python
      from dotenv import load_dotenv
@@ -589,9 +588,81 @@ Shopping List:
      openai.api_key = os.environ["OPENAI_API_KEY"]
      ```
 
-- **トークンの長さについての一言**。生成したいテキストに必要なトークン数を考慮するべきです。トークンはコストがかかるため、可能な限り、使用するトークン数を節約するようにするべきです。例えば、プロンプトをどのように表現すればトークンを少なくできるかを考えることができます。
+- **トークンの長さについての注意**。生成したいテキストに必要なトークン数を考慮するべきです。トークンにはコストがかかるため、可能な限り使用するトークン数を節約するようにしましょう。例えば、プロンプトを工夫してトークン数を減らせるかどうかを検討してください。
 
-  使用するトークンを変更するには、`max_tokens` パラメータを使用します
+  使用するトークン数を変更するには、`max_tokens` パラメータを使用します。例えば、100トークンを使用したい場合は以下のように設定します:
 
-**免責事項**:
-この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確さを期していますが、自動翻訳には誤りや不正確さが含まれる可能性があることをご了承ください。原文の言語での文書が信頼できる情報源と見なされるべきです。重要な情報については、専門の人間による翻訳をお勧めします。この翻訳の使用によって生じた誤解や誤解釈について、当社は責任を負いません。
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
+  ```
+
+- **温度の調整**。温度はこれまで触れていませんが、プログラムの動作において重要な要素です。温度値が高いほど出力がランダムになり、低いほど予測可能な出力になります。出力にバリエーションが必要かどうかを考慮してください。
+
+  温度を変更するには、`temperature` パラメータを使用します。例えば、温度を0.5に設定したい場合は以下のようにします:
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  ```
+
+  > 注意: 1.0に近いほど出力が多様になります。
+
+## 課題
+
+この課題では、何を作るかを選択できます。
+
+以下は提案の一例です:
+
+- レシピ生成アプリをさらに改善する。温度値やプロンプトを調整して、どのような結果が得られるか試してみてください。
+- "勉強仲間"を作る。このアプリは、Pythonなどのトピックに関する質問に答えることができます。例えば、「Pythonの特定のトピックとは何ですか？」や「特定のトピックに関するコードを見せてください」といったプロンプトを使用できます。
+- 歴史ボットを作成し、歴史を生き生きとさせる。ボットに特定の歴史上の人物を演じさせ、その人物の人生や時代について質問してみてください。
+
+## 解決策
+
+### 勉強仲間
+
+以下はスタータープロンプトです。これを使用して、自分の好みに合わせて調整してみてください。
+
+```text
+- "You're an expert on the Python language
+
+    Suggest a beginner lesson for Python in the following format:
+
+    Format:
+    - concepts:
+    - brief explanation of the lesson:
+    - exercise in code with solutions"
+```
+
+### 歴史ボット
+
+以下は使用できるプロンプトの例です:
+
+```text
+- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
+- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
+
+   Tell me about your greatest accomplishments, in 300 words"
+```
+
+## 知識チェック
+
+温度の概念は何を制御しますか？
+
+1. 出力のランダム性を制御します。
+1. 応答の大きさを制御します。
+1. 使用するトークン数を制御します。
+
+## 🚀 チャレンジ
+
+課題に取り組む際、温度を変えてみてください。0、0.5、1に設定して試してみましょう。0は最も変化が少なく、1は最も変化が多いです。あなたのアプリに最適な値はどれですか？
+
+## 素晴らしい仕事！学習を続けましょう
+
+このレッスンを完了した後は、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) をチェックして、生成AIの知識をさらに深めてください！
+
+次のレッスン7では、[チャットアプリケーションの構築](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)について学びます！
+
+---
+
+**免責事項**:  
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてご参照ください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤認について、当方は一切の責任を負いません。

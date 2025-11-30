@@ -26,7 +26,7 @@ export async function main() {
             console.log(choice.message);
         }
     } catch (error) {
-        console.log("The sample encoutered an error: ", error);
+        console.log("The sample encountered an error: ", error);
     }
 }
 

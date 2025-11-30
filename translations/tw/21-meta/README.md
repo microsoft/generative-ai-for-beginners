@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:07:38+00:00",
+  "translation_date": "2025-07-09T19:07:22+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "tw"
 }
 -->
-# 使用 Meta 家族模型构建
+# 使用 Meta 家族模型構建
 
-## 介绍
+## 介紹
 
-本课程将涵盖：
+本課程將涵蓋：
 
-- 探索 Meta 家族的两个主要模型 - Llama 3.1 和 Llama 3.2
-- 理解每个模型的使用案例和场景
-- 展示每个模型独特功能的代码示例
+- 探索兩個主要的 Meta 家族模型 - Llama 3.1 與 Llama 3.2  
+- 了解每個模型的使用情境與應用場景  
+- 透過程式碼範例展示各模型的獨特功能  
 
 ## Meta 家族模型
 
-在本课程中，我们将探索 Meta 家族或“Llama Herd”的两个模型 - Llama 3.1 和 Llama 3.2
+在本課程中，我們將探索來自 Meta 家族或稱「Llama Herd」的兩款模型 - Llama 3.1 與 Llama 3.2
 
-这些模型有不同的变体，可以在 GitHub Model 市场上找到。这里有更多关于使用 GitHub Models进行[AI模型原型设计](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的详细信息。
+這些模型有不同的變體，並可在 GitHub Model 市場上取得。以下是使用 GitHub Models 來[以 AI 模型進行原型設計](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)的更多細節。
 
-模型变体：
-- Llama 3.1 - 70B 指令
-- Llama 3.1 - 405B 指令
-- Llama 3.2 - 11B 视觉指令
-- Llama 3.2 - 90B 视觉指令
+模型變體：  
+- Llama 3.1 - 70B Instruct  
+- Llama 3.1 - 405B Instruct  
+- Llama 3.2 - 11B Vision Instruct  
+- Llama 3.2 - 90B Vision Instruct  
 
-*注意：Llama 3 也可以在 GitHub Models 上找到，但不会在本课程中涉及*
+*注意：Llama 3 也可在 GitHub Models 上取得，但本課程不涵蓋該模型*
 
 ## Llama 3.1
 
-拥有4050亿参数的 Llama 3.1 属于开源 LLM 类别。
+擁有 4050 億參數的 Llama 3.1 屬於開源大型語言模型（LLM）類別。
 
-该模式是对早期发布的 Llama 3 的升级，提供：
+此模型是早期版本 Llama 3 的升級版，提供：
 
-- 更大的上下文窗口 - 128k tokens 对比 8k tokens
-- 更大的最大输出 tokens - 4096 对比 2048
-- 更好的多语言支持 - 由于训练 tokens 的增加
+- 更大的上下文視窗 - 128k 代幣對比 8k 代幣  
+- 更大的最大輸出代幣數 - 4096 對比 2048  
+- 更佳的多語言支援 - 由於訓練代幣數增加  
 
-这些使得 Llama 3.1 能够在构建 GenAI 应用时处理更复杂的使用案例，包括：
-- 本地函数调用 - 能够在 LLM 工作流程之外调用外部工具和函数
-- 更好的 RAG 性能 - 由于更高的上下文窗口
-- 合成数据生成 - 能够为微调等任务创建有效数据
+這些改進使 Llama 3.1 能夠處理更複雜的應用場景，適合用於構建生成式 AI 應用，包括：  
+- 原生函式呼叫 - 能夠在 LLM 工作流程外呼叫外部工具與函式  
+- 更佳的 RAG（檢索增強生成）效能 - 受益於更大的上下文視窗  
+- 合成資料生成 - 能夠為微調等任務創造有效資料  
 
-### 本地函数调用
+### 原生函式呼叫
 
-Llama 3.1 已被微调以更有效地进行函数或工具调用。它还有两个内置工具，模型可以根据用户的提示识别需要使用。这些工具是：
+Llama 3.1 經過微調，能更有效地進行函式或工具呼叫。它內建兩個工具，模型可根據使用者提示判斷是否需要使用這些工具。這些工具包括：
 
-- **Brave Search** - 可以通过进行网络搜索来获取最新信息，例如天气
-- **Wolfram Alpha** - 可以用于更复杂的数学计算，因此无需编写自己的函数
+- **Brave Search** - 可用於透過網路搜尋取得最新資訊，例如天氣  
+- **Wolfram Alpha** - 可用於更複雜的數學計算，無需自行撰寫函式  
 
-您也可以创建自己的自定义工具供 LLM 调用。
+你也可以建立自訂工具，讓 LLM 呼叫。
 
-在下面的代码示例中：
+以下程式碼範例中：
 
-- 我们在系统提示中定义可用工具（brave_search, wolfram_alpha）。
-- 发送一个用户提示，询问某个城市的天气。
-- LLM 将响应一个对 Brave Search 工具的调用，看起来像这样 `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- 我們在系統提示中定義可用工具（brave_search、wolfram_alpha）。  
+- 傳送一個詢問特定城市天氣的使用者提示。  
+- LLM 將回應一個呼叫 Brave Search 工具的指令，格式類似 `<|python_tag|>brave_search.call(query="Stockholm weather")`  
 
-*注意：此示例仅进行工具调用，如果您想获得结果，需要在 Brave API 页面创建一个免费帐户并定义函数本身*
+*注意：此範例僅示範工具呼叫，若想取得結果，需在 Brave API 頁面註冊免費帳號並自行定義函式*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-尽管是 LLM，Llama 3.1 的一个限制是多模态性。即能够使用不同类型的输入，如图像作为提示并提供响应。这种能力是 Llama 3.2 的主要功能之一。这些功能还包括：
+儘管 Llama 3.1 是大型語言模型，但其一大限制是缺乏多模態能力，也就是無法使用圖片等不同類型的輸入作為提示並回應。這正是 Llama 3.2 的主要特色之一。其他特點還包括：
 
-- 多模态性 - 能够评估文本和图像提示
-- 小到中等尺寸的变体（11B 和 90B） - 提供灵活的部署选项
-- 仅文本变体（1B 和 3B） - 允许模型在边缘/移动设备上部署并提供低延迟
+- 多模態能力 - 能同時處理文字與圖片提示  
+- 小至中型變體（11B 與 90B） - 提供彈性的部署選項  
+- 純文字變體（1B 與 3B） - 允許模型部署於邊緣或行動裝置，並提供低延遲  
 
-多模态支持代表了开源模型领域的一大进步。下面的代码示例同时使用图像和文本提示，从 Llama 3.2 90B 获取图像分析。
+多模態支援是開源模型領域的一大進展。以下程式碼範例同時使用圖片與文字提示，讓 Llama 3.2 90B 對圖片進行分析。
 
-### Llama 3.2 的多模态支持
+### Llama 3.2 的多模態支援
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## 学习不止于此，继续探索之旅
+## 學習不止於此，繼續前行
 
-完成本课程后，请查看我们的[生成式 AI 学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，继续提升您的生成式 AI 知识！
+完成本課程後，歡迎參考我們的[生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
 **免責聲明**：  
-本文檔使用AI翻譯服務[Co-op Translator](https://github.com/Azure/co-op-translator)進行翻譯。我們努力追求準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。應將原始語言的文檔視為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對使用此翻譯引起的任何誤解或誤讀不承擔責任。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。

@@ -1,17 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "77a48a201447be19aa7560706d6f93a0",
-  "translation_date": "2025-05-19T21:29:15+00:00",
+  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+  "translation_date": "2025-10-17T18:18:29+00:00",
   "source_file": "11-integrating-with-function-calling/README.md",
   "language_code": "el"
 }
 -->
 # Ενσωμάτωση με κλήση λειτουργιών
 
-Έχετε μάθει αρκετά μέχρι τώρα στα προηγούμενα μαθήματα. Ωστόσο, μπορούμε να βελτιωθούμε περαιτέρω. Μερικά πράγματα που μπορούμε να αντιμετωπίσουμε είναι πώς μπορούμε να έχουμε μια πιο συνεπή μορφή απάντησης για να είναι πιο εύκολη η εργασία με την απάντηση σε επόμενα στάδια. Επίσης, μπορεί να θέλουμε να προσθέσουμε δεδομένα από άλλες πηγές για να εμπλουτίσουμε περαιτέρω την εφαρμογή μας.
+[![Ενσωμάτωση με κλήση λειτουργιών](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.el.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Τα παραπάνω προβλήματα είναι αυτά που επιδιώκει να αντιμετωπίσει αυτό το κεφάλαιο.
+Έχετε μάθει αρκετά μέχρι τώρα στα προηγούμενα μαθήματα. Ωστόσο, μπορούμε να βελτιωθούμε περαιτέρω. Κάποια θέματα που μπορούμε να αντιμετωπίσουμε είναι πώς να έχουμε μια πιο συνεπή μορφή απάντησης για να διευκολύνουμε τη χρήση της απάντησης σε επόμενα στάδια. Επίσης, ίσως θέλουμε να προσθέσουμε δεδομένα από άλλες πηγές για να εμπλουτίσουμε περαιτέρω την εφαρμογή μας.
+
+Τα παραπάνω προβλήματα είναι αυτά που αυτό το κεφάλαιο επιδιώκει να αντιμετωπίσει.
 
 ## Εισαγωγή
 
@@ -23,42 +25,42 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Στόχοι Μάθησης
 
-Μέχρι το τέλος αυτού του μαθήματος, θα είστε σε θέση να:
+Μέχρι το τέλος αυτού του μαθήματος, θα μπορείτε να:
 
-- Εξηγήσετε το σκοπό της χρήσης της κλήσης λειτουργιών.
-- Ρυθμίσετε την Κλήση Λειτουργίας χρησιμοποιώντας την Υπηρεσία Azure OpenAI.
+- Εξηγήσετε τον σκοπό της χρήσης της κλήσης λειτουργιών.
+- Ρυθμίσετε την Κλήση Λειτουργίας χρησιμοποιώντας την υπηρεσία Azure OpenAI.
 - Σχεδιάσετε αποτελεσματικές κλήσεις λειτουργιών για την περίπτωση χρήσης της εφαρμογής σας.
 
 ## Σενάριο: Βελτίωση του chatbot μας με λειτουργίες
 
-Για αυτό το μάθημα, θέλουμε να δημιουργήσουμε μια λειτουργία για την εκπαιδευτική μας startup που επιτρέπει στους χρήστες να χρησιμοποιούν ένα chatbot για να βρουν τεχνικά μαθήματα. Θα προτείνουμε μαθήματα που ταιριάζουν στο επίπεδο δεξιοτήτων τους, τον τρέχοντα ρόλο και την τεχνολογία ενδιαφέροντος.
+Για αυτό το μάθημα, θέλουμε να δημιουργήσουμε μια δυνατότητα για την εκπαιδευτική μας startup που επιτρέπει στους χρήστες να χρησιμοποιούν ένα chatbot για να βρουν τεχνικά μαθήματα. Θα προτείνουμε μαθήματα που ταιριάζουν στο επίπεδο δεξιοτήτων τους, τον τρέχοντα ρόλο τους και την τεχνολογία που τους ενδιαφέρει.
 
 Για να ολοκληρώσουμε αυτό το σενάριο, θα χρησιμοποιήσουμε έναν συνδυασμό από:
 
 - `Azure OpenAI` για να δημιουργήσουμε μια εμπειρία συνομιλίας για τον χρήστη.
-- `Microsoft Learn Catalog API` για να βοηθήσουμε τους χρήστες να βρουν μαθήματα με βάση το αίτημα του χρήστη.
-- `Function Calling` για να πάρουμε την ερώτηση του χρήστη και να την στείλουμε σε μια λειτουργία για να κάνουμε την αίτηση API.
+- `Microsoft Learn Catalog API` για να βοηθήσουμε τους χρήστες να βρουν μαθήματα βάσει του αιτήματός τους.
+- `Κλήση Λειτουργιών` για να πάρουμε το ερώτημα του χρήστη και να το στείλουμε σε μια λειτουργία για να γίνει το αίτημα API.
 
 Για να ξεκινήσουμε, ας δούμε γιατί θα θέλαμε να χρησιμοποιήσουμε την κλήση λειτουργιών εξαρχής:
 
 ## Γιατί Κλήση Λειτουργιών
 
-Πριν από την κλήση λειτουργιών, οι απαντήσεις από ένα LLM ήταν μη δομημένες και ασυνεπείς. Οι προγραμματιστές έπρεπε να γράψουν σύνθετο κώδικα επικύρωσης για να βεβαιωθούν ότι μπορούσαν να χειριστούν κάθε παραλλαγή μιας απάντησης. Οι χρήστες δεν μπορούσαν να λάβουν απαντήσεις όπως "Ποιος είναι ο τρέχων καιρός στη Στοκχόλμη;". Αυτό οφείλεται στο ότι τα μοντέλα περιορίζονταν στον χρόνο που τα δεδομένα είχαν εκπαιδευτεί.
+Πριν από την κλήση λειτουργιών, οι απαντήσεις από ένα LLM ήταν μη δομημένες και ασυνεπείς. Οι προγραμματιστές έπρεπε να γράψουν πολύπλοκο κώδικα επαλήθευσης για να βεβαιωθούν ότι μπορούσαν να χειριστούν κάθε παραλλαγή μιας απάντησης. Οι χρήστες δεν μπορούσαν να λάβουν απαντήσεις όπως "Ποιος είναι ο τρέχων καιρός στη Στοκχόλμη;". Αυτό συμβαίνει επειδή τα μοντέλα περιορίζονταν στον χρόνο που είχαν εκπαιδευτεί τα δεδομένα.
 
-Η Κλήση Λειτουργιών είναι μια δυνατότητα της Υπηρεσίας Azure OpenAI για την αντιμετώπιση των ακόλουθων περιορισμών:
+Η Κλήση Λειτουργιών είναι μια δυνατότητα της υπηρεσίας Azure OpenAI για να ξεπεράσει τους εξής περιορισμούς:
 
-- **Συνεπής μορφή απάντησης**. Αν μπορούμε να ελέγξουμε καλύτερα τη μορφή της απάντησης, μπορούμε πιο εύκολα να ενσωματώσουμε την απάντηση σε επόμενα στάδια σε άλλα συστήματα.
-- **Εξωτερικά δεδομένα**. Δυνατότητα χρήσης δεδομένων από άλλες πηγές μιας εφαρμογής σε ένα περιβάλλον συνομιλίας.
+- **Συνεπής μορφή απάντησης**. Αν μπορούμε να ελέγξουμε καλύτερα τη μορφή της απάντησης, μπορούμε πιο εύκολα να την ενσωματώσουμε σε άλλα συστήματα.
+- **Εξωτερικά δεδομένα**. Δυνατότητα χρήσης δεδομένων από άλλες πηγές μιας εφαρμογής σε ένα πλαίσιο συνομιλίας.
 
 ## Εικονογράφηση του προβλήματος μέσω ενός σεναρίου
 
-> Σας προτείνουμε να χρησιμοποιήσετε το [συμπεριλαμβανόμενο σημειωματάριο](../../../11-integrating-with-function-calling/python/aoai-assignment.ipynb) αν θέλετε να εκτελέσετε το παρακάτω σενάριο. Μπορείτε επίσης απλά να διαβάσετε καθώς προσπαθούμε να εικονογραφήσουμε ένα πρόβλημα όπου οι λειτουργίες μπορούν να βοηθήσουν στην αντιμετώπιση του προβλήματος.
+> Σας προτείνουμε να χρησιμοποιήσετε το [συμπεριλαμβανόμενο notebook](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) αν θέλετε να εκτελέσετε το παρακάτω σενάριο. Μπορείτε επίσης απλά να διαβάσετε καθώς προσπαθούμε να εικονογραφήσουμε ένα πρόβλημα όπου οι λειτουργίες μπορούν να βοηθήσουν στην επίλυσή του.
 
 Ας δούμε το παράδειγμα που εικονογραφεί το πρόβλημα της μορφής απάντησης:
 
-Ας πούμε ότι θέλουμε να δημιουργήσουμε μια βάση δεδομένων με δεδομένα μαθητών ώστε να μπορούμε να προτείνουμε το σωστό μάθημα σε αυτούς. Παρακάτω έχουμε δύο περιγραφές μαθητών που είναι πολύ παρόμοιες στα δεδομένα που περιέχουν.
+Ας πούμε ότι θέλουμε να δημιουργήσουμε μια βάση δεδομένων με δεδομένα μαθητών ώστε να μπορούμε να τους προτείνουμε το κατάλληλο μάθημα. Παρακάτω έχουμε δύο περιγραφές μαθητών που είναι πολύ παρόμοιες στα δεδομένα που περιέχουν.
 
-1. Δημιουργήστε μια σύνδεση με τον πόρο μας Azure OpenAI:
+1. Δημιουργήστε μια σύνδεση με τον πόρο Azure OpenAI μας:
 
    ```python
    import os
@@ -75,9 +77,9 @@ CO_OP_TRANSLATOR_METADATA:
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Παρακάτω είναι κάποιοι κώδικες Python για τη διαμόρφωση της σύνδεσής μας με το Azure OpenAI όπου ορίζουμε `api_type`, `api_base`, `api_version` and `api_key`.
+   Παρακάτω είναι κάποιος κώδικας Python για τη διαμόρφωση της σύνδεσής μας με το Azure OpenAI όπου ορίζουμε `api_type`, `api_base`, `api_version` και `api_key`.
 
-1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
+1. Δημιουργία δύο περιγραφών μαθητών χρησιμοποιώντας μεταβλητές `student_1_description` και `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -119,7 +121,7 @@ CO_OP_TRANSLATOR_METADATA:
 
    Τα παραπάνω prompts δίνουν οδηγίες στο LLM να εξάγει πληροφορίες και να επιστρέψει την απάντηση σε μορφή JSON.
 
-1. Αφού ρυθμίσουμε τα prompts και τη σύνδεση με το Azure OpenAI, θα στείλουμε τώρα τα prompts στο LLM χρησιμοποιώντας `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. Αυτό γίνεται για να μιμηθούμε ένα μήνυμα από έναν χρήστη που γράφεται σε ένα chatbot.
+1. Αφού ρυθμίσουμε τα prompts και τη σύνδεση με το Azure OpenAI, τώρα θα στείλουμε τα prompts στο LLM χρησιμοποιώντας `openai.ChatCompletion`. Αποθηκεύουμε το prompt στη μεταβλητή `messages` και αναθέτουμε τον ρόλο `user`. Αυτό γίνεται για να μιμηθούμε ένα μήνυμα από έναν χρήστη που γράφεται σε ένα chatbot.
 
    ```python
    # response from prompt one
@@ -137,9 +139,9 @@ CO_OP_TRANSLATOR_METADATA:
    openai_response2.choices[0].message.content
    ```
 
-Τώρα μπορούμε να στείλουμε και τις δύο αιτήσεις στο LLM και να εξετάσουμε την απάντηση που λαμβάνουμε βρίσκοντάς την έτσι `openai_response1['choices'][0]['message']['content']`.
+Τώρα μπορούμε να στείλουμε και τα δύο αιτήματα στο LLM και να εξετάσουμε την απάντηση που λαμβάνουμε βρίσκοντάς την όπως `openai_response1['choices'][0]['message']['content']`.
 
-1. Lastly, we can convert the response to JSON format by calling `json.loads`:
+1. Τέλος, μπορούμε να μετατρέψουμε την απάντηση σε μορφή JSON καλώντας `json.loads`:
 
    ```python
    # Loading the response as a JSON object
@@ -171,55 +173,55 @@ CO_OP_TRANSLATOR_METADATA:
    }
    ```
 
-   Παρόλο που τα prompts είναι τα ίδια και οι περιγραφές είναι παρόμοιες, βλέπουμε τιμές των `Grades` property formatted differently, as we can sometimes get the format `3.7` or `3.7 GPA` for example.
+   Παρόλο που τα prompts είναι ίδια και οι περιγραφές είναι παρόμοιες, βλέπουμε τιμές της ιδιότητας `Grades` να μορφοποιούνται διαφορετικά, καθώς μπορούμε να έχουμε τη μορφή `3.7` ή `3.7 GPA` για παράδειγμα.
 
-   This result is because the LLM takes unstructured data in the form of the written prompt and returns also unstructured data. We need to have a structured format so that we know what to expect when storing or using this data
+   Αυτό το αποτέλεσμα οφείλεται στο γεγονός ότι το LLM λαμβάνει μη δομημένα δεδομένα με τη μορφή του γραπτού prompt και επιστρέφει επίσης μη δομημένα δεδομένα. Χρειαζόμαστε μια δομημένη μορφή ώστε να ξέρουμε τι να περιμένουμε όταν αποθηκεύουμε ή χρησιμοποιούμε αυτά τα δεδομένα.
 
-So how do we solve the formatting problem then? By using functional calling, we can make sure that we receive structured data back. When using function calling, the LLM does not actually call or run any functions. Instead, we create a structure for the LLM to follow for its responses. We then use those structured responses to know what function to run in our applications.
+Πώς λοιπόν λύνουμε το πρόβλημα της μορφοποίησης; Χρησιμοποιώντας την κλήση λειτουργιών, μπορούμε να βεβαιωθούμε ότι λαμβάνουμε δομημένα δεδομένα πίσω. Όταν χρησιμοποιούμε την κλήση λειτουργιών, το LLM δεν καλεί ή εκτελεί πραγματικά καμία λειτουργία. Αντίθετα, δημιουργούμε μια δομή για το LLM να ακολουθήσει για τις απαντήσεις του. Στη συνέχεια, χρησιμοποιούμε αυτές τις δομημένες απαντήσεις για να ξέρουμε ποια λειτουργία να εκτελέσουμε στις εφαρμογές μας.
 
-![function flow](../../../translated_images/Function-Flow.01a723a374f79e5856d9915c39e16c59fa2a00c113698b22a28e616224f407e1.el.png)
+![ροή λειτουργιών](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.el.png)
 
-We can then take what is returned from the function and send this back to the LLM. The LLM will then respond using natural language to answer the user's query.
+Μπορούμε στη συνέχεια να πάρουμε αυτό που επιστρέφεται από τη λειτουργία και να το στείλουμε πίσω στο LLM. Το LLM θα απαντήσει στη συνέχεια χρησιμοποιώντας φυσική γλώσσα για να απαντήσει στο ερώτημα του χρήστη.
 
-## Use Cases for using function calls
+## Περιπτώσεις Χρήσης για τη χρήση κλήσεων λειτουργιών
 
-There are many different use cases where function calls can improve your app like:
+Υπάρχουν πολλές διαφορετικές περιπτώσεις χρήσης όπου οι κλήσεις λειτουργιών μπορούν να βελτιώσουν την εφαρμογή σας όπως:
 
-- **Calling External Tools**. Chatbots are great at providing answers to questions from users. By using function calling, the chatbots can use messages from users to complete certain tasks. For example, a student can ask the chatbot to "Send an email to my instructor saying I need more assistance with this subject". This can make a function call to `send_email(to: string, body: string)`
+- **Κλήση Εξωτερικών Εργαλείων**. Τα chatbots είναι εξαιρετικά στο να παρέχουν απαντήσεις σε ερωτήσεις από χρήστες. Χρησιμοποιώντας την κλήση λειτουργιών, τα chatbots μπορούν να χρησιμοποιούν μηνύματα από χρήστες για να ολοκληρώνουν συγκεκριμένες εργασίες. Για παράδειγμα, ένας μαθητής μπορεί να ζητήσει από το chatbot να "Στείλει ένα email στον καθηγητή μου λέγοντας ότι χρειάζομαι περισσότερη βοήθεια με αυτό το θέμα". Αυτό μπορεί να κάνει μια κλήση λειτουργίας στο `send_email(to: string, body: string)`.
 
-- **Create API or Database Queries**. Users can find information using natural language that gets converted into a formatted query or API request. An example of this could be a teacher who requests "Who are the students that completed the last assignment" which could call a function named `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Δημιουργία Ερωτημάτων API ή Βάσης Δεδομένων**. Οι χρήστες μπορούν να βρουν πληροφορίες χρησιμοποιώντας φυσική γλώσσα που μετατρέπεται σε μορφοποιημένο ερώτημα ή αίτημα API. Ένα παράδειγμα αυτού θα μπορούσε να είναι ένας καθηγητής που ζητά "Ποιοι είναι οι μαθητές που ολοκλήρωσαν την τελευταία εργασία" που θα μπορούσε να καλέσει μια λειτουργία με όνομα `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Creating Structured Data**. Users can take a block of text or CSV and use the LLM to extract important information from it. For example, a student can convert a Wikipedia article about peace agreements to create AI flashcards. This can be done by using a function called `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Δημιουργία Δομημένων Δεδομένων**. Οι χρήστες μπορούν να πάρουν ένα μπλοκ κειμένου ή CSV και να χρησιμοποιήσουν το LLM για να εξάγουν σημαντικές πληροφορίες από αυτό. Για παράδειγμα, ένας μαθητής μπορεί να μετατρέψει ένα άρθρο της Wikipedia για συμφωνίες ειρήνης για να δημιουργήσει AI flashcards. Αυτό μπορεί να γίνει χρησιμοποιώντας μια λειτουργία που ονομάζεται `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Creating Your First Function Call
+## Δημιουργία της Πρώτης Κλήσης Λειτουργίας σας
 
-The process of creating a function call includes 3 main steps:
+Η διαδικασία δημιουργίας μιας κλήσης λειτουργίας περιλαμβάνει 3 βασικά βήματα:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
-2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+1. **Κλήση** του API Συμπληρώσεων Συνομιλίας με μια λίστα των λειτουργιών σας και ένα μήνυμα χρήστη.
+2. **Ανάγνωση** της απάντησης του μοντέλου για να εκτελέσετε μια ενέργεια, π.χ. εκτέλεση μιας λειτουργίας ή κλήση API.
+3. **Δημιουργία** μιας άλλης κλήσης στο API Συμπληρώσεων Συνομιλίας με την απάντηση από τη λειτουργία σας για να χρησιμοποιήσετε αυτές τις πληροφορίες για να δημιουργήσετε μια απάντηση στον χρήστη.
 
-![LLM Flow](../../../translated_images/LLM-Flow.7df9f166be50aa324705f2ccddc04a27cfc7b87e57b1fbe65eb534059a3b8b66.el.png)
+![Ροή LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.el.png)
 
-### Step 1 - creating messages
+### Βήμα 1 - δημιουργία μηνυμάτων
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+Το πρώτο βήμα είναι να δημιουργήσετε ένα μήνυμα χρήστη. Αυτό μπορεί να ανατεθεί δυναμικά λαμβάνοντας την τιμή μιας εισόδου κειμένου ή μπορείτε να αναθέσετε μια τιμή εδώ. Αν είναι η πρώτη σας φορά που εργάζεστε με το API Συμπληρώσεων Συνομιλίας, πρέπει να ορίσουμε τον `ρόλο` και το `περιεχόμενο` του μηνύματος.
 
-The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` και ένα παράδειγμα ερώτησης.
+Ο `ρόλος` μπορεί να είναι είτε `system` (δημιουργία κανόνων), `assistant` (το μοντέλο) ή `user` (ο τελικός χρήστης). Για την κλήση λειτουργιών, θα το αναθέσουμε ως `user` και ένα παράδειγμα ερώτησης.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Αναθέτοντας διαφορετικούς ρόλους, γίνεται σαφές στο LLM αν είναι το σύστημα που λέει κάτι ή ο χρήστης, το οποίο βοηθά στη δημιουργία ενός ιστορικού συνομιλίας που το LLM μπορεί να βασιστεί.
+Αναθέτοντας διαφορετικούς ρόλους, γίνεται σαφές στο LLM αν είναι το σύστημα που λέει κάτι ή ο χρήστης, κάτι που βοηθά στη δημιουργία ιστορικού συνομιλίας που το LLM μπορεί να βασιστεί.
 
 ### Βήμα 2 - δημιουργία λειτουργιών
 
-Στη συνέχεια, θα ορίσουμε μια λειτουργία και τις παραμέτρους αυτής της λειτουργίας. Θα χρησιμοποιήσουμε μόνο μία λειτουργία εδώ που ονομάζεται `search_courses` but you can create multiple functions.
+Στη συνέχεια, θα ορίσουμε μια λειτουργία και τις παραμέτρους αυτής της λειτουργίας. Θα χρησιμοποιήσουμε μόνο μία λειτουργία εδώ που ονομάζεται `search_courses`, αλλά μπορείτε να δημιουργήσετε πολλαπλές λειτουργίες.
 
-> **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
+> **Σημαντικό**: Οι λειτουργίες περιλαμβάνονται στο μήνυμα συστήματος προς το LLM και θα περιλαμβάνονται στον αριθμό διαθέσιμων tokens που έχετε.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+Παρακάτω, δημιουργούμε τις λειτουργίες ως έναν πίνακα αντικειμένων. Κάθε αντικείμενο είναι μια λειτουργία και έχει ιδιότητες `name`, `description` και `parameters`:
 
 ```python
 functions = [
@@ -250,26 +252,26 @@ functions = [
 ]
 ```
 
-Ας περιγράψουμε κάθε περίπτωση λειτουργίας πιο λεπτομερώς παρακάτω:
+Ας περιγράψουμε κάθε περίπτωση λειτουργίας πιο αναλυτικά παρακάτω:
 
-- `name` - The name of the function that we want to have called.
-- `description` - This is the description of how the function works. Here it's important to be specific and clear.
-- `parameters` - A list of values and format that you want the model to produce in its response. The parameters array consists of items where the items have the following properties:
-  1.  `type` - The data type of the properties will be stored in.
-  1.  `properties` - List of the specific values that the model will use for its response
-      1. `name` - The key is the name of the property that the model will use in its formatted response, for example, `product`.
-      1. `type` - The data type of this property, for example, `string`.
-      1. `description` - Description of the specific property.
+- `name` - Το όνομα της λειτουργίας που θέλουμε να καλέσουμε.
+- `description` - Αυτή είναι η περιγραφή του πώς λειτουργεί η λειτουργία. Εδώ είναι σημαντικό να είστε συγκεκριμένοι και σαφείς.
+- `parameters` - Μια λίστα τιμών και μορφής που θέλετε το μοντέλο να παράγει στην απάντησή του. Ο πίνακας παραμέτρων αποτελείται από αντικείμενα όπου τα αντικείμενα έχουν τις εξής ιδιότητες:
+  1.  `type` - Ο τύπος δεδομένων που θα αποθηκευτούν οι ιδιότητες.
+  1.  `properties` - Λίστα των συγκεκριμένων τιμών που το μοντέλο θα χρησιμοποιήσει για την απάντησή του.
+      1. `name` - Το κλειδί είναι το όνομα της ιδιότητας που το μοντέλο θα χρησιμοποιήσει στη μορφοποιημένη απάντησή του, για παράδειγμα, `product`.
+      1. `type` - Ο τύπος δεδομένων αυτής της ιδιότητας, για παράδειγμα, `string`.
+      1. `description` - Περιγραφή της συγκεκριμένης ιδιότητας.
 
-There's also an optional property `required` - required property for the function call to be completed.
+Υπάρχει επίσης μια προαιρετική ιδιότητα `required` - απαραίτητη ιδιότητα για να ολοκληρωθεί η κλήση λειτουργίας.
 
-### Step 3 - Making the function call
+### Βήμα 3 - Δημιουργία της κλήσης λειτουργίας
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+Αφού ορίσουμε μια λειτουργία, τώρα πρέπει να την συμπεριλάβουμε στην κλήση προς το API Συμπληρώσεων Συνομιλίας. Το κάνουμε αυτό προσθέτοντας `functions` στο αίτημα. Σε αυτή την περίπτωση `functions=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+Υπάρχει επίσης μια επιλογή να ορίσουμε το `function_call` σε `auto`. Αυτό σημαίνει ότι θα αφήσουμε το LLM να αποφασίσει ποια λειτουργία πρέπει να καλεστεί βάσει του μηνύματος χρήστη αντί να την αναθέσουμε εμείς.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` και δίνοντας έτσι στο LLM την επιλογή πότε να καλέσει τις λειτουργίες που του παρέχουμε:
+Ακολουθεί κάποιος κώδικας παρακάτω όπου καλούμε το `ChatCompletion.create`, σημειώστε πώς ορίζουμε `functions=functions` και `function_call="auto"` και έτσι δίνουμε στο LLM την επιλογή πότε να καλέσει τις λειτουργίες που του παρέχουμε:
 
 ```python
 response = client.chat.completions.create(model=deployment,
@@ -280,7 +282,7 @@ response = client.chat.completions.create(model=deployment,
 print(response.choices[0].message)
 ```
 
-Η απάντηση που επιστρέφει τώρα φαίνεται έτσι:
+Η απάντηση που επιστρέφεται τώρα μοιάζει με την εξής:
 
 ```json
 {
@@ -292,33 +294,33 @@ print(response.choices[0].message)
 }
 ```
 
-Εδώ μπορούμε να δούμε πώς η λειτουργία `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
+Εδώ μπορούμε να δούμε πώς η λειτουργία `search_courses` καλέστηκε και με ποια επιχειρήματα, όπως αναφέρονται στην ιδιότητα `arguments` στην απάντηση JSON.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` αξία:
+Το συμπέρασμα είναι ότι το LLM ήταν σε θέση να βρει τα δεδομένα για να ταιριάξει τα επιχειρήματα της λειτουργίας καθώς τα εξήγαγε από την τιμή που παρέχεται στην παράμετρο `messages` στην κλήση συμπλήρωσης συνομιλίας. Παρακάτω είναι μια υπενθύμιση της τιμής `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Όπως μπορείτε να δείτε, `student`, `Azure` and `beginner` was extracted from `messages` and set as input to the function. Using functions this way is a great way to extract information from a prompt but also to provide structure to the LLM and have reusable functionality.
+Όπως μπορείτε να δείτε, το `student`, το `Azure` και το `beginner` εξήχθησαν από το `messages` και ορίστηκαν ως είσοδος στη λειτουργία. Χρησιμοποιώντας λειτουργίες με αυτόν τον τρόπο είναι ένας εξαιρετικός τρόπος για να εξάγετε πληροφορίες από ένα prompt αλλά και να παρέχετε δομή στο LLM και να έχετε επαναχρησιμοποιήσιμη λειτουργικότητα.
 
-Next, we need to see how we can use this in our app.
+Στη συνέχεια, πρέπει να δούμε πώς μπορούμε να χρησιμοποιήσουμε αυτό στην εφαρμογή μας.
 
-## Integrating Function Calls into an Application
+## Ενσωμάτωση Κλήσεων Λειτουργιών σε μια Εφαρμογή
 
-After we have tested the formatted response from the LLM, we can now integrate this into an application.
+Αφού δοκιμάσουμε τη μορφοποιημένη απάντηση από το LLM, μπορούμε τώρα να την ενσωματώσουμε σε μια εφαρμογή.
 
-### Managing the flow
+### Διαχείριση της ροής
 
-To integrate this into our application, let's take the following steps:
+Για να ενσωματώσουμε αυτό στην εφαρμογή μας, ας ακολουθήσουμε τα εξής βήματα:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. Πρώτα, ας κάνουμε την κλήση στις υπηρεσίες OpenAI και να αποθηκεύσουμε το μήνυμα σε μια μεταβλητή που ονομάζεται `response_message`.
 
    ```python
    response_message = response.choices[0].message
    ```
 
-1. Τώρα θα ορίσουμε τη λειτουργία που θα καλέσει το API Microsoft Learn για να πάρει μια λίστα μαθημάτων:
+1. Τώρα θα ορίσουμε τη λειτουργία που θα καλέσει το Microsoft Learn API για να πάρει μια λίστα μαθημάτων:
 
    ```python
    import requests
@@ -340,129 +342,18 @@ To integrate this into our application, let's take the following steps:
      return str(results)
    ```
 
-   Παρατηρήστε πώς τώρα δημιουργούμε μια πραγματική λειτουργία Python που αντιστοιχεί στα ονόματα λειτουργιών που εισάγονται στο `functions` variable. We're also making real external API calls to fetch the data we need. In this case, we go against the Microsoft Learn API to search for training modules.
-
-Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
-
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` είναι μέρος της και καλεί την υποδεικνυόμενη λειτουργία. Εδώ είναι πώς μπορείτε να κάνετε τον αναφερόμενο έλεγχο παρακάτω:
-
-   ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
-
-    # Call the function.
-    function_name = response_message.function_call.name
-
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
-
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
-
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
-
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
-   ```
-
-   Αυτές οι τρεις γραμμές, εξασφαλίζουν ότι εξάγουμε το όνομα της λειτουργίας, τα επιχειρήματα και κάνουμε την κλήση:
-
-   ```python
-   function_to_call = available_functions[function_name]
-
-   function_args = json.loads(response_message.function_call.arguments)
-   function_response = function_to_call(**function_args)
-   ```
-
-   Παρακάτω είναι η έξοδος από την εκτέλεση του κώδικα μας:
-
-   **Έξοδος**
-
-   ```Recommended Function call:
-   {
-     "name": "search_courses",
-     "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-   }
-
-   Output of function call:
-   [{'title': 'Describe concepts of cryptography', 'url': 'https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Introduction to audio classification with TensorFlow', 'url': 'https://learn.microsoft.com/en-
-   us/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi'}, {'title': 'Design a Performant Data Model in Azure SQL
-   Database with Azure Data Studio', 'url': 'https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?
-   WT.mc_id=api_CatalogApi'}, {'title': 'Getting started with the Microsoft Cloud Adoption Framework for Azure', 'url':
-   'https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi'}, {'title': 'Set up the
-   Rust development environment', 'url': 'https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi'}]
-   <class 'str'>
-   ```
-
-1. Τώρα θα στείλουμε το ενημερωμένο μήνυμα, `messages` στο LLM ώστε να μπορούμε να λάβουμε μια απάντηση σε φυσική γλώσσα αντί για μια απάντηση σε μορφή JSON API.
-
-   ```python
-   print("Messages in next request:")
-   print(messages)
-   print()
-
-   second_response = client.chat.completions.create(
-      messages=messages,
-      model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
-
-
-   print(second_response.choices[0].message)
-   ```
-
-   **Έξοδος**
-
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
-
-   ```
-
-## Ανάθεση
-
-Για να συνεχίσετε τη μάθηση σας για την Κλήση Λειτουργιών Azure OpenAI μπορείτε να δημιουργήσετε:
-
-- Περισσότερες παραμέτρους της λειτουργίας που μπορεί να βοηθήσουν τους μαθητές να βρουν περισσότερα μαθήματα.
-- Δημιουργήστε μια άλλη κλήση λειτουργίας που λαμβάνει περισσότερες πληροφορίες από τον μαθητή όπως τη μητρική τους γλώσσα.
-- Δημιουργήστε χειρισμό σφαλμάτων όταν η κλήση λειτουργίας και/ή η κλήση API δεν επιστρέφει κατάλληλα μαθήματα.
+   Σημειώστε πώς τώρα δημιουργούμε μια πραγματική λειτουργία Python που αντιστοιχεί στα ονόματα λειτουργιών που εισήχθησαν στη μεταβλητή
+- Δημιουργήστε χειρισμό σφαλμάτων όταν η κλήση της συνάρτησης και/ή η κλήση του API δεν επιστρέφει κατάλληλα μαθήματα
 
 Υπόδειξη: Ακολουθήστε τη σελίδα [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) για να δείτε πώς και πού είναι διαθέσιμα αυτά τα δεδομένα.
 
-## Μπράβο! Συνεχίστε το Ταξίδι
+## Εξαιρετική Δουλειά! Συνεχίστε το Ταξίδι
 
-Αφού ολοκληρώσετε αυτό το μάθημα, δείτε τη [Συλλογή Μάθησης Γενετικής AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) για να συνεχίσετε να βελτιώνετε τις γνώσεις σας στη Γενετική AI!
+Αφού ολοκληρώσετε αυτό το μάθημα, δείτε τη συλλογή μας [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) για να συνεχίσετε να αναβαθμίζετε τις γνώσεις σας στη Γενετική Τεχνητή Νοημοσύνη!
 
-Πηγαίνετε στο Μάθημα 12, όπου θα δούμε πώς να [σχεδιάσουμε UX για εφαρμογές AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Προχωρήστε στο Μάθημα 12, όπου θα εξετάσουμε πώς να [σχεδιάσετε UX για εφαρμογές AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Αποποίηση ευθύνης**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ενώ προσπαθούμε για ακρίβεια, παρακαλώ να γνωρίζετε ότι οι αυτοματοποιημένες μεταφράσεις μπορεί να περιέχουν λάθη ή ανακρίβειες. Το αρχικό έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να γνωρίζετε ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.

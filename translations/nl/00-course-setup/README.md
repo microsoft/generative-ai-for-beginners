@@ -1,58 +1,71 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9f4785899ee92500f524b4acb26e3bb3",
-  "translation_date": "2025-05-19T12:30:08+00:00",
+  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
+  "translation_date": "2025-10-17T19:53:16+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "nl"
 }
 -->
 # Aan de slag met deze cursus
 
-We zijn erg enthousiast dat je met deze cursus begint en benieuwd naar wat je geïnspireerd raakt om te bouwen met Generatieve AI!
+We zijn erg enthousiast dat je met deze cursus begint en we zijn benieuwd wat je geïnspireerd raakt om te bouwen met Generatieve AI!
 
-Om je succes te garanderen, worden op deze pagina de stappen voor de setup, technische vereisten en waar je hulp kunt krijgen indien nodig, uiteengezet.
+Om je succes te garanderen, beschrijft deze pagina de stappen voor de setup, technische vereisten en waar je hulp kunt krijgen indien nodig.
 
 ## Setup Stappen
 
-Om deze cursus te volgen, moet je de volgende stappen voltooien.
+Om deze cursus te starten, moet je de volgende stappen voltooien.
 
 ### 1. Fork deze Repo
 
-[Fork deze hele repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) naar je eigen GitHub-account zodat je de code kunt wijzigen en de uitdagingen kunt voltooien. Je kunt ook [deze repo ster (🌟) geven](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) om het en gerelateerde repo's gemakkelijker te vinden.
+[Fork deze hele repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) naar je eigen GitHub-account om de code te kunnen wijzigen en de uitdagingen te voltooien. Je kunt ook [deze repo ster (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) om het en gerelateerde repos gemakkelijker terug te vinden.
 
 ### 2. Maak een codespace
 
-Om eventuele afhankelijkheidsproblemen bij het uitvoeren van de code te vermijden, raden we aan deze cursus uit te voeren in een [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
+Om afhankelijkheidsproblemen bij het uitvoeren van de code te vermijden, raden we aan deze cursus te volgen in een [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
 
-Dit kan worden aangemaakt door de optie `Code` te selecteren op je geforkte versie van deze repo en de optie **Codespaces** te kiezen.
+In je fork: **Code -> Codespaces -> Nieuw op main**
 
 ![Dialoogvenster met knoppen om een codespace te maken](../../../00-course-setup/images/who-will-pay.webp)
 
-### 3. Opslaan van je API-sleutels
+#### 2.1 Voeg een geheim toe
 
-Het veilig en beveiligd houden van je API-sleutels is belangrijk bij het bouwen van elke vorm van applicatie. We raden aan om geen API-sleutels direct in je code op te slaan. Het vastleggen van die gegevens in een openbare repository kan leiden tot beveiligingsproblemen en zelfs ongewenste kosten als ze worden gebruikt door een kwaadwillende.
-Hier is een stapsgewijze handleiding over hoe je een `.env`-bestand voor Python maakt en de `GITHUB_TOKEN` toevoegt:
+1. ⚙️ Tandwielicoon -> Command Pallete -> Codespaces: Beheer gebruikersgeheim -> Voeg een nieuw geheim toe.
+2. Naam OPENAI_API_KEY, plak je sleutel, Opslaan.
 
-1. **Navigeer naar je projectdirectory**: Open je terminal of opdrachtprompt en navigeer naar de hoofdmap van je project waar je het `.env`-bestand wilt maken.
+### 3. Wat nu?
 
-   ```bash
-   cd path/to/your/project
-   ```
+| Ik wil…             | Ga naar…                                                               |
+|---------------------|------------------------------------------------------------------------|
+| Start Les 1         | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)    |
+| Offline werken      | [`setup-local.md`](02-setup-local.md)                                  |
+| Een LLM-provider instellen | [`providers.md`](03-providers.md)                                     |
+| Andere deelnemers ontmoeten | [Word lid van onze Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
 
-2. **Maak het `.env`-bestand**: Gebruik je favoriete teksteditor om een nieuw bestand te maken met de naam `.env`. Als je de opdrachtregel gebruikt, kun je `touch` (on Unix-based systems) or `echo` gebruiken (op Windows):
+## Problemen oplossen
+
+| Symptoom                                  | Oplossing                                                       |
+|-------------------------------------------|-----------------------------------------------------------------|
+| Container build blijft hangen > 10 min    | **Codespaces ➜ “Rebuild Container”**                            |
+| `python: command not found`               | Terminal is niet gekoppeld; klik **+** ➜ *bash*                 |
+| `401 Unauthorized` van OpenAI             | Verkeerde/verlopen `OPENAI_API_KEY`                             |
+| VS Code toont “Dev container mounting…”   | Vernieuw het browsertabblad—Codespaces verliest soms verbinding |
+| Notebook kernel ontbreekt                 | Notebook menu ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
 
    Unix-gebaseerde systemen:
+
    ```bash
    touch .env
    ```
 
    Windows:
+
    ```cmd
    echo . > .env
    ```
 
-3. **Bewerk het `.env`-bestand**: Open het `.env`-bestand in een teksteditor (bijv. VS Code, Notepad++, of een andere editor). Voeg de volgende regel toe aan het bestand, waarbij je `your_github_token_here` vervangt door je daadwerkelijke GitHub-token:
+3. **Bewerk het `.env` bestand**: Open het `.env` bestand in een teksteditor (bijv. VS Code, Notepad++, of een andere editor). Voeg de volgende regel toe aan het bestand, waarbij je `your_github_token_here` vervangt door je daadwerkelijke GitHub-token:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
@@ -60,13 +73,13 @@ Hier is een stapsgewijze handleiding over hoe je een `.env`-bestand voor Python 
 
 4. **Sla het bestand op**: Sla de wijzigingen op en sluit de teksteditor.
 
-5. **Installeer `python-dotenv`**: If you haven't already, you'll need to install the `python-dotenv`-pakket om omgevingsvariabelen uit het `.env`-bestand in je Python-applicatie te laden. Je kunt het installeren met `pip`:
+5. **Installeer `python-dotenv`**: Als je dit nog niet hebt gedaan, moet je het `python-dotenv` pakket installeren om omgevingsvariabelen uit het `.env` bestand in je Python-applicatie te laden. Je kunt het installeren met `pip`:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Laad omgevingsvariabelen in je Python-script**: Gebruik in je Python-script het `python-dotenv`-pakket om de omgevingsvariabelen uit het `.env`-bestand te laden:
+6. **Laad omgevingsvariabelen in je Python-script**: Gebruik in je Python-script het `python-dotenv` pakket om de omgevingsvariabelen uit het `.env` bestand te laden:
 
    ```python
    from dotenv import load_dotenv
@@ -81,83 +94,82 @@ Hier is een stapsgewijze handleiding over hoe je een `.env`-bestand voor Python 
    print(github_token)
    ```
 
-Dat is het! Je hebt succesvol een `.env`-bestand gemaakt, je GitHub-token toegevoegd en het geladen in je Python-applicatie.
+Dat is alles! Je hebt succesvol een `.env` bestand aangemaakt, je GitHub-token toegevoegd en het geladen in je Python-applicatie.
 
-## Hoe lokaal op je computer te draaien
+## Hoe lokaal op je computer uitvoeren
 
-Om de code lokaal op je computer uit te voeren, moet je een versie van [Python geïnstalleerd](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) hebben.
+Om de code lokaal op je computer uit te voeren, moet je een versie van [Python geïnstalleerd hebben](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-Om vervolgens de repository te gebruiken, moet je deze klonen:
+Om vervolgens de repository te gebruiken, moet je deze clonen:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Zodra je alles hebt uitgecheckt, kun je aan de slag!
+Zodra je alles hebt gedownload, kun je aan de slag!
 
 ## Optionele stappen
 
 ### Miniconda installeren
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is een lichte installer voor het installeren van [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, evenals enkele pakketten.
-Conda zelf is een pakketbeheerder, die het gemakkelijk maakt om verschillende Python [**virtuele omgevingen**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) en pakketten in te stellen en te wisselen. Het is ook handig voor het installeren van pakketten die niet beschikbaar zijn via `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) is een lichte installer voor het installeren van [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python en enkele pakketten.
+Conda zelf is een pakketbeheerder die het eenvoudig maakt om verschillende Python [**virtuele omgevingen**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) en pakketten in te stellen en te wisselen. Het is ook handig voor het installeren van pakketten die niet beschikbaar zijn via `pip`.
 
-You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
+Je kunt de [MiniConda installatiegids](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) volgen om het in te stellen.
 
-With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
+Met Miniconda geïnstalleerd, moet je de [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) clonen (als je dat nog niet hebt gedaan).
 
-Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
+Vervolgens moet je een virtuele omgeving aanmaken. Om dit met Conda te doen, maak je een nieuw omgevingsbestand aan (_environment.yml_). Als je Codespaces gebruikt, maak je dit bestand aan binnen de `.devcontainer` directory, dus `.devcontainer/environment.yml`.
 
-Ga je gang en vul je omgevingsbestand met de onderstaande snippet:
+Vul je omgevingsbestand met de onderstaande snippet:
 
 ```yml
 name: <environment-name>
 channels:
- - defaults
- - microsoft
+  - defaults
+  - microsoft
 dependencies:
-- python=<python-version>
-- openai
-- python-dotenv
-- pip
-- pip:
-    - azure-ai-ml
-
+  - python=<python-version>
+  - openai
+  - python-dotenv
+  - pip
+  - pip:
+      - azure-ai-ml
 ```
 
-Als je fouten krijgt bij het gebruik van conda, kun je de Microsoft AI Libraries handmatig installeren met het volgende commando in een terminal.
+Als je fouten tegenkomt bij het gebruik van Conda, kun je handmatig de Microsoft AI Libraries installeren met het volgende commando in een terminal.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-Het omgevingsbestand specificeert de benodigde afhankelijkheden. `<environment-name>` refers to the name you would like to use for your Conda environment, and `<python-version>` is the version of Python you would like to use, for example, `3` is de nieuwste hoofdversie van Python.
+Het omgevingsbestand specificeert de benodigde afhankelijkheden. `<environment-name>` verwijst naar de naam die je wilt gebruiken voor je Conda-omgeving, en `<python-version>` is de versie van Python die je wilt gebruiken, bijvoorbeeld `3` is de nieuwste hoofdversie van Python.
 
-Met dat gedaan, kun je je Conda-omgeving maken door de onderstaande opdrachten in je opdrachtregel/terminal uit te voeren
+Als dat gedaan is, kun je je Conda-omgeving aanmaken door de onderstaande commando's uit te voeren in je command line/terminal:
 
 ```bash
 conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
 conda activate ai4beg
 ```
 
-Raadpleeg de [Conda omgevingen handleiding](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) als je problemen tegenkomt.
+Raadpleeg de [Conda omgevingsgids](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) als je problemen tegenkomt.
 
-### Gebruik van Visual Studio Code met de Python-ondersteuning extensie
+### Visual Studio Code gebruiken met de Python-ondersteuning extensie
 
-We raden aan om de [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) editor te gebruiken met de [Python-ondersteuning extensie](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) geïnstalleerd voor deze cursus. Dit is echter meer een aanbeveling en geen absolute vereiste.
+We raden aan om de [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) editor te gebruiken met de [Python-ondersteuning extensie](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) geïnstalleerd voor deze cursus. Dit is echter meer een aanbeveling en geen vereiste.
 
-> **Opmerking**: Door de cursusrepository in VS Code te openen, heb je de optie om het project binnen een container op te zetten. Dit komt door de [speciale `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) directory die in de cursusrepository te vinden is. Hierover later meer.
+> **Let op**: Door de cursusrepository te openen in VS Code, heb je de optie om het project binnen een container op te zetten. Dit komt door de [speciale `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) directory die in de cursusrepository te vinden is. Hierover later meer.
 
-> **Opmerking**: Zodra je de directory kloont en opent in VS Code, zal het automatisch voorstellen om een Python-ondersteuning extensie te installeren.
+> **Let op**: Zodra je de directory clonet en opent in VS Code, zal het automatisch voorstellen om een Python-ondersteuning extensie te installeren.
 
-> **Opmerking**: Als VS Code je vraagt om de repository opnieuw te openen in een container, wijs dit verzoek af om de lokaal geïnstalleerde versie van Python te gebruiken.
+> **Let op**: Als VS Code je vraagt om de repository opnieuw te openen in een container, weiger dit verzoek om de lokaal geïnstalleerde versie van Python te gebruiken.
 
-### Gebruik van Jupyter in de browser
+### Jupyter in de browser gebruiken
 
-Je kunt ook aan het project werken met de [Jupyter-omgeving](https://jupyter.org?WT.mc_id=academic-105485-koreyst) direct in je browser. Zowel klassieke Jupyter als [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) bieden een aangename ontwikkelomgeving met functies zoals automatische aanvulling, code-highlighting, enz.
+Je kunt ook aan het project werken met behulp van de [Jupyter-omgeving](https://jupyter.org?WT.mc_id=academic-105485-koreyst) direct in je browser. Zowel klassieke Jupyter als [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) bieden een prettige ontwikkelomgeving met functies zoals automatische aanvulling, code-highlighting, enz.
 
-Om Jupyter lokaal te starten, ga naar de terminal/opdrachtregel, navigeer naar de cursusdirectory en voer uit:
+Om Jupyter lokaal te starten, ga naar de terminal/command line, navigeer naar de cursusdirectory en voer uit:
 
 ```bash
 jupyter notebook
@@ -169,57 +181,58 @@ of
 jupyterhub
 ```
 
-Dit zal een Jupyter-instance starten en de URL om toegang te krijgen zal binnen het opdrachtregelvenster worden weergegeven.
+Dit start een Jupyter-instantie en de URL om toegang te krijgen wordt weergegeven in het command line-venster.
 
-Zodra je toegang hebt tot de URL, zou je de cursusoutline moeten zien en kunnen navigeren naar elk `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
+Zodra je toegang hebt tot de URL, zou je de cursusindeling moeten zien en kun je navigeren naar elk `*.ipynb` bestand. Bijvoorbeeld, `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Running in a container
+### Uitvoeren in een container
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+Een alternatief voor het lokaal instellen van alles op je computer of Codespace is het gebruik van een [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). De speciale `.devcontainer` map binnen de cursusrepository maakt het mogelijk voor VS Code om het project binnen een container op te zetten. Buiten Codespaces vereist dit de installatie van Docker, en eerlijk gezegd, het kost wat werk, dus we raden dit alleen aan voor degenen met ervaring in het werken met containers.
 
-One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
+Een van de beste manieren om je API-sleutels veilig te houden bij het gebruik van GitHub Codespaces is door Codespace Secrets te gebruiken. Volg de [Codespaces geheimenbeheer](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) gids om hier meer over te leren.
 
-## Lessons and Technical Requirements
+## Lessen en technische vereisten
 
-The course has 6 concept lessons and 6 coding lessons.
+De cursus bestaat uit 6 conceptlessen en 6 coderingslessen.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Voor de coderingslessen maken we gebruik van de Azure OpenAI Service. Je hebt toegang tot de Azure OpenAI-service en een API-sleutel nodig om deze code uit te voeren. Je kunt toegang aanvragen door [deze aanvraag in te vullen](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` bestand waar je de code en uitvoer kunt bekijken.
+Terwijl je wacht op de verwerking van je aanvraag, bevat elke coderingsles ook een `README.md` bestand waarin je de code en uitvoer kunt bekijken.
 
-## Gebruik van de Azure OpenAI Service voor de eerste keer
+## Voor het eerst de Azure OpenAI Service gebruiken
 
-Als dit je eerste keer is dat je met de Azure OpenAI-service werkt, volg dan deze handleiding over hoe je [een Azure OpenAI Service-resource kunt maken en implementeren.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Als dit de eerste keer is dat je werkt met de Azure OpenAI-service, volg dan deze gids over hoe je [een Azure OpenAI Service resource kunt maken en implementeren.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## Gebruik van de OpenAI API voor de eerste keer
+## Voor het eerst de OpenAI API gebruiken
 
-Als dit je eerste keer is dat je met de OpenAI API werkt, volg dan de handleiding over hoe je [de Interface kunt maken en gebruiken.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+Als dit de eerste keer is dat je werkt met de OpenAI API, volg dan de gids over hoe je [de interface kunt maken en gebruiken.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
-## Ontmoet andere deelnemers
+## Andere deelnemers ontmoeten
 
-We hebben kanalen aangemaakt in onze officiële [AI Community Discord-server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) om andere deelnemers te ontmoeten. Dit is een geweldige manier om te netwerken met andere gelijkgestemde ondernemers, bouwers, studenten, en iedereen die zijn vaardigheden in Generatieve AI wil verbeteren.
+We hebben kanalen aangemaakt in onze officiële [AI Community Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) om andere deelnemers te ontmoeten. Dit is een geweldige manier om te netwerken met andere gelijkgestemde ondernemers, bouwers, studenten en iedereen die zijn vaardigheden in Generatieve AI wil verbeteren.
 
-[![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Word lid van Discord-kanaal](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-Het projectteam zal ook op deze Discord-server zijn om deelnemers te helpen.
+Het projectteam zal ook aanwezig zijn op deze Discord-server om deelnemers te helpen.
 
 ## Bijdragen
 
-Deze cursus is een open-source initiatief. Als je verbeterpunten of problemen ziet, maak dan een [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) of log een [GitHub-issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+Deze cursus is een open-source initiatief. Als je verbeterpunten of problemen ziet, maak dan een [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) of log een [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-Het projectteam zal alle bijdragen volgen. Bijdragen aan open source is een geweldige manier om je carrière in Generatieve AI op te bouwen.
+Het projectteam zal alle bijdragen bijhouden. Bijdragen aan open source is een geweldige manier om je carrière in Generatieve AI op te bouwen.
 
-De meeste bijdragen vereisen dat je akkoord gaat met een Contributor License Agreement (CLA) waarin je verklaart dat je het recht hebt om en daadwerkelijk ons de rechten geeft om je bijdrage te gebruiken. Voor details, bezoek de [CLA, Contributor License Agreement website](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+De meeste bijdragen vereisen dat je akkoord gaat met een Contributor License Agreement (CLA) waarin je verklaart dat je het recht hebt om en daadwerkelijk de rechten verleent om je bijdrage te gebruiken. Voor meer informatie, bezoek [CLA, Contributor License Agreement website](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Belangrijk: bij het vertalen van tekst in deze repo, zorg ervoor dat je geen gebruik maakt van machinevertaling. We zullen vertalingen via de community verifiëren, dus vrijwillig alleen voor vertalingen in talen waarin je bekwaam bent.
+Belangrijk: bij het vertalen van tekst in deze repo, zorg ervoor dat je geen gebruik maakt van automatische vertaling. We zullen vertalingen verifiëren via de community, dus bied alleen aan om te vertalen in talen waarin je bekwaam bent.
 
-Wanneer je een pull request indient, zal een CLA-bot automatisch bepalen of je een CLA moet verstrekken en de PR dienovereenkomstig decoreren (bijv. label, commentaar). Volg gewoon de instructies die door de bot worden gegeven. Je hoeft dit slechts één keer te doen voor alle repositories die onze CLA gebruiken.
+Wanneer je een pull request indient, zal een CLA-bot automatisch bepalen of je een CLA moet indienen en de PR dienovereenkomstig voorzien van een label of opmerking. Volg gewoon de instructies van de bot. Je hoeft dit slechts één keer te doen voor alle repositories die onze CLA gebruiken.
 
-Dit project heeft de [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) aangenomen. Voor meer informatie lees de Code of Conduct FAQ of neem contact op met [Email opencode](opencode@microsoft.com) met eventuele aanvullende vragen of opmerkingen.
+Dit project heeft de [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) aangenomen. Voor meer informatie lees de Code of Conduct FAQ of neem contact op met [Email opencode](opencode@microsoft.com) voor eventuele aanvullende vragen of opmerkingen.
 
 ## Laten we beginnen
+Nu je de benodigde stappen hebt voltooid om deze cursus af te ronden, laten we beginnen met een [introductie tot Generatieve AI en LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
-Nu je de benodigde stappen hebt voltooid om deze cursus te voltooien, laten we beginnen met een [introductie tot Generatieve AI en LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of misinterpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

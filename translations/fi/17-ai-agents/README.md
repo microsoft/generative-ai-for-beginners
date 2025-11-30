@@ -1,71 +1,71 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "11f03c81f190d9cbafd0f977dcbede6c",
-  "translation_date": "2025-05-20T07:26:27+00:00",
+  "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
+  "translation_date": "2025-10-17T19:48:27+00:00",
   "source_file": "17-ai-agents/README.md",
   "language_code": "fi"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.85938ffe06e157e1dfc9ae2fcf0de326892e71c463f62b397291ad54bd8e9602.fi.png)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Avoimen lähdekoodin mallit](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.fi.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Johdanto
 
-AI-agentit edustavat jännittävää kehitystä generatiivisessa tekoälyssä, mahdollistaen suurten kielimallien (LLM) kehittymisen avustajista toimia suorittaviksi agenteiksi. AI-agenttikehykset antavat kehittäjille mahdollisuuden luoda sovelluksia, jotka antavat LLM:ille pääsyn työkaluihin ja tilanhallintaan. Nämä kehykset parantavat myös näkyvyyttä, jolloin käyttäjät ja kehittäjät voivat seurata LLM:ien suunnittelemia toimia, mikä parantaa kokemusten hallintaa.
+AI-agentit edustavat jännittävää kehitystä generatiivisessa tekoälyssä, sillä ne mahdollistavat suurten kielimallien (LLM) kehittymisen avustajista toimintaan kykeneviksi agenteiksi. AI-agenttikehykset antavat kehittäjille mahdollisuuden luoda sovelluksia, jotka tarjoavat LLM:ille pääsyn työkaluihin ja tilanhallintaan. Nämä kehykset parantavat myös näkyvyyttä, jolloin käyttäjät ja kehittäjät voivat seurata LLM:ien suunnittelemia toimia ja siten parantaa käyttökokemuksen hallintaa.
 
 Tässä oppitunnissa käsitellään seuraavia aiheita:
 
-- Mitä AI-agentit ovat - Mitä AI-agentti tarkalleen ottaen on?
-- Neljän erilaisen AI-agenttikehyksen tutkiminen - Mikä tekee niistä ainutlaatuisia?
-- Näiden AI-agenttien soveltaminen eri käyttötapauksiin - Milloin meidän tulisi käyttää AI-agentteja?
+- Ymmärtäminen, mitä AI-agentti on - Mitä AI-agentti tarkalleen ottaen tarkoittaa?
+- Neljän eri AI-agenttikehyksen tutkiminen - Mikä tekee niistä ainutlaatuisia?
+- Näiden AI-agenttien soveltaminen eri käyttötapauksiin - Milloin AI-agentteja kannattaa käyttää?
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen pystyt:
+Tämän oppitunnin jälkeen osaat:
 
-- Selittämään, mitä AI-agentit ovat ja miten niitä voidaan käyttää.
-- Ymmärtämään eroja joidenkin suosittujen AI-agenttikehysten välillä ja miten ne eroavat toisistaan.
-- Ymmärtämään, miten AI-agentit toimivat sovellusten rakentamiseksi niiden avulla.
+- Selittää, mitä AI-agentit ovat ja miten niitä voidaan käyttää.
+- Ymmärtää eroja suosittujen AI-agenttikehysten välillä ja miten ne eroavat toisistaan.
+- Ymmärtää, miten AI-agentit toimivat, jotta voit rakentaa sovelluksia niiden avulla.
 
-## Mitä ovat AI-agentit?
+## Mitä AI-agentit ovat?
 
-AI-agentit ovat erittäin jännittävä ala generatiivisen tekoälyn maailmassa. Tämän innostuksen myötä termit ja niiden soveltaminen voivat joskus aiheuttaa sekaannusta. Pidetään asiat yksinkertaisina ja kattavina useimmille AI-agenteiksi viittaaville työkaluille käyttämällä tätä määritelmää:
+AI-agentit ovat erittäin jännittävä ala generatiivisen tekoälyn maailmassa. Tämän innostuksen mukana tulee joskus termien ja niiden soveltamisen aiheuttamaa hämmennystä. Pidämme asiat yksinkertaisina ja kattavina useimmille AI-agenteiksi kutsutuille työkaluille käyttämällä seuraavaa määritelmää:
 
-AI-agentit antavat suurille kielimalleille (LLM) mahdollisuuden suorittaa tehtäviä antamalla niille pääsyn **tilaan** ja **työkaluihin**.
+AI-agentit antavat suurille kielimalleille (LLM) mahdollisuuden suorittaa tehtäviä tarjoamalla niille pääsyn **tilaan** ja **työkaluihin**.
 
-![Agenttimalli](../../../translated_images/what-agent.61a7315e4b722e06561f6c93e682a51357308b53884f00af289b5a81e3e65242.fi.png)
+![Agenttimalli](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.fi.png)
 
 Määritellään nämä termit:
 
-**Suuret kielimallit** - Nämä ovat kurssin aikana mainittuja malleja, kuten GPT-3.5, GPT-4, Llama-2 jne.
+**Suuret kielimallit** - Nämä ovat kurssilla käsiteltyjä malleja, kuten GPT-3.5, GPT-4, Llama-2 jne.
 
-**Tila** - Tämä viittaa kontekstiin, jossa LLM toimii. LLM käyttää menneiden toimien ja nykyisen kontekstin tietoja ohjatakseen päätöksentekoaan tulevia toimia varten. AI-agenttikehykset helpottavat kehittäjien työtä tämän kontekstin ylläpitämisessä.
+**Tila** - Tämä viittaa kontekstiin, jossa LLM toimii. LLM käyttää aiempien toimiensa ja nykyisen kontekstin tietoja ohjatakseen päätöksentekoaan seuraavissa toimissa. AI-agenttikehykset helpottavat kehittäjien työtä tämän kontekstin ylläpitämisessä.
 
-**Työkalut** - Tehtävän suorittamiseksi, jonka käyttäjä on pyytänyt ja jonka LLM on suunnitellut, LLM tarvitsee pääsyn työkaluihin. Esimerkkejä työkaluista voivat olla tietokanta, API, ulkoinen sovellus tai jopa toinen LLM!
+**Työkalut** - LLM tarvitsee työkaluja suorittaakseen käyttäjän pyytämän tehtävän ja suunnitellakseen sen. Esimerkkejä työkaluista ovat tietokanta, API, ulkoinen sovellus tai jopa toinen LLM!
 
-Nämä määritelmät toivottavasti antavat sinulle hyvän pohjan, kun tarkastelemme, miten ne toteutetaan. Tutkitaan muutamia erilaisia AI-agenttikehyksiä:
+Nämä määritelmät toivottavasti antavat sinulle hyvän pohjan eteenpäin, kun tarkastelemme niiden toteutusta. Tutustutaan muutamaan eri AI-agenttikehykseen:
 
-## LangChain-agentit
+## LangChain Agents
 
-[LangChain-agentit](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) ovat toteutus yllä antamillemme määritelmille.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) on toteutus yllä annetuista määritelmistä.
 
-**Tilan** hallitsemiseksi se käyttää sisäänrakennettua toimintoa nimeltä `AgentExecutor`. Tämä hyväksyy määritellyt `agent` ja `tools`, jotka ovat sille saatavilla.
+**Tilan** hallintaan se käyttää sisäänrakennettua toimintoa nimeltä `AgentExecutor`. Tämä hyväksyy määritellyn `agentin` ja käytettävissä olevat `työkalut`.
 
-`Agent Executor` tallentaa myös keskusteluhistorian tarjotakseen keskustelun kontekstin.
+`AgentExecutor` tallentaa myös keskusteluhistorian tarjotakseen keskustelun kontekstin.
 
-![Langchain-agentit](../../../translated_images/langchain-agents.4709b559c14be8903a59abf4ebef43916a23fac43924b133a7552121ff5e6730.fi.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.fi.png)
 
-LangChain tarjoaa [työkalukatalogin](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), jotka voidaan tuoda sovellukseesi, jossa LLM voi saada niihin pääsyn. Nämä ovat yhteisön ja LangChain-tiimin tekemiä.
+LangChain tarjoaa [työkalukatalogin](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), jonka yhteisö ja LangChain-tiimi ovat luoneet ja jotka voidaan tuoda sovellukseesi, jotta LLM saa niihin pääsyn.
 
-Voit sitten määritellä nämä työkalut ja välittää ne `Agent Executor`:lle.
+Voit määritellä nämä työkalut ja välittää ne `AgentExecutorille`.
 
-Näkyvyys on toinen tärkeä asia, kun puhutaan AI-agenteista. On tärkeää, että sovelluskehittäjät ymmärtävät, mitä työkalua LLM käyttää ja miksi. Tätä varten LangChain-tiimi on kehittänyt LangSmithin.
+Näkyvyys on toinen tärkeä näkökohta AI-agenteista puhuttaessa. On tärkeää, että sovelluskehittäjät ymmärtävät, mitä työkalua LLM käyttää ja miksi. Tätä varten LangChain-tiimi on kehittänyt LangSmithin.
 
 ## AutoGen
 
-Seuraava AI-agenttikehys, jota käsittelemme, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGenin pääpaino on keskusteluissa. Agentit ovat sekä **keskustelukykyisiä** että **muokattavissa**.
+Seuraava AI-agenttikehys, jota käsittelemme, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGen keskittyy pääasiassa keskusteluihin. Agentit ovat sekä **keskustelukykyisiä** että **muokattavissa**.
 
-**Keskustelukykyisyys -** LLM:t voivat aloittaa ja jatkaa keskustelua toisen LLM:n kanssa tehtävän suorittamiseksi. Tämä tehdään luomalla `AssistantAgents` ja antamalla niille erityinen järjestelmäviesti.
+**Keskustelukykyisiä -** LLM:t voivat aloittaa ja jatkaa keskustelua toisen LLM:n kanssa suorittaakseen tehtävän. Tämä tehdään luomalla `AssistantAgents` ja antamalla niille erityinen järjestelmäviesti.
 
 ```python
 
@@ -73,7 +73,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Muokattavuus** - Agentit voidaan määritellä paitsi LLM:inä, myös käyttäjinä tai työkaluina. Kehittäjänä voit määritellä `UserProxyAgent`:in, joka on vastuussa vuorovaikutuksesta käyttäjän kanssa saadakseen palautetta tehtävän suorittamiseksi. Tämä palaute voi joko jatkaa tehtävän suorittamista tai keskeyttää sen.
+**Muokattavissa** - Agentit voidaan määritellä paitsi LLM:iksi myös käyttäjiksi tai työkaluiksi. Kehittäjänä voit määritellä `UserProxyAgentin`, joka vastaa käyttäjän kanssa vuorovaikutuksesta saadakseen palautetta tehtävän suorittamiseksi. Tämä palaute voi joko jatkaa tehtävän suorittamista tai keskeyttää sen.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -81,11 +81,11 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Tila ja työkalut
 
-Tilan muuttamiseksi ja hallitsemiseksi avustaja-agentti luo Python-koodia tehtävän suorittamiseksi.
+Tilan muuttamiseksi ja hallitsemiseksi avustaja-agentti tuottaa Python-koodia tehtävän suorittamiseksi.
 
 Tässä on esimerkki prosessista:
 
-![AutoGen](../../../translated_images/autogen.8ac57409019150ec5a17c6381a92863116b19acce02604b4bf5681225dee62eb.fi.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.fi.png)
 
 #### LLM määritelty järjestelmäviestillä
 
@@ -93,7 +93,7 @@ Tässä on esimerkki prosessista:
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Tämä järjestelmäviesti ohjaa tätä tiettyä LLM:ää, mitkä toiminnot ovat olennaisia sen tehtävälle. Muista, että AutoGenin avulla voit määritellä useita AssistantAgentteja erilaisilla järjestelmäviesteillä.
+Tämä järjestelmäviesti ohjaa kyseistä LLM:ää siihen, mitkä toiminnot ovat olennaisia sen tehtävälle. Muista, että AutoGenin avulla voit määritellä useita AssistantAgentteja, joilla on erilaisia järjestelmäviestejä.
 
 #### Käyttäjä aloittaa keskustelun
 
@@ -102,7 +102,7 @@ user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next wee
 
 ```
 
-Tämä käyttäjäproksin (ihminen) viesti käynnistää prosessin, jossa agentti tutkii mahdollisia toimintoja, jotka sen tulisi suorittaa.
+Tämä käyttäjän (Human) lähettämä viesti käynnistää agentin prosessin tutkia, mitä toimintoja sen pitäisi suorittaa.
 
 #### Toiminto suoritetaan
 
@@ -115,59 +115,61 @@ chatbot (to user_proxy):
 
 ```
 
-Kun alkuperäinen keskustelu on käsitelty, agentti ehdottaa, mitä työkalua kutsua. Tässä tapauksessa se on toiminto nimeltä `get_weather`. Depending on your configuration, this function can be automatically executed and read by the Agent or can be executed based on user input.
+Kun alkuperäinen keskustelu on käsitelty, agentti ehdottaa käytettävää työkalua. Tässä tapauksessa se on toiminto nimeltä `get_weather`. Konfiguraatiostasi riippuen tämä toiminto voidaan suorittaa automaattisesti agentin toimesta tai käyttäjän syötteen perusteella.
 
-You can find a list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to further explore how to get started building.
+Voit löytää listan [AutoGen-koodiesimerkeistä](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) tutkiaksesi tarkemmin, miten aloittaa rakentaminen.
 
 ## Taskweaver
 
-The next agent framework we will explore is [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). It is known as a "code-first" agent because instead of working strictly with `strings` , it can work with DataFrames in Python. This becomes extremely useful for data analysis and generation tasks. This can be things like creating graphs and charts or generating random numbers.
+Seuraava agenttikehys, jota tarkastelemme, on [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Sitä kutsutaan "koodipohjaiseksi" agentiksi, koska sen sijaan, että se toimisi pelkästään `merkkijonojen` kanssa, se voi työskennellä Pythonin DataFramejen kanssa. Tämä on erittäin hyödyllistä data-analyysi- ja generointitehtävissä, kuten kaavioiden ja graafien luomisessa tai satunnaisten numeroiden generoinnissa.
 
-### State and Tools
+### Tila ja työkalut
 
-To manage the state of the conversation, TaskWeaver uses the concept of a `Planner`. The `Planner` is a LLM that takes the request from the users and maps out the tasks that need to be completed to fulfill this request.
+Keskustelun tilan hallitsemiseksi TaskWeaver käyttää `Plannerin` käsitettä. `Planner` on LLM, joka ottaa käyttäjien pyynnön ja kartoittaa tehtävät, jotka on suoritettava pyynnön täyttämiseksi.
 
-To complete the tasks the `Planner` is exposed to the collection of tools called `Plugins`. Tämä voi olla Python-luokkia tai yleinen koodintulkki. Nämä laajennukset tallennetaan upotuksina, jotta LLM voi paremmin etsiä oikeaa laajennusta.
+Tehtävien suorittamiseksi `Planner` altistetaan työkalukokoelmalle, jota kutsutaan `Pluginsiksi`. Tämä voi olla Python-luokkia tai yleinen kooditulkki. Nämä pluginit tallennetaan upotuksina, jotta LLM voi paremmin etsiä oikean pluginin.
 
-![Taskweaver](../../../translated_images/taskweaver.c0997002a3df51572f6cad019c41202b7c2110cbfcccc4af2e5d6a0ace4b4545.fi.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.fi.png)
 
-Tässä on esimerkki laajennuksesta, joka käsittelee poikkeavuuksien havaitsemista:
+Tässä on esimerkki pluginista, joka käsittelee poikkeavuuksien havaitsemista:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Koodi tarkistetaan ennen suorittamista. Toinen ominaisuus kontekstin hallintaan Taskweaverissa on keskustelun `kokemus`. Experience allows for the context of a conversation to be stored over to the long term in a YAML file. This can be configured so that the LLM improves over time on certain tasks given that it is exposed to prior conversations.
+Koodi tarkistetaan ennen sen suorittamista. Toinen ominaisuus kontekstin hallintaan TaskWeaverissa on `kokemus`. Kokemus mahdollistaa keskustelun kontekstin tallentamisen pitkällä aikavälillä YAML-tiedostoon. Tämä voidaan konfiguroida niin, että LLM paranee ajan myötä tietyissä tehtävissä, kun se altistuu aiemmille keskusteluille.
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `tila` ja `tools`ovat muita AI-malleja. Jokainen AI-malli on erikoistunut malli, joka suorittaa tiettyjä tehtäviä, kuten objektien tunnistamista, transkriptiota tai kuvatekstitystä.
+Viimeinen agenttikehys, jota tarkastelemme, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVISin ainutlaatuisuus piilee siinä, että se käyttää LLM:ää keskustelun `tilan` hallintaan ja `työkalut` ovat muita AI-malleja. Kukin AI-malli on erikoistunut tiettyihin tehtäviin, kuten objektien tunnistamiseen, transkriptioon tai kuvatekstien luomiseen.
 
-![JARVIS](../../../translated_images/jarvis.d41d7c4c81bf015bd7ced7f1108abdec56b312472aaf3f63b5b0e82a5f4fb395.fi.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.fi.png)
 
-LLM, ollessaan yleiskäyttöinen malli, vastaanottaa käyttäjän pyynnön ja tunnistaa tietyn tehtävän ja kaikki tarvittavat argumentit/tiedot tehtävän suorittamiseksi.
+LLM, joka on yleiskäyttöinen malli, vastaanottaa käyttäjän pyynnön ja tunnistaa tietyn tehtävän sekä tarvittavat argumentit/tiedot tehtävän suorittamiseksi.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM muotoilee sitten pyynnön tavalla, jonka erikoistunut AI-malli voi tulkita, kuten JSON. Kun AI-malli on palauttanut ennusteensa tehtävän perusteella, LLM vastaanottaa vastauksen.
+LLM muotoilee pyynnön tavalla, jonka erikoistunut AI-malli voi tulkita, kuten JSON-muodossa. Kun AI-malli on palauttanut ennusteensa tehtävän perusteella, LLM vastaanottaa vastauksen.
 
-Jos useita malleja tarvitaan tehtävän suorittamiseen, se tulkitsee myös näiden mallien vastaukset ennen kuin yhdistää ne luodakseen vastauksen käyttäjälle.
+Jos tehtävän suorittamiseen tarvitaan useita malleja, se myös tulkitsee näiden mallien vastaukset ennen kuin yhdistää ne ja tuottaa vastauksen käyttäjälle.
 
-Alla oleva esimerkki näyttää, miten tämä toimisi, kun käyttäjä pyytää kuvausta ja esineiden lukumäärää kuvassa:
+Alla oleva esimerkki näyttää, miten tämä toimisi, kun käyttäjä pyytää kuvausta ja laskentaa kuvassa olevista objekteista:
 
 ## Tehtävä
 
-Jatkaaksesi AI-agenttien oppimista voit rakentaa AutoGenilla:
+Jatka oppimista AI-agenteista rakentamalla AutoGenilla:
 
-- Sovelluksen, joka simuloi liiketapaamista koulutusstartupin eri osastojen kanssa.
-- Luo järjestelmäviestejä, jotka ohjaavat LLM:itä ymmärtämään eri persoonallisuuksia ja prioriteetteja, ja anna käyttäjän esittää uusi tuoteidea.
-- LLM:n tulisi sitten luoda jatkokysymyksiä kustakin osastosta tarkentaakseen ja parantaakseen esitystä ja tuoteideaa.
+- Sovellus, joka simuloi liiketapaamista koulutusalan startupin eri osastojen välillä.
+- Luo järjestelmäviestejä, jotka ohjaavat LLM:ää ymmärtämään eri persoonia ja prioriteetteja, ja anna käyttäjän esitellä uusi tuoteidea.
+- LLM:n tulisi sitten luoda jatkokysymyksiä kustakin osastosta, jotta esitystä ja tuoteideaa voidaan tarkentaa ja parantaa.
 
-## Oppiminen ei lopu tähän, jatka matkaa
+## Oppiminen ei lopu tähän, jatka matkaasi
 
-Suoritettuasi tämän oppitunnin, tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi syventämistä!
+Tämän oppitunnin jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+
+---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä AI-käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää auktoritatiivisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

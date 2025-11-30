@@ -1,135 +1,145 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T14:29:38+00:00",
+  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+  "translation_date": "2025-10-17T22:30:59+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "en"
 }
 -->
 # Using Generative AI Responsibly
 
-> _Click the image above to view video of this lesson_
+[![Using Generative AI Responsibly](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.en.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
-It's easy to be fascinated with AI and generative AI in particular, but you need to consider how you would use it responsibly. You need to consider things like how to ensure the output is fair, non-harmful and more. This chapter aims to provide you with the mentioned context, what to consider, and how to take active steps to improve your AI usage.
+> _Click the image above to view the video of this lesson_
+
+Generative AI can be fascinating, but it’s important to consider how to use it responsibly. You need to think about ensuring the output is fair, non-harmful, and more. This chapter aims to provide the necessary context, key considerations, and actionable steps to improve your use of AI responsibly.
 
 ## Introduction
 
 This lesson will cover:
 
-- Why you should prioritize Responsible AI when building Generative AI applications.
-- Core principles of Responsible AI and how they relate to Generative AI.
-- How to put these Responsible AI principles into practice through strategy and tooling.
+- Why Responsible AI should be a priority when building Generative AI applications.
+- Core principles of Responsible AI and their relevance to Generative AI.
+- Strategies and tools to implement Responsible AI principles in practice.
 
 ## Learning Goals
 
-After completing this lesson you will know:
+After completing this lesson, you will understand:
 
-- The importance of Responsible AI when building Generative AI applications.
-- When to think and apply the core principles of Responsible AI when building Generative AI applications.
-- What tools and strategies are available to you to put the concept of Responsible AI into practice.
+- The significance of Responsible AI in developing Generative AI applications.
+- When and how to apply the core principles of Responsible AI in Generative AI development.
+- Available tools and strategies to implement Responsible AI effectively.
 
 ## Responsible AI Principles
 
-The excitement of Generative AI has never been higher. This excitement has brought a lot of new developers, attention, and funding to this space. While this is very positive for anyone looking to build products and companies using Generative AI, it is also important we proceed responsibly.
+The excitement surrounding Generative AI is at an all-time high. This enthusiasm has attracted many new developers, attention, and funding to the field. While this is great for those building products and companies with Generative AI, it’s crucial to proceed responsibly.
 
-Throughout this course, we are focusing on building our startup and our AI education product. We’ll use the principles of Responsible AI: Fairness, Inclusiveness, Reliability/Safety, Security & Privacy, Transparency and Accountability. With these principles, we will explore how they relate to our use of Generative AI in our products.
+Throughout this course, we focus on building our startup and AI education product using the principles of Responsible AI: Fairness, Inclusiveness, Reliability/Safety, Security & Privacy, Transparency, and Accountability. We will explore how these principles apply to our use of Generative AI in our products.
 
 ## Why Should You Prioritize Responsible AI
 
-When building a product, taking a human-centric approach by keeping your user's best interest in mind leads to the best results.
+When creating a product, adopting a human-centric approach that prioritizes your users’ best interests often yields the best results.
 
-The uniqueness of Generative AI is its power to create helpful answers, information, guidance, and content for users. This can be done without many manual steps which can lead to very impressive results. Without proper planning and strategies, it can also unfortunately lead to some harmful results for your users, your product, and society as a whole.
+Generative AI is unique in its ability to produce helpful answers, information, guidance, and content for users with minimal manual effort, often leading to impressive outcomes. However, without proper planning and strategies, it can also result in harmful consequences for your users, your product, and society.
 
-Let's look at some (but not all) of these potentially harmful results:
+Let’s examine some of these potential harmful outcomes:
 
 ### Hallucinations
 
-Hallucinations are a term used to describe when an LLM produces content that is either completely nonsensical or something we know is factually wrong based on other sources of information.
+Hallucinations refer to instances where a large language model (LLM) generates content that is either nonsensical or factually incorrect based on other sources of information.
 
-Let's take for example we build a feature for our startup that allows students to ask historical questions to a model. A student asks the question `Who was the sole survivor of Titanic?`
+For example, imagine our startup develops a feature that allows students to ask historical questions to a model. A student asks, `Who was the sole survivor of Titanic?`
 
-The model produces a response such as the one below:
+The model generates the following response:
 
-This is a very confident and thorough answer. Unfortunately, it is incorrect. Even with a minimal amount of research, one would discover there was more than one survivor of the Titanic disaster. For a student who is just starting to research this topic, this answer can be persuasive enough to not be questioned and treated as fact. The consequences of this can lead to the AI system being unreliable and negatively impact the reputation of our startup.
+![Prompt saying "Who was the sole survivor of the Titanic"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
-With each iteration of any given LLM, we have seen performance improvements around minimizing hallucinations. Even with this improvement, we as application builders and users still need to remain aware of these limitations.
+> _(Source: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
+
+This response is confident and detailed but incorrect. Even minimal research would reveal that there were multiple survivors of the Titanic disaster. For a student new to the topic, this answer might seem convincing enough to be accepted as fact. Such inaccuracies can make the AI system unreliable and harm the reputation of our startup.
+
+Although each iteration of LLMs has shown improvements in reducing hallucinations, application developers and users must remain vigilant about these limitations.
 
 ### Harmful Content
 
-We covered in the earlier section when an LLM produces incorrect or nonsensical responses. Another risk we need to be aware of is when a model responds with harmful content.
+In addition to incorrect or nonsensical responses, there’s a risk of models generating harmful content.
 
-Harmful content can be defined as:
+Harmful content includes:
 
-- Providing instructions or encouraging self-harm or harm to certain groups.
-- Hateful or demeaning content.
-- Guiding planning any type of attack or violent acts.
-- Providing instructions on how to find illegal content or commit illegal acts.
-- Displaying sexually explicit content.
+- Instructions or encouragement for self-harm or harm to specific groups.
+- Hateful or demeaning language.
+- Guidance for planning attacks or violent acts.
+- Instructions for accessing illegal content or committing illegal acts.
+- Displaying sexually explicit material.
 
-For our startup, we want to make sure we have the right tools and strategies in place to prevent this type of content from being seen by students.
+For our startup, it’s essential to implement tools and strategies to prevent students from encountering such content.
 
 ### Lack of Fairness
 
-Fairness is defined as “ensuring that an AI system is free from bias and discrimination and that they treat everyone fairly and equally.” In the world of Generative AI, we want to ensure that exclusionary worldviews of marginalized groups are not reinforced by the model’s output.
+Fairness means ensuring that an AI system is free from bias and discrimination, treating everyone equally and fairly. In the realm of Generative AI, it’s crucial to prevent the reinforcement of exclusionary worldviews or biases against marginalized groups in the model’s output.
 
-These types of outputs are not only destructive to building positive product experiences for our users, but they also cause further societal harm. As application builders, we should always keep a wide and diverse user base in mind when building solutions with Generative AI.
+Such outputs not only harm the user experience but also contribute to broader societal issues. As developers, we must consider a diverse user base when creating solutions with Generative AI.
 
 ## How to Use Generative AI Responsibly
 
-Now that we have identified the importance of Responsible Generative AI, let's look at 4 steps we can take to build our AI solutions responsibly:
+Now that we understand the importance of Responsible Generative AI, let’s explore four steps to build AI solutions responsibly:
+
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.en.png)
 
 ### Measure Potential Harms
 
-In software testing, we test the expected actions of a user on an application. Similarly, testing a diverse set of prompts users are most likely going to use is a good way to measure potential harm.
+In software testing, we evaluate expected user actions within an application. Similarly, testing a diverse set of prompts that users are likely to use can help identify potential harm.
 
-Since our startup is building an education product, it would be good to prepare a list of education-related prompts. This could be to cover a certain subject, historical facts, and prompts about student life.
+For our education-focused startup, it’s beneficial to prepare a list of prompts related to education, such as specific subjects, historical facts, and student life.
 
 ### Mitigate Potential Harms
 
-It is now time to find ways where we can prevent or limit the potential harm caused by the model and its responses. We can look at this in 4 different layers:
+Next, we need to find ways to prevent or minimize potential harm caused by the model and its responses. This can be approached through four layers:
 
-- **Model**. Choosing the right model for the right use case. Larger and more complex models like GPT-4 can cause more of a risk of harmful content when applied to smaller and more specific use cases. Using your training data to fine-tune also reduces the risk of harmful content.
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.en.png)
 
-- **Safety System**. A safety system is a set of tools and configurations on the platform serving the model that help mitigate harm. An example of this is the content filtering system on the Azure OpenAI service. Systems should also detect jailbreak attacks and unwanted activity like requests from bots.
+- **Model**: Select the appropriate model for the specific use case. Larger, more complex models like GPT-4 may pose greater risks of harmful content when applied to narrow use cases. Fine-tuning with your training data can help reduce these risks.
 
-- **Metaprompt**. Metaprompts and grounding are ways we can direct or limit the model based on certain behaviors and information. This could be using system inputs to define certain limits of the model. In addition, providing outputs that are more relevant to the scope or domain of the system.
+- **Safety System**: Implement a safety system with tools and configurations on the platform hosting the model to mitigate harm. For example, the Azure OpenAI service includes a content filtering system. Safety systems should also detect jailbreak attacks and unwanted activities, such as bot requests.
 
-It can also be using techniques like Retrieval Augmented Generation (RAG) to have the model only pull information from a selection of trusted sources. There is a lesson later in this course for [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)
+- **Metaprompt**: Use metaprompts and grounding to guide or limit the model’s behavior and information. This can involve system inputs that define the model’s boundaries or techniques like Retrieval Augmented Generation (RAG) to ensure the model uses information from trusted sources. A later lesson in this course will cover [building search applications](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-- **User Experience**. The final layer is where the user interacts directly with the model through our application’s interface in some way. In this way we can design the UI/UX to limit the user on the types of inputs they can send to the model as well as text or images displayed to the user. When deploying the AI application, we also must be transparent about what our Generative AI application can and can’t do.
+- **User Experience**: Design the user interface and experience to restrict the types of inputs users can provide to the model and control the text or images displayed to users. Transparency about the capabilities and limitations of your Generative AI application is also essential.
 
-We have an entire lesson dedicated to [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+We have a dedicated lesson on [Designing UX for AI Applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-- **Evaluate model**. Working with LLMs can be challenging because we don’t always have control over the data the model was trained on. Regardless, we should always evaluate the model’s performance and outputs. It’s still important to measure the model’s accuracy, similarity, groundedness, and relevance of the output. This helps provide transparency and trust to stakeholders and users.
+- **Evaluate Model**: Working with LLMs can be challenging due to limited control over the training data. Nevertheless, it’s crucial to evaluate the model’s performance and outputs, including accuracy, relevance, groundedness, and similarity. This evaluation fosters transparency and trust among stakeholders and users.
 
-### Operate a Responsible Generative AI solution
+### Operate a Responsible Generative AI Solution
 
-Building an operational practice around your AI applications is the final stage. This includes partnering with other parts of our startup like Legal and Security to ensure we are compliant with all regulatory policies. Before launching, we also want to build plans around delivery, handling incidents, and rollback to prevent any harm to our users from growing.
+The final stage involves establishing operational practices for your AI applications. Collaborate with other teams in your startup, such as Legal and Security, to ensure compliance with regulatory policies. Before launching, develop plans for delivery, incident management, and rollback to minimize potential harm to users.
 
 ## Tools
 
-While the work of developing Responsible AI solutions may seem like a lot, it is work well worth the effort. As the area of Generative AI grows, more tooling to help developers efficiently integrate responsibility into their workflows will mature. For example, the [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) can help detect harmful content and images via an API request.
+Although developing Responsible AI solutions may seem challenging, it is a worthwhile endeavor. As Generative AI continues to evolve, more tools will emerge to help developers integrate responsibility into their workflows efficiently. For instance, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) can detect harmful content and images through API requests.
 
-## Knowledge check
+## Knowledge Check
 
-What are some things you need to care about to ensure responsible AI usage?
+What are some things you need to consider to ensure responsible AI usage?
 
 1. That the answer is correct.
-1. Harmful usage, that AI isn't used for criminal purposes.
-1. Ensuring the AI is free from bias and discrimination.
+2. Harmful usage, ensuring AI isn’t used for criminal purposes.
+3. Ensuring the AI is free from bias and discrimination.
 
-A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmful effects and biases and more.
+A: 2 and 3 are correct. Responsible AI helps you consider how to mitigate harmful effects, biases, and more.
 
 ## 🚀 Challenge
 
-Read up on [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and see what you can adopt for your usage.
+Learn more about [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) and explore how you can incorporate it into your work.
 
 ## Great Work, Continue Your Learning
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to further enhance your knowledge of Generative AI!
 
-Head over to Lesson 4 where we will look at [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Proceed to Lesson 4, where we’ll dive into [Prompt Engineering Fundamentals](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.

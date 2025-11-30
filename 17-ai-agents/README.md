@@ -1,4 +1,4 @@
-[![Open Source Models](./images/17-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst)
+[![Open Source Models](./images/17-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introduction
 

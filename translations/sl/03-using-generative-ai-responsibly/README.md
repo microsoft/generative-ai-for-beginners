@@ -1,135 +1,147 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13084c6321a2092841b9a081b29497ba",
-  "translation_date": "2025-05-19T14:53:18+00:00",
+  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+  "translation_date": "2025-10-18T01:40:52+00:00",
   "source_file": "03-using-generative-ai-responsibly/README.md",
   "language_code": "sl"
 }
 -->
 # Uporaba generativne umetne inteligence odgovorno
 
-> _Kliknite na zgornjo sliko za ogled videa te lekcije_
+[![Uporaba generativne umetne inteligence odgovorno](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.sl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
-Zlahka se je navdušiti nad umetno inteligenco, še posebej generativno umetno inteligenco, vendar je treba razmisliti, kako jo uporabljati odgovorno. Treba je razmisliti o tem, kako zagotoviti, da je rezultat pravičen, neškodljiv in še več. Ta poglavje vam želi ponuditi omenjeni kontekst, kaj je treba upoštevati in kako sprejeti aktivne korake za izboljšanje vaše uporabe umetne inteligence.
+> _Kliknite zgornjo sliko za ogled videa te lekcije_
+
+Generativna umetna inteligenca je fascinantna, vendar je pomembno razmisliti, kako jo uporabljati odgovorno. Pomembno je upoštevati, kako zagotoviti, da so rezultati pravični, neškodljivi in še več. Ta poglavje vam želi ponuditi kontekst, kaj upoštevati in kako sprejeti aktivne korake za izboljšanje uporabe umetne inteligence.
 
 ## Uvod
 
 Ta lekcija bo obravnavala:
 
-- Zakaj bi morali pri gradnji aplikacij generativne umetne inteligence dati prednost odgovorni umetni inteligenci.
-- Osnovna načela odgovorne umetne inteligence in kako se nanašajo na generativno umetno inteligenco.
-- Kako uresničiti ta načela odgovorne umetne inteligence s strategijo in orodji.
+- Zakaj bi morali dati prednost odgovorni umetni inteligenci pri gradnji aplikacij z generativno umetno inteligenco.
+- Temeljna načela odgovorne umetne inteligence in kako se nanašajo na generativno umetno inteligenco.
+- Kako ta načela odgovorne umetne inteligence uresničiti s strategijo in orodji.
 
 ## Cilji učenja
 
-Po končani lekciji boste vedeli:
+Po zaključku te lekcije boste vedeli:
 
-- Pomembnost odgovorne umetne inteligence pri gradnji aplikacij generativne umetne inteligence.
-- Kdaj razmisliti in uporabiti osnovna načela odgovorne umetne inteligence pri gradnji aplikacij generativne umetne inteligence.
-- Katera orodja in strategije so vam na voljo za uresničitev koncepta odgovorne umetne inteligence.
+- Pomen odgovorne umetne inteligence pri gradnji aplikacij z generativno umetno inteligenco.
+- Kdaj razmišljati o temeljnih načelih odgovorne umetne inteligence in jih uporabiti pri gradnji aplikacij z generativno umetno inteligenco.
+- Katera orodja in strategije so na voljo za uresničitev koncepta odgovorne umetne inteligence.
 
 ## Načela odgovorne umetne inteligence
 
-Navdušenje nad generativno umetno inteligenco še nikoli ni bilo večje. To navdušenje je prineslo veliko novih razvijalcev, pozornosti in financiranja na tem področju. Čeprav je to zelo pozitivno za vsakogar, ki želi graditi izdelke in podjetja z uporabo generativne umetne inteligence, je pomembno, da ravnamo odgovorno.
+Navdušenje nad generativno umetno inteligenco je večje kot kdajkoli prej. To navdušenje je pritegnilo veliko novih razvijalcev, pozornosti in financiranja na tem področju. Čeprav je to zelo pozitivno za vse, ki želijo graditi izdelke in podjetja z generativno umetno inteligenco, je prav tako pomembno, da ravnamo odgovorno.
 
-V tem tečaju se osredotočamo na gradnjo našega startupa in našega izobraževalnega produkta umetne inteligence. Uporabili bomo načela odgovorne umetne inteligence: pravičnost, vključenost, zanesljivost/varnost, varnost in zasebnost, preglednost in odgovornost. S temi načeli bomo raziskali, kako se nanašajo na našo uporabo generativne umetne inteligence v naših izdelkih.
+V tem tečaju se osredotočamo na gradnjo našega startupa in našega izobraževalnega produkta z umetno inteligenco. Uporabili bomo načela odgovorne umetne inteligence: pravičnost, vključenost, zanesljivost/varnost, varnost in zasebnost, transparentnost ter odgovornost. S temi načeli bomo raziskali, kako se nanašajo na našo uporabo generativne umetne inteligence v naših izdelkih.
 
 ## Zakaj bi morali dati prednost odgovorni umetni inteligenci
 
-Pri gradnji izdelka pristop, ki je osredotočen na človeka in upošteva najboljše interese uporabnika, vodi do najboljših rezultatov.
+Pri gradnji izdelka je človeško usmerjen pristop, ki upošteva najboljše interese uporabnika, ključnega pomena za doseganje najboljših rezultatov.
 
-Edinstvenost generativne umetne inteligence je njena moč, da ustvari koristne odgovore, informacije, usmeritve in vsebino za uporabnike. To je mogoče storiti brez veliko ročnih korakov, kar lahko vodi do zelo impresivnih rezultatov. Brez ustreznega načrtovanja in strategij lahko žal vodi tudi do nekaterih škodljivih rezultatov za vaše uporabnike, vaš izdelek in družbo kot celoto.
+Posebnost generativne umetne inteligence je njena sposobnost ustvarjanja koristnih odgovorov, informacij, nasvetov in vsebin za uporabnike. To je mogoče doseči brez številnih ročnih korakov, kar lahko vodi do zelo impresivnih rezultatov. Brez ustreznega načrtovanja in strategij pa lahko na žalost povzroči tudi škodljive rezultate za vaše uporabnike, vaš izdelek in družbo kot celoto.
 
-Poglejmo si nekaj (vendar ne vseh) teh potencialno škodljivih rezultatov:
+Poglejmo nekaj (ne vseh) potencialno škodljivih rezultatov:
 
 ### Halucinacije
 
-Halucinacije so izraz, ki opisuje, ko LLM ustvari vsebino, ki je bodisi popolnoma nesmiselna bodisi nekaj, kar vemo, da je dejansko napačno na podlagi drugih virov informacij.
+Halucinacije so izraz, ki opisuje, ko LLM ustvari vsebino, ki je bodisi popolnoma nesmiselna bodisi nekaj, kar vemo, da je dejansko napačno glede na druge vire informacij.
 
-Recimo, da zgradimo funkcijo za naš startup, ki omogoča študentom, da modelu zastavijo zgodovinska vprašanja. Študent zastavi vprašanje `Who was the sole survivor of Titanic?`
+Recimo, da zgradimo funkcijo za naš startup, ki omogoča študentom, da modelu postavljajo zgodovinska vprašanja. Študent postavi vprašanje: `Kdo je bil edini preživeli Titanika?`
 
 Model ustvari odgovor, kot je spodnji:
 
-To je zelo samozavesten in temeljit odgovor. Na žalost je napačen. Tudi z minimalno količino raziskav bi ugotovili, da je bilo več kot en preživeli katastrofe Titanika. Za študenta, ki šele začenja raziskovati to temo, je ta odgovor lahko dovolj prepričljiv, da ga ne bo vprašal in obravnaval kot dejstvo. Posledice tega lahko vodijo v nezanesljivost sistema umetne inteligence in negativno vplivajo na ugled našega startupa.
+![Vprašanje: "Kdo je bil edini preživeli Titanika"](../../../03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp)
 
-Z vsako iteracijo kateregakoli danega LLM smo videli izboljšave zmogljivosti pri zmanjševanju halucinacij. Tudi s to izboljšavo moramo kot graditelji aplikacij in uporabniki ostati pozorni na te omejitve.
+> _(Vir: [Flying bisons](https://flyingbisons.com?WT.mc_id=academic-105485-koreyst))_
+
+To je zelo samozavesten in podroben odgovor. Na žalost je napačen. Tudi z minimalno količino raziskav bi ugotovili, da je bilo več preživelih v katastrofi Titanika. Za študenta, ki šele začenja raziskovati to temo, je tak odgovor lahko dovolj prepričljiv, da ga ne bo podvomil in ga bo obravnaval kot dejstvo. Posledice tega lahko privedejo do nezanesljivosti sistema umetne inteligence in negativno vplivajo na ugled našega startupa.
+
+Z vsako iteracijo določenega LLM smo opazili izboljšave zmogljivosti pri zmanjševanju halucinacij. Kljub tem izboljšavam moramo kot graditelji aplikacij in uporabniki ostati pozorni na te omejitve.
 
 ### Škodljiva vsebina
 
-V prejšnjem razdelku smo obravnavali, ko LLM ustvari napačne ali nesmiselne odgovore. Drugo tveganje, na katerega moramo biti pozorni, je, ko model odgovori s škodljivo vsebino.
+V prejšnjem razdelku smo obravnavali primere, ko LLM ustvari napačne ali nesmiselne odgovore. Drugo tveganje, na katerega moramo biti pozorni, je, ko model odgovori s škodljivo vsebino.
 
 Škodljiva vsebina je lahko opredeljena kot:
 
-- Nudenje navodil ali spodbujanje k samopoškodbam ali škodi določenim skupinam.
-- Sovražna ali poniževalna vsebina.
-- Usmerjanje k načrtovanju kakršnih koli napadov ali nasilnih dejanj.
-- Nudenje navodil, kako najti nezakonito vsebino ali storiti nezakonita dejanja.
+- Podajanje navodil ali spodbujanje samopoškodovanja ali škodovanja določenim skupinam.
+- Sovražna ali ponižujoča vsebina.
+- Usmerjanje načrtovanja kakršnih koli napadov ali nasilnih dejanj.
+- Podajanje navodil, kako najti nezakonito vsebino ali storiti nezakonita dejanja.
 - Prikazovanje spolno eksplicitne vsebine.
 
-Za naš startup želimo zagotoviti, da imamo prava orodja in strategije, da preprečimo, da bi tovrstna vsebina bila videna s strani študentov.
+Za naš startup želimo zagotoviti, da imamo na voljo prava orodja in strategije za preprečevanje prikaza tovrstne vsebine študentom.
 
 ### Pomanjkanje pravičnosti
 
-Pravičnost je opredeljena kot "zagotavljanje, da je sistem umetne inteligence brez pristranskosti in diskriminacije ter da obravnava vse pošteno in enakopravno." V svetu generativne umetne inteligence želimo zagotoviti, da izključujoči pogledi marginaliziranih skupin niso okrepljeni z izhodom modela.
+Pravičnost je opredeljena kot "zagotavljanje, da je sistem umetne inteligence brez pristranskosti in diskriminacije ter da obravnava vse pravično in enakopravno." V svetu generativne umetne inteligence želimo zagotoviti, da izključujoči pogledi na marginalizirane skupine niso ojačani z izhodom modela.
 
-Takšne vrste izhodov niso le uničujoče za gradnjo pozitivnih izkušenj izdelkov za naše uporabnike, temveč povzročajo tudi nadaljnjo družbeno škodo. Kot graditelji aplikacij bi morali vedno imeti široko in raznoliko bazo uporabnikov v mislih pri gradnji rešitev z generativno umetno inteligenco.
+Takšni izhodi ne le škodujejo gradnji pozitivnih izkušenj z izdelki za naše uporabnike, temveč povzročajo tudi dodatno družbeno škodo. Kot graditelji aplikacij bi morali vedno imeti v mislih široko in raznoliko bazo uporabnikov pri gradnji rešitev z generativno umetno inteligenco.
 
 ## Kako uporabljati generativno umetno inteligenco odgovorno
 
-Sedaj, ko smo opredelili pomembnost odgovorne generativne umetne inteligence, si poglejmo 4 korake, ki jih lahko sprejmemo, da odgovorno gradimo naše AI rešitve:
+Zdaj, ko smo opredelili pomen odgovorne generativne umetne inteligence, si poglejmo 4 korake, ki jih lahko naredimo, da odgovorno gradimo naše rešitve z umetno inteligenco:
+
+![Cikel zmanjševanja tveganj](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.sl.png)
 
 ### Merjenje potencialnih škod
 
-Pri testiranju programske opreme testiramo pričakovane akcije uporabnika na aplikaciji. Podobno je testiranje raznolikega nabora pozivov, ki jih uporabniki najverjetneje bodo uporabili, dober način za merjenje potencialne škode.
+Pri testiranju programske opreme testiramo pričakovane akcije uporabnika v aplikaciji. Podobno je testiranje raznolikega nabora pozivov, ki jih bodo uporabniki najverjetneje uporabili, dober način za merjenje potencialne škode.
 
-Ker naš startup gradi izobraževalni produkt, bi bilo dobro pripraviti seznam pozivov povezanih z izobraževanjem. To bi lahko zajemalo določeno temo, zgodovinska dejstva in pozive o študentskem življenju.
+Ker naš startup gradi izobraževalni produkt, bi bilo dobro pripraviti seznam pozivov, povezanih z izobraževanjem. To bi lahko vključevalo določene predmete, zgodovinska dejstva in pozive o študentskem življenju.
 
 ### Zmanjšanje potencialnih škod
 
-Sedaj je čas, da poiščemo načine, kjer lahko preprečimo ali omejimo potencialno škodo, ki jo povzroča model in njegovi odgovori. To lahko obravnavamo v 4 različnih slojih:
+Zdaj je čas, da najdemo načine, kako preprečiti ali omejiti potencialno škodo, ki jo povzroča model in njegovi odgovori. To lahko obravnavamo na 4 različnih ravneh:
 
-- **Model**. Izbira pravega modela za pravi primer uporabe. Večji in bolj kompleksni modeli, kot je GPT-4, lahko povzročijo večje tveganje za škodljivo vsebino, ko se uporabijo za manjše in bolj specifične primere uporabe. Uporaba vaših podatkov za fino nastavitev prav tako zmanjša tveganje za škodljivo vsebino.
+![Plasti zmanjševanja tveganj](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.sl.png)
 
-- **Varnostni sistem**. Varnostni sistem je niz orodij in konfiguracij na platformi, ki služi modelu in pomaga zmanjšati škodo. Primer tega je sistem filtriranja vsebine na storitvi Azure OpenAI. Sistemi bi morali tudi zaznati napade z izogibanjem in nezaželeno aktivnost, kot so zahteve od botov.
+- **Model**. Izbira pravega modela za pravi primer uporabe. Večji in bolj zapleteni modeli, kot je GPT-4, lahko predstavljajo večje tveganje za škodljivo vsebino, če se uporabljajo za manjše in bolj specifične primere uporabe. Uporaba vaših podatkov za prilagoditev modela prav tako zmanjšuje tveganje za škodljivo vsebino.
 
-- **Metaprompt**. Metaprompti in utemeljitev so načini, kako lahko usmerimo ali omejimo model na podlagi določenih vedenj in informacij. To bi lahko bilo uporaba sistemskih vnosov za določitev določenih omejitev modela. Poleg tega nudenje izhodov, ki so bolj relevantni za obseg ali domeno sistema.
+- **Varnostni sistem**. Varnostni sistem je niz orodij in konfiguracij na platformi, ki služi modelu in pomaga zmanjšati škodo. Primer tega je sistem za filtriranje vsebine na storitvi Azure OpenAI. Sistemi bi morali zaznati tudi napade na varnost in neželeno dejavnost, kot so zahteve botov.
 
-Lahko se tudi uporabi tehnike, kot je Generacija z obogatitvijo pridobivanja (RAG), da model pridobi informacije samo iz izbora zaupanja vrednih virov. Kasneje v tem tečaju je lekcija za [gradnjo iskalnih aplikacij](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
+- **Metaprompt**. Metaprompti in utemeljitve so načini, kako lahko usmerimo ali omejimo model na podlagi določenih vedenj in informacij. To bi lahko vključevalo uporabo sistemskih vnosov za določanje določenih omejitev modela. Poleg tega pa zagotavljanje izhodov, ki so bolj relevantni za obseg ali področje sistema.
 
-- **Uporabniška izkušnja**. Končni sloj je, kjer uporabnik neposredno sodeluje z modelom prek vmesnika naše aplikacije na nek način. Na ta način lahko oblikujemo UI/UX, da omejimo uporabnika glede vrste vnosov, ki jih lahko pošlje modelu, kot tudi besedilo ali slike, prikazane uporabniku. Pri uvajanju AI aplikacije moramo biti tudi transparentni glede tega, kaj naša aplikacija generativne umetne inteligence lahko in česa ne more storiti.
+Lahko se uporablja tudi tehnike, kot je Retrieval Augmented Generation (RAG), da model pridobi informacije samo iz izbranih zaupanja vrednih virov. Kasneje v tem tečaju je lekcija o [gradnji iskalnih aplikacij](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-Imamo celotno lekcijo, posvečeno [Oblikovanju UX za AI aplikacije](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
+- **Uporabniška izkušnja**. Zadnja plast je tam, kjer uporabnik neposredno komunicira z modelom prek vmesnika naše aplikacije. Na ta način lahko oblikujemo UI/UX, da omejimo uporabnika glede vrst vnosov, ki jih lahko pošlje modelu, kot tudi glede besedila ali slik, prikazanih uporabniku. Pri uvajanju aplikacije z umetno inteligenco moramo biti tudi transparentni glede tega, kaj naša aplikacija z generativno umetno inteligenco zmore in česa ne.
 
-- **Ocenjevanje modela**. Delo z LLM-ji je lahko zahtevno, ker nimamo vedno nadzora nad podatki, na katerih je bil model usposobljen. Kljub temu bi morali vedno oceniti zmogljivost in izhode modela. Še vedno je pomembno meriti natančnost modela, podobnost, utemeljenost in relevantnost izhoda. To pomaga zagotoviti preglednost in zaupanje deležnikom ter uporabnikom.
+Imamo celotno lekcijo, posvečeno [Oblikovanju UX za aplikacije z umetno inteligenco](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst).
 
-### Upravljanje odgovorne generativne AI rešitve
+- **Ocenjevanje modela**. Delo z LLM-ji je lahko zahtevno, ker nimamo vedno nadzora nad podatki, na katerih je bil model usposobljen. Kljub temu bi morali vedno oceniti delovanje in izhode modela. Še vedno je pomembno meriti natančnost modela, podobnost, utemeljenost in relevantnost izhoda. To pomaga zagotoviti transparentnost in zaupanje deležnikom in uporabnikom.
 
-Gradnja operativne prakse okoli vaših AI aplikacij je končna faza. To vključuje partnerstvo z drugimi deli našega startupa, kot sta pravni in varnostni oddelek, da zagotovimo skladnost z vsemi regulativnimi politikami. Pred lansiranjem želimo tudi zgraditi načrte okoli dostave, obravnave incidentov in povratka, da preprečimo kakršno koli škodo našim uporabnikom pri rasti.
+### Upravljanje odgovorne rešitve z generativno umetno inteligenco
+
+Zadnja faza je vzpostavitev operativne prakse okoli vaših aplikacij z umetno inteligenco. To vključuje sodelovanje z drugimi deli našega startupa, kot sta pravni oddelek in varnost, da zagotovimo skladnost z vsemi regulativnimi politikami. Pred lansiranjem želimo tudi pripraviti načrte za dostavo, obravnavo incidentov in povratne ukrepe, da preprečimo kakršno koli škodo našim uporabnikom.
 
 ## Orodja
 
-Čeprav se zdi delo razvoja rešitev odgovorne umetne inteligence veliko, je delo zelo vredno truda. Ko področje generativne umetne inteligence raste, se bo več orodij za pomoč razvijalcem pri učinkovitem vključevanju odgovornosti v njihove delovne tokove razvijalo. Na primer, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) lahko pomaga zaznati škodljivo vsebino in slike prek zahteve API.
+Čeprav se delo pri razvoju rešitev z odgovorno umetno inteligenco morda zdi obsežno, je to delo vredno truda. Z rastjo področja generativne umetne inteligence se bodo razvijala tudi orodja, ki bodo razvijalcem pomagala učinkovito vključiti odgovornost v njihove delovne procese. Na primer, [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) lahko pomaga zaznati škodljivo vsebino in slike prek API zahteve.
 
 ## Preverjanje znanja
 
 Na kaj morate biti pozorni, da zagotovite odgovorno uporabo umetne inteligence?
 
 1. Da je odgovor pravilen.
-2. Škodljiva uporaba, da umetna inteligenca ni uporabljena za kriminalne namene.
-3. Zagotavljanje, da je umetna inteligenca brez pristranskosti in diskriminacije.
+1. Škodljiva uporaba, da umetna inteligenca ni uporabljena za kriminalne namene.
+1. Zagotavljanje, da je umetna inteligenca brez pristranskosti in diskriminacije.
 
-A: 2 in 3 sta pravilna. Odgovorna umetna inteligenca vam pomaga razmisliti, kako zmanjšati škodljive učinke in pristranskosti ter več.
+A: 2 in 3 sta pravilna. Odgovorna umetna inteligenca vam pomaga razmisliti, kako zmanjšati škodljive učinke in pristranskosti ter še več.
 
 ## 🚀 Izziv
 
-Preberite o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) in preverite, kaj lahko sprejmete za svojo uporabo.
+Preberite več o [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=academic-105485-koreyst) in preverite, kaj lahko uporabite za svoje potrebe.
 
 ## Odlično delo, nadaljujte z učenjem
 
-Po končani lekciji si oglejte našo [Generativno AI zbirko učenja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgradnjo svojega znanja o generativni umetni inteligenci!
+Po zaključku te lekcije si oglejte našo [zbirko učenja o generativni umetni inteligenci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da še naprej nadgrajujete svoje znanje o generativni umetni inteligenci!
 
-Pojdite na Lekcijo 4, kjer si bomo ogledali [Osnove inženiringa pozivov](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
+Pojdite na lekcijo 4, kjer bomo obravnavali [Osnove inženiringa pozivov](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)!
 
-**Omejitev odgovornosti**: 
-Ta dokument je bil preveden z uporabo storitve AI prevajanja [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljivo profesionalno človeško prevajanje. Ne odgovarjamo za morebitne nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+---
+
+**Omejitev odgovornosti**:  
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

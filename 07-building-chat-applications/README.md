@@ -1,6 +1,6 @@
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](./images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst)
+[![Building Generative AI-Powered Chat Applications](./images/07-lesson-banner.png?WT.mc_id=academic-105485-koreyst)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -175,7 +175,7 @@ Microsoft's approach to Responsible AI has identified six principles that should
 
 ## Assignment
 
-See [assignment](./python?WT.mc_id=academic-105485-koreyst) it will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
+See [assignment](./python?WT.mc_id=academic-105485-koreyst). It will take you through a series of exercises from running your first chat prompts, to classifying and summarizing text and more. Notice that the assignments are available in different programming languages!
 
 ## Great Work! Continue the Journey
 

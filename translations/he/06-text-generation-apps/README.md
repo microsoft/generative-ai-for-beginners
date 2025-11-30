@@ -1,282 +1,668 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5ec6c92b629564538ef397c550adb73e",
-  "translation_date": "2025-05-19T17:06:19+00:00",
+  "original_hash": "df027997f1448323d6159b78a1b669bf",
+  "translation_date": "2025-10-17T20:00:07+00:00",
   "source_file": "06-text-generation-apps/README.md",
   "language_code": "he"
 }
 -->
-# בניית יישומים ליצירת טקסט
+# בניית יישומי יצירת טקסט
 
-> _(לחץ על התמונה למעלה לצפייה בסרטון של שיעור זה)_
+[![בניית יישומי יצירת טקסט](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.he.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-עד כה ראית דרך תוכנית הלימודים הזו שיש מושגים מרכזיים כמו הנחיות ואפילו תחום שלם שנקרא "הנדסת הנחיות". כלים רבים שאתה יכול לתקשר איתם כמו ChatGPT, Office 365, Microsoft Power Platform ועוד, תומכים בך בשימוש בהנחיות כדי להשיג משהו.
+> _(לחצו על התמונה למעלה לצפייה בסרטון של השיעור הזה)_
 
-כדי להוסיף חוויה כזו ליישום, עליך להבין מושגים כמו הנחיות, השלמות ולבחור ספרייה לעבוד איתה. זה בדיוק מה שתלמד בפרק הזה.
+עד כה ראיתם דרך תוכנית הלימודים הזו שישנם מושגים מרכזיים כמו הנחיות ואפילו תחום שלם שנקרא "הנדסת הנחיות". כלים רבים שתוכלו לתקשר איתם כמו ChatGPT, Office 365, Microsoft Power Platform ועוד, תומכים בשימוש בהנחיות כדי להשיג משהו.
+
+כדי להוסיף חוויה כזו ליישום, עליכם להבין מושגים כמו הנחיות, השלמות ולבחור ספרייה לעבוד איתה. בדיוק את זה תלמדו בפרק הזה.
 
 ## מבוא
 
-בפרק זה, תלמד:
+בפרק הזה תלמדו:
 
-- על ספריית openai ועל המושגים המרכזיים שלה.
-- לבנות יישום ליצירת טקסט באמצעות openai.
-- להבין כיצד להשתמש במושגים כמו הנחיה, טמפרטורה וטוקנים כדי לבנות יישום ליצירת טקסט.
+- על ספריית openai והמושגים המרכזיים שלה.
+- כיצד לבנות יישום יצירת טקסט באמצעות openai.
+- להבין כיצד להשתמש במושגים כמו הנחיה, טמפרטורה וטוקנים כדי לבנות יישום יצירת טקסט.
 
-## מטרות לימוד
+## מטרות למידה
 
-בסוף השיעור הזה, תוכל:
+בסוף השיעור הזה תוכלו:
 
-- להסביר מהו יישום ליצירת טקסט.
-- לבנות יישום ליצירת טקסט באמצעות openai.
-- להגדיר את היישום שלך לשימוש ביותר או פחות טוקנים וגם לשנות את הטמפרטורה, לתוצאה מגוונת.
+- להסביר מהו יישום יצירת טקסט.
+- לבנות יישום יצירת טקסט באמצעות openai.
+- להגדיר את היישום שלכם לשימוש ביותר או פחות טוקנים וגם לשנות את הטמפרטורה, לתוצאה מגוונת.
 
-## מהו יישום ליצירת טקסט?
+## מהו יישום יצירת טקסט?
 
-בדרך כלל כשאתה בונה יישום יש לו סוג של ממשק כמו הבאים:
+בדרך כלל כשאתם בונים יישום יש לו סוג כלשהו של ממשק כמו הבא:
 
-- מבוסס פקודה. יישומי קונסולה הם יישומים טיפוסיים שבהם אתה מקליד פקודה והיא מבצעת משימה. לדוגמה, `git` הוא יישום מבוסס פקודה.
-- ממשק משתמש (UI). יש יישומים עם ממשקי משתמש גרפיים (GUIs) שבהם אתה לוחץ על כפתורים, מזין טקסט, בוחר אפשרויות ועוד.
+- מבוסס פקודות. יישומי קונסולה הם יישומים טיפוסיים שבהם אתם מקלידים פקודה והיא מבצעת משימה. לדוגמה, `git` הוא יישום מבוסס פקודות.
+- ממשק משתמש (UI). ישנם יישומים עם ממשקי משתמש גרפיים (GUIs) שבהם אתם לוחצים על כפתורים, מזינים טקסט, בוחרים אפשרויות ועוד.
 
 ### יישומי קונסולה ו-UI מוגבלים
 
-השווה זאת ליישום מבוסס פקודה שבו אתה מקליד פקודה:
+השוו את זה ליישום מבוסס פקודות שבו אתם מקלידים פקודה:
 
-- **זה מוגבל**. אתה לא יכול פשוט להקליד כל פקודה, רק את אלה שהיישום תומך בהן.
-- **ספציפי לשפה**. יש יישומים שתומכים בשפות רבות, אבל כברירת מחדל היישום בנוי לשפה ספציפית, גם אם אתה יכול להוסיף תמיכה בשפות נוספות.
+- **זה מוגבל**. אתם לא יכולים פשוט להקליד כל פקודה, רק את אלו שהיישום תומך בהן.
+- **תלוי שפה**. יש יישומים שתומכים בשפות רבות, אבל כברירת מחדל היישום נבנה לשפה מסוימת, גם אם ניתן להוסיף תמיכה בשפות נוספות.
 
-### יתרונות יישומי יצירת טקסט
+### יתרונות של יישומי יצירת טקסט
 
-אז איך יישום ליצירת טקסט שונה?
+אז איך יישום יצירת טקסט שונה?
 
-ביישום ליצירת טקסט יש לך יותר גמישות, אתה לא מוגבל למערכת פקודות או לשפת קלט ספציפית. במקום זאת, אתה יכול להשתמש בשפה טבעית כדי לתקשר עם היישום. יתרון נוסף הוא שכשאתה כבר מתקשר עם מקור נתונים שאומן על קורפוס מידע רחב, בעוד שיישום מסורתי עשוי להיות מוגבל למה שיש בבסיס נתונים.
+ביישום יצירת טקסט, יש לכם יותר גמישות, אתם לא מוגבלים למערכת פקודות או לשפת קלט מסוימת. במקום זאת, אתם יכולים להשתמש בשפה טבעית כדי לתקשר עם היישום. יתרון נוסף הוא שאתם כבר מתקשרים עם מקור נתונים שאומן על מאגר מידע רחב, בעוד שיישום מסורתי עשוי להיות מוגבל למה שיש בבסיס הנתונים.
 
-### מה אני יכול לבנות עם יישום ליצירת טקסט?
+### מה אפשר לבנות עם יישום יצירת טקסט?
 
-יש הרבה דברים שאתה יכול לבנות. לדוגמה:
+יש הרבה דברים שאפשר לבנות. לדוגמה:
 
-- **צ'אטבוט**. צ'אטבוט שעונה על שאלות על נושאים, כמו החברה שלך ומוצריה יכול להיות התאמה טובה.
-- **עוזר**. LLMs מצוינים בדברים כמו סיכום טקסט, קבלת תובנות מטקסט, יצירת טקסט כמו קורות חיים ועוד.
-- **עוזר קוד**. בהתאם לדגם השפה שאתה משתמש בו, אתה יכול לבנות עוזר קוד שעוזר לך לכתוב קוד. לדוגמה, אתה יכול להשתמש במוצר כמו GitHub Copilot וכן ChatGPT כדי לעזור לך לכתוב קוד.
+- **צ'אטבוט**. צ'אטבוט שעונה על שאלות בנושאים כמו החברה שלכם והמוצרים שלה יכול להיות מתאים.
+- **עוזר**. מודלים שפתיים גדולים (LLMs) מצוינים בדברים כמו סיכום טקסט, הפקת תובנות מטקסט, יצירת טקסט כמו קורות חיים ועוד.
+- **עוזר קוד**. בהתאם למודל השפה שבו אתם משתמשים, תוכלו לבנות עוזר קוד שיעזור לכם לכתוב קוד. לדוגמה, תוכלו להשתמש במוצר כמו GitHub Copilot וגם ב-ChatGPT כדי לעזור לכם לכתוב קוד.
 
-## איך אני יכול להתחיל?
+## איך מתחילים?
 
-ובכן, אתה צריך למצוא דרך להשתלב עם LLM שלרוב כוללת את שתי הגישות הבאות:
+ובכן, עליכם למצוא דרך להשתלב עם מודל שפה גדול (LLM), מה שבדרך כלל כרוך בשתי גישות:
 
-- שימוש ב-API. כאן אתה בונה בקשות אינטרנט עם ההנחיה שלך ומקבל טקסט שנוצר בחזרה.
-- שימוש בספרייה. ספריות עוזרות לעטוף את קריאות ה-API ולהקל על השימוש בהן.
+- שימוש ב-API. כאן אתם בונים בקשות רשת עם ההנחיה שלכם ומקבלים טקסט שנוצר בחזרה.
+- שימוש בספרייה. ספריות עוזרות לעטוף את קריאות ה-API ולהפוך אותן לקלות יותר לשימוש.
 
 ## ספריות/SDKs
 
-יש כמה ספריות מוכרות לעבודה עם LLMs כמו:
+ישנן כמה ספריות ידועות לעבודה עם מודלים שפתיים גדולים כמו:
 
-- **openai**, הספרייה הזו מקלה על חיבור למודל שלך ושליחת הנחיות.
+- **openai**, ספרייה זו מקלה על החיבור למודל שלכם ושליחת הנחיות.
 
 ואז יש ספריות שפועלות ברמה גבוהה יותר כמו:
 
-- **Langchain**. Langchain ידועה ותומכת בפייתון.
-- **Semantic Kernel**. Semantic Kernel היא ספרייה של Microsoft התומכת בשפות C#, Python ו-Java.
+- **Langchain**. Langchain ידועה ותומכת ב-Python.
+- **Semantic Kernel**. Semantic Kernel היא ספרייה של Microsoft שתומכת בשפות C#, Python ו-Java.
 
 ## יישום ראשון באמצעות openai
 
-בוא נראה איך אנחנו יכולים לבנות את היישום הראשון שלנו, אילו ספריות אנחנו צריכים, כמה נדרש וכן הלאה.
+בואו נראה איך אפשר לבנות את היישום הראשון שלנו, אילו ספריות נדרשות, כמה נדרש ועוד.
 
 ### התקנת openai
 
-יש הרבה ספריות שם לחיבור עם OpenAI או Azure OpenAI. ניתן להשתמש בשפות תכנות רבות כמו C#, Python, JavaScript, Java ועוד. בחרנו להשתמש בספריית `openai` Python, אז נשתמש ב-`pip` כדי להתקין אותה.
+ישנן ספריות רבות שם בחוץ לתקשורת עם OpenAI או Azure OpenAI. ניתן להשתמש בשפות תכנות רבות כמו C#, Python, JavaScript, Java ועוד. בחרנו להשתמש בספריית Python `openai`, ולכן נשתמש ב-`pip` כדי להתקין אותה.
+
+```bash
+pip install openai
+```
 
 ### יצירת משאב
 
-אתה צריך לבצע את השלבים הבאים:
+עליכם לבצע את השלבים הבאים:
 
-- צור חשבון ב-Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- קבל גישה ל-Azure OpenAI. עבור אל [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ובקש גישה.
+- ליצור חשבון ב-Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- לקבל גישה ל-Azure OpenAI. עברו ל-[https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ובקשו גישה.
 
   > [!NOTE]
-  > בזמן כתיבת השורות האלה, אתה צריך להגיש בקשה לגישה ל-Azure OpenAI.
+  > נכון לזמן הכתיבה, עליכם להגיש בקשה לגישה ל-Azure OpenAI.
 
-- התקן Python <https://www.python.org/>
-- צור משאב שירות Azure OpenAI. ראה את המדריך הזה כיצד [ליצור משאב](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- התקינו Python <https://www.python.org/>
+- צרו משאב שירות Azure OpenAI. ראו מדריך זה כיצד [ליצור משאב](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### מצא את מפתח ה-API והנקודת קצה
+### איתור מפתח API ונקודת קצה
 
-בשלב זה, אתה צריך לומר לספריית `openai` שלך איזה מפתח API להשתמש. כדי למצוא את מפתח ה-API שלך, עבור לסעיף "Keys and Endpoint" של משאב Azure OpenAI שלך והעתק את הערך "Key 1".
+בשלב זה, עליכם להגדיר לספריית `openai` שלכם איזה מפתח API להשתמש. כדי למצוא את מפתח ה-API שלכם, עברו לקטע "Keys and Endpoint" במשאב Azure OpenAI שלכם והעתיקו את הערך "Key 1".
 
-עכשיו שיש לך את המידע הזה מועתק, בוא ננחה את הספריות להשתמש בו.
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+
+עכשיו שיש לכם את המידע הזה, בואו ננחה את הספריות להשתמש בו.
 
 > [!NOTE]
-> כדאי להפריד את מפתח ה-API שלך מהקוד. אתה יכול לעשות זאת באמצעות משתני סביבה.
+> כדאי להפריד את מפתח ה-API שלכם מהקוד. ניתן לעשות זאת באמצעות משתני סביבה.
+>
+> - הגדירו את משתנה הסביבה `OPENAI_API_KEY` למפתח ה-API שלכם.
+>   `export OPENAI_API_KEY='sk-...'`
 
-### הגדרת תצורה של Azure
+### הגדרת תצורה Azure
 
-אם אתה משתמש ב-Azure OpenAI, הנה איך אתה מגדיר את התצורה:
+אם אתם משתמשים ב-Azure OpenAI, כך תגדירו תצורה:
 
-במעלה אנחנו מגדירים את הדברים הבאים:
+```python
+openai.api_type = 'azure'
+openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_version = '2023-05-15'
+openai.api_base = os.getenv("API_BASE")
+```
 
-בקטע הקוד לעיל, אנו יוצרים אובייקט השלמה ומעבירים את המודל שאנחנו רוצים להשתמש בו ואת ההנחיה. ואז אנו מדפיסים את הטקסט שנוצר.
+למעלה אנחנו מגדירים את הדברים הבאים:
+
+- `api_type` ל-`azure`. זה אומר לספרייה להשתמש ב-Azure OpenAI ולא ב-OpenAI.
+- `api_key`, זהו מפתח ה-API שלכם שנמצא בפורטל Azure.
+- `api_version`, זו גרסת ה-API שאתם רוצים להשתמש בה. נכון לזמן הכתיבה, הגרסה האחרונה היא `2023-05-15`.
+- `api_base`, זו נקודת הקצה של ה-API. ניתן למצוא אותה בפורטל Azure ליד מפתח ה-API שלכם.
+
+> [!NOTE] > `os.getenv` היא פונקציה שקוראת משתני סביבה. ניתן להשתמש בה כדי לקרוא משתני סביבה כמו `OPENAI_API_KEY` ו-`API_BASE`. הגדירו את משתני הסביבה האלה בטרמינל שלכם או באמצעות ספרייה כמו `dotenv`.
+
+## יצירת טקסט
+
+הדרך ליצור טקסט היא להשתמש במחלקה `Completion`. הנה דוגמה:
+
+```python
+prompt = "Complete the following: Once upon a time there was a"
+
+completion = openai.Completion.create(model="davinci-002", prompt=prompt)
+print(completion.choices[0].text)
+```
+
+בקוד למעלה, אנחנו יוצרים אובייקט השלמה ומעבירים את המודל שאנחנו רוצים להשתמש בו ואת ההנחיה. לאחר מכן אנחנו מדפיסים את הטקסט שנוצר.
 
 ### השלמות צ'אט
 
-עד כה, ראית איך השתמשנו ב-`Completion` to generate text. But there's another class called `ChatCompletion` שמתאים יותר לצ'אטבוטים. הנה דוגמה לשימוש בזה:
+עד כה, ראיתם איך אנחנו משתמשים ב-`Completion` כדי ליצור טקסט. אבל יש מחלקה נוספת שנקראת `ChatCompletion` שמתאימה יותר לצ'אטבוטים. הנה דוגמה לשימוש בה:
 
-עוד על פונקציונליות זו בפרק הקרוב.
+```python
+import openai
 
-## תרגיל - יישום ליצירת טקסט הראשון שלך
+openai.api_key = "sk-..."
 
-עכשיו שלמדנו איך להגדיר ולהגדיר openai, הגיע הזמן לבנות את יישום ליצירת הטקסט הראשון שלך. כדי לבנות את היישום שלך, בצע את השלבים הבאים:
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+print(completion.choices[0].message.content)
+```
 
-1. צור סביבה וירטואלית והתקן openai:
+עוד על פונקציונליות זו בפרק הבא.
+
+## תרגיל - יישום יצירת הטקסט הראשון שלכם
+
+עכשיו שלמדנו איך להגדיר ולתצורת openai, הגיע הזמן לבנות את יישום יצירת הטקסט הראשון שלכם. כדי לבנות את היישום שלכם, בצעו את השלבים הבאים:
+
+1. צרו סביבה וירטואלית והתקינו openai:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install openai
+   ```
 
    > [!NOTE]
-   > אם אתה משתמש ב-Windows הקלד `venv\Scripts\activate` instead of `source venv/bin/activate`.
+   > אם אתם משתמשים ב-Windows הקלידו `venv\Scripts\activate` במקום `source venv/bin/activate`.
 
    > [!NOTE]
-   > Locate your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` and select the `Open AI resource` and then select `Keys and Endpoint` and copy the `Key 1` value.
+   > מצאו את מפתח Azure OpenAI שלכם על ידי מעבר ל-[https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) וחיפוש `Open AI`, בחרו את `Open AI resource` ואז בחרו `Keys and Endpoint` והעתיקו את הערך `Key 1`.
 
-1. צור קובץ _app.py_ ותן לו את הקוד הבא:
+1. צרו קובץ _app.py_ ותנו לו את הקוד הבא:
+
+   ```python
+   import openai
+
+   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
+
+   openai.api_type = 'azure'
+   openai.api_version = '2023-05-15'
+   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   deployment_name = "<deployment name>"
+
+   # add your completion code
+   prompt = "Complete the following: Once upon a time there was a"
+   messages = [{"role": "user", "content": prompt}]
+
+   # make completion
+   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
+
+   # print response
+   print(completion.choices[0].message.content)
+   ```
 
    > [!NOTE]
-   > אם אתה משתמש ב-Azure OpenAI, אתה צריך להגדיר את `api_type` to `azure` and set the `api_key` למפתח Azure OpenAI שלך.
+   > אם אתם משתמשים ב-Azure OpenAI, עליכם להגדיר את `api_type` ל-`azure` ולהגדיר את `api_key` למפתח Azure OpenAI שלכם.
 
-   אתה אמור לראות פלט כמו הבא:
+   אתם אמורים לראות פלט כמו הבא:
+
+   ```output
+    very unhappy _____.
+
+   Once upon a time there was a very unhappy mermaid.
+   ```
 
 ## סוגים שונים של הנחיות, לדברים שונים
 
-עכשיו ראית איך לייצר טקסט באמצעות הנחיה. יש לך אפילו תוכנית פועלת שאתה יכול לשנות ולהתאים כדי לייצר סוגים שונים של טקסט.
+עכשיו ראיתם איך ליצור טקסט באמצעות הנחיה. יש לכם אפילו תוכנית פועלת שתוכלו לשנות ולהתאים כדי ליצור סוגים שונים של טקסט.
 
 ניתן להשתמש בהנחיות לכל מיני משימות. לדוגמה:
 
-- **יצירת סוג טקסט**. לדוגמה, אתה יכול לייצר שיר, שאלות לטריוויה וכו'.
-- **חיפוש מידע**. אתה יכול להשתמש בהנחיות כדי לחפש מידע כמו הדוגמה הבאה 'מה המשמעות של CORS בפיתוח אתרים?'.
-- **יצירת קוד**. אתה יכול להשתמש בהנחיות כדי לייצר קוד, לדוגמה פיתוח ביטוי רגולרי המשמש לאימות אימיילים או למה לא לייצר תוכנית שלמה, כמו יישום אינטרנט?
+- **יצירת סוג טקסט**. לדוגמה, ניתן ליצור שיר, שאלות לחידון וכו'.
+- **חיפוש מידע**. ניתן להשתמש בהנחיות לחיפוש מידע כמו הדוגמה הבאה 'מה המשמעות של CORS בפיתוח אתרים?'.
+- **יצירת קוד**. ניתן להשתמש בהנחיות ליצירת קוד, לדוגמה פיתוח ביטוי רגולרי המשמש לאימות אימיילים או אפילו יצירת תוכנית שלמה, כמו יישום אינטרנט.
 
-## מקרה שימוש מעשי יותר: מחולל מתכונים
+## שימוש מעשי יותר: מחולל מתכונים
 
-דמיין שיש לך מרכיבים בבית ואתה רוצה לבשל משהו. בשביל זה, אתה צריך מתכון. דרך למצוא מתכונים היא להשתמש במנוע חיפוש או שאתה יכול להשתמש ב-LLM כדי לעשות זאת.
+דמיינו שיש לכם מרכיבים בבית ואתם רוצים לבשל משהו. לשם כך, אתם צריכים מתכון. דרך למצוא מתכונים היא להשתמש במנוע חיפוש או שתוכלו להשתמש במודל שפה גדול (LLM) לשם כך.
 
-אתה יכול לכתוב הנחיה כמו כך:
+תוכלו לכתוב הנחיה כמו כך:
 
 > "הראה לי 5 מתכונים למנה עם המרכיבים הבאים: עוף, תפוחי אדמה וגזר. עבור כל מתכון, רשום את כל המרכיבים המשמשים"
 
-בהתחשב בהנחיה לעיל, אתה עשוי לקבל תגובה דומה ל:
+בהתחשב בהנחיה לעיל, ייתכן שתקבלו תגובה דומה ל:
 
-התוצאה הזו נהדרת, אני יודע מה לבשל. בשלב זה, מה שיכול להיות שיפורים מועילים הם:
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 2 cloves garlic, minced
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
 
-- סינון מרכיבים שאני לא אוהב או אלרגי אליהם.
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+```
+
+תוצאה זו נהדרת, אני יודע מה לבשל. בשלב זה, מה שיכול להיות שיפורים שימושיים הם:
+
+- סינון מרכיבים שאני לא אוהב או שאליהם אני אלרגי.
 - יצירת רשימת קניות, במקרה שאין לי את כל המרכיבים בבית.
 
-למקרים לעיל, בוא נוסיף הנחיה נוספת:
+למקרים לעיל, בואו נוסיף הנחיה נוספת:
 
-> "אנא הסר מתכונים עם שום מכיוון שאני אלרגי והחלף אותו במשהו אחר. בנוסף, אנא צור רשימת קניות למתכונים, בהתחשב בכך שכבר יש לי עוף, תפוחי אדמה וגזר בבית."
+> "אנא הסר מתכונים עם שום כי אני אלרגי והחלף אותו במשהו אחר. כמו כן, אנא צור רשימת קניות עבור המתכונים, בהתחשב בכך שכבר יש לי עוף, תפוחי אדמה וגזר בבית."
 
-עכשיו יש לך תוצאה חדשה, כלומר:
+עכשיו יש לכם תוצאה חדשה, כלומר:
 
-אלה חמשת המתכונים שלך, ללא שום מוזכר ויש לך גם רשימת קניות בהתחשב במה שכבר יש לך בבית.
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
+
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+
+Shopping List:
+- Olive oil
+- Onion
+- Thyme
+- Oregano
+- Salt
+- Pepper
+```
+
+אלו חמשת המתכונים שלכם, ללא שום מוזכר וגם יש לכם רשימת קניות בהתחשב במה שכבר יש לכם בבית.
 
 ## תרגיל - בניית מחולל מתכונים
 
-עכשיו ששיחקנו תרחיש, בוא נכתוב קוד שיתאים לתרחיש שהוצג. כדי לעשות זאת, בצע את השלבים הבאים:
+עכשיו ששיחקנו תרחיש, בואו נכתוב קוד שיתאים לתרחיש שהודגם. כדי לעשות זאת, בצעו את השלבים הבאים:
 
-1. השתמש בקובץ _app.py_ הקיים כנקודת התחלה
-1. מצא את משתנה ה-`prompt` ושנה את הקוד שלו לבא:
+1. השתמשו בקובץ _app.py_ הקיים כנקודת התחלה
+1. מצאו את המשתנה `prompt` ושנו את הקוד שלו ל:
 
-   אם אתה מריץ את הקוד עכשיו, אתה אמור לראות פלט דומה ל:
+   ```python
+   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+   ```
 
-   > NOTE, ה-LLM שלך אינו דטרמיניסטי, כך שאתה עשוי לקבל תוצאות שונות בכל פעם שאתה מריץ את התוכנית.
+   אם עכשיו תפעילו את הקוד, אתם אמורים לראות פלט דומה ל:
 
-   נהדר, בוא נראה איך אנחנו יכולים לשפר דברים. כדי לשפר דברים, אנחנו רוצים לוודא שהקוד גמיש, כך שמרכיבים ומספר המתכונים יכולים להיות משופרים ומשתנים.
+   ```output
+   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
+   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
+   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
 
-1. בוא נשנה את הקוד בדרך הבאה:
+   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
 
-   לקיחת הקוד לבדיקה, יכולה להיראות כך:
+   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
+   ```
 
-### שיפור על ידי הוספת מסנן ורשימת קניות
+   > שימו לב, המודל השפתי שלכם הוא לא דטרמיניסטי, כך שייתכן שתקבלו תוצאות שונות בכל פעם שתפעילו את התוכנית.
 
-יש לנו עכשיו יישום עובד שמסוגל לייצר מתכונים והוא גמיש מכיוון שהוא מסתמך על קלטים מהמשתמש, הן על מספר המתכונים וגם על המרכיבים המשמשים.
+   נהדר, בואו נראה איך אפשר לשפר דברים. כדי לשפר דברים, אנחנו רוצים לוודא שהקוד גמיש, כך שניתן לשפר ולשנות את המרכיבים ואת מספר המתכונים.
+
+1. בואו נשנה את הקוד בדרך הבאה:
+
+   ```python
+   no_recipes = input("No of recipes (for example, 5): ")
+
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
+
+   # interpolate the number of recipes into the prompt an ingredients
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
+
+   הפעלת הקוד לבדיקה יכולה להיראות כך:
+
+   ```output
+   No of recipes (for example, 5): 3
+   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
+
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
+
+### שיפור על ידי הוספת סינון ורשימת קניות
+
+עכשיו יש לנו יישום עובד שמסוגל לייצר מתכונים והוא גמיש מכיוון שהוא מסתמך על קלטים מהמשתמש, הן על מספר המתכונים והן על המרכיבים המשמשים.
 
 כדי לשפר אותו עוד יותר, אנחנו רוצים להוסיף את הדברים הבאים:
 
-- **סינון מרכיבים**. אנחנו רוצים להיות מסוגלים לסנן מרכיבים שאנחנו לא אוהבים או אלרגיים אליהם. כדי להשיג שינוי זה, אנחנו יכולים לערוך את ההנחיה הקיימת שלנו ולהוסיף תנאי סינון לסופה כמו כך:
+- **סינון מרכיבים**. אנחנו רוצים להיות מסוגלים לסנן מרכיבים שאנחנו לא אוהבים או שאליהם אנחנו אלרגיים. כדי לבצע שינוי זה, נוכל לערוך את ההנחיה הקיימת שלנו ולהוסיף תנאי סינון בסופה כמו כך:
 
-  מעל, אנחנו מוסיפים `{filter}` לסוף ההנחיה ואנחנו גם לוכדים את ערך המסנן מהמשתמש.
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
 
-  דוגמה לקלט של הרצת התוכנית יכולה להיראות כך:
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
 
-  כפי שאתה יכול לראות, כל מתכונים עם חלב סוננו החוצה. אבל, אם אתה רגיש ללקטוז, אתה עשוי לרצות לסנן גם מתכונים עם גבינה, כך שיש צורך להיות ברור.
+  למעלה, אנחנו מוסיפים `{filter}` לסוף ההנחיה ואנחנו גם לוכדים את ערך הסינון מהמשתמש.
+
+  דוגמה לקלט של הפעלת התוכנית יכולה להיראות כך:
+
+  ```output
+  No of recipes (for example, 5): 3
+  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free): no milk
+
+  1. French Onion Soup
+
+  Ingredients:
+
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  כפי שאתם רואים, כל מתכון עם חלב בו סונן החוצה. אבל, אם אתם רגישים ללקטוז, ייתכן שתרצו לסנן גם מתכונים עם גבינה בהם, כך שיש צורך להיות ברורים.
 
 - **יצירת רשימת קניות**. אנחנו רוצים ליצור רשימת קניות, בהתחשב במה שכבר יש לנו בבית.
 
-  עבור פונקציונליות זו, אנחנו יכולים לנסות לפתור הכל בהנחיה אחת או שאנחנו יכולים לחלק אותה לשתי הנחיות. בוא ננסה את הגישה האחרונה. כאן אנחנו מציעים להוסיף הנחיה נוספת, אבל כדי שזה יעבוד, אנחנו צריכים להוסיף את התוצאה מההנחיה הראשונה כקונטקסט להנחיה השנייה.
+  עבור פונקציונליות זו, נוכל לנסות לפתור הכל בהנחיה אחת או שנוכל לחלק אותה לשתי הנחיות. בואו ננסה את הגישה השנייה. כאן אנחנו מציעים להוסיף הנחיה נוספת, אבל כדי שזה יעבוד, אנחנו צריכים להוסיף את תוצאת ההנחיה הראשונה כקונטקסט להנחיה השנייה.
 
-  מצא את החלק בקוד שמדפיס את התוצאה מההנחיה הראשונה והוסף את הקוד הבא למטה:
+  מצאו את החלק בקוד שמדפיס את התוצאה מההנחיה הראשונה והוסיפו את הקוד הבא מתחת:
+  ```python
+  old_prompt_result = completion.choices[0].message.content
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
-  שים לב לדברים הבאים:
+  new_prompt = f"{old_prompt_result} {prompt}"
+  messages = [{"role": "user", "content": new_prompt}]
+  completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
 
-  1. אנחנו בונים הנחיה חדשה על ידי הוספת התוצאה מההנחיה הראשונה להנחיה החדשה:
+  # print response
+  print("Shopping list:")
+  print(completion.choices[0].message.content)
+  ```
 
-  1. אנחנו מבצעים בקשה חדשה, אבל גם בהתחשב במספר הטוקנים שביקשנו בהנחיה הראשונה, אז הפעם אנחנו אומרים ש-`max_tokens` הוא 1200.
+  שימו לב לנקודות הבאות:
 
-     לקיחת הקוד לסיבוב, אנחנו מגיעים עכשיו לפלט הבא:
+  1. אנחנו יוצרים הנחיה חדשה על ידי הוספת התוצאה מההנחיה הראשונה להנחיה החדשה:
 
-## שפר את ההגדרה שלך
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
 
-מה שיש לנו עד כה הוא קוד שעובד, אבל יש כמה שיפורים שאנחנו צריכים לעשות כדי לשפר דברים עוד יותר. כמה דברים שאנחנו צריכים לעשות הם:
+  1. אנחנו מבצעים בקשה חדשה, אך גם מתחשבים במספר הטוקנים שביקשנו בהנחיה הראשונה, ולכן הפעם אנחנו מציינים ש-`max_tokens` הוא 1200.
 
-- **הפרדת סודות מהקוד**, כמו מפתח ה-API. סודות לא שייכים לקוד וצריכים להיות מאוחסנים במיקום מאובטח. כדי להפריד סודות מהקוד, אנחנו יכולים להשתמש במשתני סביבה ובספריות כמו `python-dotenv` to load them from a file. Here's how that would look like in code:
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
 
-  1. Create a `.env` קובץ עם התוכן הבא:
+     לאחר הרצת הקוד הזה, אנחנו מגיעים לתוצאה הבאה:
 
-     > שים לב, עבור Azure, אתה צריך להגדיר את משתני הסביבה הבאים:
+     ```output
+     No of recipes (for example, 5): 2
+     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free): sugar
 
-     בקוד, אתה תטען את משתני הסביבה כמו כך:
 
-- **מילה על אורך הטוקנים**. אנחנו צריכים לשקול כמה טוקנים אנחנו צריכים כדי לייצר את הטקסט שאנחנו רוצים. טוקנים עולים כסף, אז אם אפשר, אנחנו צריכים לנסות להיות חסכוניים במספר הטוקנים שאנחנו משתמשים בהם. לדוגמה, האם אנחנו יכולים לנסח את ההנחיה כך שנוכל להשתמש בפחות טוקנים?
+     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     Shopping list:
+     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
 
-  כדי לשנות את הטוקנים המשמשים, אתה יכול להשתמש בפרמטר `max_tokens`. לדוגמה, אם אתה רוצה להשתמש ב-100 טוקנים, אתה תעשה:
+## שפרו את ההגדרות שלכם
 
-- **ניסוי עם טמפרטורה**. טמפרטורה היא משהו שלא הזכרנו עד כה אבל הוא הקשר חשוב לאופן שבו התוכנית שלנו מתפקדת. ככל שערך הטמפרטורה גבוה יותר, כך הפלט יהיה אקראי יותר. לעומת זאת, ככל שערך הטמפרטורה נמוך יותר, כך הפלט יהיה צפוי יותר. שקול אם אתה רוצה גיוון בפלט שלך או לא.
+מה שיש לנו עד כה הוא קוד שעובד, אבל יש כמה שיפורים שכדאי לבצע כדי לשפר את הדברים עוד יותר. כמה דברים שכדאי לעשות הם:
 
-  כדי לשנות את הטמפרטורה, אתה יכול להשתמש בפרמטר `temperature`. לדוגמה, אם אתה רוצה להשתמש בטמפרטורה של 0.5, אתה תעשה:
+- **הפרדת סודות מהקוד**, כמו מפתח ה-API. סודות לא צריכים להיות חלק מהקוד ויש לאחסן אותם במקום מאובטח. כדי להפריד סודות מהקוד, ניתן להשתמש במשתני סביבה ובספריות כמו `python-dotenv` כדי לטעון אותם מקובץ. כך זה ייראה בקוד:
 
-  > שים לב, ככל שקרוב יותר ל-1.0, כך הפלט יהיה מגוון יותר.
+  1. צרו קובץ `.env` עם התוכן הבא:
+
+     ```bash
+     OPENAI_API_KEY=sk-...
+     ```
+
+     > שימו לב, עבור Azure, יש להגדיר את משתני הסביבה הבאים:
+
+     ```bash
+     OPENAI_API_TYPE=azure
+     OPENAI_API_VERSION=2023-05-15
+     OPENAI_API_BASE=<replace>
+     ```
+
+     בקוד, תטענו את משתני הסביבה כך:
+
+     ```python
+     from dotenv import load_dotenv
+
+     load_dotenv()
+
+     openai.api_key = os.environ["OPENAI_API_KEY"]
+     ```
+
+- **מילה על אורך הטוקנים**. כדאי לשקול כמה טוקנים אנחנו צריכים כדי ליצור את הטקסט הרצוי. טוקנים עולים כסף, ולכן כדאי להיות חסכוניים במספר הטוקנים שאנחנו משתמשים בהם. לדוגמה, האם אפשר לנסח את ההנחיה כך שנשתמש בפחות טוקנים?
+
+  כדי לשנות את מספר הטוקנים, ניתן להשתמש בפרמטר `max_tokens`. לדוגמה, אם רוצים להשתמש ב-100 טוקנים, תעשו כך:
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
+  ```
+
+- **ניסוי עם טמפרטורה**. טמפרטורה היא משהו שלא הזכרנו עד כה אבל היא חשובה להקשר של איך התוכנית שלנו מתפקדת. ככל שערך הטמפרטורה גבוה יותר, התוצאה תהיה יותר אקראית. לעומת זאת, ככל שערך הטמפרטורה נמוך יותר, התוצאה תהיה יותר צפויה. שקלו האם אתם רוצים גיוון בתוצאה או לא.
+
+  כדי לשנות את הטמפרטורה, ניתן להשתמש בפרמטר `temperature`. לדוגמה, אם רוצים להשתמש בטמפרטורה של 0.5, תעשו כך:
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  ```
+
+  > שימו לב, ככל שהערך קרוב ל-1.0, התוצאה תהיה יותר מגוונת.
 
 ## משימה
 
-עבור המשימה הזו, אתה יכול לבחור מה לבנות.
+למשימה הזו, אתם יכולים לבחור מה לבנות.
 
 הנה כמה הצעות:
 
-- שפר את יישום מחולל המתכונים כדי לשפר אותו עוד יותר. שחק עם ערכי הטמפרטורה, וההנחיות כדי לראות מה אתה יכול להמציא.
-- בנה "חבר ללימודים". יישום זה צריך להיות מסוגל לענות על שאלות על נושא, לדוגמה פייתון, אתה יכול לקבל הנחיות כמו "מהו נושא מסוים בפייתון?", או שאתה יכול לקבל הנחיה שאומרת, הראה לי קוד עבור נושא מסוים וכו'.
-- בוט היסטוריה, הפוך את ההיסטוריה לחיה, הנחה את הבוט לשחק דמות היסטורית מסוימת ושאל אותו שאלות על חייו וזמנו.
+- שפרו את אפליקציית יצירת המתכונים כדי לשפר אותה עוד יותר. נסו לשחק עם ערכי הטמפרטורה וההנחיות כדי לראות מה תוכלו ליצור.
+- בנו "חבר ללימודים". אפליקציה זו צריכה להיות מסוגלת לענות על שאלות בנושא מסוים, לדוגמה Python. תוכלו להשתמש בהנחיות כמו "מהו נושא מסוים ב-Python?", או "הראה לי קוד לנושא מסוים" וכו'.
+- בוט היסטוריה, הפכו את ההיסטוריה לחיה, הנחו את הבוט לשחק דמות היסטורית מסוימת ושאלו אותו שאלות על חייו וזמנו.
 
 ## פתרון
 
 ### חבר ללימודים
 
-להלן הנחיה התחלתית, ראה איך אתה יכול להשתמש בה ולשפר אותה לפי רצונך.
+להלן הנחיה התחלתית, ראו איך תוכלו להשתמש בה ולשפר אותה לפי רצונכם.
+
+```text
+- "You're an expert on the Python language
+
+    Suggest a beginner lesson for Python in the following format:
+
+    Format:
+    - concepts:
+    - brief explanation of the lesson:
+    - exercise in code with solutions"
+```
 
 ### בוט היסטוריה
 
-הנה כמה הנחיות שאתה יכול להשתמש בהן:
+הנה כמה הנחיות שתוכלו להשתמש בהן:
+
+```text
+- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
+- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
+
+   Tell me about your greatest accomplishments, in 300 words"
+```
 
 ## בדיקת ידע
 
 מה עושה מושג הטמפרטורה?
 
-1. הוא שולט כמה אקראי הפלט.
-1. הוא שולט כמה גדול התגובה.
-1. הוא שולט כמה טוקנים משמשים.
+1. הוא שולט כמה אקראית תהיה התוצאה.
+1. הוא שולט כמה גדולה תהיה התשובה.
+1. הוא שולט כמה טוקנים ישמשו.
 
 ## 🚀 אתגר
 
-כשעובדים על המשימה, נסו לשנות את הטמפרטורה, נסו להגדיר אותה ל-0, 0.5 ו-1. זכרו ש-0 הוא הכי פחות מגוון ו-1 הוא הכי מגוון, איזה ערך עובד הכי טוב עבור היישום שלך?
+בעת עבודה על המשימה, נסו לשנות את הטמפרטורה, נסו להגדיר אותה ל-0, 0.5 ו-1. זכרו ש-0 הוא הכי פחות מגוון ו-1 הוא הכי מגוון. איזה ערך עובד הכי טוב עבור האפליקציה שלכם?
 
-## עבודה נהדרת! המשך את הלמידה שלך
+## עבודה מצוינת! המשיכו ללמוד
 
-לאחר השלמת השיעור הזה, בדוק את [אוסף הלמידה של AI גנרטיבי שלנו](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך להעמיק את הידע שלך ב-AI גנרטיבי!
+לאחר שסיימתם את השיעור הזה, בדקו את [אוסף הלמידה של AI גנרטיבי](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך ולהעמיק את הידע שלכם ב-AI גנרטיבי!
 
-עבור לשיעור 7 שבו נבחן כיצד [לבנות יישומי צ'אט](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+עברו לשיעור 7 שבו נלמד איך [לבנות אפליקציות צ'אט](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
 
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. אנו לא אחראים לאי-הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

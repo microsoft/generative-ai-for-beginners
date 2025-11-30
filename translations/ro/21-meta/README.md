@@ -2,66 +2,66 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-05-20T11:16:09+00:00",
+  "translation_date": "2025-07-09T19:13:11+00:00",
   "source_file": "21-meta/README.md",
   "language_code": "ro"
 }
 -->
-# Construirea cu Modelele Familiei Meta
+# Construind cu modelele din familia Meta
 
 ## Introducere
 
 Această lecție va acoperi:
 
 - Explorarea celor două modele principale din familia Meta - Llama 3.1 și Llama 3.2
-- Înțelegerea cazurilor de utilizare și a scenariilor pentru fiecare model
-- Exemple de cod pentru a arăta caracteristicile unice ale fiecărui model
+- Înțelegerea cazurilor de utilizare și scenariilor pentru fiecare model
+- Exemplu de cod pentru a evidenția caracteristicile unice ale fiecărui model
 
-## Familia de Modele Meta
+## Familia de modele Meta
 
-În această lecție, vom explora 2 modele din familia Meta sau "Turma Llama" - Llama 3.1 și Llama 3.2
+În această lecție, vom explora 2 modele din familia Meta sau „Llama Herd” - Llama 3.1 și Llama 3.2
 
-Aceste modele vin în diferite variante și sunt disponibile pe piața de modele GitHub. Iată mai multe detalii despre utilizarea modelelor GitHub pentru a [prototipa cu modele AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Aceste modele vin în diferite variante și sunt disponibile pe piața GitHub Model. Iată mai multe detalii despre utilizarea GitHub Models pentru [prototiparea cu modele AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Variante de Model:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Variante de modele:  
+- Llama 3.1 - 70B Instruct  
+- Llama 3.1 - 405B Instruct  
+- Llama 3.2 - 11B Vision Instruct  
+- Llama 3.2 - 90B Vision Instruct  
 
-*Notă: Llama 3 este de asemenea disponibil pe Modelele GitHub, dar nu va fi acoperit în această lecție*
+*Notă: Llama 3 este de asemenea disponibil pe GitHub Models, dar nu va fi acoperit în această lecție*
 
 ## Llama 3.1
 
 Cu 405 miliarde de parametri, Llama 3.1 se încadrează în categoria LLM open source.
 
-Modul este o îmbunătățire a versiunii anterioare Llama 3 oferind:
+Modelul este o îmbunătățire față de versiunea anterioară Llama 3, oferind:
 
-- Fereastră de context mai mare - 128k token-uri vs 8k token-uri
-- Token-uri maxime de ieșire mai mari - 4096 vs 2048
-- Suport multilingvistic mai bun - datorită creșterii numărului de token-uri de antrenament
+- Fereastră de context mai mare - 128k tokeni față de 8k tokeni  
+- Număr maxim de tokeni de ieșire mai mare - 4096 față de 2048  
+- Suport multilingv mai bun - datorită creșterii numărului de tokeni de antrenament  
 
-Acestea permit Llama 3.1 să gestioneze cazuri de utilizare mai complexe atunci când se construiesc aplicații GenAI, inclusiv:
-- Apelare nativă de funcții - abilitatea de a apela instrumente și funcții externe în afara fluxului de lucru LLM
-- Performanță RAG mai bună - datorită ferestrei de context mai mari
-- Generare de date sintetice - abilitatea de a crea date eficiente pentru sarcini precum ajustarea fină
+Acestea permit lui Llama 3.1 să gestioneze cazuri de utilizare mai complexe când construiești aplicații GenAI, inclusiv:  
+- Native Function Calling - capacitatea de a apela unelte și funcții externe în afara fluxului de lucru LLM  
+- Performanță RAG îmbunătățită - datorită ferestrei de context mai mari  
+- Generare de date sintetice - capacitatea de a crea date eficiente pentru sarcini precum fine-tuning  
 
-### Apelare Nativă de Funcții
+### Native Function Calling
 
-Llama 3.1 a fost ajustat pentru a fi mai eficient la efectuarea de apeluri de funcții sau instrumente. De asemenea, are două instrumente încorporate pe care modelul le poate identifica ca fiind necesare pentru a fi utilizate pe baza cererii utilizatorului. Aceste instrumente sunt:
+Llama 3.1 a fost ajustat pentru a fi mai eficient în apelarea funcțiilor sau uneltelor. De asemenea, are două unelte încorporate pe care modelul le poate identifica ca fiind necesare în funcție de promptul utilizatorului. Aceste unelte sunt:
 
-- **Brave Search** - Poate fi utilizat pentru a obține informații actualizate, cum ar fi vremea, prin efectuarea unei căutări pe web
-- **Wolfram Alpha** - Poate fi utilizat pentru calcule matematice mai complexe, astfel încât nu este necesar să scrieți propriile funcții.
+- **Brave Search** - Poate fi folosit pentru a obține informații actualizate, cum ar fi vremea, prin efectuarea unei căutări pe web  
+- **Wolfram Alpha** - Poate fi folosit pentru calcule matematice mai complexe, astfel încât să nu fie nevoie să scrii propriile funcții  
 
-De asemenea, puteți crea propriile instrumente personalizate pe care LLM le poate apela.
+Poți crea și propriile unelte personalizate pe care LLM le poate apela.
 
 În exemplul de cod de mai jos:
 
-- Definim instrumentele disponibile (brave_search, wolfram_alpha) în cererea sistemului.
-- Trimitem o cerere de utilizator care întreabă despre vremea într-un anumit oraș.
-- LLM va răspunde cu un apel de instrument către instrumentul Brave Search care va arăta astfel `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Definim uneltele disponibile (brave_search, wolfram_alpha) în promptul sistemului.  
+- Trimitem un prompt de la utilizator care întreabă despre vremea într-un anumit oraș.  
+- LLM va răspunde cu un apel către unealta Brave Search care va arăta astfel `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Notă: Acest exemplu doar face apelul de instrument, dacă doriți să obțineți rezultatele, va trebui să creați un cont gratuit pe pagina API Brave și să definiți funcția însăși`
+*Notă: Acest exemplu face doar apelul către unealtă, dacă dorești să obții rezultatele, va trebui să îți creezi un cont gratuit pe pagina Brave API și să definești funcția propriu-zisă*
 
 ```python 
 import os
@@ -103,15 +103,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Deși este un LLM, o limitare pe care o are Llama 3.1 este multimodalitatea. Adică, abilitatea de a utiliza diferite tipuri de intrare, cum ar fi imaginile ca cereri și de a oferi răspunsuri. Această abilitate este una dintre caracteristicile principale ale Llama 3.2. Aceste caracteristici includ de asemenea:
+Deși este un LLM, o limitare a lui Llama 3.1 este multimodalitatea. Adică abilitatea de a folosi diferite tipuri de input, cum ar fi imagini ca prompturi și de a oferi răspunsuri. Această capacitate este una dintre caracteristicile principale ale lui Llama 3.2. Alte caracteristici includ:
 
-- Multimodalitate - are capacitatea de a evalua atât cereri de text cât și de imagine
-- Variații de dimensiune mică spre medie (11B și 90B) - aceasta oferă opțiuni flexibile de implementare,
-- Variații doar text (1B și 3B) - aceasta permite modelului să fie implementat pe dispozitive de margine / mobile și oferă latență scăzută
+- Multimodalitate - capacitatea de a evalua atât prompturi text, cât și imagini  
+- Variante de dimensiuni mici și medii (11B și 90B) - oferă opțiuni flexibile de implementare  
+- Variante doar text (1B și 3B) - permit implementarea modelului pe dispozitive edge / mobile și oferă latență scăzută  
 
-Suportul multimodal reprezintă un mare pas în lumea modelelor open source. Exemplul de cod de mai jos ia atât o imagine cât și o cerere de text pentru a obține o analiză a imaginii de la Llama 3.2 90B.
+Suportul multimodal reprezintă un pas important în lumea modelelor open source. Exemplul de cod de mai jos primește atât o imagine, cât și un prompt text pentru a obține o analiză a imaginii de la Llama 3.2 90B.
 
-### Suport Multimodal cu Llama 3.2
+### Suport multimodal cu Llama 3.2
 
 ```python 
 import os
@@ -158,9 +158,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Învățarea nu se oprește aici, continuă Călătoria
+## Învățarea nu se oprește aici, continuă călătoria
 
-După ce ați completat această lecție, verificați [colecția noastră de Învățare AI Generativă](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să vă îmbunătățiți cunoștințele despre AI Generativ!
+După ce termini această lecție, consultă colecția noastră [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a-ți continua dezvoltarea cunoștințelor despre Generative AI!
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți de faptul că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu suntem responsabili pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
