@@ -1,33 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T18:21:31+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T16:18:10+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "ms"
 }
 -->
 # Persediaan Tempatan 🖥️
 
-**Guna panduan ini jika anda lebih suka jalankan semuanya di laptop sendiri.**  
-Anda ada dua pilihan: **(A) Python asli + virtual-env** atau **(B) VS Code Dev Container dengan Docker**.  
-Pilih mana-mana yang anda rasa mudah—kedua-duanya membawa ke pelajaran yang sama.
+**Gunakan panduan ini jika anda lebih suka menjalankan semuanya di komputer riba anda sendiri.**  
+Anda mempunyai dua pilihan: **(A) Python asli + virtual-env** atau **(B) VS Code Dev Container dengan Docker**.  
+Pilih mana-mana yang dirasakan lebih mudah—kedua-duanya membawa kepada pelajaran yang sama.
 
 ## 1.  Prasyarat
 
-| Alat                | Versi / Nota                                                                         |
-|---------------------|--------------------------------------------------------------------------------------|
-| **Python**          | 3.10 + (muat turun dari <https://python.org>)                                        |
-| **Git**             | Terkini (datang bersama Xcode / Git for Windows / pengurus pakej Linux)              |
-| **VS Code**         | Pilihan tetapi disyorkan <https://code.visualstudio.com>                             |
-| **Docker Desktop**  | *Hanya* untuk Pilihan B. Muat turun percuma: <https://docs.docker.com/desktop/>      |
+| Alat               | Versi / Nota                                                                        |
+|--------------------|------------------------------------------------------------------------------------|
+| **Python**         | 3.10 + (dapatkan dari <https://python.org>)                                        |
+| **Git**            | Terkini (datang bersama Xcode / Git untuk Windows / pengurus pakej Linux)          |
+| **VS Code**        | Pilihan tetapi disyorkan <https://code.visualstudio.com>                           |
+| **Docker Desktop** | *Hanya* untuk Pilihan B. Pemasangan percuma: <https://docs.docker.com/desktop/>    |
 
-> 💡 **Tip** – Sahkan alat di terminal:  
+> 💡 **Petua** – Sahkan alat dalam terminal:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2.  Pilihan A – Python Asli (paling pantas)
+## 2.  Pilihan A – Python Asli (paling cepat)
 
-### Langkah 1  Klon repo ini
+### Langkah 1  Klon repositori ini
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
@@ -37,52 +37,52 @@ cd generative-ai-for-beginners
 ### Langkah 2 Cipta & aktifkan persekitaran maya
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # buat satu
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Prompt kini sepatutnya bermula dengan (.venv)—ini bermakna anda sudah berada dalam env.
+✅ Prompt kini harus bermula dengan (.venv)—itu bermakna anda berada dalam persekitaran tersebut.
 
-### Langkah 3 Pasang keperluan
+### Langkah 3 Pasang kebergantungan
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Terus ke Seksyen 3 tentang [kunci API](../../../00-course-setup)
+Langkau ke Seksyen 3 mengenai [Kunci API](../../../00-course-setup)
 
 ## 2. Pilihan B – VS Code Dev Container (Docker)
 
-Kami sediakan repositori dan kursus ini dengan [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) yang mempunyai runtime Universal yang menyokong pembangunan Python3, .NET, Node.js dan Java. Konfigurasi berkaitan ditakrifkan dalam fail `devcontainer.json` yang terletak dalam folder `.devcontainer/` di root repositori ini.
+Kami menyediakan repositori dan kursus ini dengan [kontena pembangunan](https://containers.dev?WT.mc_id=academic-105485-koreyst) yang mempunyai runtime Universal yang boleh menyokong pembangunan Python3, .NET, Node.js dan Java. Konfigurasi berkaitan ditakrifkan dalam fail `devcontainer.json` yang terletak di folder `.devcontainer/` di akar repositori ini.
 
->**Kenapa pilih ini?**
->Persekitaran sama seperti Codespaces; tiada isu perbezaan kebergantungan.
+>**Kenapa pilih ini?**  
+>Persekitaran yang sama dengan Codespaces; tiada pergeseran kebergantungan.
 
-### Langkah 0 Pasang keperluan tambahan
+### Langkah 0 Pasang tambahan
 
-Docker Desktop – pastikan ```docker --version``` berfungsi.
-VS Code Remote – Containers extension (ID: ms-vscode-remote.remote-containers).
+Docker Desktop – sahkan ```docker --version``` berfungsi.  
+Sambungan VS Code Remote – Containers (ID: ms-vscode-remote.remote-containers).
 
-### Langkah 1 Buka repo dalam VS Code
+### Langkah 1 Buka repositori dalam VS Code
 
-File ▸ Open Folder…  → generative-ai-for-beginners
+Fail ▸ Buka Folder…  → generative-ai-for-beginners
 
-VS Code akan mengesan .devcontainer/ dan memaparkan prompt.
+VS Code mengesan .devcontainer/ dan memaparkan prompt.
 
-### Langkah 2 Buka semula dalam container
+### Langkah 2 Buka semula dalam kontena
 
-Klik “Reopen in Container”. Docker akan bina imej (± 3 minit kali pertama).
-Apabila prompt terminal muncul, anda sudah berada dalam container.
+Klik “Buka semula dalam Kontena”. Docker membina imej (≈ 3 minit kali pertama).  
+Apabila prompt terminal muncul, anda berada dalam kontena.
 
 ## 2.  Pilihan C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) ialah pemasang ringan untuk memasang [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, serta beberapa pakej.
-Conda sendiri ialah pengurus pakej, yang memudahkan anda untuk sediakan dan bertukar antara [**persekitaran maya**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) Python dan pakej. Ia juga berguna untuk memasang pakej yang tidak tersedia melalui `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) adalah pemasang ringan untuk memasang [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, serta beberapa pakej.  
+Conda sendiri adalah pengurus pakej, yang memudahkan penyediaan dan pertukaran antara [**persekitaran maya**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) Python dan pakej yang berbeza. Ia juga berguna untuk memasang pakej yang tidak tersedia melalui `pip`.
 
 ### Langkah 0  Pasang Miniconda
 
-Ikuti [panduan pemasangan MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) untuk sediakan.
+Ikuti [panduan pemasangan MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) untuk memasangnya.
 
 ```bash
 conda --version
@@ -94,7 +94,7 @@ Cipta fail persekitaran baru (*environment.yml*). Jika anda mengikuti menggunaka
 
 ### Langkah 2  Isikan fail persekitaran anda
 
-Tambah snippet berikut ke dalam `environment.yml` anda
+Tambah petikan berikut ke dalam `environment.yml` anda
 
 ```yml
 name: <environment-name>
@@ -113,10 +113,10 @@ dependencies:
 
 ### Langkah 3 Cipta persekitaran Conda anda
 
-Jalankan arahan di bawah dalam command line/terminal anda
+Jalankan arahan di bawah dalam baris arahan/terminal anda
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # Laluan sub .devcontainer hanya terpakai kepada tetapan Codespace sahaja
 conda activate ai4beg
 ```
 
@@ -124,12 +124,12 @@ Rujuk [panduan persekitaran Conda](https://docs.conda.io/projects/conda/en/lates
 
 ## 2  Pilihan D – Jupyter Klasik / Jupyter Lab (dalam pelayar anda)
 
-> **Untuk siapa ini?**  
-> Sesiapa yang suka antara muka Jupyter klasik atau mahu jalankan notebook tanpa VS Code.  
+> **Siapa yang sesuai?**  
+> Sesiapa yang suka antara muka Jupyter klasik atau mahu menjalankan notebook tanpa VS Code.  
 
-### Langkah 1  Pastikan Jupyter telah dipasang
+### Langkah 1  Pastikan Jupyter dipasang
 
-Untuk mulakan Jupyter secara tempatan, buka terminal/command line, navigasi ke direktori kursus, dan jalankan:
+Untuk memulakan Jupyter secara tempatan, buka terminal/baris arahan, navigasi ke direktori kursus, dan jalankan:
 
 ```bash
 jupyter notebook
@@ -141,22 +141,22 @@ atau
 jupyterhub
 ```
 
-Ini akan memulakan Jupyter dan URL untuk mengaksesnya akan dipaparkan dalam tetingkap command line.
+Ini akan memulakan instans Jupyter dan URL untuk mengaksesnya akan dipaparkan dalam tetingkap baris arahan.
 
-Selepas anda akses URL tersebut, anda akan nampak rangka kursus dan boleh navigasi ke mana-mana fail `*.ipynb`. Contohnya, `08-building-search-applications/python/oai-solution.ipynb`.
+Setelah anda mengakses URL tersebut, anda sepatutnya melihat garis panduan kursus dan boleh menavigasi ke mana-mana fail `*.ipynb`. Contohnya, `08-building-search-applications/python/oai-solution.ipynb`.
 
 ## 3. Tambah Kunci API Anda
 
-Menjaga keselamatan kunci API anda sangat penting apabila membina sebarang aplikasi. Kami syorkan supaya tidak menyimpan kunci API secara langsung dalam kod anda. Jika anda commit butiran tersebut ke repositori awam, ia boleh menyebabkan isu keselamatan dan juga kos yang tidak diingini jika disalah guna.
-Berikut adalah panduan langkah demi langkah untuk mencipta fail `.env` untuk Python dan menambah `GITHUB_TOKEN`:
+Menjaga kunci API anda selamat dan terjamin adalah penting apabila membina sebarang jenis aplikasi. Kami mengesyorkan supaya tidak menyimpan sebarang kunci API secara langsung dalam kod anda. Melakukan komit ke repositori awam boleh mengakibatkan isu keselamatan dan juga kos yang tidak diingini jika digunakan oleh pihak yang tidak bertanggungjawab.  
+Berikut adalah panduan langkah demi langkah tentang cara mencipta fail `.env` untuk Python dan menambah `GITHUB_TOKEN`:
 
-1. **Navigasi ke Direktori Projek Anda**: Buka terminal atau command prompt dan navigasi ke direktori root projek anda di mana anda ingin mencipta fail `.env`.
+1. **Navigasi ke Direktori Projek Anda**: Buka terminal atau command prompt dan navigasi ke direktori akar projek anda di mana anda ingin mencipta fail `.env`.
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **Cipta Fail `.env`**: Guna editor teks pilihan anda untuk mencipta fail baru bernama `.env`. Jika anda menggunakan command line, anda boleh guna `touch` (untuk sistem berasaskan Unix) atau `echo` (untuk Windows):
+2. **Cipta Fail `.env`**: Gunakan editor teks pilihan anda untuk mencipta fail baru bernama `.env`. Jika anda menggunakan baris arahan, anda boleh menggunakan `touch` (pada sistem berasaskan Unix) atau `echo` (pada Windows):
 
    Sistem berasaskan Unix:
 
@@ -170,7 +170,7 @@ Berikut adalah panduan langkah demi langkah untuk mencipta fail `.env` untuk Pyt
    echo . > .env
    ```
 
-3. **Edit Fail `.env`**: Buka fail `.env` dalam editor teks (cth. VS Code, Notepad++, atau mana-mana editor lain). Tambah baris berikut ke dalam fail, gantikan `your_github_token_here` dengan token GitHub sebenar anda:
+3. **Edit Fail `.env`**: Buka fail `.env` dalam editor teks (contohnya, VS Code, Notepad++, atau editor lain). Tambah baris berikut ke dalam fail, gantikan `your_github_token_here` dengan token GitHub sebenar anda:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
@@ -178,7 +178,7 @@ Berikut adalah panduan langkah demi langkah untuk mencipta fail `.env` untuk Pyt
 
 4. **Simpan Fail**: Simpan perubahan dan tutup editor teks.
 
-5. **Pasang `python-dotenv`**: Jika anda belum pasang, anda perlu pasang pakej `python-dotenv` untuk memuatkan pembolehubah persekitaran dari fail `.env` ke dalam aplikasi Python anda. Anda boleh pasang menggunakan `pip`:
+5. **Pasang `python-dotenv`**: Jika anda belum memasangnya, anda perlu memasang pakej `python-dotenv` untuk memuatkan pembolehubah persekitaran dari fail `.env` ke dalam aplikasi Python anda. Anda boleh memasangnya menggunakan `pip`:
 
    ```bash
    pip install python-dotenv
@@ -190,10 +190,10 @@ Berikut adalah panduan langkah demi langkah untuk mencipta fail `.env` untuk Pyt
    from dotenv import load_dotenv
    import os
 
-   # Load environment variables from .env file
+   # Muatkan pembolehubah persekitaran dari fail .env
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
+   # Akses pembolehubah GITHUB_TOKEN
    github_token = os.getenv("GITHUB_TOKEN")
 
    print(github_token)
@@ -201,30 +201,32 @@ Berikut adalah panduan langkah demi langkah untuk mencipta fail `.env` untuk Pyt
 
 Itu sahaja! Anda telah berjaya mencipta fail `.env`, menambah token GitHub anda, dan memuatkannya ke dalam aplikasi Python anda.
 
-🔐 Jangan pernah commit .env—ia sudah ada dalam .gitignore.
-Arahan penuh untuk penyedia ada dalam [`providers.md`](03-providers.md).
+🔐 Jangan sekali-kali komit .env—ia sudah ada dalam .gitignore.  
+Arahan penuh penyedia terdapat dalam [`providers.md`](03-providers.md).
 
 ## 4. Apa seterusnya?
 
-| Saya mahu…           | Pergi ke…                                                                 |
-|----------------------|---------------------------------------------------------------------------|
-| Mula Pelajaran 1     | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)       |
-| Sediakan Penyedia LLM | [`providers.md`](03-providers.md)                                         |
+| Saya mahu…          | Pergi ke…                                                               |
+|---------------------|-------------------------------------------------------------------------|
+| Mula Pelajaran 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Sediakan Penyedia LLM | [`providers.md`](03-providers.md)                                       |
 | Berjumpa pelajar lain | [Sertai Discord kami](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## 5. Penyelesaian Masalah
 
-| Simptom                                   | Penyelesaian                                                    |
-|-------------------------------------------|-----------------------------------------------------------------|
-| `python not found`                        | Tambah Python ke PATH atau buka semula terminal selepas pasang  |
-| `pip` tidak dapat bina wheels (Windows)   | `pip install --upgrade pip setuptools wheel` kemudian cuba lagi.|
-| `ModuleNotFoundError: dotenv`             | Jalankan `pip install -r requirements.txt` (env belum dipasang).|
-| Docker build gagal *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → tambah saiz cakera. |
-| VS Code asyik minta buka semula           | Anda mungkin ada dua pilihan aktif; pilih satu (venv **atau** container)|
-| Ralat OpenAI 401 / 429                    | Semak nilai `OPENAI_API_KEY` / had kadar permintaan.            |
-| Ralat menggunakan Conda                   | Pasang pustaka AI Microsoft dengan `conda install -c microsoft azure-ai-ml`|
+| Gejala                                    | Penyelesaian                                                    |
+|-------------------------------------------|----------------------------------------------------------------|
+| `python not found`                        | Tambah Python ke PATH atau buka semula terminal selepas pemasangan |
+| `pip` tidak dapat bina roda (Windows)    | `pip install --upgrade pip setuptools wheel` kemudian cuba lagi. |
+| `ModuleNotFoundError: dotenv`             | Jalankan `pip install -r requirements.txt` (persekitaran tidak dipasang). |
+| Docker build gagal *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → tingkatkan saiz cakera. |
+| VS Code terus meminta buka semula          | Anda mungkin mengaktifkan kedua-dua Pilihan; pilih satu (venv **atau** kontena) |
+| Ralat OpenAI 401 / 429                    | Semak nilai `OPENAI_API_KEY` / had kadar permintaan.           |
+| Ralat menggunakan Conda                   | Pasang perpustakaan Microsoft AI menggunakan `conda install -c microsoft azure-ai-ml` |
 
 ---
 
-**Penafian**:
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:  
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
