@@ -14,9 +14,9 @@ client = AzureOpenAI(
 
 deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
 
-no_recipes = input("No of recipes (for example, 5: ")
+no_recipes = input("No of recipes (for example, 1: ")
 
-ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots: ")
+ingredients = input("List of ingredients (for example, choclate, ice cream, and coco powder: ")
 
 filter = input("Filter (for example, vegetarian, vegan, or gluten-free: ")
 
@@ -41,4 +41,6 @@ completion = client.chat.completions.create(model=deployment, messages=messages,
 # print response
 print("\n=====Shopping list ======= \n")
 print(completion.choices[0].message.content)
+
+
 
