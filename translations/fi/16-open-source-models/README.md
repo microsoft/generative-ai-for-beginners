@@ -1,93 +1,95 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a2a83aac52158c23161046cbd13faa2b",
-  "translation_date": "2025-10-17T19:48:48+00:00",
+  "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+  "translation_date": "2025-12-19T15:40:18+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "fi"
 }
 -->
-[![Avoimet lähdemallit](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.fi.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.fi.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Johdanto
 
-Avoimen lähdekoodin LLM-mallit ovat jännittävä ja jatkuvasti kehittyvä alue. Tämän oppitunnin tarkoituksena on tarjota syvällinen katsaus avoimiin lähdemalleihin. Jos etsit tietoa siitä, miten suljetut mallit vertautuvat avoimiin malleihin, siirry ["Erilaisten LLM-mallien tutkiminen ja vertailu" -oppituntiin](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Tässä oppitunnissa käsitellään myös hienosäätöä, mutta yksityiskohtaisempi selitys löytyy ["LLM-mallien hienosäätö" -oppitunnista](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+Avoimen lähdekoodin LLM-mallit ovat jännittävä ja jatkuvasti kehittyvä maailma. Tämä oppitunti pyrkii tarjoamaan syvällisen katsauksen avoimen lähdekoodin malleihin. Jos etsit tietoa siitä, miten omistusoikeudelliset mallit vertautuvat avoimen lähdekoodin malleihin, siirry kohtaan ["Exploring and Comparing Different LLMs" -oppitunti](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Tämä oppitunti käsittelee myös hienosäätöä, mutta yksityiskohtaisemman selityksen löydät ["Fine-Tuning LLMs" -oppitunnista](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
 ## Oppimistavoitteet
 
-- Ymmärtää avoimia lähdemalleja
-- Ymmärtää avoimien lähdemallien käytön hyödyt
-- Tutkia Hugging Facen ja Azure AI Studion tarjoamia avoimia malleja
+- Ymmärtää avoimen lähdekoodin mallit
+- Ymmärtää avoimen lähdekoodin mallien käytön edut
+- Tutustua Hugging Facen ja Azure AI Studion avoimiin malleihin
 
-## Mitä ovat avoimet lähdemallit?
+## Mitä ovat avoimen lähdekoodin mallit?
 
-Avoimen lähdekoodin ohjelmistoilla on ollut keskeinen rooli teknologian kehityksessä eri aloilla. Open Source Initiative (OSI) on määritellyt [10 kriteeriä ohjelmistolle](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), jotta se voidaan luokitella avoimeksi lähdekoodiksi. Lähdekoodin on oltava avoimesti jaettu OSI:n hyväksymän lisenssin alaisena.
+Avoimen lähdekoodin ohjelmistot ovat olleet ratkaisevassa roolissa teknologian kasvussa eri aloilla. Open Source Initiative (OSI) on määritellyt [10 kriteeriä ohjelmistolle](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), jotta se voidaan luokitella avoimeksi lähdekoodiksi. Lähdekoodin on oltava avoimesti jaettuna OSI:n hyväksymän lisenssin alaisena.
 
-Vaikka LLM-mallien kehittäminen sisältää samankaltaisia elementtejä kuin ohjelmistojen kehittäminen, prosessi ei ole täysin sama. Tämä on herättänyt paljon keskustelua yhteisössä siitä, mitä avoimen lähdekoodin määritelmä tarkoittaa LLM-mallien yhteydessä. Jotta malli vastaisi perinteistä avoimen lähdekoodin määritelmää, seuraavien tietojen tulisi olla julkisesti saatavilla:
+Vaikka LLM-mallien kehitys sisältää samankaltaisia elementtejä kuin ohjelmistokehitys, prosessi ei ole täysin sama. Tämä on herättänyt paljon keskustelua yhteisössä siitä, mitä avoin lähdekoodi tarkoittaa LLM-mallien yhteydessä. Jotta malli vastaisi perinteistä avoimen lähdekoodin määritelmää, seuraavien tietojen tulisi olla julkisesti saatavilla:
 
-- Mallin koulutuksessa käytetyt tietoaineistot.
-- Täydet mallipainot osana koulutusta.
+- Mallin koulutuksessa käytetyt aineistot.
+- Koko mallin painot osana koulutusta.
 - Arviointikoodi.
 - Hienosäätökoodi.
-- Täydet mallipainot ja koulutusmittarit.
+- Koko mallin painot ja koulutusmittarit.
 
-Tällä hetkellä vain harvat mallit täyttävät nämä kriteerit. [OLMo-malli, jonka on luonut Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst), kuuluu tähän kategoriaan.
+Tällä hetkellä vain muutama malli täyttää nämä kriteerit. [Allen Institute for Artificial Intelligence (AllenAI) luoma OLMo-malli](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) on yksi, joka kuuluu tähän kategoriaan.
 
-Tässä oppitunnissa viittaamme malleihin "avoimina malleina", koska ne eivät välttämättä täytä yllä olevia kriteerejä kirjoitushetkellä.
+Tässä oppitunnissa viittaamme malleihin jatkossa nimellä "avoimet mallit", koska ne eivät välttämättä täytä yllä mainittuja kriteerejä kirjoitushetkellä.
 
-## Avoimien mallien hyödyt
+## Avoimien mallien edut
 
-**Erittäin muokattavissa** - Koska avoimet mallit julkaistaan yksityiskohtaisilla koulutustiedoilla, tutkijat ja kehittäjät voivat muokata mallin sisäisiä toimintoja. Tämä mahdollistaa erittäin erikoistuneiden mallien luomisen, jotka on hienosäädetty tiettyyn tehtävään tai tutkimusalueeseen. Esimerkkejä tästä ovat koodin generointi, matemaattiset operaatiot ja biologia.
+**Erittäin muokattavissa** – Koska avoimet mallit julkaistaan yksityiskohtaisen koulutustiedon kanssa, tutkijat ja kehittäjät voivat muokata mallin sisäisiä osia. Tämä mahdollistaa erittäin erikoistuneiden mallien luomisen, jotka on hienosäädetty tiettyyn tehtävään tai tutkimusalueeseen. Esimerkkejä tästä ovat koodin generointi, matemaattiset operaatiot ja biologia.
 
-**Kustannukset** - Näiden mallien käyttö- ja käyttöönottohinta per token on alhaisempi kuin suljettujen mallien. Generatiivisten tekoälysovellusten rakentamisessa kannattaa tarkastella suorituskyvyn ja hinnan suhdetta mallien käytössä omassa käyttötapauksessa.
+**Kustannukset** – Näiden mallien käyttö- ja käyttöönottohinta per token on alhaisempi kuin omistusoikeudellisten mallien. Generatiivisia tekoälysovelluksia rakennettaessa on tärkeää tarkastella suorituskyvyn ja hinnan suhdetta näiden mallien käytössä omassa käyttötapauksessa.
 
-![Mallin kustannukset](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.fi.png)  
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.fi.png)
 Lähde: Artificial Analysis
 
-**Joustavuus** - Avoimien mallien kanssa työskentely mahdollistaa joustavuuden eri mallien käytössä tai niiden yhdistämisessä. Esimerkkinä tästä on [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), jossa käyttäjä voi valita käytettävän mallin suoraan käyttöliittymässä:
+**Joustavuus** – Avoimien mallien kanssa työskentely mahdollistaa joustavuuden eri mallien käytössä tai niiden yhdistämisessä. Esimerkkinä tästä on [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), jossa käyttäjä voi valita käytettävän mallin suoraan käyttöliittymästä:
 
-![Valitse malli](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.fi.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.fi.png)
 
-## Erilaisten avointen mallien tutkiminen
+## Tutustuminen eri avoimiin malleihin
 
 ### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), jonka Meta on kehittänyt, on avoin malli, joka on optimoitu keskustelupohjaisiin sovelluksiin. Tämä johtuu sen hienosäätömenetelmästä, joka sisälsi suuren määrän dialogia ja ihmisten antamaa palautetta. Tämän menetelmän ansiosta malli tuottaa enemmän ihmisten odotuksia vastaavia tuloksia, mikä parantaa käyttäjäkokemusta.
+[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), jonka on kehittänyt Meta, on avoin malli, joka on optimoitu keskustelupohjaisiin sovelluksiin. Tämä johtuu sen hienosäätömenetelmästä, joka sisälsi suuren määrän dialogia ja ihmispalautetta. Tämän menetelmän avulla malli tuottaa enemmän ihmisen odotuksia vastaavia tuloksia, mikä parantaa käyttökokemusta.
 
-Joistakin Llama-mallin hienosäädetyistä versioista esimerkkejä ovat [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), joka on erikoistunut japanin kieleen, ja [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), joka on parannettu versio perusmallista.
+Esimerkkejä Llaman hienosäädetyistä versioista ovat [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), joka on erikoistunut japanin kieleen, ja [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), joka on paranneltu versio perusmallista.
 
 ### Mistral
 
-[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) on avoin malli, joka keskittyy korkeaan suorituskykyyn ja tehokkuuteen. Se käyttää Mixture-of-Experts-lähestymistapaa, joka yhdistää joukon erikoistuneita asiantuntijamalleja yhdeksi järjestelmäksi, jossa syötteen mukaan valitaan käytettävät mallit. Tämä tekee laskennasta tehokkaampaa, koska mallit käsittelevät vain syötteitä, joihin ne ovat erikoistuneet.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) on avoin malli, joka keskittyy vahvasti suorituskykyyn ja tehokkuuteen. Se käyttää Mixture-of-Experts -lähestymistapaa, joka yhdistää joukon erikoistuneita asiantuntijamalleja yhdeksi järjestelmäksi, jossa syötteen mukaan valitaan tietyt mallit käytettäväksi. Tämä tekee laskennasta tehokkaampaa, koska mallit käsittelevät vain niitä syötteitä, joihin ne ovat erikoistuneet.
 
-Joistakin Mistral-mallin hienosäädetyistä versioista esimerkkejä ovat [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), joka keskittyy lääketieteelliseen alaan, ja [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), joka suorittaa matemaattisia laskutoimituksia.
+Esimerkkejä Mistralin hienosäädetyistä versioista ovat [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), joka keskittyy lääketieteelliseen alaan, ja [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), joka suorittaa matemaattisia laskutoimituksia.
 
 ### Falcon
 
-[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) on LLM, jonka on luonut Technology Innovation Institute (**TII**). Falcon-40B on koulutettu 40 miljardilla parametrilla, ja sen on osoitettu suoriutuvan paremmin kuin GPT-3 pienemmällä laskentabudjetilla. Tämä johtuu sen käyttämästä FlashAttention-algoritmista ja monikyselyhuomiosta, jotka vähentävät muistivaatimuksia inferenssiaikana. Tämän lyhentyneen inferenssiajan ansiosta Falcon-40B soveltuu hyvin keskustelusovelluksiin.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) on Technology Innovation Institute (**TII**) -instituutin luoma LLM. Falcon-40B on koulutettu 40 miljardilla parametrilla, ja sen on osoitettu suoriutuvan paremmin kuin GPT-3 pienemmällä laskentabudjetilla. Tämä johtuu FlashAttention-algoritmin ja multiquery-attentionin käytöstä, jotka vähentävät muistin tarvetta päättelyvaiheessa. Lyhentyneen päättelyajan ansiosta Falcon-40B soveltuu hyvin keskustelusovelluksiin.
 
-Joistakin Falcon-mallin hienosäädetyistä versioista esimerkkejä ovat [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), avointen mallien pohjalta rakennettu assistentti, ja [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), joka tarjoaa paremman suorituskyvyn kuin perusmalli.
+Esimerkkejä Falconin hienosäädetyistä versioista ovat [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), avoimiin malleihin perustuva avustaja, ja [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), joka tarjoaa paremman suorituskyvyn kuin perusmalli.
 
-## Kuinka valita
+## Miten valita
 
-Avoimen mallin valintaan ei ole yhtä oikeaa vastausta. Hyvä lähtökohta on käyttää Azure AI Studion tehtäväkohtaisen suodatuksen ominaisuutta. Tämä auttaa ymmärtämään, millaisiin tehtäviin malli on koulutettu. Hugging Face ylläpitää myös LLM Leaderboardia, joka näyttää parhaiten suoriutuvat mallit tiettyjen mittareiden perusteella.
+Avoimen mallin valintaan ei ole yhtä oikeaa vastausta. Hyvä lähtökohta on käyttää Azure AI Studion tehtäväkohtaisia suodattimia. Tämä auttaa ymmärtämään, millaisiin tehtäviin malli on koulutettu. Hugging Face ylläpitää myös LLM-johtotaulukkoa, joka näyttää parhaiten suoriutuvat mallit tiettyjen mittareiden perusteella.
 
-Kun haluat vertailla LLM-malleja eri tyyppien välillä, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) on toinen erinomainen resurssi:
+Kun haluat vertailla LLM-malleja eri tyypeissä, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) on toinen erinomainen resurssi:
 
-![Mallin laatu](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.fi.png)  
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.fi.png)
 Lähde: Artificial Analysis
 
-Jos työskentelet tietyn käyttötapauksen parissa, hienosäädettyjen versioiden etsiminen, jotka keskittyvät samaan alueeseen, voi olla tehokasta. Useiden avointen mallien kokeileminen ja niiden suorituskyvyn arviointi omien ja käyttäjiesi odotusten mukaan on myös hyvä käytäntö.
+Jos työskentelet tietyn käyttötapauksen parissa, saman alan hienosäädettyjen versioiden etsiminen voi olla tehokasta. Useiden avoimien mallien kokeileminen ja niiden suorituskyvyn arvioiminen omien ja käyttäjiesi odotusten mukaan on myös hyvä käytäntö.
 
 ## Seuraavat askeleet
 
-Avoimien mallien parasta puolta on, että niiden kanssa voi aloittaa työskentelyn melko nopeasti. Tutustu [Azure AI Foundry Model Catalogiin](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), joka sisältää erityisen Hugging Face -kokoelman näistä malleista, joita käsittelimme tässä.
+Parasta avoimissa malleissa on, että niiden kanssa pääsee nopeasti alkuun. Tutustu [Azure AI Foundry Model Catalogiin](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), joka sisältää erityisen Hugging Face -kokoelman näistä malleista, joista keskustelimme tässä.
 
-## Oppiminen ei lopu tähän, jatka matkaasi
+## Oppiminen ei lopu tähän, jatka matkaa
 
-Tämän oppitunnin jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+Oppitunnin suorittamisen jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisesi kehittämistä!
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

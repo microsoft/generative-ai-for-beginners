@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T17:57:37+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T15:55:46+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "he"
 }
 -->
-# בחירת והגדרת ספק LLM 🔑
+# בחירה והגדרת ספק LLM 🔑
 
-ניתן להגדיר משימות לעבוד מול פריסות של מודלים גדולים (LLM) דרך ספקי שירות נתמכים כמו OpenAI, Azure או Hugging Face. ספקים אלו מספקים _נקודת קצה מתארחת_ (API) שניתן לגשת אליה בתכנות עם האישורים המתאימים (מפתח API או טוקן). בקורס זה נדון בספקים הבאים:
+המשימות **יכולות** להיות מוגדרות גם לעבודה מול פריסות של מודל שפה גדול (LLM) דרך ספק שירות נתמך כמו OpenAI, Azure או Hugging Face. אלה מספקים _נקודת קצה מתארחת_ (API) אליה ניתן לגשת באופן תכנותי עם האישורים הנכונים (מפתח API או טוקן). בקורס זה נדון בספקים הבאים:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) עם מגוון מודלים כולל סדרת GPT המרכזית.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) עבור מודלים של OpenAI עם דגש על מוכנות לארגונים
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) עבור מודלים בקוד פתוח ושרת הסקה
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) עם מודלים מגוונים כולל סדרת GPT המרכזית.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) למודלים של OpenAI עם דגש על מוכנות ארגונית
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) למודלים בקוד פתוח ושרת אינפרנס
 
-**יהיה עליכם להשתמש בחשבונות האישיים שלכם בתרגולים האלו**. המשימות הן רשות, כך שתוכלו לבחור להגדיר ספק אחד, את כולם – או אף אחד – לפי תחומי העניין שלכם. כמה הנחיות להרשמה:
+**תצטרכו להשתמש בחשבונות שלכם לתרגילים אלה**. המשימות הן אופציונליות כך שתוכלו לבחור להגדיר אחד, את כולם - או אף אחד - מהספקים בהתאם לתחומי העניין שלכם. כמה הנחיות להרשמה:
 
 | הרשמה | עלות | מפתח API | Playground | הערות |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [תמחור](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [מבוסס פרויקט](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [ללא קוד, בדפדפן](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | קיימים מספר מודלים |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [תמחור](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה עם SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה עם Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [חובה להגיש בקשה מראש לגישה](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [תמחור](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [ל-Hugging Chat יש מספר מודלים מוגבל](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [תמחור](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [מבוסס פרויקט](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [ללא קוד, ווב](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | מודלים מרובים זמינים |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [תמחור](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [חובה להגיש בקשה מראש לגישה](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [תמחור](https://huggingface.co/pricing) | [טוקני גישה](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [ל-Hugging Chat יש מודלים מוגבלים](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-עקבו אחרי ההוראות למטה כדי _להגדיר_ את המאגר הזה לשימוש עם ספקים שונים. משימות שדורשות ספק מסוים יכילו אחד מהתגים האלו בשם הקובץ:
+עקבו אחר ההוראות למטה כדי _להגדיר_ את המאגר הזה לשימוש עם ספקים שונים. משימות שדורשות ספק מסוים יכילו אחד מהתגים האלה בשם הקובץ שלהן:
 
 - `aoai` - דורש נקודת קצה ומפתח של Azure OpenAI
 - `oai` - דורש נקודת קצה ומפתח של OpenAI
 - `hf` - דורש טוקן של Hugging Face
 
-ניתן להגדיר ספק אחד, אף אחד, או את כולם. משימות רלוונטיות פשוט ייכשלו אם יחסר אישור.
+ניתן להגדיר אחד, אף אחד, או את כל הספקים. משימות קשורות פשוט יכשלו אם חסרים האישורים.
 
 ## יצירת קובץ `.env`
 
-אנו מניחים שכבר קראתם את ההנחיות למעלה ונרשמתם לספק הרלוונטי, וקיבלתם את האישורים הנדרשים (API_KEY או טוקן). במקרה של Azure OpenAI, אנו מניחים שיש לכם גם פריסה תקפה של שירות Azure OpenAI (נקודת קצה) עם לפחות מודל GPT אחד לפריסת השלמת שיחה.
+אנו מניחים שכבר קראתם את ההנחיות למעלה ונרשמתם אצל הספק הרלוונטי, וקיבלתם את האישורים הנדרשים (API_KEY או טוקן). במקרה של Azure OpenAI, אנו מניחים שיש לכם גם פריסה תקפה של שירות Azure OpenAI (נקודת קצה) עם לפחות מודל GPT אחד לפריסת שיחה.
 
 השלב הבא הוא להגדיר את **משתני הסביבה המקומיים** שלכם כך:
 
-1. חפשו בתיקיית השורש קובץ בשם `.env.copy` שצריך להיראות כך:
+1. חפשו בתיקיית השורש קובץ `.env.copy` שצריך להכיל תוכן כמו זה:
 
    ```bash
-   # OpenAI Provider
+   # ספק OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # ברירת המחדל נקבעה!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,58 +55,58 @@ CO_OP_TRANSLATOR_METADATA:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. העתיקו את הקובץ ל-`.env` בעזרת הפקודה הבאה. קובץ זה _נמצא ב-.gitignore_, כך שהסודות נשמרים בטוחים.
+2. העתיקו את הקובץ ל-`.env` באמצעות הפקודה למטה. קובץ זה הוא _gitignore-ד_, לשמירת סודות בבטחה.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. מלאו את הערכים (החליפו את המשתנים בצד ימין של ה-`=`) כפי שמוסבר בסעיף הבא.
+3. מלאו את הערכים (החליפו את הממלאים בצד ימין של `=`) כפי שמתואר בסעיף הבא.
 
-4. (אופציונלי) אם אתם משתמשים ב-GitHub Codespaces, יש לכם אפשרות לשמור משתני סביבה כ-_Codespaces secrets_ המשויכים למאגר הזה. במקרה כזה, לא תצטרכו להגדיר קובץ .env מקומי. **שימו לב: אפשרות זו עובדת רק אם אתם משתמשים ב-GitHub Codespaces.** עדיין תצטרכו להגדיר קובץ .env אם תשתמשו ב-Docker Desktop.
+4. (אופציונלי) אם אתם משתמשים ב-GitHub Codespaces, יש לכם אפשרות לשמור משתני סביבה כ_סודות Codespaces_ המשויכים למאגר זה. במקרה כזה, לא תצטרכו להגדיר קובץ .env מקומי. **עם זאת, שימו לב שאפשרות זו פועלת רק אם אתם משתמשים ב-GitHub Codespaces.** עדיין תצטרכו להגדיר את קובץ .env אם אתם משתמשים ב-Docker Desktop במקום.
 
 ## מילוי קובץ `.env`
 
-בואו נסקור בקצרה את שמות המשתנים כדי להבין למה הם משמשים:
+בואו נסתכל במהירות על שמות המשתנים כדי להבין מה הם מייצגים:
 
 | משתנה  | תיאור  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | זהו טוקן הגישה שהגדרתם בפרופיל שלכם |
-| OPENAI_API_KEY | זהו מפתח ההרשאה לשימוש בשירות עבור נקודות קצה של OpenAI שאינן Azure |
-| AZURE_OPENAI_API_KEY | זהו מפתח ההרשאה לשימוש בשירות הזה |
-| AZURE_OPENAI_ENDPOINT | זו נקודת הקצה שפרסתם עבור משאב Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | זו נקודת הקצה של פריסת מודל _הפקת טקסט_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | זו נקודת הקצה של פריסת מודל _הטמעת טקסט_ |
+| HUGGING_FACE_API_KEY | זהו טוקן הגישה של המשתמש שהגדרתם בפרופיל שלכם |
+| OPENAI_API_KEY | זהו מפתח האישור לשימוש בשירות לנקודות קצה שאינן Azure OpenAI |
+| AZURE_OPENAI_API_KEY | זהו מפתח האישור לשימוש בשירות זה |
+| AZURE_OPENAI_ENDPOINT | זו נקודת הקצה המופעלת למשאב Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | זו נקודת הקצה לפריסת מודל _יצירת טקסט_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | זו נקודת הקצה לפריסת מודל _הטמעת טקסט_ |
 | | |
 
-הערה: שני המשתנים האחרונים של Azure OpenAI משקפים מודל ברירת מחדל להשלמת שיחה (הפקת טקסט) ולחיפוש וקטורי (הטמעות) בהתאמה. הוראות להגדרתם יופיעו במשימות הרלוונטיות.
+הערה: שני המשתנים האחרונים של Azure OpenAI משקפים מודל ברירת מחדל להשלמת שיחה (יצירת טקסט) ולחיפוש וקטורי (הטמעות) בהתאמה. ההוראות להגדרתם יוגדרו במשימות הרלוונטיות.
 
-## הגדרת Azure: מהפורטל
+## הגדרת Azure: מפורטל
 
-ערכי נקודת הקצה והמפתח של Azure OpenAI יימצאו ב-[Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), אז נתחיל שם.
+ערכי נקודת הקצה והמפתח של Azure OpenAI יימצאו ב-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) אז נתחיל שם.
 
-1. היכנסו ל-[Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. לחצו על האפשרות **Keys and Endpoint** בתפריט הצדדי (תפריט משמאל).
-1. לחצו על **Show Keys** – תראו את KEY 1, KEY 2 ו-Endpoint.
-1. השתמשו בערך של KEY 1 עבור AZURE_OPENAI_API_KEY
-1. השתמשו בערך של Endpoint עבור AZURE_OPENAI_ENDPOINT
+1. גשו ל-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. לחצו על אפשרות **Keys and Endpoint** בסרגל הצד (תפריט משמאל).
+1. לחצו על **Show Keys** - אמור להופיע: KEY 1, KEY 2 ו-Endpoint.
+1. השתמשו בערך KEY 1 עבור AZURE_OPENAI_API_KEY
+1. השתמשו בערך Endpoint עבור AZURE_OPENAI_ENDPOINT
 
-כעת נצטרך את נקודות הקצה של המודלים הספציפיים שפרסנו.
+לאחר מכן, נצטרך את נקודות הקצה למודלים הספציפיים שהפעלנו.
 
-1. לחצו על האפשרות **Model deployments** בתפריט הצדדי (משמאל) עבור משאב Azure OpenAI.
+1. לחצו על אפשרות **Model deployments** בסרגל הצד (תפריט שמאל) למשאב Azure OpenAI.
 1. בדף היעד, לחצו על **Manage Deployments**
 
-זה ייקח אתכם לאתר Azure OpenAI Studio, שם נמצא את הערכים הנוספים כפי שמוסבר למטה.
+זה יוביל אתכם לאתר Azure OpenAI Studio, שם נמצא את הערכים הנוספים כפי שמתואר למטה.
 
-## הגדרת Azure: מהסטודיו
+## הגדרת Azure: מ-Studio
 
-1. עברו ל-[Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **מהמשאב שלכם** כפי שתואר למעלה.
-1. לחצו על לשונית **Deployments** (תפריט צדדי, שמאלי) כדי לראות את המודלים שפרסתם.
-1. אם המודל הרצוי לא נפרס, השתמשו ב-**Create new deployment** כדי לפרוס אותו.
-1. תצטרכו מודל _text-generation_ – אנו ממליצים על: **gpt-35-turbo**
-1. תצטרכו מודל _text-embedding_ – אנו ממליצים על **text-embedding-ada-002**
+1. נווטו ל-[Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **מהמשאב שלכם** כפי שתואר למעלה.
+1. לחצו על לשונית **Deployments** (סרגל צד, שמאל) כדי לראות את המודלים המופעלים כרגע.
+1. אם המודל הרצוי לא מופעל, השתמשו ב-**Create new deployment** כדי להפעילו.
+1. תזדקקו למודל _text-generation_ - אנו ממליצים: **gpt-35-turbo**
+1. תזדקקו למודל _text-embedding_ - אנו ממליצים על **text-embedding-ada-002**
 
-כעת עדכנו את משתני הסביבה כך שישקפו את _שם הפריסה_ בו השתמשתם. לרוב זה יהיה זהה לשם המודל אלא אם שיניתם אותו במפורש. לדוגמה, ייתכן שיהיה לכם:
+כעת עדכנו את משתני הסביבה כדי לשקף את שם ה_Deployment_ שבו השתמשתם. בדרך כלל זה יהיה זהה לשם המודל אלא אם שיניתם אותו במפורש. לדוגמה, ייתכן שיהיה לכם:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
@@ -117,13 +117,15 @@ AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 
 ## הגדרת OpenAI: מהפרופיל
 
-מפתח ה-API של OpenAI שלכם נמצא ב-[חשבון OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). אם אין לכם אחד, תוכלו להירשם וליצור מפתח API. לאחר שיש לכם את המפתח, השתמשו בו כדי למלא את המשתנה `OPENAI_API_KEY` בקובץ `.env`.
+מפתח ה-API של OpenAI שלכם נמצא ב-[חשבון OpenAI שלכם](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). אם אין לכם, תוכלו להירשם וליצור מפתח API. לאחר שיש לכם את המפתח, תוכלו למלא את המשתנה `OPENAI_API_KEY` בקובץ `.env`.
 
 ## הגדרת Hugging Face: מהפרופיל
 
-הטוקן של Hugging Face שלכם נמצא בפרופיל תחת [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). אל תפרסמו או תשתפו אותו בפומבי. במקום זאת, צרו טוקן חדש לשימוש בפרויקט הזה והעתיקו אותו לקובץ `.env` תחת המשתנה `HUGGING_FACE_API_KEY`. _הערה:_ זה לא מפתח API טכנית, אבל הוא משמש לאימות ולכן שמרנו על השם הזה לצורך אחידות.
+הטוקן של Hugging Face שלכם נמצא בפרופיל תחת [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). אל תפרסמו או תשתפו אותם בפומבי. במקום זאת, צרו טוקן חדש לשימוש בפרויקט זה והעתיקו אותו לקובץ `.env` תחת המשתנה `HUGGING_FACE_API_KEY`. _הערה:_ טכנית זה לא מפתח API אך משמש לאימות ולכן אנו שומרים על השם הזה למען עקביות.
 
 ---
 
-**הצהרת אחריות**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עשויים להכיל טעויות או אי-דיוקים. המסמך המקורי בשפתו המקורית הוא המקור הסמכותי. למידע קריטי, מומלץ לפנות לתרגום מקצועי על ידי אדם. איננו אחראים לכל אי-הבנה או פירוש שגוי הנובעים מהשימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**כתב ויתור**:  
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפת המקור שלו נחשב למקור הסמכותי. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי אדם. אנו לא נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

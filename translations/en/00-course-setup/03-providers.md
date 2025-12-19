@@ -1,21 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T13:17:01+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T12:26:56+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "en"
 }
 -->
 # Choosing & Configuring an LLM Provider 🔑
 
-Assignments **may** also be set up to work with one or more Large Language Model (LLM) deployments through a supported service provider like OpenAI, Azure, or Hugging Face. These providers offer a _hosted endpoint_ (API) that you can access programmatically with the right credentials (API key or token). In this course, we’ll cover these providers:
+Assignments **may** also be set up to work against one or more Large Language Model (LLM) deployments through a supported service provider like OpenAI, Azure or Hugging Face. These provide a _hosted endpoint_ (API) that we can access programmatically with the right credentials (API key or token). In this course, we discuss these providers:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) offers a variety of models, including the core GPT series.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) provides OpenAI models with a focus on enterprise features.
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) offers open-source models and an inference server.
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) with diverse models including the core GPT series.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) for OpenAI models with enterprise readiness in focus
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) for open-source models and inference server
 
-**You’ll need to use your own accounts for these exercises.** Assignments are optional, so you can choose to set up one, all, or none of the providers depending on your interests. Here’s some guidance for signing up:
+**You will need to use your own accounts for these exercises**. Assignments are optional so you can choose to set up one, all - or none - of the providers based on your interests. Some guidance for signup:
 
 | Signup | Cost | API Key | Playground | Comments |
 |:---|:---|:---|:---|:---|
@@ -24,21 +24,21 @@ Assignments **may** also be set up to work with one or more Large Language Model
 | [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Pricing](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat has limited models](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Follow the steps below to _configure_ this repository for use with different providers. Assignments that need a specific provider will have one of these tags in their filename:
+Follow the directions below to _configure_ this repository for use with different providers. Assignments that require a specific provider will contain one of these tags in their filename:
 
-- `aoai` - needs Azure OpenAI endpoint and key
-- `oai` - needs OpenAI endpoint and key
-- `hf` - needs Hugging Face token
+- `aoai` - requires Azure OpenAI endpoint, key
+- `oai` - requires OpenAI endpoint, key
+- `hf` - requires Hugging Face token
 
-You can set up one, none, or all providers. Assignments that depend on a provider will simply show an error if credentials are missing.
+You can configure one, none, or all providers. Related assignments will simply error out on missing credentials.
 
 ## Create `.env` file
 
-We’re assuming you’ve already read the instructions above, signed up with the relevant provider, and obtained the required authentication credentials (API_KEY or token). For Azure OpenAI, you should also have a valid deployment of an Azure OpenAI Service (endpoint) with at least one GPT model deployed for chat completion.
+We assume that you have already read the guidance above and signed up with the relevant provider, and obtained the required authentication credentials (API_KEY or token). In the case of Azure OpenAI, we assume you also have a valid deployment of an Azure OpenAI Service (endpoint) with at least one GPT model deployed for chat completion.
 
-The next step is to set up your **local environment variables** as follows:
+The next step is to configure your **local environment variables** as follows:
 
-1. In the root folder, look for a `.env.copy` file. It should look something like this:
+1. Look in the root folder for a `.env.copy` file that should have contents like this:
 
    ```bash
    # OpenAI Provider
@@ -55,75 +55,77 @@ The next step is to set up your **local environment variables** as follows:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Copy that file to `.env` using the command below. This file is _gitignore-d_, so your secrets are safe.
+2. Copy that file to `.env` using the command below. This file is _gitignore-d_, keeping secrets safe.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Fill in the values (replace the placeholders on the right side of `=`) as described in the next section.
+3. Fill in the values (replace placeholders on right side of `=`) as described in the next section.
 
-4. (Optional) If you use GitHub Codespaces, you can save environment variables as _Codespaces secrets_ for this repository. In that case, you won’t need to set up a local .env file. **However, this only works if you’re using GitHub Codespaces.** If you’re using Docker Desktop, you’ll still need to set up the .env file.
+4. (Option) If you use GitHub Codespaces, you have the option to save environment variables as _Codespaces secrets_ associated with this repository. In that case, you won't need to set up a local .env file. **However, note that this option works only if you use GitHub Codespaces.** You will still need to set up the .env file if you use Docker Desktop instead.
 
 ## Populate `.env` file
 
-Let’s quickly review the variable names and what they mean:
+Let's take a quick look at the variable names to understand what they represent:
 
 | Variable  | Description  |
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | This is the user access token you set up in your profile |
-| OPENAI_API_KEY | This is the authorization key for using the service with non-Azure OpenAI endpoints |
+| OPENAI_API_KEY | This is the authorization key for using the service for non-Azure OpenAI endpoints |
 | AZURE_OPENAI_API_KEY | This is the authorization key for using that service |
 | AZURE_OPENAI_ENDPOINT | This is the deployed endpoint for an Azure OpenAI resource |
 | AZURE_OPENAI_DEPLOYMENT | This is the _text generation_ model deployment endpoint |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | This is the _text embeddings_ model deployment endpoint |
 | | |
 
-Note: The last two Azure OpenAI variables refer to the default model for chat completion (text generation) and vector search (embeddings), respectively. Instructions for setting these will be provided in the relevant assignments.
+Note: The last two Azure OpenAI variables reflect a default model for chat completion (text generation) and vector search (embeddings) respectively. Instructions for setting them will be defined in relevant assignments.
 
 ## Configure Azure: From Portal
 
-You’ll find the Azure OpenAI endpoint and key values in the [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), so let’s start there.
+The Azure OpenAI endpoint and key values will be found in the [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) so let's start there.
 
 1. Go to the [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Click the **Keys and Endpoint** option in the sidebar (menu on the left).
-1. Click **Show Keys** – you should see: KEY 1, KEY 2, and Endpoint.
+1. Click the **Keys and Endpoint** option in the sidebar (menu at left).
+1. Click **Show Keys** - you should see the following: KEY 1, KEY 2 and Endpoint.
 1. Use the KEY 1 value for AZURE_OPENAI_API_KEY
 1. Use the Endpoint value for AZURE_OPENAI_ENDPOINT
 
-Next, you’ll need the endpoints for the specific models you’ve deployed.
+Next, we need the endpoints for the specific models we've deployed.
 
-1. Click the **Model deployments** option in the sidebar (left menu) for your Azure OpenAI resource.
-1. On the destination page, click **Manage Deployments**
+1. Click the **Model deployments** option in the sidebar (left menu) for Azure OpenAI resource.
+1. In the destination page, click **Manage Deployments**
 
-This will take you to the Azure OpenAI Studio website, where you’ll find the other values as described below.
+This will take you to the Azure OpenAI Studio website, where we'll find the other values as described below.
 
 ## Configure Azure: From Studio
 
-1. Go to [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **from your resource** as described above.
-1. Click the **Deployments** tab (sidebar, left) to see the models you’ve deployed.
-1. If your desired model isn’t deployed, use **Create new deployment** to deploy it.
-1. You’ll need a _text-generation_ model – we recommend: **gpt-35-turbo**
-1. You’ll need a _text-embedding_ model – we recommend **text-embedding-ada-002**
+1. Navigate to [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **from your resource** as described above.
+1. Click the **Deployments** tab (sidebar, left) to view currently deployed models.
+1. If your desired model is not deployed, use **Create new deployment** to deploy it.
+1. You will need a _text-generation_ model - we recommend: **gpt-35-turbo**
+1. You will need a _text-embedding_ model - we recommend **text-embedding-ada-002**
 
-Now update the environment variables to match the _Deployment name_ you used. This is usually the same as the model name unless you changed it. For example, you might have:
+Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explicitly. So, as an example, you might have:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Don’t forget to save the .env file when you’re done.** You can now close the file and return to the instructions for running the notebook.
+**Don't forget to save the .env file when done**. You can now exit the file and return to the instructions for running the notebook.
 
 ## Configure OpenAI: From Profile
 
-Your OpenAI API key is available in your [OpenAI account](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). If you don’t have one, sign up for an account and create an API key. Once you have the key, use it to fill in the `OPENAI_API_KEY` variable in the `.env` file.
+Your OpenAI API key can be found in your [OpenAI account](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). If you don't have one, you can sign up for an account and create an API key. Once you have the key, you can use it to populate the `OPENAI_API_KEY` variable in the `.env` file.
 
 ## Configure Hugging Face: From Profile
 
-Your Hugging Face token is in your profile under [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Don’t post or share these publicly. Instead, create a new token for this project and copy it into the `.env` file under the `HUGGING_FACE_API_KEY` variable. _Note:_ This isn’t technically an API key, but it’s used for authentication, so we’re keeping the naming consistent.
+Your Hugging Face token can be found in your profile under [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Don't post or share these publicly. Instead, create a new token for this project usage and copy that into the `.env` file under the `HUGGING_FACE_API_KEY` variable. _Note:_ This is technically not an API key but is used for authentication so we are keeping that naming convention for consistency.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
 This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
