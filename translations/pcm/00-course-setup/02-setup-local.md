@@ -1,33 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-11-12T09:02:43+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T18:15:38+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "pcm"
 }
 -->
 # Local Setup 🖥️
 
-**Use dis guide if you wan run everything for your laptop.**  
-You get two options: **(A) native Python + virtual-env** or **(B) VS Code Dev Container with Docker**.  
-Choose the one wey easy for you—both go lead to the same lessons.
+**Use dis guide if you prefer to run everything for your own laptop.**   
+You get two ways: **(A) native Python + virtual-env** or **(B) VS Code Dev Container with Docker**.  
+Choose whichever e easy for you—both go lead to the same lessons.
 
-## 1. Prerequisites
+## 1.  Prerequisites
 
 | Tool               | Version / Notes                                                                      |
 |--------------------|--------------------------------------------------------------------------------------|
-| **Python**         | 3.10 + (get am from <https://python.org>)                                            |
+| **Python**         | 3.10 + (collect am from <https://python.org>)                                        |
 | **Git**            | Latest (e dey come with Xcode / Git for Windows / Linux package manager)             |
-| **VS Code**        | Optional but e good make you use am <https://code.visualstudio.com>                  |
+| **VS Code**        | Optional but e good make you get am <https://code.visualstudio.com>                   |
 | **Docker Desktop** | *Only* for Option B. Free install: <https://docs.docker.com/desktop/>                |
 
 > 💡 **Tip** – Check tools for terminal:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2. Option A – Native Python (quickest)
+## 2.  Option A – Native Python (fastest)
 
-### Step 1 Clone dis repo
+### Step 1  Clone dis repo
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
@@ -37,12 +37,12 @@ cd generative-ai-for-beginners
 ### Step 2 Create & activate virtual environment
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # mek one
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Prompt go dey start with (.venv)—e mean say you don enter the env.
+✅ Prompt go start with (.venv) now—that mean you dey inside the env.
 
 ### Step 3 Install dependencies
 
@@ -54,14 +54,14 @@ Skip go Section 3 for [API keys](../../../00-course-setup)
 
 ## 2. Option B – VS Code Dev Container (Docker)
 
-We don set dis repository and course with [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) wey get Universal runtime wey fit support Python3, .NET, Node.js and Java development. The related configuration dey for `devcontainer.json` file wey dey inside `.devcontainer/` folder for the root of dis repository.
+We set up dis repository and course with one [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) wey get Universal runtime wey fit support Python3, .NET, Node.js and Java development. The configuration dey inside `devcontainer.json` file wey dey `.devcontainer/` folder for root of dis repository.
 
->**Why you go choose dis one?**
->Environment go dey same as Codespaces; no dependency wahala.
+>**Why you go choose dis?**
+>Environment na the same as Codespaces; no wahala with dependency drift.
 
 ### Step 0 Install the extras
 
-Docker Desktop – confirm ```docker --version``` dey work.
+Docker Desktop – confirm say ```docker --version``` dey work.
 VS Code Remote – Containers extension (ID: ms-vscode-remote.remote-containers).
 
 ### Step 1 Open the repo for VS Code
@@ -70,17 +70,17 @@ File ▸ Open Folder…  → generative-ai-for-beginners
 
 VS Code go detect .devcontainer/ and go show prompt.
 
-### Step 2 Reopen for container
+### Step 2 Reopen inside container
 
 Click “Reopen in Container”. Docker go build the image (≈ 3 min first time).
-When terminal prompt show, you don enter the container.
+When terminal prompt show, you dey inside the container.
 
-## 2. Option C – Miniconda
+## 2.  Option C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) na lightweight installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, and some packages.  
-Conda na package manager wey dey make am easy to setup and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. E dey also help for installing packages wey no dey available via `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) na small installer for installing [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, plus some packages.
+Conda na package manager wey make am easy to set up and switch between different Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) and packages. E still good for installing packages wey no dey available via `pip`.
 
-### Step 0 Install Miniconda
+### Step 0  Install Miniconda
 
 Follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set am up.
 
@@ -90,11 +90,11 @@ conda --version
 
 ### Step 1 Create virtual environment
 
-Create new environment file (*environment.yml*). If you dey follow along using Codespaces, create am inside `.devcontainer` directory, so `.devcontainer/environment.yml`.
+Create new environment file (*environment.yml*). If you dey follow for Codespaces, create am inside `.devcontainer` directory, so `.devcontainer/environment.yml`.
 
-### Step 2 Add to your environment file
+### Step 2  Add to your environment file
 
-Add dis snippet to your `environment.yml`
+Put dis snippet inside your  `environment.yml`
 
 ```yml
 name: <environment-name>
@@ -113,23 +113,23 @@ dependencies:
 
 ### Step 3 Create your Conda environment
 
-Run dis commands for your command line/terminal
+Run the commands below for your command line/terminal
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path na only for Codespace setups e dey apply
 conda activate ai4beg
 ```
 
-Check [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) if you get any wahala.
+If you get any problem, check the [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
 
-## 2. Option D – Classic Jupyter / Jupyter Lab (for your browser)
+## 2  Option D – Classic Jupyter / Jupyter Lab (for your browser)
 
-> **Who dis one fit?**  
-> Anybody wey like the classic Jupyter interface or wan run notebooks without VS Code.  
+> **Who dis one dey for?**  
+> Anybody wey like the classic Jupyter interface or want run notebooks without VS Code.  
 
-### Step 1 Make sure Jupyter dey installed
+### Step 1  Make sure Jupyter dey installed
 
-To start Jupyter locally, go terminal/command line, go the course directory, and run:
+To start Jupyter locally, go terminal/command line, waka go the course directory, then run:
 
 ```bash
 jupyter notebook
@@ -141,16 +141,16 @@ or
 jupyterhub
 ```
 
-Dis go start Jupyter instance and the URL to access am go show for the command line window.
+Dis one go start Jupyter instance and the URL to access am go show for command line window.
 
-Once you access the URL, you go see the course outline and fit navigate to any `*.ipynb` file. Example, `08-building-search-applications/python/oai-solution.ipynb`.
+When you open the URL, you go see the course outline and fit waka go any `*.ipynb` file. For example, `08-building-search-applications/python/oai-solution.ipynb`.
 
 ## 3. Add Your API Keys
 
-To keep your API keys safe and secure dey important when you dey build any type of application. We dey recommend make you no store any API keys directly for your code. If you commit those details to public repository, e fit cause security wahala and even unwanted costs if bad person use am.  
+To keep your API keys safe and secure na important thing when you dey build any kind application. We recommend say no store any API keys directly for your code. If you put those details for public repository, e fit cause security wahala and even unwanted cost if bad person use am.
 Here na step-by-step guide on how to create `.env` file for Python and add `GITHUB_TOKEN`:
 
-1. **Go Your Project Directory**: Open your terminal or command prompt and go your project's root directory wey you wan create `.env` file.
+1. **Waka go Your Project Directory**: Open your terminal or command prompt and waka go your project's root directory wey you want create `.env` file.
 
    ```bash
    cd path/to/your/project
@@ -170,7 +170,7 @@ Here na step-by-step guide on how to create `.env` file for Python and add `GITH
    echo . > .env
    ```
 
-3. **Edit `.env` File**: Open `.env` file for text editor (e.g., VS Code, Notepad++, or any other editor). Add dis line to the file, replace `your_github_token_here` with your actual GitHub token:
+3. **Edit `.env` File**: Open `.env` file for text editor (e.g., VS Code, Notepad++, or any other editor). Add dis line inside the file, change `your_github_token_here` to your real GitHub token:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
@@ -178,13 +178,13 @@ Here na step-by-step guide on how to create `.env` file for Python and add `GITH
 
 4. **Save the File**: Save the changes and close the text editor.
 
-5. **Install `python-dotenv`**: If you never install am before, you go need install `python-dotenv` package to load environment variables from `.env` file into your Python application. You fit install am using `pip`:
+5. **Install `python-dotenv`**: If you never install am before, you go need install `python-dotenv` package to load environment variables from `.env` file into your Python app. You fit install am with `pip`:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Load Environment Variables for Your Python Script**: For your Python script, use `python-dotenv` package to load the environment variables from `.env` file:
+6. **Load Environment Variables for Your Python Script**: For your Python script, use `python-dotenv` package to load environment variables from `.env` file:
 
    ```python
    from dotenv import load_dotenv
@@ -199,34 +199,34 @@ Here na step-by-step guide on how to create `.env` file for Python and add `GITH
    print(github_token)
    ```
 
-Na so e be! You don successfully create `.env` file, add your GitHub token, and load am into your Python application.
+Na so e be! You don create `.env` file, add your GitHub token, and load am inside your Python app.
 
-🔐 No commit `.env`—e don already dey for `.gitignore`.  
+🔐 No ever commit .env—e don dey inside .gitignore.
 Full provider instructions dey for [`providers.md`](03-providers.md).
 
 ## 4. Wetin next?
 
-| I wan…              | Go to…                                                                  |
+| I want to…          | Go to…                                                                  |
 |---------------------|-------------------------------------------------------------------------|
 | Start Lesson 1      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| Setup LLM Provider  | [`providers.md`](03-providers.md)                                       |
+| Setup an LLM Provider | [`providers.md`](03-providers.md)                                       |
 | Meet other learners | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## 5. Troubleshooting
 
 | Symptom                                   | Fix                                                             |
 |-------------------------------------------|-----------------------------------------------------------------|
-| `python not found`                        | Add Python to PATH or re-open terminal after install            |
-| `pip` no fit build wheels (Windows)       | `pip install --upgrade pip setuptools wheel` then try again.    |
-| `ModuleNotFoundError: dotenv`             | Run `pip install -r requirements.txt` (env no dey installed).   |
-| Docker build fail *No space left*         | Docker Desktop ▸ *Settings* ▸ *Resources* → increase disk size. |
-| VS Code dey prompt to reopen              | You fit get both Options active; choose one (venv **or** container)|
+| `python not found`                        | Add Python to PATH or open terminal again after install         |
+| `pip` cannot build wheels (Windows)       | `pip install --upgrade pip setuptools wheel` then try again.    |
+| `ModuleNotFoundError: dotenv`             | Run `pip install -r requirements.txt` (env no install).         |
+| Docker build fails *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → increase disk size. |
+| VS Code dey always ask to reopen           | You fit get both Options active; choose one (venv **or** container)|
 | OpenAI 401 / 429 errors                   | Check `OPENAI_API_KEY` value / request rate limits.             |
-| Errors using Conda                        | Install Microsoft AI libraries using `conda install -c microsoft azure-ai-ml`|
+| Errors with Conda                        | Install Microsoft AI libraries with `conda install -c microsoft azure-ai-ml`|
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am accurate, abeg sabi say automated translations fit get mistake or no dey correct well. Di original dokyument wey dey for im native language na di main source wey you go fit trust. For important information, e better make professional human translation dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any wahala or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
