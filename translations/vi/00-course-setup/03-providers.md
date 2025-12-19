@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T18:06:12+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T16:02:42+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "vi"
 }
 -->
-# Lựa chọn & Cấu hình Nhà cung cấp LLM 🔑
+# Lựa chọn & Cấu hình nhà cung cấp LLM 🔑
 
-Bạn **có thể** thiết lập các bài tập để làm việc với một hoặc nhiều mô hình ngôn ngữ lớn (LLM) thông qua các nhà cung cấp dịch vụ được hỗ trợ như OpenAI, Azure hoặc Hugging Face. Các dịch vụ này cung cấp _endpoint được lưu trữ_ (API) mà bạn có thể truy cập thông qua lập trình với thông tin xác thực phù hợp (API key hoặc token). Trong khóa học này, chúng ta sẽ tìm hiểu về các nhà cung cấp sau:
+Các bài tập **có thể** được thiết lập để làm việc với một hoặc nhiều triển khai Mô hình Ngôn ngữ Lớn (LLM) thông qua nhà cung cấp dịch vụ được hỗ trợ như OpenAI, Azure hoặc Hugging Face. Những nhà cung cấp này cung cấp một _điểm cuối được lưu trữ_ (API) mà chúng ta có thể truy cập lập trình với các thông tin xác thực phù hợp (khóa API hoặc token). Trong khóa học này, chúng ta thảo luận về các nhà cung cấp sau:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) với nhiều mô hình đa dạng, bao gồm dòng GPT chủ lực.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) cung cấp các mô hình OpenAI với khả năng sẵn sàng cho doanh nghiệp
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) dành cho các mô hình mã nguồn mở và máy chủ suy luận
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) với các mô hình đa dạng bao gồm loạt GPT cốt lõi.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) dành cho các mô hình OpenAI với trọng tâm sẵn sàng cho doanh nghiệp
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) cho các mô hình mã nguồn mở và máy chủ suy luận
 
-**Bạn sẽ cần sử dụng tài khoản cá nhân cho các bài tập này**. Các bài tập là tùy chọn, vì vậy bạn có thể chọn thiết lập một, tất cả - hoặc không thiết lập nhà cung cấp nào - tùy theo sở thích. Một số hướng dẫn đăng ký:
+**Bạn sẽ cần sử dụng tài khoản riêng của mình cho các bài tập này**. Các bài tập là tùy chọn nên bạn có thể chọn thiết lập một, tất cả - hoặc không thiết lập nhà cung cấp nào dựa trên sở thích của bạn. Một số hướng dẫn đăng ký:
 
-| Đăng ký | Chi phí | API Key | Playground | Ghi chú |
+| Đăng ký | Chi phí | Khóa API | Playground | Bình luận |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Bảng giá](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Theo dự án](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Có nhiều mô hình |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Bảng giá](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Cần đăng ký trước để được cấp quyền](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Bảng giá](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat chỉ hỗ trợ một số mô hình nhất định](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Bảng giá](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Dựa trên dự án](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Không cần mã, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Nhiều mô hình có sẵn |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Bảng giá](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Bắt đầu nhanh SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Bắt đầu nhanh Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Phải đăng ký trước để được truy cập](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Bảng giá](https://huggingface.co/pricing) | [Token truy cập](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat có mô hình giới hạn](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Làm theo hướng dẫn bên dưới để _cấu hình_ kho lưu trữ này sử dụng với các nhà cung cấp khác nhau. Các bài tập yêu cầu một nhà cung cấp cụ thể sẽ có một trong các tag sau trong tên file:
+Làm theo hướng dẫn dưới đây để _cấu hình_ kho lưu trữ này sử dụng với các nhà cung cấp khác nhau. Các bài tập yêu cầu nhà cung cấp cụ thể sẽ chứa một trong các thẻ này trong tên tệp:
 
-- `aoai` - yêu cầu endpoint và key của Azure OpenAI
-- `oai` - yêu cầu endpoint và key của OpenAI
-- `hf` - yêu cầu token của Hugging Face
+- `aoai` - yêu cầu điểm cuối Azure OpenAI, khóa
+- `oai` - yêu cầu điểm cuối OpenAI, khóa
+- `hf` - yêu cầu token Hugging Face
 
-Bạn có thể cấu hình một, không hoặc tất cả các nhà cung cấp. Các bài tập liên quan sẽ báo lỗi nếu thiếu thông tin xác thực.
+Bạn có thể cấu hình một, không hoặc tất cả các nhà cung cấp. Các bài tập liên quan sẽ báo lỗi khi thiếu thông tin xác thực.
 
-## Tạo file `.env`
+## Tạo tệp `.env`
 
-Chúng tôi giả định bạn đã đọc hướng dẫn ở trên, đăng ký với nhà cung cấp phù hợp và lấy được thông tin xác thực cần thiết (API_KEY hoặc token). Với Azure OpenAI, bạn cũng cần có một dịch vụ Azure OpenAI đã triển khai (endpoint) với ít nhất một mô hình GPT phục vụ cho chat completion.
+Chúng tôi giả định bạn đã đọc hướng dẫn trên và đăng ký với nhà cung cấp liên quan, đồng thời đã lấy được thông tin xác thực cần thiết (API_KEY hoặc token). Trong trường hợp Azure OpenAI, chúng tôi giả định bạn cũng có một triển khai hợp lệ của Dịch vụ Azure OpenAI (điểm cuối) với ít nhất một mô hình GPT được triển khai cho hoàn thành trò chuyện.
 
-Bước tiếp theo là cấu hình **biến môi trường cục bộ** như sau:
+Bước tiếp theo là cấu hình **biến môi trường cục bộ** của bạn như sau:
 
-1. Tìm file `.env.copy` trong thư mục gốc, file này sẽ có nội dung như sau:
+1. Tìm trong thư mục gốc tệp `.env.copy` có nội dung như sau:
 
    ```bash
-   # OpenAI Provider
+   # Nhà cung cấp OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # Mặc định đã được đặt!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,75 +55,77 @@ Bước tiếp theo là cấu hình **biến môi trường cục bộ** như sa
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Sao chép file đó thành `.env` bằng lệnh dưới đây. File này đã được _gitignore_, giúp bảo mật thông tin.
+2. Sao chép tệp đó thành `.env` bằng lệnh dưới đây. Tệp này được _gitignore_, giữ bí mật an toàn.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Điền giá trị (thay thế các placeholder bên phải dấu `=`) như hướng dẫn ở phần tiếp theo.
+3. Điền các giá trị (thay thế các chỗ giữ chỗ bên phải dấu `=`) như mô tả trong phần tiếp theo.
 
-4. (Tùy chọn) Nếu bạn sử dụng GitHub Codespaces, bạn có thể lưu biến môi trường dưới dạng _Codespaces secrets_ liên kết với kho lưu trữ này. Khi đó, bạn không cần tạo file .env cục bộ. **Tuy nhiên, lưu ý tùy chọn này chỉ áp dụng khi dùng GitHub Codespaces.** Nếu bạn dùng Docker Desktop, vẫn cần thiết lập file .env.
+4. (Tùy chọn) Nếu bạn sử dụng GitHub Codespaces, bạn có thể lưu biến môi trường dưới dạng _bí mật Codespaces_ liên kết với kho lưu trữ này. Trong trường hợp đó, bạn không cần thiết lập tệp .env cục bộ. **Tuy nhiên, lưu ý rằng tùy chọn này chỉ hoạt động nếu bạn sử dụng GitHub Codespaces.** Bạn vẫn cần thiết lập tệp .env nếu sử dụng Docker Desktop.
 
-## Điền giá trị vào file `.env`
+## Điền tệp `.env`
 
-Hãy cùng điểm qua các tên biến để hiểu ý nghĩa của chúng:
+Hãy xem nhanh các tên biến để hiểu chúng đại diện cho gì:
 
 | Biến  | Mô tả  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Đây là access token bạn tạo trong hồ sơ cá nhân |
-| OPENAI_API_KEY | Đây là key xác thực để sử dụng dịch vụ OpenAI (không phải Azure) |
-| AZURE_OPENAI_API_KEY | Đây là key xác thực để sử dụng dịch vụ Azure OpenAI |
-| AZURE_OPENAI_ENDPOINT | Đây là endpoint đã triển khai cho tài nguyên Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | Đây là endpoint triển khai mô hình _text generation_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Đây là endpoint triển khai mô hình _text embeddings_ |
+| HUGGING_FACE_API_KEY | Đây là token truy cập người dùng bạn thiết lập trong hồ sơ của mình |
+| OPENAI_API_KEY | Đây là khóa ủy quyền để sử dụng dịch vụ cho các điểm cuối OpenAI không phải Azure |
+| AZURE_OPENAI_API_KEY | Đây là khóa ủy quyền để sử dụng dịch vụ đó |
+| AZURE_OPENAI_ENDPOINT | Đây là điểm cuối đã triển khai cho tài nguyên Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Đây là điểm cuối triển khai mô hình _tạo văn bản_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Đây là điểm cuối triển khai mô hình _nhúng văn bản_ |
 | | |
 
-Lưu ý: Hai biến cuối của Azure OpenAI phản ánh mô hình mặc định cho chat completion (tạo văn bản) và tìm kiếm vector (embeddings). Hướng dẫn thiết lập sẽ có trong các bài tập liên quan.
+Lưu ý: Hai biến Azure OpenAI cuối cùng phản ánh mô hình mặc định cho hoàn thành trò chuyện (tạo văn bản) và tìm kiếm vector (nhúng) tương ứng. Hướng dẫn thiết lập chúng sẽ được định nghĩa trong các bài tập liên quan.
 
 ## Cấu hình Azure: Từ Portal
 
-Endpoint và key của Azure OpenAI sẽ được tìm thấy trong [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), hãy bắt đầu từ đây.
+Giá trị điểm cuối và khóa Azure OpenAI sẽ được tìm thấy trong [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) nên chúng ta bắt đầu từ đó.
 
 1. Truy cập [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Chọn mục **Keys and Endpoint** ở thanh bên (menu bên trái).
-1. Nhấn **Show Keys** - bạn sẽ thấy: KEY 1, KEY 2 và Endpoint.
-1. Dùng giá trị KEY 1 cho AZURE_OPENAI_API_KEY
-1. Dùng giá trị Endpoint cho AZURE_OPENAI_ENDPOINT
+1. Nhấp vào tùy chọn **Keys and Endpoint** trong thanh bên (menu bên trái).
+1. Nhấp **Show Keys** - bạn sẽ thấy các mục sau: KEY 1, KEY 2 và Endpoint.
+1. Sử dụng giá trị KEY 1 cho AZURE_OPENAI_API_KEY
+1. Sử dụng giá trị Endpoint cho AZURE_OPENAI_ENDPOINT
 
-Tiếp theo, chúng ta cần endpoint cho các mô hình đã triển khai.
+Tiếp theo, chúng ta cần điểm cuối cho các mô hình cụ thể đã triển khai.
 
-1. Chọn mục **Model deployments** ở thanh bên (menu trái) của tài nguyên Azure OpenAI.
-1. Ở trang đích, nhấn **Manage Deployments**
+1. Nhấp vào tùy chọn **Model deployments** trong thanh bên (menu bên trái) cho tài nguyên Azure OpenAI.
+1. Trong trang đích, nhấp **Manage Deployments**
 
-Bạn sẽ được chuyển đến trang Azure OpenAI Studio, nơi tìm các giá trị khác như mô tả bên dưới.
+Điều này sẽ đưa bạn đến trang web Azure OpenAI Studio, nơi chúng ta sẽ tìm các giá trị khác như mô tả dưới đây.
 
 ## Cấu hình Azure: Từ Studio
 
-1. Truy cập [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **từ tài nguyên của bạn** như hướng dẫn ở trên.
-1. Nhấn tab **Deployments** (thanh bên trái) để xem các mô hình đã triển khai.
-1. Nếu mô hình bạn cần chưa được triển khai, dùng **Create new deployment** để triển khai.
-1. Bạn cần một mô hình _text-generation_ - khuyến nghị: **gpt-35-turbo**
-1. Bạn cần một mô hình _text-embedding_ - khuyến nghị **text-embedding-ada-002**
+1. Điều hướng đến [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **từ tài nguyên của bạn** như đã mô tả ở trên.
+1. Nhấp tab **Deployments** (thanh bên, bên trái) để xem các mô hình đang được triển khai.
+1. Nếu mô hình bạn muốn chưa được triển khai, sử dụng **Create new deployment** để triển khai nó.
+1. Bạn sẽ cần một mô hình _text-generation_ - chúng tôi khuyên dùng: **gpt-35-turbo**
+1. Bạn sẽ cần một mô hình _text-embedding_ - chúng tôi khuyên dùng **text-embedding-ada-002**
 
-Bây giờ hãy cập nhật biến môi trường với _Deployment name_ đã sử dụng. Thông thường, tên này sẽ giống tên mô hình trừ khi bạn đã đổi tên. Ví dụ:
+Bây giờ cập nhật các biến môi trường để phản ánh _Tên triển khai_ được sử dụng. Thông thường tên này sẽ giống tên mô hình trừ khi bạn thay đổi rõ ràng. Ví dụ, bạn có thể có:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Đừng quên lưu file .env sau khi hoàn thành**. Bạn có thể đóng file và quay lại hướng dẫn chạy notebook.
+**Đừng quên lưu tệp .env khi hoàn thành**. Bạn có thể thoát tệp và quay lại hướng dẫn để chạy notebook.
 
-## Cấu hình OpenAI: Từ hồ sơ cá nhân
+## Cấu hình OpenAI: Từ Hồ sơ
 
-API key của bạn có thể tìm thấy trong [tài khoản OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Nếu chưa có, bạn có thể đăng ký tài khoản và tạo API key. Sau khi có key, hãy điền vào biến `OPENAI_API_KEY` trong file `.env`.
+Khóa API OpenAI của bạn có thể tìm thấy trong [tài khoản OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Nếu bạn chưa có, bạn có thể đăng ký tài khoản và tạo khóa API. Khi có khóa, bạn có thể dùng nó để điền biến `OPENAI_API_KEY` trong tệp `.env`.
 
-## Cấu hình Hugging Face: Từ hồ sơ cá nhân
+## Cấu hình Hugging Face: Từ Hồ sơ
 
-Token của bạn trên Hugging Face có thể tìm thấy trong hồ sơ cá nhân tại mục [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Không đăng tải hoặc chia sẻ token này công khai. Thay vào đó, hãy tạo một token mới dành riêng cho dự án này và sao chép vào file `.env` dưới biến `HUGGING_FACE_API_KEY`. _Lưu ý:_ Về mặt kỹ thuật, đây không phải là API key nhưng được dùng để xác thực nên chúng tôi giữ cách đặt tên này cho nhất quán.
+Token Hugging Face của bạn có thể tìm thấy trong hồ sơ của bạn tại [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Đừng đăng hoặc chia sẻ công khai. Thay vào đó, tạo một token mới cho dự án này và sao chép vào tệp `.env` dưới biến `HUGGING_FACE_API_KEY`. _Lưu ý:_ Về kỹ thuật đây không phải là khóa API nhưng được dùng để xác thực nên chúng tôi giữ tên biến cho nhất quán.
 
 ---
 
-**Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Tuyên bố từ chối trách nhiệm**:  
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
