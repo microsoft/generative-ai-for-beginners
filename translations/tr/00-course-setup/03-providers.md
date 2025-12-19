@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T16:47:35+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T14:57:17+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "tr"
 }
 -->
-# Bir LLM Sağlayıcısı Seçmek ve Yapılandırmak 🔑
+# Bir LLM Sağlayıcısı Seçme ve Yapılandırma 🔑
 
-Ödevler, OpenAI, Azure veya Hugging Face gibi desteklenen bir servis sağlayıcı üzerinden bir veya birden fazla Büyük Dil Modeli (LLM) dağıtımıyla çalışacak şekilde de ayarlanabilir. Bu sağlayıcılar, doğru kimlik bilgileriyle (API anahtarı veya token) programlı olarak erişebileceğimiz _barındırılan bir uç nokta_ (API) sunar. Bu derste şu sağlayıcıları ele alıyoruz:
+Ödevler, OpenAI, Azure veya Hugging Face gibi desteklenen bir hizmet sağlayıcısı aracılığıyla bir veya daha fazla Büyük Dil Modeli (LLM) dağıtımına karşı çalışacak şekilde **ayarlanabilir**. Bunlar, doğru kimlik bilgileri (API anahtarı veya belirteci) ile programatik olarak erişebileceğimiz _barındırılan bir uç nokta_ (API) sağlar. Bu derste, bu sağlayıcıları tartışıyoruz:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst): Çekirdek GPT serisi dahil olmak üzere çeşitli modeller sunar.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst): Kurumsal odaklı OpenAI modelleri için
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst): Açık kaynak modeller ve çıkarım sunucusu için
+ - Çeşitli modelleri içeren [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), temel GPT serisi dahil.
+ - Kurumsal hazır olma odaklı OpenAI modelleri için [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)
+ - Açık kaynak modeller ve çıkarım sunucusu için [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst)
 
-**Bu alıştırmalar için kendi hesaplarınızı kullanmanız gerekecek.** Ödevler isteğe bağlıdır; ilginize göre birini, hepsini veya hiçbirini kurabilirsiniz. Kayıt için bazı öneriler:
+**Bu alıştırmalar için kendi hesaplarınızı kullanmanız gerekecek**. Ödevler isteğe bağlıdır, bu nedenle ilgi alanlarınıza göre birini, hepsini veya hiçbiri sağlayıcıyı kurmayı seçebilirsiniz. Kayıt için bazı rehberlik:
 
-| Kayıt | Maliyet | API Anahtarı | Playground | Yorumlar |
+| Kayıt | Ücret | API Anahtarı | Oyun Alanı | Yorumlar |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Fiyatlandırma](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Proje bazlı](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Kodsuz, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Birden fazla model mevcut |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Fiyatlandırma](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Hızlı Başlangıç](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Hızlı Başlangıç](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Erişim için önceden başvuru yapılmalı](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Fiyatlandırma](https://huggingface.co/pricing) | [Erişim Tokenları](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat'te sınırlı model var](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Fiyatlandırma](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Proje bazlı](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Kod Gerektirmez, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Birden Çok Model Mevcut |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Fiyatlandırma](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Hızlı Başlangıç](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Hızlı Başlangıç](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Erişim İçin Önceden Başvurulmalı](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Fiyatlandırma](https://huggingface.co/pricing) | [Erişim Belirteçleri](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat sınırlı modellere sahip](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Aşağıdaki adımları izleyerek bu depoyu farklı sağlayıcılarla kullanmak için _yapılandırabilirsiniz_. Belirli bir sağlayıcı gerektiren ödevlerin dosya adında şu etiketlerden biri bulunur:
+Bu depoyu farklı sağlayıcılarla kullanmak üzere _yapılandırmak_ için aşağıdaki talimatları izleyin. Belirli bir sağlayıcı gerektiren ödevler, dosya adlarında aşağıdaki etiketlerden birini içerecektir:
 
-- `aoai` - Azure OpenAI uç noktası ve anahtarı gerekir
-- `oai` - OpenAI uç noktası ve anahtarı gerekir
-- `hf` - Hugging Face token gerekir
+- `aoai` - Azure OpenAI uç noktası, anahtarı gerektirir
+- `oai` - OpenAI uç noktası, anahtarı gerektirir
+- `hf` - Hugging Face belirteci gerektirir
 
-Bir, hiçbir veya tüm sağlayıcıları yapılandırabilirsiniz. İlgili ödevler, kimlik bilgileri eksikse hata verecektir.
+Birini, hiçbirini veya tüm sağlayıcıları yapılandırabilirsiniz. İlgili ödevler, eksik kimlik bilgileri durumunda hata verecektir.
 
-## `.env` Dosyası Oluşturma
+## `.env` dosyası oluşturun
 
-Yukarıdaki yönergeleri okuduğunuzu, ilgili sağlayıcıya kaydolduğunuzu ve gerekli kimlik bilgilerini (API_KEY veya token) aldığınızı varsayıyoruz. Azure OpenAI için ayrıca, en az bir GPT modelinin sohbet tamamlaması için dağıtıldığı geçerli bir Azure OpenAI Servisi (uç nokta) dağıtımınızın olduğunu varsayıyoruz.
+Yukarıdaki rehberi okuduğunuzu, ilgili sağlayıcıya kaydolduğunuzu ve gerekli kimlik doğrulama bilgilerini (API_KEY veya belirteç) aldığınızı varsayıyoruz. Azure OpenAI durumunda, en az bir GPT modeli sohbet tamamlama için dağıtılmış geçerli bir Azure OpenAI Hizmeti (uç noktası) dağıtımınızın da olduğunu varsayıyoruz.
 
-Bir sonraki adımda, **yerel ortam değişkenlerinizi** şu şekilde yapılandırmalısınız:
+Bir sonraki adım, **yerel ortam değişkenlerinizi** aşağıdaki gibi yapılandırmaktır:
 
-1. Kök klasörde, aşağıdaki gibi içeriğe sahip bir `.env.copy` dosyası arayın:
+1. Kök klasörde `.env.copy` adlı bir dosya arayın; içeriği şu şekilde olmalıdır:
 
    ```bash
-   # OpenAI Provider
+   # OpenAI Sağlayıcı
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # Varsayılan ayarlandı!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,75 +55,77 @@ Bir sonraki adımda, **yerel ortam değişkenlerinizi** şu şekilde yapılandı
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Bu dosyayı aşağıdaki komutla `.env` olarak kopyalayın. Bu dosya _gitignore_ ile gizlenir, böylece gizli bilgiler korunur.
+2. Aşağıdaki komutla bu dosyayı `.env` olarak kopyalayın. Bu dosya _gitignore_ edilmiştir, sırları güvende tutar.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Sonraki bölümde açıklandığı gibi değerleri doldurun (`=` işaretinin sağındaki yer tutucuları değiştirin).
+3. Değerleri doldurun (`=` işaretinin sağ tarafındaki yer tutucuları değiştirin) ve sonraki bölümde açıklandığı gibi.
 
-4. (Opsiyonel) GitHub Codespaces kullanıyorsanız, ortam değişkenlerini bu depoyla ilişkili _Codespaces secrets_ olarak kaydedebilirsiniz. Bu durumda, yerel bir .env dosyası oluşturmanıza gerek kalmaz. **Ancak, bu seçenek yalnızca GitHub Codespaces kullanıyorsanız geçerlidir.** Docker Desktop kullanıyorsanız yine de .env dosyasını oluşturmanız gerekir.
+4. (İsteğe bağlı) GitHub Codespaces kullanıyorsanız, ortam değişkenlerini bu depoyla ilişkili _Codespaces sırları_ olarak kaydetme seçeneğiniz vardır. Bu durumda, yerel .env dosyası kurmanıza gerek kalmaz. **Ancak, bu seçeneğin yalnızca GitHub Codespaces kullanıyorsanız çalıştığını unutmayın.** Docker Desktop kullanıyorsanız yine .env dosyasını kurmanız gerekecektir.
 
-## `.env` Dosyasını Doldurma
+## `.env` dosyasını doldurun
 
-Değişken adlarının neyi temsil ettiğini hızlıca inceleyelim:
+Değişken adlarının ne anlama geldiğini anlamak için hızlıca bakalım:
 
 | Değişken  | Açıklama  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Profilinizde oluşturduğunuz kullanıcı erişim tokenıdır |
-| OPENAI_API_KEY | Azure dışı OpenAI uç noktaları için servis yetkilendirme anahtarıdır |
-| AZURE_OPENAI_API_KEY | Bu servisi kullanmak için yetkilendirme anahtarıdır |
+| HUGGING_FACE_API_KEY | Profilinizde ayarladığınız kullanıcı erişim belirtecidir |
+| OPENAI_API_KEY | Azure dışı OpenAI uç noktaları için hizmeti kullanma yetkilendirme anahtarıdır |
+| AZURE_OPENAI_API_KEY | Bu hizmeti kullanmak için yetkilendirme anahtarıdır |
 | AZURE_OPENAI_ENDPOINT | Azure OpenAI kaynağı için dağıtılmış uç noktadır |
-| AZURE_OPENAI_DEPLOYMENT | _Metin üretimi_ modeli dağıtım uç noktasıdır |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _Metin gömme_ modeli dağıtım uç noktasıdır |
+| AZURE_OPENAI_DEPLOYMENT | _metin oluşturma_ model dağıtım uç noktasıdır |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _metin gömme_ model dağıtım uç noktasıdır |
 | | |
 
-Not: Son iki Azure OpenAI değişkeni, sırasıyla sohbet tamamlaması (metin üretimi) ve vektör arama (gömme) için varsayılan modeli yansıtır. Bunların nasıl ayarlanacağı ilgili ödevlerde açıklanacaktır.
+Not: Son iki Azure OpenAI değişkeni sırasıyla sohbet tamamlama (metin oluşturma) ve vektör arama (gömmeler) için varsayılan modeli yansıtır. Bunların ayarlanmasıyla ilgili talimatlar ilgili ödevlerde tanımlanacaktır.
 
 ## Azure'u Yapılandırma: Portal Üzerinden
 
-Azure OpenAI uç noktası ve anahtar değerlerini [Azure Portalı](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) üzerinden bulabilirsiniz, bu yüzden oradan başlayalım.
+Azure OpenAI uç noktası ve anahtar değerleri [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) içinde bulunur, o yüzden oradan başlayalım.
 
-1. [Azure Portalı](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) adresine gidin
-1. Sol menüde **Anahtarlar ve Uç Nokta** seçeneğine tıklayın.
-1. **Anahtarları Göster**'e tıklayın - şu değerleri görmelisiniz: KEY 1, KEY 2 ve Uç Nokta.
-1. AZURE_OPENAI_API_KEY için KEY 1 değerini kullanın
+1. [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) adresine gidin
+1. Kenar çubuğunda (sol menü) **Anahtarlar ve Uç Nokta** seçeneğine tıklayın.
+1. **Anahtarları Göster**e tıklayın - aşağıdakileri görmelisiniz: ANAHTAR 1, ANAHTAR 2 ve Uç Nokta.
+1. AZURE_OPENAI_API_KEY için ANAHTAR 1 değerini kullanın
 1. AZURE_OPENAI_ENDPOINT için Uç Nokta değerini kullanın
 
-Şimdi, dağıttığımız belirli modellerin uç noktalarına ihtiyacımız var.
+Sonra, dağıttığımız belirli modellerin uç noktalarına ihtiyacımız var.
 
-1. Azure OpenAI kaynağı için sol menüde **Model dağıtımları** seçeneğine tıklayın.
-1. Açılan sayfada **Dağıtımları Yönet**'e tıklayın
+1. Azure OpenAI kaynağı için kenar çubuğunda (sol menü) **Model dağıtımları** seçeneğine tıklayın.
+1. Hedef sayfada, **Dağıtımları Yönet**e tıklayın
 
-Bu sizi Azure OpenAI Studio web sitesine götürecek, burada aşağıda açıklandığı gibi diğer değerleri bulacağız.
+Bu sizi Azure OpenAI Studio web sitesine götürecek, diğer değerleri aşağıda açıklandığı gibi burada bulacağız.
 
 ## Azure'u Yapılandırma: Studio Üzerinden
 
-1. Yukarıda açıklandığı gibi **kaynağınızdan** [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) adresine gidin.
-1. Sol menüde **Dağıtımlar** sekmesine tıklayarak mevcut dağıtılmış modelleri görüntüleyin.
-1. İstediğiniz model dağıtılmamışsa, **Yeni dağıtım oluştur** seçeneğiyle dağıtın.
-1. Bir _metin üretimi_ modeline ihtiyacınız olacak - önerimiz: **gpt-35-turbo**
+1. Yukarıda açıklandığı gibi, kaynağınızdan [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) adresine gidin.
+1. Şu anda dağıtılmış modelleri görmek için kenar çubuğunda (sol) **Dağıtımlar** sekmesine tıklayın.
+1. İstediğiniz model dağıtılmamışsa, dağıtmak için **Yeni dağıtım oluştur**u kullanın.
+1. Bir _metin oluşturma_ modeline ihtiyacınız olacak - önerimiz: **gpt-35-turbo**
 1. Bir _metin gömme_ modeline ihtiyacınız olacak - önerimiz **text-embedding-ada-002**
 
-Şimdi ortam değişkenlerini, kullandığınız _Dağıtım adı_ ile güncelleyin. Bunu değiştirmediyseniz genellikle model adıyla aynıdır. Örneğin şöyle olabilir:
+Şimdi ortam değişkenlerini, kullanılan _Dağıtım adı_ ile güncelleyin. Bu genellikle modeli açıkça değiştirmediyseniz model adıyla aynı olur. Örneğin, şöyle olabilir:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**İşiniz bittiğinde .env dosyasını kaydetmeyi unutmayın.** Artık dosyadan çıkabilir ve not defterini çalıştırma talimatlarına dönebilirsiniz.
+**İşiniz bittiğinde .env dosyasını kaydetmeyi unutmayın**. Artık dosyadan çıkabilir ve not defterini çalıştırma talimatlarına dönebilirsiniz.
 
 ## OpenAI'yi Yapılandırma: Profil Üzerinden
 
-OpenAI API anahtarınızı [OpenAI hesabınızda](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) bulabilirsiniz. Henüz bir anahtarınız yoksa, bir hesap oluşturup API anahtarı oluşturabilirsiniz. Anahtarı aldıktan sonra, `.env` dosyasındaki `OPENAI_API_KEY` değişkenine ekleyebilirsiniz.
+OpenAI API anahtarınız [OpenAI hesabınızda](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) bulunabilir. Henüz yoksa, bir hesap için kaydolabilir ve bir API anahtarı oluşturabilirsiniz. Anahtarı aldıktan sonra `.env` dosyasındaki `OPENAI_API_KEY` değişkenini doldurmak için kullanabilirsiniz.
 
 ## Hugging Face'i Yapılandırma: Profil Üzerinden
 
-Hugging Face tokenınızı profilinizde [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) bölümünde bulabilirsiniz. Bunları herkese açık olarak paylaşmayın veya yayınlamayın. Bunun yerine, bu proje için yeni bir token oluşturun ve bunu `.env` dosyasındaki `HUGGING_FACE_API_KEY` değişkenine ekleyin. _Not:_ Teknik olarak bu bir API anahtarı değildir, ancak kimlik doğrulama için kullanılır, bu yüzden tutarlılık için bu isimlendirme kullanılmıştır.
+Hugging Face belirteciniz, profilinizdeki [Erişim Belirteçleri](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) altında bulunabilir. Bunları halka açık paylaşmayın veya yayınlamayın. Bunun yerine, bu proje kullanımı için yeni bir belirteç oluşturun ve `.env` dosyasındaki `HUGGING_FACE_API_KEY` değişkenine kopyalayın. _Not:_ Teknik olarak bu bir API anahtarı değildir ancak kimlik doğrulama için kullanılır, bu yüzden tutarlılık için bu adlandırma biçimini koruyoruz.
 
 ---
 
-**Feragatname**:
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerde hata veya yanlışlıklar bulunabilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından doğabilecek herhangi bir yanlış anlama veya yanlış yorumlamadan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:  
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,52 +1,52 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a2a83aac52158c23161046cbd13faa2b",
-  "translation_date": "2025-10-17T19:06:26+00:00",
+  "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+  "translation_date": "2025-12-19T15:18:52+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "sv"
 }
 -->
-[![Open Source-modeller](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.sv.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.sv.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduktion
 
-Världen av öppna LLM-modeller är spännande och ständigt i förändring. Den här lektionen syftar till att ge en djupgående inblick i öppna modeller. Om du letar efter information om hur proprietära modeller jämförs med öppna modeller, gå till lektionen ["Utforska och jämföra olika LLM-modeller"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Den här lektionen kommer också att ta upp ämnet finjustering, men en mer detaljerad förklaring finns i lektionen ["Finjustering av LLM-modeller"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+Världen av open source LLM:er är spännande och ständigt utvecklande. Denna lektion syftar till att ge en djupgående inblick i open source-modeller. Om du letar efter information om hur proprietära modeller jämförs med open source-modeller, gå till ["Utforska och jämföra olika LLM:er"-lektionen](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Denna lektion kommer också att täcka ämnet finjustering, men en mer detaljerad förklaring finns i ["Finjustering av LLM:er"-lektionen](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
 ## Lärandemål
 
-- Få en förståelse för öppna modeller
-- Förstå fördelarna med att arbeta med öppna modeller
+- Få en förståelse för open source-modeller
+- Förstå fördelarna med att arbeta med open source-modeller
 - Utforska de öppna modeller som finns tillgängliga på Hugging Face och Azure AI Studio
 
-## Vad är öppna modeller?
+## Vad är Open Source-modeller?
 
-Öppen källkod har spelat en avgörande roll i teknikens utveckling inom olika områden. Open Source Initiative (OSI) har definierat [10 kriterier för mjukvara](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) för att klassificeras som öppen källkod. Källkoden måste delas öppet under en licens som är godkänd av OSI.
+Open source-programvara har spelat en avgörande roll i teknikens tillväxt inom olika områden. Open Source Initiative (OSI) har definierat [10 kriterier för programvara](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst) för att klassificeras som open source. Källkoden måste delas öppet under en licens godkänd av OSI.
 
-Även om utvecklingen av LLM-modeller har likheter med mjukvaruutveckling, är processen inte exakt densamma. Detta har lett till mycket diskussion i samhället om definitionen av öppen källkod i LLM-sammanhang. För att en modell ska överensstämma med den traditionella definitionen av öppen källkod bör följande information vara offentligt tillgänglig:
+Även om utvecklingen av LLM:er har liknande element som utveckling av programvara, är processen inte exakt densamma. Detta har lett till mycket diskussion i communityn om definitionen av open source i kontexten av LLM:er. För att en modell ska stämma överens med den traditionella definitionen av open source bör följande information vara offentligt tillgänglig:
 
-- Dataset som används för att träna modellen.
+- Dataset som användes för att träna modellen.
 - Fullständiga modellvikter som en del av träningen.
-- Utvärderingskod.
-- Finjusteringskod.
+- Utvärderingskoden.
+- Finjusteringskoden.
 - Fullständiga modellvikter och träningsmetrik.
 
-För närvarande finns det bara några få modeller som uppfyller dessa kriterier. [OLMo-modellen skapad av Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) är en som passar in i denna kategori.
+Det finns för närvarande bara några få modeller som uppfyller dessa kriterier. [OLMo-modellen skapad av Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) är en som passar in i denna kategori.
 
-För den här lektionen kommer vi att hänvisa till modellerna som "öppna modeller" framöver eftersom de kanske inte uppfyller ovanstående kriterier vid skrivandets tidpunkt.
+För denna lektion kommer vi framöver att referera till modellerna som "öppna modeller" eftersom de kanske inte uppfyller ovanstående kriterier vid tidpunkten för skrivandet.
 
 ## Fördelar med öppna modeller
 
-**Hög anpassningsbarhet** - Eftersom öppna modeller släpps med detaljerad träningsinformation kan forskare och utvecklare modifiera modellens interna funktioner. Detta möjliggör skapandet av mycket specialiserade modeller som är finjusterade för en specifik uppgift eller studieområde. Några exempel på detta är kodgenerering, matematiska operationer och biologi.
+**Mycket anpassningsbara** – Eftersom öppna modeller släpps med detaljerad träningsinformation kan forskare och utvecklare modifiera modellens interna delar. Detta möjliggör skapandet av mycket specialiserade modeller som är finjusterade för en specifik uppgift eller studieområde. Några exempel på detta är kodgenerering, matematiska operationer och biologi.
 
-**Kostnad** - Kostnaden per token för att använda och implementera dessa modeller är lägre än för proprietära modeller. När du bygger generativa AI-applikationer bör du jämföra prestanda och pris för dessa modeller i förhållande till din användning.
+**Kostnad** – Kostnaden per token för att använda och distribuera dessa modeller är lägre än för proprietära modeller. När man bygger Generative AI-applikationer bör man titta på prestanda kontra pris när man arbetar med dessa modeller för sitt användningsfall.
 
-![Modellkostnad](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.sv.png)  
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.sv.png)
 Källa: Artificial Analysis
 
-**Flexibilitet** - Att arbeta med öppna modeller gör det möjligt att vara flexibel när det gäller att använda olika modeller eller kombinera dem. Ett exempel på detta är [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) där användaren kan välja vilken modell som används direkt i användargränssnittet:
+**Flexibilitet** – Att arbeta med öppna modeller gör det möjligt att vara flexibel när det gäller att använda olika modeller eller kombinera dem. Ett exempel på detta är [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) där en användare kan välja vilken modell som används direkt i användargränssnittet:
 
-![Välj Modell](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.sv.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.sv.png)
 
 ## Utforska olika öppna modeller
 
@@ -58,36 +58,38 @@ Några exempel på finjusterade versioner av Llama inkluderar [Japanese Llama](h
 
 ### Mistral
 
-[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) är en öppen modell med starkt fokus på hög prestanda och effektivitet. Den använder Mixture-of-Experts-metoden som kombinerar en grupp specialiserade expertmodeller till ett system där vissa modeller väljs beroende på input. Detta gör beräkningen mer effektiv eftersom modeller endast hanterar de inputs de är specialiserade på.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) är en öppen modell med starkt fokus på hög prestanda och effektivitet. Den använder Mixture-of-Experts-metoden som kombinerar en grupp specialiserade expertmodeller till ett system där vissa modeller väljs beroende på input. Detta gör beräkningen mer effektiv eftersom modellerna endast hanterar de inputs de är specialiserade på.
 
-Några exempel på finjusterade versioner av Mistral inkluderar [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), som fokuserar på det medicinska området, och [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), som utför matematiska beräkningar.
+Några exempel på finjusterade versioner av Mistral inkluderar [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), som är fokuserad på medicinområdet, och [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), som utför matematiska beräkningar.
 
 ### Falcon
 
-[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) är en LLM skapad av Technology Innovation Institute (**TII**). Falcon-40B tränades på 40 miljarder parametrar och har visat sig prestera bättre än GPT-3 med mindre beräkningsbudget. Detta beror på dess användning av FlashAttention-algoritmen och multiquery attention som gör det möjligt att minska minneskraven vid inferenstid. Med denna reducerade inferenstid är Falcon-40B lämplig för chattapplikationer.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) är en LLM skapad av Technology Innovation Institute (**TII**). Falcon-40B tränades på 40 miljarder parametrar och har visat sig prestera bättre än GPT-3 med mindre beräkningsbudget. Detta beror på dess användning av FlashAttention-algoritmen och multiquery attention som gör att minneskraven vid inferenstid minskas. Med denna reducerade inferenstid är Falcon-40B lämplig för chattapplikationer.
 
 Några exempel på finjusterade versioner av Falcon är [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), en assistent byggd på öppna modeller, och [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), som levererar högre prestanda än basmodellen.
 
 ## Hur man väljer
 
-Det finns inget enkelt svar på hur man väljer en öppen modell. Ett bra ställe att börja är att använda Azure AI Studios filter för uppgifter. Detta hjälper dig att förstå vilka typer av uppgifter modellen har tränats för. Hugging Face upprätthåller också en LLM Leaderboard som visar de bäst presterande modellerna baserat på vissa metrik.
+Det finns inget enkelt svar på hur man väljer en öppen modell. En bra start är att använda Azure AI Studios filterfunktion för uppgift. Detta hjälper dig att förstå vilka typer av uppgifter modellen har tränats för. Hugging Face underhåller också en LLM Leaderboard som visar de bäst presterande modellerna baserat på vissa mått.
 
-När du vill jämföra LLM-modeller över olika typer är [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) en annan bra resurs:
+När du vill jämföra LLM:er över olika typer är [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) en annan utmärkt resurs:
 
-![Modellkvalitet](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.sv.png)  
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.sv.png)
 Källa: Artificial Analysis
 
-Om du arbetar med ett specifikt användningsområde kan det vara effektivt att söka efter finjusterade versioner som fokuserar på samma område. Att experimentera med flera öppna modeller för att se hur de presterar enligt dina och dina användares förväntningar är också en bra praxis.
+Om du arbetar med ett specifikt användningsfall kan det vara effektivt att söka efter finjusterade versioner som är fokuserade på samma område. Att experimentera med flera öppna modeller för att se hur de presterar enligt dina och dina användares förväntningar är också en bra metod.
 
 ## Nästa steg
 
-Det bästa med öppna modeller är att du kan börja arbeta med dem ganska snabbt. Kolla in [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), som innehåller en specifik Hugging Face-samling med de modeller vi diskuterade här.
+Det bästa med öppna modeller är att du kan börja arbeta med dem ganska snabbt. Kolla in [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), som innehåller en specifik Hugging Face-samling med de modeller vi diskuterat här.
 
 ## Lärandet slutar inte här, fortsätt resan
 
-Efter att ha avslutat denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om generativ AI!
+Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap inom Generative AI!
 
 ---
 
-**Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfriskrivning**:
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
