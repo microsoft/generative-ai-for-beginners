@@ -1,31 +1,31 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T18:15:01+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T16:11:03+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "id"
 }
 -->
-# Setup Lokal 🖥️
+# Pengaturan Lokal 🖥️
 
-**Gunakan panduan ini jika kamu ingin menjalankan semuanya di laptop sendiri.**  
-Ada dua jalur: **(A) Python native + virtual-env** atau **(B) VS Code Dev Container dengan Docker**.  
-Pilih yang paling mudah menurutmu—keduanya akan membawa ke materi yang sama.
+**Gunakan panduan ini jika Anda lebih suka menjalankan semuanya di laptop Anda sendiri.**  
+Anda memiliki dua pilihan: **(A) Python native + virtual-env** atau **(B) VS Code Dev Container dengan Docker**.  
+Pilih yang terasa lebih mudah—keduanya mengarah ke pelajaran yang sama.
 
-## 1. Prasyarat
+## 1.  Prasyarat
 
-| Alat                | Versi / Catatan                                                                       |
-|---------------------|---------------------------------------------------------------------------------------|
-| **Python**          | 3.10 + (unduh dari <https://python.org>)                                              |
-| **Git**             | Terbaru (sudah ada di Xcode / Git for Windows / package manager Linux)                |
-| **VS Code**         | Opsional tapi direkomendasikan <https://code.visualstudio.com>                        |
-| **Docker Desktop**  | *Hanya* untuk Opsi B. Instal gratis: <https://docs.docker.com/desktop/>               |
+| Alat               | Versi / Catatan                                                                      |
+|--------------------|--------------------------------------------------------------------------------------|
+| **Python**         | 3.10 + (dapatkan dari <https://python.org>)                                            |
+| **Git**            | Terbaru (termasuk dengan Xcode / Git untuk Windows / manajer paket Linux)             |
+| **VS Code**        | Opsional tapi direkomendasikan <https://code.visualstudio.com>                        |
+| **Docker Desktop** | *Hanya* untuk Opsi B. Instal gratis: <https://docs.docker.com/desktop/>               |
 
-> 💡 **Tip** – Cek alat di terminal:  
+> 💡 **Tip** – Verifikasi alat di terminal:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2. Opsi A – Python Native (paling cepat)
+## 2.  Opsi A – Python Native (paling cepat)
 
 ### Langkah 1  Clone repo ini
 
@@ -37,12 +37,12 @@ cd generative-ai-for-beginners
 ### Langkah 2 Buat & aktifkan virtual environment
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # buat satu
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Prompt sekarang harus diawali dengan (.venv)—artinya kamu sudah masuk ke environment.
+✅ Prompt sekarang harus dimulai dengan (.venv)—itu berarti Anda sudah berada di dalam env.
 
 ### Langkah 3 Instal dependensi
 
@@ -50,39 +50,39 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-Lanjut ke Bagian 3 tentang [API keys](../../../00-course-setup)
+Langsung ke Bagian 3 tentang [API keys](../../../00-course-setup)
 
 ## 2. Opsi B – VS Code Dev Container (Docker)
 
-Kami menyiapkan repository dan kursus ini dengan [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) yang punya Universal runtime untuk mendukung pengembangan Python3, .NET, Node.js, dan Java. Konfigurasi terkait ada di file `devcontainer.json` di folder `.devcontainer/` pada root repository ini.
+Kami menyiapkan repositori dan kursus ini dengan [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) yang memiliki runtime Universal yang dapat mendukung pengembangan Python3, .NET, Node.js, dan Java. Konfigurasi terkait didefinisikan dalam file `devcontainer.json` yang terletak di folder `.devcontainer/` di root repositori ini.
 
->**Kenapa pilih ini?**
->Lingkungan identik dengan Codespaces; tidak ada perbedaan dependensi.
+>**Mengapa memilih ini?**  
+>Lingkungan identik dengan Codespaces; tidak ada pergeseran dependensi.
 
 ### Langkah 0 Instal tambahan
 
-Docker Desktop – pastikan ```docker --version``` berjalan.
-VS Code Remote – ekstensi Containers (ID: ms-vscode-remote.remote-containers).
+Docker Desktop – pastikan ```docker --version``` berfungsi.  
+Ekstensi VS Code Remote – Containers (ID: ms-vscode-remote.remote-containers).
 
 ### Langkah 1 Buka repo di VS Code
 
 File ▸ Open Folder…  → generative-ai-for-beginners
 
-VS Code akan mendeteksi .devcontainer/ dan menampilkan prompt.
+VS Code mendeteksi .devcontainer/ dan menampilkan prompt.
 
-### Langkah 2 Buka ulang di container
+### Langkah 2 Buka kembali dalam container
 
-Klik “Reopen in Container”. Docker akan membangun image (sekitar 3 menit pertama kali).
-Saat prompt terminal muncul, kamu sudah berada di dalam container.
+Klik “Reopen in Container”. Docker membangun image (≈ 3 menit pertama kali).  
+Saat prompt terminal muncul, Anda sudah berada di dalam container.
 
-## 2. Opsi C – Miniconda
+## 2.  Opsi C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) adalah installer ringan untuk memasang [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, dan beberapa paket.
-Conda sendiri adalah package manager yang memudahkan setup dan berpindah antar [**virtual environment**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) Python dan paket. Juga berguna untuk menginstal paket yang tidak tersedia lewat `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) adalah installer ringan untuk memasang [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, serta beberapa paket.  
+Conda sendiri adalah manajer paket, yang memudahkan pengaturan dan pergantian antara berbagai [**virtual environment**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) dan paket Python. Ini juga berguna untuk memasang paket yang tidak tersedia melalui `pip`.
 
 ### Langkah 0  Instal Miniconda
 
-Ikuti [panduan instalasi MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) untuk setup.
+Ikuti [panduan instalasi MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) untuk mengaturnya.
 
 ```bash
 conda --version
@@ -90,11 +90,11 @@ conda --version
 
 ### Langkah 1 Buat virtual environment
 
-Buat file environment baru (*environment.yml*). Jika kamu mengikuti lewat Codespaces, buat file ini di dalam direktori `.devcontainer`, jadi `.devcontainer/environment.yml`.
+Buat file environment baru (*environment.yml*). Jika Anda mengikuti menggunakan Codespaces, buat ini di dalam direktori `.devcontainer`, jadi `.devcontainer/environment.yml`.
 
-### Langkah 2  Isi file environment-mu
+### Langkah 2  Isi file environment Anda
 
-Tambahkan potongan berikut ke `environment.yml`-mu
+Tambahkan potongan berikut ke `environment.yml` Anda
 
 ```yml
 name: <environment-name>
@@ -111,25 +111,25 @@ dependencies:
 
 ```
 
-### Langkah 3 Buat environment Conda-mu
+### Langkah 3 Buat environment Conda Anda
 
-Jalankan perintah di bawah ini di command line/terminal
+Jalankan perintah di bawah ini di command line/terminal Anda
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # sub path .devcontainer hanya berlaku untuk pengaturan Codespace saja
 conda activate ai4beg
 ```
 
-Lihat [panduan environment Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) jika mengalami masalah.
+Lihat [panduan environment Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) jika Anda mengalami masalah.
 
-## 2 Opsi D – Jupyter Klasik / Jupyter Lab (di browser)
+## 2  Opsi D – Jupyter Klasik / Jupyter Lab (di browser Anda)
 
 > **Untuk siapa ini?**  
-> Siapa saja yang suka tampilan Jupyter klasik atau ingin menjalankan notebook tanpa VS Code.  
+> Siapa saja yang menyukai antarmuka Jupyter klasik atau ingin menjalankan notebook tanpa VS Code.  
 
-### Langkah 1  Pastikan Jupyter sudah terpasang
+### Langkah 1  Pastikan Jupyter terpasang
 
-Untuk menjalankan Jupyter secara lokal, buka terminal/command line, masuk ke direktori kursus, lalu jalankan:
+Untuk memulai Jupyter secara lokal, buka terminal/command line, navigasi ke direktori kursus, dan jalankan:
 
 ```bash
 jupyter notebook
@@ -141,22 +141,22 @@ atau
 jupyterhub
 ```
 
-Ini akan memulai Jupyter dan URL untuk mengaksesnya akan muncul di jendela command line.
+Ini akan memulai instance Jupyter dan URL untuk mengaksesnya akan ditampilkan di jendela command line.
 
-Setelah mengakses URL tersebut, kamu akan melihat outline kursus dan bisa membuka file `*.ipynb` mana saja. Contohnya, `08-building-search-applications/python/oai-solution.ipynb`.
+Setelah Anda mengakses URL tersebut, Anda harus melihat garis besar kursus dan dapat menavigasi ke file `*.ipynb` mana pun. Misalnya, `08-building-search-applications/python/oai-solution.ipynb`.
 
-## 3. Tambahkan API Key-mu
+## 3. Tambahkan API Keys Anda
 
-Menjaga keamanan API key sangat penting saat membangun aplikasi apapun. Kami sarankan untuk tidak menyimpan API key langsung di kode. Jika detail tersebut dikomit ke repository publik, bisa menimbulkan masalah keamanan dan bahkan biaya tak diinginkan jika disalahgunakan.
-Berikut panduan langkah demi langkah membuat file `.env` untuk Python dan menambahkan `GITHUB_TOKEN`:
+Menjaga API keys Anda tetap aman dan terlindungi penting saat membangun aplikasi apa pun. Kami menyarankan untuk tidak menyimpan API keys langsung di kode Anda. Meng-commit detail tersebut ke repositori publik dapat menyebabkan masalah keamanan dan bahkan biaya yang tidak diinginkan jika digunakan oleh pihak yang tidak bertanggung jawab.  
+Berikut panduan langkah demi langkah tentang cara membuat file `.env` untuk Python dan menambahkan `GITHUB_TOKEN`:
 
-1. **Masuk ke Direktori Proyekmu**: Buka terminal atau command prompt dan masuk ke root direktori proyek tempat kamu ingin membuat file `.env`.
+1. **Navigasi ke Direktori Proyek Anda**: Buka terminal atau command prompt dan navigasi ke direktori root proyek Anda di mana Anda ingin membuat file `.env`.
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **Buat File `.env`**: Gunakan text editor favoritmu untuk membuat file baru bernama `.env`. Jika lewat command line, bisa pakai `touch` (di sistem Unix) atau `echo` (di Windows):
+2. **Buat File `.env`**: Gunakan editor teks favorit Anda untuk membuat file baru bernama `.env`. Jika menggunakan command line, Anda dapat menggunakan `touch` (pada sistem berbasis Unix) atau `echo` (pada Windows):
 
    Sistem berbasis Unix:
 
@@ -170,61 +170,63 @@ Berikut panduan langkah demi langkah membuat file `.env` untuk Python dan menamb
    echo . > .env
    ```
 
-3. **Edit File `.env`**: Buka file `.env` di text editor (misal VS Code, Notepad++, atau editor lain). Tambahkan baris berikut ke file, ganti `your_github_token_here` dengan token GitHub-mu yang sebenarnya:
+3. **Edit File `.env`**: Buka file `.env` di editor teks (misalnya, VS Code, Notepad++, atau editor lain). Tambahkan baris berikut ke file, ganti `your_github_token_here` dengan token GitHub Anda yang sebenarnya:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **Simpan File**: Simpan perubahan dan tutup text editor.
+4. **Simpan File**: Simpan perubahan dan tutup editor teks.
 
-5. **Instal `python-dotenv`**: Jika belum, kamu perlu menginstal paket `python-dotenv` untuk memuat variabel environment dari file `.env` ke aplikasi Python-mu. Instal dengan `pip`:
+5. **Instal `python-dotenv`**: Jika belum, Anda perlu memasang paket `python-dotenv` untuk memuat variabel lingkungan dari file `.env` ke aplikasi Python Anda. Anda dapat memasangnya menggunakan `pip`:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Muat Variabel Environment di Script Python-mu**: Di script Python-mu, gunakan paket `python-dotenv` untuk memuat variabel environment dari file `.env`:
+6. **Muat Variabel Lingkungan di Skrip Python Anda**: Dalam skrip Python Anda, gunakan paket `python-dotenv` untuk memuat variabel lingkungan dari file `.env`:
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # Load environment variables from .env file
+   # Muat variabel lingkungan dari file .env
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
+   # Akses variabel GITHUB_TOKEN
    github_token = os.getenv("GITHUB_TOKEN")
 
    print(github_token)
    ```
 
-Selesai! Kamu sudah berhasil membuat file `.env`, menambahkan token GitHub, dan memuatnya ke aplikasi Python-mu.
+Selesai! Anda telah berhasil membuat file `.env`, menambahkan token GitHub Anda, dan memuatnya ke aplikasi Python Anda.
 
-🔐 Jangan pernah commit .env—file ini sudah ada di .gitignore.
-Instruksi lengkap tiap provider ada di [`providers.md`](03-providers.md).
+🔐 Jangan pernah commit .env—file ini sudah ada di .gitignore.  
+Instruksi lengkap penyedia ada di [`providers.md`](03-providers.md).
 
-## 4. Selanjutnya apa?
+## 4. Apa selanjutnya?
 
-| Saya ingin…         | Lanjut ke…                                                                 |
-|---------------------|----------------------------------------------------------------------------|
-| Mulai Pelajaran 1   | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)        |
-| Setup LLM Provider  | [`providers.md`](03-providers.md)                                          |
-| Bertemu peserta lain| [Gabung Discord kami](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| Saya ingin…          | Pergi ke…                                                               |
+|---------------------|-------------------------------------------------------------------------|
+| Mulai Pelajaran 1   | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Mengatur Penyedia LLM | [`providers.md`](03-providers.md)                                       |
+| Bertemu pelajar lain | [Bergabung dengan Discord kami](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## 5. Pemecahan Masalah
 
-| Gejala                                    | Solusi                                                          |
-|-------------------------------------------|-----------------------------------------------------------------|
-| `python not found`                        | Tambahkan Python ke PATH atau buka ulang terminal setelah instal |
-| `pip` tidak bisa build wheels (Windows)   | `pip install --upgrade pip setuptools wheel` lalu coba lagi.    |
-| `ModuleNotFoundError: dotenv`             | Jalankan `pip install -r requirements.txt` (env belum terpasang).|
-| Docker build gagal *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → tambah ukuran disk. |
-| VS Code terus meminta reopen              | Mungkin dua opsi aktif; pilih salah satu (venv **atau** container)|
-| OpenAI 401 / 429 errors                   | Cek nilai `OPENAI_API_KEY` / batas request.                     |
-| Error saat pakai Conda                    | Instal library AI Microsoft dengan `conda install -c microsoft azure-ai-ml`|
+| Gejala                                   | Solusi                                                          |
+|-----------------------------------------|-----------------------------------------------------------------|
+| `python not found`                      | Tambahkan Python ke PATH atau buka kembali terminal setelah instalasi |
+| `pip` tidak bisa membangun wheels (Windows) | `pip install --upgrade pip setuptools wheel` lalu coba lagi.    |
+| `ModuleNotFoundError: dotenv`           | Jalankan `pip install -r requirements.txt` (env belum terpasang).|
+| Docker build gagal *No space left*      | Docker Desktop ▸ *Settings* ▸ *Resources* → tingkatkan ukuran disk. |
+| VS Code terus meminta untuk membuka ulang | Anda mungkin mengaktifkan kedua Opsi; pilih salah satu (venv **atau** container) |
+| OpenAI 401 / 429 errors                 | Periksa nilai `OPENAI_API_KEY` / batas permintaan.               |
+| Error menggunakan Conda                  | Pasang pustaka Microsoft AI menggunakan `conda install -c microsoft azure-ai-ml` |
 
 ---
 
-**Disclaimer**:
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan terjemahan yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:  
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
