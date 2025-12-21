@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "12477b7fa0b2fcfa2aafba13be6a1bb4",
-  "translation_date": "2025-12-19T12:24:17+00:00",
+  "original_hash": "4d022651f0c17151c68255e41a68e4ed",
+  "translation_date": "2025-12-21T10:19:36+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
@@ -173,6 +173,6 @@ If you have product feedback or errors while building visit:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document was translated using the AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
