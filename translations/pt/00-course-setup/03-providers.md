@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T16:13:48+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T14:31:13+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "pt"
 }
 -->
-# Escolher e Configurar um Fornecedor de LLM 🔑
+# Escolher e Configurar um Provedor LLM 🔑
 
-Os exercícios **podem** ser configurados para funcionar com uma ou mais implementações de Large Language Model (LLM) através de um fornecedor de serviços suportado, como OpenAI, Azure ou Hugging Face. Estes fornecedores disponibilizam um _endpoint alojado_ (API) ao qual podemos aceder programaticamente com as credenciais certas (chave API ou token). Neste curso, abordamos os seguintes fornecedores:
+As tarefas **podem** também ser configuradas para funcionar com uma ou mais implementações de Modelos de Linguagem Grande (LLM) através de um provedor de serviço suportado como OpenAI, Azure ou Hugging Face. Estes fornecem um _endpoint hospedado_ (API) ao qual podemos aceder programaticamente com as credenciais corretas (chave API ou token). Neste curso, discutimos estes provedores:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) com vários modelos, incluindo a série principal GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) para modelos OpenAI com foco em soluções empresariais
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) com modelos diversos incluindo a série principal GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) para modelos OpenAI com foco em prontidão empresarial
  - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) para modelos open-source e servidor de inferência
 
-**Terás de usar as tuas próprias contas nestes exercícios**. Os exercícios são opcionais, por isso podes escolher configurar um, todos - ou nenhum - dos fornecedores, conforme o teu interesse. Algumas indicações para o registo:
+**Vai precisar de usar as suas próprias contas para estes exercícios**. As tarefas são opcionais, por isso pode escolher configurar um, todos - ou nenhum - dos provedores conforme os seus interesses. Algumas orientações para inscrição:
 
-| Registo | Custo | Chave API | Playground | Comentários |
+| Inscrição | Custo | Chave API | Playground | Comentários |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Preços](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Por projeto](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Sem código, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Vários modelos disponíveis |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Preços](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [É necessário pedir acesso antecipadamente](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Preços](https://huggingface.co/pricing) | [Tokens de acesso](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [O Hugging Chat tem modelos limitados](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Preços](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Baseado em projeto](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Sem Código, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Vários Modelos Disponíveis |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Preços](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Início Rápido SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Início Rápido Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [É Necessário Solicitar Acesso](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Preços](https://huggingface.co/pricing) | [Tokens de Acesso](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat tem modelos limitados](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Segue as instruções abaixo para _configurar_ este repositório para utilização com diferentes fornecedores. Os exercícios que exigem um fornecedor específico terão um destes identificadores no nome do ficheiro:
+Siga as instruções abaixo para _configurar_ este repositório para uso com diferentes provedores. As tarefas que requerem um provedor específico conterão uma destas etiquetas no nome do ficheiro:
 
-- `aoai` - requer endpoint e chave do Azure OpenAI
-- `oai` - requer endpoint e chave do OpenAI
-- `hf` - requer token do Hugging Face
+- `aoai` - requer endpoint e chave Azure OpenAI
+- `oai` - requer endpoint e chave OpenAI
+- `hf` - requer token Hugging Face
 
-Podes configurar um, nenhum ou todos os fornecedores. Os exercícios relacionados vão simplesmente dar erro se faltar alguma credencial.
+Pode configurar um, nenhum ou todos os provedores. As tarefas relacionadas simplesmente gerarão erro se as credenciais estiverem em falta.
 
 ## Criar ficheiro `.env`
 
-Assumimos que já leste as indicações acima, te registaste no fornecedor relevante e obtiveste as credenciais de autenticação necessárias (API_KEY ou token). No caso do Azure OpenAI, assumimos também que tens uma implementação válida do serviço Azure OpenAI (endpoint) com pelo menos um modelo GPT implementado para chat completion.
+Assumimos que já leu as orientações acima, inscreveu-se no provedor relevante e obteve as credenciais de autenticação necessárias (API_KEY ou token). No caso do Azure OpenAI, assumimos também que tem uma implementação válida de um Serviço Azure OpenAI (endpoint) com pelo menos um modelo GPT implementado para conclusão de chat.
 
-O próximo passo é configurar as **variáveis de ambiente locais** da seguinte forma:
+O próximo passo é configurar as suas **variáveis de ambiente locais** da seguinte forma:
 
-1. Procura na pasta raiz um ficheiro `.env.copy` que deverá ter um conteúdo semelhante a este:
+1. Procure na pasta raiz um ficheiro `.env.copy` que deverá ter um conteúdo como este:
 
    ```bash
-   # OpenAI Provider
+   # Fornecedor OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # Padrão definido!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,75 +55,77 @@ O próximo passo é configurar as **variáveis de ambiente locais** da seguinte 
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Copia esse ficheiro para `.env` usando o comando abaixo. Este ficheiro está _gitignore-d_, mantendo os segredos protegidos.
+2. Copie esse ficheiro para `.env` usando o comando abaixo. Este ficheiro está _gitignore-d_, mantendo os segredos seguros.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Preenche os valores (substitui os espaços reservados à direita do `=`) conforme descrito na secção seguinte.
+3. Preencha os valores (substitua os espaços reservados do lado direito do `=`) conforme descrito na secção seguinte.
 
-4. (Opcional) Se usares o GitHub Codespaces, tens a opção de guardar variáveis de ambiente como _Codespaces secrets_ associados a este repositório. Nesse caso, não precisas de configurar o ficheiro .env localmente. **No entanto, esta opção só funciona se usares o GitHub Codespaces.** Se usares o Docker Desktop, terás de configurar o ficheiro .env na mesma.
+4. (Opcional) Se usar GitHub Codespaces, tem a opção de guardar variáveis de ambiente como _segredos Codespaces_ associados a este repositório. Nesse caso, não precisará de configurar um ficheiro .env local. **No entanto, note que esta opção funciona apenas se usar GitHub Codespaces.** Ainda precisará de configurar o ficheiro .env se usar Docker Desktop.
 
-## Preencher o ficheiro `.env`
+## Preencher ficheiro `.env`
 
-Vamos analisar rapidamente os nomes das variáveis para perceber o que representam:
+Vamos dar uma vista rápida aos nomes das variáveis para entender o que representam:
 
 | Variável  | Descrição  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Este é o token de acesso do utilizador que configuras no teu perfil |
-| OPENAI_API_KEY | Esta é a chave de autorização para usar o serviço em endpoints OpenAI que não sejam Azure |
+| HUGGING_FACE_API_KEY | Este é o token de acesso do utilizador que configurou no seu perfil |
+| OPENAI_API_KEY | Esta é a chave de autorização para usar o serviço para endpoints OpenAI não Azure |
 | AZURE_OPENAI_API_KEY | Esta é a chave de autorização para usar esse serviço |
 | AZURE_OPENAI_ENDPOINT | Este é o endpoint implementado para um recurso Azure OpenAI |
 | AZURE_OPENAI_DEPLOYMENT | Este é o endpoint de implementação do modelo de _geração de texto_ |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Este é o endpoint de implementação do modelo de _embeddings de texto_ |
 | | |
 
-Nota: As duas últimas variáveis do Azure OpenAI referem-se ao modelo predefinido para chat completion (geração de texto) e pesquisa vetorial (embeddings), respetivamente. As instruções para as definir serão dadas nos exercícios relevantes.
+Nota: As duas últimas variáveis Azure OpenAI refletem um modelo padrão para conclusão de chat (geração de texto) e pesquisa vetorial (embeddings), respetivamente. As instruções para configurá-las serão definidas nas tarefas relevantes.
 
-## Configurar Azure: A partir do Portal
+## Configurar Azure: Pelo Portal
 
-Os valores do endpoint e da chave do Azure OpenAI encontram-se no [Portal Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), por isso vamos começar por aí.
+Os valores do endpoint e chave Azure OpenAI serão encontrados no [Portal Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), por isso vamos começar por aí.
 
-1. Vai ao [Portal Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Clica na opção **Keys and Endpoint** na barra lateral (menu à esquerda).
-1. Clica em **Show Keys** - deves ver: KEY 1, KEY 2 e Endpoint.
-1. Usa o valor de KEY 1 para AZURE_OPENAI_API_KEY
-1. Usa o valor de Endpoint para AZURE_OPENAI_ENDPOINT
+1. Vá ao [Portal Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Clique na opção **Chaves e Endpoint** na barra lateral (menu à esquerda).
+1. Clique em **Mostrar Chaves** - deverá ver o seguinte: CHAVE 1, CHAVE 2 e Endpoint.
+1. Use o valor da CHAVE 1 para AZURE_OPENAI_API_KEY
+1. Use o valor do Endpoint para AZURE_OPENAI_ENDPOINT
 
-De seguida, precisamos dos endpoints para os modelos específicos que implementaste.
+De seguida, precisamos dos endpoints para os modelos específicos que implementámos.
 
-1. Clica na opção **Model deployments** na barra lateral (menu à esquerda) do recurso Azure OpenAI.
-1. Na página de destino, clica em **Manage Deployments**
+1. Clique na opção **Implementações de modelo** na barra lateral (menu à esquerda) para o recurso Azure OpenAI.
+1. Na página de destino, clique em **Gerir Implementações**
 
-Isto leva-te ao site do Azure OpenAI Studio, onde vais encontrar os outros valores conforme descrito abaixo.
+Isto levará ao website Azure OpenAI Studio, onde encontraremos os outros valores conforme descrito abaixo.
 
-## Configurar Azure: A partir do Studio
+## Configurar Azure: Pelo Studio
 
-1. Vai ao [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **a partir do teu recurso** como descrito acima.
-1. Clica no separador **Deployments** (barra lateral, à esquerda) para ver os modelos atualmente implementados.
-1. Se o modelo que queres não estiver implementado, usa **Create new deployment** para o implementar.
-1. Vais precisar de um modelo de _geração de texto_ - recomendamos: **gpt-35-turbo**
-1. Vais precisar de um modelo de _embeddings de texto_ - recomendamos **text-embedding-ada-002**
+1. Navegue para o [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **a partir do seu recurso** conforme descrito acima.
+1. Clique no separador **Implementações** (barra lateral, esquerda) para ver os modelos atualmente implementados.
+1. Se o modelo desejado não estiver implementado, use **Criar nova implementação** para o implementar.
+1. Vai precisar de um modelo de _geração de texto_ - recomendamos: **gpt-35-turbo**
+1. Vai precisar de um modelo de _embedding de texto_ - recomendamos **text-embedding-ada-002**
 
-Agora atualiza as variáveis de ambiente para refletir o _nome da implementação_ usado. Normalmente será igual ao nome do modelo, a menos que o tenhas alterado. Por exemplo, podes ter:
+Agora atualize as variáveis de ambiente para refletir o _Nome da implementação_ usado. Normalmente será o mesmo que o nome do modelo, a menos que o tenha alterado explicitamente. Por exemplo, poderá ter:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Não te esqueças de guardar o ficheiro .env quando terminares**. Podes agora sair do ficheiro e voltar às instruções para executar o notebook.
+**Não se esqueça de guardar o ficheiro .env quando terminar**. Pode agora sair do ficheiro e voltar às instruções para executar o notebook.
 
-## Configurar OpenAI: A partir do Perfil
+## Configurar OpenAI: Pelo Perfil
 
-A tua chave API do OpenAI pode ser encontrada na tua [conta OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Se ainda não tens uma, podes criar uma conta e gerar uma chave API. Depois de teres a chave, podes usá-la para preencher a variável `OPENAI_API_KEY` no ficheiro `.env`.
+A sua chave API OpenAI pode ser encontrada na sua [conta OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Se não tiver uma, pode inscrever-se para uma conta e criar uma chave API. Depois de ter a chave, pode usá-la para preencher a variável `OPENAI_API_KEY` no ficheiro `.env`.
 
-## Configurar Hugging Face: A partir do Perfil
+## Configurar Hugging Face: Pelo Perfil
 
-O teu token do Hugging Face encontra-se no teu perfil em [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Não partilhes nem publiques estes tokens. Em vez disso, cria um novo token para este projeto e copia-o para o ficheiro `.env` na variável `HUGGING_FACE_API_KEY`. _Nota:_ Tecnicamente isto não é uma chave API, mas é usado para autenticação, por isso mantemos essa convenção de nome para consistência.
+O seu token Hugging Face pode ser encontrado no seu perfil em [Tokens de Acesso](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Não publique nem partilhe estes publicamente. Em vez disso, crie um novo token para uso neste projeto e copie-o para o ficheiro `.env` na variável `HUGGING_FACE_API_KEY`. _Nota:_ Tecnicamente, isto não é uma chave API, mas é usado para autenticação, por isso mantemos essa convenção de nomenclatura para consistência.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

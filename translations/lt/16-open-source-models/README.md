@@ -1,93 +1,95 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a2a83aac52158c23161046cbd13faa2b",
-  "translation_date": "2025-10-18T02:33:28+00:00",
+  "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+  "translation_date": "2025-12-19T17:52:33+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "lt"
 }
 -->
-[![Atvirojo kodo modeliai](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.lt.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Atviro kodo modeliai](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.lt.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Įvadas
 
-Atvirojo kodo LLM pasaulis yra įdomus ir nuolat besikeičiantis. Ši pamoka siekia išsamiai apžvelgti atvirojo kodo modelius. Jei ieškote informacijos apie tai, kaip patentuoti modeliai lyginami su atvirojo kodo modeliais, apsilankykite pamokoje ["Skirtingų LLM tyrinėjimas ir palyginimas"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Šioje pamokoje taip pat bus aptarta modelių pritaikymo tema, tačiau išsamesnį paaiškinimą rasite pamokoje ["LLM pritaikymas"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+Atvirojo kodo LLM pasaulis yra įdomus ir nuolat besikeičiantis. Šios pamokos tikslas – išsamiai apžvelgti atvirojo kodo modelius. Jei ieškote informacijos, kaip savininkiški modeliai lyginami su atvirojo kodo modeliais, eikite į ["Skirtingų LLM tyrinėjimo ir palyginimo" pamoką](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Šioje pamokoje taip pat bus aptariama smulkiojo derinimo tema, tačiau išsamesnį paaiškinimą rasite ["LLM smulkusis derinimas" pamokoje](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
 ## Mokymosi tikslai
 
 - Suprasti atvirojo kodo modelius
-- Suprasti atvirojo kodo modelių privalumus
+- Suprasti darbo su atvirojo kodo modeliais privalumus
 - Tyrinėti atvirus modelius, prieinamus Hugging Face ir Azure AI Studio platformose
 
 ## Kas yra atvirojo kodo modeliai?
 
-Atvirojo kodo programinė įranga atliko svarbų vaidmenį technologijų plėtroje įvairiose srityse. Atvirojo kodo iniciatyva (OSI) apibrėžė [10 kriterijų programinei įrangai](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), kad ji būtų klasifikuojama kaip atvirojo kodo. Programos kodas turi būti viešai dalijamas pagal OSI patvirtintą licenciją.
+Atvirojo kodo programinė įranga vaidino svarbų vaidmenį technologijų augime įvairiose srityse. Atvirojo kodo iniciatyva (OSI) apibrėžė [10 kriterijų programinei įrangai](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), kad ji būtų priskirta atvirajam kodui. Šaltinio kodas turi būti viešai prieinamas pagal OSI patvirtintą licenciją.
 
-Nors LLM kūrimas turi panašumų su programinės įrangos kūrimu, procesas nėra visiškai toks pats. Dėl to bendruomenėje kyla daug diskusijų apie atvirojo kodo apibrėžimą LLM kontekste. Kad modelis atitiktų tradicinį atvirojo kodo apibrėžimą, turėtų būti viešai prieinama ši informacija:
+Nors LLM kūrimas turi panašumų su programinės įrangos kūrimu, procesas nėra visiškai tas pats. Tai sukėlė daug diskusijų bendruomenėje apie atvirojo kodo apibrėžimą LLM kontekste. Kad modelis atitiktų tradicinį atvirojo kodo apibrėžimą, turėtų būti viešai prieinama ši informacija:
 
-- Duomenų rinkiniai, naudoti modelio mokymui.
-- Pilni modelio svoriai kaip mokymo dalis.
+- Duomenų rinkiniai, naudoti modeliui treniruoti.
+- Pilni modelio svoriai kaip treniravimo dalis.
 - Vertinimo kodas.
-- Pritaikymo kodas.
-- Pilni modelio svoriai ir mokymo metrikos.
+- Smulkiojo derinimo kodas.
+- Pilni modelio svoriai ir treniravimo metrika.
 
-Šiuo metu yra tik keli modeliai, atitinkantys šiuos kriterijus. [OLMo modelis, sukurtas Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) yra vienas iš jų.
+Šiuo metu yra tik keletas modelių, atitinkančių šiuos kriterijus. [OLMo modelis, sukurtas Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) yra vienas iš jų.
 
-Šioje pamokoje toliau modelius vadinsime "atvirais modeliais", nes jie gali neatitikti aukščiau nurodytų kriterijų šio teksto rašymo metu.
+Šioje pamokoje toliau modelius vadinsime „atvirais modeliais“, nes jie gali neatitikti aukščiau nurodytų kriterijų rašymo metu.
 
 ## Atvirų modelių privalumai
 
-**Labai pritaikomi** - Kadangi atviri modeliai pateikiami su išsamia mokymo informacija, tyrėjai ir kūrėjai gali keisti modelio vidinę struktūrą. Tai leidžia kurti labai specializuotus modelius, pritaikytus konkrečiai užduočiai ar studijų sričiai. Kai kurie pavyzdžiai yra kodo generavimas, matematinės operacijos ir biologija.
+**Labai pritaikomi** – Kadangi atviri modeliai išleidžiami su išsamiomis treniravimo detalėmis, tyrėjai ir kūrėjai gali keisti modelio vidinius elementus. Tai leidžia kurti labai specializuotus modelius, smulkiai derintus konkrečiai užduočiai ar sričiai. Pavyzdžiai – kodo generavimas, matematiniai veiksmai ir biologija.
 
-**Kaina** - Kaina už vieną tokeną naudojant ir diegiant šiuos modelius yra mažesnė nei patentuotų modelių. Kuriant generatyviosios AI programas, verta įvertinti našumą ir kainą, dirbant su šiais modeliais pagal jūsų naudojimo atvejį.
+**Kaina** – Kaina už žetoną naudojant ir diegiant šiuos modelius yra mažesnė nei savininkiškų modelių. Kuriant generatyviosios AI programas, svarbu įvertinti našumą ir kainą, dirbant su šiais modeliais savo atveju.
 
-![Modelio kaina](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.lt.png)  
+![Modelio kaina](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.lt.png)
 Šaltinis: Artificial Analysis
 
-**Lankstumas** - Darbas su atvirais modeliais leidžia būti lankstiems naudojant skirtingus modelius arba juos derinant. Pavyzdys yra [HuggingChat Asistentai](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kur vartotojas gali tiesiogiai vartotojo sąsajoje pasirinkti naudojamą modelį:
+**Lankstumas** – Darbas su atvirais modeliais leidžia būti lanksčiam renkantis skirtingus modelius arba juos derinant. Pavyzdys – [HuggingChat asistentai](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kur vartotojas gali tiesiogiai vartotojo sąsajoje pasirinkti naudojamą modelį:
 
-![Pasirinkti modelį](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.lt.png)
+![Pasirinkite modelį](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.lt.png)
 
 ## Skirtingų atvirų modelių tyrinėjimas
 
 ### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), sukurtas Meta, yra atviras modelis, optimizuotas pokalbių programoms. Tai pasiekta naudojant pritaikymo metodą, kuris apėmė didelį kiekį dialogų ir žmonių atsiliepimų. Šis metodas leidžia modeliui generuoti rezultatus, labiau atitinkančius žmonių lūkesčius, taip užtikrinant geresnę vartotojo patirtį.
+[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), sukurtas Meta, yra atviras modelis, optimizuotas pokalbių programoms. Tai lemia jo smulkiojo derinimo metodas, apimantis daug dialogų ir žmogaus atsiliepimų. Šiuo metodu modelis generuoja rezultatus, labiau atitinkančius žmogaus lūkesčius, kas suteikia geresnę vartotojo patirtį.
 
-Kai kurie pritaikyti Llama versijų pavyzdžiai yra [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), kuris specializuojasi japonų kalboje, ir [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), kuris yra patobulinta bazinio modelio versija.
+Kai kurie smulkiai derinti Llama versijų pavyzdžiai yra [Japonų Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), specializuotas japonų kalboje, ir [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), kuris yra patobulinta bazinio modelio versija.
 
 ### Mistral
 
-[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) yra atviras modelis, orientuotas į aukštą našumą ir efektyvumą. Jis naudoja Mixture-of-Experts metodą, kuris sujungia grupę specializuotų ekspertų modelių į vieną sistemą, kurioje, priklausomai nuo įvesties, pasirenkami tam tikri modeliai. Tai daro skaičiavimus efektyvesnius, nes modeliai sprendžia tik tas įvestis, kuriose jie specializuojasi.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) yra atviras modelis, orientuotas į aukštą našumą ir efektyvumą. Jis naudoja ekspertų mišinio (Mixture-of-Experts) metodą, kuris sujungia grupę specializuotų ekspertų modelių į vieną sistemą, kurioje, priklausomai nuo įvesties, pasirenkami tam tikri modeliai. Tai leidžia efektyviau skaičiuoti, nes modeliai apdoroja tik tuos įėjimus, kuriuose yra specializuoti.
 
-Kai kurie pritaikyti Mistral versijų pavyzdžiai yra [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), kuris orientuotas į medicinos sritį, ir [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), kuris atlieka matematinius skaičiavimus.
+Kai kurie smulkiai derinti Mistral versijų pavyzdžiai yra [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), orientuotas į medicinos sritį, ir [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), atliekantis matematinius skaičiavimus.
 
 ### Falcon
 
-[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) yra LLM, sukurtas Technology Innovation Institute (**TII**). Falcon-40B buvo apmokytas naudojant 40 milijardų parametrų, kurie parodė geresnį našumą nei GPT-3 su mažesniu skaičiavimo biudžetu. Tai pasiekta naudojant FlashAttention algoritmą ir multiquery attention, kurie leidžia sumažinti atminties poreikius prognozavimo metu. Dėl sumažinto prognozavimo laiko Falcon-40B yra tinkamas pokalbių programoms.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) yra LLM, sukurtas Technology Innovation Institute (**TII**). Falcon-40B buvo treniruotas su 40 milijardų parametrų ir įrodyta, kad jis veikia geriau nei GPT-3, naudojant mažesnį skaičiavimo biudžetą. Tai pasiekta naudojant FlashAttention algoritmą ir multiquery dėmesį, kurie sumažina atminties poreikius inferencijos metu. Dėl sumažinto inferencijos laiko Falcon-40B tinka pokalbių programoms.
 
-Kai kurie pritaikyti Falcon versijų pavyzdžiai yra [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), asistentas, sukurtas remiantis atvirais modeliais, ir [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), kuris užtikrina geresnį našumą nei bazinis modelis.
+Kai kurie smulkiai derinti Falcon versijų pavyzdžiai yra [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), asistentas, sukurtas ant atvirų modelių, ir [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), kuris pasižymi geresniu našumu nei bazinis modelis.
 
 ## Kaip pasirinkti
 
-Nėra vieno teisingo atsakymo, kaip pasirinkti atvirą modelį. Geras pradžios taškas yra naudoti Azure AI Studio funkciją, leidžiančią filtruoti pagal užduotį. Tai padės suprasti, kokioms užduotims modelis buvo apmokytas. Hugging Face taip pat palaiko LLM lyderių lentelę, kurioje pateikiami geriausiai veikiantys modeliai pagal tam tikrus metrikos rodiklius.
+Nėra vieno atsakymo, kaip pasirinkti atvirą modelį. Geras pradžios taškas – naudoti Azure AI Studio filtrą pagal užduotį. Tai padės suprasti, kokiems uždaviniams modelis buvo treniruotas. Hugging Face taip pat palaiko LLM lyderių lentelę, kurioje rodomi geriausiai veikiančių modelių rezultatai pagal tam tikrus rodiklius.
 
-Norint palyginti LLM skirtingų tipų modelius, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) yra dar vienas puikus šaltinis:
+Ieškant LLM palyginimų tarp skirtingų tipų, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) yra dar viena puiki priemonė:
 
-![Modelio kokybė](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.lt.png)  
+![Modelio kokybė](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.lt.png)
 Šaltinis: Artificial Analysis
 
-Jei dirbate su konkrečiu naudojimo atveju, efektyvu ieškoti pritaikytų versijų, orientuotų į tą pačią sritį. Eksperimentavimas su keliais atvirais modeliais, siekiant pamatyti, kaip jie veikia pagal jūsų ir jūsų vartotojų lūkesčius, yra dar viena gera praktika.
+Dirbant su konkrečiu atveju, efektyvu ieškoti smulkiai derintų versijų, orientuotų į tą pačią sritį. Eksperimentavimas su keliais atvirais modeliais, siekiant įvertinti jų veikimą pagal jūsų ir vartotojų lūkesčius, taip pat yra gera praktika.
 
-## Kiti žingsniai
+## Tolimesni žingsniai
 
-Geriausia atvirų modelių dalis yra ta, kad galite pradėti dirbti su jais gana greitai. Peržiūrėkite [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), kuriame yra speciali Hugging Face kolekcija su šiais modeliais, kuriuos aptarėme čia.
+Geriausia atvirų modelių dalis yra ta, kad galite greitai pradėti su jais dirbti. Peržiūrėkite [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), kuriame yra speciali Hugging Face kolekcija su šiomis čia aptartomis modelių versijomis.
 
-## Mokymasis nesibaigia čia, tęskite kelionę
+## Mokymasis čia nesibaigia, tęskite kelionę
 
-Baigę šią pamoką, apsilankykite mūsų [Generatyviosios AI mokymosi kolekcijoje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyviąją AI!
+Baigę šią pamoką, peržiūrėkite mūsų [Generatyvios AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyviąją AI!
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, atsiradusius naudojant šį vertimą.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

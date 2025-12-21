@@ -1,100 +1,100 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T19:54:30+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T17:40:46+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "my"
 }
 -->
-# Local Setup 🖥️
+# ဒေသတွင်း စတင်ပြင်ဆင်ခြင်း 🖥️
 
-**ဒီလမ်းညွှန်ကို သင့်ရဲ့ laptop ပေါ်မှာ တစ်ခုချင်းစီ run လုပ်ချင်သူများအတွက် အသုံးပြုပါ။**  
-သင့်မှာ လမ်းကြောင်းနှစ်ခု ရွေးနိုင်ပါတယ် - **(A) native Python + virtual-env** သို့မဟုတ် **(B) VS Code Dev Container နဲ့ Docker**  
-အလွယ်ဆုံးထင်တဲ့နည်းကို ရွေးပါ—နှစ်ခုလုံးက တူညီတဲ့ သင်ခန်းစာတွေကိုရောက်ပါတယ်။
+**သင့်ရဲ့ ကိုယ်ပိုင် လက်ပ်တော့ပေါ်မှာ အားလုံးကို ပြေးဆွဲချင်ရင် ဒီလမ်းညွှန်ကို အသုံးပြုပါ။**  
+သင်မှာ နှစ်ခုသော လမ်းကြောင်းရှိပါတယ် - **(A) native Python + virtual-env** သို့မဟုတ် **(B) VS Code Dev Container with Docker**။  
+လွယ်ကူသလို ခံစားရတဲ့ ဘယ်ဟာမဆို ရွေးချယ်ပါ—နှစ်ခုလုံးက တူညီတဲ့ သင်ခန်းစာတွေကို ဦးတည်ပါတယ်။
 
-## 1.  လိုအပ်ချက်များ
+## 1.  မလိုအပ်မီ အချက်အလက်များ
 
-| Tool               | Version / Notes                                                                      |
+| ကိရိယာ               | ဗားရှင်း / မှတ်ချက်များ                                                                      |
 |--------------------|--------------------------------------------------------------------------------------|
-| **Python**         | 3.10 + (<https://python.org> မှရယူနိုင်သည်)                                         |
-| **Git**            | နောက်ဆုံးထွက် (Xcode / Git for Windows / Linux package manager တွင်ပါဝင်သည်)         |
-| **VS Code**        | Optional ဖြစ်ပေမယ့် အကြံပြုသည် <https://code.visualstudio.com>                      |
-| **Docker Desktop** | *Option B အတွက်သာ*။ အခမဲ့ install: <https://docs.docker.com/desktop/>              |
+| **Python**         | 3.10 + (<https://python.org> မှ ရယူပါ)                                            |
+| **Git**            | နောက်ဆုံးဗားရှင်း (Xcode / Git for Windows / Linux package manager တွေနဲ့ ပါလာတယ်)                   |
+| **VS Code**        | ရွေးချယ်စရာဖြစ်ပေမယ့် အကြံပြုပါတယ် <https://code.visualstudio.com>                             |
+| **Docker Desktop** | *Option B အတွက်သာ* အခမဲ့ ထည့်သွင်းနိုင်ပါတယ်: <https://docs.docker.com/desktop/>                |
 
-> 💡 **Tip** – Terminal မှာ tool တွေစစ်ကြည့်ပါ:  
+> 💡 **အကြံပြုချက်** – Terminal မှာ ကိရိယာတွေကို စစ်ဆေးပါ:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2.  Option A – Native Python (အလွယ်ဆုံး)
+## 2.  Option A – Native Python (အမြန်ဆုံး)
 
-### Step 1  ဒီ repo ကို clone လုပ်ပါ
+### အဆင့် 1  ဒီ repo ကို clone လုပ်ပါ
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-### Step 2 Virtual environment တစ်ခုဖန်တီးပြီး activate လုပ်ပါ
+### အဆင့် 2  virtual environment တစ်ခု ဖန်တီးပြီး ဖွင့်ပါ
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # တစ်ခုလုပ်ပါ
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Prompt မှာ (.venv) နဲ့စတင်လာရင် သင့်အနေနဲ့ env ထဲဝင်ပြီးသားဖြစ်ပါတယ်။
+✅ Prompt မှာ (.venv) ဆိုပြီး စတင်လာရင် သင်ဟာ env အတွင်းမှာ ရှိနေပြီဖြစ်ပါတယ်။
 
-### Step 3 လိုအပ်တဲ့ dependency တွေ install လုပ်ပါ
+### အဆင့် 3  လိုအပ်သော dependencies များ ထည့်သွင်းပါ
 
 ```bash
 pip install -r requirements.txt
 ```
 
-[API keys](../../../00-course-setup) အပိုင်း 3 ကို ဆက်လက်လုပ်ဆောင်ပါ
+[API keys](../../../00-course-setup) အပိုင်း 3 ကို ဆက်ဖတ်ပါ
 
 ## 2. Option B – VS Code Dev Container (Docker)
 
-ဒီ repository နဲ့ သင်တန်းကို [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) နဲ့ပြင်ဆင်ထားပါတယ်။ Universal runtime ပါဝင်ပြီး Python3, .NET, Node.js နဲ့ Java development တွေကို support လုပ်နိုင်ပါတယ်။ သက်ဆိုင်ရာ configuration ကို `devcontainer.json` ဖိုင်မှာ `.devcontainer/` folder ထဲမှာထားပါတယ်။
+ဒီ repository နဲ့ သင်တန်းကို [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) နဲ့ ပြင်ဆင်ထားပြီး Python3, .NET, Node.js နဲ့ Java ဖွံ့ဖြိုးရေးကို ထောက်ပံ့နိုင်တဲ့ Universal runtime ပါဝင်ပါတယ်။ ဆက်စပ် configuration ကို ဒီ repository ရဲ့ အမြစ်မှာရှိတဲ့ `.devcontainer/` ဖိုလ်ဒါအတွင်းရှိ `devcontainer.json` ဖိုင်မှာ သတ်မှတ်ထားပါတယ်။
 
->**ဘာကြောင့် ဒီနည်းကို ရွေးသင့်လဲ?**
->Codespaces နဲ့ တူညီတဲ့ environment ဖြစ်ပြီး dependency drift မရှိပါ။
+>**ဘာကြောင့် ဒီဟာကို ရွေးချယ်သင့်တာလဲ?**  
+>Codespaces နဲ့ တူညီတဲ့ ပတ်ဝန်းကျင်ဖြစ်ပြီး dependency drift မဖြစ်စေပါ။
 
-### Step 0 လိုအပ်တဲ့ extras တွေ install လုပ်ပါ
+### အဆင့် 0  အပိုဆောင်းတွေ ထည့်သွင်းပါ
 
-Docker Desktop – ```docker --version``` အလုပ်လုပ်တာစစ်ပါ။
-VS Code Remote – Containers extension (ID: ms-vscode-remote.remote-containers) ကို install လုပ်ပါ။
+Docker Desktop – ```docker --version``` က အလုပ်လုပ်တာကို အတည်ပြုပါ။  
+VS Code Remote – Containers extension (ID: ms-vscode-remote.remote-containers) ကို ထည့်သွင်းပါ။
 
-### Step 1 Repo ကို VS Code ထဲမှာဖွင့်ပါ
+### အဆင့် 1  VS Code မှာ repo ကို ဖွင့်ပါ
 
 File ▸ Open Folder…  → generative-ai-for-beginners
 
-VS Code က .devcontainer/ ကိုသိပြီး prompt တစ်ခုပေါ်လာပါလိမ့်မယ်။
+VS Code က .devcontainer/ ကို တွေ့ပြီး prompt တစ်ခု ပြပါလိမ့်မယ်။
 
-### Step 2 Container ထဲမှာ ပြန်ဖွင့်ပါ
+### အဆင့် 2  container ထဲ ပြန်ဖွင့်ပါ
 
-“Reopen in Container” ကိုနှိပ်ပါ။ Docker က image ကို build လုပ်ပါလိမ့်မယ် (ပထမဆုံးအကြိမ် ≈ 3 မိနစ်ခန့်ယူနိုင်ပါတယ်)။
-Terminal prompt ပေါ်လာရင် သင် container ထဲမှာရှိပြီးသားဖြစ်ပါတယ်။
+“Reopen in Container” ကို နှိပ်ပါ။ Docker က image ကို တည်ဆောက်ပါလိမ့်မယ် (ပထမဆုံးအကြိမ်မှာ ≈ ၃ မိနစ်)။  
+Terminal prompt ပေါ်လာတဲ့အခါ သင်ဟာ container အတွင်းမှာ ရှိနေပြီဖြစ်ပါတယ်။
 
 ## 2.  Option C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) က [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python နဲ့ အနည်းငယ် package တွေကို install လုပ်ဖို့အတွက် lightweight installer တစ်ခုပါ။
-Conda ကို package manager အနေနဲ့ အသုံးပြုနိုင်ပြီး Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) နဲ့ package တွေကို အလွယ်တကူ setup လုပ်နိုင်ပါတယ်။ pip နဲ့မရနိုင်တဲ့ package တွေကို install လုပ်ဖို့လည်း အသုံးဝင်ပါတယ်။
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) သည် [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python နဲ့ အချို့သော package များကို ထည့်သွင်းဖို့ အလင်းလေး installer ဖြစ်ပါတယ်။  
+Conda သည် package manager တစ်ခုဖြစ်ပြီး Python [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) နဲ့ package များကို လွယ်ကူစွာ စီမံခန့်ခွဲနိုင်စေပါတယ်။ `pip` နဲ့ မရနိုင်တဲ့ package များကို ထည့်သွင်းဖို့လည်း အသုံးဝင်ပါတယ်။
 
-### Step 0  Miniconda ကို install လုပ်ပါ
+### အဆင့် 0  Miniconda ကို ထည့်သွင်းပါ
 
-[MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ကိုလိုက်နာပြီး install လုပ်ပါ။
+[MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ကို လိုက်နာပြီး ထည့်သွင်းပါ။
 
 ```bash
 conda --version
 ```
 
-### Step 1 Virtual environment တစ်ခုဖန်တီးပါ
+### အဆင့် 1  virtual environment တစ်ခု ဖန်တီးပါ
 
-environment file (*environment.yml*) အသစ်တစ်ခုဖန်တီးပါ။ Codespaces ကိုအသုံးပြုနေပါက `.devcontainer` directory ထဲမှာ `.devcontainer/environment.yml` အနေနဲ့ ဖန်တီးပါ။
+environment ဖိုင်အသစ် (*environment.yml*) တစ်ခု ဖန်တီးပါ။ Codespaces ကို အသုံးပြုနေပါက `.devcontainer` ဖိုလ်ဒါအတွင်းမှာ ဖန်တီးပါ၊ ဒါမှမဟုတ် `.devcontainer/environment.yml` ဖြစ်ပါလိမ့်မယ်။
 
-### Step 2  Environment file ကို အချက်အလက်ဖြည့်ပါ
+### အဆင့် 2  environment ဖိုင်ကို ဖြည့်စွက်ပါ
 
-`environment.yml` ထဲကို အောက်ပါ code ကိုထည့်ပါ
+`environment.yml` ထဲကို အောက်ပါ snippet ကို ထည့်ပါ
 
 ```yml
 name: <environment-name>
@@ -111,25 +111,25 @@ dependencies:
 
 ```
 
-### Step 3 Conda environment ကိုဖန်တီးပါ
+### အဆင့် 3  Conda environment ကို ဖန်တီးပါ
 
-Command line/terminal မှာ အောက်ပါ command တွေကို run လုပ်ပါ
+အောက်ပါ command များကို command line/terminal မှာ ပြေးပါ
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer အောက်ပိုင်းလမ်းကြောင်းသည် Codespace စနစ်များတွင်သာ အသုံးပြုသည်။
 conda activate ai4beg
 ```
 
-ပြဿနာတက်ရင် [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ကိုကြည့်ပါ။
+ပြဿနာတက်ရင် [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ကို ရည်ညွှန်းပါ။
 
-## 2  Option D – Classic Jupyter / Jupyter Lab (Browser မှာ)
+## 2  Option D – Classic Jupyter / Jupyter Lab (သင့် browser မှာ)
 
 > **ဘယ်သူတွေအတွက်လဲ?**  
-> Jupyter interface အဟောင်းကိုနှစ်သက်သူများ သို့မဟုတ် VS Code မလိုဘဲ notebook တွေ run လုပ်ချင်သူများအတွက်။  
+> Classic Jupyter interface ကို ကြိုက်နှစ်သက်သူများ သို့မဟုတ် VS Code မလိုအပ်ဘဲ notebook များကို ပြေးချင်သူများအတွက်ဖြစ်ပါတယ်။  
 
-### Step 1  Jupyter install လုပ်ထားတာစစ်ပါ
+### အဆင့် 1  Jupyter ထည့်သွင်းထားကြောင်း သေချာစေပါ
 
-Jupyter ကို local မှာစတင်ဖို့ terminal/command line ကိုသွားပြီး သင်တန်း directory ကိုသွားပါ၊ ပြီးတော့ အောက်ပါ command ကို run လုပ်ပါ:
+Jupyter ကို ဒေသတွင်းမှာ စတင်ဖို့ terminal/command line ကို သွားပြီး သင်တန်း directory ကို ရောက်ရှိပါ၊ ပြီးတော့ အောက်ပါ command ကို အလုပ်လုပ်ပါ:
 
 ```bash
 jupyter notebook
@@ -141,24 +141,24 @@ jupyter notebook
 jupyterhub
 ```
 
-Jupyter instance တစ်ခုစတင်ပြီး URL ကို command line window မှာပြပါလိမ့်မယ်။
+ဒါက Jupyter instance တစ်ခု စတင်ပြီး URL ကို command line ပြတင်းပေါ်မှာ ပြပါလိမ့်မယ်။
 
-URL ကိုသွားရောက်လျှင် သင်တန်းအကြောင်းအရာတွေကိုမြင်ရပြီး `*.ipynb` ဖိုင်တစ်ခုချင်းစီကိုသွားနိုင်ပါလိမ့်မယ်။ ဥပမာ `08-building-search-applications/python/oai-solution.ipynb` တို့။
+URL ကို ဝင်ရောက်ပြီးနောက် သင်တန်း အကြောင်းအရာကို မြင်ရမယ်၊ `*.ipynb` ဖိုင် များကို လွယ်ကူစွာ သွားရောက်နိုင်ပါလိမ့်မယ်။ ဥပမာ - `08-building-search-applications/python/oai-solution.ipynb`။
 
-## 3. သင့်ရဲ့ API Keys တွေထည့်ပါ
+## 3. သင့် API Keys များ ထည့်သွင်းခြင်း
 
-Application တစ်ခုခုတည်ဆောက်တဲ့အခါ API keys တွေကို လုံခြုံစွာထားရှိဖို့အရေးကြီးပါတယ်။ API keys တွေကို code ထဲမှာတိုက်ရိုက်သိမ်းမထားဖို့ အကြံပြုပါတယ်။ Public repository မှာ commit လုပ်မိရင် လုံခြုံရေးပြဿနာတွေ၊ မလိုလားအပ်တဲ့ကုန်ကျစရိတ်တွေဖြစ်နိုင်ပါတယ်။
-Python အတွက် `.env` ဖိုင်တစ်ခုဖန်တီးပြီး `GITHUB_TOKEN` ထည့်သွင်းနည်းကို အဆင့်လိုက်ရှင်းပြထားပါတယ် -
+API keys များကို လုံခြုံစွာ ထိန်းသိမ်းထားခြင်းသည် မည်သည့် application မဆို တည်ဆောက်ရာတွင် အရေးကြီးပါသည်။ API keys များကို သင့် code ထဲမှာ တိုက်ရိုက် သိမ်းဆည်းခြင်း မပြုသင့်ပါ။ Public repository တစ်ခုမှာ commit လုပ်ခြင်းက လုံခြုံရေး ပြဿနာများ ဖြစ်ပေါ်စေနိုင်ပြီး မကောင်းသော အသုံးပြုသူများကြောင့် မလိုလားအပ်သော ကုန်ကျစရိတ်များ ဖြစ်ပေါ်နိုင်ပါသည်။  
+Python အတွက် `.env` ဖိုင် ဖန်တီးပြီး `GITHUB_TOKEN` ထည့်သွင်းနည်း အဆင့်ဆင့် လမ်းညွှန်မှာ အောက်ပါအတိုင်း ဖြစ်ပါတယ် -
 
-1. **Project Directory ကိုသွားပါ**: Terminal သို့မဟုတ် command prompt ကိုဖွင့်ပြီး သင့် project ရဲ့ root directory ကိုသွားပါ။ `.env` ဖိုင်ဖန်တီးမယ့်နေရာပါ။
+1. **သင့် Project Directory ကို သွားပါ**: Terminal သို့မဟုတ် command prompt ကို ဖွင့်ပြီး `.env` ဖိုင် ဖန်တီးလိုသော သင့် project ရဲ့ root directory ကို သွားပါ။
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **`.env` ဖိုင်ဖန်တီးပါ**: သင်နှစ်သက်တဲ့ text editor ကိုသုံးပြီး `.env` ဆိုတဲ့ဖိုင်အသစ်တစ်ခုဖန်တီးပါ။ Command line ကိုသုံးမယ်ဆိုရင် Unix-based systems မှာ `touch` သုံးနိုင်ပါတယ်၊ Windows မှာ `echo` သုံးနိုင်ပါတယ် -
+2. **`.env` ဖိုင် ဖန်တီးပါ**: သင်နှစ်သက်ရာ text editor ဖြင့် `.env` ဆိုတဲ့ ဖိုင်အသစ် တစ်ခု ဖန်တီးပါ။ Command line ကို အသုံးပြုပါက Unix-based စနစ်များမှာ `touch` ကို၊ Windows မှာ `echo` ကို အသုံးပြုနိုင်ပါတယ် -
 
-   Unix-based systems:
+   Unix-based စနစ်များ:
 
    ```bash
    touch .env
@@ -170,61 +170,63 @@ Python အတွက် `.env` ဖိုင်တစ်ခုဖန်တီး�
    echo . > .env
    ```
 
-3. **`.env` ဖိုင်ကို edit လုပ်ပါ**: `.env` ဖိုင်ကို text editor (ဥပမာ VS Code, Notepad++ သို့မဟုတ် အခြား editor) နဲ့ဖွင့်ပါ။ အောက်ပါလိုင်းကိုထည့်ပါ၊ `your_github_token_here` ကို သင့်ရဲ့ GitHub token နဲ့အစားထိုးပါ -
+3. **`.env` ဖိုင်ကို ပြင်ဆင်ပါ**: `.env` ဖိုင်ကို text editor (ဥပမာ - VS Code, Notepad++, သို့မဟုတ် အခြား editor) ဖြင့် ဖွင့်ပါ။ အောက်ပါလိုင်းကို ထည့်ပါ၊ `your_github_token_here` ကို သင့်ရဲ့ အမှန် GitHub token နဲ့ အစားထိုးပါ။
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **ဖိုင်ကိုသိမ်းပါ**: ပြင်ဆင်ပြီးရင် သိမ်းပြီး editor ကိုပိတ်ပါ။
+4. **ဖိုင်ကို သိမ်းပါ**: ပြင်ဆင်မှုများကို သိမ်းပြီး editor ကို ပိတ်ပါ။
 
-5. **`python-dotenv` ကို install လုပ်ပါ**: မလုပ်ရသေးရင် `python-dotenv` package ကို install လုပ်ပါ။ `.env` ဖိုင်ထဲက environment variable တွေကို Python application ထဲသို့ load လုပ်နိုင်ဖို့ပါ။ `pip` နဲ့ install လုပ်နိုင်ပါတယ် -
+5. **`python-dotenv` ကို ထည့်သွင်းပါ**: `.env` ဖိုင်မှ environment variables များကို Python application ထဲသို့ load ဖို့ `python-dotenv` package ကို ထည့်သွင်းရန် လိုအပ်ပါသည်။ `pip` ဖြင့် ထည့်သွင်းနိုင်ပါသည် -
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Python script ထဲမှာ Environment Variables တွေ load လုပ်ပါ**: Python script ထဲမှာ `python-dotenv` package ကိုသုံးပြီး `.env` ဖိုင်ထဲက environment variable တွေကို load လုပ်ပါ -
+6. **Python script မှာ Environment Variables များကို Load လုပ်ပါ**: Python script ထဲမှာ `python-dotenv` package ကို အသုံးပြုပြီး `.env` ဖိုင်မှ environment variables များကို load လုပ်ပါ -
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # Load environment variables from .env file
+   # .env ဖိုင်မှ ပတ်ဝန်းကျင်အပြောင်းအလဲများကို ဖတ်ယူပါ
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
+   # GITHUB_TOKEN အပြောင်းအလဲကို အသုံးပြုပါ
    github_token = os.getenv("GITHUB_TOKEN")
 
    print(github_token)
    ```
 
-ပြီးပါပြီ! `.env` ဖိုင်ဖန်တီးပြီး GitHub token ထည့်သွင်းပြီး Python application ထဲသို့ load လုပ်နိုင်ပါပြီ။
+ဒါဆို အဆင်ပြေပါပြီ! `.env` ဖိုင်ကို အောင်မြင်စွာ ဖန်တီးပြီး GitHub token ကို ထည့်သွင်းပြီး Python application ထဲသို့ load လုပ်နိုင်ပြီ ဖြစ်ပါတယ်။
 
-🔐 .env ကိုဘယ်တော့မှ commit မလုပ်ပါ—it’s already in .gitignore.
-Provider အသေးစိတ်လမ်းညွှန်တွေကို [`providers.md`](03-providers.md) မှာကြည့်နိုင်ပါတယ်။
+🔐 `.env` ကို မည်သည့်အချိန်မှ commit မလုပ်ပါနဲ့—ဒါဟာ `.gitignore` ထဲမှာ ရှိပြီးသားပါ။  
+Provider များအတွက် လမ်းညွှန်ချက်များကို [`providers.md`](03-providers.md) မှာ ကြည့်ရှုနိုင်ပါသည်။
 
-## 4. နောက်ထပ် ဘာလုပ်မလဲ?
+## 4. နောက်တစ်ဆင့်မှာ ဘာလုပ်မလဲ?
 
-| လုပ်ချင်တာ            | သွားရမယ့်နေရာ                                                      |
+| ကျွန်တော်/ကျွန်မ လုပ်ချင်တာ…          | သွားမယ့်နေရာ…                                                                  |
 |---------------------|-------------------------------------------------------------------------|
-| Lesson 1 စတင်ချင်တယ်      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| LLM Provider တစ်ခု setup လုပ်ချင်တယ် | [`providers.md`](03-providers.md)                                       |
-| တခြားလေ့လာသူတွေနဲ့တွေ့ချင်တယ် | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| သင်ခန်းစာ ၁ စတင်မယ်      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| LLM Provider တစ်ခု စတင်ချင်တယ် | [`providers.md`](03-providers.md)                                       |
+| အခြား သင်ယူသူတွေနဲ့ တွေ့ဆုံချင်တယ် | [Join our Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-## 5. ပြဿနာဖြေရှင်းနည်း
+## 5. ပြဿနာဖြေရှင်းခြင်း
 
-| ပြဿနာအမျိုးအစား                         | ဖြေရှင်းနည်း                                                    |
+| ရောဂါလက္ခဏာ                                   | ဖြေရှင်းနည်း                                                             |
 |-------------------------------------------|-----------------------------------------------------------------|
-| `python not found`                        | Python ကို PATH ထဲထည့်ပါ သို့မဟုတ် install ပြီးရင် terminal ကိုပြန်ဖွင့်ပါ |
-| `pip` cannot build wheels (Windows)       | `pip install --upgrade pip setuptools wheel` ပြီး retry လုပ်ပါ။        |
-| `ModuleNotFoundError: dotenv`             | `pip install -r requirements.txt` ကို run လုပ်ပါ (env မ install ရသေးပါ)   |
-| Docker build fails *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → disk size ကိုတိုးပါ။         |
-| VS Code keeps prompting to reopen         | Option နှစ်ခုလုံး active ဖြစ်နေလို့ ဖြစ်နိုင်ပါတယ်; တစ်ခုကိုသာရွေးပါ (venv **သို့မဟုတ်** container)|
-| OpenAI 401 / 429 errors                   | `OPENAI_API_KEY` value / request rate limits ကိုစစ်ပါ။             |
-| Errors using Conda                        | Microsft AI libraries ကို `conda install -c microsoft azure-ai-ml` နဲ့ install လုပ်ပါ|
+| `python not found`                        | Python ကို PATH ထဲ ထည့်ပါ သို့မဟုတ် ထည့်သွင်းပြီးနောက် terminal ကို ပြန်ဖွင့်ပါ            |
+| `pip` cannot build wheels (Windows)       | `pip install --upgrade pip setuptools wheel` ပြီးနောက် ထပ်မံကြိုးစားပါ        |
+| `ModuleNotFoundError: dotenv`             | `pip install -r requirements.txt` ကို ပြေးပါ (env မထည့်သွင်းထားပါ)   |
+| Docker build fails *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → disk size ကို တိုးပါ |
+| VS Code keeps prompting to reopen         | Options နှစ်ခုလုံး အလုပ်လုပ်နေတတ်ပါတယ်; တစ်ခုကိုသာ ရွေးချယ်ပါ (venv **သို့မဟုတ်** container)|
+| OpenAI 401 / 429 errors                   | `OPENAI_API_KEY` တန်ဖိုး / request rate limits ကို စစ်ဆေးပါ             |
+| Conda အသုံးပြုရာမှာ အမှားများ                        | Microsoft AI libraries ကို `conda install -c microsoft azure-ai-ml` ဖြင့် ထည့်သွင်းပါ|
 
 ---
 
-**သတိပေးချက်**:
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူလစာရွက်စာတမ်းသည် မူလဘာသာစကားဖြင့် အာဏာရှိသော ရင်းမြစ်အဖြစ် ယူဆသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းကြောင့် ဖြစ်ပေါ်လာနိုင်သော နားလည်မှုမှားခြင်း သို့မဟုတ် အနားလည်မှားခြင်းများအတွက် ကျွန်ုပ်တို့သည် တာဝန်ယူမည်မဟုတ်ပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**အကြောင်းကြားချက်**  
+ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးပမ်းနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မူလဘာသာဖြင့်သာ တရားဝင်အချက်အလက်အဖြစ် သတ်မှတ်စဉ်းစားသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်မှ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုရာမှ ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

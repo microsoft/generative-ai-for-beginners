@@ -1,129 +1,131 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T15:14:33+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T13:49:31+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "ko"
 }
 -->
-# LLM 공급자 선택 및 설정 🔑
+# LLM 공급자 선택 및 구성 🔑
 
-과제는 OpenAI, Azure, Hugging Face와 같은 지원되는 서비스 공급자를 통해 하나 이상의 대형 언어 모델(LLM) 배포와 연동되도록 설정할 수 있습니다. 이들 서비스는 _호스팅된 엔드포인트_ (API)를 제공하며, 적절한 인증 정보(API 키 또는 토큰)로 프로그래밍 방식으로 접근할 수 있습니다. 이 과정에서는 다음과 같은 공급자들을 다룹니다:
+과제는 OpenAI, Azure 또는 Hugging Face와 같은 지원되는 서비스 공급자를 통해 하나 이상의 대형 언어 모델(LLM) 배포에 대해 작동하도록 설정할 수도 있습니다. 이들은 올바른 자격 증명(API 키 또는 토큰)으로 프로그래밍 방식으로 액세스할 수 있는 _호스팅된 엔드포인트_(API)를 제공합니다. 이 과정에서는 다음 공급자에 대해 다룹니다:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst): GPT 시리즈를 포함한 다양한 모델 제공
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst): 엔터프라이즈 환경에 적합한 OpenAI 모델 제공
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst): 오픈소스 모델 및 추론 서버 제공
+ - 다양한 모델을 포함한 [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) (핵심 GPT 시리즈 포함)
+ - 엔터프라이즈 준비에 중점을 둔 OpenAI 모델용 [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)
+ - 오픈 소스 모델 및 추론 서버용 [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst)
 
-**이 실습을 위해서는 각자 계정을 사용해야 합니다.** 과제는 선택 사항이므로, 관심에 따라 하나, 모두, 또는 아무 공급자도 설정하지 않아도 됩니다. 가입 관련 안내는 다음과 같습니다:
+**이 연습을 위해서는 본인의 계정을 사용해야 합니다**. 과제는 선택 사항이므로 관심에 따라 하나, 모두 또는 전혀 공급자를 설정하지 않을 수 있습니다. 가입에 대한 몇 가지 안내:
 
 | 가입 | 비용 | API 키 | 플레이그라운드 | 비고 |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [가격](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [프로젝트 기반](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [노코드, 웹](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | 다양한 모델 제공 |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [가격](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK 빠른 시작](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio 빠른 시작](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [사전 신청 필요](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [가격](https://huggingface.co/pricing) | [액세스 토큰](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat은 모델이 제한적임](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [가격](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [프로젝트 기반](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [노코드, 웹](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | 다양한 모델 사용 가능 |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [가격](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK 빠른 시작](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [스튜디오 빠른 시작](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [접근 권한 사전 신청 필요](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [가격](https://huggingface.co/pricing) | [액세스 토큰](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat은 제한된 모델 제공](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-아래 안내에 따라 이 저장소를 다양한 공급자와 함께 사용할 수 있도록 _설정_하세요. 특정 공급자가 필요한 과제는 파일명에 다음과 같은 태그가 포함되어 있습니다:
+아래 지침에 따라 이 저장소를 다양한 공급자와 함께 사용하도록 _구성_하세요. 특정 공급자가 필요한 과제는 파일 이름에 다음 태그 중 하나를 포함합니다:
 
-- `aoai` - Azure OpenAI 엔드포인트 및 키 필요
-- `oai` - OpenAI 엔드포인트 및 키 필요
+- `aoai` - Azure OpenAI 엔드포인트, 키 필요
+- `oai` - OpenAI 엔드포인트, 키 필요
 - `hf` - Hugging Face 토큰 필요
 
-공급자를 하나도, 일부만, 또는 모두 설정할 수 있습니다. 관련 과제는 인증 정보가 없으면 오류가 발생합니다.
+하나, 전혀, 또는 모든 공급자를 구성할 수 있습니다. 관련 과제는 자격 증명이 없으면 오류가 발생합니다.
 
 ## `.env` 파일 생성
 
-위 안내를 이미 읽고 관련 공급자에 가입하여 필요한 인증 정보(API_KEY 또는 토큰)를 받았다고 가정합니다. Azure OpenAI의 경우, 최소 하나의 GPT 모델이 배포된 Azure OpenAI 서비스(엔드포인트)가 있어야 합니다.
+위 안내를 읽고 관련 공급자에 가입하여 필요한 인증 자격 증명(API_KEY 또는 토큰)을 이미 받았다고 가정합니다. Azure OpenAI의 경우, 최소 하나의 GPT 모델이 배포된 Azure OpenAI 서비스(엔드포인트)가 유효하게 배포되어 있다고 가정합니다.
 
-다음 단계는 **로컬 환경 변수**를 다음과 같이 설정하는 것입니다:
+다음 단계는 **로컬 환경 변수**를 다음과 같이 구성하는 것입니다:
 
-1. 루트 폴더에서 `.env.copy` 파일을 찾으세요. 내용은 다음과 비슷할 것입니다:
+1. 루트 폴더에서 `.env.copy` 파일을 찾으세요. 내용은 다음과 유사해야 합니다:
 
    ```bash
-   # OpenAI Provider
+   # OpenAI 공급자
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # 기본값이 설정되었습니다!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model name here>'
 
-   ## Hugging Face
+   ## 허깅페이스
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. 아래 명령어로 해당 파일을 `.env`로 복사하세요. 이 파일은 _gitignore_ 처리되어 비밀 정보가 안전하게 보호됩니다.
+2. 아래 명령어로 해당 파일을 `.env`로 복사하세요. 이 파일은 _gitignore_ 처리되어 비밀을 안전하게 유지합니다.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. 다음 섹션에 설명된 대로 값을 채워주세요(`=` 오른쪽의 플레이스홀더를 실제 값으로 교체).
+3. 다음 섹션에 설명된 대로 값을 채우세요(`=` 오른쪽의 자리 표시자 교체).
 
-4. (선택) GitHub Codespaces를 사용하는 경우, 환경 변수를 이 저장소에 연결된 _Codespaces secrets_로 저장할 수 있습니다. 이 경우 로컬 .env 파일을 따로 설정할 필요가 없습니다. **단, 이 옵션은 GitHub Codespaces를 사용할 때만 적용됩니다.** Docker Desktop을 사용하는 경우에는 .env 파일을 반드시 설정해야 합니다.
+4. (선택 사항) GitHub Codespaces를 사용하는 경우, 이 저장소와 연결된 _Codespaces 비밀_로 환경 변수를 저장할 수 있습니다. 이 경우 로컬 .env 파일을 설정할 필요가 없습니다. **단, 이 옵션은 GitHub Codespaces를 사용할 때만 작동합니다.** Docker Desktop을 사용하는 경우에는 여전히 .env 파일을 설정해야 합니다.
 
-## `.env` 파일 값 채우기
+## `.env` 파일 채우기
 
-변수명이 의미하는 바를 간단히 살펴보겠습니다:
+변수 이름이 무엇을 나타내는지 빠르게 살펴보겠습니다:
 
-| 변수명  | 설명  |
+| 변수  | 설명  |
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | 프로필에서 설정한 사용자 액세스 토큰 |
-| OPENAI_API_KEY | Azure가 아닌 OpenAI 엔드포인트용 서비스 인증 키 |
-| AZURE_OPENAI_API_KEY | 해당 서비스용 인증 키 |
+| OPENAI_API_KEY | 비-Azure OpenAI 엔드포인트용 서비스 인증 키 |
+| AZURE_OPENAI_API_KEY | 해당 서비스 인증 키 |
 | AZURE_OPENAI_ENDPOINT | Azure OpenAI 리소스의 배포된 엔드포인트 |
 | AZURE_OPENAI_DEPLOYMENT | _텍스트 생성_ 모델 배포 엔드포인트 |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _텍스트 임베딩_ 모델 배포 엔드포인트 |
 | | |
 
-참고: 마지막 두 Azure OpenAI 변수는 각각 채팅 완성(텍스트 생성)과 벡터 검색(임베딩)에 사용할 기본 모델을 나타냅니다. 값 설정 방법은 관련 과제에서 안내됩니다.
+참고: 마지막 두 Azure OpenAI 변수는 각각 채팅 완성(텍스트 생성) 및 벡터 검색(임베딩)에 대한 기본 모델을 반영합니다. 설정 방법은 관련 과제에서 정의됩니다.
 
-## Azure 설정: 포털에서
+## Azure 구성: 포털에서
 
-Azure OpenAI 엔드포인트와 키 값은 [Azure 포털](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)에서 확인할 수 있습니다.
+Azure OpenAI 엔드포인트 및 키 값은 [Azure 포털](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)에서 찾을 수 있으므로 여기서 시작합니다.
 
-1. [Azure 포털](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)에 접속하세요.
-1. 왼쪽 메뉴에서 **Keys and Endpoint** 옵션을 클릭하세요.
-1. **Show Keys**를 클릭하면 KEY 1, KEY 2, Endpoint가 표시됩니다.
-1. AZURE_OPENAI_API_KEY에는 KEY 1 값을 사용하세요.
-1. AZURE_OPENAI_ENDPOINT에는 Endpoint 값을 사용하세요.
+1. [Azure 포털](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)로 이동합니다.
+1. 사이드바(왼쪽 메뉴)에서 **키 및 엔드포인트** 옵션을 클릭합니다.
+1. **키 표시**를 클릭하면 다음이 표시됩니다: KEY 1, KEY 2 및 엔드포인트.
+1. AZURE_OPENAI_API_KEY에 KEY 1 값을 사용합니다.
+1. AZURE_OPENAI_ENDPOINT에 엔드포인트 값을 사용합니다.
 
 다음으로, 배포한 특정 모델의 엔드포인트가 필요합니다.
 
-1. Azure OpenAI 리소스의 왼쪽 메뉴에서 **Model deployments** 옵션을 클릭하세요.
-1. 해당 페이지에서 **Manage Deployments**를 클릭하세요.
+1. Azure OpenAI 리소스의 사이드바(왼쪽 메뉴)에서 **모델 배포** 옵션을 클릭합니다.
+1. 대상 페이지에서 **배포 관리**를 클릭합니다.
 
-이제 Azure OpenAI Studio 웹사이트로 이동하여 아래에 설명된 다른 값을 찾을 수 있습니다.
+이렇게 하면 Azure OpenAI Studio 웹사이트로 이동하며, 아래 설명된 다른 값을 찾을 수 있습니다.
 
-## Azure 설정: 스튜디오에서
+## Azure 구성: 스튜디오에서
 
-1. 위에서 설명한 대로 [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst)로 **리소스에서 이동**하세요.
-1. 왼쪽 사이드바의 **Deployments** 탭을 클릭하여 현재 배포된 모델을 확인하세요.
-1. 원하는 모델이 배포되어 있지 않다면 **Create new deployment**로 새로 배포하세요.
-1. _텍스트 생성_ 모델이 필요합니다 - **gpt-35-turbo**를 추천합니다.
-1. _텍스트 임베딩_ 모델이 필요합니다 - **text-embedding-ada-002**를 추천합니다.
+1. 위에서 설명한 대로 [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **리소스에서** 이동합니다.
+1. 현재 배포된 모델을 보려면 사이드바(왼쪽)에서 **배포** 탭을 클릭합니다.
+1. 원하는 모델이 배포되어 있지 않으면 **새 배포 생성**을 사용해 배포하세요.
+1. _텍스트 생성_ 모델이 필요합니다 - 권장: **gpt-35-turbo**
+1. _텍스트 임베딩_ 모델이 필요합니다 - 권장: **text-embedding-ada-002**
 
-이제 환경 변수에 _배포 이름_을 반영하여 값을 업데이트하세요. 별도로 변경하지 않았다면 모델명과 동일합니다. 예를 들어 다음과 같이 설정할 수 있습니다:
+이제 환경 변수를 _배포 이름_에 맞게 업데이트하세요. 일반적으로 모델 이름과 같지만 명시적으로 변경한 경우 다를 수 있습니다. 예를 들어 다음과 같을 수 있습니다:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**작업이 끝나면 .env 파일 저장을 잊지 마세요.** 이제 파일을 닫고 노트북 실행 안내로 돌아가면 됩니다.
+**완료 후 .env 파일 저장을 잊지 마세요**. 이제 파일을 닫고 노트북 실행 지침으로 돌아가면 됩니다.
 
-## OpenAI 설정: 프로필에서
+## OpenAI 구성: 프로필에서
 
-OpenAI API 키는 [OpenAI 계정](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst)에서 확인할 수 있습니다. 계정이 없다면 가입 후 API 키를 생성하세요. 키를 받으면 `.env` 파일의 `OPENAI_API_KEY` 변수에 입력하면 됩니다.
+OpenAI API 키는 [OpenAI 계정](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst)에서 찾을 수 있습니다. 계정이 없으면 가입 후 API 키를 생성할 수 있습니다. 키를 받으면 `.env` 파일의 `OPENAI_API_KEY` 변수에 입력하세요.
 
-## Hugging Face 설정: 프로필에서
+## Hugging Face 구성: 프로필에서
 
-Hugging Face 토큰은 프로필의 [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst)에서 확인할 수 있습니다. 이 토큰을 공개적으로 게시하거나 공유하지 마세요. 이 프로젝트용으로 새 토큰을 생성한 뒤, `.env` 파일의 `HUGGING_FACE_API_KEY` 변수에 복사하세요. _참고:_ 기술적으로는 API 키가 아니지만 인증에 사용되므로 명칭을 통일했습니다.
+Hugging Face 토큰은 프로필의 [액세스 토큰](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst)에서 찾을 수 있습니다. 이를 공개적으로 게시하거나 공유하지 마세요. 대신 이 프로젝트 용도로 새 토큰을 생성하고 `.env` 파일의 `HUGGING_FACE_API_KEY` 변수에 복사하세요. _참고:_ 기술적으로 API 키는 아니지만 인증에 사용되므로 일관성을 위해 이 명명법을 유지합니다.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 노력하고 있지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서(원어)가 권위 있는 자료로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역의 사용으로 인해 발생하는 오해나 오역에 대해 당사는 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확한 부분이 있을 수 있음을 유의해 주시기 바랍니다. 원문 문서가 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인한 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

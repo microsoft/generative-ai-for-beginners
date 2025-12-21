@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T13:16:46+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T12:27:49+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "en"
 }
 -->
 # Local Setup 🖥️
 
-**Use this guide if you prefer to run everything on your own laptop.**   
+**Use this guide if you prefer to run everything on your own laptop.**  
 You have two paths: **(A) native Python + virtual-env** or **(B) VS Code Dev Container with Docker**.  
 Choose whichever feels easier—both lead to the same lessons.
 
@@ -222,9 +222,11 @@ Full provider instructions live in [`providers.md`](03-providers.md).
 | Docker build fails *No space left*        | Docker Desktop ▸ *Settings* ▸ *Resources* → increase disk size. |
 | VS Code keeps prompting to reopen         | You may have both Options active; choose one (venv **or** container)|
 | OpenAI 401 / 429 errors                   | Check `OPENAI_API_KEY` value / request rate limits.             |
-| Errors using Conda                        | Install Microsft AI libraries using `conda install -c microsoft azure-ai-ml`|
+| Errors using Conda                        | Install Microsoft AI libraries using `conda install -c microsoft azure-ai-ml`|
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
 This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T19:03:59+00:00",
+  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+  "translation_date": "2025-12-19T16:53:29+00:00",
   "source_file": "00-course-setup/03-providers.md",
   "language_code": "sk"
 }
 -->
-# Výber a nastavenie poskytovateľa LLM 🔑
+# Výber a konfigurácia poskytovateľa LLM 🔑
 
-Úlohy **môžu** byť nastavené tak, aby fungovali s jedným alebo viacerými nasadeniami Large Language Model (LLM) cez podporovaného poskytovateľa služieb, ako je OpenAI, Azure alebo Hugging Face. Títo poskytovatelia ponúkajú _hostovaný endpoint_ (API), ku ktorému sa dá pristupovať programovo s použitím správnych prihlasovacích údajov (API kľúč alebo token). V tomto kurze sa venujeme týmto poskytovateľom:
+Úlohy **môžu** byť tiež nastavené tak, aby pracovali s jedným alebo viacerými nasadeniami veľkých jazykových modelov (LLM) prostredníctvom podporovaného poskytovateľa služieb ako OpenAI, Azure alebo Hugging Face. Tieto poskytujú _hostovaný endpoint_ (API), ku ktorému môžeme programovo pristupovať s príslušnými povereniami (API kľúč alebo token). V tomto kurze sa venujeme týmto poskytovateľom:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) s rôznymi modelmi vrátane hlavnej série GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) pre OpenAI modely s dôrazom na podnikové využitie
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) s rôznymi modelmi vrátane základnej série GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) pre modely OpenAI so zameraním na pripravenosť pre podniky
  - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) pre open-source modely a inference server
 
-**Na tieto cvičenia budete potrebovať vlastné účty.** Úlohy sú voliteľné, takže si môžete nastaviť jedného, všetkých – alebo žiadneho – poskytovateľa podľa vlastného záujmu. Tu je niekoľko tipov k registrácii:
+**Pre tieto cvičenia budete potrebovať vlastné účty**. Úlohy sú voliteľné, takže si môžete vybrať nastavenie jedného, všetkých alebo žiadneho z poskytovateľov podľa svojich záujmov. Niekoľko rád pre registráciu:
 
 | Registrácia | Cena | API kľúč | Playground | Komentáre |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Cenník](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Podľa projektu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | K dispozícii viacero modelov |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Cenník](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Je potrebné požiadať o prístup vopred](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Cenník](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat má obmedzený počet modelov](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Cenník](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Na základe projektu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Bez kódu, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Viacero dostupných modelov |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Cenník](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Rýchly štart SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Rýchly štart Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Nutné požiadať o prístup vopred](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Cenník](https://huggingface.co/pricing) | [Prístupové tokeny](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat má obmedzené modely](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Postupujte podľa pokynov nižšie na _nastavenie_ tohto repozitára pre použitie s rôznymi poskytovateľmi. Úlohy, ktoré vyžadujú konkrétneho poskytovateľa, budú mať v názve súboru jeden z týchto tagov:
+Postupujte podľa nižšie uvedených pokynov na _konfiguráciu_ tohto repozitára pre použitie s rôznymi poskytovateľmi. Úlohy, ktoré vyžadujú konkrétneho poskytovateľa, budú mať v názve súboru jednu z týchto značiek:
 
 - `aoai` - vyžaduje Azure OpenAI endpoint, kľúč
 - `oai` - vyžaduje OpenAI endpoint, kľúč
 - `hf` - vyžaduje Hugging Face token
 
-Môžete nastaviť jedného, žiadneho alebo všetkých poskytovateľov. Súvisiace úlohy jednoducho zlyhajú, ak chýbajú prihlasovacie údaje.
+Môžete nakonfigurovať jedného, žiadneho alebo všetkých poskytovateľov. Súvisiace úlohy jednoducho zlyhajú pri chýbajúcich povereniach.
 
 ## Vytvorenie súboru `.env`
 
-Predpokladáme, že ste si už prečítali vyššie uvedené pokyny, zaregistrovali sa u relevantného poskytovateľa a získali potrebné autentifikačné údaje (API_KEY alebo token). V prípade Azure OpenAI predpokladáme, že máte aj platné nasadenie služby Azure OpenAI (endpoint) s aspoň jedným GPT modelom nasadeným pre chat completion.
+Predpokladáme, že ste si už prečítali vyššie uvedené pokyny, zaregistrovali sa u príslušného poskytovateľa a získali potrebné autentifikačné poverenia (API_KEY alebo token). V prípade Azure OpenAI predpokladáme, že máte tiež platné nasadenie služby Azure OpenAI (endpoint) s aspoň jedným GPT modelom nasadeným pre chatovacie dokončenie.
 
-Ďalším krokom je nastavenie **lokálnych environmentálnych premenných** nasledovne:
+Ďalším krokom je nastavenie vašich **lokálnych premenných prostredia** nasledovne:
 
-1. V koreňovom adresári vyhľadajte súbor `.env.copy`, ktorý by mal obsahovať niečo takéto:
+1. Pozrite sa v koreňovom priečinku na súbor `.env.copy`, ktorý by mal obsahovať niečo takéto:
 
    ```bash
-   # OpenAI Provider
+   # Poskytovateľ OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # Predvolené je nastavené!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,75 +55,77 @@ Predpokladáme, že ste si už prečítali vyššie uvedené pokyny, zaregistrov
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Skopírujte tento súbor na `.env` pomocou nasledujúceho príkazu. Tento súbor je _gitignore-d_, takže vaše tajné údaje zostanú v bezpečí.
+2. Skopírujte tento súbor do `.env` pomocou nasledujúceho príkazu. Tento súbor je _gitignore-ovaný_, aby boli tajomstvá v bezpečí.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Doplňte hodnoty (nahraďte zástupné znaky na pravej strane `=`) podľa popisu v ďalšej sekcii.
+3. Vyplňte hodnoty (nahraďte zástupné symboly napravo od `=`) podľa popisu v nasledujúcej sekcii.
 
-4. (Voliteľné) Ak používate GitHub Codespaces, máte možnosť uložiť environmentálne premenné ako _Codespaces secrets_ priradené k tomuto repozitáru. V takom prípade nemusíte nastavovať lokálny .env súbor. **Upozornenie: Táto možnosť funguje len ak používate GitHub Codespaces.** Ak používate Docker Desktop, .env súbor musíte nastaviť aj tak.
+4. (Voliteľné) Ak používate GitHub Codespaces, máte možnosť uložiť premenné prostredia ako _Codespaces secrets_ priradené k tomuto repozitáru. V takom prípade nebudete musieť nastavovať lokálny súbor .env. **Avšak, táto možnosť funguje iba ak používate GitHub Codespaces.** Ak používate Docker Desktop, stále budete musieť nastaviť súbor .env.
 
 ## Vyplnenie súboru `.env`
 
-Pozrime sa rýchlo na názvy premenných, aby sme pochopili, čo znamenajú:
+Pozrime sa rýchlo na názvy premenných, aby sme pochopili, čo predstavujú:
 
 | Premenná  | Popis  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Toto je užívateľský access token, ktorý ste si nastavili vo svojom profile |
-| OPENAI_API_KEY | Toto je autorizačný kľúč na používanie služby pre ne-Azure OpenAI endpointy |
-| AZURE_OPENAI_API_KEY | Toto je autorizačný kľúč na používanie tejto služby |
-| AZURE_OPENAI_ENDPOINT | Toto je nasadený endpoint pre Azure OpenAI resource |
-| AZURE_OPENAI_DEPLOYMENT | Toto je endpoint nasadenia modelu na _generovanie textu_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Toto je endpoint nasadenia modelu na _textové embeddingy_ |
+| HUGGING_FACE_API_KEY | Toto je používateľský prístupový token, ktorý ste nastavili vo svojom profile |
+| OPENAI_API_KEY | Toto je autorizačný kľúč pre používanie služby mimo Azure OpenAI endpointov |
+| AZURE_OPENAI_API_KEY | Toto je autorizačný kľúč pre používanie tejto služby |
+| AZURE_OPENAI_ENDPOINT | Toto je nasadený endpoint pre Azure OpenAI zdroj |
+| AZURE_OPENAI_DEPLOYMENT | Toto je endpoint nasadenia modelu pre _generovanie textu_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Toto je endpoint nasadenia modelu pre _textové vektory (embeddings)_ |
 | | |
 
-Poznámka: Posledné dve Azure OpenAI premenné odrážajú predvolený model pre chat completion (generovanie textu) a vektorové vyhľadávanie (embeddingy). Pokyny na ich nastavenie budú uvedené v príslušných úlohách.
+Poznámka: Posledné dve premenné Azure OpenAI odrážajú predvolený model pre chatovacie dokončenie (generovanie textu) a vyhľadávanie vektorov (embeddings). Pokyny na ich nastavenie budú definované v príslušných úlohách.
 
-## Nastavenie Azure: Cez Portal
+## Konfigurácia Azure: z portálu
 
-Hodnoty endpointu a kľúča pre Azure OpenAI nájdete v [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), takže začnime tam.
+Hodnoty endpointu a kľúča Azure OpenAI nájdete v [Azure Portáli](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), začnime teda tam.
 
-1. Prejdite na [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Kliknite na možnosť **Keys and Endpoint** v bočnom paneli (menu vľavo).
-1. Kliknite na **Show Keys** – mali by ste vidieť: KEY 1, KEY 2 a Endpoint.
-1. Hodnotu KEY 1 použite pre AZURE_OPENAI_API_KEY
-1. Hodnotu Endpoint použite pre AZURE_OPENAI_ENDPOINT
+1. Prejdite na [Azure Portál](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Kliknite na možnosť **Kľúče a endpoint** v bočnom paneli (menu vľavo).
+1. Kliknite na **Zobraziť kľúče** - mali by ste vidieť: KĽÚČ 1, KĽÚČ 2 a Endpoint.
+1. Použite hodnotu KĽÚČ 1 pre AZURE_OPENAI_API_KEY
+1. Použite hodnotu Endpoint pre AZURE_OPENAI_ENDPOINT
 
-Ďalej potrebujeme endpointy pre konkrétne modely, ktoré ste nasadili.
+Ďalej potrebujeme endpointy pre konkrétne modely, ktoré sme nasadili.
 
-1. Kliknite na možnosť **Model deployments** v bočnom paneli (menu vľavo) pre Azure OpenAI resource.
-1. Na cieľovej stránke kliknite na **Manage Deployments**
+1. Kliknite na možnosť **Nasadenia modelov** v bočnom paneli (ľavé menu) pre Azure OpenAI zdroj.
+1. Na cieľovej stránke kliknite na **Spravovať nasadenia**
 
-Tým sa dostanete na web Azure OpenAI Studio, kde nájdete ďalšie hodnoty podľa popisu nižšie.
+Tým sa dostanete na web Azure OpenAI Studio, kde nájdeme ďalšie hodnoty, ako je popísané nižšie.
 
-## Nastavenie Azure: Cez Studio
+## Konfigurácia Azure: zo Studio
 
-1. Prejdite do [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **zo svojho resource** podľa vyššie uvedeného postupu.
-1. Kliknite na záložku **Deployments** (bočný panel vľavo), kde uvidíte aktuálne nasadené modely.
-1. Ak požadovaný model nie je nasadený, použite **Create new deployment** na jeho nasadenie.
-1. Potrebujete model na _generovanie textu_ – odporúčame: **gpt-35-turbo**
-1. Potrebujete model na _embeddingy textu_ – odporúčame **text-embedding-ada-002**
+1. Prejdite na [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **zo svojho zdroja** podľa vyššie uvedeného postupu.
+1. Kliknite na záložku **Nasadenia** (bočný panel, vľavo) pre zobrazenie aktuálne nasadených modelov.
+1. Ak váš požadovaný model nie je nasadený, použite **Vytvoriť nové nasadenie** na jeho nasadenie.
+1. Budete potrebovať model _text-generation_ - odporúčame: **gpt-35-turbo**
+1. Budete potrebovať model _text-embedding_ - odporúčame **text-embedding-ada-002**
 
-Teraz aktualizujte environmentálne premenné podľa názvu _Deployment name_, ktorý ste použili. Ten je zvyčajne rovnaký ako názov modelu, pokiaľ ste ho výslovne nezmenili. Napríklad môžete mať:
+Teraz aktualizujte premenné prostredia tak, aby odrážali použité _Meno nasadenia_. Zvyčajne to bude rovnaké ako názov modelu, pokiaľ ste ho explicitne nezmenili. Napríklad môžete mať:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**Nezabudnite súbor .env po úpravách uložiť.** Teraz môžete súbor zatvoriť a pokračovať podľa inštrukcií na spustenie notebooku.
+**Nezabudnite uložiť súbor .env po dokončení**. Teraz môžete súbor zatvoriť a vrátiť sa k pokynom na spustenie notebooku.
 
-## Nastavenie OpenAI: Cez Profil
+## Konfigurácia OpenAI: z profilu
 
-Váš OpenAI API kľúč nájdete vo svojom [OpenAI účte](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ak ho nemáte, zaregistrujte si účet a vytvorte API kľúč. Keď ho získate, použite ho na vyplnenie premennej `OPENAI_API_KEY` v súbore `.env`.
+Váš OpenAI API kľúč nájdete vo svojom [OpenAI účte](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ak ho ešte nemáte, môžete si vytvoriť účet a vygenerovať API kľúč. Po získaní kľúča ho môžete použiť na vyplnenie premennej `OPENAI_API_KEY` v súbore `.env`.
 
-## Nastavenie Hugging Face: Cez Profil
+## Konfigurácia Hugging Face: z profilu
 
-Váš Hugging Face token nájdete vo svojom profile v sekcii [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nikdy ich nezverejňujte ani nezdieľajte. Vytvorte si nový token pre tento projekt a skopírujte ho do súboru `.env` pod premennú `HUGGING_FACE_API_KEY`. _Poznámka:_ Technicky nejde o API kľúč, ale používa sa na autentifikáciu, takže zachovávame tento názov pre konzistenciu.
+Váš Hugging Face token nájdete vo svojom profile pod [Prístupové tokeny](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nezverejňujte ich ani nezdieľajte verejne. Namiesto toho si vytvorte nový token pre použitie v tomto projekte a skopírujte ho do súboru `.env` pod premennú `HUGGING_FACE_API_KEY`. _Poznámka:_ Technicky to nie je API kľúč, ale používa sa na autentifikáciu, preto zachovávame toto pomenovanie pre konzistenciu.
 
 ---
 
-**Vyhlásenie o zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladovej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie odporúčame profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vzniknuté použitím tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zrieknutie sa zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

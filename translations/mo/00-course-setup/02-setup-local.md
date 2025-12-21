@@ -1,33 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T14:37:38+00:00",
+  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+  "translation_date": "2025-12-19T13:25:56+00:00",
   "source_file": "00-course-setup/02-setup-local.md",
   "language_code": "mo"
 }
 -->
-# 本地安裝 🖥️
+# 本地設定 🖥️
 
-**如果你想在自己的筆電上運行所有內容，請參考這份指南。**  
-你有兩種選擇：**(A) 原生 Python + virtual-env** 或 **(B) VS Code Dev Container 搭配 Docker**。  
-選擇你覺得最簡單的方式——兩種方法都能學到一樣的內容。
+**如果你喜歡在自己的筆記型電腦上運行所有內容，請使用本指南。**  
+你有兩條路徑：**(A) 原生 Python + virtual-env** 或 **(B) 使用 Docker 的 VS Code 開發容器**。  
+選擇你覺得較容易的方式——兩者都能達到相同的課程效果。
 
 ## 1.  先決條件
 
-| 工具                | 版本 / 備註                                                                       |
-|---------------------|-----------------------------------------------------------------------------------|
-| **Python**          | 3.10 以上（可從 <https://python.org> 下載）                                       |
-| **Git**             | 最新版（Xcode / Git for Windows / Linux 套件管理員都會附帶）                      |
-| **VS Code**         | 選用但推薦 <https://code.visualstudio.com>                                        |
-| **Docker Desktop**  | *只* 需要用於選項 B。免費安裝：<https://docs.docker.com/desktop/>                 |
+| 工具               | 版本 / 備註                                                                        |
+|--------------------|-----------------------------------------------------------------------------------|
+| **Python**         | 3.10 以上（可從 <https://python.org> 取得）                                       |
+| **Git**            | 最新版本（隨 Xcode / Windows Git / Linux 套件管理器附帶）                         |
+| **VS Code**        | 選用但推薦 <https://code.visualstudio.com>                                        |
+| **Docker Desktop** | *僅限* 選項 B。免費安裝：<https://docs.docker.com/desktop/>                       |
 
 > 💡 **提示** – 在終端機驗證工具：  
-> `python --version`, `git --version`, `docker --version`, `code --version`  
+> `python --version`、`git --version`、`docker --version`、`code --version`  
 
-## 2.  選項 A – 原生 Python（最快速）
+## 2.  選項 A – 原生 Python（最快）
 
-### 步驟 1  複製這個 repo
+### 步驟 1  克隆此倉庫
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
@@ -37,48 +37,48 @@ cd generative-ai-for-beginners
 ### 步驟 2 建立並啟用虛擬環境
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # 製作一個
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ 提示字元現在應該會以 (.venv) 開頭——這代表你已經進入虛擬環境。
+✅ 提示符現在應該以 (.venv) 開頭——表示你已進入虛擬環境。
 
-### 步驟 3 安裝相依套件
+### 步驟 3 安裝依賴套件
 
 ```bash
 pip install -r requirements.txt
 ```
 
-跳到第 3 節 [API 金鑰](../../../00-course-setup)
+跳至第 3 節 [API 金鑰](../../../00-course-setup)
 
-## 2. 選項 B – VS Code Dev Container（Docker）
+## 2. 選項 B – VS Code 開發容器（Docker）
 
-我們已經用 [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) 設定好這個 repo 和課程，這個容器支援 Python3、.NET、Node.js 和 Java 開發。相關設定寫在這個 repo 根目錄的 `.devcontainer/` 資料夾裡的 `devcontainer.json` 檔案。
+我們使用 [開發容器](https://containers.dev?WT.mc_id=academic-105485-koreyst) 設定此倉庫和課程，該容器具備通用執行環境，可支援 Python3、.NET、Node.js 和 Java 開發。相關設定定義於本倉庫根目錄的 `.devcontainer/` 資料夾中的 `devcontainer.json` 檔案。
 
->**為什麼選這個？**
->環境和 Codespaces 完全一樣，不會有相依性問題。
+>**為什麼選擇這個？**  
+>環境與 Codespaces 完全相同；避免依賴漂移。
 
 ### 步驟 0 安裝額外工具
 
-Docker Desktop – 確認 ```docker --version``` 可以執行。
+Docker Desktop – 確認 ```docker --version``` 可用。  
 VS Code Remote – Containers 擴充套件（ID: ms-vscode-remote.remote-containers）。
 
-### 步驟 1 用 VS Code 開啟 repo
+### 步驟 1 在 VS Code 開啟倉庫
 
-檔案 ▸ 開啟資料夾…  → generative-ai-for-beginners
+檔案 ▸ 開啟資料夾… → generative-ai-for-beginners
 
 VS Code 會偵測到 .devcontainer/ 並跳出提示。
 
 ### 步驟 2 重新在容器中開啟
 
-點選「Reopen in Container」。Docker 會建立映像檔（第一次大約 3 分鐘）。
-當終端機出現提示字元時，你就已經在容器裡了。
+點擊「Reopen in Container」。Docker 會建立映像檔（首次約 3 分鐘）。  
+當終端機提示出現時，表示你已進入容器。
 
 ## 2.  選項 C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) 是一個輕量級的 [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst)、Python 及部分套件安裝器。
-Conda 本身是一個套件管理工具，可以輕鬆建立和切換不同的 Python [**虛擬環境**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) 和套件。對於安裝 `pip` 沒有的套件也很方便。
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) 是一個輕量級安裝器，用於安裝 [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst)、Python 以及部分套件。  
+Conda 本身是一個套件管理器，方便設定和切換不同的 Python [**虛擬環境**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) 和套件。它也方便安裝 `pip` 無法取得的套件。
 
 ### 步驟 0  安裝 Miniconda
 
@@ -88,13 +88,13 @@ Conda 本身是一個套件管理工具，可以輕鬆建立和切換不同的 P
 conda --version
 ```
 
-### 步驟 1 建立虛擬環境
+### 步驟 1 建立虛擬環境檔案
 
-建立一個新的環境檔案（*environment.yml*）。如果你是在 Codespaces 操作，請在 `.devcontainer` 目錄下建立，也就是 `.devcontainer/environment.yml`。
+建立一個新的環境檔案 (*environment.yml*)。如果你使用 Codespaces，請在 `.devcontainer` 目錄下建立，即 `.devcontainer/environment.yml`。
 
-### 步驟 2  編輯你的環境檔案
+### 步驟 2  填寫環境檔案內容
 
-將下方內容加入你的 `environment.yml`
+將以下片段加入你的 `environment.yml`
 
 ```yml
 name: <environment-name>
@@ -113,23 +113,23 @@ dependencies:
 
 ### 步驟 3 建立 Conda 環境
 
-在命令列/終端機執行下列指令
+在命令列/終端機執行以下指令
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer 子路徑只適用於 Codespace 設定
 conda activate ai4beg
 ```
 
-如果遇到問題，請參考 [Conda 環境指南](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst)。
+如遇問題，請參考 [Conda 環境指南](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst)。
 
-## 2  選項 D – 經典 Jupyter / Jupyter Lab（瀏覽器操作）
+## 2  選項 D – 傳統 Jupyter / Jupyter Lab（瀏覽器中）
 
 > **適合誰？**  
-> 喜歡經典 Jupyter 介面，或想在不安裝 VS Code 的情況下執行 notebook 的人。  
+> 喜歡經典 Jupyter 介面或想在不使用 VS Code 的情況下執行筆記本的人。
 
 ### 步驟 1  確認已安裝 Jupyter
 
-要在本機啟動 Jupyter，請打開終端機/命令列，切換到課程目錄，然後執行：
+要在本地啟動 Jupyter，請打開終端機/命令列，切換到課程目錄，執行：
 
 ```bash
 jupyter notebook
@@ -141,14 +141,14 @@ jupyter notebook
 jupyterhub
 ```
 
-這會啟動 Jupyter，並在命令列視窗顯示可存取的網址。
+這會啟動一個 Jupyter 實例，並在命令列視窗中顯示存取的 URL。
 
-進入網址後，你應該會看到課程大綱，並能瀏覽任何 `*.ipynb` 檔案。例如：`08-building-search-applications/python/oai-solution.ipynb`。
+存取該 URL 後，你應該能看到課程大綱並瀏覽任何 `*.ipynb` 檔案。例如，`08-building-search-applications/python/oai-solution.ipynb`。
 
-## 3. 加入你的 API 金鑰
+## 3. 新增你的 API 金鑰
 
-在開發任何應用程式時，保護 API 金鑰的安全非常重要。我們建議不要直接把 API 金鑰寫在程式碼裡。如果把這些資訊提交到公開的 repo，可能會有安全風險，甚至被有心人士濫用產生額外費用。
-以下是如何為 Python 建立 `.env` 檔案並加入 `GITHUB_TOKEN` 的步驟：
+在建立任何應用程式時，保護你的 API 金鑰安全非常重要。我們建議不要直接將 API 金鑰存放在程式碼中。將這些資訊提交到公開倉庫可能導致安全問題，甚至被惡意使用而產生不必要的費用。  
+以下是如何為 Python 建立 `.env` 檔案並新增 `GITHUB_TOKEN` 的逐步指南：
 
 1. **切換到你的專案目錄**：打開終端機或命令提示字元，切換到你想建立 `.env` 檔案的專案根目錄。
 
@@ -156,7 +156,7 @@ jupyterhub
    cd path/to/your/project
    ```
 
-2. **建立 `.env` 檔案**：用你喜歡的文字編輯器建立一個名為 `.env` 的新檔案。如果用命令列，可以用 `touch`（Unix 系統）或 `echo`（Windows）：
+2. **建立 `.env` 檔案**：使用你偏好的文字編輯器建立一個名為 `.env` 的新檔案。如果使用命令列，可以用 `touch`（Unix 系統）或 `echo`（Windows）：
 
    Unix 系統：
 
@@ -170,61 +170,63 @@ jupyterhub
    echo . > .env
    ```
 
-3. **編輯 `.env` 檔案**：用文字編輯器（如 VS Code、Notepad++ 或其他）打開 `.env` 檔案。加入下列內容，並把 `your_github_token_here` 換成你自己的 GitHub token：
+3. **編輯 `.env` 檔案**：用文字編輯器（例如 VS Code、Notepad++ 或其他）開啟 `.env` 檔案。加入以下一行，將 `your_github_token_here` 替換成你的實際 GitHub 令牌：
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **儲存檔案**：儲存後關閉編輯器。
+4. **儲存檔案**：儲存變更並關閉編輯器。
 
-5. **安裝 `python-dotenv`**：如果還沒安裝，請用 `pip` 安裝 `python-dotenv` 套件，讓 Python 可以讀取 `.env` 檔案的環境變數。
+5. **安裝 `python-dotenv`**：如果尚未安裝，你需要安裝 `python-dotenv` 套件，讓 Python 應用程式能從 `.env` 檔案載入環境變數。可用 `pip` 安裝：
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **在 Python 程式載入環境變數**：在你的 Python 程式裡，用 `python-dotenv` 套件載入 `.env` 檔案的環境變數：
+6. **在 Python 腳本中載入環境變數**：在你的 Python 腳本中，使用 `python-dotenv` 套件載入 `.env` 檔案中的環境變數：
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # Load environment variables from .env file
+   # 從 .env 檔案載入環境變數
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
+   # 存取 GITHUB_TOKEN 變數
    github_token = os.getenv("GITHUB_TOKEN")
 
    print(github_token)
    ```
 
-這樣就完成了！你已經成功建立 `.env` 檔案、加入 GitHub token，並在 Python 應用程式中載入它。
+完成！你已成功建立 `.env` 檔案，新增 GitHub 令牌，並在 Python 應用程式中載入。
 
-🔐 千萬不要提交 .env——它已經在 .gitignore 裡了。
-完整的服務商設定說明請見 [`providers.md`](03-providers.md)。
+🔐 切勿提交 .env 檔案——它已被加入 .gitignore。  
+完整的提供者說明請參考 [`providers.md`](03-providers.md)。
 
-## 4. 接下來呢？
+## 4. 接下來做什麼？
 
-| 我想要…             | 前往…                                                                  |
+| 我想要…            | 前往…                                                                  |
 |---------------------|-------------------------------------------------------------------------|
-| 開始第一課          | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| 設定 LLM 服務商     | [`providers.md`](03-providers.md)                                       |
-| 認識其他學員        | [加入我們的 Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| 開始第 1 課         | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| 設定 LLM 提供者     | [`providers.md`](03-providers.md)                                       |
+| 認識其他學員       | [加入我們的 Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## 5. 疑難排解
 
-| 狀況                                       | 解決方法                                                         |
-|--------------------------------------------|------------------------------------------------------------------|
-| `python not found`                         | 把 Python 加入 PATH 或安裝後重新開啟終端機                        |
-| `pip` 無法建立 wheels（Windows）           | `pip install --upgrade pip setuptools wheel` 後再試一次           |
-| `ModuleNotFoundError: dotenv`              | 執行 `pip install -r requirements.txt`（環境還沒安裝好）           |
-| Docker 建置失敗 *No space left*            | Docker Desktop ▸ *設定* ▸ *資源* → 增加磁碟空間                    |
-| VS Code 一直跳出重新開啟提示               | 你可能同時啟用了兩種選項；請選擇一種（venv **或** container）      |
-| OpenAI 401 / 429 錯誤                      | 檢查 `OPENAI_API_KEY` 值 / 請求速率限制                            |
-| 使用 Conda 發生錯誤                        | 用 `conda install -c microsoft azure-ai-ml` 安裝 Microsoft AI 套件 |
+| 症狀                                     | 解決方法                                                        |
+|------------------------------------------|----------------------------------------------------------------|
+| 找不到 `python`                         | 將 Python 加入 PATH，或安裝後重新開啟終端機                    |
+| Windows 下 `pip` 無法建立 wheels        | 執行 `pip install --upgrade pip setuptools wheel` 後重試       |
+| `ModuleNotFoundError: dotenv`            | 執行 `pip install -r requirements.txt`（虛擬環境未安裝）         |
+| Docker 建置失敗 *No space left*          | Docker Desktop ▸ *設定* ▸ *資源* → 增加磁碟空間                 |
+| VS Code 持續提示重新開啟                 | 可能同時啟用了兩個選項；選擇一個（venv **或** 容器）            |
+| OpenAI 401 / 429 錯誤                    | 檢查 `OPENAI_API_KEY` 值 / 請求速率限制                         |
+| Conda 使用錯誤                          | 使用 `conda install -c microsoft azure-ai-ml` 安裝 Microsoft AI 函式庫 |
 
 ---
 
-**免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意自動翻譯可能包含錯誤或不準確之處。原始語言的文件應視為具權威性的來源。對於重要資訊，建議採用專業人工翻譯。我們對因使用本翻譯而產生的任何誤解或誤釋不承擔任何責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件係使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我哋致力於確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件以其母語版本為權威來源。對於重要資訊，建議採用專業人工翻譯。我哋對因使用本翻譯而引致之任何誤解或誤釋概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

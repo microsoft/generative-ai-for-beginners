@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a2a83aac52158c23161046cbd13faa2b",
-  "translation_date": "2025-10-17T21:44:50+00:00",
+  "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+  "translation_date": "2025-12-19T16:43:36+00:00",
   "source_file": "16-open-source-models/README.md",
   "language_code": "cs"
 }
@@ -11,40 +11,40 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Úvod
 
-Svět open-source LLMs je vzrušující a neustále se vyvíjí. Tato lekce si klade za cíl poskytnout podrobný pohled na open-source modely. Pokud hledáte informace o tom, jak se proprietární modely srovnávají s open-source modely, přejděte na lekci ["Zkoumání a porovnávání různých LLMs"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Tato lekce se také zabývá tématem jemného ladění, ale podrobnější vysvětlení najdete v lekci ["Jemné ladění LLMs"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
+Svět open-source LLM je vzrušující a neustále se vyvíjí. Tento kurz si klade za cíl poskytnout podrobný pohled na open source modely. Pokud hledáte informace o tom, jak se proprietární modely srovnávají s open source modely, přejděte na lekci ["Prozkoumání a porovnání různých LLM"](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst). Tato lekce se také bude věnovat tématu doladění, ale podrobnější vysvětlení najdete v lekci ["Doladění LLM"](../18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst).
 
 ## Cíle učení
 
-- Získat porozumění open-source modelům
-- Pochopit výhody práce s open-source modely
-- Prozkoumat dostupné open-source modely na Hugging Face a Azure AI Studio
+- Získat porozumění open source modelům
+- Pochopit výhody práce s open source modely
+- Prozkoumat dostupné open modely na Hugging Face a v Azure AI Studiu
 
 ## Co jsou Open Source Modely?
 
-Open-source software sehrál klíčovou roli v rozvoji technologií napříč různými obory. Open Source Initiative (OSI) definovala [10 kritérií pro software](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), aby mohl být klasifikován jako open source. Zdrojový kód musí být veřejně sdílen pod licencí schválenou OSI.
+Open source software sehrál klíčovou roli v rozvoji technologií v různých oblastech. Open Source Initiative (OSI) definovala [10 kritérií pro software](https://web.archive.org/web/20241126001143/https://opensource.org/osd?WT.mc_id=academic-105485-koreyst), aby byl klasifikován jako open source. Zdrojový kód musí být otevřeně sdílen pod licencí schválenou OSI.
 
-Ačkoli vývoj LLMs má podobné prvky jako vývoj softwaru, proces není úplně stejný. To vyvolalo mnoho diskusí v komunitě o definici open source v kontextu LLMs. Aby model odpovídal tradiční definici open source, měly by být veřejně dostupné následující informace:
+Vývoj LLM má podobné prvky jako vývoj softwaru, ale proces není zcela stejný. To vyvolalo mnoho diskuzí v komunitě o definici open source v kontextu LLM. Aby model odpovídal tradiční definici open source, měly by být veřejně dostupné následující informace:
 
-- Datové sady použité k trénování modelu.
-- Kompletní váhy modelu jako součást trénování.
-- Kód pro hodnocení.
-- Kód pro jemné ladění.
-- Kompletní váhy modelu a metriky trénování.
+- Datové sady použité k tréninku modelu.
+- Kompletní váhy modelu jako součást tréninku.
+- Evaluační kód.
+- Kód pro doladění.
+- Kompletní váhy modelu a metriky tréninku.
 
-V současné době existuje jen několik modelů, které splňují tato kritéria. [Model OLMo vytvořený Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) je jedním z těch, které odpovídají této kategorii.
+V současné době existuje jen několik modelů, které těmto kritériím vyhovují. [Model OLMo vytvořený Allen Institute for Artificial Intelligence (AllenAI)](https://huggingface.co/allenai/OLMo-7B?WT.mc_id=academic-105485-koreyst) je jedním z nich.
 
-Pro tuto lekci budeme modely dále označovat jako "open modely", protože v době psaní nemusí odpovídat výše uvedeným kritériím.
+Pro tuto lekci budeme modely nadále označovat jako "open modely", protože v době psaní nemusí splňovat výše uvedená kritéria.
 
 ## Výhody Open Modelů
 
-**Vysoce přizpůsobitelné** - Protože open modely jsou vydávány s podrobnými informacemi o trénování, výzkumníci a vývojáři mohou upravovat interní části modelu. To umožňuje vytváření vysoce specializovaných modelů, které jsou jemně laděny pro konkrétní úkol nebo oblast studia. Některé příklady zahrnují generování kódu, matematické operace a biologii.
+**Vysoce přizpůsobitelné** – Protože open modely jsou vydávány s podrobnými informacemi o tréninku, výzkumníci a vývojáři mohou upravovat vnitřní strukturu modelu. To umožňuje vytvářet vysoce specializované modely, které jsou doladěné pro konkrétní úkol nebo oblast studia. Některé příklady jsou generování kódu, matematické operace a biologie.
 
-**Náklady** - Náklady na token při používání a nasazení těchto modelů jsou nižší než u proprietárních modelů. Při budování aplikací generativní AI by mělo být provedeno porovnání výkonu a ceny při práci s těmito modely na vašem konkrétním případu použití.
+**Cena** – Cena za token při používání a nasazení těchto modelů je nižší než u proprietárních modelů. Při budování aplikací Generativní AI byste měli zvážit poměr výkonu a ceny při práci s těmito modely pro váš konkrétní případ použití.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.cs.png)  
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.cs.png)
 Zdroj: Artificial Analysis
 
-**Flexibilita** - Práce s open modely umožňuje flexibilitu při používání různých modelů nebo jejich kombinování. Příkladem je [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kde si uživatel může přímo v uživatelském rozhraní vybrat model, který bude použit:
+**Flexibilita** – Práce s open modely vám umožňuje být flexibilní v používání různých modelů nebo jejich kombinování. Příkladem jsou [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kde si uživatel může přímo v uživatelském rozhraní vybrat používaný model:
 
 ![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.cs.png)
 
@@ -52,42 +52,44 @@ Zdroj: Artificial Analysis
 
 ### Llama 2
 
-[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), vyvinutý společností Meta, je open model optimalizovaný pro aplikace založené na chatu. To je způsobeno metodou jemného ladění, která zahrnovala velké množství dialogů a zpětné vazby od lidí. Díky této metodě model produkuje více výsledků, které odpovídají očekáváním lidí, což poskytuje lepší uživatelský zážitek.
+[LLama2](https://huggingface.co/meta-llama?WT.mc_id=academic-105485-koreyst), vyvinutý společností Meta, je open model optimalizovaný pro chatové aplikace. Je to díky metodě doladění, která zahrnovala velké množství dialogů a lidské zpětné vazby. Tato metoda umožňuje modelu produkovat výsledky více odpovídající lidským očekáváním, což zlepšuje uživatelský zážitek.
 
-Některé příklady jemně laděných verzí Llama zahrnují [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), který se specializuje na japonštinu, a [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), což je vylepšená verze základního modelu.
+Některé příklady doladěných verzí Llama zahrnují [Japanese Llama](https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b?WT.mc_id=academic-105485-koreyst), který se specializuje na japonštinu, a [Llama Pro](https://huggingface.co/TencentARC/LLaMA-Pro-8B?WT.mc_id=academic-105485-koreyst), což je vylepšená verze základního modelu.
 
 ### Mistral
 
-[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) je open model s důrazem na vysoký výkon a efektivitu. Používá přístup Mixture-of-Experts, který kombinuje skupinu specializovaných expertních modelů do jednoho systému, kde v závislosti na vstupu jsou vybrány určité modely k použití. To činí výpočet efektivnějším, protože modely se zabývají pouze vstupy, na které jsou specializované.
+[Mistral](https://huggingface.co/mistralai?WT.mc_id=academic-105485-koreyst) je open model se silným zaměřením na vysoký výkon a efektivitu. Používá přístup Mixture-of-Experts, který kombinuje skupinu specializovaných expertních modelů do jednoho systému, kde jsou podle vstupu vybírány určité modely k použití. To činí výpočet efektivnějším, protože modely řeší pouze vstupy, na které jsou specializované.
 
-Některé příklady jemně laděných verzí Mistral zahrnují [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), který se zaměřuje na lékařskou oblast, a [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), který provádí matematické výpočty.
+Některé příklady doladěných verzí Mistral zahrnují [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B?text=Mon+nom+est+Thomas+et+mon+principal?WT.mc_id=academic-105485-koreyst), který se zaměřuje na lékařskou oblast, a [OpenMath Mistral](https://huggingface.co/nvidia/OpenMath-Mistral-7B-v0.1-hf?WT.mc_id=academic-105485-koreyst), který provádí matematické výpočty.
 
 ### Falcon
 
-[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) je LLM vytvořený Technology Innovation Institute (**TII**). Falcon-40B byl trénován na 40 miliardách parametrů, což se ukázalo jako lepší výkon než GPT-3 s menším výpočetním rozpočtem. To je způsobeno použitím algoritmu FlashAttention a multiquery attention, které umožňují snížit požadavky na paměť během doby inferencí. Díky této snížené době inferencí je Falcon-40B vhodný pro aplikace založené na chatu.
+[Falcon](https://huggingface.co/tiiuae?WT.mc_id=academic-105485-koreyst) je LLM vytvořený Technology Innovation Institute (**TII**). Falcon-40B byl trénován na 40 miliardách parametrů a ukázalo se, že podává lepší výkon než GPT-3 s menším výpočetním rozpočtem. Je to díky použití algoritmu FlashAttention a multiquery attention, které umožňují snížit požadavky na paměť při inferenci. Díky zkrácené době inferenčního zpracování je Falcon-40B vhodný pro chatové aplikace.
 
-Některé příklady jemně laděných verzí Falcon zahrnují [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), asistenta postaveného na open modelech, a [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), který poskytuje vyšší výkon než základní model.
+Některé příklady doladěných verzí Falcon jsou [OpenAssistant](https://huggingface.co/OpenAssistant/falcon-40b-sft-top1-560?WT.mc_id=academic-105485-koreyst), asistent postavený na open modelech, a [GPT4ALL](https://huggingface.co/nomic-ai/gpt4all-falcon?WT.mc_id=academic-105485-koreyst), který poskytuje vyšší výkon než základní model.
 
 ## Jak vybrat
 
-Neexistuje jednoznačná odpověď na otázku, jak vybrat open model. Dobré místo, kde začít, je použití funkce filtrování podle úkolu v Azure AI Studio. To vám pomůže pochopit, pro jaké typy úkolů byl model trénován. Hugging Face také udržuje LLM Leaderboard, který vám ukáže nejlépe hodnocené modely na základě určitých metrik.
+Neexistuje jednoznačná odpověď na výběr open modelu. Dobré místo pro začátek je použití filtru podle úkolu v Azure AI Studiu. To vám pomůže pochopit, pro jaké typy úkolů byl model trénován. Hugging Face také udržuje LLM žebříček, který ukazuje nejlepší modely podle určitých metrik.
 
-Pokud hledáte porovnání LLMs napříč různými typy, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) je další skvělý zdroj:
+Při porovnávání LLM napříč různými typy je dalším skvělým zdrojem [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst):
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.cs.png)  
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.cs.png)
 Zdroj: Artificial Analysis
 
-Pokud pracujete na konkrétním případu použití, hledání jemně laděných verzí zaměřených na stejnou oblast může být efektivní. Experimentování s více open modely, abyste zjistili, jak si vedou podle vašich očekávání a očekávání vašich uživatelů, je další dobrá praxe.
+Pokud pracujete na konkrétním případu použití, může být efektivní hledat doladěné verze zaměřené na stejnou oblast. Experimentování s více open modely, abyste viděli, jak si vedou podle vašich a uživatelských očekávání, je další dobrá praxe.
 
 ## Další kroky
 
-Nejlepší na open modelech je, že s nimi můžete začít pracovat poměrně rychle. Podívejte se na [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), který obsahuje specifickou kolekci Hugging Face s modely, o kterých jsme zde diskutovali.
+Nejlepší na open modelech je, že s nimi můžete začít pracovat poměrně rychle. Podívejte se na [Azure AI Foundry Model Catalog](https://ai.azure.com?WT.mc_id=academic-105485-koreyst), který obsahuje speciální kolekci Hugging Face s modely, o kterých jsme zde mluvili.
 
-## Učení nekončí zde, pokračujte v cestě
+## Učení zde nekončí, pokračujte na cestě
 
-Po dokončení této lekce se podívejte na naši [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali v rozšiřování svých znalostí o generativní AI!
+Po dokončení této lekce si prohlédněte naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte ve zvyšování svých znalostí o Generativní AI!
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
