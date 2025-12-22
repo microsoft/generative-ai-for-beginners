@@ -208,7 +208,7 @@ def chatbot(user_input):
     # create a message object
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
     # use chat completion to generate a response
