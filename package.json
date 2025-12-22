@@ -22,7 +22,7 @@
 	},
 	"homepage": "https://github.com/microsoft/generative-ai-for-beginners#readme",
 	"devDependencies": {
-		"@types/node": "^25.0.2",
+		"@types/node": "^25.0.3",
 		"docsify-to-pdf": "0.0.5"
 	},
 	"dependencies": {
