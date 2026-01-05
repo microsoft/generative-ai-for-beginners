@@ -67,7 +67,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 ตัวอย่างเช่น เมื่อคุณวางเมาส์เหนือใด ๆ ในไฟล์ คุณจะเห็นคำสั่งให้กด **ctrl + click** เพื่อติดตามลิงก์
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.th.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.th.png)
 
 ถ้าคลิกลิงก์แล้วไม่ทำงานในเครื่องคุณ ก็แน่นอนว่าจะทำงานไม่ได้บน GitHub
 
@@ -75,7 +75,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 เมื่อคุณพิมพ์ `./` หรือ `../` VS code จะเสนอทางเลือกให้คุณเลือกตามที่คุณพิมพ์
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.th.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.th.png)
 
 ติดตามเส้นทางโดยคลิกที่ไฟล์หรือโฟลเดอร์ที่ต้องการ แล้วคุณจะมั่นใจได้ว่าเส้นทางของคุณไม่เสียหาย
 
@@ -92,7 +92,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 ถ้าไม่มี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.th.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.th.png)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและเพิ่ม tracking ID ต่อท้ายเส้นทางสัมพัทธ์
 
@@ -109,7 +109,7 @@ workflow นี้จะตรวจสอบว่า URL เว็บมี tr
 
 ถ้าไม่มี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.th.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.th.png)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและเพิ่ม tracking ID ต่อท้าย URL
 
@@ -126,7 +126,7 @@ workflow นี้จะตรวจสอบว่า URL เว็บไม่
 
 ถ้ามี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.th.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.th.png)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและลบ locale ของประเทศออกจาก URL
 

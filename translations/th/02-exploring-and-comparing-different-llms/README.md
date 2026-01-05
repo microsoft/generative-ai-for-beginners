@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # การสำรวจและเปรียบเทียบ LLMs ต่างๆ
 
-[![การสำรวจและเปรียบเทียบ LLMs ต่างๆ](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.th.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![การสำรวจและเปรียบเทียบ LLMs ต่างๆ](../../../translated_images/02-lesson-banner.ef94c84979f97f60.th.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _คลิกที่ภาพด้านบนเพื่อดูวิดีโอของบทเรียนนี้_
 
@@ -59,14 +59,14 @@ LLMs สามารถแบ่งประเภทได้หลายแบ
 - **เป็นโมเดลขนาดใหญ่** ที่ใช้เครือข่ายประสาทลึกมากและถูกฝึกด้วยพารามิเตอร์นับพันล้าน
 - **มักถูกออกแบบมาเพื่อเป็น ‘พื้นฐาน’ สำหรับโมเดลอื่นๆ** หมายความว่ามันสามารถใช้เป็นจุดเริ่มต้นสำหรับการสร้างโมเดลอื่นๆ โดยการปรับแต่งเพิ่มเติม
 
-![Foundation Models กับ LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.th.png)
+![Foundation Models กับ LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.th.png)
 
 แหล่งที่มาของภาพ: [Essential Guide to Foundation Models and Large Language Models | โดย Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 เพื่ออธิบายความแตกต่างนี้เพิ่มเติม ลองใช้ ChatGPT เป็นตัวอย่าง ในการสร้าง ChatGPT รุ่นแรก โมเดลที่เรียกว่า GPT-3.5 ถูกใช้เป็น Foundation Model ซึ่งหมายความว่า OpenAI ใช้ข้อมูลเฉพาะสำหรับการสนทนาเพื่อสร้างเวอร์ชันที่ปรับแต่งของ GPT-3.5 ที่เชี่ยวชาญในการทำงานได้ดีในสถานการณ์การสนทนา เช่น chatbot
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.th.png)
+![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51.th.png)
 
 แหล่งที่มาของภาพ: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLMs ยังสามารถจัดประเภทตามผลลั
 
 การฝังข้อมูลคือชุดของโมเดลที่สามารถแปลงข้อความเป็นรูปแบบตัวเลขที่เรียกว่าการฝังข้อมูล ซึ่งเป็นการแสดงผลตัวเลขของข้อความที่ป้อน การฝังข้อมูลทำให้เครื่องจักรเข้าใจความสัมพันธ์ระหว่างคำหรือประโยคได้ง่ายขึ้น และสามารถใช้เป็นอินพุตโดยโมเดลอื่นๆ เช่น โมเดลการจำแนกประเภท หรือโมเดลการจัดกลุ่มที่มีประสิทธิภาพดีกว่าบนข้อมูลตัวเลข โมเดลการฝังข้อมูลมักถูกใช้สำหรับการเรียนรู้แบบถ่ายโอน ซึ่งโมเดลถูกสร้างขึ้นสำหรับงานตัวแทนที่มีข้อมูลมากมาย และจากนั้นน้ำหนักของโมเดล (การฝังข้อมูล) ถูกนำไปใช้ใหม่สำหรับงานต่อเนื่อง ตัวอย่างของหมวดหมู่นี้คือ [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)
 
-![การฝังข้อมูล](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.th.png)
+![การฝังข้อมูล](../../../translated_images/Embedding.c3708fe988ccf760.th.png)
 
 โมเดลการสร้างภาพคือโมเดลที่สร้างภาพ โมเดลเหล่านี้มักถูกใช้สำหรับการแก้ไขภาพ การสังเคราะห์ภาพ และการแปลภาพ โมเดลการสร้างภาพมักถูกฝึกด้วยชุดข้อมูลขนาดใหญ่ของภาพ เช่น [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst) และสามารถใช้สร้างภาพใหม่หรือแก้ไขภาพที่มีอยู่ด้วยเทคนิคการเติมภาพ การเพิ่มความละเอียด และการปรับสี ตัวอย่างได้แก่ [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) และ [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)
 
-![การสร้างภาพ](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.th.png)
+![การสร้างภาพ](../../../translated_images/Image.349c080266a763fd.th.png)
 
 โมเดลการสร้างข้อความและโค้ดคือโมเดลที่สร้างข้อความหรือโค้ด โมเดลเหล่านี้มักถูกใช้สำหรับการสรุปข้อความ การแปล และการตอบคำถาม โมเดลการสร้างข้อความมักถูกฝึกด้วยชุดข้อมูลขนาดใหญ่ของข้อความ เช่น [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst) และสามารถใช้สร้างข้อความใหม่หรือตอบคำถาม โมเดลการสร้างโค้ด เช่น [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst) มักถูกฝึกด้วยชุดข้อมูลขนาดใหญ่ของโค้ด เช่น GitHub และสามารถใช้สร้างโค้ดใหม่หรือแก้ไขข้อผิดพลาดในโค้ดที่มีอยู่
 
-![การสร้างข้อความและโค้ด](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.th.png)
+![การสร้างข้อความและโค้ด](../../../translated_images/Text.a8c0cf139e5cc2a0.th.png)
 
 ### Encoder-Decoder กับ Decoder-only
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # การรักษาความปลอดภัยให้กับแอปพลิเคชัน AI เชิงสร้างสรรค์ของคุณ
 
-[![การรักษาความปลอดภัยให้กับแอปพลิเคชัน AI เชิงสร้างสรรค์ของคุณ](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.th.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![การรักษาความปลอดภัยให้กับแอปพลิเคชัน AI เชิงสร้างสรรค์ของคุณ](../../../translated_images/13-lesson-banner.14103e36b4bbf173.th.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## บทนำ
 
@@ -119,7 +119,7 @@ LLMs อาจก่อให้เกิดความเสี่ยงต่
 
 > การปฏิบัติของ AI red teaming ได้พัฒนาไปสู่ความหมายที่กว้างขึ้น: ไม่เพียงแต่ครอบคลุมการตรวจสอบช่องโหว่ด้านความปลอดภัย แต่ยังรวมถึงการตรวจสอบความล้มเหลวอื่น ๆ ของระบบ เช่น การสร้างเนื้อหาที่อาจเป็นอันตราย ระบบ AI มาพร้อมกับความเสี่ยงใหม่ ๆ และ red teaming เป็นหัวใจสำคัญในการทำความเข้าใจความเสี่ยงใหม่เหล่านั้น เช่น การฉีดคำสั่ง (prompt injection) และการสร้างเนื้อหาที่ไม่มีพื้นฐาน - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![คำแนะนำและทรัพยากรสำหรับ red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.th.png)]()
+[![คำแนะนำและทรัพยากรสำหรับ red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.th.png)]()
 
 ด้านล่างนี้คือข้อมูลสำคัญที่ได้หล่อหลอมโปรแกรม AI Red Team ของ Microsoft
 
