@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # प्रगत प्रॉम्प्ट तयार करणे
 
-[![प्रगत प्रॉम्प्ट तयार करणे](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.mr.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![प्रगत प्रॉम्प्ट तयार करणे](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.mr.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 आधीच्या अध्यायातील काही शिकवणुकींचा आढावा घेऊया:
 

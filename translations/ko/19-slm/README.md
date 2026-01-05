@@ -33,7 +33,7 @@ SLM은 방대한 텍스트 데이터를 학습합니다. 학습 과정에서 언
 
 SLM 개발은 모바일 기기나 엣지 컴퓨팅 플랫폼처럼 자원이 제한된 환경에 배포할 수 있는 모델에 대한 수요 증가와 맞물려 있습니다. 효율성에 중점을 둔 SLM은 성능과 접근성의 균형을 맞춰 다양한 분야에서 폭넓게 활용될 수 있습니다.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.ko.png)
+![slm](../../../translated_images/slm.4058842744d0444a.ko.png)
 
 ## 학습 목표  
 
@@ -132,7 +132,7 @@ Phi-3/3.5 Family 모델은 다양한 시나리오에 맞게 사용할 수 있으
 
 Phi-3/3.5를 다양한 시나리오에서 활용해보고자 합니다. 다음으로는 시나리오별로 Phi-3/3.5를 사용하는 방법을 살펴보겠습니다.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.ko.png)
+![phi3](../../../translated_images/phi3.655208c3186ae381.ko.png)
 
 ### 클라우드 API를 통한 추론 차이  
 
@@ -142,9 +142,9 @@ GitHub Models는 가장 직접적인 방법입니다. GitHub Models를 통해 Ph
 
 - 데모: 중국어 시나리오에서 Phi-3-mini와 Phi-3.5-mini 효과 비교
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.ko.png)
+![phi3](../../../translated_images/gh1.126c6139713b622b.ko.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.ko.png)
+![phi35](../../../translated_images/gh2.07d7985af66f178d.ko.png)
 
 **Azure AI Studio**  
 

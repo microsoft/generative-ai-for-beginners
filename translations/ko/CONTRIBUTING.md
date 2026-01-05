@@ -63,7 +63,7 @@ Generative AI for Beginners 저장소에 변경 사항을 제출할 때는 다�
 
 예를 들어, 파일 내 링크 위에 마우스를 올리면 **ctrl + 클릭**으로 링크를 따라갈 수 있다는 안내가 표시됩니다.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.ko.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.ko.png)
 
 링크를 클릭했을 때 로컬에서 작동하지 않으면 워크플로우가 실패하고 GitHub에서도 작동하지 않습니다.
 
@@ -71,7 +71,7 @@ Generative AI for Beginners 저장소에 변경 사항을 제출할 때는 다�
 
 `./` 또는 `../`를 입력하면 VS Code가 가능한 경로 목록을 보여줍니다.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.ko.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ko.png)
 
 원하는 파일이나 폴더를 클릭해 경로를 선택하면 경로가 올바른지 확신할 수 있습니다.
 
@@ -88,7 +88,7 @@ GitHub Pages에 배포된 저장소이므로 파일과 폴더 간 이동을 추�
 
 포함되어 있지 않으면 다음과 같은 오류가 발생할 수 있습니다.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.ko.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ko.png)
 
 이 문제를 해결하려면 워크플로우가 지적한 파일 경로를 열고 상대 경로 끝에 추적 ID를 추가하세요.
 
@@ -105,7 +105,7 @@ URL 끝에 `?wt.mc_id=`가 포함되어 있는지 확인하세요.
 
 포함되어 있지 않으면 다음과 같은 오류가 발생할 수 있습니다.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.ko.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ko.png)
 
 이 문제를 해결하려면 워크플로우가 지적한 파일 경로를 열고 URL 끝에 추적 ID를 추가하세요.
 
@@ -122,7 +122,7 @@ URL에 `/en-us/`, `/en/` 또는 기타 언어 로케일이 포함되어 있는�
 
 포함되어 있으면 다음과 같은 오류가 발생할 수 있습니다.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.ko.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ko.png)
 
 이 문제를 해결하려면 워크플로우가 지적한 파일 경로를 열고 URL에서 국가별 로케일을 제거하세요.
 

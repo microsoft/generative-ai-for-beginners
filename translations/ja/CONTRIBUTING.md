@@ -62,7 +62,7 @@ Generative AI for Beginnersリポジトリに変更を提出する際は、以�
 
 例えば、ファイル内のリンクにカーソルを合わせると、**ctrl + クリック**でリンク先に移動できるプロンプトが表示されます。
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.ja.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.ja.png)
 
 リンクをクリックしてローカルで動作しない場合は、ワークフローも失敗し、GitHub上でも動作しません。
 
@@ -70,7 +70,7 @@ Generative AI for Beginnersリポジトリに変更を提出する際は、以�
 
 `./`や`../`と入力すると、VS Codeが利用可能な候補を表示します。
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.ja.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ja.png)
 
 目的のファイルやフォルダーをクリックしてパスを選択すれば、パスが壊れていないことが確実になります。
 
@@ -87,7 +87,7 @@ GitHub Pagesにデプロイされているため、ファイルやフォルダ�
 
 付いていない場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.ja.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ja.png)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、相対パスの末尾にトラッキングIDを追加してください。
 
@@ -104,7 +104,7 @@ URLの末尾に`?wt.mc_id=`が付いているか確認してください。
 
 付いていない場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.ja.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ja.png)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、URLの末尾にトラッキングIDを追加してください。
 
@@ -121,7 +121,7 @@ URLに`/en-us/`や`/en/`、その他の言語ロケールが含まれていな�
 
 含まれている場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.ja.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ja.png)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、URLから国別ロケールを削除してください。
 

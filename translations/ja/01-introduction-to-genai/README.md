@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 生成AIと大規模言語モデルの紹介
 
-[![生成AIと大規模言語モデルの紹介](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.ja.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![生成AIと大規模言語モデルの紹介](../../../translated_images/01-lesson-banner.2424cfd092f43366.ja.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(上の画像をクリックして、このレッスンの動画をご覧ください)_
 
@@ -43,7 +43,7 @@ _(上の画像をクリックして、このレッスンの動画をご覧くだ
 
 生成AIは、今日の学び方や教え方を革命的に変えると期待されています。学生は24時間利用可能な仮想教師を手に入れ、膨大な情報や例を提供し、教師は革新的なツールを活用して生徒を評価し、フィードバックを提供することができます。
 
-![モニターを見ている5人の若い学生 - DALLE2による画像](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.ja.png)
+![モニターを見ている5人の若い学生 - DALLE2による画像](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.ja.png)
 
 まずは、このカリキュラムで使用する基本的な概念と用語を定義しましょう。
 
@@ -70,7 +70,7 @@ _(上の画像をクリックして、このレッスンの動画をご覧くだ
 
 こうして、今日の生成AIに至りました。生成AIは深層学習の一部と見なすことができます。
 
-![AI、ML、DL、生成AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.ja.png)
+![AI、ML、DL、生成AI](../../../translated_images/AI-diagram.c391fa518451a40d.ja.png)
 
 AI分野での数十年にわたる研究の結果、新しいモデルアーキテクチャである_Transformer_がRNNの限界を克服し、より長いテキストシーケンスを入力として受け取ることが可能になりました。Transformerは注意機構に基づいており、モデルが受け取る入力に異なる重みを与え、テキストシーケンス内の順序に関係なく、最も関連性の高い情報に「より注意を払う」ことを可能にします。
 
@@ -82,7 +82,7 @@ AI分野での数十年にわたる研究の結果、新しいモデルアーキ
 
 - **トークナイザー、テキストから数値へ**: 大規模言語モデルはテキストを入力として受け取り、テキストを出力として生成します。しかし、統計モデルであるため、テキストシーケンスよりも数値での処理が得意です。そのため、モデルのコア部分で使用される前に、入力はトークナイザーによって処理されます。トークンは可変長の文字列で構成されており、トークナイザーの主な役割は入力をトークンの配列に分割することです。その後、各トークンはトークンインデックスにマッピングされ、元のテキストチャンクの整数エンコーディングとなります。
 
-![トークン化の例](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.ja.png)
+![トークン化の例](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.ja.png)
 
 - **出力トークンの予測**: n個のトークンを入力として与えると（モデルによって最大nは異なる）、モデルは1つのトークンを出力として予測します。このトークンは次の反復の入力に組み込まれ、拡張ウィンドウパターンを形成し、1つまたは複数の文を回答として得るユーザー体験を向上させます。これにより、ChatGPTを使用したことがある場合、時々文の途中で止まるように見える理由が説明されます。
 
@@ -100,23 +100,23 @@ AI分野での数十年にわたる研究の結果、新しいモデルアーキ
 
   1. 記事、書籍、製品レビューなどの要約、または非構造化データからの洞察の抽出。
     
-    ![要約の例](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.ja.png)
+    ![要約の例](../../../translated_images/summarization-example.7b7ff97147b3d790.ja.png)
   
   2. 記事、エッセイ、課題などの創造的なアイデアとデザイン。
       
-     ![創造的な文章の例](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.ja.png)
+     ![創造的な文章の例](../../../translated_images/creative-writing-example.e24a685b5a543ad1.ja.png)
 
 - **質問**: エージェントとの会話形式で尋ねるもの。
   
-  ![会話の例](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.ja.png)
+  ![会話の例](../../../translated_images/conversation-example.60c2afc0f595fa59.ja.png)
 
 - **補完するテキストの一部**: 暗黙的に執筆支援を求めるもの。
   
-  ![テキスト補完の例](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.ja.png)
+  ![テキスト補完の例](../../../translated_images/text-completion-example.cbb0f28403d42752.ja.png)
 
 - **コードの一部**: 説明や文書化を求めるコメント、または特定のタスクを実行するコードの生成を求めるコメント。
   
-  ![コーディングの例](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.ja.png)
+  ![コーディングの例](../../../translated_images/coding-example.50ebabe8a6afff20.ja.png)
 
 上記の例は非常にシンプルで、大規模言語モデルの能力を完全に示すものではありません。これらは生成AIの使用可能性を示すものであり、特に教育的な文脈に限定されるものではありません。
 

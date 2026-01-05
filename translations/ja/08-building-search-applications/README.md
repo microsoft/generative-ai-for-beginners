@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 検索アプリケーションの構築
 
-[![生成AIと大規模言語モデルの紹介](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.ja.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![生成AIと大規模言語モデルの紹介](../../../translated_images/08-lesson-banner.8fff48c566dad08a.ja.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _上の画像をクリックして、このレッスンのビデオをご覧ください_
 
@@ -44,7 +44,7 @@ LLM（大規模言語モデル）はチャットボットやテキスト生成�
 
 以下は、「Azure MLでrstudioを使用できますか？」という質問に対するセマンティッククエリの例です。YouTubeのURLを確認すると、質問の答えが含まれる動画の場所に移動するタイムスタンプが含まれていることがわかります。
 
-![質問「Azure MLでrstudioを使用できますか？」に対するセマンティッククエリ](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.ja.png)
+![質問「Azure MLでrstudioを使用できますか？」に対するセマンティッククエリ](../../../translated_images/query-results.bb0480ebf025fac6.ja.png)
 
 ## セマンティック検索とは？
 
@@ -163,7 +163,7 @@ GitHub Codespacesで[ソリューションノートブック](./python/aoai-solu
 
 ノートブックを実行すると、クエリを入力するよう求められます。入力ボックスは以下のように表示されます：
 
-![ユーザーがクエリを入力するための入力ボックス](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.ja.png)
+![ユーザーがクエリを入力するための入力ボックス](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.ja.png)
 
 ## 素晴らしい仕事！学習を続けましょう
 

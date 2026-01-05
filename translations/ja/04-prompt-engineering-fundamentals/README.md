@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # プロンプトエンジニアリングの基礎
 
-[![プロンプトエンジニアリングの基礎](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.ja.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![プロンプトエンジニアリングの基礎](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.ja.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## はじめに
 このモジュールでは、生成AIモデルで効果的なプロンプトを作成するための基本的な概念と技術について説明します。LLMに送るプロンプトの書き方は非常に重要です。慎重に作成されたプロンプトは、より質の高い応答を得ることができます。しかし、そもそも「プロンプト」や「プロンプトエンジニアリング」とは何を意味するのでしょうか？また、LLMに送るプロンプトの「入力」をどのように改善すればよいのでしょうか？これらの質問に、この章と次の章で答えていきます。
@@ -53,7 +53,7 @@ Notebookには「スターター」演習が含まれていますが、独自の
 
 このレッスンがカバーする内容の全体像を掴みたいですか？このイラスト付きガイドをチェックしてみてください。主要なトピックと各トピックで考えるべき重要なポイントを示しています。このレッスンのロードマップは、基本的な概念と課題を理解するところから始まり、それらに関連するプロンプトエンジニアリングの技術とベストプラクティスで対処する方法へと進みます。このガイドの「高度な技術」セクションは、このカリキュラムの次の章でカバーされる内容を指しています。
 
-![プロンプトエンジニアリングのイラスト付きガイド](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.ja.png)
+![プロンプトエンジニアリングのイラスト付きガイド](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.ja.png)
 
 ## 私たちのスタートアップ
 
@@ -94,7 +94,7 @@ LLMはプロンプトを_トークンのシーケンス_として認識します
 
 トークン化がどのように機能するかを理解するには、以下に示す[OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)のようなツールを試してみてください。プロンプトをコピーして貼り付けると、それがどのようにトークンに変換されるかを見ることができます。空白文字や句読点がどのように処理されるかに注目してください。この例は古いLLM（GPT-3）を示していますので、新しいモデルで試すと異なる結果が得られるかもしれません。
 
-![トークン化](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.ja.png)
+![トークン化](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.ja.png)
 
 ### 概念：基盤モデル
 
@@ -104,7 +104,7 @@ LLMはプロンプトを_トークンのシーケンス_として認識します
 
 しかし、ユーザーが特定の基準やタスク目標を満たす何かを見たいと思った場合はどうでしょうか？ここで_指示調整済み_ LLMが登場します。
 
-![ベースLLMチャット完成](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.ja.png)
+![ベースLLMチャット完成](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.ja.png)
 
 ### 概念：指示調整済みLLM
 
@@ -118,7 +118,7 @@ LLMはプロンプトを_トークンのシーケンス_として認識します
 
 結果がどのように目標や形式に合わせて調整されるかを確認してください。教育者はこの応答をそのクラスのスライドに直接使用することができます。
 
-![指示調整済みLLMチャット完成](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.ja.png)
+![指示調整済みLLMチャット完成](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.ja.png)
 
 ## なぜプロンプトエンジニアリングが必要なのか？
 
@@ -144,15 +144,15 @@ OpenAIまたはAzure OpenAI Playgroundでこれを実際に見てみましょう
 
 > **レスポンス1**: OpenAI Playground (GPT-35)
 
-![レスポンス1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.ja.png)
+![レスポンス1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.ja.png)
 
 > **レスポンス2**: Azure OpenAI Playground (GPT-35)
 
-![レスポンス2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.ja.png)
+![レスポンス2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.ja.png)
 
 > **レスポンス3**: Hugging Face Chat Playground (LLama-2)
 
-![レスポンス3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.ja.png)
+![レスポンス3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.ja.png)
 
 予想通り、各モデル（またはモデルバージョン）は、確率的な挙動やモデル能力の違いにより、少し異なるレスポンスを生成します。例えば、あるモデルは中学生向けの内容を目指し、別のモデルは高校生向けの内容を想定しています。しかし、3つのモデルすべてが、情報に疎いユーザーに対してその出来事が実際にあったかのように信じ込ませるレスポンスを生成しました。
 

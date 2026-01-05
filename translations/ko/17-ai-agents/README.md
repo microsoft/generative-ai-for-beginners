@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-[![오픈 소스 모델](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ko.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![오픈 소스 모델](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ko.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## 소개
 
@@ -33,7 +33,7 @@ AI 에이전트는 생성형 AI 세계에서 매우 흥미로운 분야입니다
 
 AI 에이전트는 대규모 언어 모델(LLM)이 **상태**와 **도구**에 접근하여 작업을 수행할 수 있도록 합니다.
 
-![에이전트 모델](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ko.png)
+![에이전트 모델](../../../translated_images/what-agent.21f2893bdfd01e6a.ko.png)
 
 이 용어들을 정의해 보겠습니다:
 
@@ -53,7 +53,7 @@ AI 에이전트는 대규모 언어 모델(LLM)이 **상태**와 **도구**에 �
 
 `AgentExecutor`는 또한 채팅 기록을 저장하여 채팅의 컨텍스트를 제공합니다.
 
-![Langchain 에이전트](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ko.png)
+![Langchain 에이전트](../../../translated_images/langchain-agents.edcc55b5d5c43716.ko.png)
 
 LangChain은 LLM이 접근할 수 있는 [도구 카탈로그](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)를 제공합니다. 이는 커뮤니티와 LangChain 팀이 제작한 것입니다.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 다음은 그 과정의 예입니다:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ko.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ko.png)
 
 #### 시스템 메시지로 정의된 LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 작업을 완료하기 위해 `Planner`는 `Plugins`라는 도구 모음에 노출됩니다. 이는 Python 클래스나 일반 코드 인터프리터일 수 있습니다. 이 플러그인은 임베딩으로 저장되어 LLM이 올바른 플러그인을 더 잘 검색할 수 있도록 합니다.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ko.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ko.png)
 
 다음은 이상 탐지를 처리하는 플러그인의 예입니다:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 마지막으로 탐구할 에이전트 프레임워크는 [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)입니다. JARVIS의 독특한 점은 대화의 `상태`를 관리하는 데 LLM을 사용하고, `도구`는 다른 AI 모델이라는 점입니다. 각 AI 모델은 객체 감지, 전사 또는 이미지 캡션 생성과 같은 특정 작업을 수행하는 전문 모델입니다.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ko.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ko.png)
 
 LLM은 범용 모델로서 사용자의 요청을 받아 특정 작업과 이를 완료하는 데 필요한 인수/데이터를 식별합니다.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ジェネレーティブAIアプリケーションのセキュリティ確保
 
-[![ジェネレーティブAIアプリケーションのセキュリティ確保](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ja.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![ジェネレーティブAIアプリケーションのセキュリティ確保](../../../translated_images/13-lesson-banner.14103e36b4bbf173.ja.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## はじめに
 
@@ -125,7 +125,7 @@ LLMは使用するデータのプライバシーとセキュリティにリス�
 
 > AIのレッドチーミングの実践は進化し、より広範な意味を持つようになりました。それはセキュリティの脆弱性を探るだけでなく、潜在的に有害なコンテンツの生成など、他のシステム障害を探ることも含まれます。AIシステムには新しいリスクが伴い、レッドチーミングはプロンプトインジェクションや根拠のないコンテンツの生成など、これらの新しいリスクを理解するための重要な手法です。 - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![レッドチーミングのためのガイダンスとリソース](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ja.png)]()
+[![レッドチーミングのためのガイダンスとリソース](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.ja.png)]()
 
 以下は、MicrosoftのAIレッドチームプログラムを形成した重要な洞察です。
 

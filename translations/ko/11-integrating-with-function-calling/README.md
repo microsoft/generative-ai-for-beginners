@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 함수 호출과 통합하기
 
-[![함수 호출과 통합하기](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.ko.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![함수 호출과 통합하기](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.ko.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 이전 레슨에서 이미 많은 것을 배웠습니다. 하지만 더 개선할 수 있는 부분이 있습니다. 우리가 해결할 수 있는 몇 가지 문제는 응답을 더 일관된 형식으로 만들어 후속 작업에서 쉽게 처리할 수 있도록 하는 방법과, 다른 소스의 데이터를 추가하여 애플리케이션을 더욱 풍부하게 만드는 방법입니다.
 
@@ -179,7 +179,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 그렇다면 형식 문제를 어떻게 해결할 수 있을까요? 함수 호출을 사용하면 구조화된 데이터를 받을 수 있습니다. 함수 호출을 사용할 때 LLM이 실제로 함수 호출을 실행하거나 실행하지는 않습니다. 대신, 우리는 LLM이 응답을 따를 구조를 만듭니다. 그런 다음 이러한 구조화된 응답을 사용하여 애플리케이션에서 실행할 함수를 결정합니다.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.ko.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb.ko.png)
 
 그런 다음 함수에서 반환된 데이터를 가져와 LLM에 다시 보냅니다. LLM은 자연어를 사용하여 사용자의 질문에 답변합니다.
 
@@ -201,7 +201,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. 모델의 응답을 읽어 작업을 수행합니다. 즉, 함수나 API 호출을 실행합니다.
 3. 함수에서 받은 응답을 사용하여 사용자에게 응답을 생성하기 위해 Chat Completions API를 다시 호출합니다.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.ko.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7.ko.png)
 
 ### 1단계 - 메시지 생성
 

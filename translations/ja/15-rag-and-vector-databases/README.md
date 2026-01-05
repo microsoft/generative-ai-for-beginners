@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 検索拡張生成（RAG）とベクターデータベース
 
-[![検索拡張生成（RAG）とベクターデータベース](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.ja.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![検索拡張生成（RAG）とベクターデータベース](../../../translated_images/15-lesson-banner.ac49e59506175d4f.ja.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 検索アプリケーションのレッスンでは、独自のデータを大規模言語モデル（LLM）に統合する方法について簡単に学びました。このレッスンでは、LLMアプリケーションにおけるデータの基盤化の概念、プロセスの仕組み、および埋め込みやテキストを含むデータを保存する方法についてさらに詳しく掘り下げます。
 
@@ -53,7 +53,7 @@ LLMを搭載したチャットボットは、ユーザーのプロンプトを�
 
 ### RAG（検索拡張生成）の仕組み
 
-![RAGの仕組みを示す図](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.ja.png)
+![RAGの仕組みを示す図](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.ja.png)
 
 例えば、ノートからクイズを作成するチャットボットを展開したい場合、知識ベースへの接続が必要です。ここでRAGが役立ちます。RAGの動作は以下の通りです：
 
@@ -65,7 +65,7 @@ LLMを搭載したチャットボットは、ユーザーのプロンプトを�
 
 - **拡張生成:** LLMは取得したデータを基に応答を強化します。これにより、生成された応答が事前トレーニングデータだけでなく、追加されたコンテキストからの関連情報に基づくものとなります。取得したデータはLLMの応答を拡張するために使用されます。その後、LLMはユーザーの質問に対する回答を返します。
 
-![RAGのアーキテクチャを示す図](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.ja.png)
+![RAGのアーキテクチャを示す図](../../../translated_images/encoder-decode.f2658c25d0eadee2.ja.png)
 
 RAGのアーキテクチャは、エンコーダーとデコーダーの2つの部分からなるトランスフォーマーモデルを使用して実装されます。例えば、ユーザーが質問をすると、入力テキストが単語の意味を捉えるベクトルに「エンコード」され、そのベクトルが文書インデックスに「デコード」され、ユーザーのクエリに基づいて新しいテキストを生成します。LLMはエンコーダー-デコーダーモデルの両方を使用して出力を生成します。
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 チャンク化された後、さまざまな埋め込みモデルを使用してテキストを埋め込むことができます。使用できるモデルには、word2vec、OpenAIのada-002、Azure Computer Visionなどがあります。使用するモデルの選択は、使用する言語、エンコードされるコンテンツの種類（テキスト/画像/音声）、エンコード可能な入力のサイズ、埋め込み出力の長さによって異なります。
 
 OpenAIの`text-embedding-ada-002`モデルを使用して埋め込まれたテキストの例：
-![猫の埋め込み](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.ja.png)
+![猫の埋め込み](../../../translated_images/cat.74cbd7946bc9ca38.ja.png)
 
 ## 検索とベクター検索
 

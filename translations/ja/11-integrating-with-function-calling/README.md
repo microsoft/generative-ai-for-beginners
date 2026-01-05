@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 関数呼び出しとの統合
 
-[![関数呼び出しとの統合](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.ja.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![関数呼び出しとの統合](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.ja.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 これまでのレッスンでかなりのことを学んできましたが、さらに改善する余地があります。例えば、レスポンスのフォーマットをより一貫性のあるものにして、後続の処理がしやすくする方法や、他のソースからデータを追加してアプリケーションをさらに充実させる方法などです。
 
@@ -179,7 +179,7 @@ Azure OpenAIサービスの機能である関数呼び出しは、以下の制�
 
 では、フォーマットの問題をどのように解決するのでしょうか？関数呼び出しを使用することで、構造化されたデータを確実に受け取ることができます。関数呼び出しを使用する際、LLMは実際に関数を呼び出したり実行したりするわけではありません。代わりに、LLMがレスポンスを生成するための構造を作成します。その後、その構造化されたレスポンスを使用して、アプリケーション内で実行する関数を決定します。
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.ja.png)
+![function flow](../../../translated_images/Function-Flow.083875364af4f4bb.ja.png)
 
 関数から返されたデータを取得し、それをLLMに送信します。LLMはその後、自然言語を使用してユーザーのクエリに回答します。
 
@@ -201,7 +201,7 @@ Azure OpenAIサービスの機能である関数呼び出しは、以下の制�
 2. **読み取り** - モデルのレスポンスを読み取り、アクション（関数やAPI呼び出しの実行）を実行する。
 3. **再呼び出し** - 関数からのレスポンスを使用して、ユーザーへのレスポンスを作成するためにChat Completions APIを再度呼び出す。
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.ja.png)
+![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7.ja.png)
 
 ### ステップ1 - メッセージの作成
 
