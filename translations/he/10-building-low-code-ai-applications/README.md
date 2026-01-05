@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # בניית יישומי AI בקוד נמוך
 
-[![בניית יישומי AI בקוד נמוך](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.he.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![בניית יישומי AI בקוד נמוך](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.he.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(לחצו על התמונה למעלה לצפייה בסרטון של השיעור הזה)_
 
@@ -92,17 +92,17 @@ Copilot זמין בכל מוצרי Power Platform: Power Apps, Power Automate, P
 
 1. השתמשו באזור הטקסט במסך הבית כדי לתאר את היישום שאתם רוצים לבנות. לדוגמה, **_אני רוצה לבנות יישום למעקב וניהול משימות תלמידים_**. לחצו על כפתור **שלח** כדי לשלוח את ההנחיה ל-Copilot.
 
-![תיאור היישום שאתם רוצים לבנות](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.he.png)
+![תיאור היישום שאתם רוצים לבנות](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.he.png)
 
 1. Copilot יציע טבלת Dataverse עם השדות שאתם צריכים כדי לאחסן את הנתונים שאתם רוצים לעקוב אחריהם וכמה נתוני דוגמה. לאחר מכן תוכלו להתאים את הטבלה לצרכים שלכם באמצעות תכונת עוזר ה-AI Copilot דרך שלבים שיחיים.
 
    > **חשוב**: Dataverse הוא פלטפורמת הנתונים הבסיסית של Power Platform. מדובר בפלטפורמת נתונים בקוד נמוך לאחסון נתוני היישום. זהו שירות מנוהל לחלוטין שמאחסן נתונים בצורה מאובטחת בענן של Microsoft ומוקצה בתוך סביבת Power Platform שלכם. הוא מגיע עם יכולות ניהול נתונים מובנות, כמו סיווג נתונים, שושלת נתונים, בקרת גישה מדויקת ועוד. תוכלו ללמוד עוד על Dataverse [כאן](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-![שדות מוצעים בטבלה החדשה שלכם](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.he.png)
+![שדות מוצעים בטבלה החדשה שלכם](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.he.png)
 
 1. המורים רוצים לשלוח מיילים לתלמידים שהגישו את המשימות שלהם כדי לעדכן אותם על התקדמות המשימות שלהם. תוכלו להשתמש ב-Copilot כדי להוסיף שדה חדש לטבלה לאחסון כתובת המייל של התלמיד. לדוגמה, תוכלו להשתמש בהנחיה הבאה כדי להוסיף שדה חדש לטבלה: **_אני רוצה להוסיף עמודה לאחסון כתובת המייל של התלמיד_**. לחצו על כפתור **שלח** כדי לשלוח את ההנחיה ל-Copilot.
 
-![הוספת שדה חדש](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.he.png)
+![הוספת שדה חדש](../../../translated_images/copilot-new-column.35e15ff21acaf274.he.png)
 
 1. Copilot ייצור שדה חדש ולאחר מכן תוכלו להתאים את השדה לצרכים שלכם.
 
@@ -112,7 +112,7 @@ Copilot זמין בכל מוצרי Power Platform: Power Apps, Power Automate, P
 
 1. כדי שהמורים יוכלו לשלוח מיילים לתלמידים, תוכלו להשתמש ב-Copilot כדי להוסיף מסך חדש ליישום. לדוגמה, תוכלו להשתמש בהנחיה הבאה כדי להוסיף מסך חדש ליישום: **_אני רוצה להוסיף מסך לשליחת מיילים לתלמידים_**. לחצו על כפתור **שלח** כדי לשלוח את ההנחיה ל-Copilot.
 
-![הוספת מסך חדש באמצעות הנחיה](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.he.png)
+![הוספת מסך חדש באמצעות הנחיה](../../../translated_images/copilot-new-screen.2e0bef7132a17392.he.png)
 
 1. Copilot ייצור מסך חדש ולאחר מכן תוכלו להתאים את המסך לצרכים שלכם.
 
@@ -147,15 +147,15 @@ Copilot זמין בכל מוצרי Power Platform: Power Apps, Power Automate, P
 
 2. בסרגל הניווט השמאלי, בחרו ב-**Tables** ואז לחצו על **Describe the new Table**.
 
-![Select new table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.he.png)
+![Select new table](../../../translated_images/describe-new-table.0792373eb757281e.he.png)
 
 3. במסך **Describe the new Table**, השתמשו באזור הטקסט כדי לתאר את הטבלה שאתם רוצים ליצור. לדוגמה, **_אני רוצה ליצור טבלה לאחסון מידע על חשבוניות_**. לחצו על כפתור **Send** כדי לשלוח את ההנחיה ל-AI Copilot.
 
-![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.he.png)
+![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.he.png)
 
 4. ה-AI Copilot יציע טבלת Dataverse עם השדות הדרושים לאחסון הנתונים שאתם רוצים לעקוב אחריהם וכמה נתונים לדוגמה. לאחר מכן תוכלו להתאים את הטבלה לצרכים שלכם באמצעות תכונת העוזר של AI Copilot דרך שלבים שיחתיים.
 
-![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.he.png)
+![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.he.png)
 
 5. צוות הכספים רוצה לשלוח דוא"ל לספק כדי לעדכן אותו במצב הנוכחי של החשבונית שלו. תוכלו להשתמש ב-Copilot כדי להוסיף שדה חדש לטבלה לאחסון כתובת הדוא"ל של הספק. לדוגמה, תוכלו להשתמש בהנחיה הבאה כדי להוסיף שדה חדש לטבלה: **_אני רוצה להוסיף עמודה לאחסון כתובת דוא"ל של הספק_**. לחצו על כפתור **Send** כדי לשלוח את ההנחיה ל-AI Copilot.
 
@@ -184,7 +184,7 @@ AI Builder מספק שני סוגים של מודלים AI: מודלים AI מו
 
 עם מודלים AI מותאמים אישית תוכלו להביא את המודל שלכם ל-AI Builder כך שהוא יוכל לתפקד כמו כל מודל מותאם אישית של AI Builder, מה שמאפשר לכם לאמן את המודל באמצעות הנתונים שלכם. ניתן להשתמש במודלים אלו כדי לאוטומט תהליכים ולחזות תוצאות גם ב-Power Apps וגם ב-Power Automate. כאשר משתמשים במודל שלכם יש מגבלות שחלות. קראו עוד על המגבלות האלו [כאן](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.he.png)
+![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f.he.png)
 
 ## משימה #2 - בניית זרימת עיבוד חשבוניות עבור הסטארטאפ שלנו
 
@@ -198,7 +198,7 @@ AI Builder מספק שני סוגים של מודלים AI: מודלים AI מו
 
 2. השתמשו באזור הטקסט במסך הבית כדי לתאר את זרימת העבודה שאתם רוצים לבנות. לדוגמה, **_עבד חשבונית כשהיא מגיעה לתיבת הדואר שלי_**. לחצו על כפתור **Send** כדי לשלוח את ההנחיה ל-AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.he.png)
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.he.png)
 
 3. ה-AI Copilot יציע את הפעולות שאתם צריכים לבצע כדי לבצע את המשימה שאתם רוצים לאוטומט. תוכלו ללחוץ על כפתור **Next** כדי לעבור לשלבים הבאים.
 
@@ -212,7 +212,7 @@ AI Builder מספק שני סוגים של מודלים AI: מודלים AI מו
 
 8. הסירו את פעולת **Condition** מהזרימה מכיוון שלא תשתמשו בה. זה צריך להיראות כמו צילום המסך הבא:
 
-   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.he.png)
+   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.he.png)
 
 9. לחצו על כפתור **Add an action** וחפשו את **Dataverse**. בחרו בפעולה **Add a new row**.
 
@@ -227,7 +227,7 @@ AI Builder מספק שני סוגים של מודלים AI: מודלים AI מו
     - Status - הגדירו את **Status** ל-**Pending**.
     - Supplier Email - השתמשו בתוכן הדינמי **From** מהטריגר **When a new email arrives**.
 
-    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.he.png)
+    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.he.png)
 
 12. לאחר שתסיימו עם הזרימה, לחצו על כפתור **Save** כדי לשמור את הזרימה. לאחר מכן תוכלו לבדוק את הזרימה על ידי שליחת דוא"ל עם חשבונית לתיקייה שציינתם בטריגר.
 
@@ -241,7 +241,7 @@ AI Builder מספק שני סוגים של מודלים AI: מודלים AI מו
 
 לדוגמה, תוכלו לבנות זרימות כדי ליצור טקסט באופן אוטומטי עבור מגוון שימושים, כמו: טיוטות של דוא"ל, תיאורי מוצרים ועוד. תוכלו גם להשתמש במודל כדי ליצור טקסט עבור מגוון אפליקציות, כמו צ'אטבוטים ואפליקציות שירות לקוחות שמאפשרות לנציגי שירות לקוחות להגיב בצורה יעילה ואפקטיבית לשאלות של לקוחות.
 
-![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.he.png)
+![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a.he.png)
 
 כדי ללמוד איך להשתמש במודל AI זה ב-Power Automate, עברו על המודול [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

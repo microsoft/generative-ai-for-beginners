@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # אבטחת יישומי AI גנרטיביים
 
-[![אבטחת יישומי AI גנרטיביים](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.he.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![אבטחת יישומי AI גנרטיביים](../../../translated_images/13-lesson-banner.14103e36b4bbf173.he.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## מבוא
 
@@ -131,7 +131,7 @@ LLMs יכולים להוות סיכונים לפרטיות ואבטחת הנתו
 
 > הפרקטיקה של צוותי אדום ב-AI התפתחה למשמעות רחבה יותר: היא לא רק כוללת בדיקה של פגיעויות אבטחה, אלא גם בדיקה של כשלי מערכת אחרים, כמו יצירת תוכן שעלול להיות מזיק. מערכות AI מביאות עמן סיכונים חדשים, וצוותי אדום הם מרכזיים להבנת הסיכונים החדשים הללו, כמו הזרקת פקודות ויצירת תוכן שאינו מבוסס. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![הנחיות ומשאבים לצוותי אדום](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.he.png)]()
+[![הנחיות ומשאבים לצוותי אדום](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.he.png)]()
 
 להלן תובנות מרכזיות שעיצבו את תוכנית צוותי האדום של Microsoft AI.
 

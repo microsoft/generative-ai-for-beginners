@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "he"
 }
 -->
-[![שילוב עם קריאת פונקציות](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.he.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![שילוב עם קריאת פונקציות](../../../translated_images/14-lesson-banner.066d74a31727ac12.he.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # מחזור החיים של יישום בינה מלאכותית גנרטיבית
 
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 לכן, אנו זקוקים לפרדיגמה חדשה כדי להתאים את הכלי הזה בצורה דינמית, עם התמריצים הנכונים. ניתן לסווג יישומי בינה מלאכותית ישנים כ"יישומי למידת מכונה" ויישומים חדשים כ"יישומי בינה מלאכותית גנרטיבית" או פשוט "יישומי בינה מלאכותית", המשקפים את הטכנולוגיה והטכניקות המרכזיות בשימוש באותה תקופה. זה משנה את הנרטיב שלנו בכמה דרכים, הסתכל על ההשוואה הבאה.
 
-![השוואה בין LLMOps ל-MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.he.png)
+![השוואה בין LLMOps ל-MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.he.png)
 
 שים לב שב-LLMOps, אנו מתמקדים יותר במפתחי היישומים, משתמשים באינטגרציות כנקודת מפתח, משתמשים ב"מודלים כשירות" וחושבים בנקודות הבאות למדדים.
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ראשית, כדי להבין את מחזור החיים והשינויים, נבחן את האינפוגרפיקה הבאה.
 
-![אינפוגרפיקה של LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.he.png)
+![אינפוגרפיקה של LLMOps](../../../translated_images/02-llmops.70a942ead05a7645.he.png)
 
 כפי שניתן להבחין, זה שונה ממחזורי החיים הרגילים של MLOps. ל-LLMs יש דרישות חדשות רבות, כמו פרומפטינג, טכניקות שונות לשיפור האיכות (כמו כוונון עדין, RAG, מטה-פרומפטים), הערכה ואחריות עם בינה מלאכותית אחראית, ולבסוף, מדדי הערכה חדשים (איכות, נזק, יושרה, עלות והשהייה).
 
@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כיצד נוכל לחקור את השלבים האלה? בוא ניכנס לפרטים כיצד נוכל לבנות מחזור חיים.
 
-![זרימת עבודה של LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.he.png)
+![זרימת עבודה של LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.he.png)
 
 זה עשוי להיראות קצת מסובך, בוא נתמקד בשלושת השלבים הגדולים תחילה.
 
@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 [פלטפורמת Azure AI](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) מאפשרת לך להשתמש ב-[AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio הוא פורטל אינטרנט המאפשר לך לחקור מודלים, דוגמאות וכלים. ניהול המשאבים שלך, זרימות פיתוח ממשק משתמש ואפשרויות SDK/CLI לפיתוח קוד-ראשון.
 
-![אפשרויות Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.he.png)
+![אפשרויות Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.he.png)
 
 Azure AI מאפשרת לך להשתמש במשאבים רבים, לנהל את הפעולות, השירותים, הפרויקטים, חיפוש וקטורי וצרכי מסדי נתונים.
 
-![LLMOps עם Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.he.png)
+![LLMOps עם Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.he.png)
 
 בנה, מהוכחת מושג (POC) ועד יישומים בקנה מידה גדול עם PromptFlow:
 
@@ -86,7 +86,7 @@ Azure AI מאפשרת לך להשתמש במשאבים רבים, לנהל את �
 - בדיקה וכוונון עדין של היישומים שלך לאיכות בינה מלאכותית, בקלות.
 - השתמש ב-Azure AI Studio כדי לשלב ולאיטרט עם הענן, לדחוף ולפרוס לאינטגרציה מהירה.
 
-![LLMOps עם PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.he.png)
+![LLMOps עם PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.he.png)
 
 ## מצוין! המשך ללמוד!
 

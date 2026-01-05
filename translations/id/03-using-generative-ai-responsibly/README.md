@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Menggunakan AI Generatif Secara Bertanggung Jawab
 
-[![Menggunakan AI Generatif Secara Bertanggung Jawab](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.id.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Menggunakan AI Generatif Secara Bertanggung Jawab](../../../translated_images/03-lesson-banner.1ed56067a452d977.id.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klik gambar di atas untuk menonton video pelajaran ini_
 
@@ -85,7 +85,7 @@ Jenis output ini tidak hanya merusak pengalaman produk yang positif bagi penggun
 
 Sekarang kita telah mengidentifikasi pentingnya AI Generatif yang Bertanggung Jawab, mari kita lihat 4 langkah yang dapat kita ambil untuk membangun solusi AI kita secara bertanggung jawab:
 
-![Siklus Mitigasi](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.id.png)
+![Siklus Mitigasi](../../../translated_images/mitigate-cycle.babcd5a5658e1775.id.png)
 
 ### Mengukur Potensi Kerugian
 
@@ -97,7 +97,7 @@ Karena startup kita sedang membangun produk pendidikan, akan baik untuk menyiapk
 
 Sekarang saatnya menemukan cara di mana kita dapat mencegah atau membatasi potensi kerugian yang disebabkan oleh model dan responsnya. Kita dapat melihat ini dalam 4 lapisan berbeda:
 
-![Lapisan Mitigasi](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.id.png)
+![Lapisan Mitigasi](../../../translated_images/mitigation-layers.377215120b9a1159.id.png)
 
 - **Model**. Memilih model yang tepat untuk kasus penggunaan yang tepat. Model yang lebih besar dan lebih kompleks seperti GPT-4 dapat menimbulkan risiko konten berbahaya yang lebih besar ketika diterapkan pada kasus penggunaan yang lebih kecil dan lebih spesifik. Menggunakan data pelatihan Anda untuk fine-tuning juga mengurangi risiko konten berbahaya.
 

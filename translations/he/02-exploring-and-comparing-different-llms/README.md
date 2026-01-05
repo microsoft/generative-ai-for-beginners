@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # חקר והשוואה בין מודלים גדולים לשפה (LLMs)
 
-[![חקר והשוואה בין מודלים גדולים לשפה](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.he.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![חקר והשוואה בין מודלים גדולים לשפה](../../../translated_images/02-lesson-banner.ef94c84979f97f60.he.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _לחצו על התמונה למעלה לצפייה בסרטון של השיעור_
 
@@ -59,14 +59,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **הם מודלים גדולים מאוד**, מבוססים על רשתות עצביות עמוקות מאוד המאומנות על מיליארדי פרמטרים.
 - **הם בדרך כלל מיועדים לשמש כ'בסיס' למודלים אחרים**, כלומר ניתן להשתמש בהם כנקודת התחלה לבניית מודלים אחרים על גביהם, מה שניתן לעשות באמצעות כיוונון עדין.
 
-![מודלים בסיסיים לעומת LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.he.png)
+![מודלים בסיסיים לעומת LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.he.png)
 
 מקור תמונה: [Essential Guide to Foundation Models and Large Language Models | מאת Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 כדי להבהיר את ההבדל הזה, ניקח את ChatGPT כדוגמה. כדי לבנות את הגרסה הראשונה של ChatGPT, מודל בשם GPT-3.5 שימש כמודל הבסיס. משמעות הדבר היא ש-OpenAI השתמשו בנתונים ספציפיים לצ'אט כדי ליצור גרסה מכווננת של GPT-3.5 שהתמחתה בביצועים טובים בתרחישי שיחה, כמו צ'אטבוטים.
 
-![מודל בסיסי](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.he.png)
+![מודל בסיסי](../../../translated_images/Multimodal.2c389c6439e0fc51.he.png)
 
 מקור תמונה: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 הטמעות הן קבוצת מודלים שיכולים להמיר טקסט לצורה מספרית, הנקראת הטמעה, שהיא ייצוג מספרי של טקסט הקלט. הטמעות מקלות על מכונות להבין את הקשרים בין מילים או משפטים וניתן להשתמש בהן כקלט למודלים אחרים, כגון מודלים לסיווג או למודלים לקיבוץ עם ביצועים טובים יותר על נתונים מספריים. מודלים של הטמעה משמשים לעיתים קרובות ללמידת העברה, שבה נבנה מודל למשימה חלופית שיש לה שפע של נתונים, ואז משקלות המודל (הטמעות) משמשות מחדש למשימות אחרות. דוגמה לקטגוריה זו היא [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![הטמעה](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.he.png)
+![הטמעה](../../../translated_images/Embedding.c3708fe988ccf760.he.png)
 
 מודלים ליצירת תמונות הם מודלים שמייצרים תמונות. מודלים אלה משמשים לעיתים קרובות לעריכת תמונות, סינתזת תמונות ותרגום תמונות. מודלים ליצירת תמונות מאומנים לעיתים קרובות על מערכי נתונים גדולים של תמונות, כגון [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), וניתן להשתמש בהם ליצירת תמונות חדשות או לעריכת תמונות קיימות בטכניקות כמו צביעה מחדש, סופר-רזולוציה וטכניקות צביעה. דוגמאות כוללות [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ו-[Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![יצירת תמונות](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.he.png)
+![יצירת תמונות](../../../translated_images/Image.349c080266a763fd.he.png)
 
 מודלים ליצירת טקסט וקוד הם מודלים שמייצרים טקסט או קוד. מודלים אלה משמשים לעיתים קרובות לסיכום טקסט, תרגום ומענה על שאלות. מודלים ליצירת טקסט מאומנים לעיתים קרובות על מערכי נתונים גדולים של טקסט, כגון [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), וניתן להשתמש בהם ליצירת טקסט חדש או למענה על שאלות. מודלים ליצירת קוד, כמו [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), מאומנים לעיתים קרובות על מערכי נתונים גדולים של קוד, כגון GitHub, וניתן להשתמש בהם ליצירת קוד חדש או לתיקון באגים בקוד קיים.
 
-![יצירת טקסט וקוד](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.he.png)
+![יצירת טקסט וקוד](../../../translated_images/Text.a8c0cf139e5cc2a0.he.png)
 
 ### מודל מקודד-מפענח לעומת מודל מפענח בלבד
 
@@ -123,23 +123,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 - למצוא את מודל הבסיס הרצוי בקטלוג - בין אם הוא קנייני או בקוד פתוח, תוך סינון לפי משימה, רישיון או שם. כדי לשפר את החיפוש, המודלים מאורגנים באוספים, כמו אוסף Azure OpenAI, אוסף Hugging Face ועוד.
 
-![קטלוג מודלים](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.he.png)
+![קטלוג מודלים](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.he.png)
 
 - לעיין בכרטיס המודל, כולל תיאור מפורט של השימוש המיועד ונתוני האימון, דוגמאות קוד ותוצאות הערכה בספריית ההערכות הפנימית.
 
-![כרטיס מודל](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.he.png)
+![כרטיס מודל](../../../translated_images/ModelCard.598051692c6e400d.he.png)
 
 - להשוות ביצועים בין מודלים ומאגרי נתונים זמינים בתעשייה כדי להעריך איזה מהם מתאים לתרחיש העסקי, דרך חלונית [השוואת מודלים](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![השוואת מודלים](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.he.png)
+![השוואת מודלים](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.he.png)
 
 - לכוונן את המודל על נתוני אימון מותאמים אישית כדי לשפר את ביצועי המודל בעומס עבודה ספציפי, תוך ניצול יכולות הניסוי והמעקב של Azure AI Studio.
 
-![כיוונון מודל](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.he.png)
+![כיוונון מודל](../../../translated_images/FineTuning.aac48f07142e36fd.he.png)
 
 - לפרוס את המודל המקורי המאומן מראש או את הגרסה המכווננת לפריסה בזמן אמת - מחשוב מנוהל - או נקודת קצה API ללא שרת - [תשלום לפי שימוש](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - כדי לאפשר ליישומים לצרוך אותו.
 
-![פריסת מודל](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.he.png)
+![פריסת מודל](../../../translated_images/ModelDeploy.890da48cbd0bccdb.he.png)
 
 > [!NOTE]
 > לא כל המודלים בקטלוג זמינים כיום לכיוונון ו/או לפריסה בתשלום לפי שימוש. בדוק את כרטיס המודל לפרטים על יכולותיו ומגבלותיו.
@@ -158,7 +158,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **מודל מכוונן**. כאן, אתה מאמן את המודל עוד יותר על הנתונים שלך, מה שמוביל לכך שהמודל יהיה מדויק יותר ומגיב לצרכים שלך, אך ייתכן שיהיה יקר.
 
-![פריסת LLMs](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.he.png)
+![פריסת LLMs](../../../translated_images/Deploy.18b2d27412ec8c02.he.png)
 
 מקור תמונה: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # בניית יישומי חיפוש
 
-[![מבוא ל-AI גנרטיבי ולמודלים של שפה גדולה](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.he.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![מבוא ל-AI גנרטיבי ולמודלים של שפה גדולה](../../../translated_images/08-lesson-banner.8fff48c566dad08a.he.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _לחצו על התמונה למעלה לצפייה בסרטון של השיעור הזה_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 הדוגמה הבאה מציגה שאילתה סמנטית לשאלה 'האם אפשר להשתמש ב-rstudio עם azure ml?'. שימו לב ל-URL של YouTube, תראו שה-URL מכיל חותמת זמן שמובילה אתכם למקום בסרטון שבו נמצאת התשובה לשאלה.
 
-![שאילתה סמנטית לשאלה "האם אפשר להשתמש ב-rstudio עם Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.he.png)
+![שאילתה סמנטית לשאלה "האם אפשר להשתמש ב-rstudio עם Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.he.png)
 
 ## מה זה חיפוש סמנטי?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 כשאתם מריצים את המחברת, תתבקשו להזין שאילתה. תיבת הקלט תיראה כך:
 
-![תיבת קלט למשתמש להזנת שאילתה](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.he.png)
+![תיבת קלט למשתמש להזנת שאילתה](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.he.png)
 
 ## עבודה מצוינת! המשיכו ללמוד
 
