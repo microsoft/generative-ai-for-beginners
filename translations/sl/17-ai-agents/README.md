@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sl"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.sl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Uvod
 
@@ -33,7 +33,7 @@ AI agenti so zelo vznemirljivo področje v svetu generativne umetne inteligence.
 
 AI agenti omogočajo velikim jezikovnim modelom (LLM), da izvajajo naloge, tako da jim omogočijo dostop do **stanja** in **orodij**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sl.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.sl.png)
 
 Definirajmo te izraze:
 
@@ -53,7 +53,7 @@ Za upravljanje **stanja** uporablja vgrajeno funkcijo, imenovano `AgentExecutor`
 
 `AgentExecutor` prav tako shranjuje zgodovino pogovora, da zagotovi kontekst pogovora.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sl.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.sl.png)
 
 LangChain ponuja [katalog orodij](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), ki jih je mogoče uvoziti v vašo aplikacijo, v kateri lahko LLM dostopa do njih. Ta orodja so ustvarjena s strani skupnosti in ekipe LangChain.
 
@@ -85,7 +85,7 @@ Za spreminjanje in upravljanje stanja asistent Agent generira Python kodo za dok
 
 Tukaj je primer postopka:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sl.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.sl.png)
 
 #### LLM definiran s sistemskim sporočilom
 
@@ -129,7 +129,7 @@ Za upravljanje stanja pogovora TaskWeaver uporablja koncept `Planner`. `Planner`
 
 Za dokončanje nalog je `Planner` izpostavljen zbirki orodij, imenovanih `Plugins`. To so lahko Python razredi ali splošni tolmač kode. Ti vtičniki so shranjeni kot vdelave, da lahko LLM bolje išče ustrezen vtičnik.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sl.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.sl.png)
 
 Tukaj je primer vtičnika za obravnavo zaznavanja anomalij:
 
@@ -143,7 +143,7 @@ Koda je preverjena pred izvedbo. Druga funkcija za upravljanje konteksta v Taskw
 
 Zadnji okvir za agente, ki ga bomo raziskali, je [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Kar JARVIS-a dela edinstvenega, je to, da uporablja LLM za upravljanje `stanja` pogovora, medtem ko so `orodja` drugi modeli umetne inteligence. Vsak od AI modelov je specializiran model, ki izvaja določene naloge, kot so zaznavanje objektov, transkripcija ali opisovanje slik.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sl.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.sl.png)
 
 LLM, kot splošni model, prejme zahtevo od uporabnika in identificira specifično nalogo ter morebitne argumente/podatke, ki so potrebni za dokončanje naloge.
 

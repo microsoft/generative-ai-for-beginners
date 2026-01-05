@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # သင့် Generative AI အက်ပလီကေးရှင်းများကို လုံခြုံစေခြင်း
 
-[![သင့် Generative AI အက်ပလီကေးရှင်းများကို လုံခြုံစေခြင်း](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.my.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![သင့် Generative AI အက်ပလီကေးရှင်းများကို လုံခြုံစေခြင်း](../../../translated_images/13-lesson-banner.14103e36b4bbf173.my.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## အကျဉ်းချုပ်
 
@@ -106,7 +106,7 @@ AI စနစ်တွေကို အန္တရာယ်ရှိတဲ့ တ
 
 > AI red teaming လုပ်ငန်းစဉ်သည် ပိုမိုကျယ်ပြန့်သော အဓိပ္ပါယ်ကို ယခုအခါ ရရှိလာပြီး လုံခြုံရေး အခွင့်အလမ်းများကို စမ်းသပ်ခြင်းသာမက အခြားသော စနစ်ချို့ယွင်းမှုများကိုလည်း စမ်းသပ်ခြင်း (ဥပမာ- အန္တရာယ်ရှိနိုင်သော အကြောင်းအရာများ ဖန်တီးခြင်း) ပါဝင်သည်။ AI စနစ်များတွင် အသစ်သော အန္တရာယ်များရှိပြီး၊ prompt injection နှင့် အခြေခံမရှိသော အကြောင်းအရာများ ဖန်တီးခြင်းကဲ့သို့သော အန္တရာယ်များကို နားလည်ရန် red teaming သည် အရေးပါသည်။ - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.my.png)]()
+[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.my.png)]()
 
 Microsoft ၏ AI Red Team အစီအစဉ်ကို ပုံဖော်ခဲ့သော အဓိက အမြင်များကို အောက်တွင် ဖော်ပြထားသည်။
 

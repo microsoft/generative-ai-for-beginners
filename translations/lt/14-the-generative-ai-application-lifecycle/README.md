@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "lt"
 }
 -->
-[![Integracija su funkcijų kvietimu](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.lt.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integracija su funkcijų kvietimu](../../../translated_images/14-lesson-banner.066d74a31727ac12.lt.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Generatyviosios DI programos gyvavimo ciklas
 
@@ -30,7 +30,7 @@ LLM yra naujas įrankis dirbtinio intelekto arsenale, jie yra nepaprastai galing
 
 Dėl to mums reikia naujo paradigma, kad šį įrankį pritaikytume dinamiškai, su tinkamomis paskatomis. Galime senesnes DI programas vadinti „ML programomis“, o naujesnes DI programas – „GenAI programomis“ arba tiesiog „DI programomis“, atspindinčiomis tuo metu naudojamą pagrindinę technologiją ir metodus. Tai keičia mūsų pasakojimą keliais būdais, pažvelkite į šį palyginimą.
 
-![LLMOps ir MLOps palyginimas](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.lt.png)
+![LLMOps ir MLOps palyginimas](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.lt.png)
 
 Atkreipkite dėmesį, kad LLMOps mes labiau orientuojamės į programų kūrėjus, naudojame integracijas kaip pagrindinį tašką, naudojame „Modelius kaip paslaugą“ ir galvojame apie šiuos metrikų aspektus.
 
@@ -44,7 +44,7 @@ Atkreipkite dėmesį, kad LLMOps mes labiau orientuojamės į programų kūrėju
 
 Pirmiausia, norint suprasti gyvavimo ciklą ir jo pakeitimus, pažvelkime į šią infografiką.
 
-![LLMOps infografika](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.lt.png)
+![LLMOps infografika](../../../translated_images/02-llmops.70a942ead05a7645.lt.png)
 
 Kaip matote, tai skiriasi nuo įprastų MLOps gyvavimo ciklų. LLM turi daug naujų reikalavimų, tokių kaip užklausų kūrimas, įvairios kokybės gerinimo technikos (Fine-Tuning, RAG, Meta-Prompts), skirtingas vertinimas ir atsakomybė su atsakingu DI, galiausiai naujos vertinimo metrikos (kokybė, žala, sąžiningumas, kaina ir vėlavimas).
 
@@ -54,7 +54,7 @@ Atkreipkite dėmesį, kad tai nėra linijinis procesas, o integruoti ciklai, ite
 
 Kaip galėtume išnagrinėti šiuos žingsnius? Pažvelkime detaliau, kaip galėtume sukurti gyvavimo ciklą.
 
-![LLMOps darbo eiga](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.lt.png)
+![LLMOps darbo eiga](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.lt.png)
 
 Tai gali atrodyti šiek tiek sudėtinga, pirmiausia sutelkime dėmesį į tris didelius žingsnius.
 
@@ -74,11 +74,11 @@ O kokius įrankius galime naudoti?
 
 [Azure AI platforma](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) leidžia naudoti [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio yra internetinis portalas, leidžiantis tyrinėti modelius, pavyzdžius ir įrankius. Valdyti savo išteklius, kurti vartotojo sąsajos srautus ir naudoti SDK/CLI parinktis kodui kurti.
 
-![Azure AI galimybės](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.lt.png)
+![Azure AI galimybės](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.lt.png)
 
 Azure AI leidžia naudoti daugybę išteklių, valdyti savo operacijas, paslaugas, projektus, vektorinę paiešką ir duomenų bazes.
 
-![LLMOps su Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.lt.png)
+![LLMOps su Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.lt.png)
 
 Kurkite nuo Proof-of-Concept (POC) iki didelio masto programų su PromptFlow:
 
@@ -86,7 +86,7 @@ Kurkite nuo Proof-of-Concept (POC) iki didelio masto programų su PromptFlow:
 - Testuokite ir tobulinkite savo programas, kad pasiektumėte kokybišką DI, lengvai.
 - Naudokite Azure AI Studio integracijai ir iteracijai su debesija, greitam diegimui ir integracijai.
 
-![LLMOps su PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.lt.png)
+![LLMOps su PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.lt.png)
 
 ## Puiku! Tęskite mokymąsi!
 

@@ -33,7 +33,7 @@ SLM-ji so usposobljeni na ogromnih količinah besedilnih podatkov. Med usposablj
 
 Razvoj SLM-jev je usklajen z naraščajočo potrebo po modelih, ki jih je mogoče uporabljati v okoljih z omejenimi viri, kot so mobilne naprave ali edge računalniške platforme, kjer so polni LLM-ji zaradi velikih zahtev po virih nepraktični. S poudarkom na učinkovitosti SLM-ji uravnotežijo zmogljivost in dostopnost, kar omogoča širšo uporabo na različnih področjih.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.sl.png)
+![slm](../../../translated_images/slm.4058842744d0444a.sl.png)
 
 ## Cilji učenja  
 
@@ -135,7 +135,7 @@ Model družine Phi-3/3.5 lahko uporabljamo glede na različne scenarije. V naspr
 
 Želimo uporabiti Phi-3/3.5 v različnih scenarijih. V nadaljevanju bomo uporabili Phi-3/3.5 glede na različne primere.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.sl.png)
+![phi3](../../../translated_images/phi3.655208c3186ae381.sl.png)
 
 ### Razlike pri inferenci preko Cloud API  
 
@@ -145,9 +145,9 @@ GitHub modeli so najhitrejša pot. Hitro lahko dostopate do modela Phi-3/3.5-Ins
 
 - Demo: primerjava učinkovitosti Phi-3-mini in Phi-3.5-mini v kitajskih scenarijih
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.sl.png)
+![phi3](../../../translated_images/gh1.126c6139713b622b.sl.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.sl.png)
+![phi35](../../../translated_images/gh2.07d7985af66f178d.sl.png)
 
 **Azure AI Studio**  
 

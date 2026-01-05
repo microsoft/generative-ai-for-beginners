@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # အနည်းဆုံးကုဒ် AI အက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း
 
-[![အနည်းဆုံးကုဒ် AI အက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.my.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![အနည်းဆုံးကုဒ် AI အက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.my.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(အထက်ပါပုံကိုနှိပ်ပြီး ဒီသင်ခန်းစာရဲ့ဗီဒီယိုကိုကြည့်ပါ)_
 
@@ -105,15 +105,15 @@ Dataverse မှာ Copilot ကို အသုံးပြုပြီး ဇ�
 
 2. ဘယ်ဘက် navigation bar မှာ **Tables** ကို ရွေးပြီး **Describe the new Table** ကို နှိပ်ပါ။
 
-![Select new table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.my.png)
+![Select new table](../../../translated_images/describe-new-table.0792373eb757281e.my.png)
 
 3. **Describe the new Table** စာမျက်နှာမှာ သင့်ဇယားကို ဖန်တီးလိုတဲ့အကြောင်းကို text area မှာ ရေးပါ။ ဥပမာအားဖြင့် **_ငွေတောင်းခံလွှာအချက်အလက်တွေကို သိမ်းဆည်းဖို့ ဇယားတစ်ခု ဖန်တီးချင်ပါတယ်_**။ **Send** ခလုတ်ကို နှိပ်ပြီး AI Copilot ကို prompt ကို ပို့ပါ။
 
-![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.my.png)
+![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.my.png)
 
 4. AI Copilot က သင့်ဒေတာကို track လုပ်ဖို့လိုအပ်တဲ့ field တွေပါဝင်တဲ့ Dataverse ဇယားကို အကြံပေးပါလိမ့်မယ်။ အဲဒီဇယားကို conversational steps တွေကို အသုံးပြုပြီး သင့်လိုအပ်ချက်နဲ့ ကိုက်ညီအောင် customize လုပ်နိုင်ပါတယ်။
 
-![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.my.png)
+![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.my.png)
 
 5. ငွေကြေးအဖွဲ့က supplier ကို သူတို့ရဲ့ အင်ဗွိုင်း status နောက်ဆုံးအခြေအနေကို အပ်ဒိတ်ပေးဖို့ အီးမေးလ်ပို့ချင်ပါတယ်။ Copilot ကို အသုံးပြုပြီး ဇယားထဲမှာ supplier email ကို သိမ်းဆည်းဖို့ field အသစ်တစ်ခု ထည့်နိုင်ပါတယ်။ ဥပမာအားဖြင့် **_supplier email ကို သိမ်းဆည်းဖို့ column တစ်ခု ထည့်ချင်ပါတယ်_** ဆိုတဲ့ prompt ကို အသုံးပြုနိုင်ပါတယ်။ **Send** ခလုတ်ကို နှိပ်ပြီး AI Copilot ကို prompt ကို ပို့ပါ။
 
@@ -142,7 +142,7 @@ Power Platform မှာ ရရှိနိုင်တဲ့ Prebuilt AI Models
 
 Custom AI Models တွေကို AI Builder ထဲမှာ သင့်ကိုယ်ပိုင် model ကို ထည့်သွင်းပြီး AI Builder custom model တစ်ခုလို အလုပ်လုပ်စေဖို့ training လုပ်နိုင်ပါတယ်။ ဒီ model တွေကို Power Apps နဲ့ Power Automate မှာ ဒေတာကို automate လုပ်ခြင်း၊ အကျိုးအမြတ်ကို ခန့်မှန်းခြင်းတို့အတွက် အသုံးပြုနိုင်ပါတယ်။ သို့သော် သင့်ကိုယ်ပိုင် model ကို အသုံးပြုတဲ့အခါမှာ အချို့ကန့်သတ်ချက်တွေ ရှိပါတယ်။ ဒီ [ကန့်သတ်ချက်များ](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst) အကြောင်းကို ပိုမိုသိရှိရန် ဖတ်ရှုပါ။
 
-![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.my.png)
+![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f.my.png)
 
 ## အလုပ်ပေးစာ #2 - ကျွန်ုပ်တို့ရဲ့ စတင်လုပ်ငန်းအတွက် အင်ဗွိုင်းကို အလုပ်လုပ်စေမည့် Flow တစ်ခု တည်ဆောက်ပါ
 
@@ -154,7 +154,7 @@ AI Builder ရဲ့ Invoice Processing AI Model ကို အသုံးပြ
 
 2. အိမ်စာမျက်နှာမှာရှိတဲ့ text area ကို အသုံးပြုပြီး သင့် workflow ကို ဖော်ပြပါ။ ဥပမာအားဖြင့် **_အင်ဗွိုင်းတစ်ခု mailbox ထဲရောက်လာတဲ့အခါ process လုပ်ပါ_**။ **Send** ခလုတ်ကို နှိပ်ပြီး AI Copilot ကို prompt ကို ပို့ပါ။
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.my.png)
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.my.png)
 
 3. AI Copilot က သင့် automate လုပ်ချင်တဲ့ task ကို အကောင်အထည်ဖော်ဖို့ လိုအပ်တဲ့ action တွေကို အကြံပေးပါလိမ့်မယ်။ **Next** ခလုတ်ကို နှိပ်ပြီး နောက်တစ်ဆင့်ကို ဆက်သွားပါ။
 
@@ -168,7 +168,7 @@ AI Builder ရဲ့ Invoice Processing AI Model ကို အသုံးပြ
 
 8. flow ထဲက **Condition** action ကို ဖယ်ရှားပါ။ flow က အောက်ပါ screenshot လို ဖြစ်သင့်ပါတယ်-
 
-   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.my.png)
+   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.my.png)
 
 9. **Add an action** ခလုတ်ကို နှိပ်ပြီး **Dataverse** ကို ရှာပါ။ **Add a new row** action ကို ရွေးပါ။
 
@@ -183,7 +183,7 @@ AI Builder ရဲ့ Invoice Processing AI Model ကို အသုံးပြ
     - Status - **Pending** အဖြစ် သတ်မှတ်ပါ။
     - Supplier Email - **When a new email arrives** trigger ထဲက **From** dynamic content ကို အသုံးပြုပါ။
 
-    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.my.png)
+    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.my.png)
 
 12. flow ကို ပြီးမြောက်တဲ့အခါ **Save** ခလုတ်ကို နှိပ်ပြီး flow ကို save လုပ်ပါ။ သင် trigger မှာ သတ်မှတ်ထားတဲ့ folder ကို အင်ဗွိုင်းပါတဲ့ အီးမေးလ်တစ်ခု ပို့ပြီး flow ကို စမ်းသပ်နိုင်ပါတယ်။
 
@@ -197,7 +197,7 @@ GPT models တွေက အချက်အလက်အများကြီး�
 
 ဥပမာအားဖြင့် အီးမေးလ် draft, product description စတဲ့ use case အမျိုးမျိုးအတွက် text ကို အလိုအလျောက် ဖန်တီးတဲ့ flow တွေကို တည်ဆောက်နိုင်ပါတယ်။ customer service agents တွေကို effectively နဲ့ efficiently customer inquiry တွေကို ဖြေရှင်းနိုင်စေတဲ့ chatbot တွေ၊ customer service apps တွေ အတွက် text ကို ဖန်တီးနိုင်ပါတယ်။
 
-![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.my.png)
+![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a.my.png)
 
 ဒီ AI Model ကို Power Automate မှာ ဘယ်လိုအသုံးပြုရမလဲဆိုတာကို [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module ကို လေ့လာပါ။
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integracija su funkcijų iškvietimu
 
-[![Integracija su funkcijų iškvietimu](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.lt.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija su funkcijų iškvietimu](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.lt.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Jūs jau nemažai išmokote ankstesnėse pamokose. Tačiau vis dar yra galimybių tobulėti. Kai kurie dalykai, kuriuos galime patobulinti, yra nuoseklesnis atsakymų formatas, kad būtų lengviau dirbti su atsakymais vėliau. Taip pat galbūt norėsime pridėti duomenų iš kitų šaltinių, kad dar labiau praturtintume savo programą.
 
@@ -179,7 +179,7 @@ Dabar galime išsiųsti abi užklausas LLM ir patikrinti gautą atsakymą, suras
 
 Taigi, kaip išspręsti formatavimo problemą? Naudodami funkcijų iškvietimą, galime užtikrinti, kad gautume struktūrizuotus duomenis. Naudojant funkcijų iškvietimą, LLM iš tikrųjų neįvykdo ir neįvykdo jokių funkcijų. Vietoj to, mes sukuriame struktūrą, kurios LLM laikosi savo atsakymuose. Tada naudojame tuos struktūrizuotus atsakymus, kad žinotume, kokią funkciją vykdyti mūsų programose.
 
-![funkcijų srautas](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.lt.png)
+![funkcijų srautas](../../../translated_images/Function-Flow.083875364af4f4bb.lt.png)
 
 Tada galime paimti tai, kas grąžinama iš funkcijos, ir išsiųsti tai atgal į LLM. Tada LLM atsakys natūralia kalba, kad atsakytų į vartotojo užklausą.
 
@@ -201,7 +201,7 @@ Funkcijos iškvietimo kūrimo procesą sudaro 3 pagrindiniai žingsniai:
 2. **Atsakymo skaitymas** iš modelio, kad būtų atliktas veiksmas, pvz., funkcijos ar API užklausos vykdymas.
 3. **Pakartotinis iškvietimas** Chat Completions API su funkcijos atsakymu, kad būtų sukurta atsakymo žinutė vartotojui.
 
-![LLM srautas](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.lt.png)
+![LLM srautas](../../../translated_images/LLM-Flow.3285ed8caf4796d7.lt.png)
 
 ### 1 žingsnis - žinučių kūrimas
 

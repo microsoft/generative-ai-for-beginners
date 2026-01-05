@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generative AI နှင့် Large Language Models ကိုမိတ်ဆက်ခြင်း
 
-[![Generative AI နှင့် Large Language Models ကိုမိတ်ဆက်ခြင်း](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.my.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Generative AI နှင့် Large Language Models ကိုမိတ်ဆက်ခြင်း](../../../translated_images/01-lesson-banner.2424cfd092f43366.my.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(ဤသင်ခန်းစာ၏ ဗီဒီယိုကို ကြည့်ရန် အထက်ပါပုံကို နှိပ်ပါ)_
 
@@ -45,7 +45,7 @@ Generative Artificial Intelligence (AI) သည် AI နည်းပညာ၏ �
 
 Generative AI သည် ယနေ့ကျွန်ုပ်တို့၏ သင်ယူမှုနှင့် သင်ကြားမှုကို ပြောင်းလဲစေမည်ဟု မျှော်လင့်ရပြီး ကျောင်းသားများသည် ၂၄ နာရီလုံး Virtual Teacher များကို အသုံးပြု၍ အချက်အလက်များနှင့် ဥပမာများစွာကို ရယူနိုင်ပြီး ဆရာများသည် ၎င်းတို့၏ ကျောင်းသားများကို အကဲဖြတ်ရန်နှင့် အကြံပြုချက်ပေးရန် နည်းပညာအသစ်များကို အသုံးချနိုင်သည်။
 
-![Five young students looking at a monitor - image by DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.my.png)
+![Five young students looking at a monitor - image by DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.my.png)
 
 စတင်ရန် ကျွန်ုပ်တို့ သင်ခန်းစာတစ်ခုလုံးတွင် အသုံးပြုမည့် အခြေခံအယူအဆများနှင့် အဓိပ္ပာယ်များကို သတ်မှတ်လိုက်ပါစို့။
 
@@ -72,7 +72,7 @@ Neural networks (အထူးသဖြင့် Recurrent Neural Networks – RN
 
 ဒါကြောင့် ယနေ့ Generative AI သို့ ရောက်ရှိလာခဲ့ပြီး ၎င်းကို deep learning ၏ အစိတ်အပိုင်းတစ်ခုအဖြစ် တွေ့မြင်နိုင်သည်။
 
-![AI, ML, DL and Generative AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.my.png)
+![AI, ML, DL and Generative AI](../../../translated_images/AI-diagram.c391fa518451a40d.my.png)
 
 AI နယ်ပယ်တွင် ဆယ်စုနှစ်များစွာ သုတေသနလုပ်ငန်းများအပြီး _Transformer_ ဟုခေါ်သော မော်ဒယ် architecture အသစ်တစ်ခုသည် RNNs ၏ ကန့်သတ်ချက်များကို ကျော်လွှားနိုင်ခဲ့ပြီး စာသား၏ အလုံးစုံအရှည်ကို input အဖြင့် ရယူနိုင်စွမ်းရှိသည်။ Transformers သည် attention mechanism အပေါ် အခြေခံထားပြီး မော်ဒယ်သည် ၎င်းရရှိသော input များကို အမျိုးမျိုးသော အလေးချိန်များပေးနိုင်စွမ်းရှိစေသည်။ ၎င်းသည် စာကြောင်းအတွင်း အရေးပါသော အချက်အလက်များ အလေးပေးသောနေရာတွင် ‘ပိုမိုအာရုံစိုက်’ စေပြီး စာကြောင်းအတွင်း အစီအစဉ်ကို မထီတင်းဘဲ အလုပ်လုပ်နိုင်စေသည်။
 
@@ -84,7 +84,7 @@ AI နယ်ပယ်တွင် ဆယ်စုနှစ်များစွ�
 
 - **Tokenizer, စာသားကို နံပါတ်များသို့ ပြောင်းခြင်း**: Large Language Models သည် စာသားကို input အဖြင့် ရယူပြီး စာသား output ကို ဖန်တီးသည်။ သို့သော် စာရင်းဇယားမော်ဒယ်များဖြစ်သောကြောင့် စာသားထက် နံပါတ်များနှင့် ပိုမိုကောင်းစွာ အလုပ်လုပ်နိုင်သည်။ ထို့ကြောင့် မော်ဒယ်သို့ input အဖြစ် အသုံးပြုမည့် စာသားအား tokenizer မှ အရင်ဆုံး လုပ်ဆောင်သည်။ Tokenizer ၏ အဓိကလုပ်ငန်းသည် input ကို token များအဖြစ် ခွဲခြားခြင်းဖြစ်သည်။ ထို့နောက် token တစ်ခုစီကို token index နှင့် map လုပ်ပြီး မူရင်းစာသား chunk ၏ integer encoding ဖြစ်သည်။
 
-![Example of tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.my.png)
+![Example of tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.my.png)
 
 - **Output tokens များကို ခန့်မှန်းခြင်း**: n tokens များကို input အဖြင့် ရယူပြီး (မော်ဒယ်တစ်ခုနှင့်တစ်ခုအလိုက် max n ကွဲပြားသည်) မော်ဒယ်သည် output အဖြစ် token တစ်ခုကို ခန့်မှန်းနိုင်သည်။ ဤ token ကို နောက် iteration ၏ input အဖြစ် ထည့်သွင်းပြီး expanding window pattern ဖြင့် အဖြေတစ်ခု (သို့မဟုတ်) စာကြောင်းများစွာကို ရယူနိုင်သော user experience ကို ပိုမိုကောင်းမွန်စေသည်။ ဤသည်မှာ ChatGPT ကို အသုံးပြုခဲ့ဖူးပါက တစ်ခါတစ်ရံ စာကြောင်းတစ်ခု၏ အလယ်တွင် ရပ်နေသလို ဖြစ်ပုံရသည်ကို သတိထားမိနိုင်သည်။
 

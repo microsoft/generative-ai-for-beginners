@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove oblikovanja pozivov
 
-[![Osnove oblikovanja pozivov](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.sl.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Osnove oblikovanja pozivov](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.sl.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Uvod
 Ta modul pokriva osnovne koncepte in tehnike za ustvarjanje učinkovitih pozivov v generativnih modelih umetne inteligence. Način, kako napišete svoj poziv za LLM, je pomemben. Previdno oblikovan poziv lahko prinese bolj kakovostne odgovore. Toda kaj točno pomenijo izrazi, kot sta _poziv_ in _oblikovanje pozivov_? In kako lahko izboljšam vhodni _poziv_, ki ga pošljem LLM? To so vprašanja, na katera bomo poskušali odgovoriti v tem poglavju in naslednjem.
@@ -53,7 +53,7 @@ Notebook vsebuje _začetne_ vaje - vendar vas spodbujamo, da dodate svoje _Markd
 
 Želite dobiti celovito sliko o tem, kaj ta lekcija zajema, preden se poglobite? Oglejte si ta ilustrirani vodnik, ki vam daje občutek glavnih tem, ki jih pokriva lekcija, in ključnih spoznanj, o katerih lahko razmislite pri vsaki. Načrt lekcije vas vodi od razumevanja osnovnih konceptov in izzivov do njihovega reševanja z ustreznimi tehnikami oblikovanja pozivov in najboljšimi praksami. Upoštevajte, da se odsek "Napredne tehnike" v tem vodniku nanaša na vsebino, ki je zajeta v _naslednjem_ poglavju tega učnega načrta.
 
-![Ilustrirani vodnik za oblikovanje pozivov](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.sl.png)
+![Ilustrirani vodnik za oblikovanje pozivov](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.sl.png)
 
 ## Naš startup
 
@@ -94,7 +94,7 @@ LLM vidi pozive kot _zaporedje tokenov_, pri čemer lahko različni modeli (ali 
 
 Da bi dobili občutek, kako deluje tokenizacija, poskusite orodja, kot je [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), prikazano spodaj. Kopirajte svoj poziv - in si oglejte, kako se pretvori v tokene, pri čemer bodite pozorni na to, kako se obravnavajo presledki in ločila. Upoštevajte, da ta primer prikazuje starejši LLM (GPT-3) - zato lahko uporaba novejšega modela prinese drugačen rezultat.
 
-![Tokenizacija](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.sl.png)
+![Tokenizacija](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.sl.png)
 
 ### Koncept: Osnovni modeli
 
@@ -104,7 +104,7 @@ Ko je poziv tokeniziran, je primarna funkcija ["osnovnega LLM"](https://blog.gop
 
 Kaj pa, če bi uporabnik želel videti nekaj specifičnega, kar ustreza določenim kriterijem ali cilju naloge? Tukaj pridejo v poštev _LLM-ji, prilagojeni za navodila_.
 
-![Osnovno LLM dokončanje klepeta](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.sl.png)
+![Osnovno LLM dokončanje klepeta](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.sl.png)
 
 ### Koncept: LLM-ji, prilagojeni za navodila
 
@@ -118,7 +118,7 @@ Poskusimo - ponovno uporabite zgornji poziv, vendar zdaj spremenite _sistemsko s
 
 Opazite, kako je rezultat zdaj prilagojen, da odraža želeni cilj in format? Učitelj lahko zdaj neposredno uporabi ta odgovor v svojih predstavitvah za razred.
 
-![LLM, prilagojen za navodila, dokončanje klepeta](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.sl.png)
+![LLM, prilagojen za navodila, dokončanje klepeta](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.sl.png)
 
 ## Zakaj potrebujemo oblikovanje pozivov?
 
@@ -148,15 +148,15 @@ Kaj se zgodi, ko ta poziv izvedemo z različnimi ponudniki LLM?
 
 > **Odgovor 1**: OpenAI Playground (GPT-35)
 
-![Odgovor 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.sl.png)
+![Odgovor 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.sl.png)
 
 > **Odgovor 2**: Azure OpenAI Playground (GPT-35)
 
-![Odgovor 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.sl.png)
+![Odgovor 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.sl.png)
 
 > **Odgovor 3**: Hugging Face Chat Playground (LLama-2)
 
-![Odgovor 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.sl.png)
+![Odgovor 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.sl.png)
 
 Kot pričakovano, vsak model (ali različica modela) ustvari nekoliko drugačne odgovore zaradi stohastičnega vedenja in razlik v zmogljivostih modela. Na primer, en model cilja na občinstvo osmega razreda, medtem ko drugi predvideva dijake srednje šole. Vendar so vsi trije modeli ustvarili odgovore, ki bi lahko prepričali neinformiranega uporabnika, da je dogodek resničen.
 

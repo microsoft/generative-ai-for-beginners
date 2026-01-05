@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "my"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.my.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac12.my.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Generative AI အပလီကေးရှင်း အသက်တာလမ်းကြောင်း
 
@@ -30,7 +30,7 @@ LLM များသည် Artificial Intelligence လက်နက်အစုအ
 
 ဒါကြောင့် ဤကိရိယာကို တိကျသော အားပေးမှုများနှင့်အတူ ဒိုင်နမစ်စနစ်ဖြင့် လိုက်လျောညီထွေဖြစ်စေရန် Paradigm အသစ်တစ်ခု လိုအပ်သည်။ အဟောင်း AI အပလီကေးရှင်းများကို "ML Apps" ဟုခွဲခြားနိုင်ပြီး၊ အသစ် AI အပလီကေးရှင်းများကို "GenAI Apps" သို့မဟုတ် "AI Apps" ဟုခေါ်ဆိုနိုင်သည်၊ ထိုအချိန်တွင် အသုံးပြုသော နည်းပညာနှင့် နည်းလမ်းများကို ပြသသည်။ ၎င်းသည် ကျွန်ုပ်တို့၏ စကားဝိုင်းကို အမျိုးမျိုးနည်းဖြင့် ပြောင်းလဲစေသည်၊ အောက်ပါ နှိုင်းယှဉ်ချက်ကို ကြည့်ပါ။
 
-![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.my.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.my.png)
 
 LLMOps တွင် အဓိကထားသည်မှာ အပလီကေးရှင်း ဖန်တီးသူများဖြစ်ပြီး၊ အဓိကအချက်အနေနှင့် ပေါင်းစည်းမှုများကို အသုံးပြုခြင်း၊ "Models-as-a-Service" ကို အသုံးပြုခြင်းနှင့် အောက်ပါအချက်များအတွက် တိုင်းတာမှုများကို စဉ်းစားခြင်းဖြစ်သည်။
 
@@ -44,7 +44,7 @@ LLMOps တွင် အဓိကထားသည်မှာ အပလီကေ�
 
 ပထမဦးဆုံး အသက်တာလမ်းကြောင်းနှင့် ပြင်ဆင်မှုများကို နားလည်ရန် အောက်ပါ အချက်အလက်ပုံကို မှတ်သားပါ။
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.my.png)
+![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645.my.png)
 
 သင်တွေ့မည်မှာ MLOps ၏ ပုံမှန် အသက်တာလမ်းကြောင်းများနှင့် ကွာခြားသည်။ LLM များတွင် Prompting, အရည်အသွေးတိုးတက်စေရန် နည်းလမ်းများ (Fine-Tuning, RAG, Meta-Prompts), တာဝန်ရှိသော AI နှင့် ပတ်သက်သော အကဲဖြတ်မှုများ၊ နောက်ဆုံးတွင် အသစ်သော တိုင်းတာမှုများ (အရည်အသွေး၊ ထိခိုက်မှု၊ ရိုးသားမှု၊ ကုန်ကျစရိတ်နှင့် နောက်ကျမှု) ပါဝင်သည်။
 
@@ -54,7 +54,7 @@ LLMOps တွင် အဓိကထားသည်မှာ အပလီကေ�
 
 အဆင့်များကို မည်သို့ ရှာဖွေမည်နည်း? အသက်တာလမ်းကြောင်း တည်ဆောက်ပုံကို အသေးစိတ် ကြည့်ကြရအောင်။
 
-![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.my.png)
+![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.my.png)
 
 ဤသည်သည် အနည်းငယ်ရှုပ်ထွေးသည့်အတိုင်း မြင်ရနိုင်သော်လည်း ပထမဦးဆုံး အကြီးစား အဆင့်သုံးခုကို အာရုံစိုက်ကြည့်ပါ။
 
@@ -74,11 +74,11 @@ LLMOps တွင် အဓိကထားသည်မှာ အပလီကေ�
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) သည် [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys) ကို အသုံးပြုခွင့်ပြုသည်။ AI Studio သည် မော်ဒယ်များ၊ နမူနာများနှင့် ကိရိယာများကို ရှာဖွေစူးစမ်းနိုင်သော ဝက်ဘ်ပေါ်တယ်ဖြစ်သည်။ သင့်ရင်းမြစ်များကို စီမံခန့်ခွဲခြင်း၊ UI ဖန်တီးမှု လမ်းကြောင်းများနှင့် SDK/CLI ရွေးချယ်မှုများဖြင့် Code-First ဖွံ့ဖြိုးတိုးတက်မှုကို ထောက်ပံ့သည်။
 
-![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.my.png)
+![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.my.png)
 
 Azure AI သည် သင့် လည်ပတ်မှုများ၊ ဝန်ဆောင်မှုများ၊ စီမံကိန်းများ၊ vector ရှာဖွေရေးနှင့် ဒေတာဘေ့စ်လိုအပ်ချက်များကို စီမံခန့်ခွဲရန် အရင်းအမြစ်များစွာကို အသုံးပြုခွင့်ပြုသည်။
 
-![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.my.png)
+![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.my.png)
 
 Proof-of-Concept (POC) မှ စ၍ ကြီးမားသော အပလီကေးရှင်းများအထိ PromptFlow ဖြင့် တည်ဆောက်ပါ။
 
@@ -86,7 +86,7 @@ Proof-of-Concept (POC) မှ စ၍ ကြီးမားသော အပလီ
 - အရည်အသွေးမြင့် AI အတွက် အပလီကေးရှင်းများကို စမ်းသပ်ပြီး fine-tune လုပ်ပါ၊ လွယ်ကူစွာ
 - Azure AI Studio ကို အသုံးပြု၍ cloud နှင့် ပေါင်းစည်းပြီး အမြန်တင်သွင်းခြင်းနှင့် ပြန်လည်ပြင်ဆင်ခြင်းများ ပြုလုပ်ပါ။
 
-![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.my.png)
+![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.my.png)
 
 ## အံ့သြဖွယ်! သင်ယူမှုကို ဆက်လက်လုပ်ဆောင်ပါ!
 

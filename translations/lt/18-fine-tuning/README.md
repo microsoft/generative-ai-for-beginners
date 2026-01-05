@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "lt"
 }
 -->
-[![Atvirojo kodo modeliai](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.lt.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Atvirojo kodo modeliai](../../../translated_images/18-lesson-banner.f30176815b1a5074.lt.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM modelio pritaikymas
 
@@ -32,7 +32,7 @@ Pasiruošę? Pradėkime.
 
 Norite gauti bendrą vaizdą apie tai, ką aptarsime, prieš pasinerdami į detales? Peržiūrėkite šį iliustruotą vadovą, kuriame aprašoma mokymosi kelionė šioje pamokoje – nuo pagrindinių pritaikymo koncepcijų ir motyvacijos supratimo iki proceso ir geriausios praktikos vykdant pritaikymo užduotį. Tai įdomi tema tyrinėjimui, todėl nepamirškite peržiūrėti [Resursų](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) puslapio, kuriame rasite papildomų nuorodų, padėsiančių savarankiškai mokytis!
 
-![Iliustruotas kalbos modelių pritaikymo vadovas](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.lt.png)
+![Iliustruotas kalbos modelių pritaikymo vadovas](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.lt.png)
 
 ## Kas yra kalbos modelių pritaikymas?
 
