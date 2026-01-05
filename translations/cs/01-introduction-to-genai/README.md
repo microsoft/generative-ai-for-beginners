@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Úvod do generativní AI a velkých jazykových modelů
 
-[![Úvod do generativní AI a velkých jazykových modelů](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.cs.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Úvod do generativní AI a velkých jazykových modelů](../../../translated_images/01-lesson-banner.2424cfd092f43366.cs.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
@@ -43,7 +43,7 @@ Tým našeho startupu si je vědom, že tohoto cíle nedosáhneme bez využití 
 
 Generativní AI má potenciál revolucionalizovat způsob, jakým se dnes učíme a vyučujeme, kdy studenti mají k dispozici virtuální učitele 24 hodin denně, kteří poskytují obrovské množství informací a příkladů, a učitelé mohou využívat inovativní nástroje k hodnocení svých studentů a poskytování zpětné vazby.
 
-![Pět mladých studentů sledujících monitor - obrázek od DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.cs.png)
+![Pět mladých studentů sledujících monitor - obrázek od DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.cs.png)
 
 Začněme definováním některých základních pojmů a terminologie, které budeme používat v průběhu kurzu.
 
@@ -69,7 +69,7 @@ Tato technologie poháněla virtuální asistenty, které se objevily v první d
 
 Tak jsme se dostali k dnešní generativní AI, kterou lze považovat za podmnožinu hlubokého učení.
 
-![AI, ML, DL a generativní AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.cs.png)
+![AI, ML, DL a generativní AI](../../../translated_images/AI-diagram.c391fa518451a40d.cs.png)
 
 Po desetiletích výzkumu v oblasti AI nová architektura modelu – nazvaná _Transformer_ – překonala limity RNN, protože dokáže přijímat mnohem delší sekvence textu jako vstup. Transformery jsou založeny na mechanismu pozornosti, který umožňuje modelu přidělovat různé váhy vstupům, které přijímá, a „věnovat větší pozornost“ tam, kde je soustředěna nejrelevantnější informace, bez ohledu na jejich pořadí v textové sekvenci.
 
@@ -81,7 +81,7 @@ V další kapitole prozkoumáme různé typy generativních AI modelů, ale proz
 
 - **Tokenizér, text na čísla**: Velké jazykové modely přijímají text jako vstup a generují text jako výstup. Nicméně, protože jsou statistické modely, pracují mnohem lépe s čísly než s textovými sekvencemi. Proto je každý vstup do modelu zpracován tokenizérem, než je použit hlavním modelem. Token je část textu – skládající se z proměnného počtu znaků, takže hlavním úkolem tokenizéru je rozdělit vstup na pole tokenů. Poté je každý token mapován na index tokenu, což je číselné kódování původního textového úseku.
 
-![Příklad tokenizace](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.cs.png)
+![Příklad tokenizace](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.cs.png)
 
 - **Predikce výstupních tokenů**: Na základě n tokenů jako vstupu (s maximálním n, které se liší od modelu k modelu) je model schopen předpovědět jeden token jako výstup. Tento token je poté začleněn do vstupu další iterace, v rozšiřujícím se vzoru okna, což umožňuje lepší uživatelskou zkušenost získání jedné (nebo více) věty jako odpovědi. To vysvětluje, proč, pokud jste si někdy hráli s ChatGPT, jste si možná všimli, že někdy vypadá, jako by se zastavil uprostřed věty.
 
@@ -98,23 +98,23 @@ Vstup velkého jazykového modelu je známý jako podnět (prompt), zatímco vý
 
   1. Shrnutí článku, knihy, recenzí produktů a další, spolu s extrakcí poznatků z nestrukturovaných dat.
     
-    ![Příklad shrnutí](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.cs.png)
+    ![Příklad shrnutí](../../../translated_images/summarization-example.7b7ff97147b3d790.cs.png)
   
   2. Kreativní nápady a návrhy článků, esejí, úkolů a dalších.
       
-     ![Příklad kreativního psaní](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.cs.png)
+     ![Příklad kreativního psaní](../../../translated_images/creative-writing-example.e24a685b5a543ad1.cs.png)
 
 - **Otázku**, položenou formou konverzace s agentem.
   
-  ![Příklad konverzace](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.cs.png)
+  ![Příklad konverzace](../../../translated_images/conversation-example.60c2afc0f595fa59.cs.png)
 
 - Úsek **textu k dokončení**, což implicitně znamená žádost o pomoc s psaním.
   
-  ![Příklad dokončení textu](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.cs.png)
+  ![Příklad dokončení textu](../../../translated_images/text-completion-example.cbb0f28403d42752.cs.png)
 
 - Úsek **kódu** spolu s žádostí o jeho vysvětlení a dokumentaci, nebo komentář žádající o generování části kódu, která provádí konkrétní úkol.
   
-  ![Příklad kódování](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.cs.png)
+  ![Příklad kódování](../../../translated_images/coding-example.50ebabe8a6afff20.cs.png)
 
 Výše uvedené příklady jsou poměrně jednoduché a nejsou zamýšleny jako vyčerpávající demonstrace schopností velkých jazykových modelů. Mají za cíl ukázat potenciál využití generativní AI, zejména, ale nejen, v kontextu vzdělávání.
 

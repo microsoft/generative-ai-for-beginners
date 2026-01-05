@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváření chatovacích aplikací poháněných generativní AI
 
-[![Vytváření chatovacích aplikací poháněných generativní AI](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.cs.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Vytváření chatovacích aplikací poháněných generativní AI](../../../translated_images/07-lesson-banner.a279b937f2843833.cs.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
@@ -96,11 +96,11 @@ Obecné principy UX platí pro chatovací aplikace, ale zde je několik dalšíc
 
 Jedním z příkladů personalizace je nastavení „Vlastní pokyny“ v ChatGPT od OpenAI. Umožňuje vám poskytnout informace o sobě, které mohou být důležitým kontextem pro vaše výzvy. Zde je příklad vlastních pokynů.
 
-![Nastavení vlastních pokynů v ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.cs.png)
+![Nastavení vlastních pokynů v ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.cs.png)
 
 Tento „profil“ vybízí ChatGPT k vytvoření plánu lekce o propojených seznamech. Všimněte si, že ChatGPT bere v úvahu, že uživatel může chtít podrobnější plán lekce na základě svých zkušeností.
 
-![Výzva v ChatGPT pro plán lekce o propojených seznamech](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.cs.png)
+![Výzva v ChatGPT pro plán lekce o propojených seznamech](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.cs.png)
 
 ### Rámec systémových zpráv Microsoftu pro velké jazykové modely
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Защита на вашите приложения за генеративен AI
 
-[![Защита на вашите приложения за генеративен AI](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.bg.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Защита на вашите приложения за генеративен AI](../../../translated_images/13-lesson-banner.14103e36b4bbf173.bg.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Въведение
 
@@ -119,7 +119,7 @@ LLMs могат да представляват рискове за повери
 
 > Практиката на AI red teaming се е развила, за да придобие по-широко значение: тя не само обхваща проверка за уязвимости в сигурността, но също така включва проверка за други системни провали, като генериране на потенциално вредно съдържание. AI системите идват с нови рискове, а red teaming е ключов за разбирането на тези нови рискове, като инжектиране на команди и създаване на съдържание без основа. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Насоки и ресурси за red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.bg.png)]()
+[![Насоки и ресурси за red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.bg.png)]()
 
 По-долу са ключови прозрения, които са формирали програмата на Microsoft за AI Red Team.
 

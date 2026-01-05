@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "bg"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.bg.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.bg.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Въведение
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Цена** - Цената на токен за използване и внедряване на тези модели е по-ниска в сравнение със собствени модели. При изграждане на генеративни AI приложения, трябва да се разгледа съотношението производителност към цена при работа с тези модели за вашия конкретен случай.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.bg.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.bg.png)
 Източник: Artificial Analysis
 
 **Гъвкавост** - Работата с отворени модели ви позволява да бъдете гъвкави по отношение на използването на различни модели или комбинирането им. Пример за това са [HuggingChat асистентите](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), където потребителят може да избере модела, който се използва директно в потребителския интерфейс:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.bg.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.bg.png)
 
 ## Изследване на различни отворени модели
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 При сравняване на LLM от различни типове, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) е още един отличен ресурс:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.bg.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.bg.png)
 Източник: Artificial Analysis
 
 Ако работите по конкретен случай, търсенето на фино настроени версии, фокусирани върху същата област, може да бъде ефективно. Експериментирането с няколко отворени модела, за да видите как се представят според вашите и очакванията на потребителите, е друга добра практика.

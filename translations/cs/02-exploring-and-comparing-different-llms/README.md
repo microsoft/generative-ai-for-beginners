@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Zkoumání a porovnávání různých LLM
 
-[![Zkoumání a porovnávání různých LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.cs.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Zkoumání a porovnávání různých LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60.cs.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klikněte na obrázek výše pro zhlédnutí videa této lekce_
 
@@ -59,14 +59,14 @@ Termín Základní model byl [zaveden výzkumníky ze Stanfordu](https://arxiv.o
 - **Jsou velmi velké modely**, založené na velmi hlubokých neuronových sítích trénovaných na miliardách parametrů.
 - **Obvykle slouží jako „základ“ pro jiné modely**, což znamená, že mohou být použity jako výchozí bod pro vytvoření dalších modelů, což lze provést jemným doladěním.
 
-![Základní modely versus LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.cs.png)
+![Základní modely versus LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.cs.png)
 
 Zdroj obrázku: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Pro další objasnění tohoto rozlišení si vezměme jako příklad ChatGPT. Pro vytvoření první verze ChatGPT sloužil model GPT-3.5 jako základní model. To znamená, že OpenAI použilo některá data specifická pro chat k vytvoření upravené verze GPT-3.5, která byla specializována na dobrý výkon v konverzačních scénářích, jako jsou chatboty.
 
-![Základní model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.cs.png)
+![Základní model](../../../translated_images/Multimodal.2c389c6439e0fc51.cs.png)
 
 Zdroj obrázku: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM mohou být také kategorizovány podle výstupu, který generují.
 
 Embeddings jsou sada modelů, které dokážou převést text do numerické podoby, nazývané embedding, což je numerická reprezentace vstupního textu. Embeddings usnadňují strojům pochopení vztahů mezi slovy nebo větami a mohou být použity jako vstupy pro jiné modely, jako jsou klasifikační modely nebo modely shlukování, které mají lepší výkon na numerických datech. Embedding modely se často používají pro transfer learning, kde je model vytvořen pro náhradní úkol, pro který je dostatek dat, a poté jsou váhy modelu (embeddings) znovu použity pro jiné následné úkoly. Příkladem této kategorie je [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.cs.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.cs.png)
 
 Modely generování obrázků jsou modely, které generují obrázky. Tyto modely se často používají pro úpravy obrázků, syntézu obrázků a překlad obrázků. Modely generování obrázků jsou často trénovány na velkých datových sadách obrázků, jako je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), a mohou být použity k vytváření nových obrázků nebo k úpravě existujících obrázků pomocí technik jako inpainting, super-rozlišení a kolorování. Příklady zahrnují [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) a [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generování obrázků](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.cs.png)
+![Generování obrázků](../../../translated_images/Image.349c080266a763fd.cs.png)
 
 Modely generování textu a kódu jsou modely, které generují text nebo kód. Tyto modely se často používají pro sumarizaci textu, překlad a odpovídání na otázky. Modely generování textu jsou často trénovány na velkých datových sadách textu, jako je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), a mohou být použity k vytváření nového textu nebo k odpovídání na otázky. Modely generování kódu, jako [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), jsou často trénovány na velkých datových sadách kódu, jako je GitHub, a mohou být použity k vytváření nového kódu nebo k opravě chyb v existujícím kódu.
 
-![Generování textu a kódu](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.cs.png)
+![Generování textu a kódu](../../../translated_images/Text.a8c0cf139e5cc2a0.cs.png)
 
 ### Encoder-Decoder versus Pouze Decoder
 
@@ -123,23 +123,23 @@ Většina modelů, které jsme zmínili v předchozích odstavcích (modely Open
 
 - Najít základní model, který je zajímá, v katalogu – ať už proprietární nebo open source, s možností filtrování podle úkolu, licence nebo názvu. Pro zlepšení vyhledávání jsou modely organizovány do kolekcí, jako je kolekce Azure OpenAI, kolekce Hugging Face a další.
 
-![Modelový katalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.cs.png)
+![Modelový katalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.cs.png)
 
 - Prohlédnout si kartu modelu, která obsahuje podrobný popis zamýšleného použití a tréninkových dat, ukázky kódu a výsledky hodnocení z interní knihovny hodnocení.
 
-![Karta modelu](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.cs.png)
+![Karta modelu](../../../translated_images/ModelCard.598051692c6e400d.cs.png)
 
 - Porovnat benchmarky napříč modely a datovými sadami dostupnými v průmyslu, aby bylo možné posoudit, který model nejlépe odpovídá obchodnímu scénáři, prostřednictvím panelu [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmarky modelů](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.cs.png)
+![Benchmarky modelů](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.cs.png)
 
 - Doladit model na vlastních tréninkových datech, aby se zlepšil výkon modelu v konkrétní pracovní zátěži, s využitím experimentálních a sledovacích schopností Azure AI Studio.
 
-![Doladění modelu](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.cs.png)
+![Doladění modelu](../../../translated_images/FineTuning.aac48f07142e36fd.cs.png)
 
 - Nasadit původní předtrénovaný model nebo doladěnou verzi na vzdálené rozhraní pro inferenci v reálném čase – spravovaný výpočetní výkon – nebo serverless API endpoint – [platba za použití](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) – aby aplikace mohly model využívat.
 
-![Nasazení modelu](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.cs.png)
+![Nasazení modelu](../../../translated_images/ModelDeploy.890da48cbd0bccdb.cs.png)
 
 > [!NOTE]
 > Ne všechny modely v katalogu jsou aktuálně dostupné pro doladění a/nebo nasazení s platbou za použití. Podrobnosti o schopnostech a omezeních modelu najdete na jeho kartě.
@@ -158,7 +158,7 @@ Existuje několik přístupů, které může firma použít k dosažení požado
 
 - **Doladěný model**. Zde model dále trénujete na vlastních datech, což vede k tomu, že model je přesnější a lépe reaguje na vaše potřeby, ale může být nákladný.
 
-![Nasazení LLM](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.cs.png)
+![Nasazení LLM](../../../translated_images/Deploy.18b2d27412ec8c02.cs.png)
 
 Zdroj obrázku: [Čtyři způsoby, jak firmy nasazují LLM | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
