@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ne"
 }
 -->
-[![ओपन सोर्स मोडेलहरू](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ne.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![ओपन सोर्स मोडेलहरू](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ne.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## परिचय
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 एआई एजेन्टहरूले ठूलो भाषा मोडेलहरू (LLMs) लाई **राज्य** र **उपकरणहरू** मा पहुँच दिएर कार्यहरू प्रदर्शन गर्न अनुमति दिन्छ।
 
-![एजेन्ट मोडेल](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ne.png)
+![एजेन्ट मोडेल](../../../translated_images/what-agent.21f2893bdfd01e6a.ne.png)
 
 आउनुहोस् यी शब्दहरूको परिभाषा गरौं:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 `Agent Executor` ले च्याट इतिहास पनि भण्डारण गर्दछ ताकि च्याटको सन्दर्भ प्रदान गर्न सकियोस्।
 
-![LangChain एजेन्टहरू](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ne.png)
+![LangChain एजेन्टहरू](../../../translated_images/langchain-agents.edcc55b5d5c43716.ne.png)
 
 LangChain ले [उपकरणहरूको सूची](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) प्रदान गर्दछ जुन तपाईंको एप्लिकेसनमा आयात गर्न सकिन्छ जहाँ LLM ले पहुँच प्राप्त गर्न सक्छ। यी समुदाय र LangChain टोलीद्वारा बनाइएका छन्।
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 यहाँ प्रक्रियाको एक उदाहरण छ:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ne.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ne.png)
 
 #### प्रणाली सन्देशको साथ परिभाषित LLM
 
@@ -129,7 +129,7 @@ AutoGen कोड नमूनाहरूको सूची [यहाँ](htt
 
 कार्यहरू पूरा गर्न `Planner` उपकरणहरूको संग्रह `Plugins` मा एक्सपोज हुन्छ। यो Python कक्षाहरू वा सामान्य कोड इन्टरप्रिटर हुन सक्छ। यी प्लगइनहरू embeddings को रूपमा भण्डारण गरिन्छ ताकि LLM ले सही प्लगइनको लागि राम्रो खोज गर्न सकियोस्।
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ne.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ne.png)
 
 यहाँ एनोमली डिटेक्शन ह्यान्डल गर्नको लागि प्लगइनको एक उदाहरण छ:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 हामीले अन्वेषण गर्ने अन्तिम एजेन्ट फ्रेमवर्क [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst) हो। JARVIS लाई अद्वितीय बनाउने कुरा यो हो कि यसले वार्तालापको `state` व्यवस्थापन गर्न LLM प्रयोग गर्दछ र `tools` अन्य एआई मोडेलहरू हुन्। प्रत्येक एआई मोडेलहरू विशेष मोडेलहरू हुन् जसले वस्तु पहिचान, ट्रान्सक्रिप्शन वा छवि क्याप्शनिङ जस्ता निश्चित कार्यहरू प्रदर्शन गर्छन्।
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ne.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ne.png)
 
 LLM, एक सामान्य उद्देश्य मोडेल भएकोले, प्रयोगकर्ताबाट अनुरोध प्राप्त गर्दछ र विशिष्ट कार्य र कार्य पूरा गर्न आवश्यक कुनै पनि तर्क/डेटा पहिचान गर्दछ।
 
