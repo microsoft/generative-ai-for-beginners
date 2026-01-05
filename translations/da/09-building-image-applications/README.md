@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygning af applikationer til billedgenerering
 
-[![Bygning af applikationer til billedgenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.da.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Bygning af applikationer til billedgenerering](../../../translated_images/09-lesson-banner.906e408c741f4411.da.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM'er kan mere end bare tekstgenerering. Det er også muligt at generere billeder ud fra tekstbeskrivelser. At have billeder som en modalitet kan være yderst nyttigt inden for en række områder som MedTech, arkitektur, turisme, spiludvikling og mere. I dette kapitel vil vi se nærmere på de to mest populære modeller til billedgenerering, DALL-E og Midjourney.
 
@@ -43,7 +43,7 @@ Som en del af denne lektion vil vi fortsætte med at arbejde med vores startup, 
 
 Her er et eksempel på, hvad Edu4All's elever kunne generere, hvis de arbejder i klassen med monumenter:
 
-![Edu4All startup, klasse om monumenter, Eiffeltårnet](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.da.png)
+![Edu4All startup, klasse om monumenter, Eiffeltårnet](../../../translated_images/startup.94d6b79cc4bb3f5a.da.png)
 
 ved hjælp af en prompt som
 
@@ -273,9 +273,9 @@ Her er et eksempel ved hjælp af GPT Image:
   Basisbilledet ville kun indeholde loungen med pool, men det endelige billede ville have en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.da.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.da.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.da.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.da.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.da.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.da.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Lad os se på et eksempel på, hvordan temperatur fungerer, ved at køre denne p
 
 > Prompt: "Kanin på hest, holder en slikkepind, på en tåget eng hvor der vokser påskeliljer"
 
-![Kanin på en hest, holder en slikkepind, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.da.png)
+![Kanin på en hest, holder en slikkepind, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.da.png)
 
 Nu lad os køre den samme prompt igen for at se, at vi ikke får det samme billede to gange:
 
-![Genereret billede af kanin på hest](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.da.png)
+![Genereret billede af kanin på hest](../../../translated_images/v2-generated-image.33f55a3714efe61d.da.png)
 
 Som du kan se, er billederne ens, men ikke identiske. Lad os prøve at ændre temperaturværdien til 0,1 og se, hvad der sker:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Nu, når du kører denne kode, får du disse to billeder:
 
-- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.da.png)
-- ![Temperatur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.da.png)
+- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.da.png)
+- ![Temperatur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.da.png)
 
 Her kan du tydeligt se, hvordan billederne ligner hinanden mere.
 
