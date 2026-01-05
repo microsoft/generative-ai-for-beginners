@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integracija s pozivanjem funkcija
 
-[![Integracija s pozivanjem funkcija](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.hr.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija s pozivanjem funkcija](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.hr.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Do sada ste naučili dosta toga u prethodnim lekcijama. Međutim, uvijek postoji prostor za poboljšanje. Neke od stvari koje možemo unaprijediti uključuju dobivanje dosljednijeg formata odgovora kako bi rad s odgovorima bio lakši u daljnjem procesu. Također, možda želimo dodati podatke iz drugih izvora kako bismo dodatno obogatili našu aplikaciju.
 
@@ -179,7 +179,7 @@ Sada možemo poslati oba zahtjeva LLM-u i pregledati odgovor koji primimo pronal
 
 Kako onda riješiti problem formatiranja? Korištenjem pozivanja funkcija možemo osigurati da dobijemo strukturirane podatke natrag. Kod korištenja pozivanja funkcija, LLM zapravo ne poziva ili izvršava funkcije. Umjesto toga, kreiramo strukturu koju LLM treba slijediti za svoje odgovore. Zatim koristimo te strukturirane odgovore kako bismo znali koju funkciju pokrenuti u našim aplikacijama.
 
-![tok funkcije](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.hr.png)
+![tok funkcije](../../../translated_images/Function-Flow.083875364af4f4bb.hr.png)
 
 Možemo zatim uzeti ono što je vraćeno iz funkcije i poslati to natrag LLM-u. LLM će zatim odgovoriti koristeći prirodni jezik kako bi odgovorio na korisnički upit.
 
@@ -201,7 +201,7 @@ Proces kreiranja poziva funkcije uključuje 3 glavna koraka:
 2. **Čitanje** odgovora modela za izvršenje akcije, tj. pokretanje funkcije ili API poziva.
 3. **Ponovno pozivanje** Chat Completions API-ja s odgovorom vaše funkcije kako bi se taj odgovor iskoristio za kreiranje odgovora korisniku.
 
-![LLM tok](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.hr.png)
+![LLM tok](../../../translated_images/LLM-Flow.3285ed8caf4796d7.hr.png)
 
 ### Korak 1 - kreiranje poruka
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Izrada aplikacija za pretraživanje
 
-[![Uvod u generativnu umjetnu inteligenciju i velike jezične modele](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.hr.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Uvod u generativnu umjetnu inteligenciju i velike jezične modele](../../../translated_images/08-lesson-banner.8fff48c566dad08a.hr.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kliknite na sliku iznad za pregled videozapisa ove lekcije_
 
@@ -44,7 +44,7 @@ Lekcija uključuje indeks ugrađivanja transkripata YouTube videozapisa s Micros
 
 Slijedi primjer semantičkog upita za pitanje 'možete li koristiti rstudio s azure ml?'. Pogledajte YouTube URL, vidjet ćete da URL sadrži vremensku oznaku koja vas vodi do dijela videozapisa gdje se nalazi odgovor na pitanje.
 
-![Semantički upit za pitanje "možete li koristiti rstudio s Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.hr.png)
+![Semantički upit za pitanje "možete li koristiti rstudio s Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.hr.png)
 
 ## Što je semantičko pretraživanje?
 
@@ -163,7 +163,7 @@ Otvorite [rješenje u Jupyter Notebooku](./python/aoai-solution.ipynb?WT.mc_id=a
 
 Kada pokrenete notebook, bit ćete upitani da unesete upit. Okvir za unos izgleda ovako:
 
-![Okvir za unos upita korisnika](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.hr.png)
+![Okvir za unos upita korisnika](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.hr.png)
 
 ## Odlično! Nastavite s učenjem
 

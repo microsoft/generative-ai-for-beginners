@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Izrada aplikacija za chat s generativnom umjetnom inteligencijom
 
-[![Izrada aplikacija za chat s generativnom umjetnom inteligencijom](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.hr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Izrada aplikacija za chat s generativnom umjetnom inteligencijom](../../../translated_images/07-lesson-banner.a279b937f2843833.hr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Kliknite na sliku iznad za pregled videozapisa ove lekcije)_
 
@@ -96,11 +96,11 @@ Opća načela UX-a primjenjuju se na aplikacije za chat, ali ovdje su neka dodat
 
 Jedan takav primjer personalizacije su postavke "Prilagođene upute" u OpenAI-jevom ChatGPT-u. Omogućuje vam pružanje informacija o sebi koje mogu biti važan kontekst za vaše upite. Evo primjera prilagođene upute.
 
-![Postavke prilagođenih uputa u ChatGPT-u](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.hr.png)
+![Postavke prilagođenih uputa u ChatGPT-u](../../../translated_images/custom-instructions.b96f59aa69356fcf.hr.png)
 
 Ovaj "profil" potiče ChatGPT da stvori plan lekcije o povezanim listama. Primijetite da ChatGPT uzima u obzir da korisnik možda želi detaljniji plan lekcije na temelju svog iskustva.
 
-![Upit u ChatGPT-u za plan lekcije o povezanim listama](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.hr.png)
+![Upit u ChatGPT-u za plan lekcije o povezanim listama](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.hr.png)
 
 ### Microsoftov okvir za sistemske poruke za velike jezične modele
 
