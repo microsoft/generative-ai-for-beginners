@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # జెనరేటివ్ AI ను బాధ్యతగా ఉపయోగించడం
 
-[![Using Generative AI Responsibly](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.te.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Using Generative AI Responsibly](../../../translated_images/03-lesson-banner.1ed56067a452d977.te.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _ఈ పాఠం వీడియోను చూడడానికి పై చిత్రాన్ని క్లిక్ చేయండి_
 
@@ -85,7 +85,7 @@ AI మరియు ప్రత్యేకంగా జెనరేటివ్
 
 ఇప్పుడు మనం బాధ్యతాయుత జెనరేటివ్ AI ప్రాముఖ్యతను గుర్తించినందున, మన AI పరిష్కారాలను బాధ్యతగా నిర్మించడానికి తీసుకోవచ్చిన 4 దశలను చూద్దాం:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.te.png)
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.te.png)
 
 ### హానికరమైన అవకాశాలను కొలవండి
 
@@ -97,7 +97,7 @@ AI మరియు ప్రత్యేకంగా జెనరేటివ్
 
 ఇప్పుడు మోడల్ మరియు దాని ప్రతిస్పందనల వల్ల కలిగే హానిని నివారించడానికి లేదా పరిమితం చేయడానికి మార్గాలను కనుగొనాల్సిన సమయం వచ్చింది. దీన్ని 4 వేర్వేరు పొరలలో చూడవచ్చు:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.te.png)
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.te.png)
 
 - **మోడల్**. సరైన ఉపయోగానికి సరైన మోడల్‌ను ఎంచుకోవడం. GPT-4 వంటి పెద్ద మరియు క్లిష్టమైన మోడల్స్ చిన్న మరియు నిర్దిష్ట ఉపయోగాలపై హానికరమైన కంటెంట్ ప్రమాదాన్ని పెంచవచ్చు. మీ శిక్షణ డేటాను ఉపయోగించి ఫైన్-ట్యూన్ చేయడం కూడా హానికరమైన కంటెంట్ ప్రమాదాన్ని తగ్గిస్తుంది.
 

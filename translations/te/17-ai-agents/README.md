@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "te"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.te.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.te.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## పరిచయం
 
@@ -33,7 +33,7 @@ AI ఏజెంట్లు జనరేటివ్ AI ప్రపంచంల
 
 AI ఏజెంట్లు పెద్ద భాషా మోడల్స్ (LLMs) కు **స్టేట్** మరియు **టూల్స్** కి ప్రాప్తి కల్పించడం ద్వారా పనులు చేయడానికి అనుమతిస్తాయి.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.te.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.te.png)
 
 ఈ పదాలను నిర్వచిద్దాం:
 
@@ -53,7 +53,7 @@ AI ఏజెంట్లు పెద్ద భాషా మోడల్స్ (
 
 `Agent Executor` చాట్ చరిత్రను కూడా నిల్వ చేస్తుంది, తద్వారా చాట్ సందర్భం అందించబడుతుంది.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.te.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.te.png)
 
 LangChain మీ అప్లికేషన్‌లో దిగుమతి చేసుకోవడానికి [టూల్స్ క్యాటలాగ్](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ను అందిస్తుంది, ఇందులో LLM ప్రాప్తి పొందవచ్చు. ఇవి కమ్యూనిటీ మరియు LangChain టీమ్ తయారు చేసినవి.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ప్రక్రియ ఉదాహరణ ఇక్కడ ఉంది:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.te.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.te.png)
 
 #### సిస్టమ్ సందేశంతో నిర్వచించిన LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 పనులను పూర్తి చేయడానికి `Planner` కు `Plugins` అనే టూల్స్ సేకరణ అందుబాటులో ఉంటుంది. ఇవి Python క్లాసులు లేదా సాధారణ కోడ్ ఇంటర్‌ప్రెటర్ కావచ్చు. ఈ ప్లగిన్లు ఎంబెడ్డింగ్స్‌గా నిల్వ చేయబడతాయి, తద్వారా LLM సరైన ప్లగిన్‌ను సులభంగా వెతుకుతుంది.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.te.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.te.png)
 
 అనామలీ డిటెక్షన్ నిర్వహించడానికి ప్లగిన్ ఉదాహరణ ఇక్కడ ఉంది:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 చివరి ఏజెంట్ ఫ్రేమ్‌వర్క్ [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVIS ప్రత్యేకత ఏమిటంటే ఇది సంభాషణ `స్టేట్` ను నిర్వహించడానికి LLM ను ఉపయోగిస్తుంది మరియు `టూల్స్` గా ఇతర AI మోడల్స్ ఉంటాయి. ప్రతి AI మోడల్ ప్రత్యేక పనులు చేస్తుంది, ఉదాహరణకు ఆబ్జెక్ట్ డిటెక్షన్, ట్రాన్స్క్రిప్షన్ లేదా ఇమేజ్ క్యాప్షనింగ్.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.te.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.te.png)
 
 LLM, ఒక సాధారణ ప్రయోజన మోడల్‌గా, వినియోగదారుని అభ్యర్థనను స్వీకరించి నిర్దిష్ట పని మరియు ఆ పని పూర్తి చేయడానికి అవసరమైన ఆర్గ్యుమెంట్లు/డేటాను గుర్తిస్తుంది.
 
