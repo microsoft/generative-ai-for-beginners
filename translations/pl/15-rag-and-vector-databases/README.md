@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generowanie wspomagane wyszukiwaniem (RAG) i bazy danych wektorowych
 
-[![Generowanie wspomagane wyszukiwaniem (RAG) i bazy danych wektorowych](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.pl.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Generowanie wspomagane wyszukiwaniem (RAG) i bazy danych wektorowych](../../../translated_images/15-lesson-banner.ac49e59506175d4f.pl.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 W lekcji dotyczącej aplikacji wyszukiwania krótko omówiliśmy, jak zintegrować własne dane z dużymi modelami językowymi (LLM). W tej lekcji zagłębimy się w koncepcję osadzania danych w aplikacji LLM, mechanikę tego procesu oraz metody przechowywania danych, w tym osadzeń i tekstu.
 
@@ -53,7 +53,7 @@ Chatbot oparty na LLM przetwarza zapytania użytkownika, aby generować odpowied
 
 ### Jak działają RAG (Generowanie wspomagane wyszukiwaniem)
 
-![schemat działania RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.pl.png)
+![schemat działania RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.pl.png)
 
 Załóżmy, że chcesz wdrożyć chatbota, który tworzy quizy na podstawie Twoich notatek. Wymaga to połączenia z bazą wiedzy. Tutaj z pomocą przychodzi RAG. RAG działa w następujący sposób:
 
@@ -65,7 +65,7 @@ Załóżmy, że chcesz wdrożyć chatbota, który tworzy quizy na podstawie Twoi
 
 - **Generowanie wspomagane:** LLM ulepsza swoją odpowiedź na podstawie wyszukanych danych. Pozwala to na generowanie odpowiedzi nie tylko na podstawie danych wstępnie przeszkolonych, ale także na podstawie istotnych informacji z dodanego kontekstu. Wyszukane dane są używane do wzbogacenia odpowiedzi LLM. Następnie LLM zwraca odpowiedź na pytanie użytkownika.
 
-![schemat architektury RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.pl.png)
+![schemat architektury RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2.pl.png)
 
 Architektura RAG jest implementowana za pomocą transformatorów składających się z dwóch części: kodera i dekodera. Na przykład, gdy użytkownik zadaje pytanie, tekst wejściowy jest "kodowany" na wektory, które przechwytują znaczenie słów, a następnie wektory są "dekodowane" w naszym indeksie dokumentów, generując nowy tekst na podstawie zapytania użytkownika. LLM wykorzystuje zarówno model kodera, jak i dekodera do generowania odpowiedzi.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Po podzieleniu na fragmenty możemy osadzić nasz tekst, korzystając z różnych modeli osadzeń. Niektóre modele, które można wykorzystać, to: word2vec, ada-002 od OpenAI, Azure Computer Vision i wiele innych. Wybór modelu zależy od używanych języków, rodzaju kodowanej treści (tekst/obrazy/dźwięk), rozmiaru danych wejściowych, które może zakodować, oraz długości wyjściowego osadzenia.
 
 Przykład osadzonego tekstu przy użyciu modelu OpenAI `text-embedding-ada-002`:
-![osadzenie słowa kot](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.pl.png)
+![osadzenie słowa kot](../../../translated_images/cat.74cbd7946bc9ca38.pl.png)
 
 ## Wyszukiwanie i wyszukiwanie wektorowe
 

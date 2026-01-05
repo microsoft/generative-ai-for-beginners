@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integração com chamadas de função
 
-[![Integração com chamadas de função](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.pt.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integração com chamadas de função](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.pt.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Você já aprendeu bastante nas lições anteriores. No entanto, ainda podemos melhorar. Algumas questões que podemos abordar são como obter um formato de resposta mais consistente para facilitar o trabalho com a resposta posteriormente. Além disso, talvez queiramos adicionar dados de outras fontes para enriquecer ainda mais nossa aplicação.
 
@@ -179,7 +179,7 @@ Agora podemos enviar ambas as solicitações para o LLM e examinar a resposta qu
 
 Então, como resolvemos o problema de formatação? Usando chamadas de função, podemos garantir que recebemos dados estruturados de volta. Ao usar chamadas de função, o LLM não chama ou executa nenhuma função de fato. Em vez disso, criamos uma estrutura para o LLM seguir em suas respostas. Em seguida, usamos essas respostas estruturadas para saber qual função executar em nossas aplicações.
 
-![fluxo de função](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.pt.png)
+![fluxo de função](../../../translated_images/Function-Flow.083875364af4f4bb.pt.png)
 
 Podemos então pegar o que é retornado da função e enviar isso de volta ao LLM. O LLM responderá usando linguagem natural para responder à consulta do usuário.
 
@@ -201,7 +201,7 @@ O processo de criação de uma chamada de função inclui 3 etapas principais:
 2. **Ler** a resposta do modelo para realizar uma ação, ou seja, executar uma função ou chamada de API.
 3. **Fazer** outra chamada à API de Chat Completions com a resposta da sua função para usar essas informações e criar uma resposta para o usuário.
 
-![Fluxo LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.pt.png)
+![Fluxo LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.pt.png)
 
 ### Etapa 1 - criando mensagens
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਨਰੇਟਿਵ AI ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਵਰਤਣਾ
 
-[![ਜਨਰੇਟਿਵ AI ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਵਰਤਣਾ](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.pa.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![ਜਨਰੇਟਿਵ AI ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਵਰਤਣਾ](../../../translated_images/03-lesson-banner.1ed56067a452d977.pa.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _ਉਪਰ ਦਿੱਤੀ ਤਸਵੀਰ 'ਤੇ ਕਲਿਕ ਕਰਕੇ ਇਸ ਪਾਠ ਦਾ ਵੀਡੀਓ ਵੇਖੋ_
 
@@ -85,7 +85,7 @@ AI ਅਤੇ ਖਾਸ ਕਰਕੇ ਜਨਰੇਟਿਵ AI ਦੇ ਪ੍ਰਤ
 
 ਹੁਣ ਜਦੋਂ ਅਸੀਂ ਜ਼ਿੰਮੇਵਾਰ ਜਨਰੇਟਿਵ AI ਦੇ ਮਹੱਤਵ ਦੀ ਪਛਾਣ ਕਰ ਲਈ ਹੈ, ਆਓ 4 ਕਦਮਾਂ 'ਤੇ ਨਜ਼ਰ ਮਾਰਦੇ ਹਾਂ ਜੋ ਅਸੀਂ ਆਪਣੇ AI ਹੱਲ ਨੂੰ ਜ਼ਿੰਮੇਵਾਰੀ ਨਾਲ ਬਣਾਉਣ ਲਈ ਲੈ ਸਕਦੇ ਹਾਂ:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.pa.png)
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.pa.png)
 
 ### ਸੰਭਾਵਿਤ ਹਾਨੀਆਂ ਨੂੰ ਮਾਪੋ
 
@@ -97,7 +97,7 @@ AI ਅਤੇ ਖਾਸ ਕਰਕੇ ਜਨਰੇਟਿਵ AI ਦੇ ਪ੍ਰਤ
 
 ਹੁਣ ਸਮਾਂ ਹੈ ਕਿ ਅਸੀਂ ਉਹ ਤਰੀਕੇ ਲੱਭੀਏ ਜਿੱਥੇ ਅਸੀਂ ਮਾਡਲ ਅਤੇ ਇਸਦੇ ਜਵਾਬਾਂ ਦੁਆਰਾ ਪੈਦਾ ਕੀਤੀ ਗਈ ਸੰਭਾਵਿਤ ਹਾਨੀ ਨੂੰ ਰੋਕ ਸਕਦੇ ਹਾਂ ਜਾਂ ਘਟਾ ਸਕਦੇ ਹਾਂ। ਅਸੀਂ ਇਸਨੂੰ 4 ਵੱਖ-ਵੱਖ ਪੱਧਰਾਂ ਵਿੱਚ ਦੇਖ ਸਕਦੇ ਹਾਂ:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.pa.png)
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.pa.png)
 
 - **ਮਾਡਲ**. ਸਹੀ ਮਾਮਲੇ ਲਈ ਸਹੀ ਮਾਡਲ ਦੀ ਚੋਣ ਕਰਨਾ। GPT-4 ਵਰਗੇ ਵੱਡੇ ਅਤੇ ਜਟਿਲ ਮਾਡਲ ਛੋਟੇ ਅਤੇ ਵਧੇਰੇ ਵਿਸ਼ੇਸ਼ ਮਾਮਲਿਆਂ 'ਤੇ ਲਾਗੂ ਕਰਨ ਸਮੇਂ ਹਾਨੀਕਾਰਕ ਸਮੱਗਰੀ ਦਾ ਵਧੇਰੇ ਜੋਖਮ ਪੈਦਾ ਕਰ ਸਕਦੇ ਹਨ। ਆਪਣੇ ਟ੍ਰੇਨਿੰਗ ਡੇਟਾ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਫਾਈਨ-ਟਿਊਨ ਕਰਨਾ ਵੀ ਹਾਨੀਕਾਰਕ ਸਮੱਗਰੀ ਦੇ ਜੋਖਮ ਨੂੰ ਘਟਾਉਂਦਾ ਹੈ।
 

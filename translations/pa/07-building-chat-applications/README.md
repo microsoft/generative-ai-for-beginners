@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਨਰੇਟਿਵ ਏਆਈ-ਚਲਿਤ ਚੈਟ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣਾ
 
-[![ਜਨਰੇਟਿਵ ਏਆਈ-ਚਲਿਤ ਚੈਟ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣਾ](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.pa.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![ਜਨਰੇਟਿਵ ਏਆਈ-ਚਲਿਤ ਚੈਟ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣਾ](../../../translated_images/07-lesson-banner.a279b937f2843833.pa.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ਉਪਰੋਕਤ ਚਿੱਤਰ 'ਤੇ ਕਲਿੱਕ ਕਰਕੇ ਇਸ ਪਾਠ ਦਾ ਵੀਡੀਓ ਵੇਖੋ)_
 
@@ -96,7 +96,7 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ਇੱਕ ਐਸਾ ਹੀ ਉਦਾਹਰਣ OpenAI ਦੇ ChatGPT ਵਿੱਚ "ਕਸਟਮ ਨਿਰਦੇਸ਼" ਸੈਟਿੰਗ ਹੈ। ਇਹ ਤੁਹਾਨੂੰ ਆਪਣੇ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ ਜੋ ਤੁਹਾਡੇ ਪ੍ਰੋਮਪਟ ਲਈ ਮਹੱਤਵਪੂਰਨ ਸੰਦਰਭ ਹੋ ਸਕਦਾ ਹੈ। ਇੱਥੇ ਇੱਕ ਕਸਟਮ ਨਿਰਦੇਸ਼ ਦਾ ਉਦਾਹਰਣ ਹੈ।
 
-![ChatGPT ਵਿੱਚ ਕਸਟਮ ਨਿਰਦੇਸ਼ ਸੈਟਿੰਗ](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.pa.png)
+![ChatGPT ਵਿੱਚ ਕਸਟਮ ਨਿਰਦੇਸ਼ ਸੈਟਿੰਗ](../../../translated_images/custom-instructions.b96f59aa69356fcf.pa.png)
 
 ਇਹ "ਪ੍ਰੋਫਾਈਲ" ChatGPT ਨੂੰ ਲਿੰਕਡ ਲਿਸਟਾਂ 'ਤੇ ਪਾਠ ਯੋਜਨਾ ਬਣਾਉਣ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰਦਾ ਹੈ। ਧਿਆਨ ਦਿਓ ਕਿ ChatGPT ਇਹ ਧਿਆਨ ਵਿੱਚ ਰੱਖਦਾ ਹੈ ਕਿ ਯੂਜ਼ਰ ਨੂੰ ਉਸਦੇ ਤਜਰਬੇ ਦੇ ਆਧਾਰ 'ਤੇ ਇੱਕ ਹੋਰ ਵਿਸਤ੍ਰਿਤ ਪਾਠ ਯੋਜਨਾ ਚਾਹੀਦੀ ਹੋ ਸਕਦੀ ਹੈ।
 

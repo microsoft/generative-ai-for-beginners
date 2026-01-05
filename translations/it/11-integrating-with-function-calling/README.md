@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrazione con la chiamata di funzioni
 
-[![Integrazione con la chiamata di funzioni](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.it.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrazione con la chiamata di funzioni](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.it.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Hai già imparato parecchio nelle lezioni precedenti. Tuttavia, possiamo migliorare ulteriormente. Alcuni aspetti che possiamo affrontare includono ottenere un formato di risposta più coerente per facilitare il lavoro con la risposta a valle. Inoltre, potremmo voler aggiungere dati da altre fonti per arricchire ulteriormente la nostra applicazione.
 
@@ -179,7 +179,7 @@ Ora possiamo inviare entrambe le richieste al LLM ed esaminare la risposta che r
 
 Quindi, come risolviamo il problema della formattazione? Utilizzando la chiamata di funzioni, possiamo assicurarci di ricevere dati strutturati. Quando utilizziamo la chiamata di funzioni, il LLM non chiama o esegue effettivamente alcuna funzione. Invece, creiamo una struttura che il LLM deve seguire per le sue risposte. Utilizziamo quindi quelle risposte strutturate per sapere quale funzione eseguire nelle nostre applicazioni.
 
-![flusso di funzioni](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.it.png)
+![flusso di funzioni](../../../translated_images/Function-Flow.083875364af4f4bb.it.png)
 
 Possiamo quindi prendere ciò che viene restituito dalla funzione e inviarlo nuovamente al LLM. Il LLM risponderà quindi utilizzando il linguaggio naturale per rispondere alla query dell'utente.
 
@@ -201,7 +201,7 @@ Il processo di creazione di una chiamata di funzione include 3 passaggi principa
 2. **Leggere** la risposta del modello per eseguire un'azione, ad esempio eseguire una funzione o una chiamata API.
 3. **Effettuare** un'altra chiamata all'API Chat Completions con la risposta della tua funzione per utilizzare quelle informazioni per creare una risposta per l'utente.
 
-![Flusso LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.it.png)
+![Flusso LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.it.png)
 
 ### Passaggio 1 - Creare messaggi
 

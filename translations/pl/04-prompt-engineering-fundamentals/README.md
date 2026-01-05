@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Podstawy Inżynierii Promptów
 
-[![Podstawy Inżynierii Promptów](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.pl.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Podstawy Inżynierii Promptów](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.pl.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Wprowadzenie
 Ten moduł obejmuje podstawowe pojęcia i techniki tworzenia skutecznych promptów dla modeli generatywnej sztucznej inteligencji. Sposób, w jaki piszesz swój prompt do LLM, ma znaczenie. Starannie skonstruowany prompt może zapewnić lepszą jakość odpowiedzi. Ale co dokładnie oznaczają takie terminy jak _prompt_ i _inżynieria promptów_? I jak mogę poprawić dane wejściowe _promptu_, które wysyłam do LLM? Na te pytania spróbujemy odpowiedzieć w tym rozdziale i następnym.
@@ -53,7 +53,7 @@ Notatnik zawiera ćwiczenia _startowe_ - ale zachęcamy do dodawania własnych s
 
 Chcesz zrozumieć ogólny obraz tego, co obejmuje ta lekcja, zanim się zagłębisz? Sprawdź ten przewodnik ilustrowany, który daje poczucie głównych tematów i kluczowych wniosków, o których warto pomyśleć w każdym z nich. Plan lekcji prowadzi od zrozumienia podstawowych koncepcji i wyzwań do ich rozwiązania za pomocą odpowiednich technik inżynierii promptów i najlepszych praktyk. Zauważ, że sekcja "Zaawansowane techniki" w tym przewodniku odnosi się do treści omówionych w _następnym_ rozdziale tego programu nauczania.
 
-![Przewodnik ilustrowany po inżynierii promptów](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.pl.png)
+![Przewodnik ilustrowany po inżynierii promptów](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.pl.png)
 
 ## Nasz startup
 
@@ -84,7 +84,7 @@ LLM widzi prompty jako _ciąg tokenów_, przy czym różne modele (lub wersje mo
 
 Aby zrozumieć, jak działa tokenizacja, wypróbuj narzędzia takie jak [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) pokazane poniżej. Skopiuj swój prompt - i zobacz, jak zostaje przekształcony w tokeny, zwracając uwagę na sposób, w jaki obsługiwane są znaki odstępu i znaki interpunkcyjne. Zauważ, że ten przykład pokazuje starszy LLM (GPT-3) - więc wypróbowanie tego z nowszym modelem może dać inny wynik.
 
-![Tokenizacja](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.pl.png)
+![Tokenizacja](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.pl.png)
 
 ### Koncepcja: Modele bazowe
 
@@ -94,7 +94,7 @@ Chcesz zobaczyć, jak działa uzupełnianie oparte na promptach? Wprowadź powy�
 
 Ale co, jeśli użytkownik chciałby zobaczyć coś konkretnego, co spełnia określone kryteria lub cel zadania? Właśnie tutaj wchodzą w grę _LLM dostosowane do instrukcji_.
 
-![Uzupełnianie czatu w modelu bazowym LLM](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.pl.png)
+![Uzupełnianie czatu w modelu bazowym LLM](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.pl.png)
 
 ### Koncepcja: LLM dostosowane do instrukcji
 
@@ -108,7 +108,7 @@ Spróbujmy - wróć do powyższego promptu, ale teraz zmień _wiadomość system
 
 Zobacz, jak wynik jest teraz dostosowany do odzwierciedlenia pożądanego celu i formatu? Nauczyciel może teraz bezpośrednio wykorzystać tę odpowiedź w swoich slajdach na lekcji.
 
-![Uzupełnianie czatu w modelu dostosowanym do instrukcji LLM](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.pl.png)
+![Uzupełnianie czatu w modelu dostosowanym do instrukcji LLM](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.pl.png)
 
 ## Dlaczego potrzebujemy inżynierii promptów?
 
@@ -138,15 +138,15 @@ Co się więc dzieje, gdy uruchamiamy ten prompt z różnymi dostawcami LLM?
 
 > **Odpowiedź 1**: OpenAI Playground (GPT-35)
 
-![Odpowiedź 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.pl.png)
+![Odpowiedź 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.pl.png)
 
 > **Odpowiedź 2**: Azure OpenAI Playground (GPT-35)
 
-![Odpowiedź 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.pl.png)
+![Odpowiedź 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.pl.png)
 
 > **Odpowiedź 3**: Hugging Face Chat Playground (LLama-2)
 
-![Odpowiedź 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.pl.png)
+![Odpowiedź 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.pl.png)
 
 Zgodnie z oczekiwaniami, każdy model (lub wersja modelu) generuje nieco inne odpowiedzi dzięki stochastycznemu zachowaniu i różnicom w możliwościach modelu. Na przykład jeden model kieruje się do odbiorców na poziomie ósmej klasy, podczas gdy inny zakłada poziom ucznia szkoły średniej. Jednak wszystkie trzy modele wygenerowały odpowiedzi, które mogłyby przekonać nieświadomego użytkownika, że wydarzenie było prawdziwe.
 

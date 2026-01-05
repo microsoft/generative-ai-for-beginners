@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introdução à IA Generativa e Modelos de Linguagem de Grande Escala
 
-[![Introdução à IA Generativa e Modelos de Linguagem de Grande Escala](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.pt.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introdução à IA Generativa e Modelos de Linguagem de Grande Escala](../../../translated_images/01-lesson-banner.2424cfd092f43366.pt.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
@@ -43,7 +43,7 @@ A equipe da nossa startup está ciente de que não conseguiremos alcançar esse 
 
 A IA generativa promete revolucionar a forma como aprendemos e ensinamos hoje, com estudantes tendo à disposição professores virtuais 24 horas por dia, que fornecem vastas quantidades de informações e exemplos, e professores capazes de usar ferramentas inovadoras para avaliar seus alunos e fornecer feedback.
 
-![Cinco jovens estudantes olhando para um monitor - imagem por DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.pt.png)
+![Cinco jovens estudantes olhando para um monitor - imagem por DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.pt.png)
 
 Para começar, vamos definir alguns conceitos básicos e terminologias que usaremos ao longo do currículo.
 
@@ -69,7 +69,7 @@ Essa é a tecnologia que impulsionou os assistentes virtuais surgidos na primeir
 
 E foi assim que chegamos à IA Generativa hoje, que pode ser vista como um subconjunto do aprendizado profundo.
 
-![IA, ML, DL e IA Generativa](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.pt.png)
+![IA, ML, DL e IA Generativa](../../../translated_images/AI-diagram.c391fa518451a40d.pt.png)
 
 Após décadas de pesquisa no campo da IA, uma nova arquitetura de modelo – chamada _Transformer_ – superou os limites das RNNs, sendo capaz de processar sequências de texto muito mais longas como entrada. Os Transformers são baseados no mecanismo de atenção, permitindo que o modelo atribua diferentes pesos às entradas que recebe, ‘prestando mais atenção’ onde as informações mais relevantes estão concentradas, independentemente de sua ordem na sequência de texto.
 
@@ -81,7 +81,7 @@ No próximo capítulo, vamos explorar diferentes tipos de modelos de IA generati
 
 - **Tokenizador, texto para números**: Os Modelos de Linguagem de Grande Escala recebem um texto como entrada e geram um texto como saída. No entanto, sendo modelos estatísticos, eles funcionam muito melhor com números do que com sequências de texto. É por isso que toda entrada no modelo é processada por um tokenizador antes de ser usada pelo modelo principal. Um token é um pedaço de texto – consistindo em um número variável de caracteres, então a principal tarefa do tokenizador é dividir a entrada em um array de tokens. Em seguida, cada token é mapeado com um índice de token, que é a codificação inteira do pedaço de texto original.
 
-![Exemplo de tokenização](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.pt.png)
+![Exemplo de tokenização](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.pt.png)
 
 - **Previsão de tokens de saída**: Dado n tokens como entrada (com n máximo variando de um modelo para outro), o modelo é capaz de prever um token como saída. Esse token é então incorporado na entrada da próxima iteração, em um padrão de janela expansiva, permitindo uma melhor experiência do usuário ao obter uma (ou várias) frases como resposta. Isso explica por que, se você já brincou com o ChatGPT, pode ter notado que às vezes parece que ele para no meio de uma frase.
 
@@ -98,23 +98,23 @@ A entrada de um modelo de linguagem de grande escala é conhecida como _prompt_,
 
   1. Resumo de um artigo, livro, avaliações de produtos e mais, juntamente com a extração de insights de dados não estruturados.
     
-    ![Exemplo de resumo](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.pt.png)
+    ![Exemplo de resumo](../../../translated_images/summarization-example.7b7ff97147b3d790.pt.png)
   
   2. Ideação criativa e design de um artigo, ensaio, tarefa ou mais.
       
-     ![Exemplo de escrita criativa](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.pt.png)
+     ![Exemplo de escrita criativa](../../../translated_images/creative-writing-example.e24a685b5a543ad1.pt.png)
 
 - Uma **pergunta**, feita na forma de uma conversa com um agente.
   
-  ![Exemplo de conversa](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.pt.png)
+  ![Exemplo de conversa](../../../translated_images/conversation-example.60c2afc0f595fa59.pt.png)
 
 - Um pedaço de **texto para completar**, que implicitamente é um pedido de assistência na escrita.
   
-  ![Exemplo de conclusão de texto](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.pt.png)
+  ![Exemplo de conclusão de texto](../../../translated_images/text-completion-example.cbb0f28403d42752.pt.png)
 
 - Um pedaço de **código** junto com o pedido de explicá-lo e documentá-lo, ou um comentário pedindo para gerar um trecho de código que execute uma tarefa específica.
   
-  ![Exemplo de código](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.pt.png)
+  ![Exemplo de código](../../../translated_images/coding-example.50ebabe8a6afff20.pt.png)
 
 Os exemplos acima são bastante simples e não têm a intenção de ser uma demonstração exaustiva das capacidades dos Modelos de Linguagem de Grande Escala. Eles servem para mostrar o potencial do uso da IA generativa, em particular, mas não exclusivamente, em contextos educacionais.
 

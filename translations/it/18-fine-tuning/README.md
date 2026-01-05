@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "it"
 }
 -->
-[![Modelli Open Source](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.it.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Modelli Open Source](../../../translated_images/18-lesson-banner.f30176815b1a5074.it.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Ottimizzazione del tuo LLM
 
@@ -32,7 +32,7 @@ Pronto? Iniziamo.
 
 Vuoi avere una visione d'insieme di ciò che tratteremo prima di approfondire? Dai un'occhiata a questa guida illustrata che descrive il percorso di apprendimento per questa lezione - dai concetti fondamentali e la motivazione per il fine-tuning, alla comprensione del processo e delle migliori pratiche per eseguire il compito di fine-tuning. È un argomento affascinante da esplorare, quindi non dimenticare di consultare la pagina [Risorse](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) per ulteriori link a supporto del tuo percorso di apprendimento autonomo!
 
-![Guida illustrata al fine-tuning dei modelli di linguaggio](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.it.png)
+![Guida illustrata al fine-tuning dei modelli di linguaggio](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.it.png)
 
 ## Cos'è il fine-tuning per i modelli di linguaggio?
 

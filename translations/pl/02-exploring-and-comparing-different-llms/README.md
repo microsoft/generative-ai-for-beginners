@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Eksploracja i porównanie różnych LLM-ów
 
-[![Eksploracja i porównanie różnych LLM-ów](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.pl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Eksploracja i porównanie różnych LLM-ów](../../../translated_images/02-lesson-banner.ef94c84979f97f60.pl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji_
 
@@ -59,14 +59,14 @@ Termin Model Bazowy został [wprowadzony przez badaczy z Uniwersytetu Stanforda]
 - **Są bardzo dużymi modelami**, opartymi na bardzo głębokich sieciach neuronowych trenowanych na miliardach parametrów.
 - **Zazwyczaj służą jako „podstawa” dla innych modeli**, co oznacza, że mogą być używane jako punkt wyjścia do budowy innych modeli, co można osiągnąć poprzez ich dostrajanie.
 
-![Modele bazowe a LLM-y](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.pl.png)
+![Modele bazowe a LLM-y](../../../translated_images/FoundationModel.e4859dbb7a825c94.pl.png)
 
 Źródło obrazu: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Aby lepiej wyjaśnić tę różnicę, weźmy jako przykład ChatGPT. Aby zbudować pierwszą wersję ChatGPT, model GPT-3.5 posłużył jako model bazowy. Oznacza to, że OpenAI użyło danych specyficznych dla czatu, aby stworzyć dostrojony wariant GPT-3.5, który był wyspecjalizowany w osiąganiu dobrych wyników w scenariuszach konwersacyjnych, takich jak chatboty.
 
-![Model bazowy](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.pl.png)
+![Model bazowy](../../../translated_images/Multimodal.2c389c6439e0fc51.pl.png)
 
 Źródło obrazu: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-y można również klasyfikować według rodzaju generowanego wyjścia.
 
 Embeddings to zestaw modeli, które mogą konwertować tekst na formę numeryczną, zwaną embeddingiem, czyli numeryczną reprezentację wejściowego tekstu. Embeddings ułatwiają maszynom zrozumienie relacji między słowami lub zdaniami i mogą być wykorzystywane jako dane wejściowe przez inne modele, takie jak modele klasyfikacyjne czy modele klastrowania, które lepiej radzą sobie z danymi numerycznymi. Modele embedding są często używane w uczeniu transferowym, gdzie model jest budowany dla zadania zastępczego, dla którego dostępne są obfite dane, a następnie wagi modelu (embeddingi) są ponownie wykorzystywane do innych zadań. Przykładem tej kategorii są [embeddingi OpenAI](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.pl.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.pl.png)
 
 Modele generowania obrazów to modele, które generują obrazy. Te modele są często używane do edycji obrazów, syntezy obrazów i tłumaczenia obrazów. Modele generowania obrazów są często trenowane na dużych zbiorach danych obrazów, takich jak [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), i mogą być używane do generowania nowych obrazów lub edycji istniejących obrazów za pomocą technik takich jak inpainting, super-rozdzielczość i kolorowanie. Przykłady to [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) i [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generowanie obrazów](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.pl.png)
+![Generowanie obrazów](../../../translated_images/Image.349c080266a763fd.pl.png)
 
 Modele generowania tekstu i kodu to modele, które generują tekst lub kod. Te modele są często używane do streszczania tekstu, tłumaczenia i odpowiadania na pytania. Modele generowania tekstu są często trenowane na dużych zbiorach danych tekstowych, takich jak [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), i mogą być używane do generowania nowego tekstu lub odpowiadania na pytania. Modele generowania kodu, takie jak [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), są często trenowane na dużych zbiorach danych kodu, takich jak GitHub, i mogą być używane do generowania nowego kodu lub naprawiania błędów w istniejącym kodzie.
 
-![Generowanie tekstu i kodu](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.pl.png)
+![Generowanie tekstu i kodu](../../../translated_images/Text.a8c0cf139e5cc2a0.pl.png)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -123,23 +123,23 @@ Większość modeli, które wspomnieliśmy w poprzednich akapitach (modele OpenA
 
 - Znalezienie interesującego modelu bazowego w katalogu - zarówno własnościowego, jak i open source, filtrując według zadania, licencji lub nazwy. Aby ułatwić wyszukiwanie, modele są zorganizowane w kolekcje, takie jak kolekcja Azure OpenAI, kolekcja Hugging Face i inne.
 
-![Katalog modeli](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.pl.png)
+![Katalog modeli](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.pl.png)
 
 - Przeglądanie karty modelu, w tym szczegółowego opisu zamierzonego zastosowania i danych treningowych, przykładów kodu oraz wyników oceny w wewnętrznej bibliotece ewaluacyjnej.
 
-![Karta modelu](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.pl.png)
+![Karta modelu](../../../translated_images/ModelCard.598051692c6e400d.pl.png)
 
 - Porównywanie wyników benchmarków między modelami i zestawami danych dostępnymi w branży, aby ocenić, który z nich najlepiej odpowiada na potrzeby biznesowe, za pomocą panelu [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmarki modeli](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.pl.png)
+![Benchmarki modeli](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.pl.png)
 
 - Dostosowanie modelu do własnych danych treningowych, aby poprawić jego wydajność w określonym obciążeniu, korzystając z możliwości eksperymentowania i śledzenia w Azure AI Studio.
 
-![Dostosowanie modelu](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.pl.png)
+![Dostosowanie modelu](../../../translated_images/FineTuning.aac48f07142e36fd.pl.png)
 
 - Wdrożenie oryginalnego modelu wstępnie wytrenowanego lub jego dostosowanej wersji do zdalnego wnioskowania w czasie rzeczywistym - zarządzanej infrastruktury obliczeniowej - lub serwerowego punktu końcowego API - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - aby umożliwić aplikacjom korzystanie z niego.
 
-![Wdrożenie modelu](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.pl.png)
+![Wdrożenie modelu](../../../translated_images/ModelDeploy.890da48cbd0bccdb.pl.png)
 
 > [!NOTE]
 > Nie wszystkie modele w katalogu są obecnie dostępne do dostosowania i/lub wdrożenia w modelu pay-as-you-go. Sprawdź kartę modelu, aby uzyskać szczegóły dotyczące możliwości i ograniczeń modelu.
@@ -158,7 +158,7 @@ Istnieje kilka podejść, które firma może zastosować, aby uzyskać oczekiwan
 
 - **Dostosowany model**. Tutaj model jest dodatkowo trenowany na własnych danych, co sprawia, że jest bardziej precyzyjny i dostosowany do Twoich potrzeb, ale może być kosztowny.
 
-![Wdrożenie LLM](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.pl.png)
+![Wdrożenie LLM](../../../translated_images/Deploy.18b2d27412ec8c02.pl.png)
 
 Źródło obrazka: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

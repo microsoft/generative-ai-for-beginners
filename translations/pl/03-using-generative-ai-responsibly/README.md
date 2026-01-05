@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Odpowiedzialne korzystanie z generatywnej AI
 
-[![Odpowiedzialne korzystanie z generatywnej AI](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.pl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Odpowiedzialne korzystanie z generatywnej AI](../../../translated_images/03-lesson-banner.1ed56067a452d977.pl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji_
 
@@ -85,7 +85,7 @@ Tego rodzaju wyniki nie tylko niszczą pozytywne doświadczenia użytkowników z
 
 Teraz, gdy zidentyfikowaliśmy znaczenie odpowiedzialnej generatywnej AI, przyjrzyjmy się 4 krokom, które możemy podjąć, aby budować nasze rozwiązania AI w sposób odpowiedzialny:
 
-![Cykl łagodzenia](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.pl.png)
+![Cykl łagodzenia](../../../translated_images/mitigate-cycle.babcd5a5658e1775.pl.png)
 
 ### Ocena potencjalnych szkód
 
@@ -97,7 +97,7 @@ Ponieważ nasz startup buduje produkt edukacyjny, warto przygotować listę zapy
 
 Teraz nadszedł czas, aby znaleźć sposoby zapobiegania lub ograniczania potencjalnych szkód spowodowanych przez model i jego odpowiedzi. Możemy to rozważyć na 4 różnych poziomach:
 
-![Warstwy ograniczania](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.pl.png)
+![Warstwy ograniczania](../../../translated_images/mitigation-layers.377215120b9a1159.pl.png)
 
 - **Model**. Wybór odpowiedniego modelu do odpowiedniego zastosowania. Większe i bardziej złożone modele, takie jak GPT-4, mogą stwarzać większe ryzyko generowania szkodliwych treści, gdy są stosowane w mniejszych i bardziej specyficznych przypadkach. Użycie danych treningowych do dostosowania modelu również zmniejsza ryzyko szkodliwych treści.
 
