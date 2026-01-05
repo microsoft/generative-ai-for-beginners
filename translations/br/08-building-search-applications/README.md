@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construindo Aplicações de Busca
 
-[![Introdução à IA Generativa e Modelos de Linguagem Grandes](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.br.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introdução à IA Generativa e Modelos de Linguagem Grandes](../../../translated_images/08-lesson-banner.8fff48c566dad08a.br.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Clique na imagem acima para assistir ao vídeo desta lição_
 
@@ -44,7 +44,7 @@ A lição inclui um Índice de Embeddings das transcrições do YouTube do canal
 
 A seguir, um exemplo de uma consulta semântica para a pergunta "é possível usar rstudio com azure ml?". Confira a URL do YouTube, você verá que ela contém um timestamp que leva ao momento exato no vídeo onde a resposta à pergunta está localizada.
 
-![Consulta semântica para a pergunta "é possível usar rstudio com Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.br.png)
+![Consulta semântica para a pergunta "é possível usar rstudio com Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.br.png)
 
 ## O que é busca semântica?
 
@@ -163,7 +163,7 @@ Abra o [notebook de solução](./python/aoai-solution.ipynb?WT.mc_id=academic-10
 
 Quando você executar o notebook, será solicitado que insira uma consulta. A caixa de entrada será assim:
 
-![Caixa de entrada para o usuário inserir uma consulta](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.br.png)
+![Caixa de entrada para o usuário inserir uma consulta](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.br.png)
 
 ## Ótimo Trabalho! Continue Aprendendo
 

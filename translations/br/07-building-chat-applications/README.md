@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construindo Aplicativos de Chat com IA Generativa
 
-[![Construindo Aplicativos de Chat com IA Generativa](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.br.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Construindo Aplicativos de Chat com IA Generativa](../../../translated_images/07-lesson-banner.a279b937f2843833.br.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
@@ -96,11 +96,11 @@ Princípios gerais de UX se aplicam a aplicativos de chat, mas aqui estão algum
 
 Um exemplo de personalização é a configuração de "Instruções Personalizadas" no ChatGPT da OpenAI. Isso permite que você forneça informações sobre si mesmo que podem ser um contexto importante para seus prompts. Aqui está um exemplo de uma instrução personalizada.
 
-![Configurações de Instruções Personalizadas no ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.br.png)
+![Configurações de Instruções Personalizadas no ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.br.png)
 
 Este "perfil" solicita ao ChatGPT que crie um plano de aula sobre listas ligadas. Observe que o ChatGPT leva em conta que o usuário pode querer um plano de aula mais detalhado com base em sua experiência.
 
-![Um prompt no ChatGPT para um plano de aula sobre listas ligadas](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.br.png)
+![Um prompt no ChatGPT para um plano de aula sobre listas ligadas](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.br.png)
 
 ### Framework de Mensagem de Sistema da Microsoft para Modelos de Linguagem Extensa
 

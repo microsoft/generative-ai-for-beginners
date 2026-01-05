@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Creare Applicazioni di Ricerca
 
-[![Introduzione all'AI Generativa e ai Modelli di Linguaggio Avanzati](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.it.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduzione all'AI Generativa e ai Modelli di Linguaggio Avanzati](../../../translated_images/08-lesson-banner.8fff48c566dad08a.it.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Clicca sull'immagine sopra per vedere il video di questa lezione_
 
@@ -44,7 +44,7 @@ La lezione include un Indice di Embeddings dei trascritti di YouTube del canale 
 
 Di seguito è riportato un esempio di una query semantica per la domanda 'puoi usare rstudio con azure ml?'. Dai un'occhiata all'URL di YouTube, vedrai che l'URL contiene un timestamp che ti porta al punto del video in cui si trova la risposta alla domanda.
 
-![Query semantica per la domanda "puoi usare rstudio con Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.it.png)
+![Query semantica per la domanda "puoi usare rstudio con Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.it.png)
 
 ## Cos'è la ricerca semantica?
 
@@ -163,7 +163,7 @@ Apri il [notebook della soluzione](./python/aoai-solution.ipynb?WT.mc_id=academi
 
 Quando esegui il notebook, ti verrà chiesto di inserire una query. La casella di input apparirà così:
 
-![Casella di input per l'utente per inserire una query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.it.png)
+![Casella di input per l'utente per inserire una query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.it.png)
 
 ## Ottimo lavoro! Continua a imparare
 

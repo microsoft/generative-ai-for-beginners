@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Esplorare e confrontare diversi LLM
 
-[![Esplorare e confrontare diversi LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.it.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Esplorare e confrontare diversi LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60.it.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Clicca sull'immagine sopra per vedere il video di questa lezione_
 
@@ -59,14 +59,14 @@ Il termine Modello di Base è stato [coniato dai ricercatori di Stanford](https:
 - **Sono modelli molto grandi**, basati su reti neurali molto profonde addestrate su miliardi di parametri.
 - **Sono normalmente destinati a servire come 'fondamento' per altri modelli**, il che significa che possono essere utilizzati come punto di partenza per costruire altri modelli, cosa che può essere fatta attraverso il fine-tuning.
 
-![Modelli di base versus LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.it.png)
+![Modelli di base versus LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.it.png)
 
 Fonte immagine: [Essential Guide to Foundation Models and Large Language Models | di Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Per chiarire ulteriormente questa distinzione, prendiamo ChatGPT come esempio. Per costruire la prima versione di ChatGPT, un modello chiamato GPT-3.5 ha servito come modello di base. Ciò significa che OpenAI ha utilizzato alcuni dati specifici per creare una versione ottimizzata di GPT-3.5 specializzata nel funzionare bene in scenari conversazionali, come i chatbot.
 
-![Modello di base](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.it.png)
+![Modello di base](../../../translated_images/Multimodal.2c389c6439e0fc51.it.png)
 
 Fonte immagine: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ Gli LLM possono anche essere categorizzati in base al tipo di output che generan
 
 Gli embeddings sono un insieme di modelli che possono convertire il testo in una forma numerica, chiamata embedding, che è una rappresentazione numerica del testo di input. Gli embeddings facilitano la comprensione da parte delle macchine delle relazioni tra parole o frasi e possono essere utilizzati come input da altri modelli, come modelli di classificazione o modelli di clustering che hanno prestazioni migliori sui dati numerici. I modelli di embedding sono spesso utilizzati per il transfer learning, dove un modello viene costruito per un compito surrogato per il quale c'è abbondanza di dati, e poi i pesi del modello (embeddings) vengono riutilizzati per altri compiti a valle. Un esempio di questa categoria è [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.it.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.it.png)
 
 I modelli di generazione di immagini sono modelli che generano immagini. Questi modelli sono spesso utilizzati per l'editing di immagini, la sintesi di immagini e la traduzione di immagini. I modelli di generazione di immagini sono spesso addestrati su grandi dataset di immagini, come [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), e possono essere utilizzati per generare nuove immagini o per modificare immagini esistenti con tecniche di inpainting, super-risoluzione e colorazione. Esempi includono [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) e [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generazione di immagini](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.it.png)
+![Generazione di immagini](../../../translated_images/Image.349c080266a763fd.it.png)
 
 I modelli di generazione di testo e codice sono modelli che generano testo o codice. Questi modelli sono spesso utilizzati per la sintesi di testo, la traduzione e la risposta a domande. I modelli di generazione di testo sono spesso addestrati su grandi dataset di testo, come [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), e possono essere utilizzati per generare nuovo testo o per rispondere a domande. I modelli di generazione di codice, come [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), sono spesso addestrati su grandi dataset di codice, come GitHub, e possono essere utilizzati per generare nuovo codice o per correggere bug nel codice esistente.
 
-![Generazione di testo e codice](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.it.png)
+![Generazione di testo e codice](../../../translated_images/Text.a8c0cf139e5cc2a0.it.png)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -123,23 +123,23 @@ La maggior parte dei modelli che abbiamo menzionato nei paragrafi precedenti (mo
 
 - Trovare il modello di base di interesse nel catalogo - sia proprietario che open source, filtrando per attività, licenza o nome. Per migliorare la ricerca, i modelli sono organizzati in collezioni, come la collezione Azure OpenAI, la collezione Hugging Face e altre.
 
-![Catalogo modelli](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.it.png)
+![Catalogo modelli](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.it.png)
 
 - Esaminare la scheda del modello, che include una descrizione dettagliata dell'uso previsto e dei dati di addestramento, esempi di codice e risultati di valutazione nella libreria interna di valutazioni.
 
-![Scheda del modello](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.it.png)
+![Scheda del modello](../../../translated_images/ModelCard.598051692c6e400d.it.png)
 
 - Confrontare i benchmark tra modelli e dataset disponibili nel settore per valutare quale soddisfa meglio lo scenario aziendale, attraverso il pannello [Benchmark dei Modelli](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmark dei modelli](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.it.png)
+![Benchmark dei modelli](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.it.png)
 
 - Ottimizzare il modello su dati di addestramento personalizzati per migliorare le prestazioni del modello in un carico di lavoro specifico, sfruttando le capacità di sperimentazione e tracciamento di Azure AI Studio.
 
-![Ottimizzazione del modello](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.it.png)
+![Ottimizzazione del modello](../../../translated_images/FineTuning.aac48f07142e36fd.it.png)
 
 - Distribuire il modello pre-addestrato originale o la versione ottimizzata per un'inferenza in tempo reale remota - calcolo gestito - o endpoint API serverless - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - per consentire alle applicazioni di utilizzarlo.
 
-![Distribuzione del modello](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.it.png)
+![Distribuzione del modello](../../../translated_images/ModelDeploy.890da48cbd0bccdb.it.png)
 
 > [!NOTE]
 > Non tutti i modelli nel catalogo sono attualmente disponibili per l'ottimizzazione e/o la distribuzione pay-as-you-go. Controlla la scheda del modello per i dettagli sulle capacità e limitazioni del modello.
@@ -158,7 +158,7 @@ Ci sono diversi approcci che un'azienda può utilizzare per ottenere i risultati
 
 - **Modello ottimizzato**. In questo caso, il modello viene ulteriormente addestrato sui propri dati, rendendolo più preciso e reattivo alle esigenze, ma potrebbe essere costoso.
 
-![Distribuzione degli LLM](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.it.png)
+![Distribuzione degli LLM](../../../translated_images/Deploy.18b2d27412ec8c02.it.png)
 
 Fonte immagine: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

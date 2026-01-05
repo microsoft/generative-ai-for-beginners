@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Protegendo Suas Aplicações de IA Generativa
 
-[![Protegendo Suas Aplicações de IA Generativa](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.br.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Protegendo Suas Aplicações de IA Generativa](../../../translated_images/13-lesson-banner.14103e36b4bbf173.br.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introdução
 
@@ -131,7 +131,7 @@ Emular ameaças do mundo real agora é considerado uma prática padrão na const
 
 > A prática de red teaming em IA evoluiu para assumir um significado mais amplo: ela não apenas cobre a busca por vulnerabilidades de segurança, mas também inclui a investigação de outras falhas do sistema, como a geração de conteúdo potencialmente prejudicial. Os sistemas de IA trazem novos riscos, e o red teaming é essencial para entender esses riscos inéditos, como injeção de prompts e produção de conteúdo sem fundamento. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Orientações e recursos para red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.br.png)]()
+[![Orientações e recursos para red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.br.png)]()
 
 Abaixo estão os principais insights que moldaram o programa de Red Team de IA da Microsoft.
 
