@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-[![نماذج مفتوحة المصدر](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ar.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![نماذج مفتوحة المصدر](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ar.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## المقدمة
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 تسمح وكلاء الذكاء الاصطناعي لنماذج اللغة الكبيرة (LLMs) بأداء المهام من خلال منحها الوصول إلى **الحالة** و**الأدوات**.
 
-![نموذج الوكيل](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ar.png)
+![نموذج الوكيل](../../../translated_images/what-agent.21f2893bdfd01e6a.ar.png)
 
 دعونا نعرف هذه المصطلحات:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يقوم `AgentExecutor` أيضًا بتخزين سجل المحادثات لتوفير سياق المحادثة.
 
-![وكلاء LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ar.png)
+![وكلاء LangChain](../../../translated_images/langchain-agents.edcc55b5d5c43716.ar.png)
 
 يوفر LangChain [كتالوجًا للأدوات](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) يمكن استيراده إلى تطبيقك حيث يمكن لنموذج اللغة الكبير الوصول إليه. تم إنشاء هذه الأدوات بواسطة المجتمع وفريق LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 إليك مثال على العملية:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ar.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ar.png)
 
 #### نموذج لغة كبير معرف برسالة نظام
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 لإكمال المهام، يتم عرض الـ `Planner` على مجموعة من الأدوات تسمى `Plugins`. يمكن أن تكون هذه الأدوات فصول Python أو مفسر كود عام. يتم تخزين هذه الإضافات كـ embeddings بحيث يمكن لنموذج اللغة الكبير البحث بشكل أفضل عن الإضافة الصحيحة.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ar.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ar.png)
 
 إليك مثال على إضافة للتعامل مع اكتشاف الشذوذ:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 الإطار الأخير للوكيل الذي سنستكشفه هو [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). ما يجعل JARVIS فريدًا هو أنه يستخدم نموذج لغة كبير لإدارة `الحالة` للمحادثة و`الأدوات` هي نماذج ذكاء اصطناعي أخرى. كل نموذج من نماذج الذكاء الاصطناعي هو نموذج متخصص يؤدي مهام معينة مثل اكتشاف الكائنات، النسخ أو وصف الصور.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ar.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ar.png)
 
 نموذج اللغة الكبير، كونه نموذجًا عامًا، يتلقى الطلب من المستخدم ويحدد المهمة المحددة وأي حجج/بيانات مطلوبة لإكمال المهمة.
 

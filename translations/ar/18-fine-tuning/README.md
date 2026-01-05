@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-[![نماذج مفتوحة المصدر](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.ar.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![نماذج مفتوحة المصدر](../../../translated_images/18-lesson-banner.f30176815b1a5074.ar.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # تحسين النموذج اللغوي الكبير الخاص بك
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هل تريد الحصول على صورة شاملة لما سنغطيه قبل أن نتعمق؟ تحقق من هذا الدليل المصور الذي يصف رحلة التعلم لهذا الدرس - من تعلم المفاهيم الأساسية والدافع لتحسين النموذج، إلى فهم العملية وأفضل الممارسات لتنفيذ مهمة تحسين النموذج. هذا موضوع مثير للاستكشاف، لذا لا تنسَ الاطلاع على صفحة [الموارد](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) للحصول على روابط إضافية لدعم رحلة التعلم الذاتية الخاصة بك!
 
-![دليل مصور لتحسين النماذج اللغوية](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.ar.png)
+![دليل مصور لتحسين النماذج اللغوية](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.ar.png)
 
 ## ما هو تحسين النموذج للنماذج اللغوية؟
 

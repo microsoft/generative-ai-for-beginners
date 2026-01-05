@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Grundlagen des Prompt Engineering
 
-[![Grundlagen des Prompt Engineering](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.de.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Grundlagen des Prompt Engineering](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.de.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Einführung
 Dieses Modul behandelt grundlegende Konzepte und Techniken zur Erstellung effektiver Prompts für generative KI-Modelle. Die Art und Weise, wie Sie Ihren Prompt an ein LLM schreiben, ist entscheidend. Ein sorgfältig gestalteter Prompt kann die Qualität der Antwort erheblich verbessern. Aber was genau bedeuten Begriffe wie _Prompt_ und _Prompt Engineering_? Und wie kann ich den _Input_ des Prompts, den ich an das LLM sende, verbessern? Diese Fragen werden wir in diesem Kapitel und im nächsten zu beantworten versuchen.
@@ -53,7 +53,7 @@ Das Notebook enthält _Einstiegsübungen_ – Sie werden jedoch ermutigt, eigene
 
 Möchten Sie sich einen Überblick über die Hauptthemen dieser Lektion verschaffen, bevor Sie tiefer eintauchen? Sehen Sie sich diese illustrierte Anleitung an, die Ihnen die wichtigsten Themen und Erkenntnisse vermittelt, über die Sie in jedem Abschnitt nachdenken sollten. Der Lehrplan führt Sie von der Einführung in die grundlegenden Konzepte und Herausforderungen bis hin zu deren Lösung mit relevanten Techniken und bewährten Praktiken des Prompt Engineering. Beachten Sie, dass der Abschnitt "Fortgeschrittene Techniken" in dieser Anleitung auf Inhalte verweist, die im _nächsten_ Kapitel dieses Lehrplans behandelt werden.
 
-![Illustrierte Anleitung zum Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.de.png)
+![Illustrierte Anleitung zum Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.de.png)
 
 ## Unser Startup
 
@@ -94,7 +94,7 @@ Ein LLM sieht Prompts als eine _Sequenz von Tokens_, wobei verschiedene Modelle 
 
 Um ein Gespür dafür zu bekommen, wie Tokenisierung funktioniert, probieren Sie Tools wie den [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) aus, der unten gezeigt wird. Kopieren Sie Ihren Prompt hinein – und sehen Sie, wie dieser in Tokens umgewandelt wird, wobei Sie darauf achten, wie Leerzeichen und Satzzeichen behandelt werden. Beachten Sie, dass dieses Beispiel ein älteres LLM (GPT-3) zeigt – das Ausprobieren mit einem neueren Modell könnte ein anderes Ergebnis liefern.
 
-![Tokenisierung](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.de.png)
+![Tokenisierung](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.de.png)
 
 ### Konzept: Grundmodelle
 
@@ -104,7 +104,7 @@ Möchten Sie sehen, wie Prompt-basierte Completions funktionieren? Geben Sie den
 
 Aber was, wenn der Benutzer etwas Spezifisches sehen möchte, das bestimmte Kriterien oder ein Aufgabenobjektiv erfüllt? Hier kommen _Instruction-Tuned_ LLMs ins Spiel.
 
-![Basis-LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.de.png)
+![Basis-LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.de.png)
 
 ### Konzept: Instruction-Tuned LLMs
 
@@ -118,7 +118,7 @@ Probieren wir es aus – gehen Sie zurück zum obigen Prompt, ändern Sie jedoch
 
 Sehen Sie, wie das Ergebnis jetzt auf das gewünschte Ziel und Format abgestimmt ist? Ein Lehrer kann diese Antwort nun direkt in seinen Folien für den Unterricht verwenden.
 
-![Instruction-Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.de.png)
+![Instruction-Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.de.png)
 
 ## Warum brauchen wir Prompt Engineering?
 
@@ -148,15 +148,15 @@ Was passiert also, wenn wir diese Eingabeaufforderung mit verschiedenen LLM-Anbi
 
 > **Antwort 1**: OpenAI Playground (GPT-35)
 
-![Antwort 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.de.png)
+![Antwort 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.de.png)
 
 > **Antwort 2**: Azure OpenAI Playground (GPT-35)
 
-![Antwort 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.de.png)
+![Antwort 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.de.png)
 
 > **Antwort 3**: Hugging Face Chat Playground (LLama-2)
 
-![Antwort 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.de.png)
+![Antwort 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.de.png)
 
 Wie erwartet, erzeugt jedes Modell (oder jede Modellversion) leicht unterschiedliche Antworten, was auf stochastisches Verhalten und Unterschiede in den Modellfähigkeiten zurückzuführen ist. Beispielsweise richtet sich ein Modell an ein Publikum der 8. Klasse, während ein anderes von Schülern der Oberstufe ausgeht. Aber alle drei Modelle haben Antworten generiert, die einen uninformierten Benutzer davon überzeugen könnten, dass das Ereignis real ist.
 

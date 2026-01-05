@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # استكشاف ومقارنة نماذج اللغة الكبيرة (LLMs)
 
-[![استكشاف ومقارنة نماذج اللغة الكبيرة](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.ar.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![استكشاف ومقارنة نماذج اللغة الكبيرة](../../../translated_images/02-lesson-banner.ef94c84979f97f60.ar.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _اضغط على الصورة أعلاه لمشاهدة فيديو الدرس_
 
@@ -59,14 +59,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **نماذج كبيرة جدًا**، تعتمد على شبكات عصبية عميقة جدًا مدربة على مليارات المعلمات.
 - **عادةً ما تكون مخصصة لتكون "أساسًا" لنماذج أخرى**، مما يعني أنه يمكن استخدامها كنقطة انطلاق لبناء نماذج أخرى عليها، وهو ما يمكن القيام به من خلال التخصيص.
 
-![النماذج الأساسية مقابل نماذج اللغة الكبيرة](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.ar.png)
+![النماذج الأساسية مقابل نماذج اللغة الكبيرة](../../../translated_images/FoundationModel.e4859dbb7a825c94.ar.png)
 
 مصدر الصورة: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 لتوضيح هذا التمييز بشكل أكبر، دعونا نأخذ ChatGPT كمثال. لبناء النسخة الأولى من ChatGPT، تم استخدام نموذج يسمى GPT-3.5 كنموذج أساسي. هذا يعني أن OpenAI استخدمت بعض البيانات الخاصة بالدردشة لإنشاء نسخة مخصصة من GPT-3.5 متخصصة في الأداء الجيد في سيناريوهات المحادثة، مثل روبوتات الدردشة.
 
-![النموذج الأساسي](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.ar.png)
+![النموذج الأساسي](../../../translated_images/Multimodal.2c389c6439e0fc51.ar.png)
 
 مصدر الصورة: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 التضمينات هي مجموعة من النماذج التي يمكنها تحويل النص إلى شكل رقمي، يسمى التضمين، وهو تمثيل رقمي للنص المدخل. التضمينات تجعل من السهل على الآلات فهم العلاقات بين الكلمات أو الجمل ويمكن استهلاكها كمدخلات بواسطة نماذج أخرى، مثل نماذج التصنيف، أو نماذج التجميع التي تتمتع بأداء أفضل على البيانات الرقمية. غالبًا ما تُستخدم نماذج التضمين في التعلم الانتقالي، حيث يتم بناء نموذج لمهمة بديلة تتوفر لها وفرة من البيانات، ثم يتم إعادة استخدام أوزان النموذج (التضمينات) لمهام أخرى. مثال على هذه الفئة هو [تضمينات OpenAI](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![التضمين](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.ar.png)
+![التضمين](../../../translated_images/Embedding.c3708fe988ccf760.ar.png)
 
 نماذج توليد الصور هي نماذج تولد صورًا. غالبًا ما تُستخدم هذه النماذج لتحرير الصور، تركيب الصور، وترجمة الصور. غالبًا ما يتم تدريب نماذج توليد الصور على مجموعات بيانات كبيرة من الصور، مثل [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)، ويمكن استخدامها لتوليد صور جديدة أو لتحرير الصور الموجودة باستخدام تقنيات مثل التلوين، تحسين الدقة، وتقنيات التلوين. أمثلة تشمل [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) و [نماذج Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![توليد الصور](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.ar.png)
+![توليد الصور](../../../translated_images/Image.349c080266a763fd.ar.png)
 
 نماذج توليد النصوص والرموز هي نماذج تولد نصوصًا أو رموزًا. غالبًا ما تُستخدم هذه النماذج لتلخيص النصوص، الترجمة، والإجابة على الأسئلة. غالبًا ما يتم تدريب نماذج توليد النصوص على مجموعات بيانات كبيرة من النصوص، مثل [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)، ويمكن استخدامها لتوليد نصوص جديدة، أو للإجابة على الأسئلة. نماذج توليد الرموز، مثل [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)، غالبًا ما يتم تدريبها على مجموعات بيانات كبيرة من الرموز، مثل GitHub، ويمكن استخدامها لتوليد رموز جديدة، أو لإصلاح الأخطاء في الرموز الموجودة.
 
-![توليد النصوص والرموز](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.ar.png)
+![توليد النصوص والرموز](../../../translated_images/Text.a8c0cf139e5cc2a0.ar.png)
 
 ### التشفير-الفك مقابل الفك فقط
 
@@ -123,23 +123,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 - العثور على نموذج الأساس المطلوب في الكتالوج - سواء كان مملوكًا أو مفتوح المصدر، مع إمكانية التصفية حسب المهمة أو الترخيص أو الاسم. لتحسين إمكانية البحث، يتم تنظيم النماذج في مجموعات، مثل مجموعة Azure OpenAI، مجموعة Hugging Face، والمزيد.
 
-![كتالوج النماذج](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.ar.png)
+![كتالوج النماذج](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.ar.png)
 
 - مراجعة بطاقة النموذج، بما في ذلك وصف مفصل للاستخدام المقصود وبيانات التدريب، أمثلة على التعليمات البرمجية ونتائج التقييم في مكتبة التقييمات الداخلية.
 
-![بطاقة النموذج](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.ar.png)
+![بطاقة النموذج](../../../translated_images/ModelCard.598051692c6e400d.ar.png)
 
 - مقارنة الأداء بين النماذج ومجموعات البيانات المتاحة في الصناعة لتقييم أي منها يناسب سيناريو العمل، من خلال لوحة [معايير النماذج](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![معايير النماذج](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.ar.png)
+![معايير النماذج](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.ar.png)
 
 - تحسين النموذج باستخدام بيانات تدريب مخصصة لتحسين أداء النموذج في عبء عمل معين، بالاستفادة من قدرات التجربة والتتبع في Azure AI Studio.
 
-![تحسين النموذج](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.ar.png)
+![تحسين النموذج](../../../translated_images/FineTuning.aac48f07142e36fd.ar.png)
 
 - نشر النموذج المدرب مسبقًا أو النسخة المحسنة منه للاستدلال في الوقت الحقيقي - الحوسبة المدارة - أو نقطة نهاية API بدون خادم - [الدفع حسب الاستخدام](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - لتمكين التطبيقات من استخدامه.
 
-![نشر النموذج](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.ar.png)
+![نشر النموذج](../../../translated_images/ModelDeploy.890da48cbd0bccdb.ar.png)
 
 > [!NOTE]
 > ليست كل النماذج في الكتالوج متاحة حاليًا للتحسين و/أو النشر بالدفع حسب الاستخدام. تحقق من بطاقة النموذج للحصول على تفاصيل حول قدرات النموذج وقيوده.
@@ -158,7 +158,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **نموذج محسّن**. هنا، يتم تدريب النموذج بشكل إضافي على بياناتك الخاصة مما يؤدي إلى أن يصبح النموذج أكثر دقة واستجابة لاحتياجاتك ولكنه قد يكون مكلفًا.
 
-![نشر LLMs](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.ar.png)
+![نشر LLMs](../../../translated_images/Deploy.18b2d27412ec8c02.ar.png)
 
 مصدر الصورة: [أربع طرق لنشر LLMs في المؤسسات | مدونة Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
