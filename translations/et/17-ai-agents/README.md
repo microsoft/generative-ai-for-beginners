@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "et"
 }
 -->
-[![Avatud lähtekoodiga mudelid](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.et.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Avatud lähtekoodiga mudelid](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.et.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Sissejuhatus
 
@@ -33,7 +33,7 @@ Tehisintellekti agendid on generatiivse tehisintellekti maailmas väga põnev va
 
 Tehisintellekti agendid võimaldavad suurte keelemudelite (LLM) täita ülesandeid, andes neile juurdepääsu **olekule** ja **tööriistadele**.
 
-![Agentide mudel](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.et.png)
+![Agentide mudel](../../../translated_images/what-agent.21f2893bdfd01e6a.et.png)
 
 Määratleme need terminid:
 
@@ -53,7 +53,7 @@ Need definitsioonid peaksid andma hea aluse edasiseks uurimiseks, kuidas neid ra
 
 `AgentExecutor` salvestab ka vestluste ajaloo, et pakkuda vestluse konteksti.
 
-![LangChain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.et.png)
+![LangChain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.et.png)
 
 LangChain pakub [tööriistade kataloogi](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), mida saab importida teie rakendusse, et LLM saaks neile juurde pääseda. Need on loodud kogukonna ja LangChaini meeskonna poolt.
 
@@ -85,7 +85,7 @@ Oleku muutmiseks ja haldamiseks genereerib assistendi agent Python-koodi, et ül
 
 Siin on protsessi näide:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.et.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.et.png)
 
 #### LLM määratletud süsteemisõnumiga
 
@@ -129,7 +129,7 @@ Vestluse oleku haldamiseks kasutab Taskweaver `Planner`i kontseptsiooni. `Planne
 
 Ülesannete täitmiseks on `Planner`il juurdepääs tööriistade kogumile, mida nimetatakse `Plugins`. Need võivad olla Python klassid või üldine kooditõlgendaja. Need pluginad salvestatakse embeddingutena, et LLM saaks paremini otsida õiget pluginit.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.et.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.et.png)
 
 Siin on näide pluginast, mis tegeleb anomaaliate tuvastamisega:
 
@@ -143,7 +143,7 @@ Kood kontrollitakse enne täitmist. Teine funktsioon konteksti haldamiseks Taskw
 
 Viimane agentide raamistik, mida uurime, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Mis teeb JARVIS-e ainulaadseks, on see, et ta kasutab LLM-i vestluse oleku haldamiseks ja `tööriistad` on teised AI mudelid. Iga AI mudel on spetsialiseerunud teatud ülesannetele, nagu objektide tuvastamine, transkriptsioon või pildiallkirjade loomine.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.et.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.et.png)
 
 LLM, olles üldotstarbeline mudel, võtab kasutajalt taotluse ja tuvastab konkreetse ülesande ning kõik argumendid/andmed, mis on vajalikud ülesande täitmiseks.
 

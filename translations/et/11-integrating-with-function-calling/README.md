@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Funktsioonikutsumise integreerimine
 
-[![Funktsioonikutsumise integreerimine](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.et.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Funktsioonikutsumise integreerimine](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.et.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Eelnevates tundides oled juba päris palju õppinud. Siiski on veel ruumi edasiminekuks. Mõned asjad, mida saame parandada, on vastuste formaadi järjepidevuse suurendamine, et lihtsustada nende kasutamist edasises töövoos. Samuti võiksime lisada andmeid teistest allikatest, et oma rakendust veelgi rikastada.
 
@@ -179,7 +179,7 @@ Nüüd saame saata mõlemad päringud LLM-ile ja uurida vastust, mille saame, le
 
 Kuidas siis lahendada vormindamise probleemi? Kasutades funktsioonikutsumist, saame tagada, et saame tagasi struktureeritud andmeid. Funktsioonikutsumist kasutades LLM tegelikult ei kutsu ega käivita ühtegi funktsiooni. Selle asemel loome LLM-ile struktuuri, mida ta oma vastustes järgib. Seejärel kasutame neid struktureeritud vastuseid, et teada saada, millist funktsiooni meie rakendustes käivitada.
 
-![funktsiooni voog](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.et.png)
+![funktsiooni voog](../../../translated_images/Function-Flow.083875364af4f4bb.et.png)
 
 Seejärel saame funktsioonist tagastatud andmed saata tagasi LLM-ile. LLM vastab seejärel loomulikus keeles, et vastata kasutaja päringule.
 
@@ -201,7 +201,7 @@ Funktsioonikutsumise loomise protsess hõlmab kolme peamist sammu:
 2. **Lugemine**: Mudeli vastuse lugemine, et teostada tegevus, näiteks funktsiooni või API päringu käivitamine.
 3. **Teostamine**: Teine Chat Completions API kutsumine funktsiooni vastusega, et kasutada seda teavet kasutajale vastuse loomiseks.
 
-![LLM voog](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.et.png)
+![LLM voog](../../../translated_images/LLM-Flow.3285ed8caf4796d7.et.png)
 
 ### 1. samm - sõnumite loomine
 

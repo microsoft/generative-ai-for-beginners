@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # UX-i kujundamine tehisintellekti rakenduste jaoks
 
-[![UX-i kujundamine tehisintellekti rakenduste jaoks](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.et.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![UX-i kujundamine tehisintellekti rakenduste jaoks](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.et.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klõpsake ülaloleval pildil, et vaadata selle õppetunni videot)_
 
@@ -58,7 +58,7 @@ Kättesaadav olemine tähendab kasutajakogemuse laiendamist erinevate võimetega
 
 Meeldiv olemine tähendab, et rakendust on nauditav kasutada. Atraktiivne kasutajakogemus võib avaldada positiivset mõju kasutajale, julgustades teda rakendust uuesti kasutama ja suurendades ettevõtte tulusid.
 
-![pilt, mis illustreerib UX-i kaalutlusi tehisintellektis](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.et.png)
+![pilt, mis illustreerib UX-i kaalutlusi tehisintellektis](../../../translated_images/uxinai.d5b4ed690f5cefff.et.png)
 
 Mitte iga väljakutset ei saa lahendada tehisintellektiga. Tehisintellekt täiendab teie kasutajakogemust, olgu selleks siis käsitsi tehtavate ülesannete automatiseerimine või kasutajakogemuste isikupärastamine.
 
@@ -72,25 +72,25 @@ Kaks viisi, kuidas tagada usalduse keskne roll disainis, on selgitatavus ja kont
 
 Kui tehisintellekt aitab otsuseid teha, näiteks tulevastele põlvkondadele teadmisi edasi anda, on õpetajatele ja vanematele oluline mõista, kuidas tehisintellekti otsused tehakse. See on selgitatavus - arusaamine, kuidas tehisintellekti rakendused otsuseid teevad. Selgitatavuse kujundamine hõlmab üksikasjade lisamist, mis toovad esile, kuidas tehisintellekt jõudis tulemuseni. Publik peab olema teadlik, et tulemus on genereeritud tehisintellekti, mitte inimese poolt. Näiteks selle asemel, et öelda "Alusta vestlust oma juhendajaga kohe", ütle "Kasuta tehisintellekti juhendajat, kes kohandub sinu vajadustega ja aitab sul õppida omas tempos."
 
-![rakenduse avaleht, kus on selgelt illustreeritud selgitatavus tehisintellekti rakendustes](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.et.png)
+![rakenduse avaleht, kus on selgelt illustreeritud selgitatavus tehisintellekti rakendustes](../../../translated_images/explanability-in-ai.134426a96b498fbf.et.png)
 
 Teine näide on see, kuidas tehisintellekt kasutab kasutaja ja isiklikke andmeid. Näiteks võib õpilase persona piirata teatud funktsioone. Tehisintellekt ei pruugi olla võimeline vastuseid küsimustele avaldama, kuid võib aidata kasutajal mõelda, kuidas probleemi lahendada.
 
-![Tehisintellekt vastab küsimustele persona põhjal](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.et.png)
+![Tehisintellekt vastab küsimustele persona põhjal](../../../translated_images/solving-questions.b7dea1604de0cbd2.et.png)
 
 Viimane oluline osa selgitatavusest on selgituste lihtsustamine. Õpilased ja õpetajad ei pruugi olla tehisintellekti eksperdid, seetõttu peaksid selgitused rakenduse võimekuse ja piirangute kohta olema lihtsad ja kergesti arusaadavad.
 
-![lihtsustatud selgitused tehisintellekti võimekuse kohta](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.et.png)
+![lihtsustatud selgitused tehisintellekti võimekuse kohta](../../../translated_images/simplified-explanations.4679508a406c3621.et.png)
 
 ### Kontroll
 
 Generatiivne tehisintellekt loob koostöö tehisintellekti ja kasutaja vahel, kus näiteks kasutaja saab muuta päringuid erinevate tulemuste saamiseks. Lisaks peaksid kasutajad saama pärast tulemuse genereerimist seda muuta, andes neile kontrolli tunde. Näiteks Bingis otsingut tehes saab kasutaja kohandada oma päringut formaadi, tooni ja pikkuse alusel. Lisaks saab ta muuta tulemust ja kohandada seda vastavalt oma vajadustele, nagu allpool näidatud:
 
-![Bingi otsingutulemused koos võimalustega päringut ja tulemust muuta](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.et.png)
+![Bingi otsingutulemused koos võimalustega päringut ja tulemust muuta](../../../translated_images/bing1.293ae8527dbe2789.et.png)
 
 Teine Bingi funktsioon, mis võimaldab kasutajal rakenduse üle kontrolli omada, on võimalus valida, kas lubada või keelata andmete kasutamine tehisintellekti poolt. Näiteks koolirakenduse puhul võib õpilane soovida kasutada oma märkmeid ja õpetaja ressursse kordamismaterjalina.
 
-![Bingi otsingutulemused koos võimalustega päringut ja tulemust muuta](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.et.png)
+![Bingi otsingutulemused koos võimalustega päringut ja tulemust muuta](../../../translated_images/bing2.309f4845528a88c2.et.png)
 
 > Tehisintellekti rakenduste kujundamisel on oluline tagada, et kasutajad ei usaldaks süsteemi liigselt ega seaks selle võimekusele ebarealistlikke ootusi. Üks viis selle saavutamiseks on luua päringute ja tulemuste vahel teatud takistus, mis tuletab kasutajale meelde, et tegemist on tehisintellektiga, mitte teise inimesega.
 
@@ -102,7 +102,7 @@ Tehisintellekti rakendused peaksid olema loodud nii, et nad suudaksid tagasiside
 
 Teine viis sellega tegelemiseks on süsteemi võimekuse ja piirangute selge kommunikeerimine. Kui kasutaja teeb vea, küsides midagi, mis ületab tehisintellekti võimekust, peaks olema viis, kuidas sellega toime tulla, nagu allpool näidatud.
 
-![Tagasiside andmine ja vigade käsitlemine](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.et.png)
+![Tagasiside andmine ja vigade käsitlemine](../../../translated_images/feedback-loops.7955c134429a9466.et.png)
 
 Süsteemivead on rakendustes tavalised, kus kasutaja võib vajada abi teabega, mis jääb tehisintellekti ulatusest välja, või rakendusel võib olla piirang, kui palju küsimusi/teemasid saab kasutaja kokkuvõtteid genereerida. Näiteks tehisintellekti rakendus, mis on treenitud piiratud teemade andmetega, näiteks ajalugu ja matemaatika, ei pruugi olla võimeline vastama geograafia küsimustele. Selle leevendamiseks võib tehisintellekti süsteem anda vastuse nagu: "Vabandust, meie toode on treenitud järgmiste teemade andmetega....., ma ei saa vastata teie esitatud küsimusele."
 

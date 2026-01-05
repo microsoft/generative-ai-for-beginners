@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Erinevate suurte keelemudelite (LLM) uurimine ja võrdlemine
 
-[![Erinevate suurte keelemudelite uurimine ja võrdlemine](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.et.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Erinevate suurte keelemudelite uurimine ja võrdlemine](../../../translated_images/02-lesson-banner.ef94c84979f97f60.et.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klõpsake ülaloleval pildil, et vaadata selle õppetunni videot_
 
@@ -59,14 +59,14 @@ Mõiste "alusmudel" [võeti kasutusele Stanfordi teadlaste poolt](https://arxiv.
 - **Need on väga suured mudelid**, mis põhinevad väga sügavatel närvivõrkudel, mis on treenitud miljardite parameetritega.
 - **Need on tavaliselt mõeldud teiste mudelite "aluseks"**, mis tähendab, et neid saab kasutada lähtepunktina teiste mudelite loomiseks, mida saab teha peenhäälestamise teel.
 
-![Alusmudelid versus LLM-id](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.et.png)
+![Alusmudelid versus LLM-id](../../../translated_images/FoundationModel.e4859dbb7a825c94.et.png)
 
 Pildi allikas: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Selle eristuse selgitamiseks võtame näiteks ChatGPT. Esimese ChatGPT versiooni loomiseks kasutati alusmudelina GPT-3.5 mudelit. See tähendab, et OpenAI kasutas mõningaid vestlusteemalisi andmeid, et luua GPT-3.5 peenhäälestatud versioon, mis oli spetsialiseerunud vestlusstsenaariumides, näiteks vestlusrobotites, hästi toimima.
 
-![Alusmudel](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.et.png)
+![Alusmudel](../../../translated_images/Multimodal.2c389c6439e0fc51.et.png)
 
 Pildi allikas: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-e saab kategoriseerida ka nende genereeritava väljundi järgi.
 
 Embeddings on mudelite komplekt, mis suudab teisendada teksti numbriliseks vormiks, mida nimetatakse embeddinguks, mis on sisendteksti numbriline esitus. Embeddingud muudavad masinate jaoks lihtsamaks sõnade või lausete vaheliste seoste mõistmise ja neid saab kasutada sisenditena teiste mudelite poolt, nagu klassifitseerimismudelid või klasterdamismudelid, millel on parem jõudlus numbriliste andmete puhul. Embedding-mudeleid kasutatakse sageli ülekandeõppes, kus mudel ehitatakse asendusülesande jaoks, mille jaoks on palju andmeid, ja seejärel kasutatakse mudeli kaalusid (embeddinguid) teiste alluvate ülesannete jaoks. Selle kategooria näide on [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.et.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.et.png)
 
 Pildigeneratsiooni mudelid on mudelid, mis genereerivad pilte. Neid mudeleid kasutatakse sageli pilditöötluseks, pildisünteesiks ja pilditõlgeteks. Pildigeneratsiooni mudelid on sageli treenitud suurte pildikogumite põhjal, nagu [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ja neid saab kasutada uute piltide genereerimiseks või olemasolevate piltide redigeerimiseks, kasutades tehnikaid nagu inpainting, super-resolutsioon ja värvimine. Näited hõlmavad [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ja [Stable Diffusion mudelid](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Pildigeneratsioon](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.et.png)
+![Pildigeneratsioon](../../../translated_images/Image.349c080266a763fd.et.png)
 
 Teksti ja koodi genereerimise mudelid on mudelid, mis genereerivad teksti või koodi. Neid mudeleid kasutatakse sageli teksti kokkuvõtete tegemiseks, tõlkimiseks ja küsimustele vastamiseks. Teksti genereerimise mudelid on sageli treenitud suurte tekstikogumite põhjal, nagu [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ja neid saab kasutada uue teksti genereerimiseks või küsimustele vastamiseks. Koodi genereerimise mudelid, nagu [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), on sageli treenitud suurte koodikogumite põhjal, nagu GitHub, ja neid saab kasutada uue koodi genereerimiseks või olemasoleva koodi vigade parandamiseks.
 
-![Teksti ja koodi genereerimine](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.et.png)
+![Teksti ja koodi genereerimine](../../../translated_images/Text.a8c0cf139e5cc2a0.et.png)
 
 ### Kodeerija-dekodeerija versus ainult dekodeerija
 
@@ -123,23 +123,23 @@ Enamik mudeleid, mida mainisime eelnevates lõikudes (OpenAI mudelid, avatud lä
 
 - Leida kataloogist huvipakkuv Foundation Model - kas omandatud või avatud lähtekoodiga, filtreerides ülesande, litsentsi või nime järgi. Otsingut lihtsustamiseks on mudelid organiseeritud kollektsioonidesse, nagu Azure OpenAI kollektsioon, Hugging Face kollektsioon ja teised.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.et.png)
+![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.et.png)
 
 - Vaadata mudelikaarti, mis sisaldab üksikasjalikku kirjeldust kavandatud kasutuse ja treeningandmete kohta, koodinäiteid ja hindamistulemusi sisemise hindamisraamatukogu põhjal.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.et.png)
+![Model card](../../../translated_images/ModelCard.598051692c6e400d.et.png)
 
 - Võrrelda tööstuses saadaval olevate mudelite ja andmekogumite võrdlusaluseid, et hinnata, milline neist vastab äristsenaariumile, kasutades [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) paneeli.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.et.png)
+![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.et.png)
 
 - Kohandada mudelit oma treeningandmete põhjal, et parandada mudeli jõudlust konkreetses töökoormuses, kasutades Azure AI Studio katsetamise ja jälgimise võimalusi.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.et.png)
+![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.et.png)
 
 - Paigaldada algne eeltreenitud mudel või kohandatud versioon kaugjuhtimisega reaalajas järelduste tegemiseks - hallatud arvutusvõimsus - või serverivaba API lõpp-punkti - [maksa vastavalt kasutusele](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - et võimaldada rakendustel seda kasutada.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.et.png)
+![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.et.png)
 
 > [!NOTE]
 > Kõik kataloogis olevad mudelid ei ole praegu saadaval kohandamiseks ja/või maksa vastavalt kasutusele paigaldamiseks. Kontrollige mudelikaarti, et saada teavet mudeli võimaluste ja piirangute kohta.
@@ -158,7 +158,7 @@ Ettevõtted saavad kasutada mitmeid lähenemisviise, et saavutada LLM-ilt soovit
 
 - **Kohandatud mudel**. Siin treenitakse mudelit edasi teie enda andmetega, mis muudab mudeli täpsemaks ja vastavaks teie vajadustele, kuid võib olla kulukas.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.et.png)
+![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.et.png)
 
 Pildi allikas: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
