@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.en.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Exploring and comparing different LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60.en.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Click the image above to watch the video of this lesson_
 
@@ -59,13 +59,13 @@ The term "Foundation Model" was [introduced by Stanford researchers](https://arx
 - **Large-scale models**: They are built on deep neural networks with billions of parameters.
 - **Serving as a foundation for other models**: These models can be fine-tuned to create specialized models for specific tasks.
 
-![Foundation Models versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.en.png)
+![Foundation Models versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.en.png)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 To clarify this distinction further, consider ChatGPT as an example. The first version of ChatGPT was built using GPT-3.5 as the foundation model. OpenAI fine-tuned GPT-3.5 with chat-specific data to create a version optimized for conversational tasks, such as chatbots.
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.en.png)
+![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51.en.png)
 
 Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ LLMs can also be categorized based on the type of output they produce.
 
 Embedding models convert text into numerical representations, called embeddings, which help machines understand relationships between words or sentences. These embeddings can be used as inputs for other models, such as classification or clustering models, which perform better with numerical data. Embedding models are often used for transfer learning, where model weights (embeddings) are reused for downstream tasks. An example is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.en.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.en.png)
 
 Image generation models create images and are used for tasks like image editing, synthesis, and translation. These models are trained on large image datasets, such as [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), and can generate new images or edit existing ones using techniques like inpainting, super-resolution, and colorization. Examples include [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.en.png)
+![Image generation](../../../translated_images/Image.349c080266a763fd.en.png)
 
 Text and code generation models produce text or code. They are used for tasks like text summarization, translation, and question answering. Text generation models are trained on large text datasets, such as [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), and can generate new text or answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), are trained on large code datasets, such as GitHub, and can generate new code or debug existing code.
 
-![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.en.png)
+![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0.en.png)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -122,23 +122,23 @@ Most of the models mentioned in previous paragraphs (OpenAI models, open-source 
 
 - Discover the Foundation Model of interest in the catalog—whether proprietary or open-source—by filtering based on task, license, or name. To enhance searchability, models are grouped into collections such as the Azure OpenAI collection, Hugging Face collection, and more.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.en.png)
+![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.en.png)
 
 - Review the model card, which includes a detailed description of intended use, training data, code samples, and evaluation results from the internal evaluations library.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.en.png)
+![Model card](../../../translated_images/ModelCard.598051692c6e400d.en.png)
 
 - Compare benchmarks across models and datasets available in the industry to determine which one best fits the business scenario, using the [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) section.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.en.png)
+![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.en.png)
 
 - Fine-tune the model using custom training data to enhance its performance for specific workloads, utilizing the experimentation and tracking features of Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.en.png)
+![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.en.png)
 
 - Deploy the original pre-trained model or the fine-tuned version for real-time inference on managed compute or serverless API endpoints—[pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst)—to enable applications to utilize it.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.en.png)
+![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.en.png)
 
 > [!NOTE]
 > Not all models in the catalog are currently available for fine-tuning and/or pay-as-you-go deployment. Check the model card for details on the model's capabilities and limitations.
@@ -157,7 +157,7 @@ There are several strategies businesses can use to achieve the desired results f
 
 - **Fine-tuned model**: This approach involves further training the model on your own data, making it more precise and tailored to your needs, though it may be more expensive.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.en.png)
+![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.en.png)
 
 Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

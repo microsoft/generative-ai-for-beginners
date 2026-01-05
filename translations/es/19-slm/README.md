@@ -33,7 +33,7 @@ Los SLM se entrenan con grandes cantidades de datos textuales. Durante el entren
 
 El desarrollo de los SLM responde a la creciente necesidad de modelos que puedan desplegarse en entornos con recursos limitados, como dispositivos móviles o plataformas de computación en el borde, donde los LLM a gran escala pueden ser poco prácticos debido a sus altos requerimientos. Al enfocarse en la eficiencia, los SLM equilibran rendimiento y accesibilidad, permitiendo una aplicación más amplia en diversos dominios.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.es.png)
+![slm](../../../translated_images/slm.4058842744d0444a.es.png)
 
 ## Objetivos de Aprendizaje  
 
@@ -135,7 +135,7 @@ Podemos usar el modelo de la familia Phi-3/3.5 basado en diferentes escenarios. 
 
 Queremos usar Phi-3/3.5 en diferentes escenarios. A continuación, usaremos Phi-3/3.5 basado en distintos casos.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.es.png)
+![phi3](../../../translated_images/phi3.655208c3186ae381.es.png)
 
 ### Diferencias de inferencia con la API en la nube  
 
@@ -145,9 +145,9 @@ Los modelos en GitHub son la forma más directa. Puedes acceder rápidamente al 
 
 - Demo: Comparación de los efectos de Phi-3-mini y Phi-3.5-mini en escenarios en chino
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.es.png)
+![phi3](../../../translated_images/gh1.126c6139713b622b.es.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.es.png)
+![phi35](../../../translated_images/gh2.07d7985af66f178d.es.png)
 
 **Azure AI Studio**  
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.en.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4f.en.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 In the search applications lesson, we briefly explored how to integrate your own data into Large Language Models (LLMs). In this lesson, we will dive deeper into the concepts of grounding your data in your LLM application, the mechanics of the process, and the methods for storing data, including embeddings and text.
 
@@ -53,7 +53,7 @@ An LLM-powered chatbot processes user prompts to generate responses. It is desig
 
 ### How RAGs (Retrieval Augmented Generation) Work
 
-![drawing showing how RAGs work](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.en.png)
+![drawing showing how RAGs work](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.en.png)
 
 Suppose you want to deploy a chatbot that creates quizzes from your notes. You will need a connection to the knowledge base. This is where RAG comes into play. RAGs work as follows:
 
@@ -65,7 +65,7 @@ Suppose you want to deploy a chatbot that creates quizzes from your notes. You w
 
 - **Augmented Generation:** The LLM enhances its response based on the retrieved data. This allows the generated response to be based not only on pre-trained data but also on relevant information from the added context. The retrieved data is used to augment the LLM's responses, and the LLM then returns an answer to the user's question.
 
-![drawing showing how RAGs architecture](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.en.png)
+![drawing showing how RAGs architecture](../../../translated_images/encoder-decode.f2658c25d0eadee2.en.png)
 
 The architecture for RAGs is implemented using transformers consisting of two parts: an encoder and a decoder. For example, when a user asks a question, the input text is 'encoded' into vectors that capture the meaning of words, and the vectors are 'decoded' into our document index to generate new text based on the user query. The LLM uses both an encoder-decoder model to generate the output.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Once chunked, we can embed our text using different embedding models. Some models you can use include: word2vec, ada-002 by OpenAI, Azure Computer Vision, and many more. The choice of model depends on the languages you're using, the type of content being encoded (text/images/audio), the size of input it can encode, and the length of the embedding output.
 
 An example of embedded text using OpenAI's `text-embedding-ada-002` model is:
-![an embedding of the word cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.en.png)
+![an embedding of the word cat](../../../translated_images/cat.74cbd7946bc9ca38.en.png)
 
 ## Retrieval and Vector Search
 

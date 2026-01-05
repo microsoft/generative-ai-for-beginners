@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "en"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.en.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.en.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduction
 
@@ -41,12 +41,12 @@ For this lesson, we will refer to the models as "open models" going forward as t
 
 **Cost** - The cost per token for using and deploying these models is lower than that of proprietary models. When building Generative AI applications, looking at performance vs price when working with these models on your use case should be done.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.en.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.en.png)
 Source: Artificial Analysis
 
 **Flexibility** - Working with open models enables you to be flexible in terms of using different models or combining them. An example of this is the [HuggingChat Assistants ](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) where a user can select the model being used directly in the user interface:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.en.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.en.png)
 
 ## Exploring Different Open Models
 
@@ -74,7 +74,7 @@ There is no one answer for choosing an open model. A good place to start is by u
 
 When looking to compare LLMs across the different types, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) is another great resource:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.en.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.en.png)
 Source: Artificial Analysis
 
 If working on a specific use case, searching for fine-tuned versions that are focused on the same area can be effective. Experimenting with multiple open models to see how they perform according to your and your users' expectations is another good practice

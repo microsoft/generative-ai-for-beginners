@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construire des applications IA à faible code
 
-[![Construire des applications IA à faible code](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.fr.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Construire des applications IA à faible code](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.fr.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon)_
 
@@ -92,17 +92,17 @@ Vous allez créer l'application en utilisant Copilot dans Power Apps en suivant 
 
 1. Utilisez la zone de texte sur l'écran d'accueil pour décrire l'application que vous souhaitez créer. Par exemple, **_Je veux créer une application pour suivre et gérer les devoirs des étudiants_**. Cliquez sur le bouton **Envoyer** pour envoyer le prompt à l'assistant IA Copilot.
 
-![Décrire l'application que vous souhaitez créer](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.fr.png)
+![Décrire l'application que vous souhaitez créer](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.fr.png)
 
 1. L'assistant IA Copilot suggérera une table Dataverse avec les champs nécessaires pour stocker les données que vous souhaitez suivre, ainsi que des données d'exemple. Vous pouvez ensuite personnaliser la table selon vos besoins en utilisant la fonctionnalité d'assistant IA Copilot à travers des étapes conversationnelles.
 
    > **Important** : Dataverse est la plateforme de données sous-jacente de Power Platform. C'est une plateforme de données à faible code pour stocker les données de l'application. C'est un service entièrement géré qui stocke les données de manière sécurisée dans le cloud Microsoft et est provisionné dans votre environnement Power Platform. Il est doté de capacités intégrées de gouvernance des données, telles que la classification des données, la traçabilité des données, un contrôle d'accès granulaire, et plus encore. Vous pouvez en apprendre davantage sur Dataverse [ici](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Champs suggérés dans votre nouvelle table](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.fr.png)
+   ![Champs suggérés dans votre nouvelle table](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.fr.png)
 
 1. Les enseignants souhaitent envoyer des e-mails aux étudiants qui ont soumis leurs devoirs pour les tenir informés de l'avancement de leurs devoirs. Vous pouvez utiliser Copilot pour ajouter un nouveau champ à la table afin de stocker l'adresse e-mail des étudiants. Par exemple, vous pouvez utiliser le prompt suivant pour ajouter un nouveau champ à la table : **_Je veux ajouter une colonne pour stocker l'adresse e-mail des étudiants_**. Cliquez sur le bouton **Envoyer** pour envoyer le prompt à l'assistant IA Copilot.
 
-![Ajout d'un nouveau champ](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.fr.png)
+![Ajout d'un nouveau champ](../../../translated_images/copilot-new-column.35e15ff21acaf274.fr.png)
 
 1. L'assistant IA Copilot générera un nouveau champ et vous pourrez ensuite personnaliser ce champ selon vos besoins.
 
@@ -112,7 +112,7 @@ Vous allez créer l'application en utilisant Copilot dans Power Apps en suivant 
 
 1. Pour permettre aux enseignants d'envoyer des e-mails aux étudiants, vous pouvez utiliser Copilot pour ajouter un nouvel écran à l'application. Par exemple, vous pouvez utiliser le prompt suivant pour ajouter un nouvel écran à l'application : **_Je veux ajouter un écran pour envoyer des e-mails aux étudiants_**. Cliquez sur le bouton **Envoyer** pour envoyer le prompt à l'assistant IA Copilot.
 
-![Ajout d'un nouvel écran via une instruction de prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.fr.png)
+![Ajout d'un nouvel écran via une instruction de prompt](../../../translated_images/copilot-new-screen.2e0bef7132a17392.fr.png)
 
 1. L'assistant IA Copilot générera un nouvel écran et vous pourrez ensuite personnaliser cet écran selon vos besoins.
 
@@ -147,15 +147,15 @@ Pour créer une table dans Dataverse à l'aide de Copilot, suivez les étapes ci
 
 2. Dans la barre de navigation à gauche, sélectionnez **Tables**, puis cliquez sur **Décrire la nouvelle table**.
 
-![Sélectionner une nouvelle table](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.fr.png)
+![Sélectionner une nouvelle table](../../../translated_images/describe-new-table.0792373eb757281e.fr.png)
 
 3. Sur l'écran **Décrire la nouvelle table**, utilisez la zone de texte pour décrire la table que vous souhaitez créer. Par exemple, **_Je veux créer une table pour stocker les informations des factures_**. Cliquez sur le bouton **Envoyer** pour envoyer l'invite à l'IA Copilot.
 
-![Décrire la table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.fr.png)
+![Décrire la table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.fr.png)
 
 4. L'IA Copilot suggérera une table Dataverse avec les champs nécessaires pour stocker les données que vous souhaitez suivre ainsi que des données d'exemple. Vous pouvez ensuite personnaliser la table selon vos besoins à l'aide de la fonctionnalité d'assistant IA Copilot via des étapes conversationnelles.
 
-![Table Dataverse suggérée](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.fr.png)
+![Table Dataverse suggérée](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.fr.png)
 
 5. L'équipe financière souhaite envoyer un e-mail au fournisseur pour l'informer de l'état actuel de sa facture. Vous pouvez utiliser Copilot pour ajouter un nouveau champ à la table afin de stocker l'e-mail du fournisseur. Par exemple, vous pouvez utiliser l'invite suivante pour ajouter un nouveau champ à la table : **_Je veux ajouter une colonne pour stocker l'e-mail du fournisseur_**. Cliquez sur le bouton **Envoyer** pour envoyer l'invite à l'IA Copilot.
 
@@ -184,7 +184,7 @@ Certains des modèles d'IA préconstruits disponibles dans Power Platform inclue
 
 Avec les modèles d'IA personnalisés, vous pouvez intégrer votre propre modèle dans AI Builder afin qu'il fonctionne comme n'importe quel modèle personnalisé d'AI Builder, vous permettant de former le modèle en utilisant vos propres données. Vous pouvez utiliser ces modèles pour automatiser des processus et prédire des résultats dans Power Apps et Power Automate. Lorsque vous utilisez votre propre modèle, certaines limitations s'appliquent. Lisez-en plus sur ces [limitations](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Modèles AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.fr.png)
+![Modèles AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f.fr.png)
 
 ## Devoir #2 - Créer un flux de traitement des factures pour notre startup
 
@@ -198,7 +198,7 @@ Pour créer un flux de travail qui aidera l'équipe financière à traiter les f
 
 2. Utilisez la zone de texte sur l'écran d'accueil pour décrire le flux de travail que vous souhaitez créer. Par exemple, **_Traiter une facture lorsqu'elle arrive dans ma boîte de réception_**. Cliquez sur le bouton **Envoyer** pour envoyer l'invite à l'IA Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.fr.png)
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.fr.png)
 
 3. L'IA Copilot suggérera les actions nécessaires pour effectuer la tâche que vous souhaitez automatiser. Vous pouvez cliquer sur le bouton **Suivant** pour passer aux étapes suivantes.
 
@@ -212,7 +212,7 @@ Pour créer un flux de travail qui aidera l'équipe financière à traiter les f
 
 8. Supprimez l'action **Condition** du flux, car vous ne l'utiliserez pas. Cela devrait ressembler à la capture d'écran suivante :
 
-   ![power automate, supprimer des actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.fr.png)
+   ![power automate, supprimer des actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.fr.png)
 
 9. Cliquez sur le bouton **Ajouter une action** et recherchez **Dataverse**. Sélectionnez l'action **Ajouter une nouvelle ligne**.
 
@@ -227,7 +227,7 @@ Pour créer un flux de travail qui aidera l'équipe financière à traiter les f
     - Statut - Définissez le **Statut** sur **En attente**.
     - E-mail du fournisseur - Utilisez le contenu dynamique **De** du déclencheur **Lorsqu'un nouvel e-mail arrive**.
 
-    ![power automate ajouter une ligne](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.fr.png)
+    ![power automate ajouter une ligne](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.fr.png)
 
 12. Une fois que vous avez terminé avec le flux, cliquez sur le bouton **Enregistrer** pour enregistrer le flux. Vous pouvez ensuite tester le flux en envoyant un e-mail avec une facture au dossier que vous avez spécifié dans le déclencheur.
 
@@ -241,7 +241,7 @@ Les modèles GPT subissent une formation approfondie sur de vastes quantités de
 
 Par exemple, vous pouvez créer des flux pour générer automatiquement du texte pour divers cas d'utilisation, tels que : des brouillons d'e-mails, des descriptions de produits, et plus encore. Vous pouvez également utiliser le modèle pour générer du texte pour diverses applications, telles que des chatbots et des applications de service client qui permettent aux agents du service client de répondre efficacement et rapidement aux demandes des clients.
 
-![créer une invite](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.fr.png)
+![créer une invite](../../../translated_images/create-prompt-gpt.69d429300c2e870a.fr.png)
 
 Pour apprendre à utiliser ce modèle d'IA dans Power Automate, consultez le module [Ajouter de l'intelligence avec AI Builder et GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Utiliser l'IA générative de manière responsable
 
-[![Utiliser l'IA générative de manière responsable](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.fr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Utiliser l'IA générative de manière responsable](../../../translated_images/03-lesson-banner.1ed56067a452d977.fr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon_
 
@@ -85,7 +85,7 @@ Ces types de résultats ne sont pas seulement destructeurs pour créer des expé
 
 Maintenant que nous avons identifié l'importance de l'IA générative responsable, examinons 4 étapes que nous pouvons suivre pour créer nos solutions d'IA de manière responsable :
 
-![Cycle d'atténuation](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.fr.png)
+![Cycle d'atténuation](../../../translated_images/mitigate-cycle.babcd5a5658e1775.fr.png)
 
 ### Mesurer les dommages potentiels
 
@@ -97,7 +97,7 @@ Dans les tests logiciels, nous testons les actions attendues d'un utilisateur su
 
 Il est maintenant temps de trouver des moyens de prévenir ou de limiter les dommages potentiels causés par le modèle et ses réponses. Nous pouvons examiner cela sous 4 couches différentes :
 
-![Couches d'atténuation](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.fr.png)
+![Couches d'atténuation](../../../translated_images/mitigation-layers.377215120b9a1159.fr.png)
 
 - **Modèle**. Choisir le bon modèle pour le bon cas d'utilisation. Les modèles plus grands et plus complexes comme GPT-4 peuvent présenter un risque accru de contenu nuisible lorsqu'ils sont appliqués à des cas d'utilisation plus petits et spécifiques. Utiliser vos données d'entraînement pour un ajustement fin réduit également le risque de contenu nuisible.
 

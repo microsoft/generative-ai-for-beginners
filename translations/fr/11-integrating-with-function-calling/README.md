@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Intégration avec l'appel de fonction
 
-[![Intégration avec l'appel de fonction](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.fr.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Intégration avec l'appel de fonction](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.fr.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Vous avez déjà appris pas mal de choses dans les leçons précédentes. Cependant, nous pouvons encore nous améliorer. Parmi les points à aborder, il y a la manière d'obtenir un format de réponse plus cohérent pour faciliter le traitement des réponses en aval. De plus, nous pourrions vouloir ajouter des données provenant d'autres sources pour enrichir davantage notre application.
 
@@ -179,7 +179,7 @@ Nous pouvons maintenant envoyer les deux requêtes au LLM et examiner la répons
 
 Alors, comment résoudre le problème de formatage ? En utilisant l'appel de fonction, nous pouvons nous assurer de recevoir des données structurées. Lors de l'utilisation de l'appel de fonction, le LLM n'appelle ni n'exécute réellement de fonctions. Au lieu de cela, nous créons une structure que le LLM doit suivre pour ses réponses. Nous utilisons ensuite ces réponses structurées pour savoir quelle fonction exécuter dans nos applications.
 
-![flux de fonction](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.fr.png)
+![flux de fonction](../../../translated_images/Function-Flow.083875364af4f4bb.fr.png)
 
 Nous pouvons ensuite prendre ce qui est retourné par la fonction et renvoyer cela au LLM. Le LLM répondra alors en utilisant un langage naturel pour répondre à la requête de l'utilisateur.
 
@@ -201,7 +201,7 @@ Le processus de création d'un appel de fonction comprend 3 étapes principales 
 2. **Lire** la réponse du modèle pour effectuer une action, c'est-à-dire exécuter une fonction ou une requête API.
 3. **Effectuer** un autre appel à l'API Chat Completions avec la réponse de votre fonction pour utiliser ces informations pour créer une réponse à l'utilisateur.
 
-![Flux LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.fr.png)
+![Flux LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.fr.png)
 
 ### Étape 1 - créer des messages
 

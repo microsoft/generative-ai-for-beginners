@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "es"
 }
 -->
-[![Modelos de Código Abierto](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.es.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Modelos de Código Abierto](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.es.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introducción
 
@@ -33,7 +33,7 @@ Los Agentes de IA son un campo muy emocionante en el mundo de la IA Generativa. 
 
 Los Agentes de IA permiten que los Modelos de Lenguaje Extenso (LLMs) realicen tareas al proporcionarles acceso a un **estado** y **herramientas**.
 
-![Modelo de Agente](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.es.png)
+![Modelo de Agente](../../../translated_images/what-agent.21f2893bdfd01e6a.es.png)
 
 Definamos estos términos:
 
@@ -53,7 +53,7 @@ Para gestionar el **estado**, utiliza una función incorporada llamada `AgentExe
 
 El `Agent Executor` también almacena el historial de chat para proporcionar el contexto del chat.
 
-![Agentes de LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.es.png)
+![Agentes de LangChain](../../../translated_images/langchain-agents.edcc55b5d5c43716.es.png)
 
 LangChain ofrece un [catálogo de herramientas](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) que pueden ser importadas a tu aplicación en la que el LLM puede obtener acceso. Estas son creadas por la comunidad y por el equipo de LangChain.
 
@@ -85,7 +85,7 @@ Para cambiar y gestionar el estado, un agente asistente genera código Python pa
 
 Aquí hay un ejemplo del proceso:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.es.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.es.png)
 
 #### LLM Definido con un Mensaje de Sistema
 
@@ -129,7 +129,7 @@ Para gestionar el estado de la conversación, TaskWeaver utiliza el concepto de 
 
 Para completar las tareas, el `Planner` está expuesto a la colección de herramientas llamadas `Plugins`. Estos pueden ser clases de Python o un intérprete de código general. Estos plugins se almacenan como embeddings para que el LLM pueda buscar mejor el plugin correcto.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.es.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.es.png)
 
 Aquí hay un ejemplo de un plugin para manejar la detección de anomalías:
 
@@ -143,7 +143,7 @@ El código es verificado antes de ejecutarse. Otra característica para gestiona
 
 El último marco de trabajo de agentes que exploraremos es [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Lo que hace único a JARVIS es que utiliza un LLM para gestionar el `estado` de la conversación y las `herramientas` son otros modelos de IA. Cada uno de los modelos de IA son modelos especializados que realizan ciertas tareas como detección de objetos, transcripción o generación de descripciones de imágenes.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.es.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.es.png)
 
 El LLM, siendo un modelo de propósito general, recibe la solicitud del usuario e identifica la tarea específica y cualquier argumento/dato necesario para completar la tarea.
 

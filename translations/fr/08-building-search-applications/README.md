@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construire des applications de recherche
 
-[![Introduction à l'IA générative et aux grands modèles de langage](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.fr.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduction à l'IA générative et aux grands modèles de langage](../../../translated_images/08-lesson-banner.8fff48c566dad08a.fr.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon_
 
@@ -44,7 +44,7 @@ La leçon inclut un index d'embeddings des transcriptions YouTube de la chaîne 
 
 Voici un exemple de requête sémantique pour la question "peut-on utiliser rstudio avec azure ml ?". Consultez l'URL YouTube, vous verrez qu'elle contient un timestamp qui vous mène directement à l'endroit de la vidéo où se trouve la réponse à la question.
 
-![Requête sémantique pour la question "peut-on utiliser rstudio avec Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.fr.png)
+![Requête sémantique pour la question "peut-on utiliser rstudio avec Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.fr.png)
 
 ## Qu'est-ce que la recherche sémantique ?
 
@@ -163,7 +163,7 @@ Ouvrez le [notebook de solution](./python/aoai-solution.ipynb?WT.mc_id=academic-
 
 Lorsque vous exécutez le notebook, vous serez invité à entrer une requête. La boîte de saisie ressemblera à ceci :
 
-![Boîte de saisie pour que l'utilisateur entre une requête](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.fr.png)
+![Boîte de saisie pour que l'utilisateur entre une requête](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.fr.png)
 
 ## Excellent travail ! Continuez votre apprentissage
 
