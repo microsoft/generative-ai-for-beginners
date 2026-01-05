@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bảo mật ứng dụng AI tạo sinh của bạn
 
-[![Bảo mật ứng dụng AI tạo sinh của bạn](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.vi.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Bảo mật ứng dụng AI tạo sinh của bạn](../../../translated_images/13-lesson-banner.14103e36b4bbf173.vi.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Giới thiệu
 
@@ -128,7 +128,7 @@ Việc mô phỏng các mối đe dọa thực tế hiện được coi là mộ
 
 > Thực hành red teaming AI đã phát triển để mang ý nghĩa rộng hơn: nó không chỉ bao gồm việc kiểm tra các lỗ hổng bảo mật mà còn bao gồm việc kiểm tra các lỗi hệ thống khác, chẳng hạn như việc tạo ra nội dung có khả năng gây hại. Các hệ thống AI đi kèm với những rủi ro mới, và red teaming là cốt lõi để hiểu những rủi ro mới đó, chẳng hạn như tiêm lệnh (prompt injection) và tạo nội dung không có cơ sở. - [Microsoft AI Red Team xây dựng tương lai AI an toàn hơn](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Hướng dẫn và tài nguyên cho red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.vi.png)]()
+[![Hướng dẫn và tài nguyên cho red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.vi.png)]()
 
 Dưới đây là những thông tin chính đã định hình chương trình AI Red Team của Microsoft.
 

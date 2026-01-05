@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng trò chuyện sử dụng AI tạo sinh
 
-[![Xây dựng ứng dụng trò chuyện sử dụng AI tạo sinh](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.vi.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Xây dựng ứng dụng trò chuyện sử dụng AI tạo sinh](../../../translated_images/07-lesson-banner.a279b937f2843833.vi.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Nhấp vào hình ảnh trên để xem video của bài học này)_
 
@@ -96,11 +96,11 @@ Các nguyên tắc UX chung áp dụng cho các ứng dụng trò chuyện, như
 
 Một ví dụ về cá nhân hóa là cài đặt "Hướng dẫn tùy chỉnh" trong ChatGPT của OpenAI. Nó cho phép bạn cung cấp thông tin về bản thân mà có thể là ngữ cảnh quan trọng cho các yêu cầu của bạn. Dưới đây là một ví dụ về hướng dẫn tùy chỉnh.
 
-![Cài đặt Hướng dẫn Tùy chỉnh trong ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.vi.png)
+![Cài đặt Hướng dẫn Tùy chỉnh trong ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.vi.png)
 
 Hồ sơ này yêu cầu ChatGPT tạo một kế hoạch bài học về danh sách liên kết. Lưu ý rằng ChatGPT đã tính đến việc người dùng có thể muốn một kế hoạch bài học chi tiết hơn dựa trên kinh nghiệm của cô ấy.
 
-![Một yêu cầu trong ChatGPT về kế hoạch bài học liên quan đến danh sách liên kết](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.vi.png)
+![Một yêu cầu trong ChatGPT về kế hoạch bài học liên quan đến danh sách liên kết](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.vi.png)
 
 ### Khung tin nhắn hệ thống của Microsoft dành cho các mô hình ngôn ngữ lớn
 

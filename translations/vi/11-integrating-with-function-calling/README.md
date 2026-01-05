@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tích hợp với chức năng gọi hàm
 
-[![Tích hợp với chức năng gọi hàm](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.vi.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Tích hợp với chức năng gọi hàm](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.vi.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Bạn đã học được khá nhiều điều trong các bài học trước. Tuy nhiên, chúng ta vẫn có thể cải thiện thêm. Một số vấn đề cần giải quyết là làm thế nào để có được định dạng phản hồi nhất quán hơn, giúp dễ dàng làm việc với phản hồi ở các bước tiếp theo. Ngoài ra, chúng ta cũng có thể muốn thêm dữ liệu từ các nguồn khác để làm phong phú thêm ứng dụng của mình.
 
@@ -179,7 +179,7 @@ Bây giờ chúng ta có thể gửi cả hai yêu cầu đến LLM và kiểm t
 
 Vậy làm thế nào để giải quyết vấn đề định dạng? Bằng cách sử dụng chức năng gọi hàm, chúng ta có thể đảm bảo rằng chúng ta nhận được dữ liệu có cấu trúc. Khi sử dụng chức năng gọi hàm, LLM thực sự không gọi hoặc chạy bất kỳ hàm nào. Thay vào đó, chúng ta tạo một cấu trúc để LLM tuân theo cho các phản hồi của nó. Sau đó, chúng ta sử dụng các phản hồi có cấu trúc đó để biết hàm nào cần chạy trong ứng dụng của mình.
 
-![luồng chức năng](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.vi.png)
+![luồng chức năng](../../../translated_images/Function-Flow.083875364af4f4bb.vi.png)
 
 Chúng ta có thể lấy những gì được trả về từ hàm và gửi lại cho LLM. LLM sau đó sẽ phản hồi bằng ngôn ngữ tự nhiên để trả lời truy vấn của người dùng.
 
@@ -201,7 +201,7 @@ Quá trình tạo chức năng gọi hàm bao gồm 3 bước chính:
 2. **Đọc** phản hồi của mô hình để thực hiện một hành động, ví dụ: thực thi một hàm hoặc yêu cầu API.
 3. **Thực hiện** một cuộc gọi khác đến API Chat Completions với phản hồi từ hàm của bạn để sử dụng thông tin đó tạo phản hồi cho người dùng.
 
-![Luồng LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.vi.png)
+![Luồng LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.vi.png)
 
 ### Bước 1 - tạo tin nhắn
 

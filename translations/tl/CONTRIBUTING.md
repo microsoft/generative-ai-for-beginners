@@ -63,7 +63,7 @@ Para matiyak na gumagana nang maayos ang iyong mga link, gamitin lamang ang VS c
 
 Halimbawa, kapag in-hover mo ang anumang link sa iyong mga file, ipapakita sa iyo ang opsyon na sundan ang link sa pamamagitan ng pagpindot ng **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.tl.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.tl.png)
 
 Kung i-click mo ang isang link at hindi ito gumagana sa lokal, tiyak na magti-trigger ito ng workflow at hindi gagana sa GitHub.
 
@@ -71,7 +71,7 @@ Para ayusin ang isyung ito, subukang i-type ang link gamit ang tulong ng VS code
 
 Kapag nag-type ka ng `./` o `../` magpapakita ang VS code ng mga opsyon na maaari mong piliin base sa iyong tinype.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.tl.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.tl.png)
 
 Sundin ang path sa pamamagitan ng pag-click sa nais na file o folder at makakasiguro kang hindi sira ang iyong path.
 
@@ -88,7 +88,7 @@ Kung nakadugtong ito sa iyong mga relative path, makakapasa ka sa check na ito.
 
 Kung wala, maaaring lumabas ang sumusunod na error.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.tl.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.tl.png)
 
 Para ayusin ito, buksan ang file path na tinukoy ng workflow at idagdag ang tracking ID sa dulo ng mga relative path.
 
@@ -105,7 +105,7 @@ Kung nakadugtong ito sa iyong mga URL, makakapasa ka sa check na ito.
 
 Kung wala, maaaring lumabas ang sumusunod na error.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.tl.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.tl.png)
 
 Para ayusin ito, buksan ang file path na tinukoy ng workflow at idagdag ang tracking ID sa dulo ng mga URL.
 
@@ -122,7 +122,7 @@ Kung wala ito sa iyong mga URL, makakapasa ka sa check na ito.
 
 Kung mayroon, maaaring lumabas ang sumusunod na error.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.tl.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.tl.png)
 
 Para ayusin ito, buksan ang file path na tinukoy ng workflow at alisin ang country locale mula sa mga URL.
 

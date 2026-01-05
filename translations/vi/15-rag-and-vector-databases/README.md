@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tạo nội dung tăng cường truy xuất (RAG) và cơ sở dữ liệu vector
 
-[![Tạo nội dung tăng cường truy xuất (RAG) và cơ sở dữ liệu vector](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.vi.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Tạo nội dung tăng cường truy xuất (RAG) và cơ sở dữ liệu vector](../../../translated_images/15-lesson-banner.ac49e59506175d4f.vi.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Trong bài học về ứng dụng tìm kiếm, chúng ta đã tìm hiểu sơ qua cách tích hợp dữ liệu của riêng bạn vào các mô hình ngôn ngữ lớn (LLMs). Trong bài học này, chúng ta sẽ đi sâu hơn vào các khái niệm về việc gắn kết dữ liệu của bạn vào ứng dụng LLM, cơ chế của quy trình và các phương pháp lưu trữ dữ liệu, bao gồm cả embeddings và văn bản.
 
@@ -53,7 +53,7 @@ Một chatbot được hỗ trợ bởi LLM xử lý các yêu cầu của ngư�
 
 ### Cách RAGs (Tạo nội dung tăng cường truy xuất) hoạt động
 
-![hình minh họa cách RAGs hoạt động](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.vi.png)
+![hình minh họa cách RAGs hoạt động](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.vi.png)
 
 Giả sử bạn muốn triển khai một chatbot tạo các bài kiểm tra từ ghi chú của bạn, bạn sẽ cần một kết nối đến cơ sở kiến thức. Đây là lúc RAG phát huy tác dụng. RAGs hoạt động như sau:
 
@@ -65,7 +65,7 @@ Giả sử bạn muốn triển khai một chatbot tạo các bài kiểm tra t�
 
 - **Tạo nội dung tăng cường:** LLM cải thiện phản hồi của nó dựa trên dữ liệu được truy xuất. Điều này cho phép phản hồi được tạo ra không chỉ dựa trên dữ liệu đã được đào tạo mà còn dựa trên thông tin liên quan từ ngữ cảnh được thêm vào. Dữ liệu được truy xuất được sử dụng để tăng cường các phản hồi của LLM. Sau đó, LLM trả lời câu hỏi của người dùng.
 
-![hình minh họa kiến trúc của RAGs](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.vi.png)
+![hình minh họa kiến trúc của RAGs](../../../translated_images/encoder-decode.f2658c25d0eadee2.vi.png)
 
 Kiến trúc của RAGs được triển khai bằng cách sử dụng transformers bao gồm hai phần: một encoder và một decoder. Ví dụ, khi người dùng đặt câu hỏi, văn bản đầu vào được 'mã hóa' thành các vector nắm bắt ý nghĩa của các từ và các vector này được 'giải mã' vào chỉ mục tài liệu của chúng ta và tạo ra văn bản mới dựa trên yêu cầu của người dùng. LLM sử dụng cả mô hình encoder-decoder để tạo ra đầu ra.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Sau khi chia nhỏ, chúng ta có thể nhúng văn bản của mình bằng các mô hình nhúng khác nhau. Một số mô hình bạn có thể sử dụng bao gồm: word2vec, ada-002 của OpenAI, Azure Computer Vision và nhiều hơn nữa. Việc chọn mô hình để sử dụng sẽ phụ thuộc vào ngôn ngữ bạn đang sử dụng, loại nội dung được mã hóa (văn bản/hình ảnh/âm thanh), kích thước đầu vào mà nó có thể mã hóa và độ dài của đầu ra embedding.
 
 Một ví dụ về văn bản nhúng sử dụng mô hình `text-embedding-ada-002` của OpenAI là:
-![một embedding của từ cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.vi.png)
+![một embedding của từ cat](../../../translated_images/cat.74cbd7946bc9ca38.vi.png)
 
 ## Truy xuất và tìm kiếm vector
 

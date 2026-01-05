@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tạo các lời nhắc nâng cao
 
-[![Tạo các lời nhắc nâng cao](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.vi.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Tạo các lời nhắc nâng cao](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.vi.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Hãy cùng ôn lại một số kiến thức từ chương trước:
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Giới thiệu về AI Tạo Sinh và Mô Hình Ngôn Ngữ Lớn
 
-[![Giới thiệu về AI Tạo Sinh và Mô Hình Ngôn Ngữ Lớn](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.vi.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Giới thiệu về AI Tạo Sinh và Mô Hình Ngôn Ngữ Lớn](../../../translated_images/01-lesson-banner.2424cfd092f43366.vi.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Nhấn vào hình ảnh trên để xem video bài học này)_
 
@@ -43,7 +43,7 @@ Trí tuệ nhân tạo tạo sinh (AI) đại diện cho đỉnh cao của công
 
 AI Tạo Sinh được kỳ vọng sẽ cách mạng hóa cách chúng ta học và dạy ngày nay, với học sinh có sẵn giáo viên ảo 24 giờ mỗi ngày cung cấp lượng lớn thông tin và ví dụ, và giáo viên có thể tận dụng các công cụ sáng tạo để đánh giá học sinh và đưa ra phản hồi.
 
-![Năm học sinh trẻ đang nhìn vào màn hình - hình ảnh bởi DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.vi.png)
+![Năm học sinh trẻ đang nhìn vào màn hình - hình ảnh bởi DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.vi.png)
 
 Để bắt đầu, hãy định nghĩa một số khái niệm và thuật ngữ cơ bản mà chúng ta sẽ sử dụng trong suốt chương trình học.
 
@@ -69,7 +69,7 @@ Mạng nơ-ron (đặc biệt là Mạng nơ-ron hồi quy – RNNs) đã cải 
 
 Vậy đó là cách chúng ta đến với AI Tạo Sinh ngày nay, có thể được xem như một phần của học sâu.
 
-![AI, ML, DL và AI Tạo Sinh](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.vi.png)
+![AI, ML, DL và AI Tạo Sinh](../../../translated_images/AI-diagram.c391fa518451a40d.vi.png)
 
 Sau nhiều thập kỷ nghiên cứu trong lĩnh vực AI, một kiến trúc mô hình mới – gọi là _Transformer_ – đã vượt qua giới hạn của RNNs, có khả năng nhận được các chuỗi văn bản dài hơn nhiều làm đầu vào. Transformers dựa trên cơ chế chú ý, cho phép mô hình gán các trọng số khác nhau cho các đầu vào mà nó nhận được, ‘chú ý nhiều hơn’ đến nơi thông tin quan trọng nhất tập trung, bất kể thứ tự của chúng trong chuỗi văn bản.
 
@@ -81,7 +81,7 @@ Trong chương tiếp theo, chúng ta sẽ khám phá các loại mô hình AI T
 
 - **Tokenizer, chuyển văn bản thành số**: Mô Hình Ngôn Ngữ Lớn nhận một văn bản làm đầu vào và tạo ra một văn bản làm đầu ra. Tuy nhiên, vì là mô hình thống kê, chúng hoạt động tốt hơn với số hơn là chuỗi văn bản. Đó là lý do tại sao mọi đầu vào cho mô hình đều được xử lý bởi một tokenizer trước khi được sử dụng bởi mô hình cốt lõi. Một token là một đoạn văn bản – bao gồm một số lượng ký tự biến đổi, vì vậy nhiệm vụ chính của tokenizer là chia đầu vào thành một mảng các token. Sau đó, mỗi token được ánh xạ với một chỉ số token, là mã hóa số nguyên của đoạn văn bản gốc.
 
-![Ví dụ về tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.vi.png)
+![Ví dụ về tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.vi.png)
 
 - **Dự đoán token đầu ra**: Với n token làm đầu vào (với n tối đa thay đổi từ mô hình này sang mô hình khác), mô hình có thể dự đoán một token làm đầu ra. Token này sau đó được kết hợp vào đầu vào của lần lặp tiếp theo, theo mô hình cửa sổ mở rộng, cho phép trải nghiệm người dùng tốt hơn khi nhận được một (hoặc nhiều) câu trả lời. Điều này giải thích tại sao, nếu bạn từng thử ChatGPT, bạn có thể nhận thấy rằng đôi khi nó dừng lại giữa câu.
 
@@ -98,23 +98,23 @@ Nhưng loại đầu vào và đầu ra văn bản nào?
 
   1. Tóm tắt một bài báo, sách, đánh giá sản phẩm và hơn thế nữa, cùng với việc trích xuất thông tin từ dữ liệu không có cấu trúc.
     
-    ![Ví dụ về tóm tắt](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.vi.png)
+    ![Ví dụ về tóm tắt](../../../translated_images/summarization-example.7b7ff97147b3d790.vi.png)
   
   2. Tư duy sáng tạo và thiết kế một bài báo, bài luận, bài tập hoặc hơn thế nữa.
       
-     ![Ví dụ về viết sáng tạo](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.vi.png)
+     ![Ví dụ về viết sáng tạo](../../../translated_images/creative-writing-example.e24a685b5a543ad1.vi.png)
 
 - Một **câu hỏi**, được hỏi dưới dạng cuộc trò chuyện với một tác nhân.
   
-  ![Ví dụ về cuộc trò chuyện](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.vi.png)
+  ![Ví dụ về cuộc trò chuyện](../../../translated_images/conversation-example.60c2afc0f595fa59.vi.png)
 
 - Một đoạn **văn bản để hoàn thành**, mà ngầm hiểu là yêu cầu hỗ trợ viết.
   
-  ![Ví dụ về hoàn thành văn bản](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.vi.png)
+  ![Ví dụ về hoàn thành văn bản](../../../translated_images/text-completion-example.cbb0f28403d42752.vi.png)
 
 - Một đoạn **mã** cùng với yêu cầu giải thích và tài liệu hóa nó, hoặc một bình luận yêu cầu tạo một đoạn mã thực hiện một nhiệm vụ cụ thể.
   
-  ![Ví dụ về mã hóa](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.vi.png)
+  ![Ví dụ về mã hóa](../../../translated_images/coding-example.50ebabe8a6afff20.vi.png)
 
 Các ví dụ trên khá đơn giản và không nhằm mục đích là một minh chứng đầy đủ về khả năng của Mô Hình Ngôn Ngữ Lớn. Chúng được thiết kế để cho thấy tiềm năng của việc sử dụng AI Tạo Sinh, đặc biệt nhưng không giới hạn trong các bối cảnh giáo dục.
 
