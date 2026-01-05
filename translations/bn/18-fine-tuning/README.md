@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "bn"
 }
 -->
-[![ওপেন সোর্স মডেল](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.bn.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![ওপেন সোর্স মডেল](../../../translated_images/18-lesson-banner.f30176815b1a5074.bn.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # আপনার LLM ফাইন-টিউন করা
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 আমরা কী নিয়ে আলোচনা করব তার একটি বড় ছবি পেতে চান? এই চিত্রিত গাইডটি দেখুন যা এই পাঠের শেখার যাত্রা বর্ণনা করে - ফাইন-টিউনিং এর মূল ধারণা এবং প্রেরণা থেকে শুরু করে প্রক্রিয়া এবং সেরা অনুশীলনগুলো বুঝতে। এটি একটি চমৎকার বিষয় যা অন্বেষণের জন্য আকর্ষণীয়, তাই আপনার স্ব-নির্দেশিত শেখার যাত্রাকে সমর্থন করার জন্য [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) পৃষ্ঠাটি দেখতে ভুলবেন না!
 
-![ভাষার মডেল ফাইন-টিউনিং এর চিত্রিত গাইড](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.bn.png)
+![ভাষার মডেল ফাইন-টিউনিং এর চিত্রিত গাইড](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.bn.png)
 
 ## ভাষার মডেলের জন্য ফাইন-টিউনিং কী?
 
