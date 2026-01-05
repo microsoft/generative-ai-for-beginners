@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # உரை உருவாக்க பயன்பாடுகளை உருவாக்குதல்
 
-[![உரை உருவாக்க பயன்பாடுகளை உருவாக்குதல்](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.ta.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![உரை உருவாக்க பயன்பாடுகளை உருவாக்குதல்](../../../translated_images/06-lesson-banner.a5c629f990a636c8.ta.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(மேலே உள்ள படத்தை கிளிக் செய்து இந்த பாடத்தின் வீடியோவைப் பாருங்கள்)_
 

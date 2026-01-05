@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # மேம்பட்ட ப்ராம்ப்ட்களை உருவாக்குதல்
 
-[![மேம்பட்ட ப்ராம்ப்ட்களை உருவாக்குதல்](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ta.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![மேம்பட்ட ப்ராம்ப்ட்களை உருவாக்குதல்](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.ta.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 முந்தைய அத்தியாயத்தில் கற்றுக்கொண்டவற்றை மீண்டும் நினைவூட்டுவோம்:
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Take Advanced Steps for Prompts
 
-[![How to Take Advanced Steps for Prompts](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.pcm.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![How to Take Advanced Steps for Prompts](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.pcm.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Make we look back wetin we don learn for di last chapter:
 

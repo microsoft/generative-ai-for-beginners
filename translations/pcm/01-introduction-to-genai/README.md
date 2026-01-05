@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.pcm.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduction to Generative AI and Large Language Models](../../../translated_images/01-lesson-banner.2424cfd092f43366.pcm.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Click di image wey dey up to watch di video for dis lesson)_
 
@@ -43,7 +43,7 @@ Our startup team sabi say we no fit reach dis goal if we no use one of di strong
 
 Generative AI dey change di way we dey learn and teach today, students fit get virtual teachers wey dey available 24 hours wey dey give plenty information and examples, and teachers fit use new tools to check how students dey do and give feedback.
 
-![Five young students dey look monitor - image by DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.pcm.png)
+![Five young students dey look monitor - image by DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.pcm.png)
 
 To start, make we define some basic tins and words wey we go dey use for dis curriculum.
 
@@ -69,7 +69,7 @@ Dis na di technology wey dey power di virtual assistants wey start for di first 
 
 Na so we take reach Generative AI today, wey be one part of deep learning.
 
-![AI, ML, DL and Generative AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.pcm.png)
+![AI, ML, DL and Generative AI](../../../translated_images/AI-diagram.c391fa518451a40d.pcm.png)
 
 After many years of research for AI, new model architecture – wey dem dey call _Transformer_ – don pass di limit of RNNs, e fit take longer text as input. Transformers dey use attention mechanism, wey make di model dey give different weight to di inputs e receive, ‘pay attention’ to di important information, no matter di order for di text.
 
@@ -81,7 +81,7 @@ For di next chapter we go look different types of Generative AI models, but for 
 
 - **Tokenizer, text to numbers**: Large Language Models dey take text as input and dey generate text as output. But because dem be statistical models, dem dey work better with numbers than text. Na why every input to di model dey pass through tokenizer before e reach di main model. Token na small piece of text – wey fit get different number of characters, so di tokenizer dey split di input into array of tokens. Then, each token go get token index, wey be di number wey represent di original text.
 
-![Example of tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.pcm.png)
+![Example of tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.pcm.png)
 
 - **Predicting output tokens**: If di model get n tokens as input (di max n dey different for each model), e fit predict one token as output. Dis token go join di input for di next round, like expanding window, wey dey make di user experience better as e dey give one or more sentences as answer. Na why, if you don use ChatGPT before, you go notice say sometimes e dey stop for middle of sentence.
 
@@ -98,23 +98,23 @@ Di input for large language model na wetin dem dey call prompt, while di output 
 
   1. Summary of article, book, product reviews and more, plus extraction of information from unstructured data.
     
-    ![Example of summarization](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.pcm.png)
+    ![Example of summarization](../../../translated_images/summarization-example.7b7ff97147b3d790.pcm.png)
   
   2. Creative ideas and writing of article, essay, assignment or more.
       
-     ![Example of creative writing](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.pcm.png)
+     ![Example of creative writing](../../../translated_images/creative-writing-example.e24a685b5a543ad1.pcm.png)
 
 - One **question**, wey person go ask like conversation with di agent.
   
-  ![Example of conversation](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.pcm.png)
+  ![Example of conversation](../../../translated_images/conversation-example.60c2afc0f595fa59.pcm.png)
 
 - One piece of **text to complete**, wey dey indirectly ask for writing help.
   
-  ![Example of text completion](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.pcm.png)
+  ![Example of text completion](../../../translated_images/text-completion-example.cbb0f28403d42752.pcm.png)
 
 - One piece of **code** with di ask to explain and document am, or comment wey dey ask to generate code wey go do one specific task.
   
-  ![Coding example](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.pcm.png)
+  ![Coding example](../../../translated_images/coding-example.50ebabe8a6afff20.pcm.png)
 
 Di examples wey dey up dey simple and no dey show all di things wey Large Language Models fit do. Dem dey show di potential of generative AI, especially for education.
 

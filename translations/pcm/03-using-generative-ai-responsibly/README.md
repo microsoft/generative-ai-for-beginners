@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Use Generative AI Well
 
-[![How to Use Generative AI Well](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.pcm.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![How to Use Generative AI Well](../../../translated_images/03-lesson-banner.1ed56067a452d977.pcm.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Click di image wey dey up to watch di video for dis lesson_
 
@@ -85,7 +85,7 @@ Dis kind output no just dey bad for di product experience wey we dey build for o
 
 Now we don talk about why Responsible Generative AI dey important, make we look 4 steps we fit take to build our AI solutions well:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.pcm.png)
+![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.pcm.png)
 
 ### Measure Potential Harms
 
@@ -97,7 +97,7 @@ Since our startup dey build education product, e go good make we prepare list of
 
 Now na time to find ways wey we fit stop or reduce di potential harm wey di model and di responses fit cause. We fit look dis one for 4 different layers:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.pcm.png)
+![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.pcm.png)
 
 - **Model**. Choose di right model for di right use case. Big and complex models like GPT-4 fit cause more risk of harmful content if you use am for small and specific use cases. Use your training data to fine-tune di model to reduce di risk of harmful content.
 

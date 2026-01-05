@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Build App Wey Dey Generate Image
 
-[![How to Build App Wey Dey Generate Image](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.pcm.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![How to Build App Wey Dey Generate Image](../../../translated_images/09-lesson-banner.906e408c741f4411.pcm.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs no be only for text generation. Dem fit also generate image from text description. To get image as one modality fit help well well for plenty areas like MedTech, architecture, tourism, game development and others. For dis chapter, we go look two popular image generation models, DALL-E and Midjourney.
 
@@ -43,7 +43,7 @@ For dis lesson, we go still dey work with our startup, Edu4All. The students go 
 
 Example, if Edu4All students dey work for class on monuments, dem fit generate something like dis:
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.pcm.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5a.pcm.png)
 
 with prompt like:
 
@@ -273,9 +273,9 @@ Example with GPT Image:
   The base image go only get lounge with pool but the final image go get flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Make we look example of how temperature dey work, by running dis prompt two time
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.pcm.png)
+![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.pcm.png)
 
 Now make we run the same prompt again to see say we no go get the same image twice:
 
-![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.pcm.png)
+![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61d.pcm.png)
 
 As you fit see, the images dey similar, but dem no be the same. Make we try change the temperature value to 0.1 and see wetin go happen:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Now when you run dis code, you go get dis two images:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.pcm.png)
-- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.pcm.png)
+- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.pcm.png)
+- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.pcm.png)
 
 Here you fit clearly see how the images resemble each other more.
 

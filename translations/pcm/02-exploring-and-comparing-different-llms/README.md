@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Exploring and comparing different LLMs
 
-[![Exploring and comparing different LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.pcm.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Exploring and comparing different LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60.pcm.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Click di image wey dey up to watch di video for dis lesson_
 
@@ -59,14 +59,14 @@ Di term Foundation Model na [Stanford researchers coin am](https://arxiv.org/abs
 - **Dem be very big models**, wey dey based on very deep neural networks wey dem train on billions of parameters.
 - **Dem dey meant to serve as ‘foundation’ for other models**, meaning dem fit dey use as starting point for other models wey dem go build on top, wey dem fit do by fine-tuning.
 
-![Foundation Models versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.pcm.png)
+![Foundation Models versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.pcm.png)
 
 Image source: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 To explain dis difference more, make we use ChatGPT as example. To build di first version of ChatGPT, dem use one model wey dem call GPT-3.5 as di foundation model. Dis mean say OpenAI use some chat-specific data to create one tuned version of GPT-3.5 wey dem specialize to perform well for chat situations, like chatbots.
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.pcm.png)
+![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51.pcm.png)
 
 Image source: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLMs fit dey categorize by di output wey dem dey generate.
 
 Embeddings na models wey fit change text into numbers, wey dem dey call embedding, wey be numerical representation of di input text. Embeddings dey make am easy for machines to sabi di relationship between words or sentences and fit dey use as input for other models, like classification models, or clustering models wey dey perform better on numerical data. Embedding models dey often use for transfer learning, where dem dey build model for one task wey get plenty data, and then dem dey reuse di model weights (embeddings) for other tasks. Example of dis category na [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.pcm.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.pcm.png)
 
 Image generation models na models wey dey generate images. Dem dey often use for image editing, image synthesis, and image translation. Image generation models dey train on big datasets of images, like [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), and dem fit use am to create new images or edit old ones with inpainting, super-resolution, and colorization techniques. Examples na [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) and [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.pcm.png)
+![Image generation](../../../translated_images/Image.349c080266a763fd.pcm.png)
 
 Text and code generation models na models wey dey generate text or code. Dem dey often use for text summarization, translation, and question answering. Text generation models dey train on big datasets of text, like [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), and dem fit use am to create new text, or answer questions. Code generation models, like [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), dey train on big datasets of code, like GitHub, and dem fit use am to create new code, or fix bugs for old code.
 
-![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.pcm.png)
+![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0.pcm.png)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -123,23 +123,23 @@ Most of di models wey we mention for di previous paragraphs (OpenAI models, open
 
 - Find di Foundation Model wey dem need for di catalog - whether e be proprietary or open source, dem fit filter am by task, license, or name. To make search easy, di models dey arranged inside collections, like Azure OpenAI collection, Hugging Face collection, and others.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.pcm.png)
+![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.pcm.png)
 
 - Check di model card, wey go include detailed description of how dem suppose use am and di training data, code samples, and evaluation results from di internal evaluations library.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.pcm.png)
+![Model card](../../../translated_images/ModelCard.598051692c6e400d.pcm.png)
 
 - Compare benchmarks across models and datasets wey dey available for di industry to know which one go fit di business scenario, through di [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) pane.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.pcm.png)
+![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.pcm.png)
 
 - Fine-tune di model on custom training data to make di model perform better for one specific workload, using di experimentation and tracking features wey dey Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.pcm.png)
+![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.pcm.png)
 
 - Deploy di original pre-trained model or di fine-tuned version to remote real-time inference - managed compute - or serverless api endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - so dat applications fit dey use am.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.pcm.png)
+![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.pcm.png)
 
 > [!NOTE]
 > No be all di models wey dey di catalog fit dey fine-tuned and/or pay-as-you-go deployment. Make you check di model card for di details about di model capabilities and limitations.
@@ -158,7 +158,7 @@ E get different ways wey business fit use to get di results wey dem need from LL
 
 - **Fine-tuned model**. Dis one na when you train di model more with your own data so di model go dey more accurate and go fit meet your needs well, but e fit cost.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.pcm.png)
+![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.pcm.png)
 
 Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
