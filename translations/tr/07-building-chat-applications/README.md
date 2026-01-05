@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Üretken Yapay Zeka Destekli Sohbet Uygulamaları Geliştirme
 
-[![Üretken Yapay Zeka Destekli Sohbet Uygulamaları Geliştirme](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.tr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Üretken Yapay Zeka Destekli Sohbet Uygulamaları Geliştirme](../../../translated_images/07-lesson-banner.a279b937f2843833.tr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
@@ -96,11 +96,11 @@ Genel UX prensipleri sohbet uygulamaları için geçerlidir, ancak makine öğre
 
 Kişiselleştirmeye bir örnek, OpenAI'nin ChatGPT'sindeki "Özel talimatlar" ayarlarıdır. Bu ayar, istemleriniz için önemli bağlam olabilecek kendinizle ilgili bilgileri sağlamanıza olanak tanır. İşte bir özel talimat örneği.
 
-![ChatGPT'deki Özel Talimatlar Ayarları](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.tr.png)
+![ChatGPT'deki Özel Talimatlar Ayarları](../../../translated_images/custom-instructions.b96f59aa69356fcf.tr.png)
 
 Bu "profil", ChatGPT'ye bağlı listeler hakkında bir ders planı oluşturmasını ister. ChatGPT'nin, kullanıcının deneyimine dayanarak daha derinlemesine bir ders planı isteyebileceğini dikkate aldığını fark edin.
 
-![Bağlı listeler hakkında bir ders planı için ChatGPT'de bir istem](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.tr.png)
+![Bağlı listeler hakkında bir ders planı için ChatGPT'de bir istem](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.tr.png)
 
 ### Microsoft'un Büyük Dil Modelleri için Sistem Mesajı Çerçevesi
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Üretken Yapay Zekayı Sorumlu Şekilde Kullanma
 
-[![Üretken Yapay Zekayı Sorumlu Şekilde Kullanma](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.tr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Üretken Yapay Zekayı Sorumlu Şekilde Kullanma](../../../translated_images/03-lesson-banner.1ed56067a452d977.tr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın_
 
@@ -85,7 +85,7 @@ Bu tür çıktılar, kullanıcılarımız için olumlu ürün deneyimleri oluşt
 
 Artık Sorumlu Üretken Yapay Zeka'nın önemini belirlediğimize göre, yapay zeka çözümlerimizi sorumlu bir şekilde oluşturmak için atabileceğimiz 4 adıma bakalım:
 
-![Azaltma Döngüsü](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.tr.png)
+![Azaltma Döngüsü](../../../translated_images/mitigate-cycle.babcd5a5658e1775.tr.png)
 
 ### Potansiyel Zararları Ölçün
 
@@ -97,7 +97,7 @@ Girişimimiz bir eğitim ürünü oluşturduğundan, eğitimle ilgili istemlerin
 
 Artık modelin ve yanıtlarının neden olabileceği potansiyel zararı önlemek veya sınırlamak için yollar bulma zamanı. Bunu 4 farklı katmanda inceleyebiliriz:
 
-![Azaltma Katmanları](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.tr.png)
+![Azaltma Katmanları](../../../translated_images/mitigation-layers.377215120b9a1159.tr.png)
 
 - **Model**. Doğru kullanım durumu için doğru modeli seçmek. GPT-4 gibi daha büyük ve karmaşık modeller, daha küçük ve daha spesifik kullanım durumlarına uygulandığında zararlı içerik riski oluşturabilir. Eğitim verilerinizi kullanarak ince ayar yapmak, zararlı içerik riskini de azaltır.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gelişmiş İstekler Oluşturma
 
-[![Gelişmiş İstekler Oluşturma](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.tr.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Gelişmiş İstekler Oluşturma](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.tr.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Önceki bölümden bazı öğrenimleri tekrar gözden geçirelim:
 
