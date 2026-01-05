@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Merancang UX untuk Aplikasi AI
 
-[![Merancang UX untuk Aplikasi AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.id.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Merancang UX untuk Aplikasi AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.id.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klik gambar di atas untuk menonton video pelajaran ini)_
 
@@ -58,7 +58,7 @@ Menjadi aksesibel berarti memperluas pengalaman pengguna kepada pengguna dengan 
 
 Menjadi menyenangkan berarti aplikasi mudah digunakan dan memberikan pengalaman yang menarik. Pengalaman pengguna yang menarik dapat memberikan dampak positif pada pengguna, mendorong mereka untuk kembali menggunakan aplikasi dan meningkatkan pendapatan bisnis.
 
-![gambar yang menggambarkan pertimbangan UX dalam AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.id.png)
+![gambar yang menggambarkan pertimbangan UX dalam AI](../../../translated_images/uxinai.d5b4ed690f5cefff.id.png)
 
 Tidak setiap tantangan dapat diselesaikan dengan AI. AI hadir untuk meningkatkan pengalaman pengguna, baik itu mengotomatisasi tugas manual atau mempersonalisasi pengalaman pengguna.
 
@@ -72,25 +72,25 @@ Dua cara untuk memastikan bahwa kepercayaan menjadi pusat desain adalah keterjel
 
 Ketika AI membantu menginformasikan keputusan seperti memberikan pengetahuan kepada generasi mendatang, sangat penting bagi guru dan orang tua untuk memahami bagaimana keputusan AI dibuat. Inilah yang disebut keterjelasan - memahami bagaimana aplikasi AI membuat keputusan. Merancang untuk keterjelasan mencakup penambahan detail yang menyoroti bagaimana AI mencapai hasil. Audiens harus menyadari bahwa hasil tersebut dihasilkan oleh AI dan bukan manusia. Misalnya, daripada mengatakan "Mulai mengobrol dengan tutor Anda sekarang" katakan "Gunakan tutor AI yang beradaptasi dengan kebutuhan Anda dan membantu Anda belajar sesuai kecepatan Anda."
 
-![halaman awal aplikasi dengan ilustrasi yang jelas tentang keterjelasan dalam aplikasi AI](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.id.png)
+![halaman awal aplikasi dengan ilustrasi yang jelas tentang keterjelasan dalam aplikasi AI](../../../translated_images/explanability-in-ai.134426a96b498fbf.id.png)
 
 Contoh lainnya adalah bagaimana AI menggunakan data pengguna dan data pribadi. Misalnya, seorang pengguna dengan persona siswa mungkin memiliki batasan berdasarkan persona mereka. AI mungkin tidak dapat memberikan jawaban langsung tetapi dapat membantu membimbing pengguna untuk berpikir bagaimana mereka dapat menyelesaikan masalah.
 
-![AI merespons pertanyaan berdasarkan persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.id.png)
+![AI merespons pertanyaan berdasarkan persona](../../../translated_images/solving-questions.b7dea1604de0cbd2.id.png)
 
 Bagian penting terakhir dari keterjelasan adalah penyederhanaan penjelasan. Siswa dan guru mungkin bukan ahli AI, oleh karena itu penjelasan tentang apa yang dapat atau tidak dapat dilakukan oleh aplikasi harus disederhanakan dan mudah dipahami.
 
-![penjelasan yang disederhanakan tentang kemampuan AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.id.png)
+![penjelasan yang disederhanakan tentang kemampuan AI](../../../translated_images/simplified-explanations.4679508a406c3621.id.png)
 
 ### Kontrol
 
 AI generatif menciptakan kolaborasi antara AI dan pengguna, di mana misalnya pengguna dapat memodifikasi prompt untuk mendapatkan hasil yang berbeda. Selain itu, setelah hasil dihasilkan, pengguna harus dapat memodifikasi hasil tersebut sehingga mereka merasa memiliki kendali. Misalnya, saat menggunakan Bing, Anda dapat menyesuaikan prompt Anda berdasarkan format, nada, dan panjang. Selain itu, Anda dapat menambahkan perubahan pada hasil Anda dan memodifikasi hasil tersebut seperti yang ditunjukkan di bawah ini:
 
-![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.id.png)
+![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/bing1.293ae8527dbe2789.id.png)
 
 Fitur lain di Bing yang memungkinkan pengguna memiliki kendali atas aplikasi adalah kemampuan untuk memilih masuk dan keluar dari data yang digunakan AI. Untuk aplikasi sekolah, seorang siswa mungkin ingin menggunakan catatan mereka serta sumber daya guru sebagai bahan revisi.
 
-![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.id.png)
+![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/bing2.309f4845528a88c2.id.png)
 
 > Saat merancang aplikasi AI, penting untuk memastikan pengguna tidak terlalu percaya sehingga menetapkan ekspektasi yang tidak realistis terhadap kemampuannya. Salah satu cara untuk melakukan ini adalah dengan menciptakan friksi antara prompt dan hasil. Mengingatkan pengguna bahwa ini adalah AI dan bukan manusia.
 
@@ -102,7 +102,7 @@ Aplikasi AI harus dirancang untuk menerima dan memberikan umpan balik. Hal ini t
 
 Cara lain untuk menangani ini adalah dengan secara jelas mengkomunikasikan kemampuan dan keterbatasan sistem. Ketika pengguna membuat kesalahan dengan meminta sesuatu di luar kemampuan AI, harus ada cara untuk menangani hal ini, seperti yang ditunjukkan di bawah ini.
 
-![Memberikan umpan balik dan menangani kesalahan](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.id.png)
+![Memberikan umpan balik dan menangani kesalahan](../../../translated_images/feedback-loops.7955c134429a9466.id.png)
 
 Kesalahan sistem adalah hal yang umum pada aplikasi di mana pengguna mungkin membutuhkan bantuan dengan informasi di luar cakupan AI atau aplikasi mungkin memiliki batasan pada berapa banyak pertanyaan/subjek yang dapat dihasilkan ringkasannya oleh pengguna. Misalnya, aplikasi AI yang dilatih dengan data pada subjek terbatas seperti Sejarah dan Matematika mungkin tidak dapat menangani pertanyaan tentang Geografi. Untuk mengatasi ini, sistem AI dapat memberikan respons seperti: "Maaf, produk kami telah dilatih dengan data dalam subjek berikut....., saya tidak dapat menjawab pertanyaan yang Anda ajukan."
 

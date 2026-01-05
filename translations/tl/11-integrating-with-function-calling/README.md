@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagsasama ng function calling
 
-[![Pagsasama ng function calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.tl.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Pagsasama ng function calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.tl.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Marami ka nang natutunan sa mga nakaraang aralin. Gayunpaman, maaari pa nating pagbutihin ito. Ilan sa mga bagay na maaari nating tugunan ay kung paano makakakuha ng mas pare-parehong format ng sagot upang mas madali itong magamit sa mga susunod na proseso. Bukod dito, maaaring gusto nating magdagdag ng data mula sa ibang mga mapagkukunan upang mas mapagyaman ang ating aplikasyon.
 
@@ -179,7 +179,7 @@ Ngayon maaari nating ipadala ang parehong mga kahilingan sa LLM at suriin ang sa
 
 Paano natin malulutas ang problema sa pag-format? Sa pamamagitan ng paggamit ng functional calling, masisiguro natin na makakatanggap tayo ng nakaayos na data pabalik. Kapag gumagamit ng function calling, ang LLM ay hindi aktwal na tumatawag o nagpapatakbo ng anumang mga function. Sa halip, gumagawa tayo ng istruktura para sundin ng LLM sa mga sagot nito. Ginagamit natin ang mga nakaayos na sagot upang malaman kung anong function ang tatakbo sa ating mga aplikasyon.
 
-![daloy ng function](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.tl.png)
+![daloy ng function](../../../translated_images/Function-Flow.083875364af4f4bb.tl.png)
 
 Maaari nating kunin ang ibinalik mula sa function at ipadala ito pabalik sa LLM. Ang LLM ay magbibigay ng sagot gamit ang natural na wika upang sagutin ang query ng user.
 
@@ -201,7 +201,7 @@ Ang proseso ng paglikha ng function call ay binubuo ng 3 pangunahing hakbang:
 2. **Pagbasa** sa sagot ng modelo upang magsagawa ng aksyon, halimbawa, magpatakbo ng function o API Call.
 3. **Paggawa** ng isa pang tawag sa Chat Completions API gamit ang sagot mula sa iyong function upang magamit ang impormasyong iyon upang lumikha ng sagot para sa user.
 
-![Daloy ng LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.tl.png)
+![Daloy ng LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.tl.png)
 
 ### Hakbang 1 - paggawa ng mga mensahe
 

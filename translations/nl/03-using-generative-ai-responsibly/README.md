@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Verantwoord Gebruik van Generatieve AI
 
-[![Verantwoord Gebruik van Generatieve AI](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.nl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Verantwoord Gebruik van Generatieve AI](../../../translated_images/03-lesson-banner.1ed56067a452d977.nl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klik op de afbeelding hierboven om de video van deze les te bekijken_
 
@@ -85,7 +85,7 @@ Dit soort outputs zijn niet alleen destructief voor het bouwen van positieve pro
 
 Nu we het belang van Verantwoordelijke Generatieve AI hebben geïdentificeerd, laten we kijken naar 4 stappen die we kunnen nemen om onze AI-oplossingen verantwoord te bouwen:
 
-![Mitigatiecyclus](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.nl.png)
+![Mitigatiecyclus](../../../translated_images/mitigate-cycle.babcd5a5658e1775.nl.png)
 
 ### Potentiële Schade Meten
 
@@ -97,7 +97,7 @@ Aangezien onze startup een educatieproduct bouwt, zou het goed zijn om een lijst
 
 Het is nu tijd om manieren te vinden waarop we de potentiële schade veroorzaakt door het model en zijn reacties kunnen voorkomen of beperken. We kunnen dit bekijken in 4 verschillende lagen:
 
-![Mitigatielagen](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.nl.png)
+![Mitigatielagen](../../../translated_images/mitigation-layers.377215120b9a1159.nl.png)
 
 - **Model**. Het juiste model kiezen voor de juiste use case. Grotere en complexere modellen zoals GPT-4 kunnen meer risico op schadelijke inhoud veroorzaken wanneer ze worden toegepast op kleinere en specifiekere use cases. Het gebruik van je trainingsdata om te fine-tunen vermindert ook het risico op schadelijke inhoud.
 

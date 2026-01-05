@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Verkennen en vergelijken van verschillende LLM's
 
-[![Verkennen en vergelijken van verschillende LLM's](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.nl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Verkennen en vergelijken van verschillende LLM's](../../../translated_images/02-lesson-banner.ef94c84979f97f60.nl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klik op de afbeelding hierboven om de video van deze les te bekijken_
 
@@ -59,14 +59,14 @@ De term Foundation Model werd [bedacht door Stanford-onderzoekers](https://arxiv
 - **Het zijn zeer grote modellen**, gebaseerd op zeer diepe neurale netwerken die zijn getraind op miljarden parameters.
 - **Ze zijn normaal gesproken bedoeld als 'fundament' voor andere modellen**, wat betekent dat ze kunnen worden gebruikt als startpunt voor andere modellen die daarop kunnen worden gebouwd, wat kan worden gedaan door fine-tuning.
 
-![Foundation Models versus LLM's](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.nl.png)
+![Foundation Models versus LLM's](../../../translated_images/FoundationModel.e4859dbb7a825c94.nl.png)
 
 Afbeeldingsbron: [Essential Guide to Foundation Models and Large Language Models | door Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Om dit onderscheid verder te verduidelijken, nemen we ChatGPT als voorbeeld. Om de eerste versie van ChatGPT te bouwen, diende een model genaamd GPT-3.5 als het foundation model. Dit betekent dat OpenAI enkele chat-specifieke gegevens gebruikte om een afgestemde versie van GPT-3.5 te creëren die gespecialiseerd was in het goed presteren in conversatiescenario's, zoals chatbots.
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.nl.png)
+![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51.nl.png)
 
 Afbeeldingsbron: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM's kunnen ook worden gecategoriseerd op basis van de output die ze genereren.
 
 Embeddings zijn een set modellen die tekst kunnen omzetten in een numerieke vorm, genaamd embedding, wat een numerieke representatie is van de invoertekst. Embeddings maken het gemakkelijker voor machines om de relaties tussen woorden of zinnen te begrijpen en kunnen worden gebruikt als invoer door andere modellen, zoals classificatiemodellen of clusteringmodellen die beter presteren op numerieke gegevens. Embedding-modellen worden vaak gebruikt voor transfer learning, waarbij een model wordt gebouwd voor een surrogaattaak waarvoor een overvloed aan gegevens beschikbaar is, en vervolgens worden de modelgewichten (embeddings) hergebruikt voor andere downstream-taken. Een voorbeeld van deze categorie is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.nl.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.nl.png)
 
 Beeldgeneratiemodellen zijn modellen die beelden genereren. Deze modellen worden vaak gebruikt voor beeldbewerking, beeldsynthese en beeldvertaling. Beeldgeneratiemodellen worden vaak getraind op grote datasets van beelden, zoals [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), en kunnen worden gebruikt om nieuwe beelden te genereren of bestaande beelden te bewerken met technieken zoals inpainting, superresolutie en inkleuring. Voorbeelden zijn [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) en [Stable Diffusion-modellen](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Beeldgeneratie](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.nl.png)
+![Beeldgeneratie](../../../translated_images/Image.349c080266a763fd.nl.png)
 
 Tekst- en codegeneratiemodellen zijn modellen die tekst of code genereren. Deze modellen worden vaak gebruikt voor tekstsamenvatting, vertaling en vraagbeantwoording. Tekstgeneratiemodellen worden vaak getraind op grote datasets van tekst, zoals [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), en kunnen worden gebruikt om nieuwe tekst te genereren of om vragen te beantwoorden. Codegeneratiemodellen, zoals [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), worden vaak getraind op grote datasets van code, zoals GitHub, en kunnen worden gebruikt om nieuwe code te genereren of om bugs in bestaande code te repareren.
 
-![Tekst- en codegeneratie](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.nl.png)
+![Tekst- en codegeneratie](../../../translated_images/Text.a8c0cf139e5cc2a0.nl.png)
 
 ### Encoder-Decoder versus Alleen Decoder
 
@@ -123,23 +123,23 @@ De meeste modellen die we in de vorige paragrafen hebben genoemd (OpenAI-modelle
 
 - Het gewenste Foundation Model in de catalogus te vinden - zowel eigendom als open source - door te filteren op taak, licentie of naam. Om de zoekbaarheid te verbeteren, zijn de modellen georganiseerd in collecties, zoals de Azure OpenAI-collectie, Hugging Face-collectie en meer.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.nl.png)
+![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.nl.png)
 
 - De modelkaart te bekijken, inclusief een gedetailleerde beschrijving van het beoogde gebruik en trainingsdata, codevoorbeelden en evaluatieresultaten uit de interne evaluatiebibliotheek.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.nl.png)
+![Model card](../../../translated_images/ModelCard.598051692c6e400d.nl.png)
 
 - Benchmarks te vergelijken tussen modellen en datasets die beschikbaar zijn in de industrie om te beoordelen welke het beste past bij het bedrijfsscenario, via het [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-paneel.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.nl.png)
+![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.nl.png)
 
 - Het model te fine-tunen op aangepaste trainingsdata om de prestaties van het model te verbeteren voor een specifieke werklast, gebruikmakend van de experimenteer- en trackingmogelijkheden van Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.nl.png)
+![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.nl.png)
 
 - Het originele voorgetrainde model of de fijn-afgestelde versie te implementeren voor realtime inferentie op een beheerde compute-omgeving of een serverloze API-eindpunt - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - zodat toepassingen het kunnen gebruiken.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.nl.png)
+![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.nl.png)
 
 > [!NOTE]
 > Niet alle modellen in de catalogus zijn momenteel beschikbaar voor fine-tuning en/of pay-as-you-go implementatie. Controleer de modelkaart voor details over de mogelijkheden en beperkingen van het model.
@@ -158,7 +158,7 @@ Er zijn verschillende benaderingen die een bedrijf kan gebruiken om de gewenste 
 
 - **Fijn-afgesteld model**. Hierbij train je het model verder op je eigen data, wat leidt tot een model dat nauwkeuriger en responsiever is voor jouw behoeften, maar mogelijk kostbaar is.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.nl.png)
+![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.nl.png)
 
 Afbeeldingsbron: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

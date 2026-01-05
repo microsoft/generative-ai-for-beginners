@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tl"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.tl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.tl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Panimula
 
@@ -33,7 +33,7 @@ Ang AI Agents ay isang napaka-kapana-panabik na larangan sa mundo ng Generative 
 
 Ang AI Agents ay nagbibigay-daan sa Large Language Models (LLMs) na magsagawa ng mga gawain sa pamamagitan ng pagbibigay sa kanila ng access sa **estado** at **mga tools**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.tl.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.tl.png)
 
 Tukuyin natin ang mga terminong ito:
 
@@ -53,7 +53,7 @@ Upang pamahalaan ang **estado**, gumagamit ito ng built-in na function na tinata
 
 Ang `Agent Executor` ay nag-iimbak din ng chat history upang magbigay ng konteksto ng chat.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.tl.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.tl.png)
 
 Nag-aalok ang LangChain ng [catalog ng tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) na maaaring i-import sa iyong aplikasyon kung saan makakakuha ng access ang LLM. Ang mga ito ay ginawa ng komunidad at ng LangChain team.
 
@@ -85,7 +85,7 @@ Upang baguhin at pamahalaan ang estado, ang isang assistant Agent ay bumubuo ng 
 
 Narito ang isang halimbawa ng proseso:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.tl.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.tl.png)
 
 #### LLM na Tinukoy gamit ang System Message
 
@@ -129,7 +129,7 @@ Upang pamahalaan ang estado ng pag-uusap, gumagamit ang TaskWeaver ng konsepto n
 
 Upang makumpleto ang mga gawain, ang `Planner` ay may access sa koleksyon ng mga tools na tinatawag na `Plugins`. Maaari itong mga Python classes o isang pangkalahatang code interpreter. Ang mga plugin na ito ay naka-imbak bilang embeddings upang mas mahusay na mahanap ng LLM ang tamang plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.tl.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.tl.png)
 
 Narito ang isang halimbawa ng plugin para sa anomaly detection:
 
@@ -143,7 +143,7 @@ Ang code ay nabe-verify bago isagawa. Isa pang tampok upang pamahalaan ang konte
 
 Ang huling agent framework na ating susuriin ay [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Ang natatangi sa JARVIS ay gumagamit ito ng isang LLM upang pamahalaan ang `estado` ng pag-uusap at ang `tools` ay iba pang AI models. Ang bawat isa sa mga AI models ay mga specialized models na gumaganap ng partikular na mga gawain tulad ng object detection, transcription, o image captioning.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.tl.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.tl.png)
 
 Ang LLM, bilang isang general purpose model, ay tumatanggap ng kahilingan mula sa user at tinutukoy ang partikular na gawain at anumang mga argumento/data na kinakailangan upang makumpleto ang gawain.
 

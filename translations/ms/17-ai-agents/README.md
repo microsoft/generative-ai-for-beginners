@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ms"
 }
 -->
-[![Model Sumber Terbuka](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ms.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Model Sumber Terbuka](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ms.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Pengenalan
 
@@ -33,7 +33,7 @@ Ejen AI adalah bidang yang sangat menarik dalam dunia AI Generatif. Dengan keter
 
 Ejen AI membolehkan Model Bahasa Besar (LLM) melaksanakan tugas dengan memberikan mereka akses kepada **keadaan** dan **alat**.
 
-![Model Ejen](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ms.png)
+![Model Ejen](../../../translated_images/what-agent.21f2893bdfd01e6a.ms.png)
 
 Mari kita definisikan istilah ini:
 
@@ -53,7 +53,7 @@ Untuk menguruskan **keadaan**, ia menggunakan fungsi terbina dalam yang dipanggi
 
 `Agent Executor` juga menyimpan sejarah perbualan untuk memberikan konteks perbualan.
 
-![Ejen LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ms.png)
+![Ejen LangChain](../../../translated_images/langchain-agents.edcc55b5d5c43716.ms.png)
 
 LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang boleh diimport ke dalam aplikasi anda di mana LLM boleh mendapatkan akses. Alat ini dibuat oleh komuniti dan pasukan LangChain.
 
@@ -85,7 +85,7 @@ Untuk menukar dan menguruskan keadaan, Ejen pembantu menjana kod Python untuk me
 
 Berikut adalah contoh prosesnya:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ms.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ms.png)
 
 #### LLM Ditakrifkan dengan Mesej Sistem
 
@@ -129,7 +129,7 @@ Untuk menguruskan keadaan perbualan, TaskWeaver menggunakan konsep `Planner`. `P
 
 Untuk melengkapkan tugas, `Planner` didedahkan kepada koleksi alat yang dipanggil `Plugins`. Ini boleh menjadi kelas Python atau jurubahasa kod umum. Plugin ini disimpan sebagai embeddings supaya LLM boleh mencari plugin yang betul dengan lebih baik.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ms.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ms.png)
 
 Berikut adalah contoh plugin untuk mengendalikan pengesanan anomali:
 
@@ -143,7 +143,7 @@ Kod disahkan sebelum dilaksanakan. Satu lagi ciri untuk menguruskan konteks dala
 
 Rangka kerja ejen terakhir yang akan kita terokai ialah [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Apa yang menjadikan JARVIS unik ialah ia menggunakan LLM untuk menguruskan `keadaan` perbualan dan `alat` adalah model AI lain. Setiap model AI adalah model khusus yang melaksanakan tugas tertentu seperti pengesanan objek, transkripsi atau kapsyen imej.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ms.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ms.png)
 
 LLM, sebagai model tujuan umum, menerima permintaan daripada pengguna dan mengenal pasti tugas tertentu serta sebarang argumen/data yang diperlukan untuk melengkapkan tugas.
 

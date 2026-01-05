@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "id"
 }
 -->
-[![Model Open Source](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.id.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Model Open Source](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.id.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Pendahuluan
 
@@ -33,7 +33,7 @@ AI Agents adalah bidang yang sangat menarik dalam dunia Generative AI. Dengan an
 
 AI Agents memungkinkan Large Language Models (LLMs) melakukan tugas dengan memberikan mereka akses ke **state** dan **tools**.
 
-![Model Agen](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.id.png)
+![Model Agen](../../../translated_images/what-agent.21f2893bdfd01e6a.id.png)
 
 Mari kita definisikan istilah-istilah ini:
 
@@ -53,7 +53,7 @@ Untuk mengelola **state**, LangChain menggunakan fungsi bawaan yang disebut `Age
 
 `AgentExecutor` juga menyimpan riwayat percakapan untuk memberikan konteks percakapan.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.id.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.id.png)
 
 LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang dapat diimpor ke aplikasi Anda sehingga LLM dapat mengaksesnya. Alat-alat ini dibuat oleh komunitas dan tim LangChain.
 
@@ -85,7 +85,7 @@ Untuk mengubah dan mengelola state, Assistant Agent menghasilkan kode Python unt
 
 Berikut adalah contoh prosesnya:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.id.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.id.png)
 
 #### LLM Didefinisikan dengan Pesan Sistem
 
@@ -129,7 +129,7 @@ Untuk mengelola state percakapan, TaskWeaver menggunakan konsep `Planner`. `Plan
 
 Untuk menyelesaikan tugas-tugas tersebut, `Planner` memiliki akses ke koleksi alat yang disebut `Plugins`. Plugins ini bisa berupa kelas Python atau interpreter kode umum. Plugins ini disimpan sebagai embeddings sehingga LLM dapat lebih baik mencari plugin yang tepat.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.id.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.id.png)
 
 Berikut adalah contoh plugin untuk menangani deteksi anomali:
 
@@ -143,7 +143,7 @@ Kode ini diverifikasi sebelum dieksekusi. Fitur lain untuk mengelola konteks di 
 
 Kerangka kerja agent terakhir yang akan kita eksplorasi adalah [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Yang membuat JARVIS unik adalah ia menggunakan LLM untuk mengelola `state` percakapan dan `tools` adalah model AI lainnya. Setiap model AI adalah model khusus yang melakukan tugas tertentu seperti deteksi objek, transkripsi, atau penjelasan gambar.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.id.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.id.png)
 
 LLM, sebagai model tujuan umum, menerima permintaan dari pengguna dan mengidentifikasi tugas spesifik serta argumen/data yang diperlukan untuk menyelesaikan tugas tersebut.
 

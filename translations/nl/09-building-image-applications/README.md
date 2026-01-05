@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Applicaties voor beeldgeneratie bouwen
 
-[![Applicaties voor beeldgeneratie bouwen](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.nl.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Applicaties voor beeldgeneratie bouwen](../../../translated_images/09-lesson-banner.906e408c741f4411.nl.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Er is meer mogelijk met LLMs dan alleen tekstgeneratie. Het is ook mogelijk om afbeeldingen te genereren op basis van tekstbeschrijvingen. Het gebruik van afbeeldingen als modaliteit kan zeer nuttig zijn in verschillende gebieden zoals MedTech, architectuur, toerisme, gameontwikkeling en meer. In dit hoofdstuk bekijken we de twee meest populaire modellen voor beeldgeneratie, DALL-E en Midjourney.
 
@@ -43,7 +43,7 @@ Als onderdeel van deze les blijven we werken met onze startup, Edu4All. De stude
 
 Hier is een voorbeeld van wat de studenten van Edu4All zouden kunnen genereren als ze in de klas werken aan monumenten:
 
-![Edu4All startup, klas over monumenten, Eiffeltoren](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.nl.png)
+![Edu4All startup, klas over monumenten, Eiffeltoren](../../../translated_images/startup.94d6b79cc4bb3f5a.nl.png)
 
 met een prompt zoals:
 
@@ -272,9 +272,9 @@ Hier is een voorbeeld met GPT Image:
   De basisafbeelding zou alleen de lounge met zwembad bevatten, maar de uiteindelijke afbeelding zou een flamingo hebben:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.nl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.nl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.nl.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.nl.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.nl.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.nl.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -299,11 +299,11 @@ Laten we een voorbeeld bekijken van hoe temperatuur werkt door deze prompt twee 
 
 > Prompt: "Konijn op paard, met een lolly, op een mistige weide waar narcissen groeien"
 
-![Konijn op een paard met een lolly, versie 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.nl.png)
+![Konijn op een paard met een lolly, versie 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.nl.png)
 
 Nu voeren we dezelfde prompt opnieuw uit om te zien dat we niet twee keer dezelfde afbeelding krijgen:
 
-![Gegenereerde afbeelding van konijn op paard](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.nl.png)
+![Gegenereerde afbeelding van konijn op paard](../../../translated_images/v2-generated-image.33f55a3714efe61d.nl.png)
 
 Zoals je kunt zien, lijken de afbeeldingen op elkaar, maar zijn ze niet hetzelfde. Laten we proberen de temperatuurwaarde te veranderen naar 0,1 en kijken wat er gebeurt:
 
@@ -332,8 +332,8 @@ generation_response = client.images.create(
 
 Nu krijg je bij het uitvoeren van deze code de volgende twee afbeeldingen:
 
-- ![Temperatuur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.nl.png)
-- ![Temperatuur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.nl.png)
+- ![Temperatuur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.nl.png)
+- ![Temperatuur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.nl.png)
 
 Hier kun je duidelijk zien hoe de afbeeldingen meer op elkaar lijken.
 

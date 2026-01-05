@@ -68,7 +68,7 @@ Untuk memastikan pautan anda berfungsi dengan betul, gunakan VS code untuk memer
 
 Contohnya, apabila anda mengarahkan kursor ke atas mana-mana pautan dalam fail anda, anda akan diberi pilihan untuk mengikuti pautan dengan menekan **ctrl + klik**
 
-![Tangkapan skrin VS code ikut pautan](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.ms.png)
+![Tangkapan skrin VS code ikut pautan](../../translated_images/vscode-follow-link.85520ab6a1237adc.ms.png)
 
 Jika anda klik pada pautan dan ia tidak berfungsi secara tempatan, sudah tentu ia akan mencetuskan aliran kerja dan tidak akan berfungsi di GitHub.
 
@@ -76,7 +76,7 @@ Untuk membetulkan isu ini, cuba taip pautan dengan bantuan VS code.
 
 Apabila anda menaip `./` atau `../` VS code akan memberi pilihan untuk memilih dari pilihan yang tersedia mengikut apa yang anda taip.
 
-![Tangkapan skrin VS code pilih laluan relatif](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.ms.png)
+![Tangkapan skrin VS code pilih laluan relatif](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ms.png)
 
 Ikuti laluan dengan mengklik pada fail atau folder yang dikehendaki dan anda akan pasti bahawa laluan anda tidak rosak.
 
@@ -93,7 +93,7 @@ Jika ia ditambah pada laluan relatif anda, anda akan lulus pemeriksaan ini.
 
 Jika tidak, anda mungkin mendapat ralat berikut.
 
-![Tangkapan skrin komen GitHub semak laluan tiada penjejakan](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.ms.png)
+![Tangkapan skrin komen GitHub semak laluan tiada penjejakan](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ms.png)
 
 Untuk membetulkan isu ini, cuba buka laluan fail yang diserlahkan oleh aliran kerja dan tambah ID penjejakan di hujung laluan relatif.
 
@@ -110,7 +110,7 @@ Jika ia ditambah pada URL anda, anda akan lulus pemeriksaan ini.
 
 Jika tidak, anda mungkin mendapat ralat berikut.
 
-![Tangkapan skrin komen GitHub semak URL tiada penjejakan](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.ms.png)
+![Tangkapan skrin komen GitHub semak URL tiada penjejakan](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ms.png)
 
 Untuk membetulkan isu ini, cuba buka laluan fail yang diserlahkan oleh aliran kerja dan tambah ID penjejakan di hujung URL.
 
@@ -127,7 +127,7 @@ Jika ia tidak ada dalam URL anda, anda akan lulus pemeriksaan ini.
 
 Jika tidak, anda mungkin mendapat ralat berikut.
 
-![Tangkapan skrin komen GitHub semak lokal negara](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.ms.png)
+![Tangkapan skrin komen GitHub semak lokal negara](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ms.png)
 
 Untuk membetulkan isu ini, cuba buka laluan fail yang diserlahkan oleh aliran kerja dan keluarkan lokal negara dari URL.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membina Aplikasi Penjanaan Teks
 
-[![Membina Aplikasi Penjanaan Teks](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.ms.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Membina Aplikasi Penjanaan Teks](../../../translated_images/06-lesson-banner.a5c629f990a636c8.ms.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klik imej di atas untuk menonton video pelajaran ini)_
 
