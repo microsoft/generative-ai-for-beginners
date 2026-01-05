@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge applikasjoner for tekstgenerering
 
-[![Bygge applikasjoner for tekstgenerering](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.no.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Bygge applikasjoner for tekstgenerering](../../../translated_images/06-lesson-banner.a5c629f990a636c8.no.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klikk på bildet ovenfor for å se videoen til denne leksjonen)_
 

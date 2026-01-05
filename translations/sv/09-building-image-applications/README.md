@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygga applikationer för bildgenerering
 
-[![Bygga applikationer för bildgenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sv.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Bygga applikationer för bildgenerering](../../../translated_images/09-lesson-banner.906e408c741f4411.sv.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Det finns mer att utforska med LLM än bara textgenerering. Det är också möjligt att generera bilder från textbeskrivningar. Att ha bilder som en modalitet kan vara mycket användbart inom flera områden som MedTech, arkitektur, turism, spelutveckling och mer. I detta kapitel kommer vi att titta på de två mest populära modellerna för bildgenerering, DALL-E och Midjourney.
 
@@ -43,7 +43,7 @@ Som en del av denna lektion kommer vi att fortsätta arbeta med vår startup, Ed
 
 Här är vad Edu4Alls studenter kan generera, till exempel om de arbetar i klassrummet med monument:
 
-![Edu4All startup, klass om monument, Eiffeltornet](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sv.png)
+![Edu4All startup, klass om monument, Eiffeltornet](../../../translated_images/startup.94d6b79cc4bb3f5a.sv.png)
 
 med en prompt som
 
@@ -273,9 +273,9 @@ Här är ett exempel med GPT Image:
   Basbilden skulle bara innehålla loungen med poolen men slutbilden skulle ha en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.sv.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.sv.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.sv.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.sv.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.sv.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.sv.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Låt oss titta på ett exempel på hur temperatur fungerar genom att köra denna
 
 > Prompt: "Kanin på häst, håller en klubba, på en dimmig äng där det växer påskliljor"
 
-![Kanin på häst som håller en klubba, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sv.png)
+![Kanin på häst som håller en klubba, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.sv.png)
 
 Nu låt oss köra samma prompt igen för att se att vi inte får samma bild två gånger:
 
-![Genererad bild av kanin på häst](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sv.png)
+![Genererad bild av kanin på häst](../../../translated_images/v2-generated-image.33f55a3714efe61d.sv.png)
 
 Som du kan se är bilderna liknande, men inte identiska. Låt oss försöka ändra temperaturvärdet till 0.1 och se vad som händer:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Nu när du kör denna kod får du dessa två bilder:
 
-- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sv.png)
-- ![Temperatur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sv.png)
+- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.sv.png)
+- ![Temperatur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.sv.png)
 
 Här kan du tydligt se hur bilderna liknar varandra mer.
 

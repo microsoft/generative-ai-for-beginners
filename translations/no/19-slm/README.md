@@ -33,7 +33,7 @@ SLM-er trenes på store mengder tekstdata. Under treningen lærer de mønstre og
 
 Utviklingen av SLM-er samsvarer med det økende behovet for modeller som kan distribueres i ressursbegrensede miljøer, som mobile enheter eller edge computing-plattformer, hvor fullskala LLM-er kan være upraktiske på grunn av deres store ressursbehov. Ved å fokusere på effektivitet balanserer SLM-er ytelse med tilgjengelighet, noe som muliggjør bredere anvendelse på tvers av ulike domener.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.no.png)
+![slm](../../../translated_images/slm.4058842744d0444a.no.png)
 
 ## Læringsmål  
 
@@ -135,7 +135,7 @@ Vi kan bruke Phi-3/3.5-familien basert på ulike scenarier. I motsetning til LLM
 
 Vi ønsker å bruke Phi-3/3.5 i ulike scenarier. Neste steg er å bruke Phi-3/3.5 basert på forskjellige situasjoner.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.no.png)
+![phi3](../../../translated_images/phi3.655208c3186ae381.no.png)
 
 ### Forskjeller i inferens via Cloud API  
 
@@ -145,9 +145,9 @@ GitHub Models er den mest direkte måten. Du kan raskt få tilgang til Phi-3/3.5
 
 - Demo: Sammenligning av effektene til Phi-3-mini og Phi-3.5-mini i kinesiske scenarier
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.no.png)
+![phi3](../../../translated_images/gh1.126c6139713b622b.no.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.no.png)
+![phi35](../../../translated_images/gh2.07d7985af66f178d.no.png)
 
 **Azure AI Studio**  
 

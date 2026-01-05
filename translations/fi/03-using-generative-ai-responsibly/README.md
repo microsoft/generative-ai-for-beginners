@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatiivisen tekoälyn vastuullinen käyttö
 
-[![Generatiivisen tekoälyn vastuullinen käyttö](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.fi.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Generatiivisen tekoälyn vastuullinen käyttö](../../../translated_images/03-lesson-banner.1ed56067a452d977.fi.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon_
 
@@ -85,7 +85,7 @@ Tämän tyyppiset tuotokset eivät ainoastaan tuhoa positiivisten tuotekokemuste
 
 Nyt kun olemme tunnistaneet vastuullisen generatiivisen tekoälyn merkityksen, tarkastellaan neljää askelta, joita voimme ottaa rakentaaksemme tekoälyratkaisujamme vastuullisesti:
 
-![Vähentämisen sykli](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.fi.png)
+![Vähentämisen sykli](../../../translated_images/mitigate-cycle.babcd5a5658e1775.fi.png)
 
 ### Mahdollisten haittojen mittaaminen
 
@@ -97,7 +97,7 @@ Koska startupimme rakentaa koulutustuotetta, olisi hyvä valmistella lista koulu
 
 On nyt aika löytää tapoja, joilla voimme estää tai rajoittaa mallin ja sen vastausten aiheuttamia mahdollisia haittoja. Voimme tarkastella tätä neljällä eri tasolla:
 
-![Vähentämisen tasot](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.fi.png)
+![Vähentämisen tasot](../../../translated_images/mitigation-layers.377215120b9a1159.fi.png)
 
 - **Malli**. Oikean mallin valitseminen oikeaan käyttötapaukseen. Suuremmat ja monimutkaisemmat mallit, kuten GPT-4, voivat aiheuttaa enemmän haitallisen sisällön riskiä, kun niitä sovelletaan pienempiin ja tarkempiin käyttötapauksiin. Koulutusdatan käyttäminen hienosäätöön vähentää myös haitallisen sisällön riskiä.
 

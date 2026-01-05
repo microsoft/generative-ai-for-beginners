@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Για παράδειγμα, όταν τοποθετείτε τον κέρσορα πάνω από οποιονδήποτε σύνδεσμο στα αρχεία σας, θα σας προταθεί να ακολουθήσετε τον σύνδεσμο πατώντας **ctrl + κλικ**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.el.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.el.png)
 
 Αν κάνετε κλικ σε έναν σύνδεσμο και δεν λειτουργεί τοπικά, τότε σίγουρα θα ενεργοποιήσει το workflow και δεν θα λειτουργήσει στο GitHub.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Όταν πληκτρολογείτε `./` ή `../`, το VS code θα σας προτείνει επιλογές σύμφωνα με ό,τι πληκτρολογήσατε.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.el.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.el.png)
 
 Ακολουθήστε τη διαδρομή κάνοντας κλικ στο επιθυμητό αρχείο ή φάκελο και θα είστε σίγουροι ότι η διαδρομή σας δεν είναι σπασμένη.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αν όχι, μπορεί να λάβετε το παρακάτω σφάλμα.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.el.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.el.png)
 
 Για να διορθώσετε αυτό το πρόβλημα, ανοίξτε τη διαδρομή αρχείου που επισημάνθηκε από το workflow και προσθέστε το αναγνωριστικό παρακολούθησης στο τέλος των σχετικών διαδρομών.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αν όχι, μπορεί να λάβετε το παρακάτω σφάλμα.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.el.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.el.png)
 
 Για να διορθώσετε αυτό το πρόβλημα, ανοίξτε τη διαδρομή αρχείου που επισημάνθηκε από το workflow και προσθέστε το αναγνωριστικό παρακολούθησης στο τέλος των διευθύνσεων URL.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αν όχι, μπορεί να λάβετε το παρακάτω σφάλμα.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.el.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.el.png)
 
 Για να διορθώσετε αυτό το πρόβλημα, ανοίξτε τη διαδρομή αρχείου που επισημάνθηκε από το workflow και αφαιρέστε την τοπική ρύθμιση χώρας από τις διευθύνσεις URL.
 

@@ -68,7 +68,7 @@ For å være sikker på at lenkene dine fungerer, bruk VS Code til å sjekke det
 
 For eksempel, når du holder musepekeren over en lenke i filene dine, får du mulighet til å følge lenken ved å trykke **ctrl + klikk**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.no.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.no.png)
 
 Hvis du klikker på en lenke og den ikke fungerer lokalt, vil workflowen mest sannsynlig feile og lenken vil ikke fungere på GitHub.
 
@@ -76,7 +76,7 @@ For å fikse dette, prøv å skrive lenken med hjelp fra VS Code.
 
 Når du skriver `./` eller `../` vil VS Code foreslå tilgjengelige alternativer basert på det du har skrevet.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.no.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.no.png)
 
 Følg stien ved å klikke på ønsket fil eller mappe, så er du sikker på at stien ikke er ødelagt.
 
@@ -93,7 +93,7 @@ Hvis den er lagt til, vil du bestå sjekken.
 
 Hvis ikke, kan du få følgende feil.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.no.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.no.png)
 
 For å fikse dette, åpne filstien workflowen har markert og legg til sporings-ID på slutten av de relative stiene.
 
@@ -110,7 +110,7 @@ Hvis den er lagt til, vil du bestå sjekken.
 
 Hvis ikke, kan du få følgende feil.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.no.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.no.png)
 
 For å fikse dette, åpne filstien workflowen har markert og legg til sporings-ID på slutten av URL-ene.
 
@@ -127,7 +127,7 @@ Hvis den ikke er til stede, vil du bestå sjekken.
 
 Hvis ikke, kan du få følgende feil.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.no.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.no.png)
 
 For å fikse dette, åpne filstien workflowen har markert og fjern landsspesifikk lokalitet fra URL-ene.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrering med funksjonskall
 
-[![Integrering med funksjonskall](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.no.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrering med funksjonskall](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.no.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Du har lært en god del så langt i de tidligere leksjonene. Men vi kan fortsatt forbedre oss. Noen ting vi kan ta tak i er hvordan vi kan få et mer konsistent responsformat for å gjøre det enklere å jobbe med responsen videre. I tillegg kan vi ønske å legge til data fra andre kilder for å berike applikasjonen vår ytterligere.
 
@@ -179,7 +179,7 @@ Nå kan vi sende begge forespørslene til LLM og undersøke responsen vi mottar 
 
 Så hvordan løser vi formateringsproblemet da? Ved å bruke funksjonskall kan vi sørge for at vi får strukturert data tilbake. Når vi bruker funksjonskall, kaller eller kjører LLM faktisk ikke noen funksjoner. I stedet oppretter vi en struktur for LLM å følge for sine svar. Vi bruker deretter disse strukturerte svarene for å vite hvilken funksjon vi skal kjøre i våre applikasjoner.
 
-![funksjonsflyt](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.no.png)
+![funksjonsflyt](../../../translated_images/Function-Flow.083875364af4f4bb.no.png)
 
 Vi kan deretter ta det som returneres fra funksjonen og sende dette tilbake til LLM. LLM vil deretter svare ved å bruke naturlig språk for å besvare brukerens forespørsel.
 
@@ -201,7 +201,7 @@ Prosessen med å opprette et funksjonskall inkluderer 3 hovedtrinn:
 2. **Lese** modellens respons for å utføre en handling, dvs. kjøre en funksjon eller API-forespørsel.
 3. **Gjøre** en ny samtale til Chat Completions API med responsen fra funksjonen din for å bruke den informasjonen til å lage et svar til brukeren.
 
-![LLM-flyt](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.no.png)
+![LLM-flyt](../../../translated_images/LLM-Flow.3285ed8caf4796d7.no.png)
 
 ### Trinn 1 - opprette meldinger
 

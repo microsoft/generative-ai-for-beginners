@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sv"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.sv.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.sv.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduktion
 
@@ -41,12 +41,12 @@ För denna lektion kommer vi framöver att referera till modellerna som "öppna 
 
 **Kostnad** – Kostnaden per token för att använda och distribuera dessa modeller är lägre än för proprietära modeller. När man bygger Generative AI-applikationer bör man titta på prestanda kontra pris när man arbetar med dessa modeller för sitt användningsfall.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.sv.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.sv.png)
 Källa: Artificial Analysis
 
 **Flexibilitet** – Att arbeta med öppna modeller gör det möjligt att vara flexibel när det gäller att använda olika modeller eller kombinera dem. Ett exempel på detta är [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) där en användare kan välja vilken modell som används direkt i användargränssnittet:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.sv.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.sv.png)
 
 ## Utforska olika öppna modeller
 
@@ -74,7 +74,7 @@ Det finns inget enkelt svar på hur man väljer en öppen modell. En bra start �
 
 När du vill jämföra LLM:er över olika typer är [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) en annan utmärkt resurs:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.sv.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.sv.png)
 Källa: Artificial Analysis
 
 Om du arbetar med ett specifikt användningsfall kan det vara effektivt att söka efter finjusterade versioner som är fokuserade på samma område. Att experimentera med flera öppna modeller för att se hur de presterar enligt dina och dina användares förväntningar är också en bra metod.

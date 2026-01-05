@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "el"
 }
 -->
-[![Ανοιχτά Μοντέλα Πηγής](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.el.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Ανοιχτά Μοντέλα Πηγής](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.el.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Εισαγωγή
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Οι Πράκτορες Τεχνητής Νοημοσύνης επιτρέπουν στα Μεγάλα Γλωσσικά Μοντέλα (LLMs) να εκτελούν εργασίες παρέχοντάς τους πρόσβαση σε **κατάσταση** και **εργαλεία**.
 
-![Μοντέλο Πράκτορα](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.el.png)
+![Μοντέλο Πράκτορα](../../../translated_images/what-agent.21f2893bdfd01e6a.el.png)
 
 Ας ορίσουμε αυτούς τους όρους:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ο `AgentExecutor` αποθηκεύει επίσης το ιστορικό συνομιλιών για να παρέχει το πλαίσιο της συνομιλίας.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.el.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.el.png)
 
 Το LangChain προσφέρει έναν [κατάλογο εργαλείων](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) που μπορούν να εισαχθούν στην εφαρμογή σας, στα οποία το LLM μπορεί να αποκτήσει πρόσβαση. Αυτά δημιουργούνται από την κοινότητα και την ομάδα του LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 Ακολουθεί ένα παράδειγμα της διαδικασίας:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.el.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.el.png)
 
 #### LLM Ορισμένο με Μήνυμα Συστήματος
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 Για να ολοκληρώσει τις εργασίες, ο `Planner` έχει πρόσβαση σε μια συλλογή εργαλείων που ονομάζονται `Plugins`. Αυτά μπορεί να είναι κλάσεις Python ή ένας γενικός διερμηνέας κώδικα. Αυτά τα plugins αποθηκεύονται ως embeddings ώστε το LLM να μπορεί να αναζητήσει καλύτερα το σωστό plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.el.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.el.png)
 
 Ακολουθεί ένα παράδειγμα plugin για την ανίχνευση ανωμαλιών:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 Το τελευταίο πλαίσιο πρακτόρων που θα εξερευνήσουμε είναι το [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Αυτό που κάνει το JARVIS μοναδικό είναι ότι χρησιμοποιεί ένα LLM για να διαχειριστεί την `κατάσταση` της συνομιλίας και τα `εργαλεία` είναι άλλα μοντέλα AI. Κάθε ένα από τα μοντέλα AI είναι εξειδικευμένα μοντέλα που εκτελούν συγκεκριμένες εργασίες όπως ανίχνευση αντικειμένων, μεταγραφή ή περιγραφή εικόνων.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.el.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.el.png)
 
 Το LLM, ως γενικό μοντέλο, λαμβάνει το αίτημα από τον χρήστη και προσδιορίζει τη συγκεκριμένη εργασία και οποιαδήποτε επιχειρήματα/δεδομένα χρειάζονται για την ολοκλήρωση της εργασίας.
 

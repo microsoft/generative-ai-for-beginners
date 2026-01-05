@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygga generativa AI-drivna chattapplikationer
 
-[![Bygga generativa AI-drivna chattapplikationer](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.sv.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Bygga generativa AI-drivna chattapplikationer](../../../translated_images/07-lesson-banner.a279b937f2843833.sv.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klicka på bilden ovan för att se videon till denna lektion)_
 
@@ -96,11 +96,11 @@ Allmänna UX-principer gäller för chattapplikationer, men här är några ytte
 
 Ett exempel på personalisering är inställningen "Anpassade instruktioner" i OpenAI:s ChatGPT. Det låter dig ge information om dig själv som kan vara viktig kontext för dina promptar. Här är ett exempel på en anpassad instruktion.
 
-![Anpassade instruktioner i ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.sv.png)
+![Anpassade instruktioner i ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.sv.png)
 
 Denna "profil" uppmanar ChatGPT att skapa en lektionsplan om länkade listor. Lägg märke till att ChatGPT tar hänsyn till att användaren kanske vill ha en mer detaljerad lektionsplan baserat på hennes erfarenhet.
 
-![En prompt i ChatGPT för en lektionsplan om länkade listor](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.sv.png)
+![En prompt i ChatGPT för en lektionsplan om länkade listor](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.sv.png)
 
 ### Microsofts systemmeddelanderamverk för stora språkmodeller
 
