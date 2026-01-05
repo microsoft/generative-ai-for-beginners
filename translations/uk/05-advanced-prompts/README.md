@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Створення розширених підказок
 
-[![Створення розширених підказок](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.uk.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Створення розширених підказок](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.uk.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Давайте згадаємо деякі уроки з попереднього розділу:
 
