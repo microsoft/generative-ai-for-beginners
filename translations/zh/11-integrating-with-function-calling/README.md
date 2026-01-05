@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 集成函数调用
 
-[![集成函数调用](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.zh.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![集成函数调用](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.zh.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 在之前的课程中，你已经学到了不少内容。然而，我们仍然可以进一步改进。我们可以解决的一些问题包括如何获得更一致的响应格式，以便更容易在后续处理响应。此外，我们可能希望从其他来源添加数据，以进一步丰富我们的应用程序。
 
@@ -179,7 +179,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 那么我们如何解决格式化问题呢？通过使用函数调用，我们可以确保收到结构化数据。当使用函数调用时，LLM 实际上并不会调用或运行任何函数。相反，我们为 LLM 创建一个结构，以便其响应遵循该结构。然后我们使用这些结构化响应来确定在我们的应用程序中运行哪些函数。
 
-![函数流程](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.zh.png)
+![函数流程](../../../translated_images/Function-Flow.083875364af4f4bb.zh.png)
 
 然后我们可以将函数返回的内容发送回 LLM。LLM 随后会使用自然语言回答用户的查询。
 
@@ -201,7 +201,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. **读取**模型的响应以执行操作，例如运行函数或 API 调用。
 3. **再次调用** Chat Completions API，使用函数的响应生成用户的自然语言回复。
 
-![LLM 流程](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.zh.png)
+![LLM 流程](../../../translated_images/LLM-Flow.3285ed8caf4796d7.zh.png)
 
 ### 第一步 - 创建消息
 

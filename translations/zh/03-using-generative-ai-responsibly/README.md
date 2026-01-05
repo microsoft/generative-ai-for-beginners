@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 负责任地使用生成式人工智能
 
-[![负责任地使用生成式人工智能](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.zh.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![负责任地使用生成式人工智能](../../../translated_images/03-lesson-banner.1ed56067a452d977.zh.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _点击上方图片观看本课视频_
 
@@ -85,7 +85,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 现在我们已经确定了负责任生成式人工智能的重要性，让我们来看看可以采取的四个步骤，以负责任的方式构建我们的人工智能解决方案：
 
-![缓解循环](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.zh.png)
+![缓解循环](../../../translated_images/mitigate-cycle.babcd5a5658e1775.zh.png)
 
 ### 测量潜在危害
 
@@ -97,7 +97,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 现在是时候找到方法来防止或限制模型及其响应可能造成的潜在危害了。我们可以从四个不同的层面来看：
 
-![缓解层](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.zh.png)
+![缓解层](../../../translated_images/mitigation-layers.377215120b9a1159.zh.png)
 
 - **模型**。为特定用例选择合适的模型。像GPT-4这样更大、更复杂的模型在应用于较小且更具体的用例时可能会带来更多有害内容的风险。使用您的训练数据进行微调也可以减少有害内容的风险。
 

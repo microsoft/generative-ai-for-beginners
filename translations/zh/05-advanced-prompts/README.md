@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 创建高级提示
 
-[![创建高级提示](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.zh.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![创建高级提示](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.zh.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 让我们回顾一下上一章的学习内容：
 

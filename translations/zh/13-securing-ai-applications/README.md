@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 保护您的生成式 AI 应用程序
 
-[![保护您的生成式 AI 应用程序](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.zh.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![保护您的生成式 AI 应用程序](../../../translated_images/13-lesson-banner.14103e36b4bbf173.zh.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## 介绍
 
@@ -104,7 +104,7 @@ OpenAI 作为 AI 系统的领导者，已经建立了一系列 _安全评估_，
 
 > AI红队实践的意义已经扩展：它不仅涵盖了对安全漏洞的探测，还包括对其他系统故障的探测，例如生成潜在有害内容。AI系统带来了新的风险，而红队测试是理解这些新风险的核心，例如提示注入和生成无依据内容。 - [微软AI红队构建更安全的AI未来](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![红队测试的指导和资源](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.zh.png)]()
+[![红队测试的指导和资源](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.zh.png)]()
 
 以下是塑造微软AI红队计划的关键见解。
 
