@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 例如，當您將滑鼠移至檔案中的連結上方時，會提示您按 **ctrl + click** 以追蹤連結。
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.tw.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.tw.png)
 
 若您點擊連結後在本地端無法開啟，工作流程也會因此失敗，GitHub 上同樣無法正常運作。
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 當您輸入 `./` 或 `../` 時，VS Code 會根據您輸入的內容，提示可選擇的檔案或資料夾。
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.tw.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.tw.png)
 
 點擊想要的檔案或資料夾，即可確保路徑正確無誤。
 
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.tw.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.tw.png)
 
 解決方法是打開工作流程標示的檔案路徑，並在相對路徑結尾加上追蹤 ID。
 
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.tw.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.tw.png)
 
 解決方法是打開工作流程標示的檔案路徑，並在 URL 結尾加上追蹤 ID。
 
@@ -123,7 +123,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若有，您可能會看到以下錯誤訊息。
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.tw.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.tw.png)
 
 解決方法是打開工作流程標示的檔案路徑，並移除 URL 中的國家語系。
 

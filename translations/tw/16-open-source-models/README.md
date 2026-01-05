@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tw"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.tw.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.tw.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## 介紹
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **成本** — 使用和部署這些模型的每個 token 成本低於專有模型。建構生成式 AI 應用時，應根據您的使用案例評估性能與價格的平衡。
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.tw.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.tw.png)
 來源：Artificial Analysis
 
 **彈性** — 使用開源模型讓您在使用不同模型或將它們結合時更具彈性。例如，[HuggingChat 助理](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)允許使用者直接在介面中選擇所使用的模型：
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.tw.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.tw.png)
 
 ## 探索不同的開源模型
 
@@ -74,7 +74,7 @@ Falcon 的微調版本範例包括基於開源模型打造的[OpenAssistant](htt
 
 若想跨類型比較LLM，[Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)是另一個很好的資源：
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.tw.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.tw.png)
 來源：Artificial Analysis
 
 針對特定使用案例，搜尋專注於相同領域的微調版本會很有效。嘗試多個開源模型，根據您和使用者的期望評估其表現，也是良好做法。

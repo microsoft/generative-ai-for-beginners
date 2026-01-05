@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-[![開源模型](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.mo.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![開源模型](../../../translated_images/18-lesson-banner.f30176815b1a5074.mo.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # 微調您的大型語言模型 (LLM)
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 想在深入學習之前了解我們將涵蓋的內容的大致框架嗎？查看這份圖解指南，它描述了本課程的學習旅程——從學習微調的核心概念和動機，到理解執行微調任務的過程和最佳實踐。這是一個值得探索的有趣主題，因此不要忘記查看[資源](./RESOURCES.md?WT.mc_id=academic-105485-koreyst)頁面，獲取支持您自主學習旅程的額外鏈接！
 
-![語言模型微調圖解指南](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.mo.png)
+![語言模型微調圖解指南](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.mo.png)
 
 ## 什麼是語言模型的微調？
 

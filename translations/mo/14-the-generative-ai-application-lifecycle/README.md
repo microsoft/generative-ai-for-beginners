@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.mo.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac12.mo.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # 生成式 AI 應用程式生命週期
 
@@ -30,7 +30,7 @@ LLM 是人工智能武器庫中的新工具，它們在應用程式的分析和�
 
 因此，我們需要一個新的範式，以動態且具正確激勵的方式適應這個工具。我們可以將較舊的 AI 應用程式歸類為「ML 應用程式」，而較新的 AI 應用程式則稱為「生成式 AI 應用程式」或簡稱「AI 應用程式」，反映當時主流的技術和方法。這在多方面改變了我們的敘事，請看以下比較。
 
-![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.mo.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.mo.png)
 
 請注意，在 LLMOps 中，我們更關注應用程式開發者，將整合作為關鍵點，使用「模型即服務」並考慮以下指標：
 
@@ -44,7 +44,7 @@ LLM 是人工智能武器庫中的新工具，它們在應用程式的分析和�
 
 首先，為了理解生命週期及其變化，請參考下方資訊圖表。
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.mo.png)
+![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645.mo.png)
 
 如您所見，這與傳統 MLOps 的生命週期不同。LLM 有許多新需求，如提示工程、提升品質的不同技術（微調、RAG、元提示）、負責任 AI 的不同評估與責任，以及新的評估指標（品質、風險、誠實、成本和延遲）。
 
@@ -54,7 +54,7 @@ LLM 是人工智能武器庫中的新工具，它們在應用程式的分析和�
 
 我們如何探索這些步驟？讓我們詳細了解如何建立生命週期。
 
-![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.mo.png)
+![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.mo.png)
 
 這看起來可能有點複雜，先聚焦於三個主要步驟。
 
@@ -74,11 +74,11 @@ LLM 是人工智能武器庫中的新工具，它們在應用程式的分析和�
 
 [Azure AI 平台](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) 允許您使用 [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)。AI Studio 是一個網頁入口，讓您探索模型、範例和工具。管理資源、UI 開發流程以及 SDK/CLI 選項，支援以程式碼為先的開發。
 
-![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.mo.png)
+![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.mo.png)
 
 Azure AI 允許您使用多種資源，管理您的運營、服務、專案、向量搜尋和資料庫需求。
 
-![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.mo.png)
+![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.mo.png)
 
 從概念驗證（POC）到大規模應用，使用 PromptFlow：
 
@@ -86,7 +86,7 @@ Azure AI 允許您使用多種資源，管理您的運營、服務、專案、�
 - 輕鬆測試和微調您的應用程式，確保 AI 品質
 - 使用 Azure AI Studio 進行整合和迭代，快速推送和部署
 
-![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.mo.png)
+![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.mo.png)
 
 ## 太好了！繼續您的學習！
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 與函數調用整合
 
-[![與函數調用整合](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.hk.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![與函數調用整合](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.hk.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 在之前的課程中，你已經學到了不少內容。然而，我們還可以進一步改進。一些可以解決的問題包括如何獲得更一致的回應格式，以便於後續處理回應。此外，我們可能希望從其他來源添加數據，以進一步豐富我們的應用程序。
 
@@ -179,7 +179,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 那麼我們該如何解決格式化問題呢？通過使用函數調用，我們可以確保收到結構化的數據。使用函數調用時，LLM 實際上並不會調用或運行任何函數。相反，我們為 LLM 創建一個結構，以便其遵循回應格式。然後我們使用這些結構化的回應來確定在應用程序中需要運行哪些函數。
 
-![函數流程](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.hk.png)
+![函數流程](../../../translated_images/Function-Flow.083875364af4f4bb.hk.png)
 
 接著，我們可以將函數返回的結果發送回 LLM。LLM 隨後會使用自然語言來回答用戶的問題。
 
@@ -201,7 +201,7 @@ CO_OP_TRANSLATOR_METADATA:
 2. **閱讀**模型的回應以執行操作，例如執行函數或 API 調用。
 3. **再次調用**聊天完成 API，使用函數的回應生成用戶的回應。
 
-![LLM 流程](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.hk.png)
+![LLM 流程](../../../translated_images/LLM-Flow.3285ed8caf4796d7.hk.png)
 
 ### 第一步 - 創建消息
 

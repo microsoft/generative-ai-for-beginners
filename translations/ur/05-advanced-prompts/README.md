@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ایڈوانس پرامپٹس بنانا
 
-[![ایڈوانس پرامپٹس بنانا](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ur.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![ایڈوانس پرامپٹس بنانا](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.ur.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 آئیے پچھلے باب سے کچھ سیکھنے کا خلاصہ کرتے ہیں:
 

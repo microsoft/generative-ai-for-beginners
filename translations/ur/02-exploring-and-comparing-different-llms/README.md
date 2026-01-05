@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # مختلف LLMs کا جائزہ اور موازنہ
 
-[![مختلف LLMs کا جائزہ اور موازنہ](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.ur.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![مختلف LLMs کا جائزہ اور موازنہ](../../../translated_images/02-lesson-banner.ef94c84979f97f60.ur.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _اوپر دی گئی تصویر پر کلک کریں تاکہ اس سبق کی ویڈیو دیکھ سکیں_
 
@@ -59,13 +59,13 @@ LLMs کی کئی مختلف اقسام ہیں، آپ کا ماڈل کا انتخ
 - **یہ بہت بڑے ماڈلز ہیں**، بہت گہرے نیورل نیٹ ورکس پر مبنی ہیں جو اربوں پیرامیٹرز پر تربیت یافتہ ہیں۔
 - **یہ عام طور پر دوسرے ماڈلز کے لیے 'بنیاد' کے طور پر کام کرنے کے لیے بنائے گئے ہیں**، یعنی انہیں دوسرے ماڈلز کے لیے نقطہ آغاز کے طور پر استعمال کیا جا سکتا ہے، جسے فائن ٹیوننگ کے ذریعے بنایا جا سکتا ہے۔
 
-![فاؤنڈیشن ماڈلز بمقابلہ LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.ur.png)
+![فاؤنڈیشن ماڈلز بمقابلہ LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.ur.png)
 
 تصویری ماخذ: [فاؤنڈیشن ماڈلز اور بڑے زبان کے ماڈلز کے لیے ضروری گائیڈ | بابار ایم بھٹی | میڈیم](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 اس فرق کو مزید واضح کرنے کے لیے، آئیے ChatGPT کو ایک مثال کے طور پر لیں۔ ChatGPT کا پہلا ورژن بنانے کے لیے، ایک ماڈل جسے GPT-3.5 کہا جاتا ہے، فاؤنڈیشن ماڈل کے طور پر کام کیا۔ اس کا مطلب یہ ہے کہ OpenAI نے کچھ چیٹ مخصوص ڈیٹا کا استعمال کیا تاکہ GPT-3.5 کا ایک ٹیونڈ ورژن بنایا جا سکے جو چیٹ بوٹس جیسے گفتگو کے منظرناموں میں اچھی کارکردگی کا مظاہرہ کرنے میں مہارت رکھتا تھا۔
 
-![فاؤنڈیشن ماڈل](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.ur.png)
+![فاؤنڈیشن ماڈل](../../../translated_images/Multimodal.2c389c6439e0fc51.ur.png)
 
 تصویری ماخذ: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ LLMs کو ان کے پیدا کردہ آؤٹ پٹ کے لحاظ سے بھی تق
 
 ایمبیڈنگ وہ ماڈلز ہیں جو متن کو عددی شکل میں تبدیل کر سکتے ہیں، جسے ایمبیڈنگ کہا جاتا ہے، جو ان پٹ متن کی عددی نمائندگی ہے۔ ایمبیڈنگ مشینوں کے لیے الفاظ یا جملوں کے درمیان تعلقات کو سمجھنا آسان بناتے ہیں اور دوسرے ماڈلز کے ذریعہ ان پٹ کے طور پر استعمال کیے جا سکتے ہیں، جیسے کہ درجہ بندی کے ماڈلز، یا کلسٹرنگ ماڈلز جو عددی ڈیٹا پر بہتر کارکردگی رکھتے ہیں۔ ایمبیڈنگ ماڈلز اکثر ٹرانسفر لرننگ کے لیے استعمال کیے جاتے ہیں، جہاں ایک ماڈل ایک متبادل کام کے لیے بنایا جاتا ہے جس کے لیے ڈیٹا کی کثرت ہوتی ہے، اور پھر ماڈل کے وزن (ایمبیڈنگ) کو دوسرے نیچے والے کاموں کے لیے دوبارہ استعمال کیا جاتا ہے۔ اس زمرے کی ایک مثال ہے [OpenAI ایمبیڈنگ](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)۔
 
-![ایمبیڈنگ](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.ur.png)
+![ایمبیڈنگ](../../../translated_images/Embedding.c3708fe988ccf760.ur.png)
 
 تصویر کی تخلیق کے ماڈلز وہ ماڈلز ہیں جو تصاویر تخلیق کرتے ہیں۔ یہ ماڈلز اکثر تصویر کی تدوین، تصویر کی ترکیب، اور تصویر کی ترجمہ کے لیے استعمال کیے جاتے ہیں۔ تصویر کی تخلیق کے ماڈلز اکثر تصاویر کے بڑے ڈیٹا سیٹس پر تربیت یافتہ ہوتے ہیں، جیسے [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)، اور نئی تصاویر تخلیق کرنے یا موجودہ تصاویر کو ان پینٹنگ، سپر ریزولوشن، اور کلرائزیشن تکنیکوں کے ساتھ ترمیم کرنے کے لیے استعمال کیے جا سکتے ہیں۔ مثالیں شامل ہیں [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) اور [Stable Diffusion ماڈلز](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)۔
 
-![تصویر کی تخلیق](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.ur.png)
+![تصویر کی تخلیق](../../../translated_images/Image.349c080266a763fd.ur.png)
 
 متن اور کوڈ کی تخلیق کے ماڈلز وہ ماڈلز ہیں جو متن یا کوڈ تخلیق کرتے ہیں۔ یہ ماڈلز اکثر متن کے خلاصے، ترجمہ، اور سوالات کے جوابات کے لیے استعمال کیے جاتے ہیں۔ متن کی تخلیق کے ماڈلز اکثر متن کے بڑے ڈیٹا سیٹس پر تربیت یافتہ ہوتے ہیں، جیسے [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)، اور نئے متن تخلیق کرنے یا سوالات کے جوابات دینے کے لیے استعمال کیے جا سکتے ہیں۔ کوڈ کی تخلیق کے ماڈلز، جیسے [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)، اکثر کوڈ کے بڑے ڈیٹا سیٹس پر تربیت یافتہ ہوتے ہیں، جیسے GitHub، اور نئے کوڈ تخلیق کرنے یا موجودہ کوڈ میں بگز کو ٹھیک کرنے کے لیے استعمال کیے جا سکتے ہیں۔
 
-![متن اور کوڈ کی تخلیق](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.ur.png)
+![متن اور کوڈ کی تخلیق](../../../translated_images/Text.a8c0cf139e5cc2a0.ur.png)
 
 ### انکوڈر-ڈیکوڈر بمقابلہ صرف ڈیکوڈر
 
@@ -122,23 +122,23 @@ LLMs کی مختلف اقسام کی ساخت کے بارے میں بات کرن
 
 - کیٹلاگ میں دلچسپی کے فاؤنڈیشن ماڈل کو تلاش کریں - چاہے وہ ملکیتی ہو یا اوپن سورس، کام، لائسنس، یا نام کے ذریعے فلٹر کریں۔ تلاش کو بہتر بنانے کے لیے، ماڈلز کو کلیکشنز میں منظم کیا گیا ہے، جیسے Azure OpenAI کلیکشن، Hugging Face کلیکشن، اور مزید۔
 
-![ماڈل کیٹلاگ](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.ur.png)
+![ماڈل کیٹلاگ](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.ur.png)
 
 - ماڈل کارڈ کا جائزہ لیں، جس میں استعمال کا تفصیلی بیان، تربیتی ڈیٹا، کوڈ کے نمونے، اور اندرونی تشخیص لائبریری پر تشخیص کے نتائج شامل ہیں۔
 
-![ماڈل کارڈ](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.ur.png)
+![ماڈل کارڈ](../../../translated_images/ModelCard.598051692c6e400d.ur.png)
 
 - صنعت میں دستیاب ماڈلز اور ڈیٹا سیٹس کے بینچ مارکس کا موازنہ کریں تاکہ یہ اندازہ لگایا جا سکے کہ کون سا کاروباری منظرنامے کے مطابق ہے، [ماڈل بینچ مارکس](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) پین کے ذریعے۔
 
-![ماڈل بینچ مارکس](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.ur.png)
+![ماڈل بینچ مارکس](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.ur.png)
 
 - ماڈل کی کارکردگی کو مخصوص ورک لوڈ میں بہتر بنانے کے لیے اپنی مرضی کے تربیتی ڈیٹا پر ماڈل کو فائن ٹیون کریں، Azure AI Studio کی تجرباتی اور ٹریکنگ صلاحیتوں کا فائدہ اٹھاتے ہوئے۔
 
-![ماڈل فائن ٹیوننگ](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.ur.png)
+![ماڈل فائن ٹیوننگ](../../../translated_images/FineTuning.aac48f07142e36fd.ur.png)
 
 - اصل پری ٹرینڈ ماڈل یا فائن ٹیونڈ ورژن کو ریموٹ ریئل ٹائم انفرنس - مینیجڈ کمپیوٹ - یا سرور لیس API اینڈ پوائنٹ - [پے ایز یو گو](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - پر تعینات کریں تاکہ ایپلیکیشنز اسے استعمال کر سکیں۔
 
-![ماڈل ڈیپلائمنٹ](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.ur.png)
+![ماڈل ڈیپلائمنٹ](../../../translated_images/ModelDeploy.890da48cbd0bccdb.ur.png)
 
 > [!NOTE]
 > کیٹلاگ میں موجود تمام ماڈلز فی الحال فائن ٹیوننگ اور/یا پے ایز یو گو ڈیپلائمنٹ کے لیے دستیاب نہیں ہیں۔ ماڈل کی صلاحیتوں اور حدود کی تفصیلات کے لیے ماڈل کارڈ چیک کریں۔
@@ -157,7 +157,7 @@ LLMs کی مختلف اقسام کی ساخت کے بارے میں بات کرن
 
 - **فائن ٹیونڈ ماڈل**۔ یہاں، آپ نے ماڈل کو اپنے ڈیٹا پر مزید تربیت دی ہے جس سے ماڈل آپ کی ضروریات کے لیے زیادہ درست اور جوابدہ ہو گیا ہے لیکن یہ مہنگا ہو سکتا ہے۔
 
-![LLMs ڈیپلائمنٹ](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.ur.png)
+![LLMs ڈیپلائمنٹ](../../../translated_images/Deploy.18b2d27412ec8c02.ur.png)
 
 تصویری ماخذ: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

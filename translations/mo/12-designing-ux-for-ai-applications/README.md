@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 為人工智慧應用設計使用者體驗
 
-[![為人工智慧應用設計使用者體驗](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.mo.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![為人工智慧應用設計使用者體驗](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.mo.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(點擊上方圖片觀看本課程影片)_
 
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 愉悅性意味著應用程式使用起來令人愉快。一個吸引人的使用者體驗能對使用者產生正面影響，鼓勵他們再次使用應用程式並增加業務收入。
 
-![展示人工智慧中的使用者體驗考量的圖片](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.mo.png)
+![展示人工智慧中的使用者體驗考量的圖片](../../../translated_images/uxinai.d5b4ed690f5cefff.mo.png)
 
 並非每個挑戰都能用人工智慧解決。人工智慧的作用是增強您的使用者體驗，例如自動化手動任務或個性化使用者體驗。
 
@@ -72,25 +72,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 當人工智慧幫助做出決策，例如向下一代傳授知識時，教師和家長了解人工智慧如何做出決策至關重要。這就是可解釋性——理解人工智慧應用程式如何做出決策。設計可解釋性包括添加細節，說明人工智慧如何得出輸出。使用者必須知道輸出是由人工智慧生成的，而不是人類。例如，與其說「現在開始與您的導師聊天」，不如說「使用人工智慧導師，根據您的需求進行調整，幫助您以自己的節奏學習。」
 
-![應用程式首頁展示人工智慧應用程式可解釋性的清晰示例](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.mo.png)
+![應用程式首頁展示人工智慧應用程式可解釋性的清晰示例](../../../translated_images/explanability-in-ai.134426a96b498fbf.mo.png)
 
 另一個例子是人工智慧如何使用使用者和個人資料。例如，一個具有學生角色的使用者可能會因其角色而受到限制。人工智慧可能無法直接揭示問題答案，但可以幫助引導使用者思考如何解決問題。
 
-![人工智慧根據角色回答問題](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.mo.png)
+![人工智慧根據角色回答問題](../../../translated_images/solving-questions.b7dea1604de0cbd2.mo.png)
 
 可解釋性的另一個重要部分是簡化解釋。學生和教師可能不是人工智慧專家，因此應用程式的功能和限制的解釋應簡單易懂。
 
-![簡化人工智慧功能的解釋](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.mo.png)
+![簡化人工智慧功能的解釋](../../../translated_images/simplified-explanations.4679508a406c3621.mo.png)
 
 ### 控制
 
 生成式人工智慧創造了人工智慧與使用者之間的協作，例如使用者可以修改提示以獲得不同的結果。此外，一旦生成輸出，使用者應能修改結果，讓他們感受到控制感。例如，在使用 Bing 時，您可以根據格式、語氣和長度調整您的提示。此外，您可以對輸出進行更改並修改結果，如下所示：
 
-![Bing 搜尋結果展示修改提示和輸出的選項](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.mo.png)
+![Bing 搜尋結果展示修改提示和輸出的選項](../../../translated_images/bing1.293ae8527dbe2789.mo.png)
 
 Bing 的另一個功能是允許使用者選擇是否使用人工智慧的資料。例如，學校應用程式中，學生可能希望使用自己的筆記以及教師的資源作為複習材料。
 
-![Bing 搜尋結果展示修改提示和輸出的選項](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.mo.png)
+![Bing 搜尋結果展示修改提示和輸出的選項](../../../translated_images/bing2.309f4845528a88c2.mo.png)
 
 > 在設計人工智慧應用程式時，刻意性是關鍵，確保使用者不會過度信任，對其能力設置不切實際的期望。一種方法是在提示和結果之間創造摩擦，提醒使用者這是人工智慧而不是人類。
 
@@ -102,7 +102,7 @@ Bing 的另一個功能是允許使用者選擇是否使用人工智慧的資料
 
 另一種處理方式是清楚地傳達系統的功能和限制。當使用者犯錯，要求超出人工智慧能力範圍的內容時，應有方法來處理，如下所示。
 
-![提供回饋並處理錯誤](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.mo.png)
+![提供回饋並處理錯誤](../../../translated_images/feedback-loops.7955c134429a9466.mo.png)
 
 系統錯誤在應用程式中很常見，例如使用者可能需要超出人工智慧範圍的資訊，或者應用程式可能對使用者能生成的問題/主題數量有限制。例如，一個僅以有限科目（如歷史和數學）資料訓練的人工智慧應用程式可能無法處理地理相關的問題。為了減輕這種情況，人工智慧系統可以給出如下回應：「抱歉，我們的產品僅以以下科目資料進行訓練……，我無法回答您提出的問題。」
 
