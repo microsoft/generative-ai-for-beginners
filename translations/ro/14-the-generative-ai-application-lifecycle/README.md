@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.ro.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac12.ro.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Ciclu de viață al aplicațiilor AI generative
 
@@ -30,7 +30,7 @@ LLM-urile sunt un nou instrument în arsenalul Inteligenței Artificiale, sunt i
 
 În acest sens, avem nevoie de o nouă paradigmă pentru a adapta acest instrument într-un mod dinamic, cu stimulente corecte. Putem categorisi aplicațiile AI mai vechi ca „Aplicații ML” și aplicațiile AI mai noi ca „Aplicații GenAI” sau pur și simplu „Aplicații AI”, reflectând tehnologia și tehnicile mainstream folosite la momentul respectiv. Aceasta schimbă narațiunea noastră în mai multe moduri, priviți comparația următoare.
 
-![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.ro.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.ro.png)
 
 Observați că în LLMOps, ne concentrăm mai mult pe dezvoltatorii de aplicații, folosind integrări ca punct cheie, utilizând „Modele ca Serviciu” și gândind în următorii termeni pentru metrici.
 
@@ -44,7 +44,7 @@ Observați că în LLMOps, ne concentrăm mai mult pe dezvoltatorii de aplicați
 
 Mai întâi, pentru a înțelege ciclul de viață și modificările, să observăm următoarea infografică.
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.ro.png)
+![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645.ro.png)
 
 După cum observați, acesta este diferit de ciclurile obișnuite din MLOps. LLM-urile au multe cerințe noi, cum ar fi Prompting, tehnici diferite pentru îmbunătățirea calității (Fine-Tuning, RAG, Meta-Prompts), evaluare și responsabilitate diferită cu AI responsabil, în final, metrici noi de evaluare (Calitate, Rău, Onestitate, Cost și Latență).
 
@@ -54,7 +54,7 @@ Observați că acest proces nu este liniar, ci bucle integrate, iterative și cu
 
 Cum am putea explora acești pași? Să intrăm în detaliu despre cum am putea construi un ciclu de viață.
 
-![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.ro.png)
+![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.ro.png)
 
 Acesta poate părea puțin complicat, să ne concentrăm mai întâi pe cei trei pași mari.
 
@@ -74,11 +74,11 @@ Pentru unelte, Microsoft oferă [Azure AI Platform](https://azure.microsoft.com/
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) vă permite să folosiți [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio este un portal web care vă permite să explorați modele, exemple și unelte. Gestionați resursele, fluxurile de dezvoltare UI și opțiunile SDK/CLI pentru dezvoltare Code-First.
 
-![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.ro.png)
+![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.ro.png)
 
 Azure AI vă permite să folosiți multiple resurse pentru a gestiona operațiunile, serviciile, proiectele, căutarea vectorială și nevoile de baze de date.
 
-![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.ro.png)
+![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.ro.png)
 
 Construiți, de la Proof-of-Concept (POC) până la aplicații la scară largă cu PromptFlow:
 
@@ -86,7 +86,7 @@ Construiți, de la Proof-of-Concept (POC) până la aplicații la scară largă 
 - Testați și ajustați aplicațiile pentru AI de calitate, cu ușurință.
 - Folosiți Azure AI Studio pentru a integra și itera cu cloud, împingeți și implementați pentru integrare rapidă.
 
-![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.ro.png)
+![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.ro.png)
 
 ## Grozav! Continuați să învățați!
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sk.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.sk.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Úvod
 
@@ -33,7 +33,7 @@ AI agenti sú veľmi vzrušujúcou oblasťou vo svete generatívnej AI. S týmto
 
 AI agenti umožňujú veľkým jazykovým modelom (LLM) vykonávať úlohy tým, že im poskytujú prístup k **stavu** a **nástrojom**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sk.png)
+![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.sk.png)
 
 Definujme si tieto pojmy:
 
@@ -53,7 +53,7 @@ Na správu **stavu** používa zabudovanú funkciu nazývanú `AgentExecutor`. T
 
 `AgentExecutor` tiež uchováva históriu chatu, aby poskytol kontext chatu.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sk.png)
+![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.sk.png)
 
 LangChain ponúka [katalóg nástrojov](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), ktoré je možné importovať do vašej aplikácie, v ktorej LLM môže získať prístup. Tieto nástroje sú vytvorené komunitou a tímom LangChain.
 
@@ -85,7 +85,7 @@ Na zmenu a správu stavu generuje asistent Agent kód v jazyku Python na splneni
 
 Tu je príklad procesu:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sk.png)
+![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.sk.png)
 
 #### LLM definovaný systémovou správou
 
@@ -129,7 +129,7 @@ Na správu stavu konverzácie TaskWeaver používa koncept `Plánovača`. `Plán
 
 Na splnenie úloh je `Plánovač` vystavený kolekcii nástrojov nazývaných `Pluginy`. Môžu to byť triedy v Pythone alebo všeobecný interpret kódu. Tieto pluginy sú uložené ako embeddings, aby LLM mohol lepšie vyhľadávať správny plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sk.png)
+![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.sk.png)
 
 Tu je príklad pluginu na detekciu anomálií:
 
@@ -143,7 +143,7 @@ Kód je overený pred vykonaním. Ďalšou funkciou na správu kontextu v Taskwe
 
 Posledný rámec agenta, ktorý preskúmame, je [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Čo robí JARVIS jedinečným, je to, že používa LLM na správu `stavu` konverzácie a `nástroje` sú iné AI modely. Každý z AI modelov je špecializovaný model, ktorý vykonáva určité úlohy, ako je detekcia objektov, prepis alebo popis obrázkov.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sk.png)
+![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.sk.png)
 
 LLM, ako všeobecný model, prijíma požiadavku od používateľa a identifikuje konkrétnu úlohu a akékoľvek argumenty/dáta, ktoré sú potrebné na splnenie úlohy.
 

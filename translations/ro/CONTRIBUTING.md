@@ -68,7 +68,7 @@ Pentru a te asigura că linkurile tale funcționează corect, folosește VS Code
 
 De exemplu, când treci cursorul peste orice link din fișierele tale, vei primi opțiunea de a urma linkul apăsând **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.ro.png)
+![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.ro.png)
 
 Dacă dai click pe un link și nu funcționează local, cu siguranță va declanșa fluxul de lucru și nu va funcționa pe GitHub.
 
@@ -76,7 +76,7 @@ Pentru a rezolva această problemă, încearcă să tastezi linkul cu ajutorul V
 
 Când tastezi `./` sau `../`, VS Code îți va sugera opțiuni disponibile în funcție de ce ai tastat.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.ro.png)
+![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ro.png)
 
 Urmează calea făcând click pe fișierul sau folderul dorit și vei fi sigur că calea ta nu este ruptă.
 
@@ -93,7 +93,7 @@ Dacă este adăugat la căile tale relative, vei trece această verificare.
 
 Dacă nu, poți primi următoarea eroare.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.ro.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ro.png)
 
 Pentru a rezolva această problemă, deschide calea fișierului evidențiată de fluxul de lucru și adaugă ID-ul de urmărire la finalul căilor relative.
 
@@ -110,7 +110,7 @@ Dacă este adăugat la URL-urile tale, vei trece această verificare.
 
 Dacă nu, poți primi următoarea eroare.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.ro.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ro.png)
 
 Pentru a rezolva această problemă, deschide calea fișierului evidențiată de fluxul de lucru și adaugă ID-ul de urmărire la finalul URL-urilor.
 
@@ -127,7 +127,7 @@ Dacă nu este prezent în URL-urile tale, vei trece această verificare.
 
 Dacă nu, poți primi următoarea eroare.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.ro.png)
+![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ro.png)
 
 Pentru a rezolva această problemă, deschide calea fișierului evidențiată de fluxul de lucru și elimină localizarea țării din URL-uri.
 

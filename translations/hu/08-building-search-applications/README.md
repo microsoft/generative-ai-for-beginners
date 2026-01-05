@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Keresési alkalmazások építése
 
-[![Bevezetés a generatív AI-ba és a nagy nyelvi modellekbe](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.hu.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Bevezetés a generatív AI-ba és a nagy nyelvi modellekbe](../../../translated_images/08-lesson-banner.8fff48c566dad08a.hu.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kattints a fenti képre, hogy megnézd az óra videóját_
 
@@ -44,7 +44,7 @@ Az óra tartalmazza a Microsoft [AI Show](https://www.youtube.com/playlist?list=
 
 Az alábbi példa egy szemantikus keresésre a 'Használható-e az rstudio az Azure ML-lel?' kérdésre. Nézd meg a YouTube URL-t, látni fogod, hogy az URL tartalmaz egy időbélyeget, amely a videó azon részére visz, ahol a kérdésre adott válasz található.
 
-![Szemantikus keresés a "Használható-e az rstudio az Azure ML-lel?" kérdésre](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.hu.png)
+![Szemantikus keresés a "Használható-e az rstudio az Azure ML-lel?" kérdésre](../../../translated_images/query-results.bb0480ebf025fac6.hu.png)
 
 ## Mi az a szemantikus keresés?
 
@@ -163,7 +163,7 @@ Nyisd meg a [megoldási notebookot](./python/aoai-solution.ipynb?WT.mc_id=academ
 
 Amikor futtatod a notebookot, megjelenik egy mező, ahová beírhatod a lekérdezést. Az input mező így néz ki:
 
-![Input mező a felhasználó lekérdezésének beírásához](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.hu.png)
+![Input mező a felhasználó lekérdezésének beírásához](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.hu.png)
 
 ## Szép munka! Folytasd a tanulást
 

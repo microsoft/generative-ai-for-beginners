@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Képgeneráló alkalmazások építése
 
-[![Képgeneráló alkalmazások építése](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.hu.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Képgeneráló alkalmazások építése](../../../translated_images/09-lesson-banner.906e408c741f4411.hu.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 A nagy nyelvi modellek (LLM-ek) nem csak szöveg generálására alkalmasak. Szöveges leírások alapján képek is létrehozhatók. A képek mint modalitás számos területen hasznosak lehetnek, például az orvostechnológia, építészet, turizmus, játékfejlesztés és más területeken. Ebben a fejezetben megvizsgáljuk a két legnépszerűbb képgeneráló modellt, a DALL-E-t és a Midjourney-t.
 
@@ -43,7 +43,7 @@ A lecke részeként tovább dolgozunk az Edu4All nevű startupunkkal. A diákok 
 
 Például, ha az Edu4All diákjai az osztályban műemlékekről tanulnak, az alábbi képet generálhatják:
 
-![Edu4All startup, osztály a műemlékekről, Eiffel-torony](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.hu.png)
+![Edu4All startup, osztály a műemlékekről, Eiffel-torony](../../../translated_images/startup.94d6b79cc4bb3f5a.hu.png)
 
 egy ilyen prompt segítségével:
 
@@ -272,9 +272,9 @@ Itt egy példa a GPT Image használatával:
   Az alap kép csak a medencés lounge-t tartalmazza, de a végső kép egy flamingót is tartalmaz:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.hu.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.hu.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.hu.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.hu.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.hu.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.hu.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Variációk létrehozása**. Az ötlet az, hogy egy meglévő képet veszel, és variációkat kérsz róla. A variáció létrehozásához megadod a képet és egy szöveges promptot, valamint ilyen kódot:
@@ -298,11 +298,11 @@ Nézzünk egy példát arra, hogyan működik a hőmérséklet, ha kétszer futt
 
 > Prompt: "Nyúl lovon, nyalókát tartva, ködös réten, ahol nárciszok nőnek"
 
-![Nyúl lovon, nyalókát tartva, 1. verzió](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.hu.png)
+![Nyúl lovon, nyalókát tartva, 1. verzió](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.hu.png)
 
 Most futtassuk ugyanazt a promptot, hogy lássuk, nem kapunk kétszer ugyanazt a képet:
 
-![Generált kép nyúl lovon](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.hu.png)
+![Generált kép nyúl lovon](../../../translated_images/v2-generated-image.33f55a3714efe61d.hu.png)
 
 Ahogy látható, a képek hasonlóak, de nem teljesen azonosak. Próbáljuk meg megváltoztatni a hőmérséklet értékét 0,1-re, és nézzük meg, mi történik:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Most, amikor futtatod ezt a kódot, az alábbi két képet kapod:
 
-- ![Hőmérséklet 0, 1. verzió](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.hu.png)
-- ![Hőmérséklet 0, 2. verzió](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.hu.png)
+- ![Hőmérséklet 0, 1. verzió](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.hu.png)
+- ![Hőmérséklet 0, 2. verzió](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.hu.png)
 
 Itt egyértelműen látható, hogy a képek jobban hasonlítanak egymásra.
 

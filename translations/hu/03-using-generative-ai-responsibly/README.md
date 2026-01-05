@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatív AI felelősségteljes használata
 
-[![Generatív AI felelősségteljes használata](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.hu.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Generatív AI felelősségteljes használata](../../../translated_images/03-lesson-banner.1ed56067a452d977.hu.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Kattints a fenti képre a leckéhez tartozó videó megtekintéséhez_
 
@@ -85,7 +85,7 @@ Az ilyen típusú kimenetek nemcsak romboló hatásúak a pozitív termékélmé
 
 Most, hogy azonosítottuk a felelősségteljes generatív AI fontosságát, nézzük meg 4 lépést, amelyet megtehetünk AI megoldásaink felelősségteljes építése érdekében:
 
-![Mitigációs ciklus](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.hu.png)
+![Mitigációs ciklus](../../../translated_images/mitigate-cycle.babcd5a5658e1775.hu.png)
 
 ### Potenciális károk mérése
 
@@ -97,7 +97,7 @@ Mivel startupunk oktatási terméket épít, érdemes lenne előkészíteni egy 
 
 Most eljött az idő, hogy megtaláljuk azokat a módokat, amelyekkel megelőzhetjük vagy korlátozhatjuk a modell és annak válaszai által okozott potenciális károkat. Ezt 4 különböző rétegben vizsgálhatjuk:
 
-![Enyhítési rétegek](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.hu.png)
+![Enyhítési rétegek](../../../translated_images/mitigation-layers.377215120b9a1159.hu.png)
 
 - **Modell**. A megfelelő modell kiválasztása a megfelelő felhasználási esethez. Nagyobb és összetettebb modellek, mint például a GPT-4, nagyobb kockázatot jelenthetnek káros tartalom szempontjából, ha kisebb és specifikusabb felhasználási esetekre alkalmazzák őket. A képzési adatok használata a finomhangoláshoz szintén csökkenti a káros tartalom kockázatát.
 

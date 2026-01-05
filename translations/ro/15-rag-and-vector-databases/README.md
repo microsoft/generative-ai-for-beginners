@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generarea Augmentată prin Recuperare (RAG) și Baze de Date Vectoriale
 
-[![Generarea Augmentată prin Recuperare (RAG) și Baze de Date Vectoriale](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.ro.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Generarea Augmentată prin Recuperare (RAG) și Baze de Date Vectoriale](../../../translated_images/15-lesson-banner.ac49e59506175d4f.ro.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 În lecția despre aplicațiile de căutare, am învățat pe scurt cum să integrăm propriile date în Modelele de Limbaj Extins (LLMs). În această lecție, vom aprofunda conceptele de ancorare a datelor în aplicația LLM, mecanismele procesului și metodele de stocare a datelor, inclusiv atât încorporările, cât și textul.
 
@@ -53,7 +53,7 @@ Un chatbot alimentat de LLM procesează solicitările utilizatorilor pentru a ge
 
 ### Cum funcționează RAG (Generarea Augmentată prin Recuperare)
 
-![desen care arată cum funcționează RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.ro.png)
+![desen care arată cum funcționează RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.ro.png)
 
 Să presupunem că dorești să implementezi un chatbot care creează teste din notițele tale, vei avea nevoie de o conexiune la baza de cunoștințe. Aici intervine RAG. RAG funcționează astfel:
 
@@ -65,7 +65,7 @@ Să presupunem că dorești să implementezi un chatbot care creează teste din 
 
 - **Generarea augmentată:** LLM își îmbunătățește răspunsul pe baza datelor recuperate. Acest lucru permite ca răspunsul generat să se bazeze nu doar pe datele pre-antrenate, ci și pe informații relevante din contextul adăugat. Datele recuperate sunt utilizate pentru a augmenta răspunsurile LLM-ului. LLM-ul returnează apoi un răspuns la întrebarea utilizatorului.
 
-![desen care arată arhitectura RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.ro.png)
+![desen care arată arhitectura RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2.ro.png)
 
 Arhitectura RAG este implementată folosind transformatoare care constau din două părți: un encoder și un decoder. De exemplu, când un utilizator pune o întrebare, textul de intrare este 'encodat' în vectori care captează semnificația cuvintelor, iar vectorii sunt 'decodați' în indexul documentului nostru și generează text nou pe baza interogării utilizatorului. LLM-ul folosește atât un model encoder-decoder pentru a genera rezultatul.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Odată fragmentate, putem încorpora textul nostru folosind diferite modele de încorporare. Unele modele pe care le poți folosi includ: word2vec, ada-002 de la OpenAI, Azure Computer Vision și multe altele. Selectarea unui model de utilizat va depinde de limbile pe care le folosești, tipul de conținut codificat (text/imagine/audio), dimensiunea intrării pe care o poate codifica și lungimea ieșirii încorporării.
 
 Un exemplu de text încorporat folosind modelul `text-embedding-ada-002` de la OpenAI este:
-![o încorporare a cuvântului pisică](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.ro.png)
+![o încorporare a cuvântului pisică](../../../translated_images/cat.74cbd7946bc9ca38.ro.png)
 
 ## Recuperare și Căutare Vectorială
 

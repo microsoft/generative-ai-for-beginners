@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváření AI aplikací s nízkým kódem
 
-[![Vytváření AI aplikací s nízkým kódem](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.cs.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Vytváření AI aplikací s nízkým kódem](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.cs.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
@@ -92,17 +92,17 @@ Aplikaci vytvoříte pomocí Copilot v Power Apps podle následujících kroků:
 
 1. Použijte textové pole na domovské obrazovce k popisu aplikace, kterou chcete vytvořit. Například **_Chci vytvořit aplikaci ke sledování a správě studentských úkolů_**. Klikněte na tlačítko **Odeslat**, abyste odeslali prompt AI Copilotovi.
 
-![Popište aplikaci, kterou chcete vytvořit](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.cs.png)
+![Popište aplikaci, kterou chcete vytvořit](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.cs.png)
 
 1. AI Copilot navrhne tabulku Dataverse s poli, která potřebujete k ukládání dat, která chcete sledovat, a některými vzorovými daty. Poté můžete tabulku přizpůsobit svým potřebám pomocí funkce AI Copilot asistenta prostřednictvím konverzačních kroků.
 
    > **Důležité**: Dataverse je podkladová datová platforma pro Power Platform. Je to platforma s nízkým kódem pro ukládání dat aplikace. Je to plně spravovaná služba, která bezpečně ukládá data v Microsoft Cloudu a je zřízena ve vašem prostředí Power Platform. Má vestavěné schopnosti správy dat, jako je klasifikace dat, původ dat, jemně odstupňovaná kontrola přístupu a další. Více o Dataverse se můžete dozvědět [zde](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Navržená pole ve vaší nové tabulce](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.cs.png)
+   ![Navržená pole ve vaší nové tabulce](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.cs.png)
 
 1. Učitelé chtějí posílat e-maily studentům, kteří odevzdali své úkoly, aby je informovali o pokroku jejich úkolů. Můžete použít Copilot k přidání nového pole do tabulky pro ukládání e-mailu studenta. Například můžete použít následující prompt k přidání nového pole do tabulky: **_Chci přidat sloupec pro ukládání e-mailu studenta_**. Klikněte na tlačítko **Odeslat**, abyste odeslali prompt AI Copilotovi.
 
-![Přidání nového pole](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.cs.png)
+![Přidání nového pole](../../../translated_images/copilot-new-column.35e15ff21acaf274.cs.png)
 
 1. AI Copilot vytvoří nové pole a poté můžete pole přizpůsobit svým potřebám.
 
@@ -112,7 +112,7 @@ Aplikaci vytvoříte pomocí Copilot v Power Apps podle následujících kroků:
 
 1. Aby učitelé mohli posílat e-maily studentům, můžete použít Copilot k přidání nové obrazovky do aplikace. Například můžete použít následující prompt k přidání nové obrazovky do aplikace: **_Chci přidat obrazovku pro posílání e-mailů studentům_**. Klikněte na tlačítko **Odeslat**, abyste odeslali prompt AI Copilotovi.
 
-![Přidání nové obrazovky pomocí promptu](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.cs.png)
+![Přidání nové obrazovky pomocí promptu](../../../translated_images/copilot-new-screen.2e0bef7132a17392.cs.png)
 
 1. AI Copilot vytvoří novou obrazovku a poté můžete obrazovku přizpůsobit svým potřebám.
 
@@ -147,15 +147,15 @@ Chcete-li vytvořit tabulku v Dataverse pomocí Copilot, postupujte podle násle
 
 2. Na levém navigačním panelu vyberte **Tables** a poté klikněte na **Describe the new Table**.
 
-![Vyberte novou tabulku](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.cs.png)
+![Vyberte novou tabulku](../../../translated_images/describe-new-table.0792373eb757281e.cs.png)
 
 3. Na obrazovce **Describe the new Table** použijte textové pole k popisu tabulky, kterou chcete vytvořit. Například **_Chci vytvořit tabulku pro ukládání informací o fakturách_**. Klikněte na tlačítko **Send**, abyste odeslali požadavek AI Copilotovi.
 
-![Popište tabulku](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.cs.png)
+![Popište tabulku](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.cs.png)
 
 4. AI Copilot navrhne tabulku Dataverse s poli, která potřebujete k ukládání dat, která chcete sledovat, a poskytne vzorová data. Poté můžete tabulku přizpůsobit svým potřebám pomocí asistenta AI Copilot prostřednictvím konverzačních kroků.
 
-![Navržená tabulka Dataverse](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.cs.png)
+![Navržená tabulka Dataverse](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.cs.png)
 
 5. Finanční tým chce poslat e-mail dodavateli, aby ho informoval o aktuálním stavu jeho faktury. Můžete použít Copilot k přidání nového pole do tabulky pro uložení e-mailu dodavatele. Například můžete použít následující požadavek k přidání nového pole do tabulky: **_Chci přidat sloupec pro uložení e-mailu dodavatele_**. Klikněte na tlačítko **Send**, abyste odeslali požadavek AI Copilotovi.
 
@@ -184,7 +184,7 @@ Některé z předpřipravených AI modelů dostupných v Power Platform zahrnuj�
 
 S vlastními AI modely můžete přinést svůj vlastní model do AI Builderu, aby mohl fungovat jako jakýkoli vlastní model AI Builderu, což vám umožní trénovat model pomocí vlastních dat. Tyto modely můžete použít k automatizaci procesů a předpovídání výsledků v Power Apps i Power Automate. Při používání vlastního modelu platí určitá omezení. Přečtěte si více o těchto [omezeních](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder modely](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.cs.png)
+![AI builder modely](../../../translated_images/ai-builder-models.8069423b84cfc47f.cs.png)
 
 ## Úkol č. 2 - Vytvořte tok pro zpracování faktur pro náš startup
 
@@ -198,7 +198,7 @@ Chcete-li vytvořit workflow, který pomůže finančnímu týmu zpracovávat fa
 
 2. Použijte textové pole na domovské obrazovce k popisu workflow, který chcete vytvořit. Například **_Zpracovat fakturu, když dorazí do mé schránky_**. Klikněte na tlačítko **Send**, abyste odeslali požadavek AI Copilotovi.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.cs.png)
+   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.cs.png)
 
 3. AI Copilot navrhne akce, které potřebujete k provedení úkolu, který chcete automatizovat. Můžete kliknout na tlačítko **Next**, abyste prošli dalšími kroky.
 
@@ -212,7 +212,7 @@ Chcete-li vytvořit workflow, který pomůže finančnímu týmu zpracovávat fa
 
 8. Odstraňte akci **Condition** z toku, protože ji nebudete používat. Mělo by to vypadat jako na následujícím snímku obrazovky:
 
-   ![power automate, odstranit akce](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.cs.png)
+   ![power automate, odstranit akce](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.cs.png)
 
 9. Klikněte na tlačítko **Add an action** a vyhledejte **Dataverse**. Vyberte akci **Add a new row**.
 
@@ -227,7 +227,7 @@ Chcete-li vytvořit workflow, který pomůže finančnímu týmu zpracovávat fa
     - Stav - Nastavte **Status** na **Pending**.
     - E-mail dodavatele - Použijte dynamický obsah **From** z triggeru **When a new email arrives**.
 
-    ![power automate přidat řádek](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.cs.png)
+    ![power automate přidat řádek](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.cs.png)
 
 12. Jakmile budete s tokem hotovi, klikněte na tlačítko **Save**, abyste tok uložili. Poté můžete tok otestovat tím, že pošlete e-mail s fakturou do složky, kterou jste specifikovali v triggeru.
 
@@ -241,7 +241,7 @@ GPT modely procházejí rozsáhlým tréninkem na obrovském množství dat, co�
 
 Například můžete vytvořit toky pro automatické generování textu pro různé účely, jako jsou: návrhy e-mailů, popisy produktů a další. Model můžete také použít k generování textu pro různé aplikace, jako jsou chatboty a aplikace zákaznického servisu, které umožňují pracovníkům zákaznického servisu efektivně a účinně reagovat na dotazy zákazníků.
 
-![vytvořit požadavek](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.cs.png)
+![vytvořit požadavek](../../../translated_images/create-prompt-gpt.69d429300c2e870a.cs.png)
 
 Chcete-li se naučit, jak používat tento AI model v Power Automate, projděte si modul [Přidání inteligence s AI Builderem a GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea aplicațiilor AI cu cod redus
 
-[![Construirea aplicațiilor AI cu cod redus](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.ro.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Construirea aplicațiilor AI cu cod redus](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.ro.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
@@ -92,17 +92,17 @@ Veți construi aplicația folosind Copilot în Power Apps urmând pașii de mai 
 
 1. Utilizați zona de text de pe ecranul principal pentru a descrie aplicația pe care doriți să o construiți. De exemplu, **_Vreau să construiesc o aplicație pentru a urmări și gestiona temele studenților_**. Faceți clic pe butonul **Trimite** pentru a trimite promptul către AI Copilot.
 
-![Descrieți aplicația pe care doriți să o construiți](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.ro.png)
+![Descrieți aplicația pe care doriți să o construiți](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.ro.png)
 
 1. AI Copilot va sugera o tabelă Dataverse cu câmpurile necesare pentru a stoca datele pe care doriți să le urmăriți și câteva date de exemplu. Ulterior, puteți personaliza tabela pentru a se potrivi nevoilor dvs. utilizând funcția de asistent AI Copilot prin pași conversaționali.
 
    > **Important**: Dataverse este platforma de date de bază pentru Power Platform. Este o platformă de date cu cod redus pentru stocarea datelor aplicației. Este un serviciu complet gestionat care stochează datele în mod securizat în Microsoft Cloud și este furnizat în cadrul mediului dvs. Power Platform. Vine cu capacități integrate de guvernanță a datelor, cum ar fi clasificarea datelor, linia de date, controlul accesului detaliat și altele. Puteți afla mai multe despre Dataverse [aici](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Câmpuri sugerate în noua tabelă](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.ro.png)
+   ![Câmpuri sugerate în noua tabelă](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.ro.png)
 
 1. Educatorii doresc să trimită e-mailuri studenților care și-au predat temele pentru a-i ține la curent cu progresul temelor lor. Puteți utiliza Copilot pentru a adăuga un nou câmp în tabelă pentru a stoca e-mailul studentului. De exemplu, puteți utiliza următorul prompt pentru a adăuga un nou câmp în tabelă: **_Vreau să adaug o coloană pentru a stoca e-mailul studentului_**. Faceți clic pe butonul **Trimite** pentru a trimite promptul către AI Copilot.
 
-![Adăugarea unui nou câmp](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.ro.png)
+![Adăugarea unui nou câmp](../../../translated_images/copilot-new-column.35e15ff21acaf274.ro.png)
 
 1. AI Copilot va genera un nou câmp și ulterior îl puteți personaliza pentru a se potrivi nevoilor dvs.
 
@@ -112,7 +112,7 @@ Veți construi aplicația folosind Copilot în Power Apps urmând pașii de mai 
 
 1. Pentru ca educatorii să trimită e-mailuri studenților, puteți utiliza Copilot pentru a adăuga un nou ecran în aplicație. De exemplu, puteți utiliza următorul prompt pentru a adăuga un nou ecran în aplicație: **_Vreau să adaug un ecran pentru a trimite e-mailuri studenților_**. Faceți clic pe butonul **Trimite** pentru a trimite promptul către AI Copilot.
 
-![Adăugarea unui nou ecran printr-o instrucțiune prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.ro.png)
+![Adăugarea unui nou ecran printr-o instrucțiune prompt](../../../translated_images/copilot-new-screen.2e0bef7132a17392.ro.png)
 
 1. AI Copilot va genera un nou ecran și ulterior îl puteți personaliza pentru a se potrivi nevoilor dvs.
 
@@ -147,15 +147,15 @@ Pentru a crea o tabelă în Dataverse folosind Copilot, urmează pașii de mai j
 
 2. În bara de navigare din stânga, selectează **Tables** și apoi apasă pe **Describe the new Table**.
 
-![Selectează tabel nou](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.ro.png)
+![Selectează tabel nou](../../../translated_images/describe-new-table.0792373eb757281e.ro.png)
 
 3. Pe ecranul **Describe the new Table**, folosește zona de text pentru a descrie tabelul pe care vrei să-l creezi. De exemplu, **_Vreau să creez un tabel pentru a stoca informații despre facturi_**. Apasă pe butonul **Send** pentru a trimite cererea către AI Copilot.
 
-![Descrie tabelul](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.ro.png)
+![Descrie tabelul](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.ro.png)
 
 4. AI Copilot va sugera un tabel Dataverse cu câmpurile necesare pentru a stoca datele pe care vrei să le urmărești și câteva date de exemplu. Poți personaliza tabelul pentru a se potrivi nevoilor tale folosind funcția de asistență AI Copilot prin pași conversaționali.
 
-![Tabel Dataverse sugerat](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.ro.png)
+![Tabel Dataverse sugerat](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.ro.png)
 
 5. Echipa financiară dorește să trimită un email furnizorului pentru a-l informa despre starea actuală a facturii sale. Poți folosi Copilot pentru a adăuga un câmp nou în tabel pentru a stoca emailul furnizorului. De exemplu, poți folosi următorul prompt pentru a adăuga un câmp nou în tabel: **_Vreau să adaug o coloană pentru a stoca emailul furnizorului_**. Apasă pe butonul **Send** pentru a trimite cererea către AI Copilot.
 
@@ -184,7 +184,7 @@ Unele dintre modelele AI predefinite disponibile în Power Platform includ:
 
 Cu Modelele AI personalizate poți aduce propriul model în AI Builder astfel încât să funcționeze ca orice model personalizat AI Builder, permițându-ți să antrenezi modelul folosind propriile date. Poți folosi aceste modele pentru a automatiza procesele și a prezice rezultate atât în Power Apps, cât și în Power Automate. Când folosești propriul model, există limitări care se aplică. Citește mai multe despre aceste [limitări](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Modele AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.ro.png)
+![Modele AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f.ro.png)
 
 ## Tema #2 - Construiește un flux de procesare a facturilor pentru startup-ul nostru
 
@@ -198,7 +198,7 @@ Pentru a construi un flux de lucru care să ajute echipa financiară să procese
 
 2. Folosește zona de text de pe ecranul principal pentru a descrie fluxul de lucru pe care vrei să-l construiești. De exemplu, **_Procesează o factură când ajunge în căsuța mea de email_**. Apasă pe butonul **Send** pentru a trimite cererea către AI Copilot.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.ro.png)
+   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.ro.png)
 
 3. AI Copilot va sugera acțiunile necesare pentru a îndeplini sarcina pe care vrei să o automatizezi. Poți apăsa pe butonul **Next** pentru a parcurge pașii următori.
 
@@ -212,7 +212,7 @@ Pentru a construi un flux de lucru care să ajute echipa financiară să procese
 
 8. Elimină acțiunea **Condition** din flux, deoarece nu o vei folosi. Ar trebui să arate ca în următoarea captură de ecran:
 
-   ![Power Automate, elimină acțiuni](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.ro.png)
+   ![Power Automate, elimină acțiuni](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.ro.png)
 
 9. Apasă pe butonul **Add an action** și caută **Dataverse**. Selectează acțiunea **Add a new row**.
 
@@ -227,7 +227,7 @@ Pentru a construi un flux de lucru care să ajute echipa financiară să procese
     - Status - Setează **Status** la **Pending**.
     - Supplier Email - Folosește conținutul dinamic **From** din declanșatorul **When a new email arrives**.
 
-    ![Power Automate adaugă rând](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.ro.png)
+    ![Power Automate adaugă rând](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.ro.png)
 
 12. După ce ai terminat cu fluxul, apasă pe butonul **Save** pentru a salva fluxul. Poți apoi testa fluxul trimițând un email cu o factură către folderul specificat în declanșator.
 
@@ -241,7 +241,7 @@ Modelele GPT trec printr-un proces extins de antrenare pe cantități mari de da
 
 De exemplu, poți construi fluxuri pentru a genera automat text pentru diverse utilizări, cum ar fi: schițe de emailuri, descrieri de produse și altele. Poți folosi modelul pentru a genera text pentru diverse aplicații, cum ar fi chatbots și aplicații de servicii pentru clienți care permit agenților de servicii pentru clienți să răspundă eficient și eficace la solicitările clienților.
 
-![Creează un prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.ro.png)
+![Creează un prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a.ro.png)
 
 Pentru a învăța cum să folosești acest model AI în Power Automate, parcurge modulul [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrace s voláním funkcí
 
-[![Integrace s voláním funkcí](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.cs.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrace s voláním funkcí](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.cs.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 V předchozích lekcích jste se již naučili poměrně dost. Nicméně stále je prostor pro zlepšení. Některé věci, které můžeme řešit, zahrnují získání konzistentnějšího formátu odpovědí, což usnadní práci s odpověďmi v dalších krocích. Také bychom mohli přidat data z jiných zdrojů, abychom naši aplikaci dále obohatili.
 
@@ -179,7 +179,7 @@ Nyní můžeme poslat oba požadavky do LLM a zkoumat odpověď, kterou obdrží
 
 Jak tedy vyřešíme problém s formátováním? Použitím volání funkcí můžeme zajistit, že dostaneme zpět strukturovaná data. Při použití volání funkcí LLM ve skutečnosti žádné funkce nevolá ani nespouští. Místo toho vytvoříme strukturu, kterou LLM bude následovat při generování odpovědí. Poté použijeme tyto strukturované odpovědi k určení, jakou funkci spustit v našich aplikacích.
 
-![průběh funkce](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.cs.png)
+![průběh funkce](../../../translated_images/Function-Flow.083875364af4f4bb.cs.png)
 
 Poté můžeme vzít to, co je vráceno z funkce, a poslat to zpět do LLM. LLM pak odpoví přirozeným jazykem na dotaz uživatele.
 
@@ -201,7 +201,7 @@ Proces vytvoření volání funkce zahrnuje 3 hlavní kroky:
 2. **Čtení** odpovědi modelu k provedení akce, tj. spuštění funkce nebo API požadavku.
 3. **Vytvoření** dalšího volání API Chat Completions s odpovědí z vaší funkce, aby se tato informace použila k vytvoření odpovědi pro uživatele.
 
-![Průběh LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.cs.png)
+![Průběh LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.cs.png)
 
 ### Krok 1 - vytvoření zpráv
 

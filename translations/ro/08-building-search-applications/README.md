@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea unei aplicații de căutare
 
-[![Introducere în AI Generativ și Modele de Limbaj Extinse](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.ro.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introducere în AI Generativ și Modele de Limbaj Extinse](../../../translated_images/08-lesson-banner.8fff48c566dad08a.ro.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții_
 
@@ -44,7 +44,7 @@ Lecția include un Index de Embeddings al transcrierilor de pe YouTube pentru ca
 
 Următorul este un exemplu de interogare semantică pentru întrebarea „poți folosi rstudio cu azure ml?”. Verificați URL-ul YouTube, veți vedea că URL-ul conține un timestamp care vă duce la locul din videoclip unde se află răspunsul la întrebare.
 
-![Interogare semantică pentru întrebarea "poți folosi rstudio cu Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.ro.png)
+![Interogare semantică pentru întrebarea "poți folosi rstudio cu Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.ro.png)
 
 ## Ce este căutarea semantică?
 
@@ -163,7 +163,7 @@ Deschideți [notebook-ul soluției](./python/aoai-solution.ipynb?WT.mc_id=academ
 
 Când rulați notebook-ul, vi se va solicita să introduceți o interogare. Caseta de introducere va arăta astfel:
 
-![Caseta de introducere pentru utilizator pentru a introduce o interogare](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.ro.png)
+![Caseta de introducere pentru utilizator pentru a introduce o interogare](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.ro.png)
 
 ## Felicitări! Continuați să învățați
 

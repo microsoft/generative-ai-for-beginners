@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generování s podporou vyhledávání (RAG) a vektorové databáze
 
-[![Generování s podporou vyhledávání (RAG) a vektorové databáze](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.cs.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Generování s podporou vyhledávání (RAG) a vektorové databáze](../../../translated_images/15-lesson-banner.ac49e59506175d4f.cs.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 V lekci o vyhledávacích aplikacích jsme se krátce naučili, jak integrovat vlastní data do modelů velkých jazyků (LLMs). V této lekci se podrobněji zaměříme na koncepty zakotvení vašich dat v aplikaci LLM, na mechaniku procesu a na metody ukládání dat, včetně vektorových reprezentací a textu.
 
@@ -53,7 +53,7 @@ Chatbot poháněný LLM zpracovává uživatelské dotazy a generuje odpovědi. 
 
 ### Jak fungují RAG (Generování s podporou vyhledávání)
 
-![schéma ukazující, jak fungují RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.cs.png)
+![schéma ukazující, jak fungují RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.cs.png)
 
 Představte si, že chcete nasadit chatbota, který vytváří kvízy z vašich poznámek, budete potřebovat připojení k databázi znalostí. Zde přichází na řadu RAG. RAG funguje následovně:
 
@@ -65,7 +65,7 @@ Představte si, že chcete nasadit chatbota, který vytváří kvízy z vašich 
 
 - **Generování s podporou:** LLM vylepší svou odpověď na základě získaných dat. To umožňuje, aby odpověď byla nejen založena na předtrénovaných datech, ale také na relevantních informacích z přidaného kontextu. Získaná data se používají k vylepšení odpovědí LLM. LLM poté vrátí odpověď na otázku uživatele.
 
-![schéma ukazující architekturu RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.cs.png)
+![schéma ukazující architekturu RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2.cs.png)
 
 Architektura RAG je implementována pomocí transformátorů, které se skládají ze dvou částí: kodéru a dekodéru. Například když uživatel položí otázku, vstupní text je "zakódován" do vektorů zachycujících význam slov a vektory jsou "dekódovány" do našeho indexu dokumentů a generují nový text na základě dotazu uživatele. LLM používá model kodér-dekodér k vytvoření výstupu.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Jakmile jsou data rozdělena na části, můžeme je poté zakódovat pomocí různých modelů vektorových reprezentací. Některé modely, které můžete použít, zahrnují: word2vec, ada-002 od OpenAI, Azure Computer Vision a mnoho dalších. Výběr modelu závisí na jazycích, které používáte, typu obsahu, který je kódován (text/obrázky/audio), velikosti vstupu, který může být zakódován, a délce výstupu vektorové reprezentace.
 
 Příklad zakódovaného textu pomocí modelu OpenAI `text-embedding-ada-002` je:
-![vektorová reprezentace slova kočka](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.cs.png)
+![vektorová reprezentace slova kočka](../../../translated_images/cat.74cbd7946bc9ca38.cs.png)
 
 ## Vyhledávání a vektorové hledání
 

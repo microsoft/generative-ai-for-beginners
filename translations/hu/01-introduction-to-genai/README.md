@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bevezetés a generatív mesterséges intelligenciába és a nagy nyelvi modellekbe
 
-[![Bevezetés a generatív mesterséges intelligenciába és a nagy nyelvi modellekbe](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.hu.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Bevezetés a generatív mesterséges intelligenciába és a nagy nyelvi modellekbe](../../../translated_images/01-lesson-banner.2424cfd092f43366.hu.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Kattints a fenti képre, hogy megnézd az óra videóját)_
 
@@ -43,7 +43,7 @@ Startupunk csapata tisztában van azzal, hogy ezt a célt nem tudjuk elérni an�
 
 A generatív mesterséges intelligencia várhatóan forradalmasítja a mai tanulás és tanítás módját, lehetővé téve a diákok számára, hogy 24 órás virtuális tanárok álljanak rendelkezésükre, akik hatalmas mennyiségű információt és példát nyújtanak, míg a tanárok innovatív eszközöket használhatnak diákjaik értékelésére és visszajelzés adására.
 
-![Öt fiatal diák egy monitort néz - kép a DALLE2-től](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.hu.png)
+![Öt fiatal diák egy monitort néz - kép a DALLE2-től](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.hu.png)
 
 Kezdjük azzal, hogy meghatározunk néhány alapfogalmat és terminológiát, amelyeket a tananyag során használni fogunk.
 
@@ -69,7 +69,7 @@ Ez a technológia táplálta az első évtizedben született virtuális assziszt
 
 Így jutottunk el a mai generatív mesterséges intelligenciához, amely a mélytanulás egyik részhalmazának tekinthető.
 
-![AI, ML, DL és generatív mesterséges intelligencia](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.hu.png)
+![AI, ML, DL és generatív mesterséges intelligencia](../../../translated_images/AI-diagram.c391fa518451a40d.hu.png)
 
 Évtizedek AI kutatásai után egy új modellarchitektúra – _Transformer_ néven – leküzdötte az RNN-ek korlátait, és képes lett sokkal hosszabb szöveges sorozatokat fogadni bemenetként. A Transformerek az úgynevezett figyelemmechanizmuson alapulnak, amely lehetővé teszi a modell számára, hogy különböző súlyokat rendeljen a kapott bemenetekhez, „nagyobb figyelmet szentelve” azoknak a részeknek, ahol a legfontosabb információk koncentrálódnak, függetlenül azok sorrendjétől a szöveges sorozatban.
 
@@ -81,7 +81,7 @@ A következő fejezetben különböző generatív AI modelleket fogunk megvizsg�
 
 - **Tokenizáló, szöveg számokká alakítása**: A nagy nyelvi modellek szöveget kapnak bemenetként, és szöveget generálnak kimenetként. Azonban, mivel statisztikai modellek, sokkal jobban működnek számokkal, mint szöveges sorozatokkal. Ezért minden bemenetet egy tokenizáló dolgoz fel, mielőtt a magmodell használná. Egy token egy szövegrészlet – amely változó számú karakterből áll, így a tokenizáló fő feladata a bemenet tokenek tömbjére való felosztása. Ezután minden tokenhez hozzárendelnek egy token indexet, amely az eredeti szövegrészlet egész számú kódolása.
 
-![Tokenizálás példája](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.hu.png)
+![Tokenizálás példája](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.hu.png)
 
 - **Kimeneti tokenek előrejelzése**: Adott n token bemenetként (a max n modellről modellre változik), a modell képes egy token előrejelzésére kimenetként. Ez a token bekerül a következő iteráció bemenetébe, egy bővülő ablak mintázatban, lehetővé téve a felhasználói élményt, hogy egy (vagy több) mondatot kapjunk válaszként. Ez megmagyarázza, hogy ha valaha játszottál a ChatGPT-vel, észrevehetted, hogy néha úgy tűnik, mintha megállna egy mondat közepén.
 
@@ -99,23 +99,23 @@ A nagy nyelvi modell bemenetét promptnak nevezik, míg a kimenetet completionne
 
   1. Cikk, könyv, termékértékelések összefoglalása és betekintések kinyerése strukturálatlan adatokból.
     
-    ![Összefoglalás példája](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.hu.png)
+    ![Összefoglalás példája](../../../translated_images/summarization-example.7b7ff97147b3d790.hu.png)
   
   2. Kreatív ötletelés és tervezés cikkhez, esszéhez, feladathoz vagy más tartalomhoz.
       
-     ![Kreatív írás példája](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.hu.png)
+     ![Kreatív írás példája](../../../translated_images/creative-writing-example.e24a685b5a543ad1.hu.png)
 
 - Egy **kérdést**, amelyet egy ügynökkel folytatott beszélgetés formájában teszünk fel.
   
-  ![Beszélgetés példája](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.hu.png)
+  ![Beszélgetés példája](../../../translated_images/conversation-example.60c2afc0f595fa59.hu.png)
 
 - Egy **szövegrészletet, amelyet ki kell egészíteni**, ami implicit módon írási segítséget kér.
   
-  ![Szövegkiegészítés példája](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.hu.png)
+  ![Szövegkiegészítés példája](../../../translated_images/text-completion-example.cbb0f28403d42752.hu.png)
 
 - Egy **kódrészletet**, amelyhez magyarázatot és dokumentációt kérünk, vagy egy megjegyzést, amely egy adott feladatot végrehajtó kódrészlet generálását kéri.
   
-  ![Kódolási példa](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.hu.png)
+  ![Kódolási példa](../../../translated_images/coding-example.50ebabe8a6afff20.hu.png)
 
 A fenti példák meglehetősen egyszerűek, és nem céljuk, hogy kimerítően bemutassák a nagy nyelvi modellek képességeit. Céljuk, hogy megmutassák a generatív mesterséges intelligencia használatának lehetőségeit, különösen, de nem kizárólag oktatási kontextusban.
 

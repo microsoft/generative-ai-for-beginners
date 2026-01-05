@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Utilizarea AI Generativ în mod responsabil
 
-[![Utilizarea AI Generativ în mod responsabil](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.ro.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Utilizarea AI Generativ în mod responsabil](../../../translated_images/03-lesson-banner.1ed56067a452d977.ro.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții_
 
@@ -85,7 +85,7 @@ Aceste tipuri de rezultate nu sunt doar distructive pentru construirea unor expe
 
 Acum că am identificat importanța AI Generativ Responsabil, să analizăm 4 pași pe care îi putem face pentru a construi soluții AI în mod responsabil:
 
-![Ciclul de atenuare](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.ro.png)
+![Ciclul de atenuare](../../../translated_images/mitigate-cycle.babcd5a5658e1775.ro.png)
 
 ### Măsurarea riscurilor potențiale
 
@@ -97,7 +97,7 @@ Deoarece startup-ul nostru construiește un produs educațional, ar fi bine să 
 
 Este momentul să găsim modalități prin care putem preveni sau limita riscurile potențiale cauzate de model și de răspunsurile acestuia. Putem privi acest aspect în 4 straturi diferite:
 
-![Straturi de atenuare](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.ro.png)
+![Straturi de atenuare](../../../translated_images/mitigation-layers.377215120b9a1159.ro.png)
 
 - **Model**. Alegerea modelului potrivit pentru cazul de utilizare potrivit. Modelele mai mari și mai complexe, cum ar fi GPT-4, pot prezenta un risc mai mare de conținut nociv atunci când sunt aplicate la cazuri de utilizare mai mici și mai specifice. Utilizarea datelor de antrenament pentru ajustare fină reduce, de asemenea, riscul de conținut nociv.
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.sk.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.sk.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Úvod
 
@@ -41,12 +41,12 @@ Pre túto lekciu budeme modely ďalej označovať ako "open modely", pretože v 
 
 **Cena** – Cena za token pri používaní a nasadzovaní týchto modelov je nižšia ako u proprietárnych modelov. Pri budovaní aplikácií Generatívnej AI by ste mali zvážiť pomer výkon/cena pri práci s týmito modelmi pre váš prípad použitia.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.sk.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.sk.png)
 Zdroj: Artificial Analysis
 
 **Flexibilita** – Práca s open modelmi vám umožňuje byť flexibilný v používaní rôznych modelov alebo ich kombinovaní. Príkladom sú [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kde si používateľ môže priamo v používateľskom rozhraní vybrať model, ktorý sa používa:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.sk.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.sk.png)
 
 ## Preskúmanie rôznych Open Modelov
 
@@ -74,7 +74,7 @@ Neexistuje jednoznačná odpoveď na výber open modelu. Dobré miesto na začia
 
 Pri porovnávaní LLM naprieč rôznymi typmi je ďalším skvelým zdrojom [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst):
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.sk.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.sk.png)
 Zdroj: Artificial Analysis
 
 Ak pracujete na konkrétnom prípade použitia, môže byť efektívne hľadať doladené verzie zamerané na rovnakú oblasť. Experimentovanie s viacerými open modelmi, aby ste videli, ako sa správajú podľa vašich a používateľských očakávaní, je ďalšia dobrá prax.
