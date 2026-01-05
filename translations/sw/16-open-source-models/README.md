@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.sw.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.sw.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Utangulizi
 
@@ -41,12 +41,12 @@ Kwa somo hili, tutarejelea mifano kama "mifano huria" kuendelea kwani huenda hai
 
 **Gharama** - Gharama kwa tokeni kwa kutumia na kupeleka mifano hii ni chini kuliko ile ya mifano ya umiliki. Unapojenga programu za AI za kizazi, kuangalia utendaji dhidi ya bei unapotumia mifano hii kwa matumizi yako ni muhimu.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.sw.png)
+![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.sw.png)
 Chanzo: Artificial Analysis
 
 **Uwezo wa Kubadilika** - Kufanya kazi na mifano huria kunakuwezesha kuwa na uhuru wa kutumia mifano tofauti au kuziunganisha. Mfano wa hili ni [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) ambapo mtumiaji anaweza kuchagua mfano unaotumika moja kwa moja kwenye kiolesura cha mtumiaji:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.sw.png)
+![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.sw.png)
 
 ## Kuchunguza Mifano Huria Tofauti
 
@@ -74,7 +74,7 @@ Hakuna jibu moja la kuchagua mfano huria. Mahali pazuri pa kuanza ni kutumia kip
 
 Unapotaka kulinganisha LLM kati ya aina tofauti, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) ni rasilimali nyingine nzuri:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.sw.png)
+![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.sw.png)
 Chanzo: Artificial Analysis
 
 Ikiwa unafanya kazi kwa matumizi maalum, kutafuta toleo zilizorekebishwa zinazolenga eneo hilo linaweza kuwa na ufanisi. Ku jaribu mifano huria mingi kuona jinsi inavyofanya kazi kulingana na matarajio yako na ya watumiaji ni mazoezi mazuri pia.

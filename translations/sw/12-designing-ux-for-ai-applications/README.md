@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kubuni UX kwa Programu za AI
 
-[![Kubuni UX kwa Programu za AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.sw.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Kubuni UX kwa Programu za AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.sw.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Bofya picha hapo juu kutazama video ya somo hili)_
 
@@ -58,7 +58,7 @@ Kuwa rahisi kupatikana inamaanisha kupanua uzoefu wa mtumiaji kwa watumiaji weny
 
 Kuwa wa kupendeza inamaanisha kuwa programu ni ya kufurahisha kutumia. Uzoefu wa mtumiaji unaovutia unaweza kuwa na athari chanya kwa mtumiaji, kumhimiza kurudi kutumia programu na kuongeza mapato ya biashara.
 
-![picha inayoonyesha mambo ya kuzingatia katika UX ya AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.sw.png)
+![picha inayoonyesha mambo ya kuzingatia katika UX ya AI](../../../translated_images/uxinai.d5b4ed690f5cefff.sw.png)
 
 Si kila changamoto inaweza kutatuliwa na AI. AI huja kusaidia uzoefu wa mtumiaji, iwe ni kuendesha kazi za mikono, au kubinafsisha uzoefu wa mtumiaji.
 
@@ -72,25 +72,25 @@ Njia mbili za kuhakikisha kuwa uaminifu unakuwa katikati ya ubunifu ni kueleweka
 
 Wakati AI inasaidia kutoa maamuzi kama vile kufundisha vizazi vijavyo, ni muhimu kwa walimu na wazazi kuelewa jinsi maamuzi ya AI yanavyofanywa. Hii ni uelewevu - kuelewa jinsi programu za AI zinavyofanya maamuzi. Kubuni kwa ajili ya uelewevu kunajumuisha kuongeza maelezo yanayoonyesha jinsi AI ilivyofikia matokeo. Hadhira inapaswa kufahamu kuwa matokeo yanatolewa na AI na si binadamu. Kwa mfano, badala ya kusema "Anza kuzungumza na mwalimu wako sasa" sema "Tumia mwalimu wa AI anayejibadilisha kulingana na mahitaji yako na kukusaidia kujifunza kwa kasi yako."
 
-![ukurasa wa programu unaoonyesha uelewevu wa wazi katika programu za AI](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.sw.png)
+![ukurasa wa programu unaoonyesha uelewevu wa wazi katika programu za AI](../../../translated_images/explanability-in-ai.134426a96b498fbf.sw.png)
 
 Mfano mwingine ni jinsi AI inavyotumia data ya mtumiaji na ya kibinafsi. Kwa mfano, mtumiaji mwenye tabia ya mwanafunzi anaweza kuwa na mipaka kulingana na tabia yake. AI inaweza kuwa hawezi kufichua majibu ya maswali lakini inaweza kusaidia kumwelekeza mtumiaji kufikiria jinsi ya kutatua tatizo.
 
-![AI ikijibu maswali kulingana na tabia ya mtumiaji](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.sw.png)
+![AI ikijibu maswali kulingana na tabia ya mtumiaji](../../../translated_images/solving-questions.b7dea1604de0cbd2.sw.png)
 
 Sehemu nyingine muhimu ya uelewevu ni urahisi wa maelezo. Wanafunzi na walimu huenda si wataalamu wa AI, kwa hivyo maelezo ya kile ambacho programu inaweza au haiwezi kufanya yanapaswa kuwa rahisi na rahisi kueleweka.
 
-![maelezo rahisi kuhusu uwezo wa AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.sw.png)
+![maelezo rahisi kuhusu uwezo wa AI](../../../translated_images/simplified-explanations.4679508a406c3621.sw.png)
 
 ### Udhibiti
 
 AI ya kizazi huunda ushirikiano kati ya AI na mtumiaji, ambapo kwa mfano mtumiaji anaweza kurekebisha maelezo ya maombi ili kupata matokeo tofauti. Zaidi ya hayo, mara matokeo yanapotolewa, watumiaji wanapaswa kuwa na uwezo wa kurekebisha matokeo hayo na kuwapa hisia ya udhibiti. Kwa mfano, wakati wa kutumia Bing, unaweza kubadilisha maelezo ya maombi kulingana na muundo, sauti na urefu. Zaidi ya hayo, unaweza kuongeza mabadiliko kwenye matokeo yako na kurekebisha matokeo kama inavyoonyeshwa hapa chini:
 
-![Matokeo ya utafutaji wa Bing na chaguo za kurekebisha maombi na matokeo](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.sw.png)
+![Matokeo ya utafutaji wa Bing na chaguo za kurekebisha maombi na matokeo](../../../translated_images/bing1.293ae8527dbe2789.sw.png)
 
 Kipengele kingine katika Bing kinachomruhusu mtumiaji kuwa na udhibiti juu ya programu ni uwezo wa kuchagua kuingia au kutoka kwa data ambayo AI inatumia. Kwa programu ya shule, mwanafunzi anaweza kutaka kutumia noti zake pamoja na rasilimali za walimu kama nyenzo za marudio.
 
-![Matokeo ya utafutaji wa Bing na chaguo za kurekebisha maombi na matokeo](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.sw.png)
+![Matokeo ya utafutaji wa Bing na chaguo za kurekebisha maombi na matokeo](../../../translated_images/bing2.309f4845528a88c2.sw.png)
 
 > Wakati wa kubuni programu za AI, makusudi ni muhimu katika kuhakikisha watumiaji hawana imani kupita kiasi na kuweka matarajio yasiyo ya kweli kuhusu uwezo wake. Njia moja ya kufanya hili ni kwa kuunda vikwazo kati ya maombi na matokeo. Kumbusha mtumiaji kuwa hii ni AI na si binadamu mwingine.
 
@@ -102,7 +102,7 @@ Programu za AI zinapaswa kujengwa ili kupokea na kutoa maoni. Hii haimsaidii tu 
 
 Njia nyingine ya kushughulikia hili ni kuwasilisha wazi uwezo na mipaka ya mfumo. Wakati mtumiaji anafanya kosa akiomba kitu ambacho kiko nje ya uwezo wa AI, pia inapaswa kuwa na njia ya kushughulikia hili, kama inavyoonyeshwa hapa chini.
 
-![Kutoa maoni na kushughulikia makosa](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.sw.png)
+![Kutoa maoni na kushughulikia makosa](../../../translated_images/feedback-loops.7955c134429a9466.sw.png)
 
 Makosa ya mfumo ni ya kawaida katika programu ambapo mtumiaji anaweza kuhitaji msaada na taarifa nje ya wigo wa AI au programu inaweza kuwa na kikomo cha maswali/masomo ambayo mtumiaji anaweza kuunda muhtasari. Kwa mfano, programu ya AI iliyofundishwa na data ya masomo machache kama Historia na Hisabati inaweza kuwa hawezi kushughulikia maswali kuhusu Jiografia. Ili kupunguza hili, mfumo wa AI unaweza kutoa jibu kama: "Samahani, bidhaa yetu imefundishwa na data katika masomo yafuatayo....., siwezi kujibu swali ulilouliza."
 

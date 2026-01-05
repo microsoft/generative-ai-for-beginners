@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kuchunguza na kulinganisha LLM tofauti
 
-[![Kuchunguza na kulinganisha LLM tofauti](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.sw.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Kuchunguza na kulinganisha LLM tofauti](../../../translated_images/02-lesson-banner.ef94c84979f97f60.sw.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Bonyeza picha hapo juu kutazama video ya somo hili_
 
@@ -59,14 +59,14 @@ Neno Mfano wa Msingi lilianzishwa na [watafiti wa Stanford](https://arxiv.org/ab
 - **Ni mifano mikubwa sana**, inayotegemea mitandao ya neva yenye kina kirefu iliyofundishwa kwa mamilioni ya vigezo.
 - **Kwa kawaida zinalenga kutumika kama ‘msingi’ wa mifano mingine**, ikimaanisha zinaweza kutumika kama msingi wa mifano mingine kujengwa juu yake, ambayo inaweza kufanywa kwa kurekebisha.
 
-![Mifano ya Msingi dhidi ya LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.sw.png)
+![Mifano ya Msingi dhidi ya LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.sw.png)
 
 Chanzo cha picha: [Mwongozo Muhimu wa Mifano ya Msingi na LLM | na Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Ili kufafanua zaidi tofauti hii, hebu tuchukue ChatGPT kama mfano. Ili kujenga toleo la kwanza la ChatGPT, mfano uitwao GPT-3.5 ulitumika kama mfano wa msingi. Hii inamaanisha kuwa OpenAI ilitumia data maalum ya mazungumzo kuunda toleo lililorekebishwa la GPT-3.5 ambalo lilikuwa maalum kwa kufanya vizuri katika hali za mazungumzo, kama vile chatbots.
 
-![Mfano wa Msingi](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.sw.png)
+![Mfano wa Msingi](../../../translated_images/Multimodal.2c389c6439e0fc51.sw.png)
 
 Chanzo cha picha: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM pia zinaweza kuainishwa kulingana na matokeo wanayozalisha.
 
 Embeddings ni seti ya mifano inayoweza kubadilisha maandishi kuwa fomu ya nambari, inayoitwa embedding, ambayo ni uwakilishi wa nambari wa maandishi ya pembejeo. Embeddings hufanya iwe rahisi kwa mashine kuelewa uhusiano kati ya maneno au sentensi na inaweza kutumiwa kama pembejeo na mifano mingine, kama mifano ya uainishaji, au mifano ya clustering ambayo ina utendaji bora kwenye data ya nambari. Mifano ya embedding mara nyingi hutumiwa kwa kujifunza uhamisho, ambapo mfano hujengwa kwa kazi mbadala ambayo kuna wingi wa data, na kisha uzito wa mfano (embeddings) hutumiwa tena kwa kazi nyingine za chini. Mfano wa kategoria hii ni [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.sw.png)
+![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.sw.png)
 
 Mifano ya uzalishaji wa picha ni mifano inayozalisha picha. Mifano hii mara nyingi hutumiwa kwa uhariri wa picha, usanisi wa picha, na tafsiri ya picha. Mifano ya uzalishaji wa picha mara nyingi hufundishwa kwa seti kubwa za data za picha, kama [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), na inaweza kutumika kuzalisha picha mpya au kuhariri picha zilizopo kwa mbinu za inpainting, super-resolution, na colorization. Mifano ni pamoja na [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) na [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Uzalishaji wa Picha](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.sw.png)
+![Uzalishaji wa Picha](../../../translated_images/Image.349c080266a763fd.sw.png)
 
 Mifano ya uzalishaji wa maandishi na nambari ni mifano inayozalisha maandishi au nambari. Mifano hii mara nyingi hutumiwa kwa muhtasari wa maandishi, tafsiri, na kujibu maswali. Mifano ya uzalishaji wa maandishi mara nyingi hufundishwa kwa seti kubwa za data za maandishi, kama [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), na inaweza kutumika kuzalisha maandishi mapya, au kujibu maswali. Mifano ya uzalishaji wa nambari, kama [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), mara nyingi hufundishwa kwa seti kubwa za data za nambari, kama GitHub, na inaweza kutumika kuzalisha nambari mpya, au kurekebisha hitilafu katika nambari zilizopo.
 
-![Uzalishaji wa Maandishi na Nambari](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.sw.png)
+![Uzalishaji wa Maandishi na Nambari](../../../translated_images/Text.a8c0cf139e5cc2a0.sw.png)
 
 ### Encoder-Decoder dhidi ya Decoder-only
 
@@ -123,23 +123,23 @@ Mifano mingi ya modeli tuliyotaja katika aya zilizopita (modeli za OpenAI, model
 
 - Kupata Modeli ya Msingi ya kuvutia katika katalogi - iwe ni ya wamiliki au chanzo huria, kwa kuchuja kulingana na kazi, leseni, au jina. Ili kuboresha utafutaji, modeli zimepangwa katika makusanyo, kama vile mkusanyiko wa Azure OpenAI, mkusanyiko wa Hugging Face, na zaidi.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.sw.png)
+![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.sw.png)
 
 - Kukagua kadi ya modeli, ikiwa ni pamoja na maelezo ya kina ya matumizi yaliyokusudiwa na data ya mafunzo, sampuli za msimbo na matokeo ya tathmini kwenye maktaba ya tathmini ya ndani.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.sw.png)
+![Model card](../../../translated_images/ModelCard.598051692c6e400d.sw.png)
 
 - Kulinganisha viwango vya utendaji kati ya modeli na seti za data zinazopatikana katika sekta ili kutathmini ni ipi inayokidhi hali ya biashara, kupitia paneli ya [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.sw.png)
+![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.sw.png)
 
 - Kuboresha modeli kwa kutumia data ya mafunzo ya kibinafsi ili kuboresha utendaji wa modeli katika mzigo maalum wa kazi, kwa kutumia uwezo wa majaribio na ufuatiliaji wa Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.sw.png)
+![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.sw.png)
 
 - Kuweka modeli ya awali iliyofunzwa au toleo lililoboreshwa kwa utabiri wa wakati halisi wa mbali - kompyuta inayosimamiwa - au mwisho wa api isiyo na seva - [kulipa kadri unavyotumia](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - ili kuwezesha programu kuitumia.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.sw.png)
+![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.sw.png)
 
 > [!NOTE]
 > Sio modeli zote katika katalogi zinapatikana kwa sasa kwa kuboreshwa na/au kuwekwa kwa kulipa kadri unavyotumia. Angalia kadi ya modeli kwa maelezo kuhusu uwezo na mipaka ya modeli.
@@ -158,7 +158,7 @@ Kuna njia kadhaa biashara inaweza kutumia kupata matokeo wanayohitaji kutoka kwa
 
 - **Modeli iliyoboreshwa**. Hapa, unafundisha modeli zaidi kwa data yako mwenyewe ambayo husababisha modeli kuwa sahihi zaidi na kujibu mahitaji yako lakini inaweza kuwa ghali.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.sw.png)
+![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.sw.png)
 
 Chanzo cha picha: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Misingi ya Uhandisi wa Maelekezo
 
-[![Misingi ya Uhandisi wa Maelekezo](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.sw.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Misingi ya Uhandisi wa Maelekezo](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.sw.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Utangulizi
 Moduli hii inashughulikia dhana muhimu na mbinu za kuunda maelekezo bora kwa mifano ya AI inayozalisha. Jinsi unavyoandika maelekezo yako kwa LLM pia ni muhimu. Maelekezo yaliyoandaliwa kwa uangalifu yanaweza kufanikisha majibu bora zaidi. Lakini maneno kama _maelekezo_ na _uhandisi wa maelekezo_ yanamaanisha nini hasa? Na ninawezaje kuboresha _maelekezo_ ninayotuma kwa LLM? Haya ni maswali tutakayojaribu kujibu ndani ya sura hii na inayofuata.
@@ -53,7 +53,7 @@ Notebook inakuja na mazoezi ya _kuanzia_ - lakini unahimizwa kuongeza sehemu zak
 
 Unataka kupata picha kubwa ya kile somo hili linashughulikia kabla ya kuanza? Angalia mwongozo huu wa picha, ambao unakupa hisia ya mada kuu zinazoshughulikiwa na mambo muhimu ya kuzingatia katika kila moja. Ramani ya somo inakupeleka kutoka kuelewa dhana za msingi na changamoto hadi kuzishughulikia kwa mbinu husika za uhandisi wa maelekezo na mbinu bora. Kumbuka kuwa sehemu ya "Mbinu za Juu" katika mwongozo huu inahusu maudhui yanayoshughulikiwa katika sura _inayofuata_ ya mtaala huu.
 
-![Mwongozo wa Picha wa Uhandisi wa Maelekezo](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.sw.png)
+![Mwongozo wa Picha wa Uhandisi wa Maelekezo](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.sw.png)
 
 ## Kuanza kwa Biashara Yetu
 
@@ -84,7 +84,7 @@ LLM huona maelekezo kama _mlolongo wa tokeni_ ambapo mifano tofauti (au matoleo 
 
 Ili kupata hisia ya jinsi tokenization inavyofanya kazi, jaribu zana kama [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) iliyoonyeshwa hapa chini. Nakili maelekezo yako - na uone jinsi yanavyobadilishwa kuwa tokeni, ukizingatia jinsi wahusika wa nafasi na alama za uakifishaji zinavyoshughulikiwa. Kumbuka kuwa mfano huu unaonyesha LLM ya zamani (GPT-3) - kwa hivyo kujaribu hili na mfano mpya zaidi kunaweza kutoa matokeo tofauti.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.sw.png)
+![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.sw.png)
 
 ### Dhana: Mifano ya Msingi
 
@@ -94,7 +94,7 @@ Unataka kuona jinsi ukamilishaji unaotegemea maelekezo unavyofanya kazi? Weka ma
 
 Lakini je, mtumiaji alitaka kuona kitu maalum kinachokidhi vigezo fulani au lengo la kazi? Hapa ndipo _LLMs zilizotunzwa kwa maelekezo_ zinapokuja.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.sw.png)
+![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.sw.png)
 
 ### Dhana: LLMs Zilizotunzwa kwa Maelekezo
 
@@ -108,7 +108,7 @@ Hebu tujaribu - rudi kwenye maelekezo hapo juu, lakini sasa badilisha _ujumbe wa
 
 Angalia jinsi matokeo sasa yanavyolingana na lengo na muundo unaotakiwa? Mwalimu sasa anaweza kutumia moja kwa moja majibu haya katika slaidi za darasa hilo.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.sw.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.sw.png)
 
 ## Kwa nini tunahitaji Uhandisi wa Maelekezo?
 
@@ -138,15 +138,15 @@ Kwa hivyo, nini kinatokea tunapojaribu ombi hili na watoa huduma tofauti wa LLM?
 
 > **Jibu 1**: OpenAI Playground (GPT-35)
 
-![Jibu 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.sw.png)
+![Jibu 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.sw.png)
 
 > **Jibu 2**: Azure OpenAI Playground (GPT-35)
 
-![Jibu 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.sw.png)
+![Jibu 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.sw.png)
 
 > **Jibu 3**: Hugging Face Chat Playground (LLama-2)
 
-![Jibu 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.sw.png)
+![Jibu 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.sw.png)
 
 Kama ilivyotarajiwa, kila modeli (au toleo la modeli) hutoa majibu yanayotofautiana kidogo kutokana na tabia ya nasibu na tofauti za uwezo wa modeli. Kwa mfano, modeli moja inalenga hadhira ya darasa la nane, wakati nyingine inadhani ni mwanafunzi wa shule ya upili. Lakini modeli zote tatu zilitengeneza majibu ambayo yanaweza kumshawishi mtumiaji asiye na taarifa kuwa tukio hilo lilikuwa halisi.
 

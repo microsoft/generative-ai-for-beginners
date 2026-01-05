@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za Kutengeneza Picha
 
-[![Kujenga Programu za Kutengeneza Picha](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sw.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Kujenga Programu za Kutengeneza Picha](../../../translated_images/09-lesson-banner.906e408c741f4411.sw.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Kuna zaidi ya LLMs kuliko kutengeneza maandishi tu. Inawezekana pia kutengeneza picha kutoka kwa maelezo ya maandishi. Kuwa na picha kama njia ya mawasiliano kunaweza kuwa na manufaa makubwa katika maeneo mbalimbali kama MedTech, usanifu, utalii, ukuzaji wa michezo na zaidi. Katika sura hii, tutachunguza mifano miwili maarufu ya kutengeneza picha, DALL-E na Midjourney.
 
@@ -43,7 +43,7 @@ Kama sehemu ya somo hili, tutaendelea kufanya kazi na kampuni yetu ya kuanzisha,
 
 Hapa kuna mfano wa kile wanafunzi wa Edu4All wanaweza kutengeneza ikiwa wanajifunza darasani kuhusu makaburi:
 
-![Kampuni ya Edu4All, darasa kuhusu makaburi, Mnara wa Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sw.png)
+![Kampuni ya Edu4All, darasa kuhusu makaburi, Mnara wa Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5a.sw.png)
 
 wakitumia prompt kama
 
@@ -273,9 +273,9 @@ Hapa kuna mfano wa kutumia GPT Image:
   Picha ya msingi ingekuwa na chumba cha kupumzika na bwawa tu lakini picha ya mwisho ingekuwa na flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.sw.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.sw.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.sw.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.sw.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mask.1b2976ccec9e011e.sw.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.sw.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Hebu tuangalie mfano wa jinsi temperature inavyofanya kazi, kwa kuendesha prompt
 
 > Prompt : "Sungura juu ya farasi, ameshikilia lollipop, kwenye uwanja wa ukungu ambapo maua ya daffodils yanamea"
 
-![Sungura juu ya farasi ameshikilia lollipop, toleo la 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sw.png)
+![Sungura juu ya farasi ameshikilia lollipop, toleo la 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.sw.png)
 
 Sasa hebu tuendeshe prompt hiyo hiyo ili tuone kwamba hatutapata picha sawa mara mbili:
 
-![Picha iliyotengenezwa ya sungura juu ya farasi](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sw.png)
+![Picha iliyotengenezwa ya sungura juu ya farasi](../../../translated_images/v2-generated-image.33f55a3714efe61d.sw.png)
 
 Kama unavyoona, picha zinafanana, lakini si sawa. Hebu jaribu kubadilisha thamani ya temperature kuwa 0.1 na tuone kinachotokea:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Sasa unapokimbia msimbo huu, unapata picha hizi mbili:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sw.png)
-- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sw.png)
+- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.sw.png)
+- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.sw.png)
 
 Hapa unaweza kuona wazi jinsi picha zinavyofanana zaidi.
 
