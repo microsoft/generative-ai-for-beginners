@@ -49,7 +49,9 @@ AI & OCR-Powered Personal & Community Library
 4. Integration: Link to Goodreads, Kindle, or library apps to sync digital and physical collections. (For personal use)
 
 To be created: Workflow Diagram
+
 To be created: PRD
+
 To be created: Business Canvas & Business Plan
 
 
