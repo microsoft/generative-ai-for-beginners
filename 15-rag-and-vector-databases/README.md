@@ -133,9 +133,7 @@ There are several ways to perform search within our database such as:
 
 - **Keyword search** - used for text searches
 
-- **Semantic search** - uses the semantic meaning of words
-
-- **Vector search** - converts documents from text to vector representations using embedding models. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
+- **Vector search** - converts documents from text to vector representations using embedding models, permitting a **semantic search** using the meaning of words. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
 
 - **Hybrid** - a combination of both keyword and vector search.
 
