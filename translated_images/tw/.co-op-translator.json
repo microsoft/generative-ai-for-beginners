@@ -1,206 +1,8 @@
 {
-  "github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp": {
-    "original_hash": "b1cd05ae141ccf3cbaae388818578cb6",
-    "translation_date": "2026-01-16T10:35:05+00:00",
-    "source_file": "images/github-check-urls-missing-tracking-comment.png",
-    "language_code": "tw"
-  },
-  "vscode-follow-link.85520ab6a1237adc.webp": {
-    "original_hash": "5fde2d71a49a708cd6343002fa1e63a3",
-    "translation_date": "2026-01-16T10:35:14+00:00",
-    "source_file": "images/vscode-follow-link.png",
-    "language_code": "tw"
-  },
-  "android-chrome-192x192.a77b6997304e7e1f.webp": {
-    "original_hash": "3b97d290216941307be828e5ce4c9b4d",
-    "translation_date": "2026-01-16T10:35:17+00:00",
-    "source_file": "images/android-chrome-192x192.png",
-    "language_code": "tw"
-  },
-  "github-check-country-locale-comment.2f4fe93228161dee.webp": {
-    "original_hash": "5f12e0c4fa8c5c9c343e87e2ac92e0fd",
-    "translation_date": "2026-01-16T10:35:24+00:00",
-    "source_file": "images/github-check-country-locale-comment.png",
-    "language_code": "tw"
-  },
-  "repo-thumbnailv2.06f4a48036fde647.webp": {
-    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
-    "translation_date": "2026-01-16T10:35:37+00:00",
-    "source_file": "images/repo-thumbnailv2.png",
-    "language_code": "tw"
-  },
-  "repo-thubmnail2.0f2b17cf562b4a8c.webp": {
-    "original_hash": "48d5875c746eea4336d928f29a8a8918",
-    "translation_date": "2026-01-16T10:35:49+00:00",
-    "source_file": "images/repo-thubmnail2.png",
-    "language_code": "tw"
-  },
-  "favicon-16x16.1582c46aa87708ce.webp": {
-    "original_hash": "9ed523ea8f3610840fb1a3acad83b7f9",
-    "translation_date": "2026-01-16T10:35:49+00:00",
-    "source_file": "images/favicon-16x16.png",
-    "language_code": "tw"
-  },
-  "favicon-32x32.3f87837bcd542629.webp": {
-    "original_hash": "618bbabc1fbfc4ae34992d8cbf4df79b",
-    "translation_date": "2026-01-16T10:35:49+00:00",
-    "source_file": "images/favicon-32x32.png",
-    "language_code": "tw"
-  },
-  "github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp": {
-    "original_hash": "54912bef63e510fadf09bfdfa0a2eed7",
-    "translation_date": "2026-01-16T10:35:59+00:00",
-    "source_file": "images/github-check-paths-missing-tracking-comment.png",
-    "language_code": "tw"
-  },
-  "logo.706ff17a872243dc.webp": {
-    "original_hash": "6cbc063bca7846975724645cabdc92ba",
-    "translation_date": "2026-01-16T10:36:03+00:00",
-    "source_file": "images/logo.png",
-    "language_code": "tw"
-  },
-  "vscode-select-relative-path.3804eb73c3a9e5f2.webp": {
-    "original_hash": "497325b2f7858e324224d92c885fca35",
-    "translation_date": "2026-01-16T10:36:30+00:00",
-    "source_file": "images/vscode-select-relative-path.png",
-    "language_code": "tw"
-  },
-  "repository-thumbnail.d450333985e6cb81.webp": {
-    "original_hash": "7cf33b807aaf9de3771b56c627077971",
-    "translation_date": "2026-01-16T10:36:39+00:00",
-    "source_file": "images/repository-thumbnail.png",
-    "language_code": "tw"
-  },
-  "repo-thumbnailv4.2a8556df61fae2a1.webp": {
-    "original_hash": "4ea0e4c04d0429fcf5fcf974e9b29526",
-    "translation_date": "2026-01-16T10:36:49+00:00",
-    "source_file": "images/repo-thumbnailv4.png",
-    "language_code": "tw"
-  },
-  "apple-touch-icon.02980588806a9ada.webp": {
-    "original_hash": "de7f45bbf53c787c654f0d08b8dbb243",
-    "translation_date": "2026-01-16T10:36:52+00:00",
-    "source_file": "images/apple-touch-icon.png",
-    "language_code": "tw"
-  },
-  "repo-thubmnailv2.115823d179386974.webp": {
-    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
-    "translation_date": "2026-01-16T10:37:05+00:00",
-    "source_file": "images/repo-thubmnailv2.png",
-    "language_code": "tw"
-  },
-  "repo-thumbnailv4-fixed.11f1ce6a85d01461.webp": {
-    "original_hash": "a1c0bdadfc81125f9662146924c9b9af",
-    "translation_date": "2026-01-16T10:37:15+00:00",
-    "source_file": "images/repo-thumbnailv4-fixed.png",
-    "language_code": "tw"
-  },
-  "repo-thumbnailv3.917487e234b90100.webp": {
-    "original_hash": "1573acc06f264d139365fd3fca221806",
-    "translation_date": "2026-01-16T10:37:24+00:00",
-    "source_file": "images/repo-thumbnailv3.png",
-    "language_code": "tw"
-  },
-  "android-chrome-512x512.2ac1c9816814f4fd.webp": {
-    "original_hash": "f08348084e4d3a4ed2d034dd300f60ce",
-    "translation_date": "2026-01-16T10:37:29+00:00",
-    "source_file": "images/android-chrome-512x512.png",
-    "language_code": "tw"
-  },
-  "text-completion-example.cbb0f28403d42752.webp": {
-    "original_hash": "f1085b628244e575a0a4c1bb0f2d6bd4",
-    "translation_date": "2026-01-16T10:37:58+00:00",
-    "source_file": "01-introduction-to-genai/images/text-completion-example.png",
-    "language_code": "tw"
-  },
-  "coding-example.50ebabe8a6afff20.webp": {
-    "original_hash": "f01935c06cd382caeb289b1210ea4a50",
-    "translation_date": "2026-01-16T10:38:10+00:00",
-    "source_file": "01-introduction-to-genai/images/coding-example.png",
-    "language_code": "tw"
-  },
-  "students-by-DALLE2.b70fddaced1042ee.webp": {
-    "original_hash": "eb6c11420a6df35996fa4ef817c62e0d",
-    "translation_date": "2026-01-16T10:38:11+00:00",
-    "source_file": "01-introduction-to-genai/images/students-by-DALLE2.png",
-    "language_code": "tw"
-  },
   "01-lesson-banner.2424cfd092f43366.webp": {
     "original_hash": "764a5361fc9a5c0fdbeabb599add45b5",
     "translation_date": "2026-01-16T10:38:16+00:00",
     "source_file": "01-introduction-to-genai/images/01-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "AI-diagram.c391fa518451a40d.webp": {
-    "original_hash": "20e8fd1d752435e1dc270827e7f9c5c5",
-    "translation_date": "2026-01-16T10:38:25+00:00",
-    "source_file": "01-introduction-to-genai/images/AI-diagram.png",
-    "language_code": "tw"
-  },
-  "summarization-example.7b7ff97147b3d790.webp": {
-    "original_hash": "f7f2e4b3b3b9faf49b864ddbeeb44f71",
-    "translation_date": "2026-01-16T10:38:56+00:00",
-    "source_file": "01-introduction-to-genai/images/summarization-example.png",
-    "language_code": "tw"
-  },
-  "conversation-example.60c2afc0f595fa59.webp": {
-    "original_hash": "afd78ba6ccc05b44f806d10f4db4a4a1",
-    "translation_date": "2026-01-16T10:39:16+00:00",
-    "source_file": "01-introduction-to-genai/images/conversation-example.png",
-    "language_code": "tw"
-  },
-  "tokenizer-example.80a5c151ee7d1bd4.webp": {
-    "original_hash": "70bd973fc6e2b9ea5c0fb994eeb66773",
-    "translation_date": "2026-01-16T10:39:20+00:00",
-    "source_file": "01-introduction-to-genai/images/tokenizer-example.png",
-    "language_code": "tw"
-  },
-  "creative-writing-example.e24a685b5a543ad1.webp": {
-    "original_hash": "bd57560524b91fc24d4008af3585206b",
-    "translation_date": "2026-01-16T10:39:44+00:00",
-    "source_file": "01-introduction-to-genai/images/creative-writing-example.png",
-    "language_code": "tw"
-  },
-  "model-quality.aaae1c22e00f7ee1.webp": {
-    "original_hash": "d6fa73f9c000f13095e3e7577b89c14c",
-    "translation_date": "2026-01-16T10:39:55+00:00",
-    "source_file": "16-open-source-models/images/model-quality.png",
-    "language_code": "tw"
-  },
-  "model-price.3f5a3e4d32ae00b4.webp": {
-    "original_hash": "98c4407d195143ac6d305c6f71ca8a76",
-    "translation_date": "2026-01-16T10:40:03+00:00",
-    "source_file": "16-open-source-models/images/model-price.png",
-    "language_code": "tw"
-  },
-  "choose-model.f095d15bbac92214.webp": {
-    "original_hash": "e2b006f74417290be79fc6bd3c37d063",
-    "translation_date": "2026-01-16T10:40:18+00:00",
-    "source_file": "16-open-source-models/images/choose-model.png",
-    "language_code": "tw"
-  },
-  "16-lesson-banner.6b56555e8404fda1.webp": {
-    "original_hash": "c2fc603411583b94f23f5eb1e5275330",
-    "translation_date": "2026-01-16T10:40:23+00:00",
-    "source_file": "16-open-source-models/images/16-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "14-lesson-banner.066d74a31727ac12.webp": {
-    "original_hash": "e513eba3cd7b4a2521a1de0a28c69b7b",
-    "translation_date": "2026-01-16T10:40:28+00:00",
-    "source_file": "14-the-generative-ai-application-lifecycle/images/14-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "02-llmops.70a942ead05a7645.webp": {
-    "original_hash": "8ee24ff062a702348def58433e933cfb",
-    "translation_date": "2026-01-16T10:40:42+00:00",
-    "source_file": "14-the-generative-ai-application-lifecycle/images/02-llmops.png",
-    "language_code": "tw"
-  },
-  "03-llm-stage-flows.3a1e1c401235a6cf.webp": {
-    "original_hash": "91c5b45c7d9c0c8cfa48cb2cdab187d1",
-    "translation_date": "2026-01-16T10:40:52+00:00",
-    "source_file": "14-the-generative-ai-application-lifecycle/images/03-llm-stage-flows.png",
     "language_code": "tw"
   },
   "01-llmops-shift.29bc933cb3bb0080.webp": {
@@ -209,16 +11,28 @@
     "source_file": "14-the-generative-ai-application-lifecycle/images/01-llmops-shift.png",
     "language_code": "tw"
   },
-  "06-llm-promptflow.a183eba07a3a7fdf.webp": {
-    "original_hash": "009440d13cbb89a2129c78e7b2384aa7",
-    "translation_date": "2026-01-16T10:41:25+00:00",
-    "source_file": "14-the-generative-ai-application-lifecycle/images/06-llm-promptflow.png",
+  "02-lesson-banner.ef94c84979f97f60.webp": {
+    "original_hash": "80c419307e0748e4cd33b8467add3494",
+    "translation_date": "2026-01-16T10:52:44+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/02-lesson-banner.png",
     "language_code": "tw"
   },
-  "05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp": {
-    "original_hash": "ddd4d17fcf213e79251449863d252297",
-    "translation_date": "2026-01-16T10:41:42+00:00",
-    "source_file": "14-the-generative-ai-application-lifecycle/images/05-llm-azure-ai-prompt.png",
+  "02-llmops.70a942ead05a7645.webp": {
+    "original_hash": "8ee24ff062a702348def58433e933cfb",
+    "translation_date": "2026-01-16T10:40:42+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/images/02-llmops.png",
+    "language_code": "tw"
+  },
+  "03-lesson-banner.1ed56067a452d977.webp": {
+    "original_hash": "a59127a9d2f8e3d57a493e6b0fca2212",
+    "translation_date": "2026-01-16T10:49:23+00:00",
+    "source_file": "03-using-generative-ai-responsibly/images/03-lesson-banner.png",
+    "language_code": "tw"
+  },
+  "03-llm-stage-flows.3a1e1c401235a6cf.webp": {
+    "original_hash": "91c5b45c7d9c0c8cfa48cb2cdab187d1",
+    "translation_date": "2026-01-16T10:40:52+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/images/03-llm-stage-flows.png",
     "language_code": "tw"
   },
   "04-azure-ai-platform.80203baf03a12fa8.webp": {
@@ -227,10 +41,34 @@
     "source_file": "14-the-generative-ai-application-lifecycle/images/04-azure-ai-platform.png",
     "language_code": "tw"
   },
-  "04-tokenizer-example.e71f0a0f70356c5c.webp": {
-    "original_hash": "1d5fcd05543b9968b27b3673da93ace9",
-    "translation_date": "2026-01-16T10:42:16+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-tokenizer-example.png",
+  "04-fabrication-aoai.b14268e9ecf25caf.webp": {
+    "original_hash": "0e1147a30814a8149fe88308bbcbd08c",
+    "translation_date": "2026-01-16T10:45:02+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-aoai.png",
+    "language_code": "tw"
+  },
+  "04-fabrication-huggingchat.faf82a0a51278956.webp": {
+    "original_hash": "9d89cdc169866ccf7d78582decafde88",
+    "translation_date": "2026-01-16T10:44:48+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-huggingchat.png",
+    "language_code": "tw"
+  },
+  "04-fabrication-oai.5818c4e0b2a2678c.webp": {
+    "original_hash": "4cadf9130e34cffbcaf6be3d0bfb0f0f",
+    "translation_date": "2026-01-16T10:44:29+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-oai.png",
+    "language_code": "tw"
+  },
+  "04-lesson-banner.a2c90deba7fedacd.webp": {
+    "original_hash": "d5c3261676a937f141958c67f01456e8",
+    "translation_date": "2026-01-16T10:45:25+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-lesson-banner.png",
+    "language_code": "tw"
+  },
+  "04-playground-chat-base.65b76fcfde0caa67.webp": {
+    "original_hash": "746f870a518618708be10a63f17567e0",
+    "translation_date": "2026-01-16T10:45:20+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-playground-chat-base.png",
     "language_code": "tw"
   },
   "04-playground-chat-instructions.b30bbfbdf92f2d05.webp": {
@@ -245,124 +83,10 @@
     "source_file": "04-prompt-engineering-fundamentals/images/04-prompt-engineering-sketchnote.png",
     "language_code": "tw"
   },
-  "04-fabrication-oai.5818c4e0b2a2678c.webp": {
-    "original_hash": "4cadf9130e34cffbcaf6be3d0bfb0f0f",
-    "translation_date": "2026-01-16T10:44:29+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-oai.png",
-    "language_code": "tw"
-  },
-  "04-fabrication-huggingchat.faf82a0a51278956.webp": {
-    "original_hash": "9d89cdc169866ccf7d78582decafde88",
-    "translation_date": "2026-01-16T10:44:48+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-huggingchat.png",
-    "language_code": "tw"
-  },
-  "04-fabrication-aoai.b14268e9ecf25caf.webp": {
-    "original_hash": "0e1147a30814a8149fe88308bbcbd08c",
-    "translation_date": "2026-01-16T10:45:02+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-fabrication-aoai.png",
-    "language_code": "tw"
-  },
-  "04-playground-chat-base.65b76fcfde0caa67.webp": {
-    "original_hash": "746f870a518618708be10a63f17567e0",
-    "translation_date": "2026-01-16T10:45:20+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-playground-chat-base.png",
-    "language_code": "tw"
-  },
-  "04-lesson-banner.a2c90deba7fedacd.webp": {
-    "original_hash": "d5c3261676a937f141958c67f01456e8",
-    "translation_date": "2026-01-16T10:45:25+00:00",
-    "source_file": "04-prompt-engineering-fundamentals/images/04-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "sample.8e6ed0440e2c33bf.webp": {
-    "original_hash": "7a821b1ae6c8416152c7457fda608f56",
-    "translation_date": "2026-01-16T10:45:54+00:00",
-    "source_file": "21-meta/python/sample.jpg",
-    "language_code": "tw"
-  },
-  "query-results.bb0480ebf025fac6.webp": {
-    "original_hash": "66ddb770ebb5a6010a8dc40ff31720e6",
-    "translation_date": "2026-01-16T10:46:10+00:00",
-    "source_file": "08-building-search-applications/images/query-results.png",
-    "language_code": "tw"
-  },
-  "08-lesson-banner.8fff48c566dad08a.webp": {
-    "original_hash": "c8e093cb629a615bc50d95414026fb14",
-    "translation_date": "2026-01-16T10:46:15+00:00",
-    "source_file": "08-building-search-applications/images/08-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "notebook-search.1e320b9c7fcbb0bc.webp": {
-    "original_hash": "529baf3f021b6e0a76491d94db487d4e",
-    "translation_date": "2026-01-16T10:46:31+00:00",
-    "source_file": "08-building-search-applications/images/notebook-search.png",
-    "language_code": "tw"
-  },
-  "uxinai.d5b4ed690f5cefff.webp": {
-    "original_hash": "36d1aa62d316d2cc8be4773f8b01c149",
-    "translation_date": "2026-01-16T10:46:38+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/uxinai.png",
-    "language_code": "tw"
-  },
-  "bing2.309f4845528a88c2.webp": {
-    "original_hash": "1839432e7d5272a0fb5d4a8e59f7a824",
-    "translation_date": "2026-01-16T10:46:49+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/bing2.png",
-    "language_code": "tw"
-  },
-  "feedback-loops.7955c134429a9466.webp": {
-    "original_hash": "5760e2501aac3a15a033ac351bc95b0a",
-    "translation_date": "2026-01-16T10:47:06+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/feedback-loops.png",
-    "language_code": "tw"
-  },
-  "simplified-explanations.4679508a406c3621.webp": {
-    "original_hash": "778147172716702fef6e142cf778eeb0",
-    "translation_date": "2026-01-16T10:47:18+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/simplified-explanations.png",
-    "language_code": "tw"
-  },
-  "solving-questions.b7dea1604de0cbd2.webp": {
-    "original_hash": "2649ca1d24ea1a5ca57cb9ea4299517e",
-    "translation_date": "2026-01-16T10:47:39+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/solving-questions.png",
-    "language_code": "tw"
-  },
-  "bing1.293ae8527dbe2789.webp": {
-    "original_hash": "bbd7a48bfa276092769d0d38e4f1827b",
-    "translation_date": "2026-01-16T10:47:51+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/bing1.png",
-    "language_code": "tw"
-  },
-  "explanability-in-ai.134426a96b498fbf.webp": {
-    "original_hash": "7fc364849ee1f20752ba39225460759f",
-    "translation_date": "2026-01-16T10:48:02+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/explanability-in-ai.png",
-    "language_code": "tw"
-  },
-  "genai_course_12[88].76a0a38703cefa94.webp": {
-    "original_hash": "bce584bbc930d58ed317a7cd8290a439",
-    "translation_date": "2026-01-16T10:48:08+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/genai_course_12[88].png",
-    "language_code": "tw"
-  },
-  "12-lesson-banner.c53c3c7c802e8f56.webp": {
-    "original_hash": "12da71af000c837406e3e757b251b6f1",
-    "translation_date": "2026-01-16T10:48:13+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/12-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "13-lesson-banner.14103e36b4bbf173.webp": {
-    "original_hash": "8a9c79a892c86b50cef8924183020a95",
-    "translation_date": "2026-01-16T10:48:19+00:00",
-    "source_file": "13-securing-ai-applications/images/13-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "13-AI-red-team.642ed54689d7e8a4.webp": {
-    "original_hash": "5bd627388cb0dad9ce506d192e54731c",
-    "translation_date": "2026-01-16T10:48:26+00:00",
-    "source_file": "13-securing-ai-applications/images/13-AI-red-team.png",
+  "04-tokenizer-example.e71f0a0f70356c5c.webp": {
+    "original_hash": "1d5fcd05543b9968b27b3673da93ace9",
+    "translation_date": "2026-01-16T10:42:16+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/images/04-tokenizer-example.png",
     "language_code": "tw"
   },
   "05-lesson-banner.522610fd4a2cd82d.webp": {
@@ -371,148 +95,22 @@
     "source_file": "05-advanced-prompts/images/05-lesson-banner.png",
     "language_code": "tw"
   },
-  "phi3.655208c3186ae381.webp": {
-    "original_hash": "d844451f1d3dba7de2988592f0f34063",
-    "translation_date": "2026-01-16T10:48:45+00:00",
-    "source_file": "19-slm/img/phi3.png",
+  "05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp": {
+    "original_hash": "ddd4d17fcf213e79251449863d252297",
+    "translation_date": "2026-01-16T10:41:42+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/images/05-llm-azure-ai-prompt.png",
     "language_code": "tw"
   },
-  "slm.4058842744d0444a.webp": {
-    "original_hash": "2302aa094a8ea3e398f63e524f9b9d13",
-    "translation_date": "2026-01-16T10:48:51+00:00",
-    "source_file": "19-slm/img/slm.png",
+  "06-lesson-banner.a5c629f990a636c8.webp": {
+    "original_hash": "83d792488c334b912277fb17c0c066a8",
+    "translation_date": "2026-01-16T11:01:40+00:00",
+    "source_file": "06-text-generation-apps/images/06-lesson-banner.png",
     "language_code": "tw"
   },
-  "gh1.126c6139713b622b.webp": {
-    "original_hash": "753045dc29626f9c682079b7b1e38b26",
-    "translation_date": "2026-01-16T10:49:01+00:00",
-    "source_file": "19-slm/img/gh1.png",
-    "language_code": "tw"
-  },
-  "gh2.07d7985af66f178d.webp": {
-    "original_hash": "ec41331281539c8ffff80c96d95e3e3b",
-    "translation_date": "2026-01-16T10:49:11+00:00",
-    "source_file": "19-slm/img/gh2.png",
-    "language_code": "tw"
-  },
-  "mitigation-layers.377215120b9a1159.webp": {
-    "original_hash": "00a92d81e68497a54007c311885469e2",
-    "translation_date": "2026-01-16T10:49:15+00:00",
-    "source_file": "03-using-generative-ai-responsibly/images/mitigation-layers.png",
-    "language_code": "tw"
-  },
-  "mitigate-cycle.babcd5a5658e1775.webp": {
-    "original_hash": "8289d6f645651e830172226adddbe7d7",
-    "translation_date": "2026-01-16T10:49:18+00:00",
-    "source_file": "03-using-generative-ai-responsibly/images/mitigate-cycle.png",
-    "language_code": "tw"
-  },
-  "03-lesson-banner.1ed56067a452d977.webp": {
-    "original_hash": "a59127a9d2f8e3d57a493e6b0fca2212",
-    "translation_date": "2026-01-16T10:49:23+00:00",
-    "source_file": "03-using-generative-ai-responsibly/images/03-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "FoundationModel.e4859dbb7a825c94.webp": {
-    "original_hash": "41492e9960a26c161d38987a1e66fffa",
-    "translation_date": "2026-01-16T10:49:46+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/FoundationModel.png",
-    "language_code": "tw"
-  },
-  "FineTuning.aac48f07142e36fd.webp": {
-    "original_hash": "aed143c125bfe8e9db3590fd836aac1a",
-    "translation_date": "2026-01-16T10:49:51+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/FineTuning.png",
-    "language_code": "tw"
-  },
-  "Llama4.42bb7d9ca73554bf.webp": {
-    "original_hash": "9145d9786f37c1fdbb858ca6b39fc75a",
-    "translation_date": "2026-01-16T10:50:00+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama4.png",
-    "language_code": "tw"
-  },
-  "Llama1.da7b29534fe3cbc7.webp": {
-    "original_hash": "483e6c9fab2bbc1e6dc95f7b3c0f2b14",
-    "translation_date": "2026-01-16T10:50:30+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama1.png",
-    "language_code": "tw"
-  },
-  "Llama2.5c15b0755a9cd824.webp": {
-    "original_hash": "69f29cd8d93c10d4f0760aad20e6c279",
-    "translation_date": "2026-01-16T10:50:41+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama2.png",
-    "language_code": "tw"
-  },
-  "ModelDeploy.890da48cbd0bccdb.webp": {
-    "original_hash": "fd614b4ed91e64426d8582d05efac1d2",
-    "translation_date": "2026-01-16T10:51:11+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/ModelDeploy.png",
-    "language_code": "tw"
-  },
-  "Text.a8c0cf139e5cc2a0.webp": {
-    "original_hash": "51a5e2896f2467da3eb1750019113777",
-    "translation_date": "2026-01-16T10:51:17+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Text.png",
-    "language_code": "tw"
-  },
-  "Embedding.c3708fe988ccf760.webp": {
-    "original_hash": "b2d5ebcfc8a878503d41e449040b55f8",
-    "translation_date": "2026-01-16T10:51:20+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Embedding.png",
-    "language_code": "tw"
-  },
-  "AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp": {
-    "original_hash": "0e2414ad4a0d25b8d7700470daef0bae",
-    "translation_date": "2026-01-16T10:51:59+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/AzureAIStudioModelCatalog.png",
-    "language_code": "tw"
-  },
-  "ModelBenchmarks.254cb20fbd06c03a.webp": {
-    "original_hash": "4c3b5f2b945a8a2892b3c4f92722b15b",
-    "translation_date": "2026-01-16T10:52:37+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/ModelBenchmarks.png",
-    "language_code": "tw"
-  },
-  "02-lesson-banner.ef94c84979f97f60.webp": {
-    "original_hash": "80c419307e0748e4cd33b8467add3494",
-    "translation_date": "2026-01-16T10:52:44+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/02-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "Deploy.18b2d27412ec8c02.webp": {
-    "original_hash": "531e4b0190198acbb2d3cce2293d3a76",
-    "translation_date": "2026-01-16T10:52:53+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Deploy.png",
-    "language_code": "tw"
-  },
-  "Image.349c080266a763fd.webp": {
-    "original_hash": "634e9bc85a18051fb29c901d6111b286",
-    "translation_date": "2026-01-16T10:52:56+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Image.png",
-    "language_code": "tw"
-  },
-  "Llama3.b985a3d84bf298c3.webp": {
-    "original_hash": "b283a2c5a5fc03afbc4b5885a1bd073b",
-    "translation_date": "2026-01-16T10:53:09+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama3.png",
-    "language_code": "tw"
-  },
-  "Multimodal.2c389c6439e0fc51.webp": {
-    "original_hash": "87da6682114953e4054efdb4b8b7cfb5",
-    "translation_date": "2026-01-16T10:53:27+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Multimodal.png",
-    "language_code": "tw"
-  },
-  "ModelCard.598051692c6e400d.webp": {
-    "original_hash": "d3aa5852a04568a525b37131a64df0a7",
-    "translation_date": "2026-01-16T10:54:11+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/ModelCard.png",
-    "language_code": "tw"
-  },
-  "custom-instructions.b96f59aa69356fcf.webp": {
-    "original_hash": "0f5f893715c8dd7fb4c04d845b7390f5",
-    "translation_date": "2026-01-16T10:54:23+00:00",
-    "source_file": "07-building-chat-applications/images/custom-instructions.png",
+  "06-llm-promptflow.a183eba07a3a7fdf.webp": {
+    "original_hash": "009440d13cbb89a2129c78e7b2384aa7",
+    "translation_date": "2026-01-16T10:41:25+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/images/06-llm-promptflow.png",
     "language_code": "tw"
   },
   "07-lesson-banner.a279b937f2843833.webp": {
@@ -521,58 +119,22 @@
     "source_file": "07-building-chat-applications/images/07-lesson-banner.png",
     "language_code": "tw"
   },
-  "lesson-plan-prompt.cc47c488cf1343df.webp": {
-    "original_hash": "0e2f241320d00c58d06f092111aa45df",
-    "translation_date": "2026-01-16T10:54:39+00:00",
-    "source_file": "07-building-chat-applications/images/lesson-plan-prompt.png",
+  "08-lesson-banner.8fff48c566dad08a.webp": {
+    "original_hash": "c8e093cb629a615bc50d95414026fb14",
+    "translation_date": "2026-01-16T10:46:15+00:00",
+    "source_file": "08-building-search-applications/images/08-lesson-banner.png",
     "language_code": "tw"
   },
-  "autogen.dee9a25a45fde584.webp": {
-    "original_hash": "46fa30ed78ea859945ec4196bc71ba28",
-    "translation_date": "2026-01-16T10:55:24+00:00",
-    "source_file": "17-ai-agents/images/autogen.png",
+  "09-lesson-banner.906e408c741f4411.webp": {
+    "original_hash": "95555b4e37d94bdaf4d9b4f052f65ba2",
+    "translation_date": "2026-01-16T11:09:40+00:00",
+    "source_file": "09-building-image-applications/images/09-lesson-banner.png",
     "language_code": "tw"
   },
-  "jarvis.762ddbadbd1a3a33.webp": {
-    "original_hash": "8a0e14d79193a53c6df9f892c6e1230a",
-    "translation_date": "2026-01-16T10:56:00+00:00",
-    "source_file": "17-ai-agents/images/jarvis.png",
-    "language_code": "tw"
-  },
-  "taskweaver.da8559999267715a.webp": {
-    "original_hash": "9c4bb35719c261d417ccce168ac7cee2",
-    "translation_date": "2026-01-16T10:57:03+00:00",
-    "source_file": "17-ai-agents/images/taskweaver.png",
-    "language_code": "tw"
-  },
-  "what-agent.21f2893bdfd01e6a.webp": {
-    "original_hash": "fcec8d972223900d3d2f274c9987b6a4",
-    "translation_date": "2026-01-16T10:57:10+00:00",
-    "source_file": "17-ai-agents/images/what-agent.png",
-    "language_code": "tw"
-  },
-  "langchain-agents.edcc55b5d5c43716.webp": {
-    "original_hash": "ee1ab713acb05c6e9aef2efe4d6be9ef",
-    "translation_date": "2026-01-16T10:57:52+00:00",
-    "source_file": "17-ai-agents/images/langchain-agents.png",
-    "language_code": "tw"
-  },
-  "17-lesson-banner.a5b918fb0920e4e6.webp": {
-    "original_hash": "e4e727c73b8524413e5e8743cf01c215",
-    "translation_date": "2026-01-16T10:57:57+00:00",
-    "source_file": "17-ai-agents/images/17-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "LLM-Flow.3285ed8caf4796d7.webp": {
-    "original_hash": "21b18962957089bf83685acb99f93eb2",
-    "translation_date": "2026-01-16T10:58:03+00:00",
-    "source_file": "11-integrating-with-function-calling/images/LLM-Flow.png",
-    "language_code": "tw"
-  },
-  "Function-Flow.083875364af4f4bb.webp": {
-    "original_hash": "3066d37950bf7457d510a456692ac316",
-    "translation_date": "2026-01-16T10:58:10+00:00",
-    "source_file": "11-integrating-with-function-calling/images/Function-Flow.png",
+  "10-lesson-banner.a01ac8fe3fd86310.webp": {
+    "original_hash": "718e602a4ff5572212a47bc05702f486",
+    "translation_date": "2026-01-16T11:08:08+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/10-lesson-banner.png",
     "language_code": "tw"
   },
   "11-lesson-banner.d78860d3e1f041e2.webp": {
@@ -581,46 +143,46 @@
     "source_file": "11-integrating-with-function-calling/images/11-lesson-banner.png",
     "language_code": "tw"
   },
-  "GithubModels-getstarted.4821f6f3182fc666.webp": {
-    "original_hash": "cf749d70cfa48a649c3eb23ee82b66fa",
-    "translation_date": "2026-01-16T10:58:52+00:00",
-    "source_file": "06-text-generation-apps/images/GithubModels-getstarted.png",
+  "12-lesson-banner.c53c3c7c802e8f56.webp": {
+    "original_hash": "12da71af000c837406e3e757b251b6f1",
+    "translation_date": "2026-01-16T10:48:13+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/12-lesson-banner.png",
     "language_code": "tw"
   },
-  "codespaces-basicpy.3f0d052758c11ce9.webp": {
-    "original_hash": "9ec8afe4d31c769119abf8b38a8d9c64",
-    "translation_date": "2026-01-16T10:59:30+00:00",
-    "source_file": "06-text-generation-apps/images/codespaces-basicpy.png",
+  "13-AI-red-team.642ed54689d7e8a4.webp": {
+    "original_hash": "5bd627388cb0dad9ce506d192e54731c",
+    "translation_date": "2026-01-16T10:48:26+00:00",
+    "source_file": "13-securing-ai-applications/images/13-AI-red-team.png",
     "language_code": "tw"
   },
-  "vscode-envvariable.33d8dc1aa25ec2a7.webp": {
-    "original_hash": "00252b60d50c5dfac05767e63ab042dc",
-    "translation_date": "2026-01-16T11:00:04+00:00",
-    "source_file": "06-text-generation-apps/images/vscode-envvariable.png",
+  "13-lesson-banner.14103e36b4bbf173.webp": {
+    "original_hash": "8a9c79a892c86b50cef8924183020a95",
+    "translation_date": "2026-01-16T10:48:19+00:00",
+    "source_file": "13-securing-ai-applications/images/13-lesson-banner.png",
     "language_code": "tw"
   },
-  "GithubModels-plagroundcode.da2dea486f1ad5e0.webp": {
-    "original_hash": "3bdd863a57408e34c2591272493f43ff",
-    "translation_date": "2026-01-16T11:00:30+00:00",
-    "source_file": "06-text-generation-apps/images/GithubModels-plagroundcode.png",
+  "14-lesson-banner.066d74a31727ac12.webp": {
+    "original_hash": "e513eba3cd7b4a2521a1de0a28c69b7b",
+    "translation_date": "2026-01-16T10:40:28+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/images/14-lesson-banner.png",
     "language_code": "tw"
   },
-  "GithubModelsMainScreen.62aed2c56e2bee64.webp": {
-    "original_hash": "4d2dea5cef890c297628ca5b2a7aa158",
-    "translation_date": "2026-01-16T11:01:07+00:00",
-    "source_file": "06-text-generation-apps/images/GithubModelsMainScreen.png",
+  "15-lesson-banner.ac49e59506175d4f.webp": {
+    "original_hash": "39916f5245d6040bf93b98ab1af3b1e6",
+    "translation_date": "2026-01-16T11:09:02+00:00",
+    "source_file": "15-rag-and-vector-databases/images/15-lesson-banner.png",
     "language_code": "tw"
   },
-  "GithubModels-modelcard.c65ce4538e7bee92.webp": {
-    "original_hash": "9307ba58b85e5ffee9efd3a0d1f64287",
-    "translation_date": "2026-01-16T11:01:35+00:00",
-    "source_file": "06-text-generation-apps/images/GithubModels-modelcard.png",
+  "16-lesson-banner.6b56555e8404fda1.webp": {
+    "original_hash": "c2fc603411583b94f23f5eb1e5275330",
+    "translation_date": "2026-01-16T10:40:23+00:00",
+    "source_file": "16-open-source-models/images/16-lesson-banner.png",
     "language_code": "tw"
   },
-  "06-lesson-banner.a5c629f990a636c8.webp": {
-    "original_hash": "83d792488c334b912277fb17c0c066a8",
-    "translation_date": "2026-01-16T11:01:40+00:00",
-    "source_file": "06-text-generation-apps/images/06-lesson-banner.png",
+  "17-lesson-banner.a5b918fb0920e4e6.webp": {
+    "original_hash": "e4e727c73b8524413e5e8743cf01c215",
+    "translation_date": "2026-01-16T10:57:57+00:00",
+    "source_file": "17-ai-agents/images/17-lesson-banner.png",
     "language_code": "tw"
   },
   "18-fine-tuning-sketchnote.11b21f9ec8a70346.webp": {
@@ -635,40 +197,220 @@
     "source_file": "18-fine-tuning/img/18-lesson-banner.png",
     "language_code": "tw"
   },
+  "AI-diagram.c391fa518451a40d.webp": {
+    "original_hash": "20e8fd1d752435e1dc270827e7f9c5c5",
+    "translation_date": "2026-01-16T10:38:25+00:00",
+    "source_file": "01-introduction-to-genai/images/AI-diagram.png",
+    "language_code": "tw"
+  },
+  "AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp": {
+    "original_hash": "0e2414ad4a0d25b8d7700470daef0bae",
+    "translation_date": "2026-01-16T10:51:59+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/AzureAIStudioModelCatalog.png",
+    "language_code": "tw"
+  },
+  "Deploy.18b2d27412ec8c02.webp": {
+    "original_hash": "531e4b0190198acbb2d3cce2293d3a76",
+    "translation_date": "2026-01-16T10:52:53+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Deploy.png",
+    "language_code": "tw"
+  },
+  "Embedding.c3708fe988ccf760.webp": {
+    "original_hash": "b2d5ebcfc8a878503d41e449040b55f8",
+    "translation_date": "2026-01-16T10:51:20+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Embedding.png",
+    "language_code": "tw"
+  },
+  "FineTuning.aac48f07142e36fd.webp": {
+    "original_hash": "aed143c125bfe8e9db3590fd836aac1a",
+    "translation_date": "2026-01-16T10:49:51+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/FineTuning.png",
+    "language_code": "tw"
+  },
+  "FoundationModel.e4859dbb7a825c94.webp": {
+    "original_hash": "41492e9960a26c161d38987a1e66fffa",
+    "translation_date": "2026-01-16T10:49:46+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/FoundationModel.png",
+    "language_code": "tw"
+  },
+  "Function-Flow.083875364af4f4bb.webp": {
+    "original_hash": "3066d37950bf7457d510a456692ac316",
+    "translation_date": "2026-01-16T10:58:10+00:00",
+    "source_file": "11-integrating-with-function-calling/images/Function-Flow.png",
+    "language_code": "tw"
+  },
+  "GithubModels-getstarted.4821f6f3182fc666.webp": {
+    "original_hash": "cf749d70cfa48a649c3eb23ee82b66fa",
+    "translation_date": "2026-01-16T10:58:52+00:00",
+    "source_file": "06-text-generation-apps/images/GithubModels-getstarted.png",
+    "language_code": "tw"
+  },
+  "GithubModels-modelcard.c65ce4538e7bee92.webp": {
+    "original_hash": "9307ba58b85e5ffee9efd3a0d1f64287",
+    "translation_date": "2026-01-16T11:01:35+00:00",
+    "source_file": "06-text-generation-apps/images/GithubModels-modelcard.png",
+    "language_code": "tw"
+  },
+  "GithubModels-plagroundcode.da2dea486f1ad5e0.webp": {
+    "original_hash": "3bdd863a57408e34c2591272493f43ff",
+    "translation_date": "2026-01-16T11:00:30+00:00",
+    "source_file": "06-text-generation-apps/images/GithubModels-plagroundcode.png",
+    "language_code": "tw"
+  },
+  "GithubModelsMainScreen.62aed2c56e2bee64.webp": {
+    "original_hash": "4d2dea5cef890c297628ca5b2a7aa158",
+    "translation_date": "2026-01-16T11:01:07+00:00",
+    "source_file": "06-text-generation-apps/images/GithubModelsMainScreen.png",
+    "language_code": "tw"
+  },
+  "Image.349c080266a763fd.webp": {
+    "original_hash": "634e9bc85a18051fb29c901d6111b286",
+    "translation_date": "2026-01-16T10:52:56+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Image.png",
+    "language_code": "tw"
+  },
+  "LLM-Flow.3285ed8caf4796d7.webp": {
+    "original_hash": "21b18962957089bf83685acb99f93eb2",
+    "translation_date": "2026-01-16T10:58:03+00:00",
+    "source_file": "11-integrating-with-function-calling/images/LLM-Flow.png",
+    "language_code": "tw"
+  },
+  "Llama1.da7b29534fe3cbc7.webp": {
+    "original_hash": "483e6c9fab2bbc1e6dc95f7b3c0f2b14",
+    "translation_date": "2026-01-16T10:50:30+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Llama1.png",
+    "language_code": "tw"
+  },
+  "Llama2.5c15b0755a9cd824.webp": {
+    "original_hash": "69f29cd8d93c10d4f0760aad20e6c279",
+    "translation_date": "2026-01-16T10:50:41+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Llama2.png",
+    "language_code": "tw"
+  },
+  "Llama3.b985a3d84bf298c3.webp": {
+    "original_hash": "b283a2c5a5fc03afbc4b5885a1bd073b",
+    "translation_date": "2026-01-16T10:53:09+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Llama3.png",
+    "language_code": "tw"
+  },
+  "Llama4.42bb7d9ca73554bf.webp": {
+    "original_hash": "9145d9786f37c1fdbb858ca6b39fc75a",
+    "translation_date": "2026-01-16T10:50:00+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Llama4.png",
+    "language_code": "tw"
+  },
+  "ModelBenchmarks.254cb20fbd06c03a.webp": {
+    "original_hash": "4c3b5f2b945a8a2892b3c4f92722b15b",
+    "translation_date": "2026-01-16T10:52:37+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/ModelBenchmarks.png",
+    "language_code": "tw"
+  },
+  "ModelCard.598051692c6e400d.webp": {
+    "original_hash": "d3aa5852a04568a525b37131a64df0a7",
+    "translation_date": "2026-01-16T10:54:11+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/ModelCard.png",
+    "language_code": "tw"
+  },
+  "ModelDeploy.890da48cbd0bccdb.webp": {
+    "original_hash": "fd614b4ed91e64426d8582d05efac1d2",
+    "translation_date": "2026-01-16T10:51:11+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/ModelDeploy.png",
+    "language_code": "tw"
+  },
+  "Multimodal.2c389c6439e0fc51.webp": {
+    "original_hash": "87da6682114953e4054efdb4b8b7cfb5",
+    "translation_date": "2026-01-16T10:53:27+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Multimodal.png",
+    "language_code": "tw"
+  },
+  "Text.a8c0cf139e5cc2a0.webp": {
+    "original_hash": "51a5e2896f2467da3eb1750019113777",
+    "translation_date": "2026-01-16T10:51:17+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/images/Text.png",
+    "language_code": "tw"
+  },
+  "ai-builder-models.8069423b84cfc47f.webp": {
+    "original_hash": "2c1e85fcbc7052fc22850204e8e0fb64",
+    "translation_date": "2026-01-16T11:07:31+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/ai-builder-models.png",
+    "language_code": "tw"
+  },
+  "android-chrome-192x192.a77b6997304e7e1f.webp": {
+    "original_hash": "3b97d290216941307be828e5ce4c9b4d",
+    "translation_date": "2026-01-16T10:35:17+00:00",
+    "source_file": "images/android-chrome-192x192.png",
+    "language_code": "tw"
+  },
+  "android-chrome-512x512.2ac1c9816814f4fd.webp": {
+    "original_hash": "f08348084e4d3a4ed2d034dd300f60ce",
+    "translation_date": "2026-01-16T10:37:29+00:00",
+    "source_file": "images/android-chrome-512x512.png",
+    "language_code": "tw"
+  },
+  "apple-touch-icon.02980588806a9ada.webp": {
+    "original_hash": "de7f45bbf53c787c654f0d08b8dbb243",
+    "translation_date": "2026-01-16T10:36:52+00:00",
+    "source_file": "images/apple-touch-icon.png",
+    "language_code": "tw"
+  },
+  "autogen.dee9a25a45fde584.webp": {
+    "original_hash": "46fa30ed78ea859945ec4196bc71ba28",
+    "translation_date": "2026-01-16T10:55:24+00:00",
+    "source_file": "17-ai-agents/images/autogen.png",
+    "language_code": "tw"
+  },
+  "bing1.293ae8527dbe2789.webp": {
+    "original_hash": "bbd7a48bfa276092769d0d38e4f1827b",
+    "translation_date": "2026-01-16T10:47:51+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/bing1.png",
+    "language_code": "tw"
+  },
+  "bing2.309f4845528a88c2.webp": {
+    "original_hash": "1839432e7d5272a0fb5d4a8e59f7a824",
+    "translation_date": "2026-01-16T10:46:49+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/bing2.png",
+    "language_code": "tw"
+  },
+  "cat.74cbd7946bc9ca38.webp": {
+    "original_hash": "c4c49056f7bc79cd6e9f9fc8c5a0bccf",
+    "translation_date": "2026-01-16T11:08:56+00:00",
+    "source_file": "15-rag-and-vector-databases/images/cat.png",
+    "language_code": "tw"
+  },
+  "choose-model.f095d15bbac92214.webp": {
+    "original_hash": "e2b006f74417290be79fc6bd3c37d063",
+    "translation_date": "2026-01-16T10:40:18+00:00",
+    "source_file": "16-open-source-models/images/choose-model.png",
+    "language_code": "tw"
+  },
+  "codespaces-basicpy.3f0d052758c11ce9.webp": {
+    "original_hash": "9ec8afe4d31c769119abf8b38a8d9c64",
+    "translation_date": "2026-01-16T10:59:30+00:00",
+    "source_file": "06-text-generation-apps/images/codespaces-basicpy.png",
+    "language_code": "tw"
+  },
   "codespaces-secrets.acfe1f8ab4d8cd1b.webp": {
     "original_hash": "15662a255cdd461f8fea73e937d20476",
     "translation_date": "2026-01-16T11:03:39+00:00",
     "source_file": "18-fine-tuning/img/codespaces-secrets.png",
     "language_code": "tw"
   },
-  "fine-tuned-playground-launch.5a26495c983c6350.webp": {
-    "original_hash": "44ea3796e3f50cb93c0e2245eb225f9e",
-    "translation_date": "2026-01-16T11:03:47+00:00",
-    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-playground-launch.png",
+  "coding-example.50ebabe8a6afff20.webp": {
+    "original_hash": "f01935c06cd382caeb289b1210ea4a50",
+    "translation_date": "2026-01-16T10:38:10+00:00",
+    "source_file": "01-introduction-to-genai/images/coding-example.png",
     "language_code": "tw"
   },
-  "fine-tuned-metrics-panel.700d7e4995a65229.webp": {
-    "original_hash": "fddf93799b1cdc97b71a6191e4ba78d8",
-    "translation_date": "2026-01-16T11:04:03+00:00",
-    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-metrics-panel.png",
+  "conversation-example.60c2afc0f595fa59.webp": {
+    "original_hash": "afd78ba6ccc05b44f806d10f4db4a4a1",
+    "translation_date": "2026-01-16T10:39:16+00:00",
+    "source_file": "01-introduction-to-genai/images/conversation-example.png",
     "language_code": "tw"
   },
-  "fine-tuned-messages-panel.4ed0c2da5ea1313b.webp": {
-    "original_hash": "e38fdbb20544a81212fd4af18008cad1",
-    "translation_date": "2026-01-16T11:04:18+00:00",
-    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-messages-panel.png",
-    "language_code": "tw"
-  },
-  "fine-tuned-model-status.563271727bf7bfba.webp": {
-    "original_hash": "d6998f89e50828e59e72641ff83d7eec",
-    "translation_date": "2026-01-16T11:04:52+00:00",
-    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-model-status.png",
-    "language_code": "tw"
-  },
-  "fine-tuned-playground-compare.56e06f0ad8922016.webp": {
-    "original_hash": "f224714fec50a4bc60b96a73fc3dde08",
-    "translation_date": "2026-01-16T11:05:14+00:00",
-    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-playground-compare.png",
+  "copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp": {
+    "original_hash": "de4c57bebf1e25d457add47c15759073",
+    "translation_date": "2026-01-16T11:07:44+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/copilot-chat-prompt-dataverse.png",
     "language_code": "tw"
   },
   "copilot-chat-prompt-powerapps.84250f341d060830.webp": {
@@ -683,22 +425,10 @@
     "source_file": "10-building-low-code-ai-applications/images/copilot-chat-prompt-powerautomate.png",
     "language_code": "tw"
   },
-  "text-generation-works.6a9bf609154fce28.webp": {
-    "original_hash": "3927234d9f22d3141130a3fd08939aec",
-    "translation_date": "2026-01-16T11:05:40+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/text-generation-works.png",
-    "language_code": "tw"
-  },
   "copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp": {
     "original_hash": "ba95eb9355228482e00804542d389958",
     "translation_date": "2026-01-16T11:05:59+00:00",
     "source_file": "10-building-low-code-ai-applications/images/copilot-dataverse-table-powerapps.png",
-    "language_code": "tw"
-  },
-  "create-prompt-gpt.69d429300c2e870a.webp": {
-    "original_hash": "3391da6f08b4aa06474b5063f58a9372",
-    "translation_date": "2026-01-16T11:06:28+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/create-prompt-gpt.png",
     "language_code": "tw"
   },
   "copilot-dataverse-table.b3bc936091324d9d.webp": {
@@ -707,28 +437,10 @@
     "source_file": "10-building-low-code-ai-applications/images/copilot-dataverse-table.png",
     "language_code": "tw"
   },
-  "powerautomate-add-row.5edce45e5dd3d51e.webp": {
-    "original_hash": "5220cbaaadc42ac83495b53020fa6a24",
-    "translation_date": "2026-01-16T11:07:04+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/powerautomate-add-row.png",
-    "language_code": "tw"
-  },
-  "describe-new-table.0792373eb757281e.webp": {
-    "original_hash": "4d4850e0d9b482962405e3ef274d2e5a",
-    "translation_date": "2026-01-16T11:07:09+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/describe-new-table.png",
-    "language_code": "tw"
-  },
-  "ai-builder-models.8069423b84cfc47f.webp": {
-    "original_hash": "2c1e85fcbc7052fc22850204e8e0fb64",
-    "translation_date": "2026-01-16T11:07:31+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/ai-builder-models.png",
-    "language_code": "tw"
-  },
-  "copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp": {
-    "original_hash": "de4c57bebf1e25d457add47c15759073",
-    "translation_date": "2026-01-16T11:07:44+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/copilot-chat-prompt-dataverse.png",
+  "copilot-new-column.35e15ff21acaf274.webp": {
+    "original_hash": "2860aff5abfe07a869a3f497fb4f5a97",
+    "translation_date": "2026-01-16T11:08:19+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/copilot-new-column.png",
     "language_code": "tw"
   },
   "copilot-new-screen.2e0bef7132a17392.webp": {
@@ -737,40 +449,28 @@
     "source_file": "10-building-low-code-ai-applications/images/copilot-new-screen.png",
     "language_code": "tw"
   },
-  "10-lesson-banner.a01ac8fe3fd86310.webp": {
-    "original_hash": "718e602a4ff5572212a47bc05702f486",
-    "translation_date": "2026-01-16T11:08:08+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/10-lesson-banner.png",
+  "create-prompt-gpt.69d429300c2e870a.webp": {
+    "original_hash": "3391da6f08b4aa06474b5063f58a9372",
+    "translation_date": "2026-01-16T11:06:28+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/create-prompt-gpt.png",
     "language_code": "tw"
   },
-  "copilot-new-column.35e15ff21acaf274.webp": {
-    "original_hash": "2860aff5abfe07a869a3f497fb4f5a97",
-    "translation_date": "2026-01-16T11:08:19+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/copilot-new-column.png",
+  "creative-writing-example.e24a685b5a543ad1.webp": {
+    "original_hash": "bd57560524b91fc24d4008af3585206b",
+    "translation_date": "2026-01-16T10:39:44+00:00",
+    "source_file": "01-introduction-to-genai/images/creative-writing-example.png",
     "language_code": "tw"
   },
-  "powerautomate-remove-actions.7216392fe684ceba.webp": {
-    "original_hash": "1591759f40e41083ff1f47ed4a96db6d",
-    "translation_date": "2026-01-16T11:08:23+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/powerautomate-remove-actions.png",
+  "custom-instructions.b96f59aa69356fcf.webp": {
+    "original_hash": "0f5f893715c8dd7fb4c04d845b7390f5",
+    "translation_date": "2026-01-16T10:54:23+00:00",
+    "source_file": "07-building-chat-applications/images/custom-instructions.png",
     "language_code": "tw"
   },
-  "how-rag-works.f5d0ff63942bd3a6.webp": {
-    "original_hash": "5985959f0f97ef0b142f771d3c4baac5",
-    "translation_date": "2026-01-16T11:08:41+00:00",
-    "source_file": "15-rag-and-vector-databases/images/how-rag-works.png",
-    "language_code": "tw"
-  },
-  "cat.74cbd7946bc9ca38.webp": {
-    "original_hash": "c4c49056f7bc79cd6e9f9fc8c5a0bccf",
-    "translation_date": "2026-01-16T11:08:56+00:00",
-    "source_file": "15-rag-and-vector-databases/images/cat.png",
-    "language_code": "tw"
-  },
-  "15-lesson-banner.ac49e59506175d4f.webp": {
-    "original_hash": "39916f5245d6040bf93b98ab1af3b1e6",
-    "translation_date": "2026-01-16T11:09:02+00:00",
-    "source_file": "15-rag-and-vector-databases/images/15-lesson-banner.png",
+  "describe-new-table.0792373eb757281e.webp": {
+    "original_hash": "4d4850e0d9b482962405e3ef274d2e5a",
+    "translation_date": "2026-01-16T11:07:09+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/describe-new-table.png",
     "language_code": "tw"
   },
   "encoder-decode.f2658c25d0eadee2.webp": {
@@ -779,10 +479,286 @@
     "source_file": "15-rag-and-vector-databases/images/encoder-decode.png",
     "language_code": "tw"
   },
+  "explanability-in-ai.134426a96b498fbf.webp": {
+    "original_hash": "7fc364849ee1f20752ba39225460759f",
+    "translation_date": "2026-01-16T10:48:02+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/explanability-in-ai.png",
+    "language_code": "tw"
+  },
+  "favicon-16x16.1582c46aa87708ce.webp": {
+    "original_hash": "9ed523ea8f3610840fb1a3acad83b7f9",
+    "translation_date": "2026-01-16T10:35:49+00:00",
+    "source_file": "images/favicon-16x16.png",
+    "language_code": "tw"
+  },
+  "favicon-32x32.3f87837bcd542629.webp": {
+    "original_hash": "618bbabc1fbfc4ae34992d8cbf4df79b",
+    "translation_date": "2026-01-16T10:35:49+00:00",
+    "source_file": "images/favicon-32x32.png",
+    "language_code": "tw"
+  },
+  "feedback-loops.7955c134429a9466.webp": {
+    "original_hash": "5760e2501aac3a15a033ac351bc95b0a",
+    "translation_date": "2026-01-16T10:47:06+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/feedback-loops.png",
+    "language_code": "tw"
+  },
+  "fine-tuned-messages-panel.4ed0c2da5ea1313b.webp": {
+    "original_hash": "e38fdbb20544a81212fd4af18008cad1",
+    "translation_date": "2026-01-16T11:04:18+00:00",
+    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-messages-panel.png",
+    "language_code": "tw"
+  },
+  "fine-tuned-metrics-panel.700d7e4995a65229.webp": {
+    "original_hash": "fddf93799b1cdc97b71a6191e4ba78d8",
+    "translation_date": "2026-01-16T11:04:03+00:00",
+    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-metrics-panel.png",
+    "language_code": "tw"
+  },
+  "fine-tuned-model-status.563271727bf7bfba.webp": {
+    "original_hash": "d6998f89e50828e59e72641ff83d7eec",
+    "translation_date": "2026-01-16T11:04:52+00:00",
+    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-model-status.png",
+    "language_code": "tw"
+  },
+  "fine-tuned-playground-compare.56e06f0ad8922016.webp": {
+    "original_hash": "f224714fec50a4bc60b96a73fc3dde08",
+    "translation_date": "2026-01-16T11:05:14+00:00",
+    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-playground-compare.png",
+    "language_code": "tw"
+  },
+  "fine-tuned-playground-launch.5a26495c983c6350.webp": {
+    "original_hash": "44ea3796e3f50cb93c0e2245eb225f9e",
+    "translation_date": "2026-01-16T11:03:47+00:00",
+    "source_file": "18-fine-tuning/python/openai/img/fine-tuned-playground-launch.png",
+    "language_code": "tw"
+  },
+  "genai_course_12[88].76a0a38703cefa94.webp": {
+    "original_hash": "bce584bbc930d58ed317a7cd8290a439",
+    "translation_date": "2026-01-16T10:48:08+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/genai_course_12[88].png",
+    "language_code": "tw"
+  },
+  "generated-image.7e17ceec085357b2.webp": {
+    "original_hash": "dc2b8fe051905608f12adca030eab947",
+    "translation_date": "2026-01-16T11:09:18+00:00",
+    "source_file": "09-building-image-applications/images/generated-image.png",
+    "language_code": "tw"
+  },
   "generated-image.95d5d16f109311a0.webp": {
     "original_hash": "6c071e545c86d274c55cc1f516d2bb8e",
     "translation_date": "2026-01-16T11:09:14+00:00",
     "source_file": "09-building-image-applications/python/generated-image.png",
+    "language_code": "tw"
+  },
+  "gh1.126c6139713b622b.webp": {
+    "original_hash": "753045dc29626f9c682079b7b1e38b26",
+    "translation_date": "2026-01-16T10:49:01+00:00",
+    "source_file": "19-slm/img/gh1.png",
+    "language_code": "tw"
+  },
+  "gh2.07d7985af66f178d.webp": {
+    "original_hash": "ec41331281539c8ffff80c96d95e3e3b",
+    "translation_date": "2026-01-16T10:49:11+00:00",
+    "source_file": "19-slm/img/gh2.png",
+    "language_code": "tw"
+  },
+  "github-check-country-locale-comment.2f4fe93228161dee.webp": {
+    "original_hash": "5f12e0c4fa8c5c9c343e87e2ac92e0fd",
+    "translation_date": "2026-01-16T10:35:24+00:00",
+    "source_file": "images/github-check-country-locale-comment.png",
+    "language_code": "tw"
+  },
+  "github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp": {
+    "original_hash": "54912bef63e510fadf09bfdfa0a2eed7",
+    "translation_date": "2026-01-16T10:35:59+00:00",
+    "source_file": "images/github-check-paths-missing-tracking-comment.png",
+    "language_code": "tw"
+  },
+  "github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp": {
+    "original_hash": "b1cd05ae141ccf3cbaae388818578cb6",
+    "translation_date": "2026-01-16T10:35:05+00:00",
+    "source_file": "images/github-check-urls-missing-tracking-comment.png",
+    "language_code": "tw"
+  },
+  "how-rag-works.f5d0ff63942bd3a6.webp": {
+    "original_hash": "5985959f0f97ef0b142f771d3c4baac5",
+    "translation_date": "2026-01-16T11:08:41+00:00",
+    "source_file": "15-rag-and-vector-databases/images/how-rag-works.png",
+    "language_code": "tw"
+  },
+  "jarvis.762ddbadbd1a3a33.webp": {
+    "original_hash": "8a0e14d79193a53c6df9f892c6e1230a",
+    "translation_date": "2026-01-16T10:56:00+00:00",
+    "source_file": "17-ai-agents/images/jarvis.png",
+    "language_code": "tw"
+  },
+  "langchain-agents.edcc55b5d5c43716.webp": {
+    "original_hash": "ee1ab713acb05c6e9aef2efe4d6be9ef",
+    "translation_date": "2026-01-16T10:57:52+00:00",
+    "source_file": "17-ai-agents/images/langchain-agents.png",
+    "language_code": "tw"
+  },
+  "lesson-plan-prompt.cc47c488cf1343df.webp": {
+    "original_hash": "0e2f241320d00c58d06f092111aa45df",
+    "translation_date": "2026-01-16T10:54:39+00:00",
+    "source_file": "07-building-chat-applications/images/lesson-plan-prompt.png",
+    "language_code": "tw"
+  },
+  "logo.706ff17a872243dc.webp": {
+    "original_hash": "6cbc063bca7846975724645cabdc92ba",
+    "translation_date": "2026-01-16T10:36:03+00:00",
+    "source_file": "images/logo.png",
+    "language_code": "tw"
+  },
+  "mask.1b2976ccec9e011e.webp": {
+    "original_hash": "c7289ceb502203fec05c4a1945f2ad34",
+    "translation_date": "2026-01-16T11:09:31+00:00",
+    "source_file": "09-building-image-applications/images/mask.png",
+    "language_code": "tw"
+  },
+  "mitigate-cycle.babcd5a5658e1775.webp": {
+    "original_hash": "8289d6f645651e830172226adddbe7d7",
+    "translation_date": "2026-01-16T10:49:18+00:00",
+    "source_file": "03-using-generative-ai-responsibly/images/mitigate-cycle.png",
+    "language_code": "tw"
+  },
+  "mitigation-layers.377215120b9a1159.webp": {
+    "original_hash": "00a92d81e68497a54007c311885469e2",
+    "translation_date": "2026-01-16T10:49:15+00:00",
+    "source_file": "03-using-generative-ai-responsibly/images/mitigation-layers.png",
+    "language_code": "tw"
+  },
+  "model-price.3f5a3e4d32ae00b4.webp": {
+    "original_hash": "98c4407d195143ac6d305c6f71ca8a76",
+    "translation_date": "2026-01-16T10:40:03+00:00",
+    "source_file": "16-open-source-models/images/model-price.png",
+    "language_code": "tw"
+  },
+  "model-quality.aaae1c22e00f7ee1.webp": {
+    "original_hash": "d6fa73f9c000f13095e3e7577b89c14c",
+    "translation_date": "2026-01-16T10:39:55+00:00",
+    "source_file": "16-open-source-models/images/model-quality.png",
+    "language_code": "tw"
+  },
+  "notebook-search.1e320b9c7fcbb0bc.webp": {
+    "original_hash": "529baf3f021b6e0a76491d94db487d4e",
+    "translation_date": "2026-01-16T10:46:31+00:00",
+    "source_file": "08-building-search-applications/images/notebook-search.png",
+    "language_code": "tw"
+  },
+  "phi3.655208c3186ae381.webp": {
+    "original_hash": "d844451f1d3dba7de2988592f0f34063",
+    "translation_date": "2026-01-16T10:48:45+00:00",
+    "source_file": "19-slm/img/phi3.png",
+    "language_code": "tw"
+  },
+  "powerautomate-add-row.5edce45e5dd3d51e.webp": {
+    "original_hash": "5220cbaaadc42ac83495b53020fa6a24",
+    "translation_date": "2026-01-16T11:07:04+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/powerautomate-add-row.png",
+    "language_code": "tw"
+  },
+  "powerautomate-remove-actions.7216392fe684ceba.webp": {
+    "original_hash": "1591759f40e41083ff1f47ed4a96db6d",
+    "translation_date": "2026-01-16T11:08:23+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/powerautomate-remove-actions.png",
+    "language_code": "tw"
+  },
+  "query-results.bb0480ebf025fac6.webp": {
+    "original_hash": "66ddb770ebb5a6010a8dc40ff31720e6",
+    "translation_date": "2026-01-16T10:46:10+00:00",
+    "source_file": "08-building-search-applications/images/query-results.png",
+    "language_code": "tw"
+  },
+  "repo-thubmnail2.0f2b17cf562b4a8c.webp": {
+    "original_hash": "48d5875c746eea4336d928f29a8a8918",
+    "translation_date": "2026-01-16T10:35:49+00:00",
+    "source_file": "images/repo-thubmnail2.png",
+    "language_code": "tw"
+  },
+  "repo-thubmnailv2.115823d179386974.webp": {
+    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
+    "translation_date": "2026-01-16T10:37:05+00:00",
+    "source_file": "images/repo-thubmnailv2.png",
+    "language_code": "tw"
+  },
+  "repo-thumbnailv2.06f4a48036fde647.webp": {
+    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
+    "translation_date": "2026-01-16T10:35:37+00:00",
+    "source_file": "images/repo-thumbnailv2.png",
+    "language_code": "tw"
+  },
+  "repo-thumbnailv3.917487e234b90100.webp": {
+    "original_hash": "1573acc06f264d139365fd3fca221806",
+    "translation_date": "2026-01-16T10:37:24+00:00",
+    "source_file": "images/repo-thumbnailv3.png",
+    "language_code": "tw"
+  },
+  "repo-thumbnailv4-fixed.11f1ce6a85d01461.webp": {
+    "original_hash": "a1c0bdadfc81125f9662146924c9b9af",
+    "translation_date": "2026-01-16T10:37:15+00:00",
+    "source_file": "images/repo-thumbnailv4-fixed.png",
+    "language_code": "tw"
+  },
+  "repo-thumbnailv4.2a8556df61fae2a1.webp": {
+    "original_hash": "4ea0e4c04d0429fcf5fcf974e9b29526",
+    "translation_date": "2026-01-16T10:36:49+00:00",
+    "source_file": "images/repo-thumbnailv4.png",
+    "language_code": "tw"
+  },
+  "repository-thumbnail.d450333985e6cb81.webp": {
+    "original_hash": "7cf33b807aaf9de3771b56c627077971",
+    "translation_date": "2026-01-16T10:36:39+00:00",
+    "source_file": "images/repository-thumbnail.png",
+    "language_code": "tw"
+  },
+  "sample.8e6ed0440e2c33bf.webp": {
+    "original_hash": "7a821b1ae6c8416152c7457fda608f56",
+    "translation_date": "2026-01-16T10:45:54+00:00",
+    "source_file": "21-meta/python/sample.jpg",
+    "language_code": "tw"
+  },
+  "simplified-explanations.4679508a406c3621.webp": {
+    "original_hash": "778147172716702fef6e142cf778eeb0",
+    "translation_date": "2026-01-16T10:47:18+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/simplified-explanations.png",
+    "language_code": "tw"
+  },
+  "slm.4058842744d0444a.webp": {
+    "original_hash": "2302aa094a8ea3e398f63e524f9b9d13",
+    "translation_date": "2026-01-16T10:48:51+00:00",
+    "source_file": "19-slm/img/slm.png",
+    "language_code": "tw"
+  },
+  "solving-questions.b7dea1604de0cbd2.webp": {
+    "original_hash": "2649ca1d24ea1a5ca57cb9ea4299517e",
+    "translation_date": "2026-01-16T10:47:39+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/solving-questions.png",
+    "language_code": "tw"
+  },
+  "startup.94d6b79cc4bb3f5a.webp": {
+    "original_hash": "c10f5b592fb049bd498c300c7042d032",
+    "translation_date": "2026-01-16T11:09:28+00:00",
+    "source_file": "09-building-image-applications/images/startup.png",
+    "language_code": "tw"
+  },
+  "students-by-DALLE2.b70fddaced1042ee.webp": {
+    "original_hash": "eb6c11420a6df35996fa4ef817c62e0d",
+    "translation_date": "2026-01-16T10:38:11+00:00",
+    "source_file": "01-introduction-to-genai/images/students-by-DALLE2.png",
+    "language_code": "tw"
+  },
+  "summarization-example.7b7ff97147b3d790.webp": {
+    "original_hash": "f7f2e4b3b3b9faf49b864ddbeeb44f71",
+    "translation_date": "2026-01-16T10:38:56+00:00",
+    "source_file": "01-introduction-to-genai/images/summarization-example.png",
+    "language_code": "tw"
+  },
+  "sunlit_lounge.a75a0cb61749db0e.webp": {
+    "original_hash": "020dd55f65bd4ac0a0b81ae1323ca380",
+    "translation_date": "2026-01-16T11:09:35+00:00",
+    "source_file": "09-building-image-applications/images/sunlit_lounge.png",
     "language_code": "tw"
   },
   "sunlit_lounge_result.76ae02957c0bbeb8.webp": {
@@ -791,10 +767,40 @@
     "source_file": "09-building-image-applications/images/sunlit_lounge_result.png",
     "language_code": "tw"
   },
-  "generated-image.7e17ceec085357b2.webp": {
-    "original_hash": "dc2b8fe051905608f12adca030eab947",
-    "translation_date": "2026-01-16T11:09:18+00:00",
-    "source_file": "09-building-image-applications/images/generated-image.png",
+  "taskweaver.da8559999267715a.webp": {
+    "original_hash": "9c4bb35719c261d417ccce168ac7cee2",
+    "translation_date": "2026-01-16T10:57:03+00:00",
+    "source_file": "17-ai-agents/images/taskweaver.png",
+    "language_code": "tw"
+  },
+  "text-completion-example.cbb0f28403d42752.webp": {
+    "original_hash": "f1085b628244e575a0a4c1bb0f2d6bd4",
+    "translation_date": "2026-01-16T10:37:58+00:00",
+    "source_file": "01-introduction-to-genai/images/text-completion-example.png",
+    "language_code": "tw"
+  },
+  "text-generation-works.6a9bf609154fce28.webp": {
+    "original_hash": "3927234d9f22d3141130a3fd08939aec",
+    "translation_date": "2026-01-16T11:05:40+00:00",
+    "source_file": "10-building-low-code-ai-applications/images/text-generation-works.png",
+    "language_code": "tw"
+  },
+  "tokenizer-example.80a5c151ee7d1bd4.webp": {
+    "original_hash": "70bd973fc6e2b9ea5c0fb994eeb66773",
+    "translation_date": "2026-01-16T10:39:20+00:00",
+    "source_file": "01-introduction-to-genai/images/tokenizer-example.png",
+    "language_code": "tw"
+  },
+  "uxinai.d5b4ed690f5cefff.webp": {
+    "original_hash": "36d1aa62d316d2cc8be4773f8b01c149",
+    "translation_date": "2026-01-16T10:46:38+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/images/uxinai.png",
+    "language_code": "tw"
+  },
+  "v1-generated-image.a295cfcffa3c13c2.webp": {
+    "original_hash": "9b740bd7ff1b40e32b25a6bc9e046350",
+    "translation_date": "2026-01-16T11:09:33+00:00",
+    "source_file": "09-building-image-applications/images/v1-generated-image.png",
     "language_code": "tw"
   },
   "v1-low-temp-generated-image.c96d135514f96423.webp": {
@@ -809,10 +815,10 @@
     "source_file": "09-building-image-applications/images/v1-temp-generated-image.png",
     "language_code": "tw"
   },
-  "v2-temp-generated-image.871d0c920dbfb0f1.webp": {
-    "original_hash": "b315c8216f3e4c4378f8bd811f6641f6",
-    "translation_date": "2026-01-16T11:09:23+00:00",
-    "source_file": "09-building-image-applications/images/v2-temp-generated-image.png",
+  "v2-generated-image.33f55a3714efe61d.webp": {
+    "original_hash": "4788edcde9ec51473dad3536e628daeb",
+    "translation_date": "2026-01-16T11:09:42+00:00",
+    "source_file": "09-building-image-applications/images/v2-generated-image.png",
     "language_code": "tw"
   },
   "v2-low-temp-generated-image.f1b2c78ff318d685.webp": {
@@ -821,40 +827,34 @@
     "source_file": "09-building-image-applications/images/v2-low-temp-generated-image.png",
     "language_code": "tw"
   },
-  "startup.94d6b79cc4bb3f5a.webp": {
-    "original_hash": "c10f5b592fb049bd498c300c7042d032",
-    "translation_date": "2026-01-16T11:09:28+00:00",
-    "source_file": "09-building-image-applications/images/startup.png",
+  "v2-temp-generated-image.871d0c920dbfb0f1.webp": {
+    "original_hash": "b315c8216f3e4c4378f8bd811f6641f6",
+    "translation_date": "2026-01-16T11:09:23+00:00",
+    "source_file": "09-building-image-applications/images/v2-temp-generated-image.png",
     "language_code": "tw"
   },
-  "mask.1b2976ccec9e011e.webp": {
-    "original_hash": "c7289ceb502203fec05c4a1945f2ad34",
-    "translation_date": "2026-01-16T11:09:31+00:00",
-    "source_file": "09-building-image-applications/images/mask.png",
+  "vscode-envvariable.33d8dc1aa25ec2a7.webp": {
+    "original_hash": "00252b60d50c5dfac05767e63ab042dc",
+    "translation_date": "2026-01-16T11:00:04+00:00",
+    "source_file": "06-text-generation-apps/images/vscode-envvariable.png",
     "language_code": "tw"
   },
-  "v1-generated-image.a295cfcffa3c13c2.webp": {
-    "original_hash": "9b740bd7ff1b40e32b25a6bc9e046350",
-    "translation_date": "2026-01-16T11:09:33+00:00",
-    "source_file": "09-building-image-applications/images/v1-generated-image.png",
+  "vscode-follow-link.85520ab6a1237adc.webp": {
+    "original_hash": "5fde2d71a49a708cd6343002fa1e63a3",
+    "translation_date": "2026-01-16T10:35:14+00:00",
+    "source_file": "images/vscode-follow-link.png",
     "language_code": "tw"
   },
-  "sunlit_lounge.a75a0cb61749db0e.webp": {
-    "original_hash": "020dd55f65bd4ac0a0b81ae1323ca380",
-    "translation_date": "2026-01-16T11:09:35+00:00",
-    "source_file": "09-building-image-applications/images/sunlit_lounge.png",
+  "vscode-select-relative-path.3804eb73c3a9e5f2.webp": {
+    "original_hash": "497325b2f7858e324224d92c885fca35",
+    "translation_date": "2026-01-16T10:36:30+00:00",
+    "source_file": "images/vscode-select-relative-path.png",
     "language_code": "tw"
   },
-  "09-lesson-banner.906e408c741f4411.webp": {
-    "original_hash": "95555b4e37d94bdaf4d9b4f052f65ba2",
-    "translation_date": "2026-01-16T11:09:40+00:00",
-    "source_file": "09-building-image-applications/images/09-lesson-banner.png",
-    "language_code": "tw"
-  },
-  "v2-generated-image.33f55a3714efe61d.webp": {
-    "original_hash": "4788edcde9ec51473dad3536e628daeb",
-    "translation_date": "2026-01-16T11:09:42+00:00",
-    "source_file": "09-building-image-applications/images/v2-generated-image.png",
+  "what-agent.21f2893bdfd01e6a.webp": {
+    "original_hash": "fcec8d972223900d3d2f274c9987b6a4",
+    "translation_date": "2026-01-16T10:57:10+00:00",
+    "source_file": "17-ai-agents/images/what-agent.png",
     "language_code": "tw"
   }
 }
