@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Създаване на напреднали подканвания
 
-[![Създаване на напреднали подканвания](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.bg.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Създаване на напреднали подканвания](../../../translated_images/bg/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Нека обобщим някои от наученото в предишната глава:
 

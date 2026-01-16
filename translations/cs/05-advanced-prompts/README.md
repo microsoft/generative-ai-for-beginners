@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváření pokročilých promptů
 
-[![Vytváření pokročilých promptů](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.cs.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Vytváření pokročilých promptů](../../../translated_images/cs/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Pojďme si zopakovat některé poznatky z předchozí kapitoly:
 

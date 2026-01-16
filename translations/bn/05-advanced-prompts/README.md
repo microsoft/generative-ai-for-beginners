@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # উন্নত প্রম্পট তৈরি করা
 
-[![উন্নত প্রম্পট তৈরি করা](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.bn.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![উন্নত প্রম্পট তৈরি করা](../../../translated_images/bn/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 আগের অধ্যায় থেকে কিছু শেখা পুনরায় দেখে নেওয়া যাক:
 

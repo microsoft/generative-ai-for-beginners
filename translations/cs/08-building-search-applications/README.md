@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváření vyhledávacích aplikací
 
-[![Úvod do generativní AI a velkých jazykových modelů](../../../translated_images/08-lesson-banner.8fff48c566dad08a.cs.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Úvod do generativní AI a velkých jazykových modelů](../../../translated_images/cs/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klikněte na obrázek výše pro zhlédnutí videa k této lekci_
 
@@ -44,7 +44,7 @@ Lekce obsahuje index embeddings přepisů z YouTube kanálu Microsoft [AI Show](
 
 Následuje příklad sémantického dotazu na otázku „Můžete použít rstudio s azure ml?“. Podívejte se na URL YouTube, uvidíte, že obsahuje časovou značku, která vás zavede na místo ve videu, kde se nachází odpověď na otázku.
 
-![Sémantický dotaz na otázku "Můžete použít rstudio s Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.cs.png)
+![Sémantický dotaz na otázku "Můžete použít rstudio s Azure ML"](../../../translated_images/cs/query-results.bb0480ebf025fac6.png)
 
 ## Co je sémantické vyhledávání?
 
@@ -162,7 +162,7 @@ Otevřete [řešení v notebooku](./python/aoai-solution.ipynb?WT.mc_id=academic
 
 Když spustíte notebook, budete vyzváni k zadání dotazu. Vstupní pole bude vypadat takto:
 
-![Vstupní pole pro zadání dotazu uživatelem](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.cs.png)
+![Vstupní pole pro zadání dotazu uživatelem](../../../translated_images/cs/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Skvělá práce! Pokračujte v učení
 

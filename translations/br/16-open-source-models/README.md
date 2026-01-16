@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "br"
 }
 -->
-[![Modelos Open Source](../../../translated_images/16-lesson-banner.6b56555e8404fda1.br.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Modelos Open Source](../../../translated_images/br/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introdução
 
@@ -41,12 +41,12 @@ Para esta lição, nos referiremos aos modelos como "modelos open" daqui para fr
 
 **Custo** - O custo por token para usar e implantar esses modelos é menor do que o dos modelos proprietários. Ao construir aplicações de IA Generativa, deve-se analisar o desempenho versus preço ao trabalhar com esses modelos no seu caso de uso.
 
-![Custo do Modelo](../../../translated_images/model-price.3f5a3e4d32ae00b4.br.png)
+![Custo do Modelo](../../../translated_images/br/model-price.3f5a3e4d32ae00b4.png)
 Fonte: Artificial Analysis
 
 **Flexibilidade** - Trabalhar com modelos open permite que você seja flexível em termos de usar diferentes modelos ou combiná-los. Um exemplo disso são os [Assistentes HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), onde o usuário pode selecionar o modelo usado diretamente na interface:
 
-![Escolher Modelo](../../../translated_images/choose-model.f095d15bbac92214.br.png)
+![Escolher Modelo](../../../translated_images/br/choose-model.f095d15bbac92214.png)
 
 ## Explorando Diferentes Modelos Open
 
@@ -74,7 +74,7 @@ Não há uma resposta única para escolher um modelo open. Um bom ponto de parti
 
 Ao buscar comparar LLMs entre os diferentes tipos, o [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) é outro ótimo recurso:
 
-![Qualidade do Modelo](../../../translated_images/model-quality.aaae1c22e00f7ee1.br.png)
+![Qualidade do Modelo](../../../translated_images/br/model-quality.aaae1c22e00f7ee1.png)
 Fonte: Artificial Analysis
 
 Se estiver trabalhando em um caso de uso específico, buscar versões fine-tuned focadas na mesma área pode ser eficaz. Experimentar múltiplos modelos open para ver como eles performam de acordo com suas expectativas e as dos seus usuários é outra boa prática.

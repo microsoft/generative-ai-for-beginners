@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # تأمين تطبيقات الذكاء الاصطناعي التوليدي
 
-[![تأمين تطبيقات الذكاء الاصطناعي التوليدي](../../../translated_images/13-lesson-banner.14103e36b4bbf173.ar.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![تأمين تطبيقات الذكاء الاصطناعي التوليدي](../../../translated_images/ar/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## المقدمة
 
@@ -131,7 +131,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > ممارسة فريق التحدي في الذكاء الاصطناعي تطورت لتأخذ معنى أوسع: فهي لا تقتصر فقط على البحث عن الثغرات الأمنية، بل تشمل أيضًا البحث عن إخفاقات أخرى في النظام، مثل إنتاج محتوى قد يكون ضارًا. أنظمة الذكاء الاصطناعي تأتي مع مخاطر جديدة، وفريق التحدي هو أساس لفهم تلك المخاطر الجديدة، مثل حقن التعليمات وإنتاج محتوى غير موثوق. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![إرشادات وموارد لفريق التحدي](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.ar.png)]()
+[![إرشادات وموارد لفريق التحدي](../../../translated_images/ar/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 فيما يلي رؤى رئيسية شكلت برنامج فريق التحدي للذكاء الاصطناعي في Microsoft.
 

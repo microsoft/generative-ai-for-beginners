@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-[![نماذج مفتوحة المصدر](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ar.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![نماذج مفتوحة المصدر](../../../translated_images/ar/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## المقدمة
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 تسمح وكلاء الذكاء الاصطناعي لنماذج اللغة الكبيرة (LLMs) بأداء المهام من خلال منحها الوصول إلى **الحالة** و**الأدوات**.
 
-![نموذج الوكيل](../../../translated_images/what-agent.21f2893bdfd01e6a.ar.png)
+![نموذج الوكيل](../../../translated_images/ar/what-agent.21f2893bdfd01e6a.png)
 
 دعونا نعرف هذه المصطلحات:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يقوم `AgentExecutor` أيضًا بتخزين سجل المحادثات لتوفير سياق المحادثة.
 
-![وكلاء LangChain](../../../translated_images/langchain-agents.edcc55b5d5c43716.ar.png)
+![وكلاء LangChain](../../../translated_images/ar/langchain-agents.edcc55b5d5c43716.png)
 
 يوفر LangChain [كتالوجًا للأدوات](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) يمكن استيراده إلى تطبيقك حيث يمكن لنموذج اللغة الكبير الوصول إليه. تم إنشاء هذه الأدوات بواسطة المجتمع وفريق LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 إليك مثال على العملية:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ar.png)
+![AutoGen](../../../translated_images/ar/autogen.dee9a25a45fde584.png)
 
 #### نموذج لغة كبير معرف برسالة نظام
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 لإكمال المهام، يتم عرض الـ `Planner` على مجموعة من الأدوات تسمى `Plugins`. يمكن أن تكون هذه الأدوات فصول Python أو مفسر كود عام. يتم تخزين هذه الإضافات كـ embeddings بحيث يمكن لنموذج اللغة الكبير البحث بشكل أفضل عن الإضافة الصحيحة.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ar.png)
+![Taskweaver](../../../translated_images/ar/taskweaver.da8559999267715a.png)
 
 إليك مثال على إضافة للتعامل مع اكتشاف الشذوذ:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 الإطار الأخير للوكيل الذي سنستكشفه هو [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). ما يجعل JARVIS فريدًا هو أنه يستخدم نموذج لغة كبير لإدارة `الحالة` للمحادثة و`الأدوات` هي نماذج ذكاء اصطناعي أخرى. كل نموذج من نماذج الذكاء الاصطناعي هو نموذج متخصص يؤدي مهام معينة مثل اكتشاف الكائنات، النسخ أو وصف الصور.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ar.png)
+![JARVIS](../../../translated_images/ar/jarvis.762ddbadbd1a3a33.png)
 
 نموذج اللغة الكبير، كونه نموذجًا عامًا، يتلقى الطلب من المستخدم ويحدد المهمة المحددة وأي حجج/بيانات مطلوبة لإكمال المهمة.
 

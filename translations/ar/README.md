@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-![الذكاء الاصطناعي التوليدي للمبتدئين](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ar.png)
+![الذكاء الاصطناعي التوليدي للمبتدئين](../../translated_images/ar/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 درسًا تعلمك كل ما تحتاج لمعرفته لبدء بناء تطبيقات الذكاء الاصطناعي التوليدي
 

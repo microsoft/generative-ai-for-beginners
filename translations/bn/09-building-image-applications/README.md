@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ইমেজ জেনারেশন অ্যাপ্লিকেশন তৈরি করা
 
-[![ইমেজ জেনারেশন অ্যাপ্লিকেশন তৈরি করা](../../../translated_images/09-lesson-banner.906e408c741f4411.bn.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![ইমেজ জেনারেশন অ্যাপ্লিকেশন তৈরি করা](../../../translated_images/bn/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 টেক্সট জেনারেশনের বাইরে LLM-এর আরও অনেক কিছু আছে। টেক্সট বর্ণনা থেকে ইমেজ তৈরি করাও সম্ভব। ইমেজ একটি মাধ্যম হিসেবে বিভিন্ন ক্ষেত্রে যেমন মেডটেক, স্থাপত্য, পর্যটন, গেম ডেভেলপমেন্ট এবং আরও অনেক কিছুতে অত্যন্ত কার্যকর হতে পারে। এই অধ্যায়ে, আমরা দুটি জনপ্রিয় ইমেজ জেনারেশন মডেল, DALL-E এবং Midjourney সম্পর্কে আলোচনা করব।
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 যদি তারা ক্লাসে স্মৃতিস্তম্ভ নিয়ে কাজ করে, তাহলে Edu4All-এর শিক্ষার্থীরা উদাহরণস্বরূপ এটি তৈরি করতে পারে:
 
-![Edu4All স্টার্টআপ, ক্লাসে স্মৃতিস্তম্ভ, আইফেল টাওয়ার](../../../translated_images/startup.94d6b79cc4bb3f5a.bn.png)
+![Edu4All স্টার্টআপ, ক্লাসে স্মৃতিস্তম্ভ, আইফেল টাওয়ার](../../../translated_images/bn/startup.94d6b79cc4bb3f5a.png)
 
 একটি প্রম্পট ব্যবহার করে যেমন:
 
@@ -273,9 +273,9 @@ _চিত্র ক্রেডিট উইকিপিডিয়া, Midjou
   বেস ইমেজটি শুধুমাত্র পুল সহ লাউঞ্জটি ধারণ করবে কিন্তু চূড়ান্ত ইমেজে একটি ফ্লেমিঙ্গো থাকবে:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.bn.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.bn.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.bn.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/bn/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/bn/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/bn/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ _চিত্র ক্রেডিট উইকিপিডিয়া, Midjou
 
 > প্রম্পট: "ঘোড়ার উপর খরগোশ, ললিপপ ধরে আছে, কুয়াশাচ্ছন্ন মাঠে যেখানে ড্যাফোডিল জন্মায়"
 
-![ঘোড়ার উপর ললিপপ ধরে থাকা খরগোশ, সংস্করণ 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.bn.png)
+![ঘোড়ার উপর ললিপপ ধরে থাকা খরগোশ, সংস্করণ 1](../../../translated_images/bn/v1-generated-image.a295cfcffa3c13c2.png)
 
 এখন একই প্রম্পটটি চালিয়ে দেখি যে আমরা একই ইমেজ দুইবার পাই না:
 
-![ঘোড়ার উপর খরগোশের তৈরি ইমেজ](../../../translated_images/v2-generated-image.33f55a3714efe61d.bn.png)
+![ঘোড়ার উপর খরগোশের তৈরি ইমেজ](../../../translated_images/bn/v2-generated-image.33f55a3714efe61d.png)
 
 আপনি দেখতে পাচ্ছেন, ইমেজগুলো একই রকম, কিন্তু একেবারে এক নয়। এবার টেম্পারেচার মান 0.1-এ পরিবর্তন করে দেখি কী ঘটে:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 এখন আপনি এই কোডটি চালালে, আপনি এই দুটি ইমেজ পাবেন:
 
-- ![টেম্পারেচার 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.bn.png)
-- ![টেম্পারেচার 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.bn.png)
+- ![টেম্পারেচার 0, v1](../../../translated_images/bn/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![টেম্পারেচার 0, v2](../../../translated_images/bn/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 এখানে আপনি স্পষ্টভাবে দেখতে পারেন কীভাবে ইমেজগুলো আরও বেশি একে অপরের সাথে সাদৃশ্যপূর্ণ।
 

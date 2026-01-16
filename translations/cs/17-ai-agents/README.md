@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "cs"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.cs.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/cs/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Úvod
 
@@ -33,7 +33,7 @@ AI agenti jsou velmi vzrušující oblastí ve světě generativní AI. S tímto
 
 AI agenti umožňují velkým jazykovým modelům (LLMs) vykonávat úkoly tím, že jim poskytují přístup ke **stavu** a **nástrojům**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.cs.png)
+![Agent Model](../../../translated_images/cs/what-agent.21f2893bdfd01e6a.png)
 
 Definujme si tyto pojmy:
 
@@ -53,7 +53,7 @@ Pro správu **stavu** používá vestavěnou funkci nazvanou `AgentExecutor`. Ta
 
 `AgentExecutor` také ukládá historii chatu, aby poskytl kontext chatu.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.cs.png)
+![Langchain Agents](../../../translated_images/cs/langchain-agents.edcc55b5d5c43716.png)
 
 LangChain nabízí [katalog nástrojů](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), které lze importovat do vaší aplikace, kde k nim LLM může získat přístup. Tyto nástroje jsou vytvořeny komunitou a týmem LangChain.
 
@@ -85,7 +85,7 @@ Pro změnu a správu stavu generuje asistent Agent Python kód k dokončení úk
 
 Zde je příklad procesu:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.cs.png)
+![AutoGen](../../../translated_images/cs/autogen.dee9a25a45fde584.png)
 
 #### LLM definovaný systémovou zprávou
 
@@ -129,7 +129,7 @@ Pro správu stavu konverzace používá TaskWeaver koncept `Plánovače`. `Plán
 
 Pro splnění úkolů má `Plánovač` přístup ke sbírce nástrojů nazvané `Pluginy`. Tyto pluginy mohou být Python třídy nebo obecný interpret kódu. Pluginy jsou uloženy jako embeddings, aby LLM mohl lépe vyhledávat správný plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.cs.png)
+![Taskweaver](../../../translated_images/cs/taskweaver.da8559999267715a.png)
 
 Zde je příklad pluginu pro detekci anomálií:
 
@@ -143,7 +143,7 @@ Kód je před vykonáním ověřen. Další funkcí pro správu kontextu v Taskw
 
 Posledním rámcem agentů, který prozkoumáme, je [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Co činí JARVIS jedinečným, je to, že používá LLM k řízení `stavu` konverzace a `nástroje` jsou jiné AI modely. Každý z AI modelů je specializovaný na určité úkoly, jako je detekce objektů, přepis nebo popis obrázků.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.cs.png)
+![JARVIS](../../../translated_images/cs/jarvis.762ddbadbd1a3a33.png)
 
 LLM, jako obecný model, přijímá požadavek od uživatele a identifikuje konkrétní úkol a jaké argumenty/data jsou potřebné k jeho splnění.
 

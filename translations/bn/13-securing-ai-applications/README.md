@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # আপনার জেনারেটিভ AI অ্যাপ্লিকেশন সুরক্ষিত করা
 
-[![আপনার জেনারেটিভ AI অ্যাপ্লিকেশন সুরক্ষিত করা](../../../translated_images/13-lesson-banner.14103e36b4bbf173.bn.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![আপনার জেনারেটিভ AI অ্যাপ্লিকেশন সুরক্ষিত করা](../../../translated_images/bn/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## ভূমিকা
 
@@ -123,7 +123,7 @@ LLM-গুলো তাদের ব্যবহৃত ডেটার গোপ
 
 > AI রেড টিমিং-এর প্রক্রিয়া এখন আরও বিস্তৃত অর্থ গ্রহণ করেছে: এটি শুধুমাত্র নিরাপত্তা দুর্বলতাগুলি পরীক্ষা করার মধ্যে সীমাবদ্ধ নয়, বরং অন্যান্য সিস্টেম ব্যর্থতাগুলিও পরীক্ষা করে, যেমন সম্ভাব্য ক্ষতিকারক বিষয়বস্তু তৈরি। AI সিস্টেম নতুন ঝুঁকি নিয়ে আসে, এবং রেড টিমিং এই নতুন ঝুঁকিগুলি বুঝতে গুরুত্বপূর্ণ, যেমন প্রম্পট ইনজেকশন এবং ভিত্তিহীন বিষয়বস্তু তৈরি। - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![রেড টিমিং-এর জন্য নির্দেশিকা এবং সম্পদ](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.bn.png)]()
+[![রেড টিমিং-এর জন্য নির্দেশিকা এবং সম্পদ](../../../translated_images/bn/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 নিচে Microsoft-এর AI রেড টিম প্রোগ্রামকে গঠনকারী গুরুত্বপূর্ণ অন্তর্দৃষ্টিগুলি দেওয়া হয়েছে।
 

@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Например, когато задържите курсора върху някоя връзка във файловете, ще получите подсказка да последвате връзката с натискане на **ctrl + клик**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.bg.png)
+![VS code follow links screenshot](../../translated_images/bg/vscode-follow-link.85520ab6a1237adc.png)
 
 Ако кликнете върху връзка и тя не работи локално, със сигурност ще предизвика workflow грешка и няма да работи и в GitHub.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Когато напишете `./` или `../`, VS code ще ви предложи да изберете от наличните опции според това, което сте въвели.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.bg.png)
+![VS code select relative path screenshot](../../translated_images/bg/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Следвайте пътя, като кликнете върху желания файл или папка, и ще сте сигурни, че пътят ви не е счупен.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ако не, може да получите следната грешка.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.bg.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/bg/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 За да поправите този проблем, отворете файла, посочен от workflow-а, и добавете проследяващия идентификатор в края на относителните пътища.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ако не, може да получите следната грешка.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.bg.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/bg/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 За да поправите този проблем, отворете файла, посочен от workflow-а, и добавете проследяващия идентификатор в края на URL адресите.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ако има, може да получите следната грешка.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.bg.png)
+![GitHub check country locale comment screenshot](../../translated_images/bg/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 За да поправите този проблем, отворете файла, посочен от workflow-а, и премахнете локализацията на държавата от URL адресите.
 
