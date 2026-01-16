@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "my"
 }
 -->
-![Generative AI For Beginners](../../translated_images/my/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI For Beginners](../../translated_images/my/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### Generative AI အပလီကေးရှင်းတွေ တည်ဆောက်ဖို့ လိုအပ်တာတွေကို လူသတ်မှတ် အသိပညာ ၂၁ ပိုင်းလုံး
 

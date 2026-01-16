@@ -62,7 +62,7 @@ workflow စစ်ဆေးမှုများကို ဖြတ်သန်�
 
 ဥပမာ - ဖိုင်ထဲရှိ လင့်ခ်တစ်ခုကို hover လုပ်တဲ့အခါ **ctrl + click** နှိပ်ပြီး လင့်ခ်ကို လိုက်နာနိုင်ဖို့ prompt ပေါ်လာပါလိမ့်မယ်။
 
-![VS code follow links screenshot](../../translated_images/my/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/my/vscode-follow-link.85520ab6a1237adc.webp)
 
 လင့်ခ်ကို နှိပ်ပြီး မိမိ local မှာ အလုပ်မလုပ်ပါက workflow က error ဖြစ်စေပြီး GitHub ပေါ်မှာလည်း အလုပ်မလုပ်ပါဘူး။
 
@@ -70,7 +70,7 @@ workflow စစ်ဆေးမှုများကို ဖြတ်သန်�
 
 `./` သို့မဟုတ် `../` ရိုက်တဲ့အခါ VS code က ရွေးချယ်စရာများကို ပြပါလိမ့်မယ်။
 
-![VS code select relative path screenshot](../../translated_images/my/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/my/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 လိုချင်တဲ့ ဖိုင် သို့မဟုတ် ဖိုလ်ဒါကို နှိပ်ပြီး လင့်ခ်မပျက်စီးကြောင်း သေချာစေပါ။
 
@@ -87,7 +87,7 @@ tracking ID ပါလာရင် စစ်ဆေးမှုကို ဖြတ
 
 မပါလာရင် အောက်ပါ error ကို ကြုံတွေ့နိုင်ပါတယ်။
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/my/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/my/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 ပြဿနာကို ဖြေရှင်းဖို့ workflow က ပြထားတဲ့ ဖိုင်လမ်းကြောင်းကို ဖွင့်ပြီး relative path အဆုံးတွင် tracking ID ထည့်ပါ။
 
@@ -104,7 +104,7 @@ tracking ID ပါလာရင် စစ်ဆေးမှုကို ဖြတ
 
 မပါလာရင် အောက်ပါ error ကို ကြုံတွေ့နိုင်ပါတယ်။
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/my/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/my/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 ပြဿနာကို ဖြေရှင်းဖို့ workflow က ပြထားတဲ့ ဖိုင်လမ်းကြောင်းကို ဖွင့်ပြီး URL အဆုံးတွင် tracking ID ထည့်ပါ။
 
@@ -121,7 +121,7 @@ URL များတွင် နိုင်ငံ locale မပါရှိမ�
 
 ရှိရင် အောက်ပါ error ကို ကြုံတွေ့နိုင်ပါတယ်။
 
-![GitHub check country locale comment screenshot](../../translated_images/my/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/my/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 ပြဿနာကို ဖြေရှင်းဖို့ workflow က ပြထားတဲ့ ဖိုင်လမ်းကြောင်းကို ဖွင့်ပြီး URL ထဲက နိုင်ငံ locale ကို ဖယ်ရှားပါ။
 

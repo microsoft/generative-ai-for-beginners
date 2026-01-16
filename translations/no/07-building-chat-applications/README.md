@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge generative AI-drevne chatapplikasjoner
 
-[![Bygge generative AI-drevne chatapplikasjoner](../../../translated_images/no/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Bygge generative AI-drevne chatapplikasjoner](../../../translated_images/no/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klikk på bildet ovenfor for å se videoen til denne leksjonen)_
 
@@ -96,11 +96,11 @@ Generelle UX-prinsipper gjelder for chatapplikasjoner, men her er noen ekstra he
 
 Et eksempel på personalisering er innstillingen "Custom instructions" i OpenAIs ChatGPT. Den lar deg gi informasjon om deg selv som kan være viktig kontekst for dine forespørsler. Her er et eksempel på en tilpasset instruksjon.
 
-![Innstillinger for tilpassede instruksjoner i ChatGPT](../../../translated_images/no/custom-instructions.b96f59aa69356fcf.png)
+![Innstillinger for tilpassede instruksjoner i ChatGPT](../../../translated_images/no/custom-instructions.b96f59aa69356fcf.webp)
 
 Denne "profilen" ber ChatGPT om å lage en leksjonsplan om lenkelister. Legg merke til at ChatGPT tar hensyn til at brukeren kanskje ønsker en mer detaljert leksjonsplan basert på hennes erfaring.
 
-![En forespørsel i ChatGPT om en leksjonsplan om lenkelister](../../../translated_images/no/lesson-plan-prompt.cc47c488cf1343df.png)
+![En forespørsel i ChatGPT om en leksjonsplan om lenkelister](../../../translated_images/no/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsofts systemmeldingsrammeverk for store språkmodeller
 

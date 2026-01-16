@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Saugokite savo generatyviosios dirbtinio intelekto (DI) programas
 
-[![Saugokite savo generatyviosios DI programas](../../../translated_images/lt/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Saugokite savo generatyviosios DI programas](../../../translated_images/lt/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Įvadas
 
@@ -121,7 +121,7 @@ Imituoti realaus pasaulio grėsmes dabar laikoma standartine praktika kuriant at
 
 > Dirbtinio intelekto „raudonosios komandos“ praktika evoliucionavo ir įgavo platesnę prasmę: ji ne tik apima saugumo pažeidžiamumų paiešką, bet ir kitų sistemų gedimų, tokių kaip potencialiai žalingo turinio generavimas, tyrimą. Dirbtinio intelekto sistemos kelia naujas rizikas, o „raudonosios komandos“ veikla yra esminė norint suprasti šias naujas rizikas, tokias kaip užklausų injekcija ir nepagrįsto turinio kūrimas. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Gairės ir ištekliai „raudonosios komandos“ veiklai](../../../translated_images/lt/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Gairės ir ištekliai „raudonosios komandos“ veiklai](../../../translated_images/lt/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Žemiau pateikiami pagrindiniai įžvalgos, kurios formavo „Microsoft“ dirbtinio intelekto „raudonosios komandos“ programą.
 

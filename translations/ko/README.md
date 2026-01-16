@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-![초보자를 위한 생성형 AI](../../translated_images/ko/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![초보자를 위한 생성형 AI](../../translated_images/ko/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 생성형 AI 애플리케이션을 구축하기 위해 알아야 할 모든 것을 가르치는 21개의 강의
 

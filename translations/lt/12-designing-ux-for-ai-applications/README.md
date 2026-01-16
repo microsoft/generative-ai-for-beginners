@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # UX kūrimas AI programoms
 
-[![UX kūrimas AI programoms](../../../translated_images/lt/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![UX kūrimas AI programoms](../../../translated_images/lt/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
@@ -58,7 +58,7 @@ Būti prieinamu reiškia išplėsti vartotojo patirtį vartotojams su įvairiais
 
 Būti maloniu reiškia, kad programa yra maloni naudoti. Patraukli vartotojo patirtis gali turėti teigiamą poveikį vartotojui, paskatindama jį grįžti prie programos ir padidindama verslo pajamas.
 
-![vaizdas, iliustruojantis UX aspektus AI](../../../translated_images/lt/uxinai.d5b4ed690f5cefff.png)
+![vaizdas, iliustruojantis UX aspektus AI](../../../translated_images/lt/uxinai.d5b4ed690f5cefff.webp)
 
 Ne kiekvieną iššūkį galima išspręsti naudojant AI. AI padeda pagerinti vartotojo patirtį, pavyzdžiui, automatizuojant rankinius darbus ar personalizuojant vartotojo patirtį.
 
@@ -72,25 +72,25 @@ Du būdai užtikrinti, kad pasitikėjimas būtų pagrindinis dizaino elementas, 
 
 Kai AI padeda priimti sprendimus, pavyzdžiui, perduoti žinias ateities kartoms, labai svarbu, kad mokytojai ir tėvai suprastų, kaip priimami AI sprendimai. Tai yra paaiškinamumas – supratimas, kaip AI programos priima sprendimus. Dizainas, orientuotas į paaiškinamumą, apima detalių pridėjimą, kurios parodo, kaip AI pasiekė rezultatą. Auditorija turi žinoti, kad rezultatas yra sukurtas AI, o ne žmogaus. Pavyzdžiui, vietoj „Pradėkite pokalbį su savo mokytoju dabar“ sakykite „Naudokite AI mokytoją, kuris prisitaiko prie jūsų poreikių ir padeda mokytis jūsų tempu.“
 
-![programos pagrindinis puslapis su aiškiu AI paaiškinamumo pavyzdžiu](../../../translated_images/lt/explanability-in-ai.134426a96b498fbf.png)
+![programos pagrindinis puslapis su aiškiu AI paaiškinamumo pavyzdžiu](../../../translated_images/lt/explanability-in-ai.134426a96b498fbf.webp)
 
 Kitas pavyzdys – kaip AI naudoja vartotojo ir asmeninius duomenis. Pavyzdžiui, vartotojas su studento persona gali turėti apribojimų, susijusių su jų persona. AI gali negalėti atskleisti atsakymų į klausimus, tačiau gali padėti vartotojui apmąstyti, kaip jie gali išspręsti problemą.
 
-![AI atsako į klausimus pagal persona](../../../translated_images/lt/solving-questions.b7dea1604de0cbd2.png)
+![AI atsako į klausimus pagal persona](../../../translated_images/lt/solving-questions.b7dea1604de0cbd2.webp)
 
 Dar vienas svarbus paaiškinamumo aspektas yra paaiškinimų supaprastinimas. Studentai ir mokytojai gali nebūti AI ekspertai, todėl paaiškinimai apie tai, ką programa gali ar negali padaryti, turėtų būti supaprastinti ir lengvai suprantami.
 
-![supaprastinti paaiškinimai apie AI galimybes](../../../translated_images/lt/simplified-explanations.4679508a406c3621.png)
+![supaprastinti paaiškinimai apie AI galimybes](../../../translated_images/lt/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrolė
 
 Generatyvinis AI sukuria bendradarbiavimą tarp AI ir vartotojo, kur, pavyzdžiui, vartotojas gali keisti užklausas, kad gautų skirtingus rezultatus. Be to, kai rezultatas yra sukurtas, vartotojai turėtų galėti keisti rezultatus, suteikdami jiems kontrolės jausmą. Pavyzdžiui, naudojant Bing, galite pritaikyti savo užklausą pagal formatą, toną ir ilgį. Be to, galite keisti savo rezultatą ir jį koreguoti, kaip parodyta žemiau:
 
-![Bing paieškos rezultatai su galimybėmis keisti užklausą ir rezultatą](../../../translated_images/lt/bing1.293ae8527dbe2789.png)
+![Bing paieškos rezultatai su galimybėmis keisti užklausą ir rezultatą](../../../translated_images/lt/bing1.293ae8527dbe2789.webp)
 
 Kita Bing funkcija, leidžianti vartotojui kontroliuoti programą, yra galimybė pasirinkti, ar leisti, ar neleisti naudoti AI duomenis. Mokyklos programoje studentas gali norėti naudoti savo užrašus, taip pat mokytojų išteklius kaip mokymosi medžiagą.
 
-![Bing paieškos rezultatai su galimybėmis keisti užklausą ir rezultatą](../../../translated_images/lt/bing2.309f4845528a88c2.png)
+![Bing paieškos rezultatai su galimybėmis keisti užklausą ir rezultatą](../../../translated_images/lt/bing2.309f4845528a88c2.webp)
 
 > Kuriant AI programas, svarbu užtikrinti, kad vartotojai nepervertintų AI galimybių, nustatydami nerealistinius lūkesčius. Vienas iš būdų tai pasiekti – sukurti trintį tarp užklausų ir rezultatų. Priminkite vartotojui, kad tai yra AI, o ne žmogus.
 
@@ -102,7 +102,7 @@ AI programos turėtų būti sukurtos taip, kad galėtų priimti ir teikti grįž
 
 Kitas būdas spręsti šią problemą – aiškiai komunikuoti sistemos galimybes ir apribojimus. Kai vartotojas padaro klaidą, prašydamas kažko, kas viršija AI galimybes, turėtų būti būdas tai spręsti, kaip parodyta žemiau.
 
-![Grįžtamojo ryšio teikimas ir klaidų sprendimas](../../../translated_images/lt/feedback-loops.7955c134429a9466.png)
+![Grįžtamojo ryšio teikimas ir klaidų sprendimas](../../../translated_images/lt/feedback-loops.7955c134429a9466.webp)
 
 Sistemos klaidos yra dažnos programose, kur vartotojui gali prireikti informacijos už AI ribų arba programa gali turėti apribojimų, kiek klausimų/temų vartotojas gali generuoti santraukas. Pavyzdžiui, AI programa, apmokyta duomenimis apie ribotas temas, pavyzdžiui, istoriją ir matematiką, gali nesugebėti atsakyti į geografijos klausimus. Norint tai spręsti, AI sistema gali pateikti atsakymą, pavyzdžiui: „Atsiprašome, mūsų produktas buvo apmokytas duomenimis apie šias temas....., negaliu atsakyti į jūsų užduotą klausimą.“
 

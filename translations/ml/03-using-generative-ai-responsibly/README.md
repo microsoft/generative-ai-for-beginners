@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ഉത്തരവാദിത്വത്തോടെ ജനറേറ്റീവ് AI ഉപയോഗിക്കൽ
 
-[![Using Generative AI Responsibly](../../../translated_images/ml/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Using Generative AI Responsibly](../../../translated_images/ml/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _ഈ പാഠത്തിന്റെ വീഡിയോ കാണാൻ മുകളിൽ ചിത്രത്തിൽ ക്ലിക്ക് ചെയ്യുക_
 
@@ -85,7 +85,7 @@ AI-യിലും പ്രത്യേകിച്ച് ജനറേറ്റ
 
 ഇപ്പോൾ ഉത്തരവാദിത്വമുള്ള ജനറേറ്റീവ് AI-യുടെ പ്രാധാന്യം തിരിച്ചറിഞ്ഞതോടെ, AI പരിഹാരങ്ങൾ ഉത്തരവാദിത്വത്തോടെ നിർമ്മിക്കാൻ സ്വീകരിക്കാവുന്ന 4 ഘട്ടങ്ങൾ നോക്കാം:
 
-![Mitigate Cycle](../../../translated_images/ml/mitigate-cycle.babcd5a5658e1775.png)
+![Mitigate Cycle](../../../translated_images/ml/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### സാധ്യതയുള്ള ഹാനികൾ അളക്കുക
 
@@ -97,7 +97,7 @@ AI-യിലും പ്രത്യേകിച്ച് ജനറേറ്റ
 
 ഇപ്പോൾ മോഡലും അതിന്റെ മറുപടികളും ഉണ്ടാക്കുന്ന സാധ്യതയുള്ള ഹാനി തടയാനോ കുറയ്ക്കാനോ മാർഗങ്ങൾ കണ്ടെത്തേണ്ട സമയം. ഇത് 4 വ്യത്യസ്ത പാളികളിൽ നോക്കാം:
 
-![Mitigation Layers](../../../translated_images/ml/mitigation-layers.377215120b9a1159.png)
+![Mitigation Layers](../../../translated_images/ml/mitigation-layers.377215120b9a1159.webp)
 
 - **മോഡൽ**. ശരിയായ ഉപയോഗത്തിനായി ശരിയായ മോഡൽ തിരഞ്ഞെടുക്കൽ. GPT-4 പോലുള്ള വലിയ, സങ്കീർണ്ണ മോഡലുകൾ ചെറിയ, പ്രത്യേക ഉപയോഗങ്ങളിലേക്കു പ്രയോഗിക്കുമ്പോൾ ഹാനികരമായ ഉള്ളടക്കത്തിന്റെ അപകടം കൂടുതലാകും. പരിശീലന ഡാറ്റ ഉപയോഗിച്ച് ഫൈൻ-ട്യൂൺ ചെയ്യുന്നതും ഹാനികരമായ ഉള്ളടക്കത്തിന്റെ അപകടം കുറയ്ക്കുന്നു.
 

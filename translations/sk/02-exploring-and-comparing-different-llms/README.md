@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Preskúmanie a porovnanie rôznych LLM
 
-[![Preskúmanie a porovnanie rôznych LLM](../../../translated_images/sk/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Preskúmanie a porovnanie rôznych LLM](../../../translated_images/sk/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii_
 
@@ -59,14 +59,14 @@ Termín Základný model bol [vytvorený výskumníkmi zo Stanfordu](https://arx
 - **Sú veľmi veľké modely**, založené na veľmi hlbokých neurónových sieťach trénovaných na miliardách parametrov.
 - **Sú zvyčajne určené ako „základ“ pre iné modely**, čo znamená, že môžu byť použité ako východiskový bod pre iné modely, ktoré môžu byť postavené na ich základe, čo sa dá dosiahnuť jemným doladením.
 
-![Základné modely verzus LLM](../../../translated_images/sk/FoundationModel.e4859dbb7a825c94.png)
+![Základné modely verzus LLM](../../../translated_images/sk/FoundationModel.e4859dbb7a825c94.webp)
 
 Zdroj obrázku: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Aby sme tento rozdiel ešte viac objasnili, vezmime si ako príklad ChatGPT. Na vytvorenie prvej verzie ChatGPT slúžil model nazývaný GPT-3.5 ako základný model. To znamená, že OpenAI použil niektoré špecifické dáta pre chat na vytvorenie upravenej verzie GPT-3.5, ktorá bola špecializovaná na dobrý výkon v konverzačných scenároch, ako sú chatboty.
 
-![Základný model](../../../translated_images/sk/Multimodal.2c389c6439e0fc51.png)
+![Základný model](../../../translated_images/sk/Multimodal.2c389c6439e0fc51.webp)
 
 Zdroj obrázku: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM môžu byť tiež kategorizované podľa výstupu, ktorý generujú.
 
 Embeddings sú súbor modelov, ktoré dokážu previesť text do numerickej formy, nazývanej embedding, čo je numerická reprezentácia vstupného textu. Embeddings uľahčujú strojom pochopenie vzťahov medzi slovami alebo vetami a môžu byť použité ako vstupy pre iné modely, ako sú klasifikačné modely alebo modely zoskupovania, ktoré majú lepší výkon na numerických dátach. Embedding modely sa často používajú na transfer learning, kde je model postavený na náhradnej úlohe, pre ktorú je dostatok dát, a potom sa váhy modelu (embeddings) znovu používajú pre iné úlohy. Príkladom tejto kategórie je [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/sk/Embedding.c3708fe988ccf760.png)
+![Embedding](../../../translated_images/sk/Embedding.c3708fe988ccf760.webp)
 
 Modely generovania obrázkov sú modely, ktoré generujú obrázky. Tieto modely sa často používajú na úpravu obrázkov, syntézu obrázkov a preklad obrázkov. Modely generovania obrázkov sú často trénované na veľkých datasetoch obrázkov, ako je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), a môžu byť použité na generovanie nových obrázkov alebo na úpravu existujúcich obrázkov pomocou techník ako inpainting, super-rezolučné a kolorizačné techniky. Príklady zahŕňajú [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) a [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generovanie obrázkov](../../../translated_images/sk/Image.349c080266a763fd.png)
+![Generovanie obrázkov](../../../translated_images/sk/Image.349c080266a763fd.webp)
 
 Modely generovania textu a kódu sú modely, ktoré generujú text alebo kód. Tieto modely sa často používajú na sumarizáciu textu, preklad a odpovedanie na otázky. Modely generovania textu sú často trénované na veľkých datasetoch textu, ako je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), a môžu byť použité na generovanie nového textu alebo na odpovedanie na otázky. Modely generovania kódu, ako [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), sú často trénované na veľkých datasetoch kódu, ako je GitHub, a môžu byť použité na generovanie nového kódu alebo na opravu chýb v existujúcom kóde.
 
-![Generovanie textu a kódu](../../../translated_images/sk/Text.a8c0cf139e5cc2a0.png)
+![Generovanie textu a kódu](../../../translated_images/sk/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder verzus Iba Decoder
 
@@ -123,23 +123,23 @@ Väčšina modelov, ktoré sme spomenuli v predchádzajúcich odsekoch (modely O
 
 - Nájsť základný model, ktorý ho zaujíma, v katalógu - či už proprietárny alebo open source, filtrovaním podľa úlohy, licencie alebo názvu. Na zlepšenie vyhľadávania sú modely organizované do kolekcií, ako napríklad kolekcia Azure OpenAI, kolekcia Hugging Face a ďalšie.
 
-![Modelový katalóg](../../../translated_images/sk/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Modelový katalóg](../../../translated_images/sk/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Prezrieť si kartu modelu, vrátane podrobného popisu zamýšľaného použitia a tréningových dát, ukážok kódu a výsledkov hodnotenia v internej knižnici hodnotení.
 
-![Karta modelu](../../../translated_images/sk/ModelCard.598051692c6e400d.png)
+![Karta modelu](../../../translated_images/sk/ModelCard.598051692c6e400d.webp)
 
 - Porovnať benchmarky medzi modelmi a dostupnými dátovými sadami v priemysle, aby ste mohli posúdiť, ktorý model najlepšie vyhovuje obchodnému scenáru, prostredníctvom panelu [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmarky modelov](../../../translated_images/sk/ModelBenchmarks.254cb20fbd06c03a.png)
+![Benchmarky modelov](../../../translated_images/sk/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Jemne doladiť model na vlastných tréningových dátach, aby sa zlepšil výkon modelu v konkrétnej pracovnej záťaži, využitím experimentálnych a sledovacích schopností Azure AI Studio.
 
-![Jemné doladenie modelu](../../../translated_images/sk/FineTuning.aac48f07142e36fd.png)
+![Jemné doladenie modelu](../../../translated_images/sk/FineTuning.aac48f07142e36fd.webp)
 
 - Nasadiť pôvodný predtrénovaný model alebo jemne doladenú verziu na vzdialené inferenčné prostredie v reálnom čase - spravovaný výpočtový výkon - alebo serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - aby ho aplikácie mohli využívať.
 
-![Nasadenie modelu](../../../translated_images/sk/ModelDeploy.890da48cbd0bccdb.png)
+![Nasadenie modelu](../../../translated_images/sk/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Nie všetky modely v katalógu sú momentálne dostupné na jemné doladenie a/alebo nasadenie formou pay-as-you-go. Skontrolujte kartu modelu pre podrobnosti o schopnostiach a obmedzeniach modelu.
@@ -158,7 +158,7 @@ Existuje niekoľko prístupov, ktoré môže podnik použiť na dosiahnutie pož
 
 - **Jemne doladený model**. Tu model ďalej trénujete na vlastných dátach, čo vedie k tomu, že model je presnejší a lepšie reaguje na vaše potreby, ale môže byť nákladný.
 
-![Nasadenie LLM](../../../translated_images/sk/Deploy.18b2d27412ec8c02.png)
+![Nasadenie LLM](../../../translated_images/sk/Deploy.18b2d27412ec8c02.webp)
 
 Zdroj obrázku: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

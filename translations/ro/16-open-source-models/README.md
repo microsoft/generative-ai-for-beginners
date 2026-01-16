@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-[![Open Source Models](../../../translated_images/ro/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/ro/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introducere
 
@@ -41,12 +41,12 @@ Pentru această lecție, ne vom referi la modele ca "modele open" pe viitor, deo
 
 **Cost** - Costul per token pentru utilizarea și implementarea acestor modele este mai mic decât cel al modelelor proprietare. Când construiți aplicații Generative AI, ar trebui să analizați performanța în raport cu prețul când lucrați cu aceste modele pentru cazul dvs. de utilizare.
 
-![Model Cost](../../../translated_images/ro/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/ro/model-price.3f5a3e4d32ae00b4.webp)
 Sursa: Artificial Analysis
 
 **Flexibilitate** - Lucrul cu modelele open vă permite să fiți flexibil în ceea ce privește utilizarea diferitelor modele sau combinarea lor. Un exemplu este [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), unde un utilizator poate selecta modelul folosit direct în interfața utilizatorului:
 
-![Choose Model](../../../translated_images/ro/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/ro/choose-model.f095d15bbac92214.webp)
 
 ## Explorarea diferitelor modele open
 
@@ -74,7 +74,7 @@ Nu există un răspuns unic pentru alegerea unui model open. Un punct bun de ple
 
 Când doriți să comparați LLM-uri din diferite categorii, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) este o altă resursă excelentă:
 
-![Model Quality](../../../translated_images/ro/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/ro/model-quality.aaae1c22e00f7ee1.webp)
 Sursa: Artificial Analysis
 
 Dacă lucrați la un caz specific de utilizare, căutarea versiunilor fine-tunate concentrate pe același domeniu poate fi eficientă. Experimentarea cu mai multe modele open pentru a vedea cum performează conform așteptărilor dvs. și ale utilizatorilor este o altă practică bună.

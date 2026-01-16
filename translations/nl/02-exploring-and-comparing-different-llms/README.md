@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Verkennen en vergelijken van verschillende LLM's
 
-[![Verkennen en vergelijken van verschillende LLM's](../../../translated_images/nl/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Verkennen en vergelijken van verschillende LLM's](../../../translated_images/nl/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klik op de afbeelding hierboven om de video van deze les te bekijken_
 
@@ -59,14 +59,14 @@ De term Foundation Model werd [bedacht door Stanford-onderzoekers](https://arxiv
 - **Het zijn zeer grote modellen**, gebaseerd op zeer diepe neurale netwerken die zijn getraind op miljarden parameters.
 - **Ze zijn normaal gesproken bedoeld als 'fundament' voor andere modellen**, wat betekent dat ze kunnen worden gebruikt als startpunt voor andere modellen die daarop kunnen worden gebouwd, wat kan worden gedaan door fine-tuning.
 
-![Foundation Models versus LLM's](../../../translated_images/nl/FoundationModel.e4859dbb7a825c94.png)
+![Foundation Models versus LLM's](../../../translated_images/nl/FoundationModel.e4859dbb7a825c94.webp)
 
 Afbeeldingsbron: [Essential Guide to Foundation Models and Large Language Models | door Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Om dit onderscheid verder te verduidelijken, nemen we ChatGPT als voorbeeld. Om de eerste versie van ChatGPT te bouwen, diende een model genaamd GPT-3.5 als het foundation model. Dit betekent dat OpenAI enkele chat-specifieke gegevens gebruikte om een afgestemde versie van GPT-3.5 te creëren die gespecialiseerd was in het goed presteren in conversatiescenario's, zoals chatbots.
 
-![Foundation Model](../../../translated_images/nl/Multimodal.2c389c6439e0fc51.png)
+![Foundation Model](../../../translated_images/nl/Multimodal.2c389c6439e0fc51.webp)
 
 Afbeeldingsbron: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM's kunnen ook worden gecategoriseerd op basis van de output die ze genereren.
 
 Embeddings zijn een set modellen die tekst kunnen omzetten in een numerieke vorm, genaamd embedding, wat een numerieke representatie is van de invoertekst. Embeddings maken het gemakkelijker voor machines om de relaties tussen woorden of zinnen te begrijpen en kunnen worden gebruikt als invoer door andere modellen, zoals classificatiemodellen of clusteringmodellen die beter presteren op numerieke gegevens. Embedding-modellen worden vaak gebruikt voor transfer learning, waarbij een model wordt gebouwd voor een surrogaattaak waarvoor een overvloed aan gegevens beschikbaar is, en vervolgens worden de modelgewichten (embeddings) hergebruikt voor andere downstream-taken. Een voorbeeld van deze categorie is [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/nl/Embedding.c3708fe988ccf760.png)
+![Embedding](../../../translated_images/nl/Embedding.c3708fe988ccf760.webp)
 
 Beeldgeneratiemodellen zijn modellen die beelden genereren. Deze modellen worden vaak gebruikt voor beeldbewerking, beeldsynthese en beeldvertaling. Beeldgeneratiemodellen worden vaak getraind op grote datasets van beelden, zoals [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), en kunnen worden gebruikt om nieuwe beelden te genereren of bestaande beelden te bewerken met technieken zoals inpainting, superresolutie en inkleuring. Voorbeelden zijn [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) en [Stable Diffusion-modellen](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Beeldgeneratie](../../../translated_images/nl/Image.349c080266a763fd.png)
+![Beeldgeneratie](../../../translated_images/nl/Image.349c080266a763fd.webp)
 
 Tekst- en codegeneratiemodellen zijn modellen die tekst of code genereren. Deze modellen worden vaak gebruikt voor tekstsamenvatting, vertaling en vraagbeantwoording. Tekstgeneratiemodellen worden vaak getraind op grote datasets van tekst, zoals [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), en kunnen worden gebruikt om nieuwe tekst te genereren of om vragen te beantwoorden. Codegeneratiemodellen, zoals [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), worden vaak getraind op grote datasets van code, zoals GitHub, en kunnen worden gebruikt om nieuwe code te genereren of om bugs in bestaande code te repareren.
 
-![Tekst- en codegeneratie](../../../translated_images/nl/Text.a8c0cf139e5cc2a0.png)
+![Tekst- en codegeneratie](../../../translated_images/nl/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder versus Alleen Decoder
 
@@ -123,23 +123,23 @@ De meeste modellen die we in de vorige paragrafen hebben genoemd (OpenAI-modelle
 
 - Het gewenste Foundation Model in de catalogus te vinden - zowel eigendom als open source - door te filteren op taak, licentie of naam. Om de zoekbaarheid te verbeteren, zijn de modellen georganiseerd in collecties, zoals de Azure OpenAI-collectie, Hugging Face-collectie en meer.
 
-![Model catalog](../../../translated_images/nl/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Model catalog](../../../translated_images/nl/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - De modelkaart te bekijken, inclusief een gedetailleerde beschrijving van het beoogde gebruik en trainingsdata, codevoorbeelden en evaluatieresultaten uit de interne evaluatiebibliotheek.
 
-![Model card](../../../translated_images/nl/ModelCard.598051692c6e400d.png)
+![Model card](../../../translated_images/nl/ModelCard.598051692c6e400d.webp)
 
 - Benchmarks te vergelijken tussen modellen en datasets die beschikbaar zijn in de industrie om te beoordelen welke het beste past bij het bedrijfsscenario, via het [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-paneel.
 
-![Model benchmarks](../../../translated_images/nl/ModelBenchmarks.254cb20fbd06c03a.png)
+![Model benchmarks](../../../translated_images/nl/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Het model te fine-tunen op aangepaste trainingsdata om de prestaties van het model te verbeteren voor een specifieke werklast, gebruikmakend van de experimenteer- en trackingmogelijkheden van Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/nl/FineTuning.aac48f07142e36fd.png)
+![Model fine-tuning](../../../translated_images/nl/FineTuning.aac48f07142e36fd.webp)
 
 - Het originele voorgetrainde model of de fijn-afgestelde versie te implementeren voor realtime inferentie op een beheerde compute-omgeving of een serverloze API-eindpunt - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - zodat toepassingen het kunnen gebruiken.
 
-![Model deployment](../../../translated_images/nl/ModelDeploy.890da48cbd0bccdb.png)
+![Model deployment](../../../translated_images/nl/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Niet alle modellen in de catalogus zijn momenteel beschikbaar voor fine-tuning en/of pay-as-you-go implementatie. Controleer de modelkaart voor details over de mogelijkheden en beperkingen van het model.
@@ -158,7 +158,7 @@ Er zijn verschillende benaderingen die een bedrijf kan gebruiken om de gewenste 
 
 - **Fijn-afgesteld model**. Hierbij train je het model verder op je eigen data, wat leidt tot een model dat nauwkeuriger en responsiever is voor jouw behoeften, maar mogelijk kostbaar is.
 
-![LLMs deployment](../../../translated_images/nl/Deploy.18b2d27412ec8c02.png)
+![LLMs deployment](../../../translated_images/nl/Deploy.18b2d27412ec8c02.webp)
 
 Afbeeldingsbron: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

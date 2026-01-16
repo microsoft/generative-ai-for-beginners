@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Например, при наведении на ссылку в файле вы увидите подсказку перейти по ней, нажав **ctrl + клик**.
 
-![VS code follow links screenshot](../../translated_images/ru/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/ru/vscode-follow-link.85520ab6a1237adc.webp)
 
 Если ссылка не работает локально, workflow тоже её не пропустит.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 При вводе `./` или `../` VS Code предложит варианты файлов и папок.
 
-![VS code select relative path screenshot](../../translated_images/ru/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/ru/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Выберите нужный файл или папку, чтобы быть уверенным, что путь корректен.
 
@@ -87,7 +87,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Если его нет, вы получите ошибку.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/ru/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/ru/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Чтобы исправить, откройте файл, указанный в ошибке, и добавьте идентификатор отслеживания в конец относительных путей.
 
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Если его нет, вы получите ошибку.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/ru/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/ru/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Чтобы исправить, откройте файл, указанный в ошибке, и добавьте идентификатор отслеживания в конец URL.
 
@@ -119,7 +119,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Если локаль есть, вы получите ошибку.
 
-![GitHub check country locale comment screenshot](../../translated_images/ru/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/ru/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Чтобы исправить, откройте файл, указанный в ошибке, и удалите локаль из URL.
 

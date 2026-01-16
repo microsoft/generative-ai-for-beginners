@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membina Aplikasi Carian
 
-[![Pengenalan kepada AI Generatif dan Model Bahasa Besar](../../../translated_images/ms/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Pengenalan kepada AI Generatif dan Model Bahasa Besar](../../../translated_images/ms/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klik imej di atas untuk menonton video pelajaran ini_
 
@@ -44,7 +44,7 @@ Pelajaran ini termasuk Indeks Embedding daripada transkrip YouTube untuk saluran
 
 Berikut adalah contoh pertanyaan semantik untuk soalan 'bolehkah anda menggunakan rstudio dengan azure ml?'. Lihat url YouTube, anda akan melihat url tersebut mengandungi cap masa yang membawa anda ke tempat dalam video di mana jawapan kepada soalan tersebut berada.
 
-![Pertanyaan semantik untuk soalan "bolehkah anda menggunakan rstudio dengan Azure ML"](../../../translated_images/ms/query-results.bb0480ebf025fac6.png)
+![Pertanyaan semantik untuk soalan "bolehkah anda menggunakan rstudio dengan Azure ML"](../../../translated_images/ms/query-results.bb0480ebf025fac6.webp)
 
 ## Apa itu carian semantik?
 
@@ -163,7 +163,7 @@ Buka [notebook penyelesaian](./python/aoai-solution.ipynb?WT.mc_id=academic-1054
 
 Apabila anda menjalankan notebook, anda akan diminta untuk memasukkan pertanyaan. Kotak input akan kelihatan seperti ini:
 
-![Kotak input untuk pengguna memasukkan pertanyaan](../../../translated_images/ms/notebook-search.1e320b9c7fcbb0bc.png)
+![Kotak input untuk pengguna memasukkan pertanyaan](../../../translated_images/ms/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Kerja Hebat! Teruskan Pembelajaran Anda
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-![Inteligență Artificială Generativă Pentru Începători](../../translated_images/ro/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Inteligență Artificială Generativă Pentru Începători](../../translated_images/ro/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 Lecții care te învață tot ce trebuie să știi pentru a începe să construiești aplicații de Inteligență Artificială Generativă
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membina Aplikasi Penjanaan Imej
 
-[![Membina Aplikasi Penjanaan Imej](../../../translated_images/ms/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Membina Aplikasi Penjanaan Imej](../../../translated_images/ms/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM bukan hanya untuk penjanaan teks. Ia juga boleh digunakan untuk menjana imej daripada deskripsi teks. Mempunyai imej sebagai satu modaliti boleh sangat berguna dalam pelbagai bidang seperti MedTech, seni bina, pelancongan, pembangunan permainan dan banyak lagi. Dalam bab ini, kita akan melihat dua model penjanaan imej yang paling popular, DALL-E dan Midjourney.
 
@@ -43,7 +43,7 @@ Sebagai sebahagian daripada pelajaran ini, kita akan terus bekerja dengan startu
 
 Berikut adalah contoh apa yang pelajar Edu4All boleh hasilkan jika mereka sedang belajar tentang monumen:
 
-![Startup Edu4All, kelas tentang monumen, Menara Eiffel](../../../translated_images/ms/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, kelas tentang monumen, Menara Eiffel](../../../translated_images/ms/startup.94d6b79cc4bb3f5a.webp)
 
 menggunakan prompt seperti
 
@@ -273,9 +273,9 @@ Berikut adalah contoh menggunakan GPT Image:
   Imej asas hanya akan mengandungi ruang santai dengan kolam tetapi imej akhir akan mempunyai flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/ms/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ms/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ms/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ms/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ms/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ms/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Mari kita lihat contoh bagaimana temperature berfungsi, dengan menjalankan promp
 
 > Prompt : "Arnab di atas kuda, memegang lolipop, di padang berkabus di mana tumbuh bunga daffodil"
 
-![Arnab di atas kuda memegang lolipop, versi 1](../../../translated_images/ms/v1-generated-image.a295cfcffa3c13c2.png)
+![Arnab di atas kuda memegang lolipop, versi 1](../../../translated_images/ms/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Sekarang mari kita jalankan prompt yang sama untuk melihat bahawa kita tidak akan mendapat imej yang sama dua kali:
 
-![Imej dijana arnab di atas kuda](../../../translated_images/ms/v2-generated-image.33f55a3714efe61d.png)
+![Imej dijana arnab di atas kuda](../../../translated_images/ms/v2-generated-image.33f55a3714efe61d.webp)
 
 Seperti yang anda lihat, imej-imej itu serupa, tetapi tidak sama. Mari cuba ubah nilai temperature kepada 0.1 dan lihat apa yang berlaku:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Sekarang apabila anda menjalankan kod ini, anda akan mendapat dua imej ini:
 
-- ![Temperature 0, v1](../../../translated_images/ms/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperature 0 , v2](../../../translated_images/ms/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperature 0, v1](../../../translated_images/ms/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0 , v2](../../../translated_images/ms/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Di sini anda dapat melihat dengan jelas bagaimana imej-imej itu lebih menyerupai satu sama lain.
 

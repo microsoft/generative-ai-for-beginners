@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pa"
 }
 -->
-![ਸ਼ੁਰੂਆਤੀ ਲਈ ਜਨੇਰਟਿਵ ਏਆਈ](../../translated_images/pa/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![ਸ਼ੁਰੂਆਤੀ ਲਈ ਜਨੇਰਟਿਵ ਏਆਈ](../../translated_images/pa/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 ਪਾਠ ਜੋ ਤੁਹਾਨੂੰ ਜਨੇਰਟਿਵ ਏਆਈ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਦੇ ਲਈ ਸਾਰੀ ਜਰੂਰੀ ਜਾਣਕਾਰੀ ਸਿਖਾਉਂਦੇ ਹਨ
 

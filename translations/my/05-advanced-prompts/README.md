@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # အဆင့်မြင့် Prompt များဖန်တီးခြင်း
 
-[![အဆင့်မြင့် Prompt များဖန်တီးခြင်း](../../../translated_images/my/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![အဆင့်မြင့် Prompt များဖန်တီးခြင်း](../../../translated_images/my/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 ယခင်အခန်းမှ သင်ယူမှုများကို ပြန်လည်သုံးသပ်ကြပါစို့-
 

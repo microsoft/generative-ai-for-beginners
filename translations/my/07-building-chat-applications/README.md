@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generative AI အားဖြင့် Chat Applications တည်ဆောက်ခြင်း
 
-[![Generative AI အားဖြင့် Chat Applications တည်ဆောက်ခြင်း](../../../translated_images/my/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generative AI အားဖြင့် Chat Applications တည်ဆောက်ခြင်း](../../../translated_images/my/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ဤသင်ခန်းစာ၏ ဗီဒီယိုကို ကြည့်ရန် အထက်ပါ ပုံကို နှိပ်ပါ)_
 
@@ -96,11 +96,11 @@ Chat applications များအတွက် General UX principles များ
 
 Personalization ၏ ဥပမာတစ်ခုမှာ OpenAI ၏ ChatGPT တွင် "Custom instructions" settings ဖြစ်သည်။ ၎င်းသည် သင်၏ prompts အတွက် အရေးပါသော context ဖြစ်နိုင်သော သင်၏ကိုယ်ရေးအချက်အလက်များကို ပေးနိုင်စေသည်။ Custom instruction ၏ ဥပမာကို အောက်တွင် ဖော်ပြထားသည်။
 
-![ChatGPT တွင် Custom Instructions Settings](../../../translated_images/my/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPT တွင် Custom Instructions Settings](../../../translated_images/my/custom-instructions.b96f59aa69356fcf.webp)
 
 ဤ "profile" သည် ChatGPT ကို linked lists အပေါ် lesson plan တစ်ခု ဖန်တီးရန် prompt လုပ်ပေးသည်။ ChatGPT သည် အသုံးပြုသူ၏ အတွေ့အကြုံအပေါ် အခြေခံ၍ ပိုမိုနက်ရှိုင်းသော lesson plan တစ်ခုကို ဖန်တီးရန် အာရုံစိုက်ထားသည်ကို သတိပြုပါ။
 
-![Linked lists အပေါ် lesson plan တစ်ခုအတွက် ChatGPT တွင် prompt တစ်ခု](../../../translated_images/my/lesson-plan-prompt.cc47c488cf1343df.png)
+![Linked lists အပေါ် lesson plan တစ်ခုအတွက် ChatGPT တွင် prompt တစ်ခု](../../../translated_images/my/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft's System Message Framework for Large Language Models
 

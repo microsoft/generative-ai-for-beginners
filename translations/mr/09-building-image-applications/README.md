@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # इमेज जनरेशन अ‍ॅप्लिकेशन्स तयार करणे
 
-[![इमेज जनरेशन अ‍ॅप्लिकेशन्स तयार करणे](../../../translated_images/mr/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![इमेज जनरेशन अ‍ॅप्लिकेशन्स तयार करणे](../../../translated_images/mr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs केवळ टेक्स्ट जनरेशनसाठीच मर्यादित नाहीत. टेक्स्ट वर्णनांमधून प्रतिमा तयार करणे देखील शक्य आहे. प्रतिमा ही एक महत्त्वाची माध्यम असू शकते, जी MedTech, आर्किटेक्चर, पर्यटन, गेम डेव्हलपमेंट आणि इतर अनेक क्षेत्रांमध्ये उपयुक्त ठरते. या अध्यायात, आपण दोन सर्वात लोकप्रिय इमेज जनरेशन मॉडेल्स, DALL-E आणि Midjourney यांचा अभ्यास करू.
 
@@ -43,7 +43,7 @@ LLMs केवळ टेक्स्ट जनरेशनसाठीच मर
 
 उदाहरणार्थ, Edu4All चे विद्यार्थी वर्गात स्मारकांवर काम करत असल्यास ते खालीलप्रमाणे प्रतिमा तयार करू शकतात:
 
-![Edu4All स्टार्टअप, वर्गात स्मारकांवर काम, आयफेल टॉवर](../../../translated_images/mr/startup.94d6b79cc4bb3f5a.png)
+![Edu4All स्टार्टअप, वर्गात स्मारकांवर काम, आयफेल टॉवर](../../../translated_images/mr/startup.94d6b79cc4bb3f5a.webp)
 
 प्रॉम्प्ट वापरून:
 
@@ -273,9 +273,9 @@ GPT Image वापरून एक उदाहरण येथे आहे:
   मूळ प्रतिमेमध्ये फक्त पूलसह लाउंज असेल परंतु अंतिम प्रतिमेमध्ये फ्लेमिंगो असेल:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/mr/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mr/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mr/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mr/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/mr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ GPT Image वापरून एक उदाहरण येथे आहे:
 
 > प्रॉम्प्ट : "घोड्यावर बसलेला ससा, हातात लॉलीपॉप, धुकट कुरणावर जिथे डॅफोडिल्स उगवतात"
 
-![घोड्यावर बसलेला ससा, लॉलीपॉप धरलेला, आवृत्ती 1](../../../translated_images/mr/v1-generated-image.a295cfcffa3c13c2.png)
+![घोड्यावर बसलेला ससा, लॉलीपॉप धरलेला, आवृत्ती 1](../../../translated_images/mr/v1-generated-image.a295cfcffa3c13c2.webp)
 
 आता तोच प्रॉम्प्ट पुन्हा चालवूया आणि पाहूया की आपल्याला एकसारखी प्रतिमा दोनदा मिळत नाही:
 
-![घोड्यावर बसलेला ससा तयार केलेली प्रतिमा](../../../translated_images/mr/v2-generated-image.33f55a3714efe61d.png)
+![घोड्यावर बसलेला ससा तयार केलेली प्रतिमा](../../../translated_images/mr/v2-generated-image.33f55a3714efe61d.webp)
 
 जसे आपण पाहू शकता, प्रतिमा समान आहेत, परंतु एकसारख्या नाहीत. तापमान मूल्य 0.1 वर बदलून काय होते ते पाहूया:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 आता आपण हा कोड चालवला तर आपल्याला या दोन प्रतिमा मिळतात:
 
-- ![तापमान 0, v1](../../../translated_images/mr/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![तापमान 0 , v2](../../../translated_images/mr/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![तापमान 0, v1](../../../translated_images/mr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![तापमान 0 , v2](../../../translated_images/mr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 येथे आपण स्पष्टपणे पाहू शकता की प्रतिमा एकमेकांशी अधिक साम्य आहेत.
 

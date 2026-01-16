@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Sikring av dine generative AI-applikasjoner
 
-[![Sikring av dine generative AI-applikasjoner](../../../translated_images/no/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Sikring av dine generative AI-applikasjoner](../../../translated_images/no/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introduksjon
 
@@ -131,7 +131,7 @@ Datasikkerhet, styring og samsvar er avgjørende for enhver organisasjon som øn
 
 > Praksisen med AI red teaming har utviklet seg til å få en mer utvidet betydning: den dekker ikke bare søk etter sikkerhetssårbarheter, men inkluderer også søk etter andre systemfeil, som generering av potensielt skadelig innhold. AI-systemer medfører nye risikoer, og red teaming er sentralt for å forstå disse nye risikoene, som prompt-injeksjon og produksjon av innhold uten grunnlag. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Veiledning og ressurser for red teaming](../../../translated_images/no/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Veiledning og ressurser for red teaming](../../../translated_images/no/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Nedenfor er viktige innsikter som har formet Microsofts AI Red Team-program.
 

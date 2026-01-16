@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prompt Engineering အခြေခံ
 
-[![Prompt Engineering Fundamentals](../../../translated_images/my/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Prompt Engineering Fundamentals](../../../translated_images/my/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## အကျဉ်းချုပ်
 ဒီ module မှာ generative AI models တွေမှာ prompt တွေကို ထိရောက်စွာဖန်တီးနိုင်ဖို့အတွက် အရေးကြီးတဲ့အယူအဆတွေ၊ နည်းလမ်းတွေကို လေ့လာပါမယ်။ LLM ကို prompt ရေးသားပုံကလည်း အရေးကြီးပါတယ်။ Prompt ကို သေချာစွာရေးသားနိုင်ရင် response quality ပိုမိုကောင်းမွန်စေပါတယ်။ ဒါပေမယ့် _prompt_ နဲ့ _prompt engineering_ ဆိုတာ ဘာလဲ? LLM ကို ပေးပို့တဲ့ prompt _input_ ကို ဘယ်လိုတိုးတက်အောင်လုပ်မလဲ? ဒီ chapter နဲ့ နောက် chapter မှာ ဒီမေးခွန်းတွေကို ဖြေရှင်းဖို့ ကြိုးစားပါမယ်။
@@ -53,7 +53,7 @@ Notebook မှာ _starter_ exercises တွေ ပါဝင်ပြီး - �
 
 ဒီသင်ခန်းစာမှာ ဘာတွေကို လေ့လာရမယ်ဆိုတာကို အဓိကအချက်တွေကို ရှင်းလင်းပြပေးထားတဲ့ guide ကို ကြည့်ရှုနိုင်ပါတယ်။ ဒီ lesson roadmap က core concepts နဲ့ challenges တွေကို နားလည်စေပြီး prompt engineering techniques နဲ့ အကောင်းဆုံးနည်းလမ်းတွေကို အသုံးပြုပြီး ပြဿနာတွေကို ဖြေရှင်းပုံကို ပြသပေးပါတယ်။ ဒီ guide ရဲ့ "Advanced Techniques" အပိုင်းကတော့ curriculum ရဲ့ _နောက် chapter_ မှာ လေ့လာရမယ့် content ကို ရည်ညွှန်းထားပါတယ်။
 
-![Illustrated Guide to Prompt Engineering](../../../translated_images/my/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Illustrated Guide to Prompt Engineering](../../../translated_images/my/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## ကျွန်တော်တို့ရဲ့ Startup
 
@@ -94,7 +94,7 @@ LLM က prompts တွေကို _tokens တွေ အစီအစဉ်_ အ�
 
 Tokenization လုပ်ပုံကို နားလည်ဖို့ [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) လို tools တွေကို စမ်းသပ်ကြည့်ပါ။ Prompt ကို copy လုပ်ပြီး tokens တွေ အဖြစ် ပြောင်းလဲပုံကို ကြည့်ပါ။ Whitespace characters နဲ့ punctuation marks တွေကို ဘယ်လိုကိုင်တွယ်ထားလဲဆိုတာကိုလည်း သတိထားပါ။ ဥပမာမှာ GPT-3 LLM ကို ပြထားပြီး - နောက်ဆုံးပေါ် model နဲ့ စမ်းကြည့်ရင် အခြားအခြေအနေတစ်ခုကို ရနိုင်ပါတယ်။
 
-![Tokenization](../../../translated_images/my/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenization](../../../translated_images/my/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concept: Foundation Models
 
@@ -104,7 +104,7 @@ Prompt-based completion လုပ်ပုံကို မြင်ချင်�
 
 ဒါပေမယ့် user က criteria သို့မဟုတ် task objective တစ်ခုကို ဖြည့်ဆည်းတဲ့ အထူးတိကျတဲ့အရာကို မြင်ချင်တယ်ဆိုရင်တော့ _instruction-tuned_ LLMs တွေက အရေးပါတဲ့အခန်းကဏ္ဍကို ထည့်သွင်းပေးနိုင်ပါတယ်။
 
-![Base LLM Chat Completion](../../../translated_images/my/04-playground-chat-base.65b76fcfde0caa67.png)
+![Base LLM Chat Completion](../../../translated_images/my/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concept: Instruction Tuned LLMs
 
@@ -118,7 +118,7 @@ Reinforcement Learning with Human Feedback (RLHF) လို techniques တွေ
 
 Result က ရည်ရွယ်ချက်နဲ့ format ကို ကိုက်ညီတဲ့အတိုင်း ပြောင်းလဲလာတာကို မြင်ရပါမယ်။ Educator တစ်ယောက်က ဒီ response ကို class အတွက် slides တွေမှာ တိုက်ရိုက်အသုံးပြုနိုင်ပါပြီ။
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/my/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/my/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Prompt Engineering ဘာကြောင့်လိုအပ်လဲ?
 
@@ -133,15 +133,15 @@ Prompt တွေကို LLMs တွေက ဘယ်လို process လုပ
 
 > **တုံ့ပြန်မှု ၁**: OpenAI Playground (GPT-35)
 
-![Response 1](../../../translated_images/my/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Response 1](../../../translated_images/my/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **တုံ့ပြန်မှု ၂**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../../translated_images/my/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Response 2](../../../translated_images/my/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **တုံ့ပြန်မှု ၃**: Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../../translated_images/my/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Response 3](../../../translated_images/my/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 မျှော်လင့်ထားသလိုပဲ၊ မော်ဒယ် (သို့မဟုတ် မော်ဒယ်ဗားရှင်း) တစ်ခုစီက stochastic အပြုအမူနဲ့ မော်ဒယ်စွမ်းရည်ကွဲပြားမှုကြောင့် response များက အနည်းငယ်ကွဲပြားမှုရှိပါတယ်။ ဥပမာအားဖြင့် မော်ဒယ်တစ်ခုက ၈ တန်းကျောင်းသားများကို ပစ်မှတ်ထားပြီး၊ တစ်ခုက အထက်တန်းကျောင်းသားများကို ပစ်မှတ်ထားပါတယ်။ ဒါပေမယ့် မော်ဒယ်သုံးခုလုံးက အမှန်တကယ်မသိတဲ့ အသုံးပြုသူကို အဖြစ်အပျက်ဟာ အမှန်တကယ်ဖြစ်ပွားခဲ့တယ်လို့ ယုံကြည်စေမယ့် တုံ့ပြန်မှုများကို ဖန်တီးနိုင်ခဲ့ပါတယ်။
 

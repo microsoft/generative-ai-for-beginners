@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # टेक्स्ट जेनेरेशन एप्लिकेसन निर्माण
 
-[![टेक्स्ट जेनेरेशन एप्लिकेसन निर्माण](../../../translated_images/ne/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![टेक्स्ट जेनेरेशन एप्लिकेसन निर्माण](../../../translated_images/ne/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(माथिको तस्बिरमा क्लिक गरेर यो पाठको भिडियो हेर्नुहोस्)_
 

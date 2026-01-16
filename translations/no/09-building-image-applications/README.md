@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge applikasjoner for bildegenerering
 
-[![Bygge applikasjoner for bildegenerering](../../../translated_images/no/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Bygge applikasjoner for bildegenerering](../../../translated_images/no/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-er handler om mer enn tekstgenerering. Det er også mulig å generere bilder fra tekstbeskrivelser. Å ha bilder som en modalitet kan være svært nyttig innen en rekke områder som MedTech, arkitektur, turisme, spillutvikling og mer. I dette kapittelet skal vi se nærmere på de to mest populære modellene for bildegenerering, DALL-E og Midjourney.
 
@@ -43,7 +43,7 @@ Som en del av denne leksjonen skal vi fortsette å jobbe med vår oppstart, Edu4
 
 Her er et eksempel på hva Edu4Alls studenter kan generere hvis de jobber i klassen med monumenter:
 
-![Edu4All oppstart, klasse om monumenter, Eiffeltårnet](../../../translated_images/no/startup.94d6b79cc4bb3f5a.png)
+![Edu4All oppstart, klasse om monumenter, Eiffeltårnet](../../../translated_images/no/startup.94d6b79cc4bb3f5a.webp)
 
 ved å bruke en prompt som
 
@@ -273,9 +273,9 @@ Her er et eksempel ved bruk av GPT Image:
   Grunnbildet vil bare inneholde loungen med bassenget, men det endelige bildet vil ha en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/no/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/no/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/no/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ La oss se på et eksempel på hvordan temperatur fungerer, ved å kjøre denne p
 
 > Prompt : "Kanin på hest, holder en kjærlighet på pinne, på en tåkete eng hvor det vokser påskeliljer"
 
-![Kanin på en hest som holder en kjærlighet på pinne, versjon 1](../../../translated_images/no/v1-generated-image.a295cfcffa3c13c2.png)
+![Kanin på en hest som holder en kjærlighet på pinne, versjon 1](../../../translated_images/no/v1-generated-image.a295cfcffa3c13c2.webp)
 
 La oss nå kjøre den samme prompten bare for å se at vi ikke får det samme bildet to ganger:
 
-![Generert bilde av kanin på hest](../../../translated_images/no/v2-generated-image.33f55a3714efe61d.png)
+![Generert bilde av kanin på hest](../../../translated_images/no/v2-generated-image.33f55a3714efe61d.webp)
 
 Som du kan se, er bildene like, men ikke identiske. La oss prøve å endre temperaturverdien til 0,1 og se hva som skjer:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Nå, når du kjører denne koden, får du disse to bildene:
 
-- ![Temperatur 0, v1](../../../translated_images/no/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatur 0 , v2](../../../translated_images/no/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatur 0, v1](../../../translated_images/no/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatur 0 , v2](../../../translated_images/no/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Her kan du tydelig se hvordan bildene ligner hverandre mer.
 

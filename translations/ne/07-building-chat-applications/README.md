@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जेनेरेटिभ एआई-संचालित च्याट एप्लिकेसन निर्माण
 
-[![जेनेरेटिभ एआई-संचालित च्याट एप्लिकेसन निर्माण](../../../translated_images/ne/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![जेनेरेटिभ एआई-संचालित च्याट एप्लिकेसन निर्माण](../../../translated_images/ne/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(माथिको तस्बिरमा क्लिक गरेर यस पाठको भिडियो हेर्नुहोस्)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 व्यक्तिगतकरणको एउटा उदाहरण OpenAI को ChatGPT मा "कस्टम निर्देशनहरू" सेटिङ हो। यसले तपाईंलाई आफ्नो प्रम्प्टहरूको लागि महत्त्वपूर्ण सन्दर्भ हुन सक्ने आफ्नो बारेमा जानकारी प्रदान गर्न अनुमति दिन्छ। यहाँ कस्टम निर्देशनको एउटा उदाहरण छ।
 
-![ChatGPT मा कस्टम निर्देशन सेटिङ](../../../translated_images/ne/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPT मा कस्टम निर्देशन सेटिङ](../../../translated_images/ne/custom-instructions.b96f59aa69356fcf.webp)
 
 यो "प्रोफाइल" ले ChatGPT लाई लिंक्ड लिस्टहरूमा पाठ योजना सिर्जना गर्न संकेत गर्दछ। ध्यान दिनुहोस् कि ChatGPT ले प्रयोगकर्ताले आफ्नो अनुभवको आधारमा थप गहिरो पाठ योजना चाहन सक्छ भन्ने कुरा ध्यानमा राख्छ।
 
-![लिंक्ड लिस्टहरूको पाठ योजनाको लागि ChatGPT मा प्रम्प्ट](../../../translated_images/ne/lesson-plan-prompt.cc47c488cf1343df.png)
+![लिंक्ड लिस्टहरूको पाठ योजनाको लागि ChatGPT मा प्रम्प्ट](../../../translated_images/ne/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### माइक्रोसफ्टको ठूलो भाषा मोडेलहरूको लागि प्रणाली सन्देश फ्रेमवर्क
 

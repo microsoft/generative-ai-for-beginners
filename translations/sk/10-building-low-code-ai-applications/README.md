@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváranie AI aplikácií s nízkym kódom
 
-[![Vytváranie AI aplikácií s nízkym kódom](../../../translated_images/sk/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Vytváranie AI aplikácií s nízkym kódom](../../../translated_images/sk/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 
@@ -92,17 +92,17 @@ Aplikáciu vytvoríte pomocou Copilot v Power Apps podľa nasledujúcich krokov:
 
 1. Použite textové pole na domovskej obrazovke na popísanie aplikácie, ktorú chcete vytvoriť. Napríklad: **_Chcem vytvoriť aplikáciu na sledovanie a správu študentských úloh_**. Kliknite na tlačidlo **Send**, aby ste odoslali prompt AI Copilotovi.
 
-![Popíšte aplikáciu, ktorú chcete vytvoriť](../../../translated_images/sk/copilot-chat-prompt-powerapps.84250f341d060830.png)
+![Popíšte aplikáciu, ktorú chcete vytvoriť](../../../translated_images/sk/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot navrhne Dataverse tabuľku s poliami, ktoré potrebujete na ukladanie dát, ktoré chcete sledovať, a niektoré vzorové dáta. Tabuľku môžete potom prispôsobiť podľa svojich potrieb pomocou funkcie AI Copilot asistenta prostredníctvom konverzačných krokov.
 
    > **Dôležité**: Dataverse je podkladová dátová platforma pre Power Platform. Je to platforma s nízkym kódom na ukladanie dát aplikácie. Je to plne spravovaná služba, ktorá bezpečne ukladá dáta v Microsoft Cloud a je poskytovaná v rámci vášho prostredia Power Platform. Má zabudované schopnosti správy dát, ako je klasifikácia dát, sledovanie pôvodu dát, jemne odstupňovaná kontrola prístupu a ďalšie. Viac o Dataverse sa môžete dozvedieť [tu](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Navrhnuté polia vo vašej novej tabuľke](../../../translated_images/sk/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
+   ![Navrhnuté polia vo vašej novej tabuľke](../../../translated_images/sk/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Učitelia chcú posielať e-maily študentom, ktorí odovzdali svoje úlohy, aby ich informovali o pokroku ich úloh. Môžete použiť Copilot na pridanie nového poľa do tabuľky na ukladanie e-mailu študenta. Napríklad môžete použiť nasledujúci prompt na pridanie nového poľa do tabuľky: **_Chcem pridať stĺpec na ukladanie e-mailu študenta_**. Kliknite na tlačidlo **Send**, aby ste odoslali prompt AI Copilotovi.
 
-![Pridanie nového poľa](../../../translated_images/sk/copilot-new-column.35e15ff21acaf274.png)
+![Pridanie nového poľa](../../../translated_images/sk/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot vygeneruje nové pole a môžete ho potom prispôsobiť podľa svojich potrieb.
 
@@ -112,7 +112,7 @@ Aplikáciu vytvoríte pomocou Copilot v Power Apps podľa nasledujúcich krokov:
 
 1. Aby učitelia mohli posielať e-maily študentom, môžete použiť Copilot na pridanie novej obrazovky do aplikácie. Napríklad môžete použiť nasledujúci prompt na pridanie novej obrazovky do aplikácie: **_Chcem pridať obrazovku na posielanie e-mailov študentom_**. Kliknite na tlačidlo **Send**, aby ste odoslali prompt AI Copilotovi.
 
-![Pridanie novej obrazovky prostredníctvom promptu](../../../translated_images/sk/copilot-new-screen.2e0bef7132a17392.png)
+![Pridanie novej obrazovky prostredníctvom promptu](../../../translated_images/sk/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot vygeneruje novú obrazovku a môžete ju potom prispôsobiť podľa svojich potrieb.
 
@@ -147,15 +147,15 @@ Na vytvorenie tabuľky v Dataverse pomocou Copilot postupujte podľa nasledujúc
 
 2. Na navigačnom paneli vľavo vyberte **Tables** a potom kliknite na **Describe the new Table**.
 
-![Vyberte novú tabuľku](../../../translated_images/sk/describe-new-table.0792373eb757281e.png)
+![Vyberte novú tabuľku](../../../translated_images/sk/describe-new-table.0792373eb757281e.webp)
 
 3. Na obrazovke **Describe the new Table** použite textové pole na opísanie tabuľky, ktorú chcete vytvoriť. Napríklad: **_Chcem vytvoriť tabuľku na ukladanie informácií o faktúrach_**. Kliknite na tlačidlo **Send**, aby ste odoslali požiadavku AI Copilotovi.
 
-![Opíšte tabuľku](../../../translated_images/sk/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
+![Opíšte tabuľku](../../../translated_images/sk/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot navrhne tabuľku Dataverse s poliami, ktoré potrebujete na ukladanie dát, ktoré chcete sledovať, a niektorými vzorovými dátami. Potom môžete tabuľku prispôsobiť podľa svojich potrieb pomocou asistenta AI Copilot prostredníctvom konverzačných krokov.
 
-![Navrhnutá tabuľka Dataverse](../../../translated_images/sk/copilot-dataverse-table.b3bc936091324d9d.png)
+![Navrhnutá tabuľka Dataverse](../../../translated_images/sk/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Finančný tím chce poslať e-mail dodávateľovi, aby ho informoval o aktuálnom stave jeho faktúry. Môžete použiť Copilot na pridanie nového poľa do tabuľky na uloženie e-mailu dodávateľa. Napríklad môžete použiť nasledujúcu požiadavku na pridanie nového poľa do tabuľky: **_Chcem pridať stĺpec na uloženie e-mailu dodávateľa_**. Kliknite na tlačidlo **Send**, aby ste odoslali požiadavku AI Copilotovi.
 
@@ -184,7 +184,7 @@ Niektoré z predpripravených AI modelov dostupných v Power Platform zahŕňaj�
 
 S vlastnými AI modelmi môžete priniesť svoj vlastný model do AI Builder, aby mohol fungovať ako akýkoľvek vlastný model AI Builder, čo vám umožní trénovať model pomocou vlastných dát. Tieto modely môžete použiť na automatizáciu procesov a predpovedanie výsledkov v Power Apps aj Power Automate. Pri používaní vlastného modelu platia určité obmedzenia. Viac o týchto [obmedzeniach](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder modely](../../../translated_images/sk/ai-builder-models.8069423b84cfc47f.png)
+![AI builder modely](../../../translated_images/sk/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Úloha č. 2 - Vytvorte tok na spracovanie faktúr pre náš startup
 
@@ -198,7 +198,7 @@ Na vytvorenie pracovného toku, ktorý pomôže finančnému tímu spracovať fa
 
 2. Použite textové pole na domovskej obrazovke na opísanie pracovného toku, ktorý chcete vytvoriť. Napríklad: **_Spracovať faktúru, keď dorazí do mojej schránky_**. Kliknite na tlačidlo **Send**, aby ste odoslali požiadavku AI Copilotovi.
 
-   ![Copilot power automate](../../../translated_images/sk/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
+   ![Copilot power automate](../../../translated_images/sk/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot navrhne akcie, ktoré potrebujete na vykonanie úlohy, ktorú chcete automatizovať. Môžete kliknúť na tlačidlo **Next**, aby ste prešli na ďalšie kroky.
 
@@ -212,7 +212,7 @@ Na vytvorenie pracovného toku, ktorý pomôže finančnému tímu spracovať fa
 
 8. Odstráňte akciu **Condition** z toku, pretože ju nebudete používať. Tok by mal vyzerať ako na nasledujúcom obrázku:
 
-   ![power automate, odstrániť akcie](../../../translated_images/sk/powerautomate-remove-actions.7216392fe684ceba.png)
+   ![power automate, odstrániť akcie](../../../translated_images/sk/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Kliknite na tlačidlo **Add an action** a vyhľadajte **Dataverse**. Vyberte akciu **Add a new row**.
 
@@ -227,7 +227,7 @@ Na vytvorenie pracovného toku, ktorý pomôže finančnému tímu spracovať fa
     - Status - Nastavte **Status** na **Pending**.
     - Supplier Email - Použite dynamický obsah **From** zo spúšťača **When a new email arrives**.
 
-    ![power automate pridať riadok](../../../translated_images/sk/powerautomate-add-row.5edce45e5dd3d51e.png)
+    ![power automate pridať riadok](../../../translated_images/sk/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Keď budete hotoví s tokom, kliknite na tlačidlo **Save**, aby ste tok uložili. Potom môžete tok otestovať odoslaním e-mailu s faktúrou do priečinka, ktorý ste špecifikovali v spúšťači.
 
@@ -241,7 +241,7 @@ GPT modely prechádzajú rozsiahlym tréningom na obrovskom množstve dát, čo 
 
 Napríklad môžete vytvárať toky na automatické generovanie textu pre rôzne účely, ako sú: návrhy e-mailov, popisy produktov a ďalšie. Model môžete tiež použiť na generovanie textu pre rôzne aplikácie, ako sú chatboty a aplikácie zákazníckeho servisu, ktoré umožňujú agentom zákazníckeho servisu efektívne a účinne reagovať na otázky zákazníkov.
 
-![vytvoriť požiadavku](../../../translated_images/sk/create-prompt-gpt.69d429300c2e870a.png)
+![vytvoriť požiadavku](../../../translated_images/sk/create-prompt-gpt.69d429300c2e870a.webp)
 
 Ak sa chcete naučiť, ako používať tento AI model v Power Automate, prejdite cez modul [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Toepassen van tekstgeneratie in applicaties
 
-[![Toepassen van tekstgeneratie in applicaties](../../../translated_images/nl/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Toepassen van tekstgeneratie in applicaties](../../../translated_images/nl/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 

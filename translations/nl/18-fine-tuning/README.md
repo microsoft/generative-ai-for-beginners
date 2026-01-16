@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "nl"
 }
 -->
-[![Open Source Modellen](../../../translated_images/nl/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Modellen](../../../translated_images/nl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Het Fijnstemmen van Je LLM
 
@@ -32,7 +32,7 @@ Klaar? Laten we beginnen.
 
 Wil je een overzicht van wat we gaan behandelen voordat we erin duiken? Bekijk deze geïllustreerde gids die de leerreis voor deze les beschrijft - van het leren van de kernconcepten en motivatie voor fijnstemmen, tot het begrijpen van het proces en de beste praktijken voor het uitvoeren van de fijnstemtaak. Dit is een fascinerend onderwerp om te verkennen, dus vergeet niet de [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pagina te bekijken voor aanvullende links om je zelfgestuurde leerreis te ondersteunen!
 
-![Geïllustreerde Gids voor Fijnstemmen van Taalmodellen](../../../translated_images/nl/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Geïllustreerde Gids voor Fijnstemmen van Taalmodellen](../../../translated_images/nl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Wat is fijnstemmen voor taalmodellen?
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea aplicațiilor de generare de imagini
 
-[![Construirea aplicațiilor de generare de imagini](../../../translated_images/ro/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Construirea aplicațiilor de generare de imagini](../../../translated_images/ro/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-urile nu se limitează doar la generarea de text. Este posibil să generăm imagini din descrieri textuale. Având imagini ca modalitate poate fi extrem de util în diverse domenii, cum ar fi MedTech, arhitectură, turism, dezvoltare de jocuri și altele. În acest capitol, vom analiza cele mai populare modele de generare de imagini, DALL-E și Midjourney.
 
@@ -43,7 +43,7 @@ Ca parte a acestei lecții, vom continua să lucrăm cu startup-ul nostru, Edu4A
 
 Iată ce ar putea genera studenții Edu4All, de exemplu, dacă lucrează în clasă la monumente:
 
-![Startup Edu4All, clasă despre monumente, Turnul Eiffel](../../../translated_images/ro/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, clasă despre monumente, Turnul Eiffel](../../../translated_images/ro/startup.94d6b79cc4bb3f5a.webp)
 
 folosind un prompt precum
 
@@ -273,9 +273,9 @@ Iată un exemplu folosind GPT Image:
   Imaginea de bază ar conține doar lounge-ul cu piscină, dar imaginea finală ar avea un flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/ro/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ro/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ro/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Să analizăm un exemplu despre cum funcționează temperatura, rulând acest pr
 
 > Prompt : "Iepure pe cal, ținând o acadea, pe o pajiște cețoasă unde cresc narcise"
 
-![Iepure pe cal ținând o acadea, versiunea 1](../../../translated_images/ro/v1-generated-image.a295cfcffa3c13c2.png)
+![Iepure pe cal ținând o acadea, versiunea 1](../../../translated_images/ro/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Acum să rulăm același prompt doar pentru a vedea că nu vom obține aceeași imagine de două ori:
 
-![Imagine generată cu iepure pe cal](../../../translated_images/ro/v2-generated-image.33f55a3714efe61d.png)
+![Imagine generată cu iepure pe cal](../../../translated_images/ro/v2-generated-image.33f55a3714efe61d.webp)
 
 După cum poți vedea, imaginile sunt similare, dar nu identice. Să încercăm să schimbăm valoarea temperaturii la 0.1 și să vedem ce se întâmplă:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Acum, când rulezi acest cod, obții aceste două imagini:
 
-- ![Temperatura 0, v1](../../../translated_images/ro/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatura 0 , v2](../../../translated_images/ro/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatura 0, v1](../../../translated_images/ro/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0 , v2](../../../translated_images/ro/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Aici poți vedea clar cum imaginile se aseamănă mai mult.
 

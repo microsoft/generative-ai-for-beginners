@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Grunnleggende om promptutforming
 
-[![Grunnleggende om promptutforming](../../../translated_images/no/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Grunnleggende om promptutforming](../../../translated_images/no/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduksjon
 Denne modulen dekker viktige konsepter og teknikker for å lage effektive prompts i generative AI-modeller. Måten du skriver en prompt til en LLM på, har stor betydning. En nøye utformet prompt kan gi bedre kvalitet på responsen. Men hva betyr egentlig begreper som _prompt_ og _promptutforming_? Og hvordan kan jeg forbedre prompten _input_ som jeg sender til LLM? Dette er spørsmålene vi skal prøve å besvare i dette kapittelet og det neste.
@@ -53,7 +53,7 @@ Notebooken kommer med _startøvelser_ - men du oppfordres til å legge til dine 
 
 Vil du få et overblikk over hva denne leksjonen dekker før du dykker inn? Sjekk ut denne illustrerte guiden, som gir deg en følelse av hovedtemaene som dekkes og de viktigste læringspunktene du bør tenke på i hver av dem. Leksjonsveikartet tar deg fra å forstå kjernebegrepene og utfordringene til å adressere dem med relevante teknikker og beste praksis for promptutforming. Merk at "Avanserte teknikker"-seksjonen i denne guiden refererer til innhold som dekkes i _neste_ kapittel av dette pensumet.
 
-![Illustrert guide til promptutforming](../../../translated_images/no/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Illustrert guide til promptutforming](../../../translated_images/no/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Vår oppstart
 
@@ -94,7 +94,7 @@ En LLM ser prompts som en _sekvens av tokens_ der ulike modeller (eller versjone
 
 For å få en intuisjon for hvordan tokenisering fungerer, prøv verktøy som [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) vist nedenfor. Kopier inn din prompt - og se hvordan den blir konvertert til tokens, og legg merke til hvordan mellomrom og tegnsetting håndteres. Merk at dette eksemplet viser en eldre LLM (GPT-3) - så å prøve dette med en nyere modell kan gi et annet resultat.
 
-![Tokenisering](../../../translated_images/no/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenisering](../../../translated_images/no/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Konsept: Grunnmodeller
 
@@ -104,7 +104,7 @@ Vil du se hvordan promptbasert fullføring fungerer? Skriv inn prompten ovenfor 
 
 Men hva om brukeren ønsket å se noe spesifikt som oppfylte noen kriterier eller oppgaveformål? Det er her _instruksjonsjusterte_ LLM-er kommer inn i bildet.
 
-![Grunnleggende LLM Chat Completion](../../../translated_images/no/04-playground-chat-base.65b76fcfde0caa67.png)
+![Grunnleggende LLM Chat Completion](../../../translated_images/no/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Konsept: Instruksjonsjusterte LLM-er
 
@@ -118,7 +118,7 @@ La oss prøve det - gå tilbake til prompten ovenfor, men endre nå _systemmeldi
 
 Se hvordan resultatet nå er tilpasset for å reflektere det ønskede målet og formatet? En lærer kan nå direkte bruke denne responsen i sine lysbilder for den klassen.
 
-![Instruksjonsjustert LLM Chat Completion](../../../translated_images/no/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Instruksjonsjustert LLM Chat Completion](../../../translated_images/no/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Hvorfor trenger vi promptutforming?
 
@@ -148,15 +148,15 @@ Så hva skjer når vi kjører denne prompten med forskjellige LLM-leverandører?
 
 > **Respons 1**: OpenAI Playground (GPT-35)
 
-![Respons 1](../../../translated_images/no/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Respons 1](../../../translated_images/no/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Respons 2**: Azure OpenAI Playground (GPT-35)
 
-![Respons 2](../../../translated_images/no/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Respons 2](../../../translated_images/no/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Respons 3**: Hugging Face Chat Playground (LLama-2)
 
-![Respons 3](../../../translated_images/no/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Respons 3](../../../translated_images/no/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Som forventet produserer hver modell (eller modellversjon) litt forskjellige svar takket være stokastisk oppførsel og variasjoner i modellens evner. For eksempel retter én modell seg mot et publikum på 8. klassetrinn, mens en annen antar en videregående elev. Men alle tre modellene genererte svar som kunne overbevise en uinformert bruker om at hendelsen var ekte.
 

@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਉਦਾਹਰਨ ਵਜੋਂ, ਜਦੋਂ ਤੁਸੀਂ ਕਿਸੇ ਲਿੰਕ 'ਤੇ ਮਾਊਸ ਰੱਖਦੇ ਹੋ ਤਾਂ ਤੁਹਾਨੂੰ ਲਿੰਕ ਨੂੰ ਫੋਲੋ ਕਰਨ ਲਈ **ctrl + click** ਕਰਨ ਦਾ ਸੁਝਾਅ ਮਿਲੇਗਾ।
 
-![VS code follow links screenshot](../../translated_images/pa/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/pa/vscode-follow-link.85520ab6a1237adc.webp)
 
 ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਲਿੰਕ 'ਤੇ ਕਲਿੱਕ ਕਰਦੇ ਹੋ ਅਤੇ ਉਹ ਲੋਕਲ ਤੌਰ 'ਤੇ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ, ਤਾਂ ਇਹ ਵਰਕਫਲੋ ਨੂੰ ਟ੍ਰਿਗਰ ਕਰੇਗਾ ਅਤੇ GitHub 'ਤੇ ਵੀ ਕੰਮ ਨਹੀਂ ਕਰੇਗਾ।
 
@@ -69,7 +69,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਜਦੋਂ ਤੁਸੀਂ `./` ਜਾਂ `../` ਟਾਈਪ ਕਰਦੇ ਹੋ, ਤਾਂ VS ਕੋਡ ਤੁਹਾਨੂੰ ਉਪਲਬਧ ਵਿਕਲਪਾਂ ਵਿੱਚੋਂ ਚੁਣਨ ਲਈ ਪ੍ਰੰਪਟ ਕਰੇਗਾ।
 
-![VS code select relative path screenshot](../../translated_images/pa/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/pa/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 ਚਾਹੀਦਾ ਫਾਈਲ ਜਾਂ ਫੋਲਡਰ ਚੁਣ ਕੇ ਲਿੰਕ ਨੂੰ ਫੋਲੋ ਕਰੋ ਅਤੇ ਤੁਹਾਨੂੰ ਯਕੀਨ ਹੋ ਜਾਵੇਗਾ ਕਿ ਤੁਹਾਡਾ ਪਾਥ ਟੁੱਟਿਆ ਨਹੀਂ ਹੈ।
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਨਹੀਂ ਤਾਂ, ਤੁਹਾਨੂੰ ਹੇਠਾਂ ਦਿੱਤੀ ਗਈ ਗਲਤੀ ਮਿਲ ਸਕਦੀ ਹੈ।
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/pa/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/pa/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 ਇਸ ਸਮੱਸਿਆ ਨੂੰ ਠੀਕ ਕਰਨ ਲਈ, ਵਰਕਫਲੋ ਵੱਲੋਂ ਹਾਈਲਾਈਟ ਕੀਤੇ ਗਏ ਫਾਈਲ ਪਾਥ ਨੂੰ ਖੋਲ੍ਹੋ ਅਤੇ ਸਬੰਧਤ ਪਾਥਾਂ ਦੇ ਅੰਤ ਵਿੱਚ ਟ੍ਰੈਕਿੰਗ ID ਜੋੜੋ।
 
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਨਹੀਂ ਤਾਂ, ਤੁਹਾਨੂੰ ਹੇਠਾਂ ਦਿੱਤੀ ਗਈ ਗਲਤੀ ਮਿਲ ਸਕਦੀ ਹੈ।
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/pa/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/pa/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 ਇਸ ਸਮੱਸਿਆ ਨੂੰ ਠੀਕ ਕਰਨ ਲਈ, ਵਰਕਫਲੋ ਵੱਲੋਂ ਹਾਈਲਾਈਟ ਕੀਤੇ ਗਏ ਫਾਈਲ ਪਾਥ ਨੂੰ ਖੋਲ੍ਹੋ ਅਤੇ URLs ਦੇ ਅੰਤ ਵਿੱਚ ਟ੍ਰੈਕਿੰਗ ID ਜੋੜੋ।
 
@@ -120,7 +120,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਨਹੀਂ ਤਾਂ, ਤੁਹਾਨੂੰ ਹੇਠਾਂ ਦਿੱਤੀ ਗਈ ਗਲਤੀ ਮਿਲ ਸਕਦੀ ਹੈ।
 
-![GitHub check country locale comment screenshot](../../translated_images/pa/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/pa/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 ਇਸ ਸਮੱਸਿਆ ਨੂੰ ਠੀਕ ਕਰਨ ਲਈ, ਵਰਕਫਲੋ ਵੱਲੋਂ ਹਾਈਲਾਈਟ ਕੀਤੇ ਗਏ ਫਾਈਲ ਪਾਥ ਨੂੰ ਖੋਲ੍ਹੋ ਅਤੇ URLs ਵਿੱਚੋਂ ਦੇਸ਼ ਦੀ ਸਥਾਨਕਤਾ ਹਟਾਓ।
 

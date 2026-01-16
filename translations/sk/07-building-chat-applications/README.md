@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Budovanie chatovacích aplikácií poháňaných generatívnou AI
 
-[![Budovanie chatovacích aplikácií poháňaných generatívnou AI](../../../translated_images/sk/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Budovanie chatovacích aplikácií poháňaných generatívnou AI](../../../translated_images/sk/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 
@@ -96,11 +96,11 @@ Všeobecné princípy UX platia pre chatovacie aplikácie, ale existujú aj ďal
 
 Jedným z príkladov personalizácie je nastavenie „Vlastné pokyny“ v ChatGPT od OpenAI. Umožňuje vám poskytnúť informácie o sebe, ktoré môžu byť dôležitým kontextom pre vaše výzvy. Tu je príklad vlastnej pokyny.
 
-![Nastavenie vlastných pokynov v ChatGPT](../../../translated_images/sk/custom-instructions.b96f59aa69356fcf.png)
+![Nastavenie vlastných pokynov v ChatGPT](../../../translated_images/sk/custom-instructions.b96f59aa69356fcf.webp)
 
 Tento „profil“ vyzýva ChatGPT, aby vytvoril plán lekcie o prepojených zoznamoch. Všimnite si, že ChatGPT berie do úvahy, že používateľ môže chcieť podrobnejší plán lekcie na základe jej skúseností.
 
-![Výzva v ChatGPT na plán lekcie o prepojených zoznamoch](../../../translated_images/sk/lesson-plan-prompt.cc47c488cf1343df.png)
+![Výzva v ChatGPT na plán lekcie o prepojených zoznamoch](../../../translated_images/sk/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Rámec systémových správ od Microsoftu pre veľké jazykové modely
 

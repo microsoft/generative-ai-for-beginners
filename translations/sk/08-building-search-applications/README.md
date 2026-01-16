@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváranie aplikácií na vyhľadávanie
 
-[![Úvod do generatívnej AI a veľkých jazykových modelov](../../../translated_images/sk/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Úvod do generatívnej AI a veľkých jazykových modelov](../../../translated_images/sk/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii_
 
@@ -44,7 +44,7 @@ Lekcia obsahuje index embeddings pre prepisy YouTube videí z kanála Microsoft 
 
 Nasleduje príklad sémantického dotazu na otázku 'môžete použiť rstudio s azure ml?'. Pozrite si URL YouTube, uvidíte, že URL obsahuje časovú značku, ktorá vás zavedie na miesto vo videu, kde sa nachádza odpoveď na otázku.
 
-![Sémantický dotaz na otázku "môžete použiť rstudio s Azure ML"](../../../translated_images/sk/query-results.bb0480ebf025fac6.png)
+![Sémantický dotaz na otázku "môžete použiť rstudio s Azure ML"](../../../translated_images/sk/query-results.bb0480ebf025fac6.webp)
 
 ## Čo je sémantické vyhľadávanie?
 
@@ -162,7 +162,7 @@ Otvorte [notebook s riešením](./python/aoai-solution.ipynb?WT.mc_id=academic-1
 
 Keď spustíte notebook, budete vyzvaní na zadanie dotazu. Vstupné pole bude vyzerať takto:
 
-![Vstupné pole pre používateľa na zadanie dotazu](../../../translated_images/sk/notebook-search.1e320b9c7fcbb0bc.png)
+![Vstupné pole pre používateľa na zadanie dotazu](../../../translated_images/sk/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Skvelá práca! Pokračujte vo svojom vzdelávaní
 

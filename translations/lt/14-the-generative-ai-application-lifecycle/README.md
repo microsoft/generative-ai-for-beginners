@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "lt"
 }
 -->
-[![Integracija su funkcijų kvietimu](../../../translated_images/lt/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integracija su funkcijų kvietimu](../../../translated_images/lt/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Generatyviosios DI programos gyvavimo ciklas
 
@@ -30,7 +30,7 @@ LLM yra naujas įrankis dirbtinio intelekto arsenale, jie yra nepaprastai galing
 
 Dėl to mums reikia naujo paradigma, kad šį įrankį pritaikytume dinamiškai, su tinkamomis paskatomis. Galime senesnes DI programas vadinti „ML programomis“, o naujesnes DI programas – „GenAI programomis“ arba tiesiog „DI programomis“, atspindinčiomis tuo metu naudojamą pagrindinę technologiją ir metodus. Tai keičia mūsų pasakojimą keliais būdais, pažvelkite į šį palyginimą.
 
-![LLMOps ir MLOps palyginimas](../../../translated_images/lt/01-llmops-shift.29bc933cb3bb0080.png)
+![LLMOps ir MLOps palyginimas](../../../translated_images/lt/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Atkreipkite dėmesį, kad LLMOps mes labiau orientuojamės į programų kūrėjus, naudojame integracijas kaip pagrindinį tašką, naudojame „Modelius kaip paslaugą“ ir galvojame apie šiuos metrikų aspektus.
 
@@ -44,7 +44,7 @@ Atkreipkite dėmesį, kad LLMOps mes labiau orientuojamės į programų kūrėju
 
 Pirmiausia, norint suprasti gyvavimo ciklą ir jo pakeitimus, pažvelkime į šią infografiką.
 
-![LLMOps infografika](../../../translated_images/lt/02-llmops.70a942ead05a7645.png)
+![LLMOps infografika](../../../translated_images/lt/02-llmops.70a942ead05a7645.webp)
 
 Kaip matote, tai skiriasi nuo įprastų MLOps gyvavimo ciklų. LLM turi daug naujų reikalavimų, tokių kaip užklausų kūrimas, įvairios kokybės gerinimo technikos (Fine-Tuning, RAG, Meta-Prompts), skirtingas vertinimas ir atsakomybė su atsakingu DI, galiausiai naujos vertinimo metrikos (kokybė, žala, sąžiningumas, kaina ir vėlavimas).
 
@@ -54,7 +54,7 @@ Atkreipkite dėmesį, kad tai nėra linijinis procesas, o integruoti ciklai, ite
 
 Kaip galėtume išnagrinėti šiuos žingsnius? Pažvelkime detaliau, kaip galėtume sukurti gyvavimo ciklą.
 
-![LLMOps darbo eiga](../../../translated_images/lt/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![LLMOps darbo eiga](../../../translated_images/lt/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Tai gali atrodyti šiek tiek sudėtinga, pirmiausia sutelkime dėmesį į tris didelius žingsnius.
 
@@ -74,11 +74,11 @@ O kokius įrankius galime naudoti?
 
 [Azure AI platforma](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) leidžia naudoti [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio yra internetinis portalas, leidžiantis tyrinėti modelius, pavyzdžius ir įrankius. Valdyti savo išteklius, kurti vartotojo sąsajos srautus ir naudoti SDK/CLI parinktis kodui kurti.
 
-![Azure AI galimybės](../../../translated_images/lt/04-azure-ai-platform.80203baf03a12fa8.png)
+![Azure AI galimybės](../../../translated_images/lt/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI leidžia naudoti daugybę išteklių, valdyti savo operacijas, paslaugas, projektus, vektorinę paiešką ir duomenų bazes.
 
-![LLMOps su Azure AI](../../../translated_images/lt/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps su Azure AI](../../../translated_images/lt/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Kurkite nuo Proof-of-Concept (POC) iki didelio masto programų su PromptFlow:
 
@@ -86,7 +86,7 @@ Kurkite nuo Proof-of-Concept (POC) iki didelio masto programų su PromptFlow:
 - Testuokite ir tobulinkite savo programas, kad pasiektumėte kokybišką DI, lengvai.
 - Naudokite Azure AI Studio integracijai ir iteracijai su debesija, greitam diegimui ir integracijai.
 
-![LLMOps su PromptFlow](../../../translated_images/lt/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps su PromptFlow](../../../translated_images/lt/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Puiku! Tęskite mokymąsi!
 

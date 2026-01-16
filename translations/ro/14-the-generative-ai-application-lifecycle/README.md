@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-[![Integrating with function calling](../../../translated_images/ro/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/ro/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Ciclu de viață al aplicațiilor AI generative
 
@@ -30,7 +30,7 @@ LLM-urile sunt un nou instrument în arsenalul Inteligenței Artificiale, sunt i
 
 În acest sens, avem nevoie de o nouă paradigmă pentru a adapta acest instrument într-un mod dinamic, cu stimulente corecte. Putem categorisi aplicațiile AI mai vechi ca „Aplicații ML” și aplicațiile AI mai noi ca „Aplicații GenAI” sau pur și simplu „Aplicații AI”, reflectând tehnologia și tehnicile mainstream folosite la momentul respectiv. Aceasta schimbă narațiunea noastră în mai multe moduri, priviți comparația următoare.
 
-![LLMOps vs. MLOps comparison](../../../translated_images/ro/01-llmops-shift.29bc933cb3bb0080.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/ro/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Observați că în LLMOps, ne concentrăm mai mult pe dezvoltatorii de aplicații, folosind integrări ca punct cheie, utilizând „Modele ca Serviciu” și gândind în următorii termeni pentru metrici.
 
@@ -44,7 +44,7 @@ Observați că în LLMOps, ne concentrăm mai mult pe dezvoltatorii de aplicați
 
 Mai întâi, pentru a înțelege ciclul de viață și modificările, să observăm următoarea infografică.
 
-![LLMOps infographic](../../../translated_images/ro/02-llmops.70a942ead05a7645.png)
+![LLMOps infographic](../../../translated_images/ro/02-llmops.70a942ead05a7645.webp)
 
 După cum observați, acesta este diferit de ciclurile obișnuite din MLOps. LLM-urile au multe cerințe noi, cum ar fi Prompting, tehnici diferite pentru îmbunătățirea calității (Fine-Tuning, RAG, Meta-Prompts), evaluare și responsabilitate diferită cu AI responsabil, în final, metrici noi de evaluare (Calitate, Rău, Onestitate, Cost și Latență).
 
@@ -54,7 +54,7 @@ Observați că acest proces nu este liniar, ci bucle integrate, iterative și cu
 
 Cum am putea explora acești pași? Să intrăm în detaliu despre cum am putea construi un ciclu de viață.
 
-![LLMOps Workflow](../../../translated_images/ro/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![LLMOps Workflow](../../../translated_images/ro/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Acesta poate părea puțin complicat, să ne concentrăm mai întâi pe cei trei pași mari.
 
@@ -74,11 +74,11 @@ Pentru unelte, Microsoft oferă [Azure AI Platform](https://azure.microsoft.com/
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) vă permite să folosiți [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio este un portal web care vă permite să explorați modele, exemple și unelte. Gestionați resursele, fluxurile de dezvoltare UI și opțiunile SDK/CLI pentru dezvoltare Code-First.
 
-![Azure AI possibilities](../../../translated_images/ro/04-azure-ai-platform.80203baf03a12fa8.png)
+![Azure AI possibilities](../../../translated_images/ro/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI vă permite să folosiți multiple resurse pentru a gestiona operațiunile, serviciile, proiectele, căutarea vectorială și nevoile de baze de date.
 
-![LLMOps with Azure AI](../../../translated_images/ro/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps with Azure AI](../../../translated_images/ro/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Construiți, de la Proof-of-Concept (POC) până la aplicații la scară largă cu PromptFlow:
 
@@ -86,7 +86,7 @@ Construiți, de la Proof-of-Concept (POC) până la aplicații la scară largă 
 - Testați și ajustați aplicațiile pentru AI de calitate, cu ușurință.
 - Folosiți Azure AI Studio pentru a integra și itera cu cloud, împingeți și implementați pentru integrare rapidă.
 
-![LLMOps with PromptFlow](../../../translated_images/ro/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps with PromptFlow](../../../translated_images/ro/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Grozav! Continuați să învățați!
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "no"
 }
 -->
-![Generative AI For Beginners](../../translated_images/no/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI For Beginners](../../translated_images/no/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 leksjoner som lærer deg alt du trenger å vite for å begynne å bygge Generative AI-applikasjoner
 

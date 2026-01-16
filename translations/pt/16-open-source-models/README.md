@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pt"
 }
 -->
-[![Modelos Open Source](../../../translated_images/pt/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Modelos Open Source](../../../translated_images/pt/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introdução
 
@@ -41,12 +41,12 @@ Para esta lição, iremos referir-nos aos modelos como "modelos open" daqui em d
 
 **Custo** - O custo por token para usar e implementar estes modelos é inferior ao dos modelos proprietários. Ao construir aplicações de IA Generativa, deve-se analisar o desempenho versus preço ao trabalhar com estes modelos no seu caso de uso.
 
-![Custo do Modelo](../../../translated_images/pt/model-price.3f5a3e4d32ae00b4.png)
+![Custo do Modelo](../../../translated_images/pt/model-price.3f5a3e4d32ae00b4.webp)
 Fonte: Artificial Analysis
 
 **Flexibilidade** - Trabalhar com modelos open permite-lhe ser flexível em termos de usar diferentes modelos ou combiná-los. Um exemplo disto são os [Assistentes HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) onde o utilizador pode selecionar o modelo a ser usado diretamente na interface:
 
-![Escolher Modelo](../../../translated_images/pt/choose-model.f095d15bbac92214.png)
+![Escolher Modelo](../../../translated_images/pt/choose-model.f095d15bbac92214.webp)
 
 ## Explorando Diferentes Modelos Open
 
@@ -74,7 +74,7 @@ Não há uma resposta única para escolher um modelo open. Um bom ponto de parti
 
 Ao procurar comparar LLMs entre os diferentes tipos, o [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) é outro excelente recurso:
 
-![Qualidade do Modelo](../../../translated_images/pt/model-quality.aaae1c22e00f7ee1.png)
+![Qualidade do Modelo](../../../translated_images/pt/model-quality.aaae1c22e00f7ee1.webp)
 Fonte: Artificial Analysis
 
 Se estiver a trabalhar num caso de uso específico, procurar versões fine-tuned focadas na mesma área pode ser eficaz. Experimentar múltiplos modelos open para ver como eles performam de acordo com as suas e dos seus utilizadores expectativas é outra boa prática.

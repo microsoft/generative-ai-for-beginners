@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-[![Open Source Models](../../../translated_images/sk/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/sk/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Úvod
 
@@ -41,12 +41,12 @@ Pre túto lekciu budeme modely ďalej označovať ako "open modely", pretože v 
 
 **Cena** – Cena za token pri používaní a nasadzovaní týchto modelov je nižšia ako u proprietárnych modelov. Pri budovaní aplikácií Generatívnej AI by ste mali zvážiť pomer výkon/cena pri práci s týmito modelmi pre váš prípad použitia.
 
-![Model Cost](../../../translated_images/sk/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/sk/model-price.3f5a3e4d32ae00b4.webp)
 Zdroj: Artificial Analysis
 
 **Flexibilita** – Práca s open modelmi vám umožňuje byť flexibilný v používaní rôznych modelov alebo ich kombinovaní. Príkladom sú [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kde si používateľ môže priamo v používateľskom rozhraní vybrať model, ktorý sa používa:
 
-![Choose Model](../../../translated_images/sk/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/sk/choose-model.f095d15bbac92214.webp)
 
 ## Preskúmanie rôznych Open Modelov
 
@@ -74,7 +74,7 @@ Neexistuje jednoznačná odpoveď na výber open modelu. Dobré miesto na začia
 
 Pri porovnávaní LLM naprieč rôznymi typmi je ďalším skvelým zdrojom [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst):
 
-![Model Quality](../../../translated_images/sk/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/sk/model-quality.aaae1c22e00f7ee1.webp)
 Zdroj: Artificial Analysis
 
 Ak pracujete na konkrétnom prípade použitia, môže byť efektívne hľadať doladené verzie zamerané na rovnakú oblasť. Experimentovanie s viacerými open modelmi, aby ste videli, ako sa správajú podľa vašich a používateľských očakávaní, je ďalšia dobrá prax.

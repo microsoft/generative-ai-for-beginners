@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-[![Modele Open Source](../../../translated_images/ro/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Modele Open Source](../../../translated_images/ro/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Ajustarea fină a modelului LLM
 
@@ -32,7 +32,7 @@ Gata? Să începem.
 
 Doriți să aveți o imagine de ansamblu a ceea ce vom acoperi înainte de a intra în detalii? Consultați acest ghid ilustrat care descrie parcursul de învățare pentru această lecție - de la învățarea conceptelor de bază și motivația pentru ajustarea fină, până la înțelegerea procesului și a celor mai bune practici pentru executarea sarcinii de ajustare fină. Este un subiect fascinant de explorat, așa că nu uitați să verificați pagina [Resurse](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pentru linkuri suplimentare care să vă sprijine parcursul de învățare autodidact!
 
-![Ghid ilustrat pentru ajustarea fină a modelelor lingvistice](../../../translated_images/ro/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Ghid ilustrat pentru ajustarea fină a modelelor lingvistice](../../../translated_images/ro/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Ce este ajustarea fină pentru modelele lingvistice?
 

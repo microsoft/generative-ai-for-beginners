@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integracija su funkcijų iškvietimu
 
-[![Integracija su funkcijų iškvietimu](../../../translated_images/lt/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija su funkcijų iškvietimu](../../../translated_images/lt/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Jūs jau nemažai išmokote ankstesnėse pamokose. Tačiau vis dar yra galimybių tobulėti. Kai kurie dalykai, kuriuos galime patobulinti, yra nuoseklesnis atsakymų formatas, kad būtų lengviau dirbti su atsakymais vėliau. Taip pat galbūt norėsime pridėti duomenų iš kitų šaltinių, kad dar labiau praturtintume savo programą.
 
@@ -179,7 +179,7 @@ Dabar galime išsiųsti abi užklausas LLM ir patikrinti gautą atsakymą, suras
 
 Taigi, kaip išspręsti formatavimo problemą? Naudodami funkcijų iškvietimą, galime užtikrinti, kad gautume struktūrizuotus duomenis. Naudojant funkcijų iškvietimą, LLM iš tikrųjų neįvykdo ir neįvykdo jokių funkcijų. Vietoj to, mes sukuriame struktūrą, kurios LLM laikosi savo atsakymuose. Tada naudojame tuos struktūrizuotus atsakymus, kad žinotume, kokią funkciją vykdyti mūsų programose.
 
-![funkcijų srautas](../../../translated_images/lt/Function-Flow.083875364af4f4bb.png)
+![funkcijų srautas](../../../translated_images/lt/Function-Flow.083875364af4f4bb.webp)
 
 Tada galime paimti tai, kas grąžinama iš funkcijos, ir išsiųsti tai atgal į LLM. Tada LLM atsakys natūralia kalba, kad atsakytų į vartotojo užklausą.
 
@@ -201,7 +201,7 @@ Funkcijos iškvietimo kūrimo procesą sudaro 3 pagrindiniai žingsniai:
 2. **Atsakymo skaitymas** iš modelio, kad būtų atliktas veiksmas, pvz., funkcijos ar API užklausos vykdymas.
 3. **Pakartotinis iškvietimas** Chat Completions API su funkcijos atsakymu, kad būtų sukurta atsakymo žinutė vartotojui.
 
-![LLM srautas](../../../translated_images/lt/LLM-Flow.3285ed8caf4796d7.png)
+![LLM srautas](../../../translated_images/lt/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### 1 žingsnis - žinučių kūrimas
 

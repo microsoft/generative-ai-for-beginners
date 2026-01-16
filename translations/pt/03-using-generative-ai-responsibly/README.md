@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Usar IA Generativa de Forma Responsável
 
-[![Usar IA Generativa de Forma Responsável](../../../translated_images/pt/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Usar IA Generativa de Forma Responsável](../../../translated_images/pt/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Clique na imagem acima para assistir ao vídeo desta lição_
 
@@ -85,7 +85,7 @@ Esses tipos de resultados não apenas prejudicam a construção de experiências
 
 Agora que identificamos a importância da IA Generativa Responsável, vamos analisar 4 etapas que podemos seguir para construir nossas soluções de IA de forma responsável:
 
-![Ciclo de Mitigação](../../../translated_images/pt/mitigate-cycle.babcd5a5658e1775.png)
+![Ciclo de Mitigação](../../../translated_images/pt/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Medir Danos Potenciais
 
@@ -97,7 +97,7 @@ Como nossa startup está construindo um produto educacional, seria bom preparar 
 
 Agora é hora de encontrar maneiras de prevenir ou limitar os danos potenciais causados pelo modelo e suas respostas. Podemos analisar isso em 4 camadas diferentes:
 
-![Camadas de Mitigação](../../../translated_images/pt/mitigation-layers.377215120b9a1159.png)
+![Camadas de Mitigação](../../../translated_images/pt/mitigation-layers.377215120b9a1159.webp)
 
 - **Modelo**. Escolher o modelo certo para o caso de uso certo. Modelos maiores e mais complexos, como o GPT-4, podem causar mais risco de conteúdo prejudicial quando aplicados a casos de uso menores e mais específicos. Usar seus dados de treinamento para ajuste fino também reduz o risco de conteúdo prejudicial.
 

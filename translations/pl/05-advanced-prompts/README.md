@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tworzenie zaawansowanych promptów
 
-[![Tworzenie zaawansowanych promptów](../../../translated_images/pl/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Tworzenie zaawansowanych promptów](../../../translated_images/pl/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Podsumujmy najważniejsze informacje z poprzedniego rozdziału:
 

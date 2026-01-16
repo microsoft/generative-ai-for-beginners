@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrarea cu apelarea funcțiilor
 
-[![Integrarea cu apelarea funcțiilor](../../../translated_images/ro/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrarea cu apelarea funcțiilor](../../../translated_images/ro/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Ai învățat destul de multe până acum în lecțiile anterioare. Totuși, putem îmbunătăți și mai mult. Unele aspecte pe care le putem aborda sunt cum să obținem un format de răspuns mai consistent pentru a facilita utilizarea răspunsului în etapele ulterioare. De asemenea, s-ar putea să dorim să adăugăm date din alte surse pentru a îmbogăți aplicația noastră.
 
@@ -179,7 +179,7 @@ Acum putem trimite ambele cereri către LLM și examina răspunsul pe care îl p
 
 Deci, cum rezolvăm problema formatării? Prin utilizarea apelării funcțiilor, putem asigura că primim date structurate înapoi. Când folosim apelarea funcțiilor, LLM-ul nu apelează sau rulează de fapt nicio funcție. În schimb, creăm o structură pe care LLM-ul să o urmeze pentru răspunsurile sale. Apoi folosim aceste răspunsuri structurate pentru a ști ce funcție să rulăm în aplicațiile noastre.
 
-![flux funcțional](../../../translated_images/ro/Function-Flow.083875364af4f4bb.png)
+![flux funcțional](../../../translated_images/ro/Function-Flow.083875364af4f4bb.webp)
 
 Putem apoi să luăm ceea ce este returnat de funcție și să trimitem acest lucru înapoi către LLM. LLM-ul va răspunde apoi folosind limbaj natural pentru a răspunde la interogarea utilizatorului.
 
@@ -201,7 +201,7 @@ Procesul de creare a unui apel de funcție include 3 pași principali:
 2. **Citirea** răspunsului modelului pentru a efectua o acțiune, adică executarea unei funcții sau a unui apel API.
 3. **Realizarea** unui alt apel către API-ul Chat Completions cu răspunsul de la funcția ta pentru a folosi acea informație pentru a crea un răspuns pentru utilizator.
 
-![Flux LLM](../../../translated_images/ro/LLM-Flow.3285ed8caf4796d7.png)
+![Flux LLM](../../../translated_images/ro/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Pasul 1 - crearea mesajelor
 

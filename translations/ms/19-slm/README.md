@@ -33,7 +33,7 @@ SLM dilatih menggunakan sejumlah besar data teks. Semasa latihan, model mempelaj
 
 Pembangunan SLM sejajar dengan keperluan yang semakin meningkat untuk model yang boleh digunakan dalam persekitaran dengan sumber terhad, seperti peranti mudah alih atau platform pengkomputeran tepi, di mana LLM berskala penuh mungkin tidak praktikal kerana keperluan sumber yang tinggi. Dengan menumpukan pada kecekapan, SLM mengimbangi prestasi dengan kebolehcapaian, membolehkan aplikasi yang lebih meluas dalam pelbagai bidang.  
 
-![slm](../../../translated_images/ms/slm.4058842744d0444a.png)  
+![slm](../../../translated_images/ms/slm.4058842744d0444a.webp)  
 
 ## Objektif Pembelajaran  
 
@@ -135,7 +135,7 @@ Kita boleh menggunakan model Keluarga Phi-3/3.5 berdasarkan senario yang berbeza
 
 Kami berharap dapat menggunakan Phi-3/3.5 dalam pelbagai senario. Seterusnya, kami akan menggunakan Phi-3/3.5 berdasarkan senario yang berbeza.  
 
-![phi3](../../../translated_images/ms/phi3.655208c3186ae381.png)  
+![phi3](../../../translated_images/ms/phi3.655208c3186ae381.webp)  
 
 ### Perbezaan Inferens API Awan  
 
@@ -145,9 +145,9 @@ Model GitHub adalah cara paling langsung. Anda boleh mengakses model Phi-3/3.5-I
 
 - Demo: Perbandingan kesan Phi-3-mini dan Phi-3.5-mini dalam senario bahasa Cina  
 
-![phi3](../../../translated_images/ms/gh1.126c6139713b622b.png)  
+![phi3](../../../translated_images/ms/gh1.126c6139713b622b.webp)  
 
-![phi35](../../../translated_images/ms/gh2.07d7985af66f178d.png)  
+![phi35](../../../translated_images/ms/gh2.07d7985af66f178d.webp)  
 
 **Azure AI Studio**  
 

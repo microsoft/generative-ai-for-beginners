@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Základy tvorby promptov
 
-[![Základy tvorby promptov](../../../translated_images/sk/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Základy tvorby promptov](../../../translated_images/sk/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Úvod
 Tento modul pokrýva základné koncepty a techniky na vytváranie efektívnych promptov pre generatívne AI modely. Spôsob, akým napíšete svoj prompt pre LLM, je dôležitý. Dôkladne vytvorený prompt môže priniesť kvalitnejšiu odpoveď. Ale čo presne znamenajú pojmy ako _prompt_ a _tvorba promptov_? A ako môžem zlepšiť _vstupný prompt_, ktorý posielam LLM? Na tieto otázky sa pokúsime odpovedať v tejto kapitole a v nasledujúcej.
@@ -53,7 +53,7 @@ Notebook obsahuje _úvodné_ cvičenia - ale odporúčame vám pridať vlastné 
 
 Chcete získať celkový obraz o tom, čo táto lekcia pokrýva, predtým než sa do nej pustíte? Pozrite si tento ilustrovaný sprievodca, ktorý vám poskytne prehľad hlavných tém a kľúčových poznatkov, o ktorých by ste mali premýšľať v každej z nich. Cestovná mapa lekcie vás prevedie od pochopenia základných konceptov a výziev k ich riešeniu pomocou relevantných techník a osvedčených postupov tvorby promptov. Upozorňujeme, že sekcia "Pokročilé techniky" v tomto sprievodcovi sa týka obsahu pokrytého v _nasledujúcej_ kapitole tejto učebnej osnovy.
 
-![Ilustrovaný sprievodca tvorbou promptov](../../../translated_images/sk/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Ilustrovaný sprievodca tvorbou promptov](../../../translated_images/sk/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Naša startupová misia
 
@@ -94,7 +94,7 @@ LLM vidí prompty ako _sekvenciu tokenov_, pričom rôzne modely (alebo verzie m
 
 Aby ste získali intuíciu o tom, ako funguje tokenizácia, vyskúšajte nástroje ako [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) uvedený nižšie. Skopírujte svoj prompt - a pozrite sa, ako sa konvertuje na tokeny, pričom venujte pozornosť tomu, ako sa spracovávajú medzery a interpunkčné znamienka. Upozorňujeme, že tento príklad ukazuje starší LLM (GPT-3) - takže skúšanie tohto s novším modelom môže priniesť iný výsledok.
 
-![Tokenizácia](../../../translated_images/sk/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenizácia](../../../translated_images/sk/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Koncept: Základné modely
 
@@ -104,7 +104,7 @@ Chcete vidieť, ako funguje dokončovanie na základe promptov? Zadajte vyššie
 
 Ale čo ak používateľ chcel vidieť niečo konkrétne, čo spĺňa určité kritériá alebo cieľ úlohy? Tu prichádzajú na scénu _LLM upravené na inštrukcie_.
 
-![Základné LLM Chat Completion](../../../translated_images/sk/04-playground-chat-base.65b76fcfde0caa67.png)
+![Základné LLM Chat Completion](../../../translated_images/sk/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Koncept: LLM upravené na inštrukcie
 
@@ -118,7 +118,7 @@ Vyskúšajme si to - vráťte sa k vyššie uvedenému promptu, ale teraz zmeňt
 
 Pozrite sa, ako je výsledok teraz prispôsobený tak, aby odrážal požadovaný cieľ a formát? Učiteľ môže teraz priamo použiť túto odpoveď vo svojich prezentáciách pre danú triedu.
 
-![LLM upravené na inštrukcie - Chat Completion](../../../translated_images/sk/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![LLM upravené na inštrukcie - Chat Completion](../../../translated_images/sk/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Prečo potrebujeme tvorbu promptov?
 
@@ -144,15 +144,15 @@ Webové vyhľadávanie mi ukázalo, že existujú fiktívne príbehy (napr. tele
 
 > **Odpoveď 1**: OpenAI Playground (GPT-35)
 
-![Odpoveď 1](../../../translated_images/sk/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Odpoveď 1](../../../translated_images/sk/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Odpoveď 2**: Azure OpenAI Playground (GPT-35)
 
-![Odpoveď 2](../../../translated_images/sk/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Odpoveď 2](../../../translated_images/sk/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Odpoveď 3**: Hugging Face Chat Playground (LLama-2)
 
-![Odpoveď 3](../../../translated_images/sk/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Odpoveď 3](../../../translated_images/sk/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Ako sa očakávalo, každý model (alebo verzia modelu) generuje mierne odlišné odpovede vďaka stochastickému správaniu a rozdielom v schopnostiach modelov. Napríklad jeden model sa zameriava na publikum ôsmeho ročníka, zatiaľ čo druhý predpokladá študentov strednej školy. Ale všetky tri modely generovali odpovede, ktoré by mohli presvedčiť neinformovaného používateľa, že udalosť bola skutočná.
 

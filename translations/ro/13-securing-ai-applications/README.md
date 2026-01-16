@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Securizarea aplicațiilor tale de AI generativ
 
-[![Securizarea aplicațiilor tale de AI generativ](../../../translated_images/ro/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Securizarea aplicațiilor tale de AI generativ](../../../translated_images/ro/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introducere
 
@@ -125,7 +125,7 @@ Emularea amenințărilor din lumea reală este acum considerată o practică sta
 
 > Practica de red teaming pentru AI a evoluat pentru a avea un sens mai extins: nu acoperă doar identificarea vulnerabilităților de securitate, ci include și identificarea altor eșecuri ale sistemului, cum ar fi generarea de conținut potențial dăunător. Sistemele AI vin cu riscuri noi, iar red teaming-ul este esențial pentru a înțelege aceste riscuri noi, cum ar fi injectarea de prompturi și producerea de conținut nefundamentat. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Ghiduri și resurse pentru red teaming](../../../translated_images/ro/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Ghiduri și resurse pentru red teaming](../../../translated_images/ro/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Mai jos sunt prezentate perspectivele cheie care au modelat programul Microsoft AI Red Team.
 

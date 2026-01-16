@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tworzenie aplikacji wyszukiwania
 
-[![Wprowadzenie do generatywnej AI i dużych modeli językowych](../../../translated_images/pl/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Wprowadzenie do generatywnej AI i dużych modeli językowych](../../../translated_images/pl/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji_
 
@@ -44,7 +44,7 @@ Lekcja zawiera indeks Embedding transkryptów z kanału YouTube Microsoft [AI Sh
 
 Poniżej znajduje się przykład semantycznego zapytania dla pytania „Czy można używać rstudio z azure ml?”. Sprawdź URL na YouTube, zobaczysz, że zawiera on znacznik czasu, który przenosi Cię do miejsca w filmie, gdzie znajduje się odpowiedź na pytanie.
 
-![Semantyczne zapytanie dla pytania "Czy można używać rstudio z Azure ML"](../../../translated_images/pl/query-results.bb0480ebf025fac6.png)
+![Semantyczne zapytanie dla pytania "Czy można używać rstudio z Azure ML"](../../../translated_images/pl/query-results.bb0480ebf025fac6.webp)
 
 ## Co to jest wyszukiwanie semantyczne?
 
@@ -163,7 +163,7 @@ Otwórz [notebook z rozwiązaniem](./python/aoai-solution.ipynb?WT.mc_id=academi
 
 Po uruchomieniu notebooka zostaniesz poproszony o wpisanie zapytania. Pole do wprowadzania będzie wyglądać tak:
 
-![Pole do wprowadzania zapytania przez użytkownika](../../../translated_images/pl/notebook-search.1e320b9c7fcbb0bc.png)
+![Pole do wprowadzania zapytania przez użytkownika](../../../translated_images/pl/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Świetna robota! Kontynuuj naukę
 

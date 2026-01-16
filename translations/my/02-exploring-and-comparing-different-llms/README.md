@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # LLM များကိုလေ့လာခြင်းနှင့် နှိုင်းယှဉ်ခြင်း
 
-[![LLM များကိုလေ့လာခြင်းနှင့် နှိုင်းယှဉ်ခြင်း](../../../translated_images/my/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![LLM များကိုလေ့လာခြင်းနှင့် နှိုင်းယှဉ်ခြင်း](../../../translated_images/my/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _အထက်ပါပုံကိုနှိပ်ပြီး ဒီသင်ခန်းစာရဲ့ ဗီဒီယိုကို ကြည့်ပါ_
 
@@ -59,14 +59,14 @@ Foundation Model ဆိုသော စကားလုံးကို [Stanford 
 - **မော်ဒယ်များသည် အလွန်ကြီးမားသည်**။ အလွန်နက်ရှိုင်းသော neural networks များကို လေ့ကျင့်ထားပြီး parameters ဘီလီယံများပါဝင်သည်။
 - **အခြေခံအဆောက်အအုံအဖြစ် အခြားမော်ဒယ်များအတွက် အသုံးပြုရန် ရည်ရွယ်ထားသည်**။ ၎င်းသည် အခြားမော်ဒယ်များကို အပေါ်တွင် တည်ဆောက်ရန် အခြေခံအဆောက်အအုံအဖြစ် အသုံးပြုနိုင်သည်။
 
-![Foundation Models versus LLMs](../../../translated_images/my/FoundationModel.e4859dbb7a825c94.png)
+![Foundation Models versus LLMs](../../../translated_images/my/FoundationModel.e4859dbb7a825c94.webp)
 
 ပုံရင်းအရင်းအမြစ်: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 ဒီကွာခြားချက်ကို ပိုမိုရှင်းလင်းစေရန် ChatGPT ကို ဥပမာအနေနှင့် ယူဆောင်ပါမည်။ ChatGPT ၏ ပထမဆုံးဗားရှင်းကို တည်ဆောက်ရန် GPT-3.5 မော်ဒယ်ကို Foundation Model အဖြစ် အသုံးပြုခဲ့သည်။ ၎င်းသည် OpenAI သည် chat-specific data အချို့ကို အသုံးပြု၍ GPT-3.5 ကို ပြုပြင်ထားပြီး chatbot ကဲ့သို့သော စကားပြောအခြေအနေများတွင် စွမ်းဆောင်ရည်ကောင်းစေရန် အထူးပြုလုပ်ထားသည်။
 
-![Foundation Model](../../../translated_images/my/Multimodal.2c389c6439e0fc51.png)
+![Foundation Model](../../../translated_images/my/Multimodal.2c389c6439e0fc51.webp)
 
 ပုံရင်းအရင်းအမြစ်: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLMs များကို ၎င်းတို့ထုတ်လုပ်သ�
 
 Embeddings သည် စာသားကို ဂဏန်းပုံစံ (embedding ဟုခေါ်သည်) သို့ ပြောင်းလဲနိုင်သော မော်ဒယ်များဖြစ်သည်။ Embeddings သည် စကားလုံးများ သို့မဟုတ် စာကြောင်းများအကြား ဆက်နွယ်မှုများကို စက်များနားလည်ရန် ပိုမိုလွယ်ကူစေပြီး classification မော်ဒယ်များ သို့မဟုတ် clustering မော်ဒယ်များကဲ့သို့သော အခြားမော်ဒယ်များမှ input အဖြစ် အသုံးပြုနိုင်သည်။ Embedding မော်ဒယ်များကို transfer learning အတွက် အများအားဖြင့် အသုံးပြုသည်။ ဥပမာအားဖြင့် [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst) ကို ဖော်ပြနိုင်သည်။
 
-![Embedding](../../../translated_images/my/Embedding.c3708fe988ccf760.png)
+![Embedding](../../../translated_images/my/Embedding.c3708fe988ccf760.webp)
 
 Image generation မော်ဒယ်များသည် ပုံများကို ထုတ်လုပ်သော မော်ဒယ်များဖြစ်သည်။ ၎င်းတို့ကို ပုံတည်းဖြတ်ခြင်း၊ ပုံစီမံခြင်းနှင့် ပုံပြောင်းလဲခြင်းအတွက် အသုံးပြုနိုင်သည်။ Image generation မော်ဒယ်များသည် [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst) ကဲ့သို့သော ပုံများ၏ ဒေတာများစွာကို လေ့ကျင့်ထားပြီး ပုံအသစ်များကို ထုတ်လုပ်ရန် သို့မဟုတ် ရှိပြီးသားပုံများကို တည်းဖြတ်ရန် အသုံးပြုနိုင်သည်။ ဥပမာများမှာ [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) နှင့် [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) ဖြစ်သည်။
 
-![Image generation](../../../translated_images/my/Image.349c080266a763fd.png)
+![Image generation](../../../translated_images/my/Image.349c080266a763fd.webp)
 
 Text နှင့် code generation မော်ဒယ်များသည် စာသား သို့မဟုတ် code ကို ထုတ်လုပ်သော မော်ဒယ်များဖြစ်သည်။ ၎င်းတို့ကို စာသားအကျဉ်းချုပ်ရေးခြင်း၊ ဘာသာပြန်ခြင်းနှင့် မေးခွန်းများကို ဖြေဆိုခြင်းအတွက် အသုံးပြုနိုင်သည်။ Text generation မော်ဒယ်များသည် [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst) ကဲ့သို့သော စာသားဒေတာများစွာကို လေ့ကျင့်ထားပြီး စာသားအသစ်များကို ထုတ်လုပ်ရန် သို့မဟုတ် မေးခွန်းများကို ဖြေဆိုရန် အသုံးပြုနိုင်သည်။ Code generation မော်ဒယ်များကဲ့သို့ [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst) သည် GitHub ကဲ့သို့သော code ဒေတာများစွာကို လေ့ကျင့်ထားပြီး code အသစ်များကို ထုတ်လုပ်ရန် သို့မဟုတ် ရှိပြီးသား code တွင် bug များကို ပြုပြင်ရန် အသုံးပြုနိုင်သည်။
 
-![Text and code generation](../../../translated_images/my/Text.a8c0cf139e5cc2a0.png)
+![Text and code generation](../../../translated_images/my/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder နှင့် Decoder-only
 
@@ -107,23 +107,23 @@ content ဖန်တီးသူသည် Decoder-only မော်ဒယ်က�
 
 - Catalog တွင် စိတ်ဝင်စားသော Foundation Model ကို ရှာဖွေပါ - proprietary သို့မဟုတ် open source ဖြစ်စေ၊ task, license, သို့မဟုတ် name ဖြင့် filter လုပ်နိုင်ပါသည်။ ရှာဖွေရန် ပိုမိုလွယ်ကူစေရန် မော်ဒယ်များကို collections အဖြစ် စီစဉ်ထားပြီး၊ ဥပမာအားဖြင့် Azure OpenAI collection, Hugging Face collection စသည်ဖြင့် ရှာဖွေနိုင်ပါသည်။
 
-![Model catalog](../../../translated_images/my/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Model catalog](../../../translated_images/my/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Model card ကို ပြန်လည်သုံးသပ်ပါ၊ ရည်ရွယ်ချက်နှင့် သင်ကြားမှုအချက်အလက်များ၊ code samples နှင့် internal evaluations library တွင် အကဲဖြတ်မှုရလဒ်များ ပါဝင်သည်။
 
-![Model card](../../../translated_images/my/ModelCard.598051692c6e400d.png)
+![Model card](../../../translated_images/my/ModelCard.598051692c6e400d.webp)
 
 - Model Benchmarks ပန်းကို အသုံးပြု၍ စီးပွားရေးအခြေအနေနှင့် ကိုက်ညီသော မော်ဒယ်ကို သတ်မှတ်ရန်၊ စက်မှုလုပ်ငန်းတွင် ရရှိနိုင်သော မော်ဒယ်များနှင့် datasets များအကြား benchmark များကို နှိုင်းယှဉ်ပါ။
 
-![Model benchmarks](../../../translated_images/my/ModelBenchmarks.254cb20fbd06c03a.png)
+![Model benchmarks](../../../translated_images/my/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Azure AI Studio ၏ experimentation နှင့် tracking စွမ်းရည်များကို အသုံးပြု၍ workload အထူးပြု performance ကို တိုးတက်စေရန် မော်ဒယ်ကို custom training data ဖြင့် fine-tune လုပ်ပါ။
 
-![Model fine-tuning](../../../translated_images/my/FineTuning.aac48f07142e36fd.png)
+![Model fine-tuning](../../../translated_images/my/FineTuning.aac48f07142e36fd.webp)
 
 - Original pre-trained model သို့မဟုတ် fine-tuned version ကို remote real-time inference - managed compute - သို့မဟုတ် serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - သို့ deploy လုပ်ပါ၊ ထို့ကြောင့် အက်ပလီကေးရှင်းများသည် ၎င်းကို အသုံးပြုနိုင်ပါသည်။
 
-![Model deployment](../../../translated_images/my/ModelDeploy.890da48cbd0bccdb.png)
+![Model deployment](../../../translated_images/my/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Catalog တွင်ရှိသော မော်ဒယ်များအားလုံးကို fine-tuning နှင့်/သို့မဟုတ် pay-as-you-go deployment အတွက် လက်ရှိတွင် အသုံးပြုနိုင်မည်မဟုတ်ပါ။ မော်ဒယ်၏ စွမ်းရည်များနှင့် ကန့်သတ်ချက်များကို model card တွင် စစ်ဆေးပါ။
@@ -142,7 +142,7 @@ LLM မှာ စီးပွားရေးလုပ်ငန်းအတွက
 
 - **Fine-tuned model**။ မော်ဒယ်ကို သင့် data ဖြင့် ထပ်မံ training လုပ်ခြင်းဖြင့် သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသော ရလဒ်များရရှိစေပြီး၊ ကုန်ကျစရိတ်များ တက်နိုင်သည်။
 
-![LLMs deployment](../../../translated_images/my/Deploy.18b2d27412ec8c02.png)
+![LLMs deployment](../../../translated_images/my/Deploy.18b2d27412ec8c02.webp)
 
 Img source: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

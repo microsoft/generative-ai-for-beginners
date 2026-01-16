@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਉੱਚ ਪੱਧਰੀ ਪ੍ਰੋੰਪਟ ਬਣਾਉਣਾ
 
-[![ਉੱਚ ਪੱਧਰੀ ਪ੍ਰੋੰਪਟ ਬਣਾਉਣਾ](../../../translated_images/pa/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![ਉੱਚ ਪੱਧਰੀ ਪ੍ਰੋੰਪਟ ਬਣਾਉਣਾ](../../../translated_images/pa/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 ਪਿਛਲੇ ਅਧਿਆਇ ਤੋਂ ਕੁਝ ਸਿੱਖਿਆਵਾਂ ਨੂੰ ਦੁਹਰਾਈਏ:
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vaizdų generavimo programų kūrimas
 
-[![Vaizdų generavimo programų kūrimas](../../../translated_images/lt/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Vaizdų generavimo programų kūrimas](../../../translated_images/lt/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM modeliai nėra skirti vien tik tekstų generavimui. Taip pat galima generuoti vaizdus iš tekstinių aprašymų. Vaizdai kaip modalumas gali būti labai naudingi įvairiose srityse, tokiose kaip medicinos technologijos, architektūra, turizmas, žaidimų kūrimas ir kt. Šiame skyriuje aptarsime du populiariausius vaizdų generavimo modelius – DALL-E ir Midjourney.
 
@@ -43,7 +43,7 @@ Vaizdų generavimo programos yra puikus būdas tyrinėti generatyvinio dirbtinio
 
 Štai ką, pavyzdžiui, galėtų sukurti Edu4All studentai, jei klasėje dirbtų su paminklais:
 
-![Edu4All startuolis, pamoka apie paminklus, Eifelio bokštas](../../../translated_images/lt/startup.94d6b79cc4bb3f5a.png)
+![Edu4All startuolis, pamoka apie paminklus, Eifelio bokštas](../../../translated_images/lt/startup.94d6b79cc4bb3f5a.webp)
 
 naudodami tokį promptą:
 
@@ -272,9 +272,9 @@ Taip pat galite:
   Pagrindiniame vaizde būtų tik poilsio zona su baseinu, tačiau galutiniame vaizde atsirastų flamingas:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/lt/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/lt/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/lt/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/lt/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/lt/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/lt/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Kurti variacijas**. Idėja yra ta, kad paimamas esamas vaizdas ir prašoma sukurti jo variacijas. Norėdami sukurti variaciją, pateikiate vaizdą ir tekstinį promptą bei kodą, kaip parodyta:
@@ -298,11 +298,11 @@ Pažvelkime į pavyzdį, kaip veikia temperatūra, paleisdami šį promptą du k
 
 > Promptas: „Triušis ant arklio, laikantis ledinuką, rūke apgaubtoje pievoje, kurioje auga narcizai“
 
-![Triušis ant arklio, laikantis ledinuką, versija 1](../../../translated_images/lt/v1-generated-image.a295cfcffa3c13c2.png)
+![Triušis ant arklio, laikantis ledinuką, versija 1](../../../translated_images/lt/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Dabar paleiskime tą patį promptą dar kartą, kad pamatytume, jog negausime tokio paties vaizdo du kartus:
 
-![Sugeneruotas triušio ant arklio vaizdas](../../../translated_images/lt/v2-generated-image.33f55a3714efe61d.png)
+![Sugeneruotas triušio ant arklio vaizdas](../../../translated_images/lt/v2-generated-image.33f55a3714efe61d.webp)
 
 Kaip matote, vaizdai yra panašūs, bet ne identiški. Pabandykime pakeisti temperatūros reikšmę į 0.1 ir pažiūrėkime, kas nutiks:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Dabar, kai paleisite šį kodą, gausite šiuos du vaizdus:
 
-- ![Temperatūra 0, v1](../../../translated_images/lt/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatūra 0, v2](../../../translated_images/lt/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatūra 0, v1](../../../translated_images/lt/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatūra 0, v2](../../../translated_images/lt/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Čia aiškiai matyti, kaip vaizdai labiau panašūs vienas į kitą.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) နှင့် Vector Databases
 
-[![Retrieval Augmented Generation (RAG) နှင့် Vector Databases](../../../translated_images/my/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) နှင့် Vector Databases](../../../translated_images/my/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 ရှာဖွေမှုအက်ပလီကေးရှင်းများဆိုင်ရာ သင်ခန်းစာတွင် သင်၏ကိုယ်ပိုင်ဒေတာများကို Large Language Models (LLMs) တွင် ပေါင်းစည်းပုံကို အနည်းငယ်လေ့လာခဲ့ပါသည်။ ဒီသင်ခန်းစာတွင် သင်၏ LLM အက်ပလီကေးရှင်းတွင် ဒေတာများကို အခြေခံပုံ၊ လုပ်ငန်းစဉ်၏စက်မှုဆိုင်ရာနှင့် ဒေတာကို သိမ်းဆည်းပုံနည်းလမ်းများ (embeddings နှင့် text နှစ်ခုစလုံးအပါအဝင်) ကို ပိုမိုနက်နက်ရှိုင်းရှိုင်း လေ့လာသင်ယူမည်ဖြစ်သည်။
 
@@ -53,7 +53,7 @@ LLM အားဖြင့် အားပေးထားသော chatbot သည
 
 ### RAGs (Retrieval Augmented Generation) ၏ လုပ်ပုံလုပ်နည်း
 
-![RAGs ၏ လုပ်ပုံလုပ်နည်းကို ပြသသော ပုံ](../../../translated_images/my/how-rag-works.f5d0ff63942bd3a6.png)
+![RAGs ၏ လုပ်ပုံလုပ်နည်းကို ပြသသော ပုံ](../../../translated_images/my/how-rag-works.f5d0ff63942bd3a6.webp)
 
 ဥပမာအားဖြင့် သင်၏မှတ်စုများမှ စမ်းသပ်မေးခွန်းများကို ဖန်တီးသော chatbot ကို စတင်အသုံးပြုလိုပါက သင်သည် knowledge base နှင့် ချိတ်ဆက်မှုတစ်ခုလိုအပ်ပါမည်။ ဒီနေရာမှာ RAG က ကူညီပေးနိုင်ပါတယ်။ RAGs သည် အောက်ပါအတိုင်း လုပ်ဆောင်သည်-
 
@@ -65,7 +65,7 @@ LLM အားဖြင့် အားပေးထားသော chatbot သည
 
 - **Augmented Generation:** LLM သည် ရှာဖွေထားသောဒေတာအပေါ် အခြေခံပြီး ၎င်း၏အဖြေကို တိုးတက်စေသည်။ ၎င်းသည် လေ့ကျင့်ထားသောဒေတာအပေါ်သာမက ထည့်သွင်းထားသော context မှ သက်ဆိုင်သောအချက်အလက်များကိုလည်း အခြေခံပြီး အဖြေကို ထုတ်ပေးနိုင်စေသည်။ ရှာဖွေထားသောဒေတာကို LLM ၏အဖြေများကို တိုးတက်စေရန် အသုံးပြုသည်။ LLM သည် အသုံးပြုသူ၏မေးခွန်းကို အဖြေပြန်ပေးသည်။
 
-![RAGs architecture ကို ပြသသော ပုံ](../../../translated_images/my/encoder-decode.f2658c25d0eadee2.png)
+![RAGs architecture ကို ပြသသော ပုံ](../../../translated_images/my/encoder-decode.f2658c25d0eadee2.webp)
 
 RAGs ၏ architecture ကို encoder နှင့် decoder အပိုင်းနှစ်ခုပါဝင်သော transformers ကို အသုံးပြု၍ အကောင်အထည်ဖော်သည်။ ဥပမာအားဖြင့် အသုံးပြုသူသည် မေးခွန်းတစ်ခုမေးသောအခါ input text ကို 'encoded' လုပ်ပြီး vectors အဖြစ် ပြောင်းလဲကာ စာရွက်အညွှန်းထဲသို့ 'decoded' လုပ်ကာ အသုံးပြုသူ၏မေးခွန်းအပေါ် အခြေခံပြီး အဖြစ်အပျက်အသစ်များကို ဖန်တီးသည်။ LLM သည် encoder-decoder model နှစ်ခုလုံးကို အသုံးပြုကာ output ကို ဖန်တီးသည်။
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Chunking ပြီးနောက်၊ ကျွန်ုပ်တို့၏စာသားကို embedding models များကို အသုံးပြုကာ embed လုပ်နိုင်သည်။ အသုံးပြုနိုင်သော models အချို့မှာ word2vec, OpenAI ၏ ada-002, Azure Computer Vision နှင့် အခြားများဖြစ်သည်။ အသုံးပြုမည့် model ကို ရွေးချယ်ခြင်းသည် သင်အသုံးပြုနေသောဘာသာစကားများ၊ encoded ဖြစ်သောအကြောင်းအရာအမျိုးအစား (text/images/audio), input အရွယ်အစားနှင့် embedding output အရှည်တို့ပေါ်မူတည်သည်။
 
 OpenAI ၏ `text-embedding-ada-002` model ကို အသုံးပြုကာ embedded text ၏ နမူနာတစ်ခုမှာ:
-![cat စကားလုံး၏ embedding](../../../translated_images/my/cat.74cbd7946bc9ca38.png)
+![cat စကားလုံး၏ embedding](../../../translated_images/my/cat.74cbd7946bc9ca38.webp)
 
 ## Retrieval နှင့် Vector Search
 

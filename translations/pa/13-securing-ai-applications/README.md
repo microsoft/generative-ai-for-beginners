@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਨਰੇਟਿਵ AI ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਸੁਰੱਖਿਆ
 
-[![ਜਨਰੇਟਿਵ AI ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਸੁਰੱਖਿਆ](../../../translated_images/pa/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![ਜਨਰੇਟਿਵ AI ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਸੁਰੱਖਿਆ](../../../translated_images/pa/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## ਪਰਿਚਯ
 
@@ -116,7 +116,7 @@ LLMs ਉਹ ਡਾਟਾ ਜੋ ਉਹ ਵਰਤਦੇ ਹਨ, ਉਸ ਦੀ ਪ
 
 > AI ਰੈੱਡ ਟੀਮਿੰਗ ਦਾ ਅਭਿਆਸ ਹੁਣ ਇੱਕ ਵਧੇਰੇ ਵਿਸਤਾਰਤ ਅਰਥ ਲੈ ਚੁੱਕਾ ਹੈ: ਇਹ ਸਿਰਫ ਸੁਰੱਖਿਆ ਦੀਆਂ ਕਮਜ਼ੋਰੀਆਂ ਦੀ ਜਾਂਚ ਕਰਨ ਤੱਕ ਹੀ ਸੀਮਿਤ ਨਹੀਂ ਹੈ, ਸਗੋਂ ਹੋਰ ਸਿਸਟਮ ਦੀਆਂ ਨਾਕਾਮੀਆਂ ਦੀ ਜਾਂਚ ਕਰਨ ਨੂੰ ਵੀ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਸੰਭਾਵਿਤ ਹਾਨੀਕਾਰਕ ਸਮੱਗਰੀ ਦੀ ਪੈਦਾਵਾਰ। AI ਸਿਸਟਮ ਨਵੇਂ ਖਤਰੇ ਲੈ ਕੇ ਆਉਂਦੇ ਹਨ, ਅਤੇ ਰੈੱਡ ਟੀਮਿੰਗ ਉਹਨਾਂ ਨਵੇਂ ਖਤਰੇ ਨੂੰ ਸਮਝਣ ਦਾ ਕੇਂਦਰ ਹੈ, ਜਿਵੇਂ ਕਿ ਪ੍ਰੌੰਪਟ ਇੰਜੈਕਸ਼ਨ ਅਤੇ ਅਧਾਰਹੀਣ ਸਮੱਗਰੀ ਪੈਦਾ ਕਰਨਾ। - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![ਰੈੱਡ ਟੀਮਿੰਗ ਲਈ ਮਾਰਗਦਰਸ਼ਨ ਅਤੇ ਸਰੋਤ](../../../translated_images/pa/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![ਰੈੱਡ ਟੀਮਿੰਗ ਲਈ ਮਾਰਗਦਰਸ਼ਨ ਅਤੇ ਸਰੋਤ](../../../translated_images/pa/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 ਹੇਠਾਂ ਕੁਝ ਮੁੱਖ ਅੰਕ ਦਿੱਤੇ ਗਏ ਹਨ ਜੋ Microsoft ਦੇ AI ਰੈੱਡ ਟੀਮ ਪ੍ਰੋਗਰਾਮ ਨੂੰ ਆਕਾਰ ਦੇਣ ਵਿੱਚ ਸਹਾਇਕ ਰਹੇ ਹਨ।
 

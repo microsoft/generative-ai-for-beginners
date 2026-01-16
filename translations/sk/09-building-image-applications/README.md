@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváranie aplikácií na generovanie obrázkov
 
-[![Vytváranie aplikácií na generovanie obrázkov](../../../translated_images/sk/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Vytváranie aplikácií na generovanie obrázkov](../../../translated_images/sk/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Generovanie textu nie je jedinou schopnosťou LLM. Je možné generovať aj obrázky na základe textových popisov. Obrázky ako modality môžu byť veľmi užitočné v mnohých oblastiach, ako je MedTech, architektúra, cestovný ruch, vývoj hier a ďalšie. V tejto kapitole sa pozrieme na dva najpopulárnejšie modely na generovanie obrázkov, DALL-E a Midjourney.
 
@@ -43,7 +43,7 @@ V rámci tejto lekcie budeme pokračovať v práci s naším startupom Edu4All. 
 
 Tu je príklad toho, čo by mohli študenti Edu4All vytvoriť, ak pracujú v triede na téme pamiatok:
 
-![Startup Edu4All, trieda o pamiatkach, Eiffelova veža](../../../translated_images/sk/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, trieda o pamiatkach, Eiffelova veža](../../../translated_images/sk/startup.94d6b79cc4bb3f5a.webp)
 
 pomocou promptu ako
 
@@ -272,9 +272,9 @@ Tu je príklad pomocou GPT Image:
   Základný obrázok by obsahoval iba salónik s bazénom, ale konečný obrázok by mal plameniaka:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sk/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sk/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sk/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sk/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sk/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sk/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Vytvárať variácie**. Ide o to, že vezmete existujúci obrázok a požiadate o vytvorenie variácií. Na vytvorenie variácie poskytnete obrázok a textový prompt a kód ako takýto:
@@ -298,11 +298,11 @@ Pozrime sa na príklad, ako teplota funguje, spustením tohto promptu dvakrát:
 
 > Prompt: "Zajac na koni, držiaci lízanku, na hmlistom lúke, kde rastú narcisy"
 
-![Zajac na koni držiaci lízanku, verzia 1](../../../translated_images/sk/v1-generated-image.a295cfcffa3c13c2.png)
+![Zajac na koni držiaci lízanku, verzia 1](../../../translated_images/sk/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Teraz spustíme ten istý prompt znova, aby sme videli, že nedostaneme dvakrát ten istý obrázok:
 
-![Generovaný obrázok zajaca na koni](../../../translated_images/sk/v2-generated-image.33f55a3714efe61d.png)
+![Generovaný obrázok zajaca na koni](../../../translated_images/sk/v2-generated-image.33f55a3714efe61d.webp)
 
 Ako vidíte, obrázky sú podobné, ale nie rovnaké. Skúsme zmeniť hodnotu teploty na 0,1 a uvidíme, čo sa stane:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Teraz, keď spustíte tento kód, dostanete tieto dva obrázky:
 
-- ![Teplota 0, v1](../../../translated_images/sk/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Teplota 0, v2](../../../translated_images/sk/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Teplota 0, v1](../../../translated_images/sk/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Teplota 0, v2](../../../translated_images/sk/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Tu jasne vidíte, ako sa obrázky viac podobajú.
 

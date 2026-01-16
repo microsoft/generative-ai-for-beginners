@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "lt"
 }
 -->
-![Generatyvinis DI pradedantiesiems](../../translated_images/lt/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generatyvinis DI pradedantiesiems](../../translated_images/lt/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 pamoka, mokanti visko, ką reikia žinoti norint pradėti kurti generatyvinės DI programas
 

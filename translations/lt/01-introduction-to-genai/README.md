@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Įvadas į generatyvinį dirbtinį intelektą ir didelius kalbos modelius
 
-[![Įvadas į generatyvinį dirbtinį intelektą ir didelius kalbos modelius](../../../translated_images/lt/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Įvadas į generatyvinį dirbtinį intelektą ir didelius kalbos modelius](../../../translated_images/lt/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
@@ -43,7 +43,7 @@ Mūsų startuolio komanda supranta, kad šio tikslo nepasieksime be vieno iš ga
 
 Generatyvinis DI turėtų revoliucionizuoti mokymosi ir mokymo būdus šiandien, suteikdamas studentams galimybę turėti virtualius mokytojus 24 valandas per parą, kurie teikia didžiulį kiekį informacijos ir pavyzdžių, o mokytojams – pasitelkti inovatyvius įrankius, kad galėtų vertinti savo mokinius ir teikti grįžtamąjį ryšį.
 
-![Penki jauni mokiniai žiūri į monitorių - vaizdas sukurtas DALLE2](../../../translated_images/lt/students-by-DALLE2.b70fddaced1042ee.png)
+![Penki jauni mokiniai žiūri į monitorių - vaizdas sukurtas DALLE2](../../../translated_images/lt/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Pradėkime nuo pagrindinių sąvokų ir terminų, kuriuos naudosime visoje mokymo programoje.
 
@@ -69,7 +69,7 @@ Neuroniniai tinklai (ypač pasikartojantys neuroniniai tinklai – RNN) reikšmi
 
 Taip mes pasiekėme generatyvinį DI šiandien, kuris gali būti laikomas giluminio mokymosi dalimi.
 
-![DI, ML, DL ir generatyvinis DI](../../../translated_images/lt/AI-diagram.c391fa518451a40d.png)
+![DI, ML, DL ir generatyvinis DI](../../../translated_images/lt/AI-diagram.c391fa518451a40d.webp)
 
 Po dešimtmečius trukusių DI srities tyrimų nauja modelio architektūra – vadinama _Transformer_ – įveikė RNN apribojimus, galėdama priimti daug ilgesnes teksto sekas kaip įvestį. Transformeriai yra pagrįsti dėmesio mechanizmu, leidžiančiu modeliui skirti skirtingą dėmesį gautiems įvesties duomenims, „daugiau dėmesio“ skiriant ten, kur koncentruojama svarbiausia informacija, nepriklausomai nuo jų tvarkos teksto sekoje.
 
@@ -81,7 +81,7 @@ Kitame skyriuje nagrinėsime skirtingus generatyvinių DI modelių tipus, tačia
 
 - **Tokenizatorius, tekstas į skaičius**: Dideli kalbos modeliai gauna tekstą kaip įvestį ir generuoja tekstą kaip išvestį. Tačiau, būdami statistiniai modeliai, jie daug geriau veikia su skaičiais nei su tekstinėmis sekomis. Todėl kiekviena įvestis į modelį yra apdorojama tokenizatoriaus prieš naudojant pagrindinį modelį. Tokenas yra teksto dalis – sudaryta iš kintamo simbolių skaičiaus, todėl pagrindinė tokenizatoriaus užduotis yra padalinti įvestį į tokenų masyvą. Tada kiekvienas tokenas susiejamas su tokeno indeksu, kuris yra originalios teksto dalies sveikasis kodavimas.
 
-![Tokenizacijos pavyzdys](../../../translated_images/lt/tokenizer-example.80a5c151ee7d1bd4.png)
+![Tokenizacijos pavyzdys](../../../translated_images/lt/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Išvesties tokenų prognozavimas**: Turėdamas n tokenų kaip įvestį (maksimalus n skaičius skiriasi priklausomai nuo modelio), modelis gali prognozuoti vieną tokeną kaip išvestį. Šis tokenas tada įtraukiamas į kitos iteracijos įvestį, naudojant besiplečiančio lango modelį, leidžiantį geresnę vartotojo patirtį, gaunant vieną (ar kelis) sakinius kaip atsakymą. Tai paaiškina, kodėl, jei kada nors naudojotės ChatGPT, galėjote pastebėti, kad kartais jis atrodo sustojantis sakinio viduryje.
 
@@ -98,23 +98,23 @@ Didelio kalbos modelio įvestis vadinama užklausa, o išvestis – užbaigimu, 
 
   1. Straipsnio, knygos, produktų apžvalgų ir kt. santrauka, kartu su įžvalgų iš neapdorotų duomenų išgavimu.
     
-    ![Santraukos pavyzdys](../../../translated_images/lt/summarization-example.7b7ff97147b3d790.png)
+    ![Santraukos pavyzdys](../../../translated_images/lt/summarization-example.7b7ff97147b3d790.webp)
   
   2. Kūrybinės idėjos ir straipsnio, esė, užduoties ar kt. dizainas.
       
-     ![Kūrybinio rašymo pavyzdys](../../../translated_images/lt/creative-writing-example.e24a685b5a543ad1.png)
+     ![Kūrybinio rašymo pavyzdys](../../../translated_images/lt/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Klausimą**, užduotą pokalbio su agentu forma.
   
-  ![Pokalbio pavyzdys](../../../translated_images/lt/conversation-example.60c2afc0f595fa59.png)
+  ![Pokalbio pavyzdys](../../../translated_images/lt/conversation-example.60c2afc0f595fa59.webp)
 
 - Teksto **užbaigimo fragmentą**, kuris netiesiogiai yra prašymas padėti rašyti.
   
-  ![Teksto užbaigimo pavyzdys](../../../translated_images/lt/text-completion-example.cbb0f28403d42752.png)
+  ![Teksto užbaigimo pavyzdys](../../../translated_images/lt/text-completion-example.cbb0f28403d42752.webp)
 
 - Kodo fragmentą kartu su prašymu paaiškinti ir dokumentuoti jį arba komentarą, prašant sukurti kodo dalį, atliekančią konkrečią užduotį.
   
-  ![Kodo pavyzdys](../../../translated_images/lt/coding-example.50ebabe8a6afff20.png)
+  ![Kodo pavyzdys](../../../translated_images/lt/coding-example.50ebabe8a6afff20.webp)
 
 Aukščiau pateikti pavyzdžiai yra gana paprasti ir nėra skirti būti išsamia didelių kalbos modelių galimybių demonstracija. Jie skirti parodyti generatyvinio DI potencialą, ypač, bet ne tik, švietimo kontekste.
 

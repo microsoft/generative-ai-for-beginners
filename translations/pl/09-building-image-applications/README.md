@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tworzenie aplikacji do generowania obrazów
 
-[![Tworzenie aplikacji do generowania obrazów](../../../translated_images/pl/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Tworzenie aplikacji do generowania obrazów](../../../translated_images/pl/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Generowanie tekstu to nie jedyna funkcja LLM. Możliwe jest również generowanie obrazów na podstawie opisów tekstowych. Obrazy jako forma przekazu mogą być niezwykle przydatne w wielu dziedzinach, takich jak MedTech, architektura, turystyka, tworzenie gier i wiele innych. W tym rozdziale przyjrzymy się dwóm najpopularniejszym modelom generowania obrazów: DALL-E i Midjourney.
 
@@ -43,7 +43,7 @@ W ramach tej lekcji będziemy kontynuować pracę z naszym startupem, Edu4All. S
 
 Oto przykład, co studenci Edu4All mogliby wygenerować, jeśli pracują w klasie nad tematyką zabytków:
 
-![Startup Edu4All, klasa o zabytkach, Wieża Eiffla](../../../translated_images/pl/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, klasa o zabytkach, Wieża Eiffla](../../../translated_images/pl/startup.94d6b79cc4bb3f5a.webp)
 
 używając takiego promptu jak:
 
@@ -272,9 +272,9 @@ Oto przykład użycia GPT Image:
   Bazowy obraz zawierałby tylko salon z basenem, ale ostateczny obraz miałby flaminga:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/pl/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/pl/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/pl/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pl/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pl/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pl/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -299,11 +299,11 @@ Przyjrzyjmy się przykładowi działania temperatury, uruchamiając ten prompt d
 
 > Prompt : "Królik na koniu, trzymający lizaka, na mglistym łące, gdzie rosną żonkile"
 
-![Królik na koniu trzymający lizaka, wersja 1](../../../translated_images/pl/v1-generated-image.a295cfcffa3c13c2.png)
+![Królik na koniu trzymający lizaka, wersja 1](../../../translated_images/pl/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Teraz uruchommy ten sam prompt jeszcze raz, aby zobaczyć, że nie otrzymamy dwa razy tego samego obrazu:
 
-![Wygenerowany obraz królika na koniu](../../../translated_images/pl/v2-generated-image.33f55a3714efe61d.png)
+![Wygenerowany obraz królika na koniu](../../../translated_images/pl/v2-generated-image.33f55a3714efe61d.webp)
 
 Jak widać, obrazy są podobne, ale nie identyczne. Spróbujmy zmienić wartość temperatury na 0.1 i zobaczyć, co się stanie:
 
@@ -332,8 +332,8 @@ generation_response = client.images.create(
 
 Teraz, gdy uruchomisz ten kod, otrzymasz te dwa obrazy:
 
-- ![Temperatura 0, v1](../../../translated_images/pl/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatura 0 , v2](../../../translated_images/pl/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatura 0, v1](../../../translated_images/pl/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0 , v2](../../../translated_images/pl/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Tutaj wyraźnie widać, że obrazy są do siebie bardziej podobne.
 

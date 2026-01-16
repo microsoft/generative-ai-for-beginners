@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge lavkode AI-applikasjoner
 
-[![Bygge lavkode AI-applikasjoner](../../../translated_images/no/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Bygge lavkode AI-applikasjoner](../../../translated_images/no/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klikk på bildet over for å se videoen til denne leksjonen)_
 
@@ -92,17 +92,17 @@ Du vil bygge appen ved hjelp av Copilot i Power Apps ved å følge trinnene nede
 
 1. Bruk tekstområdet på startskjermen til å beskrive appen du vil bygge. For eksempel: **_Jeg vil bygge en app for å spore og administrere studentoppgaver_**. Klikk på **Send**-knappen for å sende prompten til AI Copilot.
 
-![Beskriv appen du vil bygge](../../../translated_images/no/copilot-chat-prompt-powerapps.84250f341d060830.png)
+![Beskriv appen du vil bygge](../../../translated_images/no/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot vil foreslå en Dataverse-tabell med feltene du trenger for å lagre dataene du vil spore, samt noen eksempler på data. Du kan deretter tilpasse tabellen for å møte dine behov ved hjelp av AI Copilot-assistentfunksjonen gjennom samtalesteg.
 
    > **Viktig**: Dataverse er den underliggende dataplattformen for Power Platform. Det er en lavkode dataplattform for lagring av appens data. Det er en fullt administrert tjeneste som lagrer data sikkert i Microsoft Cloud og er klargjort innenfor ditt Power Platform-miljø. Den kommer med innebygde datastyringsfunksjoner, som dataklassifisering, dataopprinnelse, finkornet tilgangskontroll og mer. Du kan lære mer om Dataverse [her](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Foreslåtte felt i din nye tabell](../../../translated_images/no/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
+   ![Foreslåtte felt i din nye tabell](../../../translated_images/no/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Lærerne ønsker å sende e-poster til studentene som har levert oppgavene sine for å holde dem oppdatert på fremdriften av oppgavene. Du kan bruke Copilot til å legge til et nytt felt i tabellen for å lagre studentens e-post. For eksempel kan du bruke følgende prompt for å legge til et nytt felt i tabellen: **_Jeg vil legge til en kolonne for å lagre studentens e-post_**. Klikk på **Send**-knappen for å sende prompten til AI Copilot.
 
-![Legge til et nytt felt](../../../translated_images/no/copilot-new-column.35e15ff21acaf274.png)
+![Legge til et nytt felt](../../../translated_images/no/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot vil generere et nytt felt, og du kan deretter tilpasse feltet for å møte dine behov.
 
@@ -112,7 +112,7 @@ Du vil bygge appen ved hjelp av Copilot i Power Apps ved å følge trinnene nede
 
 1. For at lærerne skal kunne sende e-poster til studentene, kan du bruke Copilot til å legge til en ny skjerm i appen. For eksempel kan du bruke følgende prompt for å legge til en ny skjerm i appen: **_Jeg vil legge til en skjerm for å sende e-poster til studentene_**. Klikk på **Send**-knappen for å sende prompten til AI Copilot.
 
-![Legge til en ny skjerm via en prompt-instruksjon](../../../translated_images/no/copilot-new-screen.2e0bef7132a17392.png)
+![Legge til en ny skjerm via en prompt-instruksjon](../../../translated_images/no/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot vil generere en ny skjerm, og du kan deretter tilpasse skjermen for å møte dine behov.
 
@@ -147,15 +147,15 @@ For å opprette en tabell i Dataverse ved hjelp av Copilot, følg trinnene neden
 
 2. På navigasjonslinjen til venstre, velg **Tabeller** og klikk deretter på **Beskriv den nye tabellen**.
 
-![Velg ny tabell](../../../translated_images/no/describe-new-table.0792373eb757281e.png)
+![Velg ny tabell](../../../translated_images/no/describe-new-table.0792373eb757281e.webp)
 
 3. På skjermen **Beskriv den nye tabellen**, bruk tekstområdet til å beskrive tabellen du vil opprette. For eksempel, **_Jeg vil opprette en tabell for å lagre fakturainformasjon_**. Klikk på **Send**-knappen for å sende forespørselen til AI Copilot.
 
-![Beskriv tabellen](../../../translated_images/no/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
+![Beskriv tabellen](../../../translated_images/no/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot vil foreslå en Dataverse-tabell med feltene du trenger for å lagre dataene du ønsker å spore, samt noen eksempler på data. Du kan deretter tilpasse tabellen etter dine behov ved hjelp av AI Copilot-assistenten gjennom samtalebaserte trinn.
 
-![Foreslått Dataverse-tabell](../../../translated_images/no/copilot-dataverse-table.b3bc936091324d9d.png)
+![Foreslått Dataverse-tabell](../../../translated_images/no/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Økonomiteamet ønsker å sende en e-post til leverandøren for å oppdatere dem med den nåværende statusen for fakturaen deres. Du kan bruke Copilot til å legge til et nytt felt i tabellen for å lagre leverandørens e-postadresse. For eksempel kan du bruke følgende forespørsel for å legge til et nytt felt i tabellen: **_Jeg vil legge til en kolonne for å lagre leverandørens e-postadresse_**. Klikk på **Send**-knappen for å sende forespørselen til AI Copilot.
 
@@ -184,7 +184,7 @@ Noen av de ferdiglagde AI-modellene som er tilgjengelige i Power Platform inklud
 
 Med Tilpassede AI-modeller kan du ta med din egen modell inn i AI Builder slik at den kan fungere som enhver AI Builder-tilpasset modell, og lar deg trene modellen ved hjelp av dine egne data. Du kan bruke disse modellene til å automatisere prosesser og forutsi resultater i både Power Apps og Power Automate. Når du bruker din egen modell, gjelder det visse begrensninger. Les mer om disse [begrensningene](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI Builder-modeller](../../../translated_images/no/ai-builder-models.8069423b84cfc47f.png)
+![AI Builder-modeller](../../../translated_images/no/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Oppgave #2 - Bygg en fakturabehandlingsflyt for vår oppstart
 
@@ -198,7 +198,7 @@ For å bygge en arbeidsflyt som vil hjelpe økonomiteamet med å behandle faktur
 
 2. Bruk tekstområdet på startskjermen til å beskrive arbeidsflyten du vil bygge. For eksempel, **_Behandle en faktura når den ankommer innboksen min_**. Klikk på **Send**-knappen for å sende forespørselen til AI Copilot.
 
-   ![Copilot Power Automate](../../../translated_images/no/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
+   ![Copilot Power Automate](../../../translated_images/no/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot vil foreslå handlingene du trenger for å utføre oppgaven du vil automatisere. Du kan klikke på **Neste**-knappen for å gå gjennom de neste trinnene.
 
@@ -212,7 +212,7 @@ For å bygge en arbeidsflyt som vil hjelpe økonomiteamet med å behandle faktur
 
 8. Fjern **Betingelse**-handlingen fra flyten fordi du ikke vil bruke den. Det bør se ut som følgende skjermbilde:
 
-   ![Power Automate, fjern handlinger](../../../translated_images/no/powerautomate-remove-actions.7216392fe684ceba.png)
+   ![Power Automate, fjern handlinger](../../../translated_images/no/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Klikk på **Legg til en handling**-knappen og søk etter **Dataverse**. Velg **Legg til en ny rad**-handlingen.
 
@@ -227,7 +227,7 @@ For å bygge en arbeidsflyt som vil hjelpe økonomiteamet med å behandle faktur
     - Status - Sett **Status** til **Venter**.
     - Leverandørens e-post - Bruk **Fra** dynamisk innhold fra **Når en ny e-post ankommer**-utløseren.
 
-    ![Power Automate legg til rad](../../../translated_images/no/powerautomate-add-row.5edce45e5dd3d51e.png)
+    ![Power Automate legg til rad](../../../translated_images/no/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Når du er ferdig med flyten, klikker du på **Lagre**-knappen for å lagre flyten. Du kan deretter teste flyten ved å sende en e-post med en faktura til mappen du spesifiserte i utløseren.
 
@@ -241,7 +241,7 @@ GPT-modeller gjennomgår omfattende trening på store mengder data, noe som gjø
 
 For eksempel kan du bygge flyter for automatisk generering av tekst for ulike bruksområder, som utkast til e-poster, produktbeskrivelser og mer. Du kan også bruke modellen til å generere tekst for ulike applikasjoner, som chatbots og kundeserviceapplikasjoner som gjør det mulig for kundeserviceagenter å svare effektivt og raskt på kundehenvendelser.
 
-![Opprett en forespørsel](../../../translated_images/no/create-prompt-gpt.69d429300c2e870a.png)
+![Opprett en forespørsel](../../../translated_images/no/create-prompt-gpt.69d429300c2e870a.webp)
 
 For å lære hvordan du bruker denne AI-modellen i Power Automate, gå gjennom [Legg til intelligens med AI Builder og GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko)-modulen.
 

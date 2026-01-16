@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integracja z wywoływaniem funkcji
 
-[![Integracja z wywoływaniem funkcji](../../../translated_images/pl/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracja z wywoływaniem funkcji](../../../translated_images/pl/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 W poprzednich lekcjach nauczyłeś się już całkiem sporo. Jednak zawsze można coś poprawić. Możemy na przykład zadbać o bardziej spójny format odpowiedzi, aby ułatwić pracę z odpowiedzią w dalszych etapach. Możemy również dodać dane z innych źródeł, aby wzbogacić naszą aplikację.
 
@@ -179,7 +179,7 @@ Teraz możemy wysłać oba żądania do LLM i zbadać otrzymaną odpowiedź, zna
 
 Jak więc rozwiązać problem formatowania? Korzystając z wywoływania funkcji, możemy upewnić się, że otrzymujemy dane ustrukturyzowane. Podczas korzystania z wywoływania funkcji LLM faktycznie nie wywołuje ani nie uruchamia żadnych funkcji. Zamiast tego tworzymy strukturę, której LLM ma przestrzegać w swoich odpowiedziach. Następnie używamy tych ustrukturyzowanych odpowiedzi, aby wiedzieć, jaką funkcję uruchomić w naszych aplikacjach.
 
-![przepływ funkcji](../../../translated_images/pl/Function-Flow.083875364af4f4bb.png)
+![przepływ funkcji](../../../translated_images/pl/Function-Flow.083875364af4f4bb.webp)
 
 Możemy następnie wziąć to, co zwróci funkcja, i przesłać to z powrotem do LLM. LLM odpowie wtedy w języku naturalnym, aby odpowiedzieć na zapytanie użytkownika.
 
@@ -201,7 +201,7 @@ Proces tworzenia wywołania funkcji obejmuje 3 główne kroki:
 2. **Odczytanie** odpowiedzi modelu w celu wykonania akcji, np. wywołania funkcji lub żądania API.
 3. **Wykonanie** kolejnego wywołania API Chat Completions z odpowiedzią z funkcji, aby wykorzystać te informacje do stworzenia odpowiedzi dla użytkownika.
 
-![Przepływ LLM](../../../translated_images/pl/LLM-Flow.3285ed8caf4796d7.png)
+![Przepływ LLM](../../../translated_images/pl/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Krok 1 - tworzenie wiadomości
 
