@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng tạo văn bản
 
-[![Xây dựng ứng dụng tạo văn bản](../../../translated_images/06-lesson-banner.a5c629f990a636c8.vi.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Xây dựng ứng dụng tạo văn bản](../../../translated_images/vi/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Nhấp vào hình ảnh trên để xem video bài học này)_
 

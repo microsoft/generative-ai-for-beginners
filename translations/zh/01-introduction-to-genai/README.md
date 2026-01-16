@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 生成式人工智能和大型语言模型简介
 
-[![生成式人工智能和大型语言模型简介](../../../translated_images/01-lesson-banner.2424cfd092f43366.zh.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![生成式人工智能和大型语言模型简介](../../../translated_images/zh/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _（点击上方图片观看本课视频）_
 
@@ -43,7 +43,7 @@ _（点击上方图片观看本课视频）_
 
 生成式人工智能有望彻底改变我们今天的学习和教学方式，学生可以随时随地通过虚拟教师获取大量信息和示例，而教师则可以利用创新工具评估学生并提供反馈。
 
-![五个年轻学生在看显示器 - 图片由DALLE2提供](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.zh.png)
+![五个年轻学生在看显示器 - 图片由DALLE2提供](../../../translated_images/zh/students-by-DALLE2.b70fddaced1042ee.png)
 
 首先，让我们定义一些将在整个课程中使用的基本概念和术语。
 
@@ -69,7 +69,7 @@ _（点击上方图片观看本课视频）_
 
 这就是我们如何发展到今天的生成式人工智能，它可以被视为深度学习的一个子集。
 
-![人工智能、机器学习、深度学习和生成式人工智能](../../../translated_images/AI-diagram.c391fa518451a40d.zh.png)
+![人工智能、机器学习、深度学习和生成式人工智能](../../../translated_images/zh/AI-diagram.c391fa518451a40d.png)
 
 经过数十年的人工智能领域研究，一种名为_Transformer_的新型模型架构克服了RNN的局限性，能够接受更长的文本序列作为输入。Transformer基于注意力机制，使模型能够对接收到的输入赋予不同的权重，“更加关注”文本序列中最相关的信息，而不受其顺序的影响。
 
@@ -81,7 +81,7 @@ _（点击上方图片观看本课视频）_
 
 - **分词器，将文本转化为数字**：大型语言模型接收文本作为输入，并生成文本作为输出。然而，作为统计模型，它们处理数字比处理文本序列更为高效。这就是为什么模型在使用核心模型之前，每个输入都需要通过分词器处理。一个token是一个文本片段——由可变数量的字符组成，因此分词器的主要任务是将输入分割成一个个token数组。然后，每个token会被映射为一个token索引，即原始文本片段的整数编码。
 
-![分词示例](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.zh.png)
+![分词示例](../../../translated_images/zh/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **预测输出token**：给定n个输入token（每个模型的最大n值不同），模型能够预测一个输出token。然后，这个token会被纳入下一次迭代的输入中，以扩展窗口的模式运行，从而提供更好的用户体验，生成一个（或多个）句子作为回答。这也解释了为什么如果你曾使用过ChatGPT，可能会注意到有时它会在句子中途停止。
 
@@ -98,23 +98,23 @@ _（点击上方图片观看本课视频）_
 
   1. 文章、书籍、产品评论等的摘要，以及从非结构化数据中提取见解。
     
-    ![摘要示例](../../../translated_images/summarization-example.7b7ff97147b3d790.zh.png)
+    ![摘要示例](../../../translated_images/zh/summarization-example.7b7ff97147b3d790.png)
   
   2. 创意构思和设计文章、论文、作业等。
       
-     ![创意写作示例](../../../translated_images/creative-writing-example.e24a685b5a543ad1.zh.png)
+     ![创意写作示例](../../../translated_images/zh/creative-writing-example.e24a685b5a543ad1.png)
 
 - **问题**，以与代理对话的形式提出。
   
-  ![对话示例](../../../translated_images/conversation-example.60c2afc0f595fa59.zh.png)
+  ![对话示例](../../../translated_images/zh/conversation-example.60c2afc0f595fa59.png)
 
 - 一段需要**补全的文本**，这隐含了对写作辅助的需求。
   
-  ![文本补全示例](../../../translated_images/text-completion-example.cbb0f28403d42752.zh.png)
+  ![文本补全示例](../../../translated_images/zh/text-completion-example.cbb0f28403d42752.png)
 
 - 一段**代码**，同时要求解释和记录，或者一条要求生成执行特定任务代码的注释。
   
-  ![代码示例](../../../translated_images/coding-example.50ebabe8a6afff20.zh.png)
+  ![代码示例](../../../translated_images/zh/coding-example.50ebabe8a6afff20.png)
 
 以上示例相对简单，并非旨在全面展示大型语言模型的能力。它们的目的是展示生成式人工智能的潜力，特别是在教育领域的应用，但不限于此。
 

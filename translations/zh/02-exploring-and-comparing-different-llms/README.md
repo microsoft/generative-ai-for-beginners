@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 探索和比较不同的LLM
 
-[![探索和比较不同的LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60.zh.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![探索和比较不同的LLM](../../../translated_images/zh/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _点击上方图片观看本课视频_
 
@@ -59,13 +59,13 @@ LLM模型种类繁多，选择哪种模型取决于您的使用目的、数据�
 - **它们是非常大的模型**，基于非常深的神经网络，训练了数十亿个参数。
 - **通常旨在作为其他模型的“基础”**，即它们可以作为其他模型的起点，通过微调来构建其他模型。
 
-![基础模型与LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.zh.png)
+![基础模型与LLM](../../../translated_images/zh/FoundationModel.e4859dbb7a825c94.png)
 
 图片来源：[基础模型和大型语言模型的基本指南 | 作者：Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 为了进一步澄清这一区别，让我们以ChatGPT为例。构建ChatGPT的第一个版本时，使用了一个名为GPT-3.5的模型作为基础模型。这意味着OpenAI使用了一些特定于聊天的数据来创建一个经过调优的GPT-3.5版本，使其在对话场景（如聊天机器人）中表现出色。
 
-![基础模型](../../../translated_images/Multimodal.2c389c6439e0fc51.zh.png)
+![基础模型](../../../translated_images/zh/Multimodal.2c389c6439e0fc51.png)
 
 图片来源：[2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ LLM还可以根据其生成的输出进行分类。
 
 嵌入模型是一组可以将文本转换为数值形式的模型，称为嵌入，即输入文本的数值表示。嵌入使机器更容易理解单词或句子之间的关系，并可以作为其他模型的输入，例如分类模型或在数值数据上性能更好的聚类模型。嵌入模型通常用于迁移学习，在这种情况下，模型为一个有大量数据的替代任务构建，然后模型权重（嵌入）被重新用于其他下游任务。此类别的一个示例是[OpenAI嵌入](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)。
 
-![嵌入](../../../translated_images/Embedding.c3708fe988ccf760.zh.png)
+![嵌入](../../../translated_images/zh/Embedding.c3708fe988ccf760.png)
 
 图像生成模型是生成图像的模型。这些模型通常用于图像编辑、图像合成和图像翻译。图像生成模型通常基于大型图像数据集进行训练，例如[LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)，可以用于生成新图像或编辑现有图像，使用修复、超分辨率和上色技术。示例包括[DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst)和[Stable Diffusion模型](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)。
 
-![图像生成](../../../translated_images/Image.349c080266a763fd.zh.png)
+![图像生成](../../../translated_images/zh/Image.349c080266a763fd.png)
 
 文本和代码生成模型是生成文本或代码的模型。这些模型通常用于文本摘要、翻译和问答。文本生成模型通常基于大型文本数据集进行训练，例如[BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)，可以用于生成新文本或回答问题。代码生成模型，例如[CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)，通常基于大型代码数据集进行训练，例如GitHub，可以用于生成新代码或修复现有代码中的错误。
 
-![文本和代码生成](../../../translated_images/Text.a8c0cf139e5cc2a0.zh.png)
+![文本和代码生成](../../../translated_images/zh/Text.a8c0cf139e5cc2a0.png)
 
 ### 编码器-解码器与仅解码器
 
@@ -122,23 +122,23 @@ LLM还可以根据其生成的输出进行分类。
 
 - 在目录中找到感兴趣的基础模型——无论是专有模型还是开源模型，可以按任务、许可证或名称进行筛选。为了提高搜索效率，模型被组织到不同的集合中，例如Azure OpenAI集合、Hugging Face集合等。
 
-![模型目录](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.zh.png)
+![模型目录](../../../translated_images/zh/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - 查看模型卡，包括关于预期用途和训练数据的详细描述、代码示例以及内部评估库的评估结果。
 
-![模型卡](../../../translated_images/ModelCard.598051692c6e400d.zh.png)
+![模型卡](../../../translated_images/zh/ModelCard.598051692c6e400d.png)
 
 - 通过[模型基准测试](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)面板比较行业内可用的模型和数据集的基准测试，以评估哪个模型最符合业务场景。
 
-![模型基准测试](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.zh.png)
+![模型基准测试](../../../translated_images/zh/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - 利用Azure AI Studio的实验和跟踪功能，在自定义训练数据上微调模型，以提高模型在特定工作负载中的性能。
 
-![模型微调](../../../translated_images/FineTuning.aac48f07142e36fd.zh.png)
+![模型微调](../../../translated_images/zh/FineTuning.aac48f07142e36fd.png)
 
 - 将原始预训练模型或微调版本部署到远程实时推理——托管计算——或无服务器API端点——[按需付费](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst)——以便应用程序可以使用它。
 
-![模型部署](../../../translated_images/ModelDeploy.890da48cbd0bccdb.zh.png)
+![模型部署](../../../translated_images/zh/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > 目录中的所有模型目前并不都支持微调和/或按需付费部署。请查看模型卡以了解模型的功能和限制。
@@ -157,7 +157,7 @@ LLM还可以根据其生成的输出进行分类。
 
 - **微调模型**。通过在自己的数据上进一步训练模型，使其更加精确并满足需求，但可能成本较高。
 
-![LLM部署](../../../translated_images/Deploy.18b2d27412ec8c02.zh.png)
+![LLM部署](../../../translated_images/zh/Deploy.18b2d27412ec8c02.png)
 
 图片来源：[企业部署LLM的四种方式 | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

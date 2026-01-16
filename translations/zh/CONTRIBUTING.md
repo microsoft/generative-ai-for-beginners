@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 例如，将鼠标悬停在文件中的任意链接上时，您会看到提示，按 **ctrl + 点击** 即可跳转链接。
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.zh.png)
+![VS code follow links screenshot](../../translated_images/zh/vscode-follow-link.85520ab6a1237adc.png)
 
 如果您点击链接后本地无法打开，那么该链接肯定会触发工作流失败，且在 GitHub 上也无法正常工作。
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 当您输入 `./` 或 `../` 时，VS Code 会根据您输入的内容弹出可选项供您选择。
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.zh.png)
+![VS code select relative path screenshot](../../translated_images/zh/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 点击所需的文件或文件夹即可确保路径无误。
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 如果没有，您可能会看到如下错误：
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.zh.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/zh/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 解决方法是打开工作流提示的文件路径，在相对路径末尾添加跟踪 ID。
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 如果没有，您可能会看到如下错误：
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.zh.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/zh/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 解决方法是打开工作流提示的文件路径，在 URL 末尾添加跟踪 ID。
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 如果有，您可能会看到如下错误：
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.zh.png)
+![GitHub check country locale comment screenshot](../../translated_images/zh/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 解决方法是打开工作流提示的文件路径，删除 URL 中的语言代码。
 

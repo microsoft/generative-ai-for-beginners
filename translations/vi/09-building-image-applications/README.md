@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng tạo hình ảnh
 
-[![Xây dựng ứng dụng tạo hình ảnh](../../../translated_images/09-lesson-banner.906e408c741f4411.vi.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Xây dựng ứng dụng tạo hình ảnh](../../../translated_images/vi/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs không chỉ dừng lại ở việc tạo văn bản. Chúng cũng có thể tạo hình ảnh từ các mô tả văn bản. Việc sử dụng hình ảnh như một phương thức có thể rất hữu ích trong nhiều lĩnh vực như công nghệ y tế, kiến trúc, du lịch, phát triển trò chơi và nhiều lĩnh vực khác. Trong chương này, chúng ta sẽ tìm hiểu về hai mô hình tạo hình ảnh phổ biến nhất, DALL-E và Midjourney.
 
@@ -43,7 +43,7 @@ Trong bài học này, chúng ta sẽ tiếp tục làm việc với startup c�
 
 Đây là những gì học sinh của Edu4All có thể tạo ra, ví dụ, nếu họ đang học về các công trình kiến trúc:
 
-![Startup Edu4All, lớp học về các công trình kiến trúc, Tháp Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5a.vi.png)
+![Startup Edu4All, lớp học về các công trình kiến trúc, Tháp Eiffel](../../../translated_images/vi/startup.94d6b79cc4bb3f5a.png)
 
 sử dụng một prompt như
 
@@ -272,9 +272,9 @@ Dưới đây là một ví dụ sử dụng GPT Image:
   Hình ảnh gốc chỉ chứa ghế dài với hồ bơi nhưng hình ảnh cuối cùng sẽ có một con chim hồng hạc:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.vi.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.vi.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.vi.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Tạo các biến thể**. Ý tưởng là bạn lấy một hình ảnh hiện có và yêu cầu tạo các biến thể. Để tạo một biến thể, bạn cung cấp một hình ảnh và một prompt văn bản và mã như sau:
@@ -298,11 +298,11 @@ Hãy xem một ví dụ về cách temperature hoạt động, bằng cách ch�
 
 > Prompt: "Thỏ trên lưng ngựa, cầm kẹo mút, trên đồng cỏ sương mù nơi mọc hoa thủy tiên"
 
-![Thỏ trên lưng ngựa cầm kẹo mút, phiên bản 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.vi.png)
+![Thỏ trên lưng ngựa cầm kẹo mút, phiên bản 1](../../../translated_images/vi/v1-generated-image.a295cfcffa3c13c2.png)
 
 Bây giờ hãy chạy lại prompt đó để xem rằng chúng ta sẽ không nhận được cùng một hình ảnh hai lần:
 
-![Hình ảnh được tạo của thỏ trên lưng ngựa](../../../translated_images/v2-generated-image.33f55a3714efe61d.vi.png)
+![Hình ảnh được tạo của thỏ trên lưng ngựa](../../../translated_images/vi/v2-generated-image.33f55a3714efe61d.png)
 
 Như bạn thấy, các hình ảnh tương tự nhau, nhưng không giống hệt. Hãy thử thay đổi giá trị temperature thành 0.1 và xem điều gì xảy ra:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Bây giờ khi bạn chạy mã này, bạn sẽ nhận được hai hình ảnh sau:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.vi.png)
-- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.vi.png)
+- ![Temperature 0, v1](../../../translated_images/vi/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Temperature 0, v2](../../../translated_images/vi/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Ở đây bạn có thể thấy rõ cách các hình ảnh giống nhau hơn.
 

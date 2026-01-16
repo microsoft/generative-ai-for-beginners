@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.vi.png)
+![Generative AI For Beginners](../../translated_images/vi/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 Bài học dạy mọi thứ bạn cần biết để bắt đầu xây dựng các ứng dụng AI Tạo sinh
 

@@ -33,7 +33,7 @@ SLM được huấn luyện trên lượng lớn dữ liệu văn bản. Trong q
 
 Việc phát triển SLM phù hợp với nhu cầu ngày càng tăng về các mô hình có thể triển khai trong môi trường hạn chế tài nguyên, như thiết bị di động hoặc nền tảng điện toán biên, nơi mà LLM đầy đủ có thể không thực tế do yêu cầu tài nguyên lớn. Bằng cách tập trung vào hiệu quả, SLM cân bằng giữa hiệu suất và khả năng tiếp cận, giúp mở rộng ứng dụng trong nhiều lĩnh vực khác nhau.  
 
-![slm](../../../translated_images/slm.4058842744d0444a.vi.png)  
+![slm](../../../translated_images/vi/slm.4058842744d0444a.png)  
 
 ## Mục tiêu học tập  
 
@@ -135,7 +135,7 @@ Chúng ta có thể sử dụng mô hình Phi-3/3.5 Family dựa trên các kị
 
 Chúng ta hy vọng sử dụng Phi-3/3.5 trong các kịch bản khác nhau. Tiếp theo, chúng ta sẽ sử dụng Phi-3/3.5 dựa trên các kịch bản khác nhau.  
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.vi.png)  
+![phi3](../../../translated_images/vi/phi3.655208c3186ae381.png)  
 
 ### Sự khác biệt khi suy luận qua API đám mây  
 
@@ -145,9 +145,9 @@ GitHub Models là cách trực tiếp nhất. Bạn có thể nhanh chóng truy 
 
 - Demo: So sánh hiệu quả của Phi-3-mini và Phi-3.5-mini trong các kịch bản tiếng Trung  
 
-![phi3](../../../translated_images/gh1.126c6139713b622b.vi.png)  
+![phi3](../../../translated_images/vi/gh1.126c6139713b622b.png)  
 
-![phi35](../../../translated_images/gh2.07d7985af66f178d.vi.png)  
+![phi35](../../../translated_images/vi/gh2.07d7985af66f178d.png)  
 
 **Azure AI Studio**  
 

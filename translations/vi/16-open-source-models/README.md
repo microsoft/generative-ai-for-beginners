@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.vi.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/vi/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Giới thiệu
 
@@ -41,12 +41,12 @@ Trong bài học này, chúng tôi sẽ gọi các mô hình là "mô hình mở
 
 **Chi phí** - Chi phí trên mỗi token khi sử dụng và triển khai các mô hình này thấp hơn so với các mô hình độc quyền. Khi xây dựng các ứng dụng AI tạo sinh, nên xem xét hiệu suất so với giá cả khi làm việc với các mô hình này cho trường hợp sử dụng của bạn.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.vi.png)
+![Model Cost](../../../translated_images/vi/model-price.3f5a3e4d32ae00b4.png)
 Nguồn: Artificial Analysis
 
 **Linh hoạt** - Làm việc với các mô hình mở cho phép bạn linh hoạt trong việc sử dụng các mô hình khác nhau hoặc kết hợp chúng. Một ví dụ là [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) nơi người dùng có thể chọn mô hình được sử dụng trực tiếp trong giao diện người dùng:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.vi.png)
+![Choose Model](../../../translated_images/vi/choose-model.f095d15bbac92214.png)
 
 ## Khám phá Các Mô hình Mở Khác nhau
 
@@ -74,7 +74,7 @@ Không có câu trả lời duy nhất cho việc chọn một mô hình mở. M
 
 Khi muốn so sánh các LLM theo các loại khác nhau, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) là một nguồn tài nguyên tuyệt vời khác:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.vi.png)
+![Model Quality](../../../translated_images/vi/model-quality.aaae1c22e00f7ee1.png)
 Nguồn: Artificial Analysis
 
 Nếu làm việc trên một trường hợp sử dụng cụ thể, tìm kiếm các phiên bản tinh chỉnh tập trung vào cùng lĩnh vực có thể hiệu quả. Thử nghiệm với nhiều mô hình mở để xem chúng hoạt động như thế nào theo kỳ vọng của bạn và người dùng cũng là một thực hành tốt.
