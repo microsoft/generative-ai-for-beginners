@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Δημιουργία Εφαρμογών Γεννήτριας Εικόνων
 
-[![Δημιουργία Εφαρμογών Γεννήτριας Εικόνων](../../../translated_images/el/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Δημιουργία Εφαρμογών Γεννήτριας Εικόνων](../../../translated_images/el/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Τα LLMs δεν περιορίζονται μόνο στη δημιουργία κειμένου. Είναι επίσης δυνατό να δημιουργηθούν εικόνες από περιγραφές κειμένου. Η ύπαρξη εικόνων ως μέσο μπορεί να είναι εξαιρετικά χρήσιμη σε πολλούς τομείς, όπως η ιατρική τεχνολογία, η αρχιτεκτονική, ο τουρισμός, η ανάπτυξη παιχνιδιών και άλλα. Σε αυτό το κεφάλαιο, θα εξετάσουμε τα δύο πιο δημοφιλή μοντέλα δημιουργίας εικόνων, το DALL-E και το Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ακολουθεί ένα παράδειγμα του τι θα μπορούσαν να δημιουργήσουν οι μαθητές του Edu4All εάν εργάζονται στην τάξη για μνημεία:
 
-![Startup Edu4All, τάξη για μνημεία, Πύργος του Άιφελ](../../../translated_images/el/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, τάξη για μνημεία, Πύργος του Άιφελ](../../../translated_images/el/startup.94d6b79cc4bb3f5a.webp)
 
 χρησιμοποιώντας μια προτροπή όπως
 
@@ -273,9 +273,9 @@ _Πηγή εικόνας Wikipedia, εικόνα που δημιουργήθηκ
   Η αρχική εικόνα θα περιείχε μόνο το lounge με την πισίνα, αλλά η τελική εικόνα θα είχε ένα φλαμίνγκο:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/el/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/el/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/el/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/el/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/el/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/el/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ _Πηγή εικόνας Wikipedia, εικόνα που δημιουργήθηκ
 
 > Προτροπή: "Λαγός πάνω σε άλογο, κρατώντας γλειφιτζούρι, σε ομιχλώδες λιβάδι όπου φυτρώνουν νάρκισσοι"
 
-![Λαγός πάνω σε άλογο κρατώντας γλειφιτζούρι, έκδοση 1](../../../translated_images/el/v1-generated-image.a295cfcffa3c13c2.png)
+![Λαγός πάνω σε άλογο κρατώντας γλειφιτζούρι, έκδοση 1](../../../translated_images/el/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Τώρα ας εκτελέσουμε την ίδια προτροπή για να δούμε ότι δεν θα πάρουμε την ίδια εικόνα δύο φορές:
 
-![Παραγόμενη εικόνα λαγού πάνω σε άλογο](../../../translated_images/el/v2-generated-image.33f55a3714efe61d.png)
+![Παραγόμενη εικόνα λαγού πάνω σε άλογο](../../../translated_images/el/v2-generated-image.33f55a3714efe61d.webp)
 
 Όπως μπορείτε να δείτε, οι εικόνες είναι παρόμοιες, αλλά όχι ίδιες. Ας δοκιμάσουμε να αλλάξουμε την τιμή της θερμοκρασίας σε 0.1 και να δούμε τι συμβαίνει:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Τώρα όταν εκτελέσετε αυτόν τον κώδικα, θα πάρετε αυτές τις δύο εικόνες:
 
-- ![Θερμοκρασία 0, έκδοση 1](../../../translated_images/el/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Θερμοκρασία 0, έκδοση 2](../../../translated_images/el/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Θερμοκρασία 0, έκδοση 1](../../../translated_images/el/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Θερμοκρασία 0, έκδοση 2](../../../translated_images/el/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Εδώ μπορείτε να δείτε καθαρά πώς οι εικόνες μοιάζουν περισσότερο μεταξύ τους.
 

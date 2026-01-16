@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जनरेटिव एआई-संचालित चैट एप्लिकेशन बनाना
 
-[![जनरेटिव एआई-संचालित चैट एप्लिकेशन बनाना](../../../translated_images/hi/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![जनरेटिव एआई-संचालित चैट एप्लिकेशन बनाना](../../../translated_images/hi/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ऊपर दी गई छवि पर क्लिक करें और इस पाठ का वीडियो देखें)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 पर्सनलाइजेशन का एक उदाहरण OpenAI के ChatGPT में "कस्टम इंस्ट्रक्शंस" सेटिंग है। यह आपको अपने बारे में जानकारी प्रदान करने की अनुमति देता है जो आपके प्रॉम्प्ट के लिए महत्वपूर्ण संदर्भ हो सकता है। यहां कस्टम इंस्ट्रक्शन का एक उदाहरण दिया गया है।
 
-![ChatGPT में कस्टम इंस्ट्रक्शंस सेटिंग्स](../../../translated_images/hi/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPT में कस्टम इंस्ट्रक्शंस सेटिंग्स](../../../translated_images/hi/custom-instructions.b96f59aa69356fcf.webp)
 
 यह "प्रोफाइल" ChatGPT को लिंक्ड लिस्ट्स पर एक पाठ योजना बनाने के लिए प्रेरित करता है। ध्यान दें कि ChatGPT इस बात को ध्यान में रखता है कि उपयोगकर्ता अपने अनुभव के आधार पर अधिक गहन पाठ योजना चाह सकता है।
 
-![लिंक्ड लिस्ट्स के बारे में पाठ योजना के लिए ChatGPT में एक प्रॉम्प्ट](../../../translated_images/hi/lesson-plan-prompt.cc47c488cf1343df.png)
+![लिंक्ड लिस्ट्स के बारे में पाठ योजना के लिए ChatGPT में एक प्रॉम्प्ट](../../../translated_images/hi/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### माइक्रोसॉफ्ट का सिस्टम मैसेज फ्रेमवर्क बड़े भाषा मॉडल्स के लिए
 

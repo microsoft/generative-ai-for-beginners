@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Promptien suunnittelun perusteet
 
-[![Promptien suunnittelun perusteet](../../../translated_images/fi/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Promptien suunnittelun perusteet](../../../translated_images/fi/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Johdanto
 Tämä moduuli käsittelee keskeisiä käsitteitä ja tekniikoita tehokkaiden kehotteiden luomiseksi generatiivisissa tekoälymalleissa. Tapa, jolla kirjoitat kehotteen LLM:lle, vaikuttaa myös lopputulokseen. Huolellisesti laadittu kehotus voi tuottaa laadukkaamman vastauksen. Mutta mitä tarkalleen ottaen tarkoittavat termit _kehotus_ ja _promptien suunnittelu_? Ja miten voin parantaa kehotteen _syötettä_, jonka lähetän LLM:lle? Näihin kysymyksiin pyrimme vastaamaan tässä ja seuraavassa luvussa.
@@ -53,7 +53,7 @@ Notebook sisältää _aloitusharjoituksia_ - mutta sinua rohkaistaan lisäämä�
 
 Haluatko saada yleiskuvan siitä, mitä tämä oppitunti kattaa ennen kuin sukellat syvemmälle? Tutustu tähän kuvitettuun oppaaseen, joka antaa sinulle käsityksen pääaiheista ja keskeisistä huomioista, joita kannattaa miettiä kunkin aiheen kohdalla. Oppitunnin etenemissuunnitelma vie sinut ydinkäsitteiden ja haasteiden ymmärtämisestä niiden käsittelyyn asiaankuuluvilla promptien suunnittelutekniikoilla ja parhailla käytännöillä. Huomaa, että tämän oppaan "Edistyneet tekniikat" -osio viittaa seuraavan luvun sisältöön tässä oppimateriaalissa.
 
-![Kuvitettu opas promptien suunnitteluun](../../../translated_images/fi/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Kuvitettu opas promptien suunnitteluun](../../../translated_images/fi/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Startupimme
 
@@ -94,7 +94,7 @@ LLM näkee kehotteet _tokenien sarjana_, jossa eri mallit (tai mallin versiot) v
 
 Saadaksesi käsityksen siitä, miten tokenisaatio toimii, kokeile työkaluja kuten [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), joka on esitetty alla. Kopioi kehotteesi - ja katso, miten se muunnetaan tokeneiksi, kiinnittäen huomiota siihen, miten välilyönnit ja välimerkit käsitellään. Huomaa, että tämä esimerkki näyttää vanhemman LLM:n (GPT-3) - joten kokeilu uudemmalla mallilla voi tuottaa erilaisen tuloksen.
 
-![Tokenisaatio](../../../translated_images/fi/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenisaatio](../../../translated_images/fi/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Käsite: Perustamallit
 
@@ -104,7 +104,7 @@ Haluatko nähdä, miten kehotuspohjainen täydennys toimii? Syötä yllä oleva 
 
 Mutta entä jos käyttäjä halusi nähdä jotain erityistä, joka täyttää tietyt kriteerit tai tehtävätavoitteen? Tässä kohtaa _ohjeviritetyt_ LLM:t astuvat kuvaan.
 
-![Perus-LLM Chat-täydennys](../../../translated_images/fi/04-playground-chat-base.65b76fcfde0caa67.png)
+![Perus-LLM Chat-täydennys](../../../translated_images/fi/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Käsite: Ohjeviritetyt LLM:t
 
@@ -118,7 +118,7 @@ Kokeillaan - palataan yllä olevaan kehotteeseen, mutta muutetaan nyt _järjeste
 
 Huomaatko, kuinka tulos on nyt viritetty vastaamaan haluttua tavoitetta ja muotoa? Opettaja voi nyt käyttää tätä vastausta suoraan luokkansa dioissa.
 
-![Ohjeviritetty LLM Chat-täydennys](../../../translated_images/fi/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Ohjeviritetty LLM Chat-täydennys](../../../translated_images/fi/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Miksi tarvitsemme promptien suunnittelua?
 
@@ -144,15 +144,15 @@ Mitä tapahtuu, kun käytämme tätä kehotetta eri LLM-palveluntarjoajien kanss
 
 > **Vastaus 1**: OpenAI Playground (GPT-35)
 
-![Vastaus 1](../../../translated_images/fi/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Vastaus 1](../../../translated_images/fi/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Vastaus 2**: Azure OpenAI Playground (GPT-35)
 
-![Vastaus 2](../../../translated_images/fi/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Vastaus 2](../../../translated_images/fi/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Vastaus 3**: Hugging Face Chat Playground (LLama-2)
 
-![Vastaus 3](../../../translated_images/fi/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Vastaus 3](../../../translated_images/fi/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Kuten odotettua, jokainen malli (tai malliversio) tuottaa hieman erilaisia vastauksia johtuen stokastisesta käyttäytymisestä ja mallien kyvykkyyksien eroista. Esimerkiksi yksi malli kohdistuu kahdeksannen luokan yleisölle, kun taas toinen olettaa lukion opiskelijan. Mutta kaikki kolme mallia tuottivat vastauksia, jotka voisivat vakuuttaa tietämättömän käyttäjän siitä, että tapahtuma oli todellinen.
 

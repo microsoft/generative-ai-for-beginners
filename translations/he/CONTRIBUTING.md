@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 לדוגמה, כשאתה מרחף עם העכבר מעל קישור בקבצים, תוכל ללחוץ על **ctrl + click** כדי לעקוב אחר הקישור.
 
-![צילום מסך של VS code למעקב אחרי קישורים](../../translated_images/he/vscode-follow-link.85520ab6a1237adc.png)
+![צילום מסך של VS code למעקב אחרי קישורים](../../translated_images/he/vscode-follow-link.85520ab6a1237adc.webp)
 
 אם תלחץ על קישור והוא לא יעבוד במחשב המקומי, סביר להניח שהתהליך יכשל ולא יעבוד גם ב-GitHub.
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כשאתה מקליד `./` או `../`, VS Code יציג אפשרויות לבחירה בהתאם למה שהקלדת.
 
-![צילום מסך של VS code לבחירת נתיב יחסי](../../translated_images/he/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![צילום מסך של VS code לבחירת נתיב יחסי](../../translated_images/he/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 עקוב אחרי הנתיב על ידי לחיצה על הקובץ או התיקיה הרצויים ותהיה בטוח שהנתיב שלך תקין.
 
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם לא, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על חוסר מעקב בקישורים יחסיים](../../translated_images/he/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![צילום מסך של תגובת GitHub על חוסר מעקב בקישורים יחסיים](../../translated_images/he/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והוסף את מזהה המעקב בסוף הנתיב היחסי.
 
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם לא, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על חוסר מעקב בכתובות URL](../../translated_images/he/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![צילום מסך של תגובת GitHub על חוסר מעקב בכתובות URL](../../translated_images/he/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והוסף את מזהה המעקב בסוף כתובת ה-URL.
 
@@ -123,7 +123,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם קיימת, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על קידומת שפה בכתובות URL](../../translated_images/he/github-check-country-locale-comment.2f4fe93228161dee.png)
+![צילום מסך של תגובת GitHub על קידומת שפה בכתובות URL](../../translated_images/he/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והסר את קידומת השפה מהכתובות.
 

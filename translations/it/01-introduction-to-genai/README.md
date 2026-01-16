@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduzione all'AI Generativa e ai Modelli Linguistici di Grandi Dimensioni
 
-[![Introduzione all'AI Generativa e ai Modelli Linguistici di Grandi Dimensioni](../../../translated_images/it/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduzione all'AI Generativa e ai Modelli Linguistici di Grandi Dimensioni](../../../translated_images/it/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Clicca sull'immagine sopra per vedere il video di questa lezione)_
 
@@ -43,7 +43,7 @@ Il team della nostra startup è consapevole che non sarà possibile raggiungere 
 
 L'AI generativa è destinata a rivoluzionare il modo in cui impariamo e insegniamo oggi, con studenti che hanno a disposizione insegnanti virtuali 24 ore su 24, capaci di fornire enormi quantità di informazioni ed esempi, e insegnanti che possono sfruttare strumenti innovativi per valutare i loro studenti e fornire feedback.
 
-![Cinque giovani studenti che guardano un monitor - immagine di DALLE2](../../../translated_images/it/students-by-DALLE2.b70fddaced1042ee.png)
+![Cinque giovani studenti che guardano un monitor - immagine di DALLE2](../../../translated_images/it/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Per iniziare, definiamo alcuni concetti e termini di base che utilizzeremo nel corso del curriculum.
 
@@ -69,7 +69,7 @@ Questa è la tecnologia che ha alimentato gli assistenti virtuali nati nel primo
 
 Ed è così che siamo arrivati all'AI generativa di oggi, che può essere vista come un sottogruppo del deep learning.
 
-![AI, ML, DL e AI Generativa](../../../translated_images/it/AI-diagram.c391fa518451a40d.png)
+![AI, ML, DL e AI Generativa](../../../translated_images/it/AI-diagram.c391fa518451a40d.webp)
 
 Dopo decenni di ricerca nel campo dell'AI, una nuova architettura di modelli – chiamata _Transformer_ – ha superato i limiti delle RNN, essendo in grado di gestire sequenze di testo molto più lunghe come input. I Transformer si basano sul meccanismo di attenzione, che consente al modello di attribuire pesi diversi agli input ricevuti, ‘prestando maggiore attenzione’ alle informazioni più rilevanti, indipendentemente dal loro ordine nella sequenza di testo.
 
@@ -81,7 +81,7 @@ Nel prossimo capitolo esploreremo diversi tipi di modelli di AI generativa, ma p
 
 - **Tokenizer, testo in numeri**: I Modelli Linguistici di Grandi Dimensioni ricevono un testo come input e generano un testo come output. Tuttavia, essendo modelli statistici, funzionano molto meglio con i numeri rispetto alle sequenze di testo. Ecco perché ogni input al modello viene elaborato da un tokenizer, prima di essere utilizzato dal modello principale. Un token è un frammento di testo – composto da un numero variabile di caratteri, quindi il compito principale del tokenizer è suddividere l'input in un array di token. Successivamente, ogni token viene mappato con un indice di token, che è la codifica intera del frammento di testo originale.
 
-![Esempio di tokenizzazione](../../../translated_images/it/tokenizer-example.80a5c151ee7d1bd4.png)
+![Esempio di tokenizzazione](../../../translated_images/it/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Predizione dei token di output**: Dati n token come input (con un massimo n che varia da un modello all'altro), il modello è in grado di prevedere un token come output. Questo token viene poi incorporato nell'input della successiva iterazione, in un pattern a finestra espandibile, consentendo una migliore esperienza utente nel ricevere una (o più) frase come risposta. Questo spiega perché, se hai mai provato ChatGPT, potresti aver notato che a volte sembra fermarsi a metà di una frase.
 
@@ -98,23 +98,23 @@ L'input di un modello linguistico di grandi dimensioni è noto come prompt, ment
 
   1. Sintesi di un articolo, libro, recensioni di prodotti e altro, insieme all'estrazione di informazioni da dati non strutturati.
     
-    ![Esempio di sintesi](../../../translated_images/it/summarization-example.7b7ff97147b3d790.png)
+    ![Esempio di sintesi](../../../translated_images/it/summarization-example.7b7ff97147b3d790.webp)
   
   2. Ideazione creativa e progettazione di un articolo, un saggio, un compito o altro.
       
-     ![Esempio di scrittura creativa](../../../translated_images/it/creative-writing-example.e24a685b5a543ad1.png)
+     ![Esempio di scrittura creativa](../../../translated_images/it/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Una **domanda**, posta sotto forma di conversazione con un agente.
   
-  ![Esempio di conversazione](../../../translated_images/it/conversation-example.60c2afc0f595fa59.png)
+  ![Esempio di conversazione](../../../translated_images/it/conversation-example.60c2afc0f595fa59.webp)
 
 - Un frammento di **testo da completare**, che implicitamente è una richiesta di assistenza nella scrittura.
   
-  ![Esempio di completamento del testo](../../../translated_images/it/text-completion-example.cbb0f28403d42752.png)
+  ![Esempio di completamento del testo](../../../translated_images/it/text-completion-example.cbb0f28403d42752.webp)
 
 - Un frammento di **codice** insieme alla richiesta di spiegarlo e documentarlo, o un commento che chiede di generare un pezzo di codice che svolga un compito specifico.
   
-  ![Esempio di codice](../../../translated_images/it/coding-example.50ebabe8a6afff20.png)
+  ![Esempio di codice](../../../translated_images/it/coding-example.50ebabe8a6afff20.webp)
 
 Gli esempi sopra sono piuttosto semplici e non sono pensati per essere una dimostrazione esaustiva delle capacità dei Modelli Linguistici di Grandi Dimensioni. Sono pensati per mostrare il potenziale dell'uso dell'AI generativa, in particolare ma non esclusivamente in contesti educativi.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mengamankan Aplikasi AI Generatif Anda
 
-[![Mengamankan Aplikasi AI Generatif Anda](../../../translated_images/id/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Mengamankan Aplikasi AI Generatif Anda](../../../translated_images/id/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Pendahuluan
 
@@ -131,7 +131,7 @@ Meniru ancaman dunia nyata kini dianggap sebagai praktik standar dalam membangun
 
 > Praktik red teaming AI telah berkembang dengan makna yang lebih luas: tidak hanya mencakup pengujian kerentanan keamanan, tetapi juga mencakup pengujian kegagalan sistem lainnya, seperti pembuatan konten yang berpotensi berbahaya. Sistem AI membawa risiko baru, dan red teaming adalah inti untuk memahami risiko-risiko baru tersebut, seperti injeksi prompt dan pembuatan konten yang tidak berdasar. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Panduan dan sumber daya untuk red teaming](../../../translated_images/id/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Panduan dan sumber daya untuk red teaming](../../../translated_images/id/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Berikut adalah wawasan utama yang telah membentuk program Microsoft AI Red Team.
 

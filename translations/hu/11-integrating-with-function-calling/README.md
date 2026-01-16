@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Funkcióhívás integrálása
 
-[![Funkcióhívás integrálása](../../../translated_images/hu/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Funkcióhívás integrálása](../../../translated_images/hu/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Az előző leckék során már sok mindent megtanultál. Azonban még tovább fejleszthetjük a tudásunkat. Néhány dolog, amit érdemes megvizsgálni, hogy hogyan érhetünk el egységesebb válaszformátumot, amely megkönnyíti a válaszok további feldolgozását. Emellett érdemes lehet más forrásokból származó adatokat is hozzáadni, hogy gazdagítsuk az alkalmazásunkat.
 
@@ -179,7 +179,7 @@ Most elküldhetjük mindkét kérést az LLM-nek, és megvizsgálhatjuk a kapott
 
 Hogyan oldhatjuk meg tehát a formázási problémát? A funkcióhívás használatával biztosíthatjuk, hogy strukturált adatokat kapjunk vissza. A funkcióhívás során az LLM valójában nem hív meg vagy futtat semmilyen funkciót. Ehelyett létrehozunk egy struktúrát, amelyet az LLM követ a válaszai során. Ezután ezeket a strukturált válaszokat használjuk fel annak eldöntésére, hogy milyen funkciót futtassunk az alkalmazásainkban.
 
-![function flow](../../../translated_images/hu/Function-Flow.083875364af4f4bb.png)
+![function flow](../../../translated_images/hu/Function-Flow.083875364af4f4bb.webp)
 
 Ezután a funkcióból visszakapott adatokat elküldhetjük az LLM-nek, amely természetes nyelven válaszol a felhasználó kérdésére.
 
@@ -201,7 +201,7 @@ A funkcióhívás létrehozásának folyamata három fő lépésből áll:
 2. **Olvasás** a modell válaszából, hogy végrehajtsunk egy műveletet, például egy funkciót vagy API-hívást.
 3. **Újabb hívás** a Chat Completions API-hoz a funkció válaszával, hogy ezt az információt felhasználva válaszoljunk a felhasználónak.
 
-![LLM Flow](../../../translated_images/hu/LLM-Flow.3285ed8caf4796d7.png)
+![LLM Flow](../../../translated_images/hu/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### 1. lépés - üzenetek létrehozása
 

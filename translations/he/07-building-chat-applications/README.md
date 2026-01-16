@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # בניית אפליקציות צ'אט מבוססות בינה מלאכותית
 
-[![בניית אפליקציות צ'אט מבוססות בינה מלאכותית](../../../translated_images/he/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![בניית אפליקציות צ'אט מבוססות בינה מלאכותית](../../../translated_images/he/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(לחצו על התמונה למעלה לצפייה בסרטון של השיעור)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 דוגמה אחת להתאמה אישית היא הגדרות "הוראות מותאמות אישית" ב-ChatGPT של OpenAI. היא מאפשרת לכם לספק מידע על עצמכם שעשוי להיות הקשר חשוב לפקודות שלכם. הנה דוגמה להוראה מותאמת אישית.
 
-![הגדרות הוראות מותאמות אישית ב-ChatGPT](../../../translated_images/he/custom-instructions.b96f59aa69356fcf.png)
+![הגדרות הוראות מותאמות אישית ב-ChatGPT](../../../translated_images/he/custom-instructions.b96f59aa69356fcf.webp)
 
 "פרופיל" זה מבקש מ-ChatGPT ליצור תוכנית שיעור על רשימות מקושרות. שימו לב ש-ChatGPT לוקח בחשבון שהמשתמש עשוי לרצות תוכנית שיעור מעמיקה יותר בהתבסס על הניסיון שלה.
 
-![פקודה ב-ChatGPT לתוכנית שיעור על רשימות מקושרות](../../../translated_images/he/lesson-plan-prompt.cc47c488cf1343df.png)
+![פקודה ב-ChatGPT לתוכנית שיעור על רשימות מקושרות](../../../translated_images/he/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### מסגרת הודעות מערכת של מיקרוסופט למודלים של שפה גדולה
 

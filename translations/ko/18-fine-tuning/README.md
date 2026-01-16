@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-[![오픈 소스 모델](../../../translated_images/ko/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![오픈 소스 모델](../../../translated_images/ko/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM 미세 조정하기
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 본격적으로 시작하기 전에 다룰 내용을 한눈에 보고 싶으신가요? 이 강의의 학습 여정을 설명하는 그림 가이드를 확인해보세요. 미세 조정의 핵심 개념과 동기를 배우는 것부터, 미세 조정 작업을 실행하기 위한 프로세스와 모범 사례를 이해하는 것까지 다룹니다. 탐구하기에 흥미로운 주제이니, [리소스](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) 페이지를 확인하여 자기 주도 학습 여정을 지원하는 추가 링크를 놓치지 마세요!
 
-![언어 모델 미세 조정에 대한 그림 가이드](../../../translated_images/ko/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![언어 모델 미세 조정에 대한 그림 가이드](../../../translated_images/ko/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## 언어 모델의 미세 조정이란 무엇인가요?
 

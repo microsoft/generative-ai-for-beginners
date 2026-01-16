@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Udforskning og sammenligning af forskellige LLM'er
 
-[![Udforskning og sammenligning af forskellige LLM'er](../../../translated_images/da/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Udforskning og sammenligning af forskellige LLM'er](../../../translated_images/da/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klik på billedet ovenfor for at se videoen til denne lektion_
 
@@ -59,14 +59,14 @@ Begrebet Grundlæggende Model blev [skabt af Stanford-forskere](https://arxiv.or
 - **De er meget store modeller**, baseret på meget dybe neurale netværk trænet på milliarder af parametre.
 - **De er normalt beregnet til at fungere som en 'grundlæggelse' for andre modeller**, hvilket betyder, at de kan bruges som udgangspunkt for andre modeller, der kan bygges ovenpå, hvilket kan gøres ved finjustering.
 
-![Grundlæggende modeller versus LLM'er](../../../translated_images/da/FoundationModel.e4859dbb7a825c94.png)
+![Grundlæggende modeller versus LLM'er](../../../translated_images/da/FoundationModel.e4859dbb7a825c94.webp)
 
 Billedkilde: [Essential Guide to Foundation Models and Large Language Models | af Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 For yderligere at afklare denne forskel, lad os tage ChatGPT som et eksempel. For at bygge den første version af ChatGPT blev en model kaldet GPT-3.5 brugt som grundlæggende model. Det betyder, at OpenAI brugte nogle chat-specifikke data til at skabe en finjusteret version af GPT-3.5, der var specialiseret i at præstere godt i samtalescenarier, såsom chatbots.
 
-![Grundlæggende model](../../../translated_images/da/Multimodal.2c389c6439e0fc51.png)
+![Grundlæggende model](../../../translated_images/da/Multimodal.2c389c6439e0fc51.webp)
 
 Billedkilde: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM'er kan også kategoriseres efter det output, de genererer.
 
 Embeddings er en række modeller, der kan konvertere tekst til en numerisk form, kaldet embedding, som er en numerisk repræsentation af inputteksten. Embeddings gør det lettere for maskiner at forstå forholdet mellem ord eller sætninger og kan bruges som input af andre modeller, såsom klassifikationsmodeller eller klyngemodeller, der har bedre ydeevne på numeriske data. Embedding-modeller bruges ofte til transfer learning, hvor en model bygges til en surrogatopgave, som der er rigeligt med data til, og derefter genbruges modelvægtene (embeddings) til andre opgaver. Et eksempel på denne kategori er [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/da/Embedding.c3708fe988ccf760.png)
+![Embedding](../../../translated_images/da/Embedding.c3708fe988ccf760.webp)
 
 Billedgenereringsmodeller er modeller, der genererer billeder. Disse modeller bruges ofte til billedredigering, billedsyntese og billedoversættelse. Billedgenereringsmodeller trænes ofte på store datasæt af billeder, såsom [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), og kan bruges til at generere nye billeder eller til at redigere eksisterende billeder med teknikker som inpainting, superopløsning og farvelægning. Eksempler inkluderer [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) og [Stable Diffusion-modeller](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Billedgenerering](../../../translated_images/da/Image.349c080266a763fd.png)
+![Billedgenerering](../../../translated_images/da/Image.349c080266a763fd.webp)
 
 Tekst- og kodegenereringsmodeller er modeller, der genererer tekst eller kode. Disse modeller bruges ofte til tekstopsummering, oversættelse og besvarelse af spørgsmål. Tekstgenereringsmodeller trænes ofte på store datasæt af tekst, såsom [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), og kan bruges til at generere ny tekst eller til at besvare spørgsmål. Kodegenereringsmodeller, som [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), trænes ofte på store datasæt af kode, såsom GitHub, og kan bruges til at generere ny kode eller til at rette fejl i eksisterende kode.
 
-![Tekst- og kodegenerering](../../../translated_images/da/Text.a8c0cf139e5cc2a0.png)
+![Tekst- og kodegenerering](../../../translated_images/da/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder versus Kun Decoder
 
@@ -123,23 +123,23 @@ De fleste af de modeller, vi nævnte i de tidligere afsnit (OpenAI-modeller, ope
 
 - Finde den ønskede Foundation Model i kataloget - enten proprietær eller open source - ved at filtrere efter opgave, licens eller navn. For at forbedre søgbarheden er modellerne organiseret i samlinger, såsom Azure OpenAI-samlingen, Hugging Face-samlingen og flere.
 
-![Modelkatalog](../../../translated_images/da/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Modelkatalog](../../../translated_images/da/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Gennemgå modelkortet, som inkluderer en detaljeret beskrivelse af den tilsigtede anvendelse og træningsdata, kodeeksempler og evalueringsresultater fra det interne evalueringsbibliotek.
 
-![Modelkort](../../../translated_images/da/ModelCard.598051692c6e400d.png)
+![Modelkort](../../../translated_images/da/ModelCard.598051692c6e400d.webp)
 
 - Sammenligne benchmarks på tværs af modeller og datasæt, der er tilgængelige i branchen, for at vurdere, hvilken der bedst opfylder forretningsscenariet, via [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-panelet.
 
-![Model benchmarks](../../../translated_images/da/ModelBenchmarks.254cb20fbd06c03a.png)
+![Model benchmarks](../../../translated_images/da/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Finjustere modellen på brugerdefinerede træningsdata for at forbedre modellens ydeevne i en specifik arbejdsopgave ved at udnytte eksperimenterings- og sporingsfunktionerne i Azure AI Studio.
 
-![Model finjustering](../../../translated_images/da/FineTuning.aac48f07142e36fd.png)
+![Model finjustering](../../../translated_images/da/FineTuning.aac48f07142e36fd.webp)
 
 - Implementere den originale fortrænede model eller den finjusterede version til fjern realtidsinference - administreret beregning - eller serverløs API-endepunkt - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - for at gøre det muligt for applikationer at bruge den.
 
-![Model implementering](../../../translated_images/da/ModelDeploy.890da48cbd0bccdb.png)
+![Model implementering](../../../translated_images/da/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Ikke alle modeller i kataloget er i øjeblikket tilgængelige for finjustering og/eller pay-as-you-go implementering. Tjek modelkortet for detaljer om modellens kapaciteter og begrænsninger.
@@ -158,7 +158,7 @@ Der er flere tilgange, en virksomhed kan bruge for at opnå de ønskede resultat
 
 - **Finjusteret model**. Her træner du modellen yderligere på dine egne data, hvilket gør modellen mere præcis og responsiv i forhold til dine behov, men det kan være dyrt.
 
-![LLMs implementering](../../../translated_images/da/Deploy.18b2d27412ec8c02.png)
+![LLMs implementering](../../../translated_images/da/Deploy.18b2d27412ec8c02.webp)
 
 Billedkilde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

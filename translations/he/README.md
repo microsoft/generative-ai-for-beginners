@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "he"
 }
 -->
-![AI מחולל למתחילים](../../translated_images/he/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![AI מחולל למתחילים](../../translated_images/he/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 שיעורים המלמדים כל מה שצריך לדעת כדי להתחיל לבנות יישומי AI מחולל
 

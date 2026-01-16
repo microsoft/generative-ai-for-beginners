@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tehisintellekti rakenduste turvalisuse tagamine
 
-[![Tehisintellekti rakenduste turvalisuse tagamine](../../../translated_images/et/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Tehisintellekti rakenduste turvalisuse tagamine](../../../translated_images/et/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Sissejuhatus
 
@@ -123,7 +123,7 @@ Reaalse maailma ohtude jäljendamine on nüüdseks muutunud standardseks praktik
 
 > Tehisintellekti punase meeskonna (red teaming) praktika on arenenud laiemaks tähenduseks: see ei hõlma ainult turvavigade otsimist, vaid ka teiste süsteemirikkumiste tuvastamist, näiteks potentsiaalselt kahjuliku sisu genereerimist. Tehisintellektisüsteemid toovad kaasa uusi riske ning punane meeskond on keskne nende uute riskide mõistmisel, nagu näiteks prompt injection ja põhjendamata sisu loomine. - [Microsoft AI Red Team ehitab turvalisema tehisintellekti tulevikku](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Juhised ja ressursid punase meeskonna jaoks](../../../translated_images/et/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Juhised ja ressursid punase meeskonna jaoks](../../../translated_images/et/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Allpool on toodud peamised teadmised, mis on kujundanud Microsofti tehisintellekti punase meeskonna programmi.
 

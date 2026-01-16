@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fi"
 }
 -->
-![Generatiivinen tekoäly aloittelijoille](../../translated_images/fi/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generatiivinen tekoäly aloittelijoille](../../translated_images/fi/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 oppituntia, jotka opettavat kaiken tarvittavan generatiivisten tekoälysovellusten rakentamisen aloittamiseen
 

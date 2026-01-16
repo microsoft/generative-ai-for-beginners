@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduktion til Generativ AI og Store Sproglige Modeller
 
-[![Introduktion til Generativ AI og Store Sproglige Modeller](../../../translated_images/da/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduktion til Generativ AI og Store Sproglige Modeller](../../../translated_images/da/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klik på billedet ovenfor for at se videoen til denne lektion)_
 
@@ -43,7 +43,7 @@ Vores startup-team er klar over, at vi ikke vil kunne opnå dette mål uden at u
 
 Generativ AI forventes at revolutionere den måde, vi lærer og underviser på i dag, med studerende, der har virtuelle lærere til rådighed 24 timer i døgnet, som giver store mængder information og eksempler, og lærere, der kan udnytte innovative værktøjer til at vurdere deres elever og give feedback.
 
-![Fem unge studerende kigger på en skærm - billede af DALLE2](../../../translated_images/da/students-by-DALLE2.b70fddaced1042ee.png)
+![Fem unge studerende kigger på en skærm - billede af DALLE2](../../../translated_images/da/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Lad os starte med at definere nogle grundlæggende begreber og terminologi, som vi vil bruge gennem hele pensum.
 
@@ -70,7 +70,7 @@ Dette er teknologien, der drev de virtuelle assistenter, der blev født i det f�
 
 Sådan er vi kommet til Generativ AI i dag, som kan ses som en underkategori af dyb læring.
 
-![AI, ML, DL og Generativ AI](../../../translated_images/da/AI-diagram.c391fa518451a40d.png)
+![AI, ML, DL og Generativ AI](../../../translated_images/da/AI-diagram.c391fa518451a40d.webp)
 
 Efter årtiers forskning inden for AI-feltet overvandt en ny modelarkitektur – kaldet _Transformer_ – begrænsningerne ved RNNs, da den var i stand til at modtage meget længere tekstsekvenser som input. Transformers er baseret på opmærksomhedsmekanismen, der gør det muligt for modellen at give forskellige vægte til de input, den modtager, og 'fokusere mere' der, hvor de mest relevante oplysninger er koncentreret, uanset deres rækkefølge i tekstsekvensen.
 
@@ -82,7 +82,7 @@ I det næste kapitel vil vi udforske forskellige typer af generative AI-modeller
 
 - **Tokenizer, tekst til tal**: Store Sproglige Modeller modtager en tekst som input og genererer en tekst som output. Men da de er statistiske modeller, fungerer de meget bedre med tal end med tekstsekvenser. Derfor behandles hvert input til modellen af en tokenizer, før det bruges af selve modellen. En token er en tekstbid – bestående af et variabelt antal tegn, så tokenizerens hovedopgave er at opdele inputtet i en række tokens. Derefter matches hver token med et token-indeks, som er den numeriske kodning af den oprindelige tekstbid.
 
-![Eksempel på tokenisering](../../../translated_images/da/tokenizer-example.80a5c151ee7d1bd4.png)
+![Eksempel på tokenisering](../../../translated_images/da/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Forudsigelse af output-tokens**: Givet n tokens som input (med maks n, der varierer fra model til model), er modellen i stand til at forudsige én token som output. Denne token inkorporeres derefter i inputtet til næste iteration i et udvidende vinduesmønster, hvilket muliggør en bedre brugeroplevelse ved at få en (eller flere) sætninger som svar. Dette forklarer, hvorfor du, hvis du nogensinde har prøvet ChatGPT, måske har bemærket, at den nogle gange ser ud til at stoppe midt i en sætning.
 
@@ -100,23 +100,23 @@ Inputtet til en stor sproglig model er kendt som en prompt, mens outputtet er ke
 
   1. Opsummering af en artikel, bog, produktanmeldelser og mere, sammen med udtræk af indsigt fra ustrukturerede data.
     
-    ![Eksempel på opsummering](../../../translated_images/da/summarization-example.7b7ff97147b3d790.png)
+    ![Eksempel på opsummering](../../../translated_images/da/summarization-example.7b7ff97147b3d790.webp)
   
   2. Kreativ idéudvikling og design af en artikel, et essay, en opgave eller mere.
       
-     ![Eksempel på kreativ skrivning](../../../translated_images/da/creative-writing-example.e24a685b5a543ad1.png)
+     ![Eksempel på kreativ skrivning](../../../translated_images/da/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Et **spørgsmål**, stillet i form af en samtale med en agent.
   
-  ![Eksempel på samtale](../../../translated_images/da/conversation-example.60c2afc0f595fa59.png)
+  ![Eksempel på samtale](../../../translated_images/da/conversation-example.60c2afc0f595fa59.webp)
 
 - Et stykke **tekst til at fuldføre**, som implicit er en anmodning om skrivehjælp.
   
-  ![Eksempel på tekstfuldførelse](../../../translated_images/da/text-completion-example.cbb0f28403d42752.png)
+  ![Eksempel på tekstfuldførelse](../../../translated_images/da/text-completion-example.cbb0f28403d42752.webp)
 
 - Et stykke **kode** sammen med en anmodning om at forklare og dokumentere det, eller en kommentar, der beder om at generere et stykke kode, der udfører en specifik opgave.
   
-  ![Eksempel på kodning](../../../translated_images/da/coding-example.50ebabe8a6afff20.png)
+  ![Eksempel på kodning](../../../translated_images/da/coding-example.50ebabe8a6afff20.webp)
 
 Ovenstående eksempler er ret simple og er ikke beregnet til at være en udtømmende demonstration af Store Sproglige Modellers kapaciteter. De er ment til at vise potentialet ved at bruge generativ AI, især men ikke begrænset til uddannelsesmæssige kontekster.
 

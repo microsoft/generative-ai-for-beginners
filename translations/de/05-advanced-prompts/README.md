@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Erstellen von fortgeschrittenen Prompts
 
-[![Erstellen von fortgeschrittenen Prompts](../../../translated_images/de/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Erstellen von fortgeschrittenen Prompts](../../../translated_images/de/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Lassen Sie uns einige Erkenntnisse aus dem vorherigen Kapitel zusammenfassen:
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ja"
 }
 -->
-[![オープンソースモデル](../../../translated_images/ja/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![オープンソースモデル](../../../translated_images/ja/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLMのファインチューニング
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 詳細に入る前に、今回のレッスンで扱う内容の全体像を把握したいですか？ファインチューニングの核心的な概念と動機から、そのプロセスや実行のベストプラクティスまでを説明するイラスト付きガイドをご覧ください。このトピックは非常に興味深いので、自己学習をサポートする追加リンクについては[リソース](./RESOURCES.md?WT.mc_id=academic-105485-koreyst)ページを忘れずにチェックしてください！
 
-![言語モデルのファインチューニングに関するイラスト付きガイド](../../../translated_images/ja/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![言語モデルのファインチューニングに関するイラスト付きガイド](../../../translated_images/ja/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## 言語モデルのファインチューニングとは？
 

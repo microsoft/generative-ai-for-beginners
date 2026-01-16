@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membangun Aplikasi Generasi Teks
 
-[![Membangun Aplikasi Generasi Teks](../../../translated_images/id/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Membangun Aplikasi Generasi Teks](../../../translated_images/id/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klik gambar di atas untuk menonton video pelajaran ini)_
 

@@ -62,7 +62,7 @@ Generative AI for Beginnersリポジトリに変更を提出する際は、以�
 
 例えば、ファイル内のリンクにカーソルを合わせると、**ctrl + クリック**でリンク先に移動できるプロンプトが表示されます。
 
-![VS code follow links screenshot](../../translated_images/ja/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/ja/vscode-follow-link.85520ab6a1237adc.webp)
 
 リンクをクリックしてローカルで動作しない場合は、ワークフローも失敗し、GitHub上でも動作しません。
 
@@ -70,7 +70,7 @@ Generative AI for Beginnersリポジトリに変更を提出する際は、以�
 
 `./`や`../`と入力すると、VS Codeが利用可能な候補を表示します。
 
-![VS code select relative path screenshot](../../translated_images/ja/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/ja/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 目的のファイルやフォルダーをクリックしてパスを選択すれば、パスが壊れていないことが確実になります。
 
@@ -87,7 +87,7 @@ GitHub Pagesにデプロイされているため、ファイルやフォルダ�
 
 付いていない場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/ja/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/ja/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、相対パスの末尾にトラッキングIDを追加してください。
 
@@ -104,7 +104,7 @@ URLの末尾に`?wt.mc_id=`が付いているか確認してください。
 
 付いていない場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/ja/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/ja/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、URLの末尾にトラッキングIDを追加してください。
 
@@ -121,7 +121,7 @@ URLに`/en-us/`や`/en/`、その他の言語ロケールが含まれていな�
 
 含まれている場合、以下のようなエラーが表示されることがあります。
 
-![GitHub check country locale comment screenshot](../../translated_images/ja/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/ja/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 この問題を修正するには、ワークフローが指摘したファイルパスを開き、URLから国別ロケールを削除してください。
 

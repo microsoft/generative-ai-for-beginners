@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "he"
 }
 -->
-[![Open Source Models](../../../translated_images/he/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/he/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## מבוא
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **עלות** - העלות לכל טוקן לשימוש ופריסה של מודלים אלו נמוכה יותר מזו של מודלים קנייניים. כאשר בונים יישומי AI גנרטיביים, יש לשקול את הביצועים מול המחיר בעת עבודה עם מודלים אלו במקרי השימוש שלכם.
 
-![Model Cost](../../../translated_images/he/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/he/model-price.3f5a3e4d32ae00b4.webp)
 מקור: Artificial Analysis
 
 **גמישות** - עבודה עם מודלים פתוחים מאפשרת גמישות בשימוש במודלים שונים או בשילוב שלהם. דוגמה לכך היא [עוזרי HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) שבה המשתמש יכול לבחור את המודל בשימוש ישירות בממשק המשתמש:
 
-![Choose Model](../../../translated_images/he/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/he/choose-model.f095d15bbac92214.webp)
 
 ## חקירת מודלים פתוחים שונים
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כשמחפשים להשוות LLMs בין סוגים שונים, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) הוא משאב מצוין נוסף:
 
-![Model Quality](../../../translated_images/he/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/he/model-quality.aaae1c22e00f7ee1.webp)
 מקור: Artificial Analysis
 
 אם עובדים על מקרה שימוש ספציפי, חיפוש גרסאות מותאמות שמתמקדות באותו תחום יכול להיות יעיל. ניסוי עם מספר מודלים פתוחים כדי לראות איך הם מתפקדים לפי הציפיות שלכם ושל המשתמשים הוא גם פרקטיקה טובה.

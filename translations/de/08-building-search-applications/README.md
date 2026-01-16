@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Aufbau von Suchanwendungen
 
-[![Einführung in Generative KI und große Sprachmodelle](../../../translated_images/de/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Einführung in Generative KI und große Sprachmodelle](../../../translated_images/de/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen_
 
@@ -44,7 +44,7 @@ Die Lektion enthält einen Embedding-Index der YouTube-Transkripte des Microsoft
 
 Das folgende ist ein Beispiel für eine semantische Abfrage zur Frage „Kann man RStudio mit Azure ML verwenden?“. Schauen Sie sich die YouTube-URL an, Sie werden sehen, dass die URL einen Zeitstempel enthält, der Sie zu der Stelle im Video führt, an der die Antwort auf die Frage zu finden ist.
 
-![Semantische Abfrage zur Frage "Kann man RStudio mit Azure ML verwenden?"](../../../translated_images/de/query-results.bb0480ebf025fac6.png)
+![Semantische Abfrage zur Frage "Kann man RStudio mit Azure ML verwenden?"](../../../translated_images/de/query-results.bb0480ebf025fac6.webp)
 
 ## Was ist semantische Suche?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Wenn Sie das Notebook ausführen, werden Sie aufgefordert, eine Abfrage einzugeben. Das Eingabefeld sieht wie folgt aus:
 
-![Eingabefeld für den Benutzer zur Eingabe einer Abfrage](../../../translated_images/de/notebook-search.1e320b9c7fcbb0bc.png)
+![Eingabefeld für den Benutzer zur Eingabe einer Abfrage](../../../translated_images/de/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Großartige Arbeit! Setzen Sie Ihr Lernen fort
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 생성 AI 기반 채팅 애플리케이션 구축
 
-[![생성 AI 기반 채팅 애플리케이션 구축](../../../translated_images/ko/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![생성 AI 기반 채팅 애플리케이션 구축](../../../translated_images/ko/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 개인화의 한 가지 예는 OpenAI의 ChatGPT에서 제공하는 "사용자 정의 지침" 설정입니다. 이를 통해 프롬프트에 중요한 맥락이 될 수 있는 사용자에 대한 정보를 제공할 수 있습니다. 아래는 사용자 정의 지침의 예입니다.
 
-![ChatGPT의 사용자 정의 지침 설정](../../../translated_images/ko/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPT의 사용자 정의 지침 설정](../../../translated_images/ko/custom-instructions.b96f59aa69356fcf.webp)
 
 이 "프로필"은 ChatGPT가 연결 리스트에 대한 강의 계획을 작성하도록 요청합니다. ChatGPT는 사용자가 경험에 따라 더 깊이 있는 강의 계획을 원할 수 있다는 점을 고려합니다.
 
-![연결 리스트에 대한 강의 계획을 요청하는 ChatGPT 프롬프트](../../../translated_images/ko/lesson-plan-prompt.cc47c488cf1343df.png)
+![연결 리스트에 대한 강의 계획을 요청하는 ChatGPT 프롬프트](../../../translated_images/ko/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft의 대규모 언어 모델을 위한 시스템 메시지 프레임워크
 

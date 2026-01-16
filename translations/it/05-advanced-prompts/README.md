@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Creare prompt avanzati
 
-[![Creare prompt avanzati](../../../translated_images/it/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Creare prompt avanzati](../../../translated_images/it/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Ripassiamo alcune nozioni apprese nel capitolo precedente:
 

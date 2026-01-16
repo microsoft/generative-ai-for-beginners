@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Δημιουργία Εφαρμογών AI με Χαμηλό Κώδικα
 
-[![Δημιουργία Εφαρμογών AI με Χαμηλό Κώδικα](../../../translated_images/el/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Δημιουργία Εφαρμογών AI με Χαμηλό Κώδικα](../../../translated_images/el/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Κάντε κλικ στην εικόνα παραπάνω για να δείτε το βίντεο αυτού του μαθήματος)_
 
@@ -92,17 +92,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. Χρησιμοποιήστε την περιοχή κειμένου στην αρχική οθόνη για να περιγράψετε την εφαρμογή που θέλετε να δημιουργήσετε. Για παράδειγμα, **_Θέλω να δημιουργήσω μια εφαρμογή για την παρακολούθηση και διαχείριση εργασιών μαθητών_**. Κάντε κλικ στο κουμπί **Αποστολή** για να στείλετε την εντολή στο AI Copilot.
 
-![Περιγράψτε την εφαρμογή που θέλετε να δημιουργήσετε](../../../translated_images/el/copilot-chat-prompt-powerapps.84250f341d060830.png)
+![Περιγράψτε την εφαρμογή που θέλετε να δημιουργήσετε](../../../translated_images/el/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Ο AI Copilot θα προτείνει έναν Πίνακα Dataverse με τα πεδία που χρειάζεστε για να αποθηκεύσετε τα δεδομένα που θέλετε να παρακολουθείτε και κάποια δείγματα δεδομένων. Μπορείτε στη συνέχεια να προσαρμόσετε τον πίνακα ώστε να ανταποκρίνεται στις ανάγκες σας χρησιμοποιώντας τη λειτουργία βοηθού AI Copilot μέσω συνομιλιακών βημάτων.
 
    > **Σημαντικό**: Το Dataverse είναι η υποκείμενη πλατφόρμα δεδομένων για το Power Platform. Είναι μια πλατφόρμα δεδομένων χαμηλού κώδικα για την αποθήκευση των δεδομένων της εφαρμογής. Είναι μια πλήρως διαχειριζόμενη υπηρεσία που αποθηκεύει με ασφάλεια δεδομένα στο Microsoft Cloud και παρέχεται μέσα στο περιβάλλον του Power Platform σας. Διαθέτει ενσωματωμένες δυνατότητες διακυβέρνησης δεδομένων, όπως ταξινόμηση δεδομένων, προέλευση δεδομένων, λεπτομερή έλεγχο πρόσβασης και άλλα. Μπορείτε να μάθετε περισσότερα για το Dataverse [εδώ](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Προτεινόμενα πεδία στον νέο σας πίνακα](../../../translated_images/el/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
+   ![Προτεινόμενα πεδία στον νέο σας πίνακα](../../../translated_images/el/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Οι εκπαιδευτικοί θέλουν να στέλνουν email στους μαθητές που έχουν υποβάλει τις εργασίες τους για να τους ενημερώνουν για την πρόοδο των εργασιών τους. Μπορείτε να χρησιμοποιήσετε το Copilot για να προσθέσετε ένα νέο πεδίο στον πίνακα για να αποθηκεύσετε το email του μαθητή. Για παράδειγμα, μπορείτε να χρησιμοποιήσετε την ακόλουθη εντολή για να προσθέσετε ένα νέο πεδίο στον πίνακα: **_Θέλω να προσθέσω μια στήλη για να αποθηκεύσω το email του μαθητή_**. Κάντε κλικ στο κουμπί **Αποστολή** για να στείλετε την εντολή στο AI Copilot.
 
-![Προσθήκη νέου πεδίου](../../../translated_images/el/copilot-new-column.35e15ff21acaf274.png)
+![Προσθήκη νέου πεδίου](../../../translated_images/el/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Ο AI Copilot θα δημιουργήσει ένα νέο πεδίο και μπορείτε στη συνέχεια να προσαρμόσετε το πεδίο ώστε να ανταποκρίνεται στις ανάγκες σας.
 
@@ -131,15 +131,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 2. Στη γραμμή πλοήγησης στα αριστερά, επιλέξτε **Tables** και στη συνέχεια κάντε κλικ στο **Describe the new Table**.
 
-![Select new table](../../../translated_images/el/describe-new-table.0792373eb757281e.png)
+![Select new table](../../../translated_images/el/describe-new-table.0792373eb757281e.webp)
 
 3. Στην οθόνη **Describe the new Table**, χρησιμοποιήστε το πεδίο κειμένου για να περιγράψετε τον πίνακα που θέλετε να δημιουργήσετε. Για παράδειγμα, **_Θέλω να δημιουργήσω έναν πίνακα για την αποθήκευση πληροφοριών τιμολογίων_**. Κάντε κλικ στο κουμπί **Send** για να στείλετε την εντολή στο AI Copilot.
 
-![Describe the table](../../../translated_images/el/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
+![Describe the table](../../../translated_images/el/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. Το AI Copilot θα προτείνει έναν πίνακα Dataverse με τα πεδία που χρειάζεστε για να αποθηκεύσετε τα δεδομένα που θέλετε να παρακολουθήσετε και μερικά δείγματα δεδομένων. Στη συνέχεια, μπορείτε να προσαρμόσετε τον πίνακα ώστε να καλύπτει τις ανάγκες σας χρησιμοποιώντας τη λειτουργία βοηθού του AI Copilot μέσω συνομιλιακών βημάτων.
 
-![Suggested Dataverse table](../../../translated_images/el/copilot-dataverse-table.b3bc936091324d9d.png)
+![Suggested Dataverse table](../../../translated_images/el/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Η οικονομική ομάδα θέλει να στείλει ένα email στον προμηθευτή για να τον ενημερώσει για την τρέχουσα κατάσταση του τιμολογίου του. Μπορείτε να χρησιμοποιήσετε το Copilot για να προσθέσετε ένα νέο πεδίο στον πίνακα για την αποθήκευση του email του προμηθευτή. Για παράδειγμα, μπορείτε να χρησιμοποιήσετε την εξής εντολή: **_Θέλω να προσθέσω μια στήλη για την αποθήκευση του email του προμηθευτή_**. Κάντε κλικ στο κουμπί **Send** για να στείλετε την εντολή στο AI Copilot.
 
@@ -168,7 +168,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Με τα Προσαρμοσμένα Μοντέλα AI μπορείτε να φέρετε το δικό σας μοντέλο στο AI Builder ώστε να λειτουργεί όπως οποιοδήποτε προσαρμοσμένο μοντέλο του AI Builder, επιτρέποντάς σας να εκπαιδεύσετε το μοντέλο χρησιμοποιώντας τα δικά σας δεδομένα. Μπορείτε να χρησιμοποιήσετε αυτά τα μοντέλα για να αυτοματοποιήσετε διαδικασίες και να προβλέψετε αποτελέσματα τόσο στο Power Apps όσο και στο Power Automate. Όταν χρησιμοποιείτε το δικό σας μοντέλο, υπάρχουν περιορισμοί που ισχύουν. Διαβάστε περισσότερα για αυτούς τους [περιορισμούς](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder models](../../../translated_images/el/ai-builder-models.8069423b84cfc47f.png)
+![AI builder models](../../../translated_images/el/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Εργασία #2 - Δημιουργία Ροής Επεξεργασίας Τιμολογίων για την Startup μας
 
@@ -182,7 +182,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 2. Χρησιμοποιήστε το πεδίο κειμένου στην αρχική οθόνη για να περιγράψετε τη ροή εργασίας που θέλετε να δημιουργήσετε. Για παράδειγμα, **_Επεξεργασία ενός τιμολογίου όταν φτάνει στο mailbox μου_**. Κάντε κλικ στο κουμπί **Send** για να στείλετε την εντολή στο AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/el/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
+   ![Copilot power automate](../../../translated_images/el/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. Το AI Copilot θα προτείνει τις ενέργειες που χρειάζεστε για να εκτελέσετε την εργασία που θέλετε να αυτοματοποιήσετε. Μπορείτε να κάνετε κλικ στο κουμπί **Next** για να προχωρήσετε στα επόμενα βήματα.
 
@@ -196,7 +196,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 8. Αφαιρέστε την ενέργεια **Condition** από τη ροή επειδή δεν θα τη χρησιμοποιήσετε. Θα πρέπει να μοιάζει με το παρακάτω στιγμιότυπο οθόνης:
 
-   ![power automate, remove actions](../../../translated_images/el/powerautomate-remove-actions.7216392fe684ceba.png)
+   ![power automate, remove actions](../../../translated_images/el/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Κάντε κλικ στο κουμπί **Add an action** και αναζητήστε **Dataverse**. Επιλέξτε την ενέργεια **Add a new row**.
 
@@ -211,7 +211,7 @@ CO_OP_TRANSLATOR_METADATA:
     - Status - Ορίστε το **Status** σε **Pending**.
     - Supplier Email - Χρησιμοποιήστε το **From** δυναμικό περιεχόμενο από την ενεργοποίηση **When a new email arrives**.
 
-    ![power automate add row](../../../translated_images/el/powerautomate-add-row.5edce45e5dd3d51e.png)
+    ![power automate add row](../../../translated_images/el/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Όταν ολοκληρώσετε τη ροή, κάντε κλικ στο κουμπί **Save** για να αποθηκεύσετε τη ροή. Στη συνέχεια, μπορείτε να δοκιμάσετε τη ροή στέλνοντας ένα email με ένα τιμολόγιο στον φάκελο που καθορίσατε στην ενεργοποίηση.
 
@@ -225,7 +225,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Για παράδειγμα, μπορείτε να δημιουργήσετε ροές για να δημιουργείτε αυτόματα κείμενο για διάφορες χρήσεις, όπως: προσχέδια email, περιγραφές προϊόντων και άλλα. Μπορείτε επίσης να χρησιμοποιήσετε το μοντέλο για να δημιουργείτε κείμενο για διάφορες εφαρμογές, όπως chatbots και εφαρμογές εξυπηρέτησης πελατών που επιτρέπουν στους εκπροσώπους εξυπηρέτησης πελατών να απαντούν αποτελεσματικά και αποδοτικά σε ερωτήματα πελατών.
 
-![create a prompt](../../../translated_images/el/create-prompt-gpt.69d429300c2e870a.png)
+![create a prompt](../../../translated_images/el/create-prompt-gpt.69d429300c2e870a.webp)
 
 Για να μάθετε πώς να χρησιμοποιείτε αυτό το Μοντέλο AI στο Power Automate, εξετάστε το [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module.
 

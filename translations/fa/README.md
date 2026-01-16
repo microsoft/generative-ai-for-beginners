@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-![هوش مصنوعی مولد برای مبتدیان](../../translated_images/fa/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![هوش مصنوعی مولد برای مبتدیان](../../translated_images/fa/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### ۲۱ درس که همه چیز لازم برای شروع ساخت برنامه‌های هوش مصنوعی مولد را آموزش می‌دهد
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membangun Aplikasi Generasi Gambar
 
-[![Membangun Aplikasi Generasi Gambar](../../../translated_images/id/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Membangun Aplikasi Generasi Gambar](../../../translated_images/id/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM tidak hanya untuk menghasilkan teks. Anda juga dapat menghasilkan gambar dari deskripsi teks. Memiliki gambar sebagai modalitas bisa sangat berguna di berbagai bidang seperti MedTech, arsitektur, pariwisata, pengembangan game, dan lainnya. Dalam bab ini, kita akan membahas dua model generasi gambar yang paling populer, DALL-E dan Midjourney.
 
@@ -43,7 +43,7 @@ Sebagai bagian dari pelajaran ini, kita akan melanjutkan bekerja dengan startup 
 
 Berikut adalah contoh gambar yang dapat dihasilkan oleh siswa Edu4All jika mereka sedang belajar tentang monumen di kelas:
 
-![Startup Edu4All, kelas tentang monumen, Menara Eiffel](../../../translated_images/id/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, kelas tentang monumen, Menara Eiffel](../../../translated_images/id/startup.94d6b79cc4bb3f5a.webp)
 
 menggunakan prompt seperti
 
@@ -272,9 +272,9 @@ Berikut adalah contoh menggunakan GPT Image:
   Gambar dasar hanya akan berisi lounge dengan kolam renang tetapi gambar akhir akan memiliki flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/id/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/id/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/id/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/id/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/id/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/id/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Membuat variasi**. Ide dasarnya adalah Anda mengambil gambar yang ada dan meminta agar variasi dibuat. Untuk membuat variasi, Anda memberikan gambar dan prompt teks serta kode seperti ini:
@@ -298,11 +298,11 @@ Mari kita lihat contoh bagaimana temperature bekerja, dengan menjalankan prompt 
 
 > Prompt: "Kelinci di atas kuda, memegang lolipop, di padang rumput berkabut tempat tumbuh bunga daffodil"
 
-![Kelinci di atas kuda memegang lolipop, versi 1](../../../translated_images/id/v1-generated-image.a295cfcffa3c13c2.png)
+![Kelinci di atas kuda memegang lolipop, versi 1](../../../translated_images/id/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Sekarang mari kita jalankan prompt yang sama untuk melihat bahwa kita tidak akan mendapatkan gambar yang sama dua kali:
 
-![Gambar yang dihasilkan dari kelinci di atas kuda](../../../translated_images/id/v2-generated-image.33f55a3714efe61d.png)
+![Gambar yang dihasilkan dari kelinci di atas kuda](../../../translated_images/id/v2-generated-image.33f55a3714efe61d.webp)
 
 Seperti yang Anda lihat, gambar-gambar tersebut serupa, tetapi tidak sama. Mari kita coba mengubah nilai temperature menjadi 0.1 dan lihat apa yang terjadi:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Sekarang ketika Anda menjalankan kode ini, Anda mendapatkan dua gambar ini:
 
-- ![Temperature 0, v1](../../../translated_images/id/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperature 0, v2](../../../translated_images/id/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperature 0, v1](../../../translated_images/id/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0, v2](../../../translated_images/id/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Di sini Anda dapat dengan jelas melihat bagaimana gambar-gambar tersebut lebih mirip satu sama lain.
 

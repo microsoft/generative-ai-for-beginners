@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hu"
 }
 -->
-[![Nyílt forráskódú modellek](../../../translated_images/hu/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Nyílt forráskódú modellek](../../../translated_images/hu/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Bevezetés
 
@@ -33,7 +33,7 @@ Az AI ügynökök rendkívül izgalmas területet képviselnek a generatív mest
 
 Az AI ügynökök lehetővé teszik a nagy nyelvi modellek (LLM-ek) számára, hogy feladatokat végezzenek el azáltal, hogy hozzáférést biztosítanak számukra egy **állapothoz** és **eszközökhöz**.
 
-![Ügynök modell](../../../translated_images/hu/what-agent.21f2893bdfd01e6a.png)
+![Ügynök modell](../../../translated_images/hu/what-agent.21f2893bdfd01e6a.webp)
 
 Határozzuk meg ezeket a kifejezéseket:
 
@@ -53,7 +53,7 @@ Az **állapot** kezelésére egy beépített funkciót használ, amelyet `AgentE
 
 Az `AgentExecutor` a csevegési előzményeket is tárolja, hogy biztosítsa a csevegés kontextusát.
 
-![LangChain ügynökök](../../../translated_images/hu/langchain-agents.edcc55b5d5c43716.png)
+![LangChain ügynökök](../../../translated_images/hu/langchain-agents.edcc55b5d5c43716.webp)
 
 A LangChain kínál egy [eszközkatalógust](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), amelyet be lehet importálni az alkalmazásba, hogy az LLM hozzáférhessen hozzájuk. Ezeket a közösség és a LangChain csapata készítette.
 
@@ -85,7 +85,7 @@ Az állapot megváltoztatásához és kezeléséhez egy asszisztens ügynök Pyt
 
 Íme egy példa a folyamatra:
 
-![AutoGen](../../../translated_images/hu/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/hu/autogen.dee9a25a45fde584.webp)
 
 #### LLM rendszerüzenettel definiálva
 
@@ -129,7 +129,7 @@ A beszélgetés állapotának kezeléséhez a TaskWeaver a `Planner` koncepciój
 
 A feladatok elvégzéséhez a `Planner` hozzáférést kap egy eszközgyűjteményhez, amelyet `Plugins`-nek neveznek. Ezek lehetnek Python osztályok vagy általános kódértelmezők. Ezeket az eszközöket beágyazásokként tárolják, hogy az LLM könnyebben megtalálja a megfelelő plugint.
 
-![Taskweaver](../../../translated_images/hu/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/hu/taskweaver.da8559999267715a.webp)
 
 Íme egy példa egy anomáliadetektálás kezelésére szolgáló pluginra:
 
@@ -143,7 +143,7 @@ A kódot végrehajtás előtt ellenőrzik. A Taskweaver másik funkciója az ál
 
 Az utolsó ügynök keretrendszer, amelyet megvizsgálunk, a [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Ami a JARVIS-t egyedivé teszi, az az, hogy egy LLM-et használ a beszélgetés **állapotának** kezelésére, és az **eszközök** más AI modellek. Minden AI modell specializált modell, amely bizonyos feladatokat végez, például objektumfelismerés, átirat készítés vagy képaláírás.
 
-![JARVIS](../../../translated_images/hu/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/hu/jarvis.762ddbadbd1a3a33.webp)
 
 Az LLM, mint általános célú modell, megkapja a felhasználó kérését, és azonosítja a konkrét feladatot, valamint az ahhoz szükséges argumentumokat/adatokat.
 

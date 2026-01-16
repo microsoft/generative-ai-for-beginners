@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Design af UX til AI-applikationer
 
-[![Design af UX til AI-applikationer](../../../translated_images/da/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Design af UX til AI-applikationer](../../../translated_images/da/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klik på billedet ovenfor for at se videoen til denne lektion)_
 
@@ -58,7 +58,7 @@ At være tilgængelig betyder at udvide brugeroplevelsen til brugere med forskel
 
 At være behagelig betyder, at applikationen er fornøjelig at bruge. En tiltalende brugeroplevelse kan have en positiv indvirkning på brugeren, opmuntre dem til at vende tilbage til applikationen og øge virksomhedens indtægter.
 
-![billede der illustrerer UX-overvejelser i AI](../../../translated_images/da/uxinai.d5b4ed690f5cefff.png)
+![billede der illustrerer UX-overvejelser i AI](../../../translated_images/da/uxinai.d5b4ed690f5cefff.webp)
 
 Ikke alle udfordringer kan løses med AI. AI kommer ind for at supplere din brugeroplevelse, hvad enten det er ved at automatisere manuelle opgaver eller personalisere brugeroplevelser.
 
@@ -72,25 +72,25 @@ To måder at sikre, at tillid er centralt i designet, er forklarbarhed og kontro
 
 Når AI hjælper med at informere beslutninger, såsom at formidle viden til fremtidige generationer, er det afgørende for lærere og forældre at forstå, hvordan AI-beslutninger træffes. Dette er forklarbarhed - forståelse af, hvordan AI-applikationer træffer beslutninger. Design for forklarbarhed inkluderer at tilføje detaljer, der fremhæver, hvordan AI nåede frem til outputtet. Publikum skal være opmærksom på, at outputtet er genereret af AI og ikke af et menneske. For eksempel, i stedet for at sige "Start med at chatte med din tutor nu", sig "Brug AI-tutor, der tilpasser sig dine behov og hjælper dig med at lære i dit eget tempo."
 
-![en app landingsside med klar illustration af forklarbarhed i AI-applikationer](../../../translated_images/da/explanability-in-ai.134426a96b498fbf.png)
+![en app landingsside med klar illustration af forklarbarhed i AI-applikationer](../../../translated_images/da/explanability-in-ai.134426a96b498fbf.webp)
 
 Et andet eksempel er, hvordan AI bruger bruger- og persondata. For eksempel kan en bruger med personaen elev have begrænsninger baseret på deres persona. AI kan muligvis ikke afsløre svar på spørgsmål, men kan hjælpe med at guide brugeren til at tænke over, hvordan de kan løse et problem.
 
-![AI svarer på spørgsmål baseret på persona](../../../translated_images/da/solving-questions.b7dea1604de0cbd2.png)
+![AI svarer på spørgsmål baseret på persona](../../../translated_images/da/solving-questions.b7dea1604de0cbd2.webp)
 
 En sidste vigtig del af forklarbarhed er forenkling af forklaringer. Elever og lærere er måske ikke AI-eksperter, derfor bør forklaringer på, hvad applikationen kan eller ikke kan gøre, være enkle og lette at forstå.
 
-![forenklede forklaringer på AI-kapaciteter](../../../translated_images/da/simplified-explanations.4679508a406c3621.png)
+![forenklede forklaringer på AI-kapaciteter](../../../translated_images/da/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrol
 
 Generativ AI skaber et samarbejde mellem AI og brugeren, hvor en bruger for eksempel kan ændre prompts for forskellige resultater. Derudover, når et output er genereret, bør brugere kunne ændre resultaterne, hvilket giver dem en følelse af kontrol. For eksempel, når man bruger Bing, kan du tilpasse din prompt baseret på format, tone og længde. Derudover kan du tilføje ændringer til dit output og modificere resultatet som vist nedenfor:
 
-![Bing søgeresultater med muligheder for at ændre prompt og output](../../../translated_images/da/bing1.293ae8527dbe2789.png)
+![Bing søgeresultater med muligheder for at ændre prompt og output](../../../translated_images/da/bing1.293ae8527dbe2789.webp)
 
 En anden funktion i Bing, der giver en bruger kontrol over applikationen, er muligheden for at vælge til og fra i forhold til de data, AI bruger. For en skoleapplikation kan en elev ønske at bruge sine noter såvel som lærerens ressourcer som repetitionsmateriale.
 
-![Bing søgeresultater med muligheder for at ændre prompt og output](../../../translated_images/da/bing2.309f4845528a88c2.png)
+![Bing søgeresultater med muligheder for at ændre prompt og output](../../../translated_images/da/bing2.309f4845528a88c2.webp)
 
 > Når man designer AI-applikationer, er det vigtigt at være intentionel for at sikre, at brugere ikke overtror og sætter urealistiske forventninger til dens kapaciteter. En måde at gøre dette på er ved at skabe friktion mellem prompts og resultater. Mind brugeren om, at dette er AI og ikke et andet menneske.
 
@@ -102,7 +102,7 @@ AI-applikationer bør bygges til at modtage og give feedback. Dette hjælper ikk
 
 En anden måde at håndtere dette på er at kommunikere systemets kapaciteter og begrænsninger tydeligt. Når en bruger laver en fejl ved at anmode om noget, der ligger uden for AI's kapaciteter, bør der også være en måde at håndtere dette på, som vist nedenfor.
 
-![Giv feedback og håndter fejl](../../../translated_images/da/feedback-loops.7955c134429a9466.png)
+![Giv feedback og håndter fejl](../../../translated_images/da/feedback-loops.7955c134429a9466.webp)
 
 Systemfejl er almindelige med applikationer, hvor brugeren måske har brug for hjælp med information uden for AI's rækkevidde, eller applikationen kan have en grænse for, hvor mange spørgsmål/emner en bruger kan generere resuméer af. For eksempel kan en AI-applikation, der er trænet med data om begrænsede emner, for eksempel Historie og Matematik, muligvis ikke håndtere spørgsmål om Geografi. For at afhjælpe dette kan AI-systemet give et svar som: "Beklager, vores produkt er blevet trænet med data inden for følgende emner....., jeg kan ikke svare på det spørgsmål, du stillede."
 

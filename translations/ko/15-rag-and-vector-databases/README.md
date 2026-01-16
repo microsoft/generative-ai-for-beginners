@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 검색 증강 생성(RAG) 및 벡터 데이터베이스
 
-[![검색 증강 생성(RAG) 및 벡터 데이터베이스](../../../translated_images/ko/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![검색 증강 생성(RAG) 및 벡터 데이터베이스](../../../translated_images/ko/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 검색 애플리케이션 수업에서 우리는 대형 언어 모델(LLM)에 자신의 데이터를 통합하는 방법에 대해 간략히 배웠습니다. 이번 수업에서는 LLM 애플리케이션에서 데이터를 기반으로 하는 개념, 프로세스의 메커니즘, 임베딩 및 텍스트를 포함한 데이터를 저장하는 방법에 대해 더 깊이 탐구할 것입니다.
 
@@ -53,7 +53,7 @@ LLM 기반 챗봇은 사용자 프롬프트를 처리하여 응답을 생성합�
 
 ### RAG(검색 증강 생성)의 작동 방식
 
-![RAG의 작동 방식을 보여주는 그림](../../../translated_images/ko/how-rag-works.f5d0ff63942bd3a6.png)
+![RAG의 작동 방식을 보여주는 그림](../../../translated_images/ko/how-rag-works.f5d0ff63942bd3a6.webp)
 
 예를 들어, 자신의 노트에서 퀴즈를 생성하는 챗봇을 배포하려면 지식 베이스와의 연결이 필요합니다. 이때 RAG가 구원에 나섭니다. RAG는 다음과 같이 작동합니다:
 
@@ -65,7 +65,7 @@ LLM 기반 챗봇은 사용자 프롬프트를 처리하여 응답을 생성합�
 
 - **증강 생성:** LLM은 검색된 데이터를 기반으로 응답을 향상시킵니다. 이는 사전 훈련된 데이터뿐만 아니라 추가된 컨텍스트에서 관련 정보를 기반으로 응답을 생성할 수 있게 합니다. 검색된 데이터는 LLM의 응답을 증강하는 데 사용됩니다. 이후 LLM은 사용자의 질문에 대한 답변을 반환합니다.
 
-![RAG의 아키텍처를 보여주는 그림](../../../translated_images/ko/encoder-decode.f2658c25d0eadee2.png)
+![RAG의 아키텍처를 보여주는 그림](../../../translated_images/ko/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG의 아키텍처는 인코더와 디코더로 구성된 트랜스포머를 사용하여 구현됩니다. 예를 들어, 사용자가 질문을 하면 입력 텍스트가 단어의 의미를 캡처하는 벡터로 '인코딩'되고, 벡터는 문서 인덱스로 '디코딩'되어 사용자 쿼리에 따라 새 텍스트를 생성합니다. LLM은 인코더-디코더 모델을 사용하여 출력을 생성합니다.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 조각화된 후에는 다양한 임베딩 모델을 사용하여 텍스트를 임베딩할 수 있습니다. 사용할 수 있는 모델로는 word2vec, OpenAI의 ada-002, Azure Computer Vision 등이 있습니다. 사용할 모델을 선택할 때 사용하는 언어, 인코딩된 콘텐츠 유형(텍스트/이미지/오디오), 인코딩할 수 있는 입력 크기 및 임베딩 출력 길이를 고려해야 합니다.
 
 OpenAI의 `text-embedding-ada-002` 모델을 사용한 텍스트 임베딩 예는 다음과 같습니다:
-![단어 cat의 임베딩](../../../translated_images/ko/cat.74cbd7946bc9ca38.png)
+![단어 cat의 임베딩](../../../translated_images/ko/cat.74cbd7946bc9ca38.webp)
 
 ## 검색 및 벡터 검색
 

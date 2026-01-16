@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # יצירת הנחיות מתקדמות
 
-[![יצירת הנחיות מתקדמות](../../../translated_images/he/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![יצירת הנחיות מתקדמות](../../../translated_images/he/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 בואו נסכם כמה מהלימודים מהפרק הקודם:
 

@@ -63,7 +63,7 @@ Annak ellenőrzésére, hogy a linkjeid megfelelően működnek, egyszerűen has
 
 Például, ha az egérrel egy link fölé viszed a kurzort, megjelenik egy lehetőség, hogy a **ctrl + kattintás** segítségével kövesd a linket.
 
-![VS code follow links screenshot](../../translated_images/hu/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/hu/vscode-follow-link.85520ab6a1237adc.webp)
 
 Ha rákattintasz egy linkre, és az helyileg nem működik, akkor biztosan a munkafolyamat is hibát jelez majd, és a GitHub-on sem fog működni.
 
@@ -71,7 +71,7 @@ A probléma megoldásához próbáld meg a linket a VS Code segítségével beí
 
 Amikor beírod a `./` vagy `../` karaktereket, a VS Code felajánlja a választható lehetőségeket az alapján, amit beírtál.
 
-![VS code select relative path screenshot](../../translated_images/hu/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/hu/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Kattints a kívánt fájlra vagy mappára, így biztos lehetsz benne, hogy az útvonalad nem törött.
 
@@ -88,7 +88,7 @@ Ha ez szerepel az útvonalakon, át fogsz menni az ellenőrzésen.
 
 Ha nem, a következő hibaüzenetet kaphatod.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/hu/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/hu/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és add hozzá a követőkódot a relatív útvonalak végéhez.
 
@@ -105,7 +105,7 @@ Ha ez szerepel az URL-ek végén, át fogsz menni az ellenőrzésen.
 
 Ha nem, a következő hibaüzenetet kaphatod.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/hu/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/hu/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és add hozzá a követőkódot az URL-ek végéhez.
 
@@ -122,7 +122,7 @@ Ha nincs ilyen az URL-ekben, át fogsz menni az ellenőrzésen.
 
 Ha van, a következő hibaüzenetet kaphatod.
 
-![GitHub check country locale comment screenshot](../../translated_images/hu/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/hu/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 A probléma megoldásához nyisd meg a munkafolyamat által kiemelt fájlútvonalat, és távolítsd el az ország-specifikus nyelvi beállítást az URL-ekből.
 

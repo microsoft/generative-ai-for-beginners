@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ジェネレーティブAIを活用したチャットアプリケーションの構築
 
-[![ジェネレーティブAIを活用したチャットアプリケーションの構築](../../../translated_images/ja/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![ジェネレーティブAIを活用したチャットアプリケーションの構築](../../../translated_images/ja/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(上の画像をクリックして、このレッスンの動画をご覧ください)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 OpenAIのChatGPTにおける「カスタム指示」設定は、プロンプトに重要な文脈となる情報を提供することができます。以下はカスタム指示の例です。
 
-![ChatGPTのカスタム指示設定](../../../translated_images/ja/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPTのカスタム指示設定](../../../translated_images/ja/custom-instructions.b96f59aa69356fcf.webp)
 
 この「プロファイル」は、ChatGPTにリンクリストに関するレッスンプランを作成するよう促します。ChatGPTは、ユーザーの経験に基づいてより詳細なレッスンプランを求めている可能性を考慮しています。
 
-![リンクリストに関するレッスンプランのプロンプト](../../../translated_images/ja/lesson-plan-prompt.cc47c488cf1343df.png)
+![リンクリストに関するレッスンプランのプロンプト](../../../translated_images/ja/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoftの大規模言語モデル向けシステムメッセージフレームワーク
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membangun Aplikasi AI dengan Kode Rendah
 
-[![Membangun Aplikasi AI dengan Kode Rendah](../../../translated_images/id/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Membangun Aplikasi AI dengan Kode Rendah](../../../translated_images/id/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klik gambar di atas untuk menonton video pelajaran ini)_
 
@@ -92,17 +92,17 @@ Anda akan membangun aplikasi menggunakan Copilot di Power Apps dengan mengikuti 
 
 1. Gunakan area teks di layar utama untuk mendeskripsikan aplikasi yang ingin Anda bangun. Misalnya, **_Saya ingin membangun aplikasi untuk melacak dan mengelola tugas siswa_**. Klik tombol **Kirim** untuk mengirimkan prompt ke AI Copilot.
 
-![Deskripsikan aplikasi yang ingin Anda bangun](../../../translated_images/id/copilot-chat-prompt-powerapps.84250f341d060830.png)
+![Deskripsikan aplikasi yang ingin Anda bangun](../../../translated_images/id/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot akan menyarankan Tabel Dataverse dengan bidang yang Anda perlukan untuk menyimpan data yang ingin Anda lacak serta beberapa data contoh. Anda kemudian dapat menyesuaikan tabel untuk memenuhi kebutuhan Anda menggunakan fitur asisten AI Copilot melalui langkah-langkah percakapan.
 
    > **Penting**: Dataverse adalah platform data yang mendasari Power Platform. Ini adalah platform data kode rendah untuk menyimpan data aplikasi. Ini adalah layanan yang sepenuhnya dikelola yang menyimpan data secara aman di Microsoft Cloud dan disediakan dalam lingkungan Power Platform Anda. Dataverse dilengkapi dengan kemampuan tata kelola data bawaan, seperti klasifikasi data, garis keturunan data, kontrol akses yang terperinci, dan lainnya. Anda dapat mempelajari lebih lanjut tentang Dataverse [di sini](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Bidang yang disarankan dalam tabel baru Anda](../../../translated_images/id/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
+   ![Bidang yang disarankan dalam tabel baru Anda](../../../translated_images/id/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Para pendidik ingin mengirim email kepada siswa yang telah mengirimkan tugas mereka untuk memberi tahu mereka tentang kemajuan tugas mereka. Anda dapat menggunakan Copilot untuk menambahkan bidang baru ke tabel untuk menyimpan email siswa. Misalnya, Anda dapat menggunakan prompt berikut untuk menambahkan bidang baru ke tabel: **_Saya ingin menambahkan kolom untuk menyimpan email siswa_**. Klik tombol **Kirim** untuk mengirimkan prompt ke AI Copilot.
 
-![Menambahkan bidang baru](../../../translated_images/id/copilot-new-column.35e15ff21acaf274.png)
+![Menambahkan bidang baru](../../../translated_images/id/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot akan menghasilkan bidang baru dan Anda kemudian dapat menyesuaikan bidang tersebut untuk memenuhi kebutuhan Anda.
 
@@ -112,7 +112,7 @@ Anda akan membangun aplikasi menggunakan Copilot di Power Apps dengan mengikuti 
 
 1. Agar pendidik dapat mengirim email kepada siswa, Anda dapat menggunakan Copilot untuk menambahkan layar baru ke aplikasi. Misalnya, Anda dapat menggunakan prompt berikut untuk menambahkan layar baru ke aplikasi: **_Saya ingin menambahkan layar untuk mengirim email kepada siswa_**. Klik tombol **Kirim** untuk mengirimkan prompt ke AI Copilot.
 
-![Menambahkan layar baru melalui instruksi prompt](../../../translated_images/id/copilot-new-screen.2e0bef7132a17392.png)
+![Menambahkan layar baru melalui instruksi prompt](../../../translated_images/id/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot akan menghasilkan layar baru dan Anda kemudian dapat menyesuaikan layar tersebut untuk memenuhi kebutuhan Anda.
 
@@ -147,15 +147,15 @@ Untuk membuat tabel di Dataverse menggunakan Copilot, ikuti langkah-langkah beri
 
 2. Pada bilah navigasi kiri, pilih **Tables** lalu klik **Describe the new Table**.
 
-![Pilih tabel baru](../../../translated_images/id/describe-new-table.0792373eb757281e.png)
+![Pilih tabel baru](../../../translated_images/id/describe-new-table.0792373eb757281e.webp)
 
 3. Pada layar **Describe the new Table**, gunakan area teks untuk menjelaskan tabel yang ingin Anda buat. Misalnya, **_Saya ingin membuat tabel untuk menyimpan informasi faktur_**. Klik tombol **Send** untuk mengirimkan perintah ke AI Copilot.
 
-![Deskripsikan tabel](../../../translated_images/id/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
+![Deskripsikan tabel](../../../translated_images/id/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot akan menyarankan Tabel Dataverse dengan bidang yang Anda perlukan untuk menyimpan data yang ingin Anda lacak dan beberapa data contoh. Anda kemudian dapat menyesuaikan tabel sesuai kebutuhan Anda menggunakan fitur asisten AI Copilot melalui langkah-langkah percakapan.
 
-![Tabel Dataverse yang disarankan](../../../translated_images/id/copilot-dataverse-table.b3bc936091324d9d.png)
+![Tabel Dataverse yang disarankan](../../../translated_images/id/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Tim keuangan ingin mengirim email kepada pemasok untuk memperbarui mereka dengan status terkini faktur mereka. Anda dapat menggunakan Copilot untuk menambahkan bidang baru ke tabel untuk menyimpan email pemasok. Misalnya, Anda dapat menggunakan perintah berikut untuk menambahkan bidang baru ke tabel: **_Saya ingin menambahkan kolom untuk menyimpan email pemasok_**. Klik tombol **Send** untuk mengirimkan perintah ke AI Copilot.
 
@@ -184,7 +184,7 @@ Beberapa Model AI Siap Pakai yang tersedia di Power Platform meliputi:
 
 Dengan Model AI Kustom, Anda dapat membawa model Anda sendiri ke AI Builder sehingga dapat berfungsi seperti model kustom AI Builder lainnya, memungkinkan Anda melatih model menggunakan data Anda sendiri. Anda dapat menggunakan model ini untuk mengotomatisasi proses dan memprediksi hasil baik di Power Apps maupun Power Automate. Saat menggunakan model Anda sendiri, ada batasan yang berlaku. Baca lebih lanjut tentang [batasan ini](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Model AI builder](../../../translated_images/id/ai-builder-models.8069423b84cfc47f.png)
+![Model AI builder](../../../translated_images/id/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Tugas #2 - Bangun Alur Pemrosesan Faktur untuk Startup Kita
 
@@ -198,7 +198,7 @@ Untuk membangun alur kerja yang akan membantu tim keuangan memproses faktur meng
 
 2. Gunakan area teks di layar utama untuk menjelaskan alur kerja yang ingin Anda bangun. Misalnya, **_Proses faktur saat tiba di kotak masuk saya_**. Klik tombol **Send** untuk mengirimkan perintah ke AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/id/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
+   ![Copilot power automate](../../../translated_images/id/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot akan menyarankan tindakan yang Anda perlukan untuk melakukan tugas yang ingin Anda otomatisasi. Anda dapat mengklik tombol **Next** untuk melanjutkan ke langkah berikutnya.
 
@@ -212,7 +212,7 @@ Untuk membangun alur kerja yang akan membantu tim keuangan memproses faktur meng
 
 8. Hapus tindakan **Condition** dari alur kerja karena Anda tidak akan menggunakannya. Alur kerja Anda seharusnya terlihat seperti tangkapan layar berikut:
 
-   ![power automate, hapus tindakan](../../../translated_images/id/powerautomate-remove-actions.7216392fe684ceba.png)
+   ![power automate, hapus tindakan](../../../translated_images/id/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Klik tombol **Add an action** dan cari **Dataverse**. Pilih tindakan **Add a new row**.
 
@@ -227,7 +227,7 @@ Untuk membangun alur kerja yang akan membantu tim keuangan memproses faktur meng
     - Status - Atur **Status** ke **Pending**.
     - Supplier Email - Gunakan konten dinamis **From** dari pemicu **When a new email arrives**.
 
-    ![power automate tambahkan baris](../../../translated_images/id/powerautomate-add-row.5edce45e5dd3d51e.png)
+    ![power automate tambahkan baris](../../../translated_images/id/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Setelah selesai dengan alur kerja, klik tombol **Save** untuk menyimpan alur kerja. Anda kemudian dapat menguji alur kerja dengan mengirimkan email dengan faktur ke folder yang Anda tentukan di pemicu.
 
@@ -241,7 +241,7 @@ Model GPT menjalani pelatihan ekstensif pada sejumlah besar data, memungkinkan m
 
 Misalnya, Anda dapat membangun alur kerja untuk secara otomatis menghasilkan teks untuk berbagai kasus penggunaan, seperti: draf email, deskripsi produk, dan lainnya. Anda juga dapat menggunakan model ini untuk menghasilkan teks untuk berbagai aplikasi, seperti chatbot dan aplikasi layanan pelanggan yang memungkinkan agen layanan pelanggan merespons pertanyaan pelanggan dengan efektif dan efisien.
 
-![buat perintah](../../../translated_images/id/create-prompt-gpt.69d429300c2e870a.png)
+![buat perintah](../../../translated_images/id/create-prompt-gpt.69d429300c2e870a.webp)
 
 Untuk mempelajari cara menggunakan Model AI ini di Power Automate, pelajari modul [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

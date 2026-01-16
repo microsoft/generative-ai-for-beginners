@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "et"
 }
 -->
-![Looja tehisintellekt algajatele](../../translated_images/et/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Looja tehisintellekt algajatele](../../translated_images/et/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 õppetundi, mis õpetavad kõike, mida vajad Generatiivsete tehisintellekti rakenduste loomiseks
 

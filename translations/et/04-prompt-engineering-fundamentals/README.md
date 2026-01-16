@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Põhitõed promptide kujundamisest
 
-[![Põhitõed promptide kujundamisest](../../../translated_images/et/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Põhitõed promptide kujundamisest](../../../translated_images/et/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Sissejuhatus
 See moodul käsitleb olulisi kontseptsioone ja tehnikaid tõhusate promptide loomiseks generatiivsete AI mudelite jaoks. Kuidas te oma prompti LLM-ile kirjutate, on samuti oluline. Hoolikalt koostatud prompt võib anda parema vastuse kvaliteedi. Kuid mida täpselt tähendavad sellised terminid nagu _prompt_ ja _promptide kujundamine_? Ja kuidas ma saan parandada prompti _sisendit_, mida ma LLM-ile saadan? Need on küsimused, millele püüame vastata selles ja järgmises peatükis.
@@ -53,7 +53,7 @@ Notebook sisaldab _algajate_ harjutusi - kuid teid julgustatakse lisama oma _Mar
 
 Kas soovite enne süvenemist saada ülevaate sellest, mida see õppetund hõlmab? Vaadake seda illustreeritud juhendit, mis annab ülevaate peamistest käsitletavatest teemadest ja olulisematest järeldustest, millele mõelda. Õppetüki teekond viib teid põhikontseptsioonide ja väljakutsete mõistmisest nende lahendamiseni asjakohaste promptide kujundamise tehnikate ja parimate praktikate abil. Pange tähele, et selle juhendi "Edasijõudnute tehnikad" osa viitab järgmises peatükis käsitletavale sisule.
 
-![Illustreeritud juhend promptide kujundamisest](../../../translated_images/et/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Illustreeritud juhend promptide kujundamisest](../../../translated_images/et/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Meie idufirma
 
@@ -94,7 +94,7 @@ LLM näeb prompti kui _tokenite järjestust_, kus erinevad mudelid (või mudeli 
 
 Et saada intuitsiooni, kuidas tokeniseerimine toimib, proovige selliseid tööriistu nagu [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), mis on allpool näidatud. Kopeerige oma prompt - ja vaadake, kuidas see tokeniteks muudetakse, pöörates tähelepanu sellele, kuidas käsitletakse tühikuid ja kirjavahemärke. Pange tähele, et see näide näitab vanemat LLM-i (GPT-3) - seega võib uuema mudeliga proovimine anda teistsuguse tulemuse.
 
-![Tokeniseerimine](../../../translated_images/et/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokeniseerimine](../../../translated_images/et/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Kontseptsioon: Põhimudelid
 
@@ -104,7 +104,7 @@ Kas soovite näha, kuidas promptipõhine täitmine toimib? Sisestage ülaltoodud
 
 Aga mis siis, kui kasutaja soovib näha midagi konkreetset, mis vastab teatud kriteeriumidele või ülesande eesmärgile? Siin tulevad mängu _instruktsioonidega häälestatud_ LLM-id.
 
-![Baasmudeli vestluse täitmine](../../../translated_images/et/04-playground-chat-base.65b76fcfde0caa67.png)
+![Baasmudeli vestluse täitmine](../../../translated_images/et/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Kontseptsioon: Instruktsioonidega häälestatud LLM-id
 
@@ -118,7 +118,7 @@ Proovime seda - vaadake uuesti ülaltoodud prompti, kuid muutke nüüd _süsteem
 
 Vaadake, kuidas tulemus on nüüd häälestatud, et kajastada soovitud eesmärki ja vormingut? Õpetaja saab nüüd seda vastust otse kasutada oma klassi slaidides.
 
-![Instruktsioonidega häälestatud LLM-i vestluse täitmine](../../../translated_images/et/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Instruktsioonidega häälestatud LLM-i vestluse täitmine](../../../translated_images/et/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Miks on promptide kujundamist vaja?
 
@@ -148,15 +148,15 @@ Mis juhtub, kui kasutame seda küsimust erinevate LLM-i pakkujatega?
 
 > **Vastus 1**: OpenAI Playground (GPT-35)
 
-![Vastus 1](../../../translated_images/et/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Vastus 1](../../../translated_images/et/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Vastus 2**: Azure OpenAI Playground (GPT-35)
 
-![Vastus 2](../../../translated_images/et/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Vastus 2](../../../translated_images/et/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Vastus 3**: Hugging Face Chat Playground (LLama-2)
 
-![Vastus 3](../../../translated_images/et/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Vastus 3](../../../translated_images/et/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Nagu oodatud, genereerib iga mudel (või mudeli versioon) veidi erinevaid vastuseid tänu stohhastilisele käitumisele ja mudeli võimekuse variatsioonidele. Näiteks üks mudel sihib 8. klassi tasemel publikut, samas kui teine eeldab keskkooliõpilast. Kuid kõik kolm mudelit genereerisid vastuseid, mis võiksid veenda informeerimata kasutajat, et sündmus oli tõeline.
 

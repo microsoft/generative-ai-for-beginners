@@ -68,7 +68,7 @@ Untuk memastikan tautan Anda berfungsi dengan baik, cukup gunakan VS code untuk 
 
 Misalnya, saat Anda mengarahkan kursor ke tautan dalam file Anda, Anda akan diberi opsi untuk mengikuti tautan dengan menekan **ctrl + klik**
 
-![VS code follow links screenshot](../../translated_images/id/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/id/vscode-follow-link.85520ab6a1237adc.webp)
 
 Jika Anda mengklik tautan dan tautan tersebut tidak berfungsi secara lokal, maka pasti akan memicu workflow dan tidak akan berfungsi di GitHub.
 
@@ -76,7 +76,7 @@ Untuk memperbaiki masalah ini, coba ketik tautan dengan bantuan VS code.
 
 Saat Anda mengetik `./` atau `../` VS code akan menampilkan pilihan yang tersedia sesuai dengan yang Anda ketik.
 
-![VS code select relative path screenshot](../../translated_images/id/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/id/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Ikuti path dengan mengklik file atau folder yang diinginkan dan Anda akan yakin bahwa path Anda tidak rusak.
 
@@ -93,7 +93,7 @@ Jika sudah ditambahkan ke path relatif Anda, maka Anda akan lolos pemeriksaan in
 
 Jika tidak, Anda mungkin akan mendapatkan error berikut.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/id/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/id/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Untuk memperbaiki masalah ini, coba buka file path yang disorot oleh workflow dan tambahkan ID pelacakan di akhir path relatif.
 
@@ -110,7 +110,7 @@ Jika sudah ditambahkan ke URL Anda, maka Anda akan lolos pemeriksaan ini.
 
 Jika tidak, Anda mungkin akan mendapatkan error berikut.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/id/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/id/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Untuk memperbaiki masalah ini, coba buka file path yang disorot oleh workflow dan tambahkan ID pelacakan di akhir URL.
 
@@ -127,7 +127,7 @@ Jika tidak ada dalam URL Anda, maka Anda akan lolos pemeriksaan ini.
 
 Jika tidak, Anda mungkin akan mendapatkan error berikut.
 
-![GitHub check country locale comment screenshot](../../translated_images/id/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/id/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Untuk memperbaiki masalah ini, coba buka file path yang disorot oleh workflow dan hapus locale negara dari URL.
 

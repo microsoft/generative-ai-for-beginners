@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-[![ادغام با فراخوانی تابع](../../../translated_images/fa/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![ادغام با فراخوانی تابع](../../../translated_images/fa/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # چرخه عمر برنامه‌های هوش مصنوعی مولد
 
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 با این وجود، ما به یک پارادایم جدید نیاز داریم تا این ابزار را به صورت پویا و با انگیزه‌های صحیح تطبیق دهیم. می‌توانیم برنامه‌های قدیمی‌تر هوش مصنوعی را به عنوان "برنامه‌های ML" و برنامه‌های جدیدتر هوش مصنوعی را به عنوان "برنامه‌های GenAI" یا فقط "برنامه‌های AI" دسته‌بندی کنیم، که فناوری و تکنیک‌های رایج در آن زمان را منعکس می‌کند. این تغییر روایت ما را به چندین روش تغییر می‌دهد، به مقایسه زیر نگاه کنید.
 
-![مقایسه LLMOps و MLOps](../../../translated_images/fa/01-llmops-shift.29bc933cb3bb0080.png)
+![مقایسه LLMOps و MLOps](../../../translated_images/fa/01-llmops-shift.29bc933cb3bb0080.webp)
 
 توجه کنید که در LLMOps، تمرکز بیشتری بر توسعه‌دهندگان برنامه داریم، استفاده از ادغام‌ها به عنوان نقطه کلیدی، استفاده از "مدل‌ها به عنوان سرویس" و تفکر در مورد نکات زیر برای معیارها.
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ابتدا، برای درک چرخه عمر و تغییرات، به این اینفوگرافیک توجه کنید.
 
-![اینفوگرافیک LLMOps](../../../translated_images/fa/02-llmops.70a942ead05a7645.png)
+![اینفوگرافیک LLMOps](../../../translated_images/fa/02-llmops.70a942ead05a7645.webp)
 
 همانطور که ممکن است متوجه شوید، این با چرخه‌های معمول MLOps متفاوت است. LLMها نیازمندی‌های جدید زیادی دارند، مانند پرامپتینگ، تکنیک‌های مختلف برای بهبود کیفیت (تنظیم دقیق، RAG، متا-پرامپت‌ها)، ارزیابی و مسئولیت‌پذیری با هوش مصنوعی مسئول، و در نهایت معیارهای ارزیابی جدید (کیفیت، آسیب، صداقت، هزینه و تأخیر).
 
@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 چگونه می‌توانیم این مراحل را بررسی کنیم؟ بیایید به جزئیات ساخت چرخه عمر بپردازیم.
 
-![جریان کاری LLMOps](../../../translated_images/fa/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![جریان کاری LLMOps](../../../translated_images/fa/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 این ممکن است کمی پیچیده به نظر برسد، ابتدا روی سه مرحله بزرگ تمرکز کنیم.
 
@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 پلتفرم [Azure AI](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) به شما امکان استفاده از [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys) را می‌دهد. AI Studio یک پورتال وب است که به شما امکان کاوش مدل‌ها، نمونه‌ها و ابزارها را می‌دهد. مدیریت منابع، جریان‌های توسعه UI و گزینه‌های SDK/CLI برای توسعه کد-اول را فراهم می‌کند.
 
-![امکانات Azure AI](../../../translated_images/fa/04-azure-ai-platform.80203baf03a12fa8.png)
+![امکانات Azure AI](../../../translated_images/fa/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI به شما امکان استفاده از منابع متعدد برای مدیریت عملیات، خدمات، پروژه‌ها، جستجوی برداری و نیازهای پایگاه داده را می‌دهد.
 
-![LLMOps با Azure AI](../../../translated_images/fa/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps با Azure AI](../../../translated_images/fa/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 ساخت، از اثبات مفهوم (POC) تا برنامه‌های مقیاس بزرگ با PromptFlow:
 
@@ -86,7 +86,7 @@ Azure AI به شما امکان استفاده از منابع متعدد برا
 - آزمایش و تنظیم دقیق برنامه‌ها برای هوش مصنوعی با کیفیت، به آسانی.
 - استفاده از Azure AI Studio برای ادغام و تکرار با ابر، فشار و استقرار برای ادغام سریع.
 
-![LLMOps با PromptFlow](../../../translated_images/fa/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps با PromptFlow](../../../translated_images/fa/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## عالی! یادگیری خود را ادامه دهید!
 

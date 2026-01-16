@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Izrada naprednih upita
 
-[![Izrada naprednih upita](../../../translated_images/hr/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Izrada naprednih upita](../../../translated_images/hr/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Prisjetimo se nekih lekcija iz prethodnog poglavlja:
 

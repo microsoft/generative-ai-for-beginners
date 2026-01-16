@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 負責任地使用生成式人工智能
 
-[![負責任地使用生成式人工智能](../../../translated_images/hk/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![負責任地使用生成式人工智能](../../../translated_images/hk/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _點擊上方圖片觀看本課程的視頻_
 
@@ -85,7 +85,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 現在我們已經確定了負責任生成式人工智能的重要性，讓我們來看看可以採取的四個步驟，以負責任地構建人工智能解決方案：
 
-![減輕循環](../../../translated_images/hk/mitigate-cycle.babcd5a5658e1775.png)
+![減輕循環](../../../translated_images/hk/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### 衡量潛在危害
 
@@ -97,7 +97,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 現在是時候找到方法來防止或限制模型及其回應可能造成的潛在危害。我們可以從四個不同的層面來看：
 
-![減輕層面](../../../translated_images/hk/mitigation-layers.377215120b9a1159.png)
+![減輕層面](../../../translated_images/hk/mitigation-layers.377215120b9a1159.webp)
 
 - **模型**。為特定用例選擇合適的模型。像 GPT-4 這樣更大更複雜的模型在應用於較小且更具特定用途的情況時可能會帶來更多有害內容的風險。使用您的訓練數據進行微調也可以減少有害內容的風險。
 

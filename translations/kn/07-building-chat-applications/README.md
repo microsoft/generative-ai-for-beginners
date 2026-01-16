@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಜನರೇಟಿವ್ AI-ಚಾಲಿತ ಚಾಟ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು
 
-[![ಜನರೇಟಿವ್ AI-ಚಾಲಿತ ಚಾಟ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು](../../../translated_images/kn/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![ಜನರೇಟಿವ್ AI-ಚಾಲಿತ ಚಾಟ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು](../../../translated_images/kn/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ಈ ಪಾಠದ ವೀಡಿಯೋವನ್ನು ನೋಡಲು ಮೇಲಿನ ಚಿತ್ರವನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ವೈಯಕ್ತೀಕರಣದ ಒಂದು ಉದಾಹರಣೆ OpenAIನ ChatGPTಯ "ಕಸ್ಟಮ್ ಸೂಚನೆಗಳು" ಸೆಟ್ಟಿಂಗ್‌ಗಳಾಗಿದೆ. ಇದು ನಿಮ್ಮ ಪ್ರಾಂಪ್ಟ್‌ಗಳಿಗೆ ಪ್ರಮುಖ ಸಾಂದರ್ಭಿಕ ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ. ಇಲ್ಲಿದೆ ಒಂದು ಕಸ್ಟಮ್ ಸೂಚನೆಯ ಉದಾಹರಣೆ.
 
-![ChatGPTಯಲ್ಲಿ ಕಸ್ಟಮ್ ಸೂಚನೆಗಳ ಸೆಟ್ಟಿಂಗ್‌ಗಳು](../../../translated_images/kn/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPTಯಲ್ಲಿ ಕಸ್ಟಮ್ ಸೂಚನೆಗಳ ಸೆಟ್ಟಿಂಗ್‌ಗಳು](../../../translated_images/kn/custom-instructions.b96f59aa69356fcf.webp)
 
 ಈ "ಪ್ರೊಫೈಲ್" ChatGPTಗೆ ಲಿಂಕ್ ಮಾಡಿದ ಪಟ್ಟಿಗಳ ಮೇಲೆ ಪಾಠ ಯೋಜನೆಯನ್ನು ರಚಿಸಲು ಸೂಚಿಸುತ್ತದೆ. ChatGPT ಬಳಕೆದಾರನ ಅನುಭವ ಆಧರಿಸಿ ಹೆಚ್ಚು ಆಳವಾದ ಪಾಠ ಯೋಜನೆಯನ್ನು ಬಯಸಬಹುದು ಎಂದು ಪರಿಗಣಿಸುತ್ತದೆ.
 
-![ಲಿಂಕ್ ಮಾಡಿದ ಪಟ್ಟಿಗಳ ಬಗ್ಗೆ ಪಾಠ ಯೋಜನೆಗಾಗಿ ChatGPTಯಲ್ಲಿ ಪ್ರಾಂಪ್ಟ್](../../../translated_images/kn/lesson-plan-prompt.cc47c488cf1343df.png)
+![ಲಿಂಕ್ ಮಾಡಿದ ಪಟ್ಟಿಗಳ ಬಗ್ಗೆ ಪಾಠ ಯೋಜನೆಗಾಗಿ ChatGPTಯಲ್ಲಿ ಪ್ರಾಂಪ್ಟ್](../../../translated_images/kn/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### ದೊಡ್ಡ ಭಾಷಾ ಮಾದರಿಗಳಿಗಾಗಿ ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನ ಸಿಸ್ಟಮ್ ಸಂದೇಶ ಫ್ರೇಮ್ವರ್ಕ್
 

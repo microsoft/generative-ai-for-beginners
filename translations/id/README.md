@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "id"
 }
 -->
-![Generative AI Untuk Pemula](../../translated_images/id/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI Untuk Pemula](../../translated_images/id/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 Pelajaran mengajarkan semua yang perlu Anda ketahui untuk mulai membangun aplikasi Generative AI
 

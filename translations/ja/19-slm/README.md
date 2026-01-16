@@ -33,7 +33,7 @@ SLMは大量のテキストデータで訓練されます。訓練中に言語�
 
 SLMの開発は、モバイルデバイスやエッジコンピューティングプラットフォームなど、リソースが限られた環境での展開ニーズの高まりに対応しています。フルスケールのLLMはリソース負荷が大きいため実用的でない場合があります。効率性に重点を置くことで、SLMは性能とアクセスのバランスを取り、さまざまな分野での幅広い応用を可能にしています。
 
-![slm](../../../translated_images/ja/slm.4058842744d0444a.png)
+![slm](../../../translated_images/ja/slm.4058842744d0444a.webp)
 
 ## 学習目標
 
@@ -135,7 +135,7 @@ Phi-3/3.5ファミリーのモデルはシナリオに応じて使い分けが�
 
 Phi-3/3.5をさまざまなシナリオで活用したいと思います。次に、異なるシナリオに基づいてPhi-3/3.5を使う方法を紹介します。
 
-![phi3](../../../translated_images/ja/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/ja/phi3.655208c3186ae381.webp)
 
 ### クラウドAPIによる推論の違い
 
@@ -145,9 +145,9 @@ GitHub Modelsは最も直接的な方法です。GitHub Modelsを通じてPhi-3/
 
 - デモ：中国語シナリオにおけるPhi-3-miniとPhi-3.5-miniの効果比較
 
-![phi3](../../../translated_images/ja/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/ja/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/ja/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/ja/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

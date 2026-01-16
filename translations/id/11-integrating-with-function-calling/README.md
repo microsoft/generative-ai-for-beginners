@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mengintegrasikan dengan Pemanggilan Fungsi
 
-[![Mengintegrasikan dengan Pemanggilan Fungsi](../../../translated_images/id/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Mengintegrasikan dengan Pemanggilan Fungsi](../../../translated_images/id/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Anda telah mempelajari cukup banyak sejauh ini dalam pelajaran sebelumnya. Namun, kita masih bisa meningkatkan lebih jauh. Beberapa hal yang dapat kita perbaiki adalah bagaimana kita bisa mendapatkan format respons yang lebih konsisten agar lebih mudah bekerja dengan respons di tahap selanjutnya. Selain itu, kita mungkin ingin menambahkan data dari sumber lain untuk memperkaya aplikasi kita.
 
@@ -179,7 +179,7 @@ Sekarang kita dapat mengirim kedua permintaan ke LLM dan memeriksa respons yang 
 
 Jadi bagaimana kita menyelesaikan masalah format ini? Dengan menggunakan pemanggilan fungsi, kita dapat memastikan bahwa kita menerima data yang terstruktur kembali. Saat menggunakan pemanggilan fungsi, LLM sebenarnya tidak memanggil atau menjalankan fungsi apa pun. Sebaliknya, kita membuat struktur untuk diikuti LLM dalam responsnya. Kami kemudian menggunakan respons terstruktur tersebut untuk mengetahui fungsi apa yang harus dijalankan dalam aplikasi kami.
 
-![alur fungsi](../../../translated_images/id/Function-Flow.083875364af4f4bb.png)
+![alur fungsi](../../../translated_images/id/Function-Flow.083875364af4f4bb.webp)
 
 Kami kemudian dapat mengambil apa yang dikembalikan dari fungsi dan mengirimkannya kembali ke LLM. LLM kemudian akan merespons menggunakan bahasa alami untuk menjawab kueri pengguna.
 
@@ -201,7 +201,7 @@ Proses membuat pemanggilan fungsi mencakup 3 langkah utama:
 2. **Membaca** respons model untuk melakukan tindakan, misalnya menjalankan fungsi atau permintaan API.
 3. **Melakukan** panggilan lain ke API Chat Completions dengan respons dari fungsi Anda untuk menggunakan informasi tersebut untuk membuat respons kepada pengguna.
 
-![Alur LLM](../../../translated_images/id/LLM-Flow.3285ed8caf4796d7.png)
+![Alur LLM](../../../translated_images/id/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Langkah 1 - membuat pesan
 

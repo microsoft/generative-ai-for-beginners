@@ -33,7 +33,7 @@ SLM:t koulutetaan valtavilla tekstiaineistoilla. Koulutuksen aikana ne oppivat k
 
 SLM:ien kehitys vastaa kasvavaa tarvetta malleille, joita voidaan käyttää resurssirajoitetuissa ympäristöissä, kuten mobiililaitteissa tai reunalaskennassa, joissa täysimittaiset LLM:t voivat olla liian raskaita. Tehokkuuteen keskittyen SLM:t tasapainottavat suorituskyvyn ja saavutettavuuden, mahdollistaen laajemman soveltamisen eri aloilla.
 
-![slm](../../../translated_images/fi/slm.4058842744d0444a.png)
+![slm](../../../translated_images/fi/slm.4058842744d0444a.webp)
 
 ## Oppimistavoitteet  
 
@@ -135,7 +135,7 @@ Voimme käyttää Phi-3/3.5 -perheen malleja eri käyttötarkoituksissa. Toisin 
 
 Toivomme käyttävämme Phi-3/3.5 -malleja eri tilanteissa. Seuraavaksi käytämme Phi-3/3.5 -malleja eri käyttötarkoitusten mukaan.  
 
-![phi3](../../../translated_images/fi/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/fi/phi3.655208c3186ae381.webp)
 
 ### Päättelyn erot pilvipalvelun API:n kautta  
 
@@ -145,9 +145,9 @@ GitHub Models on suorin tapa. Voit nopeasti käyttää Phi-3/3.5-Instruct -malli
 
 - Demo: Vertailu Phi-3-mini:n ja Phi-3.5-mini:n vaikutuksista kiinankielisissä tilanteissa  
 
-![phi3](../../../translated_images/fi/gh1.126c6139713b622b.png)  
+![phi3](../../../translated_images/fi/gh1.126c6139713b622b.webp)  
 
-![phi35](../../../translated_images/fi/gh2.07d7985af66f178d.png)  
+![phi35](../../../translated_images/fi/gh2.07d7985af66f178d.webp)  
 
 **Azure AI Studio**  
 

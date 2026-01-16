@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "et"
 }
 -->
-[![Funktsioonikõnede integreerimine](../../../translated_images/et/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Funktsioonikõnede integreerimine](../../../translated_images/et/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Generatiivse tehisintellekti rakenduse elutsükkel
 
@@ -30,7 +30,7 @@ LLMid on uus tööriist tehisintellekti arsenalis, need on äärmiselt võimsad 
 
 Selleks vajame uut paradigmat, et seda tööriista dünaamiliselt kohandada õige stiimuli abil. Võime vanemaid AI rakendusi kategoriseerida kui "ML rakendused" ja uuemaid AI rakendusi kui "GenAI rakendused" või lihtsalt "AI rakendused", peegeldades tolleaegset peavoolutehnoloogiat ja -meetodeid. See nihutab meie narratiivi mitmel moel, vaadake järgmist võrdlust.
 
-![LLMOps vs. MLOps võrdlus](../../../translated_images/et/01-llmops-shift.29bc933cb3bb0080.png)
+![LLMOps vs. MLOps võrdlus](../../../translated_images/et/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Pange tähele, et LLMOps-is keskendume rohkem rakenduste arendajatele, kasutades integratsioone võtmetähtsusega punktina, kasutades "Mudelit teenusena" ja mõeldes järgmistele mõõdikutele.
 
@@ -44,7 +44,7 @@ Pange tähele, et LLMOps-is keskendume rohkem rakenduste arendajatele, kasutades
 
 Esmalt, et mõista elutsüklit ja selle muudatusi, vaatame järgmist infograafikat.
 
-![LLMOps infograafik](../../../translated_images/et/02-llmops.70a942ead05a7645.png)
+![LLMOps infograafik](../../../translated_images/et/02-llmops.70a942ead05a7645.webp)
 
 Nagu võite märgata, erineb see tavapärastest MLOps elutsüklitest. LLMidel on palju uusi nõudeid, nagu promptimine, erinevad tehnikad kvaliteedi parandamiseks (peenhäälestamine, RAG, meta-promptid), erinev hindamine ja vastutus vastutustundliku AI raames ning lõpuks uued hindamismõõdikud (kvaliteet, kahju, ausus, kulu ja latentsus).
 
@@ -54,7 +54,7 @@ Pange tähele, et see ei ole lineaarne, vaid integreeritud tsüklid, iteratiivne
 
 Kuidas saaksime neid samme uurida? Vaatame üksikasjalikumalt, kuidas elutsüklit üles ehitada.
 
-![LLMOps töövoog](../../../translated_images/et/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![LLMOps töövoog](../../../translated_images/et/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 See võib tunduda veidi keeruline, keskendume esmalt kolmele suurele etapile.
 
@@ -74,11 +74,11 @@ Tööriistade jaoks pakub Microsoft [Azure AI platvormi](https://azure.microsoft
 
 [Azure AI platvorm](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) võimaldab teil kasutada [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio on veebipõhine portaal, mis võimaldab teil uurida mudeleid, näidiseid ja tööriistu. Haldate oma ressursse, kasutajaliidese arendusvooge ning SDK/CLI valikuid koodipõhiseks arenduseks.
 
-![Azure AI võimalused](../../../translated_images/et/04-azure-ai-platform.80203baf03a12fa8.png)
+![Azure AI võimalused](../../../translated_images/et/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI võimaldab teil kasutada mitmeid ressursse oma operatsioonide, teenuste, projektide, vektorotsingu ja andmebaaside haldamiseks.
 
-![LLMOps Azure AI-ga](../../../translated_images/et/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps Azure AI-ga](../../../translated_images/et/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Ehitage alates kontseptsiooni tõestusest (POC) kuni suuremahuliste rakendusteni PromptFlow abil:
 
@@ -86,7 +86,7 @@ Ehitage alates kontseptsiooni tõestusest (POC) kuni suuremahuliste rakendusteni
 - Testige ja peenhäälestage oma rakendusi kvaliteetse AI jaoks lihtsalt.
 - Kasutage Azure AI Studio't pilvega integreerimiseks ja iteratsiooniks, kiireks integreerimiseks lükake ja juurutage.
 
-![LLMOps PromptFlow-ga](../../../translated_images/et/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps PromptFlow-ga](../../../translated_images/et/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Suurepärane! Jätkake õppimist!
 

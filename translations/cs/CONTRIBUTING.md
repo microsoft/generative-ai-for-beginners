@@ -63,7 +63,7 @@ Pro ověření správnosti odkazů jednoduše použijte VS Code.
 
 Například, když najedete myší na jakýkoli odkaz ve vašich souborech, zobrazí se vám možnost otevřít odkaz stisknutím **ctrl + kliknutí**
 
-![VS code follow links screenshot](../../translated_images/cs/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/cs/vscode-follow-link.85520ab6a1237adc.webp)
 
 Pokud na odkaz kliknete a lokálně nefunguje, workflow jej také označí jako chybný a nebude fungovat ani na GitHubu.
 
@@ -71,7 +71,7 @@ Pro opravu zkuste odkaz napsat s pomocí VS Code.
 
 Když začnete psát `./` nebo `../`, VS Code vám nabídne dostupné možnosti podle toho, co jste napsali.
 
-![VS code select relative path screenshot](../../translated_images/cs/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/cs/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Vyberte cestu kliknutím na požadovaný soubor nebo složku a budete mít jistotu, že cesta není poškozená.
 
@@ -88,7 +88,7 @@ Pokud je přidán, kontrolu projdete.
 
 Pokud ne, může se objevit následující chyba.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/cs/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/cs/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Pro opravu otevřete soubor, který workflow označil, a přidejte sledovací ID na konec relativních cest.
 
@@ -105,7 +105,7 @@ Pokud je přidán, kontrolu projdete.
 
 Pokud ne, může se objevit následující chyba.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/cs/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/cs/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Pro opravu otevřete soubor, který workflow označil, a přidejte sledovací ID na konec URL.
 
@@ -122,7 +122,7 @@ Pokud není přítomna, kontrolu projdete.
 
 Pokud ano, může se objevit následující chyba.
 
-![GitHub check country locale comment screenshot](../../translated_images/cs/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/cs/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Pro opravu otevřete soubor, který workflow označil, a odstraňte lokalizaci z URL.
 

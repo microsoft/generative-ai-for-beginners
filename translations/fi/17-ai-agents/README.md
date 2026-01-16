@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fi"
 }
 -->
-[![Avoimen lähdekoodin mallit](../../../translated_images/fi/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Avoimen lähdekoodin mallit](../../../translated_images/fi/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Johdanto
 
@@ -33,7 +33,7 @@ AI-agentit ovat erittäin jännittävä ala generatiivisen tekoälyn maailmassa.
 
 AI-agentit antavat suurille kielimalleille (LLM) mahdollisuuden suorittaa tehtäviä tarjoamalla niille pääsyn **tilaan** ja **työkaluihin**.
 
-![Agenttimalli](../../../translated_images/fi/what-agent.21f2893bdfd01e6a.png)
+![Agenttimalli](../../../translated_images/fi/what-agent.21f2893bdfd01e6a.webp)
 
 Määritellään nämä termit:
 
@@ -53,7 +53,7 @@ Nämä määritelmät toivottavasti antavat sinulle hyvän pohjan eteenpäin, ku
 
 `AgentExecutor` tallentaa myös keskusteluhistorian tarjotakseen keskustelun kontekstin.
 
-![Langchain Agents](../../../translated_images/fi/langchain-agents.edcc55b5d5c43716.png)
+![Langchain Agents](../../../translated_images/fi/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain tarjoaa [työkalukatalogin](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), jonka yhteisö ja LangChain-tiimi ovat luoneet ja jotka voidaan tuoda sovellukseesi, jotta LLM saa niihin pääsyn.
 
@@ -85,7 +85,7 @@ Tilan muuttamiseksi ja hallitsemiseksi avustaja-agentti tuottaa Python-koodia te
 
 Tässä on esimerkki prosessista:
 
-![AutoGen](../../../translated_images/fi/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/fi/autogen.dee9a25a45fde584.webp)
 
 #### LLM määritelty järjestelmäviestillä
 
@@ -129,7 +129,7 @@ Keskustelun tilan hallitsemiseksi TaskWeaver käyttää `Plannerin` käsitettä.
 
 Tehtävien suorittamiseksi `Planner` altistetaan työkalukokoelmalle, jota kutsutaan `Pluginsiksi`. Tämä voi olla Python-luokkia tai yleinen kooditulkki. Nämä pluginit tallennetaan upotuksina, jotta LLM voi paremmin etsiä oikean pluginin.
 
-![Taskweaver](../../../translated_images/fi/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/fi/taskweaver.da8559999267715a.webp)
 
 Tässä on esimerkki pluginista, joka käsittelee poikkeavuuksien havaitsemista:
 
@@ -143,7 +143,7 @@ Koodi tarkistetaan ennen sen suorittamista. Toinen ominaisuus kontekstin hallint
 
 Viimeinen agenttikehys, jota tarkastelemme, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVISin ainutlaatuisuus piilee siinä, että se käyttää LLM:ää keskustelun `tilan` hallintaan ja `työkalut` ovat muita AI-malleja. Kukin AI-malli on erikoistunut tiettyihin tehtäviin, kuten objektien tunnistamiseen, transkriptioon tai kuvatekstien luomiseen.
 
-![JARVIS](../../../translated_images/fi/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/fi/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, joka on yleiskäyttöinen malli, vastaanottaa käyttäjän pyynnön ja tunnistaa tietyn tehtävän sekä tarvittavat argumentit/tiedot tehtävän suorittamiseksi.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Δημιουργία Εφαρμογών Αναζήτησης
 
-[![Εισαγωγή στη Γενετική Τεχνητή Νοημοσύνη και στα Μεγάλα Γλωσσικά Μοντέλα](../../../translated_images/el/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Εισαγωγή στη Γενετική Τεχνητή Νοημοσύνη και στα Μεγάλα Γλωσσικά Μοντέλα](../../../translated_images/el/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Κάντε κλικ στην εικόνα παραπάνω για να δείτε το βίντεο αυτού του μαθήματος_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Το παρακάτω είναι ένα παράδειγμα σημασιολογικής ερώτησης για την ερώτηση "μπορείτε να χρησιμοποιήσετε το rstudio με το azure ml;". Δείτε το url του YouTube, θα δείτε ότι το url περιέχει ένα timestamp που σας οδηγεί στο σημείο του βίντεο όπου βρίσκεται η απάντηση στην ερώτηση.
 
-![Σημασιολογική ερώτηση για την ερώτηση "μπορείτε να χρησιμοποιήσετε το rstudio με το Azure ML"](../../../translated_images/el/query-results.bb0480ebf025fac6.png)
+![Σημασιολογική ερώτηση για την ερώτηση "μπορείτε να χρησιμοποιήσετε το rstudio με το Azure ML"](../../../translated_images/el/query-results.bb0480ebf025fac6.webp)
 
 ## Τι είναι η σημασιολογική αναζήτηση;
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Όταν εκτελέσετε το notebook, θα σας ζητηθεί να εισάγετε μια ερώτηση. Το πλαίσιο εισόδου θα μοιάζει με αυτό:
 
-![Πλαίσιο εισόδου για τον χρήστη να εισάγει μια ερώτηση](../../../translated_images/el/notebook-search.1e320b9c7fcbb0bc.png)
+![Πλαίσιο εισόδου για τον χρήστη να εισάγει μια ερώτηση](../../../translated_images/el/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Εξαιρετική δουλειά! Συνεχίστε τη μάθηση σας
 

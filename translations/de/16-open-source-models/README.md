@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "de"
 }
 -->
-[![Open Source Models](../../../translated_images/de/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/de/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Einführung
 
@@ -41,12 +41,12 @@ Für diese Lektion werden wir die Modelle im Folgenden als "Open Models" bezeich
 
 **Kosten** – Die Kosten pro Token für die Nutzung und Bereitstellung dieser Modelle sind niedriger als bei proprietären Modellen. Beim Aufbau von Generative-AI-Anwendungen sollte man die Leistung im Verhältnis zum Preis bei der Arbeit mit diesen Modellen für den eigenen Anwendungsfall berücksichtigen.
 
-![Model Cost](../../../translated_images/de/model-price.3f5a3e4d32ae00b4.png)  
+![Model Cost](../../../translated_images/de/model-price.3f5a3e4d32ae00b4.webp)  
 Quelle: Artificial Analysis
 
 **Flexibilität** – Die Arbeit mit Open Models ermöglicht Flexibilität bei der Verwendung verschiedener Modelle oder deren Kombination. Ein Beispiel hierfür sind die [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), bei denen ein Nutzer das verwendete Modell direkt in der Benutzeroberfläche auswählen kann:
 
-![Choose Model](../../../translated_images/de/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/de/choose-model.f095d15bbac92214.webp)
 
 ## Verschiedene Open Models erkunden
 
@@ -74,7 +74,7 @@ Es gibt keine eindeutige Antwort darauf, wie man ein Open Model auswählt. Ein g
 
 Wenn Sie LLMs verschiedener Typen vergleichen möchten, ist [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) eine weitere großartige Ressource:
 
-![Model Quality](../../../translated_images/de/model-quality.aaae1c22e00f7ee1.png)  
+![Model Quality](../../../translated_images/de/model-quality.aaae1c22e00f7ee1.webp)  
 Quelle: Artificial Analysis
 
 Wenn Sie an einem spezifischen Anwendungsfall arbeiten, kann die Suche nach feinabgestimmten Versionen, die sich auf denselben Bereich konzentrieren, effektiv sein. Das Experimentieren mit mehreren Open Models, um zu sehen, wie sie Ihren und den Erwartungen Ihrer Nutzer entsprechen, ist ebenfalls eine gute Praxis.

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "et"
 }
 -->
-[![Avatud lähtekoodiga mudelid](../../../translated_images/et/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Avatud lähtekoodiga mudelid](../../../translated_images/et/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM-i peenhäälestamine
 
@@ -32,7 +32,7 @@ Valmis? Alustame.
 
 Kas tahad enne süvitsi minemist saada ülevaate, mida me käsitleme? Vaata seda illustreeritud juhendit, mis kirjeldab õpiteekonda selle tunni jaoks - alates peenhäälestamise põhikontseptsioonide ja motivatsiooni õppimisest kuni protsessi ja parimate praktikate mõistmiseni peenhäälestamise ülesande täitmiseks. See on põnev teema uurimiseks, nii et ära unusta vaadata [Ressursid](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) lehte, et leida lisamaterjale iseseisvaks õppimiseks!
 
-![Illustreeritud juhend keelemudelite peenhäälestamiseks](../../../translated_images/et/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Illustreeritud juhend keelemudelite peenhäälestamiseks](../../../translated_images/et/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Mis on keelemudelite peenhäälestamine?
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hr"
 }
 -->
-![Generativna AI za početnike](../../translated_images/hr/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generativna AI za početnike](../../translated_images/hr/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 lekcija koja podučava sve što trebate znati za početak izrade Generativnih AI aplikacija
 

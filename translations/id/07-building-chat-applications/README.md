@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membangun Aplikasi Chat Berbasis AI Generatif
 
-[![Membangun Aplikasi Chat Berbasis AI Generatif](../../../translated_images/id/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Membangun Aplikasi Chat Berbasis AI Generatif](../../../translated_images/id/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klik gambar di atas untuk menonton video pelajaran ini)_
 
@@ -96,11 +96,11 @@ Prinsip umum UX berlaku untuk aplikasi chat, tetapi ada beberapa pertimbangan ta
 
 Salah satu contoh personalisasi adalah pengaturan "Custom instructions" di ChatGPT OpenAI. Fitur ini memungkinkan Anda memberikan informasi tentang diri Anda yang mungkin menjadi konteks penting untuk prompt Anda. Berikut adalah contoh pengaturan custom instruction.
 
-![Pengaturan Custom Instructions di ChatGPT](../../../translated_images/id/custom-instructions.b96f59aa69356fcf.png)
+![Pengaturan Custom Instructions di ChatGPT](../../../translated_images/id/custom-instructions.b96f59aa69356fcf.webp)
 
 "Profil" ini meminta ChatGPT untuk membuat rencana pelajaran tentang linked list. Perhatikan bahwa ChatGPT mempertimbangkan bahwa pengguna mungkin menginginkan rencana pelajaran yang lebih mendalam berdasarkan pengalamannya.
 
-![Prompt di ChatGPT untuk rencana pelajaran tentang linked list](../../../translated_images/id/lesson-plan-prompt.cc47c488cf1343df.png)
+![Prompt di ChatGPT untuk rencana pelajaran tentang linked list](../../../translated_images/id/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Kerangka Pesan Sistem Microsoft untuk Model Bahasa Besar
 

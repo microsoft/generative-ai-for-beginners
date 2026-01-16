@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ja"
 }
 -->
-[![Open Source Models](../../../translated_images/ja/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/ja/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## はじめに
 
@@ -41,12 +41,12 @@ LLMの開発はソフトウェア開発と似た要素を持ちますが、プ�
 
 **コスト** - これらのモデルの使用および展開にかかるトークンあたりのコストは、プロプライエタリモデルよりも低くなっています。生成AIアプリケーションを構築する際には、これらのモデルを使った場合のパフォーマンスと価格のバランスを検討することが重要です。
 
-![Model Cost](../../../translated_images/ja/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/ja/model-price.3f5a3e4d32ae00b4.webp)
 出典: Artificial Analysis
 
 **柔軟性** - オープンモデルを使うことで、異なるモデルを使い分けたり組み合わせたりする柔軟性が得られます。例として、[HuggingChatアシスタント](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)では、ユーザーがUI上で直接使用するモデルを選択できます：
 
-![Choose Model](../../../translated_images/ja/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/ja/choose-model.f095d15bbac92214.webp)
 
 ## さまざまなオープンモデルの紹介
 
@@ -74,7 +74,7 @@ Falconのファインチューニング版の例には、オープンモデル�
 
 異なるタイプのLLMを比較したい場合は、[Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)も優れたリソースです：
 
-![Model Quality](../../../translated_images/ja/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/ja/model-quality.aaae1c22e00f7ee1.webp)
 出典: Artificial Analysis
 
 特定のユースケースに取り組む場合は、同じ分野に特化したファインチューニング版を探すのが効果的です。複数のオープンモデルを試して、自分やユーザーの期待にどのように応えるかを評価するのも良い方法です。

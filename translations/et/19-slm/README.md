@@ -33,7 +33,7 @@ SLM-e treenitakse tohutul hulgal tekstandmetel. Treeningu käigus õpivad nad ke
 
 SLM-ide arendamine vastab kasvavale vajadusele mudelite järele, mida saab kasutada piiratud ressurssidega keskkondades, nagu mobiilseadmed või serva arvutusplatvormid, kus täismahus LLM-id võivad olla ebapraktilised nende suurte ressursinõuete tõttu. Tõhususele keskendudes tasakaalustavad SLM-id jõudlust ja kättesaadavust, võimaldades laiemat rakendust erinevates valdkondades.
 
-![slm](../../../translated_images/et/slm.4058842744d0444a.png)
+![slm](../../../translated_images/et/slm.4058842744d0444a.webp)
 
 ## Õpieesmärgid
 
@@ -135,7 +135,7 @@ Me saame kasutada Phi-3/3.5 perekonna mudeleid erinevate stsenaariumide põhjal.
 
 Me loodame kasutada Phi-3/3.5 erinevates stsenaariumides. Järgmisena kasutame Phi-3/3.5 erinevate stsenaariumide põhjal.
 
-![phi3](../../../translated_images/et/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/et/phi3.655208c3186ae381.webp)
 
 ### Järeldamise erinevus pilve API-de vahel
 
@@ -145,9 +145,9 @@ GitHubi mudelid on kõige otsesem viis. Saate kiiresti juurde pääseda Phi-3/3.
 
 - Demo: Phi-3-mini ja Phi-3.5-mini efektide võrdlus hiina keele stsenaariumides
 
-![phi3](../../../translated_images/et/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/et/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/et/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/et/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

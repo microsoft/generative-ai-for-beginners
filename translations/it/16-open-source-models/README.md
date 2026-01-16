@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "it"
 }
 -->
-[![Modelli Open Source](../../../translated_images/it/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Modelli Open Source](../../../translated_images/it/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduzione
 
@@ -41,12 +41,12 @@ Per questa lezione, ci riferiremo ai modelli come "modelli open" d'ora in avanti
 
 **Costo** - Il costo per token per utilizzare e distribuire questi modelli è inferiore rispetto a quello dei modelli proprietari. Quando si costruiscono applicazioni di Generative AI, è importante valutare il rapporto prestazioni-prezzo lavorando con questi modelli per il proprio caso d'uso.
 
-![Costo del Modello](../../../translated_images/it/model-price.3f5a3e4d32ae00b4.png)
+![Costo del Modello](../../../translated_images/it/model-price.3f5a3e4d32ae00b4.webp)
 Fonte: Artificial Analysis
 
 **Flessibilità** - Lavorare con modelli open consente di essere flessibili nell'uso di modelli diversi o nella loro combinazione. Un esempio è rappresentato dagli [Assistenti HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) dove un utente può selezionare il modello utilizzato direttamente nell'interfaccia utente:
 
-![Scegli Modello](../../../translated_images/it/choose-model.f095d15bbac92214.png)
+![Scegli Modello](../../../translated_images/it/choose-model.f095d15bbac92214.webp)
 
 ## Esplorare Diversi Modelli Open
 
@@ -74,7 +74,7 @@ Non esiste una risposta unica per scegliere un modello open. Un buon punto di pa
 
 Quando si desidera confrontare LLM tra i diversi tipi, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) è un'altra ottima risorsa:
 
-![Qualità del Modello](../../../translated_images/it/model-quality.aaae1c22e00f7ee1.png)
+![Qualità del Modello](../../../translated_images/it/model-quality.aaae1c22e00f7ee1.webp)
 Fonte: Artificial Analysis
 
 Se si lavora su un caso d'uso specifico, cercare versioni fine-tuned focalizzate sulla stessa area può essere efficace. Sperimentare con più modelli open per vedere come performano secondo le tue e le aspettative dei tuoi utenti è un'altra buona pratica.

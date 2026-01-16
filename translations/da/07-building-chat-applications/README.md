@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygning af generative AI-drevne chatapplikationer
 
-[![Bygning af generative AI-drevne chatapplikationer](../../../translated_images/da/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Bygning af generative AI-drevne chatapplikationer](../../../translated_images/da/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klik på billedet ovenfor for at se videoen til denne lektion)_
 
@@ -96,11 +96,11 @@ Generelle UX-principper gælder for chatapplikationer, men her er nogle yderlige
 
 Et eksempel på personalisering er indstillingen "Custom instructions" i OpenAI's ChatGPT. Det giver dig mulighed for at give oplysninger om dig selv, der kan være vigtig kontekst for dine prompts. Her er et eksempel på en brugerdefineret instruktion.
 
-![Custom Instructions Settings i ChatGPT](../../../translated_images/da/custom-instructions.b96f59aa69356fcf.png)
+![Custom Instructions Settings i ChatGPT](../../../translated_images/da/custom-instructions.b96f59aa69356fcf.webp)
 
 Denne "profil" beder ChatGPT om at oprette en lektionsplan om linked lists. Bemærk, at ChatGPT tager højde for, at brugeren måske ønsker en mere dybdegående lektionsplan baseret på hendes erfaring.
 
-![En prompt i ChatGPT for en lektionsplan om linked lists](../../../translated_images/da/lesson-plan-prompt.cc47c488cf1343df.png)
+![En prompt i ChatGPT for en lektionsplan om linked lists](../../../translated_images/da/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsofts System Message Framework for store sprogmodeller
 

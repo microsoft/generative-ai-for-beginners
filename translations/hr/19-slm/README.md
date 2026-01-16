@@ -33,7 +33,7 @@ SLM-ovi se treniraju na ogromnim količinama tekstualnih podataka. Tijekom treni
 
 Razvoj SLM-ova prati rastuću potrebu za modelima koji se mogu implementirati u okruženjima s ograničenim resursima, poput mobilnih uređaja ili edge računalnih platformi, gdje su puni LLM-ovi često nepraktični zbog velikih zahtjeva za resursima. Fokusirajući se na učinkovitost, SLM-ovi balansiraju izvedbu i pristupačnost, omogućujući širu primjenu u različitim područjima.
 
-![slm](../../../translated_images/hr/slm.4058842744d0444a.png)
+![slm](../../../translated_images/hr/slm.4058842744d0444a.webp)
 
 ## Ciljevi Učenja
 
@@ -135,7 +135,7 @@ Možemo koristiti Phi-3/3.5 obitelj modela u različitim scenarijima. Za razliku
 
 Želimo koristiti Phi-3/3.5 u različitim scenarijima. Sljedeće ćemo koristiti Phi-3/3.5 u skladu s različitim scenarijima.
 
-![phi3](../../../translated_images/hr/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/hr/phi3.655208c3186ae381.webp)
 
 ### Razlika u inferenciji putem Cloud API-ja
 
@@ -145,9 +145,9 @@ GitHub Models je najizravniji način. Možete brzo pristupiti Phi-3/3.5-Instruct
 
 - Demo: Usporedba učinaka Phi-3-mini i Phi-3.5-mini u kineskim scenarijima
 
-![phi3](../../../translated_images/hr/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/hr/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/hr/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/hr/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

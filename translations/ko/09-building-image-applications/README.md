@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 이미지 생성 애플리케이션 구축
 
-[![이미지 생성 애플리케이션 구축](../../../translated_images/ko/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![이미지 생성 애플리케이션 구축](../../../translated_images/ko/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM은 텍스트 생성뿐만 아니라 더 많은 가능성을 제공합니다. 텍스트 설명을 통해 이미지를 생성하는 것도 가능합니다. 이미지를 활용하는 것은 MedTech, 건축, 관광, 게임 개발 등 다양한 분야에서 매우 유용할 수 있습니다. 이 장에서는 가장 인기 있는 이미지 생성 모델인 DALL-E와 Midjourney에 대해 살펴보겠습니다.
 
@@ -43,7 +43,7 @@ LLM은 텍스트 생성뿐만 아니라 더 많은 가능성을 제공합니다.
 
 예를 들어, Edu4All의 학생들이 수업에서 기념물을 작업하고 있다면 다음과 같은 이미지를 생성할 수 있습니다:
 
-![Edu4All 스타트업, 기념물 수업, 에펠탑](../../../translated_images/ko/startup.94d6b79cc4bb3f5a.png)
+![Edu4All 스타트업, 기념물 수업, 에펠탑](../../../translated_images/ko/startup.94d6b79cc4bb3f5a.webp)
 
 다음과 같은 프롬프트를 사용하여:
 
@@ -272,9 +272,9 @@ _자동회귀 변환기_는 모델이 텍스트 설명에서 이미지를 생성
   기본 이미지는 수영장이 있는 라운지만 포함하지만 최종 이미지는 플라밍고를 포함합니다:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/ko/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ko/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ko/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ko/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ko/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ko/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **변형 생성**. 기존 이미지를 가져와 변형을 생성하도록 요청할 수 있습니다. 변형을 생성하려면 이미지를 제공하고 텍스트 프롬프트와 코드를 다음과 같이 제공합니다:
@@ -298,11 +298,11 @@ _자동회귀 변환기_는 모델이 텍스트 설명에서 이미지를 생성
 
 > 프롬프트: "안개 낀 초원에서 수선화가 자라는 곳에서 막대사탕을 들고 말을 타고 있는 토끼"
 
-![막대사탕을 들고 말을 타고 있는 토끼, 버전 1](../../../translated_images/ko/v1-generated-image.a295cfcffa3c13c2.png)
+![막대사탕을 들고 말을 타고 있는 토끼, 버전 1](../../../translated_images/ko/v1-generated-image.a295cfcffa3c13c2.webp)
 
 이제 동일한 프롬프트를 실행하여 동일한 이미지를 두 번 생성하지 않는다는 것을 확인해 보세요:
 
-![말을 타고 있는 토끼로 생성된 이미지](../../../translated_images/ko/v2-generated-image.33f55a3714efe61d.png)
+![말을 타고 있는 토끼로 생성된 이미지](../../../translated_images/ko/v2-generated-image.33f55a3714efe61d.webp)
 
 보시다시피, 이미지는 비슷하지만 동일하지 않습니다. 이제 온도 값을 0.1로 변경해 보겠습니다:
 
@@ -329,8 +329,8 @@ generation_response = client.images.create(
 
 이제 이 코드를 실행하면 다음 두 이미지를 얻을 수 있습니다:
 
-- ![온도 0, v1](../../../translated_images/ko/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![온도 0, v2](../../../translated_images/ko/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![온도 0, v1](../../../translated_images/ko/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![온도 0, v2](../../../translated_images/ko/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 여기서 이미지는 서로 더 닮아 있음을 명확히 볼 수 있습니다.
 

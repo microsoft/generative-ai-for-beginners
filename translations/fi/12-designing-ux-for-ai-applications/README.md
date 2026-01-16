@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # UX-suunnittelu tekoälysovelluksille
 
-[![UX-suunnittelu tekoälysovelluksille](../../../translated_images/fi/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![UX-suunnittelu tekoälysovelluksille](../../../translated_images/fi/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
@@ -58,7 +58,7 @@ Esteettömyys tarkoittaa käyttäjäkokemuksen laajentamista erilaisille käytt�
 
 Miellyttävyys tarkoittaa, että sovellusta on mukava käyttää. Houkutteleva käyttäjäkokemus voi vaikuttaa positiivisesti käyttäjään, kannustaen häntä palaamaan sovelluksen pariin ja lisäten liiketoiminnan tuottoa.
 
-![kuva, joka havainnollistaa UX-näkökulmia tekoälyssä](../../../translated_images/fi/uxinai.d5b4ed690f5cefff.png)
+![kuva, joka havainnollistaa UX-näkökulmia tekoälyssä](../../../translated_images/fi/uxinai.d5b4ed690f5cefff.webp)
 
 Kaikkia haasteita ei voida ratkaista tekoälyllä. Tekoäly täydentää käyttäjäkokemusta, olipa kyseessä manuaalisten tehtävien automatisointi tai käyttäjäkokemuksen personointi.
 
@@ -72,25 +72,25 @@ Kaksi tapaa varmistaa, että luottamus on suunnittelun keskiössä, ovat selitet
 
 Kun tekoäly auttaa päätöksenteossa, kuten tiedon siirtämisessä tuleville sukupolville, on kriittistä, että opettajat ja vanhemmat ymmärtävät, miten tekoäly tekee päätöksiä. Tämä on selitettävyys - ymmärrys siitä, miten tekoälysovellukset tekevät päätöksiä. Selitettävyys voidaan huomioida suunnittelussa lisäämällä yksityiskohtia, jotka korostavat, miten tekoäly päätyi tiettyyn lopputulokseen. Käyttäjien on oltava tietoisia siitä, että tulos on tekoälyn eikä ihmisen tuottama. Esimerkiksi sen sijaan, että sanottaisiin "Aloita keskustelu tutorisi kanssa nyt", voisi sanoa "Käytä tekoälytutoria, joka mukautuu tarpeisiisi ja auttaa sinua oppimaan omaan tahtiisi."
 
-![sovelluksen aloitussivu, jossa selitetään tekoälysovellusten toimintaa](../../../translated_images/fi/explanability-in-ai.134426a96b498fbf.png)
+![sovelluksen aloitussivu, jossa selitetään tekoälysovellusten toimintaa](../../../translated_images/fi/explanability-in-ai.134426a96b498fbf.webp)
 
 Toinen esimerkki on, miten tekoäly käyttää käyttäjän ja henkilökohtaisia tietoja. Esimerkiksi opiskelijapersoonalla voi olla rajoituksia, jotka perustuvat hänen rooliinsa. Tekoäly ei ehkä pysty paljastamaan vastauksia kysymyksiin, mutta voi auttaa käyttäjää pohtimaan, miten hän voi ratkaista ongelman.
 
-![Tekoäly vastaa kysymyksiin perustuen persoonaan](../../../translated_images/fi/solving-questions.b7dea1604de0cbd2.png)
+![Tekoäly vastaa kysymyksiin perustuen persoonaan](../../../translated_images/fi/solving-questions.b7dea1604de0cbd2.webp)
 
 Viimeinen tärkeä osa selitettävyydessä on selitysten yksinkertaistaminen. Opiskelijat ja opettajat eivät välttämättä ole tekoälyn asiantuntijoita, joten selitykset siitä, mitä sovellus voi tai ei voi tehdä, tulisi yksinkertaistaa ja tehdä helposti ymmärrettäviksi.
 
-![yksinkertaistetut selitykset tekoälyn kyvyistä](../../../translated_images/fi/simplified-explanations.4679508a406c3621.png)
+![yksinkertaistetut selitykset tekoälyn kyvyistä](../../../translated_images/fi/simplified-explanations.4679508a406c3621.webp)
 
 ### Hallinta
 
 Generatiivinen tekoäly luo yhteistyötä tekoälyn ja käyttäjän välillä, jossa esimerkiksi käyttäjä voi muokata kehotteita saadakseen erilaisia tuloksia. Lisäksi, kun tulos on luotu, käyttäjien tulisi pystyä muokkaamaan tuloksia, mikä antaa heille tunteen hallinnasta. Esimerkiksi Bingissä voit muokata kehotettasi muodon, sävyn ja pituuden perusteella. Lisäksi voit tehdä muutoksia tulokseen ja muokata sitä, kuten alla on esitetty:
 
-![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing1.293ae8527dbe2789.png)
+![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing1.293ae8527dbe2789.webp)
 
 Toinen Bingin ominaisuus, joka antaa käyttäjälle hallinnan sovelluksesta, on mahdollisuus valita, haluaako käyttäjä antaa tekoälyn käyttää hänen dataansa vai ei. Esimerkiksi koulusovelluksessa opiskelija saattaa haluta käyttää muistiinpanojaan sekä opettajan materiaaleja kertaamiseen.
 
-![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing2.309f4845528a88c2.png)
+![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing2.309f4845528a88c2.webp)
 
 > Tekoälysovelluksia suunniteltaessa tarkoituksellisuus on avainasemassa, jotta käyttäjät eivät luota liikaa ja aseta epärealistisia odotuksia sen kyvyille. Yksi tapa tehdä tämä on luoda kitkaa kehotteiden ja tulosten välille. Muistuta käyttäjää, että kyseessä on tekoäly eikä toinen ihminen.
 
@@ -102,7 +102,7 @@ Tekoälysovellusten tulisi olla rakennettu vastaanottamaan ja antamaan palautett
 
 Toinen tapa käsitellä tätä on selkeästi viestiä järjestelmän kyvyt ja rajoitukset. Kun käyttäjä tekee virheen pyytäessään jotain, joka ylittää tekoälyn kyvyt, tulisi olla tapa käsitellä tämä, kuten alla on esitetty.
 
-![Palautteen antaminen ja virheiden käsittely](../../../translated_images/fi/feedback-loops.7955c134429a9466.png)
+![Palautteen antaminen ja virheiden käsittely](../../../translated_images/fi/feedback-loops.7955c134429a9466.webp)
 
 Järjestelmävirheet ovat yleisiä sovelluksissa, joissa käyttäjä saattaa tarvita apua tiedoissa, jotka ovat tekoälyn ulottumattomissa, tai sovelluksella voi olla rajoituksia siitä, kuinka monta kysymystä/aihetta käyttäjä voi luoda tiivistelmiä. Esimerkiksi tekoälysovellus, joka on koulutettu rajallisilla aiheilla, kuten historia ja matematiikka, ei ehkä pysty käsittelemään maantiedon kysymyksiä. Tämän lieventämiseksi tekoälyjärjestelmä voi antaa vastauksen, kuten: "Valitettavasti tuotteemme on koulutettu seuraavilla aiheilla....., en pysty vastaamaan kysymykseesi."
 

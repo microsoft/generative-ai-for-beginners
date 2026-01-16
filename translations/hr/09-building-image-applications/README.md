@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Izrada aplikacija za generiranje slika
 
-[![Izrada aplikacija za generiranje slika](../../../translated_images/hr/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Izrada aplikacija za generiranje slika](../../../translated_images/hr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-ovi nisu ograničeni samo na generiranje teksta. Također je moguće generirati slike iz tekstualnih opisa. Imati slike kao modalitet može biti izuzetno korisno u brojnim područjima poput medicinske tehnologije, arhitekture, turizma, razvoja igara i više. U ovom poglavlju ćemo istražiti dva najpopularnija modela za generiranje slika, DALL-E i Midjourney.
 
@@ -43,7 +43,7 @@ Kao dio ove lekcije, nastavit ćemo raditi s našim startupom, Edu4All. Studenti
 
 Evo što bi studenti Edu4All-a mogli generirati, na primjer, ako rade u razredu na spomenicima:
 
-![Startup Edu4All, razred o spomenicima, Eiffelov toranj](../../../translated_images/hr/startup.94d6b79cc4bb3f5a.png)
+![Startup Edu4All, razred o spomenicima, Eiffelov toranj](../../../translated_images/hr/startup.94d6b79cc4bb3f5a.webp)
 
 koristeći prompt poput
 
@@ -273,9 +273,9 @@ Evo primjera korištenja GPT Image:
   Osnovna slika bi sadržavala samo salon s bazenom, ali konačna slika bi imala flaminga:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/hr/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/hr/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/hr/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hr/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Pogledajmo primjer kako temperatura funkcionira, pokretanjem ovog prompta dva pu
 
 > Prompt : "Zec na konju, drži lizalicu, na maglovitoj livadi gdje rastu narcisi"
 
-![Zec na konju drži lizalicu, verzija 1](../../../translated_images/hr/v1-generated-image.a295cfcffa3c13c2.png)
+![Zec na konju drži lizalicu, verzija 1](../../../translated_images/hr/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Sada pokrenimo isti prompt ponovno da vidimo da nećemo dobiti istu sliku dva puta:
 
-![Generirana slika zeca na konju](../../../translated_images/hr/v2-generated-image.33f55a3714efe61d.png)
+![Generirana slika zeca na konju](../../../translated_images/hr/v2-generated-image.33f55a3714efe61d.webp)
 
 Kao što možete vidjeti, slike su slične, ali nisu iste. Pokušajmo promijeniti vrijednost temperature na 0.1 i vidjeti što će se dogoditi:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Sada kada pokrenete ovaj kod, dobit ćete ove dvije slike:
 
-- ![Temperatura 0, v1](../../../translated_images/hr/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatura 0 , v2](../../../translated_images/hr/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatura 0, v1](../../../translated_images/hr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0 , v2](../../../translated_images/hr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Ovdje jasno možete vidjeti kako se slike više međusobno podudaraju.
 

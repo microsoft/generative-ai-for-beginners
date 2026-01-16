@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fi"
 }
 -->
-[![Integrointi funktiokutsujen kanssa](../../../translated_images/fi/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrointi funktiokutsujen kanssa](../../../translated_images/fi/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Generatiivisen tekoälyn sovelluskehityksen elinkaari
 
@@ -30,7 +30,7 @@ LLM:t ovat uusi työkalu tekoälyn arsenaalissa, ne ovat uskomattoman tehokkaita
 
 Tämän vuoksi tarvitsemme uuden paradigman sopeuttaaksemme tämän työkalun dynaamisesti ja oikeilla kannustimilla. Voimme luokitella vanhemmat tekoälysovellukset "ML-sovelluksiksi" ja uudemmat tekoälysovellukset "GenAI-sovelluksiksi" tai yksinkertaisesti "AI-sovelluksiksi", heijastaen aikakauden valtavirran teknologiaa ja tekniikoita. Tämä muuttaa kertomustamme monin tavoin, katso seuraavaa vertailua.
 
-![LLMOps vs. MLOps vertailu](../../../translated_images/fi/01-llmops-shift.29bc933cb3bb0080.png)
+![LLMOps vs. MLOps vertailu](../../../translated_images/fi/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Huomaa, että LLMOpsissa keskitymme enemmän sovelluskehittäjiin, käyttäen integraatioita keskeisenä kohtana, hyödyntäen "Malleja palveluna" ja ajatellen seuraavia mittareita.
 
@@ -44,7 +44,7 @@ Huomaa, että LLMOpsissa keskitymme enemmän sovelluskehittäjiin, käyttäen in
 
 Ensiksi, ymmärtääksemme elinkaaren ja muutokset, katsotaan seuraavaa infografiikkaa.
 
-![LLMOps infografiikka](../../../translated_images/fi/02-llmops.70a942ead05a7645.png)
+![LLMOps infografiikka](../../../translated_images/fi/02-llmops.70a942ead05a7645.webp)
 
 Kuten huomaat, tämä eroaa tavallisista MLOpsin elinkaareista. LLM:illä on monia uusia vaatimuksia, kuten kehotteiden käyttö, erilaiset tekniikat laadun parantamiseksi (Fine-Tuning, RAG, Meta-Prompts), erilainen arviointi ja vastuu vastuullisen tekoälyn kanssa, lopuksi uudet arviointimittarit (Laatu, Haitta, Rehellisyys, Kustannus ja Viive).
 
@@ -54,7 +54,7 @@ Huomaa, että tämä ei ole lineaarista, vaan integroitua silmukkaa, iteratiivis
 
 Miten voisimme tutkia näitä vaiheita? Sukelletaan yksityiskohtiin siitä, miten voisimme rakentaa elinkaaren.
 
-![LLMOps työnkulku](../../../translated_images/fi/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![LLMOps työnkulku](../../../translated_images/fi/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Tämä saattaa näyttää hieman monimutkaiselta, keskitytään ensin kolmeen isoon vaiheeseen.
 
@@ -74,11 +74,11 @@ Työkalujen osalta Microsoft tarjoaa [Azure AI Platformin](https://azure.microso
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) antaa sinun käyttää [AI Studiota](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio on verkkosivusto, joka mahdollistaa mallien, esimerkkien ja työkalujen tutkimisen. Resurssien hallinnan, käyttöliittymän kehitystyönkulut sekä SDK/CLI-vaihtoehdot koodipohjaiseen kehitykseen.
 
-![Azure AI mahdollisuudet](../../../translated_images/fi/04-azure-ai-platform.80203baf03a12fa8.png)
+![Azure AI mahdollisuudet](../../../translated_images/fi/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI mahdollistaa useiden resurssien käytön, halliten toimintoja, palveluita, projekteja, vektorihakua ja tietokantatarpeita.
 
-![LLMOps Azure AI:n kanssa](../../../translated_images/fi/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps Azure AI:n kanssa](../../../translated_images/fi/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Rakenna, Proof-of-Conceptistä (POC) suuriin sovelluksiin PromptFlow:n avulla:
 
@@ -86,7 +86,7 @@ Rakenna, Proof-of-Conceptistä (POC) suuriin sovelluksiin PromptFlow:n avulla:
 - Testaa ja hienosäädä sovelluksiasi laadukkaaksi tekoälyksi helposti.
 - Käytä Azure AI Studiota integroidaksesi ja iterointiin pilvessä, työn työntöön ja käyttöönottoon nopeaa integraatiota varten.
 
-![LLMOps PromptFlow:n kanssa](../../../translated_images/fi/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps PromptFlow:n kanssa](../../../translated_images/fi/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Hienoa! Jatka oppimista!
 

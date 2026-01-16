@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membangun Aplikasi Pencarian
 
-[![Pengantar Generative AI dan Model Bahasa Besar](../../../translated_images/id/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Pengantar Generative AI dan Model Bahasa Besar](../../../translated_images/id/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klik gambar di atas untuk menonton video pelajaran ini_
 
@@ -44,7 +44,7 @@ Pelajaran ini mencakup Indeks Embedding dari transkrip YouTube untuk saluran You
 
 Berikut adalah contoh kueri semantik untuk pertanyaan 'bisakah Anda menggunakan rstudio dengan azure ml?'. Periksa URL YouTube, Anda akan melihat URL tersebut berisi timestamp yang membawa Anda ke bagian video di mana jawaban atas pertanyaan tersebut berada.
 
-![Kueri semantik untuk pertanyaan "bisakah Anda menggunakan rstudio dengan Azure ML"](../../../translated_images/id/query-results.bb0480ebf025fac6.png)
+![Kueri semantik untuk pertanyaan "bisakah Anda menggunakan rstudio dengan Azure ML"](../../../translated_images/id/query-results.bb0480ebf025fac6.webp)
 
 ## Apa itu pencarian semantik?
 
@@ -163,7 +163,7 @@ Buka [notebook solusi](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-kor
 
 Saat Anda menjalankan notebook, Anda akan diminta untuk memasukkan kueri. Kotak input akan terlihat seperti ini:
 
-![Kotak input untuk pengguna memasukkan kueri](../../../translated_images/id/notebook-search.1e320b9c7fcbb0bc.png)
+![Kotak input untuk pengguna memasukkan kueri](../../../translated_images/id/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Kerja Hebat! Lanjutkan Pembelajaran Anda
 

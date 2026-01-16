@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "de"
 }
 -->
-[![Open Source Modelle](../../../translated_images/de/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Modelle](../../../translated_images/de/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Einführung
 
@@ -33,7 +33,7 @@ KI-Agenten sind ein sehr spannendes Feld in der Welt der generativen KI. Mit die
 
 KI-Agenten ermöglichen es großen Sprachmodellen (LLMs), Aufgaben auszuführen, indem sie ihnen Zugang zu einem **Zustand** und **Werkzeugen** geben.
 
-![Agentenmodell](../../../translated_images/de/what-agent.21f2893bdfd01e6a.png)
+![Agentenmodell](../../../translated_images/de/what-agent.21f2893bdfd01e6a.webp)
 
 Lass uns diese Begriffe definieren:
 
@@ -53,7 +53,7 @@ Um den **Zustand** zu verwalten, wird eine integrierte Funktion namens `AgentExe
 
 Der `AgentExecutor` speichert auch den Chatverlauf, um den Kontext des Gesprächs bereitzustellen.
 
-![Langchain Agents](../../../translated_images/de/langchain-agents.edcc55b5d5c43716.png)
+![Langchain Agents](../../../translated_images/de/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain bietet einen [Katalog von Werkzeugen](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), die in deine Anwendung importiert werden können, damit das LLM darauf zugreifen kann. Diese werden von der Community und dem LangChain-Team erstellt.
 
@@ -85,7 +85,7 @@ Um den Zustand zu ändern und zu verwalten, generiert ein AssistantAgent Python-
 
 Hier ist ein Beispiel für den Prozess:
 
-![AutoGen](../../../translated_images/de/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/de/autogen.dee9a25a45fde584.webp)
 
 #### LLM definiert mit einer Systemnachricht
 
@@ -129,7 +129,7 @@ Um den Zustand des Gesprächs zu verwalten, verwendet TaskWeaver das Konzept ein
 
 Um die Aufgaben zu erfüllen, hat der `Planner` Zugriff auf eine Sammlung von Werkzeugen, die als `Plugins` bezeichnet werden. Dies können Python-Klassen oder ein allgemeiner Code-Interpreter sein. Diese Plugins werden als Embeddings gespeichert, damit das LLM besser nach dem richtigen Plugin suchen kann.
 
-![Taskweaver](../../../translated_images/de/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/de/taskweaver.da8559999267715a.webp)
 
 Hier ist ein Beispiel für ein Plugin zur Anomalieerkennung:
 
@@ -143,7 +143,7 @@ Der Code wird vor der Ausführung überprüft. Eine weitere Funktion zur Verwalt
 
 Das letzte Framework für Agenten, das wir erkunden, ist [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Was JARVIS einzigartig macht, ist, dass es ein LLM verwendet, um den `Zustand` des Gesprächs zu verwalten, und die `Werkzeuge` sind andere KI-Modelle. Jedes der KI-Modelle ist ein spezialisiertes Modell, das bestimmte Aufgaben wie Objekterkennung, Transkription oder Bildbeschreibung ausführt.
 
-![JARVIS](../../../translated_images/de/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/de/jarvis.762ddbadbd1a3a33.webp)
 
 Das LLM, als allgemeines Modell, erhält die Anfrage vom Nutzer und identifiziert die spezifische Aufgabe sowie alle Argumente/Daten, die zur Erfüllung der Aufgabe benötigt werden.
 

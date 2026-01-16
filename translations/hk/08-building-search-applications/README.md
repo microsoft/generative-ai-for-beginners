@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立搜尋應用程式
 
-[![生成式 AI 和大型語言模型介紹](../../../translated_images/hk/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![生成式 AI 和大型語言模型介紹](../../../translated_images/hk/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _點擊上方圖片觀看本課程的影片_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 以下是一個語義搜尋的示例，問題是「可以使用 rstudio 與 azure ml 嗎？」。查看 YouTube 的 URL，您會看到 URL 包含一個時間戳，該時間戳會直接跳轉到影片中回答問題的具體位置。
 
-![問題「可以使用 rstudio 與 Azure ML 嗎？」的語義搜尋示例](../../../translated_images/hk/query-results.bb0480ebf025fac6.png)
+![問題「可以使用 rstudio 與 Azure ML 嗎？」的語義搜尋示例](../../../translated_images/hk/query-results.bb0480ebf025fac6.webp)
 
 ## 什麼是語義搜尋？
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 當您運行筆記本時，系統會提示您輸入查詢。輸入框看起來如下：
 
-![用戶輸入查詢的輸入框](../../../translated_images/hk/notebook-search.1e320b9c7fcbb0bc.png)
+![用戶輸入查詢的輸入框](../../../translated_images/hk/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## 做得好！繼續學習
 

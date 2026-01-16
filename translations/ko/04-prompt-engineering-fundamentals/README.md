@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 프롬프트 엔지니어링 기초
 
-[![프롬프트 엔지니어링 기초](../../../translated_images/ko/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![프롬프트 엔지니어링 기초](../../../translated_images/ko/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## 소개
 이 모듈은 생성형 AI 모델에서 효과적인 프롬프트를 작성하기 위한 필수 개념과 기술을 다룹니다. LLM에 프롬프트를 작성하는 방식도 중요합니다. 신중하게 작성된 프롬프트는 더 나은 품질의 응답을 얻을 수 있습니다. 하지만 _프롬프트_와 _프롬프트 엔지니어링_ 같은 용어는 정확히 무엇을 의미할까요? 그리고 LLM에 보내는 프롬프트 _입력_을 어떻게 개선할 수 있을까요? 이 장과 다음 장에서 이러한 질문에 답하려고 합니다.
@@ -53,7 +53,7 @@ Notebook에는 _시작용_ 연습이 포함되어 있지만, 더 많은 예제�
 
 이 강의에서 다루는 내용을 시작하기 전에 전체적인 개요를 보고 싶으신가요? 주요 주제와 각 주제에서 생각해야 할 주요 사항을 알려주는 그림으로 보는 가이드를 확인하세요. 강의 로드맵은 핵심 개념과 과제를 이해하는 것에서 시작하여 관련 프롬프트 엔지니어링 기술과 모범 사례로 이를 해결하는 과정으로 안내합니다. 이 가이드의 "고급 기술" 섹션은 이 커리큘럼의 _다음_ 장에서 다루는 내용을 참조합니다.
 
-![프롬프트 엔지니어링에 대한 그림 가이드](../../../translated_images/ko/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![프롬프트 엔지니어링에 대한 그림 가이드](../../../translated_images/ko/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## 우리의 스타트업
 
@@ -94,7 +94,7 @@ LLM은 프롬프트를 _토큰의 시퀀스_로 봅니다. 서로 다른 모델(
 
 토큰화가 어떻게 작동하는지 직관을 얻으려면 아래에 표시된 [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst)와 같은 도구를 사용해 보세요. 프롬프트를 복사하여 붙여넣고 공백 문자와 구두점이 처리되는 방식을 주의 깊게 관찰하면서 토큰으로 변환되는 방식을 확인하세요. 이 예는 이전 LLM(GPT-3)을 보여줍니다. 따라서 최신 모델로 시도하면 다른 결과가 나올 수 있습니다.
 
-![토큰화](../../../translated_images/ko/04-tokenizer-example.e71f0a0f70356c5c.png)
+![토큰화](../../../translated_images/ko/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### 개념: 기본 모델
 
@@ -104,7 +104,7 @@ LLM은 프롬프트를 _토큰의 시퀀스_로 봅니다. 서로 다른 모델(
 
 하지만 사용자가 특정 기준이나 작업 목표를 충족하는 무언가를 보고 싶다면 어떻게 될까요? 이때 _지시 조정된_ LLM이 등장합니다.
 
-![기본 LLM 채팅 완성](../../../translated_images/ko/04-playground-chat-base.65b76fcfde0caa67.png)
+![기본 LLM 채팅 완성](../../../translated_images/ko/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### 개념: 지시 조정된 LLM
 
@@ -118,7 +118,7 @@ LLM은 프롬프트를 _토큰의 시퀀스_로 봅니다. 서로 다른 모델(
 
 결과가 원하는 목표와 형식을 반영하도록 조정된 것을 확인할 수 있습니다. 교육자는 이제 이 응답을 해당 수업의 슬라이드에 직접 사용할 수 있습니다.
 
-![지시 조정된 LLM 채팅 완성](../../../translated_images/ko/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![지시 조정된 LLM 채팅 완성](../../../translated_images/ko/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## 왜 프롬프트 엔지니어링이 필요한가?
 
@@ -148,15 +148,15 @@ OpenAI 또는 Azure OpenAI Playground에서 이를 직접 확인해 보세요:
 
 > **응답 1**: OpenAI Playground (GPT-35)
 
-![응답 1](../../../translated_images/ko/04-fabrication-oai.5818c4e0b2a2678c.png)
+![응답 1](../../../translated_images/ko/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **응답 2**: Azure OpenAI Playground (GPT-35)
 
-![응답 2](../../../translated_images/ko/04-fabrication-aoai.b14268e9ecf25caf.png)
+![응답 2](../../../translated_images/ko/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **응답 3**: Hugging Face Chat Playground (LLama-2)
 
-![응답 3](../../../translated_images/ko/04-fabrication-huggingchat.faf82a0a51278956.png)
+![응답 3](../../../translated_images/ko/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 예상대로, 각 모델(또는 모델 버전)은 확률적 행동과 모델 능력의 차이로 인해 약간 다른 응답을 생성합니다. 예를 들어, 한 모델은 중학생 수준의 청중을 대상으로 하고, 다른 모델은 고등학생을 대상으로 합니다. 하지만 세 모델 모두 정보가 부족한 사용자에게 사건이 실제라고 믿게 할 수 있는 응답을 생성했습니다.
 

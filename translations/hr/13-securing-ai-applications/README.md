@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osiguranje vaših generativnih AI aplikacija
 
-[![Osiguranje vaših generativnih AI aplikacija](../../../translated_images/hr/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Osiguranje vaših generativnih AI aplikacija](../../../translated_images/hr/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Uvod
 
@@ -131,7 +131,7 @@ Oponašanje prijetnji iz stvarnog svijeta sada se smatra standardnom praksom u i
 
 > Praksa AI red teaminga evoluirala je i dobila šire značenje: ne pokriva samo ispitivanje sigurnosnih ranjivosti, već uključuje i ispitivanje drugih neuspjeha sustava, poput generiranja potencijalno štetnog sadržaja. AI sustavi donose nove rizike, a red teaming je ključan za razumijevanje tih novih rizika, poput ubrizgavanja upita i stvaranja neosnovanog sadržaja. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Smjernice i resursi za red teaming](../../../translated_images/hr/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Smjernice i resursi za red teaming](../../../translated_images/hr/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Ispod su ključni uvidi koji su oblikovali Microsoftov AI Red Team program.
 

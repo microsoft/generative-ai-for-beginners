@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "kn"
 }
 -->
-[![Open Source Models](../../../translated_images/kn/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/kn/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # ನಿಮ್ಮ LLM ಅನ್ನು ಫೈನ್-ಟ್ಯೂನಿಂಗ್ ಮಾಡುವುದು
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ನಾವು ಒಳಗೊಳ್ಳುವ ಮೊದಲು ದೊಡ್ಡ ಚಿತ್ರಣವನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುವಿರಾ? ಈ ಚಿತ್ರಣಗೊಳಿಸಿದ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ನೋಡಿ, ಇದು ಫೈನ್-ಟ್ಯೂನಿಂಗ್‌ನ ಮೂಲ ಕಲ್ಪನೆಗಳು ಮತ್ತು ಪ್ರೇರಣೆಯಿಂದ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಉತ್ತಮ ಅಭ್ಯಾಸಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವವರೆಗೆ ಕಲಿಕೆಯ ಪ್ರಯಾಣವನ್ನು ವಿವರಿಸುತ್ತದೆ. ಇದು ಅನ್ವೇಷಣೆಗೆ ಆಕರ್ಷಕ ವಿಷಯ, ಆದ್ದರಿಂದ ನಿಮ್ಮ ಸ್ವಯಂ-ಮಾರ್ಗದರ್ಶನ ಕಲಿಕೆಯ ಪ್ರಯಾಣವನ್ನು ಬೆಂಬಲಿಸುವ ಹೆಚ್ಚುವರಿ ಲಿಂಕ್‌ಗಳಿಗಾಗಿ [ಸಂಪನ್ಮೂಲಗಳು](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) ಪುಟವನ್ನು ಪರಿಶೀಲಿಸಲು ಮರೆಯಬೇಡಿ!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/kn/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/kn/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ಭಾಷಾ ಮಾದರಿಗಳಿಗಾಗಿ ಫೈನ್-ಟ್ಯೂನಿಂಗ್ ಎಂದರೆ ಏನು?
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gestaltung der Benutzererfahrung für KI-Anwendungen
 
-[![Gestaltung der Benutzererfahrung für KI-Anwendungen](../../../translated_images/de/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Gestaltung der Benutzererfahrung für KI-Anwendungen](../../../translated_images/de/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
 
@@ -58,7 +58,7 @@ Zugänglich zu sein bedeutet, die Benutzererfahrung auf Benutzer mit unterschied
 
 Angenehm zu sein bedeutet, dass die Anwendung Spaß macht und gerne genutzt wird. Eine ansprechende Benutzererfahrung kann sich positiv auf den Benutzer auswirken, ihn dazu ermutigen, zur Anwendung zurückzukehren, und den Geschäftserfolg steigern.
 
-![Bild, das UX-Überlegungen in der KI illustriert](../../../translated_images/de/uxinai.d5b4ed690f5cefff.png)
+![Bild, das UX-Überlegungen in der KI illustriert](../../../translated_images/de/uxinai.d5b4ed690f5cefff.webp)
 
 Nicht jede Herausforderung kann mit KI gelöst werden. KI kommt ins Spiel, um Ihre Benutzererfahrung zu verbessern, sei es durch die Automatisierung manueller Aufgaben oder die Personalisierung von Benutzererfahrungen.
 
@@ -72,25 +72,25 @@ Zwei Möglichkeiten, um sicherzustellen, dass Vertrauen im Mittelpunkt des Desig
 
 Wenn KI Entscheidungen unterstützt, wie z. B. das Vermitteln von Wissen an zukünftige Generationen, ist es entscheidend, dass Lehrer und Eltern verstehen, wie KI-Entscheidungen getroffen werden. Das ist Erklärbarkeit – das Verständnis, wie KI-Anwendungen Entscheidungen treffen. Das Entwerfen für Erklärbarkeit umfasst das Hinzufügen von Details, die hervorheben, wie KI zu einem Ergebnis gekommen ist. Das Publikum muss sich bewusst sein, dass das Ergebnis von KI und nicht von einem Menschen generiert wurde. Zum Beispiel, anstatt zu sagen: "Beginnen Sie jetzt mit Ihrem Tutor zu chatten", sagen Sie: "Nutzen Sie den KI-Tutor, der sich an Ihre Bedürfnisse anpasst und Ihnen hilft, in Ihrem Tempo zu lernen."
 
-![Eine App-Landingpage mit klarer Darstellung der Erklärbarkeit in KI-Anwendungen](../../../translated_images/de/explanability-in-ai.134426a96b498fbf.png)
+![Eine App-Landingpage mit klarer Darstellung der Erklärbarkeit in KI-Anwendungen](../../../translated_images/de/explanability-in-ai.134426a96b498fbf.webp)
 
 Ein weiteres Beispiel ist, wie KI Benutzer- und persönliche Daten verwendet. Zum Beispiel könnte ein Benutzer mit der Persona "Schüler" Einschränkungen basierend auf seiner Persona haben. Die KI könnte nicht in der Lage sein, Antworten auf Fragen zu geben, aber sie könnte dem Benutzer helfen, darüber nachzudenken, wie er ein Problem lösen kann.
 
-![KI antwortet auf Fragen basierend auf der Persona](../../../translated_images/de/solving-questions.b7dea1604de0cbd2.png)
+![KI antwortet auf Fragen basierend auf der Persona](../../../translated_images/de/solving-questions.b7dea1604de0cbd2.webp)
 
 Ein letzter wichtiger Teil der Erklärbarkeit ist die Vereinfachung der Erklärungen. Schüler und Lehrer sind möglicherweise keine KI-Experten, daher sollten die Erklärungen darüber, was die Anwendung kann oder nicht kann, vereinfacht und leicht verständlich sein.
 
-![Vereinfachte Erklärungen zu KI-Fähigkeiten](../../../translated_images/de/simplified-explanations.4679508a406c3621.png)
+![Vereinfachte Erklärungen zu KI-Fähigkeiten](../../../translated_images/de/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrolle
 
 Generative KI schafft eine Zusammenarbeit zwischen KI und dem Benutzer, bei der ein Benutzer beispielsweise Eingabeaufforderungen für unterschiedliche Ergebnisse ändern kann. Darüber hinaus sollten Benutzer, sobald ein Ergebnis generiert wurde, die Möglichkeit haben, die Ergebnisse zu ändern, was ihnen ein Gefühl der Kontrolle gibt. Zum Beispiel können Sie bei der Nutzung von Bing Ihre Eingabeaufforderung basierend auf Format, Ton und Länge anpassen. Außerdem können Sie Änderungen an Ihrem Ergebnis vornehmen und es wie unten gezeigt modifizieren:
 
-![Bing-Suchergebnisse mit Optionen zur Änderung der Eingabeaufforderung und des Ergebnisses](../../../translated_images/de/bing1.293ae8527dbe2789.png)
+![Bing-Suchergebnisse mit Optionen zur Änderung der Eingabeaufforderung und des Ergebnisses](../../../translated_images/de/bing1.293ae8527dbe2789.webp)
 
 Eine weitere Funktion in Bing, die es einem Benutzer ermöglicht, Kontrolle über die Anwendung zu haben, ist die Möglichkeit, die Daten, die die KI verwendet, ein- und auszuschalten. Für eine Schul-App könnte ein Schüler beispielsweise seine Notizen sowie die Ressourcen des Lehrers als Lernmaterial verwenden wollen.
 
-![Bing-Suchergebnisse mit Optionen zur Änderung der Eingabeaufforderung und des Ergebnisses](../../../translated_images/de/bing2.309f4845528a88c2.png)
+![Bing-Suchergebnisse mit Optionen zur Änderung der Eingabeaufforderung und des Ergebnisses](../../../translated_images/de/bing2.309f4845528a88c2.webp)
 
 > Beim Entwerfen von KI-Anwendungen ist es wichtig, sicherzustellen, dass Benutzer nicht übermäßig vertrauen und unrealistische Erwartungen an die Fähigkeiten der KI haben. Eine Möglichkeit, dies zu erreichen, besteht darin, Reibung zwischen den Eingabeaufforderungen und den Ergebnissen zu schaffen. Erinnern Sie den Benutzer daran, dass dies KI ist und kein anderer Mensch.
 
@@ -102,7 +102,7 @@ KI-Anwendungen sollten so gestaltet sein, dass sie Feedback empfangen und geben 
 
 Eine weitere Möglichkeit, dies zu handhaben, besteht darin, die Fähigkeiten und Grenzen des Systems klar zu kommunizieren. Wenn ein Benutzer einen Fehler macht, indem er etwas außerhalb der Fähigkeiten der KI anfordert, sollte es auch eine Möglichkeit geben, dies zu handhaben, wie unten gezeigt.
 
-![Feedback geben und Fehler handhaben](../../../translated_images/de/feedback-loops.7955c134429a9466.png)
+![Feedback geben und Fehler handhaben](../../../translated_images/de/feedback-loops.7955c134429a9466.webp)
 
 Systemfehler sind bei Anwendungen häufig, bei denen der Benutzer möglicherweise Hilfe bei Informationen außerhalb des Umfangs der KI benötigt oder die Anwendung eine Begrenzung hat, wie viele Fragen/Fächer ein Benutzer Zusammenfassungen generieren kann. Zum Beispiel könnte eine KI-Anwendung, die mit Daten zu begrenzten Fächern wie Geschichte und Mathematik trainiert wurde, möglicherweise keine Fragen zu Geografie beantworten. Um dies zu mildern, könnte das KI-System eine Antwort wie diese geben: "Entschuldigung, unser Produkt wurde mit Daten zu den folgenden Fächern trainiert....., ich kann die Frage, die Sie gestellt haben, nicht beantworten."
 

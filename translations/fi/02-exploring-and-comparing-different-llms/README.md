@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tutkimus ja vertailu eri LLM-malleista
 
-[![Tutkimus ja vertailu eri LLM-malleista](../../../translated_images/fi/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Tutkimus ja vertailu eri LLM-malleista](../../../translated_images/fi/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon_
 
@@ -59,14 +59,14 @@ Termi Perusmalli (Foundation Model) [keksittiin Stanfordin tutkijoiden toimesta]
 - **Ne ovat erittäin suuria malleja**, jotka perustuvat erittäin syviin neuroverkkoihin, jotka on koulutettu miljardeilla parametreilla.
 - **Ne on yleensä tarkoitettu toimimaan muiden mallien "perustana"**, eli niitä voidaan käyttää lähtökohtana muiden mallien rakentamiseen, mikä voidaan tehdä hienosäätämällä.
 
-![Perusmallit vs. LLM:t](../../../translated_images/fi/FoundationModel.e4859dbb7a825c94.png)
+![Perusmallit vs. LLM:t](../../../translated_images/fi/FoundationModel.e4859dbb7a825c94.webp)
 
 Kuvan lähde: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Tämän eron selventämiseksi otetaan esimerkkinä ChatGPT. Ensimmäisen ChatGPT-version rakentamiseen käytettiin mallia nimeltä GPT-3.5 perusmallina. Tämä tarkoittaa, että OpenAI käytti chat-spesifistä dataa luodakseen GPT-3.5:stä hienosäädetyn version, joka oli erikoistunut suoriutumaan hyvin keskustelutilanteissa, kuten chatbotit.
 
-![Perusmalli](../../../translated_images/fi/Multimodal.2c389c6439e0fc51.png)
+![Perusmalli](../../../translated_images/fi/Multimodal.2c389c6439e0fc51.webp)
 
 Kuvan lähde: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM:t voidaan myös luokitella niiden tuottaman ulostulon perusteella.
 
 Upotukset ovat joukko malleja, jotka voivat muuntaa tekstin numeeriseen muotoon, jota kutsutaan upotukseksi. Upotus on tekstin numeerinen esitys, joka helpottaa koneiden ymmärtää sanojen tai lauseiden välisiä suhteita ja jota voidaan käyttää syötteenä muille malleille, kuten luokittelumalleille tai klusterointimalleille, jotka toimivat paremmin numeerisella datalla. Upotusmalleja käytetään usein siirto-oppimisessa, jossa malli rakennetaan korvaavaa tehtävää varten, josta on runsaasti dataa, ja sitten mallin painoja (upotuksia) käytetään uudelleen muihin tehtäviin. Esimerkki tästä kategoriasta on [OpenAI upotukset](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Upotus](../../../translated_images/fi/Embedding.c3708fe988ccf760.png)
+![Upotus](../../../translated_images/fi/Embedding.c3708fe988ccf760.webp)
 
 Kuvien generointimallit ovat malleja, jotka tuottavat kuvia. Näitä malleja käytetään usein kuvien muokkaukseen, kuvien synteesiin ja kuvien kääntämiseen. Kuvien generointimallit koulutetaan usein suurilla kuvadataseteillä, kuten [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uusien kuvien luomiseen tai olemassa olevien kuvien muokkaamiseen esimerkiksi täydennyksen, superresoluution ja väritystekniikoiden avulla. Esimerkkejä ovat [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ja [Stable Diffusion -mallit](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Kuvien generointi](../../../translated_images/fi/Image.349c080266a763fd.png)
+![Kuvien generointi](../../../translated_images/fi/Image.349c080266a763fd.webp)
 
 Tekstin ja koodin generointimallit ovat malleja, jotka tuottavat tekstiä tai koodia. Näitä malleja käytetään usein tekstin tiivistämiseen, kääntämiseen ja kysymyksiin vastaamiseen. Tekstin generointimallit koulutetaan usein suurilla tekstidataseteillä, kuten [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ja niitä voidaan käyttää uuden tekstin luomiseen tai kysymyksiin vastaamiseen. Koodin generointimallit, kuten [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), koulutetaan usein suurilla koodidataseteillä, kuten GitHubilla, ja niitä voidaan käyttää uuden koodin luomiseen tai olemassa olevan koodin virheiden korjaamiseen.
 
-![Tekstin ja koodin generointi](../../../translated_images/fi/Text.a8c0cf139e5cc2a0.png)
+![Tekstin ja koodin generointi](../../../translated_images/fi/Text.a8c0cf139e5cc2a0.webp)
 
 ### Kooderi-dekooderi vs. Vain dekooderi
 
@@ -123,23 +123,23 @@ Useimmat aiemmin mainitsemamme mallit (OpenAI-mallit, avoimen lähdekoodin malli
 
 - Löytää kiinnostava Foundation Model - joko omistettu tai avoimen lähdekoodin - suodattamalla tehtävän, lisenssin tai nimen mukaan. Hakujen helpottamiseksi mallit on järjestetty kokoelmiin, kuten Azure OpenAI -kokoelma, Hugging Face -kokoelma ja muita.
 
-![Model catalog](../../../translated_images/fi/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Model catalog](../../../translated_images/fi/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Tarkastella mallikorttia, joka sisältää yksityiskohtaisen kuvauksen mallin käyttötarkoituksesta ja koulutusdatasta, koodiesimerkkejä sekä arviointituloksia sisäisestä arviointikirjastosta.
 
-![Model card](../../../translated_images/fi/ModelCard.598051692c6e400d.png)
+![Model card](../../../translated_images/fi/ModelCard.598051692c6e400d.webp)
 
 - Verrata mallien ja teollisuudessa saatavilla olevien datasetien vertailuarvoja arvioidakseen, mikä malli sopii parhaiten liiketoimintaskenaarioon, [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) -paneelin kautta.
 
-![Model benchmarks](../../../translated_images/fi/ModelBenchmarks.254cb20fbd06c03a.png)
+![Model benchmarks](../../../translated_images/fi/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Hienosäätää mallia omalla koulutusdatalla parantaakseen mallin suorituskykyä tietyssä työkuormassa hyödyntäen Azure AI Studion kokeilu- ja seurantatoimintoja.
 
-![Model fine-tuning](../../../translated_images/fi/FineTuning.aac48f07142e36fd.png)
+![Model fine-tuning](../../../translated_images/fi/FineTuning.aac48f07142e36fd.webp)
 
 - Ottaa käyttöön alkuperäinen esikoulutettu malli tai hienosäädetty versio etäreaaliaikaisessa inferenssissä - hallinnoitu laskenta - tai serverittömässä API-päätepisteessä - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - mahdollistamaan sovellusten kuluttavan sitä.
 
-![Model deployment](../../../translated_images/fi/ModelDeploy.890da48cbd0bccdb.png)
+![Model deployment](../../../translated_images/fi/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Kaikkia katalogin malleja ei tällä hetkellä voi hienosäätää ja/tai ottaa käyttöön pay-as-you-go-mallilla. Tarkista mallikortista yksityiskohdat mallin ominaisuuksista ja rajoituksista.
@@ -158,7 +158,7 @@ On olemassa useita lähestymistapoja, joita yritys voi käyttää saadakseen hal
 
 - **Hienosäädetty malli**. Tässä mallia koulutetaan lisää omalla datalla, mikä tekee mallista tarkemman ja vastaamaan paremmin tarpeitasi, mutta voi olla kallista.
 
-![LLMs deployment](../../../translated_images/fi/Deploy.18b2d27412ec8c02.png)
+![LLMs deployment](../../../translated_images/fi/Deploy.18b2d27412ec8c02.webp)
 
 Kuvan lähde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove oblikovanja upita
 
-[![Osnove oblikovanja upita](../../../translated_images/hr/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Osnove oblikovanja upita](../../../translated_images/hr/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Uvod
 Ovaj modul pokriva osnovne koncepte i tehnike za stvaranje učinkovitih upita u generativnim AI modelima. Način na koji pišete svoj upit za LLM također je važan. Pažljivo osmišljen upit može postići bolju kvalitetu odgovora. Ali što točno znače pojmovi poput _upit_ i _oblikovanje upita_? I kako mogu poboljšati _unos upita_ koji šaljem LLM-u? To su pitanja na koja ćemo pokušati odgovoriti u ovom poglavlju i sljedećem.
@@ -53,7 +53,7 @@ Notebook dolazi s _početnim_ vježbama - ali potičemo vas da dodate vlastite _
 
 Želite li dobiti širu sliku o tome što ova lekcija pokriva prije nego što se upustite u detalje? Pogledajte ovaj ilustrirani vodič koji vam daje uvid u glavne teme koje se obrađuju i ključne zaključke o kojima trebate razmisliti u svakoj od njih. Plan lekcije vodi vas od razumijevanja osnovnih koncepata i izazova do njihovog rješavanja relevantnim tehnikama oblikovanja upita i najboljim praksama. Napominjemo da se odjeljak "Napredne tehnike" u ovom vodiču odnosi na sadržaj obrađen u _sljedećem_ poglavlju ovog kurikuluma.
 
-![Ilustrirani vodič za oblikovanje upita](../../../translated_images/hr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Ilustrirani vodič za oblikovanje upita](../../../translated_images/hr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Naš startup
 
@@ -84,7 +84,7 @@ LLM vidi upite kao _niz tokena_ gdje različiti modeli (ili verzije modela) mogu
 
 Da biste stekli intuiciju o tome kako tokenizacija funkcionira, isprobajte alate poput [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) prikazanog dolje. Kopirajte svoj upit - i pogledajte kako se pretvara u tokene, obraćajući pažnju na to kako se obrađuju razmaci i interpunkcijski znakovi. Napominjemo da ovaj primjer prikazuje stariji LLM (GPT-3) - pa bi pokušaj s novijim modelom mogao proizvesti drugačiji rezultat.
 
-![Tokenizacija](../../../translated_images/hr/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenizacija](../../../translated_images/hr/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Koncept: Temeljni modeli
 
@@ -94,7 +94,7 @@ Nakon što se upit tokenizira, primarna funkcija ["Osnovnog LLM-a"](https://blog
 
 Ali što ako korisnik želi vidjeti nešto specifično što zadovoljava određene kriterije ili cilj zadatka? Tu dolaze _instrukcijski prilagođeni_ LLM-ovi.
 
-![Dovršavanje chata osnovnog LLM-a](../../../translated_images/hr/04-playground-chat-base.65b76fcfde0caa67.png)
+![Dovršavanje chata osnovnog LLM-a](../../../translated_images/hr/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Koncept: Instrukcijski prilagođeni LLM-ovi
 
@@ -108,7 +108,7 @@ Pokušajmo to - ponovno posjetite gornji upit, ali sada promijenite _sistemski p
 
 Vidite kako je rezultat sada prilagođen da odražava željeni cilj i format? Edukator sada može izravno koristiti ovaj odgovor u svojim prezentacijama za taj razred.
 
-![Dovršavanje chata instrukcijski prilagođenog LLM-a](../../../translated_images/hr/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Dovršavanje chata instrukcijski prilagođenog LLM-a](../../../translated_images/hr/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Zašto nam treba oblikovanje upita?
 
@@ -138,15 +138,15 @@ Pretraživanje na internetu pokazalo mi je da postoje izmišljeni prikazi (npr. 
 
 > **Odgovor 1**: OpenAI Playground (GPT-35)
 
-![Odgovor 1](../../../translated_images/hr/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Odgovor 1](../../../translated_images/hr/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Odgovor 2**: Azure OpenAI Playground (GPT-35)
 
-![Odgovor 2](../../../translated_images/hr/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Odgovor 2](../../../translated_images/hr/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Odgovor 3**: Hugging Face Chat Playground (LLama-2)
 
-![Odgovor 3](../../../translated_images/hr/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Odgovor 3](../../../translated_images/hr/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Kao što se očekivalo, svaki model (ili verzija modela) proizvodi malo drugačije odgovore zahvaljujući stohastičkom ponašanju i varijacijama u sposobnostima modela. Na primjer, jedan model cilja publiku osmog razreda, dok drugi pretpostavlja srednjoškolsku razinu. No, sva tri modela generirala su odgovore koji bi mogli uvjeriti neinformiranog korisnika da je događaj stvaran.
 
