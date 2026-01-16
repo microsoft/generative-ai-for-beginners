@@ -68,7 +68,7 @@ Kho này được triển khai trên GitHub pages nên bạn cần rất cẩn t
 
 Ví dụ, khi bạn di chuột qua bất kỳ liên kết nào trong tệp, bạn sẽ được nhắc theo liên kết bằng cách nhấn **ctrl + click**
 
-![Ảnh chụp màn hình VS code theo liên kết](../../translated_images/vi/vscode-follow-link.85520ab6a1237adc.png)
+![Ảnh chụp màn hình VS code theo liên kết](../../translated_images/vi/vscode-follow-link.85520ab6a1237adc.webp)
 
 Nếu bạn nhấp vào liên kết mà không hoạt động trên máy cục bộ, chắc chắn nó sẽ gây lỗi trong quy trình và không hoạt động trên GitHub.
 
@@ -76,7 +76,7 @@ Nếu bạn nhấp vào liên kết mà không hoạt động trên máy cục b
 
 Khi bạn gõ `./` hoặc `../`, VS code sẽ gợi ý các lựa chọn phù hợp với những gì bạn đã gõ.
 
-![Ảnh chụp màn hình VS code chọn đường dẫn tương đối](../../translated_images/vi/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![Ảnh chụp màn hình VS code chọn đường dẫn tương đối](../../translated_images/vi/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Theo đường dẫn bằng cách nhấp vào tệp hoặc thư mục mong muốn và bạn sẽ chắc chắn đường dẫn không bị hỏng.
 
@@ -93,7 +93,7 @@ Nếu có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu không, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi](../../translated_images/vi/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi](../../translated_images/vi/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và thêm ID theo dõi vào cuối liên kết tương đối.
 
@@ -110,7 +110,7 @@ Nếu có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu không, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi URL](../../translated_images/vi/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi URL](../../translated_images/vi/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và thêm ID theo dõi vào cuối URL.
 
@@ -127,7 +127,7 @@ Nếu không có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu có, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra locale quốc gia trong URL](../../translated_images/vi/github-check-country-locale-comment.2f4fe93228161dee.png)
+![Ảnh chụp màn hình GitHub kiểm tra locale quốc gia trong URL](../../translated_images/vi/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và xóa locale quốc gia khỏi URL.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Arama Uygulamaları Oluşturma
 
-[![Generatif AI ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Generatif AI ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın_
 
@@ -44,7 +44,7 @@ Ders, Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mw
 
 Aşağıda 'Azure ML ile rstudio kullanabilir misiniz?' sorusu için bir anlamsal sorgu örneği verilmiştir. YouTube URL'sine göz atın, URL'nin sorunun cevabının bulunduğu videodaki bir zaman damgasını içerdiğini göreceksiniz.
 
-![Azure ML ile rstudio kullanabilir misiniz? sorusu için anlamsal sorgu](../../../translated_images/tr/query-results.bb0480ebf025fac6.png)
+![Azure ML ile rstudio kullanabilir misiniz? sorusu için anlamsal sorgu](../../../translated_images/tr/query-results.bb0480ebf025fac6.webp)
 
 ## Anlamsal arama nedir?
 
@@ -163,7 +163,7 @@ GitHub Codespaces'te [çözüm not defterini](./python/aoai-solution.ipynb?WT.mc
 
 Not defterini çalıştırdığınızda, bir sorgu girmeniz istenecektir. Giriş kutusu şu şekilde görünecektir:
 
-![Kullanıcının bir sorgu girmesi için giriş kutusu](../../../translated_images/tr/notebook-search.1e320b9c7fcbb0bc.png)
+![Kullanıcının bir sorgu girmesi için giriş kutusu](../../../translated_images/tr/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Harika İş! Öğrenmeye Devam Edin
 

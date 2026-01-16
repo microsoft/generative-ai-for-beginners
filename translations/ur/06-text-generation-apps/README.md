@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ٹیکسٹ جنریشن ایپلیکیشنز بنانا
 
-[![ٹیکسٹ جنریشن ایپلیکیشنز بنانا](../../../translated_images/ur/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![ٹیکسٹ جنریشن ایپلیکیشنز بنانا](../../../translated_images/ur/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(اوپر دی گئی تصویر پر کلک کریں تاکہ اس سبق کی ویڈیو دیکھ سکیں)_
 

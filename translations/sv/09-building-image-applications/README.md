@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygga applikationer för bildgenerering
 
-[![Bygga applikationer för bildgenerering](../../../translated_images/sv/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Bygga applikationer för bildgenerering](../../../translated_images/sv/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Det finns mer att utforska med LLM än bara textgenerering. Det är också möjligt att generera bilder från textbeskrivningar. Att ha bilder som en modalitet kan vara mycket användbart inom flera områden som MedTech, arkitektur, turism, spelutveckling och mer. I detta kapitel kommer vi att titta på de två mest populära modellerna för bildgenerering, DALL-E och Midjourney.
 
@@ -43,7 +43,7 @@ Som en del av denna lektion kommer vi att fortsätta arbeta med vår startup, Ed
 
 Här är vad Edu4Alls studenter kan generera, till exempel om de arbetar i klassrummet med monument:
 
-![Edu4All startup, klass om monument, Eiffeltornet](../../../translated_images/sv/startup.94d6b79cc4bb3f5a.png)
+![Edu4All startup, klass om monument, Eiffeltornet](../../../translated_images/sv/startup.94d6b79cc4bb3f5a.webp)
 
 med en prompt som
 
@@ -273,9 +273,9 @@ Här är ett exempel med GPT Image:
   Basbilden skulle bara innehålla loungen med poolen men slutbilden skulle ha en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sv/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sv/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sv/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sv/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sv/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sv/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Låt oss titta på ett exempel på hur temperatur fungerar genom att köra denna
 
 > Prompt: "Kanin på häst, håller en klubba, på en dimmig äng där det växer påskliljor"
 
-![Kanin på häst som håller en klubba, version 1](../../../translated_images/sv/v1-generated-image.a295cfcffa3c13c2.png)
+![Kanin på häst som håller en klubba, version 1](../../../translated_images/sv/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Nu låt oss köra samma prompt igen för att se att vi inte får samma bild två gånger:
 
-![Genererad bild av kanin på häst](../../../translated_images/sv/v2-generated-image.33f55a3714efe61d.png)
+![Genererad bild av kanin på häst](../../../translated_images/sv/v2-generated-image.33f55a3714efe61d.webp)
 
 Som du kan se är bilderna liknande, men inte identiska. Låt oss försöka ändra temperaturvärdet till 0.1 och se vad som händer:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Nu när du kör denna kod får du dessa två bilder:
 
-- ![Temperatur 0, v1](../../../translated_images/sv/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperatur 0, v2](../../../translated_images/sv/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperatur 0, v1](../../../translated_images/sv/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatur 0, v2](../../../translated_images/sv/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Här kan du tydligt se hur bilderna liknar varandra mer.
 

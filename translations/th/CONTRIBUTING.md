@@ -67,7 +67,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 ตัวอย่างเช่น เมื่อคุณวางเมาส์เหนือใด ๆ ในไฟล์ คุณจะเห็นคำสั่งให้กด **ctrl + click** เพื่อติดตามลิงก์
 
-![VS code follow links screenshot](../../translated_images/th/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/th/vscode-follow-link.85520ab6a1237adc.webp)
 
 ถ้าคลิกลิงก์แล้วไม่ทำงานในเครื่องคุณ ก็แน่นอนว่าจะทำงานไม่ได้บน GitHub
 
@@ -75,7 +75,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 เมื่อคุณพิมพ์ `./` หรือ `../` VS code จะเสนอทางเลือกให้คุณเลือกตามที่คุณพิมพ์
 
-![VS code select relative path screenshot](../../translated_images/th/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/th/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 ติดตามเส้นทางโดยคลิกที่ไฟล์หรือโฟลเดอร์ที่ต้องการ แล้วคุณจะมั่นใจได้ว่าเส้นทางของคุณไม่เสียหาย
 
@@ -92,7 +92,7 @@ workflow นี้จะตรวจสอบว่าเส้นทางส�
 
 ถ้าไม่มี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/th/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/th/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและเพิ่ม tracking ID ต่อท้ายเส้นทางสัมพัทธ์
 
@@ -109,7 +109,7 @@ workflow นี้จะตรวจสอบว่า URL เว็บมี tr
 
 ถ้าไม่มี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/th/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/th/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและเพิ่ม tracking ID ต่อท้าย URL
 
@@ -126,7 +126,7 @@ workflow นี้จะตรวจสอบว่า URL เว็บไม่
 
 ถ้ามี คุณอาจได้รับข้อผิดพลาดดังนี้
 
-![GitHub check country locale comment screenshot](../../translated_images/th/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/th/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 เพื่อแก้ไขปัญหานี้ ให้เปิดไฟล์ที่ workflow แจ้งและลบ locale ของประเทศออกจาก URL
 

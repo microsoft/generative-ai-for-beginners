@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za Kutengeneza Picha
 
-[![Kujenga Programu za Kutengeneza Picha](../../../translated_images/sw/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Kujenga Programu za Kutengeneza Picha](../../../translated_images/sw/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Kuna zaidi ya LLMs kuliko kutengeneza maandishi tu. Inawezekana pia kutengeneza picha kutoka kwa maelezo ya maandishi. Kuwa na picha kama njia ya mawasiliano kunaweza kuwa na manufaa makubwa katika maeneo mbalimbali kama MedTech, usanifu, utalii, ukuzaji wa michezo na zaidi. Katika sura hii, tutachunguza mifano miwili maarufu ya kutengeneza picha, DALL-E na Midjourney.
 
@@ -43,7 +43,7 @@ Kama sehemu ya somo hili, tutaendelea kufanya kazi na kampuni yetu ya kuanzisha,
 
 Hapa kuna mfano wa kile wanafunzi wa Edu4All wanaweza kutengeneza ikiwa wanajifunza darasani kuhusu makaburi:
 
-![Kampuni ya Edu4All, darasa kuhusu makaburi, Mnara wa Eiffel](../../../translated_images/sw/startup.94d6b79cc4bb3f5a.png)
+![Kampuni ya Edu4All, darasa kuhusu makaburi, Mnara wa Eiffel](../../../translated_images/sw/startup.94d6b79cc4bb3f5a.webp)
 
 wakitumia prompt kama
 
@@ -273,9 +273,9 @@ Hapa kuna mfano wa kutumia GPT Image:
   Picha ya msingi ingekuwa na chumba cha kupumzika na bwawa tu lakini picha ya mwisho ingekuwa na flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sw/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sw/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sw/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sw/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sw/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sw/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Hebu tuangalie mfano wa jinsi temperature inavyofanya kazi, kwa kuendesha prompt
 
 > Prompt : "Sungura juu ya farasi, ameshikilia lollipop, kwenye uwanja wa ukungu ambapo maua ya daffodils yanamea"
 
-![Sungura juu ya farasi ameshikilia lollipop, toleo la 1](../../../translated_images/sw/v1-generated-image.a295cfcffa3c13c2.png)
+![Sungura juu ya farasi ameshikilia lollipop, toleo la 1](../../../translated_images/sw/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Sasa hebu tuendeshe prompt hiyo hiyo ili tuone kwamba hatutapata picha sawa mara mbili:
 
-![Picha iliyotengenezwa ya sungura juu ya farasi](../../../translated_images/sw/v2-generated-image.33f55a3714efe61d.png)
+![Picha iliyotengenezwa ya sungura juu ya farasi](../../../translated_images/sw/v2-generated-image.33f55a3714efe61d.webp)
 
 Kama unavyoona, picha zinafanana, lakini si sawa. Hebu jaribu kubadilisha thamani ya temperature kuwa 0.1 na tuone kinachotokea:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Sasa unapokimbia msimbo huu, unapata picha hizi mbili:
 
-- ![Temperature 0, v1](../../../translated_images/sw/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Temperature 0 , v2](../../../translated_images/sw/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Temperature 0, v1](../../../translated_images/sw/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0 , v2](../../../translated_images/sw/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Hapa unaweza kuona wazi jinsi picha zinavyofanana zaidi.
 

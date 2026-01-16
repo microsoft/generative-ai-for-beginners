@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-[![Open Source Models](../../../translated_images/sw/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/sw/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Utangulizi
 
@@ -41,12 +41,12 @@ Kwa somo hili, tutarejelea mifano kama "mifano huria" kuendelea kwani huenda hai
 
 **Gharama** - Gharama kwa tokeni kwa kutumia na kupeleka mifano hii ni chini kuliko ile ya mifano ya umiliki. Unapojenga programu za AI za kizazi, kuangalia utendaji dhidi ya bei unapotumia mifano hii kwa matumizi yako ni muhimu.
 
-![Model Cost](../../../translated_images/sw/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/sw/model-price.3f5a3e4d32ae00b4.webp)
 Chanzo: Artificial Analysis
 
 **Uwezo wa Kubadilika** - Kufanya kazi na mifano huria kunakuwezesha kuwa na uhuru wa kutumia mifano tofauti au kuziunganisha. Mfano wa hili ni [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) ambapo mtumiaji anaweza kuchagua mfano unaotumika moja kwa moja kwenye kiolesura cha mtumiaji:
 
-![Choose Model](../../../translated_images/sw/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/sw/choose-model.f095d15bbac92214.webp)
 
 ## Kuchunguza Mifano Huria Tofauti
 
@@ -74,7 +74,7 @@ Hakuna jibu moja la kuchagua mfano huria. Mahali pazuri pa kuanza ni kutumia kip
 
 Unapotaka kulinganisha LLM kati ya aina tofauti, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) ni rasilimali nyingine nzuri:
 
-![Model Quality](../../../translated_images/sw/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/sw/model-quality.aaae1c22e00f7ee1.webp)
 Chanzo: Artificial Analysis
 
 Ikiwa unafanya kazi kwa matumizi maalum, kutafuta toleo zilizorekebishwa zinazolenga eneo hilo linaweza kuwa na ufanisi. Ku jaribu mifano huria mingi kuona jinsi inavyofanya kazi kulingana na matarajio yako na ya watumiaji ni mazoezi mazuri pia.

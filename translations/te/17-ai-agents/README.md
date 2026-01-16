@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "te"
 }
 -->
-[![Open Source Models](../../../translated_images/te/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/te/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## పరిచయం
 
@@ -33,7 +33,7 @@ AI ఏజెంట్లు జనరేటివ్ AI ప్రపంచంల
 
 AI ఏజెంట్లు పెద్ద భాషా మోడల్స్ (LLMs) కు **స్టేట్** మరియు **టూల్స్** కి ప్రాప్తి కల్పించడం ద్వారా పనులు చేయడానికి అనుమతిస్తాయి.
 
-![Agent Model](../../../translated_images/te/what-agent.21f2893bdfd01e6a.png)
+![Agent Model](../../../translated_images/te/what-agent.21f2893bdfd01e6a.webp)
 
 ఈ పదాలను నిర్వచిద్దాం:
 
@@ -53,7 +53,7 @@ AI ఏజెంట్లు పెద్ద భాషా మోడల్స్ (
 
 `Agent Executor` చాట్ చరిత్రను కూడా నిల్వ చేస్తుంది, తద్వారా చాట్ సందర్భం అందించబడుతుంది.
 
-![Langchain Agents](../../../translated_images/te/langchain-agents.edcc55b5d5c43716.png)
+![Langchain Agents](../../../translated_images/te/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain మీ అప్లికేషన్‌లో దిగుమతి చేసుకోవడానికి [టూల్స్ క్యాటలాగ్](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ను అందిస్తుంది, ఇందులో LLM ప్రాప్తి పొందవచ్చు. ఇవి కమ్యూనిటీ మరియు LangChain టీమ్ తయారు చేసినవి.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ప్రక్రియ ఉదాహరణ ఇక్కడ ఉంది:
 
-![AutoGen](../../../translated_images/te/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/te/autogen.dee9a25a45fde584.webp)
 
 #### సిస్టమ్ సందేశంతో నిర్వచించిన LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 పనులను పూర్తి చేయడానికి `Planner` కు `Plugins` అనే టూల్స్ సేకరణ అందుబాటులో ఉంటుంది. ఇవి Python క్లాసులు లేదా సాధారణ కోడ్ ఇంటర్‌ప్రెటర్ కావచ్చు. ఈ ప్లగిన్లు ఎంబెడ్డింగ్స్‌గా నిల్వ చేయబడతాయి, తద్వారా LLM సరైన ప్లగిన్‌ను సులభంగా వెతుకుతుంది.
 
-![Taskweaver](../../../translated_images/te/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/te/taskweaver.da8559999267715a.webp)
 
 అనామలీ డిటెక్షన్ నిర్వహించడానికి ప్లగిన్ ఉదాహరణ ఇక్కడ ఉంది:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 చివరి ఏజెంట్ ఫ్రేమ్‌వర్క్ [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVIS ప్రత్యేకత ఏమిటంటే ఇది సంభాషణ `స్టేట్` ను నిర్వహించడానికి LLM ను ఉపయోగిస్తుంది మరియు `టూల్స్` గా ఇతర AI మోడల్స్ ఉంటాయి. ప్రతి AI మోడల్ ప్రత్యేక పనులు చేస్తుంది, ఉదాహరణకు ఆబ్జెక్ట్ డిటెక్షన్, ట్రాన్స్క్రిప్షన్ లేదా ఇమేజ్ క్యాప్షనింగ్.
 
-![JARVIS](../../../translated_images/te/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/te/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, ఒక సాధారణ ప్రయోజన మోడల్‌గా, వినియోగదారుని అభ్యర్థనను స్వీకరించి నిర్దిష్ట పని మరియు ఆ పని పూర్తి చేయడానికి అవసరమైన ఆర్గ్యుమెంట్లు/డేటాను గుర్తిస్తుంది.
 

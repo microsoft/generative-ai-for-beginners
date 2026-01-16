@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Các Nguyên Tắc Cơ Bản Về Kỹ Thuật Tạo Prompt
 
-[![Các Nguyên Tắc Cơ Bản Về Kỹ Thuật Tạo Prompt](../../../translated_images/vi/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Các Nguyên Tắc Cơ Bản Về Kỹ Thuật Tạo Prompt](../../../translated_images/vi/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Giới thiệu
 Module này bao gồm các khái niệm và kỹ thuật cơ bản để tạo các prompt hiệu quả trong các mô hình AI tạo nội dung. Cách bạn viết prompt cho một LLM cũng rất quan trọng. Một prompt được tạo cẩn thận có thể đạt được chất lượng phản hồi tốt hơn. Nhưng chính xác thì các thuật ngữ như _prompt_ và _kỹ thuật tạo prompt_ có nghĩa là gì? Và làm thế nào để cải thiện _dữ liệu đầu vào_ mà tôi gửi đến LLM? Đây là những câu hỏi mà chúng ta sẽ cố gắng trả lời trong chương này và chương tiếp theo.
@@ -53,7 +53,7 @@ Notebook đi kèm với các bài tập _khởi đầu_ - nhưng bạn được 
 
 Muốn có cái nhìn tổng quan về những gì bài học này bao gồm trước khi bạn bắt đầu? Hãy xem hướng dẫn minh họa này, cung cấp cho bạn cái nhìn về các chủ đề chính được đề cập và những điểm chính cần suy nghĩ trong mỗi phần. Lộ trình bài học đưa bạn từ việc hiểu các khái niệm và thách thức cốt lõi đến việc giải quyết chúng bằng các kỹ thuật và thực hành tốt nhất trong kỹ thuật tạo prompt. Lưu ý rằng phần "Kỹ thuật Nâng cao" trong hướng dẫn này đề cập đến nội dung được đề cập trong chương _tiếp theo_ của chương trình học này.
 
-![Hướng dẫn minh họa về Kỹ thuật tạo Prompt](../../../translated_images/vi/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Hướng dẫn minh họa về Kỹ thuật tạo Prompt](../../../translated_images/vi/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Startup của chúng ta
 
@@ -84,7 +84,7 @@ Một LLM nhìn thấy các prompt như một _chuỗi các token_ nơi các mô
 
 Để có trực giác về cách tokenization hoạt động, hãy thử các công cụ như [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) được hiển thị dưới đây. Sao chép prompt của bạn vào - và xem cách nó được chuyển đổi thành các token, chú ý cách các ký tự khoảng trắng và dấu chấm câu được xử lý. Lưu ý rằng ví dụ này hiển thị một LLM cũ hơn (GPT-3) - vì vậy thử nghiệm với một mô hình mới hơn có thể tạo ra kết quả khác.
 
-![Tokenization](../../../translated_images/vi/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenization](../../../translated_images/vi/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Khái niệm: Mô hình Nền Tảng
 
@@ -94,7 +94,7 @@ Muốn thấy cách hoàn thành dựa trên prompt hoạt động? Nhập promp
 
 Nhưng điều gì sẽ xảy ra nếu người dùng muốn thấy điều gì đó cụ thể đáp ứng một số tiêu chí hoặc mục tiêu nhiệm vụ? Đây là lúc các LLM được tinh chỉnh theo hướng dẫn xuất hiện.
 
-![Base LLM Chat Completion](../../../translated_images/vi/04-playground-chat-base.65b76fcfde0caa67.png)
+![Base LLM Chat Completion](../../../translated_images/vi/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Khái niệm: Instruction Tuned LLMs
 
@@ -108,7 +108,7 @@ Hãy thử nghiệm - quay lại prompt trên, nhưng bây giờ thay đổi _th
 
 Xem cách kết quả bây giờ được tinh chỉnh để phản ánh mục tiêu và định dạng mong muốn? Một giáo viên bây giờ có thể trực tiếp sử dụng phản hồi này trong các slide cho lớp học đó.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/vi/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/vi/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Tại sao chúng ta cần Kỹ Thuật Tạo Prompt?
 
@@ -138,15 +138,15 @@ Vậy điều gì xảy ra khi chúng ta chạy lời nhắc này với các nh�
 
 > **Phản hồi 1**: OpenAI Playground (GPT-35)
 
-![Phản hồi 1](../../../translated_images/vi/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Phản hồi 1](../../../translated_images/vi/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Phản hồi 2**: Azure OpenAI Playground (GPT-35)
 
-![Phản hồi 2](../../../translated_images/vi/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Phản hồi 2](../../../translated_images/vi/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Phản hồi 3**: Hugging Face Chat Playground (LLama-2)
 
-![Phản hồi 3](../../../translated_images/vi/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Phản hồi 3](../../../translated_images/vi/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Như mong đợi, mỗi mô hình (hoặc phiên bản mô hình) tạo ra các phản hồi hơi khác nhau nhờ vào hành vi ngẫu nhiên và sự khác biệt về khả năng của mô hình. Ví dụ, một mô hình nhắm đến đối tượng học sinh lớp 8 trong khi mô hình khác giả định đối tượng là học sinh trung học. Nhưng cả ba mô hình đều tạo ra các phản hồi có thể thuyết phục một người dùng không có thông tin rằng sự kiện là có thật.
 

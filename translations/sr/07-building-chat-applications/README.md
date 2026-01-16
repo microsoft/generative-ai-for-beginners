@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Изградња апликација за ћаскање заснованих на генеративној вештачкој интелигенцији
 
-[![Изградња апликација за ћаскање заснованих на генеративној вештачкој интелигенцији](../../../translated_images/sr/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Изградња апликација за ћаскање заснованих на генеративној вештачкој интелигенцији](../../../translated_images/sr/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Кликните на слику изнад да бисте погледали видео лекције)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 Један такав пример персонализације је подешавање „Прилагођена упутства“ у OpenAI-овом ChatGPT-у. Омогућава вам да пружите информације о себи које могу бити важан контекст за ваше упите. Ево примера прилагођеног упутства.
 
-![Подешавање прилагођених упутстава у ChatGPT-у](../../../translated_images/sr/custom-instructions.b96f59aa69356fcf.png)
+![Подешавање прилагођених упутстава у ChatGPT-у](../../../translated_images/sr/custom-instructions.b96f59aa69356fcf.webp)
 
 Овај „профил“ подстиче ChatGPT да креира план лекције о повезаним листама. Приметите да ChatGPT узима у обзир да корисник можда жели детаљнији план лекције на основу њеног искуства.
 
-![Упит у ChatGPT-у за план лекције о повезаним листама](../../../translated_images/sr/lesson-plan-prompt.cc47c488cf1343df.png)
+![Упит у ChatGPT-у за план лекције о повезаним листама](../../../translated_images/sr/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft-ов оквир за системске поруке за моделе великог језика
 

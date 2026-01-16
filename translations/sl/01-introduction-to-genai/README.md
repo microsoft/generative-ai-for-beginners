@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Uvod v generativno umetno inteligenco in velike jezikovne modele
 
-[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/sl/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/sl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Kliknite na zgornjo sliko za ogled videa te lekcije)_
 
@@ -43,7 +43,7 @@ Ekipa našega startupa se zaveda, da tega cilja ne bomo mogli doseči brez upora
 
 Generativna umetna inteligenca naj bi revolucionirala način, kako danes učimo in se učimo, saj bodo imeli učenci na voljo virtualne učitelje 24 ur na dan, ki zagotavljajo ogromne količine informacij in primerov, učitelji pa bodo lahko uporabljali inovativna orodja za ocenjevanje svojih učencev in podajanje povratnih informacij.
 
-![Pet mladih učencev gleda monitor - slika DALLE2](../../../translated_images/sl/students-by-DALLE2.b70fddaced1042ee.png)
+![Pet mladih učencev gleda monitor - slika DALLE2](../../../translated_images/sl/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Za začetek opredelimo nekaj osnovnih pojmov in terminologije, ki jo bomo uporabljali skozi celoten učni načrt.
 
@@ -69,7 +69,7 @@ To je tehnologija, ki je omogočila nastanek virtualnih asistentov v prvem deset
 
 Tako smo prišli do današnje generativne umetne inteligence, ki jo lahko vidimo kot podskupino globokega učenja.
 
-![AI, ML, DL in generativna umetna inteligenca](../../../translated_images/sl/AI-diagram.c391fa518451a40d.png)
+![AI, ML, DL in generativna umetna inteligenca](../../../translated_images/sl/AI-diagram.c391fa518451a40d.webp)
 
 Po desetletjih raziskav na področju umetne inteligence je nova arhitektura modela – imenovana _Transformer_ – presegla omejitve RNN-jev, saj je sposobna sprejeti veliko daljše zaporedje besedila kot vhod. Transformatorji temeljijo na mehanizmu pozornosti, ki modelu omogoča, da različnim vhodnim podatkom dodeli različne teže, 'posveča več pozornosti' tam, kjer je zgoščena najbolj relevantna informacija, ne glede na njihov vrstni red v zaporedju besedila.
 
@@ -81,7 +81,7 @@ V naslednjem poglavju bomo raziskali različne vrste generativnih AI modelov, za
 
 - **Tokenizer, pretvorba besedila v številke**: Veliki jezikovni modeli sprejmejo besedilo kot vhod in generirajo besedilo kot izhod. Ker pa so statistični modeli, bolje delujejo s številkami kot z besedilnimi zaporedji. Zato je vsak vhod v model obdelan s tokenizerjem, preden ga uporabi osrednji model. Token je del besedila – sestavljen iz spremenljivega števila znakov, zato je glavna naloga tokenizerja razdeliti vhod na niz tokenov. Nato se vsak token preslika v indeks tokena, ki je celoštevilska kodifikacija izvirnega dela besedila.
 
-![Primer tokenizacije](../../../translated_images/sl/tokenizer-example.80a5c151ee7d1bd4.png)
+![Primer tokenizacije](../../../translated_images/sl/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Napovedovanje izhodnih tokenov**: Glede na n tokenov kot vhod (pri čemer se največji n razlikuje od modela do modela) je model sposoben napovedati en token kot izhod. Ta token se nato vključi v vhod naslednje iteracije, v vzorcu razširjajočega se okna, kar omogoča boljšo uporabniško izkušnjo pridobivanja enega (ali več) stavkov kot odgovora. To pojasnjuje, zakaj, če ste se kdaj igrali s ChatGPT, ste morda opazili, da se včasih zdi, da se ustavi sredi stavka.
 
@@ -98,23 +98,23 @@ Vhod velikega jezikovnega modela je znan kot poziv (prompt), medtem ko je izhod 
 
   1. Povzetek članka, knjige, pregledov izdelkov in več, skupaj z izluščanjem vpogledov iz nestrukturiranih podatkov.
     
-    ![Primer povzetka](../../../translated_images/sl/summarization-example.7b7ff97147b3d790.png)
+    ![Primer povzetka](../../../translated_images/sl/summarization-example.7b7ff97147b3d790.webp)
   
   2. Ustvarjalno oblikovanje in zasnova članka, eseja, naloge ali več.
       
-     ![Primer ustvarjalnega pisanja](../../../translated_images/sl/creative-writing-example.e24a685b5a543ad1.png)
+     ![Primer ustvarjalnega pisanja](../../../translated_images/sl/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Vprašanje**, zastavljeno v obliki pogovora z agentom.
   
-  ![Primer pogovora](../../../translated_images/sl/conversation-example.60c2afc0f595fa59.png)
+  ![Primer pogovora](../../../translated_images/sl/conversation-example.60c2afc0f595fa59.webp)
 
 - Del **besedila za dokončanje**, kar implicitno pomeni prošnjo za pomoč pri pisanju.
   
-  ![Primer dokončanja besedila](../../../translated_images/sl/text-completion-example.cbb0f28403d42752.png)
+  ![Primer dokončanja besedila](../../../translated_images/sl/text-completion-example.cbb0f28403d42752.webp)
 
 - Del **kode** skupaj s prošnjo za razlago in dokumentiranje ali komentarjem, ki zahteva generiranje dela kode za izvedbo določene naloge.
   
-  ![Primer kodiranja](../../../translated_images/sl/coding-example.50ebabe8a6afff20.png)
+  ![Primer kodiranja](../../../translated_images/sl/coding-example.50ebabe8a6afff20.webp)
 
 Zgornji primeri so precej preprosti in niso namenjeni izčrpni predstavitvi zmogljivosti velikih jezikovnih modelov. Namenjeni so prikazu potenciala uporabe generativne umetne inteligence, zlasti, vendar ne izključno, v izobraževalnih kontekstih.
 

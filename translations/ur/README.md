@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ur"
 }
 -->
-![ابتدائی افراد کے لیے جنریٹو AI](../../translated_images/ur/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![ابتدائی افراد کے لیے جنریٹو AI](../../translated_images/ur/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 اسباق جو آپ کو جنریٹو AI ایپلیکیشنز بنانے کے لیے سب کچھ سکھاتے ہیں
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # రిట్రీవల్ ఆగ్మెంటెడ్ జనరేషన్ (RAG) మరియు వెక్టర్ డేటాబేసులు
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/te/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/te/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 సెర్చ్ అప్లికేషన్ల పాఠంలో, మీ స్వంత డేటాను లార్జ్ లాంగ్వేజ్ మోడల్స్ (LLMs) లో ఎలా ఇంటిగ్రేట్ చేయాలో మేము సంక్షిప్తంగా నేర్చుకున్నాము. ఈ పాఠంలో, మీ LLM అప్లికేషన్‌లో మీ డేటాను గ్రౌండింగ్ చేయడం, ప్రక్రియ యొక్క యాంత్రికత మరియు డేటాను నిల్వ చేయడానికి పద్ధతులు, ఎంబెడ్డింగ్స్ మరియు టెక్స్ట్ రెండింటినీ కలిపి, మరింత లోతుగా తెలుసుకుంటాము.
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAGs (Retrieval Augmented Generation) ఎలా పనిచేస్తాయి
 
-![drawing showing how RAGs work](../../../translated_images/te/how-rag-works.f5d0ff63942bd3a6.png)
+![drawing showing how RAGs work](../../../translated_images/te/how-rag-works.f5d0ff63942bd3a6.webp)
 
 మీ నోట్స్ నుండి క్విజ్‌లు సృష్టించే చాట్‌బాట్‌ను మీరు డిప్లాయ్ చేయాలనుకుంటే, మీకు జ్ఞాన బేస్‌కు కనెక్షన్ అవసరం. ఇక్కడ RAG సహాయం చేస్తుంది. RAGs ఈ విధంగా పనిచేస్తాయి:
 
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **ఆగ్మెంటెడ్ జనరేషన్:** LLM రిట్రీవ్ చేసిన డేటా ఆధారంగా దాని ప్రతిస్పందనను మెరుగుపరుస్తుంది. ఇది ప్రీ-ట్రెయిన్ చేసిన డేటా మాత్రమే కాకుండా, జోడించిన సందర్భం నుండి సంబంధిత సమాచారాన్ని కూడా ఉపయోగించి ప్రతిస్పందనను సృష్టిస్తుంది. LLM ఆ తర్వాత వినియోగదారుడి ప్రశ్నకు సమాధానం ఇస్తుంది.
 
-![drawing showing how RAGs architecture](../../../translated_images/te/encoder-decode.f2658c25d0eadee2.png)
+![drawing showing how RAGs architecture](../../../translated_images/te/encoder-decode.f2658c25d0eadee2.webp)
 
 RAGs ఆర్కిటెక్చర్ ట్రాన్స్‌ఫార్మర్స్ ఉపయోగించి అమలు చేయబడింది, ఇది రెండు భాగాలుగా ఉంటుంది: ఎంకోడర్ మరియు డీకోడర్. ఉదాహరణకు, వినియోగదారు ప్రశ్న అడిగినప్పుడు, ఇన్‌పుట్ టెక్స్ట్ పదాల అర్థాన్ని పట్టుకునే వెక్టర్లుగా 'ఎంకోడ్' చేయబడుతుంది మరియు ఆ వెక్టర్లు మా డాక్యుమెంట్ ఇండెక్స్‌లో 'డీకోడ్' చేయబడతాయి మరియు వినియోగదారుడి ప్రశ్న ఆధారంగా కొత్త టెక్స్ట్ సృష్టిస్తాయి. LLM అవుట్‌పుట్ సృష్టించడానికి ఎంకోడర్-డీకోడర్ మోడల్‌ను ఉపయోగిస్తుంది.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 భాగాలుగా విభజించిన తర్వాత, మేము మా టెక్స్ట్‌ను వివిధ ఎంబెడ్డింగ్ మోడల్స్ ఉపయోగించి ఎంబెడ్ చేయవచ్చు. మీరు ఉపయోగించగల కొన్ని మోడల్స్: word2vec, OpenAI యొక్క ada-002, Azure కంప్యూటర్ విజన్ మరియు మరిన్ని. మోడల్ ఎంపిక మీరు ఉపయోగించే భాషలు, ఎంకోడ్ చేసే కంటెంట్ రకం (టెక్స్ట్/చిత్రాలు/ఆడియో), అది ఎంకోడ్ చేయగల ఇన్‌పుట్ పరిమాణం మరియు ఎంబెడ్డింగ్ అవుట్‌పుట్ పొడవు ఆధారంగా ఉంటుంది.
 
 OpenAI యొక్క `text-embedding-ada-002` మోడల్ ఉపయోగించి ఎంబెడ్డింగ్ చేసిన టెక్స్ట్ ఉదాహరణ:
-![an embedding of the word cat](../../../translated_images/te/cat.74cbd7946bc9ca38.png)
+![an embedding of the word cat](../../../translated_images/te/cat.74cbd7946bc9ca38.webp)
 
 ## రిట్రీవల్ మరియు వెక్టర్ సెర్చ్
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) och Vektordatabaser
 
-[![Retrieval Augmented Generation (RAG) och Vektordatabaser](../../../translated_images/sv/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) och Vektordatabaser](../../../translated_images/sv/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 I lektionen om sökapplikationer lärde vi oss kort hur man integrerar egen data i stora språkmodeller (LLMs). I denna lektion kommer vi att fördjupa oss i koncepten kring att grunda din data i din LLM-applikation, mekaniken bakom processen och metoder för att lagra data, inklusive både embeddings och text.
 
@@ -53,7 +53,7 @@ En LLM-driven chatbot bearbetar användarens frågor för att generera svar. Den
 
 ### Hur RAGs (Retrieval Augmented Generation) fungerar
 
-![ritning som visar hur RAGs fungerar](../../../translated_images/sv/how-rag-works.f5d0ff63942bd3a6.png)
+![ritning som visar hur RAGs fungerar](../../../translated_images/sv/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Anta att du vill distribuera en chatbot som skapar quiz från dina anteckningar, då behöver du en anslutning till kunskapsbasen. Det är här RAG kommer till undsättning. RAGs fungerar enligt följande:
 
@@ -65,7 +65,7 @@ Anta att du vill distribuera en chatbot som skapar quiz från dina anteckningar,
 
 - **Förbättrad generering:** LLM förbättrar sitt svar baserat på den data som hämtats. Det gör att det genererade svaret inte bara baseras på förtränad data utan också relevant information från det tillagda sammanhanget. Den hämtade datan används för att förbättra LLM:s svar. LLM returnerar sedan ett svar på användarens fråga.
 
-![ritning som visar RAGs arkitektur](../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.png)
+![ritning som visar RAGs arkitektur](../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.webp)
 
 Arkitekturen för RAGs implementeras med hjälp av transformatorer som består av två delar: en encoder och en decoder. Till exempel, när en användare ställer en fråga, kodas inputtexten till vektorer som fångar innebörden av orden och vektorerna avkodas till vårt dokumentindex och genererar ny text baserat på användarens fråga. LLM använder både en encoder-decoder-modell för att generera output.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 När den är uppdelad kan vi sedan bädda in vår text med olika embeddingmodeller. Några modeller du kan använda inkluderar: word2vec, ada-002 av OpenAI, Azure Computer Vision och många fler. Valet av modell beror på vilka språk du använder, vilken typ av innehåll som kodas (text/bilder/ljud), storleken på input den kan koda och längden på embeddingoutputen.
 
 Ett exempel på inbäddad text med OpenAI:s `text-embedding-ada-002`-modell är:
-![en embedding av ordet katt](../../../translated_images/sv/cat.74cbd7946bc9ca38.png)
+![en embedding av ordet katt](../../../translated_images/sv/cat.74cbd7946bc9ca38.webp)
 
 ## Hämtning och vektorsökning
 

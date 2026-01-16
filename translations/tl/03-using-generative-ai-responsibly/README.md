@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Paggamit ng Generative AI nang Responsable
 
-[![Paggamit ng Generative AI nang Responsable](../../../translated_images/tl/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Paggamit ng Generative AI nang Responsable](../../../translated_images/tl/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _I-click ang imahe sa itaas upang mapanood ang video ng araling ito_
 
@@ -85,7 +85,7 @@ Ang ganitong uri ng output ay hindi lamang nakakasira sa pagbuo ng positibong ka
 
 Ngayon na natukoy natin ang kahalagahan ng Responsible Generative AI, tingnan natin ang 4 na hakbang na maaari nating gawin upang bumuo ng mga AI solution nang responsable:
 
-![Mitigate Cycle](../../../translated_images/tl/mitigate-cycle.babcd5a5658e1775.png)
+![Mitigate Cycle](../../../translated_images/tl/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Sukatin ang Posibleng Pinsala
 
@@ -97,7 +97,7 @@ Dahil ang ating startup ay gumagawa ng produktong pang-edukasyon, maganda kung m
 
 Panahon na upang maghanap ng mga paraan kung paano natin maiiwasan o malilimitahan ang posibleng pinsala na dulot ng modelo at ng mga sagot nito. Maaari natin itong tingnan sa 4 na magkakaibang layer:
 
-![Mitigation Layers](../../../translated_images/tl/mitigation-layers.377215120b9a1159.png)
+![Mitigation Layers](../../../translated_images/tl/mitigation-layers.377215120b9a1159.webp)
 
 - **Modelo**. Pumili ng tamang modelo para sa tamang layunin. Ang mas malaki at mas kumplikadong mga modelo tulad ng GPT-4 ay maaaring magdulot ng mas mataas na panganib ng nakakasamang nilalaman kapag ginamit sa mas maliit at mas tiyak na mga layunin. Ang paggamit ng iyong training data upang i-fine-tune ang modelo ay nakakatulong din upang mabawasan ang panganib ng nakakasamang nilalaman.
 

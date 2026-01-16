@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Изградња апликација за генерисање слика
 
-[![Изградња апликација за генерисање слика](../../../translated_images/sr/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Изградња апликација за генерисање слика](../../../translated_images/sr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Генеративни језички модели (LLM) нису ограничени само на генерисање текста. Могуће је генерисати и слике на основу текстуалних описа. Имање слика као модалитета може бити изузетно корисно у бројним областима као што су медицинска технологија, архитектура, туризам, развој игара и многе друге. У овом поглављу, погледаћемо два најпопуларнија модела за генерисање слика, DALL-E и Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ево шта би студенти Edu4All-а могли да креирају, на пример, ако раде на часу о споменицима:
 
-![Edu4All стартап, час о споменицима, Ајфелова кула](../../../translated_images/sr/startup.94d6b79cc4bb3f5a.png)
+![Edu4All стартап, час о споменицима, Ајфелова кула](../../../translated_images/sr/startup.94d6b79cc4bb3f5a.webp)
 
 користећи промпт као што је:
 
@@ -273,9 +273,9 @@ _Ауторегресивни трансформер_ дефинише како 
   Основна слика би садржавала само салон са базеном, али коначна слика би имала фламинга:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sr/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sr/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sr/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ _Ауторегресивни трансформер_ дефинише како 
 
 > Промпт: "Зец на коњу, држи лизалицу, на магловитој ливади где расту нарциси"
 
-![Зец на коњу држи лизалицу, верзија 1](../../../translated_images/sr/v1-generated-image.a295cfcffa3c13c2.png)
+![Зец на коњу држи лизалицу, верзија 1](../../../translated_images/sr/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Сада покренимо исти промпт само да видимо да нећемо добити исту слику два пута:
 
-![Генерисана слика зеца на коњу](../../../translated_images/sr/v2-generated-image.33f55a3714efe61d.png)
+![Генерисана слика зеца на коњу](../../../translated_images/sr/v2-generated-image.33f55a3714efe61d.webp)
 
 Као што видите, слике су сличне, али нису исте. Покушајмо да променимо вредност температуре на 0.1 и видимо шта ће се десити:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Сада када покренете овај код, добијате ове две слике:
 
-- ![Температура 0, в1](../../../translated_images/sr/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![Температура 0 , в2](../../../translated_images/sr/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![Температура 0, в1](../../../translated_images/sr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Температура 0 , в2](../../../translated_images/sr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Овде јасно можете видети како се слике више међусобно подударају.
 

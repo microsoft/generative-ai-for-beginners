@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tích hợp với chức năng gọi hàm
 
-[![Tích hợp với chức năng gọi hàm](../../../translated_images/vi/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Tích hợp với chức năng gọi hàm](../../../translated_images/vi/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Bạn đã học được khá nhiều điều trong các bài học trước. Tuy nhiên, chúng ta vẫn có thể cải thiện thêm. Một số vấn đề cần giải quyết là làm thế nào để có được định dạng phản hồi nhất quán hơn, giúp dễ dàng làm việc với phản hồi ở các bước tiếp theo. Ngoài ra, chúng ta cũng có thể muốn thêm dữ liệu từ các nguồn khác để làm phong phú thêm ứng dụng của mình.
 
@@ -179,7 +179,7 @@ Bây giờ chúng ta có thể gửi cả hai yêu cầu đến LLM và kiểm t
 
 Vậy làm thế nào để giải quyết vấn đề định dạng? Bằng cách sử dụng chức năng gọi hàm, chúng ta có thể đảm bảo rằng chúng ta nhận được dữ liệu có cấu trúc. Khi sử dụng chức năng gọi hàm, LLM thực sự không gọi hoặc chạy bất kỳ hàm nào. Thay vào đó, chúng ta tạo một cấu trúc để LLM tuân theo cho các phản hồi của nó. Sau đó, chúng ta sử dụng các phản hồi có cấu trúc đó để biết hàm nào cần chạy trong ứng dụng của mình.
 
-![luồng chức năng](../../../translated_images/vi/Function-Flow.083875364af4f4bb.png)
+![luồng chức năng](../../../translated_images/vi/Function-Flow.083875364af4f4bb.webp)
 
 Chúng ta có thể lấy những gì được trả về từ hàm và gửi lại cho LLM. LLM sau đó sẽ phản hồi bằng ngôn ngữ tự nhiên để trả lời truy vấn của người dùng.
 
@@ -201,7 +201,7 @@ Quá trình tạo chức năng gọi hàm bao gồm 3 bước chính:
 2. **Đọc** phản hồi của mô hình để thực hiện một hành động, ví dụ: thực thi một hàm hoặc yêu cầu API.
 3. **Thực hiện** một cuộc gọi khác đến API Chat Completions với phản hồi từ hàm của bạn để sử dụng thông tin đó tạo phản hồi cho người dùng.
 
-![Luồng LLM](../../../translated_images/vi/LLM-Flow.3285ed8caf4796d7.png)
+![Luồng LLM](../../../translated_images/vi/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Bước 1 - tạo tin nhắn
 

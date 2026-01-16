@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za Gumzo Zinazotumia AI ya Kizazi
 
-[![Kujenga Programu za Gumzo Zinazotumia AI ya Kizazi](../../../translated_images/sw/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Kujenga Programu za Gumzo Zinazotumia AI ya Kizazi](../../../translated_images/sw/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Bofya picha hapo juu kutazama video ya somo hili)_
 
@@ -96,11 +96,11 @@ Kanuni za jumla za UX zinatumika kwa programu za gumzo, lakini hapa kuna masuala
 
 Mfano mmoja wa ubinafsishaji ni mipangilio ya "Maelekezo Maalum" katika ChatGPT ya OpenAI. Inakuruhusu kutoa taarifa kuhusu wewe ambayo inaweza kuwa muktadha muhimu kwa maombi yako. Hapa kuna mfano wa maelekezo maalum.
 
-![Mipangilio ya Maelekezo Maalum katika ChatGPT](../../../translated_images/sw/custom-instructions.b96f59aa69356fcf.png)
+![Mipangilio ya Maelekezo Maalum katika ChatGPT](../../../translated_images/sw/custom-instructions.b96f59aa69356fcf.webp)
 
 Maelezo haya ya "wasifu" yanamshawishi ChatGPT kuunda mpango wa somo kuhusu orodha zilizounganishwa. Angalia kuwa ChatGPT inazingatia kuwa mtumiaji anaweza kutaka mpango wa somo wa kina zaidi kulingana na uzoefu wake.
 
-![Ombi katika ChatGPT kwa mpango wa somo kuhusu orodha zilizounganishwa](../../../translated_images/sw/lesson-plan-prompt.cc47c488cf1343df.png)
+![Ombi katika ChatGPT kwa mpango wa somo kuhusu orodha zilizounganishwa](../../../translated_images/sw/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Mfumo wa Ujumbe wa Mfumo wa Microsoft kwa Mifano Mikubwa ya Lugha
 

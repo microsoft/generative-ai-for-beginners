@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Skapa avancerade prompts
 
-[![Skapa avancerade prompts](../../../translated_images/sv/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Skapa avancerade prompts](../../../translated_images/sv/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Låt oss sammanfatta några lärdomar från föregående kapitel:
 

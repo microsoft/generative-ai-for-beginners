@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Створення додатків для генерації тексту
 
-[![Створення додатків для генерації тексту](../../../translated_images/uk/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Створення додатків для генерації тексту](../../../translated_images/uk/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Натисніть на зображення вище, щоб переглянути відео цього уроку)_
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-[![Mifano ya Chanzo Huria](../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Mifano ya Chanzo Huria](../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Kuboresha LLM Yako
 
@@ -32,7 +32,7 @@ Tayari? Hebu tuanze.
 
 Unataka kupata picha kubwa ya kile tutakachojadili kabla ya kuanza? Angalia mwongozo huu wa picha unaoelezea safari ya kujifunza kwa somo hili - kutoka kujifunza dhana kuu na motisha ya kuboresha, hadi kuelewa mchakato na mbinu bora za kutekeleza kazi ya kuboresha. Hili ni somo la kuvutia la kuchunguza, kwa hivyo usisahau kuangalia ukurasa wa [Rasilimali](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa viungo vya ziada vya kusaidia safari yako ya kujifunza kwa kujitegemea!
 
-![Mwongozo wa Picha wa Kuboresha Mifano ya Lugha](../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Mwongozo wa Picha wa Kuboresha Mifano ya Lugha](../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Kuboresha mifano ya lugha ni nini?
 

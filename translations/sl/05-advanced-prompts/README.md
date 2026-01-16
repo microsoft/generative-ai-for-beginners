@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ustvarjanje naprednih pozivov
 
-[![Ustvarjanje naprednih pozivov](../../../translated_images/sl/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Ustvarjanje naprednih pozivov](../../../translated_images/sl/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Povzemimo nekaj naukov iz prejšnjega poglavja:
 

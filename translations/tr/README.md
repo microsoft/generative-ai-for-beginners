@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tr"
 }
 -->
-![Yeni Başlayanlar için Üretken Yapay Zeka](../../translated_images/tr/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Yeni Başlayanlar için Üretken Yapay Zeka](../../translated_images/tr/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### Üretken Yapay Zeka uygulamaları geliştirmeye başlamak için bilmeniz gereken her şeyi öğreten 21 Ders
 

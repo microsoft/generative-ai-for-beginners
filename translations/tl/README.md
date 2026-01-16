@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tl"
 }
 -->
-![Generative AI For Beginners](../../translated_images/tl/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI For Beginners](../../translated_images/tl/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 Mga Aralin na nagtuturo ng lahat ng kailangan mong malaman para makapagsimula sa paggawa ng Mga Aplikasyon ng Generative AI
 

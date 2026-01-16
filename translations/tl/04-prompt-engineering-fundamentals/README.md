@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mga Pangunahing Kaalaman sa Prompt Engineering
 
-[![Mga Pangunahing Kaalaman sa Prompt Engineering](../../../translated_images/tl/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Mga Pangunahing Kaalaman sa Prompt Engineering](../../../translated_images/tl/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Panimula
 Ang module na ito ay tumatalakay sa mahahalagang konsepto at teknik para sa paglikha ng epektibong mga prompt sa generative AI models. Ang paraan ng pagsusulat mo ng prompt sa isang LLM ay mahalaga rin. Ang maingat na pagkakagawa ng prompt ay maaaring magresulta sa mas mataas na kalidad ng sagot. Ngunit ano nga ba ang ibig sabihin ng mga terminong tulad ng _prompt_ at _prompt engineering_? At paano ko mapapabuti ang prompt _input_ na ipinapadala ko sa LLM? Ito ang mga tanong na susubukan nating sagutin sa kabanatang ito at sa susunod.
@@ -53,7 +53,7 @@ Ang notebook ay may mga _starter_ na ehersisyo - ngunit hinihikayat kang magdagd
 
 Gusto mo bang makuha ang kabuuang larawan ng saklaw ng araling ito bago ka sumisid? Tingnan ang gabay na may larawan, na nagbibigay sa iyo ng ideya ng mga pangunahing paksa na saklaw at ang mga mahahalagang takeaway na dapat mong pag-isipan sa bawat isa. Ang roadmap ng aralin ay magdadala sa iyo mula sa pag-unawa sa mga pangunahing konsepto at hamon hanggang sa pagtugon sa mga ito gamit ang mga kaugnay na teknik sa prompt engineering at pinakamahusay na mga kasanayan. Tandaan na ang seksyong "Advanced Techniques" sa gabay na ito ay tumutukoy sa nilalaman na saklaw sa _susunod_ na kabanata ng kurikulum na ito.
 
-![Gabay na May Larawan sa Prompt Engineering](../../../translated_images/tl/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![Gabay na May Larawan sa Prompt Engineering](../../../translated_images/tl/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Ang Ating Startup
 
@@ -94,7 +94,7 @@ Nakikita ng isang LLM ang mga prompt bilang isang _sunod-sunod na mga token_ kun
 
 Upang makakuha ng intuwisyon kung paano gumagana ang tokenization, subukan ang mga tool tulad ng [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) na ipinakita sa ibaba. Kopyahin ang iyong prompt - at tingnan kung paano ito na-convert sa mga token, bigyang-pansin kung paano hinahandle ang mga whitespace characters at punctuation marks. Tandaan na ang halimbawang ito ay nagpapakita ng mas lumang LLM (GPT-3) - kaya't ang pagsubok nito sa mas bagong modelo ay maaaring magresulta sa ibang resulta.
 
-![Tokenization](../../../translated_images/tl/04-tokenizer-example.e71f0a0f70356c5c.png)
+![Tokenization](../../../translated_images/tl/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Konsepto: Foundation Models
 
@@ -104,7 +104,7 @@ Gusto mo bang makita kung paano gumagana ang prompt-based completion? Ipasok ang
 
 Ngunit paano kung nais ng user na makakita ng isang bagay na partikular na tumutugma sa ilang pamantayan o layunin ng gawain? Dito pumapasok ang _instruction-tuned_ LLMs.
 
-![Base LLM Chat Completion](../../../translated_images/tl/04-playground-chat-base.65b76fcfde0caa67.png)
+![Base LLM Chat Completion](../../../translated_images/tl/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Konsepto: Instruction Tuned LLMs
 
@@ -118,7 +118,7 @@ Subukan natin ito - balikan ang prompt sa itaas, ngunit ngayon baguhin ang _syst
 
 Tingnan kung paano ang resulta ay naka-tune upang ipakita ang nais na layunin at format? Ang isang guro ay maaari nang direktang gamitin ang sagot na ito sa kanilang mga slide para sa klase.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/tl/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/tl/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Bakit Kailangan Natin ang Prompt Engineering?
 
@@ -148,15 +148,15 @@ Ano ang mangyayari kapag ginamit natin ang prompt na ito sa iba't ibang LLM prov
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../../translated_images/tl/04-fabrication-oai.5818c4e0b2a2678c.png)
+![Response 1](../../../translated_images/tl/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../../translated_images/tl/04-fabrication-aoai.b14268e9ecf25caf.png)
+![Response 2](../../../translated_images/tl/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Response 3**: Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../../translated_images/tl/04-fabrication-huggingchat.faf82a0a51278956.png)
+![Response 3](../../../translated_images/tl/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Tulad ng inaasahan, bawat modelo (o bersyon ng modelo) ay naglalabas ng bahagyang magkakaibang mga sagot dahil sa stochastic na pag-uugali at pagkakaiba sa kakayahan ng modelo. Halimbawa, ang isang modelo ay nakatuon sa audience na nasa ika-8 baitang habang ang isa naman ay para sa mga estudyanteng nasa high school. Ngunit lahat ng tatlong modelo ay nagbigay ng mga sagot na maaaring makumbinsi ang isang hindi alam na user na ang pangyayari ay totoo.
 

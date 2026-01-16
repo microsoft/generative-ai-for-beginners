@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gradnja iskalnih aplikacij
 
-[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/sl/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/sl/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kliknite zgornjo sliko za ogled videoposnetka te lekcije_
 
@@ -44,7 +44,7 @@ Lekcija vključuje indeks vektorskih predstavitev prepisov YouTube videoposnetko
 
 Spodaj je primer semantičnega iskanja za vprašanje 'Ali lahko uporabite rstudio z azure ml?'. Oglejte si URL YouTube videoposnetka, videli boste, da URL vsebuje časovno oznako, ki vas popelje na mesto v videoposnetku, kjer se nahaja odgovor na vprašanje.
 
-![Semantično iskanje za vprašanje "Ali lahko uporabite rstudio z Azure ML"](../../../translated_images/sl/query-results.bb0480ebf025fac6.png)
+![Semantično iskanje za vprašanje "Ali lahko uporabite rstudio z Azure ML"](../../../translated_images/sl/query-results.bb0480ebf025fac6.webp)
 
 ## Kaj je semantično iskanje?
 
@@ -162,7 +162,7 @@ Odprite [rešitveni zvezek](./python/aoai-solution.ipynb?WT.mc_id=academic-10548
 
 Ko zaženete zvezek, boste pozvani, da vnesete poizvedbo. Vnosno polje bo videti takole:
 
-![Vnosno polje za uporabnika za vnos poizvedbe](../../../translated_images/sl/notebook-search.1e320b9c7fcbb0bc.png)
+![Vnosno polje za uporabnika za vnos poizvedbe](../../../translated_images/sl/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Odlično delo! Nadaljujte z učenjem
 

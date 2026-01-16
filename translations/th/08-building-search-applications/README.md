@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # การสร้างแอปพลิเคชันค้นหา
 
-[![แนะนำ AI เชิงสร้างสรรค์และโมเดลภาษาขนาดใหญ่](../../../translated_images/th/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![แนะนำ AI เชิงสร้างสรรค์และโมเดลภาษาขนาดใหญ่](../../../translated_images/th/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _คลิกที่ภาพด้านบนเพื่อดูวิดีโอของบทเรียนนี้_
 
@@ -44,7 +44,7 @@ LLMs ไม่ได้มีแค่แชทบอทและการสร
 
 ตัวอย่างต่อไปนี้เป็นการค้นหาเชิงความหมายสำหรับคำถาม 'สามารถใช้ rstudio กับ azure ml ได้หรือไม่?' ลองดูที่ URL ของ YouTube คุณจะเห็นว่า URL มี timestamp ที่นำคุณไปยังจุดในวิดีโอที่มีคำตอบสำหรับคำถามนั้น
 
-![การค้นหาเชิงความหมายสำหรับคำถาม "สามารถใช้ rstudio กับ Azure ML ได้หรือไม่"](../../../translated_images/th/query-results.bb0480ebf025fac6.png)
+![การค้นหาเชิงความหมายสำหรับคำถาม "สามารถใช้ rstudio กับ Azure ML ได้หรือไม่"](../../../translated_images/th/query-results.bb0480ebf025fac6.webp)
 
 ## การค้นหาเชิงความหมายคืออะไร?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 เมื่อคุณรัน notebook คุณจะได้รับการแจ้งให้ป้อน query กล่องป้อนข้อมูลจะมีลักษณะดังนี้:
 
-![กล่องป้อนข้อมูลสำหรับผู้ใช้เพื่อป้อน query](../../../translated_images/th/notebook-search.1e320b9c7fcbb0bc.png)
+![กล่องป้อนข้อมูลสำหรับผู้ใช้เพื่อป้อน query](../../../translated_images/th/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## ยอดเยี่ยม! เรียนรู้ต่อไป
 

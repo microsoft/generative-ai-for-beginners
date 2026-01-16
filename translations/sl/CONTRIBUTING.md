@@ -63,7 +63,7 @@ Da preverite, ali vaše povezave delujejo pravilno, preprosto uporabite VS Code.
 
 Na primer, ko se z miško postavite nad katerokoli povezavo v datotekah, boste lahko sledili povezavi s pritiskom na **ctrl + klik**
 
-![VS code follow links screenshot](../../translated_images/sl/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/sl/vscode-follow-link.85520ab6a1237adc.webp)
 
 Če kliknete povezavo in ta lokalno ne deluje, bo delovni tok sprožen in povezava ne bo delovala niti na GitHubu.
 
@@ -71,7 +71,7 @@ Za odpravo te težave poskusite povezavo vnesti s pomočjo VS Code.
 
 Ko vnesete `./` ali `../`, vam bo VS Code ponudil izbiro iz razpoložljivih možnosti glede na to, kar ste vnesli.
 
-![VS code select relative path screenshot](../../translated_images/sl/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/sl/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Sledite poti s klikom na želeno datoteko ali mapo in tako boste prepričani, da vaša pot ni prekinjena.
 
@@ -88,7 +88,7 @@ Da zagotovite, da imajo vaše relativne poti sledilni ID, preprosto preverite, a
 
 Če ni, boste morda prejeli naslednjo napako.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/sl/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/sl/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Za odpravo te težave odprite datoteko, ki jo je delovni tok označil, in dodajte sledilni ID na konec relativnih poti.
 
@@ -105,7 +105,7 @@ Da zagotovite, da imajo vaši URL-ji sledilni ID, preprosto preverite, ali se na
 
 Če ni, boste morda prejeli naslednjo napako.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/sl/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/sl/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Za odpravo te težave odprite datoteko, ki jo je delovni tok označil, in dodajte sledilni ID na konec URL-jev.
 
@@ -122,7 +122,7 @@ Da zagotovite, da vaši URL-ji ne vsebujejo lokalizacije države, preprosto prev
 
 Če je, boste morda prejeli naslednjo napako.
 
-![GitHub check country locale comment screenshot](../../translated_images/sl/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/sl/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Za odpravo te težave odprite datoteko, ki jo je delovni tok označil, in odstranite lokalizacijo države iz URL-jev.
 

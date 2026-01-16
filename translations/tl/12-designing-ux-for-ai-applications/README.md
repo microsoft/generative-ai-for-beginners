@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagdidisenyo ng UX para sa mga AI Application
 
-[![Pagdidisenyo ng UX para sa mga AI Application](../../../translated_images/tl/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Pagdidisenyo ng UX para sa mga AI Application](../../../translated_images/tl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
 
@@ -58,7 +58,7 @@ Ang pagiging accessible ay nangangahulugan ng pagpapalawak ng karanasan ng gumag
 
 Ang pagiging kaaya-aya ay nangangahulugan na ang application ay masaya gamitin. Ang isang kaakit-akit na karanasan ng gumagamit ay maaaring magkaroon ng positibong epekto sa gumagamit, na hinihikayat silang bumalik sa application at nagpapataas ng kita ng negosyo.
 
-![larawan na naglalarawan ng mga konsiderasyon sa UX sa AI](../../../translated_images/tl/uxinai.d5b4ed690f5cefff.png)
+![larawan na naglalarawan ng mga konsiderasyon sa UX sa AI](../../../translated_images/tl/uxinai.d5b4ed690f5cefff.webp)
 
 Hindi lahat ng hamon ay maaaring malutas gamit ang AI. Ang AI ay pumapasok upang mapahusay ang karanasan ng gumagamit, maging ito ay pag-automate ng mga manu-manong gawain, o pag-personalize ng mga karanasan ng gumagamit.
 
@@ -72,25 +72,25 @@ Dalawang paraan upang matiyak na ang tiwala ay inilalagay sa gitna ng disenyo ay
 
 Kapag ang AI ay tumutulong sa paggawa ng mga desisyon tulad ng pagbibigay ng kaalaman sa mga susunod na henerasyon, mahalaga para sa mga guro at magulang na maunawaan kung paano ginagawa ang mga desisyon ng AI. Ito ang explainability - ang pag-unawa kung paano gumagawa ng desisyon ang mga AI application. Ang pagdidisenyo para sa explainability ay kinabibilangan ng pagdaragdag ng mga detalye na nagha-highlight kung paano nakarating ang AI sa output. Kailangang malaman ng audience na ang output ay nabuo ng AI at hindi ng tao. Halimbawa, sa halip na sabihin "Simulan ang pakikipag-chat sa iyong tutor ngayon" sabihin "Gamitin ang AI tutor na umaangkop sa iyong mga pangangailangan at tumutulong sa iyong matuto sa iyong bilis."
 
-![isang landing page ng app na may malinaw na ilustrasyon ng explainability sa mga AI application](../../../translated_images/tl/explanability-in-ai.134426a96b498fbf.png)
+![isang landing page ng app na may malinaw na ilustrasyon ng explainability sa mga AI application](../../../translated_images/tl/explanability-in-ai.134426a96b498fbf.webp)
 
 Isa pang halimbawa ay kung paano ginagamit ng AI ang data ng gumagamit at personal na data. Halimbawa, ang isang gumagamit na may persona na mag-aaral ay maaaring magkaroon ng mga limitasyon batay sa kanilang persona. Ang AI ay maaaring hindi makapagbigay ng mga sagot sa mga tanong ngunit maaaring tumulong na gabayan ang gumagamit kung paano nila malulutas ang isang problema.
 
-![AI na sumasagot sa mga tanong batay sa persona](../../../translated_images/tl/solving-questions.b7dea1604de0cbd2.png)
+![AI na sumasagot sa mga tanong batay sa persona](../../../translated_images/tl/solving-questions.b7dea1604de0cbd2.webp)
 
 Ang isa pang mahalagang bahagi ng explainability ay ang pagpapasimple ng mga paliwanag. Ang mga mag-aaral at guro ay maaaring hindi mga eksperto sa AI, kaya't ang mga paliwanag kung ano ang magagawa o hindi magagawa ng application ay dapat na simple at madaling maunawaan.
 
-![mga pinasimpleng paliwanag sa mga kakayahan ng AI](../../../translated_images/tl/simplified-explanations.4679508a406c3621.png)
+![mga pinasimpleng paliwanag sa mga kakayahan ng AI](../../../translated_images/tl/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
 Ang Generative AI ay lumilikha ng pakikipagtulungan sa pagitan ng AI at ng gumagamit, kung saan halimbawa ang isang gumagamit ay maaaring baguhin ang mga prompt para sa iba't ibang resulta. Bukod pa rito, kapag nabuo ang isang output, dapat magawa ng mga gumagamit na baguhin ang mga resulta na nagbibigay sa kanila ng pakiramdam ng kontrol. Halimbawa, kapag gumagamit ng Bing, maaari mong i-tailor ang iyong prompt batay sa format, tono, at haba. Bukod pa rito, maaari kang magdagdag ng mga pagbabago sa iyong output at baguhin ang output tulad ng ipinapakita sa ibaba:
 
-![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing1.293ae8527dbe2789.png)
+![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing1.293ae8527dbe2789.webp)
 
 Isa pang tampok sa Bing na nagbibigay-daan sa isang gumagamit na magkaroon ng kontrol sa application ay ang kakayahang mag-opt in at mag-opt out sa data na ginagamit ng AI. Para sa isang application sa paaralan, maaaring gustuhin ng isang mag-aaral na gamitin ang kanilang mga tala pati na rin ang mga mapagkukunan ng guro bilang materyal sa pag-aaral.
 
-![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing2.309f4845528a88c2.png)
+![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing2.309f4845528a88c2.webp)
 
 > Kapag nagdidisenyo ng mga AI application, mahalaga ang intensyonalidad upang matiyak na ang mga gumagamit ay hindi masyadong nagtitiwala na nagtatakda ng hindi makatotohanang mga inaasahan sa mga kakayahan nito. Isang paraan upang gawin ito ay sa pamamagitan ng paglikha ng friction sa pagitan ng mga prompt at mga resulta. Paalalahanan ang gumagamit na ito ay AI at hindi isang kapwa tao.
 
@@ -102,7 +102,7 @@ Ang mga AI application ay dapat na idisenyo upang makatanggap at magbigay ng fee
 
 Isa pang paraan upang harapin ito ay ang malinaw na iparating ang mga kakayahan at limitasyon ng sistema. Kapag ang isang gumagamit ay nagkamali sa paghingi ng isang bagay na lampas sa kakayahan ng AI, dapat ding magkaroon ng paraan upang harapin ito, tulad ng ipinapakita sa ibaba.
 
-![Pagbibigay ng feedback at paghawak ng mga error](../../../translated_images/tl/feedback-loops.7955c134429a9466.png)
+![Pagbibigay ng feedback at paghawak ng mga error](../../../translated_images/tl/feedback-loops.7955c134429a9466.webp)
 
 Ang mga error sa sistema ay karaniwan sa mga application kung saan maaaring kailanganin ng gumagamit ang tulong sa impormasyon na lampas sa saklaw ng AI o ang application ay maaaring may limitasyon sa kung gaano karaming mga tanong/paksa ang maaaring makabuo ng mga buod ng gumagamit. Halimbawa, ang isang AI application na sinanay sa data sa limitadong mga paksa tulad ng History at Math ay maaaring hindi makayanan ang mga tanong tungkol sa Geography. Upang mabawasan ito, maaaring magbigay ang sistema ng AI ng tugon tulad ng: "Paumanhin, ang aming produkto ay sinanay sa data sa mga sumusunod na paksa....., hindi ko kayang sagutin ang tanong na iyong tinanong."
 

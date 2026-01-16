@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # టెక్స్ట్ జనరేషన్ అప్లికేషన్లు నిర్మించడం
 
-[![టెక్స్ట్ జనరేషన్ అప్లికేషన్లు నిర్మించడం](../../../translated_images/te/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![టెక్స్ట్ జనరేషన్ అప్లికేషన్లు నిర్మించడం](../../../translated_images/te/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(ఈ పాఠం వీడియోను చూడడానికి పై చిత్రాన్ని క్లిక్ చేయండి)_
 

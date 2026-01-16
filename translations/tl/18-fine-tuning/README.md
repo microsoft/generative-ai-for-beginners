@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tl"
 }
 -->
-[![Open Source Models](../../../translated_images/tl/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/tl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Pag-Fine-Tune ng Iyong LLM
 
@@ -32,7 +32,7 @@ Handa ka na ba? Simulan na natin.
 
 Gusto mo bang makita ang kabuuang larawan ng mga tatalakayin bago tayo magsimula? Tingnan ang gabay na may ilustrasyon na naglalarawan ng learning journey para sa araling ito - mula sa pag-aaral ng mga pangunahing konsepto at motibasyon para sa fine-tuning, hanggang sa pag-unawa sa proseso at pinakamahusay na mga kasanayan para sa pagsasagawa ng fine-tuning task. Isang kawili-wiling paksa ito para sa paggalugad, kaya huwag kalimutang tingnan ang [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page para sa karagdagang mga link na susuporta sa iyong self-guided learning journey!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/tl/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/tl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Ano ang fine-tuning para sa mga language models?
 

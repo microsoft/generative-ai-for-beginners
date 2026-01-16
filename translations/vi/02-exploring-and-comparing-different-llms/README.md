@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Khám phá và so sánh các mô hình ngôn ngữ lớn (LLMs)
 
-[![Khám phá và so sánh các mô hình ngôn ngữ lớn (LLMs)](../../../translated_images/vi/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Khám phá và so sánh các mô hình ngôn ngữ lớn (LLMs)](../../../translated_images/vi/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Nhấn vào hình ảnh trên để xem video bài học này_
 
@@ -59,14 +59,14 @@ Thuật ngữ Mô hình nền tảng được [đặt ra bởi các nhà nghiên
 - **Chúng là các mô hình rất lớn**, dựa trên các mạng nơ-ron rất sâu được huấn luyện trên hàng tỷ tham số.
 - **Chúng thường được thiết kế để làm nền tảng cho các mô hình khác**, nghĩa là chúng có thể được sử dụng làm điểm khởi đầu để xây dựng các mô hình khác, điều này có thể được thực hiện bằng cách tinh chỉnh.
 
-![Mô hình nền tảng so với LLMs](../../../translated_images/vi/FoundationModel.e4859dbb7a825c94.png)
+![Mô hình nền tảng so với LLMs](../../../translated_images/vi/FoundationModel.e4859dbb7a825c94.webp)
 
 Nguồn hình ảnh: [Hướng dẫn cơ bản về Mô hình nền tảng và Mô hình ngôn ngữ lớn | bởi Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Để làm rõ hơn sự khác biệt này, hãy lấy ChatGPT làm ví dụ. Để xây dựng phiên bản đầu tiên của ChatGPT, một mô hình gọi là GPT-3.5 đã được sử dụng làm mô hình nền tảng. Điều này có nghĩa là OpenAI đã sử dụng một số dữ liệu cụ thể về trò chuyện để tạo ra một phiên bản tinh chỉnh của GPT-3.5, được chuyên biệt hóa để hoạt động tốt trong các tình huống hội thoại, chẳng hạn như chatbot.
 
-![Mô hình nền tảng](../../../translated_images/vi/Multimodal.2c389c6439e0fc51.png)
+![Mô hình nền tảng](../../../translated_images/vi/Multimodal.2c389c6439e0fc51.webp)
 
 Nguồn hình ảnh: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLMs cũng có thể được phân loại theo đầu ra mà chúng tạo ra.
 
 Nhúng là một tập hợp các mô hình có thể chuyển đổi văn bản thành dạng số, gọi là nhúng, là một biểu diễn số của văn bản đầu vào. Nhúng giúp máy móc dễ dàng hiểu mối quan hệ giữa các từ hoặc câu và có thể được sử dụng làm đầu vào cho các mô hình khác, chẳng hạn như mô hình phân loại hoặc mô hình phân cụm có hiệu suất tốt hơn trên dữ liệu số. Các mô hình nhúng thường được sử dụng cho học chuyển giao, nơi một mô hình được xây dựng cho một nhiệm vụ thay thế mà có nhiều dữ liệu, sau đó trọng số của mô hình (nhúng) được tái sử dụng cho các nhiệm vụ tiếp theo. Một ví dụ về danh mục này là [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Nhúng](../../../translated_images/vi/Embedding.c3708fe988ccf760.png)
+![Nhúng](../../../translated_images/vi/Embedding.c3708fe988ccf760.webp)
 
 Các mô hình tạo hình ảnh là các mô hình tạo ra hình ảnh. Các mô hình này thường được sử dụng cho chỉnh sửa hình ảnh, tổng hợp hình ảnh và dịch hình ảnh. Các mô hình tạo hình ảnh thường được huấn luyện trên các tập dữ liệu lớn về hình ảnh, chẳng hạn như [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), và có thể được sử dụng để tạo hình ảnh mới hoặc chỉnh sửa hình ảnh hiện có với các kỹ thuật như inpainting, siêu phân giải và tô màu. Các ví dụ bao gồm [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) và [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Tạo hình ảnh](../../../translated_images/vi/Image.349c080266a763fd.png)
+![Tạo hình ảnh](../../../translated_images/vi/Image.349c080266a763fd.webp)
 
 Các mô hình tạo văn bản và mã là các mô hình tạo ra văn bản hoặc mã. Các mô hình này thường được sử dụng cho tóm tắt văn bản, dịch thuật và trả lời câu hỏi. Các mô hình tạo văn bản thường được huấn luyện trên các tập dữ liệu lớn về văn bản, chẳng hạn như [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), và có thể được sử dụng để tạo văn bản mới hoặc trả lời câu hỏi. Các mô hình tạo mã, như [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), thường được huấn luyện trên các tập dữ liệu lớn về mã, chẳng hạn như GitHub, và có thể được sử dụng để tạo mã mới hoặc sửa lỗi trong mã hiện có.
 
-![Tạo văn bản và mã](../../../translated_images/vi/Text.a8c0cf139e5cc2a0.png)
+![Tạo văn bản và mã](../../../translated_images/vi/Text.a8c0cf139e5cc2a0.webp)
 
 ### Mã hóa-Giải mã so với Chỉ giải mã
 
@@ -123,23 +123,23 @@ Hầu hết các mô hình mà chúng tôi đã đề cập trong các đoạn t
 
 - Tìm kiếm Mô hình Nền tảng mà bạn quan tâm trong danh mục - có thể là mô hình độc quyền hoặc mã nguồn mở, lọc theo nhiệm vụ, giấy phép hoặc tên. Để cải thiện khả năng tìm kiếm, các mô hình được tổ chức thành các bộ sưu tập, như bộ sưu tập Azure OpenAI, bộ sưu tập Hugging Face, và nhiều hơn nữa.
 
-![Danh mục mô hình](../../../translated_images/vi/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Danh mục mô hình](../../../translated_images/vi/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Xem xét thẻ mô hình, bao gồm mô tả chi tiết về mục đích sử dụng và dữ liệu huấn luyện, mẫu mã và kết quả đánh giá trong thư viện đánh giá nội bộ.
 
-![Thẻ mô hình](../../../translated_images/vi/ModelCard.598051692c6e400d.png)
+![Thẻ mô hình](../../../translated_images/vi/ModelCard.598051692c6e400d.webp)
 
 - So sánh các tiêu chuẩn giữa các mô hình và tập dữ liệu có sẵn trong ngành để đánh giá mô hình nào phù hợp với kịch bản kinh doanh, thông qua bảng [Tiêu chuẩn Mô hình](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Tiêu chuẩn mô hình](../../../translated_images/vi/ModelBenchmarks.254cb20fbd06c03a.png)
+![Tiêu chuẩn mô hình](../../../translated_images/vi/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Tinh chỉnh mô hình trên dữ liệu huấn luyện tùy chỉnh để cải thiện hiệu suất mô hình trong một khối lượng công việc cụ thể, tận dụng khả năng thử nghiệm và theo dõi của Azure AI Studio.
 
-![Tinh chỉnh mô hình](../../../translated_images/vi/FineTuning.aac48f07142e36fd.png)
+![Tinh chỉnh mô hình](../../../translated_images/vi/FineTuning.aac48f07142e36fd.webp)
 
 - Triển khai mô hình đã được huấn luyện trước hoặc phiên bản đã được tinh chỉnh để suy luận thời gian thực từ xa - tính toán được quản lý - hoặc điểm cuối API không máy chủ - [trả phí theo mức sử dụng](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - để cho phép các ứng dụng sử dụng nó.
 
-![Triển khai mô hình](../../../translated_images/vi/ModelDeploy.890da48cbd0bccdb.png)
+![Triển khai mô hình](../../../translated_images/vi/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Không phải tất cả các mô hình trong danh mục hiện đều có sẵn để tinh chỉnh và/hoặc triển khai trả phí theo mức sử dụng. Kiểm tra thẻ mô hình để biết chi tiết về khả năng và hạn chế của mô hình.
@@ -158,7 +158,7 @@ Có một số cách tiếp cận mà doanh nghiệp có thể sử dụng để
 
 - **Mô hình đã được tinh chỉnh**. Ở đây, bạn huấn luyện mô hình thêm trên dữ liệu của riêng mình, điều này dẫn đến mô hình trở nên chính xác hơn và đáp ứng nhu cầu của bạn nhưng có thể tốn kém.
 
-![Triển khai LLMs](../../../translated_images/vi/Deploy.18b2d27412ec8c02.png)
+![Triển khai LLMs](../../../translated_images/vi/Deploy.18b2d27412ec8c02.webp)
 
 Nguồn hình ảnh: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagsasama ng function calling
 
-[![Pagsasama ng function calling](../../../translated_images/tl/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Pagsasama ng function calling](../../../translated_images/tl/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Marami ka nang natutunan sa mga nakaraang aralin. Gayunpaman, maaari pa nating pagbutihin ito. Ilan sa mga bagay na maaari nating tugunan ay kung paano makakakuha ng mas pare-parehong format ng sagot upang mas madali itong magamit sa mga susunod na proseso. Bukod dito, maaaring gusto nating magdagdag ng data mula sa ibang mga mapagkukunan upang mas mapagyaman ang ating aplikasyon.
 
@@ -179,7 +179,7 @@ Ngayon maaari nating ipadala ang parehong mga kahilingan sa LLM at suriin ang sa
 
 Paano natin malulutas ang problema sa pag-format? Sa pamamagitan ng paggamit ng functional calling, masisiguro natin na makakatanggap tayo ng nakaayos na data pabalik. Kapag gumagamit ng function calling, ang LLM ay hindi aktwal na tumatawag o nagpapatakbo ng anumang mga function. Sa halip, gumagawa tayo ng istruktura para sundin ng LLM sa mga sagot nito. Ginagamit natin ang mga nakaayos na sagot upang malaman kung anong function ang tatakbo sa ating mga aplikasyon.
 
-![daloy ng function](../../../translated_images/tl/Function-Flow.083875364af4f4bb.png)
+![daloy ng function](../../../translated_images/tl/Function-Flow.083875364af4f4bb.webp)
 
 Maaari nating kunin ang ibinalik mula sa function at ipadala ito pabalik sa LLM. Ang LLM ay magbibigay ng sagot gamit ang natural na wika upang sagutin ang query ng user.
 
@@ -201,7 +201,7 @@ Ang proseso ng paglikha ng function call ay binubuo ng 3 pangunahing hakbang:
 2. **Pagbasa** sa sagot ng modelo upang magsagawa ng aksyon, halimbawa, magpatakbo ng function o API Call.
 3. **Paggawa** ng isa pang tawag sa Chat Completions API gamit ang sagot mula sa iyong function upang magamit ang impormasyong iyon upang lumikha ng sagot para sa user.
 
-![Daloy ng LLM](../../../translated_images/tl/LLM-Flow.3285ed8caf4796d7.png)
+![Daloy ng LLM](../../../translated_images/tl/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Hakbang 1 - paggawa ng mga mensahe
 

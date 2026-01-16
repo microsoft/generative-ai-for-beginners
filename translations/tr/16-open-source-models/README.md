@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tr"
 }
 -->
-[![Open Source Models](../../../translated_images/tr/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/tr/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Giriş
 
@@ -41,12 +41,12 @@ Bu ders için, yazım sırasında yukarıdaki kriterlere uymayabilecekleri için
 
 **Maliyet** - Bu modelleri kullanmanın ve dağıtmanın token başına maliyeti, özel modellere göre daha düşüktür. Üretken AI uygulamaları geliştirirken, bu modellerle kullanım durumunuzda performans ve fiyat karşılaştırması yapmak önemlidir.
 
-![Model Cost](../../../translated_images/tr/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/tr/model-price.3f5a3e4d32ae00b4.webp)
 Kaynak: Artificial Analysis
 
 **Esneklik** - Açık modellerle çalışmak, farklı modelleri kullanma veya birleştirme konusunda esneklik sağlar. Bunun bir örneği, kullanıcıların arayüzde doğrudan kullanılan modeli seçebildiği [HuggingChat Asistanlarıdır](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst):
 
-![Choose Model](../../../translated_images/tr/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/tr/choose-model.f095d15bbac92214.webp)
 
 ## Farklı Açık Modelleri Keşfetmek
 
@@ -74,7 +74,7 @@ Açık model seçmek için tek bir doğru cevap yoktur. Başlamak için iyi bir 
 
 Farklı türlerde LLM'leri karşılaştırmak için [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) başka harika bir kaynaktır:
 
-![Model Quality](../../../translated_images/tr/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/tr/model-quality.aaae1c22e00f7ee1.webp)
 Kaynak: Artificial Analysis
 
 Belirli bir kullanım durumu üzerinde çalışıyorsanız, aynı alana odaklanmış ince ayarlı versiyonları aramak etkili olabilir. Birden fazla açık modeli deneyerek sizin ve kullanıcılarınızın beklentilerine göre nasıl performans gösterdiklerini görmek de iyi bir uygulamadır.

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kuhakikisha Usalama wa Programu Zako za AI ya Kizazi
 
-[![Kuhakikisha Usalama wa Programu Zako za AI ya Kizazi](../../../translated_images/sw/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Kuhakikisha Usalama wa Programu Zako za AI ya Kizazi](../../../translated_images/sw/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Utangulizi
 
@@ -127,7 +127,7 @@ Kuiga vitisho vya ulimwengu halisi sasa inachukuliwa kama mazoezi ya kawaida kat
 
 > Mazoezi ya AI red teaming yamebadilika na kupata maana pana zaidi: hayahusishi tu kutafuta udhaifu wa usalama, bali pia yanajumuisha kutafuta kushindwa kwa mifumo mingine, kama vile uzalishaji wa maudhui yanayoweza kuwa hatari. Mifumo ya AI huja na hatari mpya, na red teaming ni msingi wa kuelewa hatari hizo mpya, kama vile sindikizo la maelekezo na uzalishaji wa maudhui yasiyo na msingi. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Mwongozo na rasilimali za red teaming](../../../translated_images/sw/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Mwongozo na rasilimali za red teaming](../../../translated_images/sw/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Hapa chini kuna maarifa muhimu ambayo yameunda programu ya Microsoft AI Red Team.
 

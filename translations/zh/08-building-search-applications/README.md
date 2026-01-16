@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 构建搜索应用程序
 
-[![生成式 AI 和大型语言模型简介](../../../translated_images/zh/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![生成式 AI 和大型语言模型简介](../../../translated_images/zh/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _点击上方图片观看本课视频_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 以下是一个关于问题“可以在 Azure ML 中使用 RStudio 吗？”的语义查询示例。查看 YouTube URL，你会发现 URL 包含一个时间戳，直接跳转到视频中回答问题的具体时间点。
 
-![关于问题“可以在 Azure ML 中使用 RStudio 吗？”的语义查询示例](../../../translated_images/zh/query-results.bb0480ebf025fac6.png)
+![关于问题“可以在 Azure ML 中使用 RStudio 吗？”的语义查询示例](../../../translated_images/zh/query-results.bb0480ebf025fac6.webp)
 
 ## 什么是语义搜索？
 
@@ -162,7 +162,7 @@ az cognitiveservices account deployment create \
 
 运行笔记本时，系统会提示你输入查询。输入框如下所示：
 
-![用户输入查询的输入框](../../../translated_images/zh/notebook-search.1e320b9c7fcbb0bc.png)
+![用户输入查询的输入框](../../../translated_images/zh/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## 做得好！继续学习
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Farklı Büyük Dil Modellerini (LLM) Keşfetmek ve Karşılaştırmak
 
-[![Farklı Büyük Dil Modellerini Keşfetmek ve Karşılaştırmak](../../../translated_images/tr/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Farklı Büyük Dil Modellerini Keşfetmek ve Karşılaştırmak](../../../translated_images/tr/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın_
 
@@ -59,13 +59,13 @@ Temel Model terimi [Stanford araştırmacıları tarafından](https://arxiv.org/
 - **Çok büyük modellerdir**, milyarlarca parametre üzerinde eğitilmiş çok derin sinir ağlarına dayanır.
 - **Genellikle diğer modeller için bir 'temel' olarak hizmet etmek üzere tasarlanmışlardır**, yani diğer modellerin üzerine inşa edilmesi için bir başlangıç noktası olarak kullanılabilirler ve bu, ince ayar yapılarak gerçekleştirilebilir.
 
-![Temel Modeller ve LLM'ler](../../../translated_images/tr/FoundationModel.e4859dbb7a825c94.png)
+![Temel Modeller ve LLM'ler](../../../translated_images/tr/FoundationModel.e4859dbb7a825c94.webp)
 
 Görsel kaynağı: [Temel Modeller ve Büyük Dil Modelleri için Temel Kılavuz | Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Bu ayrımı daha net bir şekilde açıklamak için ChatGPT'yi örnek olarak ele alalım. ChatGPT'nin ilk versiyonunu oluşturmak için GPT-3.5 adlı bir model temel model olarak kullanılmıştır. Bu, OpenAI'nin GPT-3.5'i sohbet senaryolarında, örneğin sohbet robotlarında, iyi performans gösterecek şekilde özelleştirilmiş bir versiyon oluşturmak için bazı sohbet odaklı veriler kullandığı anlamına gelir.
 
-![Temel Model](../../../translated_images/tr/Multimodal.2c389c6439e0fc51.png)
+![Temel Model](../../../translated_images/tr/Multimodal.2c389c6439e0fc51.webp)
 
 Görsel kaynağı: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ LLM'ler ayrıca ürettikleri çıktıya göre kategorize edilebilir.
 
 Gömme modelleri, metni sayısal bir forma dönüştürebilen bir model setidir. Bu sayısal form, gömme olarak adlandırılır ve giriş metninin sayısal bir temsilidir. Gömme modelleri, makinelerin kelimeler veya cümleler arasındaki ilişkileri anlamasını kolaylaştırır ve sınıflandırma modelleri veya sayısal verilerde daha iyi performans gösteren kümeleme modelleri gibi diğer modeller tarafından giriş olarak kullanılabilir. Gömme modelleri genellikle transfer öğrenimi için kullanılır; burada bir model, bol miktarda veri bulunan bir vekil görev için oluşturulur ve ardından model ağırlıkları (gömme) diğer alt görevler için yeniden kullanılır. Bu kategoriye bir örnek [OpenAI gömme modelleri](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst) olabilir.
 
-![Gömme](../../../translated_images/tr/Embedding.c3708fe988ccf760.png)
+![Gömme](../../../translated_images/tr/Embedding.c3708fe988ccf760.webp)
 
 Görüntü üretimi modelleri, görüntü üreten modellerdir. Bu modeller genellikle görüntü düzenleme, görüntü sentezi ve görüntü çevirisi için kullanılır. Görüntü üretimi modelleri genellikle [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst) gibi büyük görüntü veri setleri üzerinde eğitilir ve yeni görüntüler üretmek veya mevcut görüntüleri düzenlemek için kullanılabilir. Örnekler arasında [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ve [Stable Diffusion modelleri](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) bulunmaktadır.
 
-![Görüntü üretimi](../../../translated_images/tr/Image.349c080266a763fd.png)
+![Görüntü üretimi](../../../translated_images/tr/Image.349c080266a763fd.webp)
 
 Metin ve kod üretimi modelleri, metin veya kod üreten modellerdir. Bu modeller genellikle metin özetleme, çeviri ve soru yanıtlama için kullanılır. Metin üretimi modelleri genellikle [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst) gibi büyük metin veri setleri üzerinde eğitilir ve yeni metinler üretmek veya soruları yanıtlamak için kullanılabilir. Kod üretimi modelleri, [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst) gibi, genellikle GitHub gibi büyük kod veri setleri üzerinde eğitilir ve yeni kod üretmek veya mevcut koddaki hataları düzeltmek için kullanılabilir.
 
-![Metin ve kod üretimi](../../../translated_images/tr/Text.a8c0cf139e5cc2a0.png)
+![Metin ve kod üretimi](../../../translated_images/tr/Text.a8c0cf139e5cc2a0.webp)
 
 ### Kodlayıcı-Çözücü ve Sadece Çözücü
 
@@ -122,23 +122,23 @@ Ekibimiz mevcut LLM'ler dünyasını keşfedip senaryoları için uygun adaylar�
 
 - İlgi duyulan Temel Modeli kataloğda bulma - ister özel ister açık kaynak olsun - görev, lisans veya ada göre filtreleme yaparak. Arama kolaylığı sağlamak için modeller, Azure OpenAI koleksiyonu, Hugging Face koleksiyonu gibi koleksiyonlar halinde düzenlenmiştir.
 
-![Model kataloğu](../../../translated_images/tr/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
+![Model kataloğu](../../../translated_images/tr/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Model kartını inceleme, kullanım amacı ve eğitim verileri, kod örnekleri ve iç değerlendirme kütüphanesindeki değerlendirme sonuçları gibi ayrıntılı bir açıklama dahil.
 
-![Model kartı](../../../translated_images/tr/ModelCard.598051692c6e400d.png)
+![Model kartı](../../../translated_images/tr/ModelCard.598051692c6e400d.webp)
 
 - İş senaryosuna en uygun olanı değerlendirmek için endüstride mevcut modeller ve veri setleri arasında karşılaştırma yapma, [Model Karşılaştırmaları](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) paneli aracılığıyla.
 
-![Model karşılaştırmaları](../../../translated_images/tr/ModelBenchmarks.254cb20fbd06c03a.png)
+![Model karşılaştırmaları](../../../translated_images/tr/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Model performansını belirli bir iş yükünde artırmak için özel eğitim verileriyle modeli ince ayar yapma, Azure AI Studio'nun deneme ve izleme yeteneklerinden yararlanarak.
 
-![Model ince ayar](../../../translated_images/tr/FineTuning.aac48f07142e36fd.png)
+![Model ince ayar](../../../translated_images/tr/FineTuning.aac48f07142e36fd.webp)
 
 - Orijinal önceden eğitilmiş modeli veya ince ayar yapılmış versiyonunu uzak gerçek zamanlı çıkarım - yönetilen hesaplama - veya sunucusuz API uç noktası - [kullandıkça öde](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - olarak dağıtarak uygulamaların bunu tüketmesini sağlama.
 
-![Model dağıtımı](../../../translated_images/tr/ModelDeploy.890da48cbd0bccdb.png)
+![Model dağıtımı](../../../translated_images/tr/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Katalogdaki tüm modeller şu anda ince ayar ve/veya kullandıkça öde dağıtımı için uygun değildir. Modelin yetenekleri ve sınırlamaları hakkında ayrıntılar için model kartını kontrol edin.
@@ -157,7 +157,7 @@ Bir işletmenin bir LLM'den istediği sonuçları alması için kullanabileceği
 
 - **İnce ayar yapılmış model**. Burada, modeli kendi verilerinizle daha fazla eğiterek ihtiyaçlarınıza daha doğru ve duyarlı hale getirirsiniz, ancak bu maliyetli olabilir.
 
-![LLM'lerin dağıtımı](../../../translated_images/tr/Deploy.18b2d27412ec8c02.png)
+![LLM'lerin dağıtımı](../../../translated_images/tr/Deploy.18b2d27412ec8c02.webp)
 
 Görsel kaynağı: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

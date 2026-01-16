@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sr"
 }
 -->
-[![Open Source Models](../../../translated_images/sr/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/sr/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Увод
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 АИ агенти омогућавају великим језичким моделима (LLMs) да обављају задатке пружајући им приступ **стању** и **алатима**.
 
-![Agent Model](../../../translated_images/sr/what-agent.21f2893bdfd01e6a.png)
+![Agent Model](../../../translated_images/sr/what-agent.21f2893bdfd01e6a.webp)
 
 Хајде да дефинишемо ове термине:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 `AgentExecutor` такође чува историју разговора како би обезбедио контекст разговора.
 
-![Langchain Agents](../../../translated_images/sr/langchain-agents.edcc55b5d5c43716.png)
+![Langchain Agents](../../../translated_images/sr/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain нуди [каталог алата](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) који се могу увозити у вашу апликацију и којима LLM може приступити. Ове алате креира заједница и тим LangChain-а.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 Ево примера процеса:
 
-![AutoGen](../../../translated_images/sr/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/sr/autogen.dee9a25a45fde584.webp)
 
 #### LLM дефинисан са системском поруком
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 Да би завршио задатке, `Planner` је изложен колекцији алата названих `Plugins`. Ово могу бити Python класе или општи интерпретатор кода. Ови додаци се чувају као уграђени елементи како би LLM могао боље да претражује прави додатак.
 
-![Taskweaver](../../../translated_images/sr/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/sr/taskweaver.da8559999267715a.webp)
 
 Ево примера додатка за откривање аномалија:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 Последњи оквир агента који ћемо истражити је [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Оно што JARVIS чини јединственим је то што користи LLM за управљање `стањем` разговора, а `алати` су други АИ модели. Сваки од АИ модела су специјализовани модели који обављају одређене задатке као што су детекција објеката, транскрипција или описивање слика.
 
-![JARVIS](../../../translated_images/sr/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/sr/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, као модел опште намене, прима захтев од корисника и идентификује специфичан задатак и било које аргументе/податке који су потребни за завршетак задатка.
 

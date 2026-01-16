@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pridobivanje z dodatno generacijo (RAG) in vektorske baze podatkov
 
-[![Pridobivanje z dodatno generacijo (RAG) in vektorske baze podatkov](../../../translated_images/sl/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Pridobivanje z dodatno generacijo (RAG) in vektorske baze podatkov](../../../translated_images/sl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 V lekciji o aplikacijah za iskanje smo na kratko spoznali, kako vključiti lastne podatke v velike jezikovne modele (LLM). V tej lekciji se bomo podrobneje posvetili konceptom utemeljevanja vaših podatkov v aplikaciji LLM, mehaniki procesa in metodam za shranjevanje podatkov, vključno z vektorskimi predstavitvami in besedilom.
 
@@ -53,7 +53,7 @@ Chatbot, ki ga poganja LLM, obdeluje uporabniške zahteve za generiranje odgovor
 
 ### Kako delujejo RAG (Pridobivanje z dodatno generacijo)
 
-![diagram, ki prikazuje, kako delujejo RAG](../../../translated_images/sl/how-rag-works.f5d0ff63942bd3a6.png)
+![diagram, ki prikazuje, kako delujejo RAG](../../../translated_images/sl/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Recimo, da želite namestiti chatbot, ki ustvarja kvize iz vaših zapiskov, potrebovali boste povezavo z bazo znanja. Tukaj pride RAG na pomoč. RAG deluje na naslednji način:
 
@@ -65,7 +65,7 @@ Recimo, da želite namestiti chatbot, ki ustvarja kvize iz vaših zapiskov, potr
 
 - **Dodatna generacija:** LLM izboljša svoj odgovor na podlagi pridobljenih podatkov. To omogoča, da je generiran odgovor ne le temelječ na predhodno usposobljenih podatkih, temveč tudi na ustreznih informacijah iz dodanega konteksta. Pridobljeni podatki se uporabljajo za izboljšanje odgovorov LLM. LLM nato vrne odgovor na uporabnikovo vprašanje.
 
-![diagram, ki prikazuje arhitekturo RAG](../../../translated_images/sl/encoder-decode.f2658c25d0eadee2.png)
+![diagram, ki prikazuje arhitekturo RAG](../../../translated_images/sl/encoder-decode.f2658c25d0eadee2.webp)
 
 Arhitektura RAG je implementirana z uporabo transformatorjev, ki sestojijo iz dveh delov: kodirnika in dekodirnika. Na primer, ko uporabnik postavi vprašanje, se vhodno besedilo 'kodira' v vektorje, ki zajemajo pomen besed, in vektorji se 'dekodirajo' v naš indeks dokumentov ter generirajo novo besedilo na podlagi uporabniške zahteve. LLM uporablja tako kodirni-dekodirni model za generiranje izhoda.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Ko so podatki razdeljeni, jih lahko nato kodiramo z različnimi modeli za vektorske predstavitve. Nekateri modeli, ki jih lahko uporabite, vključujejo: word2vec, ada-002 od OpenAI, Azure Computer Vision in mnoge druge. Izbira modela bo odvisna od jezikov, ki jih uporabljate, vrste kodirane vsebine (besedilo/slike/zvok), velikosti vhodnih podatkov, ki jih lahko kodira, in dolžine izhoda vektorske predstavitve.
 
 Primer kodiranega besedila z uporabo modela OpenAI `text-embedding-ada-002` je:
-![vektorska predstavitev besede mačka](../../../translated_images/sl/cat.74cbd7946bc9ca38.png)
+![vektorska predstavitev besede mačka](../../../translated_images/sl/cat.74cbd7946bc9ca38.webp)
 
 ## Pridobivanje in vektorsko iskanje
 

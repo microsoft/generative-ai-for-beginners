@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "th"
 }
 -->
-[![Open Source Models](../../../translated_images/th/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/th/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # การปรับแต่งโมเดล LLM ของคุณ
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 อยากเห็นภาพรวมของสิ่งที่เราจะพูดถึงก่อนลงลึกใช่ไหม? ลองดูคู่มือภาพประกอบที่อธิบายเส้นทางการเรียนรู้สำหรับบทเรียนนี้ ตั้งแต่การเรียนรู้แนวคิดหลักและแรงจูงใจในการปรับแต่ง ไปจนถึงการเข้าใจขั้นตอนและแนวทางปฏิบัติที่ดีที่สุดสำหรับการดำเนินการปรับแต่ง นี่เป็นหัวข้อที่น่าสนใจสำหรับการสำรวจ อย่าลืมดูหน้า [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) สำหรับลิงก์เพิ่มเติมเพื่อสนับสนุนการเรียนรู้ด้วยตัวเองของคุณ!
 
-![คู่มือภาพประกอบการปรับแต่งโมเดลภาษา](../../../translated_images/th/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
+![คู่มือภาพประกอบการปรับแต่งโมเดลภาษา](../../../translated_images/th/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## การปรับแต่งโมเดลภาษาคืออะไร?
 

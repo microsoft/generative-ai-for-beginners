@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Захист ваших додатків генеративного AI
 
-[![Захист ваших додатків генеративного AI](../../../translated_images/uk/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Захист ваших додатків генеративного AI](../../../translated_images/uk/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Вступ
 
@@ -123,7 +123,7 @@ LLM можуть становити ризик для конфіденційно
 
 > Практика тестування штучного інтелекту (AI red teaming) еволюціонувала, набуваючи більш розширеного значення: вона охоплює не лише пошук вразливостей безпеки, але й перевірку інших збоїв системи, таких як генерація потенційно шкідливого контенту. Системи штучного інтелекту мають нові ризики, і тестування є ключовим для розуміння цих нових ризиків, таких як ін'єкція запитів і створення непідтвердженого контенту. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Рекомендації та ресурси для тестування](../../../translated_images/uk/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Рекомендації та ресурси для тестування](../../../translated_images/uk/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Нижче наведено ключові висновки, які сформували програму Microsoft AI Red Team.
 

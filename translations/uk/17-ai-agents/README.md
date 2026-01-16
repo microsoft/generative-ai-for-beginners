@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "uk"
 }
 -->
-[![Open Source Models](../../../translated_images/uk/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/uk/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Вступ
 
@@ -33,7 +33,7 @@ AI-агенти є дуже захоплюючою сферою у світі г
 
 AI-агенти дозволяють великим мовним моделям (LLMs) виконувати завдання, надаючи їм доступ до **стану** і **інструментів**.
 
-![Agent Model](../../../translated_images/uk/what-agent.21f2893bdfd01e6a.png)
+![Agent Model](../../../translated_images/uk/what-agent.21f2893bdfd01e6a.webp)
 
 Давайте визначимо ці терміни:
 
@@ -53,7 +53,7 @@ AI-агенти дозволяють великим мовним моделям 
 
 `AgentExecutor` також зберігає історію чату, щоб забезпечити контекст чату.
 
-![Langchain Agents](../../../translated_images/uk/langchain-agents.edcc55b5d5c43716.png)
+![Langchain Agents](../../../translated_images/uk/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain пропонує [каталог інструментів](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), які можна імпортувати у ваш додаток, щоб LLM міг отримати до них доступ. Ці інструменти створені спільнотою та командою LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 Ось приклад процесу:
 
-![AutoGen](../../../translated_images/uk/autogen.dee9a25a45fde584.png)
+![AutoGen](../../../translated_images/uk/autogen.dee9a25a45fde584.webp)
 
 #### LLM визначений системним повідомленням
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 Для виконання завдань `Planner` має доступ до колекції інструментів, які називаються `Plugins`. Це можуть бути класи Python або загальний інтерпретатор коду. Ці плагіни зберігаються як embeddings, щоб LLM міг краще шукати відповідний плагін.
 
-![Taskweaver](../../../translated_images/uk/taskweaver.da8559999267715a.png)
+![Taskweaver](../../../translated_images/uk/taskweaver.da8559999267715a.webp)
 
 Ось приклад плагіна для обробки виявлення аномалій:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 Останній фреймворк агентів, який ми розглянемо, це [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Що робить JARVIS унікальним, так це те, що він використовує LLM для управління `станом` розмови, а `інструменти` - це інші моделі штучного інтелекту. Кожна з моделей штучного інтелекту є спеціалізованою моделлю, яка виконує певні завдання, такі як розпізнавання об'єктів, транскрипція або опис зображень.
 
-![JARVIS](../../../translated_images/uk/jarvis.762ddbadbd1a3a33.png)
+![JARVIS](../../../translated_images/uk/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, будучи універсальною моделлю, отримує запит від користувача і визначає конкретне завдання та будь-які аргументи/дані, необхідні для виконання завдання.
 

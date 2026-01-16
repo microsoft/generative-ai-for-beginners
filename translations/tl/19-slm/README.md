@@ -33,7 +33,7 @@ Ang SLM ay sinasanay gamit ang malalaking dami ng tekstong datos. Sa panahon ng 
 
 Ang pagbuo ng SLM ay tugma sa lumalaking pangangailangan para sa mga modelong maaaring gamitin sa mga kapaligirang may limitadong resources, tulad ng mga mobile device o edge computing platforms, kung saan ang full-scale na LLM ay maaaring hindi praktikal dahil sa mataas na pangangailangan sa resources. Sa pagtutok sa episyensya, pinagsasama ng SLM ang performance at accessibility, na nagpapahintulot ng mas malawak na aplikasyon sa iba't ibang larangan.
 
-![slm](../../../translated_images/tl/slm.4058842744d0444a.png)
+![slm](../../../translated_images/tl/slm.4058842744d0444a.webp)
 
 ## Mga Layunin sa Pagkatuto
 
@@ -135,7 +135,7 @@ Maaari nating gamitin ang Phi-3/3.5 Family model base sa iba't ibang senaryo. Hi
 
 Nais naming gamitin ang Phi-3/3.5 sa iba't ibang senaryo. Susunod, gagamitin natin ang Phi-3/3.5 base sa iba't ibang senaryo.
 
-![phi3](../../../translated_images/tl/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/tl/phi3.655208c3186ae381.webp)
 
 ### Pagkakaiba sa Inference gamit ang Cloud's API
 
@@ -145,9 +145,9 @@ Ang GitHub Models ang pinaka-direktang paraan. Maaari kang mabilis na makakuha n
 
 - Demo: Paghahambing ng epekto ng Phi-3-mini at Phi-3.5-mini sa mga senaryo sa wikang Tsino
 
-![phi3](../../../translated_images/tl/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/tl/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/tl/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/tl/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

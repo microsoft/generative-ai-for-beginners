@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # చిత్రం సృష్టి అనువర్తనాలు నిర్మించడం
 
-[![చిత్రం సృష్టి అనువర్తనాలు నిర్మించడం](../../../translated_images/te/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![చిత్రం సృష్టి అనువర్తనాలు నిర్మించడం](../../../translated_images/te/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs కేవలం టెక్స్ట్ ఉత్పత్తికి మాత్రమే కాదు. టెక్స్ట్ వివరణల నుండి చిత్రాలను కూడా సృష్టించవచ్చు. చిత్రాలను ఒక మోడ్‌గా కలిగి ఉండటం మెడటెక్, వాస్తుశిల్పం, పర్యాటకం, గేమ్ అభివృద్ధి మరియు మరెన్నో ప్రాంతాలలో చాలా ఉపయోగకరంగా ఉంటుంది. ఈ అధ్యాయంలో, రెండు అత్యంత ప్రాచుర్యం పొందిన చిత్రం సృష్టి మోడల్స్, DALL-E మరియు Midjourney గురించి తెలుసుకుందాం.
 
@@ -43,7 +43,7 @@ LLMs కేవలం టెక్స్ట్ ఉత్పత్తికి మ
 
 క్లాస్‌లో స్మారక చిహ్నాలపై పని చేస్తున్నప్పుడు Edu4All విద్యార్థులు ఉదాహరణకు సృష్టించగలిగే చిత్రాలు ఇక్కడ ఉన్నాయి:
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/te/startup.94d6b79cc4bb3f5a.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/te/startup.94d6b79cc4bb3f5a.webp)
 
 ఈ ప్రాంప్ట్ ఉపయోగించి
 
@@ -272,9 +272,9 @@ _చిత్ర క్రెడిట్ వికీపీడియా, Midjou
   ప్రాథమిక చిత్రం కేవలం పూల్ ఉన్న లౌంజ్ మాత్రమే ఉంటుంది కానీ తుది చిత్రంలో ఫ్లామింగో ఉంటుంది:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/te/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/te/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/te/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/te/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/te/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/te/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **వేరియేషన్లు సృష్టించండి**. మీరు ఇప్పటికే ఉన్న చిత్రాన్ని తీసుకుని వేరియేషన్లు సృష్టించాలని అడగవచ్చు. వేరియేషన్ సృష్టించడానికి, మీరు చిత్రం మరియు టెక్స్ట్ ప్రాంప్ట్ ఇస్తారు, మరియు క్రింది కోడ్ వంటిది ఉపయోగిస్తారు:
@@ -298,11 +298,11 @@ _చిత్ర క్రెడిట్ వికీపీడియా, Midjou
 
 > ప్రాంప్ట్ : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![గాడిదపై బన్నీ, వెర్షన్ 1](../../../translated_images/te/v1-generated-image.a295cfcffa3c13c2.png)
+![గాడిదపై బన్నీ, వెర్షన్ 1](../../../translated_images/te/v1-generated-image.a295cfcffa3c13c2.webp)
 
 ఇప్పుడు అదే ప్రాంప్ట్‌ను మరోసారి నడిపించి, రెండు సార్లు అదే చిత్రం రాదు అని చూద్దాం:
 
-![గాడిదపై బన్నీ చిత్రం](../../../translated_images/te/v2-generated-image.33f55a3714efe61d.png)
+![గాడిదపై బన్నీ చిత్రం](../../../translated_images/te/v2-generated-image.33f55a3714efe61d.webp)
 
 మీరు చూడగలిగినట్లుగా, చిత్రాలు సమానంగా ఉన్నా, ఒకేలా లేవు. ఇప్పుడు టెంపరేచర్ విలువను 0.1కి మార్చి చూద్దాం:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 ఇప్పుడు మీరు ఈ కోడ్ నడిపినప్పుడు, ఈ రెండు చిత్రాలు వస్తాయి:
 
-- ![టెంపరేచర్ 0, వి1](../../../translated_images/te/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![టెంపరేచర్ 0, వి2](../../../translated_images/te/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![టెంపరేచర్ 0, వి1](../../../translated_images/te/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![టెంపరేచర్ 0, వి2](../../../translated_images/te/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 ఇక్కడ మీరు స్పష్టంగా చూడవచ్చు, చిత్రాలు ఒకదానితో మరింత సమానంగా ఉన్నాయని.
 

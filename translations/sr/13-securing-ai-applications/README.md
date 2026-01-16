@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Обезбеђивање ваших апликација заснованих на генеративној вештачкој интелигенцији
 
-[![Обезбеђивање ваших апликација заснованих на генеративној вештачкој интелигенцији](../../../translated_images/sr/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Обезбеђивање ваших апликација заснованих на генеративној вештачкој интелигенцији](../../../translated_images/sr/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Увод
 
@@ -115,7 +115,7 @@ Emuliranje pretnji iz stvarnog sveta sada se smatra standardnom praksom u izgrad
 
 > Praksa AI red timinga se razvila i dobila šire značenje: ne pokriva samo ispitivanje sigurnosnih ranjivosti, već uključuje i ispitivanje drugih sistemskih grešaka, kao što je generisanje potencijalno štetnog sadržaja. AI sistemi donose nove rizike, a red timing je ključan za razumevanje tih novih rizika, kao što su ubrizgavanje upita i proizvodnja neosnovanog sadržaja. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Uputstva i resursi za red timing](../../../translated_images/sr/13-AI-red-team.642ed54689d7e8a4.png)]()
+[![Uputstva i resursi za red timing](../../../translated_images/sr/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Ispod su ključni uvidi koji su oblikovali Microsoftov AI Red Team program.
 

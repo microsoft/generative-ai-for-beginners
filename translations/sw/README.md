@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-![Generative AI Kwa Komunyo](../../translated_images/sw/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI Kwa Komunyo](../../translated_images/sw/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### Masomo 21 yanayofundisha kila kitu unachohitaji kujua kuanza kujenga programu za Generative AI
 

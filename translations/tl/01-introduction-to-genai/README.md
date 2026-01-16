@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Panimula sa Generative AI at Malalaking Modelo ng Wika
 
-[![Panimula sa Generative AI at Malalaking Modelo ng Wika](../../../translated_images/tl/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Panimula sa Generative AI at Malalaking Modelo ng Wika](../../../translated_images/tl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
 
@@ -43,7 +43,7 @@ Alam ng aming startup team na hindi namin makakamit ang layuning ito nang hindi 
 
 Inaasahan na babaguhin ng Generative AI ang paraan ng pag-aaral at pagtuturo ngayon, kung saan ang mga mag-aaral ay may virtual na guro na magagamit 24 oras sa isang araw na nagbibigay ng malawak na impormasyon at mga halimbawa, at ang mga guro ay maaaring gumamit ng mga makabagong kasangkapan upang suriin ang kanilang mga mag-aaral at magbigay ng feedback.
 
-![Limang kabataang mag-aaral na nakatingin sa monitor - imahe mula sa DALLE2](../../../translated_images/tl/students-by-DALLE2.b70fddaced1042ee.png)
+![Limang kabataang mag-aaral na nakatingin sa monitor - imahe mula sa DALLE2](../../../translated_images/tl/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Upang magsimula, tukuyin natin ang ilang pangunahing konsepto at terminolohiya na gagamitin natin sa buong kurikulum.
 
@@ -69,7 +69,7 @@ Ito ang teknolohiyang nagbigay-daan sa mga virtual assistants na ipinanganak noo
 
 Kaya't ganito tayo nakarating sa Generative AI ngayon, na maaaring ituring bilang isang subset ng deep learning.
 
-![AI, ML, DL at Generative AI](../../../translated_images/tl/AI-diagram.c391fa518451a40d.png)
+![AI, ML, DL at Generative AI](../../../translated_images/tl/AI-diagram.c391fa518451a40d.webp)
 
 Pagkatapos ng mga dekada ng pananaliksik sa larangan ng AI, isang bagong arkitektura ng modelo—tinatawag na _Transformer_—ang nagtagumpay sa mga limitasyon ng RNNs, na may kakayahang tumanggap ng mas mahahabang mga sequence ng teksto bilang input. Ang Transformers ay batay sa attention mechanism, na nagbibigay-daan sa modelo na magbigay ng iba't ibang timbang sa mga input na natatanggap nito, 'mas binibigyang pansin' kung saan nakatuon ang pinaka-kaugnay na impormasyon, anuman ang pagkakasunod-sunod nito sa text sequence.
 
@@ -81,7 +81,7 @@ Sa susunod na kabanata, susuriin natin ang iba't ibang uri ng Generative AI mode
 
 - **Tokenizer, teksto sa mga numero**: Ang Malalaking Modelo ng Wika ay tumatanggap ng teksto bilang input at bumubuo ng teksto bilang output. Gayunpaman, bilang mga estadistikal na modelo, mas mahusay silang gumagana sa mga numero kaysa sa mga sequence ng teksto. Kaya't ang bawat input sa modelo ay pinoproseso ng isang tokenizer bago gamitin ng core model. Ang token ay isang bahagi ng teksto—binubuo ng variable na bilang ng mga karakter, kaya't ang pangunahing gawain ng tokenizer ay hatiin ang input sa isang array ng mga token. Pagkatapos, ang bawat token ay tinutugma sa isang token index, na siyang integer encoding ng orihinal na bahagi ng teksto.
 
-![Halimbawa ng tokenization](../../../translated_images/tl/tokenizer-example.80a5c151ee7d1bd4.png)
+![Halimbawa ng tokenization](../../../translated_images/tl/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Pagpredikta ng output tokens**: Sa ibinigay na n tokens bilang input (na may max n na nag-iiba mula sa isang modelo patungo sa iba), ang modelo ay may kakayahang magpredikta ng isang token bilang output. Ang token na ito ay isinasama sa input ng susunod na iteration, sa isang expanding window pattern, na nagbibigay ng mas mahusay na karanasan sa user na makakuha ng isang (o maramihang) pangungusap bilang sagot. Ipinaliwanag nito kung bakit, kung sakaling naglaro ka gamit ang ChatGPT, maaaring napansin mo na minsan tila humihinto ito sa gitna ng isang pangungusap.
 
@@ -98,23 +98,23 @@ Ang input ng isang malaking modelo ng wika ay kilala bilang prompt, habang ang o
 
   1. Pagbubuod ng isang artikulo, libro, mga review ng produkto, at iba pa, kasama ang pagkuha ng mga insight mula sa unstructured data.
     
-    ![Halimbawa ng pagbubuod](../../../translated_images/tl/summarization-example.7b7ff97147b3d790.png)
+    ![Halimbawa ng pagbubuod](../../../translated_images/tl/summarization-example.7b7ff97147b3d790.webp)
   
   2. Malikhaing ideya at disenyo ng isang artikulo, sanaysay, assignment, o iba pa.
       
-     ![Halimbawa ng malikhaing pagsusulat](../../../translated_images/tl/creative-writing-example.e24a685b5a543ad1.png)
+     ![Halimbawa ng malikhaing pagsusulat](../../../translated_images/tl/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Isang **tanong**, na itinatanong sa anyo ng isang pag-uusap sa isang agent.
   
-  ![Halimbawa ng pag-uusap](../../../translated_images/tl/conversation-example.60c2afc0f595fa59.png)
+  ![Halimbawa ng pag-uusap](../../../translated_images/tl/conversation-example.60c2afc0f595fa59.webp)
 
 - Isang bahagi ng **teksto upang makumpleto**, na implicit na humihiling ng tulong sa pagsusulat.
   
-  ![Halimbawa ng text completion](../../../translated_images/tl/text-completion-example.cbb0f28403d42752.png)
+  ![Halimbawa ng text completion](../../../translated_images/tl/text-completion-example.cbb0f28403d42752.webp)
 
 - Isang bahagi ng **code** kasama ang kahilingan na ipaliwanag at idokumento ito, o isang komento na humihiling na bumuo ng isang piraso ng code na gumaganap ng isang partikular na gawain.
   
-  ![Halimbawa ng coding](../../../translated_images/tl/coding-example.50ebabe8a6afff20.png)
+  ![Halimbawa ng coding](../../../translated_images/tl/coding-example.50ebabe8a6afff20.webp)
 
 Ang mga halimbawa sa itaas ay medyo simple at hindi nilalayon na maging isang kumpletong demonstrasyon ng kakayahan ng Malalaking Modelo ng Wika. Ang mga ito ay nilalayon upang ipakita ang potensyal ng paggamit ng generative AI, partikular ngunit hindi limitado sa mga konteksto ng edukasyon.
 

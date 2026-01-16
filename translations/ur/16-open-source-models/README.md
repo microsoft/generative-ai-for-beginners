@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ur"
 }
 -->
-[![اوپن سورس ماڈلز](../../../translated_images/ur/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![اوپن سورس ماڈلز](../../../translated_images/ur/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## تعارف
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **لاگت** - ان ماڈلز کے استعمال اور تعیناتی کے لیے فی ٹوکن لاگت پروپرائٹری ماڈلز کے مقابلے میں کم ہوتی ہے۔ جب جنریٹو AI ایپلیکیشنز بنائی جا رہی ہوں، تو ان ماڈلز کے ساتھ آپ کے استعمال کے معاملے میں کارکردگی بمقابلہ قیمت کا جائزہ لینا چاہیے۔
 
-![ماڈل کی لاگت](../../../translated_images/ur/model-price.3f5a3e4d32ae00b4.png)
+![ماڈل کی لاگت](../../../translated_images/ur/model-price.3f5a3e4d32ae00b4.webp)
 ماخذ: Artificial Analysis
 
 **لچک** - اوپن ماڈلز کے ساتھ کام کرنے سے آپ مختلف ماڈلز استعمال کرنے یا انہیں ملانے میں لچکدار ہوتے ہیں۔ اس کی ایک مثال [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) ہے جہاں صارف براہ راست یوزر انٹرفیس میں استعمال ہونے والا ماڈل منتخب کر سکتا ہے:
 
-![ماڈل منتخب کریں](../../../translated_images/ur/choose-model.f095d15bbac92214.png)
+![ماڈل منتخب کریں](../../../translated_images/ur/choose-model.f095d15bbac92214.webp)
 
 ## مختلف اوپن ماڈلز کی دریافت
 
@@ -74,7 +74,7 @@ Falcon کے فائن ٹیونڈ ورژنز کی مثالوں میں [OpenAssista
 
 مختلف اقسام کے LLMs کا موازنہ کرنے کے لیے، [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) ایک اور بہترین ذریعہ ہے:
 
-![ماڈل کی کوالٹی](../../../translated_images/ur/model-quality.aaae1c22e00f7ee1.png)
+![ماڈل کی کوالٹی](../../../translated_images/ur/model-quality.aaae1c22e00f7ee1.webp)
 ماخذ: Artificial Analysis
 
 اگر آپ کسی مخصوص استعمال کے معاملے پر کام کر رہے ہیں، تو اسی شعبے پر مرکوز فائن ٹیونڈ ورژنز کی تلاش مؤثر ہو سکتی ہے۔ متعدد اوپن ماڈلز کے ساتھ تجربہ کرنا اور دیکھنا کہ وہ آپ اور آپ کے صارفین کی توقعات کے مطابق کیسے کارکردگی دکھاتے ہیں، ایک اچھی مشق ہے۔

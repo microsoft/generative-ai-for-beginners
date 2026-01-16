@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Thiết kế UX cho Ứng dụng AI
 
-[![Thiết kế UX cho Ứng dụng AI](../../../translated_images/vi/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Thiết kế UX cho Ứng dụng AI](../../../translated_images/vi/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Nhấn vào hình ảnh trên để xem video của bài học này)_
 
@@ -58,7 +58,7 @@ Dễ tiếp cận có nghĩa là mở rộng trải nghiệm người dùng đ�
 
 Thú vị có nghĩa là ứng dụng mang lại cảm giác dễ chịu khi sử dụng. Một trải nghiệm người dùng hấp dẫn có thể có tác động tích cực đến người dùng, khuyến khích họ quay lại ứng dụng và tăng doanh thu kinh doanh.
 
-![hình ảnh minh họa các yếu tố UX trong AI](../../../translated_images/vi/uxinai.d5b4ed690f5cefff.png)
+![hình ảnh minh họa các yếu tố UX trong AI](../../../translated_images/vi/uxinai.d5b4ed690f5cefff.webp)
 
 Không phải mọi thách thức đều có thể được giải quyết bằng AI. AI được sử dụng để tăng cường trải nghiệm người dùng, dù là tự động hóa các nhiệm vụ thủ công hay cá nhân hóa trải nghiệm người dùng.
 
@@ -72,25 +72,25 @@ Hai cách để đảm bảo rằng niềm tin được đặt đúng trọng t�
 
 Khi AI giúp đưa ra quyết định như truyền đạt kiến thức cho các thế hệ tương lai, điều quan trọng là giáo viên và phụ huynh phải hiểu cách các quyết định của AI được đưa ra. Đây là tính giải thích - hiểu cách các ứng dụng AI đưa ra quyết định. Thiết kế cho tính giải thích bao gồm việc thêm các chi tiết làm nổi bật cách AI đạt được kết quả. Người dùng phải nhận thức rằng kết quả được tạo ra bởi AI chứ không phải con người. Ví dụ, thay vì nói "Bắt đầu trò chuyện với gia sư của bạn ngay bây giờ" hãy nói "Sử dụng gia sư AI thích ứng với nhu cầu của bạn và giúp bạn học theo tốc độ của mình."
 
-![trang đích của ứng dụng với minh họa rõ ràng về tính giải thích trong các ứng dụng AI](../../../translated_images/vi/explanability-in-ai.134426a96b498fbf.png)
+![trang đích của ứng dụng với minh họa rõ ràng về tính giải thích trong các ứng dụng AI](../../../translated_images/vi/explanability-in-ai.134426a96b498fbf.webp)
 
 Một ví dụ khác là cách AI sử dụng dữ liệu người dùng và dữ liệu cá nhân. Ví dụ, một người dùng với nhân vật học sinh có thể có những hạn chế dựa trên nhân vật của họ. AI có thể không tiết lộ câu trả lời cho các câu hỏi nhưng có thể giúp hướng dẫn người dùng suy nghĩ cách giải quyết vấn đề.
 
-![AI trả lời câu hỏi dựa trên nhân vật](../../../translated_images/vi/solving-questions.b7dea1604de0cbd2.png)
+![AI trả lời câu hỏi dựa trên nhân vật](../../../translated_images/vi/solving-questions.b7dea1604de0cbd2.webp)
 
 Một phần quan trọng cuối cùng của tính giải thích là sự đơn giản hóa các giải thích. Học sinh và giáo viên có thể không phải là chuyên gia về AI, do đó các giải thích về những gì ứng dụng có thể hoặc không thể làm nên được đơn giản hóa và dễ hiểu.
 
-![giải thích đơn giản về khả năng của AI](../../../translated_images/vi/simplified-explanations.4679508a406c3621.png)
+![giải thích đơn giản về khả năng của AI](../../../translated_images/vi/simplified-explanations.4679508a406c3621.webp)
 
 ### Kiểm soát
 
 AI tạo ra sự hợp tác giữa AI và người dùng, nơi mà ví dụ người dùng có thể chỉnh sửa các yêu cầu để có kết quả khác nhau. Ngoài ra, khi một kết quả được tạo ra, người dùng nên có khả năng chỉnh sửa kết quả, mang lại cho họ cảm giác kiểm soát. Ví dụ, khi sử dụng Bing, bạn có thể điều chỉnh yêu cầu của mình dựa trên định dạng, giọng điệu và độ dài. Ngoài ra, bạn có thể thêm thay đổi vào kết quả và chỉnh sửa kết quả như hình dưới đây:
 
-![Kết quả tìm kiếm Bing với các tùy chọn để chỉnh sửa yêu cầu và kết quả](../../../translated_images/vi/bing1.293ae8527dbe2789.png)
+![Kết quả tìm kiếm Bing với các tùy chọn để chỉnh sửa yêu cầu và kết quả](../../../translated_images/vi/bing1.293ae8527dbe2789.webp)
 
 Một tính năng khác trong Bing cho phép người dùng kiểm soát ứng dụng là khả năng chọn tham gia hoặc không tham gia vào dữ liệu mà AI sử dụng. Đối với một ứng dụng trường học, một học sinh có thể muốn sử dụng ghi chú của mình cũng như tài liệu của giáo viên làm tài liệu ôn tập.
 
-![Kết quả tìm kiếm Bing với các tùy chọn để chỉnh sửa yêu cầu và kết quả](../../../translated_images/vi/bing2.309f4845528a88c2.png)
+![Kết quả tìm kiếm Bing với các tùy chọn để chỉnh sửa yêu cầu và kết quả](../../../translated_images/vi/bing2.309f4845528a88c2.webp)
 
 > Khi thiết kế các ứng dụng AI, sự cố ý là yếu tố quan trọng để đảm bảo người dùng không tin tưởng quá mức, đặt ra những kỳ vọng không thực tế về khả năng của nó. Một cách để làm điều này là tạo ra sự cản trở giữa các yêu cầu và kết quả. Nhắc nhở người dùng rằng đây là AI chứ không phải một con người.
 
@@ -102,7 +102,7 @@ Các ứng dụng AI nên được xây dựng để nhận và cung cấp phả
 
 Một cách khác để xử lý điều này là truyền đạt rõ ràng khả năng và hạn chế của hệ thống. Khi người dùng mắc lỗi yêu cầu điều gì đó vượt quá khả năng của AI, cũng nên có cách để xử lý điều này, như hình dưới đây.
 
-![Cung cấp phản hồi và xử lý lỗi](../../../translated_images/vi/feedback-loops.7955c134429a9466.png)
+![Cung cấp phản hồi và xử lý lỗi](../../../translated_images/vi/feedback-loops.7955c134429a9466.webp)
 
 Lỗi hệ thống là điều phổ biến với các ứng dụng, nơi người dùng có thể cần hỗ trợ thông tin ngoài phạm vi của AI hoặc ứng dụng có thể có giới hạn về số lượng câu hỏi/chủ đề mà người dùng có thể tạo tóm tắt. Ví dụ, một ứng dụng AI được đào tạo với dữ liệu về các môn học giới hạn, chẳng hạn như Lịch sử và Toán học, có thể không xử lý được các câu hỏi liên quan đến Địa lý. Để giảm thiểu điều này, hệ thống AI có thể đưa ra phản hồi như: "Xin lỗi, sản phẩm của chúng tôi đã được đào tạo với dữ liệu trong các môn học sau....., tôi không thể trả lời câu hỏi bạn đã hỏi."
 

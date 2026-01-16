@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Наприклад, коли ви наведете курсор на будь-яке посилання у файлах, вам запропонують перейти за ним, натиснувши **ctrl + клік**
 
-![VS code follow links screenshot](../../translated_images/uk/vscode-follow-link.85520ab6a1237adc.png)
+![VS code follow links screenshot](../../translated_images/uk/vscode-follow-link.85520ab6a1237adc.webp)
 
 Якщо ви натиснете на посилання і воно не працює локально, то, ймовірно, воно викличе помилку у робочому процесі і не працюватиме на GitHub.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Коли ви вводите `./` або `../`, VS Code запропонує вибрати з доступних варіантів відповідно до введеного.
 
-![VS code select relative path screenshot](../../translated_images/uk/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![VS code select relative path screenshot](../../translated_images/uk/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Виберіть шлях, клацнувши потрібний файл або папку, і ви будете впевнені, що ваш шлях не пошкоджений.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/uk/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/uk/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і додайте ідентифікатор відстеження в кінці відносних шляхів.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/uk/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/uk/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і додайте ідентифікатор відстеження в кінці URL.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check country locale comment screenshot](../../translated_images/uk/github-check-country-locale-comment.2f4fe93228161dee.png)
+![GitHub check country locale comment screenshot](../../translated_images/uk/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і видаліть локалізацію країни з URL.
 

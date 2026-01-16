@@ -32,7 +32,7 @@ SLM sa trénujú na obrovskom množstve textových dát. Počas tréningu sa uč
 
 Vývoj SLM reaguje na rastúcu potrebu modelov, ktoré je možné nasadiť v prostrediach s obmedzenými zdrojmi, ako sú mobilné zariadenia alebo edge computing platformy, kde by plnohodnotné LLM boli nepraktické kvôli vysokým nárokom na zdroje. Zameraním sa na efektivitu SLM vyvažujú výkon a dostupnosť, čo umožňuje širšie využitie v rôznych oblastiach.
 
-![slm](../../../translated_images/sk/slm.4058842744d0444a.png)
+![slm](../../../translated_images/sk/slm.4058842744d0444a.webp)
 
 ## Ciele učenia  
 V tejto lekcii sa snažíme predstaviť poznatky o SLM a spojiť ich s Microsoft Phi-3, aby sme sa naučili rôzne scenáre v oblasti textového obsahu, videnia a MoE.
@@ -113,7 +113,7 @@ Modely rodiny Phi-3/3.5 môžeme používať podľa rôznych scenárov. Na rozdi
 ## Ako používať modely rodiny Phi-3/3.5  
 Chceme využiť Phi-3/3.5 v rôznych scenároch. Ďalej použijeme Phi-3/3.5 podľa rôznych situácií.
 
-![phi3](../../../translated_images/sk/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/sk/phi3.655208c3186ae381.webp)
 
 ### Rozdiely v inferencii cez cloudové API  
 
@@ -122,9 +122,9 @@ GitHub Models je najpriamejší spôsob. Môžete rýchlo pristupovať k modelu 
 
 - Demo: Porovnanie efektov Phi-3-mini a Phi-3.5-mini v čínskych scenároch
 
-![phi3](../../../translated_images/sk/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/sk/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/sk/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/sk/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 Ak chcete používať modely Vision a MoE, môžete využiť Azure AI Studio na vykonanie volaní. Ak máte záujem, môžete si prečítať Phi-3 Cookbook, kde sa naučíte, ako volať Phi-3/3.5 Instruct, Vision a MoE cez Azure AI Studio [Kliknite na tento odkaz](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-[![Tích hợp với gọi hàm](../../../translated_images/vi/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Tích hợp với gọi hàm](../../../translated_images/vi/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Vòng đời Ứng dụng AI Tạo sinh
 
@@ -30,7 +30,7 @@ LLM là một công cụ mới trong kho vũ khí Trí tuệ Nhân tạo, chúng
 
 Với điều này, chúng ta cần một mô hình mới để thích nghi công cụ này một cách linh hoạt, với các động lực phù hợp. Chúng ta có thể phân loại các ứng dụng AI cũ là "Ứng dụng ML" và các ứng dụng AI mới hơn là "Ứng dụng GenAI" hoặc chỉ đơn giản là "Ứng dụng AI", phản ánh công nghệ và kỹ thuật chủ đạo được sử dụng vào thời điểm đó. Điều này thay đổi cách kể chuyện của chúng ta theo nhiều cách, hãy xem so sánh sau đây.
 
-![So sánh LLMOps và MLOps](../../../translated_images/vi/01-llmops-shift.29bc933cb3bb0080.png)
+![So sánh LLMOps và MLOps](../../../translated_images/vi/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Lưu ý rằng trong LLMOps, chúng ta tập trung nhiều hơn vào Nhà phát triển Ứng dụng, sử dụng tích hợp như một điểm then chốt, sử dụng "Mô hình như một Dịch vụ" và suy nghĩ theo các điểm sau cho các chỉ số.
 
@@ -44,7 +44,7 @@ Lưu ý rằng trong LLMOps, chúng ta tập trung nhiều hơn vào Nhà phát 
 
 Trước tiên, để hiểu vòng đời và các sửa đổi, hãy xem infographic tiếp theo.
 
-![Infographic LLMOps](../../../translated_images/vi/02-llmops.70a942ead05a7645.png)
+![Infographic LLMOps](../../../translated_images/vi/02-llmops.70a942ead05a7645.webp)
 
 Như bạn có thể nhận thấy, điều này khác với các vòng đời thông thường của MLOps. LLM có nhiều yêu cầu mới, như Prompting, các kỹ thuật khác nhau để cải thiện chất lượng (Fine-Tuning, RAG, Meta-Prompts), đánh giá và trách nhiệm khác với AI có trách nhiệm, cuối cùng là các chỉ số đánh giá mới (Chất lượng, Tác hại, Trung thực, Chi phí và Độ trễ).
 
@@ -54,7 +54,7 @@ Lưu ý rằng đây không phải là tuyến tính, mà là các vòng lặp t
 
 Chúng ta có thể khám phá các bước đó như thế nào? Hãy đi vào chi tiết cách xây dựng một vòng đời.
 
-![Quy trình làm việc LLMOps](../../../translated_images/vi/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![Quy trình làm việc LLMOps](../../../translated_images/vi/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Điều này có thể trông hơi phức tạp, hãy tập trung vào ba bước lớn trước.
 
@@ -74,11 +74,11 @@ Về công cụ, Microsoft cung cấp [Nền tảng AI Azure](https://azure.micr
 
 [Nền tảng AI Azure](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) cho phép bạn sử dụng [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio là một cổng web cho phép bạn khám phá các mô hình, mẫu và công cụ. Quản lý tài nguyên, phát triển giao diện người dùng và các tùy chọn SDK/CLI cho phát triển theo hướng mã.
 
-![Khả năng của Azure AI](../../../translated_images/vi/04-azure-ai-platform.80203baf03a12fa8.png)
+![Khả năng của Azure AI](../../../translated_images/vi/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI cho phép bạn sử dụng nhiều tài nguyên để quản lý các hoạt động, dịch vụ, dự án, tìm kiếm vector và nhu cầu cơ sở dữ liệu.
 
-![LLMOps với Azure AI](../../../translated_images/vi/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps với Azure AI](../../../translated_images/vi/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Xây dựng, từ Bằng chứng Khái niệm (POC) đến các ứng dụng quy mô lớn với PromptFlow:
 
@@ -86,7 +86,7 @@ Xây dựng, từ Bằng chứng Khái niệm (POC) đến các ứng dụng quy
 - Kiểm tra và tinh chỉnh ứng dụng để có AI chất lượng, dễ dàng.
 - Sử dụng Azure AI Studio để tích hợp và lặp lại với đám mây, Đẩy và Triển khai để tích hợp nhanh.
 
-![LLMOps với PromptFlow](../../../translated_images/vi/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps với PromptFlow](../../../translated_images/vi/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Tuyệt vời! Tiếp tục học tập!
 

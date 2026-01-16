@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Designa användarupplevelse för AI-applikationer
 
-[![Designa användarupplevelse för AI-applikationer](../../../translated_images/sv/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Designa användarupplevelse för AI-applikationer](../../../translated_images/sv/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klicka på bilden ovan för att se videon till denna lektion)_
 
@@ -58,7 +58,7 @@ Att vara tillgänglig innebär att utöka användarupplevelsen till användare m
 
 Att vara trevlig innebär att applikationen är behaglig att använda. En tilltalande användarupplevelse kan ha en positiv inverkan på användaren, uppmuntra dem att återvända till applikationen och öka företagets intäkter.
 
-![bild som illustrerar UX-överväganden i AI](../../../translated_images/sv/uxinai.d5b4ed690f5cefff.png)
+![bild som illustrerar UX-överväganden i AI](../../../translated_images/sv/uxinai.d5b4ed690f5cefff.webp)
 
 Inte alla utmaningar kan lösas med AI. AI används för att förstärka användarupplevelsen, vare sig det handlar om att automatisera manuella uppgifter eller att anpassa användarupplevelser.
 
@@ -72,25 +72,25 @@ Två sätt att säkerställa att förtroende är centralt i designen är förkla
 
 När AI hjälper till att fatta beslut, som att förmedla kunskap till framtida generationer, är det avgörande för lärare och föräldrar att förstå hur AI-beslut fattas. Detta är förklarbarhet - att förstå hur AI-applikationer fattar beslut. Att designa för förklarbarhet innebär att lägga till detaljer som belyser hur AI kom fram till resultatet. Publiken måste vara medveten om att resultatet genereras av AI och inte av en människa. Till exempel, istället för att säga "Börja chatta med din handledare nu", säg "Använd AI-handledare som anpassar sig till dina behov och hjälper dig att lära dig i din egen takt."
 
-![en app-landningssida med tydlig illustration av förklarbarhet i AI-applikationer](../../../translated_images/sv/explanability-in-ai.134426a96b498fbf.png)
+![en app-landningssida med tydlig illustration av förklarbarhet i AI-applikationer](../../../translated_images/sv/explanability-in-ai.134426a96b498fbf.webp)
 
 Ett annat exempel är hur AI använder användar- och personuppgifter. Till exempel kan en användare med personan student ha begränsningar baserat på sin persona. AI:n kanske inte kan avslöja svar på frågor men kan hjälpa användaren att tänka igenom hur de kan lösa ett problem.
 
-![AI svarar på frågor baserat på persona](../../../translated_images/sv/solving-questions.b7dea1604de0cbd2.png)
+![AI svarar på frågor baserat på persona](../../../translated_images/sv/solving-questions.b7dea1604de0cbd2.webp)
 
 En sista viktig del av förklarbarhet är förenkling av förklaringar. Elever och lärare kanske inte är experter på AI, därför bör förklaringar av vad applikationen kan eller inte kan göra förenklas och vara lätta att förstå.
 
-![förenklade förklaringar av AI-funktioner](../../../translated_images/sv/simplified-explanations.4679508a406c3621.png)
+![förenklade förklaringar av AI-funktioner](../../../translated_images/sv/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontroll
 
 Generativ AI skapar ett samarbete mellan AI och användaren, där användaren till exempel kan ändra uppmaningar för olika resultat. Dessutom, när ett resultat genereras, bör användare kunna ändra resultaten och därmed få en känsla av kontroll. Till exempel, när du använder Bing, kan du anpassa din uppmaning baserat på format, ton och längd. Dessutom kan du göra ändringar i ditt resultat och modifiera det som visas nedan:
 
-![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing1.293ae8527dbe2789.png)
+![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing1.293ae8527dbe2789.webp)
 
 En annan funktion i Bing som ger användaren kontroll över applikationen är möjligheten att välja att delta eller avstå från den data som AI använder. För en skolapplikation kanske en elev vill använda sina anteckningar samt lärarens resurser som repetitionsmaterial.
 
-![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing2.309f4845528a88c2.png)
+![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing2.309f4845528a88c2.webp)
 
 > När du designar AI-applikationer är det viktigt att vara medveten om att användare inte ska överdriva sitt förtroende för AI och dess kapacitet. Ett sätt att göra detta är att skapa en viss friktion mellan uppmaningarna och resultaten. Påminn användaren om att detta är AI och inte en annan människa.
 
@@ -102,7 +102,7 @@ AI-applikationer bör vara utformade för att ta emot och ge feedback. Detta hj�
 
 Ett annat sätt att hantera detta är att tydligt kommunicera systemets kapacitet och begränsningar. När en användare gör ett fel genom att begära något utanför AI:s kapacitet, bör det också finnas ett sätt att hantera detta, som visas nedan.
 
-![Ge feedback och hantera fel](../../../translated_images/sv/feedback-loops.7955c134429a9466.png)
+![Ge feedback och hantera fel](../../../translated_images/sv/feedback-loops.7955c134429a9466.webp)
 
 Systemfel är vanliga i applikationer där användaren kan behöva hjälp med information utanför AI:s räckvidd eller där applikationen kan ha en gräns för hur många frågor/ämnen en användare kan generera sammanfattningar för. Till exempel kan en AI-applikation som är tränad med data om begränsade ämnen, som historia och matematik, kanske inte kunna hantera frågor om geografi. För att mildra detta kan AI-systemet ge ett svar som: "Tyvärr, vår produkt har tränats med data inom följande ämnen....., jag kan inte svara på frågan du ställde."
 

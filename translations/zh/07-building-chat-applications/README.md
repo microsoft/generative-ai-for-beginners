@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 构建生成式 AI 驱动的聊天应用
 
-[![构建生成式 AI 驱动的聊天应用](../../../translated_images/zh/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![构建生成式 AI 驱动的聊天应用](../../../translated_images/zh/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(点击上方图片观看本课视频)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 OpenAI的ChatGPT中的“自定义指令”设置就是个性化的一个例子。它允许您提供关于自己的信息，这些信息可能是提示的重要上下文。以下是一个自定义指令的示例。
 
-![ChatGPT中的自定义指令设置](../../../translated_images/zh/custom-instructions.b96f59aa69356fcf.png)
+![ChatGPT中的自定义指令设置](../../../translated_images/zh/custom-instructions.b96f59aa69356fcf.webp)
 
 这个“档案”提示ChatGPT创建一个关于链表的课程计划。注意，ChatGPT会根据用户的经验提供更深入的课程计划。
 
-![ChatGPT中关于链表课程计划的提示](../../../translated_images/zh/lesson-plan-prompt.cc47c488cf1343df.png)
+![ChatGPT中关于链表课程计划的提示](../../../translated_images/zh/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### 微软的大型语言模型系统消息框架
 

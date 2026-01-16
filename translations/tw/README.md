@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tw"
 }
 -->
-![給初學者的生成式 AI](../../translated_images/tw/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![給初學者的生成式 AI](../../translated_images/tw/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 課教你建立生成式 AI 應用所需知道的一切
 

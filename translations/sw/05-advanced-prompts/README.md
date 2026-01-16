@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kuunda Maelekezo ya Juu
 
-[![Kuunda Maelekezo ya Juu](../../../translated_images/sw/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Kuunda Maelekezo ya Juu](../../../translated_images/sw/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Hebu tukumbuke baadhi ya masomo kutoka sura iliyopita:
 

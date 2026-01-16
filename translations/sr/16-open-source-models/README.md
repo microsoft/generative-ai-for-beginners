@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sr"
 }
 -->
-[![Open Source Models](../../../translated_images/sr/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/sr/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Увод
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Трошкови** - Трошак по токену за коришћење и имплементацију ових модела је нижи него код власничких модела. При изградњи апликација заснованих на генеративној вештачкој интелигенцији, треба размотрити однос перформанси и цене када радите са овим моделима за ваш конкретан случај употребе.
 
-![Model Cost](../../../translated_images/sr/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/sr/model-price.3f5a3e4d32ae00b4.webp)
 Извор: Artificial Analysis
 
 **Флексибилност** - Рад са отвореним моделима омогућава флексибилност у коришћењу различитих модела или њиховом комбиновaњу. Пример за то су [HuggingChat асистенти](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) где корисник може директно у корисничком интерфејсу изабрати модел који се користи:
 
-![Choose Model](../../../translated_images/sr/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/sr/choose-model.f095d15bbac92214.webp)
 
 ## Истраживање различитих отворених модела
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Када желите да упоредите LLM моделе различитих типова, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) је још један одличан ресурс:
 
-![Model Quality](../../../translated_images/sr/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/sr/model-quality.aaae1c22e00f7ee1.webp)
 Извор: Artificial Analysis
 
 Ако радите на специфичном случају употребе, претраживање фино подешених верзија које су фокусиране на исту област може бити ефикасно. Испробавање више отворених модела да бисте видели како се понашају у складу са вашим и очекивањима ваших корисника је такође добра пракса.
