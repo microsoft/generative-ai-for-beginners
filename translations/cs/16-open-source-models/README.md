@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "cs"
 }
 -->
-[![Open Source Models](../../../translated_images/cs/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/cs/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Úvod
 
@@ -41,12 +41,12 @@ Pro tuto lekci budeme modely nadále označovat jako "open modely", protože v d
 
 **Cena** – Cena za token při používání a nasazení těchto modelů je nižší než u proprietárních modelů. Při budování aplikací Generativní AI byste měli zvážit poměr výkonu a ceny při práci s těmito modely pro váš konkrétní případ použití.
 
-![Model Cost](../../../translated_images/cs/model-price.3f5a3e4d32ae00b4.png)
+![Model Cost](../../../translated_images/cs/model-price.3f5a3e4d32ae00b4.webp)
 Zdroj: Artificial Analysis
 
 **Flexibilita** – Práce s open modely vám umožňuje být flexibilní v používání různých modelů nebo jejich kombinování. Příkladem jsou [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kde si uživatel může přímo v uživatelském rozhraní vybrat používaný model:
 
-![Choose Model](../../../translated_images/cs/choose-model.f095d15bbac92214.png)
+![Choose Model](../../../translated_images/cs/choose-model.f095d15bbac92214.webp)
 
 ## Prozkoumání různých Open Modelů
 
@@ -74,7 +74,7 @@ Neexistuje jednoznačná odpověď na výběr open modelu. Dobré místo pro za�
 
 Při porovnávání LLM napříč různými typy je dalším skvělým zdrojem [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst):
 
-![Model Quality](../../../translated_images/cs/model-quality.aaae1c22e00f7ee1.png)
+![Model Quality](../../../translated_images/cs/model-quality.aaae1c22e00f7ee1.webp)
 Zdroj: Artificial Analysis
 
 Pokud pracujete na konkrétním případu použití, může být efektivní hledat doladěné verze zaměřené na stejnou oblast. Experimentování s více open modely, abyste viděli, jak si vedou podle vašich a uživatelských očekávání, je další dobrá praxe.

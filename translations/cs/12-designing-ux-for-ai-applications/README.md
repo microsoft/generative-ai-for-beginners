@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Navrhování UX pro AI aplikace
 
-[![Navrhování UX pro AI aplikace](../../../translated_images/cs/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Navrhování UX pro AI aplikace](../../../translated_images/cs/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
@@ -58,7 +58,7 @@ Být přístupný znamená rozšířit uživatelskou zkušenost na uživatele s 
 
 Být příjemný znamená, že je aplikace radost používat. Příjemná uživatelská zkušenost může mít pozitivní dopad na uživatele, povzbudit je k návratu k aplikaci a zvýšit příjmy firmy.
 
-![obrázek ilustrující úvahy o UX v AI](../../../translated_images/cs/uxinai.d5b4ed690f5cefff.png)
+![obrázek ilustrující úvahy o UX v AI](../../../translated_images/cs/uxinai.d5b4ed690f5cefff.webp)
 
 Ne každý problém lze vyřešit pomocí AI. AI přichází na řadu, aby doplnila vaši uživatelskou zkušenost, ať už automatizací manuálních úkolů nebo personalizací uživatelských zkušeností.
 
@@ -72,25 +72,25 @@ Dva způsoby, jak zajistit, že důvěra je umístěna přímo do středu design
 
 Když AI pomáhá informovat rozhodnutí, jako je předávání znalostí budoucím generacím, je důležité, aby učitelé a rodiče rozuměli tomu, jak jsou rozhodnutí AI přijímána. To je vysvětlitelnost - pochopení, jak AI aplikace přijímají rozhodnutí. Navrhování pro vysvětlitelnost zahrnuje přidávání podrobností, které zdůrazňují, jak AI dospěla k výstupu. Publikum musí být informováno, že výstup je generován AI a nikoli člověkem. Například místo "Začněte chatovat se svým učitelem nyní" řekněte "Použijte AI učitele, který se přizpůsobí vašim potřebám a pomůže vám učit se vaším tempem."
 
-![stránka aplikace s jasnou ilustrací vysvětlitelnosti v AI aplikacích](../../../translated_images/cs/explanability-in-ai.134426a96b498fbf.png)
+![stránka aplikace s jasnou ilustrací vysvětlitelnosti v AI aplikacích](../../../translated_images/cs/explanability-in-ai.134426a96b498fbf.webp)
 
 Dalším příkladem je, jak AI používá uživatelská a osobní data. Například uživatel s personou student může mít omezení na základě své persony. AI nemusí být schopna odhalit odpovědi na otázky, ale může pomoci uživateli přemýšlet o tom, jak může problém vyřešit.
 
-![AI odpovídající na otázky na základě persony](../../../translated_images/cs/solving-questions.b7dea1604de0cbd2.png)
+![AI odpovídající na otázky na základě persony](../../../translated_images/cs/solving-questions.b7dea1604de0cbd2.webp)
 
 Poslední klíčovou částí vysvětlitelnosti je zjednodušení vysvětlení. Studenti a učitelé nemusí být odborníky na AI, proto by vysvětlení toho, co aplikace může nebo nemůže dělat, měla být zjednodušená a snadno pochopitelná.
 
-![zjednodušená vysvětlení schopností AI](../../../translated_images/cs/simplified-explanations.4679508a406c3621.png)
+![zjednodušená vysvětlení schopností AI](../../../translated_images/cs/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrola
 
 Generativní AI vytváří spolupráci mezi AI a uživatelem, kde například uživatel může upravit podněty pro různé výsledky. Navíc, jakmile je výstup generován, uživatelé by měli být schopni upravit výsledky, což jim dává pocit kontroly. Například při používání Bingu můžete upravit svůj podnět na základě formátu, tónu a délky. Navíc můžete přidat změny do svého výstupu a upravit ho, jak je ukázáno níže:
 
-![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing1.293ae8527dbe2789.png)
+![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing1.293ae8527dbe2789.webp)
 
 Další funkcí v Bingu, která umožňuje uživateli mít kontrolu nad aplikací, je možnost přihlásit se nebo odhlásit z dat, která AI používá. Pro školní aplikaci může student chtít použít své poznámky i zdroje učitelů jako materiál pro opakování.
 
-![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing2.309f4845528a88c2.png)
+![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing2.309f4845528a88c2.webp)
 
 > Při navrhování AI aplikací je klíčová záměrnost, která zajistí, že uživatelé nebudou přehnaně důvěřovat a nastavovat nerealistická očekávání ohledně jejích schopností. Jedním ze způsobů, jak toho dosáhnout, je vytvoření tření mezi podněty a výsledky. Připomínání uživateli, že se jedná o AI a nikoli o jiného člověka.
 
@@ -102,7 +102,7 @@ AI aplikace by měly být navrženy tak, aby přijímaly a poskytovaly zpětnou 
 
 Dalším způsobem, jak to řešit, je jasně komunikovat schopnosti a omezení systému. Když uživatel udělá chybu při požadavku na něco mimo schopnosti AI, mělo by existovat také způsob, jak to řešit, jak je ukázáno níže.
 
-![Poskytování zpětné vazby a řešení chyb](../../../translated_images/cs/feedback-loops.7955c134429a9466.png)
+![Poskytování zpětné vazby a řešení chyb](../../../translated_images/cs/feedback-loops.7955c134429a9466.webp)
 
 Systémové chyby jsou běžné u aplikací, kde uživatel může potřebovat pomoc s informacemi mimo rozsah AI nebo aplikace může mít limit na počet otázek/předmětů, které uživatel může generovat souhrny. Například AI aplikace trénovaná na datech z omezených předmětů, například historie a matematiky, nemusí být schopna řešit otázky týkající se geografie. Aby se tomu předešlo, AI systém může dát odpověď jako: "Promiňte, náš produkt byl trénován na datech z následujících předmětů....., nemohu odpovědět na otázku, kterou jste položili."
 

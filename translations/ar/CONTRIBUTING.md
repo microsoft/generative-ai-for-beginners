@@ -68,7 +68,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 على سبيل المثال، عند تحريك المؤشر فوق أي رابط في ملفاتك، سيُطلب منك اتباع الرابط بالضغط على **ctrl + click**
 
-![لقطة شاشة من VS code لمتابعة الروابط](../../translated_images/ar/vscode-follow-link.85520ab6a1237adc.png)
+![لقطة شاشة من VS code لمتابعة الروابط](../../translated_images/ar/vscode-follow-link.85520ab6a1237adc.webp)
 
 إذا نقرت على رابط ولم يعمل محليًا، فمن المؤكد أنه سيؤدي إلى فشل سير العمل ولن يعمل على GitHub.
 
@@ -76,7 +76,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 عند كتابة `./` أو `../` سيقترح عليك VS code الخيارات المتاحة بناءً على ما كتبته.
 
-![لقطة شاشة من VS code لاختيار المسار النسبي](../../translated_images/ar/vscode-select-relative-path.3804eb73c3a9e5f2.png)
+![لقطة شاشة من VS code لاختيار المسار النسبي](../../translated_images/ar/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 اتبع المسار بالنقر على الملف أو المجلد المطلوب وستتأكد من أن مسارك غير معطل.
 
@@ -93,7 +93,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 إذا لم يكن كذلك، قد تحصل على الخطأ التالي.
 
-![لقطة شاشة لتعليق GitHub يوضح نقص التتبع في المسارات](../../translated_images/ar/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
+![لقطة شاشة لتعليق GitHub يوضح نقص التتبع في المسارات](../../translated_images/ar/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 لحل هذه المشكلة، افتح مسار الملف الذي أشار إليه سير العمل وأضف معرف التتبع إلى نهاية المسارات النسبية.
 
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 إذا لم يكن كذلك، قد تحصل على الخطأ التالي.
 
-![لقطة شاشة لتعليق GitHub يوضح نقص التتبع في عناوين URL](../../translated_images/ar/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
+![لقطة شاشة لتعليق GitHub يوضح نقص التتبع في عناوين URL](../../translated_images/ar/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 لحل هذه المشكلة، افتح مسار الملف الذي أشار إليه سير العمل وأضف معرف التتبع إلى نهاية عناوين URL.
 
@@ -127,7 +127,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 إذا كان موجودًا، قد تحصل على الخطأ التالي.
 
-![لقطة شاشة لتعليق GitHub يوضح وجود إعداد محلي في عناوين URL](../../translated_images/ar/github-check-country-locale-comment.2f4fe93228161dee.png)
+![لقطة شاشة لتعليق GitHub يوضح وجود إعداد محلي في عناوين URL](../../translated_images/ar/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 لحل هذه المشكلة، افتح مسار الملف الذي أشار إليه سير العمل وأزل الإعداد المحلي من عناوين URL.
 

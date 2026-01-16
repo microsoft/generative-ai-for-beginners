@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "bg"
 }
 -->
-![Generative AI For Beginners](../../translated_images/bg/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI For Beginners](../../translated_images/bg/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 урока, които преподават всичко необходимо, за да започнете да изграждате приложения с Generative AI
 

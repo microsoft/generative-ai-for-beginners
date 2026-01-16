@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # بناء تطبيقات الدردشة المدعومة بالذكاء الاصطناعي التوليدي
 
-[![بناء تطبيقات الدردشة المدعومة بالذكاء الاصطناعي التوليدي](../../../translated_images/ar/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![بناء تطبيقات الدردشة المدعومة بالذكاء الاصطناعي التوليدي](../../../translated_images/ar/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(انقر على الصورة أعلاه لمشاهدة فيديو الدرس)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 أحد الأمثلة على التخصيص هو إعدادات "التعليمات المخصصة" في ChatGPT من OpenAI. يتيح لك تقديم معلومات عن نفسك قد تكون سياقًا مهمًا لطلباتك. إليك مثال على التعليمات المخصصة.
 
-![إعدادات التعليمات المخصصة في ChatGPT](../../../translated_images/ar/custom-instructions.b96f59aa69356fcf.png)
+![إعدادات التعليمات المخصصة في ChatGPT](../../../translated_images/ar/custom-instructions.b96f59aa69356fcf.webp)
 
 تطلب هذه "الملف الشخصي" من ChatGPT إنشاء خطة درس حول القوائم المرتبطة. لاحظ أن ChatGPT يأخذ في الاعتبار أن المستخدم قد يرغب في خطة درس أكثر تفصيلًا بناءً على خبرتها.
 
-![طلب في ChatGPT لخطة درس حول القوائم المرتبطة](../../../translated_images/ar/lesson-plan-prompt.cc47c488cf1343df.png)
+![طلب في ChatGPT لخطة درس حول القوائم المرتبطة](../../../translated_images/ar/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### إطار عمل رسائل النظام من مايكروسوفت لنماذج اللغة الكبيرة
 

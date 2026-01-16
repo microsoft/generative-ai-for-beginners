@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # بناء تطبيقات توليد النصوص
 
-[![بناء تطبيقات توليد النصوص](../../../translated_images/ar/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![بناء تطبيقات توليد النصوص](../../../translated_images/ar/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(اضغط على الصورة أعلاه لمشاهدة الفيديو الخاص بهذا الدرس)_
 

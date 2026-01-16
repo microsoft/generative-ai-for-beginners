@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # أساسيات هندسة التوجيه
 
-[![أساسيات هندسة التوجيه](../../../translated_images/ar/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![أساسيات هندسة التوجيه](../../../translated_images/ar/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## المقدمة
 يغطي هذا الفصل مفاهيم وتقنيات أساسية لإنشاء توجيهات فعالة لنماذج الذكاء الاصطناعي التوليدي. الطريقة التي تكتب بها التوجيه لنموذج اللغة الكبير (LLM) لها تأثير كبير. يمكن للتوجيه المصمم بعناية أن يحقق استجابة ذات جودة أفضل. ولكن ماذا تعني مصطلحات مثل _التوجيه_ و_هندسة التوجيه_؟ وكيف يمكنني تحسين مدخلات التوجيه التي أرسلها إلى النموذج؟ هذه هي الأسئلة التي سنحاول الإجابة عليها في هذا الفصل والفصل التالي.
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هل تريد الحصول على صورة عامة لما يغطيه هذا الدرس قبل أن تغوص فيه؟ تحقق من هذا الدليل المصور، الذي يمنحك فكرة عن الموضوعات الرئيسية التي يتم تناولها والنقاط الرئيسية التي يجب التفكير فيها في كل منها. يأخذك مخطط الدرس من فهم المفاهيم الأساسية والتحديات إلى معالجتها باستخدام تقنيات هندسة التوجيه ذات الصلة وأفضل الممارسات. لاحظ أن قسم "التقنيات المتقدمة" في هذا الدليل يشير إلى المحتوى الذي يتم تغطيته في الفصل _التالي_ من هذا المنهج.
 
-![دليل مصور لهندسة التوجيه](../../../translated_images/ar/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
+![دليل مصور لهندسة التوجيه](../../../translated_images/ar/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## شركتنا الناشئة
 
@@ -84,7 +84,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 للحصول على حدس حول كيفية عمل التجزئة، جرب أدوات مثل [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) الموضحة أدناه. انسخ توجيهك - وشاهد كيف يتم تحويله إلى رموز، مع الانتباه إلى كيفية التعامل مع أحرف المسافات وعلامات الترقيم. لاحظ أن هذا المثال يظهر نموذجًا أقدم (GPT-3) - لذا فإن تجربة هذا مع نموذج أحدث قد تنتج نتيجة مختلفة.
 
-![التجزئة](../../../translated_images/ar/04-tokenizer-example.e71f0a0f70356c5c.png)
+![التجزئة](../../../translated_images/ar/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### المفهوم: نماذج الأساس
 
@@ -94,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ولكن ماذا لو أراد المستخدم رؤية شيء محدد يلبي بعض المعايير أو هدف المهمة؟ هنا تأتي نماذج LLM المعدلة بالتعليمات إلى الصورة.
 
-![إكمال الدردشة باستخدام نموذج LLM الأساسي](../../../translated_images/ar/04-playground-chat-base.65b76fcfde0caa67.png)
+![إكمال الدردشة باستخدام نموذج LLM الأساسي](../../../translated_images/ar/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### المفهوم: نماذج LLM المعدلة بالتعليمات
 
@@ -108,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 شاهد كيف أن النتيجة الآن معدلة لتعكس الهدف والتنسيق المطلوب؟ يمكن للمعلم الآن استخدام هذه الاستجابة مباشرة في شرائح العرض لتلك الحصة.
 
-![إكمال الدردشة باستخدام نموذج LLM المعدل بالتعليمات](../../../translated_images/ar/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
+![إكمال الدردشة باستخدام نموذج LLM المعدل بالتعليمات](../../../translated_images/ar/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## لماذا نحتاج إلى هندسة التوجيه؟
 
@@ -138,15 +138,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 > **الرد الأول**: OpenAI Playground (GPT-35)
 
-![الرد الأول](../../../translated_images/ar/04-fabrication-oai.5818c4e0b2a2678c.png)
+![الرد الأول](../../../translated_images/ar/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **الرد الثاني**: Azure OpenAI Playground (GPT-35)
 
-![الرد الثاني](../../../translated_images/ar/04-fabrication-aoai.b14268e9ecf25caf.png)
+![الرد الثاني](../../../translated_images/ar/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **الرد الثالث**: Hugging Face Chat Playground (LLama-2)
 
-![الرد الثالث](../../../translated_images/ar/04-fabrication-huggingchat.faf82a0a51278956.png)
+![الرد الثالث](../../../translated_images/ar/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 كما هو متوقع، كل نموذج (أو إصدار النموذج) ينتج ردودًا مختلفة قليلاً بفضل السلوك العشوائي وتفاوت قدرات النموذج. على سبيل المثال، يستهدف أحد النماذج جمهورًا في الصف الثامن بينما يفترض الآخر جمهورًا من طلاب الثانوية. ولكن جميع النماذج الثلاثة قدمت ردودًا قد تقنع مستخدمًا غير مطلع بأن الحدث كان حقيقيًا.
 

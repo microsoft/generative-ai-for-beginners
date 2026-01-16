@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Създаване на приложения за генериране на текст
 
-[![Създаване на приложения за генериране на текст](../../../translated_images/bg/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Създаване на приложения за генериране на текст](../../../translated_images/bg/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Кликнете върху изображението по-горе, за да гледате видеото на този урок)_
 

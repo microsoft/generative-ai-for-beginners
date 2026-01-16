@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "bn"
 }
 -->
-[![ওপেন সোর্স মডেল](../../../translated_images/bn/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![ওপেন সোর্স মডেল](../../../translated_images/bn/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## পরিচিতি
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 এআই এজেন্ট বড় ভাষার মডেলগুলোকে (LLMs) **স্টেট** এবং **টুলস**-এ অ্যাক্সেস দিয়ে কাজ সম্পাদন করতে সক্ষম করে।
 
-![এজেন্ট মডেল](../../../translated_images/bn/what-agent.21f2893bdfd01e6a.png)
+![এজেন্ট মডেল](../../../translated_images/bn/what-agent.21f2893bdfd01e6a.webp)
 
 এসব শব্দের সংজ্ঞা দিই:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 `AgentExecutor` চ্যাট ইতিহাসও সংরক্ষণ করে যাতে চ্যাটের প্রসঙ্গ প্রদান করা যায়।
 
-![ল্যাংচেইন এজেন্টস](../../../translated_images/bn/langchain-agents.edcc55b5d5c43716.png)
+![ল্যাংচেইন এজেন্টস](../../../translated_images/bn/langchain-agents.edcc55b5d5c43716.webp)
 
 ল্যাংচেইন একটি [টুলসের ক্যাটালগ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) অফার করে যা আপনার অ্যাপ্লিকেশনে আমদানি করা যায় যেখানে LLM অ্যাক্সেস পেতে পারে। এগুলো কমিউনিটি এবং ল্যাংচেইন টিম দ্বারা তৈরি।
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 এখানে প্রক্রিয়ার একটি উদাহরণ:
 
-![অটোজেন](../../../translated_images/bn/autogen.dee9a25a45fde584.png)
+![অটোজেন](../../../translated_images/bn/autogen.dee9a25a45fde584.webp)
 
 #### সিস্টেম বার্তা সহ সংজ্ঞায়িত LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 কার্যক্রম সম্পন্ন করতে `Planner` টুলসের একটি সংগ্রহ `Plugins`-এ অ্যাক্সেস পায়। এটি পাইথন ক্লাস বা একটি সাধারণ কোড ইন্টারপ্রেটার হতে পারে। এই প্লাগইনগুলো এমবেডিং হিসেবে সংরক্ষিত হয় যাতে LLM সঠিক প্লাগইনটি আরও ভালোভাবে অনুসন্ধান করতে পারে।
 
-![টাস্কওয়েভার](../../../translated_images/bn/taskweaver.da8559999267715a.png)
+![টাস্কওয়েভার](../../../translated_images/bn/taskweaver.da8559999267715a.webp)
 
 এখানে অ্যানোমালি ডিটেকশন পরিচালনা করার একটি প্লাগইনের উদাহরণ:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 শেষ এজেন্ট ফ্রেমওয়ার্ক যা আমরা অন্বেষণ করব তা হলো [জার্ভিস](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)। জার্ভিসের অনন্য বৈশিষ্ট্য হলো এটি কথোপকথনের `state` পরিচালনা করতে একটি LLM ব্যবহার করে এবং `tools` হলো অন্যান্য AI মডেল। প্রতিটি AI মডেল নির্দিষ্ট কার্যক্রম সম্পাদন করে যেমন অবজেক্ট ডিটেকশন, ট্রান্সক্রিপশন বা ইমেজ ক্যাপশনিং।
 
-![জার্ভিস](../../../translated_images/bn/jarvis.762ddbadbd1a3a33.png)
+![জার্ভিস](../../../translated_images/bn/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, একটি সাধারণ উদ্দেশ্য মডেল হিসেবে, ব্যবহারকারীর অনুরোধ গ্রহণ করে এবং নির্দিষ্ট কার্যক্রম এবং কার্যক্রম সম্পন্ন করতে প্রয়োজনীয় যে কোনো আর্গুমেন্ট/ডেটা চিহ্নিত করে।
 

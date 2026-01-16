@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يتماشى تطوير نماذج اللغة الصغيرة مع الحاجة المتزايدة لنماذج يمكن نشرها في بيئات ذات موارد محدودة، مثل الأجهزة المحمولة أو منصات الحوسبة الطرفية، حيث قد تكون نماذج اللغة الكبيرة غير عملية بسبب متطلبات مواردها العالية. من خلال التركيز على الكفاءة، توازن نماذج اللغة الصغيرة بين الأداء وسهولة الوصول، مما يتيح تطبيقات أوسع في مجالات مختلفة.
 
-![slm](../../../translated_images/ar/slm.4058842744d0444a.png)
+![slm](../../../translated_images/ar/slm.4058842744d0444a.webp)
 
 ## أهداف التعلم  
 في هذا الدرس، نأمل في تقديم معرفة حول نماذج اللغة الصغيرة وربطها مع Microsoft Phi-3 لتعلم سيناريوهات مختلفة في محتوى النصوص، والرؤية، وMoE.
@@ -113,7 +113,7 @@ CO_OP_TRANSLATOR_METADATA:
 ## كيفية استخدام نماذج عائلة Phi-3/3.5  
 نأمل في استخدام Phi-3/3.5 في سيناريوهات مختلفة. بعد ذلك، سنستخدم Phi-3/3.5 بناءً على سيناريوهات مختلفة.
 
-![phi3](../../../translated_images/ar/phi3.655208c3186ae381.png)
+![phi3](../../../translated_images/ar/phi3.655208c3186ae381.webp)
 
 ### الفرق في الاستدلال عبر API السحابي  
 **نماذج GitHub**  
@@ -121,9 +121,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 - عرض توضيحي: مقارنة تأثيرات Phi-3-mini وPhi-3.5-mini في سيناريوهات اللغة الصينية
 
-![phi3](../../../translated_images/ar/gh1.126c6139713b622b.png)
+![phi3](../../../translated_images/ar/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/ar/gh2.07d7985af66f178d.png)
+![phi35](../../../translated_images/ar/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 أو إذا أردنا استخدام نماذج الرؤية وMoE، يمكنك استخدام Azure AI Studio لإجراء الاستدعاء. إذا كنت مهتمًا، يمكنك قراءة كتاب وصفات Phi-3 لتعلم كيفية استدعاء Phi-3/3.5 Instruct، Vision، MoE عبر Azure AI Studio [اضغط على هذا الرابط](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)

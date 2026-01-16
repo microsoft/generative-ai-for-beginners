@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "bn"
 }
 -->
-![Generative AI For Beginners](../../translated_images/bn/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
+![Generative AI For Beginners](../../translated_images/bn/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### ২১টি পাঠ যা আপনাকে জেনারেটিভ AI অ্যাপ্লিকেশন তৈরি শুরু করার জন্য প্রয়োজনীয় সবকিছু শেখাবে
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # بناء تطبيقات توليد الصور
 
-[![بناء تطبيقات توليد الصور](../../../translated_images/ar/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![بناء تطبيقات توليد الصور](../../../translated_images/ar/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 هناك أكثر من مجرد توليد النصوص في نماذج اللغة الكبيرة (LLMs). يمكن أيضًا توليد الصور من وصف النصوص. وجود الصور كوسيلة يمكن أن يكون مفيدًا للغاية في العديد من المجالات مثل التكنولوجيا الطبية، الهندسة المعمارية، السياحة، تطوير الألعاب والمزيد. في هذا الفصل، سنلقي نظرة على أكثر نماذج توليد الصور شهرة، DALL-E وMidjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 إليك ما يمكن أن يولده طلاب Edu4All على سبيل المثال إذا كانوا يعملون في الفصل على المعالم:
 
-![شركة Edu4All، فصل عن المعالم، برج إيفل](../../../translated_images/ar/startup.94d6b79cc4bb3f5a.png)
+![شركة Edu4All، فصل عن المعالم، برج إيفل](../../../translated_images/ar/startup.94d6b79cc4bb3f5a.webp)
 
 باستخدام برومبت مثل:
 
@@ -272,9 +272,9 @@ _حقوق الصورة ويكيبيديا، الصورة مولدة بواسطة
   الصورة الأساسية ستحتوي فقط على الصالة مع المسبح ولكن الصورة النهائية ستحتوي على فلامنغو:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/ar/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ar/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/ar/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ar/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ar/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ar/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **إنشاء تنويعات**. الفكرة هي أنك تأخذ صورة موجودة وتطلب إنشاء تنويعات لها. لإنشاء تنويع، تقدم صورة وبرومبت نصي وكود مثل هذا:
@@ -298,11 +298,11 @@ _حقوق الصورة ويكيبيديا، الصورة مولدة بواسطة
 
 > برومبت: "أرنب على حصان، يحمل مصاصة، في مرج ضبابي حيث تنمو أزهار النرجس"
 
-![أرنب على حصان يحمل مصاصة، النسخة الأولى](../../../translated_images/ar/v1-generated-image.a295cfcffa3c13c2.png)
+![أرنب على حصان يحمل مصاصة، النسخة الأولى](../../../translated_images/ar/v1-generated-image.a295cfcffa3c13c2.webp)
 
 الآن لنقم بتشغيل نفس البرومبت فقط لنرى أننا لن نحصل على نفس الصورة مرتين:
 
-![صورة مولدة لأرنب على حصان](../../../translated_images/ar/v2-generated-image.33f55a3714efe61d.png)
+![صورة مولدة لأرنب على حصان](../../../translated_images/ar/v2-generated-image.33f55a3714efe61d.webp)
 
 كما ترى، الصور متشابهة، لكنها ليست نفسها. لنحاول تغيير قيمة درجة الحرارة إلى 0.1 ونرى ما يحدث:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 الآن عندما تقوم بتشغيل هذا الكود، تحصل على هاتين الصورتين:
 
-- ![درجة الحرارة 0، النسخة الأولى](../../../translated_images/ar/v1-temp-generated-image.a4346e1d2360a056.png)
-- ![درجة الحرارة 0، النسخة الثانية](../../../translated_images/ar/v2-temp-generated-image.871d0c920dbfb0f1.png)
+- ![درجة الحرارة 0، النسخة الأولى](../../../translated_images/ar/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![درجة الحرارة 0، النسخة الثانية](../../../translated_images/ar/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 هنا يمكنك أن ترى بوضوح كيف تتشابه الصور أكثر.
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "cs"
 }
 -->
-[![Integrace s voláním funkcí](../../../translated_images/cs/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrace s voláním funkcí](../../../translated_images/cs/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Životní cyklus aplikace generativní AI
 
@@ -30,7 +30,7 @@ LLM jsou novým nástrojem v arzenálu umělé inteligence, jsou neuvěřitelně
 
 Potřebujeme tedy nové paradigma, které tento nástroj adaptuje dynamicky a s vhodnými pobídkami. Starší AI aplikace můžeme kategorizovat jako „ML aplikace“ a novější AI aplikace jako „GenAI aplikace“ nebo jednoduše „AI aplikace“, což odráží hlavní používané technologie a techniky v dané době. To posouvá náš narativ v několika směrech, podívejte se na následující srovnání.
 
-![Srovnání LLMOps vs. MLOps](../../../translated_images/cs/01-llmops-shift.29bc933cb3bb0080.png)
+![Srovnání LLMOps vs. MLOps](../../../translated_images/cs/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Všimněte si, že v LLMOps se více zaměřujeme na vývojáře aplikací, používáme integrace jako klíčový bod, využíváme „Modely jako službu“ a uvažujeme o následujících metrikách.
 
@@ -44,7 +44,7 @@ Všimněte si, že v LLMOps se více zaměřujeme na vývojáře aplikací, pou�
 
 Nejprve, abychom pochopili životní cyklus a jeho úpravy, podívejme se na následující infografiku.
 
-![Infografika LLMOps](../../../translated_images/cs/02-llmops.70a942ead05a7645.png)
+![Infografika LLMOps](../../../translated_images/cs/02-llmops.70a942ead05a7645.webp)
 
 Jak si můžete všimnout, je to odlišné od běžných životních cyklů v MLOps. LLM mají mnoho nových požadavků, jako je promptování, různé techniky pro zlepšení kvality (doladění, RAG, meta-promptování), odlišné hodnocení a odpovědnost s ohledem na odpovědnou AI, a nakonec nové hodnotící metriky (kvalita, škoda, poctivost, náklady a latence).
 
@@ -54,7 +54,7 @@ Všimněte si, že to není lineární, ale integrované smyčky, iterativní a 
 
 Jak bychom mohli tyto kroky prozkoumat? Pojďme se podrobněji podívat, jak můžeme vytvořit životní cyklus.
 
-![Pracovní postup LLMOps](../../../translated_images/cs/03-llm-stage-flows.3a1e1c401235a6cf.png)
+![Pracovní postup LLMOps](../../../translated_images/cs/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Může to vypadat trochu složitě, zaměřme se nejprve na tři hlavní kroky.
 
@@ -74,11 +74,11 @@ Pro nástroje Microsoft poskytuje [Azure AI Platform](https://azure.microsoft.co
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) vám umožňuje používat [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio je webový portál, který vám umožňuje prozkoumávat modely, ukázky a nástroje. Spravovat vaše zdroje, vývojové toky UI a možnosti SDK/CLI pro vývoj zaměřený na kód.
 
-![Možnosti Azure AI](../../../translated_images/cs/04-azure-ai-platform.80203baf03a12fa8.png)
+![Možnosti Azure AI](../../../translated_images/cs/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI vám umožňuje používat různé zdroje pro správu vašich operací, služeb, projektů, vyhledávání vektorů a databází.
 
-![LLMOps s Azure AI](../../../translated_images/cs/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
+![LLMOps s Azure AI](../../../translated_images/cs/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Vytvářejte od Proof-of-Concept (POC) až po aplikace ve velkém měřítku s PromptFlow:
 
@@ -86,7 +86,7 @@ Vytvářejte od Proof-of-Concept (POC) až po aplikace ve velkém měřítku s P
 - Testujte a dolaďujte své aplikace pro kvalitní AI snadno
 - Používejte Azure AI Studio pro integraci a iteraci s cloudem, push a nasazení pro rychlou integraci
 
-![LLMOps s PromptFlow](../../../translated_images/cs/06-llm-promptflow.a183eba07a3a7fdf.png)
+![LLMOps s PromptFlow](../../../translated_images/cs/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Skvělé! Pokračujte ve svém učení!
 
