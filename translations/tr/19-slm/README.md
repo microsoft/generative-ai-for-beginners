@@ -33,7 +33,7 @@ SLM’ler, çok büyük miktarda metin verisi üzerinde eğitilir. Eğitim sıra
 
 SLM’lerin geliştirilmesi, tam ölçekli LLM’lerin ağır kaynak gereksinimleri nedeniyle pratik olmadığı mobil cihazlar veya uç bilişim platformları gibi kaynak kısıtlı ortamlarda kullanılabilecek modeller ihtiyacına paraleldir. Verimliliğe odaklanarak, SLM’ler performans ile erişilebilirlik arasında bir denge kurar ve çeşitli alanlarda daha geniş uygulama imkanı sağlar.  
 
-![slm](../../../translated_images/slm.4058842744d0444a.tr.png)  
+![slm](../../../translated_images/tr/slm.4058842744d0444a.png)  
 
 ## Öğrenme Hedefleri  
 
@@ -135,7 +135,7 @@ Phi-3/3.5 Ailesi modellerini farklı senaryolara göre kullanabiliriz. LLM’ler
 
 Phi-3/3.5’i farklı senaryolarda kullanmayı hedefliyoruz. Şimdi, farklı senaryolara göre Phi-3/3.5 kullanacağız.  
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.tr.png)  
+![phi3](../../../translated_images/tr/phi3.655208c3186ae381.png)  
 
 ### Bulut API’si ile Çıkarım Farkı  
 
@@ -145,9 +145,9 @@ GitHub Modelleri en doğrudan yoldur. Phi-3/3.5-Instruct modeline GitHub Modelle
 
 - Demo: Çince senaryolarda Phi-3-mini ve Phi-3.5-mini etkilerinin karşılaştırılması  
 
-![phi3](../../../translated_images/gh1.126c6139713b622b.tr.png)  
+![phi3](../../../translated_images/tr/gh1.126c6139713b622b.png)  
 
-![phi35](../../../translated_images/gh2.07d7985af66f178d.tr.png)  
+![phi35](../../../translated_images/tr/gh2.07d7985af66f178d.png)  
 
 **Azure AI Studio**  
 

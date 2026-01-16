@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygga sökapplikationer
 
-[![Introduktion till Generativ AI och Stora Språkmodeller](../../../translated_images/08-lesson-banner.8fff48c566dad08a.sv.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduktion till Generativ AI och Stora Språkmodeller](../../../translated_images/sv/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klicka på bilden ovan för att se videon för denna lektion_
 
@@ -44,7 +44,7 @@ Lektionens Embedding Index innehåller transkriptioner från YouTube-videor på 
 
 Följande är ett exempel på en semantisk fråga för frågan 'kan du använda rstudio med azure ml?'. Kolla in YouTube-URL:en, du kommer att se att URL:en innehåller en tidsstämpel som tar dig till den plats i videon där svaret på frågan finns.
 
-![Semantisk fråga för frågan "kan du använda rstudio med Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.sv.png)
+![Semantisk fråga för frågan "kan du använda rstudio med Azure ML"](../../../translated_images/sv/query-results.bb0480ebf025fac6.png)
 
 ## Vad är semantisk sökning?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 När du kör notebooken kommer du att bli ombedd att ange en fråga. Inmatningsrutan kommer att se ut så här:
 
-![Inmatningsruta för användaren att ange en fråga](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.sv.png)
+![Inmatningsruta för användaren att ange en fråga](../../../translated_images/sv/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Bra jobbat! Fortsätt din inlärning
 

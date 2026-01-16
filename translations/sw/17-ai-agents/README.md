@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.sw.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/sw/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Utangulizi
 
@@ -33,7 +33,7 @@ Wakala wa AI ni uwanja wa kusisimua sana katika ulimwengu wa AI ya Kizazi. Pamoj
 
 Wakala wa AI huruhusu Mifano Mikubwa ya Lugha (LLMs) kutekeleza majukumu kwa kuwapa ufikiaji wa **hali** na **zana**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.sw.png)
+![Agent Model](../../../translated_images/sw/what-agent.21f2893bdfd01e6a.png)
 
 Hebu tueleze maneno haya:
 
@@ -53,7 +53,7 @@ Ili kusimamia **hali**, hutumia kazi iliyojengwa ndani inayoitwa `AgentExecutor`
 
 `Agent Executor` pia huhifadhi historia ya mazungumzo ili kutoa muktadha wa mazungumzo.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.sw.png)
+![Langchain Agents](../../../translated_images/sw/langchain-agents.edcc55b5d5c43716.png)
 
 LangChain inatoa [katalogi ya zana](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ambazo zinaweza kuingizwa katika programu yako ambapo LLM inaweza kupata ufikiaji. Hizi zimetengenezwa na jamii na timu ya LangChain.
 
@@ -85,7 +85,7 @@ Ili kubadilisha na kusimamia hali, Msaidizi Wakala huzalisha msimbo wa Python ku
 
 Hapa kuna mfano wa mchakato:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.sw.png)
+![AutoGen](../../../translated_images/sw/autogen.dee9a25a45fde584.png)
 
 #### LLM Iliyofafanuliwa na Ujumbe wa Mfumo
 
@@ -129,7 +129,7 @@ Ili kusimamia hali ya mazungumzo, TaskWeaver hutumia dhana ya `Planner`. `Planne
 
 Ili kukamilisha majukumu, `Planner` inafikiwa na mkusanyiko wa zana zinazoitwa `Plugins`. Hizi zinaweza kuwa madarasa ya Python au mfasiri wa msimbo wa jumla. Plugins hizi zinahifadhiwa kama embeddings ili LLM iweze kutafuta plugin sahihi kwa urahisi.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.sw.png)
+![Taskweaver](../../../translated_images/sw/taskweaver.da8559999267715a.png)
 
 Hapa kuna mfano wa plugin ya kushughulikia utambuzi wa kasoro:
 
@@ -143,7 +143,7 @@ Msimbo unathibitishwa kabla ya kutekelezwa. Kipengele kingine cha kusimamia mukt
 
 Mfumo wa wakala wa mwisho tutakaochunguza ni [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Kinachofanya JARVIS kuwa wa kipekee ni kwamba hutumia LLM kusimamia `hali` ya mazungumzo na `zana` ni mifano mingine ya AI. Kila moja ya mifano ya AI ni mifano maalum inayotekeleza majukumu fulani kama vile utambuzi wa vitu, unukuzi au maelezo ya picha.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.sw.png)
+![JARVIS](../../../translated_images/sw/jarvis.762ddbadbd1a3a33.png)
 
 LLM, ikiwa ni mfano wa matumizi ya jumla, hupokea ombi kutoka kwa mtumiaji na kutambua jukumu maalum na hoja/data yoyote inayohitajika kukamilisha jukumu.
 

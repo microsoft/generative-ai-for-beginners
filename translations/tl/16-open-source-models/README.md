@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tl"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.tl.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/tl/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Panimula
 
@@ -41,12 +41,12 @@ Para sa araling ito, tatawagin natin ang mga modelo bilang "open models" mula ng
 
 **Gastos** - Mas mababa ang gastos kada token sa paggamit at pag-deploy ng mga modelong ito kumpara sa mga proprietary na modelo. Kapag bumubuo ng mga Generative AI na aplikasyon, mahalagang tingnan ang performance kumpara sa presyo kapag nagtatrabaho gamit ang mga modelong ito para sa iyong use case.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.tl.png)
+![Model Cost](../../../translated_images/tl/model-price.3f5a3e4d32ae00b4.png)
 Pinagmulan: Artificial Analysis
 
 **Kakayahang Magbago-bago** - Ang pagtatrabaho gamit ang open models ay nagbibigay-daan sa iyo na maging flexible sa paggamit ng iba't ibang modelo o pagsasama-sama ng mga ito. Isang halimbawa nito ay ang [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) kung saan maaaring pumili ang user ng modelong gagamitin direkta sa user interface:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.tl.png)
+![Choose Model](../../../translated_images/tl/choose-model.f095d15bbac92214.png)
 
 ## Pagtuklas sa Iba't Ibang Open Models
 
@@ -74,7 +74,7 @@ Walang iisang sagot sa pagpili ng open model. Isang magandang lugar upang magsim
 
 Kapag naghahanap ng paghahambing ng LLMs sa iba't ibang uri, ang [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) ay isa pang mahusay na mapagkukunan:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.tl.png)
+![Model Quality](../../../translated_images/tl/model-quality.aaae1c22e00f7ee1.png)
 Pinagmulan: Artificial Analysis
 
 Kung nagtatrabaho sa isang partikular na use case, ang paghahanap ng mga fine-tuned na bersyon na nakatuon sa parehong larangan ay maaaring maging epektibo. Ang pagsubok sa maraming open models upang makita kung paano sila gumaganap ayon sa iyong at ng iyong mga user na inaasahan ay isa pang magandang gawain.

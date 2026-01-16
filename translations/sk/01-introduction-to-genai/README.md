@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Úvod do generatívnej AI a veľkých jazykových modelov
 
-[![Úvod do generatívnej AI a veľkých jazykových modelov](../../../translated_images/01-lesson-banner.2424cfd092f43366.sk.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Úvod do generatívnej AI a veľkých jazykových modelov](../../../translated_images/sk/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 
@@ -43,7 +43,7 @@ Tím nášho startupu si uvedomuje, že tento cieľ nedokážeme dosiahnuť bez 
 
 Generatívna AI má potenciál revolučne zmeniť spôsob, akým sa dnes učíme a učíme iných, pričom študenti majú k dispozícii virtuálnych učiteľov 24 hodín denne, ktorí poskytujú obrovské množstvo informácií a príkladov, a učitelia môžu využívať inovatívne nástroje na hodnotenie svojich študentov a poskytovanie spätnej väzby.
 
-![Päť mladých študentov pozerajúcich na monitor - obrázok od DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.sk.png)
+![Päť mladých študentov pozerajúcich na monitor - obrázok od DALLE2](../../../translated_images/sk/students-by-DALLE2.b70fddaced1042ee.png)
 
 Na začiatok si definujme niektoré základné pojmy a terminológiu, ktorú budeme používať počas celého kurzu.
 
@@ -69,7 +69,7 @@ Táto technológia poháňala virtuálnych asistentov, ktorí sa objavili v prve
 
 Takto sme sa dostali k dnešnej generatívnej AI, ktorú možno považovať za podmnožinu hlbokého učenia.
 
-![AI, ML, DL a generatívna AI](../../../translated_images/AI-diagram.c391fa518451a40d.sk.png)
+![AI, ML, DL a generatívna AI](../../../translated_images/sk/AI-diagram.c391fa518451a40d.png)
 
 Po desaťročiach výskumu v oblasti AI nová architektúra modelov – nazývaná _Transformer_ – prekonala obmedzenia RNNs, umožňujúc spracovanie oveľa dlhších sekvencií textu ako vstup. Transformery sú založené na mechanizme pozornosti, ktorý umožňuje modelu priradiť rôzne váhy vstupom, ktoré dostáva, „venovať väčšiu pozornosť“ tam, kde je sústredená najrelevantnejšia informácia, bez ohľadu na ich poradie v textovej sekvencii.
 
@@ -81,7 +81,7 @@ V ďalšej kapitole preskúmame rôzne typy generatívnych AI modelov, ale teraz
 
 - **Tokenizér, text na čísla**: Veľké jazykové modely prijímajú text ako vstup a generujú text ako výstup. Avšak, keďže ide o štatistické modely, pracujú oveľa lepšie s číslami než s textovými sekvenciami. Preto každý vstup do modelu je spracovaný tokenizérom predtým, než ho použije hlavný model. Token je časť textu – pozostávajúca z variabilného počtu znakov, takže hlavnou úlohou tokenizéra je rozdelenie vstupu na pole tokenov. Potom je každý token mapovaný na index tokenu, čo je číselné kódovanie pôvodného textového úseku.
 
-![Príklad tokenizácie](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.sk.png)
+![Príklad tokenizácie](../../../translated_images/sk/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **Predikcia výstupných tokenov**: Na základe n tokenov ako vstupu (s maximálnym n, ktoré sa líši od modelu k modelu) je model schopný predpovedať jeden token ako výstup. Tento token je potom začlenený do vstupu ďalšej iterácie, v rozširujúcom sa okne, čo umožňuje lepší používateľský zážitok z získania jednej (alebo viacerých) vety ako odpovede. To vysvetľuje, prečo, ak ste niekedy používali ChatGPT, mohli ste si všimnúť, že niekedy sa zdá, že sa zastaví uprostred vety.
 
@@ -98,23 +98,23 @@ Vstup veľkého jazykového modelu je známy ako prompt, zatiaľ čo výstup je 
 
   1. Zhrnutie článku, knihy, recenzií produktov a ďalších, spolu s extrakciou poznatkov z nestruktúrovaných dát.
     
-    ![Príklad zhrnutia](../../../translated_images/summarization-example.7b7ff97147b3d790.sk.png)
+    ![Príklad zhrnutia](../../../translated_images/sk/summarization-example.7b7ff97147b3d790.png)
   
   2. Kreatívne nápady a návrh článku, eseje, zadania a ďalších.
       
-     ![Príklad kreatívneho písania](../../../translated_images/creative-writing-example.e24a685b5a543ad1.sk.png)
+     ![Príklad kreatívneho písania](../../../translated_images/sk/creative-writing-example.e24a685b5a543ad1.png)
 
 - **Otázku**, položenú vo forme konverzácie s agentom.
   
-  ![Príklad konverzácie](../../../translated_images/conversation-example.60c2afc0f595fa59.sk.png)
+  ![Príklad konverzácie](../../../translated_images/sk/conversation-example.60c2afc0f595fa59.png)
 
 - Časť **textu na dokončenie**, čo implicitne znamená žiadosť o pomoc pri písaní.
   
-  ![Príklad dokončenia textu](../../../translated_images/text-completion-example.cbb0f28403d42752.sk.png)
+  ![Príklad dokončenia textu](../../../translated_images/sk/text-completion-example.cbb0f28403d42752.png)
 
 - Časť **kódu** spolu s požiadavkou na vysvetlenie a dokumentáciu, alebo komentár žiadajúci o generovanie kódu vykonávajúceho konkrétnu úlohu.
   
-  ![Príklad kódovania](../../../translated_images/coding-example.50ebabe8a6afff20.sk.png)
+  ![Príklad kódovania](../../../translated_images/sk/coding-example.50ebabe8a6afff20.png)
 
 Vyššie uvedené príklady sú pomerne jednoduché a nie sú určené na to, aby boli vyčerpávajúcou ukážkou schopností veľkých jazykových modelov. Majú za cieľ ukázať potenciál využitia generatívnej AI, najmä ale nielen v kontexte vzdelávania.
 

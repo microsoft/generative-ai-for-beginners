@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 為 AI 應用設計使用者體驗
 
-[![為 AI 應用設計使用者體驗](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.tw.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![為 AI 應用設計使用者體驗](../../../translated_images/tw/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(點擊上方圖片觀看本課程的影片)_
 
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 愉悅性意味著應用程式使用起來令人愉快。一個吸引人的使用者體驗可以對使用者產生積極影響，鼓勵他們再次使用該應用程式並增加業務收入。
 
-![展示 AI 中 UX 考量的圖片](../../../translated_images/uxinai.d5b4ed690f5cefff.tw.png)
+![展示 AI 中 UX 考量的圖片](../../../translated_images/tw/uxinai.d5b4ed690f5cefff.png)
 
 並非每個挑戰都能通過 AI 解決。AI 的作用是增強您的使用者體驗，例如自動化手動任務或個性化使用者體驗。
 
@@ -72,25 +72,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 當 AI 幫助做出決策，例如向下一代傳授知識時，教師和家長了解 AI 決策的方式至關重要。這就是可解釋性——理解 AI 應用程式如何做出決策。為可解釋性設計包括添加詳細信息，突出顯示 AI 如何得出結果。使用者必須知道結果是由 AI 而非人類生成的。例如，與其說「現在開始與您的導師聊天」，不如說「使用 AI 導師，根據您的需求進行調整，幫助您以自己的節奏學習。」
 
-![應用程式登陸頁面清楚展示 AI 應用程式的可解釋性](../../../translated_images/explanability-in-ai.134426a96b498fbf.tw.png)
+![應用程式登陸頁面清楚展示 AI 應用程式的可解釋性](../../../translated_images/tw/explanability-in-ai.134426a96b498fbf.png)
 
 另一個例子是 AI 如何使用使用者和個人數據。例如，一個具有學生角色的使用者可能會因其角色而受到限制。AI 可能無法直接揭示問題的答案，但可以幫助引導使用者思考如何解決問題。
 
-![AI 根據角色回答問題](../../../translated_images/solving-questions.b7dea1604de0cbd2.tw.png)
+![AI 根據角色回答問題](../../../translated_images/tw/solving-questions.b7dea1604de0cbd2.png)
 
 可解釋性的另一個重要部分是簡化解釋。學生和教師可能不是 AI 專家，因此應用程式的功能和限制的解釋應該簡單易懂。
 
-![簡化 AI 功能的解釋](../../../translated_images/simplified-explanations.4679508a406c3621.tw.png)
+![簡化 AI 功能的解釋](../../../translated_images/tw/simplified-explanations.4679508a406c3621.png)
 
 ### 控制
 
 生成式 AI 創造了 AI 與使用者之間的協作，例如使用者可以修改提示以獲得不同的結果。此外，一旦生成了結果，使用者應能夠修改結果，讓他們感到有控制感。例如，在使用 Bing 時，您可以根據格式、語氣和長度調整您的提示。此外，您可以對生成的結果進行修改，如下所示：
 
-![Bing 搜索結果，提供修改提示和結果的選項](../../../translated_images/bing1.293ae8527dbe2789.tw.png)
+![Bing 搜索結果，提供修改提示和結果的選項](../../../translated_images/tw/bing1.293ae8527dbe2789.png)
 
 Bing 的另一個功能是允許使用者控制應用程式使用的數據。例如，學校應用程式中的學生可能希望使用自己的筆記以及教師的資源作為複習材料。
 
-![Bing 搜索結果，提供修改提示和結果的選項](../../../translated_images/bing2.309f4845528a88c2.tw.png)
+![Bing 搜索結果，提供修改提示和結果的選項](../../../translated_images/tw/bing2.309f4845528a88c2.png)
 
 > 在設計 AI 應用程式時，刻意性是關鍵，確保使用者不會過度信任，對其能力設置不切實際的期望。一種方法是在提示和結果之間創造摩擦，提醒使用者這是 AI 而不是另一個人。
 
@@ -102,7 +102,7 @@ AI 應用程式應該內建接收和提供回饋的功能。這不僅有助於 A
 
 另一種處理方式是清楚地傳達系統的功能和限制。如果使用者犯錯，要求超出 AI 能力範圍的內容，應該有一種方式來處理，如下所示。
 
-![提供回饋並處理錯誤](../../../translated_images/feedback-loops.7955c134429a9466.tw.png)
+![提供回饋並處理錯誤](../../../translated_images/tw/feedback-loops.7955c134429a9466.png)
 
 系統錯誤在應用程式中很常見，使用者可能需要超出 AI 範圍的信息幫助，或者應用程式可能對使用者生成摘要的問題/主題數量有限。例如，一個僅用有限科目（例如歷史和數學）數據訓練的 AI 應用程式可能無法處理地理相關的問題。為了減輕這種情況，AI 系統可以給出如下回應：「抱歉，我們的產品僅用以下科目數據進行訓練......，我無法回答您提出的問題。」
 

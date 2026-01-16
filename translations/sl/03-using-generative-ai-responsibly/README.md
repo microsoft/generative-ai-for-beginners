@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Uporaba generativne umetne inteligence odgovorno
 
-[![Uporaba generativne umetne inteligence odgovorno](../../../translated_images/03-lesson-banner.1ed56067a452d977.sl.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Uporaba generativne umetne inteligence odgovorno](../../../translated_images/sl/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Kliknite zgornjo sliko za ogled videa te lekcije_
 
@@ -85,7 +85,7 @@ Takšni izhodi ne le škodujejo gradnji pozitivnih izkušenj z izdelki za naše 
 
 Zdaj, ko smo opredelili pomen odgovorne generativne umetne inteligence, si poglejmo 4 korake, ki jih lahko naredimo, da odgovorno gradimo naše rešitve z umetno inteligenco:
 
-![Cikel zmanjševanja tveganj](../../../translated_images/mitigate-cycle.babcd5a5658e1775.sl.png)
+![Cikel zmanjševanja tveganj](../../../translated_images/sl/mitigate-cycle.babcd5a5658e1775.png)
 
 ### Merjenje potencialnih škod
 
@@ -97,7 +97,7 @@ Ker naš startup gradi izobraževalni produkt, bi bilo dobro pripraviti seznam p
 
 Zdaj je čas, da najdemo načine, kako preprečiti ali omejiti potencialno škodo, ki jo povzroča model in njegovi odgovori. To lahko obravnavamo na 4 različnih ravneh:
 
-![Plasti zmanjševanja tveganj](../../../translated_images/mitigation-layers.377215120b9a1159.sl.png)
+![Plasti zmanjševanja tveganj](../../../translated_images/sl/mitigation-layers.377215120b9a1159.png)
 
 - **Model**. Izbira pravega modela za pravi primer uporabe. Večji in bolj zapleteni modeli, kot je GPT-4, lahko predstavljajo večje tveganje za škodljivo vsebino, če se uporabljajo za manjše in bolj specifične primere uporabe. Uporaba vaših podatkov za prilagoditev modela prav tako zmanjšuje tveganje za škodljivo vsebino.
 

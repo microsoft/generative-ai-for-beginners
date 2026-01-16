@@ -33,7 +33,7 @@ SLM-urile sunt antrenate pe cantități mari de date text. În timpul antrenamen
 
 Dezvoltarea SLM-urilor răspunde nevoii tot mai mari de modele care pot fi implementate în medii cu resurse limitate, cum ar fi dispozitive mobile sau platforme de edge computing, unde LLM-urile complete pot fi nepractice din cauza cerințelor mari de resurse. Prin concentrarea pe eficiență, SLM-urile echilibrează performanța cu accesibilitatea, permițând o aplicare mai largă în diverse domenii.
 
-![slm](../../../translated_images/slm.4058842744d0444a.ro.png)
+![slm](../../../translated_images/ro/slm.4058842744d0444a.png)
 
 ## Obiective de Învățare  
 
@@ -135,7 +135,7 @@ Putem folosi modelul din familia Phi-3/3.5 în funcție de diferite scenarii. Sp
 
 Ne propunem să folosim Phi-3/3.5 în diferite scenarii. În continuare, vom folosi Phi-3/3.5 în funcție de diverse scenarii.
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.ro.png)
+![phi3](../../../translated_images/ro/phi3.655208c3186ae381.png)
 
 ### Diferența de inferență prin API-ul Cloud  
 
@@ -145,9 +145,9 @@ Modelele GitHub sunt cea mai directă metodă. Poți accesa rapid modelul Phi-3/
 
 - Demo: Compararea efectelor Phi-3-mini și Phi-3.5-mini în scenarii chinezești
 
-![phi3](../../../translated_images/gh1.126c6139713b622b.ro.png)
+![phi3](../../../translated_images/ro/gh1.126c6139713b622b.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178d.ro.png)
+![phi35](../../../translated_images/ro/gh2.07d7985af66f178d.png)
 
 **Azure AI Studio**  
 

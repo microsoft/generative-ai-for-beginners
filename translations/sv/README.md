@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sv"
 }
 -->
-![Generativ AI för nybörjare](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.sv.png)
+![Generativ AI för nybörjare](../../translated_images/sv/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 lektioner som lär dig allt du behöver veta för att börja bygga generativa AI-applikationer
 

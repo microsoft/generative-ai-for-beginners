@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Створення пошукових додатків
 
-[![Вступ до генеративного штучного інтелекту та великих мовних моделей](../../../translated_images/08-lesson-banner.8fff48c566dad08a.uk.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Вступ до генеративного штучного інтелекту та великих мовних моделей](../../../translated_images/uk/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Натисніть на зображення вище, щоб переглянути відео цього уроку_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ось приклад семантичного запиту для запитання "Чи можна використовувати rstudio з azure ml?". Зверніть увагу на URL-адресу YouTube, вона містить часову мітку, яка веде до моменту у відео, де знаходиться відповідь на запитання.
 
-![Семантичний запит для запитання "Чи можна використовувати rstudio з Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.uk.png)
+![Семантичний запит для запитання "Чи можна використовувати rstudio з Azure ML"](../../../translated_images/uk/query-results.bb0480ebf025fac6.png)
 
 ## Що таке семантичний пошук?
 
@@ -162,7 +162,7 @@ az cognitiveservices account deployment create \
 
 Коли ви запустите ноутбук, вам буде запропоновано ввести запит. Вікно введення виглядатиме так:
 
-![Вікно введення для введення запиту користувачем](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.uk.png)
+![Вікно введення для введення запиту користувачем](../../../translated_images/uk/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Чудова робота! Продовжуйте навчання
 

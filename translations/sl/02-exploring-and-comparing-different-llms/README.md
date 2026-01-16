@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Raziskovanje in primerjava različnih velikih jezikovnih modelov (LLM)
 
-[![Raziskovanje in primerjava različnih velikih jezikovnih modelov](../../../translated_images/02-lesson-banner.ef94c84979f97f60.sl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Raziskovanje in primerjava različnih velikih jezikovnih modelov](../../../translated_images/sl/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Kliknite zgornjo sliko za ogled videoposnetka te lekcije_
 
@@ -59,14 +59,14 @@ Izraz Temeljni model so [skovali raziskovalci na Stanfordu](https://arxiv.org/ab
 - **So zelo veliki modeli**, ki temeljijo na zelo globokih nevronskih mrežah, usposobljenih na milijardah parametrov.
 - **Običajno so namenjeni kot 'temelj' za druge modele**, kar pomeni, da se lahko uporabijo kot izhodišče za gradnjo drugih modelov, kar se lahko doseže z dodatnim prilagajanjem.
 
-![Temeljni modeli proti LLM-jem](../../../translated_images/FoundationModel.e4859dbb7a825c94.sl.png)
+![Temeljni modeli proti LLM-jem](../../../translated_images/sl/FoundationModel.e4859dbb7a825c94.png)
 
 Vir slike: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Za dodatno pojasnitev te razlike vzemimo ChatGPT kot primer. Za izdelavo prve različice ChatGPT je model GPT-3.5 služil kot temeljni model. To pomeni, da je OpenAI uporabil nekaj podatkov, specifičnih za klepet, da bi ustvaril prilagojeno različico GPT-3.5, ki je bila specializirana za dobro delovanje v pogovornih scenarijih, kot so klepetalni roboti.
 
-![Temeljni model](../../../translated_images/Multimodal.2c389c6439e0fc51.sl.png)
+![Temeljni model](../../../translated_images/sl/Multimodal.2c389c6439e0fc51.png)
 
 Vir slike: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-je lahko razvrstimo tudi glede na izhod, ki ga generirajo.
 
 Vdelave so nabor modelov, ki lahko pretvorijo besedilo v numerično obliko, imenovano vdelava, kar je numerična predstavitev vhodnega besedila. Vdelave olajšajo strojem razumevanje odnosov med besedami ali stavki in jih lahko uporabimo kot vhodne podatke za druge modele, kot so klasifikacijski modeli ali modeli za razvrščanje, ki imajo boljšo zmogljivost pri numeričnih podatkih. Modeli vdelave se pogosto uporabljajo za prenosno učenje, kjer se model gradi za nadomestno nalogo, za katero je na voljo veliko podatkov, nato pa se uteži modela (vdelave) ponovno uporabijo za druge naloge. Primer te kategorije je [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Vdelava](../../../translated_images/Embedding.c3708fe988ccf760.sl.png)
+![Vdelava](../../../translated_images/sl/Embedding.c3708fe988ccf760.png)
 
 Modeli za generiranje slik so modeli, ki generirajo slike. Ti modeli se pogosto uporabljajo za urejanje slik, sintezo slik in prevajanje slik. Modeli za generiranje slik so pogosto usposobljeni na velikih zbirkah slik, kot je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), in jih je mogoče uporabiti za generiranje novih slik ali za urejanje obstoječih slik s tehnikami, kot so inpainting, super-resolucija in barvanje. Primeri vključujejo [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) in [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generiranje slik](../../../translated_images/Image.349c080266a763fd.sl.png)
+![Generiranje slik](../../../translated_images/sl/Image.349c080266a763fd.png)
 
 Modeli za generiranje besedila in kode so modeli, ki generirajo besedilo ali kodo. Ti modeli se pogosto uporabljajo za povzemanje besedila, prevajanje in odgovarjanje na vprašanja. Modeli za generiranje besedila so pogosto usposobljeni na velikih zbirkah besedila, kot je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), in jih je mogoče uporabiti za generiranje novega besedila ali za odgovarjanje na vprašanja. Modeli za generiranje kode, kot je [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), so pogosto usposobljeni na velikih zbirkah kode, kot je GitHub, in jih je mogoče uporabiti za generiranje nove kode ali za odpravljanje napak v obstoječi kodi.
 
-![Generiranje besedila in kode](../../../translated_images/Text.a8c0cf139e5cc2a0.sl.png)
+![Generiranje besedila in kode](../../../translated_images/sl/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder proti samo Decoder
 
@@ -123,23 +123,23 @@ Večina modelov, ki smo jih omenili v prejšnjih odstavkih (modeli OpenAI, odprt
 
 - Iskanje osnovnega modela, ki ga zanima, v katalogu - bodisi lastniškega ali odprtokodnega, s filtriranjem po nalogi, licenci ali imenu. Za boljšo iskalnost so modeli organizirani v zbirke, kot so zbirka Azure OpenAI, zbirka Hugging Face in druge.
 
-![Katalog modelov](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.sl.png)
+![Katalog modelov](../../../translated_images/sl/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Pregled kartice modela, ki vključuje podroben opis namena uporabe in podatkov za učenje, vzorce kode ter rezultate ocenjevanja v interni knjižnici za ocenjevanje.
 
-![Kartica modela](../../../translated_images/ModelCard.598051692c6e400d.sl.png)
+![Kartica modela](../../../translated_images/sl/ModelCard.598051692c6e400d.png)
 
 - Primerjava meril uspešnosti med modeli in podatkovnimi nabori, ki so na voljo v industriji, da se oceni, kateri ustreza poslovnemu scenariju, prek zavihka [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Merila uspešnosti modelov](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.sl.png)
+![Merila uspešnosti modelov](../../../translated_images/sl/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Prilagoditev modela na podlagi lastnih podatkov za učenje, da se izboljša zmogljivost modela za določeno delovno obremenitev, z uporabo zmogljivosti za eksperimentiranje in sledenje v Azure AI Studio.
 
-![Prilagoditev modela](../../../translated_images/FineTuning.aac48f07142e36fd.sl.png)
+![Prilagoditev modela](../../../translated_images/sl/FineTuning.aac48f07142e36fd.png)
 
 - Namestitev prvotnega predhodno naučenega modela ali prilagojene različice za oddaljeno sklepanje v realnem času - upravljano računalništvo - ali strežniško API končno točko - [plačilo po porabi](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - da omogočite aplikacijam njegovo uporabo.
 
-![Namestitev modela](../../../translated_images/ModelDeploy.890da48cbd0bccdb.sl.png)
+![Namestitev modela](../../../translated_images/sl/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Vsi modeli v katalogu trenutno niso na voljo za prilagoditev in/ali namestitev s plačilom po porabi. Preverite kartico modela za podrobnosti o zmogljivostih in omejitvah modela.
@@ -158,7 +158,7 @@ Obstaja več pristopov, ki jih lahko podjetje uporabi za dosego želenih rezulta
 
 - **Prilagojen model**. Tukaj model dodatno naučite na svojih podatkih, kar vodi do bolj natančnega in odzivnega modela, ki ustreza vašim potrebam, vendar je to lahko drago.
 
-![Namestitev LLM-jev](../../../translated_images/Deploy.18b2d27412ec8c02.sl.png)
+![Namestitev LLM-jev](../../../translated_images/sl/Deploy.18b2d27412ec8c02.png)
 
 Vir slike: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

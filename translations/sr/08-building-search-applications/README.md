@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Изградња апликација за претрагу
 
-[![Увод у генеративну вештачку интелигенцију и моделе великог обима](../../../translated_images/08-lesson-banner.8fff48c566dad08a.sr.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Увод у генеративну вештачку интелигенцију и моделе великог обима](../../../translated_images/sr/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Кликните на слику изнад да бисте погледали видео лекцију_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Следе пример семантичке претраге за питање „Можете ли користити rstudio са azure ml?“. Погледајте YouTube URL, видећете да URL садржи временску ознаку која вас води до дела видеа где се налази одговор на питање.
 
-![Семантичка претрага за питање "Можете ли користити rstudio са Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.sr.png)
+![Семантичка претрага за питање "Можете ли користити rstudio са Azure ML"](../../../translated_images/sr/query-results.bb0480ebf025fac6.png)
 
 ## Шта је семантичка претрага?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Када покренете notebook, биће вам затражено да унесете упит. Поље за унос ће изгледати овако:
 
-![Поље за унос за корисника да унесе упит](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.sr.png)
+![Поље за унос за корисника да унесе упит](../../../translated_images/sr/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Одличан рад! Наставите са учењем
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sl"
 }
 -->
-![Generativna umetna inteligenca za začetnike](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.sl.png)
+![Generativna umetna inteligenca za začetnike](../../translated_images/sl/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 lekcij, ki vas naučijo vsega, kar morate vedeti, da začnete graditi aplikacije generativne umetne inteligence
 

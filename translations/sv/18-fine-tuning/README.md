@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sv"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.sv.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sv/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Finjustering av din LLM
 
@@ -32,7 +32,7 @@ Redo? Låt oss börja.
 
 Vill du få en överblick över vad vi kommer att täcka innan vi dyker in? Kolla in denna illustrerade guide som beskriver lärandets resa för denna lektion - från att lära sig kärnkoncepten och motivationen för finjustering, till att förstå processen och bästa praxis för att utföra finjusteringsuppgiften. Detta är ett fascinerande ämne att utforska, så glöm inte att kolla in [Resurser](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) för ytterligare länkar som stödjer din självstyrda läranderesa!
 
-![Illustrerad guide till finjustering av språkmodeller](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.sv.png)
+![Illustrerad guide till finjustering av språkmodeller](../../../translated_images/sv/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## Vad är finjustering för språkmodeller?
 

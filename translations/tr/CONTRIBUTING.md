@@ -63,7 +63,7 @@ Bağlantılarınızın düzgün çalıştığından emin olmak için VS Code kul
 
 Örneğin, dosyalarınızdaki herhangi bir bağlantının üzerine geldiğinizde, **ctrl + tıklama** ile bağlantıyı takip etmeniz istenir.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.tr.png)
+![VS code follow links screenshot](../../translated_images/tr/vscode-follow-link.85520ab6a1237adc.png)
 
 Bir bağlantıya tıkladığınızda yerelde çalışmıyorsa, iş akışı da hata verecek ve GitHub'da çalışmayacaktır.
 
@@ -71,7 +71,7 @@ Bu sorunu düzeltmek için bağlantıyı VS Code yardımıyla yazmayı deneyin.
 
 `./` veya `../` yazdığınızda, VS Code size yazdığınıza göre mevcut seçenekleri sunar.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.tr.png)
+![VS code select relative path screenshot](../../translated_images/tr/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 İstediğiniz dosya veya klasöre tıklayarak yolu takip edin, böylece yolunuzun kırık olmadığından emin olursunuz.
 
@@ -88,7 +88,7 @@ Eğer varsa, bu kontrolü geçersiniz.
 
 Yoksa aşağıdaki hatayı alabilirsiniz.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.tr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/tr/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Bu sorunu düzeltmek için iş akışının işaretlediği dosya yolunu açın ve göreli yolların sonuna takip kimliğini ekleyin.
 
@@ -105,7 +105,7 @@ Eğer varsa, bu kontrolü geçersiniz.
 
 Yoksa aşağıdaki hatayı alabilirsiniz.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.tr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/tr/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Bu sorunu düzeltmek için iş akışının işaretlediği dosya yolunu açın ve URL'lerin sonuna takip kimliğini ekleyin.
 
@@ -122,7 +122,7 @@ Eğer yoksa, bu kontrolü geçersiniz.
 
 Yoksa aşağıdaki hatayı alabilirsiniz.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.tr.png)
+![GitHub check country locale comment screenshot](../../translated_images/tr/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Bu sorunu düzeltmek için iş akışının işaretlediği dosya yolunu açın ve URL'lerden ülke yerel kodunu kaldırın.
 

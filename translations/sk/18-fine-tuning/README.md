@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.sk.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sk/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Jemné doladenie vášho LLM
 
@@ -32,7 +32,7 @@ Pripravení? Poďme na to.
 
 Chcete si urobiť prehľad o tom, čo budeme preberať, ešte predtým, než sa do toho pustíme? Pozrite si tento ilustrovaný sprievodca, ktorý popisuje učebnú cestu tejto lekcie - od učenia sa základných konceptov a motivácie pre jemné doladenie až po pochopenie procesu a najlepších postupov pri vykonávaní úlohy jemného doladenia. Je to fascinujúca téma na preskúmanie, takže nezabudnite navštíviť stránku [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pre ďalšie odkazy na podporu vašej samostatnej učebnej cesty!
 
-![Ilustrovaný sprievodca jemným doladením jazykových modelov](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.sk.png)
+![Ilustrovaný sprievodca jemným doladením jazykových modelov](../../../translated_images/sk/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## Čo je jemné doladenie jazykových modelov?
 

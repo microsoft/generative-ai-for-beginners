@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ta"
 }
 -->
-![ஆரம்பத்தவர்களுக்கு உருவாக்கும் AI](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ta.png)
+![ஆரம்பத்தவர்களுக்கு உருவாக்கும் AI](../../translated_images/ta/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### உருவாக்கும் AI பயன்பாடுகளை தொடங்க அறிய வேண்டிய அனைத்தையும் கற்பிக்கும் 21 பாடங்கள்
 

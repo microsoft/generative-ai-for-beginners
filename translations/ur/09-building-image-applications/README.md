@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # تصویری تخلیقی ایپلیکیشنز بنانا
 
-[![تصویری تخلیقی ایپلیکیشنز بنانا](../../../translated_images/09-lesson-banner.906e408c741f4411.ur.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![تصویری تخلیقی ایپلیکیشنز بنانا](../../../translated_images/ur/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs صرف متن تخلیق کرنے تک محدود نہیں ہیں۔ متن کی وضاحتوں سے تصاویر تخلیق کرنا بھی ممکن ہے۔ تصاویر کو ایک موڈالٹی کے طور پر استعمال کرنا مختلف شعبوں جیسے میڈٹیک، آرکیٹیکچر، سیاحت، گیم ڈیولپمنٹ اور دیگر میں بہت مفید ہو سکتا ہے۔ اس باب میں، ہم دو مشہور تصویری تخلیقی ماڈلز، DALL-E اور Midjourney پر غور کریں گے۔
 
@@ -43,7 +43,7 @@ LLMs صرف متن تخلیق کرنے تک محدود نہیں ہیں۔ متن 
 
 یہاں ایک مثال ہے کہ Edu4All کے طلباء کلاس میں یادگاروں پر کام کرتے ہوئے کیا تخلیق کر سکتے ہیں:
 
-![Edu4All اسٹارٹ اپ، کلاس میں یادگاروں پر کام، ایفل ٹاور](../../../translated_images/startup.94d6b79cc4bb3f5a.ur.png)
+![Edu4All اسٹارٹ اپ، کلاس میں یادگاروں پر کام، ایفل ٹاور](../../../translated_images/ur/startup.94d6b79cc4bb3f5a.png)
 
 ایک پرامپٹ استعمال کرتے ہوئے جیسے:
 
@@ -273,9 +273,9 @@ Azure OpenAI ریسورس اور ماڈل تخلیق کرنے کے لیے۔ DALL
   بنیادی تصویر میں صرف پول کے ساتھ لاؤنج ہوگا لیکن حتمی تصویر میں فلیمنگو ہوگا:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.ur.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.ur.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.ur.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ur/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ur/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ur/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **تغیرات تخلیق کریں**۔ خیال یہ ہے کہ آپ موجودہ تصویر لیں اور اس سے تغیرات تخلیق کرنے کو کہیں۔ تغیر تخلیق کرنے کے لیے، آپ تصویر اور متن پرامپٹ فراہم کرتے ہیں اور کوڈ کچھ اس طرح ہوتا ہے:
@@ -299,11 +299,11 @@ Temperature ایک پیرامیٹر ہے جو جنریٹو AI ماڈل کے آؤ
 
 > پرامپٹ: "گھوڑے پر خرگوش، ہاتھ میں لالی پاپ، دھندلے میدان میں جہاں نرگس کے پھول اگتے ہیں"
 
-![گھوڑے پر خرگوش، ہاتھ میں لالی پاپ، ورژن 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.ur.png)
+![گھوڑے پر خرگوش، ہاتھ میں لالی پاپ، ورژن 1](../../../translated_images/ur/v1-generated-image.a295cfcffa3c13c2.png)
 
 اب اسی پرامپٹ کو دوبارہ چلائیں تاکہ دیکھ سکیں کہ ہمیں ایک جیسی تصویر دوبارہ نہیں ملے گی:
 
-![گھوڑے پر خرگوش کی تخلیق کردہ تصویر](../../../translated_images/v2-generated-image.33f55a3714efe61d.ur.png)
+![گھوڑے پر خرگوش کی تخلیق کردہ تصویر](../../../translated_images/ur/v2-generated-image.33f55a3714efe61d.png)
 
 جیسا کہ آپ دیکھ سکتے ہیں، تصاویر ایک جیسی ہیں لیکن بالکل ایک جیسی نہیں۔ آئیے temperature کی قدر کو 0.1 پر تبدیل کریں اور دیکھیں کیا ہوتا ہے:
 
@@ -332,8 +332,8 @@ generation_response = client.images.create(
 
 اب جب آپ یہ کوڈ چلائیں گے، آپ کو یہ دو تصاویر ملیں گی:
 
-- ![Temperature 0، v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.ur.png)
-- ![Temperature 0، v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.ur.png)
+- ![Temperature 0، v1](../../../translated_images/ur/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Temperature 0، v2](../../../translated_images/ur/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 یہاں آپ واضح طور پر دیکھ سکتے ہیں کہ تصاویر ایک دوسرے سے زیادہ مشابہت رکھتی ہیں۔
 

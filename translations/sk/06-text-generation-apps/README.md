@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Vytváranie aplikácií na generovanie textu
 
-[![Vytváranie aplikácií na generovanie textu](../../../translated_images/06-lesson-banner.a5c629f990a636c8.sk.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Vytváranie aplikácií na generovanie textu](../../../translated_images/sk/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 

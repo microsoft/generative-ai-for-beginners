@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Изградња апликација са вештачком интелигенцијом уз мало кода
 
-[![Изградња апликација са вештачком интелигенцијом уз мало кода](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.sr.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Изградња апликација са вештачком интелигенцијом уз мало кода](../../../translated_images/sr/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Кликните на слику изнад да бисте погледали видео лекцију)_
 
@@ -92,17 +92,17 @@ Copilot је доступан у свим производима Power Platform-
 
 1. Користите текстуално поље на почетном екрану да опишете апликацију коју желите да направите. На пример, **_Желим да направим апликацију за праћење и управљање задацима студената_**. Кликните на дугме **Send** да пошаљете упутство AI Copilot-у.
 
-![Опишите апликацију коју желите да направите](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.sr.png)
+![Опишите апликацију коју желите да направите](../../../translated_images/sr/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. AI Copilot ће предложити Dataverse табелу са пољима која су вам потребна за чување података које желите да пратите, као и неке узорке података. Табелу можете прилагодити својим потребама користећи функцију AI Copilot асистента кроз конверзацијске кораке.
 
    > **Важно**: Dataverse је основна платформа за податке у Power Platform-у. То је платформа за податке уз мало кода за чување података апликације. То је у потпуности управљана услуга која безбедно чува податке у Microsoft Cloud-у и обезбеђује се у оквиру вашег Power Platform окружења. Долази са уграђеним могућностима управљања подацима, као што су класификација података, порекло података, фино подешена контрола приступа и још много тога. Више о Dataverse-у можете сазнати [овде](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Предложена поља у вашој новој табели](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.sr.png)
+   ![Предложена поља у вашој новој табели](../../../translated_images/sr/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. Едукатори желе да шаљу имејлове студентима који су предали своје задатке како би их обавестили о напретку њихових задатака. Можете користити Copilot да додате ново поље у табелу за чување имејл адресе студента. На пример, можете користити следеће упутство да додате ново поље у табелу: **_Желим да додам колону за чување имејл адресе студента_**. Кликните на дугме **Send** да пошаљете упутство AI Copilot-у.
 
-![Додавање новог поља](../../../translated_images/copilot-new-column.35e15ff21acaf274.sr.png)
+![Додавање новог поља](../../../translated_images/sr/copilot-new-column.35e15ff21acaf274.png)
 
 1. AI Copilot ће генерисати ново поље, а затим можете прилагодити поље својим потребама.
 
@@ -112,7 +112,7 @@ Copilot је доступан у свим производима Power Platform-
 
 1. Да би едукатори могли да шаљу имејлове студентима, можете користити Copilot да додате нови екран у апликацију. На пример, можете користити следеће упутство да додате нови екран у апликацију: **_Желим да додам екран за слање имејлова студентима_**. Кликните на дугме **Send** да пошаљете упутство AI Copilot-у.
 
-![Додавање новог екрана путем упутства](../../../translated_images/copilot-new-screen.2e0bef7132a17392.sr.png)
+![Додавање новог екрана путем упутства](../../../translated_images/sr/copilot-new-screen.2e0bef7132a17392.png)
 
 1. AI Copilot ће генерисати нови екран, а затим можете прилагодити екран својим потребама.
 
@@ -141,15 +141,15 @@ Copilot је доступан у свим производима Power Platform-
 
 2. На левој навигационој траци, изаберите **Tables** и затим кликните на **Describe the new Table**.
 
-![Select new table](../../../translated_images/describe-new-table.0792373eb757281e.sr.png)
+![Select new table](../../../translated_images/sr/describe-new-table.0792373eb757281e.png)
 
 3. На екрану **Describe the new Table**, користите текстуално поље да опишете табелу коју желите да креирате. На пример, **_Желим да креирам табелу за складиштење информација о фактурама_**. Кликните на дугме **Send** да бисте послали упит AI Copilot-у.
 
-![Describe the table](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.sr.png)
+![Describe the table](../../../translated_images/sr/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 4. AI Copilot ће предложити Dataverse табелу са пољима која су вам потребна за складиштење података које желите да пратите и неке примерке података. Затим можете прилагодити табелу својим потребама користећи AI Copilot асистента кроз конверзацијске кораке.
 
-![Suggested Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.sr.png)
+![Suggested Dataverse table](../../../translated_images/sr/copilot-dataverse-table.b3bc936091324d9d.png)
 
 5. Финансијски тим жели да пошаље е-пошту добављачу како би га обавестио о тренутном статусу његове фактуре. Можете користити Copilot да додате ново поље у табелу за складиштење е-поште добављача. На пример, можете користити следећи упит да додате ново поље у табелу: **_Желим да додам колону за складиштење е-поште добављача_**. Кликните на дугме **Send** да бисте послали упит AI Copilot-у.
 
@@ -178,7 +178,7 @@ AI Builder пружа две врсте AI модела: унапред прип
 
 Са прилагођеним AI моделима можете увести сопствени модел у AI Builder тако да функционише као било који прилагођени AI Builder модел, омогућавајући вам да обучите модел користећи сопствене податке. Можете користити ове моделе за аутоматизацију процеса и предвиђање исхода у Power Apps-у и Power Automate-у. Када користите сопствени модел, постоје ограничења која се примењују. Прочитајте више о овим [ограничењима](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f.sr.png)
+![AI builder models](../../../translated_images/sr/ai-builder-models.8069423b84cfc47f.png)
 
 ## Задатак #2 - Изградите ток за обраду фактура за наш стартап
 
@@ -192,7 +192,7 @@ AI Builder пружа две врсте AI модела: унапред прип
 
 2. Користите текстуално поље на почетној страници да опишете ток рада који желите да изградите. На пример, **_Обради фактуру када стигне у мој поштански сандучић_**. Кликните на дугме **Send** да бисте послали упит AI Copilot-у.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.sr.png)
+   ![Copilot power automate](../../../translated_images/sr/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. AI Copilot ће предложити радње које су вам потребне за извршење задатка који желите да аутоматизујете. Можете кликнути на дугме **Next** да бисте прешли на следеће кораке.
 
@@ -206,7 +206,7 @@ AI Builder пружа две врсте AI модела: унапред прип
 
 8. Уклоните радњу **Condition** из тока јер је нећете користити. Требало би да изгледа као на следећем снимку екрана:
 
-   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.sr.png)
+   ![power automate, remove actions](../../../translated_images/sr/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. Кликните на дугме **Add an action** и потражите **Dataverse**. Изаберите радњу **Add a new row**.
 
@@ -221,7 +221,7 @@ AI Builder пружа две врсте AI модела: унапред прип
     - Status - Подесите **Status** на **Pending**.
     - Supplier Email - Користите **From** динамички садржај из окидача **When a new email arrives**.
 
-    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.sr.png)
+    ![power automate add row](../../../translated_images/sr/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. Када завршите са током, кликните на дугме **Save** да бисте сачували ток. Затим можете тестирати ток слањем е-поште са фактуром у фасциклу коју сте навели у окидачу.
 
@@ -235,7 +235,7 @@ GPT модели пролазе кроз обимну обуку на огром
 
 На пример, можете изградити токове за аутоматско генерисање текста за различите намене, као што су: нацрти е-поште, описи производа и још много тога. Такође можете користити модел за генерисање текста за различите апликације, као што су чет-ботови и апликације за корисничку подршку које омогућавају агентима за корисничку подршку да ефикасно и ефективно одговарају на упите корисника.
 
-![create a prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a.sr.png)
+![create a prompt](../../../translated_images/sr/create-prompt-gpt.69d429300c2e870a.png)
 
 Да бисте научили како да користите овај AI модел у Power Automate-у, прођите кроз модул [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

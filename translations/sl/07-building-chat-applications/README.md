@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gradnja klepetalnih aplikacij z generativno umetno inteligenco
 
-[![Gradnja klepetalnih aplikacij z generativno umetno inteligenco](../../../translated_images/07-lesson-banner.a279b937f2843833.sl.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Gradnja klepetalnih aplikacij z generativno umetno inteligenco](../../../translated_images/sl/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Kliknite na zgornjo sliko za ogled videoposnetka te lekcije)_
 
@@ -96,11 +96,11 @@ Splošna načela uporabniške izkušnje veljajo za klepetalne aplikacije, vendar
 
 Eden takšnih primerov personalizacije je nastavitev "Custom instructions" v OpenAI-jevem ChatGPT. Omogoča vam, da zagotovite informacije o sebi, ki so lahko pomemben kontekst za vaše pozive. Tukaj je primer prilagojene nastavitve.
 
-![Nastavitve prilagojenih navodil v ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.sl.png)
+![Nastavitve prilagojenih navodil v ChatGPT](../../../translated_images/sl/custom-instructions.b96f59aa69356fcf.png)
 
 Ta "profil" ChatGPT-ju omogoča ustvarjanje učnega načrta o povezanih seznamih. Opazite, da ChatGPT upošteva, da uporabnik morda želi bolj poglobljen učni načrt glede na njene izkušnje.
 
-![Poziv v ChatGPT za učni načrt o povezanih seznamih](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.sl.png)
+![Poziv v ChatGPT za učni načrt o povezanih seznamih](../../../translated_images/sl/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsoftov okvir sistemskih sporočil za velike jezikovne modele
 

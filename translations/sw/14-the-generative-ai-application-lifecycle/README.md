@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sw"
 }
 -->
-[![Kuunganisha na kuitwa kwa kazi](../../../translated_images/14-lesson-banner.066d74a31727ac12.sw.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Kuunganisha na kuitwa kwa kazi](../../../translated_images/sw/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Mzunguko wa Maisha wa Programu ya AI Inayozalisha
 
@@ -30,7 +30,7 @@ LLM ni zana mpya katika silaha ya Akili Bandia, ni zenye nguvu sana katika kazi 
 
 Kwa hili, tunahitaji Mtazamo mpya kuoanisha zana hii kwa njia ya mabadiliko, na motisha sahihi. Tunaweza kuainisha programu za AI za zamani kama "Programu za ML" na programu mpya za AI kama "Programu za GenAI" au tu "Programu za AI", zikionyesha teknolojia na mbinu kuu zinazotumika wakati huo. Hii inabadilisha simulizi yetu kwa njia nyingi, angalia kulinganisha ifuatayo.
 
-![Ulinganisho wa LLMOps na MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.sw.png)
+![Ulinganisho wa LLMOps na MLOps](../../../translated_images/sw/01-llmops-shift.29bc933cb3bb0080.png)
 
 Tambua kwamba katika LLMOps, tunazingatia zaidi Waendelezaji wa Programu, tukitumia muunganiko kama kipengele muhimu, tukitumia "Mifano-kama-Huduma" na kufikiria katika pointi zifuatazo kwa vipimo.
 
@@ -44,7 +44,7 @@ Tambua kwamba katika LLMOps, tunazingatia zaidi Waendelezaji wa Programu, tukitu
 
 Kwanza, kuelewa mzunguko wa maisha na mabadiliko, tuchukue picha ifuatayo.
 
-![Picha ya LLMOps](../../../translated_images/02-llmops.70a942ead05a7645.sw.png)
+![Picha ya LLMOps](../../../translated_images/sw/02-llmops.70a942ead05a7645.png)
 
 Kama unavyoona, hii ni tofauti na Mzunguko wa Maisha wa kawaida wa MLOps. LLM zina mahitaji mapya mengi, kama Kuamsha, mbinu tofauti za kuboresha ubora (Fine-Tuning, RAG, Meta-Prompts), tathmini tofauti na uwajibikaji wa AI yenye uwajibikaji, na mwisho, vipimo vipya vya tathmini (Ubora, Madhara, Uaminifu, Gharama na Ucheleweshaji).
 
@@ -54,7 +54,7 @@ Tambua kwamba hii si mfululizo wa moja kwa moja, bali ni mizunguko iliyojumuishw
 
 Tunawezaje kuchunguza hatua hizo? Tuchunguze kwa undani jinsi tunavyoweza kujenga mzunguko wa maisha.
 
-![Mtiririko wa Kazi wa LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.sw.png)
+![Mtiririko wa Kazi wa LLMOps](../../../translated_images/sw/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Hii inaweza kuonekana ngumu kidogo, tuchukulie hatua kubwa tatu kwanza.
 
@@ -74,11 +74,11 @@ Kwa zana, Microsoft hutoa [Jukwaa la AI la Azure](https://azure.microsoft.com/so
 
 [Jukwaa la AI la Azure](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), linakuwezesha kutumia [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio ni lango la wavuti linalokuwezesha Kuchunguza mifano, sampuli na zana. Kusimamia rasilimali zako, mtiririko wa maendeleo ya UI na chaguzi za SDK/CLI kwa maendeleo ya Kwanza-Kodi.
 
-![Muwezekano wa Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.sw.png)
+![Muwezekano wa Azure AI](../../../translated_images/sw/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI, inakuwezesha kutumia rasilimali nyingi, kusimamia shughuli zako, huduma, miradi, utafutaji wa vector na mahitaji ya hifadhidata.
 
-![LLMOps na Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.sw.png)
+![LLMOps na Azure AI](../../../translated_images/sw/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Jenga, kutoka kwa Proof-of-Concept(POC) hadi programu za kiwango kikubwa na PromptFlow:
 
@@ -86,7 +86,7 @@ Jenga, kutoka kwa Proof-of-Concept(POC) hadi programu za kiwango kikubwa na Prom
 - Jaribu na boresha programu zako kwa AI bora, kwa urahisi.
 - Tumia Azure AI Studio kuunganisha na kurudia na wingu, Sogeza na Peleka kwa muunganiko wa haraka.
 
-![LLMOps na PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.sw.png)
+![LLMOps na PromptFlow](../../../translated_images/sw/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Nzuri! Endelea Kujifunza!
 

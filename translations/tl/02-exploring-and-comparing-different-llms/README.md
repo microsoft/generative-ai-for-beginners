@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagsusuri at Paghahambing ng Iba't Ibang LLM
 
-[![Pagsusuri at Paghahambing ng Iba't Ibang LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60.tl.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Pagsusuri at Paghahambing ng Iba't Ibang LLM](../../../translated_images/tl/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _I-click ang imahe sa itaas upang mapanood ang video ng araling ito_
 
@@ -59,14 +59,14 @@ Ang terminong Foundation Model ay [binuo ng mga mananaliksik sa Stanford](https:
 - **Napakalaking mga modelo**, batay sa napakalalim na neural networks na sinanay sa bilyun-bilyong parameters.
 - **Karaniwang nilalayon na magsilbing ‘foundation’ para sa ibang mga modelo**, ibig sabihin, maaari silang gamitin bilang panimulang punto para sa ibang mga modelo na maaaring itayo sa ibabaw nito, na maaaring gawin sa pamamagitan ng fine-tuning.
 
-![Foundation Models kumpara sa LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.tl.png)
+![Foundation Models kumpara sa LLMs](../../../translated_images/tl/FoundationModel.e4859dbb7a825c94.png)
 
 Pinagmulan ng imahe: [Essential Guide to Foundation Models and Large Language Models | ni Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Upang higit pang linawin ang pagkakaibang ito, kunin natin ang ChatGPT bilang halimbawa. Upang mabuo ang unang bersyon ng ChatGPT, isang modelo na tinatawag na GPT-3.5 ang nagsilbing foundation model. Nangangahulugan ito na ginamit ng OpenAI ang ilang chat-specific data upang lumikha ng isang tuned na bersyon ng GPT-3.5 na espesyal na idinisenyo upang mahusay na gumana sa conversational scenarios, tulad ng chatbots.
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51.tl.png)
+![Foundation Model](../../../translated_images/tl/Multimodal.2c389c6439e0fc51.png)
 
 Pinagmulan ng imahe: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ Ang LLMs ay maaari ring ikategorya batay sa output na kanilang nililikha.
 
 Ang embeddings ay isang set ng mga modelo na maaaring mag-convert ng text sa numerical form, na tinatawag na embedding, na isang numerical representation ng input text. Ang embeddings ay nagpapadali sa mga makina na maunawaan ang mga relasyon sa pagitan ng mga salita o pangungusap at maaaring magamit bilang input ng ibang mga modelo, tulad ng classification models, o clustering models na may mas mahusay na pagganap sa numerical data. Ang embedding models ay madalas na ginagamit para sa transfer learning, kung saan ang isang modelo ay binuo para sa isang surrogate task na may maraming data, at pagkatapos ay ang model weights (embeddings) ay muling ginagamit para sa ibang downstream tasks. Isang halimbawa ng kategoryang ito ay [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.tl.png)
+![Embedding](../../../translated_images/tl/Embedding.c3708fe988ccf760.png)
 
 Ang image generation models ay mga modelong lumilikha ng mga imahe. Ang mga modelong ito ay madalas na ginagamit para sa image editing, image synthesis, at image translation. Ang image generation models ay madalas na sinanay sa malalaking datasets ng mga imahe, tulad ng [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), at maaaring gamitin upang lumikha ng mga bagong imahe o i-edit ang mga umiiral na imahe gamit ang inpainting, super-resolution, at colorization techniques. Mga halimbawa ay [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) at [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Image generation](../../../translated_images/Image.349c080266a763fd.tl.png)
+![Image generation](../../../translated_images/tl/Image.349c080266a763fd.png)
 
 Ang text at code generation models ay mga modelong lumilikha ng text o code. Ang mga modelong ito ay madalas na ginagamit para sa text summarization, translation, at question answering. Ang text generation models ay madalas na sinanay sa malalaking datasets ng text, tulad ng [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), at maaaring gamitin upang lumikha ng bagong text, o upang sagutin ang mga tanong. Ang code generation models, tulad ng [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), ay madalas na sinanay sa malalaking datasets ng code, tulad ng GitHub, at maaaring gamitin upang lumikha ng bagong code, o upang ayusin ang mga bug sa umiiral na code.
 
-![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0.tl.png)
+![Text and code generation](../../../translated_images/tl/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder kumpara sa Decoder-only
 
@@ -123,23 +123,23 @@ Ang [Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-stu
 
 - Hanapin ang Foundation Model na interesado sa catalog - proprietary man o open source, gamit ang filter sa task, lisensya, o pangalan. Upang mapabuti ang kakayahang maghanap, ang mga modelo ay nakaayos sa mga koleksyon, tulad ng Azure OpenAI collection, Hugging Face collection, at iba pa.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.tl.png)
+![Model catalog](../../../translated_images/tl/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Suriin ang model card, kabilang ang detalyadong paglalarawan ng layunin ng paggamit at training data, mga halimbawa ng code, at mga resulta ng pagsusuri mula sa internal evaluations library.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d.tl.png)
+![Model card](../../../translated_images/tl/ModelCard.598051692c6e400d.png)
 
 - Ihambing ang mga benchmark sa pagitan ng mga modelo at dataset na magagamit sa industriya upang masuri kung alin ang angkop sa business scenario, sa pamamagitan ng [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) pane.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.tl.png)
+![Model benchmarks](../../../translated_images/tl/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - I-fine-tune ang modelo gamit ang custom training data upang mapabuti ang performance ng modelo sa isang partikular na workload, gamit ang experimentation at tracking capabilities ng Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.tl.png)
+![Model fine-tuning](../../../translated_images/tl/FineTuning.aac48f07142e36fd.png)
 
 - I-deploy ang orihinal na pre-trained model o ang fine-tuned na bersyon nito sa remote real-time inference - managed compute - o serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - upang magamit ito ng mga application.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.tl.png)
+![Model deployment](../../../translated_images/tl/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Hindi lahat ng modelo sa catalog ay kasalukuyang magagamit para sa fine-tuning at/o pay-as-you-go deployment. Tingnan ang model card para sa mga detalye tungkol sa kakayahan at limitasyon ng modelo.
@@ -158,7 +158,7 @@ Mayroong ilang mga paraan na maaaring gamitin ng isang negosyo upang makuha ang 
 
 - **Fine-tuned model**. Dito, mas pinahusay mo ang training ng modelo gamit ang sarili mong data na nagresulta sa mas eksaktong modelo na tumutugon sa iyong mga pangangailangan ngunit maaaring magastos.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.tl.png)
+![LLMs deployment](../../../translated_images/tl/Deploy.18b2d27412ec8c02.png)
 
 Pinagmulan ng larawan: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

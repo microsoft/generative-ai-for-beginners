@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Створення чат-додатків на основі генеративного штучного інтелекту
 
-[![Створення чат-додатків на основі генеративного штучного інтелекту](../../../translated_images/07-lesson-banner.a279b937f2843833.uk.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Створення чат-додатків на основі генеративного штучного інтелекту](../../../translated_images/uk/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Натисніть на зображення вище, щоб переглянути відео цього уроку)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 Одним із прикладів персоналізації є налаштування "Custom instructions" у ChatGPT від OpenAI. Воно дозволяє надати інформацію про себе, яка може бути важливим контекстом для ваших запитів. Ось приклад налаштування.
 
-![Налаштування Custom Instructions у ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.uk.png)
+![Налаштування Custom Instructions у ChatGPT](../../../translated_images/uk/custom-instructions.b96f59aa69356fcf.png)
 
 Цей "профіль" спонукає ChatGPT створити план уроку про зв'язані списки. Зверніть увагу, що ChatGPT враховує, що користувач може хотіти більш детальний план уроку, виходячи з її досвіду.
 
-![Запит у ChatGPT для плану уроку про зв'язані списки](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.uk.png)
+![Запит у ChatGPT для плану уроку про зв'язані списки](../../../translated_images/uk/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Система повідомлень Microsoft для великих мовних моделей
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # İstek Mühendisliği Temelleri
 
-[![İstek Mühendisliği Temelleri](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.tr.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![İstek Mühendisliği Temelleri](../../../translated_images/tr/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Giriş
 Bu modül, üretken yapay zeka modellerinde etkili istekler oluşturmak için temel kavramları ve teknikleri ele alır. Bir LLM'ye (Büyük Dil Modeli) yazdığınız isteğin şekli de önemlidir. Özenle hazırlanmış bir istek, daha kaliteli bir yanıt elde etmenizi sağlayabilir. Ancak, _istek_ ve _istek mühendisliği_ gibi terimler tam olarak ne anlama geliyor? Ve LLM'ye gönderdiğim istek _girdisini_ nasıl geliştirebilirim? Bu bölümde ve bir sonraki bölümde bu soruları yanıtlamaya çalışacağız.
@@ -53,7 +53,7 @@ Notebook, _başlangıç_ alıştırmalarıyla birlikte gelir - ancak kendi _Mark
 
 Bu derste ele alınan konuların genel bir resmini görmek ister misiniz? Her birinde düşünmeniz gereken ana konuları ve önemli çıkarımları size bir fikir veren bu resimli kılavuza göz atın. Ders yol haritası, temel kavramları ve zorlukları anlamaktan başlayarak, ilgili istek mühendisliği teknikleri ve en iyi uygulamalarla bunları ele almaya kadar uzanır. Bu kılavuzdaki "Gelişmiş Teknikler" bölümü, bu müfredatın _bir sonraki_ bölümünde ele alınan içeriğe atıfta bulunur.
 
-![İstek Mühendisliği için Resimli Kılavuz](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.tr.png)
+![İstek Mühendisliği için Resimli Kılavuz](../../../translated_images/tr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
 
 ## Girişimimiz
 
@@ -84,7 +84,7 @@ Bir LLM, istekleri _token dizisi_ olarak görür ve farklı modeller (veya bir m
 
 Tokenizasyonun nasıl çalıştığına dair bir fikir edinmek için aşağıda gösterilen [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) gibi araçları deneyin. İsteğinizi kopyalayın - ve bunun tokenlara nasıl dönüştüğünü görün, boşluk karakterleri ve noktalama işaretlerinin nasıl ele alındığına dikkat edin. Bu örneğin daha eski bir LLM'yi (GPT-3) gösterdiğini unutmayın - bu nedenle daha yeni bir modelle denemek farklı bir sonuç üretebilir.
 
-![Tokenizasyon](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.tr.png)
+![Tokenizasyon](../../../translated_images/tr/04-tokenizer-example.e71f0a0f70356c5c.png)
 
 ### Kavram: Temel Modeller
 
@@ -94,7 +94,7 @@ Bir istek tokenleştirildikten sonra, ["Temel LLM"](https://blog.gopenai.com/an-
 
 Peki ya kullanıcı, belirli bir kriteri veya görev hedefini karşılayan bir şey görmek isteseydi? İşte bu noktada _talimatla ayarlanmış_ LLM'ler devreye giriyor.
 
-![Temel LLM Sohbet Tamamlama](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.tr.png)
+![Temel LLM Sohbet Tamamlama](../../../translated_images/tr/04-playground-chat-base.65b76fcfde0caa67.png)
 
 ### Kavram: Talimatla Ayarlanmış LLM'ler
 
@@ -108,7 +108,7 @@ Hadi deneyelim - yukarıdaki isteği tekrar gözden geçirin, ancak şimdi _sist
 
 Sonucun şimdi istenen hedefi ve formatı nasıl yansıttığını görün? Bir eğitmen artık bu yanıtı doğrudan sınıfındaki slaytlarında kullanabilir.
 
-![Talimatla Ayarlanmış LLM Sohbet Tamamlama](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.tr.png)
+![Talimatla Ayarlanmış LLM Sohbet Tamamlama](../../../translated_images/tr/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
 
 ## Neden İstek Mühendisliğine İhtiyacımız Var?
 
@@ -138,15 +138,15 @@ Peki, bu istemi farklı LLM sağlayıcılarıyla çalıştırdığımızda ne ol
 
 > **Yanıt 1**: OpenAI Playground (GPT-35)
 
-![Yanıt 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.tr.png)
+![Yanıt 1](../../../translated_images/tr/04-fabrication-oai.5818c4e0b2a2678c.png)
 
 > **Yanıt 2**: Azure OpenAI Playground (GPT-35)
 
-![Yanıt 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.tr.png)
+![Yanıt 2](../../../translated_images/tr/04-fabrication-aoai.b14268e9ecf25caf.png)
 
 > **Yanıt 3**: Hugging Face Chat Playground (LLama-2)
 
-![Yanıt 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.tr.png)
+![Yanıt 3](../../../translated_images/tr/04-fabrication-huggingchat.faf82a0a51278956.png)
 
 Beklendiği gibi, her model (veya model versiyonu) stokastik davranış ve model yeteneklerindeki farklılıklar nedeniyle biraz farklı yanıtlar üretiyor. Örneğin, bir model 8. sınıf seviyesindeki bir kitleyi hedeflerken, diğeri lise öğrencilerini hedef alıyor. Ancak, üç model de bilgisiz bir kullanıcıyı olayın gerçek olduğuna ikna edebilecek yanıtlar üretti.
 

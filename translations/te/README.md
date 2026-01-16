@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "te"
 }
 -->
-![సృజనాత్మక AI ప్రారంభికుల కోసం](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.te.png)
+![సృజనాత్మక AI ప్రారంభికుల కోసం](../../translated_images/te/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### సృజనాత్మక AI అప్లికేషన్లు నిర్మించడానికి మీకు తెలుసుకోవలసిన ప్రతిదీ నేర్పే 21 పాఠాలు
 

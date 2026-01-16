@@ -60,7 +60,7 @@ Ili kuhakikisha viungo vyako vinafanya kazi vizuri tumia VS code kuangalia.
 
 Kwa mfano, unapoelekeza kipanya juu ya kiungo chochote katika faili zako utaombwa kufuata kiungo kwa kubonyeza **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.sw.png)
+![VS code follow links screenshot](../../translated_images/sw/vscode-follow-link.85520ab6a1237adc.png)
 
 Ukibonyeza kiungo na hakifanyi kazi kwa ndani basi, hakika mchakato utaanzishwa na hautafanya kazi kwenye GitHub.
 
@@ -68,7 +68,7 @@ Kurekebisha tatizo hili, jaribu kuandika kiungo kwa msaada wa VS code.
 
 Unapoandika `./` au `../` VS code itakuomba uchague kutoka kwa chaguzi zinazopatikana kulingana na ulichokiandika.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.sw.png)
+![VS code select relative path screenshot](../../translated_images/sw/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Fuata njia kwa kubonyeza faili au folda unayotaka na utahakikisha njia yako haivunjiki.
 
@@ -82,7 +82,7 @@ Ili kuhakikisha njia zako zinazohusiana zina ufuatiliaji ndani yake angalia maan
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.sw.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/sw/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza kitambulisho cha ufuatiliaji mwishoni mwa njia zinazohusiana.
 
@@ -96,7 +96,7 @@ Ili kuhakikisha URL zako zina ufuatiliaji ndani yake angalia maandishi haya `?wt
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.sw.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/sw/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza kitambulisho cha ufuatiliaji mwishoni mwa URL.
 
@@ -110,7 +110,7 @@ Ili kuhakikisha URL zako hazina lugha maalum za nchi ndani yake angalia maandish
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.sw.png)
+![GitHub check country locale comment screenshot](../../translated_images/sw/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ondoa lugha maalum ya nchi kutoka kwenye URL.
 

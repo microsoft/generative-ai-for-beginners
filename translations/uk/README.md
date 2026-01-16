@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "uk"
 }
 -->
-![Генеративний ШІ для Початківців](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.uk.png)
+![Генеративний ШІ для Початківців](../../translated_images/uk/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 урок, які навчають усьому, що потрібно знати, щоб почати створювати додатки на основі Генеративного ШІ
 

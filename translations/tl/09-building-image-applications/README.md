@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Paggawa ng Mga Aplikasyon para sa Paggawa ng Imahe
 
-[![Paggawa ng Mga Aplikasyon para sa Paggawa ng Imahe](../../../translated_images/09-lesson-banner.906e408c741f4411.tl.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Paggawa ng Mga Aplikasyon para sa Paggawa ng Imahe](../../../translated_images/tl/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Hindi lang text generation ang kayang gawin ng LLMs. Posible rin ang paggawa ng mga imahe mula sa mga text na deskripsyon. Ang pagkakaroon ng mga imahe bilang modality ay maaaring maging napaka-kapaki-pakinabang sa iba't ibang larangan tulad ng MedTech, arkitektura, turismo, game development, at marami pang iba. Sa kabanatang ito, tatalakayin natin ang dalawang pinakasikat na modelo ng paggawa ng imahe, ang DALL-E at Midjourney.
 
@@ -43,7 +43,7 @@ Bilang bahagi ng araling ito, ipagpapatuloy natin ang pagtatrabaho sa ating star
 
 Narito ang maaaring gawin ng mga mag-aaral ng Edu4All, halimbawa, kung nagtatrabaho sila sa klase tungkol sa mga monumento:
 
-![Startup ng Edu4All, klase tungkol sa mga monumento, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5a.tl.png)
+![Startup ng Edu4All, klase tungkol sa mga monumento, Eiffel Tower](../../../translated_images/tl/startup.94d6b79cc4bb3f5a.png)
 
 gamit ang prompt na
 
@@ -272,9 +272,9 @@ Narito ang isang halimbawa gamit ang GPT Image:
   Ang base image ay naglalaman lamang ng lounge na may pool ngunit ang final image ay may flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.tl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.tl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.tl.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tl/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tl/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tl/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Gumawa ng mga variation**. Ang ideya ay kumuha ng umiiral na imahe at hilingin na gumawa ng mga variation. Upang gumawa ng variation, magbigay ng imahe at isang text prompt at code tulad nito:
@@ -298,11 +298,11 @@ Tingnan natin ang isang halimbawa kung paano gumagana ang temperature, sa pamama
 
 > Prompt: "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny sa kabayo na may hawak na lollipop, bersyon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.tl.png)
+![Bunny sa kabayo na may hawak na lollipop, bersyon 1](../../../translated_images/tl/v1-generated-image.a295cfcffa3c13c2.png)
 
 Ngayon, ulitin natin ang parehong prompt upang makita na hindi natin makukuha ang parehong imahe nang dalawang beses:
 
-![Ginawang imahe ng kuneho sa kabayo](../../../translated_images/v2-generated-image.33f55a3714efe61d.tl.png)
+![Ginawang imahe ng kuneho sa kabayo](../../../translated_images/tl/v2-generated-image.33f55a3714efe61d.png)
 
 Tulad ng nakikita mo, magkatulad ang mga imahe, ngunit hindi pareho. Subukan nating baguhin ang halaga ng temperature sa 0.1 at tingnan ang mangyayari:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Ngayon kapag pinatakbo mo ang code na ito, makakakuha ka ng dalawang imaheng ito:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.tl.png)
-- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.tl.png)
+- ![Temperature 0, v1](../../../translated_images/tl/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Temperature 0, v2](../../../translated_images/tl/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Dito malinaw mong makikita kung paano mas magkahawig ang mga imahe.
 

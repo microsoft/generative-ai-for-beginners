@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "uk"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.uk.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/uk/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Вступ
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Вартість** – Вартість за токен при використанні та розгортанні цих моделей нижча, ніж у пропрієтарних моделей. При створенні додатків Generative AI слід враховувати співвідношення продуктивності та ціни при роботі з цими моделями для вашого випадку використання.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.uk.png)
+![Model Cost](../../../translated_images/uk/model-price.3f5a3e4d32ae00b4.png)
 Джерело: Artificial Analysis
 
 **Гнучкість** – Робота з відкритими моделями дозволяє бути гнучким у використанні різних моделей або їх поєднанні. Прикладом є [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), де користувач може вибрати модель безпосередньо в інтерфейсі користувача:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.uk.png)
+![Choose Model](../../../translated_images/uk/choose-model.f095d15bbac92214.png)
 
 ## Ознайомлення з різними відкритими моделями
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Для порівняння LLM різних типів [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) є ще одним чудовим ресурсом:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.uk.png)
+![Model Quality](../../../translated_images/uk/model-quality.aaae1c22e00f7ee1.png)
 Джерело: Artificial Analysis
 
 Якщо ви працюєте над конкретним випадком використання, пошук тонко налаштованих версій, орієнтованих на ту ж сферу, може бути ефективним. Експерименти з кількома відкритими моделями, щоб побачити, як вони працюють відповідно до ваших і користувацьких очікувань, також є доброю практикою.

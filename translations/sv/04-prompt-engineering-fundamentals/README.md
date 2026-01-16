@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Grundläggande om Prompt Engineering
 
-[![Grundläggande om Prompt Engineering](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.sv.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Grundläggande om Prompt Engineering](../../../translated_images/sv/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduktion
 Det här kapitlet täcker viktiga koncept och tekniker för att skapa effektiva prompts i generativa AI-modeller. Hur du skriver din prompt till en LLM spelar också roll. En noggrant utformad prompt kan ge bättre kvalitet på svaret. Men vad betyder egentligen termer som _prompt_ och _prompt engineering_? Och hur kan jag förbättra prompt _input_ som jag skickar till LLM? Det är frågor vi kommer att försöka besvara i detta kapitel och nästa.
@@ -53,7 +53,7 @@ Notebooken kommer med _startövningar_ - men du uppmuntras att lägga till egna 
 
 Vill du få en överblick över vad denna lektion täcker innan du dyker in? Kolla in denna illustrerade guide, som ger dig en känsla för de viktigaste ämnena som behandlas och de viktigaste insikterna att tänka på i varje avsnitt. Lektionens vägkarta tar dig från att förstå kärnkoncept och utmaningar till att hantera dem med relevanta tekniker och bästa praxis för prompt engineering. Observera att avsnittet "Avancerade tekniker" i denna guide hänvisar till innehåll som behandlas i _nästa_ kapitel av denna kursplan.
 
-![Illustrerad guide till Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.sv.png)
+![Illustrerad guide till Prompt Engineering](../../../translated_images/sv/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
 
 ## Vårt startup
 
@@ -94,7 +94,7 @@ En LLM ser prompts som en _sekvens av tokens_ där olika modeller (eller version
 
 För att få en intuition för hur tokenisering fungerar, testa verktyg som [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) som visas nedan. Kopiera in din prompt - och se hur den konverteras till tokens, och var uppmärksam på hur blanksteg och skiljetecken hanteras. Observera att detta exempel visar en äldre LLM (GPT-3) - så att testa detta med en nyare modell kan ge ett annat resultat.
 
-![Tokenisering](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.sv.png)
+![Tokenisering](../../../translated_images/sv/04-tokenizer-example.e71f0a0f70356c5c.png)
 
 ### Koncept: Grundmodeller
 
@@ -104,7 +104,7 @@ Vill du se hur prompt-baserad completion fungerar? Ange prompten ovan i Azure Op
 
 Men vad händer om användaren ville se något specifikt som uppfyller vissa kriterier eller mål? Det är här _instruktionsanpassade_ LLMs kommer in i bilden.
 
-![Bas-LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.sv.png)
+![Bas-LLM Chat Completion](../../../translated_images/sv/04-playground-chat-base.65b76fcfde0caa67.png)
 
 ### Koncept: Instruktionsanpassade LLMs
 
@@ -118,7 +118,7 @@ Låt oss testa det - gå tillbaka till prompten ovan, men ändra nu _systemmedde
 
 Se hur resultatet nu är anpassat för att återspegla det önskade målet och formatet? En lärare kan nu direkt använda detta svar i sina presentationer för den klassen.
 
-![Instruktionsanpassad LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.sv.png)
+![Instruktionsanpassad LLM Chat Completion](../../../translated_images/sv/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
 
 ## Varför behöver vi Prompt Engineering?
 
@@ -148,15 +148,15 @@ Så vad händer när vi kör denna prompt med olika LLM-leverantörer?
 
 > **Svar 1**: OpenAI Playground (GPT-35)
 
-![Svar 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.sv.png)
+![Svar 1](../../../translated_images/sv/04-fabrication-oai.5818c4e0b2a2678c.png)
 
 > **Svar 2**: Azure OpenAI Playground (GPT-35)
 
-![Svar 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.sv.png)
+![Svar 2](../../../translated_images/sv/04-fabrication-aoai.b14268e9ecf25caf.png)
 
 > **Svar 3**: Hugging Face Chat Playground (LLama-2)
 
-![Svar 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.sv.png)
+![Svar 3](../../../translated_images/sv/04-fabrication-huggingchat.faf82a0a51278956.png)
 
 Som förväntat producerar varje modell (eller modellversion) något olika svar tack vare stokastiskt beteende och variationer i modellens kapacitet. Till exempel riktar sig en modell till en åttondeklassare medan en annan antar att användaren är gymnasieelev. Men alla tre modeller genererade svar som skulle kunna övertyga en oinformerad användare om att händelsen var verklig.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # جنریٹو اے آئی سے چلنے والی چیٹ ایپلیکیشنز بنانا
 
-[![جنریٹو اے آئی سے چلنے والی چیٹ ایپلیکیشنز بنانا](../../../translated_images/07-lesson-banner.a279b937f2843833.ur.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![جنریٹو اے آئی سے چلنے والی چیٹ ایپلیکیشنز بنانا](../../../translated_images/ur/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(اوپر دی گئی تصویر پر کلک کریں تاکہ اس سبق کی ویڈیو دیکھ سکیں)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ذاتی نوعیت کی ایک مثال OpenAI کے ChatGPT میں "Custom instructions" سیٹنگز ہے۔ یہ آپ کو اپنے بارے میں معلومات فراہم کرنے کی اجازت دیتا ہے جو آپ کے پرامپٹس کے لیے اہم سیاق و سباق ہو سکتی ہے۔ یہاں ایک مثال ہے:
 
-![ChatGPT میں Custom Instructions سیٹنگز](../../../translated_images/custom-instructions.b96f59aa69356fcf.ur.png)
+![ChatGPT میں Custom Instructions سیٹنگز](../../../translated_images/ur/custom-instructions.b96f59aa69356fcf.png)
 
 یہ "پروفائل" ChatGPT کو لنکڈ لسٹس پر ایک سبق منصوبہ بنانے کے لیے پرامپٹ کرتا ہے۔ نوٹ کریں کہ ChatGPT اس بات کو مدنظر رکھتا ہے کہ صارف اپنی تجربے کی بنیاد پر ایک زیادہ تفصیلی سبق منصوبہ چاہتا ہے۔
 
-![ChatGPT میں لنکڈ لسٹس کے بارے میں سبق منصوبہ کے لیے پرامپٹ](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.ur.png)
+![ChatGPT میں لنکڈ لسٹس کے بارے میں سبق منصوبہ کے لیے پرامپٹ](../../../translated_images/ur/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### مائیکروسافٹ کا سسٹم میسج فریم ورک برائے بڑے زبان ماڈلز
 

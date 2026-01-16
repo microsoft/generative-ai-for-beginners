@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sl"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.sl.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/sl/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Uvod
 
@@ -41,12 +41,12 @@ Za to lekcijo bomo modele naprej imenovali "odprti modeli", saj morda v času pi
 
 **Stroški** - Stroški na token za uporabo in uvajanje teh modelov so nižji kot pri lastniških modelih. Pri gradnji aplikacij Generativne AI je treba upoštevati razmerje med zmogljivostjo in ceno pri delu s temi modeli za vaš primer uporabe.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.sl.png)
+![Model Cost](../../../translated_images/sl/model-price.3f5a3e4d32ae00b4.png)
 Vir: Artificial Analysis
 
 **Fleksibilnost** - Delo z odprtimi modeli vam omogoča fleksibilnost pri uporabi različnih modelov ali njihovi kombinaciji. Primer tega so [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kjer lahko uporabnik neposredno v uporabniškem vmesniku izbere model, ki se uporablja:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.sl.png)
+![Choose Model](../../../translated_images/sl/choose-model.f095d15bbac92214.png)
 
 ## Raziskovanje različnih odprtih modelov
 
@@ -74,7 +74,7 @@ Za izbiro odprtega modela ni enega samega odgovora. Dobro izhodišče je uporaba
 
 Če želite primerjati LLM-je med različnimi vrstami, je [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) še en odličen vir:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.sl.png)
+![Model Quality](../../../translated_images/sl/model-quality.aaae1c22e00f7ee1.png)
 Vir: Artificial Analysis
 
 Če delate na specifičnem primeru uporabe, je lahko učinkovito iskati fino nastavljene različice, ki so osredotočene na isto področje. Eksperimentiranje z več odprtimi modeli, da vidite, kako delujejo glede na vaša in pričakovanja vaših uporabnikov, je prav tako dobra praksa.

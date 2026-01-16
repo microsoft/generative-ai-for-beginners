@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 مثال کے طور پر، جب آپ اپنی فائلوں میں کسی لنک پر hover کریں گے تو آپ کو لنک پر جانے کے لیے **ctrl + click** دبانے کا اشارہ ملے گا۔
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.ur.png)
+![VS code follow links screenshot](../../translated_images/ur/vscode-follow-link.85520ab6a1237adc.png)
 
 اگر آپ کسی لنک پر کلک کریں اور وہ لوکل طور پر کام نہ کرے، تو یقیناً ورک فلو بھی اسے ناکام قرار دے گا اور GitHub پر بھی کام نہیں کرے گا۔
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 جب آپ `./` یا `../` ٹائپ کریں گے تو VS code آپ کو دستیاب آپشنز میں سے انتخاب کرنے کا اشارہ دے گا۔
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ur.png)
+![VS code select relative path screenshot](../../translated_images/ur/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 مطلوبہ فائل یا فولڈر پر کلک کر کے راستہ منتخب کریں تاکہ آپ کو یقین ہو کہ آپ کا راستہ ٹوٹا ہوا نہیں ہے۔
 
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اگر نہیں، تو آپ کو درج ذیل غلطی مل سکتی ہے۔
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ur.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/ur/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 اس مسئلے کو حل کرنے کے لیے، ورک فلو نے جس فائل کے راستے کو ہائی لائٹ کیا ہے اسے کھولیں اور نسبتی راستوں کے آخر میں ٹریکنگ ID شامل کریں۔
 
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اگر نہیں، تو آپ کو درج ذیل غلطی مل سکتی ہے۔
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ur.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/ur/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 اس مسئلے کو حل کرنے کے لیے، ورک فلو نے جس فائل کے راستے کو ہائی لائٹ کیا ہے اسے کھولیں اور URLs کے آخر میں ٹریکنگ ID شامل کریں۔
 
@@ -123,7 +123,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اگر موجود ہو، تو آپ کو درج ذیل غلطی مل سکتی ہے۔
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ur.png)
+![GitHub check country locale comment screenshot](../../translated_images/ur/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 اس مسئلے کو حل کرنے کے لیے، ورک فلو نے جس فائل کے راستے کو ہائی لائٹ کیا ہے اسے کھولیں اور URLs سے ملک کا لوکیل ہٹا دیں۔
 

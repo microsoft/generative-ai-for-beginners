@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za Uzalishaji wa Maandishi
 
-[![Kujenga Programu za Uzalishaji wa Maandishi](../../../translated_images/06-lesson-banner.a5c629f990a636c8.sw.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Kujenga Programu za Uzalishaji wa Maandishi](../../../translated_images/sw/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Bofya picha hapo juu kutazama video ya somo hili)_
 

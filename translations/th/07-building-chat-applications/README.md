@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # การสร้างแอปพลิเคชันแชทที่ขับเคลื่อนด้วย Generative AI
 
-[![การสร้างแอปพลิเคชันแชทที่ขับเคลื่อนด้วย Generative AI](../../../translated_images/07-lesson-banner.a279b937f2843833.th.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![การสร้างแอปพลิเคชันแชทที่ขับเคลื่อนด้วย Generative AI](../../../translated_images/th/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(คลิกที่ภาพด้านบนเพื่อดูวิดีโอของบทเรียนนี้)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ตัวอย่างหนึ่งของการปรับแต่งคือการตั้งค่า "Custom instructions" ใน ChatGPT ของ OpenAI ซึ่งช่วยให้คุณสามารถให้ข้อมูลเกี่ยวกับตัวคุณเองที่อาจเป็นบริบทสำคัญสำหรับ prompt ของคุณ นี่คือตัวอย่างของการตั้งค่า custom instruction
 
-![การตั้งค่า Custom Instructions ใน ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.th.png)
+![การตั้งค่า Custom Instructions ใน ChatGPT](../../../translated_images/th/custom-instructions.b96f59aa69356fcf.png)
 
 โปรไฟล์นี้ช่วยให้ ChatGPT สร้างแผนการสอนเกี่ยวกับ linked lists สังเกตว่า ChatGPT คำนึงถึงว่าผู้ใช้อาจต้องการแผนการสอนที่ลึกซึ้งขึ้นตามประสบการณ์ของเธอ
 
-![Prompt ใน ChatGPT สำหรับแผนการสอนเกี่ยวกับ linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.th.png)
+![Prompt ใน ChatGPT สำหรับแผนการสอนเกี่ยวกับ linked lists](../../../translated_images/th/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Framework ข้อความระบบของ Microsoft สำหรับโมเดลภาษาขนาดใหญ่
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sr"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.sr.png)
+![Generative AI For Beginners](../../translated_images/sr/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 лекција које вас уче свему што треба да знате да бисте почели да правите апликације засноване на генеративној вештачкој интелигенцији
 

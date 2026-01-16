@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gradnja aplikacij za generiranje besedila
 
-[![Gradnja aplikacij za generiranje besedila](../../../translated_images/06-lesson-banner.a5c629f990a636c8.sl.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Gradnja aplikacij za generiranje besedila](../../../translated_images/sl/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Kliknite zgornjo sliko za ogled videa te lekcije)_
 

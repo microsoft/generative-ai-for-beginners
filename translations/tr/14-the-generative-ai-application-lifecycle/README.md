@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tr"
 }
 -->
-[![Fonksiyon çağrısı ile entegrasyon](../../../translated_images/14-lesson-banner.066d74a31727ac12.tr.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Fonksiyon çağrısı ile entegrasyon](../../../translated_images/tr/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Üretken Yapay Zeka Uygulama Yaşam Döngüsü
 
@@ -30,7 +30,7 @@ LLM'ler, Yapay Zeka cephaneliğinde yeni bir araçtır, uygulamalar için analiz
 
 Bununla birlikte, bu aracı dinamik bir şekilde, doğru teşviklerle uyarlamak için yeni bir Paradigmaya ihtiyacımız var. Eski yapay zeka uygulamalarını "ML Uygulamaları" ve yeni yapay zeka uygulamalarını "GenAI Uygulamaları" veya sadece "AI Uygulamaları" olarak kategorize edebiliriz; bu, o dönemde kullanılan ana teknoloji ve teknikleri yansıtır. Bu, anlatımızı birçok yönden değiştirir, aşağıdaki karşılaştırmaya bakın.
 
-![LLMOps ve MLOps karşılaştırması](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.tr.png)
+![LLMOps ve MLOps karşılaştırması](../../../translated_images/tr/01-llmops-shift.29bc933cb3bb0080.png)
 
 LLMOps'ta, uygulama geliştiricilere daha fazla odaklandığımızı, entegrasyonları anahtar nokta olarak kullandığımızı, "Hizmet Olarak Modeller" kullandığımızı ve metrikler için aşağıdaki noktalarda düşündüğümüzü fark edin.
 
@@ -44,7 +44,7 @@ LLMOps'ta, uygulama geliştiricilere daha fazla odaklandığımızı, entegrasyo
 
 Öncelikle, yaşam döngüsünü ve değişiklikleri anlamak için aşağıdaki infografiğe bakalım.
 
-![LLMOps infografiği](../../../translated_images/02-llmops.70a942ead05a7645.tr.png)
+![LLMOps infografiği](../../../translated_images/tr/02-llmops.70a942ead05a7645.png)
 
 Gördüğünüz gibi, bu MLOps'tan alışık olduğumuz yaşam döngülerinden farklıdır. LLM'lerin birçok yeni gereksinimi vardır; Prompting, kaliteyi artırmak için farklı teknikler (İnce Ayar, RAG, Meta-Promptlar), sorumlu yapay zeka ile farklı değerlendirme ve sorumluluk, son olarak yeni değerlendirme metrikleri (Kalite, Zarar, Dürüstlük, Maliyet ve Gecikme).
 
@@ -54,7 +54,7 @@ Bunun doğrusal değil, entegre döngüler, yinelemeli ve genel bir döngü oldu
 
 Bu adımları nasıl keşfedebiliriz? Bir yaşam döngüsü nasıl oluşturabileceğimize ayrıntılı bakalım.
 
-![LLMOps İş Akışı](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.tr.png)
+![LLMOps İş Akışı](../../../translated_images/tr/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Bu biraz karmaşık görünebilir, önce üç büyük adıma odaklanalım.
 
@@ -74,11 +74,11 @@ Araçlar için Microsoft, [Azure AI Platformu](https://azure.microsoft.com/solut
 
 [Azure AI Platformu](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys) kullanmanıza olanak tanır. AI Studio, modelleri, örnekleri ve araçları keşfetmenizi sağlayan bir web portalıdır. Kaynaklarınızı yönetir, kullanıcı arayüzü geliştirme akışları ve Kod-Öncelikli geliştirme için SDK/CLI seçenekleri sunar.
 
-![Azure AI imkanları](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.tr.png)
+![Azure AI imkanları](../../../translated_images/tr/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI, operasyonlarınızı, hizmetlerinizi, projelerinizi, vektör arama ve veritabanı ihtiyaçlarınızı yönetmek için birden çok kaynak kullanmanıza olanak tanır.
 
-![Azure AI ile LLMOps](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.tr.png)
+![Azure AI ile LLMOps](../../../translated_images/tr/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Proof-of-Concept(POC)'ten büyük ölçekli uygulamalara kadar PromptFlow ile inşa edin:
 
@@ -86,7 +86,7 @@ Proof-of-Concept(POC)'ten büyük ölçekli uygulamalara kadar PromptFlow ile in
 - Uygulamalarınızı kaliteli yapay zeka için kolayca test edin ve ince ayar yapın.
 - Azure AI Studio'yu kullanarak bulut ile entegre edin, iterasyon yapın, hızlı entegrasyon için itme ve dağıtım yapın.
 
-![PromptFlow ile LLMOps](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.tr.png)
+![PromptFlow ile LLMOps](../../../translated_images/tr/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Harika! Öğrenmeye Devam Edin!
 

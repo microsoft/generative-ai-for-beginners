@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za AI kwa Kutumia Nambari Kidogo
 
-[![Kujenga Programu za AI kwa Kutumia Nambari Kidogo](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.sw.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Kujenga Programu za AI kwa Kutumia Nambari Kidogo](../../../translated_images/sw/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
@@ -92,17 +92,17 @@ Utajenga programu kwa kutumia Copilot katika Power Apps ukifuata hatua zifuatazo
 
 1. Tumia eneo la maandishi kwenye skrini ya nyumbani kuelezea programu unayotaka kujenga. Kwa mfano, **_Nataka kujenga programu ya kufuatilia na kusimamia kazi za wanafunzi_**. Bonyeza kitufe cha **Tuma** kutuma maelezo kwa AI Copilot.
 
-![Elezea programu unayotaka kujenga](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.sw.png)
+![Elezea programu unayotaka kujenga](../../../translated_images/sw/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. AI Copilot itapendekeza Jedwali la Dataverse lenye sehemu unazohitaji kuhifadhi data unayotaka kufuatilia na baadhi ya data ya mfano. Unaweza kisha kubinafsisha jedwali ili kukidhi mahitaji yako kwa kutumia kipengele cha msaidizi wa AI Copilot kupitia hatua za mazungumzo.
 
    > **Muhimu**: Dataverse ni jukwaa la data la msingi kwa Power Platform. Ni jukwaa la data la nambari kidogo kwa kuhifadhi data ya programu. Ni huduma inayosimamiwa kikamilifu inayohifadhi data kwa usalama katika Microsoft Cloud na hutolewa ndani ya mazingira yako ya Power Platform. Inakuja na uwezo wa usimamizi wa data uliojengwa ndani, kama uainishaji wa data, mfuatano wa data, udhibiti wa ufikiaji wa kina, na zaidi. Unaweza kujifunza zaidi kuhusu Dataverse [hapa](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Sehemu zilizopendekezwa katika jedwali lako jipya](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.sw.png)
+   ![Sehemu zilizopendekezwa katika jedwali lako jipya](../../../translated_images/sw/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. Walimu wanataka kutuma barua pepe kwa wanafunzi waliowasilisha kazi zao ili kuwafahamisha kuhusu maendeleo ya kazi zao. Unaweza kutumia Copilot kuongeza sehemu mpya kwenye jedwali kuhifadhi barua pepe za wanafunzi. Kwa mfano, unaweza kutumia maelezo yafuatayo kuongeza sehemu mpya kwenye jedwali: **_Nataka kuongeza safu kuhifadhi barua pepe za wanafunzi_**. Bonyeza kitufe cha **Tuma** kutuma maelezo kwa AI Copilot.
 
-![Kuongeza sehemu mpya](../../../translated_images/copilot-new-column.35e15ff21acaf274.sw.png)
+![Kuongeza sehemu mpya](../../../translated_images/sw/copilot-new-column.35e15ff21acaf274.png)
 
 1. AI Copilot itatengeneza sehemu mpya na unaweza kisha kubinafsisha sehemu hiyo ili kukidhi mahitaji yako.
 
@@ -112,7 +112,7 @@ Utajenga programu kwa kutumia Copilot katika Power Apps ukifuata hatua zifuatazo
 
 1. Ili walimu waweze kutuma barua pepe kwa wanafunzi, unaweza kutumia Copilot kuongeza skrini mpya kwenye programu. Kwa mfano, unaweza kutumia maelezo yafuatayo kuongeza skrini mpya kwenye programu: **_Nataka kuongeza skrini ya kutuma barua pepe kwa wanafunzi_**. Bonyeza kitufe cha **Tuma** kutuma maelezo kwa AI Copilot.
 
-![Kuongeza skrini mpya kupitia maelezo ya maelekezo](../../../translated_images/copilot-new-screen.2e0bef7132a17392.sw.png)
+![Kuongeza skrini mpya kupitia maelezo ya maelekezo](../../../translated_images/sw/copilot-new-screen.2e0bef7132a17392.png)
 
 1. AI Copilot itatengeneza skrini mpya na unaweza kisha kubinafsisha skrini hiyo ili kukidhi mahitaji yako.
 
@@ -147,15 +147,15 @@ Ili kuunda jedwali katika Dataverse kwa kutumia Copilot, fuata hatua zifuatazo:
 
 2. Kwenye upau wa urambazaji wa kushoto, chagua **Tables** kisha bonyeza **Describe the new Table**.
 
-![Chagua jedwali jipya](../../../translated_images/describe-new-table.0792373eb757281e.sw.png)
+![Chagua jedwali jipya](../../../translated_images/sw/describe-new-table.0792373eb757281e.png)
 
 3. Kwenye skrini ya **Describe the new Table**, tumia eneo la maandishi kuelezea jedwali unayotaka kuunda. Kwa mfano, **_Nataka kuunda jedwali kuhifadhi taarifa za ankara_**. Bonyeza kitufe cha **Send** kutuma maelezo kwa AI Copilot.
 
-![Eleza jedwali](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.sw.png)
+![Eleza jedwali](../../../translated_images/sw/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 4. AI Copilot itapendekeza Jedwali la Dataverse lenye sehemu unazohitaji kuhifadhi data unayotaka kufuatilia na baadhi ya data ya mfano. Unaweza kubinafsisha jedwali ili kukidhi mahitaji yako kwa kutumia kipengele cha msaidizi wa AI Copilot kupitia hatua za mazungumzo.
 
-![Jedwali la Dataverse lililopendekezwa](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.sw.png)
+![Jedwali la Dataverse lililopendekezwa](../../../translated_images/sw/copilot-dataverse-table.b3bc936091324d9d.png)
 
 5. Timu ya fedha inataka kutuma barua pepe kwa muuzaji kuwajulisha hali ya sasa ya ankara yao. Unaweza kutumia Copilot kuongeza sehemu mpya kwenye jedwali kuhifadhi barua pepe ya muuzaji. Kwa mfano, unaweza kutumia maelezo yafuatayo kuongeza sehemu mpya kwenye jedwali: **_Nataka kuongeza safu kuhifadhi barua pepe ya muuzaji_**. Bonyeza kitufe cha **Send** kutuma maelezo kwa AI Copilot.
 
@@ -184,7 +184,7 @@ Baadhi ya Miundo ya AI Iliyotengenezwa Tayari inayopatikana katika Power Platfor
 
 Kwa Miundo ya AI ya Kipekee unaweza kuleta muundo wako mwenyewe katika AI Builder ili uweze kufanya kazi kama muundo wowote wa kipekee wa AI Builder, ukiruhusu kufundisha muundo kwa kutumia data yako mwenyewe. Unaweza kutumia miundo hii kuendesha michakato na kutabiri matokeo katika Power Apps na Power Automate. Unapotumia muundo wako mwenyewe kuna vikwazo vinavyotumika. Soma zaidi kuhusu [vikwazo hivi](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Miundo ya AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f.sw.png)
+![Miundo ya AI Builder](../../../translated_images/sw/ai-builder-models.8069423b84cfc47f.png)
 
 ## Kazi #2 - Jenga Mtiririko wa Usindikaji wa Ankara kwa Kampuni Yetu Changa
 
@@ -198,7 +198,7 @@ Ili kujenga mtiririko ambao utasaidia timu ya fedha kusindika ankara kwa kutumia
 
 2. Tumia eneo la maandishi kwenye skrini ya nyumbani kuelezea mtiririko unaotaka kujenga. Kwa mfano, **_Sindika ankara inapofika kwenye sanduku langu la barua_**. Bonyeza kitufe cha **Send** kutuma maelezo kwa AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.sw.png)
+   ![Copilot power automate](../../../translated_images/sw/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. AI Copilot itapendekeza hatua unazohitaji kutekeleza kazi unayotaka kuendesha. Unaweza kubonyeza kitufe cha **Next** kupitia hatua zinazofuata.
 
@@ -212,7 +212,7 @@ Ili kujenga mtiririko ambao utasaidia timu ya fedha kusindika ankara kwa kutumia
 
 8. Ondoa hatua ya **Condition** kutoka kwa mtiririko kwa sababu hautaitumia. Inapaswa kuonekana kama picha ifuatayo:
 
-   ![power automate, ondoa hatua](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.sw.png)
+   ![power automate, ondoa hatua](../../../translated_images/sw/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. Bonyeza kitufe cha **Add an action** na tafuta **Dataverse**. Chagua hatua ya **Add a new row**.
 
@@ -227,7 +227,7 @@ Ili kujenga mtiririko ambao utasaidia timu ya fedha kusindika ankara kwa kutumia
     - Status - Weka **Status** kuwa **Pending**.
     - Supplier Email - Tumia maudhui ya nguvu ya **From** kutoka kwa kichocheo cha **When a new email arrives**.
 
-    ![power automate ongeza safu](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.sw.png)
+    ![power automate ongeza safu](../../../translated_images/sw/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. Ukimaliza na mtiririko, bonyeza kitufe cha **Save** kuhifadhi mtiririko. Unaweza kisha kujaribu mtiririko kwa kutuma barua pepe yenye ankara kwenye folda uliyoainisha kwenye kichocheo.
 
@@ -241,7 +241,7 @@ Miundo ya GPT hupitia mafunzo makubwa kwa kutumia data nyingi, ikiruhusu kuzalis
 
 Kwa mfano, unaweza kujenga mtiririko wa kuzalisha maandishi kiotomatiki kwa matumizi mbalimbali, kama: rasimu za barua pepe, maelezo ya bidhaa, na zaidi. Unaweza pia kutumia muundo kuzalisha maandishi kwa programu mbalimbali, kama vile chatbots na programu za huduma kwa wateja zinazowawezesha mawakala wa huduma kwa wateja kujibu maswali ya wateja kwa ufanisi.
 
-![unda maelezo](../../../translated_images/create-prompt-gpt.69d429300c2e870a.sw.png)
+![unda maelezo](../../../translated_images/sw/create-prompt-gpt.69d429300c2e870a.png)
 
 Ili kujifunza jinsi ya kutumia Muundo huu wa AI katika Power Automate, pitia moduli ya [Ongeza akili na AI Builder na GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Paglikha ng Advanced na Prompt
 
-[![Paglikha ng Advanced na Prompt](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.tl.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Paglikha ng Advanced na Prompt](../../../translated_images/tl/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Balikan natin ang ilang natutunan mula sa nakaraang kabanata:
 

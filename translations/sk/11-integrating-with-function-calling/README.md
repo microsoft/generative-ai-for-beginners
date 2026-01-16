@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrácia s volaním funkcií
 
-[![Integrácia s volaním funkcií](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.sk.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrácia s volaním funkcií](../../../translated_images/sk/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 V predchádzajúcich lekciách ste sa už naučili pomerne veľa. Napriek tomu sa môžeme ešte zlepšiť. Niektoré veci, ktoré môžeme riešiť, zahŕňajú získanie konzistentnejšieho formátu odpovedí, aby sa s nimi dalo ľahšie pracovať v ďalších krokoch. Tiež by sme mohli chcieť pridať údaje z iných zdrojov na ďalšie obohatenie našej aplikácie.
 
@@ -179,7 +179,7 @@ Teraz môžeme poslať obe požiadavky do LLM a preskúmať odpoveď, ktorú dos
 
 Ako teda vyriešiť problém s formátovaním? Použitím volania funkcií môžeme zabezpečiť, že dostaneme späť štruktúrované údaje. Pri použití volania funkcií LLM vlastne nevolá ani nespúšťa žiadne funkcie. Namiesto toho vytvárame štruktúru, ktorú LLM dodržiava pri svojich odpovediach. Potom používame tieto štruktúrované odpovede na určenie, akú funkciu spustiť v našich aplikáciách.
 
-![tok funkcie](../../../translated_images/Function-Flow.083875364af4f4bb.sk.png)
+![tok funkcie](../../../translated_images/sk/Function-Flow.083875364af4f4bb.png)
 
 Potom môžeme vziať to, čo sa vráti z funkcie, a poslať to späť do LLM. LLM potom odpovie pomocou prirodzeného jazyka na zodpovedanie používateľského dotazu.
 
@@ -201,7 +201,7 @@ Proces vytvorenia volania funkcie zahŕňa 3 hlavné kroky:
 2. **Čítanie** odpovede modelu na vykonanie akcie, napr. vykonanie funkcie alebo API požiadavky.
 3. **Vykonanie** ďalšieho volania API Chat Completions s odpoveďou z vašej funkcie na použitie týchto informácií na vytvorenie odpovede pre používateľa.
 
-![LLM tok](../../../translated_images/LLM-Flow.3285ed8caf4796d7.sk.png)
+![LLM tok](../../../translated_images/sk/LLM-Flow.3285ed8caf4796d7.png)
 
 ### Krok 1 - vytvorenie správ
 

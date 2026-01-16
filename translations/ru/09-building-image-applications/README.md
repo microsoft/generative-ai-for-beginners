@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Создание приложений для генерации изображений
 
-[![Создание приложений для генерации изображений](../../../translated_images/09-lesson-banner.906e408c741f4411.ru.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Создание приложений для генерации изображений](../../../translated_images/ru/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Генерация текста — это не единственное, что могут делать LLM. Также возможно создавать изображения на основе текстовых описаний. Наличие изображений как модальности может быть чрезвычайно полезным в различных областях, таких как медицинские технологии, архитектура, туризм, разработка игр и многое другое. В этой главе мы рассмотрим две самые популярные модели генерации изображений: DALL-E и Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Вот пример того, что студенты Edu4All могут создать, если они работают в классе над темой памятников:
 
-![Стартап Edu4All, класс о памятниках, Эйфелева башня](../../../translated_images/startup.94d6b79cc4bb3f5a.ru.png)
+![Стартап Edu4All, класс о памятниках, Эйфелева башня](../../../translated_images/ru/startup.94d6b79cc4bb3f5a.png)
 
 используя подсказку вроде:
 
@@ -272,9 +272,9 @@ _Авторегрессионный трансформер_ определяет
   Исходное изображение будет содержать только лаунж с бассейном, но итоговое изображение будет включать фламинго:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.ru.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.ru.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.ru.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Создавать вариации**. Идея заключается в том, чтобы взять существующее изображение и попросить создать его вариации. Для создания вариации вы предоставляете изображение и текстовую подсказку, а код выглядит следующим образом:
@@ -298,11 +298,11 @@ _Авторегрессионный трансформер_ определяет
 
 > Подсказка: "Кролик на лошади, держащий леденец, на туманном лугу, где растут нарциссы"
 
-![Кролик на лошади, держащий леденец, версия 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.ru.png)
+![Кролик на лошади, держащий леденец, версия 1](../../../translated_images/ru/v1-generated-image.a295cfcffa3c13c2.png)
 
 Теперь запустим ту же подсказку снова, чтобы увидеть, что мы не получим одно и то же изображение дважды:
 
-![Созданное изображение кролика на лошади](../../../translated_images/v2-generated-image.33f55a3714efe61d.ru.png)
+![Созданное изображение кролика на лошади](../../../translated_images/ru/v2-generated-image.33f55a3714efe61d.png)
 
 Как видите, изображения похожи, но не идентичны. Давайте попробуем изменить значение температуры на 0.1 и посмотрим, что произойдет:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Теперь, когда вы запустите этот код, вы получите эти два изображения:
 
-- ![Температура 0, версия 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.ru.png)
-- ![Температура 0, версия 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.ru.png)
+- ![Температура 0, версия 1](../../../translated_images/ru/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Температура 0, версия 2](../../../translated_images/ru/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Здесь вы можете ясно видеть, как изображения больше похожи друг на друга.
 

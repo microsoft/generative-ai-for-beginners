@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 生成式人工智慧與大型語言模型簡介
 
-[![生成式人工智慧與大型語言模型簡介](../../../translated_images/01-lesson-banner.2424cfd092f43366.tw.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![生成式人工智慧與大型語言模型簡介](../../../translated_images/tw/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(點擊上方圖片觀看本課程影片)_
 
@@ -43,7 +43,7 @@ _(點擊上方圖片觀看本課程影片)_
 
 生成式人工智慧預計將徹底改變我們今天的學習和教學方式，學生可以隨時隨地使用虛擬教師獲取大量信息和範例，而教師則能利用創新的工具評估學生並提供反饋。
 
-![五位年輕學生正在觀看螢幕 - 圖片由 DALLE2 提供](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.tw.png)
+![五位年輕學生正在觀看螢幕 - 圖片由 DALLE2 提供](../../../translated_images/tw/students-by-DALLE2.b70fddaced1042ee.png)
 
 首先，讓我們定義一些我們在整個課程中將使用的基本概念和術語。
 
@@ -70,7 +70,7 @@ _(點擊上方圖片觀看本課程影片)_
 
 這就是我們如何走到今天的生成式人工智慧，它可以被視為深度學習的一個子集。
 
-![人工智慧、機器學習、深度學習與生成式人工智慧](../../../translated_images/AI-diagram.c391fa518451a40d.tw.png)
+![人工智慧、機器學習、深度學習與生成式人工智慧](../../../translated_images/tw/AI-diagram.c391fa518451a40d.png)
 
 經過數十年的人工智慧領域研究，一種新的模型架構——稱為 _Transformer_——克服了 RNNs 的限制，能夠接受更長的文本序列作為輸入。Transformer 基於注意力機制，使模型能夠對接收到的輸入賦予不同的權重，‘更關注’最相關的信息所在位置，而不受文本序列中順序的影響。
 
@@ -82,7 +82,7 @@ _(點擊上方圖片觀看本課程影片)_
 
 - **分詞器，將文本轉換為數字**：大型語言模型接收文本作為輸入並生成文本作為輸出。然而，作為統計模型，它們處理數字比處理文本序列更為有效。因此，模型的每個輸入在被核心模型使用之前都會經過分詞器處理。分詞器的主要任務是將輸入拆分為一系列的詞元（token），每個詞元由可變數量的字符組成。然後，每個詞元會映射到一個詞元索引，即原始文本片段的整數編碼。
 
-![分詞示例](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.tw.png)
+![分詞示例](../../../translated_images/tw/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **預測輸出詞元**：給定 n 個詞元作為輸入（最大 n 隨模型而異），模型能夠預測一個詞元作為輸出。該詞元然後被納入下一次迭代的輸入中，形成擴展窗口模式，提供更好的用戶體驗，生成一個（或多個）句子作為答案。這解釋了為什麼如果您曾使用過 ChatGPT，可能會注意到有時它似乎在句子中途停止。
 
@@ -100,23 +100,23 @@ _(點擊上方圖片觀看本課程影片)_
 
   1. 文章、書籍、產品評論等的摘要，以及從非結構化數據中提取洞察。
     
-    ![摘要示例](../../../translated_images/summarization-example.7b7ff97147b3d790.tw.png)
+    ![摘要示例](../../../translated_images/tw/summarization-example.7b7ff97147b3d790.png)
   
   2. 創意構思和設計文章、論文、作業等。
       
-     ![創意寫作示例](../../../translated_images/creative-writing-example.e24a685b5a543ad1.tw.png)
+     ![創意寫作示例](../../../translated_images/tw/creative-writing-example.e24a685b5a543ad1.png)
 
 - **問題**，以與代理對話的形式提出。
   
-  ![對話示例](../../../translated_images/conversation-example.60c2afc0f595fa59.tw.png)
+  ![對話示例](../../../translated_images/tw/conversation-example.60c2afc0f595fa59.png)
 
 - 一段需要**完成的文本**，隱含著對寫作協助的需求。
   
-  ![文本完成示例](../../../translated_images/text-completion-example.cbb0f28403d42752.tw.png)
+  ![文本完成示例](../../../translated_images/tw/text-completion-example.cbb0f28403d42752.png)
 
 - 一段**程式碼**，並要求解釋和記錄它，或者一段評論要求生成執行特定任務的程式碼。
   
-  ![程式碼示例](../../../translated_images/coding-example.50ebabe8a6afff20.tw.png)
+  ![程式碼示例](../../../translated_images/tw/coding-example.50ebabe8a6afff20.png)
 
 以上示例相對簡單，並非旨在全面展示大型語言模型的能力。它們旨在展示使用生成式人工智慧的潛力，特別是在教育環境中，但不限於此。
 

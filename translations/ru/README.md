@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ru"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ru.png)
+![Generative AI For Beginners](../../translated_images/ru/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 урок, обучающих всему, что нужно знать, чтобы начать создавать приложения с использованием генеративного ИИ
 

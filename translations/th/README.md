@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "th"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.th.png)
+![Generative AI For Beginners](../../translated_images/th/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 บทเรียนสอนทุกสิ่งที่คุณต้องรู้เพื่อเริ่มสร้างแอปพลิเคชัน Generative AI
 

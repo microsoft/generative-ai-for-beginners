@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Görüntü Oluşturma Uygulamaları Oluşturma
 
-[![Görüntü Oluşturma Uygulamaları Oluşturma](../../../translated_images/09-lesson-banner.906e408c741f4411.tr.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Görüntü Oluşturma Uygulamaları Oluşturma](../../../translated_images/tr/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Büyük Dil Modelleri (LLM'ler) yalnızca metin oluşturma ile sınırlı değildir. Metin açıklamalarından görüntü oluşturmak da mümkündür. Görüntülerin bir modalite olarak kullanılması, MedTech, mimarlık, turizm, oyun geliştirme gibi birçok alanda oldukça faydalı olabilir. Bu bölümde, en popüler iki görüntü oluşturma modeli olan DALL-E ve Midjourney'i inceleyeceğiz.
 
@@ -43,7 +43,7 @@ Bu ders kapsamında, Edu4All adlı girişimimizle çalışmaya devam edeceğiz. 
 
 Edu4All öğrencilerinin sınıfta anıtlar üzerinde çalışırken oluşturabilecekleri örneklerden biri:
 
-![Edu4All girişimi, anıtlar üzerine sınıf, Eyfel Kulesi](../../../translated_images/startup.94d6b79cc4bb3f5a.tr.png)
+![Edu4All girişimi, anıtlar üzerine sınıf, Eyfel Kulesi](../../../translated_images/tr/startup.94d6b79cc4bb3f5a.png)
 
 şu tür bir istem kullanarak:
 
@@ -272,9 +272,9 @@ Ayrıca şunları yapabilirsiniz:
   Temel görüntü yalnızca havuzlu salonu içerirken, son görüntüde bir flamingo olacaktır:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.tr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.tr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.tr.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Varyasyonlar oluşturma**. Buradaki fikir, mevcut bir görüntüyü alıp farklı varyasyonlar oluşturmanızdır. Bir varyasyon oluşturmak için bir görüntü ve bir metin istemi sağlayarak şu şekilde kod yazabilirsiniz:
@@ -298,11 +298,11 @@ Sıcaklığın nasıl çalıştığını görmek için bu istemi iki kez çalı�
 
 > İstem: "Sisli bir çayırda nergislerin yetiştiği bir alanda lolipop tutan bir atın üzerindeki tavşan"
 
-![Lolipop tutan bir atın üzerindeki tavşan, versiyon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.tr.png)
+![Lolipop tutan bir atın üzerindeki tavşan, versiyon 1](../../../translated_images/tr/v1-generated-image.a295cfcffa3c13c2.png)
 
 Şimdi aynı istemi tekrar çalıştırarak aynı görüntüyü iki kez alamayacağımızı görelim:
 
-![Atın üzerindeki tavşan görüntüsü](../../../translated_images/v2-generated-image.33f55a3714efe61d.tr.png)
+![Atın üzerindeki tavşan görüntüsü](../../../translated_images/tr/v2-generated-image.33f55a3714efe61d.png)
 
 Gördüğünüz gibi, görüntüler benzer ancak aynı değil. Şimdi sıcaklık değerini 0.1'e değiştirip ne olduğunu görelim:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Şimdi bu kodu çalıştırdığınızda şu iki görüntüyü elde edersiniz:
 
-- ![Sıcaklık 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.tr.png)
-- ![Sıcaklık 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.tr.png)
+- ![Sıcaklık 0, v1](../../../translated_images/tr/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Sıcaklık 0, v2](../../../translated_images/tr/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Burada açıkça görebilirsiniz ki görüntüler birbirine daha çok benziyor.
 
