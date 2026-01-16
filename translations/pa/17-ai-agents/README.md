@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pa"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.pa.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/pa/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## ਜਾਣ ਪਛਾਣ
 
@@ -33,7 +33,7 @@ AI Agents ਜਨਰੇਟਿਵ AI ਦੀ ਦੁਨੀਆ ਵਿੱਚ ਬਹੁ
 
 AI Agents ਵੱਡੇ ਭਾਸ਼ਾ ਮਾਡਲਾਂ (LLMs) ਨੂੰ **ਸਟੇਟ** ਅਤੇ **ਟੂਲ** ਤੱਕ ਪਹੁੰਚ ਦੇ ਕੇ ਕੰਮ ਕਰਨ ਦੀ ਯੋਗਤਾ ਦਿੰਦੇ ਹਨ।
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.pa.png)
+![Agent Model](../../../translated_images/pa/what-agent.21f2893bdfd01e6a.png)
 
 ਆਓ ਇਹਨਾਂ ਸ਼ਬਦਾਂ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਕਰੀਏ:
 
@@ -53,7 +53,7 @@ AI Agents ਵੱਡੇ ਭਾਸ਼ਾ ਮਾਡਲਾਂ (LLMs) ਨੂੰ **ਸ
 
 `Agent Executor` ਚੈਟ ਇਤਿਹਾਸ ਨੂੰ ਸਟੋਰ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਚੈਟ ਦਾ ਸੰਦਰਭ ਪ੍ਰਦਾਨ ਕੀਤਾ ਜਾ ਸਕੇ।
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.pa.png)
+![Langchain Agents](../../../translated_images/pa/langchain-agents.edcc55b5d5c43716.png)
 
 LangChain ਇੱਕ [ਟੂਲਾਂ ਦੀ ਕੈਟਾਲੌਗ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਜੋ ਤੁਹਾਡੇ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਇੰਪੋਰਟ ਕੀਤੇ ਜਾ ਸਕਦੇ ਹਨ ਜਿਸ ਵਿੱਚ LLM ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦਾ ਹੈ। ਇਹ ਟੂਲ ਕਮਿਊਨਿਟੀ ਅਤੇ LangChain ਟੀਮ ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਹਨ।
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ਇੱਥੇ ਪ੍ਰਕਿਰਿਆ ਦਾ ਇੱਕ ਉਦਾਹਰਣ ਹੈ:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.pa.png)
+![AutoGen](../../../translated_images/pa/autogen.dee9a25a45fde584.png)
 
 #### ਸਿਸਟਮ ਸੁਨੇਹਾ ਨਾਲ ਪਰਿਭਾਸ਼ਿਤ LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 ਕੰਮ ਪੂਰੇ ਕਰਨ ਲਈ `Planner` ਨੂੰ `Plugins` ਕਿਹਾ ਜਾਣ ਵਾਲੇ ਟੂਲਾਂ ਦੇ ਸੰਗ੍ਰਹਿ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਹੁੰਦੀ ਹੈ। ਇਹ Python ਕਲਾਸਾਂ ਜਾਂ ਇੱਕ ਜਨਰਲ ਕੋਡ ਇੰਟਰਪ੍ਰੀਟਰ ਹੋ ਸਕਦੇ ਹਨ। ਇਹ plugins embeddings ਵਜੋਂ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਤਾਂ ਜੋ LLM ਸਹੀ plugin ਦੀ ਭਾਲ ਕਰ ਸਕੇ।
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.pa.png)
+![Taskweaver](../../../translated_images/pa/taskweaver.da8559999267715a.png)
 
 ਇੱਥੇ anomaly detection ਨੂੰ ਸੰਭਾਲਣ ਲਈ ਇੱਕ plugin ਦਾ ਉਦਾਹਰਣ ਹੈ:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 ਅੰਤਮ Agent ਫਰੇਮਵਰਕ ਜਿਸ ਬਾਰੇ ਅਸੀਂ ਚਰਚਾ ਕਰਾਂਗੇ ਉਹ ਹੈ [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)। JARVIS ਨੂੰ ਵਿਸ਼ੇਸ਼ ਬਣਾਉਂਦਾ ਹੈ ਕਿ ਇਹ ਗੱਲਬਾਤ ਦੇ `state` ਨੂੰ ਪ੍ਰਬੰਧਿਤ ਕਰਨ ਲਈ ਇੱਕ LLM ਵਰਤਦਾ ਹੈ ਅਤੇ `tools` ਹੋਰ AI ਮਾਡਲ ਹਨ। ਹਰ AI ਮਾਡਲ ਵਿਸ਼ੇਸ਼ ਮਾਡਲ ਹੁੰਦੇ ਹਨ ਜੋ ਕੁਝ ਕੰਮਾਂ ਜਿਵੇਂ object detection, transcription ਜਾਂ image captioning ਕਰਨ ਲਈ ਬਣਾਏ ਜਾਂਦੇ ਹਨ।
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.pa.png)
+![JARVIS](../../../translated_images/pa/jarvis.762ddbadbd1a3a33.png)
 
 LLM, ਇੱਕ ਜਨਰਲ ਪਰਪਜ਼ ਮਾਡਲ ਹੋਣ ਦੇ ਨਾਤੇ, ਉਪਭੋਗਤਾ ਤੋਂ ਬੇਨਤੀ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ ਅਤੇ ਵਿਸ਼ੇਸ਼ ਕੰਮ ਅਤੇ ਕੋਈ ਵੀ arguments/ਡਾਟਾ ਜੋ ਇਸ ਕੰਮ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਲੋੜੀਂਦਾ ਹੈ, ਦੀ ਪਛਾਣ ਕਰਦਾ ਹੈ।
 

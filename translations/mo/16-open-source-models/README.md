@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.mo.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/mo/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## 介紹
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **成本** — 使用和部署這些模型的每個標記成本低於專有模型。構建生成式AI應用時，應根據您的使用案例評估性能與價格的平衡。
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.mo.png)
+![Model Cost](../../../translated_images/mo/model-price.3f5a3e4d32ae00b4.png)
 來源：Artificial Analysis
 
 **靈活性** — 使用開源模型讓您在使用不同模型或將它們結合時更具彈性。例如，[HuggingChat 助手](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)允許用戶直接在介面中選擇使用的模型：
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.mo.png)
+![Choose Model](../../../translated_images/mo/choose-model.f095d15bbac92214.png)
 
 ## 探索不同的開源模型
 
@@ -74,7 +74,7 @@ Falcon 的微調版本包括基於開源模型打造的[OpenAssistant](https://h
 
 若想比較不同類型的LLMs，[Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)是另一個很好的資源：
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.mo.png)
+![Model Quality](../../../translated_images/mo/model-quality.aaae1c22e00f7ee1.png)
 來源：Artificial Analysis
 
 針對特定使用案例，尋找專注於相同領域的微調版本會很有效。嘗試多個開源模型，根據您和用戶的期望評估其表現，也是良好做法。

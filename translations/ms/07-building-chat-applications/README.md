@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membina Aplikasi Chat Berkuasa AI Generatif
 
-[![Membina Aplikasi Chat Berkuasa AI Generatif](../../../translated_images/07-lesson-banner.a279b937f2843833.ms.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Membina Aplikasi Chat Berkuasa AI Generatif](../../../translated_images/ms/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klik imej di atas untuk menonton video pelajaran ini)_
 
@@ -96,11 +96,11 @@ Prinsip UX umum terpakai kepada aplikasi chat, tetapi berikut adalah beberapa pe
 
 Satu contoh personalisasi adalah tetapan "Arahan Tersuai" dalam ChatGPT OpenAI. Ia membolehkan anda memberikan maklumat tentang diri anda yang mungkin menjadi konteks penting untuk prompt anda. Berikut adalah contoh arahan tersuai.
 
-![Tetapan Arahan Tersuai dalam ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.ms.png)
+![Tetapan Arahan Tersuai dalam ChatGPT](../../../translated_images/ms/custom-instructions.b96f59aa69356fcf.png)
 
 "Profil" ini meminta ChatGPT untuk mencipta rancangan pelajaran tentang senarai berkait. Perhatikan bahawa ChatGPT mengambil kira bahawa pengguna mungkin mahukan rancangan pelajaran yang lebih mendalam berdasarkan pengalamannya.
 
-![Prompt dalam ChatGPT untuk rancangan pelajaran tentang senarai berkait](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.ms.png)
+![Prompt dalam ChatGPT untuk rancangan pelajaran tentang senarai berkait](../../../translated_images/ms/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Rangka Kerja Mesej Sistem Microsoft untuk Model Bahasa Besar
 

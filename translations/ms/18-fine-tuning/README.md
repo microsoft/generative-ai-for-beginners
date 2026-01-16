@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ms"
 }
 -->
-[![Model Sumber Terbuka](../../../translated_images/18-lesson-banner.f30176815b1a5074.ms.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Model Sumber Terbuka](../../../translated_images/ms/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Penyesuaian Model LLM Anda
 
@@ -32,7 +32,7 @@ Sedia? Mari kita mulakan.
 
 Ingin mendapatkan gambaran besar tentang apa yang akan kita bahas sebelum kita mendalami? Lihat panduan bergambar ini yang menerangkan perjalanan pembelajaran untuk pelajaran ini - dari mempelajari konsep utama dan motivasi untuk penyesuaian, hingga memahami proses dan amalan terbaik untuk melaksanakan tugas penyesuaian. Ini adalah topik yang menarik untuk diterokai, jadi jangan lupa untuk melihat halaman [Sumber](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) untuk pautan tambahan bagi menyokong perjalanan pembelajaran kendiri anda!
 
-![Panduan Bergambar untuk Penyesuaian Model Bahasa](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.ms.png)
+![Panduan Bergambar untuk Penyesuaian Model Bahasa](../../../translated_images/ms/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## Apa itu penyesuaian untuk model bahasa?
 

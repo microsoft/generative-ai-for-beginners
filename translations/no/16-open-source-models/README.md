@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "no"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.no.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/no/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduksjon
 
@@ -41,12 +41,12 @@ For denne leksjonen vil vi referere til modellene som "åpne modeller" videre, d
 
 **Kostnad** – Kostnaden per token for bruk og distribusjon av disse modellene er lavere enn for proprietære modeller. Når man bygger generative AI-applikasjoner, bør man vurdere ytelse versus pris når man jobber med disse modellene for sitt brukstilfelle.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.no.png)
+![Model Cost](../../../translated_images/no/model-price.3f5a3e4d32ae00b4.png)
 Kilde: Artificial Analysis
 
 **Fleksibilitet** – Å jobbe med åpne modeller gir deg fleksibilitet når det gjelder å bruke forskjellige modeller eller kombinere dem. Et eksempel på dette er [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) hvor en bruker kan velge modellen som brukes direkte i brukergrensesnittet:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.no.png)
+![Choose Model](../../../translated_images/no/choose-model.f095d15bbac92214.png)
 
 ## Utforske forskjellige åpne modeller
 
@@ -74,7 +74,7 @@ Det finnes ikke ett svar på hvordan man velger en åpen modell. Et godt sted å
 
 Når du ønsker å sammenligne LLM-er på tvers av forskjellige typer, er [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) en annen flott ressurs:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.no.png)
+![Model Quality](../../../translated_images/no/model-quality.aaae1c22e00f7ee1.png)
 Kilde: Artificial Analysis
 
 Hvis du jobber med et spesifikt brukstilfelle, kan det være effektivt å søke etter finjusterte versjoner som fokuserer på samme område. Å eksperimentere med flere åpne modeller for å se hvordan de presterer i henhold til dine og brukernes forventninger er også en god praksis.

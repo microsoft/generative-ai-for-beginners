@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ms"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ms.png)
+![Generative AI For Beginners](../../translated_images/ms/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 Pelajaran mengajar segala yang anda perlu tahu untuk mula membina aplikasi Generative AI
 

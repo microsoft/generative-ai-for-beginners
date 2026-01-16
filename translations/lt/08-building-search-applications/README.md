@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Programų paieškai kūrimas
 
-[![Įvadas į generatyvinį dirbtinį intelektą ir didelius kalbos modelius](../../../translated_images/08-lesson-banner.8fff48c566dad08a.lt.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Įvadas į generatyvinį dirbtinį intelektą ir didelius kalbos modelius](../../../translated_images/lt/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą_
 
@@ -44,7 +44,7 @@ Pamokoje pateikiamas „Embedding Index“ su „YouTube“ transkripcijomis iš
 
 Toliau pateikiamas semantinės užklausos pavyzdys klausimui „Ar galite naudoti rstudio su azure ml?“. Pažiūrėkite į „YouTube“ URL, pamatysite, kad URL turi laiko žymą, kuri nukreipia jus į vietą vaizdo įraše, kurioje yra atsakymas į klausimą.
 
-![Semantinė užklausa klausimui „Ar galite naudoti rstudio su Azure ML“](../../../translated_images/query-results.bb0480ebf025fac6.lt.png)
+![Semantinė užklausa klausimui „Ar galite naudoti rstudio su Azure ML“](../../../translated_images/lt/query-results.bb0480ebf025fac6.png)
 
 ## Kas yra semantinė paieška?
 
@@ -163,7 +163,7 @@ Atidarykite [sprendimo užrašų knygelę](./python/aoai-solution.ipynb?WT.mc_id
 
 Kai paleisite užrašų knygelę, jums bus pasiūlyta įvesti užklausą. Įvesties langas atrodys taip:
 
-![Įvesties langas vartotojui įvesti užklausą](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.lt.png)
+![Įvesties langas vartotojui įvesti užklausą](../../../translated_images/lt/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Puikus darbas! Tęskite mokymąsi
 

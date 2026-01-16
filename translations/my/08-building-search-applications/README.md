@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ရှာဖွေမှုအက်ပလီကေးရှင်းတစ်ခုတည်ဆောက်ခြင်း
 
-[![Generative AI နှင့် Large Language Models ကိုမိတ်ဆက်ခြင်း](../../../translated_images/08-lesson-banner.8fff48c566dad08a.my.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Generative AI နှင့် Large Language Models ကိုမိတ်ဆက်ခြင်း](../../../translated_images/my/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _အထက်ပါပုံကိုနှိပ်ပြီး ဒီသင်ခန်းစာရဲ့ဗီဒီယိုကိုကြည့်ပါ_
 
@@ -44,7 +44,7 @@ LLMs တွေဟာ chatbot တွေ၊ စာသားထုတ်လုပ�
 
 အောက်မှာ 'can you use rstudio with azure ml?' ဆိုတဲ့မေးခွန်းအတွက် semantic query ရဲ့ဥပမာကိုတွေ့နိုင်ပါတယ်။ YouTube url ကိုကြည့်ပါ၊ url မှာ timestamp ပါဝင်ပြီး မေးခွန်းရဲ့အဖြေရှိတဲ့ဗီဒီယိုရဲ့နေရာကိုသွားနိုင်ပါတယ်။
 
-![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.my.png)
+![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/my/query-results.bb0480ebf025fac6.png)
 
 ## Semantic ရှာဖွေမှုဆိုတာဘာလဲ?
 

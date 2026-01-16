@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Het bouwen van zoekapplicaties
 
-[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/08-lesson-banner.8fff48c566dad08a.nl.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/nl/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klik op de afbeelding hierboven om de video van deze les te bekijken_
 
@@ -44,7 +44,7 @@ De les bevat een Embedding Index van de YouTube-transcripten van het Microsoft [
 
 Hieronder staat een voorbeeld van een semantische zoekopdracht voor de vraag 'kun je rstudio gebruiken met azure ml?'. Bekijk de YouTube-URL, je zult zien dat de URL een timestamp bevat die je naar het specifieke moment in de video brengt waar het antwoord op de vraag te vinden is.
 
-![Semantische zoekopdracht voor de vraag "kun je rstudio gebruiken met Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.nl.png)
+![Semantische zoekopdracht voor de vraag "kun je rstudio gebruiken met Azure ML"](../../../translated_images/nl/query-results.bb0480ebf025fac6.png)
 
 ## Wat is semantisch zoeken?
 
@@ -163,7 +163,7 @@ Open het [oplossingsnotebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105
 
 Wanneer je het notebook uitvoert, wordt je gevraagd om een zoekopdracht in te voeren. Het invoerveld ziet er als volgt uit:
 
-![Invoerveld voor de gebruiker om een zoekopdracht in te voeren](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.nl.png)
+![Invoerveld voor de gebruiker om een zoekopdracht in te voeren](../../../translated_images/nl/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Goed gedaan! Ga door met leren
 

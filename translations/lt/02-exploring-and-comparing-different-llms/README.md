@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tyrinėjimas ir skirtingų LLM palyginimas
 
-[![Tyrinėjimas ir skirtingų LLM palyginimas](../../../translated_images/02-lesson-banner.ef94c84979f97f60.lt.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Tyrinėjimas ir skirtingų LLM palyginimas](../../../translated_images/lt/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą_
 
@@ -59,14 +59,14 @@ Terminas „Pagrindinis modelis“ buvo [sukurtas Stanfordo tyrėjų](https://ar
 - **Jie yra labai dideli modeliai**, pagrįsti labai giliomis neuronų tinklais, mokomais milijardais parametrų.
 - **Jie paprastai skirti būti „pagrindu“ kitiems modeliams**, tai reiškia, kad jie gali būti naudojami kaip pradinis taškas kitiems modeliams, kurie gali būti sukurti ant jų, pavyzdžiui, atliekant smulkius patobulinimus.
 
-![Pagrindiniai modeliai prieš LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.lt.png)
+![Pagrindiniai modeliai prieš LLM](../../../translated_images/lt/FoundationModel.e4859dbb7a825c94.png)
 
 Vaizdo šaltinis: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Norėdami dar labiau paaiškinti šį skirtumą, paimkime ChatGPT kaip pavyzdį. Pirmoji ChatGPT versija buvo sukurta remiantis GPT-3.5 modeliu kaip pagrindiniu modeliu. Tai reiškia, kad OpenAI naudojo tam tikrus pokalbių duomenis, kad sukurtų pritaikytą GPT-3.5 versiją, kuri buvo specializuota gerai veikti pokalbių scenarijuose, tokiuose kaip pokalbių robotai.
 
-![Pagrindinis modelis](../../../translated_images/Multimodal.2c389c6439e0fc51.lt.png)
+![Pagrindinis modelis](../../../translated_images/lt/Multimodal.2c389c6439e0fc51.png)
 
 Vaizdo šaltinis: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM taip pat gali būti klasifikuojami pagal jų generuojamą išvestį.
 
 Įterpimai yra modelių rinkinys, galintis konvertuoti tekstą į skaitinę formą, vadinamą įterpimu, kuris yra skaitinė įvesties teksto reprezentacija. Įterpimai palengvina mašinoms suprasti žodžių ar sakinių tarpusavio ryšius ir gali būti naudojami kaip įvestys kitiems modeliams, tokiems kaip klasifikavimo modeliai ar klasterizavimo modeliai, kurie geriau veikia su skaitiniais duomenimis. Įterpimo modeliai dažnai naudojami perkėlimo mokymuisi, kai modelis kuriamas pakaitiniam uždaviniui, kuriam yra gausu duomenų, o tada modelio svoriai (įterpimai) yra panaudojami kitoms užduotims. Šios kategorijos pavyzdys yra [OpenAI įterpimai](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Įterpimas](../../../translated_images/Embedding.c3708fe988ccf760.lt.png)
+![Įterpimas](../../../translated_images/lt/Embedding.c3708fe988ccf760.png)
 
 Vaizdų generavimo modeliai yra modeliai, kurie generuoja vaizdus. Šie modeliai dažnai naudojami vaizdų redagavimui, sintezei ir vertimui. Vaizdų generavimo modeliai dažnai mokomi didelėmis vaizdų duomenų bazėmis, tokiomis kaip [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ir gali būti naudojami naujiems vaizdams generuoti arba esamiems vaizdams redaguoti naudojant įterpimą, superrezoliuciją ir spalvinimo technikas. Pavyzdžiai: [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) ir [Stable Diffusion modeliai](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Vaizdų generavimas](../../../translated_images/Image.349c080266a763fd.lt.png)
+![Vaizdų generavimas](../../../translated_images/lt/Image.349c080266a763fd.png)
 
 Teksto ir kodo generavimo modeliai yra modeliai, kurie generuoja tekstą arba kodą. Šie modeliai dažnai naudojami teksto santraukų sudarymui, vertimui ir klausimų atsakymui. Teksto generavimo modeliai dažnai mokomi didelėmis teksto duomenų bazėmis, tokiomis kaip [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ir gali būti naudojami naujam tekstui generuoti arba atsakyti į klausimus. Kodo generavimo modeliai, tokie kaip [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), dažnai mokomi didelėmis kodų duomenų bazėmis, tokiomis kaip GitHub, ir gali būti naudojami naujam kodui generuoti arba esamų kodų klaidoms taisyti.
 
-![Teksto ir kodo generavimas](../../../translated_images/Text.a8c0cf139e5cc2a0.lt.png)
+![Teksto ir kodo generavimas](../../../translated_images/lt/Text.a8c0cf139e5cc2a0.png)
 
 ### Kodavimo-dekodavimo prieš tik dekodavimo modelius
 
@@ -123,23 +123,23 @@ Dauguma modelių, kuriuos paminėjome ankstesnėse pastraipose (OpenAI modeliai,
 
 - Rasti dominančią bazinį modelį kataloge – tiek nuosavą, tiek atvirojo kodo, filtruojant pagal užduotį, licenciją ar pavadinimą. Siekiant pagerinti paiešką, modeliai yra suskirstyti į kolekcijas, tokias kaip Azure OpenAI kolekcija, Hugging Face kolekcija ir kt.
 
-![Modelių katalogas](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.lt.png)
+![Modelių katalogas](../../../translated_images/lt/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Peržiūrėti modelio kortelę, įskaitant išsamų aprašymą apie numatomą naudojimą ir mokymo duomenis, kodo pavyzdžius ir vertinimo rezultatus vidinėje vertinimo bibliotekoje.
 
-![Modelio kortelė](../../../translated_images/ModelCard.598051692c6e400d.lt.png)
+![Modelio kortelė](../../../translated_images/lt/ModelCard.598051692c6e400d.png)
 
 - Palyginti modelių ir pramonėje prieinamų duomenų rinkinių etalonus, kad būtų galima įvertinti, kuris modelis geriausiai atitinka verslo scenarijų, naudojant [Modelių etalonų](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) skydelį.
 
-![Modelių etalonai](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.lt.png)
+![Modelių etalonai](../../../translated_images/lt/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Priderinti modelį prie individualių mokymo duomenų, siekiant pagerinti modelio našumą konkrečioje užduotyje, pasinaudojant Azure AI studijos eksperimentavimo ir stebėjimo galimybėmis.
 
-![Modelio pritaikymas](../../../translated_images/FineTuning.aac48f07142e36fd.lt.png)
+![Modelio pritaikymas](../../../translated_images/lt/FineTuning.aac48f07142e36fd.png)
 
 - Diegti originalų iš anksto apmokytą modelį arba pritaikytą versiją nuotoliniam realaus laiko prognozavimui – valdomam skaičiavimui – arba serverio neturinčiam API galutiniam taškui – [mokėjimas pagal naudojimą](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) – kad programos galėtų jį naudoti.
 
-![Modelio diegimas](../../../translated_images/ModelDeploy.890da48cbd0bccdb.lt.png)
+![Modelio diegimas](../../../translated_images/lt/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Ne visi kataloge esantys modeliai šiuo metu yra pasiekiami pritaikymui ir/arba mokėjimui pagal naudojimą. Patikrinkite modelio kortelę, kad sužinotumėte daugiau apie modelio galimybes ir apribojimus.
@@ -158,7 +158,7 @@ Yra keletas būdų, kuriuos verslas gali naudoti norėdamas pasiekti norimus rez
 
 - **Pritaikytas modelis**. Čia modelis papildomai apmokomas jūsų duomenimis, todėl jis tampa tikslesnis ir labiau atitinka jūsų poreikius, tačiau tai gali būti brangu.
 
-![LLM diegimas](../../../translated_images/Deploy.18b2d27412ec8c02.lt.png)
+![LLM diegimas](../../../translated_images/lt/Deploy.18b2d27412ec8c02.png)
 
 Nuotraukos šaltinis: [Keturi būdai, kaip įmonės diegia LLM | Fiddler AI tinklaraštis](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

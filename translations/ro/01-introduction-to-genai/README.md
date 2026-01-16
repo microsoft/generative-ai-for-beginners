@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introducere în AI Generativ și Modele de Limbaj Extinse
 
-[![Introducere în AI Generativ și Modele de Limbaj Extinse](../../../translated_images/01-lesson-banner.2424cfd092f43366.ro.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introducere în AI Generativ și Modele de Limbaj Extinse](../../../translated_images/ro/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
@@ -43,7 +43,7 @@ Echipa startup-ului nostru este conștientă că nu vom putea atinge acest obiec
 
 Se așteaptă ca AI generativ să revoluționeze modul în care învățăm și predăm astăzi, oferind studenților profesori virtuali disponibili 24 de ore pe zi, care furnizează cantități vaste de informații și exemple, iar profesorii pot utiliza instrumente inovatoare pentru a evalua elevii și a oferi feedback.
 
-![Cinci elevi tineri privind un monitor - imagine de DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.ro.png)
+![Cinci elevi tineri privind un monitor - imagine de DALLE2](../../../translated_images/ro/students-by-DALLE2.b70fddaced1042ee.png)
 
 Pentru început, să definim câteva concepte și termeni de bază pe care îi vom folosi pe parcursul curriculum-ului.
 
@@ -69,7 +69,7 @@ Aceasta este tehnologia care a alimentat asistenții virtuali născuți în prim
 
 Așa am ajuns la AI Generativ astăzi, care poate fi considerat un subset al învățării profunde.
 
-![AI, ML, DL și AI Generativ](../../../translated_images/AI-diagram.c391fa518451a40d.ro.png)
+![AI, ML, DL și AI Generativ](../../../translated_images/ro/AI-diagram.c391fa518451a40d.png)
 
 După decenii de cercetare în domeniul AI, o nouă arhitectură de model – numită _Transformer_ – a depășit limitele RNN-urilor, fiind capabilă să primească secvențe mult mai lungi de text ca intrare. Transformerele se bazează pe mecanismul de atenție, permițând modelului să acorde greutăți diferite intrărilor pe care le primește, ‘acordând mai multă atenție’ acolo unde informațiile cele mai relevante sunt concentrate, indiferent de ordinea lor în secvența de text.
 
@@ -81,7 +81,7 @@ Majoritatea modelelor AI generative recente – cunoscute și sub numele de Mode
 
 - **Tokenizer, text în numere**: Modelele de Limbaj Extins primesc un text ca intrare și generează un text ca ieșire. Totuși, fiind modele statistice, funcționează mult mai bine cu numere decât cu secvențe de text. De aceea, fiecare intrare în model este procesată de un tokenizer înainte de a fi utilizată de modelul principal. Un token este o bucată de text – constând dintr-un număr variabil de caractere, astfel încât sarcina principală a tokenizer-ului este să împartă intrarea într-un array de tokeni. Apoi, fiecare token este mapat cu un index de token, care este codificarea întregului text original.
 
-![Exemplu de tokenizare](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.ro.png)
+![Exemplu de tokenizare](../../../translated_images/ro/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **Predicția tokenilor de ieșire**: Având n tokeni ca intrare (cu max n variind de la un model la altul), modelul este capabil să prezică un token ca ieșire. Acest token este apoi încorporat în intrarea următoarei iterații, într-un model de fereastră extinsă, permițând o experiență mai bună utilizatorului de a primi una (sau mai multe) propoziții ca răspuns. Acest lucru explică de ce, dacă ați interacționat vreodată cu ChatGPT, ați observat că uneori pare să se oprească la mijlocul unei propoziții.
 
@@ -98,23 +98,23 @@ Intrarea unui model de limbaj extins este cunoscută sub numele de prompt, în t
 
   1. Rezumarea unui articol, a unei cărți, a recenziilor unui produs și altele, împreună cu extragerea de informații din date nestructurate.
     
-    ![Exemplu de rezumare](../../../translated_images/summarization-example.7b7ff97147b3d790.ro.png)
+    ![Exemplu de rezumare](../../../translated_images/ro/summarization-example.7b7ff97147b3d790.png)
   
   2. Idei creative și redactarea unui articol, eseu, temă sau altele.
       
-     ![Exemplu de scriere creativă](../../../translated_images/creative-writing-example.e24a685b5a543ad1.ro.png)
+     ![Exemplu de scriere creativă](../../../translated_images/ro/creative-writing-example.e24a685b5a543ad1.png)
 
 - O **întrebare**, adresată sub forma unei conversații cu un agent.
   
-  ![Exemplu de conversație](../../../translated_images/conversation-example.60c2afc0f595fa59.ro.png)
+  ![Exemplu de conversație](../../../translated_images/ro/conversation-example.60c2afc0f595fa59.png)
 
 - O bucată de **text de completat**, care implicit reprezintă o cerere de asistență la scriere.
   
-  ![Exemplu de completare text](../../../translated_images/text-completion-example.cbb0f28403d42752.ro.png)
+  ![Exemplu de completare text](../../../translated_images/ro/text-completion-example.cbb0f28403d42752.png)
 
 - O bucată de **cod** împreună cu cererea de a-l explica și documenta, sau un comentariu care solicită generarea unui fragment de cod care să îndeplinească o sarcină specifică.
   
-  ![Exemplu de codare](../../../translated_images/coding-example.50ebabe8a6afff20.ro.png)
+  ![Exemplu de codare](../../../translated_images/ro/coding-example.50ebabe8a6afff20.png)
 
 Exemplele de mai sus sunt destul de simple și nu sunt menite să fie o demonstrație exhaustivă a capacităților modelelor de limbaj extins. Ele sunt destinate să arate potențialul utilizării AI generative, în special, dar nu exclusiv, în contexte educaționale.
 

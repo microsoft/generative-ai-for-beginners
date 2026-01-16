@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಅಡ್ವಾನ್ಸ್ಡ್ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ರಚಿಸುವುದು
 
-[![ಅಡ್ವಾನ್ಸ್ಡ್ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ರಚಿಸುವುದು](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.kn.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![ಅಡ್ವಾನ್ಸ್ಡ್ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ರಚಿಸುವುದು](../../../translated_images/kn/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 ಹಿಂದಿನ ಅಧ್ಯಾಯದಿಂದ ಕೆಲವು ಕಲಿಕೆಗಳನ್ನು ಪುನರಾವರ್ತಿಸೋಣ:
 

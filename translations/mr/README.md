@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mr"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.mr.png)
+![Generative AI For Beginners](../../translated_images/mr/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### जनरेटिव AI अनुप्रयोग तयार करण्यासाठी तुम्हाला आवश्यक असलेले सर्वकाही शिकवणाऱ्या २१ धडे
 

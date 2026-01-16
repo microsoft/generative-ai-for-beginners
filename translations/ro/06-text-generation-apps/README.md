@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea aplicațiilor de generare de text
 
-[![Construirea aplicațiilor de generare de text](../../../translated_images/06-lesson-banner.a5c629f990a636c8.ro.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Construirea aplicațiilor de generare de text](../../../translated_images/ro/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Click pe imaginea de mai sus pentru a viziona videoclipul lecției)_
 

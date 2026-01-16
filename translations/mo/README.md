@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-![初學者生成式人工智能](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.mo.png)
+![初學者生成式人工智能](../../translated_images/mo/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 節課教你所有開始構建生成式人工智能應用所需了解的知識
 

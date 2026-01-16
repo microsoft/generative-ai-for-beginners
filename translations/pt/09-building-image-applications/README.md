@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construção de Aplicações de Geração de Imagens
 
-[![Construção de Aplicações de Geração de Imagens](../../../translated_images/09-lesson-banner.906e408c741f4411.pt.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Construção de Aplicações de Geração de Imagens](../../../translated_images/pt/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Os LLMs vão além da geração de texto. Também é possível gerar imagens a partir de descrições textuais. Ter imagens como uma modalidade pode ser extremamente útil em diversas áreas, como MedTech, arquitetura, turismo, desenvolvimento de jogos e muito mais. Neste capítulo, vamos explorar os dois modelos de geração de imagens mais populares, DALL-E e Midjourney.
 
@@ -43,7 +43,7 @@ Como parte desta lição, continuaremos a trabalhar com nossa startup, Edu4All. 
 
 Aqui está um exemplo do que os alunos da Edu4All poderiam gerar se estivessem trabalhando em sala de aula sobre monumentos:
 
-![Startup Edu4All, aula sobre monumentos, Torre Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5a.pt.png)
+![Startup Edu4All, aula sobre monumentos, Torre Eiffel](../../../translated_images/pt/startup.94d6b79cc4bb3f5a.png)
 
 usando um prompt como:
 
@@ -272,9 +272,9 @@ Aqui está um exemplo usando GPT Image:
   A imagem base conteria apenas o lounge com piscina, mas a imagem final teria um flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.pt.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.pt.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.pt.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pt/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pt/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pt/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Criar variações**. A ideia é pegar uma imagem existente e pedir que sejam criadas variações. Para criar uma variação, você fornece uma imagem e um prompt textual e um código como este:
@@ -298,11 +298,11 @@ Vamos analisar um exemplo de como a temperatura funciona, executando este prompt
 
 > Prompt: "Coelho em um cavalo, segurando um pirulito, em um prado enevoado onde crescem narcisos"
 
-![Coelho em um cavalo segurando um pirulito, versão 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.pt.png)
+![Coelho em um cavalo segurando um pirulito, versão 1](../../../translated_images/pt/v1-generated-image.a295cfcffa3c13c2.png)
 
 Agora vamos executar o mesmo prompt novamente para ver que não obteremos a mesma imagem duas vezes:
 
-![Imagem gerada de coelho em um cavalo](../../../translated_images/v2-generated-image.33f55a3714efe61d.pt.png)
+![Imagem gerada de coelho em um cavalo](../../../translated_images/pt/v2-generated-image.33f55a3714efe61d.png)
 
 Como pode ver, as imagens são semelhantes, mas não idênticas. Vamos tentar alterar o valor da temperatura para 0,1 e ver o que acontece:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Agora, ao executar este código, você obtém estas duas imagens:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.pt.png)
-- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.pt.png)
+- ![Temperatura 0, v1](../../../translated_images/pt/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Temperatura 0, v2](../../../translated_images/pt/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Aqui você pode ver claramente como as imagens se assemelham mais.
 

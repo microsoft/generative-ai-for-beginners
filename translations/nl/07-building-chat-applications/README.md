@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatieve AI-gestuurde chatapplicaties bouwen
 
-[![Generatieve AI-gestuurde chatapplicaties bouwen](../../../translated_images/07-lesson-banner.a279b937f2843833.nl.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatieve AI-gestuurde chatapplicaties bouwen](../../../translated_images/nl/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
@@ -96,11 +96,11 @@ Algemene UX-principes zijn van toepassing op chatapplicaties, maar hier zijn enk
 
 Een voorbeeld van personalisatie is de instelling "Aangepaste instructies" in OpenAI's ChatGPT. Hiermee kun je informatie over jezelf verstrekken die mogelijk belangrijke context is voor je prompts. Hier is een voorbeeld van een aangepaste instructie.
 
-![Instellingen voor aangepaste instructies in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.nl.png)
+![Instellingen voor aangepaste instructies in ChatGPT](../../../translated_images/nl/custom-instructions.b96f59aa69356fcf.png)
 
 Dit "profiel" vraagt ChatGPT om een lesplan te maken over linked lists. Merk op dat ChatGPT rekening houdt met het feit dat de gebruiker mogelijk een meer diepgaand lesplan wil op basis van haar ervaring.
 
-![Een prompt in ChatGPT voor een lesplan over linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.nl.png)
+![Een prompt in ChatGPT voor een lesplan over linked lists](../../../translated_images/nl/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsoft's System Message Framework voor grote taalmodellen
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 提示工程基礎
 
-[![提示工程基礎](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.mo.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![提示工程基礎](../../../translated_images/mo/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## 簡介
 本模組涵蓋了在生成式 AI 模型中創建有效提示的基本概念和技術。如何撰寫提示給 LLM（大型語言模型）非常重要。一個精心設計的提示可以獲得更高品質的回應。但究竟什麼是 _提示_ 和 _提示工程_？如何改善我發送給 LLM 的提示 _輸入_？這些問題將在本章及下一章中探討。
@@ -53,7 +53,7 @@ Notebook 附帶了 _入門_ 練習，但我們鼓勵您添加自己的 _Markdown
 
 想在深入學習之前了解本課程涵蓋的主要內容嗎？查看這份圖解指南，它能幫助您了解主要主題及每個主題的關鍵要點。課程路線圖將帶您從理解核心概念和挑戰到使用相關提示工程技術和最佳實踐來解決問題。請注意，指南中的 "進階技術" 部分指的是本課程下一章的內容。
 
-![提示工程圖解指南](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.mo.png)
+![提示工程圖解指南](../../../translated_images/mo/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
 
 ## 我們的創業項目
 
@@ -84,7 +84,7 @@ LLM 將提示視為 _token 的序列_，不同的模型（或模型版本）可�
 
 要了解分詞如何運作，可以嘗試使用 [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) 等工具。將您的提示複製到工具中，看看它如何轉換為 token，注意空白字符和標點符號的處理方式。請注意，此示例顯示的是舊版 LLM（GPT-3），使用新版模型可能會產生不同結果。
 
-![分詞](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.mo.png)
+![分詞](../../../translated_images/mo/04-tokenizer-example.e71f0a0f70356c5c.png)
 
 ### 概念：基礎模型
 
@@ -94,7 +94,7 @@ LLM 將提示視為 _token 的序列_，不同的模型（或模型版本）可�
 
 但如果使用者希望看到符合某些標準或任務目標的特定內容呢？這就是 _指令調整_ LLM 的作用。
 
-![基礎 LLM 聊天完成](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.mo.png)
+![基礎 LLM 聊天完成](../../../translated_images/mo/04-playground-chat-base.65b76fcfde0caa67.png)
 
 ### 概念：指令調整 LLM
 
@@ -108,7 +108,7 @@ LLM 將提示視為 _token 的序列_，不同的模型（或模型版本）可�
 
 看看結果如何反映所需的目標和格式？教育者現在可以直接在課堂的幻燈片中使用此回應。
 
-![指令調整 LLM 聊天完成](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.mo.png)
+![指令調整 LLM 聊天完成](../../../translated_images/mo/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
 
 ## 為什麼需要提示工程？
 
@@ -138,15 +138,15 @@ LLM 將提示視為 _token 的序列_，不同的模型（或模型版本）可�
 
 > **回應1**：OpenAI Playground (GPT-35)
 
-![回應1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.mo.png)
+![回應1](../../../translated_images/mo/04-fabrication-oai.5818c4e0b2a2678c.png)
 
 > **回應2**：Azure OpenAI Playground (GPT-35)
 
-![回應2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.mo.png)
+![回應2](../../../translated_images/mo/04-fabrication-aoai.b14268e9ecf25caf.png)
 
 > **回應3**：Hugging Face Chat Playground (LLama-2)
 
-![回應3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.mo.png)
+![回應3](../../../translated_images/mo/04-fabrication-huggingchat.faf82a0a51278956.png)
 
 如預期，每個模型（或模型版本）因隨機行為和模型能力的差異而產生略有不同的回應。例如，一個模型針對八年級的受眾，而另一個則假設是高中生。但所有三個模型都生成了可能讓不知情的用戶相信事件是真實的回應。
 

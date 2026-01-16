@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "lt"
 }
 -->
-[![Atviro kodo modeliai](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.lt.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Atviro kodo modeliai](../../../translated_images/lt/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Įvadas
 
@@ -33,7 +33,7 @@ DI agentai yra labai įdomi Generatyvaus DI sritis. Su šiuo susidomėjimu karta
 
 DI agentai leidžia dideliems kalbos modeliams (LLM) atlikti užduotis, suteikdami jiems prieigą prie **būsenos** ir **įrankių**.
 
-![Agentų modelis](../../../translated_images/what-agent.21f2893bdfd01e6a.lt.png)
+![Agentų modelis](../../../translated_images/lt/what-agent.21f2893bdfd01e6a.png)
 
 Apibrėžkime šiuos terminus:
 
@@ -53,7 +53,7 @@ Norint valdyti **būseną**, naudojama įmontuota funkcija, vadinama `AgentExecu
 
 `AgentExecutor` taip pat saugo pokalbių istoriją, kad pateiktų pokalbio kontekstą.
 
-![LangChain agentai](../../../translated_images/langchain-agents.edcc55b5d5c43716.lt.png)
+![LangChain agentai](../../../translated_images/lt/langchain-agents.edcc55b5d5c43716.png)
 
 LangChain siūlo [įrankių katalogą](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), kurį galima importuoti į jūsų programą, kad LLM galėtų jais naudotis. Šiuos įrankius kuria bendruomenė ir LangChain komanda.
 
@@ -85,7 +85,7 @@ Norėdamas keisti ir valdyti būseną, asistentas agentas generuoja Python kodą
 
 Štai proceso pavyzdys:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.lt.png)
+![AutoGen](../../../translated_images/lt/autogen.dee9a25a45fde584.png)
 
 #### LLM apibrėžtas su sistemos žinute
 
@@ -129,7 +129,7 @@ Norėdamas valdyti pokalbio būseną, TaskWeaver naudoja `Planner` koncepciją. 
 
 Norėdamas atlikti užduotis, `Planner` turi prieigą prie įrankių rinkinio, vadinamo `Plugins`. Tai gali būti Python klasės arba bendras kodo interpretatorius. Šie įskiepiai saugomi kaip įterpiniai, kad LLM galėtų geriau ieškoti tinkamo įskiepio.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.lt.png)
+![Taskweaver](../../../translated_images/lt/taskweaver.da8559999267715a.png)
 
 Štai įskiepio pavyzdys, skirtas anomalijų aptikimui:
 
@@ -143,7 +143,7 @@ Kodas yra patikrinamas prieš vykdymą. Kita funkcija, skirta valdyti kontekstą
 
 Paskutinė agentų sistema, kurią nagrinėsime, yra [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVIS išsiskiria tuo, kad naudoja LLM pokalbio būsenai valdyti, o `tools` yra kiti DI modeliai. Kiekvienas DI modelis yra specializuotas tam tikroms užduotims, tokioms kaip objektų atpažinimas, transkripcija ar vaizdų aprašymas.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.lt.png)
+![JARVIS](../../../translated_images/lt/jarvis.762ddbadbd1a3a33.png)
 
 LLM, būdamas bendros paskirties modelis, gauna vartotojo prašymą ir nustato konkrečią užduotį bei bet kokius argumentus/duomenis, reikalingus užduočiai atlikti.
 

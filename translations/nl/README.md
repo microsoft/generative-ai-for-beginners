@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "nl"
 }
 -->
-![Generative AI Voor Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.nl.png)
+![Generative AI Voor Beginners](../../translated_images/nl/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 Lessen die alles leren wat je moet weten om Generatieve AI-toepassingen te bouwen
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "nl"
 }
 -->
-[![Open Source Modellen](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.nl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Modellen](../../../translated_images/nl/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introductie
 
@@ -33,7 +33,7 @@ AI-agents zijn een zeer spannend gebied binnen de wereld van Generatieve AI. Met
 
 AI-agents stellen Grote Taalmodellen (LLMs) in staat om taken uit te voeren door ze toegang te geven tot een **state** en **tools**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.nl.png)
+![Agent Model](../../../translated_images/nl/what-agent.21f2893bdfd01e6a.png)
 
 Laten we deze termen definiëren:
 
@@ -53,7 +53,7 @@ Om de **state** te beheren, gebruikt het een ingebouwde functie genaamd `AgentEx
 
 De `AgentExecutor` slaat ook de chatgeschiedenis op om de context van het gesprek te bieden.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.nl.png)
+![Langchain Agents](../../../translated_images/nl/langchain-agents.edcc55b5d5c43716.png)
 
 LangChain biedt een [catalogus van tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) die in je applicatie kunnen worden geïmporteerd, zodat het LLM toegang krijgt. Deze tools zijn gemaakt door de community en het LangChain-team.
 
@@ -85,7 +85,7 @@ Om de state te wijzigen en te beheren, genereert een AssistantAgent Python-code 
 
 Hier is een voorbeeld van het proces:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.nl.png)
+![AutoGen](../../../translated_images/nl/autogen.dee9a25a45fde584.png)
 
 #### LLM gedefinieerd met een systeemboodschap
 
@@ -129,7 +129,7 @@ Om de state van het gesprek te beheren, gebruikt TaskWeaver het concept van een 
 
 Om de taken te voltooien, heeft de `Planner` toegang tot een verzameling tools genaamd `Plugins`. Dit kunnen Python-klassen of een algemene code-interpreter zijn. Deze plugins worden opgeslagen als embeddings zodat het LLM beter kan zoeken naar de juiste plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.nl.png)
+![Taskweaver](../../../translated_images/nl/taskweaver.da8559999267715a.png)
 
 Hier is een voorbeeld van een plugin voor het detecteren van afwijkingen:
 
@@ -143,7 +143,7 @@ De code wordt geverifieerd voordat deze wordt uitgevoerd. Een andere functie om 
 
 Het laatste agent framework dat we verkennen is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Wat JARVIS uniek maakt, is dat het een LLM gebruikt om de `state` van het gesprek te beheren en de `tools` andere AI-modellen zijn. Elk van de AI-modellen is gespecialiseerd in bepaalde taken, zoals objectdetectie, transcriptie of beeldbeschrijving.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.nl.png)
+![JARVIS](../../../translated_images/nl/jarvis.762ddbadbd1a3a33.png)
 
 Het LLM, als algemeen model, ontvangt het verzoek van de gebruiker en identificeert de specifieke taak en eventuele argumenten/data die nodig zijn om de taak te voltooien.
 

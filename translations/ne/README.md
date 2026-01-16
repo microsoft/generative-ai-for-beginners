@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ne"
 }
 -->
-![सुरुवातीहरूका लागि जेनेरेटिभ AI](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ne.png)
+![सुरुवातीहरूका लागि जेनेरेटिभ AI](../../translated_images/ne/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### २१ पाठहरूले जेनेरेटिभ AI अनुप्रयोगहरू विकास गर्न सुरु गर्न आवश्यक सबै कुरा सिकाउँदछ
 

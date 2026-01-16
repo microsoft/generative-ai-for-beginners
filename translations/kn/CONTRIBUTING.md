@@ -66,7 +66,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಉದಾಹರಣೆಗೆ, ನಿಮ್ಮ ಫೈಲ್‌ಗಳಲ್ಲಿ ಯಾವುದೇ ಲಿಂಕ್ ಮೇಲೆ ಹೋವರ್ ಮಾಡಿದಾಗ **ctrl + click** ಒತ್ತಿ ಲಿಂಕ್ ಅನುಸರಿಸಲು ಪ್ರಾಂಪ್ಟ್ ಆಗುತ್ತದೆ.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.kn.png)
+![VS code follow links screenshot](../../translated_images/kn/vscode-follow-link.85520ab6a1237adc.png)
 
 ನೀವು ಲಿಂಕ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಅದು ಸ್ಥಳೀಯವಾಗಿ ಕೆಲಸ ಮಾಡುತ್ತಿಲ್ಲದಿದ್ದರೆ, ಖಚಿತವಾಗಿ ಅದು ವರ್ಕ್‌ಫ್ಲೋವನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತದೆ ಮತ್ತು GitHub ನಲ್ಲಿ ಕೆಲಸ ಮಾಡದು.
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ನೀವು `./` ಅಥವಾ `../` ಟೈಪ್ ಮಾಡಿದಾಗ VS ಕೋಡ್ ನೀವು ಟೈಪ್ ಮಾಡಿದ ಪ್ರಕಾರ ಲಭ್ಯವಿರುವ ಆಯ್ಕೆಗಳಿಂದ ಆಯ್ಕೆಮಾಡಲು ಪ್ರಾಂಪ್ಟ್ ಮಾಡುತ್ತದೆ.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.kn.png)
+![VS code select relative path screenshot](../../translated_images/kn/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 ಆಗಬೇಕಾದ ಫೈಲ್ ಅಥವಾ ಫೋಲ್ಡರ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಮಾರ್ಗವನ್ನು ಅನುಸರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಮಾರ್ಗವು ಮುರಿದಿಲ್ಲ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.
 
@@ -91,7 +91,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಇಲ್ಲದಿದ್ದರೆ, ನೀವು ಕೆಳಗಿನ ದೋಷವನ್ನು ಪಡೆಯಬಹುದು.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.kn.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/kn/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 ಈ ಸಮಸ್ಯೆಯನ್ನು ಸರಿಪಡಿಸಲು, ವರ್ಕ್‌ಫ್ಲೋ ಸೂಚಿಸಿದ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು ಸಂಬಂಧಿತ ಮಾರ್ಗಗಳ ಕೊನೆಯಲ್ಲಿ ಟ್ರ್ಯಾಕಿಂಗ್ ID ಅನ್ನು ಸೇರಿಸಿ.
 
@@ -108,7 +108,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಇಲ್ಲದಿದ್ದರೆ, ನೀವು ಕೆಳಗಿನ ದೋಷವನ್ನು ಪಡೆಯಬಹುದು.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.kn.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/kn/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 ಈ ಸಮಸ್ಯೆಯನ್ನು ಸರಿಪಡಿಸಲು, ವರ್ಕ್‌ಫ್ಲೋ ಸೂಚಿಸಿದ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು URL ಗಳ ಕೊನೆಯಲ್ಲಿ ಟ್ರ್ಯಾಕಿಂಗ್ ID ಅನ್ನು ಸೇರಿಸಿ.
 
@@ -125,7 +125,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಇಲ್ಲದಿದ್ದರೆ, ನೀವು ಕೆಳಗಿನ ದೋಷವನ್ನು ಪಡೆಯಬಹುದು.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.kn.png)
+![GitHub check country locale comment screenshot](../../translated_images/kn/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 ಈ ಸಮಸ್ಯೆಯನ್ನು ಸರಿಪಡಿಸಲು, ವರ್ಕ್‌ಫ್ಲೋ ಸೂಚಿಸಿದ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು URL ಗಳಿಂದ ದೇಶದ ಸ್ಥಳೀಯತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ.
 

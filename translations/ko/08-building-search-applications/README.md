@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 검색 애플리케이션 구축하기
 
-[![생성형 AI와 대규모 언어 모델 소개](../../../translated_images/08-lesson-banner.8fff48c566dad08a.ko.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![생성형 AI와 대규모 언어 모델 소개](../../../translated_images/ko/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다_
 
@@ -44,7 +44,7 @@ LLM은 챗봇과 텍스트 생성 이상의 기능을 제공합니다. 임베딩
 
 다음은 'Azure ML에서 rstudio를 사용할 수 있나요?'라는 질문에 대한 의미론적 검색 예제입니다. YouTube URL을 확인해보면, URL에 질문에 대한 답변이 위치한 동영상의 특정 지점으로 연결되는 타임스탬프가 포함되어 있는 것을 볼 수 있습니다.
 
-![Azure ML에서 rstudio를 사용할 수 있나요?라는 질문에 대한 의미론적 검색](../../../translated_images/query-results.bb0480ebf025fac6.ko.png)
+![Azure ML에서 rstudio를 사용할 수 있나요?라는 질문에 대한 의미론적 검색](../../../translated_images/ko/query-results.bb0480ebf025fac6.png)
 
 ## 의미론적 검색이란 무엇인가?
 
@@ -162,7 +162,7 @@ GitHub Codespaces에서 [솔루션 노트북](./python/aoai-solution.ipynb?WT.mc
 
 노트북을 실행하면 쿼리를 입력하라는 메시지가 표시됩니다. 입력 상자는 다음과 같이 보입니다:
 
-![사용자가 쿼리를 입력할 수 있는 입력 상자](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.ko.png)
+![사용자가 쿼리를 입력할 수 있는 입력 상자](../../../translated_images/ko/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## 훌륭한 작업! 학습을 계속하세요
 

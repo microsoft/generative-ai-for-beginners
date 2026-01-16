@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integreren met functie-aanroepen
 
-[![Integreren met functie-aanroepen](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.nl.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integreren met functie-aanroepen](../../../translated_images/nl/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Je hebt al veel geleerd in de vorige lessen. Maar er is nog ruimte voor verbetering. Enkele zaken die we kunnen aanpakken zijn hoe we een consistenter responsformaat kunnen krijgen, zodat het eenvoudiger wordt om met de respons verder te werken. Ook willen we mogelijk gegevens uit andere bronnen toevoegen om onze applicatie verder te verrijken.
 
@@ -179,7 +179,7 @@ Nu kunnen we beide verzoeken naar de LLM sturen en de respons die we ontvangen o
 
 Hoe lossen we het formatteringsprobleem dan op? Door gebruik te maken van functie-aanroepen kunnen we ervoor zorgen dat we gestructureerde gegevens terugkrijgen. Bij het gebruik van functie-aanroepen roept of voert de LLM eigenlijk geen functies uit. In plaats daarvan creëren we een structuur voor de LLM om te volgen voor zijn antwoorden. We gebruiken die gestructureerde antwoorden vervolgens om te weten welke functie we in onze applicaties moeten uitvoeren.
 
-![functie flow](../../../translated_images/Function-Flow.083875364af4f4bb.nl.png)
+![functie flow](../../../translated_images/nl/Function-Flow.083875364af4f4bb.png)
 
 We kunnen vervolgens wat wordt geretourneerd door de functie terugsturen naar de LLM. De LLM zal dan reageren met natuurlijke taal om de vraag van de gebruiker te beantwoorden.
 
@@ -201,7 +201,7 @@ Het proces van het maken van een functie-aanroep omvat 3 hoofdstappen:
 2. **Lezen** van de respons van het model om een actie uit te voeren, zoals het uitvoeren van een functie of API-aanroep.
 3. **Nogmaals aanroepen** van de Chat Completions API met de respons van je functie om die informatie te gebruiken om een antwoord voor de gebruiker te creëren.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7.nl.png)
+![LLM Flow](../../../translated_images/nl/LLM-Flow.3285ed8caf4796d7.png)
 
 ### Stap 1 - berichten maken
 

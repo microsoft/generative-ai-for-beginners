@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mengintegrasikan dengan Panggilan Fungsi
 
-[![Mengintegrasikan dengan Panggilan Fungsi](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.ms.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Mengintegrasikan dengan Panggilan Fungsi](../../../translated_images/ms/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Anda telah mempelajari banyak perkara dalam pelajaran sebelumnya. Namun, kita masih boleh memperbaiki lagi. Beberapa perkara yang boleh kita tangani adalah bagaimana kita boleh mendapatkan format respons yang lebih konsisten untuk memudahkan kerja dengan respons tersebut di peringkat seterusnya. Selain itu, kita mungkin ingin menambah data daripada sumber lain untuk memperkayakan lagi aplikasi kita.
 
@@ -179,7 +179,7 @@ Kini kita boleh menghantar kedua-dua permintaan kepada LLM dan memeriksa respons
 
 Jadi bagaimana kita menyelesaikan masalah format ini? Dengan menggunakan panggilan fungsi, kita boleh memastikan bahawa kita menerima data berstruktur kembali. Apabila menggunakan panggilan fungsi, LLM sebenarnya tidak memanggil atau menjalankan sebarang fungsi. Sebaliknya, kita mencipta struktur untuk LLM ikuti untuk responsnya. Kita kemudian menggunakan respons berstruktur tersebut untuk mengetahui fungsi apa yang perlu dijalankan dalam aplikasi kita.
 
-![aliran fungsi](../../../translated_images/Function-Flow.083875364af4f4bb.ms.png)
+![aliran fungsi](../../../translated_images/ms/Function-Flow.083875364af4f4bb.png)
 
 Kita kemudian boleh mengambil apa yang dikembalikan daripada fungsi dan menghantarnya kembali kepada LLM. LLM kemudian akan memberikan respons menggunakan bahasa semula jadi untuk menjawab pertanyaan pengguna.
 
@@ -201,7 +201,7 @@ Proses membuat panggilan fungsi merangkumi 3 langkah utama:
 2. **Membaca** respons model untuk melaksanakan tindakan iaitu menjalankan fungsi atau panggilan API.
 3. **Membuat** panggilan lain kepada API Chat Completions dengan respons daripada fungsi anda untuk menggunakan maklumat tersebut bagi mencipta respons kepada pengguna.
 
-![Aliran LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7.ms.png)
+![Aliran LLM](../../../translated_images/ms/LLM-Flow.3285ed8caf4796d7.png)
 
 ### Langkah 1 - mencipta mesej
 

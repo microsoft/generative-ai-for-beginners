@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ms"
 }
 -->
-[![Integrasi dengan pemanggilan fungsi](../../../translated_images/14-lesson-banner.066d74a31727ac12.ms.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrasi dengan pemanggilan fungsi](../../../translated_images/ms/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Kitaran Hayat Aplikasi AI Generatif
 
@@ -30,7 +30,7 @@ LLM adalah alat baru dalam arsenal Kecerdasan Buatan, mereka sangat berkuasa dal
 
 Dengan ini, kita memerlukan Paradigma baru untuk menyesuaikan alat ini secara dinamik, dengan insentif yang betul. Kita boleh mengkategorikan aplikasi AI lama sebagai "Aplikasi ML" dan aplikasi AI baru sebagai "Aplikasi GenAI" atau hanya "Aplikasi AI", mencerminkan teknologi dan teknik arus perdana yang digunakan pada masa itu. Ini mengubah naratif kita dalam pelbagai cara, lihat perbandingan berikut.
 
-![Perbandingan LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.ms.png)
+![Perbandingan LLMOps vs. MLOps](../../../translated_images/ms/01-llmops-shift.29bc933cb3bb0080.png)
 
 Perhatikan bahawa dalam LLMOps, kita lebih fokus pada Pembangun Aplikasi, menggunakan integrasi sebagai titik utama, menggunakan "Model-sebagai-Perkhidmatan" dan berfikir dalam perkara berikut untuk metrik.
 
@@ -44,7 +44,7 @@ Perhatikan bahawa dalam LLMOps, kita lebih fokus pada Pembangun Aplikasi, menggu
 
 Pertama, untuk memahami kitaran hayat dan pengubahsuaian, mari perhatikan infografik berikut.
 
-![Infografik LLMOps](../../../translated_images/02-llmops.70a942ead05a7645.ms.png)
+![Infografik LLMOps](../../../translated_images/ms/02-llmops.70a942ead05a7645.png)
 
 Seperti yang anda perhatikan, ini berbeza daripada Kitaran Hayat biasa dari MLOps. LLM mempunyai banyak keperluan baru, seperti Prompting, teknik berbeza untuk meningkatkan kualiti (Fine-Tuning, RAG, Meta-Prompts), penilaian dan tanggungjawab berbeza dengan AI bertanggungjawab, akhirnya, metrik penilaian baru (Kualiti, Kerosakan, Kejujuran, Kos dan Latensi).
 
@@ -54,7 +54,7 @@ Perhatikan bahawa ini bukan linear, tetapi gelung terintegrasi, iteratif dan den
 
 Bagaimana kita boleh meneroka langkah-langkah tersebut? Mari kita lihat dengan lebih terperinci bagaimana kita boleh membina kitaran hayat.
 
-![Aliran Kerja LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.ms.png)
+![Aliran Kerja LLMOps](../../../translated_images/ms/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Ini mungkin kelihatan agak rumit, mari fokus pada tiga langkah besar dahulu.
 
@@ -74,11 +74,11 @@ Untuk Alat, Microsoft menyediakan [Azure AI Platform](https://azure.microsoft.co
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), membolehkan anda menggunakan [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio adalah portal web yang membolehkan anda Meneroka model, contoh dan alat. Mengurus sumber anda, aliran pembangunan UI dan pilihan SDK/CLI untuk pembangunan Berasaskan Kod.
 
-![Kemungkinan Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.ms.png)
+![Kemungkinan Azure AI](../../../translated_images/ms/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI, membolehkan anda menggunakan pelbagai sumber, untuk mengurus operasi, perkhidmatan, projek, carian vektor dan keperluan pangkalan data anda.
 
-![LLMOps dengan Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.ms.png)
+![LLMOps dengan Azure AI](../../../translated_images/ms/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Membina, dari Bukti-Konsep (POC) sehingga aplikasi skala besar dengan PromptFlow:
 
@@ -86,7 +86,7 @@ Membina, dari Bukti-Konsep (POC) sehingga aplikasi skala besar dengan PromptFlow
 - Uji dan laraskan aplikasi anda untuk AI berkualiti, dengan mudah.
 - Gunakan Azure AI Studio untuk Integrasi dan Iterasi dengan awan, Tolak dan Lancarkan untuk integrasi cepat.
 
-![LLMOps dengan PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.ms.png)
+![LLMOps dengan PromptFlow](../../../translated_images/ms/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Hebat! Teruskan Pembelajaran Anda!
 

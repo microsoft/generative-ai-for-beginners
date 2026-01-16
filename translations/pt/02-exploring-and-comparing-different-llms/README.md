@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Explorando e comparando diferentes LLMs
 
-[![Explorando e comparando diferentes LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60.pt.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Explorando e comparando diferentes LLMs](../../../translated_images/pt/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Clique na imagem acima para assistir ao vídeo desta lição_
 
@@ -59,14 +59,14 @@ O termo Modelo Fundamental foi [cunhado por pesquisadores de Stanford](https://a
 - **São modelos muito grandes**, baseados em redes neurais profundas treinadas com bilhões de parâmetros.
 - **Normalmente são destinados a servir como uma 'base' para outros modelos**, ou seja, podem ser usados como ponto de partida para outros modelos serem construídos sobre eles, o que pode ser feito por meio de ajuste fino.
 
-![Modelos Fundamentais versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.pt.png)
+![Modelos Fundamentais versus LLMs](../../../translated_images/pt/FoundationModel.e4859dbb7a825c94.png)
 
 Fonte da imagem: [Essential Guide to Foundation Models and Large Language Models | por Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Para esclarecer ainda mais essa distinção, vamos usar o ChatGPT como exemplo. Para construir a primeira versão do ChatGPT, um modelo chamado GPT-3.5 serviu como modelo fundamental. Isso significa que a OpenAI usou alguns dados específicos de chat para criar uma versão ajustada do GPT-3.5 que foi especializada em ter um bom desempenho em cenários de conversação, como chatbots.
 
-![Modelo Fundamental](../../../translated_images/Multimodal.2c389c6439e0fc51.pt.png)
+![Modelo Fundamental](../../../translated_images/pt/Multimodal.2c389c6439e0fc51.png)
 
 Fonte da imagem: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ Os LLMs também podem ser categorizados pelo tipo de saída que geram.
 
 Embeddings são um conjunto de modelos que podem converter texto em uma forma numérica, chamada embedding, que é uma representação numérica do texto de entrada. Os embeddings facilitam a compreensão das relações entre palavras ou frases pelas máquinas e podem ser usados como entradas por outros modelos, como modelos de classificação ou de agrupamento que têm melhor desempenho com dados numéricos. Modelos de embedding são frequentemente usados para aprendizado de transferência, onde um modelo é construído para uma tarefa substituta para a qual há uma abundância de dados, e então os pesos do modelo (embeddings) são reutilizados para outras tarefas subsequentes. Um exemplo dessa categoria é [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.pt.png)
+![Embedding](../../../translated_images/pt/Embedding.c3708fe988ccf760.png)
 
 Modelos de geração de imagens são modelos que geram imagens. Esses modelos são frequentemente usados para edição de imagens, síntese de imagens e tradução de imagens. Modelos de geração de imagens são frequentemente treinados em grandes conjuntos de dados de imagens, como [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), e podem ser usados para gerar novas imagens ou editar imagens existentes com técnicas de inpainting, super-resolução e colorização. Exemplos incluem [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) e [Modelos Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Geração de imagens](../../../translated_images/Image.349c080266a763fd.pt.png)
+![Geração de imagens](../../../translated_images/pt/Image.349c080266a763fd.png)
 
 Modelos de geração de texto e código são modelos que geram texto ou código. Esses modelos são frequentemente usados para sumarização de texto, tradução e resposta a perguntas. Modelos de geração de texto são frequentemente treinados em grandes conjuntos de dados de texto, como [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), e podem ser usados para gerar novo texto ou responder perguntas. Modelos de geração de código, como [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), são frequentemente treinados em grandes conjuntos de dados de código, como GitHub, e podem ser usados para gerar novo código ou corrigir bugs em código existente.
 
-![Geração de texto e código](../../../translated_images/Text.a8c0cf139e5cc2a0.pt.png)
+![Geração de texto e código](../../../translated_images/pt/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder versus Apenas Decoder
 
@@ -123,23 +123,23 @@ A maioria dos modelos que mencionámos nos parágrafos anteriores (modelos da Op
 
 - Encontrar o Modelo Base de interesse no catálogo - seja proprietário ou de código aberto, filtrando por tarefa, licença ou nome. Para melhorar a pesquisa, os modelos estão organizados em coleções, como a coleção Azure OpenAI, coleção Hugging Face, entre outras.
 
-![Catálogo de modelos](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.pt.png)
+![Catálogo de modelos](../../../translated_images/pt/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Rever o cartão do modelo, incluindo uma descrição detalhada do uso pretendido e dos dados de treino, exemplos de código e resultados de avaliação na biblioteca interna de avaliações.
 
-![Cartão do modelo](../../../translated_images/ModelCard.598051692c6e400d.pt.png)
+![Cartão do modelo](../../../translated_images/pt/ModelCard.598051692c6e400d.png)
 
 - Comparar benchmarks entre modelos e conjuntos de dados disponíveis na indústria para avaliar qual deles atende ao cenário de negócio, através do painel [Benchmarks de Modelos](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmarks de modelos](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.pt.png)
+![Benchmarks de modelos](../../../translated_images/pt/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Ajustar o modelo com dados de treino personalizados para melhorar o desempenho do modelo numa carga de trabalho específica, aproveitando as capacidades de experimentação e rastreamento do Azure AI Studio.
 
-![Ajuste de modelo](../../../translated_images/FineTuning.aac48f07142e36fd.pt.png)
+![Ajuste de modelo](../../../translated_images/pt/FineTuning.aac48f07142e36fd.png)
 
 - Implementar o modelo pré-treinado original ou a versão ajustada para uma inferência remota em tempo real - computação gerida - ou endpoint de API sem servidor - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - para permitir que as aplicações o consumam.
 
-![Implementação de modelo](../../../translated_images/ModelDeploy.890da48cbd0bccdb.pt.png)
+![Implementação de modelo](../../../translated_images/pt/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Nem todos os modelos no catálogo estão atualmente disponíveis para ajuste e/ou implementação pay-as-you-go. Verifique o cartão do modelo para detalhes sobre as capacidades e limitações do modelo.
@@ -158,7 +158,7 @@ Existem várias abordagens que uma empresa pode usar para obter os resultados ne
 
 - **Modelo ajustado**. Aqui, o modelo é treinado adicionalmente com os seus próprios dados, o que o torna mais preciso e responsivo às suas necessidades, mas pode ser dispendioso.
 
-![Implementação de LLMs](../../../translated_images/Deploy.18b2d27412ec8c02.pt.png)
+![Implementação de LLMs](../../../translated_images/pt/Deploy.18b2d27412ec8c02.png)
 
 Fonte da imagem: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

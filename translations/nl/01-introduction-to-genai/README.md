@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introductie tot Generatieve AI en Grote Taalmodellen
 
-[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/01-lesson-banner.2424cfd092f43366.nl.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/nl/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
@@ -43,7 +43,7 @@ Ons startupteam is zich ervan bewust dat we dit doel niet kunnen bereiken zonder
 
 Generatieve AI zal naar verwachting de manier waarop we vandaag leren en lesgeven revolutioneren, met studenten die 24 uur per dag virtuele leraren tot hun beschikking hebben die enorme hoeveelheden informatie en voorbeelden bieden, en leraren die innovatieve tools kunnen gebruiken om hun studenten te beoordelen en feedback te geven.
 
-![Vijf jonge studenten kijken naar een monitor - afbeelding door DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.nl.png)
+![Vijf jonge studenten kijken naar een monitor - afbeelding door DALLE2](../../../translated_images/nl/students-by-DALLE2.b70fddaced1042ee.png)
 
 Laten we beginnen met het definiëren van enkele basisconcepten en terminologie die we in het hele curriculum zullen gebruiken.
 
@@ -70,7 +70,7 @@ Dit is de technologie die de virtuele assistenten aandreef die in het eerste dec
 
 Zo zijn we gekomen tot Generatieve AI vandaag, dat kan worden gezien als een subset van deep learning.
 
-![AI, ML, DL en Generatieve AI](../../../translated_images/AI-diagram.c391fa518451a40d.nl.png)
+![AI, ML, DL en Generatieve AI](../../../translated_images/nl/AI-diagram.c391fa518451a40d.png)
 
 Na decennia van onderzoek op het gebied van AI heeft een nieuwe modelarchitectuur – genaamd _Transformer_ – de beperkingen van RNNs overwonnen, doordat het veel langere tekstreeksen als invoer kan verwerken. Transformers zijn gebaseerd op het aandachtmechanisme, waardoor het model verschillende gewichten kan toekennen aan de invoer die het ontvangt, ‘meer aandacht’ kan besteden aan waar de meest relevante informatie geconcentreerd is, ongeacht hun volgorde in de tekstreeks.
 
@@ -82,7 +82,7 @@ In het volgende hoofdstuk gaan we verschillende soorten generatieve AI-modellen 
 
 - **Tokenizer, tekst naar cijfers**: Grote Taalmodellen ontvangen een tekst als invoer en genereren een tekst als uitvoer. Omdat het statistische modellen zijn, werken ze echter veel beter met cijfers dan met tekstreeksen. Daarom wordt elke invoer naar het model verwerkt door een tokenizer voordat het door het kernmodel wordt gebruikt. Een token is een stukje tekst – bestaande uit een variabel aantal tekens, dus de belangrijkste taak van de tokenizer is het splitsen van de invoer in een reeks tokens. Vervolgens wordt elk token gekoppeld aan een tokenindex, wat de gehele codering is van het oorspronkelijke tekstgedeelte.
 
-![Voorbeeld van tokenisatie](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.nl.png)
+![Voorbeeld van tokenisatie](../../../translated_images/nl/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **Voorspellen van uitvoertokens**: Gegeven n tokens als invoer (met een maximale n die varieert van model tot model), kan het model één token als uitvoer voorspellen. Dit token wordt vervolgens opgenomen in de invoer van de volgende iteratie, in een uitbreidend vensterpatroon, wat een betere gebruikerservaring mogelijk maakt door één (of meerdere) zinnen als antwoord te krijgen. Dit verklaart waarom, als je ooit met ChatGPT hebt gespeeld, je misschien hebt gemerkt dat het soms lijkt te stoppen midden in een zin.
 
@@ -100,23 +100,23 @@ De invoer van een groot taalmodel staat bekend als een prompt, terwijl de uitvoe
 
   1. Samenvatting van een artikel, boek, productrecensies en meer, samen met het extraheren van inzichten uit ongestructureerde gegevens.
     
-    ![Voorbeeld van samenvatting](../../../translated_images/summarization-example.7b7ff97147b3d790.nl.png)
+    ![Voorbeeld van samenvatting](../../../translated_images/nl/summarization-example.7b7ff97147b3d790.png)
   
   2. Creatieve ideeën en ontwerpen van een artikel, essay, opdracht of meer.
       
-     ![Voorbeeld van creatief schrijven](../../../translated_images/creative-writing-example.e24a685b5a543ad1.nl.png)
+     ![Voorbeeld van creatief schrijven](../../../translated_images/nl/creative-writing-example.e24a685b5a543ad1.png)
 
 - Een **vraag**, gesteld in de vorm van een gesprek met een agent.
   
-  ![Voorbeeld van gesprek](../../../translated_images/conversation-example.60c2afc0f595fa59.nl.png)
+  ![Voorbeeld van gesprek](../../../translated_images/nl/conversation-example.60c2afc0f595fa59.png)
 
 - Een stuk **tekst om aan te vullen**, wat impliciet een verzoek is om hulp bij schrijven.
   
-  ![Voorbeeld van tekstaanvulling](../../../translated_images/text-completion-example.cbb0f28403d42752.nl.png)
+  ![Voorbeeld van tekstaanvulling](../../../translated_images/nl/text-completion-example.cbb0f28403d42752.png)
 
 - Een stuk **code** samen met het verzoek om het uit te leggen en te documenteren, of een opmerking waarin wordt gevraagd een stuk code te genereren dat een specifieke taak uitvoert.
   
-  ![Voorbeeld van codering](../../../translated_images/coding-example.50ebabe8a6afff20.nl.png)
+  ![Voorbeeld van codering](../../../translated_images/nl/coding-example.50ebabe8a6afff20.png)
 
 De bovenstaande voorbeelden zijn vrij eenvoudig en zijn niet bedoeld als een uitgebreide demonstratie van de capaciteiten van Grote Taalmodellen. Ze zijn bedoeld om het potentieel van het gebruik van generatieve AI te laten zien, in het bijzonder maar niet beperkt tot educatieve contexten.
 

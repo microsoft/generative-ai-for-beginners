@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 저코드 AI 애플리케이션 구축하기
 
-[![저코드 AI 애플리케이션 구축하기](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.ko.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![저코드 AI 애플리케이션 구축하기](../../../translated_images/ko/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)_
 
@@ -92,17 +92,17 @@ Copilot을 사용하기 시작할 때 [Power Platform Copilot Prompt Library](ht
 
 1. 홈 화면의 텍스트 영역을 사용하여 만들고자 하는 앱을 설명합니다. 예를 들어, **_학생 과제를 추적하고 관리하는 앱을 만들고 싶습니다_**라고 입력합니다. **전송** 버튼을 클릭하여 프롬프트를 AI Copilot에 보냅니다.
 
-![만들고자 하는 앱 설명하기](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.ko.png)
+![만들고자 하는 앱 설명하기](../../../translated_images/ko/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. AI Copilot은 추적하려는 데이터를 저장하기 위한 필드와 샘플 데이터를 포함한 Dataverse 테이블을 제안합니다. 이후 대화형 단계로 AI Copilot 비서 기능을 사용하여 테이블을 사용자 정의할 수 있습니다.
 
    > **중요**: Dataverse는 Power Platform의 기본 데이터 플랫폼입니다. 이는 앱의 데이터를 저장하기 위한 저코드 데이터 플랫폼입니다. Microsoft Cloud에서 데이터를 안전하게 저장하며 Power Platform 환경 내에서 프로비저닝됩니다. 데이터 분류, 데이터 계보, 세분화된 액세스 제어 등과 같은 내장된 데이터 거버넌스 기능을 제공합니다. Dataverse에 대해 더 알아보려면 [여기](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)를 참조하세요.
 
-   ![새 테이블의 제안된 필드](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.ko.png)
+   ![새 테이블의 제안된 필드](../../../translated_images/ko/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. 교육자들은 과제를 제출한 학생들에게 이메일을 보내 과제 진행 상황을 업데이트하고 싶어합니다. Copilot을 사용하여 테이블에 학생 이메일을 저장할 새 필드를 추가할 수 있습니다. 예를 들어, 다음 프롬프트를 사용하여 테이블에 새 필드를 추가할 수 있습니다: **_학생 이메일을 저장할 열을 추가하고 싶습니다_**. **전송** 버튼을 클릭하여 프롬프트를 AI Copilot에 보냅니다.
 
-![새 필드 추가하기](../../../translated_images/copilot-new-column.35e15ff21acaf274.ko.png)
+![새 필드 추가하기](../../../translated_images/ko/copilot-new-column.35e15ff21acaf274.png)
 
 1. AI Copilot은 새 필드를 생성하며 이후 필요에 따라 필드를 사용자 정의할 수 있습니다.
 
@@ -112,7 +112,7 @@ Copilot을 사용하기 시작할 때 [Power Platform Copilot Prompt Library](ht
 
 1. 교육자가 학생들에게 이메일을 보내기 위해 Copilot을 사용하여 앱에 새 화면을 추가할 수 있습니다. 예를 들어, 다음 프롬프트를 사용하여 앱에 새 화면을 추가할 수 있습니다: **_학생들에게 이메일을 보내는 화면을 추가하고 싶습니다_**. **전송** 버튼을 클릭하여 프롬프트를 AI Copilot에 보냅니다.
 
-![프롬프트 지시를 통해 새 화면 추가하기](../../../translated_images/copilot-new-screen.2e0bef7132a17392.ko.png)
+![프롬프트 지시를 통해 새 화면 추가하기](../../../translated_images/ko/copilot-new-screen.2e0bef7132a17392.png)
 
 1. AI Copilot은 새 화면을 생성하며 이후 필요에 따라 화면을 사용자 정의할 수 있습니다.
 
@@ -147,15 +147,15 @@ Copilot을 사용하여 Dataverse에서 테이블을 생성하려면 아래 단�
 
 2. 왼쪽 탐색 바에서 **Tables**를 선택한 후 **Describe the new Table**을 클릭합니다.
 
-![새 테이블 선택](../../../translated_images/describe-new-table.0792373eb757281e.ko.png)
+![새 테이블 선택](../../../translated_images/ko/describe-new-table.0792373eb757281e.png)
 
 3. **Describe the new Table** 화면에서 텍스트 영역을 사용하여 생성하려는 테이블을 설명합니다. 예를 들어, **_송장 정보를 저장할 테이블을 만들고 싶습니다_**라고 입력합니다. **Send** 버튼을 클릭하여 AI Copilot에 프롬프트를 보냅니다.
 
-![테이블 설명](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.ko.png)
+![테이블 설명](../../../translated_images/ko/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 4. AI Copilot은 추적하려는 데이터를 저장하기 위한 필드와 샘플 데이터를 포함한 Dataverse 테이블을 제안합니다. 이후 대화형 단계로 AI Copilot 어시스턴트 기능을 사용하여 테이블을 사용자 지정할 수 있습니다.
 
-![제안된 Dataverse 테이블](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.ko.png)
+![제안된 Dataverse 테이블](../../../translated_images/ko/copilot-dataverse-table.b3bc936091324d9d.png)
 
 5. 재무팀은 송장의 현재 상태를 업데이트하기 위해 공급업체에게 이메일을 보내고 싶어합니다. Copilot을 사용하여 테이블에 공급업체 이메일을 저장할 새 필드를 추가할 수 있습니다. 예를 들어, **_공급업체 이메일을 저장할 열을 추가하고 싶습니다_**라는 프롬프트를 사용하여 새 필드를 추가할 수 있습니다. **Send** 버튼을 클릭하여 AI Copilot에 프롬프트를 보냅니다.
 
@@ -184,7 +184,7 @@ Power Platform에서 제공되는 사전 구축 AI 모델에는 다음이 포함
 
 사용자 지정 AI 모델을 사용하면 AI Builder에 자체 모델을 가져와 AI Builder 사용자 지정 모델처럼 작동하도록 할 수 있으며, 자체 데이터를 사용하여 모델을 훈련할 수 있습니다. 이러한 모델을 사용하여 Power Apps와 Power Automate에서 프로세스를 자동화하고 결과를 예측할 수 있습니다. 자체 모델을 사용할 때 적용되는 제한 사항이 있습니다. 자세한 내용은 [제한 사항](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)을 참조하세요.
 
-![AI Builder 모델](../../../translated_images/ai-builder-models.8069423b84cfc47f.ko.png)
+![AI Builder 모델](../../../translated_images/ko/ai-builder-models.8069423b84cfc47f.png)
 
 ## 과제 #2 - 스타트업을 위한 송장 처리 흐름 구축
 
@@ -198,7 +198,7 @@ Power Platform에서 제공되는 사전 구축 AI 모델에는 다음이 포함
 
 2. 홈 화면의 텍스트 영역을 사용하여 구축하려는 워크플로우를 설명합니다. 예를 들어, **_내 메일함에 송장이 도착하면 처리합니다_**라고 입력합니다. **Send** 버튼을 클릭하여 AI Copilot에 프롬프트를 보냅니다.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.ko.png)
+   ![Copilot Power Automate](../../../translated_images/ko/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. AI Copilot은 자동화하려는 작업을 수행하기 위해 필요한 작업을 제안합니다. **Next** 버튼을 클릭하여 다음 단계를 진행합니다.
 
@@ -212,7 +212,7 @@ Power Platform에서 제공되는 사전 구축 AI 모델에는 다음이 포함
 
 8. 흐름에서 **Condition** 작업을 제거합니다. 사용하지 않을 것입니다. 흐름은 다음 스크린샷과 같아야 합니다:
 
-   ![Power Automate, 작업 제거](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.ko.png)
+   ![Power Automate, 작업 제거](../../../translated_images/ko/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. **Add an action** 버튼을 클릭하고 **Dataverse**를 검색합니다. **Add a new row** 작업을 선택합니다.
 
@@ -227,7 +227,7 @@ Power Platform에서 제공되는 사전 구축 AI 모델에는 다음이 포함
     - Status - **Status**를 **Pending**으로 설정합니다.
     - Supplier Email - **When a new email arrives** 트리거의 **From** 동적 콘텐츠를 사용합니다.
 
-    ![Power Automate 행 추가](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.ko.png)
+    ![Power Automate 행 추가](../../../translated_images/ko/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. 흐름 작업이 완료되면 **Save** 버튼을 클릭하여 흐름을 저장합니다. 이후 지정한 트리거 폴더로 송장이 포함된 이메일을 보내 흐름을 테스트할 수 있습니다.
 
@@ -241,7 +241,7 @@ GPT 모델은 방대한 데이터로 광범위한 훈련을 거쳐 프롬프트�
 
 예를 들어, 이메일 초안 작성, 제품 설명 등 다양한 용도로 텍스트를 자동으로 생성하는 흐름을 구축할 수 있습니다. 또한, 고객 서비스 에이전트가 고객 문의에 효과적이고 효율적으로 응답할 수 있도록 돕는 챗봇 및 고객 서비스 앱과 같은 다양한 애플리케이션을 위해 모델을 사용할 수 있습니다.
 
-![프롬프트 생성](../../../translated_images/create-prompt-gpt.69d429300c2e870a.ko.png)
+![프롬프트 생성](../../../translated_images/ko/create-prompt-gpt.69d429300c2e870a.png)
 
 Power Automate에서 이 AI 모델을 사용하는 방법을 배우려면 [AI Builder와 GPT로 지능 추가하기](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) 모듈을 확인하세요.
 

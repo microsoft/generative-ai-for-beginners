@@ -63,7 +63,7 @@ Norėdami įsitikinti, kad jūsų nuorodos veikia tinkamai, naudokite VS code ir
 
 Pavyzdžiui, užvedus pelę ant nuorodos, VS code pasiūlys ją atidaryti paspaudus **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.lt.png)
+![VS code follow links screenshot](../../translated_images/lt/vscode-follow-link.85520ab6a1237adc.png)
 
 Jei paspausite nuorodą ir ji neveikia lokaliai, tikrai sukels darbo eigos klaidą ir neveiks GitHub.
 
@@ -71,7 +71,7 @@ Norėdami ištaisyti šią problemą, rašykite nuorodą su VS code pagalba.
 
 Kai rašote `./` arba `../`, VS code pasiūlys pasirinkti iš galimų variantų pagal tai, ką įvedėte.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.lt.png)
+![VS code select relative path screenshot](../../translated_images/lt/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Sekite kelią paspaudę norimą failą ar aplanką ir būsite tikri, kad kelias nėra sugadintas.
 
@@ -88,7 +88,7 @@ Jei jis pridėtas prie jūsų reliatyvių kelių, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.lt.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/lt/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID reliatyvių kelių pabaigoje.
 
@@ -105,7 +105,7 @@ Jei jis pridėtas prie jūsų URL, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.lt.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/lt/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID URL pabaigoje.
 
@@ -122,7 +122,7 @@ Jei nėra, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.lt.png)
+![GitHub check country locale comment screenshot](../../translated_images/lt/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pašalinkite šalies lokalę iš URL.
 

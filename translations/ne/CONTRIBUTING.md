@@ -60,7 +60,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 उदाहरणका लागि, तपाईंले फाइलहरूमा कुनै लिंकमा होभर गर्दा **ctrl + click** थिचेर लिंक पछ्याउन प्रोत्साहित गरिनेछ।
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.ne.png)
+![VS code follow links screenshot](../../translated_images/ne/vscode-follow-link.85520ab6a1237adc.png)
 
 यदि तपाईं लिंकमा क्लिक गर्दा स्थानीय रूपमा काम गर्दैन भने, पक्का छ यो कार्यप्रवाह ट्रिगर हुनेछ र GitHub मा पनि काम गर्ने छैन।
 
@@ -68,7 +68,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 जब तपाईं `./` वा `../` टाइप गर्नुहुन्छ, VS कोडले तपाईंले टाइप गरेको अनुसार उपलब्ध विकल्पहरूबाट छान्न प्रोत्साहित गर्नेछ।
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.ne.png)
+![VS code select relative path screenshot](../../translated_images/ne/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 आवश्यक फाइल वा फोल्डरमा क्लिक गरेर पथ पछ्याउनुहोस् र तपाईं निश्चित हुनुहुनेछ कि तपाईंको पथ टुटेको छैन।
 
@@ -82,7 +82,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि छैन भने, तपाईंलाई तलको त्रुटि देखिन सक्छ।
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.ne.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/ne/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 यो समस्या समाधान गर्न, कार्यप्रवाहले हाइलाइट गरेको फाइल पथ खोल्नुहोस् र सापेक्ष पथहरूको अन्त्यमा ट्र्याकिङ ID थप्नुहोस्।
 
@@ -96,7 +96,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि छैन भने, तपाईंलाई तलको त्रुटि देखिन सक्छ।
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.ne.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/ne/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 यो समस्या समाधान गर्न, कार्यप्रवाहले हाइलाइट गरेको फाइल पथ खोल्नुहोस् र URL हरूको अन्त्यमा ट्र्याकिङ ID थप्नुहोस्।
 
@@ -110,7 +110,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि छ भने, तपाईंलाई तलको त्रुटि देखिन सक्छ।
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.ne.png)
+![GitHub check country locale comment screenshot](../../translated_images/ne/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 यो समस्या समाधान गर्न, कार्यप्रवाहले हाइलाइट गरेको फाइल पथ खोल्नुहोस् र URL बाट देश लोकल हटाउनुहोस्।
 

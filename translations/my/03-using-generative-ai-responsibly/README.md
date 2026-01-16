@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generative AI ကို တာဝန်ရှိရှိ အသုံးပြုခြင်း
 
-[![Generative AI ကို တာဝန်ရှိရှိ အသုံးပြုခြင်း](../../../translated_images/03-lesson-banner.1ed56067a452d977.my.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Generative AI ကို တာဝန်ရှိရှိ အသုံးပြုခြင်း](../../../translated_images/my/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _အထက်ပါပုံကိုနှိပ်ပြီး ဒီသင်ခန်းစာရဲ့ ဗီဒီယိုကို ကြည့်ပါ_
 
@@ -85,7 +85,7 @@ LLM က မှားယွင်းသော သို့မဟုတ် အဓ�
 
 အခုတော့ Responsible Generative AI ရဲ့ အရေးပါမှုကို သတ်မှတ်ပြီးနောက်၊ AI ဖြေရှင်းချက်များကို တာဝန်ရှိရှိ တည်ဆောက်ဖို့ အဆင့် ၄ ခုကို ကြည့်လိုက်ရအောင်-
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.my.png)
+![Mitigate Cycle](../../../translated_images/my/mitigate-cycle.babcd5a5658e1775.png)
 
 ### အန္တရာယ်များကို တိုင်းတာခြင်း
 
@@ -97,7 +97,7 @@ LLM က မှားယွင်းသော သို့မဟုတ် အဓ�
 
 အခုတော့ မော်ဒယ်နှင့် output ရဲ့ အန္တရာယ်များကို ကာကွယ်ခြင်း သို့မဟုတ် ကန့်သတ်ခြင်းနည်းလမ်းများကို ရှာဖွေဖို့ အချိန်ရောက်ပါပြီ။ ဒီဟာကို အလွှာ ၄ ခုအနေနဲ့ ကြည့်နိုင်ပါတယ်-
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.my.png)
+![Mitigation Layers](../../../translated_images/my/mitigation-layers.377215120b9a1159.png)
 
 - **Model**. သင့်တော်သော use case အတွက် သင့်တော်သော မော်ဒယ်ကို ရွေးချယ်ခြင်း။ GPT-4 ကဲ့သို့သော ကြီးမားပြီး ရှုပ်ထွေးသော မော်ဒယ်များဟာ သေးငယ်ပြီး သတ်မှတ်ထားသော use case များတွင် အန္တရာယ်ရှိသော အကြောင်းအရာများကို ဖြစ်စေနိုင်ပါတယ်။ သင့် training data ကို အသုံးပြုပြီး fine-tune လုပ်ခြင်းကလည်း အန္တရာယ်ရှိသော အကြောင်းအရာများကို လျှော့ချစေနိုင်ပါတယ်။
 

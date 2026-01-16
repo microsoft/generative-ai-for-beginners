@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "nl"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.nl.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/nl/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introductie
 
@@ -41,12 +41,12 @@ Voor deze les zullen we de modellen voortaan "open modellen" noemen, omdat ze mo
 
 **Kosten** - De kosten per token voor het gebruik en implementeren van deze modellen zijn lager dan die van propriëtaire modellen. Bij het bouwen van Generatieve AI-toepassingen is het belangrijk om de prestaties versus prijs te bekijken bij het werken met deze modellen voor jouw gebruikssituatie.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.nl.png)
+![Model Cost](../../../translated_images/nl/model-price.3f5a3e4d32ae00b4.png)
 Bron: Artificial Analysis
 
 **Flexibiliteit** - Werken met open modellen stelt je in staat flexibel te zijn in het gebruik van verschillende modellen of het combineren ervan. Een voorbeeld hiervan zijn de [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) waarbij een gebruiker het model dat wordt gebruikt direct in de gebruikersinterface kan selecteren:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.nl.png)
+![Choose Model](../../../translated_images/nl/choose-model.f095d15bbac92214.png)
 
 ## Verkennen van Verschillende Open Modellen
 
@@ -74,7 +74,7 @@ Er is geen eenduidig antwoord voor het kiezen van een open model. Een goed start
 
 Als je LLM's wilt vergelijken over verschillende types, is [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) een andere uitstekende bron:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.nl.png)
+![Model Quality](../../../translated_images/nl/model-quality.aaae1c22e00f7ee1.png)
 Bron: Artificial Analysis
 
 Als je aan een specifieke use case werkt, kan het zoeken naar fijn afgestemde versies die zich richten op hetzelfde gebied effectief zijn. Experimenteren met meerdere open modellen om te zien hoe ze presteren volgens jouw en de verwachtingen van je gebruikers is ook een goede praktijk.

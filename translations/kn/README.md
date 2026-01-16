@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "kn"
 }
 -->
-![ಶುರುವಾಗುತ್ತಿರುವವರಿಗಾಗಿ ಜನರೇಟಿವ್ AI](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.kn.png)
+![ಶುರುವಾಗುತ್ತಿರುವವರಿಗಾಗಿ ಜನರೇಟಿವ್ AI](../../translated_images/kn/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### ಜನರೇಟಿವ್ AI ಅಪ್ಲಿಕೇಶನ್ ಗಳವನ್ನು ನಿರ್ಮಿಸುವುದನ್ನು ಆರಂಭಿಸಲು ನಿಮಗೆ ಬೇಕಾಗಿರುವ ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ಕಲಿಸುವ 21 ಪಾಠಗಳು
 

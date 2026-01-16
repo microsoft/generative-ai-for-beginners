@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.ko.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/ko/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## 소개
 
@@ -41,12 +41,12 @@ LLM 개발은 소프트웨어 개발과 유사한 요소를 가지고 있지만,
 
 **비용** - 이러한 모델을 사용하고 배포하는 토큰당 비용이 독점 모델보다 낮습니다. 생성 AI 애플리케이션을 구축할 때, 사용 사례에 맞게 성능 대비 가격을 고려하는 것이 중요합니다.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.ko.png)
+![Model Cost](../../../translated_images/ko/model-price.3f5a3e4d32ae00b4.png)
 출처: Artificial Analysis
 
 **유연성** - 오픈 모델을 사용하면 다양한 모델을 사용하거나 결합하는 데 유연성을 가질 수 있습니다. 예를 들어, [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst)에서는 사용자가 인터페이스에서 직접 사용할 모델을 선택할 수 있습니다:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.ko.png)
+![Choose Model](../../../translated_images/ko/choose-model.f095d15bbac92214.png)
 
 ## 다양한 오픈 모델 탐색
 
@@ -74,7 +74,7 @@ Falcon의 미세 조정 버전 예로는 오픈 모델 기반의 어시스턴트
 
 다양한 유형의 LLM을 비교할 때는 [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst)도 훌륭한 자료입니다:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.ko.png)
+![Model Quality](../../../translated_images/ko/model-quality.aaae1c22e00f7ee1.png)
 출처: Artificial Analysis
 
 특정 사용 사례에 집중한다면, 동일 분야에 특화된 미세 조정 버전을 찾는 것이 효과적일 수 있습니다. 여러 오픈 모델을 실험하여 사용자와 자신의 기대에 맞는 성능을 확인하는 것도 좋은 방법입니다.

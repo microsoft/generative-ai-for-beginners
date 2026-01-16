@@ -63,7 +63,7 @@ Om te controleren of je links goed werken, gebruik je gewoon VS Code.
 
 Bijvoorbeeld, als je met je muis over een link in je bestanden zweeft, krijg je de optie om de link te volgen door op **ctrl + klik** te drukken.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.nl.png)
+![VS code follow links screenshot](../../translated_images/nl/vscode-follow-link.85520ab6a1237adc.png)
 
 Als je op een link klikt en deze werkt lokaal niet, dan zal de workflow ook falen en werkt het niet op GitHub.
 
@@ -71,7 +71,7 @@ Om dit op te lossen, probeer de link te typen met behulp van VS Code.
 
 Wanneer je `./` of `../` typt, zal VS Code je opties tonen op basis van wat je hebt getypt.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.nl.png)
+![VS code select relative path screenshot](../../translated_images/nl/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Volg het pad door te klikken op het gewenste bestand of map, zo weet je zeker dat je pad niet verbroken is.
 
@@ -88,7 +88,7 @@ Als dit is toegevoegd, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.nl.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/nl/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en voeg je de tracking-ID toe aan het einde van de relatieve paden.
 
@@ -105,7 +105,7 @@ Als dit is toegevoegd, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.nl.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/nl/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en voeg je de tracking-ID toe aan het einde van de URL’s.
 
@@ -122,7 +122,7 @@ Als dit niet voorkomt, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.nl.png)
+![GitHub check country locale comment screenshot](../../translated_images/nl/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en verwijder je de land-specifieke locale uit de URL’s.
 

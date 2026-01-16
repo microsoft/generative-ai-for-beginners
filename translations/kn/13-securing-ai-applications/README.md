@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ನಿಮ್ಮ ಜನರೇಟಿವ್ AI ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸುವುದು
 
-[![ನಿಮ್ಮ ಜನರೇಟಿವ್ AI ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸುವುದು](../../../translated_images/13-lesson-banner.14103e36b4bbf173.kn.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![ನಿಮ್ಮ ಜನರೇಟಿವ್ AI ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸುವುದು](../../../translated_images/kn/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## ಪರಿಚಯ
 
@@ -131,7 +131,7 @@ LLM ಗಳು ಬಳಸುವ ಡೇಟಾದ ಗೌಪ್ಯತೆ ಮತ್ತ
 
 > AI ರೆಡ್ ಟೀಮಿಂಗ್ ಅಭ್ಯಾಸವು ವಿಸ್ತೃತ ಅರ್ಥವನ್ನು ಪಡೆದಿದೆ: ಇದು ಕೇವಲ ಭದ್ರತಾ ದುರ್ಬಲತೆಗಳನ್ನು ಪರೀಕ್ಷಿಸುವುದಲ್ಲದೆ, ಹಾನಿಕಾರಕ ವಿಷಯಗಳ ಉತ್ಪಾದನೆ ಮುಂತಾದ ಇತರ ವ್ಯವಸ್ಥಾ ವೈಫಲ್ಯಗಳನ್ನು ಕೂಡ ಪರೀಕ್ಷಿಸುತ್ತದೆ. AI ವ್ಯವಸ್ಥೆಗಳಿಗೆ ಹೊಸ ಅಪಾಯಗಳಿವೆ, ಮತ್ತು ರೆಡ್ ಟೀಮಿಂಗ್ ಆ ಹೊಸ ಅಪಾಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮುಖ್ಯವಾಗಿದೆ, ಉದಾಹರಣೆಗೆ ಪ್ರಾಂಪ್ಟ್ ಇಂಜೆಕ್ಷನ್ ಮತ್ತು ಅಸಂಬಂಧಿತ ವಿಷಯಗಳ ಉತ್ಪಾದನೆ. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.kn.png)]()
+[![Guidance and resources for red teaming](../../../translated_images/kn/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 ಕೆಳಗಿನವುಗಳು ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನ AI ರೆಡ್ ಟೀಮ್ ಕಾರ್ಯಕ್ರಮವನ್ನು ರೂಪಿಸಿದ ಪ್ರಮುಖ ಅಂಶಗಳು.
 

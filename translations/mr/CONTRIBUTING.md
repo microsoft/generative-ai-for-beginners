@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 उदाहरणार्थ, जेव्हा तुम्ही तुमच्या फाइलमधील कोणत्याही लिंकवर होवर करता, तेव्हा तुम्हाला **ctrl + click** करून लिंक फॉलो करण्याचा पर्याय दिसेल.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.mr.png)
+![VS code follow links screenshot](../../translated_images/mr/vscode-follow-link.85520ab6a1237adc.png)
 
 जर तुम्ही लिंकवर क्लिक केला आणि ती स्थानिकरित्या कार्यरत नसेल, तर नक्कीच वर्कफ्लो त्रुटी दाखवेल आणि GitHub वरही ती काम करणार नाही.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 जेव्हा तुम्ही `./` किंवा `../` टाइप करता, तेव्हा VS कोड तुम्हाला उपलब्ध पर्यायांमधून निवडण्याचा प्रॉम्प्ट देईल.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.mr.png)
+![VS code select relative path screenshot](../../translated_images/mr/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 इच्छित फाइल किंवा फोल्डरवर क्लिक करून मार्ग फॉलो करा आणि तुम्हाला खात्री होईल की तुमचा मार्ग तुटलेला नाही.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 नसेल तर, तुम्हाला खालील त्रुटी मिळू शकते.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.mr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/mr/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 ही समस्या सोडवण्यासाठी, वर्कफ्लोने हायलाइट केलेला फाइल पथ उघडा आणि सापेक्ष मार्गांच्या शेवटी ट्रॅकिंग आयडी जोडा.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 नसेल तर, तुम्हाला खालील त्रुटी मिळू शकते.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.mr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/mr/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 ही समस्या सोडवण्यासाठी, वर्कफ्लोने हायलाइट केलेला फाइल पथ उघडा आणि URLs च्या शेवटी ट्रॅकिंग आयडी जोडा.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 नसेल तर, तुम्हाला खालील त्रुटी मिळू शकते.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.mr.png)
+![GitHub check country locale comment screenshot](../../translated_images/mr/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 ही समस्या सोडवण्यासाठी, वर्कफ्लोने हायलाइट केलेला फाइल पथ उघडा आणि URLs मधून देशविशिष्ट लोकल काढा.
 

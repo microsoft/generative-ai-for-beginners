@@ -63,7 +63,7 @@ Aby upewnić się, że Twoje linki działają poprawnie, po prostu użyj VS Code
 
 Na przykład, gdy najedziesz kursorem na dowolny link w plikach, pojawi się podpowiedź, aby przejść do linku, naciskając **ctrl + kliknięcie**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.pl.png)
+![VS code follow links screenshot](../../translated_images/pl/vscode-follow-link.85520ab6a1237adc.png)
 
 Jeśli klikniesz link i nie działa lokalnie, to na pewno workflow zgłosi błąd i nie zadziała na GitHub.
 
@@ -71,7 +71,7 @@ Aby rozwiązać ten problem, spróbuj wpisać link z pomocą VS Code.
 
 Gdy wpiszesz `./` lub `../`, VS Code podpowie Ci dostępne opcje zgodne z tym, co wpisałeś.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.pl.png)
+![VS code select relative path screenshot](../../translated_images/pl/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Wybierz ścieżkę, klikając na odpowiedni plik lub folder, i będziesz mieć pewność, że ścieżka nie jest uszkodzona.
 
@@ -88,7 +88,7 @@ Jeśli jest dołączony do Twoich ścieżek względnych, przejdziesz tę kontrol
 
 Jeśli nie, możesz otrzymać następujący błąd.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.pl.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/pl/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Aby rozwiązać ten problem, otwórz plik wskazany przez workflow i dodaj identyfikator śledzenia na końcu ścieżek względnych.
 
@@ -105,7 +105,7 @@ Jeśli jest dołączony do Twoich adresów URL, przejdziesz tę kontrolę.
 
 Jeśli nie, możesz otrzymać następujący błąd.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.pl.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/pl/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Aby rozwiązać ten problem, otwórz plik wskazany przez workflow i dodaj identyfikator śledzenia na końcu adresów URL.
 
@@ -122,7 +122,7 @@ Jeśli nie ma jej w Twoich adresach URL, przejdziesz tę kontrolę.
 
 Jeśli nie, możesz otrzymać następujący błąd.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.pl.png)
+![GitHub check country locale comment screenshot](../../translated_images/pl/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Aby rozwiązać ten problem, otwórz plik wskazany przez workflow i usuń lokalizację kraju z adresów URL.
 

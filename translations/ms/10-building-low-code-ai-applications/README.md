@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membina Aplikasi AI Kod Rendah
 
-[![Membina Aplikasi AI Kod Rendah](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.ms.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Membina Aplikasi AI Kod Rendah](../../../translated_images/ms/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klik imej di atas untuk menonton video pelajaran ini)_
 
@@ -92,17 +92,17 @@ Anda akan membina aplikasi ini menggunakan Copilot dalam Power Apps dengan mengi
 
 1. Gunakan kawasan teks pada skrin utama untuk menerangkan aplikasi yang anda mahu bina. Sebagai contoh, **_Saya mahu membina aplikasi untuk menjejak dan mengurus tugasan pelajar_**. Klik pada butang **Send** untuk menghantar prompt kepada AI Copilot.
 
-![Terangkan aplikasi yang anda mahu bina](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.ms.png)
+![Terangkan aplikasi yang anda mahu bina](../../../translated_images/ms/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. AI Copilot akan mencadangkan Jadual Dataverse dengan medan yang anda perlukan untuk menyimpan data yang anda mahu jejak dan beberapa data contoh. Anda kemudian boleh menyesuaikan jadual untuk memenuhi keperluan anda menggunakan ciri pembantu AI Copilot melalui langkah perbualan.
 
    > **Penting**: Dataverse adalah platform data asas untuk Power Platform. Ia adalah platform data kod rendah untuk menyimpan data aplikasi. Ia adalah perkhidmatan yang diurus sepenuhnya yang menyimpan data dengan selamat di Microsoft Cloud dan disediakan dalam persekitaran Power Platform anda. Ia dilengkapi dengan keupayaan tadbir urus data terbina dalam, seperti klasifikasi data, garis keturunan data, kawalan akses yang terperinci, dan banyak lagi. Anda boleh belajar lebih lanjut tentang Dataverse [di sini](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Medan yang dicadangkan dalam jadual baru anda](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.ms.png)
+   ![Medan yang dicadangkan dalam jadual baru anda](../../../translated_images/ms/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. Pendidik mahu menghantar e-mel kepada pelajar yang telah menghantar tugasan mereka untuk mengemas kini mereka tentang kemajuan tugasan mereka. Anda boleh menggunakan Copilot untuk menambah medan baru pada jadual untuk menyimpan e-mel pelajar. Sebagai contoh, anda boleh menggunakan prompt berikut untuk menambah medan baru pada jadual: **_Saya mahu menambah lajur untuk menyimpan e-mel pelajar_**. Klik pada butang **Send** untuk menghantar prompt kepada AI Copilot.
 
-![Menambah medan baru](../../../translated_images/copilot-new-column.35e15ff21acaf274.ms.png)
+![Menambah medan baru](../../../translated_images/ms/copilot-new-column.35e15ff21acaf274.png)
 
 1. AI Copilot akan menjana medan baru dan anda kemudian boleh menyesuaikan medan untuk memenuhi keperluan anda.
 
@@ -112,7 +112,7 @@ Anda akan membina aplikasi ini menggunakan Copilot dalam Power Apps dengan mengi
 
 1. Untuk pendidik menghantar e-mel kepada pelajar, anda boleh menggunakan Copilot untuk menambah skrin baru pada aplikasi. Sebagai contoh, anda boleh menggunakan prompt berikut untuk menambah skrin baru pada aplikasi: **_Saya mahu menambah skrin untuk menghantar e-mel kepada pelajar_**. Klik pada butang **Send** untuk menghantar prompt kepada AI Copilot.
 
-![Menambah skrin baru melalui arahan prompt](../../../translated_images/copilot-new-screen.2e0bef7132a17392.ms.png)
+![Menambah skrin baru melalui arahan prompt](../../../translated_images/ms/copilot-new-screen.2e0bef7132a17392.png)
 
 1. AI Copilot akan menjana skrin baru dan anda kemudian boleh menyesuaikan skrin untuk memenuhi keperluan anda.
 
@@ -147,15 +147,15 @@ Untuk mencipta jadual dalam Dataverse menggunakan Copilot, ikuti langkah-langkah
 
 2. Pada bar navigasi kiri, pilih **Tables** dan kemudian klik pada **Describe the new Table**.
 
-![Pilih jadual baru](../../../translated_images/describe-new-table.0792373eb757281e.ms.png)
+![Pilih jadual baru](../../../translated_images/ms/describe-new-table.0792373eb757281e.png)
 
 3. Pada skrin **Describe the new Table**, gunakan kawasan teks untuk menerangkan jadual yang anda ingin cipta. Sebagai contoh, **_Saya ingin mencipta jadual untuk menyimpan maklumat invois_**. Klik pada butang **Send** untuk menghantar arahan kepada AI Copilot.
 
-![Terangkan jadual](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.ms.png)
+![Terangkan jadual](../../../translated_images/ms/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 4. AI Copilot akan mencadangkan Jadual Dataverse dengan medan yang anda perlukan untuk menyimpan data yang ingin anda jejak dan beberapa data contoh. Anda kemudian boleh menyesuaikan jadual untuk memenuhi keperluan anda menggunakan ciri pembantu AI Copilot melalui langkah-langkah perbualan.
 
-![Cadangan jadual Dataverse](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.ms.png)
+![Cadangan jadual Dataverse](../../../translated_images/ms/copilot-dataverse-table.b3bc936091324d9d.png)
 
 5. Pasukan kewangan ingin menghantar e-mel kepada pembekal untuk mengemas kini mereka dengan status semasa invois mereka. Anda boleh menggunakan Copilot untuk menambah medan baru ke jadual untuk menyimpan e-mel pembekal. Sebagai contoh, anda boleh menggunakan arahan berikut untuk menambah medan baru ke jadual: **_Saya ingin menambah lajur untuk menyimpan e-mel pembekal_**. Klik pada butang **Send** untuk menghantar arahan kepada AI Copilot.
 
@@ -184,7 +184,7 @@ Beberapa Model AI Sedia Ada yang tersedia dalam Power Platform termasuk:
 
 Dengan Model AI Tersuai, anda boleh membawa model anda sendiri ke dalam AI Builder supaya ia boleh berfungsi seperti mana-mana model tersuai AI Builder, membolehkan anda melatih model menggunakan data anda sendiri. Anda boleh menggunakan model ini untuk mengautomasi proses dan meramalkan hasil dalam Power Apps dan Power Automate. Apabila menggunakan model anda sendiri, terdapat batasan yang dikenakan. Baca lebih lanjut mengenai [batasan ini](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Model AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f.ms.png)
+![Model AI Builder](../../../translated_images/ms/ai-builder-models.8069423b84cfc47f.png)
 
 ## Tugasan #2 - Bina Aliran Pemprosesan Invois untuk Startup Kita
 
@@ -198,7 +198,7 @@ Untuk membina aliran kerja yang akan membantu pasukan kewangan memproses invois 
 
 2. Gunakan kawasan teks pada skrin utama untuk menerangkan aliran kerja yang anda ingin bina. Sebagai contoh, **_Proseskan invois apabila ia tiba di peti masuk saya_**. Klik pada butang **Send** untuk menghantar arahan kepada AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.ms.png)
+   ![Copilot power automate](../../../translated_images/ms/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. AI Copilot akan mencadangkan tindakan yang anda perlukan untuk melaksanakan tugas yang ingin anda automasikan. Anda boleh klik pada butang **Next** untuk melalui langkah-langkah seterusnya.
 
@@ -212,7 +212,7 @@ Untuk membina aliran kerja yang akan membantu pasukan kewangan memproses invois 
 
 8. Buang tindakan **Condition** daripada aliran kerana anda tidak akan menggunakannya. Ia sepatutnya kelihatan seperti tangkapan skrin berikut:
 
-   ![power automate, buang tindakan](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.ms.png)
+   ![power automate, buang tindakan](../../../translated_images/ms/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. Klik pada butang **Add an action** dan cari **Dataverse**. Pilih tindakan **Add a new row**.
 
@@ -227,7 +227,7 @@ Untuk membina aliran kerja yang akan membantu pasukan kewangan memproses invois 
     - Status - Tetapkan **Status** kepada **Pending**.
     - Supplier Email - Gunakan kandungan dinamik **From** daripada pencetus **When a new email arrives**.
 
-    ![power automate tambah baris](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.ms.png)
+    ![power automate tambah baris](../../../translated_images/ms/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. Setelah selesai dengan aliran, klik pada butang **Save** untuk menyimpan aliran. Anda kemudian boleh menguji aliran dengan menghantar e-mel dengan invois ke folder yang anda tentukan dalam pencetus.
 
@@ -241,7 +241,7 @@ Model GPT menjalani latihan yang meluas pada sejumlah besar data, membolehkan me
 
 Sebagai contoh, anda boleh membina aliran untuk menjana teks secara automatik untuk pelbagai kegunaan, seperti: draf e-mel, penerangan produk, dan banyak lagi. Anda juga boleh menggunakan model ini untuk menjana teks untuk pelbagai aplikasi, seperti chatbot dan aplikasi perkhidmatan pelanggan yang membolehkan ejen perkhidmatan pelanggan memberikan respons yang berkesan dan efisien kepada pertanyaan pelanggan.
 
-![cipta arahan](../../../translated_images/create-prompt-gpt.69d429300c2e870a.ms.png)
+![cipta arahan](../../../translated_images/ms/create-prompt-gpt.69d429300c2e870a.png)
 
 Untuk belajar bagaimana menggunakan Model AI ini dalam Power Automate, lalui modul [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ပုံဖန်တီးမှုအက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း
 
-[![ပုံဖန်တီးမှုအက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/09-lesson-banner.906e408c741f4411.my.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![ပုံဖန်တီးမှုအက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/my/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs တွေဟာ စာသားဖန်တီးမှုထက်ပိုပြီး အသုံးဝင်ပါတယ်။ စာသားဖော်ပြချက်တွေကနေ ပုံတွေကိုလည်း ဖန်တီးနိုင်ပါတယ်။ ပုံတွေကို modality အနေနဲ့ အသုံးပြုခြင်းဟာ MedTech, အိမ်ဆောက်လုပ်ရေး, ခရီးသွားလုပ်ငန်း, ဂိမ်းဖွံ့ဖြိုးရေးနဲ့ အခြားသော နေရာများစွာမှာ အလွန်အသုံးဝင်ပါတယ်။ ဒီအခန်းမှာတော့ DALL-E နဲ့ Midjourney ဆိုတဲ့ ပုံဖန်တီးမှုမော်ဒယ်တွေကို လေ့လာကြမယ်။
 
@@ -43,7 +43,7 @@ LLMs တွေဟာ စာသားဖန်တီးမှုထက်ပိ�
 
 ဥပမာအားဖြင့် Edu4All ရဲ့ ကျောင်းသားတွေဟာ အတန်းထဲမှာ အထိမ်းအမှတ်တွေကို လေ့လာနေကြတယ်ဆိုရင် -
 
-![Edu4All စတတ်အပ်၊ အထိမ်းအမှတ်အတန်း၊ Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5a.my.png)
+![Edu4All စတတ်အပ်၊ အထိမ်းအမှတ်အတန်း၊ Eiffel Tower](../../../translated_images/my/startup.94d6b79cc4bb3f5a.png)
 
 ဒီလို prompt တစ်ခုကို အသုံးပြုနိုင်ပါတယ် -
 
@@ -272,9 +272,9 @@ GPT Image ကို အသုံးပြုတဲ့ ဥပမာကတော�
   အခြေခံပုံဟာ lounge နဲ့ pool ကိုသာ ပါဝင်မှာဖြစ်ပြီး နောက်ဆုံးပုံမှာ flamingo ပါဝင်မှာဖြစ်ပါတယ် -
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.my.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.my.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.my.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/my/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/my/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/my/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **အမျိုးမျိုးသောပုံတွေ ဖန်တီးခြင်း**။ အဓိကအကြောင်းအရာက ရှိပြီးသားပုံတစ်ပုံကို ယူပြီး အမျိုးမျိုးသော variation တွေကို ဖန်တီးဖို့ တောင်းဆိုတာဖြစ်ပါတယ်။ variation တစ်ခုကို ဖန်တီးဖို့ ပုံတစ်ပုံနဲ့ စာသား prompt တစ်ခုကို ပေးပြီး အောက်ပါ code ကို အသုံးပြုနိုင်ပါတယ် -
@@ -298,11 +298,11 @@ Temperature ဘယ်လိုအလုပ်လုပ်လဲဆိုတာ�
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.my.png)
+![Bunny on a horse holding a lollipop, version 1](../../../translated_images/my/v1-generated-image.a295cfcffa3c13c2.png)
 
 အဲဒီ prompt ကို ထပ်ပြီး run လုပ်ကြည့်ရင် ပုံတစ်ပုံတည်းကို မရနိုင်ဘဲ -
 
-![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61d.my.png)
+![Generated image of bunny on horse](../../../translated_images/my/v2-generated-image.33f55a3714efe61d.png)
 
 သင်မြ
 ```python

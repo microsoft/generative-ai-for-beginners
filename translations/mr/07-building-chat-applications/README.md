@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जनरेटिव AI-सक्षम चॅट अनुप्रयोग तयार करणे
 
-[![जनरेटिव AI-सक्षम चॅट अनुप्रयोग तयार करणे](../../../translated_images/07-lesson-banner.a279b937f2843833.mr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![जनरेटिव AI-सक्षम चॅट अनुप्रयोग तयार करणे](../../../translated_images/mr/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(वरील प्रतिमेवर क्लिक करून या धड्याचा व्हिडिओ पहा)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 वैयक्तिकरणाचा एक उदाहरण म्हणजे OpenAI च्या ChatGPT मधील "कस्टम निर्देश" सेटिंग्ज. हे तुम्हाला तुमच्याबद्दल माहिती प्रदान करण्याची परवानगी देते जी तुमच्या प्रॉम्प्टसाठी महत्त्वाचा संदर्भ असू शकतो. कस्टम निर्देशाचे एक उदाहरण येथे आहे.
 
-![ChatGPT मधील कस्टम निर्देश सेटिंग्ज](../../../translated_images/custom-instructions.b96f59aa69356fcf.mr.png)
+![ChatGPT मधील कस्टम निर्देश सेटिंग्ज](../../../translated_images/mr/custom-instructions.b96f59aa69356fcf.png)
 
 हे "प्रोफाइल" ChatGPT ला लिंक्ड लिस्ट्सवर धडा योजना तयार करण्यास प्रवृत्त करते. लक्षात घ्या की ChatGPT वापरकर्त्याच्या अनुभवावर आधारित अधिक सखोल धडा योजना तयार करू इच्छित आहे.
 
-![लिंक्ड लिस्ट्सबद्दल धडा योजनेसाठी ChatGPT मध्ये एक प्रॉम्प्ट](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.mr.png)
+![लिंक्ड लिस्ट्सबद्दल धडा योजनेसाठी ChatGPT मध्ये एक प्रॉम्प्ट](../../../translated_images/mr/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### मोठ्या भाषा मॉडेल्ससाठी Microsoft चा सिस्टम मेसेज फ्रेमवर्क
 

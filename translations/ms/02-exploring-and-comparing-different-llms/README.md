@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Meneroka dan Membandingkan LLM yang Berbeza
 
-[![Meneroka dan Membandingkan LLM yang Berbeza](../../../translated_images/02-lesson-banner.ef94c84979f97f60.ms.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Meneroka dan Membandingkan LLM yang Berbeza](../../../translated_images/ms/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klik imej di atas untuk menonton video pelajaran ini_
 
@@ -59,14 +59,14 @@ Istilah Model Asas telah [dicipta oleh penyelidik Stanford](https://arxiv.org/ab
 - **Model yang sangat besar**, berdasarkan rangkaian neural yang sangat mendalam yang dilatih pada berbilion parameter.
 - **Biasanya bertujuan untuk berfungsi sebagai 'asas' untuk model lain**, bermaksud ia boleh digunakan sebagai titik permulaan untuk membina model lain di atasnya, yang boleh dilakukan dengan penyesuaian.
 
-![Model Asas berbanding LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.ms.png)
+![Model Asas berbanding LLM](../../../translated_images/ms/FoundationModel.e4859dbb7a825c94.png)
 
 Sumber imej: [Essential Guide to Foundation Models and Large Language Models | oleh Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Untuk menjelaskan lagi perbezaan ini, mari kita ambil ChatGPT sebagai contoh. Untuk membina versi pertama ChatGPT, model yang dipanggil GPT-3.5 berfungsi sebagai model asas. Ini bermaksud OpenAI menggunakan beberapa data khusus chat untuk mencipta versi GPT-3.5 yang disesuaikan dan khusus untuk berprestasi baik dalam senario perbualan, seperti chatbot.
 
-![Model Asas](../../../translated_images/Multimodal.2c389c6439e0fc51.ms.png)
+![Model Asas](../../../translated_images/ms/Multimodal.2c389c6439e0fc51.png)
 
 Sumber imej: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM juga boleh dikategorikan berdasarkan output yang dihasilkannya.
 
 Embedding adalah satu set model yang boleh menukar teks kepada bentuk berangka, yang dipanggil embedding, iaitu representasi berangka teks input. Embedding memudahkan mesin memahami hubungan antara perkataan atau ayat dan boleh digunakan sebagai input oleh model lain, seperti model klasifikasi, atau model pengelompokan yang mempunyai prestasi lebih baik pada data berangka. Model embedding sering digunakan untuk pembelajaran pemindahan, di mana model dibina untuk tugas pengganti yang mempunyai banyak data, dan kemudian berat model (embedding) digunakan semula untuk tugas hiliran lain. Contoh kategori ini adalah [Embedding OpenAI](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.ms.png)
+![Embedding](../../../translated_images/ms/Embedding.c3708fe988ccf760.png)
 
 Model penjanaan imej adalah model yang menghasilkan imej. Model ini sering digunakan untuk penyuntingan imej, sintesis imej, dan terjemahan imej. Model penjanaan imej sering dilatih pada set data imej yang besar, seperti [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), dan boleh digunakan untuk menghasilkan imej baru atau menyunting imej sedia ada dengan teknik inpainting, super-resolution, dan pewarnaan. Contoh termasuk [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) dan [Model Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Penjanaan Imej](../../../translated_images/Image.349c080266a763fd.ms.png)
+![Penjanaan Imej](../../../translated_images/ms/Image.349c080266a763fd.png)
 
 Model penjanaan teks dan kod adalah model yang menghasilkan teks atau kod. Model ini sering digunakan untuk ringkasan teks, terjemahan, dan menjawab soalan. Model penjanaan teks sering dilatih pada set data teks yang besar, seperti [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), dan boleh digunakan untuk menghasilkan teks baru, atau menjawab soalan. Model penjanaan kod, seperti [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), sering dilatih pada set data kod yang besar, seperti GitHub, dan boleh digunakan untuk menghasilkan kod baru, atau membetulkan bug dalam kod sedia ada.
 
-![Penjanaan Teks dan Kod](../../../translated_images/Text.a8c0cf139e5cc2a0.ms.png)
+![Penjanaan Teks dan Kod](../../../translated_images/ms/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder berbanding Decoder-only
 
@@ -123,23 +123,23 @@ Kebanyakan model yang kami sebutkan dalam perenggan sebelumnya (model OpenAI, mo
 
 - Mencari Model Asas yang diminati dalam katalog - sama ada model proprietari atau sumber terbuka, dengan menapis mengikut tugas, lesen, atau nama. Untuk meningkatkan kebolehcarian, model-model ini diatur dalam koleksi seperti koleksi Azure OpenAI, koleksi Hugging Face, dan lain-lain.
 
-![Katalog Model](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.ms.png)
+![Katalog Model](../../../translated_images/ms/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Menyemak kad model, termasuk penerangan terperinci tentang penggunaan yang dimaksudkan dan data latihan, sampel kod, dan hasil penilaian dalam perpustakaan penilaian dalaman.
 
-![Kad Model](../../../translated_images/ModelCard.598051692c6e400d.ms.png)
+![Kad Model](../../../translated_images/ms/ModelCard.598051692c6e400d.png)
 
 - Membandingkan penanda aras antara model dan dataset yang tersedia dalam industri untuk menilai mana yang memenuhi senario perniagaan, melalui panel [Penanda Aras Model](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Penanda Aras Model](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.ms.png)
+![Penanda Aras Model](../../../translated_images/ms/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Menyesuaikan model dengan data latihan tersuai untuk meningkatkan prestasi model dalam beban kerja tertentu, dengan memanfaatkan keupayaan eksperimen dan penjejakan Azure AI Studio.
 
-![Penyesuaian Model](../../../translated_images/FineTuning.aac48f07142e36fd.ms.png)
+![Penyesuaian Model](../../../translated_images/ms/FineTuning.aac48f07142e36fd.png)
 
 - Melancarkan model pra-latihan asal atau versi yang telah disesuaikan untuk inferens masa nyata jauh - pengkomputeran terurus - atau titik akhir API tanpa pelayan - [bayar mengikut penggunaan](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - untuk membolehkan aplikasi menggunakannya.
 
-![Pelancaran Model](../../../translated_images/ModelDeploy.890da48cbd0bccdb.ms.png)
+![Pelancaran Model](../../../translated_images/ms/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Tidak semua model dalam katalog kini tersedia untuk penyesuaian dan/atau pelancaran bayar mengikut penggunaan. Semak kad model untuk butiran tentang keupayaan dan batasan model.
@@ -158,7 +158,7 @@ Terdapat beberapa pendekatan yang boleh digunakan oleh perniagaan untuk mendapat
 
 - **Model yang disesuaikan**. Di sini, anda melatih model lebih lanjut dengan data anda sendiri yang menjadikan model lebih tepat dan responsif kepada keperluan anda tetapi mungkin mahal.
 
-![Pelancaran LLMs](../../../translated_images/Deploy.18b2d27412ec8c02.ms.png)
+![Pelancaran LLMs](../../../translated_images/ms/Deploy.18b2d27412ec8c02.png)
 
 Sumber gambar: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

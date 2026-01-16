@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Projektowanie UX dla aplikacji AI
 
-[![Projektowanie UX dla aplikacji AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.pl.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Projektowanie UX dla aplikacji AI](../../../translated_images/pl/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
 
@@ -58,7 +58,7 @@ Bycie dostępnym oznacza rozszerzenie doświadczenia użytkownika na osoby o ró
 
 Bycie przyjemnym oznacza, że korzystanie z aplikacji sprawia radość. Atrakcyjne doświadczenie użytkownika może mieć pozytywny wpływ na użytkownika, zachęcając go do powrotu do aplikacji i zwiększając przychody firmy.
 
-![obraz ilustrujący rozważania dotyczące UX w AI](../../../translated_images/uxinai.d5b4ed690f5cefff.pl.png)
+![obraz ilustrujący rozważania dotyczące UX w AI](../../../translated_images/pl/uxinai.d5b4ed690f5cefff.png)
 
 Nie każde wyzwanie można rozwiązać za pomocą AI. AI wspiera doświadczenie użytkownika, czy to poprzez automatyzację ręcznych zadań, czy personalizację doświadczeń użytkownika.
 
@@ -72,25 +72,25 @@ Dwa sposoby na zapewnienie, że zaufanie jest w centrum projektowania, to wyjaś
 
 Kiedy AI pomaga w podejmowaniu decyzji, takich jak przekazywanie wiedzy przyszłym pokoleniom, kluczowe jest, aby nauczyciele i rodzice rozumieli, jak podejmowane są decyzje przez AI. To właśnie jest wyjaśnialność - zrozumienie, jak aplikacje AI podejmują decyzje. Projektowanie z myślą o wyjaśnialności obejmuje dodawanie szczegółów, które podkreślają, jak AI doszło do danego wyniku. Odbiorcy muszą być świadomi, że wynik został wygenerowany przez AI, a nie przez człowieka. Na przykład, zamiast mówić "Rozpocznij rozmowę ze swoim nauczycielem teraz", można powiedzieć "Skorzystaj z nauczyciela AI, który dostosowuje się do Twoich potrzeb i pomaga Ci uczyć się w Twoim tempie."
 
-![strona główna aplikacji z wyraźnym wskazaniem wyjaśnialności w aplikacjach AI](../../../translated_images/explanability-in-ai.134426a96b498fbf.pl.png)
+![strona główna aplikacji z wyraźnym wskazaniem wyjaśnialności w aplikacjach AI](../../../translated_images/pl/explanability-in-ai.134426a96b498fbf.png)
 
 Innym przykładem jest sposób, w jaki AI wykorzystuje dane użytkownika i dane osobowe. Na przykład użytkownik z rolą ucznia może mieć ograniczenia wynikające z jego roli. AI może nie być w stanie ujawnić odpowiedzi na pytania, ale może pomóc użytkownikowi w przemyśleniu, jak rozwiązać problem.
 
-![AI odpowiadające na pytania na podstawie roli użytkownika](../../../translated_images/solving-questions.b7dea1604de0cbd2.pl.png)
+![AI odpowiadające na pytania na podstawie roli użytkownika](../../../translated_images/pl/solving-questions.b7dea1604de0cbd2.png)
 
 Ostatnim kluczowym elementem wyjaśnialności jest uproszczenie wyjaśnień. Uczniowie i nauczyciele mogą nie być ekspertami w dziedzinie AI, dlatego wyjaśnienia dotyczące tego, co aplikacja może lub nie może zrobić, powinny być uproszczone i łatwe do zrozumienia.
 
-![uproszczone wyjaśnienia dotyczące możliwości AI](../../../translated_images/simplified-explanations.4679508a406c3621.pl.png)
+![uproszczone wyjaśnienia dotyczące możliwości AI](../../../translated_images/pl/simplified-explanations.4679508a406c3621.png)
 
 ### Kontrola
 
 Generatywna AI tworzy współpracę między AI a użytkownikiem, gdzie na przykład użytkownik może modyfikować polecenia, aby uzyskać różne wyniki. Dodatkowo, po wygenerowaniu wyniku, użytkownicy powinni mieć możliwość jego modyfikacji, co daje im poczucie kontroli. Na przykład, korzystając z Bing, możesz dostosować swoje polecenie na podstawie formatu, tonu i długości. Dodatkowo możesz wprowadzać zmiany w wyniku i modyfikować go, jak pokazano poniżej:
 
-![Wyniki wyszukiwania Bing z opcjami modyfikacji polecenia i wyniku](../../../translated_images/bing1.293ae8527dbe2789.pl.png)
+![Wyniki wyszukiwania Bing z opcjami modyfikacji polecenia i wyniku](../../../translated_images/pl/bing1.293ae8527dbe2789.png)
 
 Inną funkcją w Bing, która pozwala użytkownikowi kontrolować aplikację, jest możliwość włączenia i wyłączenia danych, które AI wykorzystuje. W przypadku aplikacji szkolnej uczeń może chcieć korzystać zarówno ze swoich notatek, jak i zasobów nauczyciela jako materiałów do powtórek.
 
-![Wyniki wyszukiwania Bing z opcjami modyfikacji polecenia i wyniku](../../../translated_images/bing2.309f4845528a88c2.pl.png)
+![Wyniki wyszukiwania Bing z opcjami modyfikacji polecenia i wyniku](../../../translated_images/pl/bing2.309f4845528a88c2.png)
 
 > Podczas projektowania aplikacji AI kluczowe jest celowe działanie, aby użytkownicy nie nadmiernie ufali, stawiając nierealistyczne oczekiwania wobec jej możliwości. Jednym ze sposobów na to jest tworzenie pewnego rodzaju "tarcia" między poleceniami a wynikami. Przypominanie użytkownikowi, że to jest AI, a nie inny człowiek.
 
@@ -102,7 +102,7 @@ Aplikacje AI powinny być zaprojektowane tak, aby mogły przyjmować i udzielać
 
 Innym sposobem radzenia sobie z tym jest jasne komunikowanie możliwości i ograniczeń systemu. Gdy użytkownik popełni błąd, prosząc o coś, co wykracza poza możliwości AI, powinien istnieć sposób na rozwiązanie tego problemu, jak pokazano poniżej.
 
-![Udzielanie informacji zwrotnej i radzenie sobie z błędami](../../../translated_images/feedback-loops.7955c134429a9466.pl.png)
+![Udzielanie informacji zwrotnej i radzenie sobie z błędami](../../../translated_images/pl/feedback-loops.7955c134429a9466.png)
 
 Błędy systemowe są częste w aplikacjach, gdzie użytkownik może potrzebować pomocy w uzyskaniu informacji wykraczających poza zakres AI lub aplikacja może mieć ograniczenia dotyczące liczby pytań/tematów, które użytkownik może generować. Na przykład aplikacja AI przeszkolona na danych z ograniczonej liczby przedmiotów, na przykład historii i matematyki, może nie być w stanie odpowiedzieć na pytania dotyczące geografii. Aby temu zaradzić, system AI może odpowiedzieć: "Przepraszam, nasz produkt został przeszkolony na danych z następujących przedmiotów....., nie mogę odpowiedzieć na pytanie, które zadałeś."
 

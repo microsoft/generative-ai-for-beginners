@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ml"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.ml.png)
+![Generative AI For Beginners](../../translated_images/ml/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### ജെനറേറ്റീവ് AI അപ്ലിക്കേഷനുകൾ നിർമ്മിക്കാൻ തുടങ്ങുന്നതിനായി നിങ്ങൾ അറിയേണ്ടതൊക്കെ പഠിപ്പിക്കുന്ന 21 പാഠങ്ങൾ
 

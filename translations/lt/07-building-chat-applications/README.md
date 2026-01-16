@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatyviosios AI technologijos pagrindu sukurtų pokalbių programų kūrimas
 
-[![Generatyviosios AI technologijos pagrindu sukurtų pokalbių programų kūrimas](../../../translated_images/07-lesson-banner.a279b937f2843833.lt.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatyviosios AI technologijos pagrindu sukurtų pokalbių programų kūrimas](../../../translated_images/lt/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
@@ -96,11 +96,11 @@ Bendrieji UX principai taikomi pokalbių programoms, tačiau yra keletas papildo
 
 Vienas tokios personalizacijos pavyzdys yra „Custom instructions“ nustatymai OpenAI ChatGPT. Tai leidžia pateikti informaciją apie save, kuri gali būti svarbi kontekste jūsų užklausoms. Štai pavyzdys, kaip atrodo „Custom instructions“.
 
-![Custom Instructions Settings in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.lt.png)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/lt/custom-instructions.b96f59aa69356fcf.png)
 
 Šis „profilis“ skatina ChatGPT sukurti pamokos planą apie sąrašus. Pastebėkite, kad ChatGPT atsižvelgia į tai, kad vartotojas gali norėti išsamesnio pamokos plano, atsižvelgiant į jos patirtį.
 
-![Užklausa ChatGPT dėl pamokos plano apie sąrašus](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.lt.png)
+![Užklausa ChatGPT dėl pamokos plano apie sąrašus](../../../translated_images/lt/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsoft sistemos pranešimų struktūra dideliems kalbos modeliams
 

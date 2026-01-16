@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Basisprincipes van Prompt Engineering
 
-[![Basisprincipes van Prompt Engineering](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.nl.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Basisprincipes van Prompt Engineering](../../../translated_images/nl/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introductie
 Deze module behandelt essentiële concepten en technieken voor het maken van effectieve prompts in generatieve AI-modellen. De manier waarop je je prompt schrijft aan een LLM is van belang. Een zorgvuldig opgestelde prompt kan een betere kwaliteit van respons opleveren. Maar wat betekenen termen zoals _prompt_ en _prompt engineering_ precies? En hoe kan ik de prompt _input_ die ik naar de LLM stuur verbeteren? Dit zijn de vragen die we in dit hoofdstuk en het volgende proberen te beantwoorden.
@@ -53,7 +53,7 @@ De notebook bevat _startoefeningen_ - maar je wordt aangemoedigd om je eigen _Ma
 
 Wil je een overzicht krijgen van wat deze les behandelt voordat je erin duikt? Bekijk deze geïllustreerde gids, die je een idee geeft van de belangrijkste onderwerpen die worden behandeld en de belangrijkste inzichten om over na te denken bij elk onderwerp. De lesroutekaart neemt je mee van het begrijpen van de kernconcepten en uitdagingen tot het aanpakken ervan met relevante technieken en best practices voor prompt engineering. Merk op dat de sectie "Geavanceerde technieken" in deze gids verwijst naar inhoud die wordt behandeld in het _volgende_ hoofdstuk van dit curriculum.
 
-![Geïllustreerde gids voor Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.nl.png)
+![Geïllustreerde gids voor Prompt Engineering](../../../translated_images/nl/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
 
 ## Onze Startup
 
@@ -94,7 +94,7 @@ Een LLM ziet prompts als een _reeks van tokens_ waarbij verschillende modellen (
 
 Om een intuïtie te krijgen voor hoe tokenization werkt, kun je tools zoals de [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) proberen, zoals hieronder weergegeven. Kopieer je prompt erin - en zie hoe deze wordt omgezet in tokens, waarbij je let op hoe witruimtes en leestekens worden behandeld. Merk op dat dit voorbeeld een ouder LLM (GPT-3) toont - dus het proberen met een nieuwer model kan een ander resultaat opleveren.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.nl.png)
+![Tokenization](../../../translated_images/nl/04-tokenizer-example.e71f0a0f70356c5c.png)
 
 ### Concept: Foundation Models
 
@@ -104,7 +104,7 @@ Wil je zien hoe prompt-gebaseerde completie werkt? Voer de bovenstaande prompt i
 
 Maar wat als de gebruiker iets specifieks wilde zien dat aan bepaalde criteria of taakdoelen voldeed? Hier komen _instruction-tuned_ LLMs in beeld.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.nl.png)
+![Base LLM Chat Completion](../../../translated_images/nl/04-playground-chat-base.65b76fcfde0caa67.png)
 
 ### Concept: Instruction Tuned LLMs
 
@@ -118,7 +118,7 @@ Laten we het uitproberen - ga terug naar de bovenstaande prompt, maar verander n
 
 Zie je hoe het resultaat nu is afgestemd op het gewenste doel en formaat? Een docent kan deze respons nu direct gebruiken in zijn of haar presentatie voor die les.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.nl.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/nl/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
 
 ## Waarom hebben we Prompt Engineering nodig?
 
@@ -148,15 +148,15 @@ Wat gebeurt er als we deze prompt uitvoeren met verschillende LLM-providers?
 
 > **Reactie 1**: OpenAI Playground (GPT-35)
 
-![Reactie 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.nl.png)
+![Reactie 1](../../../translated_images/nl/04-fabrication-oai.5818c4e0b2a2678c.png)
 
 > **Reactie 2**: Azure OpenAI Playground (GPT-35)
 
-![Reactie 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.nl.png)
+![Reactie 2](../../../translated_images/nl/04-fabrication-aoai.b14268e9ecf25caf.png)
 
 > **Reactie 3**: Hugging Face Chat Playground (LLama-2)
 
-![Reactie 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.nl.png)
+![Reactie 3](../../../translated_images/nl/04-fabrication-huggingchat.faf82a0a51278956.png)
 
 Zoals verwacht produceert elk model (of modelversie) enigszins verschillende reacties dankzij stochastisch gedrag en variaties in modelcapaciteit. Bijvoorbeeld, het ene model richt zich op een publiek van groep 8, terwijl het andere uitgaat van een middelbare scholier. Maar alle drie de modellen genereerden reacties die een onwetende gebruiker zouden kunnen overtuigen dat de gebeurtenis echt was.
 

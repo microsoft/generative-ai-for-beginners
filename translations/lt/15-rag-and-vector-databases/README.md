@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Duomenų paieškos papildyta generacija (RAG) ir vektorinės duomenų bazės
 
-[![Duomenų paieškos papildyta generacija (RAG) ir vektorinės duomenų bazės](../../../translated_images/15-lesson-banner.ac49e59506175d4f.lt.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Duomenų paieškos papildyta generacija (RAG) ir vektorinės duomenų bazės](../../../translated_images/lt/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Pamokoje apie paieškos programas trumpai aptarėme, kaip integruoti savo duomenis į didelius kalbos modelius (LLM). Šioje pamokoje gilinsimės į duomenų pagrindimo jūsų LLM programoje koncepcijas, proceso mechaniką ir duomenų saugojimo metodus, įskaitant tiek įterpimus, tiek tekstą.
 
@@ -53,7 +53,7 @@ LLM pagrįstas pokalbių robotas apdoroja vartotojo užklausas, kad generuotų a
 
 ### Kaip veikia RAG (Duomenų paieškos papildyta generacija)
 
-![schema, rodanti, kaip veikia RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.lt.png)
+![schema, rodanti, kaip veikia RAG](../../../translated_images/lt/how-rag-works.f5d0ff63942bd3a6.png)
 
 Tarkime, norite paleisti pokalbių robotą, kuris kuria testus iš jūsų užrašų, jums reikės ryšio su žinių baze. Čia į pagalbą ateina RAG. RAG veikia taip:
 
@@ -65,7 +65,7 @@ Tarkime, norite paleisti pokalbių robotą, kuris kuria testus iš jūsų užra�
 
 - **Papildyta generacija:** LLM patobulina savo atsakymą remdamasis gautais duomenimis. Tai leidžia generuoti atsakymus ne tik remiantis iš anksto apmokytais duomenimis, bet ir atitinkama informacija iš pridėto konteksto. Gauti duomenys naudojami LLM atsakymams papildyti. Tada LLM pateikia atsakymą į vartotojo klausimą.
 
-![schema, rodanti RAG architektūrą](../../../translated_images/encoder-decode.f2658c25d0eadee2.lt.png)
+![schema, rodanti RAG architektūrą](../../../translated_images/lt/encoder-decode.f2658c25d0eadee2.png)
 
 RAG architektūra įgyvendinama naudojant transformatorius, susidedančius iš dviejų dalių: koduotojo ir dekoderio. Pavyzdžiui, kai vartotojas užduoda klausimą, įvestas tekstas yra „užkoduojamas“ į vektorius, kurie atspindi žodžių reikšmę, o vektoriai yra „dekoduojami“ į mūsų dokumentų indeksą ir generuoja naują tekstą pagal vartotojo užklausą. LLM naudoja tiek koduotojo, tiek dekoderio modelį, kad sugeneruotų atsakymą.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Kai duomenys suskaidyti, galime juos įterpti naudodami skirtingus įterpimo modelius. Kai kurie modeliai, kuriuos galite naudoti, yra: word2vec, ada-002 iš OpenAI, Azure Computer Vision ir daugelis kitų. Modelio pasirinkimas priklausys nuo naudojamų kalbų, koduojamo turinio tipo (tekstas/vaizdai/garso įrašai), įvesties dydžio, kurį jis gali užkoduoti, ir įterpimo išvesties ilgio.
 
 Pavyzdys, kaip tekstas įterpiamas naudojant OpenAI modelį `text-embedding-ada-002`:
-![katės žodžio įterpimas](../../../translated_images/cat.74cbd7946bc9ca38.lt.png)
+![katės žodžio įterpimas](../../../translated_images/lt/cat.74cbd7946bc9ca38.png)
 
 ## Paieška ir vektorinė paieška
 

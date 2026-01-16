@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "nl"
 }
 -->
-[![Integreren met functie-aanroepen](../../../translated_images/14-lesson-banner.066d74a31727ac12.nl.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integreren met functie-aanroepen](../../../translated_images/nl/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # De levenscyclus van generatieve AI-toepassingen
 
@@ -30,7 +30,7 @@ LLM's zijn een nieuw hulpmiddel in het arsenaal van Kunstmatige Intelligentie, z
 
 Hiervoor hebben we een nieuw paradigma nodig om dit hulpmiddel dynamisch aan te passen, met de juiste prikkels. We kunnen oudere AI-apps categoriseren als "ML Apps" en nieuwere AI-apps als "GenAI Apps" of gewoon "AI Apps", wat de gangbare technologie en technieken weerspiegelt die op dat moment werden gebruikt. Dit verschuift ons verhaal op meerdere manieren, bekijk de volgende vergelijking.
 
-![LLMOps vs. MLOps vergelijking](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.nl.png)
+![LLMOps vs. MLOps vergelijking](../../../translated_images/nl/01-llmops-shift.29bc933cb3bb0080.png)
 
 Merk op dat we bij LLMOps meer gericht zijn op de app-ontwikkelaars, waarbij integraties een belangrijk punt zijn, gebruikmakend van "Models-as-a-Service" en denken aan de volgende punten voor metrics.
 
@@ -44,7 +44,7 @@ Merk op dat we bij LLMOps meer gericht zijn op de app-ontwikkelaars, waarbij int
 
 Om eerst de levenscyclus en de aanpassingen te begrijpen, laten we de volgende infographic bekijken.
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645.nl.png)
+![LLMOps infographic](../../../translated_images/nl/02-llmops.70a942ead05a7645.png)
 
 Zoals u kunt zien, verschilt dit van de gebruikelijke levenscycli van MLOps. LLM's hebben veel nieuwe vereisten, zoals prompting, verschillende technieken om de kwaliteit te verbeteren (fine-tuning, RAG, meta-prompts), verschillende beoordeling en verantwoordelijkheid met verantwoorde AI, en tenslotte nieuwe evaluatiemetrics (kwaliteit, schade, eerlijkheid, kosten en latentie).
 
@@ -54,7 +54,7 @@ Merk op dat dit niet lineair is, maar geïntegreerde lussen, iteratief en met ee
 
 Hoe kunnen we die stappen verkennen? Laten we in detail bekijken hoe we een levenscyclus kunnen opbouwen.
 
-![LLMOps workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.nl.png)
+![LLMOps workflow](../../../translated_images/nl/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Dit kan er wat ingewikkeld uitzien, laten we ons eerst richten op de drie grote stappen.
 
@@ -74,11 +74,11 @@ Voor hulpmiddelen biedt Microsoft het [Azure AI Platform](https://azure.microsof
 
 Het [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) stelt u in staat om [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys) te gebruiken. AI Studio is een webportaal waarmee u modellen, voorbeelden en tools kunt verkennen. Het beheren van uw resources, UI-ontwikkelingsflows en SDK/CLI-opties voor code-first ontwikkeling.
 
-![Azure AI mogelijkheden](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.nl.png)
+![Azure AI mogelijkheden](../../../translated_images/nl/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI stelt u in staat meerdere resources te gebruiken om uw operaties, services, projecten, vectorzoekopdrachten en databasebehoeften te beheren.
 
-![LLMOps met Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.nl.png)
+![LLMOps met Azure AI](../../../translated_images/nl/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Bouw, van Proof-of-Concept (POC) tot grootschalige toepassingen met PromptFlow:
 
@@ -86,7 +86,7 @@ Bouw, van Proof-of-Concept (POC) tot grootschalige toepassingen met PromptFlow:
 - Test en verfijn uw apps voor kwalitatieve AI, eenvoudig.
 - Gebruik Azure AI Studio om te integreren en itereren met de cloud, pushen en implementeren voor snelle integratie.
 
-![LLMOps met PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.nl.png)
+![LLMOps met PromptFlow](../../../translated_images/nl/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Geweldig! Ga door met leren!
 

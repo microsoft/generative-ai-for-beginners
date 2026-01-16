@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-[![함수 호출과 통합하기](../../../translated_images/14-lesson-banner.066d74a31727ac12.ko.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![함수 호출과 통합하기](../../../translated_images/ko/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # 생성형 AI 애플리케이션 수명 주기
 
@@ -30,7 +30,7 @@ LLM은 인공지능 무기고의 새로운 도구로, 애플리케이션의 분�
 
 이에 따라 이 도구를 동적으로 적응시키고 올바른 인센티브를 부여하기 위한 새로운 패러다임이 필요합니다. 이전 AI 앱은 "ML 앱"으로, 최신 AI 앱은 "GenAI 앱" 또는 단순히 "AI 앱"으로 분류할 수 있으며, 이는 당시 주류 기술과 기법을 반영합니다. 이는 여러 면에서 우리의 내러티브를 변화시킵니다. 다음 비교를 살펴보세요.
 
-![LLMOps vs. MLOps 비교](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.ko.png)
+![LLMOps vs. MLOps 비교](../../../translated_images/ko/01-llmops-shift.29bc933cb3bb0080.png)
 
 LLMOps에서는 앱 개발자에 더 집중하며, 통합을 핵심 포인트로 사용하고, "서비스로서의 모델"을 활용하며 다음과 같은 지표를 고려합니다.
 
@@ -44,7 +44,7 @@ LLMOps에서는 앱 개발자에 더 집중하며, 통합을 핵심 포인트로
 
 먼저 수명 주기와 변경 사항을 이해하기 위해 다음 인포그래픽을 참고하세요.
 
-![LLMOps 인포그래픽](../../../translated_images/02-llmops.70a942ead05a7645.ko.png)
+![LLMOps 인포그래픽](../../../translated_images/ko/02-llmops.70a942ead05a7645.png)
 
 보시다시피, 이는 일반적인 MLOps 수명 주기와 다릅니다. LLM은 프롬프트, 품질 향상을 위한 다양한 기법(파인튜닝, RAG, 메타 프롬프트), 책임 있는 AI에 따른 평가 및 책임, 그리고 새로운 평가 지표(품질, 해악, 정직성, 비용, 지연 시간) 등 많은 새로운 요구사항이 있습니다.
 
@@ -54,7 +54,7 @@ LLMOps에서는 앱 개발자에 더 집중하며, 통합을 핵심 포인트로
 
 이 단계를 어떻게 탐색할 수 있을까요? 수명 주기를 구축하는 방법을 자세히 살펴봅시다.
 
-![LLMOps 워크플로우](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.ko.png)
+![LLMOps 워크플로우](../../../translated_images/ko/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 조금 복잡해 보일 수 있으니, 먼저 세 가지 큰 단계에 집중해 봅시다.
 
@@ -74,11 +74,11 @@ LLMOps에서는 앱 개발자에 더 집중하며, 통합을 핵심 포인트로
 
 [Azure AI 플랫폼](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys)은 [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)를 사용할 수 있게 합니다. AI Studio는 모델, 샘플, 도구를 탐색하고, 리소스를 관리하며, UI 개발 흐름과 코드 우선 개발을 위한 SDK/CLI 옵션을 제공하는 웹 포털입니다.
 
-![Azure AI 가능성](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.ko.png)
+![Azure AI 가능성](../../../translated_images/ko/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI는 여러 리소스를 사용하여 운영, 서비스, 프로젝트, 벡터 검색 및 데이터베이스 요구를 관리할 수 있게 합니다.
 
-![Azure AI와 함께하는 LLMOps](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.ko.png)
+![Azure AI와 함께하는 LLMOps](../../../translated_images/ko/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Proof-of-Concept(POC)부터 대규모 애플리케이션까지 PromptFlow로 구축하세요:
 
@@ -86,7 +86,7 @@ Proof-of-Concept(POC)부터 대규모 애플리케이션까지 PromptFlow로 구
 - 품질 높은 AI를 위해 앱을 테스트하고 파인튜닝
 - Azure AI Studio를 사용해 클라우드와 통합, 반복, 빠른 통합을 위한 푸시 및 배포
 
-![PromptFlow와 함께하는 LLMOps](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.ko.png)
+![PromptFlow와 함께하는 LLMOps](../../../translated_images/ko/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## 훌륭합니다! 학습을 계속하세요!
 

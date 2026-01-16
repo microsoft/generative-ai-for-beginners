@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "no"
 }
 -->
-[![Integrering med funksjonskalling](../../../translated_images/14-lesson-banner.066d74a31727ac12.no.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrering med funksjonskalling](../../../translated_images/no/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Livssyklusen for generative AI-applikasjoner
 
@@ -30,7 +30,7 @@ LLM-er er et nytt verktøy i kunstig intelligens-arsenalet, de er utrolig krafti
 
 Med dette trenger vi et nytt paradigme for å tilpasse dette verktøyet på en dynamisk måte, med riktige insentiver. Vi kan kategorisere eldre AI-apper som "ML-apper" og nyere AI-apper som "GenAI-apper" eller bare "AI-apper", som reflekterer den dominerende teknologien og teknikkene som brukes på den tiden. Dette endrer vår fortelling på flere måter, se på følgende sammenligning.
 
-![LLMOps vs. MLOps sammenligning](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.no.png)
+![LLMOps vs. MLOps sammenligning](../../../translated_images/no/01-llmops-shift.29bc933cb3bb0080.png)
 
 Legg merke til at i LLMOps er vi mer fokusert på apputviklerne, bruker integrasjoner som et nøkkelpunkt, bruker "Modeller-som-en-tjeneste" og tenker på følgende punkter for metrikker.
 
@@ -44,7 +44,7 @@ Legg merke til at i LLMOps er vi mer fokusert på apputviklerne, bruker integras
 
 Først, for å forstå livssyklusen og endringene, la oss merke oss neste infografikk.
 
-![LLMOps infografikk](../../../translated_images/02-llmops.70a942ead05a7645.no.png)
+![LLMOps infografikk](../../../translated_images/no/02-llmops.70a942ead05a7645.png)
 
 Som du kan merke, er dette annerledes enn de vanlige livssyklusene fra MLOps. LLM-er har mange nye krav, som prompting, forskjellige teknikker for å forbedre kvalitet (finjustering, RAG, meta-prompter), forskjellig vurdering og ansvar med ansvarlig AI, til slutt nye evalueringsmetrikker (kvalitet, skade, ærlighet, kostnad og forsinkelse).
 
@@ -54,7 +54,7 @@ Merk at dette ikke er lineært, men integrerte løkker, iterative og med en over
 
 Hvordan kan vi utforske disse trinnene? La oss gå i detalj på hvordan vi kan bygge en livssyklus.
 
-![LLMOps arbeidsflyt](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.no.png)
+![LLMOps arbeidsflyt](../../../translated_images/no/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Dette kan se litt komplisert ut, la oss fokusere på de tre store trinnene først.
 
@@ -74,11 +74,11 @@ For verktøy tilbyr Microsoft [Azure AI Platform](https://azure.microsoft.com/so
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) lar deg bruke [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio er en nettportal som lar deg utforske modeller, eksempler og verktøy. Administrere ressursene dine, UI-utviklingsflyter og SDK/CLI-alternativer for kode-først utvikling.
 
-![Muligheter med Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.no.png)
+![Muligheter med Azure AI](../../../translated_images/no/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI lar deg bruke flere ressurser for å administrere operasjoner, tjenester, prosjekter, vektorsøk og databasebehov.
 
-![LLMOps med Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.no.png)
+![LLMOps med Azure AI](../../../translated_images/no/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Bygg, fra Proof-of-Concept (POC) til storskala applikasjoner med PromptFlow:
 
@@ -86,7 +86,7 @@ Bygg, fra Proof-of-Concept (POC) til storskala applikasjoner med PromptFlow:
 - Test og finjuster appene dine for kvalitets-AI, enkelt.
 - Bruk Azure AI Studio for å integrere og iterere med skyen, push og distribuer for rask integrasjon.
 
-![LLMOps med PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.no.png)
+![LLMOps med PromptFlow](../../../translated_images/no/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Flott! Fortsett læringen din!
 
