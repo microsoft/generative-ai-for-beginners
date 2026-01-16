@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Erstellung von Anwendungen zur Textgenerierung
 
-[![Erstellung von Anwendungen zur Textgenerierung](../../../translated_images/06-lesson-banner.a5c629f990a636c8.de.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Erstellung von Anwendungen zur Textgenerierung](../../../translated_images/de/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "it"
 }
 -->
-[![Integrazione con chiamata di funzione](../../../translated_images/14-lesson-banner.066d74a31727ac12.it.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrazione con chiamata di funzione](../../../translated_images/it/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Il Ciclo di Vita delle Applicazioni di AI Generativa
 
@@ -30,7 +30,7 @@ Gli LLM sono un nuovo strumento nell'arsenale dell'Intelligenza Artificiale, son
 
 Con questo, abbiamo bisogno di un nuovo Paradigma per adattare questo strumento in modo dinamico, con gli incentivi corretti. Possiamo categorizzare le vecchie app AI come "App ML" e le nuove app AI come "App GenAI" o semplicemente "App AI", riflettendo la tecnologia e le tecniche mainstream usate al momento. Questo cambia la nostra narrazione in diversi modi, guarda il confronto seguente.
 
-![Confronto LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.it.png)
+![Confronto LLMOps vs. MLOps](../../../translated_images/it/01-llmops-shift.29bc933cb3bb0080.png)
 
 Nota che in LLMOps, ci concentriamo maggiormente sugli Sviluppatori di App, usando le integrazioni come punto chiave, utilizzando "Modelli come Servizio" e pensando ai seguenti punti per le metriche.
 
@@ -44,7 +44,7 @@ Nota che in LLMOps, ci concentriamo maggiormente sugli Sviluppatori di App, usan
 
 Per prima cosa, per comprendere il ciclo di vita e le modifiche, osserviamo l'infografica seguente.
 
-![Infografica LLMOps](../../../translated_images/02-llmops.70a942ead05a7645.it.png)
+![Infografica LLMOps](../../../translated_images/it/02-llmops.70a942ead05a7645.png)
 
 Come puoi notare, questo è diverso dai soliti cicli di vita di MLOps. Gli LLM hanno molti nuovi requisiti, come il Prompting, diverse tecniche per migliorare la qualità (Fine-Tuning, RAG, Meta-Prompts), diverse valutazioni e responsabilità con l'AI responsabile, infine, nuove metriche di valutazione (Qualità, Danno, Onestà, Costo e Latenza).
 
@@ -54,7 +54,7 @@ Nota che questo non è lineare, ma cicli integrati, iterativi e con un ciclo gen
 
 Come potremmo esplorare questi passaggi? Entriamo nel dettaglio di come potremmo costruire un ciclo di vita.
 
-![Flusso di lavoro LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.it.png)
+![Flusso di lavoro LLMOps](../../../translated_images/it/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Questo può sembrare un po' complicato, concentriamoci prima sui tre grandi passaggi.
 
@@ -74,11 +74,11 @@ Per gli strumenti, Microsoft fornisce la [Azure AI Platform](https://azure.micro
 
 La [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), ti permette di usare [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio è un portale web che ti permette di esplorare modelli, esempi e strumenti. Gestire le tue risorse, flussi di sviluppo UI e opzioni SDK/CLI per uno sviluppo Code-First.
 
-![Possibilità di Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.it.png)
+![Possibilità di Azure AI](../../../translated_images/it/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI ti permette di usare molteplici risorse, per gestire le tue operazioni, servizi, progetti, ricerca vettoriale e necessità di database.
 
-![LLMOps con Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.it.png)
+![LLMOps con Azure AI](../../../translated_images/it/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Costruisci, dal Proof-of-Concept (POC) fino ad applicazioni su larga scala con PromptFlow:
 
@@ -86,7 +86,7 @@ Costruisci, dal Proof-of-Concept (POC) fino ad applicazioni su larga scala con P
 - Testa e affina le tue app per un'AI di qualità, con facilità.
 - Usa Azure AI Studio per integrare e iterare con il cloud, Push e Deploy per un'integrazione rapida.
 
-![LLMOps con PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.it.png)
+![LLMOps con PromptFlow](../../../translated_images/it/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Ottimo! Continua il tuo apprendimento!
 

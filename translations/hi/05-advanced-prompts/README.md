@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # उन्नत प्रॉम्प्ट्स बनाना
 
-[![उन्नत प्रॉम्प्ट्स बनाना](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.hi.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![उन्नत प्रॉम्प्ट्स बनाना](../../../translated_images/hi/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 पिछले अध्याय से कुछ सीखों को दोहराते हैं:
 

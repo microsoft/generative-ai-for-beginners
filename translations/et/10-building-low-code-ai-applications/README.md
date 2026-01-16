@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Madal koodiga tehisintellekti rakenduste loomine
 
-[![Madal koodiga tehisintellekti rakenduste loomine](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.et.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Madal koodiga tehisintellekti rakenduste loomine](../../../translated_images/et/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klõpsake ülaloleval pildil, et vaadata selle õppetunni videot)_
 
@@ -92,17 +92,17 @@ Loote rakenduse Copilotiga Power Appsis, järgides alltoodud samme:
 
 1. Kasutage avalehel olevat tekstiala, et kirjeldada rakendust, mida soovite luua. Näiteks **_Soovin luua rakenduse õpilaste ülesannete jälgimiseks ja haldamiseks_**. Klõpsake nuppu **Saada**, et saata juhis AI Copilotile.
 
-![Kirjeldage rakendust, mida soovite luua](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.et.png)
+![Kirjeldage rakendust, mida soovite luua](../../../translated_images/et/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. AI Copilot soovitab Dataverse'i tabelit koos vajalike väljadega, et salvestada andmeid, mida soovite jälgida, ja mõned näidisandmed. Seejärel saate tabelit kohandada vastavalt oma vajadustele, kasutades AI Copiloti assistendi funktsiooni vestluslike sammude kaudu.
 
    > **Oluline**: Dataverse on Power Platformi aluseks olev andmeplatvorm. See on madala koodiga andmeplatvorm rakenduse andmete salvestamiseks. See on täielikult hallatav teenus, mis salvestab andmeid turvaliselt Microsofti pilves ja on teie Power Platformi keskkonnas ette nähtud. Sellega kaasnevad sisseehitatud andmehalduse võimalused, nagu andmete klassifikatsioon, andmete päritolu, peeneteraline juurdepääsukontroll ja palju muud. Lisateavet Dataverse'i kohta leiate [siit](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Soovitatud väljad teie uues tabelis](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.et.png)
+   ![Soovitatud väljad teie uues tabelis](../../../translated_images/et/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. Õpetajad soovivad saata e-kirju õpilastele, kes on oma ülesanded esitanud, et hoida neid kursis nende ülesannete edenemisega. Saate kasutada Copilotit, et lisada tabelisse uus väli õpilaste e-posti aadressi salvestamiseks. Näiteks saate kasutada järgmist juhist, et lisada tabelisse uus väli: **_Soovin lisada veeru õpilaste e-posti aadressi salvestamiseks_**. Klõpsake nuppu **Saada**, et saata juhis AI Copilotile.
 
-![Uue välja lisamine](../../../translated_images/copilot-new-column.35e15ff21acaf274.et.png)
+![Uue välja lisamine](../../../translated_images/et/copilot-new-column.35e15ff21acaf274.png)
 
 1. AI Copilot genereerib uue välja ja seejärel saate välja oma vajadustele vastavaks kohandada.
 
@@ -112,7 +112,7 @@ Loote rakenduse Copilotiga Power Appsis, järgides alltoodud samme:
 
 1. Selleks, et õpetajad saaksid õpilastele e-kirju saata, saate kasutada Copilotit, et lisada rakendusele uus ekraan. Näiteks saate kasutada järgmist juhist, et lisada rakendusele uus ekraan: **_Soovin lisada ekraani õpilastele e-kirjade saatmiseks_**. Klõpsake nuppu **Saada**, et saata juhis AI Copilotile.
 
-![Uue ekraani lisamine juhise kaudu](../../../translated_images/copilot-new-screen.2e0bef7132a17392.et.png)
+![Uue ekraani lisamine juhise kaudu](../../../translated_images/et/copilot-new-screen.2e0bef7132a17392.png)
 
 1. AI Copilot genereerib uue ekraani ja seejärel saate ekraani oma vajadustele vastavaks kohandada.
 
@@ -147,15 +147,15 @@ Tabeli loomiseks Dataverse'is Copilot'i abil järgige alltoodud samme:
 
 2. Vasakpoolses navigeerimisribal valige **Tables** ja klõpsake **Describe the new Table**.
 
-![Vali uus tabel](../../../translated_images/describe-new-table.0792373eb757281e.et.png)
+![Vali uus tabel](../../../translated_images/et/describe-new-table.0792373eb757281e.png)
 
 3. **Describe the new Table** ekraanil kasutage tekstiala, et kirjeldada tabelit, mida soovite luua. Näiteks: **_Soovin luua tabeli arveandmete salvestamiseks_**. Klõpsake **Send** nuppu, et saata päring AI Copilot'ile.
 
-![Kirjelda tabelit](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.et.png)
+![Kirjelda tabelit](../../../translated_images/et/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 4. AI Copilot soovitab Dataverse'i tabelit koos vajalike väljadega, et salvestada andmeid, mida soovite jälgida, ja lisab näidisandmeid. Seejärel saate tabelit kohandada vastavalt oma vajadustele, kasutades AI Copilot'i abifunktsiooni vestluse kaudu.
 
-![Soovitatud Dataverse'i tabel](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.et.png)
+![Soovitatud Dataverse'i tabel](../../../translated_images/et/copilot-dataverse-table.b3bc936091324d9d.png)
 
 5. Finantsmeeskond soovib saata tarnijale e-kirja, et teavitada neid arve praegusest olekust. Saate kasutada Copilot'i, et lisada tabelisse uus väli tarnija e-posti salvestamiseks. Näiteks saate kasutada järgmist päringut, et lisada tabelisse uus väli: **_Soovin lisada veeru tarnija e-posti salvestamiseks_**. Klõpsake **Send** nuppu, et saata päring AI Copilot'ile.
 
@@ -184,7 +184,7 @@ Mõned eelvalmistatud AI mudelid, mis on saadaval Power Platformis, hõlmavad:
 
 Kohandatud AI mudelitega saate tuua oma mudeli AI Builderisse, et see toimiks nagu iga AI Builderi kohandatud mudel, võimaldades teil mudelit treenida oma andmetega. Neid mudeleid saab kasutada protsesside automatiseerimiseks ja tulemuste ennustamiseks nii Power Appsis kui ka Power Automates. Oma mudeli kasutamisel kehtivad teatud piirangud. Lisateavet nende [piirangute kohta](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI Builder mudelid](../../../translated_images/ai-builder-models.8069423b84cfc47f.et.png)
+![AI Builder mudelid](../../../translated_images/et/ai-builder-models.8069423b84cfc47f.png)
 
 ## Ülesanne #2 - Loo arve töötlemise voog meie idufirma jaoks
 
@@ -198,7 +198,7 @@ Töövoo loomiseks, mis aitab finantsmeeskonnal arveid töödelda, kasutades AI 
 
 2. Kasutage avalehel olevat tekstiala, et kirjeldada töövoogu, mida soovite luua. Näiteks: **_Töötle arvet, kui see saabub minu postkasti_**. Klõpsake **Send** nuppu, et saata päring AI Copilot'ile.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.et.png)
+   ![Copilot Power Automate](../../../translated_images/et/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. AI Copilot soovitab toiminguid, mida vajate ülesande automatiseerimiseks. Saate klõpsata **Next** nupul, et liikuda järgmistele sammudele.
 
@@ -212,7 +212,7 @@ Töövoo loomiseks, mis aitab finantsmeeskonnal arveid töödelda, kasutades AI 
 
 8. Eemaldage voost **Condition** toiming, kuna te ei kasuta seda. See peaks välja nägema nagu järgmine ekraanipilt:
 
-   ![Power Automate, eemalda toimingud](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.et.png)
+   ![Power Automate, eemalda toimingud](../../../translated_images/et/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. Klõpsake **Add an action** nuppu ja otsige **Dataverse**. Valige **Add a new row** toiming.
 
@@ -227,7 +227,7 @@ Töövoo loomiseks, mis aitab finantsmeeskonnal arveid töödelda, kasutades AI 
     - Olek - Määrake **Status** väärtuseks **Pending**.
     - Tarnija e-post - Kasutage **From** dünaamilist sisu **When a new email arrives** käivitajast.
 
-    ![Power Automate lisa rida](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.et.png)
+    ![Power Automate lisa rida](../../../translated_images/et/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. Kui olete vooga valmis, klõpsake **Save** nuppu, et voog salvestada. Seejärel saate voogu testida, saates e-kirja koos arvega kausta, mille määrasite käivitajas.
 
@@ -241,7 +241,7 @@ GPT mudelid läbivad ulatusliku treeningu suurel hulgal andmetel, mis võimaldab
 
 Näiteks saate luua vooge, mis genereerivad automaatselt teksti erinevateks kasutusjuhtudeks, nagu e-kirjade mustandid, tootekirjeldused ja palju muud. Samuti saate mudelit kasutada teksti genereerimiseks erinevates rakendustes, nagu vestlusrobotid ja klienditeenindusrakendused, mis võimaldavad klienditeenindajatel tõhusalt ja tulemuslikult klientide päringutele vastata.
 
-![Loo päring](../../../translated_images/create-prompt-gpt.69d429300c2e870a.et.png)
+![Loo päring](../../../translated_images/et/create-prompt-gpt.69d429300c2e870a.png)
 
 Et õppida, kuidas seda AI mudelit Power Automates kasutada, minge läbi [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) mooduli.
 

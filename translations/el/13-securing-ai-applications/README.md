@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ασφάλεια στις Εφαρμογές Γενετικής Τεχνητής Νοημοσύνης
 
-[![Ασφάλεια στις Εφαρμογές Γενετικής Τεχνητής Νοημοσύνης](../../../translated_images/13-lesson-banner.14103e36b4bbf173.el.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Ασφάλεια στις Εφαρμογές Γενετικής Τεχνητής Νοημοσύνης](../../../translated_images/el/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Εισαγωγή
 
@@ -107,7 +107,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Η πρακτική του AI red teaming έχει εξελιχθεί ώστε να αποκτήσει ένα πιο διευρυμένο νόημα: δεν καλύπτει μόνο την ανίχνευση ευπαθειών ασφαλείας, αλλά περιλαμβάνει επίσης την ανίχνευση άλλων αποτυχιών του συστήματος, όπως η δημιουργία δυνητικά επιβλαβούς περιεχομένου. Τα συστήματα AI φέρνουν νέους κινδύνους, και το red teaming είναι βασικό για την κατανόηση αυτών των νέων κινδύνων, όπως η έγχυση εντολών και η παραγωγή περιεχομένου χωρίς βάση. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Καθοδήγηση και πόροι για το red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.el.png)]()
+[![Καθοδήγηση και πόροι για το red teaming](../../../translated_images/el/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 Παρακάτω παρατίθενται βασικές πληροφορίες που έχουν διαμορφώσει το πρόγραμμα AI Red Team της Microsoft.
 

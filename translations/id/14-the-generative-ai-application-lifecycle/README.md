@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "id"
 }
 -->
-[![Integrasi dengan pemanggilan fungsi](../../../translated_images/14-lesson-banner.066d74a31727ac12.id.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrasi dengan pemanggilan fungsi](../../../translated_images/id/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Siklus Hidup Aplikasi AI Generatif
 
@@ -30,7 +30,7 @@ LLM adalah alat baru dalam arsenal Kecerdasan Buatan, mereka sangat kuat dalam t
 
 Dengan ini, kita membutuhkan Paradigma baru untuk mengadaptasi alat ini secara dinamis, dengan insentif yang tepat. Kita dapat mengkategorikan aplikasi AI lama sebagai "Aplikasi ML" dan aplikasi AI baru sebagai "Aplikasi GenAI" atau hanya "Aplikasi AI", mencerminkan teknologi dan teknik utama yang digunakan pada saat itu. Ini menggeser narasi kita dalam berbagai cara, lihat perbandingan berikut.
 
-![Perbandingan LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.id.png)
+![Perbandingan LLMOps vs. MLOps](../../../translated_images/id/01-llmops-shift.29bc933cb3bb0080.png)
 
 Perhatikan bahwa dalam LLMOps, kita lebih fokus pada Pengembang Aplikasi, menggunakan integrasi sebagai titik kunci, menggunakan "Model-sebagai-Layanan" dan memikirkan poin-poin berikut untuk metrik.
 
@@ -44,7 +44,7 @@ Perhatikan bahwa dalam LLMOps, kita lebih fokus pada Pengembang Aplikasi, menggu
 
 Pertama, untuk memahami siklus hidup dan modifikasinya, mari perhatikan infografis berikut.
 
-![Infografis LLMOps](../../../translated_images/02-llmops.70a942ead05a7645.id.png)
+![Infografis LLMOps](../../../translated_images/id/02-llmops.70a942ead05a7645.png)
 
 Seperti yang Anda lihat, ini berbeda dari Siklus Hidup biasa dari MLOps. LLM memiliki banyak kebutuhan baru, seperti Prompting, teknik berbeda untuk meningkatkan kualitas (Fine-Tuning, RAG, Meta-Prompts), penilaian dan tanggung jawab berbeda dengan AI yang bertanggung jawab, terakhir, metrik evaluasi baru (Kualitas, Bahaya, Kejujuran, Biaya, dan Latensi).
 
@@ -54,7 +54,7 @@ Perhatikan bahwa ini bukan linear, melainkan loop terintegrasi, iteratif dan den
 
 Bagaimana kita bisa mengeksplorasi langkah-langkah tersebut? Mari kita masuk ke detail bagaimana kita bisa membangun siklus hidup.
 
-![Alur Kerja LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.id.png)
+![Alur Kerja LLMOps](../../../translated_images/id/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Ini mungkin terlihat agak rumit, mari fokus pada tiga langkah besar terlebih dahulu.
 
@@ -74,11 +74,11 @@ Untuk alat, Microsoft menyediakan [Azure AI Platform](https://azure.microsoft.co
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), memungkinkan Anda menggunakan [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio adalah portal web yang memungkinkan Anda Menjelajahi model, contoh, dan alat. Mengelola sumber daya Anda, alur pengembangan UI dan opsi SDK/CLI untuk pengembangan Berbasis Kode.
 
-![Kemungkinan Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.id.png)
+![Kemungkinan Azure AI](../../../translated_images/id/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI, memungkinkan Anda menggunakan berbagai sumber daya, untuk mengelola operasi, layanan, proyek, pencarian vektor dan kebutuhan basis data Anda.
 
-![LLMOps dengan Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.id.png)
+![LLMOps dengan Azure AI](../../../translated_images/id/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Membangun, dari Proof-of-Concept(POC) hingga aplikasi skala besar dengan PromptFlow:
 
@@ -86,7 +86,7 @@ Membangun, dari Proof-of-Concept(POC) hingga aplikasi skala besar dengan PromptF
 - Menguji dan menyempurnakan aplikasi Anda untuk AI berkualitas, dengan mudah.
 - Gunakan Azure AI Studio untuk Mengintegrasikan dan Mengiterasi dengan cloud, Push dan Deploy untuk integrasi cepat.
 
-![LLMOps dengan PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.id.png)
+![LLMOps dengan PromptFlow](../../../translated_images/id/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Hebat! Lanjutkan Pembelajaran Anda!
 

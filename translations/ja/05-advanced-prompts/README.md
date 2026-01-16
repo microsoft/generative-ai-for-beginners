@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 高度なプロンプトの作成
 
-[![高度なプロンプトの作成](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.ja.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![高度なプロンプトの作成](../../../translated_images/ja/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 前の章で学んだ内容を振り返りましょう：
 

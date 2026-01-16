@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-[![مدل‌های متن‌باز](../../../translated_images/16-lesson-banner.6b56555e8404fda1.fa.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![مدل‌های متن‌باز](../../../translated_images/fa/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## مقدمه
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **هزینه** - هزینه به ازای هر توکن برای استفاده و استقرار این مدل‌ها کمتر از مدل‌های اختصاصی است. هنگام ساخت برنامه‌های هوش مصنوعی مولد، باید عملکرد در مقابل قیمت را هنگام کار با این مدل‌ها در مورد استفاده خود بررسی کنید.
 
-![هزینه مدل](../../../translated_images/model-price.3f5a3e4d32ae00b4.fa.png)  
+![هزینه مدل](../../../translated_images/fa/model-price.3f5a3e4d32ae00b4.png)  
 منبع: Artificial Analysis
 
 **انعطاف‌پذیری** - کار با مدل‌های متن‌باز به شما امکان می‌دهد در استفاده از مدل‌های مختلف یا ترکیب آن‌ها انعطاف‌پذیر باشید. نمونه‌ای از این مورد [دستیارهای HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) است که کاربر می‌تواند مدل مورد استفاده را مستقیماً در رابط کاربری انتخاب کند:
 
-![انتخاب مدل](../../../translated_images/choose-model.f095d15bbac92214.fa.png)
+![انتخاب مدل](../../../translated_images/fa/choose-model.f095d15bbac92214.png)
 
 ## بررسی مدل‌های متن‌باز مختلف
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 برای مقایسه مدل‌های زبان بزرگ در انواع مختلف، [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) منبع عالی دیگری است:
 
-![کیفیت مدل](../../../translated_images/model-quality.aaae1c22e00f7ee1.fa.png)  
+![کیفیت مدل](../../../translated_images/fa/model-quality.aaae1c22e00f7ee1.png)  
 منبع: Artificial Analysis
 
 اگر روی یک مورد استفاده خاص کار می‌کنید، جستجوی نسخه‌های تنظیم دقیق شده که بر همان حوزه تمرکز دارند می‌تواند مؤثر باشد. آزمایش با چند مدل متن‌باز برای دیدن عملکرد آن‌ها بر اساس انتظارات شما و کاربران‌تان نیز روش خوبی است.

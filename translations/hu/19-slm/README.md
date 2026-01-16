@@ -33,7 +33,7 @@ Az SLM-eket hatalmas mennyiségű szöveges adaton tanítják. A tanulás során
 
 Az SLM-ek fejlesztése összhangban áll azzal a növekvő igénnyel, hogy olyan modelleket hozzunk létre, amelyek erőforrás-korlátozott környezetekben, például mobil eszközökön vagy élő számítástechnikai platformokon is használhatók, ahol a teljes méretű LLM-ek túl erőforrás-igényesek lennének. Az SLM-ek az erőforrás-hatékonyságra fókuszálva egyensúlyt teremtenek a teljesítmény és az elérhetőség között, így szélesebb körben alkalmazhatók különböző területeken.
 
-![slm](../../../translated_images/slm.4058842744d0444a.hu.png)
+![slm](../../../translated_images/hu/slm.4058842744d0444a.png)
 
 ## Tanulási célok
 
@@ -135,7 +135,7 @@ A Phi-3/3.5 család modelljeit különböző szcenáriókban használhatjuk. Az 
 
 Szeretnénk a Phi-3/3.5-öt különböző szcenáriókban használni. Ezután különböző helyzetekben fogjuk alkalmazni a Phi-3/3.5-öt.
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.hu.png)
+![phi3](../../../translated_images/hu/phi3.655208c3186ae381.png)
 
 ### Inferálás különbsége a felhő API-jával
 

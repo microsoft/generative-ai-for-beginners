@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatív AI-alapú chatalkalmazások építése
 
-[![Generatív AI-alapú chatalkalmazások építése](../../../translated_images/07-lesson-banner.a279b937f2843833.hu.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatív AI-alapú chatalkalmazások építése](../../../translated_images/hu/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Kattints a fenti képre a leckéhez tartozó videó megtekintéséhez)_
 
@@ -96,11 +96,11 @@ A fenti példa a GPT-3.5 Turbo modellt használja a prompt teljesítéséhez, de
 
 Egy ilyen személyre szabási példa az OpenAI ChatGPT „Egyéni utasítások” beállítása. Ez lehetővé teszi, hogy megadjon magáról olyan információkat, amelyek fontos kontextust jelenthetnek a promptjaihoz. Íme egy példa egy egyéni utasításra.
 
-![Egyéni utasítások beállítása a ChatGPT-ben](../../../translated_images/custom-instructions.b96f59aa69356fcf.hu.png)
+![Egyéni utasítások beállítása a ChatGPT-ben](../../../translated_images/hu/custom-instructions.b96f59aa69356fcf.png)
 
 Ez a „profil” arra készteti a ChatGPT-t, hogy készítsen egy lecketervezetet a láncolt listákról. Figyeld meg, hogy a ChatGPT figyelembe veszi, hogy a felhasználó talán mélyebb lecketervezetet szeretne a tapasztalata alapján.
 
-![Egy prompt a ChatGPT-ben a láncolt listákról szóló lecketervezethez](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.hu.png)
+![Egy prompt a ChatGPT-ben a láncolt listákról szóló lecketervezethez](../../../translated_images/hu/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsoft rendszerüzenet-keretrendszere nagy nyelvi modellekhez
 

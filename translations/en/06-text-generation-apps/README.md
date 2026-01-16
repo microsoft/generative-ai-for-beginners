@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](../../../translated_images/06-lesson-banner.a5c629f990a636c8.en.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Building Text Generation Applications](../../../translated_images/en/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Click the image above to watch the video for this lesson)_
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Verantwortungsbewusster Einsatz von generativer KI
 
-[![Verantwortungsbewusster Einsatz von generativer KI](../../../translated_images/03-lesson-banner.1ed56067a452d977.de.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Verantwortungsbewusster Einsatz von generativer KI](../../../translated_images/de/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen_
 
@@ -85,7 +85,7 @@ Diese Arten von Ausgaben sind nicht nur schädlich für den Aufbau positiver Pro
 
 Nachdem wir die Bedeutung von verantwortungsvoller generativer KI identifiziert haben, schauen wir uns 4 Schritte an, die wir unternehmen können, um unsere KI-Lösungen verantwortungsvoll zu entwickeln:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.de.png)
+![Mitigate Cycle](../../../translated_images/de/mitigate-cycle.babcd5a5658e1775.png)
 
 ### Potenzielle Schäden messen
 
@@ -97,7 +97,7 @@ Da unser Startup ein Bildungsprodukt entwickelt, wäre es sinnvoll, eine Liste v
 
 Es ist nun an der Zeit, Wege zu finden, wie wir den potenziellen Schaden, der durch das Modell und seine Antworten verursacht wird, verhindern oder begrenzen können. Wir können dies in 4 verschiedenen Ebenen betrachten:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.de.png)
+![Mitigation Layers](../../../translated_images/de/mitigation-layers.377215120b9a1159.png)
 
 - **Modell**. Das richtige Modell für den richtigen Anwendungsfall auswählen. Größere und komplexere Modelle wie GPT-4 können ein höheres Risiko für schädliche Inhalte darstellen, wenn sie auf kleinere und spezifischere Anwendungsfälle angewendet werden. Die Verwendung Ihrer Trainingsdaten zur Feinabstimmung reduziert ebenfalls das Risiko schädlicher Inhalte.
 

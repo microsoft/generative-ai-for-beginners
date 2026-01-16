@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "el"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.el.png)
+![Generative AI For Beginners](../../translated_images/el/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 Μαθήματα που διδάσκουν όλα όσα χρειάζεστε για να ξεκινήσετε να δημιουργείτε εφαρμογές Γεννητικής Τεχνητής Νοημοσύνης
 

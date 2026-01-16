@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Building Image Generation Applications
 
-[![Building Image Generation Applications](../../../translated_images/09-lesson-banner.906e408c741f4411.en.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Building Image Generation Applications](../../../translated_images/en/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Large Language Models (LLMs) are not limited to text generation; they can also create images based on text descriptions. Image generation can be incredibly useful in various fields such as MedTech, architecture, tourism, game development, and more. In this chapter, we will explore two of the most popular image generation models: DALL-E and Midjourney.
 
@@ -42,7 +42,7 @@ In this lesson, we will continue working with our startup, Edu4All. Students wil
 
 For example, if Edu4All's students are working on a class project about monuments, they might generate images like this:
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5a.en.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/en/startup.94d6b79cc4bb3f5a.webp)
 
 Using a prompt such as:
 
@@ -268,9 +268,9 @@ Here’s an example using GPT Image:
   The base image might only show a lounge with a pool, but the final image could include a flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.en.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.en.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.en.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Creating variations**: You can take an existing image and generate variations of it. To do this, provide an image and a text prompt, and use code like this:
@@ -294,11 +294,11 @@ Let’s explore how temperature affects the output by running the same prompt tw
 
 > Prompt: "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.en.png)
+![Bunny on a horse holding a lollipop, version 1](../../../translated_images/en/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Now, let’s run the same prompt again to see how the images differ:
 
-![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61d.en.png)
+![Generated image of bunny on horse](../../../translated_images/en/v2-generated-image.33f55a3714efe61d.webp)
 
 As you can see, the images are similar but not identical. Now, let’s change the temperature value to 0.1 and observe the results:
 
@@ -325,8 +325,8 @@ generation_response = client.images.create(
 
 When you run this code, you will get these two images:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.en.png)
-- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.en.png)
+- ![Temperature 0, v1](../../../translated_images/en/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0, v2](../../../translated_images/en/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Notice how the images are much more similar to each other.
 

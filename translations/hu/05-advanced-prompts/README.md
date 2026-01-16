@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Haladó promptok létrehozása
 
-[![Haladó promptok létrehozása](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.hu.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Haladó promptok létrehozása](../../../translated_images/hu/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Ismételjük át az előző fejezet tanulságait:
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Building Generative AI-Powered Chat Applications
 
-[![Building Generative AI-Powered Chat Applications](../../../translated_images/07-lesson-banner.a279b937f2843833.en.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Building Generative AI-Powered Chat Applications](../../../translated_images/en/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Click the image above to view video of this lesson)_
 
@@ -96,11 +96,11 @@ General UX principles apply to chat applications, but there are additional consi
 
 An example of personalization is the "Custom instructions" feature in OpenAI's ChatGPT. It lets users provide information about themselves that may be relevant to their prompts. Here's an example of a custom instruction.
 
-![Custom Instructions Settings in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.en.png)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/en/custom-instructions.b96f59aa69356fcf.webp)
 
 This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice how ChatGPT considers the user's experience level to provide a more detailed lesson plan.
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.en.png)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/en/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft's System Message Framework for Large Language Models
 

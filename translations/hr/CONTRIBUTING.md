@@ -63,7 +63,7 @@ Da biste bili sigurni da vaši linkovi rade ispravno, jednostavno koristite VS c
 
 Na primjer, kada pređete mišem preko bilo kojeg linka u vašim datotekama, dobit ćete mogućnost da slijedite link pritiskom na **ctrl + klik**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.hr.png)
+![VS code follow links screenshot](../../translated_images/hr/vscode-follow-link.85520ab6a1237adc.png)
 
 Ako kliknete na link i on ne radi lokalno, sigurno će workflow prijaviti grešku i neće raditi ni na GitHubu.
 
@@ -71,7 +71,7 @@ Da biste riješili ovaj problem, pokušajte upisati link uz pomoć VS code-a.
 
 Kada upišete `./` ili `../`, VS code će vam ponuditi dostupne opcije prema onome što ste upisali.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.hr.png)
+![VS code select relative path screenshot](../../translated_images/hr/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Slijedite put klikom na željenu datoteku ili mapu i bit ćete sigurni da vaš put nije pokvaren.
 
@@ -88,7 +88,7 @@ Ako je dodan na vaše relativne putove, proći ćete ovu provjeru.
 
 Ako nije, možete dobiti sljedeću grešku.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.hr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/hr/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 Da biste riješili ovaj problem, otvorite datoteku koju je workflow označio i dodajte tracking ID na kraj relativnih putova.
 
@@ -105,7 +105,7 @@ Ako je dodan na vaše URL-ove, proći ćete ovu provjeru.
 
 Ako nije, možete dobiti sljedeću grešku.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.hr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/hr/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 Da biste riješili ovaj problem, otvorite datoteku koju je workflow označio i dodajte tracking ID na kraj URL-ova.
 
@@ -122,7 +122,7 @@ Ako nije prisutna u vašim URL-ovima, proći ćete ovu provjeru.
 
 Ako jest, možete dobiti sljedeću grešku.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.hr.png)
+![GitHub check country locale comment screenshot](../../translated_images/hr/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 Da biste riješili ovaj problem, otvorite datoteku koju je workflow označio i uklonite lokalizaciju zemlje iz URL-ova.
 

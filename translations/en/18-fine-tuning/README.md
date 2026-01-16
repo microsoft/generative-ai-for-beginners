@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "en"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.en.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/en/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fine-Tuning Your LLM
 
@@ -32,7 +32,7 @@ Ready? Let’s get started.
 
 Want to get an overview of what we’ll cover before diving in? Check out this illustrated guide that outlines the learning journey for this lesson—from understanding the core concepts and motivation for fine-tuning to learning the process and best practices for executing the fine-tuning task. This is an exciting topic to explore, so don’t forget to visit the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for additional links to support your self-guided learning journey!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.en.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/en/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## What is fine-tuning for language models?
 

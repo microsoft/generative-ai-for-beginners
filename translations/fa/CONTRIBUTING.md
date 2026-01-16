@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 برای مثال، وقتی روی هر لینکی در فایل‌های خود موس را نگه دارید، با فشار دادن **ctrl + click** به شما پیشنهاد دنبال کردن لینک داده می‌شود.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.fa.png)
+![VS code follow links screenshot](../../translated_images/fa/vscode-follow-link.85520ab6a1237adc.png)
 
 اگر روی لینکی کلیک کنید و در محیط محلی کار نکند، مطمئناً گردش‌کار فعال می‌شود و در GitHub نیز کار نخواهد کرد.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 وقتی `./` یا `../` را تایپ می‌کنید، VS code به شما گزینه‌هایی را بر اساس آنچه تایپ کرده‌اید پیشنهاد می‌دهد.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.fa.png)
+![VS code select relative path screenshot](../../translated_images/fa/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 با کلیک روی فایل یا پوشه مورد نظر مسیر را دنبال کنید و مطمئن خواهید شد که مسیر شما شکسته نیست.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.fa.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/fa/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و شناسه ردیابی را به انتهای مسیرهای نسبی اضافه کنید.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.fa.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/fa/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و شناسه ردیابی را به انتهای URLها اضافه کنید.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.fa.png)
+![GitHub check country locale comment screenshot](../../translated_images/fa/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و لوکال کشور را از URLها حذف کنید.
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hr"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.hr.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/hr/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Uvod
 
@@ -41,12 +41,12 @@ Za ovu lekciju, ubuduće ćemo modele nazivati "open modeli" jer možda ne zadov
 
 **Trošak** - Trošak po tokenu za korištenje i implementaciju ovih modela je niži nego kod vlasničkih modela. Prilikom izrade Generativnih AI aplikacija, treba razmotriti omjer performansi i cijene pri radu s ovim modelima za vaš slučaj upotrebe.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.hr.png)
+![Model Cost](../../../translated_images/hr/model-price.3f5a3e4d32ae00b4.png)
 Izvor: Artificial Analysis
 
 **Fleksibilnost** - Rad s open modelima omogućuje vam fleksibilnost u smislu korištenja različitih modela ili njihove kombinacije. Primjer za to su [HuggingChat asistenti](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) gdje korisnik može izravno u korisničkom sučelju odabrati model koji se koristi:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.hr.png)
+![Choose Model](../../../translated_images/hr/choose-model.f095d15bbac92214.png)
 
 ## Istraživanje različitih Open modela
 
@@ -74,7 +74,7 @@ Ne postoji jedinstven odgovor za odabir open modela. Dobar početak je korišten
 
 Kada želite usporediti LLM-ove različitih vrsta, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) je još jedan izvrstan resurs:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.hr.png)
+![Model Quality](../../../translated_images/hr/model-quality.aaae1c22e00f7ee1.png)
 Izvor: Artificial Analysis
 
 Ako radite na specifičnom slučaju upotrebe, traženje fino podešenih verzija koje su fokusirane na isto područje može biti učinkovito. Eksperimentiranje s više open modela kako biste vidjeli kako se ponašaju prema vašim i očekivanjima vaših korisnika je također dobra praksa.

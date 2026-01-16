@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Erstellung von Low-Code-AI-Anwendungen
 
-[![Erstellung von Low-Code-AI-Anwendungen](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310.de.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Erstellung von Low-Code-AI-Anwendungen](../../../translated_images/de/10-lesson-banner.a01ac8fe3fd86310.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 
@@ -92,17 +92,17 @@ Sie werden die App mit Copilot in Power Apps erstellen, indem Sie die folgenden 
 
 1. Verwenden Sie das Textfeld auf dem Startbildschirm, um die App zu beschreiben, die Sie erstellen möchten. Zum Beispiel: **_Ich möchte eine App erstellen, um Schüleraufgaben zu verfolgen und zu verwalten_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den KI-Copilot zu senden.
 
-![Beschreiben Sie die App, die Sie erstellen möchten](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830.de.png)
+![Beschreiben Sie die App, die Sie erstellen möchten](../../../translated_images/de/copilot-chat-prompt-powerapps.84250f341d060830.png)
 
 1. Der KI-Copilot schlägt eine Dataverse-Tabelle mit den Feldern vor, die Sie benötigen, um die Daten zu speichern, die Sie verfolgen möchten, sowie einige Beispieldaten. Sie können die Tabelle dann mithilfe der KI-Copilot-Assistentenfunktion durch konversationelle Schritte anpassen.
 
    > **Wichtig**: Dataverse ist die zugrunde liegende Datenplattform der Power Platform. Es ist eine Low-Code-Datenplattform zur Speicherung der App-Daten. Es handelt sich um einen vollständig verwalteten Dienst, der Daten sicher in der Microsoft Cloud speichert und innerhalb Ihrer Power Platform-Umgebung bereitgestellt wird. Es bietet integrierte Datenverwaltungsfunktionen wie Datenklassifizierung, Datenherkunft, fein abgestimmte Zugriffskontrolle und mehr. Weitere Informationen zu Dataverse finden Sie [hier](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Vorgeschlagene Felder in Ihrer neuen Tabelle](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.de.png)
+   ![Vorgeschlagene Felder in Ihrer neuen Tabelle](../../../translated_images/de/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.png)
 
 1. Lehrkräfte möchten E-Mails an die Schüler senden, die ihre Aufgaben eingereicht haben, um sie über den Fortschritt ihrer Aufgaben auf dem Laufenden zu halten. Sie können Copilot verwenden, um der Tabelle ein neues Feld hinzuzufügen, um die E-Mail-Adresse des Schülers zu speichern. Zum Beispiel können Sie die folgende Eingabeaufforderung verwenden, um der Tabelle ein neues Feld hinzuzufügen: **_Ich möchte eine Spalte hinzufügen, um die E-Mail-Adresse des Schülers zu speichern_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den KI-Copilot zu senden.
 
-![Hinzufügen eines neuen Feldes](../../../translated_images/copilot-new-column.35e15ff21acaf274.de.png)
+![Hinzufügen eines neuen Feldes](../../../translated_images/de/copilot-new-column.35e15ff21acaf274.png)
 
 1. Der KI-Copilot generiert ein neues Feld, und Sie können das Feld anschließend an Ihre Bedürfnisse anpassen.
 
@@ -112,7 +112,7 @@ Sie werden die App mit Copilot in Power Apps erstellen, indem Sie die folgenden 
 
 1. Damit Lehrkräfte E-Mails an Schüler senden können, können Sie Copilot verwenden, um der App einen neuen Bildschirm hinzuzufügen. Zum Beispiel können Sie die folgende Eingabeaufforderung verwenden, um der App einen neuen Bildschirm hinzuzufügen: **_Ich möchte einen Bildschirm hinzufügen, um E-Mails an Schüler zu senden_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den KI-Copilot zu senden.
 
-![Hinzufügen eines neuen Bildschirms über eine Eingabeaufforderung](../../../translated_images/copilot-new-screen.2e0bef7132a17392.de.png)
+![Hinzufügen eines neuen Bildschirms über eine Eingabeaufforderung](../../../translated_images/de/copilot-new-screen.2e0bef7132a17392.png)
 
 1. Der KI-Copilot generiert einen neuen Bildschirm, und Sie können den Bildschirm anschließend an Ihre Bedürfnisse anpassen.
 
@@ -147,15 +147,15 @@ Um eine Tabelle in Dataverse mit Copilot zu erstellen, folgen Sie den untenstehe
 
 2. Wählen Sie in der linken Navigationsleiste **Tabellen** aus und klicken Sie dann auf **Neue Tabelle beschreiben**.
 
-![Neue Tabelle auswählen](../../../translated_images/describe-new-table.0792373eb757281e.de.png)
+![Neue Tabelle auswählen](../../../translated_images/de/describe-new-table.0792373eb757281e.png)
 
 1. Auf dem Bildschirm **Neue Tabelle beschreiben** verwenden Sie das Textfeld, um die Tabelle zu beschreiben, die Sie erstellen möchten. Zum Beispiel: **_Ich möchte eine Tabelle erstellen, um Rechnungsinformationen zu speichern_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den AI Copilot zu senden.
 
-![Tabelle beschreiben](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.de.png)
+![Tabelle beschreiben](../../../translated_images/de/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.png)
 
 1. Der AI Copilot schlägt eine Dataverse-Tabelle mit den Feldern vor, die Sie benötigen, um die Daten zu speichern, die Sie verfolgen möchten, sowie einige Beispieldaten. Sie können die Tabelle dann mit der AI Copilot-Assistentenfunktion durch konversationelle Schritte an Ihre Bedürfnisse anpassen.
 
-![Vorgeschlagene Dataverse-Tabelle](../../../translated_images/copilot-dataverse-table.b3bc936091324d9d.de.png)
+![Vorgeschlagene Dataverse-Tabelle](../../../translated_images/de/copilot-dataverse-table.b3bc936091324d9d.png)
 
 1. Das Finanzteam möchte eine E-Mail an den Lieferanten senden, um ihn über den aktuellen Status seiner Rechnung zu informieren. Sie können Copilot verwenden, um der Tabelle ein neues Feld hinzuzufügen, um die E-Mail-Adresse des Lieferanten zu speichern. Zum Beispiel können Sie die folgende Eingabeaufforderung verwenden, um der Tabelle ein neues Feld hinzuzufügen: **_Ich möchte eine Spalte hinzufügen, um die E-Mail-Adresse des Lieferanten zu speichern_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den AI Copilot zu senden.
 
@@ -184,7 +184,7 @@ Einige der vorgefertigten KI-Modelle, die in der Power Platform verfügbar sind,
 
 Mit benutzerdefinierten KI-Modellen können Sie Ihr eigenes Modell in AI Builder einbringen, sodass es wie jedes benutzerdefinierte AI Builder-Modell funktioniert und Sie das Modell mit Ihren eigenen Daten trainieren können. Sie können diese Modelle verwenden, um Prozesse zu automatisieren und Ergebnisse sowohl in Power Apps als auch in Power Automate vorherzusagen. Bei der Verwendung Ihres eigenen Modells gelten bestimmte Einschränkungen. Lesen Sie mehr über diese [Einschränkungen](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI Builder Modelle](../../../translated_images/ai-builder-models.8069423b84cfc47f.de.png)
+![AI Builder Modelle](../../../translated_images/de/ai-builder-models.8069423b84cfc47f.png)
 
 ## Aufgabe #2 - Erstellen eines Rechnungsverarbeitungs-Workflows für unser Startup
 
@@ -198,7 +198,7 @@ Um einen Workflow zu erstellen, der dem Finanzteam bei der Verarbeitung von Rech
 
 2. Verwenden Sie das Textfeld auf der Startseite, um den Workflow zu beschreiben, den Sie erstellen möchten. Zum Beispiel: **_Eine Rechnung verarbeiten, wenn sie in meinem Posteingang ankommt_**. Klicken Sie auf die Schaltfläche **Senden**, um die Eingabeaufforderung an den AI Copilot zu senden.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de.de.png)
+   ![Copilot Power Automate](../../../translated_images/de/copilot-chat-prompt-powerautomate.f377e478cc8412de.png)
 
 3. Der AI Copilot schlägt die Aktionen vor, die Sie ausführen müssen, um die Aufgabe zu automatisieren, die Sie durchführen möchten. Sie können auf die Schaltfläche **Weiter** klicken, um die nächsten Schritte durchzugehen.
 
@@ -212,7 +212,7 @@ Um einen Workflow zu erstellen, der dem Finanzteam bei der Verarbeitung von Rech
 
 8. Entfernen Sie die Aktion **Bedingung** aus dem Flow, da Sie diese nicht verwenden werden. Es sollte wie im folgenden Screenshot aussehen:
 
-   ![Power Automate, Aktionen entfernen](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba.de.png)
+   ![Power Automate, Aktionen entfernen](../../../translated_images/de/powerautomate-remove-actions.7216392fe684ceba.png)
 
 9. Klicken Sie auf die Schaltfläche **Aktion hinzufügen** und suchen Sie nach **Dataverse**. Wählen Sie die Aktion **Neue Zeile hinzufügen**.
 
@@ -227,7 +227,7 @@ Um einen Workflow zu erstellen, der dem Finanzteam bei der Verarbeitung von Rech
     - Status - Setzen Sie den **Status** auf **Ausstehend**.
     - Lieferanten-E-Mail - Verwenden Sie den dynamischen Inhalt **Von** aus dem Auslöser **Wenn eine neue E-Mail eintrifft**.
 
-    ![Power Automate Zeile hinzufügen](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e.de.png)
+    ![Power Automate Zeile hinzufügen](../../../translated_images/de/powerautomate-add-row.5edce45e5dd3d51e.png)
 
 12. Sobald Sie mit dem Flow fertig sind, klicken Sie auf die Schaltfläche **Speichern**, um den Flow zu speichern. Sie können den Flow dann testen, indem Sie eine E-Mail mit einer Rechnung an den Ordner senden, den Sie im Auslöser angegeben haben.
 
@@ -241,7 +241,7 @@ GPT-Modelle durchlaufen ein umfangreiches Training mit großen Datenmengen, wodu
 
 Zum Beispiel können Sie Flows erstellen, um automatisch Text für verschiedene Anwendungsfälle zu generieren, wie: Entwürfe von E-Mails, Produktbeschreibungen und mehr. Sie können das Modell auch verwenden, um Text für verschiedene Apps zu generieren, wie Chatbots und Kundenservice-Apps, die es Kundenservice-Mitarbeitern ermöglichen, effektiv und effizient auf Kundenanfragen zu reagieren.
 
-![Eingabeaufforderung erstellen](../../../translated_images/create-prompt-gpt.69d429300c2e870a.de.png)
+![Eingabeaufforderung erstellen](../../../translated_images/de/create-prompt-gpt.69d429300c2e870a.png)
 
 Um zu lernen, wie Sie dieses KI-Modell in Power Automate verwenden können, gehen Sie das Modul [Intelligenz mit AI Builder und GPT hinzufügen](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) durch.
 

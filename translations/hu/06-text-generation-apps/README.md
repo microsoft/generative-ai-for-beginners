@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Szövegalkotó alkalmazások építése
 
-[![Szövegalkotó alkalmazások építése](../../../translated_images/06-lesson-banner.a5c629f990a636c8.hu.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Szövegalkotó alkalmazások építése](../../../translated_images/hu/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Kattints a fenti képre a leckéhez tartozó videó megtekintéséhez)_
 

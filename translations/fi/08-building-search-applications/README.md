@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Hakusovellusten rakentaminen
 
-[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/08-lesson-banner.8fff48c566dad08a.fi.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/fi/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon_
 
@@ -44,7 +44,7 @@ Oppitunnin mukana tulee upotusindeksi Microsoftin [AI Show](https://www.youtube.
 
 Alla on esimerkki semanttisesta kyselystä kysymykselle 'voiko rstudioa käyttää azure ml:n kanssa?'. Katso YouTube-URL, huomaat, että URL sisältää aikaleiman, joka vie sinut kohtaan videossa, jossa kysymykseen annetaan vastaus.
 
-![Semanttinen kysely kysymykselle "voiko rstudioa käyttää Azure ML:n kanssa"](../../../translated_images/query-results.bb0480ebf025fac6.fi.png)
+![Semanttinen kysely kysymykselle "voiko rstudioa käyttää Azure ML:n kanssa"](../../../translated_images/fi/query-results.bb0480ebf025fac6.png)
 
 ## Mitä on semanttinen haku?
 
@@ -163,7 +163,7 @@ Avaa [ratkaisun Jupyter Notebook](./python/aoai-solution.ipynb?WT.mc_id=academic
 
 Kun suoritat Notebookin, sinua pyydetään syöttämään kysely. Syöttökenttä näyttää tältä:
 
-![Syöttökenttä käyttäjälle kyselyn syöttämistä varten](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.fi.png)
+![Syöttökenttä käyttäjälle kyselyn syöttämistä varten](../../../translated_images/fi/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## Hienoa työtä! Jatka oppimista
 

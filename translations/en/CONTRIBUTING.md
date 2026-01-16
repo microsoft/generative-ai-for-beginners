@@ -62,14 +62,14 @@ Since this repo is deployed to GitHub Pages, you need to be careful when typing 
 To check your links, simply use VS Code.  
 For example, when you hover over a link, you can press **ctrl + click** to follow it.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.en.png)
+![VS code follow links screenshot](../../translated_images/en/vscode-follow-link.85520ab6a1237adc.webp)
 
 If a link doesn’t work locally, it will likely fail the workflow check on GitHub as well.
 
 To fix this, type the link with VS Code’s help.  
 When you type `./` or `../`, VS Code will suggest available options based on what you typed.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.en.png)
+![VS code select relative path screenshot](../../translated_images/en/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Click on the desired file or folder to ensure your path is correct.
 
@@ -84,7 +84,7 @@ Since this repo is deployed to GitHub Pages, we need to track navigation between
 To pass, make sure your relative paths end with `?wt.mc_id=` or similar tracking text.  
 If missing, you may see an error like this:
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.en.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/en/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 To fix it, open the file the workflow flagged and add the tracking ID to the end of the relative paths.
 
@@ -99,7 +99,7 @@ Since this repo is public, tracking helps us understand where traffic comes from
 To pass, make sure URLs end with `?wt.mc_id=` or similar tracking text.  
 If missing, you may see an error like this:
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.en.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/en/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 To fix it, open the flagged file and add the tracking ID to the URLs.
 
@@ -114,7 +114,7 @@ Since this repo is global, URLs should not contain locale segments like `/en-us/
 To pass, make sure your URLs do not include any language or country locale anywhere.  
 If present, you may see an error like this:
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.en.png)
+![GitHub check country locale comment screenshot](../../translated_images/en/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 To fix it, open the flagged file and remove the locale from the URLs.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Einführung in Generative KI und große Sprachmodelle
 
-[![Einführung in Generative KI und große Sprachmodelle](../../../translated_images/01-lesson-banner.2424cfd092f43366.de.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Einführung in Generative KI und große Sprachmodelle](../../../translated_images/de/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen)_
 
@@ -43,7 +43,7 @@ Unser Startup-Team ist sich bewusst, dass wir dieses Ziel nicht ohne die Nutzung
 
 Generative KI wird voraussichtlich die Art und Weise, wie wir heute lernen und lehren, revolutionieren. Schüler haben rund um die Uhr virtuelle Lehrer zur Verfügung, die ihnen eine Fülle von Informationen und Beispielen bieten, und Lehrer können innovative Werkzeuge nutzen, um ihre Schüler zu bewerten und Feedback zu geben.
 
-![Fünf junge Schüler, die auf einen Monitor schauen - Bild von DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.de.png)
+![Fünf junge Schüler, die auf einen Monitor schauen - Bild von DALLE2](../../../translated_images/de/students-by-DALLE2.b70fddaced1042ee.png)
 
 Beginnen wir damit, einige grundlegende Konzepte und Begriffe zu definieren, die wir im gesamten Lehrplan verwenden werden.
 
@@ -70,7 +70,7 @@ Diese Technologie hat die virtuellen Assistenten ermöglicht, die im ersten Jahr
 
 So sind wir heute bei der Generativen KI angekommen, die als Teilbereich des Deep Learning betrachtet werden kann.
 
-![KI, ML, DL und Generative KI](../../../translated_images/AI-diagram.c391fa518451a40d.de.png)
+![KI, ML, DL und Generative KI](../../../translated_images/de/AI-diagram.c391fa518451a40d.png)
 
 Nach Jahrzehnten der Forschung im Bereich der KI hat eine neue Modellarchitektur – genannt _Transformer_ – die Grenzen der RNNs überwunden, indem sie viel längere Textsequenzen als Eingabe verarbeiten kann. Transformer basieren auf dem Attention-Mechanismus, der es dem Modell ermöglicht, den Eingaben, die es erhält, unterschiedliche Gewichtungen zuzuweisen und „mehr Aufmerksamkeit“ dort zu schenken, wo die relevantesten Informationen konzentriert sind, unabhängig von ihrer Reihenfolge in der Textsequenz.
 
@@ -82,7 +82,7 @@ Im nächsten Kapitel werden wir verschiedene Arten von generativen KI-Modellen u
 
 - **Tokenizer, Text in Zahlen umwandeln**: Große Sprachmodelle erhalten einen Text als Eingabe und generieren einen Text als Ausgabe. Da es sich jedoch um statistische Modelle handelt, arbeiten sie viel besser mit Zahlen als mit Textsequenzen. Deshalb wird jede Eingabe in das Modell vor der Verwendung durch den Kern des Modells von einem Tokenizer verarbeitet. Ein Token ist ein Textstück – bestehend aus einer variablen Anzahl von Zeichen, sodass die Hauptaufgabe des Tokenizers darin besteht, die Eingabe in ein Array von Tokens aufzuteilen. Dann wird jedes Token mit einem Token-Index verknüpft, der die Ganzzahlkodierung des ursprünglichen Textstücks darstellt.
 
-![Beispiel für Tokenisierung](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.de.png)
+![Beispiel für Tokenisierung](../../../translated_images/de/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **Vorhersage von Ausgabetokens**: Angenommen, n Tokens werden als Eingabe gegeben (wobei das maximale n von Modell zu Modell variiert), kann das Modell ein Token als Ausgabe vorhersagen. Dieses Token wird dann in die Eingabe der nächsten Iteration integriert, in einem sich erweiternden Fenster-Muster, das eine bessere Benutzererfahrung ermöglicht, indem eine (oder mehrere) Sätze als Antwort geliefert werden. Das erklärt, warum Sie, wenn Sie jemals mit ChatGPT gespielt haben, möglicherweise bemerkt haben, dass es manchmal mitten in einem Satz zu stoppen scheint.
 
@@ -100,23 +100,23 @@ Die Eingabe eines großen Sprachmodells wird als Prompt bezeichnet, während die
 
   1. Zusammenfassung eines Artikels, Buches, Produktbewertungen und mehr, zusammen mit der Extraktion von Erkenntnissen aus unstrukturierten Daten.
     
-    ![Beispiel für Zusammenfassung](../../../translated_images/summarization-example.7b7ff97147b3d790.de.png)
+    ![Beispiel für Zusammenfassung](../../../translated_images/de/summarization-example.7b7ff97147b3d790.png)
   
   2. Kreative Ideenfindung und Gestaltung eines Artikels, Essays, einer Aufgabe oder mehr.
       
-     ![Beispiel für kreatives Schreiben](../../../translated_images/creative-writing-example.e24a685b5a543ad1.de.png)
+     ![Beispiel für kreatives Schreiben](../../../translated_images/de/creative-writing-example.e24a685b5a543ad1.png)
 
 - Eine **Frage**, die in Form eines Gesprächs mit einem Agenten gestellt wird.
   
-  ![Beispiel für ein Gespräch](../../../translated_images/conversation-example.60c2afc0f595fa59.de.png)
+  ![Beispiel für ein Gespräch](../../../translated_images/de/conversation-example.60c2afc0f595fa59.png)
 
 - Ein Textstück zur **Vervollständigung**, das implizit eine Bitte um Schreibunterstützung darstellt.
   
-  ![Beispiel für Textvervollständigung](../../../translated_images/text-completion-example.cbb0f28403d42752.de.png)
+  ![Beispiel für Textvervollständigung](../../../translated_images/de/text-completion-example.cbb0f28403d42752.png)
 
 - Ein Stück **Code** zusammen mit der Bitte, es zu erklären und zu dokumentieren, oder ein Kommentar, der darum bittet, ein Stück Code zu generieren, das eine bestimmte Aufgabe ausführt.
   
-  ![Beispiel für Codierung](../../../translated_images/coding-example.50ebabe8a6afff20.de.png)
+  ![Beispiel für Codierung](../../../translated_images/de/coding-example.50ebabe8a6afff20.png)
 
 Die obigen Beispiele sind ziemlich einfach und sollen keine umfassende Demonstration der Fähigkeiten großer Sprachmodelle darstellen. Sie sollen das Potenzial der Nutzung generativer KI zeigen, insbesondere, aber nicht ausschließlich, in Bildungskontexten.
 

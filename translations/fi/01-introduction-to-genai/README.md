@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin
 
-[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/01-lesson-banner.2424cfd092f43366.fi.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/fi/01-lesson-banner.2424cfd092f43366.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
@@ -43,7 +43,7 @@ Startupimme tiimi tiedostaa, että emme voi saavuttaa tätä tavoitetta ilman mo
 
 Generatiivisen tekoälyn odotetaan mullistavan tapaa, jolla opimme ja opetamme nykyään. Opiskelijoilla on käytettävissään virtuaaliset opettajat 24 tuntia vuorokaudessa, jotka tarjoavat valtavia määriä tietoa ja esimerkkejä, ja opettajat voivat hyödyntää innovatiivisia työkaluja arvioidakseen oppilaitaan ja antaakseen palautetta.
 
-![Viisi nuorta opiskelijaa katsomassa näyttöä - kuva DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.fi.png)
+![Viisi nuorta opiskelijaa katsomassa näyttöä - kuva DALLE2](../../../translated_images/fi/students-by-DALLE2.b70fddaced1042ee.png)
 
 Aloitetaan määrittelemällä joitakin peruskäsitteitä ja terminologiaa, joita käytämme oppimateriaalin aikana.
 
@@ -69,7 +69,7 @@ Tämä teknologia mahdollisti virtuaaliassistenttien syntymisen 2000-luvun ensim
 
 Näin olemme päätyneet nykyiseen generatiiviseen tekoälyyn, joka voidaan nähdä syväoppimisen alalajina.
 
-![AI, ML, DL ja generatiivinen tekoäly](../../../translated_images/AI-diagram.c391fa518451a40d.fi.png)
+![AI, ML, DL ja generatiivinen tekoäly](../../../translated_images/fi/AI-diagram.c391fa518451a40d.png)
 
 Vuosikymmenten tekoälytutkimuksen jälkeen uusi mallirakenne – nimeltään _Transformer_ – ylitti RNN-mallien rajoitukset, sillä se pystyy käsittelemään paljon pidempiä tekstijonoja syötteenä. Transformerit perustuvat huomiointimekanismiin, joka mahdollistaa mallin antamaan eri painoarvoja vastaanottamilleen syötteille, 'kiinnittäen enemmän huomiota' kohtiin, joissa olennaisin tieto on keskittynyt, riippumatta niiden järjestyksestä tekstijonossa.
 
@@ -81,7 +81,7 @@ Seuraavassa luvussa tutkimme erilaisia generatiivisia tekoälymalleja, mutta tar
 
 - **Tokenisaattori, tekstistä numeroiksi**: Suuret kielimallit vastaanottavat tekstin syötteenä ja tuottavat tekstin tulosteena. Koska ne ovat tilastollisia malleja, ne toimivat paljon paremmin numeroiden kuin tekstijonojen kanssa. Siksi jokainen mallille annettu syöte käsitellään tokenisaattorilla ennen kuin se käytetään ydinosassa. Token on tekstin osa – koostuen vaihtelevasta määrästä merkkejä, joten tokenisaattorin päätehtävä on jakaa syöte tokenien taulukoksi. Sitten jokainen token yhdistetään token-indeksiin, joka on alkuperäisen tekstiosan kokonaislukukoodaus.
 
-![Tokenisaation esimerkki](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.fi.png)
+![Tokenisaation esimerkki](../../../translated_images/fi/tokenizer-example.80a5c151ee7d1bd4.png)
 
 - **Tulostokenien ennustaminen**: Kun mallille annetaan n tokenia syötteenä (maksimi n vaihtelee mallista riippuen), se pystyy ennustamaan yhden tokenin tulosteena. Tämä token lisätään seuraavan iteraation syötteeseen, muodostaen laajenevan ikkunan, joka mahdollistaa paremman käyttäjäkokemuksen, kun vastauksena saadaan yksi (tai useampi) lause. Tämä selittää, miksi, jos olet koskaan käyttänyt ChatGPT:tä, olet saattanut huomata, että joskus se näyttää pysähtyvän kesken lauseen.
 
@@ -99,23 +99,23 @@ Suuren kielimallin syötettä kutsutaan kehotteeksi (prompt), kun taas tulostett
 
   1. Artikkelin, kirjan, tuotearvostelujen ja muun tiivistäminen sekä oivallusten poimiminen jäsentämättömästä datasta.
     
-    ![Tiivistämisen esimerkki](../../../translated_images/summarization-example.7b7ff97147b3d790.fi.png)
+    ![Tiivistämisen esimerkki](../../../translated_images/fi/summarization-example.7b7ff97147b3d790.png)
   
   2. Luova ideointi ja artikkelin, esseen, tehtävän tai muun suunnittelu.
       
-     ![Luovan kirjoittamisen esimerkki](../../../translated_images/creative-writing-example.e24a685b5a543ad1.fi.png)
+     ![Luovan kirjoittamisen esimerkki](../../../translated_images/fi/creative-writing-example.e24a685b5a543ad1.png)
 
 - **Kysymys**, joka esitetään keskustelun muodossa agentille.
   
-  ![Keskustelun esimerkki](../../../translated_images/conversation-example.60c2afc0f595fa59.fi.png)
+  ![Keskustelun esimerkki](../../../translated_images/fi/conversation-example.60c2afc0f595fa59.png)
 
 - **Tekstin osa täydennettäväksi**, joka implisiittisesti pyytää kirjoitusapua.
   
-  ![Tekstin täydennyksen esimerkki](../../../translated_images/text-completion-example.cbb0f28403d42752.fi.png)
+  ![Tekstin täydennyksen esimerkki](../../../translated_images/fi/text-completion-example.cbb0f28403d42752.png)
 
 - **Koodinpätkä**, johon liittyy pyyntö selittää ja dokumentoida se, tai kommentti, joka pyytää luomaan koodinpätkän tietyn tehtävän suorittamiseksi.
   
-  ![Koodiesimerkki](../../../translated_images/coding-example.50ebabe8a6afff20.fi.png)
+  ![Koodiesimerkki](../../../translated_images/fi/coding-example.50ebabe8a6afff20.png)
 
 Yllä olevat esimerkit ovat melko yksinkertaisia eivätkä ole tarkoitettu kattavaksi esittelyksi suurten kielimallien kyvyistä. Niiden tarkoituksena on osoittaa generatiivisen tekoälyn käyttömahdollisuuksia, erityisesti mutta ei rajoittuen koulutuskonteksteihin.
 

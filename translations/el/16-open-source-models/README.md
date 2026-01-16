@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "el"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.el.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/el/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Εισαγωγή
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Κόστος** - Το κόστος ανά token για τη χρήση και την ανάπτυξη αυτών των μοντέλων είναι χαμηλότερο από αυτό των ιδιόκτητων μοντέλων. Κατά την κατασκευή εφαρμογών Γεννητικής Τεχνητής Νοημοσύνης, πρέπει να εξετάζεται η απόδοση σε σχέση με την τιμή όταν εργάζεστε με αυτά τα μοντέλα για την περίπτωσή σας.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.el.png)
+![Model Cost](../../../translated_images/el/model-price.3f5a3e4d32ae00b4.png)
 Πηγή: Artificial Analysis
 
 **Ευελιξία** - Η εργασία με ανοιχτά μοντέλα σας επιτρέπει να είστε ευέλικτοι όσον αφορά τη χρήση διαφορετικών μοντέλων ή τον συνδυασμό τους. Ένα παράδειγμα είναι οι [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), όπου ο χρήστης μπορεί να επιλέξει το μοντέλο που χρησιμοποιείται απευθείας στη διεπαφή χρήστη:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.el.png)
+![Choose Model](../../../translated_images/el/choose-model.f095d15bbac92214.png)
 
 ## Εξερεύνηση Διαφορετικών Ανοιχτών Μοντέλων
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Όταν θέλετε να συγκρίνετε LLMs μεταξύ διαφορετικών τύπων, το [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) είναι μια ακόμη εξαιρετική πηγή:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.el.png)
+![Model Quality](../../../translated_images/el/model-quality.aaae1c22e00f7ee1.png)
 Πηγή: Artificial Analysis
 
 Εάν εργάζεστε σε μια συγκεκριμένη περίπτωση χρήσης, η αναζήτηση λεπτομερώς προσαρμοσμένων εκδόσεων που εστιάζουν στον ίδιο τομέα μπορεί να είναι αποτελεσματική. Η πειραματική χρήση πολλαπλών ανοιχτών μοντέλων για να δείτε πώς αποδίδουν σύμφωνα με τις δικές σας και των χρηστών σας προσδοκίες είναι μια ακόμη καλή πρακτική.

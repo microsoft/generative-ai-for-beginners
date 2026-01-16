@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "da"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.da.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/da/16-lesson-banner.6b56555e8404fda1.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduktion
 
@@ -41,12 +41,12 @@ For denne lektion vil vi fremover referere til modellerne som "åbne modeller", 
 
 **Omkostninger** - Omkostningen pr. token for at bruge og implementere disse modeller er lavere end for proprietære modeller. Når man bygger Generative AI-applikationer, bør man overveje ydeevne versus pris, når man arbejder med disse modeller i sin brugssag.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.da.png)
+![Model Cost](../../../translated_images/da/model-price.3f5a3e4d32ae00b4.png)
 Kilde: Artificial Analysis
 
 **Fleksibilitet** - At arbejde med åbne modeller giver dig fleksibilitet i forhold til at bruge forskellige modeller eller kombinere dem. Et eksempel på dette er [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), hvor en bruger kan vælge den model, der bruges, direkte i brugergrænsefladen:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.da.png)
+![Choose Model](../../../translated_images/da/choose-model.f095d15bbac92214.png)
 
 ## Udforskning af Forskellige Åbne Modeller
 
@@ -74,7 +74,7 @@ Der findes ikke ét svar på, hvordan man vælger en åben model. Et godt sted a
 
 Når man ønsker at sammenligne LLM'er på tværs af forskellige typer, er [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) en anden god ressource:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.da.png)
+![Model Quality](../../../translated_images/da/model-quality.aaae1c22e00f7ee1.png)
 Kilde: Artificial Analysis
 
 Hvis man arbejder på en specifik brugssag, kan det være effektivt at søge efter finjusterede versioner, der fokuserer på samme område. At eksperimentere med flere åbne modeller for at se, hvordan de præsterer i forhold til dine og dine brugeres forventninger, er også en god praksis.

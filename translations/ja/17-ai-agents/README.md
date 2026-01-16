@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ja"
 }
 -->
-[![オープンソースモデル](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.ja.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![オープンソースモデル](../../../translated_images/ja/17-lesson-banner.a5b918fb0920e4e6.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## はじめに
 
@@ -33,7 +33,7 @@ AIエージェントは生成AIの世界で非常にエキサイティングな�
 
 AIエージェントは、大規模言語モデル（LLM）に**状態**と**ツール**へのアクセスを提供することでタスクを実行できるようにします。
 
-![エージェントモデル](../../../translated_images/what-agent.21f2893bdfd01e6a.ja.png)
+![エージェントモデル](../../../translated_images/ja/what-agent.21f2893bdfd01e6a.png)
 
 これらの用語を定義しましょう：
 
@@ -53,7 +53,7 @@ AIエージェントは、大規模言語モデル（LLM）に**状態**と**ツ
 
 `AgentExecutor`はチャット履歴も保存し、チャットのコンテキストを提供します。
 
-![LangChainエージェント](../../../translated_images/langchain-agents.edcc55b5d5c43716.ja.png)
+![LangChainエージェント](../../../translated_images/ja/langchain-agents.edcc55b5d5c43716.png)
 
 LangChainは、LLMがアクセスできる[ツールのカタログ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)を提供しています。これらはコミュニティやLangChainチームによって作成されています。
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 以下はそのプロセスの例です：
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.ja.png)
+![AutoGen](../../../translated_images/ja/autogen.dee9a25a45fde584.png)
 
 #### システムメッセージで定義されたLLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 タスクを完了するために、`Planner`は`Plugins`と呼ばれるツールのコレクションにアクセスします。これらはPythonクラスや一般的なコードインタープリターである可能性があります。このプラグインは埋め込みとして保存され、LLMが適切なプラグインをよりよく検索できるようにします。
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.ja.png)
+![Taskweaver](../../../translated_images/ja/taskweaver.da8559999267715a.png)
 
 以下は異常検出を処理するプラグインの例です：
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 最後に探るエージェントフレームワークは[JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)です。JARVISのユニークな点は、会話の`状態`を管理するためにLLMを使用し、`ツール`として他のAIモデルを使用することです。これらのAIモデルは、物体検出、文字起こし、画像キャプションなど特定のタスクを実行する専門モデルです。
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.ja.png)
+![JARVIS](../../../translated_images/ja/jarvis.762ddbadbd1a3a33.png)
 
 汎用モデルであるLLMは、ユーザーからのリクエストを受け取り、特定のタスクとそのタスクを完了するために必要な引数やデータを特定します。
 

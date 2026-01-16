@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Brug af Generativ AI Ansvarligt
 
-[![Brug af Generativ AI Ansvarligt](../../../translated_images/03-lesson-banner.1ed56067a452d977.da.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Brug af Generativ AI Ansvarligt](../../../translated_images/da/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klik på billedet ovenfor for at se videoen til denne lektion_
 
@@ -85,7 +85,7 @@ Denne type output er ikke kun destruktiv for at bygge positive produktoplevelser
 
 Nu hvor vi har identificeret vigtigheden af Ansvarlig Generativ AI, lad os se på 4 trin, vi kan tage for at bygge vores AI-løsninger ansvarligt:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775.da.png)
+![Mitigate Cycle](../../../translated_images/da/mitigate-cycle.babcd5a5658e1775.png)
 
 ### Mål potentielle skader
 
@@ -97,7 +97,7 @@ Da vores startup bygger et uddannelsesprodukt, ville det være godt at forberede
 
 Det er nu tid til at finde måder, hvor vi kan forhindre eller begrænse den potentielle skade forårsaget af modellen og dens svar. Vi kan se på dette i 4 forskellige lag:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159.da.png)
+![Mitigation Layers](../../../translated_images/da/mitigation-layers.377215120b9a1159.png)
 
 - **Model**. Vælg den rigtige model til den rigtige brugssag. Større og mere komplekse modeller som GPT-4 kan medføre større risiko for skadeligt indhold, når de anvendes til mindre og mere specifikke brugssager. Brug af dine træningsdata til finjustering reducerer også risikoen for skadeligt indhold.
 

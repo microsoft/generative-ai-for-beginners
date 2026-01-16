@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Εξερεύνηση και σύγκριση διαφορετικών LLMs
 
-[![Εξερεύνηση και σύγκριση διαφορετικών LLMs](../../../translated_images/02-lesson-banner.ef94c84979f97f60.el.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Εξερεύνηση και σύγκριση διαφορετικών LLMs](../../../translated_images/el/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Κάντε κλικ στην εικόνα παραπάνω για να παρακολουθήσετε το βίντεο αυτού του μαθήματος_
 
@@ -59,14 +59,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **Είναι πολύ μεγάλα μοντέλα**, βασισμένα σε πολύ βαθιά νευρωνικά δίκτυα εκπαιδευμένα σε δισεκατομμύρια παραμέτρους.
 - **Συνήθως προορίζονται να χρησιμεύσουν ως "βάση" για άλλα μοντέλα**, που σημαίνει ότι μπορούν να χρησιμοποιηθούν ως σημείο εκκίνησης για την κατασκευή άλλων μοντέλων, κάτι που μπορεί να γίνει με τη λεπτομερή προσαρμογή.
 
-![Μοντέλα Βάσης έναντι LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94.el.png)
+![Μοντέλα Βάσης έναντι LLMs](../../../translated_images/el/FoundationModel.e4859dbb7a825c94.png)
 
 Πηγή εικόνας: [Essential Guide to Foundation Models and Large Language Models | από τον Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Για να διευκρινίσουμε περαιτέρω αυτή τη διάκριση, ας πάρουμε το ChatGPT ως παράδειγμα. Για να δημιουργηθεί η πρώτη έκδοση του ChatGPT, ένα μοντέλο που ονομάζεται GPT-3.5 χρησίμευσε ως το μοντέλο βάσης. Αυτό σημαίνει ότι η OpenAI χρησιμοποίησε κάποια δεδομένα ειδικά για συνομιλίες για να δημιουργήσει μια προσαρμοσμένη έκδοση του GPT-3.5 που ήταν εξειδικευμένη στο να αποδίδει καλά σε σενάρια συνομιλιών, όπως chatbots.
 
-![Μοντέλο Βάσης](../../../translated_images/Multimodal.2c389c6439e0fc51.el.png)
+![Μοντέλο Βάσης](../../../translated_images/el/Multimodal.2c389c6439e0fc51.png)
 
 Πηγή εικόνας: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 Οι ενσωματώσεις είναι ένα σύνολο μοντέλων που μπορούν να μετατρέψουν το κείμενο σε αριθμητική μορφή, που ονομάζεται ενσωμάτωση, η οποία είναι μια αριθμητική αναπαράσταση του εισαγόμενου κειμένου. Οι ενσωματώσεις διευκολύνουν τις μηχανές να κατανοήσουν τις σχέσεις μεταξύ λέξεων ή προτάσεων και μπορούν να καταναλωθούν ως είσοδοι από άλλα μοντέλα, όπως μοντέλα ταξινόμησης ή μοντέλα ομαδοποίησης που έχουν καλύτερη απόδοση σε αριθμητικά δεδομένα. Τα μοντέλα ενσωμάτωσης χρησιμοποιούνται συχνά για μεταφορά μάθησης, όπου ένα μοντέλο κατασκευάζεται για μια υποκατάστατη εργασία για την οποία υπάρχει αφθονία δεδομένων και στη συνέχεια τα βάρη του μοντέλου (ενσωματώσεις) επαναχρησιμοποιούνται για άλλες εργασίες. Ένα παράδειγμα αυτής της κατηγορίας είναι [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Ενσωμάτωση](../../../translated_images/Embedding.c3708fe988ccf760.el.png)
+![Ενσωμάτωση](../../../translated_images/el/Embedding.c3708fe988ccf760.png)
 
 Τα μοντέλα δημιουργίας εικόνων είναι μοντέλα που δημιουργούν εικόνες. Αυτά τα μοντέλα χρησιμοποιούνται συχνά για επεξεργασία εικόνων, σύνθεση εικόνων και μετάφραση εικόνων. Τα μοντέλα δημιουργίας εικόνων εκπαιδεύονται συχνά σε μεγάλα σύνολα δεδομένων εικόνων, όπως [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), και μπορούν να χρησιμοποιηθούν για τη δημιουργία νέων εικόνων ή για την επεξεργασία υπαρχουσών εικόνων με τεχνικές inpainting, υπερ-ανάλυσης και χρωματισμού. Παραδείγματα περιλαμβάνουν [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) και [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Δημιουργία εικόνων](../../../translated_images/Image.349c080266a763fd.el.png)
+![Δημιουργία εικόνων](../../../translated_images/el/Image.349c080266a763fd.png)
 
 Τα μοντέλα δημιουργίας κειμένου και κώδικα είναι μοντέλα που δημιουργούν κείμενο ή κώδικα. Αυτά τα μοντέλα χρησιμοποιούνται συχνά για σύνοψη κειμένου, μετάφραση και απάντηση σε ερωτήσεις. Τα μοντέλα δημιουργίας κειμένου εκπαιδεύονται συχνά σε μεγάλα σύνολα δεδομένων κειμένου, όπως [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), και μπορούν να χρησιμοποιηθούν για τη δημιουργία νέου κειμένου ή για την απάντηση σε ερωτήσεις. Τα μοντέλα δημιουργίας κώδικα, όπως [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), εκπαιδεύονται συχνά σε μεγάλα σύνολα δεδομένων κώδικα, όπως το GitHub, και μπορούν να χρησιμοποιηθούν για τη δημιουργία νέου κώδικα ή για τη διόρθωση σφαλμάτων σε υπάρχοντα κώδικα.
 
-![Δημιουργία κειμένου και κώδικα](../../../translated_images/Text.a8c0cf139e5cc2a0.el.png)
+![Δημιουργία κειμένου και κώδικα](../../../translated_images/el/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder έναντι Μόνο Decoder
 
@@ -117,23 +117,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Βρει το Foundation Model που τον ενδιαφέρει στον κατάλογο - είτε ιδιόκτητο είτε ανοιχτού κώδικα, φιλτράροντας ανάλογα με την εργασία, την άδεια ή το όνομα. Για να βελτιωθεί η αναζήτηση, τα μοντέλα είναι οργανωμένα σε συλλογές, όπως η συλλογή Azure OpenAI, η συλλογή Hugging Face και άλλες.
 
-![Κατάλογος μοντέλων](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.el.png)
+![Κατάλογος μοντέλων](../../../translated_images/el/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Εξετάσει την κάρτα του μοντέλου, η οποία περιλαμβάνει λεπτομερή περιγραφή της προτεινόμενης χρήσης και των δεδομένων εκπαίδευσης, δείγματα κώδικα και αποτελέσματα αξιολόγησης από τη βιβλιοθήκη εσωτερικών αξιολογήσεων.
 
-![Κάρτα μοντέλου](../../../translated_images/ModelCard.598051692c6e400d.el.png)
+![Κάρτα μοντέλου](../../../translated_images/el/ModelCard.598051692c6e400d.png)
 
 - Συγκρίνει benchmarks μεταξύ μοντέλων και datasets που είναι διαθέσιμα στη βιομηχανία, για να αξιολογήσει ποιο ταιριάζει στο επιχειρηματικό σενάριο, μέσω του πίνακα [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmarks μοντέλων](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.el.png)
+![Benchmarks μοντέλων](../../../translated_images/el/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Προσαρμόσει το μοντέλο σε δεδομένα εκπαίδευσης που έχει ο ίδιος, για να βελτιώσει την απόδοση του μοντέλου σε συγκεκριμένο φόρτο εργασίας, αξιοποιώντας τις δυνατότητες πειραματισμού και παρακολούθησης του Azure AI Studio.
 
-![Fine-tuning μοντέλου](../../../translated_images/FineTuning.aac48f07142e36fd.el.png)
+![Fine-tuning μοντέλου](../../../translated_images/el/FineTuning.aac48f07142e36fd.png)
 
 - Αναπτύξει το αρχικό προεκπαιδευμένο μοντέλο ή την προσαρμοσμένη έκδοση σε απομακρυσμένη πραγματική πρόβλεψη - διαχειριζόμενη υπολογιστική ισχύ - ή σε serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - για να επιτρέψει στις εφαρμογές να το χρησιμοποιούν.
 
-![Ανάπτυξη μοντέλου](../../../translated_images/ModelDeploy.890da48cbd0bccdb.el.png)
+![Ανάπτυξη μοντέλου](../../../translated_images/el/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Δεν είναι όλα τα μοντέλα στον κατάλογο διαθέσιμα για fine-tuning και/ή ανάπτυξη με pay-as-you-go. Ελέγξτε την κάρτα του μοντέλου για λεπτομέρειες σχετικά με τις δυνατότητες και τους περιορισμούς του μοντέλου.
@@ -152,7 +152,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **Fine-tuned μοντέλο**. Εδώ, εκπαιδεύετε περαιτέρω το μοντέλο με τα δικά σας δεδομένα, κάτι που οδηγεί το μοντέλο να είναι πιο ακριβές και να ανταποκρίνεται καλύτερα στις ανάγκες σας, αλλά μπορεί να είναι δαπανηρό.
 
-![Ανάπτυξη LLMs](../../../translated_images/Deploy.18b2d27412ec8c02.el.png)
+![Ανάπτυξη LLMs](../../../translated_images/el/Deploy.18b2d27412ec8c02.png)
 
 Πηγή εικόνας: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

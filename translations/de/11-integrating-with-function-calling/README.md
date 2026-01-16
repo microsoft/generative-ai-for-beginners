@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integration mit Funktionsaufrufen
 
-[![Integration mit Funktionsaufrufen](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.de.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integration mit Funktionsaufrufen](../../../translated_images/de/11-lesson-banner.d78860d3e1f041e2.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Du hast in den vorherigen Lektionen bereits einiges gelernt. Dennoch gibt es noch Raum für Verbesserungen. Einige Punkte, die wir angehen können, sind beispielsweise, wie wir ein konsistenteres Antwortformat erhalten, um die Weiterverarbeitung der Antworten zu erleichtern. Außerdem könnten wir Daten aus anderen Quellen hinzufügen, um unsere Anwendung weiter zu bereichern.
 
@@ -179,7 +179,7 @@ Nun können wir beide Anfragen an das LLM senden und die erhaltene Antwort unter
 
 Wie lösen wir also das Formatierungsproblem? Durch die Verwendung von Funktionsaufrufen können wir sicherstellen, dass wir strukturierte Daten zurückerhalten. Bei der Verwendung von Funktionsaufrufen ruft oder führt das LLM tatsächlich keine Funktionen aus. Stattdessen erstellen wir eine Struktur, der das LLM bei seinen Antworten folgen soll. Wir verwenden diese strukturierten Antworten, um zu wissen, welche Funktion in unseren Anwendungen ausgeführt werden soll.
 
-![Funktionsfluss](../../../translated_images/Function-Flow.083875364af4f4bb.de.png)
+![Funktionsfluss](../../../translated_images/de/Function-Flow.083875364af4f4bb.png)
 
 Wir können dann das, was von der Funktion zurückgegeben wird, an das LLM zurücksenden. Das LLM wird dann in natürlicher Sprache antworten, um die Anfrage des Nutzers zu beantworten.
 
@@ -201,7 +201,7 @@ Der Prozess zur Erstellung eines Funktionsaufrufs umfasst drei Hauptschritte:
 2. **Lesen** der Antwort des Modells, um eine Aktion auszuführen, z. B. eine Funktion oder API-Anfrage ausführen.
 3. **Erneutes Aufrufen** der Chat Completions API mit der Antwort deiner Funktion, um diese Informationen zu verwenden und eine Antwort für den Nutzer zu erstellen.
 
-![LLM-Fluss](../../../translated_images/LLM-Flow.3285ed8caf4796d7.de.png)
+![LLM-Fluss](../../../translated_images/de/LLM-Flow.3285ed8caf4796d7.png)
 
 ### Schritt 1 - Nachrichten erstellen
 

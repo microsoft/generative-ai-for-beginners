@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.en.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Prompt Engineering Fundamentals](../../../translated_images/en/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduction
 This module introduces key concepts and techniques for crafting effective prompts in generative AI models. The way you structure your prompt for an LLM is crucial. A well-designed prompt can lead to higher-quality responses. But what do terms like _prompt_ and _prompt engineering_ actually mean? And how can you improve the prompt _input_ you send to the LLM? These are the questions we aim to answer in this chapter and the next.
@@ -53,7 +53,7 @@ The notebook includes _starter_ exercises, but you are encouraged to add your ow
 
 Want a visual overview of this lesson before diving in? Check out this illustrated guide, which highlights the main topics covered and key takeaways for each. The roadmap takes you from understanding core concepts and challenges to addressing them with relevant prompt engineering techniques and best practices. Note that the "Advanced Techniques" section in this guide refers to content covered in the _next_ chapter of this curriculum.
 
-![Illustrated Guide to Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.en.png)
+![Illustrated Guide to Prompt Engineering](../../../translated_images/en/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Our Startup
 
@@ -94,7 +94,7 @@ An LLM interprets prompts as a _sequence of tokens_, and different models (or ve
 
 To understand tokenization, try tools like the [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) shown below. Paste your prompt into the tool and observe how it is converted into tokens, noting how whitespace and punctuation are handled. This example uses an older LLM (GPT-3), so results may vary with newer models.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.en.png)
+![Tokenization](../../../translated_images/en/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concept: Foundation Models
 
@@ -104,7 +104,7 @@ Want to see how prompt-based completion works? Enter the above prompt into the A
 
 But what if the user wants a response tailored to specific criteria or a task? This is where _instruction-tuned_ LLMs come into play.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.en.png)
+![Base LLM Chat Completion](../../../translated_images/en/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concept: Instruction-Tuned LLMs
 
@@ -118,7 +118,7 @@ Let’s test this—revisit the earlier prompt, but now modify the _system messa
 
 Notice how the response is now tailored to meet the specified goal and format? An educator could directly use this response in their class slides.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.en.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/en/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Why do we need Prompt Engineering?
 
@@ -148,15 +148,15 @@ So, what happens when we test this prompt with different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.en.png)
+![Response 1](../../../translated_images/en/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.en.png)
+![Response 2](../../../translated_images/en/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Response 3**: Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.en.png)
+![Response 3](../../../translated_images/en/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 As expected, each model (or model version) generates slightly different responses due to stochastic behavior and variations in model capabilities. For example, one model targets an 8th-grade audience, while another assumes a high school-level reader. However, all three models produced responses that could convince an uninformed user that the event was real.
 

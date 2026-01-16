@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatiiviseen tekoälyyn perustuvien chat-sovellusten rakentaminen
 
-[![Generatiiviseen tekoälyyn perustuvien chat-sovellusten rakentaminen](../../../translated_images/07-lesson-banner.a279b937f2843833.fi.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatiiviseen tekoälyyn perustuvien chat-sovellusten rakentaminen](../../../translated_images/fi/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
@@ -96,11 +96,11 @@ Yleiset UX-periaatteet pätevät chat-sovelluksiin, mutta koneoppimiseen liittyv
 
 Yksi esimerkki personoinnista on "Mukautetut ohjeet" -asetukset OpenAI:n ChatGPT:ssä. Sen avulla voit antaa tietoja itsestäsi, jotka voivat olla tärkeitä kontekstia kehotteillesi. Tässä on esimerkki mukautetusta ohjeesta.
 
-![Mukautetut ohjeet ChatGPT:ssä](../../../translated_images/custom-instructions.b96f59aa69356fcf.fi.png)
+![Mukautetut ohjeet ChatGPT:ssä](../../../translated_images/fi/custom-instructions.b96f59aa69356fcf.png)
 
 Tämä "profiili" kehottaa ChatGPT:tä luomaan oppituntisuunnitelman linkkijonoista. Huomaa, että ChatGPT ottaa huomioon, että käyttäjä saattaa haluta syvällisemmän oppituntisuunnitelman kokemuksensa perusteella.
 
-![Kehote ChatGPT:ssä oppituntisuunnitelmasta linkkijonoista](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.fi.png)
+![Kehote ChatGPT:ssä oppituntisuunnitelmasta linkkijonoista](../../../translated_images/fi/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsoftin järjestelmäviestikehys suurille kielimalleille
 

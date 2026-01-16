@@ -63,7 +63,7 @@ For at sikre, at dine links fungerer korrekt, kan du bruge VS Code til at tjekke
 
 For eksempel, når du holder musen over et link i dine filer, får du mulighed for at følge linket ved at trykke på **ctrl + klik**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.da.png)
+![VS code follow links screenshot](../../translated_images/da/vscode-follow-link.85520ab6a1237adc.png)
 
 Hvis du klikker på et link, og det ikke virker lokalt, vil det med sikkerhed også udløse workflowet og ikke virke på GitHub.
 
@@ -71,7 +71,7 @@ For at løse dette problem, prøv at skrive linket med hjælp fra VS Code.
 
 Når du skriver `./` eller `../`, vil VS Code foreslå tilgængelige muligheder baseret på det, du har skrevet.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.da.png)
+![VS code select relative path screenshot](../../translated_images/da/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 Følg stien ved at klikke på den ønskede fil eller mappe, og du kan være sikker på, at din sti ikke er brudt.
 
@@ -88,7 +88,7 @@ Hvis det er tilføjet til dine relative stier, vil du bestå dette tjek.
 
 Hvis ikke, kan du få følgende fejl.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.da.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/da/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 For at løse dette problem, prøv at åbne den filsti, som workflowet har fremhævet, og tilføj tracking-ID’et til slutningen af de relative stier.
 
@@ -105,7 +105,7 @@ Hvis det er tilføjet til dine URL’er, vil du bestå dette tjek.
 
 Hvis ikke, kan du få følgende fejl.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.da.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/da/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 For at løse dette problem, prøv at åbne den filsti, som workflowet har fremhævet, og tilføj tracking-ID’et til slutningen af URL’erne.
 
@@ -122,7 +122,7 @@ Hvis det ikke er til stede i dine URL’er, vil du bestå dette tjek.
 
 Hvis ikke, kan du få følgende fejl.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.da.png)
+![GitHub check country locale comment screenshot](../../translated_images/da/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 For at løse dette problem, prøv at åbne den filsti, som workflowet har fremhævet, og fjern landelokaliteten fra URL’erne.
 

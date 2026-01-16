@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kehittyneiden kehotteiden luominen
 
-[![Kehittyneiden kehotteiden luominen](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.fi.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Kehittyneiden kehotteiden luominen](../../../translated_images/fi/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Kerrataanpa edellisen luvun oppeja:
 

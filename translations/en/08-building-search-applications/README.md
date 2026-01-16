@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Building a Search Applications
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/08-lesson-banner.8fff48c566dad08a.en.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduction to Generative AI and Large Language Models](../../../translated_images/en/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Click the image above to watch the video for this lesson_
 
@@ -44,7 +44,7 @@ This lesson includes an Embedding Index of YouTube transcripts from the Microsof
 
 Below is an example of a semantic query for the question "Can you use RStudio with Azure ML?" Notice the YouTube URL includes a timestamp that directs you to the specific part of the video where the answer is found.
 
-![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.en.png)
+![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/en/query-results.bb0480ebf025fac6.webp)
 
 ## What is semantic search?
 
@@ -164,7 +164,7 @@ Open the [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-1054
 
 When you run the notebook, you'll be prompted to enter a query. The input box will look like this:
 
-![Input box for the user to input a query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.en.png)
+![Input box for the user to input a query](../../../translated_images/en/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Great Work! Continue Your Learning
 

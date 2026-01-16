@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Teksti genereerimise rakenduste loomine
 
-[![Teksti genereerimise rakenduste loomine](../../../translated_images/06-lesson-banner.a5c629f990a636c8.et.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Teksti genereerimise rakenduste loomine](../../../translated_images/et/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
 

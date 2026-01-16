@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "de"
 }
 -->
-![Generative KI für Anfänger](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.de.png)
+![Generative KI für Anfänger](../../translated_images/de/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 Lektionen, die alles lehren, was Sie wissen müssen, um Generative KI-Anwendungen zu erstellen
 

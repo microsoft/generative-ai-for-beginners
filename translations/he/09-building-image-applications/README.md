@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # בניית יישומים ליצירת תמונות
 
-[![בניית יישומים ליצירת תמונות](../../../translated_images/09-lesson-banner.906e408c741f4411.he.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![בניית יישומים ליצירת תמונות](../../../translated_images/he/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 יש הרבה יותר ל-LLMs מאשר יצירת טקסט. ניתן גם ליצור תמונות מתיאורים טקסטואליים. שימוש בתמונות כמודל יכול להיות מאוד שימושי בתחומים רבים כמו טכנולוגיה רפואית, אדריכלות, תיירות, פיתוח משחקים ועוד. בפרק זה, נבחן את שני המודלים הפופולריים ביותר ליצירת תמונות, DALL-E ו-Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 הנה דוגמה למה שהתלמידים של Edu4All יכולים ליצור אם הם עובדים בכיתה על מונומנטים:
 
-![סטארטאפ Edu4All, כיתה על מונומנטים, מגדל אייפל](../../../translated_images/startup.94d6b79cc4bb3f5a.he.png)
+![סטארטאפ Edu4All, כיתה על מונומנטים, מגדל אייפל](../../../translated_images/he/startup.94d6b79cc4bb3f5a.png)
 
 באמצעות פרומפט כמו:
 
@@ -273,9 +273,9 @@ _טרנספורמר אוטורגרסיבי_ מגדיר איך מודל מייצ�
   התמונה הבסיסית תכיל רק את הטרקלין עם הבריכה אבל התמונה הסופית תכלול פלמינגו:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.he.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.he.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.he.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/he/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/he/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/he/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **יצירת וריאציות**. הרעיון הוא לקחת תמונה קיימת ולבקש שייצרו וריאציות שלה. כדי ליצור וריאציה, מספקים תמונה ופרומפט טקסטואלי וקוד כמו כך:
@@ -299,11 +299,11 @@ _טרנספורמר אוטורגרסיבי_ מגדיר איך מודל מייצ�
 
 > פרומפט: "ארנב על סוס, מחזיק סוכרייה על מקל, בשדה ערפילי שבו גדלים נרקיסים"
 
-![ארנב על סוס מחזיק סוכרייה על מקל, גרסה 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.he.png)
+![ארנב על סוס מחזיק סוכרייה על מקל, גרסה 1](../../../translated_images/he/v1-generated-image.a295cfcffa3c13c2.png)
 
 עכשיו נריץ את אותו פרומפט שוב כדי לראות שלא נקבל את אותה תמונה פעמיים:
 
-![תמונה שנוצרה של ארנב על סוס](../../../translated_images/v2-generated-image.33f55a3714efe61d.he.png)
+![תמונה שנוצרה של ארנב על סוס](../../../translated_images/he/v2-generated-image.33f55a3714efe61d.png)
 
 כפי שאתם רואים, התמונות דומות, אבל לא זהות. בואו ננסה לשנות את ערך הטמפרטורה ל-0.1 ונראה מה קורה:
 
@@ -332,8 +332,8 @@ generation_response = client.images.create(
 
 עכשיו כשמריצים את הקוד הזה, מקבלים את שתי התמונות הבאות:
 
-- ![טמפרטורה 0, גרסה 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.he.png)
-- ![טמפרטורה 0, גרסה 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.he.png)
+- ![טמפרטורה 0, גרסה 1](../../../translated_images/he/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![טמפרטורה 0, גרסה 2](../../../translated_images/he/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 כאן ניתן לראות בבירור איך התמונות דומות יותר זו לזו.
 

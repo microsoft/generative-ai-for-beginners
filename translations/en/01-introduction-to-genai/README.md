@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduction to Generative AI and Large Language Models
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/01-lesson-banner.2424cfd092f43366.en.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduction to Generative AI and Large Language Models](../../../translated_images/en/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Click the image above to view the video of this lesson)_
 
@@ -43,7 +43,7 @@ Our startup team recognizes that achieving this goal is impossible without lever
 
 Generative AI is expected to revolutionize the way we learn and teach today, offering students virtual teachers available 24/7 to provide vast amounts of information and examples, while enabling teachers to use innovative tools to assess students and provide feedback.
 
-![Five young students looking at a monitor - image by DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.en.png)
+![Five young students looking at a monitor - image by DALLE2](../../../translated_images/en/students-by-DALLE2.b70fddaced1042ee.webp)
 
 To begin, let’s define some basic concepts and terminology that will be used throughout the curriculum.
 
@@ -69,7 +69,7 @@ This technology powered the virtual assistants that emerged in the first decade 
 
 This brings us to today’s Generative AI, which can be considered a subset of deep learning.
 
-![AI, ML, DL and Generative AI](../../../translated_images/AI-diagram.c391fa518451a40d.en.png)
+![AI, ML, DL and Generative AI](../../../translated_images/en/AI-diagram.c391fa518451a40d.webp)
 
 After decades of AI research, a new model architecture—called _Transformer_—overcame the limitations of RNNs by processing much longer text sequences as input. Transformers use an attention mechanism that allows the model to assign different weights to the inputs it receives, focusing more on the most relevant information regardless of its position in the text sequence.
 
@@ -81,7 +81,7 @@ In the next chapter, we’ll explore different types of Generative AI models, bu
 
 - **Tokenizer, text to numbers**: Large Language Models take text as input and produce text as output. However, as statistical models, they work better with numbers than text sequences. Therefore, every input to the model is processed by a tokenizer before being used by the core model. A token is a chunk of text consisting of a variable number of characters, and the tokenizer’s main task is to split the input into an array of tokens. Each token is then mapped to a token index, which is the integer encoding of the original text chunk.
 
-![Example of tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.en.png)
+![Example of tokenization](../../../translated_images/en/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Predicting output tokens**: Given n tokens as input (with max n varying by model), the model predicts one token as output. This token is then added to the input for the next iteration, creating an expanding window pattern that enhances the user experience by generating one (or multiple) sentences as a response. This explains why, if you’ve used ChatGPT, you might notice it sometimes stops mid-sentence.
 
@@ -98,23 +98,23 @@ The input to a large language model is called a prompt, while the output is refe
 
   1. Summarization of articles, books, product reviews, etc., along with extracting insights from unstructured data.
     
-    ![Example of summarization](../../../translated_images/summarization-example.7b7ff97147b3d790.en.png)
+    ![Example of summarization](../../../translated_images/en/summarization-example.7b7ff97147b3d790.webp)
   
   2. Creative ideation and design of articles, essays, assignments, and more.
       
-     ![Example of creative writing](../../../translated_images/creative-writing-example.e24a685b5a543ad1.en.png)
+     ![Example of creative writing](../../../translated_images/en/creative-writing-example.e24a685b5a543ad1.webp)
 
 - A **question**, posed as part of a conversation with an agent.
   
-  ![Example of conversation](../../../translated_images/conversation-example.60c2afc0f595fa59.en.png)
+  ![Example of conversation](../../../translated_images/en/conversation-example.60c2afc0f595fa59.webp)
 
 - A chunk of **text to complete**, implicitly requesting writing assistance.
   
-  ![Example of text completion](../../../translated_images/text-completion-example.cbb0f28403d42752.en.png)
+  ![Example of text completion](../../../translated_images/en/text-completion-example.cbb0f28403d42752.webp)
 
 - A chunk of **code**, accompanied by a request for explanation and documentation, or a comment asking for code to perform a specific task.
   
-  ![Coding example](../../../translated_images/coding-example.50ebabe8a6afff20.en.png)
+  ![Coding example](../../../translated_images/en/coding-example.50ebabe8a6afff20.webp)
 
 The examples above are simple and not intended to fully demonstrate the capabilities of Large Language Models. They aim to showcase the potential of generative AI, particularly in educational contexts.
 

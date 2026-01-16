@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "en"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6.en.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/en/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introduction
 
@@ -33,7 +33,7 @@ AI Agents are an exciting area within Generative AI. However, this excitement ca
 
 AI Agents enable Large Language Models (LLMs) to perform tasks by providing them access to **state** and **tools**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a.en.png)
+![Agent Model](../../../translated_images/en/what-agent.21f2893bdfd01e6a.webp)
 
 Let’s define these terms:
 
@@ -53,7 +53,7 @@ To manage the **state**, LangChain uses a built-in function called `AgentExecuto
 
 The `AgentExecutor` also stores the chat history to provide context for the conversation.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c43716.en.png)
+![Langchain Agents](../../../translated_images/en/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain offers a [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) that can be integrated into your application, allowing the LLM to access them. These tools are created by the community and the LangChain team.
 
@@ -85,7 +85,7 @@ To manage and modify the state, an assistant agent generates Python code to comp
 
 Here’s an example of the process:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584.en.png)
+![AutoGen](../../../translated_images/en/autogen.dee9a25a45fde584.webp)
 
 #### LLM Defined with a System Message
 
@@ -129,7 +129,7 @@ Taskweaver manages the state of the conversation using a `Planner`. The `Planner
 
 To complete these tasks, the `Planner` accesses a collection of tools called `Plugins`. These can be Python classes or general code interpreters. The plugins are stored as embeddings, enabling the LLM to better identify the appropriate plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a.en.png)
+![Taskweaver](../../../translated_images/en/taskweaver.da8559999267715a.webp)
 
 Here’s an example of a plugin for anomaly detection:
 
@@ -143,7 +143,7 @@ The code is verified before execution. Another feature for managing context in T
 
 The final agent framework we’ll explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVIS stands out because it uses an LLM to manage the `state` of the conversation, while the `tools` are other AI models. These specialized AI models perform specific tasks, such as object detection, transcription, or image captioning.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a33.en.png)
+![JARVIS](../../../translated_images/en/jarvis.762ddbadbd1a3a33.webp)
 
 The LLM, as a general-purpose model, receives the user’s request, identifies the specific task, and determines the necessary arguments/data to complete it.
 

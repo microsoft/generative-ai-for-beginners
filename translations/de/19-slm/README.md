@@ -33,7 +33,7 @@ SLMs werden mit großen Mengen an Textdaten trainiert. Während des Trainings le
 
 Die Entwicklung von SLMs entspricht dem wachsenden Bedarf an Modellen, die in ressourcenbeschränkten Umgebungen eingesetzt werden können, wie etwa auf mobilen Geräten oder Edge-Computing-Plattformen, wo vollwertige LLMs aufgrund ihres hohen Ressourcenbedarfs oft unpraktisch sind. Durch den Fokus auf Effizienz schaffen SLMs eine Balance zwischen Leistung und Zugänglichkeit und ermöglichen so eine breitere Anwendung in verschiedenen Bereichen.
 
-![slm](../../../translated_images/slm.4058842744d0444a.de.png)
+![slm](../../../translated_images/de/slm.4058842744d0444a.png)
 
 ## Lernziele  
 
@@ -135,7 +135,7 @@ Wir können das Phi-3/3.5 Familienmodell je nach Szenario einsetzen. Im Gegensat
 
 Wir möchten Phi-3/3.5 in verschiedenen Szenarien einsetzen. Im Folgenden zeigen wir, wie man Phi-3/3.5 je nach Anwendungsszenario nutzt.
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.de.png)
+![phi3](../../../translated_images/de/phi3.655208c3186ae381.png)
 
 ### Unterschiedliche Inferenzmöglichkeiten über Cloud-APIs  
 
@@ -145,9 +145,9 @@ GitHub Models ist der direkteste Weg. Du kannst schnell auf das Phi-3/3.5-Instru
 
 - Demo: Vergleich der Ergebnisse von Phi-3-mini und Phi-3.5-mini in chinesischen Szenarien
 
-![phi3](../../../translated_images/gh1.126c6139713b622b.de.png)
+![phi3](../../../translated_images/de/gh1.126c6139713b622b.png)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178d.de.png)
+![phi35](../../../translated_images/de/gh2.07d7985af66f178d.png)
 
 **Azure AI Studio**  
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "da"
 }
 -->
-[![Integrering med funktionskald](../../../translated_images/14-lesson-banner.066d74a31727ac12.da.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrering med funktionskald](../../../translated_images/da/14-lesson-banner.066d74a31727ac12.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Livscyklussen for Generative AI-applikationer
 
@@ -30,7 +30,7 @@ LLM'er er et nyt værktøj i den kunstige intelligens arsenal, de er utroligt kr
 
 Derfor har vi brug for et nyt paradigme for at tilpasse dette værktøj dynamisk med de rette incitamenter. Vi kan kategorisere ældre AI-apps som "ML Apps" og nyere AI-apps som "GenAI Apps" eller blot "AI Apps", hvilket afspejler den dominerende teknologi og de teknikker, der blev brugt på det tidspunkt. Dette ændrer vores fortælling på flere måder, se på følgende sammenligning.
 
-![LLMOps vs. MLOps sammenligning](../../../translated_images/01-llmops-shift.29bc933cb3bb0080.da.png)
+![LLMOps vs. MLOps sammenligning](../../../translated_images/da/01-llmops-shift.29bc933cb3bb0080.png)
 
 Bemærk, at i LLMOps er vi mere fokuserede på app-udviklerne, bruger integrationer som et nøglepunkt, anvender "Models-as-a-Service" og tænker på følgende punkter for metrikker.
 
@@ -44,7 +44,7 @@ Bemærk, at i LLMOps er vi mere fokuserede på app-udviklerne, bruger integratio
 
 Først, for at forstå livscyklussen og ændringerne, lad os se på den næste infografik.
 
-![LLMOps infografik](../../../translated_images/02-llmops.70a942ead05a7645.da.png)
+![LLMOps infografik](../../../translated_images/da/02-llmops.70a942ead05a7645.png)
 
 Som du kan se, er dette anderledes end de sædvanlige livscyklusser fra MLOps. LLM'er har mange nye krav, såsom promptning, forskellige teknikker til at forbedre kvaliteten (finjustering, RAG, meta-prompter), forskellige vurderinger og ansvar med ansvarlig AI, og endelig nye evalueringsmetrikker (kvalitet, skade, ærlighed, omkostning og latens).
 
@@ -54,7 +54,7 @@ Bemærk, at dette ikke er lineært, men integrerede løkker, iterative og med en
 
 Hvordan kunne vi udforske disse trin? Lad os gå i detaljer om, hvordan vi kan bygge en livscyklus.
 
-![LLMOps arbejdsgang](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cf.da.png)
+![LLMOps arbejdsgang](../../../translated_images/da/03-llm-stage-flows.3a1e1c401235a6cf.png)
 
 Dette kan se lidt kompliceret ud, lad os fokusere på de tre store trin først.
 
@@ -74,11 +74,11 @@ Til værktøjer tilbyder Microsoft [Azure AI Platform](https://azure.microsoft.c
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) giver dig mulighed for at bruge [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio er en webportal, der giver dig mulighed for at udforske modeller, eksempler og værktøjer. Administrere dine ressourcer, UI-udviklingsflows og SDK/CLI-muligheder til kode-først udvikling.
 
-![Azure AI muligheder](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8.da.png)
+![Azure AI muligheder](../../../translated_images/da/04-azure-ai-platform.80203baf03a12fa8.png)
 
 Azure AI giver dig mulighed for at bruge flere ressourcer til at administrere dine operationer, tjenester, projekter, vektorsøgning og databasebehov.
 
-![LLMOps med Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.da.png)
+![LLMOps med Azure AI](../../../translated_images/da/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.png)
 
 Byg, fra Proof-of-Concept (POC) til storskala-applikationer med PromptFlow:
 
@@ -86,7 +86,7 @@ Byg, fra Proof-of-Concept (POC) til storskala-applikationer med PromptFlow:
 - Test og finjuster dine apps for kvalitets-AI med lethed.
 - Brug Azure AI Studio til at integrere og iterere med cloud, push og deploy for hurtig integration.
 
-![LLMOps med PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf.da.png)
+![LLMOps med PromptFlow](../../../translated_images/da/06-llm-promptflow.a183eba07a3a7fdf.png)
 
 ## Fantastisk! Fortsæt din læring!
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prompt Engineering Alapjai
 
-[![Prompt Engineering Alapjai](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.hu.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Prompt Engineering Alapjai](../../../translated_images/hu/04-lesson-banner.a2c90deba7fedacd.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Bevezetés
 Ez a modul a generatív AI modellek hatékony utasításainak létrehozásához szükséges alapvető fogalmakat és technikákat tárgyalja. Az, hogy hogyan fogalmazzuk meg az utasításokat egy LLM számára, szintén számít. Egy gondosan megfogalmazott utasítás jobb minőségű választ eredményezhet. De mit is jelentenek pontosan az olyan kifejezések, mint a _prompt_ és a _prompt engineering_? És hogyan javíthatom az LLM-nek küldött utasítás _bemenetét_? Ezekre a kérdésekre próbálunk választ adni ebben a fejezetben és a következőben.
@@ -53,7 +53,7 @@ A notebook _kezdő_ gyakorlatokat tartalmaz - de bátorítunk, hogy adj hozzá s
 
 Szeretnéd átlátni, miről szól ez a lecke, mielőtt belemerülsz? Nézd meg ezt az illusztrált útmutatót, amely bemutatja a főbb témákat és a legfontosabb tanulságokat, amelyeket érdemes átgondolni mindegyiknél. A lecke útvonala elvezet a főbb fogalmak és kihívások megértésétől azok kezeléséig releváns prompt engineering technikákkal és legjobb gyakorlatokkal. Ne feledd, hogy az útmutató "Haladó technikák" szekciója a tananyag _következő_ fejezetében tárgyalt tartalomra utal.
 
-![Prompt Engineering Illusztrált Útmutató](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.hu.png)
+![Prompt Engineering Illusztrált Útmutató](../../../translated_images/hu/04-prompt-engineering-sketchnote.d5f33336957a1e4f.png)
 
 ## Startupunk
 
@@ -94,7 +94,7 @@ Egy LLM az utasításokat _tokenek sorozataként_ látja, ahol különböző mod
 
 Hogy intuíciót szerezzünk arról, hogyan működik a tokenizáció, próbáljunk ki olyan eszközöket, mint az [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), amelyet az alábbiakban láthatunk. Másold be az utasításodat - és nézd meg, hogyan alakul át tokenekké, figyelve arra, hogyan kezelik a szóköz karaktereket és írásjeleket. Ne feledd, hogy ez a példa egy régebbi LLM-et (GPT-3) mutat - így ha egy újabb modellel próbálkozol, eltérő eredményt kaphatsz.
 
-![Tokenizáció](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.hu.png)
+![Tokenizáció](../../../translated_images/hu/04-tokenizer-example.e71f0a0f70356c5c.png)
 
 ### Fogalom: Alapmodellek
 
@@ -104,7 +104,7 @@ Szeretnéd látni, hogyan működik az utasítás-alapú kimenet? Írd be a fent
 
 De mi van akkor, ha a felhasználó valami konkrétat szeretne látni, amely megfelel bizonyos kritériumoknak vagy feladati célnak? Itt jönnek képbe az _instruction-tuned_ LLM-ek.
 
-![Alap LLM Chat Kimenet](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.hu.png)
+![Alap LLM Chat Kimenet](../../../translated_images/hu/04-playground-chat-base.65b76fcfde0caa67.png)
 
 ### Fogalom: Instruction-Tuned LLM-ek
 
@@ -118,7 +118,7 @@ Próbáljuk ki - térjünk vissza a fenti utasításhoz, de most változtassuk m
 
 Látható, hogy az eredmény most már a kívánt célhoz és formátumhoz igazodik? Egy oktató most már közvetlenül felhasználhatja ezt a választ az osztályának szánt diákok számára készített diákban.
 
-![Instruction-Tuned LLM Chat Kimenet](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.hu.png)
+![Instruction-Tuned LLM Chat Kimenet](../../../translated_images/hu/04-playground-chat-instructions.b30bbfbdf92f2d05.png)
 
 ## Miért van szükségünk Prompt Engineeringre?
 
@@ -135,15 +135,15 @@ Mi történik tehát, ha ezt a kérdést különböző LLM szolgáltatókkal fut
 
 > **Válasz 1**: OpenAI Playground (GPT-35)
 
-![Válasz 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.hu.png)
+![Válasz 1](../../../translated_images/hu/04-fabrication-oai.5818c4e0b2a2678c.png)
 
 > **Válasz 2**: Azure OpenAI Playground (GPT-35)
 
-![Válasz 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.hu.png)
+![Válasz 2](../../../translated_images/hu/04-fabrication-aoai.b14268e9ecf25caf.png)
 
 > **Válasz 3**: Hugging Face Chat Playground (LLama-2)
 
-![Válasz 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.hu.png)
+![Válasz 3](../../../translated_images/hu/04-fabrication-huggingchat.faf82a0a51278956.png)
 
 Ahogy várható volt, minden modell (vagy modellverzió) kissé eltérő válaszokat generál a sztochasztikus viselkedés és a modell képességeinek különbségei miatt. Például az egyik modell egy nyolcadikos közönséget céloz meg, míg a másik egy középiskolás diákot feltételez. Mindhárom modell azonban olyan válaszokat generált, amelyek meggyőzhetik egy tájékozatlan felhasználót arról, hogy az esemény valós.
 

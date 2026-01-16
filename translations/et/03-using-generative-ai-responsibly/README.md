@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatiivse tehisintellekti vastutustundlik kasutamine
 
-[![Generatiivse tehisintellekti vastutustundlik kasutamine](../../../translated_images/03-lesson-banner.1ed56067a452d977.et.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Generatiivse tehisintellekti vastutustundlik kasutamine](../../../translated_images/et/03-lesson-banner.1ed56067a452d977.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot_
 
@@ -85,7 +85,7 @@ Sellised väljundid ei ole ainult destruktiivsed positiivsete tootekogemuste loo
 
 Nüüd, kui oleme tuvastanud vastutustundliku generatiivse tehisintellekti olulisuse, vaatame 4 sammu, mida saame teha, et ehitada oma tehisintellekti lahendusi vastutustundlikult:
 
-![Leevendamise tsükkel](../../../translated_images/mitigate-cycle.babcd5a5658e1775.et.png)
+![Leevendamise tsükkel](../../../translated_images/et/mitigate-cycle.babcd5a5658e1775.png)
 
 ### Potentsiaalsete kahjude hindamine
 
@@ -97,7 +97,7 @@ Kuna meie idufirma ehitab haridustoodet, oleks hea koostada nimekiri haridusega 
 
 Nüüd on aeg leida viise, kuidas mudeli ja selle vastuste põhjustatud kahju ennetada või piirata. Seda saab vaadelda neljal erineval tasandil:
 
-![Leevendamise kihid](../../../translated_images/mitigation-layers.377215120b9a1159.et.png)
+![Leevendamise kihid](../../../translated_images/et/mitigation-layers.377215120b9a1159.png)
 
 - **Mudel**. Õige mudeli valimine õige kasutusjuhtumi jaoks. Suuremad ja keerukamad mudelid, nagu GPT-4, võivad põhjustada suuremat kahjuliku sisu riski, kui neid rakendatakse väiksemates ja spetsiifilisemates kasutusjuhtumites. Oma treeningandmete kasutamine peenhäälestamiseks vähendab samuti kahjuliku sisu riski.
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fr"
 }
 -->
-[![Modèles Open Source](../../../translated_images/16-lesson-banner.6b56555e8404fda1.fr.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Modèles Open Source](../../../translated_images/fr/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduction
 
@@ -41,12 +41,12 @@ Pour cette leçon, nous nous référerons aux modèles comme "modèles open" car
 
 **Coût** - Le coût par token pour utiliser et déployer ces modèles est inférieur à celui des modèles propriétaires. Lors de la création d'applications d'IA générative, il est important d'évaluer le rapport performance/prix en travaillant avec ces modèles pour votre cas d'usage.
 
-![Coût du modèle](../../../translated_images/model-price.3f5a3e4d32ae00b4.fr.png)
+![Coût du modèle](../../../translated_images/fr/model-price.3f5a3e4d32ae00b4.webp)
 Source : Artificial Analysis
 
 **Flexibilité** - Travailler avec des modèles open permet d'être flexible en termes d'utilisation de différents modèles ou de leur combinaison. Un exemple est les [Assistants HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) où un utilisateur peut sélectionner le modèle utilisé directement dans l'interface utilisateur :
 
-![Choisir un modèle](../../../translated_images/choose-model.f095d15bbac92214.fr.png)
+![Choisir un modèle](../../../translated_images/fr/choose-model.f095d15bbac92214.webp)
 
 ## Explorer différents modèles open
 
@@ -74,7 +74,7 @@ Il n'y a pas de réponse unique pour choisir un modèle open. Un bon point de d�
 
 Pour comparer les LLM entre différents types, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) est une autre excellente ressource :
 
-![Qualité du modèle](../../../translated_images/model-quality.aaae1c22e00f7ee1.fr.png)
+![Qualité du modèle](../../../translated_images/fr/model-quality.aaae1c22e00f7ee1.webp)
 Source : Artificial Analysis
 
 Si vous travaillez sur un cas d'usage spécifique, rechercher des versions affinées axées sur le même domaine peut être efficace. Expérimenter avec plusieurs modèles open pour voir comment ils répondent à vos attentes et à celles de vos utilisateurs est une autre bonne pratique.

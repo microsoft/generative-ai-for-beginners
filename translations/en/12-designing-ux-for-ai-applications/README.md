@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Designing UX for AI Applications
 
-[![Designing UX for AI Applications](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.en.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Designing UX for AI Applications](../../../translated_images/en/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Click the image above to view the video of this lesson)_
 
@@ -58,7 +58,7 @@ Being accessible means extending the user experience to individuals with diverse
 
 Being pleasant means the application is enjoyable to use. A positive user experience can encourage users to return to the application, ultimately boosting business revenue.
 
-![image illustrating UX considerations in AI](../../../translated_images/uxinai.d5b4ed690f5cefff.en.png)
+![image illustrating UX considerations in AI](../../../translated_images/en/uxinai.d5b4ed690f5cefff.webp)
 
 Not every challenge can be solved with AI. AI enhances user experience, whether by automating manual tasks or personalizing user interactions.
 
@@ -72,25 +72,25 @@ Two key ways to prioritize trust in design are explainability and control.
 
 When AI informs decisions, such as imparting knowledge to future generations, it is crucial for teachers and parents to understand how AI decisions are made. Explainability refers to understanding how AI applications arrive at their decisions. Designing for explainability involves providing details that clarify how AI generates its output. Users must be aware that the output is produced by AI, not a human. For example, instead of saying "Start chatting with your tutor now," you could say, "Use an AI tutor that adapts to your needs and helps you learn at your pace."
 
-![an app landing page with clear illustration of explainability in AI applications](../../../translated_images/explanability-in-ai.134426a96b498fbf.en.png)
+![an app landing page with clear illustration of explainability in AI applications](../../../translated_images/en/explanability-in-ai.134426a96b498fbf.webp)
 
 Another example is how AI uses user and personal data. For instance, a student persona may have limitations based on their role. The AI might not reveal answers to questions but could guide the user in thinking through how to solve a problem.
 
-![AI replying to questions based on persona](../../../translated_images/solving-questions.b7dea1604de0cbd2.en.png)
+![AI replying to questions based on persona](../../../translated_images/en/solving-questions.b7dea1604de0cbd2.webp)
 
 A crucial aspect of explainability is simplifying explanations. Since students and teachers may not be AI experts, explanations of the application's capabilities and limitations should be clear and easy to understand.
 
-![simplified explanations on AI capabilities](../../../translated_images/simplified-explanations.4679508a406c3621.en.png)
+![simplified explanations on AI capabilities](../../../translated_images/en/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
 Generative AI fosters collaboration between AI and users, allowing users to modify prompts for different results. Additionally, once an output is generated, users should be able to adjust the results, giving them a sense of control. For example, when using Bing, users can tailor their prompts based on format, tone, and length. They can also make changes to the output, as shown below:
 
-![Bing search results with options to modify the prompt and output](../../../translated_images/bing1.293ae8527dbe2789.en.png)
+![Bing search results with options to modify the prompt and output](../../../translated_images/en/bing1.293ae8527dbe2789.webp)
 
 Another feature in Bing that provides users control over the application is the ability to opt in and opt out of the data AI uses. For instance, a student might want to use their notes along with the teacher's resources as study material.
 
-![Bing search results with options to modify the prompt and output](../../../translated_images/bing2.309f4845528a88c2.en.png)
+![Bing search results with options to modify the prompt and output](../../../translated_images/en/bing2.309f4845528a88c2.webp)
 
 > When designing AI applications, intentionality is key to ensuring users do not overtrust the system and set unrealistic expectations of its capabilities. One way to achieve this is by creating friction between prompts and results, reminding users that the system is AI, not a human.
 
@@ -102,7 +102,7 @@ AI applications should be designed to receive and provide feedback. This not onl
 
 Another way to address this is by clearly communicating the system's capabilities and limitations. If a user makes an error by requesting something beyond the AI's capabilities, the application should handle this appropriately, as shown below.
 
-![Giving feedback and handling errors](../../../translated_images/feedback-loops.7955c134429a9466.en.png)
+![Giving feedback and handling errors](../../../translated_images/en/feedback-loops.7955c134429a9466.webp)
 
 System errors are common in applications, especially when users need information outside the AI's scope or when the application has limitations on the number of questions or subjects it can handle. For example, an AI application trained on limited subjects like History and Math may not be able to answer questions about Geography. To address this, the AI system could respond with: "Sorry, our product has been trained with data in the following subjects... I cannot respond to the question you asked."
 

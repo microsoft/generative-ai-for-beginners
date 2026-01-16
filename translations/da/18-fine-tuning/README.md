@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "da"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.da.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/da/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Finjustering af din LLM
 
@@ -32,7 +32,7 @@ Klar? Lad os komme i gang.
 
 Vil du have det store overblik over, hvad vi dækker, før vi dykker ned? Tjek denne illustrerede guide, der beskriver læringsrejsen for denne lektion - fra at lære de grundlæggende begreber og motivationen for finjustering til at forstå processen og bedste praksis for at udføre finjusteringsopgaven. Dette er et fascinerende emne at udforske, så glem ikke at tjekke [Ressourcer](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) siden for yderligere links til at støtte din selvstyrede læringsrejse!
 
-![Illustreret guide til finjustering af sprogmodeller](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.da.png)
+![Illustreret guide til finjustering af sprogmodeller](../../../translated_images/da/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## Hvad er finjustering af sprogmodeller?
 

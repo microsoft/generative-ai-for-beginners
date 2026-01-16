@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 異なるLLMの探索と比較
 
-[![異なるLLMの探索と比較](../../../translated_images/02-lesson-banner.ef94c84979f97f60.ja.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![異なるLLMの探索と比較](../../../translated_images/ja/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _上の画像をクリックして、このレッスンの動画をご覧ください_
 
@@ -59,14 +59,14 @@ LLMには多くの種類があり、選択するモデルは使用目的、デ�
 - **非常に大規模なモデル**。非常に深いニューラルネットワークで構成され、数十億のパラメータでトレーニングされています。
 - **他のモデルの「基盤」として機能することを意図している**。つまり、他のモデルがその上に構築される出発点として使用されることができます。これには微調整が含まれます。
 
-![基盤モデルとLLMの違い](../../../translated_images/FoundationModel.e4859dbb7a825c94.ja.png)
+![基盤モデルとLLMの違い](../../../translated_images/ja/FoundationModel.e4859dbb7a825c94.png)
 
 画像出典: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 この違いをさらに明確にするために、ChatGPTを例にとりましょう。ChatGPTの最初のバージョンを構築するために、GPT-3.5というモデルが基盤モデルとして使用されました。これは、OpenAIがチャット特有のデータを使用して、会話シナリオ（チャットボットなど）で優れた性能を発揮するように特化したGPT-3.5のバージョンを作成したことを意味します。
 
-![基盤モデル](../../../translated_images/Multimodal.2c389c6439e0fc51.ja.png)
+![基盤モデル](../../../translated_images/ja/Multimodal.2c389c6439e0fc51.png)
 
 画像出典: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLMは生成する出力によっても分類できます。
 
 埋め込みは、テキストを数値形式（埋め込み）に変換できるモデルのセットです。埋め込みは、入力テキストの数値表現であり、機械が単語や文の関係を理解しやすくします。また、分類モデルやクラスタリングモデルなど、数値データで性能が向上する他のモデルの入力として使用できます。埋め込みモデルは、転移学習に頻繁に使用されます。転移学習では、データが豊富な代替タスク用にモデルが構築され、その後モデルの重み（埋め込み）が他の下流タスクに再利用されます。このカテゴリの例としては、[OpenAI埋め込み](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)があります。
 
-![埋め込み](../../../translated_images/Embedding.c3708fe988ccf760.ja.png)
+![埋め込み](../../../translated_images/ja/Embedding.c3708fe988ccf760.png)
 
 画像生成モデルは画像を生成するモデルです。これらのモデルは、画像編集、画像合成、画像翻訳に頻繁に使用されます。画像生成モデルは、[LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)のような大規模な画像データセットでトレーニングされ、新しい画像を生成したり、既存の画像をインペインティング、超解像、色付け技術で編集したりするために使用できます。例としては、[DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst)や[Stable Diffusionモデル](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)があります。
 
-![画像生成](../../../translated_images/Image.349c080266a763fd.ja.png)
+![画像生成](../../../translated_images/ja/Image.349c080266a763fd.png)
 
 テキストおよびコード生成モデルは、テキストやコードを生成するモデルです。これらのモデルは、テキスト要約、翻訳、質問応答に頻繁に使用されます。テキスト生成モデルは、[BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)のような大規模なテキストデータセットでトレーニングされ、新しいテキストを生成したり、質問に答えたりするために使用できます。コード生成モデルは、[CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)のように、GitHubなどの大規模なコードデータセットでトレーニングされ、新しいコードを生成したり、既存のコードのバグを修正したりするために使用できます。
 
-![テキストおよびコード生成](../../../translated_images/Text.a8c0cf139e5cc2a0.ja.png)
+![テキストおよびコード生成](../../../translated_images/ja/Text.a8c0cf139e5cc2a0.png)
 
 ### エンコーダ-デコーダとデコーダのみ
 
@@ -123,23 +123,23 @@ LLMの異なるアーキテクチャについて話すために、例えを使�
 
 - カタログ内で興味のある基盤モデルを見つけることができます。プロプライエタリモデルやオープンソースモデルを、タスク、ライセンス、名前でフィルタリングして検索できます。検索性を向上させるために、モデルはAzure OpenAIコレクションやHugging Faceコレクションなどのコレクションに整理されています。
 
-![モデルカタログ](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.ja.png)
+![モデルカタログ](../../../translated_images/ja/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - モデルカードを確認し、使用目的やトレーニングデータの詳細な説明、コードサンプル、内部評価ライブラリでの評価結果を確認できます。
 
-![モデルカード](../../../translated_images/ModelCard.598051692c6e400d.ja.png)
+![モデルカード](../../../translated_images/ja/ModelCard.598051692c6e400d.png)
 
 - 業界で利用可能なモデルやデータセット間のベンチマークを比較し、ビジネスシナリオに最適なものを評価するために[モデルベンチマーク](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)パネルを使用できます。
 
-![モデルベンチマーク](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.ja.png)
+![モデルベンチマーク](../../../translated_images/ja/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - カスタムトレーニングデータでモデルを微調整し、特定のワークロードでのモデル性能を向上させることができます。Azure AI Studioの実験とトラッキング機能を活用します。
 
-![モデル微調整](../../../translated_images/FineTuning.aac48f07142e36fd.ja.png)
+![モデル微調整](../../../translated_images/ja/FineTuning.aac48f07142e36fd.png)
 
 - 元の事前トレーニング済みモデルまたは微調整済みバージョンを、リモートリアルタイム推論（管理されたコンピュート）またはサーバーレスAPIエンドポイント（[従量課金制](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst)）にデプロイし、アプリケーションがそれを利用できるようにします。
 
-![モデルデプロイ](../../../translated_images/ModelDeploy.890da48cbd0bccdb.ja.png)
+![モデルデプロイ](../../../translated_images/ja/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > カタログ内のすべてのモデルが微調整や従量課金制デプロイに対応しているわけではありません。モデルカードでモデルの機能や制限について詳細を確認してください。
@@ -158,7 +158,7 @@ LLMの異なるアーキテクチャについて話すために、例えを使�
 
 - **微調整モデル**。モデルをさらに自分のデータでトレーニングすることで、より正確でニーズに応じた応答を得ることができますが、コストがかかる可能性があります。
 
-![LLMのデプロイ](../../../translated_images/Deploy.18b2d27412ec8c02.ja.png)
+![LLMのデプロイ](../../../translated_images/ja/Deploy.18b2d27412ec8c02.png)
 
 画像出典: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

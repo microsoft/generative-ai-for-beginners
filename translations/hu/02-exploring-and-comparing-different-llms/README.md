@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Különböző LLM-ek felfedezése és összehasonlítása
 
-[![Különböző LLM-ek felfedezése és összehasonlítása](../../../translated_images/02-lesson-banner.ef94c84979f97f60.hu.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Különböző LLM-ek felfedezése és összehasonlítása](../../../translated_images/hu/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Kattints a fenti képre, hogy megnézd a leckéről szóló videót_
 
@@ -59,14 +59,14 @@ Az Alapmodell kifejezést [Stanford kutatók alkották meg](https://arxiv.org/ab
 - **Nagyon nagy modellek**, amelyek nagyon mély neurális hálózatokon alapulnak, és milliárdnyi paraméterrel vannak tanítva.
 - **Általában más modellek „alapjaként” szolgálnak**, ami azt jelenti, hogy kiindulópontként használhatók más modellek építéséhez, amit finomhangolással lehet elérni.
 
-![Alapmodellek és LLM-ek](../../../translated_images/FoundationModel.e4859dbb7a825c94.hu.png)
+![Alapmodellek és LLM-ek](../../../translated_images/hu/FoundationModel.e4859dbb7a825c94.png)
 
 Kép forrása: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 A különbség további tisztázása érdekében vegyük példának a ChatGPT-t. A ChatGPT első verziójának létrehozásához egy GPT-3.5 nevű modell szolgált alapmodellként. Ez azt jelenti, hogy az OpenAI néhány chat-specifikus adatot használt fel egy finomhangolt GPT-3.5 verzió létrehozásához, amelyet kifejezetten arra specializáltak, hogy jól teljesítsen beszélgetési helyzetekben, például chatbotok esetében.
 
-![Alapmodell](../../../translated_images/Multimodal.2c389c6439e0fc51.hu.png)
+![Alapmodell](../../../translated_images/hu/Multimodal.2c389c6439e0fc51.png)
 
 Kép forrása: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ Az LLM-eket az általuk generált kimenet alapján is kategorizálhatjuk.
 
 A beágyazások olyan modellek, amelyek képesek a szöveget numerikus formává, úgynevezett beágyazássá alakítani, amely az input szöveg numerikus reprezentációja. A beágyazások megkönnyítik a gépek számára a szavak vagy mondatok közötti kapcsolatok megértését, és más modellek, például osztályozási vagy klaszterezési modellek bemeneteként is felhasználhatók, amelyek jobban teljesítenek numerikus adatokkal. A beágyazási modelleket gyakran használják transzfer tanulásra, ahol egy modellt egy helyettesítő feladatra építenek, amelyhez bőséges adat áll rendelkezésre, majd a modell súlyait (beágyazásokat) újra felhasználják más downstream feladatokhoz. Példa erre a kategóriára: [OpenAI beágyazások](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Beágyazás](../../../translated_images/Embedding.c3708fe988ccf760.hu.png)
+![Beágyazás](../../../translated_images/hu/Embedding.c3708fe988ccf760.png)
 
 A képgenerálási modellek olyan modellek, amelyek képeket generálnak. Ezeket a modelleket gyakran használják kép szerkesztésére, kép szintézisére és kép átalakítására. A képgenerálási modelleket gyakran nagy képadatbázisokon tanítják, például [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), és új képek generálására vagy meglévő képek szerkesztésére használhatók, például inpainting, szuperfelbontás és színezési technikák segítségével. Példák: [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) és [Stable Diffusion modellek](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Képgenerálás](../../../translated_images/Image.349c080266a763fd.hu.png)
+![Képgenerálás](../../../translated_images/hu/Image.349c080266a763fd.png)
 
 A szöveg- és kódgenerálási modellek olyan modellek, amelyek szöveget vagy kódot generálnak. Ezeket a modelleket gyakran használják szövegösszefoglalásra, fordításra és kérdések megválaszolására. A szöveggenerálási modelleket gyakran nagy szövegadatbázisokon tanítják, például [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), és új szövegek generálására vagy kérdések megválaszolására használhatók. A kódgenerálási modelleket, mint például [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), gyakran nagy kódadatbázisokon tanítják, például GitHubon, és új kód generálására vagy meglévő kód hibáinak javítására használhatók.
 
-![Szöveg- és kódgenerálás](../../../translated_images/Text.a8c0cf139e5cc2a0.hu.png)
+![Szöveg- és kódgenerálás](../../../translated_images/hu/Text.a8c0cf139e5cc2a0.png)
 
 ### Kódoló-dekódoló vs. Csak dekódoló
 
@@ -119,23 +119,23 @@ Az [Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-stud
 
 - Megtalálják az érdeklődésüknek megfelelő alapmodellt a katalógusban - akár saját fejlesztésű, akár nyílt forráskódú -, feladat, licenc vagy név alapján szűrve. A kereshetőség javítása érdekében a modellek gyűjteményekbe vannak rendezve, mint például az Azure OpenAI gyűjtemény, Hugging Face gyűjtemény és mások.
 
-![Modellek katalógusa](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.hu.png)
+![Modellek katalógusa](../../../translated_images/hu/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Áttekintsék a modellkártyát, amely részletes leírást tartalmaz a tervezett felhasználásról és a képzési adatokkal kapcsolatos információkról, kódpéldákat és értékelési eredményeket az Azure belső értékelési könyvtárában.
 
-![Modellkártya](../../../translated_images/ModelCard.598051692c6e400d.hu.png)
+![Modellkártya](../../../translated_images/hu/ModelCard.598051692c6e400d.png)
 
 - Összehasonlítsák az iparágban elérhető modellek és adathalmazok benchmarkjait, hogy felmérjék, melyik felel meg legjobban az üzleti igényeknek, a [Modellek benchmarkjai](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) panelen keresztül.
 
-![Modellek benchmarkjai](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.hu.png)
+![Modellek benchmarkjai](../../../translated_images/hu/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Finomhangolják a modellt egyedi képzési adatokkal, hogy javítsák a modell teljesítményét egy adott munkaterhelésben, kihasználva az Azure AI Studio kísérletezési és nyomonkövetési képességeit.
 
-![Modell finomhangolása](../../../translated_images/FineTuning.aac48f07142e36fd.hu.png)
+![Modell finomhangolása](../../../translated_images/hu/FineTuning.aac48f07142e36fd.png)
 
 - Telepítsék az eredeti előre betanított modellt vagy a finomhangolt verziót távoli valós idejű következtetésre - kezelt számítási környezetre - vagy szerver nélküli API végpontra - [fizetés használat alapján](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) -, hogy lehetővé tegyék az alkalmazások számára a modell használatát.
 
-![Modell telepítése](../../../translated_images/ModelDeploy.890da48cbd0bccdb.hu.png)
+![Modell telepítése](../../../translated_images/hu/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Nem minden modell érhető el jelenleg finomhangolásra és/vagy fizetés használat alapján történő telepítésre a katalógusban. Ellenőrizze a modellkártyát a modell képességeiről és korlátairól szóló részletekért.
@@ -154,7 +154,7 @@ Számos megközelítés létezik, amelyet egy vállalkozás alkalmazhat, hogy el
 
 - **Finomhangolt modell**. Itt a modellt tovább képezték saját adatokon, ami pontosabbá és az igényekre érzékenyebbé tette, bár költséges lehet.
 
-![LLM-ek telepítése](../../../translated_images/Deploy.18b2d27412ec8c02.hu.png)
+![LLM-ek telepítése](../../../translated_images/hu/Deploy.18b2d27412ec8c02.png)
 
 Kép forrása: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hu"
 }
 -->
-![Generative AI kezdőknek](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.hu.png)
+![Generative AI kezdőknek](../../translated_images/hu/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 lecke, amelyek megtanítanak mindent, amit a Generatív AI alkalmazások fejlesztésének megkezdéséhez tudni kell
 

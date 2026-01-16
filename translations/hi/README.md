@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hi"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.hi.png)
+![Generative AI For Beginners](../../translated_images/hi/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 पाठ जो आपको जनरेटिव एआई अनुप्रयोगों के निर्माण की शुरुआत करने के लिए सब कुछ सिखाते हैं
 

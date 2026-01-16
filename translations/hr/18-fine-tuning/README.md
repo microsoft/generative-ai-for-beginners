@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hr"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.hr.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/hr/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fino podešavanje vašeg LLM-a
 
@@ -32,7 +32,7 @@ Spremni? Krenimo.
 
 Želite li dobiti širu sliku o tome što ćemo pokriti prije nego što zaronimo u detalje? Pogledajte ovaj ilustrirani vodič koji opisuje put učenja za ovu lekciju - od učenja osnovnih pojmova i motivacije za fino podešavanje, do razumijevanja procesa i najboljih praksi za izvršavanje zadatka finog podešavanja. Ovo je fascinantna tema za istraživanje, stoga ne zaboravite provjeriti [Resurse](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne poveznice koje će podržati vaše samostalno učenje!
 
-![Ilustrirani vodič za fino podešavanje jezičnih modela](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.hr.png)
+![Ilustrirani vodič za fino podešavanje jezičnih modela](../../../translated_images/hr/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## Što je fino podešavanje jezičnih modela?
 

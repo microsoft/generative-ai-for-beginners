@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introducción a la IA Generativa y los Modelos de Lenguaje Extensos
 
-[![Introducción a la IA Generativa y los Modelos de Lenguaje Extensos](../../../translated_images/01-lesson-banner.2424cfd092f43366.es.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introducción a la IA Generativa y los Modelos de Lenguaje Extensos](../../../translated_images/es/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Haz clic en la imagen de arriba para ver el video de esta lección)_
 
@@ -43,7 +43,7 @@ El equipo de nuestra startup es consciente de que no podremos alcanzar este obje
 
 Se espera que la IA generativa revolucione la forma en que aprendemos y enseñamos hoy en día, con estudiantes que tendrán a su disposición profesores virtuales las 24 horas del día, que proporcionan vastas cantidades de información y ejemplos, y profesores que podrán aprovechar herramientas innovadoras para evaluar a sus estudiantes y brindar retroalimentación.
 
-![Cinco estudiantes jóvenes mirando un monitor - imagen de DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.es.png)
+![Cinco estudiantes jóvenes mirando un monitor - imagen de DALLE2](../../../translated_images/es/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Para comenzar, definamos algunos conceptos básicos y terminología que utilizaremos a lo largo del programa.
 
@@ -69,7 +69,7 @@ Esta es la tecnología que impulsó los asistentes virtuales nacidos en la prime
 
 Así es como llegamos a la IA Generativa actual, que puede considerarse como un subconjunto del aprendizaje profundo.
 
-![IA, ML, DL y IA Generativa](../../../translated_images/AI-diagram.c391fa518451a40d.es.png)
+![IA, ML, DL y IA Generativa](../../../translated_images/es/AI-diagram.c391fa518451a40d.webp)
 
 Después de décadas de investigación en el campo de la IA, una nueva arquitectura de modelo, llamada _Transformer_, superó los límites de las RNNs, siendo capaz de recibir secuencias de texto mucho más largas como entrada. Los Transformers se basan en el mecanismo de atención, que permite al modelo asignar diferentes pesos a las entradas que recibe, ‘prestando más atención’ donde se concentra la información más relevante, independientemente de su orden en la secuencia de texto.
 
@@ -81,7 +81,7 @@ En el próximo capítulo vamos a explorar diferentes tipos de modelos de IA Gene
 
 - **Tokenizador, texto a números**: Los Modelos de Lenguaje Extensos reciben un texto como entrada y generan un texto como salida. Sin embargo, al ser modelos estadísticos, funcionan mucho mejor con números que con secuencias de texto. Es por eso que cada entrada al modelo es procesada por un tokenizador antes de ser utilizada por el núcleo del modelo. Un token es un fragmento de texto – que consiste en un número variable de caracteres, por lo que la tarea principal del tokenizador es dividir la entrada en un arreglo de tokens. Luego, cada token se asigna a un índice de token, que es la codificación entera del fragmento de texto original.
 
-![Ejemplo de tokenización](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.es.png)
+![Ejemplo de tokenización](../../../translated_images/es/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Predicción de tokens de salida**: Dado n tokens como entrada (con un máximo n que varía de un modelo a otro), el modelo es capaz de predecir un token como salida. Este token se incorpora a la entrada de la siguiente iteración, en un patrón de ventana expansiva, lo que permite una mejor experiencia de usuario al obtener una (o varias) oraciones como respuesta. Esto explica por qué, si alguna vez has jugado con ChatGPT, podrías haber notado que a veces parece que se detiene en medio de una oración.
 
@@ -98,23 +98,23 @@ La entrada de un modelo de lenguaje extenso se conoce como un _prompt_, mientras
 
   1. Resumen de un artículo, libro, reseñas de productos y más, junto con la extracción de ideas de datos no estructurados.
     
-    ![Ejemplo de resumen](../../../translated_images/summarization-example.7b7ff97147b3d790.es.png)
+    ![Ejemplo de resumen](../../../translated_images/es/summarization-example.7b7ff97147b3d790.webp)
   
   2. Ideación creativa y diseño de un artículo, ensayo, tarea o más.
       
-     ![Ejemplo de escritura creativa](../../../translated_images/creative-writing-example.e24a685b5a543ad1.es.png)
+     ![Ejemplo de escritura creativa](../../../translated_images/es/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Una **pregunta**, formulada en forma de conversación con un agente.
   
-  ![Ejemplo de conversación](../../../translated_images/conversation-example.60c2afc0f595fa59.es.png)
+  ![Ejemplo de conversación](../../../translated_images/es/conversation-example.60c2afc0f595fa59.webp)
 
 - Un fragmento de **texto para completar**, que implícitamente es una solicitud de asistencia para escribir.
   
-  ![Ejemplo de finalización de texto](../../../translated_images/text-completion-example.cbb0f28403d42752.es.png)
+  ![Ejemplo de finalización de texto](../../../translated_images/es/text-completion-example.cbb0f28403d42752.webp)
 
 - Un fragmento de **código** junto con la solicitud de explicarlo y documentarlo, o un comentario pidiendo generar un código que realice una tarea específica.
   
-  ![Ejemplo de codificación](../../../translated_images/coding-example.50ebabe8a6afff20.es.png)
+  ![Ejemplo de codificación](../../../translated_images/es/coding-example.50ebabe8a6afff20.webp)
 
 Los ejemplos anteriores son bastante simples y no están destinados a ser una demostración exhaustiva de las capacidades de los Modelos de Lenguaje Extensos. Están diseñados para mostrar el potencial de usar IA generativa, en particular pero no limitado a contextos educativos.
 

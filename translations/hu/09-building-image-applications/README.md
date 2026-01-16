@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Képgeneráló alkalmazások építése
 
-[![Képgeneráló alkalmazások építése](../../../translated_images/09-lesson-banner.906e408c741f4411.hu.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Képgeneráló alkalmazások építése](../../../translated_images/hu/09-lesson-banner.906e408c741f4411.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 A nagy nyelvi modellek (LLM-ek) nem csak szöveg generálására alkalmasak. Szöveges leírások alapján képek is létrehozhatók. A képek mint modalitás számos területen hasznosak lehetnek, például az orvostechnológia, építészet, turizmus, játékfejlesztés és más területeken. Ebben a fejezetben megvizsgáljuk a két legnépszerűbb képgeneráló modellt, a DALL-E-t és a Midjourney-t.
 
@@ -43,7 +43,7 @@ A lecke részeként tovább dolgozunk az Edu4All nevű startupunkkal. A diákok 
 
 Például, ha az Edu4All diákjai az osztályban műemlékekről tanulnak, az alábbi képet generálhatják:
 
-![Edu4All startup, osztály a műemlékekről, Eiffel-torony](../../../translated_images/startup.94d6b79cc4bb3f5a.hu.png)
+![Edu4All startup, osztály a műemlékekről, Eiffel-torony](../../../translated_images/hu/startup.94d6b79cc4bb3f5a.png)
 
 egy ilyen prompt segítségével:
 
@@ -272,9 +272,9 @@ Itt egy példa a GPT Image használatával:
   Az alap kép csak a medencés lounge-t tartalmazza, de a végső kép egy flamingót is tartalmaz:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.hu.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.hu.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.hu.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hu/sunlit_lounge.a75a0cb61749db0e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hu/mask.1b2976ccec9e011e.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/hu/sunlit_lounge_result.76ae02957c0bbeb8.png" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Variációk létrehozása**. Az ötlet az, hogy egy meglévő képet veszel, és variációkat kérsz róla. A variáció létrehozásához megadod a képet és egy szöveges promptot, valamint ilyen kódot:
@@ -298,11 +298,11 @@ Nézzünk egy példát arra, hogyan működik a hőmérséklet, ha kétszer futt
 
 > Prompt: "Nyúl lovon, nyalókát tartva, ködös réten, ahol nárciszok nőnek"
 
-![Nyúl lovon, nyalókát tartva, 1. verzió](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.hu.png)
+![Nyúl lovon, nyalókát tartva, 1. verzió](../../../translated_images/hu/v1-generated-image.a295cfcffa3c13c2.png)
 
 Most futtassuk ugyanazt a promptot, hogy lássuk, nem kapunk kétszer ugyanazt a képet:
 
-![Generált kép nyúl lovon](../../../translated_images/v2-generated-image.33f55a3714efe61d.hu.png)
+![Generált kép nyúl lovon](../../../translated_images/hu/v2-generated-image.33f55a3714efe61d.png)
 
 Ahogy látható, a képek hasonlóak, de nem teljesen azonosak. Próbáljuk meg megváltoztatni a hőmérséklet értékét 0,1-re, és nézzük meg, mi történik:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Most, amikor futtatod ezt a kódot, az alábbi két képet kapod:
 
-- ![Hőmérséklet 0, 1. verzió](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.hu.png)
-- ![Hőmérséklet 0, 2. verzió](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.hu.png)
+- ![Hőmérséklet 0, 1. verzió](../../../translated_images/hu/v1-temp-generated-image.a4346e1d2360a056.png)
+- ![Hőmérséklet 0, 2. verzió](../../../translated_images/hu/v2-temp-generated-image.871d0c920dbfb0f1.png)
 
 Itt egyértelműen látható, hogy a képek jobban hasonlítanak egymásra.
 

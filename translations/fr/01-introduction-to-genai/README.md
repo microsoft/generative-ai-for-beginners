@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduction à l'IA générative et aux modèles de langage étendus
 
-[![Introduction à l'IA générative et aux modèles de langage étendus](../../../translated_images/01-lesson-banner.2424cfd092f43366.fr.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduction à l'IA générative et aux modèles de langage étendus](../../../translated_images/fr/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon)_
 
@@ -43,7 +43,7 @@ L'équipe de notre startup est consciente qu'elle ne pourra pas atteindre cet ob
 
 L'IA générative devrait révolutionner la façon dont nous apprenons et enseignons aujourd'hui, avec des étudiants disposant de professeurs virtuels 24 heures sur 24 qui fournissent une quantité énorme d'informations et d'exemples, et des enseignants capables d'utiliser des outils innovants pour évaluer leurs élèves et leur donner des retours.
 
-![Cinq jeunes étudiants regardant un écran - image par DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee.fr.png)
+![Cinq jeunes étudiants regardant un écran - image par DALLE2](../../../translated_images/fr/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Pour commencer, définissons quelques concepts et terminologies de base que nous utiliserons tout au long du programme.
 
@@ -69,7 +69,7 @@ C'est cette technologie qui a alimenté les assistants virtuels nés dans la pre
 
 C'est ainsi que nous sommes arrivés à l'IA générative aujourd'hui, qui peut être considérée comme un sous-ensemble de l'apprentissage profond.
 
-![IA, ML, DL et IA générative](../../../translated_images/AI-diagram.c391fa518451a40d.fr.png)
+![IA, ML, DL et IA générative](../../../translated_images/fr/AI-diagram.c391fa518451a40d.webp)
 
 Après des décennies de recherche dans le domaine de l'IA, une nouvelle architecture de modèle – appelée _Transformer_ – a surmonté les limites des RNNs, étant capable de recevoir des séquences de texte beaucoup plus longues en entrée. Les Transformers sont basés sur le mécanisme d'attention, permettant au modèle de donner des poids différents aux entrées qu'il reçoit, en « prêtant plus d'attention » là où se concentre l'information la plus pertinente, indépendamment de leur ordre dans la séquence de texte.
 
@@ -81,7 +81,7 @@ Dans le prochain chapitre, nous allons explorer différents types de modèles d'
 
 - **Tokenisation, texte en chiffres** : Les modèles de langage étendus reçoivent un texte en entrée et génèrent un texte en sortie. Cependant, étant des modèles statistiques, ils fonctionnent beaucoup mieux avec des chiffres qu'avec des séquences de texte. C'est pourquoi chaque entrée au modèle est traitée par un tokenizer avant d'être utilisée par le modèle principal. Un token est un fragment de texte – composé d'un nombre variable de caractères, donc la tâche principale du tokenizer est de diviser l'entrée en un tableau de tokens. Ensuite, chaque token est associé à un index de token, qui est le codage entier du fragment de texte original.
 
-![Exemple de tokenisation](../../../translated_images/tokenizer-example.80a5c151ee7d1bd4.fr.png)
+![Exemple de tokenisation](../../../translated_images/fr/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Prédiction des tokens de sortie** : Étant donné n tokens en entrée (avec un maximum n variant d'un modèle à l'autre), le modèle est capable de prédire un token en sortie. Ce token est ensuite incorporé dans l'entrée de l'itération suivante, dans un modèle de fenêtre extensible, permettant une meilleure expérience utilisateur en obtenant une (ou plusieurs) phrase(s) comme réponse. Cela explique pourquoi, si vous avez déjà utilisé ChatGPT, vous avez peut-être remarqué qu'il semble parfois s'arrêter au milieu d'une phrase.
 
@@ -98,23 +98,23 @@ L'entrée d'un modèle de langage étendu est connue sous le nom de prompt, tand
 
   1. Résumé d'un article, livre, avis sur un produit, etc., accompagné de l'extraction d'informations à partir de données non structurées.
     
-    ![Exemple de résumé](../../../translated_images/summarization-example.7b7ff97147b3d790.fr.png)
+    ![Exemple de résumé](../../../translated_images/fr/summarization-example.7b7ff97147b3d790.webp)
   
   2. Idéation créative et conception d'un article, d'un essai, d'un devoir ou autre.
       
-     ![Exemple de rédaction créative](../../../translated_images/creative-writing-example.e24a685b5a543ad1.fr.png)
+     ![Exemple de rédaction créative](../../../translated_images/fr/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Une **question**, posée sous forme de conversation avec un agent.
   
-  ![Exemple de conversation](../../../translated_images/conversation-example.60c2afc0f595fa59.fr.png)
+  ![Exemple de conversation](../../../translated_images/fr/conversation-example.60c2afc0f595fa59.webp)
 
 - Un fragment de **texte à compléter**, qui est implicitement une demande d'assistance à la rédaction.
   
-  ![Exemple de complétion de texte](../../../translated_images/text-completion-example.cbb0f28403d42752.fr.png)
+  ![Exemple de complétion de texte](../../../translated_images/fr/text-completion-example.cbb0f28403d42752.webp)
 
 - Un fragment de **code** accompagné d'une demande d'explication et de documentation, ou un commentaire demandant de générer un morceau de code réalisant une tâche spécifique.
   
-  ![Exemple de codage](../../../translated_images/coding-example.50ebabe8a6afff20.fr.png)
+  ![Exemple de codage](../../../translated_images/fr/coding-example.50ebabe8a6afff20.webp)
 
 Les exemples ci-dessus sont assez simples et ne sont pas destinés à être une démonstration exhaustive des capacités des modèles de langage étendus. Ils visent à montrer le potentiel de l'utilisation de l'IA générative, en particulier mais pas exclusivement dans des contextes éducatifs.
 

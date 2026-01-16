@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ساخت برنامه‌های جستجو
 
-[![مقدمه‌ای بر هوش مصنوعی تولیدی و مدل‌های زبان بزرگ](../../../translated_images/08-lesson-banner.8fff48c566dad08a.fa.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![مقدمه‌ای بر هوش مصنوعی تولیدی و مدل‌های زبان بزرگ](../../../translated_images/fa/08-lesson-banner.8fff48c566dad08a.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _برای مشاهده ویدئوی این درس روی تصویر بالا کلیک کنید_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در زیر یک مثال از یک جستجوی معنایی برای سؤال "آیا می‌توان از rstudio با azure ml استفاده کرد؟" آورده شده است. به لینک یوتیوب توجه کنید، خواهید دید که لینک شامل یک زمان‌بندی است که شما را به قسمتی از ویدئو که پاسخ سؤال در آن قرار دارد هدایت می‌کند.
 
-![جستجوی معنایی برای سؤال "آیا می‌توان از rstudio با Azure ML استفاده کرد؟"](../../../translated_images/query-results.bb0480ebf025fac6.fa.png)
+![جستجوی معنایی برای سؤال "آیا می‌توان از rstudio با Azure ML استفاده کرد؟"](../../../translated_images/fa/query-results.bb0480ebf025fac6.png)
 
 ## جستجوی معنایی چیست؟
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 هنگام اجرای دفترچه، از شما خواسته می‌شود که یک پرسش وارد کنید. جعبه ورودی به این شکل خواهد بود:
 
-![جعبه ورودی برای وارد کردن پرسش توسط کاربر](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.fa.png)
+![جعبه ورودی برای وارد کردن پرسش توسط کاربر](../../../translated_images/fa/notebook-search.1e320b9c7fcbb0bc.png)
 
 ## کار عالی! یادگیری خود را ادامه دهید
 

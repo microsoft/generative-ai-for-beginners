@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Menjelajahi dan Membandingkan Berbagai LLM
 
-[![Menjelajahi dan Membandingkan Berbagai LLM](../../../translated_images/02-lesson-banner.ef94c84979f97f60.id.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Menjelajahi dan Membandingkan Berbagai LLM](../../../translated_images/id/02-lesson-banner.ef94c84979f97f60.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klik gambar di atas untuk menonton video pelajaran ini_
 
@@ -59,14 +59,14 @@ Istilah Model Dasar [diciptakan oleh peneliti Stanford](https://arxiv.org/abs/21
 - **Model yang sangat besar**, berdasarkan jaringan saraf yang sangat dalam yang dilatih pada miliaran parameter.
 - **Biasanya dimaksudkan untuk menjadi 'dasar' bagi model lain**, artinya dapat digunakan sebagai titik awal untuk membangun model lain di atasnya, yang dapat dilakukan dengan penyesuaian lebih lanjut.
 
-![Model Dasar versus LLM](../../../translated_images/FoundationModel.e4859dbb7a825c94.id.png)
+![Model Dasar versus LLM](../../../translated_images/id/FoundationModel.e4859dbb7a825c94.png)
 
 Sumber gambar: [Panduan Penting untuk Model Dasar dan Model Bahasa Besar | oleh Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Untuk memperjelas perbedaan ini, mari kita ambil ChatGPT sebagai contoh. Untuk membangun versi pertama ChatGPT, model yang disebut GPT-3.5 berfungsi sebagai model dasar. Ini berarti bahwa OpenAI menggunakan beberapa data spesifik percakapan untuk membuat versi GPT-3.5 yang disesuaikan dan dioptimalkan untuk berkinerja baik dalam skenario percakapan, seperti chatbot.
 
-![Model Dasar](../../../translated_images/Multimodal.2c389c6439e0fc51.id.png)
+![Model Dasar](../../../translated_images/id/Multimodal.2c389c6439e0fc51.png)
 
 Sumber gambar: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM juga dapat dikategorikan berdasarkan output yang dihasilkan.
 
 Embedding adalah serangkaian model yang dapat mengubah teks menjadi bentuk numerik, yang disebut embedding, yaitu representasi numerik dari teks input. Embedding mempermudah mesin untuk memahami hubungan antara kata atau kalimat dan dapat digunakan sebagai input oleh model lain, seperti model klasifikasi atau model pengelompokan yang memiliki kinerja lebih baik pada data numerik. Model embedding sering digunakan untuk pembelajaran transfer, di mana model dibangun untuk tugas pengganti yang memiliki banyak data, dan kemudian bobot model (embedding) digunakan kembali untuk tugas-tugas lain. Contoh kategori ini adalah [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf760.id.png)
+![Embedding](../../../translated_images/id/Embedding.c3708fe988ccf760.png)
 
 Model generasi gambar adalah model yang menghasilkan gambar. Model ini sering digunakan untuk pengeditan gambar, sintesis gambar, dan terjemahan gambar. Model generasi gambar sering dilatih pada dataset besar gambar, seperti [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), dan dapat digunakan untuk menghasilkan gambar baru atau mengedit gambar yang ada dengan teknik inpainting, super-resolution, dan colorization. Contoh termasuk [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) dan [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generasi Gambar](../../../translated_images/Image.349c080266a763fd.id.png)
+![Generasi Gambar](../../../translated_images/id/Image.349c080266a763fd.png)
 
 Model generasi teks dan kode adalah model yang menghasilkan teks atau kode. Model ini sering digunakan untuk ringkasan teks, terjemahan, dan menjawab pertanyaan. Model generasi teks sering dilatih pada dataset besar teks, seperti [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), dan dapat digunakan untuk menghasilkan teks baru, atau menjawab pertanyaan. Model generasi kode, seperti [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), sering dilatih pada dataset besar kode, seperti GitHub, dan dapat digunakan untuk menghasilkan kode baru, atau memperbaiki bug dalam kode yang ada.
 
-![Generasi Teks dan Kode](../../../translated_images/Text.a8c0cf139e5cc2a0.id.png)
+![Generasi Teks dan Kode](../../../translated_images/id/Text.a8c0cf139e5cc2a0.png)
 
 ### Encoder-Decoder versus Decoder-only
 
@@ -123,23 +123,23 @@ Sebagian besar model yang kami sebutkan dalam paragraf sebelumnya (model OpenAI,
 
 - Menemukan Foundation Model yang diinginkan dalam katalog - baik yang bersifat proprietary maupun open source, dengan memfilter berdasarkan tugas, lisensi, atau nama. Untuk meningkatkan pencarian, model-model ini diorganisasi ke dalam koleksi, seperti koleksi Azure OpenAI, koleksi Hugging Face, dan lainnya.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba031.id.png)
+![Model catalog](../../../translated_images/id/AzureAIStudioModelCatalog.3cf8a499aa8ba031.png)
 
 - Meninjau model card, termasuk deskripsi rinci tentang penggunaan yang dimaksudkan dan data pelatihan, contoh kode, serta hasil evaluasi pada pustaka evaluasi internal.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d.id.png)
+![Model card](../../../translated_images/id/ModelCard.598051692c6e400d.png)
 
 - Membandingkan benchmark antar model dan dataset yang tersedia di industri untuk menilai mana yang memenuhi skenario bisnis, melalui panel [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a.id.png)
+![Model benchmarks](../../../translated_images/id/ModelBenchmarks.254cb20fbd06c03a.png)
 
 - Melakukan fine-tuning pada model dengan data pelatihan khusus untuk meningkatkan kinerja model dalam beban kerja tertentu, memanfaatkan kemampuan eksperimen dan pelacakan dari Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fd.id.png)
+![Model fine-tuning](../../../translated_images/id/FineTuning.aac48f07142e36fd.png)
 
 - Mendeploy model pra-latih asli atau versi yang telah di-fine-tune ke inference real-time jarak jauh - managed compute - atau endpoint API tanpa server - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - untuk memungkinkan aplikasi mengonsumsinya.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb.id.png)
+![Model deployment](../../../translated_images/id/ModelDeploy.890da48cbd0bccdb.png)
 
 > [!NOTE]
 > Tidak semua model dalam katalog saat ini tersedia untuk fine-tuning dan/atau deployment pay-as-you-go. Periksa model card untuk detail tentang kemampuan dan keterbatasan model.
@@ -158,7 +158,7 @@ Ada beberapa pendekatan yang dapat digunakan bisnis untuk mendapatkan hasil yang
 
 - **Model yang di-fine-tune**. Di sini, Anda melatih model lebih lanjut dengan data Anda sendiri yang membuat model menjadi lebih tepat dan responsif terhadap kebutuhan Anda, tetapi mungkin memerlukan biaya yang lebih besar.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02.id.png)
+![LLMs deployment](../../../translated_images/id/Deploy.18b2d27412ec8c02.png)
 
 Sumber gambar: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

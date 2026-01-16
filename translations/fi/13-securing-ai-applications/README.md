@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatiivisten tekoälysovellusten suojaaminen
 
-[![Generatiivisten tekoälysovellusten suojaaminen](../../../translated_images/13-lesson-banner.14103e36b4bbf173.fi.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Generatiivisten tekoälysovellusten suojaaminen](../../../translated_images/fi/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Johdanto
 
@@ -121,7 +121,7 @@ Reaaliaikaisten uhkien jäljittelyä pidetään nykyään vakiokäytäntönä ke
 
 > Tekoälyn red teaming -käytäntö on kehittynyt laajempaan merkitykseen: se ei kata ainoastaan tietoturva-aukkojen etsimistä, vaan myös muiden järjestelmävirheiden, kuten mahdollisesti haitallisen sisällön tuottamisen, tutkimista. Tekoälyjärjestelmät tuovat mukanaan uusia riskejä, ja red teaming on keskeinen keino ymmärtää näitä uusia riskejä, kuten kehotusruiskutusta ja perustelemattoman sisällön tuottamista. - [Microsoft AI Red Team rakentaa turvallisempaa tekoälyä](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Ohjeet ja resurssit red teamingille](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.fi.png)]()
+[![Ohjeet ja resurssit red teamingille](../../../translated_images/fi/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 Alla on keskeisiä oivalluksia, jotka ovat muokanneet Microsoftin AI Red Team -ohjelmaa.
 

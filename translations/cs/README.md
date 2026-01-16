@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "cs"
 }
 -->
-![Generative AI pro začátečníky](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.cs.png)
+![Generative AI pro začátečníky](../../translated_images/cs/repo-thumbnailv4-fixed.11f1ce6a85d01461.png)
 
 ### 21 lekcí, které vás naučí vše, co potřebujete vědět pro začátek vytváření aplikací Generativní AI
 

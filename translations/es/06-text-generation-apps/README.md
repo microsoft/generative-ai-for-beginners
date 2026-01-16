@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construcción de Aplicaciones de Generación de Texto
 
-[![Construcción de Aplicaciones de Generación de Texto](../../../translated_images/06-lesson-banner.a5c629f990a636c8.es.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Construcción de Aplicaciones de Generación de Texto](../../../translated_images/es/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Haz clic en la imagen de arriba para ver el video de esta lección)_
 

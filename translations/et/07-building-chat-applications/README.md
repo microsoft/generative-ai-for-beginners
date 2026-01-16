@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatiivse AI-põhiste vestlusrakenduste loomine
 
-[![Generatiivse AI-põhiste vestlusrakenduste loomine](../../../translated_images/07-lesson-banner.a279b937f2843833.et.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatiivse AI-põhiste vestlusrakenduste loomine](../../../translated_images/et/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 Üks selline personaliseerimise näide on OpenAI ChatGPT "Kohandatud juhiste" seaded. See võimaldab teil anda teavet enda kohta, mis võib olla teie käskude jaoks oluline kontekst. Siin on näide kohandatud juhistest.
 
-![Kohandatud juhiste seaded ChatGPT-s](../../../translated_images/custom-instructions.b96f59aa69356fcf.et.png)
+![Kohandatud juhiste seaded ChatGPT-s](../../../translated_images/et/custom-instructions.b96f59aa69356fcf.png)
 
 See "profiil" palub ChatGPT-l koostada õppetund lingitud loendite kohta. Märkige, et ChatGPT arvestab, et kasutaja võib soovida põhjalikumat õppetundi, lähtudes tema kogemustest.
 
-![ChatGPT-s lingitud loendite õppetunni kohta käiv käsk](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.et.png)
+![ChatGPT-s lingitud loendite õppetunni kohta käiv käsk](../../../translated_images/et/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsofti süsteemisõnumite raamistik suurte keelemudelite jaoks
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Andmete täiendatud genereerimine (RAG) ja vektoriandmebaasid
 
-[![Andmete täiendatud genereerimine (RAG) ja vektoriandmebaasid](../../../translated_images/15-lesson-banner.ac49e59506175d4f.et.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Andmete täiendatud genereerimine (RAG) ja vektoriandmebaasid](../../../translated_images/et/15-lesson-banner.ac49e59506175d4f.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Otsingurakenduste õppetunnis õppisime lühidalt, kuidas integreerida oma andmeid suurtesse keelemudelitesse (LLM). Selles õppetunnis süveneme rohkem andmete sidumise kontseptsioonidesse LLM-i rakenduses, protsessi mehhanismidesse ja andmete salvestamise meetoditesse, sealhulgas nii sisukirjeldustesse kui ka tekstidesse.
 
@@ -53,7 +53,7 @@ LLM-i poolt juhitud vestlusrobot töötleb kasutaja sisendeid, et genereerida va
 
 ### Kuidas RAG (Andmete täiendatud genereerimine) töötab
 
-![joonis, mis näitab, kuidas RAG töötab](../../../translated_images/how-rag-works.f5d0ff63942bd3a6.et.png)
+![joonis, mis näitab, kuidas RAG töötab](../../../translated_images/et/how-rag-works.f5d0ff63942bd3a6.png)
 
 Oletame, et soovite juurutada vestlusrobotit, mis loob teie märkmetest teste, siis vajate ühendust teadmistebaasiga. Siin tuleb appi RAG. RAG töötab järgmiselt:
 
@@ -65,7 +65,7 @@ Oletame, et soovite juurutada vestlusrobotit, mis loob teie märkmetest teste, s
 
 - **Täiendatud genereerimine:** LLM täiustab oma vastust leitud andmete põhjal. See võimaldab genereeritud vastusel põhineda mitte ainult eelnevalt treenitud andmetel, vaid ka lisatud konteksti asjakohasel teabel. Leitud andmeid kasutatakse LLM-i vastuste täiendamiseks. Seejärel tagastab LLM vastuse kasutaja küsimusele.
 
-![joonis, mis näitab RAG arhitektuuri](../../../translated_images/encoder-decode.f2658c25d0eadee2.et.png)
+![joonis, mis näitab RAG arhitektuuri](../../../translated_images/et/encoder-decode.f2658c25d0eadee2.png)
 
 RAG-i arhitektuur on rakendatud transformeerijate abil, mis koosnevad kahest osast: kodeerija ja dekodeerija. Näiteks kui kasutaja esitab küsimuse, kodeeritakse sisendtekst vektoriteks, mis hõlmavad sõnade tähendust, ja vektorid dekodeeritakse meie dokumendi indeksisse, et genereerida kasutaja päringu põhjal uus tekst. LLM kasutab nii kodeerija-dekodeerija mudelit, et genereerida väljund.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Kui andmed on osadeks jagatud, saame seejärel teksti sisukirjeldada, kasutades erinevaid sisukirjelduste mudeleid. Mõned mudelid, mida saate kasutada, on: word2vec, ada-002 OpenAI poolt, Azure Computer Vision ja palju muud. Mudeli valik sõltub kasutatavatest keeltest, kodeeritava sisu tüübist (tekst/pildid/audio), sisendi suurusest ja sisukirjelduse väljundi pikkusest.
 
 Näide sisukirjeldatud tekstist, kasutades OpenAI mudelit `text-embedding-ada-002`:
-![kassi sisukirjeldus](../../../translated_images/cat.74cbd7946bc9ca38.et.png)
+![kassi sisukirjeldus](../../../translated_images/et/cat.74cbd7946bc9ca38.png)
 
 ## Otsing ja vektorotsing
 

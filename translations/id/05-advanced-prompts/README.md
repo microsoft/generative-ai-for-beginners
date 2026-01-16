@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membuat Prompt Lanjutan
 
-[![Membuat Prompt Lanjutan](../../../translated_images/05-lesson-banner.522610fd4a2cd82d.id.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Membuat Prompt Lanjutan](../../../translated_images/id/05-lesson-banner.522610fd4a2cd82d.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Mari kita ulas kembali beberapa pembelajaran dari bab sebelumnya:
 

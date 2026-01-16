@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Sicherung Ihrer generativen KI-Anwendungen
 
-[![Sicherung Ihrer generativen KI-Anwendungen](../../../translated_images/13-lesson-banner.14103e36b4bbf173.de.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Sicherung Ihrer generativen KI-Anwendungen](../../../translated_images/de/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Einführung
 
@@ -131,7 +131,7 @@ Die Nachahmung realer Bedrohungen wird mittlerweile als Standardpraxis angesehen
 
 > Die Praxis des AI Red Teaming hat sich weiterentwickelt und umfasst nun eine erweiterte Bedeutung: Sie deckt nicht nur die Untersuchung von Sicherheitslücken ab, sondern auch die Analyse anderer Systemfehler, wie z. B. die Generierung potenziell schädlicher Inhalte. KI-Systeme bringen neue Risiken mit sich, und Red Teaming ist entscheidend, um diese neuartigen Risiken zu verstehen, wie etwa Prompt Injection und die Erzeugung von nicht fundierten Inhalten. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Leitfäden und Ressourcen für Red Teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.de.png)]()
+[![Leitfäden und Ressourcen für Red Teaming](../../../translated_images/de/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 Im Folgenden finden Sie wichtige Erkenntnisse, die das AI Red Team-Programm von Microsoft geprägt haben.
 

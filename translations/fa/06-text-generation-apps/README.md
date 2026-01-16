@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ساخت برنامه‌های تولید متن
 
-[![ساخت برنامه‌های تولید متن](../../../translated_images/06-lesson-banner.a5c629f990a636c8.fa.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![ساخت برنامه‌های تولید متن](../../../translated_images/fa/06-lesson-banner.a5c629f990a636c8.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(برای مشاهده ویدئوی این درس، روی تصویر بالا کلیک کنید)_
 

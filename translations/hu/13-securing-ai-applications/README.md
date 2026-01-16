@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Generatív AI alkalmazások biztonságának megőrzése
 
-[![Generatív AI alkalmazások biztonságának megőrzése](../../../translated_images/13-lesson-banner.14103e36b4bbf173.hu.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Generatív AI alkalmazások biztonságának megőrzése](../../../translated_images/hu/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Bevezetés
 
@@ -115,7 +115,7 @@ A valós fenyegetések szimulálása ma már standard gyakorlatnak számít az e
 
 > Az AI red teaming gyakorlata kibővült, és már nemcsak a biztonsági sebezhetőségek feltárását foglalja magában, hanem más rendszerhibák vizsgálatát is, például potenciálisan káros tartalmak generálását. Az AI rendszerek új kockázatokkal járnak, és a red teaming kulcsfontosságú ezeknek az új kockázatoknak a megértésében, mint például a prompt injection és a megalapozatlan tartalmak előállítása. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Útmutató és források a red teaminghez](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.hu.png)]()
+[![Útmutató és források a red teaminghez](../../../translated_images/hu/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 Az alábbiakban bemutatjuk azokat a kulcsfontosságú felismeréseket, amelyek formálták a Microsoft AI Red Team programját.
 

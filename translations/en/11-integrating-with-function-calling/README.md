@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrating with function calling
 
-[![Integrating with function calling](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.en.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrating with function calling](../../../translated_images/en/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 You’ve learned quite a bit in the previous lessons. However, there’s always room for improvement. Some areas we can focus on include achieving a more consistent response format to simplify downstream processing and incorporating data from external sources to enrich our application.
 
@@ -179,7 +179,7 @@ Now, send both requests to the LLM and examine the responses by accessing them l
 
 How can we solve the formatting problem? By using function calling, we can ensure structured data is returned. When using function calling, the LLM doesn’t actually execute any functions. Instead, we define a structure for the LLM to follow in its responses. We then use these structured responses to determine which function to execute in our applications.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb.en.png)
+![function flow](../../../translated_images/en/Function-Flow.083875364af4f4bb.webp)
 
 The output from the function can then be sent back to the LLM, which will use it to generate a natural language response to the user’s query.
 
@@ -201,7 +201,7 @@ Creating a function call involves three main steps:
 2. **Reading** the model’s response to perform an action, such as executing a function or API call.
 3. **Making** another call to the Chat Completions API with the function’s response to generate a user-friendly reply.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7.en.png)
+![LLM Flow](../../../translated_images/en/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Step 1 - Creating messages
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-[![مدل‌های متن‌باز](../../../translated_images/18-lesson-banner.f30176815b1a5074.fa.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![مدل‌های متن‌باز](../../../translated_images/fa/18-lesson-banner.f30176815b1a5074.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # تنظیم دقیق مدل‌های زبانی بزرگ (LLM)
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 آیا می‌خواهید قبل از ورود به جزئیات، تصویر کلی از آنچه که پوشش خواهیم داد داشته باشید؟ این راهنمای تصویری را بررسی کنید که مسیر یادگیری این درس را توصیف می‌کند - از یادگیری مفاهیم اصلی و انگیزه تنظیم دقیق، تا درک فرآیند و بهترین روش‌ها برای اجرای وظیفه تنظیم دقیق. این موضوعی جذاب برای کاوش است، بنابراین فراموش نکنید که صفحه [منابع](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) را برای لینک‌های اضافی جهت حمایت از مسیر یادگیری خود بررسی کنید!
 
-![راهنمای تصویری تنظیم دقیق مدل‌های زبانی](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.fa.png)
+![راهنمای تصویری تنظیم دقیق مدل‌های زبانی](../../../translated_images/fa/18-fine-tuning-sketchnote.11b21f9ec8a70346.png)
 
 ## تنظیم دقیق برای مدل‌های زبانی چیست؟
 

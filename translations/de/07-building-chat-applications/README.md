@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Aufbau von Chat-Anwendungen mit generativer KI
 
-[![Aufbau von Chat-Anwendungen mit generativer KI](../../../translated_images/07-lesson-banner.a279b937f2843833.de.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Aufbau von Chat-Anwendungen mit generativer KI](../../../translated_images/de/07-lesson-banner.a279b937f2843833.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen)_
 
@@ -96,11 +96,11 @@ Allgemeine UX-Prinzipien gelten auch für Chat-Anwendungen, aber hier sind einig
 
 Ein Beispiel für Personalisierung ist die Einstellung "Benutzerdefinierte Anweisungen" in OpenAI's ChatGPT. Sie ermöglicht es Ihnen, Informationen über sich selbst bereitzustellen, die für Ihre Eingabeaufforderungen wichtig sein könnten. Hier ist ein Beispiel für eine benutzerdefinierte Anweisung.
 
-![Benutzerdefinierte Anweisungen in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcf.de.png)
+![Benutzerdefinierte Anweisungen in ChatGPT](../../../translated_images/de/custom-instructions.b96f59aa69356fcf.png)
 
 Dieses "Profil" fordert ChatGPT auf, einen Lehrplan zu verketteten Listen zu erstellen. Beachten Sie, dass ChatGPT berücksichtigt, dass der Benutzer möglicherweise einen detaillierteren Lehrplan basierend auf ihrer Erfahrung wünscht.
 
-![Eine Eingabeaufforderung in ChatGPT für einen Lehrplan über verkettete Listen](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df.de.png)
+![Eine Eingabeaufforderung in ChatGPT für einen Lehrplan über verkettete Listen](../../../translated_images/de/lesson-plan-prompt.cc47c488cf1343df.png)
 
 ### Microsofts Systemnachrichten-Framework für große Sprachmodelle
 

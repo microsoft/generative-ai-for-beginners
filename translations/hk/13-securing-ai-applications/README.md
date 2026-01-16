@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 保護您的生成式 AI 應用程式
 
-[![保護您的生成式 AI 應用程式](../../../translated_images/13-lesson-banner.14103e36b4bbf173.hk.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![保護您的生成式 AI 應用程式](../../../translated_images/hk/13-lesson-banner.14103e36b4bbf173.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## 簡介
 
@@ -104,7 +104,7 @@ OpenAI 作為 AI 系統的領導者，已設立一系列 _安全評估_ 作為�
 
 > 人工智能紅隊測試的實踐已經演變為更廣泛的含義：它不僅涵蓋探測安全漏洞，還包括探測其他系統故障，例如生成可能有害的內容。人工智能系統帶來了新的風險，而紅隊測試是理解這些新型風險的核心，例如提示注入和生成無根據的內容。 - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![紅隊測試的指導和資源](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.hk.png)]()
+[![紅隊測試的指導和資源](../../../translated_images/hk/13-AI-red-team.642ed54689d7e8a4.png)]()
 
 以下是塑造微軟人工智能紅隊計劃的關鍵洞察。
 

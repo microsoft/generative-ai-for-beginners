@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 例如，當您將滑鼠移到檔案中的連結上時，會提示您按 **ctrl + click** 以跟隨連結。
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.hk.png)
+![VS code follow links screenshot](../../translated_images/hk/vscode-follow-link.85520ab6a1237adc.png)
 
 如果您點擊連結後在本地無法開啟，工作流程也會失敗，GitHub 上同樣無法正常運作。
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 當您輸入 `./` 或 `../` 時，VS Code 會根據您輸入的內容提示可選擇的檔案或資料夾。
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.hk.png)
+![VS code select relative path screenshot](../../translated_images/hk/vscode-select-relative-path.3804eb73c3a9e5f2.png)
 
 點擊想要的檔案或資料夾，即可確保路徑正確無誤。
 
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.hk.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/hk/github-check-paths-missing-tracking-comment.880d4afe03e898ff.png)
 
 要修正此問題，請打開工作流程標示的檔案路徑，並在相對路徑結尾加上追蹤 ID。
 
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若沒有，您可能會看到以下錯誤訊息。
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.hk.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/hk/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.png)
 
 要修正此問題，請打開工作流程標示的檔案路徑，並在 URL 結尾加上追蹤 ID。
 
@@ -123,7 +123,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 若有，您可能會看到以下錯誤訊息。
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.hk.png)
+![GitHub check country locale comment screenshot](../../translated_images/hk/github-check-country-locale-comment.2f4fe93228161dee.png)
 
 要修正此問題，請打開工作流程標示的檔案路徑，並移除 URL 中的國家語系。
 

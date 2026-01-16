@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # UX tervezése AI alkalmazásokhoz
 
-[![UX tervezése AI alkalmazásokhoz](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.hu.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![UX tervezése AI alkalmazásokhoz](../../../translated_images/hu/12-lesson-banner.c53c3c7c802e8f56.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Kattints a fenti képre a leckéhez tartozó videó megtekintéséhez)_
 
@@ -58,7 +58,7 @@ A hozzáférhetőség azt jelenti, hogy a felhasználói élményt kiterjesztjü
 
 A kellemes azt jelenti, hogy az alkalmazás élvezetes a használat során. Egy vonzó felhasználói élmény pozitív hatással lehet a felhasználóra, ösztönözve őt arra, hogy visszatérjen az alkalmazáshoz, és növelve az üzleti bevételt.
 
-![kép, amely az AI UX szempontjait illusztrálja](../../../translated_images/uxinai.d5b4ed690f5cefff.hu.png)
+![kép, amely az AI UX szempontjait illusztrálja](../../../translated_images/hu/uxinai.d5b4ed690f5cefff.png)
 
 Nem minden kihívás oldható meg AI-val. Az AI kiegészíti a felhasználói élményt, legyen szó manuális feladatok automatizálásáról vagy a felhasználói élmények személyre szabásáról.
 
@@ -72,25 +72,25 @@ Két módja van annak, hogy a bizalmat a tervezés középpontjába helyezzük: 
 
 Amikor az AI segít döntéseket hozni, például tudás átadásában a jövő generációinak, kritikus fontosságú, hogy a tanárok és szülők megértsék, hogyan születnek az AI döntései. Ez a magyarázhatóság - annak megértése, hogy az AI alkalmazások hogyan hoznak döntéseket. A magyarázhatóságot szolgáló tervezés magában foglalja azokat a részleteket, amelyek kiemelik, hogyan jutott az AI az eredményhez. A közönségnek tudnia kell, hogy az eredményt AI generálta, nem pedig ember. Például ahelyett, hogy azt mondanánk: "Kezdj el csevegni a tutoroddal most", mondjuk inkább: "Használj AI tutort, amely alkalmazkodik az igényeidhez, és segít a saját tempódban tanulni."
 
-![egy alkalmazás kezdőlapja, amely az AI alkalmazások magyarázhatóságát illusztrálja](../../../translated_images/explanability-in-ai.134426a96b498fbf.hu.png)
+![egy alkalmazás kezdőlapja, amely az AI alkalmazások magyarázhatóságát illusztrálja](../../../translated_images/hu/explanability-in-ai.134426a96b498fbf.png)
 
 Egy másik példa arra, hogy az AI hogyan használja a felhasználói és személyes adatokat. Például egy diák személyisége korlátozásokat jelenthet az AI számára. Az AI nem tudja megadni a válaszokat a kérdésekre, de segíthet a felhasználónak átgondolni, hogyan oldhatja meg a problémát.
 
-![AI válaszol kérdésekre a személyiség alapján](../../../translated_images/solving-questions.b7dea1604de0cbd2.hu.png)
+![AI válaszol kérdésekre a személyiség alapján](../../../translated_images/hu/solving-questions.b7dea1604de0cbd2.png)
 
 A magyarázhatóság egy másik kulcsfontosságú része az egyszerűsített magyarázatok. A diákok és tanárok nem feltétlenül AI szakértők, ezért az alkalmazás képességeiről és korlátairól szóló magyarázatokat egyszerűvé és könnyen érthetővé kell tenni.
 
-![egyszerűsített magyarázatok az AI képességeiről](../../../translated_images/simplified-explanations.4679508a406c3621.hu.png)
+![egyszerűsített magyarázatok az AI képességeiről](../../../translated_images/hu/simplified-explanations.4679508a406c3621.png)
 
 ### Kontroll
 
 A generatív AI együttműködést hoz létre az AI és a felhasználó között, ahol például a felhasználó módosíthatja a promptokat különböző eredmények érdekében. Ezenkívül, ha egy eredmény generálódik, a felhasználók módosíthatják az eredményeket, ami kontrollérzetet ad nekik. Például a Bing használatakor a felhasználó testreszabhatja a promptot formátum, hangnem és hossz alapján. Ezenkívül módosíthatja az eredményt, ahogy az alábbiakban látható:
 
-![Bing keresési eredmények, amelyek lehetőséget adnak a prompt és az eredmény módosítására](../../../translated_images/bing1.293ae8527dbe2789.hu.png)
+![Bing keresési eredmények, amelyek lehetőséget adnak a prompt és az eredmény módosítására](../../../translated_images/hu/bing1.293ae8527dbe2789.png)
 
 A Bing egy másik funkciója, amely lehetővé teszi a felhasználó számára, hogy kontrollálja az alkalmazást, az adatok használatának be- és kikapcsolásának lehetősége. Egy iskolai alkalmazás esetében egy diák szeretné használni a jegyzeteit, valamint a tanárok forrásait tanulási anyagként.
 
-![Bing keresési eredmények, amelyek lehetőséget adnak a prompt és az eredmény módosítására](../../../translated_images/bing2.309f4845528a88c2.hu.png)
+![Bing keresési eredmények, amelyek lehetőséget adnak a prompt és az eredmény módosítására](../../../translated_images/hu/bing2.309f4845528a88c2.png)
 
 > AI alkalmazások tervezésekor szándékosságra van szükség annak biztosítására, hogy a felhasználók ne bízzanak túlzottan az AI-ban, irreális elvárásokat támasztva annak képességeivel szemben. Ennek egyik módja a súrlódás létrehozása a promptok és az eredmények között, emlékeztetve a felhasználót arra, hogy ez AI, nem pedig egy másik ember.
 
@@ -102,7 +102,7 @@ Az AI alkalmazásokat úgy kell megtervezni, hogy képesek legyenek visszajelzé
 
 Egy másik módja ennek az, hogy egyértelműen kommunikáljuk a rendszer képességeit és korlátait. Ha a felhasználó hibát követ el, és valami olyat kér, ami túlmutat az AI képességein, ennek kezelésére is legyen mód, ahogy az alábbiakban látható.
 
-![Visszajelzés adása és hibák kezelése](../../../translated_images/feedback-loops.7955c134429a9466.hu.png)
+![Visszajelzés adása és hibák kezelése](../../../translated_images/hu/feedback-loops.7955c134429a9466.png)
 
 Rendszerhibák gyakoriak az alkalmazásoknál, ahol a felhasználónak szüksége lehet olyan információra, amely kívül esik az AI hatókörén, vagy az alkalmazás korlátozhatja, hogy hány kérdést/témát generálhat összefoglalókat. Például egy AI alkalmazás, amely korlátozott tárgyakra, például történelemre és matematikára van kiképezve, nem tud földrajzi kérdéseket kezelni. Ennek enyhítésére az AI rendszer válaszolhat például így: "Sajnálom, termékünk az alábbi tárgyak adataival lett kiképezve....., nem tudok válaszolni az általad feltett kérdésre."
 

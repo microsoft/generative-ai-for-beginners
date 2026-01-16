@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fondamentaux de l'ingénierie des invites
 
-[![Fondamentaux de l'ingénierie des invites](../../../translated_images/04-lesson-banner.a2c90deba7fedacd.fr.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Fondamentaux de l'ingénierie des invites](../../../translated_images/fr/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduction
 Ce module couvre les concepts et techniques essentiels pour créer des invites efficaces dans les modèles d'IA générative. La manière dont vous rédigez votre invite pour un LLM est également importante. Une invite soigneusement conçue peut améliorer la qualité de la réponse. Mais que signifient exactement des termes comme _invite_ et _ingénierie des invites_ ? Et comment puis-je améliorer l'_entrée_ de l'invite que j'envoie au LLM ? Ce sont les questions auxquelles nous tenterons de répondre dans ce chapitre et le suivant.
@@ -53,7 +53,7 @@ Le notebook est fourni avec des exercices _de départ_ - mais vous êtes encoura
 
 Vous voulez avoir une vue d'ensemble de ce que couvre cette leçon avant de plonger dedans ? Consultez ce guide illustré, qui vous donne une idée des principaux sujets abordés et des points clés à retenir pour chacun. La feuille de route de la leçon vous emmène de la compréhension des concepts de base et des défis à leur résolution avec des techniques et des meilleures pratiques d'ingénierie des invites. Notez que la section "Techniques avancées" de ce guide fait référence au contenu abordé dans le _chapitre suivant_ de ce programme.
 
-![Guide illustré de l'ingénierie des invites](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f.fr.png)
+![Guide illustré de l'ingénierie des invites](../../../translated_images/fr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Notre startup
 
@@ -94,7 +94,7 @@ Un LLM voit les invites comme une _séquence de tokens_ où différents modèles
 
 Pour avoir une intuition sur le fonctionnement de la tokenisation, essayez des outils comme le [Tokeniseur OpenAI](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) montré ci-dessous. Copiez votre invite - et voyez comment elle est convertie en tokens, en prêtant attention à la manière dont les caractères d'espacement et les signes de ponctuation sont traités. Notez que cet exemple montre un ancien LLM (GPT-3) - donc essayer cela avec un modèle plus récent peut produire un résultat différent.
 
-![Tokenisation](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c.fr.png)
+![Tokenisation](../../../translated_images/fr/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concept : Modèles de base
 
@@ -104,7 +104,7 @@ Vous voulez voir comment fonctionne la complétion basée sur les invites ? Entr
 
 Mais que se passe-t-il si l'utilisateur souhaite voir quelque chose de spécifique qui répond à certains critères ou objectifs de tâche ? C'est là que les _LLMs ajustés par instructions_ entrent en jeu.
 
-![Complétion de chat avec un modèle de base](../../../translated_images/04-playground-chat-base.65b76fcfde0caa67.fr.png)
+![Complétion de chat avec un modèle de base](../../../translated_images/fr/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concept : LLMs ajustés par instructions
 
@@ -118,7 +118,7 @@ Essayons-le - revenez à l'invite ci-dessus, mais modifiez maintenant le _messag
 
 Voyez comment le résultat est maintenant ajusté pour refléter l'objectif et le format souhaités ? Un éducateur peut désormais utiliser directement cette réponse dans ses diapositives pour cette classe.
 
-![Complétion de chat avec un LLM ajusté par instructions](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d05.fr.png)
+![Complétion de chat avec un LLM ajusté par instructions](../../../translated_images/fr/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Pourquoi avons-nous besoin de l'ingénierie des invites ?
 
@@ -148,15 +148,15 @@ Alors, que se passe-t-il lorsque nous testons cette requête avec différents fo
 
 > **Réponse 1** : OpenAI Playground (GPT-35)
 
-![Réponse 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c.fr.png)
+![Réponse 1](../../../translated_images/fr/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Réponse 2** : Azure OpenAI Playground (GPT-35)
 
-![Réponse 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf.fr.png)
+![Réponse 2](../../../translated_images/fr/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Réponse 3** : Hugging Face Chat Playground (LLama-2)
 
-![Réponse 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a51278956.fr.png)
+![Réponse 3](../../../translated_images/fr/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Comme prévu, chaque modèle (ou version de modèle) produit des réponses légèrement différentes grâce au comportement stochastique et aux variations de capacités des modèles. Par exemple, un modèle cible un public de niveau collège tandis qu'un autre suppose un étudiant de lycée. Mais les trois modèles ont généré des réponses qui pourraient convaincre un utilisateur non informé que l'événement était réel.
 
