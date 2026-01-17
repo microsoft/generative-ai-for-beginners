@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to join function call
 
-[![How to join function call](../../../translated_images/11-lesson-banner.d78860d3e1f041e2.pcm.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![How to join function call](../../../translated_images/pcm/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 You don learn plenty things for di previous lessons. But we fit still improve am. Some things we fit look into na how we fit get response wey dey consistent so e go easy to work with di response later. Plus, we fit wan add data from other places to make our app better.
 
@@ -179,7 +179,7 @@ Now we fit send di two requests to di LLM and check di response wey we receive b
 
 So how we go solve di formatting problem? By using functional calling, we fit make sure say we dey receive structured data back. When we dey use function calling, di LLM no dey actually call or run any function. Instead, we dey create structure for di LLM to follow for di responses. We go then use di structured responses to sabi wetin function to run for our apps.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb.pcm.png)
+![function flow](../../../translated_images/pcm/Function-Flow.083875364af4f4bb.webp)
 
 We fit then take wetin di function return and send am back to di LLM. Di LLM go then respond using natural language to answer di user's query.
 
@@ -201,7 +201,7 @@ Di process to create function call get 3 main steps:
 2. **Read** di model response to do action like run function or API Call.
 3. **Make** another call to Chat Completions API with di response from your function to use di information to create response for di user.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7.pcm.png)
+![LLM Flow](../../../translated_images/pcm/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Step 1 - create messages
 

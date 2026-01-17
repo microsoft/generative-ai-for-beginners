@@ -63,7 +63,7 @@ To make sure say your links dey work well, use VS code to check am.
 
 Example, wen you hover over any link for your files, VS code go show you say make you press **ctrl + click** to follow di link.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adc.pcm.png)
+![VS code follow links screenshot](../../translated_images/pcm/vscode-follow-link.85520ab6a1237adc.webp)
 
 If you click di link and e no work locally, e mean say e go trigger di workflow and e no go work for GitHub.
 
@@ -71,7 +71,7 @@ To fix dis issue, try type di link wit di help of VS code.
 
 Wen you type `./` or `../` VS code go show you di available options wey match wetin you type.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2.pcm.png)
+![VS code select relative path screenshot](../../translated_images/pcm/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Follow di path by clicking di file or folder wey you want and you go dey sure say your path no break.
 
@@ -88,7 +88,7 @@ If e dey for your relative paths, you go pass dis check.
 
 If e no dey, you fit see dis error.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ff.pcm.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/pcm/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 To fix dis issue, try open di file path wey di workflow highlight and add di tracking ID for di end of di relative paths.
 
@@ -105,7 +105,7 @@ If e dey for your URLs, you go pass dis check.
 
 If e no dey, you fit see dis error.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.pcm.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/pcm/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 To fix dis issue, try open di file path wey di workflow highlight and add di tracking ID for di end of di URLs.
 
@@ -122,7 +122,7 @@ If e no dey for your URLs, you go pass dis check.
 
 If e dey, you fit see dis error.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee.pcm.png)
+![GitHub check country locale comment screenshot](../../translated_images/pcm/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 To fix dis issue, try open di file path wey di workflow highlight and remove di country locale from di URLs.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Build Text Generation Apps
 
-[![How to Build Text Generation Apps](../../../translated_images/06-lesson-banner.a5c629f990a636c8.pcm.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![How to Build Text Generation Apps](../../../translated_images/pcm/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Click di image wey dey up to watch di video for dis lesson)_
 

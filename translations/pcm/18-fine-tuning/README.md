@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pcm"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074.pcm.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/pcm/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # How to Fine-Tune Your LLM
 
@@ -32,7 +32,7 @@ You ready? Make we start.
 
 You wan get di overview of wetin we go talk before we start? Check dis illustrated guide wey dey show di learning journey for dis lesson - from di core concepts and why fine-tuning dey important, to di process and best practices for how to do di fine-tuning work. Dis topic dey very interesting, so no forget to check di [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for more links wey go help you learn by yourself!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a70346.pcm.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/pcm/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Wetin be fine-tuning for language models?
 

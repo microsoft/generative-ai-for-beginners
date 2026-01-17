@@ -33,7 +33,7 @@ SLMs dey train with plenty text data. As dem dey train am, e dey learn di patter
 
 Di way wey dem dey develop SLMs dey match di need for models wey fit work for places wey no get plenty resources, like mobile devices or edge computing platforms. SLMs dey focus on efficiency, so e go balance performance with accessibility, and e go fit work for plenty areas.
 
-![slm](../../../translated_images/slm.4058842744d0444a.pcm.png)
+![slm](../../../translated_images/pcm/slm.4058842744d0444a.webp)
 
 ## Learning Objectives
 
@@ -135,7 +135,7 @@ We fit use di Phi-3/3.5 Family model based on different areas. Unlike LLM, you f
 
 We wan use Phi-3/3.5 for different areas. Next, we go show how to use Phi-3/3.5 based on different areas.
 
-![phi3](../../../translated_images/phi3.655208c3186ae381.pcm.png)
+![phi3](../../../translated_images/pcm/phi3.655208c3186ae381.webp)
 
 ### Inference Difference Cloud's API
 
@@ -145,9 +145,9 @@ GitHub Models na di easiest way. You fit quickly access di Phi-3/3.5-Instruct mo
 
 - Demo:Comparison of di effects of Phi-3-mini and Phi-3.5-mini for Chinese scenarios
 
-![phi3](../../../translated_images/gh1.126c6139713b622b.pcm.png)
+![phi3](../../../translated_images/pcm/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178d.pcm.png)
+![phi35](../../../translated_images/pcm/gh2.07d7985af66f178d.webp)
 
 
 **Azure AI Studio**

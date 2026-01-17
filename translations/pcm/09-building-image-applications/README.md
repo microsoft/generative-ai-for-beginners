@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Build App Wey Dey Generate Image
 
-[![How to Build App Wey Dey Generate Image](../../../translated_images/09-lesson-banner.906e408c741f4411.pcm.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![How to Build App Wey Dey Generate Image](../../../translated_images/pcm/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs no be only for text generation. Dem fit also generate image from text description. To get image as one modality fit help well well for plenty areas like MedTech, architecture, tourism, game development and others. For dis chapter, we go look two popular image generation models, DALL-E and Midjourney.
 
@@ -43,7 +43,7 @@ For dis lesson, we go still dey work with our startup, Edu4All. The students go 
 
 Example, if Edu4All students dey work for class on monuments, dem fit generate something like dis:
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5a.pcm.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/pcm/startup.94d6b79cc4bb3f5a.webp)
 
 with prompt like:
 
@@ -273,9 +273,9 @@ Example with GPT Image:
   The base image go only get lounge with pool but the final image go get flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0e.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011e.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb8.pcm.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pcm/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pcm/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/pcm/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Make we look example of how temperature dey work, by running dis prompt two time
 
 > Prompt : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2.pcm.png)
+![Bunny on a horse holding a lollipop, version 1](../../../translated_images/pcm/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Now make we run the same prompt again to see say we no go get the same image twice:
 
-![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61d.pcm.png)
+![Generated image of bunny on horse](../../../translated_images/pcm/v2-generated-image.33f55a3714efe61d.webp)
 
 As you fit see, the images dey similar, but dem no be the same. Make we try change the temperature value to 0.1 and see wetin go happen:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Now when you run dis code, you go get dis two images:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056.pcm.png)
-- ![Temperature 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1.pcm.png)
+- ![Temperature 0, v1](../../../translated_images/pcm/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0 , v2](../../../translated_images/pcm/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Here you fit clearly see how the images resemble each other more.
 

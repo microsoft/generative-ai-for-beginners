@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Protect Your Generative AI Apps
 
-[![How to Protect Your Generative AI Apps](../../../translated_images/13-lesson-banner.14103e36b4bbf173.pcm.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![How to Protect Your Generative AI Apps](../../../translated_images/pcm/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introduction
 
@@ -131,7 +131,7 @@ To dey act like real-world threats don become normal way wey people dey use to b
 
 > Di way wey AI red teaming dey work don change small: e no just dey look for security wahala, e dey also check for other system problems, like di kind content wey fit cause harm. AI systems get new risks, and red teaming na di main way to sabi di new risks, like prompt injection and creating content wey no get correct base. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Guidance and resources for red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4.pcm.png)]()
+[![Guidance and resources for red teaming](../../../translated_images/pcm/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Below na di main things wey don shape Microsoft AI Red Team program.
 

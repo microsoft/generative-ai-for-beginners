@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Build Search Application
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/08-lesson-banner.8fff48c566dad08a.pcm.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduction to Generative AI and Large Language Models](../../../translated_images/pcm/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Click di image wey dey up to watch di video for dis lesson_
 
@@ -44,7 +44,7 @@ Dis lesson get Embedding Index of di YouTube transcripts for Microsoft [AI Show]
 
 Dis na example of semantic query for di question 'fit person use rstudio with azure ml?'. Check di YouTube url, you go see say di url get timestamp wey go carry you go di part of di video wey answer di question.
 
-![Semantic query for di question "fit person use rstudio with Azure ML"](../../../translated_images/query-results.bb0480ebf025fac6.pcm.png)
+![Semantic query for di question "fit person use rstudio with Azure ML"](../../../translated_images/pcm/query-results.bb0480ebf025fac6.webp)
 
 ## Wetin be semantic search?
 
@@ -163,7 +163,7 @@ Open di [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-10548
 
 When you run di notebook, e go ask you to enter query. Di input box go look like dis:
 
-![Input box for di user to input query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc.pcm.png)
+![Input box for di user to input query](../../../translated_images/pcm/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Good Job! Continue Your Learning
 

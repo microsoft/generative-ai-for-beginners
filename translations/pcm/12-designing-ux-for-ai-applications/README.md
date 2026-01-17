@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Designing UX for AI Applications
 
-[![Designing UX for AI Applications](../../../translated_images/12-lesson-banner.c53c3c7c802e8f56.pcm.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Designing UX for AI Applications](../../../translated_images/pcm/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Click di image wey dey up to watch di video for dis lesson)_
 
@@ -58,7 +58,7 @@ To dey accessible mean say di user experience go reach people wey get different 
 
 To dey pleasant mean say di application go dey enjoyable to use. If di user experience sweet, e go make di user wan come back to use di app again and e fit even increase business revenue.
 
-![image wey dey show UX considerations for AI](../../../translated_images/uxinai.d5b4ed690f5cefff.pcm.png)
+![image wey dey show UX considerations for AI](../../../translated_images/pcm/uxinai.d5b4ed690f5cefff.webp)
 
 No be every problem AI fit solve. AI dey help improve di user experience, whether na to automate manual tasks or personalize user experiences.
 
@@ -72,25 +72,25 @@ Two ways wey you fit make sure say trust dey di center of di design na explainab
 
 When AI dey help make decisions like teaching future generations, e dey very important make teachers and parents understand how AI dey make di decisions. Dis na explainability - to understand how AI applications dey make decisions. To design for explainability, you go add details wey go show how AI take reach di output. People suppose sabi say na AI generate di output, no be human. For example, instead of saying "Start chatting with your tutor now," you fit say "Use AI tutor wey dey adapt to your needs and go help you learn at your pace."
 
-![app landing page wey dey show explainability for AI applications](../../../translated_images/explanability-in-ai.134426a96b498fbf.pcm.png)
+![app landing page wey dey show explainability for AI applications](../../../translated_images/pcm/explanability-in-ai.134426a96b498fbf.webp)
 
 Another example na how AI dey use user and personal data. For example, user wey be student fit get limitations based on di persona. Di AI fit no fit reveal answers to questions but e fit help guide di user to think how dem go solve di problem.
 
-![AI dey reply questions based on persona](../../../translated_images/solving-questions.b7dea1604de0cbd2.pcm.png)
+![AI dey reply questions based on persona](../../../translated_images/pcm/solving-questions.b7dea1604de0cbd2.webp)
 
 One last important part of explainability na to simplify di explanations. Students and teachers no be AI experts, so di explanation of wetin di application fit do or no fit do suppose dey simple and easy to understand.
 
-![simplified explanations on AI capabilities](../../../translated_images/simplified-explanations.4679508a406c3621.pcm.png)
+![simplified explanations on AI capabilities](../../../translated_images/pcm/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
 Generative AI dey create collaboration between AI and di user, where user fit modify prompts to get different results. Plus, after output don generate, users suppose fit modify di results to give dem sense of control. For example, when you dey use Bing, you fit adjust your prompt based on format, tone, and length. Plus, you fit add changes to di output and modify am as e dey show below:
 
-![Bing search results wey get options to modify di prompt and output](../../../translated_images/bing1.293ae8527dbe2789.pcm.png)
+![Bing search results wey get options to modify di prompt and output](../../../translated_images/pcm/bing1.293ae8527dbe2789.webp)
 
 Another feature for Bing wey dey give user control na di ability to opt in and opt out of di data wey AI dey use. For school application, student fit wan use dia notes plus di teachers' resources as revision material.
 
-![Bing search results wey get options to modify di prompt and output](../../../translated_images/bing2.309f4845528a88c2.pcm.png)
+![Bing search results wey get options to modify di prompt and output](../../../translated_images/pcm/bing2.309f4845528a88c2.webp)
 
 > When you dey design AI applications, you go need intentionality to make sure say users no go overtrust di system or get unrealistic expectations of wetin e fit do. One way to do dis na to create small friction between di prompts and di results. Remind di user say na AI dey work, no be human.
 
@@ -102,7 +102,7 @@ AI applications suppose dey built to receive and give feedback. Dis no just dey 
 
 Another way to handle dis na to clearly talk di capabilities and limitations of di system. If user make mistake request something wey dey beyond wetin di AI fit do, di application suppose get way to handle am, like di example wey dey below.
 
-![Giving feedback and handling errors](../../../translated_images/feedback-loops.7955c134429a9466.pcm.png)
+![Giving feedback and handling errors](../../../translated_images/pcm/feedback-loops.7955c134429a9466.webp)
 
 System errors dey common for applications where user fit need help with information wey dey outside di scope of di AI or di application fit get limit on how many questions/subjects user fit generate summaries. For example, AI application wey dem train with data for limited subjects like History and Math fit no fit handle questions about Geography. To solve dis, di AI system fit give response like: "Sorry, our product don train with data for di following subjects....., I no fit respond to di question wey you ask."
 

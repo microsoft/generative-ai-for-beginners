@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pcm"
 }
 -->
-![Generative AI For Beginners](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461.pcm.png)
+![Generative AI For Beginners](../../translated_images/pcm/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 Lessons wey teach everytin wey you need sabi to start build Generative AI applications
 

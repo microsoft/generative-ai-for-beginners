@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pcm"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1.pcm.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/pcm/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introduction
 
@@ -41,12 +41,12 @@ For dis lesson, we go dey call di models "open models" as dem fit no too match d
 
 **Cost** - Di cost per token to use and deploy dis models dey cheaper pass proprietary models. When you dey build Generative AI apps, you suppose check performance vs price when you dey use dis models for your own use case.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b4.pcm.png)
+![Model Cost](../../../translated_images/pcm/model-price.3f5a3e4d32ae00b4.webp)
 Source: Artificial Analysis
 
 **Flexibility** - To work with open models go give you chance to dey flexible to use different models or join dem together. One example na di [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) wey user fit choose di model wey dem wan use directly for di user interface:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac92214.pcm.png)
+![Choose Model](../../../translated_images/pcm/choose-model.f095d15bbac92214.webp)
 
 ## Exploring Different Open Models
 
@@ -74,7 +74,7 @@ No be only one answer dey for how to choose open model. One good place to start 
 
 If you wan compare LLMs across different types, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) na another beta resource:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1.pcm.png)
+![Model Quality](../../../translated_images/pcm/model-quality.aaae1c22e00f7ee1.webp)
 Source: Artificial Analysis
 
 If you dey work on one specific use case, to find fine-tuned versions wey focus on di same area fit work well. To try different open models to see how dem perform based on your and your users' expectations na another good way.
