@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integracija z uporabo klicev funkcij
 
-[![Integracija z uporabo klicev funkcij](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sl.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija z uporabo klicev funkcij](../../../translated_images/sl/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 V prejšnjih lekcijah ste se že veliko naučili. Vendar pa lahko še izboljšamo stvari. Nekatere težave, ki jih lahko naslovimo, vključujejo, kako pridobiti bolj dosleden format odgovorov, da bi olajšali nadaljnjo obdelavo odgovorov. Prav tako bi morda želeli dodati podatke iz drugih virov, da bi še bolj obogatili našo aplikacijo.
 
@@ -179,7 +179,7 @@ Zdaj lahko pošljemo obe zahtevi LLM in preučimo odgovor, ki ga prejmemo, tako 
 
 Kako torej rešimo problem formatiranja? Z uporabo klicev funkcij lahko zagotovimo, da prejmemo strukturirane podatke. Pri uporabi klicev funkcij LLM dejansko ne kliče ali izvaja nobenih funkcij. Namesto tega ustvarimo strukturo, ki ji LLM sledi pri svojih odgovorih. Nato te strukturirane odgovore uporabimo za določitev, katero funkcijo bomo zagnali v naših aplikacijah.
 
-![potek funkcije](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sl.png)
+![potek funkcije](../../../translated_images/sl/Function-Flow.083875364af4f4bb.webp)
 
 Nato lahko vzamemo, kar funkcija vrne, in to pošljemo nazaj LLM. LLM bo nato odgovoril z naravnim jezikom, da odgovori na uporabnikovo poizvedbo.
 
@@ -201,7 +201,7 @@ Postopek ustvarjanja klica funkcije vključuje 3 glavne korake:
 2. **Branje** odgovora modela za izvedbo dejanja, tj. izvedbo funkcije ali API klica.
 3. **Izvedba** še enega klica API-ju za klepet z odgovorom vaše funkcije, da uporabniku posredujete odgovor.
 
-![Potek LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sl.png)
+![Potek LLM](../../../translated_images/sl/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Korak 1 - ustvarjanje sporočil
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Создание чат-приложений с поддержкой генеративного ИИ
 
-[![Создание чат-приложений с поддержкой генеративного ИИ](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ru.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Создание чат-приложений с поддержкой генеративного ИИ](../../../translated_images/ru/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Нажмите на изображение выше, чтобы посмотреть видео урока)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 Одним из примеров персонализации является настройка "Пользовательские инструкции" в ChatGPT от OpenAI. Она позволяет предоставлять информацию о себе, которая может быть важным контекстом для ваших запросов. Вот пример пользовательской инструкции.
 
-![Настройки пользовательских инструкций в ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ru.png)
+![Настройки пользовательских инструкций в ChatGPT](../../../translated_images/ru/custom-instructions.b96f59aa69356fcf.webp)
 
 Этот "профиль" побуждает ChatGPT создать план урока по связным спискам. Обратите внимание, что ChatGPT учитывает, что пользователь может хотеть более углубленный план урока, основываясь на ее опыте.
 
-![Запрос в ChatGPT для создания плана урока о связных списках](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ru.png)
+![Запрос в ChatGPT для создания плана урока о связных списках](../../../translated_images/ru/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Система сообщений Microsoft для больших языковых моделей
 

@@ -68,7 +68,7 @@ Kho này được triển khai trên GitHub pages nên bạn cần rất cẩn t
 
 Ví dụ, khi bạn di chuột qua bất kỳ liên kết nào trong tệp, bạn sẽ được nhắc theo liên kết bằng cách nhấn **ctrl + click**
 
-![Ảnh chụp màn hình VS code theo liên kết](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.vi.png)
+![Ảnh chụp màn hình VS code theo liên kết](../../translated_images/vi/vscode-follow-link.85520ab6a1237adc.webp)
 
 Nếu bạn nhấp vào liên kết mà không hoạt động trên máy cục bộ, chắc chắn nó sẽ gây lỗi trong quy trình và không hoạt động trên GitHub.
 
@@ -76,7 +76,7 @@ Nếu bạn nhấp vào liên kết mà không hoạt động trên máy cục b
 
 Khi bạn gõ `./` hoặc `../`, VS code sẽ gợi ý các lựa chọn phù hợp với những gì bạn đã gõ.
 
-![Ảnh chụp màn hình VS code chọn đường dẫn tương đối](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.vi.png)
+![Ảnh chụp màn hình VS code chọn đường dẫn tương đối](../../translated_images/vi/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Theo đường dẫn bằng cách nhấp vào tệp hoặc thư mục mong muốn và bạn sẽ chắc chắn đường dẫn không bị hỏng.
 
@@ -93,7 +93,7 @@ Nếu có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu không, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.vi.png)
+![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi](../../translated_images/vi/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và thêm ID theo dõi vào cuối liên kết tương đối.
 
@@ -110,7 +110,7 @@ Nếu có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu không, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi URL](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.vi.png)
+![Ảnh chụp màn hình GitHub kiểm tra thiếu ID theo dõi URL](../../translated_images/vi/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và thêm ID theo dõi vào cuối URL.
 
@@ -127,7 +127,7 @@ Nếu không có, bạn sẽ vượt qua kiểm tra này.
 
 Nếu có, bạn có thể nhận lỗi như sau.
 
-![Ảnh chụp màn hình GitHub kiểm tra locale quốc gia trong URL](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.vi.png)
+![Ảnh chụp màn hình GitHub kiểm tra locale quốc gia trong URL](../../translated_images/vi/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Để sửa lỗi này, hãy mở tệp được quy trình làm việc đánh dấu và xóa locale quốc gia khỏi URL.
 

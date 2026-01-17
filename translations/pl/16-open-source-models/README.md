@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pl"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.pl.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/pl/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Wprowadzenie
 
@@ -41,12 +41,12 @@ W tej lekcji będziemy odnosić się do modeli jako "otwarte modele", ponieważ 
 
 **Koszt** – Koszt za token przy używaniu i wdrażaniu tych modeli jest niższy niż w przypadku modeli własnościowych. Budując aplikacje Generative AI, warto rozważyć stosunek wydajności do ceny przy pracy z tymi modelami w swoim przypadku użycia.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.pl.png)
+![Model Cost](../../../translated_images/pl/model-price.3f5a3e4d32ae00b4.webp)
 Źródło: Artificial Analysis
 
 **Elastyczność** – Praca z otwartymi modelami pozwala na elastyczność w zakresie używania różnych modeli lub ich łączenia. Przykładem są [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), gdzie użytkownik może wybrać model bezpośrednio w interfejsie użytkownika:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.pl.png)
+![Choose Model](../../../translated_images/pl/choose-model.f095d15bbac92214.webp)
 
 ## Przegląd różnych otwartych modeli
 
@@ -74,7 +74,7 @@ Nie ma jednej odpowiedzi na wybór otwartego modelu. Dobrym punktem startowym je
 
 Przy porównywaniu LLM różnych typów, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) jest kolejnym świetnym źródłem:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.pl.png)
+![Model Quality](../../../translated_images/pl/model-quality.aaae1c22e00f7ee1.webp)
 Źródło: Artificial Analysis
 
 Pracując nad konkretnym przypadkiem użycia, warto poszukać wersji fine-tuned skoncentrowanych na tej samej dziedzinie. Eksperymentowanie z wieloma otwartymi modelami, aby zobaczyć, jak spełniają oczekiwania twoje i twoich użytkowników, to również dobra praktyka.

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Δημιουργία Προχωρημένων Προτροπών
 
-[![Δημιουργία Προχωρημένων Προτροπών](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.el.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Δημιουργία Προχωρημένων Προτροπών](../../../translated_images/el/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Ας ανακεφαλαιώσουμε μερικά από τα μαθήματα του προηγούμενου κεφαλαίου:
 

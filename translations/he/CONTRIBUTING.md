@@ -64,7 +64,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 לדוגמה, כשאתה מרחף עם העכבר מעל קישור בקבצים, תוכל ללחוץ על **ctrl + click** כדי לעקוב אחר הקישור.
 
-![צילום מסך של VS code למעקב אחרי קישורים](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.he.png)
+![צילום מסך של VS code למעקב אחרי קישורים](../../translated_images/he/vscode-follow-link.85520ab6a1237adc.webp)
 
 אם תלחץ על קישור והוא לא יעבוד במחשב המקומי, סביר להניח שהתהליך יכשל ולא יעבוד גם ב-GitHub.
 
@@ -72,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כשאתה מקליד `./` או `../`, VS Code יציג אפשרויות לבחירה בהתאם למה שהקלדת.
 
-![צילום מסך של VS code לבחירת נתיב יחסי](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.he.png)
+![צילום מסך של VS code לבחירת נתיב יחסי](../../translated_images/he/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 עקוב אחרי הנתיב על ידי לחיצה על הקובץ או התיקיה הרצויים ותהיה בטוח שהנתיב שלך תקין.
 
@@ -89,7 +89,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם לא, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על חוסר מעקב בקישורים יחסיים](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.he.png)
+![צילום מסך של תגובת GitHub על חוסר מעקב בקישורים יחסיים](../../translated_images/he/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והוסף את מזהה המעקב בסוף הנתיב היחסי.
 
@@ -106,7 +106,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם לא, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על חוסר מעקב בכתובות URL](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.he.png)
+![צילום מסך של תגובת GitHub על חוסר מעקב בכתובות URL](../../translated_images/he/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והוסף את מזהה המעקב בסוף כתובת ה-URL.
 
@@ -123,7 +123,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אם קיימת, תקבל את השגיאה הבאה.
 
-![צילום מסך של תגובת GitHub על קידומת שפה בכתובות URL](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.he.png)
+![צילום מסך של תגובת GitHub על קידומת שפה בכתובות URL](../../translated_images/he/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 כדי לתקן, פתח את הנתיב שהודגש בתהליך העבודה והסר את קידומת השפה מהכתובות.
 

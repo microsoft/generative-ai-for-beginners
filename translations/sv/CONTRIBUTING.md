@@ -68,7 +68,7 @@ För att säkerställa att dina länkar fungerar korrekt, använd helt enkelt VS
 
 Till exempel, när du hovrar över en länk i dina filer får du en prompt att följa länken genom att trycka på **ctrl + klick**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.sv.png)
+![VS code follow links screenshot](../../translated_images/sv/vscode-follow-link.85520ab6a1237adc.webp)
 
 Om du klickar på en länk och den inte fungerar lokalt, kommer det med största sannolikhet att trigga arbetsflödet och inte fungera på GitHub.
 
@@ -76,7 +76,7 @@ För att åtgärda detta, försök skriva länken med hjälp av VS Code.
 
 När du skriver `./` eller `../` kommer VS Code att föreslå tillgängliga alternativ baserat på vad du skrivit.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.sv.png)
+![VS code select relative path screenshot](../../translated_images/sv/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Följ sökvägen genom att klicka på önskad fil eller mapp och du kan vara säker på att din sökväg inte är bruten.
 
@@ -93,7 +93,7 @@ Om det är tillagt i dina relativa sökvägar klarar du kontrollen.
 
 Om inte, kan du få följande felmeddelande.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.sv.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/sv/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 För att åtgärda detta, öppna filvägen som arbetsflödet markerat och lägg till spårnings-ID i slutet av de relativa sökvägarna.
 
@@ -110,7 +110,7 @@ Om det är tillagt i dina URL:er klarar du kontrollen.
 
 Om inte, kan du få följande felmeddelande.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.sv.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/sv/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 För att åtgärda detta, öppna filvägen som arbetsflödet markerat och lägg till spårnings-ID i slutet av URL:erna.
 
@@ -127,7 +127,7 @@ Om det inte finns i dina URL:er klarar du kontrollen.
 
 Om inte, kan du få följande felmeddelande.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.sv.png)
+![GitHub check country locale comment screenshot](../../translated_images/sv/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 För att åtgärda detta, öppna filvägen som arbetsflödet markerat och ta bort landslokalen från URL:erna.
 

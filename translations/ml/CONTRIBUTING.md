@@ -66,7 +66,7 @@ Generative AI for Beginners റിപോസിറ്ററിയിൽ മാറ
 
 ഉദാഹരണത്തിന്, നിങ്ങളുടെ ഫയലിലെ ഏതെങ്കിലും ലിങ്കിൽ ഹോവർ ചെയ്യുമ്പോൾ **ctrl + click** അമർത്തി ലിങ്ക് പിന്തുടരാൻ പ്രോംപ്റ്റ് കാണിക്കും.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.ml.png)
+![VS code follow links screenshot](../../translated_images/ml/vscode-follow-link.85520ab6a1237adc.webp)
 
 ലിങ്ക് ക്ലിക്ക് ചെയ്ത് ലോക്കലായി പ്രവർത്തിക്കാത്ത പക്ഷം, വർക്ക്‌ഫ്ലോ ട്രിഗർ ചെയ്ത് GitHub-ലും പ്രവർത്തിക്കില്ല.
 
@@ -74,7 +74,7 @@ Generative AI for Beginners റിപോസിറ്ററിയിൽ മാറ
 
 `./` അല്ലെങ്കിൽ `../` ടൈപ്പ് ചെയ്യുമ്പോൾ, VS കോഡ് നിങ്ങൾ ടൈപ്പ് ചെയ്തതനുസരിച്ച് ലഭ്യമായ ഓപ്ഷനുകളിൽ നിന്ന് തിരഞ്ഞെടുക്കാൻ പ്രോംപ്റ്റ് നൽകും.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.ml.png)
+![VS code select relative path screenshot](../../translated_images/ml/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 ആവശ്യമായ ഫയൽ അല്ലെങ്കിൽ ഫോൾഡർ ക്ലിക്ക് ചെയ്ത് പാത പിന്തുടരുക, പാത തകരാറില്ലെന്ന് ഉറപ്പാക്കാം.
 
@@ -91,7 +91,7 @@ GitHub പേജുകളിൽ ഡിപ്ലോയുചെയ്യപ്പ
 
 ഇല്ലെങ്കിൽ, താഴെ കാണുന്ന പിശക് വരാം.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.ml.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/ml/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 ഈ പ്രശ്നം പരിഹരിക്കാൻ, വർക്ക്‌ഫ്ലോ ഹൈലൈറ്റ് ചെയ്ത ഫയൽ പാത തുറന്ന് ട്രാക്കിംഗ് ഐഡി സാപേക്ഷ പാതകളുടെ അവസാനം ചേർക്കുക.
 
@@ -108,7 +108,7 @@ URL കളിൽ `?wt.mc_id=` എന്ന ടെക്സ്റ്റ് അവ
 
 ഇല്ലെങ്കിൽ, താഴെ കാണുന്ന പിശക് വരാം.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.ml.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/ml/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 ഈ പ്രശ്നം പരിഹരിക്കാൻ, വർക്ക്‌ഫ്ലോ ഹൈലൈറ്റ് ചെയ്ത ഫയൽ പാത തുറന്ന് URL കളുടെ അവസാനം ട്രാക്കിംഗ് ഐഡി ചേർക്കുക.
 
@@ -125,7 +125,7 @@ URL കളിൽ `/en-us/` അല്ലെങ്കിൽ `/en/` അല്ലെ
 
 ഇല്ലെങ്കിൽ, താഴെ കാണുന്ന പിശക് വരാം.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.ml.png)
+![GitHub check country locale comment screenshot](../../translated_images/ml/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 ഈ പ്രശ്നം പരിഹരിക്കാൻ, വർക്ക്‌ഫ്ലോ ഹൈലൈറ്റ് ചെയ്ത ഫയൽ പാത തുറന്ന് URL കളിൽ നിന്നുള്ള രാജ്യ ലൊക്കൽ നീക്കം ചെയ്യുക.
 

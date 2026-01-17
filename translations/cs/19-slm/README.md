@@ -33,7 +33,7 @@ SLM jsou trénovány na obrovském množství textových dat. Během tréninku s
 
 Vývoj SLM odpovídá rostoucí potřebě modelů, které lze nasadit v prostředích s omezenými zdroji, jako jsou mobilní zařízení nebo edge computing platformy, kde by plnohodnotné LLM byly kvůli vysokým nárokům nepraktické. Díky zaměření na efektivitu SLM vyvažují výkon a dostupnost, což umožňuje širší využití v různých oblastech.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.cs.png)
+![slm](../../../translated_images/cs/slm.4058842744d0444a.webp)
 
 ## Výukové cíle
 
@@ -135,7 +135,7 @@ Modely rodiny Phi-3/3.5 můžeme používat podle různých scénářů. Na rozd
 
 Chceme využít Phi-3/3.5 v různých scénářích. Následující část ukáže použití Phi-3/3.5 podle různých scénářů.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.cs.png)
+![phi3](../../../translated_images/cs/phi3.655208c3186ae381.webp)
 
 ### Rozdíly v inferenci přes cloudové API
 
@@ -145,9 +145,9 @@ GitHub Models je nejpřímější cesta. Můžete rychle získat přístup k mod
 
 - Demo: Porovnání efektů Phi-3-mini a Phi-3.5-mini v čínských scénářích
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.cs.png)
+![phi3](../../../translated_images/cs/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.cs.png)
+![phi35](../../../translated_images/cs/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

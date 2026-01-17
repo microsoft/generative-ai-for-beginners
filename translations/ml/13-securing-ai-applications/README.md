@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # നിങ്ങളുടെ ജനറേറ്റീവ് AI ആപ്ലിക്കേഷനുകൾ സുരക്ഷിതമാക്കൽ
 
-[![നിങ്ങളുടെ ജനറേറ്റീവ് AI ആപ്ലിക്കേഷനുകൾ സുരക്ഷിതമാക്കൽ](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ml.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![നിങ്ങളുടെ ജനറേറ്റീവ് AI ആപ്ലിക്കേഷനുകൾ സുരക്ഷിതമാക്കൽ](../../../translated_images/ml/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## പരിചയം
 

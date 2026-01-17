@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş
 
-[![Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.tr.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
@@ -43,7 +43,7 @@ Girişim ekibimiz, bu hedefe modern zamanların en güçlü araçlarından biri 
 
 Üretken yapay zekanın, öğrencilerin 24 saat boyunca sanal öğretmenlere erişebildiği, büyük miktarda bilgi ve örnekler sunan ve öğretmenlerin öğrencilerini değerlendirmek ve geri bildirimde bulunmak için yenilikçi araçlardan yararlanabildiği günümüzde öğrenme ve öğretme biçimimizi devrimleştirmesi bekleniyor.
 
-![Beş genç öğrenci bir monitöre bakıyor - DALLE2 tarafından oluşturulan görüntü](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.tr.png)
+![Beş genç öğrenci bir monitöre bakıyor - DALLE2 tarafından oluşturulan görüntü](../../../translated_images/tr/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Başlamak için, müfredat boyunca kullanacağımız bazı temel kavramları ve terminolojiyi tanımlayalım.
 
@@ -69,7 +69,7 @@ Bu teknoloji, insan dilini yorumlama, bir ihtiyacı belirleme ve bunu karşılam
 
 Böylece bugün Üretken Yapay Zeka'ya geldik, bu da derin öğrenmenin bir alt kümesi olarak görülebilir.
 
-![AI, ML, DL ve Üretken Yapay Zeka](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.tr.png)
+![AI, ML, DL ve Üretken Yapay Zeka](../../../translated_images/tr/AI-diagram.c391fa518451a40d.webp)
 
 Yapay zeka alanında on yıllarca süren araştırmalardan sonra, _Transformer_ adı verilen yeni bir model mimarisi, RNN'lerin sınırlarını aşarak çok daha uzun metin dizilerini giriş olarak almayı mümkün kıldı. Transformer'lar, aldığı girdilere farklı ağırlıklar veren dikkat mekanizmasına dayanır, metin dizisindeki sıralarına bakılmaksızın en alakalı bilginin yoğunlaştığı yerlere 'daha fazla dikkat eder'.
 
@@ -81,7 +81,7 @@ Bir sonraki bölümde farklı türde Üretken Yapay Zeka modellerini keşfedece�
 
 - **Tokenizasyon, metni sayılara dönüştürme**: Büyük Dil Modelleri bir metni giriş olarak alır ve bir metni çıkış olarak üretir. Ancak, istatistiksel modeller oldukları için metin dizileri yerine sayılarla çok daha iyi çalışırlar. Bu nedenle, modelin çekirdeği tarafından kullanılmadan önce her giriş bir tokenizer tarafından işlenir. Bir token, değişken sayıda karakterden oluşan bir metin parçasıdır, bu nedenle tokenizer'ın ana görevi girişi bir token dizisine ayırmaktır. Daha sonra, her token bir token indeksine, yani orijinal metin parçasının tam sayı kodlamasına eşlenir.
 
-![Tokenizasyon örneği](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.tr.png)
+![Tokenizasyon örneği](../../../translated_images/tr/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Çıkış tokenlarını tahmin etme**: n token giriş olarak verildiğinde (maksimum n modelden modele değişir), model bir token çıkış olarak tahmin edebilir. Bu token, bir yanıt olarak bir (veya birden fazla) cümle almayı sağlayan genişleyen bir pencere modeliyle bir sonraki yinelemenin girişine dahil edilir. Bu, eğer ChatGPT ile oynadıysanız, bazen bir cümlenin ortasında duruyormuş gibi göründüğünü fark etmiş olabilirsiniz.
 
@@ -98,23 +98,23 @@ Büyük dil modelinin girişi bir istem olarak bilinirken, çıkışı bir tamam
 
   1. Bir makale, kitap, ürün incelemeleri ve daha fazlasının özetlenmesi, yapılandırılmamış verilerden içgörülerin çıkarılması.
     
-    ![Özetleme örneği](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.tr.png)
+    ![Özetleme örneği](../../../translated_images/tr/summarization-example.7b7ff97147b3d790.webp)
   
   2. Bir makale, deneme, ödev veya daha fazlasının yaratıcı fikir üretimi ve tasarımı.
       
-     ![Yaratıcı yazım örneği](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.tr.png)
+     ![Yaratıcı yazım örneği](../../../translated_images/tr/creative-writing-example.e24a685b5a543ad1.webp)
 
 - Bir **soru**, bir ajanla yapılan bir sohbet şeklinde sorulmuş.
   
-  ![Sohbet örneği](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.tr.png)
+  ![Sohbet örneği](../../../translated_images/tr/conversation-example.60c2afc0f595fa59.webp)
 
 - Tamamlanması gereken bir **metin parçası**, bu da dolaylı olarak yazma yardımı talebidir.
   
-  ![Metin tamamlama örneği](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.tr.png)
+  ![Metin tamamlama örneği](../../../translated_images/tr/text-completion-example.cbb0f28403d42752.webp)
 
 - Belirli bir görevi yerine getiren bir kod parçası oluşturma veya açıklama ve belgeleme talebiyle birlikte bir **kod parçası**.
   
-  ![Kodlama örneği](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.tr.png)
+  ![Kodlama örneği](../../../translated_images/tr/coding-example.50ebabe8a6afff20.webp)
 
 Yukarıdaki örnekler oldukça basittir ve Büyük Dil Modellerinin yeteneklerinin kapsamlı bir gösterimi olarak tasarlanmamıştır. Bunlar, üretken yapay zekanın, özellikle ancak eğitim bağlamlarıyla sınırlı olmamak üzere, kullanım potansiyelini göstermek için tasarlanmıştır.
 

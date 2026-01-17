@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagbuo ng Mga Aplikasyon sa Pagbuo ng Teksto
 
-[![Pagbuo ng Mga Aplikasyon sa Pagbuo ng Teksto](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.tl.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Pagbuo ng Mga Aplikasyon sa Pagbuo ng Teksto](../../../translated_images/tl/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(I-click ang imahe sa itaas upang mapanood ang video ng araling ito)_
 

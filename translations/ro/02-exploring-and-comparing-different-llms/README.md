@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Explorarea și compararea diferitelor LLM-uri
 
-[![Explorarea și compararea diferitelor LLM-uri](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.ro.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Explorarea și compararea diferitelor LLM-uri](../../../translated_images/ro/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții_
 
@@ -59,14 +59,14 @@ Termenul Model Fundamental a fost [inventat de cercetătorii de la Stanford](htt
 - **Sunt modele foarte mari**, bazate pe rețele neuronale foarte profunde, antrenate pe miliarde de parametri.
 - **Sunt de obicei destinate să servească drept „fundament” pentru alte modele**, ceea ce înseamnă că pot fi utilizate ca punct de plecare pentru construirea altor modele, lucru care se poate realiza prin ajustare fină.
 
-![Modele Fundamentale versus LLM-uri](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.ro.png)
+![Modele Fundamentale versus LLM-uri](../../../translated_images/ro/FoundationModel.e4859dbb7a825c94.webp)
 
 Sursa imaginii: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Pentru a clarifica și mai mult această distincție, să luăm ChatGPT ca exemplu. Pentru a construi prima versiune a ChatGPT, un model numit GPT-3.5 a servit drept model fundamental. Aceasta înseamnă că OpenAI a utilizat unele date specifice pentru chat pentru a crea o versiune ajustată a GPT-3.5, specializată în performanțe bune în scenarii conversaționale, cum ar fi chatbot-urile.
 
-![Model Fundamental](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.ro.png)
+![Model Fundamental](../../../translated_images/ro/Multimodal.2c389c6439e0fc51.webp)
 
 Sursa imaginii: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-urile pot fi, de asemenea, categorisite în funcție de tipul de ieșire pe 
 
 Modelele de încorporare sunt modele care pot converti textul într-o formă numerică, numită încorporare, care reprezintă o reprezentare numerică a textului de intrare. Încorporările facilitează înțelegerea relațiilor dintre cuvinte sau propoziții de către mașini și pot fi utilizate ca intrări pentru alte modele, cum ar fi modelele de clasificare sau de grupare care au performanțe mai bune pe date numerice. Modelele de încorporare sunt adesea utilizate pentru învățarea transferului, unde un model este construit pentru o sarcină surogat pentru care există o abundență de date, iar apoi greutățile modelului (încorporările) sunt reutilizate pentru alte sarcini ulterioare. Un exemplu din această categorie este [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Încorporare](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.ro.png)
+![Încorporare](../../../translated_images/ro/Embedding.c3708fe988ccf760.webp)
 
 Modelele de generare de imagini sunt modele care generează imagini. Aceste modele sunt adesea utilizate pentru editarea imaginilor, sinteza imaginilor și traducerea imaginilor. Modelele de generare de imagini sunt adesea antrenate pe seturi mari de date de imagini, cum ar fi [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), și pot fi utilizate pentru a genera imagini noi sau pentru a edita imagini existente cu tehnici de inpainting, super-rezoluție și colorizare. Exemple includ [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) și [Modelele Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generare de imagini](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.ro.png)
+![Generare de imagini](../../../translated_images/ro/Image.349c080266a763fd.webp)
 
 Modelele de generare de text și cod sunt modele care generează text sau cod. Aceste modele sunt adesea utilizate pentru sumarizarea textului, traducere și răspuns la întrebări. Modelele de generare de text sunt adesea antrenate pe seturi mari de date de text, cum ar fi [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), și pot fi utilizate pentru a genera text nou sau pentru a răspunde la întrebări. Modelele de generare de cod, precum [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), sunt adesea antrenate pe seturi mari de date de cod, cum ar fi GitHub, și pot fi utilizate pentru a genera cod nou sau pentru a remedia erori în codul existent.
 
-![Generare de text și cod](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.ro.png)
+![Generare de text și cod](../../../translated_images/ro/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder versus doar Decoder
 
@@ -123,23 +123,23 @@ Majoritatea modelelor menționate în paragrafele anterioare (modelele OpenAI, m
 
 - Găsească modelul de bază dorit în catalog - fie proprietar, fie open source, filtrând după sarcină, licență sau nume. Pentru a îmbunătăți căutarea, modelele sunt organizate în colecții, precum colecția Azure OpenAI, colecția Hugging Face și altele.
 
-![Catalog de modele](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.ro.png)
+![Catalog de modele](../../../translated_images/ro/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Revizuiască fișa modelului, inclusiv o descriere detaliată a utilizării intenționate și a datelor de antrenament, exemple de cod și rezultate ale evaluării din biblioteca internă de evaluări.
 
-![Fișa modelului](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.ro.png)
+![Fișa modelului](../../../translated_images/ro/ModelCard.598051692c6e400d.webp)
 
 - Compare benchmark-uri între modele și seturi de date disponibile în industrie pentru a evalua care se potrivește cel mai bine scenariului de afaceri, prin panoul [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![Benchmark-uri modele](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.ro.png)
+![Benchmark-uri modele](../../../translated_images/ro/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Ajusteze modelul pe baza datelor de antrenament personalizate pentru a îmbunătăți performanța modelului într-o sarcină specifică, utilizând capacitățile de experimentare și urmărire ale Azure AI Studio.
 
-![Ajustarea modelului](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.ro.png)
+![Ajustarea modelului](../../../translated_images/ro/FineTuning.aac48f07142e36fd.webp)
 
 - Desfășoare modelul pre-antrenat original sau versiunea ajustată pentru inferență în timp real - calcul gestionat - sau endpoint API fără server - [plată pe măsură ce utilizezi](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - pentru a permite aplicațiilor să îl consume.
 
-![Desfășurarea modelului](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.ro.png)
+![Desfășurarea modelului](../../../translated_images/ro/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Nu toate modelele din catalog sunt disponibile în prezent pentru ajustare și/sau desfășurare cu plată pe măsură ce utilizezi. Verificați fișa modelului pentru detalii despre capacitățile și limitările modelului.
@@ -158,7 +158,7 @@ Există mai multe abordări pe care o afacere le poate utiliza pentru a obține 
 
 - **Model ajustat**. Aici, modelul este antrenat suplimentar pe datele proprii, ceea ce duce la un model mai exact și mai receptiv la nevoile dvs., dar poate fi costisitor.
 
-![Desfășurarea LLM-urilor](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.ro.png)
+![Desfășurarea LLM-urilor](../../../translated_images/ro/Deploy.18b2d27412ec8c02.webp)
 
 Sursa imaginii: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # بررسی و مقایسه مدل‌های زبانی بزرگ (LLMs)
 
-[![بررسی و مقایسه مدل‌های زبانی بزرگ](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.fa.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![بررسی و مقایسه مدل‌های زبانی بزرگ](../../../translated_images/fa/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _برای مشاهده ویدئوی این درس، روی تصویر بالا کلیک کنید_
 
@@ -59,13 +59,13 @@ CO_OP_TRANSLATOR_METADATA:
 - **آن‌ها مدل‌های بسیار بزرگی هستند**، بر اساس شبکه‌های عصبی بسیار عمیق که بر روی میلیاردها پارامتر آموزش داده شده‌اند.
 - **آن‌ها معمولاً به عنوان یک "پایه" برای مدل‌های دیگر طراحی شده‌اند**، به این معنا که می‌توانند به عنوان نقطه شروع برای ساخت مدل‌های دیگر استفاده شوند، که این کار با تنظیم دقیق انجام می‌شود.
 
-![مدل‌های پایه در مقابل مدل‌های زبانی بزرگ](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.fa.png)
+![مدل‌های پایه در مقابل مدل‌های زبانی بزرگ](../../../translated_images/fa/FoundationModel.e4859dbb7a825c94.webp)
 
 منبع تصویر: [راهنمای ضروری برای مدل‌های پایه و مدل‌های زبانی بزرگ | نوشته بابار م بهاتی | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 برای روشن‌تر کردن این تفاوت، بیایید ChatGPT را به عنوان مثال در نظر بگیریم. برای ساخت نسخه اول ChatGPT، مدلی به نام GPT-3.5 به عنوان مدل پایه استفاده شد. این به این معناست که OpenAI از برخی داده‌های خاص چت برای ایجاد نسخه تنظیم‌شده‌ای از GPT-3.5 استفاده کرد که در سناریوهای مکالمه‌ای، مانند چت‌بات‌ها، عملکرد خوبی داشت.
 
-![مدل پایه](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.fa.png)
+![مدل پایه](../../../translated_images/fa/Multimodal.2c389c6439e0fc51.webp)
 
 منبع تصویر: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 جاسازی‌ها مجموعه‌ای از مدل‌ها هستند که می‌توانند متن را به صورت عددی تبدیل کنند، که به آن جاسازی گفته می‌شود و نمایشی عددی از متن ورودی است. جاسازی‌ها درک روابط بین کلمات یا جملات را برای ماشین‌ها آسان‌تر می‌کنند و می‌توانند به عنوان ورودی توسط مدل‌های دیگر مصرف شوند، مانند مدل‌های طبقه‌بندی یا مدل‌های خوشه‌بندی که عملکرد بهتری بر روی داده‌های عددی دارند. مدل‌های جاسازی اغلب برای یادگیری انتقالی استفاده می‌شوند، جایی که یک مدل برای یک وظیفه جانشین که داده‌های زیادی برای آن وجود دارد ساخته می‌شود و سپس وزن‌های مدل (جاسازی‌ها) برای وظایف پایین‌دستی دیگر استفاده می‌شوند. نمونه‌ای از این دسته [جاسازی‌های OpenAI](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst) است.
 
-![جاسازی](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.fa.png)
+![جاسازی](../../../translated_images/fa/Embedding.c3708fe988ccf760.webp)
 
 مدل‌های تولید تصویر مدل‌هایی هستند که تصاویر تولید می‌کنند. این مدل‌ها اغلب برای ویرایش تصویر، سنتز تصویر و ترجمه تصویر استفاده می‌شوند. مدل‌های تولید تصویر اغلب بر روی مجموعه داده‌های بزرگ تصاویر، مانند [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)، آموزش داده می‌شوند و می‌توانند برای تولید تصاویر جدید یا ویرایش تصاویر موجود با تکنیک‌های inpainting، وضوح بالا و رنگ‌آمیزی استفاده شوند. نمونه‌ها شامل [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) و [مدل‌های Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) هستند.
 
-![تولید تصویر](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.fa.png)
+![تولید تصویر](../../../translated_images/fa/Image.349c080266a763fd.webp)
 
 مدل‌های تولید متن و کد مدل‌هایی هستند که متن یا کد تولید می‌کنند. این مدل‌ها اغلب برای خلاصه‌سازی متن، ترجمه و پاسخ به سوالات استفاده می‌شوند. مدل‌های تولید متن اغلب بر روی مجموعه داده‌های بزرگ متن، مانند [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)، آموزش داده می‌شوند و می‌توانند برای تولید متن جدید یا پاسخ به سوالات استفاده شوند. مدل‌های تولید کد، مانند [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)، اغلب بر روی مجموعه داده‌های بزرگ کد، مانند GitHub، آموزش داده می‌شوند و می‌توانند برای تولید کد جدید یا رفع اشکال در کد موجود استفاده شوند.
 
-![تولید متن و کد](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.fa.png)
+![تولید متن و کد](../../../translated_images/fa/Text.a8c0cf139e5cc2a0.webp)
 
 ### مدل‌های Encoder-Decoder در مقابل مدل‌های فقط Decoder
 
@@ -122,23 +122,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 - مدل پایه مورد نظر را در کاتالوگ پیدا کنند - چه اختصاصی باشد و چه متن‌باز - با فیلتر کردن بر اساس وظیفه، مجوز یا نام. برای بهبود قابلیت جستجو، مدل‌ها در مجموعه‌هایی مانند مجموعه Azure OpenAI، مجموعه Hugging Face و موارد دیگر سازماندهی شده‌اند.
 
-![کاتالوگ مدل](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.fa.png)
+![کاتالوگ مدل](../../../translated_images/fa/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - کارت مدل را بررسی کنند، که شامل توضیحات دقیق در مورد استفاده مورد نظر و داده‌های آموزشی، نمونه‌های کد و نتایج ارزیابی در کتابخانه ارزیابی داخلی است.
 
-![کارت مدل](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.fa.png)
+![کارت مدل](../../../translated_images/fa/ModelCard.598051692c6e400d.webp)
 
 - مقایسه معیارها بین مدل‌ها و مجموعه داده‌های موجود در صنعت برای ارزیابی اینکه کدام یک با سناریوی کسب‌وکار مطابقت دارد، از طریق پنل [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-![معیارهای مدل](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.fa.png)
+![معیارهای مدل](../../../translated_images/fa/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - مدل را با داده‌های آموزشی سفارشی تنظیم کنند تا عملکرد مدل در یک بار کاری خاص بهبود یابد، با استفاده از قابلیت‌های آزمایش و ردیابی Azure AI Studio.
 
-![تنظیم مدل](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.fa.png)
+![تنظیم مدل](../../../translated_images/fa/FineTuning.aac48f07142e36fd.webp)
 
 - مدل پیش‌آموزش‌دیده یا نسخه تنظیم‌شده آن را برای استنتاج بلادرنگ از راه دور - محاسبه مدیریت‌شده - یا نقطه پایانی API بدون سرور - [پرداخت به ازای استفاده](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - مستقر کنند تا برنامه‌ها بتوانند از آن استفاده کنند.
 
-![استقرار مدل](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.fa.png)
+![استقرار مدل](../../../translated_images/fa/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > همه مدل‌های موجود در کاتالوگ در حال حاضر برای تنظیم و/یا استقرار پرداخت به ازای استفاده در دسترس نیستند. برای جزئیات در مورد قابلیت‌ها و محدودیت‌های مدل، کارت مدل را بررسی کنید.
@@ -157,7 +157,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **مدل تنظیم‌شده**. در اینجا، شما مدل را بیشتر بر روی داده‌های خود آموزش داده‌اید که منجر به دقیق‌تر و پاسخگوتر شدن مدل به نیازهای شما می‌شود، اما ممکن است هزینه‌بر باشد.
 
-![استقرار LLM‌ها](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.fa.png)
+![استقرار LLM‌ها](../../../translated_images/fa/Deploy.18b2d27412ec8c02.webp)
 
 منبع تصویر: [چهار روش استقرار LLM‌ها توسط شرکت‌ها | وبلاگ Fiddler AI](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

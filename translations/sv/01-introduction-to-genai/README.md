@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Introduktion till Generativ AI och Stora Språkmodeller
 
-[![Introduktion till Generativ AI och Stora Språkmodeller](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.sv.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Introduktion till Generativ AI och Stora Språkmodeller](../../../translated_images/sv/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klicka på bilden ovan för att se videon till denna lektion)_
 
@@ -43,7 +43,7 @@ Vårt startup-team är medvetet om att vi inte kommer att kunna uppnå detta må
 
 Generativ AI förväntas revolutionera sättet vi lär oss och undervisar idag, med studenter som har tillgång till virtuella lärare dygnet runt som tillhandahåller enorma mängder information och exempel, och lärare som kan använda innovativa verktyg för att bedöma sina elever och ge feedback.
 
-![Fem unga studenter tittar på en skärm - bild av DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.sv.png)
+![Fem unga studenter tittar på en skärm - bild av DALLE2](../../../translated_images/sv/students-by-DALLE2.b70fddaced1042ee.webp)
 
 För att börja, låt oss definiera några grundläggande begrepp och terminologi som vi kommer att använda genom kursplanen.
 
@@ -70,7 +70,7 @@ Detta är teknologin som drev de virtuella assistenterna som föddes under det f
 
 Så här kom vi till Generativ AI idag, som kan ses som en underkategori av djupinlärning.
 
-![AI, ML, DL och Generativ AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.sv.png)
+![AI, ML, DL och Generativ AI](../../../translated_images/sv/AI-diagram.c391fa518451a40d.webp)
 
 Efter decennier av forskning inom AI-fältet övervanns begränsningarna hos RNNs med en ny modellarkitektur – kallad _Transformer_ – som kunde ta mycket längre textsekvenser som input. Transformers är baserade på uppmärksamhetsmekanismen, vilket gör det möjligt för modellen att ge olika vikter till den input den får, ‘lägga mer uppmärksamhet’ där den mest relevanta informationen är koncentrerad, oavsett deras ordning i textsekvensen.
 
@@ -82,7 +82,7 @@ I nästa kapitel kommer vi att utforska olika typer av generativa AI-modeller, m
 
 - **Tokenizer, text till siffror**: Stora Språkmodeller tar emot en text som input och genererar en text som output. Men eftersom de är statistiska modeller fungerar de mycket bättre med siffror än textsekvenser. Därför bearbetas varje input till modellen av en tokenizer innan den används av kärnmodellen. En token är en textbit – bestående av ett variabelt antal tecken, så tokenizerns huvuduppgift är att dela upp input i en array av tokens. Sedan mappas varje token med ett tokenindex, vilket är den heltalskodning av den ursprungliga textbiten.
 
-![Exempel på tokenisering](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.sv.png)
+![Exempel på tokenisering](../../../translated_images/sv/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Förutsägelse av output-tokens**: Givet n tokens som input (med max n som varierar från en modell till en annan), kan modellen förutsäga en token som output. Denna token införlivas sedan i input för nästa iteration, i ett expanderande fönstermönster, vilket möjliggör en bättre användarupplevelse av att få en (eller flera) meningar som svar. Detta förklarar varför, om du någonsin har lekt med ChatGPT, du kanske har märkt att det ibland verkar som att det stannar mitt i en mening.
 
@@ -100,23 +100,23 @@ Input till en stor språkmodell kallas en prompt, medan output kallas en complet
 
   1. Sammanfattning av en artikel, bok, produktrecensioner och mer, tillsammans med insiktsutvinning från ostrukturerad data.
     
-    ![Exempel på sammanfattning](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.sv.png)
+    ![Exempel på sammanfattning](../../../translated_images/sv/summarization-example.7b7ff97147b3d790.webp)
   
   2. Kreativ idéutveckling och design av en artikel, ett essä, en uppgift eller mer.
       
-     ![Exempel på kreativt skrivande](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.sv.png)
+     ![Exempel på kreativt skrivande](../../../translated_images/sv/creative-writing-example.e24a685b5a543ad1.webp)
 
 - En **fråga**, ställd i form av en konversation med en agent.
   
-  ![Exempel på konversation](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.sv.png)
+  ![Exempel på konversation](../../../translated_images/sv/conversation-example.60c2afc0f595fa59.webp)
 
 - En bit **text att komplettera**, vilket implicit är en begäran om skrivhjälp.
   
-  ![Exempel på textkomplettering](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.sv.png)
+  ![Exempel på textkomplettering](../../../translated_images/sv/text-completion-example.cbb0f28403d42752.webp)
 
 - En bit **kod** tillsammans med en begäran om att förklara och dokumentera den, eller en kommentar som ber om att generera en kodbit som utför en specifik uppgift.
   
-  ![Kodexempel](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.sv.png)
+  ![Kodexempel](../../../translated_images/sv/coding-example.50ebabe8a6afff20.webp)
 
 Exemplen ovan är ganska enkla och är inte avsedda att vara en uttömmande demonstration av Stora Språkmodellers kapabiliteter. De är avsedda att visa potentialen med att använda generativ AI, särskilt men inte begränsat till utbildningssammanhang.
 

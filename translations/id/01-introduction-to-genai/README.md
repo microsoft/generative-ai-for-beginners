@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pengantar AI Generatif dan Model Bahasa Besar
 
-[![Pengantar AI Generatif dan Model Bahasa Besar](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.id.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Pengantar AI Generatif dan Model Bahasa Besar](../../../translated_images/id/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klik gambar di atas untuk menonton video pelajaran ini)_
 
@@ -43,7 +43,7 @@ Tim startup kita menyadari bahwa kita tidak akan dapat mencapai tujuan ini tanpa
 
 AI generatif diperkirakan akan merevolusi cara kita belajar dan mengajar saat ini, dengan siswa memiliki guru virtual yang tersedia 24 jam sehari yang menyediakan sejumlah besar informasi dan contoh, serta guru yang dapat memanfaatkan alat inovatif untuk menilai siswa mereka dan memberikan umpan balik.
 
-![Lima siswa muda melihat monitor - gambar oleh DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.id.png)
+![Lima siswa muda melihat monitor - gambar oleh DALLE2](../../../translated_images/id/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Untuk memulai, mari kita definisikan beberapa konsep dasar dan terminologi yang akan kita gunakan sepanjang kurikulum.
 
@@ -69,7 +69,7 @@ Ini adalah teknologi yang mendukung asisten virtual yang lahir pada dekade perta
 
 Begitulah cara kita sampai pada AI Generatif hari ini, yang dapat dilihat sebagai subset dari pembelajaran mendalam.
 
-![AI, ML, DL dan AI Generatif](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.id.png)
+![AI, ML, DL dan AI Generatif](../../../translated_images/id/AI-diagram.c391fa518451a40d.webp)
 
 Setelah puluhan tahun penelitian di bidang AI, arsitektur model baru – yang disebut _Transformer_ – mengatasi batasan RNN, mampu menerima urutan teks yang jauh lebih panjang sebagai input. Transformer didasarkan pada mekanisme perhatian, memungkinkan model untuk memberikan bobot yang berbeda pada input yang diterimanya, ‘lebih memperhatikan’ di mana informasi yang paling relevan terkonsentrasi, terlepas dari urutannya dalam urutan teks.
 
@@ -81,7 +81,7 @@ Dalam bab berikutnya kita akan mengeksplorasi berbagai jenis model AI Generatif,
 
 - **Tokenizer, teks ke angka**: Model Bahasa Besar menerima teks sebagai input dan menghasilkan teks sebagai output. Namun, sebagai model statistik, mereka bekerja jauh lebih baik dengan angka daripada urutan teks. Itulah mengapa setiap input ke model diproses oleh tokenizer, sebelum digunakan oleh model inti. Token adalah potongan teks – terdiri dari sejumlah karakter yang bervariasi, sehingga tugas utama tokenizer adalah membagi input menjadi array token. Kemudian, setiap token dipetakan dengan indeks token, yang merupakan pengkodean bilangan bulat dari potongan teks asli.
 
-![Contoh tokenisasi](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.id.png)
+![Contoh tokenisasi](../../../translated_images/id/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Memprediksi token output**: Diberikan n token sebagai input (dengan max n bervariasi dari satu model ke model lainnya), model mampu memprediksi satu token sebagai output. Token ini kemudian dimasukkan ke dalam input iterasi berikutnya, dalam pola jendela yang berkembang, memungkinkan pengalaman pengguna yang lebih baik untuk mendapatkan satu (atau beberapa) kalimat sebagai jawaban. Ini menjelaskan mengapa, jika Anda pernah bermain dengan ChatGPT, Anda mungkin memperhatikan bahwa terkadang terlihat seperti berhenti di tengah kalimat.
 
@@ -98,23 +98,23 @@ Input dari model bahasa besar dikenal sebagai prompt, sedangkan outputnya dikena
 
   1. Ringkasan artikel, buku, ulasan produk, dan lainnya, bersama dengan ekstraksi wawasan dari data yang tidak terstruktur.
     
-    ![Contoh ringkasan](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.id.png)
+    ![Contoh ringkasan](../../../translated_images/id/summarization-example.7b7ff97147b3d790.webp)
   
   2. Ide kreatif dan desain artikel, esai, tugas, atau lainnya.
       
-     ![Contoh penulisan kreatif](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.id.png)
+     ![Contoh penulisan kreatif](../../../translated_images/id/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Pertanyaan**, yang diajukan dalam bentuk percakapan dengan agen.
   
-  ![Contoh percakapan](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.id.png)
+  ![Contoh percakapan](../../../translated_images/id/conversation-example.60c2afc0f595fa59.webp)
 
 - Potongan **teks untuk dilengkapi**, yang secara implisit adalah permintaan untuk bantuan penulisan.
   
-  ![Contoh pelengkapan teks](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.id.png)
+  ![Contoh pelengkapan teks](../../../translated_images/id/text-completion-example.cbb0f28403d42752.webp)
 
 - Potongan **kode** bersama dengan permintaan untuk menjelaskan dan mendokumentasikannya, atau komentar yang meminta untuk menghasilkan potongan kode yang melakukan tugas tertentu.
   
-  ![Contoh kode](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.id.png)
+  ![Contoh kode](../../../translated_images/id/coding-example.50ebabe8a6afff20.webp)
 
 Contoh-contoh di atas cukup sederhana dan tidak dimaksudkan sebagai demonstrasi lengkap kemampuan Model Bahasa Besar. Mereka dimaksudkan untuk menunjukkan potensi penggunaan AI generatif, khususnya tetapi tidak terbatas pada konteks pendidikan.
 

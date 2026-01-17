@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Beveiliging van je Generatieve AI-toepassingen
 
-[![Beveiliging van je Generatieve AI-toepassingen](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.nl.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Beveiliging van je Generatieve AI-toepassingen](../../../translated_images/nl/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introductie
 
@@ -131,7 +131,7 @@ Het nabootsen van realistische dreigingen wordt tegenwoordig beschouwd als een s
 
 > De praktijk van AI red teaming heeft zich ontwikkeld tot een bredere betekenis: het omvat niet alleen het opsporen van beveiligingskwetsbaarheden, maar ook het onderzoeken van andere systeemfouten, zoals het genereren van potentieel schadelijke inhoud. AI-systemen brengen nieuwe risico's met zich mee, en red teaming is essentieel om die nieuwe risico's te begrijpen, zoals prompt injection en het produceren van ongefundeerde inhoud. - [Microsoft AI Red Team bouwt aan de toekomst van veiligere AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Richtlijnen en middelen voor red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.nl.png)]()
+[![Richtlijnen en middelen voor red teaming](../../../translated_images/nl/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Hieronder staan belangrijke inzichten die het AI Red Team-programma van Microsoft hebben gevormd.
 

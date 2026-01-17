@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) at Vector Databases
 
-[![Retrieval Augmented Generation (RAG) at Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.tl.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) at Vector Databases](../../../translated_images/tl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Sa aralin tungkol sa search applications, bahagyang tinalakay natin kung paano isama ang sariling data sa Large Language Models (LLMs). Sa araling ito, mas malalim nating pag-aaralan ang mga konsepto ng pag-ground ng iyong data sa LLM application, ang mekanismo ng proseso, at ang mga pamamaraan ng pag-iimbak ng data, kabilang ang embeddings at text.
 
@@ -53,7 +53,7 @@ Ang LLM-powered chatbot ay nagpoproseso ng mga prompt ng user para makabuo ng mg
 
 ### Paano gumagana ang RAGs (Retrieval Augmented Generation)
 
-![drawing showing how RAGs work](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.tl.png)
+![drawing showing how RAGs work](../../../translated_images/tl/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Halimbawa, gusto mong mag-deploy ng chatbot na gumagawa ng quizzes mula sa iyong mga tala, kakailanganin mo ng koneksyon sa knowledge base. Dito papasok ang RAG. Ang RAGs ay gumagana sa ganitong paraan:
 
@@ -65,7 +65,7 @@ Halimbawa, gusto mong mag-deploy ng chatbot na gumagawa ng quizzes mula sa iyong
 
 - **Augmented Generation:** pinapahusay ng LLM ang sagot nito batay sa data na nakuha. Pinapayagan nito ang sagot na mabuo hindi lamang batay sa pre-trained data kundi pati na rin sa kaugnay na impormasyon mula sa idinagdag na konteksto. Ang nakuha na data ay ginagamit upang i-augment ang mga sagot ng LLM. Ang LLM ay nagbibigay ng sagot sa tanong ng user.
 
-![drawing showing how RAGs architecture](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.tl.png)
+![drawing showing how RAGs architecture](../../../translated_images/tl/encoder-decode.f2658c25d0eadee2.webp)
 
 Ang arkitektura ng RAGs ay ipinatutupad gamit ang transformers na binubuo ng dalawang bahagi: isang encoder at isang decoder. Halimbawa, kapag nagtatanong ang user, ang input text ay 'encoded' sa vectors na kumukuha ng kahulugan ng mga salita at ang vectors ay 'decoded' sa ating document index at bumubuo ng bagong text batay sa tanong ng user. Ang LLM ay gumagamit ng parehong encoder-decoder model upang makabuo ng output.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Kapag na-chunk na, maaari nating i-embed ang ating text gamit ang iba't ibang embedding models. Ang ilang models na maaari mong gamitin ay: word2vec, ada-002 ng OpenAI, Azure Computer Vision, at marami pang iba. Ang pagpili ng model na gagamitin ay depende sa mga wika na ginagamit mo, uri ng content na encoded (text/images/audio), laki ng input na maaari nitong i-encode, at haba ng embedding output.
 
 Isang halimbawa ng embedded text gamit ang model ng OpenAI na `text-embedding-ada-002` ay:
-![an embedding of the word cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.tl.png)
+![an embedding of the word cat](../../../translated_images/tl/cat.74cbd7946bc9ca38.webp)
 
 ## Retrieval at Vector Search
 

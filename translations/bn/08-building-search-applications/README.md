@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # সার্চ অ্যাপ্লিকেশন তৈরি করা
 
-[![জেনারেটিভ AI এবং লার্জ ল্যাঙ্গুয়েজ মডেলের পরিচিতি](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.bn.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![জেনারেটিভ AI এবং লার্জ ল্যাঙ্গুয়েজ মডেলের পরিচিতি](../../../translated_images/bn/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _উপরের ছবিতে ক্লিক করে এই পাঠের ভিডিও দেখুন_
 
@@ -44,7 +44,7 @@ LLMs শুধুমাত্র চ্যাটবট এবং টেক্স
 
 নিচে 'can you use rstudio with azure ml?' প্রশ্নের জন্য একটি সেমান্টিক কোয়েরির উদাহরণ দেওয়া হয়েছে। ইউটিউব URLটি দেখুন, আপনি দেখতে পাবেন URL-এ একটি টাইমস্ট্যাম্প রয়েছে যা আপনাকে ভিডিওর সেই অংশে নিয়ে যায় যেখানে প্রশ্নের উত্তর রয়েছে।
 
-![সেমান্টিক কোয়েরি "can you use rstudio with Azure ML" প্রশ্নের জন্য](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.bn.png)
+![সেমান্টিক কোয়েরি "can you use rstudio with Azure ML" প্রশ্নের জন্য](../../../translated_images/bn/query-results.bb0480ebf025fac6.webp)
 
 ## সেমান্টিক সার্চ কী?
 
@@ -163,7 +163,7 @@ GitHub Codespaces-এ [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=
 
 যখন আপনি নোটবুক চালাবেন, তখন আপনাকে একটি কোয়েরি প্রবেশ করানোর জন্য অনুরোধ করা হবে। ইনপুট বক্সটি এরকম দেখাবে:
 
-![ইউজারের জন্য কোয়েরি প্রবেশ করানোর ইনপুট বক্স](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.bn.png)
+![ইউজারের জন্য কোয়েরি প্রবেশ করানোর ইনপুট বক্স](../../../translated_images/bn/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## চমৎকার কাজ! আপনার শেখা চালিয়ে যান
 

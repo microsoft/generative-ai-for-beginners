@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge søkeapplikasjoner
 
-[![Introduksjon til Generativ AI og Store Språkmodeller](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.no.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduksjon til Generativ AI og Store Språkmodeller](../../../translated_images/no/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klikk på bildet ovenfor for å se videoen til denne leksjonen_
 
@@ -44,7 +44,7 @@ Leksjonen inkluderer en embedding-indeks av YouTube-transkriptene for Microsoft 
 
 Følgende er et eksempel på et semantisk søk for spørsmålet 'kan du bruke rstudio med azure ml?'. Sjekk ut YouTube-URL-en, du vil se at URL-en inneholder et tidsstempel som tar deg til stedet i videoen hvor svaret på spørsmålet finnes.
 
-![Semantisk søk for spørsmålet "kan du bruke rstudio med Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.no.png)
+![Semantisk søk for spørsmålet "kan du bruke rstudio med Azure ML"](../../../translated_images/no/query-results.bb0480ebf025fac6.webp)
 
 ## Hva er semantisk søk?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Når du kjører notatboken, vil du bli bedt om å skrive inn en forespørsel. Inndataboksen vil se slik ut:
 
-![Inndataboks for brukeren til å skrive inn en forespørsel](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.no.png)
+![Inndataboks for brukeren til å skrive inn en forespørsel](../../../translated_images/no/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Flott arbeid! Fortsett læringen din
 

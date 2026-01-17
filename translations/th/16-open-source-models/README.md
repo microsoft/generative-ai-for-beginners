@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "th"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.th.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/th/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## บทนำ
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **ต้นทุน** - ต้นทุนต่อโทเค็นสำหรับการใช้งานและปรับใช้โมเดลเหล่านี้ต่ำกว่าโมเดลที่เป็นกรรมสิทธิ์ เมื่อสร้างแอปพลิเคชัน Generative AI ควรพิจารณาประสิทธิภาพเทียบกับราคาเมื่อทำงานกับโมเดลเหล่านี้ในกรณีการใช้งานของคุณ
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.th.png)
+![Model Cost](../../../translated_images/th/model-price.3f5a3e4d32ae00b4.webp)
 ที่มา: Artificial Analysis
 
 **ความยืดหยุ่น** - การทำงานกับโมเดลเปิดช่วยให้คุณมีความยืดหยุ่นในการใช้โมเดลต่างๆ หรือผสมผสานกัน ตัวอย่างเช่น [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) ที่ผู้ใช้สามารถเลือกโมเดลที่ใช้ได้โดยตรงในอินเทอร์เฟซผู้ใช้:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.th.png)
+![Choose Model](../../../translated_images/th/choose-model.f095d15bbac92214.webp)
 
 ## การสำรวจโมเดลเปิดต่างๆ
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 เมื่อมองหาเปรียบเทียบ LLMs ในประเภทต่างๆ [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) เป็นแหล่งข้อมูลที่ดีอีกแห่ง:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.th.png)
+![Model Quality](../../../translated_images/th/model-quality.aaae1c22e00f7ee1.webp)
 ที่มา: Artificial Analysis
 
 หากทำงานในกรณีการใช้งานเฉพาะ การค้นหาเวอร์ชันที่ปรับแต่งซึ่งเน้นในสาขาเดียวกันอาจมีประสิทธิภาพ การทดลองใช้โมเดลเปิดหลายๆ ตัวเพื่อดูว่าทำงานได้ตามความคาดหวังของคุณและผู้ใช้ของคุณอย่างไรเป็นแนวทางปฏิบัติที่ดีอีกอย่างหนึ่ง

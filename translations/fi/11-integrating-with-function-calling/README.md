@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrointi funktiokutsujen kanssa
 
-[![Integrointi funktiokutsujen kanssa](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.fi.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrointi funktiokutsujen kanssa](../../../translated_images/fi/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Olet oppinut jo paljon aiemmissa oppitunneissa. Kuitenkin voimme parantaa vielä lisää. Joitakin asioita, joita voimme käsitellä, ovat esimerkiksi miten voimme saada johdonmukaisemman vastausmuodon, joka helpottaa vastauksen käsittelyä myöhemmin. Lisäksi voimme haluta lisätä dataa muista lähteistä rikastuttaaksemme sovellustamme.
 
@@ -179,7 +179,7 @@ Nyt voimme lähettää molemmat pyynnöt LLM:lle ja tarkastella saamaamme vastau
 
 Kuinka sitten ratkaista muotoiluongelma? Käyttämällä funktiokutsuja voimme varmistaa, että saamme takaisin jäsenneltyä dataa. Funktiokutsuja käytettäessä LLM ei itse asiassa kutsu tai suorita mitään funktioita. Sen sijaan luomme rakenteen, jota LLM noudattaa vastauksissaan. Käytämme näitä jäsenneltyjä vastauksia tietääksemme, mitä funktiota sovelluksissamme tulee suorittaa.
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.fi.png)
+![function flow](../../../translated_images/fi/Function-Flow.083875364af4f4bb.webp)
 
 Voimme sitten ottaa funktiosta palautetun tiedon ja lähettää sen takaisin LLM:lle. LLM vastaa sitten luonnollisella kielellä käyttäjän kyselyyn.
 
@@ -201,7 +201,7 @@ Funktiokutsun luominen sisältää kolme päävaihetta:
 2. **Lukeminen** mallin vastauksesta toiminnon suorittamiseksi, kuten funktion tai API-pyynnön suorittaminen.
 3. **Tekeminen** uusi kutsu Chat Completion API:lle funktion vastauksen kanssa, jotta voidaan luoda vastaus käyttäjälle.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.fi.png)
+![LLM Flow](../../../translated_images/fi/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Vaihe 1 - viestien luominen
 

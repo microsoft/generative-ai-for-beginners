@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立生成式 AI 驅動的聊天應用程式
 
-[![建立生成式 AI 驅動的聊天應用程式](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.hk.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![建立生成式 AI 驅動的聊天應用程式](../../../translated_images/hk/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(點擊上方圖片觀看本課程的影片)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 OpenAI 的 ChatGPT 中的「自定義指令」設置就是個性化的一個例子。它允許您提供關於自己的信息，這些信息可能是提示的重要上下文。以下是一個自定義指令的示例。
 
-![ChatGPT 中的自定義指令設置](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.hk.png)
+![ChatGPT 中的自定義指令設置](../../../translated_images/hk/custom-instructions.b96f59aa69356fcf.webp)
 
 此「檔案」提示 ChatGPT 創建一個關於鏈表的課程計劃。注意，ChatGPT 根據用戶的經驗，提供了一個更深入的課程計劃。
 
-![ChatGPT 中關於鏈表課程計劃的提示](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.hk.png)
+![ChatGPT 中關於鏈表課程計劃的提示](../../../translated_images/hk/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### 微軟的大型語言模型系統消息框架
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hu"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.hu.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/hu/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Bevezetés
 
@@ -41,12 +41,12 @@ Ebben a leckében a modelleket a továbbiakban "nyílt modelleknek" fogjuk nevez
 
 **Költség** – Ezeknek a modelleknek a tokenenkénti használati és telepítési költsége alacsonyabb, mint a zárt forráskódú modelleké. Generatív AI alkalmazások építésekor érdemes figyelembe venni a teljesítmény és ár arányát az adott felhasználási esetben.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.hu.png)
+![Model Cost](../../../translated_images/hu/model-price.3f5a3e4d32ae00b4.webp)
 Forrás: Artificial Analysis
 
 **Rugalmasság** – A nyílt modellekkel való munka lehetővé teszi, hogy rugalmas legyen a különböző modellek használatában vagy azok kombinálásában. Erre példa a [HuggingChat Asszisztensek](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), ahol a felhasználó közvetlenül a felhasználói felületen választhatja ki a használt modellt:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.hu.png)
+![Choose Model](../../../translated_images/hu/choose-model.f095d15bbac92214.webp)
 
 ## Különböző nyílt modellek felfedezése
 
@@ -74,7 +74,7 @@ Nincs egyetlen helyes válasz a nyílt modell kiválasztására. Jó kiindulópo
 
 Ha különböző típusú LLM-eket szeretne összehasonlítani, az [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) egy másik nagyszerű forrás:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.hu.png)
+![Model Quality](../../../translated_images/hu/model-quality.aaae1c22e00f7ee1.webp)
 Forrás: Artificial Analysis
 
 Ha egy adott felhasználási esetre dolgozik, hatékony lehet olyan finomhangolt verziókat keresni, amelyek ugyanarra a területre fókuszálnak. Több nyílt modellel való kísérletezés, hogy lássa, hogyan teljesítenek az Ön és felhasználói elvárásai szerint, szintén jó gyakorlat.

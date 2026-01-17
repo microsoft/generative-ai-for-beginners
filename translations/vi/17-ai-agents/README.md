@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-[![Mô hình mã nguồn mở](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.vi.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Mô hình mã nguồn mở](../../../translated_images/vi/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Giới thiệu
 
@@ -33,7 +33,7 @@ Tác nhân AI là một lĩnh vực rất thú vị trong thế giới AI Tạo 
 
 Tác nhân AI cho phép Mô hình Ngôn ngữ Lớn (LLMs) thực hiện các nhiệm vụ bằng cách cung cấp cho chúng quyền truy cập vào **trạng thái** và **công cụ**.
 
-![Mô hình Tác nhân](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.vi.png)
+![Mô hình Tác nhân](../../../translated_images/vi/what-agent.21f2893bdfd01e6a.webp)
 
 Hãy định nghĩa các thuật ngữ này:
 
@@ -53,7 +53,7 @@ Những định nghĩa này hy vọng sẽ cung cấp cho bạn một nền tả
 
 `AgentExecutor` cũng lưu trữ lịch sử trò chuyện để cung cấp ngữ cảnh của cuộc trò chuyện.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.vi.png)
+![Langchain Agents](../../../translated_images/vi/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain cung cấp một [danh mục công cụ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) có thể được nhập vào ứng dụng của bạn để LLM có thể truy cập. Những công cụ này được tạo bởi cộng đồng và đội ngũ LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 Dưới đây là một ví dụ về quy trình:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.vi.png)
+![AutoGen](../../../translated_images/vi/autogen.dee9a25a45fde584.webp)
 
 #### LLM được định nghĩa với một thông điệp hệ thống
 
@@ -129,7 +129,7 @@ Khung làm việc tác nhân tiếp theo mà chúng ta sẽ khám phá là [Task
 
 Để hoàn thành các nhiệm vụ, `Planner` được tiếp xúc với một tập hợp các công cụ gọi là `Plugins`. Đây có thể là các lớp Python hoặc một trình thông dịch mã chung. Các plugin này được lưu trữ dưới dạng embeddings để LLM có thể tìm kiếm plugin phù hợp tốt hơn.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.vi.png)
+![Taskweaver](../../../translated_images/vi/taskweaver.da8559999267715a.webp)
 
 Dưới đây là một ví dụ về plugin để xử lý phát hiện bất thường:
 
@@ -143,7 +143,7 @@ Mã được xác minh trước khi thực thi. Một tính năng khác để qu
 
 Khung làm việc tác nhân cuối cùng mà chúng ta sẽ khám phá là [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Điều làm cho JARVIS trở nên độc đáo là nó sử dụng một LLM để quản lý `trạng thái` của cuộc trò chuyện và các `công cụ` là các mô hình AI khác. Mỗi mô hình AI là các mô hình chuyên biệt thực hiện các nhiệm vụ cụ thể như nhận diện đối tượng, chuyển đổi giọng nói thành văn bản hoặc chú thích hình ảnh.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.vi.png)
+![JARVIS](../../../translated_images/vi/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, là một mô hình đa năng, nhận yêu cầu từ người dùng và xác định nhiệm vụ cụ thể cũng như bất kỳ tham số/dữ liệu nào cần thiết để hoàn thành nhiệm vụ.
 

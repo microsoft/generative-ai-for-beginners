@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # بناء تطبيقات البحث
 
-[![مقدمة في الذكاء الاصطناعي التوليدي ونماذج اللغة الكبيرة](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.ar.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![مقدمة في الذكاء الاصطناعي التوليدي ونماذج اللغة الكبيرة](../../../translated_images/ar/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _اضغط على الصورة أعلاه لمشاهدة فيديو الدرس_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 فيما يلي مثال على استعلام دلالي للسؤال "هل يمكن استخدام rstudio مع azure ml؟". تحقق من رابط YouTube، ستلاحظ أن الرابط يحتوي على طابع زمني يأخذك إلى المكان في الفيديو حيث توجد الإجابة على السؤال.
 
-![استعلام دلالي للسؤال "هل يمكن استخدام rstudio مع Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.ar.png)
+![استعلام دلالي للسؤال "هل يمكن استخدام rstudio مع Azure ML"](../../../translated_images/ar/query-results.bb0480ebf025fac6.webp)
 
 ## ما هو البحث الدلالي؟
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 عند تشغيل الدفتر، ستتم مطالبتك بإدخال استعلام. ستبدو نافذة الإدخال كما يلي:
 
-![نافذة إدخال للمستخدم لإدخال استعلام](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.ar.png)
+![نافذة إدخال للمستخدم لإدخال استعلام](../../../translated_images/ar/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## عمل رائع! استمر في التعلم
 

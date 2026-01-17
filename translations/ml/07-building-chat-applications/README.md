@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ജനറേറ്റീവ് എഐ-പവേർഡ് ചാറ്റ് ആപ്ലിക്കേഷനുകൾ നിർമ്മിക്കൽ
 
-[![Building Generative AI-Powered Chat Applications](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ml.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Building Generative AI-Powered Chat Applications](../../../translated_images/ml/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ഈ പാഠത്തിന്റെ വീഡിയോ കാണാൻ മുകളിൽ ചിത്രത്തിൽ ക്ലിക്ക് ചെയ്യുക)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ഉദാഹരണമായി, OpenAIയുടെ ChatGPT-യിലെ "Custom instructions" ക്രമീകരണങ്ങൾ. ഇത് നിങ്ങളുടെ പ്രോംപ്റ്റുകൾക്കായി പ്രധാനമായ സാന്ദർഭം നൽകുന്ന വിവരങ്ങൾ നൽകാൻ അനുവദിക്കുന്നു. ഒരു കസ്റ്റം ഇൻസ്ട്രക്ഷന്റെ ഉദാഹരണം താഴെ കാണാം.
 
-![Custom Instructions Settings in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ml.png)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/ml/custom-instructions.b96f59aa69356fcf.webp)
 
 ഈ "പ്രൊഫൈൽ" ChatGPT-യെ ലിങ്ക്ഡ് ലിസ്റ്റുകളെക്കുറിച്ചുള്ള പാഠപദ്ധതി തയ്യാറാക്കാൻ പ്രേരിപ്പിക്കുന്നു. ഉപയോക്താവിന്റെ അനുഭവം അടിസ്ഥാനമാക്കി കൂടുതൽ ആഴത്തിലുള്ള പാഠപദ്ധതി വേണമെന്നു ChatGPT പരിഗണിക്കുന്നു.
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ml.png)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/ml/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### വലിയ ഭാഷാ മോഡലുകൾക്കുള്ള Microsoft സിസ്റ്റം മെസേജ് ഫ്രെയിംവർക്ക്
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng tạo hình ảnh
 
-[![Xây dựng ứng dụng tạo hình ảnh](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.vi.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Xây dựng ứng dụng tạo hình ảnh](../../../translated_images/vi/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLMs không chỉ dừng lại ở việc tạo văn bản. Chúng cũng có thể tạo hình ảnh từ các mô tả văn bản. Việc sử dụng hình ảnh như một phương thức có thể rất hữu ích trong nhiều lĩnh vực như công nghệ y tế, kiến trúc, du lịch, phát triển trò chơi và nhiều lĩnh vực khác. Trong chương này, chúng ta sẽ tìm hiểu về hai mô hình tạo hình ảnh phổ biến nhất, DALL-E và Midjourney.
 
@@ -43,7 +43,7 @@ Trong bài học này, chúng ta sẽ tiếp tục làm việc với startup c�
 
 Đây là những gì học sinh của Edu4All có thể tạo ra, ví dụ, nếu họ đang học về các công trình kiến trúc:
 
-![Startup Edu4All, lớp học về các công trình kiến trúc, Tháp Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.vi.png)
+![Startup Edu4All, lớp học về các công trình kiến trúc, Tháp Eiffel](../../../translated_images/vi/startup.94d6b79cc4bb3f5a.webp)
 
 sử dụng một prompt như
 
@@ -272,9 +272,9 @@ Dưới đây là một ví dụ sử dụng GPT Image:
   Hình ảnh gốc chỉ chứa ghế dài với hồ bơi nhưng hình ảnh cuối cùng sẽ có một con chim hồng hạc:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.vi.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.vi.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.vi.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/vi/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Tạo các biến thể**. Ý tưởng là bạn lấy một hình ảnh hiện có và yêu cầu tạo các biến thể. Để tạo một biến thể, bạn cung cấp một hình ảnh và một prompt văn bản và mã như sau:
@@ -298,11 +298,11 @@ Hãy xem một ví dụ về cách temperature hoạt động, bằng cách ch�
 
 > Prompt: "Thỏ trên lưng ngựa, cầm kẹo mút, trên đồng cỏ sương mù nơi mọc hoa thủy tiên"
 
-![Thỏ trên lưng ngựa cầm kẹo mút, phiên bản 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.vi.png)
+![Thỏ trên lưng ngựa cầm kẹo mút, phiên bản 1](../../../translated_images/vi/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Bây giờ hãy chạy lại prompt đó để xem rằng chúng ta sẽ không nhận được cùng một hình ảnh hai lần:
 
-![Hình ảnh được tạo của thỏ trên lưng ngựa](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.vi.png)
+![Hình ảnh được tạo của thỏ trên lưng ngựa](../../../translated_images/vi/v2-generated-image.33f55a3714efe61d.webp)
 
 Như bạn thấy, các hình ảnh tương tự nhau, nhưng không giống hệt. Hãy thử thay đổi giá trị temperature thành 0.1 và xem điều gì xảy ra:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Bây giờ khi bạn chạy mã này, bạn sẽ nhận được hai hình ảnh sau:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.vi.png)
-- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.vi.png)
+- ![Temperature 0, v1](../../../translated_images/vi/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0, v2](../../../translated_images/vi/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Ở đây bạn có thể thấy rõ cách các hình ảnh giống nhau hơn.
 

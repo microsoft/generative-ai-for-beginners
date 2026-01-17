@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite maailma
 
-[![Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite maailma](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.et.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite maailma](../../../translated_images/et/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
 
@@ -43,7 +43,7 @@ Meie idufirma meeskond on teadlik, et me ei suuda seda eesmärki saavutada ilma 
 
 Generatiivne tehisintellekt on eeldatavasti revolutsioneerimas tänapäevast õppimist ja õpetamist, pakkudes õpilastele virtuaalseid õpetajaid, kes on saadaval 24 tundi ööpäevas, jagades tohutul hulgal teavet ja näiteid, ning õpetajatele innovaatilisi tööriistu, et hinnata oma õpilasi ja anda tagasisidet.
 
-![Viis noort õpilast vaatavad monitori - pilt DALLE2 poolt](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.et.png)
+![Viis noort õpilast vaatavad monitori - pilt DALLE2 poolt](../../../translated_images/et/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Alustuseks määratleme mõned põhimõisted ja terminid, mida kasutame kogu õppekava jooksul.
 
@@ -70,7 +70,7 @@ See tehnoloogia toetas virtuaalsete assistentide sündi uue sajandi esimesel kü
 
 Nii jõudsimegi tänapäeva generatiivse tehisintellektini, mida võib pidada süvaõppe alamhulgaks.
 
-![AI, ML, DL ja generatiivne tehisintellekt](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.et.png)
+![AI, ML, DL ja generatiivne tehisintellekt](../../../translated_images/et/AI-diagram.c391fa518451a40d.webp)
 
 Pärast aastakümnete pikkust uurimistööd tehisintellekti valdkonnas ületas uus mudeli arhitektuur – nimega _Transformer_ – RNN-ide piirangud, olles võimeline vastu võtma palju pikemaid tekstijadasid sisendina. Transformerid põhinevad tähelepanumehhanismil, mis võimaldab mudelil anda erinevaid kaalusid saadud sisenditele, pöörates rohkem tähelepanu kohtadele, kus kõige olulisem teave on koondunud, sõltumata nende järjekorrast tekstijadas.
 
@@ -82,7 +82,7 @@ Järgmises peatükis uurime erinevat tüüpi generatiivseid AI mudeleid, kuid pr
 
 - **Tokeniseerimine, tekstist numbriteni**: Suured keelemudelid võtavad sisendiks teksti ja genereerivad väljundiks teksti. Kuid kuna tegemist on statistiliste mudelitega, töötavad nad numbritega palju paremini kui tekstijadadega. Seetõttu töödeldakse iga mudelile antud sisend enne põhiosa mudelisse jõudmist tokeniseerija poolt. Token on tekstilõik – koosneb muutuvast arvust tähemärkidest, seega tokeniseerija peamine ülesanne on jagada sisend tokenite massiiviks. Seejärel kaardistatakse iga token tokeni indeksiga, mis on algse tekstilõigu täisarvuline kodeering.
 
-![Tokeniseerimise näide](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.et.png)
+![Tokeniseerimise näide](../../../translated_images/et/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Väljundtokenite ennustamine**: Arvestades n tokenit sisendina (kus max n varieerub mudeliti), suudab mudel ennustada ühe tokeni väljundiks. See token lisatakse järgmise iteratsiooni sisendisse, kasutades laieneva akna mustrit, mis võimaldab paremat kasutajakogemust, pakkudes vastuseks ühte (või mitut) lauset. See selgitab, miks, kui olete kunagi ChatGPT-ga mänginud, olete võib-olla märganud, et mõnikord tundub, et see peatub lause keskel.
 
@@ -100,23 +100,23 @@ Suure keelemudeli sisendit tuntakse kui päringut (prompt), samas kui väljundit
 
   1. Artikli, raamatu, tootearvustuste jms kokkuvõte koos struktureerimata andmetest saadud ülevaadetega.
     
-    ![Kokkuvõtte näide](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.et.png)
+    ![Kokkuvõtte näide](../../../translated_images/et/summarization-example.7b7ff97147b3d790.webp)
   
   2. Loov ideede genereerimine ja artikli, essee, ülesande jms kujundamine.
       
-     ![Loova kirjutamise näide](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.et.png)
+     ![Loova kirjutamise näide](../../../translated_images/et/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Küsimust**, mis on esitatud vestluse vormis agendiga.
   
-  ![Vestluse näide](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.et.png)
+  ![Vestluse näide](../../../translated_images/et/conversation-example.60c2afc0f595fa59.webp)
 
 - **Tekstilõiku, mida täiendada**, mis kaudselt tähendab palvet kirjutamisabi saamiseks.
   
-  ![Teksti täiendamise näide](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.et.png)
+  ![Teksti täiendamise näide](../../../translated_images/et/text-completion-example.cbb0f28403d42752.webp)
 
 - **Koodilõiku** koos palvega seda selgitada ja dokumenteerida või kommentaari, mis palub genereerida konkreetset ülesannet täitvat koodilõiku.
   
-  ![Koodi näide](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.et.png)
+  ![Koodi näide](../../../translated_images/et/coding-example.50ebabe8a6afff20.webp)
 
 Ülaltoodud näited on üsna lihtsad ja ei ole mõeldud suure keelemudeli võimekuse ammendavaks demonstreerimiseks. Need on mõeldud näitama generatiivse tehisintellekti kasutamise potentsiaali, eriti, kuid mitte ainult, hariduskontekstis.
 

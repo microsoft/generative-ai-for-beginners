@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # How to Build Chat App Wey Use Generative AI
 
-[![How to Build Chat App Wey Use Generative AI](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.pcm.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![How to Build Chat App Wey Use Generative AI](../../../translated_images/pcm/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Click di image wey dey up to watch di video for dis lesson)_
 
@@ -96,11 +96,11 @@ General UX principles dey apply to chat app, but some extra things dey important
 
 One example of personalization na di "Custom instructions" settings for OpenAI's ChatGPT. E dey allow you provide information about yourself wey fit be important for di prompts. See example of custom instruction.
 
-![Custom Instructions Settings in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.pcm.png)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/pcm/custom-instructions.b96f59aa69356fcf.webp)
 
 Dis "profile" dey prompt ChatGPT to create lesson plan on linked lists. You go notice say ChatGPT dey consider say di user fit want more detailed lesson plan based on her experience.
 
-![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.pcm.png)
+![A prompt in ChatGPT for a lesson plan about linked lists](../../../translated_images/pcm/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft's System Message Framework for Large Language Models
 

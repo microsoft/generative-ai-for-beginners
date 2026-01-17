@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # آپ کی جنریٹو AI ایپلیکیشنز کو محفوظ بنانا
 
-[![آپ کی جنریٹو AI ایپلیکیشنز کو محفوظ بنانا](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ur.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![آپ کی جنریٹو AI ایپلیکیشنز کو محفوظ بنانا](../../../translated_images/ur/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## تعارف
 
@@ -122,7 +122,7 @@ LLMs اس ڈیٹا کی رازداری اور سیکیورٹی کے لیے خط�
 
 > AI ریڈ ٹیمنگ کا عمل اب ایک وسیع تر معنی اختیار کر چکا ہے: یہ نہ صرف سیکیورٹی کی کمزوریوں کی جانچ کرتا ہے بلکہ دیگر نظامی ناکامیوں کی جانچ بھی شامل کرتا ہے، جیسے کہ ممکنہ طور پر نقصان دہ مواد کی تخلیق۔ AI نظام نئے خطرات کے ساتھ آتے ہیں، اور ریڈ ٹیمنگ ان نئے خطرات کو سمجھنے کے لیے بنیادی حیثیت رکھتی ہے، جیسے کہ پرامپٹ انجیکشن اور غیر مستند مواد کی پیداوار۔ - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![ریڈ ٹیمنگ کے لیے رہنمائی اور وسائل](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ur.png)]()
+[![ریڈ ٹیمنگ کے لیے رہنمائی اور وسائل](../../../translated_images/ur/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 ذیل میں وہ اہم نکات ہیں جنہوں نے مائیکروسافٹ کے AI ریڈ ٹیم پروگرام کو تشکیل دیا ہے۔
 

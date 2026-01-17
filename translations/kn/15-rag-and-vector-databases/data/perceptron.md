@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 |      |      |
 |--------------|-----------|
-|<img src='../../../../translated_images/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.kn.jpg' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.kn.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/kn/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.jpg' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/kn/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.jpg' alt='The Mark 1 Perceptron' />|
 
 > ವಿಕಿಪೀಡಿಯಾದಿಂದ ಚಿತ್ರಗಳು
 

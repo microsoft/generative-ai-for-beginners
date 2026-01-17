@@ -63,7 +63,7 @@ Para asegurarte de que tus enlaces funcionen correctamente, simplemente usa VS C
 
 Por ejemplo, cuando pases el cursor sobre cualquier enlace en tus archivos, se te sugerirá seguir el enlace presionando **ctrl + clic**
 
-![Captura de pantalla de VS code para seguir enlaces](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.es.png)
+![Captura de pantalla de VS code para seguir enlaces](../../translated_images/es/vscode-follow-link.85520ab6a1237adc.webp)
 
 Si haces clic en un enlace y no funciona localmente, seguramente activará el flujo de trabajo y no funcionará en GitHub.
 
@@ -71,7 +71,7 @@ Para solucionar este problema, intenta escribir el enlace con la ayuda de VS Cod
 
 Cuando escribas `./` o `../`, VS Code te sugerirá opciones disponibles según lo que hayas escrito.
 
-![Captura de pantalla de VS code para seleccionar ruta relativa](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.es.png)
+![Captura de pantalla de VS code para seleccionar ruta relativa](../../translated_images/es/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Sigue la ruta haciendo clic en el archivo o carpeta deseada y así te asegurarás de que tu ruta no esté rota.
 
@@ -88,7 +88,7 @@ Si está agregado a tus rutas relativas, pasarás esta verificación.
 
 Si no, podrías recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre rutas sin seguimiento](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.es.png)
+![Captura de pantalla del comentario de GitHub sobre rutas sin seguimiento](../../translated_images/es/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y agrega el ID de seguimiento al final de las rutas relativas.
 
@@ -105,7 +105,7 @@ Si está agregado a tus URLs, pasarás esta verificación.
 
 Si no, podrías recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre URLs sin seguimiento](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.es.png)
+![Captura de pantalla del comentario de GitHub sobre URLs sin seguimiento](../../translated_images/es/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y agrega el ID de seguimiento al final de las URLs.
 
@@ -122,7 +122,7 @@ Si no está presente en tus URLs, pasarás esta verificación.
 
 Si no, podrías recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre locales de país en URLs](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.es.png)
+![Captura de pantalla del comentario de GitHub sobre locales de país en URLs](../../translated_images/es/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y elimina el locale de país de las URLs.
 

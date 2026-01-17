@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygning af søgeapplikationer
 
-[![Introduktion til Generativ AI og Store Sproglige Modeller](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.da.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introduktion til Generativ AI og Store Sproglige Modeller](../../../translated_images/da/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klik på billedet ovenfor for at se videoen til denne lektion_
 
@@ -44,7 +44,7 @@ Lektionens Embedding Index indeholder YouTube-transkriptioner fra Microsoft [AI 
 
 Følgende er et eksempel på en semantisk forespørgsel for spørgsmålet 'kan du bruge rstudio med azure ml?'. Tjek YouTube-url'en, du vil se, at url'en indeholder et tidsstempel, der tager dig til det sted i videoen, hvor svaret på spørgsmålet findes.
 
-![Semantisk forespørgsel for spørgsmålet "kan du bruge rstudio med Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.da.png)
+![Semantisk forespørgsel for spørgsmålet "kan du bruge rstudio med Azure ML"](../../../translated_images/da/query-results.bb0480ebf025fac6.webp)
 
 ## Hvad er semantisk søgning?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Når du kører notebooken, vil du blive bedt om at indtaste en forespørgsel. Inputfeltet vil se sådan ud:
 
-![Inputfelt for brugeren til at indtaste en forespørgsel](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.da.png)
+![Inputfelt for brugeren til at indtaste en forespørgsel](../../../translated_images/da/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Godt arbejde! Fortsæt din læring
 

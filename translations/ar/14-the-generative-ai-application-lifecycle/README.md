@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-[![الاندماج مع استدعاء الدالة](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.ar.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![الاندماج مع استدعاء الدالة](../../../translated_images/ar/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # دورة حياة تطبيقات الذكاء الاصطناعي التوليدي
 
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 مع ذلك، نحتاج إلى نموذج جديد لتكييف هذه الأداة بطريقة ديناميكية، مع الحوافز الصحيحة. يمكننا تصنيف تطبيقات الذكاء الاصطناعي القديمة كـ "تطبيقات التعلم الآلي" وتطبيقات الذكاء الاصطناعي الأحدث كـ "تطبيقات الذكاء الاصطناعي التوليدي" أو فقط "تطبيقات الذكاء الاصطناعي"، مما يعكس التكنولوجيا والتقنيات السائدة في ذلك الوقت. هذا يحول سردنا بعدة طرق، انظر إلى المقارنة التالية.
 
-![مقارنة LLMOps مقابل MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.ar.png)
+![مقارنة LLMOps مقابل MLOps](../../../translated_images/ar/01-llmops-shift.29bc933cb3bb0080.webp)
 
 لاحظ أنه في LLMOps، نركز أكثر على مطوري التطبيقات، باستخدام التكامل كنقطة رئيسية، واستخدام "النماذج كخدمة" والتفكير في النقاط التالية للقياسات.
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 أولاً، لفهم دورة الحياة والتعديلات، دعنا نلاحظ الرسم البياني التالي.
 
-![مخطط LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.ar.png)
+![مخطط LLMOps](../../../translated_images/ar/02-llmops.70a942ead05a7645.webp)
 
 كما قد تلاحظ، هذا يختلف عن دورات الحياة المعتادة في MLOps. لدى نماذج اللغة الكبيرة العديد من المتطلبات الجديدة، مثل التوجيه، وتقنيات مختلفة لتحسين الجودة (التعديل الدقيق، RAG، التوجيهات الميتا)، تقييم مختلف ومسؤولية مع الذكاء الاصطناعي المسؤول، وأخيرًا، مقاييس تقييم جديدة (الجودة، الضرر، الصدق، التكلفة والكمون).
 
@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 كيف يمكننا استكشاف هذه الخطوات؟ دعنا ندخل في التفاصيل حول كيفية بناء دورة حياة.
 
-![سير عمل LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.ar.png)
+![سير عمل LLMOps](../../../translated_images/ar/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 قد يبدو هذا معقدًا بعض الشيء، دعنا نركز أولاً على الخطوات الثلاث الكبيرة.
 
@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 تتيح لك [منصة Azure AI](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) استخدام [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio هو بوابة ويب تتيح لك استكشاف النماذج، العينات والأدوات. إدارة مواردك، تدفقات تطوير واجهة المستخدم وخيارات SDK/CLI لتطوير يعتمد على الكود أولاً.
 
-![إمكانيات Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.ar.png)
+![إمكانيات Azure AI](../../../translated_images/ar/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 يتيح لك Azure AI استخدام موارد متعددة، لإدارة عملياتك، الخدمات، المشاريع، البحث المتجه وقواعد البيانات.
 
-![LLMOps مع Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.ar.png)
+![LLMOps مع Azure AI](../../../translated_images/ar/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 ابنِ، من إثبات المفهوم (POC) حتى التطبيقات واسعة النطاق مع PromptFlow:
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - اختبار وضبط تطبيقاتك لجودة الذكاء الاصطناعي، بسهولة.
 - استخدم Azure AI Studio للتكامل والتكرار مع السحابة، الدفع والنشر للتكامل السريع.
 
-![LLMOps مع PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.ar.png)
+![LLMOps مع PromptFlow](../../../translated_images/ar/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## رائع! واصل تعلمك!
 

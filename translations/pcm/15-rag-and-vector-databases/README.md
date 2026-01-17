@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.pcm.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/pcm/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 For di lesson wey we do for search applications, we don learn small about how to put your own data inside Large Language Models (LLMs). For dis lesson, we go talk more about how you fit ground your data for your LLM application, how di process dey work, and di ways wey you fit store data, including embeddings and text.
 
@@ -53,7 +53,7 @@ LLM-powered chatbot dey process user prompts to generate response. E dey interac
 
 ### How RAGs (Retrieval Augmented Generation) dey work
 
-![drawing showing how RAGs work](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.pcm.png)
+![drawing showing how RAGs work](../../../translated_images/pcm/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Imagine say you wan deploy chatbot wey go dey create quizzes from your notes, you go need connection to di knowledge base. Na here RAG go help. RAG dey work like dis:
 
@@ -65,7 +65,7 @@ Imagine say you wan deploy chatbot wey go dey create quizzes from your notes, yo
 
 - **Augmented Generation:** Di LLM go use di data wey e retrieve to make di response better. E go make di response no just dey based on pre-trained data but also dey relevant to di added context. Di retrieved data go help di LLM response. Di LLM go then give answer to di user question.
 
-![drawing showing how RAGs architecture](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.pcm.png)
+![drawing showing how RAGs architecture](../../../translated_images/pcm/encoder-decode.f2658c25d0eadee2.webp)
 
 Di architecture for RAG dey use transformers wey get two parts: encoder and decoder. For example, when user ask question, di input text go dey 'encoded' into vectors wey capture di meaning of di words, and di vectors go dey 'decoded' into di document index to generate new text based on di user query. Di LLM dey use encoder-decoder model to generate output.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 After chunking, we fit embed our text using different embedding models. Some models wey you fit use na: word2vec, ada-002 by OpenAI, Azure Computer Vision, and many more. Di model wey you go use go depend on di language wey you dey use, di type of content wey you dey encode (text/images/audio), di size of input wey e fit encode, and di length of di embedding output.
 
 Example of embedded text using OpenAI's `text-embedding-ada-002` model na:
-![an embedding of the word cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.pcm.png)
+![an embedding of the word cat](../../../translated_images/pcm/cat.74cbd7946bc9ca38.webp)
 
 ## Retrieval and Vector Search
 

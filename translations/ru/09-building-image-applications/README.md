@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Создание приложений для генерации изображений
 
-[![Создание приложений для генерации изображений](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.ru.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Создание приложений для генерации изображений](../../../translated_images/ru/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Генерация текста — это не единственное, что могут делать LLM. Также возможно создавать изображения на основе текстовых описаний. Наличие изображений как модальности может быть чрезвычайно полезным в различных областях, таких как медицинские технологии, архитектура, туризм, разработка игр и многое другое. В этой главе мы рассмотрим две самые популярные модели генерации изображений: DALL-E и Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Вот пример того, что студенты Edu4All могут создать, если они работают в классе над темой памятников:
 
-![Стартап Edu4All, класс о памятниках, Эйфелева башня](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.ru.png)
+![Стартап Edu4All, класс о памятниках, Эйфелева башня](../../../translated_images/ru/startup.94d6b79cc4bb3f5a.webp)
 
 используя подсказку вроде:
 
@@ -272,9 +272,9 @@ _Авторегрессионный трансформер_ определяет
   Исходное изображение будет содержать только лаунж с бассейном, но итоговое изображение будет включать фламинго:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.ru.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.ru.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.ru.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ru/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Создавать вариации**. Идея заключается в том, чтобы взять существующее изображение и попросить создать его вариации. Для создания вариации вы предоставляете изображение и текстовую подсказку, а код выглядит следующим образом:
@@ -298,11 +298,11 @@ _Авторегрессионный трансформер_ определяет
 
 > Подсказка: "Кролик на лошади, держащий леденец, на туманном лугу, где растут нарциссы"
 
-![Кролик на лошади, держащий леденец, версия 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.ru.png)
+![Кролик на лошади, держащий леденец, версия 1](../../../translated_images/ru/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Теперь запустим ту же подсказку снова, чтобы увидеть, что мы не получим одно и то же изображение дважды:
 
-![Созданное изображение кролика на лошади](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.ru.png)
+![Созданное изображение кролика на лошади](../../../translated_images/ru/v2-generated-image.33f55a3714efe61d.webp)
 
 Как видите, изображения похожи, но не идентичны. Давайте попробуем изменить значение температуры на 0.1 и посмотрим, что произойдет:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Теперь, когда вы запустите этот код, вы получите эти два изображения:
 
-- ![Температура 0, версия 1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.ru.png)
-- ![Температура 0, версия 2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.ru.png)
+- ![Температура 0, версия 1](../../../translated_images/ru/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Температура 0, версия 2](../../../translated_images/ru/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Здесь вы можете ясно видеть, как изображения больше похожи друг на друга.
 

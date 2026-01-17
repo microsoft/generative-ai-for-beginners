@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mr"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.mr.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/mr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # तुमचा LLM फाइन-ट्यून करणे
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 आम्ही सखोल अभ्यास करण्यापूर्वी आपण काय कव्हर करणार आहोत याची मोठी चित्र मिळवायची आहे का? या धड्याच्या शिकण्याच्या प्रवासाचे वर्णन करणारा चित्रात्मक मार्गदर्शक पहा - फाइन-ट्यूनिंगसाठी मुख्य संकल्पना आणि प्रेरणा शिकण्यापासून ते प्रक्रिया समजून घेणे आणि फाइन-ट्यूनिंग कार्य अंमलात आणण्यासाठी सर्वोत्तम पद्धती समजून घेणे. हे एक आकर्षक विषय आहे, त्यामुळे तुमच्या स्व-मार्गदर्शित शिक्षण प्रवासाला समर्थन देण्यासाठी अतिरिक्त दुव्यांसाठी [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) पृष्ठ तपासायला विसरू नका!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.mr.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/mr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## भाषा मॉडेल्ससाठी फाइन-ट्यूनिंग म्हणजे काय?
 

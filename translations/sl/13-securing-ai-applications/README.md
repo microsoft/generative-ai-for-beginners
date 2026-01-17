@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Zavarovanje vaših aplikacij generativne umetne inteligence
 
-[![Zavarovanje vaših aplikacij generativne umetne inteligence](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.sl.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Zavarovanje vaših aplikacij generativne umetne inteligence](../../../translated_images/sl/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Uvod
 
@@ -125,7 +125,7 @@ Posnemanje groženj iz resničnega sveta je zdaj standardna praksa pri gradnji o
 
 > Praksa rdečega timinga za umetno inteligenco se je razvila v širši pomen: ne zajema le iskanja varnostnih ranljivosti, temveč vključuje tudi iskanje drugih sistemskih napak, kot je generiranje potencialno škodljive vsebine. Sistemi umetne inteligence prinašajo nova tveganja, rdeči tim pa je ključen za razumevanje teh novih tveganj, kot so vbrizgavanje ukazov in ustvarjanje vsebine brez podlage. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Navodila in viri za rdeči tim](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.sl.png)]()
+[![Navodila in viri za rdeči tim](../../../translated_images/sl/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Spodaj so ključni vpogledi, ki so oblikovali Microsoftov program rdečega tima za umetno inteligenco.
 

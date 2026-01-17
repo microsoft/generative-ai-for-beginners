@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) dan Basis Data Vektor
 
-[![Retrieval Augmented Generation (RAG) dan Basis Data Vektor](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.id.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) dan Basis Data Vektor](../../../translated_images/id/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Dalam pelajaran aplikasi pencarian, kita telah mempelajari secara singkat cara mengintegrasikan data Anda sendiri ke dalam Model Bahasa Besar (LLM). Dalam pelajaran ini, kita akan mendalami lebih jauh konsep menanamkan data Anda ke dalam aplikasi LLM, mekanisme prosesnya, dan metode penyimpanan data, termasuk embedding dan teks.
 
@@ -53,7 +53,7 @@ Chatbot yang didukung LLM memproses permintaan pengguna untuk menghasilkan respo
 
 ### Cara kerja RAG (Retrieval Augmented Generation)
 
-![gambar menunjukkan cara kerja RAG](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.id.png)
+![gambar menunjukkan cara kerja RAG](../../../translated_images/id/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Misalkan Anda ingin menerapkan chatbot yang membuat kuis dari catatan Anda, Anda akan memerlukan koneksi ke basis pengetahuan. Di sinilah RAG menjadi solusi. RAG bekerja sebagai berikut:
 
@@ -65,7 +65,7 @@ Misalkan Anda ingin menerapkan chatbot yang membuat kuis dari catatan Anda, Anda
 
 - **Generasi yang Ditingkatkan:** LLM meningkatkan responsnya berdasarkan data yang diambil. Ini memungkinkan respons yang dihasilkan tidak hanya berdasarkan data yang telah dilatih sebelumnya tetapi juga informasi relevan dari konteks tambahan. Data yang diambil digunakan untuk meningkatkan respons LLM. LLM kemudian memberikan jawaban atas pertanyaan pengguna.
 
-![gambar menunjukkan arsitektur RAG](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.id.png)
+![gambar menunjukkan arsitektur RAG](../../../translated_images/id/encoder-decode.f2658c25d0eadee2.webp)
 
 Arsitektur RAG diimplementasikan menggunakan transformer yang terdiri dari dua bagian: encoder dan decoder. Misalnya, ketika pengguna mengajukan pertanyaan, teks input 'dikodekan' menjadi vektor yang menangkap makna kata-kata dan vektor tersebut 'didekodekan' ke dalam indeks dokumen kita dan menghasilkan teks baru berdasarkan permintaan pengguna. LLM menggunakan model encoder-decoder untuk menghasilkan output.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Setelah dipecah, kita kemudian dapat meng-embed teks kita menggunakan berbagai model embedding. Beberapa model yang dapat Anda gunakan termasuk: word2vec, ada-002 oleh OpenAI, Azure Computer Vision, dan banyak lagi. Memilih model yang akan digunakan akan bergantung pada bahasa yang Anda gunakan, jenis konten yang dikodekan (teks/gambar/audio), ukuran input yang dapat dikodekan, dan panjang output embedding.
 
 Contoh teks yang di-embed menggunakan model `text-embedding-ada-002` dari OpenAI adalah:
-![embedding dari kata kucing](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.id.png)
+![embedding dari kata kucing](../../../translated_images/id/cat.74cbd7946bc9ca38.webp)
 
 ## Pengambilan dan Pencarian Vektor
 

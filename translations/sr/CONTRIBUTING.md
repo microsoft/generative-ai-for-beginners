@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 На пример, када пређете курсором преко било ког линка у вашим фајловима, биће вам понуђено да пратите линк притиском на **ctrl + клик**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.sr.png)
+![VS code follow links screenshot](../../translated_images/sr/vscode-follow-link.85520ab6a1237adc.webp)
 
 Ако кликнете на линк и он не ради локално, сигурно ће покренути workflow и неће радити на GitHub-у.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Када куцате `./` или `../`, VS code ће вам понудити опције у складу са тим што сте куцали.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.sr.png)
+![VS code select relative path screenshot](../../translated_images/sr/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Пратите путању кликом на жељени фајл или фасциклу и бићете сигурни да ваша путања није покварена.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У супротном, можете добити следећу грешку.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.sr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/sr/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Да бисте решили овај проблем, отворите фајл који је workflow означио и додајте ID за праћење на крај релативних путања.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У супротном, можете добити следећу грешку.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.sr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/sr/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Да бисте решили овај проблем, отворите фајл који је workflow означио и додајте ID за праћење на крај URL-ова.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У супротном, можете добити следећу грешку.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.sr.png)
+![GitHub check country locale comment screenshot](../../translated_images/sr/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Да бисте решили овај проблем, отворите фајл који је workflow означио и уклоните локализацију земље из URL-ова.
 

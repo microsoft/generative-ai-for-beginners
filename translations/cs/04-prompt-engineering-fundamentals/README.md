@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Základy návrhu promptů
 
-[![Základy návrhu promptů](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.cs.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Základy návrhu promptů](../../../translated_images/cs/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Úvod
 Tento modul se zabývá základními koncepty a technikami pro vytváření efektivních promptů v generativních AI modelech. Způsob, jakým napíšete svůj prompt pro LLM, má také význam. Pečlivě vytvořený prompt může přinést kvalitnější odpovědi. Ale co přesně znamenají pojmy jako _prompt_ a _návrh promptů_? A jak mohu zlepšit _vstupní prompt_, který posílám LLM? To jsou otázky, na které se pokusíme odpovědět v této kapitole a v následující.
@@ -53,7 +53,7 @@ Notebook obsahuje _startovací_ cvičení - ale doporučujeme přidat vlastní s
 
 Chcete získat celkový přehled o tom, co tato lekce pokrývá, než se do ní ponoříte? Podívejte se na tento ilustrovaný průvodce, který vám poskytne přehled hlavních témat a klíčových poznatků, o kterých byste měli přemýšlet v každé z nich. Plán lekce vás provede od pochopení základních konceptů a výzev k jejich řešení pomocí relevantních technik návrhu promptů a osvědčených postupů. Upozorňujeme, že sekce "Pokročilé techniky" v tomto průvodci odkazuje na obsah pokrytý v _další_ kapitole tohoto kurzu.
 
-![Ilustrovaný průvodce návrhem promptů](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.cs.png)
+![Ilustrovaný průvodce návrhem promptů](../../../translated_images/cs/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Naše startupová mise
 
@@ -94,7 +94,7 @@ LLM vidí prompty jako _sekvenci tokenů_, kde různé modely (nebo verze modelu
 
 Chcete-li získat intuici o tom, jak tokenizace funguje, vyzkoušejte nástroje jako [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) uvedený níže. Zkopírujte svůj prompt - a podívejte se, jak se převádí na tokeny, věnujte pozornost tomu, jak jsou zpracovávány znaky mezer a interpunkce. Upozorňujeme, že tento příklad ukazuje starší LLM (GPT-3) - takže při použití novějšího modelu může být výsledek odlišný.
 
-![Tokenizace](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.cs.png)
+![Tokenizace](../../../translated_images/cs/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Koncept: Základní modely
 
@@ -104,7 +104,7 @@ Chcete vidět, jak funguje dokončování na základě promptů? Zadejte výše 
 
 Ale co když uživatel chtěl vidět něco konkrétního, co splňuje nějaká kritéria nebo cíl úkolu? Zde přicházejí na scénu _LLM laděné na instrukce_.
 
-![Dokončování chatu základního LLM](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.cs.png)
+![Dokončování chatu základního LLM](../../../translated_images/cs/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Koncept: LLM laděné na instrukce
 
@@ -118,7 +118,7 @@ Vyzkoušejme to - vraťte se k výše uvedenému promptu, ale nyní změňte _sy
 
 Vidíte, jak je výsledek nyní přizpůsoben požadovanému cíli a formátu? Učitel může nyní tuto odpověď přímo použít ve svých prezentacích pro danou třídu.
 
-![Dokončování chatu LLM laděného na instrukce](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.cs.png)
+![Dokončování chatu LLM laděného na instrukce](../../../translated_images/cs/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Proč potřebujeme návrh promptů?
 
@@ -146,15 +146,15 @@ Co se tedy stane, když tento dotaz zadáme různým poskytovatelům LLM?
 
 > **Odpověď 1**: OpenAI Playground (GPT-35)
 
-![Odpověď 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.cs.png)
+![Odpověď 1](../../../translated_images/cs/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Odpověď 2**: Azure OpenAI Playground (GPT-35)
 
-![Odpověď 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.cs.png)
+![Odpověď 2](../../../translated_images/cs/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Odpověď 3**: Hugging Face Chat Playground (LLama-2)
 
-![Odpověď 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.cs.png)
+![Odpověď 3](../../../translated_images/cs/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Jak se dalo očekávat, každý model (nebo verze modelu) generuje mírně odlišné odpovědi díky stochastickému chování a rozdílům ve schopnostech modelu. Například jeden model cílí na publikum osmého ročníku, zatímco druhý předpokládá středoškolské studenty. Ale všechny tři modely vytvořily odpovědi, které by mohly přesvědčit neinformovaného uživatele, že událost byla skutečná.
 

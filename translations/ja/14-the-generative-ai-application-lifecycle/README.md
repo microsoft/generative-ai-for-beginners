@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ja"
 }
 -->
-[![関数呼び出しとの統合](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.ja.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![関数呼び出しとの統合](../../../translated_images/ja/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # 生成AIアプリケーションのライフサイクル
 
@@ -30,7 +30,7 @@ LLMは人工知能の新しいツールであり、アプリケーションの�
 
 これにより、このツールを動的かつ適切なインセンティブで適応させるための新しいパラダイムが必要になります。古いAIアプリを「MLアプリ」、新しいAIアプリを「GenAIアプリ」または単に「AIアプリ」と分類できます。これは当時の主流技術や手法を反映しています。この変化は複数の面で物語を変えます。以下の比較をご覧ください。
 
-![LLMOpsとMLOpsの比較](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.ja.png)
+![LLMOpsとMLOpsの比較](../../../translated_images/ja/01-llmops-shift.29bc933cb3bb0080.webp)
 
 LLMOpsでは、アプリ開発者により焦点を当て、統合を重要なポイントとして使用し、「モデル・アズ・ア・サービス」を利用し、以下の指標を考慮しています。
 
@@ -44,7 +44,7 @@ LLMOpsでは、アプリ開発者により焦点を当て、統合を重要な�
 
 まず、ライフサイクルとその変更点を理解するために、次のインフォグラフィックに注目しましょう。
 
-![LLMOpsのインフォグラフィック](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.ja.png)
+![LLMOpsのインフォグラフィック](../../../translated_images/ja/02-llmops.70a942ead05a7645.webp)
 
 ご覧の通り、これは通常のMLOpsのライフサイクルとは異なります。LLMには多くの新しい要件があります。プロンプティング、品質向上のためのさまざまな技術（ファインチューニング、RAG、メタプロンプト）、責任あるAIに関する異なる評価と責任、最後に新しい評価指標（品質、有害性、正直さ、コスト、レイテンシ）です。
 
@@ -54,7 +54,7 @@ LLMOpsでは、アプリ開発者により焦点を当て、統合を重要な�
 
 これらのステップをどのように探求できるでしょうか？ライフサイクルの構築方法を詳しく見てみましょう。
 
-![LLMOpsのワークフロー](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.ja.png)
+![LLMOpsのワークフロー](../../../translated_images/ja/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 少し複雑に見えるかもしれませんが、まずは3つの大きなステップに注目しましょう。
 
@@ -74,11 +74,11 @@ LLMOpsでは、アプリ開発者により焦点を当て、統合を重要な�
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys)では、[AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys)を利用できます。AI Studioは、モデル、サンプル、ツールを探索し、リソース管理、UI開発フロー、コードファースト開発のためのSDK/CLIオプションを提供するウェブポータルです。
 
-![Azure AIの可能性](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.ja.png)
+![Azure AIの可能性](../../../translated_images/ja/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AIは、複数のリソースを使用して、運用、サービス、プロジェクト、ベクトル検索、データベースのニーズを管理できます。
 
-![Azure AIによるLLMOps](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.ja.png)
+![Azure AIによるLLMOps](../../../translated_images/ja/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Proof-of-Concept（POC）から大規模アプリケーションまで、PromptFlowで構築：
 
@@ -86,7 +86,7 @@ Proof-of-Concept（POC）から大規模アプリケーションまで、PromptF
 - 品質の高いAIのためにアプリをテスト・ファインチューニングを簡単に実施
 - Azure AI Studioを使ってクラウドと統合し、迅速な統合のためにプッシュ＆デプロイを繰り返す
 
-![PromptFlowによるLLMOps](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.ja.png)
+![PromptFlowによるLLMOps](../../../translated_images/ja/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## 素晴らしい！学習を続けましょう！
 

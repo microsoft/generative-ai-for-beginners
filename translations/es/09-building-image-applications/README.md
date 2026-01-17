@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construyendo Aplicaciones de Generación de Imágenes
 
-[![Construyendo Aplicaciones de Generación de Imágenes](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.es.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Construyendo Aplicaciones de Generación de Imágenes](../../../translated_images/es/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Los LLMs no solo sirven para generar texto. También es posible generar imágenes a partir de descripciones de texto. Tener imágenes como modalidad puede ser muy útil en diversas áreas como MedTech, arquitectura, turismo, desarrollo de videojuegos y más. En este capítulo, exploraremos los dos modelos de generación de imágenes más populares: DALL-E y Midjourney.
 
@@ -43,7 +43,7 @@ Como parte de esta lección, continuaremos trabajando con nuestra startup, Edu4A
 
 Esto es un ejemplo de lo que los estudiantes de Edu4All podrían generar si están trabajando en clase sobre monumentos:
 
-![Startup Edu4All, clase sobre monumentos, Torre Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.es.png)
+![Startup Edu4All, clase sobre monumentos, Torre Eiffel](../../../translated_images/es/startup.94d6b79cc4bb3f5a.webp)
 
 usando un prompt como:
 
@@ -272,9 +272,9 @@ Aquí hay un ejemplo usando GPT Image:
   La imagen base solo contendría el salón con piscina, pero la imagen final tendría un flamenco:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.es.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.es.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.es.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/es/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/es/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/es/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -299,11 +299,11 @@ Veamos un ejemplo de cómo funciona la temperatura, ejecutando este prompt dos v
 
 > Prompt : "Conejo en caballo, sosteniendo una piruleta, en un prado con niebla donde crecen narcisos"
 
-![Conejo en un caballo sosteniendo una piruleta, versión 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.es.png)
+![Conejo en un caballo sosteniendo una piruleta, versión 1](../../../translated_images/es/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Ahora ejecutemos el mismo prompt nuevamente para ver que no obtendremos la misma imagen dos veces:
 
-![Imagen generada de conejo en caballo](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.es.png)
+![Imagen generada de conejo en caballo](../../../translated_images/es/v2-generated-image.33f55a3714efe61d.webp)
 
 Como puedes ver, las imágenes son similares, pero no idénticas. Probemos cambiar el valor de la temperatura a 0.1 y veamos qué sucede:
 
@@ -332,8 +332,8 @@ generation_response = client.images.create(
 
 Ahora, cuando ejecutes este código, obtendrás estas dos imágenes:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.es.png)
-- ![Temperatura 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.es.png)
+- ![Temperatura 0, v1](../../../translated_images/es/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0 , v2](../../../translated_images/es/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Aquí puedes ver claramente cómo las imágenes se parecen más entre sí.
 

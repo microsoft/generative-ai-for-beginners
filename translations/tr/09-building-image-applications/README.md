@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Görüntü Oluşturma Uygulamaları Oluşturma
 
-[![Görüntü Oluşturma Uygulamaları Oluşturma](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.tr.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Görüntü Oluşturma Uygulamaları Oluşturma](../../../translated_images/tr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Büyük Dil Modelleri (LLM'ler) yalnızca metin oluşturma ile sınırlı değildir. Metin açıklamalarından görüntü oluşturmak da mümkündür. Görüntülerin bir modalite olarak kullanılması, MedTech, mimarlık, turizm, oyun geliştirme gibi birçok alanda oldukça faydalı olabilir. Bu bölümde, en popüler iki görüntü oluşturma modeli olan DALL-E ve Midjourney'i inceleyeceğiz.
 
@@ -43,7 +43,7 @@ Bu ders kapsamında, Edu4All adlı girişimimizle çalışmaya devam edeceğiz. 
 
 Edu4All öğrencilerinin sınıfta anıtlar üzerinde çalışırken oluşturabilecekleri örneklerden biri:
 
-![Edu4All girişimi, anıtlar üzerine sınıf, Eyfel Kulesi](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.tr.png)
+![Edu4All girişimi, anıtlar üzerine sınıf, Eyfel Kulesi](../../../translated_images/tr/startup.94d6b79cc4bb3f5a.webp)
 
 şu tür bir istem kullanarak:
 
@@ -272,9 +272,9 @@ Ayrıca şunları yapabilirsiniz:
   Temel görüntü yalnızca havuzlu salonu içerirken, son görüntüde bir flamingo olacaktır:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.tr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.tr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.tr.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/tr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Varyasyonlar oluşturma**. Buradaki fikir, mevcut bir görüntüyü alıp farklı varyasyonlar oluşturmanızdır. Bir varyasyon oluşturmak için bir görüntü ve bir metin istemi sağlayarak şu şekilde kod yazabilirsiniz:
@@ -298,11 +298,11 @@ Sıcaklığın nasıl çalıştığını görmek için bu istemi iki kez çalı�
 
 > İstem: "Sisli bir çayırda nergislerin yetiştiği bir alanda lolipop tutan bir atın üzerindeki tavşan"
 
-![Lolipop tutan bir atın üzerindeki tavşan, versiyon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.tr.png)
+![Lolipop tutan bir atın üzerindeki tavşan, versiyon 1](../../../translated_images/tr/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Şimdi aynı istemi tekrar çalıştırarak aynı görüntüyü iki kez alamayacağımızı görelim:
 
-![Atın üzerindeki tavşan görüntüsü](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.tr.png)
+![Atın üzerindeki tavşan görüntüsü](../../../translated_images/tr/v2-generated-image.33f55a3714efe61d.webp)
 
 Gördüğünüz gibi, görüntüler benzer ancak aynı değil. Şimdi sıcaklık değerini 0.1'e değiştirip ne olduğunu görelim:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Şimdi bu kodu çalıştırdığınızda şu iki görüntüyü elde edersiniz:
 
-- ![Sıcaklık 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.tr.png)
-- ![Sıcaklık 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.tr.png)
+- ![Sıcaklık 0, v1](../../../translated_images/tr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Sıcaklık 0, v2](../../../translated_images/tr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Burada açıkça görebilirsiniz ki görüntüler birbirine daha çok benziyor.
 

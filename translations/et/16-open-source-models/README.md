@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "et"
 }
 -->
-[![Avatud lähtekoodiga mudelid](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.et.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Avatud lähtekoodiga mudelid](../../../translated_images/et/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Sissejuhatus
 
@@ -41,12 +41,12 @@ Selles õppetunnis nimetame mudeleid edaspidi "avatud mudeliteks", kuna need ei 
 
 **Kulu** – Nende mudelite kasutamise ja juurutamise tokeni hind on madalam kui omandatud mudelitel. Generatiivsete tehisintellekti rakenduste loomisel tuleks hinnata jõudlust ja hinda vastavalt oma kasutusjuhtumile.
 
-![Mudeli hind](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.et.png)
+![Mudeli hind](../../../translated_images/et/model-price.3f5a3e4d32ae00b4.webp)
 Allikas: Artificial Analysis
 
 **Paindlikkus** – Avatud mudelitega töötamine võimaldab olla paindlik erinevate mudelite kasutamisel või nende kombineerimisel. Näiteks [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), kus kasutaja saab kasutajaliideses otse valida kasutatava mudeli:
 
-![Vali mudel](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.et.png)
+![Vali mudel](../../../translated_images/et/choose-model.f095d15bbac92214.webp)
 
 ## Erinevate avatud mudelite uurimine
 
@@ -74,7 +74,7 @@ Avatud mudeli valimiseks ei ole ühtset vastust. Hea koht alustamiseks on Azure 
 
 Kui soovite võrrelda erinevat tüüpi LLM-e, on [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) veel üks suurepärane ressurss:
 
-![Mudeli kvaliteet](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.et.png)
+![Mudeli kvaliteet](../../../translated_images/et/model-quality.aaae1c22e00f7ee1.webp)
 Allikas: Artificial Analysis
 
 Kui töötate konkreetse kasutusjuhtumiga, võib olla tõhus otsida sama valdkonna peenhäälestatud versioone. Samuti on hea tava katsetada mitut avatud mudelit, et näha, kuidas need vastavad teie ja teie kasutajate ootustele.

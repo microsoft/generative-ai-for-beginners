@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Utangulizi wa AI ya Kizazi na Miundo Mikubwa ya Lugha
 
-[![Utangulizi wa AI ya Kizazi na Miundo Mikubwa ya Lugha](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.sw.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Utangulizi wa AI ya Kizazi na Miundo Mikubwa ya Lugha](../../../translated_images/sw/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Bofya picha hapo juu kutazama video ya somo hili)_
 
@@ -43,7 +43,7 @@ Timu ya kampuni yetu inatambua kuwa hatutaweza kufanikisha lengo hili bila kutum
 
 AI ya kizazi inatarajiwa kubadilisha jinsi tunavyosoma na kufundisha leo, huku wanafunzi wakiwa na walimu wa mtandaoni masaa 24 kwa siku wanaotoa taarifa nyingi na mifano, na walimu wakiwa na uwezo wa kutumia zana za ubunifu kutathmini wanafunzi wao na kutoa maoni.
 
-![Wanafunzi watano vijana wakiangalia skrini - picha na DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.sw.png)
+![Wanafunzi watano vijana wakiangalia skrini - picha na DALLE2](../../../translated_images/sw/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Ili kuanza, hebu tueleze baadhi ya dhana za msingi na istilahi tutakazotumia katika mtaala huu.
 
@@ -70,7 +70,7 @@ Hii ndiyo teknolojia iliyowezesha wasaidizi wa kijanja waliozaliwa katika muongo
 
 Hivyo ndivyo tulivyofikia AI ya kizazi leo, ambayo inaweza kuonekana kama sehemu ndogo ya kujifunza kwa kina.
 
-![AI, ML, DL na AI ya Kizazi](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.sw.png)
+![AI, ML, DL na AI ya Kizazi](../../../translated_images/sw/AI-diagram.c391fa518451a40d.webp)
 
 Baada ya miongo ya utafiti katika uwanja wa AI, usanifu mpya wa modeli – unaoitwa _Transformer_ – ulivuka mipaka ya RNNs, ukiwa na uwezo wa kupokea mlolongo mrefu zaidi wa maandishi kama pembejeo. Transformers zinategemea utaratibu wa umakini, unaowezesha modeli kutoa uzito tofauti kwa pembejeo inazopokea, ‘kuzingatia zaidi’ pale ambapo taarifa muhimu zaidi zimejikita, bila kujali mpangilio wao katika mlolongo wa maandishi.
 
@@ -82,7 +82,7 @@ Katika sura inayofuata tutachunguza aina tofauti za miundo ya AI ya kizazi, laki
 
 - **Tokenizer, maandishi hadi namba**: Miundo Mikubwa ya Lugha hupokea maandishi kama pembejeo na huzalisha maandishi kama matokeo. Hata hivyo, kwa kuwa ni miundo ya takwimu, hufanya kazi vizuri zaidi na namba kuliko mlolongo wa maandishi. Ndiyo maana kila pembejeo kwa modeli huchakatwa na tokenizer, kabla ya kutumiwa na modeli kuu. Tokeni ni kipande cha maandishi – kinachojumuisha idadi tofauti ya herufi, hivyo kazi kuu ya tokenizer ni kugawanya pembejeo kuwa safu ya tokeni. Kisha, kila tokeni inaambatanishwa na index ya tokeni, ambayo ni usimbaji wa namba ya maandishi ya asili.
 
-![Mfano wa tokenization](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.sw.png)
+![Mfano wa tokenization](../../../translated_images/sw/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Kutabiri tokeni za matokeo**: Kwa kuzingatia tokeni n kama pembejeo (na max n ikitofautiana kutoka modeli moja hadi nyingine), modeli ina uwezo wa kutabiri tokeni moja kama matokeo. Tokeni hii kisha hujumuishwa katika pembejeo ya mzunguko unaofuata, kwa muundo wa dirisha linalopanuka, ikiruhusu uzoefu bora wa mtumiaji wa kupata sentensi moja (au nyingi) kama jibu. Hii inaeleza kwa nini, ikiwa umewahi kucheza na ChatGPT, unaweza kuwa umeona kwamba wakati mwingine inaonekana kama inasimama katikati ya sentensi.
 
@@ -100,23 +100,23 @@ Pembejeo ya modeli kubwa ya lugha inajulikana kama prompt, wakati matokeo yanaju
 
   1. Muhtasari wa makala, kitabu, maoni ya bidhaa na zaidi, pamoja na uchimbaji wa maarifa kutoka kwa data isiyo na muundo.
     
-    ![Mfano wa muhtasari](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.sw.png)
+    ![Mfano wa muhtasari](../../../translated_images/sw/summarization-example.7b7ff97147b3d790.webp)
   
   2. Ubunifu wa mawazo na muundo wa makala, insha, kazi ya nyumbani au zaidi.
       
-     ![Mfano wa uandishi wa ubunifu](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.sw.png)
+     ![Mfano wa uandishi wa ubunifu](../../../translated_images/sw/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Swali**, linaloulizwa kwa njia ya mazungumzo na wakala.
   
-  ![Mfano wa mazungumzo](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.sw.png)
+  ![Mfano wa mazungumzo](../../../translated_images/sw/conversation-example.60c2afc0f595fa59.webp)
 
 - Kipande cha **maandishi ya kukamilisha**, ambacho kwa njia isiyo ya moja kwa moja ni ombi la msaada wa uandishi.
   
-  ![Mfano wa kukamilisha maandishi](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.sw.png)
+  ![Mfano wa kukamilisha maandishi](../../../translated_images/sw/text-completion-example.cbb0f28403d42752.webp)
 
 - Kipande cha **kodi** pamoja na ombi la kuelezea na kuandika maelezo yake, au maoni yanayoomba kuzalisha kipande cha kodi kinachofanya kazi maalum.
   
-  ![Mfano wa coding](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.sw.png)
+  ![Mfano wa coding](../../../translated_images/sw/coding-example.50ebabe8a6afff20.webp)
 
 Mifano hapo juu ni rahisi sana na haikusudiwi kuwa onyesho kamili la uwezo wa Miundo Mikubwa ya Lugha. Zinakusudiwa kuonyesha uwezo wa kutumia AI ya kizazi, hasa lakini si tu kwa muktadha wa elimu.
 

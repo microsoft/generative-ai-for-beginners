@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # జనరేటివ్ AI-చేత నడిపించే చాట్ అప్లికేషన్లు నిర్మాణం
 
-[![జనరేటివ్ AI-చేత నడిపించే చాట్ అప్లికేషన్లు నిర్మాణం](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.te.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![జనరేటివ్ AI-చేత నడిపించే చాట్ అప్లికేషన్లు నిర్మాణం](../../../translated_images/te/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(ఈ పాఠం వీడియోను చూడడానికి పై చిత్రాన్ని క్లిక్ చేయండి)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 అటువంటి వ్యక్తిగతీకరణ ఉదాహరణగా OpenAI యొక్క ChatGPTలో "Custom instructions" సెట్టింగ్స్ ఉన్నాయి. ఇది మీ ప్రాంప్ట్‌లకు ముఖ్యమైన సందర్భం కావచ్చు అని మీ గురించి సమాచారం అందించడానికి అనుమతిస్తుంది. కింది ఉదాహరణ ఒక కస్టమ్ సూచన.
 
-![ChatGPTలో కస్టమ్ సూచనలు సెట్టింగ్స్](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.te.png)
+![ChatGPTలో కస్టమ్ సూచనలు సెట్టింగ్స్](../../../translated_images/te/custom-instructions.b96f59aa69356fcf.webp)
 
 ఈ "ప్రొఫైల్" ChatGPTని లింక్డ్ లిస్టులపై పాఠ్య ప్రణాళిక రూపొందించమని ప్రేరేపిస్తుంది. వినియోగదారుని అనుభవం ఆధారంగా మరింత లోతైన పాఠ్య ప్రణాళిక కావాలని ChatGPT పరిగణలోకి తీసుకుంటుంది.
 
-![లింక్డ్ లిస్టులపై పాఠ్య ప్రణాళిక కోసం ChatGPTలో ప్రాంప్ట్](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.te.png)
+![లింక్డ్ లిస్టులపై పాఠ్య ప్రణాళిక కోసం ChatGPTలో ప్రాంప్ట్](../../../translated_images/te/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoft యొక్క పెద్ద భాషా మోడల్స్ కోసం సిస్టమ్ మెసేజ్ ఫ్రేమ్‌వర్క్
 

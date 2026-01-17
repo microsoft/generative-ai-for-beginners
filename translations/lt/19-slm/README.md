@@ -33,7 +33,7 @@ SLM mokomi naudojant didžiulius tekstų kiekius. Mokymo metu jie perpranta kalb
 
 SLM kūrimas atitinka augantį poreikį turėti modelius, kuriuos būtų galima naudoti ribotų resursų aplinkose, pavyzdžiui, mobiliuosiuose įrenginiuose ar krašto kompiuterijos platformose, kur pilno masto LLM gali būti nepraktiški dėl didelių reikalavimų. SLM siekia efektyvumo, subalansuodami našumą ir prieinamumą, todėl juos galima plačiau taikyti įvairiose srityse.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.lt.png)
+![slm](../../../translated_images/lt/slm.4058842744d0444a.webp)
 
 ## Mokymosi tikslai
 
@@ -136,7 +136,7 @@ Galime naudoti Phi-3/3.5 šeimos modelį pagal skirtingus scenarijus. Skirtingai
 
 Norime naudoti Phi-3/3.5 įvairiose situacijose. Toliau naudosime Phi-3/3.5 pagal skirtingus scenarijus.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.lt.png)
+![phi3](../../../translated_images/lt/phi3.655208c3186ae381.webp)
 
 ### Inferencijos skirtumai debesijos API
 
@@ -146,9 +146,9 @@ GitHub Models – tiesiausias būdas. Greitai galite pasiekti Phi-3/3.5-Instruct
 
 - Demo: Phi-3-mini ir Phi-3.5-mini efektų palyginimas kinų kalbos scenarijuose
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.lt.png)
+![phi3](../../../translated_images/lt/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.lt.png)
+![phi35](../../../translated_images/lt/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**
 

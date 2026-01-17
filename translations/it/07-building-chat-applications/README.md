@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Creare Applicazioni Chat Potenziate dall'AI Generativa
 
-[![Creare Applicazioni Chat Potenziate dall'AI Generativa](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.it.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Creare Applicazioni Chat Potenziate dall'AI Generativa](../../../translated_images/it/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Clicca sull'immagine sopra per vedere il video di questa lezione)_
 
@@ -96,11 +96,11 @@ I principi generali di UX si applicano alle applicazioni di chat, ma ci sono alc
 
 Un esempio di personalizzazione è l'impostazione "Istruzioni personalizzate" in ChatGPT di OpenAI. Ti consente di fornire informazioni su di te che potrebbero essere un contesto importante per i tuoi prompt. Ecco un esempio di istruzione personalizzata.
 
-![Impostazioni delle Istruzioni Personalizzate in ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.it.png)
+![Impostazioni delle Istruzioni Personalizzate in ChatGPT](../../../translated_images/it/custom-instructions.b96f59aa69356fcf.webp)
 
 Questo "profilo" invita ChatGPT a creare un piano di lezione sui linked list. Nota che ChatGPT tiene conto del fatto che l'utente potrebbe desiderare un piano di lezione più approfondito basato sulla sua esperienza.
 
-![Un prompt in ChatGPT per un piano di lezione sui linked list](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.it.png)
+![Un prompt in ChatGPT per un piano di lezione sui linked list](../../../translated_images/it/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Framework di Messaggi di Sistema di Microsoft per Modelli di Linguaggio Avanzati
 

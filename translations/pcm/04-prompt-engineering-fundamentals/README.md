@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prompt Engineering Fundamentals
 
-[![Prompt Engineering Fundamentals](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.pcm.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Prompt Engineering Fundamentals](../../../translated_images/pcm/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduction
 Dis module dey talk about di main tins and techniques wey go help you sabi how to write beta prompts for generative AI models. Di way you dey write your prompt for LLM matter wella. If you craft your prompt well, e fit make di response better. But wetin "prompt" and "prompt engineering" mean sef? And how I go fit make di prompt _input_ wey I dey send to di LLM better? Na di kind questions wey we go try answer for dis chapter and di next one.
@@ -53,7 +53,7 @@ Di notebook get _starter_ exercises - but you fit add your own _Markdown_ (descr
 
 You wan get di big picture of wetin dis lesson dey talk before you start? Check dis illustrated guide, e go show you di main topics wey di lesson cover and di key things wey you suppose think about for each one. Di lesson roadmap go carry you from understanding di main ideas and di challenges to how you fit solve dem with di right prompt engineering techniques and best practices. Note say di "Advanced Techniques" section for dis guide dey talk about content wey dem go cover for di _next_ chapter of dis curriculum.
 
-![Illustrated Guide to Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.pcm.png)
+![Illustrated Guide to Prompt Engineering](../../../translated_images/pcm/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Our Startup
 
@@ -84,7 +84,7 @@ LLM dey see prompts as _sequence of tokens_ and different models (or versions of
 
 To understand how tokenization dey work, try tools like di [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) wey dey below. Copy your prompt inside - and see how e go turn to tokens, check how e dey handle space characters and punctuation marks. Note say dis example dey show older LLM (GPT-3) - so if you try am with newer model, e fit give different result.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.pcm.png)
+![Tokenization](../../../translated_images/pcm/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concept: Foundation Models
 
@@ -94,7 +94,7 @@ You wan see how prompt-based completion dey work? Enter di prompt wey dey above 
 
 But wetin if di user wan see something specific wey match some criteria or task goal? Na here _instruction-tuned_ LLMs go enter.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.pcm.png)
+![Base LLM Chat Completion](../../../translated_images/pcm/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concept: Instruction Tuned LLMs
 
@@ -108,7 +108,7 @@ Make we try am - go back to di prompt wey dey above, but dis time change di _sys
 
 See how di result don change to match di goal and format wey you want? Educators fit use dis response directly for their slides for di class.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.pcm.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/pcm/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Why we need Prompt Engineering?
 
@@ -138,15 +138,15 @@ So wetin go happen if we use dis prompt for different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
-![Response 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.pcm.png)
+![Response 1](../../../translated_images/pcm/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Response 2**: Azure OpenAI Playground (GPT-35)
 
-![Response 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.pcm.png)
+![Response 2](../../../translated_images/pcm/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Response 3**: Hugging Face Chat Playground (LLama-2)
 
-![Response 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.pcm.png)
+![Response 3](../../../translated_images/pcm/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 As we expect, each model (or model version) dey give small small different answers because of how dem dey behave and how capable dem be. For example, one model dey target 8th grade audience while another one dey assume say na high-school student. But all three models still give answers wey fit make person wey no sabi believe say the event na real.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Paggawa ng Low Code AI Applications
 
-[![Paggawa ng Low Code AI Applications](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.tl.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Paggawa ng Low Code AI Applications](../../../translated_images/tl/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
 
@@ -92,17 +92,17 @@ Gagawa ka ng app gamit ang Copilot sa Power Apps sa pamamagitan ng pagsunod sa m
 
 1. Gamitin ang text area sa home screen upang ilarawan ang app na gusto mong gawin. Halimbawa, **_Gusto kong gumawa ng app para subaybayan at pamahalaan ang mga student assignment_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
-![Ilarawan ang app na gusto mong gawin](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.tl.png)
+![Ilarawan ang app na gusto mong gawin](../../../translated_images/tl/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Ang AI Copilot ay magmumungkahi ng Dataverse Table na may mga field na kailangan mo upang i-store ang data na gusto mong i-track at ilang sample data. Maaari mo itong i-customize upang matugunan ang iyong mga pangangailangan gamit ang AI Copilot assistant feature sa pamamagitan ng mga conversational steps.
 
    > **Mahalaga**: Ang Dataverse ay ang underlying data platform para sa Power Platform. Ito ay isang low-code data platform para sa pag-iimbak ng data ng app. Ito ay isang fully managed service na ligtas na nag-iimbak ng data sa Microsoft Cloud at naka-provision sa loob ng iyong Power Platform environment. Mayroon itong built-in na data governance capabilities, tulad ng data classification, data lineage, fine-grained access control, at iba pa. Maaari kang matuto pa tungkol sa Dataverse [dito](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Mga mungkahing field sa iyong bagong table](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.tl.png)
+   ![Mga mungkahing field sa iyong bagong table](../../../translated_images/tl/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Ang mga guro ay nais magpadala ng mga email sa mga estudyante na nagsumite ng kanilang mga assignment upang panatilihin silang updated sa progreso ng kanilang mga assignment. Maaari mong gamitin ang Copilot upang magdagdag ng bagong field sa table upang i-store ang email ng estudyante. Halimbawa, maaari mong gamitin ang sumusunod na prompt upang magdagdag ng bagong field sa table: **_Gusto kong magdagdag ng column para i-store ang email ng estudyante_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
-![Pagdaragdag ng bagong field](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.tl.png)
+![Pagdaragdag ng bagong field](../../../translated_images/tl/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Ang AI Copilot ay gagawa ng bagong field at maaari mo itong i-customize upang matugunan ang iyong mga pangangailangan.
 
@@ -112,7 +112,7 @@ Gagawa ka ng app gamit ang Copilot sa Power Apps sa pamamagitan ng pagsunod sa m
 
 1. Para sa mga guro na magpadala ng mga email sa mga estudyante, maaari mong gamitin ang Copilot upang magdagdag ng bagong screen sa app. Halimbawa, maaari mong gamitin ang sumusunod na prompt upang magdagdag ng bagong screen sa app: **_Gusto kong magdagdag ng screen para magpadala ng email sa mga estudyante_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
-![Pagdaragdag ng bagong screen sa pamamagitan ng prompt instruction](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.tl.png)
+![Pagdaragdag ng bagong screen sa pamamagitan ng prompt instruction](../../../translated_images/tl/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. Ang AI Copilot ay gagawa ng bagong screen at maaari mo itong i-customize upang matugunan ang iyong mga pangangailangan.
 
@@ -147,15 +147,15 @@ Para gumawa ng talahanayan sa Dataverse gamit ang Copilot, sundin ang mga hakban
 
 2. Sa kaliwang navigation bar, piliin ang **Tables** at pagkatapos ay i-click ang **Describe the new Table**.
 
-![Piliin ang bagong talahanayan](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.tl.png)
+![Piliin ang bagong talahanayan](../../../translated_images/tl/describe-new-table.0792373eb757281e.webp)
 
 3. Sa **Describe the new Table** screen, gamitin ang text area upang ilarawan ang talahanayan na nais mong gawin. Halimbawa, **_Gusto kong gumawa ng talahanayan para mag-imbak ng impormasyon ng invoice_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
-![Ilarawan ang talahanayan](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.tl.png)
+![Ilarawan ang talahanayan](../../../translated_images/tl/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. Ang AI Copilot ay magmumungkahi ng Dataverse Table na may mga field na kailangan mo upang mag-imbak ng data na nais mong i-track at ilang sample na data. Maaari mong i-customize ang talahanayan upang tumugma sa iyong mga pangangailangan gamit ang AI Copilot assistant feature sa pamamagitan ng conversational steps.
 
-![Inirekomendang Dataverse table](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.tl.png)
+![Inirekomendang Dataverse table](../../../translated_images/tl/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Ang finance team ay nais magpadala ng email sa supplier upang i-update sila sa kasalukuyang status ng kanilang invoice. Maaari mong gamitin ang Copilot upang magdagdag ng bagong field sa talahanayan para mag-imbak ng supplier email. Halimbawa, maaari mong gamitin ang sumusunod na prompt upang magdagdag ng bagong field sa talahanayan: **_Gusto kong magdagdag ng column para mag-imbak ng supplier email_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
@@ -184,7 +184,7 @@ Ilan sa mga Prebuilt AI Models na available sa Power Platform ay:
 
 Sa Custom AI Models, maaari mong dalhin ang sarili mong modelo sa AI Builder upang magamit ito tulad ng anumang AI Builder custom model, na nagbibigay-daan sa iyo na i-train ang modelo gamit ang sarili mong data. Maaari mong gamitin ang mga modelong ito upang mag-automate ng mga proseso at magpredict ng mga resulta sa parehong Power Apps at Power Automate. Kapag gumagamit ng sarili mong modelo, may mga limitasyon na nalalapat. Basahin ang higit pa tungkol sa mga [limitasyon](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder models](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.tl.png)
+![AI builder models](../../../translated_images/tl/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Assignment #2 - Gumawa ng Invoice Processing Flow para sa Ating Startup
 
@@ -198,7 +198,7 @@ Para gumawa ng workflow na makakatulong sa finance team na magproseso ng mga inv
 
 2. Gamitin ang text area sa home screen upang ilarawan ang workflow na nais mong gawin. Halimbawa, **_Proseso ng invoice kapag dumating ito sa aking mailbox_**. I-click ang **Send** button upang ipadala ang prompt sa AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.tl.png)
+   ![Copilot power automate](../../../translated_images/tl/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. Ang AI Copilot ay magmumungkahi ng mga aksyon na kailangan upang maisagawa ang task na nais mong i-automate. Maaari mong i-click ang **Next** button upang dumaan sa mga susunod na hakbang.
 
@@ -212,7 +212,7 @@ Para gumawa ng workflow na makakatulong sa finance team na magproseso ng mga inv
 
 8. Alisin ang **Condition** action mula sa flow dahil hindi mo ito gagamitin. Dapat itong magmukhang tulad ng sumusunod na screenshot:
 
-   ![power automate, alisin ang mga aksyon](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.tl.png)
+   ![power automate, alisin ang mga aksyon](../../../translated_images/tl/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. I-click ang **Add an action** button at hanapin ang **Dataverse**. Piliin ang **Add a new row** action.
 
@@ -227,7 +227,7 @@ Para gumawa ng workflow na makakatulong sa finance team na magproseso ng mga inv
     - Status - I-set ang **Status** sa **Pending**.
     - Supplier Email - Gamitin ang **From** dynamic content mula sa **When a new email arrives** trigger.
 
-    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.tl.png)
+    ![power automate add row](../../../translated_images/tl/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Kapag tapos ka na sa flow, i-click ang **Save** button upang i-save ang flow. Maaari mo itong i-test sa pamamagitan ng pagpapadala ng email na may invoice sa folder na tinukoy mo sa trigger.
 
@@ -241,7 +241,7 @@ Ang GPT models ay dumadaan sa malawak na training gamit ang napakaraming data, n
 
 Halimbawa, maaari kang gumawa ng mga flow upang awtomatikong maggenerate ng text para sa iba't ibang use cases, tulad ng: drafts ng email, mga product description, at iba pa. Maaari mo ring gamitin ang modelo upang maggenerate ng text para sa iba't ibang app, tulad ng chatbots at customer service apps na nagbibigay-daan sa mga customer service agents na tumugon nang epektibo at mabilis sa mga tanong ng customer.
 
-![gumawa ng prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.tl.png)
+![gumawa ng prompt](../../../translated_images/tl/create-prompt-gpt.69d429300c2e870a.webp)
 
 Para matutunan kung paano gamitin ang AI Model na ito sa Power Automate, dumaan sa [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) module.
 

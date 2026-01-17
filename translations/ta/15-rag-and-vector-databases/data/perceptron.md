@@ -13,7 +13,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 |      |      |
 |--------------|-----------|
-|<img src='../../../../translated_images/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.ta.jpg' alt='ஃப்ராங்க் ரோசன்பிளாட்'/> | <img src='../../../../translated_images/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.ta.jpg' alt='மார்க் 1 பெர்செப்ட்ரான்' />|
+|<img src='../../../../translated_images/ta/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.jpg' alt='ஃப்ராங்க் ரோசன்பிளாட்'/> | <img src='../../../../translated_images/ta/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.jpg' alt='மார்க் 1 பெர்செப்ட்ரான்' />|
 
 > விக்கிபீடியாவில் இருந்து பெறப்பட்ட படங்கள்
 

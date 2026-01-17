@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 برای مثال، وقتی روی هر لینکی در فایل‌های خود موس را نگه دارید، با فشار دادن **ctrl + click** به شما پیشنهاد دنبال کردن لینک داده می‌شود.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.fa.png)
+![VS code follow links screenshot](../../translated_images/fa/vscode-follow-link.85520ab6a1237adc.webp)
 
 اگر روی لینکی کلیک کنید و در محیط محلی کار نکند، مطمئناً گردش‌کار فعال می‌شود و در GitHub نیز کار نخواهد کرد.
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 وقتی `./` یا `../` را تایپ می‌کنید، VS code به شما گزینه‌هایی را بر اساس آنچه تایپ کرده‌اید پیشنهاد می‌دهد.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.fa.png)
+![VS code select relative path screenshot](../../translated_images/fa/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 با کلیک روی فایل یا پوشه مورد نظر مسیر را دنبال کنید و مطمئن خواهید شد که مسیر شما شکسته نیست.
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.fa.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/fa/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و شناسه ردیابی را به انتهای مسیرهای نسبی اضافه کنید.
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.fa.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/fa/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و شناسه ردیابی را به انتهای URLها اضافه کنید.
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در غیر این صورت، ممکن است خطای زیر را دریافت کنید.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.fa.png)
+![GitHub check country locale comment screenshot](../../translated_images/fa/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 برای رفع این مشکل، فایل مسیر که گردش‌کار به آن اشاره کرده را باز کنید و لوکال کشور را از URLها حذف کنید.
 

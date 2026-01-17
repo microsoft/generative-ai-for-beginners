@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Istraživanje i usporedba različitih LLM-ova
 
-[![Istraživanje i usporedba različitih LLM-ova](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.hr.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Istraživanje i usporedba različitih LLM-ova](../../../translated_images/hr/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Kliknite na sliku iznad za pregled videozapisa ove lekcije_
 
@@ -59,14 +59,14 @@ Pojam Osnovni model [skovali su istraživači sa Stanforda](https://arxiv.org/ab
 - **To su vrlo veliki modeli**, temeljeni na vrlo dubokim neuronskim mrežama treniranim na milijardama parametara.
 - **Obično su namijenjeni kao 'osnova' za druge modele**, što znači da se mogu koristiti kao početna točka za izgradnju drugih modela, što se može postići finim podešavanjem.
 
-![Osnovni modeli naspram LLM-ova](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.hr.png)
+![Osnovni modeli naspram LLM-ova](../../../translated_images/hr/FoundationModel.e4859dbb7a825c94.webp)
 
 Izvor slike: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 Kako bismo dodatno pojasnili ovu razliku, uzmimo ChatGPT kao primjer. Za izradu prve verzije ChatGPT-a, model nazvan GPT-3.5 služio je kao osnovni model. To znači da je OpenAI koristio neke podatke specifične za chat kako bi stvorio prilagođenu verziju GPT-3.5 koja je bila specijalizirana za dobro funkcioniranje u konverzacijskim scenarijima, poput chatbotova.
 
-![Osnovni model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.hr.png)
+![Osnovni model](../../../translated_images/hr/Multimodal.2c389c6439e0fc51.webp)
 
 Izvor slike: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-ovi se također mogu kategorizirati prema izlazu koji generiraju.
 
 Ugrađivanja su skup modela koji mogu pretvoriti tekst u numerički oblik, nazvan ugrađivanje, što je numerička reprezentacija ulaznog teksta. Ugrađivanja olakšavaju strojevima razumijevanje odnosa između riječi ili rečenica i mogu se koristiti kao ulazi za druge modele, poput modela za klasifikaciju ili modela za grupiranje koji imaju bolje performanse na numeričkim podacima. Modeli ugrađivanja često se koriste za prijenosno učenje, gdje se model gradi za zamjenski zadatak za koji postoji obilje podataka, a zatim se težine modela (ugrađivanja) ponovno koriste za druge zadatke. Primjer ove kategorije je [OpenAI ugrađivanja](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Ugrađivanje](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.hr.png)
+![Ugrađivanje](../../../translated_images/hr/Embedding.c3708fe988ccf760.webp)
 
 Modeli za generiranje slika su modeli koji generiraju slike. Ovi modeli često se koriste za uređivanje slika, sintezu slika i prevođenje slika. Modeli za generiranje slika često se treniraju na velikim skupovima podataka o slikama, poput [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), i mogu se koristiti za generiranje novih slika ili za uređivanje postojećih slika tehnikama poput nadopunjavanja, super-rezolucije i koloriranja. Primjeri uključuju [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) i [Stable Diffusion modele](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Generiranje slika](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.hr.png)
+![Generiranje slika](../../../translated_images/hr/Image.349c080266a763fd.webp)
 
 Modeli za generiranje teksta i koda su modeli koji generiraju tekst ili kod. Ovi modeli često se koriste za sažimanje teksta, prevođenje i odgovaranje na pitanja. Modeli za generiranje teksta često se treniraju na velikim skupovima podataka o tekstu, poput [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), i mogu se koristiti za generiranje novog teksta ili za odgovaranje na pitanja. Modeli za generiranje koda, poput [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), često se treniraju na velikim skupovima podataka o kodu, poput GitHuba, i mogu se koristiti za generiranje novog koda ili za ispravljanje grešaka u postojećem kodu.
 
-![Generiranje teksta i koda](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.hr.png)
+![Generiranje teksta i koda](../../../translated_images/hr/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder naspram samo Decoder
 
@@ -123,23 +123,23 @@ Većina modela koje smo spomenuli u prethodnim odlomcima (OpenAI modeli, open so
 
 - Pronaći temeljni model od interesa u katalogu - bilo vlasnički ili open source, filtrirajući prema zadatku, licenci ili nazivu. Kako bi se poboljšala pretraživost, modeli su organizirani u kolekcije, poput Azure OpenAI kolekcije, Hugging Face kolekcije i drugih.
 
-![Model katalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.hr.png)
+![Model katalog](../../../translated_images/hr/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Pregledati karticu modela, uključujući detaljan opis namjene i podataka za treniranje, primjere koda i rezultate evaluacije iz interne biblioteke evaluacija.
 
-![Kartica modela](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.hr.png)
+![Kartica modela](../../../translated_images/hr/ModelCard.598051692c6e400d.webp)
 
 - Usporediti mjerila između modela i dostupnih skupova podataka u industriji kako bi se procijenilo koji najbolje odgovara poslovnom scenariju, putem [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) panela.
 
-![Mjerila modela](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.hr.png)
+![Mjerila modela](../../../translated_images/hr/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Fino podesiti model na prilagođenim podacima za treniranje kako bi se poboljšala izvedba modela u određenom radnom opterećenju, koristeći mogućnosti eksperimentiranja i praćenja u Azure AI Studio.
 
-![Fino podešavanje modela](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.hr.png)
+![Fino podešavanje modela](../../../translated_images/hr/FineTuning.aac48f07142e36fd.webp)
 
 - Implementirati originalni unaprijed trenirani model ili fino podešenu verziju za udaljenu inferenciju u stvarnom vremenu - upravljano računanje - ili serverless API endpoint - [plaćanje po korištenju](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - kako bi aplikacije mogle koristiti model.
 
-![Implementacija modela](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.hr.png)
+![Implementacija modela](../../../translated_images/hr/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Nisu svi modeli u katalogu trenutno dostupni za fino podešavanje i/ili implementaciju putem plaćanja po korištenju. Provjerite karticu modela za detalje o mogućnostima i ograničenjima modela.
@@ -158,7 +158,7 @@ Postoji nekoliko pristupa koje tvrtka može koristiti kako bi postigla željene 
 
 - **Fino podešen model**. Ovdje dodatno trenirate model na vlastitim podacima, što dovodi do toga da model postane precizniji i odgovara vašim potrebama, ali to može biti skupo.
 
-![Implementacija LLM-a](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.hr.png)
+![Implementacija LLM-a](../../../translated_images/hr/Deploy.18b2d27412ec8c02.webp)
 
 Izvor slike: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construire des applications de chat alimentées par l'IA générative
 
-[![Construire des applications de chat alimentées par l'IA générative](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.fr.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Construire des applications de chat alimentées par l'IA générative](../../../translated_images/fr/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon)_
 
@@ -96,11 +96,11 @@ Les principes généraux de l'UX s'appliquent aux applications de chat, mais voi
 
 Un exemple de personnalisation est les paramètres "Instructions personnalisées" dans ChatGPT d'OpenAI. Cela vous permet de fournir des informations sur vous-même qui peuvent être un contexte important pour vos invites. Voici un exemple d'instruction personnalisée.
 
-![Paramètres d'instructions personnalisées dans ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.fr.png)
+![Paramètres d'instructions personnalisées dans ChatGPT](../../../translated_images/fr/custom-instructions.b96f59aa69356fcf.webp)
 
 Ce "profil" invite ChatGPT à créer un plan de cours sur les listes chaînées. Notez que ChatGPT prend en compte que l'utilisateur peut vouloir un plan de cours plus approfondi en fonction de son expérience.
 
-![Une invite dans ChatGPT pour un plan de cours sur les listes chaînées](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.fr.png)
+![Une invite dans ChatGPT pour un plan de cours sur les listes chaînées](../../../translated_images/fr/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Cadre de message système de Microsoft pour les modèles de langage étendu
 

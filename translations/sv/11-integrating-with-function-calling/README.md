@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integrera med funktionsanrop
 
-[![Integrera med funktionsanrop](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sv.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrera med funktionsanrop](../../../translated_images/sv/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Du har lärt dig en hel del hittills i de tidigare lektionerna. Men vi kan fortfarande förbättra oss. Några saker vi kan ta itu med är hur vi kan få ett mer konsekvent svarformat för att göra det enklare att arbeta med svaret längre fram. Dessutom kanske vi vill lägga till data från andra källor för att ytterligare berika vår applikation.
 
@@ -179,7 +179,7 @@ Nu kan vi skicka båda förfrågningarna till LLM och undersöka svaret vi får 
 
 Så hur löser vi problemet med formatering då? Genom att använda funktionsanrop kan vi säkerställa att vi får strukturerad data tillbaka. När vi använder funktionsanrop, kallar eller kör LLM faktiskt inga funktioner. Istället skapar vi en struktur för LLM att följa för sina svar. Vi använder sedan dessa strukturerade svar för att veta vilken funktion som ska köras i våra applikationer.
 
-![funktionsflöde](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sv.png)
+![funktionsflöde](../../../translated_images/sv/Function-Flow.083875364af4f4bb.webp)
 
 Vi kan sedan ta det som returneras från funktionen och skicka detta tillbaka till LLM. LLM kommer sedan att svara med naturligt språk för att besvara användarens fråga.
 
@@ -201,7 +201,7 @@ Processen för att skapa ett funktionsanrop inkluderar 3 huvudsteg:
 2. **Läsa** modellens svar för att utföra en åtgärd, dvs. köra en funktion eller API-anrop.
 3. **Göra** ett nytt anrop till Chat Completions API med svaret från din funktion för att använda den informationen för att skapa ett svar till användaren.
 
-![LLM-flöde](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sv.png)
+![LLM-flöde](../../../translated_images/sv/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Steg 1 - skapa meddelanden
 

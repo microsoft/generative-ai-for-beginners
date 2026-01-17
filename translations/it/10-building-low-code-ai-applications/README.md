@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Creare Applicazioni AI a Basso Codice
 
-[![Creare Applicazioni AI a Basso Codice](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.it.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Creare Applicazioni AI a Basso Codice](../../../translated_images/it/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Clicca sull'immagine sopra per vedere il video di questa lezione)_
 
@@ -92,17 +92,17 @@ Creerai l'app utilizzando Copilot in Power Apps seguendo i passaggi seguenti:
 
 1. Usa l'area di testo nella schermata iniziale per descrivere l'app che vuoi creare. Ad esempio, **_Voglio creare un'app per monitorare e gestire gli incarichi degli studenti_**. Clicca sul pulsante **Invia** per inviare il prompt a Copilot AI.
 
-![Descrivi l'app che vuoi creare](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.it.png)
+![Descrivi l'app che vuoi creare](../../../translated_images/it/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Copilot AI suggerirà una tabella Dataverse con i campi necessari per archiviare i dati che vuoi monitorare e alcuni dati di esempio. Puoi poi personalizzare la tabella per soddisfare le tue esigenze utilizzando la funzione di assistente AI Copilot attraverso passaggi conversazionali.
 
    > **Importante**: Dataverse è la piattaforma dati sottostante per Power Platform. È una piattaforma dati a basso codice per archiviare i dati dell'app. È un servizio completamente gestito che archivia i dati in modo sicuro nel cloud Microsoft ed è fornito all'interno del tuo ambiente Power Platform. Include funzionalità di governance dei dati integrate, come classificazione dei dati, tracciabilità dei dati, controllo di accesso granulare e altro. Puoi saperne di più su Dataverse [qui](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Campi suggeriti nella tua nuova tabella](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.it.png)
+   ![Campi suggeriti nella tua nuova tabella](../../../translated_images/it/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Gli educatori vogliono inviare email agli studenti che hanno inviato i loro incarichi per tenerli aggiornati sullo stato dei loro incarichi. Puoi utilizzare Copilot per aggiungere un nuovo campo alla tabella per archiviare l'email dello studente. Ad esempio, puoi utilizzare il seguente prompt per aggiungere un nuovo campo alla tabella: **_Voglio aggiungere una colonna per archiviare l'email dello studente_**. Clicca sul pulsante **Invia** per inviare il prompt a Copilot AI.
 
-![Aggiungere un nuovo campo](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.it.png)
+![Aggiungere un nuovo campo](../../../translated_images/it/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Copilot AI genererà un nuovo campo e potrai poi personalizzare il campo per soddisfare le tue esigenze.
 
@@ -112,7 +112,7 @@ Creerai l'app utilizzando Copilot in Power Apps seguendo i passaggi seguenti:
 
 1. Per permettere agli educatori di inviare email agli studenti, puoi utilizzare Copilot per aggiungere una nuova schermata all'app. Ad esempio, puoi utilizzare il seguente prompt per aggiungere una nuova schermata all'app: **_Voglio aggiungere una schermata per inviare email agli studenti_**. Clicca sul pulsante **Invia** per inviare il prompt a Copilot AI.
 
-![Aggiungere una nuova schermata tramite un'istruzione prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.it.png)
+![Aggiungere una nuova schermata tramite un'istruzione prompt](../../../translated_images/it/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. Copilot AI genererà una nuova schermata e potrai poi personalizzare la schermata per soddisfare le tue esigenze.
 
@@ -147,15 +147,15 @@ Per creare una tabella in Dataverse utilizzando Copilot, segui i passaggi seguen
 
 2. Nella barra di navigazione a sinistra, seleziona **Tabelle** e poi clicca su **Descrivi la nuova tabella**.
 
-![Seleziona nuova tabella](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.it.png)
+![Seleziona nuova tabella](../../../translated_images/it/describe-new-table.0792373eb757281e.webp)
 
 3. Nella schermata **Descrivi la nuova tabella**, utilizza l'area di testo per descrivere la tabella che desideri creare. Ad esempio, **_Voglio creare una tabella per archiviare le informazioni delle fatture_**. Clicca sul pulsante **Invia** per inviare il prompt al Copilot AI.
 
-![Descrivi la tabella](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.it.png)
+![Descrivi la tabella](../../../translated_images/it/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. Il Copilot AI suggerirà una tabella Dataverse con i campi necessari per archiviare i dati che desideri monitorare e alcuni dati di esempio. Puoi quindi personalizzare la tabella per soddisfare le tue esigenze utilizzando la funzione di assistenza del Copilot AI attraverso passaggi conversazionali.
 
-![Tabella Dataverse suggerita](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.it.png)
+![Tabella Dataverse suggerita](../../../translated_images/it/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Il team finanziario desidera inviare un'email al fornitore per aggiornarlo sullo stato attuale della sua fattura. Puoi utilizzare Copilot per aggiungere un nuovo campo alla tabella per archiviare l'email del fornitore. Ad esempio, puoi utilizzare il seguente prompt per aggiungere un nuovo campo alla tabella: **_Voglio aggiungere una colonna per archiviare l'email del fornitore_**. Clicca sul pulsante **Invia** per inviare il prompt al Copilot AI.
 
@@ -184,7 +184,7 @@ Alcuni dei modelli AI predefiniti disponibili in Power Platform includono:
 
 Con i modelli AI personalizzati puoi portare il tuo modello in AI Builder in modo che possa funzionare come qualsiasi modello personalizzato di AI Builder, permettendoti di addestrare il modello utilizzando i tuoi dati. Puoi utilizzare questi modelli per automatizzare i processi e prevedere risultati sia in Power Apps che in Power Automate. Quando utilizzi il tuo modello ci sono limitazioni che si applicano. Leggi di più su queste [limitazioni](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Modelli AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.it.png)
+![Modelli AI Builder](../../../translated_images/it/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Compito #2 - Crea un flusso di elaborazione delle fatture per la nostra startup
 
@@ -198,7 +198,7 @@ Per creare un flusso di lavoro che aiuti il team finanziario a elaborare le fatt
 
 2. Utilizza l'area di testo nella schermata principale per descrivere il flusso di lavoro che desideri creare. Ad esempio, **_Elabora una fattura quando arriva nella mia casella di posta_**. Clicca sul pulsante **Invia** per inviare il prompt al Copilot AI.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.it.png)
+   ![Copilot Power Automate](../../../translated_images/it/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. Il Copilot AI suggerirà le azioni necessarie per eseguire il compito che desideri automatizzare. Puoi cliccare sul pulsante **Avanti** per procedere con i passaggi successivi.
 
@@ -212,7 +212,7 @@ Per creare un flusso di lavoro che aiuti il team finanziario a elaborare le fatt
 
 8. Rimuovi l'azione **Condition** dal flusso perché non la utilizzerai. Dovrebbe apparire come nello screenshot seguente:
 
-   ![Power Automate, rimuovi azioni](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.it.png)
+   ![Power Automate, rimuovi azioni](../../../translated_images/it/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Clicca sul pulsante **Aggiungi un'azione** e cerca **Dataverse**. Seleziona l'azione **Aggiungi una nuova riga**.
 
@@ -227,7 +227,7 @@ Per creare un flusso di lavoro che aiuti il team finanziario a elaborare le fatt
     - Stato - Imposta lo **Stato** su **In sospeso**.
     - Email del fornitore - Utilizza il contenuto dinamico **Da** dal trigger **Quando arriva una nuova email**.
 
-    ![Power Automate aggiungi riga](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.it.png)
+    ![Power Automate aggiungi riga](../../../translated_images/it/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Una volta completato il flusso, clicca sul pulsante **Salva** per salvare il flusso. Puoi quindi testare il flusso inviando un'email con una fattura alla cartella che hai specificato nel trigger.
 
@@ -241,7 +241,7 @@ I modelli GPT subiscono un ampio addestramento su enormi quantità di dati, perm
 
 Ad esempio, puoi creare flussi per generare automaticamente testo per una varietà di casi d'uso, come: bozze di email, descrizioni di prodotti e altro. Puoi anche utilizzare il modello per generare testo per una varietà di app, come chatbot e app di assistenza clienti che consentono agli agenti del servizio clienti di rispondere in modo efficace ed efficiente alle richieste dei clienti.
 
-![Crea un prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.it.png)
+![Crea un prompt](../../../translated_images/it/create-prompt-gpt.69d429300c2e870a.webp)
 
 Per imparare come utilizzare questo modello AI in Power Automate, consulta il modulo [Aggiungi intelligenza con AI Builder e GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Θεμελιώδεις Αρχές της Μηχανικής Προτροπών
 
-[![Θεμελιώδεις Αρχές της Μηχανικής Προτροπών](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.el.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Θεμελιώδεις Αρχές της Μηχανικής Προτροπών](../../../translated_images/el/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Εισαγωγή
 Αυτό το κεφάλαιο καλύπτει βασικές έννοιες και τεχνικές για τη δημιουργία αποτελεσματικών προτροπών σε μοντέλα γενετικής τεχνητής νοημοσύνης. Ο τρόπος με τον οποίο γράφετε την προτροπή σας σε ένα LLM έχει σημασία. Μια προσεκτικά σχεδιασμένη προτροπή μπορεί να οδηγήσει σε καλύτερης ποιότητας απαντήσεις. Αλλά τι ακριβώς σημαίνουν όροι όπως _προτροπή_ και _μηχανική προτροπών_; Και πώς μπορώ να βελτιώσω την _εισαγωγή προτροπής_ που στέλνω στο LLM; Αυτά είναι τα ερωτήματα που θα προσπαθήσουμε να απαντήσουμε σε αυτό το κεφάλαιο και το επόμενο.
@@ -53,7 +53,7 @@ Instruction-Tuned LLMs: Μεγάλα Γλωσσικά Μοντέλα (LLMs) πο
 
 Θέλετε να αποκτήσετε μια γενική εικόνα για το τι καλύπτει αυτό το μάθημα πριν βουτήξετε; Δείτε αυτόν τον εικονογραφημένο οδηγό, που σας δίνει μια αίσθηση των κύριων θεμάτων που καλύπτονται και των βασικών σημείων που πρέπει να σκεφτείτε σε καθένα από αυτά. Ο χάρτης πορείας του μαθήματος σας οδηγεί από την κατανόηση των βασικών εννοιών και προκλήσεων στην αντιμετώπισή τους με σχετικές τεχνικές μηχανικής προτροπών και βέλτιστες πρακτικές. Σημειώστε ότι η ενότητα "Προχωρημένες Τεχνικές" σε αυτόν τον οδηγό αναφέρεται σε περιεχόμενο που καλύπτεται στο _επόμενο_ κεφάλαιο αυτού του προγράμματος σπουδών.
 
-![Εικονογραφημένος Οδηγός για τη Μηχανική Προτροπών](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.el.png)
+![Εικονογραφημένος Οδηγός για τη Μηχανική Προτροπών](../../../translated_images/el/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Η Startup μας
 
@@ -94,7 +94,7 @@ Instruction-Tuned LLMs: Μεγάλα Γλωσσικά Μοντέλα (LLMs) πο
 
 Για να αποκτήσετε μια διαίσθηση για το πώς λειτουργεί το tokenization, δοκιμάστε εργαλεία όπως το [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) που φαίνεται παρακάτω. Αντιγράψτε την προτροπή σας - και δείτε πώς μετατρέπεται σε tokens, δίνοντας προσοχή στο πώς χειρίζονται οι χαρακτήρες κενών και τα σημεία στίξης. Σημειώστε ότι αυτό το παράδειγμα δείχνει ένα παλαιότερο LLM (GPT-3) - οπότε η δοκιμή με ένα νεότερο μοντέλο μπορεί να παράγει διαφορετικό αποτέλεσμα.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.el.png)
+![Tokenization](../../../translated_images/el/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Έννοια: Θεμελιώδη Μοντέλα
 
@@ -104,7 +104,7 @@ Instruction-Tuned LLMs: Μεγάλα Γλωσσικά Μοντέλα (LLMs) πο
 
 Αλλά τι γίνεται αν ο χρήστης ήθελε να δει κάτι συγκεκριμένο που να πληροί κάποια κριτήρια ή στόχο εργασίας; Εδώ έρχονται στο προσκήνιο τα _instruction-tuned_ LLMs.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.el.png)
+![Base LLM Chat Completion](../../../translated_images/el/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Έννοια: Instruction Tuned LLMs
 
@@ -118,7 +118,7 @@ Instruction-Tuned LLMs: Μεγάλα Γλωσσικά Μοντέλα (LLMs) πο
 
 Δείτε πώς το αποτέλεσμα τώρα προσαρμόζεται ώστε να αντικατοπτρίζει τον επιθυμητό στόχο και τη μορφή; Ένας εκπαιδευτικός μπορεί τώρα να χρησιμοποιήσει αυτή την απάντηση απευθείας στις διαφάνειες για εκείνη την τάξη.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.el.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/el/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Γιατί χρειαζόμαστε τη Μηχανική Προτροπών;
 
@@ -129,15 +129,15 @@ Instruction-Tuned LLMs: Μεγάλα Γλωσσικά Μοντέλα (LLMs) πο
 
 > **Απάντηση 1**: OpenAI Playground (GPT-35)
 
-![Απάντηση 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.el.png)
+![Απάντηση 1](../../../translated_images/el/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Απάντηση 2**: Azure OpenAI Playground (GPT-35)
 
-![Απάντηση 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.el.png)
+![Απάντηση 2](../../../translated_images/el/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Απάντηση 3**: Hugging Face Chat Playground (LLama-2)
 
-![Απάντηση 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.el.png)
+![Απάντηση 3](../../../translated_images/el/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Όπως αναμενόταν, κάθε μοντέλο (ή έκδοση μοντέλου) παράγει ελαφρώς διαφορετικές απαντήσεις λόγω της στοχαστικής συμπεριφοράς και των διαφορών στις δυνατότητες του μοντέλου. Για παράδειγμα, ένα μοντέλο απευθύνεται σε κοινό 8ης τάξης, ενώ το άλλο υποθέτει μαθητές λυκείου. Ωστόσο, και τα τρία μοντέλα δημιούργησαν απαντήσεις που θα μπορούσαν να πείσουν έναν ανενημέρωτο χρήστη ότι το γεγονός ήταν πραγματικό.
 

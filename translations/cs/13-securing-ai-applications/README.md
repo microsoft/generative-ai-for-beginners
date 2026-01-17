@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Zabezpečení vašich aplikací generativní AI
 
-[![Zabezpečení vašich aplikací generativní AI](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.cs.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Zabezpečení vašich aplikací generativní AI](../../../translated_images/cs/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Úvod
 
@@ -125,7 +125,7 @@ Napodobování reálných hrozeb je nyní považováno za standardní praxi při
 
 > Praxe AI red teamingu se vyvinula do širšího významu: nezahrnuje pouze hledání bezpečnostních zranitelností, ale také zkoumání dalších selhání systému, jako je generování potenciálně škodlivého obsahu. AI systémy přinášejí nová rizika a red teaming je klíčový pro pochopení těchto nových rizik, jako je injekce promptů nebo produkce neodůvodněného obsahu. - [Microsoft AI Red Team buduje budoucnost bezpečnější AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Pokyny a zdroje pro red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.cs.png)]()
+[![Pokyny a zdroje pro red teaming](../../../translated_images/cs/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Níže jsou uvedeny klíčové poznatky, které formovaly program Microsoft AI Red Team.
 

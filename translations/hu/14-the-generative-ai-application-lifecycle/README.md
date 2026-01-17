@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hu"
 }
 -->
-[![Integrálás függvényhívással](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.hu.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrálás függvényhívással](../../../translated_images/hu/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # A generatív MI alkalmazás életciklusa
 
@@ -30,7 +30,7 @@ Az LLM-ek új eszközök a mesterséges intelligencia arzenáljában, rendkívü
 
 Ehhez új paradigmára van szükség, hogy ezt az eszközt dinamikusan, a megfelelő ösztönzőkkel alkalmazzuk. A régebbi MI alkalmazásokat "ML alkalmazásoknak", az újabbakat pedig "GenAI alkalmazásoknak" vagy egyszerűen "MI alkalmazásoknak" nevezhetjük, tükrözve az adott időszak fő technológiáit és technikáit. Ez többféleképpen is megváltoztatja a narratívánkat, nézd meg az alábbi összehasonlítást.
 
-![LLMOps vs. MLOps összehasonlítás](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.hu.png)
+![LLMOps vs. MLOps összehasonlítás](../../../translated_images/hu/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Figyeld meg, hogy az LLMOps esetén inkább az alkalmazásfejlesztőkre fókuszálunk, az integrációkat kulcspontként használva, "Modellek mint szolgáltatás" megközelítéssel, és a következő metrikákra gondolunk.
 
@@ -44,7 +44,7 @@ Figyeld meg, hogy az LLMOps esetén inkább az alkalmazásfejlesztőkre fókusz�
 
 Először, hogy megértsük az életciklust és a módosításokat, nézzük meg a következő infografikát.
 
-![LLMOps infografika](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.hu.png)
+![LLMOps infografika](../../../translated_images/hu/02-llmops.70a942ead05a7645.webp)
 
 Ahogy láthatod, ez eltér a megszokott MLOps életciklusoktól. Az LLM-eknek sok új követelménye van, mint a promptolás, különböző technikák a minőség javítására (finomhangolás, RAG, meta-promptok), különböző értékelési és felelősségi szempontok a felelős MI-vel kapcsolatban, végül új értékelési metrikák (minőség, káros hatás, őszinteség, költség és késleltetés).
 
@@ -54,7 +54,7 @@ Figyeld meg, hogy ez nem lineáris, hanem integrált hurkokból áll, iteratív 
 
 Hogyan fedezhetnénk fel ezeket a lépéseket? Nézzük meg részletesen, hogyan építhetünk életciklust.
 
-![LLMOps munkafolyamat](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.hu.png)
+![LLMOps munkafolyamat](../../../translated_images/hu/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Ez talán bonyolultnak tűnik, fókuszáljunk először a három nagy lépésre.
 
@@ -74,11 +74,11 @@ Eszközök tekintetében a Microsoft az [Azure AI Platformot](https://azure.micr
 
 Az [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) lehetővé teszi az [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys) használatát. Az AI Studio egy webes portál, amely lehetővé teszi modellek, minták és eszközök felfedezését. Erőforrásaid kezelését, UI fejlesztési folyamatokat és SDK/CLI opciókat kínál kód-első fejlesztéshez.
 
-![Azure AI lehetőségek](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.hu.png)
+![Azure AI lehetőségek](../../../translated_images/hu/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Az Azure AI lehetővé teszi több erőforrás használatát, hogy kezeld az üzemeltetést, szolgáltatásokat, projekteket, vektoros keresést és adatbázis igényeket.
 
-![LLMOps Azure AI-val](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.hu.png)
+![LLMOps Azure AI-val](../../../translated_images/hu/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Építs, a Proof-of-Concepttől (POC) a nagyszabású alkalmazásokig a PromptFlow-val:
 
@@ -86,7 +86,7 @@ Az Azure AI lehetővé teszi több erőforrás használatát, hogy kezeld az üz
 - Teszteld és finomhangold az alkalmazásokat minőségi MI-hez, könnyedén.
 - Használd az Azure AI Studiot az integrációhoz és iterációhoz a felhővel, gyors integráció érdekében nyomd és telepítsd.
 
-![LLMOps PromptFlow-val](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.hu.png)
+![LLMOps PromptFlow-val](../../../translated_images/hu/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Remek! Folytasd a tanulást!
 

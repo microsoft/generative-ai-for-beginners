@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ontwerpen van UX voor AI-toepassingen
 
-[![Ontwerpen van UX voor AI-toepassingen](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.nl.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Ontwerpen van UX voor AI-toepassingen](../../../translated_images/nl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
@@ -58,7 +58,7 @@ Toegankelijk zijn betekent dat de gebruikerservaring wordt uitgebreid naar gebru
 
 Aangenaam zijn betekent dat de applicatie prettig is om te gebruiken. Een aantrekkelijke gebruikerservaring kan een positieve impact hebben op de gebruiker, waardoor deze terugkeert naar de applicatie en de bedrijfsinkomsten toenemen.
 
-![afbeelding die UX-overwegingen in AI illustreert](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.nl.png)
+![afbeelding die UX-overwegingen in AI illustreert](../../../translated_images/nl/uxinai.d5b4ed690f5cefff.webp)
 
 Niet elke uitdaging kan worden opgelost met AI. AI wordt ingezet om je gebruikerservaring te verbeteren, bijvoorbeeld door handmatige taken te automatiseren of gebruikerservaringen te personaliseren.
 
@@ -72,25 +72,25 @@ Twee manieren om ervoor te zorgen dat vertrouwen centraal staat in het ontwerp z
 
 Wanneer AI helpt bij het nemen van beslissingen, zoals het overdragen van kennis aan toekomstige generaties, is het cruciaal voor docenten en ouders om te begrijpen hoe AI-beslissingen worden genomen. Dit is uitlegbaarheid - begrijpen hoe AI-toepassingen beslissingen nemen. Ontwerpen voor uitlegbaarheid omvat het toevoegen van details die benadrukken hoe AI tot de output is gekomen. Het publiek moet zich ervan bewust zijn dat de output door AI is gegenereerd en niet door een mens. Bijvoorbeeld, in plaats van te zeggen "Begin nu met chatten met je tutor" kun je zeggen "Gebruik een AI-tutor die zich aanpast aan jouw behoeften en je helpt in jouw tempo te leren."
 
-![een app-landingspagina met duidelijke illustratie van uitlegbaarheid in AI-toepassingen](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.nl.png)
+![een app-landingspagina met duidelijke illustratie van uitlegbaarheid in AI-toepassingen](../../../translated_images/nl/explanability-in-ai.134426a96b498fbf.webp)
 
 Een ander voorbeeld is hoe AI gebruikmaakt van gebruikers- en persoonlijke gegevens. Bijvoorbeeld, een gebruiker met de persona 'student' kan beperkingen hebben op basis van hun persona. De AI kan mogelijk geen antwoorden op vragen onthullen, maar kan de gebruiker helpen na te denken over hoe ze een probleem kunnen oplossen.
 
-![AI reageert op vragen op basis van persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.nl.png)
+![AI reageert op vragen op basis van persona](../../../translated_images/nl/solving-questions.b7dea1604de0cbd2.webp)
 
 Een laatste belangrijk onderdeel van uitlegbaarheid is het vereenvoudigen van uitleg. Studenten en docenten zijn mogelijk geen AI-experts, daarom moeten de uitleg over wat de applicatie wel of niet kan eenvoudig en gemakkelijk te begrijpen zijn.
 
-![vereenvoudigde uitleg over AI-capaciteiten](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.nl.png)
+![vereenvoudigde uitleg over AI-capaciteiten](../../../translated_images/nl/simplified-explanations.4679508a406c3621.webp)
 
 ### Controle
 
 Generatieve AI creëert een samenwerking tussen AI en de gebruiker, waarbij een gebruiker bijvoorbeeld prompts kan aanpassen voor verschillende resultaten. Bovendien moeten gebruikers, zodra een output is gegenereerd, de resultaten kunnen aanpassen, zodat ze een gevoel van controle hebben. Bijvoorbeeld, bij het gebruik van Bing kun je je prompt aanpassen op basis van formaat, toon en lengte. Daarnaast kun je wijzigingen aanbrengen in je output en deze aanpassen zoals hieronder weergegeven:
 
-![Bing-zoekresultaten met opties om de prompt en output aan te passen](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.nl.png)
+![Bing-zoekresultaten met opties om de prompt en output aan te passen](../../../translated_images/nl/bing1.293ae8527dbe2789.webp)
 
 Een andere functie in Bing die een gebruiker controle geeft over de applicatie is de mogelijkheid om in te stemmen met of af te zien van de gegevens die AI gebruikt. Voor een schoolapplicatie kan een student bijvoorbeeld zijn notities willen gebruiken, evenals de bronnen van de docent als studiemateriaal.
 
-![Bing-zoekresultaten met opties om de prompt en output aan te passen](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.nl.png)
+![Bing-zoekresultaten met opties om de prompt en output aan te passen](../../../translated_images/nl/bing2.309f4845528a88c2.webp)
 
 > Bij het ontwerpen van AI-toepassingen is intentionaliteit essentieel om ervoor te zorgen dat gebruikers niet te veel vertrouwen hebben en onrealistische verwachtingen van de capaciteiten stellen. Een manier om dit te doen is door wrijving te creëren tussen de prompts en de resultaten. Herinner de gebruiker eraan dat dit AI is en geen medemens.
 
@@ -102,7 +102,7 @@ AI-toepassingen moeten worden ontworpen om feedback te ontvangen en te geven. Di
 
 Een andere manier om hiermee om te gaan is door duidelijk te communiceren wat de capaciteiten en beperkingen van het systeem zijn. Wanneer een gebruiker een fout maakt door iets te vragen dat buiten de mogelijkheden van de AI ligt, moet er ook een manier zijn om hiermee om te gaan, zoals hieronder weergegeven.
 
-![Feedback geven en omgaan met fouten](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.nl.png)
+![Feedback geven en omgaan met fouten](../../../translated_images/nl/feedback-loops.7955c134429a9466.webp)
 
 Systeemfouten komen vaak voor bij applicaties waarbij de gebruiker mogelijk hulp nodig heeft met informatie buiten het bereik van de AI, of de applicatie kan een limiet hebben op hoeveel vragen/onderwerpen een gebruiker samenvattingen kan genereren. Bijvoorbeeld, een AI-toepassing die is getraind met gegevens over beperkte onderwerpen, zoals Geschiedenis en Wiskunde, kan mogelijk geen vragen over Aardrijkskunde behandelen. Om dit te beperken kan het AI-systeem een reactie geven zoals: "Sorry, ons product is getraind met gegevens over de volgende onderwerpen....., ik kan niet reageren op de vraag die je hebt gesteld."
 

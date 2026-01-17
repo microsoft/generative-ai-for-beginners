@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Proiectarea UX pentru aplicații AI
 
-[![Proiectarea UX pentru aplicații AI](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.ro.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Proiectarea UX pentru aplicații AI](../../../translated_images/ro/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
@@ -58,7 +58,7 @@ A fi accesibil înseamnă extinderea experienței utilizatorului la utilizatori 
 
 A fi plăcut înseamnă că aplicația este agreabilă de utilizat. O experiență atractivă pentru utilizator poate avea un impact pozitiv asupra acestuia, încurajându-l să revină la aplicație și crescând veniturile afacerii.
 
-![imagine ilustrând considerațiile UX în AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.ro.png)
+![imagine ilustrând considerațiile UX în AI](../../../translated_images/ro/uxinai.d5b4ed690f5cefff.webp)
 
 Nu fiecare provocare poate fi rezolvată cu AI. AI vine să îmbunătățească experiența utilizatorului, fie că este vorba de automatizarea sarcinilor manuale sau personalizarea experiențelor utilizatorului.
 
@@ -72,25 +72,25 @@ Două moduri de a asigura că încrederea este plasată în centrul designului s
 
 Când AI ajută la luarea deciziilor, cum ar fi transmiterea cunoștințelor generațiilor viitoare, este esențial ca profesorii și părinții să înțeleagă cum sunt luate deciziile de către AI. Aceasta este explicabilitatea - înțelegerea modului în care aplicațiile AI iau decizii. Proiectarea pentru explicabilitate include adăugarea de detalii care evidențiază modul în care AI a ajuns la un anumit rezultat. Publicul trebuie să fie conștient că rezultatul este generat de AI și nu de un om. De exemplu, în loc să spuneți "Începeți să discutați acum cu tutorul dvs." spuneți "Folosiți tutorul AI care se adaptează nevoilor dvs. și vă ajută să învățați în ritmul propriu."
 
-![pagina de start a unei aplicații cu ilustrație clară a explicabilității în aplicațiile AI](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.ro.png)
+![pagina de start a unei aplicații cu ilustrație clară a explicabilității în aplicațiile AI](../../../translated_images/ro/explanability-in-ai.134426a96b498fbf.webp)
 
 Un alt exemplu este modul în care AI utilizează datele utilizatorului și datele personale. De exemplu, un utilizator cu persona elev poate avea limitări bazate pe persona sa. AI poate să nu fie capabil să dezvăluie răspunsuri la întrebări, dar poate ajuta utilizatorul să gândească cum să rezolve o problemă.
 
-![AI răspunzând la întrebări pe baza personajului](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.ro.png)
+![AI răspunzând la întrebări pe baza personajului](../../../translated_images/ro/solving-questions.b7dea1604de0cbd2.webp)
 
 Un ultim aspect important al explicabilității este simplificarea explicațiilor. Elevii și profesorii pot să nu fie experți în AI, prin urmare explicațiile despre ceea ce aplicația poate sau nu poate face ar trebui să fie simplificate și ușor de înțeles.
 
-![explicații simplificate despre capacitățile AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.ro.png)
+![explicații simplificate despre capacitățile AI](../../../translated_images/ro/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
 AI generativ creează o colaborare între AI și utilizator, unde, de exemplu, un utilizator poate modifica solicitările pentru a obține rezultate diferite. În plus, odată ce un rezultat este generat, utilizatorii ar trebui să poată modifica rezultatele, oferindu-le un sentiment de control. De exemplu, atunci când utilizați Bing, puteți ajusta solicitarea în funcție de format, ton și lungime. În plus, puteți adăuga modificări la rezultatul obținut și să-l ajustați, așa cum se arată mai jos:
 
-![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.ro.png)
+![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/ro/bing1.293ae8527dbe2789.webp)
 
 O altă funcție în Bing care permite utilizatorului să aibă control asupra aplicației este abilitatea de a opta pentru utilizarea sau nu a datelor de către AI. Pentru o aplicație școlară, un elev ar putea dori să folosească notițele sale, precum și resursele profesorului ca material de revizuire.
 
-![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.ro.png)
+![Rezultatele căutării Bing cu opțiuni pentru a modifica solicitarea și rezultatul](../../../translated_images/ro/bing2.309f4845528a88c2.webp)
 
 > Când proiectați aplicații AI, intenționalitatea este esențială pentru a vă asigura că utilizatorii nu supraîncred în AI, stabilind așteptări nerealiste cu privire la capacitățile sale. Un mod de a face acest lucru este prin crearea de fricțiuni între solicitări și rezultate. Reamintind utilizatorului că aceasta este AI și nu un alt om.
 
@@ -102,7 +102,7 @@ Aplicațiile AI ar trebui să fie construite pentru a primi și oferi feedback. 
 
 Un alt mod de a gestiona acest lucru este comunicarea clară a capacităților și limitărilor sistemului. Când un utilizator face o eroare solicitând ceva dincolo de capacitățile AI, ar trebui să existe și o modalitate de a gestiona acest lucru, așa cum se arată mai jos.
 
-![Oferirea de feedback și gestionarea erorilor](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.ro.png)
+![Oferirea de feedback și gestionarea erorilor](../../../translated_images/ro/feedback-loops.7955c134429a9466.webp)
 
 Erorile de sistem sunt frecvente în aplicații, unde utilizatorul ar putea avea nevoie de asistență cu informații în afara domeniului de aplicare al AI sau aplicația poate avea o limită privind numărul de întrebări/subiecte pentru care utilizatorul poate genera rezumate. De exemplu, o aplicație AI antrenată cu date despre subiecte limitate, cum ar fi Istoria și Matematica, poate să nu fie capabilă să gestioneze întrebări despre Geografie. Pentru a atenua acest lucru, sistemul AI poate oferi un răspuns de genul: "Ne pare rău, produsul nostru a fost antrenat cu date în următoarele subiecte....., nu pot răspunde la întrebarea pe care ați adresat-o."
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ஜெனரேட்டிவ் AI-இன் சக்தியுடன் கூடிய உரையாடல் பயன்பாடுகளை உருவாக்குதல்
 
-[![ஜெனரேட்டிவ் AI-இன் சக்தியுடன் கூடிய உரையாடல் பயன்பாடுகளை உருவாக்குதல்](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ta.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![ஜெனரேட்டிவ் AI-இன் சக்தியுடன் கூடிய உரையாடல் பயன்பாடுகளை உருவாக்குதல்](../../../translated_images/ta/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(மேலே உள்ள படத்தை கிளிக் செய்து இந்த பாடத்தின் வீடியோவைப் பாருங்கள்)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 OpenAI-இன் ChatGPT-இல் "Custom instructions" அமைப்புகள் தனிப்பயனாக்கலின் ஒரு உதாரணமாகும். இது உங்கள் ப்ராம்ப்ட்டுக்கு முக்கியமான சூழல் தகவல்களை வழங்க அனுமதிக்கிறது. இதோ ஒரு Custom instruction-இன் உதாரணம்.
 
-![ChatGPT-இல் Custom Instructions அமைப்புகள்](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ta.png)
+![ChatGPT-இல் Custom Instructions அமைப்புகள்](../../../translated_images/ta/custom-instructions.b96f59aa69356fcf.webp)
 
 இந்த "சுயவிவரம்" ChatGPT-ஐ லிங்க்ட் லிஸ்ட்கள் பற்றிய பாட திட்டத்தை உருவாக்குமாறு தூண்டுகிறது. பயனர் தனது அனுபவத்தின் அடிப்படையில் மேலும் விரிவான பாட திட்டத்தை விரும்பலாம் என்பதை ChatGPT கவனத்தில் எடுத்துக்கொள்வதை கவனிக்கவும்.
 
-![லிங்க்ட் லிஸ்ட்கள் பற்றிய பாட திட்டத்திற்கான ChatGPT-இல் ப்ராம்ப்ட்](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ta.png)
+![லிங்க்ட் லிஸ்ட்கள் பற்றிய பாட திட்டத்திற்கான ChatGPT-இல் ப்ராம்ப்ட்](../../../translated_images/ta/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### மைக்ரோசாஃப்ட்-இன் பெரிய மொழி மாடல்களுக்கான சிஸ்டம் மெசேஜ் அமைப்பு
 

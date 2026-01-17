@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Navrhovanie UX pre AI aplikácie
 
-[![Navrhovanie UX pre AI aplikácie](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.sk.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Navrhovanie UX pre AI aplikácie](../../../translated_images/sk/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
 
@@ -58,7 +58,7 @@ Byť prístupný znamená rozšíriť používateľskú skúsenosť na používa
 
 Byť príjemný znamená, že aplikácia je zábavná na používanie. Atraktívna používateľská skúsenosť môže mať pozitívny vplyv na používateľa, povzbudiť ho k návratu k aplikácii a zvýšiť príjmy podniku.
 
-![obrázok ilustrujúci úvahy o UX v AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.sk.png)
+![obrázok ilustrujúci úvahy o UX v AI](../../../translated_images/sk/uxinai.d5b4ed690f5cefff.webp)
 
 Nie každý problém sa dá vyriešiť pomocou AI. AI prichádza na pomoc pri zlepšovaní používateľskej skúsenosti, či už automatizáciou manuálnych úloh alebo personalizáciou používateľských skúseností.
 
@@ -72,25 +72,25 @@ Dva spôsoby, ako zabezpečiť, že dôvera je umiestnená priamo do centra diza
 
 Keď AI pomáha informovať rozhodnutia, ako je odovzdávanie vedomostí budúcim generáciám, je kritické, aby učitelia a rodičia pochopili, ako sa rozhodnutia AI robia. Toto je vysvetliteľnosť - pochopenie, ako AI aplikácie robia rozhodnutia. Navrhovanie pre vysvetliteľnosť zahŕňa pridanie detailov, ktoré zdôrazňujú, ako AI dospela k výstupu. Publikum musí byť informované, že výstup je generovaný AI a nie človekom. Napríklad namiesto "Začnite chatovať so svojím tútorom teraz" povedzte "Použite AI tútora, ktorý sa prispôsobí vašim potrebám a pomôže vám učiť sa vlastným tempom."
 
-![stránka aplikácie s jasnou ilustráciou vysvetliteľnosti v AI aplikáciách](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.sk.png)
+![stránka aplikácie s jasnou ilustráciou vysvetliteľnosti v AI aplikáciách](../../../translated_images/sk/explanability-in-ai.134426a96b498fbf.webp)
 
 Ďalším príkladom je, ako AI používa údaje používateľa a osobné údaje. Napríklad používateľ s personou študent môže mať obmedzenia na základe svojej persony. AI nemusí byť schopná odhaliť odpovede na otázky, ale môže pomôcť používateľovi premýšľať o tom, ako môže problém vyriešiť.
 
-![AI odpovedajúca na otázky na základe persony](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.sk.png)
+![AI odpovedajúca na otázky na základe persony](../../../translated_images/sk/solving-questions.b7dea1604de0cbd2.webp)
 
 Poslednou kľúčovou časťou vysvetliteľnosti je zjednodušenie vysvetlení. Študenti a učitelia nemusia byť odborníkmi na AI, preto by vysvetlenia toho, čo aplikácia dokáže alebo nedokáže, mali byť zjednodušené a ľahko pochopiteľné.
 
-![zjednodušené vysvetlenia schopností AI](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.sk.png)
+![zjednodušené vysvetlenia schopností AI](../../../translated_images/sk/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrola
 
 Generatívna AI vytvára spoluprácu medzi AI a používateľom, kde napríklad používateľ môže upraviť podnety pre rôzne výsledky. Okrem toho, keď je výstup generovaný, používatelia by mali byť schopní upraviť výsledky, čím získajú pocit kontroly. Napríklad pri používaní Bingu môžete prispôsobiť svoj podnet na základe formátu, tónu a dĺžky. Okrem toho môžete pridať zmeny do svojho výstupu a upraviť výsledok, ako je uvedené nižšie:
 
-![Výsledky vyhľadávania Bing s možnosťami upraviť podnet a výstup](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.sk.png)
+![Výsledky vyhľadávania Bing s možnosťami upraviť podnet a výstup](../../../translated_images/sk/bing1.293ae8527dbe2789.webp)
 
 Ďalšou funkciou v Bingu, ktorá umožňuje používateľovi mať kontrolu nad aplikáciou, je možnosť zapnúť a vypnúť údaje, ktoré AI používa. Pre školskú aplikáciu môže študent chcieť použiť svoje poznámky, ako aj zdroje učiteľa ako materiál na opakovanie.
 
-![Výsledky vyhľadávania Bing s možnosťami upraviť podnet a výstup](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.sk.png)
+![Výsledky vyhľadávania Bing s možnosťami upraviť podnet a výstup](../../../translated_images/sk/bing2.309f4845528a88c2.webp)
 
 > Pri navrhovaní AI aplikácií je kľúčová úmyselnosť, aby sa zabezpečilo, že používatelia nebudú nadmerne dôverovať a nastavovať nerealistické očakávania voči jej schopnostiam. Jedným zo spôsobov, ako to dosiahnuť, je vytváranie trenia medzi podnetmi a výsledkami. Pripomínanie používateľovi, že ide o AI a nie o človeka.
 
@@ -102,7 +102,7 @@ AI aplikácie by mali byť navrhnuté tak, aby prijímali a poskytovali spätnú
 
 Ďalším spôsobom, ako to riešiť, je jasne komunikovať schopnosti a obmedzenia systému. Keď používateľ urobí chybu pri požiadavke na niečo, čo presahuje schopnosti AI, malo by existovať aj spôsob, ako to riešiť, ako je uvedené nižšie.
 
-![Poskytovanie spätnej väzby a riešenie chýb](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.sk.png)
+![Poskytovanie spätnej väzby a riešenie chýb](../../../translated_images/sk/feedback-loops.7955c134429a9466.webp)
 
 Systémové chyby sú bežné pri aplikáciách, kde používateľ môže potrebovať pomoc s informáciami mimo rozsahu AI alebo aplikácia môže mať obmedzenie na počet otázok/predmetov, ktoré môže používateľ generovať. Napríklad AI aplikácia trénovaná na údajoch o obmedzených predmetoch, napríklad História a Matematika, nemusí byť schopná riešiť otázky týkajúce sa Geografie. Na zmiernenie tohto problému môže AI systém poskytnúť odpoveď ako: "Prepáčte, náš produkt bol trénovaný na údajoch z nasledujúcich predmetov....., nemôžem odpovedať na otázku, ktorú ste položili."
 

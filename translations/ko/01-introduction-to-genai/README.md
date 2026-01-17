@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 생성형 AI와 대규모 언어 모델 소개
 
-[![생성형 AI와 대규모 언어 모델 소개](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.ko.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![생성형 AI와 대규모 언어 모델 소개](../../../translated_images/ko/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)_
 
@@ -43,7 +43,7 @@ _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)
 
 생성형 AI는 오늘날 우리가 배우고 가르치는 방식을 혁신할 것으로 기대되며, 학생들은 24시간 가상 교사를 통해 방대한 정보와 예제를 제공받고, 교사들은 혁신적인 도구를 활용하여 학생들을 평가하고 피드백을 제공할 수 있습니다.
 
-![다섯 명의 젊은 학생들이 모니터를 보고 있는 모습 - DALLE2 제작 이미지](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.ko.png)
+![다섯 명의 젊은 학생들이 모니터를 보고 있는 모습 - DALLE2 제작 이미지](../../../translated_images/ko/students-by-DALLE2.b70fddaced1042ee.webp)
 
 먼저, 커리큘럼 전반에서 사용할 기본 개념과 용어를 정의해 보겠습니다.
 
@@ -69,7 +69,7 @@ _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)
 
 이렇게 해서 오늘날의 생성형 AI에 도달하게 되었습니다. 생성형 AI는 딥 러닝의 하위 집합으로 볼 수 있습니다.
 
-![AI, ML, DL 및 생성형 AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.ko.png)
+![AI, ML, DL 및 생성형 AI](../../../translated_images/ko/AI-diagram.c391fa518451a40d.webp)
 
 AI 분야에서 수십 년간의 연구 끝에 _Transformer_라는 새로운 모델 아키텍처가 RNN의 한계를 극복하며 훨씬 더 긴 텍스트 시퀀스를 입력으로 받을 수 있게 되었습니다. Transformer는 주의 메커니즘(attention mechanism)을 기반으로 하며, 모델이 받은 입력에 서로 다른 가중치를 부여하여 텍스트 시퀀스에서 가장 관련성이 높은 정보에 '더 많은 주의'를 기울일 수 있게 합니다.
 
@@ -81,7 +81,7 @@ AI 분야에서 수십 년간의 연구 끝에 _Transformer_라는 새로운 모
 
 - **토크나이저, 텍스트를 숫자로 변환**: 대규모 언어 모델은 텍스트를 입력으로 받고 텍스트를 출력으로 생성합니다. 그러나 통계 모델이기 때문에 텍스트 시퀀스보다 숫자로 작업하는 것이 훨씬 더 효과적입니다. 그래서 모델의 핵심 부분에 사용되기 전에 모든 입력은 토크나이저에 의해 처리됩니다. 토큰은 가변 길이의 문자로 구성된 텍스트 조각이며, 토크나이저의 주요 작업은 입력을 토큰 배열로 나누는 것입니다. 그런 다음 각 토큰은 원래 텍스트 조각의 정수 인코딩인 토큰 인덱스와 매핑됩니다.
 
-![토크나이저 예시](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.ko.png)
+![토크나이저 예시](../../../translated_images/ko/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **출력 토큰 예측**: n개의 토큰을 입력으로 받으면(최대 n은 모델마다 다름), 모델은 하나의 토큰을 출력으로 예측할 수 있습니다. 이 토큰은 다음 반복의 입력에 통합되어 확장 창 패턴으로 작동하며, 사용자 경험을 개선하여 하나(또는 여러 개)의 문장을 답변으로 받을 수 있게 합니다. 따라서 ChatGPT를 사용해 본 적이 있다면, 때때로 문장 중간에서 멈추는 것처럼 보이는 이유를 설명할 수 있습니다.
 
@@ -97,23 +97,23 @@ AI 분야에서 수십 년간의 연구 끝에 _Transformer_라는 새로운 모
 
   1. 기사, 책, 제품 리뷰 등의 요약 및 비정형 데이터에서 통찰력 추출.
     
-    ![요약 예시](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.ko.png)
+    ![요약 예시](../../../translated_images/ko/summarization-example.7b7ff97147b3d790.webp)
   
   2. 기사, 에세이, 과제 등의 창의적 아이디어 및 디자인.
       
-     ![창의적 글쓰기 예시](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.ko.png)
+     ![창의적 글쓰기 예시](../../../translated_images/ko/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **에이전트와의 대화 형태로 질문**.
   
-  ![대화 예시](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.ko.png)
+  ![대화 예시](../../../translated_images/ko/conversation-example.60c2afc0f595fa59.webp)
 
 - **완성해야 할 텍스트 조각**, 이는 암묵적으로 글쓰기 지원 요청을 의미합니다.
   
-  ![텍스트 완성 예시](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.ko.png)
+  ![텍스트 완성 예시](../../../translated_images/ko/text-completion-example.cbb0f28403d42752.webp)
 
 - **코드 조각**과 함께 이를 설명하고 문서화하거나 특정 작업을 수행하는 코드 생성을 요청하는 주석.
   
-  ![코딩 예시](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.ko.png)
+  ![코딩 예시](../../../translated_images/ko/coding-example.50ebabe8a6afff20.webp)
 
 위의 예시는 매우 간단하며 대규모 언어 모델의 기능을 포괄적으로 보여주기 위한 것이 아닙니다. 이들은 생성형 AI를 사용하는 잠재력을 보여주기 위한 것이며, 특히 교육적 맥락에 국한되지 않습니다.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Function Calling နှင့် ပေါင်းစပ်ခြင်း
 
-[![Function Calling နှင့် ပေါင်းစပ်ခြင်း](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.my.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Function Calling နှင့် ပေါင်းစပ်ခြင်း](../../../translated_images/my/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 ယခင်သင်ခန်းစာများတွင် သင်တော်တော်များများလေ့လာပြီးဖြစ်ပါပြီ။ သို့သော် ကျွန်ုပ်တို့ ပိုမိုကောင်းမွန်စေရန် ဆက်လက်တိုးတက်နိုင်ပါသေးသည်။ ကျွန်ုပ်တို့ လုပ်ဆောင်နိုင်သည့် အချို့သောအရာများမှာ တုံ့ပြန်မှုကို အလွယ်တကူ အလုပ်လုပ်နိုင်ရန် တုံ့ပြန်မှုပုံစံကို ပိုမိုတိကျစေခြင်းနှင့် အခြားအရင်းအမြစ်များမှ ဒေတာများကို ထည့်သွင်းခြင်းဖြင့် ကျွန်ုပ်တို့၏အက်ပလီကေးရှင်းကို ပိုမိုချမ်းသာစေခြင်းတို့ဖြစ်သည်။
 
@@ -179,7 +179,7 @@ Function Calling သည် Azure OpenAI Service ၏ feature တစ်ခုဖ�
 
 ဒါဆို formatting ပြဿနာကို ဘယ်လိုဖြေရှင်းမလဲ? Functional calling ကို အသုံးပြုခြင်းဖြင့် structured data ကို ပြန်လည်ရရှိစေရန် သေချာစေနိုင်သည်။ Function calling ကို အသုံးပြုသောအခါ LLM သည် function များကို တကယ်ခေါ်ခြင်း သို့မဟုတ် အလုပ်မလုပ်ပါ။ ၎င်း၏ response များအတွက် LLM ကို လိုက်နာရန် structure တစ်ခု ဖန်တီးသည်။ ထို့နောက် ၎င်း response များကို အသုံးပြု၍ ကျွန်ုပ်တို့၏ အက်ပလီကေးရှင်းများတွင် function ကို အလုပ်လုပ်ရန် သိရှိသည်။
 
-![function flow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.my.png)
+![function flow](../../../translated_images/my/Function-Flow.083875364af4f4bb.webp)
 
 ထို့နောက် function မှ ပြန်ပေးသောအရာကို ယူပြီး LLM သို့ ပြန်ပို့နိုင်သည်။ ထို့နောက် LLM သည် အသုံးပြုသူ၏ မေးခွန်းကို ဖြေဆိုရန် သဘာဝဘာသာစကားဖြင့် တုံ့ပြန်မည်။
 
@@ -201,7 +201,7 @@ Function Call တစ်ခု ဖန်တီးခြင်းလုပ်င�
 2. **Reading** - မော်ဒယ်၏ response ကို ဖတ်၍ တာဝန်တစ်ခုကို အကောင်အထည်ဖော်ခြင်း၊ ဥပမာအားဖြင့် function သို့မဟုတ် API Call ကို အကောင်အထည်ဖော်ခြင်း။
 3. **Making** - Function response မှ အချက်အလက်များကို အသုံးပြု၍ အသုံးပြုသူ message ကို Chat Completions API သို့ ပြန်လည်ခေါ်ခြင်း။
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.my.png)
+![LLM Flow](../../../translated_images/my/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### အဆင့် ၁ - Messages ဖန်တီးခြင်း
 

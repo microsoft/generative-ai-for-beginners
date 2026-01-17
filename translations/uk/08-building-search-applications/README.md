@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Створення пошукових додатків
 
-[![Вступ до генеративного штучного інтелекту та великих мовних моделей](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.uk.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Вступ до генеративного штучного інтелекту та великих мовних моделей](../../../translated_images/uk/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Натисніть на зображення вище, щоб переглянути відео цього уроку_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ось приклад семантичного запиту для запитання "Чи можна використовувати rstudio з azure ml?". Зверніть увагу на URL-адресу YouTube, вона містить часову мітку, яка веде до моменту у відео, де знаходиться відповідь на запитання.
 
-![Семантичний запит для запитання "Чи можна використовувати rstudio з Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.uk.png)
+![Семантичний запит для запитання "Чи можна використовувати rstudio з Azure ML"](../../../translated_images/uk/query-results.bb0480ebf025fac6.webp)
 
 ## Що таке семантичний пошук?
 
@@ -162,7 +162,7 @@ az cognitiveservices account deployment create \
 
 Коли ви запустите ноутбук, вам буде запропоновано ввести запит. Вікно введення виглядатиме так:
 
-![Вікно введення для введення запиту користувачем](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.uk.png)
+![Вікно введення для введення запиту користувачем](../../../translated_images/uk/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Чудова робота! Продовжуйте навчання
 

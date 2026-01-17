@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-[![Mô hình mã nguồn mở](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.vi.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Mô hình mã nguồn mở](../../../translated_images/vi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Tinh chỉnh LLM của bạn
 
@@ -32,7 +32,7 @@ Sẵn sàng chưa? Hãy bắt đầu.
 
 Muốn có cái nhìn tổng quan về những gì chúng ta sẽ đề cập trước khi đi sâu vào chi tiết? Hãy xem hướng dẫn minh họa mô tả hành trình học tập cho bài học này - từ việc học các khái niệm cốt lõi và động lực cho việc tinh chỉnh, đến việc hiểu quy trình và các thực hành tốt nhất để thực hiện nhiệm vụ tinh chỉnh. Đây là một chủ đề thú vị để khám phá, vì vậy đừng quên kiểm tra trang [Tài nguyên](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) để có thêm các liên kết hỗ trợ hành trình học tập tự định hướng của bạn!
 
-![Hướng dẫn minh họa về tinh chỉnh mô hình ngôn ngữ](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.vi.png)
+![Hướng dẫn minh họa về tinh chỉnh mô hình ngôn ngữ](../../../translated_images/vi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Tinh chỉnh mô hình ngôn ngữ là gì?
 

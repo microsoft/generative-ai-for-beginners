@@ -33,7 +33,7 @@ SLM hufunzwa kwa kutumia kiasi kikubwa cha data ya maandishi. Wakati wa mafunzo,
 
 Maendeleo ya SLM yanaendana na hitaji la kuunda modeli zinazoweza kutumika katika mazingira yenye rasilimali chache, kama vile vifaa vya simu au mifumo ya edge computing, ambapo LLM kamili inaweza kuwa ngumu kutumia kutokana na mahitaji makubwa ya rasilimali. Kwa kuzingatia ufanisi, SLM huleta usawa kati ya utendaji na upatikanaji, na kuwezesha matumizi mapana katika nyanja mbalimbali.  
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.sw.png)  
+![slm](../../../translated_images/sw/slm.4058842744d0444a.webp)  
 
 ## Malengo ya Kujifunza  
 
@@ -135,7 +135,7 @@ Tunaweza kutumia modeli za Familia ya Phi-3/3.5 kulingana na matukio tofauti. To
 
 Tunatarajia kutumia Phi-3/3.5 katika matukio tofauti. Ifuatayo, tutatumia Phi-3/3.5 kulingana na matukio tofauti.  
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.sw.png)  
+![phi3](../../../translated_images/sw/phi3.655208c3186ae381.webp)  
 
 ### Tofauti ya Inference kwa API za Wingu  
 
@@ -145,9 +145,9 @@ Modeli za GitHub ni njia rahisi zaidi. Unaweza kupata haraka modeli ya Phi-3/3.5
 
 - Demo: Ulinganisho wa athari za Phi-3-mini na Phi-3.5-mini katika matukio ya Kichina  
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.sw.png)  
+![phi3](../../../translated_images/sw/gh1.126c6139713b622b.webp)  
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.sw.png)  
+![phi35](../../../translated_images/sw/gh2.07d7985af66f178d.webp)  
 
 **Azure AI Studio**  
 

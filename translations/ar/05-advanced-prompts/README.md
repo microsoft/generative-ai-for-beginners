@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # إنشاء مطالبات متقدمة
 
-[![إنشاء مطالبات متقدمة](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ar.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![إنشاء مطالبات متقدمة](../../../translated_images/ar/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 لنقم بمراجعة بعض ما تعلمناه في الفصل السابق:
 

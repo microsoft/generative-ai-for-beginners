@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ro"
 }
 -->
-[![Modele Open Source](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ro.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Modele Open Source](../../../translated_images/ro/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introducere
 
@@ -33,7 +33,7 @@ Agenții AI reprezintă un domeniu foarte interesant în lumea AI Generativ. Cu 
 
 Agenții AI permit modelelor lingvistice mari (LLMs) să îndeplinească sarcini oferindu-le acces la un **context** și **instrumente**.
 
-![Model Agent](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ro.png)
+![Model Agent](../../../translated_images/ro/what-agent.21f2893bdfd01e6a.webp)
 
 Să definim acești termeni:
 
@@ -53,7 +53,7 @@ Pentru a gestiona **contextul**, folosește o funcție încorporată numită `Ag
 
 `AgentExecutor` stochează, de asemenea, istoricul conversațiilor pentru a oferi contextul discuției.
 
-![Agenți LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ro.png)
+![Agenți LangChain](../../../translated_images/ro/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain oferă un [catalog de instrumente](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) care pot fi importate în aplicația ta, oferind LLM-ului acces la ele. Acestea sunt create de comunitate și de echipa LangChain.
 
@@ -85,7 +85,7 @@ Pentru a schimba și gestiona contextul, un Agent asistent generează cod Python
 
 Iată un exemplu al procesului:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ro.png)
+![AutoGen](../../../translated_images/ro/autogen.dee9a25a45fde584.webp)
 
 #### LLM definit cu un mesaj de sistem
 
@@ -129,7 +129,7 @@ Pentru a gestiona contextul conversației, TaskWeaver folosește conceptul de `P
 
 Pentru a finaliza sarcinile, `Planner` are acces la o colecție de instrumente numite `Plugins`. Acestea pot fi clase Python sau un interpret general de cod. Aceste plugin-uri sunt stocate ca embeddings pentru ca LLM-ul să poată căuta mai bine plugin-ul corect.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ro.png)
+![Taskweaver](../../../translated_images/ro/taskweaver.da8559999267715a.webp)
 
 Iată un exemplu de plugin pentru detectarea anomaliilor:
 
@@ -143,7 +143,7 @@ Codul este verificat înainte de a fi executat. O altă caracteristică pentru g
 
 Ultimul framework pentru agenți pe care îl vom explora este [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Ce face JARVIS unic este faptul că folosește un LLM pentru a gestiona `contextul` conversației, iar `instrumentele` sunt alte modele AI. Fiecare dintre modelele AI sunt modele specializate care îndeplinesc anumite sarcini, cum ar fi detectarea obiectelor, transcrierea sau descrierea imaginilor.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ro.png)
+![JARVIS](../../../translated_images/ro/jarvis.762ddbadbd1a3a33.webp)
 
 LLM-ul, fiind un model cu scop general, primește cererea de la utilizator și identifică sarcina specifică și orice argumente/date necesare pentru a finaliza sarcina.
 

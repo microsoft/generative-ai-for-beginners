@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Grundlæggende om Prompt Engineering
 
-[![Grundlæggende om Prompt Engineering](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.da.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Grundlæggende om Prompt Engineering](../../../translated_images/da/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduktion
 Dette modul dækker essentielle begreber og teknikker til at skabe effektive prompts i generative AI-modeller. Den måde, du skriver din prompt til en LLM, har betydning. En omhyggeligt udformet prompt kan give en bedre kvalitet af svar. Men hvad betyder begreber som _prompt_ og _prompt engineering_ egentlig? Og hvordan forbedrer jeg prompt _input_, som jeg sender til LLM'en? Det er de spørgsmål, vi vil forsøge at besvare i dette kapitel og det næste.
@@ -53,7 +53,7 @@ Notebooken kommer med _startøvelser_ - men du opfordres til at tilføje dine eg
 
 Vil du have det store overblik over, hvad denne lektion dækker, før du dykker ned? Tjek denne illustrerede guide, som giver dig en fornemmelse af de vigtigste emner, der dækkes, og de vigtigste pointer, du skal tænke over i hver enkelt. Lektionens køreplan tager dig fra at forstå kernebegreber og udfordringer til at adressere dem med relevante prompt engineering-teknikker og bedste praksis. Bemærk, at afsnittet "Avancerede teknikker" i denne guide refererer til indhold, der dækkes i det _næste_ kapitel af dette pensum.
 
-![Illustreret guide til Prompt Engineering](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.da.png)
+![Illustreret guide til Prompt Engineering](../../../translated_images/da/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Vores startup
 
@@ -94,7 +94,7 @@ En LLM ser prompts som en _sekvens af tokens_, hvor forskellige modeller (eller 
 
 For at få en intuition for, hvordan tokenization fungerer, kan du prøve værktøjer som [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), som vist nedenfor. Kopier din prompt ind - og se, hvordan den bliver konverteret til tokens, og læg mærke til, hvordan mellemrumstegn og tegnsætning håndteres. Bemærk, at dette eksempel viser en ældre LLM (GPT-3) - så hvis du prøver dette med en nyere model, kan det give et andet resultat.
 
-![Tokenization](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.da.png)
+![Tokenization](../../../translated_images/da/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Begreb: Grundmodeller
 
@@ -104,7 +104,7 @@ Vil du se, hvordan prompt-baseret completion fungerer? Indtast ovenstående prom
 
 Men hvad hvis brugeren ønskede at se noget specifikt, der opfyldte nogle kriterier eller opgaveformål? Det er her, _instruction-tuned_ LLM'er kommer ind i billedet.
 
-![Base LLM Chat Completion](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.da.png)
+![Base LLM Chat Completion](../../../translated_images/da/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Begreb: Instruction Tuned LLMs
 
@@ -118,7 +118,7 @@ Lad os prøve det - gå tilbage til ovenstående prompt, men ændr nu _systembes
 
 Se, hvordan resultatet nu er tilpasset til at afspejle det ønskede mål og format? En underviser kan nu direkte bruge dette svar i sine slides til den klasse.
 
-![Instruction Tuned LLM Chat Completion](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.da.png)
+![Instruction Tuned LLM Chat Completion](../../../translated_images/da/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Hvorfor har vi brug for Prompt Engineering?
 
@@ -148,15 +148,15 @@ Så hvad sker der, når vi kører denne prompt med forskellige LLM-udbydere?
 
 > **Svar 1**: OpenAI Playground (GPT-35)
 
-![Svar 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.da.png)
+![Svar 1](../../../translated_images/da/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Svar 2**: Azure OpenAI Playground (GPT-35)
 
-![Svar 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.da.png)
+![Svar 2](../../../translated_images/da/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Svar 3**: Hugging Face Chat Playground (LLama-2)
 
-![Svar 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.da.png)
+![Svar 3](../../../translated_images/da/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Som forventet producerer hver model (eller modelversion) lidt forskellige svar takket være stokastisk adfærd og variationer i modellernes kapacitet. For eksempel retter én model sig mod et publikum på 8. klasses niveau, mens en anden antager en gymnasieelev. Men alle tre modeller genererede svar, der kunne overbevise en uinformeret bruger om, at begivenheden var reel.
 

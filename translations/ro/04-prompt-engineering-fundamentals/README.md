@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fundamentele Ingineriei Prompturilor
 
-[![Fundamentele Ingineriei Prompturilor](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.ro.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Fundamentele Ingineriei Prompturilor](../../../translated_images/ro/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introducere
 Acest modul acoperă concepte și tehnici esențiale pentru crearea prompturilor eficiente în modelele de inteligență artificială generativă. Modul în care scrii un prompt pentru un LLM contează. Un prompt bine conceput poate obține un răspuns de calitate mai bună. Dar ce înseamnă exact termeni precum _prompt_ și _ingineria prompturilor_? Și cum pot îmbunătăți _inputul_ promptului pe care îl trimit către LLM? Acestea sunt întrebările la care vom încerca să răspundem în acest capitol și în următorul.
@@ -53,7 +53,7 @@ Notebook-ul vine cu exerciții _de început_ - dar ești încurajat să adaugi p
 
 Vrei să obții o imagine de ansamblu a ceea ce acoperă această lecție înainte de a te aprofunda? Consultă acest ghid ilustrat, care îți oferă o idee despre principalele subiecte abordate și concluziile cheie pe care să le ai în vedere pentru fiecare. Harta lecției te duce de la înțelegerea conceptelor de bază și a provocărilor la abordarea acestora cu tehnici relevante de inginerie a prompturilor și cele mai bune practici. Reține că secțiunea "Tehnici avansate" din acest ghid se referă la conținutul acoperit în capitolul _următor_ al acestui curriculum.
 
-![Ghid ilustrat pentru Ingineria Prompturilor](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.ro.png)
+![Ghid ilustrat pentru Ingineria Prompturilor](../../../translated_images/ro/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Startup-ul nostru
 
@@ -84,7 +84,7 @@ Un LLM vede prompturile ca o _secvență de tokeni_, unde diferite modele (sau v
 
 Pentru a înțelege cum funcționează tokenizarea, încearcă instrumente precum [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) prezentat mai jos. Copiază promptul tău - și vezi cum este convertit în tokeni, acordând atenție modului în care sunt tratate caracterele spațiale și semnele de punctuație. Reține că acest exemplu arată un LLM mai vechi (GPT-3) - așa că încercarea acestuia cu un model mai nou poate produce un rezultat diferit.
 
-![Tokenizare](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.ro.png)
+![Tokenizare](../../../translated_images/ro/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concept: Modele de bază
 
@@ -94,7 +94,7 @@ Vrei să vezi cum funcționează completarea bazată pe prompturi? Introdu promp
 
 Dar ce se întâmplă dacă utilizatorul dorește să vadă ceva specific care să îndeplinească anumite criterii sau obiective de sarcină? Aici intervin LLM-urile _ajustate pentru instrucțiuni_.
 
-![Completare Chat LLM de bază](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.ro.png)
+![Completare Chat LLM de bază](../../../translated_images/ro/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concept: LLM-uri ajustate pentru instrucțiuni
 
@@ -108,7 +108,7 @@ Hai să încercăm - revizitează promptul de mai sus, dar acum schimbă _mesaju
 
 Vezi cum rezultatul este acum ajustat pentru a reflecta scopul și formatul dorit? Un educator poate folosi acum direct acest răspuns în prezentările sale pentru acea clasă.
 
-![Completare Chat LLM ajustat pentru instrucțiuni](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.ro.png)
+![Completare Chat LLM ajustat pentru instrucțiuni](../../../translated_images/ro/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## De ce avem nevoie de Ingineria Prompturilor?
 
@@ -138,15 +138,15 @@ Deci, ce se întâmplă când rulăm acest prompt cu diferiți furnizori de LLM?
 
 > **Răspuns 1**: OpenAI Playground (GPT-35)
 
-![Răspuns 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.ro.png)
+![Răspuns 1](../../../translated_images/ro/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Răspuns 2**: Azure OpenAI Playground (GPT-35)
 
-![Răspuns 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.ro.png)
+![Răspuns 2](../../../translated_images/ro/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Răspuns 3**: Hugging Face Chat Playground (LLama-2)
 
-![Răspuns 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.ro.png)
+![Răspuns 3](../../../translated_images/ro/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Așa cum era de așteptat, fiecare model (sau versiune de model) produce răspunsuri ușor diferite datorită comportamentului stochastic și variațiilor de capacitate ale modelului. De exemplu, un model se adresează unui public de clasa a VIII-a, în timp ce altul presupune un elev de liceu. Dar toate cele trei modele au generat răspunsuri care ar putea convinge un utilizator neinformat că evenimentul este real.
 

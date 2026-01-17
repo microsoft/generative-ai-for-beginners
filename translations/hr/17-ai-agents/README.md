@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "hr"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.hr.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/hr/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Uvod
 
@@ -33,7 +33,7 @@ AI agenti su vrlo uzbudljivo područje u svijetu generativne umjetne inteligenci
 
 AI agenti omogućuju velikim jezičnim modelima (LLMs) obavljanje zadataka dajući im pristup **stanju** i **alatima**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.hr.png)
+![Agent Model](../../../translated_images/hr/what-agent.21f2893bdfd01e6a.webp)
 
 Definirajmo ove pojmove:
 
@@ -53,7 +53,7 @@ Za upravljanje **stanjem**, koristi ugrađenu funkciju pod nazivom `AgentExecuto
 
 `AgentExecutor` također pohranjuje povijest razgovora kako bi pružio kontekst razgovora.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.hr.png)
+![Langchain Agents](../../../translated_images/hr/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain nudi [katalog alata](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) koji se mogu uvesti u vašu aplikaciju, omogućujući LLM-u pristup tim alatima. Ove alate kreira zajednica i tim LangChain-a.
 
@@ -85,7 +85,7 @@ Za promjenu i upravljanje stanjem, pomoćni agent generira Python kod za dovrša
 
 Evo primjera procesa:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.hr.png)
+![AutoGen](../../../translated_images/hr/autogen.dee9a25a45fde584.webp)
 
 #### LLM definiran sistemskom porukom
 
@@ -129,7 +129,7 @@ Za upravljanje stanjem razgovora, TaskWeaver koristi koncept `Plannera`. `Planne
 
 Za dovršavanje zadataka, `Planner` ima pristup zbirci alata nazvanih `Plugins`. To mogu biti Python klase ili opći interpreter koda. Ovi pluginovi se pohranjuju kao ugrađeni podaci kako bi LLM mogao bolje pretraživati odgovarajući plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.hr.png)
+![Taskweaver](../../../translated_images/hr/taskweaver.da8559999267715a.webp)
 
 Evo primjera plugina za detekciju anomalija:
 
@@ -143,7 +143,7 @@ Kod se provjerava prije izvršavanja. Još jedna značajka za upravljanje kontek
 
 Posljednji okvir za agente koji ćemo istražiti je [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Ono što JARVIS čini jedinstvenim jest to što koristi LLM za upravljanje `stanjem` razgovora, dok su `alati` drugi AI modeli. Svaki od AI modela su specijalizirani modeli koji obavljaju određene zadatke poput detekcije objekata, transkripcije ili opisivanja slika.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.hr.png)
+![JARVIS](../../../translated_images/hr/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, kao model opće namjene, prima zahtjev od korisnika i identificira specifičan zadatak te sve argumente/podatke potrebne za dovršavanje zadatka.
 

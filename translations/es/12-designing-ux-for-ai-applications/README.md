@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Diseñando UX para Aplicaciones de IA
 
-[![Diseñando UX para Aplicaciones de IA](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.es.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Diseñando UX para Aplicaciones de IA](../../../translated_images/es/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Haz clic en la imagen de arriba para ver el video de esta lección)_
 
@@ -58,7 +58,7 @@ Ser accesible significa extender la experiencia del usuario a usuarios con diver
 
 Ser agradable significa que la aplicación es placentera de usar. Una experiencia de usuario atractiva puede tener un impacto positivo en el usuario, alentándolo a regresar a la aplicación y aumentando los ingresos del negocio.
 
-![imagen que ilustra consideraciones de UX en IA](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.es.png)
+![imagen que ilustra consideraciones de UX en IA](../../../translated_images/es/uxinai.d5b4ed690f5cefff.webp)
 
 No todos los desafíos pueden resolverse con IA. La IA entra en juego para mejorar tu experiencia de usuario, ya sea automatizando tareas manuales o personalizando experiencias de usuario.
 
@@ -72,25 +72,25 @@ Dos formas de garantizar que la confianza esté en el centro del diseño son la 
 
 Cuando la IA ayuda a informar decisiones como impartir conocimiento a las generaciones futuras, es fundamental que los profesores y padres comprendan cómo se toman las decisiones de la IA. Esto es la explicabilidad: entender cómo las aplicaciones de IA toman decisiones. Diseñar para la explicabilidad incluye agregar detalles que destaquen cómo la IA llegó al resultado. La audiencia debe ser consciente de que el resultado es generado por la IA y no por un humano. Por ejemplo, en lugar de decir "Comienza a chatear con tu tutor ahora", di "Usa un tutor de IA que se adapta a tus necesidades y te ayuda a aprender a tu ritmo."
 
-![una página de inicio de aplicación con una ilustración clara de la explicabilidad en aplicaciones de IA](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.es.png)
+![una página de inicio de aplicación con una ilustración clara de la explicabilidad en aplicaciones de IA](../../../translated_images/es/explanability-in-ai.134426a96b498fbf.webp)
 
 Otro ejemplo es cómo la IA utiliza datos de usuario y personales. Por ejemplo, un usuario con la persona de estudiante puede tener limitaciones basadas en su perfil. La IA puede no ser capaz de revelar respuestas a preguntas, pero puede ayudar a guiar al usuario a pensar cómo puede resolver un problema.
 
-![La IA responde preguntas basándose en el perfil del usuario](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.es.png)
+![La IA responde preguntas basándose en el perfil del usuario](../../../translated_images/es/solving-questions.b7dea1604de0cbd2.webp)
 
 Otra parte clave de la explicabilidad es la simplificación de las explicaciones. Los estudiantes y profesores pueden no ser expertos en IA, por lo tanto, las explicaciones sobre lo que la aplicación puede o no puede hacer deben ser simplificadas y fáciles de entender.
 
-![explicaciones simplificadas sobre las capacidades de la IA](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.es.png)
+![explicaciones simplificadas sobre las capacidades de la IA](../../../translated_images/es/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
 La IA generativa crea una colaboración entre la IA y el usuario, donde, por ejemplo, un usuario puede modificar indicaciones para obtener diferentes resultados. Además, una vez que se genera un resultado, los usuarios deberían poder modificar los resultados, dándoles una sensación de control. Por ejemplo, al usar Bing, puedes personalizar tu indicación según el formato, el tono y la longitud. Además, puedes realizar cambios en tu resultado y modificarlo como se muestra a continuación:
 
-![Resultados de búsqueda en Bing con opciones para modificar la indicación y el resultado](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.es.png)
+![Resultados de búsqueda en Bing con opciones para modificar la indicación y el resultado](../../../translated_images/es/bing1.293ae8527dbe2789.webp)
 
 Otra característica en Bing que permite al usuario tener control sobre la aplicación es la capacidad de optar por participar o no en los datos que utiliza la IA. Para una aplicación escolar, un estudiante podría querer usar sus notas, así como los recursos del profesor como material de revisión.
 
-![Resultados de búsqueda en Bing con opciones para modificar la indicación y el resultado](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.es.png)
+![Resultados de búsqueda en Bing con opciones para modificar la indicación y el resultado](../../../translated_images/es/bing2.309f4845528a88c2.webp)
 
 > Al diseñar aplicaciones de IA, la intencionalidad es clave para garantizar que los usuarios no confíen demasiado, estableciendo expectativas poco realistas sobre sus capacidades. Una forma de hacer esto es creando fricción entre las indicaciones y los resultados. Recordando al usuario que esto es IA y no un ser humano.
 
@@ -102,7 +102,7 @@ Las aplicaciones de IA deben estar diseñadas para recibir y dar feedback. Esto 
 
 Otra forma de manejar esto es comunicar claramente las capacidades y limitaciones del sistema. Cuando un usuario comete un error al solicitar algo más allá de las capacidades de la IA, también debería haber una forma de manejar esto, como se muestra a continuación.
 
-![Dando feedback y manejando errores](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.es.png)
+![Dando feedback y manejando errores](../../../translated_images/es/feedback-loops.7955c134429a9466.webp)
 
 Los errores del sistema son comunes en las aplicaciones donde el usuario podría necesitar asistencia con información fuera del alcance de la IA o la aplicación puede tener un límite en cuántas preguntas/asignaturas puede generar resúmenes. Por ejemplo, una aplicación de IA entrenada con datos sobre asignaturas limitadas, por ejemplo, Historia y Matemáticas, puede no ser capaz de manejar preguntas sobre Geografía. Para mitigar esto, el sistema de IA puede dar una respuesta como: "Lo siento, nuestro producto ha sido entrenado con datos en las siguientes asignaturas..., no puedo responder a la pregunta que hiciste."
 

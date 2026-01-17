@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # שימוש בבינה מלאכותית גנרטיבית באחריות
 
-[![שימוש בבינה מלאכותית גנרטיבית באחריות](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.he.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![שימוש בבינה מלאכותית גנרטיבית באחריות](../../../translated_images/he/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _לחצו על התמונה למעלה לצפייה בסרטון של השיעור_
 
@@ -85,7 +85,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כעת, לאחר שזיהינו את חשיבות הבינה המלאכותית הגנרטיבית האחראית, בואו נבחן 4 צעדים שנוכל לנקוט כדי לבנות את פתרונות הבינה המלאכותית שלנו באחריות:
 
-![מעגל מזעור](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.he.png)
+![מעגל מזעור](../../../translated_images/he/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### מדידת נזקים פוטנציאליים
 
@@ -97,7 +97,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 כעת הגיע הזמן למצוא דרכים שבהן נוכל למנוע או להגביל את הנזק הפוטנציאלי שנגרם על ידי המודל ותשובותיו. ניתן לבחון זאת ב-4 שכבות שונות:
 
-![שכבות מזעור](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.he.png)
+![שכבות מזעור](../../../translated_images/he/mitigation-layers.377215120b9a1159.webp)
 
 - **מודל**. בחירת המודל הנכון לשימוש הנכון. מודלים גדולים ומורכבים יותר כמו GPT-4 יכולים להוות סיכון גבוה יותר לתוכן מזיק כאשר הם מיושמים על שימושים קטנים וספציפיים יותר. שימוש בנתוני האימון שלכם לכיול המודל גם מפחית את הסיכון לתוכן מזיק.
 
