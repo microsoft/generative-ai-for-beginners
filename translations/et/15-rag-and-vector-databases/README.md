@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4b0266fbadbba7ded891b6485adc66d",
-  "translation_date": "2025-10-18T02:52:08+00:00",
+  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+  "translation_date": "2026-01-18T19:41:57+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "et"
 }
 -->
-# Andmete täiendatud genereerimine (RAG) ja vektoriandmebaasid
+# Taastepõhine täiustatud genereerimine (RAG) ja vektorandmebaasid
 
-[![Andmete täiendatud genereerimine (RAG) ja vektoriandmebaasid](../../../translated_images/et/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Taastepõhine täiustatud genereerimine (RAG) ja vektorandmebaasid](../../../../../translated_images/et/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-Otsingurakenduste õppetunnis õppisime lühidalt, kuidas integreerida oma andmeid suurtesse keelemudelitesse (LLM). Selles õppetunnis süveneme rohkem andmete sidumise kontseptsioonidesse LLM-i rakenduses, protsessi mehhanismidesse ja andmete salvestamise meetoditesse, sealhulgas nii sisukirjeldustesse kui ka tekstidesse.
+Otsingurakenduste õppetunnis õppisime lühidalt, kuidas integreerida oma andmeid suurtesse keelemudelitesse (LLM). Selles õppetunnis süveneme andmete sidumisse teie LLM-rakenduses, protsessi mehhaanikasse ja andmete salvestamise meetoditesse, sealhulgas nii manustesse kui tekstidesse.
 
-> **Video tulekul peagi**
+> **Video tuleb peagi**
 
 ## Sissejuhatus
 
@@ -21,79 +21,79 @@ Selles õppetunnis käsitleme järgmist:
 
 - Sissejuhatus RAG-i, mis see on ja miks seda tehisintellektis kasutatakse.
 
-- Arusaamine, mis on vektoriandmebaasid, ja ühe loomine meie rakenduse jaoks.
+- Mõistmine, mis on vektorandmebaasid ja nende loomine meie rakenduse jaoks.
 
-- Praktiline näide, kuidas integreerida RAG rakendusse.
+- Praktiline näide, kuidas RAG-i rakendusse integreerida.
 
 ## Õpieesmärgid
 
-Pärast selle õppetunni läbimist suudad:
+Pärast selle õppetunni läbimist oskad:
 
-- Selgitada RAG-i olulisust andmete otsimisel ja töötlemisel.
+- Selgitada RAG-i tähtsust andmete päringus ja töötlemises.
 
-- Seadistada RAG-i rakendust ja siduda oma andmed LLM-iga.
+- Seadistada RAG-rakendus ja siduda oma andmed LLM-iga.
 
-- Tõhusalt integreerida RAG-i ja vektoriandmebaase LLM-i rakendustesse.
+- Tõhusalt integreerida RAG ja vektorandmebaasid LLM-rakendustesse.
 
-## Meie stsenaarium: LLM-i täiustamine oma andmetega
+## Meie stsenaarium: täiustame meie LLM-e oma andmetega
 
-Selles õppetunnis soovime lisada oma märkmed hariduse idufirmasse, mis võimaldab vestlusrobotil saada rohkem teavet erinevate teemade kohta. Kasutades meie märkmeid, saavad õppijad paremini õppida ja erinevaid teemasid mõista, mis muudab eksamiteks valmistumise lihtsamaks. Stsenaariumi loomiseks kasutame:
+Selle õppetunni jaoks tahame lisada oma märkmed haridusstartupisse, mis võimaldab chatbotil saada rohkem teavet erinevate õppeainete kohta. Kasutades olemasolevaid märkmeid, saavad õppijad paremini õppida ja mõista erinevaid teemasid, mis teeb eksamiteks kordamise lihtsamaks. Stsenaariumi loomiseks kasutame:
 
-- `Azure OpenAI:` LLM-i, mida kasutame vestlusroboti loomiseks
+- `Azure OpenAI:` LLM, mida kasutame oma chatbot'i loomiseks
 
-- `AI algajatele mõeldud õppetund närvivõrkudest:` see on andmestik, millele me oma LLM-i põhistame
+- `AI algajatele õppetund närvivõrkudest:` see saab olema andmed, millele oma LLM-i põhistame
 
-- `Azure AI Search` ja `Azure Cosmos DB:` vektoriandmebaas, kuhu salvestame oma andmed ja loome otsinguindeksi
+- `Azure AI Search` ja `Azure Cosmos DB:` vektorandmebaasid meie andmete salvestamiseks ja otsinguindeksi loomiseks
 
-Kasutajad saavad oma märkmetest luua harjutusteste, kordamiskaarte ja kokkuvõtteid. Alustamiseks vaatame, mis on RAG ja kuidas see töötab:
+Kasutajad saavad oma märkmetest luua harjutusülesandeid, kordamiskaarte ja kokkuvõtteid. Alustame RAG-i mõistmisest ja toimimisest:
 
-## Andmete täiendatud genereerimine (RAG)
+## Taastepõhine täiustatud genereerimine (RAG)
 
-LLM-i poolt juhitud vestlusrobot töötleb kasutaja sisendeid, et genereerida vastuseid. See on loodud interaktiivseks ja suhtleb kasutajatega mitmesugustel teemadel. Kuid selle vastused on piiratud antud konteksti ja algse treeningandmestikuga. Näiteks GPT-4 teadmiste piirang on september 2021, mis tähendab, et tal puuduvad teadmised pärast seda perioodi toimunud sündmustest. Lisaks ei sisalda LLM-i treeningandmestik konfidentsiaalset teavet, nagu isiklikud märkmed või ettevõtte tootekäsiraamat.
+LLM-toega chatbot töötleb kasutajate sisendeid, et genereerida vastuseid. See on loodud interaktiivseks ning suudab suhelda inimestega paljudel erinevatel teemadel. Selle vastused sõltuvad aga ainult kontekstist ja põhikoolitusandmetest. Näiteks GPT-4 teadmiste lõppkuupäev on september 2021, mis tähendab, et tal puudub info selle ajaperioodi järgselt toimunud sündmuste kohta. Lisaks on LLM-ide treeningandmetest välja jäetud konfidentsiaalsed andmed nagu isiklikud märkmed või ettevõtte tootemanuaal.
 
-### Kuidas RAG (Andmete täiendatud genereerimine) töötab
+### Kuidas RAG-id (taastepõhine täiustatud genereerimine) töötavad
 
-![joonis, mis näitab, kuidas RAG töötab](../../../translated_images/et/how-rag-works.f5d0ff63942bd3a6.webp)
+![joonis, mis näitab kuidas RAG-id töötavad](../../../../../translated_images/et/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Oletame, et soovite juurutada vestlusrobotit, mis loob teie märkmetest teste, siis vajate ühendust teadmistebaasiga. Siin tuleb appi RAG. RAG töötab järgmiselt:
+Oletame, et soovid juurutada chatbot’i, mis loob sinu märkmetest viktoriine, vajalik on ühendus teadmistebaasiga. Siin tuleb mängu RAG. RAG-id töötavad järgmiselt:
 
-- **Teadmistebaas:** Enne otsingut tuleb dokumendid sisestada ja eeltöödelda, tavaliselt jagades suured dokumendid väiksemateks osadeks, muutes need tekstisisukirjeldusteks ja salvestades andmebaasi.
+- **Teadmistebaas:** Enne päringut tuleb dokumendid importida ja eeltöödelda, tavaliselt lõhestades suured dokumendid väiksemateks osadeks, teisendades need tekstiliseks manuseks ja salvestades andmebaasi.
 
-- **Kasutaja päring:** Kasutaja esitab küsimuse.
+- **Kasutaja päring:** kasutaja esitab küsimuse
 
-- **Otsing:** Kui kasutaja esitab küsimuse, otsib sisukirjelduste mudel meie teadmistebaasist asjakohast teavet, et pakkuda rohkem konteksti, mis lisatakse sisendile.
+- **Päring:** Kui kasutaja esitab küsimuse, otsib manustamismudel meie teadmistebaasist asjakohast teavet, mida lisatakse vestluse konteksti.
 
-- **Täiendatud genereerimine:** LLM täiustab oma vastust leitud andmete põhjal. See võimaldab genereeritud vastusel põhineda mitte ainult eelnevalt treenitud andmetel, vaid ka lisatud konteksti asjakohasel teabel. Leitud andmeid kasutatakse LLM-i vastuste täiendamiseks. Seejärel tagastab LLM vastuse kasutaja küsimusele.
+- **Täiustatud genereerimine:** LLM täiendab oma vastust päringust saadud olulise teabe põhjal. See võimaldab genereeritud vastusel põhineda mitte ainult eelneval koolitusandmestikul, vaid ka lisatud konteksti asjakohasel informatsioonil. RAG abil tuuakse vastustesse juurde teadmisbaasi infot, mille alusel LLM kasutajale lõpuks vastab.
 
-![joonis, mis näitab RAG arhitektuuri](../../../translated_images/et/encoder-decode.f2658c25d0eadee2.webp)
+![jmnis, mis näitab RAG arhitektuuri](../../../../../translated_images/et/encoder-decode.f2658c25d0eadee2.webp)
 
-RAG-i arhitektuur on rakendatud transformeerijate abil, mis koosnevad kahest osast: kodeerija ja dekodeerija. Näiteks kui kasutaja esitab küsimuse, kodeeritakse sisendtekst vektoriteks, mis hõlmavad sõnade tähendust, ja vektorid dekodeeritakse meie dokumendi indeksisse, et genereerida kasutaja päringu põhjal uus tekst. LLM kasutab nii kodeerija-dekodeerija mudelit, et genereerida väljund.
+RAG arhitektuur on üles ehitatud transformeritele, millel on kaks osa: kodeerija ja dekodeerija. Näiteks kui kasutaja esitab küsimuse, kodeeritakse sisendtekst vektoriteks, mis haaravad sõnade tähenduse ning vektorid dekodeeritakse meie dokumentide indeksisse ja genereeritakse uus tekst kasutajapäringu põhjal. LLM kasutab nii kodeerija kui dekodeerija mudelit väljundi loomiseks.
 
-Kaks lähenemisviisi RAG-i rakendamisel vastavalt ettepanekule: [Andmete täiendatud genereerimine teadmiste intensiivsete NLP (loomuliku keele töötlemise tarkvara) ülesannete jaoks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) on:
+RAG-i rakendamisel on teadusartikli [Retrieval-Augmented Generation for Knowledge intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) kohaselt kaks lähenemist:
 
-- **_RAG-Sequence_** kasutab leitud dokumente, et ennustada parimat võimalikku vastust kasutaja päringule.
+- **_RAG-Sequence_** kasutab päringus leitud dokumente, et ennustada parimat võimalikku vastust kasutaja küsimusele
 
-- **RAG-Token** kasutab dokumente järgmise märgi genereerimiseks ja seejärel otsib neid, et vastata kasutaja päringule.
+- **RAG-Token** kasutab dokumente järgmise sõna (tokeni) genereerimiseks ning seejärel otsib neid uuesti kasutaja päringu jaoks vastuse saamiseks
 
-### Miks kasutada RAG-i?
+### Miks kasutada RAG-e?
 
-- **Teabe rikkus:** tagab, et tekstivastused on ajakohased ja asjakohased. Seega parandab see domeenispetsiifiliste ülesannete täitmist, pääsedes juurde sisemisele teadmistebaasile.
+- **Informatiivsus:** tagab, et tekstivastused on värsked ja ajakohased. Parandab seega spetsiifiliste valdkondade ülesannete täitmist, pöördudes sisemise teadmistebaasi poole.
 
-- Vähendab väljamõeldisi, kasutades **kontrollitavat teavet** teadmistebaasis, et pakkuda konteksti kasutaja päringutele.
+- Vähendab väljamõtlemist, kasutades **kontrollitavat teavet** teadmistebaasis, et pakkuda kasutajate päringutele konteksti.
 
-- See on **kulutõhus**, kuna need on ökonoomsemad võrreldes LLM-i peenhäälestamisega.
+- On **kulutõhus**, sest on odavam kui LLM-i peenhäälestamine.
 
 ## Teadmistebaasi loomine
 
-Meie rakendus põhineb meie isiklikel andmetel, st AI algajate õppekava närvivõrkude õppetunnil.
+Meie rakendus põhineb meie isiklikel andmetel ehk AI algajatele närvivõrkude õppetunnil.
 
-### Vektoriandmebaasid
+### Vektorandmebaasid
 
-Vektoriandmebaas, erinevalt traditsioonilistest andmebaasidest, on spetsialiseerunud andmebaas, mis on loodud sisukirjelduste salvestamiseks, haldamiseks ja otsimiseks. See salvestab dokumentide numbrilisi esitlusi. Andmete jagamine numbrilisteks sisukirjeldusteks muudab meie AI süsteemile andmete mõistmise ja töötlemise lihtsamaks.
+Vektorandmebaas erinevalt traditsioonilistest andmebaasidest on spetsiaalne andmebaas vektorite salvestamiseks, haldamiseks ja otsimiseks. See hoiab dokumentide arvulisi esitlusi. Andmete lagundamine numbrilisteks manusteks teeb meie AI süsteemil andmete mõistmise ja töötlemise lihtsamaks.
 
-Salvestame oma sisukirjeldused vektoriandmebaasidesse, kuna LLM-idel on piirang sisendina aktsepteeritavate märkide arvule. Kuna te ei saa kogu sisukirjeldust LLM-ile edastada, peame need jagama osadeks ja kui kasutaja esitab küsimuse, tagastatakse sisukirjeldused, mis on küsimusega kõige sarnasemad, koos sisendiga. Osadeks jagamine vähendab ka kulusid LLM-i kaudu edastatavate märkide arvu osas.
+Salvestame oma manused vektorandmebaasides, sest LLM-idel on sisendi jaoks tokenite arv piiratud. Kuna me ei saa kogu manustust korraga LLM-ile anda, tuleb see jagada tükkideks ja kui kasutaja esitab päringu, tagastatakse selle küsimusele kõige sarnasemad manused koos promptiga. Jagamine vähendab ka kulusid tokenite arvu pealt.
 
-Mõned populaarsed vektoriandmebaasid on Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Azure Cosmos DB mudeli saab luua Azure CLI abil järgmise käsuga:
+Populaarsed vektorandmebaasid on Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Azure Cosmos DB mudeli saab luua Azure CLI abil järgmise käsuga:
 
 ```bash
 az login
@@ -102,9 +102,9 @@ az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
 az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 ```
 
-### Tekstist sisukirjeldusteni
+### Tekstist manusteks
 
-Enne andmete salvestamist peame need teisendama vektori sisukirjeldusteks, enne kui need andmebaasi salvestatakse. Kui töötate suurte dokumentide või pikkade tekstidega, saate need jagada osadeks vastavalt oodatavatele päringutele. Osadeks jagamine võib toimuda lause tasemel või lõigu tasemel. Kuna osadeks jagamine tuletab tähendusi ümbritsevatest sõnadest, saate osale lisada mõne muu konteksti, näiteks dokumendi pealkirja või lisada osa ette või taha teksti. Andmeid saab osadeks jagada järgmiselt:
+Enne andmete salvestamist peame need teisendama vektormanusteks. Kui töötad suurte dokumentide või pikkade tekstidega, saad need lõhkuda vastavalt päringutele, mida ootad. Jagamine võib toimuda lausetasandil või lõigutasandil. Kuna jagamine tuletab tähenduse sõnade ümber, võid lisada lõikudele ka täiendava konteksti, näiteks dokumendi pealkirja või teksti enne või pärast lõiku. Näiteks võid andmed nii jagada:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -118,70 +118,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # If the last chunk didn't reach the minimum length, add it anyway
+    # Kui viimane tükk ei saavutanud minimaalset pikkust, lisa see siiski
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Kui andmed on osadeks jagatud, saame seejärel teksti sisukirjeldada, kasutades erinevaid sisukirjelduste mudeleid. Mõned mudelid, mida saate kasutada, on: word2vec, ada-002 OpenAI poolt, Azure Computer Vision ja palju muud. Mudeli valik sõltub kasutatavatest keeltest, kodeeritava sisu tüübist (tekst/pildid/audio), sisendi suurusest ja sisukirjelduse väljundi pikkusest.
+Pärast lõikude moodustamist saame teksti kattes manustamismudelitega. Mõned mudelid, mida saad kasutada: word2vec, OpenAI ada-002, Azure Computer Vision ja paljud teised. Mudeli valik sõltub kasutatavatest keeltest, kodeeritava sisu tüübist (tekst/pildid/audio), sisendi mahust ja katte väljundi pikkusest.
 
-Näide sisukirjeldatud tekstist, kasutades OpenAI mudelit `text-embedding-ada-002`:
-![kassi sisukirjeldus](../../../translated_images/et/cat.74cbd7946bc9ca38.webp)
+Näide tekstimanusest OpenAI `text-embedding-ada-002` mudeli abil:
+![kassi sõna manustus](../../../../../translated_images/et/cat.74cbd7946bc9ca38.webp)
 
-## Otsing ja vektorotsing
+## Päringud ja vektorotsing
 
-Kui kasutaja esitab küsimuse, teisendab otsija selle vektoriks, kasutades päringu kodeerijat, seejärel otsib meie dokumendi otsinguindeksist sisendiga seotud vektoreid. Kui see on tehtud, konverteerib see nii sisendvektori kui ka dokumendivektorid tekstiks ja edastab need LLM-ile.
+Kui kasutaja esitab küsimuse, teisendab otsija selle päringukodeerija abil vektoriks, otsib meie dokumentide otsinguindeksist sarnaseid vektoreid. Pärast seda teisendab nii sisendi kui dokumentide vektorid tekstiks ja edastab LLM-ile.
 
-### Otsing
+### Päring
 
-Otsing toimub siis, kui süsteem püüab kiiresti leida indeksist dokumente, mis vastavad otsingukriteeriumidele. Otsija eesmärk on leida dokumendid, mida kasutatakse konteksti pakkumiseks ja LLM-i sidumiseks teie andmetega.
+Päring toimub siis, kui süsteem proovib kiiresti leida indeksi põhjal dokumente, mis vastavad otsingukriteeriumile. Otsija eesmärk on saada dokumente, mida kasutatakse konteksti pakkumiseks ja LLM-i andmetega sidumiseks.
 
-Andmebaasis otsingut saab teha mitmel viisil, näiteks:
+Otsingut saab meie andmebaasis teha mitmel viisil:
 
-- **Märksõnaotsing** - kasutatakse tekstotsinguteks.
+- **Märksõnaotsing** – tekstipõhine otsing
 
-- **Semantiline otsing** - kasutab sõnade semantilist tähendust.
+- **Vektorotsing** – teisendab dokumendid tekstist vektoriesitlusteks, võimaldades **semantilist otsingut** sõnade tähenduse põhjal. Päring toimub dokumentide järgi, mille vektorid on kasutaja küsimusele lähimad.
 
-- **Vektorotsing** - teisendab dokumendid tekstist vektori esitluseks, kasutades sisukirjelduste mudeleid. Otsing tehakse dokumentide päringuga, mille vektori esitlused on kasutaja küsimusele kõige lähemal.
+- **Hübriid** – märksõna- ja vektorotsingu kombinatsioon.
 
-- **Hübriid** - märksõna- ja vektorotsingu kombinatsioon.
+Väljakutse on siis, kui andmebaasis pole päringule sarnast vastust. Sel juhul tagastab süsteem parima saadaoleva vastuse, kuid võid kasutada meetodeid nagu asjakohasuse maksimaalse kauguse seadistamine või hübriidotsing, mis ühendab mõlemad otsingutüübid. Selles tunnis kasutame hübriidotsingut, mis ühendab nii vektori- kui märksõnaotsingu. Salvestame andmed andmeraamatusse, mille veerud sisaldavad nii lõike kui manuseid.
 
-Otsinguga kaasneb väljakutse, kui andmebaasis pole päringule sarnast vastust, siis tagastab süsteem parima saadaval oleva teabe. Siiski saate kasutada taktikaid, nagu määrata maksimaalne kaugus asjakohasuse jaoks või kasutada hübriidotsingut, mis kombineerib nii märksõna- kui ka vektorotsingut. Selles õppetunnis kasutame hübriidotsingut, mis ühendab nii vektori- kui ka märksõnaotsingu. Salvestame oma andmed andmeraamistikku, mille veerud sisaldavad osasid ja sisukirjeldusi.
+### Vektorsarnasus
 
-### Vektori sarnasus
+Otsija otsib teadmistebaasist manuseid, mis asuvad teineteisele lähedal, s.t lähimad naabrid, mis näitavad sarnaseid tekste. Kui kasutaja esitab päringu, manustatakse see esmalt ja leitakse sarnased manused. Levim kõnekeeles kasutatav mõõdupuu sarnasuse hindamiseks on kosiinussarnasus, mis põhineb kahe vektori vahelisel nurgal.
 
-Otsija otsib teadmistebaasist sisukirjeldusi, mis on üksteisele lähedal, lähim naaber, kuna need on tekstid, mis on sarnased. Kui kasutaja esitab päringu, sisukirjeldatakse see esmalt ja seejärel sobitatakse sarnaste sisukirjeldustega. Üldine mõõt, mida kasutatakse erinevate vektorite sarnasuse leidmiseks, on kosinuse sarnasus, mis põhineb kahe vektori vahelisel nurgal.
-
-Sarnasuse mõõtmiseks võib kasutada ka alternatiive, nagu Eukleidese kaugus, mis on sirgjoon vektori otspunktide vahel, ja punktkorrutis, mis mõõdab kahe vektori vastavate elementide korrutiste summat.
+Sarnasust saab mõõta ka alternatiivide abil, nagu Eukleidese kaugus (otsejoon kahe vektori otspunktide vahel) ja punktitoodang (kahe vektori vastavate elementide korrutiste summa).
 
 ### Otsinguindeks
 
-Otsingu tegemisel peame looma oma teadmistebaasi jaoks otsinguindeksi, enne kui otsingut teostame. Indeks salvestab meie sisukirjeldused ja suudab kiiresti leida kõige sarnasemaid osasid isegi suures andmebaasis. Indeksi saame luua lokaalselt, kasutades:
+Päringu teostamiseks tuleb teadmistebaasile luua otsinguindeks. Indeks salvestab manused ja võimaldab isegi suures andmebaasis kiiresti leida kõige sarnasemaid lõike. Indeksi saab luua lokaalselt:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Create the search index
+# Loo otsinguisindeks
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# To query the index, you can use the kneighbors method
+# Indeksi päringuks võite kasutada meetodit kneighbors
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Tulemuste järjestamine
+### Ümberjärjestamine
 
-Kui olete andmebaasi päringu teinud, võib olla vajalik tulemuste sorteerimine kõige asjakohasemate järgi. Järjestamise LLM kasutab masinõpet, et parandada otsingutulemuste asjakohasust, järjestades need kõige asjakohasemate järgi. Kasutades Azure AI Search'i, tehakse järjestamine automaatselt semantilise järjestaja abil. Näide, kuidas järjestamine töötab lähimate naabrite abil:
+Pärast päringu tegemist võib olla vaja tulemusi sorteerida asjakohasuse järgi. Ümberjärjestav LLM kasutab masinõpet, et parandada otsingutulemuste asjakohasust, järjestades need asjakohasuse järgi. Azure AI Search kasutab seda protsessi automaatselt semantilise ümberjärjestajaga. Näide sellest, kuidas ümberjärjestamine töötab lähim naaber meetodi abil:
 
 ```python
-# Find the most similar documents
+# Leia kõige sarnasemad dokumendid
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Print the most similar documents
+# Trüki välja kõige sarnasemad dokumendid
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -192,35 +190,35 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Kõik kokku viimine
+## Kõik kokku
 
-Viimane samm on LLM-i lisamine, et saada vastuseid, mis põhinevad meie andmetel. Seda saab rakendada järgmiselt:
+Viimane samm on lisada LLM, et saada vastuseid, mis põhinevad meie andmetel. Rakendame selle järgmiselt:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Convert the question to a query vector
+    # Muuda küsimus päringuvektoriks
     query_vector = create_embeddings(user_input)
 
-    # Find the most similar documents
+    # Leia kõige sarnasemad dokumendid
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # add documents to query  to provide context
+    # lisa dokumendid päringule konteksti pakkumiseks
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # combine the history and the user input
+    # ühenda ajalugu ja kasutaja sisend
     history.append(user_input)
 
-    # create a message object
+    # loo sõnumi objekt
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # use chat completion to generate a response
+    # kasuta vestluse lõpetamist vastuse genereerimiseks
     response = openai.chat.completions.create(
         model="gpt-4",
         temperature=0.7,
@@ -233,49 +231,51 @@ def chatbot(user_input):
 chatbot(user_input)
 ```
 
-## Meie rakenduse hindamine
+## Rakenduse hindamine
 
 ### Hindamiskriteeriumid
 
-- Esitatud vastuste kvaliteet, tagades, et need kõlavad loomulikult, sujuvalt ja inimlikult.
+- Vastuste kvaliteet: veenduda, et kõlaks loomulikult, sujuvalt ja inimlikult
 
-- Andmete sidusus: hinnates, kas vastus pärineb esitatud dokumentidest.
+- Andmete sidusus: hinnata, kas vastus pärineb esitatud dokumentidest
 
-- Asjakohasus: hinnates, kas vastus vastab ja on seotud esitatud küsimusega.
+- Asjakohasus: kontrollida, kas vastus on seotud esitatud küsimusega
 
-- Sujuvus - kas vastus on grammatiliselt arusaadav.
+- Sujuvus – kas vastus on grammatiliselt mõistlik
 
-## RAG-i (Andmete täiendatud genereerimine) ja vektoriandmebaaside kasutusvõimalused
+## RAG (taastepõhine täiustatud genereerimine) ja vektorandmebaaside kasutusvõimalused
 
-Funktsioonikõned võivad teie rakendust mitmel viisil täiustada, näiteks:
+RAG funktsionaalsus võib parandada sinu rakendust mitmel moel:
 
-- Küsimuste ja vastuste süsteemid: oma ettevõtte andmete sidumine vestlusega, mida töötajad saavad kasutada küsimuste esitamiseks.
+- Küsimuste ja vastuste süsteemid: oma ettevõtte andmete sidumine chatbot-iga, mida töötajad saavad kasutada küsimuste esitamiseks.
 
-- Soovitussüsteemid: süsteemi loomine, mis sobitab kõige sarnasemad väärtused, näiteks filmid, restoranid ja palju muud.
+- Soovitussüsteemid: süsteemi loomine, mis leiab kõige sarnasemad väärtused, nt filmid, restoranid jpm.
 
-- Vestlusrobotite teenused: saate salvestada vestluste ajalugu ja isikupärastada vestlust kasutaja andmete põhjal.
+- Chatboti teenused: vestlusajaloo salvestamine ja vestluse isikupärastamine kasutajaandmete põhjal.
 
-- Pildiotsing vektori sisukirjelduste põhjal, kasulik pildituvastuses ja anomaaliate tuvastamises.
+- Põhineb vektormanustel pildiotsing, kasulik pildituvastuses ja anomaaliate avastamisel.
 
 ## Kokkuvõte
 
-Oleme käsitlenud RAG-i põhivaldkondi, alates andmete lisamisest rakendusse kuni kasutaja päringu ja väljundini. RAG-i loomise lihtsustamiseks saate kasutada selliseid raamistikke nagu Semantic Kernel, Langchain või Autogen.
+Käsitlesime RAG-i põhitõdesid, kuidas lisada andmeid rakendusse, kasutaja päringut ja väljundit. RAG-i loomise lihtsustamiseks võid kasutada raamistikke nagu Semantic Kernel, Langchain või Autogen.
 
-## Ülesanne
+## Kodutöö
 
-Jätkake oma õppimist andmete täiendatud genereerimise (RAG) teemal, luues:
+Jätkamaks oma teadmiste arendamist Retrieval Augmented Generation (RAG) valdkonnas, võid ehitada:
 
-- Looge rakenduse esikülg, kasutades endale sobivat raamistikku.
+- Rakenduse kasutajaliidese raamistiku abil, mida ise valid
 
-- Kasutage raamistikku, kas LangChain või Semantic Kernel, ja looge oma rakendus uuesti.
+- Kasutada raamistikku, näiteks LangChain või Semantic Kernel, ning taasluua oma rakendus
 
 Palju õnne õppetunni lõpetamise puhul 👏.
 
-## Õppimine ei lõpe siin, jätkake teekonda
+## Õppimine siin ei lõpe, jätka teekonda
 
-Pärast selle õppetunni lõpetamist vaadake meie [Generatiivse tehisintellekti õppekollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse tehisintellekti teadmiste arendamist!
+Pärast selle õppetunni lõpetamist vaata meie [Generative AI õppimiskogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata generatiivse tehisintellekti teadmiste tõstmist!
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algkeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta arusaamatuste või valesti tõlgenduste eest, mis võivad tekkida selle tõlke kasutamise tõttu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tõlke täpsust tagada, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles on ametlik ja autoriteetne allikas. Olulise info puhul soovitatakse kasutada professionaalse inimtõlke teenust. Me ei vastuta ühegi arusaamatuse või valesti tõlgendamise eest, mis võib sellest tõlkest tekkida.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
