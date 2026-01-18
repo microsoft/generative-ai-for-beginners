@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Düşük Kodlu Yapay Zeka Uygulamaları Oluşturma
 
-[![Düşük Kodlu Yapay Zeka Uygulamaları Oluşturma](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.tr.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Düşük Kodlu Yapay Zeka Uygulamaları Oluşturma](../../../translated_images/tr/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
@@ -92,17 +92,17 @@ Uygulamayı Power Apps'te Copilot kullanarak aşağıdaki adımları izleyerek o
 
 1. Ana ekrandaki metin alanını kullanarak oluşturmak istediğiniz uygulamayı tanımlayın. Örneğin, **_Öğrenci ödevlerini takip etmek ve yönetmek için bir uygulama oluşturmak istiyorum_**. İstemi yapay zeka Copilot'a göndermek için **Gönder** düğmesine tıklayın.
 
-![Oluşturmak istediğiniz uygulamayı tanımlayın](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.tr.png)
+![Oluşturmak istediğiniz uygulamayı tanımlayın](../../../translated_images/tr/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Yapay zeka Copilot, takip etmek istediğiniz verileri depolamak için ihtiyaç duyduğunuz alanlarla bir Dataverse Tablosu ve bazı örnek veriler önerir. Daha sonra bu tabloyu, AI Copilot asistan özelliğini kullanarak konuşma adımlarıyla ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
    > **Önemli**: Dataverse, Power Platform'un temel veri platformudur. Uygulamanın verilerini depolamak için düşük kodlu bir veri platformudur. Microsoft Bulut'ta verileri güvenli bir şekilde depolayan ve Power Platform ortamınızda sağlanan tamamen yönetilen bir hizmettir. Veri sınıflandırması, veri kökeni, ince ayarlı erişim kontrolü ve daha fazlası gibi yerleşik veri yönetimi yetenekleriyle birlikte gelir. Dataverse hakkında daha fazla bilgi edinebilirsiniz [buradan](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Yeni tablonuzdaki önerilen alanlar](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.tr.png)
+   ![Yeni tablonuzdaki önerilen alanlar](../../../translated_images/tr/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Eğitimciler, ödevlerini gönderen öğrencilere ödevlerinin ilerleyişi hakkında bilgi vermek için e-posta göndermek istiyor. Tabloya öğrenci e-posta adresini depolamak için yeni bir alan eklemek üzere Copilot'u kullanabilirsiniz. Örneğin, tabloya yeni bir alan eklemek için şu istemi kullanabilirsiniz: **_Öğrenci e-posta adresini depolamak için bir sütun eklemek istiyorum_**. İstemi yapay zeka Copilot'a göndermek için **Gönder** düğmesine tıklayın.
 
-![Yeni bir alan ekleme](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.tr.png)
+![Yeni bir alan ekleme](../../../translated_images/tr/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Yapay zeka Copilot yeni bir alan oluşturacak ve daha sonra bu alanı ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
@@ -112,7 +112,7 @@ Uygulamayı Power Apps'te Copilot kullanarak aşağıdaki adımları izleyerek o
 
 1. Eğitimcilerin öğrencilere e-posta göndermesi için uygulamaya yeni bir ekran eklemek üzere Copilot'u kullanabilirsiniz. Örneğin, uygulamaya yeni bir ekran eklemek için şu istemi kullanabilirsiniz: **_Öğrencilere e-posta göndermek için bir ekran eklemek istiyorum_**. İstemi yapay zeka Copilot'a göndermek için **Gönder** düğmesine tıklayın.
 
-![Bir istem talimatı ile yeni bir ekran ekleme](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.tr.png)
+![Bir istem talimatı ile yeni bir ekran ekleme](../../../translated_images/tr/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. Yapay zeka Copilot yeni bir ekran oluşturacak ve daha sonra bu ekranı ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
@@ -147,15 +147,15 @@ Copilot kullanarak Dataverse'de bir tablo oluşturmak için aşağıdaki adımla
 
 2. Sol navigasyon çubuğunda **Tablolar** seçeneğini seçin ve ardından **Yeni Tabloyu Tanımla** seçeneğine tıklayın.
 
-![Yeni tabloyu seçin](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.tr.png)
+![Yeni tabloyu seçin](../../../translated_images/tr/describe-new-table.0792373eb757281e.webp)
 
 3. **Yeni Tabloyu Tanımla** ekranında, oluşturmak istediğiniz tabloyu açıklamak için metin alanını kullanın. Örneğin, **_Fatura bilgilerini depolamak için bir tablo oluşturmak istiyorum_** yazabilirsiniz. AI Copilot'a isteği göndermek için **Gönder** düğmesine tıklayın.
 
-![Tabloyu tanımlayın](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.tr.png)
+![Tabloyu tanımlayın](../../../translated_images/tr/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot, izlemek istediğiniz verileri depolamak için gerekli alanlarla bir Dataverse Tablosu önerir ve bazı örnek veriler sağlar. Daha sonra AI Copilot asistan özelliğini kullanarak tabloyu konuşma adımlarıyla ihtiyaçlarınıza göre özelleştirebilirsiniz.
 
-![Önerilen Dataverse tablosu](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.tr.png)
+![Önerilen Dataverse tablosu](../../../translated_images/tr/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Finans ekibi, faturalarının mevcut durumu hakkında tedarikçiye e-posta göndermek istiyor. Tabloya tedarikçi e-posta adresini depolamak için yeni bir alan eklemek üzere Copilot'u kullanabilirsiniz. Örneğin, şu isteği kullanabilirsiniz: **_Tedarikçi e-posta adresini depolamak için bir sütun eklemek istiyorum_**. AI Copilot'a isteği göndermek için **Gönder** düğmesine tıklayın.
 
@@ -184,7 +184,7 @@ Power Platform'da mevcut olan bazı Hazır AI Modelleri şunlardır:
 
 Özel AI Modelleri ile kendi modelinizi AI Builder'a getirebilir ve bu modelin herhangi bir AI Builder özel modeli gibi çalışmasını sağlayabilirsiniz. Modeli kendi verilerinizle eğiterek kullanabilirsiniz. Bu modelleri hem Power Apps hem de Power Automate'de süreçleri otomatikleştirmek ve sonuçları tahmin etmek için kullanabilirsiniz. Kendi modelinizi kullanırken geçerli olan sınırlamalar vardır. Bu sınırlamalar hakkında daha fazla bilgi için [buraya](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst) göz atabilirsiniz.
 
-![AI builder modelleri](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.tr.png)
+![AI builder modelleri](../../../translated_images/tr/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Görev #2 - Girişimimiz için Fatura İşleme Akışı Oluşturun
 
@@ -198,7 +198,7 @@ AI Builder'daki Fatura İşleme AI Modelini kullanarak finans ekibinin faturalar
 
 2. Ana ekrandaki metin alanını kullanarak oluşturmak istediğiniz iş akışını açıklayın. Örneğin, **_Posta kutuma bir fatura geldiğinde işle_** yazabilirsiniz. AI Copilot'a isteği göndermek için **Gönder** düğmesine tıklayın.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.tr.png)
+   ![Copilot power automate](../../../translated_images/tr/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot, otomatikleştirmek istediğiniz görevi gerçekleştirmek için gereken adımları önerecektir. Sonraki adımları görmek için **İleri** düğmesine tıklayabilirsiniz.
 
@@ -212,7 +212,7 @@ AI Builder'daki Fatura İşleme AI Modelini kullanarak finans ekibinin faturalar
 
 8. Akıştan **Koşul** eylemini kaldırın çünkü bunu kullanmayacaksınız. Şu ekran görüntüsüne benzemelidir:
 
-   ![power automate, eylemleri kaldır](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.tr.png)
+   ![power automate, eylemleri kaldır](../../../translated_images/tr/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. **Bir eylem ekle** düğmesine tıklayın ve **Dataverse** arayın. **Yeni bir satır ekle** eylemini seçin.
 
@@ -227,7 +227,7 @@ AI Builder'daki Fatura İşleme AI Modelini kullanarak finans ekibinin faturalar
     - Durum - **Durum**u **Beklemede** olarak ayarlayın.
     - Tedarikçi E-posta - **Yeni bir e-posta geldiğinde** tetikleyicisinden **Kimden** dinamik içeriğini kullanın.
 
-    ![power automate satır ekle](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.tr.png)
+    ![power automate satır ekle](../../../translated_images/tr/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Akışı tamamladıktan sonra, **Kaydet** düğmesine tıklayarak akışı kaydedin. Daha sonra tetikleyicide belirttiğiniz klasöre bir fatura içeren e-posta göndererek akışı test edebilirsiniz.
 
@@ -241,7 +241,7 @@ GPT modelleri, büyük miktarda veri üzerinde kapsamlı bir şekilde eğitilir 
 
 Örneğin, e-postaların taslaklarını, ürün açıklamalarını ve daha fazlasını otomatik olarak oluşturmak için akışlar oluşturabilirsiniz. Ayrıca, müşteri hizmetleri temsilcilerinin müşteri taleplerine etkili ve verimli bir şekilde yanıt vermesini sağlayan sohbet robotları ve müşteri hizmetleri uygulamaları gibi çeşitli uygulamalar için metin oluşturmak amacıyla modeli kullanabilirsiniz.
 
-![bir istem oluştur](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.tr.png)
+![bir istem oluştur](../../../translated_images/tr/create-prompt-gpt.69d429300c2e870a.webp)
 
 Bu AI Modelini Power Automate'de nasıl kullanacağınızı öğrenmek için [AI Builder ve GPT ile Zeka Ekleyin](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modülünü inceleyin.
 

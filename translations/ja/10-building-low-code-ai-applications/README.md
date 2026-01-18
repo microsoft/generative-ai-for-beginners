@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ローコードAIアプリケーションの構築
 
-[![ローコードAIアプリケーションの構築](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.ja.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![ローコードAIアプリケーションの構築](../../../translated_images/ja/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(上の画像をクリックして、このレッスンのビデオをご覧ください)_
 
@@ -92,17 +92,17 @@ Copilotの使用を開始する際には、[Power Platform Copilot Prompt Librar
 
 1. ホーム画面のテキストエリアを使用して、構築したいアプリを説明します。例えば、**_学生の課題を追跡・管理するアプリを構築したい_**と入力します。**送信**ボタンをクリックして、プロンプトをAI Copilotに送信します。
 
-![構築したいアプリを説明する](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.ja.png)
+![構築したいアプリを説明する](../../../translated_images/ja/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilotは、追跡したいデータを保存するために必要なフィールドを含むDataverseテーブルとサンプルデータを提案します。その後、会話型のステップを通じてAI Copilotアシスタント機能を使用してテーブルをカスタマイズできます。
 
    > **重要**: DataverseはPower Platformの基盤となるデータプラットフォームです。これは、アプリのデータを保存するためのローコードデータプラットフォームであり、Microsoft Cloud内で安全にデータを保存する完全管理型サービスです。データ分類、データの系統、きめ細かいアクセス制御などの組み込みのデータガバナンス機能を備えています。Dataverseの詳細については[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)をご覧ください。
 
-   ![新しいテーブルの提案されたフィールド](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.ja.png)
+   ![新しいテーブルの提案されたフィールド](../../../translated_images/ja/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. 教育者は、課題を提出した学生に進捗状況を知らせるためにメールを送信したいと考えています。テーブルに学生のメールアドレスを保存する新しいフィールドを追加するためにCopilotを使用できます。例えば、次のプロンプトを使用してテーブルに新しいフィールドを追加できます：**_学生のメールアドレスを保存する列を追加したい_**。**送信**ボタンをクリックして、プロンプトをAI Copilotに送信します。
 
-![新しいフィールドを追加する](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.ja.png)
+![新しいフィールドを追加する](../../../translated_images/ja/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilotは新しいフィールドを生成し、その後ニーズに合わせてフィールドをカスタマイズできます。
 
@@ -112,7 +112,7 @@ Copilotの使用を開始する際には、[Power Platform Copilot Prompt Librar
 
 1. 教育者が学生にメールを送信できるようにするために、Copilotを使用してアプリに新しい画面を追加できます。例えば、次のプロンプトを使用してアプリに新しい画面を追加できます：**_学生にメールを送信する画面を追加したい_**。**送信**ボタンをクリックして、プロンプトをAI Copilotに送信します。
 
-![プロンプト指示を使用して新しい画面を追加する](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.ja.png)
+![プロンプト指示を使用して新しい画面を追加する](../../../translated_images/ja/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilotは新しい画面を生成し、その後ニーズに合わせて画面をカスタマイズできます。
 
@@ -147,15 +147,15 @@ Copilotを使用してDataverseでテーブルを作成するには、以下の�
 
 2. 左側のナビゲーションバーで**Tables**を選択し、**Describe the new Table**をクリックします。
 
-![新しいテーブルを選択](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.ja.png)
+![新しいテーブルを選択](../../../translated_images/ja/describe-new-table.0792373eb757281e.webp)
 
 3. **Describe the new Table**画面で、作成したいテーブルを説明するテキストを入力します。例えば、**_請求書情報を保存するテーブルを作成したい_**と入力します。**Send**ボタンをクリックして、AI Copilotにプロンプトを送信します。
 
-![テーブルを説明](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.ja.png)
+![テーブルを説明](../../../translated_images/ja/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilotは、追跡したいデータを保存するために必要なフィールドを含むDataverseテーブルを提案し、サンプルデータも提供します。その後、会話形式のステップを通じてAI Copilotアシスタント機能を使用してテーブルをカスタマイズできます。
 
-![提案されたDataverseテーブル](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.ja.png)
+![提案されたDataverseテーブル](../../../translated_images/ja/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. 財務チームは、請求書の現在の状況をサプライヤーに更新するためのメールを送信したいと考えています。Copilotを使用して、サプライヤーのメールアドレスを保存する新しいフィールドをテーブルに追加できます。例えば、次のプロンプトを使用してテーブルに新しいフィールドを追加できます：**_サプライヤーのメールアドレスを保存する列を追加したい_**。**Send**ボタンをクリックして、AI Copilotにプロンプトを送信します。
 
@@ -184,7 +184,7 @@ Power Platformで利用可能な事前構築AIモデルには以下のものが�
 
 カスタムAIモデルを使用すると、独自のモデルをAI Builderに持ち込むことができ、AI Builderのカスタムモデルとして機能します。これにより、独自のデータを使用してモデルをトレーニングできます。これらのモデルを使用して、Power AppsやPower Automateでプロセスを自動化し、結果を予測できます。ただし、独自のモデルを使用する際には制限が適用されます。これらの[制限](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)について詳しく読むことができます。
 
-![AI Builderモデル](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.ja.png)
+![AI Builderモデル](../../../translated_images/ja/ai-builder-models.8069423b84cfc47f.webp)
 
 ## 課題 #2 - スタートアップのための請求書処理フローを構築する
 
@@ -198,7 +198,7 @@ AI Builderとは何か、そしてなぜそれを使用するべきなのかを�
 
 2. ホーム画面のテキストエリアを使用して、構築したいワークフローを説明します。例えば、**_メールボックスに請求書が届いたら処理する_**と入力します。**Send**ボタンをクリックして、AI Copilotにプロンプトを送信します。
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.ja.png)
+   ![Copilot Power Automate](../../../translated_images/ja/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilotは、あなたが自動化したいタスクを実行するために必要なアクションを提案します。**Next**ボタンをクリックして次のステップに進みます。
 
@@ -212,7 +212,7 @@ AI Builderとは何か、そしてなぜそれを使用するべきなのかを�
 
 8. フローから**Condition**アクションを削除します。フローは以下のスクリーンショットのようになります：
 
-   ![Power Automate、アクションを削除](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.ja.png)
+   ![Power Automate、アクションを削除](../../../translated_images/ja/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. **Add an action**ボタンをクリックし、**Dataverse**を検索します。**Add a new row**アクションを選択します。
 
@@ -227,7 +227,7 @@ AI Builderとは何か、そしてなぜそれを使用するべきなのかを�
     - Status - **Status**を**Pending**に設定します。
     - Supplier Email - **When a new email arrives**トリガーの**From**動的コンテンツを使用します。
 
-    ![Power Automate行を追加](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.ja.png)
+    ![Power Automate行を追加](../../../translated_images/ja/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. フローが完成したら、**Save**ボタンをクリックしてフローを保存します。その後、指定したトリガーのフォルダに請求書付きのメールを送信してフローをテストできます。
 
@@ -241,7 +241,7 @@ GPTモデルは膨大なデータで徹底的にトレーニングされてお�
 
 例えば、以下のような用途でテキストを自動生成するフローを構築できます：メールの下書き、製品説明など。また、チャットボットやカスタマーサービスアプリなどのアプリでモデルを使用して、カスタマーサービス担当者が顧客の問い合わせに効果的かつ効率的に対応できるようにすることもできます。
 
-![プロンプトを作成](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.ja.png)
+![プロンプトを作成](../../../translated_images/ja/create-prompt-gpt.69d429300c2e870a.webp)
 
 このAIモデルをPower Automateで使用する方法については、[AI BuilderとGPTでインテリジェンスを追加する](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko)モジュールを参照してください。
 

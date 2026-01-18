@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "my"
 }
 -->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.my.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/my/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # သင့်ရဲ့ LLM ကို Fine-Tuning လုပ်ခြင်း
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ဒီသင်ခန်းစာမှာ ဘာတွေကို လေ့လာရမယ်ဆိုတာကို စတင်မတိုင်ခင် ကြိုသိချင်ပါသလား? Fine-Tuning ရဲ့ အဓိကအကြောင်းအရာများနှင့် အဓိကအကြောင်းရင်းများကို လေ့လာခြင်းမှ Fine-Tuning လုပ်ငန်းစဉ်နှင့် အကောင်းဆုံးအကဲဖြတ်မှုများကို နားလည်ခြင်းအထိ ရှင်းလင်းသောလမ်းညွှန်ကို ကြည့်ရှုပါ။ ဒီအကြောင်းအရာက စိတ်ဝင်စားဖွယ်ကောင်းတဲ့အရာဖြစ်လို့ [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) စာမျက်နှာကိုလည်း မမေ့ပဲ ကြည့်ရှုပါ။
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.my.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/my/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ဘာသာစကားမော်ဒယ်များအတွက် Fine-Tuning ဆိုတာဘာလဲ?
 

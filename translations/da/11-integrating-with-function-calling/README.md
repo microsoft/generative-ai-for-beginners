@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Integration med funktionskald
 
-[![Integration med funktionskald](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.da.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integration med funktionskald](../../../translated_images/da/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Du har allerede lært en del i de tidligere lektioner. Men vi kan stadig forbedre os. Nogle ting, vi kan tage fat på, er hvordan vi kan få et mere konsistent svarformat, så det bliver lettere at arbejde med svaret senere. Derudover kunne vi ønske at tilføje data fra andre kilder for at berige vores applikation yderligere.
 
@@ -179,7 +179,7 @@ Nu kan vi sende begge anmodninger til LLM og undersøge det svar, vi modtager, v
 
 Så hvordan løser vi problemet med formatering? Ved at bruge funktionskald kan vi sikre, at vi modtager strukturerede data tilbage. Når vi bruger funktionskald, kalder eller kører LLM faktisk ikke nogen funktioner. I stedet opretter vi en struktur, som LLM skal følge for sine svar. Vi bruger derefter disse strukturerede svar til at vide, hvilken funktion der skal køres i vores applikationer.
 
-![funktionsflow](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.da.png)
+![funktionsflow](../../../translated_images/da/Function-Flow.083875364af4f4bb.webp)
 
 Vi kan derefter tage det, der returneres fra funktionen, og sende det tilbage til LLM. LLM vil derefter svare ved hjælp af naturligt sprog for at besvare brugerens forespørgsel.
 
@@ -201,7 +201,7 @@ Processen med at oprette et funktionskald inkluderer 3 hovedtrin:
 2. **Læser** modellens svar for at udføre en handling, dvs. udføre en funktion eller API-anmodning.
 3. **Laver** endnu et kald til Chat Completions API med svaret fra din funktion for at bruge disse oplysninger til at skabe et svar til brugeren.
 
-![LLM Flow](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.da.png)
+![LLM Flow](../../../translated_images/da/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Trin 1 - oprettelse af beskeder
 

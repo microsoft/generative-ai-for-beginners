@@ -33,7 +33,7 @@ SLMs are trained on large amounts of text data. During training, they learn lang
 
 SLMs have been developed to meet the growing need for models that can run in resource-limited environments, like mobile devices or edge computing platforms, where full-scale LLMs are often too demanding. By focusing on efficiency, SLMs strike a balance between performance and accessibility, enabling wider use across different fields.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.en.png)
+![slm](../../../translated_images/en/slm.4058842744d0444a.webp)
 
 ## Learning Objectives  
 
@@ -135,7 +135,7 @@ We can use the Phi-3/3.5 Family models in different scenarios. Unlike LLMs, you 
 
 We aim to use Phi-3/3.5 in various scenarios. Next, we will explore using Phi-3/3.5 based on different use cases.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.en.png)
+![phi3](../../../translated_images/en/phi3.655208c3186ae381.webp)
 
 ### Inference Differences: Cloud API  
 
@@ -145,9 +145,9 @@ GitHub Models is the most direct way. You can quickly access the Phi-3/3.5-Instr
 
 - Demo: Comparison of Phi-3-mini and Phi-3.5-mini performance in Chinese scenarios
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.en.png)
+![phi3](../../../translated_images/en/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.en.png)
+![phi35](../../../translated_images/en/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 

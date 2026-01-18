@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Rakentaminen vähäkoodisia tekoälysovelluksia
 
-[![Rakentaminen vähäkoodisia tekoälysovelluksia](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.fi.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Rakentaminen vähäkoodisia tekoälysovelluksia](../../../translated_images/fi/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
@@ -92,17 +92,17 @@ Rakennat sovelluksen Copilotin avulla Power Appsissa seuraamalla alla olevia vai
 
 1. Käytä aloitusnäytön tekstikenttää kuvaamaan sovellusta, jonka haluat rakentaa. Esimerkiksi **_Haluan rakentaa sovelluksen opiskelijatehtävien seuraamiseen ja hallintaan_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen tekoäly-Copilotille.
 
-![Kuvaile sovellus, jonka haluat rakentaa](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.fi.png)
+![Kuvaile sovellus, jonka haluat rakentaa](../../../translated_images/fi/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Tekoäly-Copilot ehdottaa Dataverse-taulukkoa, jossa on tarvittavat kentät tietojen tallentamiseen ja joitakin esimerkkitietoja. Voit sen jälkeen mukauttaa taulukkoa tarpeidesi mukaan käyttämällä tekoäly-Copilotin avustajatoimintoa keskusteluvaiheiden kautta.
 
    > **Tärkeää**: Dataverse on Power Platformin taustalla oleva tietojen tallennusalusta. Se on vähäkoodinen tietojen tallennusalusta sovelluksen tietojen tallentamiseen. Se on täysin hallinnoitu palvelu, joka tallentaa tiedot turvallisesti Microsoftin pilveen ja otetaan käyttöön Power Platform -ympäristössäsi. Siinä on sisäänrakennetut tietojen hallintatoiminnot, kuten tietojen luokittelu, tietojen alkuperä, hienojakoiset käyttöoikeudet ja paljon muuta. Voit oppia lisää Dataversestä [täältä](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Ehdotetut kentät uudessa taulukossasi](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.fi.png)
+   ![Ehdotetut kentät uudessa taulukossasi](../../../translated_images/fi/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Opettajat haluavat lähettää sähköposteja opiskelijoille, jotka ovat palauttaneet tehtävänsä, pitääkseen heidät ajan tasalla tehtäviensä etenemisestä. Voit käyttää Copilotia lisätäksesi uuden kentän taulukkoon opiskelijan sähköpostin tallentamista varten. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden kentän taulukkoon: **_Haluan lisätä sarakkeen opiskelijan sähköpostin tallentamista varten_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen tekoäly-Copilotille.
 
-![Uuden kentän lisääminen](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.fi.png)
+![Uuden kentän lisääminen](../../../translated_images/fi/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Tekoäly-Copilot luo uuden kentän, ja voit sen jälkeen mukauttaa kenttää tarpeidesi mukaan.
 
@@ -112,7 +112,7 @@ Rakennat sovelluksen Copilotin avulla Power Appsissa seuraamalla alla olevia vai
 
 1. Jotta opettajat voivat lähettää sähköposteja opiskelijoille, voit käyttää Copilotia lisätäksesi uuden näytön sovellukseen. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden näytön sovellukseen: **_Haluan lisätä näytön sähköpostien lähettämiseksi opiskelijoille_**. Klikkaa **Lähetä**-painiketta lähettääksesi kehotteen tekoäly-Copilotille.
 
-![Uuden näytön lisääminen kehotteen avulla](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.fi.png)
+![Uuden näytön lisääminen kehotteen avulla](../../../translated_images/fi/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. Tekoäly-Copilot luo uuden näytön, ja voit sen jälkeen mukauttaa näyttöä tarpeidesi mukaan.
 
@@ -147,15 +147,15 @@ Taulukon luominen Dataversessa Copilotin avulla:
 
 2. Valitse vasemman navigointipalkin **Tables** ja napsauta **Describe the new Table**.
 
-![Valitse uusi taulukko](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.fi.png)
+![Valitse uusi taulukko](../../../translated_images/fi/describe-new-table.0792373eb757281e.webp)
 
 3. **Describe the new Table** -näytössä käytä tekstialuetta kuvaamaan taulukkoa, jonka haluat luoda. Esimerkiksi **_Haluan luoda taulukon laskutietojen tallentamista varten_**. Napsauta **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-![Kuvaile taulukko](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.fi.png)
+![Kuvaile taulukko](../../../translated_images/fi/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot ehdottaa Dataverse-taulukkoa, jossa on kentät, joita tarvitset haluamasi datan tallentamiseen, sekä esimerkkidataa. Voit mukauttaa taulukkoa tarpeidesi mukaan käyttämällä AI Copilotin avustajatoimintoa keskusteluvaiheiden kautta.
 
-![Ehdotettu Dataverse-taulukko](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.fi.png)
+![Ehdotettu Dataverse-taulukko](../../../translated_images/fi/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Taloustiimi haluaa lähettää sähköpostin toimittajalle päivittääkseen heidät laskunsa nykyisestä tilasta. Voit käyttää Copilotia lisätäksesi uuden kentän taulukkoon toimittajan sähköpostin tallentamista varten. Esimerkiksi voit käyttää seuraavaa kehotetta lisätäksesi uuden kentän taulukkoon: **_Haluan lisätä sarakkeen toimittajan sähköpostin tallentamista varten_**. Napsauta **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
 
@@ -184,7 +184,7 @@ Joihinkin Power Platformin valmiisiin AI-malleihin kuuluvat:
 
 Mukautettujen AI-mallien avulla voit tuoda oman mallisi AI Builderiin, jolloin se voi toimia kuten mikä tahansa AI Builderin mukautettu malli. Tämä mahdollistaa mallin kouluttamisen omalla datallasi. Voit käyttää näitä malleja prosessien automatisointiin ja tulosten ennustamiseen sekä Power Appsissa että Power Automatessa. Omien mallien käytössä on kuitenkin rajoituksia. Lue lisää näistä [rajoituksista](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI Builder -mallit](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.fi.png)
+![AI Builder -mallit](../../../translated_images/fi/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Tehtävä #2 - Rakenna laskujen käsittelytyönkulku startupillemme
 
@@ -198,7 +198,7 @@ Työnkulun rakentaminen laskujen käsittelyyn AI Builderin laskujen käsittelyma
 
 2. Käytä aloitusnäytön tekstialuetta kuvaamaan työnkulku, jonka haluat rakentaa. Esimerkiksi **_Käsittele lasku, kun se saapuu postilaatikkooni_**. Napsauta **Send**-painiketta lähettääksesi kehotteen AI Copilotille.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.fi.png)
+   ![Copilot Power Automate](../../../translated_images/fi/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot ehdottaa toimintoja, joita tarvitset haluamasi tehtävän automatisointiin. Voit napsauttaa **Next**-painiketta siirtyäksesi seuraaviin vaiheisiin.
 
@@ -212,7 +212,7 @@ Työnkulun rakentaminen laskujen käsittelyyn AI Builderin laskujen käsittelyma
 
 8. Poista **Condition**-toiminto työnkulusta, koska et käytä sitä. Sen pitäisi näyttää seuraavalta kuvakaappaukselta:
 
-   ![Power Automate, poista toiminnot](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.fi.png)
+   ![Power Automate, poista toiminnot](../../../translated_images/fi/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Napsauta **Add an action**-painiketta ja etsi **Dataverse**. Valitse **Add a new row**-toiminto.
 
@@ -227,7 +227,7 @@ Työnkulun rakentaminen laskujen käsittelyyn AI Builderin laskujen käsittelyma
     - Status - Aseta **Status** arvoon **Pending**.
     - Supplier Email - Käytä **From**-dynaamista sisältöä **When a new email arrives**-käynnistimestä.
 
-    ![Power Automate lisää rivi](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.fi.png)
+    ![Power Automate lisää rivi](../../../translated_images/fi/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Kun olet valmis työnkulun kanssa, napsauta **Save**-painiketta tallentaaksesi työnkulun. Voit testata työnkulkua lähettämällä sähköpostin laskun kanssa kansioon, jonka määritit käynnistimessä.
 
@@ -241,7 +241,7 @@ GPT-mallit käyvät läpi laajamittaista koulutusta valtavilla datamäärillä, 
 
 Esimerkiksi voit rakentaa työnkulkuja, jotka automaattisesti generoivat tekstiä erilaisiin käyttötarkoituksiin, kuten sähköpostiluonnoksiin, tuotekuvauksiin ja muuhun. Voit myös käyttää mallia tekstin generointiin erilaisissa sovelluksissa, kuten chatbotit ja asiakaspalvelusovellukset, jotka mahdollistavat asiakaspalvelijoiden vastaamisen tehokkaasti ja sujuvasti asiakaskyselyihin.
 
-![Luo kehotus](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.fi.png)
+![Luo kehotus](../../../translated_images/fi/create-prompt-gpt.69d429300c2e870a.webp)
 
 Jos haluat oppia käyttämään tätä AI-mallia Power Automatessa, käy läpi [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) -moduuli.
 

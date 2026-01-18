@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Asas Kejuruteraan Prompt
 
-[![Asas Kejuruteraan Prompt](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.ms.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Asas Kejuruteraan Prompt](../../../translated_images/ms/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Pengenalan
 Modul ini merangkumi konsep dan teknik penting untuk mencipta prompt yang berkesan dalam model AI generatif. Cara anda menulis prompt kepada LLM juga memainkan peranan. Prompt yang dirancang dengan teliti boleh menghasilkan respons yang lebih berkualiti. Tetapi apa sebenarnya maksud istilah seperti _prompt_ dan _kejuruteraan prompt_? Dan bagaimana saya boleh memperbaiki _input prompt_ yang saya hantar kepada LLM? Ini adalah soalan yang akan kita cuba jawab dalam bab ini dan bab seterusnya.
@@ -53,7 +53,7 @@ Notebook ini dilengkapi dengan latihan _permulaan_ - tetapi anda digalakkan untu
 
 Ingin mendapatkan gambaran besar tentang apa yang diliputi dalam pelajaran ini sebelum anda mendalami? Lihat panduan bergambar ini, yang memberikan anda gambaran tentang topik utama yang diliputi dan perkara penting untuk difikirkan dalam setiap satu. Peta jalan pelajaran membawa anda dari memahami konsep asas dan cabaran kepada menangani mereka dengan teknik kejuruteraan prompt yang relevan dan amalan terbaik. Perhatikan bahawa bahagian "Teknik Lanjutan" dalam panduan ini merujuk kepada kandungan yang diliputi dalam bab _seterusnya_ kurikulum ini.
 
-![Panduan Bergambar Kejuruteraan Prompt](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.ms.png)
+![Panduan Bergambar Kejuruteraan Prompt](../../../translated_images/ms/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Startup Kami
 
@@ -84,7 +84,7 @@ LLM melihat prompt sebagai _urutan token_ di mana model yang berbeza (atau versi
 
 Untuk mendapatkan intuisi tentang bagaimana tokenisasi berfungsi, cuba alat seperti [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) yang ditunjukkan di bawah. Salin prompt anda - dan lihat bagaimana ia ditukar menjadi token, perhatikan bagaimana watak ruang kosong dan tanda baca ditangani. Perhatikan bahawa contoh ini menunjukkan LLM lama (GPT-3) - jadi mencuba ini dengan model yang lebih baru mungkin menghasilkan hasil yang berbeza.
 
-![Tokenisasi](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.ms.png)
+![Tokenisasi](../../../translated_images/ms/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Konsep: Model Asas
 
@@ -94,7 +94,7 @@ Ingin melihat bagaimana penyelesaian berasaskan prompt berfungsi? Masukkan promp
 
 Tetapi bagaimana jika pengguna ingin melihat sesuatu yang spesifik yang memenuhi beberapa kriteria atau objektif tugas? Di sinilah _LLM ditala arahan_ memainkan peranan.
 
-![Penyelesaian Sembang Base LLM](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.ms.png)
+![Penyelesaian Sembang Base LLM](../../../translated_images/ms/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Konsep: LLM Ditala Arahan
 
@@ -108,7 +108,7 @@ Mari cuba - ulangi prompt di atas, tetapi kini ubah _mesej sistem_ untuk memberi
 
 Lihat bagaimana hasilnya kini disesuaikan untuk mencerminkan matlamat dan format yang diingini? Seorang pendidik kini boleh menggunakan respons ini secara langsung dalam slaid mereka untuk kelas tersebut.
 
-![Penyelesaian Sembang LLM Ditala Arahan](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.ms.png)
+![Penyelesaian Sembang LLM Ditala Arahan](../../../translated_images/ms/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Mengapa kita memerlukan Kejuruteraan Prompt?
 
@@ -138,15 +138,15 @@ Jadi, apa yang berlaku apabila kita menjalankan arahan ini dengan penyedia LLM y
 
 > **Respons 1**: OpenAI Playground (GPT-35)
 
-![Respons 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.ms.png)
+![Respons 1](../../../translated_images/ms/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Respons 2**: Azure OpenAI Playground (GPT-35)
 
-![Respons 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.ms.png)
+![Respons 2](../../../translated_images/ms/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Respons 3**: Hugging Face Chat Playground (LLama-2)
 
-![Respons 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.ms.png)
+![Respons 3](../../../translated_images/ms/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Seperti yang dijangka, setiap model (atau versi model) menghasilkan respons yang sedikit berbeza disebabkan oleh tingkah laku stokastik dan variasi keupayaan model. Sebagai contoh, satu model menyasarkan audiens pelajar darjah 8 manakala yang lain menganggap pelajar sekolah menengah. Tetapi ketiga-tiga model menghasilkan respons yang boleh meyakinkan pengguna yang tidak berpengetahuan bahawa peristiwa itu adalah benar.
 

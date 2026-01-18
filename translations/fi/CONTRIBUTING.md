@@ -63,7 +63,7 @@ Varmista linkkien toimivuus käyttämällä VS Codea.
 
 Esimerkiksi, kun viet hiiren minkä tahansa linkin päälle tiedostoissasi, voit seurata linkkiä painamalla **ctrl + klikkaus**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.fi.png)
+![VS code follow links screenshot](../../translated_images/fi/vscode-follow-link.85520ab6a1237adc.webp)
 
 Jos klikkaat linkkiä ja se ei toimi paikallisesti, työnkulku varmasti epäonnistuu eikä linkki toimi GitHubissa.
 
@@ -71,7 +71,7 @@ Korjataksesi tämän, kirjoita linkki VS Coden avulla.
 
 Kun kirjoitat `./` tai `../`, VS Code ehdottaa käytettävissä olevia vaihtoehtoja kirjoittamasi perusteella.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.fi.png)
+![VS code select relative path screenshot](../../translated_images/fi/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Seuraa polkua klikkaamalla haluamaasi tiedostoa tai kansiota, niin voit olla varma, ettei polkusi ole rikki.
 
@@ -88,7 +88,7 @@ Jos se on lisätty, tarkistus menee läpi.
 
 Jos ei, saatat saada seuraavan virheen.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.fi.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/fi/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja lisää seuranta-ID suhteellisten polkujen loppuun.
 
@@ -105,7 +105,7 @@ Jos se on lisätty, tarkistus menee läpi.
 
 Jos ei, saatat saada seuraavan virheen.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.fi.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/fi/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja lisää seuranta-ID URL-osoitteiden loppuun.
 
@@ -122,7 +122,7 @@ Jos niitä ei ole, tarkistus menee läpi.
 
 Jos on, saatat saada seuraavan virheen.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.fi.png)
+![GitHub check country locale comment screenshot](../../translated_images/fi/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Korjataksesi tämän, avaa työnkulun osoittama tiedostopolku ja poista maakohtainen paikallisasetus URL-osoitteista.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Melindungi Aplikasi AI Generatif Anda
 
-[![Melindungi Aplikasi AI Generatif Anda](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ms.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Melindungi Aplikasi AI Generatif Anda](../../../translated_images/ms/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Pengenalan
 
@@ -131,7 +131,7 @@ Meniru ancaman dunia nyata kini dianggap sebagai amalan standard dalam membina s
 
 > Amalan red teaming AI telah berkembang dengan makna yang lebih luas: ia bukan sahaja melibatkan pengujian kelemahan keselamatan, tetapi juga termasuk pengujian kegagalan sistem lain, seperti penghasilan kandungan yang berpotensi berbahaya. Sistem AI membawa risiko baru, dan red teaming adalah kunci untuk memahami risiko baru tersebut, seperti suntikan arahan dan penghasilan kandungan yang tidak berasas. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Panduan dan sumber untuk red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ms.png)]()
+[![Panduan dan sumber untuk red teaming](../../../translated_images/ms/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Berikut adalah pandangan utama yang telah membentuk program AI Red Team Microsoft.
 

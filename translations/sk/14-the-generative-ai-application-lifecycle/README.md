@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-[![Integrácia s volaním funkcií](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.sk.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrácia s volaním funkcií](../../../translated_images/sk/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Životný cyklus aplikácie generatívnej AI
 
@@ -30,7 +30,7 @@ LLM sú nový nástroj v arzenáli umelej inteligencie, sú neuveriteľne silné
 
 S týmto potrebujeme nový paradigmatický prístup, aby sme tento nástroj adaptovali dynamicky, s vhodnými stimulmi. Môžeme kategorizovať staršie AI aplikácie ako „ML aplikácie“ a novšie AI aplikácie ako „GenAI aplikácie“ alebo jednoducho „AI aplikácie“, čo odráža hlavný technologický a technický prístup používaný v danom čase. Toto posúva náš príbeh viacerými smermi, pozrite si nasledujúce porovnanie.
 
-![Porovnanie LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.sk.png)
+![Porovnanie LLMOps vs. MLOps](../../../translated_images/sk/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Všimnite si, že v LLMOps sa viac zameriavame na vývojárov aplikácií, používame integrácie ako kľúčový bod, využívame „Modely ako službu“ a uvažujeme o nasledujúcich bodoch pre metriky.
 
@@ -44,7 +44,7 @@ Všimnite si, že v LLMOps sa viac zameriavame na vývojárov aplikácií, použ
 
 Najprv, aby sme pochopili životný cyklus a jeho úpravy, pozrime sa na nasledujúcu infografiku.
 
-![Infografika LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.sk.png)
+![Infografika LLMOps](../../../translated_images/sk/02-llmops.70a942ead05a7645.webp)
 
 Ako si možno všimnete, toto sa líši od bežných životných cyklov v MLOps. LLM majú mnoho nových požiadaviek, ako je promptovanie, rôzne techniky na zlepšenie kvality (doladenie, RAG, meta-promptovanie), rôzne hodnotenie a zodpovednosť v rámci zodpovednej AI, nakoniec nové hodnotiace metriky (kvalita, škoda, pravdivosť, náklady a latencia).
 
@@ -54,7 +54,7 @@ Všimnite si, že to nie je lineárne, ale integrované slučky, iteratívne a s
 
 Ako by sme mohli preskúmať tieto kroky? Pozrime sa podrobnejšie, ako môžeme vytvoriť životný cyklus.
 
-![Pracovný tok LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.sk.png)
+![Pracovný tok LLMOps](../../../translated_images/sk/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Môže to vyzerať trochu komplikovane, zamerajme sa najprv na tri veľké kroky.
 
@@ -74,11 +74,11 @@ Pre nástroje poskytuje Microsoft [Azure AI Platform](https://azure.microsoft.co
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) vám umožňuje používať [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio je webový portál, ktorý vám umožňuje preskúmavať modely, ukážky a nástroje. Spravovať vaše zdroje, vývojové toky UI a možnosti SDK/CLI pre vývoj založený na kóde.
 
-![Možnosti Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.sk.png)
+![Možnosti Azure AI](../../../translated_images/sk/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI vám umožňuje používať viacero zdrojov na správu vašich operácií, služieb, projektov, vyhľadávania vektorov a databázových potrieb.
 
-![LLMOps s Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.sk.png)
+![LLMOps s Azure AI](../../../translated_images/sk/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Vytvárajte od Proof-of-Concept (POC) až po veľkorozsahové aplikácie s PromptFlow:
 
@@ -86,7 +86,7 @@ Vytvárajte od Proof-of-Concept (POC) až po veľkorozsahové aplikácie s Promp
 - Testujte a dolaďujte svoje aplikácie pre kvalitnú AI jednoducho.
 - Používajte Azure AI Studio na integráciu a iteráciu s cloudom, push a nasadenie pre rýchlu integráciu.
 
-![LLMOps s PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.sk.png)
+![LLMOps s PromptFlow](../../../translated_images/sk/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Skvelé! Pokračujte v učení!
 

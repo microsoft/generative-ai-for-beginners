@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # उन्नत प्रम्प्टहरू सिर्जना गर्दै
 
-[![उन्नत प्रम्प्टहरू सिर्जना गर्दै](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ne.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![उन्नत प्रम्प्टहरू सिर्जना गर्दै](../../../translated_images/ne/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 अघिल्लो अध्यायबाट केही सिकाइहरूलाई पुनः सम्झौं:
 

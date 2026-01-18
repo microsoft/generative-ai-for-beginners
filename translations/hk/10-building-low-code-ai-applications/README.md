@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立低代碼 AI 應用程式
 
-[![建立低代碼 AI 應用程式](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.hk.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![建立低代碼 AI 應用程式](../../../translated_images/hk/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(點擊上方圖片觀看本課程影片)_
 
@@ -92,17 +92,17 @@ Power Automate 中的 Copilot AI 助理功能讓您可以描述所需的流程�
 
 1. 使用主畫面上的文字區域描述您想要建立的應用程式。例如，**_我想建立一個應用程式來追蹤和管理學生作業_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
-![描述您想建立的應用程式](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.hk.png)
+![描述您想建立的應用程式](../../../translated_images/hk/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot 會建議一個包含所需字段的 Dataverse 表格來存儲您希望追蹤的數據以及一些示例數據。您可以通過 AI Copilot 助理功能的對話式步驟來自定義表格以滿足您的需求。
 
    > **重要提示**：Dataverse 是 Power Platform 的底層數據平台。它是一個低代碼數據平台，用於存儲應用程式的數據。它是一項完全管理的服務，安全地將數據存儲在 Microsoft Cloud 中，並在您的 Power Platform 環境中進行配置。它具有內建的數據治理功能，例如數據分類、數據來源、細粒度的訪問控制等。您可以在[這裡](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)了解更多關於 Dataverse 的資訊。
 
-   ![新表格中的建議字段](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.hk.png)
+   ![新表格中的建議字段](../../../translated_images/hk/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. 教育工作者希望向提交作業的學生發送電子郵件，讓他們了解作業的進展情況。您可以使用 Copilot 向表格中新增一個字段來存儲學生的電子郵件。例如，您可以使用以下提示向表格中新增一個字段：**_我想新增一個欄位來存儲學生的電子郵件_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
-![新增一個字段](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.hk.png)
+![新增一個字段](../../../translated_images/hk/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot 會生成一個新字段，您可以根據需求進行自定義。
 
@@ -112,7 +112,7 @@ Power Automate 中的 Copilot AI 助理功能讓您可以描述所需的流程�
 
 1. 為了讓教育工作者向學生發送電子郵件，您可以使用 Copilot 向應用程式新增一個新界面。例如，您可以使用以下提示向應用程式新增一個新界面：**_我想新增一個界面來向學生發送電子郵件_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
-![通過提示指令新增新界面](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.hk.png)
+![通過提示指令新增新界面](../../../translated_images/hk/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot 會生成一個新界面，您可以根據需求進行自定義。
 
@@ -147,15 +147,15 @@ Power Platform 擁有一個底層數據平台，稱為 Dataverse，讓您可以�
 
 2. 在左側導航欄中選擇 **Tables**，然後點擊 **Describe the new Table**。
 
-![選擇新表格](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.hk.png)
+![選擇新表格](../../../translated_images/hk/describe-new-table.0792373eb757281e.webp)
 
 3. 在 **Describe the new Table** 頁面，使用文本框描述您想要創建的表格。例如，**_我想創建一個表格來存儲發票信息_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
-![描述表格](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.hk.png)
+![描述表格](../../../translated_images/hk/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot 會建議一個包含您需要的字段的 Dataverse 表格來存儲您想要追蹤的數據，並提供一些示例數據。然後，您可以使用 AI Copilot 助手功能通過對話步驟自定義表格以滿足您的需求。
 
-![建議的 Dataverse 表格](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.hk.png)
+![建議的 Dataverse 表格](../../../translated_images/hk/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. 財務團隊希望向供應商發送電子郵件，更新他們的發票當前狀態。您可以使用 Copilot 向表格添加一個新字段來存儲供應商的電子郵件。例如，您可以使用以下提示來向表格添加新字段：**_我想添加一列來存儲供應商的電子郵件_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
@@ -184,7 +184,7 @@ Power Platform 中提供的一些預建 AI 模型包括：
 
 通過自定義 AI 模型，您可以將自己的模型引入 AI Builder，使其像任何 AI Builder 自定義模型一樣運作，並使用自己的數據訓練模型。您可以使用這些模型在 Power Apps 和 Power Automate 中自動化流程並預測結果。使用自定義模型時有一些限制。詳細信息請參閱這些 [限制](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)。
 
-![AI builder 模型](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.hk.png)
+![AI builder 模型](../../../translated_images/hk/ai-builder-models.8069423b84cfc47f.webp)
 
 ## 作業 #2 - 為我們的初創公司建立一個發票處理流程
 
@@ -198,7 +198,7 @@ Power Platform 中提供的一些預建 AI 模型包括：
 
 2. 在主頁的文本框中描述您想要構建的工作流程。例如，**_當我的郵箱收到發票時處理它_**。點擊 **Send** 按鈕將提示發送給 AI Copilot。
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.hk.png)
+   ![Copilot power automate](../../../translated_images/hk/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot 會建議您需要執行的操作以完成您想要自動化的任務。您可以點擊 **Next** 按鈕進行下一步。
 
@@ -212,7 +212,7 @@ Power Platform 中提供的一些預建 AI 模型包括：
 
 8. 從流程中移除 **Condition** 操作，因為您不會使用它。流程應看起來像以下截圖：
 
-   ![power automate, remove actions](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.hk.png)
+   ![power automate, remove actions](../../../translated_images/hk/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. 點擊 **Add an action** 按鈕並搜索 **Dataverse**。選擇 **Add a new row** 操作。
 
@@ -227,7 +227,7 @@ Power Platform 中提供的一些預建 AI 模型包括：
     - Status - 將 **Status** 設置為 **Pending**。
     - Supplier Email - 使用 **From** 動態內容來自 **When a new email arrives** 觸發器。
 
-    ![power automate add row](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.hk.png)
+    ![power automate add row](../../../translated_images/hk/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. 完成流程後，點擊 **Save** 按鈕保存流程。您可以通過向觸發器中指定的文件夾發送帶有發票的電子郵件來測試流程。
 
@@ -241,7 +241,7 @@ GPT 模型經過大量數據的深入訓練，使其能夠在提供提示時生�
 
 例如，您可以構建流程來自動生成各種用途的文本，例如：電子郵件草稿、產品描述等。您還可以使用該模型為各種應用生成文本，例如聊天機器人和客戶服務應用，幫助客戶服務代理有效地回應客戶詢問。
 
-![創建提示](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.hk.png)
+![創建提示](../../../translated_images/hk/create-prompt-gpt.69d429300c2e870a.webp)
 
 要了解如何在 Power Automate 中使用此 AI 模型，請參閱 [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) 模組。
 

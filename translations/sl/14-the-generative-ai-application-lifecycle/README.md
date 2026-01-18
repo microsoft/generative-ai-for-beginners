@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sl"
 }
 -->
-[![Integracija s klicem funkcij](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.sl.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integracija s klicem funkcij](../../../translated_images/sl/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Življenjski cikel generativne umetne inteligence
 
@@ -30,7 +30,7 @@ LLM so novo orodje v arzenalu umetne inteligence, izjemno močni pri analizah in
 
 Zato potrebujemo novo paradigmo, da to orodje prilagodimo dinamično in z ustreznimi spodbudami. Starejše AI aplikacije lahko kategoriziramo kot "ML aplikacije", novejše pa kot "GenAI aplikacije" ali preprosto "AI aplikacije", kar odraža prevladujočo tehnologijo in tehnike v tistem času. To premakne našo pripoved na več načinov, poglejte naslednjo primerjavo.
 
-![Primerjava LLMOps in MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.sl.png)
+![Primerjava LLMOps in MLOps](../../../translated_images/sl/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Opazite, da se v LLMOps bolj osredotočamo na razvijalce aplikacij, uporabljamo integracije kot ključno točko, uporabljamo "Modeli kot storitev" in razmišljamo o naslednjih metrikah.
 
@@ -44,7 +44,7 @@ Opazite, da se v LLMOps bolj osredotočamo na razvijalce aplikacij, uporabljamo 
 
 Najprej, da razumemo življenjski cikel in spremembe, si oglejmo naslednjo infografiko.
 
-![Infografika LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.sl.png)
+![Infografika LLMOps](../../../translated_images/sl/02-llmops.70a942ead05a7645.webp)
 
 Kot lahko opazite, se to razlikuje od običajnih življenjskih ciklov MLOps. LLM imajo veliko novih zahtev, kot so spodbujanje (Prompting), različne tehnike za izboljšanje kakovosti (Fine-Tuning, RAG, Meta-Prompts), drugačno ocenjevanje in odgovornost z odgovorno AI, nazadnje nove metrike ocenjevanja (Kakovost, Škoda, Iskrenost, Stroški in Zakasnitev).
 
@@ -54,7 +54,7 @@ Opazite, da to ni linearno, ampak integrirani zanki, iterativno in z obsežnim c
 
 Kako bi lahko raziskali te korake? Poglobimo se v podrobnosti, kako lahko zgradimo življenjski cikel.
 
-![Delovni tok LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.sl.png)
+![Delovni tok LLMOps](../../../translated_images/sl/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 To se morda zdi nekoliko zapleteno, osredotočimo se najprej na tri velike korake.
 
@@ -74,11 +74,11 @@ Za orodja Microsoft ponuja [Azure AI Platform](https://azure.microsoft.com/solut
 
 [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) vam omogoča uporabo [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio je spletni portal, ki vam omogoča raziskovanje modelov, vzorcev in orodij. Upravljanje virov, razvoj uporabniških vmesnikov in možnosti SDK/CLI za razvoj s kodo.
 
-![Možnosti Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.sl.png)
+![Možnosti Azure AI](../../../translated_images/sl/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI vam omogoča uporabo več virov za upravljanje vaših operacij, storitev, projektov, iskanja vektorjev in potreb po bazah podatkov.
 
-![LLMOps z Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.sl.png)
+![LLMOps z Azure AI](../../../translated_images/sl/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Gradite od Proof-of-Concept (POC) do velikih aplikacij s PromptFlow:
 
@@ -86,7 +86,7 @@ Gradite od Proof-of-Concept (POC) do velikih aplikacij s PromptFlow:
 - Testirajte in fino nastavite svoje aplikacije za kakovostno AI, enostavno.
 - Uporabite Azure AI Studio za integracijo in iteracijo z oblakom, potiskanje in uvajanje za hitro integracijo.
 
-![LLMOps s PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.sl.png)
+![LLMOps s PromptFlow](../../../translated_images/sl/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Odlično! Nadaljujte z učenjem!
 

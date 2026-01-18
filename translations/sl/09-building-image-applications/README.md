@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Gradnja aplikacij za generiranje slik
 
-[![Gradnja aplikacij za generiranje slik](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sl.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Gradnja aplikacij za generiranje slik](../../../translated_images/sl/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-ji niso omejeni le na generiranje besedila. Možno je tudi generirati slike iz opisov besedila. Slike kot modalnost so lahko zelo uporabne na številnih področjih, kot so MedTech, arhitektura, turizem, razvoj iger in še več. V tem poglavju si bomo ogledali dva najbolj priljubljena modela za generiranje slik, DALL-E in Midjourney.
 
@@ -43,7 +43,7 @@ V okviru te lekcije bomo nadaljevali delo z našim startupom Edu4All. Študenti 
 
 Tukaj je primer, kaj bi lahko ustvarili študenti Edu4All, če bi v razredu delali na spomenikih:
 
-![Startup Edu4All, razred o spomenikih, Eifflov stolp](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sl.png)
+![Startup Edu4All, razred o spomenikih, Eifflov stolp](../../../translated_images/sl/startup.94d6b79cc4bb3f5a.webp)
 
 z uporabo poziva, kot je:
 
@@ -272,9 +272,9 @@ Tukaj je primer z uporabo GPT Image:
   Osnovna slika bi vsebovala le salon z bazenom, končna slika pa bi imela flaminga:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.sl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.sl.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.sl.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sl/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sl/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sl/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Ustvarjanje različic**. Ideja je, da vzamete obstoječo sliko in zahtevate, da se ustvarijo različice. Za ustvarjanje različice zagotovite sliko in besedilni poziv ter kodo, kot je prikazano:
@@ -298,11 +298,11 @@ Poglejmo primer, kako deluje temperatura, tako da dvakrat zaženemo ta poziv:
 
 > Poziv: "Zajček na konju, drži liziko, na meglenem travniku, kjer rastejo narcise"
 
-![Zajček na konju, drži liziko, različica 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sl.png)
+![Zajček na konju, drži liziko, različica 1](../../../translated_images/sl/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Zdaj zaženimo isti poziv še enkrat, da vidimo, da ne bomo dvakrat dobili iste slike:
 
-![Generirana slika zajčka na konju](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sl.png)
+![Generirana slika zajčka na konju](../../../translated_images/sl/v2-generated-image.33f55a3714efe61d.webp)
 
 Kot lahko vidite, so slike podobne, vendar niso enake. Poskusimo spremeniti vrednost temperature na 0,1 in poglejmo, kaj se zgodi:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Ko zaženete to kodo, dobite ti dve sliki:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sl.png)
-- ![Temperatura 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sl.png)
+- ![Temperatura 0, v1](../../../translated_images/sl/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0, v2](../../../translated_images/sl/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Tukaj lahko jasno vidite, kako se slike bolj podobajo ena drugi.
 

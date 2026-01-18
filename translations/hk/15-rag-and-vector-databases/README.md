@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 檢索增強生成 (RAG) 和向量數據庫
 
-[![檢索增強生成 (RAG) 和向量數據庫](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.hk.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![檢索增強生成 (RAG) 和向量數據庫](../../../translated_images/hk/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 在搜索應用的課程中，我們簡單學習了如何將自己的數據整合到大型語言模型 (LLMs) 中。在本課程中，我們將深入探討如何在 LLM 應用中基於自己的數據進行操作的概念、過程的機制以及存儲數據的方法，包括嵌入和文本。
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAG (檢索增強生成) 的工作原理
 
-![展示 RAG 工作原理的圖示](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.hk.png)
+![展示 RAG 工作原理的圖示](../../../translated_images/hk/how-rag-works.f5d0ff63942bd3a6.webp)
 
 假設您想部署一個聊天機器人來根據您的筆記創建測驗，您需要連接到知識庫。這就是 RAG 的作用。RAG 的運作方式如下：
 
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **增強生成:** LLM 根據檢索到的數據增強其回應。這使得生成的回應不僅基於預訓練數據，還基於添加的上下文中的相關信息。檢索到的數據用於增強 LLM 的回應。LLM 然後返回用戶問題的答案。
 
-![展示 RAG 架構的圖示](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.hk.png)
+![展示 RAG 架構的圖示](../../../translated_images/hk/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG 的架構使用由兩部分組成的 transformer：編碼器和解碼器。例如，當用戶提出問題時，輸入文本被“編碼”為捕捉單詞含義的向量，這些向量被“解碼”到我們的文檔索引中，並根據用戶查詢生成新文本。LLM 使用編碼器-解碼器模型生成輸出。
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 分塊後，我們可以使用不同的嵌入模型嵌入文本。您可以使用的模型包括：word2vec、OpenAI 的 ada-002、Azure Computer Vision 等。選擇使用的模型將取決於您使用的語言、編碼的內容類型（文本/圖像/音頻）、它可以編碼的輸入大小以及嵌入輸出的長度。
 
 使用 OpenAI 的 `text-embedding-ada-002` 模型嵌入文本的示例是：
-![嵌入單詞 cat 的示例](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.hk.png)
+![嵌入單詞 cat 的示例](../../../translated_images/hk/cat.74cbd7946bc9ca38.webp)
 
 ## 檢索和向量搜索
 

@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pl"
 }
 -->
-[![Modele Open Source](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.pl.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Modele Open Source](../../../translated_images/pl/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Wprowadzenie
 
@@ -33,7 +33,7 @@ Agenci AI to bardzo ekscytująca dziedzina w świecie Generative AI. Z tym entuz
 
 Agenci AI pozwalają dużym modelom językowym (LLM) wykonywać zadania, dając im dostęp do **stanu** i **narzędzi**.
 
-![Model Agenta](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.pl.png)
+![Model Agenta](../../../translated_images/pl/what-agent.21f2893bdfd01e6a.webp)
 
 Zdefiniujmy te terminy:
 
@@ -53,7 +53,7 @@ Aby zarządzać **stanem**, używa wbudowanej funkcji o nazwie `AgentExecutor`. 
 
 `AgentExecutor` przechowuje również historię czatu, aby zapewnić kontekst rozmowy.
 
-![Agenci LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.pl.png)
+![Agenci LangChain](../../../translated_images/pl/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain oferuje [katalog narzędzi](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), które można zaimportować do swojej aplikacji, w której LLM może uzyskać do nich dostęp. Są one tworzone przez społeczność oraz zespół LangChain.
 
@@ -85,7 +85,7 @@ Aby zmieniać i zarządzać stanem, asystent Agent generuje kod Python do wykona
 
 Oto przykład procesu:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.pl.png)
+![AutoGen](../../../translated_images/pl/autogen.dee9a25a45fde584.webp)
 
 #### LLM zdefiniowany za pomocą wiadomości systemowej
 
@@ -129,7 +129,7 @@ Aby zarządzać stanem rozmowy, TaskWeaver używa koncepcji `Plannera`. `Planner
 
 Aby wykonać zadania, `Planner` ma dostęp do kolekcji narzędzi zwanych `Plugins`. Mogą to być klasy Pythona lub ogólny interpreter kodu. Te pluginy są przechowywane jako osadzenia, aby LLM mógł lepiej wyszukiwać odpowiedni plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.pl.png)
+![Taskweaver](../../../translated_images/pl/taskweaver.da8559999267715a.webp)
 
 Oto przykład pluginu do wykrywania anomalii:
 
@@ -143,7 +143,7 @@ Kod jest weryfikowany przed wykonaniem. Kolejną funkcją zarządzania kontekste
 
 Ostatni framework agenta, który zbadamy, to [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). To, co wyróżnia JARVIS, to fakt, że używa LLM do zarządzania `stanem` rozmowy, a `narzędzia` to inne modele AI. Każdy z modeli AI to wyspecjalizowany model, który wykonuje określone zadania, takie jak wykrywanie obiektów, transkrypcja czy opisywanie obrazów.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.pl.png)
+![JARVIS](../../../translated_images/pl/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, będąc modelem ogólnego przeznaczenia, otrzymuje żądanie od użytkownika i identyfikuje konkretne zadanie oraz wszelkie argumenty/dane potrzebne do jego wykonania.
 

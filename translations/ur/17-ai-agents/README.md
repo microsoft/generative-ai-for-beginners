@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ur"
 }
 -->
-[![اوپن سورس ماڈلز](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ur.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![اوپن سورس ماڈلز](../../../translated_images/ur/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## تعارف
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اے آئی ایجنٹس بڑے لینگویج ماڈلز (LLMs) کو **اسٹیٹ** اور **ٹولز** تک رسائی دے کر کام انجام دینے کی اجازت دیتے ہیں۔
 
-![ایجنٹ ماڈل](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ur.png)
+![ایجنٹ ماڈل](../../../translated_images/ur/what-agent.21f2893bdfd01e6a.webp)
 
 آئیے ان اصطلاحات کی وضاحت کریں:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 `Agent Executor` چیٹ کی تاریخ کو بھی ذخیرہ کرتا ہے تاکہ چیٹ کے سیاق و سباق فراہم کیا جا سکے۔
 
-![لینگ چین ایجنٹس](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ur.png)
+![لینگ چین ایجنٹس](../../../translated_images/ur/langchain-agents.edcc55b5d5c43716.webp)
 
 لینگ چین ایک [ٹولز کی کیٹلاگ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) پیش کرتا ہے جسے آپ کی ایپلیکیشن میں درآمد کیا جا سکتا ہے جس میں LLM کو رسائی حاصل ہو سکتی ہے۔ یہ کمیونٹی اور لینگ چین ٹیم کے ذریعہ بنائے گئے ہیں۔
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 یہاں عمل کی ایک مثال ہے:
 
-![آٹو جن](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ur.png)
+![آٹو جن](../../../translated_images/ur/autogen.dee9a25a45fde584.webp)
 
 #### سسٹم میسج کے ساتھ متعین LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 کاموں کو مکمل کرنے کے لیے `Planner` ٹولز کے مجموعہ کو `Plugins` کہا جاتا ہے۔ یہ Python کلاسز یا ایک عمومی کوڈ انٹرپریٹر ہو سکتے ہیں۔ یہ پلگ انز ایمبیڈنگ کے طور پر ذخیرہ کیے جاتے ہیں تاکہ LLM صحیح پلگ ان کو بہتر طریقے سے تلاش کر سکے۔
 
-![ٹاسک ویور](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ur.png)
+![ٹاسک ویور](../../../translated_images/ur/taskweaver.da8559999267715a.webp)
 
 یہاں ایک پلگ ان کی مثال ہے جو anomaly detection کو ہینڈل کرتا ہے:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 آخری ایجنٹ فریم ورک جس کا ہم جائزہ لیں گے وہ ہے [جارویس](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)۔ جو چیز جارویس کو منفرد بناتی ہے وہ یہ ہے کہ یہ گفتگو کے `state` کو منظم کرنے کے لیے ایک LLM استعمال کرتا ہے اور `tools` دوسرے اے آئی ماڈلز ہیں۔ ہر اے آئی ماڈل مخصوص کام انجام دینے والے ماڈلز ہیں جیسے object detection، transcription یا image captioning۔
 
-![جارویس](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ur.png)
+![جارویس](../../../translated_images/ur/jarvis.762ddbadbd1a3a33.webp)
 
 LLM، ایک عمومی مقصد ماڈل ہونے کے ناطے، صارف سے درخواست وصول کرتا ہے اور مخصوص کام اور کوئی بھی دلائل/ڈیٹا کی شناخت کرتا ہے جو کام کو مکمل کرنے کے لیے ضروری ہے۔
 

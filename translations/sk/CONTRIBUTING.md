@@ -63,7 +63,7 @@ Pre istotu, že vaše odkazy fungujú správne, použite VS Code na ich kontrolu
 
 Napríklad, keď podržíte kurzor nad akýmkoľvek odkazom vo vašich súboroch, zobrazí sa vám možnosť otvoriť odkaz stlačením **ctrl + kliknutie**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.sk.png)
+![VS code follow links screenshot](../../translated_images/sk/vscode-follow-link.85520ab6a1237adc.webp)
 
 Ak kliknete na odkaz a lokálne nefunguje, workflow ho určite označí ako chybný a nebude fungovať ani na GitHube.
 
@@ -71,7 +71,7 @@ Na opravu tohto problému skúste odkaz napísať s pomocou VS Code.
 
 Keď začnete písať `./` alebo `../`, VS Code vám ponúkne výber z dostupných možností podľa toho, čo ste zadali.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.sk.png)
+![VS code select relative path screenshot](../../translated_images/sk/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Vyberte cestu kliknutím na požadovaný súbor alebo priečinok a budete mať istotu, že vaša cesta nie je nefunkčná.
 
@@ -88,7 +88,7 @@ Ak je pridaný, kontrolu prejdete.
 
 Ak nie, môžete dostať nasledujúcu chybu.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.sk.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/sk/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Na opravu tohto problému otvorte súbor, ktorý workflow označil, a pridajte sledovací identifikátor na koniec relatívnych ciest.
 
@@ -105,7 +105,7 @@ Ak je pridaný, kontrolu prejdete.
 
 Ak nie, môžete dostať nasledujúcu chybu.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.sk.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/sk/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Na opravu tohto problému otvorte súbor, ktorý workflow označil, a pridajte sledovací identifikátor na koniec URL.
 
@@ -122,7 +122,7 @@ Ak tam nie je, kontrolu prejdete.
 
 Ak nie, môžete dostať nasledujúcu chybu.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.sk.png)
+![GitHub check country locale comment screenshot](../../translated_images/sk/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Na opravu tohto problému otvorte súbor, ktorý workflow označil, a odstráňte lokalizáciu krajiny z URL.
 

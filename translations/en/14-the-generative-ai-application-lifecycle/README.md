@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "en"
 }
 -->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.en.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/en/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # The Generative AI Application Lifecycle
 
@@ -30,7 +30,7 @@ LLMs are a new tool in the Artificial Intelligence arsenal, they are incredibly 
 
 With this, we need a new Paradigm to adapt this tool in a dynamic, with the correct incentives. We can categorize older AI apps as "ML Apps" and newer AI Apps as "GenAI Apps" or just "AI Apps", reflecting the mainstream technology and techniques used at the time. This shifts our narrative in multiple ways, look at the following comparison.
 
-![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.en.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/en/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Notice that in LLMOps, we are more focused on the App Developers, using integrations as a key point, using "Models-as-a-Service" and thinking in the following points for metrics.
 
@@ -44,7 +44,7 @@ Notice that in LLMOps, we are more focused on the App Developers, using integrat
 
 First, to understand the lifecycle and the modifications, let's note the next infographic.
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.en.png)
+![LLMOps infographic](../../../translated_images/en/02-llmops.70a942ead05a7645.webp)
 
 As you may note, this is different from the usual Lifecycles from MLOps. LLMs have many new requirements, as Prompting, different techniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsibility with responsible AI, lastly, new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
 
@@ -54,7 +54,7 @@ Note that this is not linear, but integrated loops, iterative and with an overar
 
 How could we explore those steps? Let's step into detail in how could we build a lifecycle.
 
-![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.en.png)
+![LLMOps Workflow](../../../translated_images/en/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 This may look a bit complicated, lets focus on the three big steps first.
 
@@ -74,11 +74,11 @@ For Tooling, Microsoft provides the [Azure AI Platform](https://azure.microsoft.
 
 The [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), allows you to use [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio is a web portal allows you to Explore models, samples and tools. Managing your resources, UI development flows and SDK/CLI options for Code-First development.
 
-![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.en.png)
+![Azure AI possibilities](../../../translated_images/en/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Azure AI, allows you to use multiple resources, to manage your operations, services, projects, vector search and databases needs.
 
-![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.en.png)
+![LLMOps with Azure AI](../../../translated_images/en/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Construct, from Proof-of-Concept(POC) until large scale applications with PromptFlow:
 
@@ -86,7 +86,7 @@ Construct, from Proof-of-Concept(POC) until large scale applications with Prompt
 - Test and fine-tune your apps for quality AI, with ease.
 - Use Azure AI Studio to Integrate and Iterate with cloud, Push and Deploy for quick integration.
 
-![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.en.png)
+![LLMOps with PromptFlow](../../../translated_images/en/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Great! Continue your Learning!
 

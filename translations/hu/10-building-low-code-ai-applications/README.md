@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Alacsony kódú AI alkalmazások építése
 
-[![Alacsony kódú AI alkalmazások építése](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.hu.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Alacsony kódú AI alkalmazások építése](../../../translated_images/hu/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Kattints a fenti képre a lecke videójának megtekintéséhez)_
 
@@ -92,17 +92,17 @@ Az alkalmazást a Power Appsben, Copilot segítségével fogod megépíteni az a
 
 1. Használd a kezdőképernyő szövegmezőjét, hogy leírd, milyen alkalmazást szeretnél építeni. Például: **_Egy alkalmazást szeretnék építeni a diákfeladatok nyomon követésére és kezelésére_**. Kattints a **Küldés** gombra, hogy elküldd a promptot az AI Copilotnak.
 
-![Írd le, milyen alkalmazást szeretnél építeni](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.hu.png)
+![Írd le, milyen alkalmazást szeretnél építeni](../../../translated_images/hu/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. Az AI Copilot javasolni fog egy Dataverse táblát a szükséges mezőkkel, hogy tárolja azokat az adatokat, amelyeket követni szeretnél, valamint néhány mintaadatot. Ezután testre szabhatod a táblát az igényeid szerint az AI Copilot asszisztens funkcióval, beszélgetési lépések segítségével.
 
    > **Fontos**: A Dataverse a Power Platform alapjául szolgáló adatplatform. Ez egy alacsony kódú adatplatform az alkalmazás adatainak tárolásához. Ez egy teljesen kezelt szolgáltatás, amely biztonságosan tárolja az adatokat a Microsoft Cloudban, és a Power Platform környezetedben van telepítve. Beépített adatirányítási képességekkel rendelkezik, mint például adatklasszifikáció, adatvonal, finomhangolt hozzáférés-vezérlés és még sok más. További információt a Dataverse-ről [itt találhatsz](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Javasolt mezők az új tábládban](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.hu.png)
+   ![Javasolt mezők az új tábládban](../../../translated_images/hu/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Az oktatók szeretnének e-maileket küldeni azoknak a diákoknak, akik leadták a feladataikat, hogy tájékoztassák őket a feladataik állapotáról. Használhatod a Copilotot, hogy új mezőt adj hozzá a táblához a diák e-mail címének tárolásához. Például használhatod a következő promptot, hogy új mezőt adj hozzá a táblához: **_Egy oszlopot szeretnék hozzáadni a diák e-mail címének tárolásához_**. Kattints a **Küldés** gombra, hogy elküldd a promptot az AI Copilotnak.
 
-![Új mező hozzáadása](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.hu.png)
+![Új mező hozzáadása](../../../translated_images/hu/copilot-new-column.35e15ff21acaf274.webp)
 
 1. Az AI Copilot generálni fog egy új mezőt, és ezután testre szabhatod a mezőt az igényeid szerint.
 
@@ -112,7 +112,7 @@ Az alkalmazást a Power Appsben, Copilot segítségével fogod megépíteni az a
 
 1. Az oktatók számára, hogy e-maileket küldjenek a diákoknak, használhatod a Copilotot, hogy új képernyőt adj hozzá az alkalmazáshoz. Például használhatod a következő promptot, hogy új képernyőt adj hozzá az alkalmazáshoz: **_Egy képernyőt szeretnék hozzáadni, hogy e-maileket küldhessek a diákoknak_**. Kattints a **Küldés** gombra, hogy elküldd a promptot az AI Copilotnak.
 
-![Új képernyő hozzáadása prompt utasítással](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.hu.png)
+![Új képernyő hozzáadása prompt utasítással](../../../translated_images/hu/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. Az AI Copilot generálni fog egy új képernyőt, és ezután testre szabhatod a képernyőt az igényeid szerint.
 
@@ -139,15 +139,15 @@ A Dataverse-ben történő tábla létrehozásához a Copilot segítségével k�
 
 2. A bal oldali navigációs sávban válassza a **Táblák** lehetőséget, majd kattintson az **Új tábla leírása** gombra.
 
-![Új tábla kiválasztása](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.hu.png)
+![Új tábla kiválasztása](../../../translated_images/hu/describe-new-table.0792373eb757281e.webp)
 
 3. Az **Új tábla leírása** képernyőn használja a szövegmezőt a létrehozni kívánt tábla leírására. Például: **_Egy táblát szeretnék létrehozni a számlainformációk tárolására_**. Kattintson a **Küldés** gombra, hogy elküldje a kérést az AI Copilotnak.
 
-![A tábla leírása](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.hu.png)
+![A tábla leírása](../../../translated_images/hu/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. Az AI Copilot javasolni fog egy Dataverse táblát a szükséges mezőkkel, amelyekkel tárolhatja a nyomon követni kívánt adatokat, valamint néhány mintaadatot. Ezután testre szabhatja a táblát az AI Copilot asszisztens funkció segítségével, beszélgetéses lépések révén.
 
-![Javasolt Dataverse tábla](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.hu.png)
+![Javasolt Dataverse tábla](../../../translated_images/hu/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. A pénzügyi csapat szeretne e-mailt küldeni a beszállítónak, hogy tájékoztassa őket számlájuk aktuális állapotáról. A Copilot segítségével új mezőt adhat a táblához a beszállító e-mail címének tárolására. Például használhatja a következő kérést egy új mező hozzáadásához a táblához: **_Egy oszlopot szeretnék hozzáadni a beszállító e-mail címének tárolására_**. Kattintson a **Küldés** gombra, hogy elküldje a kérést az AI Copilotnak.
 
@@ -176,7 +176,7 @@ Néhány előre elkészített AI modell, amely elérhető a Power Platformban:
 
 Az egyedi AI modellekkel saját modellt hozhat az AI Builderbe, hogy az úgy működjön, mint bármely AI Builder egyedi modell, lehetővé téve a modell képzését saját adatokkal. Ezeket a modelleket folyamatok automatizálására és eredmények előrejelzésére használhatja mind a Power Apps-ben, mind a Power Automate-ben. Saját modell használata esetén bizonyos korlátozások érvényesek. További információért olvassa el ezeket a [korlátozásokat](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder modellek](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.hu.png)
+![AI builder modellek](../../../translated_images/hu/ai-builder-models.8069423b84cfc47f.webp)
 
 ## 2. feladat - Számlafeldolgozási folyamat létrehozása a startupunk számára
 
@@ -190,7 +190,7 @@ A Számlafeldolgozási AI Modell használatával történő munkafolyamat létre
 
 2. Használja a kezdőképernyőn található szövegmezőt a létrehozni kívánt munkafolyamat leírására. Például: **_Feldolgozzon egy számlát, amikor az megérkezik a postafiókomba_**. Kattintson a **Küldés** gombra, hogy elküldje a kérést az AI Copilotnak.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.hu.png)
+   ![Copilot power automate](../../../translated_images/hu/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. Az AI Copilot javasolni fogja azokat a lépéseket, amelyek szükségesek az automatizálni kívánt feladat elvégzéséhez. Kattintson a **Tovább** gombra, hogy végigmenjen a következő lépéseken.
 
@@ -204,7 +204,7 @@ A Számlafeldolgozási AI Modell használatával történő munkafolyamat létre
 
 8. Távolítsa el a **Feltétel** műveletet a folyamatból, mivel ezt nem fogja használni. A folyamatnak a következő képernyőképhez hasonlóan kell kinéznie:
 
-   ![power automate, műveletek eltávolítása](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.hu.png)
+   ![power automate, műveletek eltávolítása](../../../translated_images/hu/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Kattintson az **Új művelet hozzáadása** gombra, és keressen rá a **Dataverse**-re. Válassza az **Új sor hozzáadása** műveletet.
 
@@ -219,7 +219,7 @@ A Számlafeldolgozási AI Modell használatával történő munkafolyamat létre
     - Állapot - Állítsa az **Állapotot** **Függőben**-re.
     - Beszállító e-mail - Használja a **Feladó** dinamikus tartalmat a **Amikor új e-mail érkezik** indítóból.
 
-    ![power automate új sor hozzáadása](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.hu.png)
+    ![power automate új sor hozzáadása](../../../translated_images/hu/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Miután elkészült a folyamattal, kattintson a **Mentés** gombra a folyamat mentéséhez. Ezután tesztelheti a folyamatot úgy, hogy küld egy e-mailt egy számlával a triggerben megadott mappába.
 
@@ -233,7 +233,7 @@ A GPT modellek hatalmas mennyiségű adaton történő kiterjedt képzésen menn
 
 Például létrehozhat folyamatokat, amelyek automatikusan generálnak szöveget különféle felhasználási esetekhez, például e-mail vázlatokhoz, termékleírásokhoz és más célokra. A modellt arra is használhatja, hogy szöveget generáljon különféle alkalmazásokhoz, például chatbotokhoz és ügyfélszolgálati alkalmazásokhoz, amelyek lehetővé teszik az ügyfélszolgálati munkatársak számára, hogy hatékonyan és eredményesen válaszoljanak az ügyfélkérdésekre.
 
-![kérés létrehozása](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.hu.png)
+![kérés létrehozása](../../../translated_images/hu/create-prompt-gpt.69d429300c2e870a.webp)
 
 Ha szeretne többet megtudni ennek az AI Modellnek a Power Automate-ben történő használatáról, tekintse meg az [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modult.
 

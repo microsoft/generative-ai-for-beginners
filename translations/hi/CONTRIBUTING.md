@@ -63,7 +63,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 उदाहरण के लिए, जब आप अपनी फाइलों में किसी लिंक पर होवर करेंगे, तो आपको **ctrl + click** दबाकर लिंक को फॉलो करने का विकल्प मिलेगा।
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.hi.png)
+![VS code follow links screenshot](../../translated_images/hi/vscode-follow-link.85520ab6a1237adc.webp)
 
 यदि आप किसी लिंक पर क्लिक करते हैं और वह लोकल रूप से काम नहीं करता, तो निश्चित रूप से यह वर्कफ़्लो को ट्रिगर करेगा और GitHub पर भी काम नहीं करेगा।
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 जब आप `./` या `../` टाइप करते हैं, तो VS कोड आपको उपलब्ध विकल्पों में से चुनने का सुझाव देगा।
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.hi.png)
+![VS code select relative path screenshot](../../translated_images/hi/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 अपनी पसंदीदा फाइल या फोल्डर पर क्लिक करके पथ का पालन करें और आप सुनिश्चित हो जाएंगे कि आपका पथ टूटा हुआ नहीं है।
 
@@ -88,7 +88,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि नहीं, तो आपको निम्न त्रुटि मिल सकती है।
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.hi.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/hi/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 इस समस्या को ठीक करने के लिए, उस फाइल पथ को खोलें जिसे वर्कफ़्लो ने हाइलाइट किया है और सापेक्ष पथों के अंत में ट्रैकिंग ID जोड़ें।
 
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि नहीं, तो आपको निम्न त्रुटि मिल सकती है।
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.hi.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/hi/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 इस समस्या को ठीक करने के लिए, उस फाइल पथ को खोलें जिसे वर्कफ़्लो ने हाइलाइट किया है और URLs के अंत में ट्रैकिंग ID जोड़ें।
 
@@ -122,7 +122,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यदि नहीं, तो आपको निम्न त्रुटि मिल सकती है।
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.hi.png)
+![GitHub check country locale comment screenshot](../../translated_images/hi/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 इस समस्या को ठीक करने के लिए, उस फाइल पथ को खोलें जिसे वर्कफ़्लो ने हाइलाइट किया है और URLs से देश लोकल हटा दें।
 

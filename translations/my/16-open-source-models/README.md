@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "my"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.my.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/my/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## နိဒါန်း
 
@@ -41,12 +41,12 @@ LLM များ ဖန်တီးခြင်းသည် ဆော့ဖ်�
 
 **ကုန်ကျစရိတ်** - ဤမော်ဒယ်များကို အသုံးပြုခြင်းနှင့် တပ်ဆင်ခြင်းအတွက် တိုကင်တစ်ခုလျှင် ကုန်ကျစရိတ်သည် ပိုင်ဆိုင်မှုမော်ဒယ်များထက် နည်းပါးသည်။ Generative AI အက်ပလီကေးရှင်းများ တည်ဆောက်ရာတွင် သင့်အသုံးပြုမှုအပေါ် မော်ဒယ်များ၏ စွမ်းဆောင်ရည်နှင့် စျေးနှုန်းကို နှိုင်းယှဉ်စဉ်းစားသင့်သည်။
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.my.png)
+![Model Cost](../../../translated_images/my/model-price.3f5a3e4d32ae00b4.webp)
 အရင်းအမြစ် - Artificial Analysis
 
 **တိုးတက်မှုအလွယ်တကူ** - အဖွင့်မော်ဒယ်များနှင့်အတူ အမျိုးမျိုးသော မော်ဒယ်များကို အသုံးပြုခြင်း သို့မဟုတ် ပေါင်းစပ်အသုံးပြုခြင်းတွင် လွယ်ကူသည်။ ဥပမာမှာ [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) ဖြစ်ပြီး၊ အသုံးပြုသူသည် မော်ဒယ်ကို တိုက်ရိုက် အသုံးပြုသူအင်တာဖေ့စ်တွင် ရွေးချယ်နိုင်သည်။
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.my.png)
+![Choose Model](../../../translated_images/my/choose-model.f095d15bbac92214.webp)
 
 ## အမျိုးမျိုးသော အဖွင့်မော်ဒယ်များ ရှာဖွေခြင်း
 
@@ -74,7 +74,7 @@ Falcon ၏ fine-tuned ဥပမာများတွင် အဖွင့်မ
 
 အမျိုးမျိုးသော LLM များကို နှိုင်းယှဉ်လိုပါက [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) သည် ထပ်မံကောင်းမွန်သော အရင်းအမြစ်ဖြစ်သည်။
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.my.png)
+![Model Quality](../../../translated_images/my/model-quality.aaae1c22e00f7ee1.webp)
 အရင်းအမြစ် - Artificial Analysis
 
 သတ်မှတ်ထားသော အသုံးပြုမှုအတွက် အထူးပြု fine-tuned ဗားရှင်းများ ရှာဖွေရန် သင့်တော်သည်။ မျိုးစုံသော အဖွင့်မော်ဒယ်များနှင့် စမ်းသပ်၍ သင့်နှင့် သင့်အသုံးပြုသူများ၏ မျှော်မှန်းချက်အတိုင်း စွမ်းဆောင်ရည်ကို ကြည့်ရှုခြင်းသည် ကောင်းမွန်သော လေ့လာမှုဖြစ်သည်။

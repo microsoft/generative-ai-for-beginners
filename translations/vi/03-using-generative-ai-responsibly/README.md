@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Sử dụng AI Tạo Nội Dung một cách Có Trách Nhiệm
 
-[![Sử dụng AI Tạo Nội Dung một cách Có Trách Nhiệm](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.vi.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Sử dụng AI Tạo Nội Dung một cách Có Trách Nhiệm](../../../translated_images/vi/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Nhấn vào hình ảnh trên để xem video của bài học này_
 
@@ -85,7 +85,7 @@ Những loại đầu ra này không chỉ phá hoại việc xây dựng trải
 
 Bây giờ chúng ta đã xác định được tầm quan trọng của AI Tạo Nội Dung Có Trách Nhiệm, hãy cùng xem 4 bước chúng ta có thể thực hiện để xây dựng các giải pháp AI của mình một cách có trách nhiệm:
 
-![Chu trình Giảm thiểu](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.vi.png)
+![Chu trình Giảm thiểu](../../../translated_images/vi/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Đo lường các tác hại tiềm ẩn
 
@@ -97,7 +97,7 @@ Vì startup của chúng ta đang xây dựng một sản phẩm giáo dục, s�
 
 Bây giờ là lúc tìm cách để chúng ta có thể ngăn chặn hoặc hạn chế tác hại tiềm ẩn do mô hình và các phản hồi của nó gây ra. Chúng ta có thể xem xét điều này ở 4 lớp khác nhau:
 
-![Các lớp Giảm thiểu](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.vi.png)
+![Các lớp Giảm thiểu](../../../translated_images/vi/mitigation-layers.377215120b9a1159.webp)
 
 - **Mô hình**. Lựa chọn mô hình phù hợp với trường hợp sử dụng. Các mô hình lớn và phức tạp hơn như GPT-4 có thể gây ra nhiều rủi ro về nội dung gây hại hơn khi áp dụng cho các trường hợp sử dụng nhỏ hơn và cụ thể hơn. Sử dụng dữ liệu đào tạo của bạn để tinh chỉnh cũng giảm thiểu rủi ro về nội dung gây hại.
 

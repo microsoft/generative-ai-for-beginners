@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ml"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.ml.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/ml/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## പരിചയം
 
@@ -33,7 +33,7 @@ AI ഏജന്റുകൾ ജനറേറ്റീവ് AI ലോകത്ത
 
 AI ഏജന്റുകൾ വലിയ ഭാഷാ മോഡലുകൾ (LLMs) **സ്റ്റേറ്റ്**ക്കും **ടൂളുകൾ**ക്കും ആക്‌സസ് നൽകിക്കൊണ്ട് പ്രവർത്തനങ്ങൾ നിർവഹിക്കാൻ അനുവദിക്കുന്നു.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.ml.png)
+![Agent Model](../../../translated_images/ml/what-agent.21f2893bdfd01e6a.webp)
 
 ഈ പദങ്ങൾ നിർവചിക്കാം:
 
@@ -53,7 +53,7 @@ AI ഏജന്റുകൾ വലിയ ഭാഷാ മോഡലുകൾ (LLM
 
 `Agent Executor` ചാറ്റ് ചരിത്രം സൂക്ഷിച്ച് ചാറ്റിന്റെ സാന്ദർഭം നൽകുന്നു.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.ml.png)
+![Langchain Agents](../../../translated_images/ml/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain ഒരു [ടൂൾ കാറ്റലോഗ്](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) നൽകുന്നു, ഇത് നിങ്ങളുടെ അപ്ലിക്കേഷനിലേക്ക് ഇറക്കുമതി ചെയ്ത് LLM-കൾക്ക് ആക്‌സസ് നൽകാം. ഇവ കമ്മ്യൂണിറ്റിയും LangChain ടീമും നിർമ്മിച്ചവയാണ്.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 പ്രക്രിയയുടെ ഉദാഹരണം:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.ml.png)
+![AutoGen](../../../translated_images/ml/autogen.dee9a25a45fde584.webp)
 
 #### സിസ്റ്റം സന്ദേശത്തോടെ LLM നിർവചനം
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 പ്രവർത്തനങ്ങൾ പൂർത്തിയാക്കാൻ `Planner`-ന് `Plugins` എന്ന ടൂൾസിന്റെ ശേഖരം ലഭ്യമാണ്. ഇത് Python ക്ലാസ്സുകളോ പൊതുവായ കോഡ് ഇന്റർപ്രിറ്ററോ ആയിരിക്കും. ഈ പ്ലഗിനുകൾ എമ്പെഡിംഗുകളായി സൂക്ഷിക്കപ്പെടുന്നു, അതിലൂടെ LLM ശരിയായ പ്ലഗിൻ കണ്ടെത്താൻ സഹായിക്കുന്നു.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.ml.png)
+![Taskweaver](../../../translated_images/ml/taskweaver.da8559999267715a.webp)
 
 അനോമലി ഡിറ്റക്ഷൻ കൈകാര്യം ചെയ്യുന്ന പ്ലഗിൻ ഉദാഹരണം:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 അവസാന ഏജന്റ് ഫ്രെയിംവർക്കാണ് [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). JARVIS-ന്റെ പ്രത്യേകത LLM സംഭാഷണത്തിന്റെ `സ്റ്റേറ്റ്` കൈകാര്യം ചെയ്യുകയും `ടൂളുകൾ` മറ്റ് AI മോഡലുകളായിരിക്കുകയും ചെയ്യുന്നു. ഓരോ AI മോഡലും പ്രത്യേക പ്രവർത്തനങ്ങൾ നിർവഹിക്കുന്ന പ്രത്യേക മോഡലുകളാണ്, ഉദാഹരണത്തിന് ഒബ്ജക്റ്റ് ഡിറ്റക്ഷൻ, ട്രാൻസ്ക്രിപ്ഷൻ, ഇമേജ് ക്യാപ്ഷനിംഗ്.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.ml.png)
+![JARVIS](../../../translated_images/ml/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, ഒരു പൊതുവായ മോഡലായി, ഉപയോക്താവിന്റെ അഭ്യർത്ഥന സ്വീകരിച്ച് പ്രത്യേക പ്രവർത്തനം തിരിച്ചറിയുകയും പൂർത്തിയാക്കാൻ ആവശ്യമായ ഡാറ്റ/ആർഗ്യുമെന്റുകൾ കണ്ടെത്തുകയും ചെയ്യുന്നു.
 

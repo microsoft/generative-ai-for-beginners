@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Изградња апликација за генерисање слика
 
-[![Изградња апликација за генерисање слика](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.sr.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Изградња апликација за генерисање слика](../../../translated_images/sr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Генеративни језички модели (LLM) нису ограничени само на генерисање текста. Могуће је генерисати и слике на основу текстуалних описа. Имање слика као модалитета може бити изузетно корисно у бројним областима као што су медицинска технологија, архитектура, туризам, развој игара и многе друге. У овом поглављу, погледаћемо два најпопуларнија модела за генерисање слика, DALL-E и Midjourney.
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ево шта би студенти Edu4All-а могли да креирају, на пример, ако раде на часу о споменицима:
 
-![Edu4All стартап, час о споменицима, Ајфелова кула](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.sr.png)
+![Edu4All стартап, час о споменицима, Ајфелова кула](../../../translated_images/sr/startup.94d6b79cc4bb3f5a.webp)
 
 користећи промпт као што је:
 
@@ -273,9 +273,9 @@ _Ауторегресивни трансформер_ дефинише како 
   Основна слика би садржавала само салон са базеном, али коначна слика би имала фламинга:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.sr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.sr.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.sr.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/sr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ _Ауторегресивни трансформер_ дефинише како 
 
 > Промпт: "Зец на коњу, држи лизалицу, на магловитој ливади где расту нарциси"
 
-![Зец на коњу држи лизалицу, верзија 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.sr.png)
+![Зец на коњу држи лизалицу, верзија 1](../../../translated_images/sr/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Сада покренимо исти промпт само да видимо да нећемо добити исту слику два пута:
 
-![Генерисана слика зеца на коњу](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.sr.png)
+![Генерисана слика зеца на коњу](../../../translated_images/sr/v2-generated-image.33f55a3714efe61d.webp)
 
 Као што видите, слике су сличне, али нису исте. Покушајмо да променимо вредност температуре на 0.1 и видимо шта ће се десити:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Сада када покренете овај код, добијате ове две слике:
 
-- ![Температура 0, в1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.sr.png)
-- ![Температура 0 , в2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.sr.png)
+- ![Температура 0, в1](../../../translated_images/sr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Температура 0 , в2](../../../translated_images/sr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Овде јасно можете видети како се слике више међусобно подударају.
 

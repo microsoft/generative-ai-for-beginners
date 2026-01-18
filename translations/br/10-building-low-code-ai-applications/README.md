@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construindo Aplicações de IA com Baixo Código
 
-[![Construindo Aplicações de IA com Baixo Código](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.br.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Construindo Aplicações de IA com Baixo Código](../../../translated_images/br/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
@@ -92,17 +92,17 @@ Você criará o aplicativo usando o Copilot no Power Apps seguindo os passos aba
 
 1. Use a área de texto na tela inicial para descrever o aplicativo que deseja criar. Por exemplo, **_Quero criar um aplicativo para rastrear e gerenciar tarefas de estudantes_**. Clique no botão **Enviar** para enviar o prompt ao Copilot.
 
-![Descreva o aplicativo que deseja criar](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.br.png)
+![Descreva o aplicativo que deseja criar](../../../translated_images/br/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. O Copilot sugerirá uma tabela do Dataverse com os campos necessários para armazenar os dados que você deseja rastrear e alguns dados de exemplo. Você pode personalizar a tabela para atender às suas necessidades usando o recurso de assistente Copilot por meio de etapas conversacionais.
 
    > **Importante**: O Dataverse é a plataforma de dados subjacente do Power Platform. É uma plataforma de dados de baixo código para armazenar os dados do aplicativo. É um serviço totalmente gerenciado que armazena dados com segurança na nuvem da Microsoft e é provisionado dentro do seu ambiente do Power Platform. Ele vem com recursos integrados de governança de dados, como classificação de dados, linhagem de dados, controle de acesso detalhado e mais. Você pode aprender mais sobre o Dataverse [aqui](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Campos sugeridos na sua nova tabela](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.br.png)
+   ![Campos sugeridos na sua nova tabela](../../../translated_images/br/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Os educadores querem enviar e-mails aos estudantes que enviaram suas tarefas para mantê-los atualizados sobre o progresso de suas tarefas. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do estudante. Por exemplo, você pode usar o seguinte prompt para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do estudante_**. Clique no botão **Enviar** para enviar o prompt ao Copilot.
 
-![Adicionando um novo campo](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.br.png)
+![Adicionando um novo campo](../../../translated_images/br/copilot-new-column.35e15ff21acaf274.webp)
 
 1. O Copilot gerará um novo campo e você poderá personalizar o campo para atender às suas necessidades.
 
@@ -112,7 +112,7 @@ Você criará o aplicativo usando o Copilot no Power Apps seguindo os passos aba
 
 1. Para que os educadores enviem e-mails aos estudantes, você pode usar o Copilot para adicionar uma nova tela ao aplicativo. Por exemplo, você pode usar o seguinte prompt para adicionar uma nova tela ao aplicativo: **_Quero adicionar uma tela para enviar e-mails aos estudantes_**. Clique no botão **Enviar** para enviar o prompt ao Copilot.
 
-![Adicionando uma nova tela via instrução de prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.br.png)
+![Adicionando uma nova tela via instrução de prompt](../../../translated_images/br/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. O Copilot gerará uma nova tela e você poderá personalizar a tela para atender às suas necessidades.
 
@@ -147,15 +147,15 @@ Para criar uma tabela no Dataverse usando o Copilot, siga os passos abaixo:
 
 2. Na barra de navegação à esquerda, selecione **Tabelas** e clique em **Descrever nova tabela**.
 
-![Selecionar nova tabela](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.br.png)
+![Selecionar nova tabela](../../../translated_images/br/describe-new-table.0792373eb757281e.webp)
 
 3. Na tela **Descrever nova tabela**, use a área de texto para descrever a tabela que você deseja criar. Por exemplo, **_Quero criar uma tabela para armazenar informações de faturas_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
-![Descrever a tabela](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.br.png)
+![Descrever a tabela](../../../translated_images/br/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. O AI Copilot sugerirá uma tabela do Dataverse com os campos necessários para armazenar os dados que você deseja acompanhar e alguns dados de exemplo. Você pode personalizar a tabela conforme suas necessidades usando o recurso de assistente do AI Copilot por meio de etapas conversacionais.
 
-![Tabela sugerida pelo Dataverse](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.br.png)
+![Tabela sugerida pelo Dataverse](../../../translated_images/br/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. A equipe financeira quer enviar um e-mail ao fornecedor para atualizá-lo sobre o status atual da fatura. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do fornecedor. Por exemplo, você pode usar o seguinte comando para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do fornecedor_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
@@ -184,7 +184,7 @@ Alguns dos modelos de IA pré-construídos disponíveis no Power Platform inclue
 
 Com os modelos de IA personalizados, você pode trazer seu próprio modelo para o AI Builder para que ele funcione como qualquer modelo personalizado do AI Builder, permitindo que você treine o modelo usando seus próprios dados. Você pode usar esses modelos para automatizar processos e prever resultados tanto no Power Apps quanto no Power Automate. Ao usar seu próprio modelo, existem limitações que se aplicam. Leia mais sobre essas [limitações](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Modelos do AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.br.png)
+![Modelos do AI Builder](../../../translated_images/br/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Tarefa #2 - Criar um Fluxo de Processamento de Faturas para Nossa Startup
 
@@ -198,7 +198,7 @@ Para criar um fluxo de trabalho que ajudará a equipe financeira a processar fat
 
 2. Use a área de texto na tela inicial para descrever o fluxo de trabalho que você deseja criar. Por exemplo, **_Processar uma fatura quando ela chegar na minha caixa de entrada_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.br.png)
+   ![Copilot power automate](../../../translated_images/br/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. O AI Copilot sugerirá as ações necessárias para realizar a tarefa que você deseja automatizar. Você pode clicar no botão **Próximo** para seguir para as próximas etapas.
 
@@ -212,7 +212,7 @@ Para criar um fluxo de trabalho que ajudará a equipe financeira a processar fat
 
 8. Remova a ação **Condição** do fluxo, pois você não a usará. Deve ficar como na captura de tela a seguir:
 
-   ![power automate, remover ações](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.br.png)
+   ![power automate, remover ações](../../../translated_images/br/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Clique no botão **Adicionar uma ação** e procure por **Dataverse**. Selecione a ação **Adicionar uma nova linha**.
 
@@ -227,7 +227,7 @@ Para criar um fluxo de trabalho que ajudará a equipe financeira a processar fat
     - Status - Defina o **Status** como **Pendente**.
     - E-mail do Fornecedor - Use o conteúdo dinâmico **De** do gatilho **Quando um novo e-mail chegar**.
 
-    ![power automate adicionar linha](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.br.png)
+    ![power automate adicionar linha](../../../translated_images/br/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Quando terminar de configurar o fluxo, clique no botão **Salvar** para salvar o fluxo. Você pode testar o fluxo enviando um e-mail com uma fatura para a pasta que você especificou no gatilho.
 
@@ -241,7 +241,7 @@ Os modelos GPT passam por um treinamento extenso em grandes volumes de dados, pe
 
 Por exemplo, você pode criar fluxos para gerar automaticamente textos para diversos casos de uso, como: rascunhos de e-mails, descrições de produtos e muito mais. Você também pode usar o modelo para gerar textos para diversos aplicativos, como chatbots e aplicativos de atendimento ao cliente que permitem que agentes de atendimento respondam de forma eficaz e eficiente às consultas dos clientes.
 
-![criar um comando](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.br.png)
+![criar um comando](../../../translated_images/br/create-prompt-gpt.69d429300c2e870a.webp)
 
 Para aprender como usar este modelo de IA no Power Automate, acesse o módulo [Adicionar inteligência com AI Builder e GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

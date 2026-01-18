@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bygge applikasjoner for bildegenerering
 
-[![Bygge applikasjoner for bildegenerering](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.no.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Bygge applikasjoner for bildegenerering](../../../translated_images/no/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-er handler om mer enn tekstgenerering. Det er også mulig å generere bilder fra tekstbeskrivelser. Å ha bilder som en modalitet kan være svært nyttig innen en rekke områder som MedTech, arkitektur, turisme, spillutvikling og mer. I dette kapittelet skal vi se nærmere på de to mest populære modellene for bildegenerering, DALL-E og Midjourney.
 
@@ -43,7 +43,7 @@ Som en del av denne leksjonen skal vi fortsette å jobbe med vår oppstart, Edu4
 
 Her er et eksempel på hva Edu4Alls studenter kan generere hvis de jobber i klassen med monumenter:
 
-![Edu4All oppstart, klasse om monumenter, Eiffeltårnet](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.no.png)
+![Edu4All oppstart, klasse om monumenter, Eiffeltårnet](../../../translated_images/no/startup.94d6b79cc4bb3f5a.webp)
 
 ved å bruke en prompt som
 
@@ -273,9 +273,9 @@ Her er et eksempel ved bruk av GPT Image:
   Grunnbildet vil bare inneholde loungen med bassenget, men det endelige bildet vil ha en flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.no.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.no.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.no.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/no/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ La oss se på et eksempel på hvordan temperatur fungerer, ved å kjøre denne p
 
 > Prompt : "Kanin på hest, holder en kjærlighet på pinne, på en tåkete eng hvor det vokser påskeliljer"
 
-![Kanin på en hest som holder en kjærlighet på pinne, versjon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.no.png)
+![Kanin på en hest som holder en kjærlighet på pinne, versjon 1](../../../translated_images/no/v1-generated-image.a295cfcffa3c13c2.webp)
 
 La oss nå kjøre den samme prompten bare for å se at vi ikke får det samme bildet to ganger:
 
-![Generert bilde av kanin på hest](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.no.png)
+![Generert bilde av kanin på hest](../../../translated_images/no/v2-generated-image.33f55a3714efe61d.webp)
 
 Som du kan se, er bildene like, men ikke identiske. La oss prøve å endre temperaturverdien til 0,1 og se hva som skjer:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Nå, når du kjører denne koden, får du disse to bildene:
 
-- ![Temperatur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.no.png)
-- ![Temperatur 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.no.png)
+- ![Temperatur 0, v1](../../../translated_images/no/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatur 0 , v2](../../../translated_images/no/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Her kan du tydelig se hvordan bildene ligner hverandre mer.
 

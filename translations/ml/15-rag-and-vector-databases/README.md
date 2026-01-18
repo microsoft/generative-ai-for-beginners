@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/15-lesson-banner.ac49e59506175d4fc6ce521561dab2f9ccc6187410236376cfaed13cde371b90.ml.png)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/ml/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 സേർച്ച് ആപ്ലിക്കേഷനുകൾ പാഠത്തിൽ, നിങ്ങളുടെ സ്വന്തം ഡാറ്റയെ Large Language Models (LLMs) ൽ എങ്ങനെ സംയോജിപ്പിക്കാമെന്ന് ഞങ്ങൾ സംക്ഷിപ്തമായി പഠിച്ചു. ഈ പാഠത്തിൽ, നിങ്ങളുടെ LLM ആപ്ലിക്കേഷനിൽ നിങ്ങളുടെ ഡാറ്റയെ ഗ്രൗണ്ടുചെയ്യുന്നതിനുള്ള ആശയങ്ങൾ, പ്രക്രിയയുടെ മെക്കാനിക്സ്, ഡാറ്റ സംഭരിക്കുന്ന രീതികൾ ഉൾപ്പെടെ, എമ്പെഡിംഗുകളും ടെക്സ്റ്റും ഉൾപ്പെടെ, കൂടുതൽ വിശദമായി പരിശോധിക്കും.
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAGs (Retrieval Augmented Generation) എങ്ങനെ പ്രവർത്തിക്കുന്നു
 
-![drawing showing how RAGs work](../../../translated_images/how-rag-works.f5d0ff63942bd3a638e7efee7a6fce7f0787f6d7a1fca4e43f2a7a4d03cde3e0.ml.png)
+![drawing showing how RAGs work](../../../translated_images/ml/how-rag-works.f5d0ff63942bd3a6.webp)
 
 നിങ്ങൾ നിങ്ങളുടെ നോട്ടുകളിൽ നിന്നുള്ള ക്വിസുകൾ സൃഷ്ടിക്കുന്ന ഒരു ചാറ്റ്ബോട്ട് വിന്യസിക്കാൻ ആഗ്രഹിക്കുന്നുവെന്ന് കരുതുക, നിങ്ങൾക്ക് അറിവ് അടിസ്ഥാനവുമായി കണക്ഷൻ ആവശ്യമുണ്ട്. ഇതാണ് RAG സഹായിക്കുന്ന സ്ഥലം. RAGs ഇങ്ങനെ പ്രവർത്തിക്കുന്നു:
 
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **ഓഗ്മെന്റഡ് ജനറേഷൻ:** LLM തിരികെ കൊണ്ടുവന്ന ഡാറ്റയുടെ അടിസ്ഥാനത്തിൽ തന്റെ പ്രതികരണം മെച്ചപ്പെടുത്തുന്നു. ഇത് മുൻപരിചയ ഡാറ്റ മാത്രമല്ല, ചേർത്ത കോൺടെക്സ്റ്റിൽ നിന്നുള്ള പ്രസക്തമായ വിവരങ്ങളും ഉൾപ്പെടുത്താൻ അനുവദിക്കുന്നു. തിരികെ കൊണ്ടുവന്ന ഡാറ്റ LLM-ന്റെ പ്രതികരണങ്ങൾ വർദ്ധിപ്പിക്കാൻ ഉപയോഗിക്കുന്നു. LLM പിന്നീട് ഉപയോക്താവിന്റെ ചോദ്യംക്ക് ഉത്തരം നൽകുന്നു.
 
-![drawing showing how RAGs architecture](../../../translated_images/encoder-decode.f2658c25d0eadee2377bb28cf3aee8b67aa9249bf64d3d57bb9be077c4bc4e1a.ml.png)
+![drawing showing how RAGs architecture](../../../translated_images/ml/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG-കളുടെ ആർക്കിടെക്ചർ ട്രാൻസ്ഫോർമറുകൾ ഉപയോഗിച്ച് നടപ്പിലാക്കുന്നു, രണ്ട് ഭാഗങ്ങളുള്ളത്: എൻകോഡർ, ഡികോഡർ. ഉദാഹരണത്തിന്, ഉപയോക്താവ് ചോദ്യം ചോദിക്കുമ്പോൾ, ഇൻപുട്ട് ടെക്സ്റ്റ് വാക്കുകളുടെ അർത്ഥം പിടിച്ചെടുക്കുന്ന വെക്ടറുകളായി 'എൻകോഡ്' ചെയ്യപ്പെടുന്നു, ആ വെക്ടറുകൾ ഡോക്യുമെന്റ് ഇൻഡക്സ് 'ഡികോഡ്' ചെയ്ത് ഉപയോക്തൃ ചോദ്യം അടിസ്ഥാനമാക്കി പുതിയ ടെക്സ്റ്റ് സൃഷ്ടിക്കുന്നു. LLM ഔട്ട്പുട്ട് സൃഷ്ടിക്കാൻ എൻകോഡർ-ഡികോഡർ മോഡൽ ഉപയോഗിക്കുന്നു.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 ചങ്ക് ചെയ്ത ശേഷം, വ്യത്യസ്ത എമ്പെഡിംഗ് മോഡലുകൾ ഉപയോഗിച്ച് ടെക്സ്റ്റ് എമ്പെഡ് ചെയ്യാം. ഉപയോഗിക്കാവുന്ന ചില മോഡലുകൾ: word2vec, OpenAI-യുടെ ada-002, Azure Computer Vision തുടങ്ങിയവ. ഉപയോഗിക്കാനുള്ള മോഡൽ തിരഞ്ഞെടുക്കുന്നത് നിങ്ങൾ ഉപയോഗിക്കുന്ന ഭാഷകൾ, എൻകോഡ് ചെയ്യുന്ന ഉള്ളടക്കത്തിന്റെ തരം (ടെക്സ്റ്റ്/ഇമേജ്/ഓഡിയോ), എൻകോഡ് ചെയ്യാവുന്ന ഇൻപുട്ടിന്റെ വലിപ്പം, എമ്പെഡിംഗ് ഔട്ട്പുട്ടിന്റെ നീളം എന്നിവയെ ആശ്രയിച്ചിരിക്കും.
 
 OpenAI-യുടെ `text-embedding-ada-002` മോഡൽ ഉപയോഗിച്ച് എമ്പെഡ് ചെയ്ത ടെക്സ്റ്റിന്റെ ഉദാഹരണം:
-![an embedding of the word cat](../../../translated_images/cat.74cbd7946bc9ca380a8894c4de0c706a4f85b16296ffabbf52d6175df6bf841e.ml.png)
+![an embedding of the word cat](../../../translated_images/ml/cat.74cbd7946bc9ca38.webp)
 
 ## റിട്രീവൽ ആൻഡ് വെക്ടർ സെർച്ച്
 

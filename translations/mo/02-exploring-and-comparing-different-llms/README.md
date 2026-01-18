@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 探索與比較不同的大型語言模型 (LLM)
 
-[![探索與比較不同的大型語言模型](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.mo.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![探索與比較不同的大型語言模型](../../../translated_images/mo/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _點擊上方圖片觀看本課程影片_
 
@@ -59,13 +59,13 @@ LLM 有許多不同的類型，選擇模型取決於您的用途、數據、預�
 - **它們是非常大的模型**，基於非常深的神經網絡，訓練於數十億個參數。
 - **通常旨在作為其他模型的“基礎”**，意味著它們可以作為其他模型的起點，通過微調進一步構建。
 
-![基礎模型與 LLM 的區別](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.mo.png)
+![基礎模型與 LLM 的區別](../../../translated_images/mo/FoundationModel.e4859dbb7a825c94.webp)
 
 圖片來源：[基礎模型與大型語言模型的基本指南 | 作者 Babar M Bhatti | Medium](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 為了進一步澄清這一區別，讓我們以 ChatGPT 為例。要構建 ChatGPT 的第一版，使用了一個名為 GPT-3.5 的模型作為基礎模型。這意味著 OpenAI 使用了一些特定於聊天的數據，創建了一個專門針對對話場景（如聊天機器人）表現良好的 GPT-3.5 微調版本。
 
-![基礎模型](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.mo.png)
+![基礎模型](../../../translated_images/mo/Multimodal.2c389c6439e0fc51.webp)
 
 圖片來源：[2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -83,15 +83,15 @@ LLM 也可以根據其生成的輸出進行分類。
 
 嵌入式模型是一組可以將文本轉換為數值形式（稱為嵌入）的模型，這是一種輸入文本的數值表示。嵌入使機器更容易理解單詞或句子之間的關係，並且可以作為其他模型的輸入，例如分類模型或在數值數據上性能更好的聚類模型。嵌入模型通常用於遷移學習，模型為一個有大量數據的替代任務構建，然後模型權重（嵌入）被重新用於其他下游任務。此類模型的例子包括 [OpenAI 嵌入](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)。
 
-![嵌入](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.mo.png)
+![嵌入](../../../translated_images/mo/Embedding.c3708fe988ccf760.webp)
 
 圖像生成模型是生成圖像的模型。這些模型通常用於圖像編輯、圖像合成和圖像翻譯。圖像生成模型通常訓練於大型圖像數據集，例如 [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)，可以用於生成新圖像或使用修補、超解析度和著色技術編輯現有圖像。例子包括 [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) 和 [Stable Diffusion 模型](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)。
 
-![圖像生成](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.mo.png)
+![圖像生成](../../../translated_images/mo/Image.349c080266a763fd.webp)
 
 文本與程式碼生成模型是生成文本或程式碼的模型。這些模型通常用於文本摘要、翻譯和問答。文本生成模型通常訓練於大型文本數據集，例如 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)，可以用於生成新文本或回答問題。程式碼生成模型，如 [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)，通常訓練於大型程式碼數據集，例如 GitHub，可以用於生成新程式碼或修復現有程式碼中的錯誤。
 
-![文本與程式碼生成](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.mo.png)
+![文本與程式碼生成](../../../translated_images/mo/Text.a8c0cf139e5cc2a0.webp)
 
 ### 編碼器-解碼器 vs 僅解碼器
 
@@ -122,23 +122,23 @@ LLM 也可以根據其生成的輸出進行分類。
 
 - 在目錄中找到感興趣的基礎模型——無論是專有模型還是開源模型，並根據任務、許可證或名稱進行篩選。為了提高搜索效率，這些模型被組織成不同的集合，例如 Azure OpenAI 集合、Hugging Face 集合等。
 
-![模型目錄](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.mo.png)
+![模型目錄](../../../translated_images/mo/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - 查看模型卡，包括詳細的用途描述和訓練數據、代碼範例以及內部評估庫中的評估結果。
 
-![模型卡](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.mo.png)
+![模型卡](../../../translated_images/mo/ModelCard.598051692c6e400d.webp)
 
 - 通過 [模型基準](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) 面板比較行業內可用的模型和數據集基準，以評估哪個模型最符合業務場景。
 
-![模型基準](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.mo.png)
+![模型基準](../../../translated_images/mo/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - 利用 Azure AI Studio 的實驗和追蹤功能，使用自定義訓練數據微調模型，以提高模型在特定工作負載中的性能。
 
-![模型微調](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.mo.png)
+![模型微調](../../../translated_images/mo/FineTuning.aac48f07142e36fd.webp)
 
 - 部署原始的預訓練模型或微調版本到遠程實時推理——管理計算資源——或無伺服器 API 端點——[按需付費](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst)——以便應用程序能夠使用它。
 
-![模型部署](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.mo.png)
+![模型部署](../../../translated_images/mo/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > 目錄中的所有模型目前並不都支持微調和/或按需付費部署。請查看模型卡以了解模型的功能和限制。
@@ -157,7 +157,7 @@ LLM 也可以根據其生成的輸出進行分類。
 
 - **微調模型**。這種方法是基於您的數據進一步訓練模型，使模型更精確並更符合您的需求，但可能成本較高。
 
-![LLM 部署](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.mo.png)
+![LLM 部署](../../../translated_images/mo/Deploy.18b2d27412ec8c02.webp)
 
 圖片來源：[企業部署 LLM 的四種方式 | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 生成AIを責任を持って使用する
 
-[![生成AIを責任を持って使用する](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.ja.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![生成AIを責任を持って使用する](../../../translated_images/ja/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _上の画像をクリックして、このレッスンの動画をご覧ください_
 
@@ -85,7 +85,7 @@ AI、特に生成AIに魅了されるのは簡単ですが、それを責任を�
 
 責任ある生成AIの重要性を認識したところで、AIソリューションを責任を持って構築するために取るべき4つのステップを見てみましょう：
 
-![軽減サイクル](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.ja.png)
+![軽減サイクル](../../../translated_images/ja/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### 潜在的な害を測定する
 
@@ -97,7 +97,7 @@ AI、特に生成AIに魅了されるのは簡単ですが、それを責任を�
 
 次に、モデルとその応答によって引き起こされる可能性のある害を防止または制限する方法を見つける時です。これを4つの異なる層で考えることができます：
 
-![軽減層](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.ja.png)
+![軽減層](../../../translated_images/ja/mitigation-layers.377215120b9a1159.webp)
 
 - **モデル**. 適切なユースケースに適したモデルを選択すること。GPT-4のような大規模で複雑なモデルは、より小規模で特定のユースケースに適用すると有害なコンテンツのリスクが高まる可能性があります。トレーニングデータを使用して微調整することで、有害なコンテンツのリスクを軽減することができます。
 

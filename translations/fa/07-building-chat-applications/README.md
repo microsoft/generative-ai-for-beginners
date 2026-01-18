@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ساخت برنامه‌های چت مبتنی بر هوش مصنوعی مولد
 
-[![ساخت برنامه‌های چت مبتنی بر هوش مصنوعی مولد](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.fa.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![ساخت برنامه‌های چت مبتنی بر هوش مصنوعی مولد](../../../translated_images/fa/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(برای مشاهده ویدئوی این درس روی تصویر بالا کلیک کنید)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 یکی از نمونه‌های شخصی‌سازی تنظیمات "دستورالعمل‌های سفارشی" در ChatGPT OpenAI است. این امکان را به شما می‌دهد که اطلاعاتی درباره خودتان ارائه دهید که ممکن است برای درخواست‌های شما مهم باشد. در اینجا یک نمونه از دستورالعمل سفارشی آورده شده است.
 
-![تنظیمات دستورالعمل‌های سفارشی در ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.fa.png)
+![تنظیمات دستورالعمل‌های سفارشی در ChatGPT](../../../translated_images/fa/custom-instructions.b96f59aa69356fcf.webp)
 
 این "پروفایل" ChatGPT را ترغیب می‌کند تا یک برنامه درس درباره لیست‌های پیوندی ایجاد کند. توجه کنید که ChatGPT در نظر می‌گیرد که کاربر ممکن است بخواهد یک برنامه درس عمیق‌تر بر اساس تجربه خود داشته باشد.
 
-![یک درخواست در ChatGPT برای برنامه درس درباره لیست‌های پیوندی](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.fa.png)
+![یک درخواست در ChatGPT برای برنامه درس درباره لیست‌های پیوندی](../../../translated_images/fa/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### چارچوب پیام سیستمی مایکروسافت برای مدل‌های زبان بزرگ
 

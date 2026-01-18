@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Odgovorno korištenje generativne umjetne inteligencije
 
-[![Odgovorno korištenje generativne umjetne inteligencije](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.hr.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Odgovorno korištenje generativne umjetne inteligencije](../../../translated_images/hr/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Kliknite na sliku iznad za pregled videa ove lekcije_
 
@@ -85,7 +85,7 @@ Ove vrste izlaza ne samo da su destruktivne za izgradnju pozitivnog iskustva pro
 
 Sada kada smo identificirali važnost odgovorne generativne umjetne inteligencije, pogledajmo 4 koraka koje možemo poduzeti kako bismo odgovorno izgradili naše AI rješenja:
 
-![Ciklus ublažavanja](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.hr.png)
+![Ciklus ublažavanja](../../../translated_images/hr/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Mjerenje potencijalnih šteta
 
@@ -97,7 +97,7 @@ Budući da naš startup gradi edukacijski proizvod, bilo bi dobro pripremiti pop
 
 Sada je vrijeme da pronađemo načine kako možemo spriječiti ili ograničiti potencijalnu štetu uzrokovanu modelom i njegovim odgovorima. Na to možemo gledati kroz 4 različita sloja:
 
-![Slojevi ublažavanja](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.hr.png)
+![Slojevi ublažavanja](../../../translated_images/hr/mitigation-layers.377215120b9a1159.webp)
 
 - **Model**. Odabir pravog modela za pravi slučaj upotrebe. Veći i složeniji modeli poput GPT-4 mogu predstavljati veći rizik od štetnog sadržaja kada se primjenjuju na manje i specifične slučajeve upotrebe. Korištenje vaših podataka za treniranje modela također smanjuje rizik od štetnog sadržaja.
 

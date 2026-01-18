@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Building Image Generation Applications
 
-[![Building Image Generation Applications](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.en.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Building Image Generation Applications](../../../translated_images/en/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 Large Language Models (LLMs) are not limited to text generation; they can also create images based on text descriptions. Image generation can be incredibly useful in various fields such as MedTech, architecture, tourism, game development, and more. In this chapter, we will explore two of the most popular image generation models: DALL-E and Midjourney.
 
@@ -42,7 +42,7 @@ In this lesson, we will continue working with our startup, Edu4All. Students wil
 
 For example, if Edu4All's students are working on a class project about monuments, they might generate images like this:
 
-![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.en.png)
+![Edu4All startup, class on monuments, Eiffel Tower](../../../translated_images/en/startup.94d6b79cc4bb3f5a.webp)
 
 Using a prompt such as:
 
@@ -268,9 +268,9 @@ Here’s an example using GPT Image:
   The base image might only show a lounge with a pool, but the final image could include a flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.en.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.en.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.en.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/en/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Creating variations**: You can take an existing image and generate variations of it. To do this, provide an image and a text prompt, and use code like this:
@@ -294,11 +294,11 @@ Let’s explore how temperature affects the output by running the same prompt tw
 
 > Prompt: "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![Bunny on a horse holding a lollipop, version 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.en.png)
+![Bunny on a horse holding a lollipop, version 1](../../../translated_images/en/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Now, let’s run the same prompt again to see how the images differ:
 
-![Generated image of bunny on horse](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.en.png)
+![Generated image of bunny on horse](../../../translated_images/en/v2-generated-image.33f55a3714efe61d.webp)
 
 As you can see, the images are similar but not identical. Now, let’s change the temperature value to 0.1 and observe the results:
 
@@ -325,8 +325,8 @@ generation_response = client.images.create(
 
 When you run this code, you will get these two images:
 
-- ![Temperature 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.en.png)
-- ![Temperature 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.en.png)
+- ![Temperature 0, v1](../../../translated_images/en/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0, v2](../../../translated_images/en/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Notice how the images are much more similar to each other.
 

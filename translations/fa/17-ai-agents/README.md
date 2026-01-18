@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-[![مدل‌های متن‌باز](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.fa.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![مدل‌های متن‌باز](../../../translated_images/fa/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## مقدمه
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 عامل‌های هوش مصنوعی به مدل‌های زبانی بزرگ (LLMs) امکان می‌دهند وظایف را با دسترسی به **وضعیت** و **ابزارها** انجام دهند.
 
-![مدل عامل](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.fa.png)
+![مدل عامل](../../../translated_images/fa/what-agent.21f2893bdfd01e6a.webp)
 
 بیایید این اصطلاحات را تعریف کنیم:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 `AgentExecutor` همچنین تاریخچه چت را ذخیره می‌کند تا زمینه چت را فراهم کند.
 
-![عامل‌های LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.fa.png)
+![عامل‌های LangChain](../../../translated_images/fa/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain یک [کاتالوگ ابزارها](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ارائه می‌دهد که می‌توان آن‌ها را به برنامه شما وارد کرد تا LLM به آن‌ها دسترسی پیدا کند. این ابزارها توسط جامعه و تیم LangChain ساخته شده‌اند.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 در اینجا یک مثال از فرآیند آورده شده است:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.fa.png)
+![AutoGen](../../../translated_images/fa/autogen.dee9a25a45fde584.webp)
 
 #### تعریف LLM با پیام سیستمی
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 برای انجام وظایف، `Planner` به مجموعه‌ای از ابزارها به نام `Plugins` دسترسی دارد. این ابزارها می‌توانند کلاس‌های پایتون یا یک مفسر کد عمومی باشند. این پلاگین‌ها به صورت embeddings ذخیره می‌شوند تا LLM بتواند بهتر پلاگین مناسب را جستجو کند.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.fa.png)
+![Taskweaver](../../../translated_images/fa/taskweaver.da8559999267715a.webp)
 
 در اینجا یک مثال از یک پلاگین برای مدیریت تشخیص ناهنجاری آورده شده است:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 آخرین چارچوب عاملی که بررسی خواهیم کرد [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst) است. چیزی که JARVIS را منحصر به فرد می‌کند این است که از یک LLM برای مدیریت `وضعیت` مکالمه استفاده می‌کند و `ابزارها` مدل‌های هوش مصنوعی دیگر هستند. هر یک از مدل‌های هوش مصنوعی مدل‌های تخصصی هستند که وظایف خاصی مانند تشخیص اشیاء، تبدیل متن به گفتار یا توضیح تصاویر را انجام می‌دهند.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.fa.png)
+![JARVIS](../../../translated_images/fa/jarvis.762ddbadbd1a3a33.webp)
 
 LLM، به عنوان یک مدل عمومی، درخواست کاربر را دریافت کرده و وظیفه خاص و هر آرگومان/داده‌ای که برای انجام وظیفه لازم است را شناسایی می‌کند.
 

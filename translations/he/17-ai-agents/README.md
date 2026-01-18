@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "he"
 }
 -->
-[![מודלים בקוד פתוח](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.he.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![מודלים בקוד פתוח](../../../translated_images/he/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## הקדמה
 
@@ -33,7 +33,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 סוכני AI מאפשרים למודלים שפה גדולים (LLMs) לבצע משימות על ידי מתן גישה ל**מצב** ו**כלים**.
 
-![מודל סוכן](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.he.png)
+![מודל סוכן](../../../translated_images/he/what-agent.21f2893bdfd01e6a.webp)
 
 בואו נגדיר את המונחים הללו:
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ה-`AgentExecutor` גם שומר את היסטוריית השיחה כדי לספק את הקשר השיחה.
 
-![סוכני LangChain](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.he.png)
+![סוכני LangChain](../../../translated_images/he/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain מציע [קטלוג כלים](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) שניתן לייבא ליישום שלכם, בו ה-LLM יכול לקבל גישה. כלים אלו נוצרו על ידי הקהילה ועל ידי צוות LangChain.
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 הנה דוגמה לתהליך:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.he.png)
+![AutoGen](../../../translated_images/he/autogen.dee9a25a45fde584.webp)
 
 #### LLM מוגדר עם הודעת מערכת
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 כדי להשלים את המשימות, ה-`Planner` נחשף לאוסף כלים שנקרא `Plugins`. אלו יכולים להיות מחלקות Python או מפרש קוד כללי. הפלאגינים הללו נשמרים כ-embeddings כך שה-LLM יוכל לחפש טוב יותר את הפלאגין הנכון.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.he.png)
+![Taskweaver](../../../translated_images/he/taskweaver.da8559999267715a.webp)
 
 הנה דוגמה לפלאגין לטיפול בזיהוי חריגות:
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 מסגרת הסוכנים האחרונה שנחקור היא [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). מה שהופך את JARVIS לייחודי הוא שהוא משתמש ב-LLM לניהול ה`מצב` של השיחה וה`כלים` הם מודלים AI אחרים. כל אחד ממודלי ה-AI הם מודלים מתמחים שמבצעים משימות מסוימות כמו זיהוי אובייקטים, תמלול או תיאור תמונות.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.he.png)
+![JARVIS](../../../translated_images/he/jarvis.762ddbadbd1a3a33.webp)
 
 ה-LLM, בהיותו מודל כללי, מקבל את הבקשה מהמשתמש ומזהה את המשימה הספציפית ואת כל הפרמטרים/נתונים הדרושים להשלמת המשימה.
 

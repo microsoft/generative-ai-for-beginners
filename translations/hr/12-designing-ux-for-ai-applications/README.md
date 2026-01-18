@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Dizajniranje korisničkog iskustva za AI aplikacije
 
-[![Dizajniranje korisničkog iskustva za AI aplikacije](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.hr.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Dizajniranje korisničkog iskustva za AI aplikacije](../../../translated_images/hr/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Kliknite na sliku iznad za pregled videa ove lekcije)_
 
@@ -58,7 +58,7 @@ Biti pristupačan znači proširiti korisničko iskustvo na korisnike s različi
 
 Biti ugodan znači da je aplikacija užitak za korištenje. Privlačno korisničko iskustvo može imati pozitivan utjecaj na korisnika, potičući ga da se vrati aplikaciji i povećavajući poslovni prihod.
 
-![slika koja ilustrira UX razmatranja u AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.hr.png)
+![slika koja ilustrira UX razmatranja u AI](../../../translated_images/hr/uxinai.d5b4ed690f5cefff.webp)
 
 Nije svaki izazov moguće riješiti pomoću AI-a. AI dolazi kao dopuna vašem korisničkom iskustvu, bilo da se radi o automatizaciji ručnih zadataka ili personalizaciji korisničkog iskustva.
 
@@ -72,25 +72,25 @@ Dva načina za osiguranje povjerenja u dizajnu su objašnjivost i kontrola.
 
 Kada AI pomaže u donošenju odluka, poput prenošenja znanja budućim generacijama, ključno je da učitelji i roditelji razumiju kako se donose AI odluke. To je objašnjivost - razumijevanje kako AI aplikacije donose odluke. Dizajniranje za objašnjivost uključuje dodavanje detalja koji ističu kako je AI došao do rezultata. Publika mora biti svjesna da je rezultat generiran od strane AI-a, a ne čovjeka. Na primjer, umjesto da kažete "Započnite razgovor sa svojim tutorom sada", recite "Koristite AI tutora koji se prilagođava vašim potrebama i pomaže vam učiti vlastitim tempom."
 
-![stranica aplikacije s jasnom ilustracijom objašnjivosti u AI aplikacijama](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.hr.png)
+![stranica aplikacije s jasnom ilustracijom objašnjivosti u AI aplikacijama](../../../translated_images/hr/explanability-in-ai.134426a96b498fbf.webp)
 
 Drugi primjer je kako AI koristi korisničke i osobne podatke. Na primjer, korisnik s personom učenika može imati ograničenja na temelju svoje persone. AI možda neće moći otkriti odgovore na pitanja, ali može pomoći korisniku da razmisli o tome kako može riješiti problem.
 
-![AI odgovara na pitanja na temelju persone](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.hr.png)
+![AI odgovara na pitanja na temelju persone](../../../translated_images/hr/solving-questions.b7dea1604de0cbd2.webp)
 
 Još jedan ključni dio objašnjivosti je pojednostavljenje objašnjenja. Učenici i učitelji možda nisu stručnjaci za AI, stoga objašnjenja o tome što aplikacija može ili ne može učiniti trebaju biti pojednostavljena i lako razumljiva.
 
-![pojednostavljena objašnjenja o sposobnostima AI-a](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.hr.png)
+![pojednostavljena objašnjenja o sposobnostima AI-a](../../../translated_images/hr/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrola
 
 Generativni AI stvara suradnju između AI-a i korisnika, gdje, na primjer, korisnik može mijenjati upite za različite rezultate. Osim toga, nakon što se generira rezultat, korisnici bi trebali moći mijenjati rezultate, dajući im osjećaj kontrole. Na primjer, kada koristite Bing, možete prilagoditi svoj upit na temelju formata, tona i duljine. Osim toga, možete dodati promjene svom rezultatu i modificirati ga, kao što je prikazano dolje:
 
-![Rezultati pretraživanja na Bingu s opcijama za izmjenu upita i rezultata](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.hr.png)
+![Rezultati pretraživanja na Bingu s opcijama za izmjenu upita i rezultata](../../../translated_images/hr/bing1.293ae8527dbe2789.webp)
 
 Još jedna značajka na Bingu koja omogućuje korisniku kontrolu nad aplikacijom je mogućnost uključivanja i isključivanja podataka koje AI koristi. Za školsku aplikaciju, učenik bi mogao željeti koristiti svoje bilješke kao i resurse učitelja kao materijal za ponavljanje gradiva.
 
-![Rezultati pretraživanja na Bingu s opcijama za izmjenu upita i rezultata](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.hr.png)
+![Rezultati pretraživanja na Bingu s opcijama za izmjenu upita i rezultata](../../../translated_images/hr/bing2.309f4845528a88c2.webp)
 
 > Kada dizajnirate AI aplikacije, namjera je ključna za osiguranje da korisnici ne pretjerano vjeruju, postavljajući nerealna očekivanja o njezinim sposobnostima. Jedan od načina za to je stvaranje trenja između upita i rezultata. Podsjetite korisnika da je ovo AI, a ne drugi čovjek.
 
@@ -102,7 +102,7 @@ AI aplikacije trebale bi biti dizajnirane tako da primaju i daju povratne inform
 
 Drugi način za rješavanje ovoga je jasno komuniciranje sposobnosti i ograničenja sustava. Kada korisnik napravi grešku tražeći nešto izvan mogućnosti AI-a, također bi trebao postojati način da se to riješi, kao što je prikazano dolje.
 
-![Davanje povratnih informacija i rješavanje grešaka](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.hr.png)
+![Davanje povratnih informacija i rješavanje grešaka](../../../translated_images/hr/feedback-loops.7955c134429a9466.webp)
 
 Sistemske greške su uobičajene kod aplikacija gdje korisnik možda treba pomoć s informacijama izvan dosega AI-a ili aplikacija može imati ograničenje u broju pitanja/predmeta za koje korisnik može generirati sažetke. Na primjer, AI aplikacija trenirana s podacima o ograničenim predmetima, poput Povijesti i Matematike, možda neće moći obraditi pitanja o Geografiji. Kako bi se to ublažilo, AI sustav može dati odgovor poput: "Nažalost, naš proizvod je treniran s podacima o sljedećim predmetima....., ne mogu odgovoriti na pitanje koje ste postavili."
 

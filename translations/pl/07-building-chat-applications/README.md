@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tworzenie aplikacji czatowych zasilanych przez generatywną sztuczną inteligencję
 
-[![Tworzenie aplikacji czatowych zasilanych przez generatywną sztuczną inteligencję](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.pl.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Tworzenie aplikacji czatowych zasilanych przez generatywną sztuczną inteligencję](../../../translated_images/pl/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
 
@@ -96,11 +96,11 @@ Ogólne zasady UX mają zastosowanie do aplikacji czatowych, ale istnieją dodat
 
 Jednym z przykładów personalizacji są ustawienia „Instrukcje niestandardowe” w ChatGPT od OpenAI. Pozwalają one na podanie informacji o sobie, które mogą być ważnym kontekstem dla Twoich podpowiedzi. Oto przykład instrukcji niestandardowej.
 
-![Ustawienia instrukcji niestandardowych w ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.pl.png)
+![Ustawienia instrukcji niestandardowych w ChatGPT](../../../translated_images/pl/custom-instructions.b96f59aa69356fcf.webp)
 
 Ten „profil” skłania ChatGPT do stworzenia planu lekcji na temat list powiązanych. Zauważ, że ChatGPT bierze pod uwagę, że użytkownik może chcieć bardziej szczegółowego planu lekcji na podstawie swojego doświadczenia.
 
-![Podpowiedź w ChatGPT dotycząca planu lekcji o listach powiązanych](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.pl.png)
+![Podpowiedź w ChatGPT dotycząca planu lekcji o listach powiązanych](../../../translated_images/pl/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Framework wiadomości systemowych Microsoft dla dużych modeli językowych
 

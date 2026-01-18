@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Wprowadzenie do generatywnej sztucznej inteligencji i dużych modeli językowych
 
-[![Wprowadzenie do generatywnej sztucznej inteligencji i dużych modeli językowych](../../../translated_images/01-lesson-banner.2424cfd092f43366707ee2d15749f62f76f80ea3cb0816f4f31d0abd5ffd4dd1.pl.png)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Wprowadzenie do generatywnej sztucznej inteligencji i dużych modeli językowych](../../../translated_images/pl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
 
@@ -43,7 +43,7 @@ Zespół naszego startupu zdaje sobie sprawę, że nie uda nam się osiągnąć 
 
 Generatywna sztuczna inteligencja ma potencjał, aby zrewolucjonizować sposób, w jaki uczymy się i nauczamy. Uczniowie mogą korzystać z wirtualnych nauczycieli dostępnych przez całą dobę, którzy dostarczają ogromne ilości informacji i przykładów, a nauczyciele mogą wykorzystywać innowacyjne narzędzia do oceny swoich uczniów i udzielania im informacji zwrotnej.
 
-![Pięcioro młodych uczniów patrzących na monitor - obraz stworzony przez DALLE2](../../../translated_images/students-by-DALLE2.b70fddaced1042ee47092320243050c4c9a7da78b31eeba515b09b2f0dca009b.pl.png)
+![Pięcioro młodych uczniów patrzących na monitor - obraz stworzony przez DALLE2](../../../translated_images/pl/students-by-DALLE2.b70fddaced1042ee.webp)
 
 Na początek zdefiniujmy kilka podstawowych pojęć i terminów, które będziemy używać w całym programie nauczania.
 
@@ -69,7 +69,7 @@ To właśnie ta technologia napędzała wirtualnych asystentów, którzy pojawil
 
 Tak doszliśmy do dzisiejszej generatywnej sztucznej inteligencji, która może być postrzegana jako podzbiór głębokiego uczenia.
 
-![AI, ML, DL i generatywna AI](../../../translated_images/AI-diagram.c391fa518451a40de58d4f792c88adb8568d8cb4c48eed6e97b6b16e621eeb77.pl.png)
+![AI, ML, DL i generatywna AI](../../../translated_images/pl/AI-diagram.c391fa518451a40d.webp)
 
 Po dekadach badań w dziedzinie AI, nowa architektura modelu – zwana _Transformer_ – pokonała ograniczenia RNN, umożliwiając przetwarzanie znacznie dłuższych sekwencji tekstu jako danych wejściowych. Transformatory opierają się na mechanizmie uwagi, który pozwala modelowi przypisywać różne wagi do otrzymanych danych wejściowych, „zwracając większą uwagę” na najbardziej istotne informacje, niezależnie od ich kolejności w sekwencji tekstowej.
 
@@ -81,7 +81,7 @@ W następnym rozdziale przyjrzymy się różnym typom modeli generatywnej AI, al
 
 - **Tokenizacja, tekst na liczby**: Duże modele językowe otrzymują tekst jako dane wejściowe i generują tekst jako dane wyjściowe. Jednak jako modele statystyczne, lepiej radzą sobie z liczbami niż z sekwencjami tekstowymi. Dlatego każdy tekst wejściowy jest najpierw przetwarzany przez tokenizator, zanim zostanie użyty przez główny model. Token to fragment tekstu – składający się z zmiennej liczby znaków, więc głównym zadaniem tokenizatora jest podzielenie tekstu wejściowego na tablicę tokenów. Następnie każdy token jest mapowany na indeks tokenu, który jest liczbą całkowitą kodującą oryginalny fragment tekstu.
 
-![Przykład tokenizacji](../../../translated_images/tokenizer-example.80a5c151ee7d1bd485eff5aca60ac3d2c1eaaff4c0746e09b98c696c959afbfa.pl.png)
+![Przykład tokenizacji](../../../translated_images/pl/tokenizer-example.80a5c151ee7d1bd4.webp)
 
 - **Przewidywanie tokenów wyjściowych**: Mając n tokenów jako dane wejściowe (gdzie maksymalne n różni się w zależności od modelu), model jest w stanie przewidzieć jeden token jako dane wyjściowe. Ten token jest następnie włączany do danych wejściowych kolejnej iteracji, w rozszerzającym się wzorcu okna, co umożliwia lepsze doświadczenie użytkownika, który otrzymuje jedno (lub kilka) zdań jako odpowiedź. To wyjaśnia, dlaczego, jeśli kiedykolwiek korzystałeś z ChatGPT, mogłeś zauważyć, że czasami wygląda, jakby zatrzymywał się w połowie zdania.
 
@@ -98,23 +98,23 @@ Wejście dużego modelu językowego nazywane jest promptem, a wyjście nazywane 
 
   1. Podsumowanie artykułu, książki, recenzji produktów i innych, wraz z wyciąganiem wniosków z nieustrukturyzowanych danych.
     
-    ![Przykład podsumowania](../../../translated_images/summarization-example.7b7ff97147b3d790477169f442b5e3f8f78079f152450e62c45dbdc23b1423c1.pl.png)
+    ![Przykład podsumowania](../../../translated_images/pl/summarization-example.7b7ff97147b3d790.webp)
   
   2. Kreatywne pomysły i projektowanie artykułu, eseju, zadania lub innych treści.
       
-     ![Przykład kreatywnego pisania](../../../translated_images/creative-writing-example.e24a685b5a543ad1287ad8f6c963019518920e92a1cf7510f354e85b0830fbe8.pl.png)
+     ![Przykład kreatywnego pisania](../../../translated_images/pl/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Pytanie**, zadane w formie rozmowy z agentem.
   
-  ![Przykład rozmowy](../../../translated_images/conversation-example.60c2afc0f595fa599f367d36ccc3909ffc15e1d5265cb33b907d3560f3d03116.pl.png)
+  ![Przykład rozmowy](../../../translated_images/pl/conversation-example.60c2afc0f595fa59.webp)
 
 - Fragment **tekstu do uzupełnienia**, który implikuje prośbę o pomoc w pisaniu.
   
-  ![Przykład uzupełniania tekstu](../../../translated_images/text-completion-example.cbb0f28403d427524f8f8c935f84d084a9765b683a6bf37f977df3adb868b0e7.pl.png)
+  ![Przykład uzupełniania tekstu](../../../translated_images/pl/text-completion-example.cbb0f28403d42752.webp)
 
 - Fragment **kodu** wraz z prośbą o jego wyjaśnienie i dokumentację, lub komentarz z prośbą o wygenerowanie fragmentu kodu wykonującego określone zadanie.
   
-  ![Przykład kodowania](../../../translated_images/coding-example.50ebabe8a6afff20267c91f18aab1957ddd9561ee2988b2362b7365aa6796935.pl.png)
+  ![Przykład kodowania](../../../translated_images/pl/coding-example.50ebabe8a6afff20.webp)
 
 Powyższe przykłady są dość proste i nie mają na celu wyczerpującego przedstawienia możliwości dużych modeli językowych. Mają one na celu pokazanie potencjału wykorzystania generatywnej AI, szczególnie, ale nie tylko, w kontekstach edukacyjnych.
 

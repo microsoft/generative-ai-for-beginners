@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pildigeneratsiooni rakenduste loomine
 
-[![Pildigeneratsiooni rakenduste loomine](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.et.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Pildigeneratsiooni rakenduste loomine](../../../translated_images/et/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-id ei piirdu ainult tekstide genereerimisega. Samuti on võimalik luua pilte tekstikirjelduste põhjal. Pildid kui meedium võivad olla väga kasulikud mitmes valdkonnas, nagu meditsiinitehnoloogia, arhitektuur, turism, mänguarendus ja palju muud. Selles peatükis vaatleme kahte populaarseimat pildigeneratsiooni mudelit, DALL-E ja Midjourney.
 
@@ -43,7 +43,7 @@ Selle õppetüki osana jätkame tööd oma idufirmaga Edu4All. Õpilased loovad 
 
 Näiteks, kui Edu4Alli õpilased töötavad klassis monumentide teemal, võivad nad luua selliseid pilte:
 
-![Edu4All idufirma, klass monumentide teemal, Eiffeli torn](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.et.png)
+![Edu4All idufirma, klass monumentide teemal, Eiffeli torn](../../../translated_images/et/startup.94d6b79cc4bb3f5a.webp)
 
 kasutades sellist küsimust nagu
 
@@ -272,9 +272,9 @@ Siin on näide GPT Image'i kasutamisest:
   Algne pilt sisaldaks ainult basseini ja puhkenurka, kuid lõplik pilt sisaldaks flamingot:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.et.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.et.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.et.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/et/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/et/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/et/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **Loo variatsioone**. Idee seisneb selles, et võtate olemasoleva pildi ja palute luua variatsioone. Variatsiooni loomiseks annate pildi ja tekstiküsimuse ning koodi, näiteks:
@@ -298,11 +298,11 @@ Vaatame näidet, kuidas temperatuur töötab, käivitades selle küsimuse kaks k
 
 > Küsimus: "Jänes hobuse seljas, hoides pulgakommi, udusel niidul, kus kasvavad nartsissid"
 
-![Jänes hobuse seljas, hoides pulgakommi, versioon 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.et.png)
+![Jänes hobuse seljas, hoides pulgakommi, versioon 1](../../../translated_images/et/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Nüüd käivitame sama küsimuse uuesti, et näha, et me ei saa kaks korda täpselt sama pilti:
 
-![Loodud pilt jänesest hobuse seljas](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.et.png)
+![Loodud pilt jänesest hobuse seljas](../../../translated_images/et/v2-generated-image.33f55a3714efe61d.webp)
 
 Nagu näete, on pildid sarnased, kuid mitte identsed. Proovime muuta temperatuuri väärtust 0.1 ja vaatame, mis juhtub:
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 Nüüd, kui käivitate selle koodi, saate need kaks pilti:
 
-- ![Temperatuur 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.et.png)
-- ![Temperatuur 0, v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.et.png)
+- ![Temperatuur 0, v1](../../../translated_images/et/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatuur 0, v2](../../../translated_images/et/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Siin näete selgelt, kuidas pildid sarnanevad rohkem.
 

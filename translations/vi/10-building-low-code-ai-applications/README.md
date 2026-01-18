@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng AI mã thấp
 
-[![Xây dựng ứng dụng AI mã thấp](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.vi.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Xây dựng ứng dụng AI mã thấp](../../../translated_images/vi/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Nhấp vào hình ảnh trên để xem video bài học này)_
 
@@ -92,17 +92,17 @@ Bạn sẽ xây dựng ứng dụng bằng Copilot trong Power Apps theo các b�
 
 1. Sử dụng khu vực văn bản trên màn hình chính để mô tả ứng dụng bạn muốn xây dựng. Ví dụ, **_Tôi muốn xây dựng một ứng dụng để theo dõi và quản lý bài tập của học sinh_**. Nhấp vào nút **Gửi** để gửi prompt đến AI Copilot.
 
-![Mô tả ứng dụng bạn muốn xây dựng](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.vi.png)
+![Mô tả ứng dụng bạn muốn xây dựng](../../../translated_images/vi/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot sẽ gợi ý một bảng Dataverse với các trường bạn cần để lưu trữ dữ liệu bạn muốn theo dõi và một số dữ liệu mẫu. Bạn có thể tùy chỉnh bảng để đáp ứng nhu cầu của mình bằng tính năng trợ lý AI Copilot thông qua các bước hội thoại.
 
    > **Quan trọng**: Dataverse là nền tảng dữ liệu cơ bản cho Power Platform. Đây là một nền tảng dữ liệu mã thấp để lưu trữ dữ liệu của ứng dụng. Đây là một dịch vụ được quản lý hoàn toàn, lưu trữ dữ liệu một cách an toàn trong Microsoft Cloud và được cung cấp trong môi trường Power Platform của bạn. Nó đi kèm với các khả năng quản trị dữ liệu tích hợp, chẳng hạn như phân loại dữ liệu, nguồn gốc dữ liệu, kiểm soát truy cập chi tiết và nhiều hơn nữa. Bạn có thể tìm hiểu thêm về Dataverse [tại đây](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Các trường được gợi ý trong bảng mới của bạn](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.vi.png)
+   ![Các trường được gợi ý trong bảng mới của bạn](../../../translated_images/vi/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Giáo viên muốn gửi email cho học sinh đã nộp bài tập để cập nhật tiến độ bài tập của họ. Bạn có thể sử dụng Copilot để thêm một trường mới vào bảng để lưu trữ email của học sinh. Ví dụ, bạn có thể sử dụng prompt sau để thêm một trường mới vào bảng: **_Tôi muốn thêm một cột để lưu trữ email của học sinh_**. Nhấp vào nút **Gửi** để gửi prompt đến AI Copilot.
 
-![Thêm một trường mới](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.vi.png)
+![Thêm một trường mới](../../../translated_images/vi/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot sẽ tạo một trường mới và bạn có thể tùy chỉnh trường để đáp ứng nhu cầu của mình.
 
@@ -112,7 +112,7 @@ Bạn sẽ xây dựng ứng dụng bằng Copilot trong Power Apps theo các b�
 
 1. Để giáo viên gửi email cho học sinh, bạn có thể sử dụng Copilot để thêm một màn hình mới vào ứng dụng. Ví dụ, bạn có thể sử dụng prompt sau để thêm một màn hình mới vào ứng dụng: **_Tôi muốn thêm một màn hình để gửi email cho học sinh_**. Nhấp vào nút **Gửi** để gửi prompt đến AI Copilot.
 
-![Thêm một màn hình mới qua hướng dẫn prompt](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.vi.png)
+![Thêm một màn hình mới qua hướng dẫn prompt](../../../translated_images/vi/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot sẽ tạo một màn hình mới và bạn có thể tùy chỉnh màn hình để đáp ứng nhu cầu của mình.
 
@@ -147,15 +147,15 @@ Bây giờ bạn đã biết Dataverse là gì và tại sao nên sử dụng n�
 
 2. Trên thanh điều hướng bên trái, chọn **Tables** và sau đó nhấp vào **Describe the new Table**.
 
-![Chọn bảng mới](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.vi.png)
+![Chọn bảng mới](../../../translated_images/vi/describe-new-table.0792373eb757281e.webp)
 
 3. Trên màn hình **Describe the new Table**, sử dụng khu vực văn bản để mô tả bảng bạn muốn tạo. Ví dụ, **_Tôi muốn tạo một bảng để lưu trữ thông tin hóa đơn_**. Nhấp vào nút **Send** để gửi yêu cầu đến AI Copilot.
 
-![Mô tả bảng](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.vi.png)
+![Mô tả bảng](../../../translated_images/vi/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot sẽ gợi ý một bảng Dataverse với các trường bạn cần để lưu trữ dữ liệu mà bạn muốn theo dõi và một số dữ liệu mẫu. Sau đó, bạn có thể tùy chỉnh bảng để phù hợp với nhu cầu của mình bằng tính năng trợ lý AI Copilot thông qua các bước hội thoại.
 
-![Bảng Dataverse được gợi ý](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.vi.png)
+![Bảng Dataverse được gợi ý](../../../translated_images/vi/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Đội ngũ tài chính muốn gửi email cho nhà cung cấp để cập nhật trạng thái hiện tại của hóa đơn. Bạn có thể sử dụng Copilot để thêm một trường mới vào bảng để lưu trữ email của nhà cung cấp. Ví dụ, bạn có thể sử dụng yêu cầu sau để thêm một trường mới vào bảng: **_Tôi muốn thêm một cột để lưu trữ email của nhà cung cấp_**. Nhấp vào nút **Send** để gửi yêu cầu đến AI Copilot.
 
@@ -184,7 +184,7 @@ Một số mô hình AI có sẵn trong Power Platform bao gồm:
 
 Với Mô hình AI tùy chỉnh, bạn có thể mang mô hình của riêng mình vào AI Builder để nó hoạt động như bất kỳ mô hình tùy chỉnh nào của AI Builder, cho phép bạn đào tạo mô hình bằng dữ liệu của riêng mình. Bạn có thể sử dụng các mô hình này để tự động hóa quy trình và dự đoán kết quả trong cả Power Apps và Power Automate. Khi sử dụng mô hình của riêng bạn, có một số hạn chế áp dụng. Đọc thêm về các [hạn chế](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![Mô hình AI Builder](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.vi.png)
+![Mô hình AI Builder](../../../translated_images/vi/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Bài tập #2 - Xây dựng quy trình xử lý hóa đơn cho startup của chúng ta
 
@@ -198,7 +198,7 @@ Bây giờ bạn đã biết AI Builder là gì và tại sao nên sử dụng n
 
 2. Sử dụng khu vực văn bản trên màn hình chính để mô tả quy trình làm việc bạn muốn xây dựng. Ví dụ, **_Xử lý hóa đơn khi nó đến trong hộp thư của tôi_**. Nhấp vào nút **Send** để gửi yêu cầu đến AI Copilot.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.vi.png)
+   ![Copilot power automate](../../../translated_images/vi/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot sẽ gợi ý các hành động bạn cần thực hiện để tự động hóa nhiệm vụ bạn muốn. Bạn có thể nhấp vào nút **Next** để tiếp tục các bước tiếp theo.
 
@@ -212,7 +212,7 @@ Bây giờ bạn đã biết AI Builder là gì và tại sao nên sử dụng n
 
 8. Xóa hành động **Condition** khỏi quy trình vì bạn sẽ không sử dụng nó. Quy trình sẽ trông giống như ảnh chụp màn hình sau:
 
-   ![power automate, xóa hành động](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.vi.png)
+   ![power automate, xóa hành động](../../../translated_images/vi/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Nhấp vào nút **Add an action** và tìm kiếm **Dataverse**. Chọn hành động **Add a new row**.
 
@@ -227,7 +227,7 @@ Bây giờ bạn đã biết AI Builder là gì và tại sao nên sử dụng n
     - Status - Đặt **Status** thành **Pending**.
     - Supplier Email - Sử dụng nội dung động **From** từ trình kích hoạt **When a new email arrives**.
 
-    ![power automate thêm hàng](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.vi.png)
+    ![power automate thêm hàng](../../../translated_images/vi/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Sau khi hoàn tất quy trình, nhấp vào nút **Save** để lưu quy trình. Sau đó, bạn có thể kiểm tra quy trình bằng cách gửi một email có hóa đơn đến thư mục bạn đã chỉ định trong trình kích hoạt.
 
@@ -241,7 +241,7 @@ Các mô hình GPT trải qua quá trình đào tạo rộng rãi trên lượng
 
 Ví dụ, bạn có thể xây dựng các quy trình để tự động tạo văn bản cho nhiều trường hợp sử dụng, chẳng hạn như: bản nháp email, mô tả sản phẩm, và nhiều hơn nữa. Bạn cũng có thể sử dụng mô hình để tạo văn bản cho nhiều ứng dụng, chẳng hạn như chatbot và ứng dụng dịch vụ khách hàng, giúp nhân viên dịch vụ khách hàng phản hồi hiệu quả và nhanh chóng các yêu cầu của khách hàng.
 
-![tạo yêu cầu](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.vi.png)
+![tạo yêu cầu](../../../translated_images/vi/create-prompt-gpt.69d429300c2e870a.webp)
 
 Để tìm hiểu cách sử dụng Mô hình AI này trong Power Automate, hãy tham khảo module [Thêm trí tuệ với AI Builder và GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujumuisha na Kupiga Kazi
 
-[![Kujumuisha na Kupiga Kazi](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.sw.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Kujumuisha na Kupiga Kazi](../../../translated_images/sw/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Umejifunza mambo mengi hadi sasa katika masomo yaliyopita. Hata hivyo, tunaweza kuboresha zaidi. Baadhi ya mambo tunayotaka kushughulikia ni jinsi tunavyoweza kupata muundo wa majibu unaoeleweka zaidi ili kurahisisha kufanya kazi na majibu hayo baadaye. Pia, tunaweza kutaka kuongeza data kutoka vyanzo vingine ili kuboresha zaidi programu yetu.
 
@@ -179,7 +179,7 @@ Sasa tunaweza kutuma maombi yote mawili kwa LLM na kuchunguza majibu tunayopokea
 
 Kwa hivyo tunatatua tatizo la muundo vipi? Kwa kutumia kupiga kazi, tunaweza kuhakikisha tunapokea data iliyoundwa. Tunapotumia kupiga kazi, LLM haifanyi kazi au kuendesha kazi yoyote. Badala yake, tunaunda muundo wa LLM kufuata kwa majibu yake. Kisha tunatumia majibu hayo yaliyoundwa kujua ni kazi gani ya kuendesha katika programu zetu.
 
-![mchakato wa kazi](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.sw.png)
+![mchakato wa kazi](../../../translated_images/sw/Function-Flow.083875364af4f4bb.webp)
 
 Tunaweza kisha kuchukua kile kinachorudishwa kutoka kwa kazi na kutuma hii tena kwa LLM. LLM kisha itajibu kwa kutumia lugha ya asili kujibu swali la mtumiaji.
 
@@ -201,7 +201,7 @@ Mchakato wa kuunda kupiga kazi unajumuisha hatua 3 kuu:
 2. **Kusoma** majibu ya mfano ili kutekeleza hatua yaani kuendesha kazi au ombi la API.
 3. **Kutuma** ombi lingine kwa API ya Chat Completions na majibu kutoka kwa kazi yako ili kutumia taarifa hiyo kuunda jibu kwa mtumiaji.
 
-![Mchakato wa LLM](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.sw.png)
+![Mchakato wa LLM](../../../translated_images/sw/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Hatua ya 1 - kuunda ujumbe
 

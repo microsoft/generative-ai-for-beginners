@@ -33,7 +33,7 @@ SLM dilatih menggunakan sejumlah besar data teks. Selama pelatihan, model mempel
 
 Pengembangan SLM sejalan dengan kebutuhan yang meningkat akan model yang dapat dijalankan di lingkungan dengan sumber daya terbatas, seperti perangkat mobile atau platform edge computing, di mana LLM skala penuh mungkin tidak praktis karena kebutuhan sumber daya yang besar. Dengan fokus pada efisiensi, SLM menyeimbangkan performa dan aksesibilitas, memungkinkan aplikasi yang lebih luas di berbagai bidang.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.id.png)
+![slm](../../../translated_images/id/slm.4058842744d0444a.webp)
 
 ## Tujuan Pembelajaran  
 
@@ -135,7 +135,7 @@ Kita dapat menggunakan model Phi-3/3.5 Family berdasarkan berbagai skenario. Ber
 
 Kami berharap menggunakan Phi-3/3.5 dalam berbagai skenario. Selanjutnya, kita akan menggunakan Phi-3/3.5 berdasarkan skenario yang berbeda.  
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.id.png)
+![phi3](../../../translated_images/id/phi3.655208c3186ae381.webp)
 
 ### Perbedaan Inferensi dengan API Cloud  
 
@@ -145,9 +145,9 @@ GitHub Models adalah cara paling langsung. Anda dapat dengan cepat mengakses mod
 
 - Demo: Perbandingan efek Phi-3-mini dan Phi-3.5-mini dalam skenario bahasa Mandarin  
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.id.png)  
+![phi3](../../../translated_images/id/gh1.126c6139713b622b.webp)  
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.id.png)  
+![phi35](../../../translated_images/id/gh2.07d7985af66f178d.webp)  
 
 **Azure AI Studio**  
 

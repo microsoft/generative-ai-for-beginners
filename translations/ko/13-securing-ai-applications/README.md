@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 생성형 AI 애플리케이션 보안
 
-[![생성형 AI 애플리케이션 보안](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ko.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![생성형 AI 애플리케이션 보안](../../../translated_images/ko/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## 소개
 
@@ -114,7 +114,7 @@ AI 보안은 AI 시스템과 데이터의 무결성, 가용성 및 기밀성을 
 
 > AI 레드 팀 활동은 보안 취약점을 탐지하는 것뿐만 아니라 잠재적으로 유해한 콘텐츠 생성과 같은 다른 시스템 실패를 탐지하는 것을 포함하도록 더 확장된 의미로 발전했습니다. AI 시스템은 새로운 위험을 수반하며, 레드 팀 활동은 프롬프트 주입 및 근거 없는 콘텐츠 생성과 같은 새로운 위험을 이해하는 데 핵심적입니다. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![레드 팀 활동을 위한 가이드 및 리소스](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ko.png)]()
+[![레드 팀 활동을 위한 가이드 및 리소스](../../../translated_images/ko/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 아래는 Microsoft의 AI 레드 팀 프로그램을 형성한 주요 통찰입니다.
 

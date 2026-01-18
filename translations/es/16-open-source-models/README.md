@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "es"
 }
 -->
-[![Modelos de Código Abierto](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.es.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Modelos de Código Abierto](../../../translated_images/es/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Introducción
 
@@ -41,12 +41,12 @@ Para esta lección, nos referiremos a los modelos como "modelos abiertos" en ade
 
 **Costo** - El costo por token para usar y desplegar estos modelos es menor que el de los modelos propietarios. Al construir aplicaciones de IA Generativa, se debe evaluar el rendimiento frente al precio al trabajar con estos modelos en tu caso de uso.
 
-![Costo del Modelo](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.es.png)
+![Costo del Modelo](../../../translated_images/es/model-price.3f5a3e4d32ae00b4.webp)
 Fuente: Artificial Analysis
 
 **Flexibilidad** - Trabajar con modelos abiertos te permite ser flexible en términos de usar diferentes modelos o combinarlos. Un ejemplo de esto son los [Asistentes HuggingChat](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) donde un usuario puede seleccionar el modelo que se usa directamente en la interfaz de usuario:
 
-![Elegir Modelo](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.es.png)
+![Elegir Modelo](../../../translated_images/es/choose-model.f095d15bbac92214.webp)
 
 ## Explorando Diferentes Modelos Abiertos
 
@@ -74,7 +74,7 @@ No hay una única respuesta para elegir un modelo abierto. Un buen lugar para co
 
 Al buscar comparar LLMs entre los diferentes tipos, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) es otro gran recurso:
 
-![Calidad del Modelo](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.es.png)
+![Calidad del Modelo](../../../translated_images/es/model-quality.aaae1c22e00f7ee1.webp)
 Fuente: Artificial Analysis
 
 Si trabajas en un caso de uso específico, buscar versiones ajustadas que estén enfocadas en la misma área puede ser efectivo. Experimentar con múltiples modelos abiertos para ver cómo se desempeñan según tus expectativas y las de tus usuarios es otra buena práctica.

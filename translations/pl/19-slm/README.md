@@ -33,7 +33,7 @@ SLMy są trenowane na ogromnych zbiorach danych tekstowych. Podczas treningu ucz
 
 Rozwój SLMów odpowiada rosnącemu zapotrzebowaniu na modele, które można wdrażać w środowiskach o ograniczonych zasobach, takich jak urządzenia mobilne czy platformy edge computing, gdzie pełnowymiarowe LLMy mogą być niepraktyczne ze względu na duże wymagania sprzętowe. Skupiając się na efektywności, SLMy łączą wydajność z dostępnością, umożliwiając szersze zastosowanie w różnych dziedzinach.
 
-![slm](../../../translated_images/slm.4058842744d0444a021548a3e8253efd20e93a6ef59ec1525ded361bfc9e6c22.pl.png)
+![slm](../../../translated_images/pl/slm.4058842744d0444a.webp)
 
 ## Cele nauki  
 
@@ -135,7 +135,7 @@ Możemy używać modeli z rodziny Phi-3/3.5 w różnych scenariuszach. W przeciw
 
 Chcemy używać Phi-3/3.5 w różnych scenariuszach. Poniżej przedstawimy wykorzystanie Phi-3/3.5 w zależności od scenariusza.
 
-![phi3](../../../translated_images/phi3.655208c3186ae38168d66032ed529d1d0d9c881ac531c95a2a5a32dbe11c38b4.pl.png)
+![phi3](../../../translated_images/pl/phi3.655208c3186ae381.webp)
 
 ### Różnice w inferencji w API chmurowym  
 
@@ -145,9 +145,9 @@ GitHub Models to najprostszy sposób. Możesz szybko uzyskać dostęp do modelu 
 
 - Demo: Porównanie efektów Phi-3-mini i Phi-3.5-mini w scenariuszach chińskojęzycznych
 
-![phi3](../../../translated_images/gh1.126c6139713b622b2564ef280de7d2a4c7f4c4a5e60cf577b94b47feec4342dd.pl.png)
+![phi3](../../../translated_images/pl/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/gh2.07d7985af66f178df0c80d0331f39f763c5b5ec2859931d86ed7f2b43e6fa644.pl.png)
+![phi35](../../../translated_images/pl/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 

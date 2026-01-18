@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Atsakingas generatyviosios dirbtinio intelekto naudojimas
 
-[![Atsakingas generatyviosios dirbtinio intelekto naudojimas](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.lt.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Atsakingas generatyviosios dirbtinio intelekto naudojimas](../../../translated_images/lt/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą_
 
@@ -85,7 +85,7 @@ Tokie rezultatai ne tik kenkia teigiamai vartotojų patirčiai, bet ir daro papi
 
 Dabar, kai nustatėme atsakingo generatyvaus dirbtinio intelekto svarbą, pažvelkime į 4 žingsnius, kuriuos galime atlikti, kad atsakingai kurtume savo dirbtinio intelekto sprendimus:
 
-![Mažinimo ciklas](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.lt.png)
+![Mažinimo ciklas](../../../translated_images/lt/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Įvertinkite galimą žalą
 
@@ -97,7 +97,7 @@ Kadangi mūsų startuolis kuria švietimo produktą, būtų naudinga paruošti �
 
 Dabar laikas rasti būdus, kaip galime užkirsti kelią arba apriboti modelio ir jo atsakymų sukeltą galimą žalą. Tai galime nagrinėti 4 skirtingais lygiais:
 
-![Mažinimo sluoksniai](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.lt.png)
+![Mažinimo sluoksniai](../../../translated_images/lt/mitigation-layers.377215120b9a1159.webp)
 
 - **Modelis**. Pasirinkti tinkamą modelį tinkamam naudojimo atvejui. Didesni ir sudėtingesni modeliai, tokie kaip GPT-4, gali kelti didesnę kenksmingo turinio riziką, kai taikomi mažesniems ir konkretesniems naudojimo atvejams. Naudojant mokymo duomenis modelio pritaikymui taip pat sumažinama kenksmingo turinio rizika.
 

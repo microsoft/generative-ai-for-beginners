@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kujenga Programu za Utafutaji
 
-[![Utangulizi wa AI ya Kizazi na Mifano Mikubwa ya Lugha](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sw.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Utangulizi wa AI ya Kizazi na Mifano Mikubwa ya Lugha](../../../translated_images/sw/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Bonyeza picha hapo juu kutazama video ya somo hili_
 
@@ -44,7 +44,7 @@ Somo linajumuisha Kielezo cha Embeddings cha maandishi ya video za YouTube za ki
 
 Ifuatayo ni mfano wa swali la kimaana kwa swali 'je, unaweza kutumia rstudio na azure ml?'. Angalia URL ya YouTube, utaona URL ina timestamp inayokupeleka kwenye sehemu ya video ambapo jibu la swali linapatikana.
 
-![Swali la kimaana kwa swali "je, unaweza kutumia rstudio na Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sw.png)
+![Swali la kimaana kwa swali "je, unaweza kutumia rstudio na Azure ML"](../../../translated_images/sw/query-results.bb0480ebf025fac6.webp)
 
 ## Utafutaji wa kimaana ni nini?
 
@@ -163,7 +163,7 @@ Fungua [notebook ya suluhisho](./python/aoai-solution.ipynb?WT.mc_id=academic-10
 
 Unapoendesha notebook, utaombwa kuingiza swali. Kisanduku cha kuingiza kitaonekana kama hiki:
 
-![Kisanduku cha kuingiza kwa mtumiaji kuingiza swali](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sw.png)
+![Kisanduku cha kuingiza kwa mtumiaji kuingiza swali](../../../translated_images/sw/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Kazi Nzuri! Endelea Kujifunza
 

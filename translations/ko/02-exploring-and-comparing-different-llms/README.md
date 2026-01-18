@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 다양한 LLM 탐구 및 비교
 
-[![다양한 LLM 탐구 및 비교](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.ko.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![다양한 LLM 탐구 및 비교](../../../translated_images/ko/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다_
 
@@ -59,14 +59,14 @@ Foundation Model이라는 용어는 [스탠포드 연구원들에 의해 만들�
 - **매우 큰 모델**로, 수십억 개의 매개변수로 학습된 매우 깊은 신경망을 기반으로 합니다.
 - **다른 모델의 '기초'로 사용될 의도로 설계됨**, 즉 다른 모델이 이를 기반으로 구축될 수 있으며, 이는 미세 조정을 통해 이루어질 수 있습니다.
 
-![Foundation Models versus LLMs](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.ko.png)
+![Foundation Models versus LLMs](../../../translated_images/ko/FoundationModel.e4859dbb7a825c94.webp)
 
 이미지 출처: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 이 차이를 더 명확히 하기 위해 ChatGPT를 예로 들어보겠습니다. ChatGPT의 첫 번째 버전을 구축하기 위해 GPT-3.5라는 모델이 Foundation Model로 사용되었습니다. 이는 OpenAI가 일부 채팅 관련 데이터를 사용하여 GPT-3.5의 튜닝 버전을 생성했으며, 이 버전은 채팅봇과 같은 대화 시나리오에서 우수한 성능을 발휘하도록 특화되었습니다.
 
-![Foundation Model](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.ko.png)
+![Foundation Model](../../../translated_images/ko/Multimodal.2c389c6439e0fc51.webp)
 
 이미지 출처: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM은 생성하는 출력에 따라 분류될 수도 있습니다.
 
 임베딩은 텍스트를 임베딩이라고 하는 숫자 형태로 변환할 수 있는 모델 세트입니다. 임베딩은 기계가 단어 또는 문장 간의 관계를 이해하기 쉽게 만들어주며, 분류 모델이나 클러스터링 모델과 같은 다른 모델에서 입력으로 소비될 수 있습니다. 임베딩 모델은 종종 전이 학습에 사용되며, 대체 작업을 위해 모델을 구축하고 데이터가 풍부한 경우 모델 가중치(임베딩)를 다른 다운스트림 작업에 재사용합니다. 이 범주의 예로는 [OpenAI 임베딩](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst)이 있습니다.
 
-![Embedding](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.ko.png)
+![Embedding](../../../translated_images/ko/Embedding.c3708fe988ccf760.webp)
 
 이미지 생성 모델은 이미지를 생성하는 모델입니다. 이러한 모델은 종종 이미지 편집, 이미지 합성 및 이미지 번역에 사용됩니다. 이미지 생성 모델은 종종 [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst)와 같은 대규모 이미지 데이터 세트로 학습되며, 새로운 이미지를 생성하거나 기존 이미지를 인페인팅, 초고해상도 및 색상화 기술로 편집하는 데 사용할 수 있습니다. 예로는 [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst)와 [Stable Diffusion 모델](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst)이 있습니다.
 
-![Image generation](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.ko.png)
+![Image generation](../../../translated_images/ko/Image.349c080266a763fd.webp)
 
 텍스트 및 코드 생성 모델은 텍스트 또는 코드를 생성하는 모델입니다. 이러한 모델은 종종 텍스트 요약, 번역 및 질문 응답에 사용됩니다. 텍스트 생성 모델은 종종 [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst)와 같은 대규모 텍스트 데이터 세트로 학습되며, 새로운 텍스트를 생성하거나 질문에 답변하는 데 사용할 수 있습니다. 코드 생성 모델인 [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst)은 종종 GitHub과 같은 대규모 코드 데이터 세트로 학습되며, 새로운 코드를 생성하거나 기존 코드의 버그를 수정하는 데 사용할 수 있습니다.
 
-![Text and code generation](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.ko.png)
+![Text and code generation](../../../translated_images/ko/Text.a8c0cf139e5cc2a0.webp)
 
 ### 인코더-디코더 대 디코더 전용
 
@@ -123,23 +123,23 @@ LLM의 다양한 아키텍처 유형에 대해 이야기하기 위해 비유를 
 
 - 관심 있는 기본 모델을 카탈로그에서 찾을 수 있습니다. 독점 모델이든 오픈 소스 모델이든 작업, 라이선스 또는 이름으로 필터링할 수 있습니다. 검색 편의성을 높이기 위해 모델은 Azure OpenAI 컬렉션, Hugging Face 컬렉션 등과 같은 컬렉션으로 구성되어 있습니다.
 
-![모델 카탈로그](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.ko.png)
+![모델 카탈로그](../../../translated_images/ko/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - 모델 카드 검토: 사용 의도와 학습 데이터, 코드 샘플, 내부 평가 라이브러리의 평가 결과에 대한 자세한 설명을 포함합니다.
 
-![모델 카드](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.ko.png)
+![모델 카드](../../../translated_images/ko/ModelCard.598051692c6e400d.webp)
 
 - 산업에서 이용 가능한 모델과 데이터셋 간의 벤치마크를 비교하여 비즈니스 시나리오에 적합한 모델을 평가할 수 있습니다. 이는 [모델 벤치마크](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) 패널을 통해 가능합니다.
 
-![모델 벤치마크](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.ko.png)
+![모델 벤치마크](../../../translated_images/ko/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - 특정 작업에서 모델 성능을 향상시키기 위해 사용자 지정 학습 데이터를 사용하여 모델을 미세 조정할 수 있습니다. Azure AI Studio의 실험 및 추적 기능을 활용합니다.
 
-![모델 미세 조정](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.ko.png)
+![모델 미세 조정](../../../translated_images/ko/FineTuning.aac48f07142e36fd.webp)
 
 - 원래 사전 학습된 모델 또는 미세 조정된 버전을 원격 실시간 추론 - 관리형 컴퓨팅 - 또는 서버리스 API 엔드포인트 - [사용한 만큼 지불](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - 방식으로 배포하여 애플리케이션이 이를 사용할 수 있도록 합니다.
 
-![모델 배포](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.ko.png)
+![모델 배포](../../../translated_images/ko/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > 카탈로그에 있는 모든 모델이 현재 미세 조정 및/또는 사용한 만큼 지불 방식의 배포를 지원하는 것은 아닙니다. 모델 카드에서 모델의 기능과 제한 사항에 대한 세부 정보를 확인하세요.
@@ -158,7 +158,7 @@ LLM의 다양한 아키텍처 유형에 대해 이야기하기 위해 비유를 
 
 - **미세 조정된 모델**. 여기서는 모델을 자체 데이터로 추가 학습시켜 모델이 더 정확하고 요구에 더 잘 반응하도록 하지만 비용이 많이 들 수 있습니다.
 
-![LLMs 배포](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.ko.png)
+![LLMs 배포](../../../translated_images/ko/Deploy.18b2d27412ec8c02.webp)
 
 이미지 출처: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

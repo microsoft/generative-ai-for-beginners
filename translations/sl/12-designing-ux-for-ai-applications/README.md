@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Oblikovanje uporabniške izkušnje za aplikacije z umetno inteligenco
 
-[![Oblikovanje uporabniške izkušnje za aplikacije z umetno inteligenco](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.sl.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Oblikovanje uporabniške izkušnje za aplikacije z umetno inteligenco](../../../translated_images/sl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Kliknite zgornjo sliko za ogled videa te lekcije)_
 
@@ -58,7 +58,7 @@ Biti dostopen pomeni razširiti uporabniško izkušnjo na uporabnike z različni
 
 Biti prijeten pomeni, da je aplikacijo užitek uporabljati. Privlačna uporabniška izkušnja lahko pozitivno vpliva na uporabnika, ga spodbuja k ponovni uporabi aplikacije in povečuje poslovne prihodke.
 
-![slika, ki prikazuje vidike uporabniške izkušnje v AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.sl.png)
+![slika, ki prikazuje vidike uporabniške izkušnje v AI](../../../translated_images/sl/uxinai.d5b4ed690f5cefff.webp)
 
 Vsak izziv ni mogoče rešiti z umetno inteligenco. Umetna inteligenca dopolnjuje vašo uporabniško izkušnjo, bodisi z avtomatizacijo ročnih nalog ali personalizacijo uporabniških izkušenj.
 
@@ -72,25 +72,25 @@ Dva načina za zagotovitev, da je zaupanje postavljeno v središče oblikovanja,
 
 Ko umetna inteligenca pomaga pri sprejemanju odločitev, kot je prenos znanja na prihodnje generacije, je ključnega pomena, da učitelji in starši razumejo, kako so odločitve sprejete. To je razložljivost - razumevanje, kako aplikacije z umetno inteligenco sprejemajo odločitve. Oblikovanje za razložljivost vključuje dodajanje podrobnosti, ki poudarjajo, kako je umetna inteligenca prišla do določenega rezultata. Občinstvo mora biti obveščeno, da je rezultat ustvarjen s strani umetne inteligence in ne človeka. Na primer, namesto "Začnite klepetati s svojim učiteljem zdaj" recite "Uporabite AI učitelja, ki se prilagaja vašim potrebam in vam pomaga učiti se v vašem tempu."
 
-![pristajalna stran aplikacije z jasnim prikazom razložljivosti v aplikacijah z umetno inteligenco](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.sl.png)
+![pristajalna stran aplikacije z jasnim prikazom razložljivosti v aplikacijah z umetno inteligenco](../../../translated_images/sl/explanability-in-ai.134426a96b498fbf.webp)
 
 Drug primer je, kako umetna inteligenca uporablja uporabniške in osebne podatke. Na primer, uporabnik s persono študenta ima lahko omejitve glede na svojo persono. Umetna inteligenca morda ne bo mogla razkriti odgovorov na vprašanja, lahko pa pomaga uporabniku razmisliti, kako lahko reši problem.
 
-![AI odgovarja na vprašanja glede na persono](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.sl.png)
+![AI odgovarja na vprašanja glede na persono](../../../translated_images/sl/solving-questions.b7dea1604de0cbd2.webp)
 
 Še en ključni del razložljivosti je poenostavitev razlag. Študenti in učitelji morda niso strokovnjaki za umetno inteligenco, zato morajo biti razlage o tem, kaj aplikacija lahko ali ne more storiti, poenostavljene in enostavne za razumevanje.
 
-![poenostavljene razlage o zmožnostih umetne inteligence](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.sl.png)
+![poenostavljene razlage o zmožnostih umetne inteligence](../../../translated_images/sl/simplified-explanations.4679508a406c3621.webp)
 
 ### Nadzor
 
 Generativna umetna inteligenca ustvarja sodelovanje med umetno inteligenco in uporabnikom, kjer lahko uporabnik na primer spreminja pozive za različne rezultate. Poleg tega, ko je rezultat ustvarjen, bi morali uporabniki imeti možnost, da ga spremenijo, kar jim daje občutek nadzora. Na primer, pri uporabi Binga lahko prilagodite svoj poziv glede na format, ton in dolžino. Poleg tega lahko dodate spremembe svojemu rezultatu in ga prilagodite, kot je prikazano spodaj:
 
-![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.sl.png)
+![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/sl/bing1.293ae8527dbe2789.webp)
 
 Druga funkcija v Bingu, ki uporabniku omogoča nadzor nad aplikacijo, je možnost, da se odloči za vključitev ali izključitev podatkov, ki jih umetna inteligenca uporablja. Za šolsko aplikacijo bi študent morda želel uporabiti svoje zapiske kot tudi učiteljeve vire kot učni material.
 
-![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.sl.png)
+![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/sl/bing2.309f4845528a88c2.webp)
 
 > Pri oblikovanju aplikacij z umetno inteligenco je ključna namernost, da se uporabnikom prepreči pretirano zaupanje, ki bi postavilo nerealna pričakovanja glede zmožnosti aplikacije. Eden od načinov za to je ustvarjanje trenja med pozivi in rezultati. Opominjanje uporabnika, da gre za umetno inteligenco in ne za človeka.
 
@@ -102,7 +102,7 @@ Aplikacije z umetno inteligenco bi morale biti zasnovane tako, da sprejemajo in 
 
 Drug način za obravnavo tega je jasno komuniciranje zmožnosti in omejitev sistema. Ko uporabnik naredi napako in zahteva nekaj, kar presega zmožnosti umetne inteligence, bi moral obstajati način za obravnavo tega, kot je prikazano spodaj.
 
-![Dajanje povratnih informacij in obravnavanje napak](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.sl.png)
+![Dajanje povratnih informacij in obravnavanje napak](../../../translated_images/sl/feedback-loops.7955c134429a9466.webp)
 
 Sistemske napake so pogoste pri aplikacijah, kjer uporabnik morda potrebuje pomoč z informacijami, ki so zunaj obsega umetne inteligence, ali pa ima aplikacija omejitev glede števila vprašanj/predmetov, za katere lahko uporabnik ustvari povzetke. Na primer, aplikacija z umetno inteligenco, ki je usposobljena z omejenimi podatki o določenih predmetih, na primer zgodovini in matematiki, morda ne bo mogla obravnavati vprašanj o geografiji. Da bi to omilili, lahko sistem umetne inteligence poda odgovor, kot je: "Oprostite, naš izdelek je bil usposobljen z podatki o naslednjih predmetih....., ne morem odgovoriti na vprašanje, ki ste ga postavili."
 

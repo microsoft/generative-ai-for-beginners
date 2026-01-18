@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-[![開源模型](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.mo.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![開源模型](../../../translated_images/mo/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## 簡介
 
@@ -33,7 +33,7 @@ AI代理是生成式AI領域中非常令人興奮的一部分。隨著這種興�
 
 AI代理允許大型語言模型（LLMs）通過提供**狀態**和**工具**來執行任務。
 
-![代理模型](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.mo.png)
+![代理模型](../../../translated_images/mo/what-agent.21f2893bdfd01e6a.webp)
 
 讓我們定義這些術語：
 
@@ -53,7 +53,7 @@ AI代理允許大型語言模型（LLMs）通過提供**狀態**和**工具**來
 
 `AgentExecutor`還存儲聊天記錄，以提供聊天的上下文。
 
-![Langchain代理](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.mo.png)
+![Langchain代理](../../../translated_images/mo/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain提供了一個[工具目錄](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)，可以導入到您的應用程式中，讓LLM能夠使用。這些工具由社群和LangChain團隊製作。
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 以下是過程的示例：
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.mo.png)
+![AutoGen](../../../translated_images/mo/autogen.dee9a25a45fde584.webp)
 
 #### 使用系統消息定義的LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 為了完成任務，`Planner`可以使用一組稱為`Plugins`的工具。這些工具可以是Python類或通用代碼解釋器。這些插件以嵌入的形式存儲，以便LLM能更好地搜索正確的插件。
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.mo.png)
+![Taskweaver](../../../translated_images/mo/taskweaver.da8559999267715a.webp)
 
 以下是一個處理異常檢測的插件示例：
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 最後我們將探討的代理框架是[JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)。JARVIS的獨特之處在於它使用LLM來管理對話的`狀態`，而`工具`則是其他AI模型。每個AI模型都是專門的模型，執行特定任務，例如物件檢測、轉錄或圖像標註。
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.mo.png)
+![JARVIS](../../../translated_images/mo/jarvis.762ddbadbd1a3a33.webp)
 
 LLM作為通用模型，接收使用者的請求並識別完成任務所需的特定任務及任何參數/資料。
 

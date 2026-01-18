@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kutumia AI ya Kizazi kwa Uwajibikaji
 
-[![Kutumia AI ya Kizazi kwa Uwajibikaji](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.sw.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Kutumia AI ya Kizazi kwa Uwajibikaji](../../../translated_images/sw/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Bonyeza picha hapo juu kutazama video ya somo hili_
 
@@ -85,7 +85,7 @@ Aina hizi za matokeo si tu zinaharibu kujenga uzoefu mzuri wa bidhaa kwa watumia
 
 Sasa kwa kuwa tumetambua umuhimu wa AI ya Kizazi ya Uwajibikaji, hebu tuangalie hatua 4 tunazoweza kuchukua kujenga suluhisho zetu za AI kwa uwajibikaji:
 
-![Mzunguko wa Kupunguza](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.sw.png)
+![Mzunguko wa Kupunguza](../../../translated_images/sw/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Kupima Madhara Yanayoweza Kutokea
 
@@ -97,7 +97,7 @@ Kwa kuwa kampuni yetu ya kuanzisha inajenga bidhaa ya elimu, itakuwa vizuri kuan
 
 Sasa ni wakati wa kutafuta njia za kuzuia au kupunguza madhara yanayoweza kusababishwa na modeli na majibu yake. Tunaweza kuangalia hili katika tabaka 4 tofauti:
 
-![Tabaka za Kupunguza](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.sw.png)
+![Tabaka za Kupunguza](../../../translated_images/sw/mitigation-layers.377215120b9a1159.webp)
 
 - **Modeli**. Kuchagua modeli sahihi kwa matumizi sahihi. Modeli kubwa na ngumu zaidi kama GPT-4 zinaweza kusababisha hatari zaidi ya maudhui yenye madhara zinapotumika kwa matumizi madogo na maalum. Kutumia data yako ya mafunzo kuboresha pia hupunguza hatari ya maudhui yenye madhara.
 

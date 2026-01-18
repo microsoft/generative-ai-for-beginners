@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "br"
 }
 -->
-[![Modelos Open Source](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.br.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Modelos Open Source](../../../translated_images/br/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Ajustando Seu LLM
 
@@ -32,7 +32,7 @@ Pronto? Vamos começar.
 
 Quer ter uma visão geral do que vamos abordar antes de mergulhar no conteúdo? Confira este guia ilustrado que descreve a jornada de aprendizado desta lição - desde aprender os conceitos principais e a motivação para o ajuste fino, até entender o processo e as melhores práticas para executar a tarefa de ajuste fino. Este é um tópico fascinante para explorar, então não se esqueça de conferir a página de [Recursos](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) para links adicionais que apoiarão sua jornada de aprendizado autônomo!
 
-![Guia Ilustrado para Ajuste Fino de Modelos de Linguagem](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.br.png)
+![Guia Ilustrado para Ajuste Fino de Modelos de Linguagem](../../../translated_images/br/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## O que é ajuste fino para modelos de linguagem?
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea aplicațiilor de generare de imagini
 
-[![Construirea aplicațiilor de generare de imagini](../../../translated_images/09-lesson-banner.906e408c741f44112ff5da17492a30d3872abb52b8530d6506c2631e86e704d0.ro.png)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Construirea aplicațiilor de generare de imagini](../../../translated_images/ro/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 LLM-urile nu se limitează doar la generarea de text. Este posibil să generăm imagini din descrieri textuale. Având imagini ca modalitate poate fi extrem de util în diverse domenii, cum ar fi MedTech, arhitectură, turism, dezvoltare de jocuri și altele. În acest capitol, vom analiza cele mai populare modele de generare de imagini, DALL-E și Midjourney.
 
@@ -43,7 +43,7 @@ Ca parte a acestei lecții, vom continua să lucrăm cu startup-ul nostru, Edu4A
 
 Iată ce ar putea genera studenții Edu4All, de exemplu, dacă lucrează în clasă la monumente:
 
-![Startup Edu4All, clasă despre monumente, Turnul Eiffel](../../../translated_images/startup.94d6b79cc4bb3f5afbf6e2ddfcf309aa5d1e256b5f30cc41d252024eaa9cc5dc.ro.png)
+![Startup Edu4All, clasă despre monumente, Turnul Eiffel](../../../translated_images/ro/startup.94d6b79cc4bb3f5a.webp)
 
 folosind un prompt precum
 
@@ -273,9 +273,9 @@ Iată un exemplu folosind GPT Image:
   Imaginea de bază ar conține doar lounge-ul cu piscină, dar imaginea finală ar avea un flamingo:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/sunlit_lounge.a75a0cb61749db0eddc1820c30a5fa9a3a9f48518cd7c8df4c2073e8c793bbb7.ro.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/mask.1b2976ccec9e011eaac6cd3697d804a22ae6debba7452da6ba3bebcaa9c54ff0.ro.png" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/sunlit_lounge_result.76ae02957c0bbeb860f1efdb42dd7f450ea01c6ae6cd70ad5ade4bab1a545d51.ro.png" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/ro/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 
@@ -300,11 +300,11 @@ Să analizăm un exemplu despre cum funcționează temperatura, rulând acest pr
 
 > Prompt : "Iepure pe cal, ținând o acadea, pe o pajiște cețoasă unde cresc narcise"
 
-![Iepure pe cal ținând o acadea, versiunea 1](../../../translated_images/v1-generated-image.a295cfcffa3c13c2432eb1e41de7e49a78c814000fb1b462234be24b6e0db7ea.ro.png)
+![Iepure pe cal ținând o acadea, versiunea 1](../../../translated_images/ro/v1-generated-image.a295cfcffa3c13c2.webp)
 
 Acum să rulăm același prompt doar pentru a vedea că nu vom obține aceeași imagine de două ori:
 
-![Imagine generată cu iepure pe cal](../../../translated_images/v2-generated-image.33f55a3714efe61dc19622c869ba6cd7d6e6de562e26e95b5810486187aace39.ro.png)
+![Imagine generată cu iepure pe cal](../../../translated_images/ro/v2-generated-image.33f55a3714efe61d.webp)
 
 După cum poți vedea, imaginile sunt similare, dar nu identice. Să încercăm să schimbăm valoarea temperaturii la 0.1 și să vedem ce se întâmplă:
 
@@ -333,8 +333,8 @@ generation_response = client.images.create(
 
 Acum, când rulezi acest cod, obții aceste două imagini:
 
-- ![Temperatura 0, v1](../../../translated_images/v1-temp-generated-image.a4346e1d2360a056d855ee3dfcedcce91211747967cb882e7d2eff2076f90e4a.ro.png)
-- ![Temperatura 0 , v2](../../../translated_images/v2-temp-generated-image.871d0c920dbfb0f1cb5d9d80bffd52da9b41f83b386320d9a9998635630ec83d.ro.png)
+- ![Temperatura 0, v1](../../../translated_images/ro/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperatura 0 , v2](../../../translated_images/ro/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 Aici poți vedea clar cum imaginile se aseamănă mai mult.
 

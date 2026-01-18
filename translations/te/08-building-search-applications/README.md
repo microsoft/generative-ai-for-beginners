@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # శోధన అనువర్తనాలు నిర్మించడం
 
-[![జనరేటివ్ AI మరియు పెద్ద భాషా మోడల్స్ పరిచయం](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.te.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![జనరేటివ్ AI మరియు పెద్ద భాషా మోడల్స్ పరిచయం](../../../translated_images/te/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _ఈ పాఠం వీడియోను చూడడానికి పై చిత్రాన్ని క్లిక్ చేయండి_
 
@@ -44,7 +44,7 @@ LLMs అంటే కేవలం చాట్‌బాట్లు మరియ
 
 క్రింది ఉదాహరణ 'can you use rstudio with azure ml?' అనే ప్రశ్నకు సేమాంటిక్ క్వెరీ. YouTube URL చూడండి, URLలో టైమ్‌స్టాంప్ ఉంటుంది, ఇది ప్రశ్నకు సమాధానం ఉన్న వీడియోలోని స్థానానికి తీసుకెళ్తుంది.
 
-!["can you use rstudio with Azure ML" అనే ప్రశ్నకు సేమాంటిక్ క్వెరీ](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.te.png)
+!["can you use rstudio with Azure ML" అనే ప్రశ్నకు సేమాంటిక్ క్వెరీ](../../../translated_images/te/query-results.bb0480ebf025fac6.webp)
 
 ## సేమాంటిక్ శోధన అంటే ఏమిటి?
 
@@ -163,7 +163,7 @@ GitHub Codespacesలో [solution notebook](./python/aoai-solution.ipynb?WT.mc_i
 
 మీరు నోట్‌బుక్ నడిపినప్పుడు, మీరు ఒక క్వెరీని ఎంటర్ చేయమని అడుగుతారు. ఇన్‌పుట్ బాక్స్ ఇలా కనిపిస్తుంది:
 
-![వాడుకరి క్వెరీని ఎంటర్ చేయడానికి ఇన్‌పుట్ బాక్స్](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.te.png)
+![వాడుకరి క్వెరీని ఎంటర్ చేయడానికి ఇన్‌పుట్ బాక్స్](../../../translated_images/te/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## అద్భుతమైన పని! మీ అభ్యాసాన్ని కొనసాగించండి
 

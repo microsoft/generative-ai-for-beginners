@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # テキスト生成アプリケーションの構築
 
-[![テキスト生成アプリケーションの構築](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.ja.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![テキスト生成アプリケーションの構築](../../../translated_images/ja/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(上の画像をクリックして、このレッスンの動画をご覧ください)_
 

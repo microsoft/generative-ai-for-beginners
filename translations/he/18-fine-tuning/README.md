@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "he"
 }
 -->
-[![מודלים בקוד פתוח](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.he.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![מודלים בקוד פתוח](../../../translated_images/he/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # כיוונון עדין של מודל השפה הגדול שלך
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 רוצים לקבל תמונה כללית של מה שנכסה לפני שנצלול פנימה? עיינו במדריך המאויר שמתאר את מסע הלמידה של השיעור הזה - החל מלמידת המושגים המרכזיים והמוטיבציה לכיוונון עדין, ועד להבנת התהליך והפרקטיקות הטובות ביותר לביצוע משימת הכיוונון העדין. זהו נושא מרתק לחקירה, אז אל תשכחו לבדוק את [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) למידע נוסף שיתמוך במסע הלמידה העצמאי שלכם!
 
-![מדריך מאויר לכיוונון עדין של מודלים שפתיים](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.he.png)
+![מדריך מאויר לכיוונון עדין של מודלים שפתיים](../../../translated_images/he/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## מהו כיוונון עדין עבור מודלים שפתיים?
 

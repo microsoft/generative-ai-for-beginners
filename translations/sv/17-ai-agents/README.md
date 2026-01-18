@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sv"
 }
 -->
-[![Open Source Models](../../../translated_images/17-lesson-banner.a5b918fb0920e4e6d8d391a100f5cb1d5929f4c2752c937d40392905dec82592.sv.png)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/sv/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Introduktion
 
@@ -33,7 +33,7 @@ AI-agenter är ett mycket spännande område inom Generativ AI. Med denna spänn
 
 AI-agenter gör det möjligt för stora språkmodeller (LLMs) att utföra uppgifter genom att ge dem tillgång till ett **tillstånd** och **verktyg**.
 
-![Agent Model](../../../translated_images/what-agent.21f2893bdfd01e6a7fd09b0416c2b15594d97f44bbb2ab5a1ff8bf643d2fcb3d.sv.png)
+![Agent Model](../../../translated_images/sv/what-agent.21f2893bdfd01e6a.webp)
 
 Låt oss definiera dessa termer:
 
@@ -53,7 +53,7 @@ För att hantera **tillståndet** använder det en inbyggd funktion som kallas `
 
 `AgentExecutor` lagrar också chattens historik för att ge sammanhang till konversationen.
 
-![Langchain Agents](../../../translated_images/langchain-agents.edcc55b5d5c437169a2037211284154561183c58bcec6d4ac2f8a79046fac9af.sv.png)
+![Langchain Agents](../../../translated_images/sv/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain erbjuder en [katalog över verktyg](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) som kan importeras till din applikation och som LLM kan få tillgång till. Dessa är skapade av communityn och av LangChain-teamet.
 
@@ -85,7 +85,7 @@ För att ändra och hantera tillstånd genererar en assistentagent Python-kod f�
 
 Här är ett exempel på processen:
 
-![AutoGen](../../../translated_images/autogen.dee9a25a45fde584fedd84b812a6e31de5a6464687cdb66bb4f2cb7521391856.sv.png)
+![AutoGen](../../../translated_images/sv/autogen.dee9a25a45fde584.webp)
 
 #### LLM definierad med ett systemmeddelande
 
@@ -129,7 +129,7 @@ För att hantera tillståndet i konversationen använder TaskWeaver konceptet `P
 
 För att slutföra uppgifterna har `Planner` tillgång till en samling verktyg som kallas `Plugins`. Dessa kan vara Python-klasser eller en allmän kodtolkare. Dessa plugins lagras som embeddings så att LLM bättre kan söka efter rätt plugin.
 
-![Taskweaver](../../../translated_images/taskweaver.da8559999267715a95b7677cf9b7d7dd8420aee6f3c484ced1833f081988dcd5.sv.png)
+![Taskweaver](../../../translated_images/sv/taskweaver.da8559999267715a.webp)
 
 Här är ett exempel på en plugin för att hantera avvikelsedetektering:
 
@@ -143,7 +143,7 @@ Koden verifieras innan den utförs. En annan funktion för att hantera sammanhan
 
 Det sista ramverket för agenter vi ska utforska är [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Det som gör JARVIS unikt är att det använder en LLM för att hantera `tillståndet` i konversationen och `verktygen` är andra AI-modeller. Var och en av AI-modellerna är specialiserade modeller som utför vissa uppgifter såsom objektigenkänning, transkribering eller bildbeskrivning.
 
-![JARVIS](../../../translated_images/jarvis.762ddbadbd1a3a3364d4ca3db1a7a9c0d2180060c0f8da6f7bd5b5ea2a115aa7.sv.png)
+![JARVIS](../../../translated_images/sv/jarvis.762ddbadbd1a3a33.webp)
 
 LLM, som är en allmän modell, tar emot begäran från användaren och identifierar den specifika uppgiften och eventuella argument/data som behövs för att slutföra uppgiften.
 

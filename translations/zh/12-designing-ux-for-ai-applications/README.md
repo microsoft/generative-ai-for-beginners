@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 为人工智能应用设计用户体验
 
-[![为人工智能应用设计用户体验](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.zh.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![为人工智能应用设计用户体验](../../../translated_images/zh/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(点击上方图片观看本课视频)_
 
@@ -58,7 +58,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 愉悦性意味着应用程序使用起来令人愉快。吸引人的用户体验可以对用户产生积极的影响，鼓励他们再次使用该应用程序，并增加业务收入。
 
-![展示人工智能用户体验考虑因素的图片](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.zh.png)
+![展示人工智能用户体验考虑因素的图片](../../../translated_images/zh/uxinai.d5b4ed690f5cefff.webp)
 
 并非所有挑战都可以通过人工智能解决。人工智能的作用是增强用户体验，无论是自动化手动任务，还是个性化用户体验。
 
@@ -72,25 +72,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 当人工智能帮助做出决策，例如向下一代传授知识时，教师和家长了解人工智能如何做出决策至关重要。这就是可解释性——理解人工智能应用程序如何做出决策。为可解释性设计包括添加详细信息，突出显示人工智能如何得出结果。用户必须知道结果是由人工智能生成的，而不是人类。例如，与其说“现在开始与您的导师聊天”，不如说“使用适合您需求的人工智能导师，帮助您以自己的节奏学习”。
 
-![一个应用程序登录页面，清楚地展示了人工智能应用程序中的可解释性](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.zh.png)
+![一个应用程序登录页面，清楚地展示了人工智能应用程序中的可解释性](../../../translated_images/zh/explanability-in-ai.134426a96b498fbf.webp)
 
 另一个例子是人工智能如何使用用户和个人数据。例如，一个具有学生身份的用户可能会根据其身份受到限制。人工智能可能无法直接给出问题的答案，但可以帮助用户思考如何解决问题。
 
-![人工智能根据用户身份回答问题](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.zh.png)
+![人工智能根据用户身份回答问题](../../../translated_images/zh/solving-questions.b7dea1604de0cbd2.webp)
 
 可解释性的另一个关键部分是简化解释。学生和教师可能不是人工智能专家，因此对应用程序能做什么或不能做什么的解释应该简洁易懂。
 
-![关于人工智能能力的简化解释](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.zh.png)
+![关于人工智能能力的简化解释](../../../translated_images/zh/simplified-explanations.4679508a406c3621.webp)
 
 ### 控制
 
 生成式人工智能创造了人工智能与用户之间的协作，例如用户可以修改提示以获得不同的结果。此外，一旦生成了输出，用户应该能够修改结果，从而获得控制感。例如，在使用Bing时，您可以根据格式、语气和长度调整您的提示。此外，您可以对输出进行修改，如下图所示：
 
-![Bing搜索结果，显示修改提示和输出的选项](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.zh.png)
+![Bing搜索结果，显示修改提示和输出的选项](../../../translated_images/zh/bing1.293ae8527dbe2789.webp)
 
 Bing的另一个功能是允许用户控制应用程序使用的数据。例如，在学校应用程序中，学生可能希望使用自己的笔记以及教师的资源作为复习材料。
 
-![Bing搜索结果，显示修改提示和输出的选项](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.zh.png)
+![Bing搜索结果，显示修改提示和输出的选项](../../../translated_images/zh/bing2.309f4845528a88c2.webp)
 
 > 在设计人工智能应用程序时，确保用户不会过度信任人工智能并对其能力设定不切实际的期望是至关重要的。实现这一点的一种方法是通过提示和结果之间的摩擦来提醒用户，这只是人工智能，而不是一个人类。
 
@@ -102,7 +102,7 @@ Bing的另一个功能是允许用户控制应用程序使用的数据。例如�
 
 另一种处理方法是清楚地传达系统的能力和局限性。当用户因请求超出人工智能能力范围而犯错时，也应该有一种处理方式，如下图所示。
 
-![提供反馈和处理错误](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.zh.png)
+![提供反馈和处理错误](../../../translated_images/zh/feedback-loops.7955c134429a9466.webp)
 
 系统错误在应用程序中很常见，例如用户可能需要超出人工智能范围的信息，或者应用程序可能对用户可以生成的总结问题/主题数量有限制。例如，一个人工智能应用程序可能仅接受有限学科的数据训练，例如历史和数学，可能无法处理地理相关的问题。为了解决这个问题，人工智能系统可以给出这样的响应：“抱歉，我们的产品仅接受以下学科的数据训练……，我无法回答您提出的问题。”
 

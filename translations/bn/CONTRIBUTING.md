@@ -63,7 +63,7 @@ workflow চেক পাস করতে এখানে দেওয়া ন
 
 উদাহরণস্বরূপ, ফাইলের যেকোনো লিঙ্কের উপর hover করলে **ctrl + click** চাপার মাধ্যমে লিঙ্ক অনুসরণ করার প্রম্পট পাবেন।
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.bn.png)
+![VS code follow links screenshot](../../translated_images/bn/vscode-follow-link.85520ab6a1237adc.webp)
 
 যদি লিঙ্ক ক্লিক করলে লোকালি কাজ না করে, তাহলে workflow ত্রুটি দেখাবে এবং GitHub এও কাজ করবে না।
 
@@ -71,7 +71,7 @@ workflow চেক পাস করতে এখানে দেওয়া ন
 
 `./` বা `../` টাইপ করলে VS code আপনাকে উপলব্ধ অপশন থেকে বেছে নিতে বলবে।
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.bn.png)
+![VS code select relative path screenshot](../../translated_images/bn/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 প্রয়োজনীয় ফাইল বা ফোল্ডারে ক্লিক করে পাথ অনুসরণ করুন, এতে নিশ্চিত হবেন পাথ ভাঙা নয়।
 
@@ -88,7 +88,7 @@ GitHub pages এ ডিপ্লয় হওয়ায় ফাইল ও �
 
 না থাকলে নিচের ত্রুটি পেতে পারেন।
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.bn.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/bn/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 সমাধানের জন্য workflow যে ফাইল পাথ হাইলাইট করেছে তা খুলে রিলেটিভ পাথের শেষে ট্র্যাকিং আইডি যোগ করুন।
 
@@ -105,7 +105,7 @@ GitHub pages এ ডিপ্লয় হওয়ায় ফাইল ও �
 
 না থাকলে নিচের ত্রুটি পেতে পারেন।
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.bn.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/bn/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 সমাধানের জন্য workflow যে ফাইল পাথ হাইলাইট করেছে তা খুলে URL এর শেষে ট্র্যাকিং আইডি যোগ করুন।
 
@@ -122,7 +122,7 @@ GitHub pages এ ডিপ্লয় হওয়ায় ফাইল ও �
 
 না থাকলে নিচের ত্রুটি পেতে পারেন।
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.bn.png)
+![GitHub check country locale comment screenshot](../../translated_images/bn/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 সমাধানের জন্য workflow যে ফাইল পাথ হাইলাইট করেছে তা খুলে URL থেকে দেশভিত্তিক লোকেল সরিয়ে ফেলুন।
 

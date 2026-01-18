@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Sikring af dine generative AI-applikationer
 
-[![Sikring af dine generative AI-applikationer](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.da.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Sikring af dine generative AI-applikationer](../../../translated_images/da/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introduktion
 
@@ -131,7 +131,7 @@ At efterligne trusler fra den virkelige verden betragtes nu som en standardpraks
 
 > Praksis med AI red teaming har udviklet sig til at få en mere udvidet betydning: det dækker ikke kun søgning efter sikkerhedssårbarheder, men også søgning efter andre systemfejl, såsom generering af potentielt skadeligt indhold. AI-systemer medfører nye risici, og red teaming er centralt for at forstå disse nye risici, såsom prompt injection og produktion af ubegrundet indhold. - [Microsoft AI Red Team bygger fremtidens sikrere AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Vejledning og ressourcer til red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.da.png)]()
+[![Vejledning og ressourcer til red teaming](../../../translated_images/da/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Nedenfor er nøgleindsigter, der har formet Microsofts AI Red Team-program.
 

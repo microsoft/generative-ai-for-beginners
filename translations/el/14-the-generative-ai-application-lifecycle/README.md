@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "el"
 }
 -->
-[![Ενσωμάτωση με κλήση λειτουργίας](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.el.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Ενσωμάτωση με κλήση λειτουργίας](../../../translated_images/el/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Ο Κύκλος Ζωής Εφαρμογών Γενετικής Τεχνητής Νοημοσύνης
 
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Με αυτό, χρειαζόμαστε ένα νέο Παράδειγμα για να προσαρμόσουμε αυτό το εργαλείο δυναμικά, με τα σωστά κίνητρα. Μπορούμε να κατηγοριοποιήσουμε τις παλαιότερες εφαρμογές ΤΝ ως "ML Apps" και τις νεότερες εφαρμογές ΤΝ ως "GenAI Apps" ή απλά "AI Apps", αντανακλώντας την κυρίαρχη τεχνολογία και τεχνικές που χρησιμοποιούνται εκείνη την εποχή. Αυτό μετατοπίζει την αφήγησή μας με πολλούς τρόπους, δείτε την παρακάτω σύγκριση.
 
-![Σύγκριση LLMOps vs. MLOps](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.el.png)
+![Σύγκριση LLMOps vs. MLOps](../../../translated_images/el/01-llmops-shift.29bc933cb3bb0080.webp)
 
 Παρατηρήστε ότι στο LLMOps, εστιάζουμε περισσότερο στους Προγραμματιστές Εφαρμογών, χρησιμοποιώντας ενσωματώσεις ως βασικό σημείο, χρησιμοποιώντας "Models-as-a-Service" και σκεπτόμενοι τα ακόλουθα σημεία για μετρικές.
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Πρώτα, για να κατανοήσουμε τον κύκλο ζωής και τις τροποποιήσεις, ας σημειώσουμε το επόμενο infographic.
 
-![Infographic LLMOps](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.el.png)
+![Infographic LLMOps](../../../translated_images/el/02-llmops.70a942ead05a7645.webp)
 
 Όπως ίσως παρατηρήσετε, αυτό διαφέρει από τους συνήθεις Κύκλους Ζωής του MLOps. Τα LLM έχουν πολλές νέες απαιτήσεις, όπως το Prompting, διαφορετικές τεχνικές για βελτίωση ποιότητας (Fine-Tuning, RAG, Meta-Prompts), διαφορετική αξιολόγηση και υπευθυνότητα με υπεύθυνη ΤΝ, τέλος, νέες μετρικές αξιολόγησης (Ποιότητα, Βλάβη, Ειλικρίνεια, Κόστος και Καθυστέρηση).
 
@@ -54,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Πώς θα μπορούσαμε να εξερευνήσουμε αυτά τα βήματα; Ας δούμε λεπτομερώς πώς θα μπορούσαμε να δημιουργήσουμε έναν κύκλο ζωής.
 
-![Ροή εργασίας LLMOps](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.el.png)
+![Ροή εργασίας LLMOps](../../../translated_images/el/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
 Αυτό μπορεί να φαίνεται λίγο περίπλοκο, ας εστιάσουμε πρώτα στα τρία μεγάλα βήματα.
 
@@ -74,11 +74,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Η [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), σας επιτρέπει να χρησιμοποιήσετε το [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). Το AI Studio είναι μια διαδικτυακή πύλη που σας επιτρέπει να εξερευνήσετε μοντέλα, δείγματα και εργαλεία. Διαχειρίζεστε τους πόρους σας, ροές ανάπτυξης UI και επιλογές SDK/CLI για ανάπτυξη με κώδικα.
 
-![Δυνατότητες Azure AI](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.el.png)
+![Δυνατότητες Azure AI](../../../translated_images/el/04-azure-ai-platform.80203baf03a12fa8.webp)
 
 Το Azure AI, σας επιτρέπει να χρησιμοποιήσετε πολλαπλούς πόρους, για να διαχειριστείτε τις λειτουργίες, τις υπηρεσίες, τα έργα, την αναζήτηση διανυσμάτων και τις ανάγκες βάσεων δεδομένων.
 
-![LLMOps με Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.el.png)
+![LLMOps με Azure AI](../../../translated_images/el/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
 Κατασκευάστε, από Proof-of-Concept (POC) μέχρι εφαρμογές μεγάλης κλίμακας με το PromptFlow:
 
@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - Δοκιμάστε και βελτιστοποιήστε τις εφαρμογές σας για ποιοτική ΤΝ, με ευκολία.
 - Χρησιμοποιήστε το Azure AI Studio για να ενσωματώσετε και να επαναλάβετε με το cloud, Push και Deploy για γρήγορη ενσωμάτωση.
 
-![LLMOps με PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.el.png)
+![LLMOps με PromptFlow](../../../translated_images/el/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Υπέροχα! Συνεχίστε τη Μάθησή σας!
 

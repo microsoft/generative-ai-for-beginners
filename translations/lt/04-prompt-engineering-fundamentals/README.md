@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagrindai apie užklausų kūrimą
 
-[![Pagrindai apie užklausų kūrimą](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.lt.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Pagrindai apie užklausų kūrimą](../../../translated_images/lt/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Įvadas
 Šiame modulyje aptariami esminiai konceptai ir technikos, kaip kurti efektyvias užklausas generatyviniams dirbtinio intelekto modeliams. Tai, kaip jūs formuluojate savo užklausą LLM (dideliam kalbos modeliui), yra labai svarbu. Kruopščiai suformuluota užklausa gali užtikrinti geresnę atsakymo kokybę. Bet ką iš tikrųjų reiškia tokie terminai kaip _užklausa_ ir _užklausų kūrimas_? Ir kaip galima patobulinti užklausos _įvestį_, kurią siunčiate LLM? Tai yra klausimai, į kuriuos bandysime atsakyti šiame ir kitame skyriuje.
@@ -53,7 +53,7 @@ Notebook turi _pradinių_ pratimų – tačiau jūs esate skatinami pridėti sav
 
 Norite gauti bendrą vaizdą apie tai, ką apima ši pamoka, prieš pradedant gilintis? Peržiūrėkite šį iliustruotą vadovą, kuris suteikia supratimą apie pagrindines aptariamas temas ir svarbiausius dalykus, kuriuos verta apmąstyti kiekvienoje iš jų. Pamokos planas veda jus nuo pagrindinių konceptų ir iššūkių supratimo iki jų sprendimo, taikant atitinkamas užklausų kūrimo technikas ir geriausias praktikas. Atkreipkite dėmesį, kad „Pažangių technikų“ skyrius šiame vadove nurodo turinį, aptariamą _kitame_ šios mokymo programos skyriuje.
 
-![Iliustruotas vadovas apie užklausų kūrimą](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.lt.png)
+![Iliustruotas vadovas apie užklausų kūrimą](../../../translated_images/lt/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Mūsų startuolis
 
@@ -84,7 +84,7 @@ LLM mato užklausas kaip _tokenų seką_, kur skirtingi modeliai (arba modelio v
 
 Norėdami geriau suprasti, kaip veikia tokenizacija, išbandykite tokias priemones kaip [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), parodytą žemiau. Nukopijuokite savo užklausą – ir pažiūrėkite, kaip ji paverčiama į tokenus, atkreipdami dėmesį į tai, kaip tvarkomi tarpai ir skyrybos ženklai. Atkreipkite dėmesį, kad šis pavyzdys rodo senesnį LLM (GPT-3) – todėl bandymas su naujesniu modeliu gali duoti kitokį rezultatą.
 
-![Tokenizacija](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.lt.png)
+![Tokenizacija](../../../translated_images/lt/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Konceptas: Pagrindiniai modeliai
 
@@ -94,7 +94,7 @@ Norite pamatyti, kaip veikia užklausų pagrindu sukurtas užbaigimas? Įveskite
 
 Bet kas, jei vartotojas norėtų pamatyti kažką konkretaus, kas atitiktų tam tikrus kriterijus ar užduoties tikslą? Čia į pagalbą ateina _instrukcijomis pritaikyti_ LLM.
 
-![Bazinis LLM pokalbio užbaigimas](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.lt.png)
+![Bazinis LLM pokalbio užbaigimas](../../../translated_images/lt/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Konceptas: Instrukcijomis pritaikyti LLM
 
@@ -108,7 +108,7 @@ Pabandykime – peržiūrėkite aukščiau pateiktą užklausą, tačiau dabar p
 
 Pažiūrėkite, kaip rezultatas dabar pritaikytas atspindėti norimą tikslą ir formatą? Mokytojas dabar gali tiesiogiai naudoti šį atsakymą savo klasės skaidrėse.
 
-![Instrukcijomis pritaikytas LLM pokalbio užbaigimas](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.lt.png)
+![Instrukcijomis pritaikytas LLM pokalbio užbaigimas](../../../translated_images/lt/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Kodėl mums reikia užklausų kūrimo?
 
@@ -125,15 +125,15 @@ Taigi, kas nutinka, kai šį užklausą pateikiame skirtingiems LLM tiekėjams?
 
 > **Atsakymas 1**: OpenAI Playground (GPT-35)
 
-![Atsakymas 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.lt.png)
+![Atsakymas 1](../../../translated_images/lt/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Atsakymas 2**: Azure OpenAI Playground (GPT-35)
 
-![Atsakymas 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.lt.png)
+![Atsakymas 2](../../../translated_images/lt/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Atsakymas 3**: Hugging Face Chat Playground (LLama-2)
 
-![Atsakymas 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.lt.png)
+![Atsakymas 3](../../../translated_images/lt/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Kaip ir tikėtasi, kiekvienas modelis (arba modelio versija) pateikia šiek tiek skirtingus atsakymus dėl stochastinio elgesio ir modelio galimybių skirtumų. Pavyzdžiui, vienas modelis orientuojasi į 8 klasės auditoriją, o kitas - į vidurinės mokyklos mokinius. Tačiau visi trys modeliai pateikė atsakymus, kurie galėtų įtikinti neinformuotą vartotoją, kad įvykis buvo tikras.
 

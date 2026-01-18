@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # জেনারেটিভ এআই-চালিত চ্যাট অ্যাপ্লিকেশন তৈরি করা
 
-[![জেনারেটিভ এআই-চালিত চ্যাট অ্যাপ্লিকেশন তৈরি করা](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.bn.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![জেনারেটিভ এআই-চালিত চ্যাট অ্যাপ্লিকেশন তৈরি করা](../../../translated_images/bn/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(উপরের ছবিতে ক্লিক করে এই পাঠের ভিডিও দেখুন)_
 
@@ -96,11 +96,11 @@ chat_completion = client.chat.completions.create(model="gpt-3.5-turbo", messages
 
 ব্যক্তিগতকরণের একটি উদাহরণ হল OpenAI-এর ChatGPT-তে "Custom instructions" সেটিংস। এটি আপনাকে আপনার প্রম্পটগুলির জন্য গুরুত্বপূর্ণ প্রসঙ্গ হতে পারে এমন আপনার সম্পর্কে তথ্য প্রদান করতে দেয়। এখানে একটি কাস্টম ইনস্ট্রাকশনের উদাহরণ দেওয়া হয়েছে।
 
-![ChatGPT-তে কাস্টম ইনস্ট্রাকশন সেটিংস](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.bn.png)
+![ChatGPT-তে কাস্টম ইনস্ট্রাকশন সেটিংস](../../../translated_images/bn/custom-instructions.b96f59aa69356fcf.webp)
 
 এই "প্রোফাইল" ChatGPT-কে লিঙ্কড লিস্ট নিয়ে একটি পাঠ পরিকল্পনা তৈরি করতে বলে। লক্ষ্য করুন যে ChatGPT ব্যবহারকারীর অভিজ্ঞতার উপর ভিত্তি করে একটি আরও গভীর পাঠ পরিকল্পনা চায় তা বিবেচনায় নিয়েছে।
 
-![লিঙ্কড লিস্ট নিয়ে একটি পাঠ পরিকল্পনার জন্য ChatGPT-তে একটি প্রম্পট](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.bn.png)
+![লিঙ্কড লিস্ট নিয়ে একটি পাঠ পরিকল্পনার জন্য ChatGPT-তে একটি প্রম্পট](../../../translated_images/bn/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### বড় ভাষার মডেলের জন্য মাইক্রোসফটের সিস্টেম মেসেজ ফ্রেমওয়ার্ক
 

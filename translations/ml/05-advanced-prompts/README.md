@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ആഡ്വാൻസ്ഡ് പ്രോംപ്റ്റുകൾ സൃഷ്ടിക്കൽ
 
-[![Creating Advanced Prompts](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ml.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Creating Advanced Prompts](../../../translated_images/ml/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 മുൻ അധ്യായത്തിൽ നിന്നുള്ള ചില പഠനങ്ങൾ നമുക്ക് പുനഃസ്മരിക്കാം:
 

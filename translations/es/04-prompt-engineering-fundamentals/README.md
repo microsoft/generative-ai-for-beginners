@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fundamentos de Ingeniería de Prompts
 
-[![Fundamentos de Ingeniería de Prompts](../../../translated_images/04-lesson-banner.a2c90deba7fedacda69f35b41636a8951ec91c2e33f5420b1254534ac85bc18e.es.png)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Fundamentos de Ingeniería de Prompts](../../../translated_images/es/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introducción
 Este módulo cubre conceptos esenciales y técnicas para crear prompts efectivos en modelos de IA generativa. La forma en que redactas tu prompt para un LLM también importa. Un prompt cuidadosamente diseñado puede lograr una mejor calidad de respuesta. Pero, ¿qué significan exactamente términos como _prompt_ e _ingeniería de prompts_? ¿Y cómo puedo mejorar el _input_ del prompt que envío al LLM? Estas son las preguntas que intentaremos responder en este capítulo y el siguiente.
@@ -53,7 +53,7 @@ El notebook incluye ejercicios _iniciales_, pero se te anima a agregar tus propi
 
 ¿Quieres tener una visión general de lo que cubre esta lección antes de profundizar? Consulta esta guía ilustrada, que te da una idea de los temas principales tratados y los puntos clave para reflexionar en cada uno. El mapa de la lección te lleva desde la comprensión de los conceptos y desafíos básicos hasta abordarlos con técnicas relevantes de ingeniería de prompts y mejores prácticas. Ten en cuenta que la sección "Técnicas Avanzadas" en esta guía se refiere a contenido cubierto en el _próximo_ capítulo de este currículo.
 
-![Guía Ilustrada de Ingeniería de Prompts](../../../translated_images/04-prompt-engineering-sketchnote.d5f33336957a1e4f623b826195c2146ef4cc49974b72fa373de6929b474e8b70.es.png)
+![Guía Ilustrada de Ingeniería de Prompts](../../../translated_images/es/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Nuestra Startup
 
@@ -94,7 +94,7 @@ Un LLM ve los prompts como una _secuencia de tokens_, donde diferentes modelos (
 
 Para obtener una intuición sobre cómo funciona la tokenización, prueba herramientas como el [Tokenizador de OpenAI](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) que se muestra a continuación. Copia tu prompt y observa cómo se convierte en tokens, prestando atención a cómo se manejan los caracteres de espacio y los signos de puntuación. Ten en cuenta que este ejemplo muestra un LLM más antiguo (GPT-3), por lo que probar esto con un modelo más nuevo puede producir un resultado diferente.
 
-![Tokenización](../../../translated_images/04-tokenizer-example.e71f0a0f70356c5c7d80b21e8753a28c18a7f6d4aaa1c4b08e65d17625e85642.es.png)
+![Tokenización](../../../translated_images/es/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Concepto: Modelos Base
 
@@ -104,7 +104,7 @@ Una vez que un prompt se tokeniza, la función principal del ["Modelo Base LLM"]
 
 Pero, ¿qué pasa si el usuario quiere ver algo específico que cumpla con ciertos criterios u objetivos de tarea? Aquí es donde entran en juego los LLMs ajustados por instrucciones.
 
-![Completación de Chat con Modelo Base LLM](../../../translated_images/04-playground-chat-base.65b76fcfde0caa6738e41d20f1a6123f9078219e6f91a88ee5ea8014f0469bdf.es.png)
+![Completación de Chat con Modelo Base LLM](../../../translated_images/es/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Concepto: LLMs Ajustados por Instrucciones
 
@@ -118,7 +118,7 @@ Probémoslo: vuelve al prompt anterior, pero ahora cambia el _mensaje del sistem
 
 ¿Ves cómo el resultado ahora está ajustado para reflejar el objetivo y formato deseados? Un educador ahora puede usar directamente esta respuesta en sus diapositivas para esa clase.
 
-![Completación de Chat con LLM Ajustado por Instrucciones](../../../translated_images/04-playground-chat-instructions.b30bbfbdf92f2d051639c9bc23f74a0e2482f8dc7f0dafc6cc6fda81b2b00534.es.png)
+![Completación de Chat con LLM Ajustado por Instrucciones](../../../translated_images/es/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## ¿Por qué necesitamos Ingeniería de Prompts?
 
@@ -148,15 +148,15 @@ Entonces, ¿qué sucede cuando probamos este mensaje con diferentes proveedores 
 
 > **Respuesta 1**: OpenAI Playground (GPT-35)
 
-![Respuesta 1](../../../translated_images/04-fabrication-oai.5818c4e0b2a2678c40e0793bf873ef4a425350dd0063a183fb8ae02cae63aa0c.es.png)
+![Respuesta 1](../../../translated_images/es/04-fabrication-oai.5818c4e0b2a2678c.webp)
 
 > **Respuesta 2**: Azure OpenAI Playground (GPT-35)
 
-![Respuesta 2](../../../translated_images/04-fabrication-aoai.b14268e9ecf25caf613b7d424c16e2a0dc5b578f8f960c0c04d4fb3a68e6cf61.es.png)
+![Respuesta 2](../../../translated_images/es/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
 > **Respuesta 3**: Hugging Face Chat Playground (LLama-2)
 
-![Respuesta 3](../../../translated_images/04-fabrication-huggingchat.faf82a0a512789565e410568bce1ac911075b943dec59b1ef4080b61723b5bf4.es.png)
+![Respuesta 3](../../../translated_images/es/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
 Como era de esperar, cada modelo (o versión del modelo) produce respuestas ligeramente diferentes gracias al comportamiento estocástico y las variaciones en las capacidades del modelo. Por ejemplo, un modelo se dirige a una audiencia de octavo grado, mientras que otro asume un estudiante de secundaria. Pero los tres modelos generaron respuestas que podrían convencer a un usuario desinformado de que el evento fue real.
 

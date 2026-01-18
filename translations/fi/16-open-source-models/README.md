@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fi"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.fi.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/fi/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Johdanto
 
@@ -41,12 +41,12 @@ Tässä oppitunnissa viittaamme malleihin jatkossa nimellä "avoimet mallit", ko
 
 **Kustannukset** – Näiden mallien käyttö- ja käyttöönottohinta per token on alhaisempi kuin omistusoikeudellisten mallien. Generatiivisia tekoälysovelluksia rakennettaessa on tärkeää tarkastella suorituskyvyn ja hinnan suhdetta näiden mallien käytössä omassa käyttötapauksessa.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.fi.png)
+![Model Cost](../../../translated_images/fi/model-price.3f5a3e4d32ae00b4.webp)
 Lähde: Artificial Analysis
 
 **Joustavuus** – Avoimien mallien kanssa työskentely mahdollistaa joustavuuden eri mallien käytössä tai niiden yhdistämisessä. Esimerkkinä tästä on [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), jossa käyttäjä voi valita käytettävän mallin suoraan käyttöliittymästä:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.fi.png)
+![Choose Model](../../../translated_images/fi/choose-model.f095d15bbac92214.webp)
 
 ## Tutustuminen eri avoimiin malleihin
 
@@ -74,7 +74,7 @@ Avoimen mallin valintaan ei ole yhtä oikeaa vastausta. Hyvä lähtökohta on k�
 
 Kun haluat vertailla LLM-malleja eri tyypeissä, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) on toinen erinomainen resurssi:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.fi.png)
+![Model Quality](../../../translated_images/fi/model-quality.aaae1c22e00f7ee1.webp)
 Lähde: Artificial Analysis
 
 Jos työskentelet tietyn käyttötapauksen parissa, saman alan hienosäädettyjen versioiden etsiminen voi olla tehokasta. Useiden avoimien mallien kokeileminen ja niiden suorituskyvyn arvioiminen omien ja käyttäjiesi odotusten mukaan on myös hyvä käytäntö.

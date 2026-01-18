@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fonksiyon Çağrımı ile Entegrasyon
 
-[![Fonksiyon Çağrımı ile Entegrasyon](../../../translated_images/11-lesson-banner.d78860d3e1f041e2c3426b1c052e1590738d2978db584a08efe1efbca299ed82.tr.png)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Fonksiyon Çağrımı ile Entegrasyon](../../../translated_images/tr/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
 Önceki derslerde oldukça fazla şey öğrendiniz. Ancak daha da geliştirebiliriz. Ele alabileceğimiz bazı konular, yanıt formatını daha tutarlı hale getirerek yanıtı daha kolay işlenebilir hale getirmek ve uygulamamızı daha da zenginleştirmek için diğer kaynaklardan veri eklemek olabilir.
 
@@ -179,7 +179,7 @@ Diyelim ki öğrenci verilerinden oluşan bir veritabanı oluşturmak istiyoruz,
 
 Peki formatlama sorununu nasıl çözeriz? Fonksiyonel çağrımı kullanarak yapılandırılmış veriler alacağımızdan emin olabiliriz. Fonksiyon çağrımı kullanıldığında, LLM aslında herhangi bir fonksiyonu çağırmaz veya çalıştırmaz. Bunun yerine, LLM'in yanıtları için takip edeceği bir yapı oluştururuz. Daha sonra bu yapılandırılmış yanıtları kullanarak uygulamalarımızda hangi fonksiyonun çalıştırılacağını biliriz.
 
-![fonksiyon akışı](../../../translated_images/Function-Flow.083875364af4f4bb69bd6f6ed94096a836453183a71cf22388f50310ad6404de.tr.png)
+![fonksiyon akışı](../../../translated_images/tr/Function-Flow.083875364af4f4bb.webp)
 
 Fonksiyondan dönen verileri alıp bunu LLM'e geri gönderebiliriz. LLM daha sonra kullanıcının sorgusuna yanıt vermek için doğal dil kullanarak yanıt verir.
 
@@ -201,7 +201,7 @@ Bir fonksiyon çağrısı oluşturma süreci 3 ana adımdan oluşur:
 2. **Okuma**: Modelin yanıtını bir işlem gerçekleştirmek için okuma, yani bir fonksiyon veya API çağrısı yürütme.
 3. **Yapma**: Fonksiyondan gelen yanıtla Chat Completions API'sine başka bir çağrı yaparak bu bilgiyi kullanıcının sorgusuna yanıt oluşturmak için kullanma.
 
-![LLM Akışı](../../../translated_images/LLM-Flow.3285ed8caf4796d7343c02927f52c9d32df59e790f6e440568e2e951f6ffa5fd.tr.png)
+![LLM Akışı](../../../translated_images/tr/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Adım 1 - mesajlar oluşturma
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Zodpovědné používání generativní AI
 
-[![Zodpovědné používání generativní AI](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.cs.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Zodpovědné používání generativní AI](../../../translated_images/cs/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klikněte na obrázek výše a podívejte se na video této lekce_
 
@@ -85,7 +85,7 @@ Tyto typy výstupů nejenže ničí pozitivní zkušenosti uživatelů s našimi
 
 Nyní, když jsme identifikovali důležitost zodpovědné generativní AI, podívejme se na 4 kroky, které můžeme podniknout, abychom naše AI řešení budovali zodpovědně:
 
-![Cyklus zmírnění](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.cs.png)
+![Cyklus zmírnění](../../../translated_images/cs/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Měření potenciálních škod
 
@@ -97,7 +97,7 @@ Protože náš startup vytváří vzdělávací produkt, bylo by dobré připrav
 
 Nyní je čas najít způsoby, jak můžeme zabránit nebo omezit potenciální škody způsobené modelem a jeho odpověďmi. Můžeme se na to podívat ve 4 různých vrstvách:
 
-![Vrstvy zmírnění](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.cs.png)
+![Vrstvy zmírnění](../../../translated_images/cs/mitigation-layers.377215120b9a1159.webp)
 
 - **Model**. Výběr správného modelu pro správné použití. Větší a složitější modely, jako je GPT-4, mohou představovat větší riziko škodlivého obsahu, pokud jsou aplikovány na menší a konkrétnější případy použití. Použití vašich tréninkových dat k doladění také snižuje riziko škodlivého obsahu.
 

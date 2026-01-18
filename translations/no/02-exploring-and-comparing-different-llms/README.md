@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Utforsking og sammenligning av ulike LLM-er
 
-[![Utforsking og sammenligning av ulike LLM-er](../../../translated_images/02-lesson-banner.ef94c84979f97f60f07e27d905e708cbcbdf78707120553ccab27d91c947805b.no.png)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Utforsking og sammenligning av ulike LLM-er](../../../translated_images/no/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
 > _Klikk på bildet over for å se videoen til denne leksjonen_
 
@@ -59,14 +59,14 @@ Begrepet Grunnmodell ble [skapt av forskere ved Stanford](https://arxiv.org/abs/
 - **De er svært store modeller**, basert på svært dype nevrale nettverk trent på milliarder av parametere.
 - **De er vanligvis ment å tjene som et ‘grunnlag’ for andre modeller**, noe som betyr at de kan brukes som et utgangspunkt for å bygge andre modeller, som kan gjøres ved finjustering.
 
-![Grunnmodeller versus LLM-er](../../../translated_images/FoundationModel.e4859dbb7a825c94b284f17eae1c186aabc21d4d8644331f5b007d809cf8d0f2.no.png)
+![Grunnmodeller versus LLM-er](../../../translated_images/no/FoundationModel.e4859dbb7a825c94.webp)
 
 Bildekilde: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
 For å tydeliggjøre dette skillet, la oss ta ChatGPT som et eksempel. For å bygge den første versjonen av ChatGPT, fungerte en modell kalt GPT-3.5 som grunnmodellen. Dette betyr at OpenAI brukte noen chat-spesifikke data for å lage en finjustert versjon av GPT-3.5 som var spesialisert på å prestere godt i samtalescenarier, som chatboter.
 
-![Grunnmodell](../../../translated_images/Multimodal.2c389c6439e0fc51b0b7b226d95d7d900d372ae66902d71b8ce5ec4951b8efbe.no.png)
+![Grunnmodell](../../../translated_images/no/Multimodal.2c389c6439e0fc51.webp)
 
 Bildekilde: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
@@ -84,15 +84,15 @@ LLM-er kan også kategoriseres etter outputen de genererer.
 
 Innebygginger er et sett med modeller som kan konvertere tekst til en numerisk form, kalt innebygging, som er en numerisk representasjon av input-teksten. Innebygginger gjør det enklere for maskiner å forstå forholdet mellom ord eller setninger og kan brukes som input av andre modeller, som klassifiseringsmodeller eller klyngemodeller som har bedre ytelse på numeriske data. Innebyggingsmodeller brukes ofte til overføringslæring, der en modell bygges for en surrogatoppgave som det finnes rikelig med data for, og deretter gjenbrukes modellvektene (innebyggingene) for andre oppgaver. Et eksempel på denne kategorien er [OpenAI innebygginger](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Innebygging](../../../translated_images/Embedding.c3708fe988ccf76073d348483dbb7569f622211104f073e22e43106075c04800.no.png)
+![Innebygging](../../../translated_images/no/Embedding.c3708fe988ccf760.webp)
 
 Bildegenereringsmodeller er modeller som genererer bilder. Disse modellene brukes ofte til bildebehandling, bildesyntese og bildetransformasjon. Bildegenereringsmodeller trenes ofte på store datasett av bilder, som [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere nye bilder eller redigere eksisterende bilder med teknikker som inpainting, superoppløsning og fargelegging. Eksempler inkluderer [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) og [Stable Diffusion-modeller](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
 
-![Bildegenerering](../../../translated_images/Image.349c080266a763fd255b840a921cd8fc526ed78dc58708fa569ff1873d302345.no.png)
+![Bildegenerering](../../../translated_images/no/Image.349c080266a763fd.webp)
 
 Tekst- og kodegenereringsmodeller er modeller som genererer tekst eller kode. Disse modellene brukes ofte til tekstsammendrag, oversettelse og spørsmål-svar. Tekstgenereringsmodeller trenes ofte på store datasett av tekst, som [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere ny tekst eller svare på spørsmål. Kodegenereringsmodeller, som [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), trenes ofte på store datasett av kode, som GitHub, og kan brukes til å generere ny kode eller fikse feil i eksisterende kode.
 
-![Tekst- og kodegenerering](../../../translated_images/Text.a8c0cf139e5cc2a0cd3edaba8d675103774e6ddcb3c9fc5a98bb17c9a450e31d.no.png)
+![Tekst- og kodegenerering](../../../translated_images/no/Text.a8c0cf139e5cc2a0.webp)
 
 ### Encoder-Decoder versus kun Decoder
 
@@ -123,23 +123,23 @@ De fleste av modellene vi nevnte i tidligere avsnitt (OpenAI-modeller, åpen kil
 
 - Finne Foundation-modellen av interesse i katalogen – enten proprietær eller åpen kildekode – ved å filtrere etter oppgave, lisens eller navn. For å forbedre søkbarheten er modellene organisert i samlinger, som Azure OpenAI-samlingen, Hugging Face-samlingen og mer.
 
-![Model catalog](../../../translated_images/AzureAIStudioModelCatalog.3cf8a499aa8ba0314f2c73d4048b3225d324165f547525f5b7cfa5f6c9c68941.no.png)
+![Model catalog](../../../translated_images/no/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
 - Gå gjennom modellkortet, som inkluderer en detaljert beskrivelse av tiltenkt bruk og treningsdata, kodeeksempler og evalueringsresultater fra det interne evalueringsbiblioteket.
 
-![Model card](../../../translated_images/ModelCard.598051692c6e400d681a713ba7717e8b6e5e65f08d12131556fcec0f1789459b.no.png)
+![Model card](../../../translated_images/no/ModelCard.598051692c6e400d.webp)
 
 - Sammenligne benchmarks på tvers av modeller og datasett tilgjengelig i bransjen for å vurdere hvilken som passer best til forretningsscenariet, via [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-panelet.
 
-![Model benchmarks](../../../translated_images/ModelBenchmarks.254cb20fbd06c03a4ca53994585c5ea4300a88bcec8eff0450f2866ee2ac5ff3.no.png)
+![Model benchmarks](../../../translated_images/no/ModelBenchmarks.254cb20fbd06c03a.webp)
 
 - Finjustere modellen på egendefinerte treningsdata for å forbedre modellens ytelse i en spesifikk arbeidsbelastning, ved å utnytte eksperimenterings- og sporingsfunksjonene i Azure AI Studio.
 
-![Model fine-tuning](../../../translated_images/FineTuning.aac48f07142e36fddc6571b1f43ea2e003325c9c6d8e3fc9d8834b771e308dbf.no.png)
+![Model fine-tuning](../../../translated_images/no/FineTuning.aac48f07142e36fd.webp)
 
 - Distribuere den originale forhåndstrente modellen eller den finjusterte versjonen til en ekstern sanntidsinference – administrert databehandling – eller serverløs API-endepunkt – [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) – for å gjøre det mulig for applikasjoner å bruke den.
 
-![Model deployment](../../../translated_images/ModelDeploy.890da48cbd0bccdb4abfc9257f3d884831e5d41b723e7d1ceeac9d60c3c4f984.no.png)
+![Model deployment](../../../translated_images/no/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
 > Ikke alle modeller i katalogen er for øyeblikket tilgjengelige for finjustering og/eller pay-as-you-go-distribusjon. Sjekk modellkortet for detaljer om modellens funksjoner og begrensninger.
@@ -158,7 +158,7 @@ Det finnes flere tilnærminger en bedrift kan bruke for å oppnå de resultatene
 
 - **Finjustert modell**. Her trener du modellen videre på dine egne data, noe som gjør modellen mer presis og responsiv til dine behov, men det kan være kostbart.
 
-![LLMs deployment](../../../translated_images/Deploy.18b2d27412ec8c02871386cbe91097c7f2190a8c6e2be88f66392b411609a48c.no.png)
+![LLMs deployment](../../../translated_images/no/Deploy.18b2d27412ec8c02.webp)
 
 Bildekilde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 

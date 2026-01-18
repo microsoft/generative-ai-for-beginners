@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Low Code AI-toepassingen bouwen
 
-[![Low Code AI-toepassingen bouwen](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.nl.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Low Code AI-toepassingen bouwen](../../../translated_images/nl/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
@@ -92,17 +92,17 @@ Je zult de app bouwen met Copilot in Power Apps volgens de onderstaande stappen:
 
 1. Gebruik het tekstvak op het startscherm om de app te beschrijven die je wilt bouwen. Bijvoorbeeld: **_Ik wil een app bouwen om studentopdrachten bij te houden en te beheren_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
-![Beschrijf de app die je wilt bouwen](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.nl.png)
+![Beschrijf de app die je wilt bouwen](../../../translated_images/nl/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. De AI Copilot zal een Dataverse-tabel voorstellen met de velden die je nodig hebt om de gegevens die je wilt bijhouden op te slaan, samen met enkele voorbeeldgegevens. Je kunt de tabel vervolgens aanpassen aan je behoeften met behulp van de AI Copilot-assistentfunctie via conversatiestappen.
 
    > **Belangrijk**: Dataverse is het onderliggende dataplatform voor Power Platform. Het is een low-code dataplatform voor het opslaan van de gegevens van de app. Het is een volledig beheerde service die gegevens veilig opslaat in de Microsoft Cloud en wordt ingericht binnen je Power Platform-omgeving. Het biedt ingebouwde mogelijkheden voor gegevensbeheer, zoals gegevensclassificatie, gegevenslijnage, fijnmazige toegangscontrole en meer. Je kunt meer leren over Dataverse [hier](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Voorgestelde velden in je nieuwe tabel](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.nl.png)
+   ![Voorgestelde velden in je nieuwe tabel](../../../translated_images/nl/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Docenten willen e-mails sturen naar de studenten die hun opdrachten hebben ingediend om hen op de hoogte te houden van de voortgang van hun opdrachten. Je kunt Copilot gebruiken om een nieuw veld aan de tabel toe te voegen om het e-mailadres van de student op te slaan. Bijvoorbeeld, je kunt de volgende prompt gebruiken om een nieuw veld aan de tabel toe te voegen: **_Ik wil een kolom toevoegen om het e-mailadres van de student op te slaan_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
-![Een nieuw veld toevoegen](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.nl.png)
+![Een nieuw veld toevoegen](../../../translated_images/nl/copilot-new-column.35e15ff21acaf274.webp)
 
 1. De AI Copilot zal een nieuw veld genereren en je kunt het veld vervolgens aanpassen aan je behoeften.
 
@@ -112,7 +112,7 @@ Je zult de app bouwen met Copilot in Power Apps volgens de onderstaande stappen:
 
 1. Om docenten in staat te stellen e-mails naar studenten te sturen, kun je Copilot gebruiken om een nieuw scherm aan de app toe te voegen. Bijvoorbeeld, je kunt de volgende prompt gebruiken om een nieuw scherm aan de app toe te voegen: **_Ik wil een scherm toevoegen om e-mails naar studenten te sturen_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
-![Een nieuw scherm toevoegen via een prompt-instructie](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.nl.png)
+![Een nieuw scherm toevoegen via een prompt-instructie](../../../translated_images/nl/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. De AI Copilot zal een nieuw scherm genereren en je kunt het scherm vervolgens aanpassen aan je behoeften.
 
@@ -147,15 +147,15 @@ Om een tabel in Dataverse te maken met Copilot, volg je de onderstaande stappen:
 
 2. Selecteer in de navigatiebalk links **Tabellen** en klik vervolgens op **Beschrijf de nieuwe tabel**.
 
-![Selecteer nieuwe tabel](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.nl.png)
+![Selecteer nieuwe tabel](../../../translated_images/nl/describe-new-table.0792373eb757281e.webp)
 
 3. Op het scherm **Beschrijf de nieuwe tabel**, gebruik je het tekstveld om de tabel te beschrijven die je wilt maken. Bijvoorbeeld: **_Ik wil een tabel maken om factuurinformatie op te slaan_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
-![Beschrijf de tabel](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.nl.png)
+![Beschrijf de tabel](../../../translated_images/nl/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. De AI Copilot zal een Dataverse-tabel voorstellen met de velden die je nodig hebt om de gegevens die je wilt bijhouden op te slaan, samen met enkele voorbeeldgegevens. Je kunt de tabel vervolgens aanpassen aan je behoeften met behulp van de AI Copilot-assistent via conversatiestappen.
 
-![Voorgestelde Dataverse-tabel](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.nl.png)
+![Voorgestelde Dataverse-tabel](../../../translated_images/nl/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Het financiële team wil een e-mail sturen naar de leverancier om hen op de hoogte te stellen van de huidige status van hun factuur. Je kunt Copilot gebruiken om een nieuw veld aan de tabel toe te voegen om het e-mailadres van de leverancier op te slaan. Bijvoorbeeld: je kunt de volgende prompt gebruiken om een nieuw veld aan de tabel toe te voegen: **_Ik wil een kolom toevoegen om het e-mailadres van de leverancier op te slaan_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
@@ -184,7 +184,7 @@ Enkele van de voorgebouwde AI-modellen die beschikbaar zijn in Power Platform zi
 
 Met aangepaste AI-modellen kun je je eigen model in AI Builder integreren zodat het kan functioneren als elk ander AI Builder aangepast model, waarmee je het model kunt trainen met je eigen gegevens. Je kunt deze modellen gebruiken om processen te automatiseren en uitkomsten te voorspellen in zowel Power Apps als Power Automate. Bij het gebruik van je eigen model gelden er beperkingen. Lees meer over deze [beperkingen](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI Builder-modellen](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.nl.png)
+![AI Builder-modellen](../../../translated_images/nl/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Opdracht #2 - Bouw een factuurverwerkingsflow voor onze startup
 
@@ -198,7 +198,7 @@ Om een workflow te bouwen die het financiële team helpt facturen te verwerken m
 
 2. Gebruik het tekstveld op het startscherm om de workflow te beschrijven die je wilt bouwen. Bijvoorbeeld: **_Verwerk een factuur wanneer deze in mijn mailbox aankomt_**. Klik op de knop **Verzenden** om de prompt naar de AI Copilot te sturen.
 
-   ![Copilot Power Automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.nl.png)
+   ![Copilot Power Automate](../../../translated_images/nl/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. De AI Copilot zal de acties voorstellen die je nodig hebt om de taak die je wilt automatiseren uit te voeren. Je kunt op de knop **Volgende** klikken om door te gaan naar de volgende stappen.
 
@@ -212,7 +212,7 @@ Om een workflow te bouwen die het financiële team helpt facturen te verwerken m
 
 8. Verwijder de **Voorwaarde**-actie uit de flow, omdat je deze niet zult gebruiken. Het zou eruit moeten zien zoals in de volgende screenshot:
 
-   ![Power Automate, acties verwijderen](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.nl.png)
+   ![Power Automate, acties verwijderen](../../../translated_images/nl/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Klik op de knop **Actie toevoegen** en zoek naar **Dataverse**. Selecteer de actie **Een nieuwe rij toevoegen**.
 
@@ -227,7 +227,7 @@ Om een workflow te bouwen die het financiële team helpt facturen te verwerken m
     - Status - Stel de **Status** in op **In behandeling**.
     - E-mailadres leverancier - Gebruik de **Van** dynamische inhoud van de trigger **Wanneer een nieuwe e-mail aankomt**.
 
-    ![Power Automate rij toevoegen](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.nl.png)
+    ![Power Automate rij toevoegen](../../../translated_images/nl/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Zodra je klaar bent met de flow, klik je op de knop **Opslaan** om de flow op te slaan. Je kunt de flow vervolgens testen door een e-mail met een factuur te sturen naar de map die je hebt opgegeven in de trigger.
 
@@ -241,7 +241,7 @@ GPT-modellen ondergaan uitgebreide training op enorme hoeveelheden gegevens, waa
 
 Bijvoorbeeld: je kunt flows bouwen om automatisch tekst te genereren voor verschillende toepassingen, zoals: concepten van e-mails, productbeschrijvingen en meer. Je kunt het model ook gebruiken om tekst te genereren voor verschillende apps, zoals chatbots en klantenservice-apps waarmee klantenserviceagenten effectief en efficiënt kunnen reageren op klantvragen.
 
-![Maak een prompt](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.nl.png)
+![Maak een prompt](../../../translated_images/nl/create-prompt-gpt.69d429300c2e870a.webp)
 
 Om te leren hoe je dit AI-model in Power Automate kunt gebruiken, doorloop je de module [Intelligentie toevoegen met AI Builder en GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

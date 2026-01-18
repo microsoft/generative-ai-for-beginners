@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "id"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.id.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/id/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Pendahuluan
 
@@ -41,12 +41,12 @@ Untuk pelajaran ini, kami akan menyebut model-model tersebut sebagai "model terb
 
 **Biaya** - Biaya per token untuk menggunakan dan menerapkan model ini lebih rendah dibandingkan model proprietary. Saat membangun aplikasi Generative AI, penting untuk mempertimbangkan kinerja versus harga saat bekerja dengan model ini pada kasus penggunaan Anda.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.id.png)
+![Model Cost](../../../translated_images/id/model-price.3f5a3e4d32ae00b4.webp)
 Sumber: Artificial Analysis
 
 **Fleksibilitas** - Bekerja dengan model terbuka memungkinkan Anda fleksibel dalam menggunakan model yang berbeda atau menggabungkannya. Contohnya adalah [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst) di mana pengguna dapat memilih model yang digunakan langsung di antarmuka pengguna:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.id.png)
+![Choose Model](../../../translated_images/id/choose-model.f095d15bbac92214.webp)
 
 ## Menjelajahi Berbagai Model Terbuka
 
@@ -74,7 +74,7 @@ Tidak ada jawaban tunggal untuk memilih model terbuka. Tempat yang baik untuk me
 
 Saat ingin membandingkan LLM di berbagai tipe, [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst) adalah sumber daya hebat lainnya:
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.id.png)
+![Model Quality](../../../translated_images/id/model-quality.aaae1c22e00f7ee1.webp)
 Sumber: Artificial Analysis
 
 Jika mengerjakan kasus penggunaan spesifik, mencari versi yang di-fine-tune yang fokus pada area yang sama bisa efektif. Mencoba beberapa model terbuka untuk melihat bagaimana kinerjanya sesuai dengan harapan Anda dan pengguna Anda adalah praktik yang baik.

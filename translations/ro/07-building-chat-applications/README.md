@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Construirea aplicațiilor de chat bazate pe AI generativ
 
-[![Construirea aplicațiilor de chat bazate pe AI generativ](../../../translated_images/07-lesson-banner.a279b937f2843833fe28b4597f51bdef92d0ad03efee7ba52d0f166dea7574e5.ro.png)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Construirea aplicațiilor de chat bazate pe AI generativ](../../../translated_images/ro/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
 > _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul lecției)_
 
@@ -96,11 +96,11 @@ Principiile generale ale UX se aplică aplicațiilor de chat, dar iată câteva 
 
 Un astfel de exemplu de personalizare este setarea „Instrucțiuni personalizate” în ChatGPT de la OpenAI. Aceasta vă permite să furnizați informații despre dvs. care pot fi un context important pentru prompturile dvs. Iată un exemplu de instrucțiune personalizată.
 
-![Setări pentru Instrucțiuni Personalizate în ChatGPT](../../../translated_images/custom-instructions.b96f59aa69356fcfed456414221919e8996f93c90c20d0d58d1bc0221e3c909f.ro.png)
+![Setări pentru Instrucțiuni Personalizate în ChatGPT](../../../translated_images/ro/custom-instructions.b96f59aa69356fcf.webp)
 
 Acest „profil” determină ChatGPT să creeze un plan de lecție despre listele înlănțuite. Observați că ChatGPT ia în considerare faptul că utilizatorul ar putea dori un plan de lecție mai detaliat, bazat pe experiența sa.
 
-![Un prompt în ChatGPT pentru un plan de lecție despre listele înlănțuite](../../../translated_images/lesson-plan-prompt.cc47c488cf1343df5d67aa796a1acabca32c380e5b782971e289f6ab8b21cf5a.ro.png)
+![Un prompt în ChatGPT pentru un plan de lecție despre listele înlănțuite](../../../translated_images/ro/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Cadrul de mesaje de sistem al Microsoft pentru modelele de limbaj extins
 

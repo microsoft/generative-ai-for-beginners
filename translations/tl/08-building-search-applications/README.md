@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Pagbuo ng Search Applications
 
-[![Panimula sa Generative AI at Malalaking Language Models](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.tl.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Panimula sa Generative AI at Malalaking Language Models](../../../translated_images/tl/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _I-click ang imahe sa itaas upang mapanood ang video ng araling ito_
 
@@ -44,7 +44,7 @@ Ang aralin ay may kasamang Embedding Index ng mga transcript ng YouTube para sa 
 
 Narito ang isang halimbawa ng semantic query para sa tanong na 'can you use rstudio with azure ml?'. Tingnan ang YouTube url, makikita mo na ang url ay naglalaman ng timestamp na magdadala sa iyo sa bahagi ng video kung saan matatagpuan ang sagot sa tanong.
 
-![Semantic query para sa tanong na "can you use rstudio with Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.tl.png)
+![Semantic query para sa tanong na "can you use rstudio with Azure ML"](../../../translated_images/tl/query-results.bb0480ebf025fac6.webp)
 
 ## Ano ang semantic search?
 
@@ -163,7 +163,7 @@ Buksan ang [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-10
 
 Kapag pinatakbo mo ang notebook, hihilingin sa iyo na maglagay ng query. Ang input box ay magmumukhang ganito:
 
-![Input box para sa user upang maglagay ng query](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.tl.png)
+![Input box para sa user upang maglagay ng query](../../../translated_images/tl/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Mahusay na Trabaho! Ipagpatuloy ang Iyong Pag-aaral
 

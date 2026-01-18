@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ایجاد درخواست‌های پیشرفته
 
-[![ایجاد درخواست‌های پیشرفته](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.fa.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![ایجاد درخواست‌های پیشرفته](../../../translated_images/fa/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 بیایید برخی از مطالب فصل قبلی را مرور کنیم:
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # AI Uygulamaları için UX Tasarımı
 
-[![AI Uygulamaları için UX Tasarımı](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.tr.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![AI Uygulamaları için UX Tasarımı](../../../translated_images/tr/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
@@ -58,7 +58,7 @@ Erişilebilir olmak, kullanıcı deneyimini çeşitli yeteneklere sahip kullanı
 
 Hoş olmak, uygulamanın kullanımı keyifli olması anlamına gelir. Çekici bir kullanıcı deneyimi, kullanıcı üzerinde olumlu bir etki yaratabilir, onları uygulamaya geri dönmeye teşvik edebilir ve işletme gelirini artırabilir.
 
-![AI'de UX ile ilgili hususları gösteren bir görsel](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.tr.png)
+![AI'de UX ile ilgili hususları gösteren bir görsel](../../../translated_images/tr/uxinai.d5b4ed690f5cefff.webp)
 
 Her zorluk AI ile çözülemez. AI, kullanıcı deneyiminizi manuel görevleri otomatikleştirmek veya kullanıcı deneyimlerini kişiselleştirmek gibi alanlarda desteklemek için devreye girer.
 
@@ -72,25 +72,25 @@ Güveni tasarımın merkezine yerleştirmenin iki yolu açıklanabilirlik ve kon
 
 AI, gelecekteki nesillere bilgi aktarmak gibi kararlar alırken öğretmenlerin ve ebeveynlerin AI kararlarının nasıl alındığını anlaması kritik önem taşır. Bu, açıklanabilirliktir - AI uygulamalarının kararları nasıl aldığını anlamak. Açıklanabilirlik için tasarım yapmak, AI'nın çıktıya nasıl ulaştığını vurgulayan ayrıntılar eklemeyi içerir. Hedef kitle, çıktının bir insan tarafından değil, AI tarafından oluşturulduğunun farkında olmalıdır. Örneğin, "Şimdi öğretmeninizle sohbet etmeye başlayın" demek yerine "İhtiyaçlarınıza uyum sağlayan ve kendi hızınızda öğrenmenize yardımcı olan AI öğretmenini kullanın" diyebilirsiniz.
 
-![AI uygulamalarında açıklanabilirliği açıkça gösteren bir uygulama açılış sayfası](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.tr.png)
+![AI uygulamalarında açıklanabilirliği açıkça gösteren bir uygulama açılış sayfası](../../../translated_images/tr/explanability-in-ai.134426a96b498fbf.webp)
 
 Bir diğer örnek, AI'nın kullanıcı ve kişisel verileri nasıl kullandığıdır. Örneğin, öğrenci kişiliğine sahip bir kullanıcı, kişiliğine bağlı olarak sınırlamalara sahip olabilir. AI, soruların cevaplarını açıklayamayabilir ancak kullanıcının bir problemi nasıl çözebileceğini düşünmesine yardımcı olabilir.
 
-![Kişiliğe dayalı sorulara yanıt veren AI](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.tr.png)
+![Kişiliğe dayalı sorulara yanıt veren AI](../../../translated_images/tr/solving-questions.b7dea1604de0cbd2.webp)
 
 Açıklanabilirliğin son önemli kısmı, açıklamaların basitleştirilmesidir. Öğrenciler ve öğretmenler AI uzmanı olmayabilir, bu nedenle uygulamanın ne yapıp ne yapamayacağına dair açıklamalar basit ve anlaşılır olmalıdır.
 
-![AI yetenekleri hakkında basitleştirilmiş açıklamalar](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.tr.png)
+![AI yetenekleri hakkında basitleştirilmiş açıklamalar](../../../translated_images/tr/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrol
 
 Üretken AI, AI ile kullanıcı arasında bir işbirliği yaratır; örneğin, bir kullanıcı farklı sonuçlar için istemleri değiştirebilir. Ayrıca, bir çıktı oluşturulduktan sonra, kullanıcılar sonuçları değiştirerek kontrol hissi kazanmalıdır. Örneğin, Bing'i kullanırken, format, ton ve uzunluğa göre isteminizi özelleştirebilirsiniz. Ayrıca, çıktınıza değişiklikler ekleyebilir ve çıktıyı aşağıda gösterildiği gibi değiştirebilirsiniz:
 
-![İstem ve çıktıyı değiştirme seçenekleriyle Bing arama sonuçları](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.tr.png)
+![İstem ve çıktıyı değiştirme seçenekleriyle Bing arama sonuçları](../../../translated_images/tr/bing1.293ae8527dbe2789.webp)
 
 Bing'deki bir diğer özellik, kullanıcının uygulama üzerinde kontrol sahibi olmasını sağlayan, AI'nın kullandığı verilere katılma veya çıkma seçeneğidir. Bir okul uygulaması için bir öğrenci, notlarını ve öğretmen kaynaklarını tekrar materyali olarak kullanmak isteyebilir.
 
-![İstem ve çıktıyı değiştirme seçenekleriyle Bing arama sonuçları](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.tr.png)
+![İstem ve çıktıyı değiştirme seçenekleriyle Bing arama sonuçları](../../../translated_images/tr/bing2.309f4845528a88c2.webp)
 
 > AI uygulamaları tasarlarken, kullanıcıların aşırı güven duymalarını ve yetenekleri hakkında gerçekçi olmayan beklentiler oluşturmalarını önlemek için kasıtlı olmak önemlidir. Bunu yapmanın bir yolu, istemler ve sonuçlar arasında sürtünme yaratmaktır. Kullanıcıya bunun bir AI olduğunu ve bir insan olmadığını hatırlatmak.
 
@@ -102,7 +102,7 @@ AI uygulamaları, geri bildirim alacak ve verecek şekilde tasarlanmalıdır. Bu
 
 Bunu ele almanın bir diğer yolu, sistemin yeteneklerini ve sınırlamalarını açıkça iletmektir. Bir kullanıcı, AI'nın yeteneklerinin ötesinde bir şey talep ettiğinde, bununla başa çıkmanın bir yolu olmalıdır, aşağıda gösterildiği gibi.
 
-![Geri bildirim verme ve hataları ele alma](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.tr.png)
+![Geri bildirim verme ve hataları ele alma](../../../translated_images/tr/feedback-loops.7955c134429a9466.webp)
 
 Sistem hataları, kullanıcının AI'nın kapsamı dışındaki bilgilerle ilgili yardıma ihtiyaç duyabileceği veya uygulamanın bir kullanıcının kaç soru/konu oluşturabileceği konusunda bir sınırı olabileceği durumlarda yaygındır. Örneğin, sınırlı konularla (örneğin, Tarih ve Matematik) eğitilmiş bir AI uygulaması, Coğrafya ile ilgili soruları ele alamayabilir. Bunu hafifletmek için, AI sistemi şu şekilde bir yanıt verebilir: "Üzgünüm, ürünümüz aşağıdaki konularla ilgili verilerle eğitilmiştir....., sorduğunuz soruya yanıt veremem."
 

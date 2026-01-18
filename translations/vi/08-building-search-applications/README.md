@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Xây dựng ứng dụng tìm kiếm
 
-[![Giới thiệu về AI tạo sinh và Mô hình ngôn ngữ lớn](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.vi.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Giới thiệu về AI tạo sinh và Mô hình ngôn ngữ lớn](../../../translated_images/vi/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Nhấp vào hình ảnh trên để xem video của bài học này_
 
@@ -44,7 +44,7 @@ Bài học bao gồm một chỉ mục Embedding của các bản ghi YouTube ch
 
 Dưới đây là một ví dụ về truy vấn ngữ nghĩa cho câu hỏi 'bạn có thể sử dụng rstudio với azure ml không?'. Hãy kiểm tra URL YouTube, bạn sẽ thấy URL chứa một timestamp dẫn bạn đến phần trong video nơi có câu trả lời cho câu hỏi.
 
-![Truy vấn ngữ nghĩa cho câu hỏi "bạn có thể sử dụng rstudio với Azure ML không"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.vi.png)
+![Truy vấn ngữ nghĩa cho câu hỏi "bạn có thể sử dụng rstudio với Azure ML không"](../../../translated_images/vi/query-results.bb0480ebf025fac6.webp)
 
 ## Tìm kiếm ngữ nghĩa là gì?
 
@@ -163,7 +163,7 @@ Mở [notebook giải pháp](./python/aoai-solution.ipynb?WT.mc_id=academic-1054
 
 Khi bạn chạy notebook, bạn sẽ được yêu cầu nhập một truy vấn. Hộp nhập sẽ trông như thế này:
 
-![Hộp nhập để người dùng nhập truy vấn](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.vi.png)
+![Hộp nhập để người dùng nhập truy vấn](../../../translated_images/vi/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Làm tốt lắm! Tiếp tục học tập của bạn
 

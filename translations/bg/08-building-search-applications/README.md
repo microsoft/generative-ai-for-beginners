@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Създаване на приложения за търсене
 
-[![Въведение в Генеративния AI и Големите Езикови Модели](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.bg.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Въведение в Генеративния AI и Големите Езикови Модели](../../../translated_images/bg/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Кликнете върху изображението по-горе, за да гледате видеото на този урок_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ето пример за семантично търсене на въпроса „Може ли да се използва rstudio с azure ml?“. Вижте URL адреса на YouTube – той съдържа времеви маркер, който ви отвежда до мястото във видеото, където се намира отговорът на въпроса.
 
-![Семантично търсене за въпроса "Може ли да се използва rstudio с Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.bg.png)
+![Семантично търсене за въпроса "Може ли да се използва rstudio с Azure ML"](../../../translated_images/bg/query-results.bb0480ebf025fac6.webp)
 
 ## Какво е семантично търсене?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Когато изпълните notebook-а, ще бъдете подканени да въведете заявка. Полето за въвеждане ще изглежда така:
 
-![Поле за въвеждане на заявка от потребителя](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.bg.png)
+![Поле за въвеждане на заявка от потребителя](../../../translated_images/bg/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Отлична работа! Продължете обучението си
 

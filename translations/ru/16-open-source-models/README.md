@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ru"
 }
 -->
-[![Open Source Models](../../../translated_images/16-lesson-banner.6b56555e8404fda1716382db4832cecbe616ccd764de381f0af6cfd694d05f74.ru.png)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
+[![Open Source Models](../../../translated_images/ru/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## Введение
 
@@ -41,12 +41,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Стоимость** — Стоимость за токен при использовании и развертывании этих моделей ниже, чем у проприетарных моделей. При создании приложений Generative AI следует учитывать соотношение производительности и цены для вашей задачи.
 
-![Model Cost](../../../translated_images/model-price.3f5a3e4d32ae00b465325159e1f4ebe7b5861e95117518c6bfc37fe842950687.ru.png)
+![Model Cost](../../../translated_images/ru/model-price.3f5a3e4d32ae00b4.webp)
 Источник: Artificial Analysis
 
 **Гибкость** — Работа с открытыми моделями позволяет быть гибким в использовании различных моделей или их комбинаций. Примером являются [HuggingChat Assistants](https://huggingface.co/chat?WT.mc_id=academic-105485-koreyst), где пользователь может выбрать модель прямо в интерфейсе:
 
-![Choose Model](../../../translated_images/choose-model.f095d15bbac922141591fd4fac586dc8d25e69b42abf305d441b84c238e293f2.ru.png)
+![Choose Model](../../../translated_images/ru/choose-model.f095d15bbac92214.webp)
 
 ## Изучение различных открытых моделей
 
@@ -74,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Для сравнения LLM разных типов отличным ресурсом является [Artificial Analysis](https://artificialanalysis.ai/?WT.mc_id=academic-105485-koreyst):
 
-![Model Quality](../../../translated_images/model-quality.aaae1c22e00f7ee1cd9dc186c611ac6ca6627eabd19e5364dce9e216d25ae8a5.ru.png)
+![Model Quality](../../../translated_images/ru/model-quality.aaae1c22e00f7ee1.webp)
 Источник: Artificial Analysis
 
 Если вы работаете над конкретным кейсом, поиск дообученных версий, ориентированных на ту же область, может быть эффективным. Эксперименты с несколькими открытыми моделями, чтобы оценить их производительность с точки зрения ваших и пользовательских ожиданий, — ещё одна хорошая практика.

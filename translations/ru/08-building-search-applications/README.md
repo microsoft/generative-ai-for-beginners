@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Создание поисковых приложений
 
-[![Введение в генеративный ИИ и большие языковые модели](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.ru.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Введение в генеративный ИИ и большие языковые модели](../../../translated_images/ru/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Нажмите на изображение выше, чтобы посмотреть видео этого урока_
 
@@ -44,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Пример семантического запроса для вопроса «Можно ли использовать rstudio с azure ml?». Обратите внимание на URL YouTube — он содержит временную метку, которая перенесет вас к тому моменту в видео, где находится ответ на вопрос.
 
-![Семантический запрос для вопроса "Можно ли использовать rstudio с Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.ru.png)
+![Семантический запрос для вопроса "Можно ли использовать rstudio с Azure ML"](../../../translated_images/ru/query-results.bb0480ebf025fac6.webp)
 
 ## Что такое семантический поиск?
 
@@ -163,7 +163,7 @@ az cognitiveservices account deployment create \
 
 Когда вы запустите блокнот, вам будет предложено ввести запрос. Поле ввода будет выглядеть следующим образом:
 
-![Поле ввода для ввода запроса пользователем](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.ru.png)
+![Поле ввода для ввода запроса пользователем](../../../translated_images/ru/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Отличная работа! Продолжайте обучение
 

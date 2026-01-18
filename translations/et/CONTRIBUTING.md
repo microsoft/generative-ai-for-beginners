@@ -62,7 +62,7 @@ Veendumaks, et teie lingid töötavad korralikult, kasutage lihtsalt VS Code'i, 
 
 Näiteks, kui hõljutate kursorit mõne lingi kohal oma failides, kuvatakse teile võimalus lingile järgida, vajutades **ctrl + klõps**
 
-![VS Code'i lingi jälgimise ekraanipilt](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.et.png)
+![VS Code'i lingi jälgimise ekraanipilt](../../translated_images/et/vscode-follow-link.85520ab6a1237adc.webp)
 
 Kui klõpsate lingil ja see ei tööta kohapeal, siis kindlasti käivitab see töövoo ja ei tööta GitHubis.
 
@@ -70,7 +70,7 @@ Selle probleemi lahendamiseks proovige linki sisestada VS Code'i abiga.
 
 Kui sisestate `./` või `../`, kuvab VS Code teile valikud vastavalt sellele, mida sisestasite.
 
-![VS Code'i suhtelise tee valiku ekraanipilt](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.et.png)
+![VS Code'i suhtelise tee valiku ekraanipilt](../../translated_images/et/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Järgige teed, klõpsates soovitud failil või kaustal, ja veenduge, et teie tee ei oleks katki.
 
@@ -87,7 +87,7 @@ Kui see on lisatud teie suhtelistele teedele, siis läbite selle kontrolli.
 
 Kui ei, võite saada järgmise vea.
 
-![GitHubi kommentaar, mis näitab puuduvat jälgimist teedelt](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.et.png)
+![GitHubi kommentaar, mis näitab puuduvat jälgimist teedelt](../../translated_images/et/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Selle probleemi lahendamiseks proovige avada failitee, mille töövoog esile tõi, ja lisage suhteliste teede lõppu jälgimis-ID.
 
@@ -104,7 +104,7 @@ Kui see on lisatud teie URL-idele, siis läbite selle kontrolli.
 
 Kui ei, võite saada järgmise vea.
 
-![GitHubi kommentaar, mis näitab puuduvat jälgimist URL-idelt](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.et.png)
+![GitHubi kommentaar, mis näitab puuduvat jälgimist URL-idelt](../../translated_images/et/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Selle probleemi lahendamiseks proovige avada failitee, mille töövoog esile tõi, ja lisage URL-ide lõppu jälgimis-ID.
 
@@ -121,7 +121,7 @@ Kui see ei ole teie URL-ides, siis läbite selle kontrolli.
 
 Kui ei, võite saada järgmise vea.
 
-![GitHubi kommentaar, mis näitab lisatud riigi lokaliseerimist URL-idele](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.et.png)
+![GitHubi kommentaar, mis näitab lisatud riigi lokaliseerimist URL-idele](../../translated_images/et/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Selle probleemi lahendamiseks proovige avada failitee, mille töövoog esile tõi, ja eemaldage URL-idelt riigi lokaliseerimine.
 
