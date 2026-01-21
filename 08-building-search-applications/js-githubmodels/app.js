@@ -1,9 +1,13 @@
 import ModelClient from "@azure-rest/ai-inference";
 import { isUnexpected } from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
-import { brotliDecompress } from "zlib";
 
+// SECURITY: Validate required environment variable
 const token = process.env["GITHUB_TOKEN"];
+if (!token) {
+    throw new Error("GITHUB_TOKEN environment variable is required. Please set it before running this application.");
+}
+
 const endpoint = "https://models.inference.ai.azure.com";
 
 /* By using the Azure AI Inference SDK, you can easily experiment with different models

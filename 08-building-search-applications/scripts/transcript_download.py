@@ -78,8 +78,9 @@ def gen_metadata(playlist_item):
     metadata["videoId"] = playlist_item["snippet"]["resourceId"]["videoId"]
     metadata["description"] = playlist_item["snippet"]["description"]
 
-    # save the metadata as a .json file
-    json.dump(metadata, open(filename, "w", encoding="utf-8"))
+    # SECURITY: Use context manager to properly close file handles
+    with open(filename, "w", encoding="utf-8") as out_file:
+        json.dump(metadata, out_file)
 
 
 def get_transcript(playlist_item, counter_id):
