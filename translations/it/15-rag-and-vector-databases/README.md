@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4b0266fbadbba7ded891b6485adc66d",
-  "translation_date": "2025-10-17T16:08:22+00:00",
+  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+  "translation_date": "2026-01-18T18:09:48+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "it"
 }
 -->
-# Generazione Aumentata dal Recupero (RAG) e Database a Vettori
+# Retrieval Augmented Generation (RAG) e Database Vettoriali
 
-[![Generazione Aumentata dal Recupero (RAG) e Database a Vettori](../../../translated_images/it/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../../../translated_images/it/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-Nella lezione sulle applicazioni di ricerca, abbiamo brevemente imparato come integrare i tuoi dati nei modelli di linguaggio di grandi dimensioni (LLMs). In questa lezione, approfondiremo i concetti di radicare i tuoi dati nella tua applicazione LLM, i meccanismi del processo e i metodi per archiviare i dati, inclusi sia gli embedding che il testo.
+Nella lezione sulle applicazioni di ricerca, abbiamo brevemente imparato come integrare i propri dati nei Large Language Models (LLM). In questa lezione, approfondiremo ulteriormente i concetti di ancoraggio dei dati nella tua applicazione LLM, i meccanismi del processo e i metodi per la memorizzazione dei dati, inclusi sia gli embeddings che il testo.
 
 > **Video in arrivo**
 
@@ -19,81 +19,81 @@ Nella lezione sulle applicazioni di ricerca, abbiamo brevemente imparato come in
 
 In questa lezione tratteremo i seguenti argomenti:
 
-- Un'introduzione a RAG, cos'è e perché viene utilizzato nell'intelligenza artificiale (AI).
+- Una introduzione a RAG, cos’è e perché viene utilizzato nell'IA (intelligenza artificiale).
 
-- Comprendere cosa sono i database a vettori e crearne uno per la nostra applicazione.
+- Comprendere cosa sono i database vettoriali e crearne uno per la nostra applicazione.
 
 - Un esempio pratico su come integrare RAG in un'applicazione.
 
-## Obiettivi di apprendimento
+## Obiettivi di Apprendimento
 
 Dopo aver completato questa lezione, sarai in grado di:
 
-- Spiegare l'importanza di RAG nel recupero e nella elaborazione dei dati.
+- Spiegare l’importanza di RAG nel recupero e processamento dei dati.
 
-- Configurare un'applicazione RAG e radicare i tuoi dati in un LLM.
+- Configurare un'applicazione RAG e ancorare i tuoi dati a un LLM.
 
-- Integrare efficacemente RAG e database a vettori nelle applicazioni LLM.
+- Integrare efficacemente RAG e Database Vettoriali nelle applicazioni LLM.
 
 ## Il nostro scenario: migliorare i nostri LLM con i nostri dati
 
-Per questa lezione, vogliamo aggiungere le nostre note alla startup educativa, che consente al chatbot di ottenere più informazioni sui diversi argomenti. Utilizzando le note che abbiamo, gli studenti saranno in grado di studiare meglio e comprendere i diversi argomenti, rendendo più facile la revisione per gli esami. Per creare il nostro scenario, utilizzeremo:
+Per questa lezione, vogliamo aggiungere le nostre note nella startup educativa, che permette al chatbot di ottenere più informazioni su diversi argomenti. Utilizzando le note che abbiamo, gli studenti potranno studiare meglio e comprendere i vari temi, rendendo più facile prepararsi per gli esami. Per creare il nostro scenario, useremo:
 
-- `Azure OpenAI:` il LLM che utilizzeremo per creare il nostro chatbot
+- `Azure OpenAI:` l'LLM che useremo per creare il nostro chatbot
 
-- `Lezione per principianti sull'intelligenza artificiale sui Reti Neurali:` questi saranno i dati su cui radicheremo il nostro LLM
+- `Lezione AI per principianti sulle Reti Neurali:` questi saranno i dati su cui ancoreremo il nostro LLM
 
-- `Azure AI Search` e `Azure Cosmos DB:` database a vettori per archiviare i nostri dati e creare un indice di ricerca
+- `Azure AI Search` e `Azure Cosmos DB:` database vettoriale per memorizzare i nostri dati e creare un indice di ricerca
 
-Gli utenti saranno in grado di creare quiz di pratica dalle loro note, flash card di revisione e riassumerle in panoramiche concise. Per iniziare, vediamo cos'è RAG e come funziona:
+Gli utenti potranno creare quiz di pratica dalle loro note, flashcard di revisione e riassumerle in panoramiche concise. Per cominciare, vediamo cos’è RAG e come funziona:
 
-## Generazione Aumentata dal Recupero (RAG)
+## Retrieval Augmented Generation (RAG)
 
-Un chatbot alimentato da LLM elabora i prompt degli utenti per generare risposte. È progettato per essere interattivo e coinvolge gli utenti su una vasta gamma di argomenti. Tuttavia, le sue risposte sono limitate al contesto fornito e ai dati di addestramento fondamentali. Ad esempio, il limite di conoscenza di GPT-4 è settembre 2021, il che significa che non ha conoscenze sugli eventi accaduti dopo questo periodo. Inoltre, i dati utilizzati per addestrare i LLM escludono informazioni riservate come note personali o manuali di prodotti aziendali.
+Un chatbot basato su LLM elabora i prompt degli utenti per generare risposte. È progettato per essere interattivo e si confronta con gli utenti su un’ampia gamma di argomenti. Tuttavia, le sue risposte sono limitate al contesto fornito e ai dati di addestramento fondamentali. Ad esempio, la conoscenza di GPT-4 si ferma a settembre 2021, il che significa che non conosce eventi avvenuti dopo questa data. Inoltre, i dati usati per addestrare gli LLM escludono informazioni confidenziali come note personali o manuali dei prodotti di un’azienda.
 
-### Come funzionano i RAG (Generazione Aumentata dal Recupero)
+### Come funzionano i RAG (Retrieval Augmented Generation)
 
-![disegno che mostra come funzionano i RAG](../../../translated_images/it/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../../../translated_images/it/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Supponiamo che tu voglia distribuire un chatbot che crea quiz dalle tue note, avrai bisogno di una connessione al database di conoscenza. È qui che entra in gioco RAG. I RAG operano come segue:
+Supponiamo di voler distribuire un chatbot che crea quiz dalle tue note, sarà necessario un collegamento alla base di conoscenza. Qui interviene RAG. I RAG funzionano come segue:
 
-- **Database di conoscenza:** Prima del recupero, questi documenti devono essere ingeriti e pre-processati, generalmente suddividendo documenti grandi in parti più piccole, trasformandoli in embedding di testo e archiviandoli in un database.
+- **Base di conoscenza:** Prima del recupero, questi documenti devono essere ingeriti e preprocessati, tipicamente suddividendo grandi documenti in blocchi più piccoli, trasformandoli in embedding di testo e memorizzandoli in un database.
 
-- **Query dell'utente:** l'utente pone una domanda.
+- **Query utente:** l’utente pone una domanda
 
-- **Recupero:** Quando un utente pone una domanda, il modello di embedding recupera informazioni pertinenti dal nostro database di conoscenza per fornire più contesto che verrà incorporato nel prompt.
+- **Recupero:** Quando un utente pone una domanda, il modello di embedding recupera informazioni rilevanti dalla nostra base di conoscenza per fornire più contesto da incorporare nel prompt.
 
-- **Generazione Aumentata:** il LLM migliora la sua risposta basandosi sui dati recuperati. Ciò consente alla risposta generata di essere basata non solo sui dati pre-addestrati ma anche su informazioni pertinenti dal contesto aggiunto. I dati recuperati vengono utilizzati per arricchire le risposte del LLM. Il LLM quindi restituisce una risposta alla domanda dell'utente.
+- **Generazione aumentata:** l’LLM migliora la sua risposta basandosi sui dati recuperati. Ciò consente che la risposta generata non sia basata solo sui dati pre-addestrati ma anche su informazioni rilevanti provenienti dal contesto aggiunto. I dati recuperati vengono utilizzati per aumentare le risposte dell’LLM. L’LLM quindi restituisce una risposta alla domanda dell’utente.
 
-![disegno che mostra l'architettura dei RAG](../../../translated_images/it/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../../../translated_images/it/encoder-decode.f2658c25d0eadee2.webp)
 
-L'architettura dei RAG viene implementata utilizzando trasformatori costituiti da due parti: un encoder e un decoder. Ad esempio, quando un utente pone una domanda, il testo di input viene 'codificato' in vettori che catturano il significato delle parole e i vettori vengono 'decodificati' nel nostro indice di documenti generando nuovo testo basato sulla query dell'utente. Il LLM utilizza sia un modello encoder-decoder per generare l'output.
+L’architettura per i RAG viene implementata usando transformers costituiti da due parti: un encoder e un decoder. Per esempio, quando un utente pone una domanda, il testo in input viene “codificato” in vettori che catturano il significato delle parole e i vettori vengono “decodificati” nel nostro indice documentale e generano nuovo testo basato sulla query dell’utente. L’LLM utilizza un modello encoder-decoder per generare l’output.
 
-Due approcci per implementare RAG secondo il documento proposto: [Generazione Aumentata dal Recupero per compiti NLP (elaborazione del linguaggio naturale) intensivi di conoscenza](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sono:
+Due approcci per implementare RAG secondo il documento proposto: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sono:
 
-- **_RAG-Sequence_** utilizza i documenti recuperati per prevedere la migliore risposta possibile a una query dell'utente.
+- **_RAG-Sequence_** usa i documenti recuperati per predire la migliore risposta possibile a una query utente
 
-- **RAG-Token** utilizza i documenti per generare il prossimo token, quindi li recupera per rispondere alla query dell'utente.
+- **RAG-Token** usa i documenti per generare il token successivo e poi li recupera per rispondere alla query dell’utente
 
-### Perché utilizzare i RAG? 
+### Perché usare i RAG? 
 
-- **Ricchezza di informazioni:** garantisce che le risposte testuali siano aggiornate e attuali. Migliora quindi le prestazioni su compiti specifici del dominio accedendo al database di conoscenza interno.
+- **Ricchezza d’informazione:** assicura che le risposte testuali siano aggiornate e correnti. Migliora quindi la performance su compiti specifici di dominio accedendo alla base di conoscenza interna.
 
-- Riduce la fabbricazione utilizzando **dati verificabili** nel database di conoscenza per fornire contesto alle query degli utenti.
+- Riduce la fabbricazione utilizzando **dati verificabili** nella base di conoscenza per fornire contesto alle query degli utenti.
 
-- È **economico** poiché è più conveniente rispetto alla personalizzazione di un LLM.
+- È **economico**, in quanto più conveniente rispetto al fine-tuning di un LLM
 
-## Creazione di un database di conoscenza
+## Creare una base di conoscenza
 
-La nostra applicazione si basa sui nostri dati personali, ovvero la lezione sui Reti Neurali del curriculum AI For Beginners.
+La nostra applicazione si basa sui nostri dati personali, cioè la lezione sulla Rete Neurale del curriculum AI For Beginners.
 
-### Database a Vettori
+### Database Vettoriali
 
-Un database a vettori, a differenza dei database tradizionali, è un database specializzato progettato per archiviare, gestire e cercare vettori embedded. Archivia rappresentazioni numeriche di documenti. Suddividere i dati in embedding numerici rende più facile per il nostro sistema AI comprendere e elaborare i dati.
+Un database vettoriale, a differenza dei database tradizionali, è un database specializzato progettato per memorizzare, gestire e cercare vettori embedded. Memorizza rappresentazioni numeriche dei documenti. Suddividere i dati in rappresentazioni numeriche facilita la comprensione e l’elaborazione per il nostro sistema AI.
 
-Archiviamo i nostri embedding nei database a vettori poiché i LLM hanno un limite al numero di token che accettano come input. Poiché non è possibile passare tutti gli embedding a un LLM, sarà necessario suddividerli in parti e, quando un utente pone una domanda, gli embedding più simili alla domanda verranno restituiti insieme al prompt. La suddivisione riduce anche i costi relativi al numero di token passati attraverso un LLM.
+Conserviamo i nostri embeddings nei database vettoriali poiché gli LLM hanno un limite nel numero di token che accettano come input. Poiché non si possono passare interamente gli embeddings a un LLM, dobbiamo suddividerli in blocchi e quando un utente fa una domanda, verranno restituiti gli embeddings più simili alla domanda insieme al prompt. La suddivisione riduce anche i costi sul numero di token passati a un LLM.
 
-Alcuni database a vettori popolari includono Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant e DeepLake. Puoi creare un modello Azure Cosmos DB utilizzando Azure CLI con il seguente comando:
+Alcuni database vettoriali popolari includono Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant e DeepLake. Puoi creare un modello Azure Cosmos DB usando Azure CLI con il seguente comando:
 
 ```bash
 az login
@@ -102,9 +102,9 @@ az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
 az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 ```
 
-### Dal testo agli embedding
+### Da testo a embeddings
 
-Prima di archiviare i nostri dati, sarà necessario convertirli in embedding vettoriali prima di archiviarli nel database. Se stai lavorando con documenti grandi o testi lunghi, puoi suddividerli in base alle query che ti aspetti. La suddivisione può essere effettuata a livello di frase o di paragrafo. Poiché la suddivisione deriva significati dalle parole circostanti, puoi aggiungere un altro contesto a una parte, ad esempio aggiungendo il titolo del documento o includendo del testo prima o dopo la parte. Puoi suddividere i dati come segue:
+Prima di memorizzare i dati, dobbiamo convertirli in vettori embedding prima che vengano salvati nel database. Se lavori con documenti grandi o testi lunghi, puoi suddividerli in blocchi basandoti sulle query che prevedi. Si può suddividere a livello di frase o paragrafo. Poiché la segmentazione deriva significati dalle parole circostanti, puoi aggiungere altro contesto a un blocco, per esempio aggiungendo il titolo del documento o includendo testo prima o dopo il blocco. Puoi suddividere i dati come segue:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -118,70 +118,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # If the last chunk didn't reach the minimum length, add it anyway
+    # Se l'ultimo blocco non ha raggiunto la lunghezza minima, aggiungilo comunque
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Una volta suddivisi, possiamo quindi incorporare il nostro testo utilizzando diversi modelli di embedding. Alcuni modelli che puoi utilizzare includono: word2vec, ada-002 di OpenAI, Azure Computer Vision e molti altri. La scelta del modello da utilizzare dipenderà dalle lingue che stai utilizzando, dal tipo di contenuto codificato (testo/immagini/audio), dalla dimensione dell'input che può codificare e dalla lunghezza dell'output dell'embedding.
+Una volta suddivisi, possiamo quindi incorporare il nostro testo usando diversi modelli di embedding. Alcuni modelli che puoi utilizzare includono: word2vec, ada-002 di OpenAI, Azure Computer Vision e molti altri. La scelta del modello dipende dalle lingue utilizzate, dal tipo di contenuto codificato (testo/immagini/audio), dalla dimensione dell’input che può codificare e dalla lunghezza dell’output embedding.
 
-Un esempio di testo incorporato utilizzando il modello `text-embedding-ada-002` di OpenAI è:
-![un embedding della parola cat](../../../translated_images/it/cat.74cbd7946bc9ca38.webp)
+Un esempio di testo embedded usando il modello `text-embedding-ada-002` di OpenAI è:
+![an embedding of the word cat](../../../../../translated_images/it/cat.74cbd7946bc9ca38.webp)
 
-## Recupero e Ricerca Vettoriale
+## Recupero e ricerca vettoriale
 
-Quando un utente pone una domanda, il retriever la trasforma in un vettore utilizzando l'encoder di query, quindi cerca nel nostro indice di ricerca documenti i vettori pertinenti nel documento che sono correlati all'input. Una volta fatto, converte sia il vettore di input che i vettori del documento in testo e li passa attraverso il LLM.
+Quando un utente pone una domanda, il retriever la trasforma in un vettore usando l’encoder di query, poi ricerca nel nostro indice di documenti per vettori rilevanti nel documento correlati all’input. Fatto ciò, converte sia il vettore di input che i vettori del documento in testo e li passa all’LLM.
 
 ### Recupero
 
-Il recupero avviene quando il sistema cerca rapidamente i documenti dall'indice che soddisfano i criteri di ricerca. L'obiettivo del retriever è ottenere documenti che verranno utilizzati per fornire contesto e radicare il LLM sui tuoi dati.
+Il recupero avviene quando il sistema cerca rapidamente i documenti dall’indice che soddisfano i criteri di ricerca. Lo scopo del retriever è ottenere documenti che forniranno contesto e ancoreranno l’LLM ai tuoi dati.
 
-Ci sono diversi modi per eseguire la ricerca all'interno del nostro database, come:
+Ci sono vari modi per effettuare la ricerca nel nostro database come:
 
-- **Ricerca per parole chiave** - utilizzata per ricerche testuali.
+- **Ricerca per parola chiave** - usata per ricerche testuali
 
-- **Ricerca semantica** - utilizza il significato semantico delle parole.
+- **Ricerca vettoriale** - converte i documenti da testo a rappresentazioni vettoriali usando modelli embedding, permettendo una **ricerca semantica** usando il significato delle parole. Il recupero avverrà interrogando i documenti le cui rappresentazioni vettoriali sono più vicine alla domanda dell’utente.
 
-- **Ricerca vettoriale** - converte i documenti da testo a rappresentazioni vettoriali utilizzando modelli di embedding. Il recupero verrà effettuato interrogando i documenti le cui rappresentazioni vettoriali sono più vicine alla domanda dell'utente.
+- **Ibrido** - una combinazione di ricerca per parola chiave e ricerca vettoriale.
 
-- **Ibrida** - una combinazione di ricerca per parole chiave e vettoriale.
+Una sfida nel recupero si presenta quando non esiste una risposta simile alla query nel database, il sistema restituirà la migliore informazione possibile, tuttavia puoi utilizzare tattiche come impostare la distanza massima per la rilevanza o usare la ricerca ibrida che combina entrambi i metodi. In questa lezione useremo la ricerca ibrida, una combinazione di ricerca vettoriale e per parola chiave. Memorizzeremo i nostri dati in un dataframe con colonne contenenti sia i blocchi che gli embeddings.
 
-Una sfida con il recupero si presenta quando non c'è una risposta simile alla query nel database, il sistema restituirà quindi le migliori informazioni che può ottenere, tuttavia, puoi utilizzare tattiche come impostare la distanza massima per la rilevanza o utilizzare la ricerca ibrida che combina sia parole chiave che ricerca vettoriale. In questa lezione utilizzeremo la ricerca ibrida, una combinazione di ricerca vettoriale e per parole chiave. Archivieremo i nostri dati in un dataframe con colonne contenenti le parti e gli embedding.
+### Similarità vettoriale
 
-### Somiglianza Vettoriale
+Il retriever cerca nel database di conoscenza gli embeddings che sono vicini tra loro, il vicino più prossimo, poiché sono testi simili. Nello scenario in cui un utente pone una domanda, questa viene prima incorporata e poi confrontata con embeddings simili. La misura comune usata per trovare quanto sono simili diversi vettori è la similarità coseno, basata sull’angolo tra due vettori.
 
-Il retriever cercherà nel database di conoscenza gli embedding che sono vicini tra loro, il vicino più prossimo, poiché sono testi simili. Nel caso in cui un utente ponga una query, questa viene prima incorporata e poi abbinata a embedding simili. La misura comune utilizzata per trovare quanto siano simili diversi vettori è la somiglianza coseno, che si basa sull'angolo tra due vettori.
-
-Possiamo misurare la somiglianza utilizzando altre alternative come la distanza euclidea, che è la linea retta tra i punti finali dei vettori, e il prodotto scalare, che misura la somma dei prodotti degli elementi corrispondenti di due vettori.
+Possiamo misurare la similarità anche con alternative come la distanza euclidea, che è la linea retta tra le estremità dei vettori, e il prodotto scalare che misura la somma dei prodotti degli elementi corrispondenti di due vettori.
 
 ### Indice di ricerca
 
-Quando si effettua il recupero, sarà necessario costruire un indice di ricerca per il nostro database di conoscenza prima di eseguire la ricerca. Un indice archivierà i nostri embedding e potrà recuperare rapidamente le parti più simili anche in un database grande. Possiamo creare il nostro indice localmente utilizzando:
+Nel recupero, dobbiamo costruire un indice di ricerca per la nostra base di conoscenza prima di eseguire la ricerca. Un indice memorizza i nostri embeddings e può recuperare rapidamente i blocchi più simili anche in un database grande. Possiamo creare il nostro indice localmente usando:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Create the search index
+# Crea l'indice di ricerca
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# To query the index, you can use the kneighbors method
+# Per interrogare l'indice, puoi usare il metodo kneighbors
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Riordinamento
+### Reranking
 
-Una volta interrogato il database, potrebbe essere necessario ordinare i risultati dai più pertinenti. Un LLM di riordinamento utilizza il Machine Learning per migliorare la rilevanza dei risultati di ricerca ordinandoli dai più pertinenti. Utilizzando Azure AI Search, il riordinamento viene effettuato automaticamente utilizzando un riordinatore semantico. Un esempio di come funziona il riordinamento utilizzando i vicini più prossimi:
+Una volta interrogato il database, potrebbe essere necessario ordinare i risultati dal più rilevante. Un LLM di reranking utilizza il Machine Learning per migliorare la pertinenza dei risultati di ricerca ordinandoli dal più rilevante. Usando Azure AI Search, il reranking viene fatto automaticamente per te usando un semantic reranker. Un esempio di come funziona il reranking usando i vicini più prossimi:
 
 ```python
-# Find the most similar documents
+# Trova i documenti più simili
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Print the most similar documents
+# Stampa i documenti più simili
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -194,33 +192,33 @@ for i in range(3):
 
 ## Mettere tutto insieme
 
-L'ultimo passaggio è aggiungere il nostro LLM al mix per essere in grado di ottenere risposte radicate sui nostri dati. Possiamo implementarlo come segue:
+L’ultimo passo è aggiungere il nostro LLM per ottenere risposte basate sui nostri dati. Possiamo implementarlo come segue:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Convert the question to a query vector
+    # Converti la domanda in un vettore di query
     query_vector = create_embeddings(user_input)
 
-    # Find the most similar documents
+    # Trova i documenti più simili
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # add documents to query  to provide context
+    # aggiungi documenti alla query per fornire contesto
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # combine the history and the user input
+    # combina la cronologia e l'input dell'utente
     history.append(user_input)
 
-    # create a message object
+    # crea un oggetto messaggio
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # use chat completion to generate a response
+    # usa il completamento chat per generare una risposta
     response = openai.chat.completions.create(
         model="gpt-4",
         temperature=0.7,
@@ -237,45 +235,47 @@ chatbot(user_input)
 
 ### Metriche di valutazione
 
-- Qualità delle risposte fornite, assicurandosi che suonino naturali, fluide e simili a quelle umane.
+- Qualità delle risposte fornite assicurandosi che suonino naturali, fluide e simili a quelle umane
 
-- Radicamento dei dati: valutare se la risposta proviene dai documenti forniti.
+- Ancoraggio dei dati: valutare se la risposta proviene dai documenti forniti
 
-- Rilevanza: valutare se la risposta corrisponde ed è correlata alla domanda posta.
+- Rilevanza: valutare se la risposta corrisponde ed è correlata alla domanda posta
 
-- Fluidità - verificare se la risposta ha senso grammaticalmente.
+- Fluidità - valutare se la risposta ha senso grammaticalmente
 
-## Casi d'uso per l'utilizzo di RAG (Generazione Aumentata dal Recupero) e database a vettori
+## Casi d’uso per RAG (Retrieval Augmented Generation) e database vettoriali
 
-Ci sono molti casi d'uso diversi in cui le chiamate di funzione possono migliorare la tua app, come:
+Ci sono molti casi d’uso diversi dove le chiamate di funzione possono migliorare la tua app, come:
 
-- Domande e risposte: radicare i dati della tua azienda in una chat che può essere utilizzata dai dipendenti per porre domande.
+- Domande e Risposte: ancorare i dati della tua azienda a una chat che i dipendenti possono usare per fare domande.
 
-- Sistemi di raccomandazione: dove puoi creare un sistema che abbina i valori più simili, ad esempio film, ristoranti e molti altri.
+- Sistemi di raccomandazione: dove puoi creare un sistema che abbina i valori più simili, es. film, ristoranti e molto altro.
 
-- Servizi chatbot: puoi archiviare la cronologia delle chat e personalizzare la conversazione in base ai dati dell'utente.
+- Servizi chatbot: puoi memorizzare la cronologia della chat e personalizzare la conversazione in base ai dati dell’utente.
 
-- Ricerca di immagini basata su embedding vettoriali, utile per il riconoscimento delle immagini e il rilevamento delle anomalie.
+- Ricerca immagini basata su embeddings vettoriali, utile per il riconoscimento immagini e il rilevamento di anomalie.
 
 ## Riepilogo
 
-Abbiamo coperto le aree fondamentali di RAG dall'aggiunta dei nostri dati all'applicazione, alla query dell'utente e all'output. Per semplificare la creazione di RAG, puoi utilizzare framework come Semantic Kernel, Langchain o Autogen.
+Abbiamo coperto le aree fondamentali di RAG dall’aggiunta dei nostri dati all’applicazione, alla query utente e all’output. Per semplificare la creazione di RAG, puoi usare framework come Semantic Kernel, Langchain o Autogen.
 
 ## Compito
 
-Per continuare il tuo apprendimento sulla Generazione Aumentata dal Recupero (RAG) puoi costruire:
+Per continuare l’apprendimento su Retrieval Augmented Generation (RAG) puoi costruire:
 
-- Crea un front-end per l'applicazione utilizzando il framework di tua scelta.
+- Costruire un front-end per l’applicazione usando il framework di tua scelta
 
-- Utilizza un framework, LangChain o Semantic Kernel, e ricrea la tua applicazione.
+- Utilizzare un framework, LangChain o Semantic Kernel, e ricreare la tua applicazione.
 
 Congratulazioni per aver completato la lezione 👏.
 
-## L'apprendimento non si ferma qui, continua il viaggio
+## L’apprendimento non finisce qui, continua il viaggio
 
-Dopo aver completato questa lezione, dai un'occhiata alla nostra [collezione di apprendimento sull'AI generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) per continuare a migliorare le tue conoscenze sull'AI generativa!
+Dopo aver completato questa lezione, dai un’occhiata alla nostra [collezione di apprendimento Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) per continuare a migliorare le tue conoscenze di Generative AI!
 
 ---
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per l’accuratezza, si prega di notare che le traduzioni automatizzate possono contenere errori o inesattezze. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale umana. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

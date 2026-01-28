@@ -1,111 +1,114 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "807f0d9fc1747e796433534e1be6a98a",
-  "translation_date": "2025-10-17T19:45:12+00:00",
+  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
+  "translation_date": "2026-01-18T18:24:56+00:00",
   "source_file": "18-fine-tuning/README.md",
   "language_code": "fi"
 }
 -->
-[![Avoimet lähdemallit](../../../translated_images/fi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../../../translated_images/fi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# LLM:n hienosäätö
+# Hienosäätä LLM:ääsi
 
-Suurten kielimallien käyttö generatiivisten tekoälysovellusten rakentamiseen tuo mukanaan uusia haasteita. Yksi keskeinen ongelma on varmistaa mallin tuottaman sisällön vastausten laatu (tarkkuus ja osuvuus) käyttäjän antamaan pyyntöön. Aiemmissa oppitunneissa käsittelimme tekniikoita, kuten kehotteen suunnittelua ja hakuun perustuvaa generointia, jotka pyrkivät ratkaisemaan ongelman _muokkaamalla kehotteen syötettä_ olemassa olevaan malliin.
+Suurten kielimallien käyttäminen generatiivisten tekoälysovellusten rakentamiseen tuo mukanaan uusia haasteita. Keskeinen kysymys on varmistaa vastausten laatu (tarkkuus ja merkityksellisyys) mallin tuottamassa sisällössä käyttäjän esittämään pyyntöön. Aiemmissa oppitunneissa olemme käsitelleet tekniikoita kuten kehotteiden suunnittelu ja hakua tukevan generoinnin, jotka pyrkivät ratkaisemaan ongelman muuttamalla olemassa olevan mallin _kehotteen syötettä_.
 
-Tämän päivän oppitunnilla käsittelemme kolmatta tekniikkaa, **hienosäätöä**, joka pyrkii ratkaisemaan haasteen _kouluttamalla mallia uudelleen_ lisädatan avulla. Sukelletaan yksityiskohtiin.
+Tämän päivän oppitunnilla käsittelemme kolmatta tekniikkaa, **hienosäätöä**, joka pyrkii vastaamaan haasteeseen _mallin uudelleenkoulutuksella_ lisäaineistolla. Sukelletaan yksityiskohtiin.
 
 ## Oppimistavoitteet
 
-Tämä oppitunti esittelee hienosäädön käsitteen esikoulutetuille kielimalleille, tutkii tämän lähestymistavan etuja ja haasteita sekä tarjoaa ohjeita siitä, milloin ja miten hienosäätöä kannattaa käyttää generatiivisten tekoälymallien suorituskyvyn parantamiseksi.
+Tässä oppitunnissa esitellään hienosäädön käsite esikoulutettuihin kielimalleihin, tutkitaan lähestymistavan etuja ja haasteita sekä annetaan ohjeita, milloin ja miten hienosäätöä voi käyttää generatiivisten tekoälymalliesi suorituskyvyn parantamiseen.
 
 Oppitunnin lopussa sinun pitäisi pystyä vastaamaan seuraaviin kysymyksiin:
 
 - Mitä hienosäätö kielimalleille tarkoittaa?
 - Milloin ja miksi hienosäätö on hyödyllistä?
-- Kuinka voin hienosäätää esikoulutettua mallia?
+- Kuinka voin hienosäätää esikoulutetun mallin?
 - Mitkä ovat hienosäädön rajoitukset?
 
-Valmis? Aloitetaan.
+Valmiina? Aloitetaan.
 
-## Havainnollistettu opas
+## Kuvitettu opas
 
-Haluatko saada yleiskuvan siitä, mitä käsittelemme ennen kuin sukellamme syvemmälle? Tutustu tähän havainnollistettuun oppaaseen, joka kuvaa oppimismatkaa tämän oppitunnin aikana - ydinajatuksista ja hienosäädön motivaatiosta prosessin ja parhaiden käytäntöjen ymmärtämiseen hienosäätötehtävän suorittamiseksi. Tämä on kiehtova aihe tutkittavaksi, joten älä unohda tarkistaa [Resurssit](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivua saadaksesi lisälinkkejä itseohjautuvaan oppimismatkaasi!
+Haluatko saada kokonaiskuvan siitä, mitä käsittelemme ennen syvempää sukellusta? Tutustu tähän kuvitettuun oppaaseen, joka kuvaa oppimispolkua tälle oppitunnille – alkaen ydinkäsitteiden ja hienosäädön motivoinnin oppimisesta aina hienosäätöprosessin ja parhaiden käytäntöjen ymmärtämiseen asti. Tämä on kiehtova aihe, joten muista vierailla myös [Resurssit](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivulla lisälinkkien saamiseksi itseohjattua oppimista varten!
 
-![Havainnollistettu opas kielimallien hienosäätöön](../../../translated_images/fi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/fi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
-## Mitä hienosäätö kielimalleille tarkoittaa?
+## Mitä hienosäätö kielimalleille on?
 
-Määritelmän mukaan suuret kielimallit ovat _esikoulutettuja_ suurilla määrillä tekstiä, jotka on kerätty monipuolisista lähteistä, kuten internetistä. Kuten olemme oppineet aiemmilla oppitunneilla, tarvitsemme tekniikoita, kuten _kehotteen suunnittelu_ ja _hakuun perustuva generointi_, parantaaksemme mallin vastausten laatua käyttäjän kysymyksiin ("kehotteisiin").
+Määritelmän mukaan suuret kielimallit on _esikoulutettu_ suurilla määrillä tekstiä, joka on kerätty monista lähteistä, mukaan lukien internet. Kuten olemme oppineet aiemmissa oppitunneissa, tarvitsemme tekniikoita kuten _kehotteiden suunnittelua_ ja _hakua tukevaa generointia_ parantamaan mallin vastausten laatua käyttäjän kysymyksiin ("kehotteisiin").
 
-Yksi suosittu kehotteen suunnittelutekniikka sisältää mallille enemmän ohjeita siitä, mitä vastaukselta odotetaan, joko antamalla _ohjeita_ (selkeät ohjeet) tai _muutamia esimerkkejä_ (epäsuorat ohjeet). Tätä kutsutaan _few-shot learningiksi_, mutta sillä on kaksi rajoitusta:
+Suosittu kehotteiden suunnittelutekniikka on antaa mallille enemmän ohjausta siitä, mitä vastauksessa odotetaan, joko antamalla _ohjeita_ (eksplisiittinen ohjaus) tai _antamalla muutama esimerkki_ (implisiittinen ohjaus). Tätä kutsutaan _few-shot-oppimiseksi_, mutta siinä on kaksi rajoitetta:
 
-- Mallin token-rajoitukset voivat rajoittaa annettavien esimerkkien määrää ja vaikuttavuutta.
+- Mallin token-rajoitukset voivat rajoittaa annettavien esimerkkien määrää ja tehokkuutta.
 - Mallin token-kustannukset voivat tehdä esimerkkien lisäämisestä jokaiseen kehotteeseen kallista ja rajoittaa joustavuutta.
 
-Hienosäätö on yleinen käytäntö koneoppimisjärjestelmissä, jossa otamme esikoulutetun mallin ja koulutamme sen uudelleen uudella datalla parantaaksemme sen suorituskykyä tiettyyn tehtävään. Kielimallien kontekstissa voimme hienosäätää esikoulutetun mallin _huolellisesti valitulla esimerkkijoukolla tiettyä tehtävää tai sovellusaluetta varten_ luodaksemme **räätälöidyn mallin**, joka voi olla tarkempi ja osuvampi kyseiselle tehtävälle tai alueelle. Hienosäädön sivuhyötynä on myös se, että se voi vähentää tarvittavien esimerkkien määrää few-shot learningissa - vähentäen tokenien käyttöä ja siihen liittyviä kustannuksia.
+Hienosäätö on koneoppimisjärjestelmissä yleinen käytäntö, jossa otetaan esikoulutettu malli ja koulutetaan sitä uudelleen uudella aineistolla parantaakseen sen suorituskykyä tietyssä tehtävässä. Kielimallien yhteydessä voimme hienosäätää esikoulutettua mallia _valikoidulla joukolla esimerkkejä tiettyyn tehtävään tai sovellusalueeseen_ luodaksemme **räätälöidyn mallin**, joka voi olla tarkempi ja merkityksellisempi juuri kyseiseen tehtävään tai alaan. Hienosäädön sivuetu on, että se voi myös vähentää tarvittavien esimerkkien määrää few-shot-oppimisessa – vähentäen token-käyttöä ja siihen liittyviä kustannuksia.
 
-## Milloin ja miksi meidän pitäisi hienosäätää malleja?
+## Milloin ja miksi mallit pitäisi hienosäätää?
 
-Tässä kontekstissa, kun puhumme hienosäädöstä, viittaamme **valvottuun** hienosäätöön, jossa uudelleenkoulutus tehdään **lisäämällä uutta dataa**, joka ei ollut osa alkuperäistä koulutusdatakokonaisuutta. Tämä eroaa valvomattomasta hienosäätömenetelmästä, jossa mallia koulutetaan uudelleen alkuperäisellä datalla, mutta eri hyperparametreilla.
+_Tässä_ yhteydessä, kun puhumme hienosäädöstä, tarkoitamme **valvottua** hienosäätöä, jossa mallin uudelleenkoulutus tehdään **lisäämällä uusia aineistoja**, joita ei ollut alkuperäisessä koulutusdatassa. Tämä eroaa valvomattomasta hienosäädön lähestymistavasta, jossa mallia koulutetaan uudelleen alkuperäisellä aineistolla, mutta eri hyperparametreillä.
 
-Keskeinen asia muistaa on, että hienosäätö on edistynyt tekniikka, joka vaatii tietyn tason asiantuntemusta haluttujen tulosten saavuttamiseksi. Jos se tehdään väärin, se ei välttämättä tuota odotettuja parannuksia ja voi jopa heikentää mallin suorituskykyä kohdealueellasi.
+Tärkein asia muistaa on, että hienosäätö on kehittynyt tekniikka, joka vaatii tiettyä asiantuntijuuden tasoa saavuttaakseen toivotut tulokset. Jos hienosäätö tehdään väärin, se ei välttämättä tuota odotettuja parannuksia, ja voi jopa heikentää mallin suorituskykyä kohdealueellasi.
 
-Joten ennen kuin opit "kuinka" hienosäätää kielimalleja, sinun täytyy tietää "miksi" sinun pitäisi valita tämä reitti ja "milloin" aloittaa hienosäätöprosessi. Aloita kysymällä itseltäsi nämä kysymykset:
+Joten ennen kuin opit "miten" hienosäätää kielimalleja, sinun on tiedettävä "miksi" haluat käyttää tätä menetelmää ja "milloin" aloittaa hienosäätöprosessi. Aloita kysymällä itseltäsi nämä kysymykset:
 
-- **Käyttötapaus**: Mikä on hienosäädön _käyttötapauksesi_? Mitä osaa nykyisestä esikoulutetusta mallista haluat parantaa?
-- **Vaihtoehdot**: Oletko kokeillut _muita tekniikoita_ haluttujen tulosten saavuttamiseksi? Käytä niitä vertailukohtana.
-  - Kehotteen suunnittelu: Kokeile tekniikoita, kuten few-shot-kehotteita, joissa on esimerkkejä asiaankuuluvista kehotusvastauksista. Arvioi vastausten laatu.
-  - Hakuun perustuva generointi: Kokeile kehotteiden täydentämistä hakutuloksilla, jotka on haettu etsimällä dataasi. Arvioi vastausten laatu.
+- **Käyttötarkoitus**: Mikä on hienosäädön _käyttötarkoituksesi_? Mitä osa-aluetta nykyisessä esikoulutetussa mallissa haluat parantaa?
+- **Vaihtoehdot**: Oletko kokeillut _muita tekniikoita_ saavuttaaksesi halutun lopputuloksen? Käytä niitä vertailutasoksi.
+  - Kehotteiden suunnittelu: Kokeile few-shot-kehotteita esimerkkien avulla. Arvioi vastausten laatua.
+  - Hakua tukevan generoinnin menetelmät: Kokeile laajentaa kehotteita hakutuloksilla omasta datastasi. Arvioi vastausten laatua.
 - **Kustannukset**: Oletko tunnistanut hienosäädön kustannukset?
-  - Säädettävyys - onko esikoulutettu malli saatavilla hienosäätöön?
-  - Työ - koulutusdatan valmistelu, mallin arviointi ja hienosäätö.
-  - Laskenta - hienosäätötehtävien suorittaminen ja hienosäädetyn mallin käyttöönotto.
-  - Data - riittävän laadukkaiden esimerkkien saatavuus hienosäätövaikutuksen saavuttamiseksi.
-- **Hyödyt**: Oletko vahvistanut hienosäädön hyödyt?
-  - Laatu - ylittääkö hienosäädetty malli vertailukohdan?
-  - Kustannukset - vähentääkö se tokenien käyttöä yksinkertaistamalla kehotteita?
-  - Laajennettavuus - voiko perusmallia käyttää uudelleen uusille alueille?
+  - Säädettävyys – onko esikoulutettu malli saatavilla hienosäätöön?
+  - Työmäärä – koulutusdatan valmistelu, mallin arviointi ja hienosäätö.
+  - Laskenta – hienosäätötehtävien suorittaminen ja hienosäädetyn mallin käyttöönotto.
+  - Data – riittävän laadukkaiden esimerkkien saatavuus hienosäädön vaikutuksen aikaansaamiseksi.
+- **Edut**: Oletko varmistunut hienosäädön eduista?
+  - Laatu – ylittikö hienosäädetty malli vertailutason?
+  - Kustannukset – vähentääkö se token-kulutusta yksinkertaistamalla kehotteita?
+  - Laajennettavuus – voitko käyttää pohjamallia uudelleen uusille sovellusalueille?
 
-Vastaamalla näihin kysymyksiin sinun pitäisi pystyä päättämään, onko hienosäätö oikea lähestymistapa käyttötapauksessasi. Ihanteellisesti lähestymistapa on perusteltu vain, jos hyödyt ylittävät kustannukset. Kun päätät jatkaa, on aika miettiä _kuinka_ voit hienosäätää esikoulutettua mallia.
+Vastaamalla näihin kysymyksiin sinun pitäisi pystyä päättämään, onko hienosäätö oikea tapaus juuri sinun käyttötarkoituksellesi. Ihanteellisesti lähestymistapa on perusteltu vain, jos edut ylittävät kustannukset. Kun päätät jatkaa, on aika miettiä, _kuinka_ voit hienosäätää esikoulutettua mallia.
 
-Haluatko lisätietoja päätöksentekoprosessista? Katso [Hienosäätääkö vai ei](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Haluatko lisää näkemyksiä päätöksenteon tueksi? Katso [Hienosäätöön vai ei hienosäätöön](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Kuinka voimme hienosäätää esikoulutettua mallia?
+## Kuinka hienosäätää esikoulutettua mallia?
 
 Hienosäätääksesi esikoulutettua mallia tarvitset:
 
 - esikoulutetun mallin hienosäätöä varten
-- datakokonaisuuden hienosäätöön
-- koulutusympäristön hienosäätötehtävän suorittamiseen
-- isännöintialustan hienosäädetyn mallin käyttöönottoon
+- aineiston, jota käytät hienosäätöön
+- koulutusympäristön hienosäätötehtävien suorittamiseen
+- isäntäympäristön hienosäädetyn mallin käyttöönottoon
 
 ## Hienosäätö käytännössä
 
-Seuraavat resurssit tarjoavat vaiheittaisia opetusohjelmia, jotka opastavat sinut todellisen esimerkin läpi valitun mallin ja huolellisesti valitun datakokonaisuuden avulla. Näiden opetusohjelmien läpikäymiseen tarvitset tilin kyseisellä palveluntarjoajalla sekä pääsyn asiaankuuluvaan malliin ja datakokonaisuuksiin.
+Seuraavat resurssit tarjoavat vaiheittaiset ohjeet, joiden avulla voit käytännössä kokeilla valitun mallin hienosäätöä valikoidulla aineistolla. Näiden opetusohjelmien käyttöön tarvitset tilin kyseisen palveluntarjoajan järjestelmässä sekä pääsyn asiaankuuluvaan malliin ja aineistoihin.
 
-| Palveluntarjoaja | Opetusohjelma                                                                                                                                                                       | Kuvaus                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI           | [Kuinka hienosäätää chat-malleja](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Opettele hienosäätämään `gpt-35-turbo` tiettyä aluetta varten ("reseptiassistentti") valmistamalla koulutusdataa, suorittamalla hienosäätötehtävä ja käyttämällä hienosäädettyä mallia päättelyyn.                                                                                                                                                                                                                                              |
-| Azure OpenAI     | [GPT 3.5 Turbo hienosäätöopetusohjelma](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Opettele hienosäätämään `gpt-35-turbo-0613` -mallia **Azurella** ottamalla askeleet koulutusdatan luomiseen ja lataamiseen, hienosäätötehtävän suorittamiseen. Ota käyttöön ja käytä uutta mallia.                                                                                                                                                                                                                                                                 |
-| Hugging Face     | [Hienosäätö LLM:ille Hugging Facen avulla](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Tämä blogikirjoitus opastaa sinut hienosäätämään _avointa LLM:ää_ (esim. `CodeLlama 7B`) käyttämällä [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) -kirjastoa ja [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) avoimilla [datakokonaisuuksilla](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) Hugging Facessa. |
-|                   |                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain     | [Hienosäätö LLM:ille AutoTrainin avulla](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (tai AutoTrain Advanced) on Hugging Facen kehittämä Python-kirjasto, joka mahdollistaa hienosäädön monille eri tehtäville, mukaan lukien LLM-hienosäätö. AutoTrain on kooditon ratkaisu, ja hienosäätö voidaan tehdä omassa pilvessä, Hugging Face Spacesissa tai paikallisesti. Se tukee sekä verkkopohjaista käyttöliittymää, CLI:tä että koulutusta yaml-konfiguraatiotiedostojen avulla.                                                                               |
-|                   |                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-
+| Palveluntarjoaja | Opetusohjelma                                                                                                                                                                  | Kuvaus                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI           | [Miten hienosäätää chat-malleja](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)               | Opettele hienosäätämään `gpt-35-turbo` tiettyyn sovellusalueeseen ("reseptiavustaja") valmistamalla koulutusdataa, suorittamalla hienosäätötehtävä ja käyttämällä hienosäädettyä mallia ennusteisiin.                                                                                                                                                                                                            |
+| Azure OpenAI     | [GPT 3.5 Turbon hienosäätö-opas](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst)           | Opi hienosäätämään `gpt-35-turbo-0613` -malli **Azure-palvelussa** luomalla ja lataamalla koulutusdataa, suorittamalla hienosäätötehtävä sekä ottamalla uusi malli käyttöön ja käyttämään sitä.                                                                                                                                                                                                                     |
+| Hugging Face     | [LLM-mallien hienosäätö Hugging Facen avulla](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                      | Tämä blogikirjoitus opastaa hienosäätämään _avoin LLM:n_ (esim. `CodeLlama 7B`) käyttäen [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) -kirjastoa ja [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) -työkaluja avoimien [aineistojen](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) kanssa Hugging Facessa.  |
+|                  |                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 🤗 AutoTrain     | [LLM-mallien hienosäätö AutoTrainilla](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                    | AutoTrain (tai AutoTrain Advanced) on Hugging Facen kehittämä python-kirjasto, joka mahdollistaa hienosäädön moniin eri tehtäviin, mukaan lukien LLM-mallien hienosäätö. AutoTrain on kooditon ratkaisu, jossa hienosäätö voidaan tehdä omassa pilvessä, Hugging Face Spaces -palvelussa tai paikallisesti. Se tukee selainpohjaista käyttöliittymää, CLI:tä ja koulutusta yaml-konfiguraatiotiedostoilla.                                              |
+|                  |                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 🦥 Unsloth       | [LLM-mallien hienosäätö Unslothilla](https://github.com/unslothai/unsloth)                                                                                                  | Unsloth on avoimen lähdekoodin kehys, joka tukee LLM-mallien hienosäätöä ja vahvistusoppimista (RL). Unsloth virtaviivaistaa paikallisen koulutuksen, arvioinnin ja käyttöönoton valmiiden [muistikirjojen](https://github.com/unslothai/notebooks) avulla. Se tukee myös puheeksi muuntoa (TTS), BERT- ja multimodaalimalleja. Aloittaaksesi tutustu vaiheittaiseen [LLM-hienosäätöoppaaseen](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                |
+|                  |                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                        |
 ## Tehtävä
 
-Valitse yksi yllä olevista opetusohjelmista ja käy se läpi. _Saatamme kopioida version näistä opetusohjelmista Jupyter Notebooks -tiedostoihin tässä repossa vain viitteeksi. Käytä alkuperäisiä lähteitä saadaksesi uusimmat versiot_.
+Valitse yllä olevista opetusohjelmista yksi ja käy se läpi. _Saatamme kopioida näiden opetusohjelmien versiota Jupyter-notebookeihin tämän repoon vain viitteeksi. Käytä alkuperäisiä lähteitä saadaksesi viimeisimmät versiot_.
 
 ## Hienoa työtä! Jatka oppimista.
 
-Tämän oppitunnin jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+Kun olet suorittanut tämän oppitunnin, tutustu Generative AI Learning -kokoelmaamme osoitteessa [https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi syventämistä!
 
-Onnittelut!! Olet suorittanut tämän kurssin v2-sarjan viimeisen oppitunnin! Älä lopeta oppimista ja rakentamista. \*\*Tutustu [RESURSSIT](RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivuun saadaksesi lisäehdotuksia juuri tästä aiheesta.
+Onnittelut!! Olet suorittanut tämän kurssin v2-sarjan viimeisen oppitunnin! Älä lopeta oppimista ja rakentamista. \*\*Tutustu [RESURSSIT](RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivuun saadaksesi lisää ehdotuksia juuri tähän aiheeseen.
 
-Myös v1-sarjan oppitunteja on päivitetty lisää tehtävillä ja käsitteillä. Joten ota hetki aikaa päivittääksesi tietosi - ja ole hyvä [ja jaa kysymyksesi ja palautteesi](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) auttaaksesi meitä parantamaan näitä oppitunteja yhteisölle.
+Myös v1-sarjan oppitunnit on päivitetty lisäämällä uusia tehtäviä ja käsitteitä. Joten ota hetki päivittääksesi tietosi – ja pyydämme sinua [jakamaan kysymyksiäsi ja palautteesi](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) auttaaksesi meitä parantamaan näitä oppitunteja yhteisölle.
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty tekoälykäännöspalvelulla [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää virallisena lähteenä. Tärkeiden tietojen osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

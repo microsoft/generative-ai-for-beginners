@@ -1,99 +1,99 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4b0266fbadbba7ded891b6485adc66d",
-  "translation_date": "2025-10-17T19:53:40+00:00",
+  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+  "translation_date": "2026-01-18T18:30:13+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "nl"
 }
 -->
 # Retrieval Augmented Generation (RAG) en Vector Databases
 
-[![Retrieval Augmented Generation (RAG) en Vector Databases](../../../translated_images/nl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) en Vector Databases](../../../../../translated_images/nl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-In de les over zoektoepassingen hebben we kort geleerd hoe je je eigen data kunt integreren in Large Language Models (LLMs). In deze les gaan we dieper in op de concepten van het verankeren van je data in je LLM-toepassing, de werking van het proces en de methoden voor het opslaan van data, inclusief zowel embeddings als tekst.
+In de les over zoektoepassingen hebben we kort geleerd hoe je je eigen data kunt integreren in Large Language Models (LLM’s). In deze les zullen we dieper ingaan op de concepten van het funderen van je data in je LLM-toepassing, de werking van het proces en de methoden voor het opslaan van data, inclusief zowel embeddings als tekst.
 
-> **Video binnenkort beschikbaar**
+> **Video komt binnenkort**
 
-## Introductie
+## Inleiding
 
 In deze les behandelen we het volgende:
 
 - Een introductie tot RAG, wat het is en waarom het wordt gebruikt in AI (kunstmatige intelligentie).
 
-- Begrijpen wat vector databases zijn en er een maken voor onze toepassing.
+- Begrijpen wat vector databases zijn en het creëren van een vector database voor onze toepassing.
 
-- Een praktisch voorbeeld van hoe je RAG kunt integreren in een toepassing.
+- Een praktisch voorbeeld van hoe je RAG in een toepassing integreert.
 
 ## Leerdoelen
 
 Na het voltooien van deze les kun je:
 
-- Uitleggen waarom RAG belangrijk is voor data-opvraging en -verwerking.
+- De betekenis van RAG bij data-opvraging en verwerking uitleggen.
 
-- Een RAG-toepassing instellen en je data verankeren aan een LLM.
+- Een RAG-toepassing opzetten en je data funderen in een LLM.
 
-- RAG en Vector Databases effectief integreren in LLM-toepassingen.
+- Effectieve integratie van RAG en Vector Databases in LLM-toepassingen.
 
-## Ons scenario: onze LLMs verbeteren met onze eigen data
+## Ons Scenario: onze LLMs verrijken met eigen data
 
-Voor deze les willen we onze eigen notities toevoegen aan de educatieve startup, zodat de chatbot meer informatie kan geven over verschillende onderwerpen. Met behulp van de notities kunnen leerlingen beter studeren en de verschillende onderwerpen begrijpen, wat het makkelijker maakt om zich voor te bereiden op examens. Om ons scenario te creëren, gebruiken we:
+Voor deze les willen we onze eigen notities toevoegen aan de educatieve startup, wat het chatbot in staat stelt meer informatie te krijgen over verschillende onderwerpen. Met behulp van de notities die we hebben, kunnen leerlingen beter studeren en de verschillende onderwerpen begrijpen, wat het makkelijker maakt om te reviseren voor hun examens. Voor ons scenario gebruiken we:
 
-- `Azure OpenAI:` de LLM die we gebruiken om onze chatbot te maken.
+- `Azure OpenAI:` de LLM die we gebruiken om onze chatbot te maken
 
-- `AI voor beginners-les over neurale netwerken:` dit is de data waarop we onze LLM verankeren.
+- `AI for beginners' lesson on Neural Networks`: dit is de data waarop we onze LLM funderen
 
-- `Azure AI Search` en `Azure Cosmos DB:` vector database om onze data op te slaan en een zoekindex te maken.
+- `Azure AI Search` en `Azure Cosmos DB:` vector database om onze data op te slaan en een zoekindex te creëren
 
-Gebruikers kunnen oefenquizzen maken van hun notities, samenvattingskaartjes en deze samenvatten tot beknopte overzichten. Om te beginnen, laten we eens kijken wat RAG is en hoe het werkt:
+Gebruikers kunnen oefenquizzen maken vanuit hun notities, revisie-flashcards maken en deze samenvatten tot beknopte overzichten. Laten we beginnen met wat RAG is en hoe het werkt:
 
 ## Retrieval Augmented Generation (RAG)
 
-Een door LLM aangedreven chatbot verwerkt gebruikersvragen om antwoorden te genereren. Het is ontworpen om interactief te zijn en met gebruikers te communiceren over een breed scala aan onderwerpen. De antwoorden zijn echter beperkt tot de context die wordt geboden en de basis trainingsdata. Bijvoorbeeld, de kennis van GPT-4 stopt in september 2021, wat betekent dat het geen kennis heeft van gebeurtenissen die daarna hebben plaatsgevonden. Bovendien bevat de data die wordt gebruikt om LLMs te trainen geen vertrouwelijke informatie zoals persoonlijke notities of een producthandleiding van een bedrijf.
+Een LLM-gestuurde chatbot verwerkt gebruikersopdrachten om antwoorden te genereren. Het is ontworpen om interactief te zijn en gaat in gesprek met gebruikers over een breed scala aan onderwerpen. De antwoorden zijn echter beperkt tot de context die wordt verstrekt en de basis-trainingsdata. GPT-4 bijvoorbeeld heeft een kennisafkapdatum van september 2021, wat betekent dat het geen kennis heeft van gebeurtenissen na die tijd. Bovendien bevat de data die gebruikt wordt om LLMs te trainen geen vertrouwelijke informatie zoals persoonlijke notities of het producthandboek van een bedrijf.
 
 ### Hoe RAGs (Retrieval Augmented Generation) werken
 
-![tekening die laat zien hoe RAGs werken](../../../translated_images/nl/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../../../translated_images/nl/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Stel dat je een chatbot wilt inzetten die quizzen maakt van je notities, dan heb je een verbinding met de kennisbank nodig. Hier komt RAG van pas. RAGs werken als volgt:
+Stel dat je een chatbot wil inzetten die quizzen maakt van jouw notities, dan heb je een verbinding met de kennisbasis nodig. Dit is waar RAG te hulp schiet. RAGs werken als volgt:
 
-- **Kennisbank:** Voordat data wordt opgehaald, moeten deze documenten worden ingelezen en voorbewerkt, meestal door grote documenten op te splitsen in kleinere stukken, ze om te zetten in tekstembeddings en ze op te slaan in een database.
+- **Kennisbasis:** Voordat er iets wordt opgehaald, moeten deze documenten worden ingelezen en voorverwerkt, meestal door grote documenten in kleinere stukken op te splitsen, deze om te zetten in tekst-embeddings en op te slaan in een database.
 
 - **Gebruikersvraag:** de gebruiker stelt een vraag.
 
-- **Opvraging:** Wanneer een gebruiker een vraag stelt, haalt het embeddingmodel relevante informatie uit onze kennisbank om meer context te bieden die in de prompt wordt opgenomen.
+- **Ophalen:** Wanneer een gebruiker een vraag stelt, haalt het embeddingmodel relevante informatie op uit onze kennisbasis om meer context te bieden die in de prompt wordt verwerkt.
 
-- **Augmented Generation:** de LLM verbetert zijn antwoord op basis van de opgehaalde data. Dit zorgt ervoor dat het gegenereerde antwoord niet alleen gebaseerd is op vooraf getrainde data, maar ook op relevante informatie uit de toegevoegde context. De opgehaalde data wordt gebruikt om de antwoorden van de LLM te verrijken. De LLM geeft vervolgens een antwoord op de vraag van de gebruiker.
+- **Uitgebreide generatie:** de LLM verbetert zijn antwoord op basis van de opgehaalde data. Zo wordt het antwoord niet alleen gegenereerd op basis van vooraf getrainde data, maar ook via relevante informatie van de toegevoegde context. De opgehaalde data wordt gebruikt om de antwoorden van de LLM te versterken. De LLM geeft vervolgens een antwoord op de vraag van de gebruiker.
 
-![tekening die de architectuur van RAGs toont](../../../translated_images/nl/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../../../translated_images/nl/encoder-decode.f2658c25d0eadee2.webp)
 
-De architectuur van RAGs wordt geïmplementeerd met behulp van transformers die bestaan uit twee delen: een encoder en een decoder. Bijvoorbeeld, wanneer een gebruiker een vraag stelt, wordt de invoertekst 'gecodeerd' in vectoren die de betekenis van woorden vastleggen, en worden de vectoren 'gedecodeerd' in onze documentindex en genereert nieuwe tekst op basis van de gebruikersvraag. De LLM gebruikt zowel een encoder-decoder model om de output te genereren.
+De architectuur van RAGs wordt geïmplementeerd met transformers die uit twee delen bestaan: een encoder en een decoder. Bijvoorbeeld, wanneer een gebruiker een vraag stelt, wordt de invoertekst ‘geëncodeerd’ naar vectoren die de betekenis van woorden vangen en worden deze vectoren ‘gedecodeerd’ in onze documentindex en genereert nieuwe tekst gebaseerd op de gebruikersvraag. De LLM gebruikt een encoder-decoder model om de output te genereren.
 
-Twee benaderingen bij het implementeren van RAG volgens het voorgestelde artikel: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) zijn:
+Twee benaderingen voor het implementeren van RAG volgens het voorgestelde paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) zijn:
 
-- **_RAG-Sequence_** gebruikt opgehaalde documenten om het best mogelijke antwoord op een gebruikersvraag te voorspellen.
+- **_RAG-Sequence_** gebruikt opgehaalde documenten om het beste mogelijke antwoord op een gebruikersvraag te voorspellen
 
-- **RAG-Token** gebruikt documenten om de volgende token te genereren en haalt ze vervolgens op om de vraag van de gebruiker te beantwoorden.
+- **RAG-Token** gebruikt documenten om het volgende token te genereren, waarna deze opnieuw worden opgehaald om de gebruikersvraag te beantwoorden
 
 ### Waarom zou je RAGs gebruiken?
 
-- **Informatierijkdom:** zorgt ervoor dat tekstantwoorden actueel en up-to-date zijn. Het verbetert dus de prestaties bij domeinspecifieke taken door toegang te krijgen tot de interne kennisbank.
+- **Informatierijkdom:** zorgt ervoor dat tekstuele antwoorden up-to-date en actueel zijn. Zo verbetert het de prestaties op domeinspecifieke taken door toegang tot de interne kennisbasis.
 
-- Vermindert verzinsels door gebruik te maken van **verifieerbare data** in de kennisbank om context te bieden bij gebruikersvragen.
+- Vermindert verzinsels door **verifieerbare data** uit de kennisbasis te gebruiken om context te bieden bij gebruikersvragen.
 
-- Het is **kosteneffectief** omdat ze economischer zijn in vergelijking met het fijn afstemmen van een LLM.
+- Het is **kostenbesparend** omdat het economischer is dan het fijnslijpen (fine-tunen) van een LLM.
 
-## Een kennisbank maken
+## Een kennisbasis creëren
 
-Onze toepassing is gebaseerd op onze persoonlijke data, namelijk de les over neurale netwerken uit het AI For Beginners-curriculum.
+Onze applicatie is gebaseerd op onze persoonlijke data, namelijk de Neural Network-les van het AI For Beginners curriculum.
 
 ### Vector Databases
 
-Een vector database, in tegenstelling tot traditionele databases, is een gespecialiseerde database ontworpen om embedded vectoren op te slaan, beheren en doorzoeken. Het slaat numerieke representaties van documenten op. Het opsplitsen van data in numerieke embeddings maakt het makkelijker voor ons AI-systeem om de data te begrijpen en te verwerken.
+Een vector database is, anders dan traditionele databases, een gespecialiseerde database ontworpen om embedded vectoren op te slaan, beheren en doorzoeken. Het slaat numerieke representaties van documenten op. Door data om te zetten in numerieke embeddings wordt het makkelijker voor ons AI-systeem om de data te begrijpen en te verwerken.
 
-We slaan onze embeddings op in vector databases omdat LLMs een limiet hebben aan het aantal tokens dat ze als input accepteren. Omdat je niet alle embeddings aan een LLM kunt doorgeven, moeten we ze opsplitsen in stukken en wanneer een gebruiker een vraag stelt, worden de embeddings die het meest lijken op de vraag samen met de prompt teruggegeven. Het opsplitsen vermindert ook de kosten van het aantal tokens dat door een LLM wordt verwerkt.
+We slaan onze embeddings op in vector databases omdat LLMs een limiet hebben aan het aantal tokens dat ze als input accepteren. Omdat je niet de gehele embedding aan een LLM kunt voeren, moeten we deze opsplitsen in stukken, en wanneer een gebruiker een vraag stelt, worden de meest relevante embeddings samen met de prompt teruggegeven. Het opsplitsen (chunking) vermindert ook de kosten van het aantal tokens dat door een LLM gaat.
 
-Enkele populaire vector databases zijn Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant en DeepLake. Je kunt een Azure Cosmos DB-model maken met Azure CLI met het volgende commando:
+Enkele populaire vector databases zijn Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant en DeepLake. Je kunt een Azure Cosmos DB model maken met Azure CLI met het volgende commando:
 
 ```bash
 az login
@@ -104,7 +104,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### Van tekst naar embeddings
 
-Voordat we onze data opslaan, moeten we deze omzetten in vector embeddings voordat deze in de database wordt opgeslagen. Als je werkt met grote documenten of lange teksten, kun je ze opsplitsen op basis van de vragen die je verwacht. Opsplitsen kan op zinsniveau of op alinea-niveau. Omdat opsplitsen betekenissen afleidt uit de woorden eromheen, kun je wat extra context toevoegen aan een stuk, bijvoorbeeld door de documenttitel toe te voegen of wat tekst voor of na het stuk op te nemen. Je kunt de data als volgt opsplitsen:
+Voordat we onze data opslaan, moeten we deze omzetten naar vector embeddings. Als je werkt met grote documenten of lange teksten, kun je deze opdelen op basis van de vragen die je verwacht. Het opdelen kan op zin- of paragraafniveau gebeuren. Omdat de betekenis van een stuk ook afhangt van de woorden eromheen, kun je extra context aan een stuk toevoegen, bijvoorbeeld door de titel van het document toe te voegen of wat tekst ervoor of erna. Je kunt de data als volgt opdelen:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -118,70 +118,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # If the last chunk didn't reach the minimum length, add it anyway
+    # Als het laatste stuk de minimale lengte niet heeft bereikt, voeg het toch toe
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Zodra de data is opgesplitst, kunnen we deze embedden met verschillende embeddingmodellen. Enkele modellen die je kunt gebruiken zijn: word2vec, ada-002 van OpenAI, Azure Computer Vision en nog veel meer. Het kiezen van een model hangt af van de talen die je gebruikt, het type inhoud dat wordt gecodeerd (tekst/afbeeldingen/audio), de grootte van de input die het kan coderen en de lengte van de embedding-output.
+Zodra de data opgedeeld is, kunnen we onze tekst embedden met behulp van verschillende embeddingmodellen. Enkele modellen die je kunt gebruiken zijn: word2vec, ada-002 van OpenAI, Azure Computer Vision en meer. De keuze van een model is afhankelijk van de talen die je gebruikt, het soort inhoud (tekst/afbeeldingen/audio), de grootte van de input die het kan encoderen en de lengte van de embedding-output.
 
-Een voorbeeld van embedded tekst met behulp van OpenAI's `text-embedding-ada-002` model is:
-![een embedding van het woord kat](../../../translated_images/nl/cat.74cbd7946bc9ca38.webp)
+Een voorbeeld van ingebedde tekst met OpenAI’s `text-embedding-ada-002` model is:
+![an embedding of the word cat](../../../../../translated_images/nl/cat.74cbd7946bc9ca38.webp)
 
-## Opvraging en Vector Search
+## Ophalen en Vector Search
 
-Wanneer een gebruiker een vraag stelt, zet de retriever deze om in een vector met behulp van de query encoder, waarna deze door onze documentzoekindex zoekt naar relevante vectoren in het document die gerelateerd zijn aan de input. Zodra dit is gedaan, zet het zowel de inputvector als de documentvectoren om in tekst en geeft het door aan de LLM.
+Wanneer een gebruiker een vraag stelt, zet de retriever deze om in een vector met behulp van de query encoder, waarna het zoekt in onze documentzoekindex naar relevante vectoren die bij de vraag horen. Vervolgens zet het zowel de inputvector als de documentvectoren om in tekst en voert dit door de LLM.
 
-### Opvraging
+### Ophalen
 
-Opvraging vindt plaats wanneer het systeem probeert snel de documenten uit de index te vinden die voldoen aan de zoekcriteria. Het doel van de retriever is om documenten te verkrijgen die zullen worden gebruikt om context te bieden en de LLM te verankeren op je data.
+Retrieval vindt plaats wanneer het systeem snel documenten probeert te vinden uit de index die voldoen aan de zoekcriteria. Het doel van de retriever is documenten te vinden die gebruikt worden om context te bieden en de LLM te funderen op jouw data.
 
-Er zijn verschillende manieren om zoekopdrachten uit te voeren binnen onze database, zoals:
+Er zijn verschillende manieren om te zoeken binnen onze database, zoals:
 
-- **Zoeken op trefwoord** - gebruikt voor tekstzoekopdrachten.
+- **Zoeken op trefwoord** - gebruikt voor tekstzoekopdrachten
 
-- **Semantisch zoeken** - gebruikt de semantische betekenis van woorden.
+- **Vector search** - zet documenten om van tekst naar vectorrepresentaties met embeddingmodellen, waardoor een **semantische zoekopdracht** mogelijk wordt op de betekenis van woorden. Retrieval gebeurt door te zoeken naar documenten waarvan de vectorrepresentaties het dichtst bij de gebruikersvraag liggen.
 
-- **Vector zoeken** - zet documenten om van tekst naar vectorrepresentaties met behulp van embeddingmodellen. Opvraging wordt uitgevoerd door de documenten te zoeken waarvan de vectorrepresentaties het dichtst bij de gebruikersvraag liggen.
+- **Hybride** - een combinatie van zowel trefwoord- als vectorzoekopdrachten.
 
-- **Hybride** - een combinatie van zowel trefwoord- als vector zoeken.
+Een uitdaging bij retrieval ontstaat wanneer er geen vergelijkbaar antwoord in de database staat op een query. Het systeem geeft dan het beste informatie terug die het kan vinden, maar je kunt tactieken gebruiken zoals het instellen van een maximale afstand voor relevantie of een hybride zoekopdracht inzetten die zowel trefwoorden als vector search combineert. In deze les gebruiken we hybride zoeken, een combinatie van vector- en trefwoordzoekopdrachten. We slaan onze data op in een dataframe met kolommen die de chunks en de embeddings bevatten.
 
-Een uitdaging bij opvraging ontstaat wanneer er geen vergelijkbaar antwoord op de vraag in de database is, het systeem zal dan de beste informatie teruggeven die ze kunnen vinden. Je kunt echter tactieken gebruiken zoals het instellen van de maximale afstand voor relevantie of hybride zoeken dat zowel trefwoorden als vector zoeken combineert. In deze les gebruiken we hybride zoeken, een combinatie van zowel vector- als trefwoord zoeken. We slaan onze data op in een dataframe met kolommen die de stukken en embeddings bevatten.
+### Vector Gelijkenis
 
-### Vector Similarity
+De retriever zoekt in de kennisdatabase naar embeddings die dicht bij elkaar liggen, de ‘dichtstbijzijnde buur’ (nearest neighbour), omdat het teksten zijn die op elkaar lijken. In het scenario waarin een gebruiker een query stelt, wordt deze eerst geëncodeerd en vervolgens gematcht met soortgelijke embeddings. De meest gebruikte maatstaf om te bepalen hoe gelijkend vectoren zijn is cosinusgelijkenis, gebaseerd op de hoek tussen twee vectoren.
 
-De retriever zoekt door de kennisdatabase naar embeddings die dicht bij elkaar liggen, de dichtstbijzijnde buur, omdat dit teksten zijn die vergelijkbaar zijn. In het scenario waarin een gebruiker een vraag stelt, wordt deze eerst embedded en vervolgens gekoppeld aan vergelijkbare embeddings. De meest gebruikte maatstaf om te bepalen hoe vergelijkbaar verschillende vectoren zijn, is cosine similarity, gebaseerd op de hoek tussen twee vectoren.
-
-We kunnen vergelijkbaarheid meten met andere alternatieven zoals Euclidische afstand, wat de rechte lijn tussen vector eindpunten is, en dot product, wat de som van de producten van overeenkomstige elementen van twee vectoren meet.
+We kunnen gelijkenis ook meten met andere methoden zoals Euclidische afstand, de rechte lijn tussen vector-einden, en de dotproduct, die de som meet van de producten van overeenkomstige elementen in twee vectoren.
 
 ### Zoekindex
 
-Bij het uitvoeren van opvraging moeten we een zoekindex bouwen voor onze kennisbank voordat we zoeken uitvoeren. Een index slaat onze embeddings op en kan snel de meest vergelijkbare stukken ophalen, zelfs in een grote database. We kunnen onze index lokaal maken met:
+Voor het uitvoeren van retrieval moeten we een zoekindex bouwen voor onze kennisbasis. Een index slaat onze embeddings op en kan snel de meest vergelijkbare chunks ophalen, ook in een grote database. We kunnen onze index lokaal maken met:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Create the search index
+# Maak de zoekindex aan
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# To query the index, you can use the kneighbors method
+# Om de index te doorzoeken, kunt u de kneighbors-methode gebruiken
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Herordenen
+### Herordenen (Re-ranking)
 
-Nadat je de database hebt doorzocht, moet je mogelijk de resultaten sorteren van meest relevant naar minder relevant. Een herordening LLM maakt gebruik van Machine Learning om de relevantie van zoekresultaten te verbeteren door ze te ordenen van meest relevant. Met Azure AI Search wordt herordening automatisch voor je uitgevoerd met behulp van een semantische herordener. Een voorbeeld van hoe herordening werkt met behulp van dichtstbijzijnde buren:
+Zodra je hebt gevraagd in de database, moet je de resultaten mogelijk sorteren van meest relevant. Een herordenende LLM gebruikt machine learning om de relevantie van zoekresultaten te verbeteren door ze te rangschikken van meest relevant naar minst relevant. Met Azure AI Search wordt herordenen automatisch voor je gedaan met een semantische reranker. Een voorbeeld van hoe reranking werkt met nearest neighbours:
 
 ```python
-# Find the most similar documents
+# Vind de meest vergelijkbare documenten
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Print the most similar documents
+# Print de meest vergelijkbare documenten
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -194,33 +192,33 @@ for i in range(3):
 
 ## Alles samenbrengen
 
-De laatste stap is het toevoegen van onze LLM om antwoorden te kunnen krijgen die gebaseerd zijn op onze data. We kunnen dit implementeren als volgt:
+De laatste stap is het toevoegen van onze LLM om antwoorden te kunnen krijgen die gebaseerd zijn op onze data. We kunnen dit als volgt implementeren:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Convert the question to a query vector
+    # Zet de vraag om in een queryvector
     query_vector = create_embeddings(user_input)
 
-    # Find the most similar documents
+    # Vind de meest vergelijkbare documenten
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # add documents to query  to provide context
+    # voeg documenten toe aan de query om context te bieden
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # combine the history and the user input
+    # combineer de geschiedenis en de gebruikersinvoer
     history.append(user_input)
 
-    # create a message object
+    # maak een berichtobject aan
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # use chat completion to generate a response
+    # gebruik chatcompletie om een reactie te genereren
     response = openai.chat.completions.create(
         model="gpt-4",
         temperature=0.7,
@@ -233,49 +231,51 @@ def chatbot(user_input):
 chatbot(user_input)
 ```
 
-## Evaluatie van onze toepassing
+## Onze toepassing evalueren
 
-### Evaluatiemetrics
+### Evaluatiecriteria
 
-- Kwaliteit van de gegeven antwoorden, waarbij wordt gekeken of ze natuurlijk, vloeiend en menselijk klinken.
+- Kwaliteit van de gegeven antwoorden: zorgen dat ze natuurlijk, vloeiend en menselijk klinken
 
-- Verankering van de data: evalueren of het antwoord afkomstig is van de aangeleverde documenten.
+- Fundering van de data: evalueren of het antwoord afkomstig is uit de aangeleverde documenten
 
-- Relevantie: evalueren of het antwoord overeenkomt met en gerelateerd is aan de gestelde vraag.
+- Relevant: evalueren of het antwoord past bij en gerelateerd is aan de gestelde vraag
 
-- Vlotheid - of het antwoord grammaticaal logisch is.
+- Vloeiendheid: of het antwoord grammaticaal klopt
 
-## Toepassingen van RAG (Retrieval Augmented Generation) en vector databases
+## Toepassingen van Retrieval Augmented Generation (RAG) en vector databases
 
-Er zijn veel verschillende toepassingen waarbij functieaanroepen je app kunnen verbeteren, zoals:
+Er zijn veel verschillende toepassingen waar functie-aanroepen je app kunnen verbeteren, zoals:
 
-- Vraag en antwoord: je bedrijfsdata verankeren aan een chat die door medewerkers kan worden gebruikt om vragen te stellen.
+- Vraag en Antwoord: fundeer je bedrijfsdata in een chat die door medewerkers kan worden gebruikt om vragen te stellen.
 
-- Aanbevelingssystemen: waarbij je een systeem kunt maken dat de meest vergelijkbare waarden matcht, zoals films, restaurants en meer.
+- Aanbevelingssystemen: waar je een systeem maakt dat de meest vergelijkbare waarden matcht, bijvoorbeeld films, restaurants en meer.
 
-- Chatbotdiensten: je kunt chatgeschiedenis opslaan en het gesprek personaliseren op basis van gebruikersdata.
+- Chatbot diensten: je kunt chatgeschiedenis opslaan en het gesprek personaliseren op basis van gebruikersdata.
 
-- Afbeeldingszoekopdrachten op basis van vector embeddings, handig bij beeldherkenning en het detecteren van afwijkingen.
+- Afbeelding zoeken op basis van vector embeddings, nuttig bij beeldherkenning en het opsporen van afwijkingen.
 
 ## Samenvatting
 
-We hebben de fundamentele gebieden van RAG behandeld, van het toevoegen van onze data aan de toepassing, de gebruikersvraag en de output. Om het maken van RAG te vereenvoudigen, kun je frameworks zoals Semantic Kernel, Langchain of Autogen gebruiken.
+We hebben de fundamentele gebieden van RAG behandeld, van het toevoegen van data aan de applicatie, de gebruikersvraag en output. Om het maken van RAG eenvoudiger te maken, kun je frameworks gebruiken zoals Semantic Kernel, Langchain of Autogen.
 
 ## Opdracht
 
-Om je kennis over Retrieval Augmented Generation (RAG) verder te ontwikkelen, kun je:
+Om je kennis van Retrieval Augmented Generation (RAG) te verdiepen kun je:
 
-- Een front-end bouwen voor de toepassing met behulp van een framework naar keuze.
+- Een front-end bouwen voor de applicatie met het framework van jouw keuze
 
-- Een framework gebruiken, zoals LangChain of Semantic Kernel, en je toepassing opnieuw maken.
+- Een framework gebruiken, zoals LangChain of Semantic Kernel, en je applicatie opnieuw maken.
 
 Gefeliciteerd met het voltooien van de les 👏.
 
-## Het leren stopt hier niet, ga verder met de reis
+## Leren stopt hier niet, ga verder op de Reis
 
-Na het voltooien van deze les, bekijk onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis over Generative AI verder uit te breiden!
+Na het voltooien van deze les, bekijk onze [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis over Generatieve AI verder te verdiepen!
 
 ---
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI vertaaldienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, verzoeken wij u rekening te houden met het feit dat automatische vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal dient als de bevoegde bron te worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerd geïnterpreteerde informatie die voortvloeit uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

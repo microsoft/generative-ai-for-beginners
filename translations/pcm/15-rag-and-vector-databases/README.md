@@ -1,99 +1,99 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b4b0266fbadbba7ded891b6485adc66d",
-  "translation_date": "2025-11-12T08:50:49+00:00",
+  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+  "translation_date": "2026-01-18T19:44:10+00:00",
   "source_file": "15-rag-and-vector-databases/README.md",
   "language_code": "pcm"
 }
 -->
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/pcm/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../../../translated_images/pcm/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-For di lesson wey we do for search applications, we don learn small about how to put your own data inside Large Language Models (LLMs). For dis lesson, we go talk more about how you fit ground your data for your LLM application, how di process dey work, and di ways wey you fit store data, including embeddings and text.
+For di search applications lesson, we learn small how to integrate your own data inside Large Language Models (LLMs). For dis lesson, we go talk more about how to ground your data for your LLM application, how di process dey work and di methods to store data, including both embeddings and text.
 
-> **Video dey come soon**
+> **Video Coming Soon**
 
 ## Introduction
 
-For dis lesson, we go cover di following:
+For dis lesson, we go cover these tins:
 
-- Wetin RAG be, why e dey important for AI (artificial intelligence).
+- Intro to RAG, wetin e be and why dem dey use am for AI (artificial intelligence).
 
 - Understand wetin vector databases be and how to create one for our application.
 
-- Practical example of how to put RAG inside application.
+- One practical example how to integrate RAG inside one application.
 
 ## Learning Goals
 
-After you finish dis lesson, you go fit:
+After you finish dis lesson, you go sabi:
 
-- Explain why RAG dey important for data retrieval and processing.
+- Explain di importance of RAG for data retrieval and processing.
 
-- Setup RAG application and ground your data to an LLM.
+- Setup RAG application and ground your data to LLM
 
-- Integrate RAG and Vector Databases well well for LLM Applications.
+- How to integrate RAG and Vector Databases well well for LLM Applications.
 
-## Our Scenario: make our LLMs better with our own data
+## Our Scenario: how we go take improve our LLMs with our own data
 
-For dis lesson, we wan add our own notes inside di education startup, so di chatbot go fit get more information about di different subjects. With di notes wey we get, learners go fit study better and sabi di different topics well, so e go easy for dem to revise for exams. To create dis scenario, we go use:
+For dis lesson, we wan add our own notes for education startup, weh go make chatbot fit get more information about different subjects dem. If we use di notes we get, learners go fit study better and understand different topics, e go make e easy to revise for their exams. To create our scenario, we go use:
 
-- `Azure OpenAI:` di LLM wey we go use to create our chatbot.
+- `Azure OpenAI:` na di LLM wey we go take create our chatbot
 
-- `AI for beginners' lesson on Neural Networks:` na di data we go ground our LLM on.
+- `AI for beginners' lesson on Neural Networks`: na dis one be di data wey we go ground our LLM on top
 
-- `Azure AI Search` and `Azure Cosmos DB:` vector database to store our data and create search index.
+- `Azure AI Search` and `Azure Cosmos DB:` na vector database wey go store our data and create search index
 
-Users go fit create practice quizzes from their notes, revision flash cards, and summarize am to short overviews. To start, make we look wetin RAG be and how e dey work:
+Users go fit create practice quizzes from their notes, get revision flash cards and summarize am into short overview dem. To start, make we check wetin RAG be and how e dey work:
 
 ## Retrieval Augmented Generation (RAG)
 
-LLM-powered chatbot dey process user prompts to generate response. E dey interactive and dey talk with users about plenty topics. But di response wey e dey give dey limited to di context wey e get and di training data wey dem use. For example, GPT-4 knowledge cutoff na September 2021, so e no sabi wetin happen after dat time. Plus, di data wey dem use train LLMs no dey include private information like personal notes or company product manual.
+LLM powered chatbot dey process user prompts to generate answers. E join dey interactive and e dey talk with users on many kind topics. But di answers wey e dey give fit only reach as far as di context e get and di training data wey e base on. For example, GPT-4 knowledge cutoff na September 2021, mean say, e no sabi anything wey happen after dat time. Plus, di data wey dem use train LLM no include any confidential tins like personal notes or company product manual.
 
 ### How RAGs (Retrieval Augmented Generation) dey work
 
-![drawing showing how RAGs work](../../../translated_images/pcm/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../../../translated_images/pcm/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Imagine say you wan deploy chatbot wey go dey create quizzes from your notes, you go need connection to di knowledge base. Na here RAG go help. RAG dey work like dis:
+Make we suppose you want deploy one chatbot wey dey create quizzes from your notes, you go need connection to di knowledge base. Na here RAG go help. RAGs dey operate like dis:
 
-- **Knowledge base:** Before retrieval, you go need preprocess di documents, break big documents into small chunks, change dem to text embedding, and store dem for database.
+- **Knowledge base:** Before retrieval, dem need take put these documents inside and preprocess am, usually dem go break big documents into smaller chunks, convert dem to text embedding and store for database.
 
-- **User Query:** Di user go ask question.
+- **User Query:** di user go ask question
 
-- **Retrieval:** When user ask question, di embedding model go find relevant information from di knowledge base to add more context wey go join di prompt.
+- **Retrieval:** When user ask question, di embedding model go find correct info from our knowledge base to give extra context wey go join for di prompt.
 
-- **Augmented Generation:** Di LLM go use di data wey e retrieve to make di response better. E go make di response no just dey based on pre-trained data but also dey relevant to di added context. Di retrieved data go help di LLM response. Di LLM go then give answer to di user question.
+- **Augmented Generation:** di LLM go improve im answer based on di data wey dem retrieve. E go make di answer no only dey based on pre-trained data but also di info from di added context. Di data wey dem pull go add to how LLM dey answer. LLM go then return answer give di user.
 
-![drawing showing how RAGs architecture](../../../translated_images/pcm/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../../../translated_images/pcm/encoder-decode.f2658c25d0eadee2.webp)
 
-Di architecture for RAG dey use transformers wey get two parts: encoder and decoder. For example, when user ask question, di input text go dey 'encoded' into vectors wey capture di meaning of di words, and di vectors go dey 'decoded' into di document index to generate new text based on di user query. Di LLM dey use encoder-decoder model to generate output.
+Di architecture for RAGs dey use transformers wey get two parts: encoder and decoder. For example, if user ask question, di input text 'encrypted' into vectors wey get di meaning of words then di vectors dey 'decoded' into our document index and e go generate new text based on di user query. Di LLM dey use encoder-decoder model to generate output.
 
-Two ways wey dem dey use implement RAG according to di paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) na:
+Two ways to implement RAG according to di paper [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) be:
 
-- **_RAG-Sequence_** wey dey use di documents wey e retrieve to predict di best answer to di user question.
+- **_RAG-Sequence_** wey use retrieved documents to guess di best answer to the user's question
 
-- **RAG-Token** wey dey use documents to generate di next token, then retrieve dem to answer di user question.
+- **RAG-Token** wey use documents to generate di next token, then retrieve them to answer di user's question
 
-### Why you go wan use RAGs? 
+### Why you go use RAGs? 
 
-- **Information richness:** E dey make sure say di text response dey up to date and current. E dey help performance for domain-specific tasks by accessing di internal knowledge base.
+- **Info rich:** e make sure say text answers dey up to date and current. E improve performance on domain specific tasks by taking info from inside the knowledge base.
 
-- E dey reduce fabrication by using **verifiable data** for di knowledge base to give context to di user questions.
+- E reduce fake info by using **verifiable data** inside di knowledge base for context to user question.
 
-- E dey **cost effective** because e cheap pass to dey fine-tune LLM.
+- E cost less as e dey more cheap than to fine-tune LLM
 
-## Creating a knowledge base
+## How to create knowledge base
 
-Our application dey based on our personal data, like di Neural Network lesson for AI For Beginners curriculum.
+Our application dey based on our personal data i.e., di Neural Network lesson for AI For Beginners curriculum.
 
 ### Vector Databases
 
-Vector database no be like traditional database, e dey designed to store, manage, and search embedded vectors. E dey store numerical representations of documents. When you break data into numerical embeddings, e go dey easy for AI system to understand and process di data.
+Vector database, no be like normal databases, na special database wey dem design to store, manage and search embedded vectors. E store numerical representation of documents. Breaking down data to numerical embeddings make e easy for our AI system to understand and process data.
 
-We dey store our embeddings for vector databases because LLMs get limit for di number of tokens wey dem fit accept as input. Since you no fit pass di whole embeddings to LLM, you go need break dem into chunks, and when user ask question, di embeddings wey dey similar to di question go dey returned with di prompt. Chunking dey also reduce cost for di number of tokens wey you dey pass through LLM.
+We dey store our embeddings inside vector databases as LLMs get limit on how many tokens dem fit accept as input. As you no fit pass all the embeddings to LLM, we go need cut dem into chunks and when user ask question, di embeddings wey match di question most go dey returned with di prompt. Chunking still dey reduce cost on how many tokens dem pass inside LLM.
 
-Some popular vector databases na Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant, and DeepLake. You fit create Azure Cosmos DB model using Azure CLI with dis command:
+Some vector databases wey popular include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant and DeepLake. You fit create Azure Cosmos DB model using Azure CLI with dis command:
 
 ```bash
 az login
@@ -104,7 +104,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### From text to embeddings
 
-Before we store our data, we go need change am to vector embeddings before we store am for database. If you dey work with big documents or long texts, you fit chunk dem based on di queries wey you dey expect. Chunking fit dey done for sentence level or paragraph level. Since chunking dey get meaning from di words wey dey around dem, you fit add some other context to di chunk, like di document title or some text before or after di chunk. You fit chunk di data like dis:
+Before we fit store our data, we go need change am to vector embeddings before e enter database. If your documents big or long, you fit break dem based on di questions you expect. You fit chunk am for sentence level or paragraph level. Because chunking dey take meaning from words wey dey around am, you fit add some other context to di chunk, like by adding di document title or put some text before or after di chunk. You fit chunk data like dis:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -118,70 +118,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # If the last chunk didn't reach the minimum length, add it anyway
+    # If di last chunk neva reach di minimum length, still add am anyway
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-After chunking, we fit embed our text using different embedding models. Some models wey you fit use na: word2vec, ada-002 by OpenAI, Azure Computer Vision, and many more. Di model wey you go use go depend on di language wey you dey use, di type of content wey you dey encode (text/images/audio), di size of input wey e fit encode, and di length of di embedding output.
+After you chunk am, you fit embed your text using different embedding models. Some models wey you fit use be: word2vec, ada-002 by OpenAI, Azure Computer Vision and plenty more. How you go select model depend on di languages you dey use, di content type encoded (text/images/audio), how big di input fit be and how long the embedding output be.
 
-Example of embedded text using OpenAI's `text-embedding-ada-002` model na:
-![an embedding of the word cat](../../../translated_images/pcm/cat.74cbd7946bc9ca38.webp)
+Example of embedded text using OpenAI's `text-embedding-ada-002` model be:
+![an embedding of the word cat](../../../../../translated_images/pcm/cat.74cbd7946bc9ca38.webp)
 
 ## Retrieval and Vector Search
 
-When user ask question, di retriever go change am to vector using di query encoder, e go then search through di document search index for vectors wey dey related to di input. After dat, e go change di input vector and document vectors back to text and pass am through di LLM.
+When user ask question, di retriever go turn am to vector using di query encoder, e go search our document search index for relevant vectors wey relate to di input. After dat, e go change both di input vector and document vectors to text and pass am through LLM.
 
 ### Retrieval
 
-Retrieval dey happen when di system dey try find di documents from di index wey match di search criteria. Di retriever dey find documents wey go provide context and ground di LLM on your data.
+Retrieval na when system try find documents from index wey satisfy di search request sharp sharp. Di goal of di retriever be to find documents wey dem go use provide context and ground di LLM on your data.
 
-Plenty ways dey to search inside database like:
+There dey different ways to search inside our database like:
 
-- **Keyword search** - e dey used for text searches.
+- **Keyword search** - to search text
 
-- **Semantic search** - e dey use di meaning of words.
+- **Vector search** - to convert documents from text to vector using embedding models, e dey allow **semantic search** wey dey based on meaning of words. Retrieval go happen by querying documents wey their vector representations dey closest to user question.
 
-- **Vector search** - e dey change documents from text to vector representations using embedding models. Retrieval go dey done by querying di documents wey di vector representations dey close to di user question.
+- **Hybrid** - na mix of keyword and vector search.
 
-- **Hybrid** - e dey combine both keyword and vector search.
-
-Challenge wey dey with retrieval na when no similar response dey for di query inside di database, di system go return di best information wey e fit get. But you fit use tactics like set maximum distance for relevance or use hybrid search wey combine both keyword and vector search. For dis lesson, we go use hybrid search, wey dey combine vector and keyword search. We go store our data inside dataframe with columns wey get di chunks and embeddings.
+One challenge with retrieval be say if no response wey resemble di query dey database, system go give best info wey e fit find, but you fit use methods like set max distance for relevance or use hybrid search wey combine keyword and vector search. For dis lesson, we go use hybrid search, mix of vector and keyword search. We go store data inside dataframe with columns wey get chunks and embeddings.
 
 ### Vector Similarity
 
-Di retriever go search di knowledge database for embeddings wey dey close together, di closest neighbour, because dem be texts wey dey similar. If user ask query, e go first embed am then match am with similar embeddings. Di common measurement wey dem dey use to check how similar vectors dey na cosine similarity wey dey based on di angle between two vectors.
+Retriever go search inside knowledge database for embeddings wey close to each other, closest neighbour, as dem be texts wey get similarity. If user ask question, e go embed am then match am with similar embeddings. Di normal way wey dem dey take measure how vectors similar na cosine similarity, wey base on angle between two vectors.
 
-Other ways wey you fit measure similarity na Euclidean distance wey be di straight line between vector endpoints and dot product wey dey measure di sum of di products of corresponding elements of two vectors.
+Other ways to measure similarity na Euclidean distance, na straight line between vector endpoints, and dot product wey dey measure sum of products of corresponding elements of two vectors.
 
 ### Search index
 
-When you dey do retrieval, you go need build search index for di knowledge base before you fit perform search. Index go store di embeddings and fit quickly retrieve di most similar chunks even for big database. You fit create di index locally using:
+When you dey do retrieval, you go need build search index for your knowledge base before search. Index go store embeddings and fit quickly return similar chunks even if database big. You fit create index locally using:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Create the search index
+# Make di search index
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# To query the index, you can use the kneighbors method
+# To query di index, yu fit use di kneighbors method
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
 ### Re-ranking
 
-After you don query di database, you fit need sort di results from di most relevant. Reranking LLM dey use Machine Learning to make di search results better by arranging dem from di most relevant. Using Azure AI Search, reranking dey happen automatically with semantic reranker. Example of how reranking dey work using nearest neighbours:
+After you don query di database, you fit want arrange di results from di best relevant ones. Reranking LLM dey use Machine Learning to improve search result relevance by putting dem in order from most relevant. Using Azure AI Search, reranking dey automatic using semantic reranker. Example how reranking dey work with nearest neighbours:
 
 ```python
-# Find the most similar documents
+# Find di most kain documents wey resemble
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Print the most similar documents
+# Print di most kain documents wey resemble
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -192,35 +190,35 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Bringing it all together
+## How to put everything together
 
-Di last step na to add our LLM to di mix so e go fit give responses wey dey grounded on our data. We fit implement am like dis:
+Last step na add our LLM join so e fit give answers wey dey ground on our data. We fit do am like dis:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Convert the question to a query vector
+    # Change di question come query vector
     query_vector = create_embeddings(user_input)
 
-    # Find the most similar documents
+    # Find di most similar documents
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # add documents to query  to provide context
+    # add documents to query make e get context
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # combine the history and the user input
+    # join di history and di user input
     history.append(user_input)
 
-    # create a message object
+    # create one message object
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # use chat completion to generate a response
+    # use chat completion make e generate answer
     response = openai.chat.completions.create(
         model="gpt-4",
         temperature=0.7,
@@ -233,51 +231,51 @@ def chatbot(user_input):
 chatbot(user_input)
 ```
 
-## Evaluating our application
+## How to evaluate our application
 
 ### Evaluation Metrics
 
-- Di quality of di responses wey e dey give, make e sound natural, fluent, and human-like.
+- Quality of responses: make sure answer sound natural, fluent and human-like
 
-- Groundedness of di data: check whether di response dey come from di docs wey we supply.
+- Groundedness of data: check if answer dey based on docs wey you supply
 
-- Relevance: check whether di response match and relate to di question wey dem ask.
+- Relevance: check if answer match and relate to question wey dem ask
 
-- Fluency - check whether di response dey make sense grammatically.
+- Fluency - check if answer dey grammatically correct
 
-## Use Cases for using RAG (Retrieval Augmented Generation) and vector databases
+## Use Cases for RAG (Retrieval Augmented Generation) and vector databases
 
-Plenty use cases dey where function calls fit make your app better like:
+Plenty use cases dey where function calls fit improve your app like:
 
-- Question and Answering: ground your company data to chat wey employees fit use to ask questions.
+- Question and Answering: ground your company data to chat wey employees fit use ask questions.
 
-- Recommendation Systems: create system wey dey match di most similar values like movies, restaurants, and many more.
+- Recommendation Systems: you fit create system wey match most similar tins like movies, restaurants and others.
 
-- Chatbot services: store chat history and make di conversation personal based on di user data.
+- Chatbot services: you fit store chat history and personalize conversation based on user data.
 
-- Image search based on vector embeddings, e dey useful for image recognition and anomaly detection.
+- Image search based on vector embeddings, help for image recognition and anomaly detection.
 
 ## Summary
 
-We don talk about di main things for RAG from how to add our data to di application, di user query, and di output. To make RAG creation easy, you fit use frameworks like Semantic Kernel, Langchain, or Autogen.
+We don cover di main parts of RAG from how we take add our data to application, user query and output. To simplify RAG creation, you fit use frameworks like Semanti Kernel, Langchain or Autogen.
 
 ## Assignment
 
-To continue to learn about Retrieval Augmented Generation (RAG), you fit:
+To continue learning Retrieval Augmented Generation (RAG), you fit build:
 
-- Build front-end for di application using any framework wey you like.
+- Build front-end for the application using any framework you like
 
-- Use framework like LangChain or Semantic Kernel to recreate your application.
+- Use framework like LangChain or Semantic Kernel, and remake your application.
 
-Congrats say you don finish di lesson 👏.
+Congrats for finishing di lesson 👏.
 
-## Learning no dey end here, continue di Journey
+## Learning no stop here, continue di Journey
 
-After you don finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to dey improve your Generative AI knowledge!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am correct, abeg sabi say machine translation fit get mistake or no dey accurate well. Di original dokyument for im native language na di main source wey you go fit trust. For important information, e better make professional human translation dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document na AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) wey dem use translate am. Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or wrong tori. Di original document wey e dey for e original language na di correct one wey you suppose trust. If na serious info, e better make person wey sabi do human translation help. We no go responsible for any misunderstanding or wrong meaning wey fit show because of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
