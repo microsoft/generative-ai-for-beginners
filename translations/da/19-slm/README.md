@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:37:11+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "da"
-}
--->
 # Introduktion til Små Sprogmodeller for Generativ AI for Begyndere  
 Generativ AI er et fascinerende område inden for kunstig intelligens, der fokuserer på at skabe systemer, som kan generere nyt indhold. Dette indhold kan spænde fra tekst og billeder til musik og endda hele virtuelle miljøer. En af de mest spændende anvendelser af generativ AI er inden for sprogmodeller.
 

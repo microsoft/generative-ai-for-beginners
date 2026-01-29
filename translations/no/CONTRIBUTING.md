@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:08:19+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "no"
-}
--->
 # Bidra
 
 Dette prosjektet ønsker bidrag og forslag velkommen. De fleste bidrag krever at du

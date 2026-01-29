@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T19:20:20+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "no"
-}
--->
 # Komme i gang med dette kurset
 
 Vi er veldig glade for at du skal starte dette kurset og se hva du blir inspirert til å bygge med Generativ AI!

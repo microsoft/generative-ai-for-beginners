@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
-  "translation_date": "2025-10-17T19:23:39+00:00",
-  "source_file": "07-building-chat-applications/README.md",
-  "language_code": "no"
-}
--->
 # Bygge generative AI-drevne chatapplikasjoner
 
 [![Bygge generative AI-drevne chatapplikasjoner](../../../translated_images/no/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)

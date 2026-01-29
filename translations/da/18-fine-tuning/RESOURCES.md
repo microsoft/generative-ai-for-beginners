@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:03:30+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "da"
-}
--->
 # Ressourcer til Selvstyret Læring
 
 Lektionerne er bygget ved hjælp af en række centrale ressourcer fra OpenAI og Azure OpenAI som reference for terminologi og vejledninger. Her er en ikke-udtømmende liste til dine egne selvstyrede læringsrejser.

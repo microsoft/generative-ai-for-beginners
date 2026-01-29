@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T19:41:42+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "fi"
-}
--->
 # Aloittaminen tämän kurssin kanssa
 
 Olemme todella innoissamme siitä, että aloitat tämän kurssin ja näemme, mitä inspiroidut rakentamaan Generatiivisen tekoälyn avulla!
