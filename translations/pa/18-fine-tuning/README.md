@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:42:14+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "pa"
-}
--->
-[![Open Source Models](../../../../../translated_images/pa/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/pa/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # ਆਪਣੀ LLM ਨੂੰ ਫਾਈਨ-ਟਿਊਨ ਕਰਨਾ
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਕੀ ਤੁਸੀਂ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹੋ ਕਿ ਅਸੀਂ ਕੀ ਕਵਰ ਕਰਾਂਗੇ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਅਸੀਂ ਅੰਦਰ ਵੱਧੀਏ? ਇਸ ਪ੍ਰਦਰਸ਼ਿਤ ਗਾਈਡ ਨੂੰ ਵੇਖੋ ਜੋ ਫਾਈਨ-ਟਿਊਨਿੰਗ ਲਈ ਮੁੱਖ ਸੰਕਲਪਾਂ ਅਤੇ ਪ੍ਰੇਰਣਾ ਤੋਂ ਲੈ ਕੇ ਪ੍ਰਕ੍ਰਿਆ ਅਤੇ ਸਰਵੋਤਮ ਅਭਿਆਸਾਂ ਦੀ ਸਮਝ ਤੱਕ ਸਿੱਖਣ ਯਾਤਰਾ ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ। ਇਹ ਖੋਜ ਲਈ ਇੱਕ ਦਿਲਚਸਪ ਵਿਸ਼ਾ ਹੈ, ਇਸ ਲਈ ਸਵੈ-ਅਧਿਆਨ ਯਾਤਰਾ ਨੂੰ ਸਮਰਥਨ ਦੇਣ ਲਈ ਵਾਧੂ ਲਿੰਕਾਂ ਲਈ [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) ਪੰਨਾ ਨਾ ਭੁੱਲੋ!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/pa/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/pa/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ਭਾਸ਼ਾ ਮਾਡਲਾਂ ਲਈ ਫਾਈਨ-ਟਿਊਨਿੰਗ ਕੀ ਹੈ?
 
