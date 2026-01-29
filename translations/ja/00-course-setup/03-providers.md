@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T13:43:15+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ja"
-}
--->
 # LLMプロバイダーの選択と設定 🔑
 
 課題は、OpenAI、Azure、Hugging Faceなどのサポートされているサービスプロバイダーを通じて、1つ以上の大規模言語モデル（LLM）展開に対して動作するように設定することも**可能**です。これらは、適切な認証情報（APIキーまたはトークン）を使ってプログラム的にアクセスできる_ホストされたエンドポイント_（API）を提供します。このコースでは、以下のプロバイダーについて説明します：

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T05:51:23+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "hi"
-}
--->
 # योगदान
 
 यह प्रोजेक्ट योगदान और सुझावों का स्वागत करता है। अधिकांश योगदानों के लिए आपको एक Contributor License Agreement (CLA) से सहमत होना होगा, जिसमें आप यह घोषणा करते हैं कि आपके पास अपने योगदान के उपयोग के अधिकार हैं और आप हमें उन अधिकारों को प्रदान करते हैं। विवरण के लिए, कृपया <https://cla.microsoft.com> देखें।

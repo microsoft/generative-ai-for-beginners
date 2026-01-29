@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T17:20:19+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "ja"
-}
--->
 # Retrieval Augmented Generation (RAG) とベクトルデータベース
 
-[![Retrieval Augmented Generation (RAG) とベクトルデータベース](../../../../../translated_images/ja/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) とベクトルデータベース](../../../translated_images/ja/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 検索アプリケーションのレッスンでは、独自のデータを大規模言語モデル（LLM）に統合する方法を簡単に学びました。このレッスンでは、LLMアプリケーションにおけるデータのグラウンディングの概念、そのプロセスの仕組み、エンベディングとテキストの両方を含むデータの保存方法についてさらに詳しく掘り下げます。
 
@@ -53,7 +44,7 @@ LLMを搭載したチャットボットは、ユーザープロンプトを処�
 
 ### RAG（Retrieval Augmented Generation）の仕組み
 
-![RAGの仕組みを示す図](../../../../../translated_images/ja/how-rag-works.f5d0ff63942bd3a6.webp)
+![RAGの仕組みを示す図](../../../translated_images/ja/how-rag-works.f5d0ff63942bd3a6.webp)
 
 ノートからクイズを作成するチャットボットを展開するとします。この場合、ナレッジベースへの接続が必要になります。ここでRAGが役立ちます。RAGの動作は以下の通りです：
 
@@ -65,7 +56,7 @@ LLMを搭載したチャットボットは、ユーザープロンプトを処�
 
 - **強化生成（Augmented Generation）：** LLMが取得データを基に応答を強化します。これにより、応答は事前訓練データだけでなく、追加された文脈に基づく関連情報に基づいて生成されます。LLMはその後、ユーザーの質問に対して回答を返します。
 
-![RAGのアーキテクチャを示す図](../../../../../translated_images/ja/encoder-decode.f2658c25d0eadee2.webp)
+![RAGのアーキテクチャを示す図](../../../translated_images/ja/encoder-decode.f2658c25d0eadee2.webp)
 
 RAGのアーキテクチャは、エンコーダーとデコーダーの2つで構成されるトランスフォーマーを使用して実装されます。たとえば、ユーザーが質問すると、入力テキストは意味を捉えるベクトルに「エンコード」され、これが文書インデックスに「デコード」されてユーザークエリに基づく新しいテキストを生成します。LLMはエンコーダーデコーダーモデルを使用して出力を生成します。
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 チャンク化したテキストは様々なエンベディングモデルを使ってベクトル化できます。利用モデル例にはword2vec、OpenAIのada-002、Azure Computer Visionなどがあり、言語、コンテンツ種別（テキスト/画像/音声）、入力サイズおよび出力エンベディング長により選択します。
 
 OpenAIの`text-embedding-ada-002`モデルによる例：
-![catという単語のエンベディング](../../../../../translated_images/ja/cat.74cbd7946bc9ca38.webp)
+![catという単語のエンベディング](../../../translated_images/ja/cat.74cbd7946bc9ca38.webp)
 
 ## 検索とベクトル検索
 

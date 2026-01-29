@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:18:15+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ja"
-}
--->
-[![Open Source Models](../../../../../translated_images/ja/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ja/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLMのファインチューニング
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 内容に入る前に全体像を把握したいですか？このレッスンの学習の流れを示す図解ガイドをご覧ください。ファインチューニングの基本概念や動機の理解から、プロセスや実践のベストプラクティスまで説明しています。探求すべき魅力的なテーマですので、ぜひ自己学習のサポートとなる追加リンクを掲載した[リソースページ](./RESOURCES.md?WT.mc_id=academic-105485-koreyst)もご確認ください！
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ja/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ja/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## 言語モデルのファインチューニングとは？
 
