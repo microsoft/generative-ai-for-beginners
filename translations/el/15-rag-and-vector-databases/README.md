@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T17:55:07+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "el"
-}
--->
 # Retrieval Augmented Generation (RAG) και Βάσεις Δεδομένων Διανυσμάτων
 
-[![Retrieval Augmented Generation (RAG) και Βάσεις Δεδομένων Διανυσμάτων](../../../../../translated_images/el/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) και Βάσεις Δεδομένων Διανυσμάτων](../../../translated_images/el/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Στο μάθημα των εφαρμογών αναζήτησης, μάθαμε συνοπτικά πώς να ενσωματώνουμε τα δικά μας δεδομένα σε Μεγάλα Γλωσσικά Μοντέλα (LLMs). Σε αυτό το μάθημα, θα εμβαθύνουμε περαιτέρω στις έννοιες της θεμελίωσης των δεδομένων σας στην εφαρμογή LLM, τους μηχανισμούς της διαδικασίας και τις μεθόδους αποθήκευσης δεδομένων, συμπεριλαμβανομένων τόσο των embeddings όσο και του κειμένου.
 
@@ -53,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Πώς λειτουργούν τα RAG (Retrieval Augmented Generation)
 
-![drawing showing how RAGs work](../../../../../translated_images/el/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../translated_images/el/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Ας υποθέσουμε ότι θέλετε να αναπτύξετε ένα chatbot που να δημιουργεί κουίζ από τις σημειώσεις σας, θα χρειαστείτε μια σύνδεση με τη βάση γνώσης. Εκεί μπαίνει το RAG. Τα RAG λειτουργούν ως εξής:
 
@@ -65,7 +56,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **Ενισχυμένη Γενιά:** Το LLM βελτιώνει την απάντησή του βάσει των ανακτημένων δεδομένων. Αυτό επιτρέπει η απάντηση να βασίζεται όχι μόνο σε προεκπαιδευμένα δεδομένα αλλά και σε σχετικές πληροφορίες από το πρόσθετο πλαίσιο. Τα ανακτημένα δεδομένα χρησιμοποιούνται για να ενισχύσουν τις απαντήσεις του LLM. Στη συνέχεια, το LLM επιστρέφει μια απάντηση στην ερώτηση του χρήστη.
 
-![drawing showing how RAGs architecture](../../../../../translated_images/el/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../translated_images/el/encoder-decode.f2658c25d0eadee2.webp)
 
 Η αρχιτεκτονική των RAG υλοποιείται με χρήση μετασχηματιστών που αποτελούνται από δύο μέρη: έναν κωδικοποιητή (encoder) και έναν αποκωδικοποιητή (decoder). Για παράδειγμα, όταν ένας χρήστης υποβάλλει ερώτηση, το εισαγόμενο κείμενο "κωδικοποιείται" σε διανύσματα που συλλαμβάνουν το νόημα των λέξεων και τα διανύσματα "αποκωδικοποιούνται" στο ευρετήριο εγγράφων και παράγουν νέο κείμενο βασισμένο στην ερώτηση του χρήστη. Το LLM χρησιμοποιεί τόσο μοντέλο κωδικοποιητή-αποκωδικοποιητή για να δημιουργήσει την έξοδο.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Αφού κοπούν, μπορούμε να ενσωματώσουμε το κείμενό μας χρησιμοποιώντας διαφορετικά μοντέλα ενσωμάτωσης. Μερικά μοντέλα που μπορείτε να χρησιμοποιήσετε περιλαμβάνουν: word2vec, ada-002 από το OpenAI, Azure Computer Vision και πολλά άλλα. Η επιλογή μοντέλου εξαρτάται από τις γλώσσες που χρησιμοποιείτε, τον τύπο του περιεχομένου που κωδικοποιείται (κείμενο/εικόνες/ήχος), το μέγεθος της εισόδου που μπορεί να κωδικοποιήσει και το μήκος της εξόδου του embedding.
 
 Ένα παράδειγμα ενσωματωμένου κειμένου χρησιμοποιώντας το μοντέλο `text-embedding-ada-002` της OpenAI είναι:
-![an embedding of the word cat](../../../../../translated_images/el/cat.74cbd7946bc9ca38.webp)
+![an embedding of the word cat](../../../translated_images/el/cat.74cbd7946bc9ca38.webp)
 
 ## Ανάκτηση και Αναζήτηση Διανυσμάτων
 

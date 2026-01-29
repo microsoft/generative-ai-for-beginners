@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-17T18:38:31+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "th"
-}
--->
 # การสร้างแอปพลิเคชัน AI แบบ Low Code
 
 [![การสร้างแอปพลิเคชัน AI แบบ Low Code](../../../translated_images/th/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)

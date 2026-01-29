@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:10:15+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "th"
-}
--->
 # การเตรียมข้อมูลการถอดเสียง
 
 สคริปต์การเตรียมข้อมูลการถอดเสียงจะดาวน์โหลดคำบรรยายวิดีโอ YouTube และเตรียมข้อมูลเหล่านั้นเพื่อใช้งานร่วมกับตัวอย่าง Semantic Search ด้วย OpenAI Embeddings และ Functions

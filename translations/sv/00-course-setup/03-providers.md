@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:20:57+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "sv"
-}
--->
 # Välja & konfigurera en LLM-leverantör 🔑
 
 Uppgifter **kan** också ställas in för att fungera mot en eller flera Large Language Model (LLM)-distributioner via en stödd tjänsteleverantör som OpenAI, Azure eller Hugging Face. Dessa tillhandahåller en _hostad endpoint_ (API) som vi kan komma åt programmässigt med rätt autentiseringsuppgifter (API-nyckel eller token). I denna kurs diskuterar vi dessa leverantörer:

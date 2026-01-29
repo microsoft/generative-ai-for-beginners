@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:02:12+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "sv"
-}
--->
-[![Open Source Models](../../../../../translated_images/sv/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sv/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Finjustera din LLM
 
@@ -32,7 +23,7 @@ Redo? Låt oss sätta igång.
 
 Vill du få en övergripande bild av vad vi ska täcka innan vi dyker in? Titta på denna illustrerade guide som beskriver läranderesan för denna lektion – från att lära sig kärnbegrepp och motivation för finjustering till att förstå processen och bästa praxis för att utföra finjusteringsuppgiften. Detta är ett fascinerande ämne att utforska, så glöm inte att kolla in sidan [Resurser](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) för ytterligare länkar som stödjer din självstyrda inlärningsresa!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/sv/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/sv/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Vad är finjustering för språkmodeller?
 

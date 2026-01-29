@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:04:45+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "sv"
-}
--->
 # Retrieval Augmented Generation (RAG) och vektordatabaser
 
-[![Retrieval Augmented Generation (RAG) och Vektordatabaser](../../../../../translated_images/sv/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) och Vektordatabaser](../../../translated_images/sv/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 I lektionen om sökapplikationer lärde vi oss kort hur man integrerar egna data i Large Language Models (LLMs). I denna lektion ska vi fördjupa oss i koncepten för att förankra dina data i din LLM-applikation, hur processen fungerar och metoder för att lagra data, inklusive både embeddings och text.
 
@@ -53,7 +44,7 @@ En LLM-driven chatbot bearbetar användarfrågor för att generera svar. Den är
 
 ### Hur RAGs (Retrieval Augmented Generation) fungerar
 
-![ritning som visar hur RAGs fungerar](../../../../../translated_images/sv/how-rag-works.f5d0ff63942bd3a6.webp)
+![ritning som visar hur RAGs fungerar](../../../translated_images/sv/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Anta att du vill implementera en chatbot som skapar quiz från dina anteckningar, då behöver du en koppling till kunskapsbasen. Det är här RAG kommer in. RAGs fungerar enligt följande:
 
@@ -65,7 +56,7 @@ Anta att du vill implementera en chatbot som skapar quiz från dina anteckningar
 
 - **Augmented Generation:** LLM förbättrar sitt svar baserat på den hämtade datan. Detta tillåter det genererade svaret att inte bara baseras på förtränad data utan också på relevant information från den tillagda kontexten. Den hämtade datan används för att förstärka LLM:s svar. LLM returnerar därefter ett svar på användarens fråga.
 
-![ritning som visar hur RAGs arkitektur fungerar](../../../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.webp)
+![ritning som visar hur RAGs arkitektur fungerar](../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.webp)
 
 Arkitekturen för RAGs implementeras med transformers bestående av två delar: en encoder och en decoder. Till exempel, när en användare ställer en fråga, "kodas" inmatningstexten till vektorer som fångar ordens betydelse och vektorerna "avkodas" mot vårt dokumentindex och genererar ny text baserad på användarens fråga. LLM använder både en encoder-decoder-modell för att generera output.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 När den väl är uppdelad kan vi sedan bädda in vår text med olika embeddingmodeller. Några modeller du kan använda inkluderar: word2vec, ada-002 från OpenAI, Azure Computer Vision och många fler. Valet av modell beror på vilka språk du använder, typen av innehåll som kodas (text/bilder/ljud), storleken på input den kan koda och längden på embeddingoutput.
 
 Ett exempel på inbäddad text med OpenAIs `text-embedding-ada-002` modell är:
-![en embedding av ordet katt](../../../../../translated_images/sv/cat.74cbd7946bc9ca38.webp)
+![en embedding av ordet katt](../../../translated_images/sv/cat.74cbd7946bc9ca38.webp)
 
 ## Hämtning och vektorsökning
 
