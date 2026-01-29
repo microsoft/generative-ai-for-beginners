@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-12-19T20:45:53+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "kn"
-}
--->
 # ಟ್ರಾನ್ಸ್ಕ್ರಿಪ್ಷನ್ ಡೇಟಾ ತಯಾರಿ
 
 ಟ್ರಾನ್ಸ್ಕ್ರಿಪ್ಷನ್ ಡೇಟಾ ತಯಾರಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳು YouTube ವೀಡಿಯೊ ಟ್ರಾನ್ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ Semantic Search with OpenAI Embeddings and Functions ಮಾದರಿಗಾಗಿ ಬಳಸಲು ಸಿದ್ಧಪಡಿಸುತ್ತವೆ.

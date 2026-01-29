@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
-  "translation_date": "2025-12-19T18:24:28+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ml"
-}
--->
 # Microsoft ഓപ്പൺ സോഴ്‌സ് കോഡ് ഓഫ് കണ്ടക്റ്റ്
 
 ഈ പ്രോജക്ട് [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) സ്വീകരിച്ചിട്ടുണ്ട്.

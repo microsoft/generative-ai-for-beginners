@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-12-19T20:51:19+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "ml"
-}
--->
 # ന്യൂറൽ നെറ്റ്‌വർക്ക് ഫ്രെയിംവർക്കുകൾ
 
 നാം ഇതിനകം പഠിച്ചതുപോലെ, ന്യൂറൽ നെറ്റ്‌വർക്ക്‌കൾ കാര്യക്ഷമമായി പരിശീലിപ്പിക്കാൻ നമുക്ക് രണ്ട് കാര്യങ്ങൾ ചെയ്യേണ്ടതുണ്ട്:

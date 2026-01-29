@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T19:55:11+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "kn"
-}
--->
 # ವಾಪಸಿಗೆ ವೃದ್ಧಿ ಪೀಠಿಕೆ (RAG) ಮತ್ತು ವೆಕ್ಟರ್ ಡೇಟಾಬೇಸ್ಗಳು
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../../../translated_images/kn/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/kn/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 ಸರ್ಚ್ ಅಪ್ಲಿಕೇಶನ್ ಪಾಠದಲ್ಲಿ, ನಾವು ಸ್ವಲ್ಪವಾಗಿ ನಿಮ್ಮ ಸ್ವಂತ ಡೇಟಾವನ್ನು لاين್ಜ್ ಲ್ಯಾಂಗುಯೇಜ್ ಮಾದರಿಗಳ (LLMs)ೊಂದಿಗೆ ಏಕೀಕರಿಸುವ ಬಗ್ಗೆ ಕಲಿತೆವು. ಈ ಪಾಠದಲ್ಲಿ, ನಾವು ನಿಮ್ಮ ಡೇಟಾವನ್ನು ನಿಮ್ಮ LLM ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ನೆಲೆಸಿಸುವಂತೆ ಮಾಡುವುದು, ಪ್ರಕ್ರಿಯೆಯ ಯಾಂತ್ರಿಕತೆ ಮತ್ತು ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವ ವಿಧಾನಗಳು, ಇನ್ನೆರಡೂ ಎಂಬೆಡ್ಡಿಂಗ್‌ಗಳು ಮತ್ತು ಪಠ್ಯ ಸಹಿತ, ಕುರಿತು ಹೆಚ್ಚಿನವಾಗಿ ಆಳವಾಗಿ ತಿಳುವಳಿಕೆ ಪಡೆಯಲಿದ್ದೇವೆ.
 
@@ -53,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAGs (Retrieval Augmented Generation) ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ
 
-![drawing showing how RAGs work](../../../../../translated_images/kn/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../translated_images/kn/how-rag-works.f5d0ff63942bd3a6.webp)
 
 ನೀವು ನಿಮ್ಮ ಟಿಪ್ಪಣಿಗಳಿಂದ ಪ್ರಶ್ನೋತ್ತರಗಳನ್ನು ರಚಿಸುವ ಚಾಟ್‌ಬೋಟ್ ಅನ್ನು ಹಾವಳಿ ಹತ್ತಿಸಲು ಬಯಸಿದರೆ, ನಿಮಗೆ ಜ್ಞಾನ ಆಧಾರದೊಂದಿಗೆ ಸಂಪರ್ಕ ಬೇಕಾಗುತ್ತದೆ. ಇದಕ್ಕೆ RAG ಪರಿಹಾರವಾಗಿ ಬರುತ್ತದೆ. RAGಗಳು ಹೀಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ:
 
@@ -65,7 +56,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **ವೃದ್ಧಿತ ತಯಾರಿ:** LLM ತನ್ನ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ವಾಪಸಿಯಾದ ಡೇಟಾ ಆಧರಿಸಿ ಉತ್ತಮಗೊಳಿಸುತ್ತದೆ. ಇದು ಪೂರ್ವ ತರಬೇತಿಯ ಡೇಟಾದ ಮೇಲೆಯೇ ಅಲ್ಲ, ಆದರೆ ಸೇರಿಸಲಾದ ಸಾಂದರ್ಭಿಕ ಮಾಹಿತಿಯುಳ್ಳ ಸಂಬಂಧಿತ ಮಾಹಿತಿಯ ಮೇಲೆಯೂ ಆಧಾರಿತವಾಗಿರುತ್ತದೆ. ವಾಪಸಾದ ಡೇಟಾ LLM ನ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ವೃದ್ಧಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ನಂತರ LLM, ಬಳಕೆದಾರನ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರ ನೀಡುತ್ತದೆ.
 
-![drawing showing how RAGs architecture](../../../../../translated_images/kn/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../translated_images/kn/encoder-decode.f2658c25d0eadee2.webp)
 
 RAGಗಳ ಆರ್ಕಿಟೆಕ್ಟರ್ ಅನ್ನು ಟ್ರಾನ್ಸ್‌ಫಾರ್ಮರ್‌ಗಳೊಂದಿಗೆ ಎರಡು ಭಾಗಗಳಲ್ಲಿ ಅನುಷ್ಠಾನಗೊಳಿಸಲಾಗುತ್ತದೆ: ಎನ್ಕೋಡರ್ ಮತ್ತು ಡಿಕೋಡರ್. ಉದಾಹರಣೆಗೆ, ಬಳಕೆದಾರನು ಪ್ರಶ್ನೆ ಕೇಳಿದಾಗ, ಪ್ರವೇಶ ಪಠ್ಯವನ್ನು 'ಎನ್ಕೋಡ್'ಮಾಡಿ ಪದಗಳ ಅರ್ಥವನ್ನು ಹಿಡಿದಿಡುವ ವೆಕ್ಟರ್‌ಗಳಾಗಿ ಪರಿವರ್ತಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಆ ವೆಕ್ಟರ್‌ಗಳನ್ನು ಡಿಕೋಡ್ ಮಾಡಿ ನಮ್ಮ ಡಾಕ್ಯುಮೆಂಟ್ ಸೂಚ್ಯಂಕಕ್ಕೆ ಅನ್ವಯಿಸಿ ಬಳಕೆದಾರ ಪ್ರಶ್ನೆಯ ಆಧಾರದಲ್ಲಿ ಹೊಸ ಪಠ್ಯವನ್ನು ರಚಿಸುತ್ತದೆ. LLM, ಔಟ್‌ಪುಟ್ ತಯಾರಿಸಲು ಎನ್ಕೋಡರ್-ಡಿಕೋಡರ್ ಮಾದರಿಯನ್ನು ಬಳಸುತ್ತದೆ.
 
@@ -129,7 +120,7 @@ def split_text(text, max_length, min_length):
 
 OpenAIನ `text-embedding-ada-002` ಮಾದರಿಯನ್ನು ಬಳಸಿ ಮಾಡಲಾದ ಒಂದು ಉದಾಹರಣೆ:
 
-![an embedding of the word cat](../../../../../translated_images/kn/cat.74cbd7946bc9ca38.webp)
+![an embedding of the word cat](../../../translated_images/kn/cat.74cbd7946bc9ca38.webp)
 
 ## ವಾಪಸಿ ಮತ್ತು ವೆಕ್ಟರ್ ಹುಡುಕಾಟ
 

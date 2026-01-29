@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0135e6c271f3ece8699050d4debbce88",
-  "translation_date": "2025-12-19T18:41:50+00:00",
-  "source_file": "04-prompt-engineering-fundamentals/README.md",
-  "language_code": "te"
-}
--->
 # ప్రాంప్ట్ ఇంజనీరింగ్ మౌలికాలు
 
 [![Prompt Engineering Fundamentals](../../../translated_images/te/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)

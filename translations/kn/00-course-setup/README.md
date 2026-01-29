@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-12-19T19:56:20+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "kn"
-}
--->
 # ಈ ಕೋರ್ಸ್‌ನೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸುವುದು
 
 ನೀವು ಈ ಕೋರ್ಸ್ ಪ್ರಾರಂಭಿಸಲು ಮತ್ತು ಜನರೇಟಿವ್ AI ಬಳಸಿ ನಿರ್ಮಿಸಲು ಪ್ರೇರಣೆಯಾಗುವುದನ್ನು ನೋಡಲು ನಾವು ತುಂಬಾ ಉತ್ಸಾಹಿತರಾಗಿದ್ದೇವೆ!

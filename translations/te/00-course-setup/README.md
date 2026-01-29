@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-12-19T19:54:39+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "te"
-}
--->
 # ఈ కోర్సుతో ప్రారంభించండి
 
 మీరు ఈ కోర్సును ప్రారంభించి, జనరేటివ్ AI తో మీరు ఏం సృష్టించబోతున్నారో చూడటానికి మేము చాలా ఉత్సాహంగా ఉన్నాము!

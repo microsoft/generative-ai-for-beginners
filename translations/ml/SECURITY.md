@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-12-19T18:25:02+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "ml"
-}
--->
 ## സുരക്ഷ
 
 മൈക്രോസോഫ്റ്റ് നമ്മുടെ സോഫ്റ്റ്‌വെയർ ഉൽപ്പന്നങ്ങളും സേവനങ്ങളും ഉൾപ്പെടെയുള്ള എല്ലാ സോഴ്‌സ് കോഡ് റിപോസിറ്ററികളും ഗിറ്റ്ഹബ് സംഘടനകളിലൂടെ നിയന്ത്രിക്കുന്നതും ഉൾപ്പെടെ, സുരക്ഷയെ ഗൗരവത്തോടെ കാണുന്നു. ഇതിൽ [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), കൂടാതെ [നമ്മുടെ ഗിറ്റ്ഹബ് സംഘടനകൾ](https://opensource.microsoft.com/) ഉൾപ്പെടുന്നു.
