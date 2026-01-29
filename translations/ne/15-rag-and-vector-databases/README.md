@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T17:39:14+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "ne"
-}
--->
 # Retrieval Augmented Generation (RAG) तथा भेक्टर डाटाबेसहरू
 
-[![Retrieval Augmented Generation (RAG) तथा भेक्टर डाटाबेसहरू](../../../../../translated_images/ne/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) तथा भेक्टर डाटाबेसहरू](../../../translated_images/ne/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 सर्च एप्लिकेसन्स पाठमा, हामीले संक्षेपमा सिक्यौं कि कसरी आफ्नै डाटा लाई ठूलो भाषा मोडेलहरू (LLMs) मा एकीकृत गर्ने। यस पाठमा, हामी हाम्रो LLM एप्लिकेशनमा डाटा ग्राउन्डिङ गर्ने अवधारणाहरूमा अझ गहिरो जान्नेछौं, प्रक्रिया कसरी काम गर्छ र डाटा भण्डारण गर्ने विधिहरू जुन एम्बेडिङ्स र टेक्स्ट दुबैलाई समावेश गर्छन्।
 
@@ -53,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### कसरी RAGs (Retrieval Augmented Generation) काम गर्छ
 
-![RAGs कसरी काम गर्छ भनेर देखाउने चित्र](../../../../../translated_images/ne/how-rag-works.f5d0ff63942bd3a6.webp)
+![RAGs कसरी काम गर्छ भनेर देखाउने चित्र](../../../translated_images/ne/how-rag-works.f5d0ff63942bd3a6.webp)
 
 मानौं तपाईंले नोटहरूबाट क्विजहरू सिर्जना गर्ने च्याटबोट तैनाथ गर्न चाहनुहुन्छ, तपाईंलाई ज्ञान आधारसँग कनेक्शन चाहिन्छ। यहीं RAG सहयोगी हुन्छ। RAGs यसरी काम गर्छन्:
 
@@ -65,7 +56,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **वृद्धि गरिएको उत्पादन:** LLM ले प्राप्त डाटाको आधारमा आफ्नो प्रतिक्रिया सुधार गर्दछ। यसले प्रतिक्रियालाई मात्र आंशिक रूपमा पूर्व-प्रशिक्षित डाटामा मात्र निर्भर नभई थप सन्दर्भबाट प्राप्त महत्त्वपूर्ण जानकारीमा आधारित बन्न अनुमति दिन्छ। प्राप्त जानकारीले LLM को उत्तरलाई वृद्धि गर्दछ। त्यसपछि LLM प्रयोगकर्ताको प्रश्नको जवाफ फर्काउँछ।
 
-![RAGs संरचना देखाउने चित्र](../../../../../translated_images/ne/encoder-decode.f2658c25d0eadee2.webp)
+![RAGs संरचना देखाउने चित्र](../../../translated_images/ne/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG को संरचना दुई भागहरू मिलेर बनेको ट्रान्सफर्मरमा आधारित हुन्छ: एक एन्कोडर र एक डिकोडर। उदाहरणका लागि, प्रयोगकर्ताले प्रश्न सोध्दा, इनपुट टेक्स्टलाई शब्दहरूको अर्थ समेट्दै भेक्टरहरूमा 'एनकोड' गरिन्छ र भेक्टरहरू हाम्रो दस्तावेज इन्डेक्समा 'डिकोड' भएर नयाँ टेक्स्ट उत्पन्न गर्छ जुन प्रयोगकर्ताको प्रश्नमा आधारित हुन्छ। LLM ले आउटपुट उत्पन्न गर्न दुवै एन्कोडर-डिकोडर मोडल प्रयोग गर्छ।
 
@@ -129,7 +120,7 @@ def split_text(text, max_length, min_length):
 
 OpenAI को `text-embedding-ada-002` मोडल प्रयोग गरेर एम्बेड गरिएको टेक्स्टको उदाहरण:
 
-![cat शब्दको एम्बेडिङ](../../../../../translated_images/ne/cat.74cbd7946bc9ca38.webp)
+![cat शब्दको एम्बेडिङ](../../../translated_images/ne/cat.74cbd7946bc9ca38.webp)
 
 ## पुन: प्राप्ति र भेक्टर खोज
 

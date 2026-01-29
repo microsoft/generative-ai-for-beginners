@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T00:30:22+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "ne"
-}
--->
 # यो कोर्स सुरु गर्दै
 
 हामी तपाईंलाई यो कोर्स सुरु गर्न र Generative AI सँग के निर्माण गर्न प्रेरित हुनुहुन्छ भनेर हेर्नको लागि धेरै उत्साहित छौं!

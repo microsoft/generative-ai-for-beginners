@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0135e6c271f3ece8699050d4debbce88",
-  "translation_date": "2025-10-17T14:58:10+00:00",
-  "source_file": "04-prompt-engineering-fundamentals/README.md",
-  "language_code": "bn"
-}
--->
 # প্রম্পট ইঞ্জিনিয়ারিংয়ের মৌলিক বিষয়
 
 [![প্রম্পট ইঞ্জিনিয়ারিংয়ের মৌলিক বিষয়](../../../translated_images/bn/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-17T14:54:30+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "bn"
-}
--->
 # লো কোড AI অ্যাপ্লিকেশন তৈরি করা
 
 [![লো কোড AI অ্যাপ্লিকেশন তৈরি করা](../../../translated_images/bn/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)

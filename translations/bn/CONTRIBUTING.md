@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T05:51:47+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "bn"
-}
--->
 # Contributing
 
 এই প্রকল্পে অবদান এবং পরামর্শ স্বাগত। বেশিরভাগ অবদানের জন্য আপনাকে একটি Contributor License Agreement (CLA) এ সম্মত হতে হবে, যা ঘোষণা করে যে আপনার অবদান ব্যবহারের জন্য আমাদের কাছে যথাযথ অধিকার রয়েছে এবং আপনি তা প্রদান করছেন। বিস্তারিত জানতে ভিজিট করুন <https://cla.microsoft.com>।

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T00:29:01+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "ne"
-}
--->
 # उन्नत प्रम्प्टहरू सिर्जना गर्दै
 
 [![उन्नत प्रम्प्टहरू सिर्जना गर्दै](../../../translated_images/ne/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
