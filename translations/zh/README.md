@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "zh"
 }
 -->
-![生成式人工智能初学者](../../translated_images/zh/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
+![生成式人工智能初学者](../../translated_images/zh-CN/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21节课程教你构建生成式人工智能应用所需掌握的一切知识
 

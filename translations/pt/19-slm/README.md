@@ -33,7 +33,7 @@ Os SLMs são treinados com grandes quantidades de dados textuais. Durante o trei
 
 O desenvolvimento dos SLMs está alinhado com a crescente necessidade de modelos que possam ser implementados em ambientes com recursos limitados, como dispositivos móveis ou plataformas de edge computing, onde os LLMs completos podem ser impraticáveis devido às suas elevadas exigências de recursos. Ao focar na eficiência, os SLMs equilibram desempenho com acessibilidade, permitindo uma aplicação mais ampla em diversos domínios.
 
-![slm](../../../translated_images/pt/slm.4058842744d0444a.webp)
+![slm](../../../translated_images/pt-PT/slm.4058842744d0444a.webp)
 
 ## Objetivos de Aprendizagem  
 
@@ -135,7 +135,7 @@ Podemos usar o modelo da Família Phi-3/3.5 baseado em diferentes cenários. Ao 
 
 Queremos usar o Phi-3/3.5 em diferentes cenários. A seguir, vamos usar o Phi-3/3.5 baseado em diferentes cenários.
 
-![phi3](../../../translated_images/pt/phi3.655208c3186ae381.webp)
+![phi3](../../../translated_images/pt-PT/phi3.655208c3186ae381.webp)
 
 ### Diferença na inferência com API na Cloud  
 
@@ -145,9 +145,9 @@ Os Modelos GitHub são a forma mais direta. Pode aceder rapidamente ao modelo Ph
 
 - Demo: Comparação dos efeitos do Phi-3-mini e Phi-3.5-mini em cenários em chinês
 
-![phi3](../../../translated_images/pt/gh1.126c6139713b622b.webp)
+![phi3](../../../translated_images/pt-PT/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/pt/gh2.07d7985af66f178d.webp)
+![phi35](../../../translated_images/pt-PT/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 

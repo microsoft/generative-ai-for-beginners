@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "zh"
 }
 -->
-[![开源模型](../../../../../translated_images/zh/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![开源模型](../../../../../translated_images/zh-CN/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # 微调您的大型语言模型
 
@@ -32,7 +32,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 想在深入学习之前了解我们将要覆盖的整体内容吗？请查看此图解指南，介绍本课程的学习旅程——从学习微调的核心概念和动机，到理解微调过程和最佳实践。这是一个引人入胜的探索主题，别忘了查看[资源](./RESOURCES.md?WT.mc_id=academic-105485-koreyst)页面，获取支持您自主学习旅程的更多链接！
 
-![微调语言模型图解指南](../../../../../translated_images/zh/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![微调语言模型图解指南](../../../../../translated_images/zh-CN/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## 什么是语言模型的微调？
 

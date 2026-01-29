@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T22:31:13+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "en"
-}
--->
 # Getting Started with this course
 
 We are thrilled for you to begin this course and discover what you can create with Generative AI!

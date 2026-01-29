@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:11:30+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "en"
-}
--->
 # Introduction to Small Language Models for Generative AI for Beginners  
 Generative AI is an exciting area of artificial intelligence focused on building systems that can create new content. This content can include text, images, music, or even entire virtual worlds. One of the most thrilling uses of generative AI is in language models.
 

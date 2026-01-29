@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T12:33:02+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "fr"
-}
--->
 # Choisir et configurer un fournisseur LLM 🔑
 
 Les devoirs **peuvent** également être configurés pour fonctionner avec un ou plusieurs déploiements de grands modèles de langage (LLM) via un fournisseur de services pris en charge comme OpenAI, Azure ou Hugging Face. Ceux-ci fournissent un _point de terminaison hébergé_ (API) auquel nous pouvons accéder de manière programmatique avec les bonnes informations d'identification (clé API ou jeton). Dans ce cours, nous abordons ces fournisseurs :

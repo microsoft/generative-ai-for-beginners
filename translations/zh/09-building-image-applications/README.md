@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 构建图像生成应用程序
 
-[![构建图像生成应用程序](../../../translated_images/zh/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![构建图像生成应用程序](../../../translated_images/zh-CN/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 大型语言模型（LLM）的功能不仅限于文本生成，还可以通过文本描述生成图像。图像作为一种模态在许多领域都非常有用，例如医疗技术、建筑、旅游、游戏开发等。在本章中，我们将探讨两个最流行的图像生成模型：DALL-E 和 Midjourney。
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 例如，如果 Edu4All 的学生在课堂上学习纪念碑，他们可以生成以下内容：
 
-![Edu4All 初创公司，纪念碑课堂，埃菲尔铁塔](../../../translated_images/zh/startup.94d6b79cc4bb3f5a.webp)
+![Edu4All 初创公司，纪念碑课堂，埃菲尔铁塔](../../../translated_images/zh-CN/startup.94d6b79cc4bb3f5a.webp)
 
 使用以下提示：
 
@@ -272,9 +272,9 @@ _图片来源：维基百科，由 Midjourney 生成_
   基础图像仅包含带泳池的休息室，但最终图像会有一只火烈鸟：
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/zh/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/zh/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/zh/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-CN/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-CN/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-CN/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **创建变体**。这个想法是您可以选择一个现有图像并要求创建变体。要创建变体，您需要提供一个图像和一个文本提示，并使用如下代码：
@@ -298,11 +298,11 @@ _图片来源：维基百科，由 Midjourney 生成_
 
 > 提示： “兔子骑马，手拿棒棒糖，站在长满水仙花的雾蒙蒙的草地上”
 
-![兔子骑马手拿棒棒糖，版本1](../../../translated_images/zh/v1-generated-image.a295cfcffa3c13c2.webp)
+![兔子骑马手拿棒棒糖，版本1](../../../translated_images/zh-CN/v1-generated-image.a295cfcffa3c13c2.webp)
 
 现在我们再次运行相同的提示，看看是否会生成不同的图像：
 
-![兔子骑马生成的图像](../../../translated_images/zh/v2-generated-image.33f55a3714efe61d.webp)
+![兔子骑马生成的图像](../../../translated_images/zh-CN/v2-generated-image.33f55a3714efe61d.webp)
 
 如您所见，图像相似但不完全相同。现在我们尝试将温度值更改为 0.1，看看会发生什么：
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 现在运行此代码，您将得到以下两张图像：
 
-- ![温度为0，版本1](../../../translated_images/zh/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![温度为0，版本2](../../../translated_images/zh/v2-temp-generated-image.871d0c920dbfb0f1.webp)
+- ![温度为0，版本1](../../../translated_images/zh-CN/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![温度为0，版本2](../../../translated_images/zh-CN/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 在这里，您可以清楚地看到两张图像更加相似。
 

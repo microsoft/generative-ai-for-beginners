@@ -32,7 +32,7 @@ SLM 透過大量文本數據進行訓練。在訓練過程中，模型學習語�
 
 SLM 的發展符合在資源受限環境（如行動裝置或邊緣運算平台）部署模型的需求，因為大型模型在這些場景中往往因資源消耗過大而不切實際。SLM 著重效率，平衡性能與可用性，促進在各領域的廣泛應用。
 
-![slm](../../../translated_images/hk/slm.4058842744d0444a.webp)
+![slm](../../../translated_images/zh-HK/slm.4058842744d0444a.webp)
 
 ## 學習目標  
 本課程旨在介紹 SLM 的基本知識，並結合 Microsoft Phi-3，學習文字內容、視覺及 MoE 等不同應用場景。
@@ -114,7 +114,7 @@ Phi-3.5-MoE 僅有 6.6B 活躍參數，卻能達到與更大模型相當的推�
 ## 如何使用 Phi-3/3.5 系列模型  
 我們希望在不同場景下使用 Phi-3/3.5。接下來將介紹基於不同場景的 Phi-3/3.5 使用方式。
 
-![phi3](../../../translated_images/hk/phi3.655208c3186ae381.webp)
+![phi3](../../../translated_images/zh-HK/phi3.655208c3186ae381.webp)
 
 ### 推理差異與雲端 API  
 
@@ -123,9 +123,9 @@ GitHub Models 是最直接的方式。你可以透過 GitHub Models 快速存取
 
 - Demo：Phi-3-mini 與 Phi-3.5-mini 在中文場景的效果比較
 
-![phi3](../../../translated_images/hk/gh1.126c6139713b622b.webp)
+![phi3](../../../translated_images/zh-HK/gh1.126c6139713b622b.webp)
 
-![phi35](../../../translated_images/hk/gh2.07d7985af66f178d.webp)
+![phi35](../../../translated_images/zh-HK/gh2.07d7985af66f178d.webp)
 
 **Azure AI Studio**  
 若想使用視覺及 MoE 模型，可透過 Azure AI Studio 完成呼叫。若有興趣，可參考 Phi-3 Cookbook，學習如何透過 Azure AI Studio 調用 Phi-3/3.5 Instruct、Vision、MoE [點此連結](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)

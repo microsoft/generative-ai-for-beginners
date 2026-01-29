@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Geração Aumentada por Recuperação (RAG) e Bases de Dados Vetoriais
 
-[![Geração Aumentada por Recuperação (RAG) e Bases de Dados Vetoriais](../../../../../translated_images/pt/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Geração Aumentada por Recuperação (RAG) e Bases de Dados Vetoriais](../../../../../translated_images/pt-PT/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Na lição de aplicações de pesquisa, aprendemos brevemente como integrar os seus próprios dados em Grandes Modelos de Linguagem (LLMs). Nesta lição, vamos aprofundar os conceitos de fundamentar os seus dados na sua aplicação LLM, os mecanismos do processo e os métodos para armazenar dados, incluindo tanto embeddings como texto.
 
@@ -53,7 +53,7 @@ Um chatbot alimentado por um LLM processa os prompts do utilizador para gerar re
 
 ### Como funcionam os RAG (Geração Aumentada por Recuperação)
 
-![desenho a mostrar como funcionam os RAGs](../../../../../translated_images/pt/how-rag-works.f5d0ff63942bd3a6.webp)
+![desenho a mostrar como funcionam os RAGs](../../../../../translated_images/pt-PT/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Suponha que quer implementar um chatbot que cria quizzes a partir das suas notas, irá precisar de uma ligação à base de conhecimento. É aqui que o RAG entra em ação. Os RAGs operam da seguinte forma:
 
@@ -65,7 +65,7 @@ Suponha que quer implementar um chatbot que cria quizzes a partir das suas notas
 
 - **Geração Aumentada:** o LLM melhora a sua resposta com base nos dados recuperados. Isto permite que a resposta gerada não seja apenas baseada em dados pré-treinados, mas também em informação relevante do contexto adicionado. Os dados recuperados são usados para aumentar as respostas do LLM. O LLM retorna então uma resposta à pergunta do utilizador.
 
-![desenho a mostrar como é a arquitetura dos RAGs](../../../../../translated_images/pt/encoder-decode.f2658c25d0eadee2.webp)
+![desenho a mostrar como é a arquitetura dos RAGs](../../../../../translated_images/pt-PT/encoder-decode.f2658c25d0eadee2.webp)
 
 A arquitetura para os RAGs é implementada usando transformers consistindo de duas partes: um codificador (encoder) e um descodificador (decoder). Por exemplo, quando um utilizador faz uma pergunta, o texto de entrada é ‘codificado’ em vetores que capturam o significado das palavras, e os vetores são ‘descodificados’ no nosso índice de documentos e geram novo texto baseado na consulta do utilizador. O LLM usa um modelo codificador-descodificador para gerar a saída.
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 Uma vez divididos, podemos depois incorporar o nosso texto usando diferentes modelos de embedding. Alguns modelos que pode usar incluem: word2vec, ada-002 da OpenAI, Azure Computer Vision e muitos mais. A seleção do modelo depende das línguas que está a usar, o tipo de conteúdo codificado (texto/imagens/áudio), o tamanho da entrada que pode codificar e o comprimento da saída de embedding.
 
 Um exemplo de texto embutido usando o modelo `text-embedding-ada-002` da OpenAI é:
-![um embedding da palavra gato](../../../../../translated_images/pt/cat.74cbd7946bc9ca38.webp)
+![um embedding da palavra gato](../../../../../translated_images/pt-PT/cat.74cbd7946bc9ca38.webp)
 
 ## Recuperação e Pesquisa Vetorial
 

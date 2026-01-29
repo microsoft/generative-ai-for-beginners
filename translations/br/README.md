@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "br"
 }
 -->
-![Generative AI For Beginners](../../translated_images/br/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
+![Generative AI For Beginners](../../translated_images/pt-BR/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
 ### 21 Lições que ensinam tudo o que você precisa saber para começar a construir aplicações de IA Generativa
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-  "translation_date": "2025-10-17T22:37:30+00:00",
-  "source_file": "08-building-search-applications/README.md",
-  "language_code": "fr"
-}
--->
 # Construire des applications de recherche
 
 [![Introduction à l'IA générative et aux grands modèles de langage](../../../translated_images/fr/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)

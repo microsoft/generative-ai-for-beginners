@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 检索增强生成 (RAG) 和向量数据库
 
-[![检索增强生成 (RAG) 和向量数据库](../../../../../translated_images/zh/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![检索增强生成 (RAG) 和向量数据库](../../../../../translated_images/zh-CN/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 在搜索应用课程中，我们简要学习了如何将自己的数据整合到大型语言模型（LLM）中。在本课程中，我们将深入探讨在LLM应用中绑定数据的概念、该过程的机制以及存储数据的方法，包括向量嵌入和文本。
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAG（检索增强生成）如何工作
 
-![说明RAG工作方式的图](../../../../../translated_images/zh/how-rag-works.f5d0ff63942bd3a6.webp)
+![说明RAG工作方式的图](../../../../../translated_images/zh-CN/how-rag-works.f5d0ff63942bd3a6.webp)
 
 假设您想部署一个能从您的笔记中创建测验的聊天机器人，您将需要连接到知识库。这时RAG就派上用场了。RAG的运作流程如下：
 
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **增强生成：** LLM根据检索到的数据增强其回答。这使得生成的答复不仅基于预训练数据，还包括来自附加上下文的相关信息。检索到的数据用于扩展LLM的响应。随后LLM返回用户问题的答案。
 
-![显示RAG架构的图](../../../../../translated_images/zh/encoder-decode.f2658c25d0eadee2.webp)
+![显示RAG架构的图](../../../../../translated_images/zh-CN/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG的架构采用transformers实现，由编码器和解码器两部分组成。例如，当用户提出问题时，输入文本被“编码”为捕捉单词含义的向量，这些向量被“解码”到我们的文档索引，并基于用户查询生成新文本。LLM使用编码器-解码器模型来生成输出。
 
@@ -130,7 +130,7 @@ def split_text(text, max_length, min_length):
 分块完成后，我们可以使用不同的嵌入模型对文本进行嵌入。一些可用模型包括word2vec、OpenAI的ada-002、Azure计算机视觉等。选择模型取决于您使用的语言、编码内容的类型（文本/图像/音频）、输入大小限制和嵌入输出长度。
 
 以下是使用OpenAI的`text-embedding-ada-002`模型嵌入的“cat”一词示例：
-![单词 cat 的嵌入图](../../../../../translated_images/zh/cat.74cbd7946bc9ca38.webp)
+![单词 cat 的嵌入图](../../../../../translated_images/zh-CN/cat.74cbd7946bc9ca38.webp)
 
 ## 检索和向量搜索
 

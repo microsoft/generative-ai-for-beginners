@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "tw"
 }
 -->
-[![開源模型](../../../translated_images/tw/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![開源模型](../../../translated_images/zh-TW/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## 介紹
 
@@ -33,7 +33,7 @@ AI代理是生成式AI領域中非常令人興奮的一部分。隨著這種興�
 
 AI代理允許大型語言模型（LLMs）通過提供**狀態**和**工具**來執行任務。
 
-![代理模型](../../../translated_images/tw/what-agent.21f2893bdfd01e6a.webp)
+![代理模型](../../../translated_images/zh-TW/what-agent.21f2893bdfd01e6a.webp)
 
 讓我們定義這些術語：
 
@@ -53,7 +53,7 @@ AI代理允許大型語言模型（LLMs）通過提供**狀態**和**工具**來
 
 `AgentExecutor`還存儲聊天記錄，以提供聊天的上下文。
 
-![Langchain代理](../../../translated_images/tw/langchain-agents.edcc55b5d5c43716.webp)
+![Langchain代理](../../../translated_images/zh-TW/langchain-agents.edcc55b5d5c43716.webp)
 
 LangChain提供了一個[工具目錄](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)，可以導入到您的應用程式中，讓LLM能夠使用這些工具。這些工具由社群和LangChain團隊製作。
 
@@ -85,7 +85,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 以下是過程的示例：
 
-![AutoGen](../../../translated_images/tw/autogen.dee9a25a45fde584.webp)
+![AutoGen](../../../translated_images/zh-TW/autogen.dee9a25a45fde584.webp)
 
 #### 使用系統消息定義LLM
 
@@ -129,7 +129,7 @@ chatbot (to user_proxy):
 
 為了完成任務，`Planner`可以使用一組稱為`Plugins`的工具。這些工具可以是Python類或通用代碼解釋器。這些插件以嵌入的形式存儲，讓LLM能夠更好地搜索正確的插件。
 
-![Taskweaver](../../../translated_images/tw/taskweaver.da8559999267715a.webp)
+![Taskweaver](../../../translated_images/zh-TW/taskweaver.da8559999267715a.webp)
 
 以下是一個處理異常檢測的插件示例：
 
@@ -143,7 +143,7 @@ class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_
 
 最後我們要探討的代理框架是[JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)。JARVIS的獨特之處在於它使用LLM來管理對話的`狀態`，而`工具`則是其他AI模型。每個AI模型都是專門的模型，用於執行某些任務，例如物體檢測、轉錄或圖像描述。
 
-![JARVIS](../../../translated_images/tw/jarvis.762ddbadbd1a3a33.webp)
+![JARVIS](../../../translated_images/zh-TW/jarvis.762ddbadbd1a3a33.webp)
 
 LLM作為通用模型，接收使用者的請求並識別完成任務所需的具體任務及任何參數/數據。
 

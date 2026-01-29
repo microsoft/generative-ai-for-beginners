@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Design de UX para Aplicações de IA
 
-[![Design de UX para Aplicações de IA](../../../translated_images/pt/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Design de UX para Aplicações de IA](../../../translated_images/pt-PT/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Clique na imagem acima para assistir ao vídeo desta lição)_
 
@@ -58,7 +58,7 @@ Ser acessível significa estender a experiência do utilizador a utilizadores co
 
 Ser agradável significa que a aplicação é prazerosa de usar. Uma experiência do utilizador atraente pode ter um impacto positivo no utilizador, incentivando-o a voltar à aplicação e aumentando a receita do negócio.
 
-![imagem ilustrando considerações de UX em IA](../../../translated_images/pt/uxinai.d5b4ed690f5cefff.webp)
+![imagem ilustrando considerações de UX em IA](../../../translated_images/pt-PT/uxinai.d5b4ed690f5cefff.webp)
 
 Nem todos os desafios podem ser resolvidos com IA. A IA entra em cena para complementar a experiência do utilizador, seja automatizando tarefas manuais ou personalizando experiências.
 
@@ -72,25 +72,25 @@ Duas formas de garantir que a confiança está no centro do design são a explic
 
 Quando a IA ajuda a informar decisões, como transmitir conhecimento às gerações futuras, é fundamental que professores e pais compreendam como as decisões da IA são tomadas. Isso é explicabilidade - entender como as aplicações de IA tomam decisões. Projetar para a explicabilidade inclui adicionar detalhes que destacam como a IA chegou ao resultado. O público deve estar ciente de que o resultado é gerado pela IA e não por um humano. Por exemplo, em vez de dizer "Comece a conversar com o seu tutor agora", diga "Use o tutor de IA que se adapta às suas necessidades e ajuda-o a aprender ao seu ritmo."
 
-![uma página inicial de aplicação com ilustração clara de explicabilidade em aplicações de IA](../../../translated_images/pt/explanability-in-ai.134426a96b498fbf.webp)
+![uma página inicial de aplicação com ilustração clara de explicabilidade em aplicações de IA](../../../translated_images/pt-PT/explanability-in-ai.134426a96b498fbf.webp)
 
 Outro exemplo é como a IA utiliza dados do utilizador e dados pessoais. Por exemplo, um utilizador com a persona de estudante pode ter limitações com base na sua persona. A IA pode não ser capaz de revelar respostas às perguntas, mas pode ajudar a orientar o utilizador a pensar em como pode resolver um problema.
 
-![IA respondendo a perguntas com base na persona](../../../translated_images/pt/solving-questions.b7dea1604de0cbd2.webp)
+![IA respondendo a perguntas com base na persona](../../../translated_images/pt-PT/solving-questions.b7dea1604de0cbd2.webp)
 
 Uma última parte importante da explicabilidade é a simplificação das explicações. Estudantes e professores podem não ser especialistas em IA, portanto, as explicações sobre o que a aplicação pode ou não fazer devem ser simplificadas e fáceis de entender.
 
-![explicações simplificadas sobre as capacidades da IA](../../../translated_images/pt/simplified-explanations.4679508a406c3621.webp)
+![explicações simplificadas sobre as capacidades da IA](../../../translated_images/pt-PT/simplified-explanations.4679508a406c3621.webp)
 
 ### Controlo
 
 A IA generativa cria uma colaboração entre a IA e o utilizador, onde, por exemplo, um utilizador pode modificar os prompts para obter resultados diferentes. Além disso, uma vez que um resultado é gerado, os utilizadores devem ser capazes de modificar os resultados, dando-lhes uma sensação de controlo. Por exemplo, ao usar o Bing, pode ajustar o seu prompt com base no formato, tom e comprimento. Além disso, pode fazer alterações ao seu resultado e modificá-lo conforme mostrado abaixo:
 
-![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/pt/bing1.293ae8527dbe2789.webp)
+![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/pt-PT/bing1.293ae8527dbe2789.webp)
 
 Outra funcionalidade no Bing que permite ao utilizador ter controlo sobre a aplicação é a capacidade de optar por participar ou não nos dados que a IA utiliza. Para uma aplicação escolar, um aluno pode querer usar as suas notas, bem como os recursos do professor como material de revisão.
 
-![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/pt/bing2.309f4845528a88c2.webp)
+![Resultados de pesquisa no Bing com opções para modificar o prompt e o resultado](../../../translated_images/pt-PT/bing2.309f4845528a88c2.webp)
 
 > Ao projetar aplicações de IA, a intencionalidade é fundamental para garantir que os utilizadores não confiem excessivamente, criando expectativas irrealistas sobre as suas capacidades. Uma forma de fazer isso é criar fricção entre os prompts e os resultados. Lembrando o utilizador de que esta é uma IA e não um ser humano.
 
@@ -102,7 +102,7 @@ As aplicações de IA devem ser projetadas para receber e fornecer feedback. Iss
 
 Outra forma de lidar com isso é comunicar claramente as capacidades e limitações do sistema. Quando um utilizador comete um erro ao solicitar algo além das capacidades da IA, também deve haver uma forma de lidar com isso, como mostrado abaixo.
 
-![Dar feedback e lidar com erros](../../../translated_images/pt/feedback-loops.7955c134429a9466.webp)
+![Dar feedback e lidar com erros](../../../translated_images/pt-PT/feedback-loops.7955c134429a9466.webp)
 
 Erros de sistema são comuns em aplicações onde o utilizador pode precisar de assistência com informações fora do alcance da IA ou a aplicação pode ter um limite de quantas perguntas/assuntos um utilizador pode gerar resumos. Por exemplo, uma aplicação de IA treinada com dados sobre assuntos limitados, como História e Matemática, pode não ser capaz de lidar com perguntas sobre Geografia. Para mitigar isso, o sistema de IA pode dar uma resposta como: "Desculpe, o nosso produto foi treinado com dados nos seguintes assuntos....., não consigo responder à pergunta que fez."
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Criando Prompts Avançados
 
-[![Criando Prompts Avançados](../../../translated_images/br/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Criando Prompts Avançados](../../../translated_images/pt-BR/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Vamos recapitular alguns aprendizados do capítulo anterior:
 

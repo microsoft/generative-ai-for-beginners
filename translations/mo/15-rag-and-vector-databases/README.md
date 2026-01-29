@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 檢索增強生成（RAG）與向量資料庫
 
-[![檢索增強生成（RAG）與向量資料庫](../../../../../translated_images/mo/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![檢索增強生成（RAG）與向量資料庫](../../../../../translated_images/zh-MO/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 在搜尋應用課程中，我們簡要學習了如何將自己的資料整合到大型語言模型（LLMs）中。在本課程中，我們將進一步探討在LLM應用中基於資料的概念、流程機制及儲存資料的方法，包括內嵌向量和文字。
 
@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### RAG（檢索增強生成）的運作方式
 
-![說明RAG如何工作的圖](../../../../../translated_images/mo/how-rag-works.f5d0ff63942bd3a6.webp)
+![說明RAG如何工作的圖](../../../../../translated_images/zh-MO/how-rag-works.f5d0ff63942bd3a6.webp)
 
 假設你想部署一個根據筆記建立測驗的聊天機器人，你將需要連接知識庫。這時候RAG就派上用場。RAG的運作流程如下：
 
@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **增強生成：** LLM基於檢索到的資料強化其回答，讓產生的回應不僅基於預訓練資料，也結合相關的新增上下文。獲得的資料用於增強LLM回應，LLM接著回覆用戶問題。
 
-![說明RAG架構的圖](../../../../../translated_images/mo/encoder-decode.f2658c25d0eadee2.webp)
+![說明RAG架構的圖](../../../../../translated_images/zh-MO/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG的架構透過Transformers實現，包含兩部分：編碼器與解碼器。例如，當用戶提出問題時，輸入文字會被「編碼」成捕捉字詞意義的向量，向量再被「解碼」配對文檔索引並根據使用者查詢產生新文字。LLM使用編碼器－解碼器模型來生成輸出。
 
@@ -128,7 +128,7 @@ def split_text(text, max_length, min_length):
 分塊完成後，我們可以用不同嵌入模型將文字內嵌。可以使用的模型包括：word2vec、OpenAI的ada-002、Azure Computer Vision等。選擇模型會根據你使用的語言、內容型態（文字/圖片/音訊）、可編碼大小和輸出向量長度決定。
 
 以下是一個利用OpenAI的`text-embedding-ada-002`模型的文字內嵌範例：
-![cat這個字的內嵌向量圖](../../../../../translated_images/mo/cat.74cbd7946bc9ca38.webp)
+![cat這個字的內嵌向量圖](../../../../../translated_images/zh-MO/cat.74cbd7946bc9ca38.webp)
 
 ## 檢索與向量搜尋
 

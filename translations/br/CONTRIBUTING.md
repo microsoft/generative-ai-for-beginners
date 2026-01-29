@@ -63,7 +63,7 @@ Para garantir que seus links estejam funcionando corretamente, use o VS Code par
 
 Por exemplo, ao passar o mouse sobre qualquer link em seus arquivos, você será convidado a seguir o link pressionando **ctrl + clique**
 
-![VS code follow links screenshot](../../translated_images/br/vscode-follow-link.85520ab6a1237adc.webp)
+![VS code follow links screenshot](../../translated_images/pt-BR/vscode-follow-link.85520ab6a1237adc.webp)
 
 Se você clicar em um link e ele não funcionar localmente, certamente o workflow será acionado e não funcionará no GitHub.
 
@@ -71,7 +71,7 @@ Para corrigir esse problema, tente digitar o link com a ajuda do VS Code.
 
 Quando você digitar `./` ou `../`, o VS Code sugerirá opções disponíveis de acordo com o que você digitou.
 
-![VS code select relative path screenshot](../../translated_images/br/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
+![VS code select relative path screenshot](../../translated_images/pt-BR/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Siga o caminho clicando no arquivo ou pasta desejada e você terá certeza de que seu caminho não está quebrado.
 
@@ -88,7 +88,7 @@ Se estiver presente, você passará nesta verificação.
 
 Caso contrário, você poderá receber o seguinte erro.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/br/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/pt-BR/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Para corrigir, abra o arquivo destacado pelo workflow e adicione o ID de rastreamento ao final dos caminhos relativos.
 
@@ -105,7 +105,7 @@ Se estiver presente, você passará nesta verificação.
 
 Caso contrário, você poderá receber o seguinte erro.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/br/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/pt-BR/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Para corrigir, abra o arquivo destacado pelo workflow e adicione o ID de rastreamento ao final das URLs.
 
@@ -122,7 +122,7 @@ Se não estiver presente, você passará nesta verificação.
 
 Caso contrário, você poderá receber o seguinte erro.
 
-![GitHub check country locale comment screenshot](../../translated_images/br/github-check-country-locale-comment.2f4fe93228161dee.webp)
+![GitHub check country locale comment screenshot](../../translated_images/pt-BR/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Para corrigir, abra o arquivo destacado pelo workflow e remova a localidade das URLs.
 

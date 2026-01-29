@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:39:43+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "fr"
-}
--->
-[![Open Source Models](../../../../../translated_images/fr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/fr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Affiner Votre LLM
 
@@ -32,7 +23,7 @@ Prêt ? Commençons.
 
 Vous souhaitez avoir une vue d'ensemble de ce que nous allons couvrir avant de plonger ? Consultez ce guide illustré qui décrit le parcours d'apprentissage pour cette leçon - de l'apprentissage des concepts clés et de la motivation pour l'affinage, à la compréhension du processus et des meilleures pratiques pour exécuter la tâche d'affinage. C'est un sujet fascinant à explorer, n'oubliez pas de consulter la page [Ressources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pour des liens supplémentaires afin de soutenir votre parcours d'apprentissage autonome !
 
-![Guide Illustré pour l'Affinage des Modèles de Langage](../../../../../translated_images/fr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Guide Illustré pour l'Affinage des Modèles de Langage](../../../translated_images/fr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Qu'est-ce que l'affinage des modèles de langage ?
 

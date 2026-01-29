@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立圖像生成應用程式
 
-[![建立圖像生成應用程式](../../../translated_images/hk/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![建立圖像生成應用程式](../../../translated_images/zh-HK/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
 大型語言模型（LLMs）不僅僅能生成文字，還可以根據文字描述生成圖像。圖像作為一種表達方式，在醫療技術、建築、旅遊、遊戲開發等多個領域都非常有用。在本章中，我們將探討兩個最受歡迎的圖像生成模型：DALL-E 和 Midjourney。
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 例如，如果 Edu4All 的學生在課堂上學習紀念碑，他們可以生成以下圖像：
 
-![Edu4All 初創公司，紀念碑課堂，艾菲爾鐵塔](../../../translated_images/hk/startup.94d6b79cc4bb3f5a.webp)
+![Edu4All 初創公司，紀念碑課堂，艾菲爾鐵塔](../../../translated_images/zh-HK/startup.94d6b79cc4bb3f5a.webp)
 
 使用以下提示：
 
@@ -272,9 +272,9 @@ _圖片來源：維基百科，由 Midjourney 生成的圖像_
   原始圖像僅包含帶有游泳池的休息室，而最終圖像則添加了一隻火烈鳥：
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
-  <img src="../../../translated_images/hk/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/hk/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
-  <img src="../../../translated_images/hk/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-HK/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-HK/mask.1b2976ccec9e011e.webp" style="width: 30%; max-width: 200px; height: auto;">
+  <img src="../../../translated_images/zh-HK/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
 - **創建變體**。這個功能的想法是，您可以基於現有圖像生成不同的變體。要創建變體，您需要提供一張圖像和一個文字提示，並使用如下代碼：
@@ -298,11 +298,11 @@ _圖片來源：維基百科，由 Midjourney 生成的圖像_
 
 > 提示： "兔子騎在馬上，手拿棒棒糖，站在長滿水仙花的霧霾草地上"
 
-![兔子騎在馬上，手拿棒棒糖，版本 1](../../../translated_images/hk/v1-generated-image.a295cfcffa3c13c2.webp)
+![兔子騎在馬上，手拿棒棒糖，版本 1](../../../translated_images/zh-HK/v1-generated-image.a295cfcffa3c13c2.webp)
 
 現在讓我們再次運行相同的提示，看看是否會生成相同的圖像：
 
-![兔子騎在馬上的生成圖像](../../../translated_images/hk/v2-generated-image.33f55a3714efe61d.webp)
+![兔子騎在馬上的生成圖像](../../../translated_images/zh-HK/v2-generated-image.33f55a3714efe61d.webp)
 
 如您所見，這些圖像相似，但並不完全相同。現在讓我們嘗試將溫度值更改為 0.1，看看會發生什麼：
 
@@ -331,8 +331,8 @@ generation_response = client.images.create(
 
 現在運行此代碼，您將獲得以下兩張圖像：
 
-- ![溫度 0，版本 1](../../../translated_images/hk/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![溫度 0，版本 2](../../../translated_images/hk/v2-temp-generated-image.871d0c920dbfb0f1.webp)
+- ![溫度 0，版本 1](../../../translated_images/zh-HK/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![溫度 0，版本 2](../../../translated_images/zh-HK/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
 在這裡，您可以清楚地看到這些圖像更加相似。
 
