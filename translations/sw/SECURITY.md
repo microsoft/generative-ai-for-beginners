@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-07-09T06:55:26+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "sw"
-}
--->
 ## Usalama
 
 Microsoft inachukulia usalama wa bidhaa na huduma zetu za programu kwa umakini mkubwa, ikiwa ni pamoja na hifadhidata zote za msimbo wa chanzo zinazosimamiwa kupitia mashirika yetu ya GitHub, ambayo ni pamoja na [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), na [mashirika yetu ya GitHub](https://opensource.microsoft.com/).

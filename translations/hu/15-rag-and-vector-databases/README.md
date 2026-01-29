@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:54:38+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "hu"
-}
--->
 # Lekérdezés-gyorsított generálás (RAG) és vektor adatbázisok
 
-[![Lekérdezés-gyorsított generálás (RAG) és vektor adatbázisok](../../../../../translated_images/hu/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Lekérdezés-gyorsított generálás (RAG) és vektor adatbázisok](../../../translated_images/hu/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 A keresési alkalmazások leckében röviden megismertük, hogyan lehet integrálni a saját adatainkat a nagyméretű nyelvi modellekbe (LLM-ekbe). Ebben a leckében mélyebben bepillantást nyerünk az adatok alapozásának fogalmaiba az LLM alkalmazásaidban, a folyamat mechanikájába és az adattárolási módszerekbe, beleértve a beágyazásokat és a szöveget is.
 
@@ -53,7 +44,7 @@ Egy LLM-alapú chatbot felhasználói utasításokat dolgoz fel válaszok gener�
 
 ### Hogyan működnek a RAG-ek (Lekérdezés-gyorsított generálás)
 
-![rajz a RAG működéséről](../../../../../translated_images/hu/how-rag-works.f5d0ff63942bd3a6.webp)
+![rajz a RAG működéséről](../../../translated_images/hu/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Tegyük fel, hogy egy chatbotot szeretnél üzemeltetni, amely a jegyzeteidből hoz létre kvízeket, ehhez kapcsolódni kell a tudásbázishoz. Itt jön a képbe a RAG. A RAG-ek így működnek:
 
@@ -65,7 +56,7 @@ Tegyük fel, hogy egy chatbotot szeretnél üzemeltetni, amely a jegyzeteidből 
 
 - **Kiterjesztett generálás:** az LLM a lekért adatok alapján javítja válaszát. Ez lehetővé teszi, hogy a válasz ne csak a tanult adatokon alapuljon, hanem a hozzáadott releváns kontextusból is. A lekért adatokat az LLM válaszainak bővítésére használják. Az LLM ezután visszaadja a választ a felhasználó kérdésére.
 
-![rajz a RAG architektúrájáról](../../../../../translated_images/hu/encoder-decode.f2658c25d0eadee2.webp)
+![rajz a RAG architektúrájáról](../../../translated_images/hu/encoder-decode.f2658c25d0eadee2.webp)
 
 A RAG architektúrája transformer modell alapján működik, amely két részből áll: egy kódolóból és egy dekódolóból. Például, amikor a felhasználó kérdez, a bemeneti szöveget „kódolják” vektorokká, amelyek a szavak jelentését rögzítik, majd ezeket a vektorokat „dekódolják” a dokumentum indexünkbe, és új szöveget generálnak a kérdés alapján. Az LLM mind a kódoló-dekódoló modellt használja a kimenet létrehozására.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Miután daraboltuk, különböző beágyazó modellekkel alakíthatjuk beágyazásokká a szöveget. Használható modellek például: word2vec, OpenAI ada-002, Azure Computer Vision és sok más. A modell választása a használt nyelvektől, a tartalom típusától (szöveg/kép/hang), az input méretétől és a beágyazás hosszától függ.
 
 Példa egy OpenAI `text-embedding-ada-002` modell által készített beágyazásra:
-![a cat szó beágyazása](../../../../../translated_images/hu/cat.74cbd7946bc9ca38.webp)
+![a cat szó beágyazása](../../../translated_images/hu/cat.74cbd7946bc9ca38.webp)
 
 ## Lekérdezés és vektor keresés
 

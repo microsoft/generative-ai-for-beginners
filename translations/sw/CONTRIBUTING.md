@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:10:56+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "sw"
-}
--->
 # Kuchangia
 
 Mradi huu unakaribisha michango na mapendekezo. Michango mingi inahitaji ukubali Mkataba wa Leseni ya Mchangiaji (CLA) unaothibitisha kuwa una haki, na kwa kweli unatoa, haki kwetu kutumia mchango wako. Kwa maelezo zaidi, tembelea <https://cla.microsoft.com>.

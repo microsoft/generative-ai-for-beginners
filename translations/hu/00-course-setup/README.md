@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T21:26:29+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "hu"
-}
--->
 # A kurzus kezdete
 
 Nagyon izgatottak vagyunk, hogy elkezded ezt a kurzust, és kíváncsian várjuk, milyen inspirációt merítesz a Generatív Mesterséges Intelligenciával való építkezéshez!

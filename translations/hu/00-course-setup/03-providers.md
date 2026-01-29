@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:38:17+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "hu"
-}
--->
 # LLM szolgáltató kiválasztása és konfigurálása 🔑
 
 A feladatok **esetleg** beállíthatók úgy is, hogy egy vagy több Nagy Nyelvi Modell (LLM) telepítés ellen dolgozzanak egy támogatott szolgáltatón keresztül, mint például az OpenAI, Azure vagy Hugging Face. Ezek egy _hosztolt végpontot_ (API-t) biztosítanak, amelyhez a megfelelő hitelesítő adatokkal (API kulcs vagy token) programozottan hozzáférhetünk. Ebben a tanfolyamban az alábbi szolgáltatókat tárgyaljuk:
