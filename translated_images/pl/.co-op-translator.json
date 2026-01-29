@@ -209,6 +209,12 @@
     "source_file": "02-exploring-and-comparing-different-llms/images/AzureAIStudioModelCatalog.png",
     "language_code": "pl"
   },
+  "ChatGPT-titanic-survivor-prompt.e912df918cc6433b.webp": {
+    "original_hash": "61c85ed3349b99d2dadf9a5274e1866e",
+    "translation_date": "2026-01-29T15:54:48+00:00",
+    "source_file": "03-using-generative-ai-responsibly/images/ChatGPT-titanic-survivor-prompt.webp",
+    "language_code": "pl"
+  },
   "Deploy.18b2d27412ec8c02.webp": {
     "original_hash": "531e4b0190198acbb2d3cce2293d3a76",
     "translation_date": "2026-01-17T01:45:55+00:00",
@@ -855,6 +861,12 @@
     "original_hash": "fcec8d972223900d3d2f274c9987b6a4",
     "translation_date": "2026-01-17T01:49:32+00:00",
     "source_file": "17-ai-agents/images/what-agent.png",
+    "language_code": "pl"
+  },
+  "who-will-pay.4c0609b1c7780f44.webp": {
+    "original_hash": "4f9110e38af4fb1e85ec9186c3e19322",
+    "translation_date": "2026-01-29T15:54:56+00:00",
+    "source_file": "00-course-setup/images/who-will-pay.webp",
     "language_code": "pl"
   }
 }
