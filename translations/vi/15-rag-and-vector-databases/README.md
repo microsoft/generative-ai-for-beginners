@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:36:05+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "vi"
-}
--->
 # Retrieval Augmented Generation (RAG) và Cơ sở Dữ liệu Vector
 
-[![Retrieval Augmented Generation (RAG) và Cơ sở Dữ liệu Vector](../../../../../translated_images/vi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) và Cơ sở Dữ liệu Vector](../../../translated_images/vi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Trong bài học ứng dụng tìm kiếm, chúng ta đã học sơ lược cách tích hợp dữ liệu của riêng bạn vào các Mô hình Ngôn ngữ Lớn (LLMs). Trong bài học này, chúng ta sẽ đi sâu hơn vào các khái niệm về cách gắn dữ liệu của bạn vào ứng dụng LLM, cơ chế của quá trình và các phương pháp lưu trữ dữ liệu, bao gồm cả embeddings và văn bản.
 
@@ -53,7 +44,7 @@ Một chatbot dựa trên LLM xử lý các yêu cầu của người dùng đ�
 
 ### Cách RAG (Retrieval Augmented Generation) hoạt động
 
-![hình vẽ thể hiện cách RAG hoạt động](../../../../../translated_images/vi/how-rag-works.f5d0ff63942bd3a6.webp)
+![hình vẽ thể hiện cách RAG hoạt động](../../../translated_images/vi/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Giả sử bạn muốn triển khai một chatbot tạo câu đố từ ghi chú của bạn, bạn sẽ cần một kết nối tới cơ sở kiến thức. Đây là lúc RAG hỗ trợ. RAG hoạt động như sau:
 
@@ -65,7 +56,7 @@ Giả sử bạn muốn triển khai một chatbot tạo câu đố từ ghi ch�
 
 - **Tăng cường tạo dữ liệu:** LLM cải thiện phản hồi của mình dựa trên dữ liệu được truy xuất. Điều này cho phép câu trả lời được tạo ra không chỉ dựa trên dữ liệu được huấn luyện trước mà còn dựa trên thông tin liên quan từ bối cảnh thêm vào. Dữ liệu truy xuất được dùng để tăng cường các phản hồi của LLM. Sau đó, LLM trả lời câu hỏi của người dùng.
 
-![hình vẽ thể hiện kiến trúc của RAG](../../../../../translated_images/vi/encoder-decode.f2658c25d0eadee2.webp)
+![hình vẽ thể hiện kiến trúc của RAG](../../../translated_images/vi/encoder-decode.f2658c25d0eadee2.webp)
 
 Kiến trúc cho RAG được triển khai bằng cách sử dụng các transformers bao gồm hai phần: một bộ mã hóa và một bộ giải mã. Ví dụ, khi người dùng đặt câu hỏi, văn bản đầu vào được 'mã hóa' thành các vector thể hiện ý nghĩa của từ ngữ, rồi các vector này được 'giải mã' vào chỉ mục tài liệu và tạo ra văn bản mới dựa trên câu hỏi của người dùng. LLM dùng mô hình mã hóa-giải mã để tạo đầu ra.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Sau khi chia nhỏ, chúng ta có thể nhúng văn bản bằng các mô hình embedding khác nhau. Một số mô hình bạn có thể sử dụng bao gồm: word2vec, ada-002 của OpenAI, Azure Computer Vision và nhiều hơn nữa. Việc chọn mô hình sử dụng phụ thuộc vào ngôn ngữ bạn dùng, loại nội dung được mã hóa (văn bản/hình ảnh/âm thanh), kích thước đầu vào có thể mã hóa và độ dài đầu ra embedding.
 
 Ví dụ về văn bản được nhúng bằng mô hình `text-embedding-ada-002` của OpenAI như sau:
-![một embedding của từ cat](../../../../../translated_images/vi/cat.74cbd7946bc9ca38.webp)
+![một embedding của từ cat](../../../translated_images/vi/cat.74cbd7946bc9ca38.webp)
 
 ## Truy xuất và Tìm kiếm Vector
 

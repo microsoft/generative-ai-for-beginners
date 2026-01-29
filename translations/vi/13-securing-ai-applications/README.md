@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-  "translation_date": "2025-10-17T20:32:43+00:00",
-  "source_file": "13-securing-ai-applications/README.md",
-  "language_code": "vi"
-}
--->
 # Bảo mật ứng dụng AI tạo sinh của bạn
 
 [![Bảo mật ứng dụng AI tạo sinh của bạn](../../../translated_images/vi/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)

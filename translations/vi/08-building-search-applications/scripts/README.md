@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:11:27+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "vi"
-}
--->
 # Chuẩn bị dữ liệu phiên âm
 
 Các script chuẩn bị dữ liệu phiên âm tải xuống bản ghi video YouTube và chuẩn bị chúng để sử dụng với mẫu Semantic Search với OpenAI Embeddings và Functions.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0135e6c271f3ece8699050d4debbce88",
-  "translation_date": "2025-10-17T20:38:39+00:00",
-  "source_file": "04-prompt-engineering-fundamentals/README.md",
-  "language_code": "vi"
-}
--->
 # Các Nguyên Tắc Cơ Bản Về Kỹ Thuật Tạo Prompt
 
 [![Các Nguyên Tắc Cơ Bản Về Kỹ Thuật Tạo Prompt](../../../translated_images/vi/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)

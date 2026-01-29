@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:48:38+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "nl"
-}
--->
 # Kiezen & Configureren van een LLM-provider 🔑
 
 Opdrachten **kunnen** ook worden ingesteld om te werken met een of meer Large Language Model (LLM) implementaties via een ondersteunde serviceprovider zoals OpenAI, Azure of Hugging Face. Deze bieden een _gehoste endpoint_ (API) die we programmatisch kunnen benaderen met de juiste inloggegevens (API-sleutel of token). In deze cursus bespreken we deze providers:

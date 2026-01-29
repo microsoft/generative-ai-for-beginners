@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:39:27+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "nl"
-}
--->
 # Introductie tot Kleine Taalmodellen voor Generatieve AI voor Beginners  
 Generatieve AI is een fascinerend vakgebied binnen kunstmatige intelligentie dat zich richt op het creëren van systemen die in staat zijn nieuwe content te genereren. Deze content kan variëren van tekst en afbeeldingen tot muziek en zelfs complete virtuele omgevingen. Een van de meest spannende toepassingen van generatieve AI ligt op het gebied van taalmodellen.
 

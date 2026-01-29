@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:40:55+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "vi"
-}
--->
 # Giới thiệu về Mô hình Ngôn ngữ Nhỏ cho Generative AI dành cho Người mới bắt đầu  
 Generative AI là một lĩnh vực hấp dẫn của trí tuệ nhân tạo, tập trung vào việc tạo ra các hệ thống có khả năng sinh ra nội dung mới. Nội dung này có thể bao gồm văn bản, hình ảnh, âm nhạc và thậm chí cả các môi trường ảo hoàn chỉnh. Một trong những ứng dụng thú vị nhất của generative AI là trong lĩnh vực mô hình ngôn ngữ.
 
