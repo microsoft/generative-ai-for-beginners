@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-17T22:10:34+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în AI Generativ și Modele de Limbaj Extinse
 
 [![Introducere în AI Generativ și Modele de Limbaj Extinse](../../../translated_images/ro/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

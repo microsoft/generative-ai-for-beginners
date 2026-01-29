@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:07:18+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "bg"
-}
--->
-[![Open Source Models](../../../../../translated_images/bg/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/bg/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Фина настройка на Вашия LLM
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Искате ли да получите обща представа за това, което ще разглеждаме, преди да навлезем в детайлите? Вижте това илюстрирано ръководство, което описва учебното пътешествие за този урок – от запознаване с основните концепции и мотивацията за фина настройка до разбиране на процеса и най-добрите практики за изпълнение на задачата по фина настройка. Това е вълнуваща тема за изследване, затова не забравяйте да разгледате страницата с [Ресурси](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) за допълнителни връзки, които да подкрепят вашето самостоятелно обучение!
 
-![Илюстрирано ръководство за фина настройка на езикови модели](../../../../../translated_images/bg/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Илюстрирано ръководство за фина настройка на езикови модели](../../../translated_images/bg/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Какво е фина настройка за езикови модели?
 

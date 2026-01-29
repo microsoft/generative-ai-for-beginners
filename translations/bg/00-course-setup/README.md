@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T22:17:06+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "bg"
-}
--->
 # Започване на курса
 
 Много сме развълнувани, че започвате този курс и нямаме търпение да видим какво ще създадете с Генеративния AI!
