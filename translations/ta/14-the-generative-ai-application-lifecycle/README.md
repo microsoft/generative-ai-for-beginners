@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df44972d5575ea8cef3c52ee31696d04",
-  "translation_date": "2025-12-19T18:00:53+00:00",
-  "source_file": "14-the-generative-ai-application-lifecycle/README.md",
-  "language_code": "ta"
-}
--->
 [![function calling உடன் ஒருங்கிணைத்தல்](../../../translated_images/ta/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # உருவாக்கும் AI பயன்பாட்டு வாழ்க்கைச் சுழற்சி

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-10-11T11:16:07+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "et"
-}
--->
 # Neuraalvõrkude raamistikud
 
 Nagu me juba õppisime, on neuraalvõrkude tõhusaks treenimiseks vaja teha kahte asja:

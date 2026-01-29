@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-11-12T09:03:31+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Start Dis Course
 
 We dey very happy say you wan start dis course and we dey look forward to wetin you go fit create wit Generative AI!

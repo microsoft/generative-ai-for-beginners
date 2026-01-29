@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T19:41:57+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "et"
-}
--->
 # Taastepõhine täiustatud genereerimine (RAG) ja vektorandmebaasid
 
-[![Taastepõhine täiustatud genereerimine (RAG) ja vektorandmebaasid](../../../../../translated_images/et/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Taastepõhine täiustatud genereerimine (RAG) ja vektorandmebaasid](../../../translated_images/et/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Otsingurakenduste õppetunnis õppisime lühidalt, kuidas integreerida oma andmeid suurtesse keelemudelitesse (LLM). Selles õppetunnis süveneme andmete sidumisse teie LLM-rakenduses, protsessi mehhaanikasse ja andmete salvestamise meetoditesse, sealhulgas nii manustesse kui tekstidesse.
 
@@ -53,7 +44,7 @@ LLM-toega chatbot töötleb kasutajate sisendeid, et genereerida vastuseid. See 
 
 ### Kuidas RAG-id (taastepõhine täiustatud genereerimine) töötavad
 
-![joonis, mis näitab kuidas RAG-id töötavad](../../../../../translated_images/et/how-rag-works.f5d0ff63942bd3a6.webp)
+![joonis, mis näitab kuidas RAG-id töötavad](../../../translated_images/et/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Oletame, et soovid juurutada chatbot’i, mis loob sinu märkmetest viktoriine, vajalik on ühendus teadmistebaasiga. Siin tuleb mängu RAG. RAG-id töötavad järgmiselt:
 
@@ -65,7 +56,7 @@ Oletame, et soovid juurutada chatbot’i, mis loob sinu märkmetest viktoriine, 
 
 - **Täiustatud genereerimine:** LLM täiendab oma vastust päringust saadud olulise teabe põhjal. See võimaldab genereeritud vastusel põhineda mitte ainult eelneval koolitusandmestikul, vaid ka lisatud konteksti asjakohasel informatsioonil. RAG abil tuuakse vastustesse juurde teadmisbaasi infot, mille alusel LLM kasutajale lõpuks vastab.
 
-![jmnis, mis näitab RAG arhitektuuri](../../../../../translated_images/et/encoder-decode.f2658c25d0eadee2.webp)
+![jmnis, mis näitab RAG arhitektuuri](../../../translated_images/et/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG arhitektuur on üles ehitatud transformeritele, millel on kaks osa: kodeerija ja dekodeerija. Näiteks kui kasutaja esitab küsimuse, kodeeritakse sisendtekst vektoriteks, mis haaravad sõnade tähenduse ning vektorid dekodeeritakse meie dokumentide indeksisse ja genereeritakse uus tekst kasutajapäringu põhjal. LLM kasutab nii kodeerija kui dekodeerija mudelit väljundi loomiseks.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Pärast lõikude moodustamist saame teksti kattes manustamismudelitega. Mõned mudelid, mida saad kasutada: word2vec, OpenAI ada-002, Azure Computer Vision ja paljud teised. Mudeli valik sõltub kasutatavatest keeltest, kodeeritava sisu tüübist (tekst/pildid/audio), sisendi mahust ja katte väljundi pikkusest.
 
 Näide tekstimanusest OpenAI `text-embedding-ada-002` mudeli abil:
-![kassi sõna manustus](../../../../../translated_images/et/cat.74cbd7946bc9ca38.webp)
+![kassi sõna manustus](../../../translated_images/et/cat.74cbd7946bc9ca38.webp)
 
 ## Päringud ja vektorotsing
 

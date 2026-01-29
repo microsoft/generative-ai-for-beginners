@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-10-11T11:46:41+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "et"
-}
--->
 # Sissejuhatus väikestesse keelemudelitesse generatiivse tehisintellekti jaoks algajatele
 Generatiivne tehisintellekt on põnev tehisintellekti valdkond, mis keskendub süsteemide loomisele, mis suudavad genereerida uut sisu. See sisu võib ulatuda tekstist ja piltidest muusika ning isegi tervete virtuaalsete keskkondadeni. Üks põnevamaid generatiivse tehisintellekti rakendusi on keelemudelite valdkonnas.
 

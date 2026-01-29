@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:37:21+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ta"
-}
--->
-[![Open Source Models](../../../../../translated_images/ta/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ta/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # உங்கள் LLM ஐ நுண்ணறிவு மாற்றுதல்
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 நாம் விவரிக்கப் போகும் பெரிய படம் என்ன என்பதை முன்கூட்டியே தெரிந்து கொள்ள விரும்புகிறீர்களா? இந்த விளக்கப்பட வழிகாட்டியைப் பார்க்கவும், இது நுண்ணறிவு மாற்றலுக்கான மூலக் கருத்துக்கள் மற்றும் ஊக்கமும், செயல்முறை மற்றும் சிறந்த நடைமுறைகளையும் விளக்குகிறது. இது ஆராய்வுக்கு ஏற்கனவே ஆர்வமுள்ள தலைப்பாகும், எனவே உங்கள் சுய வழிகாட்டி கற்றல் பயணத்திற்கு ஆதரவாக கூடுதல் இணைப்புகளை பெற [வளங்கள்](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) பக்கத்தை மறக்காதீர்கள்!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ta/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ta/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## மொழி மாதிரிகளுக்கான நுண்ணறிவு மாற்றல் என்றால் என்ன?
 

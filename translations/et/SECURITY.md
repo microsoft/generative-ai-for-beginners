@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-10-11T11:14:18+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "et"
-}
--->
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.8 BLOCK -->
 
 ## Turvalisus

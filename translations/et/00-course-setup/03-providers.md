@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T18:08:41+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "et"
-}
--->
 # LLM-teenusepakkuja valimine ja seadistamine 🔑
 
 Ülesandeid **võib** seadistada töötama ühe või mitme suure keelemudeli (LLM) juurutusega läbi toetatud teenusepakkuja nagu OpenAI, Azure või Hugging Face. Need pakuvad _hostitud lõpp-punkti_ (API), millele saame programmeerimislikult ligi pääseda õige autentimisandmega (API võti või token). Selles kursuses käsitleme järgmisi pakkujaid:
