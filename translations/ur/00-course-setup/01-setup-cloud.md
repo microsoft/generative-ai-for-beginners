@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-08-26T14:18:59+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "ur"
-}
--->
 # کلاؤڈ سیٹ اپ ☁️ – گٹ ہب کوڈ اسپیسز
 
 **اس گائیڈ کو استعمال کریں اگر آپ کچھ بھی مقامی طور پر انسٹال نہیں کرنا چاہتے۔**  

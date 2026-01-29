@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:54:25+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "ur"
-}
--->
 # نیورل نیٹ ورکس کا تعارف: پرسیپٹرون
 
 جدید نیورل نیٹ ورک کی طرح کچھ بنانے کی پہلی کوششوں میں سے ایک 1957 میں فرینک روزن بلیٹ نے کورنل ایروناٹیکل لیبارٹری سے کی تھی۔ یہ ایک ہارڈویئر امپلیمنٹیشن تھی جسے "Mark-1" کہا جاتا تھا، جو ابتدائی جیومیٹرک اشکال جیسے مثلث، مربع اور دائرے کو پہچاننے کے لیے ڈیزائن کی گئی تھی۔
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/ur/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/ur/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > تصاویر ویکیپیڈیا سے
 
