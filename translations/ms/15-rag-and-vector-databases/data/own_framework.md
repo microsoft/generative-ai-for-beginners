@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:49:27+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "ms"
-}
--->
 # Pengenalan kepada Rangkaian Neural. Perceptron Berlapis-Lapis
 
 Dalam bahagian sebelumnya, anda telah mempelajari model rangkaian neural yang paling mudah - perceptron satu lapisan, model klasifikasi linear dua kelas.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:42:16+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "ms"
-}
--->
 # Pengenalan kepada Model Bahasa Kecil untuk AI Generatif bagi Pemula  
 AI generatif adalah bidang kecerdasan buatan yang menarik yang memfokuskan pada penciptaan sistem yang mampu menghasilkan kandungan baru. Kandungan ini boleh merangkumi teks, imej, muzik, malah persekitaran maya sepenuhnya. Salah satu aplikasi paling menarik AI generatif adalah dalam bidang model bahasa.
 

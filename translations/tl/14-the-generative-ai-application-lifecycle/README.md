@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df44972d5575ea8cef3c52ee31696d04",
-  "translation_date": "2025-12-19T16:22:52+00:00",
-  "source_file": "14-the-generative-ai-application-lifecycle/README.md",
-  "language_code": "tl"
-}
--->
 [![Integrating with function calling](../../../translated_images/tl/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # Ang Siklo ng Buhay ng Generative AI Application

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:41:39+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "id"
-}
--->
 # Pengenalan Model Bahasa Kecil untuk Generative AI bagi Pemula  
 Generative AI adalah bidang kecerdasan buatan yang menarik yang berfokus pada pembuatan sistem yang mampu menghasilkan konten baru. Konten ini bisa berupa teks, gambar, musik, bahkan lingkungan virtual secara keseluruhan. Salah satu aplikasi paling menarik dari generative AI adalah dalam ranah model bahasa.
 
