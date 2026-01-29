@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:12:13+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "sr"
-}
--->
-[![Open Source Models](../../../../../translated_images/sr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Фајн-тијунинг вашег LLM-а
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Желите да добијете општи преглед онога што ћемо обрадити пре него што уђемо у детаље? Погледајте овај илустровани водич који описује пут учења за ову лекцију - од учења основних концепата и мотивације за фајн-тијунинг, до разумевања процеса и најбољих пракси за извођење задатка фајн-тијунинга. Ово је фасцинантна тема за истраживање, па не заборавите да погледате страницу [Ресурси](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) за додатне линкове који ће подржати ваше самостално учење!
 
-![Илустровани водич за фајн-тијунинг језичких модела](../../../../../translated_images/sr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Илустровани водич за фајн-тијунинг језичких модела](../../../translated_images/sr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Шта је фајн-тијунинг језичких модела?
 

@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:16:05+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "hr"
-}
--->
-[![Open Source Models](../../../../../translated_images/hr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/hr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fino podešavanje vašeg LLM-a
 
@@ -32,7 +23,7 @@ Spremni? Krenimo.
 
 Želite li dobiti cjelovitu sliku onoga što ćemo pokriti prije nego što krenemo? Pogledajte ovaj ilustrirani vodič koji opisuje put učenja za ovu lekciju – od učenja osnovnih koncepata i motivacije za fino podešavanje, do razumijevanja procesa i najboljih praksi za izvršavanje zadatka fino podešavanja. Ovo je fascinantna tema za istraživanje, stoga ne zaboravite provjeriti stranicu [Resursi](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne poveznice koje će podržati vaše samostalno učenje!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/hr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/hr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Što je fino podešavanje za jezične modele?
 

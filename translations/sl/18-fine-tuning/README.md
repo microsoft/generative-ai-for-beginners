@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:19:20+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "sl"
-}
--->
-[![Open Source Models](../../../../../translated_images/sl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Prilagajanje vašega LLM
 
@@ -32,7 +23,7 @@ Pripravljeni? Začnimo.
 
 Želite dobiti celoten pregled tega, kar bomo obravnavali, preden se poglobimo? Oglejte si ta ilustrirani vodič, ki opisuje učni proces za to lekcijo - od spoznavanja osnovnih konceptov in motivacije za prilagajanje do razumevanja postopka in najboljših praks za izvedbo naloge prilagajanja. To je zanimiva tema za raziskovanje, zato ne pozabite preveriti tudi strani [Viri](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne povezave, ki podpirajo vaše samostojno učenje!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/sl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/sl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Kaj je prilagajanje za jezikovne modele?
 

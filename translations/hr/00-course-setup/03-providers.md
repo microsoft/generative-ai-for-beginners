@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T17:23:45+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "hr"
-}
--->
 # Odabir i konfiguracija LLM pružatelja usluga 🔑
 
 Zadaci **mogu** biti postavljeni da rade s jednim ili više Large Language Model (LLM) implementacija putem podržanog pružatelja usluga poput OpenAI, Azure ili Hugging Face. Oni pružaju _hostanu krajnju točku_ (API) kojoj možemo pristupiti programski s odgovarajućim vjerodajnicama (API ključ ili token). U ovom tečaju raspravljamo o ovim pružateljima:

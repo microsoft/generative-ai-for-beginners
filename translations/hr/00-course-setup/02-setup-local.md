@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T17:24:49+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "hr"
-}
--->
 # Lokalna postava 🖥️
 
 **Koristite ovaj vodič ako želite sve pokretati na vlastitom prijenosnom računalu.**  
