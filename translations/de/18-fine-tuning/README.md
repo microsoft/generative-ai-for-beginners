@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:45:39+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "de"
-}
--->
-[![Open Source Models](../../../../../translated_images/de/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/de/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Feinabstimmung Ihres LLM
 
@@ -32,7 +23,7 @@ Bereit? Lassen Sie uns anfangen.
 
 Möchten Sie einen Überblick über das, was wir behandeln werden, bevor wir ins Detail gehen? Schauen Sie sich diesen illustrierten Leitfaden an, der die Lernreise für diese Lektion beschreibt – vom Erlernen der Kernkonzepte und der Motivation für Feinabstimmung bis hin zum Verständnis des Prozesses und der bewährten Methoden für die Ausführung der Feinabstimmungsaufgabe. Dies ist ein faszinierendes Thema zur Erforschung, vergessen Sie also nicht, die [Ressourcen](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) Seite für zusätzliche Links zu Ihrer selbstgesteuerten Lernreise zu besuchen!
 
-![Illustrierter Leitfaden für die Feinabstimmung von Sprachmodellen](../../../../../translated_images/de/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrierter Leitfaden für die Feinabstimmung von Sprachmodellen](../../../translated_images/de/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Was ist Feinabstimmung bei Sprachmodellen?
 
