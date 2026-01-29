@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T19:34:12+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "lt"
-}
--->
 # Paieškos plėtinio generavimas (RAG) ir vektorinės duomenų bazės
 
-[![Paieškos plėtinio generavimas (RAG) ir vektorinės duomenų bazės](../../../../../translated_images/lt/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Paieškos plėtinio generavimas (RAG) ir vektorinės duomenų bazės](../../../translated_images/lt/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Paieškos taikomųjų programų pamokoje trumpai sužinojome, kaip integruoti savo duomenis į didelius kalbos modelius (LLM). Šioje pamokoje gilinsimės į jūsų duomenų pagrindimą jūsų LLM programoje, proceso mechaniką ir duomenų saugojimo metodus, įskaitant tiek vektorius, tiek tekstą.
 
@@ -53,7 +44,7 @@ LLM pagrįstas pokalbių robotas apdoroja vartotojo užklausas, kad sukurtų ats
 
 ### Kaip veikia RAG (paieškos plėtinio generavimas)
 
-![braižinys, rodantis kaip veikia RAG](../../../../../translated_images/lt/how-rag-works.f5d0ff63942bd3a6.webp)
+![braižinys, rodantis kaip veikia RAG](../../../translated_images/lt/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Tarkime, norite įdiegti pokalbių robotą, kuris kuria klausimynus iš jūsų užrašų, jums reikės jungties prie žinių bazės. Štai kur RAG padeda. RAG veikia taip:
 
@@ -65,7 +56,7 @@ Tarkime, norite įdiegti pokalbių robotą, kuris kuria klausimynus iš jūsų u
 
 - **Plėstinis generavimas:** LLM pagerina savo atsakymą remdamasis gautais duomenimis. Tai leidžia atsakymui būti pagrįstam ne tik iš anksto apmokytais duomenimis, bet ir papildoma informacija iš pridėto konteksto. Gauti duomenys naudojami LLM atsakymams papildyti. LLM tada pateikia atsakymą vartotojo klausimui.
 
-![braižinys, rodantis kaip veikia RAG architektūra](../../../../../translated_images/lt/encoder-decode.f2658c25d0eadee2.webp)
+![braižinys, rodantis kaip veikia RAG architektūra](../../../translated_images/lt/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG architektūra įgyvendinama naudojant transformerius, sudarytus iš dviejų dalių: kodavimo ir dekodavimo. Pavyzdžiui, kai vartotojas užduoda klausimą, įvestas tekstas yra „užkoduojamas“ į vektorius, kurie fiksuoja žodžių reikšmę, o vektoriai yra „iškoduojami“ į mūsų dokumentų indeksą ir generuoja naują tekstą, remiantis vartotojo užklausa. LLM naudoja abu – kodavimo-dekodavimo modelį, kad sugeneruotų rezultatą.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Suskaidžius, galime naudoti įvairius įterpimo modelius tekstui įterpti. Kai kurie modeliai yra: word2vec, ada-002 iš OpenAI, Azure Computer Vision ir daugelis kitų. Modelio pasirinkimas priklauso nuo kalbų, kurias naudojate, koduojamo turinio tipo (tekstai/vaizdai/garsas), įvesties dydžio ir įterpimo išvesties ilgio.
 
 Pavyzdys, kaip atrodo tekstas su OpenAI `text-embedding-ada-002` modeliu:
-![žodžio katė įterpimas](../../../../../translated_images/lt/cat.74cbd7946bc9ca38.webp)
+![žodžio katė įterpimas](../../../translated_images/lt/cat.74cbd7946bc9ca38.webp)
 
 ## Paieška ir vektorinė paieška
 

@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:24:16+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "my"
-}
--->
-[![Open Source Models](../../../../../translated_images/my/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/my/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # သင့် LLM ကို အတိပကျလေ့ကျင့်ခြင်း
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 သင်တို့ မျှဝေမည့် အကြောင်းအရာအကျဉ်းချုပ်ကို ကြည့်ရှုချင်ပါသလား? ဤပုံဖော်ထားသော လမ်းညွှန်သည် fine-tuning ၏ အဓိကအယူအဆနှင့် ရည်ရွယ်ချက်များကို သင်ယူခြင်းမှ စ၍ fine-tuning လုပ်ငန်းစဉ်နှင့် အကောင်းဆုံး လေ့ကျင့်နည်းများအထိ သင်ခန်းစာတွင် လေ့လာမည့် ခရီးစဉ်ကိုဖေါ်ပြထားသည်။ ယခုခေါင်းစဉ်သည် စူးစမ်းရန် စိတ်စုံလင်သောအရာဖြစ်သဖြင့် သက်ဆိုင်ရာ လေ့လာသူကိုယ်တိုင်သင်ယူမှု ခရီးစဉ်ကို ထောက်ပံ့ရန် လင့်များပါရှိသော [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) စာမျက်နှာကို မမေ့ပါနှင့်!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/my/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/my/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ဘာသာစကားမော်ဒယ်များအတွက် fine-tuning ဆိုတာဘာလဲ?
 

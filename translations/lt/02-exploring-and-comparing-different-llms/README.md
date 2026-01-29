@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
-  "translation_date": "2025-10-18T02:26:17+00:00",
-  "source_file": "02-exploring-and-comparing-different-llms/README.md",
-  "language_code": "lt"
-}
--->
 # Tyrinėjimas ir skirtingų LLM palyginimas
 
 [![Tyrinėjimas ir skirtingų LLM palyginimas](../../../translated_images/lt/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)

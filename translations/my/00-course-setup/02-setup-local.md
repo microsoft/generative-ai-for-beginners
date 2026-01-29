@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T17:40:46+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "my"
-}
--->
 # ဒေသတွင်း စတင်ပြင်ဆင်ခြင်း 🖥️
 
 **သင့်ရဲ့ ကိုယ်ပိုင် လက်ပ်တော့ပေါ်မှာ အားလုံးကို ပြေးဆွဲချင်ရင် ဒီလမ်းညွှန်ကို အသုံးပြုပါ။**  

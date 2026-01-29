@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:38:48+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "my"
-}
--->
 # Neural Network Frameworks
 
 ကျွန်တော်တို့ အရင်က သင်ယူထားသလို၊ နယူးရယ်နက်ဝပ်တွေကို ထိရောက်စွာ လေ့ကျင့်နိုင်ဖို့အတွက် အောက်ပါ အချက်နှစ်ချက် လုပ်ဆောင်ရပါမယ်။

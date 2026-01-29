@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:14:08+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "my"
-}
--->
 # Contributing
 
 ဒီပရောဂျက်မှာ အထောက်အပံ့တွေနဲ့ အကြံပြုချက်တွေကို ကြိုဆိုပါတယ်။ အများဆုံး အထောက်အပံ့တွေမှာ Contributor License Agreement (CLA) တစ်ခုကို သဘောတူဖို့ လိုအပ်ပြီး၊ သင့်ရဲ့ အထောက်အပံ့ကို အသုံးပြုခွင့်ရှိပြီး အသုံးပြုခွင့်ပေးတာကို သက်သေပြဖို့ လိုပါတယ်။ အသေးစိတ်အချက်အလက်များအတွက် <https://cla.microsoft.com> ကို သွားရောက်ကြည့်ရှုနိုင်ပါတယ်။

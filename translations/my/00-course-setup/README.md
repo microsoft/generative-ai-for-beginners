@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T01:55:45+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "my"
-}
--->
 # ဒီသင်ခန်းစာကို စတင်ပါ
 
 Generative AI ကို အသုံးပြုပြီး ဘာတွေ ဖန်တီးနိုင်မလဲဆိုတာကို ကြည့်ရှုနိုင်ဖို့ သင်ခန်းစာကို စတင်ဖို့အတွက် ကျွန်တော်တို့ အရမ်းလှုပ်လှုပ်ရှားရှားရှိနေပါတယ်!

@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:32:35+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "lt"
-}
--->
-[![Atvirojo kodo modeliai](../../../../../translated_images/lt/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Atvirojo kodo modeliai](../../../translated_images/lt/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Didelių kalbos modelių derinimas
 
@@ -32,7 +23,7 @@ Pasiruošę? Pradėkime.
 
 Norite susidaryti bendrą vaizdą apie tai, ką aptarsime, prieš pradėdami? Peržiūrėkite šį iliustruotą gidą, kuriame aprašoma mokymosi kelionė šiai pamokai – nuo pagrindinių sąvokų ir motyvacijos derinimui iki proceso ir geriausių praktikos pavyzdžių. Tai įdomi tema, tad nepamirškite apsilankyti [Resursų](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) puslapyje, kuriame rasite papildomų nuorodų savarankiškam mokymuisi!
 
-![Iliustruotas kalbos modelių derinimo gidas](../../../../../translated_images/lt/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Iliustruotas kalbos modelių derinimo gidas](../../../translated_images/lt/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Kas yra kalbos modelių derinimas?
 
