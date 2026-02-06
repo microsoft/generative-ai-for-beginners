@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T23:09:44+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "fa"
-}
--->
 # شروع به کار با این دوره
 
 ما بسیار هیجان‌زده‌ایم که شما این دوره را شروع کنید و ببینید با هوش مصنوعی تولیدی چه چیزهایی می‌توانید بسازید!

@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:13:17+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "pl"
-}
--->
 # Retrieval Augmented Generation (RAG) i bazy danych wektorowych
 
-[![Retrieval Augmented Generation (RAG) i bazy danych wektorowych](../../../../../translated_images/pl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) i bazy danych wektorowych](../../../translated_images/pl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 W lekcji o zastosowaniach wyszukiwania krótko omówiliśmy, jak zintegrować własne dane z dużymi modelami językowymi (LLM). W tej lekcji zagłębimy się w koncepcje osadzania danych w aplikacji LLM, mechanikę procesu oraz metody przechowywania danych, obejmujące zarówno osadzenia (embeddings), jak i tekst.
 
@@ -53,7 +44,7 @@ Chatbot oparty o LLM przetwarza teksty użytkowników, by generować odpowiedzi.
 
 ### Jak działają RAG (Retrieval Augmented Generation)
 
-![rysunek przedstawiający działanie RAG](../../../../../translated_images/pl/how-rag-works.f5d0ff63942bd3a6.webp)
+![rysunek przedstawiający działanie RAG](../../../translated_images/pl/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Załóżmy, że chcesz wdrożyć chatbota tworzącego quizy na podstawie twoich notatek; potrzebujesz połączenia z bazą wiedzy. Tu z pomocą przychodzi RAG. RAG działa następująco:
 
@@ -65,7 +56,7 @@ Załóżmy, że chcesz wdrożyć chatbota tworzącego quizy na podstawie twoich 
 
 - **Generowanie z uzupełnieniem (Augmented Generation):** LLM ulepsza swoją odpowiedź na podstawie pobranych danych. Pozwala to generować odpowiedzi nie tylko oparte na danych treningowych, ale też na dodanym kontekście. Pobierane dane wzbogacają odpowiedzi LLM, który następnie zwraca odpowiedź na pytanie użytkownika.
 
-![rysunek przedstawiający architekturę RAG](../../../../../translated_images/pl/encoder-decode.f2658c25d0eadee2.webp)
+![rysunek przedstawiający architekturę RAG](../../../translated_images/pl/encoder-decode.f2658c25d0eadee2.webp)
 
 Architektura RAG jest realizowana za pomocą transformatorów, składających się z dwóch części: enkodera i dekodera. Na przykład, gdy użytkownik zadaje pytanie, tekst wejściowy jest "zakodowany" na wektory oddające znaczenie słów, a następnie te wektory są "dekodowane" w indeks dokumentów i generują nowy tekst na podstawie zapytania użytkownika. LLM wykorzystuje model enkoder-dekoder do wygenerowania odpowiedzi.
 
@@ -129,7 +120,7 @@ Po podziale możemy osadzić tekst korzystając z różnych modeli osadzających
 
 Przykład osadzonego tekstu za pomocą modelu OpenAI `text-embedding-ada-002`:
 
-![osadzenie słowa cat](../../../../../translated_images/pl/cat.74cbd7946bc9ca38.webp)
+![osadzenie słowa cat](../../../translated_images/pl/cat.74cbd7946bc9ca38.webp)
 
 ## Wyszukiwanie i wyszukiwanie wektorowe
 

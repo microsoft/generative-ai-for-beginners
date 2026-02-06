@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T22:06:37+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "ro"
-}
--->
 # Începem acest curs
 
 Suntem foarte entuziasmați să începeți acest curs și să vedem ce vă inspiră să creați cu ajutorul Inteligenței Artificiale Generative!

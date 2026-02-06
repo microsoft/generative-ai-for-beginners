@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:31:35+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "he"
-}
--->
-[![Open Source Models](../../../../../translated_images/he/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/he/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # כיוונון מדויק של מודל השפה הגדול שלך
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 רוצים לקבל תמונה כוללת של מה שנכסה לפני שנכנס לפרטים? עיינו במדריך הממחיש המתאר את מסלול הלמידה לשיעור זה - מלמידת המושגים המרכזיים והמניע לכיוונון המדויק, להבנת התהליך והפרקטיקות הטובות לביצוע משימת הכיוונון המדויק. זה נושא מרתק למיצוי, אז אל תשכחו לבדוק את דף [המשאבים](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) לקישורים נוספים לתמיכה במסע הלמידה העצמי שלכם!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/he/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/he/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## מהו כיוונון מדויק למודלי שפה?
 

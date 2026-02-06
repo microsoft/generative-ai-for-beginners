@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:24:30+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "fr"
-}
--->
 # Frameworks de réseaux de neurones
 
 Comme nous l'avons déjà vu, pour pouvoir entraîner efficacement des réseaux de neurones, il faut faire deux choses :

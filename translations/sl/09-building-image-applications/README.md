@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "238cde5c90363d70ecc939569378da51",
-  "translation_date": "2025-10-18T01:43:35+00:00",
-  "source_file": "09-building-image-applications/README.md",
-  "language_code": "sl"
-}
--->
 # Gradnja aplikacij za generiranje slik
 
 [![Gradnja aplikacij za generiranje slik](../../../translated_images/sl/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-11-12T08:48:37+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "pcm"
-}
--->
 # Contributin
 
 Dis project dey welcome contribution and suggestion. Most contribution go need make you agree to Contributor License Agreement (CLA) wey go show say you get di right to, and you dey really give us di right to use wetin you contribute. For more info, go <https://cla.microsoft.com>.

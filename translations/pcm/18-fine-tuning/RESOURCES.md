@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-11-12T09:08:38+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "pcm"
-}
--->
 # Resources For Self-Guided Learning
 
 Dis lesson na di one wey dem build wit plenty core resources from OpenAI and Azure OpenAI as reference for di terms and tutorials. Here na list wey no complete, wey fit help you for your own self-guided learning waka.

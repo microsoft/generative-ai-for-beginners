@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:50:11+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ml"
-}
--->
-[![Open Source Models](../../../../../translated_images/ml/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ml/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # നിങ്ങളുടെ LLM ഫൈനട്യൂണിങ്
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ഞങ്ങൾ പരിശോധിക്കാനിരിക്കുന്ന വസ്തുക്കൾക്കറുത്തിയെ മൊത്തം ദൃശ്യമായി കണ്ട് തയ്യാറാകണമെങ്കിൽ, ഈ ചിത്രീകരിച്ച മാർഗ്ഗനിർദേശം പരിശോധിക്കുക, ഇത് ഫൈൻ-ട്യൂണിങ്ങിന്റെ കോർ ആശയങ്ങൾ മുതൽ പ്രക്രിയയും മികച്ച പ്രയോഗ രീതി വരെ പഠനയാത്ര വിശദീകരിക്കുന്നു. അത് അന്വേഷിക്കാൻ ആകർഷകമായ വിഷയം ആണ്, അതിനാൽ നിങ്ങളുടെ സ്വയം മാർഗ്ഗനിർദേശ പഠന യാത്രയെ സഹായിക്കുന്ന അധിക ലിങ്കുകൾക്കായി [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) പേജ് സന്ദർശിക്കാൻ മറക്കരുത്!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ml/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ml/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ഭാഷാ മോഡലുകൾക്കുള്ള ഫൈന്‍-ട്യൂണിംഗ് എന്താണ്?
 

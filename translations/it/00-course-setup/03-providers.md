@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T14:42:21+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "it"
-}
--->
 # Scelta e Configurazione di un Fornitore LLM 🔑
 
 I compiti **possono** anche essere configurati per funzionare con uno o più deployment di Large Language Model (LLM) tramite un fornitore di servizi supportato come OpenAI, Azure o Hugging Face. Questi forniscono un _endpoint ospitato_ (API) a cui possiamo accedere programmaticamente con le credenziali corrette (chiave API o token). In questo corso, discutiamo di questi fornitori:

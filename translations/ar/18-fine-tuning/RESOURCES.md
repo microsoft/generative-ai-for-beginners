@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T17:54:30+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "ar"
-}
--->
 # موارد للتعلم الذاتي
 
 تم بناء الدرس باستخدام عدد من الموارد الأساسية من OpenAI و Azure OpenAI كمراجع للمصطلحات والدروس التعليمية. إليك قائمة غير شاملة، لتستخدمها في رحلات التعلم الذاتي الخاصة بك.

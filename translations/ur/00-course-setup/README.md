@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T23:18:22+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "ur"
-}
--->
 # اس کورس کے ساتھ شروعات کریں
 
 ہم بہت خوش ہیں کہ آپ اس کورس کو شروع کر رہے ہیں اور دیکھیں گے کہ آپ جنریٹو اے آئی کے ساتھ کیا تخلیق کرنے کی تحریک حاصل کرتے ہیں!

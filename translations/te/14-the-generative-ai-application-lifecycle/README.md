@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df44972d5575ea8cef3c52ee31696d04",
-  "translation_date": "2025-12-19T18:40:11+00:00",
-  "source_file": "14-the-generative-ai-application-lifecycle/README.md",
-  "language_code": "te"
-}
--->
 [![ఫంక్షన్ కాలింగ్‌తో ఇంటిగ్రేషన్](../../../translated_images/te/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
 # జనరేటివ్ AI అప్లికేషన్ లైఫ్‌సైకిల్

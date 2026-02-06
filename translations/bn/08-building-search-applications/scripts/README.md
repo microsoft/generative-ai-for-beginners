@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:08:31+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "bn"
-}
--->
 # ট্রান্সক্রিপশন ডেটা প্রস্তুতি
 
 ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলো YouTube ভিডিওর ট্রান্সক্রিপ্ট ডাউনলোড করে এবং সেগুলোকে Semantic Search with OpenAI Embeddings and Functions স্যাম্পলের জন্য প্রস্তুত করে।

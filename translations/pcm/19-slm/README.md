@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-11-12T09:05:21+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "pcm"
-}
--->
 # Introduction to Small Language Models for Generative AI for Beginners
 Generative AI na one kain area for artificial intelligence wey dey focus on how to create system wey fit generate new content. Dis content fit be text, image, music, or even full virtual environment. One of di most interesting way wey dem dey use generative AI na for language models.
 

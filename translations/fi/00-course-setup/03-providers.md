@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:41:41+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "fi"
-}
--->
 # LLM-toimittajan valinta ja konfigurointi 🔑
 
 Tehtävät **voivat** myös olla asetettu toimimaan yhtä tai useampaa Suurten Kielen Mallien (LLM) käyttöönottoa vastaan tuetun palveluntarjoajan, kuten OpenAI:n, Azuren tai Hugging Facen kautta. Nämä tarjoavat _isännöidyn päätepisteen_ (API), johon voimme ohjelmallisesti päästä käsiksi oikeilla tunnistetiedoilla (API-avain tai token). Tässä kurssissa käsittelemme näitä palveluntarjoajia:

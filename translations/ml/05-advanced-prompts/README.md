@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-12-19T19:21:40+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "ml"
-}
--->
 # ആഡ്വാൻസ്ഡ് പ്രോംപ്റ്റുകൾ സൃഷ്ടിക്കൽ
 
 [![Creating Advanced Prompts](../../../translated_images/ml/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)

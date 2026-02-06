@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T17:57:42+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "ko"
-}
--->
 # 자가 학습을 위한 자료
 
 이 수업은 용어와 튜토리얼 참고를 위해 OpenAI와 Azure OpenAI의 핵심 자료들을 기반으로 제작되었습니다. 아래는 여러분의 자가 학습 여정을 위한 비포괄적인 자료 목록입니다.

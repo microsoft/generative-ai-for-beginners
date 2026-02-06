@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T00:12:59+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "hi"
-}
--->
 # इस कोर्स की शुरुआत करें
 
 हम बहुत उत्साहित हैं कि आप इस कोर्स को शुरू कर रहे हैं और देख रहे हैं कि आप जनरेटिव एआई के साथ क्या निर्माण करने के लिए प्रेरित होते हैं!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
-  "translation_date": "2025-10-17T19:01:28+00:00",
-  "source_file": "02-exploring-and-comparing-different-llms/README.md",
-  "language_code": "sv"
-}
--->
 # Utforska och jämför olika LLM:er
 
 [![Utforska och jämför olika LLM:er](../../../translated_images/sv/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)

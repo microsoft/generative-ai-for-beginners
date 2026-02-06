@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T14:57:17+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "tr"
-}
--->
 # Bir LLM Sağlayıcısı Seçme ve Yapılandırma 🔑
 
 Ödevler, OpenAI, Azure veya Hugging Face gibi desteklenen bir hizmet sağlayıcısı aracılığıyla bir veya daha fazla Büyük Dil Modeli (LLM) dağıtımına karşı çalışacak şekilde **ayarlanabilir**. Bunlar, doğru kimlik bilgileri (API anahtarı veya belirteci) ile programatik olarak erişebileceğimiz _barındırılan bir uç nokta_ (API) sağlar. Bu derste, bu sağlayıcıları tartışıyoruz:

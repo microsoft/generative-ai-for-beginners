@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T12:45:45+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "de"
-}
--->
 # Auswahl & Konfiguration eines LLM-Anbieters 🔑
 
 Aufgaben **können** auch so eingerichtet werden, dass sie gegen eine oder mehrere Large Language Model (LLM)-Bereitstellungen über einen unterstützten Dienstanbieter wie OpenAI, Azure oder Hugging Face arbeiten. Diese bieten einen _gehosteten Endpunkt_ (API), auf den wir mit den richtigen Anmeldeinformationen (API-Schlüssel oder Token) programmgesteuert zugreifen können. In diesem Kurs besprechen wir diese Anbieter:

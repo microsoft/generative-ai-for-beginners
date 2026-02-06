@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:52:51+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "hu"
-}
--->
-[![Open Source Models](../../../../../translated_images/hu/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/hu/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM finomhangolása
 
@@ -32,7 +23,7 @@ Készen állsz? Kezdjünk hozzá.
 
 Szeretnéd látni a teljes képét annak, amit tárgyalni fogunk, mielőtt belemerülnénk? Nézd meg ezt az illusztrált útmutatót, amely bemutatja a lecke tanulási útját – a finomhangolás alapvető fogalmának és motivációjának megértésétől a finomhangolási folyamat és a legjobb gyakorlatok megértéséig. Ez egy lenyűgöző témakör, ezért ne feledd megnézni a [Források](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) oldalt is, ahol további linkeket találsz az önálló tanuláshoz!
 
-![Illusztrált útmutató a nyelvi modellek finomhangolásához](../../../../../translated_images/hu/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illusztrált útmutató a nyelvi modellek finomhangolásához](../../../translated_images/hu/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Mi a finomhangolás nyelvi modelleknél?
 

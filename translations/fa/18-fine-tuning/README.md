@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:55:40+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "fa"
-}
--->
-[![Open Source Models](../../../../../translated_images/fa/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/fa/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # تنظیم دقیق مدل زبان بزرگ شما
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 می‌خواهید قبل از ورود به جزئیات، تصویر کلی آنچه خواهیم پوشش داد داشته باشید؟ این راهنمای تصویری را بررسی کنید که مسیر یادگیری این درس را از فهم مفاهیم پایه و انگیزه برای تنظیم دقیق تا درک فرآیند و بهترین روش‌ها برای اجرای وظیفه تنظیم دقیق شرح می‌دهد. این موضوع موضوع جذابی برای کاوش است، پس فراموش نکنید صفحه [منابع](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) را برای لینک‌های اضافی که از مسیر یادگیری خودگردان شما حمایت می‌کند، بررسی کنید!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/fa/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/fa/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## تنظیم دقیق مدل‌های زبان چیست؟
 

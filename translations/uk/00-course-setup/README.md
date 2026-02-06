@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T02:13:30+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "uk"
-}
--->
 # Початок роботи з цим курсом
 
 Ми дуже раді, що ви починаєте цей курс, і з нетерпінням чекаємо, що надихне вас створювати за допомогою Генеративного Штучного Інтелекту!

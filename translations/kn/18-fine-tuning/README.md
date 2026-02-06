@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:53:31+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "kn"
-}
--->
-[![ಮುಕ್ತ ಮೂಲ ಮಾದರಿಗಳು](../../../../../translated_images/kn/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![ಮುಕ್ತ ಮೂಲ ಮಾದರಿಗಳು](../../../translated_images/kn/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # ನಿಮ್ಮ LLM ನ ಕುರಿತ್ನ ಸೂಕ್ಷ್ಮ-ಸಂರಚನೆ
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ನಾವು ಏನು ಆವರಿಸೋಣ ಎಂದು ದೊಡ್ಡ ಚಿತ್ರ ಕಂಡು ನೋಡುವುದೇ ಇಷ್ಟವೇ? ಈ ಚಿತ್ರೀತ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ನೋಡಿ, ಅದು ಸೂಕ್ಷ್ಮ-ಸಂರಚನೆಯ ಮೂಲ ತತ್ವಗಳು ಮತ್ತು ಪ್ರೇರಣೆ, ಪ್ರಕ್ರಿಯೆ ಒತ್ತುವರಿ ಮತ್ತು ಅತ್ಯುತ್ತಮ ಅನುಷ್ಠಾನಗಳ ಕುರಿತು ವಿವರಿಸುತ್ತದೆ. ಇದು ಅನ್ವೇಷಣೆಗೆ ಆಕರ್ಷಕ ವಿಷಯ, ಆದ್ದರಿಂದ ನಿಮ್ಮ ಸ್ವಯಂ ಮಾರ್ಗನಿರ್ದೇಶಿತ ಕಲಿಕೆಯ ಯಾತ್ರೆಗೆ ಬೆಂಬಲ ನೀಡುವ ಹೆಚ್ಚುವರಿ ಸಂಪರ್ಕಗಳಿಗಾಗಿ [ಸಂಪನ್ಮೂಲಗಳು](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) ಪುಟವನ್ನು ಪರಿಶೀಲಿಸಲು ಮರೆಯಬೇಡಿ!
 
-![ಭಾಷಾ ಮಾದರಿಗಳ ಸೂಕ್ಷ್ಮ-ಸಂರಚನೆಗೆ ಚಿತ್ರೀತ ಮಾರ್ಗದರ್ಶಿ](../../../../../translated_images/kn/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![ಭಾಷಾ ಮಾದರಿಗಳ ಸೂಕ್ಷ್ಮ-ಸಂರಚನೆಗೆ ಚಿತ್ರೀತ ಮಾರ್ಗದರ್ಶಿ](../../../translated_images/kn/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ಭಾಷಾ ಮಾದರಿಗಳ ಸೂಕ್ಷ್ಮ-ಸಂರಚನೆ ಎಂದರೆ 무엇?
 

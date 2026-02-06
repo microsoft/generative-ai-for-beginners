@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T16:03:53+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "vi"
-}
--->
 # Cài đặt cục bộ 🖥️
 
 **Sử dụng hướng dẫn này nếu bạn muốn chạy mọi thứ trên laptop của riêng bạn.**  

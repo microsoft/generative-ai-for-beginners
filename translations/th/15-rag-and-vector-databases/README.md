@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T17:59:48+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "th"
-}
--->
 # Retrieval Augmented Generation (RAG) และฐานข้อมูลเวกเตอร์
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../../../translated_images/th/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/th/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 ในบทเรียนแอปพลิเคชันการค้นหา เราได้เรียนรู้คร่าวๆ เกี่ยวกับวิธีการรวมข้อมูลของคุณเข้ากับโมเดลภาษาขนาดใหญ่ (LLMs) ในบทเรียนนี้ เราจะเจาะลึกมากขึ้นในแนวคิดของการวางรากฐานข้อมูลของคุณในแอปพลิเคชัน LLM ของคุณ กลไกของกระบวนการ และวิธีการจัดเก็บข้อมูล รวมถึงทั้ง embeddings และข้อความ
 
@@ -53,7 +44,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### วิธีการทำงานของ RAG (Retrieval Augmented Generation)
 
-![drawing showing how RAGs work](../../../../../translated_images/th/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../translated_images/th/how-rag-works.f5d0ff63942bd3a6.webp)
 
 สมมติว่าคุณต้องการเผยแพร่แชทบอทที่สร้างแบบทดสอบจากบันทึกของคุณ คุณจะต้องมีการเชื่อมต่อกับฐานความรู้ ซึ่งนี่คือที่ที่ RAG เข้ามาช่วยทำงาน RAG ทำงานดังนี้:
 
@@ -65,7 +56,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 - **การสร้างคำตอบเสริม:** LLM ปรับปรุงคำตอบตามข้อมูลที่ดึงมา นี้ช่วยให้คำตอบที่สร้างขึ้นไม่เพียงแต่ขึ้นอยู่กับข้อมูลที่ฝึกมาเท่านั้น แต่ยังรวมถึงข้อมูลที่ดึงมาจากบริบทที่เพิ่มเข้ามา ข้อมูลที่ดึงมาจะใช้เสริมคำตอบของ LLM แล้ว LLM จะตอบคำถามผู้ใช้
 
-![drawing showing how RAGs architecture](../../../../../translated_images/th/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../translated_images/th/encoder-decode.f2658c25d0eadee2.webp)
 
 สถาปัตยกรรมของ RAG ถูกสร้างโดยใช้ transformers ประกอบด้วยสองส่วน คือ encoder และ decoder ตัวอย่างเช่น เมื่อผู้ใช้ถามคำถาม ข้อความอินพุตจะถูก 'เข้ารหัส' เป็นเวกเตอร์ที่จับความหมายของคำ และเวกเตอร์เหล่านั้นจะถูก 'ถอดรหัส' เข้าสู่ดัชนีเอกสารของเรา และสร้างข้อความใหม่ตามคำถามของผู้ใช้ LLM ใช้โมเดล encoder-decoder ทั้งสองเพื่อสร้างผลลัพธ์
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 เมื่อแบ่งชิ้นเสร็จแล้ว เราสามารถฝังข้อความโดยใช้โมเดล embedding ต่างๆ โมเดลที่ใช้ได้รวมถึง: word2vec, ada-002 โดย OpenAI, Azure Computer Vision และอื่นๆ การเลือกโมเดลใช้ขึ้นอยู่กับภาษาที่ใช้ ประเภทเนื้อหาที่เข้ารหัส (ข้อความ/ภาพ/เสียง) ขนาดของอินพุตที่สามารถเข้ารหัสได้ และความยาวของผลลัพธ์ embedding
 
 ตัวอย่าง embedding ข้อความโดยใช้โมเดล `text-embedding-ada-002` ของ OpenAI คือ:
-![an embedding of the word cat](../../../../../translated_images/th/cat.74cbd7946bc9ca38.webp)
+![an embedding of the word cat](../../../translated_images/th/cat.74cbd7946bc9ca38.webp)
 
 ## การค้นคืนและการค้นหาเวกเตอร์
 

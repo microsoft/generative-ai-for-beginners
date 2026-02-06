@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T17:54:52+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "lt"
-}
--->
 # LLM tiekėjo pasirinkimas ir konfigūravimas 🔑
 
 Užduotys **gali** būti sukonfigūruotos taip, kad veiktų su vienu ar keliais dideliais kalbos modeliais (LLM) per palaikomą paslaugų tiekėją, pvz., OpenAI, Azure ar Hugging Face. Šie tiekėjai suteikia _hostintą galinį tašką_ (API), prie kurio galime programiškai prisijungti su tinkamais kredencialais (API raktu arba žetonu). Šiame kurse aptariame šiuos tiekėjus:

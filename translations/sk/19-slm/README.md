@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:47:14+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "sk"
-}
--->
 # Úvod do malých jazykových modelov pre generatívnu AI pre začiatočníkov  
 Generatívna AI je fascinujúca oblasť umelej inteligencie, ktorá sa zameriava na vytváranie systémov schopných generovať nový obsah. Tento obsah môže byť text, obrázky, hudba alebo dokonca celé virtuálne prostredia. Jednou z najzaujímavejších aplikácií generatívnej AI sú jazykové modely.
 

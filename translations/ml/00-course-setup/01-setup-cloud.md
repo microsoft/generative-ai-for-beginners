@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-12-19T19:46:21+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "ml"
-}
--->
 # ക്ലൗഡ് സെറ്റപ്പ് ☁️ – GitHub Codespaces
 
 **നിങ്ങൾക്ക് ലൊക്കലായി ഒന്നും ഇൻസ്റ്റാൾ ചെയ്യാൻ ആഗ്രഹമില്ലെങ്കിൽ ഈ ഗൈഡ് ഉപയോഗിക്കുക.**  

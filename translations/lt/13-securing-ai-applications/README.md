@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-  "translation_date": "2025-10-18T02:24:10+00:00",
-  "source_file": "13-securing-ai-applications/README.md",
-  "language_code": "lt"
-}
--->
 # Saugokite savo generatyviosios dirbtinio intelekto (DI) programas
 
 [![Saugokite savo generatyviosios DI programas](../../../translated_images/lt/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)

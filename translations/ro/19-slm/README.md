@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:48:00+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în Modelele de Limbaj Mici pentru AI Generativ destinat Începătorilor  
 AI generativ este un domeniu fascinant al inteligenței artificiale care se concentrează pe crearea de sisteme capabile să genereze conținut nou. Acest conținut poate varia de la text și imagini, până la muzică și chiar medii virtuale întregi. Una dintre cele mai interesante aplicații ale AI generativ este în domeniul modelelor de limbaj.
 

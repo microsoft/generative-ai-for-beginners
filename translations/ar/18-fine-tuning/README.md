@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:51:11+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ar"
-}
--->
-[![نماذج مفتوحة المصدر](../../../../../translated_images/ar/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![نماذج مفتوحة المصدر](../../../translated_images/ar/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # توجيه النماذج اللغوية الكبيرة
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هل ترغب في الحصول على الصورة الكبرى لما سنغطيه قبل أن نغوص في التفاصيل؟ تصفح هذا الدليل التوضيحي الذي يوضح رحلة التعلم لهذا الدرس – من تعلم المفاهيم الأساسية والدافع للتوجيه الدقيق، إلى فهم العملية وأفضل الممارسات لتنفيذ مهمة التوجيه الدقيق. هذا موضوع شيق للاستكشاف، فلا تنسَ الاطلاع على صفحة [الموارد](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) لمزيد من الروابط التي تدعم رحلة التعلم الذاتية الخاصة بك!
 
-![دليل توضيحي لتوجيه النماذج اللغوية](../../../../../translated_images/ar/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![دليل توضيحي لتوجيه النماذج اللغوية](../../../translated_images/ar/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ما هو التوجيه الدقيق للنماذج اللغوية؟
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:31:52+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "sw"
-}
--->
 # Kuchagua & Kusanidi Mtoa Huduma wa LLM 🔑
 
 Majukumu **yanaweza** pia kusanidiwa kufanya kazi dhidi ya moja au zaidi ya usambazaji wa Mfano Mkubwa wa Lugha (LLM) kupitia mtoa huduma anayeungwa mkono kama OpenAI, Azure au Hugging Face. Hawa hutoa _kiunganishi kilichohudumiwa_ (API) ambacho tunaweza kufikia kwa mpangilio sahihi wa vitambulisho (funguo ya API au tokeni). Katika kozi hii, tunajadili watoa huduma hawa:

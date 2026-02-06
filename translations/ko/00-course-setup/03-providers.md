@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T13:49:31+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ko"
-}
--->
 # LLM 공급자 선택 및 구성 🔑
 
 과제는 OpenAI, Azure 또는 Hugging Face와 같은 지원되는 서비스 공급자를 통해 하나 이상의 대형 언어 모델(LLM) 배포에 대해 작동하도록 설정할 수도 있습니다. 이들은 올바른 자격 증명(API 키 또는 토큰)으로 프로그래밍 방식으로 액세스할 수 있는 _호스팅된 엔드포인트_(API)를 제공합니다. 이 과정에서는 다음 공급자에 대해 다룹니다:

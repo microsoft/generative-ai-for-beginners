@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "85b754d4dc980f270f264d17116d9a5f",
-  "translation_date": "2025-12-19T13:41:54+00:00",
-  "source_file": "16-open-source-models/README.md",
-  "language_code": "ja"
-}
--->
 [![Open Source Models](../../../translated_images/ja/16-lesson-banner.6b56555e8404fda1.webp)](https://youtu.be/CuICgfuHFSg?si=x8SpFRUsIxM9dohN)
 
 ## はじめに

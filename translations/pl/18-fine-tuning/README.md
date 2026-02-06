@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:11:31+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "pl"
-}
--->
-[![Otwarte Modele Źródłowe](../../../../../translated_images/pl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Otwarte Modele Źródłowe](../../../translated_images/pl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Dostosowywanie Twojego LLM
 
@@ -32,7 +23,7 @@ Gotowy? Zaczynajmy.
 
 Chcesz zobaczyć ogólny obraz tego, co omówimy, zanim zaczniemy? Sprawdź ten ilustrowany przewodnik, który opisuje ścieżkę nauki dla tej lekcji – od poznania podstawowych pojęć i motywacji do dostosowywania, po zrozumienie procesu i najlepszych praktyk realizacji zadania dostosowywania. To fascynujący temat do eksploracji, więc nie zapomnij odwiedzić strony [Zasoby](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) po dodatkowe linki wspierające twoją samodzielną naukę!
 
-![Przewodnik Ilustrowany po Dostosowywaniu Modeli Językowych](../../../../../translated_images/pl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Przewodnik Ilustrowany po Dostosowywaniu Modeli Językowych](../../../translated_images/pl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Czym jest dostosowywanie modeli językowych?
 

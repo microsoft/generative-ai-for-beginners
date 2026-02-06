@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-12-19T20:19:43+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "ml"
-}
--->
 Translation for chunk 1 of 'RESOURCES.md' skipped due to timeout.
 
 ---

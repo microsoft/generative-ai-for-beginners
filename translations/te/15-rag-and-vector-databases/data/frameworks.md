@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-12-19T20:50:43+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "te"
-}
--->
 # న్యూరల్ నెట్‌వర్క్ ఫ్రేమ్‌వర్క్‌లు
 
 మనం ఇప్పటికే నేర్చుకున్నట్లుగా, న్యూరల్ నెట్‌వర్క్‌లను సమర్థవంతంగా శిక్షణ ఇవ్వడానికి మనం రెండు విషయాలు చేయాలి:

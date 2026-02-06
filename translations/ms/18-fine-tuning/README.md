@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:41:52+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ms"
-}
--->
-[![Model Sumber Terbuka](../../../../../translated_images/ms/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Model Sumber Terbuka](../../../translated_images/ms/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Penyempurnaan Model Bahasa Besar Anda
 
@@ -32,7 +23,7 @@ Bersedia? Mari kita mulakan.
 
 Ingin mendapatkan gambaran besar tentang apa yang akan kita bincangkan sebelum mendalaminya? Lihat panduan bergambar ini yang menerangkan perjalanan pembelajaran untuk pelajaran ini - dari mempelajari konsep utama dan motivasi untuk penyempurnaan, hingga memahami proses dan amalan terbaik untuk melaksanakan tugasan penyempurnaan. Topik ini sangat menarik untuk diterokai, jadi jangan lupa untuk melihat halaman [Sumber](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) untuk pautan tambahan yang menyokong perjalanan pembelajaran kendiri anda!
 
-![Panduan Bergambar Penyempurnaan Model Bahasa](../../../../../translated_images/ms/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Panduan Bergambar Penyempurnaan Model Bahasa](../../../translated_images/ms/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Apakah penyempurnaan untuk model bahasa?
 

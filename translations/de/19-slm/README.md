@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:13:26+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "de"
-}
--->
 # Einführung in kleine Sprachmodelle für generative KI für Einsteiger  
 Generative KI ist ein faszinierendes Gebiet der künstlichen Intelligenz, das sich darauf konzentriert, Systeme zu entwickeln, die in der Lage sind, neue Inhalte zu erzeugen. Diese Inhalte können von Texten und Bildern über Musik bis hin zu kompletten virtuellen Umgebungen reichen. Eine der spannendsten Anwendungen generativer KI liegt im Bereich der Sprachmodelle.
 

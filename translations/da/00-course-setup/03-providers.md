@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:27:50+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "da"
-}
--->
 # Valg & Konfiguration af en LLM-udbyder 🔑
 
 Opgaver **kan** også sættes op til at arbejde mod en eller flere Large Language Model (LLM) implementeringer gennem en understøttet serviceudbyder som OpenAI, Azure eller Hugging Face. Disse leverer et _hostet endpoint_ (API), som vi kan tilgå programmatisk med de rette legitimationsoplysninger (API-nøgle eller token). I dette kursus diskuterer vi disse udbydere:

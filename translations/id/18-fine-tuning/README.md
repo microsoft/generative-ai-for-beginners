@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:38:59+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "id"
-}
--->
-[![Open Source Models](../../../../../translated_images/id/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/id/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fine-Tuning Your LLM
 
@@ -32,7 +23,7 @@ Siap? Mari mulai.
 
 Ingin mendapatkan gambaran besar tentang apa yang akan kita bahas sebelum kita melanjutkan? Lihat panduan bergambar ini yang menggambarkan perjalanan pembelajaran untuk pelajaran ini - dari mempelajari konsep inti dan motivasi untuk fine-tuning, hingga memahami proses dan praktik terbaik dalam menjalankan tugas fine-tuning. Ini adalah topik yang menarik untuk dieksplorasi, jadi jangan lupa lihat halaman [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) untuk tautan tambahan yang mendukung pembelajaran mandiri Anda!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/id/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/id/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## What is fine-tuning for language models?
 

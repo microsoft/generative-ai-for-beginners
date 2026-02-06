@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:37:54+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ne"
-}
--->
-[![Open Source Models](../../../../../translated_images/ne/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ne/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # तपाईंको LLM लाई फाइन-ट्युनिंग
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 हामीले के समेट्नेछौं भनी ठुलो तस्बिर थाहा पाउन चाहनुहुन्छ? यो चित्रण गरिएको मार्गदर्शक हेर्नुहोस् जसले यस पाठको लागि सिकाइ यात्रालाई वर्णन गर्दछ - फाइन-ट्युनिङका मुख्य अवधारणाहरू र प्रेरणाबाट शुरू गरेर प्रक्रिया बुझ्न र फाइन-ट्युनिङ कार्य सम्पन्न गर्ने उत्तम अभ्यासहरू बारे। यो एक्सप्लोरेशनको लागि रोचक विषय हो, त्यसैले आफ्नै सिकाइ यात्रालाई समर्थन गर्न थप लिंकहरूको लागि [संसाधनहरू](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) पृष्ठ अवश्य हेर्नुहोस्!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ne/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ne/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## भाषा मोडेलहरूको लागि फाइन-ट्युनिङ के हो?
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df027997f1448323d6159b78a1b669bf",
-  "translation_date": "2025-10-17T23:04:49+00:00",
-  "source_file": "06-text-generation-apps/README.md",
-  "language_code": "ar"
-}
--->
 # بناء تطبيقات توليد النصوص
 
 [![بناء تطبيقات توليد النصوص](../../../translated_images/ar/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)

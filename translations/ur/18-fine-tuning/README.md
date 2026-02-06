@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:59:07+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ur"
-}
--->
-[![اوپن سورس ماڈلز](../../../../../translated_images/ur/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![اوپن سورس ماڈلز](../../../translated_images/ur/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # اپنے LLM کی فائن ٹیوننگ
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 کیا آپ اس سبق میں کور کیے جانے والے موضوعات کا ایک جامع جائزہ لینا چاہتے ہیں؟ اس illustrated guide کو دیکھیں جو سیکھنے کے سفر کو بیان کرتی ہے — فائن ٹیوننگ کے بنیادی خیالات اور محرکات سے لے کر اس عمل اور بہترین طریقوں کو سمجھنے تک۔ یہ دریافت کرنے والا ایک دلچسپ موضوع ہے، لہٰذا اپنی خود سے رہنمائی کے سفر کو سپورٹ کرنے والے اضافی روابط کے لیے [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) صفحہ ضرور دیکھیں!
 
-![لینگویج ماڈلز کی فائن ٹیوننگ کا مصور شدہ گائیڈ](../../../../../translated_images/ur/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![لینگویج ماڈلز کی فائن ٹیوننگ کا مصور شدہ گائیڈ](../../../translated_images/ur/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## لینگویج ماڈلز کی فائن ٹیوننگ کیا ہے؟
 

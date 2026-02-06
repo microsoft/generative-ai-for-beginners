@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-  "translation_date": "2025-07-09T19:06:24+00:00",
-  "source_file": "21-meta/README.md",
-  "language_code": "fa"
-}
--->
 # ساخت با مدل‌های خانواده متا
 
 ## مقدمه

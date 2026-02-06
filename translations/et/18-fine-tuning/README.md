@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:40:40+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "et"
-}
--->
-[![Open Source Models](../../../../../translated_images/et/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/et/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Oma LLM-i peenhäälestamine
 
@@ -32,7 +23,7 @@ Valmis? Alustame.
 
 Tahad saada ülevaadet sellest, mida me õppetunni jooksul käsitleme, enne kui põhjalikumalt süveneme? Vaatle seda joonistatud juhendit, mis kirjeldab õppeprotsessi sellest õppetunnist – alustades peenhäälestamise põhimõtetest ja motiivist kuni protsessi ja parimate tavade mõistmiseni peenhäälestamise ülesande läbiviimisel. See on põnev uurimisvaldkond, nii et ära unusta vaadata ka [ressursside](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) lehte lisalinkide saamiseks iseseisva õppimise toetuseks!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/et/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/et/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Mis on keelemudelite peenhäälestamine?
 

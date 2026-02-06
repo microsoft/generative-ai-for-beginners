@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:38:37+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "fi"
-}
--->
 # Johdanto pieniin kielimalleihin generatiivisessa tekoälyssä aloittelijoille  
 Generatiivinen tekoäly on kiehtova tekoälyn osa-alue, joka keskittyy järjestelmien luomiseen, jotka pystyvät tuottamaan uutta sisältöä. Tämä sisältö voi olla tekstiä, kuvia, musiikkia tai jopa kokonaisia virtuaaliympäristöjä. Yksi generatiivisen tekoälyn jännittävimmistä sovelluksista liittyy kielimalleihin.
 

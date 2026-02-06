@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "55168a94c75ef46d671743c607f8f9ff",
-  "translation_date": "2025-12-19T19:58:08+00:00",
-  "source_file": "docs/_navbar.md",
-  "language_code": "kn"
-}
--->
 <!-- _navbar.md -->
 
 * ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ

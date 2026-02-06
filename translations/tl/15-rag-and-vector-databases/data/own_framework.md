@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:49:41+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa Neural Networks. Multi-Layered Perceptron
 
 Sa nakaraang bahagi, natutunan mo ang pinakasimpleng modelo ng neural network - ang one-layered perceptron, isang linear na modelo para sa dalawang klase ng klasipikasyon.

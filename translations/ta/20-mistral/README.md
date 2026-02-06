@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-10-11T11:22:25+00:00",
-  "source_file": "20-mistral/README.md",
-  "language_code": "ta"
-}
--->
 # மிஸ்ட்ரல் மாடல்களுடன் கட்டமைத்தல்
 
 ## அறிமுகம்

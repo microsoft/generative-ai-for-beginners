@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:45:52+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "cs"
-}
--->
 # Výběr a konfigurace poskytovatele LLM 🔑
 
 Úkoly **mohou** být také nastaveny tak, aby pracovaly s jedním nebo více nasazeními velkých jazykových modelů (LLM) prostřednictvím podporovaného poskytovatele služeb, jako jsou OpenAI, Azure nebo Hugging Face. Tyto poskytují _hostovaný endpoint_ (API), ke kterému můžeme programově přistupovat s příslušnými přihlašovacími údaji (API klíč nebo token). V tomto kurzu diskutujeme tyto poskytovatele:

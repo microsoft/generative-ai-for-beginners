@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:23:55+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "ko"
-}
--->
 # 초보자를 위한 생성 AI용 소형 언어 모델 소개  
 생성 AI는 새로운 콘텐츠를 생성할 수 있는 시스템을 만드는 데 중점을 둔 인공지능 분야로 매우 흥미롭습니다. 이 콘텐츠는 텍스트, 이미지, 음악부터 가상 환경 전체에 이르기까지 다양합니다. 생성 AI의 가장 흥미로운 응용 분야 중 하나는 언어 모델 영역입니다.
 

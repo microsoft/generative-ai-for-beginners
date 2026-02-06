@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:13:28+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "th"
-}
--->
 # การเลือกและการกำหนดค่าผู้ให้บริการ LLM 🔑
 
 งานมอบหมาย **อาจจะ** ถูกตั้งค่าให้ทำงานกับการปรับใช้ Large Language Model (LLM) หนึ่งหรือมากกว่าผ่านผู้ให้บริการที่รองรับ เช่น OpenAI, Azure หรือ Hugging Face ซึ่งให้ _hosted endpoint_ (API) ที่เราสามารถเข้าถึงได้โดยโปรแกรมด้วยข้อมูลรับรองที่ถูกต้อง (API key หรือ token) ในหลักสูตรนี้ เราจะพูดถึงผู้ให้บริการเหล่านี้:

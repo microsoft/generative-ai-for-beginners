@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:32:13+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "pl"
-}
--->
 # Wprowadzenie do Małych Modeli Językowych dla Generatywnej AI dla Początkujących  
 Generatywna AI to fascynująca dziedzina sztucznej inteligencji, która koncentruje się na tworzeniu systemów zdolnych do generowania nowej treści. Ta treść może obejmować tekst, obrazy, muzykę, a nawet całe wirtualne środowiska. Jednym z najbardziej ekscytujących zastosowań generatywnej AI są modele językowe.
 

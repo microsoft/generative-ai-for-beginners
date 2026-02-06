@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
-  "translation_date": "2025-10-17T23:51:36+00:00",
-  "source_file": "03-using-generative-ai-responsibly/README.md",
-  "language_code": "ja"
-}
--->
 # 生成AIを責任を持って使用する
 
 [![生成AIを責任を持って使用する](../../../translated_images/ja/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)

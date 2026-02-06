@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-  "translation_date": "2025-11-12T08:55:18+00:00",
-  "source_file": "08-building-search-applications/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Build Search Application
 
 [![Introduction to Generative AI and Large Language Models](../../../translated_images/pcm/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)

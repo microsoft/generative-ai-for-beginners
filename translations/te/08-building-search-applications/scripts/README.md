@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-12-19T20:44:48+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "te"
-}
--->
 # ట్రాన్స్క్రిప్షన్ డేటా ప్రిప్
 
 ట్రాన్స్క్రిప్షన్ డేటా ప్రిప్ స్క్రిప్టులు YouTube వీడియో ట్రాన్స్క్రిప్ట్లను డౌన్లోడ్ చేసి, OpenAI ఎంబెడ్డింగ్స్ మరియు ఫంక్షన్స్ తో సెమాంటిక్ సెర్చ్ నమూనా కోసం ఉపయోగించడానికి సిద్ధం చేస్తాయి.

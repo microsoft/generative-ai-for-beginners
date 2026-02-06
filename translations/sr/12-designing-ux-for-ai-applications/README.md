@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
-  "translation_date": "2025-10-18T01:16:51+00:00",
-  "source_file": "12-designing-ux-for-ai-applications/README.md",
-  "language_code": "sr"
-}
--->
 # Дизајнирање корисничког искуства за AI апликације
 
 [![Дизајнирање корисничког искуства за AI апликације](../../../translated_images/sr/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)

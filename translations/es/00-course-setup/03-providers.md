@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T12:39:47+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "es"
-}
--->
 # Elegir y Configurar un Proveedor de LLM 🔑
 
 Las tareas **pueden** también configurarse para trabajar con uno o más despliegues de Modelos de Lenguaje Grande (LLM) a través de un proveedor de servicios compatible como OpenAI, Azure o Hugging Face. Estos proporcionan un _endpoint alojado_ (API) al que podemos acceder programáticamente con las credenciales adecuadas (clave API o token). En este curso, discutimos estos proveedores:

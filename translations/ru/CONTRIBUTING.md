@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T05:48:15+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ru"
-}
--->
 # Вклад в проект
 
 Этот проект приветствует ваши предложения и вклад. Большинство вкладов требуют вашего согласия с Contributor License Agreement (CLA) — соглашением, в котором вы подтверждаете, что имеете право и действительно предоставляете нам права на использование вашего вклада. Подробнее на <https://cla.microsoft.com>.

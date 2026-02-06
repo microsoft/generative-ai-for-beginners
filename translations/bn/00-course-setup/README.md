@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T00:22:30+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "bn"
-}
--->
 # এই কোর্স শুরু করা
 
 আমরা খুবই উত্তেজিত যে আপনি এই কোর্সটি শুরু করছেন এবং জেনারেটিভ AI দিয়ে কী তৈরি করতে অনুপ্রাণিত হন তা দেখার জন্য অপেক্ষা করছি!

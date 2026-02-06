@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-17T18:36:40+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "th"
-}
--->
 # เริ่มต้นกับคอร์สนี้
 
 เรารู้สึกตื่นเต้นมากที่คุณจะเริ่มต้นคอร์สนี้ และได้เห็นสิ่งที่คุณจะสร้างสรรค์ด้วย Generative AI!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:31:16+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "pl"
-}
--->
 # Frameworki sieci neuronowych
 
 Jak już wiemy, aby efektywnie trenować sieci neuronowe, musimy zrobić dwie rzeczy:

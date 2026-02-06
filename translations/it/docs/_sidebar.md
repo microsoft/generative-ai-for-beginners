@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d1335b77a62c821d972c35ef82c586a",
-  "translation_date": "2025-07-09T19:19:32+00:00",
-  "source_file": "docs/_sidebar.md",
-  "language_code": "it"
-}
--->
 - Iniziare
   - [Introduzione all'Intelligenza Artificiale Generativa](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)
 

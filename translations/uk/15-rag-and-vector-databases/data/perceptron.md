@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T17:02:18+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "uk"
-}
--->
 # Вступ до нейронних мереж: Перцептрон
 
 Однією з перших спроб реалізувати щось подібне до сучасної нейронної мережі була робота Френка Розенблатта з Cornell Aeronautical Laboratory у 1957 році. Це була апаратна реалізація під назвою "Mark-1", призначена для розпізнавання примітивних геометричних фігур, таких як трикутники, квадрати та кола.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/uk/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/uk/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > Зображення з Wikipedia
 

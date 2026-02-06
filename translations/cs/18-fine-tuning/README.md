@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:56:15+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "cs"
-}
--->
-[![Open Source Models](../../../../../translated_images/cs/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/cs/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Doladění vašeho LLM
 
@@ -32,7 +23,7 @@ Jste připraveni? Pojďme začít.
 
 Chcete získat přehled o tom, co budeme probírat, ještě předtím, než se pustíme do podrobností? Podívejte se na tento ilustrovaný průvodce, který popisuje vzdělávací cestu této lekce – od seznámení s klíčovými koncepty a motivací pro doladění až po pochopení procesu a nejlepších postupů pro provedení doladění. Je to fascinující téma k prozkoumání, tak nezapomeňte navštívit stránku [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pro další odkazy na podporu vašeho samostatného vzdělávání!
 
-![Ilustrovaný průvodce doladěním jazykových modelů](../../../../../translated_images/cs/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Ilustrovaný průvodce doladěním jazykových modelů](../../../translated_images/cs/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Co je doladění jazykových modelů?
 

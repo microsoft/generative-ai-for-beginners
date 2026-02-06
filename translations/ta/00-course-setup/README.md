@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T02:38:45+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "ta"
-}
--->
 # இந்த பாடத்தை தொடங்குவது
 
 இந்த பாடத்தை நீங்கள் தொடங்குவதற்கு நாங்கள் மிகவும் உற்சாகமாக உள்ளோம், மேலும் Generative AI உடன் நீங்கள் உருவாக்குவதற்கு என்ன உந்துதல் பெறுகிறீர்கள் என்பதை பார்க்க விரும்புகிறோம்!

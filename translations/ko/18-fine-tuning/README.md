@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:22:05+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ko"
-}
--->
-[![Open Source Models](../../../../../translated_images/ko/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ko/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM 세부 조정하기
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 본격적으로 들어가기 전에 전체 개요를 보고 싶으신가요? 이 수업의 학습 여정을 도식화한 안내서를 확인하세요 - 세부 조정의 핵심 개념과 동기를 배우고, 세부 조정 작업의 과정과 모범 사례를 이해할 수 있습니다. 탐구할 만한 흥미로운 주제이니, 셀프 가이드 학습 여정을 지원하는 추가 링크를 보려면 [리소스](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) 페이지도 꼭 확인하세요!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ko/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ko/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## 언어 모델의 세부 조정이란 무엇인가?
 

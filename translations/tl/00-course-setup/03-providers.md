@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:24:00+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "tl"
-}
--->
 # Pagpili at Pag-configure ng LLM Provider 🔑
 
 Ang mga assignments **ay maaaring** i-setup upang gumana laban sa isa o higit pang Large Language Model (LLM) deployments sa pamamagitan ng isang suportadong service provider tulad ng OpenAI, Azure o Hugging Face. Nagbibigay ang mga ito ng _hosted endpoint_ (API) na maaari nating ma-access programmatically gamit ang tamang credentials (API key o token). Sa kursong ito, tatalakayin natin ang mga provider na ito:

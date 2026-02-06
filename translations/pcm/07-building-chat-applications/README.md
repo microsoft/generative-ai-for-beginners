@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
-  "translation_date": "2025-11-12T09:01:20+00:00",
-  "source_file": "07-building-chat-applications/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Build Chat App Wey Use Generative AI
 
 [![How to Build Chat App Wey Use Generative AI](../../../translated_images/pcm/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)

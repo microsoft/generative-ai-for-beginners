@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:34:31+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "vi"
-}
--->
-[![Open Source Models](../../../../../translated_images/vi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/vi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Tinh Chỉnh Lại Mô Hình Ngôn Ngữ Lớn Của Bạn
 
@@ -32,7 +23,7 @@ Sẵn sàng chưa? Bắt đầu thôi.
 
 Muốn có cái nhìn tổng quan về những gì chúng ta sẽ học trước khi đi vào chi tiết? Hãy xem hướng dẫn minh họa này mô tả hành trình học tập của bài học - từ việc tìm hiểu các khái niệm cốt lõi và động lực cho việc tinh chỉnh lại, đến hiểu quy trình và các thực hành tốt nhất để thực hiện tác vụ tinh chỉnh lại. Đây là chủ đề hấp dẫn để khám phá, đừng quên truy cập trang [Tài nguyên](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) để có thêm các liên kết hỗ trợ hành trình tự học của bạn!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/vi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/vi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Tinh chỉnh lại mô hình ngôn ngữ là gì?
 

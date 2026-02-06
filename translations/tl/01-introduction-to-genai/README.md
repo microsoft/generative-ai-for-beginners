@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-17T13:16:01+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa Generative AI at Malalaking Modelo ng Wika
 
 [![Panimula sa Generative AI at Malalaking Modelo ng Wika](../../../translated_images/tl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

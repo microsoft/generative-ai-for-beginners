@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-18T01:59:24+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "my"
-}
--->
 # အနည်းဆုံးကုဒ် AI အက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း
 
 [![အနည်းဆုံးကုဒ် AI အက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/my/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)

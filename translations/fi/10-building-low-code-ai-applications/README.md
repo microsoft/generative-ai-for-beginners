@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-17T19:43:29+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "fi"
-}
--->
 # Rakentaminen vähäkoodisia tekoälysovelluksia
 
 [![Rakentaminen vähäkoodisia tekoälysovelluksia](../../../translated_images/fi/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)

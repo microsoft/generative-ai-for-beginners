@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-12-19T20:45:21+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ml"
-}
--->
 # ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ്
 
 ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ് സ്ക്രിപ്റ്റുകൾ YouTube വീഡിയോ ട്രാൻസ്ക്രിപ്റ്റുകൾ ഡൗൺലോഡ് ചെയ്ത് Semantic Search with OpenAI Embeddings and Functions സാമ്പിളിനായി ഉപയോഗിക്കാൻ തയ്യാറാക്കുന്നു.

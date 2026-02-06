@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:29:12+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "mr"
-}
--->
 # न्यूरल नेटवर्क फ्रेमवर्क्स
 
 आपण आधीच शिकले आहे की, न्यूरल नेटवर्क्स प्रभावीपणे ट्रेन करण्यासाठी आपल्याला दोन गोष्टी कराव्या लागतात:

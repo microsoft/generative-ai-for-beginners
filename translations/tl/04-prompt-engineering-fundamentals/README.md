@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0135e6c271f3ece8699050d4debbce88",
-  "translation_date": "2025-10-17T13:19:12+00:00",
-  "source_file": "04-prompt-engineering-fundamentals/README.md",
-  "language_code": "tl"
-}
--->
 # Mga Pangunahing Kaalaman sa Prompt Engineering
 
 [![Mga Pangunahing Kaalaman sa Prompt Engineering](../../../translated_images/tl/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)

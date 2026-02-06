@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "578a2d20d79cbe5a33eac32d4eabb9b0",
-  "translation_date": "2025-10-18T02:51:41+00:00",
-  "source_file": "00-course-setup/README.md",
-  "language_code": "et"
-}
--->
 # Kursusega alustamine
 
 Meil on väga hea meel, et alustate seda kursust ja näete, milliseid ideid generatiivne tehisintellekt inspireerib teid looma!

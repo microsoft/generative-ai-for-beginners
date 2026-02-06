@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-12-19T20:52:27+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "kn"
-}
--->
 # ನ್ಯೂರಲ್ ನೆಟ್‌ವರ್ಕ್ ಫ್ರೇಮ್ವರ್ಕ್‌ಗಳು
 
 ನಾವು ಈಗಾಗಲೇ ಕಲಿತಂತೆ, ನ್ಯೂರಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ತರಬೇತುಗೊಳಿಸಲು ನಾವು ಎರಡು ಕಾರ್ಯಗಳನ್ನು ಮಾಡಬೇಕಾಗುತ್ತದೆ:

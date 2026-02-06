@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T02:10:05+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "uk"
-}
--->
 # Створення розширених підказок
 
 [![Створення розширених підказок](../../../translated_images/uk/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)

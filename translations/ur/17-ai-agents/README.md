@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
-  "translation_date": "2025-10-17T13:09:38+00:00",
-  "source_file": "17-ai-agents/README.md",
-  "language_code": "ur"
-}
--->
 [![اوپن سورس ماڈلز](../../../translated_images/ur/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## تعارف

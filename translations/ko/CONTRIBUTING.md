@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T05:51:06+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ko"
-}
--->
 # 기여하기
 
 이 프로젝트는 기여와 제안을 환영합니다. 대부분의 기여는 기여자가 자신의 기여물을 사용할 권리를 실제로 보유하고 있음을 선언하는 기여자 라이선스 계약(CLA)에 동의해야 합니다. 자세한 내용은 <https://cla.microsoft.com>을 참조하세요.

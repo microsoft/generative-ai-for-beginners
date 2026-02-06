@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-12-19T19:45:55+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "te"
-}
--->
 # క్లౌడ్ సెటప్ ☁️ – GitHub కోడ్స్‌పేసెస్
 
 **మీరు ఏదైనా స్థానికంగా ఇన్‌స్టాల్ చేయాలనుకోకపోతే ఈ గైడ్ ఉపయోగించండి.**  

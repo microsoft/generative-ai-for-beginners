@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:43:23+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "hi"
-}
--->
 # न्यूरल नेटवर्क्स का परिचय। मल्टी-लेयर्ड पर्सेप्ट्रॉन
 
 पिछले भाग में, आपने सबसे सरल न्यूरल नेटवर्क मॉडल - एक-परत वाले पर्सेप्ट्रॉन के बारे में जाना, जो एक रैखिक दो-क्लास वर्गीकरण मॉडल है।

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-  "translation_date": "2025-10-17T19:19:21+00:00",
-  "source_file": "13-securing-ai-applications/README.md",
-  "language_code": "no"
-}
--->
 # Sikring av dine generative AI-applikasjoner
 
 [![Sikring av dine generative AI-applikasjoner](../../../translated_images/no/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)

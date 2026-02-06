@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:26:12+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "fi"
-}
--->
 # Hakuavusteinen generointi (Retrieval Augmented Generation, RAG) ja vektoritietokannat
 
-[![Hakuavusteinen generointi (RAG) ja vektoritietokannat](../../../../../translated_images/fi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Hakuavusteinen generointi (RAG) ja vektoritietokannat](../../../translated_images/fi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Hakusovellusten oppitunnissa opimme lyhyesti, miten omat tietosi voidaan integroida suuriin kielimalleihin (LLM). Tässä oppitunnissa syvennymme lisää siihen, miten data voidaan perustaa LLM-sovelluksessasi, prosessin mekanismeihin ja tapoihin tallentaa tietoa, mukaan lukien sisääntulot ja teksti.
 
@@ -53,7 +44,7 @@ LLM-pohjainen chatbot käsittelee käyttäjän kehotteita luodakseen vastauksia.
 
 ### Miten RAG toimii
 
-![kuvaus RAGin toiminnasta](../../../../../translated_images/fi/how-rag-works.f5d0ff63942bd3a6.webp)
+![kuvaus RAGin toiminnasta](../../../translated_images/fi/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Oletetaan, että haluat ottaa käyttöön chatbotin, joka luo kyselyitä muistiinpanoistasi. Tarvitset tällöin yhteyden tietopohjaan. Tässä vaiheessa RAG astuu kuvaan. RAG toimii seuraavasti:
 
@@ -65,7 +56,7 @@ Oletetaan, että haluat ottaa käyttöön chatbotin, joka luo kyselyitä muistii
 
 - **Rikastettu generointi:** LLM parantaa vastaustaan haetun tiedon perusteella. Näin vastaus ei perustu pelkästään ennakkoon koulutettuun dataan, vaan myös lisättyyn relevanttiin kontekstiin. Hae data käytetään LLM:n vastausten rikastamiseen. LLM palauttaa vastauksen käyttäjän kysymykseen.
 
-![kuvaus RAG-arkkitehtuurista](../../../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
+![kuvaus RAG-arkkitehtuurista](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG-arkkitehtuuri toteutetaan transformer-tekniikalla, joka koostuu kahdesta osasta: kooderista ja purkajasta. Esimerkiksi kun käyttäjä kysyy, syötettävä teksti koodataan vektoreiksi, jotka edustavat sanojen merkitystä, ja vektorit dekoodataan dokumenttihakemistoon ja generoidaan uutta tekstiä käyttäjän kysymyksen pohjalta. LLM käyttää sekä kooderin että purkajan mallia vasteen luomiseen.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Kun data on pilkottu, voimme upottaa sen käyttäen erilaisia upotusmalleja. Joitakin käytettävissä olevia malleja ovat mm. word2vec, OpenAI:n ada-002, Azure Computer Vision ja monet muut. Mallin valinta riippuu kielestä, sisällön tyypistä (teksti/kuva/ääni), koosta ja upotuksen pituudesta.
 
 Esimerkki OpenAI:n `text-embedding-ada-002`-mallilla upotetusta tekstistä on:
-![sanasta cat upotuskuva](../../../../../translated_images/fi/cat.74cbd7946bc9ca38.webp)
+![sanasta cat upotuskuva](../../../translated_images/fi/cat.74cbd7946bc9ca38.webp)
 
 ## Haku ja vektorihaut
 
