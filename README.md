@@ -107,7 +107,7 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 ---
 
-This fork is maintained by [Igor Vepretski](https://7ya.io) - Empowering the next generation of AI builders. Learn more at [7ya.io](https://7ya.io)
+This fork is maintained by [Igor Vepretski](https://7ya.io) - Empowering the next generation of AI builders. Learn more at [7YA.IO](https://7ya.io)
 
 ## 🎒 Other Courses
 
