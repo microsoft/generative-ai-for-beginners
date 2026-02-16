@@ -1,131 +1,141 @@
-# İstek Mühendisliği Temelleri
+# Prompt Mühendisliğinin Temelleri
 
-[![İstek Mühendisliği Temelleri](../../../translated_images/tr/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Prompt Mühendisliğinin Temelleri](../../../translated_images/tr/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Giriş
-Bu modül, üretken yapay zeka modellerinde etkili istekler oluşturmak için temel kavramları ve teknikleri ele alır. Bir LLM'ye (Büyük Dil Modeli) yazdığınız isteğin şekli de önemlidir. Özenle hazırlanmış bir istek, daha kaliteli bir yanıt elde etmenizi sağlayabilir. Ancak, _istek_ ve _istek mühendisliği_ gibi terimler tam olarak ne anlama geliyor? Ve LLM'ye gönderdiğim istek _girdisini_ nasıl geliştirebilirim? Bu bölümde ve bir sonraki bölümde bu soruları yanıtlamaya çalışacağız.
+Bu modül, üretken yapay zeka modellerinde etkili istemler oluşturmak için temel kavramları ve teknikleri kapsar. Bir LLM'ye (Büyük Dil Modeli) yazdığınız istem biçimi de önemlidir. Özenle hazırlanmış bir istem, daha kaliteli yanıtlar alabilir. Peki _istem_ ve _istem mühendisliği_ gibi terimler tam olarak ne anlama geliyor? Ve LLM'ye gönderdiğim istem _girdisini_ nasıl geliştirebilirim? Bu bölüm ve bir sonraki bölümde bu soruları yanıtlamaya çalışacağız.
 
-_Üretken Yapay Zeka_, kullanıcı taleplerine yanıt olarak yeni içerikler (örneğin, metin, görseller, ses, kod vb.) oluşturma yeteneğine sahiptir. Bunu, doğal dil ve kod kullanımı için eğitilmiş OpenAI'nin GPT ("Üretken Önceden Eğitilmiş Dönüştürücü") serisi gibi _Büyük Dil Modelleri_ kullanarak başarır.
+_Uretken yapay zeka_, kullanıcı isteklerine yanıt olarak yeni içerikler (örneğin, metin, görsel, ses, kod vb.) oluşturabilir. Bunu, doğal dil ve kod kullanımı için eğitilmiş OpenAI’nin GPT (“Generative Pre-trained Transformer”) serisi gibi _Büyük Dil Modelleri_ (LLM’ler) kullanarak başarır.
 
-Kullanıcılar artık bu modellerle sohbet gibi tanıdık paradigmalar kullanarak, herhangi bir teknik uzmanlık veya eğitim gerektirmeden etkileşimde bulunabilir. Modeller _istek tabanlıdır_ - kullanıcılar bir metin girişi (istek) gönderir ve yapay zekadan bir yanıt (tamamlama) alır. Ardından, "yapay zeka ile sohbet ederek" çok aşamalı konuşmalarda isteklerini rafine edebilir ve yanıt beklentilerini karşılayana kadar iyileştirebilirler.
+Artık kullanıcılar herhangi bir teknik uzmanlık veya eğitim gerekmeden sohbet gibi tanıdık paradigmalarla bu modellerle etkileşime geçebilir. Modeller _istem tabanlıdır_ - kullanıcılar bir metin girişi (istem) gönderir, AI yanıtı (tamamlama) alır. Sonra yanıt beklentilerine uyana kadar istemlerini çok turda iteratif olarak "AI ile sohbet ederek" geliştirirler.
 
-"İstekler" artık üretken yapay zeka uygulamaları için birincil _programlama arayüzü_ haline geliyor, modellere ne yapmaları gerektiğini söylüyor ve dönen yanıtların kalitesini etkiliyor. "İstek Mühendisliği", tutarlı ve kaliteli yanıtlar sağlamak için isteklerin _tasarımı ve optimizasyonuna_ odaklanan hızla büyüyen bir çalışma alanıdır.
+“İstemler” artık üretken AI uygulamaları için temel _programlama arayüzü_ haline gelmiştir; modellere ne yapacaklarını söyler ve dönen yanıtların kalitesini etkiler. "İstem Mühendisliği", ölçekli tutarlı ve kaliteli yanıtlar sunmak için istemlerin _tasarımı ve optimizasyonu_ üzerine odaklanan hızla büyüyen bir çalışma alanıdır.
 
 ## Öğrenme Hedefleri
 
-Bu derste, İstek Mühendisliği'nin ne olduğunu, neden önemli olduğunu ve belirli bir model ve uygulama hedefi için daha etkili istekler nasıl oluşturabileceğimizi öğreneceğiz. İstek mühendisliği için temel kavramları ve en iyi uygulamaları anlayacağız - ve bu kavramların gerçek örneklere uygulandığını görebileceğimiz etkileşimli bir Jupyter Notebooks "sandbox" ortamını öğreneceğiz.
+Bu derste, İstem Mühendisliğinin ne olduğunu, neden önemli olduğunu ve belirli bir model ve uygulama amacı için daha etkili istemleri nasıl oluşturabileceğimizi öğreneceğiz. İstem mühendisliğinin temel kavramlarını ve en iyi uygulamalarını anlayacak - bu kavramların gerçek örneklere nasıl uygulandığını görebileceğimiz etkileşimli bir Jupyter Notebooks "kum havuzu" ortamını tanıyacağız.
 
-Bu dersin sonunda şunları yapabileceğiz:
+Bu dersin sonunda:
 
-1. İstek mühendisliğinin ne olduğunu ve neden önemli olduğunu açıklamak.
-2. Bir isteğin bileşenlerini ve nasıl kullanıldıklarını tanımlamak.
-3. İstek mühendisliği için en iyi uygulamaları ve teknikleri öğrenmek.
-4. Öğrenilen teknikleri gerçek örneklere uygulamak, bir OpenAI endpoint kullanarak.
+1. İstem mühendisliğinin ne olduğunu ve neden önemli olduğunu açıklayabileceğiz.
+2. Bir istemin bileşenlerini ve bunların nasıl kullanıldığını tanımlayabileceğiz.
+3. İstem mühendisliği için en iyi uygulamaları ve teknikleri öğreneceğiz.
+4. Öğrenilen teknikleri gerçek örneklere, OpenAI uç noktası kullanarak uygulayabileceğiz.
 
-## Anahtar Terimler
+## Ana Terimler
 
-İstek Mühendisliği: Yapay zeka modellerini istenen çıktıları üretmeye yönlendirmek için girdileri tasarlama ve iyileştirme pratiği.
-Tokenizasyon: Metni, modelin anlayabileceği ve işleyebileceği daha küçük birimler olan tokenlara dönüştürme süreci.
-Talimatla Ayarlanmış LLM'ler: Yanıt doğruluğunu ve alaka düzeyini artırmak için belirli talimatlarla ince ayar yapılmış Büyük Dil Modelleri (LLM'ler).
+İstem Mühendisliği: AI modellerinin istenen çıktılar üretmesini yönlendirmek için girdilerin tasarımı ve rafine edilmesi pratiği.  
+Tokenizasyon: Metni, modelin anlayıp işlem yapabileceği daha küçük birimlere (token'lara) dönüştürme süreci.  
+Talimatlarla İncelenmiş LLM’ler: Yanıt doğruluğu ve alaka düzeyini artırmak için belirli talimatlarla ince ayar yapılmış Büyük Dil Modelleri.
 
-## Öğrenme Sandbox'ı
+## Öğrenme Kum Havuzu
 
-İstek mühendisliği şu anda bilimden çok bir sanat. Bunun için sezgimizi geliştirmek adına _daha fazla pratik yapmak_ ve uygulama alanı uzmanlığını önerilen teknikler ve modele özgü optimizasyonlarla birleştiren bir deneme-yanılma yaklaşımını benimsemek en iyi yoldur.
+İstem mühendisliği şu anda daha çok sanat, bilimden çok sezgi gerektiren bir alandır. İçgörümüzü geliştirmek için en iyi yol, _daha fazla pratik yapmak_ ve uygulama alanı uzmanlığı ile önerilen teknikler ve modele özgü optimizasyonları birleştiren deneme-yanılma yaklaşımını benimsemektir.
 
-Bu derse eşlik eden Jupyter Notebook, öğrendiklerinizi uygulayabileceğiniz bir _sandbox_ ortamı sağlar - ister ders sırasında ister dersin sonunda yer alan kod zorluklarının bir parçası olarak. Alıştırmaları çalıştırmak için şunlara ihtiyacınız olacak:
+Bu dersi tamamlayan Jupyter Notebook, öğrendiklerinizi uygulayabileceğiniz bir _kum havuzu_ ortamı sunar - ister ilerlerken ister ders sonundaki kod meydan okuması sırasında. Alıştırmaları çalıştırmak için:
 
-1. **Bir Azure OpenAI API anahtarı** - dağıtılmış bir LLM için hizmet endpoint'i.
-2. **Bir Python Çalışma Zamanı** - Notebook'un çalıştırılabileceği bir ortam.
-3. **Yerel Çevre Değişkenleri** - _şimdi [KURULUM](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) adımlarını tamamlayarak hazır olun_.
+1. **Bir Azure OpenAI API anahtarı** - dağıtılmış bir LLM için servis uç noktası.  
+2. **Bir Python Çalışma Zamanı** - Notebook’un çalıştırılabileceği ortam.  
+3. **Yerel Ortam Değişkenleri** - _hazırlık için şimdiden [KURULUM](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) adımlarını tamamlayın_.
 
-Notebook, _başlangıç_ alıştırmalarıyla birlikte gelir - ancak kendi _Markdown_ (açıklama) ve _Kod_ (istek talepleri) bölümlerinizi ekleyerek daha fazla örnek veya fikir denemeye ve istek tasarımı için sezginizi geliştirmeye teşvik ediliyorsunuz.
+Notebook, _başlangıç_ alıştırmalarıyla gelir - ancak daha fazla örnek veya fikir denemek ve istem tasarımı için sezginizi geliştirmek adına kendi _Markdown_ (açıklama) ve _Kod_ (istem istekleri) bölümlerinizi eklemeniz teşvik edilir.
 
-## Resimli Kılavuz
+## Görselleştirilmiş Kılavuz
 
-Bu derste ele alınan konuların genel bir resmini görmek ister misiniz? Her birinde düşünmeniz gereken ana konuları ve önemli çıkarımları size bir fikir veren bu resimli kılavuza göz atın. Ders yol haritası, temel kavramları ve zorlukları anlamaktan başlayarak, ilgili istek mühendisliği teknikleri ve en iyi uygulamalarla bunları ele almaya kadar uzanır. Bu kılavuzdaki "Gelişmiş Teknikler" bölümü, bu müfredatın _bir sonraki_ bölümünde ele alınan içeriğe atıfta bulunur.
+Bu dersin kapsadığı konuların genel görünümünü hızlıca kavramak ister misiniz? Bu görselleştirilmiş kılavuza göz atın; ana konuları ve her biri için düşünmeniz gereken önemli çıkarımları sunar. Ders yol haritası, temel kavramları ve zorlukları anlamaktan, bunları ilgili istem mühendisliği teknikleri ve en iyi uygulamalar ile ele almaya kadar götürür. Bu kılavuzdaki "İleri Teknikler" bölümü, bu müfredatın _sonraki_ bölümünde ele alınan içeriğe atıfta bulunur.
 
-![İstek Mühendisliği için Resimli Kılavuz](../../../translated_images/tr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
+![Görselleştirilmiş Prompt Mühendisliği Kılavuzu](../../../translated_images/tr/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
-## Girişimimiz
+## Startup’ımız
 
-Şimdi, _bu konunun_ [eğitimde yapay zeka inovasyonunu getirme](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst) misyonumuzla nasıl ilişkili olduğundan bahsedelim. _Kişiselleştirilmiş öğrenme_ için yapay zeka destekli uygulamalar geliştirmek istiyoruz - bu yüzden uygulamamızın farklı kullanıcılarının nasıl "istekler" tasarlayabileceğini düşünelim:
+Şimdi, _bu konu_nun eğitim alanında [yapay zeka yeniliğini getirmek](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst) misyonumuzla nasıl ilişkili olduğundan bahsedelim. _Kişiselleştirilmiş öğrenme_ odaklı AI destekli uygulamalar geliştirmek istiyoruz - öyleyse uygulamamızın farklı kullanıcılarının istemleri nasıl "tasarlayabileceğini" düşünelim:
 
-- **Yöneticiler**, yapay zekadan _müfredat verilerini analiz ederek kapsama alanındaki boşlukları belirlemesini_ isteyebilir. Yapay zeka sonuçları özetleyebilir veya kodla görselleştirebilir.
-- **Eğitmenler**, yapay zekadan _belirli bir hedef kitle ve konu için bir ders planı oluşturmasını_ isteyebilir. Yapay zeka, belirtilen formatta kişiselleştirilmiş bir plan oluşturabilir.
-- **Öğrenciler**, yapay zekadan _zor bir konuda kendilerine rehberlik etmesini_ isteyebilir. Yapay zeka, artık öğrencilere seviyelerine uygun dersler, ipuçları ve örneklerle rehberlik edebilir.
+- **Yöneticiler** AI’dan _müfredat verisini inceleyip kapsama alanındaki boşlukları tespit etmesini_ isteyebilir. AI sonuçları özetleyebilir veya kodla görselleştirebilir.  
+- **Eğitimciler** AI’dan _hedef kitle ve konu için bir ders planı oluşturmasını_ talep edebilir. AI, belirtilen formatta kişiselleştirilmiş planı oluşturabilir.  
+- **Öğrenciler** AI’dan _zor bir konuda rehberlik etmesini (özel ders vermesini)_ isteyebilir. AI artık öğrencileri seviyelerine uygun dersler, ipuçları ve örneklerle yönlendirebilir.
 
-Bu sadece buzdağının görünen kısmı. [Eğitim için İstekler](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - eğitim uzmanları tarafından derlenen açık kaynaklı istek kütüphanesine göz atın - olasılıkların daha geniş bir yelpazesini görmek için! _Bu isteklerden bazılarını sandbox'ta veya OpenAI Playground'da çalıştırmayı deneyin ve neler olduğunu görün!_
+Bu sadece buzdağının görünen kısmı. Daha kapsamlı fikir edinmek için eğitim uzmanları tarafından düzenlenen açık kaynaklı bir istemler kütüphanesi olan [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) projesine göz atın! _İstemleri kum havuzunda veya OpenAI Playground’da çalıştırmayı deneyin, sonucu görün!_
 
-## İstek Mühendisliği Nedir?
+<!--
+DERS ŞABLONU:
+Bu birimde temel kavram #1 işlenecek.
+Kavram örneklerle ve referanslarla pekiştirilecek.
 
-Bu derse, **İstek Mühendisliği**ni belirli bir uygulama hedefi ve model için tutarlı ve kaliteli yanıtlar (tamamlamalar) sağlamak amacıyla metin girdilerini (istekleri) _tasarlama ve optimize etme_ süreci olarak tanımlayarak başladık. Bunu 2 aşamalı bir süreç olarak düşünebiliriz:
+KAVRAM #1:
+İstem Mühendisliği.
+Tanımlayın ve neden gerekli olduğunu açıklayın.
+-->
 
-- Belirli bir model ve hedef için ilk isteği _tasarlamak_
-- Yanıtın kalitesini artırmak için isteği _iteratif olarak iyileştirmek_
+## İstem Mühendisliği Nedir?
 
-Bu, optimal sonuçlar elde etmek için kullanıcı sezgisi ve çabasını gerektiren bir deneme-yanılma sürecidir. Peki neden önemlidir? Bu soruyu yanıtlamak için önce üç kavramı anlamamız gerekiyor:
+Bu derse, bir uygulama amacı ve model için tutarlı ve kaliteli yanıtlar (tamalamalar) sağlamak üzere metin girişlerini (istemleri) _tasarlama ve optimize etme_ süreci olarak İstem Mühendisliği’ni tanımlayarak başladık. Bunu iki aşamalı bir süreç olarak düşünebiliriz:
 
-- _Tokenizasyon_ = modelin isteği nasıl "gördüğü"
-- _Temel LLM'ler_ = temel modelin bir isteği nasıl "işlediği"
-- _Talimatla Ayarlanmış LLM'ler_ = modelin artık "görevleri" nasıl görebildiği
+- Verilen model ve amaç için başlangıç istemini _tasarlamak_  
+- Yanıt kalitesini arttırmak için istemi yinelemeli olarak _iyileştirmek_
+
+Bu, optimum sonucu elde etmek için kullanıcı sezgisini ve çabasını gerektiren zorunlu bir deneme-yanılma sürecidir. Peki neden önemlidir? Bu sorunun cevabı için önce üç kavramı anlamamız gerekir:
+
+- _Tokenizasyon_ = modelin istemi "nasıl gördüğü"  
+- _Temel LLM’ler_ = temel modelin bir istemi "nasıl işlediği"  
+- _Talimatlarla İncelenmiş LLM’ler_ = modelin artık "görevleri nasıl görebileceği"
 
 ### Tokenizasyon
 
-Bir LLM, istekleri _token dizisi_ olarak görür ve farklı modeller (veya bir modelin farklı sürümleri) aynı isteği farklı şekillerde tokenleştirebilir. LLM'ler tokenlar üzerinde (ham metin üzerinde değil) eğitildiğinden, isteklerin nasıl tokenleştirildiği, oluşturulan yanıtın kalitesi üzerinde doğrudan bir etkiye sahiptir.
+Bir LLM, istemleri farklı modellerin (veya model sürümlerinin) aynı istemi farklı şekillerde tokenleştirebildiği bir _token dizisi_ olarak görür. LLM’ler tokenler üzerinde eğitildiği için (ham metin değil), istemlerin nasıl tokenleştirildiği oluşturulan yanıtın kalitesini doğrudan etkiler.
 
-Tokenizasyonun nasıl çalıştığına dair bir fikir edinmek için aşağıda gösterilen [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) gibi araçları deneyin. İsteğinizi kopyalayın - ve bunun tokenlara nasıl dönüştüğünü görün, boşluk karakterleri ve noktalama işaretlerinin nasıl ele alındığına dikkat edin. Bu örneğin daha eski bir LLM'yi (GPT-3) gösterdiğini unutmayın - bu nedenle daha yeni bir modelle denemek farklı bir sonuç üretebilir.
+Tokenizasyonun nasıl çalıştığına dair sezgi edinmek için aşağıdaki gibi araçları deneyin: [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst). İsteminizi kopyalayıp yapıştırın - boşluk karakterleri ve noktalama işaretlerinin nasıl işlendiğine dikkat edin. Bu örnek daha eski bir LLM’yi (GPT-3) gösteriyor; daha yeni modelle denerken farklı sonuçlar görebilirsiniz.
 
 ![Tokenizasyon](../../../translated_images/tr/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Kavram: Temel Modeller
 
-Bir istek tokenleştirildikten sonra, ["Temel LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (veya Temel model) işlevi, o dizideki bir sonraki tokeni tahmin etmektir. LLM'ler büyük metin veri setleri üzerinde eğitildiğinden, tokenlar arasındaki istatistiksel ilişkiler hakkında iyi bir anlayışa sahiptir ve bu tahmini belirli bir güvenle yapabilir. Ancak, istekteki veya tokendeki kelimelerin _anlamını_ anlamazlar; sadece bir sonraki tahminleriyle "tamamlayabilecekleri" bir desen görürler. Kullanıcı müdahalesi veya önceden belirlenmiş bir koşulla sonlandırılana kadar diziyi tahmin etmeye devam edebilirler.
+İstem tokenleştirildikten sonra, ["Temel LLM" (Base LLM)](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (veya temel model) işlevi, o dizideki bir sonraki tokenı tahmin etmektir. LLM’ler devasa metin veri kümeleri üzerinde eğitildiğinden, tokenlar arasındaki istatistiksel ilişkileri iyi bilir ve bu tahmini nispeten güvenle yapabilir. Ancak metindeki kelimelerin _anlamını_ anlamazlar; sadece "tamamlayabilecekleri" bir desen görürler. Kullanıcı müdahalesi veya önceden belirlenmiş bir koşul ile sonlandırılana kadar tahmin etmeye devam edebilirler.
 
-İstek tabanlı tamamlamanın nasıl çalıştığını görmek ister misiniz? Yukarıdaki isteği Azure OpenAI Studio'nun [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) bölümüne varsayılan ayarlarla girin. Sistem, istekleri bilgi talepleri olarak ele alacak şekilde yapılandırılmıştır - bu nedenle bu bağlamı karşılayan bir tamamlama görmelisiniz.
+İstem tabanlı tamamlama nasıl çalışır görmek ister misiniz? Yukarıdaki istemi Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) varsayılan ayarlarla girin. Sistem, istemleri bilgi talebi olarak ele alacak şekilde yapılandırmıştır; bu nedenle bu bağlama uygun bir tamamlama görmelisiniz.
 
-Peki ya kullanıcı, belirli bir kriteri veya görev hedefini karşılayan bir şey görmek isteseydi? İşte bu noktada _talimatla ayarlanmış_ LLM'ler devreye giriyor.
+Peki ya kullanıcı, belirli kriterlere veya görev hedefine uyan bir şey görmek isteseydi? İşte burada _talimatlarla ince ayar yapılmış_ LLM’ler devreye girer.
 
 ![Temel LLM Sohbet Tamamlama](../../../translated_images/tr/04-playground-chat-base.65b76fcfde0caa67.webp)
 
-### Kavram: Talimatla Ayarlanmış LLM'ler
+### Kavram: Talimatlarla İncelenmiş LLM’ler
 
-Bir [Talimatla Ayarlanmış LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst), temel modelle başlar ve örnekler veya giriş/çıkış çiftleri (örneğin, çok aşamalı "mesajlar") ile ince ayar yapılarak açık talimatlar içerebilir - ve yapay zekanın yanıtı bu talimatı takip etmeye çalışır.
+Bir [Talimatlarla İncelenmiş LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst), temel modelle başlar ve açık talimatlar içerebilen örnekler veya giriş/çıkış çiftleri (çok tur "mesajlar" gibi) ile ince ayar yapılır - AI da yanıtında bu talimatı izlemeye çalışır.
 
-Bu, modelin _talimatları takip etmesini_ ve _geri bildirimlerden öğrenmesini_ sağlayarak, pratik uygulamalara daha uygun ve kullanıcı hedeflerine daha uygun yanıtlar üretmesini sağlayan İnsan Geri Bildirimi ile Takviyeli Öğrenme (RLHF) gibi teknikler kullanır.
+Bu, İnsan Geri Bildirimi ile Pekiştirmeli Öğrenme (RLHF) gibi teknikler kullanarak modeli _talimatları takip etmeye_ ve _geri bildirimden öğrenmeye_ yönlendirir, böylece daha pratik uygulamalara uygun ve kullanıcı amaçlarına daha alakalı yanıtlar üretir.
 
-Hadi deneyelim - yukarıdaki isteği tekrar gözden geçirin, ancak şimdi _sistem mesajını_ şu talimatı bağlam olarak sağlamak için değiştirin:
+Deneyelim - yukarıdaki istemi gözden geçirin, ancak şimdi _sistem mesajını_ şu talimatla değiştirin:
 
-> _Size verilen içeriği ikinci sınıf bir öğrenci için özetleyin. Sonucu bir paragraf ve 3-5 madde ile sınırlayın._
+> _Verilen içeriği ikinci sınıf öğrencisi için özetleyin. Sonucu 3-5 madde işaretli, tek bir paragraf olarak tutun._
 
-Sonucun şimdi istenen hedefi ve formatı nasıl yansıttığını görün? Bir eğitmen artık bu yanıtı doğrudan sınıfındaki slaytlarında kullanabilir.
+Sonucun istenen hedef ve formata göre ayarlandığını göreceksiniz. Bir eğitimci bu yanıtı doğrudan o ders için slaytlarında kullanabilir.
 
-![Talimatla Ayarlanmış LLM Sohbet Tamamlama](../../../translated_images/tr/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
+![Talimatlarla İncelenmiş LLM Sohbet Tamamlama](../../../translated_images/tr/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
-## Neden İstek Mühendisliğine İhtiyacımız Var?
+## Neden İstem Mühendisliğine İhtiyacımız Var?
 
-Artık isteklerin LLM'ler tarafından nasıl işlendiğini bildiğimize göre, _neden_ istek mühendisliğine ihtiyacımız olduğunu konuşalım. Cevap, mevcut LLM'lerin _güvenilir ve tutarlı tamamlamaları_ elde etmeyi daha zor hale getiren bir dizi zorluk sunmasında yatmaktadır. Örneğin:
+Artık istemlerin LLM’ler tarafından nasıl işlendiğini bildiğimize göre, neden istem mühendisliğine ihtiyacımız olduğunu konuşalım. Cevap, mevcut LLM’lerin, _güvenilir ve tutarlı tamamalara_ ulaşmayı, istem yapısı ve optimizasyonuna çaba harcamadan zorlaştıran birkaç zorluk barındırmasında yatar. Örneğin:
 
-1. **Model yanıtları rastlantısaldır.** _Aynı istek_, farklı modeller veya model sürümleriyle muhtemelen farklı yanıtlar üretecektir. Ve hatta _aynı modelle_ farklı zamanlarda farklı sonuçlar üretebilir. _İstek mühendisliği teknikleri, daha iyi sınırlar sağlayarak bu varyasyonları en aza indirmemize yardımcı olabilir_.
+1. **Model yanıtları stokastiktir.** _Aynı istem_, farklı modeller veya sürümler ile farklı yanıtlar oluşturabilir. Hatta _aynı model_ ile farklı zamanlarda bile farklı sonuçlar üretebilir. _İstem mühendisliği teknikleri bu varyasyonları azaltmak için daha iyi kılavuzlar sağlar_.
 
-1. **Modeller yanıtları uydurabilir.** Modeller, _büyük ama sınırlı_ veri setleriyle önceden eğitildiğinden, bu eğitim kapsamı dışındaki kavramlar hakkında bilgi eksikliği yaşarlar. Sonuç olarak, tamamlamalar bazen yanlış, hayali veya bilinen gerçeklerle doğrudan çelişkili olabilir. _İstek mühendisliği teknikleri, kullanıcıların yapay zekadan alıntılar veya mantık istemek gibi bu tür uydurmaları belirlemesine ve azaltmasına yardımcı olur_.
+1. **Modeller yanıt uydurabilir.** Modeller _büyük fakat sonlu_ veri kümeleriyle önceden eğitildiğinden, eğitim kapsamı dışındaki kavramlar hakkında bilgileri olmayabilir. Sonuç olarak, yanlış, hayali veya bilinen gerçeklerle doğrudan çelişen yanıtlar üretebilirler. _İstem mühendisliği teknikleri, örneğin AI’dan kaynak göstermek veya mantık yürütme istemek suretiyle bu uydurmaların tespiti ve azaltılmasına yardımcı olur_.
 
-1. **Modellerin yetenekleri değişkenlik gösterebilir.** Daha yeni modeller veya model nesilleri daha zengin yeteneklere sahip olacak, ancak maliyet ve karmaşıklık açısından benzersiz tuhaflıklar ve ödünler de getirecektir. _İstek mühendisliği, model farklılıklarını soyutlayan ve ölçeklenebilir, sorunsuz yollarla modele özgü gereksinimlere uyum sağlayan en iyi uygulamalar ve iş akışları geliştirmemize yardımcı olabilir_.
+1. **Model yetenekleri değişkenlik gösterir.** Daha yeni modeller veya model kuşakları daha zengin yeteneklere sahip olur ancak maliyet ve karmaşıklık açısından kendine özgü özellikler ve dengeler getirir. _İstem mühendisliği, farklılıkları soyutlayarak ve model özel gereksinimlere ölçeklenebilir, sorunsuz biçimde uyum sağlayan en iyi uygulamalar geliştirmemizi sağlar_.
 
-Bunu OpenAI veya Azure OpenAI Playground'da eylemde görelim:
+Bunu OpenAI veya Azure OpenAI Playground’da deneyelim:
 
-- Aynı isteği farklı LLM dağıtımlarıyla (örneğin, OpenAI, Azure OpenAI, Hugging Face) kullanın - varyasyonları gördünüz mü?
-- Aynı isteği _aynı_ LLM dağıtımıyla (örneğin, Azure OpenAI Playground) tekrar tekrar kullanın - bu varyasyonlar nasıl farklılık gösterdi?
+- Farklı LLM dağıtımları (Ör. OpenAI, Azure OpenAI, Hugging Face) ile aynı istemi kullanın - varyasyonları gördünüz mü?  
+- Aynı LLM dağıtımı (Ör. Azure OpenAI Playground) ile aynı istemi tekrarlı kullanın - bu varyasyonlar nasıl farklılaştı?
 
-### Uydurma Örneği
+### Uydurmalar Örneği
 
-Bu derste, **"uydurma"** terimini, LLM'lerin bazen eğitimlerindeki sınırlamalar veya diğer kısıtlamalar nedeniyle gerçeğe uygun olmayan bilgiler üretmesi olgusunu ifade etmek için kullanıyoruz. Popüler makalelerde veya araştırma makalelerinde bu olguyu _"halüsinasyonlar"_ olarak duymuş olabilirsiniz. Ancak, makine kaynaklı bir sonucu insan benzeri bir özelliğe atfederek davranışı yanlış bir şekilde insanlaştırmamak için _"uydurma"_ terimini kullanmanızı şiddetle öneriyoruz. Bu aynı zamanda [Sorumlu Yapay Zeka yönergelerini](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) terminoloji açısından güçlendirir ve bazı bağlamlarda saldırgan veya kapsayıcı olmayan olarak kabul edilebilecek terimleri ortadan kaldırır.
+Bu derste, LLM’lerin bazen eğitim sınırları veya diğer kısıtlamalar nedeniyle gerçek dışı bilgi üretmesi fenomeni için **"uydurma"** terimini kullanıyoruz. Popüler makalelerde veya araştırma makalelerinde buna _"halüsinasyonlar"_ denildiğine de şahit olmuş olabilirsiniz. Ancak davranışı insan-insanlaştırmamak için terim olarak _"uydurma"_ kullanmanızı şiddetle öneriyoruz. Bu, terim açısından [Sorumlu AI yönergelerini](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) destekler ve bazı bağlamlarda da saldırgan ya da dışlayıcı sayılabilecek terimleri çıkarır.
 
-Uydurmaların nasıl çalıştığını anlamak ister misiniz? Yapay zekaya eğitim veri setinde bulunmayan bir konu için içerik oluşturmasını isteyen bir istek düşünün. Örneğin - şu isteği denedim:
+Uydurmaların nasıl çalıştığını kavramak ister misiniz? AI’ya eğitim veri kümesinde bulunmayan bir konu için içerik oluşturma talimatı verdiğinizi düşünün. Örneğin - şu istemi denedim:
 
-> **İstek:** 2076'daki Mars Savaşı hakkında bir ders planı oluştur.
-Bir web araması, Mars savaşları hakkında kurgusal hikayeler (örneğin, televizyon dizileri veya kitaplar) olduğunu gösterdi - ancak 2076 yılında geçen bir hikaye bulunmuyor. Mantık yürütme yoluyla, 2076'nın _gelecekte_ olduğunu ve bu nedenle gerçek bir olayla ilişkilendirilemeyeceğini söyleyebiliriz.
+> **İstem:** 2076 Mars Savaşı hakkında bir ders planı oluştur.
+Bir web araması, Kızıl Gezegen savaşları hakkında kurgusal anlatımlar (örneğin, televizyon dizileri veya kitaplar) olduğunu gösterdi - ancak hiçbiri 2076 yılında değil. Sağduyu da bize 2076'nın _gelecekte_ olduğunu ve bu nedenle gerçek bir olayla ilişkilendirilemeyeceğini söylüyor.
 
-Peki, bu istemi farklı LLM sağlayıcılarıyla çalıştırdığımızda ne olur?
+Peki bu istemi farklı LLM sağlayıcıları ile çalıştırdığımızda ne olur?
 
 > **Yanıt 1**: OpenAI Playground (GPT-35)
 
@@ -135,53 +145,63 @@ Peki, bu istemi farklı LLM sağlayıcılarıyla çalıştırdığımızda ne ol
 
 ![Yanıt 2](../../../translated_images/tr/04-fabrication-aoai.b14268e9ecf25caf.webp)
 
-> **Yanıt 3**: Hugging Face Chat Playground (LLama-2)
+> **Yanıt 3**: : Hugging Face Chat Playground (LLama-2)
 
 ![Yanıt 3](../../../translated_images/tr/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
-Beklendiği gibi, her model (veya model versiyonu) stokastik davranış ve model yeteneklerindeki farklılıklar nedeniyle biraz farklı yanıtlar üretiyor. Örneğin, bir model 8. sınıf seviyesindeki bir kitleyi hedeflerken, diğeri lise öğrencilerini hedef alıyor. Ancak, üç model de bilgisiz bir kullanıcıyı olayın gerçek olduğuna ikna edebilecek yanıtlar üretti.
+Beklendiği gibi, her model (veya model sürümü), stokastik davranış ve model kapasiteleri farklılıkları nedeniyle biraz farklı yanıtlar üretir. Örneğin, bir model 8. sınıf seviyesindeki bir kitleyi hedeflerken, diğeri lise öğrencisi varsaymaktadır. Ancak üç model de, bilgisiz bir kullanıcıyı olayın gerçek olduğuna inandırabilecek yanıtlar üretti.
 
-_İstem mühendisliği_ teknikleri, örneğin _meta-istem oluşturma_ ve _sıcaklık ayarları_, modelin yanlış bilgi üretmesini bir ölçüde azaltabilir. Yeni istem mühendisliği _mimari_ yaklaşımları, bu etkileri azaltmak veya ortadan kaldırmak için yeni araçları ve teknikleri istem akışına sorunsuz bir şekilde entegre eder.
+_metaprompting_ ve _sıcaklık yapılandırması_ gibi istem mühendisliği teknikleri, model uydurmalarını bir dereceye kadar azaltabilir. Yeni istem mühendisliği _mimari_leri, bu etkileri hafifletmek veya azaltmak için yeni araçları ve teknikleri sorunsuzca istem akışına entegre etmektedir.
 
 ## Vaka Çalışması: GitHub Copilot
 
-Bu bölümü, istem mühendisliğinin gerçek dünya çözümlerinde nasıl kullanıldığını anlamak için bir vaka çalışmasıyla tamamlayalım: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Bu bölümü, gerçek dünya çözümlerinde istem mühendisliğinin nasıl kullanıldığını anlamak için bir Vaka Çalışması ile tamamlayalım: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-GitHub Copilot, sizin "Yapay Zeka Eş Programcınız"dır - metin istemlerini kod tamamlama önerilerine dönüştürür ve Visual Studio Code gibi geliştirme ortamınıza entegre edilerek sorunsuz bir kullanıcı deneyimi sunar. Aşağıdaki blog serilerinde belgelenenlere göre, ilk versiyon OpenAI Codex modeline dayanıyordu - mühendisler hızla modeli ince ayar yapma ve kod kalitesini artırmak için daha iyi istem mühendisliği teknikleri geliştirme ihtiyacını fark ettiler. Temmuz ayında, [Codex'in ötesine geçen geliştirilmiş bir yapay zeka modelini tanıttılar](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) ve daha hızlı öneriler sunmaya başladılar.
+GitHub Copilot, sizin "Yapay Zeka Eş Programcınız"dır - metin istemlerini kod tamlamalarına dönüştürür ve geliştirme ortamınıza (örneğin, Visual Studio Code) entegre edilerek kesintisiz bir kullanıcı deneyimi sunar. Aşağıdaki blog serisinde belgelenmiştir ki, en erken versiyon OpenAI Codex modeline dayanıyordu - mühendisler kısa sürede modeli ince ayar yapma ve kod kalitesini artırmak için daha iyi istem mühendisliği teknikleri geliştirme ihtiyacını fark ettiler. Temmuz ayında, [Codex'in ötesine geçen geliştirilmiş bir yapay zeka modeli](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) duyurdular; böylece öneriler çok daha hızlı hale geldi.
 
-Öğrenme yolculuklarını takip etmek için aşağıdaki yazıları sırayla okuyabilirsiniz.
+Öğrenme yolculuklarını takip etmek için yazıları sırasıyla okuyun.
 
-- **Mayıs 2023** | [GitHub Copilot Kodunuzu Anlamada Daha İyi Hale Geliyor](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- **Mayıs 2023** | [GitHub İçinde: GitHub Copilot'un Arkasındaki LLM'lerle Çalışmak](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **Mayıs 2023** | [GitHub Copilot Kodunuzu Anlama Konusunda Daha İyi Oluyor](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **Mayıs 2023** | [GitHub İçinde: GitHub Copilot Arkasındaki LLM'lerle Çalışmak](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
 - **Haziran 2023** | [GitHub Copilot için Daha İyi İstemler Nasıl Yazılır](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Temmuz 2023** | [GitHub Copilot, Codex'in Ötesine Geçiyor ve Geliştirilmiş Yapay Zeka Modeliyle Daha Akıllı ve Verimli Kodlama Sunuyor](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
-- **Temmuz 2023** | [Geliştiriciler için İstem Mühendisliği ve LLM Rehberi](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
-- **Eylül 2023** | [Bir Kurumsal LLM Uygulaması Nasıl İnşa Edilir: GitHub Copilot'tan Alınan Dersler](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **Temmuz 2023** | [GitHub Copilot, Geliştirilmiş Yapay Zeka Modeli ile Codex'in Ötesine Geçiyor](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **Temmuz 2023** | [Geliştirici Rehberi: İstem Mühendisliği ve LLM'ler](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **Eylül 2023** | [Kurumsal Bir LLM Uygulaması Nasıl İnşa Edilir: GitHub Copilot'tan Dersler](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-Ayrıca, [Mühendislik bloglarını](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) inceleyerek, bu modellerin ve tekniklerin gerçek dünya uygulamalarını nasıl yönlendirdiğini gösteren [bu yazı](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) gibi daha fazla gönderiye ulaşabilirsiniz.
+Gerçek dünyadaki uygulamalar için bu modellerin ve tekniklerin nasıl _uygulandığını_ gösteren [mühendislik bloglarını](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) da, [bu yazı gibi](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) okuyabilirsiniz.
 
 ---
 
-## İstem Tasarımı
+<!--
+DERS ŞABLONU:
+Bu birim temel kavram #2'yi kapsamalıdır.
+Kavram örnekler ve referanslarla pekiştirilir.
 
-İstem mühendisliğinin neden önemli olduğunu gördük - şimdi istemlerin nasıl _oluşturulduğunu_ anlayalım, böylece daha etkili istem tasarımı için farklı teknikleri değerlendirebiliriz.
+KAVRAM #2:
+İstem Tasarımı.
+Örneklerle açıklanmıştır.
+-->
+
+## İstem Oluşturma
+
+İstem mühendisliğinin neden önemli olduğunu gördük - şimdi istemlerin nasıl _oluşturulduğunu_ anlayalım ki, daha etkili istem tasarımı için farklı teknikleri değerlendirebilelim.
 
 ### Temel İstem
 
-Temel istemle başlayalım: modele başka bir bağlam olmadan gönderilen bir metin girdisi. İşte bir örnek - ABD ulusal marşının ilk birkaç kelimesini OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) ile gönderdiğimizde, model hemen yanıtı _tamamlayarak_ sonraki birkaç satırı tahmin eder ve temel tahmin davranışını gösterir.
+Basit bir istem ile başlayalım: modele başka bir bağlam olmadan gönderilen bir metin girişi. Örneğin, US milli marşının ilk birkaç kelimesini OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) ‘ye gönderdiğimizde, model hemen yanıtı takip eden birkaç satırla _tamamlar_, temel tahmin davranışını gösterir.
 
-| İstem (Girdi)     | Tamamlama (Çıktı)                                                                                                                        |
+| İstem (Giriş)     | Tamamlama (Çıkış)                                                                                                                        |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| Oh say can you see | Görünüşe göre ABD ulusal marşı "The Star-Spangled Banner"ın sözlerini başlatıyorsunuz. Tam sözler şu şekilde devam eder... |
+| Oh say can you see | ABD'nin milli marşı olan "The Star-Spangled Banner"ın sözlerini okumaya başladığınız anlaşılıyor. Tam metni şöyledir ... |
 
 ### Karmaşık İstem
 
-Şimdi bu temel isteme bağlam ve talimatlar ekleyelim. [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) ile bir istemi, _mesajlar_ koleksiyonu olarak oluşturabiliriz:
+Şimdi o temel isteme bağlam ve talimatlar ekleyelim. [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst), karmaşık bir istemi şu şekildedir bir _mesajlar_ koleksiyonu olarak oluşturmamıza izin verir:
 
-- Kullanıcı girdisi ve asistan yanıtını yansıtan giriş/çıkış çiftleri.
-- Asistan davranışı veya kişiliği için bağlam belirleyen sistem mesajı.
+- _Kullanıcı_ girdisi ve _asistan_ yanıtını yansıtan giriş/çıkış çiftleri.
+- Asistan davranışını veya kişiliğini belirleyen sistem mesajı.
 
-İstek artık aşağıdaki formda olup, _tokenizasyon_ bağlam ve konuşmadan ilgili bilgileri etkili bir şekilde yakalar. Sistem bağlamını değiştirmek, sağlanan kullanıcı girdileri kadar tamamlama kalitesi üzerinde etkili olabilir.
+İstek aşağıdaki biçimdedir; burada _tokenization_ bağlam ve sohbetten ilgili bilgileri etkili biçimde yakalar. Sistem bağlamını değiştirmek, verilen kullanıcı girdileri kadar tamamlama kalitesini etkileyebilir.
 
 ```python
 response = openai.chat.completions.create(
@@ -197,191 +217,194 @@ response = openai.chat.completions.create(
 
 ### Talimat İstemi
 
-Yukarıdaki örneklerde, kullanıcı istemi bilgi talebi olarak yorumlanabilecek basit bir metin sorgusuydu. _Talimat_ istemleriyle, bu metni bir görevi daha ayrıntılı bir şekilde belirtmek için kullanabilir, yapay zekaya daha iyi rehberlik sağlayabiliriz. İşte bir örnek:
+Yukarıdaki örneklerde, kullanıcı istemi bir bilgi talebi olarak yorumlanabilecek basit bir metin sorgusuydu. _Talimat_ istemi ile, metni yapay zekaya daha ayrıntılı bir görev belirtmek için kullanabilir ve daha iyi rehberlik sağlayabiliriz. İşte bir örnek:
 
-| İstem (Girdi)                                                                                                                                                                                                                         | Tamamlama (Çıktı)                                                                                                        | Talimat Türü        |
+| İstem (Giriş)                                                                                                                                                                                                                         | Tamamlama (Çıkış)                                                                                                        | Talimat Türü       |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
-| İç Savaş hakkında bir açıklama yazın                                                                                                                                                                                                   | _basit bir paragraf döndü_                                                                                              | Basit              |
-| İç Savaş hakkında bir açıklama yazın. Önemli tarihleri ve olayları belirtin ve bunların önemini açıklayın                                                                                                                              | _bir paragraf ve ardından önemli olay tarihleriyle açıklamalar içeren bir liste döndü_                                             | Karmaşık             |
-| İç Savaş hakkında bir paragraf yazın. Önemli tarihleri ve bunların önemini içeren 3 madde ekleyin. Önemli tarihi figürler ve katkılarıyla ilgili 3 madde daha ekleyin. Çıktıyı JSON dosyası olarak döndürün.                             | _daha kapsamlı detaylar döndü, bir metin kutusunda JSON formatında, dosyaya kopyalanıp doğrulanabilir_ | Karmaşık. Formatlı. |
+| İç Savaş hakkında bir açıklama yaz                                                                                                                                                                                                   | _basit bir paragraf döndürdü_                                                                                             | Basit               |
+| İç Savaş hakkında bir açıklama yaz. Önemli tarihleri ve olayları ver, bunların önemini açıkla                                                                                                                                          | _bir paragraf döndürdü ardından önemli olay tarihleri ve açıklamalarından oluşan bir liste_                                | Karmaşık             |
+| İç Savaş hakkında 1 paragraf yaz. Başlıca tarihler ve önemleri ile 3 madde ver. Önemli tarihi kişiler ve katkıları için 3 madde daha ver. Çıktıyı JSON dosyası olarak ver | _daha kapsamlı detayları içeren bir metin kutusunda JSON biçiminde çıktı döndürür; dosyaya yapıştırıp doğrulayabilirsiniz_ | Karmaşık. Biçimlendirilmiş. |
 
-## Ana İçerik
+## Birincil İçerik
 
-Yukarıdaki örneklerde, istem hala oldukça açık uçluydu ve LLM'nin önceden eğitilmiş veri setinin hangi kısmının ilgili olduğunu belirlemesine izin veriyordu. _Ana içerik_ tasarım modeliyle, giriş metni iki bölüme ayrılır:
+Yukarıdaki örneklerde, istem oldukça açık uçluydu ve LLM önceden eğitilmiş veri kümesinin hangi kısmının ilgili olduğunu kendisi seçiyordu. _Birincil içerik_ tasarım deseni ile giriş metni iki parçaya ayrılır:
 
 - bir talimat (eylem)
-- ilgili içerik (eylemi etkileyen)
+- eylemi etkileyen ilgili içerik
 
-İşte talimatın "bunu 2 cümlede özetle" olduğu bir örnek.
+Örneğin, talimat "bunu 2 cümlede özetle" olabilir.
 
-| İstem (Girdi)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Tamamlama (Çıktı)                                                                                                                                                                                                                                                                             |
+| İstem (Giriş)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Tamamlama (Çıkış)                                                                                                                                                                                                                                                                             |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jüpiter, Güneş'ten beşinci gezegen ve Güneş Sistemi'nin en büyüğüdür. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir, ancak Güneş Sistemi'ndeki diğer tüm gezegenlerin toplamının iki buçuk katı kadardır. Jüpiter, çıplak gözle gece gökyüzünde görülebilen en parlak nesnelerden biridir ve kaydedilmiş tarihten önceki antik uygarlıklar tarafından bilinmektedir. Roma tanrısı Jüpiter'in adını almıştır. Dünya'dan bakıldığında, Jüpiter'in yansıyan ışığı görünür gölgeler oluşturacak kadar parlak olabilir ve ortalama olarak Ay ve Venüs'ten sonra gece gökyüzündeki üçüncü en parlak doğal nesnedir. <br/> **Bunu 2 kısa cümlede özetle** | Jüpiter, Güneş'ten beşinci gezegen ve Güneş Sistemi'nin en büyüğüdür, gece gökyüzünde en parlak nesnelerden biridir. Roma tanrısı Jüpiter'in adını taşıyan bu gaz devi, Güneş Sistemi'ndeki diğer tüm gezegenlerin toplam kütlesinin iki buçuk katına sahiptir. |
+| Jüpiter Güneş'ten beşinci ve Güneş Sistemi'ndeki en büyük gezegendir. Bir gaz devidir, kütlesi Güneş'in binde biri kadar olmakla birlikte, Güneş Sistemi'ndeki diğer tüm gezegenlerin toplamının iki buçuk katıdır. Jüpiter, çıplak gözle gece gökyüzünde görülebilen en parlak cisimlerden biridir ve antik medeniyetler tarafından tarih öncesi kayıtlardan önce bilinmiştir. Roma tanrısı Jüpiter'in adını taşımaktadır.[19] Dünya'dan bakıldığında, Jüpiter yansıtılan ışığıyla görünür gölgeler oluşturacak kadar parlak olabilir,[20] ve ortalama olarak Ay ve Venüs'ten sonra gece gökyüzündeki üçüncü en parlak doğal cisimdir.<br/> **Bunu 2 kısa cümlede özetleyin** | Jüpiter, Güneş'ten beşinci gezegen olup Güneş Sistemi'nin en büyüğüdür ve gece gökyüzündeki en parlak nesnelerden biridir. Roma tanrısı Jüpiter'in adını taşıyan bu gaz devi, Güneş Sistemi'ndeki diğer tüm gezegenlerin toplam kütlesinin iki buçuk katıdır. |
 
-Ana içerik bölümü, daha etkili talimatlar oluşturmak için çeşitli şekillerde kullanılabilir:
+Birincil içerik bölümü, daha etkili talimatlar vermek için çeşitli şekillerde kullanılabilir:
 
-- **Örnekler** - modele ne yapması gerektiğini açık bir talimatla söylemek yerine, ne yapması gerektiğine dair örnekler verin ve modelin deseni çıkarmasına izin verin.
-- **İpuçları** - talimatın ardından bir "ipucu" vererek tamamlama sürecini başlatın ve modeli daha ilgili yanıtlar vermeye yönlendirin.
-- **Şablonlar** - bunlar, belirli kullanım durumları için verilerle özelleştirilebilen yer tutucular (değişkenler) içeren tekrarlanabilir 'tariflerdir'.
+- **Örnekler** - modele kesin bir talimat vermek yerine, istenen çıktı örneklerini verip modellerden kalıbı çıkarmasını sağlamak.
+- **İpuçları** - talimatı, modelin daha ilgili yanıtlar vermesi için tamamlayan “ipuçları” izler.
+- **Şablonlar** - özel kullanım durumları için verilerle özelleştirilebilen yer tutucular (değişkenler) içeren tekrarlanabilir istem "tarifleri".
 
-Şimdi bunları uygulamalı olarak inceleyelim.
+Bunları uygulamada inceleyelim.
 
 ### Örnek Kullanımı
 
-Bu yaklaşımda, ana içeriği kullanarak modele belirli bir talimat için istenen çıktının birkaç örneğini "beslersiniz" ve modelin istenen çıktının desenini çıkarmasına izin verirsiniz. Sağlanan örnek sayısına bağlı olarak sıfır atış istemi, tek atış istemi, birkaç atış istemi vb. olabilir.
+Bu yöntemde, birincil içerik ile modele, bir talimat için istenen çıktının bazı örnekleri verilir ve modeli, istenen çıktının kalıbını çıkarmaya bırakırız. Verilen örnek sayısına bağlı olarak, sıfır-vuruş (zero-shot), tek-vuruş (one-shot), birkaç vuruş (few-shot) istemlendirme yapılabilir.
 
 İstem artık üç bileşenden oluşur:
 
-- Bir görev açıklaması
+- Görev açıklaması
 - İstenen çıktının birkaç örneği
-- Yeni bir örneğin başlangıcı (bu, örtük bir görev açıklaması haline gelir)
+- Yeni bir örneğin başlangıcı (örtük görev açıklaması olur)
 
-| Öğrenme Türü | İstem (Girdi)                                                                                                                                        | Tamamlama (Çıktı)         |
+| Öğrenme Türü | İstem (Giriş)                                                                                                                                        | Tamamlama (Çıkış)         |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
-| Sıfır atış     | "Güneş Parlıyor". İspanyolcaya çevir                                                                                                            | "El Sol está brillando".    |
-| Tek atış      | "Güneş Parlıyor" => ""El Sol está brillando". <br> "Soğuk ve Rüzgarlı Bir Gün" =>                                                                 | "Es un día frío y ventoso". |
-| Birkaç atış      | Oyuncu üsleri koştu => Beyzbol <br/> Oyuncu bir ace vurdu => Tenis <br/> Oyuncu bir altı vurdu => Kriket <br/> Oyuncu bir smaç yaptı => | Basketbol                  |
+| Sıfır-vuruş  | "The Sun is Shining". İspanyolcaya çevir                                                                                                           | "El Sol está brillando".    |
+| Tek-vuruş    | "The Sun is Shining" => "El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                   | "Es un día frío y ventoso". |
+| Several-shot | Oyuncu üsleri döndü => Beyzbol <br/> Oyuncu servis attı => Tenis <br/> Oyuncu servi aldı => Kriket <br/> Oyuncu smacı yaptı => | Basketbol                  |
 |               |                                                                                                                                                       |                             |
 
-Sıfır atış isteminde modele açık bir talimat ("İspanyolcaya çevir") vermemiz gerektiğini, ancak tek atış istem örneğinde bunun çıkarıldığını fark edin. Birkaç atış örneği, daha fazla örnek eklemenin, ek talimatlar olmadan modellerin daha doğru çıkarımlar yapmasına nasıl izin verdiğini gösteriyor.
+Sıfır-vuruş istemlendirmede açık talimat vermek ("İspanyolcaya çevir") gerektiğine dikkat edin; tek-vuruş örnekte ise bu çıkarılır. Birkaç örnek verilmesi, modele ek talimat olmadan daha doğru çıkarım yapmasını sağlar.
 
 ### İstem İpuçları
 
-Ana içeriği kullanmanın bir başka tekniği, örnekler yerine _ipuçları_ sağlamaktır. Bu durumda, modelin istenen yanıt formatını yansıtan bir snippet ile _başlamasına yardımcı olarak_ doğru yöne yönlendirilmesini sağlıyoruz. Model daha sonra bu ipucunu alır ve bu doğrultuda devam eder.
+Birincil içeriği kullanmanın bir diğer yolu, örnekler yerine _ipuçları_ vermektir. Bu durumda, modele istenen yanıt formatına uygun bir parçayla _başlayarak_ ufak bir işaret verilir. Model, bu işareti alıp o doğrultuda yanıtı devam ettirir.
 
-| İpucu Sayısı | İstem (Girdi)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Tamamlama (Çıktı)                                                                                                                                                                                                                                                                                       |
+| İpucu Sayısı | İstem (Giriş)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Tamamlama (Çıkış)                                                                                                                                                                                                                                                                                       |
 | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0              | Jüpiter, Güneş'ten beşinci gezegen ve Güneş Sistemi'nin en büyüğüdür. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir, ancak Güneş Sistemi'ndeki diğer tüm gezegenlerin toplamının iki buçuk katı kadardır. Jüpiter, çıplak gözle gece gökyüzünde görülebilen en parlak nesnelerden biridir ve kaydedilmiş tarihten önceki antik uygarlıklar tarafından bilinmektedir. <br/>**Bunu Özetle**                                       | Jüpiter, Güneş Sistemi'nin en büyük gezegeni ve Güneş'ten beşinci gezegendir. Gaz devi olan Jüpiter, diğer tüm gezegenlerin toplam kütlesinin iki buçuk katına sahiptir ve gece gökyüzünde kolayca görülebilir. |
-| 1              | Jüpiter, Güneş'ten itibaren beşinci gezegen ve Güneş Sistemi'ndeki en büyük gezegendir. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir, ancak Güneş Sistemi'ndeki diğer tüm gezegenlerin toplam kütlesinin iki buçuk katıdır. Jüpiter, gece gökyüzünde çıplak gözle görülebilen en parlak nesnelerden biridir ve kaydedilmiş tarihten önceki antik uygarlıklar tarafından biliniyordu. <br/>**Özetle** <br/> Öğrendiğimiz şey, Jüpiter | Güneş'ten itibaren beşinci gezegen ve Güneş Sistemi'ndeki en büyük gezegendir. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir, ancak diğer tüm gezegenlerin toplam kütlesinin iki buçuk katıdır. Çıplak gözle kolayca görülebilir ve antik çağlardan beri bilinmektedir.                        |
-| 2              | Jüpiter, Güneş'ten itibaren beşinci gezegen ve Güneş Sistemi'ndeki en büyük gezegendir. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir, ancak Güneş Sistemi'ndeki diğer tüm gezegenlerin toplam kütlesinin iki buçuk katıdır. Jüpiter, gece gökyüzünde çıplak gözle görülebilen en parlak nesnelerden biridir ve kaydedilmiş tarihten önceki antik uygarlıklar tarafından biliniyordu. <br/>**Özetle** <br/> Öğrendiğimiz En Önemli 3 Gerçek:         | 1. Jüpiter, Güneş'ten itibaren beşinci gezegen ve Güneş Sistemi'ndeki en büyük gezegendir. <br/> 2. Güneş'in kütlesinin binde biri kadar bir kütleye sahiptir...<br/> 3. Jüpiter, antik çağlardan beri çıplak gözle görülebilmektedir ...                                                                       |
+| 0              | Jüpiter Güneş'ten beşinci gezegendir ve Güneş Sistemi'nin en büyüğüdür. Bir gaz devidir, kütlesi Güneş'in binde biri kadar olmakla birlikte, Güneş Sistemi'ndeki diğer tüm gezegenlerin toplamının iki buçuk katıdır. Jüpiter çıplak gözle gece gökyüzünde görülebilen en parlak nesnelerden biridir ve antik medeniyetlerce tarih öncesinden beri bilinir. <br/>**Bunu Özetle**                                       | Jüpiter, Güneş Sistemi'nin en büyük gezegenidir ve Güneş'ten beşincidir. Kütlesi Güneş'in binde biri olmasına rağmen, diğer tüm gezegenlerin toplamından daha ağırdır. Antik uygarlıklar tarafından uzun zamandır bilinmekte ve gece gökyüzünde kolayca görülebilmektedir. |
+| 1              | Jüpiter, Güneş'ten beşinci gezegendir ve Güneş Sistemi'nin en büyüğüdür. Kütlesi Güneş'in binde biri olan bir gaz devidir, ancak diğer tüm gezegenlerin kütlesinin iki buçuk katıdır. Jüpiter, çıplak gözle gece gökyüzünde görülebilen en parlak nesnelerden biridir ve kayıtlı tarihi önceki antik medeniyetler tarafından bilinmektedir. <br/>**Bunu Özetle** <br/> Öğrendiklerimiz şudur ki Jüpiter | Güneş'ten beşinci gezegerdir ve Güneş Sistemi'nin en büyüğüdür. Kütlesi Güneş'in binde biri olan bir gaz devidir, ancak diğer tüm gezegenlerin birleşik kütlesinin iki buçuk katıdır. Kolayca çıplak gözle görülebilir ve antik çağlardan beri bilinmektedir.                        |
+| 2              | Jüpiter, Güneş'ten beşinci gezegendir ve Güneş Sistemi'nin en büyüğüdür. Kütlesi Güneş'in binde biri olan bir gaz devidir, ancak diğer tüm gezegenlerin birleşik kütlesinin iki buçuk katıdır. Jüpiter, çıplak gözle gece gökyüzünde görülebilen en parlak nesnelerden biridir ve kayıtlı tarihi önceki antik medeniyetler tarafından bilinmektedir. <br/>**Bunu Özetle** <br/> Öğrendiğimiz En İyi 3 Gerçek:         | 1. Jüpiter, Güneş'ten beşinci gezegendir ve Güneş Sistemi'nin en büyüğüdür. <br/> 2. Kütlesi Güneş'in binde biri olan bir gaz devidir...<br/> 3. Jüpiter, antik çağlardan beri çıplak gözle görünmüştür ...                                                                       |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
-### Prompt Şablonları
+### İstek Şablonları
 
-Bir prompt şablonu, _önceden tanımlanmış bir prompt tarifi_ olup, tutarlı kullanıcı deneyimlerini ölçeklendirmek için gerektiğinde saklanabilir ve yeniden kullanılabilir. En basit haliyle, [OpenAI'den bu örnek](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) gibi, hem etkileşimli prompt bileşenlerini (kullanıcı ve sistem mesajları) hem de API tabanlı istek formatını sağlayan bir prompt örnekleri koleksiyonudur - yeniden kullanım için destek sağlar.
+Bir istek şablonu, _önceden tanımlanmış bir istek tarifi_ olup, gerektiğinde saklanıp yeniden kullanılabilir; böylece tutarlı kullanıcı deneyimlerini büyük ölçekte yönetir. En basit haliyle, kullanıcı ve sistem mesajlarını ve API tabanlı istek formatını içeren [OpenAI'nin şu örneği](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) gibi bir dizi örnekten oluşur.
 
-Daha karmaşık bir formda, [LangChain'den bu örnek](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) gibi, _yer tutucular_ içerir ve bu yer tutucular kullanıcı girdisi, sistem bağlamı, harici veri kaynakları gibi çeşitli kaynaklardan gelen verilerle değiştirilebilir. Bu, bir kütüphane oluşturmayı ve yeniden kullanılabilir prompt'ları ölçekli bir şekilde programlı olarak tutarlı kullanıcı deneyimlerini yönlendirmek için kullanmayı mümkün kılar.
+Daha karmaşık bir formda, [LangChain'in şu örneği](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) gibi, çeşitli kaynaklardan (kullanıcı girişi, sistem bağlamı, harici veri kaynakları vb.) dinamik olarak istek oluşturmak için _yer tutucular_ içerir. Bu, tutarlı kullanıcı deneyimlerini **programatik olarak** ölçeklendirmek için yeniden kullanılabilir istekler kütüphanesi oluşturmamızı sağlar.
 
-Son olarak, şablonların gerçek değeri, dikey uygulama alanları için _prompt kütüphaneleri_ oluşturma ve yayınlama yeteneğinde yatar - burada prompt şablonu artık hedeflenen kullanıcı kitlesi için yanıtları daha alakalı ve doğru hale getiren uygulamaya özgü bağlamı veya örnekleri yansıtacak şekilde _optimize edilmiştir_. [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) deposu, ders planlama, müfredat tasarımı, öğrenci rehberliği gibi ana hedeflere vurgu yaparak eğitim alanı için prompt'ların bir kütüphanesini derleyen bu yaklaşımın harika bir örneğidir.
+Son olarak, şablonların gerçek değeri, dikey uygulama alanları için _istek kütüphaneleri_ oluşturma ve yayımlama becerisinde yatar — bu şablonlar artık uygulamaya özgü bağlam ya da örneklerle _optimize edilmiştir_, böylece cevaplar hedef kullanıcı kitlesi için daha ilgili ve doğru olur. [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) deposu, eğitim alanı için ders planlama, müfredat tasarımı, öğrenci eğitimi gibi önemli hedeflere vurgu yaparak böyle bir yaklaşımın güzel bir örneğidir.
 
 ## Destekleyici İçerik
 
-Prompt oluşturmayı bir talimat (görev) ve bir hedef (ana içerik) olarak düşünürsek, _ikincil içerik_ çıktıyı bir şekilde **etkilemek için** sağladığımız ek bağlam gibidir. Bu, modelin yanıtını istenen kullanıcı hedeflerine veya beklentilerine uygun hale getirmesine yardımcı olabilecek ayar parametreleri, biçimlendirme talimatları, konu sınıflandırmaları vb. olabilir.
+İstek oluşturmayı bir talimat (görev) ve hedef (birincil içerik) olarak düşünürsek, _ikincil içerik_ çıktı üzerinde **bir şekilde etki etmek** amacıyla sağlanan ek bağlam gibidir. Bu, ayarlama parametreleri, biçimlendirme talimatları, konu taksonomileri vb. olabilir; modelin yanıtını istenen kullanıcı hedeflerine uygun hale getirmesine yardımcı olur.
 
-Örneğin: Bir müfredat kataloğu ile tüm mevcut kurslar hakkında geniş meta veriler (isim, açıklama, seviye, meta veri etiketleri, eğitmen vb.) sağlandığında:
+Örneğin: Müfredattaki tüm mevcut kurslar için kapsamlı meta veriler (isim, açıklama, seviye, etiketler, öğretmen vb.) içeren bir kurs kataloğu verildiğinde:
 
-- "2023 Sonbahar müfredat kataloğunu özetle" talimatını tanımlayabiliriz.
-- İstenen çıktının birkaç örneğini sağlamak için ana içeriği kullanabiliriz.
-- İkincil içeriği, en çok ilgilenilen 5 "etiketi" belirlemek için kullanabiliriz.
+- "2023 Güz dönemi kurs kataloğunu özetle" şeklinde bir talimat belirleyebiliriz
+- Birincil içerik olarak istenen çıktıdan birkaç örnek verebiliriz
+- İkincil içerik olarak en çok ilgi gören 5 "etiketi" belirtebiliriz.
 
-Artık model, birkaç örnekle gösterilen formatta bir özet sağlayabilir - ancak bir sonuç birden fazla etikete sahipse, ikincil içerikte belirtilen 5 etiketi önceliklendirebilir.
+Model, birkaç örnekle gösterilen formatta bir özet sağlayabilir — ancak sonuçta birden fazla etiket varsa, ikincil içerikte belirtilen 5 etikete öncelik verebilir.
 
 ---
 
 <!--
 DERS ŞABLONU:
-Bu birim temel kavram #1'i kapsamalıdır.
-Kavramı örnekler ve referanslarla pekiştirin.
+Bu ünitede temel kavram #1 ele alınmalıdır.
+Kavram örnekler ve referanslarla pekiştirilmeli.
 
 KAVRAM #3:
-Prompt Mühendisliği Teknikleri.
-Prompt mühendisliği için bazı temel teknikler nelerdir?
-Bunu bazı alıştırmalarla gösterin.
+İstek Mühendisliği Teknikleri.
+İstek mühendisliği için temel teknikler nelerdir?
+Birkaç alıştırmayla örneklendir.
 -->
 
-## Prompting En İyi Uygulamalar
+## İstek Verme En İyi Uygulamaları
 
-Artık prompt'ların nasıl _oluşturulabileceğini_ bildiğimize göre, bunları en iyi uygulamaları yansıtacak şekilde nasıl _tasarlayabileceğimizi_ düşünmeye başlayabiliriz. Bunu iki bölümde düşünebiliriz - doğru _zihniyete_ sahip olmak ve doğru _teknikleri_ uygulamak.
+Artık isteklerin nasıl _oluşturulacağını_ bildiğimize göre, onları en iyi uygulamalarla _tasarlama_ konusunu düşünmeye başlayabiliriz. Bunu iki kısımda düşünebiliriz — doğru _bakış açısı_ ve doğru _tekniklerin_ uygulanması.
 
-### Prompt Mühendisliği Zihniyeti
+### İstek Mühendisliği Bakış Açısı
 
-Prompt Mühendisliği bir deneme-yanılma sürecidir, bu yüzden üç geniş rehber faktörü akılda tutun:
+İstek Mühendisliği deneme-yanılma sürecidir, bu nedenle üç temel rehber faktörü aklınızda tutun:
 
-1. **Alan Bilgisi Önemlidir.** Yanıt doğruluğu ve alaka düzeyi, uygulamanın veya kullanıcının çalıştığı _alanın_ bir fonksiyonudur. Teknikleri daha fazla **özelleştirmek** için sezginizi ve alan uzmanlığınızı uygulayın. Örneğin, sistem prompt'larınızda _alana özgü kişilikler_ tanımlayın veya kullanıcı prompt'larınızda _alana özgü şablonlar_ kullanın. Alanla ilgili bağlamları yansıtan ikincil içerik sağlayın veya modeli tanıdık kullanım kalıplarına yönlendirmek için _alana özgü ipuçları ve örnekler_ kullanın.
+1. **Alan Bilgisi Önemlidir.** Yanıtların doğruluğu ve ilgisi, o uygulamanın veya kullanıcının içinde bulunduğu _alana_ bağlıdır. İçgüdünüzü ve alan uzmanlığınızı kullanarak teknikleri **özelleştirin**. Örneğin, sistem isteklerinizde _alana özgü kişilikler_ tanımlayın, kullanıcı isteklerinde _alana özel şablonlar_ kullanın. Alan bağlamlarını yansıtan ikincil içerik sağlayın veya modeli aşina olduğu kalıplara yönlendirmek için _alana özgü ipuçları ve örnekler_ kullanın.
 
-2. **Model Bilgisi Önemlidir.** Modellerin doğası gereği rastgele olduğunu biliyoruz. Ancak model uygulamaları, kullandıkları eğitim veri seti (önceden eğitilmiş bilgi), sağladıkları yetenekler (örneğin, API veya SDK aracılığıyla) ve optimize edildikleri içerik türü (örneğin, kod vs. görüntü vs. metin) açısından da farklılık gösterebilir. Kullandığınız modelin güçlü ve zayıf yönlerini anlayın ve bu bilgiyi _öncelikli görevler_ oluşturmak veya modelin yeteneklerine optimize edilmiş _özelleştirilmiş şablonlar_ oluşturmak için kullanın.
+2. **Modeli Anlamak Önemlidir.** Modeller doğası gereği stokastiktir. Ama model uygulamaları kullandıkları eğitim veri setine (önceden eğitilmiş bilgi), sundukları yeteneklere (örneğin API veya SDK yoluyla) ve optimize edildikleri içerik türüne (örneğin kod, görsel veya metin) göre değişiklik gösterebilir. Kullandığınız modelin güçlü ve zayıf yönlerini anlayın ve bu bilgiyle _görev önceliklendirmesi_ yapın veya modelin yeteneklerine göre _özelleştirilmiş şablonlar_ oluşturun.
 
-3. **Yineleme ve Doğrulama Önemlidir.** Modeller hızla gelişiyor ve prompt mühendisliği teknikleri de öyle. Bir alan uzmanı olarak, daha geniş topluluğa uygulanmayan başka bağlam veya kriterlere sahip olabilirsiniz. Prompt mühendisliği araçlarını ve tekniklerini kullanarak prompt oluşturmayı "hızlandırın", ardından kendi sezginizi ve alan uzmanlığınızı kullanarak sonuçları yineleyin ve doğrulayın. İçgörülerinizi kaydedin ve başkalarının gelecekte daha hızlı yinelemeler yapabilmesi için yeni bir temel olarak kullanılabilecek bir **bilgi tabanı** (örneğin, prompt kütüphaneleri) oluşturun.
+3. **Yineleme ve Doğrulama Önemlidir.** Modeller hızla gelişiyor ve istek mühendisliği teknikleri de öyle. Bir alan uzmanı olarak, genel topluluğa uymayabilecek başka bağlamlar veya kriterleriniz olabilir. İstek mühendisliği araçları ve tekniklerini kullanarak istek oluşturmayı "hızlandırın", sonra içgüdünüz ve uzmanlığınızla sonuçları yineleyin ve doğrulayın. İçgörülerinizi kaydedin ve başkalarının daha hızlı tekrarları için kullanabileceği bir **bilgi tabanı** (örneğin istek kütüphaneleri) oluşturun.
 
 ## En İyi Uygulamalar
 
-Şimdi [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) ve [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) uygulayıcıları tarafından önerilen yaygın en iyi uygulamalara bakalım.
+Şimdi [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) ve [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) uzmanlarının önerdiği yaygın en iyi uygulamalara göz atalım.
 
-| Ne                                | Neden                                                                                                                                                                                                                                               |
-| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| En son modelleri değerlendirin.   | Yeni model nesilleri muhtemelen geliştirilmiş özelliklere ve kaliteye sahip olacaktır - ancak daha yüksek maliyetlere de neden olabilir. Etkilerini değerlendirin, ardından geçiş kararları alın.                                                    |
-| Talimatları ve bağlamı ayırın.    | Modelinizin/sağlayıcınızın talimatları, birincil ve ikincil içeriği daha net bir şekilde ayırmak için _sınırlandırıcılar_ tanımlayıp tanımlamadığını kontrol edin. Bu, modellerin tokenlere daha doğru ağırlıklar atamasına yardımcı olabilir.         |
-| Spesifik ve net olun.             | İstenen bağlam, sonuç, uzunluk, format, stil vb. hakkında daha fazla ayrıntı verin. Bu, yanıtların hem kalitesini hem de tutarlılığını artıracaktır. Tarifleri yeniden kullanılabilir şablonlarda yakalayın.                                      |
-| Açıklayıcı olun, örnekler kullanın | Modeller "göster ve anlat" yaklaşımına daha iyi yanıt verebilir. `zero-shot` bir yaklaşım ile başlayın, burada bir talimat verirsiniz (ancak örnek yoktur), ardından birkaç örnek sağlayarak `few-shot` ile iyileştirme yapmayı deneyin. Benzerlikler kullanın. |
-| Tamamlama için ipuçları kullanın. | İstenen sonuca doğru yönlendirmek için modele yanıt için başlangıç noktası olarak kullanabileceği bazı öncü kelimeler veya ifadeler verin.                                                                                                         |
-| Tekrar Edin.                      | Bazen modele kendinizi tekrar etmeniz gerekebilir. Talimatları birincil içeriğinizin öncesinde ve sonrasında verin, bir talimat ve bir ipucu kullanın vb. Yineleyin ve doğrulayın, neyin işe yaradığını görün.                                      |
-| Sıra Önemlidir.                   | Bilgiyi modele sunma sırası, öğrenme örneklerinde bile, yanıtı etkileyebilir. Bu, yakınlık yanlılığı nedeniyle olabilir. En iyi neyin işe yaradığını görmek için farklı seçenekler deneyin.                                                        |
-| Modele bir "çıkış" verin.         | Modele, herhangi bir nedenle görevi tamamlayamazsa sağlayabileceği bir _yedek_ tamamlama yanıtı verin. Bu, modellerin yanlış veya uydurma yanıtlar üretme olasılığını azaltabilir.                                                                |
-|                                   |                                                                                                                                                                                                                                                   |
+| Ne Yapmalı                        | Neden                                                                                                                                                                                                                                             |
+| :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| En yeni modelleri değerlendirin.  | Yeni model nesilleri muhtemelen geliştirilmiş özellikler ve kaliteye sahiptir — ancak maliyetleri de daha yüksek olabilir. Etkisini değerlendirin ve sonra geçiş kararları alın.                                                                    |
+| Talimatları ve bağlamı ayırın.    | Model sağlayıcınızın talimatlar ile birincil ve ikincil içeriği daha net ayırmak için _sınırlandırıcılar_ tanımlayıp tanımlamadığını kontrol edin. Bu, modele tokenlara farklı ağırlıklar vermesinde yardımcı olur.                                  |
+| Spesifik ve net olun.              | İstenilen bağlam, sonuç, uzunluk, format, stil vb. hakkında daha fazla detay verin. Bu yanıt kalitesini ve tutarlılığını artırır. Tarifleri yeniden kullanılabilir şablonlarda kaydedin.                                                          |
+| Tanımlayıcı olun, örnekler kullanın | Modeller "göster ve anlat" yaklaşımına daha iyi yanıt verebilir. Önce `sıfır örnek` ile, yani sadece talimat verip örnek vermeden başlayın, sonra birkaç örnekle (few-shot) istediğiniz çıktıyı refinelayın. Benzetmeler kullanın.                |
+| Tamamlama için ipuçları kullanın  | Modeli istenen sonuca doğru yönlendirmek için başlangıç kelime veya ifadeleri verin; bu onun yanıtına yön vermesinde kolaylık sağlar.                                                                                                             |
+| Çift Katman Yapın                  | Bazen modeli tekrar etmeniz gerekebilir. Talimatları hem içerikten önce hem sonra verin, talimat ve ipucunu birlikte kullanın vb. Ne işe yaradığına dair yinelemeler yapın ve doğrulayın.                                                         |
+| Sıra Önemlidir                    | Verilen bilgilerin modelde sunuluş sırası, çıkışı etkileyebilir; bu durum öğrenme örneklerinde bile geçerlidir (son bilgi önyargısı nedeniyle). Farklı seçenekleri deneyin.                                                                        |
+| Modele "çıkış" yolu verin          | Modelin görevi tamamlayamadığı durumlar için bir _geri dönüş_ tamamlama yanıtı sağlayın. Bu, modelin yanlış veya uydurma yanıtlar verme olasılığını azaltabilir.                                                                                 |
+|                                  |                                                                                                                                                                                                                                                   |
 
-Herhangi bir en iyi uygulamada olduğu gibi, model, görev ve alan temelinde _sonuçlarınız değişebilir_. Bunları bir başlangıç noktası olarak kullanın ve sizin için en iyi olanı bulmak için yineleyin. Yeni modeller ve araçlar kullanıma sunuldukça prompt mühendisliği sürecinizi sürekli olarak yeniden değerlendirin, süreç ölçeklenebilirliği ve yanıt kalitesine odaklanın.
+Her en iyi uygulamada olduğu gibi, _kendi deneyiminiz_ kullandığınız model, görev ve alana göre değişebilir. Bunları bir başlangıç noktası olarak alın ve size en uygun olanı bulana kadar yineleme yapın. Yeni model ve araçlar çıktıkça istek mühendisliği sürecinizi sürekli yeniden değerlendirin; ölçeklenebilir süreç ve yanıt kalitesine odaklanarak.
 
 <!--
 DERS ŞABLONU:
-Bu birim uygulanabilir bir kod zorluğu sağlamalıdır.
+Bu ünitede bir kod alıştırması varsa sun.
 
-ZORLUK:
-Yalnızca talimatlarda kod yorumları bulunan bir Jupyter Notebook'a bağlantı verin (kod bölümleri boş).
+ALGI:
+Yalnızca kod yorumları içeren ve kod bölümleri boş olan bir Jupyter Notebook bağlantısı ver.
 
 ÇÖZÜM:
-Prompt'ların doldurulup çalıştırıldığı, bir örneğin nasıl olabileceğini gösteren bir Notebook kopyasına bağlantı verin.
+İsteklerin doldurulup çalıştırıldığı o Notebook'un bir kopyasına bağlantı vererek örnek çıktı göster.
 -->
 
 ## Ödev
 
-Tebrikler! Dersin sonuna geldiniz! Şimdi bu kavramları ve teknikleri gerçek örneklerle test etme zamanı!
+Tebrikler! Dersin sonuna geldiniz! Şimdi bazı kavram ve teknikleri gerçek örneklerle test etme zamanı!
 
-Ödevimiz için, etkileşimli olarak tamamlayabileceğiniz alıştırmalar içeren bir Jupyter Notebook kullanacağız. Ayrıca kendi fikirlerinizi ve tekniklerinizi keşfetmek için Notebook'u kendi Markdown ve Kod hücrelerinizle genişletebilirsiniz.
+Ödevimiz için, etkileşimli tamamlayabileceğiniz alıştırmalar içeren bir Jupyter Notebook kullanacağız. Kendi Markdown ve Kod hücrelerinizi ekleyerek fikir ve teknikleri keşfedebilirsiniz.
 
-### Başlamak için, repo'yu fork edin, ardından
+### Başlamak için depoyu çatallayın, sonra
 
 - (Önerilen) GitHub Codespaces'i başlatın
-- (Alternatif) Repo'yu yerel cihazınıza klonlayın ve Docker Desktop ile kullanın
-- (Alternatif) Notebook'u tercih ettiğiniz Notebook çalışma zamanı ortamında açın.
+- (Alternatif) Depoyu yerel cihazınıza klonlayıp Docker Desktop ile kullanın
+- (Alternatif) Tercih ettiğiniz Notebook çalışma ortamında açın.
 
 ### Sonra, ortam değişkenlerinizi yapılandırın
 
-- Repo kökündeki `.env.copy` dosyasını `.env` olarak kopyalayın ve `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` ve `AZURE_OPENAI_DEPLOYMENT` değerlerini doldurun. [Öğrenme Alanı bölümüne](../../../04-prompt-engineering-fundamentals/04-prompt-engineering-fundamentals) geri dönerek nasıl yapılacağını öğrenin.
+- Depo kökünde bulunan `.env.copy` dosyasını `.env` olarak kopyalayın ve `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` ve `AZURE_OPENAI_DEPLOYMENT` değerlerini doldurun. Daha fazla bilgi için [Öğrenme Sandbox bölümü](../../../04-prompt-engineering-fundamentals)'ne dönün.
 
-### Son olarak, Jupyter Notebook'u açın
+### Sonra, Jupyter Notebook'u açın
 
-- Çalışma zamanı çekirdeğini seçin. Seçenek 1 veya 2'yi kullanıyorsanız, yalnızca geliştirici konteyneri tarafından sağlanan varsayılan Python 3.10.x çekirdeğini seçin.
+- Çalışma zamanı kernelini seçin. 1. veya 2. seçenekleri kullanıyorsanız, geliştirici konteynerin sağladığı varsayılan Python 3.10.x kernelini seçmeniz yeterlidir.
 
-Alıştırmaları çalıştırmaya hazırsınız. Burada _doğru ve yanlış_ cevaplar olmadığını unutmayın - sadece deneme-yanılma yoluyla seçenekleri keşfetmek ve belirli bir model ve uygulama alanı için neyin işe yaradığını anlamak.
+Alıştırmaları çalıştırmaya hazırsınız. Burada _doğru ve yanlış_ cevaplar yoktur — sadece deneme-yanılma ile seçenekleri keşfedip, bir model ve uygulama alanında neyin işe yaradığını sezgisel olarak anlamaya çalışıyorsunuz.
 
-_Bu nedenle bu derste Kod Çözüm segmentleri bulunmamaktadır. Bunun yerine, Notebook'da "Benim Çözümüm:" başlıklı Markdown hücreleri olacak ve referans için bir örnek çıktı gösterecektir._
+_Bu nedenle derste Kod Çözüm segmentleri bulunmamakta. Bunun yerine, Notebook'ta "Çözümüm:" başlıklı Markdown hücreleri olacak ve referans için bir örnek çıktı gösterecek._
 
  <!--
 DERS ŞABLONU:
-Bölümü bir özet ve kendi kendine rehberli öğrenme kaynaklarıyla tamamlayın.
+Bölümü bir özet ve kendi kendine öğrenme kaynaklarıyla sar.
+
 -->
 
-## Bilgi Kontrolü
+## Bilgi kontrolü
 
-Aşağıdakilerden hangisi makul en iyi uygulamalara uygun iyi bir prompt'tur?
+Aşağıdakilerden hangisi makul en iyi uygulamalara uygun iyi bir istektir?
 
-1. Bana kırmızı bir arabanın resmini göster
-2. Bana bir uçurumun kenarında gün batımıyla park etmiş Volvo marka ve XC90 model kırmızı bir arabanın resmini göster
-3. Bana Volvo marka ve XC90 model kırmızı bir arabanın resmini göster
+1. Bana kırmızı araba resmi göster
+2. Bana kırmızı renkli, Volvo marka XC90 model, bir uçurum kenarında, güneş batarken park edilmiş bir araba resmi göster
+3. Bana kırmızı renkli, Volvo marka XC90 model bir araba resmi göster
 
-Cevap: 2, en iyi prompt çünkü "ne" hakkında ayrıntılar sağlar ve spesifik bir araba markası ve modeli (sadece herhangi bir araba değil) ile genel ortamı da tanımlar. 3, bir sonraki en iyisidir çünkü o da oldukça açıklayıcıdır.
+Cevap: 2, çünkü detaylar içeriyor ve "ne" sorusuna cevap veriyor, spesifik (sadece herhangi bir araba değil, belirli bir marka ve model) ve aynı zamanda genel ortamı tanımlıyor. 3. ise detay açısından ikinci en iyisidir.
 
-## 🚀 Zorluk
+## 🚀 Meydan Okuma
 
-"Show me an image of red car of make Volvo and " cümlesini tamamla prompt'u ile "ipucu" tekniğini kullanabilir misiniz? Model ne yanıt veriyor ve bunu nasıl geliştirebilirsiniz?
+"Show me an image of red car of make Volvo and " cümlesini tamamlayarak ipucu (cue) tekniğini kullanabilir misiniz? Model nasıl yanıt veriyor ve bunu nasıl geliştirebilirsiniz?
 
 ## Harika İş! Öğrenmeye Devam Edin
 
-Farklı Prompt Mühendisliği kavramları hakkında daha fazla bilgi edinmek ister misiniz? Bu konuyla ilgili diğer harika kaynakları bulmak için [devam eden öğrenme sayfasına](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) gidin.
+Farklı İstek Mühendisliği kavramlarını daha fazla öğrenmek ister misiniz? Bu konuyla ilgili diğer harika kaynakları bulmak için [devam eden öğrenme sayfasına](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) gidin.
 
-5. Derse geçin, burada [ileri düzey prompt tekniklerini](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst) inceleyeceğiz!
+İleri düzey istek tekniklerine bakacağımız 5. Derse gidin: [../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst]!
 
 ---
 
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilmekle birlikte, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmemektedir.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
