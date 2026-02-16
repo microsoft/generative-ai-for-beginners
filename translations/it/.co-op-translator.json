@@ -42,8 +42,8 @@
     "language_code": "it"
   },
   "04-prompt-engineering-fundamentals/README.md": {
-    "original_hash": "0135e6c271f3ece8699050d4debbce88",
-    "translation_date": "2025-10-17T16:12:18+00:00",
+    "original_hash": "28e5f65560fd43a26a7fa45d558f8fac",
+    "translation_date": "2026-02-16T12:24:33+00:00",
     "source_file": "04-prompt-engineering-fundamentals/README.md",
     "language_code": "it"
   },
@@ -204,8 +204,8 @@
     "language_code": "it"
   },
   "README.md": {
-    "original_hash": "8fe7a518d51ad5107520e67b2e23560e",
-    "translation_date": "2026-02-06T08:15:05+00:00",
+    "original_hash": "005f81b2e4c9bd6ce70bcd9ba0a82a97",
+    "translation_date": "2026-02-16T12:22:42+00:00",
     "source_file": "README.md",
     "language_code": "it"
   },
@@ -213,6 +213,18 @@
     "original_hash": "2d33a71bed73d6daee78e2d473ece975",
     "translation_date": "2025-07-09T06:53:14+00:00",
     "source_file": "SECURITY.md",
+    "language_code": "it"
+  },
+  "docs/ENHANCED_FEATURES_ROADMAP.md": {
+    "original_hash": "43fe261ba7a54e891e489255201c9253",
+    "translation_date": "2026-02-16T12:33:09+00:00",
+    "source_file": "docs/ENHANCED_FEATURES_ROADMAP.md",
+    "language_code": "it"
+  },
+  "docs/SECURITY_GUIDELINES.md": {
+    "original_hash": "2dc6195c00301d37e3dcdf50b8acc800",
+    "translation_date": "2026-02-16T12:31:27+00:00",
+    "source_file": "docs/SECURITY_GUIDELINES.md",
     "language_code": "it"
   },
   "docs/_navbar.md": {
