@@ -1,4 +1,4 @@
-name:  Welcome to the Microsoft Generative AI
+name: Welcome to the Microsoft Generative AI
 on:
   # Trigger the workflow on new issue
   issues:
@@ -7,7 +7,7 @@ permissions:
   contents: read
   issues: write
 jobs:
-  asses-issue:
+  assess-issue:
     runs-on: ubuntu-latest
     steps:
       - name: Add Label and thanks comment to Issue
