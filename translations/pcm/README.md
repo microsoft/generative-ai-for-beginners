@@ -1,6 +1,6 @@
-![Generative AI For Beginners](../../translated_images/pcm/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
+![Generative AI Fo Beginners](../../translated_images/pcm/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### 21 Lekshọn wey dey teach everytin wey you need sabi to start to build Generative AI apps
+### 21 Lekson wey dey teach everything wey you need sabi to start to build Generative AI applications
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -16,83 +16,92 @@
 
 ### 🌐 Multi-Language Support
 
-#### Supported via GitHub Action (Automated & Always Up-to-Date)
+#### Dem dey support am via GitHub Action (Automated & Always Up-to-Date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Prefer to Clone Locally?**
-
-> Dis repo get 50+ language translations wey go make the download size big well-well. If you want clone without translations, use sparse checkout:
+> **You prefer to Clone Locally?**
+>
+> Dis repo get more than 50 language translations wey go make the download size big. To clone without translations, use sparse checkout:
+>
+> **Bash / macOS / Linux:**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
 > cd generative-ai-for-beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis one go give you everything you need to complete di course with faster download.
-
+>
+> **CMD (Windows):**
+> ```cmd
+> git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
+> cd generative-ai-for-beginners
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+>
+> Dis one go give you everything you need to finish the course quick-quick.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# Generative AI for Beginners (Version 3) - Course
+# Generative AI fo Beginners (Version 3) - One Course
 
-Learn di fundamentals of how to build Generative AI apps wit our 21-lesson full course wey Microsoft Cloud Advocates create.
+Learn the basics for how to build Generative AI applications with our 21-lesson full course by Microsoft Cloud Advocates.
 
 ## 🌱 How to Start
 
-Dis course get 21 lessons. Each lesson get e own topic so start from anywhere wey you like!
+Dis course get 21 lessons. Each lesson get im own topic so start for anywhere wey you like!
 
-Lessons get two kind name, either "Learn" lesson wey dey explain Generative AI concept or "Build" lesson wey explain concept plus code examples for both **Python** and **TypeScript** if e fit.
+Lessons dey labeled either "Learn" lessons wey dey explain one Generative AI concept or "Build" lessons wey dey explain concept plus code examples inside both **Python** and **TypeScript** if e possible.
 
-For .NET Developers, make una check [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+For .NET Developers make you check [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Each lesson still get "Keep Learning" section wey get more learning tools.
+Each lesson still get one "Keep Learning" section with extra learning tools.
 
 ## Wetin You Need
-### To run di course code, you fit use any of these: 
+### To run the code for dis course, you fit use any of these: 
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
    
-- Basic knowledge of Python or TypeScript go help - \*For people wey never sabi, check out dis [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) courses
-- You need GitHub account to [fork dis whole repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) go your own GitHub account
+- Basic knowledge of Python or TypeScript go help - \*For absolute beginners check out these [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) courses
+- GitHub account so you fit [fork this whole repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) go your own GitHub account
 
-We don create **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson wey go help you set up your development environment.
+We don create one **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you arrange your development environment.
 
-No forget to [star (🌟) dis repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) make you fit find am quick later.
+No forget to [star (🌟) dis repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) so e go easy for you to find am later.
 
-## 🧠 Ready to Deploy?
+## 🧠 You Ready to Deploy?
 
-If you dey find more correct code samples, check our [Generative AI Code Samples collection](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) for both **Python** and **TypeScript**.
+If you dey look for more strong code samples, check our [collection of Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) for both **Python** and **TypeScript**.
 
 ## 🗣️ Meet Other Learners, Get Support
 
-Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and connect with other learners wey dey do dis course and to get support.
+Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners wey dey do dis course and get support.
 
-Ask questions or share feedback inside [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) for Github.
+Ask questions or share product feedback for our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) for Github.
 
-## 🚀 You Dey Build Startup?
+## 🚀 You Want Build Startup?
 
-Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find out how to start to build wit Azure credits today.
+Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find how you go take start to build with Azure credits today.
 
-## 🙏 You Wan Help?
+## 🙏 You want help?
 
-You get suggestions or you see spelling or code mistakes? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+You get suggestion or you see spelling or code mistake? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-## 📂 Each lesson get:
+## 📂 Each lesson get inside:
 
-- Short video intro to di topic
-- Written lesson for inside di README
-- Python and TypeScript code samples wey support Azure OpenAI and OpenAI API
-- Links go extra resources to continue your learning
+- Small video introduction to the topic
+- Written lesson wey dey for the README
+- Python and TypeScript code samples wey dey support Azure OpenAI and OpenAI API
+- Links to extra resources to continue your learning
 
 ## 🗃️ Lessons
 
 | #   | **Lesson Link**                                                                                                                              | **Description**                                                                                 | **Video**                                                                   | **Extra Learning**                                                             |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** How to Setup Your Development Environment                                            | Video Go Show Soon                                                                 | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Understand wetin Generative AI mean and how Large Language Models (LLMs) dey work.       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** How to choose the correct model for your use case                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Learn:** How to build Generative AI Applications wey responsible                                | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** How to Setup Your Development Environment                                            | Video Coming Soon                                                                 | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Understanding wetin Generative AI be and how Large Language Models (LLMs) dey work.  | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** How to choose the correct model for your use case                                    | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Learn:** How to build Generative AI Applications wey responsible                              | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 04  | [Understanding Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** Hands-on Prompt Engineering Best Practices                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 05  | [Creating Advanced Prompts](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Learn:** How to apply prompt engineering techniques that improve the outcome of your prompts. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [Building Text Generation Applications](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Build:** A text generation app using Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -100,14 +109,14 @@ You get suggestions or you see spelling or code mistakes? [Raise an issue](https
 | 08  | [Building Search Apps Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Build:** A search application that uses Embeddings to search for data.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 09  | [Building Image Generation Applications](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Build:** An image generation application                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 10  | [Building Low Code AI Applications](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Build:** A Generative AI application using Low Code tools                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integrating External Applications with Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Build:** Wetin be function calling and how e dey work for applications                        | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Integrating External Applications with Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Build:** What is function calling and its use cases for applications                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 12  | [Designing UX for AI Applications](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Learn:** How to apply UX design principles when developing Generative AI Applications         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 13  | [Securing Your Generative AI Applications](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Learn:** The threats and risks to AI systems and methods to secure these systems.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 14  | [The Generative AI Application Lifecycle](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Learn:** The tools and metrics to manage the LLM Lifecycle and LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 15  | [Retrieval Augmented Generation (RAG) and Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Build:** An application using a RAG Framework to retrieve embeddings from a Vector Databases  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 16  | [Open Source Models and Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Build:** An application using open source models available on Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 17  | [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Build:** An application using an AI Agent Framework                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Fine-Tuning LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** The wetin, why and how of fine-tuning LLMs                                          | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Fine-Tuning LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** The what, why and how of fine-tuning LLMs                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 19  | [Building with SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** The benefits of building with Small Language Models                                            | Video Coming Soon | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 20  | [Building with Mistral Models](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** The features and differences of the Mistral Family Models                                           | Video Coming Soon | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 21  | [Building with Meta Models](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Learn:** The features and differences of the Meta Family Models                                           | Video Coming Soon | [Learn More](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
@@ -120,7 +129,7 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 ## 🎒 Other Courses
 
-Our team produces other courses! Check out:
+Our team dey produce other courses! Check am out:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -164,11 +173,11 @@ Our team produces other courses! Check out:
 
 ## Getting Help
 
-If you get stuck or get any questions about how to build AI apps. Make you join other learners and experience developers dem for discussions about MCP. E be community wey support you well well where questions dey welcomed and dem dey share knowledge freely.
+If you jam or get any question about how to build AI apps. Join other learners plus experienced developers for discussion about MCP. Na community wey dey support, where questions dey welcome and knowledge dey share freely.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-If you get product feedback or you see error wen you dey build make you visit:
+If you get product feedback or errors wey happen while you dey build, visit:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -176,5 +185,5 @@ If you get product feedback or you see error wen you dey build make you visit:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis dokument don translate wit AI translation service wey dem dey call [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg sabi say automated translation fit get some mistake or no pure well. Di original dokument for im own language na di main correct source. If na serious matter, e better make person wey sabi human translation handle am. We no go gree for any misunderstanding or wrong meaning wey fit come from dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg no forget say automated translation fit get error or no too accurate. Na di original document wey e dey for im correct language suppose be di main authority. If na serious info, make you use professional human translation. We no go take responsabiliti for any misunderstanding or wrong interpretation wey fit happen from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
