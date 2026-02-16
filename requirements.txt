@@ -2,7 +2,7 @@ ipywidgets==8.1.8
 numpy==2.4.2
 matplotlib==3.10.8
 pandas==3.0.0
-tqdm==4.67.2
+tqdm==4.67.3
 python-dotenv==1.2.1
 openai>=1.12.0
 tiktoken
